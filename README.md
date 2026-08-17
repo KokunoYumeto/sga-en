@@ -22,8 +22,10 @@ Prefer a smaller file? Choose a volume below.
 | SGA 4½ | Étale cohomology | Complete reader | 175 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/05_SGA4HALF_EN_COMPLETE_READER.pdf) |
 | SGA 5 | ℓ-adic cohomology and L-functions | Complete published content; all ten published exposés | 309 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.pdf) |
 | SGA 6 | Intersection theory and Riemann–Roch | Current layered reader; mixed source-alignment status | 376 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/07_SGA6_EN_CURRENT_LAYERED_READER.pdf) |
-| SGA 7 I | Monodromy groups in algebraic geometry, I | Exposés I, II, VI–IX; Exposés III–V are absent | 287 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.pdf) |
+| SGA 7 I | Monodromy groups in algebraic geometry, I | **Complete published volume:** Exposés I, II, VI–IX; no separately written/published Exposés III–V exist | 287 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.pdf) |
 | SGA 7 II | Monodromy groups in algebraic geometry, II | Complete reader; Exposés X–XXII | 258 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/09_SGA7II_EN_COMPLETE_READER.pdf) |
+
+> **Why does SGA 7 I jump from II to VI?** This is the published structure, not a gap in the English edition. Grothendieck's oral Exposés I–V were not separately written; their substance was summarized in the written Exposé I. The published volume therefore contains I, II, VI, VII, VIII, and IX, all of which are included here. See [the source-authority note](SOURCE_AUTHORITY.md#sga-7-i-numbering).
 
 The machine-readable coverage table is [`COMPONENT_COVERAGE.tsv`](COMPONENT_COVERAGE.tsv).
 
@@ -41,7 +43,7 @@ This repository is the discoverable reading surface for one evolving English SGA
 
 It is an auditable working mathematical edition—not peer review and not a claim that no error remains. Coverage and source alignment are stated rather than implied. In particular:
 
-- SGA 7 I is intentionally partial in this release.
+- SGA 7 I is complete as the published volume stands; its historical numbering jump is explained above and in `SOURCE_AUTHORITY.md`.
 - SGA 6 contains layers with different source-alignment status.
 - No separate DOI is minted for each volume or exposé.
 - Rights in underlying French works, editions, typography, and third-party material remain with their respective rightsholders.
