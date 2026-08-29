@@ -1,5 +1,7 @@
 # SGA — Current English Edition
 
+> **Translation atlas:** browse EGA, FGA, and SGA editions by work and language in the [Grothendieck Translation Atlas](https://github.com/KokunoYumeto/ega-fga-sga). The stable Zenodo lineage currently resolves to [2026-08-24 r4](https://doi.org/10.5281/zenodo.22077879), which is newer than the latest GitHub release.
+
 [![Stable English DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21925497.svg)](https://doi.org/10.5281/zenodo.21925497)
 [![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21925498.svg)](https://doi.org/10.5281/zenodo.21925498)
 
