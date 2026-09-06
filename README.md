@@ -15,25 +15,25 @@ Each link goes directly to a peer edition repository; there is no central hub. C
 | [EGA/FGA/SGA — Vietnamese](https://github.com/KokunoYumeto/ega-fga-sga-vi) | Vietnamese | Validated partial release; current public readers are EGA |
 | [FGA — English (external)](https://github.com/thosgood/fga) | English | Independently maintained external edition |
 
-> **SGA4 refresh — 2026-09-06:** [Exact English release](https://doi.org/10.5281/zenodo.22449907) · [matching GitHub release](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-09-06-sga4-r1). SGA4 English source-frontier refresh only. Eight other component readers and source archives are inherited unchanged from the verified August 24 predecessor; French fr.zip is unchanged. This is not whole-SGA Canon completion.
+> **SGA2 refresh — 2026-09-06:** [Exact English release](https://doi.org/10.5281/zenodo.22551421) · [matching GitHub release](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-09-06-sga2-r1). SGA2 English source-frontier refresh and dependent cumulative consumers only. Eight other English readers and source archives, including the accepted SGA4 refresh, and French fr.zip are preserved. This is not whole-SGA Canon completion.
 
 [![Stable English DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21925497.svg)](https://doi.org/10.5281/zenodo.21925497)
-[![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22449907.svg)](https://doi.org/10.5281/zenodo.22449907)
+[![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22551421.svg)](https://doi.org/10.5281/zenodo.22551421)
 
 A navigable English reading edition of the *Séminaires de Géométrie Algébrique* (SGA), presented as one cumulative linked reader and nine smaller component readers.
 
 ## Read the English edition
 
-### [Open the 4,204-page linked reader (PDF, 33.9 MB)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf)
+### [Open the 4,211-page linked reader (PDF, 34.0 MB)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf)
 
-The cumulative reader has two navigation frontmatter pages followed by 4,202 component pages, with 36,549 named destinations and 25,851 link annotations. Existing body-page content, geometry, links, outlines, and font resources are preserved. The new SGA4 reader has 864 pages; the other eight readers retain their verified predecessor bytes.
+The cumulative reader has two navigation frontmatter pages followed by 4,209 component pages, with 36,572 named destinations and 25,870 link annotations. The SGA2 reader has 185 pages. Its source, links, resources and visual checks are bound in the current hub PACKAGE_VALIDATION.json. The other eight readers retain their verified predecessor bytes.
 
 Prefer a smaller file? Choose a volume below.
 
 | Volume | Main subject | Coverage in this release | Pages | English PDF |
 |---|---|---:|---:|---|
 | SGA 1 | Étale coverings and the fundamental group | Complete published scope; Exposé VII was never written | 260 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.pdf) |
-| SGA 2 | Local cohomology and Lefschetz theorems | Complete reader | 178 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.pdf) |
+| SGA 2 | Local cohomology and Lefschetz theorems | Complete reader | 185 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.pdf) |
 | SGA 3 | Group schemes | Complete reader | 1,483 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/03_SGA3_EN_COMPLETE_READER.pdf) |
 | SGA 4 | Topos theory and étale cohomology | Complete reader | 864 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/04_SGA4_EN_COMPLETE_READER.pdf) |
 | SGA 4½ | Étale cohomology | Complete reader | 175 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/05_SGA4HALF_EN_COMPLETE_READER.pdf) |
@@ -79,7 +79,7 @@ See [`SOURCE_AUTHORITY.md`](SOURCE_AUTHORITY.md) and [`LICENSE_AND_RIGHTS.md`](L
 ## Citation and stable links
 
 - Stable English-edition DOI: [10.5281/zenodo.21925497](https://doi.org/10.5281/zenodo.21925497)
-- Exact 2026-09-06 SGA4-refresh release DOI: [10.5281/zenodo.22449907](https://doi.org/10.5281/zenodo.22449907)
+- Exact 2026-09-06 SGA2-refresh release DOI: [10.5281/zenodo.22551421](https://doi.org/10.5281/zenodo.22551421)
 - Global SGA hub DOI: [10.5281/zenodo.20410947](https://doi.org/10.5281/zenodo.20410947)
 - Citation metadata: [`CITATION.cff`](CITATION.cff)
 
