@@ -1,4 +1,10 @@
-# SGA — Current English Edition
+# Seminar in Algebraic Geometry (SGA) — Cumulative English Edition
+
+[Read the cumulative English edition — 4,211 pages](https://zenodo.org/records/22551421/files/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf?download=1).
+
+English translations of the SGA seminars on algebraic geometry: fundamental groups, local and étale cohomology, group schemes, intersection theory and monodromy. The linked contents and volume bookmarks support reading across the collection; individual readers and editable LaTeX sources are also available.
+
+[French original texts and Canon](https://doi.org/10.5281/zenodo.20410947) · [Spanish edition](https://doi.org/10.5281/zenodo.21923955).
 
 ## Related editions
 
@@ -14,8 +20,6 @@ Each link goes directly to a peer edition repository; there is no central hub. C
 | [EGA/FGA/SGA — Brazilian Portuguese](https://github.com/KokunoYumeto/ega-fga-sga-pt-br) | Brazilian Portuguese | Validated partial release, including complete EGA III-1 and SGA 5 readers |
 | [EGA/FGA/SGA — Vietnamese](https://github.com/KokunoYumeto/ega-fga-sga-vi) | Vietnamese | Validated partial release; current public readers are EGA |
 | [FGA — English (external)](https://github.com/thosgood/fga) | English | Independently maintained external edition |
-
-> **SGA2 refresh — 2026-09-06:** [Exact English release](https://doi.org/10.5281/zenodo.22551421) · [matching GitHub release](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-09-06-sga2-r1). SGA2 English source-frontier refresh and dependent cumulative consumers only. Eight other English readers and source archives, including the accepted SGA4 refresh, and French fr.zip are preserved. This is not whole-SGA Canon completion.
 
 [![Stable English DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21925497.svg)](https://doi.org/10.5281/zenodo.21925497)
 [![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22551421.svg)](https://doi.org/10.5281/zenodo.22551421)
@@ -69,6 +73,8 @@ See [`SOURCE_AUTHORITY.md`](SOURCE_AUTHORITY.md) and [`LICENSE_AND_RIGHTS.md`](L
 
 ## Editable sources and audit trail
 
+> **SGA2 refresh — 2026-09-06:** [Exact English release](https://doi.org/10.5281/zenodo.22551421) · [matching GitHub release](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-09-06-sga2-r1). SGA2 English source-frontier refresh and dependent cumulative consumers only. Eight other English readers and source archives, including the accepted SGA4 refresh, and French fr.zip are preserved. This is not whole-SGA Canon completion.
+
 - [Editable English sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/10_SGA_EN_EDITABLE_SOURCES.zip)
 - [Evidence and provenance archive (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/11_SGA_EN_EVIDENCE_AND_PROVENANCE.zip)
 - [SHA-256 manifest](https://github.com/KokunoYumeto/sga-en/releases/latest/download/12_SGA_EN_SHA256_MANIFEST.txt)
@@ -76,11 +82,19 @@ See [`SOURCE_AUTHORITY.md`](SOURCE_AUTHORITY.md) and [`LICENSE_AND_RIGHTS.md`](L
 - [`DATACITE_RELATIONS.json`](DATACITE_RELATIONS.json): DOI relationships
 - [Latest GitHub release](https://github.com/KokunoYumeto/sga-en/releases/latest)
 
+## Original authors and editorial roles
+
+Alexander Grothendieck; Michèle Raynaud; Michel Demazure; Jean-Étienne Bertin; Pierre Gabriel; Michel Raynaud; Michael Artin; Jean-Pierre Serre; Jean-Louis Verdier; Bernard Saint-Donat; Pierre Deligne; Jean-François Boutot; Luc Illusie; Jean-Pierre Jouanolou; Christian Houzel; Pierre Berthelot; Olli Jussila; Steven Kleiman; Dock Sang Rim; Nicholas M. Katz.
+
+SGA 1 and SGA 2: Alexander Grothendieck, with additional work by Michèle Raynaud. SGA 3: directed by Michel Demazure and Alexander Grothendieck. SGA 4: directed by Michael Artin, Alexander Grothendieck and Jean-Louis Verdier. SGA 4½: Pierre Deligne. SGA 5: directed by Alexander Grothendieck and edited by Luc Illusie. SGA 6: directed by Pierre Berthelot, Alexander Grothendieck and Luc Illusie. SGA 7 I: directed by Alexander Grothendieck. SGA 7 II: Pierre Deligne and Nicholas M. Katz. The creator list also names authors of individual exposés. Additional original redactors are credited separately; Monique Hakim appears as M. Jaffe in the original SGA 2 introduction. Nicolas Bourbaki and Daniel Ferrand are credited as named collaborators, not as authors of unwritten chapters.
+
+Original note redactors: Italo Giorgiutti, Jean Giraud, Monique Hakim, Olav Arnfinn Laudal and Ionel Bucur. These historical credits do not imply participation in or endorsement of this modern translation.
+
 ## Citation and stable links
 
 - Stable English-edition DOI: [10.5281/zenodo.21925497](https://doi.org/10.5281/zenodo.21925497)
 - Exact 2026-09-06 SGA2-refresh release DOI: [10.5281/zenodo.22551421](https://doi.org/10.5281/zenodo.22551421)
-- Global SGA hub DOI: [10.5281/zenodo.20410947](https://doi.org/10.5281/zenodo.20410947)
+- French original texts and Canon DOI: [10.5281/zenodo.20410947](https://doi.org/10.5281/zenodo.20410947)
 - Citation metadata: [`CITATION.cff`](CITATION.cff)
 
 For scholarly citation, use the stable English DOI when referring to the evolving edition and the exact release DOI when page-level reproducibility matters.
