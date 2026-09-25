@@ -1,6 +1,9 @@
 # Seminar in Algebraic Geometry (SGA) — Cumulative English Edition
 
-[Read the cumulative English edition — 4,211 pages](https://zenodo.org/records/22551421/files/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf?download=1).
+1. [Read the cumulative English edition — 4,211 pages](https://zenodo.org/records/22949043/files/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf?download=1).
+
+2. [Complete cumulative LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.tex).
+3. [Complete editable native source projects (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00z_SGA_EN_COMPLETE_EDITABLE_SOURCES.zip).
 
 English translations of the SGA seminars on algebraic geometry: fundamental groups, local and étale cohomology, group schemes, intersection theory and monodromy. The linked contents and volume bookmarks support reading across the collection; individual readers and editable LaTeX sources are also available.
 
@@ -22,7 +25,7 @@ Each link goes directly to a peer edition repository; there is no central hub. C
 | [FGA — English (external)](https://github.com/thosgood/fga) | English | Independently maintained external edition |
 
 [![Stable English DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21925497.svg)](https://doi.org/10.5281/zenodo.21925497)
-[![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22551421.svg)](https://doi.org/10.5281/zenodo.22551421)
+[![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22949043.svg)](https://doi.org/10.5281/zenodo.22949043)
 
 A navigable English reading edition of the *Séminaires de Géométrie Algébrique* (SGA), presented as one cumulative linked reader and nine smaller component readers.
 
@@ -30,21 +33,21 @@ A navigable English reading edition of the *Séminaires de Géométrie Algébriq
 
 ### [Open the 4,211-page linked reader (PDF, 34.0 MB)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf)
 
-The cumulative reader has two navigation frontmatter pages followed by 4,209 component pages, with 36,572 named destinations and 25,870 link annotations. The SGA2 reader has 185 pages. Its source, links, resources and visual checks are bound in the current hub PACKAGE_VALIDATION.json. The other eight readers retain their verified predecessor bytes.
+The cumulative reader has two navigation frontmatter pages followed by 4,209 component pages, with 36,572 named destinations and 25,870 link annotations. The English SGA 1 spectrum-notation repair is present in both readers. All component page streams, geometry and internal links are preserved by the cumulative assembly. SGA 2 remains 185 pages.
 
 Prefer a smaller file? Choose a volume below.
 
 | Volume | Main subject | Coverage in this release | Pages | English PDF |
 |---|---|---:|---:|---|
-| SGA 1 | Étale coverings and the fundamental group | Complete published scope; Exposé VII was never written | 260 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.pdf) |
-| SGA 2 | Local cohomology and Lefschetz theorems | Complete reader | 185 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.pdf) |
-| SGA 3 | Group schemes | Complete reader | 1,483 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/03_SGA3_EN_COMPLETE_READER.pdf) |
-| SGA 4 | Topos theory and étale cohomology | Complete reader | 864 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/04_SGA4_EN_COMPLETE_READER.pdf) |
-| SGA 4½ | Étale cohomology | Complete reader | 175 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/05_SGA4HALF_EN_COMPLETE_READER.pdf) |
-| SGA 5 | ℓ-adic cohomology and L-functions | Complete published content; all ten published exposés | 311 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.pdf) |
-| SGA 6 | Intersection theory and Riemann–Roch | Current layered reader; mixed source-alignment status | 376 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/07_SGA6_EN_CURRENT_LAYERED_READER.pdf) |
-| SGA 7 I | Monodromy groups in algebraic geometry, I | **Complete published volume:** Exposés I, II, VI–IX; no separately written/published Exposés III–V exist | 289 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.pdf) |
-| SGA 7 II | Monodromy groups in algebraic geometry, II | Complete reader; Exposés X–XXII | 266 | [Download](https://github.com/KokunoYumeto/sga-en/releases/latest/download/09_SGA7II_EN_COMPLETE_READER.pdf) |
+| SGA 1 | Étale coverings and the fundamental group | Complete published scope; Exposé VII was never written | 260 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.tex) |
+| SGA 2 | Local cohomology and Lefschetz theorems | Complete reader | 185 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.tex) |
+| SGA 3 | Group schemes | Complete reader | 1,483 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/03_SGA3_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/03_SGA3_EN_COMPLETE_READER.tex) |
+| SGA 4 | Topos theory and étale cohomology | Complete reader | 864 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/04_SGA4_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/04_SGA4_EN_COMPLETE_READER.tex) |
+| SGA 4½ | Étale cohomology | Complete reader | 175 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/05_SGA4HALF_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/05_SGA4HALF_EN_COMPLETE_READER.tex) |
+| SGA 5 | ℓ-adic cohomology and L-functions | Complete published content; all ten published exposés | 311 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.tex) |
+| SGA 6 | Intersection theory and Riemann–Roch | Current layered reader; mixed source-alignment status | 376 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/07_SGA6_EN_CURRENT_LAYERED_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/07_SGA6_EN_CURRENT_LAYERED_READER.tex) |
+| SGA 7 I | Monodromy groups in algebraic geometry, I | **Complete published volume:** Exposés I, II, VI–IX; no separately written/published Exposés III–V exist | 289 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.tex) |
+| SGA 7 II | Monodromy groups in algebraic geometry, II | Complete reader; Exposés X–XXII | 266 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/09_SGA7II_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/09_SGA7II_EN_COMPLETE_READER.tex) |
 
 > **Why does SGA 7 I jump from II to VI?** This is the published structure, not a gap in the English edition. Grothendieck's oral Exposés I–V were not separately written; their substance was summarized in the written Exposé I. The published volume therefore contains I, II, VI, VII, VIII, and IX, all of which are included here. See [the source-authority note](SOURCE_AUTHORITY.md#sga-7-i-numbering).
 
@@ -73,9 +76,13 @@ See [`SOURCE_AUTHORITY.md`](SOURCE_AUTHORITY.md) and [`LICENSE_AND_RIGHTS.md`](L
 
 ## Editable sources and audit trail
 
-> **SGA2 refresh — 2026-09-06:** [Exact English release](https://doi.org/10.5281/zenodo.22551421) · [matching GitHub release](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-09-06-sga2-r1). SGA2 English source-frontier refresh and dependent cumulative consumers only. Eight other English readers and source archives, including the accepted SGA4 refresh, and French fr.zip are preserved. This is not whole-SGA Canon completion.
+The cumulative `.tex` contains the complete text of nine native documents, with explicit volume markers; it is not a thin master. Use the included splitter and modular source projects for building. The native projects control exact PDF pagination; the flattened reading copies may reflow. Each individual PDF also has a direct `.tex` companion in the release.
 
-- [Editable English sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/10_SGA_EN_EDITABLE_SOURCES.zip)
+Notation correction, source packaging and cumulative assembly for this edition: **OpenAI Codex — GPT-6 Astra, Ultra effort**. Earlier provenance is retained; no independent human certification is implied.
+
+> **25 September 2026 edition:** The spectrum notation in English SGA 1 has been repaired in both the individual and cumulative readers. Mathematical statements are unchanged; the other eight volume PDFs retain their prior published contents.
+
+- [Editable English sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00z_SGA_EN_COMPLETE_EDITABLE_SOURCES.zip)
 - [Evidence and provenance archive (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/11_SGA_EN_EVIDENCE_AND_PROVENANCE.zip)
 - [SHA-256 manifest](https://github.com/KokunoYumeto/sga-en/releases/latest/download/12_SGA_EN_SHA256_MANIFEST.txt)
 - [`RELEASE_MANIFEST.json`](RELEASE_MANIFEST.json): exact files, byte sizes, hashes, and validation identities
@@ -93,7 +100,7 @@ Original note redactors: Italo Giorgiutti, Jean Giraud, Monique Hakim, Olav Arnf
 ## Citation and stable links
 
 - Stable English-edition DOI: [10.5281/zenodo.21925497](https://doi.org/10.5281/zenodo.21925497)
-- Exact 2026-09-06 SGA2-refresh release DOI: [10.5281/zenodo.22551421](https://doi.org/10.5281/zenodo.22551421)
+- Exact 25 September 2026 release DOI: [10.5281/zenodo.22949043](https://doi.org/10.5281/zenodo.22949043)
 - French original texts and Canon DOI: [10.5281/zenodo.20410947](https://doi.org/10.5281/zenodo.20410947)
 - Citation metadata: [`CITATION.cff`](CITATION.cff)
 
