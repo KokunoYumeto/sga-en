@@ -1,6 +1,6 @@
 # Seminar in Algebraic Geometry (SGA) — Cumulative English Edition
 
-1. [Read the cumulative English edition — 4,211 pages](https://zenodo.org/records/22949043/files/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf?download=1).
+1. [Read the cumulative English edition — 4,211 pages](https://zenodo.org/records/23112549/files/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf?download=1).
 
 2. [Complete cumulative LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.tex).
 3. [Complete editable native source projects (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00z_SGA_EN_COMPLETE_EDITABLE_SOURCES.zip).
@@ -25,7 +25,7 @@ Each link goes directly to a peer edition repository; there is no central hub. C
 | [FGA — English (external)](https://github.com/thosgood/fga) | English | Independently maintained external edition |
 
 [![Stable English DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21925497.svg)](https://doi.org/10.5281/zenodo.21925497)
-[![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22949043.svg)](https://doi.org/10.5281/zenodo.22949043)
+[![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23112549.svg)](https://doi.org/10.5281/zenodo.23112549)
 
 A navigable English reading edition of the *Séminaires de Géométrie Algébrique* (SGA), presented as one cumulative linked reader and nine smaller component readers.
 
@@ -33,7 +33,7 @@ A navigable English reading edition of the *Séminaires de Géométrie Algébriq
 
 ### [Open the 4,211-page linked reader (PDF, 34.0 MB)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf)
 
-The cumulative reader has two navigation frontmatter pages followed by 4,209 component pages, with 36,572 named destinations and 25,870 link annotations. The English SGA 1 spectrum-notation repair is present in both readers. All component page streams, geometry and internal links are preserved by the cumulative assembly. SGA 2 remains 185 pages.
+The cumulative reader has two navigation frontmatter pages followed by 4,209 component pages, with 36,568 named destinations and 25,870 link annotations. The validated SGA 1 and SGA 7 II correction batch is present in both the individual and cumulative readers, including the earlier spectrum-notation repair. All component page streams, geometry and internal links are preserved by the cumulative assembly. SGA 2 remains 185 pages.
 
 Prefer a smaller file? Choose a volume below.
 
@@ -76,12 +76,13 @@ See [`SOURCE_AUTHORITY.md`](SOURCE_AUTHORITY.md) and [`LICENSE_AND_RIGHTS.md`](L
 
 ## Editable sources and audit trail
 
-The cumulative `.tex` contains the complete text of nine native documents, with explicit volume markers; it is not a thin master. Use the included splitter and modular source projects for building. The native projects control exact PDF pagination; the flattened reading copies may reflow. Each individual PDF also has a direct `.tex` companion in the release.
+The cumulative `.tex` contains the complete text of nine native documents, with explicit volume markers; it is not a thin master. Use the included splitter and modular source projects for building. For SGA 1 and SGA 7 II, the updated direct LaTeX preserves native input boundaries and reproduces the released PDF bytes. The complete native projects remain available for every volume; use the source guide for inherited engine and dependency requirements. Each individual PDF also has a direct `.tex` companion in the release.
 
-Notation correction, source packaging and cumulative assembly for this edition: **OpenAI Codex — GPT-6 Astra, Ultra effort**. Earlier provenance is retained; no independent human certification is implied.
+Correction integration, source packaging and cumulative assembly for this edition: **OpenAI Codex — GPT-6 Astra, Ultra effort**. Earlier provenance is retained; no independent human certification is implied.
 
-> **25 September 2026 edition:** The spectrum notation in English SGA 1 has been repaired in both the individual and cumulative readers. Mathematical statements are unchanged; the other eight volume PDFs retain their prior published contents.
+> **3 October 2026 edition:** A verified correction batch in SGA 1 and SGA 7 II is incorporated into both the individual and cumulative readers. The other seven volume PDFs retain their prior published contents. This is a bounded integration release, not a claim that the Canon correction backlog is finished.
 
+- [Source and reproduction guide](https://github.com/KokunoYumeto/sga-en/releases/latest/download/10_SGA_EN_SOURCE_GUIDE.txt)
 - [Editable English sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00z_SGA_EN_COMPLETE_EDITABLE_SOURCES.zip)
 - [Evidence and provenance archive (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/11_SGA_EN_EVIDENCE_AND_PROVENANCE.zip)
 - [SHA-256 manifest](https://github.com/KokunoYumeto/sga-en/releases/latest/download/12_SGA_EN_SHA256_MANIFEST.txt)
@@ -100,7 +101,7 @@ Original note redactors: Italo Giorgiutti, Jean Giraud, Monique Hakim, Olav Arnf
 ## Citation and stable links
 
 - Stable English-edition DOI: [10.5281/zenodo.21925497](https://doi.org/10.5281/zenodo.21925497)
-- Exact 25 September 2026 release DOI: [10.5281/zenodo.22949043](https://doi.org/10.5281/zenodo.22949043)
+- Exact 3 October 2026 release DOI: [10.5281/zenodo.23112549](https://doi.org/10.5281/zenodo.23112549)
 - French original texts and Canon DOI: [10.5281/zenodo.20410947](https://doi.org/10.5281/zenodo.20410947)
 - Citation metadata: [`CITATION.cff`](CITATION.cff)
 
