@@ -3,7 +3,7 @@
 1. [Read the cumulative English edition — 4,211 pages](https://zenodo.org/records/23112549/files/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf?download=1).
 
 2. [Complete cumulative LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.tex).
-3. [Complete editable native source projects (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00z_SGA_EN_COMPLETE_EDITABLE_SOURCES.zip).
+3. [Complete editable native source projects (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_SOURCE_PROJECTS.zip).
 
 English translations of the SGA seminars on algebraic geometry: fundamental groups, local and étale cohomology, group schemes, intersection theory and monodromy. The linked contents and volume bookmarks support reading across the collection; individual readers and editable LaTeX sources are also available.
 
@@ -83,7 +83,7 @@ Correction integration, source packaging and cumulative assembly for this editio
 > **3 October 2026 edition:** A verified correction batch in SGA 1 and SGA 7 II is incorporated into both the individual and cumulative readers. The other seven volume PDFs retain their prior published contents. This is a bounded integration release, not a claim that the Canon correction backlog is finished.
 
 - [Source and reproduction guide](https://github.com/KokunoYumeto/sga-en/releases/latest/download/10_SGA_EN_SOURCE_GUIDE.txt)
-- [Editable English sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00z_SGA_EN_COMPLETE_EDITABLE_SOURCES.zip)
+- [Editable English sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_SOURCE_PROJECTS.zip)
 - [Evidence and provenance archive (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/11_SGA_EN_EVIDENCE_AND_PROVENANCE.zip)
 - [SHA-256 manifest](https://github.com/KokunoYumeto/sga-en/releases/latest/download/12_SGA_EN_SHA256_MANIFEST.txt)
 - [`RELEASE_MANIFEST.json`](RELEASE_MANIFEST.json): exact files, byte sizes, hashes, and validation identities
