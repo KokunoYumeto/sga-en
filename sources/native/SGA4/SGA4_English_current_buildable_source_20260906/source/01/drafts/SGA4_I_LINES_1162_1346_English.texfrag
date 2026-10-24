@@ -1,0 +1,185 @@
+\setcounter{subsection}{2}
+\subsection{}\etiquette[5.3]{I.sec5.3}
+Specializing these results to the case where $D$ is the category of
+$𝒰$-sets, one obtains a sequence of three functors:
+$$
+u_{!}, u^\ast, u_\ast {\quoi},
+$$
+which is a ``sequence of adjoint functors'' in the sense that
+for any two consecutive functors in the sequence, the one on the right is
+right adjoint to the other. Their\pageoriginale essential
+properties are summarized in the following proposition:
+
+\begin{enonce*}{Proposition 5.4}\etiquette[5.4]{I.prop5.4}
+Let $C$ be a small category, $C'$ a $𝒰$-category, and
+$u:C\rightarrow C'$ a functor.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $u^\ast:\widehat{C'}\rightarrow
+  \widehat{C}$ commutes with inductive and
+  projective limits.
+
+\item The functor $u_\ast:\widehat{C}\rightarrow
+  \widehat{C'}$ commutes with projective limits. For
+  every presheaf $F$ on $C$ and every object $Y$ of $C'$, one has:
+  $$
+  u_\ast F(Y)\xrightarrow{\sim}
+  \Hom_{\widehat{C}}(u^\ast(Y),F){\quoi}.
+  $$
+
+\hypertarget{sga4.exp.I.proposition.5.4.item.3}{}\item The functor $u_{!}:\widehat{C}\rightarrow
+  \widehat{C'}$ commutes with inductive limits. The
+  functor $u_{!}$ is defined only up to isomorphism, but it
+  can always be chosen so that the diagram
+\[
+\xymatrix@C=2.75cm@R=1.5cm{
+  C \ar[r]^{u}\ar[d]_{h}& C' \ar[d]^{h^\prime}\\
+C{\widehat{\phantom{\;i}}}\ar[r]^{u_{!}}&C'{\widehat{\phantom{\;i}}}}
+\]
+($h$ and $h'$ are the canonical inclusion functors) is
+commutative.
+
+For every presheaf $F$ on $C$, one has:
+$$
+u_{!}F\xrightarrow{\sim} \varinjlim_{C/F} h'\sisi{}{\circ}u{\quoi}.
+$$
+
+\item If finite projective limits are representable in
+  $C$ and if $u$ is left exact $\hyperref[I.cor2.3.2]{(2.3.2)}$, the functor $u_{!}$
+  is left exact.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+Assertion (1) is trivial. Assertion (2) follows from the fact that
+$u_\ast$ is a right adjoint functor, by (\hyperref[I.prop2.11]{2.11}) and
+(\hyperref[I.prop1.4]{1.4}). The same is true of assertion (3), but one
+also applies (\hyperref[I.prop3.4]{3.4}). Finally, assertion (4) is
+simply \sisi{5.2}({\hyperref[I.prop5.2]{5.2}}), which can be applied thanks to
+(\hyperref[I.def2.7]{2.7}).
+\end{enonce*}
+
+\begin{enonce*}{Proposition 5.5}\etiquette[5.5]{I.prop5.5}
+Let\pageoriginale $C$ and $C'$ be two small categories and let
+$\xymatrix@C=1cm{
+ C \ar@<-2.5pt>[r]_{u} & C'\ar@<-2.5pt>[l]_{v}
+}$ be a pair of functors, where $v$ is left adjoint to $u$. There
+are then isomorphisms, compatible with the adjunction
+isomorphisms:
+\[
+\xymatrix@R=.75cm{
+v^{\ast} \ar[rr]^{\sim}&    & u_!      &\\
+v_{\ast} \ar[rr]^{\sim}&    & u^{\ast} & . }
+\]
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+It suffices to exhibit an isomorphism $v^\ast\xrightarrow{\sim}
+u_{!}$; the other isomorphism follows from it by adjunction. Let $F$
+be a presheaf on $C$ and let $Y$ be an object of $C'$. Then:
+$$
+v^\ast F(Y)\xrightarrow{\sim} \Hom(v(Y),F){\quoi}.
+$$
+Next, using (\hyperref[I.prop3.4]{3.4}):
+$$
+\Hom(v(Y),F)\xrightarrow{\sim} \varinjlim_{C/F} \Hom(v(Y),.){\quoi}.
+$$
+But $v$ is left adjoint to $u$, and hence:
+$$
+\varinjlim_{C/F}\Hom(v(Y),.)\xrightarrow{\sim}\varinjlim_{C/F}\Hom(Y,u(.)){\quoi}.
+$$
+Now using (\hyperref[I.prop5.4]{5.4}.3)), one obtains:
+$$
+\varinjlim_{C/F}\Hom(Y,u(.))\xrightarrow{\sim}
+\Hom(Y,u_{!}F)\xrightarrow{\sim} u_{!}F(Y){\quoi}.
+$$
+Thus, for every object $Y$ of $C'$, we have determined an isomorphism
+$v^\ast F(Y)\xrightarrow{\sim} u_{!}F(Y)$ that is clearly
+functorial in $Y$ and in $F$, \cqfd
+\end{enonce*}
+
+\begin{enonce*}{Corollary 5.5.1}\etiquette[5.5.1]{I.cor5.5.1}
+Let $u:C\rightarrow C'$ be a functor that admits a left adjoint.
+The functor $u_{!}:\widehat{C}\rightarrow
+\widehat{C'}$ commutes with projective limits
+(recall that it commutes with inductive limits by $\hyperlink{sga4.exp.I.proposition.5.4.item.3}{(1.4.3)}$).
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 5.5.2}\etiquette[5.5.2]{I.rem5.5.2}
+One\pageoriginale thus obtains a ``sequence of \emph{four}
+adjoint functors'' (\cf \hyperref[I.sec5.3]{5.3}):
+$$
+v_{!}, v^\ast=u_{!}, v_\ast = u^\ast, u_\ast{\quoi},
+$$
+of which the first three (\resp  the last three) therefore commute with
+$\varinjlim$ (\resp  $\varprojlim$).
+\end{enonce*}
+
+\begin{enonce*}{Proposition 5.6}\etiquette[5.6]{I.prop5.6}
+The hypotheses are those of $\hyperref[I.prop5.4]{5.4}$. The following
+conditions are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $u$ is fully faithful.
+
+\item The functor $u_{!}$ is fully faithful.
+
+\item The adjunction morphism
+  $\id_{\widehat{C}}\rightarrow u^\ast u_{!}$ is an
+  isomorphism.
+
+\item The functor $u_\ast$ is fully faithful.
+
+\item The adjunction morphism $u^\ast u_\ast\rightarrow
+  \id_{\widehat{C}}$ is an isomorphism.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+It is clear that ii) $\Leftrightarrow$ iii) and iv) $\Leftrightarrow$
+v) (general properties of adjoint functors), and that ii)
+$\Rightarrow$ i) (\hyperref[I.prop5.4]{5.4}.3)). Let us show that i) $\Rightarrow$
+iii). The functors $\id_{\widehat{C}}$, $u^\ast$, and
+$u_{!}$ commute with inductive limits. By \hyperref[I.prop3.4]{(3.4)}, it therefore suffices
+to prove that $H\rightarrow u^\ast u_{!} H$ is an
+isomorphism when $H$ is representable, which is evident.
+Let us show that %%
+iii) is equivalent to %%
+v). For every object $H$ (\resp  $K$) of $\widehat{C}$,
+denote by $\Phi(H):H\rightarrow u^\ast u_{!} H$ (\resp  by
+$\Psi(K):u^\ast u_\ast\rightarrow K$) the adjunction morphism. We
+then have a commutative diagram:
+\[
+\xymatrix@C=3.5cm@L=6pt{
+\Hom_{\widehat{C}}(H,u^{\ast}u_{\ast}
+K)\ar@{-}[d]_{\wr}\ar[r]^{\quad \Hom(H,\Psi(K))}   & \Hom_{\widehat{C}}(H,K)\\
+\Hom_{\widehat{C}}(u_{!}H,u_{\ast}K)\ar@{-}[d]_{\wr} &  \\
+\Hom_{\widehat{C}}(u^{\ast}u_{!}H,K)\ar[uru]_{\quad
+   \Hom(\Phi(H),K)} & .
+}
+\]
+
+It\pageoriginale follows that $\Phi(H)$ is an isomorphism for every $H$
+if and only if $\Psi(𝒦)$ is an isomorphism for every
+$K$, \cqfd
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 5.7}\etiquette[5.7]{I.rem5.7}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The equivalences ii) $\Leftrightarrow$ iii)
+  $\Leftrightarrow$ iv) $\Leftrightarrow$ v) are general results
+  on adjoint functors.
+
+\item The explicit form of $u_{!}$ \resp  $u_\ast$ given in the
+  proof of \hyperref[I.prop1.4]{1.4} immediately shows that, under the general
+  hypotheses of \hyperref[I.def1.1]{1.1}, if $u$ is fully faithful, then the
+  adjunction morphism $\id\rightarrow u^\ast u_{!}$ (\resp  $u^\ast
+  u_\ast\rightarrow \id$) is an isomorphism, \ie that $u_{!}$
+  (\resp  $u_\ast$) is fully faithful.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{8} \setcounter{subsubsection}{-1}

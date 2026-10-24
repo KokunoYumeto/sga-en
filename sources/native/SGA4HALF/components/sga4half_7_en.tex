@@ -1,0 +1,1559 @@
+
+
+\chapter{Finiteness theorems in \texorpdfstring{$\ell$}{l}-adic cohomology}\label{VII}
+
+
+
+
+
+
+
+
+
+
+
+\section{Statement of the theorems}\label{VII:1}
+
+Throughout this exposé, $S$ will be a Noetherian scheme and $A$ a left
+Noetherian torsion ring annihilated by an integer invertible on $S$. Our main
+result is the following.
+
+
+
+
+
+
+\begin{theorem_}\label{VII:1-1}
+Suppose that $S$ is regular of dimension $0$ or $1$. Let $f:X\to Y$ be a
+morphism of $S$-schemes of finite type, and let $\sF$ be a constructible sheaf
+of left $A$-modules on $X$. Then the sheaves $\eR^i f_\ast \sF$ are
+constructible.
+\end{theorem_}
+
+The proof will be given in Section \ref{VII:2} and in \ref{VII:3-10}.
+
+
+
+
+
+
+\subsection{Remark}\label{VII:1-2}
+
+In characteristic $0$, this result is less general than
+\cite[XIX paragraphe 5]{sga4}, which proves the conclusion of the theorem for
+every morphism of finite type of excellent schemes of characteristic $0$.
+The proof of \cite[XIX]{sga4} uses, on the one hand, resolution of
+singularities and, on the other, the assumption that the schemes have equal
+characteristic (in order to deduce the ``purity theorem'' from resolution).
+
+
+
+
+
+
+\subsection{Remark}\label{VII:1-3}
+
+We shall say that a complex $K\in\ob\eD(X,A)$ is \emph{constructible} if its
+cohomology sheaves are constructible, and shall use a subscript $c$ for the
+subcategory of $\eD(X,A)$ (or $\eD^+$, $\eD^-$, $\eD^b$) consisting of
+constructible complexes. In the language of derived categories, which we
+shall use freely, \ref{VII:1-1} says that
+$\eR f_\ast:\eD^+(X,A) \to \eD^+(Y,A)$ sends $\eD_c^+$ into $\eD_c^+$.
+More explicitly:
+\begin{enumerate}[\indent a)]
+  \item For $K$ concentrated in a sheaf $\sF$ in degree $0$, one has
+    $\sH^i\eR f_\ast K = \eR^i f_\ast \sF$; the derived statement therefore
+    implies the theorem.
+  \item Conversely, one invokes the spectral sequence
+    \[
+      E_1^{p q} = \eR^q f_\ast \sH^p(K) \Rightarrow \sH^{p+q} \eR f_\ast K \text{.}
+    \]
+\end{enumerate}
+
+Speaking the language of derived categories has the advantage of replacing,
+by the simple transitivity formula $\eR(f g)_\ast = \eR f_\ast \eR g_\ast$,
+the Leray spectral sequence
+$E_2^{p q} = \eR^p f_\ast \eR^q g_\ast \Rightarrow \eR^{p+q} (f g)_\ast$.
+
+Under the hypotheses of \ref{VII:1-1}, it follows from \cite{sga4} that
+$\eR f_\ast$ has finite cohomological dimension. This makes it possible above
+to replace $\eD^+$ by $\eD$, $\eD^-$, or $\eD^b$.
+
+
+
+
+
+
+\subsection{Ideas of the proof}\label{VII:1-4}
+\begin{enumerate}[\indent a)]
+  \item Poincaré duality treats the case where $X$ is smooth, $\sF$ is
+    locally constant, and $Y=S$. The dimension hypothesis is seen na\"ively
+    when calculating the $\rHom$ on $S$.
+  \item Factor $f$ as $g j$: $g$ proper and $j$ an open immersion. One has
+    $\eR f_\ast = \eR g_\ast \eR j_\ast$, and the finiteness theorem for
+    proper morphisms controls $\eR g_\ast$. By dévissage, one reduces to
+    assuming that $X$ is smooth, $\sF$ is locally constant, $f$ is an open
+    immersion, and $Y$ is proper over $S$.
+  \item Naively, an induction on $\dim X$ (with a change of $S$) makes it
+    possible to suppose that the theorem is true outside a part of $Y$ finite
+    over $S$. Denoting the structure morphisms by $a:X\to S$ and $b:Y\to S$,
+    one then shows that if the theorem were false for $\sF$ and
+    $\eR f_\ast$, it would also be false for $\sF$ and
+    $\eR b_\ast \eR f_\ast = \eR a_\ast$: a contradiction.
+\end{enumerate}
+
+
+
+
+
+
+\begin{corollary_}\label{VII:1-5}
+Under the hypotheses of the theorem, the categories $\eD_c(X,A)$ and
+$\eD_c(Y,A)$ are taken into one another by the $4$ operations
+$\eR f_\ast$, $\eR f_!$, $f^\ast$, $\eR f^!$.
+\end{corollary_}
+
+The case of $\eR f_\ast$ is treated above, that of $\eR f_!$ in
+\cite[XVII 5.3]{sga4}, and that of $f^\ast$ is clear. It remains to consider
+$\eR f^!$. The problem is local, which makes it possible to suppose that $f$
+factors as $X\xrightarrow i Z \xrightarrow g Y$ ($i$ a closed immersion and
+$g$ smooth, purely of relative dimension $n$). Poincaré duality
+$\eR g^! K \iso g^\ast K(n)[2 n]$ and the transitivity
+$\eR f^! = \eR i^! \eR g^!$ reduce us to proving \ref{VII:1-5} for $i$.
+For every $L\in \eD(Z,A)$, if $j$ is the inclusion into $Z$ of
+$U=Z\setminus X$, then $i_\ast \eR i^! L$ is the mapping cylinder of
+$L\to \eR j_\ast j^\ast L$, and \ref{VII:1-5} for $i$ follows from
+\ref{VII:1-1} for $j$.
+
+
+
+
+
+
+\begin{corollary_}\label{VII:1-6}
+Let $X$ be as in the theorem, and suppose that $A$ is commutative. Then, if
+$\sF$ and $\sG$ are constructible sheaves of $A$-modules on $X$, the
+$\Ext_A^i(\sF,\sG)$ are constructible: $\rHom$ sends
+$\eD_c^-(X,A)\times \eD_c^+(X,A)$ into $\eD_c^+(X,A)$.
+\end{corollary_}
+
+By dévissage of $\sF$, we reduce to assuming that $\sF$ has the form
+$j_!\sF_1$ ($j:Y\hookrightarrow X$ a locally closed immersion and $\sF_1$
+locally constant on $Y$). One then has
+\[
+  \rHom(j_! \sF_1,\sG) = \eR j_\ast \Hom(\sF_1,\eR j^! \sG) \text{:}
+\]
+by \ref{VII:1-3}, we are reduced to the case where $\sF$ is locally
+constant---or even constant, since the problem is local. For $\sF$ locally
+constant and constructible, one has
+$\Hom(\sF,\sG)_x=\hom(\sF_x,\sG_x)$, and likewise for $\rHom$. For $\sF$
+constant, the $\Ext^i$ can therefore be calculated using a projective
+resolution of finite type of its constant value, and the $\Ext^i$ are
+constructible if $\sG$ is---whence the corollary.
+
+
+
+
+
+
+\subsection{Remark}\label{VII:1-7}
+
+Since $\eR f_\ast$ has finite cohomological dimension, it takes complexes of
+finite tor-dimension (resp. $\leqslant d$) to complexes of finite
+tor-dimension (resp. $\leqslant d$) \cite[XVII 5.2.11]{sga4}.
+\cite[XVII 5.2.10]{sga4} and the proof of \ref{VII:1-5} then show that finite
+tor-dimension is stable under the $4$ operations $\eR f_\ast$,
+$\eR f_!$, $f^\ast$, $\eR f^!$. A variant of the argument of
+\ref{VII:1-6} (apply dévissage to $K$ along a partition of $X$ so that the
+cohomology sheaves become locally constant, then localize so as to replace $K$
+by a finite complex of locally free sheaves of finite type) then shows that,
+for $A$ commutative, $\rHom$ induces
+\[
+  \rHom:\eD_\text{ctf}^b(X,A)\times \eD_\text{tf}^b(X,A) \to \eD_\text{tf}^+(X,A)
+\]
+(t.f.: finite tor-dimension).
+
+
+
+
+
+
+\subsection{}\label{VII:1-8}
+
+Under the hypotheses of the theorem, the same method allows us to prove a
+local biduality theorem $K\iso D D K$ (Section \ref{VII:4}). We also prove a
+finiteness theorem for vanishing-cycle sheaves. For arbitrary $S$, one still
+obtains a ``generic'' theorem:
+
+
+
+
+
+
+\begin{theorem_}\label{VII:1-9}
+Let $f:X\to Y$ be a morphism of $S$-schemes of finite type, and let $\sF$ be
+a constructible sheaf of $A$-modules on $X$. There is a dense open subset
+$U$ of $S$ such that
+\begin{enumerate}[\indent (i)]
+  \item Above $U$, the $\eR^i f_\ast \sF$ are constructible, and all but
+    finitely many of them vanish.
+  \item Formation of the $\eR^i f_\ast \sF$ is compatible with every base
+    change $S' \to U\subset S$.
+\end{enumerate}
+\end{theorem_}
+
+For $S$ the spectrum of a field, one has $U=S$.
+
+If $S$ is the spectrum of a field, a passage-to-the-limit argument gives
+compatibility with $S$-base changes for the $\eR^i f_\ast$ for every
+quasi-compact quasi-separated morphism of $S$-schemes and every sheaf $\sF$.
+
+
+
+
+
+
+\begin{corollary_}\label{VII:1-10}
+Let $X$ be a scheme of finite type over a separably closed $k$, and let
+$\sF$ be a constructible sheaf of $A$-modules. Then the $\h^i(X,\sF)$ are of
+finite type.
+\end{corollary_}
+
+This is the special case $S=\spec(k)$, $Y=S$.
+
+\begin{corollary_}\label{VII:1-11}
+Let $X$ and $Y$ be two schemes of finite type over a separably closed $k$,
+and let $K\in \ob\eD^-(X,A^\circ)$,
+$L\in \ob\eD^-(Y,A)$ be complexes of sheaves of right and left modules. The
+K\"unneth arrow
+\[
+  \eR \Gamma(X,K) \lotimes \eR \Gamma(Y,L) \to \eR\Gamma(X\times Y,\pr_1^\ast K \lotimes \pr_2^\ast L)
+\]
+is an isomorphism.
+\end{corollary_}
+
+Proceed as in \cite[XVII 5.4.3]{sga4}:
+\[\xymatrix{
+  X\times Y \ar[r]^-{\text{pr}_1} \ar[d]^-{\text{pr}_2}
+    & X \ar[d]^-a \\
+  Y \ar[r]^-b
+    & \spec(k)
+}\]
+base change by $b$ shows that $\eR\pr_{2,\ast}{} \pr_1^\ast K$ is
+$b^\ast \eR\Gamma(X,K)$. One then has (cf.
+\cite[XVII 5.2.11]{sga4} and the proof)
+
+\begin{align*}
+  \eR\Gamma(X\times Y,\pr_1^\ast K\lotimes \pr_2^\ast L)
+    &= \eR\Gamma(Y,\eR \pr_{2,\ast}(\pr_1^\ast K\lotimes \pr_2^\ast L)) \\
+    &= \eR\Gamma(Y,(\eR\pr_{2,\ast}\pr_1^\ast K)\lotimes L) \\
+    &= \eR\Gamma(Y,b^\ast \eR\Gamma(X,K)\lotimes L) \\
+    &= \eR\Gamma(X,K)\lotimes \eR\Gamma(Y,L)
+\end{align*}
+
+
+
+
+
+
+\subsection{}\label{VII:1-12}
+
+Finally, as a local counterpart of \ref{VII:1-9}(ii), we shall prove a
+generic local acyclicity theorem (\ref{VII:2-13}).
+
+
+
+
+
+
+
+
+
+
+
+\section{Generic theorems}\label{VII:2}
+
+In this section, we prove \ref{VII:1-9} and the generic local acyclicity theorem
+\ref{VII:2-13}. To prove \ref{VII:1-9}, we immediately reduce to the case where
+$S$ is integral. Let $\eta$ be its generic point.
+
+
+
+
+
+\subsection{}\label{VII:2-1}
+
+We begin by proving \ref{VII:1-9} under the following additional assumptions:
+$X$ is smooth over $S$, purely of relative dimension $n$, $A=\dZ/m$, $\sF$ is
+locally constant, and $Y=S$. Let $\sF'=\Hom(\sF,\dZ/m)$. We shall show that if
+the $\eR^i f_! \sF'$ are locally constant, the conclusions of \ref{VII:1-9}
+hold with $U=S$. Recall that if $\sL$ is a constructible locally constant
+sheaf, the $\Ext^i(\sL,\sG)$ may be computed fiber by fiber, and are
+constructible if $\sG$ is. Recall also that $\dZ/m$ is an injective
+$\dZ/m$-module and is the dualizing module, so that
+$\sF=\rHom(\sF',\dZ/m)$. Poincaré duality
+\[
+  \eR f_\ast \rHom(K,\eR f^! L) = \rHom(\eR f_! K,L) \text{,} 
+\]
+for $K=\sF'$, $L=\dZ/m$, $\eR f^! L = \dZ/m[2n](n)$, therefore gives
+\[
+  \eR^{2n-i} f_\ast \sF = \Hom(\eR^i f_! \sF',\dZ/m)(-n) \text{.} 
+\]
+
+The sheaf on the right is locally constant and its formation commutes with
+every base change, which proves the assertion.
+
+
+
+
+
+\subsection{}\label{VII:2-2}
+
+Let us prove \ref{VII:1-9} under the additional assumptions that $X$ is smooth
+over $S$, $\sF$ is locally constant, and $Y=S$.
+\begin{enumerate}[a)]
+  \item By decomposing $X$ into connected components, we reduce to the case
+    where it is purely of some relative dimension $n$ over $S$.
+  \item By decomposing $A$ as a product, we reduce to the case where
+    $\ell^m A=0$, with $\ell$ a prime invertible on $S$; we then filter $\sF$
+    by the $\ell^k \sF$ and use the corresponding spectral sequence to reduce
+    to the case $\ell\sF=0$. We may then replace $A$ by $A/\ell A$ and assume
+    that $\ell A=0$.
+  \item After replacing $S$ by a suitable $U$, we may assume that there exists
+    a finite étale Galois covering $X_1/X$, with Galois group $G$, such that
+    the inverse image $\sF_1$ of $\sF$ on $X_1$ is a constant sheaf, with
+    constant value $F$. Writing $f_1$ for the projection of $X_1$ onto $S$,
+    we then have
+    \[
+      \eR^i {f_1}_\ast \sF_1 = (\eR^i {f_1}_\ast \dZ/\ell)\otimes_{\dZ/\ell} F \text{.} 
+    \]
+    We also have the Hochschild--Serre spectral sequence (or the Leray
+    spectral sequence for the covering $X_1/X$)
+    \[
+      \underline\h^p(G,\eR^q {f_1}_\ast \sF_1) \Rightarrow \eR^{p+q} f_\ast \sF \text{.} 
+    \]
+    By \ref{VII:2-1}, after shrinking $U$ if necessary, we may assume that
+    the $\eR^i {f_1}_\ast \dZ/\ell$ are locally constant and that their
+    formation commutes with every base change. The same property then holds
+    for the $\eR^i f_\ast \sF$. Finally, if $\bar\eta$ is a geometric point
+    localized at the generic point $\eta$ of $S$, almost all the
+    $\eR^i f_\ast\sF$ vanish, because the
+    $(\eR^i f_\ast \sF)_{\bar\eta} = \h^i(X_{\bar \eta},\sF)$ do.
+\end{enumerate}
+
+
+
+
+
+\subsection{}\label{VII:2-3}
+
+We prove by induction on $n$ that
+\begin{equation*}\tag{$\ast_n$}\label{VII:eq:2-3-1}
+  \begin{array}{c}
+    \text{The conclusions of \ref{VII:1-9} hold when $\dim{X_\eta}\leqslant n$} \\
+    \text{and $f$ is an open immersion with dense image.}
+  \end{array}
+\end{equation*}
+
+For $n=0$, after shrinking $S$ if necessary, we have $X=Y$: $(\ast_0)$ is
+clear. Assume $(\ast_{n-1})$, and prove \eqref{VII:eq:2-3-1}. In
+($\ast_{n-1}$), ``open immersion'' may be replaced by ``immersion,'' as is
+seen by factoring it as an open immersion followed by a closed immersion.
+
+
+
+
+
+\begin{lemma_}\label{VII:2-4}
+After shrinking $S$ if necessary, the conclusions of \ref{VII:1-9} hold over
+$Y'\subset Y$, where the complement $Y_1$ of $Y'$ is finite over $S$.
+\end{lemma_}
+
+The assertion is local on $Y$, which we may assume affine:
+$Y\subset \dA_S^n$. The induction hypothesis ($\ast_{n-1}$) applies to
+\[\xymatrix{
+  X \ar[r]^-f \ar[dr] 
+    & Y \ar[d]^-{\pr_i} \\
+  & \dA_S^1 
+}\]
+Thus, for each $i$, there exists a dense open subset $U_i$ of $\dA_S^1$ such
+that the conclusions of \ref{VII:1-9} hold over $\pr_i^{-1}(U_i)$; they hold
+over the union of the $\pr_i^{-1}(U_i)$, and \ref{VII:2-4} follows.
+
+
+
+
+
+\addtocounter{subsection}{1} % a section is skipped in the original
+\subsection{}\label{VII:2-6}
+
+Let us prove \eqref{VII:eq:2-3-1} when $X$ is smooth over $S$ and $\sF$ is
+locally constant on $X$. Since the problem is local on $Y$, we may first
+assume $Y$ affine and then projective (replacing $Y$ by its closure in a
+projective space). Let $i:Y_1\hookrightarrow Y$ and $j:Y' \to Y$ be as in
+\ref{VII:2-4}.
+\[\xymatrix{
+  X \ar@{^{(}->}[r] \ar[dr]_-a 
+    & Y \ar[d]^-b 
+    & \ar[l]_-i \ar[dl]^-{b_1} Y_1 \\
+  & S 
+}\] 
+After shrinking $S$ if necessary, we know that $j^\ast \eR f_\ast \sF$ is
+constructible and that its formation commutes with every base change in $S$;
+we also know that $\eR a_\ast \sF = \eR b_\ast \eR f_\ast \sF$ is
+constructible and that its formation commutes with every base change.
+
+Apply $\eR b_\ast$ to the triangle defined by the exact sequence
+\begin{equation*}\tag{1}\label{VII:eq:2-6-1}
+\xymatrix{
+  0 \ar[r] 
+    & j_! j^\ast \eR f_\ast \sF \ar[r] 
+    & \eR f_\ast \sF \ar[r] 
+    & i_! i^\ast \eR f_\ast \sF \ar[r] 
+    & 0 \text{:} 
+}
+\end{equation*}
+we obtain a triangle
+\begin{equation*}\tag{2}\label{VII:eq:2-6-2}
+\xymatrix{
+  \ar[r] 
+    & \eR b_\ast j_! j^\ast \eR f_\ast \sF \ar[r] 
+    & \eR a_\ast \sF \ar[r] 
+    & {b_1}_\ast i^\ast \eR f_\ast \sF \ar[r] 
+    & 
+}
+\end{equation*}
+in which the first two terms are constructible and their formation commutes
+with every base change in $S$ (for the first, by the finiteness theorem for
+the proper morphism $b$). The same therefore holds for the third. Since $b_1$
+is finite, it follows that $i^\ast \eR f_\ast \sF$ is constructible and its
+formation commutes with every base change in $S$; the same holds for
+$\eR f_\ast \sF$ by \eqref{VII:eq:2-6-1}.
+
+
+
+
+
+\subsection{}\label{VII:2-7}
+
+Let us prove \eqref{VII:eq:2-3-1} in general. We first reduce to the case where
+$X$ contains a dense open subset $V$ smooth over $S$. When $S$ is the spectrum
+of a perfect field, it is enough to replace $X$ by $X_\text{red}$ (and $Y$ by
+$Y_\text{red}$). In general, we must shrink $S$, make a finite, radicial,
+surjective base change $S' \to S$, and replace $X$ and $Y$ by $X_\text{red}$
+and $Y_\text{red}$. Since the étale topology is insensitive to finite,
+radicial, surjective morphisms, this is harmless. After shrinking $V$, we may
+assume that $\sF$ is locally constant on $V$.
+\[\xymatrix{
+  V \ar@{^{(}->}[r]^j 
+    & X \ar@{^{(}->}[r]^-f 
+    & Y \text{.} 
+}\]
+Define $\Delta$ by the triangle
+\begin{equation*}\tag{1}\label{VII:eq:2-7-1}
+\xymatrix{
+  \ar[r] 
+    & \sF \ar[r] 
+    & \eR j_\ast j^\ast \sF \ar[r] 
+    & \Delta \ar[r] 
+    & \text{.} 
+}
+\end{equation*}
+The cohomology sheaves of $\Delta$ are supported on $X\setminus V$, and
+$\dim(X\setminus V)_\eta < n$. The induction hypothesis therefore allows us
+to assume that $\eR f_\ast \Delta$ is constructible. Applying $\eR f_\ast$ to
+the triangle \eqref{VII:eq:2-7-1}, we obtain a triangle
+\[\xymatrix{
+  \ar[r] 
+    & \eR f_\ast \sF \ar[r] 
+    & \eR(f j)_\ast j^\ast \sF \ar[r] 
+    & \eR f_\ast \Delta \ar[r] 
+    & 
+}\]
+in which two of the vertices are constructible and their formation commutes
+with every base change in $S$. The same therefore holds for the third.
+
+
+
+
+
+\subsection{}\label{VII:2-8}
+
+Let us prove \ref{VII:1-9}. The problem is local on $Y$, which we may assume
+affine. Taking an affine covering of $X$ and invoking the Leray spectral
+sequence, we reduce to the case where $X$ is affine as well. This ensures that
+we can factor $f$ as an open immersion followed by a proper morphism:
+$f=g j$, hence $\eR f_\ast = \eR g_\ast \eR j_\ast$. The open immersion is
+covered by \eqref{VII:eq:2-3-1}, and the proper morphism by the finiteness
+theorem.
+
+The following corollaries are proved as in \hyperref[VII:1]{Section 1}.
+
+
+
+
+
+\begin{corollary_}\label{VII:2-9}
+Under the hypotheses of the theorem, for $K$ in $\eD_c^b(X,A)$ or
+$\eD_c^b(Y,A)$ respectively, there exists a nonempty open subset $U$ of $S$
+over which $\eR f_\ast K$, $\eR f_! K$, $f^\ast K$, and $\eR f^! K$ belong to
+$\eD_c^b(Y,A)$ or $\eD_c^b(X,A)$, and their formation commutes with every base
+change $S' \to U\subset S$.
+\end{corollary_}
+
+
+
+
+
+\begin{corollary_}\label{VII:2-10}
+Let $X$ be as in the theorem, and suppose that $A$ is commutative. Then, if
+$\sF$ and $\sG$ are constructible sheaves of $A$-modules on $X$, over a dense
+open subset $U$ of $S$, the $\Ext_A^i(\sF,\sG)$ are again constructible and
+their formation commutes with every base change $S' \to U\subset S$.
+\end{corollary_}
+
+
+
+
+
+\subsection{}\label{VII:2-11}
+
+If $x$ is a geometric point of a scheme $X$, we denote by $X_x$ the strict
+henselization of $X$ at $x$. For $f:X\to S$ and $t$ a geometric point of $S$,
+we denote by $X_t$ the geometric fiber of $X$ at $t$. Finally, for $x$ a
+geometric point of $X$ and $t$ a geometric point of $S_{f(x)}$, $(X_x)_t$ is
+the fiber at $t$ of $X_x \to S_{f(x)}$.
+
+
+
+
+
+\begin{definition_}\label{VII:2-12}
+Let $f:X\to S$ and $K\in \ob\eD^+(X,A)$. We say that $f$ is \emph{locally
+acyclic at $x$ relative to $K$} if, for every geometric point $t$ of
+$S_{f(x)}$, we have $K_x=\eR\Gamma(X_x,K)\iso \eR\Gamma(X_{x,t},K)$. We say
+that $f$ is \emph{locally acyclic relative to $K$} if this holds for every
+$x$, and \emph{universally locally acyclic relative to $K$} if it remains true
+after every base change $S' \to S$.
+\end{definition_}
+
+
+
+
+
+\begin{theorem_}\label{VII:2-13}
+Let $f:X\to S$ be a morphism of finite type and let $\sF$ be constructible on
+$X$. There exists a dense open subset $U$ of $S$ over which $f$ is universally
+locally acyclic relative to $\sF$.
+\end{theorem_}
+
+We shall use the following result, proved in the appendix.
+
+
+
+
+
+\begin{lemma_}\label{VII:2-14}
+Let $X\xrightarrow f S_1 \xrightarrow g S_2$. If $g$ is smooth and $f$ is
+universally locally acyclic relative to $K$, then so is $g f$.
+\end{lemma_}
+
+We reduce to the case where $S$ is integral, with generic point $\eta$, and
+argue by induction on $\dim{X_\eta}$. We first deduce from the induction
+hypothesis that
+\begin{equation*}\tag{A}\label{VII:eq:2-14-1}
+  \begin{array}{c}
+    \text{After shrinking $S$, there exists $T\subset X$, finite over $S$, such that $f$} \\
+    \text{is universally locally acyclic outside $T$.} 
+  \end{array}
+\end{equation*}
+
+Since this question is local, we localize on $X$ and factor $f$ as
+$X\xrightarrow u \dA_S^1 \to S$. The induction hypothesis applies
+to $u$, and we conclude by \ref{VII:2-14} and the usual arguments.
+
+To prove the theorem, we may assume that $X$ is proper, since the problem is
+local. We shrink $S$ so that the $\eR^i f_\ast \sF$ are locally constant and
+\eqref{VII:eq:2-14-1} applies, and use the following lemma.
+
+
+
+
+
+\begin{lemma_}\label{VII:2-15}
+Let $f:X\to S$ be proper and let $\sF$ be constructible. Suppose that the
+$\eR^i f_\ast \sF$ are locally constant and that, outside $T\subset X$ finite
+over $S$, $f$ is locally acyclic relative to $\sF$. Then $f$ is locally
+acyclic relative to $\sF$.
+\end{lemma_}
+
+Let $s$ be a geometric point of $S$, let $S_s$ be the strict localization of
+$S$ at $s$, and let $t$ be a geometric point of $S_s$. Let $X_{(s)}$ be the
+inverse image of $X$ on $S_s$, let $\bar j:X_t \to X_{(s)}$, and let
+$i:X_s \hookrightarrow X_{(s)}$. Again denoting by $\sF$ the inverse image of
+$\sF$ on $X_{(s)}$ or $X_t$, we must prove that
+$i^\ast \sF \iso i^\ast \eR \bar j_\ast \sF$. Let $\Delta$ be the mapping
+cylinder of this map. Its cohomology sheaves are supported on $T_s$. To prove
+that $\Delta=0$, it therefore suffices to prove that
+$\eR\Gamma(X_s,\Delta)=0$. This is the mapping cylinder of
+$(\eR f_\ast \sF)_s = \eR\Gamma(X_s,\sF) \to \eR\Gamma(X_s,i^\ast \eR\bar j_\ast \sF) = \eR\Gamma(X_{(s)},\eR\bar j_\ast \sF) = \eR\Gamma(X_t,\sF) = (\eR f_\ast \sF)_t$.
+By hypothesis this specialization morphism is an isomorphism, and
+$\Delta=0$.
+
+
+
+
+
+\begin{corollary_}\label{VII:2-16}
+When $S$ is the spectrum of a field, every $S$-scheme $X$ is universally
+locally acyclic relative to $K$, for every $K\in\ob\eD^+(X,A)$.
+\end{corollary_}
+
+This follows from \ref{VII:2-13} by passage to the limit (which is possible
+because the $U$ of \ref{VII:2-13} is always equal to $S$.
+
+
+
+
+
+
+
+
+\section{Proof of \texorpdfstring{\ref{VII:1-1}}{1.1} and constructibility of the vanishing-cycle sheaves}\label{VII:3}
+
+
+
+
+
+
+\subsection{}\label{VII:3-1}
+
+Let $S$ be a strictly local trait (the spectrum of a henselian discrete
+valuation ring with separably closed residue field). Denote its closed and
+generic points by $s$ and $\eta$, and let $\bar\eta$ be a geometric point
+localized at $\eta$ (a separable closure of $k(\eta)$). Let $X$ be over $S$
+and let $\sF$ be a sheaf on $X_\eta$. Recall the definition of the
+vanishing-cycle sheaves $\eR^i \Psi_\eta(\sF)$ (sheaves on $X_s$, endowed with
+an action of $\gal(\bar\eta/\eta)$). Let $i:X_s\hookrightarrow X$,
+$j:X_\eta \hookrightarrow X$, and let $\bar j$ be the composite
+$X_{\bar\eta}\to X_\eta \hookrightarrow X$; then
+\[
+  \eR^i \Psi_\eta(\sF) = i^\ast \eR^i \bar j_\ast (\bar j^\ast \sF) \text{.} 
+\]
+
+Here is the main theorem of this subsection. It improves
+\cite[XIII 2.3.1, 2.4.2]{sga7}.
+
+
+
+
+
+
+\begin{theorem_}\label{VII:3-2}
+Suppose that $X$ is of finite type over $S$ and that $\sF$ is constructible.
+Then the vanishing-cycle sheaves $\eR^i \Psi_\eta(\sF)$ are constructible.
+\end{theorem_}
+
+We argue by induction on the dimension $n$ of $X_\eta$. We may moreover
+assume---and do assume---that $X_\eta$ is dense in $X$ (replacing $X$ by
+$\bar X_\eta$ does not change the $\eR^i \Psi$, which are supported on
+$\bar X_\eta$).
+
+
+
+
+
+
+\begin{lemma_}\label{VII:3-3}
+If \ref{VII:3-2} holds when $X_\eta<n$, and if
+$\dim X_\eta=n$, then there exist constructible subsheaves $\sG_i$ of the
+$\eR^i \Psi_\eta(\sF)$ such that the supports of the local sections of
+$\eR^i\Psi_\eta(\sF)/\sG_i$ are finite.
+\end{lemma_}
+
+Let $s'$ be a geometric generic point of the affine line over $s$, and let
+$S'$ be the strict localization at $s'$ of the affine line $\dA_S^1$ over
+$S$. It is again a strictly local trait, and uniformizers for $S$ are
+uniformizers on $S'$.
+\[\xymatrix{
+  & \spec(k') \ar[rr] \ar[dd] \ar[dr] 
+    & & (S',\eta',s') \ar[dr] \ar[dd] \\
+  \bar\eta' \ar[ur] \ar[dr] 
+    & & \dA_{\bar S}^1 \ar[d]  
+    & & \dA_S^1 \ar[dl] \\
+  & \bar\eta\ar@{^{(}->}[r] 
+    & \bar S \ar[r] 
+    & (S,\eta,s) 
+}\]
+Let $k'=k(\bar\eta)\otimes_{k(\eta)}k(\eta')$. If $\bar S$ is the
+normalization of $S$ in $\bar\eta$, then $k'$ is the fraction field of the
+strict localization of $\dA_{\bar S}^1$ at $s'$; it is therefore a field, and
+$\gal(\bar\eta/\eta)=\gal(k'/\eta')$. Let $\bar\eta'$ be the spectrum of an
+algebraic closure of $k'$. The Galois group $P=\gal(\bar\eta'/k')$ is a
+pro-$p$ group, where $p$ is the characteristic exponent of $k(s)$.
+
+
+
+
+
+
+\begin{lemma_}\label{VII:3-4}
+For every scheme $X'$ over $S'$, and every sheaf $\sF$ on
+$X_\eta'=X_{\eta'}'$, the vanishing-cycle sheaves for $X'/S'$ and for $X'/S$
+are related by
+$\eR^i \Psi_\eta(\sF) =\eR^i\Psi_{\eta'}(\sF)^P$.
+\end{lemma_}
+
+The following diagram compares the morphisms used in the definition of
+$\eR\Psi$ for $X'/S'$ and $X'/S$:
+\[\xymatrix{
+  X_{\bar\eta'} \ar[rr] \ar[d] 
+    & & X_{\eta'}' \ar@{=}[dd] \ar@{^{(}->}[dr] 
+    & & S' \\ 
+  X_{\eta'}\times_{\eta'}\spec(k') \ar@{=}[d] \ar[urr] 
+    & & & X \ar[ur] \ar[dr] \\
+  X_\eta' \ar[rr] 
+    & & X_\eta' \ar@{^{(}->}[ur] 
+    & & S
+}\]
+and the lemma follows from the Hochschild--Serre spectral sequence, since $P$
+is a pro-$p$ group and $p$ is invertible in $A$.
+
+Let us prove \ref{VII:3-3}. The question is local; this allows us to assume
+that $X$ is affine, $X\subset \dA_S^n$. Let $f$ be one of the projections
+$X\subset \dA_S^n\to \dA_S^1$. Let $X'$ be the ``localization''
+$X_{\dA_S^1} S'$ of $X$, and let $\sF'$ be the inverse image of $\sF$ on $X'$.
+\[\xymatrix{
+  \sF'\text{ on }X' \ar[r] \ar[d]^-\lambda 
+    & S' \ar[d]^-\lambda \\
+  \sF \text{ on }X \ar[r]^-f 
+    & \dA_S^1 \ar[r] 
+    & S \text{.} 
+}\]
+On $X_s'=X_{s'}'$, we have
+\[
+  \lambda^\ast \eR^i\Psi_\eta(\sF) = \eR^i \Psi_\eta(\sF') = \eR^i\Psi_{\eta'}(\sF')^P \text{:} 
+\]
+this sheaf is constructible because the induction hypothesis applies to
+$X'/S'$, and we use the following lemma, applied to
+$X_s\subset \dA_S^n$ and to the vanishing-cycle sheaves.
+
+
+
+
+
+
+\begin{lemma_}\label{VII:3-5}
+Let $\dA^n$ be affine $n$-space over a field $k$, let $X\subset \dA^n$, let
+$\sF$ be a sheaf of $A$-modules on $X$, and let $\bar\eta$ be a geometric
+generic point of $\dA^1$. Let $X_{\bar\eta,i}$ be the geometric generic fiber
+of $X\subset \dA^n\xrightarrow{\pr_i} \dA^1$, and let
+$\sF_{\bar\eta,i}$ be the restriction of $\sF$ to $X_{\bar\eta,i}$. If the
+$\sF_{\bar\eta,i}$ are constructible, there exists a constructible
+$\sF'\subset \sF$ such that the local sections of $\sF/\sF'$ have finite
+support.
+\end{lemma_}
+
+By passage to the limit, for each $i$
+\begin{enumerate}[a)]
+  \item There exists an étale neighborhood $U$ of $\bar\eta$ and a
+    constructible sheaf $\sH$ on
+    $X_{U,i} = X\times_{\dA^1,\pr_i} U$ whose restriction
+    $\sF_{\bar\eta,i}$ to $X_{\bar\eta,i}$ is the given one.
+  \item For a suitable $U$, the isomorphism
+    $\sH_{\bar\eta,i} \iso \sF_{\bar\eta,i}$ comes from
+    $u:\sH\to \sF_{U,i}$, where $\sF_{U,i}$ is the inverse image of $\sF$ on
+    $X_{U,i}$. Let $\varphi:X_{U,i} \to X$. The morphism $u$ defines
+    $v_i:\varphi_! \sH \to \sF$, with image $\sF_i'$. We have
+    $(\sF/\sF_i')_{\bar\eta,i} = 0$, and for $\sF'$ we take the sum of the
+    $\sF_i'$.
+\end{enumerate}
+
+
+
+
+
+
+\subsection{}\label{VII:3-6}
+
+Let us prove \ref{VII:3-2} in dimension $n$. We may assume that $X$ is affine
+(because the problem is local on $X_s$), and then projective over $S$ (by
+taking the closure of $X$ in a projective embedding). We then have a spectral
+sequence \cite[I 2.2.3]{sga7} (the Leray spectral sequence for $\bar j$, taking
+into account the base-change theorem for the proper morphism $X\to S$).
+\begin{equation*}\tag{1}\label{VII:eq:3-6-1}
+  E_2^{p q} = \h^p(X_s,\eR^q\Psi_\eta(\sF)) \Rightarrow \h^{p+q}(X_{\bar\eta},\sF) \text{.} 
+\end{equation*}
+Let $\sG^q\subset \eR^q \Psi_\eta(\sF)$ be as in \ref{VII:3-3}, and let
+$\sH^q$ be the quotient sheaf. We have $\h^i(X_s,\sH^q)=0$ for $i\ne 0$, and
+for $\sH^q$, hence $\eR^q\Psi_\eta(\sF)$, to be constructible, it suffices
+that $\h^0(X_s,\sH^q)$ be of finite type.
+
+Compute \eqref{VII:eq:3-6-1} modulo modules of finite type (i.e. in the
+quotient of the category of $A$-modules by the thick subcategory of
+$A$-modules of finite type). The long cohomology exact sequence deduced from
+$0 \to \sG^q \to \eR^q\Psi_\eta(\sF) \to \sH^q \to 0$, together with
+\ref{VII:1-10} applied to $\sG^q$, gives
+$E_2^{p q} \sim \h^p(X_s,\sH^q)$. In particular,
+$E_2^{p q}\sim 0$ for $p\ne 0$,
+$E_2^{0 q}\sim \h^q(X_{\bar\eta},\sF) \sim 0$, and this completes the proof.
+
+Parallel arguments give the following result, which improves
+\cite[XIII 2.1.12, 2.4.2]{sga7}.
+
+
+
+
+
+
+\begin{proposition_}\label{VII:3-7}
+The formation of the vanishing-cycle sheaves commutes with changes of traits.
+\end{proposition_}
+
+Let $g:(S',\eta',s') \to (S,\eta,s)$ be a (surjective) morphism of strictly
+local traits, let $X/S$, let $\sF$ be on $X_\eta$, of torsion prime to the
+residual characteristic, and let $(X',\sF')$ be their inverse images on $S'$.
+Again denoting by $g$ the morphisms parallel to $g$, such as
+$X_{s'}' \to X_s$, we must prove that
+\begin{equation*}\tag{3.7.1}\label{VII:eq:3-7-1}
+\xymatrix{
+  g^\ast \eR\Psi_\eta(\sF) \ar[r]^-\sim 
+    & \eR\Psi_{\eta'}(\sF') \text{.} 
+}
+\end{equation*}
+This morphism is defined by the commutative diagram
+\[\xymatrix{
+  X_{s'}' \ar@{^{(}->}[r]^-{i'} \ar[d]^-g 
+    & X' \ar[d]^-g 
+    & X_{\eta'}' \ar[l]_-{\bar j'} \ar[d]^-g \\
+  X_s \ar@{^{(}->}[r]^-i 
+    & X 
+    & \ar[l]_-{\bar j} X_{\bar\eta} 
+}\]
+
+A passage to the limit reduces us to the case where $X$ is of finite type
+over $S$, and we argue by induction on $\dim{X_\eta}$. Since the question is
+local, we may assume that $X$ is affine, and then projective. Assume
+\eqref{VII:eq:3-7-1} when $\dim{X_\eta}<n$. When $\dim{X_\eta}=n$, it then
+follows from the following two assertions, where $\Delta$ is the mapping
+cylinder of \eqref{VII:eq:3-7-1}.
+
+\begin{enumerate}[(A)]
+  \item The support of the local sections of the cohomology sheaves of
+    $\Delta$ is finite.
+    \phantomsection\hypertarget{VII:3-A}{}
+  \item $\eR\Gamma(X_s,\Delta)=0$, hence $\Delta=0$, by
+    (\hyperlink{VII:3-A}{A}).
+    \phantomsection\hypertarget{VII:3-B}{}
+\end{enumerate}
+
+
+
+
+
+\subsection{}\label{VII:3-8}
+
+The proof of (\hyperlink{VII:3-A}{A}) parallels that of \ref{VII:3-3}. We
+localize on $X$ and consider maps $X\to \dA_S^1$; denoting by $S(x)$ the
+strict henselization of $\dA_S^1$ at the generic point of the special fiber,
+we apply the induction hypothesis to $X_1/S(x)$
+($X_1=X\times_{\dA^1} S(x)$) and to $S'(x)$. Taking invariants under a pro-$p$
+group, we find that $\Delta$ vanishes on the geometric generic fiber of
+$X_{s'} \to \dA_s^1$. Since this holds locally on $X$ and for every
+projection, we obtain (\hyperlink{VII:3-A}{A}).
+
+
+
+
+
+
+\subsection{}\label{VII:3-9}
+
+For (\hyperlink{VII:3-B}{B}), the properness of $X$ over $S$ ensures that
+\[
+  \eR\Gamma(X_{s'}',\eR\Psi_{\eta'}(\sF')) = \eR\Gamma(X_{\bar\eta}',\sF') 
+\]
+and
+\[
+  \eR\Gamma(X_s,\eR\Psi_\eta(\sF)) = \eR\Gamma(X_{\bar\eta},\sF) \text{.} 
+\]
+We have
+$\eR\Gamma(X_s,\eR\Psi_\eta(\sF))\iso \eR\Gamma(X_{s'}',g^\ast\eR\Psi_\eta(\sF))$
+(invariance under change of the separably closed base field); thus
+$\eR\Gamma(X_{s'}', \Delta)$ is the mapping cylinder of
+$\eR\Gamma(X_{\bar\eta},\sF) \to \eR\Gamma(X_{\bar\eta}',\sF')$, an
+isomorphism by the same invariance theorem.
+
+
+
+
+
+
+\subsection{}\label{VII:3-10}
+
+Let us prove \ref{VII:1-1}. We reduce to the case where $S$ is connected,
+hence integral. If $\dim S=0$ ($S$ is the spectrum of a field), apply
+\ref{VII:1-9}, \ref{VII:1-10}. If $S$ has dimension $1$, Theorem
+\ref{VII:1-9} ensures that the $\eR^i f_\ast \sF$ are constructible over the
+complement of a finite set $T$ of points of $S$. It remains to see that their
+restrictions to the $Y_t$ ($t\in T$) are constructible. It suffices to see
+this after localization at $t$: we may assume that $S$ is a strictly local
+trait. The essential case is the following.
+
+
+
+
+
+
+\begin{lemma_}\label{VII:3-11}
+Let $X$ be of finite type over $S$, let $j:X_\eta\hookrightarrow X$,
+$i:X_s\hookrightarrow X$, and let $\sF$ be constructible on $X_\eta$. Then
+$i^\ast\eR j_\ast \sF$ is constructible.
+\end{lemma_}
+
+Let $I=\gal(\bar\eta/\eta)$ be the inertia group. It is known to be an
+extension of $\widehat\dZ_{p'}(1)$ by a pro-$p$ group $P$ ($p$ being the
+characteristic exponent of the residue field). The Hochschild--Serre spectral
+sequence gives
+\[
+  E_2^{p q} = \sH^p(I,\eR^q\Psi_\eta(\sF))\Rightarrow i^\ast \eR^{p+q}j_\ast\sF \text{.} 
+\]
+Let $R_t^q = \eR^q\Psi_\eta(\sF)^P$ ($t$ for tame). If $\sigma$ is a
+generator of $\widehat\dZ_{p'}(1)$, then
+$E_2^{0 q} = \ker(\sigma-1,R_t^q)$,
+$E_2^{1 q} = \operatorname{coker}(\sigma-1,R_t^q)$, and $E_2^{p q} = 0$ for
+$p\ne 0,1$. These sheaves are constructible because the vanishing-cycle
+sheaves are, and \ref{VII:3-11} follows.
+
+
+
+
+
+
+\subsection{}\label{VII:3-12}
+
+Let us treat the general case, with $S$ still a strictly henselian trait. If
+$X=X_\eta$, then $f$ is the composite $X\to Y_\eta \to Y$, and we apply
+\ref{VII:1-9} and \ref{VII:3-11}. In the general case, let
+$j:X_\eta\hookrightarrow X$ and let $\Delta$ be the mapping cylinder of
+$\sF \to \eR j_\ast j^\ast \sF$. Its cohomology sheaves are supported on
+$X_s$; by \ref{VII:1-9} applied to $X_s \to Y_s$,
+$\eR f_\ast \Delta$ is therefore constructible. The complex
+$\eR f_\ast \eR j_\ast j^\ast \sF = \eR(f j)_\ast j^\ast \sF$ is also
+constructible, and we conclude from the triangle
+\[\xymatrix{
+  \ar[r] 
+    & \eR f_\ast \sF \ar[r] 
+    & \eR f_\ast \eR j_\ast j^\ast \sF \ar[r] 
+    & \eR f_\ast \Delta \ar[r] 
+    & \text{.} 
+}\]
+
+
+
+
+
+
+
+
+
+
+\section{Local biduality}\label{VII:4}
+
+
+
+
+
+
+\subsection{}\label{VII:4-1}
+
+Let $S$ be regular of dimension $0$ or $1$, and put $K_S=A$ (the constant
+sheaf with value $A$). For $K\in\ob\eD_\text{ctf}^b(S,A)$, put
+$D K=\rHom(K,K_S)\in\ob\eD^+(S,A^\circ)$ (a complex of sheaves of right
+$A$-modules). We still have $D K\in\ob\eD_\text{ctf}^b(S,A^\circ)$, and an explicit
+calculation, possible because $S$ has dimension $1$, shows that
+$K\iso D D K$ (for $A=\dZ/n$, \hyperref[V]{Duality} \ref{V:1-4}).
+
+
+
+
+
+\subsection{}\label{VII:4-2}
+
+We assume that $A$ is commutative, an assumption that is probably
+unnecessary. For $a:X\to S$ of finite type over $S$, put
+$K_X=\eR a^! K_S$. For $K\in\ob\eD_\text{ctf}^b(X,A)$, put
+$D K=\rHom(K,K_X)\in\ob\eD_\text{ctf}^b(X,A)$. Our main result is the
+following.
+
+
+
+
+
+\begin{theorem_}\label{VII:4-3}
+We have $K\iso D D K$ ($K\in \ob\eD_\textnormal{ctf}^b(X,A)$).
+\end{theorem_}
+
+
+
+
+
+\begin{lemma_}\label{VII:4-4}
+If $a$ is proper, then $\eR a_\ast K \iso \eR a_\ast D D K$.
+\end{lemma_}
+
+Poincaré duality
+\[
+  \eR a_! \rHom(K,\eR a^! K_S) = \rHom(\eR a_! K,K_S) 
+\]
+gives us an isomorphism $\eR a_\ast D = D \eR a_! = D \eR a_\ast$. The lemma
+follows from the commutativity of the diagram (\hyperref[V]{Duality},
+\ref{V:1-2})
+\[\xymatrix{
+  \eR a_\ast K \ar[r] \ar[d]^-\wr 
+    & \eR a_\ast D D K \ar[d]^-\wr \\
+  D D \eR a_\ast K \ar[r]^-\sim 
+    & D \eR a_\ast D K \text{.} 
+}\]
+
+
+
+
+
+\subsection{}\label{VII:4-5}
+
+By localization, it is enough to treat the cases where $S$ is the spectrum
+of a field or a trait. When $S$ is the spectrum of a field, we argue by
+induction on $\dim X$. Since the problem is local, we may assume that $X$ is
+proper. Moreover, the induction hypothesis, by the usual arguments, ensures
+that the mapping cylinder $\Delta$ of $K\to D D K$ has skyscraper cohomology
+sheaves. The lemma then ensures that $\eR a_\ast \Delta=0$, hence that
+$\Delta=0$.
+
+
+
+
+
+\subsection{}\label{VII:4-6}
+
+When $S$ is a trait, we already know that \ref{VII:4-3} holds on the generic
+fiber (\ref{VII:4-5}). We may also assume that $X$ is proper over $S$, and we
+argue by induction on $\dim{X_s}$, with $X$ proper over $S$. The mapping
+cylinder $\Delta$ again has skyscraper cohomology sheaves on $X_s$, and we
+conclude as above.
+
+
+
+
+
+\subsection{}\label{VII:4-7}
+
+Suppose that $A=\dZ/m$. We then have a variant of the preceding theory in
+which $K$ is arbitrary in $\eD_c^b(X,A)$. The complex $\eR a^! \dZ/m$ has
+finite injective dimension \cite[XVIII 3.1.7]{sga4}. This ensures that $D K$
+still belongs to $\eD_c^b(X,A)$. To prove local biduality over $S$, we use the
+fact that $\dZ/m$ is the dualizing $\dZ/m$-module. We then proceed as above.
+
+
+
+
+
+
+
+
+
+
+\section{Appendix, by L.\ Illusie}\label{VII:5}
+
+In this appendix, which takes up certain parts of the late
+\cite[II]{sga5}, and a letter from P.\ Deligne to the author, we prove
+\ref{VII:2-14}, as well as various generalizations and variants of the
+specialization theorems \cite[XVI 2.1]{sga4} and
+(\hyperref[I]{Étale cohomology} \ref{I:5-1-7}).
+
+The schemes and morphisms considered will be assumed quasi-compact and
+quasi-separated. If $X$ is a scheme and $x$ a geometric point of $X$, we
+denote by $X(x)$ the strict localization of $X$ at $x$.
+
+Fix a base scheme $S$ and a sheaf of rings $A$ on $S$ (not necessarily
+commutative or noetherian). If $X$ is an $S$-scheme, we write $\eD(X)$ for
+$\eD(X,A_X)$.
+
+
+
+
+
+\subsection{Cohomological properness}\label{VII:5-1}
+
+
+
+
+
+
+\begin{proposition}\label{VII:5-1-1}
+Let $f:X\to Y$ be an $S$-morphism and let $E\in\ob \eD^+(X)$. The following
+conditions are equivalent:
+\begin{enumerate}[\indent (i)]
+  \item The formation of $\eR f_\ast E$ commutes with every finite base change
+    $S'\to S$.
+  \item The formation of $\eR f_\ast E$ commutes with every quasi-finite base
+    change (or inverse limit of quasi-finite morphisms) $S'\to S$.
+  \item For every specialization arrow $i:t\to S(s)$
+    (\hyperref[I]{Étale cohomology}, \ref{I:5-1-2}), if $\bar S$ denotes
+    the normalization in $k(\bar t)$ of the integral scheme that is the
+    closure of $i(t)$ in $S(s)$ (by
+    \cite[IV, 6.15.5, 18.6.11, 18.8.16]{ega}, $\bar S$ is therefore local and
+    integral, with closed point radicial over $s$), if
+    $\bar f:\bar X\to \bar Y$ is the morphism deduced from $f$ by the base
+    change $\bar S\to S$, and if $f_s:X_s\to Y_s$ is the fiber of $f$ at $s$,
+    then the base-change arrow
+    \[
+      (\eR \bar f_\ast (E|\bar X))|Y_s \to \eR {f_s}_\ast(E|X_s) 
+    \]
+    is an isomorphism.
+\end{enumerate}
+\end{proposition}
+
+The equivalence of (i) and (ii) follows from Zariski's Main Theorem, and it is
+clear that (ii) implies (iii). Let us prove that (iii) implies (ii). For every
+$S'\to S$ that is an inverse limit of quasi-finite morphisms, and every
+geometric point $s$ of $S'$, denote by $C(S',s)$ the cone of the base-change
+arrow
+\[
+  (\eR f'_\ast(E|X'))|Y_s \to \eR{f_s}_\ast (E|X_s) \text{,} 
+\]
+where $f':X'\to Y'$ is deduced from $f$ by the base change $S'\to S$, and
+$f_s:X_s\to Y_s$ is the fiber of $f$ at $s$. We must prove that, for every
+$(S',s)$ as above, $C(S',s)$ is acyclic. We shall prove by induction on $N$ that
+$\h^i C(S',s) = 0$ for $i\leqslant N$. By the Main Theorem, passage to the
+limit, and elimination of radicial morphisms, we may assume that $S$ and $S'$
+are strictly local, that $S'$ is integral with closed point $s$, and that
+$S'\to S$ is finite. Let $t$ be a geometric generic point of $S'$, and let
+$\bar S$ be the normalization of $S'$ in $k(t)$. Let $\bar S_\bullet$ be the
+simplicial scheme that is the coskeleton of $\bar S\to S'$
+($\bar S_0=\bar S$,\ldots $\bar S_n=(\bar S/S')^{n+1}$,\ldots), and let
+$\bar X_\bullet=X'\times_{S'} \bar S_\bullet$. Let
+$g_\bullet:\bar X_\bullet \to X'$ be the canonical projection. Put
+$E|X'=E'$. The bicomplex ${g_\bullet}_\ast g_\bullet^\ast E'$, whose columns
+are the ${g_n}_\ast g_n^\ast E'$, is a resolution of $E'$
+\cite[VIII 8]{sga4}. We may therefore represent $C(S',s)$ by a bicomplex whose
+columns identify with the $C(\bar S_n,s)$. By (iii),
+$C(\bar S_0,s)=C(\bar S,s)$ is acyclic. On the other hand, for $n>0$, we have
+$\h^i C(\bar S_n,s)=0$ for $i\leqslant N$ by the induction hypothesis. It
+follows that $\h^i C(S',s)=0$ for $i\leqslant N+1$, which completes the proof.
+
+
+
+
+
+\subsubsection{Remark}\label{VII:5-1-2}
+
+Let $(f,E)$ satisfy condition (i) of \ref{VII:5-1-1}.
+\begin{enumerate}[a)]
+  \item If $E\in \ob \eD^b(X)$ and $f_\ast$ has finite cohomological
+    dimension, then for every $F\in \ob\eD^-(S,A^\circ)$, the canonical arrow
+    \begin{equation*}\tag{$*$}\label{VII:eq:5-1-1-1}
+      \eR f_\ast(E)\lotimes_A q^\ast F \to \eR f_\ast(E\lotimes_A p^\ast F) \text{,} 
+    \end{equation*}
+    where $p:X\to S$ and $q:Y\to S$ are the projections, is an isomorphism.
+    The same conclusion holds with $E\in\ob\eD^-(X)$.
+\end{enumerate} 
+
+Indeed, by dévissage, it is enough to verify the assertion for $F$ of the
+form $i_! A_{S'}$, with $i:S'\to S$ quasi-finite. By the Main Theorem, we
+reduce to the case where $i$ is finite, and the conclusion is then equivalent
+to the commutation of $\eR f_\ast(E)$ with base change by $i$.
+\begin{enumerate}[a)]
+\setcounter{enumi}{1}
+  \item Suppose that $A$ is noetherian and constructible. Then, for every
+    constructible $F\in\ob\eD^b(S,A^\circ)$ of finite tor-dimension, the arrow
+    \eqref{VII:eq:5-1-1-1} above is an isomorphism.
+\end{enumerate}
+
+Indeed, by dévissage, we reduce to the case where $F$ is of the form $i_! M$,
+with $i:S'\to S$ locally closed, $A$ locally constant on $S'$, and $M$
+constructible, of finite tor-dimension, and with locally constant cohomology
+on $S'$. After base change from $S$ to $S'$, we are thus reduced to the case
+where $F$ is perfect \cite[I]{sga6}, hence finally, by localization and
+dévissage, to the case $F=A$, for which the conclusion is immediate.
+
+
+
+
+
+\subsubsection{}\label{VII:5-1-3}
+
+Let $f:X\to Y$ be an $S$-morphism and let $E\in\ob\eD^+(X)$. We say that
+$(f,E)$ is \emph{cohomologically proper} rel.\ to $S$ if the formation of
+$\eR f_\ast E$ commutes with every base change $S'\to S$. Equivalently, after
+every base change $S'\to S$, the formation of $\eR f_\ast' E'$ (where
+$f'=f\times_S S'$ and $E'=$ the inverse image of $E$ on $X\times_S S'$)
+commutes with every finite base change $S'' \to S'$ (cf.
+\cite[XII 6.1]{sga4}). Here are some examples of cohomological properness
+(for a study of the analogous notion for sheaves of sets or of
+noncommutative groups, the reader may consult \cite[XIII]{sga1}).
+\begin{enumerate} % originally 1.3.1, 1.3.2, ...
+  \item Suppose that $A$ is torsion and $f$ is proper. Then, for every
+    $E\in\ob\eD^+(X)$, $(f,E)$ is cohomologically proper rel.\ to $S$
+    (proper base-change theorem, \cite[XII 5.1]{sga4}).
+  \item Suppose that $S$ is finite, that $X$ and $Y$ are of finite type over
+    $S$, and that $A$ is annihilated by an integer invertible on $S$. Then,
+    for every $E\in\ob\eD^+(X)$, $(f,E)$ is cohomologically proper rel.\ to
+    $S$ (\ref{VII:1-9}).
+  \item Suppose that $A$ is constant, noetherian, and annihilated by an
+    integer $n$ invertible on $S$, and that
+    $f:X=Y\setminus D\to Y$ is the inclusion of the complement of a divisor
+    $D$ on $Y$ with normal crossings relative to $S$
+    \cite[XIII 2.1]{sga1}. Let $E$ be a sheaf of $A$-modules on $X$ satisfying
+    one of the following conditions:
+    \begin{enumerate}[(i)]
+      \item $E$ is constructible locally constant and tamely ramified along
+        $D$;
+      \item $E$ is, locally for the étale topology on $Y$ and on $S$, the
+        inverse image of a sheaf of $A$-modules on $S$.
+    \end{enumerate}
+    Then $(f,E)$ is cohomologically proper rel.\ to $S$, and $\eR f_\ast E$
+    is constructible (compare \cite[XIII 2.4]{sga1}).
+\end{enumerate} 
+
+Let us sketch the proof in case (i). The question is local near a point $y$
+of $Y$. We may assume that $D$ is a sum of smooth divisors,
+$D=\sum_{i=1}^m D_i$. By the relative Abhyankar lemma
+\cite[XIII 5.5]{sga1}, near $y$ we may trivialize $E$ by a finite covering
+$\widetilde Y\to Y$ of the form
+$\widetilde Y=Y[T_1,\dots,T_r]/(T_1^{n_1}-t_1,\dots,T_r^{n_r}-t_r)$, where the
+$t_i$ are local equations of the smooth divisors passing through $y$, and the
+$n_i$ are integers prime to the char.\ of $k(y)$. The inverse image
+$\widetilde D$ of $D$ in $\widetilde Y$ still has normal crossings rel.\ to $S$, and
+if $g:\widetilde X=\widetilde Y\setminus \widetilde D\to X$ is the projection,
+$g^\ast E$ is constant. Since $E$ injects into $g_\ast g^\ast E$ and the
+quotient is tamely ramified, an easy dévissage reduces us to the case where
+$E$ is constant. Denote the projections by $p:X\to S$, $q:Y\to S$, and, for
+$1\leqslant i\leqslant m$, let $f_i:Y\setminus D_i \to Y$ be the canonical
+inclusion. From the relative purity theorem \cite[XVI 3.7]{sga4}, one easily
+deduces by induction on $m$ that, for every locally constant $A$-module $M$ on
+$S$, the canonical arrow
+\begin{equation*}\tag{5.1.3.1}\label{VII:eq:5-1-3-3-1} % originally 1.3.3.1
+  \eR f_\ast (\dZ/n)\lotimes q^\ast M\to \eR f_\ast (p^\ast M) 
+\end{equation*}
+is an isomorphism, and that on the other hand we have:
+\begin{align*}\tag{5.1.3.2}\label{VII:eq:5-1-3-3-2}
+  {f_i}_\ast(\dZ/n) &= \dZ/n \text{,} \\
+  \eR^1 {f_i}_\ast (\dZ/n) &= (\dZ/n)(-1)_{D_i} \text{,} 
+\end{align*}
+where a canonical isomorphism is given by the fundamental class $\cl(D_i)$
+(\hyperref[IV]{Cycle} \ref{IV:2-1-4}),
+\begin{align*}
+  \eR^q {f_i}_\ast(\dZ/n) &= 0\text{ for $q>1$,} \\
+  \eR f_\ast (\dZ/n) &= \bigotimes_i^\eL \eR {f_i}_\ast (\dZ/n) \text{ , i.e.:} \\
+  \eR^1 f_\ast(\dZ/n) &= \bigoplus_{i=1}^m (\dZ/n)(-1)_{D_i} \text{,} \\
+  \textstyle\bigwedge^\bullet \eR^1 f_\ast(\dZ/n) &\iso \eR^\bullet f_\ast (\dZ/n) \text{.} 
+\end{align*}
+The conclusion of 3, in case (i), therefore follows from
+\eqref{VII:eq:5-1-3-3-1} and \eqref{VII:eq:5-1-3-3-2}. In case (ii), by
+passage to the limit we reduce to the case where $E=p^\ast M$, with $M$
+constructible, and then, by dévissage and base change (using (i)), to the
+already treated case where $M$ is constant.
+
+It follows from the preceding proof that \eqref{VII:eq:5-1-3-3-1} is an
+isomorphism for every $M\in\ob\eD^+(S)$.
+
+One may compare the formulas \eqref{VII:eq:5-1-3-3-2} with the analogous
+formulas in integral cohomology when $S=\spec(\dC)$ (see, for example,
+\cite[3.1]{de71-2}), which follow from the fact that, locally for the classical
+topology, the complement of $D$ has the homotopy type of a torus.
+
+By passage to the limit, one deduces from \eqref{VII:eq:5-1-3-3-2} similar
+formulas in $\ell$-adic cohomology, i.e. with $\dZ/n$ replaced by $\dZ_\ell$
+($\ell$ a prime invertible on $S$). Suppose that $q:Y\to S$ is proper and
+smooth. It then follows from the Weil conjectures \cite{de74,de80} that the
+Leray spectral sequence
+\[
+  E_2^{i j} = \eR^i q_\ast \eR^j f_\ast \dZ_\ell \Rightarrow \eR^\bullet p_\ast \dZ_\ell 
+\]
+degenerates at $E_3$ modulo torsion \cite[\S 6]{de71-1}. The same phenomenon
+occurs in integral cohomology when $S=\spec(\dC)$; see (loc.\ cit.) and
+\cite[3.2.13]{de71-2}.
+
+
+
+
+
+\subsection{Specialization and cospecialization}\label{VII:5-2}
+
+Let $f:X\to S$ and $E\in\ob\eD^+(X)$.
+
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-1}
+
+Suppose that the formation of $\eR f_\ast E$ commutes with every finite base
+change. For every specialization $u:t\to S(s)$ of geometric points of $S$,
+we then define an arrow, called the \emph{specialization arrow},
+\begin{equation*}\tag{5.2.1.1}\label{VII:eq:5-2-1-1}
+  \spe(u):\eR\Gamma(X_s,E|X_s) \to \eR\Gamma(X_t,E|X_t) \text{,}
+\end{equation*}
+as follows. Let, as in \ref{VII:5-1-1}(iii), $\bar S$ be the normalization in
+$k(t)$ of the closure of $u(t)$ in $S(s)$, and let
+$\bar f:\bar X\to \bar S$ be the morphism deduced from $f$ by the base change
+$\bar S\to S$. By the immediate implication (i)$\Rightarrow$(iii) of
+\ref{VII:5-1-1}, the base-change arrow
+\begin{equation*}\tag{5.2.1.2}\label{VII:eq:5-2-1-2}
+  \eR\Gamma(\bar X,E|\bar X)=\eR\bar f_\ast (E|\bar X)_s \to \eR\Gamma(X_s,E|X_s) 
+\end{equation*}
+is an isomorphism. We define \eqref{VII:eq:5-2-1-1} as the composite of the
+inverse of \eqref{VII:eq:5-2-1-2} with the restriction arrow
+\begin{equation*}\tag{5.2.1.3}\label{VII:eq:5-2-1-3}
+  \eR\Gamma(\bar X,E|\bar X) \to \eR\Gamma(X_t,E|X_t) \text{.}
+\end{equation*}
+
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-2}
+
+Suppose that $f$ is locally acyclic rel.\ to $E$ (\ref{VII:2-12}). For
+every specialization $u:t\to S(s)$ of geometric points of $S$, we then define
+an arrow, called the \emph{cospecialization arrow},
+\begin{equation*}\tag{5.2.2.1}\label{VII:eq:5-2-2-1}
+  \cosp(u):\eR\Gamma(X_t,E|X_t) \to \eR\Gamma(X_s,E|X_s) \text{,} 
+\end{equation*}
+as follows. Let $g:X_t\to X$ and $g':\bar X\to X$ be the canonical arrows.
+Viewed vis-\`a-vis these two maps, the canonical arrow
+\begin{equation*}\tag{5.2.2.2}\label{VII:eq:5-2-2-2}
+  \eR g'_\ast(E|\bar X)\to \eR g_\ast(E|X_t) 
+\end{equation*}
+is an isomorphism by the local-acyclicity hypothesis. Indeed, we may assume
+that $S$ is strictly local and integral, with closed point $s$, and that $t$
+is a geometric generic point. Compute the fiber of
+\eqref{VII:eq:5-2-2-2} at a geometric point $x$ of $X$, with image $y$ in
+$S$. After replacing $S$ by the strict localization of $S$ at $y$, we may
+assume that $y=s$. Since $\bar S\to S$ is an inverse limit of finite
+morphisms and is radicial at $s$, we find that
+$\eR g'_\ast(E|\bar X)_x = E_x$ and that the fiber of
+\eqref{VII:eq:5-2-2-2} at $x$ identifies with the restriction
+$E_x=\eR\Gamma(X(x),E)\to \eR\Gamma(X(x)_t,E|X(x)_t)$, which is an
+isomorphism by hypothesis. Applying $\eR\Gamma(X,-)$ to
+\eqref{VII:eq:5-2-2-2}, we deduce that the restriction arrow
+\eqref{VII:eq:5-2-1-3} is an isomorphism. We define
+\eqref{VII:eq:5-2-2-1} as the composite of the inverse of
+\eqref{VII:eq:5-2-1-3} with the base-change arrow
+\eqref{VII:eq:5-2-1-2}.
+
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-3}
+
+If $s'' \xrightarrow{u'} s' \xrightarrow u s$ are specialization arrows of
+geometric points of $S$, one verifies that
+\begin{align*}
+  \spe(u')\spe(u) &= \spe(u u') \text{,} \\
+  \cosp(u) \cosp(u') &= \cosp(u u') \text{,} 
+\end{align*}
+whenever both sides are defined.
+
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-4}
+
+Suppose that the formation of $\eR f_\ast E$ commutes with every finite base
+change and that $f$ is locally acyclic rel.\ to $E$. It follows from the
+definitions that, for every specialization $u:t\to S(s)$ of geometric points
+of $S$, the arrows $\spe(u)$ and $\cosp(u)$ are isomorphisms, inverse to one
+another.
+
+The preceding hypotheses hold in particular when $A$ is noetherian and
+annihilated by an integer $n$ invertible on $S$, when $f$ is proper and smooth,
+and when $E$ has locally constant cohomology (cohomological properness of
+proper morphisms (\ref{VII:5-1-3}), and local acyclicity of smooth morphisms
+\cite[XV]{sga4}). This recovers the ``specialization theorem''
+\cite[XVI 2.1]{sga4}.
+
+On the other hand, \ref{VII:5-1-1} has the following consequence:
+
+
+
+
+
+
+\begin{proposition}\label{VII:5-2-5}
+Suppose that $f$ is locally acyclic relative to $E$ and that, for every
+specialization $u:t\to S(s)$, the cospecialization arrow $\cosp(u)$ is an
+isomorphism. Then the formation of $\eR f_\ast E$ commutes with every finite
+base change.
+\end{proposition}
+
+In view of \ref{VII:5-2-4}, \ref{VII:5-2-5} generalizes
+(\hyperref[I]{Étale cohomology} \ref{I:5-1-7}).
+
+
+
+
+
+
+\begin{corollary}\label{VII:5-2-6}
+Suppose that $f$ is locally acyclic rel.\ to $E$. Let $x$ be a geometric
+point of $X$, with image $s$ in $S$, and denote by
+$f_{(x)}:X(x)\to S(s)$ the morphism induced by $f$. Then the formation of
+$\eR {f_{(x)}}_\ast(E|X(x))$ commutes with every finite base change
+$S'\to S(s)$.
+\end{corollary}
+
+By \ref{VII:5-2-5}, it is enough to verify that the cospecialization arrows
+for $(f_{(x)},E|X(x))$ are isomorphisms. By the transitivity of the
+cospecialization arrows (\ref{VII:5-2-3}), it is enough to show that if
+$u:t\to S(s)$ is a specialization, then
+$\cosp(u):\eR\Gamma(X(x)_t,E|X(x)_t)\to \eR\Gamma(X(x)_s,E|X(x)_s)$ is an
+isomorphism. But since $s$ is closed in $S(s)$, $X(x)_s$ is strictly local
+with closed point $x$, $\eR\Gamma(X(x)_s,E|X(x)_s)=E_x$, and $\cosp(u)$ is an
+isomorphism, inverse to the restriction isomorphism
+$E_x\to \eR\Gamma(X(x)_t,E|X(x)_t)$.
+
+
+
+
+
+
+\begin{corollary}\label{VII:5-2-7}
+Let $f:X\to Y$ be an $S$-morphism, let $p:X\to S$, $q:Y\to S$ be the
+projections, and let $E\in\ob\eD^+(X)$. Suppose that $A$ is locally constant,
+that $f$ is locally acyclic rel.\ to $E$, and that $q$ is locally acyclic at
+every geometric point $y$ of $Y$ rel.\ to every sheaf locally constant
+in a neighborhood of $y$. Then $p$ is locally acyclic relative to $E$.
+\end{corollary}
+
+Let $x$ be a geometric point of $X$, with images $y$ and $s$ in $Y$ and $S$,
+let $t\to S(s)$ be a specialization, and let
+$f_{(x)}:X(x)\to Y(y)$ be the morphism induced by $f$. We must show that the
+restriction
+\begin{equation*}\tag{$*$}\label{VII:eq:5-2-7-1}
+  E_x \to \eR\Gamma(X(x)_t,E|X(x)_t) 
+\end{equation*}
+is an isomorphism. We may assume that $A$ is constant. By \ref{VII:5-2-4} and
+\ref{VII:5-2-5}, for every specialization $z\to Y(y)$, the specialization
+arrow
+\[
+  E_x = \eR {f_{(x)}}_\ast (E|X(x))_y \to (\eR {f_{(x)}}_\ast (E|X(x)))_z = \eR\Gamma(X(x)_z,E|X(x)_z) 
+\]
+is an isomorphism; in other words, $\eR{f_{(x)}}_\ast(E|X(x))$ is constant
+with value $E_x$. The acyclicity hypothesis on $q$ therefore plays the
+decisive r\^ole and ensures that the restriction
+\[
+  E_x \to \eR\Gamma(Y(y)_t,(E_x)|Y(y)_t) = \eR\Gamma\left(Y(y)_t,\eR {f_{(x)}}_\ast (E|X(x))|Y(y)_t\right)
+\]
+is an isomorphism. But this arrow identifies with
+\eqref{VII:eq:5-2-7-1}, which proves the assertion.
+
+The hypothesis of \ref{VII:5-2-7} on $q$ holds in particular when $q$ is
+smooth and $A$ is annihilated by an integer $n$ invertible on $S$
+\cite[XV]{sga4}. On the other hand, if the hypotheses of \ref{VII:5-2-7} hold
+after every base change $S'\to S$, then it follows that $p$ is universally
+locally acyclic rel.\ to $E$. These remarks imply, in particular, the
+statement of \ref{VII:2-14}.
+
+
+
+
+
+
+\begin{corollary}\label{VII:5-2-8}
+Let $f:X\to S$ and $E\in \ob\eD^+(X)$. Suppose that $f$ is universally locally
+acyclic rel.\ to $E$, that the formation of $\eR f_\ast E$ commutes with
+every finite base change, and that, for every morphism $s'\to s$, where $s$ is
+a geometric point of $S$ and $s'$ is the spectrum of a separably closed
+field, the base-change arrow
+$\eR\Gamma(X_s,E|X_s)\to \eR\Gamma(X_{s'},E|X_{s'})$ is an isomorphism. Then
+$(f,E)$ is cohomologically proper (\ref{VII:5-1-3}).
+\end{corollary}
+
+Let $f':X'\to S'$ be the morphism deduced from $f$ by a base change
+$S'\to S$; we must show that the formation of $\eR f'_\ast(E|X')$ commutes
+with every finite base change. By \ref{VII:5-2-5}, it is enough to show that,
+for every specialization $u':t'\to S'(s')$, the cospecialization arrow
+$\cosp(u')$:
+$\eR\Gamma(X_{t'}',E|X_{t'}') \to \eR\Gamma(X_{s'}',E|X_{s'}')$ is an
+isomorphism. Let $s$ (resp.\ $t$) be the geometric point that is the image of
+$s'$ (resp.\ $t'$) in $S$, and let $u:t\to S(s)$ be the
+specialization defined by $u'$. One readily sees that there is a commutative
+square
+\[\xymatrix{
+  \eR\Gamma(X_t,E|X_t) \ar[r]^-{\cosp(u)} \ar[d] 
+    & \eR\Gamma(X_s,E|X_s) \ar[d] \\
+  \eR\Gamma(X_{t'}',E|X_{t'}') \ar[r]^-{\cosp(u')} 
+    & \eR\Gamma(X_{s'}',E|X_{s'}') 
+}\]
+in which the vertical arrows are the base-change arrows. By hypothesis, these
+are isomorphisms. On the other hand, (\ref{VII:5-2-4}) $\cosp(u)$ is an
+isomorphism, hence $\cosp(u')$ is an isomorphism, which completes the proof.
+
+Here is an example of an application of \ref{VII:5-2-8}. Suppose that $A$ is
+annihilated by an integer $n$ invertible on $S$, and that $f$ is locally of
+finite type and universally locally acyclic. Let $x$ be a geometric point of
+$X$, with image $s$ in $S$, and let $f_{(x)}:X(x)\to S(s)$ be the morphism
+induced by $f$. It follows from \ref{VII:5-2-6} and \ref{VII:1-9} (by passage
+to the limit) that the hypotheses of \ref{VII:5-2-8} are satisfied by the
+pair $(f_{(x)},E|X(x))$, which is therefore cohomologically proper.
+
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-9}
+
+Suppose that $A$ is constant. Let $f:X\to S$, and let $E\in\ob\eD^+(X)$ be a
+complex of finite tor-dimension. We say that $f$ is \emph{strongly locally
+acyclic} rel.\ to $E$ if, for every geometric point $x$ of $X$, with image
+$s$ in $S$, every specialization $t\to S(s)$, and every $A^\circ$-module $M$,
+the restriction arrow
+\[
+  E_x\lotimes_A M \to \eR\Gamma(X(x)_t,(E|X(x)_t)\lotimes_A M) 
+\]
+is an isomorphism. I do not know whether ``locally acyclic'' implies
+``strongly locally acyclic.''
+
+
+
+
+
+
+\begin{proposition}\label{VII:5-2-10}
+Under the hypotheses of \ref{VII:5-2-9}, suppose that $A$ is noetherian and
+torsion, that $S$ is noetherian, and that $f$ is strongly locally acyclic
+rel.\ to $E$. Then, for every diagram with cartesian squares
+\[\xymatrix{
+  X \ar[d]^-f 
+    & \ar[l]_-j X' \ar[d]^-{f'} 
+    & \ar[l]_-{j'} X'' \ar[d]^-{f''} \\
+  S 
+    & \ar[l]_-i S' 
+    & \ar[l]_-{i'} S'' \text{,} 
+}\]
+with $i$ quasi-finite and $i'$ an open immersion, and every
+$F\in\ob\eD^+(S'',A^\circ)$, the canonical arrow
+\begin{equation*}\tag{$*$}\label{VII:eq:5-2-10-1}
+  j^\ast E \lotimes {f'}^\ast \eR i'_\ast F \to \eR j'_\ast ((j j')^\ast E\lotimes {f''}^\ast F) 
+\end{equation*}
+is an isomorphism.
+\end{proposition}
+
+Compare this statement with \cite[XV 1.17]{sga4}.
+
+Let us prove \ref{VII:5-2-10}. We readily reduce to the case where $S=S'$ is
+strictly local, and to $F$ constructible and concentrated in degree $0$. We then
+resolve $F$ on the right by finite sums of sheaves of the form $u_\ast M$,
+where $u:t\to S$ is a geometric point and $M$ is an $A^\circ$-module. The
+hypothesis, vis-\`a-vis this resolution, implies that
+\eqref{VII:eq:5-2-10-1} is an isomorphism for $F=u_\ast M$, and the result
+follows.

@@ -1,0 +1,128 @@
+\begin{remark}\label{sga3:XXI:6.7.8}
+It is immediate that \(\operatorname{Aut}(\cR)\) (respectively
+\(E_\Delta(\cR)\)) is finite if and only if
+\[
+ \rgred(\cR)-\rgss(\cR)\leq1.
+\]
+\end{remark}
+
+\subsection{\(p\)-morphisms of reduced root data}
+\label{sga3:XXI:6.8}
+
+Throughout this subsection, \(p\) is a fixed positive integer.
+
+\begin{definition}\label{sga3:XXI:6.8.1}
+Let
+\[
+ \cR=(M,M^\ast,R,R^\ast),
+ \qquad
+ \cR'=(M',M'^\ast,R',R'^\ast)
+\]
+be two reduced root data. A group homomorphism
+\[
+ f:M'\longrightarrow M
+\]
+is called a \emph{\(p\)-morphism from \(\cR'\) to \(\cR\)} if
+there exist a bijection
+\[
+ u:R\xrightarrow{\sim}R'
+\]
+and a map
+\[
+ q:R\longrightarrow\{p^n\mid n\in\mathbb N\}
+\]
+such that:
+\begin{enumerate}
+\item[(i)] \(f(u(\alpha))=q(\alpha)\alpha\) for every
+  \(\alpha\in R\);
+\item[(ii)] \({}^tf(\alpha^\ast)=q(\alpha)u(\alpha)^\ast\) for
+  every \(\alpha\in R\).\footnote{Editors' note: These two
+  conditions imply
+  \[
+   q(\alpha)\bigl(u(\alpha)^\ast,u(\beta)\bigr)
+   =q(\beta)(\alpha^\ast,\beta)
+  \]
+  for all \(\alpha,\beta\in R\).}
+\end{enumerate}
+\end{definition}
+
+\begin{corollary}\label{sga3:XXI:6.8.2}
+A \(1\)-morphism is precisely a morphism.
+\end{corollary}
+
+\begin{corollary}\label{sga3:XXI:6.8.3}
+The transpose of a \(p\)-morphism is a \(p\)-morphism.
+\end{corollary}
+
+\begin{lemma}\label{sga3:XXI:6.8.4}
+If \(w\in W(\cR)\) and \(\alpha\in R\), then
+\[
+ q(w(\alpha))=q(\alpha).
+\]
+The map
+\[
+ s_\alpha\longmapsto s_{u(\alpha)}
+\]
+extends to an isomorphism
+\[
+ u:W(\cR)\xrightarrow{\sim}W(\cR')
+\]
+such that
+\[
+ u(w(\alpha))=u(w)\bigl(u(\alpha)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+It suffices to prove, for \(\alpha,\beta\in R\), that
+\[
+ u(s_\alpha(\beta))=s_{u(\alpha)}u(\beta),
+ \qquad
+ q(s_\alpha(\beta))=q(\beta).
+\]
+Successively, one has
+\begin{align*}
+ f\bigl(s_{u(\alpha)}u(\beta)\bigr)
+  &=f(u(\beta))
+    -\bigl(u(\alpha)^\ast,u(\beta)\bigr)f(u(\alpha))\\
+  &=q(\beta)\beta
+    -q(\beta)q(\alpha)^{-1}
+       (\alpha^\ast,\beta)q(\alpha)\alpha\\
+  &=q(\beta)\bigl(\beta-(\alpha^\ast,\beta)\alpha\bigr)\\
+  &=q(\beta)s_\alpha(\beta).
+\end{align*}
+If
+\[
+ \gamma=u^{-1}\bigl(s_{u(\alpha)}u(\beta)\bigr),
+\]
+then
+\[
+ q(\gamma)\gamma=f(u(\gamma))=q(\beta)s_\alpha(\beta).
+\]
+The roots \(\gamma\) and \(s_\alpha(\beta)\) are proportional over
+\(\mathbb Q\), hence equal or opposite. Since \(q(\gamma)\) and
+\(q(\beta)\) are positive, it follows that
+\[
+ q(\gamma)=q(\beta),
+ \qquad
+ \gamma=s_\alpha(\beta).
+\]
+\end{proof}
+
+\begin{definition}\label{sga3:XXI:6.8.5}
+The numbers \(q(\alpha)\) are called the \emph{root exponents} of
+\(f\).
+\end{definition}
+
+\begin{example}\label{sga3:XXI:6.8.6}
+Let \(\cR\) be a reduced root datum and let
+\(q=p^n\), \(n\in\mathbb N\). Multiplication by \(q\),
+\[
+ M\longrightarrow M,\qquad x\longmapsto qx,
+\]
+is a \(p\)-morphism whose root exponents are all equal to \(q\)
+(and for which \(u=\operatorname{id}\)). It is denoted
+\[
+ q:\cR\longrightarrow\cR.
+\]
+\end{example}

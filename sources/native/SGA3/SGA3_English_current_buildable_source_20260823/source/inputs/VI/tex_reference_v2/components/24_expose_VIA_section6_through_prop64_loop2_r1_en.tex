@@ -1,0 +1,146 @@
+
+\section*{6. Complements on \(k\)-groups not necessarily of finite type}
+\phantomsection\label{sec:sga3-VIA-6}
+\addcontentsline{toc}{section}{6. Complements on \(k\)-groups not
+  necessarily of finite type}
+
+\footnote{\label{note:sga3-VIA-58}Editor's note: we have added the
+results that follow, taken from \textup{[Per75]}. Note that
+\hyperref[lem:sga3-VIA-6.1]{Lemma~6.1} can be expressed, in Weil's language, by saying that
+``every point of \(G\) is a product of two generic points.''}
+Let us also record the following results, which will be useful in
+the addendum, Expos\'e~VI\(_B\), \S~12. We fix a base field \(k\).
+
+\medskip
+\phantomsection\label{lem:sga3-VIA-6.1}%
+\noindent\textbf{Lemma 6.1.---}
+\emph{Let \(G\) be a \(k\)-group. For every \(x\in G\), there
+exists a point \(u\in G\times G\) such that \(\mu(u)=x\) and both
+projections \(p_1(u)\) and \(p_2(u)\) are maximal points of \(G\).}
+
+\emph{Proof.}
+Set \(K=\kappa(x)\). Since the projection \(G_K\to G\) sends
+maximal points to maximal points, we are reduced to the case in
+which \(x\) is rational. Left translation \(\lambda_x\)
+(respectively, right translation \(\rho_x\)) then gives a morphism
+\[
+  G\longrightarrow G\times G,\qquad
+  g\longmapsto\bigl(\lambda_x(g^{-1}),g\bigr)
+\]
+(respectively,
+\(g\longmapsto\bigl(g,\rho_x(g^{-1})\bigr)\)), which induces an
+isomorphism from \(G\) onto \(\mu^{-1}(x)\), inverse to \(p_2\)
+(respectively, \(p_1\)). Thus, if \(u\) is a maximal point of
+\(\mu^{-1}(x)\), then \(p_1(u)\) and \(p_2(u)\) are maximal points
+of \(G\), and \(u\) has the required properties.
+
+\medskip
+\phantomsection\label{cor:sga3-VIA-6.2}%
+\noindent\textbf{Corollary 6.2.---}
+\emph{Let \(f:G\to H\) be a quasi-compact dominant morphism of
+\(k\)-groups.
+\begin{enumerate}
+\item[\textup{(i)}]\phantomsection\label{concl:sga3-VIA-6.2-i} \(f\) is surjective.
+\item[\textup{(ii)}] If \(H\) is reduced, \(f\) is faithfully flat.
+\end{enumerate}}
+
+\emph{Proof.}
+Write \(\mu_H\) (respectively, \(\mu_G\)) for the multiplication of
+\(H\) (respectively, \(G\)). Let \(h\in H\). By \hyperref[lem:sga3-VIA-6.1]{6.1}, there exists
+\(u\in H\times H\) such that \(\mu_H(u)=h\) and
+\(\alpha=p_1(u)\), \(\beta=p_2(u)\) are maximal points of \(H\).
+Since \(f\) is quasi-compact and dominant,
+\(f^{-1}(\alpha)\) and \(f^{-1}(\beta)\) are nonempty
+(cf.\ EGA~IV\(_1\), 1.1.5). Hence there exists \(v\in G\times G\)
+such that
+\[
+  (f\times f)(v)=u
+\]
+(cf.\ EGA~I, 3.5.2). Then \(g=\mu_G(v)\) satisfies \(f(g)=h\).
+This proves that \(f\) is surjective.
+
+Suppose in addition that \(H\) is reduced. Then
+\(\mathcal O_{H,\alpha}\) is a field, and we have seen above that
+\(f^{-1}(\alpha)\ne\varnothing\). Thus \(f\) is flat at every
+point \(\xi\in f^{-1}(\alpha)\), and consequently \(f\) is flat by
+\hyperref[lem:sga3-VIA-2.5.3]{Lemma~2.5.3}.
+
+\medskip
+\phantomsection\label{rem:sga3-VIA-6.3}%
+\noindent\textbf{Reminder 6.3.---}
+Recall (cf.\ EGA~IV\(_3\), 11.10.1) that a morphism of schemes
+\(f:X\to Y\) is said to be \emph{schematically dominant} if it
+satisfies the following condition: for every open subset \(U\) of
+\(Y\), if \(Z\) is a closed subscheme of \(U\) such that the
+morphism \(f^{-1}(U)\to U\) factors through \(Z\), then \(Z=U\).
+When \(f\) is quasi-compact and quasi-separated, this is equivalent
+to saying that the closed image of \(X\) under \(f\) is \(Y\)
+(cf.\ loc.\ cit., 11.10.3(iv), and EGA~I, 9.5.8).
+
+\medskip
+\phantomsection\label{prop:sga3-VIA-6.4}%
+\noindent\textbf{Proposition 6.4.---}
+\emph{Let \(f:H\to G\) be a quasi-compact morphism of \(k\)-groups.
+Then the closed image of \(f\) is a group subscheme \(H'\) of
+\(G\), and \(f\) factors as}
+\begin{center}
+  \phantomsection\label{diag:sga3-VIA-6.4-factorization}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    H \arrow[r,"f"] \arrow[d,"f'"'] & G \\
+    H' \arrow[ur,"i"']
+  \end{tikzcd}
+\end{center}
+\emph{where \(f'\) is schematically dominant, quasi-compact, and
+surjective.}
+
+\emph{Proof.}
+Since \(H\) is separated (\hyperref[sga3:VIA:0.3]{0.3}), \(f\) is quasi-compact and
+separated. Thus \(f_*(\mathcal O_H)\) is a quasi-coherent
+\(\mathcal O_G\)-module, and the closed image \(H'\) of \(f\)
+exists and is the closed subscheme of \(G\) defined by the
+quasi-coherent ideal
+\[
+  \mathcal I
+    =\ker\bigl(\mathcal O_G\longrightarrow f_*(\mathcal O_H)\bigr)
+\]
+(cf.\ EGA~I, \S~9.5).
+
+Write \(c_G,\mu_G\) (respectively, \(c_H,\mu_H\)) for the inversion
+and multiplication morphisms of \(G\) (respectively, \(H\)).
+Then \(c_G\circ f=f\circ c_H\) factors through the closed subscheme
+\(c_G(H')\), whence
+\[
+  H'\subset c_G(H')
+  \qquad\text{and therefore}\qquad
+  H'=c_G(H'),
+\]
+since \(c_G^2=\operatorname{id}_G\). Similarly,
+\[
+  f\circ\mu_H=\mu_G\circ(f\times f)
+\]
+factors through \(H'\), so \(f\times f\) factors through the closed
+subscheme \(\mu_G^{-1}(H')\) of \(G\times G\).%
+\begingroup
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}%
+\footnote[1]{\label{note:sga3-VIA-6.4-multiplication-symbol}%
+Translator's note: in these two occurrences the French source prints
+\(\pi_H\) and \(\pi_G\), although the immediately preceding sentence
+defines the multiplication morphisms as \(\mu_H\) and \(\mu_G\).
+The multiplication symbols required by the identity are used here.}%
+\endgroup{}
+On the other hand, since formation of the closed image commutes
+with flat base change (EGA~III, 1.4.15, and EGA~IV\(_1\), 1.7.21),
+the closed image of \(f\times\operatorname{id}_H\)
+(respectively, \(\operatorname{id}_{H'}\times f\)) is
+\(H'\times H\) (respectively, \(H'\times H'\)). Hence, by
+``transitivity of closed images'' (EGA~I, 9.5.5), the closed image
+of \(f\times f\) is \(H'\times H'\). It is therefore contained in
+\(\mu_G^{-1}(H')\); that is, the restriction of \(\mu_G\) to
+\(H'\times H'\) factors through \(H'\). This proves that \(H'\) is
+a closed group subscheme of \(G\). Write \(i:H'\hookrightarrow G\)
+for the inclusion.
+
+Now \(f=i\circ f'\), where \(f':H\to H'\) is schematically
+dominant and quasi-compact (because \(f\) is quasi-compact and
+\(i\) is separated). By \hyperref[cor:sga3-VIA-6.2]{6.2}, \(f'\) is therefore surjective.
+This proves \hyperref[prop:sga3-VIA-6.4]{6.4}.

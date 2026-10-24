@@ -1,0 +1,420 @@
+\section{First reductions}\etiquette[6]{XII.sec6}
+
+We use the abbreviation $(f,F,g)$ for the data of
+\hyperref[XII.thm5.1]{5.1} in any one of cases (i), (ii), or (iii) of
+that theorem.
+
+\begin{enonce*}{Lemma 6.1}\etiquette[6.1]{XII.lem6.1}
+For \hyperref[XII.thm5.1]{5.1} to hold for the data $(f,F,g)$, where
+$f$ and $F$ are fixed and $g$ is arbitrary, it is enough that the
+theorem hold for $(\bar f,\bar F,\bar g)$ for every $S$-scheme
+$\bar S$ that is the strict localization of a scheme $S'$ locally\pageoriginale of
+finite type over $S$ at a point closed in its fiber. Here $\bar f$
+and $\bar F$ are obtained from $f$ and $F$ by the base change
+$\bar S\to S$, and $\bar g:\bar s\to\bar S$ is the inclusion of the
+closed point of $\bar S$.
+\end{enonce*}
+
+\noindent
+\emph{Proof.} We may plainly assume that $S$ and $S'$ are affine,
+say the spectra of rings $A$ and $A'$. Then $A'$ is the filtered
+direct limit of its finite-type $A$-subalgebras $A'_i$. Using the
+theory of passage to the limit (VII \hyperref[VII.cor5.11]{5.11} and \hyperref[VII.rem5.14]{5.14}), we are reduced to
+proving \hyperref[XII.thm5.1]{5.1} for the triples $(f,F,g_i)$, where
+$g_i:\Spec(A'_i)=S'_i\to S$; this reduces us to the case in which
+$g$ is of finite type. To prove that the base-change homomorphisms
+are isomorphisms, it is enough to prove that they induce isomorphisms
+on the fibers of the sheaves in question, and it is enough to
+consider geometric fibers at points $s'$ of $S'$ that are closed in
+their fibers over $S$ (VIII \hyperref[VIII.rem3.13]{3.13}). Let $\bar s'$ be a geometric
+point of $S'$ corresponding to a separable closure of $k(s')$.
+Since $s'$ is algebraic over the corresponding point $s$ of $S$,
+$k(\bar s')$ is also a separable closure of $k(s)$. Denote by
+$\bar s$ the prescheme $\bar s'$, regarded as lying over $S$, that
+is, as a geometric point of $S$, and consider the strict
+localizations $\bar S$ and $\bar S'$ of $S$ and $S'$ at $\bar s$ and
+$\bar s'$, respectively. We then have a commutative square
+$$
+\vcenter{
+\xymatrix@C=3cm@R=1.25cm{
+\bar{s}'  \ar[r] \ar[d]& \bar{s}\ar[d]\\
+\bar{S}'  \ar[r] &  \bar{S},
+}}
+$$
+in which the first horizontal arrow is an isomorphism. In view of
+VIII \hyperref[VIII.thm5.2]{5.2} and \hyperref[VIII.rem5.3]{5.3}, the homomorphism induced on the fibers at
+$\bar s'$ by the base-change homomorphism associated with $(f,F,g)$
+identifies with the homomorphism
+$$
+H^{i}(\bar{X},\bar{F})\longrightarrow H^{i}(\bar{X}',\bar{F}')
+$$
+induced\pageoriginale by $\bar X'\to\bar X$, where $\bar X$ and
+$\bar X'$ denote the schemes obtained from $X$ by the base changes
+$\bar S\to S$ and $\bar S'\to S$, respectively. The commutative
+square above plainly gives a commutative square
+$$
+\xymatrix@C=3cm@R=1.5cm{
+H^{i}(\bar{X}_{\bar{s}}, \bar{F}) \ar[r]&
+H^{i}(\bar{X}'_{\bar{s}'},\bar{F}')\\
+H^{i}(\bar{X},\bar{F})  \ar[r] \ar[u]&
+H^{i}(\bar{X}',\bar{F}') \ar[u],
+}
+$$
+in which the first horizontal arrow is again an isomorphism.
+Consequently the second horizontal arrow is an isomorphism as soon
+as the two vertical arrows are. This is precisely what the hypothesis
+of \hyperref[XII.lem6.1]{6.1} guarantees, \cqfd
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[6.1.1]{XII.subsubsec6.1.1}
+Thus, to prove \hyperref[XII.thm5.1]{5.1} in a situation $(F,f,-)$,
+we are reduced to studying the special case
+\hyperref[XII.cor5.5]{5.5}, with $S$ strictly local. This leads us to
+study in general a morphism $h:Y\to X$ of schemes and to seek general
+conditions under which the corresponding homomorphisms
+$$
+H^{i}(X,F)\longrightarrow H^{i}(Y,h^{\ast}(F))
+$$
+are bijective. This subsection gives some easy auxiliary results on
+this situation. For convenience in later references, we state them
+in greater generality and precision than is needed for the proof of
+\hyperref[XII.thm5.1]{5.1}.
+
+\begin{enonce*}{Lemma 6.2}\etiquette[6.2]{XII.lem6.2}
+Let $C$ and $C'$ be two abelian categories, let
+$T^{\bigdot}=(T^{i})$ and $T'^{\bigdot}=({T'}^{i})$ be two
+cohomological functors from $C$ to $C'$, and let
+$\varphi=(\varphi^{i})$ be a morphism of\pageoriginale cohomological functors from
+$T^{\bigdot}$ to $T'^{\bigdot}$. Assume that $T^{\bigdot}$ and
+$T'^{\bigdot}$ vanish in degrees $<0$, and that $T^{i}$ is
+effaceable for $i>0$. Let $n$ be an integer. The following conditions
+are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $\varphi^{i}$ is an isomorphism for $i\leq n$ and a
+  monomorphism for $i=n+1$.
+
+\item (If $n\geq -1$.) The homomorphism $\varphi^{i}$ is a
+  monomorphism for $i=0$ and an epimorphism for $i\leq n$.
+
+\item (If $n\geq 0$.) The homomorphism $\varphi^{\circ}$ is an
+  isomorphism, and the ${T'}^{i}$ are effaceable for $0<i\leq n$.
+\end{enumerate}
+
+If these conditions hold and $A\in\Ob(C)$, then
+$\varphi^{n+1}(A):T^{n+1}(A)\to {T'}^{n+1}(A)$ is an epimorphism
+(hence an isomorphism) if and only if ${T'}^{n+1}(A)$ is effaceable,
+that is, if there exists a monomorphism $A\to B$ such that the
+corresponding homomorphism
+${T'}^{n+1}(A)\to {T'}^{n+1}(B)$ is zero. If $C'=(\Ab)$, the category
+of abelian groups, and $\xi\in {T'}^{n+1}(A)$, then $\xi$ lies in the
+image of $T^{n+1}(A)$ if and only if $\xi$ is effaceable, that is, if
+there exists a monomorphism $A\to B$ such that the image of $\xi$ in
+${T'}^{n+1}(B)$ is zero.
+\end{enonce*}
+
+\noindent
+\emph{Proof.} It is clear that (a) implies (b) and (c). Since the
+hypotheses on $T^{\bigdot}$ imply that the $T^{i}$ for $i>0$ are the
+right satellites of $T^{\circ}$, the implication (c) $\Rightarrow$
+(a) follows from the axiomatic characterization of satellite
+functors. It also follows, by induction on $n$, from the last
+assertion of \hyperref[XII.lem6.2]{6.2}, proved by the familiar
+argument that we do not repeat here (compare the proof of
+\hyperref[XII.cor6.6]{6.6} below). The implication (b)
+$\Rightarrow$ (a) is immediate if $n=-1$. If $n\geq0$, we proceed by
+induction on $n$: the induction hypothesis allows us to suppose that
+$\varphi^{i}$ is an isomorphism for $i\leq n-1$ and\pageoriginale a monomorphism
+for $i=n$. The hypothesis then makes it an isomorphism also for
+$i=n$, and it remains to show, using the fact that $\varphi^n$ is an
+isomorphism, that it is a monomorphism for $i=n+1$. Let $A\to B$ be
+a monomorphism that effaces $T^{n+1}$, giving an exact sequence
+$0\to A\to B\to C\to0$ in $C$ and a morphism of exact sequences in
+$C'$:
+$$
+\xymatrix@R=1.25cm{
+T^{n}(B)  \ar[r] \ar[d]& T^{n}(C)  \ar[r]\ar[d] & T^{n+1}(A) \ar[d] \ar[r] & T^{n+1}(B)\ar[d]\\
+T'^{n}(B)  \ar[r] & T'^{n}(C) \ar[r] & T'^{n+1}(A)  \ar[r] &
+T'^{n+1}(B),
+}
+$$
+where the first two vertical arrows are isomorphisms by what we have
+just proved, and $T^{n+1}(A)\to T^{n+1}(B)$ is zero by construction.
+The five lemma then implies that
+$T^{n+1}(A)\to {T'}^{n+1}(A)$ is a monomorphism, \cqfd
+
+\begin{enonce*}{Corollary 6.3}\etiquette[6.3]{XII.cor6.3}
+Suppose that $T^{\bigdot}$ and $T'^{\bigdot}$ arise from
+cohomological functors (denoted by the same symbols) on the right
+derived category $D^{+}(C)$ \cite{sga4.exp.XII.bib.3}, with values in $C'$; the
+$T^{i}$ for $i>0$ are not necessarily assumed effaceable. Suppose
+that, for $K^{\bigdot}\in D^{+}(C)$, the condition
+$H^{i}(K^{\bigdot})=0$ for $i<0$ implies
+$T^{i}(K^{\bigdot})={T'}^{i}(K^{\bigdot})=0$ for $i<0$. Let
+$K^{\bigdot}\in\Ob D^{+}(C)$ be a bounded-below complex in $C$ such
+that $H^{i}(K^{\bigdot})=0$ for $i<0$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item If condition {\rm (a)} of \hyperref[XII.lem6.2]{6.2} is
+  satisfied, then the homomorphism
+  $\varphi^{i}(K^{\bigdot})=T^{i}(K^{\bigdot})\to
+  {T'}^{i}(K^{\bigdot})$ is an isomorphism for $i\leq n$ and a
+  monomorphism for $i=n+1$.
+
+\item Let, in addition, $L^{\bigdot}\in\Ob D^{+}(C)$ satisfy
+  $H^{i}(L^{\bigdot})=0$ for $i<0$, and let
+  $u:L^{\bigdot}\to K^{\bigdot}$ be a morphism in $D^{+}(C)$ that
+  induces an injective homomorphism
+  $H^{\circ}(u):H^{\circ}(L^{\bigdot})\to
+  H^{\circ}(K^{\bigdot})$. Then the homomorphism
+  $T^{n+1}(L^{\bigdot})\to {T'}^{n+1}(L^{\bigdot})$ is surjective\pageoriginale if
+  and only if the image of ${T'}^{n+1}(L^{\bigdot})$ in
+  ${T'}^{n+1}(K^{\bigdot})$ is contained in that of
+  $T^{n+1}(K^{\bigdot})$. If $C'=(\Ab)$ and
+  $\xi\in {T'}^{n+1}(L^{\bigdot})$, then $\xi$ lies in the image of
+  $T^{n+1}(L^{\bigdot})$ if and only if its image in
+  ${T'}^{n+1}(K^{\bigdot})$ lies in that of
+  $T^{n+1}(K^{\bigdot})$.
+\end{enumerate}
+\end{enonce*}
+
+Recall that the hypothesis that $T^{\bigdot}$ and $T'^{\bigdot}$
+arise from cohomological functors on $D^{+}(C)$ may be spelled out as
+follows: they arise from cohomological functors on the abelian
+category of bounded-below complexes of $C$ that commute with degree
+shifts, send morphisms of complexes homotopic to zero to zero
+morphisms in $C'$, and send every morphism
+$u:K^{\bigdot}\to L^{\bigdot}$ of complexes that is a
+quasi-isomorphism (that is, induces isomorphisms
+$H^{i}(K^{\bigdot})\to H^{i}(L^{\bigdot})$) to an isomorphism in
+$C'$. In practice, all the cohomological functors from $C$ to $C'$
+that one encounters arise in this way.
+
+\medskip
+\noindent
+\emph{Proof of} \hyperref[XII.cor6.3]{6.3}. We first prove (i). The
+assertion is clear if $H^{i}(K^{\bigdot})=0$ for $i\leq n+1$, since
+the degree properties imposed on $T^{\bigdot}$ and $T'^{\bigdot}$
+then give
+$T^{i}(K^{\bigdot})={T'}^{i}(K^{\bigdot})=0$ for $i\leq n+1$.
+On the other hand, let $m\geq0$ be an integer such that
+$H^{i}(K^{\bigdot})=0$ for $i<m$; such an integer exists, and for
+example $m=0$ will do. We proceed by descending induction on $m$, the
+assertion having been proved when $m=n+2$. Thus assume the assertion
+proved for $m'>m$, and prove it for $m$. By the hypothesis on the
+degrees of $K^{\bigdot}$, the complex $K^{\bigdot}$ is
+quasi-isomorphic to a complex concentrated in degrees $\geq m$, so
+we may suppose that it is itself concentrated in those degrees.
+There follows an exact sequence of complexes
+$$
+0\longrightarrow H^m[-m]\longrightarrow K^{\bigdot}\longrightarrow
+K'^{\bigdot}\longrightarrow 0{\quoi},
+$$
+where $H^m=H^m(K^{\bigdot})$, the notation $[-m]$ denotes a shift of
+$-m$ in the degrees of a complex,\pageoriginale and $K'^{\bigdot}$ is defined as
+the cokernel. The cohomology objects of $K'^{\bigdot}$ are therefore
+those of $K^{\bigdot}$ in degrees $\geq m+1$ and are zero in degrees
+$\leq m$. In particular, the induction hypothesis applies to
+$K'^{\bigdot}$. The preceding exact sequence gives rise to a
+morphism of exact sequences
+$$
+\xymatrix{
+T^{i-1} (K'^{\;\bigdot}) \ar[d] \ar[r] & T^{i-m}(H^m)  \ar[r]\ar[d] &
+T^{i}(K^{\bigdot}) \ar[r] \ar[d]& T^{i} (K'^{\;\bigdot})  \ar[r] \ar[d]&
+T^{i+1-m}(H^m) \ar[d]\\
+T'^{i-1}(K'^{\;\bigdot})  \ar[r] & T'^{i-m}(H^m)  \ar[r] &
+T'^{i}(K^{\bigdot})  \ar[r] & T'^{i}(K'^{\;\bigdot})  \ar[r] & T'^{i+1-m}(H^m).
+}
+$$
+Taking $i\leq n$ in this diagram and using the induction hypothesis
+and $m\geq0$, we find that the vertical arrows surrounding the
+middle vertical arrow are isomorphisms, hence in particular
+epimorphisms, and that the rightmost vertical arrow is a
+monomorphism. The five lemma therefore shows that the middle
+vertical arrow is an epimorphism. Taking $i\leq n+1$, we similarly
+find that the vertical arrows surrounding the middle one are
+monomorphisms, while the leftmost vertical arrow is an isomorphism,
+hence in particular an epimorphism. The five lemma then shows that
+the middle vertical arrow is a monomorphism. This proves
+\hyperref[XII.cor6.3]{6.3} (i).
+
+To prove the second assertion, \hyperref[XII.cor6.3]{6.3} (ii), we
+similarly use the exact sequence
+$$
+0\longrightarrow L^{\bigdot}\longrightarrow K^{\bigdot}\longrightarrow
+K'^{\bigdot}\longrightarrow 0{\quoi},
+$$
+where $K'^{\bigdot}$ is defined as the mapping cylinder of
+$L^{\bigdot}\to K^{\bigdot}$ and again has cohomology in
+nonnegative degrees. The usual diagram chase in
+$$
+\xymatrix{
+T^{n}(K^{\bigdot})  \ar[r] \ar[d]& T^{n}(K'^{\;\bigdot})  \ar[r] \ar[d]& T^{n+1}
+(L^{\bigdot})  \ar[r]\ar[d] & {T^{n+1}(K^{\bigdot})}  \ar[r]
+\ar[d]&{T^{n+1}(K'^{\;\bigdot})} \ar[d]\\
+T'^{n}(K^{\bigdot}) \ar[r] & T'^{n}(K'^{\;\bigdot})  \ar[r] &
+T'^{n+1}(L^{\bigdot}) \ar[r] & T'^{n+1}(K^{\bigdot}) \ar[r] & T'^{n+1}(K'^{\bigdot})
+}
+$$
+gives\pageoriginale the last assertion of
+\hyperref[XII.cor6.3]{6.3}, since, by the first part already proved,
+the first two vertical arrows are isomorphisms and the last two are
+monomorphisms. This completes the proof of
+\hyperref[XII.cor6.3]{6.3}.
+
+\begin{enonce*}{Lemma 6.4}\etiquette[6.4]{XII.lem6.4}
+Theorem \hyperref[XII.thm5.1]{5.1} holds if $f$ is finite.
+\end{enonce*}
+
+Indeed, this follows at once from VIII \hyperref[VIII.prop5.5]{5.5} and \hyperref[VIII.rem5.8]{5.8}.
+
+\begin{enonce*}{Proposition 6.5}\etiquette[6.5]{XII.prop6.5}
+Let $h:Y\to X$ be a quasi-compact and quasi-separated morphism of
+schemes. In {\rm (i)} below, $I$ denotes a fixed set having at least
+two elements; in {\rm (ii)} and {\rm (iii)}, $\LL$ denotes a
+nonempty subset of the set $\PP$ of prime numbers; and in {\rm (iii)},
+$n$ denotes an integer.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The following conditions are equivalent:
+\begin{itemize}
+\item[a)] For every sheaf of sets $F$ on $X$, the canonical map
+$$
+H^{\circ}(X,F)\longrightarrow H^{\circ}(Y,h^{\ast}(F))
+$$
+is injective (respectively, bijective).
+
+\item[b)] For every finite morphism $X'\to X$, let
+$h':Y'\to X'$ be the morphism obtained from $h$ by the base change
+$X'\to X$. The canonical map
+$$
+H^{\circ}(X', I_{X'})\longrightarrow H^{\circ}(Y',I_{Y'})
+$$
+induced by $h'$ is injective (respectively, bijective).
+
+\item[${\rm b')}$] With the notation of {\rm (b)}, the map
+$U\mapsto {h'}^{-1}(U)$ from the set of subsets of $X'$ that are both
+open and closed to the set of subsets of $Y'$ that are both open and
+closed is injective (respectively, bijective).
+
+\item[${\rm b'')}$] (If\pageoriginale $X$ is locally Noetherian.)
+With the notation of {\rm (b)}, the induced map on sets of connected
+components
+$$
+\Pi_{\circ}(h'):\Pi_{\circ}(Y')\longrightarrow \Pi_{\circ}(X')
+$$
+is surjective (respectively, bijective). Equivalently, if $X'$ is
+nonempty (respectively, connected and nonempty), then the same is true
+of $Y'$.
+\end{itemize}
+
+Moreover, if these conditions hold, then for every sheaf of groups
+$F$ on $X$, the functor $P\mapsto h^{\ast}(P)$ from the category of
+torsors (homogeneous principal bundles) under $F$ to the category of
+torsors under $h^{\ast}(F)$ is faithful (respectively, fully
+faithful). In particular, in the latter case, the canonical map
+$$
+H^1(X,F)\longrightarrow H^1(Y,h^{\ast}(F))
+$$
+is injective. Finally, under the same hypotheses, the functor
+$X'\mapsto Y'=\fprod{X'}{Y}{X}$ from the category of étale coverings
+of $X$ to the category of étale coverings of $Y$ is faithful
+(respectively, fully faithful).
+
+\item The following conditions are equivalent:
+\begin{itemize}
+\item[a)] For every sheaf $F$ of ind-$\LL$-finite groups on $X$, the
+canonical map
+$$
+H^i(X,F)\longrightarrow H^i(Y,h^{\ast}(F))
+$$
+is bijective for $i=0,1$.
+
+\item[b)] For every finite morphism $X'\to X$, let
+$h':Y'\to X'$ be the morphism obtained from $h$ by base change, and
+let $G$ be any ordinary finite $\LL$-group. The canonical map
+$$
+H^i(X',G_{X'})\longrightarrow H^i(Y',G_{Y'})
+$$
+is bijective for $i=0,1$.
+
+\item[${\rm b')}$] (If\pageoriginale $\LL=\PP$.) With the notation
+of {\rm (b)}, the inverse-image functor under $h'$ induces an
+equivalence from the category of étale coverings of $X'$ to the
+category of étale coverings of $Y'$.
+
+\item[${\rm b'')}$] (If $X$ is Noetherian and $\LL=\PP$.) With the
+notation of {\rm (b)}, if $X'$ is nonempty then so is $Y'$. If $y'$ is
+a geometric point of $Y'$ and $x'$ is its image in $X'$, the canonical
+map
+$$
+\Pi_i(Y',y')\longrightarrow \Pi_i(X',x')\quav\mbox{ for }i=0,1{\quoi},
+$$
+is bijective.
+\end{itemize}
+
+\item The following conditions are equivalent:
+\begin{itemize}
+\item[a)] For every sheaf $F$ of $\LL$-torsion groups on $X$, the
+homomorphism
+$$
+H^{i}(X,F)\longrightarrow H^{i}(Y,h^{\ast}(F))
+$$
+is an isomorphism for $i\leq n$ and a monomorphism for $i=n+1$.
+
+\item[${\rm a')}$] (If $n\geq -1$.) For every $F$ as above, the
+homomorphism in question is injective for $i=0$ and surjective for
+$i\leq n$.
+
+\item[b)] (If $n\geq -1$.) For every finite morphism $X'\to X$, let
+$h':Y'\to X'$ be the morphism obtained from $h$ by the base change
+$X'\to X$. Then for every $\ell\in\LL$ and $\nu>0$, the canonical
+homomorphism
+$$
+H^{i}(X',(\ZZ/\ell^{\nu}\ZZ)_{X'})\longrightarrow
+H^{i}(Y',(\ZZ/\ell^{\nu}\ZZ)_{Y'})
+$$
+is injective for $i=0$ and surjective for $i\leq n$.
+\end{itemize}
+\end{enumerate}
+\end{enonce*}
+
+In addition, we have the following supplement to the preceding
+statement:
+
+\begin{enonce*}{Corollary 6.6}\etiquette[6.6]{XII.cor6.6}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Suppose that the non-parenthesized condition in
+\hyperref[XII.prop6.5]{6.5} {\rm (i) (a)} holds. Let $F$ be a sheaf of
+sets on $X$, and let $\xi\in H^{\circ}(Y,h^{\ast}(F))$. Suppose\pageoriginale that
+there exists a monomorphism of sheaves of sets $F\to G$ such that the
+image of $\xi$ in $H^{\circ}(Y,h^{\ast}(G))$ lies in the image of
+$H^{\circ}(X,G)$. Then $\xi$ lies in the image of
+$H^{\circ}(X,F)$.
+
+\item Suppose that the parenthesized condition in
+\hyperref[XII.prop6.5]{6.5} {\rm (i) (a)} holds. Let $F$ be a sheaf of
+groups on $X$, and let $\xi\in H^1(Y,h^{\ast}(F))$. Suppose that there
+exists a monomorphism of sheaves of groups $F\to G$ such that the
+image of $\xi$ in $H^1(Y,h^{\ast}(G))$ lies in the image of
+$H^1(X,G)$. Then $\xi$ lies in the image of $H^1(X,F)$.
+
+\item Suppose that condition
+\hyperref[XII.prop6.5]{6.5} {\rm (iii) (a)} holds for a fixed value of
+$n$. Let $F$ be a sheaf of $\LL$-torsion groups on $X$, and let
+$\xi\in H^{n+1}(Y,h^{\ast}(F))$. Suppose that there exists a
+monomorphism $F\to G$ of sheaves of $\LL$-torsion groups such that
+the image of $\xi$ in $H^{n+1}(Y,h^{\ast}(G))$ lies in the image of
+$H^{n+1}(X,G)$. Then $\xi$ lies in the image of $H^{n+1}(X,F)$.
+\end{enumerate}
+\end{enonce*}
+
+\noindent
+\emph{Proof of \hyperref[XII.prop6.5]{6.5} and
+\hyperref[XII.cor6.6]{6.6}.}
+We first prove \hyperref[XII.cor6.6]{6.6}. The case

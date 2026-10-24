@@ -1,0 +1,1646 @@
+
+\chapter{Report on the trace formula}\label{II}
+
+In this text, I have attempted to present Grothendieck's cohomological theory
+of $L$-functions as directly as possible. I follow very closely some of the
+lectures given by Grothendieck at the IHES in the spring of 1966. In the
+spirit of this volume, no appeal will be made to SGA 5---apart from two
+references to passages in Exposé XI, which is otherwise independent of that
+seminar.
+
+In \S 10 (pp. 81--90) of \cite{de73}, the reader will find a summary of the
+theory in the crucial case of curves.
+
+
+
+
+
+
+
+
+
+
+\section{Some reminders}\label{II:1}
+
+
+
+
+
+\subsection{Notation}\label{II:1-1}
+
+$p,q,\dF,\dF_q$: $p$ is a prime number, $q=p^f$ a power of $p$, and $\dF$
+an algebraic closure of the prime field $\dF_p$. For every power $p^n$ of
+$p$, denote by $\dF_{p^n}$ the subfield with $p^n$ elements of $\dF$.
+
+$X_0,X$: An object over $\dF_q$ will often be denoted by a symbol carrying a
+subscript $0$. The same symbol without the $0$ then denotes the object
+obtained from it by extension of scalars to $\dF$. For example, if $\sF_0$ is
+a sheaf on a scheme $X_0$ over $\dF_q$, denote by $\sF$ its inverse image on
+$X=X_0\otimes_{\dF_q} \dF$.
+
+$F$: If $X_0$ is a scheme over $\dF_q$, the endomorphism of $X_0$ that
+``sends the point with coordinates $x$ to the point with coordinates $x^q$''
+is called the \emph{Frobenius morphism} and denoted by $F$: it is the identity
+on the underlying topological space and, for $x$ a local section of the
+structure sheaf, $F^* x = x^q$.
+
+The endomorphism of $X$ obtained from it by extension of scalars is also
+denoted by $F$. On the set $X(\dF) = X_0(\dF)$ of rational points of $X$,
+$F$ acts as the Frobenius substitution
+$\varphi\in\gal(\dF/\dF_q)$ defined by $\varphi(x)=x^q$. In particular,
+$X^F=X_0(\dF_q)$.
+
+In case of ambiguity, we shall write $F_{(q)}$ rather than $F$.
+
+
+
+
+
+
+
+
+
+
+\subsection{Frobenius correspondence}\label{II:1-2}
+
+Let $X_0$ be a scheme over $\dF_q$, and let $\sF_0$ be a sheaf on $X_0$. I
+like to view the \emph{Frobenius correspondence} (an $F$-endomorphism of
+$\sF_0$) as follows:
+\begin{equation*}\tag{1.2.1}\label{II:eq:1-2-1}
+  F^* : F^*\sF_0 \iso \sF_0
+\end{equation*}
+
+Regard $\sF_0$ as the sheaf of local sections of a space $[\sF_0]$ étale over
+$X_0$ ($[\sF_0]$ is an algebraic space in the sense of M. Artin). The
+functoriality of $F$ gives a commutative diagram
+\[\xymatrix{
+  [\sF_0] \ar[r]^-F \ar[d]
+    & [\sF_0] \ar[d] \\
+  X_0 \ar[r]^F
+    & X_0
+}\]
+Because $[\sF_0]$ is étale over $X_0$, this diagram is Cartesian; it gives an
+isomorphism $[\sF_0]\iso F^*[\sF_0]$ whose inverse is
+\eqref{II:eq:1-2-1}. We also denote by $F^*$ the correspondences or morphisms
+deduced from $F$ by extension of scalars or by functoriality, such as
+$F^*:\h_c^\bullet(X,\sF)\to \h_c^\bullet(X,\sF)$.
+
+For a formal definition, I refer to \cite[XI.1,2]{sga5}. Only the case
+$q=p$ is considered there, but the general case is treated in the same way.
+
+
+
+
+
+
+\subsection{}\label{II:1-3}
+
+The Frobenius correspondence is functorial in $(X_0,\sF_0)$. If
+$f_0:X_0\to Y_0$ is a morphism of $\dF_q$-schemes, $\sF_0$ a sheaf on $X_0$,
+$\sG_0$ a sheaf on $Y_0$, and
+$u\in\hom(f_0^*\sG_0,\sF_0)$ an $f_0$-morphism from $\sG_0$ to $\sF_0$, there
+is a commutative diagram of spaces $f_0 F = F f_0$, and above it a
+commutative diagram of sheaves
+\[\xymatrix{
+  X_0 \ar[r]^-{f_0} \ar[d]^-F
+    & Y_0 \ar[d]^-F \\
+  X_0 \ar[r]^-{f_0}
+    & Y_0
+}\qquad\qquad
+\xymatrix{
+  \sF_0
+    & \ar[l]_-u \sG_0 \\
+  \sF_0 \ar[u]_-{F^*}
+    & \ar[l] \sG_0 \ar[u]^-{F^*}
+}\]
+In particular, the correspondence on $f_{0*}\sF_0$ deduced from the
+Frobenius correspondence of $(X_0,\sF_0)$ is the Frobenius correspondence of
+$(Y_0,f_{0*}\sF_0)$.
+
+
+
+
+
+
+\subsection{}\label{II:1-4}
+
+The natural morphism $Y\to Y_0$ is a limit of étale morphisms. It follows
+that for every abelian sheaf $\sF_0$ on $X_0$, the inverse images on $Y$ of
+the $\eR^if_0\sF_0$ are the $\eR^if_*\sF$.
+
+On $\eR^if_*\sF$, one has
+\begin{enumerate}[\indent a)]
+  \item the correspondence
+    $F^*\eR^i f_*\sF \iso \eR^i f_*\sF \xrightarrow{F^*} \eR^if_*\sF$
+    deduced by functoriality from the Frobenius correspondence;
+  \item the correspondence $F^*\eR^if_*\sF\to\eR^if_*\sF$ that is the
+    inverse image on $Y$ of the Frobenius correspondence on
+    $\eR^i f_{0*}\sF_0$.
+\end{enumerate}
+
+It follows from (\ref{II:1-3}) that these correspondences coincide. They
+induce the initial term of a Frobenius action on the entire spectral sequence
+\[
+  \h^p(Y,\eR^q f_*\sF) \rightarrow \h^{p+q}(X,\sF) \text{.}
+\]
+Likewise for cohomology with proper support, and for the spectral sequence
+\[
+  \h_c^p(Y,\eR^q f_* \sF) \rightarrow \h_c^{p+q}(X,\sF)
+\]
+
+
+
+
+
+\subsection{Change of finite field}\label{II:1-5}
+
+Let $(X_0,\sF_0)$ be over $\dF_q$, let $n$ be an integer, and let
+$(X_1,\sF_1)$ over $\dF_{q^n}$ be obtained from $(X_0,\sF_0)$ by extension of
+scalars. On the one hand there is the Frobenius correspondence
+$F_{(q)}:X_0\to X_0)$, $F_{(q)}^*:F_{(q)}^*\sF_0\to \sF_0$, and on the other
+there is $F_{(q^n)}:X_1\to X_1$,
+$F_{(q^n)}^*:F_{(q^n)}^*\sF_1\to\sF_1$. It is easily verified that
+$F_{(q^n)}$ is obtained from the $n$-th power of $F_{(q)}$ by extension of
+scalars from $\dF_q$ to $\dF_{q^n}$; after extension of scalars to $\dF$, one
+still has the same identity $F_{(q^n)}=F_{(q)}^n$ between endomorphisms of
+$X$ and correspondences on $X$.
+
+If $x$ is a closed point of $X_0$, with $[k(x),\dF_q]=n$, and
+$\bar x\in X_0(\dF) = X(\dF)$ lies over $x$, then $\bar x$ is a fixed point
+of $F_{(q^n)}=F_{(q)}^n$. Denote by $F_x^*$ the endomorphism of
+$\sF_{\bar x}$ induced by $F_{(q^n)}^*$. Up to isomorphism,
+$(F_{\bar x}^*,\sF_{\bar x})$ does not depend on the choice of $\bar x$.
+The trace, etc. of $F_x^*$ is denoted by notation such as
+$\tr(F_x^*,\sF)$.
+
+
+
+
+
+
+\subsection{\texorpdfstring{$L$}{L}-function}\label{II:1-6}
+
+Let $X_0$ be a scheme of finite type over $\dF_q$. Denote by $|X_0|$ the set
+of its closed points, and for $x\in |X_0|$ set
+$\deg(x)=[k(x),\dF_p]$. If $\sF_0$ is a $\dQ_\ell$-sheaf on $X_0$ (for this
+notion, see below)---or a constructible flat sheaf of modules over a
+commutative Noetherian ring $A$---denote by $L(X_0,\sF_0)$ the formal series
+with constant term $1$, in $\dQ_\ell\llbracket t\rrbracket$ or in
+$A\llbracket t\rrbracket$,
+\[
+  L(X_0,\sF_0) = \prod_{x\in|X_0|} \det\left(1-F_x^* t^{\deg(x)},\sF\right)^{-1} \text{.}
+\]
+
+
+
+
+
+
+\subsection{Remark}\label{II:1-7}
+
+In definition (\ref{II:1-6}), one has $\deg(x)=[k(x),\dF_p]$ (absolute
+degree), and not $\deg(x)=[k(x),\dF_q]$ (degree relative to $\dF_q$). The
+effect is that $L(X_0,\sF_0)$ depends only on the scheme $X_0$ and the sheaf
+$\sF_0$, not on $q$ and the structure morphism
+$X_0\to\spec(\dF_q)$. The indeterminate $t$ is an avatar of $p^{-s}$.
+
+
+
+
+
+
+\subsection{The Galois point of view}\label{II:1-8}
+
+This subsection (n$^\circ$) will not be used in the remainder of the report. For $\sF_0$
+an abelian sheaf on $X_0$, the Galois group $\gal(\dF/\dF_q)$ acts on
+$\dF$, and by transport of structure on $\h_c^i(X,\sF)$. In particular, the
+Frobenius substitution $\varphi$ (\ref{II:1-1}) induces an automorphism, also
+denoted by $\varphi$, of $\h_c^i(X,\sF)$. The Frobenius correspondence, on the
+other hand, defines an endomorphism $F^*$ of $\h_c^i(X,\sF)$. One has
+\begin{equation*}\tag{1.8.1}\label{II:eq:1-8-1}
+  {F^*}^{-1} = \varphi \qquad \text{(on $\h_c^i(X,\sF)$).}
+\end{equation*}
+
+To see this, apply (\ref{II:1-4}) to the case where $Y_0$ is a point:
+$Y_0=\spec(\dF_q)$. One finds that $\h_c^i(X,\sF)$ is the fiber, at the
+geometric point $\spec(\dF)$ of $Y_0$, of $\eR^i f_! \sF_0$, and that $F^*$
+is the fiber of the Frobenius correspondence of $\eR^i f_!\sF_0$. Let
+$[\eR^i f_! \sF_0]$ be as in (\ref{II:1-2}). One has
+$\h_c^i(X,\sF) = [\eR^i f_!\sF_0](\dF)$ and
+\begin{enumerate}[\indent a)]
+  \item $\varphi$ acts by transport of structure, via its action on $\dF$;
+  \item $F^*$ is the inverse of
+    $F:[\eR^i f_!\sF_0](\dF) \to [\eR^i f_!\sF_0](\dF)$.
+\end{enumerate}
+
+The conclusion follows from the identity $F=\varphi$ of (\ref{II:1-1}).
+
+One advantage of the Galois point of view is that it permits reasoning by
+transport of structure.
+
+
+
+
+
+
+
+
+
+
+\section{\texorpdfstring{$\dQ_\ell$}{Ql}-sheaves}\label{II:2}
+
+The notion of $\dQ_\ell$-sheaves is developed in detail in
+\cite[V,VI]{sga5}. We shall use only the definitions and results below.
+
+
+
+
+
+
+\begin{definition_}\label{II:2-1}
+Let $X$ be a Noetherian scheme. A $\dZ_\ell$-sheaf $\sF$ on $X$ is an
+inverse system of sheaves $\sF_n$ ($n\geqslant 0$), with $\sF_n$ a
+constructible sheaf of $\dZ/\ell^{n+1}$-modules \cite[IX.2]{sga4}, such that
+the transition morphism $\sF_n\to\sF_{n-1}$ factors through an isomorphism
+\[
+  \sF_n\otimes_{\dZ/\ell^{n+1}} \dZ/\ell^n \iso \sF_{n-1}\text{.}
+\]
+The sheaf $\sF$ is said to be \emph{lisse} if the $\sF_n$ are locally
+constant.
+\end{definition_}
+
+The terminology of \cite{sga5} is different: ``constructible
+$\dZ_\ell$-sheaf'' is used there for ``$\dZ_\ell$-sheaf,'' and
+``constructibly twisted constant'' for ``lisse.''
+
+Likewise below, for $\dQ_\ell$-sheaves.
+
+
+
+
+
+
+\subsection{}\label{II:2-2}
+
+If $k$ is a separably closed field, a sheaf of $\dZ/\ell^n$-modules on
+$\spec(k)$ is identified with a $\dZ/\ell^n$-module, and the functor
+$\sF\mapsto \varprojlim \sF_n$ identifies the $\dZ_\ell$-sheaves on
+$\spec(k)$ with the $\dZ_\ell$-modules of finite type. This justifies the
+following definition: the \emph{fiber} of the $\dZ_\ell$-sheaf $\sF$ at the
+geometric point $x$ of $X$ is the $\dZ_\ell$-module
+$\varprojlim (\sF_n)_x$.
+
+
+
+
+
+
+\subsection{}\label{II:2-3}
+
+Suppose $X$ is connected, and let $x$ be a geometric point of $X$. It is
+known that the ``fiber at $x$'' functor is an equivalence between the
+category of constructible locally constant sheaves of
+$\dZ/\ell^n$-modules and the category of finite-type
+$\dZ/\ell^n$-modules equipped with a continuous action of $\pi_1(X,x)$.
+Passing to the limit gives the following proposition.
+
+
+
+
+
+
+\begin{proposition_}\label{II:2-4}
+Under the hypotheses above, the ``fiber at $x$'' functor is an equivalence
+between the category of lisse $\dZ_\ell$-sheaves on $X$ and that of
+finite-type $\dZ_\ell$-modules equipped with a continuous action of
+$\pi_1(X,x)$.
+\end{proposition_}
+
+
+
+
+
+
+\begin{proposition_}\label{II:2-5}
+Let $\sF$ be a $\dZ_\ell$-sheaf on a Noetherian scheme $X$. There is a finite
+partition of $X$ into locally closed parts $X_i$ such that the $\sF|X_i$ are
+lisse.
+\end{proposition_}
+
+Set $\gr_\ell^n\sF=\ell^n\sF_m/\ell^{m+1}\sF_m$ for $m\geqslant n$, and
+$\gr_\ell\sF=\bigoplus \gr_\ell^n\sF$. It is a sheaf of modules over the
+Noetherian ring $\gr_\ell\dZ=\dZ/\ell[t]$, the graded ring of $\dZ$ for the
+$\ell$-adic filtration. It is a quotient of
+$\gr_\ell^0\sF \otimes_{\dZ/\ell} \dZ/\ell[t]$, hence a constructible sheaf
+of $\gr_\ell\dZ$-modules \cite[IX.2]{sga4}; and there is a finite partition
+of $X$ into locally closed parts $X_i$ such that
+$\gr_\ell \sF|X_i$ is locally constant. Each of the sheaves
+$\gr_\ell^n\sF|X_i$ is then locally constant, as are the $\sF_m|X_i$, which
+are successive extensions of them.
+
+
+
+
+
+
+\subsection{}\label{II:2-6}
+
+If $\sF$ and $\sG$ are two $\dZ_\ell$-sheaves on $X$, set
+$\hom(\sF,\sG) = \varprojlim(\sF_n,\sG_n)$; this is a $\dZ_\ell$-module.
+Since $\hom(\sF_n,\sG_n) = \hom(\sF_m,\sG_n)$ for $m\geqslant n$, one also
+has
+\[
+  \hom(\sF,\sG) = \varprojlim_n \varinjlim_m \hom(\sF_m,\sG_n) \text{,}
+\]
+so that the functor $\sF\mapsto \text{``}\varprojlim\text{''}\sF_n$ is fully
+faithful from the category of $\dZ_\ell$-sheaves to that of pro-sheaves on
+$X$ ($=$ pro-objects of the category of sheaves on $X$). We shall use it to
+identify $\dZ_\ell$-sheaves with certain pro-sheaves (those such that every
+$\sF_n=\sF/\ell^{n+1}\sF$ is a sheaf, and
+$\sF\iso \text{``}\varprojlim\text{''}\sF_n$). It is easily verified that if
+$\sF+\text{``}\varprojlim\text{''}\sF_n$, with $\sF_n$ a constructible sheaf
+of $\dZ/\ell^n$-modules, then $\sF$ is a $\dZ_\ell$-sheaf if and only if the
+inverse systems (in $n$) $\sF_n/\ell^{k+1}\sF_n$ are essentially constant:
+the inverse system of
+$\sF_k'=\varprojlim_n\sF_n/\ell^{k+1}\sF_n$ then satisfies the conditions of
+(\ref{II:2-1}), and
+$\sF=\text{``}\varprojlim\text{''}\sF_k'$.
+
+In what follows, we abandon the notation $\sF_n$ of (\ref{II:2-1}); if
+$\sF$ is a $\dZ_\ell$-sheaf, the sheaf $\sF_n$ of (\ref{II:2-1}) will be
+denoted by $\sF\otimes\dZ/\ell^{n+1}$.
+
+
+
+
+
+
+\subsection{}\label{II:2-7}
+
+In the abelian category of pro-sheaves, the subcategory of
+$\dZ_\ell$-sheaves is stable under kernels, cokernels, and extensions. This is
+clear for cokernels. For kernels, if $f:\sF\to\sG$ is a morphism of
+$\dZ_\ell$-sheaves, it follows readily from
+(\ref{II:2-4}, \ref{II:2-5}) and Artin--Rees that the inverse system of
+$\ker(f:\sF\otimes\dZ/\ell^n\to\sG\otimes\dZ/\ell^n)$ satisfies the
+criterion given in (\ref{II:2-6}) above. There is even an integer $r$ such
+that for every $n$
+\[
+  \ker(f)\otimes\dZ/\ell^n = \ker(f:\sF\otimes\dZ/\ell^{n+r}\to\sG\otimes\dZ/\ell^{n+r})\otimes\dZ/\ell^n \text{.}
+\]
+The case of extensions is left to the reader.
+
+
+
+
+
+
+\subsection{}\label{II:2-8}
+
+A $\dZ_\ell$-sheaf $\sF$ is \emph{torsion-free} if
+$\ker(\ell:\sF\to\sF) = 0$. Each $\sF\otimes\dZ/\ell^n$ is then flat over
+$\dZ/\ell^n$ (i.e. its fibers are finite-rank free
+$\dZ/\ell^n$-modules). It follows from (\ref{II:2-4}, \ref{II:2-5}) that for
+every $\dZ_\ell$-sheaf $\sF$ there is an integer $n$ such that
+$\sF/\ker(\ell^n)$ is torsion-free.
+
+
+
+
+
+
+\subsection{}\label{II:2-9}
+
+The abelian category of \emph{$\dQ_\ell$-sheaves} on $X$ is the quotient of
+that of $\dZ_\ell$-sheaves by the subcategory of torsion
+$\dZ_\ell$-sheaves. Equivalently, its objects are the $\dZ_\ell$-sheaves,
+and, denoting by $\sF\otimes\dQ_\ell$ the $\dZ_\ell$-sheaf $\sF$, viewed as
+an object of the category of $\dQ_\ell$-sheaves, one has
+\[
+  \hom(\sF\otimes\dQ_\ell,\sG\otimes\dQ_\ell) = \hom(\sF,\sG)\otimes_{\dZ_\ell}\dQ_\ell \text{.}
+\]
+
+The \emph{fiber} of a $\dQ_\ell$-sheaf $\sF\otimes\dQ_\ell$ at a geometric
+point $x$ of $X$ is the finite-dimensional $\dQ_\ell$-vector space
+$\sF_x\otimes_{\dZ_\ell}\dQ_\ell$.
+
+
+
+
+
+
+\subsection{}\label{II:2-10}
+
+Let $X$ be a separated scheme of finite type over an algebraically closed
+field $k$, and let $\sF$ be a constructible $\dQ_\ell$-sheaf on $X$. Let
+$\sF'$ be a constructible $\dZ_\ell$-sheaf such that
+$\sF\sim \sF'\otimes_{\dZ_\ell}\dQ_\ell$. We shall see in
+(\ref{II:4-11}) that
+\[
+  \left(\varprojlim \h_c^q(X,\sF'\otimes \dZ/\ell^n)\right)\otimes_{\dZ_\ell}\dQ_\ell
+\]
+is a finite-dimensional $\dQ_\ell$-vector space. It depends only on $\sF'$,
+and is denoted by $\h_c^q(X,\sF)$. The proof does not use the fact that
+$\ell$ is prime to the characteristic, but only that case concerns us.
+
+
+
+
+
+
+\subsection{}\label{II:2-11}
+
+In this exposé, all important calculations will be carried out at the level
+of $\dZ/\ell^n$-sheaves, with passage to $\dQ_\ell$-sheaves taking place only
+at the very end. In practice, however, it is often convenient to work
+systematically with $\dQ_\ell$-sheaves. In Exposés V and VI of
+\cite{sga5}, Jouanolou gives the formalism that makes this possible. One of
+the essential results (\hyperref[VI:2-2]{VI 2.2}) is that if $f:X\to Y$ is a separated morphism
+of finite type of Noetherian schemes, and $\sF$ a $\dZ_\ell$-sheaf on $Y$,
+then, for every $q$, the pro-sheaf
+$\text{``}\varprojlim\text{''}\eR^q f_! (\sF\otimes\dZ/\ell^n)$ is a
+$\dZ_\ell$-sheaf on $Y$. He even proves a stronger regularity property (of
+Artin--Rees type) for the inverse system of the
+$\eR^q f_!(\sF\otimes\dZ/\ell^n)$.
+
+Jouanolou even works in a more general setting, encompassing the very useful
+case of $E_\lambda$-sheaves, for $E_\lambda$ a finite extension of
+$\dQ_\ell$. They are defined as the $\dQ_\ell$-sheaves were, with
+$\dQ_\ell$ replaced by $E_\lambda$, $\dZ_\ell$ by the ring $\sO_\lambda$ of
+the valuation $\lambda$, and $\dZ/\ell^n$ by $\sO_\lambda/\pi^n$, where
+$\pi$ is a uniformizer. It would amount to the same thing to define an
+$E_\lambda$-sheaf as a $\dQ_\ell$-sheaf $\sF$ equipped with a homomorphism
+$E_\lambda\to\operatorname{End}(\sF)$.
+
+
+
+
+
+
+
+
+
+\section{Trace formula and \texorpdfstring{$L$}{L}-functions}\label{II:3}
+
+\emph{We use the notation of \S\ref{II:1}, and $\ell$ is a prime number
+$\ne p$.}
+
+Let $X_0$ be a separated scheme of finite type over $\dF_q$ ($q=p^f$), and
+let $\sF_0$ be a constructible $\dQ_\ell$-sheaf on $X_0$. Grothendieck's
+cohomological interpretation of $L$-functions is the following theorem:
+
+
+
+
+
+
+\begin{theorem_}\label{II:3-1}
+$L(X_0,\sF_0) = \prod_i \det\left(1-F^* t^f, \h_c^i(X,\sF)\right)^{(-1)^{i+1}}$.
+\end{theorem_}
+
+It is obtained as a consequence of the trace formula:
+
+
+
+
+
+
+\begin{theorem_}\label{II:3-2}
+For every integer $n$,
+$\sum_{x\in X^{F^n}} \tr\left({F^n}^*,\sF_x\right) = \sum_i (-1)^i \tr\left({F^n}^*,\h_c^i(X,\sF)\right)$.
+\end{theorem_}
+
+
+
+
+
+
+Let us briefly recall the classical method for deducing (\ref{II:3-1}) from
+(\ref{II:3-2}). Set $T=t^f$; both sides are formal series in $T$ with
+constant term $1$. Since $\dQ_\ell$ has characteristic $0$, it suffices to
+prove that the logarithmic derivatives $T\frac{d}{dT}\log$ of the two sides
+are equal.
+
+To compute these logarithmic derivatives, we shall use the formula
+\[
+  T \frac{d}{dT}\log\det(1-f T)^{-1} = \sum_{n>0} \tr(f^n) T^n \text{,}
+\]
+whose proof (in a slightly more general setting) is recalled below. On the
+left-hand side, one finds
+\begin{align*}
+  T\frac{d}{dT}\log L(X_0,\sF_0)
+    &= \sum_{x\in |X_0|} \sum_n [k(x):\dF_q] \tr\left(F_x^n,\sF\right) T^{n\cdot[k(x):\dF_q]} \\
+    &= \sum_{n>0} T^n \sum_{x\in X^{F^n}} \tr\left({F^n}^*,\sF_x\right)
+\end{align*}
+and on the right-hand side
+\[
+  \sum_{n>0} T^n \sum (-1)^i \tr\left({F^n}^*,\h_c^i(X,\sF)\right) \text{ ; }
+\]
+the terms are compared one by one.
+
+
+
+
+
+
+\begin{proposition_}\label{II:3-3}
+Let $A$ be a commutative ring, $M$ a projective $A$-module of finite type,
+and $f$ an endomorphism of $M$. For every invertible formal series $Q$, set
+$\frac{d}{dT}\log Q = Q^{-1}\frac{d}{dT}Q$. One has
+\begin{equation*}\tag{3.3.1}\label{II:eq:3-3-1}
+  T\frac{d}{dT}\log\det(1-f T)^{-1} = \sum_{n>0} \tr(f^n) T^n \text{.}
+\end{equation*}
+\end{proposition_}
+
+Let $M'$ be an $A$-module such that $M\oplus M'$ is free of finite rank.
+Replacing $(M,f)$ by $(M\oplus M',f\oplus 0)$ changes neither side of
+(\ref{II:3-3}), and reduces us to the case where $M$ is free. For $M=A^d$,
+\eqref{II:eq:3-3-1} is an algebraic identity in the coefficients $f_i^j$ of
+$f$. By the principle of extension of algebraic identities, it suffices to
+verify it for $A$ an algebraically closed field of characteristic $0$. Since
+both sides are additive in $M$ in an extension
+$0\to M'\to M\to M''\to 0$, it even suffices to treat only the case where
+$M$ has rank $1$. If $f$ is multiplication by $a$,
+\eqref{II:eq:3-3-1} then reduces to the formula
+\[
+  T\frac{d}{dT}\log\left((1-a T)^{-1}\right) = \sum_{n>0} a^n T^n \text{.}
+\]
+
+
+
+
+
+
+\begin{corollary_}\label{II:3-4}
+Let $n$ be an integer, and let $f^{(n)}$ be the endomorphism
+$(x_1,\dotsc,x_n)\mapsto \left(f(x_n),x_1,\dotsc,x_{n-1}\right)$ of $M^n$.
+One has
+\begin{equation*}\tag{3.4.1}\label{II:eq:3-4-1}
+  \det(1-f T^n) = \det(1-f^{(n)} T) \text{.}
+\end{equation*}
+\end{corollary_}
+
+Proceeding as in (\ref{II:3-3}), we reduce to assuming that $A$ has
+characteristic $0$. It then suffices to verify that the logarithmic
+derivatives $-T\frac{d}{dT}\log$ of the two sides are equal.
+\begin{align*}
+  -T\frac{d}{dT}\log\det(1-f T^n) &= - n T^n \frac{d}{dT^n} \log\det(1-f T^n) = n \sum_{m>0} \tr(f^m) T^{n m} \text{,} \\
+  -T \frac{d}{dT}\log\det\left(1-f^{(n)} T\right) &= \sum_{m>0} \tr\left(f^{(n) m}\right) T^m \text{,}
+\end{align*}
+and one observes that
+\begin{align*}
+  \tr(f^{(n) m}) &= 0 \qquad \text{if $n\nmid m$} \\
+  \tr(f^{(n) n m}) &= n \tr(f^m) \text{.}
+\end{align*}
+
+
+
+
+
+
+\subsection{Remark}\label{II:3-5}
+
+For $A=\dQ_\ell$, \eqref{II:eq:3-4-1} is the special case
+$X_0=\spec(\dF_{q^n})$ of (\ref{II:3-1}). Using this identity, it is easy to
+verify directly that the right-hand side of (\ref{II:3-1}) is independent of
+$q$ and of the structure morphism $X_0\to\spec(\dF_q)$.
+
+
+
+
+
+
+\subsection{Remark}\label{II:3-6}
+
+If $j:X_0\hookrightarrow \bar X_0$ is a compactification of $X_0$, one has
+$L(X_0,\sF_0) = L(\bar X_0, j_!\sF_0)$ and
+$\h_c^i(X,\sF) = \h^i(\bar X,j_!\sF)$. This reduces (\ref{II:3-1}) to the
+proper case, and explains the use of cohomology with proper support. For $X$
+proper, (\ref{II:3-2}) has the form of a Lefschetz trace formula. Note that
+the local terms $\tr(F^{n *},\sF_x)$ ($x\in X^{F^n}$) depend only on the
+fiber of $\sF$ at $x$ and carry no multiplicity. For $X$ and $\sF$ smooth,
+this corresponds to the fact that the graph of $F$ is transverse to the
+diagonal (since $d F = 0$).
+
+
+
+
+
+
+\subsection{Remark}\label{II:3-7}
+
+If the formalism of $\dQ_\ell$-sheaves is admitted (cf. \ref{II:2-11}; one
+needs the Leray spectral sequence and the base-change theorem for the higher
+direct images $\eR^q f_!$), it is easy to reduce the proof of
+(\ref{II:3-1}, \ref{II:3-2}) to the case where $X_0$ is a smooth curve and
+$\sF_0$ is lisse. This is clearly explained in \cite[\S 5]{gr95} (for
+\ref{II:3-1}; \ref{II:3-2} is treated in the same way).
+
+
+
+
+
+
+\subsection{}\label{II:3-8}
+
+There are two methods for proving (\ref{II:3-2}).
+
+
+
+\paragraph{Lefschetz--Verdier}
+If $X_0$ is proper (cf. \ref{II:3-6}), the general Lefschetz--Verdier trace
+formula expresses the right-hand side of (\ref{II:3-2}) as a sum of local
+terms, one for each point of $X^{F^n}$. In the original version of
+\cite{sga5}, this formula was proved only modulo resolution of singularities.
+The reader will find an unconditional proof in the definitive version. In
+the case of curves, to which one can reduce (\ref{II:3-7}), all the
+ingredients of the proof were in fact already available.
+
+To deduce (\ref{II:3-2}) from the Lefschetz--Verdier formula, one must be
+able to compute its local terms. For a curve and the Frobenius endomorphism,
+this had been done by Artin and Verdier \cite{ve67}.
+
+
+
+\paragraph{Nielson--Wecken}
+A method inspired by the work of Nielsen and Wecken makes it possible to
+reduce (\ref{II:3-2}) to a special case proved by Weil; this is what will be
+explained in the following sections.
+
+
+
+
+
+
+
+
+
+
+
+\section{Reduction to theorems in \texorpdfstring{$\dZ/\ell^n$}{Z/l n}-cohomology}\label{II:4}
+
+We shall prove (\ref{II:3-2}) by passage to the limit from an analogous
+theorem in $\dZ/\ell^n$-cohomology. Its statement presents the following
+difficulty. Let $X_0$ be a separated scheme of finite type over $\dF_q$, and
+let $\sF_0$ be a flat constructible sheaf of $\dZ/\ell^n$-modules. Its fibers
+are finite-rank free $\dZ/\ell^n$-modules, and the left-hand side of
+(\ref{II:3-2}) therefore makes sense (it is an element of $\dZ/\ell^n$).
+The $\h_c^i(X,\sF)$, on the other hand, will not in general be free, so the
+right-hand side is not defined. Overcoming this difficulty is one of
+Grothendieck's essential uses of the theory of derived categories.
+
+
+
+
+
+
+\subsection{}\label{II:4-1}
+
+For the definition of the derived category $\eD(\cA)$ of an abelian category
+$\cA$, and that of the subcategories $\eD^+(\cA)$, $\eD^-(\cA)$,
+$\eD^b(\cA)$, I refer to Verdier's text in this volume. For $\Lambda$ a ring,
+write $\eD(\Lambda)$ instead of
+$\eD(\text{category of left $\Lambda$-modules})$; for $X$ a site, write
+$\eD(X,\Lambda)$ instead of
+$\eD($category of sheaves of left $\Lambda$-modules$)$. Likewise for
+$\eD^-$, etc\ldots
+
+The sign $\eR$ (resp. $\mathsf{L}$) indicates a right-derived (resp.
+left-derived) functor. For example, $\lotimes$ denotes the derived functor of
+the tensor product: for $K$ in $\eD^-(\Lambda^\circ)$ and $L$ in
+$\eD^-(\Lambda)$ ($\Lambda^\circ$ the opposite ring of $\Lambda$),
+$K\lotimes L$ is computed as follows: take quasi-isomorphisms $K'\to K$,
+$L'\to L$, with $K'$ and $L$ bounded above and one of them having flat
+components, and take the simple complex $s(K'\otimes_\Lambda L)$ associated
+with the double complex $K'\otimes_\Lambda L'$.
+
+
+
+
+
+
+\subsection{}\label{II:4-2}
+
+Even to treat only the case of $\dZ/\ell^n$-cohomology, we shall need the
+theory of traces of endomorphisms of modules over rings that are not
+necessarily commutative (finite-group algebras $\dZ/\ell^n[G]$). These
+traces were introduced by Stallings and Hattori \cite{ba76}.
+
+Let $\Lambda$ be a ring (with identity, but not necessarily commutative).
+Denote by $\Lambda^\natural$ the quotient of the additive group of $\Lambda$
+by the subgroup generated by the commutators $a b-b a$. If $f$ is an
+endomorphism of the free left $\Lambda$-module $\Lambda^n$, with matrix
+$f_i^j$, denote by $\tr(f)$ the image of $\sum_i f_i^i$ in
+$\Lambda^\natural$. If $f$ and $g$ are two homomorphisms
+$f:\Lambda^n \leftrightarrows \Lambda^m : g$, one immediately verifies that
+$\tr(f g) = \tr(g f)$.
+
+Let $f$ be an endomorphism of a projective $\Lambda$-module of finite type
+$P$. Write $P$ as a direct factor of a free module $\Lambda^n$: this means
+choosing a module $P'$ and an isomorphism
+$\alpha:P\oplus P'\iso \Lambda^n$, or equivalently choosing a homomorphism
+$a:P\to \Lambda^n$ and a retraction $b:\Lambda^n\to P$ (take
+$P'=\ker(b)$). Let $f'=\alpha(f\oplus 0)\alpha^{-1} =af b$. Set
+$\tr(f) = \tr(f')$. This element of $\Lambda^\natural$ depends only on $f$:
+if another choice $c:P\leftrightarrows \Lambda^m:d$ is made, one has
+$a=a(dc)(ba)$, whence
+\[
+ \tr(a f b) = \tr(adcbafb) = \tr(cbafbad) = \tr(cfd) \text{.}
+\]
+
+If $f$ is an endomorphism of a $\dZ/2$-graded projective
+$\Lambda$-module of finite type, with components $f_i^j:P^j\to P^i$, set
+\[
+  \tr(f) = \tr(f_0^0) - \tr(f_1^1) \text{.}
+\]
+If there is a risk of ambiguity, we shall instead write $\tr(f;P)$. If the
+homomorphisms $f:P\leftrightarrows Q:g$ are homogeneous, reduction to the
+free case immediately verifies that
+\begin{equation*}\tag{4.2.1}\label{II:eq:4-2-1}
+  \tr(f g) = \tr\left((-1)^{\deg f \deg g} g f\right) \text{.}
+\end{equation*}
+
+If $f$ is an endomorphism of a filtered $\dZ/2$-graded $\Lambda$-module
+$(P,F)$, with finite filtration compatible with the grading, and the
+$\gr_F^i(P)$ are projective of finite type, then $P$ is projective of finite
+type, and
+\begin{equation*}\tag{4.2.2}\label{II:eq:4-2-2}
+  \tr(f;P) = \sum \tr\left(f; \gr_F^i(P) \right)
+\end{equation*}
+(split the filtration to reduce to the case of a direct sum).
+
+
+
+
+
+
+\subsection{}\label{II:4-3}
+
+A $\dZ$-graded module will be regarded as $\dZ/2$-graded by the parity of
+the degree. In particular, if $f$ is an endomorphism of a bounded complex of
+projective $\Lambda$-modules of finite type, set
+\begin{equation*}\tag{4.3.1}\label{II:eq:4-3-1}
+  \tr(f) = \sum (-1)^i \tr(f^i) \text{.}
+\end{equation*}
+
+By \eqref{II:eq:4-2-1}, if $f$ is homotopic to zero, $\tr(f) = 0$:
+\begin{equation*}\tag{4.3.2}\label{II:eq:4-3-2}
+  f = d H + H d \rightarrow \tr(f) = 0 \text{.}
+\end{equation*}
+
+Let $\mathsf{K}_\text{parf}(\Lambda)$ be the category whose objects are
+bounded complexes of projective $\Lambda$-modules of finite type and whose
+arrows are morphisms of complexes taken up to homotopy. The functor
+$\mathsf{K}_\text{parf}(\Lambda)\to\eD(\Lambda)$ is fully faithful. Denote its
+essential image by $\mathsf{D}_\text{parf}(\Lambda)$. Formulas
+\eqref{II:eq:4-3-1} and \eqref{II:eq:4-3-2} make it possible to define
+$\tr(f)$ for $f$ an endomorphism of
+$K\in\ob \mathsf{D}_\text{parf}(\Lambda)$ (and this trace depends only on the
+isomorphism class of $(K,f)$).
+
+
+
+
+
+
+\subsection{}\label{II:4-4}
+
+Recall that the filtered derived category $\mathsf{DF}(\cA)$ of an abelian
+category $\cA$ is the category obtained from that of complexes of objects of
+$\cA$ with finite filtration by inverting the filtered quasi-isomorphisms
+($=$ morphisms of filtered complexes inducing a quasi-isomorphism on the
+associated graded). There are functors ``underlying complex'':
+$\mathsf{DF}(\cA)\to\eD(\cA): (K,F)\mapsto K$, and ``$p$-th component of the
+associated graded'':
+$\mathsf{DF}(\cA)\to\eD(\cA): (K,F)\mapsto \gr_F^p(K)$.
+
+Let $\mathsf{KF}_\text{parf}(\Lambda)$ be the category whose objects are
+bounded filtered complexes $(K,F)$ with finite filtration, with the
+$\gr_F^p(K^q)$ projective of finite type, and whose arrows are
+filtration-preserving morphisms of complexes taken up to a
+filtration-preserving homotopy. The functor
+$\mathsf{KF}_\text{parf}(\Lambda)\to\mathsf{DF}(\Lambda)$ is fully faithful;
+its essential image $\mathsf{DF}_\text{parf}(\Lambda)$ consists of the $(K,F)$ in
+$\mathsf{DF}(\Lambda)$ such that the $\gr_F^p(K)$ belong to
+$\mathsf{D}_\text{parf}(\Lambda)$ and are almost all zero; if $(K,F)$ belongs to
+$\mathsf{DF}_\text{parf}(\Lambda)$, then $K$ belongs to
+$\mathsf{D}_\text{parf}(\Lambda)$.
+
+By \eqref{II:eq:4-2-2}, if $f$ is an endomorphism of
+$(K,F)\in\ob\mathsf{DF}_\text{parf}(\Lambda)$, one has
+\begin{equation*}\tag{4.4.1}\label{II:eq:4-4-1}
+ \tr(f,K) = \sum_p \tr(f,\gr_F^p(K)) \text{.}
+\end{equation*}
+
+
+
+
+
+
+\subsection{}\label{II:4-5}
+
+Let $\Lambda$ be a ring, and let $K\in\ob\eD^-(\Lambda)$. We say that $K$
+has tor-dimension $\leqslant r$ if, for every right $\Lambda$-module $N$, the
+hypertors $\h^i(N\lotimes_\Lambda K)$ vanish for $i<-r$. It is said to have
+finite tor-dimension if this condition holds for some $r$.
+
+The same terminology is used for a complex of sheaves
+$K\in\ob\eD^-(X,\Lambda)$.
+
+
+
+
+
+
+\begin{lemma}\label{II:4-5-1}
+Let $\Lambda$ be a left Noetherian ring, and let
+$K\in\ob\eD^-(\Lambda)$. Then $K$ belongs to
+$\mathsf{D}_\text{parf}(\Lambda)$ if and only if it has finite tor-dimension
+and the $\h^i(K)$ are of finite type.
+\end{lemma}
+
+After replacing $K$ by an isomorphic complex (in $\eD^-(\Lambda)$), we may
+suppose that $K$ is bounded above and has finite-rank free components (cf.
+\ref{II:4-7} below). If $K$ has tor-dimension $\leqslant r$, the
+$\h^i(K)$ vanish for $i<-r$, $K^{-r}/\im(d)$ admits the free resolution
+\[
+  (\cdots \to K^{-r-1} \to K^{-r}) \to K^{-r}/\im(d) \text{,}
+\]
+and for every right $\Lambda$-module $N$,
+$\h^{-r-k}(N\lotimes_\Lambda K) = \h^{-r-k}(N\otimes_\Lambda K)
+= \tor_k(N,K^{-r}/\im d)$ for $k\geqslant 1$.
+
+By hypothesis, these groups vanish; the module $K^{-r}/\im d$ is therefore
+flat and finitely presented, i.e. projective of finite type. The quotient
+\[
+  0 \to K^{-r}/\im(d) \to K^{-r+1} \to K^{-r+2}\to \cdots
+\]
+of $K$ is quasi-isomorphic to $K$, and this shows that
+$K\in\ob\mathsf{D}_\text{parf}(\Lambda)$.
+
+
+
+
+
+
+\begin{prop-def_}\label{II:4-6}
+Let $X$ be a Noetherian scheme, and let $\Lambda$ be a left Noetherian ring.
+Denote by $\eD_\textnormal{ctf}^b(X,\Lambda)$ the subcategory of
+$\eD^-(X,\Lambda)$ formed by the complexes $\sK$ satisfying the following
+equivalent conditions:
+\begin{enumerate}[\indent i)]
+  \item $\sK$ is isomorphic (in $\eD^-(X,\Lambda)$) to a bounded complex of
+    flat constructible sheaves of $\Lambda$-modules.
+  \item $\sK$ has finite tor-dimension and the sheaves $\h^i(K)$ are
+    constructible.
+\end{enumerate}
+\end{prop-def_}
+
+The same argument as in (\ref{II:4-5}), starting from the following lemma.
+
+
+
+
+
+
+\begin{lemma_}\label{II:4-7}
+If a complex $\sK$ of sheaves of $\Lambda$-modules is such that the
+$\h^i(\sK)$ are constructible and vanish for large $i$, there is a
+quasi-isomorphism $\sK'\to \sK$, with $\sK'$ bounded above and having flat
+constructible components.
+\end{lemma_}
+
+Construct $\sK'$ by proceeding from right to left. For an $m$ such that the
+$\h^i(\sK)$ ($i\geqslant m$) vanish, take ${\sK'}^i = 0$ for
+$i\geqslant m$. Next suppose that the ${\sK'}^i$ have already been
+constructed for $i>n$:
+\[\xymatrix{
+  \cdots \ar[r]
+    & \sK^{n-1} \ar[r]
+    & \sK^n \ar[r]
+    & \sK^{n+1} \ar[r]
+    & \cdots \\
+  & & & {\sK'}^{n+1} \ar[u] \ar[r]
+    & \cdots \text{,}
+}\]
+with $\h^i(\sK')\iso \h^i(\sK)$ for $i>n+1$, and
+$\ker(d)\to\h^{n+1}(\sK)$ surjective in degree $n+1$. Define sheaves $\sA$
+and $\sB$ by the Cartesian diagram
+\[\xymatrix{
+  \sK^n \ar[r]
+    & \sK^n/\im(d) \ar[r]
+    & \ker(d) \\
+  \sA \ar[u] \ar[r]^u
+    & \sB \ar[u]\ar[r]
+    & \ker(d) \ar[u] \text{.}
+}\]
+
+Then $\sB$ is constructible, $u$ is surjective, and to advance one step it
+suffices to construct ${\sK'}^n$ flat and constructible and
+$v:{\sK'}^n\to \sA$ such that $u v$ is surjective. The possibility of doing so
+is guaranteed by the following lemma.
+
+
+
+
+
+
+\begin{lemma_}\label{II:4-8}
+Let $v:\sA\to \sB$ be an epimorphism of sheaves of $\Lambda$-modules, with
+$\sB$ constructible. There is then $u:\sK\to \sA$, with $\sK$ flat and
+constructible, such that $v u$ is an epimorphism.
+\end{lemma_}
+
+The sheaf $\sA$ is a quotient of a sum of sheaves of the form
+$\varphi_! \Lambda$, for $\varphi:U\to X$ étale. Since $\sB$ is Noetherian
+(\cite[IX.2.10]{sga4}), a finite sum of these already maps onto $\sB$, which
+proves the lemma.
+
+
+
+
+
+
+\begin{theorem_}\label{II:4-9}
+Let $f:X\to Y$ be a separated morphism of finite type of Noetherian schemes.
+If $\sK\in\ob\eD_\textnormal{ctf}^b(X,\Lambda)$, then
+$\eR f_!\sK\in \ob\eD_\textnormal{ctf}^b(Y,\Lambda)$.
+\end{theorem_}
+
+Recall that if $j:X\hookrightarrow \bar X \xrightarrow{\bar f} Y$ is a
+relative compactification of $X/Y$, then by definition
+$\eR f_! = \eR \bar f_* \circ j_!$, where $\eR \bar f_*$ is the derived
+functor of $\bar f_*$. This formula reduces the proof of (\ref{II:4-9}) to
+the case where $f$ is proper. For $f$ proper, $f_*$ has finite cohomological
+dimension; this makes it possible to define $\eR f_*$ on the entire derived
+category, and also as a functor
+\[
+  \eR f_* : \eD^-(X,\Lambda) \to \eD^-(Y,\Lambda) \text{.}
+\]
+By composition, one likewise defines in general
+\[
+  \eR f_! : \eD^-(X,\Lambda) \to \eD^-(Y,\Lambda) \text{.}
+\]
+
+For every right $\Lambda$-module $N$, one has (proof given below)
+\begin{equation*}\tag{4.9.1}\label{II:eq:4-9-1}
+  N\lotimes \eR f_! \sK \iso \eR f_! (N\lotimes \sK) \text{.}
+\end{equation*}
+
+Let us deduce (\ref{II:4-9}) from \eqref{II:eq:4-9-1}.
+\begin{enumerate}[\indent a)]
+  \item The spectral sequence
+    \[
+      E_2^{p q} = \eR^p f_! \h^q(\sK) \rightarrow \h^{p+q} \eR f_! \sK \text{.}
+    \]
+    and the finiteness theorem for $\eR f_!$ show that
+    $\eR f_!\sK\in \ob \eD^b(Y,\Lambda)$ and has constructible cohomology.
+    It remains to prove finite tor-dimension (\ref{II:4-6}).
+  \item If $\sK$ has tor-dimension $\leqslant -r$, the same is true of
+    $\eR f_! \sK$: one has
+    $\h^i(N\lotimes \eR f_! \sK) = \h^i(\eR f_!(N\lotimes \sK))$, and in the
+    spectral sequence above for $N\lotimes \sK$, the $E_2^{p q}$ vanish for
+    $q<r$, hence a fortiori for $p+q<r$.
+\end{enumerate}
+
+Let us prove \eqref{II:eq:4-9-1}, remaining at the level of complexes.
+\begin{enumerate}[\indent a)]
+  \item Using the defining formula $\eR f_! = \eR f_*\circ j_!$, we reduce to
+    assuming that $f$ is proper.
+  \item Represent $\sK$ by a complex bounded above whose components are
+    acyclic for $f_*:\eR^p f_* \sK^q = 0$ for $p>0$. One then has
+    $\eR f_* K \sim f_* \sK$. It is possible to work in this way with
+    complexes bounded above only because $f_*$ has finite cohomological
+    dimension.
+  \item If $L$ is a free right $\Lambda$-module, one has
+    $\eR^p f_*(L\otimes \sK^q) = L\otimes \eR^p f_* \sK^q$: this is trivial
+    when $\Lambda$ is free of finite type, and the general case follows by
+    passage to the limit. The sheaf $L\otimes \sK^q$ is acyclic for $f_*$,
+    and $f_*(L\otimes \sK^q) = L\otimes f_* \sK^q$.
+  \item Let $N_\bullet$ be a free resolution of $N$. One has
+    $N\lotimes \sK\sim s(N_\bullet\otimes \sK)$ (the simple complex
+    associated with the double complex $N_\bullet\otimes \sK$). By c),
+    \[
+      \eR f_*(N\lotimes \sK) \sim \eR f_* (s(N_\bullet\otimes \sK)) \sim f_*(s(N_\bullet\otimes \sK)) \sim s(N_\bullet\otimes f_* \sK) \sim N\lotimes \eR f_* \sK \text{,}
+    \]
+    which is the asserted formula.
+\end{enumerate}
+
+When $Y$ is the spectrum of a separably closed field, the functor $\eR f_!$
+is identified with a functor denoted by
+$\eR \Gamma_c : \eD_\text{ctf}^b(X,\Lambda)\to\eD_\text{parf}(\Lambda)$.
+
+
+
+
+
+
+\begin{theorem_}\label{II:4-10}
+With the notation of \S\ref{II:1}, let $X_0$ be a separated scheme of finite
+type over $\dF_q$, and let $\Lambda$ be a Noetherian torsion ring annihilated
+by an integer prime to $p$. Let
+$\sK_0\in\ob\eD_\textnormal{ctf}^b(X_0,\Lambda)$. With the definition of
+traces in (\ref{II:4-3}), one has for every $N$
+\begin{equation*}\label{II:eq:4-10}
+  \sum_{x\in X^{F^n}} \tr\left({F^n}^*,\sK_x\right) = \tr\left({F^n}^*,\eR\Gamma_c(X,\sK)\right) \text{.}
+\end{equation*}
+\end{theorem_}
+
+In the remainder of this \S, we shall deduce \ref{II:3-2} from
+\ref{II:4-10}, and prove \ref{II:2-10}.
+
+
+
+
+
+
+\subsection{Proof of \texorpdfstring{\ref{II:2-10}}{2.10}}\label{II:4-11}
+
+Let $X$ be a separated scheme of finite type over an algebraically closed
+field $k$, and let $\sG$ be a $\dQ_\ell$-sheaf on $X$. By \ref{II:2-8}, it
+can be written in the form $\sG=\sF\otimes\dQ_\ell$, with $\sF$ a
+torsion-free $\dZ_\ell$-sheaf. Set
+\[
+  K_n = \eR \Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\in\eD(\dZ/\ell^{n+1}) \text{.}
+\]
+By \ref{II:4-9}, one has
+$K_n\in\ob\eD_\text{parf}(\dZ/\ell^{n+1})$, and it follows from
+\eqref{II:eq:4-9-1} that the natural arrow
+\begin{equation*}\tag{4.11.1}\label{II:eq:4-11-1}
+\xymatrix{
+  K_n\lotimes_{\dZ/\ell^{n+1}} \dZ/\ell^n \ar[r] & K_{n-1} \text{,}
+}
+\end{equation*}
+is an isomorphism. The problem of defining this arrow is discussed in
+\ref{II:4-12}.
+
+We may now invoke \cite[XV.3.3]{sga5} (p. 31, lines 1--2 from the end; this
+passage is independent of the rest of \cite{sga5}) to realize each $K_n$ by
+a bounded complex of finite-rank free $\dZ/\ell^{n+1}$-modules, and the
+arrows \eqref{II:eq:4-11-1} by \emph{isomorphisms of complexes}
+\[\xymatrix{
+  K_n\otimes \dZ/\ell^n \ar[r]^-\sim
+    & K_{n-1} \text{.}
+}\]
+Let $K$ be the complex $\varprojlim K_n$. It is a bounded complex of free
+$\dZ_\ell$-modules, and
+$K_n\simeq K\otimes_{\dZ_\ell}\dZ/\ell^{n+1}$. One has
+\[
+  \h^i(K) = \varprojlim \h^i(K_n) \text{,}
+\]
+(indeed, every inverse system of finite groups satisfies the Mittag--Leffler
+condition), and $\h^i(K)$ is a $\dZ_\ell$-module of finite type. One has
+\[
+  \h_c^i(X,\sG) = \left(\varprojlim \h^i(K_n) \right)\otimes_{\dZ_\ell} \dQ_\ell \text{:}
+\]
+this is a finite-dimensional $\dQ_\ell$-vector space.
+
+
+
+
+
+
+\subsection{The arrow \texorpdfstring{\eqref{II:eq:4-11-1}}{(4.11.1)}}\label{II:4-12}
+
+To \emph{define} the arrow \eqref{II:eq:4-11-1}, one cannot proceed as in
+\ref{II:4-9}, i.e. resolve $\dZ/\ell^n$ by a complex of free
+$\dZ/\ell^{n+1}$-modules, since one wishes to construct an isomorphism in
+$\eD_\text{parf}(\dZ/\ell^n)$. The desired arrow is a special case of the
+following scalar-extension arrow.
+
+(*) Let $\Lambda\to\Lambda'$ be a homomorphism of Noetherian torsion rings.
+For $X$ a separated scheme of finite type over an algebraically closed $k$,
+and $\sK\in\ob\eD_\text{ctf}(X,\Lambda)$, one has an isomorphism
+\[\xymatrix{
+  \eR\Gamma_c(X,\sK)\lotimes_\Lambda \Lambda' \ar[r]^-\sim & \eR \Gamma_c(X,\sK\lotimes_\Lambda \Lambda') \text{.}
+}\]
+
+More general arrows are constructed in \cite[XVII 4.2.12]{sga4}. The method
+is as follows:
+\begin{enumerate}[\indent a)]
+  \item The definition of $\eR\Gamma_c$ and the formula
+    $j_!(\sK\otimes_\Lambda\Lambda') = (j_! \sK)\otimes_\Lambda\Lambda'$ for
+    an open immersion reduce us to the case where $X$ is proper.
+  \item For $X$ proper, one must replace $\sK$ by a bounded complex whose
+    components are acyclic for the functor $\Gamma$, and whose fiber at every
+    geometric point (or merely every closed point) is homotopic to a complex
+    of flat $\Lambda$-modules. For such a complex, one has
+    $\Gamma(X,\sK)\sim \eR\Gamma(X,\sK)$ and
+    $K\otimes_\Lambda\Lambda'\sim \sK\lotimes_\Lambda\Lambda'$; the arrow
+    \eqref{II:eq:4-11-1} is defined as the composite
+    \[
+      \eR\Gamma(X,\sK)\lotimes_\Lambda \Lambda' \to \Gamma(X,\sK)\otimes_\Lambda\Lambda' \to \Gamma(X,\sK\otimes_\Lambda\Lambda') \xleftarrow\sim \eR\Gamma(X,\sK\lotimes_\Lambda\Lambda') \text{.}
+    \]
+  \item It remains to show that $\sK$ can be replaced by a complex of the
+    desired kind \cite[XVII.4.2.10]{sga4}. First replace $\sK$ by a bounded
+    complex with flat components (\ref{II:4-6}), then take a truncated
+    canonical flasque resolution of it (this does not modify the homotopy
+    type of the fiber complexes, and one truncates far enough for the
+    acyclicity condition for $\Gamma$ to hold (i.e. beyond the cohomological
+    dimension of $\Gamma$)).
+\end{enumerate}
+
+
+
+
+
+
+\subsection{Proof of \texorpdfstring{(\ref{II:3-2})}{(3.2)}}\label{II:4-13}
+
+To simplify notation, we shall treat only the case $n=1$ of
+(\ref{II:3-2}). The general case follows by replacing $F$ below by $F^n$.
+
+Thus let $X_0$ be separated and of finite type over $\dF_q$, and let $\sG_0$
+be a $\dQ_\ell$-sheaf on $X_0$. One has
+$\sG_0=\sF_0\otimes\dQ_\ell$, for a suitable torsion-free
+$\dZ_\ell$-sheaf $\sF_0$. Let
+$K_n=\eR\Gamma_c(X,\sF\otimes\dZ/\ell^n)$. The Frobenius morphisms induce
+morphisms
+\[
+  F^* : K_n\to K_n \qquad \text{(in $\eD_\text{parf}(\dZ/\ell^{n+1})$),}
+\]
+which are deduced from one another via the isomorphisms
+\eqref{II:eq:4-11-1}.
+
+As in (\ref{II:4-11}), realize the $K_n$ and the isomorphisms
+\eqref{II:eq:4-11-1} at the level of complexes. The already cited passage
+\cite[XV.3.3]{sga5} makes it possible to realize the morphisms $F^*$ by
+endomorphisms of complexes, again denoted by $F^*$, which reduce to one
+another. Again denote by $F^*$ their inverse limit and the endomorphisms
+deduced from it. Since
+$\h_c^i(X,\sG) = \h^i(K)\otimes\dQ_\ell = \h^i(K\otimes\dQ_\ell)$, one has
+(with the sign convention of \ref{II:eq:4-3-1})
+\[
+  \tr\left(F^*, \h_c^\bullet(X,\sG)\right) = \tr\left(F^*,K^\bullet\otimes\dQ_\ell\right) = \varprojlim_n \tr\left(F^*,K_n^\bullet\right) = \varprojlim_n \tr\left(F^*,\eR\Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\right) \text{.}
+\]
+Apply (\ref{II:4-10}) to $\sF_0\otimes\dZ/\ell^{n+1}$ (viewed as a complex
+concentrated in degree $0$), for $\Lambda=\dZ/\ell^{n+1}$. One finds that
+\begin{align*}
+  \tr\left(F^*,\eR\Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\right)
+    &= \sum_{x\in X^F} \tr\left(F^*,\sF_x\otimes\dZ/\ell^{n+1}\right) \\
+    &= \sum_{x\in X^F} \tr\left(F^*,\sG_x\right) \mod \ell^{n+1} \text{,}
+\end{align*}
+and (\ref{II:3-2}) follows by passage to the limit.
+
+
+
+
+
+
+
+
+
+
+
+\section{The Nielsen--Wecken method}\label{II:5}
+
+In this chapter, we prove two special cases of (\ref{II:4-10}). The general
+case will be considered in the next chapter.
+
+
+
+
+
+
+\begin{lemma_}\label{II:5-1}
+Theorem (\ref{II:4-10}) is true for $X_0$ of dimension $0$.
+\end{lemma_}
+
+In dimension $0$, formula \eqref{II:eq:4-10} holds for every correspondence,
+and not only for the iterates of a Frobenius. It is a special case of the
+following statement (applied to $X(\dF)$, $K$, and the ${F^*}^n$).
+
+(*) Let $X$ be a finite set, $F:X\to X$,
+$\sK\in\ob\eD_\text{parf}(X,\Lambda)$, and $F^*:F^* \sK\to \sK$. One has
+\[
+  \sum_{X^F} \tr\left(F^*,\sK_x\right) = \tr\left(F^*,\Gamma(X,K)\right) \text{.}
+\]
+
+One has $\Gamma(X,\sK)=\bigoplus_{x\in X} \sK_x$, and the formula follows
+from the fact that for every morphism
+$u:\bigoplus_{x\in X} \sK_x\to \bigoplus_{x\in X} \sK_x$, with matrix
+$u_x^y$, one has $\tr(u)=\sum_{x\in X} \tr\left(u_x^x\right)$.
+
+
+
+
+
+
+\begin{lemma_}\label{II:5-2}
+Let $\Lambda$ be a Noetherian torsion ring annihilated by a power of the prime
+number $\ell\ne p$, let $X_0$ be a smooth projective connected curve over
+$\dF_q$, let $j:U_0\hookrightarrow X_0$ be a dense open subscheme of $X_0$,
+and let $\sG_0$ be a locally constant sheaf of projective
+$\Lambda$-modules on $U_0$. One has
+\[
+  \sum_{x\in U^F} \tr\left(F^*,\sG_x\right) = \tr\left(F^*,\eR\Gamma_c(U,\sG)\right) \text{.}
+\]
+\end{lemma_}
+
+More precisely, we shall deduce (\ref{II:5-2}) from the following theorem.
+
+
+
+
+
+
+\begin{theorem_}\label{II:5-3}
+Let $X$ be a nonsingular projective curve over an algebraically closed field
+$k$, let $f$ be an endomorphism of $X$ with isolated fixed points, and let
+$v(f)$ be the number of fixed points of $f$, each counted with its
+multiplicity: $v(f)$ is the intersection number of the graph of $f$ with the
+diagonal of $X\times X$. Then, for $\ell$ prime to the characteristic
+exponent of $k$, one has
+\[
+  v(f) = \sum (-1)^i \tr\left(f^*,\h^i(X,\dQ_\ell)\right) \text{.}
+\]
+\end{theorem_}
+
+This theorem is due to Weil (\cite{we48}, n$^\circ$ 43, 66, and 68), and Weil's
+proof is reproduced in Lang \cite{la83} (VI \S3 combined with VII \S2,
+Th. 3). It can also be deduced from the formalism of the cohomology class
+associated with a cycle (\nameref{IV}, \ref{IV:3-7}).
+
+
+
+
+
+
+\begin{corollary_}\label{II:5-4}
+Let $j:U\hookrightarrow X$ be a dense open subscheme of $X$, such that
+$f^{-1}(U)=U$. If the fixed points of $f$ in $X\setminus U$ have multiplicity
+one, then the number $v_U(f)$ of fixed points of $f$ in $U$ (each counted
+with its multiplicity) is
+\[
+  v_U(f) = \sum (-1)^i \tr\left(f^*,\h_c^i(U,\dQ_\ell)\right) \text{.}
+\]
+\end{corollary_}
+
+Let $F$ be the finite set $X\setminus U$. The cohomology exact sequence
+defined by the short exact sequence
+$0\to j_! \dQ_\ell\to\dQ_\ell\to{\dQ_\ell}_F\to 0$,
+\[\xymatrix{
+  \ar[r]^-\partial
+    & \h_c^i(U,\dQ_\ell) \ar[r]
+    & \h^i(X,\dQ_\ell) \ar[r]
+    & \h^i(F,\dQ_\ell) \ar[r]^-\partial
+    &
+}\]
+gives, with the sign convention of (\ref{II:3-1}),
+\[
+  \tr\left(f^*,\h_c^\bullet(U,\dQ_\ell)\right)
+    = \tr\left(f^*,\h^\bullet(X,\dQ_\ell)\right) - \tr\left(f^*,\h^\bullet(F,\dQ_\ell)\right)
+    = v(f) - \tr(f^*,\dQ_\ell^F) \text{.}
+\]
+The trace of $f^*$ on $\dQ_\ell^F$ is the number $v_F(f)$ of fixed points of
+$f$ in $F$; the multiplicity-one hypothesis therefore ensures that
+\[
+  \tr\left(f^*,\h_c^\bullet(U,\dQ_\ell)\right)
+    = v(f) - v_F(f) = v_U(f) \text{,}
+\]
+as promised.
+
+The proof of (\ref{II:5-2}) uses some lemmas concerning a special case of
+noncommutative traces (\ref{II:4-2}), which we now develop. \emph{For
+brevity, we shall say projective for projective of finite type}.
+
+
+
+
+
+
+\subsection{}\label{II:5-5}
+
+Let $\Lambda$ be a ring, and let $H$ be a finite group. The map
+$\sum a_h \cdot a\mapsto $ class of $a_e$, from the group algebra
+$\Lambda[H]$ to $\Lambda^\natural$, vanishes on the commutators $ab-ba$ of
+$\Lambda[H]$. It therefore factors through
+\[
+  \varepsilon : \Lambda[H]^\natural \to \Lambda^\natural \text{.}
+\]
+If $F$ is an endomorphism of a projective $\Lambda[H]$-module $P$, set
+\[
+  \tr_\Lambda^H(F) = \varepsilon \tr_{\Lambda[H]} (F)
+\]
+where the trace of (\ref{II:4-2}) appears on the right-hand side. To avoid
+ambiguity, we shall sometimes write this trace as $\tr_\Lambda^H(F,P)$.
+
+
+
+
+
+
+\begin{proposition_}\label{II:5-6}
+$\tr_\Lambda(F) = |H|\tr_\Lambda^H(F)$.
+\end{proposition_}
+
+The formal properties of traces reduce us to treating only the case
+$P=\Lambda[H]$. The endomorphism $F$ is then right multiplication by an
+element $\sum a_h\cdot h$ of $\Lambda[H]$, and
+$\tr_\Lambda(F) = |H| a_e$, $\tr_\Lambda^H(F) = a_e$.
+
+
+
+
+
+
+\subsection{}\label{II:5-7}
+
+Let $A$ be a commutative ring, and let $\Lambda$ be an $A$-algebra.
+Multiplication by an element of $A$ passes to the quotient to define an
+$A$-module structure on $A^\natural$. If $H$ is a finite group, $P$ a
+projective $A[H]$-module, and $M$ a $\Lambda[H]$-module projective as a
+$\Lambda$-module, it is known that the $\Lambda$-module $P\otimes_A M$,
+equipped with the diagonal action of $H$, is a projective
+$\Lambda[H]$-module. Indeed:
+\begin{enumerate}[\indent a)]
+  \item It suffices to verify this for $P=A[H]$.
+  \item The $\Lambda$-module $P\otimes_A M$, equipped with the action of $H$
+    defined by its action on the first factor, is clearly a projective
+    $\Lambda[H]$-module; denote it by $(P\otimes_A M)'$.
+  \item The map $h\otimes m\mapsto h\otimes h^{-1} m$ induces an isomorphism
+    \begin{equation*}\tag{5.7.1}\label{II:eq:5-7-1}
+      A[H]\otimes_A M \iso (A[H]\otimes_A M)' \text{.}
+    \end{equation*}
+\end{enumerate}
+
+
+
+
+
+
+\begin{proposition_}\label{II:5-8}
+With the preceding notation, if $u$ is an endomorphism of $P$ and $v$ an
+endomorphism of $M$, then
+\[
+  \tr_\Lambda^H(u\otimes v) = \tr_A^H(u)\tr_\Lambda(v) \text{.}
+\]
+\end{proposition_}
+
+We reduce to assuming that $P=A[H]$; the endomorphism $u$ is then right
+multiplication $m_x$ by an element $x=\sum a_h h$ of $A[H]$. Isomorphism
+\eqref{II:eq:5-7-1} takes $u\otimes v$ to
+$\sum a_h m_h\otimes h^{-1} v$, whose trace is
+$a_e\cdot\tr_\Lambda(v)$.
+
+
+
+
+
+
+\subsection{}\label{II:5-9}
+
+Let $G$ be a group that is an extension of $\dZ$ by a finite group $H$
+\[
+  1 \to H \to G \to \dZ \to 1 \text{,}
+\]
+and let $G^+$ be the inverse image of $\dN$. Let $\Lambda$ be a ring, and let
+$P$ be a $\Lambda[G^+]$-module projective as a $\Lambda[H]$-module. If
+$g\in G^+$, denote by $Z_g$ the centralizer of $g$ in $H$; multiplication by
+$g$ is an endomorphism of $P$, viewed as a $\Lambda[Z_g]$-module. Since $P$
+is $\Lambda[Z_g]$-projective, a trace $\tr_\Lambda^{Z_g}(g)$ is defined. By
+\ref{II:5-6}, one has
+\begin{equation*}\tag{5.9.1}\label{II:eq:5-9-1}
+  \tr_\Lambda(g) = |Z_g| \cdot \tr_\Lambda^{Z_g}(g) \text{.}
+\end{equation*}
+
+Suppose that $\Lambda$ is an algebra over a commutative ring $A$. For $P$ an
+$A[G^+]$-module projective as an $A[H]$-module, and $M$ a
+$\Lambda[G^+]$-module projective as a $\Lambda$-module, the
+$\Lambda[G^+]$-module $P\otimes_A M$ (diagonal action of $G^+$) is projective
+as a $\Lambda[H]$-module and, by \ref{II:5-8}, for every $g\in G^+$ one has
+\begin{equation*}\tag{5.9.2}\label{II:eq:5-9-2}
+  \tr_\Lambda^{Z_g}(g,P\otimes_A M) = \tr_A^{Z_g}(g,P) \cdot \tr_\Lambda(g,M) \text{.}
+\end{equation*}
+
+
+
+
+
+
+\subsection{}\label{II:5-10}
+
+Let $P$ be a $\Lambda[G^+]$-module projective as a $\Lambda[H]$-module, and
+let $P_H$ be the coinvariants of $H$ in $P$. This is a projective
+$\Lambda$-module. The action of $g\in G^+$ passes to the quotient and defines
+an endomorphism of $P_H$ that depends only on the image of $g$ in $\dN$. We
+denote by $F$ the action of the elements $g\in G^+$ with image $1$.
+
+
+
+
+
+
+\begin{proposition_}\label{II:5-11}
+$\tr_\Lambda(F,P_H) = \sum_{g\mapsto 1}' \tr_\Lambda^{Z_g}(g,P)$, where
+$\sum_{g\mapsto 1}'$ denotes a sum over the $H$-conjugacy classes of elements
+of $G^+$ with image $1$ in $\dN$.
+\end{proposition_}
+
+After multiplication by $|H|$, this formula can be verified as follows:
+\[
+  |H|\cdot \tr_\Lambda(F,P_H)
+    = \tr_\Lambda\left(\sum_{g\mapsto 1} g,P\right)
+    = \sum_{g\mapsto 1}' \frac{|H|}{|Z_g|}\tr_\Lambda(g,P)
+    = \sum_{g\mapsto 1}' |H|\cdot \tr_\Lambda^{Z_g}(g,P) \text{.}
+\]
+
+Choose an element $g\in G^+$ with image $1$ in $\dN$, and let $\sigma$ be
+the automorphism of $\Lambda[H]$ induced by the automorphism
+$\operatorname{ad} g$ of $H$. Giving a $\Lambda[G^+]$-module amounts to
+giving a $\Lambda[H]$--module equipped with a $\sigma$-linear endomorphism
+$\gamma$: let $g^n h$ act by $\gamma^n h$. In this language, formula
+\ref{II:5-11} takes the form: for $P$ a projective $\Lambda[H]$-module and
+$\gamma$ a $\sigma$-linear endomorphism of $P$, one has
+\[
+  \tr_\Lambda(\gamma,P_H) = \sum_h' \tr_\Lambda^{Z_g}(h\gamma,P)\text{,}
+\]
+where $\sum'$ is a sum over the $\operatorname{ad}g$-conjugacy classes in
+$H$ (orbits of $H$ acting on itself by the maps
+$x\mapsto h x \operatorname{ad} g(h)^{-1}$).
+
+In this form, the properties of traces immediately reduce us to the case
+$P=\Lambda[H]$. The endomorphism $\gamma$ then has the form
+$x\mapsto \sigma(x) a$, with $a=\sum a_h h$ in $\Lambda[H]$. It suffices to
+treat the universal case where the $a_h$ are indeterminates. In this case,
+$\Lambda=\dZ\langle a_h\rangle_{h\in H}$ (noncommutative polynomials), and
+$\Lambda^\natural$ is torsion-free: one obtains \ref{II:5-11} by the
+argument at the beginning and division by $|H|$. One can also calculate
+directly.
+
+
+
+
+
+
+\subsubsection{Remark}\label{II:5-11-1}
+
+Everything said above applies equally well to $\dZ/2$-graded modules, or to
+complexes of modules (cf. \ref{II:4-2}, \ref{II:4-3}).
+
+
+
+
+
+
+\subsection{}\label{II:5-12}
+
+Retain the notation of \ref{II:5-2}, and let $A=\dZ/\ell^n$, with $n$ large
+enough that $\Lambda$ is an $A$-algebra. Let $f:V_0\to U_0$ be a finite
+\'etale connected covering of $U_0$, Galois with Galois group $H$, and such
+that the sheaf $f^*\sG_0$ is constant. Denote its constant value
+$\h^0(V_0,f^*\sG_0)$ by $M$; it is a $\Lambda[H]$-module projective as a
+$\Lambda$-module.
+
+The sheaf $f_* A$ on $U_0$, equipped with the natural action of $H$, is a
+locally free sheaf (of rank one) of $A[H]$-modules. The complex
+$\eR\Gamma_c(U,f_* A)$ is therefore an object of
+$\eD_\text{parf}\left(A[H]\right)$. It is equipped with a Frobenius
+endomorphism $F^*$.
+
+For the natural action of $H$ on $f_* f^*\sG_0$, the trace morphism
+$f_* f^*\sG_0\to\sG_0$ factors through an isomorphism
+\[
+  \left(f_* f^*\sG_0\right)_H \to \sG_0 \text{.}
+\]
+Moreover, one has $f_* f^*\sG_0=f_* A\otimes_A M$ (with diagonal action of
+$H$). The isomorphism
+\[\xymatrix{
+  \sG_0
+    & \ar[l]_-\sim (f_* A\otimes_A M)_H = (f_* A\otimes_A M)\otimes_{\Lambda[H]} \Lambda
+}\]
+derives (\ref{II:4-12}) to an isomorphism
+\[
+  \eR\Gamma_c(U,\sG) \sim \left(\eR\Gamma_c(U,f_* A)\otimes_A M\right)\otimes_{\Lambda[H]} \Lambda \text{.}
+\]
+
+The endomorphism $F^*$ of the left-hand side is deduced from the
+endomorphism $F^*$ of $\eR\Gamma_c(U,f_* A)$. The complex of
+$\Lambda[H]$-modules $\eR\Gamma_c(U,f_* A)$, equipped with $F^*$, can be
+viewed as a complex of $\Lambda[G^+]$-modules, for $G^+=H\times \dN$.
+Formulas \ref{II:5-10} and \eqref{II:eq:5-9-2}, amplified by
+\ref{II:5-11-1}, therefore give
+\[
+  \tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \sum_h' \tr_A^{Z_h}\left(h F^*,\eR\Gamma_c(U,f_* A)\right)\cdot \tr_\Lambda(h,M)
+\]
+where $\sum'$ is a sum over the conjugacy classes in $H$. Moreover,
+\[
+  |Z_h|\cdot \tr_A^{Z_h}\left(h F^*,\eR\Gamma_c(U,f_* A)\right) = \tr_A\left((F h^{-1})^*,\eR\Gamma_c(V,A)\right) \text{.}
+\]
+This formula remains true for $A=\dZ/\ell^m$, with $m$ increasingly large.
+Passing to the limit, one finds that
+$\tr_A^{Z_h}\left(h F^*,\eR\Gamma_c(U,f_* A)\right)$ is equal to
+\[
+  \frac{1}{|Z_h|} \sum (-1)^i \tr\left((F h^{-1})^*,\h_c^i(V,\dQ_\ell)\right)
+\]
+(an element of $\dZ_\ell$), and
+\begin{equation*}\tag{5.12.1}\label{II:eq:5-12-1}
+\tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \sum_h' \frac{1}{|Z_h|} \tr\left((F h^{-1})^*,\h_c^\bullet(V,\dQ_\ell)\right)\cdot \tr_\Lambda(h,M) \text{.}
+\end{equation*}
+
+
+
+
+
+
+\subsection{}\label{II:5-13}
+
+It remains to apply \ref{II:5-4} (note that if $\bar V$ is the nonsingular
+projective completion of $V$, all the fixed points of $F h^{-1}$ have
+multiplicity one). This can be done without any calculation:
+\begin{enumerate}[\indent A.]
+  \item If $U^F=\varnothing$,
+    $\tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = 0$. \end{enumerate}
+
+Indeed, $F h^{-1}$ has no fixed point on $V$; \ref{II:5-4} shows that
+$\sum (-1)^i \tr\left((F h^{-1})^*,\h_c^i(V,\dQ_\ell)\right)=0$, and one
+applies \eqref{II:eq:5-12-1}.
+\begin{enumerate}[\indent A.]
+\setcounter{enumi}{1}
+  \item In the general case, let $j:U'=U\setminus U^F\hookrightarrow U$.
+    The filtration $j_! j^* \sG_0\subset \sG_0$ of $\sG_0$ induces a
+    filtration of $\eR\Gamma_c(U,\sG)$ with successive quotients
+    $\eR\Gamma_c(U',\sG)$ and $\eR\Gamma_c(U^F,\sG)$. By
+    \eqref{II:eq:4-4-1} and \ref{II:5-1}, one has
+    \[
+      \tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \tr\left(F^*,\eR\Gamma_c(U',\sG)\right) + \sum_{x\in U^F} \tr(F^*,\sG_x) \text{,}
+    \]
+    and, since ${U'}^F=0$, the first term on the right-hand side is $0$.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+\section{End of the proof of \ref{II:4-10}}\label{II:6}
+
+Let us prove \ref{II:4-10} under the additional hypotheses that the ring
+$\Lambda$ is annihilated by a power of a prime number $\ell\ne p$, and that
+$n=1$. The general case will follow: decompose $\Lambda$ into its
+$\ell$-primary components (with $\ell$ running through the prime numbers),
+and replace $\dF_q$ by $\dF_{q^n}$ and $X_0$ by
+$X_0\otimes_{\dF_q}\dF_{q^n}$.
+
+For $X_0$ separated and of finite type over $\dF_q$, and
+$\sK_0\in\ob\eD_\text{ctf}(X_0,\Lambda)$, set
+\[
+  T'(X_0,\sK_0) = \sum_{x\in X^F} \tr(F^*,\sK_x)
+\]
+and
+\[
+  T''(X_0,\sK_0) = \tr(F^*,\eR\Gamma_c(X,\sK)) \text{.}
+\]
+We must prove the identity
+\[
+  (1;X_0,\sK_0) \qquad T'(X_0,\sK_0) = T''(X_0,\sK_0) \text{.}
+\]
+We begin by observing that $T'$ and $T''$ (denoted generically by $T$) obey
+the same formalism:
+
+(A) If $j:U_0\hookrightarrow X_0$ is an open subscheme of $X_0$, with
+closed complement $Y_0$, one has
+\[
+  T(X_0,\sK_0) = T(U_0,\sK_0|U_0) + T(Y_0,\sK_0|Y_0) \text{.}
+\]
+This is clear for $T'$. For $T''$, observe that the filtration
+$0\subset j_! j^* \sK_0\subset \sK_0$ of $\sK_0$ induces a filtration of
+$\eR\Gamma_c(X,\sK)$ with successive quotients $\eR\Gamma_c(U,\sK)$ and
+$\eR\Gamma_c(Y,\sK)$, and invoke \eqref{II:eq:4-4-1} (more precisely stated:
+$\sK_0$, equipped with the said filtration, defines an object of
+$\mathsf{DF}(X,\Lambda)$; applying $\eR\Gamma_c$ gives an object of
+$\mathsf{DF}_\text{parf}(\Lambda)$ whose underlying object is
+$\eR\Gamma_c(X,\sK)$ and whose associated graded is as stated).
+
+(B) If $\sK_0$ is a bounded complex with constructible flat components,
+\[
+  T(X_0,\sK_0) = \sum (-1)^i T(X_0,\sK^i) \text{.}
+\]
+This is clear for $T'$; for $T''$, apply the argument above to the stupid
+filtration of $\sK_0$ to obtain
+\[
+  T''(X_0,\sK_0) = \sum T''(X_0,\sK_0^i[-i]) = \sum (-1)^i T''(X_0,\sK_0^i) \text{.}
+\]
+
+(C) For a morphism $f:X_0\to Y_0$, one has
+\[
+  T''(X_0,\sK_0) = T''(Y_0,\eR f_! \sK_0)
+\]
+and the same identity holds for $T'$ if the fibers of $f$ at the rational
+points of $Y_0$ satisfy
+$\left(1;f^{-1}(y),\sK_0|f^{-1}(y)\right)$: use the fact that
+\[
+  T'(X_0,\sK_0) = \sum_{y\in Y^F} T'\left(f^{-1}(y), \sK_0|f^{-1}(y)\right)
+\]
+and
+\[
+  \eR\Gamma_c(Y, \eR f_! \sK) = \eR\Gamma_c(X,\sK) \text{.}
+\]
+
+Using this formalism and \ref{II:4-7}, the proof of \ref{II:4-10} is reduced
+to the two special cases \ref{II:5-1} and \ref{II:5-2}.

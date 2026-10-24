@@ -1,0 +1,133 @@
+\begin{enonce*}{Proposition 9.11}\etiquette[9.11]{I.prop9.11}
+Let $E$ be a category satisfying condition $L$
+(\hyperref[I.def9.1]{9.1}), and let $C$ be a small full generating
+subcategory (\hyperref[I.def7.1]{7.1}). Suppose that the following
+condition is satisfied:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $E$ is stable under kernels of pairs of arrows, and the functor
+$\Ker$ on the category of pairs of arrows in $E$ is accessible (for
+example, it\pageoriginale commutes with small filtered inductive
+limits).
+
+Then every object of $E$ is preaccessible (\hyperref[I.def9.3]{9.3}),
+\textit{a fortiori} $E$ is preaccessible. Suppose that $C$ is even
+generating by strict epimorphisms (\hyperref[I.def7.1]{7.1}), and
+suppose that $E$ satisfies the following conditions:
+
+\item $E$ is stable under fiber products.
+
+\item Every small strictly epimorphic family in $E$ is universally
+strictly epimorphic (\hyperref[I.sec10.3]{10.3}), or small direct sums
+are representable in $E$ and every strict epimorphism of $E$ is a
+universal strict epimorphism.
+\end{enumerate}
+
+Then every object of $E$ is accessible, \textit{a fortiori} $E$ is
+accessible.
+\end{enonce*}
+
+The fact that, under (a), every object of $E$ is preaccessible follows
+from the fact that for every object $X$ of $E$, the set of strict
+subobjects of $X$ is small (\hyperref[I.prop7.4]{7.4}), and from the
+
+\begin{enonce*}{Lemma 9.11.1}\etiquette[9.11.1]{I.lem9.11.1}
+Under the conditions of (\hyperref[I.prop9.11]{9.11}a), let
+$X\in\ob E$ and let $\Pi$ be a cardinal such that $E$ satisfies
+$L_{\Pi}$ (\hyperref[I.def9.1]{9.1}), the functor $\Ker$ in
+(\hyperref[I.prop9.11]{9.11}a) is $\Pi$-accessible, and the set of
+strict subobjects of $X$ has cardinality bounded by $\Pi$. Then $X$ is
+$\Pi$-preaccessible.
+\end{enonce*}
+
+Indeed, let $I$ be an ordered set large relative to $\Pi$, let
+$(Y_i)_{i\in I}$ be an inductive system in $E$ with inductive limit
+$Y$, and let $(u_i,v_i:X\rightrightarrows Y_i)$ be a pair of arrows
+such that the composite pair
+$ \xymatrix{ X \ar@<2pt>[r]^{u,v} \ar@<-2pt>[r]& Y }$ satisfies
+$u=v$; let us prove that there exists $j\geq i$ in $I$ such that
+$u_j=v_j$. To this end,\pageoriginale consider the inductive system of
+pairs of arrows $(u_j,v_j:X\rightrightarrows Y_j)_{j\geq i}$, whose
+inductive limit is $(u,v)$. By hypothesis one has
+$X=\Ker(u,v)=\varinjlim_j\Ker(u_j,v_j)=\varinjlim_jX_j$, where
+$X_j=\Ker(u_j,v_j)$. Now the $X_j$ are strict subobjects of $X$, so
+there exists a subset $I'$ of $I$, formed by indices $j\geq i$, such
+that $\card I'\leq\Pi$ and every $X_j$ is equal to one of the $X_{i'}$
+$(i'\in I')$. Since $I$ is large relative to $\Pi$, there exists an
+upper bound $j$ of $I'$ in $I$. Then $X_j$ contains all the $X_{j'}$
+for $j'\geq i$, so $X_j\rightarrow X$ is an epimorphism (since the
+family of the $X_{j'}\rightarrow X$ is epimorphic), and hence an
+isomorphism because it is a strict monomorphism. Thus $u_j=v_j$, which
+proves \hyperref[I.lem9.11.1]{9.11.1}.
+
+The second assertion of \hyperref[I.prop9.11]{9.11} follows from the
+first and from the
+
+\begin{enonce*}{Lemma 9.11.2}\etiquette[9.11.2]{I.lem9.11.2}
+Under the conditions of (\hyperref[I.prop9.11]{9.11}a), b), c), let
+$X$ be an object of $E$, and let $\Pi$ be an infinite cardinal such
+that $E$ satisfies $L_{\Pi}$ $\hyperref[I.def9.1]{(9.1)}$, that
+$\card\ob C_{/X}\leq\Pi$, that for two objects $X'\rightarrow X$ and
+$X''\rightarrow X$ of $C_{/X}$, $\fprod{X'}{X''}{X}$ is
+$\Pi$-preaccessible, and finally that $X$ is $\Pi$-preaccessible.
+Then $X$ is $\Pi$-accessible.
+\end{enonce*}
+
+With the notation of the proof of \hyperref[I.lem9.11.1]{9.11.1}, it
+suffices to prove that every morphism $u:X\rightarrow Y$ comes from a
+morphism $u_i:X\rightarrow Y_i$. Consider the family of morphisms
+$Y_i\rightarrow Y$, which is strictly epimorphic; by b) and c), the
+family of morphisms $\fprod{Y_i}{X}{Y}\rightarrow X$ is also strictly
+epimorphic; on the other hand, for every $i$, since $C$ is generating
+by strict epimorphisms, the family of arrows
+$$
+T\longrightarrow \fprod{Y_i}{X}{Y}
+$$
+with\pageoriginale source in $C$ is strictly epimorphic. In the second
+alternative considered in c), one can find such a strictly epimorphic
+arrow whose source is a (small) sum of objects of $C$. By the
+transitivity of the notion of a universally strictly epimorphic family
+(II \hyperref[II.def2.5]{2.5}), it then follows that the family of arrows
+$T_\alpha\xrightarrow{f_\alpha}X$ with source in $C$ that factor
+through one of the $\fprod{Y_i}{X}{Y}$ is strictly epimorphic. Let $J$
+be the index set of this family; its cardinality is bounded by
+$\card\ob C_{/X}\leq\Pi$. For every $\alpha\in J$, choose an
+$i=i(\alpha)\in I$ and an $X$-morphism
+$T_\alpha\rightarrow\fprod{Y_i}{X}{Y}$, or, equivalently, a
+$v_\alpha:T_\alpha\rightarrow Y_i$ such that
+$p_iv_\alpha=uf_\alpha$, where $p_i:Y_i\rightarrow Y$ is the
+canonical morphism. Since $I$ is large relative to $\Pi$, one can
+choose $i(\alpha)$ independently of $\alpha$, say equal to $i$. For
+every pair of indices $\alpha,\beta\in J$, consider the composites
+$$
+\pr_1v_\alpha,\pr_2v_\beta:
+\fprod{T_\alpha}{T_\beta}{X}\rightrightarrows Y_i{\quoi}.
+$$
+Their composites with $Y_i\rightarrow Y$ are equal, so, since
+$\fprod{T_\alpha}{T_\beta}{X}$ is $\Pi$-preaccessible by hypothesis,
+there exists an index $i'=i(\alpha,\beta)\geq i$ such that the
+composites of the arrows under consideration with
+$Y_i\rightarrow Y_{i'}$ are equal. Since the set of pairs
+$\alpha,\beta$ has cardinality $\leq\Pi^2=\Pi$ ($\Pi$ being
+infinite), it follows once again that $i'$ can be chosen independently
+of $\alpha,\beta$. We may evidently suppose that $i'=i$. But then,
+since the family $(f_\alpha:T_\alpha\rightarrow X)$ is strictly
+epimorphic, one can find a morphism $u_i:X\rightarrow Y_i$ such that
+$u_if_\alpha=v_\alpha$. One then has $p_iu_i=u$, since for every
+$\alpha$ one has
+$(p_iu_i)f_\alpha=p_i(u_if_\alpha)=p_iv_\alpha=uf_\alpha$, and the
+family of the $f_\alpha$ is epimorphic. This completes the proof of
+\hyperref[I.lem9.11.2]{9.11.2}.
+
+\begin{enonce*}[remark]{Remark 9.11.3}\etiquette[9.11.3]{I.rem9.11.3}
+As\pageoriginale a special case of \hyperref[I.prop9.11]{9.11}, one
+sees that every object in the category $E$ is accessible in each of the
+following two cases: 1) $E$ is a $𝒰$-abelian category with exact
+filtered inductive limits and admitting a small generating subcategory
+(here it is the \emph{second} alternative of c) that applies). 2) $E$
+is the category of sheaves of sets on a topological space $X\in 𝒰$.
+More generally, it suffices that $E$ be the category of sheaves of sets
+on a $𝒰$-site (II \hyperref[II.def2.1]{2.1}), or that $E$ be a $𝒰$-topos (IV \hyperref[IV.def1.1]{1.1}).
+\end{enonce*}
+

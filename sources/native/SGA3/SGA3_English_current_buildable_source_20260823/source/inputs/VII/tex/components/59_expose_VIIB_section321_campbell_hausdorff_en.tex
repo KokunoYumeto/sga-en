@@ -1,0 +1,155 @@
+
+\subsubsection*{3.2.1}
+\phantomsection
+\label{sga3:VIIB:3.2.1}
+
+The bijection \(\exp_{U(L(C))}\) allows us, by transport of
+structure, to define a group law on the set
+\[
+  L(C)\otimes_C\mathfrak r(C),
+\]
+which, as in \SGARefLink{sga3:VIIB:3.2:prop}{3.2}, we identify with a subset of \(U(L(C))\). If
+\(x\) and \(y\) are two elements of
+\(L(C)\otimes_C\mathfrak r(C)\), this law is given by
+\phantomsection
+\label{sga3:VIIB:3.2.1:transported-product}
+\[
+\begin{aligned}
+  x\mathbin{\cdot}y
+  &=
+  \log\bigl((\exp x)(\exp y)\bigr)
+  =
+  \log\left(
+    1+\sum_{p+q>0}\frac{x^p y^q}{p!\,q!}
+  \right)
+  \\
+  &=
+  \sum_{m\geq1}
+  \sum_{p_i+q_i>0}
+  \frac{(-1)^{m-1}}{m}
+  \frac{x^{p_1}y^{q_1}}{p_1!\,q_1!}
+  \cdots
+  \frac{x^{p_m}y^{q_m}}{p_m!\,q_m!}
+  \\
+  &=
+  \sum_{\ell\geq1}P_\ell(x,y).
+\end{aligned}
+\]
+Here \(P_\ell(x,y)\) denotes the sum of the monomials of total
+degree \(\ell\) in \(x\) and \(y\). For example,
+\[
+  P_1(x,y)=x+y,
+\]
+and
+\[
+\begin{aligned}
+  P_2(x,y)
+  &=
+  \underbrace{
+    \frac{x^2}{2}+xy+\frac{y^2}{2}
+  }_{m=1}
+  -
+  \underbrace{
+    \frac12\bigl(x^2+xy+yx+y^2\bigr)
+  }_{m=2}
+  \\
+  &=
+  \frac12(xy-yx)
+  =
+  \frac12[x,y].
+\end{aligned}
+\]
+Moreover, \(P_3(x,y)\) is the sum of the following three terms:
+\[
+\begin{aligned}
+  P_3(x,y)
+  ={}&
+  \underbrace{
+    \frac{x^3}{6}
+    +\frac{x^2y}{2}
+    +\frac{xy^2}{2}
+    +\frac{y^3}{6}
+  }_{m=1}
+  \\
+  &-
+  \underbrace{
+    \frac12\left(
+      x^3+\frac32x^2y+\frac12yx^2+xyx+yxy
+      +\frac12y^2x+\frac32xy^2+y^3
+    \right)
+  }_{m=2}
+  \\
+  &+
+  \underbrace{
+    \frac13\left(
+      x^3+x^2y+yx^2+xyx+yxy+y^2x+xy^2+y^3
+    \right)
+  }_{m=3}.
+\end{aligned}
+\]
+Consequently,
+\phantomsection
+\label{sga3:VIIB:3.2.1:P3}
+\[
+  P_3(x,y)
+  =
+  \frac1{12}
+  \bigl(
+    x^2y+yx^2-2xyx-2yxy+y^2x+xy^2
+  \bigr)
+  =
+  \frac1{12}
+  \bigl(
+    [[y,x],x]+[y,[y,x]]
+  \bigr).
+\]
+
+More generally, one can prove the Campbell--Hausdorff
+formula:\footnote{%
+\label{sga3:VIIB:nde:124}The editors corrected the formula given
+in the original, which was erroneous, and added the reference
+\textup{[BLie]}.}
+\phantomsection
+\label{sga3:VIIB:3.2.1:campbell-hausdorff}
+\[
+\begin{aligned}
+  P_\ell(x,y)
+  ={}&
+  \sum_{m=1}^{\ell}
+  \frac{(-1)^{m-1}}{m\cdot\ell}
+  \sum_{\substack{
+    p_1,\ldots,p_m\\
+    q_1,\ldots,q_{m-1}
+  }}
+  \left(
+    \prod_{i=1}^{m-1}
+    \frac{(\operatorname{ad}x)^{p_i}}{p_i!}
+    \frac{(\operatorname{ad}y)^{q_i}}{q_i!}
+  \right)
+  \frac{(\operatorname{ad}x)^{p_m}}{p_m!}(y)
+  \\
+  &+
+  \sum_{m=1}^{\ell}
+  \frac{(-1)^{m-1}}{m\cdot\ell}
+  \sum_{\substack{
+    p_1,\ldots,p_{m-1}\\
+    q_1,\ldots,q_{m-1}
+  }}
+  \left(
+    \prod_{i=1}^{m-1}
+    \frac{(\operatorname{ad}x)^{p_i}}{p_i!}
+    \frac{(\operatorname{ad}y)^{q_i}}{q_i!}
+  \right)(x).
+\end{aligned}
+\]
+Here the \(p_j,q_i\in\mathbb N\) satisfy
+\[
+  p_i+q_i\geq1
+  \quad(1\leq i\leq m-1),
+  \qquad
+  p_m+\sum_{i=1}^{m-1}(p_i+q_i)=\ell-1.
+\]
+In other words, in the sums above every nonzero ``Lie monomial''
+has total degree \(\ell\). For a proof, see N.~Jacobson,
+\emph{Lie Algebras} (Interscience, 1962), \S V.5, or
+\textup{[BLie]}, II, \S6.4, Theorem~2.

@@ -1,0 +1,383 @@
+\SGANextSectionTarget{sga3:xxiii:section:4}\SGASection{4}{Uniqueness of Pinned Groups: Fundamental Theorem}
+
+\SGARefTarget{sga3:XXIII:4.1}
+\SGAInlineRefTarget{sga3:xxiii:theorem:4-1}\SGAStatement{Theorem 4.1}{Let \(S\) be a nonempty scheme. The
+functor \(R\) of \SGARefLink{sga3:XXIII:1.6}{1.6} is fully faithful. More precisely, let \(G,G'\)
+be pinned \(S\)-groups, let \(p>0\) be an integer such that
+\(x\mapsto x^p\) is an endomorphism of \(\mathbf G_{a,S}\), and let
+\[
+  h:R(G')\longrightarrow R(G)
+\]
+be a \(p\)-morphism of pinned root data. There is a unique morphism
+of pinned groups \(f:G\to G'\) such that \(R(f)=h\).}
+
+Uniqueness was proved in \SGARefLink{sga3:XXIII:1.9}{1.9}, so only existence remains. By
+hypothesis there are a bijection \(d:R\xrightarrow{\sim}R'\) and a
+map
+\[
+  q:R\longrightarrow\{p^n\mid n\in\mathbf N\}
+\]
+such that, for every \(\alpha\in R\),
+\[
+  h(d(\alpha))=q(\alpha)\alpha,
+  \qquad
+  {}^th(\alpha^*)=q(\alpha)d(\alpha)^*.
+\]
+In particular, \(G\) and \(G'\) have the same semisimple rank.
+
+\SGARefTarget{sga3:XXIII:4.1.1}
+\SGAParagraph{4.1.1}
+Suppose that both semisimple ranks are \(0\). Then \(G,G'\) are
+tori:
+\[
+  G=T=D_S(M),\qquad G'=T'=D_S(M'),
+\]
+and \(h:M'\to M\) is an ordinary homomorphism. Take \(f=D_S(h)\).
+
+\SGARefTarget{sga3:XXIII:4.1.2}
+\SGAParagraph{4.1.2}
+Suppose that both semisimple ranks are \(1\), and put
+\[
+  f_T=D_S(h):T\longrightarrow T'.
+\]
+Writing \(\alpha'=d(\alpha)\), the diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\mathbf G_{m,S}\ar[r,"\alpha^*"]\ar[d,"q(\alpha)"]
+  &T\ar[r,"\alpha"]\ar[d,"f_T"']
+  &\mathbf G_{m,S}\ar[d,"q(\alpha)"]\\
+\mathbf G_{m,S}\ar[r,"\alpha'^*"]
+  &T'\ar[r,"\alpha'"]
+  &\mathbf G_{m,S}
+\end{tikzcd}
+\]
+commutes. Apply \SGARefLink{sga3:xx:4.1}{Exposé XX, 4.1}.
+
+\SGARefTarget{sga3:XXIII:4.1.3}
+\SGAParagraph{4.1.3}
+Suppose that both semisimple ranks are \(2\). \SGARefLink{sga3:XXI:7.5.3}{Exposé XXI, 7.5.3}
+lists every possible \(h\); we verify the conditions of \SGARefLink{sga3:XXIII:2.5}{Corollary 2.5}
+in each case. Write
+\[
+  \Delta=\{\alpha,\beta\},\qquad
+  \Delta'=\{\alpha',\beta'\},\qquad
+  d(\alpha)=\alpha',\quad d(\beta)=\beta'.
+\]
+
+\SGARefTarget{sga3:XXIII:4.1.4}
+\SGAParagraph{4.1.4. \(G\) and \(G'\) of type
+\(A_1\times A_1\)}
+Here
+\[
+  h(\alpha')=q\alpha,\qquad h(\beta')=q_1\beta.
+\]
+Conditions \SGARefLink{sga3:XXIII:2.5:item:ii}{2.5(ii)} and (iii) follow from \SGARefLink{sga3:xxiii:proposition:3-1-2:item:ii}{Proposition 3.1.2(ii)},(iii).
+For (i),
+\[
+\begin{aligned}
+ D_S(h)t_{\alpha\beta}
+  &=D_S(h)(t_\alpha t_\beta)\\
+  &={}^th(\alpha^*)(-1)\,{}^th(\beta^*)(-1)\\
+  &=\alpha'^*((-1)^q)\,\beta'^*((-1)^{q_1}).
+\end{aligned}
+\]
+The assumption on \(x\mapsto x^p\), with \(S\ne\varnothing\), implies
+that \(p=1\) or \(S\) has characteristic \(p\). Thus
+\((-1)^q=-1\): if \(q\) is even, then \(p=2\) and \(1=-1\).
+Consequently
+\[
+  D_S(h)t_{\alpha\beta}
+   =\alpha'^*(-1)\beta'^*(-1)=t'_{\alpha'\beta'}.
+\]
+
+\SGARefTarget{sga3:XXIII:4.1.5}
+\SGAParagraph{4.1.5. \(G\) and \(G'\) of type \(A_2\)}
+Here
+\[
+  h(\alpha')=q\alpha,\qquad h(\beta')=q\beta.
+\]
+Put
+\[
+  X_{\alpha+\beta}=\operatorname{Ad}(w_\beta)X_\alpha,
+  \qquad
+  X'_{\alpha'+\beta'}=\operatorname{Ad}(w'_{\beta'})X'_{\alpha'}.
+\]
+Condition (i) follows as above from \SGARefLink{sga3:xxiii:proposition:3-2-1:item:i}{Proposition 3.2.1(i)}, and (ii)
+follows immediately from \SGARefLink{sga3:xxiii:proposition:3-2-1:item:ii}{Proposition 3.2.1(ii)}. For (iii), the map
+\[
+\begin{aligned}
+ p_\alpha(x)p_\beta(y)p_{\alpha+\beta}(z)
+ \longmapsto
+ p'_{\alpha'}(x^q)p'_{\beta'}(y^q)p'_{\alpha'+\beta'}(z^q)
+\end{aligned}
+\]
+must be a homomorphism. The only nontrivial relation is
+\[
+ p_\beta(y)p_\alpha(x)
+  =p_\alpha(x)p_\beta(y)p_{\alpha+\beta}(xy),
+\]
+which maps to
+\[
+ p'_{\beta'}(y^q)p'_{\alpha'}(x^q)
+  =p'_{\alpha'}(x^q)p'_{\beta'}(y^q)
+    p'_{\alpha'+\beta'}(x^qy^q).
+\]
+
+\SGARefTarget{sga3:XXIII:4.1.6}
+\SGAParagraph{4.1.6}
+The same argument treats types \(B_2\) and \(G_2\) when the
+radicial exponents are equal, using \SGARefLink{sga3:xxiii:proposition:3-3-1}{Propositions 3.3.1} and \SGARefLink{sga3:xxiii:proposition:3-4-1}{3.4.1}.
+It remains to treat the two exceptional cases in \SGARefLink{sga3:XXI:7.5.3}{Exposé XXI, 7.5.3}.
+
+\SGARefTarget{sga3:XXIII:4.1.7}
+\SGAParagraph{4.1.7. Type \(B_2\), characteristic \(2\),
+\(q(\alpha)=2q\), \(q(\beta)=q\)}
+The positive roots are
+\[
+ \{\alpha,\beta,\alpha+\beta,2\alpha+\beta\}
+\]
+and
+\[
+ \{\alpha',\beta',\alpha'+\beta',\alpha'+2\beta'\},
+\]
+where \(\alpha\) and \(\beta'\) are the short simple roots. We have
+\[
+\begin{aligned}
+ h(\alpha')&=2q\alpha,&h(\beta')&=q\beta,\\
+ h(\alpha'+\beta')&=q(2\alpha+\beta),&
+ h(\alpha'+2\beta')&=2q(\alpha+\beta),
+\end{aligned}
+\]
+so
+\[
+\begin{aligned}
+ d(\alpha+\beta)&=\alpha'+2\beta',&q(\alpha+\beta)&=2q,\\
+ d(2\alpha+\beta)&=\alpha'+\beta',&q(2\alpha+\beta)&=q.
+\end{aligned}
+\]
+Put
+\[
+\begin{aligned}
+ X_{\alpha+\beta}&=\operatorname{Ad}(w_\beta)X_\alpha,&
+ X_{2\alpha+\beta}&=\operatorname{Ad}(w_\alpha)X_\beta,\\
+ X'_{\alpha'+\beta'}&=\operatorname{Ad}(w'_{\alpha'})X'_{\beta'},&
+ X'_{\alpha'+2\beta'}&=\operatorname{Ad}(w'_{\beta'})X'_{\alpha'}.
+\end{aligned}
+\]
+
+For (i), characteristic \(2\) gives \(-1=1\), hence
+\[
+ t_{\alpha\beta}=t_\alpha=\alpha^*(-1)=e
+   =\beta'^*(-1)=t'_{\beta'}=t'_{\alpha'\beta'}.
+\]
+For (ii), the two defining identities are
+\[
+\begin{aligned}
+ \operatorname{Ad}(w_\alpha)X_\beta
+  &=X_{2\alpha+\beta},&
+ \operatorname{Ad}(w'_{\alpha'})X'_{\beta'}
+  &=X'_{\alpha'+\beta'}=X'_{d(2\alpha+\beta)},\\
+ \operatorname{Ad}(w_\beta)X_\alpha
+  &=X_{\alpha+\beta},&
+ \operatorname{Ad}(w'_{\beta'})X'_{\alpha'}
+  &=X'_{\alpha'+2\beta'}=X'_{d(\alpha+\beta)}.
+\end{aligned}
+\]
+\SGARefLink{sga3:xxiii:proposition:3-3-1:item:ii}{Proposition 3.3.1(ii)}, together with \(-1=1\), gives the four
+remaining identities:
+\[
+\begin{aligned}
+ \operatorname{Ad}(w_\alpha)X_{\alpha+\beta}&=X_{\alpha+\beta},&
+ \operatorname{Ad}(w'_{\alpha'})X'_{d(\alpha+\beta)}
+   &=X'_{d(\alpha+\beta)},\\
+ \operatorname{Ad}(w_\alpha)X_{2\alpha+\beta}&=X_\beta,&
+ \operatorname{Ad}(w'_{\alpha'})X'_{d(2\alpha+\beta)}
+   &=X'_{d(\beta)},\\
+ \operatorname{Ad}(w_\beta)X_{\alpha+\beta}&=X_\alpha,&
+ \operatorname{Ad}(w'_{\beta'})X'_{d(\alpha+\beta)}
+   &=X'_{d(\alpha)},\\
+ \operatorname{Ad}(w_\beta)X_{2\alpha+\beta}&=X_{2\alpha+\beta},&
+ \operatorname{Ad}(w'_{\beta'})X'_{d(2\alpha+\beta)}
+   &=X'_{d(2\alpha+\beta)}.
+\end{aligned}
+\]
+
+For (iii), the sole nontrivial relations are
+\[
+\begin{aligned}
+ p_\beta(y)p_\alpha(x)
+  &=p_\alpha(x)p_\beta(y)p_{\alpha+\beta}(xy)
+    p_{2\alpha+\beta}(x^2y),\\
+ p'_{\alpha'}(y')p'_{\beta'}(x')
+  &=p'_{\beta'}(x')p'_{\alpha'}(y')
+    p'_{\alpha'+\beta'}(x'y')
+    p'_{\alpha'+2\beta'}(x'y'^2).
+\end{aligned}
+\]
+The proposed map is
+\[
+\begin{aligned}
+ &p_\alpha(x)p_\beta(y)p_{\alpha+\beta}(z)p_{2\alpha+\beta}(t)\\
+ &\quad\longmapsto
+ p'_{\alpha'}(x^{2q})p'_{\beta'}(y^q)
+ p'_{\alpha'+2\beta'}(z^{2q})p'_{\alpha'+\beta'}(t^q).
+\end{aligned}
+\]
+It respects the first relation because the second, with
+\(y'=x^{2q}\) and \(x'=y^q\), reads
+\[
+\begin{aligned}
+ p'_{\beta'}(y^q)p'_{\alpha'}(x^{2q})
+  ={}&p'_{\alpha'}(x^{2q})p'_{\beta'}(y^q)
+   p'_{\alpha'+2\beta'}((xy)^{2q})\\
+   &{}\cdot p'_{\alpha'+\beta'}((x^2y)^q).
+\end{aligned}
+\]
+
+\SGARefTarget{sga3:XXIII:4.1.8}
+\SGAParagraph{4.1.8. Type \(G_2\), characteristic \(3\),
+\(q(\alpha)=3q\), \(q(\beta)=q\)}
+The positive roots are
+\[
+\{\alpha,\beta,\alpha+\beta,2\alpha+\beta,3\alpha+\beta,
+  3\alpha+2\beta\}
+\]
+and
+\[
+\{\alpha',\beta',\alpha'+\beta',\alpha'+2\beta',
+  \alpha'+3\beta',2\alpha'+3\beta'\},
+\]
+where again \(\alpha\) and \(\beta'\) are short. We have
+\[
+\begin{aligned}
+ h(\alpha')&=3q\alpha,&h(\beta')&=q\beta,\\
+ h(\alpha'+\beta')&=q(3\alpha+\beta),&
+ h(\alpha'+2\beta')&=q(3\alpha+2\beta),\\
+ h(\alpha'+3\beta')&=3q(\alpha+\beta),&
+ h(2\alpha'+3\beta')&=3q(2\alpha+\beta),
+\end{aligned}
+\]
+and hence
+\[
+\begin{aligned}
+ d(\alpha+\beta)&=\alpha'+3\beta',&q(\alpha+\beta)&=3q,\\
+ d(2\alpha+\beta)&=2\alpha'+3\beta',&q(2\alpha+\beta)&=3q,\\
+ d(3\alpha+\beta)&=\alpha'+\beta',&q(3\alpha+\beta)&=q,\\
+ d(3\alpha+2\beta)&=\alpha'+2\beta',&q(3\alpha+2\beta)&=q.
+\end{aligned}
+\]
+Define
+\[
+\begin{aligned}
+ X_{\alpha+\beta}&=\operatorname{Ad}(w_\beta)X_\alpha,&
+ X_{2\alpha+\beta}&=\operatorname{Ad}(w_\alpha)X_{\alpha+\beta},\\
+ X_{3\alpha+\beta}&=-\operatorname{Ad}(w_\alpha)X_\beta,&
+ X_{3\alpha+2\beta}&=\operatorname{Ad}(w_\beta)X_{3\alpha+\beta},\\
+ X'_{\alpha'+\beta'}&=-\operatorname{Ad}(w'_{\alpha'})X'_{\beta'},&
+ X'_{\alpha'+2\beta'}&=\operatorname{Ad}(w'_{\beta'})X'_{\alpha'+\beta'},\\
+ X'_{\alpha'+3\beta'}&=\operatorname{Ad}(w'_{\beta'})X'_{\alpha'},&
+ X'_{2\alpha'+3\beta'}&=\operatorname{Ad}(w'_{\alpha'})X'_{\alpha'+3\beta'}.
+\end{aligned}
+\]
+Condition (i) follows from \SGARefLink{sga3:xxiii:proposition:3-4-1:item:i}{Proposition 3.4.1(i)}. Four instances of
+(ii) hold by definition:
+\[
+\begin{aligned}
+ \operatorname{Ad}(w_\beta)X_\alpha&=X_{\alpha+\beta},&
+ \operatorname{Ad}(w'_{\beta'})X'_{\alpha'}&=X'_{d(\alpha+\beta)},\\
+ \operatorname{Ad}(w_\alpha)X_\beta&=-X_{3\alpha+\beta},&
+ \operatorname{Ad}(w'_{\alpha'})X'_{\beta'}&=-X'_{d(3\alpha+\beta)},\\
+ \operatorname{Ad}(w_\beta)X_{3\alpha+\beta}&=X_{3\alpha+2\beta},&
+ \operatorname{Ad}(w'_{\beta'})X'_{d(3\alpha+\beta)}
+   &=X'_{d(3\alpha+2\beta)},\\
+ \operatorname{Ad}(w_\alpha)X_{\alpha+\beta}&=X_{2\alpha+\beta},&
+ \operatorname{Ad}(w'_{\alpha'})X'_{d(\alpha+\beta)}
+   &=X'_{d(2\alpha+\beta)}.
+\end{aligned}
+\]
+The remaining instances follow from \SGARefLink{sga3:xxiii:proposition:3-4-1:item:ii}{Proposition 3.4.1(ii)}; for
+example,
+\[
+\begin{aligned}
+ \operatorname{Ad}(w_\alpha)X_{2\alpha+\beta}&=-X_{\alpha+\beta},&
+ \operatorname{Ad}(w'_{\alpha'})X'_{d(2\alpha+\beta)}
+   &=-X'_{d(\alpha+\beta)},\\
+ \operatorname{Ad}(w_\beta)X_{3\alpha+2\beta}&=-X_{3\alpha+\beta},&
+ \operatorname{Ad}(w'_{\beta'})X'_{d(3\alpha+2\beta)}
+   &=-X'_{d(3\alpha+\beta)}.
+\end{aligned}
+\]
+
+For (iii), in characteristic \(3\), the nontrivial relations in
+\(U\) are
+\[
+\begin{aligned}
+ p_\beta(y)p_\alpha(x)
+  ={}&p_\alpha(x)p_\beta(y)p_{\alpha+\beta}(xy)
+  p_{2\alpha+\beta}(x^2y)p_{3\alpha+\beta}(x^3y)
+  p_{3\alpha+2\beta}(x^3y^2),\\
+ p_{\alpha+\beta}(y)p_\alpha(x)
+  ={}&p_\alpha(x)p_{\alpha+\beta}(y)p_{2\alpha+\beta}(-xy),\\
+ p_{3\alpha+\beta}(y)p_\beta(x)
+  ={}&p_\beta(x)p_{3\alpha+\beta}(y)p_{3\alpha+2\beta}(-xy).
+\end{aligned}
+\]
+The corresponding relations in \(U'\) are
+\[
+\begin{aligned}
+ p'_{\alpha'}(y')p'_{\beta'}(x')
+  ={}&p'_{\beta'}(x')p'_{\alpha'}(y')
+  p'_{\alpha'+\beta'}(-x'y')p'_{\alpha'+2\beta'}(-x'^2y')\\
+  &{}\cdot p'_{\alpha'+3\beta'}(-x'^3y')
+  p'_{2\alpha'+3\beta'}(-x'^3y'^2),\\
+ p'_{\alpha'+\beta'}(y')p'_{\beta'}(x')
+  ={}&p'_{\beta'}(x')p'_{\alpha'+\beta'}(y')
+  p'_{\alpha'+2\beta'}(x'y'),\\
+ p'_{\alpha'+3\beta'}(y')p'_{\alpha'}(x')
+  ={}&p'_{\alpha'}(x')p'_{\alpha'+3\beta'}(y')
+  p'_{2\alpha'+3\beta'}(x'y').
+\end{aligned}
+\]
+Define \(\phi:U\to U'\) by
+\[
+\begin{aligned}
+ &\phi\!\left(
+ p_\alpha(x)p_\beta(y)p_{\alpha+\beta}(t)p_{2\alpha+\beta}(u)
+ p_{3\alpha+\beta}(v)p_{3\alpha+2\beta}(w)\right)\\
+ &\quad=
+ p'_{\alpha'}(x^{3q})p'_{\beta'}(y^q)
+ p'_{\alpha'+3\beta'}(t^{3q})p'_{2\alpha'+3\beta'}(u^{3q})
+ p'_{\alpha'+\beta'}(v^q)p'_{\alpha'+2\beta'}(w^q).
+\end{aligned}
+\]
+Substituting \(x^{3q},y^q\) in the three displayed relations for
+\(U'\) yields exactly the images of the three relations for \(U\);
+thus \(\phi\) is a homomorphism.
+
+\SGARefTarget{sga3:XXIII:4.1.9}
+\SGAParagraph{4.1.9. Semisimple rank greater than \(2\)}
+For \(\alpha\in\Delta\), put \(\alpha'=d(\alpha)\). For every
+\((\alpha,\beta)\), consider the pinned rank-at-most-two groups
+\[
+  Z_{\alpha\beta},\qquad Z'_{\alpha'\beta'}.
+\]
+The homomorphism \(M'\to M\) underlying \(h\) induces a
+\(p\)-morphism
+\[
+  h_{\alpha\beta}:R(Z'_{\alpha'\beta'})
+    \longrightarrow R(Z_{\alpha\beta}).
+\]
+By the preceding cases, there is a morphism of pinned groups
+\[
+  f_{\alpha\beta}:Z_{\alpha\beta}
+    \longrightarrow Z'_{\alpha'\beta'}
+\]
+with \(R(f_{\alpha\beta})=h_{\alpha\beta}\). The restrictions
+\[
+  f_{\alpha\beta}|_{Z_\alpha},
+  \qquad f_{\alpha\alpha}:Z_\alpha\to Z'_{\alpha'}
+\]
+correspond to the same morphism of pinned root data, and therefore
+coincide by uniqueness. \SGARefLink{sga3:XXIII:2.4}{Corollary 2.4} now glues the
+\(f_{\alpha\beta}\) to a morphism \(f:G\to G'\). It is a morphism of
+pinned groups and satisfies \(R(f)=h\), completing the proof.

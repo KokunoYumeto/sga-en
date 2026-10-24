@@ -1,0 +1,187 @@
+\section{Examples}\etiquette[4]{Vbis.sec4}
+
+\subsection{Sheaves of abelian groups on topological
+  spaces}\etiquette[4.1]{Vbis.subsec4.1}
+
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[4.1.0]{Vbis.subsubsec4.1.0}
+In this section, Top denotes the category of topological spaces
+[elements of the fixed universe $\Uu$]. We define a category
+$\mathcal{E}$ bifibered in duals of topoi over Top by taking as
+objects the pairs $(X, F)$, where $X$ is a topological space and $F$
+is a sheaf of sets on $X$, and as morphisms the pairs
+$(f, \varphi) : (X, F) \to (Y, H)$, where $f : X \to Y$ is a
+continuous map and $\varphi : H \to f_{\ast} (F)$ is a morphism of
+sheaves. We take for $\mathcal{O}$ the section of $\mathcal{E}^0$
+over $\Top^0$ that associates with each topological space the
+constant sheaf $\ZZ_X$: we set
+$G = \Ysheaf{\Mod}(\mathcal{E}^0, \mathcal{O})$, so that, for every
+topological space $X$, $G_X$ identifies with the category of sheaves
+of abelian groups on $X$.
+
+Recall that a morphism $f : X \to Y$ is \emph{separated} if the
+diagonal in $\fprod{X}{X}{Y}$ is closed. A \emph{proper} morphism is
+a separated and universally closed morphism (note that this
+definition is more restrictive than Bourbaki's).
+
+The\pageoriginale proof of the ``base-change theorem'' below is
+inspired by (\cite{sga4.exp.Vbis.bib.5} II(4.11.1)).
+
+\begin{enonce*}{Theorem 4.1.1}\etiquette[4.1.1]{Vbis.thm4.1.1}
+Let $f : X \to Y$ be a proper morphism, let $F$ be an abelian sheaf
+on $X$, and consider a Cartesian diagram
+\[
+\xymatrix@C=2.5cm@R=1.5cm{
+X' \ar[r]^{g'} \ar[d]^{f'}& X\ar[d]^{f}\\
+Y' \ar[r]^{g}& Y.
+}
+\]
+Then the canonical map \emph{(XII \hyperref[XII.eq4.2]{4.2})} or
+\emph{\eqhyperref[Vbis.eq3.2.2.3]{3.2.2.3}}
+$$
+g^{\ast} R^i f_{\ast} F \xrightarrow{\sim} R^i f'_{\ast} {g'}^{\ast}F
+$$
+is an isomorphism\nde{Unlike above, these are the derived functors
+of the usual functors, and not those arising from the fibered-category
+structure $G^\circ\rightarrow\Top^\circ$.}.
+\end{enonce*}
+
+This theorem is equivalent to the following corollary (the corollary
+is obtained by taking $Y'= (\Point)$; the theorem is obtained by
+applying the corollary to $f$ and $f'$).
+
+\begin{enonce*}{Corollary 4.1.2}\etiquette[4.1.2]{Vbis.cor4.1.2}
+Let $f : X \to Y$ be a proper morphism, let $F$ be an abelian sheaf
+on $X$, and let $y \in Y$. The canonical map
+$$
+(R^i f_{\ast} F)_y \longrightarrow H^i(f^{-1} (y), F)
+$$
+is bijective.
+\end{enonce*}
+
+By definition, as $U$ ranges over the neighborhoods of $y$, we have
+$$
+(R^if_{\ast} F)_y = \varinjlim H^i(f^{-1} (U), F){\quoi}.
+$$
+Since $f$ is closed, the $f^{-1}(U)$ form a fundamental system of
+neighborhoods of $f^{-1}(y)$, and the result follows from the
+following lemma, (\hyperref[Vbis.lem4.1.3]{4.1.3}).
+
+\begin{enonce*}{Lemma 4.1.3}\etiquette[4.1.3]{Vbis.lem4.1.3}
+Let\pageoriginale $X$ be a topological space, let $K \subset X$, and
+let $F$ be an abelian sheaf on $X$. Suppose that $K$ is compact and
+that any two distinct points of $K$ have disjoint neighborhoods in
+$X$. Then, as $U$ ranges over the neighborhoods of $K$, we have
+\begin{equation*}
+\varinjlim H^i(U, F) \xrightarrow{\sim} H^i(K, F){\quoi}.\tag{4.1.3.1}
+\end{equation*}\etiquette[4.1.3.1]{Vbis.eq4.1.3.1}
+\end{enonce*}
+
+We first treat the case $i = 0$. In this case, it is clear that
+\eqhyperref[Vbis.eq4.1.3.1]{4.1.3.1} is injective. For surjectivity,
+we use the following result.
+
+\begin{enonce*}{Lemma 4.1.4}\etiquette[4.1.4]{Vbis.lem4.1.4}
+Under the hypotheses of \emph{(\hyperref[Vbis.lem4.1.3]{4.1.3})}, if
+$A$ and $B$ are two closed subsets of $K$ and $W$ is a neighborhood
+of $A \cap B$ in $X$, then there are neighborhoods $U$ and $V$ of
+$A$ and $B$ in $X$ such that $U \cap V \subset W$.
+\end{enonce*}
+
+We first treat the case where $A$ consists of a single point $a$.
+The assertion is trivial if $a \in B$ (take $U = W$). If
+$a \not \in B$, then for every $b \in B$ there are disjoint open
+neighborhoods $U_b$ and $V_b$ of $a$ and $b$ in $X$. We take for
+$V$ a finite union of the $V_b$ that covers $B$, and for $U$ the
+intersection of the corresponding $U_b$.
+
+In the general case, for every $a \in A$, there are open
+neighborhoods $U_a$ and $V_a$ of $a$ and $B$ in $X$ such that
+$U_a \cap V_a \subset W$. We take for $U$ a finite union of the
+$U_a$ that covers $A$, and for $V$ the corresponding intersection
+of the $V_a$.
+
+Return to (\hyperref[Vbis.lem4.1.3]{4.1.3}). If
+$s \in H^{\circ}(K, F)$, there is an open covering $U_i$ of $K$ in
+$X$ and there are sections $s_i \in H^{\circ}(U_i, F)$ such that
+$s_i = s$ on $U_i \cap K$. We may suppose that there are only
+finitely many $U_i$. Let $(K_i)$ be a closed covering of $K$, with
+$K_i \subset K \cap U_i$. Let $W_y$ be the open subset of
+$U_i \cap U_j$ on which $s_i = s_j$; we have
+$K_i \cap K_j \subset W_{ij}$. Apply
+(\hyperref[Vbis.lem4.1.4]{4.1.4}) to all pairs $(K_i, K_j)$ and to
+the $W_{ij}$: we find open subsets $V_{ij}$ with
+$K_i \subset V_{ij} \subset U_i$ and
+$V_{ij} \cap V_{ji} \subset W_{ij}$. Let
+$U'_i = \displaystyle\mathop{\cap}_j V_{ij}$: then
+$K_i \subset U'_i \subset U_i$, and $s_i = s_j$ on
+$U'_i \cap U'_j$. The $s_i$ therefore glue\pageoriginale on the
+neighborhood of $K$ given by the union of the $U'_i$, and
+\eqhyperref[Vbis.eq4.1.3.1]{4.1.3.1} is surjective (hence bijective)
+for $i = 0$\nde{The two meanings of the symbol $i$ should not be
+confused.}.
+
+\begin{enonce*}{Lemma 4.1.5}\etiquette[4.1.5]{Vbis.lem4.1.5}
+If $F$ is flabby, the sheaf $F | K$ on $K$ is soft.
+\end{enonce*}
+
+Let $A \subset K$ be closed in $K$. Every section of $F$ on $A$
+extends to a neighborhood, by what precedes. Since $F$ is flabby, it
+extends to $X$, and hence in particular to $K$.
+
+We now prove (\hyperref[Vbis.lem4.1.3]{4.1.3}). Let $F^{\ast}$ be a
+flabby resolution of $F$. We have
+\begin{eqnarray*}
+\varinjlim H^i (U, F) &\stackrel{\ndemark}{=}& \varinjlim H^i (\Gamma(U, F^{\ast})) = H^i\varinjlim \Gamma(U,F^{\ast})
+\stackrel{\ndemark}{=} H^i \Gamma (K, F^{\ast})\\
+& \stackrel{\text{\hyperref[Vbis.lem4.1.5]{(4.1.5)}}}{=} & H^i (K, F){\quoi}.
+\end{eqnarray*}
+\addtocounter{cnote}{-1}\ndetext{$H^i (\Gamma(U, F^{\ast}))$ denotes here the $i$-th cohomology group of the complex $\Gamma(U,F^\ast)$.}\addtocounter{cnote}{1}
+\ndetext{By \hyperref[Vbis.lem4.1.3]{(4.1.3)}, applied with $\Gamma=H^0$}
+\begin{enonce*}{Corollary 4.1.6}\etiquette[4.1.6]{Vbis.cor4.1.6}
+Let $f : X \to Y$ be a proper surjective morphism of topological
+spaces. Then $f$ is of $G$-$1$-cohomological descent.
+\end{enonce*}
+
+This follows from (\hyperref[Vbis.cor4.1.2]{4.1.2}) and
+(\hyperref[Vbis.prop3.2.4]{3.2.4}).
+
+\begin{enonce*}{Corollary 4.1.7}\etiquette[4.1.7]{Vbis.cor4.1.7}
+Let $\Uu = (U_i)_{i \in I}$ be a locally finite closed covering of a
+topological space $X$. Then the canonical morphism
+$f : \coprod_{i\in I} U_i \to X$ is a morphism of
+$G$-$1$-cohomological descent.
+\end{enonce*}
+
+Indeed, $f$ is proper and surjective. Applying
+(\hyperref[Vbis.prop2.5.6]{2.5.6}), we recover the spectral sequence
+of [\cite{sga4.exp.Vbis.bib.5}. II (5.2.4)] (\cf the Introduction).
+
+\begin{enonce*}{Proposition 4.1.8}\etiquette[4.1.8]{Vbis.prop4.1.8}
+Let $f : X \to Y$ be a surjective local homeomorphism of topological
+spaces. Then $f$ is a morphism of universal
+$G$-$1$-cohomological descent.
+\end{enonce*}
+
+By localization on $Y$ (\cf (\hyperref[Vbis.prop3.2.4]{3.2.4})), we
+are reduced to the case where $f$ has a section.
+
+\begin{enonce*}{Corollary 4.1.9}\etiquette[4.1.9]{Vbis.cor4.1.9}
+Let\pageoriginale $\Uu = (U_i)_{i \in I}$ be an open covering of a
+topological space $X$. Then the canonical morphism
+$f : \coprod_{i \in I} U_i \to X$ is a morphism of universal
+$G$-$1$-cohomological descent.
+\end{enonce*}
+
+The descent spectral sequence then gives [\cite{sga4.exp.Vbis.bib.5} II (5.4.1)]
+(\cf the Introduction).
+
+\begin{enonce*}[remark]{Remark 4.1.10}\etiquette[4.1.10]{Vbis.rem4.1.10}
+The proofs of (\hyperrefext[VIII][VIII.sec9]{9}) show that
+``1-cohomological descent'' may be replaced by
+``2-cohomological descent'' in all the preceding statements.
+\end{enonce*}
+
+\subsection{Quasi-coherent modules on schemes}\etiquette[4.2]{Vbis.subsec4.2}
+
+\setcounter{subsubsection}{-1}

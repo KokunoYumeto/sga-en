@@ -1,0 +1,188 @@
+\section{Appendix. Criterion for the existence of points}\etiquette[9]{VI.sec9}
+
+\centerline{\textit{by} P. \textsc{Deligne}}
+
+\medskip
+\begin{enonce*}{Proposition 9.0}\etiquette[9.0]{VI.prop9.0}
+Every locally coherent topos $S$ has enough points.
+\end{enonce*}
+
+Since the question is local on $S$, we may suppose that the topos $S$
+is defined by a site $\Ss$ in which finite projective limits are
+representable and such that every covering $f_i:U_i\to U$ admits a
+finite subcovering. It is enough to prove that if
+$f:\Ff\to\Gg$ is not a monomorphism, then there is a point $x$ of
+$\Ss$ such that $f_x$ is not injective. By hypothesis, there are
+$U\in\ob\Ss$ and $\ss,\ss'\in\Ff(U)$ such that $\ss\ne\ss'$ and
+$f(\ss)=f(\ss')$. Replacing $\Ss$ by $\Ss/U$, we reduce to the
+following lemma.
+
+\begin{enonce*}{Lemma 9.1}\etiquette[9.1]{VI.lem9.1}
+If\pageoriginale $\ss$ and $\ss'$ are two distinct global sections of
+a sheaf $\mathfrak F$ on a site $\Ss$ satisfying the preceding
+hypotheses, then there is a point $x$ of $\Ss$ such that
+$\ss_x\ne\ss'_x$.
+\end{enonce*}
+
+Let $P=(U_i)_{i\in I}$ be a projective system in $\Ss$, indexed by a
+filtered ordered set $I$. For every sheaf $\Hh$ on $\Ss$, put
+$P(\Hh)=\varinjlim\Hh(U_i)$, and for every $V\in\Ob\Ss$, put
+$P(V)=\varinjlim\Hom(U_i,V)$. The functors $P(\Hh)$ and $P(V)$
+commute with fiber products. If the functor $P(V)$ takes coverings to
+surjective families of maps, it is a morphism of sites from the point
+topos to $\Ss$, and $P(\Hh)$ is the corresponding fiber functor.
+
+If $P=(U_i)_{i\in I}$ and $Q=(V_j)_{j\in J}$ are two projective
+systems in $\Ss$, we say that $Q$ refines $P$ if $I$ is a subset of
+$J$ with the induced order and $P$ is the restriction of $Q$ to $I$.
+There are then morphisms of functors from $P(\Hh)$ to $Q(\Hh)$ and
+from $P(V)$ to $Q(V)$.
+
+For every $P$ as above, denote by $\ss_P$ and $\ss'_P$ the images of
+$\ss$ and $\ss'$ in $P(\Ff)$. Lemma \hyperref[VI.lem9.1]{9.1}
+follows from the next lemma, in which $P$ is taken to be the
+projective system indexed by $\{0\}$ and consisting of the final
+object of $\Ss$.
+
+\begin{enonce*}{Lemma 9.2}\etiquette[9.2]{VI.lem9.2}
+For every $P$ as above satisfying $\ss_P\ne\ss'_P$, there is a
+refinement $Q$ of $P$ satisfying $\ss_Q\ne\ss'_Q$ and such that, for
+every covering $f_i:V_i\to V$ and every $f\in Q(V)$, $f$ belongs to
+the image of one of the $Q(V_i)$.
+\end{enonce*}
+
+We first prove:
+
+\begin{enonce*}{Lemma 9.3}\etiquette[9.3]{VI.lem9.3}
+Let $P=(U_i)_{i\in I}$ satisfy the hypotheses of Lemma
+\hyperref[VI.lem9.2]{9.2}, let $f_i:V_i\to V$ be a finite covering in
+$\Ss$, and let $f\in P(V)$. There is a refinement $Q$ of $P$
+satisfying $\ss_Q\ne\ss'_Q$ and such that the image of $f$ in $Q(V)$
+belongs to the image of one of the $Q(V_i)$.
+\end{enonce*}
+
+There are $i_{\circ}\in I$ and
+$f'\in\Hom(U_{i_{\circ}},V)$ which define $f$. For
+$i\geq i_{\circ}$, put
+$U_{i,k}=\fprod{U_i}{V_k}{V}$, this fiber product being defined by
+$f'$. Since $(V_k)$ is a covering of $V$, $(U_{i,k})$ is a covering
+of $U_i$; the following arrow is injective (for $i>i_{\circ}$):
+$$
+\Ff(U_i)\to\prod_k\Ff(U_{i,k}).
+$$
+Passing\pageoriginale to the limit, and using the commutation of
+\emph{finite} products with filtered inductive limits, we see that
+$$
+P(\Ff)\to\prod_k\varinjlim\Ff(U_{i,k})
+$$
+is injective. Hence there is a $k$ such that $\ss_P$ and $\ss'_P$
+have distinct images in
+$\varinjlim_{i>i_{\circ}}\Ff(U_{i,k})$. Put
+$I_{\circ}=\{i\mid i\geq i_{\circ}\text{ and }i\in I\}$ and
+$J=I\coprod I_{\circ}$. Order $J$ by declaring $j'\leq j''$ if the
+images of $j'$ and $j''$ in $I$ satisfy $j'\leq j''$ and it is not
+the case that $j'\in I_{\circ}$ and $j''\in I$. The $U_i$ and
+$U_{i,k}$, indexed by $J$, form a refinement $Q$ of $P$ such that
+$\ss_Q\ne\ss'_Q$ and the image of $f$ in $Q(V)$ belongs to the image
+of $Q(V_k)$.
+
+\begin{enonce*}{Lemma 9.4}\etiquette[9.4]{VI.lem9.4}
+Let $P=(U_i)_{i\in I}$ satisfy the hypotheses of Lemma
+\hyperref[VI.lem9.2]{9.2}. There is a refinement $Q$ of $P$ such that
+$\ss_Q\ne\ss'_Q$ and such that, for every finite covering $(V_k)$ of
+an object $V$ of $\Ss$ and every $f\in P(V)$, the image of $f$ in
+$Q(V)$ belongs to the image of one of the $Q(V_k)$.
+\end{enonce*}
+
+Let $E$ be the set of triples consisting of an object $V$ of $\Ss$, a
+finite covering $(V_k)$ of $V$, and an element $f\in P(V)$. Let
+$\leq$ be a well-ordering of $E$, and let $\bar E$ be the set obtained
+from $E$ by adjoining a greatest element, denoted by $\infty$. By
+transfinite induction on $e\in\bar E$, we shall define refinements
+$Q_e$ of $P$ satisfying $\ss_{Q_e}\ne\ss'_{Q_e}$ and such that
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item if $e'\leq e$, then $Q_e$ refines $Q_{e'}$;
+
+\item if $e=(V,(V_k),f)$, then the image of $f$ in $Q_e(V)$ belongs
+  to the image of one of the $Q_e(V_k)$.
+\end{enumerate}
+
+Suppose the $Q_{e'}$ already defined for $e'<e$. If $e$ is the first
+element of $E$, put $Q'_e=P$. If $e$ has a predecessor $e-1$, put
+$Q'_e=Q_{e-1}$. Otherwise, let $Q'_e$ be the projective system with
+index set $\bigcup_{e'<e}I_{e'}$ which refines the $Q_{e'}$ for
+$e'<e$. In this case,
+$$
+Q'_e(\Ff)=\varinjlim_{e'<e}Q_{e'}(\Ff),
+$$
+so that, in every case,\pageoriginale $Q'_e$ refines the $Q_{e'}$ for
+$e'<e$ and satisfies $\ss_{Q'_e}\ne\ss'_{Q'_e}$.
+
+The required projective system $Q_e$ is obtained by applying Lemma
+\hyperref[VI.lem9.3]{9.3} to $Q'_e$ and
+$e=(V,(V_k),f)$ (\resp by taking $Q_e=Q'_e$ if $e=\infty$).
+
+The projective system $Q_{\infty}$ satisfies Lemma
+\hyperref[VI.lem9.4]{9.4}.
+
+Lemma \hyperref[VI.lem9.4]{9.4} makes it possible to define,
+inductively on $n$, a sequence $Q_n=(U_i)_{i\in I_n}$ of projective
+systems in $\Ss$ such that
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $Q_0=P$;
+
+\item $Q_{n+1}$ refines $Q_n$;
+
+\item $\ss_{Q_n}\ne\ss'_{Q_n}$;
+
+\item for every covering $f_k:V_k\to V$ and every $f\in Q_n(V)$,
+  the image of $f$ in $Q_{n+1}(V)$ belongs to the image of one of the
+  $Q_{n+1}(V_k)$.
+\end{enumerate}
+
+The projective system $Q$, whose index set is the union of the $I_n$
+and which extends the various $Q_n$, then satisfies Lemma
+\hyperref[VI.lem9.2]{9.2}. The proof also shows:
+
+\begin{enonce*}{Corollary 9.5}\etiquette[9.5]{VI.cor9.5}
+Let $\Ss$ be a site in which fiber products are representable and
+such that every covering in $\Ss$ admits a finite subcovering. Put
+$c=\sup(\aleph_0,\card(\text{Fl }\Ss))$. Then there is a very dense
+set $X$ of points of $\Ss$ such that
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $\card(X)\leq2^c$;
+
+\item if $x\in X$ and $U\in\Ob\Ss$, then $\card(U_x)\leq c$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{thebibliography}{99}\pageoriginale
+\bibitem{sga4.exp.VI.bib.1} P.\textsc{Gabriel} and M.\textsc{Zisman}: Homotopy Theory
+  and Calculus of Fractions, Ergebnisse der Mathematik, Bd 35.
+
+\bibitem{sga4.exp.VI.bib.2} J. \textsc{Giraud}: M\'ethode de la descente. M\'emoire de la S.M.F.
+
+\bibitem{sga4.exp.VI.bib.3} A. \textsc{Grothendieck} and J. \textsc{Dieudonn\'e}: \'El\'ements de
+  G\'eom\'etrie Alg\'ebrique I, 2nd edition.
+
+\bibitem{sga4.exp.VI.bib.4} A. \textsc{Grothendieck} and J. \textsc{Dieudonn\'e}: \'El\'ements de
+  G\'eom\'etrie Alg\'ebrique IV I, I.H.E.S.~${\rm n^{\circ}}$
+
+\bibitem{sga4.exp.VI.bib.5} \SGA. 1 VI, by A. \textsc{Grothendieck}, I.H.E.S.
+
+\bibitem{sga4.exp.VI.bib.6} \SGA. 3 IV 6.3 by M. \textsc{Demazure}, Lecture Notes
+  ${\rm n^{\circ}}$, Springer Verlag.
+
+\bibitem{sga4.exp.VI.bib.7} A. \textsc{Grothendieck}: Sur quelques points d'alg\`ebre
+  homologique, Tohoku Math. J.
+\end{thebibliography}
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

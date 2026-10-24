@@ -1,0 +1,399 @@
+\epsilon \longrightarrow 0
+$$
+where $F_{i}$ is the restriction of $F$ to $Z_{i}$, from which the
+result for $Z$ follows.
+
+Suppose now that the theorem has been proved for the values
+$\delta<d$, and let us prove it for $\delta(F)\leq d$, assuming $d\geq 2$.
+
+\hypertarget{sga4.exp.XIX.lemma.6.5}{}\begin{enonce*}{Lemma 6.5}\etiquette[6.5]{XIX.lem6.5}
+It suffices to treat the case where
+$X=\EE^{1}_{Y}=\sheaf{\Spec}O_{Y}[t]$ is affine space of
+dimension $1$, and where $Y$ is strictly local.
+\end{enonce*}
+
+The proof is that of \hyperrefext[XIV][XIV.lem4.2]{4.2}: It is clear that one may
+suppose $Y$ strictly local, and that $\delta(F)\leq d$. We must
+prove that $H^{q}(X,F)=0$ if $q>d$. We may embed $X$ in
+$\EE^{N}_{Y}$, so it suffices to treat the case
+$X=\EE^{N}_{Y}$. Induction on $N$: Consider the diagram
+$$
+\xymatrix@C=1.2cm@R=1cm{
+\EE^{N}_Y \ar[rr]^{g} \ar[rd]_{f}&   & \EE^{N-1}_Y \ar[ld]^{h}\\
+                     & Y   &  
+}
+$$
+so that $\EE^{N}_{Y}$ is affine space of dimension 1
+over $\EE^{N-1}_{Y}$. Applying the induction hypothesis and
+the Leray spectral sequence
+$$
+H^{p}(\EE^{N-1},R^{q}g_{\ast}F)\Longrightarrow
+H^{p+q}(\EE^{N},F)
+$$
+shows that it suffices to prove that
+$$
+\delta(R^{q}g_{\ast}F)\leq d-q{\quoi}.
+$$
+This\pageoriginale means that if $z\in \EE^{N-1}$ is a
+point such that $\delta(z)>d-q$, then $R^{q}g_{\ast}F=0$ at the
+point $z$. But the induction hypothesis on $N$ applies to the morphism
+$g$, and hence $R^{q}g_{\ast}F=0$ at the point $z$ if $\delta(F,g,z)<
+q$. Thus it suffices to prove the inequality
+$$
+\delta(F,g,z)+\delta(z)\leq \delta(F){\quoi}.
+$$
+We leave this pleasure to the reader.
+
+\hypertarget{sga4.exp.XIX.lemma.6.6}{}\begin{enonce*}{Lemma 6.6}\etiquette[6.6]{XIX.lem6.6}
+To prove $\hyperref[XIX.thm6.1]{6.1}$ for the values $\delta\leq d$, it suffices to
+prove the following: Let $B$ be a complete normal local ring of equal
+characteristic and dimension $d$. Let $U\subset \Spec B$ be an
+affine open subset. Suppose that there exists an element $x\in \rad B$ which is
+invertible on $U$. Then
+$$
+H^{q}(U,\ZZ/\ell)=0\quad\text{\rm if}\quad q>d{\quoi}.
+$$
+\end{enonce*}
+
+This lemma is moreover a special case of Corollary \hyperref[XIX.cor6.2]{6.2}.
+
+\medskip
+\noindent
+\emph{Proof} (\cf \hyperrefext[XIV][XIV.lem4.4]{4.4}). By \hyperref[XIX.lem6.5]{6.5},
+it suffices to treat the case where $Y$ is strictly local and
+$X=\EE^{1}_{Y}$. Consider the diagram
+$$
+\xymatrix@C=1cm@R=.8cm{
+\EE^{1}_Y \ar[rr]^{i} \ar[rd]_{f}&   & \PP^{1}_Y \ar[ld]^{g}\\
+          & Y &,
+}
+$$
+where $\PP^{1}_{Y}$ is the projective line and $\EE^{1}_{Y}$
+is obtained from $\PP^{1}$ by removing the section $Y_{\infty}$ at
+infinity. Let $F$ be a torsion sheaf on $\EE^{1}$, with
+$\delta(F)\leq d$. We have the spectral sequence 
+$$
+H^{p}(\PP^{1},R^{q}i_{\ast}F)\Longrightarrow
+H^{p+q}(\EE^{1},F){\quoi}.
+$$
+Now\pageoriginale the $R^{q}i_{\ast}F$ for $q>0$ are concentrated on
+the section $Y_{\infty}$, which is isomorphic to $Y$. Since $Y$ is
+strictly local, it follows that $H^{p}(\PP^{1},
+R^{q}i_{\ast}F)=0$ if $p>0$ and $q>0$. Furthermore, by \hyperrefext[XII][XII.cor5.3]{5.3}, we have
+$H^{p}(\PP^{1}, i_{\ast}F)=0$ if $p>2$. Since we wish to prove
+that $H^{n}(\EE^{1},F)=0$ if $n>d$, and $d\geq 2$, it suffices
+to prove that
+$$
+H^{0}(\PP^{1},
+R^{q}i_{\ast}F)=H^{0}(Y_{\infty},R^{q}i_{\ast}F)=0\quad\text{\rm
+if}\quad q>d{\quoi}.
+$$
+This group is isomorphic to the stalk of $R^{q}i_{\ast}F$ at the
+point $y_{\infty}$ at infinity of $\PP^{1}$ in the closed fiber.
+
+Now it suffices (VII \hyperref[VII.prop3.3]{3.3} and \hyperrefext[IX][IX.prop2.9]{2.9} (iii)) to treat the case where $F$
+is constructible. Then, since $\delta(F)\leq d$, there exists a
+closed subscheme $X$ of $\PP^{1}$ with $\dim X\leq d$ such that
+$X$ contains the support of $F$. Let $\Spec A=\widetilde{X}$ be the
+strict localization of $X$ at the point $y_{\infty}$,
+$\widetilde{U}=\widetilde{X}-\fprod{\widetilde{X}}{Y_{\infty}}{\PP^{1}}$,
+and let $\widetilde{F}$ be the sheaf induced by $F$ on $\widetilde{U}$. Note that $\widetilde{U}$
+is obtained from $\widetilde{X}$ by localizing with respect to an element
+$x\in \Gamma(X,O_{X})$. We have
+$$
+(R^{q}i_{\ast}F)_{y_{\infty}}\simeq
+H^{q}(\widetilde{U},\widetilde{F}){\quoi}.
+$$
+Thus it suffices to prove that $H^{q}(\widetilde{U},\widetilde{F})=0$, if $q>d$,
+for every torsion sheaf $\widetilde{F}$ on $\widetilde{U}$.
+
+We may now apply \hyperrefext[IX][IX.prop5.6]{5.6}, with $\varphi=\delta$, and we
+find that it suffices to prove that
+$$
+H^{q}(V,\ZZ/\ell)=0\quad\text{\rm if}\quad q>\delta(V)
+$$
+for\pageoriginale every $V$ finite and integral over
+$\widetilde{U}$ and for invertible $\ell$. Let $x:\bar{V}\rightarrow
+V$ be the normalization of $V$. We have the exact sequence
+$$
+0\longrightarrow (\ZZ/\ell)_{V}\longrightarrow
+x_{\ast}(\ZZ/\ell)_{\bar{V}}\longrightarrow C\longrightarrow 0
+$$
+with $\delta(C)<\delta(V)$, and it follows from this (by induction on
+$\delta$) that it suffices to take $V$ \emph{normal}.
+
+Let $B$ be the normalization of $A$ in the field of rational functions
+on $V$. Then $B$ is an excellent strictly local ring of equal
+characteristic, and $V$ is an affine open subset of $\Spec B$, obtained by
+localizing with respect to $x$. Let $\hat{B}$ be the completion of $B$, and
+$\hat{V}$ the induced open subset (which is obtained from $\Spec \hat{B}$ by
+localizing with respect to the image of $x$ in $\hat{B}$). By \hyperref[XIX.cor4.3]{4.3},
+we have
+$$
+H^{q}(V,\ZZ/\ell)\simeq H^{q}(\hat{V},\ZZ/\ell){\quoi}.
+$$
+We are therefore reduced to proving that
+$$
+H^{q}(\hat{V},\ZZ/\ell)=0\quad\text{\rm if}\quad q>\delta
+(V)=\dim B=\dim \hat{B}{\quoi}.
+$$
+By the induction hypothesis, the theorem is true if $\delta(V)<d$,
+so Theorem \hyperref[XIX.thm6.1]{6.1} bis applies in this situation. Consequently,
+it suffices to treat the case $\dim \hat{B}=d$, and since
+$\hat{B}$ is normal, we are in the situation of the lemma, whence the
+result.
+
+\setcounter{subsection}{7}
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[6.7.0]{XIX.subsubsec6.7.0}
+We shall first prove \hyperref[XIX.lem6.6]{6.6} under additional
+hypotheses, when 
+$B$ has characteristic $p>0$. Let $A$ be an
+equidimensional, complete ring of equal characteristic, and let $k\subset A$ be a
+field such that $A/\rad A$ is a finite extension of $k$. We say that
+the\pageoriginale $k$-algebra $A$ is \emph{formally separable}
+if there exists a $k$-subalgebra of $A$ of the form
+$k[[x_{1},\ldots,x_{n}]]$ such that the morphism $\Spec A\rightarrow
+\Spec k[[x]]$ is finite and étale at the generic point of $\Spec k[[x]]$
+$(x=(x_{1},\ldots,x_{n}))$.
+
+\hypertarget{sga4.exp.XIX.lemma.6.7}{}\begin{enonce*}{Lemma 6.7}\etiquette[6.7]{XIX.lem6.7}
+Let $k\subset B$ be a field over which $B/\rad B$ is
+finite. Under the induction hypothesis on $d$ above, the conclusion
+of \hyperref[XIX.lem6.6]{6.6} holds if the hypotheses of $\hyperref[XIX.lem6.6]{6.6}$ are satisfied and if,
+in addition, either of the following conditions is satisfied:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $k$ has characteristic $0$.
+
+\item There exists an element $x\in \rad B$ which is invertible on $U$ and
+such that $\bar{B}=B/(x)$ is a formally separable $k$-algebra.
+\end{enumerate}
+\end{enonce*}
+
+\medskip
+\noindent
+\emph{Proof}. Choose elements $x_{1}=x$,
+$x_{2},\ldots, x_{d}$ of $\rad B$ such that $\{x_{1},\ldots,x_{d}\}$
+generates a primary ideal for $\rad B$. Then $B$ is a finite $A$
+-algebra, where $A=k[[x_{1},\ldots,x_{d}]]$, and $\bar{B}$ is the
+$k[[x_{2},\ldots, x_{d}]]=\bar{A}$-algebra $B/x_{1}B$. Since in
+case (ii) $\bar{B}$ is formally separable, we may in that case
+choose the elements $x_{2},\ldots,x_{d}$ in such a way that
+$\bar{B}$ becomes a generically étale $k[[x_{2},\ldots,x_{d}]]$-algebra.
+It then follows immediately that $B$ is
+also a generically étale $A$-algebra, which is of course also true
+in case (i).
+
+Let $b\in B$ be an element which generates the field extension $R(B)$ over
+$k((x))$. Let $\epsilon \in k[[x]]$ be the discriminant of the
+monic irreducible equation of $b$ over $k[[x]]$. In case (ii),
+we may choose $b$ so that $x_{1}$ does not divide
+$\epsilon$. Write moreover\pageoriginale $\Spec B-U=V(x_{1})\cup Y$,
+where $Y$ contains no irreducible component of $V(x_{1})$. Let
+$C$ be the ring $\Gamma(Y,O_{Y})$, where $Y$ is given its induced
+reduced structure. Changing the $x_{2},\ldots,x_{d}$ if necessary, we
+may suppose that $V(x_{d})$ is not contained in the image of $Y$
+in $\Spec A$, and that, moreover, in case (ii), $V(x_{d})$ is not
+contained in $V(\epsilon)$.
+
+\hypertarget{sga4.exp.XIX.lemma.6.8}{}\begin{enonce*}{Lemma 6.8}\etiquette[6.8]{XIX.lem6.8}
+Let $A_{0}=k[[x_{1},\ldots,x_{d-1}]]$ $\{x_{d}\}$ be the strict localization
+of $k[[x_{1},\ldots,x_{d-1}]]$ $[x_{d}]$ at the point
+$x_{1}=x_{2}=\ldots=x_{d}=0$. Under the conditions above, there exist
+an $A^{0}$-algebra $B^{0}$, an affine open subset $U^{0}\subset \Spec
+B^{0}$, and an isomorphism $A\otimes_{A^{0}}B^{0}\simeq B$ such that
+the open subset of $\Spec B$ induced by $U^{0}$ is $U$.
+\end{enonce*}
+
+The proof of this lemma is analogous to that of \hyperref[XIX.lem1.5]{1.5}:
+it suffices to find $A^{0}$-algebras $B^{0}$, $C^{0}$ and
+isomorphisms $A\otimes_{A^{0}}B^{0}\simeq B$,
+$A\otimes_{A^{0}}C^{0}\simeq C$, because then there will exist
+(\cite{sga4.exp.XIX.bib.3}~\hyperref[XIX.subsec1.4]{1.4}) a unique (surjective) morphism
+$B^{0}\rightarrow C^{0}$ inducing the morphism $B\rightarrow C$. We
+therefore take $U^{0}=\Spec B^{0}-\{(\Spec C^{0})\cup V(x_{1})\}$, and
+immediately verify that $U$ is induced by $U^{0}$. The existence of
+$C^{0}$, and of $B^{0}$ in case (ii), is proved as in
+\hyperref[XIX.lem1.5]{1.5}. The existence of $B^{0}$ in case (i) is a
+consequence of (\cite{sga4.exp.XIX.bib.3} 
+\hyperref[XIX.thm5.1]{5.1}). (It may also be proved directly by
+applying Abhyankar's lemma to the ramification along $\{x_{1}=0\}$,
+and descent.)
+
+We can now complete the proof of
+\hyperref[XIX.lem6.7]{6.7}. Applying 
+\hyperref[XIX.cor4.3]{4.3} once more, we find that
+$$
+H^{q}(U,\ZZ/\ell)\simeq H^{q}(U^{0},\ZZ/\ell){\quoi},
+$$
+from which\pageoriginale it follows that it suffices to prove that the latter
+group is zero for $q>d$. Now $\Spec A^{0}$ is a limit of schemes
+affine and étale over $k[[x_{1},\ldots,x_{d-1}]]$ $[x_{d}]$,
+so $\Spec B^{0}$ is a limit of schemes of finite type over
+$\Spec k[[x_{1},\ldots,x_{d-1}]]$, each fiber of which has dimension
+$\leq 1$. Since $U^{0}\subset \Spec B^{0}[1/x_{1}]$, we have
+$$
+U^{0}=\varprojlim U^{0}_{\alpha}
+$$
+where $U^{0}_{\alpha}$ is affine of finite type over the scheme
+$V^{0}=\Spec k[[x_{1},\ldots, x_{d-1}]]$ $[1/x_{1}]$ and where each
+fiber of $U^{0}_{\alpha}/V^{0}$ has dimension $\leq 1$.
+
+Let $f^{0}:U^{0}\rightarrow V^{0}$ be the structural morphism. Since
+the fibers of $f^{0}_{\alpha}$ all have dimension $\leq 1$, for
+$v\in V^{0}$ we have
+$$
+\delta(\ZZ/\ell, f^{0}_{\alpha},v)\leq \dim O_{V^{0},v}+1\leq
+d-1
+$$
+(because $\dim O_{V^{0},v}\leq d-2$). The induction hypothesis on
+$d$ is therefore applicable to the morphism $f^{0}_{\alpha}$, and, by
+applying \hyperref[XIX.thm6.1]{6.1}, we find
+$$
+R^{q}f^{0}_{\alpha\ast}(\ZZ/\ell)=0\quad\text{\rm at the
+point}\quad v\quad\text{\rm if}\quad q>\dim O_{V^{0},v}+1{\quoi},
+$$
+\ie if $q>d-\dim\bar{v}$. Thus $R^{q}f^{0}_{\alpha
+\ast}(\ZZ/\ell)\neq 0$ at the point $v$ implies that $\dim
+\bar{v}\geq d-q$. Therefore, for the inclusion $i:V^{0}\rightarrow \Spec
+k[[x_{1},\ldots, x_{d-1}]]$ (\cf \eqhyperref[XIX.eq6.0]{6.0}), we have
+$$
+\delta (R^{q}f^{0}_{\alpha\ast}(\ZZ/\ell))\leq d-q{\quoi},
+$$
+and the induction hypothesis, in the form of \hyperref[XIX.thm6.1]{6.1} bis, applied to the
+morphism\pageoriginale $i$, implies that
+$$
+H^{p}(V^{0},R^{q}f^{0}_{\alpha\ast}(\ZZ/\ell))=0\quad\text{\rm
+if}\quad p+q>d{\quoi}.
+$$
+The Leray spectral sequence
+$$
+E^{pq}_{2}=H^{p}(V^{0},R^{q}f^{0}_{\alpha\ast}(\ZZ/\ell))\Longrightarrow
+H^{p+q}(U^{0},\ZZ/\ell)
+$$
+therefore implies that $H^{n}(U^{0}_{\alpha},\ZZ/\ell)=0$ if $n>d$,
+and since $U^{0}$ is the limit of the $U^{0}_{\alpha}$, we likewise find
+$$
+H^{n}(U^{0},\ZZ/\ell)=0\quad\text{\rm if}\quad n>d{\quoi}.
+$$
+
+This completes the proof of \hyperref[XIX.lem6.7]{6.7}, and hence of Theorem \hyperref[XIX.thm6.1]{6.1} in
+characteristic 0.
+
+\section{Affine morphisms --- end of the proof}\etiquette[7]{XIX.sec7}
+
+Recall that to complete the proof of \hyperref[XIX.thm6.1]{6.1} in characteristic
+$p>0$ (still under the resolution hypothesis), we had reduced by
+\hyperref[XIX.lem6.6]{6.6} to proving the following assertion for $d\geq 2$:
+
+\hypertarget{sga4.exp.XIX.lemma.7.1}{}\begin{enonce*}{Lemma 7.1}\etiquette[7.1]{XIX.lem7.1}
+Let $B$ be a complete normal local ring of equal characteristic, with
+separably closed residue field, and of dimension $d$. Let $U\subset
+\Spec B$ be an affine open subset such that there exists $x\in \rad B$ which is
+invertible on $U$. Then 
+$$
+H^{q}(U,\ZZ/\ell)=0\quad\text{\rm if}\quad q>d{\quoi}.
+$$
+
+Moreover,\pageoriginale by the induction hypothesis, we may suppose 
+that $\hyperref[XIX.thm6.1]{6.1}$ is true for the values $\delta<d$, and that $\hyperref[XIX.lem7.1]{7.1}$ has already been proved
+in the particular case $\hyperref[XIX.lem6.7]{6.7}$ {\rm (ii)}.
+\end{enonce*}
+
+First note that the condition that $B$ be normal is not
+important. Indeed, let $B$ be arbitrary, let $\pi:\bar{B}\rightarrow
+B$ be the normalization of $B$, and let $\bar{U}\subset\Spec \bar{B}$ be the inverse
+image of $U$. We have an exact sequence
+$$
+0\longrightarrow (\ZZ/\ell)_{U}\longrightarrow
+\pi_{\ast}(\ZZ/\ell)_{\bar{U}}\longrightarrow C\longrightarrow
+0{\quoi},
+$$
+where the dimension of the support of $C$ is $<d$, so $H^{q}(U,C)=0$ if
+$q>d-1$. Since $H^{q}(U,\pi_{\ast}\bigdot)\simeq
+H^{q}(\bar{U},\bigdot)$ (VIII \hyperref[VIII.cor5.6]{5.6}), we see that
+\begin{equation*}
+\begin{split}
+& H^{q}(U,\ZZ/\ell)=0\quad \text{\rm if}\quad q>d\quad
+\text{\rm is equivalent to}\\
+& H^{q}(\bar{U},\ZZ/\ell)=0\quad\text{\rm if}\quad q>d{\quoi}.
+\end{split}\tag{7.2}
+\end{equation*}\etiquette[7.2]{XIX.eq7.2}
+
+\setcounter{subsection}{3}
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[7.3.0]{XIX.subsubsec7.3.0}
+We shall briefly recall, without proof, the properties of the notion of
+formal separability that we need. The reader may consult
+(\EGA IV 18.11.10, 18.11.11): Let $A$ be a complete noetherian local
+$k$-algebra whose residue field is a finite extension
+of $k$, and let $A'$ denote the completion of the local ring
+$A\otimes_{k}k'$ (where $k'=k^{1/p}$). Then the extension $A\rightarrow
+A'$ is \emph{radicial} (possibly infinite), as is easily seen
+--- this is the well-known example of Nagata. It is therefore
+harmless, for the calculation of étale cohomology, to replace $A$ by
+$A'$ (VIII 1).
+
+Now the condition that an equidimensional algebra $A$ of
+dimension\pageoriginale $d$ be formally \emph{separable},
+that is, be a finite generically étale extension of
+$k[[x_{1},\ldots, x_{d}]]$, can be expressed in terms of the module
+$\widehat{\Omega}^{1}_{A/k}$ (\EGA IV 18.11.10), or of the Jacobian
+criterion (\EGA $0_{IV}$ 22.6, IV 7.1)\footnote[1]{The co-editor of this
+seminar has not succeeded in elucidating the meaning of this
+reference to a situation which seems quite different to him, nor the
+justification of the assertion that follows. A. G.}, and one sees that if $A$
+is not formally separable, then the $k'$-algebra $A'$ is not
+reduced. For the proof, one may for example reduce to the
+case where $A$ is given by an equation $f=0$, $f\in k[[x_{1},\ldots,
+x_{d+1}]]$, and apply the Jacobian criterion and the following lemma,
+whose pleasant proof we leave to the reader:
+
+\hypertarget{sga4.exp.XIX.lemma.7.3}{}\begin{enonce*}{Lemma 7.3}\etiquette[7.3]{XIX.lem7.3}
+Let $f(x_{1},\ldots,x_{n})\in k[[x_{1},\ldots,x_{n}]]$ be a formal
+power series. Suppose that for each $i=1,\ldots,n$ there exists an
+invertible element $u_{i}\in k[[x_{1},\ldots,x_{n}]]$ such that $u_{i}f$
+is a series in $x_{i}^{p}$ and in the
+$x_{1},\ldots,x_{i-1},x_{i+1},\ldots,x_{n}$. Then there exists an
+invertible element $v\in k[[x_{1},\ldots,x_{n}]]$ such that
+$$
+vf\in k[[x_{1}^{p},\ldots,x_{n}^{p}]]{\quoi}.
+$$
+\end{enonce*}
+
+It follows easily that, by applying a finite number of times the
+procedure of replacing $(A,k)$ by $(\bar{A}',k')$, where $\bar{A}'$ is the
+normalization of $A'$, one is reduced to the situation where $A$ is indeed
+formally separable. Similarly, one can prove that for a given $x\in
+\rad A$, the ring $(A/(x))_{\text{\rm réd}}$ becomes a formally
+separable algebra by the same procedure, applied to
+the algebra $A$.
+
+Applying VIII \hyperref[VIII.thm1.1]{1.1} and \hyperref[VIII.def7.2]{7.2}, we find
+
+\hypertarget{sga4.exp.XIX.corollary.7.4}{}\begin{enonce*}{Corollary 7.4}\etiquette[7.4]{XIX.cor7.4}
+It suffices to prove $\hyperref[XIX.lem7.1]{(7.1)}$ under the additional condition that
+$B$ contain a field $k$ over which $B/\rad B$ is finite, and
+such that the $k$-algebra $(B/(x))_{\text{\rm réd}}$ is formally
+separable.\pageoriginale
+\end{enonce*}
+ 
+The proof of \hyperref[XIX.lem7.1]{7.1} in this case consists in a
+reduction to the particular
+case treated in \hyperref[XIX.lem6.7]{6.7} (ii):
+
+With the notation of \hyperref[XIX.lem7.1]{7.1}, \hyperref[XIX.cor7.4]{7.4}, let
+$$
+D(x)=\sum_{i}r_{i}X_{i}
+$$
+be the divisor of $x$, so that each $X_{i}$ is a closed irreducible
+subscheme of $\Spec B$ of codimension 1 which is formally separable over
+$k$ (that is, such that
+$B/\mathfrak{J}(X_{i})$ is a formally separable $k$-algebra,
+which is moreover equivalent to the assertion that $(B/(x))_{\text{\rm
+réd}}$ is formally separable). Choose $y\in\rad B$ such that
+we have
+$$
+D(y)=\sum_{i}(r_{i}-1)X_{i}+\Gamma

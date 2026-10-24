@@ -1,0 +1,145 @@
+
+\noindent\textit{Proof.}
+For every \(i,j\geq0\), put
+\[
+  W_{i,j}=U_i\widehat\otimes V_j,
+  \qquad
+  \overline W_{i,j}
+  =
+  (U_i/U_{i+1})\widehat\otimes_k(V_j/V_{j+1}).
+\]
+We prove by induction on \(n\) that the natural map
+\[
+  \pi_n:W_n\longrightarrow
+  \bigoplus_{i+j=n}\overline W_{i,j}
+\]
+is surjective and that the inclusion
+\[
+  W_{n+1}\subset\ker(\pi_n)
+\]
+is an equality. For \(n=0\), the projection
+\[
+  \pi_0:
+  U_0\widehat\otimes_kV_0
+  \longrightarrow
+  (U_0/U_1)\widehat\otimes_k(V_0/V_1)
+\]
+is surjective. Since \(U_0\), \(U_0/U_1\), and hence \(U_1\),
+are topologically flat over \(k\), we have
+\[
+  \ker(\pi_0)
+  =
+  U_0\widehat\otimes_kV_1
+  +
+  U_1\widehat\otimes_kV_0,
+\]
+and moreover
+\[
+  \bigl(U_0\widehat\otimes_kV_1\bigr)
+  \cap
+  \bigl(U_1\widehat\otimes_kV_0\bigr)
+  =
+  U_1\widehat\otimes_kV_1.
+\]
+
+Suppose now that \(n>0\) and that the result has been proved for
+\(n-1\). Put
+\[
+  M_0=U_0\widehat\otimes_kV_n,
+  \qquad
+  S_0=\sum_{i=1}^{n}U_i\widehat\otimes_kV_{n-i}.
+\]
+We have \(S_0\subset U_1\widehat\otimes_kV_0\). Applying the
+preceding argument to \(V_0\supset V_n\) in place of
+\(V_0\supset V_1\), we obtain
+\[
+  M_0\cap S_0
+  \subset
+  \bigl(U_0\widehat\otimes_kV_n\bigr)
+  \cap
+  \bigl(U_1\widehat\otimes_kV\bigr)
+  =
+  U_1\widehat\otimes_kV_n.
+\]
+It follows that
+\[
+  M_0\cap S_0=U_1\widehat\otimes_kV_n.
+\]
+Since \(W_n=M_0+S_0\), we obtain a commutative diagram with exact
+rows, where
+\[
+  U'_i=U_{i+1},
+  \qquad
+  W'_{i,n-1-i}=W_{i+1,n-1-i}
+  \quad(0\leq i\leq n-1):
+\]
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:5.1.2:filtration-exact-rows-diagram}
+  \input{native_diagrams/exp7/viib_15_95/diag_125}
+\end{center}
+
+\phantomsection
+\label{sga3:VIIB:5.1.2:diagram-source-notation-note}
+\noindent\textit{Source note.}\enspace
+The French diagram's lower middle term is printed
+\(\bigoplus_{i=0}^{n}\overline W_{i,n-1}\); the natural map
+\(\pi_n\) defined immediately above instead has target
+\(\bigoplus_{i+j=n}\overline W_{i,j}\), which would give
+\(\bigoplus_{i=0}^{n}\overline W_{i,n-i}\). The complementary index is used in the diagram above.
+
+Then \(p\) is surjective, with kernel
+\[
+  (U_0/U_1)\widehat\otimes_kV_{n+1}.
+\]
+Moreover, by the induction hypothesis applied to the sequence
+\((U'_i)\), the map \(\pi'_{n-1}\) is surjective, with kernel
+\[
+  W'_n
+  =
+  \sum_{i=1}^{n}W_{i,n+1-i}.
+\]
+It follows that \(\pi_n\) is surjective and that
+\[
+  W_{n+1}\subset\ker(\pi_n)
+\]
+is an equality. This proves the lemma.
+
+Let us return to an object \((A,J)\) of \(\mathcal C\). By
+\SGARefLink{sga3:VIIB:0.2.G}{0.2.G}, the hypothesis that every
+\[
+  \overline{J^n}/\overline{J^{n+1}}
+\]
+is topologically flat over \(k\) is equivalent to saying that
+\(\operatorname{Gr}_J(A)\) is topologically flat over \(k\).
+
+\medskip
+\noindent\textbf{Corollary.}
+\phantomsection
+\label{sga3:VIIB:5.1.2:corollary}
+{\itshape Let \(\mathcal P\) be the full subcategory of
+\(\mathcal C\) consisting of the objects \((A,J)\) such that
+\(A\) and \(\operatorname{Gr}_J(A)\) are topologically flat over
+\(k\). Then the functor
+\[
+  \mathcal P\longrightarrow\mathbf{Alpg}/k,
+  \qquad
+  (A,J)\longmapsto\operatorname{Gr}_J(A),
+\]
+commutes with finite coproducts and hence carries a cogroup of
+\(\mathcal P\) to a cogroup of \(\mathbf{Alpg}/k\).
+
+In particular, if \(k\) is a field, then for every cogroup
+\((A,J)\) of \(\mathcal C\), the algebra
+\(\operatorname{Gr}_J(A)\) is a cogroup of
+\(\mathbf{Alpg}/k\).}
+\footnote{\label{sga3:VIIB:nde:148}Thus, to a pair
+\(H\subset G\) of formal \(k\)-groups one associates the
+``formal completion \(\widehat G_H\) of \(G\) along \(H\)'',
+which is a formal \(k\)-group. Moreover, we shall see in
+\SGARefLink{sga3:VIIB:5.1.3}{5.1.3}--\SGARefLink{sga3:VIIB:5.1.4}{5.1.4} that the inclusion
+\(\sigma:H\hookrightarrow\widehat G_H\) has a retraction
+\(\pi:\widehat G_H\to H\), and that the formal \(k\)-group
+\(N=\ker(\pi)\) identifies, as a formal variety, with the
+completion of the homogeneous space \(G/H\) along the unit
+section. This will be useful in \SGARefLink{sga3:VIIB:5.2.2}{5.2.2}.}

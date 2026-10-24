@@ -1,0 +1,242 @@
+\begin{enonce*}[remark]{Exercise 9.8.2}\etiquette[9.8.2]{IV.exer9.8.2}
+(\emph{Quotient topoi of topological spaces. Topological
+\'etendues.})
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let
+\hypertarget{sga4.exp.IV.equation.9.8.2.1}{}\[
+\xymatrix@C=1.5cm@R=1.5cm@M=.2cm{
+X_2 \ar@<6pt>[r] \ar@<-1.5pt>[r] \ar@<-8pt>[r]& X_1 \ar@<2pt>[r]^{p_1} \ar@<-4pt>[r]_{p_2}& X_0\\
+}\leqno{(9.8.2.1)}
+\]\etiquette[9.8.2.1]{IV.eq9.8.2.1}
+be a semi-simplicial object truncated in degree $2$ in the category
+$(\Esp)$ of topological spaces $\in 𝒰$; the inverse-image functors
+then give a diagram of categories of sheaves
+\[
+\xymatrix@M=.2cm@C=1.25cm{
+  \Top(X_0) \ar@<2pt>[r]^{p_1^{\ast}} \ar@<-2pt>[r]_{p_2^{\ast}}&
+  \Top(X_1) \ar@<-5pt>[r] \ar[r] \ar@<5pt>[r]& \Top(X_2).
+}
+\]
+(More precisely, one has a category cofibered over the category of
+standard simplices $\Delta_n$, $0\leq n\leq 2$.) Show that the
+category $\varprojlim$ of this diagram (\ie the category of sheaves
+of sets on $X_0$ \emph{equipped} with a descent datum relative to
+the diagram \sisi{(9.8.6.1)}{\hyperref[IV.eq9.8.2.1]{9.8.2.1}}, \ie with an
+isomorphism $p^{\ast}_1(F)\simeq p^{\ast}_2(F)$ satisfying\ldots), is
+a $𝒰$-topos $T$. (For a more general statement on the stability of
+topoi under $\varprojlim$ operations, \cf \sisi{VI)}{\hyperrefext[VI][VI.sec8]{8}}.) Define a morphism
+of topoi $q:\Top(X_0)\rightarrow T$, and prove that for every
+$𝒰$-topos\pageoriginale $E$, $\Hhomtop(T,E)$ is equivalent, via
+$q^{\ast}$, to the category $\varprojlim$ of the following diagram
+of categories, deduced from \hyperref[IV.eq9.8.2.1]{(9.8.2.1)}:
+\[
+\xymatrix@M=.2cm{ \Hhomtop(\Top(X_0),E)\ar@<2pt>[r] \ar@<-4pt>[r]&
+\Hhomtop(\Top(X_1),E)\ar[r]\ar@<6pt>[r]\ar@<-6pt>[r]&
+\Hhomtop(\Top(X_2),E). }
+\]
+\item In particular, let $R$ be an equivalence relation in an object
+$X$ of $(\Esp)$, \ie (\sisi{\hyperrefext[I][I.sec10]{10}}{\hyperrefext[I][I.sec10.9]{10.9}}) a subobject $R$ of
+$X\times X$ (N.B. the inclusion $R\hookrightarrow X\times X$ is
+continuous, but the topology of $R$ is not necessarily induced by
+that of $X\times X$), such that, for every object $Y$ of $(\Esp)$,
+$\Hom(Y,R)$ is the graph of an equivalence relation in $\Hom(Y,X)$.
+This gives a diagram of the form \hyperref[IV.eq9.8.2.1]{(9.8.2.1)}, with $X_0=X$, $X_1=R$,
+$X_2=\fprod{(R,p_2)}{R,p_1}{X}$, where $p_1$, $p_2$ are the two
+projections from $R$ to $X$, and hence a topos, which we denote by
+$\Top(X)/R$, or even $\Top(X/R)$, or indeed $X/R$, by abuse of
+notation, and which plays the role of a quotient of $X$ by $R$ in
+the sense made precise in a). Suppose that the topology of $R$ is
+induced by that of $X\times X$ and that, denoting by $X/R$ the
+ordinary quotient topological space, $X$ locally admits sections
+over $X/R$. Prove that $T$ is then equivalent to $\Top(X/R)$.
+(Use \hyperref[IV.exer9.8.1]{9.8.1} d).)
+
+\item Let $H\rightarrow X$ be an injective morphism of topological
+groups, \ie a monomorphism of group objects in $(\Esp)$, and let $R$
+be the equivalence relation that it defines in $X$, \ie
+$R=H\times X$, with $p_1=\pr_2$ and $p_2$ defined by the action of
+$H$ on $X$ by left translations. Show that the topology of $R$ is
+induced by that of $X\times X$ if and only if the topology of $H$ is
+induced by that of $X$. Give examples in which this condition is not
+satisfied and in which the ordinary quotient topology on $X/H$ is
+the indiscrete topology, with a) $H=\mathbb{Z}\times\mathbb{Z}$,
+$X=\mathbb{R}$, and b) $H=\mathbb{R}$,
+$X=\mathbb{T}\times\mathbb{T}$, where
+$\mathbb{T}=\mathbb{R}/\mathbb{Z}$ (``geodesics on the torus'').
+Prove that the two topoi so obtained are equivalent and are not
+equivalent to $\Top(X/H)$ (which is a final topos
+(\hyperref[IV.subsec2.2]{2.2})), nor to any topos of the form $\Top(Y)$.
+
+\item Let $G$ be a topological group acting on a topological space
+$X$, whence, in the familiar way, a semi-simplicial object
+\[
+\xymatrix@M=.2cm{ ... G\times G \times X
+\ar@<6pt>[r]\ar@<-1.5pt>[r]\ar@<-8pt>[r] &
+  G\times X \ar@<3pt>[r] \ar@<-4pt>[r] & X.
+}
+\]
+Show\pageoriginale that the topos $T$ deduced from it by a) identifies
+with the category of spaces $X'$ over $X$ having $G$ as a group of
+operators, such that $X'\rightarrow X$ is an \'{e}tale map
+(compatible with the action of $G$). In particular, when $G$ is
+discrete, one recovers the topos $\Top(X,G)$ of \hyperref[IV.subsec2.3]{2.3}.
+
+The preceding considerations justify the notation $\Top(X)/G$, or
+indeed $\Top(X/G)$ or even simply $X/G$, for the preceding topos $T$.
+One should bear in mind, however, that when $G$ is a discrete group
+(to fix ideas) acting \emph{properly} on $X$, so that the ordinary
+quotient space $X/G$ has reasonably good properties, the natural
+morphism of topoi $T\rightarrow\Top(X/G)$ deduced from the universal
+characterization a) of $T$ is an equivalence of topoi only if $G$
+acts freely, \ie without fixed points, \ie when
+$G\times X\rightarrow X\times X$ is a monomorphism. Thus, in the
+case of a ``pre-equivalence relation'' (or ``groupoid'' in the sense
+of (\SGA 3 V 1)) which is not an equivalence relation, passage to
+the quotient in the sense of topoi (or ``passage to the fine
+quotient'') does not in general correspond (via the correspondence
+$Y\mapsto\Top(Y)$) to the usual topological quotient.
+
+\item Let $T$ be a $𝒰$-topos. Show that the following conditions are
+equivalent:
+\begin{itemize}
+\item[(i)] There exists a family $(S_i)_{i\in I}$ of objects of $T$
+covering the final object of $T$, such that for every $i\in I$ the
+induced topos $T_{/S_i}$ is equivalent to a topos of the form
+$\Top(X)$, with $X\in(\Esp)$.
+
+\item[${\rm (i')}$] There exists an $S\in\Ob T$ covering the final
+object such that the induced topos $T_{/S}$ is equivalent to a topos
+of the form $\Top(X)$.
+
+\item[(ii)] There exist a topological space $X$ and an
+\emph{\'{e}tale} pre-equivalence relation $R$ in $X$ (in the sense of
+the category $(\Esp)$) (\ie one for which $p_1:R\rightarrow X$ is an
+\'{e}tale map), such that $T$ is equivalent to $\Top(X/R)$, with the
+notation of b).
+\end{itemize}
+
+The\pageoriginale topos $T$ is then said to be \emph{locally a
+topological space}, or alternatively a \emph{topological
+\'{e}tendue} (or simply an \emph{\'{e}tendue}, when no confusion is
+likely).
+
+\item Show that the topos $T$ constructed in a) has enough points
+and, more precisely, that it admits a conservative family of points
+parametrized by the (small) set $X_0$. In particular, every
+\'{e}tendue has a small conservative family of points, and hence has
+enough points. When an \'{e}tendue $T$ is represented in the form
+$\Top(X/R)$ as in e) ii), prove that every point of $T$ is isomorphic
+to the image of a point of $\Top(X)$, and is therefore defined by an
+ordinary point of $X_{\sob}$ (or of $X$ itself, when $X$ is sober).
+
+\item Show that the topos $\Top(X/G)$ of \hyperref[IV.subsec2.3]{2.3} is an
+\'{e}tendue. (Use its description in d) or \hyperref[IV.exer7.1.10]{7.1.10} c).)
+Show that, for every $x\in X$, the monoid of endomorphisms of the
+point of $\Top(X,G)=\Top(X)/G$ defined by $x$ is canonically
+isomorphic to the stabilizer group $G_x$ of $x$. In particular, the
+points of an \'{e}tendue may have nontrivial automorphism groups.
+Determine $\Ppoint(T)$ for the \'{e}tendue $T$ defined by an \'{e}tale
+pre-equivalence relation in a space $X$, and show that every
+endomorphism of a point of $T$ is an automorphism.
+
+\item Let $T$ be a topos. Show that the following conditions are
+equivalent:
+\begin{itemize}
+\item[i)] For every point $p$ of $T$, every endomorphism of $p$
+(resp. every automorphism of $p$) is the identity.
+
+\item[ii)] For every topos $S$ having enough points and every
+morphism of topoi $f:S\rightarrow T$, every endomorphism of $f$
+(resp. every automorphism of $f$) is the identity.
+\end{itemize}
+Likewise, show that the following conditions are equivalent:
+\begin{itemize}
+\item[${\rm i')}$] For two points $p$, $q$ of $T$, there exists at
+most one morphism from $p$ to $q$.
+
+\item[${\rm ii')}$] For two morphisms $f$, $g:S\rightrightarrows T$
+from a topos $S$ having enough\pageoriginale points to $T$, there
+exists at most one morphism from $f$ to $g$.
+\end{itemize}
+
+When these latter conditions hold, the topos $T$ is said to be
+\emph{pointwise rigid}, or simply \emph{rigid}. Show that if $X$ is
+a topological space equipped with an \'{e}tale pre-equivalence
+relation $R$, the quotient \'{e}tendue $T=\Top(X)/R$ is rigid if and
+only if $R$ is an equivalence relation.
+
+\item Let $(X,G)$ be a topological space with a discrete group of
+operators, let $H$ be a normal subgroup of $G$ such that the induced
+action of $H$ on $X$ is proper and free, and let $X'=X/H$,
+$G'=G/H$, so that $G'$ acts on $X'$ in the evident way. Prove that
+the morphism of topoi
+$$
+\Top(X,G)\longrightarrow \Top(X',G')
+$$
+induced by the canonical morphism $(X,G)\rightarrow(X',G')$ of
+spaces with operators (\hyperref[IV.subsubsec4.1.2]{4.1.2}) is an equivalence of
+topoi.
+
+Show that the set of open subtopoi of $\Top(X/G)$ identifies with
+the set of open subsets of $X$ stable under the action of $G$, or
+equivalently with the set of open subsets of the quotient
+topological space $X/G$. Deduce that $\Top(X/G)$ is connected if and
+only if every subset of $X$ which is both open and closed and stable
+under the action of $G$ is either empty or equal to $X$. When the
+connected components of $X$ are open, $\Top(X/G)$ is connected if
+and only if $G$ acts transitively on the set $\pi_0(X)$ of connected
+components of $X$; more generally, $\pi_0(\Top(X/G))$
+(\hyperref[IV.exer8.7]{8.7} g)) is an essentially constant pro-set
+isomorphic to the quotient set $\pi_0(X)/G$.
+
+Show that when $X$ is locally connected and locally simply
+connected, and $T=\Top(X,G)$ is connected, \ie $G$ is transitive on
+$\pi_0(X)$, then among all the ways of representing $T$ by means of
+a space with operators $(X',G')$ (\cf above for some such
+representations), there is one, unique up to nonunique isomorphism,
+for which $X'$ is connected and simply connected. Show that choosing
+such an $(X',G')$ amounts to choosing a ``universal covering'' of
+the final object of $T$, and that $G'$ is isomorphic to the group
+$\pi_1(T)$ relative to this universal covering (\cf
+\hyperref[IV.exer2.7.5]{2.7.5}).
+
+\noindent (Hint:\pageoriginale show that giving an equivalence of
+$T$ with a $\Top(X,G)$ amounts to giving a $G_T$-torsor $P$ in $T$,
+and that, if $(X,G)$ and $P$ correspond, there is a canonical
+equivalence $\Top(X)\simeq T_{/P}$.)
+
+Deduce from this a trivial proof of the last assertion of c).
+Characterize the topoi $T$ equivalent to a $\Top(X,G)$, where $G$
+is a discrete group acting on a locally connected and locally simply
+connected topological space while transitively permuting its
+connected components, as the connected, locally connected, and
+locally simply connected \'{e}tendues whose universal covering $P$
+of the final object $e_T$ of $T$ is such that the induced topos
+$T_{/P}$ is equivalent to a topos of the form $\Top(X)$ (or, as we
+shall simply say by abuse of language, $T_{/P}$ ``is'' a topological
+space).
+
+Give an example of an \'{e}tendue, locally isomorphic to $\mathbb{R}$,
+which is connected and simply connected but is not a topological
+space. (Take the universal covering of the line $\mathbb{R}$ with
+doubled origin.)
+
+\item A ringed topos $(T,{\Oo}_T)$ (\cf \hyperref[IV.sec11]{\S 11}) is called a
+\emph{differentiable \'{e}tendue} (resp. a \emph{real-analytic
+\'{e}tendue}, resp. a \emph{complex-analytic \'{e}tendue}) if there
+exist objects $S_i$ of $T$ covering the final object such that the
+induced ringed topos $(T_{/S_i},{\Oo}_T/S_i)$ is equivalent to the
+ringed topos defined by a differentiable manifold with its sheaf of
+real $C^{\infty}$ functions (resp. to the ringed topos defined by a
+real-analytic space, resp. to the ringed topos defined by a
+complex-analytic space). Give a constructive description of these
+ringed topoi of the type in e) ii) (taking for $X$, respectively, a
+differentiable manifold, a real-analytic space, or a
+complex-analytic space). Give examples of such ringed topoi which are
+not equivalent to ringed topoi associated with topological spaces,
+by returning to the examples considered in c).
+\end{enumerate}
+\end{enonce*}

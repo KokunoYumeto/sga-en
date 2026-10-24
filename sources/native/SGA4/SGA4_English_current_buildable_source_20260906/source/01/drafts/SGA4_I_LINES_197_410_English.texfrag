@@ -1,0 +1,212 @@
+\section{$𝒰$-categories. Presheaves of sets}\etiquette[1]{I.sec1}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[1.0]{I.sec1.0}
+\emph{Throughout the remainder of the seminar and unless expressly stated
+  otherwise, the universes under consideration will contain an element
+  of infinite cardinality.} Let $𝒰$ be a universe. A set is said to be
+  $𝒰$-\emph{small} (or, when no confusion can result,
+  \emph{small}) if it is \emph{isomorphic} to an element of
+  $𝒰$. We shall also use the terminology: small group, small ring,
+  small category\nde{A category $C$ is regarded as a set of arrows
+  (equipped with the subset of objects, regarded as the set of identity
+  arrows, and with the ``source, target'' maps). Thus, the expressions ``$C$ is an element of $𝒰$'' or
+  ``$C$ is $𝒰$-small'' make sense.}
+  \ldots We shall often assume, without
+  explicit mention, that the schemes, topological spaces, indexing
+  sets\ldots with which we work are $\in 𝒰$,
+or\pageoriginale at least have cardinality $\in 𝒰$;
+  nevertheless, many of the categories with which we shall work
+  will not be $\in 𝒰$.
+
+\begin{enonce*}{Definition 1.1}\etiquette[1.1]{I.def1.1}
+Let $𝒰$ be a universe and $C$ a category. We say that $C$
+is a $𝒰$-category if, for every pair $(x,y)$ of objects
+of $C$, the set $\Hom_C(x,y)$ is $𝒰$-small.
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[1.1.1]{I.sec1.1.1}
+Let $C$ and $D$ be two categories and let $\text{Fonct}(C,D)$ be the
+category of functors from $C$ to $D$. The following assertions
+are immediate:
+\begin{enumerate}
+\item[a)] If $C$ and $D$ are elements of a universe $𝒰$
+  (\resp  are $𝒰$-small), the category $\text{Fonct}(C,D)$ is an element
+  of $𝒰$ (\resp  is $𝒰$-small).
+
+\item[b)] If $C$ is $𝒰$-small and $D$ is a $𝒰$-category,
+  $\text{Fonct}(C,D)$ is a $𝒰$-category.
+\end{enumerate}
+
+\begin{enonce*}[remark]{Remark 1.1.2}\etiquette[1.1.2]{I.rem1.1.2}
+Let $D$ be a category having the following properties:
+\begin{itemize}
+\item[(C1)] The set $\ob(D)$ is contained in the universe $𝒰$.
+
+\item[(C2)] For every pair $(x,y)$ of objects of $D$, the set
+  $\Hom_D(x,y)$ is an element of $𝒰$.
+\end{itemize}
+(The usual categories constructed from a universe
+$𝒰$ have these two properties: $𝒰$-$\Ens$,
+$𝒰$-$\Ab$,\ldots). Let $C$ be a category belonging to
+$𝒰$. Then the category $\text{Fonct}(C,D)$ does not
+in general have properties (C1) and (C2). For example, the category
+$\text{Fonct}(C,𝒰$-$\Ens$) has neither property
+(C1) nor property (C2). This justifies the adopted definition of
+$𝒰$-category, in preference to the more restrictive notion given
+by conditions (C1) and (C2) above.
+\end{enonce*}
+
+\begin{enonce*}{Definition 1.2}\etiquette[1.2]{I.def1.2}
+Let\pageoriginale $C$ be a category. The category of %%
+presheaves of sets on $C$ relative to the universe $𝒰$
+(or, when no confusion can result, the category of
+presheaves on $C$) is the category of contravariant functors on
+$C$ with values in the category of $𝒰$-sets.
+\end{enonce*}
+
+We denote by $\widehat{C}_{𝒰}$ (or more
+simply, when no confusion can result, by
+$\widehat{C}$\,) the category of presheaves
+of sets on $C$ relative to the universe $𝒰$. The objects of
+$\widehat{C}_{𝒰}$ are called
+$𝒰$-presheaves (or simply presheaves) on $C$.
+When $C$ is $𝒰$-small, the category
+$\widehat{C}_{𝒰}$ is a
+$𝒰$-category. When $C$ is a $𝒰$-category,
+$\widehat{C}_{𝒰}$ is not necessarily a
+$𝒰$-category.
+
+
+\begin{enonce*}[remark]{Construction-Definition
+    1.3}\etiquette[1.3]{I.condef1.3}
+Let $x$ be an object of a $𝒰$-category $C$. The
+$𝒰$-\emph{functor represented by} $x$ is the functor
+$h_{𝒰}(x):C^\circ\rightarrow 𝒰$-$\Ens$ whose
+construction is as follows \footnote[1]{$C^\circ$ will always denote the
+category opposite
+  to $C$.}. Let $y$ be an object of $C$.
+\begin{enumerate}
+\item[a)] If $\Hom_C(y,x)$ is an element of $𝒰$, then:
+      $$
+      h_{𝒰}(x)(y)=\Hom_C(y,x)
+      $$
+
+\item[b)] Suppose that $\Hom_C(y,x)$ is not an element of $𝒰$
+  and let $R(Z,x,y)$ be the relation: ``The set $Z$ is the codomain of an
+  isomorphism $\Hom_C(y,x)\xrightarrow{\sim}Z$''. We then set:
+  $$
+  h_{𝒰}(x)(y)=\tau_ZR(Z){\quoi}.
+  $$
+\end{enumerate}
+(By axiom $(𝒰 B)$, $h_{𝒰}(x)(y)$ is an
+element of $𝒰$). Let $R'(u,x,y)$ be the relation: « $u$ is
+a bijection
+$$
+u:\Hom_C(y,x)\xrightarrow{\sim} h_{𝒰}(x)(y)\mbox{
+»}{\quoi}.
+$$
+We\pageoriginale then set:
+$$
+\varphi(y,x)=\tau_uR'(u){\quoi}.
+$$
+
+It should be noted that, in cases (a) and (b), we have $a$ canonical
+isomorphism:
+$$
+\varphi(y,x):\Hom_C(y,x)\xrightarrow{\sim}
+h_{𝒰}(x)(y){\quoi}.
+$$
+(In case a) $\varphi(y,x)$ is the identity). Now let
+$u:y\rightarrow y'$ be an arrow of $C$. By composition of morphisms, the
+morphism $u$ defines a map:
+$$
+\Hom_C(u,x):\Hom_C(y',x)\longrightarrow \Hom_C(y,x){\quoi}.
+$$
+We then set
+$$
+h_{𝒰}(x)(u)=\varphi(y,x)\Hom_C(u,x)\varphi(y',x)^{{}-1}{\quoi}.
+$$
+
+It is immediate that $h_{𝒰}(x)$, so defined, is
+a functor $C^\circ\rightarrow 𝒰$-$\Ens$.
+\end{enonce*}
+
+\setcounter{subsection}{3} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[1.3.1]{I.sec1.3.1}
+Similarly, using the isomorphisms $\varphi$, for every
+morphism $y:x\rightarrow x'$ we define a morphism of functors:
+$$
+h_{𝒰}(y):h_{𝒰}(x)\longrightarrow h_{𝒰}(x')
+$$
+and it is immediate that this defines a functor
+$$
+h_{𝒰}:C\longrightarrow
+\widehat{C}_{𝒰}{\quoi}.
+$$
+
+\subsubsection{}\etiquette[1.3.2]{I.sec1.3.2}
+Now let $𝒱$ be a universe such that $𝒰\subset
+𝒱$. There is then a canonical fully faithful functor:
+$$
+𝒰\text{-}\Ens\hookrightarrow 𝒱\text{-}\Ens
+$$
+whence a fully faithful functor:
+$$
+\widehat{C}_{𝒰}\hookrightarrow
+\widehat{C}_{𝒱}
+$$
+and\pageoriginale the diagram:
+
+\[
+\xymatrix@R=1.75cm@C=3.5cm@M=.2cm{
+C\ar[r]^{h_{\underline{U}}} \ar[dr]_{h_{\underline{V}}}& C{\widehat{\phantom{i}}}_{\underline{U}}\ar@{_{(}->}[d]\\
+& C\widehat{\phantom{i}}_{\underline{V}} }
+\]
+commutes up to canonical isomorphism. When $C$ is an
+element of $𝒰$, this canonical isomorphism is the identity.
+
+\subsubsection{}\etiquette[1.3.3]{I.sec1.3.3}
+\emph{In practice, the universe $𝒰$ is fixed
+  once and for all and is not mentioned.} We then use the
+  notations $\widehat{C}$ (for the category of
+  $𝒰$-presheaves of sets) and
+$$
+h:C\longrightarrow \widehat{C}{\quoi}.
+$$
+For every object $x$ of $C$, the presheaf $h(x)$ is called the
+\emph{presheaf represented by} $x$, and we shall always identify
+the value at $y\in \ob(C)$ of the presheaf $h(x)$ with $\Hom_C(y,x)$.
+
+\begin{enonce*}{Proposition 1.4}\etiquette[1.4]{I.prop1.4}
+Let $C$ be a $𝒰$-category, $F$ a presheaf on $C$, and
+$X$ an object of $C$. There is an isomorphism functorial in $X$ and
+in $F$:
+$$
+i:\Hom_{\widehat{C}}(h(X),F)\xleftarrow{\sim}
+F(X){\quoi},
+$$
+where the map $i$, when $F$ is of the form $h(Y)$, is none other
+than the map:
+$$
+h:\Hom(h(X), h(Y))\longleftarrow \Hom(X,Y){\quoi}.
+$$
+In particular, the functor $h$ is fully faithful.
+\end{enonce*}
+
+\setcounter{subsection}{4} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[1.4.1]{I.sec1.4.1}
+This proposition justifies the customary abuse of language identifying
+an object of $C$ with the corresponding contravariant functor. A
+presheaf\pageoriginale isomorphic to an object in the image of $h$ (or,
+using the abuse of language noted above, isomorphic to an object
+of $C$) is called a \emph{representable presheaf.}
+
+\subsubsection{}\etiquette[1.4.2]{I.sec1.4.2}
+Let $𝒱$ be a universe containing the universe $𝒰$. The
+category of $𝒰$-presheaves is a \emph{full} subcategory
+of the category of $𝒱$-presheaves, and consequently
+a $𝒰$-presheaf is representable if and only
+if its image in the category of $𝒱$-presheaves is a
+representable $𝒱$-presheaf.

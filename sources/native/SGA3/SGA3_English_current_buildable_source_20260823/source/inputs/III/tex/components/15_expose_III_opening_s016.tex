@@ -1,0 +1,353 @@
+
+\setcounter{footnote}{-1}
+\chapter*{Expos\'e III\\Infinitesimal Extensions}
+\addcontentsline{toc}{chapter}{Expos\'e III. Infinitesimal Extensions}
+\markboth{EXPOS\'E III. INFINITESIMAL EXTENSIONS}%
+  {EXPOS\'E III. INFINITESIMAL EXTENSIONS}
+
+\begin{center}
+  \textit{by M. Demazure}
+\end{center}
+
+In this expos\'e we work in the following general situation. We have a
+scheme \(S\) and a coherent nilpotent ideal \(\mathscr I\) on \(S\).
+We denote by \(S_n\) the closed subscheme of \(S\) defined by the ideal
+\(\mathscr I^{\,n+1}\), for \(n\geq 0\). In particular, \(S_0\) is
+defined by \(\mathscr I\). Since \(\mathscr I\) is nilpotent, \(S_n=S\)
+for all sufficiently large \(n\), and the \(S_i\) have the same
+underlying topological space. A typical example is the following:
+\(S\) is the spectrum of a local Artinian ring \(A\), and \(\mathscr I\)
+is the ideal defined by the radical of \(A\), so that \(S_0\) is the
+spectrum of the residue field of \(A\).\footnote{Editor's note: version
+of October 14, 2024.}
+
+In this situation one is given certain data over \(S_0\) and seeks data
+over \(S\) that lift them, that is, data whose base change from \(S\) to
+\(S_0\) recovers the original data. This is done step by step, through
+the schemes \(S_n\). At each step we shall define the obstructions that
+arise and classify the resulting solutions when they exist.
+
+The passage from \(S_n\) to \(S_{n+1}\) may be generalized as follows.
+We have a scheme \(S\) and two ideals \(\mathscr I\supset\mathscr J\)
+such that \(\mathscr I\mathscr J=0\). In the preceding case \(S\),
+\(\mathscr I\), and \(\mathscr J\) are respectively
+\[
+ S_{n+1},\qquad
+ \mathscr I/\mathscr I^{\,n+2},\qquad
+ \mathscr I^{\,n+1}/\mathscr I^{\,n+2}.
+\]
+We denote by \(S_0\), respectively \(S_{\mathscr J}\), the closed
+subscheme of \(S\) defined by \(\mathscr I\), respectively
+\(\mathscr J\), and pose a problem of extending data from
+\(S_{\mathscr J}\) to \(S\).
+
+SGA~1, Expos\'e III, treated the problems of extending morphisms of
+schemes and of extending schemes. Here we consider the problems of
+extending group morphisms, group structures, and subgroups.
+
+In \S0 we have collected those results of SGA~1, Expos\'e III, that
+will be useful to us, putting them into the form best suited to our
+purpose and sparing the reader constant reference to that
+expos\'e.\footnote{Editor's note: the reader may prefer to begin with
+\S1, which is easier and may serve as motivation and a guide to the
+results of \S0.} \SGARefLink{sga3:iii:section:1}{Section~1} collects computations in group cohomology
+that will be used later and have nothing to do with scheme theory.
+\SGARefLink{sga3:iii:section:2}{Sections~2} and~3 treat, respectively, the extension of group morphisms
+and the extension of group structures. In \S4 we briefly recall the
+proof of a result stated in TDTE~IV concerning the extension of
+subschemes, and apply it to the problem of extending subgroups. For the
+remainder of the Seminar, only the result of \S2 concerning the
+extension of group morphisms is indispensable.\footnote{Editor's note:
+nevertheless, \SGARefLink{sga3:iii:corollary:3-10}{3.10} is used in \SGARefLink{sga3:xxiv:1.13}{XXIV~1.13}. Moreover, \SGARefLink{sga3:iii:corollary:4-37}{4.37} is used in the
+proof of \SGARefLink{sga3:ix:theorem:3:2}{IX~3.2}~bis and \SGARefLink{sga3:iii:remark:3-6}{3.6}~bis, although those results also follow from
+results of Expos\'e~X that do not use \SGARefLink{sga3:iii:corollary:4-37}{4.37}.}
+
+The idea of reducing problems of infinitesimal extension to the usual
+cohomological computations in group extensions was suggested by
+J.~Giraud during the oral expos\'e, whose computations were appreciably
+more complicated and less transparent. Unfortunately, this method seems
+to work well only for the first two problems studied, and we have been
+unable to avoid rather laborious computations for extensions of
+subgroups.
+
+To simplify the language, we shall call a \(Y\)-functor, respectively a
+\(Y\)-scheme, and so on, a functor, respectively a scheme, and so on,
+equipped with a morphism to the functor \(Y\). This extends the
+definitions of Expos\'e~I, which concerned only representable \(Y\).
+
+\section*{\SGAInlineRefTarget{sga3:iii:section:0}0. Reminders from SGA 1, Expos\'e III, and miscellaneous remarks}
+\addcontentsline{toc}{section}{0. Reminders from SGA 1, Expos\'e III}
+
+We begin with a general definition.
+
+\medskip
+\SGARefTarget{sga3:iii:definition:0:1}\noindent\textbf{Definition 0.1.}
+\textit{Let \(\mathscr C\) be a category, \(X\) an object of
+\(\widehat{\mathscr C}\), and \(G\) a
+\(\widehat{\mathscr C}\)-group acting on \(X\). We say that \(X\) is
+\emph{formally principal homogeneous}\footnote{Editor's note: one also
+calls such an object a \emph{pseudo-torsor}; see
+EGA~IV\textsubscript{4}, 16.5.15. The more general notion of a formally
+homogeneous object, not necessarily principal homogeneous, is defined
+in \SGARefLink{sga3:iv:definition:6:7:1}{Expos\'e~IV, 6.7.1}.} under \(G\) if the following equivalent
+conditions hold:}
+\begin{enumerate}
+\item[(i)] \textit{for every object \(T\) of \(\mathscr C\), the set
+  \(X(T)\) is either empty or principal homogeneous under \(G(T)\);}
+\item[(ii)] \textit{the morphism of functors
+  \[
+    G\times X\longrightarrow X\times X,
+    \qquad (g,x)\longmapsto(gx,x),
+  \]
+  is an isomorphism.}
+\end{enumerate}
+
+We shall now put the results of SGA~1, III~\S5\footnote{Editor's note:
+see also EGA~IV\textsubscript{4}, 16.5.14--18.} into the form most
+useful here. Throughout this section we use the following notation. On a
+scheme \(S\) we have two quasi-coherent ideals \(\mathscr I\) and
+\(\mathscr J\) such that
+\[
+ \mathscr I\supset\mathscr J,
+ \qquad
+ \mathscr I\mathscr J=0.
+\]
+In particular, \(\mathscr J^2=0\). We denote by \(S_0\), respectively
+\(S_{\mathscr J}\), the closed subscheme of \(S\) defined by
+\(\mathscr I\), respectively \(\mathscr J\). For every \(S\)-functor
+\(X\), we systematically denote by \(X_0\) and \(X_{\mathscr J}\) the
+functors obtained by base change from \(S\) to \(S_0\) and
+\(S_{\mathscr J}\). We use the same notation for a morphism.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:definition:0-1-1}\textbf{Definition 0.1.1.}\footnote{Editor's note: the
+numbering \SGARefLink{sga3:iii:definition:0-1-1}{0.1.1} through \SGARefLink{sga3:iii:corollary:0-1-13}{0.1.13} has been added to make the definitions
+and results contained here more visible.}
+\textit{Let \(X\) be an \(S\)-functor. Define a functor \(X^+\) over
+\(S\) by}
+\[
+ \operatorname{Hom}_S(Y,X^+)
+ =\operatorname{Hom}_{S_{\mathscr J}}
+    (Y_{\mathscr J},X_{\mathscr J})
+ =\operatorname{Hom}_S(Y_{\mathscr J},X)
+\]
+\textit{for a variable \(S\)-scheme \(Y\).} In the notation of
+Expos\'e~II, \S1,
+\[
+ X^+\simeq\prod_{S_{\mathscr J}/S}X_{\mathscr J}.
+\]
+The identity morphism of \(X_{\mathscr J}\) defines, by construction, an
+\(S\)-morphism
+\[
+ p_X:X\longrightarrow X^+.
+\]
+Explicitly,\footnote{Editor's note: the following sentence has been
+added, and the next two remarks have been expanded.} for every
+\(S\)-scheme \(Y\), the map
+\[
+ p_X(Y):
+ \operatorname{Hom}_S(Y,X)\longrightarrow
+ \operatorname{Hom}_S(Y,X^+)
+ =\operatorname{Hom}_S(Y_{\mathscr J},X)
+\]
+is induced by the morphism \(Y_{\mathscr J}\to Y\).
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:remark:0-1-2}\textbf{Remark 0.1.2.}
+If \(X\) is an \(S\)-group functor, then \(X_{\mathscr J}\) is an
+\(S_{\mathscr J}\)-group functor. The defining formula for \(X^+\)
+therefore equips \(X^+\) with an \(S\)-group-functor structure, and the
+description above shows that
+\[
+ p_X:X\longrightarrow X^+
+\]
+is a morphism of \(S\)-group functors.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:remark:0-1-3}\textbf{Remark 0.1.3.}
+For every \(S\)-group functor \(Y\), one has
+\[
+ \operatorname{Hom}_{S\text{-}\mathrm{gr}}(Y,X^+)
+ =
+ \operatorname{Hom}_{S_{\mathscr J}\text{-}\mathrm{gr}}
+   (Y_{\mathscr J},X_{\mathscr J}).
+\]
+Indeed, let \(f\in\operatorname{Hom}_S(Y,X^+)\) correspond to
+\(f_{\mathscr J}\in
+\operatorname{Hom}_{S_{\mathscr J}}
+(Y_{\mathscr J},X_{\mathscr J})\). The condition that \(f\) be an
+\(S\)-group morphism is that, for every \(T\to S\) and every
+\(y,y'\in Y(T)\),
+\[
+ f(y\cdot y')=f(y)\cdot f(y'),
+\]
+which is equivalent to
+\[
+ f_{\mathscr J}(y_{\mathscr J})
+ \cdot f_{\mathscr J}(y'_{\mathscr J})
+ =f_{\mathscr J}\bigl((y\cdot y')_{\mathscr J}\bigr).
+\]
+Since
+\((y\cdot y')_{\mathscr J}
+=y_{\mathscr J}\cdot y'_{\mathscr J}\), this is precisely the
+condition that \(f_{\mathscr J}\) be a group morphism. Applying this to
+\(Y=X\), we again see that \(p_X\), which corresponds to
+\(\operatorname{id}_{X_{\mathscr J}}\), is a morphism of
+\(S\)-group functors.
+
+Return now to the general case and suppose that \(X\) is an \(S\)-scheme.
+An \(S\)-morphism from a variable \(S\)-scheme \(Y\) to \(X^+\) is, by
+definition, an \(S_{\mathscr J}\)-morphism
+\(g_{\mathscr J}:Y_{\mathscr J}\to X_{\mathscr J}\). We define an
+\(X^+\)-functor in abelian groups \(L_X\) as follows.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:scholium:0-1-4}\textbf{Scholium 0.1.4.}\footnote{Editor's note: this scholium
+has been added.}
+If \(\pi:Y\to S\) is a morphism of schemes and \(M\) is an
+\(\mathscr O_S\)-module, we denote the inverse image \(\pi^*M\) by
+\[
+ M\otimes_{\mathscr O_S}\mathscr O_Y.
+\]
+If \(\mathscr J\) is an ideal of \(\mathscr O_S\), we denote by
+\(\mathscr J\mathscr O_Y\) the ideal of \(\mathscr O_Y\) that is the
+image of
+\[
+ \pi^*(\mathscr J)
+ =\mathscr J\otimes_{\mathscr O_S}\mathscr O_Y
+ \longrightarrow\mathscr O_Y.
+\]
+For every morphism of \(S\)-schemes \(f:Z\to Y\), there is an
+epimorphism of \(\mathscr O_Z\)-modules
+\begin{equation}
+ f^*(\mathscr J\mathscr O_Y)\longrightarrow
+ \mathscr J\mathscr O_Z.
+ \tag{0.1.4}\label{sga3:iii:scholium:0-1-4:equation:0-1-4}
+\end{equation}
+It follows from the commutative diagram below.
+
+\SGAThreeNativeDiagram[0.70\textwidth]
+  {native_diagrams/exp3/diagram_001_exp3_p004_scholie014_tensor_diagram.tex}
+  {The tensor-product diagram yielding the epimorphism (\SGARefLink{sga3:iii:scholium:0-1-4:equation:0-1-4}{0.1.4}).}
+  {fig:exp3-scholie-014-tensor}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 4; combined-reader p. 114}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:definition:0-1-5}\textbf{Definition 0.1.5.}\footnote{Editor's note: introducing
+the functor \(L_X\) gives an extension, functorial in \(Y\) and in
+\(X\), of SGA~1, III, Proposition~5.1; see \SGARefLink{sga3:iii:theorem:0-1-8}{0.1.8} and \SGARefLink{sga3:iii:corollary:0-1-9}{0.1.9} below, as
+well as \SGARefLink{sga3:iii:corollary:0-1-10}{0.1.10} and \SGARefLink{sga3:iii:proposition:0-2}{0.2}. Moreover, when \(X\) is an \(S\)-group functor,
+\(L_X\) gives rise, under certain hypotheses, to an \(S\)-group functor
+\(L'_X\) and to an exact sequence
+\(1\to L'_X\to X\to X^+\); see \SGARefLink{sga3:iii:remark:0-4}{0.4}, \SGARefLink{sga3:iii:corollary:0-9}{0.9}, and \SGARefLink{sga3:iii:proposition:0-11}{0.11}. These play an
+essential role in this expos\'e; see \SGARefLink{sga3:iii:theorem:2-1}{Theorems~2.1}, \SGARefLink{sga3:iii:theorem:3-5}{3.5}, and \SGARefLink{sga3:iii:theorem:4-21}{4.21}.}
+Let \(X\) be an \(S\)-scheme. For every \(X^+\)-scheme \(Y\), given by
+a morphism
+\[
+ g_{\mathscr J}:Y_{\mathscr J}\longrightarrow X_{\mathscr J},
+\]
+set
+\[
+ \operatorname{Hom}_{X^+}(Y,L_X)
+ =
+ \operatorname{Hom}_{\mathscr O_{Y_0}}
+ \bigl(g_0^*(\Omega^1_{X_0/S_0}),\mathscr J\mathscr O_Y\bigr),
+\]
+where \(\Omega^1_{X_0/S_0}\) is the module of relative differentials of
+\(X_0\) over \(S_0\), and \(\mathscr J\mathscr O_Y\) is regarded as an
+\(\mathscr O_{Y_0}\)-module because it is annihilated by
+\(\mathscr I\).
+
+Then \(L_X\) is an \(X^+\)-functor in abelian
+groups.\footnote{Editor's note: what follows has been added.} Indeed,
+for every \(X^+\)-morphism \(f:Z\to Y\), the functor \(f_0^*\) and the
+morphism
+\[
+ f_0^*(\mathscr J\mathscr O_Y)\longrightarrow
+ \mathscr J\mathscr O_Z
+\]
+of (\SGARefLink{sga3:iii:scholium:0-1-4}{0.1.4}) induce a natural homomorphism \(L_X(f)\):
+\[
+\begin{aligned}
+ &\operatorname{Hom}_{\mathscr O_{Y_0}}
+   \bigl(g_0^*(\Omega^1_{X_0/S_0}),\mathscr J\mathscr O_Y\bigr)\\
+ &\quad\longrightarrow
+ \operatorname{Hom}_{\mathscr O_{Z_0}}
+   \bigl(f_0^*g_0^*(\Omega^1_{X_0/S_0}),
+         f_0^*(\mathscr J\mathscr O_Y)\bigr)\\
+ &\quad\longrightarrow
+ \operatorname{Hom}_{\mathscr O_{Z_0}}
+   \bigl(f_0^*g_0^*(\Omega^1_{X_0/S_0}),
+         \mathscr J\mathscr O_Z\bigr).
+\end{aligned}
+\]
+
+Finally, \(L_X(f)\) has the following simple local description. The
+schemes \(Y\) and \(Y_{\mathscr J}\) have the same underlying
+topological space, as do \(V\) and \(V_{\mathscr J}\) for every open
+subset \(V\) of \(Y\). Let
+\[
+ U=\operatorname{Spec}(A),\qquad
+ V=\operatorname{Spec}(B),\qquad
+ W=\operatorname{Spec}(C)
+\]
+be affine opens such that \(U\) lies over
+\(\operatorname{Spec}(\Lambda)\subset S\),
+\(g_{\mathscr J}(V_{\mathscr J})\subset U\), and
+\(W\subset f^{-1}(V)\). Write \(I,J\) for the ideals of \(\Lambda\)
+corresponding to \(\mathscr I,\mathscr J\). Then \(f\), respectively
+\(g_{\mathscr J}\), induces a morphism of \(\Lambda\)-algebras
+\[
+ \theta:B\longrightarrow C,
+ \qquad\text{respectively}\qquad
+ \varphi:A\longrightarrow B/JB,
+\]
+and clearly \(\theta(JB)\subset JC\). On the other hand,
+\[
+ m\in
+ \operatorname{Hom}_{\mathscr O_{Y_0}}
+ \bigl(g_0^*(\Omega^1_{X/S}),\mathscr J\mathscr O_Y\bigr)
+\]
+induces an element \(D\) of
+\[
+\begin{aligned}
+ \operatorname{Hom}_{\mathscr O_{V_0}}
+ \bigl(g_0^*(\Omega^1_{U/S}),\mathscr J\mathscr O_V\bigr)
+ &=
+ \operatorname{Hom}_{B/IB}
+ \bigl(\Omega^1_{A/\Lambda}\otimes_A B/IB,JB\bigr)\\
+ &=\operatorname{Der}_{\Lambda}(A,JB),
+\end{aligned}
+\]
+and the image of \(L_X(f)(m)\) in
+\[
+\begin{aligned}
+ \operatorname{Hom}_{\mathscr O_{W_0}}
+ \bigl(f_0^*g_0^*(\Omega^1_{U/S}),\mathscr J\mathscr O_Z\bigr)
+ &=
+ \operatorname{Hom}_{C/IC}
+ \bigl(\Omega^1_{A/\Lambda}\otimes_A C/IC,JC\bigr)\\
+ &=\operatorname{Der}_{\Lambda}(A,JC)
+\end{aligned}
+\]
+is simply \(\theta\circ D\).
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:remark:0-1-6}\textbf{Remark 0.1.6.}\footnote{Editor's note: this remark has
+been expanded.}
+Let \(f:X\to W\) be an \(S\)-morphism. It induces an \(S\)-morphism
+\[
+ f^+:X^+\longrightarrow W^+
+\]
+defined as follows. If \(g\in\operatorname{Hom}_S(Y,X^+)\)
+corresponds to an \(S\)-morphism
+\(g_{\mathscr J}:Y_{\mathscr J}\to X\), then \(f^+(g)\) is the
+element \(f\circ g_{\mathscr J}\) of
+\(\operatorname{Hom}_S(Y,W^+)\). The following diagram is commutative.
+
+\SGAThreeNativeDiagram[0.44\textwidth]
+  {native_diagrams/exp3/diagram_002_exp3_p005_remark016_naturality_square.tex}
+  {Naturality of the morphisms \(p_X\) and \(p_W\).}
+  {fig:exp3-remark-016-naturality}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 5; combined-reader p. 115}
+

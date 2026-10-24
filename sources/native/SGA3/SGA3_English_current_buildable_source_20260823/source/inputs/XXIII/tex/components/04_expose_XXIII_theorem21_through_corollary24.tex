@@ -1,0 +1,563 @@
+\SGASection{2}{Generators and relations for a pinned group}
+\SGARefTarget{sga3:XXIII:2}
+
+Throughout this section \(G\) is a fixed pinned \(S\)-group. For
+\(\alpha,\beta\in\Delta\), we use the notation
+\(Z_\alpha,Z_{\alpha\beta},U_{\alpha\beta},R^+_{\alpha\beta}\)
+of \SGARefLink{sga3:XXIII:1.7}{1.7}.
+
+\SGARefTarget{sga3:XXIII:2.1}
+\SGAStatement{Theorem 2.1}{Let \(S\) be a scheme, let \(G\) be a
+pinned \(S\)-group, and let \(H\) be an fppf \(S\)-sheaf in groups.
+Suppose given morphisms of groups
+\[
+  f_N:\operatorname{Norm}_G(T)\longrightarrow H,\qquad
+  f_\alpha:U_\alpha\longrightarrow H\quad(\alpha\in R).
+\]
+There exists a necessarily unique morphism of groups
+\[
+  f:G\longrightarrow H
+\]
+extending \(f_N\) and all the \(f_\alpha\), \(\alpha\in R\), if and
+only if the following conditions hold:
+\begin{enumerate}
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.1:item:i}(i)] for every \(\alpha\in\Delta\) and \(\beta\in R\),
+    \[
+      \operatorname{int}\bigl(f_N(w_\alpha)\bigr)\circ f_\beta
+        =f_{s_\alpha(\beta)}\circ\operatorname{int}(w_\alpha);
+    \]
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.1:item:ii}(ii)] for every \(\alpha\in\Delta\), there exists a morphism
+    of groups
+    \[
+      F_\alpha:Z_\alpha\longrightarrow H
+    \]
+    extending \(f_\alpha\), \(f_{-\alpha}\), and
+    \(f_N|_{\operatorname{Norm}_{Z_\alpha}(T)}\);
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.1:item:iii}(iii)] for every
+    \((\alpha,\beta)\in\Delta\times\Delta\), there exists a morphism
+    of groups \(U_{\alpha\beta}\to H\) inducing \(f_\gamma\) on
+    \(U_\gamma\) for every \(\gamma\in R^+_{\alpha\beta}\)
+    (so \(U_\gamma\subset U_{\alpha\beta}\)).
+\end{enumerate}}
+
+\SGASubsection{2.1.1}{Proof}
+\SGARefTarget{sga3:XXIII:2.1.1}
+
+The conditions are plainly necessary. Choose a totally ordered group
+structure on \(\Gamma_0(R)\) for which the positive elements of \(R\)
+are precisely \(R^+\) (\SGARefLink{sga3:XXI:3.5.6}{Exposé~XXI, 3.5.6}); every product indexed by a
+subset of \(R\) will be taken in this order. Let \(f_T\) denote the
+restriction of \(f_N\) to \(T\), and define a morphism of sets
+\[
+  f:\Omega\longrightarrow H
+\]
+by
+\[
+  f\left(
+    \prod_{\alpha\in R^-}y_\alpha\cdot t\cdot
+    \prod_{\alpha\in R^+}x_\alpha
+  \right)
+  =
+  \prod_{\alpha\in R^-}f_\alpha(y_\alpha)\cdot f_T(t)\cdot
+  \prod_{\alpha\in R^+}f_\alpha(x_\alpha).
+\]
+Every morphism satisfying the theorem must extend this map. Conversely,
+any morphism of groups \(f:G\to H\) extending it also extends \(f_N\):
+since it extends \(f_\alpha\) and \(f_{-\alpha}\), one has
+\[
+  f(w_\alpha)=F_\alpha(w_\alpha)=f_N(w_\alpha),
+\]
+and it extends \(f_T\) by hypothesis. By \SGARefLink{sga3:xxii:prop:4.1.11:item:ii}{Exposé~XXII, 4.1.11(ii)}, it
+therefore remains to prove:
+
+\SGARefTarget{sga3:XXIII:2.1.2}
+\SGAStatement{Proposition 2.1.2}{The morphism
+\(f:\Omega\to H\) defined above is \emph{generically multiplicative}:
+for every \(S'\to S\) and every \(x,y\in\Omega(S')\) such that
+\(xy\in\Omega(S')\), one has \(f(xy)=f(x)f(y)\).}
+
+\SGARefTarget{sga3:XXIII:2.1.3}
+\SGAStatement{Lemma 2.1.3}{Let
+\(n\in\operatorname{Norm}_G(T)(S')\), \(S'\to S\), and let
+\(\alpha,\beta\in R\) satisfy
+\(\operatorname{int}(n)U_\alpha=U_\beta\), equivalently
+\(n(\alpha)=\beta\). Then
+\[
+  \operatorname{int}\bigl(f_N(n)\bigr)\circ f_\alpha
+    =f_\beta\circ\operatorname{int}(n).
+\]}
+
+It suffices to verify this formula for a system of generators of
+\(\operatorname{Norm}_G(T)\). It holds for every \(w_\alpha\),
+\(\alpha\in\Delta\), by \SGARefLink{sga3:XXIII:2.1:item:i}{2.1(i)}, so it remains to treat
+\(n\in T(S')\). This is immediate from \SGARefLink{sga3:XXIII:2.1:item:ii}{2.1(ii)} when \(\alpha\) is
+simple. Otherwise choose \(w\in W\) with
+\(w^{-1}(\alpha)\in\Delta\). Writing \(w\) as a product of simple
+reflections\NDE{``Fundamental symmetries'' was replaced by ``simple
+reflections.''}, one reduces to showing that if the formula holds for
+\(\alpha\) and every \(n\), it also holds for
+\(w_{\alpha_0}(\alpha)\) and \(t\in T(S')\), where
+\(\alpha_0\in\Delta\). By \SGARefLink{sga3:XXIII:2.1:item:i}{2.1(i)},
+\[
+\begin{aligned}
+  \operatorname{int}\bigl(f_N(t)\bigr)\circ f_{w_{\alpha_0}(\alpha)}
+   &=
+  \operatorname{int}\bigl(f_N(tw_{\alpha_0})\bigr)\circ
+  f_\alpha\circ\operatorname{int}(w_{\alpha_0}^{-1})\\
+   &=
+  f_{w_{\alpha_0}(\alpha)}\circ\operatorname{int}(tw_{\alpha_0})
+    \circ\operatorname{int}(w_{\alpha_0}^{-1}).
+\end{aligned}
+\]
+
+\SGARefTarget{sga3:XXIII:2.1.4}
+\SGAStatement{Lemma 2.1.4}{The restriction of \(f\) to \(U\)
+(respectively \(U^-\)) is a morphism of groups. In particular, this
+restriction is independent of the chosen ordering of the roots.}
+
+It suffices to prove the assertion for \(U\). By \SGARefLink{sga3:xxii:lem:5.5.8}{Exposé~XXII, 5.5.8},
+it is enough to show that, for every pair \(\alpha<\beta\) of positive
+roots and every \(x_\alpha\in U_\alpha(S')\),
+\(x_\beta\in U_\beta(S')\), \(S'\to S\),
+\[
+  f_\beta(x_\beta)f_\alpha(x_\alpha)f_\beta(x_\beta^{-1})
+   =f(x_\beta x_\alpha x_\beta^{-1}).
+\]
+By \SGARefLink{sga3:xxii:cor:5.5.2}{Exposé~XXII, 5.5.2}, there are elements
+\(x_\gamma\in U_\gamma(S')\), where
+\(\gamma=i\alpha+j\beta\in R\), \(i>0\), \(j\geq0\)
+\NDE{The printed \(i,j>0\) was corrected to \(i>0,j\geq0\), since
+\(x_\alpha\) occurs in the product on the right.}, such that
+\[
+  x_\beta x_\alpha x_\beta^{-1}=\prod_\gamma x_\gamma.
+\]
+It remains to verify
+\[
+  f_\beta(x_\beta)f_\alpha(x_\alpha)f_\beta(x_\beta^{-1})
+   =
+  \prod_{\substack{\gamma=i\alpha+j\beta\\i>0,\ j\geq0}}
+  f_\gamma(x_\gamma).
+\]
+By \SGARefLink{sga3:XXI:3.5.4}{Exposé~XXI, 3.5.4}, there is a \(w\in W\) such that
+\(w(\alpha)=\alpha_0\in\Delta\) and
+\(w(\beta)\in A_{\alpha_0\beta_0}\), in the notation of \SGARefLink{sga3:XXIII:1.7}{1.7}, for
+some \(\beta_0\in\Delta\). Lift \(w\) to
+\(n\in\operatorname{Norm}_G(T)(S)\) by \SGARefLink{sga3:xxii:cor:3.8}{Exposé~XXII, 3.8}. It suffices
+to verify the relation after conjugation by \(f_N(n)\); by \SGARefLink{sga3:XXIII:2.1.3}{2.1.3},
+this reduces to \(\alpha,\beta\in R^+_{\alpha_0\beta_0}\), where
+condition \SGARefLink{sga3:XXIII:2.1:item:iii}{2.1(iii)} applies.
+
+\SGARefTarget{sga3:XXIII:2.1.5}
+\SGAStatement{Lemma 2.1.5}{Let
+\(n\in\operatorname{Norm}_G(T)(S)\) satisfy
+\(\operatorname{int}(n)U=U^-\), so that \(n\) represents the
+symmetry of the Weyl group\NDE{Relative to \(\Delta\).}
+(\SGARefLink{sga3:XXI:3.6.14}{Exposé~XXI, 3.6.14}). For every \(u\in U(S')\), \(S'\to S\)
+(respectively \(u\in U^-(S')\)), one has
+\[
+  f(nun^{-1})=f_N(n)f(u)f_N(n^{-1}).
+\]}
+This follows immediately from \SGARefLink{sga3:XXIII:2.1.3}{2.1.3} and \SGARefLink{sga3:XXIII:2.1.4}{2.1.4}.
+
+\SGARefTarget{sga3:XXIII:2.1.6}
+\SGAStatement{Lemma 2.1.6}{Let \(u\in B(S')\),
+\(v\in B^-(S')\), and \(g\in\Omega(S')\), where \(S'\to S\). Then
+\[
+  f(vgu)=f(v)f(g)f(u).
+\]}
+
+Write
+\[
+  v=v_1t_1,\qquad g=v_2t_2u_2,\qquad u=t_3u_3,
+\]
+with \(v_i\in U^-(S')\), \(t_i\in T(S')\), and \(u_i\in U(S')\).
+On the one hand,
+\[
+  f(v)f(g)f(u)
+  =f(v_1)f_T(t_1)f(v_2)f_T(t_2)f(u_2)f_T(t_3)f(u_3).
+\]
+On the other hand,
+\[
+\begin{aligned}
+ f(vgu)
+ &=f(v_1t_1v_2t_1^{-1}\,t_1t_2t_3\,
+       t_3^{-1}u_2t_3u_3)\\
+ &=f(v_1\cdot t_1v_2t_1^{-1})f_T(t_1t_2t_3)
+       f(t_3^{-1}u_2t_3\cdot u_3).
+\end{aligned}
+\]
+Using \SGARefLink{sga3:XXIII:2.1.4}{2.1.4} on the two outer factors gives
+\[
+ f(vgu)=f(v_1)f(t_1v_2t_1^{-1})f_T(t_1t_2t_3)
+   f(t_3^{-1}u_2t_3)f(u_3).
+\]
+It remains only to use
+\[
+\begin{aligned}
+ f(t_1v_2t_1^{-1})&=f_T(t_1)f(v_2)f_T(t_1)^{-1},\\
+ f(t_3^{-1}u_2t_3)&=f_T(t_3)^{-1}f(u_2)f_T(t_3),
+\end{aligned}
+\]
+which follow from the definition of \(f\) and \SGARefLink{sga3:XXIII:2.1.3}{2.1.3}.
+
+\SGARefTarget{sga3:XXIII:2.1.7}
+\SGAStatement{Lemma 2.1.7}{Let \(\alpha\in\Delta\) and
+\[
+  g\in\Omega(S')\cap\operatorname{int}(w_\alpha)^{-1}\Omega(S'),
+  \qquad S'\to S.
+\]
+Then
+\[
+  f(w_\alpha gw_\alpha^{-1})
+   =f_N(w_\alpha)f(g)f_N(w_\alpha)^{-1}.
+\]}
+
+By \SGARefLink{sga3:xxii:cor:5.6.8}{Exposé~XXII, 5.6.8}, write
+\[
+  g=ax_{-\alpha}tx_\alpha b,
+\]
+where \(a\in U^-_{-\widehat\alpha}(S')\),
+\(x_{-\alpha}\in U_{-\alpha}(S')\), \(t\in T(S')\),
+\(x_\alpha\in U_\alpha(S')\), and
+\(b\in U_{\widehat\alpha}(S')\). By \SGARefLink{sga3:XXIII:2.1.3}{2.1.3} and \SGARefLink{sga3:XXIII:2.1.4}{2.1.4}, and because
+\(s_\alpha\) permutes the positive roots other than \(\alpha\)
+(\SGARefLink{sga3:XXI:3.3.2}{Exposé~XXI, 3.3.2}),
+\[
+  \operatorname{int}(w_\alpha)a\in U^-_{-\widehat\alpha}(S'),
+  \qquad
+  \operatorname{int}(w_\alpha)b\in U_{\widehat\alpha}(S').
+\]
+The desired formula holds for \(g=a\) and \(g=b\). By \SGARefLink{sga3:XXIII:2.1.6}{2.1.6} it
+therefore suffices to treat
+\(g=x_{-\alpha}tx_\alpha\in Z_\alpha(S')\); in that case everything
+takes place in \(Z_\alpha\), and condition \SGARefLink{sga3:XXIII:2.1:item:ii}{2.1(ii)} applies.
+
+\SGARefTarget{sga3:XXIII:2.1.8}
+\SGAStatement{Lemma 2.1.8}{Let
+\(n\in\operatorname{Norm}_G(T)(S)\). For every \(S'\to S\) and every
+\(g\in\Omega(S')\) such that
+\(\operatorname{int}(n)g\in\Omega(S')\),
+\[
+  f(ngn^{-1})=f_N(n)f(g)f_N(n)^{-1}.
+\]}
+
+This is immediate for \(n\in T(S)\), by \SGARefLink{sga3:XXIII:2.1.3}{2.1.3}. The two sides define
+morphisms from
+\(\Omega\cap\operatorname{int}(n)^{-1}\Omega\) to \(H\). It is
+enough to find an open \(V_n\subset\Omega\), containing the unit
+section, such that \(\operatorname{int}(n)V_n\subset\Omega\), and on
+which \(f\circ\operatorname{int}(n)\) and
+\(\operatorname{int}(f_N(n))\circ f\) agree. By the structure of
+\(\operatorname{Norm}_G(T)\), it suffices to show that if this is true
+for \(n'\), then it is true for \(n=n'w_\alpha\),
+\(\alpha\in\Delta\). Put
+\[
+  V_n=\Omega\cap\operatorname{int}(w_\alpha)^{-1}V_{n'}.
+\]
+Then
+\(\operatorname{int}(n)V_n\subset\operatorname{int}(n')V_{n'}
+\subset\Omega\). If \(g\in V_n(S')\), then
+\[
+  \operatorname{int}(n)g
+   =\operatorname{int}(n')\operatorname{int}(w_\alpha)g.
+\]
+Now \(\operatorname{int}(w_\alpha)g\in V_{n'}(S')\), so the
+induction hypothesis gives
+\[
+  f\bigl(\operatorname{int}(n')\operatorname{int}(w_\alpha)g\bigr)
+   =\operatorname{int}(f_N(n'))f(\operatorname{int}(w_\alpha)g).
+\]
+\SGARefLink{sga3:XXIII:2.1.7}{Lemma 2.1.7} gives
+\[
+  f(\operatorname{int}(w_\alpha)g)
+   =\operatorname{int}(f_N(w_\alpha))f(g),
+\]
+and the conclusion follows.
+
+We now prove \SGARefLink{sga3:XXIII:2.1.2}{Proposition 2.1.2}. Let \(x,x'\in\Omega(S')\), and write
+\[
+  x=vtu,\qquad x'=v't'u',
+\]
+so \(xx'=vt(uv')t'u'\). By \SGARefLink{sga3:XXIII:2.1.6}{2.1.6} and
+\(U^-(S')\Omega(S')U(S')=\Omega(S')\), it suffices to show that
+\(f(uv')=f(u)f(v')\) whenever \(uv'\in\Omega(S')\). Choose
+\(n\in\operatorname{Norm}_G(T)(S')\) as in \SGARefLink{sga3:XXIII:2.1.5}{2.1.5}. Then
+\[
+\begin{aligned}
+ f(u)&=f_N(n)^{-1}f(nun^{-1})f_N(n),\\
+ f(v')&=f_N(n)^{-1}f(nv'n^{-1})f_N(n),
+\end{aligned}
+\]
+and hence
+\[
+ f(u)f(v')=f_N(n)^{-1}f(nun^{-1})f(nv'n^{-1})f_N(n).
+\]
+Since \(nun^{-1}\in U^-(S')\) and \(nv'n^{-1}\in U(S')\),
+\[
+ f(nun^{-1})f(nv'n^{-1})
+   =f\bigl((nun^{-1})(nv'n^{-1})\bigr)
+   =f(nuv'n^{-1}).
+\]
+Thus
+\[
+  f(u)f(v')=f_N(n)^{-1}f(nuv'n^{-1})f_N(n).
+\]
+If \(uv'\in\Omega(S')\), \SGARefLink{sga3:XXIII:2.1.8}{Lemma 2.1.8} finishes the proof.
+
+\SGARefTarget{sga3:XXIII:2.2}
+\SGAStatement{Remark 2.2}{Instead of prescribing \(f_N\), one may
+prescribe a morphism \(f_T:T\to H\) and sections
+\(h_\alpha\in H(S)\), \(\alpha\in\Delta\), satisfying the conditions
+of \SGARefLink{sga3:XXIII:1.8.2}{1.8.2}. Condition \SGARefLink{sga3:XXIII:1.8.2:item:ii}{(ii)} of \SGARefLink{sga3:XXIII:2.1}{Theorem 2.1} must then be replaced by:
+\begin{quote}
+\emph{(ii\('\)) There exists a morphism of groups
+\(F_\alpha:Z_\alpha\to H\) extending \(f_\alpha,f_{-\alpha},f_T\)
+and satisfying \(F_\alpha(w_\alpha)=h_\alpha\).}
+\end{quote}}
+
+We now give the preceding theorem a more explicit form, retaining its
+notation.
+
+\SGARefTarget{sga3:XXIII:2.3}
+\SGAStatement{Theorem 2.3}{Let \(S\) be a scheme, let \(G\) be a
+pinned \(S\)-group, and let \(H\) be an fppf \(S\)-sheaf in groups.
+Suppose given morphisms of groups
+\[
+  f_T:T\longrightarrow H,\qquad
+  f_\alpha:U_\alpha\longrightarrow H\quad(\alpha\in\Delta),
+\]
+and sections \(h_\alpha\in H(S)\), \(\alpha\in\Delta\). There exists
+a necessarily unique morphism of groups \(f:G\to H\) inducing
+\(f_T\) and the \(f_\alpha\) and satisfying
+\(f(w_\alpha)=h_\alpha\) for all \(\alpha\in\Delta\) if and only if:
+\begin{enumerate}
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.3:item:i}(i)] for every \(S'\to S\), \(t\in T(S')\),
+    \(\alpha\in\Delta\), and \(x\in U_\alpha(S')\),
+    \begin{equation}
+    \tag{1}\label{sga3:XXIII:2.3:eq1}
+      f_T(t)f_\alpha(x)f_T(t)^{-1}
+       =f_\alpha(\operatorname{int}(t)x);
+    \end{equation}
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.3:item:ii}(ii)] for every \(\alpha\in\Delta\), \(S'\to S\), and
+    \(t\in T(S')\),
+    \begin{equation}
+    \tag{2}\label{sga3:XXIII:2.3:eq2}
+      h_\alpha f_T(t)h_\alpha^{-1}
+       =f_T(s_\alpha(t))
+       =f_T\!\bigl(t\alpha^\ast(\alpha(t)^{-1})\bigr);
+    \end{equation}
+  \item[(iii)] for every
+    \((\alpha,\beta)\in\Delta\times\Delta\),
+    \begin{equation}
+    \tag{3}\label{sga3:XXIII:2.3:eq3}
+      (h_\alpha h_\beta)^{n_{\alpha\beta}}
+       =f_T(t_{\alpha\beta});
+    \end{equation}
+  \item[(iv)] for every \(\alpha\in\Delta\), recalling that
+    \(u_\alpha=\exp_\alpha(X_\alpha)\),
+    \begin{equation}
+    \tag{4}\label{sga3:XXIII:2.3:eq4}
+      (h_\alpha f_\alpha(u_\alpha))^3=e;
+    \end{equation}
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.3:item:v}(v)] for every distinct
+    \(\alpha,\beta\in\Delta\), there exists a morphism
+    \(f_{\alpha\beta}:U_{\alpha\beta}\to H\) such that
+    \begin{equation}
+    \tag{5}\label{sga3:XXIII:2.3:eq5}
+      f_{\alpha\beta}|_{U_\alpha}=f_\alpha,\qquad
+      f_{\alpha\beta}|_{U_\beta}=f_\beta,
+    \end{equation}
+    and, for every \(\gamma\in R^+_{\alpha\beta}\) with
+    \(\gamma\ne\alpha\) (respectively \(\gamma\ne\beta\)) and every
+    \(x\in U_\gamma(S')\), \(S'\to S\),
+    \begin{equation}
+    \tag{6}\label{sga3:XXIII:2.3:eq6}
+      \operatorname{int}(h_\alpha)f_{\alpha\beta}(x)
+       =f_{\alpha\beta}(\operatorname{int}(w_\alpha)x)
+    \end{equation}
+    (respectively
+    \(\operatorname{int}(h_\beta)f_{\alpha\beta}(x)
+     =f_{\alpha\beta}(\operatorname{int}(w_\beta)x)\)).
+\end{enumerate}}
+
+\SGAProof
+Uniqueness follows from \SGARefLink{sga3:XXIII:1.9.2}{1.9.2}. We prove existence.
+
+\SGARefTarget{sga3:XXIII:2.3.1}
+\SGAStatement{Lemma 2.3.1}{There exists a morphism
+\[
+  f_N:\operatorname{Norm}_G(T)\longrightarrow H
+\]
+extending \(f_T\) and satisfying \(f_N(w_\alpha)=h_\alpha\).}
+This is precisely \SGARefLink{sga3:XXIII:1.8.2}{1.8.2}, in view of conditions
+\eqref{sga3:XXIII:2.3:eq2} and \eqref{sga3:XXIII:2.3:eq3}.
+
+\SGARefTarget{sga3:XXIII:2.3.2}
+\SGAStatement{Lemma 2.3.2}{For every \(\alpha\in\Delta\), there is a
+morphism of groups \(F_\alpha:Z_\alpha\to H\) extending \(f_T\) and
+\(f_\alpha\), satisfying \(F_\alpha(w_\alpha)=h_\alpha\), and hence
+extending \(f_N|_{\operatorname{Norm}_{Z_\alpha}(T)}\).}
+This follows from \SGARefLink{sga3:xx:6.2}{Exposé~XX, 6.2} and conditions
+\eqref{sga3:XXIII:2.3:eq1}, \eqref{sga3:XXIII:2.3:eq3}, and
+\eqref{sga3:XXIII:2.3:eq4}.
+
+\SGARefTarget{sga3:XXIII:2.3.3}
+\SGAStatement{Lemma 2.3.3}{Let
+\((\alpha,\beta)\in\Delta\times\Delta\), \(\alpha\ne\beta\). Let
+\(n\in\operatorname{Norm}_{Z_{\alpha\beta}}(T)(S)\) satisfy
+\(n(\alpha)=\alpha\) (respectively \(n(\alpha)=\beta\)), equivalently
+\(\operatorname{int}(n)U_\alpha=U_\alpha\) (respectively
+\(U_\beta\)). Then, for every \(S'\to S\) and \(x\in U_\alpha(S')\),
+\[
+  \operatorname{int}(f_N(n))f_\alpha(x)
+   =f_\alpha(\operatorname{int}(n)x)
+\]
+(respectively the right-hand side is
+\(f_\beta(\operatorname{int}(n)x)\)).}
+
+There exist \(t\in T(S)\) and a sequence
+\(\{\alpha_i\}\subset\{\alpha,\beta\}\) such that
+\[
+  n=tw_{\alpha_k}\cdots w_{\alpha_1}.
+\]
+Condition \eqref{sga3:XXIII:2.3:eq1} treats \(n=t\), so we may omit
+\(t\). Proceed by induction on \(k\), and set
+\[
+  \gamma_i=s_{\alpha_i}\cdots s_{\alpha_1}(\alpha).
+\]
+If every \(\gamma_i\) is positive, condition \SGARefLink{sga3:XXIII:2.3:item:v}{(v)} yields
+\[
+  \operatorname{int}\bigl(f_N(w_{\alpha_i}\cdots w_{\alpha_1})\bigr)
+     f_\alpha(x)
+   =
+  f_{\alpha\beta}\bigl(
+     \operatorname{int}(w_{\alpha_i}\cdots w_{\alpha_1})x\bigr),
+\]
+and \(i=k\) gives the result. Otherwise there is a \(j<k\) such that
+\(\gamma_j\in R^+\) but \(\gamma_{j+1}\notin R^+\). Since
+\(\gamma_{j+1}=s_{\alpha_j}(\gamma_j)\), \SGARefLink{sga3:XXI:3.3.2}{Exposé~XXI, 3.3.2} gives
+\(\gamma_j=\alpha_j\), hence \(\gamma_j\) is \(\alpha\) or \(\beta\).
+Decompose
+\[
+ n=n'n'',\qquad
+ n'=w_{\alpha_k}\cdots w_{\alpha_{j+1}},\qquad
+ n''=w_{\alpha_j}\cdots w_{\alpha_1}.
+\]
+Both \(n'\) and \(n''\) satisfy the lemma's hypotheses and involve
+fewer than \(k\) reflections, so induction applies.
+
+\SGARefTarget{sga3:XXIII:2.3.4}
+\SGAStatement{Lemma 2.3.4}{Let \(\alpha\in R\). Suppose
+\(n,n'\in\operatorname{Norm}_G(T)(S)\) and
+\(\beta,\beta'\in\Delta\) satisfy
+\(n(\alpha)=\beta\) and \(n'(\alpha)=\beta'\). Then, for every
+\(x\in U_\alpha(S')\), \(S'\to S\),
+\[
+ \operatorname{int}(f_N(n)^{-1})f_\beta(nx n^{-1})
+ =
+ \operatorname{int}(f_N(n')^{-1})f_{\beta'}(n'x n'^{-1}).
+\]}
+
+It suffices to prove that if \(n(\alpha)=\beta\), with
+\(\alpha,\beta\in\Delta\), then
+\[
+  \operatorname{int}(f_N(n))\circ f_\alpha
+    =f_\beta\circ\operatorname{int}(n).
+\]
+By Tits's lemma (\SGARefLink{sga3:XXI:5.6}{Exposé~XXI, 5.6}), there are simple roots
+\[
+  \alpha_0=\alpha,\alpha_1,\ldots,\alpha_m=\beta
+\]
+and elements \(w_i\in W\), \(0\leq i<m\), such that
+\[
+  n=w_{m-1}\cdots w_0,\qquad
+  w_i(\alpha_i)=\alpha_{i+1},
+\]
+and for each \(i\) there is a simple root \(\beta_i\) such that
+\[
+  w_i\in W_{\alpha_i\beta_i},\qquad
+  \alpha_{i+1}=\alpha_i\ \text{or}\ \beta_i.
+\]
+Induction reduces the assertion to \SGARefLink{sga3:XXIII:2.3.3}{Lemma 2.3.3}.
+
+\SGARefTarget{sga3:XXIII:2.3.5}
+\SGAStatement{Lemma 2.3.5}{There is a family of morphisms of groups
+\(f'_\gamma:U_\gamma\to H\), \(\gamma\in R\), such that:
+\begin{enumerate}
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.3.5:item:i}(i)] for \(\alpha\in\Delta\),
+    \(f'_\alpha=f_\alpha\) and
+    \(f'_{-\alpha}=F_\alpha|_{U_{-\alpha}}\);
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.3.5:item:ii}(ii)] if \(\alpha,\beta\in\Delta\) and
+    \(\gamma\in R^+_{\alpha\beta}\), then
+    \(f'_\gamma=f_{\alpha\beta}|_{U_\gamma}\);
+  \item[\SGAInlineRefTarget{sga3:XXIII:2.3.5:item:iii}(iii)] if \(n\in\operatorname{Norm}_G(T)(S)\) and
+    \(\alpha,\beta\in R\) satisfy \(n(\alpha)=\beta\), then
+    \[
+      \operatorname{int}(f_N(n))f'_\alpha(x)
+       =f'_\beta(\operatorname{int}(n)x)
+    \]
+    for every \(x\in U_\alpha(S')\), \(S'\to S\).
+\end{enumerate}}
+
+For every root \(\alpha\), choose
+\(n\in\operatorname{Norm}_G(T)(S)\) with \(n(\alpha)\in\Delta\), and
+define \(f'_\alpha(x)\) by the expression in \SGARefLink{sga3:XXIII:2.3.4}{Lemma 2.3.4}. This is
+independent of \(n\), and \(f'_\alpha\) is a morphism of groups.
+Property \SGARefLink{sga3:XXIII:2.3.5:item:iii}{(iii)} holds by construction. The first part of \SGARefLink{sga3:XXIII:2.3.5:item:i}{(i)} follows
+by taking \(n=e\), and the second by taking \(n=w_\alpha\) and using
+\SGARefLink{sga3:XXIII:2.3.2}{2.3.2}. If \(\gamma\in R^+_{\alpha\beta}\), choose
+\(n\in\operatorname{Norm}_{Z_{\alpha\beta}}(T)(S)\) with
+\(n(\gamma)=\alpha\) or \(\beta\); then \SGARefLink{sga3:XXIII:2.3.5:item:iii}{(iii)}, together with
+conditions \eqref{sga3:XXIII:2.3:eq5} and
+\eqref{sga3:XXIII:2.3:eq6}, proves \SGARefLink{sga3:XXIII:2.3.5:item:ii}{(ii)}.
+
+\SGARefTarget{sga3:XXIII:2.3.6}
+\SGAParagraph{2.3.6}
+We finish the proof by verifying the conditions of \SGARefLink{sga3:XXIII:2.1}{Theorem 2.1} for
+\(f_N\) and \(f'_\alpha\), \(\alpha\in R\):
+\begin{itemize}
+  \item \SGARefLink{sga3:XXIII:2.1:item:i}{2.1(i)} follows from \SGARefLink{sga3:XXIII:2.3.5:item:iii}{2.3.5(iii)};
+  \item \SGARefLink{sga3:XXIII:2.1:item:ii}{2.1(ii)} follows from \SGARefLink{sga3:XXIII:2.3.5:item:i}{2.3.5(i)} and \SGARefLink{sga3:XXIII:2.3.2}{2.3.2};
+  \item \SGARefLink{sga3:XXIII:2.1:item:iii}{2.1(iii)} follows from \SGARefLink{sga3:XXIII:2.3.5:item:ii}{2.3.5(ii)} and the fact that
+    \(f_{\alpha\beta}\) is a morphism of groups.
+\end{itemize}
+
+An immediate corollary is:
+
+\SGARefTarget{sga3:XXIII:2.4}
+\SGAStatement{Corollary 2.4}{Let \(S\) be a scheme, let \(G\) be a
+pinned \(S\)-group of semisimple rank at least \(1\), and let \(H\)
+be an fppf \(S\)-sheaf in groups. For each
+\((\alpha,\beta)\in\Delta\times\Delta\), let
+\[
+  F_{\alpha\beta}:Z_{\alpha\beta}\longrightarrow H
+\]
+be a morphism of groups. There exists a morphism \(f:G\to H\)
+inducing the \(F_{\alpha\beta}\) if and only if, for every
+\((\alpha,\beta)\in\Delta\times\Delta\),
+\[
+  F_{\alpha\beta}|_{Z_\alpha}=F_{\alpha\alpha}.
+\]}
+
+Necessity is clear. Conversely, put
+\[
+  f_T=F_{\alpha\alpha}|_T;
+\]
+this is independent of \(\alpha\), since
+\[
+  F_{\alpha\alpha}|_T
+   =F_{\alpha\beta}|_T
+   =F_{\beta\beta}|_T.
+\]
+Set
+\[
+  f_\alpha=F_{\alpha\alpha}|_{U_\alpha},\qquad
+  h_\alpha=F_{\alpha\alpha}(w_\alpha),\qquad
+  f_{\alpha\beta}=F_{\alpha\beta}|_{U_{\alpha\beta}}.
+\]
+The conditions of \SGARefLink{sga3:XXIII:2.3}{Theorem 2.3} hold: (1), (2), and (4) hold in
+\(Z_\alpha\), while (3), (5), and (6) hold in \(Z_{\alpha\beta}\).
+Thus there is a morphism \(f:G\to H\) extending \(f_T\) and all
+\(f_\alpha\), and satisfying \(f(w_\alpha)=h_\alpha\). It agrees
+with \(F_{\alpha\beta}\) on the generators of \(Z_{\alpha\beta}\);
+hence \(f|_{Z_{\alpha\beta}}=F_{\alpha\beta}\).

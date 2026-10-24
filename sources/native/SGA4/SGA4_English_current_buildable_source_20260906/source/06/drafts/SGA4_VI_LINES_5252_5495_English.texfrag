@@ -1,0 +1,253 @@
+\section{Projective limits of fibered topoi}\etiquette[8]{VI.sec8}
+
+\subsection{Generalities}\etiquette[8.1]{VI.subsec8.1}
+
+\begin{enonce*}{Definition 8.1.1}\etiquette[8.1.1]{VI.def8.1.1}
+Let $𝒰$ be a universe and let $p:F \to I$ be a fibered $𝒰$-topos. A
+pair $(C, m)$ consisting of a $𝒰$-topos $C$ and a cartesian morphism
+$m : C \times I \to F$ of fibered $𝒰$-topoi over $I$ is called a
+projective limit of the fibered topos $F$ if, for every $𝒰$-topos
+$D$, the functor
+\begin{equation*}
+\Hhomtop(D, C) \to \Hhomtop_{\cart/I}(D\times I, F)\tag{8.1.1.1}
+\end{equation*}\etiquette[8.1.1.1]{VI.eq8.1.1.1}
+obtained by composing the base-change functor
+$$
+\Hhomtop(D, C) \to \Hhomtop_{I}(D\times I, C \times I)
+$$
+with the functor of composition with $m$
+(\hyperref[VI.subsubsec7.1.8]{7.1.8}) is an equivalence of categories.
+\emph{(\cf \hyperref[VI.par8.1.3.3]{8.1.3.3} for a more
+``geometric'' formulation)}.
+\end{enonce*}
+
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[8.1.2]{VI.subsubsec8.1.2}
+
+We use the notation of \hyperref[VI.def8.1.1]{8.1.1}. Let $D$ be a
+$𝒰$-topos and let $m_1 : D \times I \to F$ be a morphism of fibered
+$𝒰$-topoi. Translating Definition \hyperref[VI.def8.1.1]{8.1.1}, one
+immediately sees that there is a morphism of topoi $n : D \to C$ and
+an isomorphism of morphisms of fibered topoi over $I$,
+$\gamma : m_{1} \xrightarrow{\sim} m \circ (n \times \id_I)$, making
+the diagram commutative:
+\[\vcenter{
+\xymatrix@C=.75cm@R=.5cm{
+D \times I  \ar[rrrr]^{m_1} \ar[dddd]_{n\times \id_I} &&{\phantom{.}}\ar@/_.5pc/@{-->}[dr]_{\gamma}  &&F\\
+                         & &{\phantom{a}}& &\\
+                         & && & \\
+                         & && & \\
+C \times I \ar[rrrruuuu]_{m}&& &&{\phantom{a}}\\
+}}\leqno{(8.1.2.1)}
+\]\etiquette[8.1.2.1]{VI.eq8.1.2.1}
+Moreover, if $(n', \gamma')$ is another pair with the property above,
+there is a \emph{unique} isomorphism
+$\eta : n \xrightarrow{\sim} n'$ such that
+\begin{equation*}
+\gamma \circ m (\eta \times \id) = \gamma'{\quoi}.\tag{8.1.2.2}
+\end{equation*}\etiquette[8.1.2.2]{VI.eq8.1.2.2}
+It\pageoriginale follows that if $(D, m_1)$ is a projective limit of
+$F$, then $n$ is an equivalence of $𝒰$-topoi (IV \hyperref[IV.subsec3.4]{3.4}), and the
+additional datum of the isomorphism $\gamma$ making diagram
+\eqhyperref[VI.eq8.1.2.1]{8.1.2.1} commutative determines the pair
+$(n, \gamma)$ up to canonical isomorphism. Existence of the
+projective limit will be proved in \hyperref[VI.thm8.2.3]{8.2.3} when
+$I$ is cofiltered.
+
+\subsubsection{}\etiquette[8.1.3]{VI.subsubsec8.1.3}
+We denote by
+$$
+\limtop{I} F \mbox{ or } \limtop{I}
+F_i \mbox{ or also } \underleftarrow{F}
+$$
+a projective limit of the fibered topos $F$, by
+$\mu : (\limtop{I} F) \times I \to F$ the canonical morphism, and,
+for every object $i$ of $I$, by
+$$
+\mu_i : \underleftarrow{F} \simeq \underleftarrow{F} \times {i} \to F_{i}
+$$
+the morphism of topoi induced by $\mu$ on the fiber over $i$.
+
+Choose a bisplitting of $F$ (\hyperref[VI.subsubsec7.1.4]{7.1.4}),
+\ie for every $f : i \to j$ a morphism of topoi
+$f\bigdot = (f^{\ast}, f_{\ast}) : F_i \to F_j$ such that $f^{\ast}$
+is an inverse-image functor for the fibered structure. Then, for every
+pair $i \xrightarrow{f} j \xrightarrow{g} k$ of composable morphisms
+of $I$, we have an isomorphism of morphisms of topoi
+(\hyperref[VI.subsubsec7.1.3]{7.1.3})
+$$
+c_{f, g} : g.f. \simeq (gf).\quad {\quoi}.
+$$
+Since $\mu$ is a cartesian morphism of fibered topoi, for every
+morphism $f : i \to j$ of $I$ we have an isomorphism of morphisms of
+topoi (\hyperref[VI.subsubsec7.1.6]{7.1.6})
+\begin{equation*}
+b_f  : f. \mu_i \xrightarrow{\sim} \mu_j{\quoi},\tag{8.1.3.1}
+\end{equation*}\etiquette[8.1.3.1.]{VI.eq8.1.3.1}
+and the family of the $b_f$ satisfies relations analogous to
+\eqhyperref[VI.eq7.1.6.2]{7.1.6.2}.
+
+\setcounter{paragraph}{1}
+\paragraph{}\etiquette[8.1.3.2]{VI.par8.1.3.2}
+
+Let $D$ be a $𝒰$-topos, let $m : D \times I \to F$ be a morphism of
+fibered topoi, let $m_i : D = D \times \{i\} \to F_i$ be the
+morphisms induced by $m$ on the fibers, and, for every $f : i \to j$,
+let
+$$
+b'_f : f . m_i \xrightarrow{\sim} m_j{\quoi},
+$$
+be the transition isomorphism. It follows from
+\hyperref[VI.subsubsec8.1.2]{8.1.2} that there is a morphism of topoi
+$n : D \to \underleftarrow{F}$\pageoriginale and a family of
+isomorphisms
+$$
+\gamma_i : m_i \xrightarrow{\sim} \mu_i n \quad i \in \ob I {\quoi},
+$$
+such that, for every $f : i \to j$,
+$$
+b_f \circ f. (\gamma_i) = \gamma_j \circ b'_f{\quoi}.
+$$
+Moreover, the morphism $n$ and the family of the $\gamma_i$,
+$i \in \ob (I)$, are determined up to unique isomorphism
+(\hyperref[VI.subsubsec8.1.2]{8.1.2}).
+
+Conversely, suppose we are given a topos $\underleftarrow{F}$,
+morphisms $\mu_i : \underleftarrow{F} \to F_i$, and isomorphisms $b_f$
+as in \eqhyperref[VI.eq8.1.3.1]{8.1.3.1.}, satisfying the usual
+compatibility conditions, and suppose all these data have the
+universal property described above. Then there is a unique morphism
+$\mu : \underleftarrow{F} \times I \to F$ of fibered topoi giving
+rise to the $\mu_{i}$ and the $b_f$, and $(\underleftarrow{F}, \mu)$
+is a projective limit of the fibered topos $F$.
+
+\paragraph{}\etiquette[8.1.3.3]{VI.par8.1.3.3}
+
+Let $𝒱$ be a universe such that $\sheaf{\Uu} \in 𝒱$. The preceding
+considerations therefore allow projective limits of fibered topoi to
+be interpreted as ``projective limits,'' in the sense of
+2-categories, of the pseudofunctors with values in the 2-category of
+fibered $𝒰$-topoi that are elements of $𝒱$, deduced from the fibered
+structure by choosing the morphisms $f.$. The reader should take care,
+however, not to confuse this notion of ``projective limit'' in the
+sense of 2-categories (with commutation up to isomorphism) with the
+strict (or naive) notion of projective limit (strict commutation of
+diagrams). Even when the strict notion makes sense (when the
+pseudofunctor is a genuine functor), generalized ``projective
+limits'' and strict projective limits do not coincide in general.
+
+\subsubsection{}\etiquette[8.1.4]{VI.subsubsec8.1.4}
+
+Let $p : F \to I$ and $q : G \to I$ be two fibered $𝒰$-topoi, and
+let $m : F \to G$ be a morphism of fibered topoi. Suppose that the
+fibered topoi $F$ and $G$ have projective limits
+(\hyperref[VI.def8.1.1]{8.1.1}). It follows immediately from
+Definition \hyperref[VI.def8.1.1]{8.1.1} that there is a morphism of
+topoi
+\begin{equation*}
+\underleftarrow{m} : \underleftarrow{F} \to
+\underleftarrow{G}{\quoi},\tag{8.1.4.1}
+\end{equation*}\etiquette[8.1.4.1]{VI.eq8.1.4.1}
+and an isomorphism of morphisms of fibered topoi
+$\gamma : m \circ \mu \xrightarrow{\sim}
+\mu \circ \underleftarrow{m} \times \id_{I}$, making the diagram
+\pageoriginale commutative:
+\[\vcenter{
+  \xymatrix@C=.6cm@R=.45cm{
+\underleftarrow{F}\times I \ar[rrr]^{\mu}
+\ar[ddd]_{\underleftarrow{m}\times \id_I}   && & F\ar[ddd]^{m}\\
+                          &            & &\\
+                          &            & &\ar@/_.55pc/@{-->}[ld]_{\gamma} \\
+\underleftarrow{G}\times I \ar[rrr]^{\mu} &       & &  G&.
+}}\leqno{(8.1.4.2)}
+\]\etiquette[8.1.4.2]{VI.eq8.1.4.2}
+Moreover, if $(\underleftarrow{m}', \gamma')$ is another pair with the
+property above, there is a \emph{unique} isomorphism
+$\eta: \underleftarrow{m} \xrightarrow{\sim} \underleftarrow{m}'$ of
+morphisms of topoi such that
+$$
+\gamma \circ \mu (\eta \times \id) = \gamma'{\quoi}.
+$$
+
+\subsubsection{}\etiquette[8.1.5]{VI.subsubsec8.1.5}
+
+Let $p : F \to I$ be a fibered $𝒰$-topos that is an element of $𝒱$,
+let $\phi : I'\to I$ be a functor that is an element of $𝒱$, and let
+$p_{\phi} : F_{\phi} \to I'$ be the fibered $𝒰$-topos deduced from
+$(F, p)$ by the base change $\phi$
+(\hyperref[VI.subsubsec7.1.9]{7.1.9}). Let
+$(\underleftarrow{F}, \mu)$ be a projective limit of $F$. By base
+change, we obtain a morphism of fibered topoi over $I'$:
+$$
+\mu' : \underleftarrow{F} \times I' \to F_{\phi}{\quoi}.
+$$
+Let $(\underleftarrow{F}_{\phi}, \mu_{\phi})$ be a projective limit of
+$F_{\phi}$. By the universal property of the projective limit
+(\hyperref[VI.subsubsec8.1.2]{8.1.2}), we then have a morphism of
+topoi
+$$
+m_{\phi} : \underleftarrow{F} \to \underleftarrow{F}_{\phi}{\quoi},
+$$
+and an isomorphism of morphisms of fibered topoi over $I'$:
+$$
+\gamma : \mu'\xrightarrow{\sim} \mu_{\phi} \circ (m_{\phi} \times \id_{I'}){\quoi}.
+$$
+The pair $(m_{\phi}, \gamma)$ is determined up to unique isomorphism.
+
+\subsubsection{}\etiquette[8.1.6]{VI.subsubsec8.1.6}
+
+Let $p : F \to I$ be a fibered $𝒰$-site over a small category $I$,
+let $F^{\sim/I} \to I$ be the associated fibered $𝒰$-topos
+(\hyperref[VI.subsubsec7.2.6]{7.2.6}), and let $D$ be a $𝒰$-topos.
+First, we have a functor
+\begin{equation*}
+\Hhomtop_{\cart / I} (D \times I, F^{\sim/I}) \to
+\Mmorsite_{\cart/I}(D \times I, F){\quoi},\tag{8.1.6.1}
+\end{equation*}\etiquette[8.1.6.1]{VI.eq8.1.6.1}
+which associates with every $m$ the composite of $m^{\ast}$ with
+$\epsilon_{F /I}$ (\hyperref[VI.prop7.2.7]{7.2.7}). Moreover, by the
+definition of the category $\Mmorsite_{\cart /I} (D \times I, F)$
+\eqhyperref[VI.eq7.2.2.2]{7.2.2.2}, we have a functor
+\begin{equation*}
+\Mmorsite_{\cart/I}(D \times I, F) \to \Hhom_{\cart / I} (F, D \times
+I)^{\circ}{\quoi}.\tag{8.1.6.2}
+\end{equation*}\etiquette[8.1.6.2]{VI.eq8.1.6.2}
+Finally,\pageoriginale by the definition of the inductive limit
+(\hyperref[VI.def6.3]{6.3}), we have a functor
+\begin{equation*}
+\Hhom_{\cart / I} (F, D \times I)^{\circ} \to
+\Hhom(\varinjlim_{I^{\circ}}F, D)^{\circ}{\quoi}.\tag{8.1.6.3}
+\end{equation*}\etiquette[8.1.6.3]{VI.eq8.1.6.3}
+Denote by
+\begin{equation*}
+\Theta : \Hhomtop_{\cart / I}(D \times I, F^{\sim / I}) \to
+\Hom(\varinjlim_{I^{\circ}}F, D)^{\circ}\tag{8.1.6.4}
+\end{equation*}\etiquette[8.1.6.4]{VI.eq8.1.6.4}
+the composite of these last three functors, and by
+\begin{equation*}
+\Pi : F \to \varinjlim_{I^{\circ}}F{\quoi},\tag{8.1.6.5}
+\end{equation*}\etiquette[8.1.6.5]{VI.eq8.1.6.5}
+the canonical functor.
+
+\begin{enonce*}{Proposition 8.1.7}\etiquette[8.1.7]{VI.prop8.1.7}
+The functor $\Theta$ is fully faithful. Its essential image is the set
+of functors $m : \varinjlim_{I^{\circ}}F \to D$ such that the functor
+$$
+(m \circ \Pi, p) : F \to D \times I
+$$
+is a morphism from the total site $D \times I$ to the total site $F$.
+\end{enonce*}
+
+It follows from \hyperref[VI.prop7.2.7]{7.2.7} that the functor
+\eqhyperref[VI.eq8.1.6.1]{8.1.6.1} is an equivalence of categories,
+from \hyperref[VI.subsubsec7.2.2]{7.2.2} that the functor \hyperref[VI.eq8.1.6.2]{(8.1.6.2)}
+is fully faithful, and from \hyperref[VI.def6.3]{6.3} that the functor
+\eqhyperref[VI.eq8.1.6.3]{8.1.6.3} is an equivalence of categories.
+Consequently, $\Theta$ is fully faithful. A functor
+$m : \varinjlim_{I^{\circ}}F \to D$ is isomorphic to the image, under
+$\Hhom_{\cart / I} (F, D \times I)^{\circ} \to
+\Hhom(\varinjlim_{I^{\circ}}F, D)^{\circ}$, of the functor
+$(m \circ \Pi, p)$, and such a functor belongs
+to the essential image of \eqhyperref[VI.eq8.1.6.2]{8.1.6.2} if and
+only if it is a morphism from the total site $D \times I$ to the total
+site $F$ (\hyperref[VI.thm7.4.13.1]{7.4.13.1}); hence the proposition.

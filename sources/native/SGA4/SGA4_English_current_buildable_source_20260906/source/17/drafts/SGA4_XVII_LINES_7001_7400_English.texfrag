@@ -1,0 +1,403 @@
+commute with localization and therefore define an $S_{\text{\rm
+et}}$-functor $\varphi=(V_{i})_{i\in I} \in \Psi_{f}(U)\mapsto
+\Ff ^{I^{\ast}}|U$ from $\Psi$ to the $S_{\text{\rm
+et}}$-category of sheaves on étale open subschemes of $S$, and a
+morphism of functors
+$\tau_{\varphi}:\Ff ^{I^{\ast}}|U\rightarrow
+f_{!}f^{\ast}\Ff |U$.
+
+\begin{enonce*}{Proposition 6.2.2}\etiquette[6.2.2]{XVII.prop6.2.2}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The category $\Psi_{f}$ is locally filtering on the right
+\emph{(\sisi{IV 14}{\hyperrefext[V][V.def8.1.1]{8.1.1}})} over $S_{\text{\rm et}}$.
+
+\item The arrows \eqhyperref[XVII.eq6.2.1.1]{6.2.1.1} define an isomorphism\sisi{s}{}
+\[
+\tau:\varinjlim_{\varphi=(V_{i})_{i\in I}\in
+\Psi_{f}(U)}\Ff ^{I^{\ast}}|U\isomto  f_{!}f^{\ast}\Ff\sisi{}{|U} {\quoi}.
+\]
+\end{enumerate}
+\end{enonce*}
+
+If $S$ is strictly local with closed point $s$, the $S$-scheme $X$
+admits a decomposition $\varphi\in\Psi_{f}(S)$ into open and closed
+parts $X=\coprod_{i\in I}X_{i}$ indexed by a pointed set $I$
+such that the fiber of $X_{0}$ at $s$ is empty, the $X_{i}$ $(i\neq
+0)$ are finite over $S$, and the fiber of $X_{i}$ $(i\neq 0)$ at $s$
+consists of a single point (\EGA IV 18.12.1). Such a decomposition is
+a final object of $\Psi\sisi{}{_f}(S)$. Moreover, by \hyperref[XVII.prop6.1.4]{6.1.4} (iii) (or
+because this is evident), the fiber at $s$ of the arrow $\tau_{\varphi}$
+\eqhyperref[XVII.eq6.2.1.1]{6.2.1.1} is an isomorphism.
+
+In the general case, let $x$ be a geometric point of $S$ and let
+$\Psi_{x}$ be the fiber of $\Psi_{f}$ at $x$,
+\[
+\Psi_{x}=\varinjlim_{U(x)} \Psi_{f}(U){\quoi},
+\]
+where $U$ ranges over the étale neighborhoods of $x$. Let $S_{x}$ be the strict localization of
+$S$ at $x$, $X_{x}=\fprod{X}{S_{x}}{S}$, and $f_{x}:X_{x}\rightarrow
+S_{x}$. The standard limit arguments show\pageoriginale that
+the category $\Psi_{x}$ is equivalent to the category
+$\Phi_{f_{x}}(S_{x})$, hence is filtering on the right. It follows that
+$\Psi\sisi{}{_f}$ is locally filtering on the right. Moreover, the fiber at $x$ of
+$\tau$ identifies with the arrow
+$$
+\tau_{x}:\varinjlim_{\Psi_{x}}\Ff _{x}^{I_{x}}\longrightarrow
+(f_{!}f^{\ast}\Ff )_{x}
+$$
+and, by the preceding discussion, this arrow is an isomorphism.
+
+\begin{enonce*}{Theorem 6.2.3}\etiquette[6.2.3]{XVII.thm6.2.3}
+There is a unique way to define, for every morphism
+$f:X\rightarrow S$ that is separated, flat, of finite presentation, and quasi-finite,
+and every abelian sheaf $\Ff $ on $S$, a trace morphism
+$$
+\Tr_{f}:f_{!}f^{\ast}\Ff \longrightarrow \Ff
+$$
+such that the following conditions hold:
+\begin{itemize}
+\item[\textsuperscript{(Var 1)}] $\Tr_{f}$ is functorial in $\Ff $.
+
+\item[\textsuperscript{(Var 2)}] $\Tr_{f}$ is compatible with every base change, \ie
+for every cartesian diagram
+$$
+\xymatrix{
+X' \ar[rr]^{g'} \ar[d]^{f'}& & X\ar[d]^{f}\\
+S' \ar[rr]^{g} & &  S
+}
+$$
+the following diagram of functors is commutative:
+$$
+\xymatrix{
+f'_{!} f'^{\ast} g^{\ast} \ar@{=}[r] \ar[d]^{\Tr_{f'}\ast g^{\ast}}& f'_{!}g'^{\ast} f^{\ast}\ar@{=}[r] &
+g^{\ast}f_{!}f^{\ast} \ar[d]^{g^{\ast}\ast
+  \Tr_f}\\
+g^{\ast} \ar@{=}[rr]&  & g^{\ast} &.
+}
+$$
+
+\item[\textsuperscript{(Var 3)}] $\Tr_{f}$\pageoriginale is compatible with
+composition, \ie if $f$ is the composite $f=gh$ of two morphisms
+that are separated, flat, of finite presentation, and quasi-finite, the following diagram
+is commutative:
+$$
+\xymatrix{
+f_{!}f^{\ast}\ar[rrdd]_{\Tr_f} \ar@{=}[rr]& & g_{!}h_{!} h^{\ast}g_{\ast}\ar[d]^{g_{!}\ast\mathord{\Tr_{h}}\ast g^\ast}\\
+              & &  g_{!}g^{\ast} \ar[d]^{\Tr_g}\\
+              & & \Id .
+}
+$$
+
+\item[\textsuperscript{(Var 4)}] (Normalization). If $f$ is finite of constant rank $n$,
+the composite homomorphism
+$$
+\Ff \rightarrow
+f_{\ast}f^{\ast}\Ff =f_{!}f^{\ast}\Ff \xrightarrow{\Tr_{f}}\Ff
+$$
+is multiplication by $n$.
+\end{itemize}
+\end{enonce*}
+
+\sisi{\emph{First note that conditions \emph{(Var 2)} through \emph{(Var 4)}
+imply that}}{First note that conditions (Var 2) through (Var 4)
+imply that}
+
+\begin{enonce*}{Lemma 6.2.3.1}\etiquette[6.2.3.1]{XVII.lem6.2.3.1}
+If $X=X'\amalg X''$\sisi{}{,} then, setting $f'=f|X'$ and $f''=f|X''$, the
+morphism $\Tr_{f}$:
+$$
+f_{!}f^{\ast}\Ff =f'_{!}{f'}^{\ast}\Ff \oplus
+f''_{!}{f''}^{\ast}\Ff \longrightarrow \Ff
+$$
+is the sum of $\Tr_{f!}$ and $\Tr_{f''}$.
+$$
+\xymatrix@C=2.25cm@R=.75cm{
+  X' \ar@{^{(}->}[rd]^{j'}&           &\\
+   & X   \ar[r]^{f}  \ar[r]^{f}    & S\\
+X'' \ar@{^{(}->}[ru]_{j''}& &.
+}
+$$
+\end{enonce*}
+
+If\pageoriginale one applies (Var 2) to $j'$, for base change by
+$j'$, and (Var 4) to the identity map, one sees that
+$$
+\Tr_{j'}:j'_{!}{j'}^{\ast}f^{\ast}\Ff \longrightarrow
+f^{\ast}\Ff
+$$
+is the canonical map defined by the decomposition of
+$f^{\ast}\Ff $ as the direct sum
+$$
+f^{\ast}\Ff =j'_{!}{j'}^{\ast}f^{\ast}\Ff \oplus
+j''_{!}{j''}^{\ast}f^{\ast}\Ff {\quoi}.
+$$
+
+If one applies (Var 3) to $f'=f\circ j'$, one sees that the following diagram
+is commutative
+\[
+\xymatrix@R=1.25cm{
+f'_{!} f'^{\ast}\Ff  \ar[rr] \ar[rd]_{\Tr_{f'}}& &f_{!}f^{\ast}\Ff \ar[ld]^{\Tr_f}\\
+                                   & \Ff    &    ,
+}
+\]
+which, together with the analogous statement for $f''$, is precisely \hyperref[XVII.lem6.2.3.1]{6.2.3.1}.
+
+Let $f:X\rightarrow S$ be a separated, flat, quasi-finite morphism of
+finite presentation. For every $U\in \Ob S_{\text{\rm et}}$, let
+$\Psi'_{f}(U)$ be the full subcategory of $\Psi_{f}(U)$ (\sisi{\hyperref[XVII.prop6.1.1]{6.1.1}}{\hyperref[XVII.subsubsec6.2.1]{6.2.1}})
+consisting of the decompositions $(V_{i})_{i\in I}$ such that, for $i\neq
+0$, $V_{i}$ is locally free of constant rank over $U$. The
+categories\pageoriginale $\Psi'_{f}(U)$ form a fibered subcategory
+of $\Psi_{f}$, cofinal in $\Psi_{f}$.
+
+Let $\Ff $ and $\mathcal{G}$ be abelian sheaves on
+$S$. By \hyperref[XVII.prop6.2.2]{6.2.2} (ii), giving a morphism
+$g:f_{!}f^{\ast}\Ff \rightarrow \mathcal{G}$ is equivalent to giving,
+for each decomposition $\varphi=(V_{i})_{i\in I}\in\Psi'_{f}(U)$,
+a morphism $g_{\varphi}:\Ff ^{I^{\ast}}|U\rightarrow
+\mathcal{G}|U$, compatible with the morphisms ${}^{t}\sigma$ of
+\eqhyperref[XVII.eq6.2.1.2]{6.2.1.2}. If $f_{i}$ is the projection from $V_{i}$ to $U$,
+$g_{\varphi}$ is the arrow whose coordinate arrows are
+the composites:
+\[
+g^{i}_{\varphi}:\Ff |U\rightarrow
+f_{i\ast}f^{\ast}_{i}\Ff |U\rightarrow
+f_{!}f^{\ast}\Ff |U\xrightarrow{g} \mathcal{G}|U{\quoi}.
+\]
+
+It follows that there exists a unique arrow $\Tr_{f}$, compatible
+with étale localization and satisfying (Var 4) and \hyperref[XVII.lem6.2.3.1]{6.2.3.1}. It is clear
+that this arrow satisfies (Var 1) and (Var~2).
+
+To verify (Var 3), by base change one reduces to the
+easy case in which $S$ is the spectrum of an algebraically closed field.
+
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[6.2.4]{XVII.subsubsec6.2.4}
+A \emph{weighting} of a separated quasi-finite morphism
+$f:X\rightarrow S$ is the datum, for each geometric point $x$ of
+$X$, of an integer $n(x)$ depending only on the point of $X$ underlying $x$,
+such that:
+\begin{itemize}
+\item[$(\ast)$] \emph{For every $U\in \Ob S_{\text{\rm et}}$ and
+every open and closed subspace $X_{1}$ of $f^{-1}(U)$ that is finite over $U$, the
+function assigning to each geometri\sisi{c}{cal} point $s$ of $U$ the number
+$\sum_{x\in X_{1}(s)}n(x)$ is locally constant.}
+\end{itemize}
+
+If $f=gh$ is the composite of two weighted morphisms, we weight $f$
+by setting $n_{f}(x)=n_{h}(x)\sisi{.}{\cdot}n_{g}(h(x))$.
+
+If\pageoriginale the morphism $f'$ is obtained by a base change
+$g$ from a weighted morphism $f$, we weight $f'$ by setting
+$n_{f'}(x)=n_{f}(g'(x))$.
+
+The preceding arguments in fact prove:
+
+\begin{enonce*}{Proposition 6.2.5}\etiquette[6.2.5]{XVII.prop6.2.5}
+There is a unique way to define, for every weighted, separated,
+quasi-finite morphism $f:X\rightarrow S$ and every abelian sheaf
+$\Ff $ on $S$, a trace morphism
+$\Tr_{f}:f_{!}f^{\ast}\Ff \rightarrow \Ff $ that is
+functorial in $\Ff $, compatible with base change and with
+composition, and satisfies:
+\begin{itemize}
+\item[\textsuperscript{(Var $\sisi{\leftexp{\prime}{4}}{4'}$)}] If $f$ is finite and there exists an integer $n$ such
+that, for every geometric point $s$ of $S$, one has $\sum_{x\in
+X(s)}n(x)=n$, then the composite arrow
+$$
+\Ff \longrightarrow
+f_{\ast}f^{\ast}\Ff =f_{!}f^{\ast}\Ff \xrightarrow{\Tr_{f}}\Ff
+$$
+is multiplication by $n$.
+\end{itemize}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Example 6.2.6}\etiquette[6.2.6]{XVII.exem6.2.6}
+Let $S$ be a \sisi{}{reduced }noetherian geometrically unibranch scheme (for
+example, a normal scheme), and let $f:X\rightarrow S$ be a separated
+quasi-finite morphism. For every geometric point $x$ of $X$ with image $s$ in $S$,
+let $\Oo_{x}$ (\resp $\Oo_{s}$) be the strictly local ring of $X$
+at $x$ (\resp of $S$ at $s$). The scheme $\Spec(\Oo_{s})$ is reduced
+and has a unique maximal point $\eta$. Moreover, $\Oo_{x}$ is finite over
+$\Oo_{s}$. Set $n(x)=\rg_{\eta}(\Oo_{x})$. One verifies that
+$n(x)$ is a weighting of $f$, whence a trace morphism $\Tr_{f}$.
+\end{enonce*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}\etiquette[6.2.7]{XVII.subsubsec6.2.7}
+Let\pageoriginale $u:X\rightarrow Y$ be a separated, quasi-finite,
+flat morphism of finite presentation. Since the trace morphism (\hyperref[XVII.thm6.2.3]{6.2.3}) is
+functorial, it defines, for every complex of abelian sheaves $K$
+on $Y$, a morphism of complexes
+$$\etiquette[6.2.7.1]{XVII.eq6.2.7.1}
+\Tr_{u}:u_{!} u^{\ast}K\longrightarrow K{\quoi}.\leqno(6.2.7.1)
+$$
+We shall use the terms \emph{trace morphism, Gysin
+morphism} and \emph{morphism} $u_{\ast}$ interchangeably for any morphism obtained from
+\eqhyperref[XVII.eq6.2.7.1]{6.2.7.1} or \hyperref[XVII.thm6.2.3]{6.2.3} by applying a functor; for example, the
+following ones.
+
+Consider a commutative diagram
+$$
+\xymatrix@C=1.5cm@R=1.75cm{
+X  \ar[rr]^{u} \ar[rd]_{f}&   & Y\ar[ld]^{g}\\
+                          & S &
+}
+$$
+with $g$ separated and locally of finite type. For every abelian sheaf
+$\Ff $ on $Y$, the trace morphism defines a morphism
+$$\etiquette[6.2.7.2]{XVII.eq6.2.7.2}
+\Tr_{u}\quad\mbox{\rm or}\quad u_{\ast}:f_{!}u^{\ast}\Ff \simeq
+g_{!}u_{!}u^{\ast}\Ff \xrightarrow{g_{!}(\Tr_{u})} g_{!}\Ff {\quoi}.\leqno(6.2.7.2)
+$$
+
+If $g$ is compactifiable, and if $K$ is a complex bounded
+below with torsion cohomology, or a complex of
+$g^{\ast}\Aa$-modules for $\Aa$ a sheaf of torsion rings on
+$S$, the trace morphism \eqhyperref[XVII.eq6.2.7.1]{6.2.7.1} likewise induces
+\begin{align*}
+\Tr_{u}\quad\mbox{\rm or}\quad u_{\ast} &: Rf_{!}u^{\ast}K\simeq
+Rg_{!}u_{!}u^{\ast}K\xrightarrow{Rg_{!}(\Tr_{u})}Rg_{!}K{\quoi},\tag{6.2.7.3}\\
+\Tr_{u}\quad\mbox{\rm or}\quad u_{\ast} &: R^{q}f_{!}u^{\ast}K\simeq
+R^{q}g_{!}u_{!}u^{\ast}K\xrightarrow{R^{q}g_{!}(\Tr_{u})}
+R^{q}g_{!}K{\quoi}.\tag{6.2.7.4}
+\end{align*}\etiquette[6.2.7.3]{XVII.eq6.2.7.3}
+\etiquette[6.2.7.4]{XVII.eq6.2.7.4}%The vertical space following this paragraph is too large.
+
+For\pageoriginale $S$ the spectrum of an algebraically closed field,
+\eqhyperref[XVII.eq6.2.7.4]{6.2.7.4} is a morphism
+$$\etiquette[6.2.7.5]{XVII.eq6.2.7.5}
+u_{\ast}:\HH^{q}_{c}(X,u^{\ast}K)\longrightarrow \HH^{q}_{c}(Y,K){\quoi}.\leqno(6.2.7.5)
+$$
+
+Thus one sees that \emph{cohomology with proper supports is
+covariant} with respect to quasi-finite morphisms.
+
+\subsubsection{}\etiquette[6.2.8]{XVII.subsubsec6.2.8}
+Let $u:X\rightarrow Y$ be as in \hyperref[XVII.subsubsec6.2.7]{6.2.7}, let $\Delta_{n}=[0,n]$
+be the standard set with $\sisi{}{(}n+1\sisi{}{)}$ elements, and let $X_{n}$ be
+the $(n+1)$\textsuperscript{fold} iterated fiber product of $X$ over $Y$. The $X_{n}$ form
+a simplicial scheme augmented to $Y$ (\cf \sisi{VI${}_{\text{B}}$}{VBIS}). We
+denote by $u_{n}:X_{n}\rightarrow Y$ the augmentation
+morphism. If $\Ff $ is an abelian sheaf on $Y$, the
+sheaves $\Ff _{n}=u_{n!}u_{n}^{\ast}\Ff $ form,
+by \eqhyperref[XVII.eq6.2.7.2]{6.2.7.2} (applied after the change of notation
+$S\sisi{\rightarrow}{\mapsto} Y$, $X\sisi{\rightarrow}{\mapsto} X_{n}$, $Y\sisi{\rightarrow}{\mapsto} Y$ or $X_{m}$),
+a \emph{simplicial} sheaf augmented to $\Ff $. By definition, the
+differential complex of ``\emph{nondegenerate chains}'' of this
+simplicial sheaf has as its $n$\textsuperscript{th}
+component the quotient of $\Ff _{n}$, namely the cokernel of the direct
+sum of the degeneracy operators with target $\Ff _{n}$ and
+of the morphisms $\sigma-\epsilon(\sigma)$ for $\sigma$ a
+symmetry operator.
+
+\begin{enonce*}{Proposition 6.2.9}\etiquette[6.2.9]{XVII.prop6.2.9}
+Under the preceding hypotheses, if $u$ is separated, étale, of finite type,
+and surjective, then for every abelian sheaf $\Ff $ on $Y$, one has
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The sheaves $\Ff _{n}$ form a (left)
+resolution of $\Ff $.
+
+\item The differential complex of nondegenerate chains of the simplicial
+sheaf $(\Ff _{n})$ is a (left) resolution of
+$\Ff $. If all the geometric fibers of $u$ have at most
+$d$ points, this resolution has length $\leq d$.
+\end{enumerate}
+\end{enonce*}
+
+By\pageoriginale base change, it suffices to verify this statement
+when $Y$ is the spectrum of an algebraically closed field, in which case
+\hyperref[XVII.subsubsec6.2.8]{6.2.8} reduces to computing the simplicial homology
+of a simplex.
+
+Let $(U_{i})_{i\in I}$ be a finite open covering of the scheme $Y$,
+let $\Ff $ be an abelian sheaf on $Y$, and, for each subset $P$
+of $I$, let $j_{P}$ be the inclusion of $U_{P}=\cap_{i\in P}U_{i}$ into
+$\sisi{X}{Y}$. Suppose that a total order on $I$ has been chosen. If $X=\coprod_{i\in
+I}U_{i}$ and if $u$ is the projection from $X$ to $Y$, the resolution
+\hyperref[XVII.prop6.2.9]{6.2.9} (ii) of $\Ff $ is given by
+$$\etiquette[6.2.9.1]{XVII.eq6.2.9.1}
+(\Ff _{n})_{n\,\text{deg}}=\bigoplus_{|P|=n+1}j_{P!}j^{\ast}_{P}\Ff {\quoi}.\leqno(6.2.9.1)
+$$
+
+This resolution still makes sense when $I$ is infinite.
+
+\setcounter{subsubsection}{9}
+\subsubsection{}\etiquette[6.2.10]{XVII.subsubsec6.2.10}
+Under the hypotheses of \hyperref[XVII.prop6.2.9]{6.2.9}, let $\Aa$ be a sheaf
+of torsion rings on $Y$ and let $K\in \Ob^{-}(Y,\Aa)$. We
+regard $X$ as ringed by $u^{\ast}\Aa$. Since resolution \hyperref[XVII.prop6.2.9]{6.2.9} (i) (\resp
+\hyperref[XVII.prop6.2.9]{6.2.9} (ii)) is functorial in $\Ff $, it defines a
+resolution of $K$ by a double complex $K_{1}$. This resolution
+is called the extraordinary \emph{Čech resolution} (\resp the
+\emph{extraordinary alternating} Čech resolution) of $K$.
+
+Consider a commutative diagram
+$$
+\xymatrix@C=1.5cm@R=1.75cm{
+X  \ar[rr]^{u} \ar[rd]_{f}&   & Y\ar[ld]^{g}\\
+                          & S & ,
+}
+$$
+with $g$ compactifiable. With the notation of
+\hyperref[XVII.subsubsec6.2.8]{6.2.8}, if $f_{n}$ is the projection from $X_{n}$ to
+$S$, one has $Rf_{n!}=Rg_{!}\sisi{U}{u}_{n!}$. The complex $K_{1}$, filtered
+by\pageoriginale the semisimplicial degree, therefore defines a spectral
+sequence
+$$\etiquette[6.2.10.1]{XVII.eq6.2.10.1}
+E^{-p,q}_{1}=R^{q}f_{p!}(u^{\ast}_{p}K)\Longrightarrow R^{-p+q} g_{!}
+K{\quoi}.\leqno(6.2.10.1)
+$$
+The differentials $d_{1}$ arise from the simplicial arrows, so
+that
+$$\etiquette[6.2.10.2]{XVII.eq6.2.10.2}
+E^{-p,q}_{2}=\check{\Hh}^{p}(R^{q}f_{p!}(u^{\ast}_{p}K)\sisi{}{)}\Longrightarrow
+R^{-p+q}g_{!}K{\quoi}.\leqno(6.2.10.2)
+$$
+
+Under the hypotheses of \eqhyperref[XVII.eq6.2.9.1]{6.2.9.1}, one similarly obtains a spectral
+sequence
+$$\etiquette[6.2.10.3]{XVII.eq6.2.10.3}
+E^{-p,q}_{1}=\bigoplus_{|P|=p+1}R^{q}f_{p!}(j^{\ast}_{p}K)\Longrightarrow R^{-p+q}g_{!}K{\quoi}.\leqno(6.2.10.3)
+$$
+
+The spectral sequences \eqhyperref[XVII.eq6.2.10.1]{6.2.10.1} and \eqhyperref[XVII.eq6.2.10.3]{6.2.10.3} are called the
+\emph{upper localization spectral sequences.}
+
+\begin{enonce*}{Proposition 6.2.11}\etiquette[6.2.11]{XVII.prop6.2.11}
+If $f$ is a separated étale morphism of finite type, the functor
+$f_{!}$ is left adjoint to the functor $f^{\ast}$, and its
+adjunction arrow is the trace morphism.
+\end{enonce*}
+
+It is known that if $X$ is an object of a site $S$, the functor $f^{\ast}$
+restricting abelian sheaves to $X$ has a left adjoint
+$f_{!}$. If $F$ is an abelian sheaf on $X$, $f_{!}F$ is the
+sheaf generated by the presheaf
+$$
+V\longrightarrow \bigoplus_{\xi \in \Hom(V,X)}F(\xi){\quoi}.
+$$
+In the étale case, provisionally denote this functor by $f\sisi{''}{^0}_{!}$. Its
+adjunction property immediately implies that its formation commutes with
+every base change. The trace morphism defines a morphism $t$
+from $f_{!}\Ff $ to $f^{0}_{!}\Ff $,
+compatible\pageoriginale with every base change. It suffices to see
+that $t$ is an isomorphism fiber by fiber, \ie when $S$ is the spectrum of a
+separably closed field, where this is trivial.
+
+\setcounter{subsubsection}{11}
+\paragraph{}\etiquette[6.2.11.1]{XVII.par6.2.11.1}
+One should note that this interpretation of $f^{0}_{!}$ is
+specific to the case of the étale site and does not extend to the fpqf site of a
+prescheme, for example.
+
+\subsection{Variant of the trace for continuous coefficients}\etiquette[6.3]{XVII.subsec6.3}
+
+In this no. we prove the assertions of \textsc{Grothendieck}
+\cite[no. 6]{sga4.exp.XVII.bib.Gr}, and apply these results to the definition
+of a ``trace morphism'' for suitable fppf sheaves.

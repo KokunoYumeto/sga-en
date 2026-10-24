@@ -1,0 +1,499 @@
+
+\SGAInlineRefTarget{sga3:VIIA:nde:2}\section*{2. Invariant Differential Operators on Group Schemes}
+\phantomsection
+\label{sga3:VIIA:2}
+\addcontentsline{toc}{section}{2. Invariant Differential Operators on Group Schemes}
+
+\medskip
+\noindent\textbf{2.1.}
+\phantomsection
+\label{sga3:VIIA:2.1}
+Let \(G\) be an \(S\)-group scheme; we denote its unit section by
+\(\varepsilon\), or by \(\varepsilon_G:S\to G\).
+
+\medskip
+\noindent\textbf{Definition.}
+\textit{Let \(U(G)\) be the \(\Gamma(\mathcal O_S)\)-module of
+\(S\)-deviations of \(\varepsilon_G\) (or \(S\)-deviations of the
+origin), as in \SGARefLink{sga3:VIIA:1.1}{1.1}.}
+
+\textit{If \(d,e\in U(G)\), then \(d\times e\) is an \(S\)-deviation of
+\[
+  \varepsilon\times\varepsilon:
+  S\simeq S\times S\longrightarrow G\times G.
+\]
+The image of \(d\times e\) under the multiplication morphism
+\(m:G\times G\to G\), as in \SGARefLink{sga3:VIIA:1.2}{1.2}, is called the \emph{product} of
+\(d\) and \(e\) and is denoted \(d\cdot e\).}
+
+\textit{The \(\Gamma(\mathcal O_S)\)-module \(U(G)\) is thereby made
+into an associative \(\Gamma(\mathcal O_S)\)-algebra with unit
+\(\varepsilon_G\). We call \(U(G)\) the \emph{infinitesimal algebra}
+of \(G\).}\footnote{This is now usually called the algebra of
+distributions (at the origin) of \(G\); see Demazure--Gabriel,
+II.4, \SGARefLink{sga3:VIIA:6.1}{6.1}, and Jantzen, I.7.7.}
+
+As \(T\) ranges over schemes above \(S\), the infinitesimal algebra
+\(U(G_T)\) of the \(T\)-group \(G\times T\) plainly varies
+contravariantly with \(T\); thus one may speak of the
+\emph{infinitesimal-algebra functor}.
+
+Restricting \(T\) to the open subsets of \(S\) gives a presheaf
+\(T\mapsto U(G_T)\) of \(\mathcal O_S\)-algebras. By \SGARefLink{sga3:VIIA:1.1.3}{1.1.3} it is a
+sheaf. We denote it by \(\mathcal U(G)\) and call it the
+\emph{sheaf of infinitesimal algebras of \(G\)}.
+
+The algebra \(U(G)\) is also covariantly functorial in \(G\). Indeed,
+if \(u:G\to H\) is a homomorphism of \(S\)-groups and \(d\) is an
+\(S\)-deviation of \(\varepsilon_G\), its image under \(u\) is the
+element
+\[
+  U(u)(d)=u d
+\]
+of \(U(H)\). The resulting map \(U(u):U(G)\to U(H)\) is a
+homomorphism of \(\Gamma(\mathcal O_S)\)-algebras. Likewise one obtains
+a homomorphism
+\(\mathcal U(u):\mathcal U(G)\to\mathcal U(H)\).
+
+\medskip
+\noindent\textbf{2.2.}
+\phantomsection
+\label{sga3:VIIA:2.2}
+Let \(d\in U(G)\), that is, let \(d\) be an \(S\)-deviation of the
+origin of \(G\). The base change of \(d\) is the \(S\)-deviation
+\[
+  d\times G
+\]
+of
+\(\varepsilon\times G:G\simeq S\times G\to G\times G\), as in
+\SGARefLink{sga3:VIIA:1.2.2}{1.2.2}. Its image under multiplication \(m:G\times G\to G\) is an
+\(S\)-deviation of
+\[
+  m\circ(\varepsilon\times\operatorname{id}_G)
+  =\operatorname{id}_G,
+\]
+hence an element of \(\operatorname{Dif}_{G/S}\), which we denote
+by \(d^G\).
+
+The map \(d\mapsto d^G\) is plainly
+\(\Gamma(\mathcal O_S)\)-linear. The following commutative diagram
+shows that
+\[
+  (e\cdot d)^G=d^G\cdot e^G.
+\]
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.2-right-translation-associativity}
+  \input{native_diagrams/exp7/viia_00_04/diag_006_right_translation_associativity}
+\end{center}
+\footnote{The editors corrected the original diagram by replacing
+\(d\times G\times G\) with \(G\times d\times G\). The composite on
+the left side of the upper triangle is then
+\((e\times d)\times G\), and \(d\mapsto d^G\) becomes an
+anti-isomorphism from \(U(G)\) to the right-invariant differential
+operators (\SGARefLink{sga3:VIIA:2.3}{2.3}--\SGARefLink{sga3:VIIA:2.4}{2.4}). If instead \({}^Gd\) is defined as the image of
+\(G\times d\) under \(m\), one similarly obtains an isomorphism onto
+the left-invariant differential operators. \SGARefLink{sga3:VIIA:2.4}{Sections 2.4} and \SGARefLink{sga3:VIIA:2.5}{2.5} have
+been corrected accordingly.}
+
+The two lower triangles commute by the definitions of \(d^G\) and
+\(e^G\). The composite \(S\)-deviation of \(e\times G\) and
+\(G\times d\times G\) is \((e\times d)\times G\), by \SGARefLink{sga3:VIIA:1.2.2}{1.2.2}. Its image
+under \(m\times G\) is \((e\cdot d)\times G\), and the image of the
+latter under \(m\) is therefore \((e\cdot d)^G\).
+
+Thus one obtains an antihomomorphism
+\[
+  U(G)\longrightarrow\operatorname{Dif}_{G/S}
+\]
+of \(\Gamma(\mathcal O_S)\)-algebras, called \emph{right
+translation}.\footnote{It would be preferable to call this a
+\emph{left action}. For example, if \(d\) is an \(S\)-derivation of
+the origin, then by \SGARefLink{sga3:VIIA:1.2.1}{1.2.1} it is the composite of
+\((\tau,\partial_t):S\to I_S\) with a morphism \(x:I_S\to G\)
+satisfying \(x\circ\tau=\varepsilon\). The derivation \(d^G\) of
+\(\mathcal O_G\) sends a local section \(\varphi\) to the section
+\(g\mapsto\partial_t\varphi(xg)\). With this terminology one could say
+that the left action commutes with right translations.}
+
+If \(\mathcal{Dif}_{G/S}\) denotes the sheaf of \(S\)-differential
+operators on \(G\), as in \SGARefLink{sga3:VIIA:1.4}{1.4}, and \(p:G\to S\) is the structural
+morphism, one likewise defines a right translation
+\[
+  \mathcal U(G)\longrightarrow p_*(\mathcal{Dif}_{G/S}).
+\]
+
+\medskip
+\noindent\textbf{2.3.}
+\phantomsection
+\label{sga3:VIIA:2.3}
+We now characterize the differential operators on \(G/S\) of the
+form \(d^G\). Let \(g:S\to G\) be a section of the structural
+morphism and let \(g_G\) denote right translation by \(g\), namely
+\[
+  g_G:
+  G\simeq G\times S
+  \xrightarrow{G\times g}G\times G
+  \xrightarrow{m}G.
+\]
+For every differential operator \(D\) on \(G/S\), the composite
+\[
+  g_G^{-1}Dg_G
+\]
+is again an \(S\)-deviation of \(\operatorname{id}_G\), hence an
+element of \(\operatorname{Dif}_{G/S}\). We write
+\[
+  D^g=g_G^{-1}Dg_G.
+\]
+We call \(D\) \emph{right-invariant} if for every base change
+\(t:T\to S\) and every section \(g:T\to G\times T\), one has
+\[
+  (D_T)^g=D_T.
+\]
+
+\medskip
+\noindent\textbf{Lemma.}
+\phantomsection
+\label{sga3:VIIA:2.3-invariance-lemma}
+\textit{For every differential operator \(D\) on \(G/S\), the
+following assertions are equivalent, where \(m\) is the
+multiplication morphism of \(G\):}
+\begin{enumerate}
+\item[\textit{(i)}] \textit{\(D\) is right-invariant.}
+\item[\textit{(ii)}] \textit{The following two deviations of \(m\)
+are equal:}
+\[
+  Dm=m(D\times G).
+\]
+\end{enumerate}
+
+\noindent\((ii)\Rightarrow(i)\).
+Since condition \SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)} is stable under base change, it suffices to show
+that it implies \(D^g=D\) for every section \(g:S\to G\). Let
+\[
+  h=G\times g:G\simeq G\times S\longrightarrow G\times G,
+\]
+so that \(m\circ h=g_G\). The equality \(D^g=D\) is equivalent to
+\(g_G\circ D=D\circ g_G\), and this follows from the commutative
+diagram
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.3-ii-implies-i}
+  \input{native_diagrams/exp7/viia_00_04/diag_007_invariance_implication_square}
+\end{center}
+
+\noindent\((i)\Rightarrow(ii)\).
+Take \(t:T\to S\) to be the structural morphism \(p:G\to S\), and
+take the section \(g:T\to G\times T\) to be the diagonal
+\(\Delta:G\to G\times G\). Right translation
+\[
+  \Delta_{G\times G}:G\times G\longrightarrow G\times G
+\]
+then has components \(m\) and \(\operatorname{pr}_2\). The equality
+\((D_G)^\Delta=D_G\) is equivalent to commutativity of the first
+square in
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.3-i-implies-ii}
+  \input{native_diagrams/exp7/viia_00_04/diag_008_delta_translation_square}
+\end{center}
+because \(m=\operatorname{pr}_1\circ\Delta_{G\times G}\). This proves
+\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}.
+
+Now consider \(d\in U(G)\). Every square in the following diagram is
+commutative:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.3-origin-deviation-invariant}
+  \input{native_diagrams/exp7/viia_00_04/diag_009_invariant_operator_rectangle}
+\end{center}
+Since
+\[
+  m\circ(d\times G)=d^G
+  \qquad\text{and}\qquad
+  (m\times G)\circ(d\times G\times G)=d^G\times G,
+\]
+one also has
+\[
+  d^G\circ m=m\circ(d^G\times G).
+\]
+Thus, for every \(S\)-deviation \(d\) of the origin, \(d^G\) is a
+right-invariant differential operator.
+
+\medskip
+\noindent\textbf{Theorem 2.4.}
+\phantomsection
+\label{sga3:VIIA:2.4}
+\begin{enumerate}
+\item[\textit{\SGAInlineRefTarget{sga3:VIIA:2.4:item:i}(i)}]
+\textit{The map \(d\mapsto d^G\) is an anti-isomorphism of the
+infinitesimal algebra \(U(G)\) onto the subalgebra
+\(\operatorname{Dif}^{G}_{G/S}\) of \(\operatorname{Dif}_{G/S}\)
+formed by the right-invariant differential operators.}
+\item[\textit{\SGAInlineRefTarget{sga3:VIIA:2.4:item:ii}(ii)}]
+\textit{Likewise, the map \(d\mapsto{}^Gd\) is an isomorphism from
+\(U(G)\) onto the subalgebra of \(\operatorname{Dif}_{G/S}\) formed
+by the left-invariant differential operators.}
+\end{enumerate}
+\footnote{The editors corrected ``isomorphism'' to
+``anti-isomorphism'' and added assertion \SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}; see the preceding
+editorial note.}
+
+Let \(D\) be an arbitrary differential operator on \(G/S\), and let
+\(D_0\) denote its \emph{value at the origin}, that is, the composite
+deviation
+\[
+  S\xrightarrow{\varepsilon}G
+   \mathop{\longrightarrow}^{D}_{\operatorname{id}_G}G.
+\]
+The right-invariant differential operator \((D_0)^G\) is obtained by
+the composite
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.4-D0-composite}
+  \input{native_diagrams/exp7/viia_00_04/diag_010_D0_composition_sequence}
+\end{center}
+If \(D\) is right-invariant, then \(Dm=m(D\times G)\), and hence
+\[
+  D=Dm(\varepsilon\times G)
+   =m(D\times G)(\varepsilon\times G)
+   =(D_0)^G.
+\]
+Thus \(d\mapsto d^G\) is surjective.
+
+Conversely, for every \(S\)-deviation \(d\) of the origin one has the
+commutative square
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.4-origin-value-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_011_origin_value_square}
+\end{center}
+from which
+\[
+  d=m(G\times\varepsilon)d
+   =m(d\times G)\varepsilon
+   =(d^G)_0.
+\]
+\textit{A fortiori}, \(d\mapsto d^G\) is injective. This proves the
+theorem.
+
+As \(S\) varies, \SGARefLink{sga3:VIIA:2.4}{Theorem~2.4} also shows that right translation
+\[
+  \mathcal U(G)\longrightarrow p_*(\mathcal{Dif}_{G/S})
+\]
+is an anti-isomorphism from \(\mathcal U(G)\) onto the sheaf of
+\(\mathcal O_S\)-algebras
+\[
+  p_*(\mathcal{Dif}_{G/S})^G,
+\]
+which assigns to every open \(V\subset S\) the algebra
+\(\operatorname{Dif}^{G_V}_{G_V/V}\).
+
+\medskip
+\noindent\textbf{Remark 2.4.1.}
+\phantomsection
+\label{sga3:VIIA:2.4.1}
+Consider the commutative diagram
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.4.1-eta-cartesian-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_012_eta_cartesian_square}
+\end{center}
+where \(\eta\) denotes the morphism
+\((x,y)\mapsto yx^{-1}\).\footnote{Thus \(G\) acts on itself on the
+left by right translations.}
+It induces morphisms
+\[
+  \eta':\eta^{-1}(\mathcal O_G)\longrightarrow\mathcal O_{G\times G}
+\]
+and
+\[
+  \Delta^{-1}(\eta'):
+  p^{-1}\varepsilon^{-1}(\mathcal O_G)
+  \longrightarrow\Delta^{-1}(\mathcal O_{G\times G}).
+\]
+
+For every integer \(n\geq1\), set
+\[
+  \mathfrak p^n_{G/S}
+  =
+  \varepsilon^{-1}(\mathcal O_G)/
+  \mathcal I_\varepsilon^{\,n+1}.
+\]
+\footnote{The editors corrected the original here: the relevant
+cartesian square is formed by \(\varepsilon,\eta,\Delta,p\), not by
+\(p,p,\eta,\operatorname{pr}_1\).}
+Since the square formed by \(\varepsilon,\eta,\Delta,p\) is cartesian,
+\(\Delta^{-1}(\eta')\) induces an isomorphism of
+\(\mathcal O_G\)-modules
+\[
+  p^*(\mathfrak p^n_{G/S})
+  \xrightarrow{\sim}
+  \mathcal P^n_{G/S}.
+\]
+The differential operators on \(G/S\) of order \(\leq n\) therefore
+correspond bijectively to the homomorphisms of
+\(\mathcal O_G\)-modules
+\[
+  p^*(\mathfrak p^n_{G/S})\longrightarrow\mathcal O_G,
+\]
+or equivalently to the homomorphisms of \(\mathcal O_S\)-modules
+\[
+  \mathfrak p^n_{G/S}\longrightarrow p_*(\mathcal O_G).
+\]
+Under this bijection the right-invariant differential operators
+correspond to the composites
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.4.1-invariant-factorization}
+  \input{native_diagrams/exp7/viia_00_04/diag_013_invariant_factorization_sequence}
+\end{center}
+This recovers the isomorphism of \SGARefLink{sga3:VIIA:2.4}{Theorem~2.4}.
+
+\medskip
+\noindent\textbf{2.5.}
+\phantomsection
+\label{sga3:VIIA:2.5}
+\footnote{The editors reordered this paragraph, beginning with the
+definition of \(\alpha:\operatorname{Lie}(G)\to U(G)\), and corrected
+the original as indicated in the note to \SGARefLink{sga3:VIIA:2.2}{2.2}.}
+Let \(\operatorname{Lie}(G)\) be the Lie algebra of \(G\).\footnote{In
+this expos\'e, for an \(S\)-group scheme \(G\) (respectively, an
+\(S\)-scheme \(X\)), \(\operatorname{Lie}(G)\) (respectively,
+\(\operatorname{Lie}(\operatorname{Aut}X)\)) denotes, in the notation
+of Expos\'e II,
+\(\operatorname{Lie}(G/S)(S)\) (respectively,
+\(\operatorname{Lie}(\operatorname{Aut}_S(X)/S)(S)\)). It is a
+\(\Gamma(\mathcal O_S)\)-Lie algebra by II, \SGARefLink{sga3:ii:subsection:4-11}{4.11} and \SGARefLink{sga3:ii:subsection:3-14}{3.14}.}
+We shall define a homomorphism of
+\(\Gamma(\mathcal O_S)\)-Lie algebras
+\[
+  \alpha:\operatorname{Lie}(G)\longrightarrow U(G).
+\]
+
+Let \(s:S\to I_S\) be the zero section and let \(\sigma\) be the
+deviation of \(s\) defined in \SGARefLink{sga3:VIIA:1.2.0}{1.2.0}. Recall from II, \SGARefLink{sga3:ii:subsection:4-1}{4.1} that
+\(\operatorname{Lie}(G)\) is the set of morphisms \(x:I_S\to G\)
+such that \(x\circ s=\varepsilon_G\). The composite
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.5-sigma-x}
+  \input{native_diagrams/exp7/viia_00_04/diag_014_sigma_x_sequence}
+\end{center}
+is an \(S\)-deviation of \(\varepsilon_G\), hence an element of
+\(U(G)\); in the notation of \SGARefLink{sga3:VIIA:1.2}{1.2} it is denoted \(\sigma x\).
+Moreover, by \SGARefLink{sga3:VIIA:1.2.1}{1.2.1} the map
+\[
+  \alpha:x\longmapsto\sigma x
+\]
+is an isomorphism of \(\mathcal O_S(S)\)-modules from
+\(\operatorname{Lie}(G)\) onto the submodule
+\(\operatorname{Der}(\varepsilon_G)\subset U(G)\) formed by the
+\(S\)-derivations of \(\varepsilon_G\). We show that \(\alpha\) is a
+homomorphism of Lie algebras.\footnote{See also \SGARefLink{sga3:ii:subsection:4-11}{Expos\'e II, 4.11}.}
+
+Let
+\[
+  \rho':U(G)\longrightarrow\operatorname{Dif}_{G/S}
+\]
+be the algebra homomorphism which sends an \(S\)-deviation \(d\) of
+\(\varepsilon_G\) to the left-invariant differential operator
+\({}^Gd\), as in \SGARefLink{sga3:VIIA:2.2}{2.2}.
+
+Let
+\[
+  \rho:G\longrightarrow\operatorname{Aut}_S(G)
+\]
+be the homomorphism of group functors which sends an \(S\)-morphism
+\(g:T\to G\) to right translation by \(g\) on \(G_T\), namely
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.5-rho-right-translation}
+  \input{native_diagrams/exp7/viia_00_04/diag_015_rho_translation_sequence}
+\end{center}
+Recall also from \SGARefLink{sga3:VIIA:1.5}{1.5} and II, \SGARefLink{sga3:ii:subsection:3-14}{3.14} that
+\[
+ \operatorname{Lie}(\operatorname{Aut}G)
+ =
+ \operatorname{Lie}(\operatorname{Aut}_S(G)/S)(S)
+\]
+identifies with the infinitesimal automorphisms of \(G\), that is, the
+automorphisms of \(I_S\times G\) which induce the identity on \(G\).
+
+Since \(\rho\) is a monomorphism, so is
+\[
+ \operatorname{Lie}(\rho):
+ \operatorname{Lie}(G/S)
+ \longrightarrow
+ \operatorname{Lie}(\operatorname{Aut}_S(G)/S)
+\]
+(see, for example, Expos\'e II, editorial note~50). Consequently
+\[
+  \operatorname{Lie}(\rho):
+  \operatorname{Lie}(G)\longrightarrow
+  \operatorname{Lie}(\operatorname{Aut}G)
+\]
+is injective.
+
+On the other hand, by \SGARefLink{sga3:VIIA:1.5}{1.5} the map \(\beta\), which assigns to every
+infinitesimal automorphism \(u\) of \(G\) the differential operator
+\(D_u\),
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.5-beta-sequence}
+  \input{native_diagrams/exp7/viia_00_04/diag_016_beta_automorphism_sequence}
+\end{center}
+is an isomorphism from
+\(\operatorname{Lie}(\operatorname{Aut}G)\) onto the Lie subalgebra
+of \(\operatorname{Dif}_{G/S}\) formed by the
+\(p^{-1}(\mathcal O_S)\)-derivations of \(\mathcal O_G\).
+
+For every \(x\in\operatorname{Lie}(G)\), the following commutative
+square determines the image of \(x\) under \(\operatorname{Lie}(\rho)\):
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.5-lie-rho-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_017_lie_rho_square}
+\end{center}
+It follows from this diagram that the image of
+\(\operatorname{Lie}(\rho)(x)\) under \(\beta\) is the composite
+deviation
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.5-composite-deviation}
+  \input{native_diagrams/exp7/viia_00_04/diag_018_composite_deviation_sequence}
+\end{center}
+which, by the editorial note to \SGARefLink{sga3:VIIA:2.2}{2.2}, is precisely
+\[
+  {}^G(\sigma x)=\rho'(\alpha(x)).
+\]
+Thus one obtains the commutative diagram
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:2.5-lie-algebra-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_019_lie_algebra_square}
+\end{center}
+in which \(\operatorname{Lie}(\rho)\), \(\beta\), and \(\rho'\) are
+homomorphisms of Lie algebras. Since \(\rho'\) is injective,
+\(\alpha\) is also a homomorphism of Lie algebras. Hence:
+
+\medskip
+\noindent\textbf{Proposition.}
+\phantomsection
+\label{sga3:VIIA:2.5-proposition}
+\textit{The map \(\alpha\) is an isomorphism of
+\(\mathcal O_S(S)\)-Lie algebras from \(\operatorname{Lie}(G)\) onto
+the Lie algebra of \(S\)-derivations of \(\varepsilon_G\); the latter
+is itself isomorphic, via \(\operatorname{Lie}(\rho)\), to the Lie
+algebra of left-invariant \(S\)-derivations of \(G\).}
+\footnote{There exist Lie algebras \(\mathfrak g\) over a ring \(A\)
+for which the canonical map \(\mathfrak g\to U(\mathfrak g)\) is not
+injective; see Bourbaki, \emph{Lie Groups and Lie Algebras}, I.2,
+Exercise~9. The result above shows, since \(\alpha\) factors through
+\[
+  \operatorname{Lie}(G)\longrightarrow
+  U(\operatorname{Lie}(G))\longrightarrow U(G),
+\]
+that this cannot happen for ``algebraic'' Lie algebras, namely those
+of the form \(\operatorname{Lie}(G)\) for an \(A\)-group scheme \(G\).}
+

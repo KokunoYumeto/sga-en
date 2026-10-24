@@ -1,0 +1,344 @@
+\subsubsection{}\etiquette[1.2.13]{Vbis.subsubsec1.2.13}
+We now introduce the notion of a morphism between $D$-topoi. First,
+let us specify that if $F$ and $F'$ are two categories over the same
+category $B$ and $T:F\to F'$ is a $B$-functor, a
+\emph{$B$-left adjoint} to $T$ means a functor $S:F'\to F$ left
+adjoint to $T$ such that the canonical morphisms
+$1\to T\circ S$ and $S\circ T\to1$ are $B$-morphisms of functors.
+Under these conditions, one verifies immediately that $T$ is
+cartesian and $S$ is cocartesian.
+
+\begin{enonce*}{Definition 1.2.14}\etiquette[1.2.14]{Vbis.def1.2.14}
+Let\pageoriginale $E$ and $E'$ be two $D$-topoi. A morphism from
+$E$ to $E'$ is a pair of $D$-functors
+$\Phi_{\ast}:E\to E'$ and $\Phi^{\ast}:E'\to E$, equipped with a
+$D$-adjunction
+$$
+\Hom(\Phi^{\ast}(-),-)\xrightarrow[\xi]{\sim}
+\Hom(-,\Phi_{\ast}(-)),
+$$
+such that, for every object $i$ of $D$, the pair
+$(\Phi_{\ast i},\Phi_i^{\ast})$, equipped with the adjunction induced
+by $\xi$, is a morphism of topoi from $E_i$ to $E'_i$.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.2.15}\etiquette[1.2.15]{Vbis.prop1.2.15}
+Let $E$ and $E'$ be two $D$-topoi, and let
+$(\Phi_{\ast},\Phi^{\ast}):E\to E'$ be a morphism. If $D$ is a
+$\Uu$-small category, then the pair
+$(\Gamma(\Phi_{\ast}),\Gamma(\Phi^{\ast})):
+\Ysheaf{\Gamma}(E)\to\Ysheaf{\Gamma}(E')$ is a morphism of topoi.
+\end{enonce*}
+
+This follows immediately from the preceding definition.
+
+The following lemma, whose proof is left to the reader, provides a
+way of constructing morphisms of $D$-topoi.
+
+\begin{enonce*}{Lemma 1.2.16}\etiquette[1.2.16]{Vbis.lem1.2.16}
+Let $E$ and $E'$ be two bifibered categories over the same category
+$D$, and let $\Phi$ be a \emph{cartesian} $D$-functor from $E$ to
+$E'$ such that, for every object $i$ of $D$,
+$\Phi_i:E_i\to E'_i$ has a left adjoint. Then the choice, for every
+$i$, of a left adjoint to $\Phi_i$ canonically determines a
+$D$-functor $\Psi:E'\to E$ which is $D$-left adjoint to $\Phi$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Scholium 1.2.17}\etiquette[1.2.17]{Vbis.sch1.2.17}
+Under the conditions of (\hyperref[Vbis.lem1.2.16]{1.2.16}), suppose
+that $E$ and $E'$ are two $D$-topoi and that, for every object $i$
+of $D$, every left adjoint to $\Phi_i$ is left exact. Then, if
+$\Psi:E'\to E$ is a $D$-left adjoint to $\Phi$, the pair
+$(\Phi,\Psi):E\to E'$ is a morphism of $D$-topoi.
+\end{enonce*}
+
+Now let $\mathcal E\to B$ be a category bifibered in duals of topoi
+over $B$, let $X$ and $X'$ be two $D$-objects of $B$, and let
+$\alpha:X\to X'$ be a functorial morphism. A choice of normalized
+cleavages for $\mathcal E$ and $\mathcal E^{\circ}$ then canonically
+determines a morphism
+$(\alpha_{\ast},\alpha^{\ast}):\bar X\to\bar X'$ of $D$-topoi such
+that, for every object\pageoriginale $i$ of $D$,
+$(\alpha_{\ast i},\alpha_i^{\ast}):\bar X_i\to\bar X'_i$ is equal
+to $(\alpha_{i\ast}^{\circ},\alpha_i^{\ast\circ})$, where
+$\alpha_i:X_i\to X'_i$ is the arrow of $B$ given by $\alpha$. For
+two different choices of cleavages for $\mathcal E$ and
+$\mathcal E^{\circ}$, there is a unique $D$-isomorphism between the
+resulting morphisms. (For the verification of these facts, the
+reader may consult \cite{sga4.exp.Vbis.bib.4}, (1.17).)
+
+\subsection{Ringed $D$-topoi}\etiquette[1.3]{Vbis.subsec1.3}
+
+\begin{enonce*}{Definition 1.3.1}\etiquette[1.3.1]{Vbis.def1.3.1}
+A ringed $D$-topos is a pair $(E,A)$, where $E$ is a $D$-topos and
+$A$ is a ring of $\Ysheaf{\Gamma}(E)$.
+\end{enonce*}
+
+One then verifies that, for every object $i$ of $D$, $A_i$ is a ring
+of the topos $E_i$, and that, for every morphism $m:i\to j$, the
+canonical arrow $A_i\to m^{\ast}(A_j)$ is a ring homomorphism.
+
+\begin{enonce*}{Definition 1.3.2}\etiquette[1.3.2]{Vbis.def1.3.2}
+Let $(E,A)$ and $(E',A')$ be two ringed $D$-topoi. A morphism from
+$(E,A)$ to $(E',A')$ is a pair $(\Phi,\theta)$, where
+$\Phi:E\to E'$ is a morphism of $D$-topoi and
+$\theta:A'\to\Gamma(\Phi_{\ast})(A)$ is a ring homomorphism.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 1.3.3}\etiquette[1.3.3]{Vbis.rem1.3.3}
+A morphism $\Phi:(E,A)\to(E',A')$ of ringed $D$-topoi induces a
+morphism
+$(\Gamma(\Phi),\theta):(\Ysheaf{\Gamma}(E),A)\to
+(\Ysheaf{\Gamma}(E'),A')$ of ringed $\Uu$-topoi when $D$ is a
+$\Uu$-small category (\cf \hyperref[Vbis.prop1.2.15]{1.2.15}).
+\end{enonce*}
+
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[1.3.4]{Vbis.subsubsec1.3.4}
+Let $\mathcal E\to B$ be a category bifibered in duals of topoi over
+$B$, and let $\mathcal O$ be a ring of
+$\Ysheaf{\Gamma}(\mathcal E^{\circ})=
+\Hom_{B^{\circ}}(B^{\circ},\mathcal E^{\circ})$. If
+$X:D^{\circ}\to B$ is a $D$-object of $B$, the $D$-topos $\bar X$
+(\cf \hyperref[Vbis.subsubsec1.2.5]{(1.2.5)}) is naturally ringed by
+$(\mathcal O\mathbin{.}X^{\circ}):D\to\mathcal E$; the resulting
+ringed $D$-topos is denoted by $(\bar X,\mathcal O)$. If
+$\alpha:X\to X'$ is a functorial morphism, the morphism
+$(\alpha_{\ast},\alpha^{\ast}):\bar X\to\bar X'$ (\cf
+\hyperref[Vbis.sch1.2.17]{1.2.17}) canonically induces a morphism
+$(\bar X,\mathcal O)\to(\bar X',\mathcal O)$ of ringed $D$-topoi,
+again denoted by $\alpha$.
+
+\subsubsection{}\etiquette[1.3.5]{Vbis.subsubsec1.3.5}
+A ringed $D$-topos $(E,A)$ canonically defines a category
+$\Ysheaf{\Mod}(E,A)$ bifibered in abelian categories over $D$, whose
+fiber at an object $i$ of\pageoriginale $D$ is the category
+$\Mod(E_i,A_i)$ of modules on the ringed topos $(E_i,A_i)$. With
+this notation, the category of modules of $\Ysheaf{\Gamma}(E)$ over
+$A$, denoted by $\Mod(\Ysheaf{\Gamma}(E),A)$, identifies with the
+category $\Hom_D(D,\Ysheaf{\Mod}(E,A))$.
+
+\subsubsection{}\etiquette[1.3.6]{Vbis.subsubsec1.3.6}
+Let $\varphi=(\Phi,\theta):(E,A)\to(E',A')$ be a morphism of ringed
+$D$-topoi. It defines two functors
+$\varphi_{\ast}:\underline{\Mod}(E,A)\to
+\underline{\Mod}(E',A')$ and
+$\varphi^{\ast}:\underline{\Mod}(E',A')\to\Mod(E,A)$ between the
+corresponding categories of modules:
+
+\begin{itemize}
+\item Let $M$ be an object of $\Ysheaf{\Mod}(E,A)$ over an object
+$i$ of $D$. Then $\Phi_{\ast}(M)$ is a module over
+$\Phi_{\ast}(A_i)$, and the morphism
+$\theta_i:A'_i\to\Phi_{\ast}(A_i)$ makes it an $A'_i$-module,
+denoted by $\varphi_{\ast}(M)$. The functor $\varphi_{\ast}$ is
+called the \emph{direct-image functor under the morphism} $\varphi$.
+
+\item Let $M'$ be an object of $\Ysheaf{\Mod}(E',A')$ over an object
+$i$ of $D$. Then $\Phi^{\ast}(M')$ is a module over
+$\Phi^{\ast}(A'_i)$, and
+$\varphi^{\ast}(M')=\Phi^{\ast}(M')
+\otimes_{\Phi^{\ast}(A'_i)}A_i$ is canonically endowed with an
+$A_i$-module structure. By means of
+(\hyperref[Vbis.lem1.2.16]{1.2.16}), this defines a functor
+$\varphi^{\ast}$ left adjoint to $\varphi_{\ast}$, called the
+\emph{inverse-image functor under the morphism} $\varphi$.
+\end{itemize}
+
+\paragraph{}\etiquette[1.3.6.1]{Vbis.par1.3.6.1}
+We say that $\varphi$ is \emph{flat} if the functor
+$\Gamma(\varphi^{\ast})$ is exact.
+
+\begin{enonce*}{Proposition 1.3.7}\etiquette[1.3.7]{Vbis.prop1.3.7}
+Let $f:D'\to D$ be a functor, and let $(E,A)$ be a ringed $D$-topos.
+Then the canonical functor
+$$
+f^{\ast}:\Mod(\Ysheaf{\Gamma}(E),A)\longrightarrow
+\Mod(\Ysheaf{\Gamma}(\fprod{E}{D'}{D}),A\circ f)
+$$
+has both a right and a left adjoint if $D'$ is a $\Uu$-small
+category. In particular, it is exact.
+\end{enonce*}
+
+This follows immediately from (\hyperref[Vbis.lem1.2.10]{1.2.10})
+and the identification
+$\Hom_D(D,\Ysheaf{\Mod}(E,A))\simeq
+\Mod(\Ysheaf{\Gamma}(E),A)$.
+
+In accordance\pageoriginale with the general notation, we denote the
+left (\resp right) adjoint to $f^{\ast}$ by $f_!$ (\resp
+$f_{\ast}$).
+
+\setcounter{subsubsection}{7}
+\subsubsection{}\etiquette[1.3.8]{Vbis.subsubsec1.3.8}
+The considerations below provide a convenient computational method
+for derived functors of the form
+$$
+\sisi{\RR^{+}}{R}\Gamma(\varphi_{\ast}):
+D^{+}(\Ysheaf{\Gamma}(E),A)\to
+D^{+}(\Ysheaf{\Gamma}(E'),A'),
+$$
+where $\varphi:(E,A)\to(E',A')$ is a morphism of ringed $D$-topoi
+(\cf (\hyperref[Vbis.subsubsec1.3.6]{1.3.6})). [If
+$(S,\mathcal O_S)$ is a ringed topos, we denote by
+$D^{+}(S,\mathcal O_S)$ the bounded-below derived
+category\nde{If $f:(S,\mathcal O_S)\rightarrow(T,\mathcal O_T)$ is
+a flat morphism of ringed topoi, we simply write $f^*$ (and not
+$L^+(f^*)$) for the derived functor
+$$f^*:D^+(T,\mathcal O_T)\rightarrow D^+(S,\mathcal O_S),$$
+as in the original version.} of the category of
+$\mathcal O_S$-modules on $S$.]
+
+\subsubsection{}\etiquette[1.3.9]{Vbis.subsubsec1.3.9}
+This formal calculation may moreover be applied in other contexts,
+such as ``descent in $\ell$-adic cohomology'' (\cf \SGA 5).
+
+\begin{enonce*}{Proposition 1.3.10}\etiquette[1.3.10]{Vbis.prop1.3.10}
+Let $D$ be a $\Uu$-small category. If $(E,A)$ is a ringed
+$D$-topos, denote by $I_{(E,A)}$ the class of objects of
+$\Mod(\Ysheaf{\Gamma}(E),A)$ isomorphic to an object of the form
+$\prod_{i\in\ob(D)}e_{i\ast}(Q_i)$, where, for every object $i$ of
+$D$, $Q_i$ is totally acyclic \emph{(\cf V \hyperref[V.def4.1]{4.1})}\footnote{``Flasque''
+in the terminology of V.}; $I_{(E,A)}$ has the following properties:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every object $F$ of $I_{(E,A)}$ and every object $i$ of
+$D$, $e_i^{\ast}(F)$ is totally acyclic.
+
+\item Every object of $\Mod(\Ysheaf{\Gamma}(E),A)$ embeds into an
+object of $I_{(E,A)}$.
+
+\item $I_{(E,A)}$ is stable under finite direct sums.
+
+\item For every morphism
+$\varphi:(E,A)\to(E',A')$ of ringed $D$-topoi, the functor
+$\Gamma(\varphi_{\ast})$ carries every acyclic complex in
+$C^{+}(\Ysheaf{\Gamma}(E),A)$ formed of objects of $I_{(E,A)}$ to
+an acyclic complex formed of objects of $I_{(E',A')}$.
+\end{enumerate}
+\end{enonce*}
+
+\noindent{\underline{\emph{Proof}}}
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item In view of the explicit expression for $e_i^{\ast}$ (\cf
+\hyperref[Vbis.cor1.2.11]{(1.2.1.1)}), it suffices to prove the following lemma:
+
+\begin{enonce*}{Lemma 1.3.10.1}\etiquette[1.3.10.1]{Vbis.lem1.3.10.1}
+Let\pageoriginale $(S,\mathcal O_S)$ be a ringed topos, and let
+$(F_t)_{t\in T}$ be a family of totally acyclic
+$\mathcal O_S$-modules indexed by a $\Uu$-small set $T$. Then
+$\prod_{t\in T}F_t$ is totally acyclic.
+\end{enonce*}
+
+Let $X$ be an object of $S$. There is a spectral sequence
+\begin{equation*}
+H^p\left(X,{\mathop{\prod}_{t\in T}}^{(q)}F_t\right)Rightarrow
+\mathop{\prod}_{t\in T}H^{p+q}(X,F_t)\tag{1.3.10.2}
+\end{equation*}\etiquette[1.3.10.2]{Vbis.eq1.3.10.2}
+where $\prod_{t\in T}^{(q)}$ denotes the $q$-th derived functor of
+the ``product indexed by $T$'' functor. Since
+$\prod_{t\in T}^{(q)}F_t$ is the sheaf associated with the presheaf
+$U\mapsto\prod_{t\in T}H^q(U,F_t)$,
+\eqhyperref[Vbis.eq1.3.10.2]{1.3.10.2} degenerates and gives
+isomorphisms
+\begin{equation*}
+H^n\left(X,\prod_{t\in T}F_t\right)\xrightarrow{\sim}
+\prod_{t\in T}H^n(X,F_t)\tag{1.3.10.3}
+\end{equation*}\etiquette[1.3.10.3]{Vbis.eq1.3.10.3}
+and hence, finally,
+$H^n(X,\prod_{t\in T}F_t)=0$ for every $n>0$.
+
+\item Let $F$ be an object of $\Mod(\Ysheaf{\Gamma}(E),A)$, and put
+$F_i=e_i^{\ast}(F)$. For every $i$, choose a monomorphism
+$F_i\to Q_i$, where $Q_i$ is
+totally acyclic in $\Mod(E_i,A_i)$. Then
+$e_{i\ast}(F_i)\to e_{i\ast}(Q_i)$ is a monomorphism (because
+$e_{i\ast}$ has a left adjoint), and the canonical arrow
+\begin{equation*}
+F\to\prod_{i\in\Ob(D)}e_{i\ast}(F_i)\to
+\prod_{i\in\Ob(D)}e_{i\ast}(Q_i)\tag{1.3.10.4}
+\end{equation*}\etiquette[1.3.10.4]{Vbis.eq1.3.10.4}
+is again a monomorphism, as is immediately verified.
+
+\item The proof is left to the reader.
+
+\item The reader may also verify that $\Gamma(\varphi_{\ast})$
+carries an object of $I_{(E,A)}$ to an object of $I_{(E',A')}$. Once
+this point is established, in view of (i), it suffices to verify the
+following lemma:
+\end{enumerate}
+
+\begin{enonce*}{Lemma 1.3.10.5}\etiquette[1.3.10.5]{Vbis.lem1.3.10.5}
+If\pageoriginale $0\to F\to G\to H\to0$ is a short exact sequence
+in $\Mod(\Ysheaf{\Gamma}(E),A)$, with $F,G\in I_{(E,A)}$, then the
+sequence
+$$
+0\to\Gamma(\varphi_{\ast})(F)\to
+\Gamma(\varphi_{\ast})(G)\to
+\Gamma(\varphi_{\ast})(H)\to0
+$$
+is exact in $\Mod(\Ysheaf{\Gamma}(E'),A')$.
+\end{enonce*}
+
+It suffices to observe that $e_i^{\ast}(H)$ is acyclic for every
+object $i$ of $D$, and that $\Gamma(\varphi_{\ast})$ is computed
+fiber by fiber. This completes the proof of
+(\hyperref[Vbis.prop1.3.10]{1.3.10}).
+
+\begin{enonce*}{Corollary 1.3.11}\etiquette[1.3.11]{Vbis.cor1.3.11}
+Let $\varphi:(E,A)\to(E',A')$ be a morphism of ringed $D$-topoi.
+The functor $\sisi{\RR^+}{R}\Gamma(\varphi_{\ast})$ can be computed
+by means of resolutions formed of objects of $I_{(E,A)}$.
+\end{enonce*}
+
+Let $L\subset K^{+}(\Ysheaf{\Gamma}(E),A)$ be the full subcategory
+of closed complexes of objects of $I_{(E,A)}$. By
+((\hyperref[Vbis.prop1.3.10]{1.3.10}), (ii)), $L$ is a triangulated
+subcategory, and the theorem (\hyperref[Vbis.subsec5.1]{5.1}) of
+[\cite{sga4.exp.Vbis.bib.7}, Chapter 1] applies to it.
+
+\begin{enonce*}{Corollary 1.3.12}\etiquette[1.3.12]{Vbis.cor1.3.12}
+Let $\varphi:(E,A)\to(E',A')$ be a morphism of ringed $D$-topoi.
+For every object $i$ of $D$, denote by
+$\varphi_i:(E_i,A_i)\to(E'_i,A'_i)$ the induced morphism of ringed
+topoi over $i$. Then the diagram
+\[
+\xymatrix@C=2.75cm@R=1.75cm{
+D^{+}(\Gamma(E),A) \ar[r]^{\sisi{\RR^{+}(e_i^{\ast})}{e_i^{\ast}}}
+\ar[d]_{\sisi{\RR^{+}}{R}\Gamma(\varphi_{\ast})}&
+D^{+}(E_i,A_i) \ar[d]^{\sisi{\RR^{+}}{R}\varphi_{i\ast}}\\
+D^{+}(\Gamma(E'),A')
+\ar[r]_{\sisi{\RR^{+}(e_i^{\ast})}{e_i^{\ast}}}&D^{+}(E'_i,A'_i)
+}
+\]
+is essentially commutative.
+\end{enonce*}
+
+There is a morphism
+$$
+\sisi{\RR^{+}(e_i^{\ast})}{e_i^{\ast}}\circ
+\sisi{\RR^{+}}{R}\Gamma(\varphi_{\ast})\to
+\sisi{\RR^{+}}{R}\varphi_{i\ast}\circ
+\sisi{\RR^{+}(e_i^{\ast})}{e_i^{\ast}}
+$$
+which is verified to be an isomorphism by
+(\hyperref[Vbis.prop1.3.10]{1.3.10}).
+
+\begin{enonce*}[remark]{Remark 1.3.13}\etiquette[1.3.13]{Vbis.rem1.3.13}
+Denote\pageoriginale by $\mathcal A_{(E,A)}$ the class of objects
+$F$ of $\Mod(\Ysheaf{\Gamma}(E),A)$ such that $e_i^{\ast}(F)$ is
+totally acyclic for every object $i$ of $D$. It follows from the
+proof of (\hyperref[Vbis.prop1.3.10]{1.3.10}) that
+$\sisi{\RR^{+}}{R}\Gamma(\varphi_{\ast})$ can be computed by means
+of resolutions formed of objects of $\mathcal A_{(E,A)}$; this is
+what is done, in particular, in the introduction by using the
+``canonical flasque resolution''\footnote{See Exposé XVII for the
+generalization of this notion.}. By
+[(\hyperref[Vbis.prop1.3.10]{1.3.10})(i)], one has
+$I_{(E,A)}\subset\mathcal A_{(E,A)}$, but we will use $I_{(E,A)}$
+explicitly in \hyperref[Vbis.sec2]{Section 2}.
+\end{enonce*}

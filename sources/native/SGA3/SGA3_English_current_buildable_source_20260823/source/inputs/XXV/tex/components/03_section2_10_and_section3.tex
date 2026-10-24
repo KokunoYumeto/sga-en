@@ -1,0 +1,187 @@
+\begin{sgastatement}{Corollary 2.10}
+\(\pi\) is ``generically associative'' and \(\sigma\) is a ``generic
+inverse'': if \(x,y,z\in\Omega(S)\), and if the expressions below are
+defined (as they always are over an open subset of \(\Omega\) containing
+the unit section), then
+\[
+ \pi(x,\pi(y,z))=\pi(\pi(x,y),z),\qquad
+ \pi(x,\sigma(x))=e=\pi(\sigma(x),x).
+\]
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:corollary:2:10}
+
+Indeed, the two sides of each formula define morphisms between smooth
+\(\mathbb Z\)-schemes of finite presentation, and the morphisms agree on
+the generic fibers by \SGARefLink{sga3:xxv:proposition:2-9:item:iii}{2.9(iii)}.\footnote{The French source reads
+``by \SGARefLink{sga3:xxv:proposition:2-9:item:iii}{2.10(iii)}''; the intended reference is Proposition 2.9(iii).}
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxv:corollary:2-11}Corollary 2.11}
+Let \(\alpha\in R\), and let \(S\) be a scheme. Suppose that
+\(x,y\in\mathbb G_a(S)\) satisfy
+\[
+ (p_\alpha(x),p_{-\alpha}(y))\in V_1(S),
+ \qquad 1+xy\in\mathbb G_m(S).
+\]
+These conditions define an open subset of \(\mathbb G_{a,S}^2\)
+containing the section \((0,0)\). Then
+\[
+ \pi(p_\alpha(x),p_{-\alpha}(y))
+ =
+ \left(
+ p_{-\alpha}\!\left(\frac{y}{1+xy}\right),
+ \alpha^\ast(1+xy),
+ p_\alpha\!\left(\frac{x}{1+xy}\right)
+ \right).
+\]
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:corollary:2:11}
+
+The proof is the same as above, by \SGARefLink{sga3:xx:2.1}{Exposé XX, 2.1}.
+
+\SGASection{3}{Existence theorem: conclusion of the proof}
+\SGARefTarget{sga3:xxv:section:3}
+
+For convenience, make the following definition.
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxv:definition:3-1}Definition 3.1}
+Let \(S\) be a scheme and \(G\) an \(S\)-group scheme. The group \(G\)
+is called \emph{admissible} if there is an open immersion of
+\(S\)-schemes
+\[
+ i\colon\Omega_S=\Omega\times S\longrightarrow G
+\]
+such that:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.2em]
+\item the diagram
+\[
+\begin{tikzcd}[column sep=4.5em,row sep=3.2em]
+(V_1)_S
+  \arrow[r]
+  \arrow[d,"\pi"]
+&
+\Omega_S\times_S\Omega_S
+  \arrow[r,"i\times_S i"]
+&
+G\times_SG
+  \arrow[d,"\pi_G"]
+\\
+\Omega_S
+  \arrow[rr,"i_S"]
+&&
+G
+\end{tikzcd}
+\]
+is commutative, where \(\pi_G\) denotes the multiplication morphism
+of \(G\);
+\item there is a finite set of sections \(a_j\in\Omega(S)\) such that
+the open subsets \(i(a_j)\,i(\Omega_S)\) cover \(G\).
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:definition:3:1}
+
+By ``Weil's theorem'' (\SGARefLink{sga3:xviii:corollary:3-13:item:iii}{Exposé XVIII, 3.13(iii)} and (iv)), we have:
+
+\begin{sgastatement}{Lemma 3.2}
+If every admissible \(S\)-group is affine whenever \(S\) is étale and
+of finite type over \(\mathbb Z\), then there exists an admissible
+affine \(\mathbb Z\)-group.
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:lemma:3:2}
+
+We now have:
+
+\begin{sgastatement}{Lemma 3.3}
+Let \(S\) be a scheme and \(G\) an admissible \(S\)-group. Then \(G\)
+is smooth and of finite presentation over \(S\), with affine,
+connected, semisimple fibers.
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:lemma:3:3}
+
+Since \(\Omega_S\) is smooth and of finite presentation over \(S\),
+with connected fibers, the same is true of \(G\) by condition (ii).
+To prove \SGARefLink{sga3:xxv:lemma:3:3}{3.3}, we may therefore suppose that \(S\) is the spectrum of a
+field \(K\). Identify \(\Omega_K\) with its image in \(G\). Plainly
+\(\Omega_K\) is the product
+\[
+ \left(\prod_{\alpha\in R^-}U_{\alpha,K}\right)
+ T_K
+ \left(\prod_{\alpha\in R^+}U_{\alpha,K}\right)
+\]
+of the subgroups \(T_K\) and \(U_{\alpha,K}\), \(\alpha\in R\), of
+\(G\). Thus the Lie algebra of \(G\) is identified with the direct sum
+\[
+ \operatorname{Lie}(T_K)
+ \oplus
+ \bigoplus_{\alpha\in R}\operatorname{Lie}(U_{\alpha,K}).
+\]
+The inner automorphism defined by a section of \(T_K\) acts on
+\(U_{\alpha,K}\), and hence on \(\operatorname{Lie}(U_{\alpha,K})\),
+through the character
+\[
+ \alpha\in R\subset M
+ \simeq\operatorname{Hom}_{K\text{-gr.}}(T_K,\mathbb G_{m,K}).
+\]
+The preceding decomposition of \(\operatorname{Lie}(G)\) is therefore
+exactly its decomposition under the adjoint action of \(T\). Thus the
+roots of \(G_K\) with respect to \(T_K\) are the elements
+\(\alpha\in R\).
+
+Apply \SGARefLink{sga3:xix:corollary:1-13}{Exposé XIX, 1.13}. Let \(T_\alpha\) be the maximal torus of
+\(\ker(\alpha)\subset T_K\), and put
+\[
+ Z_\alpha=\operatorname{Centr}_G(T_\alpha).
+\]
+It is enough to prove that each \(Z_\alpha\) is reductive. But
+\[
+ Z_\alpha\cap\Omega_K
+ =
+ \left(
+ \prod_{\substack{\beta\in R^-\\\beta|_{T_\alpha}=e}}
+ U_{\beta,K}
+ \right)
+ T_K
+ \left(
+ \prod_{\substack{\beta\in R^+\\\beta|_{T_\alpha}=e}}
+ U_{\beta,K}
+ \right).
+\]
+The roots vanishing on \(T_\alpha\) are the rational multiples of
+\(\alpha\), hence precisely \(\alpha\) and \(-\alpha\). Consequently,
+\[
+ Z_\alpha\cap\Omega_K
+ =U_{-\alpha,K}\,T_K\,U_{\alpha,K}.
+\]
+By \SGARefLink{sga3:xx:3.4}{Exposé XX, 3.4}, to prove \(Z_\alpha\) reductive it is enough to show
+that \(U_{\alpha,K}\) and \(U_{-\alpha,K}\) do not commute, and this
+follows immediately from \SGARefLink{sga3:xxv:corollary:2-11}{2.11}.
+
+It follows from \SGARefLink{sga3:xxv:lemma:3:2}{3.2} and \SGARefLink{sga3:xxv:lemma:3:3}{3.3} that the proof will be complete once the
+following lemma is proved.
+
+\begin{sgastatement}{Lemma 3.4}
+Let \(S\) be a locally noetherian scheme of dimension at most \(1\),
+and let \(G\) be a smooth \(S\)-group of finite type, with affine,
+connected, semisimple fibers. Then \(G\) is affine (and hence
+semisimple).
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:lemma:3:4}
+
+\noindent\textit{Nota.}\quad
+In Exposé XVI it was shown that \SGARefLink{sga3:xxv:lemma:3:4}{3.4} holds without any hypothesis on
+\(S\), but the proof is comparatively delicate. Since only the special
+case \SGARefLink{sga3:xxv:lemma:3:4}{3.4} is needed here, we give a direct proof.
+
+Consider the Lie algebra \(\mathfrak g\) of \(G\), a locally free
+\(\mathcal O_S\)-module, and the adjoint representation
+\[
+ \operatorname{Ad}\colon
+ G\longrightarrow\operatorname{GL}_{\mathcal O_S}(\mathfrak g).
+\]
+To prove that \(G\) is affine over \(S\), it is enough to prove that
+\(\operatorname{Ad}\) is affine. Since \(G\) is smooth with connected
+fibers, it is separated over \(S\) (Exposé VI\textsubscript{B}, \SGARefLink{cor:sga3-VIB-5.5}{5.5}),
+so \(\operatorname{Ad}\) is separated. By the result proved in the
+Appendix (see \SGARefLink{sga3:xxv:proposition:4:1}{4.1}), it suffices to show that \(\operatorname{Ad}\) is
+quasi-finite. We are thus reduced to the case in which \(S\) is the
+spectrum of a field. In that case \(G\) is affine and therefore
+semisimple, and the assertion is \SGARefLink{sga3:xxii:prop:5.7.14}{Exposé XXII, 5.7.14}.

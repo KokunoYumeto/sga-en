@@ -1,0 +1,92 @@
+\subsection{Induced and coinduced root data}\label{sga3:XXI:6.5}
+
+Let \(\cR=(M,M^\ast,R,R^\ast)\) be a root datum, and let
+\(N\subset M\) be a subgroup containing the roots, that is,
+\[
+ \Gamma_0(R)\subset N\subset M.
+\]
+The canonical linear map \(i_N:N\to M\) gives, by transposition, a
+linear map
+\[
+ {}^ti_N:M^\ast\longrightarrow N^\ast.
+\]
+Put
+\[
+ R_N=R,
+ \qquad
+ R_N^\ast={}^ti_N(R^\ast).
+\]
+
+\begin{lemma}\label{sga3:XXI:6.5.1}
+The quadruple
+\[
+ \cR_N=(N,N^\ast,R_N,R_N^\ast)
+\]
+is a root datum, and \(i_N\) is a morphism.
+\end{lemma}
+
+\begin{proof}
+First, \({}^ti_N\) induces an isomorphism from \(R^\ast\) onto
+\(R_N^\ast\). Indeed, if \(\alpha,\beta\in R\) and
+\[
+ {}^ti_N(\alpha^\ast)={}^ti_N(\beta^\ast),
+\]
+then
+\[
+ (\alpha^\ast,x)=(\beta^\ast,x)
+\]
+for every \(x\in N\), in particular for \(x\in R\). Hence
+\(\alpha=\beta\) by \ref{sga3:XXI:1.1.4}. The rest follows without
+difficulty.
+\end{proof}
+
+\begin{definition}\label{sga3:XXI:6.5.2}
+The root datum \(\cR_N\) is called the root datum
+\emph{induced by \(\cR\) on \(N\)}.
+\end{definition}
+
+\begin{lemma}\label{sga3:XXI:6.5.3}
+Let \(f:\cR'\to\cR\) be a morphism, and put
+\[
+ N=f(M')\subset M.
+\]
+Then \(f\) factors uniquely through \(i_N\).
+\end{lemma}
+
+In particular, up to isomorphism, the isogenies
+\(\cR'\to\cR\) correspond bijectively to the finite-index subgroups of
+\[
+ M/\Gamma_0(R).
+\]
+This sharpens \ref{sga3:XXI:6.2.7}.
+
+Now let \(N^\ast\subset M^\ast\) be a subgroup containing \(R^\ast\).
+Define the root datum \emph{coinduced by \(\cR\) on \(N^\ast\)} by
+\[
+ \cR^{N^\ast}=(\cR^\ast_{N^\ast})^\ast.
+\]
+There is a canonical morphism
+\[
+ p^{N^\ast}:\cR\longrightarrow\cR^{N^\ast}.
+\]
+
+\begin{lemma}\label{sga3:XXI:6.5.4}
+Let \(f:\cR'\to\cR\) be a morphism. There exist subgroups
+\(N\subset M\) and \(N'^\ast\subset M'^\ast\) such that \(f\) factors
+as
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=large]
+\cR' \arrow[r,"f"] \arrow[d,"p^{N'^\ast}"']
+  & \cR \\
+\cR'^{\,N'^\ast} \arrow[r,"f_0","\sim"']
+  & \cR_N \arrow[u,"i_N"']
+\end{tikzcd}
+\end{center}
+where \(f_0\) is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+Take \(N=f(M')\), as in \ref{sga3:XXI:6.5.3}. The resulting morphism
+\(M'\to N\) is surjective, so its transpose is injective. Take its
+image for \(N'^\ast\).
+\end{proof}

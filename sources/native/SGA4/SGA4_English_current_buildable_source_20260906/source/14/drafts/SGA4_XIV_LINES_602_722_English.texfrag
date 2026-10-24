@@ -1,0 +1,113 @@
+\section{A variant of dimension}\etiquette[2]{XIV.sec2}\pageoriginale
+
+\subsection{}\etiquette[2.1]{XIV.subsec2.1}
+Let $X$ be a scheme. We shall write
+\begin{equation*}
+d(x)=\dim\bar{\{x\}}\tag{2.1.1}
+\end{equation*}\etiquette[2.1.1]{XIV.eq2.1.1}
+for $x\in X$, where $\bar{\{x\}}$ is the closure of $\{x\}$. If $F$
+is an abelian sheaf on $X$, we put
+\begin{equation*}
+d(F)=\sup \{d(x)\mid x\in X \quaet F_{\bar{x}}\neq 0\}{\quoi}.\tag{2.1.2}
+\end{equation*}\etiquette[2.1.2]{XIV.eq2.1.2}
+We shall need a corrected notion in the local case:
+
+\begin{enonce*}{Definition 2.2}\etiquette[2.2]{XIV.def2.2}
+Let $Y$ be the spectrum of a universally catenary Noetherian local
+ring (\EGA IV 5.6.2), and let $f:X\rightarrow Y$ be a morphism of
+finite type. Let $x\in X$ and $y=f(x)$. We put
+$$
+\delta(x)=\dim\bar{\{y\}}+\degtr k(x)/k(y){\quoi}.
+$$
+If $F$ is an abelian sheaf on $X$, we put
+$$
+\delta(F)=\sup \{\delta(x)\mid x\in X\quaet F_{\bar{x}}\neq 0\}{\quoi}.
+$$
+\end{enonce*}
+
+\begin{enonce*}{Proposition 2.3}\etiquette[2.3]{XIV.prop2.3}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let $i:X'\rightarrow X$ be an immersion and let $x'\in X'$.
+Then $\delta(i(x'))=\delta(x')$.
+
+\item Let $X_{0}$ be the closed fiber of $X/Y$. We have
+$$
+\delta(x)=
+\begin{cases}
+d(x) & \mbox{if } \bar{\{x\}}\cap X_{0}\neq ∅\\
+d(x)+1 & \mbox{if } \bar{\{x\}}\cap X_{0}=∅{\quoi};
+\end{cases}
+$$
+
+\item $\delta(x)=d(x)$ if $f$ is proper.
+\end{enumerate}
+\end{enonce*}
+
+\noindent
+\emph{Proof}.\pageoriginale Assertion (i) follows immediately from the
+definition. Since $\bar{\{x\}}\cap X_{0}$ is nonempty when $f$ is
+proper, (iii) follows from (ii). For (ii), we may replace $X$ by
+$\bar{\{x\}}$ and $Y$ by $\bar{\{y\}}$ (with their induced reduced
+structures), as is permitted by (i). Let $x'\in X$ and $y'=f(x')$.
+We have the formula (\EGA IV 5.6.1.1)
+$$
+\dim \Oo_{X,x'}=\dim
+\Oo_{Y,y'}+\degtr k(x)/k(y) - \degtr k(x')/k(y'){\quoi}.
+$$
+
+Suppose that $X_{0}\neq ∅$. It is then clear that
+$\displaystyle{\mathop{\sup}_{x'}}$
+$\{\dim \Oo_{X,x'}\}=\dim X$ is attained by taking $x'$ to be a closed
+point of $X_{0}$, whence
+$$
+\dim X=\dim \Oo_{X,x'}=\dim Y + \degtr k(x)/k(y)=\delta(x){\quoi}.
+$$
+If $X_{0}=∅$, the supremum is plainly attained by taking $x'$ to
+be a closed point in its fiber $f^{-1}(y')$, with
+$\dim\bar{\{y'\}}=1$. Such points exist because the $y'\in Y$ with
+$\dim\bar{\{y'\}}=1$ form a very dense set (\EGA IV 10.1.3,
+\sisi{10.5.9, 1.8.4}{10.3.1, 10.4.1, 10.5.9}). Thus
+\begin{align*}
+\dim X=\dim \Oo_{X,x'} &= \dim \Oo_{Y,y'}+\degtr k(x)/k(y)\\
+&= \dim Y-1 +\degtr k(x)/k(y)=\delta(x) \sisi{=}{-} 1{\quoi},
+\end{align*}
+which proves the result.
+
+\begin{enonce*}{Proposition 2.4}\etiquette[2.4]{XIV.prop2.4}
+Let $f:X\rightarrow Y$ be a morphism of schemes of finite type over
+the spectrum of a field $k$. Let $x\in X$, let $y=f(x)$, and let
+$y_{0}$ be a specialization of $y$. Let $f':X'\rightarrow Y'$ be the
+strict localization of $f$ at a geometric point $\bar{y}_{0}$ above
+$y_{0}$, and let $x'\in X'$ be a point above $x$. Then
+$$
+\delta(x')=d(x)-d(y_{0}){\quoi}.
+$$
+\end{enonce*}
+
+\noindent
+\emph{Proof}.\pageoriginale We have
+\begin{align*}
+d(x) &= d(y)+\degtr k(x)/k(y)\\
+\delta(x') &= d(y')+\degtr k(x')/k(y'){\quoi},
+\end{align*}
+where $y'=f'(x')$. Moreover,
+$$
+\degtr k(x)/k(y)=\degtr k(x')/k(y'){\quoi},
+$$
+because the extensions $k(x')/k(x)$ and $k(y')/k(y)$ are algebraic.
+It therefore remains to prove that
+$$
+d(y')=d(y)-d(y_{0}){\quoi}.
+$$
+
+We may assume that $y$ is maximal in $Y$, and hence that $y'$ is
+maximal in $Y'$. Then
+\begin{align*}
+d(y') &= \dim \Oo_{Y',\bar{y}_{0}}\\
+      &= \dim \Oo_{Y,y_{0}}\quad \text{\rm (\EGA IV 6.1.3)}\\
+      &= \sisi{\dim Y}{\dim_{y_0} Y} -d(y_{0})\quad \text{\rm (\EGA IV 5.2.3.1)}\\
+      &= d(y)-d(y_{0}){\quoi},
+\end{align*}
+which proves the result.

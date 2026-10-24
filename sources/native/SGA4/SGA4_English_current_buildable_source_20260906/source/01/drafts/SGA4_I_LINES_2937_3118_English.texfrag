@@ -1,0 +1,161 @@
+\subsection{Ind-objects and ind-representable functors}\etiquette[8.2]{I.sec8.2}
+
+\subsubsection{}\etiquette[8.2.1]{I.sec8.2.1}
+In what follows, we fix a $𝒰$-category $C$, which we always regard as
+embedded in the category $\widehat{C}$ of $𝒰$-presheaves by means of
+the canonical functor \hyperref[I.sec1.3.1]{(1.3.1)}
+\hypertarget{sga4.exp.I.equation.8.2.1.1}{}$$
+\displaylines{\rlap{$(8.2.1.1)$}\hfill h:C\hookrightarrow
+  \widehat{C}{\quoi}.\hfill}
+$$
+An \emph{ind-object of} $C$ (or an \emph{inductive system} of $C$) is
+any functor
+\hypertarget{sga4.exp.I.equation.8.2.1.2}{}$$
+\displaylines{\rlap{$(8.2.1.2)$}\hfill \varphi:I\longrightarrow
+  C{\quoi},\hfill}
+$$
+where\pageoriginale $I$ is a \emph{filtered} category
+(\hyperref[I.def2.7]{2.7}), called the \emph{index category} of the
+ind-object. (Apart from this, $I$ is arbitrary; in particular, we do not
+require $I$ to be a $𝒰$-category.) It will often be convenient to denote
+an ind-object $\varphi$ by the indexed notation $(X_i)_{i\in \ob I}$, or
+even (by another abuse of notation) $(X_i)_{i\in I}$, or $(X_i)_i$, or
+$(X_i)$, where $X_i=\varphi(i)$ for $i\in \ob I$. This notation is no
+more and no less abusive than the notation classically used for inductive
+systems indexed by filtered ordered sets (where the transition morphisms
+are likewise not mentioned). The $X_i$ are called the \emph{component
+objects} of the ind-object $𝒳$. Note that, in the general case considered
+here, the ``\emph{transition morphisms}'' $\varphi(f)$ of the inductive
+system are indexed by the set $F\ell I$ of arrows of $I$, which in
+general is not identified with a subset of $\Ob I\times\Ob I$; in other
+words, for given $i$ and $j$, with $j$ an upper bound of $i$, there may
+exist more than one transition morphism from $X_i$ to $X_j$.
+
+\subsubsection{}\etiquette[8.2.2]{I.sec8.2.2}
+The most useful ind-objects $𝒳=(X_i)_{i\in I}$ of $C$ are those for
+which the index category $I$ is essentially small \hyperref[I.def8.1.8]{(8.1.8)}; such an
+ind-object is called \emph{essentially small}. If $(X_i)_{i\in I}$ is
+such an object, then, using the fact that small inductive limits are
+representable in $\widehat{C}$ \hyperref[I.prop3.1]{(3.1)}, we may consider
+\hypertarget{sga4.exp.I.equation.8.2.2.1}{}$$
+\displaylines{\rlap{$(8.2.2.1)$}\hfill
+L(𝒳)\mathrel{\mathop=^{\rm def}}
+  \varinjlim h\cdot 𝒳 = \varinjlim_i X_i \in \ob
+  \widehat{C}{\quoi},\hfill}
+$$
+where the last limit is taken \emph{in} $\widehat{C}$. Thus $L(𝒳)$ is
+the presheaf
+\hypertarget{sga4.exp.I.equation.8.2.2.2}{}$$
+\displaylines{\rlap{$(8.2.2.2)$}\hfill L(𝒳):Y\longmapsto
+  \varinjlim_i \Hom(Y,X_i)\hfill}
+$$
+on\pageoriginale $C$. This presheaf is called the \emph{presheaf
+ind-represented by the ind-object $𝒳=(X_i)_{i\in I}$ of $C$.} A presheaf
+$F$ on $C$ is called an \emph{ind-representable presheaf} if it is
+isomorphic to a presheaf $L(𝒳)$ ind-represented by an essentially small
+ind-object. It follows moreover from \hyperref[I.prop8.1.6]{8.1.6} that,
+in this definition, we may suppose that $I$ is a small category, and even
+that $I$ is associated with an ordered set $\in 𝒰$.
+
+\subsubsection{}\etiquette[8.2.3]{I.sec8.2.3}
+Consider an ind-object $𝒳=(X_i)_{i\in I}$ given by a functor
+$\varphi:I\rightarrow C$, and let
+$$
+u:I'\longrightarrow I
+$$
+be a functor, where $I'$ is a second filtered category. Then the functor
+$\varphi\circ u$ is an ind-object $𝒳'$ of $C$ with index category $I'$;
+in indexed notation it is $(X_{u(i')})_{i'\in I'}$. It is called the
+ind-object of $C$ \emph{deduced from $(X_i)_{i\in I}$ by a change of
+index categories} using the functor $u$. If $I$ and $I'$ (\ie $𝒳$ and
+$𝒳'$) are essentially small, one obtains a canonical morphism
+\hypertarget{sga4.exp.I.equation.8.2.3.1}{}$$
+\displaylines{\rlap{$(8.2.3.1)$}\hfill
+  L(𝒳')=\varinjlim_{i'}X_{u(i')}\longrightarrow L(𝒳)=\varinjlim_i
+  X_i\hfill}
+$$
+between the presheaves ind-represented by $𝒳'$ and $𝒳$, respectively.
+When $u$ is a cofinal functor (\hyperref[I.def8.1.1]{8.1.1}), $𝒳$ is
+essentially small if and only if $𝒳'$ is \hyperref[I.cor8.1.7]{(8.1.7)}, and the preceding
+homomorphism \hyperlink{sga4.exp.I.equation.8.2.3.1}{(8.2.3.1)} is an isomorphism
+\hypertarget{sga4.exp.I.equation.8.2.3.2}{}$$
+\displaylines{\rlap{$(8.2.3.2)$}\hfill L(𝒳')\simeq
+  L(𝒳){\quoi}.\hfill}
+$$
+
+\subsubsection{}\etiquette[8.2.4]{I.sec8.2.4}
+Let\pageoriginale
+\hypertarget{sga4.exp.I.equation.8.2.4.1}{}$$
+\displaylines{\rlap{$(8.2.4.1)$}\hfill 𝒳=(X_i)_{i\in
+    I},𝒴=(Y_j)_{j\in I}\hfill}
+$$
+be two essentially small ind-objects of $C$, indexed by the (filtered and
+essentially small) categories $I$ and $J$. A \emph{morphism} from the
+ind-object $𝒳$ to the ind-object $𝒴$ is any morphism
+\hypertarget{sga4.exp.I.equation.8.2.4.2}{}$$
+\displaylines{\rlap{$(8.2.4.2)$}\hfill L(𝒳)\longrightarrow
+  L(𝒴)\hfill}
+$$
+between the presheaves that they ind-represent. We put
+\hypertarget{sga4.exp.I.equation.8.2.4.3}{}$$
+\displaylines{\rlap{$(8.2.4.3)$}\hfill
+\Hom_{\text{ind}-\ob}(𝒳,𝒴)=\Hom_{\widehat{C}}(L(𝒳),L(𝒴)){\quoi}.
+   \hfill}
+$$
+(The subscript ind-ob on $\Hom$ is omitted when there is no risk of
+confusion.) Composition of morphisms of ind-objects of $𝒞$ is defined as
+composition of the morphisms of the presheaves that they ind-represent.
+If $𝒱\supset 𝒰$ is a universe containing $𝒰$, and if we restrict to
+the essentially small ind-objects that belong to $𝒱$, these form the set
+of objects of a category whose set of arrows consists of triples
+$(𝒳,𝒴,u)$, where $𝒳$ and $𝒴$ are essentially small ind-objects
+$\in 𝒱$ and $u:𝒳\rightarrow 𝒴$ is a morphism of ind-objects, \ie a
+morphism $L(𝒳)\rightarrow L(𝒴)$. The category thus obtained is denoted by
+\hypertarget{sga4.exp.I.equation.8.2.4.4}{}$$
+\displaylines{\rlap{$(8.2.4.4)$}\hfill
+  \Ind_{𝒱}(C,𝒰){\quoi}.\hfill}
+$$
+When $𝒱=𝒰$, it is denoted simply by
+\hypertarget{sga4.exp.I.equation.8.2.4.5}{}$$
+\displaylines{\rlap{$(8.2.4.5)$}\hfill \Ind_{𝒰}(C)\text{ or
+}
+  \Ind(C){\quoi},\hfill}
+$$
+and is called the \emph{category of ind-objects of} $C$ relative to
+$𝒰$, with the mention of $𝒰$ omitted when no confusion is likely.
+
+Clearly,\pageoriginale if $𝒱\subset 𝒱'$ are two universes containing
+$𝒰$, then $\Ind_{𝒱}(C,𝒰)$ is a full subcategory of
+$\Ind_{𝒱'}(,𝒰)$; it follows from \hyperref[I.sec8.2.3]{8.2.3} that the inclusion functor is an
+\emph{equivalence of categories}:
+\hypertarget{sga4.exp.I.equation.8.2.4.6}{}$$
+\displaylines{\rlap{$(8.2.4.6)$}\hfill
+\Ind_{𝒱}(C,𝒰)\xrightarrow{\approx}\Ind_{𝒱'}(C,𝒰){\quoi}.\hfill}
+$$
+This shows in particular that \emph{every essentially small ind-object of
+$C$ defines an element of $\Ind(C)$, up to unique isomorphism.} This
+observation justifies the fairly common abuse of language of identifying
+every essentially small ind-object of $C$ with an object of $\Ind(C)$.
+
+It follows at once from the definitions that, for every universe $𝒱$,
+there is a canonical functor
+\hypertarget{sga4.exp.I.equation.8.2.4.7}{}$$
+\displaylines{\rlap{$(8.2.4.7)$}\hfill
+  L:\Ind_{𝒱}(C,𝒰)\longrightarrow \widehat{C}\hfill}
+$$
+which is fully faithful. By \hyperlink{sga4.exp.I.equation.8.2.4.6}{(8.2.4.6)}, these functors are clearly
+determined up to unique isomorphism once one of them is known, and in
+particular once the canonical functor
+\hypertarget{sga4.exp.I.equation.8.2.4.8}{}$$
+\displaylines{\rlap{$(8.2.4.8)$}\hfill L:\Ind(C)\longrightarrow
+  \widehat{C}{\quoi}.\hfill}
+$$
+is known. Since this functor is fully faithful, it is often used to
+identify an object of the first member with the functor that it
+ind-represents, or even to identify $\Ind(C)$ with its essential image in
+$\widehat{C}$, consisting of the ind-representable presheaves. Note,
+however, that this identification has distinctly more disadvantages than
+the analogous identification of $C$ with a full subcategory of
+$\widehat{C}$ by the functor $h$ \hyperlink{sga4.exp.I.equation.8.2.1.1}{(8.2.1.1)}, since, unlike the latter, the
+functor \hyperlink{sga4.exp.I.equation.8.2.4.8}{(8.2.4.8)} is not in general injective on objects.
+

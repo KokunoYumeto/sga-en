@@ -1,0 +1,257 @@
+
+\textit{factors as}
+\SGAThreeDiagram[0.42\textwidth]
+  {figures/exp5/p286_theorem1012_factorization.png}
+  {The factorization of the orbit morphism in
+   Theorem~\hyperref[thm:sga3-V-10.1.2]{10.1.2}.}
+  {fig:sga3-V-10.1.2-factorization}
+  {Expos\'e V, component-local p.~36 / combined-reader p.~298 /
+   re-edited header p.~286}
+\textit{where \(p\) is the canonical projection, which is faithfully
+flat and locally of finite presentation, and \(i\) is a monomorphism.}
+
+\medskip
+\noindent\textit{Proof.}---
+The morphism \(f\) makes \(G\) into an \(X\)-scheme. By definition of
+the stabilizer of \(\xi\), the morphism
+\phantomsection\label{eq:sga3-V-10.1.2-stabilizer-isomorphism}%
+\[
+  G\times_S H\longrightarrow G\times_XG,
+  \qquad (g,h)\longmapsto(g,gh)
+\]
+is an isomorphism. Since \(H\) is flat over \(S\), the scheme
+\(G\times_SH\) is flat over \(G\); hence the first projection
+\[
+  p_1:G\times_XG\longrightarrow G
+\]
+is flat.%
+\footnote{\label{source-note:sga3-V-10.1.2-fiber-product-base}The source PDF prints \(G\times_SG\) in this projection.
+The \hyperref[eq:sga3-V-10.1.2-stabilizer-isomorphism]{preceding displayed isomorphism} and the application of
+Theorem~\hyperref[thm:sga3-V-10.1.1]{10.1.1} require the fiber product \(G\times_XG\), which is the
+reading adopted here.}
+Moreover, if \(X\) is locally of finite type over \(S\), then \(f\) is
+locally of finite presentation (EGA~IV\(_1\), 1.4.3(v)); otherwise,
+\(S\) is assumed locally Noetherian. It therefore suffices to apply
+Theorem~\hyperref[thm:sga3-V-10.1.1]{10.1.1} to \(f\). It remains only
+to see that \(G/H\) is locally of finite presentation over \(S\), and
+this follows immediately from
+Proposition~\hyperref[sga3:v:proposition:9:1]{9.1}.
+
+\medskip
+\phantomsection\label{cor:sga3-V-10.1.3}%
+\noindent\textbf{Corollary 10.1.3.}---
+\textit{Let \(S\) be a scheme and \(u:G\to H\) a morphism of
+\(S\)-group schemes. Suppose that \(G\) is locally of finite
+presentation over \(S\), and that either \(H\) is locally of finite
+type over \(S\) or \(S\) is locally Noetherian.}
+
+\textit{If \(K=\ker(u)\) is flat over \(S\), then the quotient group
+\(G/K\) is representable by an \(S\)-group scheme locally of finite
+presentation over \(S\), and \(u\) factors as}
+\SGAThreeDiagram[0.43\textwidth]
+  {figures/exp5/p286_corollary1013_factorization.png}
+  {The factorization of \(u\) through \(G/K\).}
+  {fig:sga3-V-10.1.3-factorization}
+  {Expos\'e V, component-local p.~36 / combined-reader p.~298 /
+   re-edited header p.~286}
+\textit{where \(p\) is the canonical projection and \(i\) is a
+monomorphism.}
+
+\medskip
+\noindent\textit{Proof.}---
+Apply Theorem~\hyperref[thm:sga3-V-10.1.2]{10.1.2} with \(X=H\) and
+with the unit section of \(H\) as \(\xi\).
+
+\section*{10.2. Stabilizer of the diagonal}
+\phantomsection\label{sec:sga3-V-10.2}
+\addcontentsline{toc}{section}{\SGARefLink{sec:sga3-V-10.2}{10.2}. Stabilizer of the diagonal}
+
+Let \(S\) be a Noetherian scheme, \(X\) an \(S\)-scheme of finite
+type, and \(G\) a flat \(S\)-group scheme of finite type acting on the
+left on \(X\). Thus we have an \(S\)-action
+\(d_0:G\times_SX\to X\). Let \(d_1:G\times_SX\to X\) be projection
+onto the second factor. As in \hyperref[par:sga3-V-2-a]{\S2(a)}, we have the groupoid
+\SGAThreeDiagram[0.67\textwidth]
+  {figures/exp5/p286_section102_action_groupoid.png}
+  {The action groupoid attached to \((X,G)\).}
+  {fig:sga3-V-10.2-action-groupoid}
+  {Expos\'e V, component-local p.~36 / combined-reader p.~298 /
+   re-edited header p.~286}
+whose cokernel, when it exists, is denoted \(G\backslash X\).
+
+\medskip
+\phantomsection\label{def:sga3-V-10.2.1}%
+\noindent\textbf{Definition 10.2.1.}---
+\textit{We denote by \(F\subset G\times_SX\) the \emph{stabilizer of
+the diagonal section}; that is, \(F\) is the \(X\)-scheme defined by
+the Cartesian square}
+\SGAThreeDiagram[0.47\textwidth]
+  {figures/exp5/p287_definition1021_cartesian_square.png}
+  {The stabilizer \(F\) of the diagonal section.}
+  {fig:sga3-V-10.2.1-stabilizer}
+  {Expos\'e V, component-local p.~37 / combined-reader p.~299 /
+   re-edited header p.~287}
+
+Then \(F\) is an \(X\)-subgroup scheme of \(G\times_SX\). Since
+\(G\times_SX\) is of finite type over the Noetherian scheme \(S\), it
+is Noetherian; consequently \(F\) is of finite type both over \(S\)
+and over \(X\) (EGA~I, 6.3.5 and 6.3.6). If \(X\to S\) is separated,
+then \(F\) is a closed \(X\)-subgroup scheme of \(G\times_SX\).
+
+Recall that \(G\) is said to \emph{act freely} on \(X\) when
+\[
+  (d_0,d_1):G\times_SX\longrightarrow X\times_SX
+\]
+is a monomorphism (Expos\'e~III, 3.2.1). Equivalently, \(F\) is the
+trivial group scheme over \(X\).
+
+\section*{10.3. The case in which \(F\) is quasi-finite over \(X\)}
+\phantomsection\label{sec:sga3-V-10.3}
+\addcontentsline{toc}{section}{\SGARefLink{sec:sga3-V-10.3}{10.3}. The case in which F is quasi-finite over X}
+
+Since \(F\) is of finite type over \(X\), it is quasi-finite over
+\(X\) if and only if the stabilizers of the geometric points of \(X\)
+are finite.
+
+\medskip
+\phantomsection\label{thm:sga3-V-10.3.1}%
+\noindent\textbf{Theorem 10.3.1.}---%
+\footnote{\label{note:sga3-V-49}Editor's note: here too there is a
+largest open subset \(U\subset X\) satisfying the conclusions of the
+\hyperref[thm:sga3-V-10.3.1]{theorem}; see editor's \hyperref[note:sga3-V-44]{note~44}.}
+\textit{Under the hypotheses of \hyperref[sec:sga3-V-10.2]{10.2},
+suppose that \(F\) is quasi-finite over \(X\). Then there is a dense,
+\(G\)-saturated open subset \(U\subset X\) having the following
+properties:}
+\begin{enumerate}
+\item[(i)]\phantomsection\label{thm:sga3-V-10.3.1-i}%
+  \textit{in \((\mathbf{Sch}/S)\), the cokernel
+  \(V=G\backslash U\) exists; moreover, \(V\) is a quotient in the
+  category of ringed spaces;}
+\item[(ii)]\phantomsection\label{thm:sga3-V-10.3.1-ii}%
+  \textit{\(p:U\to V\) is surjective, open, and of finite
+  presentation;}
+\item[(iii)]\phantomsection\label{thm:sga3-V-10.3.1-iii}%
+  \textit{\(V\) is of finite presentation over \(S\);}
+\item[(iv)]\phantomsection\label{thm:sga3-V-10.3.1-iv}%
+  \textit{the morphism
+  \[
+    G\times_SU\longrightarrow U\times_VU,
+    \qquad (g,x)\longmapsto(gx,x),
+  \]
+  is surjective;}
+\item[(v)]\phantomsection\label{thm:sga3-V-10.3.1-v}%
+  \textit{if, in addition, \(G\) acts freely on \(X\), then
+  \(U\to V\) is a left \(G\)-torsor, locally trivial for the fppf
+  topology. In particular, \(U\to V\) is faithfully flat.}%
+  \footnote{\label{note:sga3-V-50}Editor's note: if one assumes in
+  addition that \(G\) is a reductive \(S\)-group scheme and that its
+  free action on \(X\) is linearizable, then \(G\backslash X\) is
+  known to be representable and \(X\to G\backslash X\) is a left
+  \(G\)-torsor. This follows from results of Raynaud and Seshadri and
+  appears in \(\hyperref[bib:sga3-V-CTS79]{[\mathrm{CTS79}]}\), Proposition~6.11.}
+\end{enumerate}
+
+\noindent\textit{Proof.}---
+By hypothesis, the morphism
+\[
+  G\times_SX\longrightarrow X\times_SX,
+  \qquad (g,x)\longmapsto(gx,x),
+\]
+is quasi-finite. Theorem~\hyperref[thm:sga3-V-8.1]{8.1} therefore
+applies to the groupoid defined by \((X,G)\). Hence there is a dense
+saturated open subset \(U\subset X\) for which the quotient
+\(G\backslash U\) exists, and it has properties \hyperref[thm:sga3-V-10.3.1-i]{(i)}, \hyperref[thm:sga3-V-10.3.1-ii]{(ii)}, and \hyperref[thm:sga3-V-10.3.1-iii]{(iii)};
+the \hyperref[thm:sga3-V-8.1]{same theorem} also gives \hyperref[thm:sga3-V-10.3.1-iv]{(iv)}.
+
+To prove \hyperref[thm:sga3-V-10.3.1-v]{(v)}, recall that \(G\) acts freely on \(X\) if and only if
+\((d_0,d_1)\) is an equivalence pair (Expos\'e~III, 3.2.1).%
+\footnote{\label{source-note:sga3-V-10.3.1-proof-part-v}At this point the source PDF says \emph{to prove (iv)}.
+The cited Theorem~\hyperref[thm:sga3-V-8.1-iv]{8.1(iv)} and the conclusion about a torsor establish
+\hyperref[thm:sga3-V-10.3.1-v]{part~(v)} in the present numbering; \hyperref[thm:sga3-V-10.3.1-iv]{part~(iv)} follows from
+Theorem~\hyperref[thm:sga3-V-8.1-iii]{8.1(iii)}.}
+In that case Theorem~\hyperref[thm:sga3-V-8.1-iv]{8.1(iv)} shows that
+\[
+  G\times_SU\longrightarrow U\times_VU
+\]
+is an isomorphism and that \(p\) is faithfully flat and of finite
+presentation. Thus \(U\) is a \(G\)-torsor over \(V\), locally trivial
+for the fppf topology.
+
+\section*{10.4. The case in which \(F\) is flat over \(X\)}
+\phantomsection\label{sec:sga3-V-10.4}
+\addcontentsline{toc}{section}{\SGARefLink{sec:sga3-V-10.4}{10.4}. The case in which F is flat over X}
+
+Write
+\[
+  d=(d_0,d_1):G\times_SX\longrightarrow X\times_SX,
+  \qquad d(g,x)=(gx,x).
+\]
+Recall that the sheaf-theoretic graph \(\widetilde\Gamma\) of the
+equivalence relation associated with \((X,G)\) is the fppf
+\(S\)-subsheaf of \(X\times_SX\) given by the image of
+\((d_0,d_1)\). It is the fppf sheaf associated with the graph functor
+\[
+  T\longmapsto
+  \Gamma(T)=\bigl\{(x_0,x_1)\in X(T)\times X(T)
+  \mathrel{|} x_0\in G(T)x_1\bigr\}.
+\]
+Put \(G_X=G\times_SX\). For every \(S\)-scheme \(T\) there is a
+surjective map
+\[
+  G_X(T)\longrightarrow\Gamma(T),
+  \qquad (g,x)\longmapsto(gx,x),
+\]
+which induces a bijection%
+\phantomsection\label{eq:sga3-V-10.4-phiT-bijection}%
+\[
+  \phi(T):G_X(T)/F(T)\xrightarrow{\ \sim\ }\Gamma(T).
+\]
+Indeed, if \((g,x),(g',x')\in G_X(T)\) have the same image, then
+\(x'=x\) and \(g^{-1}g'x=x\), so that
+\((g^{-1}g',x)\in F(T)\), and \((g,x)\) and \((g',x)\) have the same
+image in \(G_X(T)/F(T)\).%
+\footnote{\label{source-note:sga3-V-10.4-ft-typing}The source PDF prints
+\((g^{-1}g'x,x)\in F(T)\). Since
+\(F(T)\subseteq G(T)\times X(T)\), the first coordinate must be the
+group element \(g^{-1}g'\); the English adopts this type-correct
+reading. In the same sentence the source writes \(F_X(T)\) once in
+the denominator; the \hyperref[eq:sga3-V-10.4-phiT-bijection]{displayed bijection immediately above} and the
+\hyperref[eq:sga3-V-10.4-quotient-presheaf]{presheaf immediately below} both use the defined stabilizer \(F(T)\),
+which is retained consistently here.}
+
+By definition (see \SGARefLink{sga3:iv:theorem:4:4:1:item:ii:01}{Expos\'e~IV, 4.4.1(ii)}, or the proof of 5.2.1),
+the quotient sheaf \(G_X/F\) is the fppf sheaf associated with the
+presheaf%
+\phantomsection\label{eq:sga3-V-10.4-quotient-presheaf}%
+\[
+  T\longmapsto G_X(T)/F(T)\simeq\Gamma(T).
+\]
+We therefore obtain an isomorphism of sheaves
+\[
+  \phi:G_X/F\xrightarrow{\ \sim\ }\widetilde\Gamma.
+\]
+
+\medskip
+\phantomsection\label{thm:sga3-V-10.4.1}%
+\noindent\textbf{Theorem 10.4.1.}---%
+\footnote{\label{note:sga3-V-51}Editor's note: this is part~(2) of
+Theorem~3 of \(\hyperref[bib:sga3-V-Ray67b]{[\mathrm{Ray67b}]}\). That note also sketches another
+proof of Theorem~\hyperref[thm:sga3-V-10.1.1]{10.1.1}.}
+\textit{Under the hypotheses of \hyperref[sec:sga3-V-10.2]{10.2},
+the following assertions hold:}
+\begin{enumerate}
+\item[\textit{a)}]\phantomsection\label{thm:sga3-V-10.4.1-a}%
+  \textit{the sheaf \(\widetilde\Gamma\) is representable if and only
+  if \(F\) is flat over \(X\);}
+\item[\textit{b)}]\phantomsection\label{thm:sga3-V-10.4.1-b}%
+  \textit{suppose that \(F\) is flat over \(X\). Then the morphisms
+  induced by \(d_1\) and \(d_0\)}
+  \SGAThreeDiagram[0.37\textwidth]
+    {figures/exp5/p288_theorem1041_double_arrow.png}
+    {The two maps induced by \(d_1\) and \(d_0\).}
+    {fig:sga3-V-10.4.1-double-arrow}
+    {Expos\'e V, component-local p.~38 / combined-reader p.~300 /
+     re-edited header p.~288}
+  \textit{are faithfully flat and of finite presentation.}
+\end{enumerate}

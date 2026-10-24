@@ -1,0 +1,400 @@
+\eqhyperref[XVII.eq2.1.3.2]{2.1.3.2} commutative.%See the Erratum in SGA 4 1/2, p. 312.
+
+By definition, in \hyperrefext[XII][XII.sec4]{4}, the base change arrow $\psi$
+was the one making the following diagram commutative
+$$\etiquette[2.1.3.3]{XVII.eq2.1.3.3}
+\vcenter{
+\xymatrix{
+f'_{\ast}g'{}^{\ast}F \ar[d]^{\psi}  & g'{}^{\ast}F \ar[d]^{u_4} \ar[l] \ar@{=}[r] &
+g'{}^{\ast}F \ar[r] \ar[d]^{u_3}   & F \ar@{=}[r] \ar[d]^{u_2}&  F \ar[d]^{u_1}\\
+g'_{\ast}f_{\ast}F   & {f'}^{\ast}g^{\ast}f_{\ast}F  \ar[l] \ar@{=}[r] &
+g'f^{\ast}f_{\ast}F   \ar[r] & f^{\ast}f_{\ast}F \ar[r] &  f_{\ast}F.
+}}\leqno{(2.1.3.3)}
+$$
+The horizontal arrows and $u_1$ are the canonical arrows; $u_2$
+is therefore the adjunction arrow, $u_3={g\sisi{^{1}}{'}}^{\ast}(u_2)$, $u_4$ is
+deduced from the isomorphism between ${f'}^{\ast}g^{\ast}$ and
+${g'}^{\ast}f^{\ast}$, and the arrow $\psi$ is deduced from $u_4$ by
+adjunction.
+
+The composite\pageoriginale map with source ${g'}^{\ast}F$ and
+target $f_{\ast}F$ is the one that appears in \eqhyperref[XVII.eq2.1.3.2]{2.1.3.2}, and the
+same therefore holds in the following commutative diagram, whose left-hand
+square is taken from \sisi{(2.1.2.3)}{\eqhyperref[XVII.eq2.1.3.3]{2.1.3.3}}
+\[
+\xymatrix{
+g'{}^{\ast}F \ar[r]^{u_4} \ar[d]& f'{}^{\ast}g{}^{\ast}f_{\ast}F
+\ar[r] \ar[d]&
+f_{\ast}F \ar@{=}[d]\\
+f'_{\ast}g'{}^{\ast}F  \ar[r]^{\psi} & g^{\ast}f_{\ast}F \ar[r] &
+f_{\ast}F\rlap{.}
+}
+\]
+This means that $\psi$ satisfies the defining property of
+$\varphi$.
+
+The definition of $\varphi$ is self-dual, so there is no need to prove
+the second part of \hyperref[XVII.prop2.1.3]{2.1.3}.
+
+\subsection{Categories fibered in triangulated categories}\etiquette[2.2]{XVII.subsec2.2}
+
+\begin{enonce*}{Definition 2.2.1}\etiquette[2.2.1]{XVII.def2.2.1}
+An “additive category over a category $\Bb$”
+is a category $\Aa$ over $\Bb$ whose sets of
+arrows $\Hom_f(X,Y)$ (for $f\in \Fl (\Bb)$, with $X$ (\resp
+$Y$) over the source (\resp the target) of $f$) have been endowed with
+abelian group structures, in such a way that:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For any $x\xrightarrow{f}y\xrightarrow{g}z$ in
+$\Bb$ and $X$, $Y$, $Z$ in $\Aa$ lying over $\sisi{s}{x}$,
+$y$, and $z$, respectively, the composition law
+\[
+\Hom_g(Y,Z)\times \Hom_f
+(X,Y)\xrightarrow{\circ}\Hom_{gf}(X,Z)
+\]
+is biadditive.
+
+\item The fiber categories are additive.
+\end{enumerate}
+\end{enonce*}
+
+We shall not need here the fact that these abelian group structures, when
+they exist, are uniquely determined by
+$\Aa$, $\Bb$, and $\rho$.\nde{here $\rho$ denotes the structural functor $\Aa\to \Bb$.} A $\Bb$-functor
+$F:\Aa_1\rightarrow \Aa_2$ between additive categories
+over $\Bb$ is said to be \emph{additive} if it induces
+homomorphisms
+\[
+F:\Hom_{\Aa_1,f}(X,Y)\longrightarrow
+\Hom_{\Aa_{2},f}(X,Y){\quoi}.
+\]
+
+\begin{enonce*}{Definition 2.2.2}\etiquette[2.2.2]{XVII.def2.2.2}
+An\pageoriginale “abelian category over a category
+$\Bb$” is an additive category $\Aa$ over
+$\Bb$ whose fibers are abelian, and such that for
+every arrow $f:x\rightarrow y$ of $\Bb$ the bifunctor
+\[
+\Hom_f(X,Y):\Aa^{\circ}_x\times \Aa_y\longrightarrow
+(\Ab)
+\]
+is left exact in $X$ and $Y$.
+\end{enonce*}
+
+We shall not need here the fact that if $\Aa$ is a category
+fibered and cofibered over $\Bb$ (\SGA 1 VI 6), it is abelian
+over $\Bb$ as soon as its fibers are abelian categories.
+
+\begin{enonce*}{Definition 2.2.3}\etiquette[2.2.3]{XVII.def2.2.3}
+A “triangulated category over a category $\Bb$” is an additive category $\Aa$ over $\Bb$, endowed
+with a functor $T:\Aa\rightarrow \Aa$, and whose
+fibers $\Aa_x$, for $x\in \Ob \Bb$, are endowed
+with sets $\Delta_x$ of triangles, in such a way that:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $T$ is an additive $\Bb$-automorphism of $\Aa$.
+
+\item Each fiber category $\Aa_x$, endowed with the functor $T_x$
+induced by $T$ and with the set $\Delta_x$, is a triangulated
+category \emph{(\cite{sga4.exp.XVII.bib.CD} \sisi{}{I 1.}1.1)}.
+
+\item If the triangles $(X,Y,Z,u,v,w)$ and $(X',Y',Z',u',v',w')$
+belong to $\Delta_x$ and $\Delta_{x'}$, respectively, every
+diagram
+\[
+\xymatrix{
+            & Z   \ar[ldd]_{w}&            &  &           & Z'   \ar[ldd]|\hole_(.3){w'} & \\
+            &   & Y\ar[lu]_{v} \ar[rrrr]_(.4){\sisi{j}{g}}&  &     &       &Y'\ar[lu]_{v'} \\
+X   \ar[rru]^{u} \ar[rrrr]_{f}&             &          &  &   X'   \ar[rru]^{u'} &              &
+}
+\]
+in which $u'f=gu$ can be completed to a morphism of triangles
+$(f,g,h):(X,Y,Z)\rightarrow (X',Y',Z')$.
+\end{enumerate}
+\end{enonce*}
+
+$T$\pageoriginale will be called the translation functor; we shall
+often write $A[1]$ rather than $T(A)$, with $A[n]$ then denoting $T^{n}(A)$
+$(n\in\ZZ)$.
+
+The triangles belonging to the sets $\Delta_x$ will be called
+\emph{distinguished} or \emph{exact}.
+
+\begin{enonce*}{Proposition 2.2.4}\etiquette[2.2.4]{XVII.prop2.2.4}
+Let $\Aa$ be a triangulated category over $\Bb$, let $x$
+be an object of $\Bb$, and let $(X,Y,Z,u,v,w)$ be a distinguished triangle of
+$\Aa_x$. For every $f:y\rightarrow x$ and every object $A\in
+\Ob \Aa_y$, the following infinite sequence is exact:
+\begin{align*}
+\ldots  \longrightarrow \Hom_f(A,X) \longrightarrow \Hom_f(A,Y)&\longrightarrow
+\Hom_f(A,Z)\\
+ & \longrightarrow \Hom_f(A,X[1])\longrightarrow
+\Hom_f(A,Y[1])\longrightarrow\ldots
+\end{align*}
+\end{enonce*}
+
+There is an analogous statement for $f:x\rightarrow y$ and $A\in \Ob \Aa_y$.
+
+We leave it to the reader to prove this proposition by
+paraphrasing \textsc{Verdier} \cite{sga4.exp.XVII.bib.CD} p.~4. We also leave it to the reader to give
+a meaning to the following proposition and to verify it:
+
+\begin{enonce*}{Proposition 2.2.5}\etiquette[2.2.5]{XVII.prop2.2.5}
+Let $\Aa$ be an additive (\resp abelian, \resp
+triangulated) category over $\Bb$. For every functor
+$\Bb'\rightarrow \Bb$ with target $\Bb$, the
+category $\Aa'=\fprod{\Aa}{\Bb'}{\Bb}$ is
+additive (\resp abelian, \resp triangulated) over $\Bb$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Example 2.2.6}\etiquette[2.2.6]{XVII.exem2.2.6}
+The category of sheaves of modules on varying ringed sites
+is abelian over the category of ringed sites.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Example 2.2.7}\etiquette[2.2.7]{XVII.exem2.2.7}
+Let $\Aa$ be an additive category over $\Bb$. The
+category $C(\Aa/\Bb)$ of complexes of $\Aa$
+over $\Bb$ has as objects the complexes of the fiber
+categories. An arrow $f$ from $(X^n,d)$ to $(Y^n,d)$ is a system
+of\pageoriginale arrows $f^{n}:X^{n}\rightarrow Y^{n}$ such that
+$\sisi{fd}{df}^{n}=f^{n+1} d$. We set $p(f)=p(f^{n})$ (this arrow does not depend
+on $n$, since the $p(d)$ are
+identities). $C(\Aa/\Bb)$ is an additive category
+over $\Bb$. A “translation” functor is defined by setting
+\[
+(K[1])^{n}=K^{n+1}\quav (d[1])\sisi{_n}{^n}=-d\sisi{_{n+1}}{^{n+1}}{\quoi}.
+\]
+\end{enonce*}
+
+\begin{enonce*}[remark]{Example 2.2.8}\etiquette[2.2.8]{XVII.exem2.2.8}
+Let $\Aa$ be an additive category over $\Bb$. \emph{The
+category $K(\Aa/\Bb)$ of complexes of $\Aa$
+over $\Bb$ modulo homotopy} has the same objects as
+$C(\Aa/\Bb)$. It is obtained by declaring the arrows homotopic
+to zero to be zero in $C(\Aa/\Bb)$; in
+other words, for $f:x\rightarrow y$ in $\Bb$,
+$X^{\bigdot}\in \Ob C(\Aa/\Bb)_x$ and $Y^{\bigdot}\in
+\Ob C(\Aa/\Bb)_y$, we set
+\[
+\Hom_f(X^{\bigdot},
+Y^{\bigdot})=H^{0}\Hom^{\bigdot}_f(X^{\bigdot},Y^{\bigdot})
+\]
+\end{enonce*}
+
+The translation functor descends to the quotient.
+
+If $F:\Bb'\rightarrow \Bb$ is a functor with target
+$\Bb$, and if
+$\Aa'=\fprod{\Aa}{\Bb'}{\Bb}$, we
+leave it to the reader to identify $C(\Aa'/\Bb')$
+with $\fprod{C(\Aa/\Bb)}{\Bb'}{\Bb}$ and
+$K(\Aa'/\Bb')$ with
+$\fprod{K(\Aa/\Bb)}{\Bb'}{\Bb}$. In
+particular, the fibers of the category $K(\Aa/\Bb)$
+are the categories $K(\Aa_x)$ and, as such, are
+triangulated.
+
+\begin{enonce*}{Proposition 2.2.9}\etiquette[2.2.9]{XVII.prop2.2.9}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item With the additional structures defined in \hyperref[XVII.exem2.2.8]{2.2.8}, the
+category $K(\Aa/\Bb)$ is triangulated over $\Bb$.
+
+\item The formation of the additive (\resp triangulated)
+category $C(\Aa/\Bb)$ (\resp $K(\Aa/\Bb)$) is
+compatible with every change of base category
+$\Bb'\rightarrow \Bb$.
+\end{enumerate}
+\end{enonce*}
+
+Conditions\pageoriginale (i) and (ii) of Definition \hyperref[XVII.def2.2.3]{2.2.3} are
+verified fiber by fiber. Condition (iii) is verified by paraphrasing \textsc{Verdier}
+\cite{sga4.exp.XVII.bib.CD} p.~4.
+
+\begin{enonce*}[remark]{Remark 2.2.10}\etiquette[2.2.10]{XVII.rem2.2.10}
+The preceding discussion also applies to the categor\sisi{y}{ies}
+$K^{+}(\Aa/\Bb)$, $K^{-}(\Aa/\Bb)$, and
+$K^{b}(\Aa/\Bb)$ obtained by restricting
+respectively to complexes bounded below, bounded above, or bounded.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 2.2.11}\etiquette[2.2.11]{XVII.rem2.2.11}
+Taking $\Bb$ to be the final category, one recovers the
+usual categories of complexes.
+\end{enonce*}
+
+\setcounter{subsection}{2}
+\setcounter{subsubsection}{11}
+\subsubsection{}\etiquette[2.2.12]{XVII.subsubsec2.2.12}
+Let $F$ be a pseudofunctor from a category $\Bb^{\circ}$ to
+$(\Cat)$. It is known (\SGA 1 VI) that $F$ defines a category fibered over
+$\Bb$, whose fibers are the categories $F(x)$. For any
+$f:x\rightarrow y$ in $\Bb$ and $X\in \Ob F(\sisi{n}{x})$, $Y\in \Ob
+F(y)$, we have by definition
+$$\etiquette[2.2.12.1]{XVII.eq2.2.12.1}
+\Hom_f(X,Y)=\Hom_{F(x)}(X,F(f)(Y)){\quoi}.\leqno(2.2.12.1)
+$$
+It is known (ibid.) that the preceding construction defines an
+equivalence between the 2-category of pseudofunctors from
+$\Bb^{\circ}$ to $(\Cat)$ and the 2-category of categories
+fibered over $\Bb$.
+
+Let us start with a pseudofunctor from $\Bb^{\circ}$ to the
+2-category whose objects are additive (\resp
+abelian, \resp triangulated) categories and whose 1-arrows are additive
+(\resp left exact, \resp triangulated) functors. One immediately verifies that the
+category defined by \sisi{(2.1.12.1)}{\eqhyperref[XVII.eq2.2.12.1]{2.2.12.1}} is additive (\resp abelian, \resp
+triangulated). Conversely:
+
+\begin{enonce*}{Proposition 2.2.13}\etiquette[2.2.13]{XVII.prop2.2.13}
+The\pageoriginale preceding construction establishes an equivalence between
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The $2$-category of pseudofunctors from $\Bb^{\circ}$
+to the $2$-category whose objects are additive
+(\resp abelian, \resp triangulated) categories and whose $1$-arrows are
+additive (\resp left exact, \resp triangulated) functors.
+
+\item The $2$-category of additive (\resp abelian,
+\resp triangulated) categories over $\Bb$ that are fibered over $\Bb$.
+\end{enumerate}
+\end{enonce*}
+
+The theory developed in \SGA 1 VI shows that it suffices to verify the
+following point:
+
+\setcounter{subsubsection}{13}
+\setcounter{paragraph}{0}
+\paragraph{}\etiquette[2.2.13.1]{XVII.par2.2.13.1}
+Let $\Aa$ be an additive (\resp abelian, \resp
+triangulated) category over $\Bb$, let $f:x\rightarrow y$ be an arrow of
+$\Bb$, and suppose that an inverse image functor
+$f^{\ast}:\Aa_y\rightarrow \Aa\sisi{_n}{_x}$ exists; then $f^{\ast}$
+is additive (\resp left exact, \resp triangulated).
+
+The functor $f^{\ast}$ gives rise to isomorphisms
+\[
+\Hom_f(X,Y)\simeq \Hom_x (X,f^{\ast}(Y)){\quoi}.
+\]
+In the triangulated case\sisi{}{}, it remains to prove that $f^{\ast}$ is triangulated
+for the isomorphism $Tf^{\ast}=f^{\ast}T$ (where $T$ is the
+translation functor) that makes the following diagrams commutative:
+$$\etiquette[2.2.13.2]{XVII.eq2.2.13.2}
+\vcenter{
+\xymatrix{
+\Hom_f(X,Y)  \ar@{=}[r] \ar@{=}[d]& \Hom_x(X,f^{\ast}Y)\ar@{=}[rd]\\
+\Hom_f(TX,TY)\ar@{=}[rd]           &      & \Hom_x(TX,Tf^{\ast}Y) \\
+             &      \Hom_x(TX,f^{\ast}TY)\ar@{=}[ru] &
+}}\leqno{(2.2.13.2)}
+$$
+
+\begin{itemize}
+\item[\emph{Additive case}:] Consider\pageoriginale a diagram
+$$\etiquette[2.2.13.3]{XVII.eq2.2.13.3}
+\vcenter{
+\xymatrix@C=2.5cm@R=1.75cm{
+f^{\ast} X \ar@<-3pt>[d]_{f^{*}(u)}\ar@<3pt>^{f^{\ast}(v)}[d]        \ar[r]^{p} & X
+\ar@<-3pt>_{u}[d] \ar@<3pt>^{v}[d]\\
+f^{\ast} X' \ar[r]^{p'}& X'\rlap{.}
+}}\leqno{(2.2.13.3)}
+$$
+We have
+$p'f^{\ast}(u+v)=(u+v)p=up+vp=p'f^{\ast}(u)+p'f^{\ast}(v)=p'(f^{\ast}(u)+f^{\ast}(v))$
+and hence $f^{\ast}(u+v)=f^{\ast}(u)+f^{\ast}(v)$.
+
+\item[\emph{Abelian case}:] by definition (\hyperref[XVII.subsec2.2]{2.2}), the functor
+$\Hom(X,f^{\ast}Y)=\Hom_f(X,Y)$ is left exact in $Y$, for every
+$X$, whence $f^{\ast}$ is left exact.
+
+\item[\emph{Triangulated case}:] let $(Y',Y,Y'')$ be a distinguished triangle in
+$\Aa_y$ and let \sisi{$(f^{\ast}Y',f^{\ast}Y)$}{$(f^{\ast}Y',f^{\ast}Y, X'')$ be a distinguished triangle in $\Aa_x$}. By \hyperref[XVII.def2.2.3]{2.2.3},
+the canonical morphism between the bases of these triangles can be
+completed to a morphism of triangles, giving rise to the following
+diagram:
+\[
+\xymatrix@C=2em{
+&  X''       \ar[rrr]^{\sisi{}{s}}\ar[ldd]   &     & &**[r]f^{\ast}Y''\ar[rrr]\ar[ldd]   &  & & Y''\ar[ldd] \\                      &     & f^{\ast}Y   \sisi{\ar[rrr]|\hole}{\ar@{=}[rrr]|\hole}\ar[lu]& &      &f^{\ast}Y \ar[rrr]|\hole\sisi{}{\ar[ul]}&&& Y\ar[lu]\\
+  f^{\ast}Y' \sisi{\ar[rrr]}{\ar@{=}[rrr]}\ar[rru]         &&& f^{\ast}Y'\sisi{}{\ar[rru]}   \ar[rrr] && & Y'\ar[rru]&&.
+}
+\]
+
+Let us prove that $s$ is an isomorphism, which will complete the
+proof. For every $X$ in $\Ob \Aa_x$, we have the
+commutative diagram:
+\[
+\text{\scriptsize
+$\xymatrix@C=1em{
+\Hom_x(X,f^{\ast}Y') \ar[r] \ar@{=}[d]& \Hom_x(X,f^{\ast}Y) \ar@{=}[d]\ar[r]& \Hom_x(X,X'')\ar[d]
+\ar[r]& \Hom_x(X,f^{\ast}Y'[1])\ar[r]\ar@{=}[d]
+& \Hom_x(X,f^{\ast}Y[1]) \ar@{=}[d]\\
+\Hom_x(X,f^{\ast}Y') \ar[r]\ar@{=}[d]&  \Hom_x(X,f^{\ast}Y)\ar[r] \ar@{=}[d]&
+\Hom_x(X,f^{\ast}Y'') \ar[r]\ar@{=}[d]&  \Hom_x(X,f^{\ast}Y'[1])\ar@{=}[d] \ar[r]&
+\Hom_x(X,f^{\ast}Y[1]) \ar@{=}[d]\\
+\Hom_f(X,Y)  \ar[r]& \Hom_f(X,Y)\ar[r]  &
+\Hom_f(X,Y'') \ar[r]& \Hom_f(X,Y'[1])\ar[r] &
+\Hom_x(X,Y[1]).
+}$}
+\]
+
+The\pageoriginale first and last rows are exact by
+\hyperref[XVII.prop2.2.4]{2.2.4}. By the five lemma, the map induced by $s$ from
+$\Hom(X,X'')$ to $\Hom(X,f^{\ast}Y'')$ is always bijective, and $s$
+is therefore an isomorphism.
+\end{itemize}
+
+There are, of course, dual results for cofibered categories.
+
+\subsection{Trivial duality formula}\etiquette[2.3]{XVII.subsec2.3}
+
+Let $\Aa$ be a category over a base category~$\Bb$,
+and let $S$ be a set of arrows of $\Aa$, each of which
+projects onto an identity of $\Bb$. The category
+$\Aa(S^{-1})$ obtained from $\Aa$ by the calculus of fractions
+is a category over $\Bb$ (by the universal property).
+
+Let $\Bb'\rightarrow \Bb$ be a functor; denote by
+$\Aa'$ the fiber product
+$\fprod{\Aa}{\Bb'}{\Bb}$ and by $S'$ the inverse
+image of $S$ in $\Aa'$. The composite functor
+$\Aa'\rightarrow \Aa\rightarrow \Aa(S^{-1})$
+makes the arrows of $S'$ invertible and hence factors through
+$\Aa'({S'}^{-1})$. We thus obtain a canonical $\Bb'$-functor
+as follows:
+$$\etiquette[2.3.1]{XVII.eq2.3.1}
+\Aa'(S^{-1})\longrightarrow
+\fprod{\Bb'}{\Aa(\sisi{S}{{S'}}^{-1})}{\Bb}{\quoi}.\leqno(2.3.1)
+$$
+
+\begin{enonce*}{Lemma 2.3.2}\etiquette[2.3.2]{XVII.lem2.3.2}
+If $\Bb'$ is a subcategory of $\Bb$, and if
+whenever a composite arrow $h=f\circ g$ of $\Bb$
+belongs to $\Bb'$, both $f$ and $g$ belong to
+$\Bb'$, then the functor \eqhyperref[XVII.eq2.3.1]{2.3.1} is an isomorphism.
+\end{enonce*}
+
+Note\pageoriginale that \eqhyperref[XVII.eq2.3.1]{2.3.1} always induces a bijection on
+objects, and that, in the present case,
+$\fprod{\Bb'}{\Aa(S^{-1})}{\Bb}$ is a
+subcategory of $\Aa(S^{-1})$.
+
+Recall the “explicit” construction of $\Aa(S^{-1})$
+\cite[\sisi{Chap.}{\chap}~I]{sga4.exp.XVII.bib.GZ}. Given two objects $X$ and $Y$ of $\Aa$, one
+considers the “formal composites” $f_1\ldots f_n$, where each
+$f_i$ is either an arrow of $\Aa$ or the inverse of an
+arrow of $S$. The set $\Hom_{\Aa(S^{-1})}(X,Y)$ is the
+quotient of the set of these “formal composites” by the
+equivalence relation generated by the relations
+\begin{alignat*}{2}
+& f_1\ldots uv\ldots f_n\equiv f_1\ldots (u\circ v)\ldots f_n &\quad &
+\mbox{\rm for } u,v\;\mbox{\rm in } \Fl(\Aa)\\
+& f_1\ldots ss^{-1}\ldots f_n\equiv f_1\ldots f_n && \mbox{\rm for }
+s\in S\\
+& f_1\ldots s^{-1}s\ldots f_n\equiv f_1\ldots f_n && \mbox{\rm for }
+s\in S{\quoi}.
+\end{alignat*}

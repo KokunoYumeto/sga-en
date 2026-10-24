@@ -1,0 +1,354 @@
+\setcounter{pageoriginal}{167}
+
+
+\section*{Introduction}\pageoriginale
+
+Let $g:X\rightarrow Y$ be a morphism of schemes. In the first section
+we study conditions under which $g$ is acyclic, that is, such that for
+every torsion sheaf $F$ on $Y$ one has
+$H^{q}(Y,F)\simeq H^{q}(X,g^{\ast}F)$, and such that this remains true
+when $Y$ is replaced by a $Y'$ étale over $Y$. A natural necessary
+condition for acyclicity is that the geometric fibers be acyclic, that
+is, have trivial cohomology for constant torsion sheaves. We shall see
+that this condition, together with a local condition called local
+acyclicity of $g$ (\hyperref[XV.def1.11]{1.11}), implies that $g$ is
+acyclic.
+
+The fundamental theorem is that a smooth morphism is locally acyclic
+for torsion sheaves of order prime to the residue characteristics
+\hyperref[XV.thm2.1]{2.1}. This will imply the base-change theorem for
+a smooth morphism \hyperrefext[XVI][XVI.thm1.1]{1.1}, which will be
+developed, together with its first consequences, in the next exposé.
+
+The present exposé is independent of Exposés XI to XIV, and in
+particular of the ``base-change theorem for a proper morphism.'' The
+latter will again enter in an essential way, but in conjunction with
+the fundamental theorem of the present exposé, beginning with the next
+exposé.
+
+\section{Generalities on globally and locally acyclic
+  morphisms}\etiquette[1]{XV.sec1}\pageoriginale
+
+
+\begin{enonce*}{Proposition 1.1}\etiquette[1.1]{XV.prop1.1}
+Let $g:X\rightarrow Y$ be a morphism of schemes. The following
+assertions {\rm(i)} to {\rm(iii)} are equivalent:
+\begin{itemize}
+\item[(i)] For every étale morphism $Y'\rightarrow Y$ (where $Y'$ may
+  be taken affine over an affine open subset of $Y$) and every sheaf of
+  sets $F$ on $Y'$, the canonical morphism $F\rightarrow
+  g'_{\ast}{g'}^{\ast}F$ is injective (\resp bijective).
+
+\item[(ii)] For every étale morphism $Y'\rightarrow Y$ (where $Y'$ may
+  be taken affine over an affine open subset of $Y$) and every sheaf of
+  sets $F$ on $Y'$, the canonical morphism $H^{0}(Y',F)\rightarrow
+  H^{0}(X',{g'}^{\ast}F)$ is injective (\resp bijective).
+
+\item[(iii)] For every locally quasi-finite morphism $Y'\rightarrow Y$
+  and every sheaf of sets $F$ on $Y'$, the canonical morphism
+  $H^{0}(Y',F)\rightarrow H^{0}(X',{g'}^{\ast}F)$ is injective
+  (\resp bijective).
+
+\item[(ii bis)] (If $g$ is quasi-compact and quasi-separated.) As in
+  {\rm(ii)}, but with $F$ a constant sheaf of the form $I_{Y'}$, where
+  $I$ is a prescribed set with $\card I\geq 2$.
+\end{itemize}
+\end{enonce*}
+
+\noindent
+\emph{Proof}. The equivalence of (i) and (ii) follows immediately from
+the definitions, while (iii) $\Rightarrow$ (ii) $\Rightarrow$ (ii bis)
+are trivial. We have (ii bis) $\Rightarrow$ (ii), since we may suppose
+$Y$ affine, so that $X$ and $Y$ are quasi-compact and quasi-separated,
+and may then apply \hyperrefext[XII][XII.prop6.5]{6.5} (i). For the
+implication (i) $\Rightarrow$ (iii), we first record the following
+lemma:
+
+\begin{enonce*}{Lemma 1.2}\etiquette[1.2]{XV.lem1.2}
+Let\pageoriginale $f:Y'\rightarrow Y$ be a locally quasi-finite
+morphism. Then $f$ is ``locally finite on $Y'$ for the étale
+topology,'' that is, there are commutative diagrams
+$$\vcenter{
+\xymatrix@=1.75cm{
+Y'_i        \ar[r]^{a_i}   \ar[d]^{b_i}& Y'\ar[d]^{f}\\
+Y_i          \ar[r]^{c_i}              & Y
+}}\leqno{(*)}
+$$
+in which the $a_i$ and $c_i$ are étale, the $b_i$ are finite, and the
+$a_i$ form a covering of $Y'$ \footnote[1]{\Cf \EGA IV 18.12.1.}.
+\end{enonce*}
+
+Indeed, let $y'$ be a point of $Y'$ and let $y=f(y')$. It is enough to
+find a diagram $({\ast})$ such that $y'$ lies in the image of $Y'_i$.
+Let $\widetilde{Y}$ be the spectrum of the henselization of the ring
+$\Oo_{Y,y}$ \hyperrefext[VIII][VIII.subsec4.1]{4.1}, and let $Z$ be
+the (ordinary) localization of
+$\widetilde{Y}'=\fprod{Y'}{\widetilde{Y}}{Y}$ at the unique point
+lying over $y'$ and the closed point $\widetilde{y}$ of
+$\widetilde{Y}$. By \hyperrefext[VIII][VIII.subsec4.1]{4.1} (ii),
+$Z\rightarrow \widetilde{Y}$ is finite, and $Z$ is an induced open
+subscheme of $\widetilde{Y}'$. Since $\widetilde{Y}$ is a limit of
+schemes $Y_i$ étale over $Y$, one sees immediately from \EGA IV 9 that,
+for a suitable $Y_i$, there is an open subscheme $Z_i$ of
+$\fprod{Y'}{Y_i}{Y}$ such that
+$Z=\fprod{Z_i}{\widetilde{Y}}{Y_i}$; in $({\ast})$ it is then enough to
+take $Y'_i=Z_i$. \cqfd
+
+
+Now suppose that (i) of \hyperref[XV.prop1.1]{1.1} holds. It is clear
+that assertion (iii) of \hyperref[XV.prop1.1]{1.1} is equivalent to the
+assertion obtained from (i) by replacing the étale morphism
+$Y'\rightarrow Y$ by a locally quasi-finite morphism. In this form,
+the assertion (for given $Y$ and $Y'$) is local on $Y$ and $Y'$ for
+the étale topology; hence the lemma reduces us to the case of a
+\emph{finite} morphism $f:Y'\rightarrow Y$.\pageoriginale Let
+$f':X'\rightarrow X$ be the morphism obtained from $f$ by base change
+along $g$. Then the base-change morphism
+$g^{\ast}f_{\ast}F\rightarrow {f'}_{\ast}{g'}^{\ast}F$ is bijective
+\hyperrefext[VIII][VIII.cor5.6]{5.6}. By (i),
+\sisi{the adjunction morphism
+$f_{\ast}F\rightarrow g_{\ast}g^{\ast}f_{\ast}F$ is injective
+(resp.~bijective)}{the adjunction morphism
+$f_{\ast}F\rightarrow g_{\ast}g^{\ast}f_{\ast}F$ is injective
+(resp.~bijective)}.
+Consequently, the morphism $H^{0}(Y',F)\xrightarrow{\epsilon}
+H^{0}(Y',g'_{\ast}{g'}^{\ast}F)$ in (iii) is the composite
+$H^{0}(Y',F)=H^{0}(Y,f_{\ast}F)\xrightarrow{\epsilon'}
+H^{0}(Y,g_{\ast}g^{\ast}f_{\ast}F)=H^{0}(X,g^{\ast}f_{\ast}F)\simeq
+H^{0}(X,{f'}_{\ast}{g'}^{\ast}F)=H^{0}(X',{g'}^{\ast}F)$.
+Since $\epsilon'$ is injective (\resp bijective), the same is true of
+$\epsilon$. This completes the proof of \hyperref[XV.prop1.1]{1.1}.
+
+\begin{enonce*}{Definition 1.3}\etiquette[1.3]{XV.def1.3}
+A morphism $g:X\rightarrow Y$ having one of the equivalent properties
+{\rm(i)} to {\rm(iii)} (\resp the corresponding parenthesized
+properties) of \hyperref[XV.prop1.1]{1.1} is called a
+\emph{$(-1)$-acyclic morphism} (\resp a \emph{$0$-acyclic morphism}).
+The morphism is said to be \emph{universally} $(-1)$-acyclic
+(\resp $0$-acyclic) if, for every base-change morphism
+$Y'\rightarrow Y$, the morphism
+$g'=\fprod{g}{Y'}{Y}:\fprod{X}{Y'}{Y}\rightarrow Y'$ is
+$(-1)$-acyclic (\resp $0$-acyclic). Finally, a scheme $X$ is said to
+be $(-1)$-acyclic (\resp $0$-acyclic) if it is nonempty (\resp
+connected and nonempty).
+\end{enonce*}
+
+\begin{enonce*}{Corollary 1.4}\etiquette[1.4]{XV.cor1.4}
+Let $g:X\rightarrow Y$ be a $0$-acyclic morphism. Then for every
+locally quasi-finite morphism $Y'\rightarrow Y$ and every sheaf of
+groups $F$ on $Y'$, the canonical morphism
+$$
+H^{1}(Y',F)\longrightarrow H^{1}(X',{g'}^{\ast}F)
+$$
+is injective.
+\end{enonce*}
+
+This follows immediately from \hyperrefext[XII][XII.prop6.5]{6.5} (i).
+
+\begin{enonce*}{Corollary 1.5}\etiquette[1.5]{XV.cor1.5}
+Let\pageoriginale $g:X\rightarrow Y$ be a morphism. If $g$ is
+surjective (\ie its fibers are nonempty, \ie its fibers are
+$(-1)$-acyclic), then $g$ is $(-1)$-acyclic. The converse holds if $g$
+is quasi-compact and quasi-separated.
+\end{enonce*}
+
+The first assertion is clear in the form \hyperref[XV.prop1.1]{1.1}
+(ii), by considering the fibers of the sheaves in question. The second
+follows from the definition in the form \hyperref[XV.prop1.1]{1.1}
+(iii) and the limit argument of \hyperrefext[VII][VII.sec5]{5}, taking
+into account that, for every $y\in Y$, $y=\Spec k(y)$ is the inverse
+limit of affine schemes locally quasi-finite over $Y$, namely the
+affine neighborhoods of $y$ in $\bar{\{y\}}$ (endowed with the induced
+reduced structure). \sisi{}{--} Note that \hyperref[XV.cor1.5]{1.5}
+implies that, when $g$ is quasi-compact and quasi-separated, the
+$(-1)$-acyclicity of $g$ already implies that $g$ is
+\emph{universally} $(-1)$-acyclic.
+
+\begin{enonce*}{Proposition 1.6}\etiquette[1.6]{XV.prop1.6}
+Let $g:X\rightarrow Y$ be a morphism of schemes, let
+$\LL\subset\PP$ be a set of prime numbers, and let $n\in\NN$ be a
+natural number (\resp let $n=1$). The following assertions {\rm(i)} to
+{\rm(iii)} (\resp the corresponding parenthesized assertions) are
+equivalent. If, moreover, $g$ is quasi-compact and quasi-separated,
+then {\rm(i)} to {\rm(iii)} (\resp the corresponding parenthesized
+assertions) are also equivalent to {\rm(iv)} (\resp the corresponding
+parenthesized assertion).
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every étale morphism $Y'\rightarrow Y$ and every abelian
+  $\LL$-torsion sheaf (\resp sheaf of
+  $\text{\rm ind}$-$\LL$-groups) \emph{\hyperrefext[IX][IX.def1.5]{1.5}}
+  $F$ on $Y'$, one has
+$$
+\begin{cases}
+F\xrightarrow{\sim} {g'}_{\ast}{g'}^{\ast}F, &\\
+(R^{q}{g'}_{\ast}){g'}^{\ast}F=0 & \mbox{if}\quad 1\leq q\leq n\quad
+(\resp \mbox{if\; } q=1){\quoi}.
+\end{cases}
+$$
+
+\item For\pageoriginale every étale morphism $Y'\rightarrow Y$ and
+every abelian $\LL$-torsion sheaf (\resp sheaf of
+ind-$\LL$-groups) $F$ on $Y'$, the canonical morphism
+$$
+H^{q}(Y',F)\longrightarrow H^{q}(X',{g'}^{\ast}F)
+$$
+is bijective if $q\leq n$ and injective if $q=n+1$ (\resp is
+bijective if $q\leq1$).
+
+\item For every locally quasi-finite morphism $Y'\rightarrow Y$ and
+every abelian $\LL$-torsion sheaf (\resp sheaf of
+ind-$\LL$-groups) $F$ on $Y'$, the morphism
+$$
+H^{q}(Y',F)\longrightarrow H^{q}(X', {g'}^{\ast}F)
+$$
+is bijective if $q\leq n$ and injective if $q=n+1$ (\resp is
+bijective if $q\leq1$).
+
+\item The morphism $g$ is surjective, and for every locally
+quasi-finite morphism $Y'\rightarrow Y$, every $\nu>0$, and every
+$\ell\in\LL$, the canonical morphism
+$$
+H^{q}(Y',\ZZ/\ell^{\nu})\longrightarrow H^{q}(X',\ZZ/\ell^{\nu})
+$$
+is \emph{surjective} for $0\leq q\leq n$ (\resp for every locally
+quasi-finite morphism $Y'\rightarrow Y$ and every ordinary finite
+$\LL$-group $G$, the canonical morphism
+$$
+H^{i}(Y',G)\longrightarrow H^{i}(X',G)
+$$
+is \emph{surjective} for $i=0,1$).
+\end{enumerate}
+\end{enonce*}
+
+\noindent
+\emph{Proof of}\pageoriginale \hyperref[XV.prop1.6]{1.6}. The
+implications (ii) $\Leftarrow$ (iii) $\Rightarrow$ (iv) are trivial.
+Now $(R^{q}{g'}_{\ast}){g'}^{\ast}F$ is the sheaf associated with the
+presheaf $R^{q}(Y'')=H^{q}(X'',{g''}^{\ast}F)$
+($Y''\rightarrow Y'$ étale). If (ii) holds, we have
+$H^{q}(Y'',F)\xrightarrow{\sim}H^{q}(X'',{g''}^{\ast}F)$, so the
+associated sheaf is zero\sisi{ if $1\leq q\leq n$}{}, \ie
+(ii) $\Rightarrow$ (i). The implication (i) $\Rightarrow$ (ii) follows
+from \hyperref[XV.prop1.1]{1.1} (i) (which corresponds to the case
+$n=0$), together with the Leray spectral sequence
+$$
+H^{p}(Y',(R^{q}{g'}_{\ast}){g'}^{\ast}F)\Longrightarrow
+H^{p+q}(X',{g'}^{\ast}F)
+$$
+in the abelian case, and the exact sequence
+$$
+0\longrightarrow H^{1}(Y',{g'}_{\ast}{g'}^{\ast}F)\longrightarrow
+H^{1}(X',{g'}^{\ast}F)\longrightarrow
+H^{0}(Y',(R^{1}{g'}_{\ast}){g'}^{\ast}F){\quoi}
+$$
+in the case of sheaves of groups.
+
+(i) $\Rightarrow$ (iii): Since (i) and (ii) are equivalent, it is
+clear that (iii) is equivalent to the statement obtained from (i) by
+replacing the word ``étale'' by the words ``locally quasi-finite.'' In
+this form, for given $Y$ and $Y'$, it is an assertion local on $Y'$ and
+on $Y$ for the étale topology, so \hyperref[XV.lem1.2]{1.2} reduces us
+to the case in which $f:Y'\rightarrow Y$ is a \emph{finite} morphism.
+Let $f':X'\rightarrow X$ be the morphism
+\sisi{obtained from~$f$ by base change along~$g$}{obtained from~$f$ by base change along~$g$}.
+By \hyperrefext[VIII][VIII.prop5.5]{5.5}
+(\resp \hyperrefext[VIII][VIII.rem5.8]{5.8}) (applied three times), we
+have
+$$
+f_{\ast}(R^{q}{g'}_{\ast}){g'}^{\ast}F\simeq
+R^{q}(fg')_{\ast}{g'}^{\ast}F\simeq
+R^{q}(gf')_{\ast}{g'}^{\ast}F\simeq
+(R^{q}g_{\ast}){f'}_{\ast}{g'}^{\ast}F\simeq
+(R^{q}g_{\ast})g^{\ast}(f_{\ast}F)
+$$
+and the last of these is zero, for the values of $q$ in question, if
+(i) holds. Thus (i) $\Rightarrow$ (iii).
+
+It remains to prove (iv) $\Rightarrow$ (iii), and this follows
+immediately\pageoriginale from \hyperrefext[XII][XII.prop6.5]{6.5}.
+
+\begin{enonce*}{Definition 1.7}\etiquette[1.7]{XV.def1.7}
+Let $n\in\NN$ and $\LL\subset\PP$. A morphism
+$g:X\rightarrow Y$ satisfying one of the equivalent conditions
+{\rm(i)} to {\rm(iii)} (\resp the corresponding parenthesized
+conditions) of \hyperref[XV.prop1.6]{1.6} is called an
+\emph{$n$-acyclic morphism} (\resp a \emph{$1$-aspherical morphism})
+for $\LL$. We say that $g$ is \emph{acyclic} for $\LL$ if it is
+$n$-acyclic for $\LL$ for every $n$. We say that $g$ is
+\emph{universally $n$-acyclic} (\resp \emph{universally
+$1$-aspherical}) for $\LL$ if, for every $Y'\rightarrow Y$, the
+morphism $g'=\fprod{g}{Y'}{Y}$ is $n$-acyclic (\resp $1$-aspherical)
+for $\LL$. Finally, a scheme $X$ is said to be $n$-\emph{acyclic}
+(\resp $1$-\emph{aspherical}) for $\LL$ if it is $0$-acyclic in the
+sense of \hyperref[XV.def1.3]{1.3} and if, for every $\ell\in\LL$ and
+every $1\leq q\leq n$, one has $H^{q}(X,\ZZ/\ell)=0$ (\resp and if,
+for every ordinary finite $\LL$-group $G$, one has $H^{1}(X,G)=0$).
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remarks 1.8}\etiquette[1.8]{XV.rem1.8}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item If $g$ is quasi-compact and quasi-separated, then, in order for
+  $g$ to be universally $n$-acyclic, it is enough that $g'$ be
+  $n$-acyclic whenever $Y'\rightarrow Y$ is locally of finite
+  presentation. We do not need this fact and leave its proof, which is
+  an exercise in passage to the limit, to the reader.
+
+\item We do not know whether a morphism that is $n$-acyclic for
+  $\LL$ is necessarily universally $n$-acyclic for $\LL$. The same
+  question arises for the local variants below
+  \hyperref[XV.def1.11]{1.11}.
+
+\item When $n=0$, we recover the notion of
+  \hyperref[XV.def1.3]{1.3}. Of course,
+  \hyperref[XV.prop1.6]{1.6} and \hyperref[XV.def1.7]{1.7} could have
+  been formulated so as to include the case $n=-1$. The following
+  proposition is also valid in that case.\pageoriginale
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.9}\etiquette[1.9]{XV.prop1.9}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let $X\xrightarrow{g}Y\xrightarrow{h}Z$ be morphisms of schemes,
+  let $\LL\subset\PP$, and let $n\in\NN$. Suppose that $g$ is
+  $0$-acyclic (\resp $1$-aspherical for $\LL$, \resp $n$-acyclic for
+  $\LL$). Put $f=hg$. Then, for every sheaf of sets (\resp of
+  ind\sisi{-}{ }$\LL$-groups, \resp abelian $\LL$-torsion sheaf) $F$
+  on $Z$, there is an isomorphism
+  $f_{\ast}f^{\ast}F\xrightarrow{\sim}h_{\ast}h^{\ast}F$ (\resp
+  isomorphisms $(R^{p}f_{\ast})f^{\ast}F\xrightarrow{\sim}
+  (R^{p}h_{\ast})h^{\ast}F$ for $p\leq1$, \resp for $p\leq n$). In
+  particular, $h$ is $0$-acyclic (\resp $1$-aspherical for $\LL$,
+  \resp $n$-acyclic for $\LL$) if and only if $f$ is.
+
+\item Let $\{g_{\alpha}:X_{\alpha}\rightarrow Y_{\alpha}\}$ be an
+  inverse system of morphisms of schemes such that the morphisms
+  $X_{\alpha}\rightarrow X_{\beta}$ and
+  $Y_{\alpha}\rightarrow Y_{\beta}$ are affine and the $g_{\alpha}$
+  are quasi-compact and quasi-separated. Let $g:X\rightarrow Y$ be the
+  inverse limit of the $g_{\alpha}$
+  \hyperrefext[VII][VII.subsec5.1]{5.1}. Then, if all the $g_{\alpha}$
+  are $0$-acyclic (\resp $1$-aspherical for $\LL$, \resp $n$-acyclic
+  for $\LL$), the same is true of $g$.
+\end{enumerate}
+\end{enonce*}
+
+\noindent
+\emph{Proof}. For (i), first observe that
+$$
+h_{\ast}h^{\ast}F\xrightarrow{\sim}
+h_{\ast}(g_{\ast}g^{\ast})h^{\ast}F\simeq f_{\ast}f^{\ast}F{\quoi}.
+$$
+The second assertion of (i) is an immediate consequence of the Leray
+spectral sequence
+$$
+(R^{p}h_{\ast})(R^{q}g_{\ast})f^{\ast}F\Longrightarrow
+(R^{p+q}f_{\ast})f^{\ast}F{\quoi}.
+$$
+Finally, the nonabelian assertion follows from the exact sequence
+\hyperrefext[XII][XII.prop3.2]{3.2}.

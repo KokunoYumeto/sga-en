@@ -1,0 +1,368 @@
+
+\chapter*{Expos\'e \texorpdfstring{VII\textsubscript{A}}{VII-A}\\
+Infinitesimal Study of Group Schemes}
+\phantomsection
+\label{sga3:VIIA:title}
+\addcontentsline{toc}{chapter}{Expos\'e VII-A. Infinitesimal Study of Group Schemes}
+\markboth{EXPOS\'E VII\textsubscript{A}. INFINITESIMAL STUDY OF GROUP SCHEMES}%
+  {EXPOS\'E VII\textsubscript{A}. INFINITESIMAL STUDY OF GROUP SCHEMES}
+
+\begin{center}
+  \textit{by P. Gabriel}
+\end{center}
+
+In Expos\'e II we restricted ourselves to the study of first-order
+differential invariants, and we did not address certain phenomena special
+to characteristic \(p>0\) or to characteristic zero. Our purpose in
+Part~A of this expos\'e is to fill that gap.
+
+Moreover, the infinitesimal study of a group scheme to arbitrary order is
+related to that of the associated formal group; the purpose of the second
+part of this expos\'e is to present the first definitions and properties
+concerning formal groups.
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\section*{A) Differential Operators and Restricted
+  \texorpdfstring{\(p\)}{p}-Lie Algebras\footnote{Part~A of the present
+  expos\'e was not treated seriously in the oral seminars.}}
+\phantomsection
+\label{sga3:VIIA:A}
+\addcontentsline{toc}{section}{A) Differential Operators and Restricted p-Lie Algebras}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+
+\section*{1. Differential Operators}
+\phantomsection
+\label{sga3:VIIA:1}
+\addcontentsline{toc}{section}{1. Differential Operators}
+
+In this section, as well as in \SGARefLink{sga3:VIIA:2}{Sections~2} and~3, \(S\) denotes a fixed
+scheme, and all products under consideration are cartesian products in
+the category of \(S\)-schemes.\footnote{In particular, if \(X\) and \(Y\)
+are two \(S\)-schemes, \(X\times_S Y\) is denoted simply by \(X\times Y\).
+For the material in \SGARefLink{sga3:VIIA:1}{Sections~1} and~2, one may also consult \emph{Groupes
+alg\'ebriques} by Demazure and Gabriel, II.4, nos.~5--6; see also
+Jantzen, \emph{Representations of Algebraic Groups}, I.7.}
+If \(X\) is an \(S\)-scheme, we write \(p_{X/S}\), \(p_X\), or simply
+\(p\) for the structural morphism from \(X\) to \(S\).
+
+\medskip
+\noindent\textbf{1.1.}
+\phantomsection
+\label{sga3:VIIA:1.1}
+Let \(u:Y\to X\) be a morphism of \(S\)-schemes, and endow the direct
+image \(u_*(\mathcal O_Y)\) of the structure sheaf of \(Y\) with the
+\(\mathcal O_X\)-module structure induced by \(u\). The sheaf
+\[
+  \mathcal H=
+  \mathcal Hom_{p_X^{-1}(\mathcal O_S)}
+    \bigl(\mathcal O_X,u_*(\mathcal O_Y)\bigr)
+\]
+of homomorphisms of \(p_X^{-1}(\mathcal O_S)\)-modules from
+\(\mathcal O_X\) to \(u_*(\mathcal O_Y)\) is therefore naturally an
+\(\mathcal O_X\)-bimodule. If \(U\) is an open subset of \(X\), and
+\(f\) and \(d\) are sections over \(U\) of \(\mathcal O_X\) and
+\(\mathcal H\), respectively, then \(fd\) and \(df\) are the morphisms
+\[
+  g\longmapsto f\,d(g)
+  \qquad\text{and}\qquad
+  g\longmapsto d(fg)
+\]
+from \(\mathcal O_X\) to \(u_*(\mathcal O_Y)\). From now on we write
+\((\operatorname{ad}f)(d)\) in place of \(fd-df\).
+
+\medskip
+\noindent\textbf{Definition 1.1.1.}
+\phantomsection
+\label{sga3:VIIA:1.1.1}
+\textit{An \(S\)-deviation of order \(\leq n\) is a pair
+\(D=(u,d)\), consisting of a morphism of \(S\)-schemes \(u:Y\to X\)
+and a morphism of \(p_X^{-1}(\mathcal O_S)\)-modules
+\[
+  d:\mathcal O_X\longrightarrow u_*(\mathcal O_Y),
+\]
+such that, for every open subset \(U\) of \(X\) and every sequence of
+\(n+1\) sections \(f_0,\ldots,f_n\in\mathcal O_X(U)\), one has}
+\begin{equation}
+  (\operatorname{ad}f_0)(\operatorname{ad}f_1)\cdots
+  (\operatorname{ad}f_n)(d)=0.
+  \tag{\(\ast_n\)}
+  \label{sga3:VIIA:eq:star-n}
+\end{equation}
+\footnote{Equivalently, for every \(x\in X\) and
+\(f_0,\ldots,f_n,g\in\mathcal O_{X,x}\),
+\[
+  (\operatorname{ad}f_0)\cdots(\operatorname{ad}f_n)(d_x)(g)=0.
+\]
+Recall also that the adjunction isomorphism
+\[
+ \theta:
+ \operatorname{Hom}_{p_X^{-1}(\mathcal O_S)}
+   \bigl(\mathcal O_X,u_*(\mathcal O_Y)\bigr)
+ \xrightarrow{\sim}
+ \operatorname{Hom}_{p_Y^{-1}(\mathcal O_S)}
+   \bigl(u^{-1}\mathcal O_X,\mathcal O_Y\bigr)
+\]
+sends \(d\) to \(d'=\varepsilon\circ u^{-1}(d)\), where
+\(\varepsilon:u^{-1}u_*(\mathcal O_Y)\to\mathcal O_Y\) is canonical.
+Conversely,
+\(\theta^{-1}(d')=u_*(d')\circ\eta\), with
+\(\eta:\mathcal O_X\to u_*u^{-1}\mathcal O_X\) canonical. Hence \(d\)
+satisfies \((\ast_n)\) if and only if \(d'\) satisfies the analogous
+identity for all local sections of \(u^{-1}\mathcal O_X\).}
+
+In this case we also say that \(d\) is an \(S\)-deviation of \(u\) of
+order \(\leq n\). In particular, an \(S\)-deviation of \(u\) of order
+\(\leq0\) is a morphism of \(\mathcal O_X\)-modules from
+\(\mathcal O_X\) to \(u_*(\mathcal O_Y)\), that is, an element of
+\(\Gamma(Y,\mathcal O_Y)\).
+
+\medskip
+\noindent\textbf{Definition 1.1.2.}
+\phantomsection
+\label{sga3:VIIA:1.1.2}
+\textit{A morphism of \(p_X^{-1}(\mathcal O_S)\)-modules
+\[
+  d:\mathcal O_X\longrightarrow u_*(\mathcal O_Y)
+\]
+is an \(S\)-deviation of \(u\) if, for every point \(y\in Y\), there
+exist an open neighborhood \(U\) of \(u(y)\) in \(X\) and an open
+neighborhood \(V\) of \(y\) in \(Y\) satisfying:
+\begin{enumerate}
+\item[\textup{a)}] \(u(V)\subset U\);
+\item[\textup{b)}] if \(v:V\to U\) is induced by \(u\), there is an
+integer \(n\) such that the morphism
+\(\mathcal O_U\to v_*(\mathcal O_V)\) induced by \(d\) is an
+\(S\)-deviation of \(v\) of order \(\leq n\).
+\end{enumerate}}\footnote{If \(X\) and \(u\) are quasi-compact, every
+\(S\)-deviation of \(u\) is therefore of order \(\leq n\) for some
+integer \(n\).}
+
+If \(d\) is an \(S\)-deviation of \(u\), we also call the pair
+\(D=(u,d)\) an \(S\)-deviation, and we may write
+\[
+  Y\xrightarrow{D}X
+  \qquad\text{or}\qquad
+  Y\mathop{\longrightarrow}^{d}_{u}X.
+\]
+When \(d\) is the homomorphism of algebras
+\[
+  u^\natural:\mathcal O_X\longrightarrow u_*(\mathcal O_Y)
+\]
+corresponding to the morphism \(u:Y\to X\), we also write \(u\) in
+place of \(D\).
+
+\medskip
+\noindent\textbf{Remarks 1.1.3.}\footnote{These remarks were added by
+the editors because they are useful in \SGARefLink{sga3:VIIA:1.3}{1.3}, \SGARefLink{sga3:VIIA:1.4}{1.4}, and \SGARefLink{sga3:VIIA:2.1}{2.1}.}
+\phantomsection
+\label{sga3:VIIA:1.1.3}
+Let \(\operatorname{Dev}(u)\) (respectively,
+\(\operatorname{Dev}_{\leq n}(u)\)) be the set of \(S\)-deviations of
+\(u\) (respectively, of order \(\leq n\)). It has a natural
+\(\mathcal O_Y(Y)\)-module structure: if
+\(\lambda\in\mathcal O_Y(Y)\), then \(\lambda d\) is the deviation
+that sends \(f\) to \(\lambda d(f)\) for every local section \(f\) of
+\(\mathcal O_X\).
+
+For every open subset \(V\) of \(Y\), set
+\(\mathcal{Dev}(u)(V)=\operatorname{Dev}(u|_V)\). Thus
+\(\mathcal{Dev}(u)(V)\) is the set of
+\begin{align*}
+ d_V&\in
+ \operatorname{Hom}_{p_X^{-1}(\mathcal O_S)}
+   \bigl(\mathcal O_X,(u|_V)_*(\mathcal O_V)\bigr)\\
+ &\simeq
+ \operatorname{Hom}_{p_Y^{-1}(\mathcal O_S)}
+   \bigl((u|_V)^{-1}\mathcal O_X,\mathcal O_V\bigr)\\
+ &\simeq
+ \operatorname{Hom}_{p_Y^{-1}(\mathcal O_S)}
+   \bigl(u^{-1}\mathcal O_X,\mathcal O_Y\bigr)(V)
+\end{align*}
+such that, for every open \(U\subset X\), the map
+\[
+ d_V(U):\mathcal O_X(U)\longrightarrow
+ \mathcal O_Y\bigl(u^{-1}(U)\cap V\bigr)
+\]
+satisfies \((\ast_n)\). This defines a presheaf of
+\(\mathcal O_Y\)-modules on \(Y\), and it is easily seen to be a sheaf
+(more precisely, a subsheaf of
+\(\mathcal Hom_{p_Y^{-1}(\mathcal O_S)}
+  (u^{-1}\mathcal O_X,\mathcal O_Y)\)).
+
+\medskip
+\noindent\textbf{1.2.}
+\phantomsection
+\label{sga3:VIIA:1.2}
+Consider two \(S\)-deviations \(D=(u,d)\) and \(E=(v,e)\):
+\[
+  Z\mathop{\longrightarrow}^{e}_{v}Y
+  \mathop{\longrightarrow}^{d}_{u}X.
+\]
+As \(U\) ranges over the open subsets of \(X\), the composites
+\[
+ \Gamma(U,\mathcal O_X)
+ \xrightarrow{d(U)}
+ \Gamma(u^{-1}U,\mathcal O_Y)
+ \xrightarrow{e(u^{-1}U)}
+ \Gamma(v^{-1}u^{-1}U,\mathcal O_Z)
+\]
+define an \(S\)-deviation of \(uv\), denoted by \(de\). If \(d\) has
+order \(\leq m\) and \(e\) has order \(\leq n\), then \(de\) has order
+\(\leq m+n\). We also write
+\begin{equation}
+  D\circ E=(uv,de)
+  \tag{\(\dagger\)}
+  \label{sga3:VIIA:eq:composition}
+\end{equation}
+\footnote{With this notation, \(de\) means the composite ``\(d\)
+followed by \(e\).''}
+and call \(D\circ E\), or \(DE\), the \emph{composite
+\(S\)-deviation}. When \(d=u^\natural\), so that \(D=u\) under the
+convention of \SGARefLink{sga3:VIIA:1.1}{1.1}, we also say that \(DE\) is the \emph{image of \(E\)
+under \(u\)}.
+
+The map \((D,E)\mapsto D\circ E\) allows us to speak from now on of the
+\emph{category of \(S\)-deviations}, whose objects are \(S\)-schemes
+and whose morphisms are \(S\)-deviations.\footnote{Often one considers
+only the \(S\)-deviations of \(\operatorname{id}_X\); they form the
+algebra of \(S\)-differential operators on \(X\), cf.~\SGARefLink{sga3:VIIA:1.4}{1.4} below. The
+more general framework provides a convenient functorial language for
+statements such as the following: if \(G\) is an \(S\)-group, the
+algebra of left-translation-invariant \(S\)-differential operators on
+\(G\) is isomorphic to the algebra of \(S\)-deviations of the unit
+section \(\varepsilon:S\to G\); cf.~\SGARefLink{sga3:VIIA:2.1}{2.1} and~\SGARefLink{sga3:VIIA:2.4}{2.4}.}
+
+\medskip
+\noindent\textbf{Definition 1.2.0.}\footnote{The editors expanded this
+paragraph and assigned the number \SGARefLink{sga3:VIIA:1.2.0}{1.2.0} to this definition and 1.2.1
+to the lemma that follows.}
+\phantomsection
+\label{sga3:VIIA:1.2.0}
+\textit{Let \(w:Z\to X\) be an \(S\)-morphism. An
+\(S\)-derivation of \(w\), or an \(S\)-derivation of \(\mathcal O_X\)
+into \(w_*(\mathcal O_Z)\), is a morphism of
+\(p^{-1}(\mathcal O_S)\)-modules
+\[
+  d:\mathcal O_X\longrightarrow w_*(\mathcal O_Z)
+\]
+such that, for every open \(U\subset X\) and
+\(f,g\in\mathcal O_X(U)\),
+\[
+  d(fg)=w^\natural(f)d(g)+w^\natural(g)d(f).
+\]
+Then \(d\) is a deviation of \(w\) of order \(\leq1\), vanishing on
+the unit section of \(\mathcal O_X\). We denote the set of
+\(S\)-derivations of \(w\) by \(\operatorname{Der}_S(w)\); it is an
+\(\mathcal O(Z)\)-module.}
+
+With the notation of \SGARefLink{sga3:VIIA:1.2}{1.2}, take
+\[
+  Y=I_Z=\operatorname{Spec}\mathcal O_Z[t],\qquad t^2=0,
+\]
+let \(v\) be the zero section \(\tau:Z\to I_Z\), defined by the
+homomorphism \(\mathcal O_Z[t]\to\mathcal O_Z\) sending \(t\) to zero,
+and let \(e\) be the morphism of \(\mathcal O_Z\)-modules
+\(\sigma:\mathcal O_Z[t]\to\mathcal O_Z\) defined by
+\(\sigma(1)=0\) and \(\sigma(t)=1\), which it is convenient to denote
+by \(\partial_t\).\footnote{The editors added this notation
+\(\partial_t\).}
+
+If \(u:I_Z\to X\) is a morphism satisfying \(w=u\circ\tau\), then
+\(\sigma\circ u^\natural\) is an \(S\)-derivation from
+\(\mathcal O_X\) to \(w_*(\mathcal O_Z)\). Conversely, an
+\(S\)-derivation \(d\) determines the morphism \(u:I_Z\to X\) which
+equals \(w\) on the underlying spaces and satisfies
+\[
+  u^\natural(f)=w^\natural(f)+d(f)t
+\]
+for every local section \(f\) of \(\mathcal O_X\).
+
+\medskip
+\noindent\textbf{Lemma 1.2.1.}
+\phantomsection
+\label{sga3:VIIA:1.2.1}
+\textit{Let \(E=(\tau,\partial_t)\) be the deviation of
+\(\tau:Z\to I_Z\) defined above. For every \(S\)-morphism \(w:Z\to X\),
+the map \(u\mapsto u\circ E\) is a bijection between the
+\(S\)-morphisms \(u:I_Z\to X\) such that \(u\circ\tau=w\), and the
+\(S\)-derivations of \(w\).}
+
+\medskip
+\noindent\textbf{1.2.2.}
+\phantomsection
+\label{sga3:VIIA:1.2.2}
+Let \(d\) be an \(S\)-deviation of \(u:Y\to X\). On the one hand, \(d\)
+is plainly an \(S'\)-deviation of \(u\) for every morphism \(s:S\to S'\).
+
+On the other hand, let \(t:T\to S\) be a morphism with target \(S\),
+let \(u_T:Y_T\to X_T\) be obtained from \(u\) by base change, and let
+\(t_Y:Y_T\to Y\) and \(t_X:X_T\to X\) be the canonical projections.
+There exists a unique \(T\)-deviation of \(u_T\), denoted \(d_T\) or
+\(d\times T\), which satisfies
+\[
+  t_Xd_T=dt_Y
+\]
+in the sense of \eqref{sga3:VIIA:eq:composition}. Thus, for every open
+\(U\subset X\), the following diagram is commutative:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:1.2.2-base-change-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_001_base_change_square}
+\end{center}
+\footnote{Explicitly, if \(V\) is an affine open subset of \(S\), and
+\(U\) (respectively, \(U'\)) is an affine open subset of \(X\)
+(respectively, \(T\)) over \(V\), then
+\[
+ \mathcal O_{X\times T}(U\times U')
+ =\mathcal O_X(U)\otimes_{\mathcal O_S(V)}\mathcal O_T(U'),
+\]
+and \(d_T(U\times U')\) is the composite
+\[
+ \mathcal O_X(U)\otimes_{\mathcal O_S(V)}\mathcal O_T(U')
+ \xrightarrow{d(U)\otimes\mathrm{id}}
+ \mathcal O_Y(u^{-1}U)\otimes_{\mathcal O_S(V)}\mathcal O_T(U')
+ \longrightarrow
+ \mathcal O_{Y\times T}(u^{-1}U\times U').
+\]
+The author left to the reader the verification that \(d_T\) is
+well-defined, and the editors do the same.}
+If \(D=(u,d)\), we also write \(D_T=(u_T,d_T)\), and say that \(d_T\)
+and \(D_T\) are obtained from \(d\) and \(D\) by base change.
+
+\medskip
+\noindent\textbf{1.2.3.}
+\phantomsection
+\label{sga3:VIIA:1.2.3}
+For example, let \(u:Y\to X\) and \(v:Z\to T\) be two \(S\)-morphisms,
+and let \(d\) and \(e\) be \(S\)-deviations of \(u\) and \(v\).
+There is a commutative diagram
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:1.2.3-product-scheme-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_002_product_scheme_square}
+\end{center}
+and we denote by \(d\times e\), the \emph{product of \(d\) and \(e\)},
+the \(S\)-deviation of \(u\times v\) equal to
+\[
+  d_Te_Y=e_Xd_Z
+\]
+under the convention of \eqref{sga3:VIIA:eq:composition}. More
+explicitly, for every open \(U\subset X\times T\), set
+\[
+  W=v_Y^{-1}u_T^{-1}U=u_Z^{-1}v_X^{-1}U.
+\]
+Then the following diagram is commutative:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:1.2.3-product-deviation-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_003_product_deviation_square}
+\end{center}
+If \(D=(u,d)\) and \(E=(v,e)\), we also write
+\[
+  D\times E=(u\times v,d\times e).
+\]
+\footnote{Source note: the French sentence at this point prints
+\(E=(v,d)\); the established notation is \(E=(v,e)\).}
+

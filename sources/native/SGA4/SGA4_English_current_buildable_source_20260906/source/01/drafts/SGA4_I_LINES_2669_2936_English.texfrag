@@ -1,0 +1,245 @@
+\section{Ind-objects and pro-objects}\etiquette[8]{I.sec8}\pageoriginale
+
+\subsection{Cofinal functors and cofinal subcategories}\etiquette[8.1]{I.sec8.1}
+
+\begin{enonce*}{Definition 8.1.1}\etiquette[8.1.1]{I.def8.1.1}
+Let
+\hypertarget{sga4.exp.I.equation.8.1.1.1}{}$$
+\displaylines{\rlap{$(8.1.1.1)$}\hfill \varphi:I\longrightarrow
+I'\hfill}
+$$
+be a functor. The functor $\varphi$ is said to be cofinal if, for every
+category $C$ and every functor $u:I'\rightarrow C$, regarding
+$\varinjlim u$ and $\varinjlim u\circ\varphi$ as objects of
+$\Hhom(G(𝒱\text{-}\Ens))^\circ$ (\hyperref[I.def2.1]{2.1},
+\hyperref[I.sec2.3.1]{2.3.1}) (where $𝒱$ is a universe such that
+$I$, $I'\in 𝒱$ and $C$ is a $𝒱$-category), the canonical morphism
+\hypertarget{sga4.exp.I.equation.8.1.1.2}{}$$
+\displaylines{\rlap{$(8.1.1.2)$}\hfill \varinjlim
+  u\circ\varphi\longrightarrow \varinjlim u\hfill}
+$$
+is an isomorphism. When $\varphi$ is the inclusion functor of a
+subcategory of $I'$, the subcategory $I$ is said to be cofinal if
+$\varphi$ is cofinal.
+\end{enonce*}
+
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[8.1.2]{I.sec8.1.2}
+Notice that for given $\varphi$ and $u$, the bijectivity of \hyperlink{sga4.exp.I.equation.8.1.1.2}{(8.1.1.2)}
+does not depend on the choice of the universe $𝒱$.
+
+Returning to the definition of the terms occurring in \hyperlink{sga4.exp.I.equation.8.1.1.2}{(8.1.1.2)}
+(\hyperref[I.def2.1]{2.1}, \hyperref[I.sec2.3.1]{2.3.1}), we see that to
+say that $\varphi$ is cofinal also means that, for every universe $𝒱$
+such that $I$ and $I'$ are $𝒱$-small, and every functor
+$$
+v:{I'}^\circ\longrightarrow (𝒱\text{-}\Ens){\quoi},
+$$
+the canonical homomorphism
+\hypertarget{sga4.exp.I.equation.8.1.2.1}{}$$
+\displaylines{\rlap{$(8.1.2.1)$}\hfill \varprojlim v\longrightarrow
+  \varprojlim v\circ\varphi\hfill}
+$$
+is an isomorphism, \ie a bijection. To see that this condition is indeed
+necessary, observe, on putting $v=v^\circ$, that it also says that the
+condition of \hyperref[I.def8.1.1]{Definition 8.1.1} is satisfied when
+$C=(𝒱\text{-}\Ens)^\circ$ (which\pageoriginale implies that the
+inductive limits considered in \hyperlink{sga4.exp.I.equation.8.1.1.2}{(8.1.1.2)} are representable in $C$).
+
+\setcounter{paragraph}{1}
+\paragraph{}\etiquette[8.1.2.2]{I.sec8.1.2.2}
+It follows immediately from the definition that \emph{the composite of
+two cofinal functors is cofinal.}
+
+\begin{enonce*}{Proposition 8.1.3}\etiquette[8.1.3]{I.prop8.1.3}
+Let $\varphi:I\rightarrow I'$ be a functor.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item For $\varphi$ to be cofinal, it is necessary that $\varphi$
+  satisfy the condition:
+
+\begin{itemize}
+\item[F 1)] For every object $i'$ of $I'$, there exists an object $i$ of
+  $I$ such that $\varphi(i)$ is an upper bound of $i'$ (\ie such that
+  $\Hom(i',\varphi(i))\neq \phi$).
+\end{itemize}
+
+\item Suppose that $I$ is filtered. For $\varphi$ to be cofinal, it is
+  necessary and sufficient that $\varphi$ satisfy condition {\rm (F 1)}
+  and the following condition:
+\begin{itemize}
+\item[F 2)] For every object $i$ of $I$ and every double arrow
+$\xymatrix{ i'\ar@<2pt>[r]^{f',g'}\ar@<-2pt>[r]& \varphi(i) }$ in $I'$
+with target $\varphi(i)$, there exists an arrow $h:i\rightarrow j$ in
+$I$ such that $\varphi(h)f'=\varphi(h)g'$.
+\end{itemize}
+Moreover, if $\varphi$ is cofinal, $I'$ is filtered.
+
+\item Suppose that $I'$ is filtered and $\varphi$ is fully faithful. For
+  $\varphi$ to be cofinal, it is necessary and sufficient that it satisfy
+  condition {\rm F 1)} of {\rm a)}. This implies that $I$ is filtered.
+\end{enumerate}
+\end{enonce*}
+
+\noindent \emph{Proof.} For necessity in a) and b), use Definition
+\hyperref[I.def8.1.1]{8.1.1} only in the case where $u$ is the canonical
+inclusion functor (\hyperref[I.sec1.3.3]{1.3.3})
+$$
+u:I'\hookrightarrow \widehat{I}'
+$$
+(having chosen a universe $𝒰$ such that $I$ and $I'$ are
+$𝒰$-small). We may then interpret \hyperlink{sga4.exp.I.equation.8.1.1.2}{(8.1.1.2)} as an arrow of
+$\widehat{I}'$ (\hyperref[I.prop3.1]{3.1}) whose target is the
+\emph{terminal} functor\pageoriginale on $I'$ (\hyperref[I.prop3.4]{3.4}).
+It is immediately clear that condition F 1) says that this arrow is an
+epimorphism of $\widehat{I}'$, \ie that it is surjective at each
+argument (taking into account that inductive limits in $\widehat{I}'$
+are computed ``argument by argument''). This proves a). Now suppose that
+$I$ is filtered and $\varphi$ is cofinal. Then $I'$ is filtered: indeed,
+the condition that two objects of $I'$ be bounded above by a third follows
+at once from the same condition on $I$ and from F 1), and it remains only
+to prove condition PS 2) of \hyperref[I.def2.7]{2.7}, \ie that for every
+double arrow
+$$
+f',g':i'\rightrightarrows j'
+$$
+in $I'$, there exists an arrow $h':j'\rightarrow k'$ of $I'$ such that
+$h'f'=h'g'$. By F~1), we may suppose that $k'$ is of the form
+$\varphi(i)$. But since $\varphi$ is cofinal, for every object $i'$ of
+$I'$ the set $\varinjlim_i\Hom(i',\varphi(i))$ consists of a single
+element. The standard description of \emph{filtered} inductive limits in
+(Ens) (\hyperref[I.lem2.8.1]{2.8.1}) therefore implies that there exists
+an arrow $h:i\rightarrow j$ in $I$ such that
+$\varphi(h)f'=\varphi(h)g'$. This completes the proof that $I'$ is
+filtered and at the same time proves condition F~2).
+
+To prove that the conditions in b) are sufficient for $\varphi$ to be
+cofinal, use the form \hyperref[I.sec8.1.2]{8.1.2} of the definition. One
+sees at once that condition F 1) implies that \hyperlink{sga4.exp.I.equation.8.1.2.1}{(8.1.2.1)} is a
+monomorphism, \ie is injective at each argument, while condition F 2)
+(together with F 1)) ensures that it is bijective (taking into account
+the argument-by-argument computation of projective limits in
+$\widehat{{I'}^\circ}$). This proves b).
+
+Finally,\pageoriginale if $I'$ is filtered and $\varphi$ is fully
+faithful, it is immediate that condition F 1) implies that $I$ is
+filtered and implies condition F 2). Thus c) follows from a) and b).
+
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[8.1.4]{I.sec8.1.4}
+When $I'$ is a filtered category and $I$ is a full subcategory of $I'$,
+we see from \hyperref[I.prop8.1.3]{8.1.3} c) that the condition that $I$ be cofinal in $I'$
+depends only on the subset $\Ob I$ of the preordered set $OB\,I'$ (for
+the preorder relation ``$x\leq y$'' $\Leftrightarrow$
+``$\Hom(x,y)\neq ∅$''). If $J'$ is a preordered set and $J$ a subset of
+$J'$, we shall sometimes say that $J$ is a \emph{cofinal subset of} $J'$
+when every element of $J'$ is bounded above by an element of $J$. When
+$J'$ is filtered, this therefore means that the inclusion functor
+$𝒥\hookrightarrow 𝒥'$ for the associated categories is cofinal.
+
+\subsubsection{}\etiquette[8.1.5]{I.sec8.1.5}
+In what follows, we shall use the notion of cofinal functor only when the
+categories $I$ and $I'$ are filtered. Classically, one even restricted
+oneself to categories associated with preordered sets (\ie categories in
+which there is at most one arrow with given source and target). It turns
+out, however, that this restriction is inconvenient in applications,
+since the ``natural'' filtered categories arising in many applications
+are \emph{not} ordered categories. The following result, %%
+due to P. \textsc{Deligne}, shows nevertheless that there is no essential
+difference between the two points of view:
+
+\begin{enonce*}{Proposition 8.1.6}\etiquette[8.1.6]{I.prop8.1.6}
+Let\pageoriginale $I$ be a small filtered category. Then there exist a
+small ordered set $E$ and a cofinal functor $\varphi:ℰ\rightarrow I$,
+where $ℰ$ denotes the category associated with $E$.
+\end{enonce*}
+
+First suppose that the preordered set $\Ob I$ has no greatest element.
+A subdiagram of $I$ is a pair $D=(\mathcal{O},F)$ consisting of a subset
+$F$ of $F\ell(I)$ and a subset $\mathcal{O}$ of $\Ob I$, such that for
+every $f\in F$, the source and target of $f$ belong to $\mathcal{O}$. An
+element $e$ of $\mathcal{O}$ is called a \emph{terminal object} of the
+subdiagram $D$ if, for every $x\in D'$, the set
+$\Hom(x,e)\cap F$ of arrows of $D$ with source $x$ and target $y$ has
+exactly one element $f_x$, if $f_x=f_y\circ g$ for every arrow
+$g:x\rightarrow y$ of $D$, and if $f_e=\id_e$. Let $E$ be the set of
+\emph{finite} subdiagrams $D$ of $I$ having a \emph{unique} terminal
+element $\varphi(D)$, and order $E$ by inclusion. If $D$, $D'$ are two
+elements of $E$ and $D\subset D'$, there is a unique arrow
+$\varphi(D',D)$ of $D'$ with source $\varphi(D)$ and target
+$\varphi(D')$. If $D\subset D'\subset D''$ are inclusions in $E$, one
+clearly has $\varphi(D'',D)=\varphi(D'',D')\varphi(D',D)$; one also has
+$\varphi(D,D)=\id_{\varphi(D)}$. Thus we obtain a functor
+$\varphi:ℰ\rightarrow I$, and it remains to prove that $E$ is filtered
+and $\varphi$ is cofinal. In view of \hyperref[I.prop8.1.3]{8.1.3} b),
+three verifications are required:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Condition F 1) of \hyperref[I.prop8.1.3]{8.1.3}: for every $i\in I$, take for $D$ the
+  subdiagram of $I$ consisting only of the object $i$ and its identity
+  arrow; then $i\leq \varphi(D)=i$. This condition F 1) also shows that
+  $E\neq ∅$.
+
+\item Condition F 2): For every $i\in \Ob I$, every $D\in E$, and every
+  double arrow $i\rightrightarrows \varphi(D)$, find a diagram $D'\in E$
+  containing $D$ such that
+  $\varphi(D',D):\varphi(D)\rightarrow \varphi(D')$ \emph{equalizes}
+  the double arrow. Since $I$ is filtered, there\pageoriginale is an
+object $j$ of $I$ and an arrow $f:\varphi(D)\rightarrow j$ that equalizes
+the double arrow. Since $I$ has no greatest element, we may suppose that
+$j$ is a \emph{strict} upper bound of $\varphi(D)$, which implies that it
+is distinct from every other object of $D$. Let $D'$ be the subdiagram
+of $I$ whose set of objects is $\mathcal{O}\cup\{j\}$ and whose set of
+arrows consists of the arrows of $D$, together with the composites
+$x\xrightarrow{f_x}\varphi(D)\xrightarrow{f}j$, where $x$ is an object
+of $D$ and $f_x$ is the unique arrow of $D$ with source $x$ and target
+$\varphi(D)$, and $\id_j$. It is then clear that $D'$ is a finite
+subdiagram of $I$, that it has $j$ as its unique terminal object, hence
+that $D'\in E$, and that $D'$ satisfies the required condition.
+
+\renewcommand{\labelenumi}{$3^\circ$}
+\item Two subdiagrams $D$, $D'\subset E$ are contained in the same
+  $D''\in E$. Indeed, one may find a strict upper bound $j$ of
+  $\varphi(D)$ and $\varphi(D')$,
+\[
+\xymatrix@C=1.5cm@R=1cm{
+\varphi(D)\ar[rd]^f && \\
+           &j &\\
+\varphi(D')\ar[ru]_{f'}&\quad , }
+\]
+and take for $D''$ the subdiagram whose set of objects is the union of
+the sets of objects of $D$ and $D'$ with $\{j\}$, and whose set of arrows
+is the union of the sets of arrows of $D$ and $D'$, the set of composites
+$f\circ f_x$ ($x$ an object of $D$) and $f'\circ f'_{x'}$ ($x'$ an
+object of $D'$), and $\{\id_j\}$. This indeed gives a finite subdiagram
+of $E$. Let us show that, after replacing $j$, $f$, $f'$ by $j'$, $gf$,
+$gf'$ for a suitable $g:j\rightarrow j'$, we may arrange that $j$ is a
+terminal object of $D'$. Equivalently, for every $x$ that is an object
+of both $D$ and $D'$, one must have $ff_x=f'f'_{x'}$. This amounts to a
+\emph{finite} set of double arrows\pageoriginale to be equalized by a
+$g:j\rightarrow j'$, which is possible since $I$ is filtered.
+\end{enumerate}
+
+This completes the proof in the case considered. The general case is
+reduced to it by introducing the filtered category $\NN$ associated with
+the ordered set $\NN$ of natural integers, and observing that the category
+$\NN\times I$ is filtered, has no greatest element, and that the
+projection $\NN\times I\rightarrow I$ is a cofinal functor.
+
+\begin{enonce*}{Corollary 8.1.7}\etiquette[8.1.7]{I.cor8.1.7}
+Let $I$ be a $𝒰$-category. There exist a small filtered ordered set $E$
+and a cofinal functor $ℰ\rightarrow I$ if and only if $I$ is filtered
+and $\Ob I$ has a small cofinal subset $I'$ (\hyperref[I.sec8.1.4]{8.1.4}).
+\end{enonce*}
+
+Necessity follows from \hyperref[I.prop8.1.3]{8.1.3} a), and sufficiency follows from \hyperref[I.prop8.1.6]{8.1.6}
+applied to the full subcategory of $I$ defined by $I'$.
+
+\begin{enonce*}{Definition 8.1.8}\etiquette[8.1.8]{I.def8.1.8}
+Let $I$ be a filtered category. We say that $I$ is essentially small if
+$I$ is a $𝒰$-category and satisfies the equivalent conditions of
+\hyperref[I.cor8.1.7]{8.1.7}.
+\end{enonce*}
+
+\setcounter{subsection}{1}

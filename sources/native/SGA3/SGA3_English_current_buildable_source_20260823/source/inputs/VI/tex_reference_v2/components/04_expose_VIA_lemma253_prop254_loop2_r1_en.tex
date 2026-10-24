@@ -1,0 +1,210 @@
+
+\setcounter{footnote}{29}
+\medskip
+\phantomsection\label{lem:sga3-VIA-2.5.3}%
+\noindent\textbf{Lemma 2.5.3.}%
+\footnote{\label{note:sga3-VIA-30}Editor's note: no finiteness
+hypotheses are made in this statement; this will be useful later
+(cf.\ \SGARefLink{cor:sga3-VIA-6.2}{6.2} and Expos\'e~VI\textsubscript{B}, \S~12).}
+\textit{Let \(A\) be an Artinian local ring, let \(k\) be its residue
+field, let \(G\) be a flat \(A\)-group, and let \(X\) be an \(A\)-scheme
+equipped with a left action
+\[
+  \mu:G\times_AX\longrightarrow X
+\]
+of \(G\) and with a section \(s_0:\operatorname{Spec}A\to X\).
+(This is the case, for example, if \(G'\) is a second \(A\)-group and
+one is given a morphism of \(A\)-groups \(G\to G'\).)}
+
+\textit{Let \(\varphi\) be the morphism
+\[
+  \mu\circ(\operatorname{id}_G\times s_0):
+  G=G\times_AA\longrightarrow X.
+\]
+If \(\varphi\) is flat at a point \(g\) of \(G\), then \(\varphi\) is
+flat.}
+
+\noindent\textit{Proof.}
+Since \(G\) is flat over \(A\), the fiberwise criterion for flatness
+(EGA~IV\textsubscript{3}, 11.3.10.2) shows that it is enough to prove
+that \(\varphi\otimes_Ak\) is flat. We may therefore suppose that
+\(A=k\). In that case, giving \(s_0\) is equivalent to giving a
+\(k\)-point \(x_0\in X(k)\), and \(\varphi\) is the morphism
+\(h\mapsto hx_0\).
+
+Let \(h\in G\); we show that \(\varphi\) is flat at \(h\). Let \(K\) be
+an extension of \(k\) containing copies of both \(\kappa(g)\) and
+\(\kappa(h)\). We have a cartesian square
+\begin{center}
+  \phantomsection\label{diag:sga3-VIA-2.5.3-basechange}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    G_K \arrow[r,"\varphi_K"] \arrow[d] &
+    X_K \arrow[d] \\
+    G \arrow[r,"\varphi"'] &
+    X
+  \end{tikzcd}
+\end{center}
+in which the two vertical arrows are faithfully flat. Thus, by
+\SGARefLink{lem:sga3-V-7.4:item:i}{Expos\'e~V, 7.4(i)}, \(\varphi_K\) is flat at every point
+\(g'\in G_K\) lying over \(g\); and, in order to show that \(\varphi\)
+is flat at \(h\), it is enough to show that \(\varphi_K\) is flat at
+one point \(h'\) lying over \(h\). We are therefore reduced to the case
+in which \(g\) and \(h\) are rational.
+
+Set \(u=hg^{-1}\), and let \(\ell_u\) (respectively, \(\mu_u\)) be left
+translation on \(G\) (respectively, on \(X\)) defined by \(u\). Since
+\(\varphi\circ\ell_u=\mu_u\circ\varphi\), we obtain a commutative
+square
+\begin{center}
+  \phantomsection\label{diag:sga3-VIA-2.5.3-translations}%
+  \begin{tikzcd}[row sep=large,column sep=huge]
+    \mathcal O_{G,h} \arrow[r,"\sim"] &
+    \mathcal O_{G,g} \\
+    \mathcal O_{X,hx_0} \arrow[u] \arrow[r,"\sim"'] &
+    \mathcal O_{X,gx_0} \arrow[u]
+  \end{tikzcd}
+\end{center}
+whose horizontal arrows are isomorphisms. Since the morphism
+\[
+  \mathcal O_{X,gx_0}\longrightarrow\mathcal O_{G,g}
+\]
+is flat, the morphism
+\[
+  \mathcal O_{X,hx_0}\longrightarrow\mathcal O_{G,h}
+\]
+is flat as well.
+
+\medskip
+\phantomsection\label{prop:sga3-VIA-2.5.4}%
+\noindent\textbf{Proposition 2.5.4.}
+\textit{Let \(A\) be an Artinian local ring, let \(k\) be its residue
+field, let \(G\) be an \(A\)-group locally of finite type, and let
+\(X\ne\varnothing\) be an \(A\)-scheme locally of finite type equipped
+with a left action of \(G\). Suppose that the morphism
+\[
+  \varphi:G\times_AX\longrightarrow X\times_AX,
+  \qquad (g,x)\longmapsto(gx,x),
+\]
+defined on underlying sets by the displayed rule, is surjective. Then:}
+\begin{enumerate}
+\item[(i)] \textit{The connected components of \(X\) are of finite
+type, irreducible, and all of the same dimension.}
+\item[(ii)]\phantomsection\label{concl:sga3-VIA-2.5.4-ii} \textit{More precisely, let \(\overline{k}\) be an
+algebraic closure of \(k\), and let \(x\) be a closed point of
+\(X\otimes_A\overline{k}\). Its stabilizer \(F\) is a closed group
+subscheme of \(G\otimes_A\overline{k}\), and the dimension of the
+irreducible components of \(X\) is
+\[
+  \dim G-\dim F.
+\]}
+\end{enumerate}
+
+In view of \hyperref[lem:sga3-VIA-2.5.1]{Lemma~2.5.1}, we may suppose
+that \(A=k\). Suppose first that \(k\) is algebraically closed. Then
+\(G_{\mathrm{red}}\) is a \(k\)-group locally of finite type; hence,
+replacing \(G\) by \(G_{\mathrm{red}}\) and \(X\) by
+\(X_{\mathrm{red}}\), we may suppose that \(G\) and \(X\) are reduced.
+
+Since \(G\times_kX\) is locally of finite type over \(k\), the morphism
+\(\varphi\) is locally of finite type (cf.\ EGA~I, 6.6.6(v)), and is
+therefore locally of finite presentation because \(X\times_kX\) is
+locally Noetherian. Let \(x\) be a rational point of \(X\). The
+morphism
+\[
+  \varphi_x:G\longrightarrow X
+\]
+obtained from \(\varphi\) by base change is surjective and locally of
+finite presentation. If \(\eta\) is a maximal point of \(X\), then
+\(\mathcal O_{X,\eta}\) is a field, since \(X\) is reduced; consequently,
+\(\varphi_x\) is flat at every point of \(G\) lying over \(\eta\).
+By \hyperref[lem:sga3-VIA-2.5.3]{Lemma~2.5.3}, \(\varphi_x\) is
+therefore flat. Thus \(\varphi_x:G\to X\) is faithfully flat and
+locally of finite presentation, and hence open (cf.\
+EGA~IV\textsubscript{2}, 2.4.6).
+
+Since \(G^0\) is open in \(G\), irreducible, and quasi-compact
+(by \hyperref[prop:sga3-VIA-2.4]{2.4}), every orbit
+\[
+  G^0x=\varphi_x(G^0),
+\]
+as \(x\) ranges over the rational points of \(X\), is an open,
+irreducible, and quasi-compact subset of \(X\), and is therefore of
+finite type over \(k\), since \(X\) is locally of finite type over
+\(k\).
+
+Every nonempty open subset of \(X\) contains a rational point, so these
+open subsets cover \(X\). Furthermore, any two of them are either
+disjoint or equal. Indeed, if
+\[
+  \varphi_x(G^0)\cap\varphi_y(G^0)
+\]
+is nonempty, it contains a rational point \(z\). There are then
+rational points \(g,h\in G^0\) such that
+\[
+  gx=z=hy,
+\]
+whence \(x=g^{-1}z\) and \(y=h^{-1}z\), and consequently
+\[
+  \varphi_x(G^0)=\varphi_z(G^0)=\varphi_y(G^0).
+\]
+It follows that the orbits \(\varphi_x(G^0)\) are also closed, and are
+therefore at once the connected components and the irreducible
+components of \(X\).
+
+Finally, let \(x,y\) be two rational points of \(X\). Since
+\(\varphi_x\) is surjective, there is a rational point \(g\in G\) such
+that \(y=gx\). Since \(G^0\) is a normal subgroup of \(G\), the orbit
+\(G^0y\) is the image of \(G^0x\)\begingroup
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}%
+\footnote[1]{Translator's note: the French source prints \(G^0\) here;
+as the object being translated is an orbit in \(X\), the intended
+source expression is \(G^0x\).}%
+\endgroup
+under translation \(\ell_g\) on
+\(X\); hence \(G^0y\) and \(G^0x\) have the same dimension.
+
+Moreover, by \SGARefLink{sga3:i:scholium:2-3-3-1}{Expos\'e~I, 2.3.3.1}, the stabilizer of \(x\) is represented
+by the closed subscheme \(F\) of \(G\) defined by the following
+cartesian square:
+\begin{center}
+  \phantomsection\label{diag:sga3-VIA-2.5.4-stabilizer}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    F \arrow[r] \arrow[d] &
+    G \arrow[d,"\varphi_x"] \\
+    \operatorname{Spec}k \arrow[r] &
+    X
+  \end{tikzcd}
+\end{center}
+Thus \(F\) is a \(k\)-group locally of finite type, while
+\(F\cap G^0\) is a \(k\)-group of finite type containing \(F^0\). By
+\hyperref[cor:sga3-VIA-2.4.1]{2.4.1}, the schemes \(F\) and
+\(F\cap G^0\) are equidimensional, of the same dimension as \(F^0\).
+Let
+\[
+  C=\varphi_x(G^0)
+\]
+be the irreducible component of \(X\) containing \(x\). Arguing as in
+the proof of \hyperref[prop:sga3-VIA-2.5.2]{part~(b) of 2.5.2}, we
+obtain
+\[
+  \dim C=\dim G^0-\dim F^0=\dim G-\dim F.
+\]
+
+In the general case, that is, when \(k\) is an arbitrary field, let
+\(\overline{k}\) be an algebraic closure of \(k\). Let \(C\) be a
+connected component of \(X\), and let \(C'\) be a connected component
+of \(C\otimes_k\overline{k}\). Then \(C'\) is a connected component of
+\[
+  X'=X\otimes_k\overline{k}.
+\]
+The morphism \(\pi:X'\to X\) is open (cf.\
+EGA~IV\textsubscript{2}, 2.4.10), and, since it is integral, it is also
+closed; therefore \(\pi(C')=C\). Since \(C'\) is irreducible and
+quasi-compact, \(C\) is irreducible and quasi-compact, and hence is of
+finite type over \(k\), because \(X\) is locally of finite type over
+\(k\).
+
+Finally, dimension is invariant under extension of the base field
+(cf.\ EGA~IV\textsubscript{2}, 4.1.4), so
+\(\dim C=\dim C'\). Since all the irreducible components of \(X'\) have
+the same dimension, the same is true of those of \(X\).

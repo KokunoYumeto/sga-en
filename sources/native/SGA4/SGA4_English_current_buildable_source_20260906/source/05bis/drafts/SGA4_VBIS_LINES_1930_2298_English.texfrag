@@ -1,0 +1,388 @@
+\section{Descent criteria}\etiquette[3]{Vbis.sec3}
+
+\setcounter{subsection}{-1}
+\subsection{Notation}\etiquette[3.0]{Vbis.subsec3.0}
+
+Throughout what follows, we retain the notation of
+(\hyperref[Vbis.subsec2.4]{2.4}). We shall always assume \emph{that
+finite fiber products are representable in} $B$.
+
+We shall also assume that $B$ satisfies the following condition:
+
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[3.0.0]{Vbis.subsubsec3.0.0}
+\emph{Coproducts exist in $B$, are disjoint and universal, and are
+families of effective $\mathcal{E}$-descent and effective
+$G^{\circ}$-descent} [\cf \cite{sga4.exp.Vbis.bib.4} (9.23), (9.25), and (9.27)].
+
+\subsubsection{}\etiquette[3.0.1]{Vbis.subsubsec3.0.1}
+We now recall some classical notation concerning simplicial objects
+of a category [\cf \cite{sga4.exp.Vbis.bib.3}, Chap.~II, and (V, Appendix)].
+
+Let $E$ be a category \emph{having finite projective limits}.
+$\Delta^{\circ}E$ denotes the category of simplicial objects of $E$
+(\cf (\hyperref[Vbis.subsubsec1.2.6]{1.2.6})).
+
+For an integer $n$, denote by $\mathop{\Delta}_n$ (\resp
+${\mathop{\Delta}_n}^{+}$, ${\mathop{\Delta}_n}^{-}$) the full
+subcategory of $\Delta$ (\resp $\Delta^+$, $\Delta^-$) consisting of
+the objects $[p]$ such that $p\leq n$.
+
+The restriction functor
+\begin{equation*}
+i_n^{\ast}:\Delta^{\circ}E\longrightarrow
+{\mathop{\Delta}_n}^{\circ}E\tag{3.0.1.1}
+\end{equation*}\etiquette[3.0.1.1]{Vbis.eq3.0.1.1}
+has a right adjoint $i_{n\ast}$, since finite projective limits exist
+in\pageoriginale $E$ (\cf (\hyperref[Vbis.lem1.2.10]{1.2.10})). The
+functor $i_{n\ast}\circ i_n^{\ast}$ is denoted by $\cosk_n$ and is
+called the \emph{coskeleton functor of order $n$}; by abuse of
+notation, we shall also use $\cosk_n$ for the functor $i_{n\ast}$.
+
+For every integer $p$, denote by $\mathop{\Delta}_{n[p]}$ (\resp
+${\mathop{\Delta}_{n[p]}}^+$) the full subcategory of
+$\Delta_{[p]}$ (\resp $\Delta_{[p]}^+$), the category of objects of
+$\Delta$ (\resp $\Delta^+$) over $[p]$, defined by the objects $[q]$
+over $[p]$ such that $q\leq n$. We leave it to the reader to verify
+that
+\begin{equation*}
+(\cosk_n(X))_p=\varprojlim_{\mathop{\Delta}_{n[p]}}X_q
+\xrightarrow{\sim}
+\varprojlim_{\mathop{\Delta}_{n[p]}^{+}}X_q{\quoi}.
+\tag{3.0.1.2}
+\end{equation*}\etiquette[3.0.1.2]{Vbis.eq3.0.1.2}
+
+\subsubsection{}\etiquette[3.0.2]{Vbis.subsubsec3.0.2}
+Let $X$ and $X'$ be two objects of $\Delta^{\circ}E$, and let
+$f,g:X\rightrightarrows X'$ be two morphisms. A \emph{homotopy from
+$f$ to $g$} consists of a map
+$h_n:\Hom_{\Delta}([n],[1])\to\Hom_E(X_n,X'_n)$ for every $n$,
+satisfying the following two conditions:
+\begin{equation*}
+h_n(\partial^1)=f_n\quad\mbox{and}\quad
+h_n(\partial^\circ)=g_n\quad\mbox{for every }n{\quoi}.
+\tag{3.0.2.1}
+\end{equation*}\etiquette[3.0.2.1]{Vbis.eq3.0.2.1}
+
+\setcounter{paragraph}{1}
+\paragraph{}\etiquette[3.0.2.2]{Vbis.par3.0.2.2}
+For every arrow $[n]\to[p]$ in $\Delta$, the following diagram is
+commutative:
+\[
+\xymatrix@C=2.25cm{
+\Hom_{\Delta}\big([p],[1]\big) \ar[r] \ar[dd]&
+\Hom_E(X_p,X'_p) \ar[rd]&\\
+& & \Hom_E(X_p,X'_p)\\
+\Hom_{\Delta}\big([n],[1]\big) \ar[r]&
+\Hom_E(X_n,X'_n) \ar[ru]&.
+}
+\]
+N.B.: The relation thus introduced on the set of morphisms from $X$
+to $X'$ is not an equivalence relation. This inconvenience can be
+remedied by introducing the notion of \emph{composite homotopy}
+[\cf \cite{sga4.exp.Vbis.bib.3}, Chap.~III], but we shall not use that notion.
+
+\begin{enonce*}{Lemma 3.0.2.3}\etiquette[3.0.2.3]{Vbis.lem3.0.2.3}
+Let\pageoriginale $X$ and $X'$ be two objects of $\Delta^{\circ}E$,
+let $f,g:X\rightrightarrows X'$ be two morphisms, and let
+$F:E\to C$ be a functor, where $C$ is an abelian category. A
+simplicial homotopy from $f$ to $g$ induces a homotopy between the
+morphisms of cochain complexes canonically associated with $F(f)$ and
+$F(g)$.
+\end{enonce*}
+
+This reduces to the case where $C$ is the category of modules over a
+ring, and one applies [\cite{sga4.exp.Vbis.bib.5}, I, (3.7.1)].
+
+\begin{enonce*}{Lemma 3.0.2.4}\etiquette[3.0.2.4]{Vbis.lem3.0.2.4}
+Let $n$ be an integer, and let $X$ and $X'$ be two objects of
+$\Delta^{\circ}E$. Let $f$ and $g$ be two morphisms from $X$ to $X'$
+such that $f_p=g_p$ for $p<n$. Then there exists a simplicial homotopy
+from $\cosk_n(f)$ to $\cosk_n(g)$.
+\end{enonce*}
+
+For $p<n$, define
+$$h_p:\Hom_{\Delta}([p],[1])\to\Hom(X_p,X'_p)$$
+to be the constant map with value $f_p=g_p$. Next define
+$h_n:\Hom_{\Delta}([n],[1])\to\Hom(X_n,X'_n)$ by sending every
+element of $\Hom_{\Delta}([n],[1])$, except $\partial^{\circ}$, to
+$f_n$, and $\partial^{\circ}$ to $g_n$. Finally, observe that
+$$
+\Hom_{\Delta}([k],[1])=
+\varprojlim_{\substack{[q]\to[k]\\q\leq n}}\Hom([q],[1])
+$$
+for $k>n$, which makes it possible to define $h_k$ canonically.
+
+\subsection{Comparison of two augmentations from the viewpoint of
+1-cohomological descent}\etiquette[3.1]{Vbis.subsec3.1}
+
+Let $S$ be an object of $B$. Denote by
+$\Hom_{\plat}(D^{\circ},B/S)$ the full subcategory of
+$\Hom(D^{\circ},B/S)$ whose objects are the flat augmentations
+[\cf (\hyperref[Vbis.subsubsec1.2.6]{1.2.6}) and
+(\hyperref[Vbis.def2.4.3.1]{2.4.3.1})].
+
+\begin{enonce*}{Proposition 3.1.1}\etiquette[3.1.1]{Vbis.prop3.1.1}
+Let $X\xrightarrow{u}C^D_S$ and $X'\xrightarrow{u'}C^D_S$ be two
+objects of $\Hom_{\plat}(D^{\circ},B/S)$. Let $f:X\to X'$ be a
+morphism over $S$ (\ie a morphism in $\Hom(D^{\circ},B/S)$). There is
+naturally associated with it a functorial morphism
+$$
+\eta^f_G:\sisi{\RR^+}{R}_G\bar u'_\ast\circ{\bar u'}_G^\ast
+\longrightarrow
+\sisi{\RR^+}{R}_G\bar u_\ast\circ\bar u_G^\ast
+$$
+such that the following diagram is commutative:
+\[
+\xymatrix@=1.5cm{
+&R_G\bar u'_\ast\circ{\bar u'}_G^{\ast}
+\ar[dd]^{\eta^f_G}\\
+\id_{D_{G_S}^{+}(S)}\ar[ru]\ar[rd]&\\
+&R_G\bar u_\ast\circ\bar u_G^{\ast}.
+}
+\]
+
+Moreover,\pageoriginale if $D=\Delta$, then $\eta^f_G$ depends only on the homotopy
+class \emph{(\cf (\hyperref[Vbis.subsubsec3.0.2]{3.0.2}))} of $f$ in
+$\Hom(\Delta^{\circ},B/S)$.
+\end{enonce*}
+
+It is clear that, for the construction of $\eta_G^f$, we may suppose
+that $G=\Ysheaf{\Mod}(\mathcal{E}^{\circ},\mathcal{O})$.
+
+Let $I$ be the category defined by the graph
+\begin{equation*}
+{0}\longrightarrow{1}{\quoi}.\tag{3.1.1.1}
+\end{equation*}\etiquette[3.1.1.1]{Vbis.eq3.1.1.1}
+Denote by $r_0:D\to I\times D$ (\resp $r_1$) the fully faithful
+functor defined by $r_0(i)=(0,i)$ (\resp $r_1(i)=(1,i)$).
+
+By virtue of the canonical isomorphism
+\begin{equation*}
+\Hom((I\times D)^{\circ},B/S)\xrightarrow{\sim}
+\Hom(I^{\circ},\Hom(D^{\circ},B/S))\tag{3.1.1.2}
+\end{equation*}\etiquette[3.1.1.2]{Vbis.eq3.1.1.2}
+the data of (\hyperref[Vbis.prop3.1.1]{3.1.1}) define a flat
+augmentation
+\nde{Explicitly, one has $(XfX')_{(0,i)}=X_i$ and
+$(XfX')_{(1,j)}=X'_j$; to
+$\alpha\in\Hom_D(i,j)=\Hom((0,i),(0,j))$ is associated
+$\alpha\circ f_i:(XfX')_{(0,i)}\to(XfX')_{(1,j)}$, and the
+endomorphisms of $(\varepsilon,i)$, $\varepsilon=0,1$, act in the
+evident way.}
+\begin{equation*}
+XfX'\xrightarrow{ufu'}C^{I\times D}_S{\quoi}.\tag{3.1.1.3}
+\end{equation*}\etiquette[3.1.1.3]{Vbis.eq3.1.1.3}
+
+Let $F$ be an object of $\Mod(\Ee^\circ_S,\Oo_S)$. The canonical
+morphism
+\begin{equation*}
+\Ee_{I\times D}^{\ast}(F)\longrightarrow
+\Gamma((ufu')_\ast)\circ\Gamma((ufu')^{\ast})
+(\Ee_{I\times D}^{\ast}(F)){\quoi}\tag{3.1.1.4}
+\end{equation*}\etiquette[3.1.1.4]{Vbis.eq3.1.1.4}
+may be interpreted as a commutative triangle in
+$\Mod(\Ysheaf{\Gamma}(\bar{C^D_S}),\Oo)$:
+\[\vcenter{
+\xymatrix@=1.5cm{
+&\Gamma(u'_\ast)\circ\Gamma({u'}^{\ast})(\Ee_D^{\ast}(F))\ar[dd]\\
+\Ee_D^{\ast}(F)\ar[ru]\ar[rd]&\\
+&\Gamma(u_\ast)\circ\Gamma(u^{\ast})(\Ee_D^{\ast}(F))
+}}\leqno{(3.1.1.5)}
+\]\etiquette[3.1.1.5]{Vbis.eq3.1.1.5}
+and hence\pageoriginale gives a functorial morphism
+$\bar u'_\ast\circ{\bar u'}^{\ast}
+\xrightarrow{\alpha_f}\bar u_\ast\circ\bar u^{\ast}$ such that the
+diagram
+\[\vcenter{
+\xymatrix@=1.5cm{
+&\bar u'_\ast\circ{\bar u'}^{\ast}\ar[dd]^{\alpha_f}\\
+\id_{\Mod(\Ee^{\circ}_S,\Oo_S)}\ar[ru]\ar[rd]&\\
+&\bar u_\ast\circ\bar u^{\ast}
+}}\leqno{(3.1.1.6)}
+\]\etiquette[3.1.1.6]{Vbis.eq3.1.1.6}
+is commutative.
+
+One consequently obtains a functorial morphism such that the diagram
+\[\vcenter{
+\xymatrix@=1.5cm{
+&K^{+}(\bar u'_\ast)\circ K^{+}({\bar u'}^{\ast})
+\ar[dd]^{K^{+}(\alpha_f)}\\
+\id_{K^{+}(\Ee^{\circ}_S,\Oo_S)}\ar[rd]\ar[ru]&\\
+&K^{+}(\bar u_\ast)\circ K^{+}(\bar u^{\ast})
+}}\leqno{(3.1.1.7)}
+\]\etiquette[3.1.1.7]{Vbis.eq3.1.1.7}
+is commutative.
+
+\noindent
+(Observe that $K^+(\alpha_f)$ can also be obtained formally by
+adjunction, using the isomorphism
+$K^+(\Gamma(f^{\ast}))\circ K^+({\bar u'}^{\ast})
+\xrightarrow{\sim}K^+(\bar u^{\ast})$.)
+
+Let $F^{\bigdot}$ be a complex in $K^+(S)$, and let
+$\xi:K^+(\overline{ufu'}^{\ast})(F^{\bigdot})\to J^{\bigdot}$ be a
+quasi-isomorphism such that, for every integer $n$, $J^n$ is totally
+acyclic objectwise (\cf (\hyperref[Vbis.rem1.3.13]{1.3.13})). By
+(\loccit), the canonical arrows
+$$
+K^+({\bar u'}^\ast)(F^{\bigdot})\to r_1^{\ast}(J^{\bigdot})
+\quad\mbox{and}\quad
+K^+(\bar u^\ast)(F^{\bigdot})\to r_0^{\ast}(J^{\bigdot})
+$$
+are\pageoriginale quasi-isomorphisms (\cf
+(\hyperref[Vbis.subsubsec1.2.8]{1.2.8}) for the notation). One
+therefore obtains a morphism
+$$
+\sisi{\RR^+}{R}\bar u'_\ast\circ{\bar u'}^\ast(F^{\bigdot})
+\xrightarrow{\eta^f(F^{\bigdot})}
+\sisi{\RR^+}{R}\bar u_\ast\circ\bar u^\ast(F^{\bigdot})
+$$
+such that the following diagram is commutative in $D^+(S)$:
+{\def\objectstyle{\scriptstyle}
+\def\labelstyle{\scriptstyle}
+
+\[\vcenter{
+\xymatrix@C=0cm@R=1cm{
+&Q\circ K^{+}(\bar u'_\ast)(r^{\ast}_{0}(J^{\bigdot}))
+\ar[rr]^{\sim}\ar@{->}'[d][ddd]&&
+R\bar u'_\ast\circ
+Q(r^{\ast}_0(J^{\bigdot}))\ar[ddd]\\
+Q\circ K^{+}(\bar u'_\ast)\circ K^{+}({\bar u'}^{\ast})(F^{\bigdot})
+\ar[rr]\ar[ru]\ar[ddd]_{Q(K^{+}(\alpha_f)(F^{\bigdot}))}&&
+R\bar u'_\ast\circ
+{\bar u'}^{\ast}(F^{\bigdot})\ar[ru]^{\sim}
+\ar@{-->}[ddd]^(.35){\eta^{f}(F^{\bigdot})}&\\
+&&&\\
+&Q\circ K^{+}(\bar u_\ast)(r^{\ast}_1(J^{\bigdot}))
+\ar@{->}'[r][rr]^(.25){\sim}&&
+R\bar u_\ast\circ Q(r_1^{\ast}(J^{\bigdot}))\\
+Q\circ K^{+}(\bar u_\ast)\circ K^{+}(\bar u^{\ast})(F^{\bigdot})
+\ar[ru]\ar[rr]&&
+R\bar u_\ast\circ\bar u^{\ast}(F^{\bigdot})
+\ar[ru]&
+}}\leqno{(3.1.1.8)}
+\]\etiquette[3.1.1.8]{Vbis.eq3.1.1.8}
+}
+\noindent
+It is clear that $\eta^f(F^{\bigdot})$ is independent of the chosen
+resolution, and one verifies that it is functorial in $F^{\bigdot}$
+as the latter varies in $D^{+}(S)$.
+
+To complete the proof of \hyperref[Vbis.prop3.1.1]{(3.1.1)}, it is enough to prove the following
+lemma:
+
+\begin{enonce*}{Lemma 3.1.1.9}\etiquette[3.1.1.9]{Vbis.lem3.1.1.9}
+Let\pageoriginale $X\xrightarrow{u}C^{\Delta}_S$ and
+$X'\xrightarrow{u'}C^{\Delta}_S$ be two objects of
+$\Hom_{\plat}(\Delta^{\circ},B/S)$. Let $f,g:X\to X'$ be two
+morphisms in $\Hom(\Delta^{\circ},B/S)$. If there exists a simplicial
+homotopy from $f$ to $g$, then $\eta^f=\eta^g$.
+\end{enonce*}
+
+Let
+$h_n:\Hom_{\Delta}([n],[1])\to\Hom_{B/S}(X_n,{X'}_n)$ be a
+simplicial homotopy from $f$ to $g$. Let $\overline{I\times D}$ be the
+category obtained from $I\times D$ by adjoining the arrows
+$(1,n)\to(0,n)$ in bijective correspondence with
+$h_n(\Hom([n],[1]))$, together with the relations imposed by the
+compatibility of the $h_n$ as $n$ varies. The data of the lemma define
+a flat augmentation
+$\overline{XfX'}\xrightarrow{t}C^{\overline{I\times D}}_S$. Let
+$F^{\bigdot}$ be a complex in $C^+(S)$, and let $J^{\bigdot}$ be a
+resolution of $C^+(t^{\ast})(F^{\bigdot})$ such that, for every
+integer $n$, $J^n$ is totally acyclic objectwise. There exists a
+simplicial homotopy between
+$$
+C^{+}(\Gamma(u'_\ast))(r^{\ast}_0(J^{\bigdot}))
+\rightrightarrows
+C^{+}(\Gamma(u_\ast))(r^\ast_1(J^{\bigdot})),
+$$
+and hence a homotopy after passage to the total complexes
+(\cf (\hyperref[Vbis.lem3.0.2.3]{3.0.2.3})).
+
+\begin{enonce*}{Definition 3.1.2}\etiquette[3.1.2]{Vbis.def3.1.2}
+With the notation of \emph{\hyperref[Vbis.prop3.1.1]{(3.1.1)}}, we say that $f$ is an
+\emph{equivalence for $G$-1-cohomological descent} if $\eta^f_G$ is an
+isomorphism.
+\end{enonce*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}\etiquette[3.1.3]{Vbis.subsubsec3.1.3}
+In what follows, denote by $L_i:\Delta\to\Delta\times\Delta$
+(\resp $C_i:\Delta\to\Delta\times\Delta$) the canonical functor
+defined by $[n]\longmapsto[n]\times[i]$ (\resp
+$[n]\longmapsto[i]\times[n]$).
+
+\begin{enonce*}{Proposition 3.1.4}\etiquette[3.1.4]{Vbis.prop3.1.4}
+Let $X\xrightarrow{u}C^{\Delta\times\Delta}_S$ and
+$X'\xrightarrow{u'}C^{\Delta\times\Delta}_S$ be two objects of
+$\Hom_{\plat}((\Delta\times\Delta)^{\circ},B/S)$. Let $f:X\to X'$ be
+a morphism over $S$. Suppose that
+$f\ast\id_{L_i}:X\circ L_i\to X'\circ L_i$ (\resp
+$f\ast\id_{C_i}:X\circ C_i\to X'\circ C_i$) is an equivalence for
+$G$-1-cohomological descent for every integer $i$. Then $f$ is an
+equivalence for $G$-1-cohomological descent.
+\end{enonce*}
+
+By the description of $\eta^f$ (\cf the proof of
+(\hyperref[Vbis.prop3.1.1]{3.1.1})), it is enough to show that a
+certain morphism of triple complexes induces an isomorphism on the
+cohomology of the total complexes. A standard spectral-sequence
+argument then gives the conclusion.
+
+\begin{enonce*}{Proposition 3.1.5}\etiquette[3.1.5]{Vbis.prop3.1.5}
+Let\pageoriginale $X$ and $X'$ be two objects of
+$\Hom_{\plat}(\Delta^{\circ},B/S)$. Let $f:X\to X'$ be a functorial
+morphism such that $f_n:X_n\to X'_n$ is a morphism of
+$G$-1-cohomological descent. Then the canonical morphism
+$$
+[[X|_fX']]\to[[X'|_{\id}X']]
+$$
+\emph{(\cf (\hyperref[Vbis.subsubsec1.2.7]{1.2.7}))} is an equivalence
+for $G$-1-cohomological descent.
+\end{enonce*}
+
+This follows from (\hyperref[Vbis.prop3.1.4]{3.1.4}) and the following
+lemma, whose proof is left to the reader:
+
+\begin{enonce*}{Lemma 3.1.5.1}\etiquette[3.1.5.1]{Vbis.lem3.1.5.1}
+Let $f:R\to S$ be a flat morphism, and let
+$Y\xrightarrow{u}C^{\Delta}_S$ and
+$Y\xrightarrow{v}C^{\Delta}_R$ be two \emph{flat} augmentations such
+that the following diagram is commutative in
+$\Hom(\Delta^{\circ},B)$:
+\[
+\xymatrix@=1.5cm{
+Y\ar[rr]^{v}\ar[rd]_{u}&&C^{\Delta}_R\ar[ld]^f\\
+&C^{\Delta}_S&
+}
+\]
+If $v$ is an augmentation of $G$-1-cohomological descent, then it is
+an equivalence for $G$-1-cohomological descent.
+\end{enonce*}
+
+In the applications, we shall combine
+(\hyperref[Vbis.prop3.1.4]{3.1.4}) and
+(\hyperref[Vbis.prop3.1.5]{3.1.5}) with the following result:
+
+\begin{enonce*}{Proposition 3.1.6}\etiquette[3.1.6]{Vbis.prop3.1.6}
+Let $X\xrightarrow{u}C^{\Delta\times\Delta}_S$ be a flat
+augmentation. For $u$ to be an augmentation of
+$G$-1-cohomological descent, it is enough that
+$$
+X\circ L_i\xrightarrow{u\ast\id_{L_i}}C^{\Delta}_S
+\quad(\resp\ X\circ C_i\xrightarrow{u\ast\id_{C_i}}C^{\Delta}_S)
+$$
+be so for every integer $i$.
+\end{enonce*}
+
+This follows from the explicit construction of
+$\sisi{\RR^+}{R}_G\bar u_\ast$
+(\cf (\hyperref[Vbis.subsubsec2.3.10]{2.3.10})).
+
+\begin{enonce*}{Corollary 3.1.7}\etiquette[3.1.7]{Vbis.cor3.1.7}
+Let $X\xrightarrow{u}C^{\Delta}_S$ be an augmentation. Then $u$ is of
+$G$-1-cohomological descent if and only if
+$[[X|_{\id}X]]\to C^{\Delta\times\Delta}_S$ is so.
+\end{enonce*}

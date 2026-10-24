@@ -1,0 +1,372 @@
+\SGASection{4}{Relative position of two parabolic subgroups}
+\SGARefTarget{sga3:xxvi:section:4}
+
+\SGASubsection{4.1}{A preliminary result}
+\SGARefTarget{sga3:xxvi:subsection:4:1}
+
+\begin{sgastatement}{Lemma 4.1.1}
+Let \(k\) be a field, \(G\) a reductive \(k\)-group, and \(P,P'\) two
+parabolic subgroups of \(G\).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The intersection \(P\cap P'\) is smooth, has the same reductive
+rank as \(G\), and contains a maximal torus \(T\) of \(G\).
+\item The set \(R'\) of roots of \(P\cap P'\) relative to \(T\) is a
+closed subset of the set \(R\) of roots of \(G\) relative to \(T\).
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:lemma:4:1:1}
+\footnote{\emph{Editor's note.} Part \textup{(ii)}, which will be useful
+in \SGARefLink{sga3:xxvi:proposition:4-5-1}{4.5.1}, was added by the editors.}
+
+\SGAProof
+Suppose first that \(k\) is algebraically closed.  Let \(B\) (respectively
+\(B'\)) be a Borel subgroup of \(P\) (respectively \(P'\)).  There is an
+element \(g\in G(k)\) such that \(\Int(g)B=B'\).  On the other hand, if
+\(T_0\) is a maximal torus of \(B\) and \(N=\Norm_G(T_0)\), Bruhat's
+theorem (\emph{Bible}, §13.4, Corollary 1 to Theorem 3) gives
+\[
+ G(k)=B(k)N(k)B(k).
+\]
+Thus there are \(b,b_1\in B(k)\) and \(n\in N(k)\) such that
+\(g=bnb_1\), and hence
+\(\Int(b)\Int(n)B=B'\).  Consequently
+\[
+ P\cap P'\supset B\cap B'
+  =\Int(b)\bigl(B\cap\Int(n)B\bigr)
+  \supset\Int(b)T_0.
+\]
+
+Now let \(k\) be arbitrary.  The preceding result shows that
+\(P_{\bar k}\cap P'_{\bar k}\) contains a maximal torus of
+\(G_{\bar k}\).  By Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.4.5}{5.4.5},
+\((P\cap P')_{\bar k}\) is smooth along the identity section; since the
+base is a field, it is therefore smooth (Exp.\ VI\textsubscript{A},
+\SGARefLink{prop:sga3-VIA-1.3.1}{1.3.1}), and so \(P\cap P'\) is smooth.  By Exp.\ VI\textsubscript{A},
+\SGARefLink{prop:sga3-VIA-2.3.1}{2.3.1}, the identity component \((P\cap P')^0\) is an open subgroup of
+\(P\cap P'\), smooth over \(k\).  Applying Exp.\ XIV, \SGARefLink{sga3:xiv:1.1}{1.1} to it proves
+\textup{(i)}.
+
+Finally, the set \(R_P\) (respectively \(R_{P'}\)) of roots of \(P\)
+(respectively \(P'\)) relative to \(T\) is closed, and
+\[
+ R'=R_P\cap R_{P'}.
+\]
+This proves \textup{(ii)}.
+\SGAQED
+
+\begin{sgastatement}{Remark 4.1.2}
+One can prove \textup{([BT65], \SGARefLink{sga3:xxvi:subsection:4:5}{4.5})} that \(P\cap P'\) is connected; this
+fact will be used in \SGARefLink{sga3:xxvi:proposition:4-5-1}{4.5.1}.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:remark:4:1:2}
+\footnote{\emph{Editor's note.} In view of the details added in \SGARefLink{sga3:xxvi:proposition:4-5-1}{4.5.1},
+the original wording ``we shall not use this fact'' was changed.}
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:remark:4-1-3}Remark 4.1.3}
+The preceding lemma is false over an arbitrary scheme.  For example, let
+\(G\) be a reductive group over an algebraically closed field \(k\), and
+let \(B\) be a Borel subgroup of \(G\).  Take \(S=G\) as base and
+consider the Borel subgroups \(B_1,B_2\) of \(G_G\), where
+\[
+ B_1=B_G,\qquad B_2=\Int(g_0)B_1,
+\]
+and \(g_0\) is the canonical (diagonal) section of \(G_G\).  For every
+\(g\in G(k)\), the fiber of \(B_1\cap B_2\) at \(g\) is
+\(B\cap\Int(g)B\).  If \(B\ne G\), the dimension of this fiber varies
+with \(g\), so \(B_1\cap B_2\) cannot be smooth over \(G\).
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:remark:4:1:3}
+
+\SGASubsection{4.2}{Transversal position}
+\SGARefTarget{sga3:xxvi:subsection:4:2}
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:theorem:4-2-1}Theorem 4.2.1}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, and \(P,Q\) two
+parabolic subgroups of \(G\).  The following conditions on the pair
+\((P,Q)\) are equivalent:
+\begin{enumerate}[leftmargin=3.2em,labelsep=.7em]
+\item[\textup{\SGAInlineRefTarget{sga3:xxvi:theorem:4-2-1:item:i}(i)}]
+\(\operatorname{Lie}(P/S)+\operatorname{Lie}(Q/S)
+  =\operatorname{Lie}(G/S)\).
+\item[\textup{\SGAInlineRefTarget{sga3:xxvi:theorem:4-2-1:item:ii}(ii)}]
+The canonical morphism \(P\times_SQ\to G\) is smooth.
+\item[\textup{(ii\(^{\prime}\))}]
+The canonical morphism \(P\to G/Q\) is smooth.
+\item[\textup{\SGAInlineRefTarget{sga3:xxvi:theorem:4-2-1:item:iii}(iii)}]
+The canonical morphism \(P\times_SQ\to G\) is open.
+\item[\textup{(iii\(^{\prime}\))}]
+The canonical morphism \(P\to G/Q\) is open.
+\item[\textup{\SGAInlineRefTarget{sga3:xxvi:theorem:4-2-1:item:iv}(iv)}]
+The canonical morphism \(P\times_SQ\to G\) is fiberwise dominant.
+\item[\textup{(iv\(^{\prime}\))}]
+The canonical morphism \(P\to G/Q\) is fiberwise dominant.
+\item[\textup{\SGAInlineRefTarget{sga3:xxvi:theorem:4-2-1:item:v}(v)}]
+For every \(s\in S\), the group \(P_s\cap Q_s\) has minimum dimension,
+that is,
+\[
+ \dim(P_s\cap Q_s)=\dim P_s+\dim Q_s-\dim G_s.
+\]
+\item[\textup{\SGAInlineRefTarget{sga3:xxvi:theorem:4-2-1:item:vi}(vi)}]
+There is an étale covering family \(\{S_i\to S\}\) and, for every \(i\),
+a Borel subgroup \(B_i\) of \(P_{S_i}\) and a Borel subgroup \(B'_i\)
+of \(Q_{S_i}\), such that \(B_i\cap B'_i\) is a maximal torus of
+\(G_{S_i}\).
+\item[\textup{\SGAInlineRefTarget{sga3:xxvi:theorem:4-2-1:item:vii}(vii)}]
+There is an étale covering family \(\{S_i\to S\}\) and, for every \(i\),
+a splitting \((T_i,\ldots,R_i)\) of \(G_{S_i}\) and a system
+\(R_i^+\) of positive roots of \(R_i\), such that \(P_{S_i}\)
+(respectively \(Q_{S_i}\)) is the subgroup of type \textup{(R)} of
+\(G_{S_i}\) containing \(T_i\) and defined by a subset \(R_i^{(1)}\)
+(respectively \(R_i^{(2)}\)) of \(R_i\) containing \(R_i^+\)
+(respectively \(-R_i^+\)); see Exp.\ XXII, \SGARefLink{sga3:xxii:def:5.4.2}{5.4.2} and 5.2.1.
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:theorem:4:2:1}
+
+\SGAProof
+We prove the theorem according to the following logical diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ \textup{(i)} \arrow[d,Rightarrow] &
+ \textup{(vii)} \arrow[l,Rightarrow] &
+ \textup{(vi)} \arrow[l,Rightarrow] \\
+ \textup{(ii\(^{\prime}\))} \arrow[d,Rightarrow] \arrow[r,Rightarrow] &
+ \textup{(iii\(^{\prime}\))} \arrow[r,Rightarrow] &
+ \textup{(iv\(^{\prime}\))} \arrow[r,Rightarrow] &
+ \textup{(v)} \arrow[ul,Rightarrow] \\
+ \textup{(ii)} \arrow[r,Rightarrow] &
+ \textup{(iii)} \arrow[r,Rightarrow] &
+ \textup{(iv)} \arrow[ur,Rightarrow] &
+ {} .
+\end{tikzcd}
+\]
+
+The implications \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:ii}{(ii)}} \(\Rightarrow\) \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:iii}{(iii)}} and
+\textup{(ii\(^{\prime}\))} \(\Rightarrow\)
+\textup{(iii\(^{\prime}\))} are immediate.  If \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:iii}{(iii)}} holds,
+the set-theoretic image of \(P\times_SQ\to G\) is an open subset of
+\(G\) containing the identity section.  Since the fibers of \(G\) are
+connected, this image is dense in every fiber; thus \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:iv}{(iv)}}
+holds.  The implication
+\textup{(iii\(^{\prime}\))} \(\Rightarrow\)
+\textup{(iv\(^{\prime}\))} is identical.
+
+Condition \textup{(ii\(^{\prime}\))} implies \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:ii}{(ii)}}, by the
+cartesian diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ P\times_SQ \arrow[r] \arrow[d,"\operatorname{pr}_1"'] & G \arrow[d]\\
+ P \arrow[r] & G/Q .
+\end{tikzcd}
+\]
+On the other hand, \textup{(iv)} or \textup{(iv\(^{\prime}\))}
+implies \textup{(v)} by dimension theory (EGA
+IV\textsubscript{2}, 5.6.6).  Indeed, one may assume
+\(S=\operatorname{Spec}(k)\), with \(k\) algebraically closed; every
+nonempty fiber of the morphism in \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:iv}{(iv)}} at a point of \(G(k)\),
+or of the morphism in \textup{(iv\(^{\prime}\))} at a point of
+\((G/Q)(k)\), is isomorphic to \(P\cap Q\).
+
+The implication \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vi}{(vi)}} \(\Rightarrow\) \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vii}{(vii)}} follows
+from Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.5.1}{5.5.1} \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:iv}{(iv)}} and \SGARefLink{sga3:xxii:prop:5.9.2}{5.9.2}.  Condition
+\textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vii}{(vii)}} implies \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:i}{(i)}}, because the latter may be checked
+fpqc-locally.  Under \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vii}{(vii)}} we may therefore suppose that
+\(G\) is split, \(P\supset B_{R^+}\), and
+\(Q\supset B_{-R^+}\); then already
+\[
+ \operatorname{Lie}(B_{R^+})+\operatorname{Lie}(B_{-R^+})
+ =\operatorname{Lie}(G).
+\]
+
+Let us prove that \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:i}{(i)}} implies
+\textup{(ii\(^{\prime}\))}.  Let \(u:P\to G/Q\) be the canonical
+morphism.  Smoothness can be checked on geometric fibers, since both
+\(P\) and \(G/Q\) are smooth over \(S\); hence we may suppose that
+\(S\) is the spectrum of an algebraically closed field.  The morphism
+\(u\) is compatible with the evident action of \(P\):
+\(u(pp')=p\,u(p')\).  A translation argument (compare the proof of
+Exp.\ VI\textsubscript{B}, 1.3) therefore reduces smoothness to the
+point \(e\in P(k)\).  By SGA 1, II, 4.7, it is enough that the tangent
+map at \(e\) be surjective.  This map is naturally identified with
+\[
+ \operatorname{Lie}(P)\longrightarrow
+ \operatorname{Lie}(G)/\operatorname{Lie}(Q),
+\]
+which is surjective under \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:i}{(i)}}.
+
+It remains to prove \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:v}{(v)}} \(\Rightarrow\) \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vi}{(vi)}}.
+Suppose first that \(S\) is the spectrum of an algebraically closed
+field.  By \SGARefLink{sga3:xxvi:lemma:4:1:1}{4.1.1} there is a maximal torus \(T\) contained in \(P\) and
+\(Q\).  Let \(R\), \(R_1\), and \(R_2\) be the respective sets of roots
+of \(G\), \(P\), and \(Q\) relative to \(T\).  By Exp.\ XXII, \SGARefLink{sga3:xxii:lem:5.4.4}{5.4.4} and
+\SGARefLink{sga3:xxii:prop:5.4.5}{5.4.5},
+\[
+\begin{aligned}
+ \dim G&=\dim T+\operatorname{Card}(R),&
+ \dim P&=\dim T+\operatorname{Card}(R_1),\\
+ \dim Q&=\dim T+\operatorname{Card}(R_2),&
+ \dim(P\cap Q)&=\dim T+\operatorname{Card}(R_1\cap R_2).
+\end{aligned}
+\]
+Condition \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:v}{(v)}} is therefore equivalent to
+\[
+ \operatorname{Card}(R_1\cap R_2)
+ =\operatorname{Card}(R_1)+\operatorname{Card}(R_2)
+  -\operatorname{Card}(R),
+\]
+that is, to \(R_1\cup R_2=R\).  By Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.9.2}{5.9.2} and \SGARefLink{sga3:xxii:prop:5.4.5}{5.4.5}, it is
+enough to prove that \(R_1\cap(-R_2)\) contains a system of positive
+roots of \(R\).  We are thus reduced to the following lemma.
+
+\begin{sgastatement}{Lemma 4.2.2}
+Let \(R\) be a ``root system''---for example, the set of roots of a root
+datum in the sense of Exposé XXI.  Let \(R_1,R_2\) be two closed subsets
+of \(R\), each containing a system of positive roots.  If
+\(R_1\cup R_2=R\), then \(R_1\cap(-R_2)\) contains a system of positive
+roots.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:lemma:4:2:2}
+
+Indeed, \(R_3=R_1\cap(-R_2)\) is closed, so by Exp.\ XXI, \SGARefLink{sga3:XXI:3.3.6}{3.3.6} it is
+enough to show that \(R_3\cup(-R_3)=R\).  Now
+\[
+ R_1\cup(-R_1)=R=R_2\cup(-R_2),
+\]
+and the conclusion follows from the following elementary fact.  If
+\(A,A',B,B'\) are four subsets of a set \(E\), and
+\[
+ A\cup A'=B\cup B'=A\cup B=A'\cup B'=E,
+\]
+then
+\[
+ (A\cap B')\cup(A'\cap B)=E.
+\]
+
+This proves \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:v}{(v)}} \(\Rightarrow\) \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vi}{(vi)}} over the
+spectrum of an algebraically closed field.  Return now to the general
+case and suppose \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:v}{(v)}} holds.  Let \(s\in S\).  By the preceding
+argument, there is a Borel subgroup \(\bar B\) of \(P_{\bar s}\) and a
+Borel subgroup \(\bar B'\) of \(Q_{\bar s}\) such that
+\(\bar B\cap\bar B'\) is a maximal torus of \(G_{\bar s}\).
+
+The \(S\)-scheme
+\[
+ \Bor(P)\simeq\Bor\bigl(P/\rad^u(P)\bigr)
+\]
+of Borel subgroups of \(P\) is smooth.  Applying ``Hensel's lemma''
+(Exp.\ XI, \SGARefLink{sga3:xi:proposition:1:10}{1.10}) and working étale-locally around \(s\), we may suppose
+that there is a Borel subgroup \(B\) of \(P\) specializing to
+\(\bar B\).  Similarly, there is a Borel subgroup \(B'\) of \(Q\)
+specializing to \(\bar B'\).  Since
+\(\bar B\cap\bar B'\) is a maximal torus of \(G_{\bar s}\), some open
+neighborhood \(U\) of \(s\) has the property that
+\(B_U\cap B'_U\) is a maximal torus of \(G_U\)
+(Exp.\ XXII, \SGARefLink{sga3:xxii:cor:5.9.4}{5.9.4}).  This proves \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vi}{(vi)}}.
+\SGAQED
+
+\begin{sgastatement}{Definition 4.2.3}
+A pair \((P,Q)\) satisfying the equivalent conditions
+\textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:i}{(i)}}--\textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vii}{(vii)}} of \SGARefLink{sga3:xxvi:theorem:4-2-1}{Theorem 4.2.1} is said to be in
+\emph{transversal position}.  One also says that \(P\) is in
+transversal position relative to \(Q\), or, by an abuse of language,
+that \(P\) and \(Q\) are in (mutual) transversal position.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:def:4:2:3}
+
+In view of \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vi}{(vi)}}, this definition agrees, for Borel subgroups,
+with that of Exp.\ XXII, \SGARefLink{sga3:xxii:def:5.9.1}{5.9.1}.
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:corollary:4-2-4}Corollary 4.2.4}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, and \(P,Q\) two
+parabolic subgroups of \(G\).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The pair \((P,Q)\) is in transversal position if and only if, for
+every \(s\in S\), the pair \((P_{\bar s},Q_{\bar s})\) is in transversal
+position.  If \(S'\to S\) is surjective and
+\((P_{S'},Q_{S'})\) is in transversal position, then so is \((P,Q)\).
+\item There is an open subscheme \(U\subset S\) with the following
+property: a morphism \(S'\to S\) factors through \(U\) if and only if
+\((P_{S'},Q_{S'})\) is in transversal position.
+\item Consider the subfunctors
+\[
+ \Gen(G)\subset\Par(G)\times_S\Par(G),\qquad
+ \Gen(/Q)\subset\Par(G),\qquad
+ \Gen(P/Q)\subset G,
+\]
+defined as follows.  For \(S'\to S\), the set \(\Gen(G)(S')\) consists
+of pairs of parabolic subgroups of \(G_{S'}\) in transversal position;
+\(\Gen(/Q)(S')\) consists of parabolic subgroups of \(G_{S'}\) in
+transversal position relative to \(Q_{S'}\); and \(\Gen(P/Q)(S')\)
+consists of the \(g\in G(S')\) such that \(\Int(g)P_{S'}\) is in
+transversal position relative to \(Q_{S'}\).
+
+Each of these functors is represented by an open subscheme,
+universally schematically dense over \(S\), of the corresponding
+\(S\)-scheme
+\[
+ \Par(G)\times_S\Par(G),\qquad\Par(G),\qquad G,
+\]
+respectively.
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:cor:4:2:4}
+\footnote{\emph{Editor's note.} The original expression ``relatively
+dense'' was replaced by ``universally schematically dense over \(S\)'';
+compare EGA IV\textsubscript{3}, Definition 11.10.8.}
+
+Assertion \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:i}{(i)}} follows immediately from condition
+\SGARefLink{sga3:xxvi:theorem:4-2-1}{4.2.1}\textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:i}{(i)}}.  For \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:ii}{(ii)}}, take
+\[
+ U=S-\operatorname{Supp}(\operatorname{Coker}u),
+\]
+where
+\[
+ u:\operatorname{Lie}(P)\oplus\operatorname{Lie}(Q)
+   \longrightarrow\operatorname{Lie}(G)
+\]
+is the canonical morphism.\footnote{\emph{Editor's note.} The second
+summand, printed as \(\operatorname{Lie}(G)\), has been corrected to
+\(\operatorname{Lie}(Q)\); this is the map used in \SGARefLink{sga3:xxvi:theorem:4-2-1}{Theorem
+4.2.1}\textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:i}{(i)}}.}
+
+There are cartesian diagrams
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ G \arrow[r,"f"] & \Par(G)\\
+ \Gen(P/Q) \arrow[u,hook] \arrow[r] & \Gen(/Q)\arrow[u,hook]
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=large,row sep=large]
+ \Par(G) \arrow[r,"f'"] & \Par(G)\times_S\Par(G)\\
+ \Gen(/Q) \arrow[u,hook] \arrow[r] & \Gen(G)\arrow[u,hook],
+\end{tikzcd}
+\]
+where \(f(g)=\Int(g)P\) and \(f'(R)=(R,Q)\).  It therefore suffices to
+prove \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:iii}{(iii)}} for \(\Gen(G)\).
+
+Let \(P_0\) be the canonical parabolic subgroup of
+\(G_{\Par(G)}\), and set
+\[
+ X=\Par(G)\times_S\Par(G),\qquad
+ P=\operatorname{pr}_1^*(P_0),\qquad
+ Q=\operatorname{pr}_2^*(P_0).
+\]
+Applying \textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:ii}{(ii)}} to the parabolic subgroups \(P,Q\) of \(G_X\)
+constructs an open subscheme \(U\subset X\), which is immediately
+identified with \(\Gen(G)\).  The density assertion may be checked on
+geometric fibers,\footnote{\emph{Editor's note.} Compare EGA
+IV\textsubscript{3}, 11.10.10.} so assume
+\(S=\operatorname{Spec}(k)\), where \(k\) is algebraically closed.
+Since \(\Par(G)\) is smooth, it is enough to show that \(\Gen(G)\)
+meets every irreducible component of
+\(\Par(G)\times_S\Par(G)\).  By \SGARefLink{sga3:xxvi:item:3:2}{3.3}, this amounts to the following:
+given \(t,t'\in\Of(\underline{\operatorname{Dyn}}(G))(S)\), find a pair
+\((P,P')\) in transversal position such that \(t(P)=t\) and
+\(t(P')=t'\).
+
+Choose Borel subgroups \(B,B'\) of \(G\) such that \(B\cap B'\) is a
+maximal torus (split \(G\) and apply Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.9.2}{5.9.2}).  By \SGARefLink{sga3:xxvi:lemma:3:8}{3.8} there
+are parabolic subgroups \(P\supset B\) and \(P'\supset B'\) with
+\(t(P)=t\) and \(t(P')=t'\).  They have the required types and are in
+transversal position by \SGARefLink{sga3:xxvi:theorem:4-2-1}{4.2.1}\textup{\SGARefLink{sga3:xxvi:theorem:4-2-1:item:vi}{(vi)}}.
+\SGAQED

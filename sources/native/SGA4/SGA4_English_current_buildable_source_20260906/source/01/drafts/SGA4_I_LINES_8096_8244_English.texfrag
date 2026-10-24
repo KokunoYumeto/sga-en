@@ -1,0 +1,157 @@
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1}{}
+\begin{enonce*}{THEOREM %%
+1} Statement \hyperlink{sga4.exp.I.appendix.II.sec.5.axiom.A-prime.6}{$(A'.6)$} implies the universe axiom (A.6).
+\end{enonce*}
+Indeed, let $A$ be a set. We must construct a universe $U$ of which
+$A$ is an element. Define recursively a sequence $(A_n)_{n\geq0}$ of
+sets by:
+\begin{itemize}
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.2}{}
+\item[(2)] $A_0=A$, $A_{n+1}=$ the union of the elements of $A_n=$
+the set of elements of the elements of $A_n$.
+\end{itemize}
+\noindent Put $B=\bigcup^\infty_{n=0}A_n$. By \hyperlink{sga4.exp.I.appendix.II.sec.5.axiom.A-prime.6}{$(A'.6)$}, let
+$\sheaf{\sheaf{c}}$ be a strongly inaccessible cardinal such that
+$\card(B)<\sheaf{\sheaf{c}}$.
+
+There exists a \emph{well-ordered} set $I$ such that
+$\card(I)=\sheaf{\sheaf{c}}$. After replacing $I$ by its smallest
+segment of cardinality $\sheaf{\sheaf{c}}$ if necessary, we may suppose
+that \emph{every segment of $I$ distinct from $I$ has cardinality
+$<\sheaf{\sheaf{c}}$.} We\pageoriginale denote by $\mathcal{E}$ the
+\emph{least element of $I$}. It follows from the hypothesis on segments
+that $I$ has no greatest element (otherwise we would remove it), and
+hence that every element of $I$ has a successor; for $\alpha\in I$, we
+denote the \emph{successor} of $\alpha$ by $s(\alpha)$.
+
+Now define, by \emph{transfinite recursion}, a family
+$(B_\alpha)_{\alpha\in I}$ of sets by:
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.3}{}
+\begin{equation}
+\begin{cases}
+& B_{\mathcal{E}}=B\\
+& B_{s(\alpha)}=B_{\alpha}\cup \mathcal{P}(B_{\alpha})\\
+& B_{\alpha}={\displaystyle{\bigcup_{\beta<\alpha}}}B_{\beta}\mbox{
+if $\alpha$ has no predecessor.}
+\end{cases}\tag{3}
+\end{equation}
+Put $U=\bigcup_{\alpha\in I}B_\alpha$. We shall show that $U$ is the
+desired universe.
+
+First, $A\in U$, since $A=A_\circ$ is a subset of
+$B=B_{\mathcal{E}}$, and therefore an element of
+$\mathcal{P}(B_{\mathcal{E}})\subset B_{s(\mathcal{E})}$.
+
+Next note that, for every $\alpha\in I$, one has:
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.4}{}
+\begin{equation}
+\card(B_{\alpha})<\sheaf{\sheaf{c}}{\quoi}.\tag{4}
+\end{equation}
+Indeed, proceed by transfinite recursion on $\alpha$. This is true for
+$\alpha=\mathcal{E}$ by hypothesis. From \hyperlink{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.4}{(4)} one obtains
+$\card(B_{s(\alpha)})\leq
+\card(B_\alpha)+2^{\card(B_\alpha)}<
+\sheaf{\sheaf{c}}+\sheaf{\sheaf{c}}$ (by \hyperlink{sga4.exp.I.appendix.II.sec.5.definition.2.condition.FI.1}{(FI.1)})
+$=\sheaf{\sheaf{c}}$ (since $\sheaf{\sheaf{c}}$ is infinite).
+Finally, if $\alpha$ has no predecessor, the set $I'$ of
+$\beta<\alpha$ has cardinality $<\sheaf{\sheaf{c}}$ by construction;
+hence (if $\card(B_\beta)<\sheaf{\sheaf{c}}$ for every
+$\beta<\alpha$),
+$\card(B_\alpha)=\card(\bigcup_{\beta\in I'}B_\beta)
+\leq\Sigma_{\beta\in I'}\card(B_\beta)<\sheaf{\sheaf{c}}$ (by
+(FI.2)). This proves \hyperlink{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.4}{(4)}.
+
+Let us now\pageoriginale show that
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.5}{}
+\begin{equation}
+\card(x)<\sheaf{\sheaf{c}}\mbox{ for every }x\in U{\quoi}.\tag{5}
+\end{equation}
+Indeed, it suffices to show that, for every $\alpha\in I$, one has
+``$\card(x)<\sheaf{\sheaf{c}}$ for every $x\in B_\alpha$''. Proceed
+again by transfinite recursion on $\alpha$. This is true for
+$\alpha=\mathcal{E}$, since, if $x\in B_{\mathcal{E}}=B$, there exists
+$n\geq0$ such that $x\in A_n$; hence $x\subset A_{n+1}$ by \hyperlink{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.2}{(2)},
+$x\subset B$, and
+$\card(x)\leq\card(B)<\sheaf{\sheaf{c}}$. The case where $\alpha$ has
+no predecessor is evident. Finally, if $x\in B_\alpha$ and
+$\alpha=s(\beta)$, either $x\in B_\beta$, in which case the assertion
+``$\card(x)<\sheaf{\sheaf{c}}$'' is true by recursion, or
+$x\in\mathcal{P}(B_\beta)$, whence $x\subset B_\beta$ and the
+assertion ``$\card(x)<\sheaf{\sheaf{c}}$'' is true by \hyperlink{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.4}{(4)}.
+
+We are now in a position to prove that $U$ is indeed a \emph{universe}:
+
+\begin{itemize}
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.clause.U.I}{}
+\item[(U.I)] Let $x\in U$ and $y\in x$. We must show %%
+that $y\in U$. In other words, we must show that, for every
+$\alpha\in I$, one has:
+$$
+\textrm{``}x\in B_{\alpha}\mbox{ and }y\in x\Longrightarrow y\in
+B_{\alpha}\textrm{''\,}{\quoi}.
+$$
+Proceed again by transfinite recursion on $\alpha$. This is true for
+$\alpha=\mathcal{E}$, since $x\in B_{\mathcal{E}}=B$ implies
+$x\in A_n$ for some $n$; hence, if $y\in x$, then $y\in A_{n+1}$,
+whence $y\in B=B_{\mathcal{E}}$. Passage to an element $\alpha$ with no
+predecessor is evident. Finally, pass from $\alpha$ to $s(\alpha)$: if
+$x\in B_{s(\alpha)}$ and $y\in x$, either $x\in B_\alpha$, whence
+$y\in B_\alpha\subset B_{s(\alpha)}$ by recursion, or
+$x\in\mathcal{P}(B_\alpha)$%%
+, whence again $y\in B_\alpha\subset B_{s(\alpha)}$.
+
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.clause.U.II}{}
+\item[(U.II)] Let $x,y\in U$. Since the family
+$(B_\alpha)_{\alpha\in I}$ is increasing by \hyperlink{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.3}{(3)}, there exists
+$\alpha\in I$ such that $x,y\in B_\alpha$. Then
+$\{x,y\}\in\mathcal{P}(B_\alpha)\subset B_{s(\alpha)}\subset U$.
+
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.clause.U.III}{}
+\item[(U.III)] Let\pageoriginale $x\in U$. Then there exists
+$\alpha\in I$ such that $x\in B_\alpha$. It therefore suffices to
+show that, for every $\alpha\in I$, one has:
+$$
+\textrm{``}x\in B_{\alpha}\Longrightarrow \mathcal{P}(x)\in
+B_{s(s(\alpha))}\textrm{''\,}{\quoi}.
+$$
+Proceed again by transfinite recursion on $\alpha$. If
+$\alpha=\mathcal{E}$, then $x\in A_n$ for some $n$, whence
+$y\subset A_{n+1}\subset B=B_{\mathcal{E}}$ for every subset $y$ of
+$x$; thus $y\in\mathcal{P}(B_{\mathcal{E}})\subset
+B_{s(\mathcal{E})}$ for every $y\in\mathcal{P}(x)$, whence
+$\mathcal{P}(x)\subset B_{s(\mathcal{E})}$ and
+$\mathcal{P}(x)\in\mathcal{P}(B_{s(\mathcal{E})})\subset
+B_{s(s(\mathcal{E}))}$, so our assertion is true for
+$\alpha=\mathcal{E}$. %%
+Passage to an element $\alpha$ with no predecessor is immediate,
+since $\beta<\alpha$ then implies $s(s(\beta))<\alpha$. Finally, pass
+from $\alpha$ to $s(\alpha)$; let $x\in B_{s(\alpha)}$; if
+$x\in B_\alpha$, then
+$\mathcal{P}(x)\in B_{s(s(\alpha))}\subset B_{s(s(s(\alpha)))}$ by
+recursion; if $x\in\mathcal{P}(B_\alpha)$, then $x\subset B_\alpha$,
+whence $\mathcal{P}(x)\subset\mathcal{P}(B_\alpha)$ and
+$\mathcal{P}(x)\in\mathcal{P}(\mathcal{P}(B_\alpha))\in
+B_{s(s(s(\alpha)))}$.
+
+\hypertarget{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.clause.U.IV}{}
+\item[(U.IV)] Let $(x_\lambda)_{\lambda\in K}$ be a family of
+elements of $U$ such that $K\in U$. We must show that the union
+$x=\bigcup_{\lambda\in K}x_\lambda$ is an element of $U$. For every
+$\lambda\in K$, choose an $\alpha(\lambda)\in I$ such that
+$x_\lambda\in B_{\alpha(\lambda)}$. Let us show that the set
+$\alpha(K)$ of the $\alpha(\lambda)$ is \emph{bounded above} in $I$:
+indeed, if it were not, one would have
+$$
+I=\bigcup_{\lambda%%
+\in K}[\mathcal{E},\alpha(\lambda)]{\quoi},
+$$
+which would contradict \hyperlink{sga4.exp.I.appendix.II.sec.5.definition.2.condition.FI.2}{(FI.2)}, since
+$\card(K)<\sheaf{\sheaf{c}}$ and
+$\card([\mathcal{E},\alpha(\lambda)])<\sheaf{\sheaf{c}}$ for every
+$\lambda\in K$. Let then $\beta$ be an upper bound of $\alpha(K)$;
+one has $x_\lambda\in B_\beta$ for every $\lambda\in K$, since the
+family $(B_\alpha)_{\alpha\in I}$ is increasing. Every element of
+$x_\lambda$ then belongs to $B_\beta$ by what was proved in \hyperlink{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.clause.U.I}{(U.I)},
+whence $x=\bigcup_{\lambda\in K}x_\lambda\subset B_\beta$. By \hyperlink{sga4.exp.I.appendix.II.sec.5.theorem.1.proof.equation.3}{(3)}, it
+follows that $x\in B_{s(\beta)}$, whence $x\in U$. \cqfd
+\end{itemize}

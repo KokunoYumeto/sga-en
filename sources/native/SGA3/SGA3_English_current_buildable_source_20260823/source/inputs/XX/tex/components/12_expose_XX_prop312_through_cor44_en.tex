@@ -1,0 +1,201 @@
+\paragraph{\textbf{Proposition 3.12.}}
+\SGARefTarget{sga3:xx:3.12}
+\emph{Let \((G,T,\alpha)\) be an elementary \(S\)-system and let
+\(w\in N^\times(S)\).  Put}
+\[
+  \Omega_0=\Omega\cap\intaut(w^{-1})(\Omega).
+\]
+\emph{Let \(d\) be the function on \(\Omega\) defined by}
+\[
+  d\bigl(\exp(Y)\cdot t\cdot\exp(X)\bigr)
+    =\alpha(t)^{-1}+XY.
+\]
+\emph{Then \(\Omega_0=\Omega_d\), and, for
+\(\exp(Y)\cdot t\cdot\exp(X)\in\Omega_0(S')\), one has the following
+formula, where
+\(z=d(\exp(Y)\cdot t\cdot\exp(X))\):}
+\begin{equation}
+\tag{\(\star\)}\label{sga3:xx:proposition:3-12:equation:star}
+  \intaut(w)\bigl(\exp(Y)\cdot t\cdot\exp(X)\bigr)
+  =
+  \exp\bigl(z^{-1}a_\alpha(w)^{-1}X\bigr)\cdot
+  t\alpha^\ast(z)\cdot
+  \exp\bigl(z^{-1}a_\alpha(w)Y\bigr).
+\end{equation}
+\emph{Moreover,}
+\[
+  d\circ\intaut(w)=d^{-1}.
+\]
+
+Indeed, one immediately has\footnote{The editors corrected the
+original by interchanging \(a_\alpha(w)\) and
+\(a_\alpha(w)^{-1}\), and supplied the details of the proof of
+\(d\circ\intaut(w)=d^{-1}\).}
+\[
+\begin{aligned}
+  \intaut(w)\bigl(\exp(Y)\cdot t\cdot\exp(X)\bigr)
+   &=
+   \exp\bigl(a_\alpha(w)Y\bigr)\cdot
+   t\alpha^\ast\bigl(\alpha(t)^{-1}\bigr)\cdot
+   \exp\bigl(a_\alpha(w)^{-1}X\bigr)\\
+   &=
+   \exp\bigl(a_\alpha(w)Y\bigr)\cdot
+   \exp\bigl(\alpha(t)a_\alpha(w)^{-1}X\bigr)\cdot
+   t\alpha^\ast\bigl(\alpha(t)^{-1}\bigr).
+\end{aligned}
+\]
+By \SGARefLink{sga3:xx:2.1}{2.1}, this is a section of \(\Omega\) if and only if
+\(1+\alpha(t)XY\) is invertible, which proves
+\(\Omega_0=\Omega_d\).  Applying formula \textup{(F)} of the same
+paragraph then gives \((\star)\) by an immediate computation.
+Finally, \((\star)\) gives
+\[
+\begin{aligned}
+  (d\circ\intaut(w))
+    \bigl(\exp(Y)\cdot t\cdot\exp(X)\bigr)
+   &=
+   \alpha\bigl(t\alpha^\ast(z)\bigr)^{-1}
+     +z^{-2}XY\\
+   &=z^{-2}\bigl(\alpha(t)^{-1}+XY\bigr)
+    =z^{-1},
+\end{aligned}
+\]
+which proves the last assertion.
+
+\smallskip
+\noindent\textbf{N.B.}\ The function \(d\) is independent of the
+choice of \(w\).
+
+\section{The Isomorphism Theorem}
+
+\paragraph{\textbf{Theorem 4.1.}}
+\SGARefTarget{sga3:xx:4.1}
+\emph{Let \(S\) be a scheme and let \(q\in\mathbb Z\), \(q>0\), be
+such that \(x\mapsto x^q\) is an endomorphism of
+\(\mathbb G_{a,S}\).  Let \((G,T,\alpha)\) and
+\((G',T',\alpha')\) be two elementary \(S\)-systems.  Let}
+\[
+  h\colon(\mathfrak g^\alpha)^{\otimes q}
+      \xrightarrow{\ \sim\ }\mathfrak g'^{\,\alpha'},
+  \qquad
+  h^\vee\colon(\mathfrak g^{-\alpha})^{\otimes q}
+      \xrightarrow{\ \sim\ }\mathfrak g'^{-\alpha'}
+\]
+\emph{be mutually contragredient isomorphisms.  Let
+\(f_T\colon T\to T'\) be a morphism of \(S\)-groups making the
+following diagram commute:}
+
+\begin{center}
+  \begin{tikzcd}[column sep=huge,row sep=large]
+    \mathbb G_{m,S}
+      \arrow[r,"q"]
+      \arrow[d,"\alpha^\ast"']
+      & \mathbb G_{m,S}
+        \arrow[d,"\alpha'^\ast"] \\
+    T
+      \arrow[r,"f_T"]
+      \arrow[d,"\alpha"']
+      & T'
+        \arrow[d,"\alpha'"] \\
+    \mathbb G_{m,S}
+      \arrow[r,"q"]
+      & \mathbb G_{m,S}
+  \end{tikzcd}
+\end{center}
+
+\emph{There exists a unique morphism of \(S\)-groups
+\(f\colon G\to G'\) extending \(f_T\) and satisfying}
+\[
+  f\bigl(\exp(X)\bigr)=\exp\bigl(h(X^q)\bigr)
+\]
+\emph{for every \(S'\to S\) and
+\(X\in W(\mathfrak g^\alpha)(S')\).  Moreover, this morphism also
+satisfies}
+\[
+  f\bigl(\exp(Y)\bigr)=\exp\bigl(h^\vee(Y^q)\bigr),
+  \qquad
+  f\bigl(w_\alpha(Z)\bigr)
+    =w_{\alpha'}\bigl(h(Z^q)\bigr)
+\]
+\emph{for every \(S'\to S\),
+\(Y\in\Gamma(S',\mathfrak g^{-\alpha})\), and
+\(Z\in\Gamma(S',\mathfrak g^\alpha)^\times\).}
+
+If \(f\colon G\to G'\) extends \(f_T\), then
+\[
+  f\circ\alpha^\ast=(\alpha'^\ast)^q.
+\]
+If, in addition, \(f\) satisfies the second displayed condition in
+the statement, then it satisfies the other two conditions as well by
+\SGARefLink{sga3:xx:3.10}{3.10}.  It follows that \(f\) is determined on \(\Omega\) by
+\[
+  f\bigl(\exp(Y)t\exp(X)\bigr)
+  =
+  \exp\bigl(h^\vee(Y^q)\bigr)\,
+  f_T(t)\,
+  \exp\bigl(h(X^q)\bigr).
+\]
+Since \(\Omega\) is schematically dense in \(G\), this already proves
+the uniqueness of \(f\).  To prove existence, it is enough, by
+\SGARefLink{sga3:xviii:prop:2.3}{Exposé XVIII, 2.3}, to show that the preceding formula defines a
+``generically multiplicative'' morphism from \(\Omega\) to \(G'\).
+By \SGARefLink{sga3:xx:2.4}{2.4}, this amounts to checking
+\[
+  \alpha'\circ f=\alpha^q,
+\]
+which follows from the fact that \(f\) extends \(f_T\).
+
+\paragraph{\textbf{Scholium 4.2.}}
+\SGARefTarget{sga3:xx:4.2}
+\SGARefLink{sga3:xx:4.1}{Theorem 4.1} may also be interpreted as follows.  Let
+\(\mathcal E\) be the category of elementary \(S\)-systems, and let
+\(\mathcal D\) be the category of tuples
+\[
+  \bigl(
+    \mathbb G_{m,S}\xrightarrow{\alpha^\ast}T
+    \xrightarrow{\alpha}\mathbb G_{m,S},\,L
+  \bigr),
+\]
+where \(T\) is a torus, \(\alpha\) and \(\alpha^\ast\) are group
+morphisms such that \(\alpha\circ\alpha^\ast=2\), and \(L\) is an
+invertible \(\mathcal O_S\)-module.  The reader may specify the
+morphisms in the two categories under consideration.  Define a
+functor
+\[
+\begin{aligned}
+  \mathcal E&\longrightarrow\mathcal D,\\
+  (G,T,\alpha)&\longmapsto
+  \bigl(
+    \mathbb G_{m,S}\xrightarrow{\alpha^\ast}T
+    \xrightarrow{\alpha}\mathbb G_{m,S},\,
+    \mathfrak g^\alpha
+  \bigr).
+\end{aligned}
+\]
+The preceding theorem says that this functor is fully faithful.  In
+fact, it is an equivalence of categories, as will be seen in the next
+section.  We already have:
+
+\paragraph{\textbf{Corollary 4.3.}}
+\SGARefTarget{sga3:xx:4.3}
+\emph{If \(q=1\) and \(f_T\) is an isomorphism, then \(f\) is an
+isomorphism.}
+
+\paragraph{\textbf{Corollary 4.4.}}
+\SGARefTarget{sga3:xx:4.4}
+\emph{If \(q=1\) and \(f_T\) is faithfully flat with kernel \(Q\)
+\textup{(cf.\ \SGARefLink{sga3:ix:proposition:2:7}{Exposé IX, 2.7})}, then \(f\) is faithfully flat and
+quasi-compact with kernel \(Q\), and hence identifies \(G'\) with
+\(G/Q\).}
+
+Indeed, if \(f_T\) is faithfully flat with kernel \(Q\), then
+\[
+  Q=\Ker(f_T)
+  \subset\Ker(\alpha'\circ f_T)
+  =\Ker(\alpha).
+\]
+Introduce the elementary \(S\)-system
+\((G/Q,T/Q,\alpha/Q)\) of \SGARefLink{sga3:xx:2.13}{2.13}.  By \SGARefLink{sga3:xx:2.14}{2.14}, we are reduced to proving
+that \(f/Q\) induces an isomorphism from \(G/Q\) onto \(G'\), which
+follows immediately from \SGARefLink{sga3:xx:4.3}{4.3}.
+

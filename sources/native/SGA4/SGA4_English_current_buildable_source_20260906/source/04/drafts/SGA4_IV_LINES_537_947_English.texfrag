@@ -1,0 +1,389 @@
+\section{Examples of topoi}\etiquette[2]{IV.sec2}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[2.0]{IV.subsec2.0}
+We have brought together in this section a fairly large number of
+typical examples of topoi, which the reader will already have had
+occasion to encounter elsewhere, and which are intended to facilitate
+his access to the ``yoga'' of topoi. For other examples (drawn from
+algebraic geometry) of topologies on sites, giving rise to as many
+topoi, he may consult \SGA 3 IV 6, and (for the étale topos) Exposé VII
+of the present seminar. Since later on we shall hardly refer to the
+present section except for questions of notation or terminology, we
+leave it to the reader, as an exercise, to verify the statements with
+which we have supplemented these examples for his general instruction.
+All the examples of the present section will be made more precise in
+4, where their functorial dependence on the data will be examined, and
+in the following sections by way of illustration of the general notions
+concerning topoi.
+
+\subsection{Topos associated with a topological space}\etiquette[2.1]{IV.subsec2.1}
+
+Let $X$ be a small topological space, and let $\Ouv(X)$ be the category
+of open subsets of $X$, endowed with the canonical topology
+\sisi{(III 2.9.1).}{(III \hyperref[III.exem1.9.1]{1.9.1}).} We shall denote by $\Top(X)$ the
+topos of $𝒰$-sheaves on $\Ouv(X)$. This topos is equivalent to the
+category of étale topological spaces over $X$, by associating with every
+such space $X'$ over $X$ the sheaf
+$U\mapsto \Gamma(X'/U)=\Hom_X(U,X')$ on $\Ouv(X)$
+[TF]\nde{Here [TF] denotes reference [8].} By an abuse\pageoriginale
+of language, we shall sometimes be unable to refrain from denoting by
+the same letter $X$ the topos $\Top(X)$ defined by the topological space
+$X$.
+
+It is of course the preceding example that served chiefly as a guide
+and as an intuitive basis for the development of the theory of topoi.
+One should note, however, that the topoi obtained from topological
+spaces are of a very special nature, owing in particular to the fact
+that they have been described by sites $C=\Ouv(X)$ in which
+\emph{all morphisms are monomorphisms} (and hence whose underlying
+category reduces to a preordered set). It follows in particular that
+the sheaves represented by the objects of $C$ are subsheaves of the
+terminal sheaf, and consequently that \emph{the subsheaves of the
+terminal sheaf form a generating family of the topos under
+consideration}. This property is not shared by most topoi that arise
+naturally in algebraic geometry or in algebra, \cf the examples below.
+It is, up to minor qualifications, characteristic of topoi of the form
+$\Top(X)$ (\cf \hyperref[IV.exer7.1.9]{7.1.9} below).
+
+It is easily verified that the map $\Ouv(X)\rightarrow \Top(X)$,
+which associates with every open subset of $X$ the sheaf it represents,
+is a \emph{bijection} from $\Ouv(X)$ onto the set of subobjects of the
+terminal object of $\Top(X)$; this bijection is even an isomorphism for
+the natural order structures, \ie it induces an isomorphism of the
+corresponding categories. This suggests that it should be possible to
+reconstruct the topological space $X$, up to homeomorphism, from
+$\Top(X)$ known up to equivalence. We shall see below
+(\hyperref[IV.subsec4.2]{4.2}) that this is indeed the case, subject to
+a slight restriction on $X$.
+
+\subsection{Point topos or terminal topos, and empty topos or initial topos}\etiquette[2.2]{IV.subsec2.2}\pageoriginale
+
+When $X$ is a topological space consisting of a single point, the
+functor
+$$
+F\longrightarrow F(X):\Top(X)\longrightarrow 𝒰\mbox{-}\Ens
+$$
+is an equivalence of categories. This shows in particular that the
+\emph{category} $𝒰$-$\Ens$ is a $𝒰$-\emph{topos.} We saw by
+examples in \Exp II that this $𝒰$-topos is typical from the point
+of view of exactness properties, in that the verification of many
+properties (especially exactness properties) of general topoi reduces
+to this particular topos. The interpretation given here in terms of
+the one-point topological space justifies the abuse of language by
+which a topos equivalent to the category $𝒰$-$\Ens$ is called a
+\emph{point topos} (although, as a category, it is not at all
+equivalent to the one-point category!). This is the terminology that
+corresponds to the correct geometric intuition of the role played by
+these topoi. By another abuse of language, a point topos is sometimes
+called a \emph{terminal topos}, \cf \hyperref[IV.subsec4.3]{4.3}; we
+shall say ``\emph{the} terminal topos'' for the topos
+($𝒰$-$\Ens$).
+
+When $X$ is the empty topological space, so that $\Ouv(X)$ is the
+one-point category, a presheaf $F$ on $\Ouv(X)$ is a sheaf if and only
+if its value at the unique object $\phi$ of $\Ouv(X)$ is a singleton
+set. It follows that $\Top(∅)$ is isomorphic to the category of
+singleton $𝒰$-sets, a category equivalent to the one-point category.
+From this one concludes in particular that the one-point category (as
+well as any $𝒰$-category equivalent to it) is a $𝒰$-topos. By an
+abuse\pageoriginale of language, it is sometimes called the
+\emph{empty topos} or the \emph{initial topos} (\cf
+\hyperref[IV.subsec4.4]{4.4}); one should take care that it is not
+equivalent to the empty category.
+
+\subsection{Topos associated with a space with operators}\etiquette[2.3]{IV.subsec2.3}
+
+Let $X$ be a topological space and $G$ a discrete group acting on $X$
+by homeomorphisms. In \sisi{[Toh. \hyperref[IV.subsec5.1]{5.1}]}{[Toh]\nde{Here
+[Toh] denotes reference [4].} \hyperref[IV.subsec5.1]{5.1}} the category
+of $G$-\emph{sheaves on} $X$, or, as we shall also say, sheaves on
+$(X,G)$, was defined; these are sheaves (of sets) on $X$
+\emph{equipped} with actions of $G$ compatible with those of $G$ on
+$X$. One sees at once, using Giraud's criterion
+\hyperref[IV.theo1.2]{1.2} iii), that this %% \XXX ii) est probablement plus facile à vérifier
+category is a topos (NB $𝒰$ is understood throughout), which we shall
+simply denote by $\Top(X,G)$. When $G$ is the trivial group, we recover
+the example of \hyperref[IV.subsec2.1]{2.1}; when $X$ is the one-point
+space, we obtain the topos of sets on which $G$ acts on the left (or
+$G$-\emph{sets}), also called the \emph{classifying topos of the
+discrete group} $G$, and denoted by $B_G$. It is easily verified that
+the only subobjects of the terminal object $e$ of the topos $B_G$ are
+$e$ and the empty sheaf $\phi$; in particular, if $G$ is not the
+trivial group, the subobjects of the terminal object of the classifying
+topos $B_G$ do not form a generating family of $B_G$. Thus $B_G$ is
+then not equivalent to a topos of the type $\Top(X)$ considered in
+\hyperref[IV.subsec2.1]{2.1}.
+
+The notion of a $G$-sheaf was introduced in \loccit in order to develop
+the cohomological theory of abelian $G$-sheaves. Interpreting the latter
+as the abelian sheaves of the topos $(X,G)$, that theory becomes part
+of the theory of \Exp V, developed in the setting of general topoi.
+
+More\pageoriginale generally, one may seek to associate an appropriate
+topos with a topological space $X$ equipped with a topological group
+$G$ (not necessarily discrete) of automorphisms, which would give rise
+to an adequate cohomological theory. The same may be done in the
+context of differentiable manifolds, real or complex analytic
+manifolds, or schemes. This is indeed possible, \cf
+\hyperref[IV.subsec2.5]{2.5} below.
+
+\subsection{Classifying topos of a group object}\etiquette[2.4]{IV.subsec2.4}
+
+Let $E$ be a topos, and let $G$ be a group object of $E$. Let $(E,G)$
+be the category of objects of $E$ on which $G$ acts. It follows at
+once from Giraud's criterion that this is a topos. It is called the
+\emph{classifying topos} of the group object $G$, and is denoted by
+$B_G$. When $E$ is the point topos (\hyperref[IV.subsec2.2]{2.2}),
+\ie when $G$ is an ordinary group, we recover the classifying topos of
+\hyperref[IV.subsec2.3]{2.3}.
+
+The terminology adopted here is justified by the fact that the topos
+$B_G$ plays a universal role in the classification of ``torsors'' (or
+homogeneous principal bundles) under $G$, or more generally under
+$G_{E'}=f^{\ast}(G)$, where $E'$ is a topos ``over $E$'', \ie endowed
+with a morphism $f:E'\rightarrow E$ (\cf
+\hyperref[IV.def3.1]{3.1} below). This role, made explicit in [3 Chap V]
+or in \hyperref[IV.exer5.9]{5.9} below, shows that $B_G$ plays, in the
+context of topoi, the same role as the classical classifying spaces of
+topological groups in the homotopy theory of topological spaces. The
+latter may be regarded (\cf \hyperref[IV.subsec2.5]{2.5}) as a weakened
+version of the former, obtained by retaining from the classifying topos
+only the ``homotopy type'' of that topos, in a suitable sense which
+need not be specified here.
+
+\subsection{``Big site'' and ``big topos'' of a topological space.
+Classifying topos of a topological group}\footnote[1]{The introduction
+of these sites and topoi is due to M. \textsc{Giraud}, who also brought
+out their advantages over the traditional ``small'' site.}\etiquette[2.5]{IV.subsec2.5}\pageoriginale
+
+Let $U-\Esp$, or simply $(\Esp)$, be the category of topological
+spaces $\in 𝒰$. It is known that finite projective limits are
+representable in $(\Esp)$. Consider on $(\Esp)$ the pretopology
+(\hyperrefext[II][II.def1.3]{1.3}) for
+which $\Cov(X)$ is the set of surjective families of open embeddings
+$u_i:X_i\rightarrow X$. We regard $(\Esp)$ as a site by means of the
+topology generated by the preceding pretopology. For every object $X$
+of $(\Esp)$, regard the category
+$$
+(\Esp)_{/X}
+$$
+of objects of $(\Esp)$ over $X$, \ie topological spaces over $X$, as a
+site, using the topology induced by that of $(\Esp)$ via the forgetful
+functor $(\Esp)_{/X}\rightarrow (\Esp)$
+(\hyperrefext[III][III.prop5.2]{5.2} 4)). This site is called the
+\emph{big site} associated with $X$. One should note that it is not
+$\in 𝒰$; nor is it a $𝒰$-site in the sense of
+\hyperrefext[II][II.def3.0.2]{3.0.2}, so precautions are necessary when
+applying the usual results to it. To remedy this inconvenience, one may
+choose a universe $𝒱$ such that $𝒰\in 𝒱$, so that
+$(\Esp)_{/X}$ becomes a $𝒱$-site, and work with the associated
+$𝒱$-topos $(\Esp)_{/X}$, which may be denoted by $\TOP(X)$ and will
+be called the \emph{big topos of} $X$. If one is reluctant to enlarge
+$𝒰$, one may choose a cardinal $c$ bounding the cardinalities of $X$
+and of all the topological spaces one intends to use in the arguments
+(most often,
+\sisi{$\Sup(\card X, \card ℛ)$}{$\Sup(\card X, \card \mathbb{R})$}
+will suffice!), and replace $(\Esp)_{/X}$ by the subcategory
+$(\Esp)'_{/X}$ consisting of those $X'$ over $X$ such that
+$\card X'\leq c$, endowed with the induced topology; one then denotes
+by $\TOP(X)$ the topos of sheaves on this\pageoriginale site. To fix
+ideas, suppose that the first definition has been adopted.
+
+The advantage of the big topos of $X$ over the small one is that the
+site defining it contains $(\Esp)_{/X}$ as a full subcategory; since
+the topology of this site is manifestly coarser than the canonical
+topology, the canonical functor from $(\Esp)_{/X}$ to $\TOP(X)$,
+associating with every space $X'$ over $X$ the sheaf it represents,
+is seen to be \emph{fully faithful.} Consequently, \emph{a space $X'$
+over $X$ is determined up to $X$-isomorphism by the sheaf
+$(\in \Top(X))$ it defines}; thus the notion of a sheaf on (the big
+site of) $X$ may be regarded as a \emph{generalization} of the notion
+of a topological space over $X$, by means of which all constructions
+of sheaf theory acquire a meaning for topological spaces over $X$.
+
+Thus, when $G$ is a group object of the category $(\Esp)_{/X}$ of
+topological spaces over $X$, one may associate with it the classifying
+topos $B_G$ (\hyperref[IV.subsec2.4]{2.4}), hence classifying cohomology
+groups, classifying homotopy groups, \etc (defined as the corresponding
+invariants of the $𝒱$-topos $B_G$). In particular, when $X$ is a
+one-point space, $G$ is identified with an ordinary topological group.
+Subject to the usual local conditions ensuring that the singular
+cohomology of the Cartesian products $G^n$ agrees with cohomology in
+the sense of sheaves (for constant coefficients, say), for example if
+$G$ is locally contractible, one may verify that the cohomology of the
+classifying topos of $G$ is canonically isomorphic to that of the
+classifying space of $G$ in the sense of topologists.
+
+The introduction\pageoriginale of classifying topoi (via ``big
+sites'') has over classifying spaces the advantage of providing a
+richer theory, since in particular they provide useful cohomological
+invariants for coefficients more general than constant or locally
+constant coefficients. Moreover, the definition considered here
+adapts in an evident way to the other customary contexts:
+differentiable manifolds, real or complex analytic manifolds or
+spaces, and schemes. This point of view makes it possible in particular
+to connect the study of characteristic classes from the traditional
+and the ``arithmetic'' points of view, by regarding the ``classical
+groups'' as arising from schemes defined over the ring of integers;
+\cf [\hyperref[IV.sec7]{7}] for indications in this direction.
+Likewise, the general results of J. \textsc{Giraud}
+[\hyperref[IV.sec3]{3}] on the classification of extensions of group
+objects, developed in the very general and flexible setting of topoi,
+may, by means of ``big topoi'', be specialized to results on the
+classification of extensions of topological groups, or of real or
+complex Lie groups, which seem to have been scarcely known to
+topologists except in the case of extensions with abelian kernel
+[\hyperref[IV.sec11]{11}].
+
+\subsection{Topoi of the form $\widehat{C}$}\etiquette[2.6]{IV.subsec2.6}
+
+Let $C$ be a small category. Then the category $\widehat{C}$ of
+$U$-presheaves on $C$ is plainly a $𝒰$-topos, since it is of the
+form $C^{\widetilde{\phantom{,}}}$, where $C$ is endowed with the
+chaotic topology. We shall give below some details on the relations
+between $C$ and $\widehat{C}$. Let us note here only that a topos $E$
+equivalent to a topos of the form $\widehat{C}$ is of a rather special
+nature, because \emph{it has a small generating family $(X_i)$
+consisting of connected projective objects}, \ie objects $X$ such
+that the functor $Y\mapsto \Hom(X,Y)$\pageoriginale takes epimorphisms
+to epimorphisms and coproducts to coproducts: indeed, it suffices to
+take in $\widehat{C}$ the generating family consisting of the functors
+represented by the $X\in \ob C$. Moreover, note that if in a topos
+$E$ one has a covering family $X_i\rightarrow X$, where the $X_i$ are
+projective and connected, then every other covering family of $X$ is
+refined by the former (\hyperrefext[I][I.sec4.3.2]{4.3.2},
+\hyperrefext[I][I.sec4.3.3]{4.3.3}). Consequently, in a topos $E$ of
+the form $\widehat{C}$ every object $X$ admits a covering family
+refining all the others. A topos of the form $\Top(X)$
+(\hyperref[IV.subsec2.1]{2.1}), where $X$ is a topological space whose
+points are closed, has the preceding property only if $X$ is discrete.
+
+When the category $C$ has a single object, $C$ is identified with a
+monoid $G$. A presheaf on $C$ is then identified with a set on which
+$G$ acts \emph{on the right} (since it is a functor
+$G^{\circ}\rightarrow (\Ens)$), and $\widehat{C}$ is the topos of
+sets with a monoid of right operators, which may also be denoted by
+$B_{G^{\circ}}$ in view of \hyperref[IV.subsec2.3]{2.3}: it is the
+\emph{topos of sets with monoid of operators $G^{\circ}$ (the monoid
+opposite to $G$)}. When $G$ is a group, using the isomorphism
+$g\mapsto g^{-1}$ from $G$ onto $G^{\circ}$, one recovers the
+classifying topos $B_G$ of \hyperref[IV.subsec2.3]{2.3}.
+
+\subsection{Classifying topos of a pro-group}\etiquette[2.7]{IV.subsec2.7}
+
+\subsubsection{}\etiquette[2.7.1]{IV.subsubsec2.7.1}
+Let $𝒢=(G_i)_{i\in I}$ be a projective system of groups, with
+$G_i$, $I\in 𝒰$. Assume that the projective system is
+\emph{strict}, \ie that the transition morphisms $G_j\rightarrow G_i$
+are surjective. If $E$ is a set, by a (left, say) \emph{action of
+$𝒢$ on $E$} we mean the following structure: a) a family
+$(E_i)_{i\in I}$ of subsets of $E$, whose union is $E$; b) for every
+$i\in I$, an action of the group $G_i$ on the set $E_i$; these data
+are furthermore required to satisfy\pageoriginale the following
+condition: for $j\geq i$, $E_i$ is the subset of $E_j$ consisting of
+the elements fixed under the kernel of $G_j\rightarrow G_i$. We also
+say that $𝒢$ \emph{acts on} $E$ (on the left) if a (left) action of
+$𝒢$ on $E$ has been given. The sets $\in 𝒰$ endowed with an
+action of $𝒢$ form a category in the evident way. By Giraud's
+criterion, one sees at once that this category is a $𝒰$-topos. It
+is denoted by $B_{𝒢}$ and called the \emph{classifying topos of}
+$𝒢$. When $I$ has an initial object $i_{\circ}$, on putting
+$G=G_{i_\circ}$ one recovers the classifying topos of
+\hyperref[IV.subsec2.3]{2.3}.
+
+\subsubsection{}\etiquette[2.7.2]{IV.subsubsec2.7.2}
+Another important example is that in which the groups $G_i$ are
+finite, so that
+$$
+G=\varprojlim G_i
+$$
+is a compact totally disconnected topological group, or
+\emph{profinite group.} An action of $𝒢$ on $E$ then amounts to a
+continuous action of $G$ on $E$, or, equivalently, to one for which
+the stabilizer of every point of $E$ is an open subgroup of $G$.
+The classifying topos $B_{𝒢}$ will also be denoted by $B_{G}$, where,
+of course, $G$ is to be regarded as endowed with its profinite
+topology.
+
+\subsubsection{}\etiquette[2.7.3]{IV.subsubsec2.7.3}
+Using the remarks of \hyperref[IV.subsec2.6]{2.6}, it is easy to verify
+that the topos $B_{𝒢}$ defined by a strict projective system
+$𝒢=(G_i)_{i\in I}$ of groups is equivalent to a topos of the form
+$\widehat{C}$ only if this projective system is essentially constant;
+in the case of a profinite group, this means that the group is in fact
+finite.
+
+\subsubsection{}\etiquette[2.7.4]{IV.subsubsec2.7.4}
+The following geometric interpretation of the classifying topos $B_G$
+of a discrete group $G$ is useful for giving a correct geometric
+intuition for these topoi. (\Cf also, in the same vein,
+\hyperref[IV.subsec4.5]{4.5}, \hyperref[IV.subsec5.8]{5.8},
+\hyperref[IV.exer5.9]{5.9}, and \hyperref[IV.subsec7.2]{7.2} below.)
+Let $X$ be a connected, locally connected, and\pageoriginale locally
+simply connected topological space, let $x$ be a point of $X$, and let
+$G$ be its fundamental group at $x$. (NB It is known that, up to
+isomorphism, every discrete group $G$ may be obtained in this way.)
+Then the Galois theory of coverings of $X$ gives an equivalence between
+the category $B_G$ of $G$-sets and the category of \emph{étale
+coverings} of $X$, \ie spaces $X'$ over $X$ that are locally
+$X$-isomorphic to $X$-spaces of the form $X\times I$, where $I$ is a
+discrete space. (Compare \SGA 1 V 4,5.) The latter can moreover be
+interpreted as the category of locally constant sheaves on $X$, \ie
+the category of locally constant objects (IX \hyperref[IX.subsec2.0]{2.0}) of the topos
+$\Top(X)$.
+
+When $G$ is a profinite group, there is an analogous geometric
+interpretation of $B_G$ as the category of $X$-schemes that are
+coproducts of finite étale coverings of a connected scheme $X$,
+equipped with a geometric point $x$ and an isomorphism
+$G\simeq \pi_1(X,x)$. It is again known that every profinite group may
+be obtained as the fundamental group of a suitable connected scheme
+(the spectrum of a field, if desired). Finally, pro-groups (not
+necessarily profinite or essentially constant) also occur in the
+classification of coverings of connected and locally connected spaces
+that are not locally simply connected, or in the classification of
+étale coverings, not necessarily finite or ind-finite, of connected
+nonnormal schemes. For the latter case, \cf \SGA 3 X 6.
+
+\begin{enonce*}[remark]{Exercise 2.7.5}\etiquette[2.7.5]{IV.exer2.7.5}
+For a topos $E$, define the notions of connectedness, local
+connectedness~\footnote[1]{\cf
+\sisi{\hyperref[IV.exer8.7]{8.7} 1).}{\hyperref[IV.exer8.7]{8.7} l).}},
+simple connectedness, and local simple connectedness. Define the notion
+of a constant and locally constant object of $E$ (\cf IX \hyperref[IX.subsec2.0]{2.0}). Let
+$f:E'\rightarrow E$\pageoriginale be a morphism of topoi
+(\hyperref[IV.def3.1]{3.1}), with $E'$ simply connected (for example,
+$E'$ the point topos (\hyperref[IV.subsec2.2]{2.2})), and $E$ connected
+and locally connected. Define a strict pro-group
+$\pi_1(E,f)=(G_i)_{i\in I}=𝒢$ (called the \emph{fundamental
+pro-group of $E$ at $f$}) and an equivalence of categories between
+$B_{𝒢}$ and the category of locally constant objects of
+$E$.\footnote[2]{One may take inspiration from \SGA 3 X 6.} Show that,
+when $E$ is locally simply connected, $\pi_1(E,f)$ is essentially
+constant and hence is identified with an ordinary discrete group
+$\pi_1(E,f)$, called the \emph{fundamental group of $E$ at $f$}.
+Show that every strict pro-group $𝒢$ is isomorphic (as a pro-group)
+to the fundamental pro-group of a suitable connected and locally
+connected topos at a suitable $f$, with $E'$ the point topos (take
+$E=B_{𝒢}$, and $f:E'\rightarrow E$ defined by the forgetful functor
+$f^{\ast}:E\rightarrow E'=(\Ens)$). When $𝒢$ is essentially
+constant, \ie isomorphic (as a pro-group) to an ordinary discrete
+group, prove that one may take $E$ above to be locally simply connected
+(again take $E=B_G$).
+\end{enonce*}
+
+\subsection{Example of a false topos}\etiquette[2.8]{IV.subsec2.8}
+
+Let $𝒢=(G_i)_{i\in I}$ be a strict pro-group, where $I$ is a
+filtered ordered set and where $i>j$ implies that
+$G_i\rightarrow G_j$ is not an isomorphism. Suppose that
+$\card(I)\not\in 𝒰$. Consider the category of sets $E\in 𝒰$
+on which $𝒢$ acts on the left
+(\hyperref[IV.subsubsec2.7.1]{2.7.1}). It is a $𝒰$-category, and one
+sees as in \hyperref[IV.subsubsec2.7.1]{2.7.1} that this category
+satisfies conditions a), b), and c) of
+\hyperref[IV.subsubsec1.1.2]{1.1.2}. Nevertheless, it is not a
+$𝒰$-topos, since it has no generating family that is
+$𝒰$-small. Similarly, it is not a $𝒱$-topos for any universe
+$𝒱$.

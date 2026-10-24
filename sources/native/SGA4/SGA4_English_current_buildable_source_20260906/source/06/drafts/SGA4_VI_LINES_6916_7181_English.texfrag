@@ -1,0 +1,290 @@
+\subsection{Cohomology of sheaves on a projective limit of
+  topoi}\etiquette[8.7]{VI.subsec8.7}
+
+\subsubsection{}\etiquette[8.7.1]{VI.subsubsec8.7.1}
+
+In this section, $I$ denotes a small cofiltered category,
+$(p:F\to I,A)$ and $(q:G\to I,B)$ two ringed fibered $𝒰$-topoi, and
+$m:(p:F\to I,A)\to(q:G\to I,B)$ a morphism of ringed fibered
+$𝒰$-topoi. We suppose that, for every morphism $f:i\to j$ of $I$, the
+derived functors $R^nf_{\ast}$, $n\in\NN$, of the functor
+$f_{\ast}:\Mod(F_i,A_i)\to\Mod(F_j,A_j)$ on modules commute with
+filtered inductive limits, and that, for every object $i\in I$, the
+derived functors $R^nm_{i\ast}$ of the functor
+$m_{i\ast}:(F_i,A_i)\to(G_i,B_i)$ on modules\footnote{To fix ideas,
+we shall take left modules.} commute with filtered inductive limits.
+Recall that these hypotheses hold when the categories $F_i,G_i$,
+$(i\in\ob(I))$, are \emph{coherent} and when the morphisms
+$f:F_i\to F_j$, $(f:i\to j\in \text{Fl}(I))$, and
+$m_i:F_i\to G_i$, $(i\in I)$, are \emph{coherent}
+(\hyperref[VI.cor5.2]{5.2}). We use the notation of
+\hyperref[VI.subsubsec8.5.1]{8.5.1}. In addition, we denote by
+$\underrightarrow{A}$ (\resp $\underrightarrow{B}$) the sheaf
+$\varinjlim\mu^{\ast}_i(A_i)$ (\resp
+$\varinjlim\mu^{\ast}_i(B_i)$). Finally, for modules, we use the
+notation $\mu^{-1}_i$ for inverse image in the sense of abelian
+sheaves, reserving $\mu_i^{\ast}$ for inverse image in the sense of
+modules (IV 11).
+
+\begin{enonce*}{Lemma 8.7.2}\etiquette[8.7.2]{VI.lem8.7.2}
+Let\pageoriginale $j\mapsto M_j$ be an injective $A$-Module of
+$\Top(F)$. Then $Q^{\ast}(j\mapsto M_j)$ is an $A$-Module acyclic for
+$\underleftarrow{m}_{\ast}$, and, for every $i\in\ob(I)$, $M_i$ is
+flasque.
+\end{enonce*}
+
+Let $i\in\ob(I)$, and let $e_i$ be a final object of $F_i$. The
+fibered $𝒰$-topos $F_{/e_i}\to I_{/i}$ is deduced from $F\to I$ by
+the base change $I_{/i}\to I$. Since the sheaf $j\mapsto M_j$ is
+injective, it is flasque (\hyperrefext[V][V.subsec4.6]{4.6}). Its
+restriction to the localized topos $F_{/e_i}$ is flasque
+(\hyperrefext[V][V.subsec4.12]{4.12}). The restriction functor from
+$F_{/e_i}$ to $F_i$ is a direct image functor for a morphism of topoi
+(\hyperref[VI.lem7.4.12]{7.4.12}). It therefore carries flasque
+Modules to flasque Modules (\hyperrefext[V][V.prop5.2]{5.2}). Thus
+$M_i$ is flasque.
+
+Let us prove the first assertion of the lemma. Set
+$N'=Q^{\ast}(j\mapsto M_j)$. By
+\eqhyperref[VI.eq8.5.3.1]{8.5.3.1}, for every $i\in\ob(I)$ we have
+$$
+\mu_{i\ast}(N') = \mu_{i\ast} Q^{\ast} (j \mapsto M_j) \simeq
+\varinjlim_{f : j \to i} f_{\ast} (M_j){\quoi}.
+$$
+Using the hypothesis of \hyperref[VI.subsubsec8.7.1]{8.7.1}, we see
+that the sheaf $N'$ has the following property:
+
+(P)~For every object $i\in\ob(I)$, $\mu_{i\ast}(N')$ is
+$m_{i\ast}$-acyclic, and, for every morphism $f:i\to j$ of $I$,
+$\mu_{i\ast}(N')$ is $f_{\ast}$-acyclic.
+
+It is enough to show that every object $N'$ having property (P) is
+$\underleftarrow{m}_{\ast}$-acyclic. Since injectives have property
+(P), it is enough to verify the following two properties
+(\hyperrefext[V][V.prop0.4]{0.4}): for every exact sequence
+$0\to N'\to N\to N''\to0$, where $N'$ and $N$ have property (P),
+(a) $N''$ has property (P), and (b)
+$m_{\ast}(N)\to m_{\ast}(N'')$ is an epimorphism. Verification of (a)
+is immediate. Let us verify (b). Set
+$K=\coker(Q_{\ast}(N')\to Q_{\ast}(N))$, so that $K$ is the section
+$(i\mapsto K_i=\coker(\mu_{i\ast}(N')\to\mu_{i\ast}(N)))$. For every
+$f:i\to j$, there is a commutative diagram
+\[
+\xymatrix{
+0  \ar[r] & f_{\ast}\mu_{i\ast}(N') \ar[r] & f_{\ast}\mu_{i\ast}(N)\ar[r]
+ & f_{\ast}(K_i) \ar[r]& 0\\
+0  \ar[r] & \mu_{j\ast}(N')\ar[u] \ar[r] & \mu_{j\ast}(N) \ar[u] \ar[r] & K_j
+\ar[r] \ar[u]&0.
+}
+\]
+Since\pageoriginale $\mu_{i\ast}(N')$ is $f_{\ast}$-acyclic, the
+top row is exact. Since $i\mapsto\mu_{i\ast}(N')$ and
+$i\mapsto\mu_{i\ast}(N)$ are Cartesian sections, the first two
+vertical morphisms are isomorphisms. Consequently, the canonical
+morphism $K_j\to f_{\ast}(K_i)$ is an isomorphism, and
+$i\mapsto K_i$ is a Cartesian section. Thus $K$ is of the form
+$Q_{\ast}(K')$, and the canonical morphisms $Q_{\ast}(N)\to K$ and
+$K\to Q_{\ast}(N'')$ are of the form $Q_{\ast}(u)$ and
+$Q_{\ast}(v)$, respectively, because $Q_{\ast}$ is fully faithful.
+Since $Q^{\ast}$ is exact and $Q^{\ast}Q_{\ast}$ is isomorphic to the
+identity, $v$ is an isomorphism, and hence $Q_{\ast}(v)$ is an
+isomorphism. Thus the sequence
+$0\to Q_{\ast}(N')\to Q_{\ast}(N)\to Q_{\ast}(N'')\to0$ is exact,
+and consequently, for every object $i$ of $I$, the sequence
+$0\to\mu_{i\ast}(N')\to\mu_{i\ast}(N)\to
+\mu_{i\ast}(N'')\to0$ is exact. Since $\mu_{i\ast}(N')$ is
+$m_{i\ast}$-acyclic, the sequence
+$0\to m_{i\ast}\mu_{i\ast}(N')\to
+m_{i\ast}\mu_{i\ast}(N)\to
+m_{i\ast}\mu_{i\ast}(N'')\to0$ is exact. Moreover, there is an
+isomorphism
+$\underleftarrow{m}_{\ast}\simeq
+\varinjlim_{I^{\circ}}\mu^{-1}_jm_{j\ast}\mu_{j\ast}$
+\eqhyperref[VI.eq8.5.8.2]{8.5.8.2}. The functor $\mu^{-1}_j$ is exact,
+and filtered inductive limits are exact. Therefore the sequence
+$0\to\underleftarrow{m}_{\ast}(N')\to
+\underleftarrow{m}_{\ast}(N)\to
+\underleftarrow{m}_{\ast}(N'')\to0$ is exact.
+
+\begin{enonce*}{Theorem 8.7.3}\etiquette[8.7.3]{VI.thm8.7.3}
+The notation and hypotheses are those of
+\hyperref[VI.subsubsec8.7.1]{8.7.1}. For every integer $n\in\NN$,
+the derived functor $R^n\underleftarrow{m}_{\ast}$ commutes with
+filtered inductive limits, and for every $A$-Module
+$j\mapsto M_j$ there is a functorial isomorphism
+\begin{equation*}
+R^{n} \underleftarrow{m}_{\ast} Q^{\ast} (j \mapsto M_j) \simeq
+\varinjlim_{I^{\circ}}
+\mu^{\ast}_j R^n m_{j\ast} (M_j)\tag{8.7.3.1}{\quoi}.
+\end{equation*}\etiquette[8.7.3.1]{VI.eq8.7.3.1}
+\end{enonce*}
+
+We have $Q^{-1}(A)=\underrightarrow{A}$, and hence inverse image for
+Modules is isomorphic to inverse image for abelian sheaves. It follows
+from \hyperref[VI.eq8.5.8.2]{8.5.8.2} that, for every section
+$j\mapsto M_j$, there is a canonical isomorphism
+$\varinjlim_{I^{\circ}}\mu^{-1}_j(M_j)\simeq
+\varinjlim_{I^{\circ}}\mu^{\ast}_j(M_j)$. Moreover, under the
+hypotheses of \hyperref[VI.subsubsec8.7.1]{8.7.1}, there is a
+canonical isomorphism \eqhyperref[VI.eq8.5.9.1]{8.5.9.1}
+$\underleftarrow{m}_{\ast}Q^{\ast}(j\mapsto M_j)\simeq
+\varinjlim_{I^{\circ}}\mu^{-1}_jm_{j\ast}(M_j)$. Since, for every
+injective $j\mapsto M_j$, the $M_j$ are flasque and
+$Q^{\ast}(j\mapsto M_j)$ is acyclic for
+$\underleftarrow{m}_{\ast}$ (\hyperref[VI.lem8.7.2]{8.7.2}), there is
+an isomorphism
+$R^n\underleftarrow{m}_{\ast}(Q^{\ast}(j\mapsto M_j))\simeq
+\varinjlim_{I^{\circ}}\mu^{-1}_jR^nm_{j\ast}(M_j)$, which gives
+formula \eqhyperref[VI.eq8.7.3.1]{8.7.3.1} by what precedes. The first
+assertion follows immediately from formula
+\eqhyperref[VI.eq8.7.3.1]{8.7.3.1}.
+
+\begin{enonce*}{Corollary 8.7.4}\etiquette[8.7.4]{VI.cor8.7.4}
+For\pageoriginale $n\in\ZZ$, there are functorial isomorphisms
+\begin{equation*}
+R^n \underleftarrow{m}_{\ast} (N) \simeq \varinjlim_{I^{\circ}}
+\mu^{\ast}_j R^n m_{j\ast} \mu_{j\ast} (N){\quoi}.\tag{8.7.4.1}
+\end{equation*}\etiquette[8.7.4.1]{VI.eq8.7.4.1}
+\end{enonce*}
+
+Indeed, $N$ is isomorphic to
+$Q^{\ast}(j\mapsto\mu_{j\ast}(N))$.
+
+\begin{enonce*}{Corollary 8.7.5}\etiquette[8.7.5]{VI.cor8.7.5}
+For every object $i$ of $I$, every integer $n$, and every
+$A_i$-Module $M_i$, there is a functorial isomorphism
+\begin{equation*}
+R^n \underleftarrow{m}_{\ast} \mu^{\ast}_i (M_i) \simeq
+\varinjlim_{f : j \to i} \mu^{\ast}_j R^n m_{j\ast} f^{\ast}
+(M_i){\quoi}.\tag{8.7.5.1}
+\end{equation*}\etiquette[8.7.5.1]{VI.eq8.7.5.1}
+\end{enonce*}
+
+After making the base change $I_{/i}\to I$, we may assume that $i$
+is a final object of $I$ (\hyperref[VI.lem8.2.1]{8.2.1}). The object
+$\mu_i^{\ast}(M_i)$ is then isomorphic to
+$Q^{\ast}((f:j\to i)\mapsto f^{\ast}(M_i))$
+(\cf \hyperref[VI.cor8.5.5]{8.5.5}).
+
+\begin{enonce*}{Corollary 8.7.6}\etiquette[8.7.6]{VI.cor8.7.6}
+Let $i$ be an object of $I$ and $n$ an integer. There is an
+isomorphism, functorial in the section $j\mapsto M_j$:
+\begin{equation*}
+R^n \mu_{i\ast} Q^{\ast} (j \mapsto M_j) \simeq \varinjlim_{f :
+  j \to i} R^n f_{\ast} (M_j){\quoi}.\tag{8.7.6.1}
+\end{equation*}\etiquette[8.7.6.1]{VI.eq8.7.6.1}
+There is an isomorphism functorial in the $\underrightarrow{A}$-Module
+$N$:
+\begin{equation*}
+R^n \mu_{i\ast} (N) \simeq \varinjlim_{f:j\to i}
+R^n f_{\ast} \mu_{j\ast} (N){\quoi}.\tag{8.7.6.2}
+\end{equation*}\etiquette[8.7.6.2]{VI.eq8.7.6.2}
+There is an isomorphism functorial in the $A_i$-Module $M_i$:
+\begin{equation*}
+R^n \mu_{i\ast} \mu^{\ast}_i (M_i) \simeq \varinjlim_{f:j\to i}
+R^n f_{\ast} f^{\ast} (M_i){\quoi}.\tag{8.7.6.3}
+\end{equation*}\etiquette[8.7.6.3]{VI.eq8.7.6.3}
+The functors $R^n\mu_{i\ast}$ commute with filtered inductive limits.
+\end{enonce*}
+
+Making the base change $I_{/i}\to I$ reduces us to the case where
+$i$ is a final object of $I$. Formulas
+\eqhyperref[VI.eq8.7.6.1]{8.7.6.1} and
+\eqhyperref[VI.eq8.7.6.2]{8.7.6.2} are then special cases of formulas
+\eqhyperref[VI.eq8.7.3.1]{8.7.3.1},
+\eqhyperref[VI.eq8.7.4.1]{8.7.4.1}, and
+\eqhyperref[VI.eq8.7.5.1]{8.7.5.1}, respectively, obtained by taking
+for $G$ the constant fibered topos with fiber $F_i$ and for $m$ the
+morphism $(f:F_j\to F_i, f\in\ob(I_{/i}))$. The last assertion
+follows from \eqhyperref[VI.eq8.7.6.2]{8.7.6.2}, taking
+\hyperref[VI.cor8.5.4]{8.5.4} into account.
+
+\begin{enonce*}{Corollary 8.7.7}\etiquette[8.7.7]{VI.cor8.7.7}
+Let\pageoriginale $i$ be an object of $I$, and let $X$ be an object
+of $F_i$ such that the functors $H^n(X,-)$, $n\in\NN$, commute with
+filtered inductive limits. For every $n$, there is a canonical
+isomorphism, functorial in the $A_i$-Module $M_i$:
+\begin{equation*}
+H^n (\mu_{i}^{\ast}(X), \mu^{\ast}_i (M_i)) \simeq \varinjlim_{f:j\to i}
+H^n (f^{\ast} (X), f^{\ast} (M_i))\tag{8.7.7.1}
+\end{equation*}\etiquette[8.7.7.1]{VI.eq8.7.7.1}
+and the functors $H^n(\mu_i^{\ast}(X),-)$ commute with filtered
+inductive limits. In particular, if the functors $H^n(F_i,-)$ commute
+with filtered inductive limits, then the functors
+$H^n(\underleftarrow{F},-)$ commute with filtered inductive limits,
+and there are canonical isomorphisms, functorial in the $A_i$-Modules
+$M_i$:
+\begin{equation*}
+H^n (\underleftarrow{F}, \mu_{i}^{\ast} (M_i)) \simeq \varinjlim_{f:j\to i}
+H^n (F_j, f^{\ast} (M_i)){\quoi}.\tag{8.7.7.2}
+\end{equation*}\etiquette[8.7.7.2]{VI.eq8.7.7.2}
+\end{enonce*}
+
+\noindent
+It follows from \hyperrefext[V][V.prop5.3]{5.3} that there are two
+spectral sequences
+\begin{align*}
+'E_{2}^{p, q} &= \varinjlim_{f:j\to i} H^p(X, R^q f_{\ast}
+f^{\ast} (M_i)) \Rightarrow \varinjlim_{f:j\to i}
+H^{p+q}(f^{\ast} (X), f^{\ast} (M_i))\\
+''E_{2}^{p, q} &=  H^p(X, R^q \mu_{i\ast} \mu^{\ast}_i (M_i))
+\Rightarrow H^{p+q} (\mu^{\ast}_i (X), \mu^{\ast}_i (M_i)){\quoi},
+\end{align*}
+and from \eqhyperref[VI.eq8.5.7.1]{8.5.7.1} that there is a morphism
+between these two spectral sequences. Since the $H^{p+q}(X,-)$
+commute with filtered inductive limits, it follows from
+\eqhyperref[VI.eq8.7.6.2]{8.7.6.2} that this morphism of spectral
+sequences is an isomorphism at the $E_2^{p,q}$ level. It therefore
+induces an isomorphism on the abutments, giving
+\eqhyperref[VI.eq8.7.7.1]{8.7.7.1}. For every
+$\underrightarrow{A}$-Module $N$, there is a spectral sequence
+(\hyperrefext[V][V.prop5.3]{5.3})
+$$
+E^{p, q}_2 = H^{p} (X, R^q \mu_{i\ast} (N)) \Rightarrow H^{p+q}
+(\mu^{\ast}_i (X), N){\quoi}.
+$$
+The assertion that the functors $H^n(\mu_i^{\ast}(X),-)$ commute with
+filtered inductive limits then follows from the analogous properties
+of the functors $H^n(X,-)$ and $R^n\mu_{i\ast}$
+(\hyperref[VI.cor8.7.6]{8.7.6}).
+
+\begin{enonce*}[remark]{Remark 8.7.8}\etiquette[8.7.8]{VI.rem8.7.8}
+When the topoi $F_j$, $j\in\ob(I)$, are coherent and the transition
+morphisms are coherent, the hypothesis made on $X$ (\resp $F_i$) in
+\hyperref[VI.cor8.7.7]{8.7.7} holds when $X$ (\resp $F_i$) is
+coherent (\hyperref[VI.cor5.2]{5.2}). Moreover, we know that in this
+case $\mu_i^{\ast}(X)$ (\resp $\underleftarrow{F}$) is coherent
+(\hyperref[VI.thm8.3.13]{8.3.13}).
+\end{enonce*}
+
+\begin{enonce*}{Corollary 8.7.9}\etiquette[8.7.9]{VI.cor8.7.9}
+Let\pageoriginale $i$ be an object of $I$, let $M_i$ be a left
+$A_i$-Module, and let $L_i$ be a right $A_i$-Module admitting a
+resolution of the form
+$$
+P_{i, k} \to P_{i, k-1} \to \cdots \to P_{i, 0} \to L_i \to 0
+$$
+where, for every integer $k$, $P_{i,k}$ is isomorphic to a finite
+direct sum of objects of the form $A_{i|X}$ \emph{(IV \hyperref[IV.prop11.3.3]{11.3.3})}, with
+$X$ satisfying the hypotheses of \hyperref[VI.cor8.7.7]{8.7.7}. If,
+in addition to the hypotheses of \hyperref[VI.subsubsec8.7.1]{8.7.1},
+the fibered topos $F$ is right flat (\hyperref[VI.subsec8.6]{8.6}),
+then for $n\leq k-1$ there are canonical isomorphisms
+\begin{equation*}
+\Ext^n_{\underrightarrow{A}}(\underleftarrow{F}, \mu^{\ast}_i(L_i),
+\mu^{\ast}_i (M_i)) \simeq \varinjlim_{f : j \to i}
+\Ext^{n}_{A_j} (F_j, f^{\ast}(L_i), f^{\ast} (M_i)){\quoi}.\tag{8.7.9.1}
+\end{equation*}\etiquette[8.7.9.1]{VI.eq8.7.9.1}
+\end{enonce*}
+
+\noindent
+Denote by $P_{i,.}$ the resolution of $L_i$. Since $F$ is right flat,
+for every $f:j\to i$, $f^{\ast}(P_{i,.})$ is a resolution of
+$f^{\ast}(L_i)$, and $\mu_i^{\ast}(P_{i,.})$ is a resolution of
+$\mu_i^{\ast}(L_i)$ (\hyperref[VI.subsec8.6]{8.6}). These resolutions
+give two spectral sequences converging respectively to the two sides
+of \eqhyperref[VI.eq8.7.9.1]{8.7.9.1}, together with a morphism between
+the two spectral sequences. At the $E_1^{p,q}$ level this morphism is
+an isomorphism by \eqhyperref[VI.eq8.7.7.1]{8.7.7.1}. It therefore
+induces an isomorphism on the abutments.
+

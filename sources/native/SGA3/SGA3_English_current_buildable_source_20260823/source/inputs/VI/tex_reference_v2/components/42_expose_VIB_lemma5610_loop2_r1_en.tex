@@ -1,0 +1,155 @@
+
+\medskip
+\phantomsection\label{lem:sga3-VIB-5.6.1.0}%
+\noindent\textbf{Lemma 5.6.1.0.---}%
+\footnote{\label{note:sga3-VIB-39}Editor's note: we have made
+explicit this lemma, which is used in the proof of \hyperref[lem:sga3-VIB-5.6.1]{Lemma 5.6.1}.}
+\emph{Let \(f:X\to S\) be a morphism locally of finite
+presentation, let \(s\in S\), and let \(x\in X_s\). Set
+\(n=\dim_x(X_s)\), and let
+\(q:\mathbb A^n_S\to S\) be the structure morphism.}
+
+\emph{Suppose that a quasi-finite morphism
+\(u:X\to\mathbb A^n_S\) is given such that \(f=q\circ u\), and
+suppose that \(f\) is universally open at the generic point \(z\)
+of an irreducible component \(\mathfrak z\) of \(X_s\), containing
+\(x\) and of dimension \(n\). Then \(u\) is universally open at
+the point \(x\in X\).}
+
+First observe that
+\[
+  (\dagger)\qquad
+  \text{\emph{the hypotheses are preserved under every base change
+  \(\pi:S'\to S\) covering \(s\)}}
+\]
+(that is, such that \(\pi^{-1}(s)\ne\varnothing\)).
+Indeed, let \(S'\to S\) be such a morphism, let
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-5.6.1.0-base-change}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    X'
+      \arrow[r,"u'"]
+      \arrow[dr,"f'"'] &
+    \mathbb A^n_{S'} \arrow[d,"q'"] \\
+    {} &
+    S'
+  \end{tikzcd}
+\end{center}
+be the diagram obtained by base change, and let \(s'\) be a point
+of \(S'\) above \(s\) and \(x'\) a point of \(X'_{s'}\) above
+\(x\). Since
+\[
+  X'_{s'}=X_s\otimes_{\kappa(s)}\kappa(s'),
+\]
+the lifting of generizations and the invariance of dimension under
+field extension (EGA~IV\(_2\), 2.3.4\textup{(i)} and 4.1.4) show
+that \(x'\) is contained in an irreducible component
+\(\mathfrak z'\) of \(X'_{s'}\) whose generic point \(z'\) lies
+above \(z\), and
+\[
+  n\leq\dim\mathfrak z'
+    \leq\dim_{x'}X'_{s'}\leq n.
+\]
+Thus
+\[
+  \dim\mathfrak z'=n=\dim_{x'}X'_{s'}.
+\]
+Since \(f\) is universally open at \(z\), \(f'\) is universally
+open at \(z'\).%
+\footnote[1]{\label{note:sga3-VIB-5.6.1.0-generic-points}Translator's
+note: the French source prints \(x\) and
+\(x'\), respectively, in this sentence. The stated hypothesis and
+the immediately preceding choice of generic points require \(z\)
+and \(z'\).}
+
+Set \(Y=\mathbb A^n_S\). By EGA~IV\(_3\), 14.3.3.1\textup{(i)},
+to prove that \(u\) is universally open at \(x\), it is enough to
+prove that, for every integer \(r\geq0\) and every point \(x'\) of
+\[
+  X'=X[T_1,\ldots,T_r]
+\]
+above \(x\), the morphism
+\[
+  u':X'\longrightarrow
+  Y'=\mathbb A^n_S[T_1,\ldots,T_r]
+\]
+is open at \(x'\). Now set
+\[
+  S'=S[T_1,\ldots,T_r],
+\]
+and let \(q'\) be the projection
+\[
+  Y'\simeq\mathbb A^n_{S'}\longrightarrow S'.
+\]
+This is the situation obtained by the base change \(S'\to S\).
+Thus, by the preceding observation, we are reduced to showing that
+\(u\) is open at \(x\).
+
+Set \(y=u(x)\). Since \(u\) is locally of finite presentation
+(because \(f\) and \(q\) are; cf. EGA~IV\(_1\), 1.4.3),
+EGA~IV\(_1\), 1.10.3 shows that it is enough to prove
+\[
+  u\bigl(\operatorname{Spec}\mathcal O_{X,x}\bigr)
+  =\operatorname{Spec}\mathcal O_{Y,y}.
+\]
+For this purpose we may assume that \(S\) is affine and integral.
+Let \(\pi:S'\to S\) be its normalization, and denote by
+\(u':X'\to Y'\) the morphism obtained from \(u\) by base change.
+Since
+\[
+  \pi_Y:Y'\longrightarrow Y
+\]
+is integral and surjective, one has
+\[
+  \operatorname{Spec}\mathcal O_{Y,y}
+  =
+  \bigcup_{y'}
+  \pi_Y\bigl(\operatorname{Spec}\mathcal O_{Y',y'}\bigr),
+\]
+where the union ranges over all points \(y'\) of \(Y'\) above
+\(y\). It is therefore enough to show that, for every such
+\(y'\) and every \(x'\in X'_{y'}\) above \(x\),
+\[
+  u'\bigl(\operatorname{Spec}\mathcal O_{X',x'}\bigr)
+  =\operatorname{Spec}\mathcal O_{Y',y'}.
+\]
+Since the hypotheses are preserved under the base change
+\(\pi:S'\to S\), we are thereby reduced to the case of \(S'\);
+that is, we may assume that \(S\) is integral and normal.
+
+The hypotheses on \(f\) now imply, by EGA~IV\(_3\), 14.3.13, that
+there is an irreducible component \(Z\) of \(X\), containing
+\(\mathfrak z\) (and hence \(x\)), dominating \(S\), and such that
+\[
+  \dim_z(Z_s)=n=\dim(Z_\eta),
+\]
+where \(\eta\) is the generic point of \(S\). Let \(\xi\) be the
+generic point of \(Z\). Since \(u\), and hence also
+\[
+  u_\eta:Z_\eta\longrightarrow\mathbb A^n_\eta,
+\]
+is quasi-finite, the closure in \(\mathbb A^n_\eta\) of the point
+\[
+  u_\eta(\xi)=u(\xi)
+\]
+has dimension \(n\). Thus \(u(\xi)\) is the generic point of
+\(\mathbb A^n_\eta\), which is also the generic point of
+\(Y=\mathbb A^n_S\). Consequently, if \(g\) denotes the
+restriction of \(u\) to \(Z\), then
+\[
+  g:Z\longrightarrow Y
+\]
+is quasi-finite and dominant. Since \(Y\) is normal, \hyperref[lem:sga3-VIB-5.6.0]{Lemma 5.6.0}
+shows that \(g\) is open. Hence \(u\) is open at every point of
+\(Z\), and in particular at \(x\). Consequently,
+\[
+  u\bigl(\operatorname{Spec}\mathcal O_{X,x}\bigr)
+  =\operatorname{Spec}\mathcal O_{Y,y},
+\]
+which completes the proof of \hyperref[lem:sga3-VIB-5.6.1.0]{Lemma 5.6.1.0}.
+
+The following lemma advantageously replaces
+EGA~IV\(_3\), 14.5.10,%
+\footnote{\label{note:sga3-VIB-40}Editor's note: we have corrected
+the original, which indicated 19.5.10.}
+in that it is independent of noetherian hypotheses.

@@ -1,0 +1,103 @@
+\subsubsection{}\etiquette[8.7.4]{I.sec8.7.4}
+Return to a functor between $𝒰$-categories
+\hypertarget{sga4.exp.I.equation.8.7.4.1}{}$$
+\displaylines{\rlap{$(8.7.4.1)$}\hfill f:C\longrightarrow
+E{\quoi},\hfill}
+$$
+where $E$ is a $𝒰$-category in which small filtered inductive limits
+are representable, giving a functor
+\hypertarget{sga4.exp.I.equation.8.7.4.2}{}$$
+\displaylines{\rlap{$(8.7.4.2)$}\hfill \bar{f}:(X_i)_{i\in I}
+\longmapsto \mathop{\lim}_i f(X_i):\Ind(C)\longrightarrow
+E{\quoi}.\hfill}
+$$
+We propose to study conditions on $f$ ensuring that $\bar f$ is fully
+faithful, \resp an equivalence of categories. Since $f$ is isomorphic to
+the composite $\bar f\circ c_C$, and $c_C:C\rightarrow\Ind(C)$ is fully
+faithful, we see that for $\bar f$ to be fully faithful, it is
+\emph{necessary} that $f$ be so. Replacing $C$ by its essential image in
+$E$, we therefore lose essentially no generality by supposing that $f$ is
+the inclusion functor of a subcategory $C$ of $E$, as we shall do below
+to simplify the notation.
+
+\begin{enonce*}{Proposition 8.7.5}\etiquette[8.7.5]{I.prop8.7.5}
+The notation is that of \hyperref[I.sec8.7.4]{8.7.4}.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $\bar f$ is fully faithful if and only if:
+\begin{itemize}
+\item[(i)] Every object $X$ of $C$ satisfies the following condition:
+
+{\rm(PF)} For every small filtered inductive system $(Y_i)_{i\in I}$ in
+$C$ whose inductive limit $\varinjlim_iY_i$ exists in\pageoriginale $E$,
+the canonical map
+\hypertarget{sga4.exp.I.equation.8.7.5.1}{}$$
+\displaylines{\rlap{$(8.7.5.1)$}\hfill \varinjlim_i \Hom
+(X,Y_i)\longrightarrow \Hom(X,\varinjlim_i Y_i)\hfill}
+$$
+is bijective.
+\end{itemize}
+
+\item The functor $\bar f$ is an equivalence of categories if and only if
+$C$ satisfies condition {\rm(i)} and the following two conditions:
+\begin{itemize}
+\item[(ii)] $C$ is a generating subcategory of $E$ by strict
+epimorphisms (\hyperref[I.def7.1]{7.1}).
+
+\item[\rm(iii)] For every object $X$ of $E$, the full subcategory
+$C_{/X}$ of $E_{/X}$ formed by the objects $X'$ over $X$ whose source is
+in $\Ob C$ is filtered and essentially small.
+\end{itemize}
+\end{enumerate}
+
+Condition {\rm(iii)} is satisfied in particular if $C$ is equivalent to
+a small category, the finite inductive limits in $C$ are representable,
+and the inclusion functor $f:C\rightarrow E$ commutes with them (\ie for
+every finite category $J$ and every functor $\varphi:J\rightarrow C$, the
+inductive limit of $f\varphi$ is representable and is isomorphic in $E$
+to an object of $C$).
+\end{enonce*}
+
+
+\noindent \emph{Proof}.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item With the notation of condition (i), let $𝒴$ denote the ind-object
+$(Y_i)$ and let $𝒳$ denote the constant ind-object defined by $X$. Then
+\hyperlink{sga4.exp.I.equation.8.7.5.1}{(8.7.5.1)} is precisely the canonical map
+$$
+\Hom(𝒳, 𝒴)\longrightarrow \Hom
+(\bar{f}(𝒳),\bar{f}(𝒴)){\quoi},
+$$
+so if $\bar f$ is fully faithful, this map is indeed bijective.
+Conversely, if $𝒳=(X_j)_{j\in J}$ and $𝒴=(Y_i)_{i\in I}$ are arbitrary
+ind-objects of $E$, then the map
+$u:\Hom(𝒳,𝒴)\rightarrow\Hom(\bar f(𝒳),\bar f(𝒴))$ is\pageoriginale the
+projective limit over $j$ of the maps
+$u_j:\Hom(𝒳_j,𝒴)\rightarrow\Hom(\bar f(𝒳_j),𝒴)$, where $𝒳_j$ is the
+constant ind-object with value $X_j$. Thus $u$ is bijective if the $u_j$
+are, and (i) therefore implies that $\bar f$ is fully faithful.
+
+\item Suppose that (i), (ii), and (iii) hold, and let us prove that
+$\bar f$ is an equivalence. It remains to prove that it is essentially
+surjective, hence that every $X\in\ob E$ belongs to the essential image.
+But hypothesis (ii) means that $\varinjlim_{C_{/X}}Z\rightarrow X$ is an
+isomorphism, while (iii) says that the category $C_{/X}$ is filtered and
+essentially small. Thus $X$ is the image of the ind-object of $E$ defined
+by the natural functor $C_{/X}\rightarrow E$. Conversely, suppose that
+$\bar f$ is an equivalence. In view of a), it remains to verify (ii) and
+(iii). We may suppose that $E=\Ind(C)$, with $C$ identified with the
+subcategory $c(C)$ of $E$. But we know (\hyperref[I.them8.3.3]{8.3.3} (ii)) that for every
+$X\in\Ind(C)$, identified if desired with the functor $F$ on $C^\circ$
+that it ind-represents, $C_{/X}=C_{/F}$ is an essentially small filtered
+category (which proves (iii)), and that the inductive limit in
+$\widehat{C}$ of the functor $C_{/F}\rightarrow\widehat{C}$ is $F$. It
+is therefore also so in the full subcategory $E$ of $\widehat C$, since
+$F=X$ belongs to $E$, which proves (ii). It remains to prove the last
+assertion of b). But the hypothesis on $C$ clearly implies that finite
+inductive limits are representable in the category $C_{/X}$; \textit{a
+fortiori}, the category $C_{/X}$ is filtered.
+\end{enumerate}
+

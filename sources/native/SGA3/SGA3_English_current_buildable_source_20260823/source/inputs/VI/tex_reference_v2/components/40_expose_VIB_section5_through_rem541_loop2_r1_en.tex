@@ -1,0 +1,160 @@
+
+\section*{5. Separation of groups and homogeneous spaces}
+\phantomsection\label{sec:sga3-VIB-5}%
+\addcontentsline{toc}{section}{5. Separation of groups and homogeneous spaces}
+
+\medskip
+\phantomsection\label{prop:sga3-VIB-5.1}%
+\noindent\textbf{Proposition 5.1.---}
+\emph{For an \(S\)-group \(G\) to be separated, it is necessary
+and sufficient that the identity section of \(G\) be a closed
+immersion.}
+
+The condition is necessary (EGA~I, 5.4.6); it is sufficient by
+virtue of the following cartesian diagram (cf. VI\(_A\), 0.3):
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-5.1-cartesian}%
+  \begin{tikzcd}[row sep=large,column sep=huge]
+    G\times_S G
+      \arrow[r,"{\mu\circ(\operatorname{id}_G\times c)}"] &
+    G \\
+    G
+      \arrow[u,"\Delta_{G/S}"]
+      \arrow[r,"\pi"] &
+    S
+      \arrow[u,"\varepsilon"']
+  \end{tikzcd}\,.
+\end{center}
+
+\medskip
+\phantomsection\label{prop:sga3-VIB-5.2}%
+\noindent\textbf{Proposition 5.2.---}
+\emph{If \(S\) is discrete, every \(S\)-group is separated.}
+
+Indeed,
+\[
+  S=\coprod_{s\in S}\operatorname{Spec}\mathcal O_{S,s},
+\]
+and, by EGA~I, 5.5.5, it is enough to show that, for every
+\(s\in S\),
+\[
+  G\times_S\operatorname{Spec}\mathcal O_{S,s}
+\]
+is separated. This follows from VI\(_A\), \SGARefLink{sga3:VIA:0.3}{0.3}, since
+\(\mathcal O_{S,s}\) is a local ring of dimension \(0\).%
+\footnote{\label{note:sga3-VIB-33}Editor's note: we have replaced
+``Artinian'' by ``of dimension \(0\)'' and mentioned this
+generalization in VI\(_A\), \SGARefLink{sga3:VIA:0.3}{0.3}.}
+
+\medskip
+\phantomsection\label{thm:sga3-VIB-5.3}%
+\noindent\textbf{Theorem 5.3.---}
+\emph{Let \(S\) be a scheme, let \(G\) be an \(S\)-group scheme
+locally of finite presentation over \(S\) and universally open over
+\(S\) in a neighborhood of the identity section, and let \(X\) be
+an \(S\)-scheme on which \(G\) acts in such a way that the morphism}
+\[
+  \Phi:G\times_S X\longrightarrow X\times_S X,
+  \qquad (g,x)\longmapsto(gx,x),
+\]
+\emph{is surjective. Suppose moreover that, for every \(s\in S\):}
+\begin{enumerate}
+\item[\textup{(i)}] \emph{there exists an open subscheme \(U\) of
+  \(X\), separated over \(S\), such that \(U_s\) is dense in
+  \(X_s\);}
+\item[\textup{\SGAInlineRefTarget{thm:sga3-VIB-5.3:item:ii}(ii)}] \emph{the fiber \(X_s\) is locally of finite
+  type over \(\kappa(s)\).}%
+\footnote{\label{note:sga3-VIB-34}Editor's note: we have corrected
+the original by assuming that \(G\) is universally open over \(S\)
+in a neighborhood of the identity section and by adding hypothesis
+\textup{\SGARefLink{thm:sga3-VIB-5.3:item:ii}{(ii)}}; see below for examples, due to O.\ Gabber, showing
+that the statements \hyperref[thm:sga3-VIB-5.3]{5.3} and \hyperref[cor:sga3-VIB-5.4]{5.4} of the original are false without
+additional hypotheses. We also point out that \hyperref[thm:sga3-VIB-5.3]{Theorem 5.3} is a
+reworked version of \hyperref[thm:sga3-VIB-5.3A]{Theorem 5.3A} below, which appears in the 1965
+edition of SGAD and is due to M.\ Raynaud; compare the notes
+\((*)\) in \SGARefLink{sga3:x:lemma:8-5}{Expos\'e~X, 8.5} and 8.8.
+
+\smallskip
+\phantomsection\label{thm:sga3-VIB-5.3A}%
+\noindent\textbf{Theorem 5.3A (Raynaud).---}
+\emph{Let \(G\) be an \(S\)-group locally of finite presentation,
+universally open over \(S\), and with connected fibers. Then \(G\)
+is separated over \(S\). More generally, every \(S\)-scheme \(X\)
+locally of finite presentation over \(S\), equipped with an action
+of \(G\) such that the morphism
+\(\Phi:G\times_SX\to X\times_SX\),
+\((g,x)\mapsto(gx,x)\), is surjective, is separated over \(S\).}}
+\end{enumerate}
+\emph{Then \(X\) is separated over \(S\).}
+
+\medskip
+\phantomsection\label{cor:sga3-VIB-5.4}%
+\noindent\textbf{Corollary 5.4.---}
+\emph{Let \(S,G,X\) be as in the preliminary hypotheses of \SGARefLink{thm:sga3-VIB-5.3}{5.3}.
+Suppose moreover that \(X\) has fibers locally of finite type and
+connected. Then:}
+\begin{enumerate}
+\item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-5.4:item:i}(i)}] \emph{\(X\) is separated over \(S\).}
+\item[\textup{(ii)}] \emph{If there exists an open subset \(V\) of
+  \(X\), quasi-compact over \(S\), which meets every nonempty fiber
+  \(X_s\),}%
+\footnote{\label{note:sga3-VIB-35}Editor's note: without this
+hypothesis there is the following counterexample, pointed out by
+O.\ Gabber. Let \(G=S\) be a local scheme with closed point \(s\),
+such that \(S^\ast=S-\{s\}\) is not quasi-compact, and let \(X\)
+be the disjoint union of \(\{s\}\) and \(S^\ast\).}
+\emph{then \(X\) is quasi-compact over \(S\).}
+\end{enumerate}
+
+\emph{Proof.}
+\textup{\SGARefLink{cor:sga3-VIB-5.4:item:i}{(i)}} Let \(s\in S\) be such that \(X_s\ne\varnothing\).
+The morphism
+\[
+  \Phi_s:
+  G_s\times_{\kappa(s)}X_s
+  \longrightarrow
+  X_s\times_{\kappa(s)}X_s
+\]
+obtained from \(\Phi\) by base change is surjective. Since \(X_s\)
+is connected, it is irreducible by VI\(_A\), \SGARefLink{prop:sga3-VIA-2.5.4}{2.5.4}. Thus, if \(U\)
+is an affine open subset of \(X\) such that \(U_s\) is nonempty,
+then \(U_s\) is dense in \(X_s\), and the theorem applies.
+
+To prove \textup{\SGARefLink{concl:sga3-VIA-2.5.4-ii}{(ii)}}, we may suppose that \(S\) is affine. Then
+\(V\) is quasi-compact and, by \hyperref[prop:sga3-VIB-3.5]{3.5}, there exists a quasi-compact
+open subset \(U\) of \(G\) containing \(\underline{G^0}\). Let
+\(s\in S\) be such that \(X_s\ne\varnothing\). Then \(X_s\) is
+irreducible (VI\(_A\), \SGARefLink{prop:sga3-VIA-2.6.6}{2.6.6}), and, since \(U_s\) contains
+\(\underline{G_s^0}\), the morphism
+\[
+  U_s\times_{\kappa(s)}V_s\longrightarrow X_s,
+  \qquad (g,x)\longmapsto gx,
+\]
+is surjective (VI\(_A\), \SGARefLink{prop:sga3-VIA-2.6.4}{2.6.4}). Consequently the morphism
+\[
+  U\times_SV\longrightarrow X
+\]
+is surjective, and \(X\) is therefore quasi-compact, since \(U\)
+and \(V\) are. As \(S\) was assumed affine, hence separated, it
+follows that \(X\) is quasi-compact over \(S\)
+(cf. EGA~I, 6.6.4\textup{(v)}).
+
+\medskip
+\phantomsection\label{rem:sga3-VIB-5.4.1}%
+\noindent\textbf{Remark 5.4.1.---}%
+\footnote{\label{note:sga3-VIB-36}Editor's note: we have added this
+remark; compare editor's \hyperref[note:sga3-VIB-34]{note 34}.}
+We shall see in the course of the proof that the conclusion of
+\hyperref[thm:sga3-VIB-5.3]{Theorem 5.3} remains true if one assumes only:
+
+\begin{quote}
+\textup{(i')} there exists an open subscheme \(U\) of \(X\),
+separated over \(S\), such that \(U_s\) is dense in every
+irreducible component of \(X_s\).
+\end{quote}
+
+This follows from \textup{\SGARefLink{cor:sga3-VIB-5.4:item:i}{(i)}} if \(X_s\) locally has a finite
+number of irreducible components, as is the case under hypothesis
+\textup{(ii)}. We shall also see later that \SGARefLink{cor:sga3-VIB-5.4}{5.4} remains true under
+the hypothesis that every fiber \(X_s\) is quasi-separated and
+connected.

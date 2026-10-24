@@ -1,0 +1,227 @@
+\section[Proof of Theorem 3.1]{Proof of Theorem \texorpdfstring{\hyperref[XIV.thm3.1]{3.1}}{3.1}}\etiquette[4]{XIV.sec4}
+
+The proof proceeds by induction on $d$.
+
+\begin{enonce*}{Lemma 4.1}\etiquette[4.1]{XIV.lem4.1}
+\emph{\hyperref[XIV.thm3.1]{3.1}~(0)} and
+\emph{\hyperref[XIV.thm3.1]{3.1}~(1)} hold.
+\end{enonce*}
+
+\noindent
+\emph{Proof}. This is trivial for $d=0$, in which case $\supp F$ is
+finite over $k$, and we apply
+(\hyperrefext[VIII][VIII.prop5.5]{5.5}). Let $F$ and
+$f:X\rightarrow Y$ be as in the statement of
+\hyperref[XIV.thm3.1]{3.1}, and suppose that $d(F)\leq1$. Replacing
+$F$ by a constructible subsheaf
+(\hyperrefext[IX][IX.prop2.9]{2.9} and
+\hyperrefext[VII][VII.prop3.3]{3.3}), we reduce to the case in which
+$F$ is constructible. The support\pageoriginale of $F$ is then
+contained in a closed subscheme of $X$ of dimension $\leq1$
+(\hyperrefext[IX][IX.def2.3]{2.3}\sisi{ (ii)}{}), and we may replace
+$X$ by this subscheme; that is, we may assume that $\dim X\leq1$.
+By \hyperrefext[IX][IX.cor5.7]{5.7}, the cohomological dimension of an
+affine algebraic scheme of dimension $1$ over a separably closed field
+is $\leq1$. It is enough, moreover, to treat the case in which $k$ is
+separably closed. Indeed, let $\bar f:\bar X\rightarrow\bar Y$ be the
+morphism obtained from $f$ by the base change
+$\Spec\bar k\rightarrow\Spec k$, where $\bar k$ is the separable
+closure of $k$. For a geometric point $\xi$ of $Y$, the strict
+localization $f':X'\rightarrow Y'$ of $f$ at $\xi$ identifies with a
+strict localization of $\bar f$, and consequently the fiber
+$(R^{q}f_{\ast}F)_\xi$ identifies with a fiber of
+$R^{q}\bar f_{\ast}\bar F$. Since $f$ is affine, it follows that
+$R^{q}f_{\ast}F=0$ for $q>1$. It is also clear that
+$d(f_{\ast}F)\leq1$. For
+$q=1$, note that the hypothesis $\dim X\leq1$ implies that there is a
+finite closed subset $Z$ of $Y$ such that $f$ is finite over $Y-Z$.
+It follows that $R^{1}f_{\ast}F$ vanishes on $Y-Z$
+(\hyperrefext[VIII][VIII.cor5.6]{5.6}), and hence
+$d(R^{1}f_{\ast}F)\leq1$. This proves the lemma.
+
+Let $d\geq2$, and now suppose that
+\hyperref[XIV.thm3.1]{3.1}~(d') (or, equivalently,
+\hyperref[XIV.cor3.4]{3.4}~(d')) holds for $d'<d$.
+
+\begin{enonce*}{Lemma 4.2}\etiquette[4.2]{XIV.lem4.2}
+To prove \emph{\hyperref[XIV.cor3.4]{3.4}~(d)} in general, it is
+enough to treat the case in which $X'=\EE^1_{Y'}$ is affine
+one-space over $Y'$ and $f$ is the structural morphism.
+\end{enonce*}
+
+\noindent
+\emph{Proof}. We may plainly assume that $X'=\EE^N_{Y'}$ for a
+suitable $N$, since $X'$ can be embedded in some $\EE^N_{Y'}$.
+Suppose that $N>1$ and that the result is known, for every $Y'$, for
+$\EE^r_{Y'}$ with $r<N$. Let $F'$ be a torsion sheaf on
+$\EE^N_{Y'}$ with\pageoriginale $d(F')\leq d$. Consider the diagram
+$$
+\xymatrix@=1.5cm{
+\EE^{N}_{Y'} \ar[rd]_{f'}       \ar[rr]^{g'}&      &
+\EE^{N-1}_{Y'} \ar[ld]^{h'}\\
+                       & Y' & &,
+}
+$$
+where $g'$ and $h'$ are the canonical projections, so that
+$\EE^N_{Y'}$ is isomorphic to affine one-space over
+$\EE^{N-1}_{Y'}$. Since every strict localization of
+$\EE^{N-1}_{Y'}$ is plainly also the strict localization of an
+algebraic scheme, we may apply the induction hypothesis to the fibers
+of $R^{q}g'_{\ast}F'$, and obtain
+\begin{equation*}
+\delta(R^{q}g'_{\ast}F')\leq d-q{\quoi}.\tag{$\ast$}
+\end{equation*}
+Moreover, \hyperref[XIV.cor3.4]{3.4}~(d') holds for $h'$ and
+$d'\leq d$, by the induction hypothesis on $N$.
+
+Consider the Leray spectral sequence
+$$
+E^{p,q}_2=H^{p}(\EE^{N-1}_{Y'},R^{q}g'_{\ast}(F'))
+\Longrightarrow H^{n}(\EE^N_{Y'},F'){\quoi}.
+$$
+We have $E^{p,q}_2=0$ if $p>d-q$, as follows by applying $(\ast)$ and
+\hyperref[XIV.cor3.4]{3.4}~(d') to the morphism $h'$. Consequently the
+abutment vanishes for $n>d$, proving the lemma.
+
+Consider the following additional statement, which is a special case
+of \hyperref[XIV.cor3.5]{3.5}:
+
+\begin{enonce*}{Statement 4.3~(d)}\etiquette[4.3]{XIV.enon4.3}
+Let $X'$ be strictly local of dimension $\leq d$, and the strict
+localization of an algebraic scheme over a field. Let
+$f\in\Gamma(X',\Oo_{X'})$, and let $U\subset X'$ be the open subset
+$U=X'-V(f)$. Then $\cd U\leq d$.
+\end{enonce*}
+
+\begin{enonce*}{Lemma 4.4}\etiquette[4.4]{XIV.lem4.4}
+\emph{\hyperref[XIV.enon4.3]{4.3}~(d)} implies
+\emph{\hyperref[XIV.cor3.4]{3.4}~(d)}.
+\end{enonce*}
+
+\noindent
+\emph{Proof}.\pageoriginale Consider the diagram
+$$
+\xymatrix@=1.5cm{
+\EE^1_{Y'} \ar[rr]^i \ar[rd]_{f'}&            &
+\PP^1_{Y'} \ar[ld]^{g'}\\
+                    &       Y'   &
+}
+$$
+where $Y'$ is as in the statement of
+\sisi{2.6}{\hyperref[XIV.cor3.4]{3.4}}, and where $\PP^1_{Y'}$ is the
+projective line obtained from $\EE^1$ ``by adjoining the section
+$Y'_\infty$ at infinity.'' Let $F'$ be a torsion sheaf on $\EE^1$
+with $d(\supp F')\leq d$. We have the spectral sequence
+$$
+H^{p}(\PP^1,R^{q}i_{\ast}F')\Longrightarrow
+H^{n}(\EE^1,F'){\quoi}.
+$$
+
+Now the $R^{q}i_{\ast}F'$, for $q>0$, are supported on $Y'_\infty$, which is
+$Y'$-isomorphic to $Y'$. Since $Y'$ is strictly local, it follows that
+$H^{p}(\PP^1,R^{q}i_{\ast}F')=0$ if $p,q>0$. Moreover, by the \emph{proper
+base-change theorem} (\hyperrefext[XII][XII.thm5.1]{5.1}), the
+cohomology of a torsion sheaf on $\PP^1$ can be computed on the closed
+fiber, which is a scheme of cohomological dimension $\leq2$
+(\hyperrefext[X][X.cor4.3]{4.3}). Thus
+$H^{p}(\PP^1,i_{\ast}F')=0$ if $p>2$. Since we wish to prove that
+$H^{n}(\EE^1,F')=0$ for $n>d$, and since $d\geq2$, we are reduced to
+proving that $H^{0}(\PP^1,R^{q}i_{\ast}F')=0$ for $q>d$. This group, which is
+also isomorphic to $H^{0}(Y'_\infty,R^{\sisi{1}{q}}i_{\ast}F')$, is, by
+(\hyperrefext[VIII][VIII.prop4.6]{4.6}), isomorphic to the fiber of
+$R^{q}i_{\ast}F'$ at the point $Q$, where $Q$ is the point at infinity of
+$\PP^1$ in the closed fiber.
+
+It is enough (\hyperrefext[VII][VII.prop3.3]{3.3} and
+\hyperrefext[IX][IX.prop2.9]{2.9}) to treat the case in which $F'$ is
+constructible. Since $\delta(\supp F')\leq d$, there is then a closed
+subscheme $X'$ of $\PP^1$, with $\dim X'\leq d$, which contains the
+support of $F'$. Let $\widetilde X'$ be the localization of $X'$ at
+the geometric point $Q$, put
+$$
+\widetilde U=\widetilde X'-
+\fprod{\widetilde X'}{Y'_\infty}{\PP^1},
+$$
+and let $\widetilde F$ be the sheaf\pageoriginale on $\widetilde U$ induced by $F'$
+via the morphism $\widetilde U\rightarrow\PP^1$. The fiber of
+$R^{q}i_{\ast}F'$ at $Q$ is then precisely
+$H^{\sisi{p}{q}}(\widetilde U,\widetilde F)$
+(\hyperrefext[VIII][VIII.thm5.2]{5.2}), and we apply
+\hyperref[XIV.enon4.3]{4.3}~(d) to the strictly local scheme
+$\widetilde X'$ and the open subset $\widetilde U$.
+
+The following lemma, together with \hyperref[XIV.lem4.4]{4.4}, will
+complete the proof.
+
+\begin{enonce*}{Lemma 4.5}\etiquette[4.5]{XIV.lem4.5}
+\emph{\hyperref[XIV.cor3.4]{3.4}~(d')} for $d'<d$ implies
+\emph{\hyperref[XIV.enon4.3]{4.3}~(d')} for $d'\leq d$.
+\end{enonce*}
+
+\noindent
+\emph{Proof}. Suppose that \hyperref[XIV.cor3.4]{3.4}~(d') holds for
+$d'<d$. By induction, we may suppose that
+\hyperref[XIV.enon4.3]{4.3}~(d') holds for $d'<d$. Let $X'$, $f$, and
+$U$ be as in the statement \hyperref[XIV.enon4.3]{4.3}~(d). Then
+$X'$ is the strict localization, at a \emph{closed} geometric point,
+of an algebraic scheme $X_0$ over a field $k$. After replacing $X_0$
+by a neighborhood of $x_0$, we may take $X_0$ to be affine and of
+dimension $\leq d$. Then $X'$ is the inverse limit of affine schemes
+$X_i$ which are étale over $X_0$
+(\hyperrefext[VIII][VIII.subsec4.5]{4.5}).
+
+Let $F$ be a torsion sheaf on $U$. We must prove that $H^q(U,F)=0$ for
+$q>d$, and once again it is enough to treat the case in which $F$ is
+constructible. The data $f$, $F$, and $U$ then arise from analogous
+data on one of the $X_i$
+(\sisi{\hyperrefext[IX][IX.prop2.7]{2.7}}{\hyperrefext[IX][IX.cor2.7.4]{2.7.4}}).
+Thus there is a sheaf $F_i$ on $U_i=X_i-V(f_i)$ which induces $F$ on
+$U$. Since $U=\varprojlim U_i$, we have
+(\hyperrefext[VII][VII.cor5.8]{5.8})
+$$
+H^q(U,F)=\varinjlim H^q(U_i,F_i){\quoi}.
+$$
+It is therefore enough to prove the following fact: for every $i$,
+there is a commutative diagram
+$$
+\xymatrix@=1.5cm{
+ U \ar[rr] \ar[rd]&        & U''\ar[ld]\\
+   &  U_i   &
+}
+$$
+in which $U\rightarrow U_i$ is the given arrow and
+$\cd(U'')\sisi{<}{\leq}d$. Indeed, this implies that\pageoriginale every element of
+$H^q(U_i,F_i)$, for $q>d$, has zero image in $H^q(U,F)$.
+
+Suppose that $i=0$, and consider the morphism
+$g:X_0\rightarrow\EE^1_k=Y_0$ defined by
+$f_0\in\Gamma(X_0,\Oo_{X_0})$. Let $Y''$ be the strict localization
+of $\EE^1_k$ at a geometric point above the origin. Thus $Y''$ is the
+spectrum of a discrete valuation ring. Put
+$X''=\fprod{X_0}{Y''}{Y_0}$.
+
+The morphism $X'\rightarrow X_0$ factors through $X''$, since $X'$ is
+strictly local. Moreover, the open subset
+$U''=\fprod{X''}{U_0}{X_0}$ is precisely the generic fiber of
+$X''/Y''$. It is therefore an affine algebraic scheme over the generic
+point of $Y''$, and plainly $\dim U''\leq d-1$.
+
+Let us verify that $\cd U''\leq d$, which will complete the proof. Let
+$K$ be the residue field of $Y''$ at its generic point. This field has
+cohomological dimension $1$; that is, $\cd(G)=1$, where $G$ is the
+Galois group of the separable closure $\bar K$ of $K$
+(\hyperrefext[X][X.thm2.2]{2.2}). Put
+$\bar U''=\fprod{U''}{(\Spec\bar K)}{\Spec K}$. By the induction
+hypothesis on $d$, we have $\cd\bar U''\leq d-1$ (this is
+\sisi{\hyperref[XIV.def2.2]{2.2} for a scheme of dimension $\leq d$}
+{\hyperref[XIV.cor3.2]{3.2} for a scheme of dimension $<d$}). It then
+follows from the Hochschild--Serre spectral sequence
+(\hyperrefext[VIII][VIII.prop8.4]{8.4}) that $\cd U''\leq d$:
+$$
+H^p(G,H^q(\bar U\sisi{'}{''},\bar F))\Longrightarrow H^n(U'',F){\quoi},
+$$
+which proves Lemma \hyperref[XIV.lem4.5]{4.5}.
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

@@ -1,0 +1,403 @@
+
+\medskip
+\noindent\textbf{1.3.}\footnote{The editors expanded the original in this
+paragraph; see also their \SGARefLink{sga3:VIIA:nde:2}{note~2} to \SGARefLink{sga3:VIIA:1.1.1}{Definition~1.1.1}.}
+\phantomsection
+\label{sga3:VIIA:1.3}
+Let \(u:Y\to X\) be a morphism of \(S\)-schemes. Recall that the
+adjunction isomorphism
+\[
+ \operatorname{Hom}_{p_X^{-1}(\mathcal O_S)}
+   \bigl(\mathcal O_X,u_*(\mathcal O_Y)\bigr)
+ \xrightarrow{\sim}
+ \operatorname{Hom}_{p_Y^{-1}(\mathcal O_S)}
+   \bigl(u^{-1}\mathcal O_X,\mathcal O_Y\bigr)
+\]
+sends a morphism of \(p^{-1}(\mathcal O_S)\)-modules
+\[
+  d:\mathcal O_X\longrightarrow u_*(\mathcal O_Y)
+\]
+to \(d'=\varepsilon\circ u^{-1}(d)\), where
+\(\varepsilon:u^{-1}u_*(\mathcal O_Y)\to\mathcal O_Y\) is the
+canonical morphism.
+
+Write \(\mathcal J_u\) (respectively, \(\mathcal I_u\)) for the kernel
+of the homomorphism of algebras
+\[
+ u^\natural:\mathcal O_X\longrightarrow u_*(\mathcal O_Y)
+ \quad
+ \left(\text{respectively, }
+ u^{\natural\prime}:u^{-1}\mathcal O_X\longrightarrow\mathcal O_Y
+ \right),
+\]
+and let \(d:\mathcal O_X\to u_*(\mathcal O_Y)\) be a morphism of
+\(p^{-1}(\mathcal O_S)\)-modules. If \(U\subset X\) is open and
+\(f_0,\ldots,f_n,g\in\mathcal O_X(U)\), induction on \(n\) shows that
+condition \((\ast_n)\) is equivalent to
+\begin{equation}
+  0=
+  \sum_{I\subset\{0,\ldots,n\}}
+  (-1)^{|I|}
+  u^\natural\bigl(f_{\{0,\ldots,n\}\setminus I}\bigr)d(f_Ig),
+  \tag{\(\ast\ast_n\)}
+  \label{sga3:VIIA:eq:starstar-n}
+\end{equation}
+where \(f_I\) denotes the product of the \(f_i\) for \(i\in I\).
+Consequently, if \(d\) satisfies \((\ast_n)\), then \(d\) vanishes on
+the ideal \(\mathcal J_u^{\,n+1}\).
+
+Now suppose that \(Y=S\). Then \(u:S\to X\) is a section of
+\(p:X\to S\), hence an immersion. On the one hand,
+\[
+ \varepsilon:u^{-1}u_*\mathcal O_S\longrightarrow\mathcal O_S
+\]
+is an isomorphism, and therefore \(u^{-1}\mathcal J_u=\mathcal I_u\).
+On the other hand, there is an isomorphism
+\begin{equation}
+  u^{-1}\mathcal O_X\simeq\mathcal O_S\oplus\mathcal I_u.
+  \tag{\(\star\)}
+  \label{sga3:VIIA:eq:section-splitting}
+\end{equation}
+Suppose that \(d\) vanishes on \(\mathcal J_u^{\,n+1}\). Then
+\(d'=\varepsilon\circ u^{-1}(d)\) vanishes on
+\(\mathcal I_u^{\,n+1}\), and therefore satisfies the analogues
+\((\ast\ast'_n)\) and \((\ast'_n)\) of
+\((\ast\ast_n)\) and \((\ast_n)\) when
+\[
+ f_0,\ldots,f_n\in\mathcal I_u\bigl(u^{-1}(U)\bigr).
+\]
+Moreover,
+\[
+  (\operatorname{ad}a)(\varphi)=0
+\]
+for every \(a\in\mathcal O_S(u^{-1}U)\) and every morphism of
+\(\mathcal O_{u^{-1}U}\)-modules
+\(\varphi:u^{-1}\mathcal O_U\to\mathcal O_{u^{-1}U}\).
+The splitting \eqref{sga3:VIIA:eq:section-splitting} therefore implies
+that \(d'\) satisfies \((\ast'_n)\), and hence that \(d\) satisfies
+\((\ast_n)\).
+
+\medskip
+\noindent\textbf{Lemma.}
+\phantomsection
+\label{sga3:VIIA:1.3-section-lemma}
+\textit{If \(u:S\to X\) is a section of \(p:X\to S\), then \(d\) is an
+\(S\)-deviation of \(u\) of order \(\leq n\) if and only if \(d'\)
+vanishes on \(\mathcal I_u^{\,n+1}\).}
+
+This interpretation generalizes as follows. Let \(u:Y\to X\) be any
+\(S\)-morphism, and let \(\Gamma_u:Y\to Y\times X\) be its graph, with
+components \(\operatorname{id}_Y\) and \(u\). Every \(S\)-deviation
+\(d\) of \(u\) of order \(\leq n\) gives, by composition,
+\[
+  Y\xrightarrow{\mathrm{diag}}Y\times Y
+   \mathop{\longrightarrow}^{d_Y}_{u_Y}Y\times X,
+\]
+a \(Y\)-deviation of \(\Gamma_u\) of order \(\leq n\), denoted
+\(\Gamma_d\), the graph of \(d\).
+
+Conversely, a \(Y\)-deviation \(e\) of \(\Gamma_u\) gives the composite
+\(S\)-deviation
+\[
+ e_X=\operatorname{pr}_2\circ e:
+ \qquad
+ Y\mathop{\longrightarrow}^{e}_{\Gamma_u}Y\times X
+  \xrightarrow{\operatorname{pr}_2}X.
+\]
+One has immediately \((\Gamma_d)_X=d\). The identity
+\(\Gamma_{e_X}=e\) follows from the \(\mathcal O_Y\)-linearity of
+\(e\).\footnote{If \(\lambda\) and \(f\) are local sections of
+\(\mathcal O_Y\) and \(\mathcal O_X\), then
+\[
+ (\Gamma_{e_X})(\lambda\otimes f)
+ =\lambda\,e(1\otimes f)
+ =e(\lambda\otimes f).
+\]
+The French note prints \(g\) in the two right-hand tensor expressions;
+the variables just introduced require \(f\).}
+Thus there is an isomorphism of \(\mathcal O_Y(Y)\)-modules
+\[
+\left\{
+\begin{array}{c}
+S\text{-deviations of }u\\[-2pt]
+\text{of order }\leq n
+\end{array}
+\right\}
+\xrightarrow{\sim}
+\left\{
+\begin{array}{c}
+Y\text{-deviations of }\Gamma_u\\[-2pt]
+\text{of order }\leq n
+\end{array}
+\right\},
+\qquad d\longmapsto\Gamma_d.
+\]
+Moreover, \(d\) is an \(S\)-derivation of \(u\) if and only if
+\(\Gamma_d\) is a \(Y\)-derivation of \(\Gamma_u\).
+
+Let \(\mathcal I_{\Gamma_u}\) denote the kernel of the homomorphism of
+algebras
+\[
+  \Gamma_u^{-1}\mathcal O_{Y\times X}\longrightarrow\mathcal O_Y
+\]
+corresponding to \(\Gamma_u\). The preceding lemma yields:
+
+\medskip
+\noindent\textbf{Proposition.}
+\phantomsection
+\label{sga3:VIIA:1.3-graph-proposition}
+\textit{Let \(u:Y\to X\) be an \(S\)-morphism and
+\(\Gamma_u:Y\to Y\times X\) its graph. The \(S\)-deviations of \(u\)
+of order \(\leq n\) identify with the \(Y\)-deviations of
+\(\Gamma_u\) of order \(\leq n\), and these are in bijection with}
+\[
+ \operatorname{Hom}_{\mathcal O_Y}
+ \left(
+  \frac{\Gamma_u^{-1}\mathcal O_{Y\times X}}
+       {\mathcal I_{\Gamma_u}^{\,n+1}},
+  \mathcal O_Y
+ \right).
+\]
+
+\medskip
+\noindent\textbf{1.3.1.}\footnote{This paragraph was added by the
+editors.}
+\phantomsection
+\label{sga3:VIIA:1.3.1}
+Return to the case in which \(u:S\to X\) is a section of \(p:X\to S\).
+The homomorphism
+\[
+ \varphi:u^{-1}\mathcal O_X\longrightarrow\mathcal O_S
+\]
+has a section, denoted simply by \(g\mapsto g\cdot1\). Thus, with the
+notation of \SGARefLink{sga3:VIIA:1.3}{1.3},
+\[
+  u^{-1}\mathcal O_X\simeq\mathcal O_S\oplus\mathcal I_u,
+\]
+and, for every section \(f\) of \(u^{-1}\mathcal O_X\),
+\[
+  f-\varphi(f)\cdot1\in\mathcal I_u.
+\]
+
+Let \(d\) be an \(S\)-deviation of \(u\) of order \(\leq1\), and let
+\(d':u^{-1}\mathcal O_X\to\mathcal O_S\) be the
+\(\mathcal O_S\)-morphism corresponding to \(d\). If \(a,b\) are
+sections of \(u^{-1}\mathcal O_X\), then
+\begin{align*}
+0
+ &=d'\bigl((a-\varphi(a)\cdot1)(b-\varphi(b)\cdot1)\bigr)\\
+ &=d'(ab)-\varphi(a)d'(b)-\varphi(b)d'(a)+\varphi(ab)d'(1).
+\end{align*}
+Consequently, \(d\) is an \(S\)-derivation of \(u\) if and only if
+\(d'(1)=0\).
+
+\medskip
+\noindent\textbf{Lemma.}
+\phantomsection
+\label{sga3:VIIA:1.3.1-derivation-lemma}
+\textit{The \(S\)-derivations of \(u\) are precisely the
+\(S\)-deviations of \(u\) of order \(1\) which vanish on the unit
+section of \(\mathcal O_X\). They correspond to the
+\(\mathcal O_S(S)\)-module}
+\[
+  \operatorname{Hom}_{\mathcal O_S}
+  \bigl(\mathcal I_u/\mathcal I_u^2,\mathcal O_S\bigr),
+\]
+\textit{and there is an isomorphism of \(\mathcal O_S(S)\)-modules}
+\[
+ \operatorname{Dev}_{\leq1}(u)
+ \simeq
+ \mathcal O_S(S)\oplus\operatorname{Der}_S(u).
+\]
+
+Returning to the general case gives:
+
+\medskip
+\noindent\textbf{Corollary.}
+\phantomsection
+\label{sga3:VIIA:1.3.1-graph-corollary}
+\textit{Let \(u:Y\to X\) be an \(S\)-morphism and
+\(\Gamma_u:Y\to Y\times X\) its graph. There is a canonical
+isomorphism of \(\mathcal O_Y(Y)\)-modules}
+\[
+ \operatorname{Der}_S(u)
+ \simeq
+ \operatorname{Der}_Y(\Gamma_u)
+ \simeq
+ \operatorname{Hom}_{\mathcal O_Y}
+ \bigl(\mathcal I_{\Gamma_u}/\mathcal I_{\Gamma_u}^2,\mathcal O_Y\bigr).
+\]
+
+\medskip
+\noindent\textbf{Definition 1.4.}
+\phantomsection
+\label{sga3:VIIA:1.4}
+\textit{Let \(X\) be an \(S\)-scheme. An \(S\)-differential operator
+(respectively, an \(S\)-differential operator of order \(\leq n\)) on
+\(X\) is an \(S\)-deviation (respectively, an \(S\)-deviation of order
+\(\leq n\)) of the identity morphism of \(X\).}
+
+By \SGARefLink{sga3:VIIA:1.1}{1.1}, an \(S\)-differential operator of order \(\leq n\) is therefore
+an endomorphism of the \(p^{-1}(\mathcal O_S)\)-module
+\(\mathcal O_X\) satisfying the identities \((\ast_n)\) of \SGARefLink{sga3:VIIA:1.1}{1.1}. We
+write \(\operatorname{Dif}^n_{X/S}\) for the
+\(\Gamma(\mathcal O_S)\)-module\footnote{In this expos\'e the ring
+\(\Gamma(S,\mathcal O_S)=\mathcal O_S(S)\) is denoted by
+\(\Gamma(\mathcal O_S)\).}
+of \(S\)-differential operators of order \(\leq n\), and
+\(\operatorname{Dif}_{X/S}\) for the module of all
+\(S\)-differential operators.
+
+As observed in \SGARefLink{sga3:VIIA:1.2}{1.2}, \(S\)-deviations of \(\operatorname{id}_X\) can be
+composed. This makes \(\operatorname{Dif}_{X/S}\) a
+\(\Gamma(\mathcal O_S)\)-algebra, called the \emph{algebra of
+differential operators of \(X/S\)}.
+
+Similarly, for every open subset \(V\subset X\), set
+\[
+ \mathcal{Dif}_{X/S}(V)
+ =\operatorname{Dif}_{V/S}
+ =\operatorname{Dev}(\operatorname{id}_V).
+\]
+By \SGARefLink{sga3:VIIA:1.1.3}{1.1.3} this defines a sheaf of \(\mathcal O_X\)-modules, called the
+\emph{sheaf of \(S\)-differential operators on \(X\)}.\footnote{The
+editors modified the original here. It mentioned the sheaf
+\(U\mapsto\operatorname{Dif}_{X_U/U}\), where \(U\) ranges over open
+subsets of \(S\); that sheaf is the direct image of
+\(\mathcal{Dif}_{X/S}\) under \(p_X:X\to S\).}
+
+\medskip
+\noindent\textbf{1.4.1.}
+\phantomsection
+\label{sga3:VIIA:1.4.1}
+As in \SGARefLink{sga3:VIIB:1.3.prop}{1.3}, differential operators on \(X/S\) may be interpreted using
+the graph of the identity morphism of \(X\), namely the diagonal
+\[
+  \Delta=\Delta_{X/S}:X\longrightarrow X\times X.
+\]
+Endow \(\mathcal O_{X\times X}\) with the
+\(\operatorname{pr}_1^{-1}(\mathcal O_X)\)-algebra structure defined
+by \(\operatorname{pr}_1\). Then
+\(\Delta^{-1}\mathcal O_{X\times X}\) is an algebra over
+\[
+  \mathcal O_X=\Delta^{-1}\operatorname{pr}_1^{-1}\mathcal O_X.
+\]
+Let \(\mathcal I_{X/S}\) be the kernel of the homomorphism
+\[
+ \Delta^{-1}\mathcal O_{X\times X}
+ \xrightarrow{m}
+ \mathcal O_X
+\]
+adjoint to
+\(\mathcal O_{X\times X}\to\Delta_*(\mathcal O_X)\), and set
+\[
+  \mathcal P^m_{X/S}
+  =
+  \Delta^{-1}\mathcal O_{X\times X}/\mathcal I_{X/S}^{\,m+1}.
+\]
+If \(V\subset S\) and \(U\subset X\) are affine open subsets with
+\(U\) above \(V\), and if
+\[
+  k=\Gamma(V,\mathcal O_S),
+  \qquad
+  A=\Gamma(U,\mathcal O_X),
+\]
+then
+\[
+  \Gamma(U,\mathcal P^m_{X/S})
+  =(A\otimes_kA)/I^{m+1},
+\]
+where \(I\) is generated by the elements \(a\otimes1-1\otimes a\),
+for \(a\in A\).
+
+By \SGARefLink{sga3:VIIB:1.3.prop}{1.3} there is an isomorphism of \(\mathcal O_X(X)\)-modules
+\[
+ j_X:\operatorname{Dif}^m_{X/S}
+ \xrightarrow{\sim}
+ \operatorname{Hom}_{\mathcal O_X}
+   (\mathcal P^m_{X/S},\mathcal O_X).
+\]
+It is given explicitly as follows: if
+\(d\in\operatorname{Dif}^m_{X/S}\) and a section \(c\) of
+\(\mathcal P^m_{X/S}\) over \(U\) has the form
+\[
+  c=a\otimes b+I^{m+1},
+\]
+then \(j_X(d)(c)=a\,d(b)\).\footnote{Under this isomorphism, the
+\(X\)-derivations of \(\Delta_{X/S}\) correspond, by \SGARefLink{sga3:VIIA:1.3.1}{1.3.1}, to the
+\(S\)-derivations of \(\operatorname{id}_X\), that is, to the
+\(p^{-1}(\mathcal O_S)\)-derivations of \(\mathcal O_X\).}
+
+\medskip
+\noindent\textbf{1.4.2.}
+\phantomsection
+\label{sga3:VIIA:1.4.2}
+Let \(d\) be a differential operator and \(u\) a section of \(X\) over
+\(S\). The \emph{value of \(d\) at \(u\)} is the composite
+\(S\)-deviation
+\[
+  S\xrightarrow{u}X
+  \mathop{\longrightarrow}^{d}_{\operatorname{id}_X}X.
+\]
+By \SGARefLink{sga3:VIIB:1.3.prop}{1.3} and \SGARefLink{sga3:VIIA:1.4.1}{1.4.1}, if \(d\) has order \(\leq m\), then \(du\)
+(respectively, \(d\)) is canonically associated with a morphism of
+\(\mathcal O_S\)-modules
+\[
+ d':u^{-1}\mathcal O_X/\mathcal I_u^{\,m+1}\longrightarrow\mathcal O_S
+\]
+(respectively, a morphism of \(\mathcal O_X\)-modules
+\(d'':\mathcal P^m_{X/S}\to\mathcal O_X\)).
+
+The morphism \(d'\) may be recovered from \(d''\) as follows. The square
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:1.4.2-value-cartesian-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_004_value_cartesian_square}
+\end{center}
+is cartesian. Hence \(X\) identifies with
+\(S\times_X(X\times X)\), \(u\) with \(S\times_X\Delta\), and
+\(u^*(\mathcal P^m_{X/S})\) with
+\(u^{-1}\mathcal O_X/\mathcal I_u^{\,m+1}\). Under these
+identifications, \(u^*(d'')\) is the morphism
+\[
+  u^{-1}\mathcal O_X/\mathcal I_u^{\,m+1}\longrightarrow\mathcal O_S
+\]
+which is precisely \(d'\).
+
+\medskip
+\noindent\textbf{1.5.}
+\phantomsection
+\label{sga3:VIIA:1.5}
+Set, as usual,
+\[
+  I_S=\operatorname{Spec}\mathcal O_S[T]/(T^2).
+\]
+Let \(\tau:S\to I_S\) be the zero section, and let \(\sigma\) be the
+canonical deviation of \(\tau\) defined in \SGARefLink{sga3:VIIA:1.2.0}{1.2.0}: it is the
+\(\mathcal O_S\)-module homomorphism which vanishes on the unit section
+of \(\mathcal O_S[T]/(T^2)\) and sends the class \(t\) of \(T\) modulo
+\(T^2\) to the unit section of \(\mathcal O_S\).
+
+Let \(X\) be an \(S\)-scheme. Every \(I_S\)-automorphism \(u\) of
+\(I_S\times X\) inducing the identity on \(X\) determines, by
+composition, a differential operator \(D_u\) on \(X\):
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:1.5-infinitesimal-automorphism-sequence}
+  \input{native_diagrams/exp7/viia_00_04/diag_005_infinitesimal_automorphism_sequence}
+\end{center}
+By \SGARefLink{sga3:ii:subsection:3-14}{Expos\'e II, 3.14}, the map \(u\mapsto D_u\) is an isomorphism from
+the \(\Gamma(\mathcal O_S)\)-Lie algebra
+\[
+  \operatorname{Lie}(\operatorname{Aut}X)
+  :=\operatorname{Lie}(\operatorname{Aut}X)(S)
+\]
+onto the \(\Gamma(\mathcal O_S)\)-Lie algebra of
+\(p^{-1}(\mathcal O_S)\)-derivations of \(\mathcal O_X\). Its inverse
+sends a derivation \(D\) to the automorphism of \(I_S\times X\)
+corresponding to
+\[
+  a+bt\longmapsto a+(Da+b)t
+\]
+on \(\mathcal O_X[T]/(T^2)\).
+

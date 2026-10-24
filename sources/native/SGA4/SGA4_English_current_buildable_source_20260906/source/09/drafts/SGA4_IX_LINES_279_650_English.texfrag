@@ -1,0 +1,367 @@
+\section{Constructible sheaves}\etiquette[2]{IX.sec2}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[2.0]{IX.subsec2.0}
+Let $T$ be a topos. Recall that with every element $S\in \Ob (\Ens)$
+one associates the sheaf $S_T$ associated with the presheaf $P$ such
+that $P(X)=S$ for every $X\in \Ob (T)$. The object of $T$ representing
+$S_T$ is
+$$
+\coprod_{s\in S}e= ``S\times e \mbox{''}{\quoi},
+$$
+where $e$ is the final object of $T$. The sheaf $S_T$ is called the
+\emph{constant sheaf} with value $S$ (IV). In the evident way one
+defines the notion of a \emph{constant sheaf of groups, constant sheaf
+of $A$-modules} ($A$ a ring), and \emph{constant abelian sheaf}, with
+value $M$. A morphism $f_T:S_T\rightarrow S'_T$ of constant sheaves is
+said to be constant if it comes from a morphism of sets
+$f:S\rightarrow S'$.
+
+A sheaf $F$ is said to be \emph{locally constant} if there exists a
+covering $\{e_i\rightarrow e\}$ of the final object such that $F$
+becomes constant on each $e_i$. One\pageoriginale defines analogously
+the notion of a locally constant \emph{sheaf of groups} or sheaf of
+$A$-\emph{modules}, and of a \emph{locally constant morphism}
+$f:F\rightarrow G$, when $F$ and $G$ are locally constant sheaves.
+Finally, a locally constant sheaf of groups or of $A$-modules is said
+to be \emph{of finite type} (\resp \emph{of finite presentation}) if
+its local values are groups or $A$-modules of finite type (\resp of
+finite presentation).
+
+\begin{enonce*}{Lemma 2.1}\etiquette[2.1]{IX.lem2.1}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let $f:F\rightarrow G$ be a morphism of locally constant sheaves
+of sets on $T$, and suppose that the local values of $F$ are finite
+sets. Then $f$ is locally constant.
+
+\item Let $f:F\rightarrow G$ be a morphism of locally constant sheaves
+of $A$-modules, with $F$ of finite type. Then $f$ is locally constant,
+and the kernel and cokernel of $f$ are locally constant.
+
+\item Let $0\rightarrow F'\rightarrow F\rightarrow F''\rightarrow 0$
+be an exact sequence of sheaves of $A$-modules (\resp of groups), with
+$F'$ and $F''$ locally constant, and $F''$ of finite presentation.
+Then $F$ is locally constant.
+\end{enumerate}
+\end{enonce*}
+
+Proof of (i) and (ii). We reduce without difficulty to the case in
+which $F$ and $G$ are constant. Consider (ii): let $F=M_T$, $G=N_T$
+($M$, $N$ being $A$-modules), and let $S\subset M$ be a finite set of
+generators of $M$. Then $f$ is determined by its restriction to $S_T$,
+and $f$ will be locally constant if $f|S_T$ is. Thus we are reduced to
+(i) for the first assertion of (ii), and the second assertion is a
+trivial consequence of the first.
+
+It therefore remains to prove (i). Suppose that $F=S_T$, $G={S'}_T$
+are constant, and also denote by $f$ the morphism of objects
+$f:S\times e\rightarrow S'\times e$ (notation as above). Let
+$f_s:e\rightarrow S'\times e$ $(s\in S)$ be the components of $f$:
+since $S$ is finite, it plainly suffices to treat the case $f=f_s$,
+that is, the case in which $S$ is a one-element set. Let
+$X_{s'}\rightarrow e$ $(s'\in S')$ be the family of morphisms that make
+the diagrams
+$$
+\xymatrix@C=2cm@R=1.5cm{
+X_{s'} \ar[r] \ar[d]& e\ar[d]^{i_{s'}}\\
+e   \ar[r]^{f}   & S'\times e
+}
+$$
+cartesian, where\pageoriginale $i_{s'}:e\rightarrow S'\times e$ is
+the ``inclusion'' into the $s'$-th component. The family $\{i_{s'}\}$
+is trivially covering, and hence so is $\{X_{s'}\rightarrow e\}$. One
+checks immediately (since coproducts in a topos are disjoint)
+that $f$ becomes constant on $X_{s'}$, and consequently $f$ is locally
+constant.
+
+Proof of (iii). Consider the case of sheaves of $A$-modules. We may
+suppose $F'$ and $F''$ constant, with $F''$ having value $M''$, an
+$A$-module of finite presentation. If $M''$ is free, and hence has a
+finite basis $(e_i)_{1\leq i\leq n}$, then the $e_i$ define sections of
+$F''$ and hence lift locally to sections of $F$; this shows that the
+extension $F$ of $F''$ by $F'$ splits locally, which proves that $F$
+is locally isomorphic to $F'\times F''$, and is therefore locally
+constant. In the general case, choose a surjective homomorphism
+$\varphi:L''\rightarrow M''$, with $L''$ free of finite type; the
+kernel $R$ of $\varphi$ is of finite type, and setting
+$L=\fprod{L''_T}{F}{M''_T}=\fprod{L''_T}{F}{F''}$, one sees on the one
+hand that $L$ is an extension of $L''_T$ by $F'$, and is therefore
+locally constant by what precedes, and on the other hand that there is
+an exact sequence $0\rightarrow R_T\rightarrow L\rightarrow
+F\rightarrow 0$, which, by (ii), implies that $F$ is locally constant.
+
+From now on we restrict ourselves to the étale topoi of schemes.
+
+\begin{enonce*}{Lemma 2.2}\etiquette[2.2]{IX.lem2.2}
+Let $X$ be a scheme and let $F$ be a locally constant sheaf on $X$.
+Then $F$ is represented by an étale $Y/X$. If, moreover, the fibers of
+$F$ are finite (\resp and nonempty), then $Y$ is an étale covering
+(\resp and is surjective).
+\end{enonce*}
+
+Proof. Descent (\SGA 1 IX 4.1 if $F$ has finite fibers, \SGA 3 X 5.4
+in the general case).
+
+\begin{enonce*}{Definition 2.3}\etiquette[2.3]{IX.def2.3}
+A sheaf of sets (\resp of groups, \resp of $A$-modules) is said to be
+constructible if, for every affine open $U\subset X$, there exists a
+decomposition of $U$ as a union of finitely many constructible
+{\rm (\EGA $0_{{\rm III}}$ 9.1.2)} reduced locally closed subschemes
+$U_i$ such that the sheaf induced by $F$\pageoriginale on each $U_i$
+is locally constant, with finite value (\resp finite, \resp of finite
+presentation\footnote[1]{When $A$ is not assumed noetherian, for the
+purposes of Homological Algebra it is preferable to require here,
+instead of finite presentation alone for the $A$-module $M$, that it
+have a left resolution by free $A$-modules of finite type. The notion
+introduced in (\hyperref[IX.def2.3]{2.3}) should then be called:
+$F$ is 1-constructible (more generally, one would define
+$n$-constructibility in the evident way, for every integer $n\geq 0$).
+For the present Exposé we shall provisionally retain the terminology in
+the form (\hyperref[IX.def2.3]{2.3}), which is chiefly reasonable when
+$A$ is noetherian, in which case it coincides with that just indicated.
+Compare \SGA 6 I for finiteness notions in nonnoetherian cases.}).
+\end{enonce*}
+
+\setcounter{subsection}{3}
+\subsubsection{}\etiquette[2.3.1]{IX.subsubsec2.3.1}
+The finiteness hypothesis on the local values amounts to saying that
+for every geometric point $\xi$, the fiber $F_{\xi}$ is finite (\resp
+finite, \resp of finite presentation). It follows immediately from
+\hyperref[IX.lem2.1]{2.1} (i) that a sheaf of groups $F$ is
+constructible if and only if the underlying sheaf of sets of $F$ is
+constructible.
+
+Care must be taken that if $F$ is an abelian sheaf, it is constructible
+as a sheaf of groups (or equivalently, as a sheaf of sets) if and only
+if it is constructible as a sheaf of $\ZZ$-modules, and if
+\emph{in addition} its fibers are finite. Thus, $\ZZ_X$ is
+constructible as a $\ZZ$-module, but not as a sheaf of groups.
+
+\begin{enonce*}{Proposition 2.4}\etiquette[2.4]{IX.prop2.4}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let $X$ be quasi-compact and quasi-separated. Then a sheaf \\
+(\resp sheaf of groups, \resp sheaf of $A$-modules) is constructible if
+and only if there exists a decomposition of $X$ as a union of
+constructible locally closed subsets such that $F$ becomes locally
+constant and finite (\resp finite, \resp of finite presentation) on
+each $X_i$.
+
+\item To verify that $F$ is constructible, it is enough to verify that
+$F| U_i$ is constructible for the $U_i$ of a given open covering of
+$X$.
+
+\item Let $f:Y\rightarrow X$ be a morphism. Then $f^{\ast}F$ is
+constructible if $F$ is.
+
+\item The\pageoriginale set of points at which the fiber of a
+constructible sheaf is nonempty (\resp nonzero) is a locally
+constructible subset {\rm (\EGA $0_{\rm III}$ 9.1.2)}.
+
+\item Let $X$ be locally noetherian. Then a sheaf of sets
+(\resp\ldots) $F$ on $X$ is constructible if and only if for every
+$x\in X$ there exists a nonempty open subset $U$ of the closure $\bar{x}$
+of $x$ such that $F$ induces a locally constant sheaf with finite value
+(\resp\ldots) on $U$.
+\end{enumerate}
+\end{enonce*}
+
+Proof. Plainly, if $f:Y\rightarrow X$ is a morphism and if there exists
+a decomposition of $X$ as a union of constructible locally closed
+subsets $X_i$ such that $F$ becomes locally constant on each $X_i$,
+the same is true of $Y$ and $f^{\ast}F$ (\cf \EGA IV 1.8.2). This
+proves the implication $\Leftarrow$ of (i). Now suppose that $X$ is
+quasi-compact and quasi-separated, and let $\{U_1,\ldots,U_n\}$ be an
+affine open covering of $X$ such that $F|U_i$ is constructible for
+every $i$. To find a decomposition of $X$ as in (i), it is enough to
+do so for $U_n$ and for $Y=X-U_n$ (with the induced reduced structure),
+since $U_n$ and $Y$ are constructible in $X$ by virtue of the
+hypothesis that ``$X$ is quasi-separated''. Now a decomposition exists
+for
+$U_n$ by the definition of constructibility, and $Y$ is the union of
+$n-1$ affine opens $V_i=Y\cap U_i$ $(i=1,\ldots,n-1)$ with
+$F| V_i$ constructible, whence result (i) follows by induction on $n$.
+The same reasoning proves (ii); indeed, the hypothesis implies that
+$F| U$ is constructible for every ``sufficiently small'' affine open
+$U$, and an arbitrary affine open $V$ can be covered by finitely many
+such opens. Assertion (ii) shows that the notion of constructibility is
+local on $X$, and (iii), (iv) follow immediately. The implication
+$\Rightarrow$ of (v) is immediate and does not depend on the
+noetherian hypothesis. If $X$ is noetherian, one proves the implication
+$\Leftarrow$ by the usual ``noetherian induction''.
+
+\begin{enonce*}{Proposition 2.5}\etiquette[2.5]{IX.prop2.5}
+Let $X$ be quasi-compact and quasi-separated, and let $F$ be a
+constructible sheaf of groups or of $A$-modules on $X$. Then there
+exists a finite filtration of $F$ whose successive quotients are of the
+form $i_{!}G$, where $i:U\rightarrow X$ is the inclusion of a
+constructible locally closed subset and where $G$ is locally constant
+and constructible on $U$. If $X$ is noetherian, there exists such a
+filtration with the $U$ irreducible.
+\end{enonce*}
+
+Proof.\pageoriginale By \hyperref[IX.prop2.4]{2.4} (i), there exists a
+decomposition of $X$ as a finite union of constructible locally closed
+subsets $X_i$ such that each $F|X_i$ is locally constant and finite
+(\resp of finite presentation). Write $X_i=U_i\cap \complement V_i$,
+where $U_i$ and $V_i$ are constructible opens, and let $N$ be the
+number of opens of $X$ in the subtopology $T$ generated by
+$\{U_i,V_i\}$. We argue by induction on $N$: if $W$ is a minimal
+nonempty element of $T$, it is plain that $F|W$ is locally constant and
+of finite presentation. Let $i:W\rightarrow X$ be the inclusion
+morphism and let $Y=X-W$. We have the exact sequence
+$$
+0\longrightarrow i_{!}i^{\ast}F\longrightarrow F\longrightarrow F|
+Y\longrightarrow 0{\quoi},
+$$
+and are thereby reduced to the same assertion for $Y$ and the sheaf
+$F| Y$, where the induction hypothesis applies.
+
+\begin{enonce*}{Proposition 2.6}\etiquette[2.6]{IX.prop2.6}
+Suppose that $A$ is a noetherian ring.
+\begin{itemize}
+\item[(i)] A finite projective (\resp inductive) limit of constructible
+sheaves of $A$-modules or sets is constructible. In particular, the
+kernel, cokernel, and image of a morphism of constructible sheaves of
+$A$-modules are constructible.
+
+\item[(i bis)] A finite projective limit of constructible sheaves of
+sets (\resp of groups) is constructible, and if $f:F\rightarrow G$ is
+a morphism of constructible sheaves of groups, the kernel, image, and
+cokernel (if $\Iim(f)$ is a normal subgroup) are constructible. A finite
+inductive limit of constructible sheaves of sets is constructible.
+
+\item[(ii)] Let $0\rightarrow M'\rightarrow M\rightarrow
+M''\rightarrow 0$ be an exact sequence of sheaves of $A$-modules
+(\resp of groups), with $M'$, $M''$ constructible. Then $M$ is
+constructible.
+
+\item[(iii)] Let $M_1\rightarrow M_2\rightarrow M_3\rightarrow
+M_4\rightarrow M_5$ be an exact sequence of sheaves of $A$-modules.
+Then if $M_i$ is constructible for $i=1,2,4,5$, the same holds for
+$i=3$.
+\end{itemize}
+\end{enonce*}
+
+\emph{Proof.} (i) We\pageoriginale leave the assertions for sets and
+groups to the reader. For sheaves of $A$-modules, it is enough to prove
+that the kernel and cokernel of a morphism $f:F\rightarrow G$ of
+constructible sheaves of $A$-modules are constructible. The assertion
+is local on $X$, and we may therefore suppose that $X$ is affine, hence
+quasi-compact and quasi-separated. By \hyperref[IX.prop2.4]{2.4} (i),
+we then reduce to the case in which $F$ and $G$ are locally constant,
+and conclude by using \hyperref[IX.lem2.1]{2.1} (ii) and the noetherian
+hypothesis on $A$. Assertion (ii) is proved analogously using
+\hyperref[IX.lem2.1]{2.1} (iii). Assertion (iii) follows immediately
+from (i) and (ii).
+
+\begin{enonce*}{Proposition 2.7}\etiquette[2.7]{IX.prop2.7}
+Let $X$ be a quasi-compact and quasi-separated scheme, and let $F$ be a
+sheaf of sets (\resp of $A$-modules). In order that $F$ be
+constructible, it is necessary and sufficient that it be isomorphic to
+the cokernel of a pair of morphisms $H\rightrightarrows G$, where $H$
+and $G$ are sheaves of sets representable by schemes étale and of
+finite presentation over $X$ (\resp that $F$ be isomorphic to the
+cokernel of a homomorphism $𝒜_{V,X}\rightarrow 𝒜_{U,X}$, where $U$ and
+$V$ are two schemes étale and of finite presentation over $X$).
+\end{enonce*}
+
+
+Sufficiency follows easily from \hyperref[IX.prop2.6]{2.6} (i bis).
+
+Suppose that $F$ is a constructible sheaf of sets. Using the existence
+of infinite coproducts in the étale site over $X$, one sees that one can
+find an epimorphism $G\rightarrow F$, with $G$ representable by a
+scheme étale over $X$, which may moreover be supposed to be a
+coproduct of affine schemes $G_i$ $(i\in I)$, and hence separated over
+$X$. For every finite subset $J$ of the index set $I$, let $G_J$ be
+the coproduct of the $G_i$ for $i\in J$, and let $F_J$ be its image in
+$F$. Since $G_J$ and $F$ are constructible, so is $F_J$
+(\hyperref[IX.prop2.6]{2.6} (i bis)); hence the set $X_J$ of $x\in X$
+such that the fibers of $F$ and $F_J$ at a geometric point of $X$ over
+$x$ are equal is locally constructible (\hyperref[IX.prop2.4]{2.4}
+(iv). Since the family of $X_J$ is increasing and has union $X$, and
+since $X$ is quasi-compact, one of the $X_J$ equals $X$
+(\EGA IV 1.9.9). This shows, after replacing $G$ by $G_J$, that we may
+suppose $G$ affine, and hence separated over $X$, and quasi-compact over
+$X$ since $X$ is quasi-separated (\EGA IV 1.2.4). Let then
+$H=\fprod{G}{G}{F}$. It is a subsheaf of $\fprod{G}{G}{X}$, which is
+representable, and is therefore itself representable (VIII \hyperref[VIII.prop6.1]{6.1}).
+Since $H$ is moreover constructible (\hyperref[IX.prop2.6]{2.6}
+(i bis)),\pageoriginale it follows again from the preceding argument
+that it is quasi-compact, and therefore (being separated over $X$) of
+finite presentation over $X$. This proves the first assertion of
+\hyperref[IX.prop2.7]{2.7}, and the second is proved by the same method
+(NB it is not necessary that $A$ be noetherian). Let us note in passing
+that the proof also proves the following corollary:
+
+\begin{enonce*}{Corollary 2.7.1}\etiquette[2.7.1]{IX.cor2.7.1}
+Let $X$ be a scheme and let $F$ be a scheme étale over $X$. In order
+that the corresponding étale sheaf on $X$ be constructible, it is
+necessary and sufficient that $F$ be of finite presentation over $X$.
+\end{enonce*}
+
+Proposition \hyperref[IX.prop2.7]{2.7} will be useful here chiefly for
+deducing certain limit-passage properties for constructible sheaves:
+
+\begin{enonce*}{Corollary 2.7.2}\etiquette[2.7.2]{IX.cor2.7.2}
+Let $X$ be a quasi-compact and quasi-separated scheme. Then every
+sheaf of sets (\resp of ind-p-groups, \resp of $A$-modules) on $X$ is
+the inductive limit of a filtered inductive system of constructible
+sheaves of sets (\resp\ldots).
+\end{enonce*}
+
+If $F$ is a sheaf of sets, retain the notation of the proof of
+\hyperref[IX.prop2.7]{2.7}, and let $L$ be the set of pairs $(J,H')$,
+where $J$ is a finite subset of $I$ and $H'$ is a quasi-compact open
+subset of $H_J=\fprod{G_J}{G_J}{F}$. Order $L$ in the evident way, and
+observe that, since $F$ is the limit of the $F_J$, and each $F_J$ is
+the limit of the $\Coker(H'\rightarrow G_J)$ for the quasi-compact
+opens $H'$ of $H_J$, $F$ is the inductive limit of the inductive system
+of the $F_{\ell}=\Coker(H'\rightarrow G_J)$ for
+$\ell=(H',J)\in L$, proving the case of sets. The case of sheaves of
+$A$-modules is treated in essentially the same way, beginning by
+representing $F$ as the cokernel of a homomorphism
+$𝒜_{V,X}\rightarrow 𝒜_{U,X}$, with $U$, $V$ schemes étale and
+separated over $X$. The case of ind-$\sheaf{p}$-groups requires a little
+more attention. Retaining the preceding notation, denote by $L(G_J)$
+the free group sheaf generated by the sheaf of sets $G_J$, by $N_J$
+the kernel of the homomorphism $L(G_J)\rightarrow F$ deduced from
+$G_J\rightarrow F$, and by $L$ the set of pairs $(J,N')$, where $N'$
+is a subsheaf of \emph{sets} of $N_J$ which is ``quasi-compact'', \ie
+such that there exists an epimorphism $P\rightarrow N'$, with $P$
+representable by a quasi-compact $X$-scheme. Order $L$ by declaring
+that $(J,N')$ is smaller than $(J_1, N'_1)$ if $J\subset J_1$ and if
+the canonical\pageoriginale homomorphism
+$L(G_J)\rightarrow L(G_{J_1})$ maps $N'$ into $N'_1$. It is immediate
+that $L$ is filtered, and that one obtains an inductive system of
+sheaves of groups $F_{\ell}$, indexed by $L$, by taking, for
+$\ell=(J,N')$, $F_{\ell}=$ the quotient sheaf of groups of $L(G_J)$ by
+the invariant subsheaf of groups generated by $N'$. It is moreover
+immediate that $F$ is isomorphic to the inductive limit of the
+$F_{\ell}$, and it remains to prove that there exists a subset $L'$ of
+$L$, cofinal in $L$, such that for $\ell\in L'$, $F_{\ell}$ is a
+constructible sheaf of $\sheaf{p}$-groups. For this, it is enough to
+prove that for every $J$ one can find a subsheaf of sets $N'$ of $N_J$
+which is quasi-compact, contains a given quasi-compact subsheaf of sets
+$N'_0$, and is such that the corresponding $F_{\ell}$ is a
+constructible sheaf of $\sheaf{p}$-groups. Note first that it is enough
+for this that the fibers of $F_{\ell}$ be finite $\sheaf{p}$-groups:
+then $F_{\ell}$ will automatically be constructible, as the reader
+will readily verify. On the other hand, the reader may also verify that
+the set $X_{N'}$ of points $x$ of $X$ such that the fiber of
+$F_{\ell}$ at a geometric point over $x$ is a finite
+$\sheaf{p}$-group is locally constructible. Moreover, the subsets
+$X_{N'}$ of $X$ are increasing functions of $N'$, and their union is
+all of $X$: this last point follows from the fact that the inductive
+limit of the $F_{\ell}$, for $\ell=(J,N')$ with $J$ fixed, is the
+subsheaf of groups $\bar{F_J}$ of $F$ generated by the subsheaf of sets
+$F_J$, which is quasi-compact, and hence $\bar{F_J}$ has fibers that
+are finite $\sheaf{p}$-groups. On the other hand, in a free group on a
+finite number of generators, every subgroup of finite index is a free group on a
+finite number of generators; hence, if it is expressed as a filtered union of its
+finite subsets, one of these generates the whole subgroup. It
+follows readily that the union of the

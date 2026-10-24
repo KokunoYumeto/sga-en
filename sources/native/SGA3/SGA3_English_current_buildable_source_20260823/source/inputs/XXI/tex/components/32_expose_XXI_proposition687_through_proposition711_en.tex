@@ -1,0 +1,109 @@
+\begin{proposition}\label{sga3:XXI:6.8.7}
+In the notation of \ref{sga3:XXI:6.8.1}, \(u\) induces an
+isomorphism from the set of systems of simple roots (respectively
+positive roots) of \(R\) onto the corresponding set for \(R'\).
+\end{proposition}
+
+\begin{proof}
+This follows immediately from \ref{sga3:XXI:3.1.5}
+(respectively \ref{sga3:XXI:3.2.1}).
+\end{proof}
+
+\section{Structure}\label{sga3:XXI:7}
+
+\subsection{Decomposition of a root datum}\label{sga3:XXI:7.1}
+
+\begin{proposition}\label{sga3:XXI:7.1.1}
+Let \(\cR\) be a root datum and let \(\Delta\) be a system of
+simple roots.
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:XXI:7.1.1:item:i}(i)] Let \(R'\) and \(R''\) be two closed symmetric sets of
+  roots forming a partition of \(R\). If
+  \[
+   \Delta'=\Delta\cap R',
+   \qquad
+   \Delta''=\Delta\cap R'',
+  \]
+  then
+  \[
+   R'=R_{\Delta'},
+   \qquad
+   R''=R_{\Delta''},
+  \]
+  and every root of \(\Delta'\) is orthogonal to every root of
+  \(\Delta''\).
+\item[\SGAInlineRefTarget{sga3:XXI:7.1.1:item:ii}(ii)] Let \(\Delta'\) and \(\Delta''\) be two orthogonal
+  subsets forming a partition of \(\Delta\). Then
+  \(R_{\Delta'}\) and \(R_{\Delta''}\) form a partition of \(R\).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+We first prove \SGARefLink{sga3:XXI:7.1.1:item:i}{(i)}.
+
+\begin{lemma}\label{sga3:XXI:7.1.2}
+Under the hypotheses of \textup{\SGARefLink{sga3:XXI:7.1.1:item:i}{(i)}}, if
+\(\alpha\), \(\beta\), and \(\alpha+\beta\) are roots, then all
+three belong to \(R'\), or all three belong to \(R''\).
+\end{lemma}
+
+Suppose, for example, that \(\alpha+\beta\in R'\). One cannot have
+\(\alpha,\beta\in R''\), since \(R''\) is closed. Suppose therefore
+that \(\alpha\in R'\). Then \(-\alpha\in R'\), and
+\[
+ \beta=(\beta+\alpha)-\alpha\in R'.
+\]
+
+We now prove \(R'=R_{\Delta'}\) by induction on the order of a
+positive root \(\alpha\in R'\cap\mathscr P(\Delta)\). If
+\(\operatorname{ord}_\Delta(\alpha)=1\), then
+\[
+ \alpha\in R'\cap\Delta=\Delta'.
+\]
+If \(\operatorname{ord}_\Delta(\alpha)>1\), there is
+\(\beta\in\Delta\) such that \(\alpha-\beta\in R\). By the lemma,
+\[
+ \beta\in\Delta',
+ \qquad
+ \alpha-\beta\in R'.
+\]
+Hence \(\alpha-\beta\in R_{\Delta'}\) by induction, and finally
+\[
+ \alpha=(\alpha-\beta)+\beta\in R_{\Delta'}.
+\]
+
+We next prove that \(\Delta'\) and \(\Delta''\) are orthogonal. If
+\(\alpha\in\Delta'\) and \(\beta\in\Delta''\), then
+\[
+ (\beta^\ast,\alpha)\leq0.
+\]
+If \((\beta^\ast,\alpha)\neq0\), then \(\beta+\alpha\) is a root,
+contrary to the lemma.
+
+We now prove \SGARefLink{sga3:XXI:7.1.1:item:ii}{(ii)}. If \(\Delta'\) or \(\Delta''\) is empty, the
+assertion is immediate. Otherwise, if \(R_{\Delta'}\) and
+\(R_{\Delta''}\) do not form a partition of \(R\), there is a root
+\(\alpha\) of the form
+\[
+ \alpha=\sum_i m_i'\alpha_i'
+       +\sum_j m_j''\alpha_j'',
+ \qquad
+ m_i',m_j''\in\mathbb Z_+,
+\]
+where the \(\alpha_i'\) (respectively \(\alpha_j''\)) belong to
+\(\Delta'\) (respectively \(\Delta''\)). Applying
+\ref{sga3:XXI:3.1.2}, and interchanging \(\Delta'\) and
+\(\Delta''\) if necessary, yields a relation
+\[
+ \delta=\gamma+\beta,
+ \qquad
+ \gamma\in R_{\Delta'},
+ \quad
+ \beta\in\Delta'',
+ \quad
+ \delta\in R.
+\]
+But \((\beta^\ast,\gamma)=0\), so
+\(\gamma-\beta\) is also a root by \ref{sga3:XXI:2.2.5}, which is
+impossible.
+\end{proof}

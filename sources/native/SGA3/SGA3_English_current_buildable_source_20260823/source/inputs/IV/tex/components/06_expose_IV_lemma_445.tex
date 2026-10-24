@@ -1,0 +1,168 @@
+
+\setcounter{footnote}{31}
+
+Let \(R_{\varnothing}\) denote the presheaf that assigns the empty set to
+every \(S\in\operatorname{Ob}\mathscr C\); it is an initial object of
+\(\widehat{\mathscr C}\).\footnote{Editor's note: part \SGARefLink{sga3:iv:lemma:4:4:5:item:i:01}{(i)} of Lemma \SGARefLink{sga3:iv:lemma:4:4:5}{4.4.5} has
+been corrected, and the proofs of all three parts have been given in detail.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:4:4:5}\textbf{Lemma 4.4.5.}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:lemma:4:4:5:item:i:01} \textit{Suppose that
+    \(R_{\varnothing}\notin J(S)\) for every
+    \(S\in\operatorname{Ob}\mathscr C\). If \((X_i)\) is a family of
+    separated presheaves, then the coproduct presheaf
+    \(\coprod_i X_i\) is separated.}\footnote{Editor's note: in general, the
+    coproduct of two sheaves \(F,G\) is not a sheaf. Indeed, let
+    \(S_1,S_2\in\operatorname{Ob}\mathscr C\). Suppose that the coproduct
+    \(S=S_1\coprod S_2\) exists in \(\mathscr C\), and that the fiber product
+    \(S_1\times_S S_2\) is an initial object \(\varnothing\) of
+    \(\mathscr C\) (cf. I, \SGARefLink{sga3:i:subsection:1:8}{1.8}). Let \(R\) be the sieve of \(S\) with basis
+    \(\{S_1,S_2\}\). Then \((F\coprod G)(R)\) is the disjoint union of
+    \(F(S)\coprod G(S)\) and the sets
+    \(F(S_i)\times G(S_j)\), for \(i\ne j\); thus \(F\coprod G\) is not a
+    sheaf in general. On the other hand, let \(\mathscr C\) be the category
+    with a single object \(S\) and \(\operatorname{id}_S\) as its only
+    morphism, equipped with the topology defined by
+    \(J(S)=\{R_{\varnothing},S\}\). Then the only separated presheaves are
+    \(R_{\varnothing}\) and \(X=\mathbf h_S\) (which is a sheaf), and
+    \(X\coprod X\) is not separated.}
+
+  \item[(ii)]\SGARefTarget{sga3:iv:lemma:4:4:5:item:ii:01} \textit{Consider an equivalence relation in the category of
+    presheaves}
+    \[
+      X\overset{u}{\underset{v}{\rightrightarrows}}Y,
+    \]
+    \textit{and let \(w:Y\to Z\) be the quotient. If \(X\) is a sheaf and
+    \(Y\) is separated, then \(Z\) is separated.}
+
+  \item[(iii)]\SGARefTarget{sga3:iv:lemma:4:4:5:item:iii:01} \textit{Consider an amalgamated sum in the category of
+    presheaves, in which \(u\) and \(u'\) are monomorphisms:}
+    \[
+    \begin{array}{ccc}
+      X & \xrightarrow{\ u\ } & Y\\
+      {\scriptstyle u'}\big\downarrow && \big\downarrow\\
+      Y' & \longrightarrow & V.
+    \end{array}
+    \]
+    \textit{If \(Y\) and \(Y'\) are separated and \(X\) is a sheaf, then
+    \(V\) is separated.}
+\end{enumerate}
+
+\noindent\textit{Proof.}
+For \SGARefLink{sga3:iv:lemma:4:4:5:item:i:01}{(i)}, set \(X=\coprod_i X_i\). Let
+\(S\in\operatorname{Ob}\mathscr C\), let
+\(\tau:R\hookrightarrow S\) be a refinement of \(S\), and let
+\(x_1,x_2\in X(S)\) satisfy \(x_1\circ\tau=x_2\circ\tau\).
+There are indices \(i,j\) such that \(x_1\in X_i(S)\) and
+\(x_2\in X_j(S)\). Since \(R\ne R_{\varnothing}\), there is a morphism
+\(\phi:T\to R\) with \(T\in\operatorname{Ob}\mathscr C\). Then
+\[
+  x_1\circ\tau\circ\phi=x_2\circ\tau\circ\phi.
+\]
+Since \(X(T)\) is the disjoint union of the \(X_k(T)\), it follows that
+\(i=j\). Because \(X_i\) is separated and is a subobject of \(X\), the map
+\[
+  X_i(S)\longrightarrow X_i(R)\longrightarrow X(R)
+\]
+is injective. Hence \(x_1=x_2\), which proves that \(X\) is separated.
+
+We next prove \SGARefLink{sga3:iv:lemma:4:4:5:item:iii:01}{(iii)}. Let \(i:Y\to V\) and \(j:Y'\to V\) be the canonical
+morphisms, and let \(K\) be the kernel of the pair
+\[
+  Y\times Y'
+  \overset{p}{\underset{q}{\rightrightarrows}}V,
+  \qquad
+  p=i\circ\operatorname{pr}_1,\quad
+  q=j\circ\operatorname{pr}_2.
+\]
+For \(S\in\operatorname{Ob}\mathscr C\), the monomorphisms \(u,u'\) allow us
+to identify \(X(S)\) with its image in \(Y(S)\), respectively in \(Y'(S)\).
+Write \(Z(S)\), respectively \(Z'(S)\), for the complement. Then \(V(S)\)
+identifies with the disjoint union of \(Z(S)\), \(Z'(S)\), and \(X(S)\).
+It follows at once that
+\[
+  i(S):Y(S)\longrightarrow V(S),
+  \qquad
+  j(S):Y'(S)\longrightarrow V(S)
+\]
+are injective and that
+\[
+  (u\times u')(S):X(S)\longrightarrow K(S)
+\]
+is bijective. Consequently \(i\) and \(j\) are monomorphisms, and
+\(u\times u':X\to K\) is an isomorphism.
+
+Set \(U=Y\coprod Y'\). For a refinement
+\(\tau:R\hookrightarrow S\), there is a commutative diagram
+\[
+\begin{array}{ccc}
+  U(S)&\xrightarrow{\ U(\tau)\ }&U(R)\\
+  \big\downarrow&&\big\downarrow\\
+  V(S)&\xrightarrow{\ V(\tau)\ }&V(R).
+\end{array}
+\]
+Let \(v_1,v_2\in V(S)\) have the same image in \(V(R)\). By the definition
+of \(V\), they lift to elements \(y_1,y_2\in U(S)\); let \(z_1,z_2\) denote
+their images in \(U(R)\). Then \(z_1,z_2\) have the same image in \(V(R)\).
+
+Since \(i:Y\to V\) and \(j:Y'\to V\) are monomorphisms, the maps
+\(Y(R)\to V(R)\) and \(Y'(R)\to V(R)\) are injective. Thus, because \(Y\)
+and \(Y'\) are separated, if \(y_1,y_2\) both belong to \(Y(S)\), or both
+belong to \(Y'(S)\), then \(y_1=y_2\). Otherwise we may suppose that
+\(y_1\in Y(S)\) and \(y_2\in Y'(S)\), so that \(z_1\in Y(R)\) and
+\(z_2\in Y'(R)\). Since \(i\circ z_1=j\circ z_2\), the morphism
+\[
+  z_1\boxtimes z_2:R\longrightarrow Y\times Y'
+\]
+factors through \(K=X\). Moreover, since \(X\) is a sheaf, the restriction
+map identifies \(X(S)\) with \(X(R)\). Hence there is an \(x\in X(S)\) such
+that
+\[
+  u(x)\circ\tau=z_1=y_1\circ\tau,
+  \qquad
+  u'(x)\circ\tau=z_2=y_2\circ\tau.
+\]
+Since \(Y\) and \(Y'\) are separated, \(u(x)=y_1\) and \(u'(x)=y_2\), and
+therefore \(v_1=v_2\). This proves that \(V\) is separated.
+
+Finally, we prove \SGARefLink{sga3:iv:lemma:4:4:5:item:ii:01}{(ii)}. First observe that the morphism of presheaves
+\[
+  X\xrightarrow{\,u\boxtimes v\,}K,
+\]
+where \(K\) is the kernel of the pair
+\[
+  w\circ\operatorname{pr}_i:Y\times Y\rightrightarrows Z,
+\]
+is an isomorphism. Indeed, for every \(T\in\operatorname{Ob}\mathscr C\),
+\(X(T)\) is an equivalence relation on \(Y(T)\), and hence the diagram
+\[
+  X(T)\xrightarrow{\,u\boxtimes v\,}Y(T)\times Y(T)
+  \overset{w\circ\operatorname{pr}_1}
+    {\underset{w\circ\operatorname{pr}_2}{\rightrightarrows}}
+  Z(T)
+\]
+is exact in the category of sets.
+
+Now let \(S\in\operatorname{Ob}\mathscr C\), and let
+\(g_1,g_2:S\to Z\) be two morphisms that agree on a refinement
+\(\tau:R\hookrightarrow S\). By the construction of \(Z\),
+\[
+  Z(S)=Y(S)/X(S),
+\]
+so there are morphisms \(f_1,f_2:S\to Y\) such that \(wf_i=g_i\). We have
+\(wf_1\tau=wf_2\tau\); by the preceding observation, there is a morphism
+\(\phi:R\to X\) such that
+\[
+  u\phi=f_1\tau,\qquad v\phi=f_2\tau.
+\]
+Since \(X\) is a sheaf, there is a morphism \(\psi:S\to X\) with
+\(\phi=\psi\tau\). Thus, in \(Y(R)\),
+\[
+  u\psi\tau=f_1\tau,\qquad v\psi\tau=f_2\tau.
+\]
+Because \(Y(S)\to Y(R)\) is injective, \(Y\) being separated, it follows
+that \(u\psi=f_1\) and \(v\psi=f_2\), hence \(g_1=g_2\). Thus \(Z\) is
+separated.
+

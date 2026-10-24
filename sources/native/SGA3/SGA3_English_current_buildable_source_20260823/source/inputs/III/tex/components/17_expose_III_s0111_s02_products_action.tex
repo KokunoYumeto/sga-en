@@ -1,0 +1,168 @@
+
+\setcounter{footnote}{17}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:lemma:0-1-11}\textbf{Lemma 0.1.11.}
+\textit{Let \(X,X'\) be two \(S\)-schemes. There is a commutative
+diagram}
+
+\SGAThreeNativeDiagram[0.58\textwidth]
+  {native_diagrams/exp3/diagram_015_exp3_p012_lemma0111_product_square.tex}
+  {Compatibility of \(L_X\) and \(X^+\) with products.}
+  {fig:exp3-lemma-0111-product}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 12; combined-reader p. 122}
+
+\textit{Proof.}\footnote{Editor's note: the proof has been expanded.}
+For every \(S\)-scheme \(Y\),
+\[
+\begin{aligned}
+ \operatorname{Hom}_S(Y,X^+\times_S X'^+)
+ &=
+ \operatorname{Hom}_S(Y,X^+)
+ \times\operatorname{Hom}_S(Y,X'^+)\\
+ &\simeq
+ \operatorname{Hom}_S(Y_{\mathscr J},X)
+ \times\operatorname{Hom}_S(Y_{\mathscr J},X')\\
+ &=
+ \operatorname{Hom}_S\bigl(Y,(X\times_S X')^+\bigr).
+\end{aligned}
+\]
+Thus
+\[
+ X^+\times_S X'^+\simeq(X\times_S X')^+.
+\]
+
+Now let \(Y\) be a scheme over \(X^+\times_S X'^+\), represented by a
+morphism
+\[
+ h:Y_{\mathscr J}\longrightarrow X\times_S X'.
+\]
+Let \(p,q\) be the projections from \(X\times_S X'\) to \(X,X'\), and
+put \(f=p\circ h\), \(g=q\circ h\). Since
+\[
+ \Omega^1_{(X_0\times_{S_0}X'_0)/S_0}
+ \simeq
+ p_0^*(\Omega^1_{X_0/S_0})
+ \oplus q_0^*(\Omega^1_{X'_0/S_0})
+\]
+(EGA~IV\textsubscript{4}, 16.4.23), there is a natural isomorphism
+\[
+\begin{aligned}
+ &\operatorname{Hom}_{\mathscr O_{Y_0}}
+   \bigl(f_0^*(\Omega^1_{X_0/S_0}),\mathscr J\mathscr O_Y\bigr)
+ \times
+ \operatorname{Hom}_{\mathscr O_{Y_0}}
+   \bigl(g_0^*(\Omega^1_{X'_0/S_0}),\mathscr J\mathscr O_Y\bigr)\\
+ &\qquad\simeq
+ \operatorname{Hom}_{\mathscr O_{Y_0}}
+ \bigl(h_0^*(\Omega^1_{(X_0\times_{S_0}X'_0)/S_0}),
+       \mathscr J\mathscr O_Y\bigr).
+\end{aligned}
+\]
+In other words,
+\[
+ L_X(Y)\times L_{X'}(Y)\simeq L_{X\times_S X'}(Y).
+\]
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:remark:0-1-12}\textbf{Remark 0.1.12.}\footnote{Editor's note: this remark
+and the corollary that follows have been added.}
+Let \(\mathscr C\) be a category stable under fiber products, let \(S\)
+be an object of \(\mathscr C\), and let \(T_1,T_2\) be two objects over
+\(S\). For \(i=1,2\), let \(L_i\) and \(X_i\) be two objects over
+\(T_i\), as in the diagram below.
+
+\SGAThreeNativeDiagram[0.52\textwidth]
+  {native_diagrams/exp3/diagram_016_exp3_p012_remark0112_fiber_objects.tex}
+  {The objects \(L_i,X_i\) over \(T_i\), and \(T_i\) over \(S\).}
+  {fig:exp3-remark-0112-objects}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 12; combined-reader p. 122}
+
+There is then a natural isomorphism
+\[
+ (L_1\times_{T_1}X_1)\times_S(L_2\times_{T_2}X_2)
+ \simeq
+ (L_1\times_S L_2)
+ \times_{T_1\times_S T_2}(X_1\times_S X_2).
+\]
+Consequently, the preceding lemma gives:
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:corollary:0-1-13}\textbf{Corollary 0.1.13.}
+\textit{Let \(X_1,X_2\) be two \(S\)-schemes. There is a commutative
+diagram of isomorphisms:}
+
+\SGAThreeNativeDiagram[0.96\textwidth]
+  {native_diagrams/exp3/diagram_017_exp3_p013_corollary0113_isomorphisms.tex}
+  {The product isomorphisms of \SGARefLink{sga3:iii:corollary:0-1-13}{Corollary 0.1.13}.}
+  {fig:exp3-corollary-0113}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 13; combined-reader p. 123}
+
+We can now state:
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:proposition:0-2}\textbf{Proposition 0.2.}
+\textit{For every \(S\)-scheme \(X\), one can define a left action of
+the \(X^+\)-abelian group \(L_X\) on the \(X^+\)-object \(X\), with
+the following properties:}
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:iii:proposition:0-2:item:i}(i)] \textit{this action makes \(X\) formally principal
+homogeneous under \(L_X\) over \(X^+\); that is, the morphism}
+\[
+ L_X\times_{X^+}X\longrightarrow X\times_{X^+}X
+\]
+\textit{is an isomorphism of \(X^+\)-functors;}
+
+\item[\SGAInlineRefTarget{sga3:iii:proposition:0-2:item:ii}(ii)] \textit{the action is functorial in the \(S\)-scheme
+\(X\): for every \(S\)-morphism \(f:X\to W\), the following diagram
+is commutative;}
+
+\SGAThreeNativeDiagram[0.55\textwidth]
+  {native_diagrams/exp3/diagram_018_exp3_p013_proposition02_functoriality_square.tex}
+  {Functoriality of the action in \SGARefLink{sga3:iii:proposition:0-2:item:ii}{Proposition 0.2(ii)}.}
+  {fig:exp3-proposition-02-functoriality}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 13; combined-reader p. 123}
+
+\item[\SGAInlineRefTarget{sga3:iii:proposition:0-2:item:iii}(iii)] \textit{the action commutes with fiber products: for all
+\(S\)-schemes \(X_1,X_2\), the following diagram is commutative.}
+\end{enumerate}
+
+\SGAThreeNativeDiagram[0.99\textwidth]
+  {native_diagrams/exp3/diagram_019_exp3_p013_proposition02_product_diagram.tex}
+  {Compatibility of the action with fiber products.}
+  {fig:exp3-proposition-02-products}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 13; combined-reader p. 123}
+
+\textit{Proof.}\footnote{Editor's note: the original has been modified
+and expanded to account for the preceding additions; in particular,
+those additions incorporate, with details, the content of original
+page 89.}
+Parts \SGARefLink{sga3:iii:proposition:0-2:item:i}{(i)} and \SGARefLink{sga3:iii:proposition:0-2:item:ii}{(ii)} follow respectively from \SGARefLink{sga3:iii:corollary:0-1-9}{Corollaries 0.1.9} and
+\SGARefLink{sga3:iii:corollary:0-1-10}{0.1.10}. To prove \SGARefLink{sga3:iii:proposition:0-2:item:iii}{(iii)}, write
+\[
+ P(X)=L_X\times_{X^+}X
+\]
+for every \(S\)-scheme \(X\). Applying \SGARefLink{sga3:iii:proposition:0-2:item:ii}{(ii)} to the projections
+\[
+ p_i:X_1\times_S X_2\longrightarrow X_i
+\]
+gives the following commutative squares.
+
+\SGAThreeNativeDiagram[0.55\textwidth]
+  {native_diagrams/exp3/diagram_020_exp3_p013_proposition02_projection_square.tex}
+  {The square induced by each projection \(p_i\).}
+  {fig:exp3-proposition-02-projection-square}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 13; combined-reader p. 123}
+
+For \(i=1,2\), these yield the commutative square
+
+\SGAThreeNativeDiagram[0.55\textwidth]
+  {native_diagrams/exp3/diagram_021_exp3_p014_proposition02_final_square.tex}
+  {The product square in the proof of \SGARefLink{sga3:iii:proposition:0-2:item:iii}{Proposition 0.2(iii)}.}
+  {fig:exp3-proposition-02-final-square}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 14; combined-reader p. 124}
+
+Combining this square with \SGARefLink{sga3:iii:corollary:0-1-13}{Corollary 0.1.13} shows that its vertical
+arrow is an isomorphism and gives precisely the commutative diagram
+asserted in \SGARefLink{sga3:iii:proposition:0-2:item:iii}{(iii)}.
+

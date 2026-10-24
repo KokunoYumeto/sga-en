@@ -1,0 +1,418 @@
+
+the \(\mathscr C\)-group structure on \(G\), and finally by
+\(\operatorname{pr}_{2,3}\) the projection of
+\(G\times G\times X=G\times(G\times X)\) onto the second factor. Then
+
+\SGAThreeDiagram[0.47\textwidth]
+  {figures/exp5/p256_action_groupoid_continuation.png}
+  {The groupoid attached to the action of the \(\mathscr C\)-group \(G\) on \(X\).}
+  {fig:sga3-exp5-p256-action-groupoid}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 6; combined-reader p. 268; page header p. 256}
+
+\noindent is a \(\mathscr C\)-groupoid.
+
+\medskip
+\phantomsection\label{par:sga3-V-2-b}%
+\noindent\textbf{b)} Let \(d_0,d_1:X_1\to X_0\) be an
+\emph{equivalence pair}. In other words, if
+\(d_0\boxtimes d_1:X_1\to X_0\times X_0\) is the arrow with components
+\(d_0\) and \(d_1\), we suppose that, for every object \(T\) of
+\(\mathscr C\), the map \((d_0\boxtimes d_1)(T)\) is a bijection from
+\(X_1(T)\) onto the graph of an equivalence relation on \(X_0(T)\).
+Consequently, \(X_1(T)\) is identified with the set of pairs \((x,y)\) of
+elements of \(X_0(T)\) such that \(x\sim y\). Likewise,
+\[
+  X_2(T)=\bigl(X_1\times_{d_1,d_0}X_1\bigr)(T)
+\]
+is identified with the set of triples \((x,y,z)\) of elements of
+\(X_0(T)\) such that \(x\sim y\) and \(y\sim z\). There is therefore a
+unique arrow \(d'_1:X_2\to X_1\) making squares
+\hyperref[sga3:v:lemma:1-2:equation:1]{(1)} and
+\hyperref[sga3:v:lemma:1-2:equation:2]{(2)} commute: \(d'_1(T)\) must send
+\((x,y,z)\in X_2(T)\) to \((x,z)\in X_1(T)\). With this choice of
+\(d'_1\),
+\[
+  \bigl(d_0,d_1:X_1\rightrightarrows X_0,d'_1\bigr)
+\]
+is a \(\mathscr C\)-groupoid.
+
+Conversely, consider a \(\mathscr C\)-groupoid \(X_\ast\) for which
+\(d_0\boxtimes d_1:X_1\to X_0\times X_0\) is a monomorphism. Then
+\((d_0,d_1)\) is an equivalence pair, and \(X_\ast\) can be reconstructed
+from \((d_0,d_1)\) as explained \hyperref[par:sga3-V-2-b]{a few lines above}.%
+\footnote{\label{note:sga3-V-9}Editor's note: in particular, if \(G\) is
+a \(\mathscr C\)-group acting on the left on an object \(X\) of
+\(\mathscr C\), and if \(X_\ast\) is the \(\mathscr C\)-groupoid defined
+in \hyperref[par:sga3-V-2-a]{2(a)}, then \((d_0,d_1)\) is an equivalence pair if and only if \(G\)
+acts freely on \(X\); cf. Expos\'e III, 3.2.1.}
+
+\medskip
+\phantomsection\label{par:sga3-V-2-c}%
+\noindent\textbf{c)} If \(p:X\to Y\) is any arrow of \(\mathscr C\), and
+if \(\operatorname{pr}_1\) and \(\operatorname{pr}_2\) are the two
+projections of \(X\times_{p,p}X\) onto \(X\), then
+\[
+  (\operatorname{pr}_1,\operatorname{pr}_2):
+  X\times_{p,p}X\rightrightarrows X
+\]
+is an equivalence pair. The arrow \(p\) is called an
+\emph{effective epimorphism} if the diagram
+
+\SGAThreeDiagram[0.36\textwidth]
+  {figures/exp5/p256_effective_epimorphism.png}
+  {The defining diagram for an effective epimorphism.}
+  {fig:sga3-exp5-p256-effective-epimorphism}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 6; combined-reader p. 268; page header p. 256}
+
+\noindent is exact, that is, if
+\[
+  (Y,p)=\operatorname{Coker}(\operatorname{pr}_1,\operatorname{pr}_2).
+\]
+
+For example, let \(S\) be a Noetherian scheme and let \(\mathscr C\) be
+the category of schemes finite over \(S\). We show that an epimorphism in
+\(\mathscr C\) need not be effective. Take
+\[
+  S=\operatorname{Spec}k[T^3,T^5],\qquad
+  Y=S,\qquad X=\operatorname{Spec}k[T],
+\]
+where \(k\) is a commutative field. If \(i\) is the inclusion of
+\(B=k[T^3,T^5]\) into \(A=k[T]\), take \(p=\operatorname{Spec}i\). Then
+\(X\times_{p,p}X\) is identified with \(\operatorname{Spec}(A\otimes_B A)\),
+and \(\operatorname{Coker}(\operatorname{pr}_1,\operatorname{pr}_2)\)
+with \(\operatorname{Spec}B'\), where \(B'\) is the subring of \(A\)
+consisting of the elements \(a\) such that
+\(a\otimes_B1=1\otimes_Ba\). But
+\[
+  T^7\otimes_B1
+  =(T^2T^5)\otimes_B1
+  =T^2\otimes_BT^5
+  =T^2\otimes_B(T^3T^2)
+  =T^5\otimes_BT^2
+  =1\otimes_BT^7.
+\]
+Thus \(T^7\) belongs to \(B'\), does not belong to \(B\), and
+\(\operatorname{Spec}B'\) is different from \(\operatorname{Spec}B\),
+which gives the counterexample.%
+\footnote{\label{note:sga3-V-10}Editor's note: the same argument applies
+to \(B=k[T^3,T^4]\) and \(T^5\otimes_B1\); more generally, it applies
+to \(B=k[T^n,T^{n+r}]\) and the element \(T^{n+2r}\otimes_B1\), provided
+that \(n\) does not divide \(2r\).}
+
+\section*{3. Some sorites concerning \(\mathscr C\)-groupoids}
+\phantomsection\label{sec:sga3-V-3}
+\addcontentsline{toc}{section}{3. Some sorites concerning
+  \texorpdfstring{\(\mathscr C\)}{C}-groupoids}
+
+Here are, in no particular order, some remarks used below.
+
+\medskip
+\phantomsection\label{par:sga3-V-3-a}%
+\noindent\textbf{a)} Let
+
+\SGAThreeDiagram[0.31\textwidth]
+  {figures/exp5/p257_x_groupoid.png}
+  {The \(\mathscr C\)-groupoid \(X_\ast\).}
+  {fig:sga3-exp5-p257-x-groupoid}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 7; combined-reader p. 269; page header p. 257}
+
+\noindent be a \(\mathscr C\)-groupoid, and let \(f_0:Y_0\to X_0\) be
+an arrow of \(\mathscr C\). We shall define a \(\mathscr C\)-groupoid
+with base \(Y_0\),
+
+\SGAThreeDiagram[0.31\textwidth]
+  {figures/exp5/p257_y_induced_groupoid.png}
+  {The induced \(\mathscr C\)-groupoid \(Y_\ast\).}
+  {fig:sga3-exp5-p257-y-induced-groupoid}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 7; combined-reader p. 269; page header p. 257}
+
+\noindent which will be said to be \emph{induced by \(X_\ast\) and
+\(f_0\)}. We also say that \(Y_\ast\) is the \emph{inverse image of
+\(X_\ast\) under the base change \(f_0\)}.
+
+We choose \(Y_1\) to be the fiber product of the diagram
+
+\SGAThreeDiagram[0.29\textwidth]
+  {figures/exp5/p257_base_change_fiber_square.png}
+  {The fiber-product definition of \(Y_1\).}
+  {fig:sga3-exp5-p257-base-change-fiber-square}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 7; combined-reader p. 269; page header p. 257}
+
+\noindent and take \(e_0\) and \(e_1\) to be the composites of the
+canonical arrow \(Y_1\to Y_0\times Y_0\) with the first and second
+projections of \(Y_0\times Y_0\), respectively. The morphism
+\(Y_1\to Y_0\times Y_0\) is then \(e_0\boxtimes e_1\), and
+\[
+  f_0\circ e_i=d_i\circ f_1\qquad(i=0,1),
+\]
+where \(f_1\) denotes the projection of \(Y_1\) onto \(X_1\).
+
+Set \(Y_2=Y_1\times_{e_0,e_1}Y_1\), cf.
+\hyperref[par:sga3-V-1-c]{1(c)}. One may say that the pair \((e_0,e_1)\)
+is defined so that, for every \(T\in\mathscr C\) and every pair \((y,x)\)
+of elements of \(Y_0(T)\), there is a certain bijective correspondence
+\[
+  \psi\longmapsto{}_{y}\psi_{x}
+\]
+between the arrows \(\psi\) of \(X_\ast(T)\) with source \(f_0(x)\) and
+target \(f_0(y)\), and the arrows \({}_{y}\psi_x\) of \(Y_\ast(T)\)
+with source \(x\) and target \(y\). Thus \(e'_1:Y_2\to Y_1\) is
+determined by defining, for every \(T\in\mathscr C\), the composition
+of arrows in \(Y_\ast(T)\) by the formula
+\[
+  {}_{z}\psi_y\circ{}_{y}\varphi_x
+  ={}_{z}(\psi\circ\varphi)_x.
+\]
+It is clear that this definition makes each \(Y_\ast(T)\) a groupoid.
+
+\medskip
+\phantomsection\label{par:sga3-V-3-b}%
+\noindent\textbf{b)} Given the \(\mathscr C\)-groupoid \(X_\ast\) and
+the base change \(f_0:Y_0\to X_0\), one can reconstruct the pair
+\((e_0,e_1):Y_1\rightrightarrows Y_0\) in another way.%
+\footnote{\label{note:sga3-V-11}Editor's note: this second viewpoint is
+used in \hyperref[par:sga3-V-3-f]{3(f)} and in the proof of \hyperref[lem:sga3-V-6.1]{6.1}.}
+Construct \(Y_0\times_{X_0}X_1\), \(\operatorname{pr}_1\), and
+\(\operatorname{pr}_2\) so that the square
+
+\SGAThreeDiagram[0.27\textwidth]
+  {figures/exp5/p257_reconstruction_square.png}
+  {The Cartesian square defining \(Y_0\times_{X_0}X_1\).}
+  {fig:sga3-exp5-p257-reconstruction-square}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 7; combined-reader p. 269; page header p. 257}
+
+\noindent is Cartesian. A straightforward reduction to the set-theoretic
+case then shows that the following square is Cartesian:
+
+\SGAThreeDiagram[0.27\textwidth]
+  {figures/exp5/p258_cartesian_reconstruction_square.png}
+  {The second Cartesian square in the reconstruction of \((e_0,e_1)\).}
+  {fig:sga3-exp5-p258-cartesian-reconstruction-square}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 8; combined-reader p. 270; page header p. 258}
+
+Here \(f_1\) denotes the canonical projection of
+\[
+  Y_1=(Y_0\times Y_0)\times_{(X_0\times X_0)}X_1
+\]
+onto \(X_1\).
+
+\medskip
+\phantomsection\label{par:sga3-V-3-c}%
+\noindent\textbf{c)} We give two examples of inverse images of a
+\(\mathscr C\)-groupoid. Take \(Y_0=X_1\) and \(f_0=d_0\). For every
+object \(T\) of \(\mathscr C\), the set \(Y_1(T)\) is then identified
+with the set of diagrams of the form
+
+\SGAThreeDiagram[0.18\textwidth]
+  {figures/exp5/p258_inverse_image_phi_diagram.png}
+  {An arrow of the first inverse-image groupoid.}
+  {fig:sga3-exp5-p258-inverse-image-phi}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 8; combined-reader p. 270; page header p. 258}
+
+\noindent in \(X_\ast(T)\). The source of such a diagram is the arrow
+\(f\), and its target is the arrow \(g\). These diagrams compose in the
+evident way.
+
+Now set \(Y'_0=X_1\) and \(f'_0=d_1\) (we add the primes% 
+\footnote{\label{note:sga3-V-12}Editor's note: ``accents'' in the
+original.}
+to avoid any confusion with the preceding example). In this case, for
+every \(T\in\mathscr C\), the set \(Y'_1(T)\) is identified with the set
+of diagrams of the form
+
+\SGAThreeDiagram[0.18\textwidth]
+  {figures/exp5/p258_inverse_image_psi_diagram.png}
+  {An arrow of the second inverse-image groupoid.}
+  {fig:sga3-exp5-p258-inverse-image-psi}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 8; combined-reader p. 270; page header p. 258}
+
+\noindent in the groupoid \(X_\ast(T)\). The source of such a diagram is
+\(f\), its target is \(g\), and these diagrams again compose in the
+evident way.
+
+It is now clear that the identity map of \(Y_0(T)\), together with the
+map
+
+\SGAThreeDiagram[0.44\textwidth]
+  {figures/exp5/p258_groupoid_isomorphism_map.png}
+  {The map from \(Y_1(T)\) to \(Y'_1(T)\).}
+  {fig:sga3-exp5-p258-groupoid-isomorphism-map}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 8; combined-reader p. 270; page header p. 258}
+
+\noindent defines an isomorphism from the groupoid \(Y_\ast(T)\) onto
+\(Y'_\ast(T)\). Moreover, this isomorphism depends functorially on \(T\),
+so the \(\mathscr C\)-groupoids \(Y_\ast\) and \(Y'_\ast\) are
+isomorphic.%
+\footnote{\label{note:sga3-V-13}Editor's note: this plays a crucial role
+in the proof of \hyperref[lem:sga3-V-6.1]{Lemma~6.1}.}
+
+\medskip
+\phantomsection\label{par:sga3-V-3-d}%
+\noindent\textbf{d)}
+
+\medskip
+\phantomsection\label{prop:sga3-V-3.1}%
+\noindent\textbf{Proposition 3.1.}---
+\textit{Keep the notation of \hyperref[par:sga3-V-3-a]{3(a)}, and suppose that \(f_0\) is an
+effective and universal epimorphism. Then
+\(\operatorname{Coker}(d_0,d_1)\) exists if and only if
+\(\operatorname{Coker}(e_0,e_1)\) exists.%
+\footnote{\label{note:sga3-V-14}Editor's note: the original has been
+modified to display explicitly the isomorphism below.}
+Moreover, in this case \(f_0\) induces an isomorphism}
+\phantomsection\label{eq:sga3-V-3.1-cokernel-isomorphism}%
+\[
+  \operatorname{Coker}(d_0,d_1)
+  \xrightarrow{\ \sim\ }
+  \operatorname{Coker}(e_0,e_1).
+\]
+
+Recall first that an epimorphism \(f_0:Y_0\to X_0\) is called
+\emph{universal} if, in every Cartesian square
+
+\SGAThreeDiagram[0.18\textwidth]
+  {figures/exp5/p259_universal_epimorphism_square.png}
+  {A base change of the universal epimorphism \(f_0\).}
+  {fig:sga3-exp5-p259-universal-epimorphism-square}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 9; combined-reader p. 271; page header p. 259}
+
+\noindent the arrow \(f'\) is an epimorphism. Now let \(C(d_0,d_1)\)
+denote the covariant functor from \(\mathscr C\) to sets which assigns to
+every \(T\in\mathscr C\) the kernel of the pair
+\[
+  T(d_0),T(d_1):T(X_0)\rightrightarrows T(X_1),
+\]
+and define \(C(e_0,e_1)\) in the same way. For every
+\(T\in\mathscr C\), there is therefore a commutative diagram
+
+\SGAThreeDiagram[0.51\textwidth]
+  {figures/exp5/p259_functor_kernel_diagram.png}
+  {The comparison of the functors \(C(d_0,d_1)\) and \(C(e_0,e_1)\).}
+  {fig:sga3-exp5-p259-functor-kernel-diagram}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 9; combined-reader p. 271; page header p. 259}
+
+Here \(T(f)\) is the injection induced by the injection \(T(f_0)\). If
+we show that \(T(f)\) is surjective for every \(T\), we obtain a
+functorial isomorphism
+\[
+  f:C(d_0,d_1)\xrightarrow{\ \sim\ }C(e_0,e_1).
+\]
+Thus one of these functors is representable if and only if the other is,
+which proves \hyperref[prop:sga3-V-3.1]{the proposition}.
+
+To prove that \(T(f)\) is surjective, consider the diagram
+
+\SGAThreeDiagram[0.52\textwidth]
+  {figures/exp5/p259_delta_proof_diagram.png}
+  {The diagram used to prove the surjectivity of \(T(f)\).}
+  {fig:sga3-exp5-p259-delta-proof-diagram}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 9; combined-reader p. 271; page header p. 259}
+
+Here \(\Delta\) is the section of \(Y_1\to Y_0\times Y_0\) defined by
+the morphism
+\[
+  s\circ f_0\circ\operatorname{pr}_1:Y_0\times Y_0\longrightarrow X_1,
+\]
+where \(s:X_0\to X_1\) satisfies
+\hyperref[eq:sga3-exp5-3]{(3)} and
+\hyperref[eq:sga3-exp5-3bis]{(3 bis)} of \hyperref[sec:sga3-V-1]{Section~1}.
+
+If \(g:Y_0\to T\) satisfies \(g\circ e_0=g\circ e_1\), then
+\[
+  g\circ e_0\circ\Delta=g\circ e_1\circ\Delta,
+\]
+so \(g\circ\operatorname{pr}_1=g\circ\operatorname{pr}_2\). Since
+\(f_0\) is an effective epimorphism, \(g\) factors as \(h\circ f_0\)
+for an arrow \(h:X_0\to T\); in other words,
+\(g=T(f_0)(h)\). It remains to prove that
+\(h\in C(d_0,d_1)(T)\), or equivalently that \(hd_0=hd_1\). But
+\[
+  hd_0f_1=hf_0e_0=ge_0=ge_1=hf_0e_1=hd_1f_1,
+\]
+and the desired equality follows because \(f_1\) is an epimorphism
+(since \(f_0\) is a universal epimorphism).
+
+\medskip
+\phantomsection\label{par:sga3-V-3-e}%
+\noindent\textbf{e)} Now let \(S\) be a scheme and take
+\(\mathscr C=(\mathbf{Sch}/S)\). The data of a \(\mathscr C\)-groupoid
+
+\SGAThreeDiagram[0.37\textwidth]
+  {figures/exp5/p260_scheme_groupoid.png}
+  {A \((\mathbf{Sch}/S)\)-groupoid.}
+  {fig:sga3-exp5-p260-scheme-groupoid}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 10; combined-reader p. 272; page header p. 260}
+
+\noindent defines an equivalence relation on the set \(\underline{X_0}\)
+underlying the scheme \(X_0\): for \(x,y\in\underline{X_0}\), write
+\(x\sim y\) if there exists \(z\in\underline{X_1}\) such that
+\(x=d_1z\) and \(y=d_0z\). Reflexivity and symmetry are clear.%
+\footnote{\label{note:sga3-V-15}Editor's note: reflexivity follows from
+the existence of \(s:X_0\to X_1\), which is a section of both \(d_0\)
+and \(d_1\); symmetry follows from the existence of the involution
+\(\sigma\) of \(X_1\) which ``exchanges \(d_0\) and \(d_1\)'', that is,
+which satisfies \(d_0\sigma=d_1\) and \(d_1\sigma=d_0\); cf. \hyperref[sec:sga3-V-1]{Section~1},
+\hyperref[eq:sga3-exp5-3]{(3)},
+\hyperref[eq:sga3-exp5-3bis]{(3 bis)}, and
+\hyperref[eq:sga3-exp5-dagger]{(\(\dagger\))}.}
+Let us prove transitivity. If \(x\sim y\) and \(y\sim z\), there exist
+\(u,v\in\underline{X_1}\) such that
+\[
+  x=d_1u,\qquad y=d_0u,\qquad y=d_1v,\qquad z=d_0v.
+\]
+It follows that \((v,u)\) belongs to the set-theoretic fiber product
+\(\underline{X_1}\times_{\underline{d_1},\underline{d_0}}
+\underline{X_1}\). Since the canonical map
+
+\SGAThreeDiagram[0.32\textwidth]
+  {figures/exp5/p260_underlying_fiber_product_map.png}
+  {The canonical map from the underlying set of the fiber product to the
+  fiber product of the underlying sets.}
+  {fig:sga3-exp5-p260-underlying-fiber-product-map}
+  {Polo--Gille Exp5-13oct24.pdf, component-local p. 10; combined-reader p. 272; page header p. 260}
+
+\noindent is surjective, \((v,u)\) is the image of some
+\(w\in\underline{X_2}\). Hence
+\[
+  x=d_1d'_1w,\qquad z=d_0d'_1w,
+\]
+and therefore \(x\sim z\).
+
+\medskip
+\phantomsection\label{par:sga3-V-3-f}%
+\noindent\textbf{f)} Keep the notation of \hyperref[par:sga3-V-3-a]{3(a)} and \hyperref[par:sga3-V-3-b]{3(b)}, still taking
+\(\mathscr C=(\mathbf{Sch}/S)\). If \(x,y\) are points of \(Y_0\), then
+\[
+  x\sim y\quad\Longleftrightarrow\quad f_0(x)\sim f_0(y).
+\]
+Thus the inverse image of the equivalence relation defined by a groupoid
+is the equivalence relation defined by the inverse image of that
+groupoid.
+
+Indeed, suppose that \(x\sim y\). There is a \(z\in\underline{Y_1}\)
+such that \(x=e_1(z)\) and \(y=e_0(z)\). Since
+\(f_0\circ e_i=d_i\circ f_1\) for \(i=0,1\), it follows that
+\[
+  f_0(x)=d_1f_1(z),\qquad f_0(y)=d_0f_1(z),
+\]
+and hence \(f_0(x)\sim f_0(y)\).
+
+Conversely, suppose that \(f_0(x)\sim f_0(y)\), and let
+\(z\in\underline{X_1}\) satisfy
+\[
+  f_0(y)=d_1(z),\qquad f_0(x)=d_0(z).
+\]
+Using the construction and notation of \hyperref[par:sga3-V-3-b]{3(b)}, there is a point
+\(t\in\underline{Y_0\times_{X_0}X_1}\) such that
+\(\operatorname{pr}_1(t)=x\) and \(\operatorname{pr}_2(t)=z\). Since
+\(f_0(y)=d_1\operatorname{pr}_2(t)\), there is likewise an
+\(s\in\underline{Y_1}\) such that
+\[
+  y=e_1(s),\qquad (e_0\boxtimes f_1)(s)=t.
+\]
+It follows that
+\[
+  e_0(s)=\operatorname{pr}_1(e_0\boxtimes f_1)(s)
+  =\operatorname{pr}_1(t)=x,
+\]
+so \(x\sim y\).

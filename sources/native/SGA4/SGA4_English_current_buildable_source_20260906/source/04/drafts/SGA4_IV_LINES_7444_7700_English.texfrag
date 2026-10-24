@@ -1,0 +1,261 @@
+\subsection{Gluing sheaf}\etiquette[9.6]{IV.subsec9.6}
+
+We saw in \hyperref[IV.theo9.5.4]{9.5.4} that the datum of a topos $E$
+equipped with an open $U$ amounts essentially to that of two topoi
+$\mathcal{U}$ and $\mathcal{F}$ and a gluing functor
+\begin{equation*}
+\rho:\mathcal{U}\longrightarrow \mathcal{F}\tag{9.6.1}
+\end{equation*}\etiquette[9.6.1]{IV.eq9.6.1}
+\ie a functor admitting a pro-adjoint
+\begin{equation*}
+\sigma:\Pro(\mathcal{F})\longrightarrow
+\Pro(\mathcal{U}){\quoi}.\tag{9.6.2}
+\end{equation*}\etiquette[9.6.2]{IV.eq9.6.2}
+By the sorites on pro-adjoint functors (\hyperrefext[I][I.sec8]{8}), the
+functor $\rho$ is determined up to unique isomorphism (and consequently
+the glued topos $E=(\mathcal{F},\mathcal{U},\rho)$ is determined up to
+equivalence of topoi) once the functor $\sigma$ is known, or,
+equivalently, once the functor induced by $\sigma$ is known:
+\begin{equation*}
+\sigma_{\circ}:\mathcal{F}\longrightarrow
+\Pro(\mathcal{U}){\quoi}.\tag{9.6.3}
+\end{equation*}\etiquette[9.6.3]{IV.eq9.6.3}
+The functor $\sigma$ is determined, up to unique isomorphism, by the
+property of commuting with small filtered projective limits and of
+extending the functor $\sigma_\circ$. On the other hand, for a given
+functor \eqhyperref[IV.eq9.6.3]{9.6.3} to be isomorphic to a pro-adjoint, it
+is plainly necessary and sufficient that, for every object $X$ of
+$\mathcal{U}$, the contravariant functor
+$$
+Y\longmapsto \Hom_{\Pro(\mathcal{U})}(\sigma_{\circ}(Y),X)
+$$
+on\pageoriginale $\mathcal{F}$ be representable, or equivalently be a
+sheaf on $\mathcal{F}$ for the canonical topology
+(\sisi{\hyperref[IV.subsubsec1.1.2]{1.1.2} (iii)}{\hyperref[IV.theo1.2]{1.2} iii)}). It follows at once that this
+also means that the opposite functor
+\begin{equation*}
+\sigma_{\circ}^{\circ}:\mathcal{F}^{\circ}\longrightarrow
+\Pro(\mathcal{U})^{\circ}\subset
+\check{\mathcal{U}}=\Hhom(\mathcal{U},(\Ens))\tag{9.6.4}
+\end{equation*}\etiquette[9.6.4]{IV.eq9.6.4}
+is a \emph{sheaf} on $\mathcal{F}$ with values in
+$\Pro(\mathcal{U})^{\circ}$ (\hyperrefext[II][II.def6.1]{6.1}). Thus, \emph{the
+datum of a gluing functor} \eqhyperref[IV.eq9.6.1]{9.6.1} \emph{is also
+equivalent} (up to isomorphism) \emph{to that of a sheaf on
+$\mathcal{F}$ with values in} $\Pro(\mathcal{U})^{\circ}$. The sheaf
+thus associated with a gluing functor (or with a situation
+$(E,U,\mathcal{F})$ as in (\hyperref[IV.subsec9.3]{9.3})) is called the
+\emph{gluing sheaf} associated with the gluing functor $\rho$ under
+consideration (\resp with the open $U$ of the topos $E$).
+
+\begin{enonce*}[remark]{Exercise 9.6.5}\etiquette[9.6.5]{IV.exer9.6.5}
+Refine \hyperref[IV.theo9.5.4]{9.5.4} into a statement of 2-equivalence of
+2-categories between the 2-category consisting of pairs $(E,U)$, where
+$E$ is a topos and $U$ an open of the latter, and the 2-category consisting
+of triples $(\mathcal{U},\mathcal{F},\rho)$, where $\mathcal{U}$ and
+$\mathcal{F}$ are topoi and
+$\rho:\mathcal{U}\rightarrow \mathcal{F}$ is a gluing functor (the
+explicit description of the 2-categories in question being left to
+the reader). Give a variant of this statement involving the
+2-category of triples $(\mathcal{U},\mathcal{F}, \phi)$, where $\phi$
+is now a sheaf on $\mathcal{F}$ with values in
+$\Pro(\mathcal{U})^{\circ}$.
+\end{enonce*}
+
+\subsection{Points of a glued topos}\etiquette[9.7]{IV.subsec9.7}
+
+\subsubsection{}\etiquette[9.7.1]{IV.subsec9.7.1}
+Let $C$ be a category, and let
+$$
+u:D'\longrightarrow C\quav v:D''\longrightarrow C
+$$
+be two fully faithful functors such that the essential images $C'$ and
+$C''$ of $u$ and $v$ satisfy
+$$
+\Ob C'\cap \Ob C''=\phi\quav \Ob C'\cup \Ob C''=\Ob C{\quoi}.
+$$
+Suppose, in addition, that
+$$
+X'\in \Ob C'\quav X''\in \Ob C''\Rightarrow
+\Hom(X'',X')=\phi{\quoi},
+$$
+or, equivalently, that
+$$
+\Hom(v(A''), u(A'))=\phi\mbox{ for } A'\in \Ob D', A''\in \Ob
+D''{\quoi}.
+$$
+It is then immediate that the category $C$ can be reconstructed, up
+to canonical\pageoriginale isomorphism, from the categories $C'$ and
+$C''$ and the functor
+$$
+(X',X'')\longmapsto \Hom(X',X''):{C'}^{\circ}\times
+C''\longrightarrow (\Ens){\quoi};
+$$
+similarly, $C$ can be reconstructed up to equivalence (this
+equivalence being defined up to unique isomorphism) from $D'$, $D''$,
+and the functor
+$$
+(A',A'')\longmapsto \Hom(u(A'), v(A'')):{D'}^{\circ}\times
+D''\longrightarrow (\Ens){\quoi}.
+$$
+This observation applies in particular to the situation described in
+the following proposition, and shows that the category
+$\Ppoint(E)$ is determined, up to equivalence, by the categories
+$\Ppoint(\mathcal{U})$ and $\Ppoint(\mathcal{F})$ and by a certain
+functor
+$$
+\Ppoint(\mathcal{U})^{\circ}\times
+\Ppoint(\mathcal{F})\longrightarrow (\Ens)
+$$
+derived from the gluing functor $\rho:\mathcal{U}\rightarrow
+\mathcal{F}$.
+
+\begin{enonce*}{Proposition 9.7.2}\etiquette[9.7.2]{IV.prop9.7.2}
+Let $E$ be a topos, let $U$ be an open of $E$, let
+$\mathcal{U}=E_{/U}$, and let $\mathcal{F}$ be the closed subtopos of
+$E$ complementary to $U$. Consider the functors $p\mapsto p\circ j$
+and $q\mapsto q\circ i$ induced by the inclusion morphisms
+$j:\mathcal{U}\rightarrow E$ and $i:\mathcal{F} \rightarrow E$:
+\begin{equation*}
+u:\Ppoint(\mathcal{U})\longrightarrow \Ppoint(E),\quad
+v:\Ppoint(\mathcal{F})\longrightarrow
+\Ppoint(E){\quoi}.\tag{9.7.2.1}
+\end{equation*}\etiquette[9.7.2.1]{IV.eq9.7.2.1}
+Then the following assertions hold:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The preceding functors $u$ and $v$ are fully faithful, and every
+point of $E$ belongs to the essential image of exactly one of the
+functors $u$ and $v$.
+
+\item Let $p$ and $q$ be two points of $E$ such that $p$ (\resp $q$)
+belongs to the essential image of $u$ (\resp of $v$). Then
+\begin{equation*}
+\Hom(q,p)=\phi{\quoi}.\tag{9.7.2.2}
+\end{equation*}\etiquette[9.7.2.2]{IV.eq9.7.2.2}
+
+\item Let $p$ (\resp $q$) be a point of $\mathcal{U}$ (\resp of
+$\mathcal{F}$). There is then an isomorphism, functorial in $(q,p)$:
+\begin{equation*}
+\Hom(u(p),v(q))\simeq \Hom(\Pro(\rho)(p),q)\simeq
+\Hom(p,\sigma(q)){\quoi},\tag{9.7.2.3}
+\end{equation*}\etiquette[9.7.2.3]{IV.eq9.7.2.3}
+where
+$$
+\sigma:\Pro(\mathcal{F})\longrightarrow \Pro(\mathcal{U})
+$$
+is the functor $\eqhyperref[IV.eq9.6.2]{9.6.2}$, pro-adjoint to the gluing
+functor $\rho:\mathcal{U}\rightarrow \mathcal{F}$, and where, in
+writing
+$$
+\rho:\mathcal{U}\longrightarrow \mathcal{F}{\quoi},
+$$
+we have\pageoriginale identified (up to equivalence) the categories
+$\Ppoint(\mathcal{U})$ and $\Ppoint(\mathcal{F})$ with full
+subcategories of $\Pro(\mathcal{U})$ and $\Pro(\mathcal{F})$,
+respectively (\hyperref[IV.subsubsec6.8.5]{6.8.5}).
+\end{enumerate}
+\end{enonce*}
+
+\noindent \emph{Proof}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The full faithfulness of $u$ and $v$ is known
+(\hyperref[IV.prop9.1.4]{9.1.4}). The assertion concerning the essential
+images of $u$ and $v$ follows from the criteria
+\hyperref[IV.subsubsec9.2.5]{9.2.5} and \hyperref[IV.prop9.2.4]{9.2.4} for a
+point $P\rightarrow E$ to factor, up to isomorphism, through
+$\mathcal{U}$ \resp $\mathcal{F}$, taking into account the fact that
+the punctual topos $P$ has only two opens, namely the initial object
+and the terminal object of $P$.
+
+\item In view of a), the assertion means that if the point
+$p:P\rightarrow E$ factors through $\mathcal{U}$, then the same holds
+for every point $p':P\rightarrow E$ such that
+$\Hom(p',p)\neq \phi$. Now, if $\alpha :p'\rightarrow p$, it induces
+$p^{\ast}(U)\rightarrow {p'}^{\ast}(U)$, and
+then $p^{\ast}(U)=e_p$ implies
+${p'}^{\ast}(U)=e_p$, \cqfd
+
+\item By the lemma \hyperref[IV.lem9.7.2.4]{9.7.2.4} below, applied to the
+inclusions $j:\mathcal{U}\rightarrow E$ and
+$i:\mathcal{F}\rightarrow E$, there is a diagram of functors
+commuting up to canonical isomorphisms:
+\[
+\xymatrix@C=2cm@R=.55cm@M=.18cm{ \Point(\Uu) \ar@{^{(}->}[d]
+\ar[r]^{u}& \Point(E) \ar@{^{(}->}[d]&
+\Point(\Gg) \ar@{^{(}->}[d] \ar[l]_{v}\\
+\Pro(\Uu) \ar[r]^{\Pro(j_{\ast})}  & \Pro(E)   & \Pro(\Gg)
+\ar[l]_{\Pro(i_{\ast})} , }
+\]
+where the vertical arrows denote the canonical fully faithful
+functors (\hyperref[IV.subsubsec6.8.5]{6.8.5}). Moreover, since
+$i_{\ast}$ admits a left adjoint $i^{\ast}$,
+$\Pro(i_{\ast})$ admits the left adjoint $\Pro(i^{\ast})$
+\hyperrefext[I][I.sec8.11.5]{8.11.5}, and one finally obtains the functorial isomorphisms
+\begin{align*}
+\Hom(u(p),v(q)) \simeq & \Hom_{\Pro(E)}(\Pro(j_{\ast})(p),
+\Pro(i_{\ast})(q))\\
+& \simeq \Hom_{\Pro(\mathcal{F})}(\Pro(i^{\ast})(\Pro(j_{\ast})(p)),q)\\
+& \simeq \Hom_{\Pro(\mathcal{F})}(\Pro(i^{\ast}j_{\ast})(p),q),
+\end{align*}
+which is precisely the first formula in \hyperref[IV.eq9.7.2.3]{(9.7.2.3)}, the second then
+being immediate from the definition of $\sigma$ as a pro-adjoint of
+$\rho$. This proves \hyperref[IV.prop9.7.2]{9.7.2}, subject to the
+following lemma.
+\end{enumerate}
+
+\begin{enonce*}{Lemma 9.7.2.4}\etiquette[9.7.2.4]{IV.lem9.7.2.4}
+Let $f:F\rightarrow E$ be a morphism of topoi. Then the diagram of
+functors
+\[\vcenter{
+\xymatrix@C=2cm@R=.5cm{
+  \Point(F)\ar[r]^{p \mapsto f \circ p} \ar[d] & \Point(E)\ar[d]\\
+\Pro(F) \ar[r]^{\Pro(f_{\ast})}     & \Pro(E) }}\leqno{(9.7.2.4.1)}
+\]\etiquette[9.7.2.4.1]{IV.eq9.7.2.4.1}
+commutes\pageoriginale up to canonical isomorphism (the vertical
+arrows denoting the fully faithful functors
+$\hyperref[IV.subsubsec6.8.5]{6.8.5}$).
+\end{enonce*}
+
+The verification is immediate from the definitions and is left to
+the reader.
+
+\begin{enonce*}{Corollary 9.7.3}\etiquette[9.7.3]{IV.cor9.7.3}
+Let $E$ be a topos having enough points. Then every closed subtopos
+$\mathcal{F}$ of $E$ also has enough points. More precisely, if
+$(p_i)_{i\in I}$ is a conservative family of points of $E$, then the
+family of points of $\mathcal{F}$ defined by the subfamily
+$(p_i)_{i\in J}$ consisting of those $p_i$ which come from points of
+$\mathcal{F}$ is conservative. (Compare
+$\hyperref[IV.cor6.7.3]{6.7.3}$, $\hyperref[IV.rem6.7.4]{6.7.4}$.)
+\end{enonce*}
+
+Indeed, let $f:X\rightarrow Y$ be an arrow of $\mathcal{F}$ which is
+carried to an isomorphism by the fiber functors associated with the
+points under consideration of $\mathcal{F}$. Since
+$i^{\ast}i_{\ast}\simeq \id_{\mathcal{F}}$, it follows that
+$i_{\ast}(f):i_{\ast}(X)\rightarrow i_{\ast}(Y)$ is carried to an
+isomorphism by the fiber functors associated with the $p_i$ for
+$i\in J$; the same is true for the $p_i$ with $i\in I-J$, \ie those
+coming from points of $U$, since $j^{\ast}i_{\ast}$ is the constant
+functor with value the terminal object. Therefore $i_{\ast}(f)$ is an
+isomorphism, and hence so is $f\simeq i^{\ast}i_{\ast}(f)$, \cqfd
+
+\begin{enonce*}[remark]{Remark 9.7.4}\etiquette[9.7.4]{IV.rem9.7.4}
+If $E$ is a topos having enough points, it is clear that an open $U$
+of $E$ is determined once the full subcategory of $\Ppoint(E)$ which
+is the essential image of $\Ppoint(E_{/U})$ is known; in fact, if
+$C$ is a full subcategory of $\Ppoint(E)$ defining a conservative
+family of points of $E$, it even suffices to know the subcategory
+$C_{/U}$ consisting of those elements of $C$ which belong to the
+essential image of $\Ppoint(U)$. It follows from this and from
+\hyperref[IV.prop9.7.2]{9.7.2} a) that a closed subtopos
+$\mathcal{F}$ of $E$ is determined once the essential image of
+$\Ppoint(\mathcal{F})$ in $\Ppoint(E)$ is known, or even merely its
+intersection with $C$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 9.7.5}\etiquette[9.7.5]{IV.exer9.7.5}

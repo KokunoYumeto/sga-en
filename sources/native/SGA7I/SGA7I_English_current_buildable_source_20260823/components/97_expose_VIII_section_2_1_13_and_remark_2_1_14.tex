@@ -1,0 +1,208 @@
+
+\SGARefTarget{sga7.sga7i.eviii.n2-1-13}{2.1.13}. Let $\ell$ be a prime number.  For every commutative group
+$E$, denote by $T_\ell(E)$ the inverse system
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-13-1}{2.1.13.1}}
+ T_\ell(E)=({}_{\ell^\nu}E)_{\nu\geq0},
+\end{equation}
+which plainly depends functorially on $E$.  The compatibilities of
+\SGARefLink{sga7.sga7i.eviii.n2-1-12}{2.1.12}, for $n,n'$ of the form $\ell^\nu,\ell^{\nu'}$ with
+$\nu'\geq\nu$, show that the homomorphisms
+$\alpha^{\ell^\nu}_{P,Q}$, as $\nu$ varies, define a homomorphism of
+inverse systems, functorial in $P,Q$:
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-13-2}{2.1.13.2}}
+ \alpha^{(\ell)}_{P,Q}:
+ T_\ell(P)\otimes T_\ell(Q)
+ \longrightarrow T_\ell\bigl(\uTor_1(P,Q)\bigr).
+\end{equation}
+Knowledge of these homomorphisms for every prime $\ell$ is plainly
+equivalent to knowledge of the $\alpha^n_{P,Q}$ for every integer
+$n$.  The antisymmetry relations of \SGARefLink{sga7.sga7i.eviii.n2-1-10}{2.1.10} then become the analogous
+$\ell$-adic antisymmetry relations, for every $\ell$, expressed by
+the anticommutativity of the diagrams
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-13-3}{2.1.13.3}}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ T_\ell(P)\otimes T_\ell(Q)
+   \arrow[r]
+   \arrow[d,"{\alpha^{(\ell)}_{P,Q}}"']
+   \arrow[rd,phantom,"-" description]&
+ T_\ell(Q)\otimes T_\ell(P)
+   \arrow[d,"{\alpha^{(\ell)}_{Q,P}}"]\\
+ T_\ell\bigl(\uTor_1(P,Q)\bigr)
+   \arrow[r]&
+ T_\ell\bigl(\uTor_1(Q,P)\bigr).
+\end{tikzcd}
+\end{equation}
+Here the horizontal arrows are the symmetry arrows.
+
+\medskip
+\noindent\underline{Remark \SGARefTarget{sga7.sga7i.eviii.n2-1-14}{2.1.14}.}
+The construction of the homomorphism (\SGARefLink{sga7.sga7i.eviii.n2-1-1}{2.1.1}), and the results \SGARefLink{sga7.sga7i.eviii.n2-1-10}{2.1.10}
+and \SGARefLink{sga7.sga7i.eviii.n2-1-11}{2.1.11} concerning it, may be generalized to the situation in
+which one is given a commutative ring $\underline A$ on $T$ and two
+ideals $\underline a$ and $\underline b$ of $\underline A$.  In the
+case treated above, both ideals are the ideal
+$n\mathbb Z_T$ of the constant ring $\mathbb Z_T$ on $T$.  One then
+defines a homomorphism, functorial in the $\underline A$-modules
+$P,Q$,
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-14-1}{2.1.14.1}}
+ {}_{\underline a}P\otimes{}_{\underline b}Q
+ \xrightarrow{\ \alpha\ }
+ \uHom_{\underline A}
+ \left(
+   \frac{\underline a\cap\underline b}
+        {\underline a\mathbin{\cdot}\underline b},
+   \uTor^{\underline A}_1(P,Q)
+ \right),
+\end{equation}
+as the composite of the homomorphisms
+\[
+\begin{split}
+ {}_{\underline a}P\otimes{}_{\underline b}Q
+ &\longrightarrow
+ \uHom(\underline A/\underline a,P)
+ \otimes
+ \uHom(\underline A/\underline b,Q)\\
+ &\longrightarrow
+ \uHom\!\left(
+   \uTor_1(\underline A/\underline a,\underline A/\underline b),
+   \uTor_1(P,Q)
+ \right),
+\end{split}
+\]
+using the well-known canonical isomorphism
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-14-2}{2.1.14.2}}
+ \uTor_1(\underline A/\underline a,\underline A/\underline b)
+ \simeq
+ \frac{\underline a\cap\underline b}
+      {\underline a\mathbin{\cdot}\underline b}.
+\end{equation}
+In fact, the sign in \SGARefLink{sga7.sga7i.eviii.n2-1-10}{2.1.10} is ``hidden'' in the choice of this
+isomorphism, according as one works with the resolution
+$0\longrightarrow\underline a\longrightarrow\underline A
+\longrightarrow0$ of $\underline A/\underline a$, or with the
+resolution $0\longrightarrow\underline b\longrightarrow\underline A
+\longrightarrow0$ of $\underline A/\underline b$.  Here it becomes
+the anticommutativity of the diagram
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-14-3}{2.1.14.3}}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ {}_{\underline a}P\otimes{}_{\underline b}Q
+   \arrow[r]
+   \arrow[d]
+   \arrow[rd,phantom,"-1" description]&
+ {}_{\underline b}Q\otimes{}_{\underline a}P
+   \arrow[d]\\
+ \uHom\!\left(
+   \dfrac{\underline a\cap\underline b}
+         {\underline a\mathbin{\cdot}\underline b},
+   \uTor_1(P,Q)
+ \right)
+   \arrow[r]&
+ \uHom\!\left(
+   \dfrac{\underline a\cap\underline b}
+         {\underline a\mathbin{\cdot}\underline b},
+   \uTor_1(Q,P)
+ \right).
+\end{tikzcd}
+\end{equation}
+The horizontal arrows are the symmetry arrows.  When
+$\underline a=\underline b$, this anticommutativity may also be
+expressed by saying that the symmetry automorphism on
+$\uTor_1(\underline A/\underline a,\underline A/\underline a)$ is
+$-\id$.
+
+In the special case where
+$\underline a=\underline b=n\underline A$, with $n$ a section of
+$\underline A$, multiplication by $n$ induces an epimorphism
+\[
+ \underline A/\underline a
+ \longrightarrow
+ \frac{\underline a\cap\underline a}
+      {\underline a\mathbin{\cdot}\underline a}
+ =\underline a/\underline a^2,
+\]
+and hence a functorial injective homomorphism, in the
+$\underline A$-module $T$,
+\[
+ \uHom(\underline a/\underline a^2,T)
+ \longrightarrow{}_{\underline a}T.
+\]
+Thus in this case the homomorphism (\SGARefLink{sga7.sga7i.eviii.n2-1-14-1}{2.1.14.1}) may be interpreted as a
+homomorphism
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-14-4}{2.1.14.4}}
+ {}_nP\otimes{}_nQ
+ \longrightarrow{}_n\uTor_1(P,Q),
+\end{equation}
+which is closer in form to (\SGARefLink{sga7.sga7i.eviii.n2-1-1}{2.1.1}).
+
+Continue to suppose that
+$\underline a=\underline b=n\underline A$, and that $n$ is a regular
+section of $\underline A$.  The spectral sequence (\SGARefLink{sga7.sga7i.eviii.n2-1-4}{2.1.4}) still makes
+sense in the present setting and yields the following exact sequence
+of low-degree terms, generalizing (\SGARefLink{sga7.sga7i.eviii.n2-1-5}{2.1.5}), where $Q$ is now an
+$\underline A$-module annihilated by $\underline a$:
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-14-5}{2.1.14.5}}
+\begin{split}
+ \uTor^{\underline A}_2(P,Q)
+ &\longrightarrow
+ \uTor^{\underline A/n\underline A}_2(P_n,Q)
+ \longrightarrow{}_nP\otimes Q
+ \xrightarrow{\ \alpha\ }
+ \uTor^{\underline A}_1(P,Q)\\
+ &\longrightarrow
+ \uTor^{\underline A/n\underline A}_1(P_n,Q)
+ \longrightarrow0.
+\end{split}
+\end{equation}
+
+Return now to arbitrary $\underline a$ and $\underline b$, and let
+$p$ and $q$ be two sections of $\underline A$.  We then obtain the
+commutative diagram below; (\SGARefLink{sga7.sga7i.eviii.n2-1-11-1}{2.1.11.1}) is essentially the special case
+obtained by taking $q=1$:
+\begin{equation}\tag{\SGARefTarget{sga7.sga7i.eviii.n2-1-14-6}{2.1.14.6}}
+{\footnotesize
+\begin{tikzcd}[row sep=large,column sep=tiny]
+ &{}_{p\underline a}P\otimes{}_{q\underline b}Q
+   \arrow[dl,"p\otimes q"']
+   \arrow[dr,"i\otimes j"]&\\
+ {}_{\underline a}P\otimes{}_{\underline b}Q
+   \arrow[d,"\alpha"']&&
+ {}_{pq\underline a}P\otimes{}_{pq\underline b}Q
+   \arrow[d,"\alpha"]\\
+ \uHom\!\left(
+   \dfrac{\underline a\cap\underline b}
+         {\underline a\mathbin{\cdot}\underline b},
+   \uTor_1(P,Q)
+ \right)
+   \arrow[dr,"\mathrm{incl.}"']&&
+ \uHom\!\left(
+   \dfrac{pq\underline a\cap pq\underline b}
+         {pq\underline a\mathbin{\cdot}pq\underline b},
+   \uTor_1(P,Q)
+ \right)
+   \arrow[dl,"(pq)^*"]\\
+ &\uHom\!\left(
+   \dfrac{\underline a\cap\underline b}
+         {pq\underline a\mathbin{\cdot}\underline b},
+   \uTor_1(P,Q)
+ \right)&
+\end{tikzcd}}
+\end{equation}
+Here
+\[
+ i:{}_{p\underline a}P\longrightarrow{}_{pq\underline a}P,
+ \qquad
+ j:{}_{q\underline b}Q\longrightarrow{}_{pq\underline b}Q
+\]
+are the canonical inclusions, and $(pq)^*$ denotes the injective
+homomorphism obtained, by passing to $\uHom$, from the surjective
+homomorphism
+\[
+ \frac{\underline a\cap\underline b}
+      {pq\underline a\mathbin{\cdot}\underline b}
+ \longrightarrow
+ \frac{pq\underline a\cap pq\underline b}
+      {pq\underline a\mathbin{\cdot}pq\underline b}
+\]
+induced by multiplication by $pq$.  When
+$\underline a=\underline b=n\underline A$, this diagram may be
+rewritten in a simpler form, given in (\SGARefLink{sga7.sga7i.eviii.n2-1-11-1}{2.1.11.1}) when $q=1$.

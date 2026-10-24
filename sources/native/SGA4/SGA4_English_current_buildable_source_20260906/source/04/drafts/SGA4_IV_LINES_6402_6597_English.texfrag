@@ -1,0 +1,207 @@
+\subsection{Construction of the closed subtopos complementary to an
+open subtopos}\etiquette[9.3]{IV.subsec9.3}\pageoriginale
+
+\subsubsection{}\etiquette[9.3.1]{IV.subsubsec9.3.1}
+Let $\mathsf{T}$ be a topological space and $U$ an open subset of
+$\mathsf{T}$, so that $\Top(U)$ identifies with an open subtopos of
+$\Top(\mathsf{T})$ (notation of \hyperref[IV.subsec2.1]{2.1}). Let
+$Y$ be the closed topological subspace of $\mathsf{T}$ complementary
+to $U$. Up to equivalence, $\Top(Y)$ may then be regarded as a
+subtopos of $\Top(\mathsf{T})$, namely the subtopos formed by the
+objects $F$ of $\Top(\mathsf{T})$ whose restriction to $U$ is
+\sisi{the terminal topos of $U$}{the terminal object of $U$}. This
+description of a subcategory of $E=\Top(\mathsf{T})$ makes sense
+whenever one has a topos and an open $U$ of it, and we shall see that
+it always gives a subtopos of $E$. Moreover, in the particular case
+first considered, it is immediate (with the terminology introduced
+in Exercise \hyperref[IV.exer9.1.13]{9.1.13}) that $\Top(Y)$ and
+$\Top(U)$ are complementary subtopoi (use
+\hyperref[IV.subsubsec9.2.5]{9.2.5} and
+\hyperref[IV.exer9.1.7.2]{9.1.7.2} e)). The same will hold in the
+general case, and we shall see that this property uniquely
+characterizes the subtopos in question. It therefore deserves in
+every respect the name of the closed subtopos complementary to the
+given open $U$, or to the open subtopos defined by $U$. The details
+of the construction of this topos $\mathcal{F}$ and of the
+inverse-image functor $i^{\ast}:E\rightarrow\mathcal{F}$ will be
+given in the present section, while Section
+\hyperref[IV.subsec9.4]{9.4} develops its first properties.
+
+\subsubsection{}\etiquette[9.3.2]{IV.subsubsec9.3.2}
+Thus let $E$ be a topos and $U$ an open of $E$, as in
+\hyperref[IV.subsubsec9.2.1]{9.2.1}, and consider the localization
+morphism
+\begin{equation*}
+j:\mathcal{U}=E_{/U}\longrightarrow E{\quoi},\tag{9.3.2.1}
+\end{equation*}\etiquette[9.3.2.1]{IV.eq9.3.2.1}
+which is an open embedding.
+
+For every object $X$ of $E$, put
+\begin{equation*}
+X_{\complement U}=U\coprod_{U\times X}
+X{\quoi},\tag{9.3.2.2}
+\end{equation*}\etiquette[9.3.2.2]{IV.eq9.3.2.2}
+where the amalgamation is formed with respect to the canonical
+projections
+$$
+\pr_1:U\times X\longrightarrow U,\quad \pr_2:U\times
+X\longrightarrow X.
+$$
+Thus there is a \emph{cocartesian} diagram
+(\hyperrefext[I][I.sec10]{10}) in $E$, depending functorially on
+$X$:\pageoriginale
+\[\vcenter{
+\xymatrix@C=1.75cm@R=1.5cm{
+U\times X \ar[r]^{\pr_2} \ar[d]_{\pr_1}& X \ar[d]\\
+U \ar[r]        & X_{\complement U} }}\leqno{(9.3.2.3)}
+\]\etiquette[9.3.2.3]{IV.eq9.3.2.3}
+Note that in the example considered in
+\hyperref[IV.subsubsec9.3.1]{9.3.1}, $X_{\complement U}$ is
+canonically isomorphic to $i_{\ast}i^{\ast}(X)$ (where
+$i:Y\rightarrow T$ is the inclusion), and
+$X\rightarrow X_{\complement U}$ identifies with the adjunction
+morphism.
+
+\begin{enonce*}{Proposition 9.3.3}\etiquette[9.3.3]{IV.prop9.3.3}
+With the preceding notation, the following statements hold:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item For every object $X$ of $E$, the following conditions are
+equivalent:
+\begin{itemize}
+\item[(i)] There exists an object $Y$ of $E$ and an isomorphism
+$X\simeq Y_{\complement U}$.
+
+\item[(ii)] The canonical morphism
+$X\xrightarrow{m}X_{\complement U}$ is an isomorphism.
+
+\item[(iii)] The canonical morphism
+$\pr_2:X\times U\rightarrow U$ is an isomorphism (\ie
+$j^{\ast}(X)$ is a terminal object of $E_{/U}$).
+\end{itemize}
+
+\item For every morphism
+$$
+m:X\longrightarrow X'
+$$
+in $E$, the following conditions are equivalent:
+\begin{itemize}
+\item[${\rm (i')}$] The diagram
+\[
+\xymatrix@C=2cm@R=1.5cm{
+X \ar[r]^{m} \ar[d]& X'\ar[d]\\
+X_{\complement U} \ar[r]& X'_{\complement U} }
+\]
+is Cartesian.
+
+\item[${\rm (ii')}$] The morphism
+$m\times\id_U:X\times U\rightarrow X'\times U$ is an isomorphism,
+\ie $j^{\ast}(m)$ is an isomorphism.
+\end{itemize}
+
+\item The functor
+$$
+X\longrightarrow X_{\complement U}
+$$
+from $E$ to $E$ is left exact, carries epimorphic families to
+epimorphic families, and commutes with filtered inductive limits
+and\pageoriginale amalgamated sums.
+\end{enumerate}
+\end{enonce*}
+
+\noindent \emph{Proof}. First prove the proposition when $E$ is of
+the form $\widehat{C}$, where $C$ is a small category. By \hyperref[I.prop3.1]{I.3.1} this
+reduces to the case where $E$ is the ``punctual'' topos $(\Ens)$,
+where the proposition is evident. One then passes to the general
+case by the standard procedures of \hyperrefext[II][II.sec4]{4},
+using the ``associated sheaf'' functor.
+
+\begin{enonce*}{Proposition 9.3.4}\etiquette[9.3.4]{IV.prop9.3.4}
+With the notation of \hyperref[IV.subsubsec9.3.2]{9.3.2}, the
+strictly full subcategory $\mathcal{F}$ of $E$ formed by the objects
+$X$ of $E$ such that $j^{\ast}(X)$ is a terminal object of
+$\mathcal{U}$ \textup{(\cf \hyperref[IV.prop9.3.3]{9.3.3} a))} is a
+subtopos of $E$: \ie (\hyperref[IV.def9.1.1]{9.1.1}) it is a topos,
+and the inclusion functor $i_{\ast}:\mathcal{F}\rightarrow E$ is the
+direct-image functor of a morphism of topoi
+$i:\mathcal{F}\rightarrow E$, whose inverse-image functor is
+$X\mapsto i^{\ast}X=X_{\complement U}$. The adjunction morphism
+$X\rightarrow i_{\ast}i^{\ast}X$ is the canonical morphism
+$X\rightarrow X_{\complement U}$ of
+\eqhyperref[IV.eq9.3.2.3]{9.3.2.3}.
+\end{enonce*}
+
+\noindent \emph{Proof}: For every object $X$ of $E$, denote by
+$u(X)$ the canonical morphism $X\rightarrow X_{\complement U}$. The
+morphism $u(X)$ is functorial in $X$, and for every object $X$,
+$u(X_{\complement U})$ is an isomorphism. It follows formally and
+immediately from these two properties that the functor $i^{\ast}$ is
+left adjoint to the functor $i_{\ast}$ and that the adjunction
+morphism is $u(X)$. Since the functor
+$X\rightarrow X_{\complement U}$ is left exact, the functor
+$i^{\ast}$ is left exact. It then follows from
+\hyperrefext[II][II.theo5.5]{5.5} that $\mathcal{F}$ is a topos, and
+from Definition \hyperref[IV.def3.1]{3.1} that the pair
+$(i^{\ast},i_{\ast})$ is a morphism of topoi.
+
+\setcounter{subsubsection}{4}
+\subsubsection{}\etiquette[9.3.5]{IV.subsubsec9.3.5}
+The subtopos $\mathcal{F}$ of $E$ described in
+\hyperref[IV.prop9.3.4]{9.3.4} is called the \emph{closed subtopos of
+$E$ complementary to the open $U$ of $E$}, or, equivalently, to the
+open subtopos of $E$ corresponding to $U$. In accordance with
+\hyperref[IV.def9.1.1]{9.1.1} b), the morphism
+$i:\mathcal{F}\rightarrow E$ constructed in
+\hyperref[IV.prop9.3.4]{9.3.4} is called the \emph{inclusion
+morphism}. A full subcategory $\mathcal{F}$ of $E$ is called a
+\emph{closed subtopos} of $E$ if there exists an open $U$ of $E$ for
+which $\mathcal{F}$ is the closed subtopos complementary to $U$.
+Note that this $U$ is uniquely determined as
+$i_{\ast}(\phi_{\mathcal{F}})$, where $\phi_{\mathcal{F}}$ is the
+initial object of $\mathcal{F}$, equal to $i^{\ast}(\phi_E)$; it is
+also called \emph{the open of $E$ complementary to the closed
+subtopos $\mathcal{F}$}, and\pageoriginale the subtopos of $E$
+defined by $U$ is also called the \emph{open subtopos of $E$
+complementary to $\mathcal{F}$}. Finally, an embedding of topoi
+(\hyperref[IV.def9.1.1]{9.1.1} a)) $i:F\rightarrow E$ is called a
+\emph{closed embedding} if the corresponding subtopos of $E$ is
+closed.
+
+If $G$ is a group object on $E$ and $s\in\Hom(e_E,G)$, the
+\emph{support} of $G$ (\resp of $s$) is the closed subtopos of $E$
+complementary to the cosupport open of $G$ (\resp of $s$)
+(\hyperref[IV.subsubsec8.5.1]{8.5.1},
+\hyperref[IV.subsubsec8.5.2]{8.5.2}).
+
+\subsubsection{}\etiquette[9.3.6]{IV.subsubsec9.3.6}
+With the notation of \hyperref[IV.subsubsec9.3.2]{9.3.2} and
+\hyperref[IV.prop9.3.4]{9.3.4}, one therefore has two morphisms of
+topoi
+\begin{equation*}
+\mathcal{U}\xrightarrow{j}
+E\xleftarrow{i}\mathcal{F}{\quoi},\tag{9.3.6.1}
+\end{equation*}\etiquette[9.3.6.1]{IV.eq9.3.6.1}
+defining five functors which form two sequences of adjoint functors,
+$(j_{!},j^{\ast},j_{\ast})$ and $(i^{\ast},i_{\ast})$:
+\[
+\xymatrix@C=2cm@R=1.5cm@M=.2cm{ \Uu \ar@<6pt>[r]^{j_!}
+\ar@<-13pt>[r]|{j_{\ast}} & E \ar@<3pt>[r]^{i^{\ast}}
+\ar@<4pt>[l]|{j^{\ast}}& \Ff
+\ar@<13pt>[l]|{i_{\ast}}.}\leqno{(9.3.6.2)}
+\]\etiquette[9.3.6.2]{IV.eq9.3.6.2}
+
+The functor
+\begin{equation*}
+\rho=i^{\ast}j_{\ast}:\mathcal{U}\longrightarrow
+\mathcal{F}\tag{9.3.6.3}
+\end{equation*}\etiquette[9.3.6.3]{IV.eq9.3.6.3}
+is called the \emph{gluing functor} relative to the open $U$ of $E$.
+More generally, if $\mathcal{U}$ and $\mathcal{F}$ are arbitrary
+topoi, a functor $\rho:\mathcal{U}\rightarrow\mathcal{F}$ is called
+a \emph{gluing functor} if it is left exact and accessible (\hyperref[I.def9.2]{I.9.2}),
+or equivalently
+(\sisi{\hyperref[IV.rem1.8]{1.8}\quad}{\hyperrefext[I][I.sec8]{8}})
+if it admits a pro-adjoint. The reasons for this terminology will
+appear in \hyperref[IV.prop9.4.1]{9.4.1} d) and
+\hyperref[IV.theo9.5.4]{9.5.4} below.

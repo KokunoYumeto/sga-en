@@ -1,0 +1,352 @@
+
+\setcounter{footnote}{28}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:proposition:0-11}\textbf{Proposition 0.11.}
+\textit{Let \(E\) be an \(S\)-scheme, and put
+\(X=\underline{\operatorname{Aut}}_S(E)\). The kernel of the morphism of
+\(S\)-group functors}
+\[
+ p_X:X\longrightarrow X^+
+\]
+\textit{is canonically identified with the commutative \(S\)-group functor
+\(L'_X\) defined by}
+\[
+ \operatorname{Hom}_S(Y,L'_X)
+ =\operatorname{Hom}_{\mathscr O_{E_0\times_{S_0}Y_0}}
+ \left(
+   \Omega^1_{E_0/S_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0},
+   \mathscr J\mathscr O_{E\times_S Y}
+ \right),
+\]
+\textit{where \(Y\) denotes a variable \(S\)-scheme.}
+
+Indeed, for a variable \(S\)-scheme \(Y\), we have
+\[
+ \operatorname{Hom}_S(Y,X)=\operatorname{Aut}_Y(E\times_S Y)
+\]
+and
+\begin{align*}
+ \operatorname{Hom}_S(Y,X^+)
+  &=\operatorname{Hom}_S(Y_{\mathscr J},X)\\
+  &=\operatorname{Aut}_{Y_{\mathscr J}}(E\times_S Y_{\mathscr J})\\
+  &=\operatorname{Aut}_{Y_{\mathscr J}}
+    \bigl((E\times_S Y)\times_Y Y_{\mathscr J}\bigr).
+\end{align*}
+Applying \SGARefLink{sga3:iii:corollary:0-7}{0.7}~\SGARefLink{sga3:iii:corollary:0-7:item:b}{(b)} to the \(Y\)-scheme \(E\times_S Y\), we obtain an
+isomorphism of groups
+\[
+ \operatorname{Hom}_S(Y,L'_X)
+ \simeq
+ \operatorname{Ker}\!\left(
+   \operatorname{Hom}_S(Y,X)\longrightarrow
+   \operatorname{Hom}_S(Y,X^+)
+ \right).
+\]
+This isomorphism is readily checked to be functorial in the \(S\)-scheme
+\(Y\). Hence it yields an isomorphism of \(S\)-groups
+\[
+ L'_X\simeq\operatorname{Ker}(X\longrightarrow X^+),
+\]
+which completes the proof of \SGARefLink{sga3:iii:proposition:0-11}{Proposition 0.11}.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:corollary:0-12}\textbf{Corollary 0.12.}\footnote{Editor's note: ``Remark'' has
+been changed to ``Corollary''.}
+\textit{Retain the notation of \SGARefLink{sga3:iii:proposition:0-11}{0.11}: \(E\) is an \(S\)-scheme and
+\(X=\underline{\operatorname{Aut}}_S(E)\). There is a natural action \(f\)
+of \(X\) on \(L'_X\), defined as follows. For every \(S\)-scheme \(Y\),}
+\[
+ \operatorname{Hom}_S(Y,X)=\operatorname{Aut}_Y(E\times_S Y)
+\]
+\textit{and}
+\[
+ \operatorname{Hom}_S(Y,L'_X)
+ =\operatorname{Hom}_{\mathscr O_{E_0\times_{S_0}Y_0}}
+ \left(
+   \Omega^1_{E_0\times_{S_0}Y_0/Y_0},
+   \mathscr J\mathscr O_{E\times_S Y}
+ \right).
+\]
+\textit{Here}
+\[
+ \Omega^1_{E_0/S_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0}
+ \simeq \Omega^1_{E_0\times_{S_0}Y_0/Y_0}
+\]
+\textit{(see EGA~IV\textsubscript{4}, 16.4.5). The first group acts on
+the second by transport of structure, and this action is functorial in
+\(Y\). One then has}
+\begin{equation}
+ x\,i(m)\,x^{-1}=i\bigl(f(x)m\bigr),
+ \tag{0.12.1}\label{sga3:iii:corollary:0-12:equation:0-12-1}
+\end{equation}
+\textit{for every \(Y\to S\), \(x\in\operatorname{Hom}_S(Y,X)\), and
+\(m\in\operatorname{Hom}_S(Y,L'_X)\).}
+
+Indeed, this follows from \SGARefLink{sga3:iii:corollary:0-7}{0.7}~\SGARefLink{sga3:iii:corollary:0-7:item:c}{(c)}, applied to the \(Y\)-scheme
+\(E\times_S Y\).
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:paragraph:0-13}\textbf{Reminder 0.13.}
+The direct image of a quasi-coherent module under a morphism of finite
+presentation is quasi-coherent. Under the same hypotheses, formation of
+the direct image commutes with flat base change. In the situation
+
+\SGAThreeNativeDiagram[0.50\textwidth]
+  {native_diagrams/exp3/diagram_026_exp3_p020_reminder013_flat_base_change_square.tex}
+  {The flat base-change square in Reminder \SGARefLink{sga3:iii:paragraph:0-13}{0.13}.}
+  {fig:exp3-reminder-013-flat-base-change}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 20; combined-reader p. 130; printed p. 120}
+
+if \(f\) (and hence \(f'\)) is of finite presentation and \(g\) (and
+hence \(g'\)) is flat, then for every quasi-coherent
+\(\mathscr O_T\)-module \(\mathscr F\),
+\[
+ f_*(\mathscr F)\otimes_{\mathscr O_S}\mathscr O_{S'}
+ =f'_*\bigl(\mathscr F\otimes_{\mathscr O_S}\mathscr O_{S'}\bigr),
+\]
+or, more elegantly,
+\[
+ g^*\bigl(f_*\mathscr F\bigr)=f'_*\bigl(g'^*\mathscr F\bigr).
+\]
+These two facts hold more generally for a quasi-compact and
+quasi-separated morphism \(f\); see EGA~I, 9.2.1, and
+EGA~III\textsubscript{1}, 1.4.15 in the quasi-compact separated case
+(taking EGA~III\textsubscript{2}, Err\textsubscript{III} 25 into
+account), as well as EGA~IV\textsubscript{1}, 1.7.4 and 1.7.21.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:remark:0-14}\textbf{Remark 0.14.}\footnote{Editor's note: The first part of
+this remark has been expanded, and a second part has been added.}
+Return to the notation of \SGARefLink{sga3:iii:proposition:0-11}{0.11}: let \(E\) be an \(S\)-scheme, put
+\(X=\underline{\operatorname{Aut}}_S(E)\), and let \(L'_X\) be the
+commutative \(S\)-group functor defined by
+\begin{align*}
+ L'_X(Y)
+ &=\operatorname{Hom}_{\mathscr O_{E_0\times_{S_0}Y_0}}
+   \left(
+     \Omega^1_{E_0/S_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0},
+     \mathscr J\mathscr O_{E\times_S Y}
+   \right)\\
+ &=\operatorname{Hom}_{\mathscr O_{E\times_S Y}}
+   \left(
+     \Omega^1_{E/S}\otimes_{\mathscr O_S}\mathscr O_Y,
+     \mathscr J\mathscr O_{E\times_S Y}
+   \right)\\
+ &=\Gamma\!\left(
+     E\times_S Y,
+     \widetilde{\operatorname{Hom}}_{\mathscr O_{E\times_S Y}}
+     \left(
+       \Omega^1_{E/S}\otimes_{\mathscr O_S}\mathscr O_Y,
+       \mathscr J\mathscr O_{E\times_S Y}
+     \right)
+   \right).
+\end{align*}
+
+Suppose that \(Y\) is flat over \(S\). There are then isomorphisms
+\[
+ \mathscr J\mathscr O_{E\times_S Y}
+ \xleftarrow{\ \sim\ }
+ (\mathscr J\mathscr O_E)\otimes_{\mathscr O_S}\mathscr O_Y
+ \xrightarrow{\ \sim\ }
+ (\mathscr J\mathscr O_E)\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0}.
+\]
+Suppose in addition that \(E\) is of finite presentation over \(S\).
+Then \(\Omega^1_{E/S}\) is an \(\mathscr O_E\)-module of finite
+presentation (EGA~IV\textsubscript{4}, 16.4.22), and therefore, by
+EGA~0\textsubscript{I}, 6.7.6,
+\begin{align*}
+ &\widetilde{\operatorname{Hom}}_{\mathscr O_{E\times_S Y}}
+ \left(
+   \Omega^1_{E/S}\otimes_{\mathscr O_S}\mathscr O_Y,
+   (\mathscr J\mathscr O_E)\otimes_{\mathscr O_S}\mathscr O_Y
+ \right)\\
+ &\qquad\simeq
+ \widetilde{\operatorname{Hom}}_{\mathscr O_E}
+ \left(\Omega^1_{E/S},\mathscr J\mathscr O_E\right)
+ \otimes_{\mathscr O_S}\mathscr O_Y.
+\end{align*}
+Let \(\pi:E\to S\) and \(g:Y\to S\) be the structural morphisms.
+Apply \SGARefLink{sga3:iii:paragraph:0-13}{0.13} to the diagram
+
+\SGAThreeNativeDiagram[0.42\textwidth]
+  {native_diagrams/exp3/diagram_027_exp3_p021_remark014_structural_base_change_square.tex}
+  {The structural base-change square used in \SGARefLink{sga3:iii:remark:0-14}{Remark 0.14}.}
+  {fig:exp3-remark-014-structural-base-change}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 21; combined-reader p. 131; printed p. 121}
+
+and to the \(\mathscr O_E\)-module
+\[
+ \mathscr F=
+ \widetilde{\operatorname{Hom}}_{\mathscr O_E}
+ \left(\Omega^1_{E/S},\mathscr J\mathscr O_E\right).
+\]
+We obtain
+\begin{align*}
+ \Gamma(E\times_S Y,g'^*\mathscr F)
+ &=\Gamma(Y,\pi'_*g'^*\mathscr F)\\
+ &=\Gamma(Y,g^*\pi_*\mathscr F)\\
+ &=W(\pi_*\mathscr F)(Y).
+\end{align*}
+Thus, if \(E\) is of finite presentation over \(S\), we have
+\begin{equation}
+ L'_X=
+ W\!\left(
+   \pi_*\widetilde{\operatorname{Hom}}_{\mathscr O_E}
+   (\Omega^1_{E/S},\mathscr J\mathscr O_E)
+ \right)
+ \tag{0.14.1}\label{sga3:iii:remark:0-14:equation:0-14-1}
+\end{equation}
+on the category of \(S\)-schemes flat over \(S\). Notice also that the
+module to which \(W\) is applied is quasi-coherent, by EGA~I, 9.1.1
+and 9.2.1.
+
+Let \(L_0\) be the \(S_0\)-functor\footnote{Editor's note: What follows
+has been added.}
+\[
+ L_0=
+ W\!\left(
+   \pi_{0*}\widetilde{\operatorname{Hom}}_{\mathscr O_{E_0}}
+   (\Omega^1_{E_0/S_0},\mathscr J\mathscr O_E)
+ \right).
+\]
+Returning to the definition of \(L'_X(Y)\), and using the isomorphism
+\[
+ \mathscr J\mathscr O_{E\times_S Y}
+ \simeq(\mathscr J\mathscr O_E)
+       \otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0},
+\]
+the same reasoning gives
+\[
+ L'_X(Y)=L_0(Y_0)=L_0(Y\times_S S_0)
+ =\left(\prod_{S_0/S}L_0\right)(Y).
+\]
+Consequently, on the category of \(S\)-schemes flat over \(S\),
+\[
+ L'_X=
+ \prod_{S_0/S}
+ W\!\left(
+   \pi_{0*}\widetilde{\operatorname{Hom}}_{\mathscr O_{E_0}}
+   (\Omega^1_{E_0/S_0},\mathscr J\mathscr O_E)
+ \right).
+\]
+It is not obvious that the action of \(X\) on \(L'_X\) defined in \SGARefLink{sga3:iii:corollary:0-12}{0.12}
+comes from an action of
+\(X_0=\underline{\operatorname{Aut}}_{S_0}(E_0)\) on \(L_0\).
+This is nevertheless the case when \(E\) is also flat over \(S\).
+
+Indeed, in that case there are canonical isomorphisms
+\[
+ \mathscr J\mathscr O_E
+ \simeq\mathscr J\otimes_{\mathscr O_S}\mathscr O_E
+ \simeq\mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{E_0},
+\]
+and hence
+\[
+ L_0\simeq
+ W\!\left(
+   \pi_{0*}\widetilde{\operatorname{Hom}}_{\mathscr O_{E_0}}
+   \left(
+     \Omega^1_{E_0/S_0},
+     \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{E_0}
+   \right)
+ \right),
+\]
+and
+\begin{equation}
+ L'_X=
+ \prod_{S_0/S}
+ W\!\left(
+   \pi_{0*}\widetilde{\operatorname{Hom}}_{\mathscr O_{E_0}}
+   \left(
+     \Omega^1_{E_0/S_0},
+     \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{E_0}
+   \right)
+ \right).
+ \tag{0.14.2}\label{sga3:iii:remark:0-14:equation:0-14-2}
+\end{equation}
+For every \(S_0\)-scheme \(T\), we then have
+\[
+ L_0(T)\simeq
+ \operatorname{Hom}_{\mathscr O_{E_0\times_{S_0}T}}
+ \left(
+   \Omega^1_{E_0\times_{S_0}T/T},
+   \mathscr J\otimes_{\mathscr O_{S_0}}
+     \mathscr O_{E_0\times_{S_0}T}
+ \right).
+\]
+Moreover,
+\[
+ \operatorname{Hom}_{S_0}(T,X_0)
+ =\operatorname{Aut}_T(E_0\times_{S_0}T)
+\]
+acts on \(L_0(T)\) by transport of structure, functorially in \(T\).
+Finally, for every \(S\)-scheme \(Y\) flat over \(S\), the action by
+transport of structure of
+\[
+ \operatorname{Hom}_S(Y,X)=\operatorname{Aut}_Y(E\times_S Y)
+\]
+on \(L'_X(Y)=L_0(Y_0)\) factors through
+\(\operatorname{Aut}_{Y_0}(E_0\times_{S_0}Y_0)\).
+
+Finally, let us extract the following two propositions from SGA~1,
+Expos\'e~III.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:proposition:0-15}\textbf{Proposition 0.15.}
+\textit{(SGA~1, Expos\'e~III, 6.8)}\footnote{Editor's note: This
+``global'' lifting result uses the ``local'' lifting result of loc.
+cit., 4.1, which is stated for \(S\) locally Noetherian; see
+EGA~IV\textsubscript{4}, 18.1.1 for the general case.}
+\textit{For every affine \(S_{\mathscr J}\)-scheme \(Y\) smooth over
+\(S_{\mathscr J}\), there exists an \(S\)-scheme \(X\), smooth over
+\(S\), such that \(X\times_S S_{\mathscr J}\simeq Y\); such an \(X\) is
+unique up to a non-unique isomorphism.}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:proposition:0-16}\textbf{Proposition 0.16.}
+\textit{(SGA~1, Expos\'e~III, 5.5)}\footnote{Editor's note: This is an
+immediate consequence of the definition of ``(formally) smooth''
+adopted in EGA~IV\textsubscript{4}, 17.3.1 (and 17.1.1).}
+\textit{Let \(X\) be an \(S\)-scheme smooth over \(S\). For every affine
+\(S\)-scheme \(Y\), the canonical map}
+\[
+ p_X(Y):\operatorname{Hom}_S(Y,X)
+ \longrightarrow\operatorname{Hom}_S(Y,X^+)
+ =\operatorname{Hom}_{S_{\mathscr J}}(Y_{\mathscr J},X_{\mathscr J})
+\]
+\textit{is surjective.}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:corollary:0-17}\textbf{Corollary 0.17.}
+\textit{Let \(E\) be an affine \(S\)-scheme smooth over \(S\), and put
+\(X=\underline{\operatorname{Aut}}_S(E)\). For every affine \(S\)-scheme
+\(Y\), the canonical map}
+\begin{align*}
+ \operatorname{Aut}_Y(E\times_S Y)
+  =\operatorname{Hom}_S(Y,X)
+ &\longrightarrow \operatorname{Hom}_S(Y,X^+)\\
+  &=\operatorname{Aut}_{Y_{\mathscr J}}
+    (E_{\mathscr J}\times_{S_{\mathscr J}}Y_{\mathscr J})
+\end{align*}
+\textit{is surjective.}
+
+Indeed, \(Y\times_S E\) is affine over the affine scheme \(Y\), hence
+is affine. Applying \SGARefLink{sga3:iii:proposition:0-16}{0.16}, we see that every \(S_{\mathscr J}\)-morphism
+\[
+ Y_{\mathscr J}\times_{S_{\mathscr J}}E_{\mathscr J}
+ \longrightarrow E_{\mathscr J}
+\]
+extends to an \(S\)-morphism
+\[
+ Y\times_S E\longrightarrow E.
+\]
+In other words,\footnote{Editor's note: The original has been modified
+slightly so that the hypotheses of \SGARefLink{sga3:iii:corollary:0-7}{0.7} apply exactly.} every
+\(Y_{\mathscr J}\)-endomorphism of
+\(Y_{\mathscr J}\times_{S_{\mathscr J}}E_{\mathscr J}\) lifts to a
+\(Y\)-endomorphism of \(Y\times_S E\). Then \SGARefLink{sga3:iii:corollary:0-7}{0.7}~\SGARefLink{sga3:iii:corollary:0-7:item:a}{(a)} shows that every
+\(Y_{\mathscr J}\)-automorphism of
+\(Y_{\mathscr J}\times_{S_{\mathscr J}}E_{\mathscr J}\) lifts to a
+\(Y\)-automorphism of \(Y\times_S E\), which is the asserted property.
+

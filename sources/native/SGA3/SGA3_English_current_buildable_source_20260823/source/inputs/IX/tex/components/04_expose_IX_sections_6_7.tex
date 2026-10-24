@@ -1,0 +1,820 @@
+
+\setcounter{footnote}{38}
+
+\SGARefTarget{sga3:ix:section:6}
+\section*{6. Monomorphisms of Groups of Multiplicative Type, and
+Canonical Factorization of a Homomorphism from Such a Group}
+\addcontentsline{toc}{section}{6. Monomorphisms of Groups of
+Multiplicative Type, and Canonical Factorization}
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:lemma:6:1}\textbf{Lemma 6.1.}
+\textit{Let \(S\) be a quasi-compact prescheme, and let \(G\) be a
+commutative \(S\)-group prescheme, of finite presentation and
+quasi-finite over \(S\). Then there is an integer \(n>0\) such that
+\[
+  n\cdot\operatorname{id}_G=0,
+  \qquad\text{that is,}\qquad
+  G={}_nG.
+\]}
+
+\emph{Proof.}
+If \(S\) is the spectrum of a field \(k\), then \(G\) is finite over
+\(k\), and by VII\textsubscript{A} \SGARefLink{sga3:VIIA:8.5}{8.5} it is enough to take
+\[
+  n=\deg(G/k).
+\]
+Suppose now that \(S=\operatorname{Spec}(A)\), where \(A\) is local
+Artinian. Let \(k\) be the residue field of \(A\), put
+\[
+  G_0=G\otimes_A k,
+  \qquad
+  n_0=\deg(G_0/k),
+\]
+and distinguish two cases.
+
+\smallskip
+\SGARefTarget{sga3:ix:lemma:6:1:proof:item:a}\noindent\textit{(a) \(k\) has characteristic zero.}
+Then \(G_0\) is separable over \(k\), and hence \(G\) is unramified over
+\(S\). The unit section of \(G\) is therefore an open immersion, so
+\[
+  {}_nG=\operatorname{Ker}(n\cdot\operatorname{id}_G)
+\]
+is an open subscheme of \(G\). For it to equal \(G\), it is consequently
+enough that it do so set-theoretically; thus one may take \(n=n_0\).
+
+\smallskip
+\SGARefTarget{sga3:ix:lemma:6:1:proof:item:b}\noindent\textit{(b) \(k\) has characteristic \(p>0\).}
+Let \(\mathfrak m\) be the maximal ideal of \(A\), and put
+\[
+  S_r=\operatorname{Spec}(A/\mathfrak m^{r+1})
+  \qquad (r\geq0).
+\]
+Choose an integer \(m\) such that \(\mathfrak m^{m+1}=0\). We claim that
+one may take \(n=p^mn_0\). Indeed, arguing by induction on \(m\) and
+putting \(n'=p^{m-1}n_0\), we may suppose that
+\(n'\cdot\operatorname{id}_G\) induces the zero endomorphism on
+\[
+  G_{m-1}=G\times_S S_{m-1}.
+\]
+\footnote{Editor's note: the original has been expanded in what follows,
+with the results of Expos\'e III that are used made explicit.}
+Let \(E\) be the set of endomorphisms \(u\) of \(G\) having this
+property, and let \(K\) be the kernel of the morphism of group functors
+\[
+  G\longrightarrow \prod_{S_{m-1}/S}G
+\]
+(cf.\ \SGARefLink{sga3:iii:remark:0-1-2}{III 0.1.2}). Then
+\[
+  E=\operatorname{Hom}_{S\text{-}\mathrm{gr}}(G,K);
+\]
+in particular, the abelian group law on \(E\) is induced by that on
+\(K\). By \SGARefLink{sga3:iii:corollary:0-9}{III 0.9}, \(K\) is the \(S\)-group functor which, to every
+\(g:T\to S\), assigns the \(k\)-vector space
+\SGARefTarget{sga3:ix:lemma:6:1:display:01}
+\[
+  \operatorname{Hom}_{\mathscr O_{T_0}}
+  \bigl(
+    g_0^*(\Omega^1_{G_0/S_0}),
+    \mathfrak m^m\mathscr O_T
+  \bigr).
+\]
+Thus \(pu=0\) for every \(u\in E\). It follows that
+\[
+  pn'\cdot\operatorname{id}_G=0,
+  \qquad\text{that is,}\qquad
+  p^mn_0\cdot\operatorname{id}_G=0.
+\]
+
+Suppose now that \(S\) is Noetherian; this is the case to which the
+general assertion reduces by the usual reduction to the Noetherian
+case.\footnote{Editor's note: since \(S\) is quasi-compact, it is covered
+by finitely many affine open subsets, so one reduces to
+\(S=\operatorname{Spec}(A)\). Since \(G\) is of finite presentation over
+\(S\), EGA IV\(_3\), 8.8.2 may then be applied.}
+It is enough to combine the foregoing with \SGARefLink{sga3:ix:lemma:6:2}{the following lemma}.
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:lemma:6:2}\textbf{Lemma 6.2.}
+\textit{Let \(X\) be a quasi-finite prescheme over a Noetherian
+prescheme \(S\), and let \((X_i)_{i\in I}\) be an increasing filtered
+family of subpreschemes having the following property:
+\[
+\left\{
+\begin{aligned}
+ &\text{for every \(s\in S\) and every \(n\geq0\), putting}\\
+ &S_{s,n}
+   =\operatorname{Spec}
+      \bigl(\mathscr O_{S,s}/\mathfrak m^{n+1}\bigr),
+   \text{ there is an \(i\in I\) such that}\\
+ &X_i\times_S S_{s,n}=X\times_S S_{s,n}.
+\end{aligned}
+\right.
+\]
+Then there is an \(i\in I\) such that \(X_i=X\).}
+
+\emph{Proof.}
+Since \(S\) is Noetherian, there is a maximal open subset \(U\) on which
+\[
+  X|_U=X_i|_U
+\]
+for all sufficiently large \(i\). We shall prove that \(U=S\). In other
+words, if \(U\neq S\), we shall find an open subset \(U'\) strictly
+larger than \(U\), and an \(i\), such that
+\[
+  X|_{U'}=X_i|_{U'}.
+\]
+Localizing at a maximal point \(s\) of \(S-U\), we reduce to the case in
+which \(S\) is local with closed point \(s\), and
+\[
+  U=S-\{s\}.
+\]
+Indeed, put \(S'=\operatorname{Spec}(\mathscr O_{S,s})\). If
+\[
+  X\times_S S'=X_i\times_S S'
+\]
+for some \(i\),\footnote{Editor's note: \(X-\{s\}\) has been corrected
+above to \(S-\{s\}\). Recall also that a quasi-finite morphism is assumed
+to be of finite type; cf.\ EGA II, 6.2.3, and EGA III\(_2\),
+Err\textsubscript{III} 20 for the definition of ``locally
+quasi-finite.'' Thus here, since \(S\) is Noetherian, \(X\) is of finite
+presentation over \(S\); every immersion \(X_i\hookrightarrow X\) is of
+finite type by EGA I, 6.3.5, so \(X_i\) is of finite presentation over
+\(S\), and EGA IV\(_3\), 8.8.2 applies.}
+there is an open neighborhood \(V\) of \(s\) such that
+\[
+  X|_V=X_i|_V.
+\]
+Taking \(i\) large enough that \(X_i|_U=X|_U\), we then have
+\[
+  X|_W=X_i|_W,
+  \qquad W=U\cup V.
+\]
+
+For all sufficiently large \(i\), the equality \(X|_U=X_i|_U\) shows
+that \(X_i\) is a closed subprescheme of \(X\), defined by an ideal
+\(\mathscr I^{(i)}\) whose support is contained in
+\[
+  X_s=X_0=X\times_S S_0,
+\]
+where
+\[
+  S_n=\operatorname{Spec}(A/\mathfrak m^{n+1}),
+  \qquad S=\operatorname{Spec}(A).
+\]
+Since \(X_0\) is quasi-finite over \(S_0\), it is a finite closed subset
+of the Noetherian prescheme \(X\). Hence \(\mathscr I^{(i)}\) is a
+module of finite length. There is therefore an integer \(n\geq0\) such
+that
+\[
+  \mathscr I^{(i)}
+  \cap\mathfrak m^{n+1}\mathscr O_X=0.
+\]
+On the other hand, by the hypothesis of the lemma, after increasing
+\(i\) if necessary we may suppose that the image of
+\(\mathscr I^{(i)}\) in
+\[
+  \mathscr O_{X_n}
+  =\mathscr O_X/\mathfrak m^{n+1}\mathscr O_X
+\]
+is zero. It follows that \(\mathscr I^{(i)}=0\), and therefore
+\(X_i=X\). \qed
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:lemma:6:3}\textbf{Lemma 6.3.}
+\textit{Let \(S\) be a prescheme, let \(K\) be a group prescheme over
+\(S\), locally of finite presentation, and let \(s\in S\). Suppose that
+\(K_s\) is quasi-finite (respectively, unramified) over \(\kappa(s)\) at
+the unit element. Then there is an open neighborhood \(U\) of \(s\) such
+that \(K|_U\) is locally quasi-finite (respectively, unramified) over
+\(U\).}%
+\begingroup
+\renewcommand{\thefootnote}{\(\ast\)}%
+\footnote{Cf.\ VI\textsubscript{B} \SGARefLink{concl:sga3-VIB-2.5-ii}{2.5(ii)} for a more general
+statement.}%
+\addtocounter{footnote}{-1}%
+\endgroup
+
+\emph{Proof.}
+Let \(V\) be the set of points \(x\in K\) having the following
+property: if \(t\) is the image of \(x\) in \(S\), then \(K_t\) is
+quasi-finite (respectively, unramified) over \(\kappa(t)\) at \(x\);
+that is, \(x\) is isolated in \(K_t\) (respectively, it is isolated and
+its local ring in \(K_t\) is a separable extension of \(\kappa(t)\)).
+The set \(V\) is open because \(K\) is locally of finite presentation
+over \(S\).\footnote{Editor's note: cf.\ EGA IV\(_3\), 13.1.4 and EGA
+IV\(_4\), 17.4.1. In addition, \(t\), rather than \(s\), has been used
+for the image of \(x\).}
+If \(\epsilon\) denotes the unit section of \(K\), then
+\(\epsilon^{-1}(V)\) is open. By hypothesis it contains \(s\), and is
+therefore an open neighborhood \(U\) of \(s\). This \(U\) has the
+required property. Indeed, if \(t\in U\), then \(K_t\), being a group
+locally of finite type over \(\kappa(t)\), is locally quasi-finite
+(respectively, unramified) over \(\kappa(t)\) because it has that
+property at \(\epsilon(t)\); cf.\ VI\textsubscript{B} \SGARefLink{prop:sga3-VIB-1.3}{1.3}. \qed
+
+Combining \SGARefLink{sga3:ix:lemma:6:1}{6.1} and
+\SGARefLink{sga3:ix:lemma:6:3}{6.3}, one obtains:
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:theorem:6:4}\textbf{Theorem 6.4.}
+\textit{Let \(S\) be a prescheme, let \(H\) be an \(S\)-group of
+multiplicative type and of finite type, and let \(K\) be a closed group
+subprescheme of \(H\), of finite presentation over \(S\). Let \(s\in S\)
+be such that \(K_s\) is finite. Then there are an open neighborhood
+\(U\) of \(s\) and an integer \(n>0\) such that
+\[
+  K|_U\subset {}_nH|_U.
+\]
+In particular, since \({}_nH\) is finite over \(S\), the group
+\(K|_U\) is finite over \(U\).}
+
+Nakayama's lemma now gives:
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:corollary:6:5}\textbf{Corollary 6.5.}
+\textit{With the preceding notation, suppose that \(K_s\) is the unit
+group. Then there is an open neighborhood \(U\) of \(s\) such that
+\(K|_U\) is the unit group.}
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:corollary:6:6}\textbf{Corollary 6.6.}
+\textit{Let \(u:H\to G\) be a homomorphism of \(S\)-group preschemes,
+where \(H\) is of multiplicative type and of finite type and \(G\) is
+separated over \(S\). Suppose in addition that either \(S\) is locally
+Noetherian or \(G\) is locally of finite presentation over
+\(S\).\footnote{Editor's note: it is enough to suppose that \(G\) is
+locally of finite type over \(S\). By EGA IV\(_4\), 1.4.3(v), this
+implies, since \(H\to S\) is of finite presentation, that \(H\to G\) is
+locally of finite presentation; the same is then true of \(K\to S\),
+which is obtained from it by base change.}
+If \(s\in S\) and
+\[
+  u_s:H_s\longrightarrow G_s
+\]
+is a monomorphism, then there is an open neighborhood \(U\) of \(s\)
+such that \(u\) induces a monomorphism
+\[
+  H|_U\longrightarrow G|_U.
+\]}
+
+\emph{Proof.}
+Put \(K=\operatorname{Ker}(u)\). The hypothesis on \(u_s\) says that
+\(K_s\) is the unit group, and the desired conclusion says that
+\(K|_U\) is the unit group for a suitable \(U\). Since \(G\) is
+separated over \(S\), the group \(K\) is a closed subgroup of \(H\).
+If \(S\) is not assumed locally Noetherian, but \(G\) is assumed locally
+of finite presentation over \(S\), then \(K\) is locally of finite
+presentation over \(S\).\footnotemark[43] It is therefore of finite
+presentation over \(S\), since it is separated over \(S\) (as \(H\)
+is) and quasi-compact over \(S\) (being closed in \(H\), which is
+quasi-compact over \(S\)). Corollary
+\SGARefLink{sga3:ix:corollary:6:5}{6.5} now applies. \qed
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:remark:6:6:1}\textbf{Remark 6.6.1.}%
+\footnote{Editor's note: the number \SGARefLink{sga3:ix:remark:6:6:1}{6.6.1} has been added for use in
+later references.}
+\textit{Under the hypotheses of
+\SGARefLink{sga3:ix:corollary:6:6}{6.6}, note that if, in addition,
+\(G\) is affine over \(S\) (respectively, of finite presentation over
+\(S\)), then
+\[
+  H|_U\longrightarrow G|_U
+\]
+is even a closed immersion, as was observed in \SGARefLink{sga3:ix:corollary:2:5}{2.5} (respectively,
+\SGARefLink{sga3:ix:remark:2:6}{2.6}).}
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:corollary:6:7}\textbf{Corollary 6.7.}
+\textit{Let \(u:H\to G\) be a homomorphism of \(S\)-group preschemes,
+where \(H\) is of multiplicative type and of finite type. Suppose that
+either \(S\) is locally Noetherian or \(G\) is locally of finite
+presentation over \(S\). If every homomorphism on fibers
+\[
+  u_s:H_s\longrightarrow G_s
+\]
+is a monomorphism, then \(u\) is a monomorphism.}
+
+\emph{Proof.}
+The argument is the same as in
+\SGARefLink{sga3:ix:corollary:6:6}{6.6}. Here the hypothesis that \(G\)
+be separated over \(S\) is unnecessary in order to ensure that
+\(K=\operatorname{Ker}(u)\) is closed in \(H\), since the assumption
+that all the \(u_s\) are monomorphisms implies that \(K\) is
+set-theoretically reduced to the unit section. \qed
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:theorem:6:8}\textbf{Theorem 6.8.}
+\begin{itshape}
+Let \(u:H\to G\) be a homomorphism of \(S\)-group preschemes,
+where \(H\) is of multiplicative type and of finite type and \(G\) is
+separated over \(S\). Suppose in addition that either \(S\) is locally
+Noetherian or \(G\) is of finite presentation over \(S\). Then
+\[
+  K=\operatorname{Ker}(u)
+\]
+is a subgroup of \(H\) of multiplicative type and of finite type, and
+\(u\) factors as
+\SGARefTarget{sga3:ix:theorem:6:8:diagram:01}
+\[
+\begin{tikzcd}[column sep=large]
+  H
+    \arrow[r,"u'"]
+  & H/K
+    \arrow[r,"u''"]
+  & G,
+\end{tikzcd}
+\]
+where \(H/K\) is of multiplicative type and of finite type,
+\(u'\) is the canonical homomorphism and is faithfully flat (and
+affine), and \(u''\) is a monomorphism.
+\end{itshape}
+
+\emph{N.B.}
+As noted in \SGARefLink{sga3:ix:remark:6:6:1}{6.6.1}, the homomorphism
+\(u''\) is a closed immersion if \(G\) is affine over \(S\), or if
+\(G\) is of finite presentation over \(S\).
+
+\emph{Proof.}
+It is enough to prove that \(K\) is of multiplicative type; the rest
+then follows from \SGARefLink{sga3:ix:proposition:2:7}{2.7} and \SGARefLink{sga3:iv:remark:5:2:6}{IV 5.2.6}.
+
+Suppose first that \(G\) is of finite presentation over \(S\). Since
+this hypothesis is stable under base change, in proving that \(K\) is
+of multiplicative type we may reduce to the case in which \(H\) is
+diagonalizable:
+\[
+  H=D_S(M),
+\]
+where \(M\) is a commutative group of finite type. Let \(s\in S\). The
+group \(K_s\) is a closed subgroup of
+\[
+  H_s=D_{\kappa(s)}(M).
+\]
+By \SGARefLink{sga3:ix:proposition:8:1}{8.1},\footnote{Editor's note:
+the erroneous reference to IV 4.7.5 has been corrected. Note that
+\SGARefLink{sga3:ix:section:8}{Section 8} of the present expos\'e is independent of Sections \SGARefLink{sga3:ix:section:2}{2} through
+\SGARefLink{sga3:ix:section:7}{7}.}
+it is therefore of the form \(D_{\kappa(s)}(N)\), where \(N\) is a
+quotient of \(M\). Put
+\[
+  K'=D_S(N).
+\]
+Then \(K'\) is a subgroup of \(H\) of multiplicative type. Let
+\[
+  v':K'\longrightarrow G
+\]
+be the homomorphism induced by \(u\).\footnote{Editor's note:
+``induced by \(G\)'' has been corrected to ``induced by \(u\).''}
+By construction, \(v'_s\) is the unit homomorphism. Corollary
+\SGARefLink{sga3:ix:corollary:5:2}{5.2} therefore gives an open
+neighborhood \(U\) of \(s\) such that
+\[
+  v'|_U:K'|_U\longrightarrow G|_U
+\]
+is the unit homomorphism. Replacing \(S\) by \(U\), we may suppose that
+\(v'\) itself is the unit homomorphism, and hence that \(u\) factors as
+\SGARefTarget{sga3:ix:theorem:6:8:diagram:02}
+\[
+\begin{tikzcd}[column sep=large]
+  H
+    \arrow[r,"u'"]
+  & H/K'
+    \arrow[r,"u''"]
+  & G.
+\end{tikzcd}
+\]
+The homomorphism \(u''_s\) is obtained from \(u_s\) by factoring through
+\[
+  H_s\longrightarrow H_s/\operatorname{Ker}(u_s),
+\]
+and is therefore a monomorphism by \SGARefLink{sga3:iv:remark:5:2:6}{IV 5.2.6}. By
+\SGARefLink{sga3:ix:corollary:6:6}{6.6}, after restricting to a suitable
+open neighborhood \(U\) of \(s\), the homomorphism
+\[
+  u''|_U:(H/K')|_U\longrightarrow G|_U
+\]
+is a monomorphism. Thus, after this restriction,
+\[
+  \operatorname{Ker}(u)
+  =\operatorname{Ker}(u')
+  =K',
+\]
+which proves that \(\operatorname{Ker}(u)\) is of multiplicative type.
+
+The same proof applies if, instead of assuming \(G\) of finite
+presentation over \(S\), one assumes \(S\) locally Noetherian, at least
+when \(H\) is diagonalizable. Without this additional hypothesis on
+\(H\), one must show that there is a covering base change
+\[
+  S'\longrightarrow S,
+\]
+with \(S'\) locally Noetherian, which trivializes \(H\). This will be
+proved in the next expos\'e, \SGARefLink{sga3:x:corollary:4-6}{X 4.6}. \qed
+
+\SGARefTarget{sga3:ix:section:7}
+\section*{7. Algebraicity of Formal Homomorphisms into an Affine Group}
+\addcontentsline{toc}{section}{7. Algebraicity of Formal Homomorphisms
+into an Affine Group}
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:theorem:7:1}\textbf{Theorem 7.1.}
+\textit{Let \(A\) be a Noetherian ring equipped with an ideal \(I\) for
+which \(A\) is separated and complete in the \(I\)-adic topology. Put
+\[
+  S=\operatorname{Spec}(A),
+  \qquad
+  S_n=\operatorname{Spec}(A/I^{n+1}),
+\]
+and let \(H,G\) be \(S\)-group preschemes, with \(H\) of isotrivial
+multiplicative type and \(G\) affine. Then the canonical map
+\SGARefTarget{sga3:ix:theorem:7:1:equation:x}
+\begin{equation}
+  \tag{x}
+  \theta:
+  \operatorname{Hom}_{S\text{-}\mathrm{gr}}(H,G)
+  \longrightarrow
+  \varprojlim_n
+  \operatorname{Hom}_{S_n\text{-}\mathrm{gr}}(H_n,G_n)
+\end{equation}
+is bijective, where \(H_n,G_n\) are the \(S_n\)-groups obtained from
+\(H,G\) by the base change \(S_n\to S\).}
+
+\emph{Proof.}
+Suppose first that \(H\) is diagonalizable, hence of the form
+\[
+  H=\operatorname{Spec}A(M),
+\]
+where \(B=A(M)\) is the algebra of the commutative group \(M\) with
+coefficients in \(A\). We may also write
+\[
+  G=\operatorname{Spec}(C),
+\]
+where \(C\) is an \(A\)-algebra equipped with a diagonal map satisfying
+the usual axioms. Homomorphisms of \(S\)-groups \(H\to G\) correspond
+bijectively to homomorphisms of \(A\)-algebras
+\[
+  \varphi:C\longrightarrow B
+\]
+compatible with the diagonal maps; that is, such that, for every
+\(f\in C\),
+\SGARefTarget{sga3:ix:theorem:7:1:display:01}
+\[
+  \Delta_H(\varphi(f))
+  =(\varphi\otimes\varphi)(\Delta_G(f)).
+\]
+There is an analogous description of the homomorphisms of \(S_n\)-groups
+\(H_n\to G_n\), given by homomorphisms of \(A_n\)-algebras
+\[
+  \varphi_n:C_n\longrightarrow B_n,
+\]
+where
+\[
+  A_n=A/I^{n+1},
+  \qquad
+  B_n=B\otimes_AA_n,
+  \qquad
+  C_n=C\otimes_AA_n.
+\]
+\emph{[The source prints \(C=C\otimes_AA_n\) in the last equality;
+\(C_n\) is intended.]}
+Put
+\SGARefTarget{sga3:ix:theorem:7:1:display:02}
+\[
+  \widehat B=\varprojlim_n B_n,
+  \qquad
+  \widehat C=\varprojlim_n C_n.
+\]
+Then
+\[
+  \widehat B=\varprojlim_n A_n(M)
+\]
+identifies with a submodule of the product \(A^M\), namely the submodule
+of families \((a_m)_{m\in M}\) of elements of \(A\) that tend to zero
+for the \(I\)-adic topology along the filter of complements of finite
+subsets of \(M\). In particular, the canonical homomorphism
+\[
+  B\longrightarrow\widehat B
+\]
+is injective.\footnote{Editor's note: the argument that follows has
+been expanded.}
+The projective system
+\[
+  \theta(\varphi)=(\varphi_n)_{n\geq0}
+\]
+defines a homomorphism
+\[
+  \widehat\varphi:\widehat C\longrightarrow\widehat B
+\]
+such that \SGARefLink{sga3:ix:theorem:7:1:diagram:01}{the following diagram} is commutative:
+\SGARefTarget{sga3:ix:theorem:7:1:diagram:01}
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+  C
+    \arrow[r,"\varphi"]
+    \arrow[d]
+  & B
+    \arrow[d]
+  \\
+  \widehat C
+    \arrow[r,"\widehat\varphi"]
+  & \widehat B.
+\end{tikzcd}
+\]
+
+We prove that \(\theta\) is surjective. Let
+\((\varphi_n)_{n\geq0}\) be a projective system; we must show that it is
+obtained by reduction from some \(\varphi\) in the left-hand side of
+\SGARefLink{sga3:ix:theorem:7:1:equation:x}{\((x)\)}. A priori, the system \((\varphi_n)\) defines a homomorphism
+on the completed algebras,
+\[
+  \widehat\varphi:\widehat C\longrightarrow\widehat B.
+\]
+It is enough to prove that the composite
+\[
+  \Phi:
+  C\longrightarrow\widehat C
+   \xrightarrow{\widehat\varphi}\widehat B
+\]
+sends \(C\) into \(B\). Indeed, in that case it gives a homomorphism of
+\(A\)-algebras
+\SGARefTarget{sga3:ix:theorem:7:1:display:phi:01}\[
+  \varphi:C\longrightarrow B
+\]
+whose reductions are the \(\varphi_n\). \SGARefLink{sga3:ix:theorem:7:1:display:phi:01}{This homomorphism} is immediately
+seen to be compatible with the diagonal maps, since the \(\varphi_n\)
+are so, and since
+\[
+  B\otimes_AB\longrightarrow\widehat{B\otimes_AB}
+\]
+is injective, as follows from the same argument after replacing \(M\)
+by \(M\times M\).
+
+Passing to the completions, the diagonal homomorphism \(\Delta_H\)
+defines
+\SGARefTarget{sga3:ix:theorem:7:1:display:03}
+\[
+  \widehat\Delta_H:
+  \widehat B\longrightarrow\widehat{B\otimes_AB}.
+\]
+Taking the projective limit of the analogous diagrams defined by the
+\(\varphi_n\), one obtains the commutative diagram
+\SGARefTarget{sga3:ix:theorem:7:1:diagram:02}
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+  C
+    \arrow[r,"\Phi"]
+    \arrow[d,"\Delta_G"']
+  & \widehat B
+    \arrow[d,"\widehat\Delta_H"]
+  \\
+  C\otimes_A C
+    \arrow[r,"\Psi"]
+  & \widehat{B\otimes_A B},
+\end{tikzcd}
+\]
+where \(\Psi\) is the composite
+\SGARefTarget{sga3:ix:theorem:7:1:display:04}
+\[
+  C\otimes_A C
+  \xrightarrow{\ \Phi\otimes\Phi\ }
+  \widehat B\otimes_A\widehat B
+  \longrightarrow
+  \widehat{B\otimes_A B};
+\]
+the last arrow is the evident canonical homomorphism. Consequently, for
+every \(f\in C\), the element \(\Phi(f)\in\widehat B\) has the property
+that its image under \(\widehat\Delta_H\) is a ``decomposable'' element
+of \(\widehat{B\otimes_A B}\), namely an element in the image of
+\(\widehat B\otimes_A\widehat B\).
+
+Let \((e_m)_{m\in M}\) be the canonical basis of \(A(M)\), and let
+\((e_{m,m'})\) be that of
+\[
+  A(M\times M)=A(M)\otimes_AA(M).
+\]
+Since
+\[
+  \Delta_H(e_m)=e_m\otimes e_m=e_{m,m}
+  \qquad (m\in M),
+\]
+it remains only to apply \SGARefLink{sga3:ix:lemma:7:2}{the following lemma}.
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:lemma:7:2}\textbf{Lemma 7.2.}
+\begin{itshape}
+Let \(A\) be a Noetherian ring, let \(M\) be a set, and let
+\((a_{m,m'})\) be a family of elements of \(A\), indexed by
+\(M\times M\), satisfying:
+\begin{enumerate}
+  \item[(i)] \SGARefTarget{sga3:ix:lemma:7:2:item:i}
+  \(a_{m,m'}=0\) if \(m\neq m'\); that is, the support of the family is
+  contained in the diagonal of \(M\times M\);
+
+  \item[(ii)] \SGARefTarget{sga3:ix:lemma:7:2:item:ii}
+  one has
+  \SGARefTarget{sga3:ix:lemma:7:2:display:01}
+  \[
+    a_{m,m'}=\sum_i b_m^ic_{m'}^i,
+  \]
+  where the \(b^i,c^i\) are finitely many elements of \(A^M\); in other
+  words, \((a_{m,m'})\) belongs to the image of the canonical
+  homomorphism
+  \[
+    A^M\otimes_AA^M\longrightarrow A^{M\times M}.
+  \]
+\end{enumerate}
+Then the support of \((a_{m,m'})\) is finite.
+\end{itshape}
+
+\emph{Proof.}
+By \SGARefLink{sga3:ix:lemma:7:2:item:i}{(i)}, the family \((a_{m,m'})\) is determined by the elements
+\[
+  a_m=a_{m,m}.
+\]
+For \(x=(x_n)_{n\in M}\in A(M)\), put
+\[
+  (u\cdot x)_m=\sum_{m'}a_{m,m'}x_{m'}.
+\]
+Thus \((a_{m,m'})\) is viewed as the matrix of a homomorphism
+\[
+  u:A(M)\longrightarrow A^M.
+\]
+Condition \SGARefLink{sga3:ix:lemma:7:2:item:i}{(i)} gives simply
+\[
+  (u\cdot x)_m=a_mx_m.
+\]
+On the other hand, condition \SGARefLink{sga3:ix:lemma:7:2:item:ii}{(ii)} gives
+\[
+  u\cdot x\in\sum_i A\cdot b^i.
+\]
+Hence \(u(A(M))\) lies in a finitely generated \(A\)-module. If
+\((e_m)_{m\in M}\) denotes the canonical basis of
+\[
+  A(M)\subset A^M,
+\]
+then all the elements \(a_me_m\) lie in a finitely generated
+\(A\)-module. Since \(A\) is Noetherian, the module generated by these
+elements is itself finitely generated. Because the \(e_m\) are linearly
+independent, all but finitely many of the \(a_m\) are zero. This proves
+the lemma, and hence Theorem \SGARefLink{sga3:ix:theorem:7:1}{7.1} when
+\(H\) is diagonalizable. \qed
+
+We now prove the general case of
+\SGARefLink{sga3:ix:theorem:7:1}{7.1}, in which \(H\) is only assumed
+isotrivial. There is then a finite \'etale surjective morphism
+\[
+  S'\longrightarrow S
+\]
+such that
+\[
+  H'=H\times_SS'
+\]
+is diagonalizable. We shall use only the fact that \(S'\to S\) is finite
+and a covering for the faithfully flat quasi-compact topology, or simply
+for the canonical topology on \((\mathbf{Sch})\). Thus ``\'etale'' could
+be replaced by ``flat.''
+
+Put
+\[
+  S''=S'\times_SS',
+\]
+and similarly introduce
+\[
+  S'_n
+  \quad\text{and}\quad
+  S''_n
+  =S''\times_SS_n
+  =S'_n\times_{S_n}S'_n,
+\]
+together with \(H',G',H'',G'',H'_n,G'_n,H''_n,G''_n\), obtained from
+\(H,G\) by the evident base changes. The groups \(H'\) and \(H''\) are
+diagonalizable. Moreover, \(S'\), and hence \(S''\), is affine. If
+\[
+  S'=\operatorname{Spec}(A'),
+  \qquad
+  S''=\operatorname{Spec}(A''),
+\]
+then \(A'\) and \(A''\) are separated and complete for the topologies
+defined by \(IA'\) and \(IA''\), respectively, because both are finite
+over \(A\).
+
+Since \(S'\to S\) and \(S'_n\to S_n\) are covering morphisms, we obtain
+a commutative diagram of maps of sets whose two rows are exact:
+\SGARefTarget{sga3:ix:theorem:7:1:diagram:03}
+\[
+\begin{tikzcd}[
+  column sep=small,
+  row sep=large,
+  cells={nodes={font=\small}}
+]
+  \operatorname{Hom}_{S\text{-}\mathrm{gr}}(H,G)
+    \arrow[r]
+    \arrow[d,"u"]
+  & \operatorname{Hom}_{S'\text{-}\mathrm{gr}}(H',G')
+    \arrow[r,shift left=.6ex]
+    \arrow[r,shift right=.6ex]
+    \arrow[d,"u'"]
+  & \operatorname{Hom}_{S''\text{-}\mathrm{gr}}(H'',G'')
+    \arrow[d,"u''"]
+  \\
+  \varprojlim_n
+    \operatorname{Hom}_{S_n\text{-}\mathrm{gr}}(H_n,G_n)
+    \arrow[r]
+  & \varprojlim_n
+    \operatorname{Hom}_{S'_n\text{-}\mathrm{gr}}(H'_n,G'_n)
+    \arrow[r,shift left=.6ex]
+    \arrow[r,shift right=.6ex]
+  & \varprojlim_n
+    \operatorname{Hom}_{S''_n\text{-}\mathrm{gr}}(H''_n,G''_n).
+\end{tikzcd}
+\]
+The second row is exact because it is the projective limit of the exact
+diagrams associated with the various \(S'_n\to S_n\). By the
+diagonalizable case already proved, \(u'\) and \(u''\) are bijective.
+Thus \(u\) is bijective as well, completing the proof of
+\SGARefLink{sga3:ix:theorem:7:1}{7.1}. \qed
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:corollary:7:3}\textbf{Corollary 7.3.}
+\textit{Under the hypotheses of
+\SGARefLink{sga3:ix:theorem:7:1}{7.1}, suppose in addition that \(G\)
+is smooth over \(S\), and let
+\[
+  u_0:H_0\longrightarrow G_0
+\]
+be a homomorphism of \(S_0\)-groups. Then there is a homomorphism of
+\(S\)-groups
+\[
+  u:H\longrightarrow G
+\]
+lifting \(u_0\). Any two such liftings \(u,u'\) are conjugate by an
+element \(g\in G(S)\) whose reduction is the unit element of
+\(G_0(S_0)\).}
+
+\emph{Proof.}
+This follows by combining
+\SGARefLink{sga3:ix:theorem:3:6}{3.6} and
+\SGARefLink{sga3:ix:theorem:7:1}{7.1}. To construct \(u\), construct
+the \(u_n\) successively, as is possible by \SGARefLink{sga3:ix:theorem:3:6}{3.6}; \SGARefLink{sga3:ix:theorem:7:1}{Theorem 7.1} then shows
+that the system \((u_n)\) comes from an \(S\)-homomorphism \(u\). Given
+two liftings \(u,u'\), construct successively elements \(g_n\) such
+that
+\[
+  g_0=1,
+  \qquad
+  g_n\text{ is the reduction of }g_{n+1},
+  \qquad
+  u'_n=\operatorname{int}(g_n)u_n.
+\]
+Again, this is possible by \SGARefLink{sga3:ix:theorem:3:6}{3.6}. Since \(A\) is separated and complete,
+the \(g_n\) come from an element \(g\in G(S)\). Finally, the injectivity
+in \SGARefLink{sga3:ix:theorem:7:1}{7.1} gives
+\[
+  u'=\operatorname{int}(g)u.
+\]
+\qed
+
+\medskip
+\noindent\SGARefTarget{sga3:ix:remark:7:4}\textbf{Remark 7.4.}
+\textit{Compare \SGARefLink{sga3:ix:theorem:7:1}{7.1} with EGA III,
+5.4.1, which implies that the statement of \SGARefLink{sga3:ix:theorem:7:1}{7.1} remains true if, instead
+of assuming \(H\) of multiplicative type and \(G\) affine, one assumes
+that \(H\) is proper over \(S\), and that \(G\) is separated and locally
+of finite type over \(S\). A statement such as \SGARefLink{sga3:ix:theorem:7:1}{7.1} without a properness
+hypothesis is rather exceptional, and should be understood here as one
+aspect of the great ``rigidity'' of the structure of a group of
+multiplicative type.}
+
+\textit{The analogous statement with
+\[
+  G=H=\mathbf G_a
+\]
+is false in general. Indeed, take \(A\) of characteristic \(p>0\), and
+define the \(u_n\), by reduction modulo \(I^{n+1}\), from an additive
+formal power series
+\SGARefTarget{sga3:ix:remark:7:4:display:01}
+\[
+  u(T)=\sum_{n\geq0}a_nT^{p^n},
+\]
+where the \(a_n\in A\) tend to zero for the \(I\)-adic topology, but not
+for the discrete topology.}
+
+\textit{The statement of \SGARefLink{sga3:ix:theorem:7:1}{7.1} also becomes false if the hypothesis that
+\(G\) be affine is omitted, even when \(H=\mathbf G_m\). An example,
+with \(A\) a complete discrete valuation ring, is obtained from an
+elliptic curve over the fraction field \(K\) of \(A\) whose reduction,
+in the N\'eron--Kodaira theory, say, is the group \(\mathbf G_m\) over the
+residue field \(k\).\footnote{Editor's note: such an example could be
+made explicit.} One then has a smooth commutative group scheme \(G\)
+over \(S\), with special fiber \(\mathbf G_{m,k}\). By \SGARefLink{sga3:ix:theorem:3:6}{3.6} this permits
+the construction of a projective system of isomorphisms
+\[
+  u_n:H_n\xrightarrow{\ \sim\ }G_n,
+  \qquad H=\mathbf G_{m,A},
+\]
+while the generic fiber of \(G\) is an abelian variety. Consequently,
+there is no homomorphism of \(S\)-groups \(H\to G\) other than the zero
+homomorphism.}
+

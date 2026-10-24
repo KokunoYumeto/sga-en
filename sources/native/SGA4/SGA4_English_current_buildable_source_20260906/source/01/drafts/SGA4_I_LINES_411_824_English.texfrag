@@ -1,0 +1,409 @@
+\section{Projective and inductive limits}\etiquette[2]{I.sec2}
+
+Let $C$ be a $𝒰$-category and $I$ a small category.
+Denote by $\Fonct(I,C)$ the category of functors from $I$ to $C$. The
+category $\Fonct(I,C)$ is a $𝒰$-category. To every object
+$X$ of $C$, associate the subcategory $𝒳$ of $C$ whose
+only object is $X$ and whose only arrow is the identity of $X$.
+Let $i_X:𝒳\rightarrow C$ denote the inclusion functor.
+There is a unique functor $e_X:I\rightarrow 𝒳$, and
+we denote by $k_X:I\rightarrow C$ the functor $i_X\circ
+e_X$. (We say that $k_X$ is the constant functor with value $X$.) The
+correspondence $X\mapsto k_X$ is clearly functorial in $X$,
+which allows us to define, for every functor $G:I\rightarrow
+C$, the presheaf $X\mapsto \Hom_{\Fonct(I,C)}(k_X,G)$.
+
+\begin{enonce*}{Definition 2.1}\etiquette[2.1]{I.def2.1}
+The projective limit of $G$, denoted by $\varprojlim_I G$, is the
+presheaf:
+$$
+X\longmapsto \Hom_{\Fonct(I,C)}(k_X,G){\quoi}.
+$$
+When the presheaf $\varprojlim_I G$ is representable, we
+also denote by $\varprojlim_I G$ an\pageoriginale object of $C$
+representing it. Thus the object $\varprojlim_I G$ is defined only up to
+isomorphism. When no confusion can result, we use
+the abbreviated notation $\varprojlim G$.
+\end{enonce*}
+
+As $G$ varies, $\varprojlim G$ is a functor from the category
+$\Fonct(I,C)$ to $\widehat{C}$.
+
+\setcounter{subsection}{1} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[2.1.1]{I.sec2.1.1}
+By symmetry (reversing the direction of the arrows
+in $C$), one similarly defines the inductive limit of a functor: it is a
+covariant functor on $C$ with values in the category of
+$𝒰$-sets. We shall use the notations $\varinjlim_I
+G$ or $\varinjlim G$.
+
+Observe that products, fiber products, and kernels are projective
+limits. Similarly, sums, amalgamated sums, and cokernels are
+inductive limits.
+
+\begin{enonce*}{Definition 2.2}\etiquette[2.2]{I.def2.2}
+Let $I$ and $C$ be two categories and $G:I\rightarrow C$ a functor.
+The projective limit of $G$ is said to be representable if there exists
+a universe $𝒰$ such that:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The category $I$ is $𝒰$-small.
+
+\item The category $C$ is a $𝒰$-category.
+
+\item The presheaf $\varprojlim G$, with values in the
+  category of $𝒰$-sets, is representable.
+\end{enumerate}
+\end{enonce*}
+
+It follows from ${\rm n^\circ}$ 1 that the object $\varprojlim G$
+representing the presheaf $\varprojlim G$ is independent, up to
+isomorphism, of the universe $𝒰$. Note also that there
+exists a smallest universe $𝒰'$ having properties
+(1) and (2), and that the presheaf $\varprojlim G$ necessarily takes
+values in the category of $𝒰'$-sets.
+
+\setcounter{subsection}{2} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[2.2.1]{I.sec2.2.1}
+Let\pageoriginale $I$ and $C$ be two categories. We say that
+\emph{the $I$-projective limits in $C$ are
+  representable} if, for every functor $G:I\rightarrow C$, the
+  projective limit of $G$ is representable. Finally, let $C$ be a
+  category and $𝒰$ a universe. We say that the
+  $𝒰$-\emph{projective
+  limits in $C$ are representable} if, for every
+  category $I$ that is $𝒰$-small and every functor $G:I\rightarrow
+  C$, the projective limit of $G$ is representable.
+
+\begin{enonce*}{Proposition 2.3}\etiquette[2.3]{I.prop2.3}
+Let $C$ be a category and $𝒰$ a universe\sisi{ that is
+nonempty}{}. The following assertions are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The $𝒰$-projective limits in $C$ are representable.
+
+\item Products indexed by a small set are
+  representable, and kernels of pairs of arrows are
+  representable.
+\item Products indexed by a small set are
+  representable, and fiber products are representable.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+It suffices to observe that there is an isomorphism, functorial in
+$G$,
+$$
+\varprojlim G=\Ker (\prod_{i\in \ob(I)} %%
+G(i)\rightrightarrows \prod_{u\in \rm{F\ell}(I)} G(\but(u))){\quoi},
+$$
+where the pair of arrows is defined by the morphisms
+\begin{align*}
+\prod_{i\in \Ob(I)}  G(i) %%
+ & \xrightarrow{\pr_{\but(u)}}{} G(\but(u))\\
+\prod_{i\in \Ob(I)} G(i) %%
+ &\xrightarrow{\pr_{\text{source}(u)}}{} G(\text{source
+}(u))\xrightarrow{G(u)} G(\but(u)){\quoi}.
+\end{align*}
+Moreover, it is clear that $\Ker (X  \displaystyle \Lright^{u}_{v}Y)=
+X\prod_{X\times Y} X$, where the two morphisms from $X$ to $X\times Y$
+are $\id_X \times u$ and $\id_X\times v$.
+\end{enonce*}
+
+\setcounter{subsection}{3} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[2.3.1]{I.sec2.3.1}
+There are of course analogous definitions and assertions for
+inductive limits, which we shall not spell out. The same applies to
+finite projective\pageoriginale and inductive limits (\ie
+those relative to a %%
+finite category $I$).
+
+
+\begin{enonce*}{Corollary 2.3.2}\etiquette[2.3.2]{I.cor2.3.2}
+Denote by $𝒰$-$\Ens$ the category of
+$𝒰$-sets and by $𝒰$-$\Ab$ the category of
+abelian group objects in $𝒰$-$\Ens$. The
+$𝒰$-projective and inductive limits in
+$𝒰$-$\Ens$ and in $𝒰$-$\Ab$ are representable.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 2.3.3}\etiquette[2.3.3]{I.prop2.3.3}
+Let $I$ be a small category, $F:I\rightarrow 𝒰$-$\Ens$
+a functor, and \linebreak %%
+$G\subset\ob(I)$ a small set of objects of $I$ such that, for every
+object $X$ of $I$, there exists an object $Y\in G$ and a morphism
+$Y\rightarrow X$ (\resp $X\rightarrow Y$). Then $\varprojlim_I F$
+(\resp $\varinjlim_I F$) is representable, and
+$\card(\varprojlim_I F)\leq \Pi_{Y\in G}\card(F(Y))$ (\resp
+$\card(\varinjlim_I F)\leq \Sigma_{Y\in G}\card(F(Y))$).
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+One immediately verifies that $\varprojlim_I F$ (\resp $\varinjlim_I
+F$) is isomorphic to a subobject (\resp a quotient) of $\Pi_{Y\in
+G}F(Y)$ (\resp $\amalg_{Y\in G}F(Y)$); hence the proposition.
+\end{enonce*}
+
+\begin{enonce*}{Definition 2.4.1}\etiquette[2.4.1]{I.def2.4.1}
+Let $C$ be a category in which finite projective (\resp
+inductive) limits are representable, and let $u:C\rightarrow C'$ be a
+functor. We say that $u$ is left exact (\resp right exact) if it
+``commutes'' with finite projective (\resp inductive) limits.
+A functor that is both left and right exact is called an exact functor.
+\end{enonce*}
+
+\setcounter{subsection}{4} \setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[2.4.2]{I.sec2.4.2}
+It follows from \hyperref[I.prop2.3]{2.3} that, for a functor to be exact\sisi{}{ on the left}, it is necessary and %% étiquette !
+sufficient that it take the terminal object (= empty product) to the
+terminal object, the product of two objects to the product of their
+images, and the kernel of a pair of arrows to the kernel of the
+image pair; equivalently, that it take the terminal object to the
+terminal object and fiber products to fiber products\sisi{. (W}{ (w}e
+assume that in $C$ finite $\varprojlim$ are
+representable\sisi{.)}{).}
+
+\setcounter{subsection}{5} \setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[2.5.0]{I.sec2.5.0}
+Let\pageoriginale $I$, $J$, and $C$ be three categories, and let $G:I\times
+J\rightarrow C$ be a functor (\ie a functor from $I$ with values in the
+category of functors from $J$ to $C$). Suppose that the projective
+limits of the functors
+\begin{align*}
+G_i:&J\longrightarrow C\qquad i\in \ob(I)\\
+    & j\longmapsto G(i\times j)
+\end{align*}
+are representable, and that the functor
+$$
+i\longmapsto \varprojlim G_i
+$$
+admits a representable projective limit. It is then clear that
+the functor $G$ admits a representable projective limit and that there is
+a canonical isomorphism
+$$
+\varprojlim_{I\times J} G\\
+\xrightarrow{\sim}\varprojlim_I \varprojlim_J G_i{\quoi},
+$$
+and consequently a canonical isomorphism
+$$
+\varprojlim_I \varprojlim_J G_i\xrightarrow{\sim}\varprojlim_J
+\varprojlim_I G_j{\quoi}.
+$$
+Hereafter we shall say more briefly that projective limits
+commute with projective limits. Similarly, inductive limits
+commute with inductive limits. But in general it is not true
+that inductive limits commute with projective limits.
+
+\setcounter{subsection}{5}
+\begin{enonce*}{Definition 2.5}\etiquette[2.5]{I.def2.5}
+Let $C$ be a category with representable fiber products, $I$ a
+category, $G:I\rightarrow C$ a functor, $g:G\rightarrow X$ a
+morphism from $G$ to an object of $C$ (\ie a morphism from $G$ to
+the constant functor associated with $X$), and $m:Y\rightarrow X$ a morphism
+in $C$. Let\pageoriginale $\fprod{G}{Y}{X}:I\rightarrow C$ be the
+functor
+$$
+i\longmapsto \fprod{G(i)}{Y}{X} {\quoi}.
+$$
+We say that the inductive limit of $G$ is universal if, for every
+object $X$, every morphism $g:G\rightarrow X$, and every morphism
+$m:Y\rightarrow X$,
+\begin{enumerate}
+\item[a)] the inductive limit of the functor $\fprod{G}{Y}{X}$ is
+  representable,
+
+\item[b)] the canonical morphism $\varinjlim (\fprod{G}{Y}{X}
+  )\rightarrow \fprod{(\varinjlim G)}{Y}{X}$ is an isomorphism.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Proposition 2.6}\etiquette[2.6]{I.prop2.6}
+Let $𝒰$ be a universe. The inductive limits in
+$𝒰$-$\Ens$ that are representable (in particular, the
+$𝒰$-inductive limits $\hyperref[I.sec2.2.1]{(2.2.1)}$ in $𝒰$-$\Ens$) %% étiquette !
+are universal.
+\end{enonce*}
+We shall also use another commutation result for
+projective and inductive limits, which we now present.
+
+\begin{enonce*}{Definition 2.7}\etiquette[2.7]{I.def2.7}
+A category $I$ is pseudo-filtered if it has the following
+properties:
+\begin{itemize}
+\item[PS 1)] Every diagram of the form
+\[
+\xymatrix@R=.5cm@C=1cm{
+       & j\\
+i \ar[ru]\ar[dr]     &  \\
+       & j'
+}
+\]
+can be embedded in a commutative diagram
+\[
+\xymatrix@R=.5cm@C=1cm{
+  & j \ar[rd]&\\
+i\ar[ur]\ar[rd] &   & k\\
+  & j'\ar[ru]&
+}
+\]
+
+\item[PS 2)] Every diagram of the form
+\[
+\xymatrix@R=.75cm@C=1.5cm@M=.25cm{
+i\ar@<2.5pt>[r]^{u}\ar@<-2.5pt>[r]_{v} & j }
+\]
+  can \pageoriginale be embedded in a diagram
+\[
+\xymatrix@C=1.75cm@M=.25cm{ i\ar@<2.5pt>[r]^{u}\ar@<-2.5pt>[r]_{v} &
+j\ar[r]%%
+^{w} & k\\
+}
+\]
+  such that
+  $$
+  w\circ u=w\circ v{\quoi}.
+  $$
+\end{itemize}
+A category $I$ is said to be filtered if it is pseudo-filtered,
+nonempty, and connected, \ie if any two objects of $I$ can
+be joined by a sequence of arrows (with no condition imposed
+on the directions of the arrows); in the presence of {\rm
+PS 2}, this also means that $I\neq ∅$ and that, for any two objects $a$, $b$ of
+$I$, there is always an object $c$ of $I$ and arrows $a\sisi{$
+$}{\rightarrow}c$ and $b\sisi{$ $}{\rightarrow}c$. We also say
+that a category $I$ is cofiltered if $I^\circ$ is filtered.
+\end{enonce*}
+
+\begin{enonce*}{Example 2.7.1}\etiquette[2.7.1]{I.exem2.7.1}
+If, in $I$, amalgamated sums (\resp sums of two objects)
+and cokernels of pairs of parallel arrows are representable, then $I$
+is pseudo-filtered (\resp filtered).
+\end{enonce*}
+
+\begin{enonce*}{Proposition 2.8}\etiquette[2.8]{I.prop2.8}
+Let $𝒰$ be a universe. Filtered $𝒰$-inductive limits
+in $𝒰$-$\Ens$ commute with finite projective
+limits.
+\end{enonce*}
+
+We are immediately reduced to proving that filtered $𝒰$-inductive
+limits commute with fiber products. The proof is
+left to the reader. One may use the description of the limit
+given by the following
+
+\begin{enonce*}{Lemma 2.8.1}\etiquette[2.8.1]{I.lem2.8.1}
+Let $I$ be a small filtered category and $i\mapsto X_i$ a
+functor from $I$ to $𝒰$-$\Ens$. On the disjoint union
+$\amalg_{i\in
+ \ob I} X_i$, let $R$ be the relation:
+\begin{itemize}
+\item[(R)] Two elements $x_i\in X_i$ and $x_j\in X_j$ are
+  related if there exists an object $k\in \ob I$ and two morphisms
+  $u:i\rightarrow k$ and $v:j\rightarrow k$ such that the images in
+  $X_k$ of $x_i$ and $x_j$ under the transition maps $u$ and
+  $v$, respectively, are equal.
+\end{itemize}
+Then:\pageoriginale
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $R$ is an equivalence relation.
+
+\item The quotient $\amalg_{i\in \ob I}X_i/R$ is canonically isomorphic
+  to $\varinjlim_I X_i$.
+
+\item Two elements $x_i\in X_i$ and $x_j\in X_j$ are
+  respectively equivalent under $R$ to two elements of the
+  same $X_k$.
+
+\item For every $i\in \ob I$, two elements $\alpha$ and $\beta$ of $X_i$ are
+  equivalent under $R$ if and only if there is a morphism
+  $u:i\rightarrow j$ such that $u(\alpha)=u(\beta)$.
+\end{enumerate}
+\end{enonce*}
+
+Assertion 1) follows from (PS 1) \hyperref[I.def2.7]{(2.7)}. To prove 2), one %% étiquette !
+checks that $\amalg_{i\in \ob I}X_i/R$ has the universal
+property of the inductive limit (only (PS 1) is used).
+Assertion 3) follows from the fact that $I$ is connected. Assertion 4)
+follows from (PS 2).
+
+\begin{enonce*}{Corollary 2.9}\etiquette[2.9]{I.cor2.9}
+Let $%%
+\gamma$ be a kind of algebraic structure ``defined by finite
+projective limits.'' (The reader is asked to give a mathematical meaning
+to the preceding phrase. We merely note that the structures of groups,
+abelian groups, rings, modules, etc. %%
+are structures of this kind.) Denote by $𝒰$-$\gamma$ the
+category of $\gamma$-objects in $𝒰$-$\Ens$. The functor that
+associates with each object of $𝒰$-$\gamma$ its underlying set
+commutes with filtered $𝒰$-inductive limits. Consequently,
+filtered $𝒰$-inductive limits in $𝒰$-$\gamma$
+commute with finite projective limits.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 2.10}\etiquette[2.10]{I.cor2.10}
+Pseudo-filtered $𝒰$-inductive limits in $𝒰$-$\Ab$
+commute with finite projective limits.
+\end{enonce*}
+
+(One reduces to filtered limits by decomposing the indexing category
+into connected components.)
+
+We now record\pageoriginale a result that we shall use
+constantly: let $C$ and $C'$ be two $𝒰$-categories, and let $u$ and
+$v$ be two functors $\xymatrix@C=1.25cm{ C  \ar@<-.6ex>[r]_u & C'
+\ar@<-.6ex>[l]_v }$, with $u$ \emph{left adjoint} to $v$. Recall
+that this means that there is an isomorphism between the
+bifunctors with values in $𝒰$-$\Ens$:
+$$
+\Hom_{C'}(u(X),X')\xrightarrow{\sim}\Hom_{C}(X,v(X')){\quoi}.
+$$
+
+\begin{enonce*}{Proposition 2.11}\etiquette[2.11]{I.prop2.11}
+The functor $u$ commutes with representable inductive limits; the
+functor $v$ commutes with representable projective limits.
+\end{enonce*}
+
+This assertion means that, for every category $I$ and every
+functor $G:I\rightarrow C'$ such that the projective limit of $G$ is
+representable, the functor $v\circ G$ has a representable
+projective limit and there is a canonical isomorphism
+$$
+v(\varprojlim G)\longrightarrow \varprojlim(v\circ G){\quoi}.
+$$
+The reader may spell out the assertion concerning the
+functor $u$.
+
+Finally, we record a computation of projective limits in the case where the
+indexing category has products.
+
+\begin{enonce*}{Proposition 2.12}\etiquette[2.12]{I.prop2.12}
+Let $I$ and $C$ be two categories, and $𝒱$ a universe. Assume
+that the $𝒱$-projective limits in $C$ are
+representable and that there is in $I$ a family of objects
+$(i_\alpha)_{\alpha\in A}$, where $A$ is an element of $𝒱$,
+such that:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item the products $i_\alpha\times i_\beta$ are representable
+  for every pair $(\alpha,\beta)\in A\times A$,
+
+\item every object of $I$ admits a morphism to at least one of the $i_\alpha$.
+\end{enumerate}
+
+
+Then, for every contravariant functor $F$ from $I$ to $C$,
+$$
+F:I^\circ\longrightarrow C{\quoi},
+$$
+the projective limit of $F$ exists, and there is an isomorphism
+functorial in $F$:
+$$
+\varprojlim F\xrightarrow{\sim} \Ker \left(\prod_{\alpha\in
+  A} F(i_\alpha)\rightrightarrows \prod_{(\alpha,\beta)\in A\times A}
+F(i_\alpha \times i_\beta)\right){\quoi},
+$$
+where the\pageoriginale two arrows are defined by the projections
+of the products $i_\alpha\times i_\beta$ onto their factors.
+\end{enonce*}

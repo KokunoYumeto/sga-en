@@ -1,0 +1,892 @@
+
+\SGASubsection{1.2}{Global lifting of finite groups}
+\SGARefTarget{sga3:xv:subsection:1:2}
+
+\SGAStatement{\SGAInlineRefTarget{sga3:xv:lemma:1-4}Lemma 1.4}{Let \(A\) be a local ring, separated and
+complete for the topology defined by its maximal ideal \(\mathfrak m\),
+let
+\[
+  S=\operatorname{Spec}(A),\qquad
+  S_n=\operatorname{Spec}(A/\mathfrak m^n).
+\]
+Then, for every prescheme \(X\) (respectively, for every \(S\)-prescheme
+\(X\)), the canonical map
+\[
+  \tag{$\ast$}\label{sga3:xv:lemma:1-4:equation:ast}
+  \operatorname{Hom}(S,X)
+  \longrightarrow
+  \varprojlim_n\operatorname{Hom}(S_n,X)
+\]
+(respectively,
+\[
+  \tag{$\ast\ast$}\label{sga3:xv:lemma:1-4:equation:ast-ast}
+  \Gamma(X/S)
+  \longrightarrow
+  \varprojlim_n\Gamma(X_n/S_n),
+  \qquad X_n=X\times_S S_n)
+\]
+is bijective.}
+\SGARefTarget{sga3:xv:lemma:1:4}
+
+Statement \((\ast\ast)\) is an easy consequence of \((\ast)\). Let us
+prove \((\ast)\). Let
+\[
+  u_n:S_n\longrightarrow X\qquad(n\in\mathbb N)
+\]
+be a coherent system of morphisms. The image \(y\) of the closed point
+of \(S_n\) is independent of \(n\), and \(u_n\) factors through
+\(\operatorname{Spec}\mathcal O_y\). On passing to the inverse limit,
+the morphisms \(u_n\) define a ring homomorphism
+\[
+  \widetilde u:\mathcal O_y
+  \longrightarrow
+  \varprojlim_n(A/\mathfrak m^n)=A.
+\]
+This proves that \((\ast)\) is surjective; it is injective as soon as
+\(A\) is separated for the \(\mathfrak m\)-adic topology.
+
+\SGAStatement{\SGAInlineRefTarget{sga3:xv:corollary:1-5}Corollary 1.5}{Let \(A\) be a complete noetherian local
+ring, let \(\mathfrak m\) be its maximal ideal, let
+\[
+  S=\operatorname{Spec}(A),\qquad
+  S_n=\operatorname{Spec}(A/\mathfrak m^n),
+\]
+let \(X\) be a finite scheme over \(S\), and let \(Y\) be an
+\(S\)-prescheme. Then the canonical map
+\[
+  \operatorname{Hom}_S(X,Y)
+  \longrightarrow
+  \varprojlim_n\operatorname{Hom}_{S_n}(X_n,Y_n)
+\]
+(where \(X_n=X\times_S S_n\), and similarly for \(Y_n\)) is
+bijective.}
+\SGARefTarget{sga3:xv:corollary:1:5}
+
+Indeed, it follows from EGA II~6.2.5 that \(X\) is a finite disjoint
+sum of local \(S\)-schemes finite over \(S\). We are thus reduced to
+the case in which \(X\) itself is the spectrum of a complete
+noetherian local ring. But
+\[
+  \operatorname{Hom}_S(X,Y)=\Gamma(Z/X),
+  \qquad Z=Y\times_S X,
+\]
+and the preceding lemma applies.
+
+\SGAStatement{\SGAInlineRefTarget{sga3:xv:proposition:1-6}Proposition 1.6}{Let \(A,S,S_n\) be as above, and let
+\(G\) and \(M\) be two \(S\)-group preschemes, with \(M\) finite over
+\(S\). Then:
+\begin{enumerate}
+\item[\normalfont a)]\SGAInlineRefTarget{sga3:xv:proposition:1-6:item:a} The canonical map
+\[
+  \operatorname{Hom}_{S\text{-}\mathrm{gr}}(M,G)
+  \longrightarrow
+  \varprojlim_n
+  \operatorname{Hom}_{S_n\text{-}\mathrm{gr}}(M_n,G_n)
+\]
+is bijective.
+\item[\normalfont b)] If \(M\) is of multiplicative type and \(G\) is
+smooth over \(S\), the canonical map
+\[
+  \varphi:\operatorname{Hom}_{S\text{-}\mathrm{gr}}(M,G)
+  \longrightarrow
+  \operatorname{Hom}_{S_0\text{-}\mathrm{gr}}(M_0,G_0)
+\]
+is surjective. Moreover, if
+\(\varphi(u)=\varphi(u')=u_0\), then \(u\) and \(u'\) are conjugate by
+an element of \(G(S)\) that reduces to the identity element of
+\(G(S_0)\).
+\item[\normalfont c)] If \(M\) is of multiplicative type and smooth
+over \(S\), if \(G\) is flat and of finite type over \(S\), and if
+\(u_0:M_0\to G_0\) is a central homomorphism, then \(u_0\) lifts
+uniquely to a homomorphism
+\[
+  u:M\longrightarrow G.
+\]
+Moreover, \(u\) is central if \(G\) has connected fibres.
+\end{enumerate}}
+\SGARefTarget{sga3:xv:proposition:1:6}
+
+\SGAProof{Proof}
+\emph{a)} This follows from \SGARefLink{sga3:xv:corollary:1-5}{1.5}, from the fact that
+\(M\times_S M\) is finite over \(S\), and from the characterization
+of group morphisms as the morphisms for which the familiar diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+M\times_S M \arrow[r,"u\times u"] \arrow[d]
+  & G\times_S G \arrow[d] \\
+M \arrow[r,"u"'] & G
+\end{tikzcd}
+\]
+is commutative.
+
+\emph{b)} By Exposé \SGARefLink{sga3:ix:theorem:3:6}{IX~3.6}, one can construct a coherent system of
+homomorphisms \(u_n:M_n\to G_n\) lifting a homomorphism
+\(u_0:M_0\to G_0\). In view of part a), this proves the first assertion
+of b).
+
+If \(u\) and \(u'\) are two liftings of \(u_0\), then \(u_n\) and
+\(u'_n\) are conjugate by an element \(g_n\in G(S_n)\) lifting the
+identity element of \(G(S_0)\) (Exposé \SGARefLink{sga3:ix:theorem:3:6}{IX~3.6}). The same reference
+also implies that the \(g_n\) may be chosen coherently; by \SGARefLink{sga3:xv:lemma:1-4}{1.4} they
+therefore arise from a section \(g\in G(S)\). The morphisms \(u\) and
+\(\operatorname{Int}(g)u'\) then agree modulo \(\mathfrak m^n\) for
+every \(n\), and hence agree by \SGARefLink{sga3:xv:corollary:1-5}{1.5}.
+
+\emph{c)} The existence and uniqueness of \(u\) follow from part a)
+and \SGARefLink{sga3:xv:proposition:1:2:bis}{1.2 bis}. If \(G\) has connected fibres, \(u\) is central by
+Exposé \SGARefLink{sga3:ix:theorem:5:6:item:a}{IX~5.6(a)}.
+
+\SGASection{2}{Infinitesimal lifting of sub-tori}
+\SGARefTarget{sga3:xv:section:2}
+
+\SGASubsection{2.1}{Statement of the theorem}
+\SGARefTarget{sga3:xv:subsection:2:1}
+
+We shall give an infinitesimal lifting theorem for sub-tori of a group
+prescheme that does not require smoothness hypotheses (in contrast
+with Exposé \SGARefLink{sga3:ix:theorem:3:6:bis}{IX~3.6 bis}) and that also answers a very natural
+question:\footnote{Editor's note: The idea of approximating a torus by
+its finite subgroups occurs in Grothendieck's proof of the
+connectedness of centralizers of tori; see §\SGARefLink{sga3:xv:lemma:4:6}{4.6} of \emph{BIBLE}.}
+is it enough to be able to lift ``sufficiently many'' points of finite
+order of a sub-torus \(T_0\) in order to ensure that \(T_0\) itself can
+be lifted (infinitesimally, of course)?
+
+\SGAStatement{Theorem 2.1}{Let \(S\) be a noetherian affine scheme,
+let \(S_0\) be a closed subscheme of \(S\) defined by a square-zero
+ideal \(J\), let \(G\) be an \(S\)-group prescheme of finite type, let
+\(G_0=G\times_S S_0\), let \(T_0\) be a sub-torus of \(G_0\), and let
+\(q>0\) be an integer invertible on \(S\). Suppose that, for every
+integer \(n\) equal to a power of \(q\), there exists a subscheme
+\(M_n\) of \(G\), flat over \(S\), such that
+\[
+  M_n\times_S S_0={}_nT_0.
+\]
+Then there exists a sub-torus \(T\) of \(G\) such that
+\(T\times_S S_0=T_0\).}
+\SGARefTarget{sga3:xv:theorem:2:1}
+
+\SGARefLink{sga3:xv:theorem:2:1}{Theorem 2.1} will be useful to us through the following two
+corollaries.
+
+\SGAStatement{\SGAInlineRefTarget{sga3:xv:corollary:2-2}Corollary 2.2}{Let \(S\) be a locally noetherian
+prescheme, let \(S_0\) be a closed subprescheme of \(S\) defined by a
+locally nilpotent sheaf of ideals, let \(G\) be an \(S\)-group
+prescheme of finite type, let \(T_0\) be a sub-torus of
+\(G_0=G\times_S S_0\), and let \(q>0\) be an integer invertible on
+\(S\). As \(n\) ranges over the powers of \(q\), let \((M_n)\) be a
+coherent system of \(S\)-subgroup schemes of \(G\), of multiplicative
+type, lifting the \({}_nT_0\). (The system \((M_n)\) is said to be
+coherent if
+\[
+  M_m={}_m(M_n)
+\]
+whenever \(m\) divides \(n\).) Then there exists a unique sub-torus
+\(T\) of \(G\) such that
+\[
+  T\times_S S_0=T_0
+  \qquad\text{and}\qquad
+  {}_nT=M_n
+\]
+for every \(n\).}
+\SGARefTarget{sga3:xv:corollary:2:2}
+
+\SGAStatement{Corollary 2.3}{Let \(G\) be an \(S\)-group prescheme,
+flat and of finite presentation over \(S\), let \(S_0\) be a closed
+subprescheme of \(S\) defined by a locally nilpotent sheaf of ideals
+of finite type, and let \(T_0\) be a central torus of
+\(G_0=G\times_S S_0\). Then there exists a unique sub-torus \(T\) of
+\(G\) lifting \(T_0\). Moreover, \(T\) is central.}
+\SGARefTarget{sga3:xv:corollary:2:3}
+
+\SGAStatement{Remark 2.4}{We leave it to the reader to formulate the
+analogues of statements \SGARefLink{sga3:xv:theorem:2:1}{2.1}, \SGARefLink{sga3:xv:corollary:2-2}{2.2}, and \SGARefLink{sga3:xv:corollary:2:3}{2.3} in which, instead of lifting
+a sub-torus of \(G_0\), one is given a torus \(T\) over \(S\) and asks
+to lift a morphism
+\[
+  u_0:T_0\longrightarrow G_0.
+\]
+One reduces to the preceding cases by considering the graph of
+\(u_0\).}
+\SGARefTarget{sga3:xv:remark:2:4}
+
+Let us show how \SGARefLink{sga3:xv:corollary:2-2}{Corollaries 2.2} and \SGARefLink{sga3:xv:corollary:2:3}{2.3} follow from \SGARefLink{sga3:xv:theorem:2:1}{Theorem 2.1}.
+
+\SGAProof{Proof of \SGARefLink{sga3:xv:corollary:2-2}{Corollary 2.2}}
+The uniqueness of \(T\) follows from Exposé \SGARefLink{sga3:ix:corollary:4:8:item:b}{IX~4.8(b)} and Exposé
+\SGARefLink{sga3:ix:remark:4:10}{IX~4.10}. To prove existence, we may therefore reduce to the case in
+which \(S\) is affine, hence noetherian, and \(S_0\) is defined by a
+square-zero ideal.
+
+\SGAStatement{Lemma 2.5}{Let \(G\) be an \(S\)-group prescheme of
+finite presentation, and let \(H\) be a subgroup scheme of \(G\), of
+multiplicative type and smooth over \(S\). Then
+\(\operatorname{Centr}_G(H)\) is representable by an \(S\)-group
+subprescheme of \(G\), of finite presentation.}
+\SGARefTarget{sga3:xv:lemma:2:5}
+
+When \(G\) is separated over \(S\), the lemma follows from Exposé
+\SGARefLink{sga3:viii:examples:6:5:item:e:01}{VIII~6.5(e)}, without any smoothness hypothesis on \(H\). In the present
+case, observe that the assertion is local for the fpqc topology. We
+may therefore assume that \(H\) is diagonalizable, hence of the form
+\(D_S(M)\). We may also assume that \(S\) is affine and then, by EGA
+IV~8, noetherian. Since \(H\) is smooth and of finite type over \(S\),
+the order \(q\) of the torsion subgroup of \(M\) is invertible on
+\(S\) (Exposé \SGARefLink{sga3:viii:proposition:2:1:item:e:01}{VIII~2.1(e)}). It is then immediate (cf. Exposé \SGARefLink{sga3:ix:remark:4:10}{IX~4.10})
+that the subgroups \({}_nH\), with \(n\) ranging over the powers of
+\(q\), are schematically dense in \(H\) (Exposé \SGARefLink{sga3:ix:definition:4:1}{IX~4.1}). But
+\({}_nH\) is a completely split covering of \(S\), that is, it is
+isomorphic to a finite disjoint sum of copies of \(S\). Consequently
+\[
+  \operatorname{Centr}_G({}_nH)=Z_n
+\]
+is representable as the intersection of the centralizers in \(G\) of
+the sections of \({}_nH\) over \(S\). It remains to apply the following
+lemma.
+
+\SGAStatement{\SGAInlineRefTarget{sga3:xv:lemma:2-5-bis}Lemma 2.5 bis}{Let \(S\) be a noetherian prescheme, let
+\(G\) be an \(S\)-group prescheme of finite type, let \(H\) be a
+subgroup of \(G\) of multiplicative type, and let \((H_i)\) be an
+increasing filtered family of subgroups of \(G\) of multiplicative
+type. Suppose that
+\[
+  Z_i=\operatorname{Centr}_G(H_i)
+\]
+is representable by a group subprescheme of \(G\). Then the family
+\((Z_i)\) is stationary. If, in addition, the \(H_i\) are schematically
+dense in \(H\), then
+\[
+  Z_i=\operatorname{Centr}_G(H)
+\]
+for all sufficiently large \(i\).}
+\SGARefTarget{sga3:xv:lemma:2:5:bis}
+
+To see that the family \((Z_i)\) is stationary, it is enough to prove
+that the family of underlying sets \(\operatorname{ens}(Z_i)\) is
+stationary. Indeed, the stationary value will then be a closed subset
+of an open subset \(U\) of \(G\). After replacing \(G\) by \(U\), we
+are reduced to studying a decreasing filtered family of closed
+subpreschemes of a noetherian prescheme. An elementary constructibility
+argument reduces us to the case in which \(S\) is integral. We then
+have to show that \(\operatorname{ens}(Z_i)\) is stationary over some
+nonempty open subset of \(S\). The generic fibre of \(G\) is separated
+(Exposé VI\textsubscript{A}~0.3); after restricting \(S\), we may
+therefore assume that \(G\) is separated over \(S\) (EGA IV~8). Then
+\(Z_i\) is closed in \(G\) (Exposé VIII~6.5(e)).
+
+To prove the last assertion of the lemma, let \(Z\) denote the
+stationary value of the family \((Z_i)\). It is clear that
+\(\operatorname{Centr}_G(H)\) is a subfunctor of \(Z\); we show that
+\(Z\) centralizes \(H\). Let \(E\) be the subprescheme of
+\(H\times_S Z\) that is the kernel of the pair of morphisms
+\[
+\begin{aligned}
+  H\times_S Z&\rightrightarrows G,\\
+  (h,c)&\longmapsto c,\\
+  (h,c)&\longmapsto hch^{-1}.
+\end{aligned}
+\]
+The prescheme \(E\) contains \(H_i\times_S Z\) for every \(i\). The
+\(H_i\) are flat over \(S\), so EGA IV~11.10.9 shows that, for every
+point \(s\) of \(S\), the \((H_i)_s\) are schematically dense in
+\(H_s\), and \(H_i\times_S Z\) is schematically dense in
+\(H\times_S Z\). Since \(G_s\) is separated, \(E_s\) is closed in
+\((H\times_S Z)_s\), and is therefore equal to it. Thus \(E\) is
+closed in \(H\times_S Z\), and hence equals \(H\times_S Z\). This says
+that \(Z\) centralizes \(H\).
+
+Returning to the proof of \SGARefLink{sga3:xv:corollary:2-2}{2.2}, \SGARefLink{sga3:xv:lemma:2:5}{Lemma 2.5} shows that
+\[
+  Z_n=\operatorname{Centr}_G(M_n)
+\]
+is representable, and \SGARefLink{sga3:xv:lemma:2-5-bis}{Lemma 2.5 bis} shows that the decreasing family
+of subpreschemes \((Z_n)\) is stationary; let \(Z\) be its stationary
+value. The group \(Z\) contains \(T_0\) and all the \(M_n\). After
+replacing \(G\) by \(Z\), we may therefore suppose that the \(M_n\)
+are central.
+
+The hypotheses of \SGARefLink{sga3:xv:theorem:2:1}{Theorem 2.1} are now satisfied, so there exists a
+sub-torus \(T\) of \(G\) lifting \(T_0\). The groups \({}_nT\) and
+\(M_n\) are two liftings of \({}_nT_0\); they are therefore conjugate
+(Exposé \SGARefLink{sga3:ix:theorem:3:2:bis}{IX~3.2 bis}), and consequently coincide because \(M_n\) is
+central. This torus \(T\) has the required properties.
+
+\SGAProof{Proof of \SGARefLink{sga3:xv:corollary:2:3}{Corollary 2.3}}
+The uniqueness of \(T\) follows from Exposé \SGARefLink{sga3:ix:theorem:5:1:bis}{IX~5.1 bis}, and its
+centrality follows from Exposé \SGARefLink{sga3:ix:theorem:5:6:item:b}{IX~5.6(b)}. By the usual procedure, this
+observation reduces us first to the case in which \(S\) is affine
+(and hence \(S_0\) is defined by a nilpotent ideal of finite type),
+and then to the noetherian case. After restricting \(S\) if necessary,
+we may suppose that there exists an integer \(q\) invertible on \(S\).
+\SGARefLink{sga3:xv:corollary:2:3}{Corollary 2.3} then follows from \SGARefLink{sga3:xv:corollary:2-2}{2.2} and \SGARefLink{sga3:xv:proposition:1:2}{1.2}.
+
+\SGAStatement{Remark 2.6}{\SGARefLink{sga3:xv:corollary:2:3}{Corollary 2.3} remains true if the torus
+\(T_0\) is replaced by a smooth central subgroup of multiplicative
+type of \(G_0\).}
+\SGARefTarget{sga3:xv:remark:2:6}
+
+\SGASubsection{2.2}{Proof of \SGARefLink{sga3:xv:theorem:2:1}{Theorem 2.1}}
+\SGARefTarget{sga3:xv:subsection:2:2}
+
+\medskip\noindent\textbf{a) Reduction to the case
+\(\boldsymbol{T_0=\mathbb G_{m,S_0}}\).}
+
+By \SGARefLink{sga3:xv:proposition:1:1}{1.1}, we may assume that \(M_n\) is a subgroup of multiplicative
+type. Using Exposé \SGARefLink{sga3:ix:theorem:3:2:bis}{IX~3.2 bis}, we may suppose that the family
+\((M_n)\) is coherent (\SGARefLink{sga3:xv:corollary:2-2}{2.2}). The centralizer \(Z_n\) of \(M_n\) in
+\(G\) is representable (\SGARefLink{sga3:xv:lemma:2:5}{2.5}), and the filtered family \((Z_n)\) is
+stationary (\SGARefLink{sga3:xv:lemma:2-5-bis}{2.5 bis}). After replacing \(G\) by \(Z_n\) for sufficiently
+large \(n\), we may therefore suppose that \(T_0\) and the \(M_n\) are
+central. The uniqueness of a lifting of \(T_0\) is then guaranteed
+by Exposé \SGARefLink{sga3:ix:theorem:5:1:bis}{IX~5.1 bis}.
+
+Proceeding as in the proof of \SGARefLink{sga3:xv:proposition:1:1}{1.1}, we may suppose that there exist an
+\(S\)-torus \(T\) and an \(S_0\)-isomorphism
+\[
+  u_0:T\times_S S_0\xrightarrow{\sim}T_0.
+\]
+Lifting \(u_0\) is equivalent to lifting \(T_0\). By uniqueness, it is
+enough to prove the existence of a lifting of \(u_0\) after an affine
+faithfully flat extension \(S'\to S\) of finite type (fpqc descent).
+This allows us to suppose that
+\[
+  T=\mathbb G_{m,S}^{\,r}
+\]
+(Exposé \SGARefLink{sga3:x:corollary:4-5}{X~4.5}). If the restriction of \(u_0\) to each factor
+\(\mathbb G_m\) lifts to an \(S\)-morphism---necessarily central---then
+these liftings immediately give a lifting of \(u_0\). In short, we may
+suppose that \(T_0=\mathbb G_{m,S_0}\).
+
+\medskip\noindent\textbf{b) Definition of the obstruction to the
+existence of a lifting of \(\boldsymbol{T_0}\).}
+
+By \SGARefLink{sga3:xv:proposition:1:1}{1.1}, to prove \SGARefLink{sga3:xv:theorem:2:1}{Theorem 2.1} it is enough to find a subscheme of \(G\),
+flat over \(S\), lifting \(T_0\). We shall see that the obstruction to
+the existence of such a lifting can be defined as an element of a
+certain \(\operatorname{Ext}^1\) group of sheaves of modules.
+
+Let \(U\) be an open subset of \(G\) in which \(T_0\) is closed, and
+again denote by \(U\) (respectively, \(U_0\)) the open subscheme of
+\(G\) (respectively, \(G_0\)) having this open subset as its underlying
+space. The sheaf \(\mathcal O_{T_0}\), regarded as a sheaf on \(U\), is
+therefore a quotient of \(\mathcal O_{U_0}\). Let
+\[
+  h:\mathcal O_{U_0}\longrightarrow\mathcal O_{T_0}
+\]
+be the canonical epimorphism.
+
+\SGAStatement{\SGAInlineRefTarget{sga3:xv:lemma:2-7}Lemma 2.7}{The canonical map
+\[
+  h'=\operatorname{id}_J\otimes h:
+  J\otimes_{S_0}\mathcal O_{U_0}
+  \longrightarrow
+  J\otimes_{S_0}\mathcal O_{T_0}
+\]
+factors, necessarily uniquely, as \(i\circ j_U\), where \(j_U\) is
+the canonical epimorphism
+\[
+  J\otimes_{S_0}\mathcal O_{U_0}
+  \longrightarrow
+  J\mathcal O_U\simeq J\mathcal O_{U_0}.
+\]}
+\SGARefTarget{sga3:xv:lemma:2:7}
+
+We must show that \(h'(K)=0\), where \(K\) is the kernel of \(j_U\).
+For every integer \(n\) equal to a power of \(q\), there is an
+epimorphism
+\[
+  h_n:\mathcal O_{T_0}\longrightarrow\mathcal O_{{}_nT_0}.
+\]
+Since \({}_nT_0\) lifts to a scheme \(M_n\) flat over \(S\), the
+canonical morphism
+\[
+  j_n:J\otimes_{S_0}\mathcal O_{{}_nT_0}
+  \xrightarrow{\sim}J\mathcal O_{M_n}
+\]
+is an isomorphism. The commutative diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+K \arrow[r]
+  & J\otimes_{S_0}\mathcal O_{U_0}
+      \arrow[r,"j_U"] \arrow[d,"h'"]
+  & J\mathcal O_U \arrow[r,hook] \arrow[dl,"i"]
+  & \mathcal O_U \\
+  & J\otimes_{S_0}\mathcal O_{T_0}
+      \arrow[d,"h'_n"] & & \\
+  & J\otimes_{S_0}\mathcal O_{{}_nT_0}
+      \arrow[r,"j_n"',"\sim"] & J\mathcal O_{M_n}
+      \arrow[r,hook] & \mathcal O_{M_n}
+\end{tikzcd}
+\]
+shows that \(h'(K)\) is contained in \(\ker h'_n\) for every \(n\).
+It is therefore contained in \(\bigcap_n\ker h'_n\), and it remains
+to prove that this intersection is zero. Now
+\[
+  \mathcal O_{T_0}=\mathcal O_{S_0}[\mathbb Z],
+  \qquad
+  \mathcal O_{{}_nT_0}
+     =\mathcal O_{S_0}[\mathbb Z/n\mathbb Z].
+\]
+Let
+\[
+  a=\sum_{m\in\mathbb Z}a_m\otimes m
+  \in J\otimes_{S_0}\mathcal O_{T_0}.
+\]
+The \(a_m\) are sections of \(J\), almost all zero. Choose \(n\) large
+enough that the indices \(m\) for which \(a_m\ne0\) have distinct
+images in \(\mathbb Z/n\mathbb Z\). If \(a\in\ker h'_n\), then
+necessarily \(a=0\). Thus \(\bigcap_n\ker h'_n=0\), proving \SGARefLink{sga3:xv:lemma:2-7}{2.7}.
+
+Let \(K_0\) be the kernel of \(h\). Consider the diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+  &&& 0 \arrow[d] \\
+  & J\mathcal O_U \arrow[d,"\sim"] && K_0 \arrow[d] \\
+0 \arrow[r]
+  & J\mathcal O_{U_0} \arrow[r] \arrow[d,"i"']
+  & \mathcal O_U \arrow[r] & \mathcal O_{U_0}
+      \arrow[r] \arrow[d,"h"'] & 0 \\
+  & J\otimes_{S_0}\mathcal O_{T_0}
+  && \mathcal O_{T_0} \arrow[d] \\
+  &&& 0 .
+\end{tikzcd}
+\]
+The sheaf \(\mathcal O_U\) defines an element
+\[
+  \Phi\in
+  \operatorname{Ext}^{1}_{\mathcal O_U}
+  (\mathcal O_{U_0},J\mathcal O_{U_0}).
+\]
+Let \(\Psi\) be the element of
+\[
+  \operatorname{Ext}^{1}_{\mathcal O_U}
+  (K_0,J\otimes_{S_0}\mathcal O_{T_0})
+\]
+obtained from \(\Phi\), by the bifunctoriality of
+\(\operatorname{Ext}^{1}\), through the morphisms
+\[
+  K_0\longrightarrow\mathcal O_{U_0},
+  \qquad
+  i:J\mathcal O_{U_0}
+    \longrightarrow J\otimes_{S_0}\mathcal O_{T_0}.
+\]
+It follows from Exposé \SGARefLink{sga3:iii:lemma:4-1}{III~4.1} and the infinitesimal criterion of
+flatness (cf. Exposé \SGARefLink{sga3:iii:proposition:4-3}{III~4.3}) that a subscheme of \(U\), flat over
+\(S\) and lifting \(T_0\), exists if and only if \(\Psi=0\).
+
+Since \(T_0\) is affine, Exposé \SGARefLink{sga3:iii:proposition:4-5}{III~4.5} and \SGARefLink{sga3:xv:lemma:4:6}{4.6} show that it is enough
+to construct, locally on \(U\), a subscheme flat over \(S\) lifting
+\(T_0\). It therefore suffices to show that the image of \(\Psi\) in
+the sheaf
+\[
+  \mathscr E=
+  \mathcal Ext^{1}_{\mathcal O_U}
+  (K_0,J\otimes_{S_0}\mathcal O_{T_0})
+\]
+is zero. We again denote this element of
+\(\Gamma(U,\mathscr E)\) by \(\Psi\).
+
+\medskip\noindent\textbf{c) Reduction to the case in which \(S\) is
+local artinian with algebraically closed residue field.}
+
+Since \(K_0\) and \(J\otimes_{S_0}\mathcal O_{T_0}\) are coherent
+sheaves, so is \(\mathscr E\); moreover, \(\mathscr E\) is supported
+on \(T_0\), because the same is true of
+\(J\otimes_{S_0}\mathcal O_{T_0}\). To show that the section \(\Psi\)
+of \(\mathscr E\) is zero, it is enough to show that, for every point
+\(u\) of \(T_0\), its image in the fibre of \(\mathscr E\) at \(u\)
+is zero. Formation of the \(\mathcal Ext^i\) of coherent sheaves
+commutes with flat extensions of the base,\footnote{Editor's note:
+cf. EGA \(0_{\mathrm{III}}\), 12.3.5.} so we are reduced to proving the
+existence of a lifting of
+\[
+  T_0\cap\operatorname{Spec}\mathcal O_u
+\]
+flat over \(S\). Let \(s\) be the image of \(u\) in \(S\). We may
+replace \(S\) by \(\operatorname{Spec}\mathcal O_s\) and \(G\) by
+\(G\times_S\operatorname{Spec}\mathcal O_s\).
+
+After another faithfully flat extension if necessary, we may suppose
+that \(\mathcal O_s\) has an algebraically closed residue field
+(EGA \(0_{\mathrm{III}}\), 10.3.1). Let \(\mathfrak m\) be the maximal
+ideal of \(\mathcal O_s\), and set
+\[
+  S_n=\operatorname{Spec}(\mathcal O_s/\mathfrak m^n).
+\]
+Suppose that, for every \(n>0\), the obstruction to lifting
+\[
+  T_0\times_S S_n=(T_0)_n
+\]
+to a subscheme of \(G_n=G\times_S S_n\), flat over \(S_n\), has been
+shown to vanish, and let \(T_n\) be the unique flat lifting of
+\((T_0)_n\) over \(S_n\) that is a sub-torus of \(G_n\). If
+\(n>n'\), it is clear that
+\[
+  T_n\times_{S_n}S_{n'}=T_{n'}.
+\]
+If \(u\) is a point of \(T_0\) lying over \(s\), the lemma below,
+applied to the coherent system of liftings
+\[
+  T_n\cap\operatorname{Spec}\mathcal O_u
+\]
+of
+\((T_0)_n\cap\operatorname{Spec}\mathcal O_u\), shows that
+\(T_0\cap\operatorname{Spec}\mathcal O_u\) indeed has a lifting flat
+over \(\mathcal O_s\). We are therefore reduced to proving that
+\(\Psi=0\) when \(S=S_n\) is the spectrum of an artinian local ring
+with algebraically closed residue field, and to proving the following
+lemma.
+
+\SGAStatement{\SGAInlineRefTarget{sga3:xv:lemma:2-8}Lemma 2.8}{Let \(A\to B\) be a local homomorphism of
+noetherian local rings, let \(\mathfrak m\) be the maximal ideal of
+\(A\), let \(J\) be a square-zero ideal of \(A\), let \(M\) be a
+finite-type \(B\)-module, and set
+\[
+  A_0=A/J,\qquad B_0=B/JB,\qquad M_0=M/JM.
+\]
+Let \(N_0\) be a quotient \(B_0\)-module of \(M_0\), flat over \(A_0\).
+For every \(n>0\), let \(A_n,A_{0,n}\), and so forth denote the objects
+obtained by the base extension
+\[
+  A\longrightarrow A/\mathfrak m^n=A_n,
+\]
+and let \(\overline{J}_n\) be the image of \(J\) in \(A_n\). For every \(n>0\),
+let \(N_n\) be a quotient \(B_n\)-module of \(M_n\), flat over \(A_n\),
+lifting \(N_{0,n}\), and suppose that, for \(n\ge n'\), \(N_{n'}\) is
+obtained from \(N_n\) by the base extension \(A_n\to A_{n'}\). Then
+there exists a quotient \(B\)-module \(N\) of \(M\), flat over \(A\),
+lifting \(N_0\).}
+\SGARefTarget{sga3:xv:lemma:2:8}
+
+\SGAProof{Proof of \SGARefLink{sga3:xv:lemma:2-8}{2.8}}
+Let \(P_0\) be the kernel of the epimorphism \(M_0\to N_0\). For every
+\(n>0\), there is a commutative diagram with exact horizontal rows:
+\[
+\tag{$\ast_n$}\label{sga3:xv:lemma:2-8:equation:ast-n}
+\begin{tikzcd}[column sep=2em,row sep=large]
+&&&& 0 \arrow[d] & \\
+&&&& P_{0,n} \arrow[d] & \\
+& 0 \arrow[r]
+  & \overline{J}_nM_n \arrow[r] \arrow[dd]
+  & M_n \arrow[r] \arrow[dd]
+  & M_{0,n} \arrow[r] \arrow[dd] & 0 \\
+\overline{J}_n\otimes_{A_{0,n}}M_{0,n}
+      \arrow[urr] \arrow[drr] &&&&& \\
+& 0 \arrow[r]
+  & \overline{J}_n\otimes_{A_{0,n}}N_{0,n} \arrow[r]
+  & N_n \arrow[r] \arrow[d]
+  & N_{0,n} \arrow[r] \arrow[d] & 0 \\
+&&& 0 & 0 &
+\end{tikzcd}
+\]
+Moreover, by hypothesis, the diagram \((\ast)_{n+1}\) reduces modulo
+\(\mathfrak m^n\) to \((\ast)_n\).
+
+The Artin--Rees lemma (Bourbaki, \emph{Algèbre commutative}, Chapter
+III, §3, Corollary 1) shows that the filtrations on \(JM\),
+\(J\otimes_{A_0}M_0\), and \(J\otimes_{A_0}N_0\), defined by the
+kernels of the respective morphisms
+\[
+\begin{gathered}
+  JM\longrightarrow \overline{J}_nM_n,\\
+  J\otimes_{A_0}M_0
+    \longrightarrow \overline{J}_n\otimes_{A_{0,n}}M_{0,n},\\
+  J\otimes_{A_0}N_0
+    \longrightarrow \overline{J}_n\otimes_{A_{0,n}}N_{0,n},
+\end{gathered}
+\]
+are \(\mathfrak mB\)-good. Passing to the inverse limit in the
+diagrams \((\ast)_n\), and writing \(\widehat Q\) for the separated
+completion of a \(B\)-module \(Q\) for the \(\mathfrak mB\)-adic
+topology, we obtain a commutative diagram in which the two horizontal
+rows remain exact:
+\[
+\tag{$\widehat\ast$}\label{sga3:xv:lemma:2-8:equation:widehat-ast}
+\begin{tikzcd}[column sep=large,row sep=large]
+&&&& 0 \arrow[d] & \\
+&&&& \widehat P_0 \arrow[d] & \\
+& 0 \arrow[r]
+  & \widehat{JM} \arrow[r] \arrow[dd]
+  & \widehat M \arrow[r] \arrow[dd]
+  & \widehat M_0 \arrow[r] \arrow[dd] & 0 \\
+\widehat{J\otimes_{A_0}M_0}
+      \arrow[urr] \arrow[drr] &&&&& \\
+& 0 \arrow[r]
+  & \widehat{J\otimes_{A_0}N_0} \arrow[r]
+  & \varprojlim_n N_n \arrow[r] \arrow[d]
+  & \widehat N_0 \arrow[r] \arrow[d] & 0 \\
+&&& 0 & 0 &
+\end{tikzcd}
+\]
+Now \((B,\mathfrak mB)\) is a Zariski ring and
+\(J\otimes_{A_0}N_0\) is of finite type over \(B\), hence separated
+for the \(\mathfrak mB\)-adic topology. The diagram
+\((\widehat\ast)\) then shows that the morphism
+\[
+  J\otimes_{A_0}M_0\longrightarrow J\otimes_{A_0}N_0
+\]
+induced by the epimorphism \(M_0\to N_0\) factors through \(JM\):
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+J\otimes_{A_0}M_0 \arrow[rr,"\mathrm{can.}"] \arrow[dr]
+  && JM \arrow[dl] \\
+& J\otimes_{A_0}N_0 &
+\end{tikzcd}
+\]
+
+Under these conditions, Exposé \SGARefLink{sga3:iii:lemma:4-1}{III~4.1} and \SGARefLink{sga3:iii:proposition:4-3}{4.3} show that a quotient
+\(B\)-module \(N\) of \(M\), flat over \(A\) and lifting \(N_0\),
+exists if and only if a certain element
+\[
+  g\in E=\operatorname{Ext}^{1}_B
+  (P_0,J\otimes_{A_0}N_0)
+\]
+vanishes. More precisely, the exact sequence
+\[
+  0\longrightarrow JM\longrightarrow M
+  \longrightarrow M_0\longrightarrow0
+\]
+defines an element \(f\in F\), where
+\[
+  F=\operatorname{Ext}^{1}_B(M_0,JM),
+\]
+and \(g\) is the image of \(f\) under the natural morphism \(F\to E\)
+arising by bifunctoriality from
+\[
+  P_0\longrightarrow M_0,
+  \qquad
+  JM\longrightarrow J\otimes_{A_0}N_0.
+\]
+The diagram \((\widehat\ast)\) and Exposé \SGARefLink{sga3:iii:lemma:4-1}{III~4.1} show that the image
+of \(g\) in
+\[
+  \widehat E\simeq
+  \operatorname{Ext}^{1}_{\widehat B}
+  (\widehat P_0,\widehat{J\otimes_{A_0}N_0})
+\]
+is zero. But \(E\) is of finite type over \(B\), and hence separated
+for the \(\mathfrak mB\)-adic topology. Consequently \(g=0\), which
+completes the proof of \SGARefLink{sga3:xv:lemma:2-8}{2.8}.
+
+\medskip\noindent\textbf{d) Study of \(\boldsymbol{\mathscr E}\).}
+
+We now suppose that \(S\) is the spectrum of an artinian local ring
+\(A\) with algebraically closed residue field \(k\). Let \(A_0\) be
+the ring of \(S_0\), and let \(\mathfrak m_0\) be the maximal ideal
+of \(A_0\). Since \(S_0\) is artinian, \(T_0\) is closed in \(G\)
+(Exposé VI\textsubscript{B}~\SGARefLink{cor:sga3-VIB-1.4.2}{1.4.2}). We may therefore take \(U=G\), so
+that
+\[
+  \mathscr E=
+  \mathcal Ext^{1}_{\mathcal O_G}
+  (K_0,J\otimes_{S_0}\mathcal O_{T_0}).
+\]
+Let \(B_0\) be the ring of the affine \(S_0\)-scheme
+\(T_0=\mathbb G_{m,S_0}\), and let \(\overline B_0\) be the ring of its special
+fibre
+\[
+  T_0\times_{S_0}\operatorname{Spec}(k)=\mathbb G_{m,k}.
+\]
+The sheaf \(\mathscr E\) is a coherent
+\(\mathcal O_{T_0}\)-module, hence is defined by a finite-type
+\(B_0\)-module, which we denote by \(E\).
+
+Consider the graded module associated with \(E\) and the
+\(\mathfrak m_0B_0\)-adic filtration:
+\[
+  E_r=\mathfrak m_0^rE/\mathfrak m_0^{r+1}E.
+\]
+Each \(E_r\) is a finite-type \(\overline B_0\)-module, and \(E_r=0\) for all
+sufficiently large \(r\), since \(S_0\) is artinian.
+
+Let \(g\) be a section of \(G\) over \(S\) whose restriction to
+\(S_0\) is a section \(g_0\) of \(T_0\). Left translation by \(g\)
+defines an ``automorphism of the situation'' from the point of view
+of the obstruction problem. In particular, \(g\) induces an
+\(S_0\)-automorphism of the sheaf \(\mathscr E\) that fixes the
+obstruction \(\Psi\). More precisely, \(g\) defines a semilinear
+automorphism of the \(B_0\)-module \(E\), relative to the
+\(A_0\)-automorphism of \(B_0\) defined by translation by \(g_0\) in
+\(T_0\). Reducing modulo \(\mathfrak m_0^{r+1}\), \(g\) therefore
+defines a semilinear automorphism of \(E_r\), relative to the
+\(k\)-automorphism of \(\overline B_0\) defined by translation by
+\[
+  g_0\times_{S_0}\operatorname{Spec}(k)
+\]
+in \(T_0\times_{S_0}\operatorname{Spec}(k)\).
+
+\SGAStatement{Lemma 2.9}{For every integer \(r\ge0\), \(E_r\) is a
+locally free \(\overline B_0\)-module.}
+\SGARefTarget{sga3:xv:lemma:2:9}
+
+Let \(x\) be a point of \(T_0\), let \(\kappa(x)\) be its residue
+field, and let
+\[
+  (E_r)_x=E_r\otimes_{\overline B_0}\kappa(x)
+\]
+be the ``fibre'' of \(E_r\) at \(x\). Denote by \(\ell(x)\) the rank
+of \((E_r)_x\) over \(\kappa(x)\), and by \(\ell\) the maximum of
+\(\ell(x)\) as \(x\) ranges over the points of \(T_0\). Let \(L\) be
+the largest closed subscheme of
+\[
+  \operatorname{Spec}\overline B_0=\mathbb G_{m,k}
+\]
+over which \(E_r\) is locally free of rank \(\ell\) (TDTE IV, \SGARefLink{sga3:xv:lemma:3:6}{Lemma
+3.6}). Let \(\beta\in L(k)\), which exists because \(L\) is of finite
+type over the algebraically closed field \(k\), and let
+\(\alpha\in\mathbb G_{m,k}(k)\) be a point whose order is a power
+\(n\) of \(q\). The point \(\alpha\) is \(k\)-rational. Since, by
+hypothesis, \({}_nT_0\) lifts to a subscheme \(M_n\) étale over \(S\),
+there is a section \(a\) of \(G\) over \(S\) lifting \(\alpha\) and
+whose restriction to \(S_0\) is a section of \(T_0\).
+
+The preceding observations show that the fibres of \(E_r\) at the
+points \(\beta\) and \(\alpha\beta\) of \(\mathbb G_{m,k}(k)\) are
+\(k\)-isomorphic. The points whose order is a power of \(q\) are dense
+in \(\mathbb G_{m,k}\), as are their translates by \(\beta\). Since
+\(L\) is closed in \(\mathbb G_{m,k}\) and \(\mathbb G_{m,k}\) is
+reduced, \(L=\mathbb G_{m,k}\), and \(E_r\) is locally free of rank
+\(\ell\) over \(\overline B_0\).
+
+\medskip\noindent\textbf{e) Completion of the proof of \SGARefLink{sga3:xv:theorem:2:1}{Theorem 2.1}.}
+
+Let \(K_0(n)\) be the sheaf of ideals of \(\mathcal O_{G_0}\)
+defining the closed subscheme \({}_nT_0\). The sheaf
+\(K_0\)\footnote{Editor's note: Introduced after \SGARefLink{sga3:xv:lemma:2-7}{Lemma 2.7}.} is
+therefore a subsheaf of \(K_0(n)\). For brevity, set
+\[
+  R=J\otimes_{S_0}\mathcal O_{T_0},
+  \qquad
+  R(n)=J\otimes_{S_0}\mathcal O_{{}_nT_0}.
+\]
+The sheaf \(R(n)\) is a quotient of \(R\), and we have the diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+&& K_0 \arrow[d] \\
+&& K_0(n) \arrow[d] \\
+0 \arrow[r]
+  & J\mathcal O_G \arrow[r] \arrow[d]
+  & \mathcal O_G \arrow[r]
+  & \mathcal O_{G_0} \arrow[r] & 0 \\
+  & R \arrow[d] \\
+  & R(n)
+\end{tikzcd}
+\]
+Using the bifunctoriality of
+\(\operatorname{Ext}^{1}_{\mathcal O_G}\), we obtain the commutative
+diagram
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+\mathcal{E}xt^{1}_{\mathcal O_G}
+  (\mathcal O_{G_0},J\mathcal O_G)
+  \arrow[dr] \\
+&
+\mathcal{E}xt^{1}_{\mathcal O_G}(K_0(n),R)
+  \arrow[r] \arrow[d]
+&
+\mathcal{E}xt^{1}_{\mathcal O_G}(K_0,R)=\mathscr E
+  \arrow[d] \\
+&
+\mathcal{E}xt^{1}_{\mathcal O_G}(K_0(n),R(n))
+  \arrow[r]
+&
+\mathcal{E}xt^{1}_{\mathcal O_G}(K_0,R(n)).
+\end{tikzcd}
+\]
+Again let \(\Phi\) denote the element of
+\(\operatorname{Ext}^{1}_{\mathcal O_G}
+(\mathcal O_{G_0},J\mathcal O_G)\) defined by the exact sequence
+\[
+  0\longrightarrow J\mathcal O_G
+  \longrightarrow\mathcal O_G
+  \longrightarrow\mathcal O_{G_0}
+  \longrightarrow0,
+\]
+so that \(\Psi\) is the image of \(\Phi\) in \(\mathscr E\). Since
+\({}_nT_0\) lifts to a subscheme \(M_n\) of \(G\), flat over \(S\),
+the image of \(\Phi\) in
+\[
+  \operatorname{Ext}^{1}_{\mathcal O_G}(K_0(n),R(n))
+\]
+is zero (Exposé \SGARefLink{sga3:iii:lemma:4-1}{III~4.1}). A fortiori, the image of \(\Phi\) in
+\(\operatorname{Ext}^{1}_{\mathcal O_G}(K_0,R(n))\), which is also
+the image of \(\Psi\), is zero.
+
+\SGAStatement{Lemma 2.10}{For every integer \(n\), the canonical
+morphism
+\[
+  \operatorname{Ext}^{1}_{\mathcal O_G}(K_0,R)
+    \otimes_{B_0}\mathcal O_{{}_nT_0}
+  \longrightarrow
+  \operatorname{Ext}^{1}_{\mathcal O_G}(K_0,R(n))
+\]
+is injective.}
+\SGARefTarget{sga3:xv:lemma:2:10}
+
+Indeed, the affine scheme \(T_0=\mathbb G_{m,S_0}\) has ring
+\[
+  B_0=A_0[T,T^{-1}].
+\]
+The subscheme \({}_nT_0\) is defined by the vanishing of
+\[
+  h(n)=T^n-1.
+\]
+This section is regular (EGA \(0_{\mathrm{IV}}\), 15.2.2) and remains
+regular after every base change \(S'_0\to S_0\). Hence there is an
+exact sequence of sheaves
+\[
+  0\longrightarrow\mathcal O_{T_0}
+  \xrightarrow{\,h(n)\,}\mathcal O_{T_0}
+  \longrightarrow\mathcal O_{{}_nT_0}
+  \longrightarrow0.
+\]
+Since \({}_nT_0\) is flat over \(S\), tensoring over
+\(\mathcal O_{S_0}\) with \(J\) gives the exact sequence
+\[
+  0\longrightarrow R\xrightarrow{\,h(n)\,}R
+  \longrightarrow R(n)\longrightarrow0,
+\]
+and then the exact sequence of Ext groups
+\[
+  \cdots\longrightarrow
+  \operatorname{Ext}^{1}_{\mathcal O_G}(K_0,R)
+  \xrightarrow{\,h(n)\,}
+  \operatorname{Ext}^{1}_{\mathcal O_G}(K_0,R)
+  \longrightarrow
+  \operatorname{Ext}^{1}_{\mathcal O_G}(K_0,R(n)),
+\]
+which proves the lemma.
+
+The foregoing shows that, for every integer \(n\) equal to a power of
+\(q\), the image of \(\Psi\) in
+\(\mathscr E/h(n)\mathscr E\) is zero. To prove that \(\Psi=0\), it
+is enough to show that
+\[
+  \Psi\in\mathfrak m_0^r\mathscr E
+  \quad\Longrightarrow\quad
+  \Psi\in\mathfrak m_0^{r+1}\mathscr E.
+\]
+Let \(\overline\Psi\) be the image of \(\Psi\) in \(E_r\). There is
+an element \(\Psi(n)\in\mathscr E\) such that
+\[
+  \Psi=\Psi(n)h(n)
+  \qquad(n\text{ a power of }q).
+\]
+We observed that the image \(\overline{h(n)}\) of \(h(n)\) in \(\overline B_0\)
+is again \(\overline B_0\)-regular. Since \(E_s\) is locally free over \(\overline B_0\)
+for every \(s\) (\SGARefLink{sga3:xv:lemma:2:9}{2.9}), multiplication by \(\overline{h(n)}\) on
+\(E_s\) is injective. It follows immediately that
+\(\Psi(n)\in\mathfrak m_0^r\mathscr E\). Let
+\(\overline{\Psi(n)}\) be its image in \(E_r\); then
+\[
+  \overline\Psi=\overline{h(n)}\,\overline{\Psi(n)}
+  \qquad(n\text{ a power of }q).
+\]
+Thus the set \(F\) of points of \(\mathbb G_{m,k}\) at which
+\(\overline\Psi\) vanishes contains the dense set of points whose
+order is a power of \(q\). Moreover, \(F\) is closed because \(E_r\)
+is locally free over \(\overline B_0\), and \(\mathbb G_{m,k}\) is reduced.
+Therefore \(\overline\Psi=0\).
+
+This completes the proof of \SGARefLink{sga3:xv:theorem:2:1}{Theorem 2.1}.
+

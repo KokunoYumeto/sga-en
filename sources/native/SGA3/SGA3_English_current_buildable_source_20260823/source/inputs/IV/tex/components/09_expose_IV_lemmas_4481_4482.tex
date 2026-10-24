@@ -1,0 +1,75 @@
+
+\setcounter{footnote}{37}
+
+The following lemmas will be useful in VI\textsubscript{B}, \SGARefLink{par:sga3-VIB-8.1}{8.1} and
+\SGARefLink{prop:sga3-VIB-8.2}{8.2}.\footnote{Editor's note: Lemmas \SGARefLink{sga3:iv:lemma:4:4:8:1}{4.4.8.1} and \SGARefLink{sga3:iv:lemma:4:4:8:2}{4.4.8.2} have been added.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:4:4:8:1}\textbf{Lemma 4.4.8.1.}
+\textit{Let \(Q\subset P\) be presheaves of groups on \(\mathscr C\), with
+\(Q\) normal in \(P\). Suppose that \(P\) is separated and that \(Q\) is a
+sheaf. Then the presheaf of groups \(P/Q\) is separated. Consequently,}
+\[
+  a(P/Q)=L(P/Q)
+  =\varinjlim_{R\in J(S)}(P/Q)(R).
+\]
+
+It is enough to prove the first assertion, since the second follows from it
+by \SGARefLink{sga3:iv:proposition:4:3:11:item:iv:01}{4.3.11(iv)} and \SGARefLink{sga3:iv:proposition:4:3:11:item:ii:01}{(ii)}. Let \(S\in\operatorname{Ob}\mathscr C\), let \(R\)
+be a sieve of \(S\), and let \(y\in P(S)/Q(S)\) have identity image in
+\((P/Q)(R)\). We must show that \(y=1\).
+
+By hypothesis, the morphism \(P(S)\to P(R)\) is injective, while
+\(Q(S)\to Q(R)\) is an isomorphism, and the upper row in the following
+commutative diagram is exact:
+\[
+\begin{array}{ccccccccc}
+1&\longrightarrow&Q(S)&\longrightarrow&P(S)&\longrightarrow&P(S)/Q(S)
+  &\longrightarrow&1\\
+&&\big\downarrow{\scriptstyle\sim}&&\big\downarrow&&\big\downarrow\\
+1&\longrightarrow&Q(R)&\longrightarrow&P(R)&\longrightarrow&(P/Q)(R).&&
+\end{array}
+\]
+\SGARefLink{sga3:iv:lemma:4:4:8:1}{The result} follows if the lower row is exact. Let \(f:R\to P\) have identity
+image in \((P/Q)(R)\), and let \(\phi:T\to R\) with
+\(T\in\operatorname{Ob}\mathscr C\). Then \(f\circ\phi\) is the identity in
+\[
+  (P/Q)(T)=P(T)/Q(T),
+\]
+that is, \(f\circ\phi\in Q(T)\). Hence
+\(\phi\mapsto f\circ\phi\) is a functorial map \(R(T)\to Q(T)\), and so
+defines a morphism of functors \(\pi:R\to Q\) such that
+\(\pi(\operatorname{id}_R)=f\). Thus \(f\in Q(R)\). This proves the
+exactness of the lower row and establishes \SGARefLink{sga3:iv:lemma:4:4:8:1}{the lemma}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:4:4:8:2}\textbf{Lemma 4.4.8.2.}
+\textit{Let \(H\subset G\) be presheaves of groups on \(\mathscr C\).}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:lemma:4:4:8:2:item:i:01} \textit{If \(H\) is normal in \(G\), then \(L(H)\) is normal in
+    \(L(G)\).}
+  \item[(ii)]\SGARefTarget{sga3:iv:lemma:4:4:8:2:item:ii:01} \textit{If \(H\) is central in \(G\), then \(L(H)\) is central
+    in \(L(G)\).}
+\end{enumerate}
+
+Let \(S\in\operatorname{Ob}\mathscr C\). We must show (cf. I~\SGARefLink{sga3:i:definition:2:3:6}{2.3.6}) that
+\(L(H)(S)\) is normal, respectively central, in \(L(G)(S)\). Let
+\[
+  h\in L(H)(S),\qquad g\in L(G)(S).
+\]
+There are a sieve \(R\) of \(S\) and elements \(h'\in H(R)\),
+\(g'\in G(R)\) such that
+\[
+  h=z_R(h'),\qquad g=z_R(g')
+\]
+in the notation of \SGARefLink{sga3:iv:lemma:4:3:10}{4.3.10}. Since \(z_R\) is a group morphism,
+\[
+  ghg^{-1}h^{-1}=z_R(g'h'g'^{-1}h'^{-1}).
+\]
+In case \SGARefLink{sga3:iv:lemma:4:4:8:2:item:i:01}{(i)},
+\[
+  g'h'g'^{-1}h'^{-1}\in H(R),
+\]
+and therefore \(ghg^{-1}h^{-1}\in L(H)(S)\). In case \SGARefLink{sga3:iv:lemma:4:4:8:2:item:ii:01}{(ii)},
+\(g'h'g'^{-1}h'^{-1}=1\), and hence \(ghg^{-1}h^{-1}=1\).
+

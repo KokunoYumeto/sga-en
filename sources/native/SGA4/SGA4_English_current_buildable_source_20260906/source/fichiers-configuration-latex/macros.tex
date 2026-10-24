@@ -1,0 +1,430 @@
+\setmainlanguage{french}
+\setotherlanguage{english}
+
+
+\def\showgitstatus{English release r2, 2026-07-23}
+
+
+\renewcommand{\mathsf}{}
+
+\setmathfont[range="2113]{latinmodern-math.otf}
+
+\makeatletter
+\def\etiquette[#1]#2{%
+  \Hy@raisedlink{\hyper@anchorstart{sga4.semantic.#2}\hyper@anchorend}%
+  \def\@currentHref{sga4.semantic.#2}%
+  \def\@currentlabel{#1}%
+  \label{#2}%
+}
+\makeatother
+\def\eqhyperref[#1]#2{(\hyperref[#1]{#2})}
+\def\pagehyperref[#1]#2{(page \hyperref[#1]{#2})}
+\def\hyperrefext[#1][#2]#3{\hyperref[#2]{#1 #3}}
+\def\eqhyperrefext[#1][#2]#3{\hyperref[#2]{#1 #3}}     %cf. exposes 17
+\def\neweqhyperrefext[#1][#2]#3{\hyperref[#2]{#1 #3}}  %cf. exposes 17
+
+\def\shat#1{\protect\widehat{#1}}
+\def\stilde#1{\protect\widetilde{#1}}
+
+
+\def\etcn{etc.\xspace}
+\def\etco{etc...\xspace}
+\def\etc{\sisi{\etco}{\etcn}}
+\def\ldotsn{\sisi{...}{\etcn}}
+
+\def\cf{{cf.}\kern.3em}
+\def\Cf{{Cf.}\kern.3em}
+\def\ie{{i.e.}\kern.3em}
+\def\iev{{i.e.},\xspace}
+\def\loccito{loc.\kern2pt cit.\xspace}
+\def\loccitn{\textit{loc.\kern2pt cit.}\xspace}
+\def\loccit{\sisi{\loccito}{\loccitn}}
+\def\EGA{\textup{EGA}\kern.2em}
+\def\SGA{\textup{SGA}\kern.3em}
+
+\def\quoi{}
+
+\def\quav{\quad,\quad}
+\def\quaet{\quad \text{et}\quad}
+\def\fibreproduct#1#2#3{#1 ×_{#3} #2}
+\let\fprod\fibreproduct
+\def\ccheck#1#2{\mbox{${\check{\check{\rm #1}}}^{\lower2pt\hbox{$\scriptstyle #2$}}$}}
+\def\sheaf#1{\protect\mathcal{#1}}
+\def\vieuxsheaf#1{{#1}} % cf. problème avec sheaf{a\Phi_i} par exemple...
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\can}{can}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Hhomtop}{\mathbf{Homtop}}
+\DeclareMathOperator{\Point}{Point}
+\DeclareMathOperator{\Pro}{Pro}
+\DeclareMathOperator{\Top}{Top}
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\Cart}{Cart}
+\DeclareMathOperator{\Mmorsite}{\mathbf{Morsite}}
+\DeclareMathOperator{\loc}{loc}
+\DeclareMathOperator{\Loc}{Loc}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Et}{Et}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\Ens}{Ens}
+\DeclareMathOperator{\h}{\underline{H}}
+\DeclareMathOperator{\Fonct}{Fonct}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\but}{but}
+\DeclareMathOperator{\Ob}{Ob}
+\DeclareMathOperator{\ob}{ob}
+\DeclareMathOperator{\Lib}{Lib}
+\DeclareMathOperator{\esj}{esj}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Iim}{Im}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\Cat}{Cat}
+\DeclareMathOperator{\car}{car}
+\DeclareMathOperator{\SysInd}{SysInd}
+\DeclareMathOperator{\Sup}{Sup}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\Filt}{Filt}
+\DeclareMathOperator{\acc}{acc}
+\DeclareMathOperator{\sur}{sur}
+\DeclareMathOperator{\cat}{cat}
+\DeclareMathOperator{\Ord}{Ord}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Caf}{Caf}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\coim}{coim}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Ouv}{Ouv}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Esp}{Esp}
+\DeclareMathOperator{\TOP}{TOP}
+\DeclareMathOperator{\Unif}{Unif}
+\DeclareMathOperator{\Iind}{\mathbf{Ind}}
+\DeclareMathOperator{\Hhomcart}{\mathbf{Homcart}}
+\DeclareMathOperator{\Hhomtopess}{\mathbf{Homtopess}}
+\DeclareMathOperator{\Ppoints}{\mathbf{Points}}
+\DeclareMathOperator{\Ppoint}{\mathbf{Point}}
+\DeclareMathOperator{\Ttors}{\mathbf{Tors}}
+\DeclareMathOperator{\Ssex}{\mathbf{Sex}}
+\DeclareMathOperator{\Ffib}{\mathbf{Fib}}
+\DeclareMathOperator{\Vvois}{\mathbf{Vois}}
+\DeclareMathOperator{\Ppointess}{\mathbf{Pointess}}
+\DeclareMathOperator{\scrHom}{\mathbf{Hom}}
+\DeclareMathOperator{\sheafPic}{\mathbf{Pic}}
+\DeclareMathOperator{\sheafAut}{\mathbf{Aut}}
+\DeclareMathOperator{\Hhomtoplocan}{\mathbf{Homtoplocan}}
+\DeclareMathOperator{\Hhomtopan}{\mathbf{Homtopan}}
+\DeclareMathOperator{\Pptgeom}{\mathbf{Ptgéom}}
+\DeclareMathOperator{\Morsite}{Morsite}
+\DeclareMathOperator{\Fib}{Fib}
+\DeclareMathOperator{\Fais}{Fais}
+\DeclareMathOperator{\kar}{kar}
+\DeclareMathOperator{\Groupes}{Groupes}
+\DeclareMathOperator{\Restr}{Restr}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Prol}{Prol}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Tors}{Tors}
+\DeclareMathOperator{\esp}{esp}
+\DeclareMathOperator{\es}{es}
+\DeclareMathOperator{\od}{od}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\sob}{sob}
+\DeclareMathOperator{\dfn}{dfn}
+\DeclareMathOperator{\Sch}{Sch}
+\DeclareMathOperator{\ouv}{ouv}
+\DeclareMathOperator{\cons}{cons}
+\DeclareMathOperator{\Nerf}{Nerf}
+\DeclareMathOperator{\Points}{Points}
+\DeclareMathOperator{\Espsob}{Espsob}
+\DeclareMathOperator{\Homtop}{Homtop}
+\DeclareMathOperator{\Pt}{Pt}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\glob}{glob}
+\DeclareMathOperator{\Homfib}{Homfib}
+\DeclareMathOperator{\Qouv}{Qouv}
+\DeclareMathOperator{\Quotouv}{Quotouv}
+\DeclareMathOperator{\ens}{ens}
+\DeclareMathOperator{\ab}{ab}
+\DeclareMathOperator{\an}{an}
+\DeclareMathOperator{\fs}{fs}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\Ab}{Ab}
+\DeclareMathOperator{\cosq}{cosq}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Zar}{Zar}
+
+
+\DeclareMathOperator{\Sex}{Sex}
+\DeclareMathOperator{\vois}{vois}
+\DeclareMathOperator{\Vois}{Vois}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\ext}{ext}
+\DeclareMathOperator{\Fer}{Fer}
+\DeclareMathOperator{\Add}{Add}
+\DeclareMathOperator{\Cocart}{Cocart}
+\DeclareMathOperator{\cosk}{cosk}
+\DeclareMathOperator{\plat}{plat}
+
+\DeclareMathOperator{\faisc}{faisc}
+\DeclareMathOperator{\sk}{sk}
+\DeclareMathOperator{\ch}{ch}
+
+\def\HH{\mathbf{H}}
+\def\qc{\mathrm{qc}}
+\def\et{\mathrm{et}}
+\def\coh{\mathrm{coh}}
+
+\def\Hvr#1{%
+\begin{array}[b]{l}
+{\kern2pt\scriptstyle r}\\[-8pt]
+{\kern1pt\scriptstyle \vee}\\[-5pt]
+H^{#1}
+\end{array}}
+
+\def\Hvv#1{%
+\begin{array}[b]{l}
+\kern2pt\rotatebox{90}{${\scriptscriptstyle\ll}$}\\[-6pt]
+H^{#1}
+\end{array}}
+
+\def\Hvi#1{%
+\begin{array}[b]{l}
+{\kern0.2pt\scriptscriptstyle \infty}\\[-8pt]
+{\kern1pt\scriptstyle \vee}\\[-5pt]
+H^{#1}
+\end{array}}
+
+\def\Hv#1{%
+\begin{array}[b]{l}
+{\kern1pt\scriptstyle \vee}\\[-5pt]
+H^{#1}
+\end{array}}
+
+\DeclareMathOperator{\cart}{cart}
+\DeclareMathOperator{\Ffaisc}{\mathbf{Faisc}}
+
+
+\def\Ev#1{%
+\begin{array}[b]{l}
+{\kern1pt\scriptstyle \vee}\\[-5pt]
+E'_{#1}
+\end{array}}
+
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Ccont}{\mathscr{C}\!\mathit{ont}}
+\DeclareMathOperator{\Site}{Site}
+\newcommand\MM{\mathbf{M}}
+\def\limtop#1{{\displaystyle{\varprojlim_{#1}\!\mbox{\rm top }}}}
+\def\Limtop{\mathop{\varprojlim\!\mbox{\rm top}}}
+\DeclareMathOperator{\spec}{spec}
+\def\ss{\scriptstyle{\mathscr{S}}}
+\DeclareMathOperator{\Gal}{Gal}
+\def\smallm{\scriptstyle{\mathscr{M}}}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ass}{ass}
+\DeclareMathOperator{\zar}{zar}
+\DeclareMathOperator{\Ogg}{Ogg}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cur}{cur}
+\DeclareMathOperator{\cdqc}{cdqc}
+\newcommand\DD{\mathbf{D}}
+\DeclareMathOperator{\cl}{cl}
+\def\JJ{\mathbf{J}}
+\def\FF{\mathbf{F}}
+\def\BB{\mathbf{B}}
+\DeclareMathOperator{\Alget}{Alget}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\prof}{prof}
+\DeclareMathOperator{\cint}{int}
+\DeclareMathOperator{\sic}{sic}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\tors}{tors}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\parf}{parf}
+\DeclareMathOperator{\tor}{tor}
+\DeclareMathOperator{\defn}{defn}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Pol}{Pol}
+\DeclareMathOperator{\Fex}{Fex}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\tot}{tot}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\HOM}{HOM}
+\DeclareMathOperator{\pch}{pch}
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\EXT}{EXT}
+\DeclareMathOperator{\PIC}{PIC}
+\DeclareMathOperator{\Rf}{Rf}
+\DeclareMathOperator{\inj}{inj}
+\newcommand\VV{\mathbf{V}}
+
+\def\Xv{%
+\begin{array}[b]{l}
+{\kern1pt\scriptstyle \vee}\\[-5pt]
+X
+\end{array}}
+
+\newcommand\TT{\mathbf{T}}
+\newcommand\XX{\mathbf{X}}
+\newcommand\EE{\mathbf{E}}
+
+\def\qedsymbol{\textup{C.Q.F.D.}}
+\let\CQFD\qed
+\let\cqfd\qed
+
+\font\bigsymb=cmsy10 at 4pt
+\def\bigdot{{\kern1.2pt\raise 1.5pt\hbox{\bigsymb\char15}}}
+
+\def\Lright{\mathop{\vcenter{\hbox{\hbox{$\longrightarrow$}\lower8pt \hbox{\kern-16pt\hbox{$\longrightarrow$}}}}}}
+
+\def\Aa{{\mathcal A}}
+\def\Bb{{\mathcal B}}
+\def\Cc{{\mathcal C}}
+\def\Dd{{\mathcal D}}
+\def\Ee{{\mathcal E}}
+\def\Ff{{\mathcal F}}
+\def\Gg{{\mathcal G}}
+\def\Hh{{\mathcal H}}
+\def\Ii{{\mathcal I}}
+\def\Jj{{\mathcal J}}
+\def\Kk{{\mathcal K}}
+\def\Ll{{\mathcal L}}
+\def\Mm{{\mathcal M}}
+\def\Nn{{\mathcal N}}
+\def\Oo{{\mathcal O}}
+\def\Pp{{\mathcal P}}
+\def\Qq{{\mathcal Q}}
+\def\Rr{{\mathcal R}}
+\def\Ss{{\mathcal S}}
+\def\Tt{{\mathcal T}}
+\def\Uu{{\mathcal U}}
+\def\Vv{{\mathcal V}}
+\def\Ww{{\mathcal W}}
+\def\Xx{{\mathcal X}}
+\def\Yy{{\mathcal Y}}
+\def\Zz{{\mathcal Z}}
+
+\newcommand{\CC}{\mathbf{C}}
+\newcommand{\GG}{\mathbf{G}}
+\newcommand{\KK}{\mathbf{K}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\PP}{\mathbf{P}}
+\newcommand\QQ{\mathbf{Q}}
+\newcommand\RR{\mathbf{R}}
+\newcommand\ZZ{\mathbf{Z}}
+
+\def\to{\mathchoice{\longrightarrow}{\rightarrow}{\rightarrow}{\rightarrow}}
+\def\from{\mathchoice{\longleftarrow}{\leftarrow}{\leftarrow}{\leftarrow}}
+\def\mto{\mathchoice{\longmapsto}{\mapsto}{\mapsto}{\mapsto}}
+\def\mfrom{\mathrel{\from\joinrel\mapstochar\,}}
+\def\hto{\mathrel{\lhook\joinrel\to}}
+\def\hfrom{\mathrel{\from\joinrel\rhook}}
+
+\def\implies{\mathchoice{\Longrightarrow}{\Rightarrow}{\Rightarrow}{\Rightarrow}}
+\def\implied{\mathchoice{\Longleftarrow}{\Leftarrow}{\Leftarrow}{\Leftarrow}}
+\def\iff{\mathchoice{\Longleftrightarrow}{\Leftrightarrow}{\Leftrightarrow}{\Leftrightarrow}}
+
+\def\To#1{\mathchoice{\xrightarrow{\labelstyle~~#1~}}{\stackrel{#1}{\longrightarrow}}{}{}}
+\def\Mto#1{\mathrel{\mapstochar\To{#1}}}
+\def\From#1{\mathchoice{\xleftarrow{\labelstyle~~#1~}}{\stackrel{#1}{\longleftarrow}}{}{}}
+
+\newcommand{\isomto}{\overset{\sim}{\longrightarrow}}
+\newcommand{\isomfrom}{\overset{\sim}{\longleftarrow}}
+
+\newcommand{\IFF}{\unskip~$\iff$~\ignorespaces}
+\newcommand{\THEN}{\unskip~$\implies$~\ignorespaces}
+
+\let\leq\leqslant
+\let\geq\geqslant
+\let\le\leqslant
+\let\ge\geqslant
+
+\def\cf{{cf.}\kern.3em}
+\def\Cf{{Cf.}\kern.3em}
+\def\ie{{i.e.}\kern.3em}
+\def\iev{{i.e.},\xspace}
+\def\EGA{\textup{EGA}\kern.2em}
+\def\SGA{\textup{SGA}\kern.3em}
+
+\let\oldS\S
+\def\S{\oldS\kern .15em}
+\def\ptbl{.\kern .2em}
+\def\resp{resp.\kern.3em}
+\def\Exp{Exp.\kern.3em}
+
+\let\bar\overline
+\let\hat\widehat
+\let\tilde\widetilde
+\let\dpl\displaystyle
+\let\ldots\dots
+\let\emptyset\varnothing
+\let\skpt\skippointrait
+\let\epsilon\varepsilon
+
+\def\sfrac#1#2{{#1}/{#2}}
+
+\DeclareMathOperator{\cd}{cd}
+\DeclareMathOperator{\Hhom}{\mathbf{Hom}}
+\DeclareMathOperator{\Eext}{\mathbf{Ext}}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Tr}{Tr}
+
+\let\emptyset=\varnothing
+
+
+\makeatletter
+\let\old@optexpose\optexpose
+\newcommand{\empty@optexpose}[1]{}
+\newcommand{\paren@optexpose}[1]{\old@optexpose{#1}(}
+\newcommand{\refnoexpose}[1]{\let\optexpose\empty@optexpose\ref{#1}\let\optexpose\old@optexpose}%\refnoexpose{X.cor5.2} engendre "5.2" au lieu de "X 5.2"
+\newcommand{\neweqref}[1]{\let\optexpose\paren@optexpose\textup{\ref{#1})}\let\optexpose\old@optexpose}%\neweqref{XII.eq4.1} engendre "XII (4.1)" au lieu de "(XII 4.1)"
+\makeatother
+\newcommand{\refvb}[2][VI${}_{\text{B}}$ ]{\sisi{#1\refnoexpose{#2}}{\ref{#2}}}
+
+\newcommand{\leftexp}[2]{{\vphantom{#2}}^{#1}{#2}}
+\newcommand{\AAA}{\mathbf{A}}
+\newcommand{\Sf}{\mathfrak{S}}
+\DeclareMathOperator*{\quotprojlim}{\text{``$\varprojlim$''}}
+\DeclareMathOperator*{\quotinjlim}{\text{``$\varinjlim$''}}
+\DeclareMathOperator{\Fl}{F\sisi{\ell}{l}}
+\DeclareMathOperator{\Pl}{P\sisi{\ell}{l}}
+\DeclareMathOperator{\tdf}{tdf}
+\DeclareMathOperator{\rg}{rg}
+\newcommand{\iInd}{\sisi{I}{i}nd}
+\newcommand{\iind}{ind}
+\newcommand{\ppro}{pro}
+\newcommand{\tTor}{\sisi{T}{t}or}
+\newcommand{\ttor}{tor}
+\newcommand{\chap}{Chap.}
+\newcommand{\Ffex}{\Ff\mathit{ex}}
+\newcommand{\sheafk}{\underline{k}}
+\newcommand{\sheafn}{\underline{n}}
+\newcommand{\sheafGamma}{\underline{\Gamma}}
+
+\makeatletter
+\newcommand{\sgarepeatedfootnotemark}[1]{%
+  \begingroup
+  \edef\@thefnmark{\thefootnote}%
+  \hyperlink{#1}{\@makefnmark}%
+  \endgroup}
+\makeatother
+
+\sisi{
+\DeclareMathOperator{\simarrow}{\rule{.15mm}{1.8mm}\kern -3.4pt\rightsquigarrow}
+\newcommand{\sheafell}{\underline{\ell}}
+\newcommand{\sheafZZ}{\underline{\ZZ}}
+}{
+\newcommand{\nderef}[1]{la N.D.E.~(\ref{#1}) page~\pageref{#1}}
+}
+

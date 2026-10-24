@@ -1,0 +1,427 @@
+\section{Two spectral sequences for integral morphisms}\etiquette[8]{VIII.sec8}
+
+\begin{enonce*}{Proposition 8.1}\etiquette[8.1]{VIII.prop8.1}
+Let $f : X \to Y$ be a surjective integral morphism, and let $F$ be an
+abelian sheaf on $Y$. For every integer $i$, let $\Hh^{i} (F)$ be the
+presheaf on $(\Sch)_{/Y}$ defined by
+$$
+\Hh^{i} (F) (Z) = H^i (Z, F_Z){\quoi},
+$$
+where $F_Z$ is the inverse image of $F$ on $Z$. Then there exists a
+spectral sequence (functorial in $F$)
+$$
+H^{\ast} (X, F) \Longleftarrow E^{pq}_2 = H^p (X /Y, \Hh^q (F))
+$$
+(``descent spectral sequence'').
+\end{enonce*}
+
+Of course, the symbol $H^p (X / Y, G)$, for a presheaf $G$ on
+$(\Sch)_{/Y}$, denotes the $p$-th relative \v{C}ech cohomology group,
+defined by means of the complex of the $C^n(X / Y, G)
+= G(X^{n+1})$, where $X^m$ denotes the $m$-th power in
+$(\Sch)_{/Y}$. To prove \hyperref[VIII.prop8.1]{8.1}, let $p_n :
+X^{n+1} \to Y$ be the projection, and set
+$$
+A^n = p_{n\ast} (𝒵_{X^{n + 1}}){\quoi},
+$$
+where $𝒵_{X^{n + 1}}$ denotes the constant sheaf $𝒵$ on
+$X^{n+1}$. Then the $A^n$ are the components of a simplicial abelian
+sheaf on $Y$, hence of a complex of abelian sheaves $A^{\ast}$ on $Y$.
+Note that there is an evident homomorphism
+\begin{equation*}
+𝒵_Y \to A^{0}{\quoi}.\tag{$\ast$}
+\end{equation*}
+With this\pageoriginale understood, we have the following
+
+\begin{enonce*}{Lemma 8.2}\etiquette[8.2]{VIII.lem8.2}
+The complex $(A^{\ast})$, endowed with the homomorphism $(\ast)$, is a
+resolution of $𝒵_Y$. More generally, for every abelian sheaf $F$ on
+$Y$, $A^{\ast} \otimes_{𝒵}F$ is a resolution of $F$.
+\end{enonce*}
+
+\noindent
+Proof: We may suppose that $Y$ is affine, hence $Y = \Spec A$, $X
+= \Spec B$, where $B$ is an integral $A$-algebra. We have $B =
+\varinjlim_i B_i$, where $B_i$ ranges over the finitely generated, hence
+finite, subalgebras of $B$, whence $X=\varprojlim X_{i}$, where
+$X_{i}=\Spec B_{i}$. Using \hyperrefext[VII][VII.cor5.11]{5.11}, one
+sees that the augmented complex $A^{\ast}(X/Y)$ is then the inductive
+limit of the augmented complexes $A^{\ast}(X_{i}/Y)$. This reduces us
+to the case where $f$ is \emph{finite}. It suffices to prove that for
+every geometric point $\bar{y}$ of $Y$, the complex $A^{\ast}_{\bar y}$ is
+a resolution of $𝒵_{\bar{y}}$, and likewise after tensoring with an
+$F$. But if $X_{\bar{y}}$ is the fiber of $X$ at $\bar{y}$, it follows
+from \hyperref[VIII.prop5.5]{5.5} that the complex
+$A^{\ast}_{\bar{y}}$ is none other than the analogous complex
+$A^{\ast}(X_{\bar{y}}/\bar{y})$. This reduces us to the case where $Y$
+is the spectrum of a separably closed field $k$. Using
+\hyperref[VIII.exem1.3]{1.3} a) and b), we may even suppose that $k$ is
+algebraically closed and $X$ is reduced, hence that $X$ is of the form
+$I_{Y}$, where $I$ is a finite set. But then the complex
+$A^{\ast}\otimes F$ is identified with the trivial cochain complex of
+the index set $I$ with coefficients in $F_{\bar{y}}$, and is therefore
+indeed a resolution of $F_{\bar{y}}$.
+
+Thus, as a consequence of \hyperref[VIII.lem8.2]{8.2}, we obtain a
+spectral sequence
+$$
+H^{\ast}(Y,F)\Longleftarrow E^{pq}_{2}=H^{p}(H^{q}(Y,A^{\ast}\otimes
+F)){\quoi},
+$$
+and it remains to make the initial term explicit. There is a canonical
+homomorphism\pageoriginale
+$$
+A^{n}\otimes F\longrightarrow p_{n_{\ast}}p^{\ast}_{n}(F){\quoi},
+$$
+and the latter is an isomorphism, as one sees once again by reduction
+to the case where $f$ is finite and passage to fibers. Using
+\hyperref[VIII.prop5.5]{5.5}, one concludes that
+$$
+H^{q}(Y,A^{n}\otimes F)\simeq
+H^{q}(X^{n+1},p^{\ast}_{n}(F))=
+\Hh^{q}(F)(X^{n+1}){\quoi},
+$$
+which indeed gives the initial term stated in
+\hyperref[VIII.prop8.1]{8.1}.
+
+\begin{enonce*}[remark]{Remark 8.3}\etiquette[8.3]{VIII.rem8.3}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item When one is given a \emph{locally finite} covering of $Y$ by
+  closed subsets $Y_{i}$, and one sets $X=\coprod_{i}Y_{i}$, the
+  canonical morphism $f:X\rightarrow Y$ is finite, and the initial
+  term of the spectral sequence \hyperref[VIII.prop8.1]{8.1} can be
+  made explicit as the cohomology of the complex defined by the
+  $H^{q}(Y_{i_{0}\ldots i_{p}},F|Y_{i_{0}\ldots i_{p}})$, where
+  $Y_{i_{0}\ldots i_{p}}=Y_{i_{0}}\cap\ldots\cap Y_{i_{p}}$. This is
+  therefore the analogue of the Leray spectral sequence for a locally
+  finite closed covering of an ordinary topological space (TF Chapter
+  II 5.2.4). The latter can moreover also be generalized to a spectral
+  sequence relative to a ``finite'' morphism, \ie one which is proper
+  with finite fibers, by proceeding as in
+  \hyperref[VIII.prop8.1]{8.1}.
+
+\item Note the analogy between the spectral sequence of
+  \hyperref[VIII.prop8.1]{8.1} and the Leray spectral sequence of a
+  covering $(X_{i})$ of $Y$ (in this case by $X_{i}$ étale over $Y$);
+  the latter would formally be obtained by writing the spectral
+  sequence \hyperref[VIII.prop8.1]{8.1} for
+  $X=\coprod_{i}X_{i}$. It is in fact likely that these two spectral
+  sequences admit a common generalization, valid whenever one has a
+  family of morphisms $(X_{i}\rightarrow Y)$ which is a ``universally
+  effective descent family'' for the fibered category of étale sheaves
+  over a variable base scheme\pageoriginale (\cf ${\rm n^{\circ}}$ 9
+  below). The analogous question also arises in ordinary topology,
+  concerning a common generalization of the two kinds of Leray
+  spectral sequences of a covering, assumed either open or locally
+  finite closed \footnote[1]{Since these lines were written, P.~Deligne
+  has developed a general theory of ``descent spectral sequences,''
+  \cf \Exp V bis.}.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Proposition 8.4}\etiquette[8.4]{VIII.prop8.4}
+Let $Y$ be a scheme, let $\pi$ be a profinite group, let
+$(\pi_{i})_{i}$ be the projective system of finite discrete quotient
+groups of $\pi$, let $(X_{i})_{i\in I}$ be a projective system of
+principal coverings of $Y$, with groups $\pi_{i}$, the transition
+homomorphisms $X_{j}\rightarrow X_{i}$ being compatible with the
+homomorphisms $\pi_{j}\rightarrow \pi_{i}$ on the groups of operators,
+and let $X=\varprojlim X_{i}$
+\emph{(\cf \hyperrefext[VII][VII.subsec5.1]{5.1})}, so that the group
+$\pi$ acts on the $Y$-scheme $X$. Let $F$ be an abelian sheaf on $Y$.
+Then there is a ``\emph{Hochschild--Serre}'' spectral sequence
+(functorial in $F$)
+$$
+H^{\ast}(Y,F)\Longleftarrow
+E^{pq}_{2}=H^{p}(\pi,\varinjlim_{i}H^{q}(X_{i},F_{X_{i}})){\quoi},
+$$
+where $F_{X_{i}}$ is the inverse image of $F$ on $X_{i}$, and
+$H^{p}(\pi,-)$ denotes Galois cohomology.
+\end{enonce*}
+
+The term $E^{pq}_{2}$ written here is also (by the definition of
+$H^{p}(\pi,-)$ and the transitivity of inductive limits) isomorphic to
+$$
+E^{pq}_{2}=\varinjlim_{i}
+H^{p}(\pi_{i},H^{q}(X_{i},F_{X_{i}})){\quoi},
+$$
+which shows that it is enough to find an inductive system of spectral
+sequences (depending on the index $i$)
+$$
+H^{\ast}(Y,F)\Longleftarrow
+{}^{i}E^{pq}_{2}=H^{p}(\pi_{i},H^{q}(X_{i},F_{X_{i}})){\quoi}.
+$$
+This reduces us to defining the spectral sequence in the case where
+$\pi$ is finite. Then $f:X\rightarrow Y$ is a covering morphism in
+$Y_{\text{\rm ét}}$, so one may write\pageoriginale the Leray
+spectral sequence of this morphism. In view of the canonical
+isomorphisms
+$$
+X^{n}\simeq X\mathop×^{\pi}\pi^{n}{\quoi},
+$$
+a well-known calculation then shows that for every presheaf $\Hh$ on
+$X_{\text{\rm ét}}$ which transforms sums into products,
+$C^{\ast}(X/Y,\Hh)$ is none other than the complex of homogeneous
+cochains of $\pi$ with coefficients in $\Hh(X)$, whence the stated form
+of the initial term.
+
+A variant of this proof, avoiding any calculation, consists in
+regarding $E\mapsto X\mathop{\times}^{\pi}E$ as a morphism from the site of
+finite $\pi$-sets to the étale site of $Y$, and writing the Leray
+spectral sequence of this morphism. Finally, when $\pi$ is finite, one
+may also regard the Hochschild--Serre spectral sequence as a special
+case of \hyperref[VIII.prop8.1]{8.1} relative to the morphism
+$f:X\rightarrow Y$.
+
+\begin{enonce*}{Corollary 8.5}\etiquette[8.5]{VIII.cor8.5}
+Suppose that $Y$ is quasi-compact and quasi-separated. Then the spectral
+sequence of \hyperref[VIII.prop8.4]{8.4} takes the form
+$$
+H^{\ast}(Y,F)\Longleftarrow E^{pq}_{2}=H^{p}(\pi,
+H^{q}(X,F_{X})){\quoi}.
+$$
+\end{enonce*}
+
+Indeed, by \hyperrefext[VII][VII.cor5.8]{5.8}, there are then canonical
+isomorphisms
+$$
+\varinjlim_{i} H^{q}(X_{i},F_{X_{i}})\simeq H^{q}(X,F_{X}){\quoi}.
+$$
+
+\begin{enonce*}{Corollary 8.6}\etiquette[8.6]{VIII.cor8.6}
+Let $Y$ be a local henselian scheme with closed point $y$, let $F$ be
+an abelian sheaf on $Y$, and let $F_{0}$ be the induced sheaf on
+$Y_{0}=\Spec (k(y))$. Then the canonical homomorphisms
+$$
+H^{n}(Y,F)\longrightarrow H^{n}(Y_{0},F_{0})
+$$
+are\pageoriginale isomorphisms.
+\end{enonce*}
+
+Indeed, let $\bar{y}$ be a geometric point over $y$, corresponding to
+a separable closure $\bar{k(y)}=k(\bar{y})$ of $k(y)$; since $Y$ is
+henselian, the strict localization $X$ of $Y$ at $\bar{y}$ is the
+projective limit of the connected étale Galois coverings pointed at
+$\bar{y}$, denoted $X_{i}$, so that the hypotheses of
+\hyperref[VIII.cor8.5]{8.5} apply. Since $H^{q}(X,F_{X})=0$ for $q>0$
+by \hyperref[VIII.cor4.7]{4.7}, one obtains isomorphisms
+$$
+H^{n}(Y,F)\xleftarrow{\sim} H^{n}(\pi, F(X)){\quoi},
+$$
+where $\pi$ is the ``Galois group'' of $X$ over $Y$, isomorphic to that
+of $\bar{k(y)}$ over $k=k(y)$. Similarly (or by
+\hyperref[VIII.cor2.3]{2.3}) one finds
+$$
+H^{n}(Y_{0},F_{0})\xleftarrow{\sim} H^{n}(\pi,F_{0}(X_{0})){\quoi},
+$$
+where $X_{0}=\fprod{X}{Y}{Y_{0}}\simeq \Spec (k(\bar{y}))$. But the
+restriction homomorphism $F(X)\rightarrow F_{0}(X_{0})$ is an
+isomorphism by \hyperref[VIII.cor4.8]{4.8}, from which the conclusion
+\hyperref[VIII.cor8.6]{8.6} follows immediately.
+
+\section{Descent of étale sheaves}\etiquette[9]{VIII.sec9}
+
+This section will not be used later in this Seminar, and may be omitted
+on a first reading.
+
+\begin{enonce*}{Proposition 9.1}\etiquette[9.1]{VIII.prop9.1}
+Let\pageoriginale $f:X'\rightarrow X$ be a surjective (\resp
+universally submersive \emph{(\SGA I IX 2.1)}) morphism of schemes.
+Then the functor $f^{\ast}:X_{\text{\rm ét}}\rightarrow
+X'_{\text{\rm ét}}$ is faithful and ``conservative''
+\emph{(\cf \hyperref[VIII.cor3.6]{3.6})} (\resp induces a
+\emph{fully faithful} functor from the category of sheaves on
+$X_{\text{\rm ét}}$ to the category of sheaves on
+$X'_{\text{\rm ét}}$ endowed with descent data relative to
+$f:X'\rightarrow X$).
+\end{enonce*}
+
+The first assertion follows immediately from the transitivity of fiber
+functors (\hyperref[VIII.subsec3.4]{3.4}) and from
+(\hyperref[VIII.cor3.7]{3.7}); the second (which can also be stated by
+saying that $f$ is a \emph{descent morphism} relative to the fibered
+category of étale sheaves on variable schemes) also means that for two
+sheaves $F$, $G$ on $X$, the natural diagram
+\begin{equation*}
+\Hom(F,G)\rightarrow \Hom (F',G')\rightrightarrows \Hom (F'',G'')\tag{$\ast$}
+\end{equation*}
+is exact, where $F'$ and $G'$ (\resp $F''$ and $G''$) are the inverse
+images of $F$ and $G$ on $X'$ (\resp on
+$X''=\fprod{X'}{X'}{X}$). Taking the final sheaf for $F$, the assertion
+gives the following
+
+\begin{enonce*}{Corollary 9.2}\etiquette[9.2]{VIII.cor9.2}
+Let $f:X'\rightarrow X$ be a universally submersive morphism. Then for
+every sheaf $F$ on $X$, the diagram
+$$
+\Gamma(X,F)\rightarrow \Gamma(X',F')\rightrightarrows \Gamma(X'',F'')
+$$
+is exact, where $X''=\fprod{X'}{X'}{X}$, and where $F'$, $F''$ are the
+inverse images of $F$ on $X'$, $X''$.
+\end{enonce*}
+
+We shall prove \hyperref[VIII.prop9.1]{9.1} using the following
+
+\begin{enonce*}{Lemma 9.3}\etiquette[9.3]{VIII.lem9.3}
+Suppose that $f$ is universally submersive. Let $F$ be a sheaf on $X$,
+denote by $S(F)$ the set of subsheaves of \sisi{$X$}{$F$},\pageoriginale
+and define $S(F')$, $S(F'')$ analogously. Then the diagram of natural
+maps
+$$
+S(F)\rightarrow S(F')\rightrightarrows S(F'')
+$$
+is exact.
+\end{enonce*}
+
+\noindent
+Proof. The fact that $S(F)\rightarrow S(F')$ is injective follows
+immediately from the fact that the functor $f^{\ast}$ is conservative;
+for if $F_{i}$ $(i=1,2)$ are two subsheaves of $F$ such that
+$f^{\ast}(F_{1})=f^{\ast}(F_{2})$, then the inclusions
+$F_{3}=F_{1}\cap F_{2}\rightarrow F_{i}$ $(i=1,2)$ are isomorphisms,
+since they become so after applying the functor $f^{\ast}$, hence
+$F_{1}=F_{2}$. It remains to prove that if $G'$ is a subsheaf of $F'$
+such that $\pr^{\ast}_{1}(G')=\pr^{\ast}_{2}(G')$, then $G'$ is the
+inverse image of a subsheaf of $F$. Note that one can find an
+epimorphism $F_{1}\rightarrow F$ in $X_{\text{\rm ét}}$, where
+$F_{1}$ is \emph{representable} by a scheme étale over $X$.
+Introduce $F_{2}=\fprod{F_{1}}{F_{1}}{F}$, and likewise $F'_{1}$,
+$F''_{1}$, $F'_{2}$, $F''_{2}$, sheaves giving rise to a diagram of
+sets
+\[
+\xymatrix@R=.75cm{
+  S(F)  \ar[r] \ar[d]& S(F') \ar[r]\ar[d] & S(F'') \ar[d]\\
+S(F_1) \ar[r] \ar@<3pt>[d] \ar@<-3pt>[d]& S(F'_1) \ar@<3pt>[r]
+  \ar@<-3pt>[r] \ar@<3pt>[d] \ar@<-3pt>[d]& S(F''_{1})\ar@<3pt>[d] \ar@<-3pt>[d] \\
+S(F_2)  \ar[r] & S(F'_2)\ar@<3pt>[r]
+  \ar@<-3pt>[r] & S(F''_2),
+}
+\]
+in which the columns are exact, by the exactness properties in the
+category of sheaves on $X$, $X'$, $X''$, respectively. A standard
+diagram chase then shows that, to prove that the first row is exact,
+it is enough to prove this for rows 2 and 3. For row 2, this follows
+from the fact that $F_{1}$ is representable, that $X'\rightarrow X$ is
+universally\pageoriginale submersive, and from
+\SGA\sisi{}{ 1} IX 2.3. On the other hand, $F_{2}$ is also
+representable, since it is a subsheaf of
+$\fprod{F_{1}}{F_{1}}{X}$, which is representable, and one applies
+\hyperref[VIII.prop6.1]{6.1}. Thus row 3 is also exact, \cqfd
+
+We now prove \hyperref[VIII.prop9.1]{9.1}, \ie that every morphism
+$u':F'\rightarrow G'$ compatible with the descent data on $F'$, $G'$,
+the morphism $u'$ comes from a morphism $u:F\rightarrow G$. Let
+$H=F\times G$, hence
+$H'=F'\times G'$, $H''=F''\times G''$; then the \emph{graph} of $u'$
+is a subsheaf $\Gamma'$ of $H'$, whose two inverse images are equal to
+the graph of the same morphism $u'':F''\rightarrow G''$. Hence, by
+\hyperref[VIII.lem9.3]{9.3}, $\Gamma'$ comes from a subsheaf $\Gamma$
+of $H$. I claim that $\Gamma$ is the graph of a morphism
+$u:F\rightarrow G$, \ie that the morphism $p:\Gamma\rightarrow F$
+induced by $\pr_{1}$ is an isomorphism: indeed, it becomes an
+isomorphism after the base change $X'\rightarrow X$, and we apply the
+already proved part of \hyperref[VIII.prop9.1]{9.1}. The morphism
+$u:F\rightarrow G$ then has the required property, \cqfd
+
+\begin{enonce*}{Theorem 9.4}\etiquette[9.4]{VIII.thm9.4}
+Let $f:X'\rightarrow X$ be a surjective morphism of schemes. Suppose
+that one of the following hypotheses holds:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $f$ is integral.
+
+\item $f$ is proper.
+
+\item $f$ is flat and locally of finite presentation
+\footnote[1]{It is likely that this second hypothesis is in fact
+superfluous.}.
+
+\item $X$ is discrete (e.g. the spectrum of a field).
+\end{enumerate}
+
+Then $f$ is an \emph{effective descent morphism} for the fibered
+category $\Ff$ over $(\Sch)$ of étale sheaves on variable schemes,
+\ie the functor $f^{\ast}$ induces an \emph{equivalence} between the
+category of\pageoriginale sheaves on $X$ and the category of sheaves on
+$X'$ endowed with descent data relative to $f:X'\rightarrow X$.
+\end{enonce*}
+
+\setcounter{subsection}{4}
+\setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[9.4.1]{VIII.subsubsec9.4.1}
+
+Let $F'$ be a sheaf on $X'$ endowed with descent data relative to
+$f:X'\rightarrow X$. Define a functor
+$$
+G:X^{0}_{\text{\rm ét}}\longrightarrow (\Ens)
+$$
+by the formula
+$$
+G(Y)=\Ker (F'(Y')\rightrightarrows F''(Y'')){\quoi}.
+$$
+One sees immediately that $G$ is a \emph{sheaf} for the étale
+topology. On the other hand, there is a canonical injective
+homomorphism $G\rightarrow f_{\ast}(F')$, hence a homomorphism
+$f^{\ast}(G)\rightarrow F'$, and the latter is evidently compatible
+with the descent data. It remains to determine whether this
+homomorphism is an \emph{isomorphism}. Note that $G$ can also be defined
+by the exactness of
+$$
+G\rightarrow f_{\ast}(F')\rightrightarrows g_{\ast}(F''){\quoi},
+$$
+so for every base change $Y\xrightarrow{h}X$ \emph{which commutes with
+  the formation of} $f_{\ast}(F')$ and $g_{\ast}(F'')$,
+$h^{\ast}(G)=G_{Y}$ is identified with the sheaf ``descended'' from
+$F'_{Y'}$ by $Y'\rightarrow Y$, and of course the homomorphism
+$f_{Y}{}^{\ast}(G_{Y})\rightarrow (F_{Y})'$ is the one deduced from
+$f^{\ast}(G)\rightarrow F'$ by base change. Now \emph{suppose that the
+  base change} $f:Y=X'\rightarrow X$ \emph{commutes with the formation
+  of} $f_{\ast}(F')$ and $g_{\ast}(F'')$, and note that since
+$Y'=\fprod{X'}{X'}{X}$ has a section over $Y=X'$, hence $Y'\rightarrow
+Y$ is an \emph{effective} descent morphism for every fibered category,
+in particular for $\mathcal{F}$, it follows that
+$f^{\ast}_{Y}(G_{Y})\rightarrow (F_{Y})'$ is an isomorphism. Thus
+$f^{\ast}(G)\rightarrow F'$ becomes an isomorphism after the base
+change $Y'=\fprod{X'}{X'}{X}\rightarrow X'$. Since the latter has a
+section, $f^{\ast}(G)\rightarrow F'$ is an isomorphism, and hence the
+descent datum\pageoriginale under consideration on $F'$ is effective.
+
+\subsubsection{}\etiquette[9.4.2]{VIII.subsubsec9.4.2}
+
+This proves Theorem \hyperref[VIII.thm9.4]{9.4} in case a), by
+\hyperref[VIII.cor5.6]{5.6}. Case b) also follows from the fact that if
+$f$ is proper, then $f_{\ast}$ commutes with \emph{every} base change
+$Y'\rightarrow Y$ (which will be proved in a later exposé (XII \hyperref[XII.thm5.1]{5.1}
+(i))).
+
+\subsubsection{}\etiquette[9.4.3]{VIII.subsubsec9.4.3}
+
+In case c), the question being local on $X$, we may suppose that $X$
+is affine and that there exists an affine scheme $X'_{1}$, of finite
+presentation, quasi-finite and faithfully flat over $X$, together with
+an $X$-morphism $X'_{1}\rightarrow X'$, which reduces us to the case
+where $f$ is quasi-finite. After localizing further on $X$, this time
+in the sense of the étale topology, one sees that there will exist an
+open subset $X'_{1}$ of $X'$ such that $X'_{1}\rightarrow X$ is finite
+and surjective, which reduces us to the case where $f$ is finite and
+surjective, already treated in a).
+
+\subsubsection{}\etiquette[9.4.4]{VIII.subsubsec9.4.4}
+In case d), we may suppose (by localizing on $X$) that $X$ consists of
+a single point, and even, in view of \hyperref[VIII.thm1.1]{1.1}, that
+it is the spectrum of a field $k$. Moreover, $f$ is universally open
+(\EGA IV 2.4.9), so the hypotheses of \hyperref[VIII.prop9.1]{9.1}
+hold, and the argument of \hyperref[VIII.subsubsec9.4.1]{9.4.1} applies
+again, making a base change with $Y=\Spec k$, where $k=k(x)$, for an
+$x\in X$. But then it is still true that $f_{\ast}$ commutes with the
+base change $Y\rightarrow X$, as we shall see later (XVI \hyperref[XVI.compl1.4]{1.4} and \hyperref[XVI.cor1.5]{1.5}).
+
+This completes the proof of \hyperref[VIII.thm9.4]{9.4}.
+
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

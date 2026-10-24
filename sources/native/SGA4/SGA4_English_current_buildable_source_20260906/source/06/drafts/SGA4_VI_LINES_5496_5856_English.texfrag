@@ -1,0 +1,379 @@
+\subsection{Construction of the projective limit when the index
+  category is cofiltered.}\etiquette[8.2]{VI.subsec8.2}
+
+\begin{enonce*}{Lemma 8.2.1}\etiquette[8.2.1]{VI.lem8.2.1}
+Let $I$ and $I'$ be two cofiltered categories \emph{(I \hyperref[I.sec8.1]{8.1})}, and let
+$\phi:I'\to I$ be a functor such that
+$\phi^{\circ}:{I'}^{\circ}\to I^{\circ}$ is cofinal \emph{(I \hyperref[I.sec8.1]{8.1})}.
+Let, moreover, $p:F\to I$ be a fibered $𝒰$-topos, let $D$ be a
+$𝒰$-topos, let $m:D\times I\to F$ be a Cartesian morphism of fibered
+topoi, and let $m':D\times I'\to F'$ be the morphism of fibered topoi
+deduced from $m$ by the base change $\phi$
+(\hyperref[VI.subsubsec7.1.9]{7.1.9}). The pair $(D,m)$ is a
+projective limit of $F$ if and only if $(D,m')$ is a projective limit
+of $F'$.
+\end{enonce*}
+
+The proof\pageoriginale is merely a rather lengthy routine
+verification. It is left to the patient reader, who may use the
+viewpoint of projective limits of pseudofunctors
+(\hyperref[VI.par8.1.3.3]{8.1.3.3}).
+
+\begin{enonce*}{Lemma 8.2.2}\etiquette[8.2.2]{VI.lem8.2.2}
+Let $p:F\to I$ be a fibered $𝒰$-site over a small cofiltered
+category, let $\underrightarrow{F}$ be the inductive limit of the
+fibered category $F$ \hyperref[VI.def6.3]{(6.3.9)}, and let
+$\pi:F\to\underrightarrow{F}$ be the canonical functor. Equip
+$\underrightarrow{F}$ with the coarsest topology making $\pi$
+continuous \emph{(III 1)}. Let $D$ be a $𝒰$-site and
+$n:\underrightarrow{F}\to D$ a functor. The following properties are
+equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $n$ is a morphism of sites $D\to\underrightarrow{F}$.
+
+\item $n\circ\pi$ is a morphism of sites (where $F$ is equipped with
+  the total topology).
+
+\item $(n\circ\pi,p):F\to D\times I$ is a morphism from the total
+  site $D\times I$ to the total site $F$.
+
+\item For every object $i$ of $I$, the composite functor
+  $F_i\xrightarrow{\alpha_{i!}}F\xrightarrow{n\circ\pi}D$ is a
+  morphism of sites.
+\end{enumerate}
+\end{enonce*}
+
+The equivalence of i) and ii) follows from
+\hyperref[VI.exe6.6]{6.6}, and that of iii) and iv) follows from
+\hyperref[VI.thm7.4.13.1]{7.4.13}. Let us prove the equivalence of iii) and ii). For this it is
+enough to show that the first projection functor
+$\pr_1:D\times I\to D$ is a morphism of sites. Denote by $D^{\sim}$
+the topos of sheaves on $D$. It follows from
+\hyperref[VI.prop7.4.7]{7.4.7} that $(D\times I)^{\sim}$ is equivalent
+to the topos
+$\Hhom_{I^{\circ}}(I^{\circ},D^{\sim}\times I^{\circ})=
+\Hhom(I^{\circ},D^{\sim})$. Moreover, one sees immediately that the
+natural extension of $\pr_1:D\times I\to D$ to sheaves (III \hyperref[III.prop1.2]{1.2}) is
+the functor from $\Hhom(I^{\circ},D^{\sim})$ to $D^{\sim}$ that
+associates with the functor $i\mapsto\sigma(i)$ the object
+$\varinjlim_{I^{\circ}}\sigma(i)$. Since $I^{\circ}$ is filtered,
+inductive limits over $I^{\circ}$ are exact (II 4), and hence
+$\pr_1$ is a morphism of sites (IV \hyperref[IV.subsec4.9]{4.9}). It remains to prove the
+equivalence of ii) and iv). First treat the case in which $D$ is a
+$𝒰$-topos and $F$ a fibered $𝒰$-topos over $I$.
+
+Let $i$ be an object of $I$. Arguing as in
+\hyperref[VI.par7.4.13.6]{7.4.13.6}, one sees that the functor
+$\alpha_{i!}:F_i\to F$ factors as a morphism
+$\bar{\alpha}_{i!}:F_i\to F/\alpha_{i!}(e_i)$ followed by the
+localization functor $F/\alpha_{i!}(e_i)\to F$, where $e_i$ is a
+final object of $F_i$. It is therefore enough to show that the
+composite functor
+$F/\alpha_{i!}(e_i)\xrightarrow{n\circ\pi}D$ is a morphism of sites.
+But there is a diagram commutative up to isomorphism:
+\[
+\xymatrix@C=2.5cm@R=1.25cm{
+F/\alpha_{i!}(e_i) \ar[d]\ar[r]^{n\circ
+  \pi/\alpha_{i!}(e_i)}& D/n\circ \pi \alpha_{i!}(e_i) \ar[d]\\
+F \ar[r]^{n\circ \pi}& D
+}
+\]
+Since\pageoriginale the property of being a morphism of sites is
+local (IV \hyperref[IV.subsec5.10]{5.10}), it is enough to show that
+$n\circ\pi\circ\alpha_{i!}(e_i)$ is a final object of $D$. For every
+morphism $f:j\to k$ of $I$, there exists a unique morphism
+$e_f:\alpha_{j!}(e_j)\to\alpha_{k!}(e_k)$ over $f$, and this
+morphism is Cartesian. Thus $j\mapsto\alpha_{j!}(e_j)$ is a Cartesian
+section of $F$ over $I$. Consequently, the canonical morphism
+$n\circ\pi\circ\alpha_{i!}(e_i)\to
+\varinjlim_I n\circ\pi\circ\alpha_{j!}(e_j)$ is an isomorphism,
+because $\pi$ carries Cartesian morphisms to isomorphisms. Moreover,
+$\varinjlim_I\alpha_{j!}(e_j)$, where the inductive limit is taken in
+$F^{\widehat{\phantom{,}}}$, is a final object of
+$F^{\widehat{\phantom{,}}}$. Since $n\circ\pi$ is a morphism of
+sites, it carries the final object of $F^{\sim}$ to a final object of
+$D$. Hence $\varinjlim_I n\circ\pi\circ\alpha_{j!}(e_j)$ is a final
+object of $D$, completing the proof in this case.
+
+In the general case, the functor $(n\pi,p):F\to D\times I$ is
+Cartesian and continuous (\hyperref[VI.prop7.4.4]{7.4.4}). Moreover,
+$n\circ\pi$ is the composite functor
+$$
+F \xrightarrow{(n \pi, p)} D \times I \xrightarrow{\pr_1} D{\quoi}.
+$$
+Passing to the associated fibered $𝒰$-topoi gives a diagram
+commutative up to isomorphism:
+\[
+\xymatrix@C=2cm@R=1.75cm{
+F       \ar@{-}[r]^{(n\pi,p)} \ar[d]_{\varepsilon_{F/I}}& D\times I
+\ar[r]^{\pr_1}\ar[d]^{\varepsilon_D\times \id} & D \ar[d]^{\varepsilon_D}\\
+F^{\sim/I}  \ar[r]^{(n\pi,p)^{\sim/I}} & D^{\sim}\times I \ar[r]^{\pr_1} & D^{\sim}&.
+}
+\]
+Since $(n\pi,p)^{\sim/I}$ is Cartesian, it is of the form
+$(n'\pi',p')$, where $p':F^{\sim/I}\to I$ and
+$\pi':F^{\sim/I}\to\varinjlim_{I^{\circ}}F^{\sim}_i$ are the
+canonical functors. Thus
+$\pr_{1^{\circ}}(n\pi,p)^{\sim/I}=n'$. Since the functors
+$\epsilon_{F/I}$ and $\epsilon_D$ induce equivalences on the topoi of
+sheaves (\hyperref[VI.cor7.4.11]{7.4.11}), the functors $n$ and $n'$
+induce isomorphic functors after passage to associated sheaves (III
+\hyperref[III.prop1.2]{1.2}), and hence $n'$ is a morphism of sites. By what precedes,\pageoriginale
+the functor $(n\pi,p)^{\sim/I}$ induces morphisms of topoi on the
+fibers. It is therefore a morphism from the total site $F^{\sim/I}$
+to the total site $D^{\sim}\times I$ \hyperref[VI.thm7.4.13.1]{(7.4.13)}. Since the functors
+$\epsilon_{F/I}$ and $\epsilon_D\times\id$ induce equivalences on the
+total topoi (\hyperref[VI.cor7.4.11]{7.4.11}), the functor $(n\pi,p)$
+is a morphism of fibered sites \hyperref[VI.thm7.4.13.1]{(7.4.13)}, which proves the assertion.
+
+\begin{enonce*}{Theorem 8.2.3}\etiquette[8.2.3]{VI.thm8.2.3}
+Let $p:F\to I$ be a fibered $𝒰$-site over an essentially small
+cofiltered category \emph{(I \hyperref[I.sec8.1]{8.1})}.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $\underrightarrow{F}$ denote the site whose underlying
+  category is the inductive limit of the fibered category $F\to I$
+  \emph{(\hyperref[VI.def6.3]{6.3})} and whose topology is the
+  coarsest topology making the canonical functor
+  $\pi:F\to\underrightarrow{F}$ continuous. Then
+  $\underrightarrow{F}$ is a $𝒰$-site and
+$$
+(\pi, p) : F \to \underrightarrow{F} \times I
+$$
+is a morphism from the fibered site $\underrightarrow{F}\times I$ to
+the fibered site $F$.
+
+\item Let $\mu:\underrightarrow{F}^{\sim}\times I\to F^{\sim/I}$ be
+  the morphism of fibered $𝒰$-topoi deduced from $(\pi,p)$ by passing
+  to the associated fibered $𝒰$-topoi. The pair
+  $(\underrightarrow{F}^{\sim},\mu)$ is a projective limit of
+  $F^{\sim/I}$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 8.2.4}\etiquette[8.2.4]{VI.rem8.2.4}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item In view of the notation introduced in
+  \hyperref[VI.subsubsec8.1.3]{8.1.3}, one may set
+$$
+\limtop{I} F^{\sim} = \underrightarrow{F}^{\sim}.
+$$
+
+\item It follows from \hyperref[VI.prop7.4.4]{7.4.4} that the topology
+  on $\underrightarrow{F}$ is also the coarsest topology making the
+  family of functors
+  $\pi_j:F_j\to F\xrightarrow{\pi}\underrightarrow{F}$,
+  $j\in\ob I$, continuous.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Definition 8.2.5}\etiquette[8.2.5]{VI.def8.2.5}
+The site $\underrightarrow{F}$ introduced in
+\hyperref[VI.thm8.2.3]{8.2.3} is called the projective-limit site of
+the fibered site $F$.
+\end{enonce*}
+
+As an exercise, the reader may, as in \hyperref[VI.lem8.2.1]{8.2.1},
+define the notion of a projective limit of a fibered site and verify
+that the site $\underrightarrow{F}$ is indeed a projective limit of
+the site $F$. The second assertion of the theorem may therefore be
+paraphrased as follows: the topos of sheaves on the projective-limit
+site is equivalent to the projective limit of the associated fibered
+topos.
+
+\setcounter{subsubsection}{5}
+\subsubsection{Proof of the theorem: Reduction to the case of a small
+  index category}\etiquette[8.2.6]{VI.subsubsec8.2.6}
+
+We\pageoriginale shall give only indications. Let $I'$ be a full
+subcategory of $I$ such that ${I'}^{\circ}$ is cofinal in
+$I^{\circ}$. Denote by $F'\to I'$ the fibered category deduced from
+$F$ by the base change $I'\to I$, and by
+$\pi':F'\to\underrightarrow{F}'$ the canonical functor. One first
+observes that the categories $\underrightarrow{F}$ and
+$\underrightarrow{F}'$ are equivalent and that the topology on
+$\underrightarrow{F}'$ deduced from the topology of
+$\underrightarrow{F}$ by this equivalence is the coarsest topology
+making the functor $\pi':F'\to\underrightarrow{F}'$ continuous.
+Assertion 1) of the theorem follows when it has been proved in the
+case where $I$ is small. Assertion 2) in the general case then
+follows from assertion 2) in the case where $I$ is small by Lemma
+\hyperref[VI.lem8.2.1]{8.2.1}.
+
+\subsubsection{End of the proof of the theorem}\etiquette[8.2.7]{VI.subsubsec8.2.7}
+The first assertion follows from Lemma \hyperref[VI.lem8.2.2]{8.2.2},
+applied with $D=\underrightarrow{F}$ and $n=\id$. Let $D$ be a
+$𝒰$-topos. There is a diagram commutative up to isomorphism:
+{\def\objectstyle{\scriptstyle}
+\def\labelstyle{\scriptstyle}
+\[
+\xymatrix@C=.8cm@R=1.15cm{
+\Hhomtop(D,{(\underrightarrow{F})}^{\sim}) \ar[r]^{(1)}\ar[d]_{(3)}&
+\Mmorsite(D,\underrightarrow{F}) \ar@{^{(}->}[r]^{(2)} \ar[d]_{(3)}&
+\Hhom(\underrightarrow{F},D)^{\circ}\ar[dd]_{(5)}\\
+\Hhomtop_{\Cart/I}(D\times I,(\underrightarrow{F})^{\sim}\times
+I)  \ar[r]^{(1)} \ar[d]_{(4)}& \Mmorsite_{\Cart/I}(D\times I,
+(\underrightarrow{F})\times I) \ar[d]&\\
+\Hhomtop_{\Cart/I}(D\times I,F^{\sim/I})
+\ar[r]^{(1)} & \Mmorsite_{\Cart/I}(D\times I,F)  \ar@{^{(}->}[r]^{(2)} &
+\Hhom_{\Cart/I}(F,D\times I)^{\circ},
+}
+\]}
+
+\noindent where the functors of type (1) are equivalences (IV \hyperref[IV.prop4.9.4]{4.9.4}
+and \hyperref[VI.prop7.2.7]{7.2.7}), the functors of type (2) are fully faithful (IV \hyperref[IV.subsubsec4.9.1]{4.9.1} and
+\hyperref[IV.eq7.2.2]{7.2.2}), the functors of type (3) are base-change functors, the
+functors of type (4) are composition functors (with $\mu$, \resp
+$(\pi,p)$), and functor (5) is the equivalence deduced from the
+universal property of the inductive limit
+(\hyperref[VI.def6.3]{6.3}). To prove that the functor
+$\Hhomtop(D,(\underrightarrow{F})^{\sim})\xrightarrow{(4)\circ(3)}
+\Hhomtop_{/I}(D\times I,F^{\sim/I})$ is an equivalence, it is enough
+to show that the functor
+$$
+\Mmorsite(D, \underrightarrow{F})
+\xrightarrow{(4) \circ (3)} \Mmorsite_{/I}(D \times I,F)
+$$
+is an\pageoriginale equivalence of categories. Equivalently, it is
+enough to show that the two fully faithful functors
+\begin{align*}
+& \Mmorsite(D, \underrightarrow{F}) \xrightarrow{(5) \circ (2)} \Hhomcart_I(F, D \times I)^{\circ}\\
+& \Mmorsite_{/I}(D \times I, F) \xrightarrow{(2)} \Hhomcart_I(F, D \times
+I)^{\circ}
+\end{align*}
+have the same essential images, which follows immediately from Lemma
+\hyperref[VI.lem8.2.2]{8.2.2}.
+
+\subsubsection{}\etiquette[8.2.8]{VI.subsubsec8.2.8}
+
+Let $p:F\to I$ be a fibered $𝒰$-topos over a category $I$, and let
+$(\limtop{I}F_i,\mu)$ be a projective limit of $F$. Thus there is a
+Cartesian morphism of fibered $𝒰$-topoi over $I$:
+$$
+\mu:\limtop{I} F_i \times I \to F{\quoi},
+$$
+whence, on passing to the categories fibered over $I^{\circ}$ by the
+direct image functors (\hyperref[VI.subsubsec7.1.3]{7.1.3}), a
+Cartesian functor
+$$
+\mu_{\ast}: \limtop{I} F_i \times I^{\circ} \to F'
+$$
+which is the direct image functor for $\mu$
+(\hyperref[VI.subsubsec7.1.7]{7.1.7}). By the definition of the
+projective limit of a fibered category (\hyperref[VI.subsec6.10]{6.10}),
+there is therefore a canonical functor
+\begin{equation*}
+\Theta : \limtop{I} F_i  \to
+\varprojlim_{I, f_{\ast}} F_i = \Hhom_{\cart/I^{\circ}} (I^{\circ},
+F'){\quoi}.\tag{8.2.8.1}
+\end{equation*}\etiquette[8.2.8.1]{VI.eq8.2.8.1}
+
+\begin{enonce*}{Theorem 8.2.9}\etiquette[8.2.9]{VI.thm8.2.9}
+Use the notation of \hyperref[VI.subsubsec8.2.8]{8.2.8}, and suppose
+that $I$ is an essentially small cofiltered category. Then the functor
+$\Theta$ is an equivalence of categories. Suppose that $I$ is small.
+Set $\limtop{I}F_i=(\underrightarrow{F})^{\sim}$ (which is permitted
+by \hyperref[VI.thm8.2.3]{8.2.3} and
+\hyperref[VI.rem8.2.4]{8.2.4}), and interpret the category
+$\Hhom_{I^{\circ}}(I^{\circ},F')$ as the category of sheaves on the
+total site $F$ (\hyperref[VI.prop7.4.7]{7.4.7}). Then the composite
+functor
+$$
+(\underrightarrow{F})^{\sim} = \limtop{I} F_i
+\xrightarrow{\Theta} \Hhom_{\cart/I^{\circ}} (I^{\circ}, F') \hookrightarrow \Hhom_{I^{\circ}}
+(I^{\circ}, F') \approxeq F^{\sim}{\quoi},
+$$
+is precisely the direct image functor for the morphism of sites
+defined by the functor
+$$
+\pi : F \to \underrightarrow{F}{\quoi}.
+$$
+\end{enonce*}
+
+\setcounter{subsubsection}{9}
+\subsubsection{}\etiquette[8.2.10]{VI.subsubsec8.2.10}
+
+Some\pageoriginale comments before the proof of Theorem
+\hyperref[VI.thm8.2.9]{8.2.9}. Besides solving the problem of the
+existence of projective limits when the index category is cofiltered,
+a solution which is curiously nontrivial in this theory, Theorems
+\hyperref[VI.thm8.2.3]{8.2.3} and \hyperref[VI.thm8.2.9]{8.2.9}
+provide two further pieces of information essential for working with
+projective-limit topoi in practice. First, Theorem
+\hyperref[VI.thm8.2.3]{8.2.3} interprets the projective-limit topos as
+the topos of sheaves on a site whose underlying category is the
+inductive-limit category of the categories $F_i$ under the system of
+inverse image functors. In applications, one will be able to
+interpret this category and its topology concretely. Second, Theorem
+\hyperref[VI.thm8.2.9]{8.2.9} asserts that a sheaf on the projective
+limit is determined by the system of its direct images in the topoi
+$F_i$ (which gives a Cartesian section over $I^{\circ}$ of the
+category $(F^{\sim/I})'$). The theorem further asserts conversely
+that, when one is given for every object $i$ of $I$ a sheaf $X_i$ on
+$F_i$ and, for every morphism $f:i\to j$ of $I$, an isomorphism
+$X_j\simeq f_{\ast}X_i$, these isomorphisms being subject to
+compatibility conditions, there exists essentially a unique sheaf on
+the projective limit whose direct images give the system of the
+$X_i$.
+
+\subsubsection{}\etiquette[8.2.11]{VI.subsubsec8.2.11}
+
+Assertion 2) of \hyperref[VI.thm8.2.3]{8.2.3} and the first assertion
+of \hyperref[VI.thm8.2.9]{8.2.9} may be summarized by the striking
+formula
+\begin{equation*}
+\varprojlim_{I, f_{\ast}}F_i^{\sim} \approxeq
+\limtop{I, f.} F_i^{\sim} \approxeq
+(\varinjlim_{I^{\circ}, f_{\ast}} F_i)^{\sim}{\quoi}. \tag{8.2.11.1}
+\end{equation*}\etiquette[8.2.11.1]{VI.eq8.2.11.1}
+
+\subsubsection{}\etiquette[8.2.12]{VI.subsubsec8.2.12}
+\emph{Proof of Theorem} \hyperref[VI.thm8.2.9]{8.2.9}.
+To prove the first assertion, reduce to the case where the category
+$I$ is small by using \hyperref[VI.lem8.2.1]{8.2.1} and an analogous
+lemma on projective limits of fibered categories. We leave the details
+to the reader. Suppose henceforth that $I$ is a small category. We
+know that the functor
+$$
+\pi : F \to \varinjlim_{I^{\circ}} F_i
+$$
+is a morphism of sites (\hyperref[VI.lem8.2.2]{8.2.2}). The direct
+image functor
+$$
+\pi_{\ast} : (\varinjlim_{I^{\circ}} F_i)^{\sim} \to F^{\sim}
+$$
+that it\pageoriginale defines on the topoi is then fully faithful,
+and its essential image is the set of sheaves on $F$ that carry the
+Cartesian morphisms of $F$ to isomorphisms
+(\hyperref[VI.exe6.6]{6.6}). These sheaves correspond, under the
+equivalence
+$F^{\sim}\simeq\Hhom_{I^{\circ}}(I^{\circ},F')$, to the Cartesian
+sections of $F'$ over $I^{\circ}$
+(\hyperref[VI.prop7.4.7]{7.4.7}). Moreover, for every
+$j\in\ob(I)$, denote by $\alpha_{j!}:F_j\to F$ the inclusion functor,
+which gives rise to the three functors
+$\xymatrix{(\alpha_{j!},\alpha^{\ast}_j,\alpha_{j\ast}):F_j
+\ar@<4pt>[r]\ar@<-4pt>[r]&F\ar[l]}$
+(\hyperref[VI.rem7.4.3]{7.4.3}). It follows from the definition of the
+equivalence $F^{\sim}\simeq\Hhom_{I^{\circ}}(I^{\circ},F')$
+(\hyperref[VI.prop7.4.7]{7.4.7}) that a sheaf $X$ on
+$\varinjlim_{I^{\circ}}F_i$ is carried by the functor
+$(\varinjlim_{I^{\circ}}F_i)^{\sim}\xrightarrow{\pi_{\ast}}F^{\sim}
+\simeq\Hhom_{I^{\circ}}(I^{\circ},F')$ to the Cartesian section
+$j\mapsto\alpha^{\ast}_j\pi_{\ast}(X)$. But the description in
+\hyperref[VI.thm8.2.3]{8.2.3} of the functor
+$\mu:(\varinjlim_{I^{\circ}}F_i)^{\sim}\times I\to F$ shows that,
+for every object $j$ of $I$, the direct image functor
+$\mu_{j\ast}:(\varinjlim_{I^{\circ}}F_i)^{\sim}\to F_j$ for the
+morphism $\mu_j:(\varinjlim_{I^{\circ}}F_i)^{\sim}\to F_j$ obtained
+from $\mu$ by passing to the fiber at $j$ is precisely the functor
+$\alpha^{\ast}_j\pi_{\ast}$. Consequently, the functor
+$(\varinjlim_{I^{\circ}}F_i)^{\sim}\xrightarrow{\pi_{\ast}}F^{\sim}
+\simeq\Hhom_{I^{\circ}}(I^{\circ},F')$ is precisely the functor
+$(\varinjlim_{I^{\circ}}F_i)^{\sim}\xrightarrow{\Theta}
+\Hhom_{\cart/I^{\circ}}(I^{\circ},F')\hookrightarrow
+\Hhom_{I^{\circ}}(I^{\circ},F')$, which proves the theorem.
+

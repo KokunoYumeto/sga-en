@@ -1,0 +1,462 @@
+
+\medskip
+\phantomsection\label{prop:sga3-VIB-11.10.bis}%
+\noindent\textbf{Proposition 11.10.bis.---}%
+\footnote{\label{note:sga3-VIB-119}Editor's note: this
+proposition has been added; it is a special case of
+\textup{[Th87]}, \SGARefLink{prop:sga3-VIB-1.4}{1.4}--\SGARefLink{lem:sga3-VIB-1.5}{1.5}. The author there refers to an
+argument of Deligne \textup{(cf.\ \textup{[Kn71]},
+III, Th.\ \SGARefLink{par:sga3-VIB-1.1}{1.1})}; one may also note its similarity with
+Serre's argument \textup{(\textup{[Se68]}, Prop.\ 2)}
+recalled in \hyperref[prop:sga3-VIB-11.8-bis]{11.8.bis}.}
+\emph{Let \(S\) be a Noetherian scheme, let \(G\) be an
+\(S\)-group that is flat, quasi-compact, and quasi-separated
+over \(S\), let \(\mathcal E\) be a quasi-coherent
+\(G\)-\(\mathcal O_S\)-module, and let \(\mathcal M\) be a
+coherent \(\mathcal O_S\)-submodule of \(\mathcal E\). Then
+\(\mathcal M\) is contained in a coherent
+\(\mathcal O_S\)-submodule stable under \(G\).}
+
+\emph{Proof.}
+Write \(f\) for the morphism \(G\to S\), and \(\tau\) for
+the adjunction morphism
+\[
+  \mathcal E\longrightarrow f_*f^*(\mathcal E).
+\]
+By \hyperref[par:sga3-VIB-11.6]{11.6}, the
+\(G\)-\(\mathcal O_S\)-module structure on \(\mathcal E\)
+is given by an automorphism \(\theta\) of the
+\(\mathcal O_G\)-module \(f^*(\mathcal E)\), such that the
+morphism
+\[
+  \delta=\theta\circ\tau
+\]
+satisfies conditions
+\hyperref[diag:sga3-VIB-11.6-1]{\textup{(1)}} and
+\hyperref[diag:sga3-VIB-11.6-2]{\textup{(2)}} of
+\hyperref[par:sga3-VIB-11.6]{11.6}. (The situation considered
+in \textup{[Th87]} is more general: the author considers a
+\(G\)-scheme \(X\) and a \(G\)-equivariant
+\(\mathcal O_X\)-module \(\mathcal E\)
+\textup{(cf.\ \SGARefLink{sga3:i:section:6}{Expos\'e I, Section 6})}; here \(X=S\), endowed
+with the trivial action of \(G\).)
+
+Since \(S\) is Noetherian, \(\mathcal E\) is the filtered
+direct limit of its coherent submodules
+\(\mathcal F_\alpha\) \textup{(cf.\ EGA~I, 9.4.9)}. Then
+\(f^*(\mathcal E)\) is the filtered direct limit of the
+\(f^*(\mathcal F_\alpha)\), which are submodules of
+\(f^*(\mathcal E)\) because \(f\) is flat. Moreover, since
+\(f\) is quasi-compact and quasi-separated, by
+\hyperref[par:sga3-VIB-11.0]{11.0} the
+\(\mathcal O_S\)-module \(f_*f^*(\mathcal E)\) is
+quasi-coherent and is the filtered direct limit of the
+quasi-coherent submodules \(f_*f^*(\mathcal F_\alpha)\).
+Consequently, \(\mathcal E\) is the filtered direct limit of
+the quasi-coherent \(\mathcal O_S\)-submodules
+\(\mathcal E_\alpha\), where \(\mathcal E_\alpha\) denotes
+the inverse image under \(\delta\) of
+\(f_*f^*(\mathcal F_\alpha)\); equivalently, it is the kernel
+of the composite
+\phantomsection\label{form:sga3-VIB-11.10bis-delta-alpha}%
+\[
+  \overline{\delta}_\alpha:\quad
+  \mathcal E\xrightarrow{\ \delta\ }f_*f^*(\mathcal E)
+    \longrightarrow f_*f^*(\mathcal E/\mathcal F_\alpha).
+\]
+Since \(\mathcal M\) is coherent and \(S\) is Noetherian,
+every increasing sequence of submodules of \(\mathcal M\)
+is stationary; hence \(\mathcal M\) is contained in some
+\(\mathcal E_\alpha\). We shall show that every
+\(\mathcal E_\alpha\) is coherent and \(G\)-stable.
+
+Let
+\[
+  u:f^*(\mathcal E)\longrightarrow\varepsilon_*(\mathcal E)
+\]
+be the morphism corresponding by adjunction to the identity
+morphism from \(\mathcal E\) to
+\(f_*\varepsilon_*(\mathcal E)=\mathcal E\). Then the
+composite
+\phantomsection\label{form:sga3-VIB-11.10bis-adjunction-retract}%
+\[
+  \mathcal E\xrightarrow{\ \delta\ }f_*f^*(\mathcal E)
+    \xrightarrow{\ f_*(u)\ }f_*\varepsilon_*(\mathcal E)
+    =\mathcal E
+\]
+is the identity%
+\footnote{\label{source-note:sga3-VIB-11.10bis-delta-arrows}The
+source PDF labels the first arrow in this composite and the lower
+horizontal arrow in the following diagram by \(\tau\). They must be
+\(\delta=\theta\circ\tau\): condition 11.6\textup{(2)} gives
+\(f_*(u)\circ\delta=\operatorname{id}_{\mathcal E}\), and the definition
+of \(\mathcal E_\alpha\) makes the square commute.}
+\textup{(cf.\ \hyperref[diag:sga3-VIB-11.6-2]{11.6\textup{(2)}})}.
+We have the commutative diagram
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-11.10bis-coherence}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    \mathcal E_\alpha
+      \arrow[r,"\delta"]
+      \arrow[d,"i_\alpha"'] &
+    f_*f^*(\mathcal F_\alpha)
+      \arrow[r,"f_*(u)"]
+      \arrow[d] &
+    \mathcal F_\alpha
+      \arrow[d,"j_\alpha"] \\
+    \mathcal E
+      \arrow[r,"\delta"'] &
+    f_*f^*(\mathcal E)
+      \arrow[r,"f_*(u)"'] &
+    \mathcal E\mathpunct{,}
+  \end{tikzcd}
+\end{center}
+where \(i_\alpha\) \textup{(respectively \(j_\alpha\))}
+denotes the inclusion of \(\mathcal E_\alpha\)
+\textup{(respectively \(\mathcal F_\alpha\))} in
+\(\mathcal E\). It follows that \(i_\alpha\) factors through
+\(j_\alpha\); thus \(\mathcal E_\alpha\) is a submodule of
+\(\mathcal F_\alpha\), and is therefore coherent.
+
+Finally, let us show that \(\mathcal E_\alpha\) is
+\(G\)-stable
+\textup{(cf.\ \hyperref[rem:sga3-VIB-11.7.bis]{11.7.bis})}.
+Let \(h:G\to S\) denote a second copy of \(f:G\to S\), and
+consider the following commutative diagram:
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-11.10bis-projections}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    G\times_S G
+      \arrow[r,"q"]
+      \arrow[d,"p"']
+      \arrow[dr,"\varphi" description] &
+    G \arrow[d,"h"] \\
+    G \arrow[r,"f"'] &
+    S\mathpunct{.}
+  \end{tikzcd}
+\end{center}
+The exact sequence
+\phantomsection\label{seq:sga3-VIB-11.10bis-first-exact}%
+\[
+  0\longrightarrow\mathcal E_\alpha
+    \longrightarrow\mathcal E
+    \xrightarrow{\ \overline{\delta}_\alpha\ }
+    h_*h^*(\mathcal E/\mathcal F_\alpha)
+\]
+therefore gives, since \(f\) is flat, the exact sequence
+\phantomsection\label{seq:sga3-VIB-11.10bis-dagger}%
+\[
+  \tag{\(\dagger\)}
+  0\longrightarrow f_*f^*(\mathcal E_\alpha)
+    \longrightarrow f_*f^*(\mathcal E)
+    \xrightarrow{\ f_*f^*(\overline{\delta}_\alpha)\ }
+    f_*f^*h_*h^*(\mathcal E/\mathcal F_\alpha).
+\]
+Moreover, since \(h\) is quasi-compact and quasi-separated
+and \(f\) is flat, the canonical morphism
+\phantomsection\label{form:sga3-VIB-11.10bis-flat-base-change}%
+\[
+  f^*h_*h^*(\mathcal E/\mathcal F_\alpha)
+    \longrightarrow
+  p_*q^*h^*(\mathcal E/\mathcal F_\alpha)
+    =p_*\varphi^*(\mathcal E/\mathcal F_\alpha)
+\]
+is an isomorphism. Thus the right-hand term in
+\hyperref[seq:sga3-VIB-11.10bis-dagger]{\textup{(\(\dagger\))}}
+is \(\varphi_*\varphi^*(\mathcal E/\mathcal F_\alpha)\).
+Using the notation of \hyperref[par:sga3-VIB-11.6]{11.6}
+and writing \(\pi_\alpha\) for the projection
+\(\mathcal E\to\mathcal E/\mathcal F_\alpha\), we obtain the
+following commutative diagram, whose bottom row is exact:
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-11.10bis-stability}%
+  {\small
+  \begin{tikzcd}[row sep=large,column sep=large]
+    {} &
+    \mathcal E_\alpha
+      \arrow[r,"\delta"]
+      \arrow[d,"\delta"'] &
+    f_*f^*(\mathcal E)
+      \arrow[d,"{f_*(f^*(\pi_\alpha)\boxtimes\delta_G)}"] \\
+    f_*f^*(\mathcal E_\alpha)
+      \arrow[r] &
+    f_*f^*(\mathcal E)
+      \arrow[r,"{f_*f^*(\overline{\delta}_\alpha)}"'] &
+    \varphi_*\varphi^*(\mathcal E/\mathcal F_\alpha)
+  \end{tikzcd}}
+\end{center}
+Since
+\[
+  f_*\bigl(f^*(\pi_\alpha)\boxtimes\delta_G\bigr)\circ\delta
+\]
+vanishes on \(\mathcal E_\alpha\), it follows that
+\(\delta\) carries \(\mathcal E_\alpha\) into
+\(f_*f^*(\mathcal E_\alpha)\); in other words,
+\(\mathcal E_\alpha\) is \(G\)-stable. This proves the
+proposition.
+
+\medskip
+\phantomsection\label{rem:sga3-VIB-11.10.1}%
+\noindent\textbf{Remark 11.10.1.---}%
+\footnote{\label{note:sga3-VIB-120}Editor's note: the first
+part of the original \hyperref[rem:sga3-VIB-11.10.1]{Remark 11.10.1} has been incorporated
+into \hyperref[lem:sga3-VIB-11.8]{11.8} and
+\hyperref[prop:sga3-VIB-11.9]{11.9}
+\textup{(with ``free'' replaced by ``projective'')}; the
+counterexamples below correct its second part.}
+In \hyperref[lem:sga3-VIB-11.8]{11.8}, it is not enough to
+assume that \(C\) is a flat \(A\)-module, even when \(A\)
+is a principal ideal domain. Indeed, we have the following
+counterexamples, pointed out to us independently by
+O.\ Gabber and J.-P.\ Serre.
+
+\smallskip
+\phantomsection\label{rem:sga3-VIB-11.10.1-a}%
+\noindent\textup{(a)}
+Let \((A,\mathfrak m)\) be a discrete valuation ring, let
+\(K\) be its field of fractions, and let \(G\) be the
+\(A\)-group obtained by ``extension by zero'' from the
+\(K\)-group \((\mathbb Z/2\mathbb Z)_K\). The constant
+group \((\mathbb Z/2\mathbb Z)_A\), and hence also its
+subgroup \(G\), acts on the free \(A\)-module \(V\) with
+basis \(v_1,v_2\) by interchanging \(v_1\) and \(v_2\).
+Then \(Av_1\) is not a \(G\)-submodule of \(V\), but it is
+the intersection of the \(G\)-submodules
+\[
+  Av_1+\mathfrak m^n v_2,\qquad n\in\mathbb N^*.
+\]
+Thus there is no smallest \(G\)-submodule of \(V\)
+containing \(v_1\).
+
+\smallskip
+\phantomsection\label{rem:sga3-VIB-11.10.1-b}%
+\noindent\textup{(b)}
+Let \(A\) be an integral domain distinct from its field of
+fractions \(K\), and let \(G\) be the flat affine
+\(A\)-group corresponding to the Hopf algebra
+\phantomsection\label{form:sga3-VIB-11.10.1-Hopf-example}%
+\[
+  \mathcal A(G)=\{P\in K[T]\mid P(0)\in A\}.
+\]
+Its comultiplication, counit, and antipode are respectively
+defined by
+\[
+  \Delta(T)=T\otimes1+1\otimes T,\qquad
+  \varepsilon(T)=0,\qquad
+  \tau(T)=-T.
+\]
+\textup{(Thus \(G\otimes_AK=\mathbb G_{a,K}\).)}
+
+Let \(V=Av_1\oplus Av_2\) be free over \(A\), and let
+\(u\) be the endomorphism of \(V\) defined by
+\[
+  u(v_1)=v_2,\qquad u(v_2)=0,
+\]
+so that \(u^2=0\). Then \(V\) has the
+\(\mathcal A(G)\)-comodule structure
+\phantomsection\label{form:sga3-VIB-11.10.1-coaction}%
+\[
+  \mu(m)=m\otimes1+u(m)\otimes T.
+\]
+The \(G\)-submodules of \(V\) containing \(v_1\) are
+precisely the \(A\)-submodules \(Av_1\oplus Iv_2\), where
+\(I\) is a nonzero ideal of \(A\). Their intersection is
+\(Av_1\), which is not a \(G\)-submodule. Hence there is no
+smallest \(G\)-submodule of \(V\) containing \(v_1\).
+Moreover,
+\[
+  C=A\oplus K\cdot T
+\]
+is a subcoalgebra of \(\mathcal A(G)\), flat over \(A\),
+and the coaction
+\[
+  \mu:V\longrightarrow V\otimes\mathcal A(G)
+\]
+factors through \(V\otimes C\). Thus the ``very simple''
+coalgebra \(C\) also gives a counterexample.
+
+Finally, the preceding two examples are special cases of
+the following construction. Let \(A\) be an integral
+domain distinct from its field of fractions \(K\), and let
+\(B\) be a Hopf \(A\)-algebra, free over \(A\). Write
+\[
+  \varepsilon:B\longrightarrow A,\qquad
+  I=\ker(\varepsilon)
+\]
+for the augmentation and the augmentation ideal. Since
+\(B=A\cdot1\oplus I\), one readily sees that
+\phantomsection\label{form:sga3-VIB-11.10.1-B-prime}%
+\[
+  B'=\{b\in B\otimes_AK\mid \varepsilon(b)\in A\}
+\]
+is a Hopf subalgebra of \(B_K\). Suppose that \(V\) is a
+\(B\)-comodule, free with basis
+\((v_1,\ldots,v_n)\) as an \(A\)-module, and that
+\(\mu_V(v_1)\neq v_1\otimes1\). Then \(Av_1\) is not a
+subcomodule of \(V\), but it is the intersection of the
+subcomodules
+\[
+  Av_1+J\cdot V
+\]
+as \(J\) ranges over the nonzero ideals of \(A\).%
+\begingroup
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}%
+\footnote[1]{\label{note:sga3-VIB-11.10.1-ideal-letter}
+Translator's note: the French re-edition uses \(I\) both
+for the fixed augmentation ideal above and for the ideals
+ranging in this final intersection. We use \(J\) for the
+latter to keep the two roles distinct.}%
+\endgroup\ 
+Thus there is no smallest subcomodule of \(V\) containing
+\(v_1\).
+
+\medskip
+\phantomsection\label{prop:sga3-VIB-11.11}%
+\noindent\textbf{Proposition 11.11.---}
+\emph{Let \(G\) be an algebraic group over a field \(k\).
+The following conditions are equivalent:}
+\begin{enumerate}
+\item[\textup{(i)}]\phantomsection\label{concl:sga3-VIB-11.11-i}
+  \emph{\(G\) is affine.}
+\item[\textup{(ii)}]\phantomsection\label{concl:sga3-VIB-11.11-ii}
+  \emph{\(G\) is quasi-affine.}
+\item[\textup{(iii)}]\phantomsection\label{concl:sga3-VIB-11.11-iii}
+  \emph{\(G\) acts faithfully on a quasi-affine
+  \(k\)-scheme \(X\).}
+\item[\textup{(iv)}]\phantomsection\label{concl:sga3-VIB-11.11-iv}
+  \emph{\(G\) acts linearly and faithfully on a
+  \(k\)-vector space \textup{(not necessarily
+  finite-dimensional)}.}
+\item[\textup{(v)}]\phantomsection\label{concl:sga3-VIB-11.11-v}
+  \emph{\(G\) is isomorphic to a closed subgroup of
+  \(\operatorname{GL}(n)_k\).}
+\end{enumerate}
+
+\emph{Proof.}
+The implication
+\hyperref[concl:sga3-VIB-11.11-i]{\textup{(i)}}
+\(\Rightarrow\)
+\hyperref[concl:sga3-VIB-11.11-ii]{\textup{(ii)}} is
+immediate, and
+\hyperref[concl:sga3-VIB-11.11-ii]{\textup{(ii)}}
+\(\Rightarrow\)
+\hyperref[concl:sga3-VIB-11.11-iii]{\textup{(iii)}} because
+\(G\) acts faithfully on itself by translations.
+
+Suppose that \(G\) acts faithfully on the right on a
+quasi-affine \(k\)-scheme \(X\).%
+\footnote{\label{note:sga3-VIB-121}Editor's note: the
+original has been expanded in what follows. We have also
+chosen a right action of \(G\) on \(X\), so as to obtain a
+left linear action of \(G\) on \(\mathcal O(X)\).}
+Since \(X\) is quasi-affine, it is separated and
+quasi-compact.%
+\footnote{\label{note:sga3-VIB-122}Editor's note: recall
+that a \(k\)-scheme \(X\) is called quasi-affine if it is
+isomorphic to a quasi-compact open subscheme of an affine
+\(k\)-scheme \textup{(EGA~II, 5.1.1)}.}
+Similarly, \(G\) is separated
+\textup{(\hyperref[sga3:VIA:0.3]{VI\(_A\), 0.3})} and
+quasi-compact \textup{(since it is of finite type over
+\(k\))}. Hence, by
+\hyperref[concl:sga3-VIB-11.1-c]{11.1\textup{(c)}}, there
+are canonical isomorphisms
+\phantomsection\label{form:sga3-VIB-11.11-functions-products}%
+\[
+  \mathcal O(X\times G)
+    =\mathcal O(X)\otimes\mathcal O(G),
+  \qquad
+  \mathcal O(X\times G\times G)
+    =\mathcal O(X)\otimes\mathcal O(G)\otimes\mathcal O(G).
+\]
+It follows that the morphism
+\[
+  \mu:\mathcal O(X)\longrightarrow
+    \mathcal O(X)\otimes\mathcal O(G)
+\]
+induced by \(X\times G\to X\) gives
+\(\mathcal O(X)\) the structure of a right
+\(\mathcal O(G)\)-comodule; that is, \(G\) acts linearly on
+the left on the \(k\)-algebra \(\mathcal O(X)\).
+Consequently, \(G\) also acts on the right on the affine
+envelope
+\[
+  X_{\mathrm{af}}=\operatorname{Spec}\mathcal O(X)
+\]
+of \(X\), and the canonical morphism
+\(X\to X_{\mathrm{af}}\) is \(G\)-equivariant.
+
+Since \(X\) is quasi-affine, the morphism
+\(X\to X_{\mathrm{af}}\) is an open immersion
+\textup{(EGA~II, 5.1.2)}. Hence, a fortiori, \(G\) acts
+faithfully on \(X_{\mathrm{af}}\), and therefore the left
+linear action of \(G\) on the \(k\)-algebra
+\(\mathcal O(X)=\mathcal O(X_{\mathrm{af}})\) is faithful.
+This proves
+\hyperref[concl:sga3-VIB-11.11-iii]{\textup{(iii)}}
+\(\Rightarrow\)
+\hyperref[concl:sga3-VIB-11.11-iv]{\textup{(iv)}}.
+
+Now suppose that \(G\) acts faithfully on a \(k\)-vector
+space \(V\). By \hyperref[cor:sga3-VIB-11.10]{11.10},
+\(V\) is the direct limit of finite-dimensional vector
+subspaces \(V_i\) stable under \(G\). Let \(K_i\) be the
+kernel of the induced action of \(G\) on \(V_i\); that is,
+the kernel of \(G\to\operatorname{Aut}(V_i)\). Then \(K_i\)
+is a closed subscheme of \(G\), and the faithfulness of the
+action of \(G\) means that the intersection of the \(K_i\)
+is the identity subgroup of \(G\). Since \(G\) is
+Noetherian, one of the \(K_i\) is already the identity
+subgroup. Thus \(G\to\operatorname{Aut}(V_i)\) is a
+monomorphism, and hence, by
+\hyperref[cor:sga3-VIB-1.4.2]{1.4.2}, a closed immersion.
+This proves
+\hyperref[concl:sga3-VIB-11.11-iv]{\textup{(iv)}}
+\(\Rightarrow\)
+\hyperref[concl:sga3-VIB-11.11-v]{\textup{(v)}}. Finally,
+\hyperref[concl:sga3-VIB-11.11-v]{\textup{(v)}}
+\(\Rightarrow\)
+\hyperref[concl:sga3-VIB-11.11-i]{\textup{(i)}} is
+immediate, and the proposition follows.
+
+\medskip
+\phantomsection\label{rem:sga3-VIB-11.11.1}%
+\noindent\textbf{Remark 11.11.1.---}
+Proposition \hyperref[prop:sga3-VIB-11.11]{11.11} admits
+the following generalization. Let \(S\) be a regular,
+locally Noetherian scheme of dimension at most \(1\), and
+let \(G\) be a group scheme that is flat, quasi-compact, and
+quasi-separated over \(S\). \textup{(In this case,
+\(\mathcal A(G)\) is a torsion-free
+\(\mathcal O_S\)-module, and hence is flat.)}
+
+\begin{enumerate}
+\item[\textup{(a)}]\phantomsection\label{concl:sga3-VIB-11.11.1-a}
+  The following conditions are equivalent:%
+  \footnote{\label{note:sga3-VIB-123}Editor's note: the
+  equivalence of these conditions is proved in the added
+  \hyperref[sec:sga3-VIB-12]{Section 12}.}
+  \begin{enumerate}
+  \item[\textup{(i)}]\phantomsection\label{concl:sga3-VIB-11.11.1-a-i}
+    \(G\) is affine over \(S\).
+  \item[\textup{(ii)}]\phantomsection\label{concl:sga3-VIB-11.11.1-a-ii}
+    \(G\) is quasi-affine over \(S\).
+  \item[\textup{(iii)}]\phantomsection\label{concl:sga3-VIB-11.11.1-a-iii}
+    \(G\) acts faithfully on a quasi-affine flat
+    \(S\)-scheme.
+  \item[\textup{(iv)}]\phantomsection\label{concl:sga3-VIB-11.11.1-a-iv}
+    \(G\) acts linearly and faithfully on a flat
+    quasi-coherent \(\mathcal O_S\)-module.
+  \end{enumerate}
+
+\item[\textup{(b)}]\phantomsection\label{concl:sga3-VIB-11.11.1-b}
+  If, moreover, \(G\) is of finite type over \(S\) and
+  \(S\) is Noetherian, these conditions imply that \(G\)
+  is isomorphic to a closed subgroup of
+  \(\operatorname{Aut}(\mathcal E)\), where
+  \(\mathcal E\) is a finite-rank locally free
+  \(\mathcal O_S\)-module.%
+  \footnote{\label{note:sga3-VIB-124}Editor's note: this is
+  proved, with various generalizations, in the added
+  \hyperref[sec:sga3-VIB-13]{Section 13}.}
+\end{enumerate}

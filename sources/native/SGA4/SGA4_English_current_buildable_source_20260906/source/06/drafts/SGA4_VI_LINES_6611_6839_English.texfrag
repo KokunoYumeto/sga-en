@@ -1,0 +1,238 @@
+\begin{enonce*}{Proposition 8.5.3}\etiquette[8.5.3]{VI.prop8.5.3}
+If, for every $f:i\to j\in\text{\rm Fl}(I)$, the functors
+$f_{\ast}:F_i\to F_j$ commute with small filtered inductive limits, then for
+every section $(i\mapsto M_i)\in\Hom_I^{\circ}(I^{\circ},F')$ we have
+\begin{equation*}
+Q_{\ast} Q^{\ast} (i \mapsto M_i) \simeq i \mapsto
+\varinjlim_{f : j \to i} f_{\ast} M_j{\quoi}.\tag{8.5.3.1}
+\end{equation*}\etiquette[8.5.3.1]{VI.eq8.5.3.1}
+\end{enonce*}
+
+\noindent We\pageoriginale leave it to the reader to describe explicitly,
+in terms of the $\beta_f$ \eqhyperref[VI.eq8.5.2.2]{8.5.2.2} and the
+$c_{f,g}$ (\hyperref[VI.subsubsec8.5.1]{8.5.1}), the transition morphisms of
+the inductive systems $(f:j\to i)\mapsto f_{\ast}(M_j)$ and the transition
+morphisms of the section
+$i\mapsto\varinjlim_{f:j\to i}f_{\ast}M_j$. Since the functors $f_{\ast}$
+commute with filtered inductive limits, the section
+$i\mapsto\varinjlim_{f:j\to i}f_{\ast}M_j$ is Cartesian. Moreover, there is
+a natural morphism $u$ from $(i\mapsto M_i)$ to the section
+$(i\mapsto\varinjlim_{f:j\to i}f_{\ast}M_j)$, and it is clear that every
+morphism from $(i\mapsto M_i)$ to a Cartesian section factors uniquely
+through $u$, giving the isomorphism \eqhyperref[VI.eq8.5.3.1]{8.5.3.1}.
+
+\begin{enonce*}{Corollary 8.5.4}\etiquette[8.5.4]{VI.cor8.5.4}
+Under the hypotheses of \hyperref[VI.prop8.5.3]{8.5.3}, the functor
+$Q_{\ast}$ commutes with small filtered inductive limits.
+\end{enonce*}
+
+Let $\alpha\mapsto N^{\alpha}$ be a small filtered inductive system of
+$\underleftarrow{F}$. Put $M^{\alpha}=Q_{\ast}(N^{\alpha})$, so that
+$M^{\alpha}$ is a section $i\mapsto M_i^{\alpha}$. We have
+$N^{\alpha}\simeq Q^{\ast}Q_{\ast}(N^{\alpha})$, and since $Q^{\ast}$
+commutes with inductive limits, we have
+$\varinjlim_{\alpha}N^{\alpha}\simeq
+Q^{\ast}(\varinjlim_{\alpha}M^{\alpha})$. Inductive limits in
+$\Top(F)=\Hom_{I^{\circ}}(I^{\circ},F')$ are computed fiber by fiber. Thus
+$\varinjlim_{\alpha}M^{\alpha}\simeq
+(i\mapsto\varinjlim_{\alpha}M_i^{\alpha})$. By
+\eqhyperref[VI.eq8.5.3.1]{8.5.3.1}, we have
+$$
+Q_{\ast} (\varinjlim_{\alpha} {N}^{\alpha}) \simeq Q_{\ast}
+Q^{\ast} (\varinjlim_{\alpha} {M}^{\alpha}) \simeq i \mapsto
+\varinjlim_{f : j \to i} f_{\ast}
+(\varinjlim_{\alpha} {M}^{\alpha}_j){\quoi}.
+$$
+Since the functors $f_{\ast}$ commute with filtered inductive limits, it
+follows that
+$$
+Q_{\ast} (\varinjlim_{\alpha} {N}^{\alpha}) \simeq i \mapsto
+\varinjlim_{f: j\to i} \varinjlim_{\alpha} f_{\ast}
+(M^{\alpha}_j) \simeq i \mapsto \varinjlim_{\alpha} \varinjlim_{f:
+  j\to i} f_{\ast}
+(M^{\alpha}_j) \simeq \varinjlim_{\alpha} Q_{\ast} (N^{\alpha}){\quoi}.
+$$
+
+\begin{enonce*}{Corollary 8.5.5}\etiquette[8.5.5]{VI.cor8.5.5}
+If the functors $f_{\ast}:F_i\to F_j$ commute with small filtered inductive
+limits, then for every object $i$ of $I$ and every $M_i\in\ob F_i$ we have
+\begin{equation*}
+\mu_{i\ast} \mu_{i}^{\ast} (M_i) \simeq \varinjlim_{f : j \to
+      i} f_{\ast} f^{\ast}(M_i){\quoi}.\tag{8.5.5.1}
+\end{equation*}\etiquette[8.5.5.1]{VI.eq8.5.5.1}
+\end{enonce*}
+\noindent
+After making the base change $I/i\to I$, we may suppose that $i$ is a final
+object of $I$ (\hyperref[VI.lem8.2.1]{8.2.1}). The morphism
+$\mu_i:\underleftarrow{F}\to F_i$ is then the composite of
+the\pageoriginale morphisms (\hyperref[VI.thm8.2.9]{8.2.9}) and
+(\hyperref[VI.lem7.4.12]{7.4.12}):
+\begin{align*}
+Q &: \underleftarrow{F} \to F^{\sim}{\quoi},\\
+\beta_i &: (\alpha_{i!}, \alpha^{\ast}_i) : F^{\sim} \to F_i{\quoi}.
+\end{align*}
+Thus $\mu_i^{\ast}(M_i)\simeq Q^{\ast}\beta_i^{\ast}(M_i)$, where
+$\beta_i^{\ast}(M_i)$ is the section
+$(f:i\to j)\mapsto f^{\ast}(M_i)$ whose transition morphisms are deduced
+from the $c_{f,g}$. The assertion then follows from
+\hyperref[VI.prop8.5.3]{8.5.3}.
+
+\begin{enonce*}{Corollary 8.5.6}\etiquette[8.5.6]{VI.cor8.5.6}
+Under the hypotheses of \hyperref[VI.cor8.5.5]{8.5.5}, the functors
+$$
+\mu_{i\ast} : \underleftarrow{F} \to F_i
+$$
+commute with filtered inductive limits.
+\end{enonce*}
+
+The functor $\mu_{i\ast}$ is the composite of the functor $Q_{\ast}$, which
+commutes with filtered inductive limits, and the functor ``restriction to
+the fiber at $i$'', which commutes with inductive limits.
+
+\begin{enonce*}{Corollary 8.5.7}\etiquette[8.5.7]{VI.cor8.5.7}
+Under the hypotheses of \hyperref[VI.prop8.5.3]{8.5.3}, let $i$ be an object
+of $I$ and $X$ an object of $F_i$ such that the functor $\Hom(X,-)$ on $F_i$
+commutes with filtered inductive limits. Then the functor
+$\Hom(\mu_i^{\ast}(X),-)$ commutes with filtered inductive limits, and for
+every object $M_i$ of $F_i$ we have
+\begin{equation*}
+\Hom(\mu^{\ast}_i(X), \mu^{\ast}_i(M_i)) \simeq \varinjlim_{f
+: j \to i} \Hom(f^{\ast}(X), f^{\ast}(M_i))\tag{8.5.7.1}{\quoi}.
+\end{equation*}\etiquette[8.5.7.1]{VI.eq8.5.7.1}
+\end{enonce*}
+\noindent
+For every object $(j\mapsto M_j)$ of $\Top(F)$, we have
+\begin{equation*}
+\Hom(\mu^{\ast}_i(X), Q^{\ast}(j \mapsto M_j)) \simeq \varinjlim_{f
+: j \to i} \Hom(f^{\ast}(X), M_{j}){\quoi}.\tag{8.5.7.2}
+\end{equation*}\etiquette[8.5.7.2]{VI.eq8.5.7.2}
+
+The functor $\Hom(\mu_i^{\ast}(X),-)$ is isomorphic to the functor
+$\Hom(X,\mu_{i\ast}(-))$, and the latter commutes with filtered inductive
+limits (\hyperref[VI.cor8.5.4]{8.5.4}). By
+\eqhyperref[VI.eq8.5.5.1]{8.5.5.1}, we have
+$$
+\Hom(\mu^{\ast}_i(X), \mu^{\ast}_i (M_i)) \simeq \Hom (X, \mu_{i\ast}\mu^{\ast}_i (M_i)) \simeq  \Hom(X, \varinjlim_{f : j \to
+  i} f_{\ast} f^{\ast} (M_i)){\quoi},
+$$
+which gives formula \eqhyperref[VI.eq8.5.7.1]{8.5.7.1}. Likewise, by
+\eqhyperref[VI.eq8.5.3.1]{8.5.3.1}, we have
+$$
+\Hom(\mu^{\ast}_i (X), Q^{\ast}(j \mapsto M_j)) \simeq \Hom(X,
+\mu_{i\ast} Q^{\ast} (j \mapsto M_j)) \simeq \Hom(X,
+\varinjlim_{f : j \to i} f_{\ast} (M_j)){\quoi},
+$$
+which\pageoriginale gives formula \eqhyperref[VI.eq8.5.7.2]{8.5.7.2}.
+
+\begin{enonce*}{Proposition 8.5.8}\etiquette[8.5.8]{VI.prop8.5.8}
+Let $G\to I$ be a fibered $𝒰$-topos and $m:F\to G$ a Cartesian morphism of
+fibered topoi \hyperref[VI.def7.1.5]{(7.1.5)}. For $G$ we use the notation introduced in
+\hyperref[VI.def8.1.1]{8.1.1}. Let
+$\underleftarrow{m}:\underleftarrow{F}\to\underleftarrow{G}$ be the
+morphism deduced from $m$ by passage to the projective limit
+(\hyperref[VI.subsubsec8.1.4]{8.1.4}). The diagram of topoi and morphisms of
+topoi
+\[\vcenter{
+\xymatrix@C=2.25cm@R=1.25cm{
+\underset{\leftarrow}{F}  \ar[r]^{Q} \ar[d]^{\underset{\leftarrow}{m}}& \Top(F)\ar[d]^{m^{\sim}}\\
+\underset{\leftarrow}{G}  \ar[r]^{Q} & \Top(G)
+}}\leqno{(8.5.8.1)}
+\]\etiquette[8.5.8.1]{VI.eq8.5.8.1}
+is commutative up to isomorphism. For every object $N$ of
+$\underleftarrow{F}$, we have
+\begin{equation*}
+\underleftarrow{m}_{\ast} (N) \simeq \varinjlim_{I^{\circ}} \mu_j^{\ast}
+m_{j\ast} \mu_{j\ast} (N){\quoi}.\tag{8.5.8.2}
+\end{equation*}\etiquette[8.5.8.2]{VI.eq8.5.8.2}
+\end{enonce*}
+
+The commutativity of diagram \eqhyperref[VI.eq8.5.8.1]{8.5.8.1} follows
+immediately from the definitions (\hyperref[VI.subsubsec8.2.8]{8.2.8} and
+\hyperref[VI.subsubsec8.5.1]{8.5.1}). We have
+$\underleftarrow{m}_{\ast}(N)\simeq
+Q^{\ast}Q_{\ast}\underleftarrow{m}_{\ast}(N)$ and, by the commutativity of
+\eqhyperref[VI.eq8.5.8.1]{8.5.8.1},
+$\underleftarrow{m}_{\ast}(N)\simeq
+Q^{\ast}m^{\sim}_{\ast}Q_{\ast}(N)$. Consequently, there is an isomorphism
+$\underleftarrow{m}_{\ast}(N)\simeq
+Q^{\ast}m^{\sim}_{\ast}(j\mapsto\mu_{j\ast}(N))$. The functor
+$m_{\ast}^{\sim}$ is simply the functor
+$\Hom_{I^{\circ}}(I^{\circ},m_{\ast})$
+(\hyperref[VI.prop7.4.10]{7.4.10}), and consequently there is a canonical
+isomorphism
+$\underleftarrow{m}_{\ast}(N)\simeq
+Q^{\ast}(j\mapsto m_{j\ast}\mu_{j\ast}(N))$. Formula
+\eqhyperref[VI.eq8.5.8.2]{8.5.8.2} then follows from
+\hyperref[VI.prop8.5.2]{8.5.2}.
+
+\begin{enonce*}{Proposition 8.5.9}\etiquette[8.5.9]{VI.prop8.5.9}
+Under the hypotheses and with the notation of \hyperref[VI.prop8.5.8]{8.5.8},
+suppose in addition that, for every object $i$ of $I$, the functor
+$m_{i\ast}:F_i\to G_i$ commutes with filtered inductive limits, and that for
+every morphism $f:i\to j$ of $I$, the functor $f_{\ast}:F_i\to F_j$ commutes
+with filtered inductive limits. Then the functor
+$\underleftarrow{m}_{\ast}:\underleftarrow{F}\to\underleftarrow{G}$ commutes
+with filtered inductive limits, and for every object $(i\mapsto M_i)$ of
+$\Top(F)$ there is a canonical isomorphism
+\begin{equation*}
+\underleftarrow{m}_{\ast} Q^{\ast} (i \mapsto M_i) \simeq
+\varinjlim_{I^{\circ}} \mu^{\ast}_j m_{j\ast} (M_j){\quoi}.\tag{8.5.9.1}
+\end{equation*}\etiquette[8.5.9.1]{VI.eq8.5.9.1}
+\end{enonce*}
+
+The first\pageoriginale assertion follows from
+\eqhyperref[VI.eq8.5.8.2]{8.5.8.2} and
+\hyperref[VI.cor8.5.6]{8.5.6}. By \eqhyperref[VI.eq8.5.8.2]{8.5.8.2} and
+\eqhyperref[VI.eq8.5.3.1]{8.5.3.1}, there is a functorial isomorphism
+$$
+\underleftarrow{m}_{\ast} Q^{\ast} (i \mapsto M_i) \simeq
+\varinjlim_i \mu^{\ast}_{i} m_{i\ast} (\varinjlim_{f
+  : j \to i} f_{\ast} (M_{j})){\quoi}.
+$$
+Using the commutation of the $m_{i\ast}$ with filtered inductive limits and
+the isomorphisms $m_{i\ast}f_{\ast}\simeq f_{\ast}m_{j\ast}$
+(\hyperref[VI.subsubsec7.1.6]{7.1.6}), we obtain
+$$
+\underleftarrow{m}_{\ast} Q^{\ast} (i \mapsto M_i) \simeq
+\varinjlim_i \mu^{\ast}_{i} (\varinjlim_{f : j \to
+  i} f_{\ast} m_{j\ast} (M_j)){\quoi}.
+$$
+Since the functors $\mu_i^{\ast}$ commute with inductive limits, it follows
+that
+$$
+\underleftarrow{m}_{\ast}Q^{\ast}(i\mapsto M_{i})\simeq \varinjlim_{i}
+\varinjlim_{f:j\to i} \mu^{\ast}_{i}f_{\ast}m_{j\ast}(M_{j}){\quoi}.
+$$
+This last object can be interpreted as an inductive limit over the category
+$\text{Fl}(I)^{\circ}$, where $\text{Fl}(I)$ is the category of morphisms of
+$I$. Let $\phi:I\to\text{Fl}(I)$ be the functor that associates with every
+object $i$ of $I$ the identity morphism of $i$. The functor
+$\phi^{\circ}:I^{\circ}\to\text{Fl}(I^{\circ})$ is cofinal, and consequently
+(I \hyperref[I.sec8.1]{8.1}) there is a canonical isomorphism
+$$
+\underleftarrow{m}_{\ast} Q^{\ast} (i \mapsto M_i) \simeq
+\varinjlim_{I^{\circ}} \mu^{\ast}_{j} m_{j\ast}(M_j){\quoi}.
+$$
+
+\begin{enonce*}{Corollary 8.5.10}\etiquette[8.5.10]{VI.cor8.5.10}
+Under the conditions of \hyperref[VI.prop8.5.9]{8.5.9}, for every object $i$
+of $I$ and every object $M_i$ of $F_i$, there is a canonical isomorphism
+\begin{equation*}
+\underleftarrow{m}_{\ast} \mu^{\ast}_i (M_i) \simeq
+\varinjlim_{f:j\to i} \mu^{\ast}_{j} m_{j\ast}f^{\ast}
+(M_{i}){\quoi}.\tag{8.5.10.1}
+\end{equation*}\etiquette[8.5.10.1]{VI.eq8.5.10.1}
+\end{enonce*}
+
+The proof is analogous to that of Corollary \hyperref[VI.cor8.5.5]{8.5.5}.
+
+\begin{enonce*}[remark]{Remark 8.5.11}\etiquette[8.5.11]{VI.rem8.5.11}
+Recall that the direct-image functor under a coherent morphism between
+coherent topoi commutes with filtered inductive limits
+(\hyperref[VI.thm5.1]{5.1}). Consequently, Propositions
+\hyperref[VI.prop8.5.3]{8.5.3} through \hyperref[VI.cor8.5.7]{8.5.7}, and
+\hyperref[VI.prop8.5.9]{8.5.9}, \hyperref[VI.cor8.5.10]{8.5.10}, apply when
+the fibered topoi under consideration are coherent and the morphisms of
+fibered topoi under consideration are coherent.
+\end{enonce*}
+

@@ -1,0 +1,29 @@
+\begin{tikzpicture}[
+  baseline=(current bounding box.center),
+  >=Stealth,
+  every node/.style={font=\normalsize}
+]
+  \node (gleft) at (-3.3,2.1) {$G$};
+  \node (upg)   at (0,2.1) {$\mathrm U^p(G)$};
+  \node (gright) at (3.3,2.1) {$G$};
+  \node (vpg)   at (-1.65,0.35) {$\mathrm V^p(G)$};
+  \node (gbr)   at (1.65,0.35) {$G^{[p/S]}$};
+  \node (gps)   at (0,-1.65) {$G^{(p/S)}$};
+
+  \draw[->] (upg) -- node[above] {$\mu(G)$} (gleft);
+  \draw[->] (gright) -- node[above] {$\delta(G)$} (upg);
+  \draw[->] (vpg) -- node[pos=.52,above,fill=white,inner sep=1pt]
+    {$\nu(G)$} (gleft);
+  \draw[->] (upg) -- node[pos=.53,right,fill=white,inner sep=1pt]
+    {$q'(G)$} (vpg);
+  \draw[->] (gbr) -- node[below] {$i(G)$} (vpg);
+  \draw[->] (gright) -- node[pos=.5,left,fill=white,inner sep=1pt]
+    {$F^{[p]}(G/S)$} (gbr);
+  \draw[->] (gbr) -- node[pos=.55,anchor=west,xshift=2pt,fill=white,inner sep=1pt]
+    {$\varphi(G)$} (gps);
+  \draw[->] (gright) to[out=-92,in=18]
+    node[right] {$\operatorname{Fr}(G/S)$} (gps);
+  \draw[->,dotted] (gps) to[out=172,in=-87]
+    node[left] {$\operatorname{Ver}(G/S)$} (gleft);
+  \node at (3.55,-1.65) {$.$};
+\end{tikzpicture}

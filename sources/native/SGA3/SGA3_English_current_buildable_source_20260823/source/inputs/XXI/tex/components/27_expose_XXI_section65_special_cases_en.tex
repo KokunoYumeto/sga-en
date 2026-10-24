@@ -1,0 +1,203 @@
+We now treat some special cases. If \(N=\Gamma_0(R)\), write
+\[
+ \cR_N=\operatorname{ad}(\cR).
+\]
+If \(N=\VR(R)\cap M\), write
+\[
+ \cR_N=\operatorname{ss}(\cR).
+\]
+Thus there is a diagram
+\[
+ \operatorname{ad}(\cR)\longrightarrow
+ \operatorname{ss}(\cR)\longrightarrow\cR.
+\]
+Put
+\[
+ \operatorname{der}(\cR)=\operatorname{ss}(\cR^\ast)^\ast,
+ \qquad
+ \operatorname{sc}(\cR)=\operatorname{ad}(\cR^\ast)^\ast.
+\]
+By duality there is a diagram
+\[
+ \cR\longrightarrow
+ \operatorname{der}(\cR)\longrightarrow
+ \operatorname{sc}(\cR).
+\]
+
+\begin{proposition}\label{sga3:XXI:6.5.5}
+\begin{enumerate}
+\item[(i)] In the first row of the diagram
+\begin{center}
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{ad}(\cR) \arrow[r]
+  & \operatorname{ss}(\cR) \arrow[rr] \arrow[dr]
+  && \operatorname{der}(\cR) \arrow[r]
+  & \operatorname{sc}(\cR) \\
+&& \cR \arrow[ur] &&
+\end{tikzcd}
+\end{center}
+the four root data are semisimple and the three morphisms are
+isogenies.
+\item[(ii)] The datum \(\operatorname{ad}(\cR)\) is adjoint, and
+\(\cR\) is adjoint if and only if
+\(\operatorname{ad}(\cR)\to\cR\) is an isomorphism.
+\item[(iii)] The datum \(\operatorname{sc}(\cR)\) is simply connected,
+and \(\cR\) is simply connected if and only if
+\(\cR\to\operatorname{sc}(\cR)\) is an isomorphism.
+\item[(iv)] The following conditions are equivalent:
+\begin{enumerate}
+\item[(a)] \(\cR\) is semisimple;
+\item[(b)] \(\operatorname{ss}(\cR)\to\cR\) is an isomorphism;
+\item[(c)] \(\cR\to\operatorname{der}(\cR)\) is an isomorphism.
+\end{enumerate}
+\end{enumerate}
+\end{proposition}
+
+Consider the morphism
+\[
+ \operatorname{ss}(\cR)\longrightarrow\operatorname{der}(\cR).
+\]
+The definitions immediately give the following result.
+
+\begin{lemma}\label{sga3:XXI:6.5.6}
+Let
+\[
+ h:\operatorname{ss}(\cR)\longrightarrow\operatorname{der}(\cR)
+\]
+be the canonical isogeny. Then
+\[
+ K(h)\simeq N(\cR).
+\]
+\end{lemma}
+
+\SGARefTarget{sga3:XXI:6.5.7}
+Consider other special cases of induced root data. Put
+\[
+ N=
+ \{x\in M\mid(\alpha^\ast,x)=0\text{ for every }\alpha\in R\}
+ \times\Gamma_0(R).
+\]
+The sum is direct by \ref{sga3:XXI:1.2.5}. It follows that
+\(\cR_N\) is identified with
+\[
+ \operatorname{ad}(\cR)\times\operatorname{corad}(\cR).
+\]
+One may replace \(\Gamma_0(R)\) by \(\VR(R)\cap M\), and then dualize
+both constructions. This gives the following diagram of root data:
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  >=stealth,
+  every node/.style={font=\small},
+  x=1cm,y=1cm
+]
+\node (at) at (0,2.1) {$\operatorname{ad}(\cR)$};
+\node (st) at (4,2.1) {$\operatorname{ss}(\cR)$};
+\node (dt) at (10,2.1) {$\operatorname{der}(\cR)$};
+\node (ct) at (14,2.1) {$\operatorname{sc}(\cR)$};
+
+\node (am) at (0,0) {$\operatorname{ad}(\cR)\times\operatorname{corad}(\cR)$};
+\node (sm) at (4,0) {$\operatorname{ss}(\cR)\times\operatorname{corad}(\cR)$};
+\node (rm) at (7,0) {$\cR$};
+\node (dm) at (10,0) {$\operatorname{der}(\cR)\times\operatorname{rad}(\cR)$};
+\node (cm) at (14,0) {$\operatorname{sc}(\cR)\times\operatorname{rad}(\cR)$};
+
+\node (ab) at (0,-2.1) {$\operatorname{ad}(\cR)$};
+\node (sb) at (4,-2.1) {$\operatorname{ss}(\cR)$};
+\node (db) at (10,-2.1) {$\operatorname{der}(\cR)$};
+\node (cb) at (14,-2.1) {$\operatorname{sc}(\cR)$};
+
+\draw[->] (at) -- (st);
+\draw[->] (st) -- (dt);
+\draw[->] (dt) -- (ct);
+\draw[->] (am) -- (sm);
+\draw[->] (sm) -- (rm);
+\draw[->] (rm) -- (dm);
+\draw[->] (dm) -- (cm);
+\draw[->] (ab) -- (sb);
+\draw[->] (sb) -- (db);
+\draw[->] (db) -- (cb);
+
+\draw[->] (at) -- (am);
+\draw[->] (am) -- (ab);
+\draw[->] (st) -- (sm);
+\draw[->] (sm) -- (sb);
+\draw[->] (dt) -- (dm);
+\draw[->] (dm) -- (db);
+\draw[->] (ct) -- (cm);
+\draw[->] (cm) -- (cb);
+\end{tikzpicture}
+}
+\end{center}
+It is commutative, as is checked at once, and is self-dual in the
+evident sense. The horizontal morphisms are isogenies, and the
+composites of the vertical arrows are the identity.
+
+\begin{lemma}\label{sga3:XXI:6.5.8}
+Let \(h_1\) and \(h_2\) be the canonical isogenies
+\[
+ \operatorname{ss}(\cR)\times\operatorname{corad}(\cR)
+ \xrightarrow{h_1}\cR
+ \xrightarrow{h_2}
+ \operatorname{der}(\cR)\times\operatorname{rad}(\cR).
+\]
+Then
+\[
+ K(h_1)\simeq K(h_2)\simeq N(\cR).
+\]
+\end{lemma}
+
+\begin{proof}
+This is immediate from the definitions.
+\end{proof}
+
+\begin{corollary}\label{sga3:XXI:6.5.9}
+For a root datum \(\cR\), the following conditions are equivalent:
+\begin{enumerate}
+\item[(i)] \(N(\cR)=0\), that is,
+  \(\operatorname{corad}(\cR)\to\operatorname{rad}(\cR)\) is an
+  isomorphism;
+\item[(ii)] the canonical map
+  \(\operatorname{ss}(\cR)\to\operatorname{der}(\cR)\) is an
+  isomorphism;
+\item[(iii)] \(h_1\) is an isomorphism;
+\item[(iv)] \(h_2\) is an isomorphism;
+\item[(v)] \(\cR\) is the product of a semisimple root datum and a
+  trivial root datum.
+\end{enumerate}
+\end{corollary}
+
+\begin{corollary}\label{sga3:XXI:6.5.10}
+For every root datum \(\cR\), there are isogenies
+\[
+ \operatorname{ad}(\cR)\times\cR_0
+ \longrightarrow\cR\longrightarrow
+ \operatorname{sc}(\cR)\times\cR_0,
+\]
+where \(\cR_0\) is the trivial root datum of rank
+\(\rgred(\cR)-\rgss(\cR)\).
+\end{corollary}
+
+\begin{lemma}\label{sga3:XXI:6.5.11}
+Let \(\cR\) be a root datum, let \(\Delta\) be a system of simple
+roots, and let \(\Delta'\subset\Delta\). Consider the root datum
+\[
+ \cR_{\Delta'}=(M,M^\ast,R_{\Delta'},R^\ast_{\Delta'})
+\]
+of \ref{sga3:XXI:3.4.7}.
+\begin{enumerate}
+\item[(i)] If \(\cR\) is simply connected, then
+  \(\operatorname{der}(\cR_{\Delta'})\) is simply connected.
+\item[(ii)] If \(\cR\) is adjoint, then
+  \(\operatorname{ss}(\cR_{\Delta'})\) is adjoint.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The two assertions are equivalent by duality. The second reduces to
+\[
+ M\cap\VR(R_{\Delta'})=\Gamma_0(R_{\Delta'}).
+\]
+When \(M=\Gamma_0(R)\), both sides are the subgroup of \(M\) generated
+by \(\Delta'\).
+\end{proof}

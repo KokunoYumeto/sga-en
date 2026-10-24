@@ -1,0 +1,119 @@
+
+\medskip
+\phantomsection\label{par:sga3-VIA-3.2.3}%
+\noindent\textbf{3.2.3.---}
+We are now in a position to prove the existence of
+\(F\backslash G\) when \(F\) and \(G\) are of finite type over
+\(A\). Let \(A'\) be sufficiently large over \(A\) that
+\(U(A')\) coincides with \(G\otimes_AA'\) (cf.\ \hyperref[par:sga3-VIA-3.2.2]{3.2.2}). Set
+\[
+  A''=A'\otimes_AA',
+\]
+and, for every \(A\)-scheme \(X\), write \(X'\) and \(X''\) for
+the fiber products \(X\otimes_AA'\) and \(X\otimes_AA''\).
+By \hyperref[par:sga3-VIA-3.2.1]{3.2.1} and \hyperref[par:sga3-VIA-3.2.2]{3.2.2}, the quotients \(F'\backslash G'\) and
+\(F''\backslash G''\) exist, and we have the following commutative
+diagram, in which the first two rows and columns are exact:
+\begin{center}
+  \phantomsection\label{diag:sga3-VIA-3.2.3-exact-descent}%
+  \begin{tabular}{c@{\qquad}c}
+    \textup{(*)}
+    &
+    \begin{tikzcd}[row sep=large,column sep=large]
+      F''\times_{A''}G''
+        \arrow[r,shift left=1.2ex,"\operatorname{pr}_2''"]
+        \arrow[r,shift right=1.2ex,"\lambda''"']
+        \arrow[d,shift left=1.2ex,"w_2"]
+        \arrow[d,shift right=1.2ex,"w_1"']
+      &
+      G''
+        \arrow[r,"p''"]
+        \arrow[d,shift left=1.2ex,"v_2"]
+        \arrow[d,shift right=1.2ex,"v_1"']
+      &
+      F''\backslash G''
+        \arrow[d,shift left=1.2ex,"u_2"]
+        \arrow[d,shift right=1.2ex,"u_1"']
+      \\
+      F'\times_{A'}G'
+        \arrow[r,shift left=1.2ex,"\operatorname{pr}_2'"]
+        \arrow[r,shift right=1.2ex,"\lambda'"']
+        \arrow[d,"h"']
+      &
+      G'
+        \arrow[r,"p'"]
+        \arrow[d,"g"]
+      &
+      F'\backslash G'
+      \\
+      F\times_A G
+        \arrow[r,shift left=1.2ex,"\operatorname{pr}_2"]
+        \arrow[r,shift right=1.2ex,"\lambda"']
+      &
+      G\mathpunct{.}
+      &
+      {}
+    \end{tikzcd}
+  \end{tabular}
+\end{center}
+
+In this diagram, \(\operatorname{pr}'_2\) and \(\lambda'\)
+(respectively, \(\operatorname{pr}''_2\) and \(\lambda''\)) are
+obtained from \(\operatorname{pr}_2\) and \(\lambda\) by the evident
+base changes; the morphisms \(g\) and \(h\) are induced by the
+canonical injection \(A\to A'\). We write \(p'\) and \(p''\) for the
+canonical morphisms, while \(v_1,v_2\) and \(w_1,w_2\) are induced
+by the two canonical injections of \(A'\) into \(A''\).
+
+Finally, formation of the quotient \(F'\backslash G'\) commutes with
+the two base changes
+\[
+  f_1,f_2:\operatorname{Spec}A''
+    \rightrightarrows \operatorname{Spec}A'.
+\]
+Thus, if
+\[
+  \pi':F'\backslash G'\longrightarrow\operatorname{Spec}A'
+\]
+denotes the structure morphism, there are canonical isomorphisms,
+for \(i=1,2\),
+\[
+  \tau_i:F''\backslash G''
+    \xrightarrow{\ \sim\ }
+    (F'\backslash G')\times_{\pi',\,f_i}\operatorname{Spec}A'',
+\]
+and \(u_i\) is the composite of \(\tau_i\) with the projection
+\[
+  (F'\backslash G')\times_{\pi',\,f_i}\operatorname{Spec}A''
+    \longrightarrow F'\backslash G'.
+\]
+
+Now, for a diagram of type \((*)\) in which the first two rows and
+columns are exact, one checks readily that
+\(\operatorname{Coker}(\operatorname{pr}_2,\lambda)\) exists if and
+only if \(\operatorname{Coker}(u_1,u_2)\) exists, and that these two
+cokernels are then identified. The existence of \(F\backslash G\)
+therefore follows from that of \(\operatorname{Coker}(u_1,u_2)\).
+
+The compatibility of the formation of \(F\backslash G\) with the
+base extensions considered here (cf.\ editor's
+note~\ref{note:sga3-VIA-37} in \SGARefLink{par:sga3-VIA-3.2.1}{3.2.1} and \SGARefLink{par:sga3-VIA-4.6}{4.6} below) shows that the
+composite
+\begin{center}
+  \phantomsection\label{diag:sga3-VIA-3.2.3-descent-datum}%
+  \(
+  (F'\backslash G')\times_{\pi',\,f_1}\operatorname{Spec}A''
+    \xrightarrow{\ \tau_1^{-1}\ }
+  F''\backslash G''
+    \xrightarrow{\ \tau_2\ }
+  (F'\backslash G')\times_{\pi',\,f_2}\operatorname{Spec}A''
+  \)
+\end{center}
+is a descent datum on \(F'\backslash G'\) relative to
+\[
+  f:\operatorname{Spec}A'\longrightarrow\operatorname{Spec}A.
+\]
+By \hyperref[par:sga3-VIA-3.2.1]{3.2.1}~\eqref{eq:sga3-VIA-3.2.1-dagger} and
+SGA~1, VIII.7.6, this descent datum is effective; that is,
+\(\operatorname{Coker}(u_1,u_2)\) exists. (One could instead apply
+\SGARefLink{thm:sga3-V-4.1}{Expos\'e~V, Theorem~4.1} directly.)

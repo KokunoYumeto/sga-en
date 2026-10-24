@@ -1,0 +1,141 @@
+
+\chapter*{Exposé XIII\\Regular Elements of Algebraic Groups and Lie Algebras}
+\addcontentsline{toc}{chapter}{Exposé XIII. Regular Elements of Algebraic Groups and Lie Algebras}
+\SGARefTarget{sga3:xiii:expose}
+
+\begin{center}
+\textit{by A. Grothendieck}
+\end{center}
+
+\section{An auxiliary lemma on varieties with operators}
+\SGARefTarget{sga3:xiii:section:1}
+
+Let \(S\) be a prescheme, let \(G\) be an \(S\)-group prescheme acting
+on the left on an \(S\)-prescheme \(V\), let \(W\) be a closed
+\(S\)-subprescheme of \(V\), and let \(N\) be its stabilizer in \(G\).
+Thus \(N\) is the subgroup of \(G\) whose points with values in an
+\(S'\) over \(S\) are the elements \(g\in G(S')\) such that
+\[
+  g\cdot W_{S'}=W_{S'}.
+\]
+We endow \((\mathrm{Sch}/S)\) with the faithfully flat
+quasi-compact topology and identify \(G\), \(V\), and \(W\) with the
+corresponding sheaves.\footnote{The French source prints \(M\) in this
+list; the surrounding sentence and all subsequent uses require \(W\).}
+We shall therefore reason in the category of sheaves on
+\((\mathrm{Sch}/S)\); throughout \SGARefLink{sga3:xiii:section:1}{this section}, ``locally'' refers to
+the topology just specified on \((\mathrm{Sch}/S)\).
+
+Since \(N\) is a sheaf, consider the quotient sheaf \(G/N\). It is
+immediately seen to be isomorphic to the following functor: to every
+\(S'\) over \(S\), it assigns the set of subsheaves \(W'\) of
+\(V_{S'}\) that are locally conjugate to \(W_{S'}\) under \(G\).
+Let \(X\) be the subsheaf of \(G/N\times_S V\) whose value on an
+\(S'\) over \(S\) is the set of pairs \((W',v)\), where \(W'\) is as
+above and \(v\) is a section of \(W'\) over \(S'\) (hence also a
+section of \(V_{S'}\) over \(S'\)). Let \(Z\) be the inverse image of
+\(X\) in \(G\times_S V\). We then have \SGARefLink{sga3:xiii:equation:x}{the cartesian diagram}
+\SGARefTarget{sga3:xiii:diagram:x}
+\[
+\tag{x}\label{sga3:xiii:equation:x}
+\begin{tikzcd}[column sep=large,row sep=large]
+Z \arrow[r] \arrow[d,hook] & X \arrow[d,hook,"i"] \\
+G\times_S V \arrow[r] & G/N\times_S V ,
+\end{tikzcd}
+\]
+where \(i\) is the canonical immersion, while the lower horizontal
+arrow is induced by the canonical morphism \(G\to G/N\).
+
+This morphism sends \(g\in G(S')\) to the subsheaf
+\(g\cdot W_{S'}\) of \(V_{S'}\). Consequently, \(Z(S')\) is the set
+of pairs \((g,v)\in G(S')\times V(S')\) such that
+\(v\in (g\cdot W_{S'})(S')\). It follows that \(Z\) is isomorphic to
+the sheaf \(G\times_S W\), via the isomorphism
+\[
+  G\times_S W \xrightarrow{\sim} Z,\qquad
+  (g,w)\longmapsto(g,g\cdot w).
+\]
+Thus \SGARefLink{sga3:xiii:equation:x}{the preceding cartesian diagram} yields \SGARefLink{sga3:xiii:equation:xx}{the cartesian diagram}
+\SGARefTarget{sga3:xiii:diagram:xx}
+\[
+\tag{xx}\label{sga3:xiii:equation:xx}
+\begin{tikzcd}[column sep=large,row sep=large]
+G\times_S W \arrow[r,"q"] \arrow[d,"\lambda"'] &
+  X \arrow[d,"i"] \\
+G\times_S V \arrow[r] & G/N\times_S V
+\end{tikzcd}
+\]
+where
+\[
+  \lambda(g,w)=(g,g\cdot w),\qquad
+  q(g,w)=(\bar g,g\cdot w),
+\]
+where \(\bar g\) denotes the image of \(g\) under the canonical map
+\(G(S')\to(G/N)(S')\).
+
+Diagram \(\SGARefLink{sga3:xiii:equation:x}{\mathrm{(x)}}\) also shows that \(Z\to X\) makes \(Z\) a
+principal bundle over \(X\), with \(N\) acting on the right by
+\[
+  (g,v)\cdot n=(gn,v).
+\]
+Accordingly, in diagram \(\SGARefLink{sga3:xiii:equation:xx}{\mathrm{(xx)}}\), the morphism
+\(q:G\times_S W\to X\) makes \(G\times_S W\) a principal bundle over
+\(X\), with right \(N\)-action
+\[
+  (g,w)\cdot n=(gn,n^{-1}\cdot w).
+\]
+
+The principal morphisms just introduced are summarized by
+\SGARefTarget{sga3:xiii:diagram:d}
+\[
+\tag{D}\label{sga3:xiii:equation:d}
+\begin{tikzcd}[column sep=large,row sep=large]
+& G\times_S W \arrow[d,"q"] \arrow[dr,"\varphi"] & \\
+G/N &
+X \arrow[l,"p"] \arrow[r,"\psi"] \arrow[d,hook,"i"] &
+V \\
+& G/N\times_S V
+  \arrow[ul,dashed,"\operatorname{pr}_1"]
+  \arrow[ur,dashed,"\operatorname{pr}_2"'] &
+\end{tikzcd}
+\]
+where
+\[
+  \psi=\operatorname{pr}_2\circ i,\qquad
+  \varphi=\psi\circ q,\qquad
+  \varphi(g,w)=g\cdot w.
+\]
+
+If \(v\) is a section of \(V\) over \(S\), let \(X_v\) be its inverse
+image in \(X\) under \(\psi\). For every \(S'\) over \(S\),
+\(X_v(S')\) is the set of subsheaves \(W'\) of \(V_{S'}\) that are
+locally conjugate to \(W_{S'}\) under \(G\) and contain the section
+\(v_{S'}\) of \(V_{S'}\). The inverse image of \(v\) in
+\(G\times_S W\) under \(\varphi\) is isomorphic to the subsheaf
+\(M_v\) of \(G\) defined by
+\[
+  M_v(S')=
+  \bigl\{g\in G(S')\mid v_{S'}\in(g\cdot W_{S'})(S')\bigr\}
+  =
+  \bigl\{g\in G(S')\mid g^{-1}v_{S'}\in W(S')\bigr\}.
+\]
+If \(v\) is a section of \(W\), and not merely of \(V\), then
+\(M_v\) evidently contains \(N\).
+
+None of these explicit descriptions used the representability of
+\(G\), \(V\), or \(W\) (nor even the fact that the site in question is
+defined in terms of preschemes). Suppose now, however, that \(N\) is
+representable, faithfully flat, and quasi-compact over \(S\), and that
+\(G/N\) is representable. When \(S\) is the spectrum of a field and
+\(G\) is of finite type over that field, this hypothesis is necessarily
+satisfied (VIII~6 and VI\textsubscript{B}.11.18). Using the cartesian
+diagram \(\SGARefLink{sga3:xiii:equation:xx}{\mathrm{(xx)}}\), faithfully flat quasi-compact descent, and
+the fact that \(Z\to G\times_S V\) is a closed immersion, one sees that
+\(X\) is representable: it is obtained by descending the closed
+subprescheme \(Z\) of \(G\times_S V\) along the faithfully flat
+quasi-compact morphism
+\[
+  G\times_S V\longrightarrow G/N\times_S V.
+\]
+Thus diagram \(\SGARefLink{sga3:xiii:equation:d}{\mathrm{(D)}}\) is a diagram of morphisms of
+preschemes over \(S\).

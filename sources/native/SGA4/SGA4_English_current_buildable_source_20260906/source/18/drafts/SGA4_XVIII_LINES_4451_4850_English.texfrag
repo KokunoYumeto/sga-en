@@ -1,0 +1,400 @@
+K{\mathop{\otimes}^{\LL}}_{\ZZ/n}Rf_{!}\ZZ/n(d)\xrightarrow{\sim} Rf_{!}(f^{\ast}K(d)){\quoi}.\tag{2.13.1}
+\end{equation*}\etiquette[2.13.1]{XVIII.eq2.13.1}
+ 
+The trace morphism
+$$
+\Tr_{f}:R^{2d}f_{!}\ZZ/n(d)\longrightarrow \ZZ/n
+$$
+may also be interpreted as a morphism
+$$
+\Tr_{f}:Rf_{!}\ZZ/n(d)[2d]\longrightarrow \ZZ/n{\quoi}.
+$$
+Tensoring this morphism with $K$ defines, via
+\eqhyperref[XVIII.eq2.13.1]{2.13.1}, a trace
+morphism
+\begin{equation*}
+\Tr_{f}:Rf_{!}(f^{\ast}K(d)[2d])\longrightarrow K{\quoi}.\tag{2.13.2}
+\end{equation*}\etiquette[2.13.2]{XVIII.eq2.13.2}
+
+As we shall see in \hyperref[XVIII.thm3.2.5]{3.2.5}, the following theorem is
+essentially equivalent to the global duality theorem in étale
+cohomology.
+
+\begin{enonce*}{Theorem 2.14}\etiquette[2.14]{XVIII.thm2.14}
+Let $f:X\rightarrow S$ be a smooth compactifiable morphism
+purely of relative dimension $d$, and let $n$ be an integer $\geq 1$
+invertible on $S$. For every geometric point $x$ of $X$
+with image $s$ in $S$, there exist an étale neighborhood $V$ of $s$ in $S$
+and an étale neighborhood $U$ of $x$ in $f^{-1}(V)$
+\begin{equation*}
+\vcenter{
+\xymatrix@C=1.5cm@R=1.25cm{
+U \ar[rd]_{f'_V} \ar[r]^{j} & f^{-1}(V)   \ar[r] \ar[d]^{f_V}& X\ar[d]^{f}\\
+                                             &     V           \ar[r]  & S
+}}\tag{2.14.1}
+\end{equation*}\etiquette[2.14.1]{XVIII.eq2.14.1}%
+such\pageoriginale that the morphism
+\sisi{\emph{(XVII 6.2.7.2)}}{\eqhyperrefext[XVII][XVII.eq6.2.7.4]{6.2.7.4}}
+$$
+R^{i}f'_{V!}\ZZ/n\longrightarrow R^{i}f_{V!}\ZZ/n
+$$
+is zero for $i<2d$, and the morphism
+$$
+\Tr_{f'_{V}}:R^{2d}f'_{V!}\ZZ/n(d)\longrightarrow \ZZ/n
+$$
+is an isomorphism.
+\end{enonce*}
+
+We first prove the following.
+
+\begin{enonce*}{Lemma 2.14.2}\etiquette[2.14.2]{XVIII.lem2.14.2}
+Let $\mathcal{A}$ be an abelian category, let $k$ be an integer $\geq 0$,
+let $(K_{i})_{0\leq i\leq 2k}$ be objects of $D^{b}(\mathcal{A})$ such that
+$H^{p}(K_{i})=0$ for $p\not\in [0,k]$, let $f_{i}:K_{i}\rightarrow
+K_{i+1}$ $(0\leq i\leq 2k-1)$ be morphisms, and let $f$ be their composite. If
+$H^{p}(f_{i})=0$ for $p<k$, then there exists in $D^{b}(\mathcal{A})$
+a morphism $\varphi$ from the complex $H^{k}(K_{0})[-k]$, consisting of
+$H^{k}(K_{0})$ placed in degree $k$, to $K_{2k}$, making
+the diagram
+$$
+\xymatrix{
+K_{0}  \ar[d]\ar[r]^{f} & K_{2k}\\
+\sigma_{\geq k}(K_{0})  \ar@{=}[r] & H^{k}(K_{0})[-k] \ar[u]_{\varphi}.
+}
+$$
+commute.
+\end{enonce*}
+
+The lemma is trivial for $k=0$. We prove it by induction on
+$k$. Applying the induction hypothesis to the complexes $\sigma_{\geq
+1}(K_{i})[1]$ gives a morphism
+$\varphi':H^{k}(K_{0})[-k]\rightarrow \sigma_{\geq 1}K_{2k-2}$ making
+the following diagram commute, where $f'=f_{2k-3}\ldots f_{0}$:
+$$
+\xymatrix{
+K_{0}  \ar[d]\ar[r]^{f'} & \sigma_{\geq 1}K_{2k-2}            \\
+\sigma_{\geq k}(K_{0})  \ar@{=}[r] & H^{k}(K_{0})[-k]. \ar[u]_{\varphi'}
+}
+$$
+
+For every complex $L$, the distinguished triangle
+$$
+\xymatrix{
+                            &\sigma_{\geq 1}(L)\ar[ld]_{+1}  &       \\
+  \sigma_{\leq 0}(L) \ar[rr] &                    & L\ar[lu]
+}
+$$
+gives,\pageoriginale for every complex $M$, an exact sequence
+$$
+\ldots\rightarrow \Hom(M,\sigma_{\leq 0}(L))\rightarrow \Hom
+(M,L)\rightarrow \Hom (M,\sigma_{\geq
+1}L)\xrightarrow{j}\Ext^{1}(M,\sigma_{\leq 0}L){\quoi}.
+$$
+
+In particular, we have a diagram
+$${\def\objectstyle{\scriptscriptstyle}
+\xymatrix@C=0.4cm{
+\Hom(\sigma_{\geq k}K_{0}, \sigma_{\leq 0} K_{2k-2})\ar[r] \ar[d]&
+\overset{\text{\ding{176}}}{\underset{\phantom{\text{\ding{176}}}}
+{\Hom}}(\sigma_{\geq k}K_{0},
+    K_{2k-2}) \ar[r]\ar[d] &
+\overset{\text{\ding{174}}}{\underset{\phantom{\text{\ding{174}}}}
+{\Hom}}(\sigma_{\geq
+      k}K_{0}, \sigma_{\geq 1} K_{2k-2})\ar[r] \ar[d]&
+\overset{\text{\ding{175}}}{\underset{\phantom{\text{\ding{175}}}}
+{\Ext}^1}(\sigma_{\geq
+      k}K_{0}, \sigma_{\leq 0} K_{2k-2})\ar[d]\\
+\overset{\text{\ding{178}}}{\underset{\phantom{\text{\ding{178}}}}
+{\Hom}}(K_0,\sigma_{\leq 0} K_{2k-2})\ar[r] &
+\overset{\text{\ding{172}}}{\underset{\phantom{\text{\ding{172}}}}
+{\Hom}}(K_0,K_{2k-2}) \ar[r] &
+\overset{\text{\ding{173}\ding{177}}}{\underset{\phantom{\text{\ding{173}\ding{177}}}}
+{\Hom}}(K_0, \sigma_{\geq
+  1}K_{2k-2})\ar[r]& \Ext^{1}(K_0, \sigma_{\leq 0} K_{2k-2})
+}}\leqno{(2.14.3)}\etiquette[2.14.3]{XVIII.eq2.14.3}
+$$
+which maps to the analogous diagrams for $K_{2k-1}$ and
+$K_{2k}$. By hypothesis, the morphism $f'$ at \ding{172} has an image
+at \ding{173} that lifts to \ding{174}. The obstruction
+\ding{175} to the element \ding{174} lifting to \ding{176}
+has zero image in diagram \eqhyperref[XVIII.eq2.14.3]{2.14.3} for
+$K_{2k-1}$. In this new diagram, \ding{174} therefore lifts to
+\ding{176}, and the difference between \ding{172} and the image of
+\ding{176} has zero image at \ding{177}, and hence is the image of an
+element \ding{178}. This element \ding{178} has zero image in
+diagram \hyperref[XVIII.eq2.14.3]{2.14.3} for $K_{2k}$; in this new diagram,
+$f$ is therefore the image of \ding{176}, which solves the problem.
+
+We prove that, for a given value of $d$, assertion
+\hyperref[XVIII.thm2.14]{2.14} implies the following.
+
+\begin{enonce*}{Corollary 2.14.4}\etiquette[2.14.4]{XVIII.cor2.14.4}
+Under the hypotheses of \hyperref[XVIII.thm2.14]{2.14}, there exists a diagram
+\eqhyperref[XVIII.eq2.14.1]{2.14.1} such
+that the morphism \emph{\hyperrefext[XVII][XVII.subsubsec6.2.4]{6.2.4}}, in
+$D^{b}(V,\sheaf{\ZZ}/n)$, admits a factorization
+$$
+\xymatrix@C=.75cm@R=1cm{
+Rf'_{V!}\sheaf{\ZZ}/n(d)  \ar[rr] \ar[rd]_{t}&  & Rf_{V!}\sheaf{\ZZ}/n(d)\\
+                          &\sheaf{\ZZ}/n[-2d], \ar[ru]_{\varphi}
+}
+$$
+where $t$ is the arrow
+$$
+t:Rf'_{V!}\ZZ/n(d)\rightarrow \sigma_{\geq
+2d}Rf'_{V!}\ZZ/n(d)=H^{2d}(Rf'_{V!}\ZZ/n(d))[-2d]\xrightarrow{\Tr}\sheaf{\ZZ}/n[-2d]{\quoi}.
+$$
+\end{enonce*}
+
+Set\pageoriginale $f'_{0}=f$ and construct, inductively, $4d$
+diagrams \eqhyperref[XVIII.eq2.14.1]{2.14.1}
+$$
+\xymatrix@C=2cm@R=1.5cm{
+U^{'}_{i+1} \ar[r]\ar[rd]_{f'_{i+1}}& f'^{-1}_{i}(V'_{i+1}) \ar[d]\ar[r]& U'_i \ar[d]^{f'_{i}}\\
+            & V'_{i+1}  \ar[r]            & V'_i
+}
+$$
+satisfying \hyperref[XVIII.thm2.14]{2.14}. Set $V=V'_{4d}$ and
+$U_{i}=\fprod{U'_{i}}{V}{V'_{i}}$. We obtain a diagram
+$$
+\xymatrix@R=1.5cm@C=1cm{
+U_{4d}\ar[r] \ar[rrrd]^{f_{4d}}& \cdots \ar[r]& U_1 \ar[r]\ar[rd]^{f_1}& U_0\ar[r]\ar[d]^{f^0} & X \ar[d]^{f}\\
+            &              &           & V \ar@{-}[r]  & S ,
+}
+$$
+with $U_{0}=f^{-1}(V)$, such that the arrows
+$$
+R^{i}f_{k+1!}\ZZ/n(d)\longrightarrow R^{i}f_{k!}\ZZ/n(d)
+$$
+are zero (for $i<2d$) and the arrow
+$$
+\Tr:R^{2d}f_{4d!}\sheaf{\ZZ}/n(d)\longrightarrow \sheaf{\ZZ}/n
+$$
+is an isomorphism. By \hyperref[XVIII.lem2.14.2]{2.14.2}, the corollary holds
+for $U=U_{4d}$.
+
+We are now \sisi{ready}{ready}
+to prove \hyperref[XVIII.thm2.14]{2.14} by induction on
+$d$. The case $d=0$ is trivial, and the case $d=1$ is precisely
+\hyperref[XVIII.lemfond1.6.9]{1.6.9}. We may therefore suppose that $d\geq 2$.
+
+Since the problem is local on $X$ and $S$, we may suppose
+that $f$ admits a factorization $f=gh$, with $g$ and $h$ smooth
+and compactifiable, purely of relative dimensions $d'$ and $d''$, and that $d'$,
+$d''<d=d'+d''$. Apply \hyperref[XVIII.cor2.14.4]{2.14.4} to $g$ and to the
+morphisms deduced from
+$h$ by base change, so as to obtain a diagram
+$$
+\xymatrix@C=2.2cm@R=1.5cm{
+  U  \ar[r]^{u} \ar[rd]^{h'_0} & f^{-1}W \ar[d]^{h_0}       \ar[r] & X \ar[d]^{h} \\
+V  \ar[r]^{v} \ar[rd]^{g'_0} & g^{-1}W \ar[r] \ar[d]^{g_0}       & Y \ar[d]^{g}\\
+               &    W   \ar[r]               & S,
+}
+$$
+such\pageoriginale that the morphisms (XVII \hyperref[XVII.eq6.2.7.3]{6.2.7.3}) admit
+factorizations
+\begin{align*}
+ Rh'_{0!}\ZZ/n(d'') & \xrightarrow{\Tr}
+\ZZ/n[-2d'']\xrightarrow{\varphi} Rh_{0!}\ZZ/n(d'')\\
+Rg'_{0!}\ZZ/n(d') & \xrightarrow{\Tr}\ZZ/n[-2d']\xrightarrow{\Psi} Rg_{0!}\ZZ/n(d')
+\end{align*}
+and such that $\Tr_{h'_0}$ and $\Tr_{g'_0}$ are isomorphisms.
+
+Let $h_{1}$ and $h'_{1}$ be the morphisms deduced from $h_{0}$ and $h'_0$
+by base change to $V$, and let $f'=g'_{0}h'_{1}$,
+$f_{W}=g_{0}h_{0}$.
+
+The following diagram is commutative:
+$$
+\xymatrix{
+  Rf'_{!}\ZZ/n(d) \ar[rr]\ar@{=}[d] & & Rf_{W!}\ZZ/n(d) \ar@{=}[d]\\
+Rg'_{0!} Rh'_1\ZZ/n(d) \ar[r]& Rg_{0!} Rh'_{0!}\ZZ/n(d) \ar[r]& Rg_{0!}
+Rh_{0!}\ZZ/n(d),
+}
+$$
+as is the diagram
+$$
+\xymatrix@C=2.1cm@R=1cm{
+  Rg'_{0!} Rh'_{1!} \ZZ/n(d)   \ar@{=}[d] \ar@<-5ex>@/_2pc/[ddd]& &\\
+Rg'_{0!} v^{\ast} Rh'_{0!} \ZZ/n(d)
+ \ar[dd] \ar[r]_{Rg'_{0!}v^{\ast}(t)(d')}&
+Rg'_{0!}\ZZ/n(d')[-2d''] \ar[d]^{t[-2d'']}& \\
+   & \ZZ/n[-2d] \ar[d]^{\Psi[-2d'']}\\
+Rg_{0!} Rh'_{0!} \ZZ/n(d) \ar[r]_{Rg_{0!}(t)(d')} \ar@/_2.2pc/[rr]& Rg_{0!}\ZZ/n(d')[-2d''] \ar[r]_{Rg_{0!}(\varphi)(d')}& Rg_{0!}Rh_{0!}\ZZ/n(d)
+}
+$$
+For\pageoriginale the diagram
+$$
+\xymatrix@C=1.5cm@R=1.25cm{
+U_1 \ar[r]\ar[rd]^{f'} & f^{-1}W \ar[r]\ar[d]^{f_W}& X\ar[d]^{f}\\
+                       &  W \ar@{-}[r]     & S,
+}
+$$
+the canonical arrow from $Rf'_{!}\ZZ/n(d)$ to
+$Rf_{W!}\ZZ/n(d)$ therefore factors through $\ZZ/n[-2d]$; hence the
+arrows from $R^{i}f'_{!}\ZZ/n(d)$ to
+$R^{i}f_{W!}\ZZ/n(d)$ are zero for $i<2d$. Finally,
+$\Tr_{f'}$ is an isomorphism, being the composite of the isomorphisms
+$\Tr_{g'_{0}}$ and $R^{2d'}g'_{0!}\Tr_{h'_{1}}$.
+
+This completes the proof of \hyperref[XVIII.thm2.14]{2.14}.
+
+\section{The global duality theorem}\etiquette[3]{XVIII.sec3}\pageoriginale
+
+\subsection{The functor $Rf^{!}$}\etiquette[3.1]{XVIII.sec3.1}
+
+We shall need a variant of the canonical flasque resolutions.
+
+\begin{enonce*}{Lemma 3.1.1}\etiquette[3.1.1]{XVIII.lem3.1.1}
+Let $X$ be a coherent scheme (\ie quasi-compact and quasi-separated). The
+functor $\varinjlim$ induces an equivalence between the category of
+Ind-objects of the category of constructible sheaves of sets (\resp of
+groups, \resp of abelian groups) and the category of sheaves
+of sets (\resp of Ind-finite groups, \resp of torsion abelian groups).
+\end{enonce*}
+
+This follows from \hyperrefext[IX][IX.cor2.7.2]{2.7.2} and \hyperrefext[IX][IX.cor2.7.3]{2.7.3}.
+
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[3.1.2]{XVIII.subsubsec3.1.2}
+Let $\Ff$ be a torsion abelian sheaf on a scheme $X$,
+the filtered direct limit of constructible sheaves
+$(\Ff_{i})_{i\in I}$, and let $X_{0}$ be a conservative set of
+points of $X$. The \emph{modified canonical flasque
+resolution} of $\mathcal{F}$ is defined by the formula
+$$
+C^{\ast}_{\ell}(\Ff)=\varinjlim_{i}C^{\ast}(\Ff_{i}){\quoi},
+$$ where the $C^{\ast}(\Ff_{i})$ are the canonical flasque resolutions
+of \hyperrefext[XVII][XVII.def4.2.2]{4.2.2}. By \hyperref[XVIII.lem3.1.1]{3.1.1}, for $X$
+coherent, this definition is independent of the choice of the $\Ff_{i}$. It
+also commutes with localization; this fact allows us to define
+$C^{\ast}_{\ell}(\Ff)$ by globalization when $\Ff$ is a torsion
+sheaf on an arbitrary scheme $X$, not necessarily coherent.
+
+\emph{The complex $C^{\ast}_{\ell}(\Ff)$ is a resolution of
+$\Ff$, functorial in $\Ff$, whose formation
+commutes with localization and filtered direct limits; the
+functors $C^{n}_{\ell}$ are exact.}
+
+It follows that, for a sheaf of rings $\mathcal{A}$ on $X$,
+the functors $C^{n}_{\ell}$ carry $\mathcal{A}$-Modules to
+$\mathcal{A}$-Modules; they likewise carry torsion sheaves
+to torsion sheaves. It is well known that
+
+\begin{enonce*}{Lemma 3.1.3}\etiquette[3.1.3]{XVIII.lem3.1.3}
+Let\pageoriginale $\mathcal{A}$ be an abelian $\sheaf{\mathcal{U}}$-category
+having a small generating set and such that direct limits
+indexed by a small filtered ordered set are representable in
+$\mathcal{A}$, and are exact. A functor $F$ from $\mathcal{A}^{\circ}$
+to $(\Ens)$ is representable if and only if it carries small direct
+limits (arbitrary ones) to inverse limits.
+\end{enonce*}
+
+\Cf for example \SGA 4 I \hyperref[I.prop8.12.5]{8.12.5}, where $\mathcal{A}$ is not assumed
+abelian, nor are filtered $\varinjlim$ assumed exact.
+
+We shall apply this lemma to the category $\Mod(X,\mathcal{A})$ of
+sheaves of modules on a ringed site $(X,\mathcal{A})$. In this special
+case, if the functor $F$ is represented by the sheaf
+$ℱ$, then
+\begin{equation*}
+ℱ(U)=F(\mathcal{A}_{U}){\quoi}.\tag{3.1.3.1}
+\end{equation*}\etiquette[3.1.3.1]{XVIII.eq3.1.3.1}
+
+This description of $ℱ$ gives a direct verification of
+\hyperref[XVIII.lem3.1.3]{3.1.3} in the case at hand.
+
+Recall that if $f:X\rightarrow S$ is a compactifiable morphism
+(\hyperrefext[XVII][XVII.subsec3.2]{3.2}.), then $S$ is quasi-compact and quasi-separated (sic), and the
+dimensions of the fibers of $f$ are bounded.
+
+\begin{enonce*}{Theorem 3.1.4}\etiquette[3.1.4]{XVIII.thm3.1.4}
+Let $f:X\rightarrow S$ be a compactifiable morphism and let $\mathcal{A}$
+be a sheaf of torsion rings on $S$. Then the functor
+\begin{equation*}
+Rf_{!}:D(X,f^{\ast}\mathcal{A})\longrightarrow D(S,\mathcal{A})\tag{3.1.4.1}
+\end{equation*}\etiquette[3.1.4.1]{XVIII.eq3.1.4.1}%
+admits a partial right adjoint
+\begin{equation*}
+Rf^{!}:D^{+}(S,\mathcal{A})\longrightarrow D^{+}(X,f^{\ast}\mathcal{A}):\tag{3.1.4.2}
+\end{equation*}\etiquette[3.1.4.2]{XVIII.eq3.1.4.2}%
+for $K\in \Ob D(X,f^{\ast}\mathcal{A})$ and $L\in \Ob
+D^{+}(S,\mathcal{A})$, there is a functorial isomorphism
+\begin{equation*}
+\Hom(Rf_{!}K,L)\simeq \Hom(K,Rf^{!}L){\quoi}.\tag{3.1.4.3}
+\end{equation*}\etiquette[3.1.4.3]{XVIII.eq3.1.4.3}%
+Endowed with the translation morphism making the diagram
+\begin{equation*}
+\vcenter{
+\xymatrix{
+  \Hom(Rf_!(K[1]),L)
+  \ar@{<->}[d]_{\text{\rotatebox{90}{$\backsim$}}}\ar@{<->}[r]^-{\sim}&
+  \Hom(K[1],Rf^{!}L)\ar@{-}[r]^-\sim&
+\Hom(K,(Rf^{!}L)[-1])\ar@{<->}[d]^{\text{\rotatebox{90}{$\backsim$}}}\\
+\Hom((Rf_!K)[1],L)\ar@{-}[r]^-\sim & \Hom(Rf_!K,L[-1])
+\ar@{<->}[r]^-{\sim}_-{\txt{\rm adj.}} & \Hom(K,Rf^{!}(L[-1])),
+}}\tag{3.1.4.4}
+\end{equation*}\etiquette[3.1.4.4]{XVIII.eq3.1.4.4}%
+commute,\pageoriginale this functor $Rf^{!}$ is a triangulated functor.
+\end{enonce*}
+
+N.B. The notation $Rf^{!}$ is abusive in that $Rf^{!}$ is not in
+general the derived functor of a functor $f^{!}$.
+
+\noindent
+\emph{Proof} Let $d$ be an integer such that every fiber of $f$
+has dimension $<d$, and choose a compactification
+$$
+\xymatrix@R=1.25cm@C=1.5cm{
+X \ar@{^{(}->}[r]^{j} \ar[d]_{f}& \bar{X}\ar[ld]^{\bar{f}}\\
+S.
+}
+$$
+
+If $K$ is a complex of $f^{\ast}\mathcal{A}$-Modules on $X$, then
+$$
+Rf_{!}K\simeq R\bar{f}_{\ast}(j_{!}K){\quoi}.
+$$
+
+For every sheaf $F$ on $X$, the components $F^{i}$ of the complex
+$\tau_{\leq 2d}C^\ast_{\ell}j_{!}F$ satisfy
+\begin{equation*}
+R^{k}\bar{f}_{\ast}F^{i}=0\quad \text{\rm for}\quad k>0{\quoi}.\tag{3.1.4.5}
+\end{equation*}\etiquette[3.1.4.5]{XVIII.eq3.1.4.5}%
+Indeed, for $i\neq 2d$, $F^{i}$ is a direct limit of flasque sheaves,
+and for $i=2d$ and $k>0$, we have (\hyperrefext[XVII][XVII.cor5.2.8.1]{5.2.8.1})
+$$
+R^{k}\bar{f}_{\ast}F^{2d}=R^{k+2d}f_{!}F=0{\quoi}.
+$$
+
+The simple complex associated with the truncated modified canonical
+flasque resolution double complex of $K$ is a resolution of $K$. By
+\eqhyperref[XVIII.eq3.1.4.5]{3.1.4.5}, we therefore have (notation of \hyperrefext[XVII][XVII.subsubsec1.1.15]{1.1.15})
+\begin{equation*}
+R\bar{f}_{\ast}(j_{!}K)\xleftarrow{\sim} \bar{f}_{\ast}\tau''_{\leq
+2d} C^{\ast}_{\ell}j_{!}K{\quoi}.\tag{3.1.4.6}
+\end{equation*}\etiquette[3.1.4.6]{XVIII.eq3.1.4.6}
+
+Denote by $f^{\bigdot}_{!}$ the functor from sheaves of modules
+on $X$ to complexes\pageoriginale of sheaves on $S$ defined
+by
+\begin{equation*}
+f^{\bigdot}_{!}(F)=\bar{f}_{\ast}\tau_{\leq
+2d}C^{\ast}_{\ell}j_{!}F{\quoi}.\tag{3.1.4.7}
+\end{equation*}\etiquette[3.1.4.7]{XVIII.eq3.1.4.7}
+
+\begin{enonce*}{Lemma 3.1.4.8}\etiquette[3.1.4.8]{XVIII.lem3.1.4.8}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The functors $f^{i}_{!}$ are exact and commute with filtered
+direct limits; we have $f^{i}_{!}=0$ for $i\not\in[0,2d]$.
+
+\item Since the functor $f^{\bigdot}_{!}$ is bounded with exact
+components, its derived functor \emph{(\hyperrefext[XVII][XVII.prop1.2.10]{1.2.10})} is obtained trivially and is denoted
+$Rf^{\bigdot}_{!}$, or simply
+$f^{\bigdot}_{!}:D(X,f^{\ast}\mathcal{A})\rightarrow
+D(S,\mathcal{A})$. The arrow \eqhyperref[XVIII.eq3.1.4.6]{3.1.4.6} is an isomorphism of
+functors
+$$
+Rf^{\bigdot}_{!}\xrightarrow{\sim} Rf_{!}{\quoi}.

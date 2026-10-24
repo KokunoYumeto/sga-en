@@ -1,0 +1,362 @@
+\subsection{The total topology of a fibered topos or site}\etiquette[7.4]{VI.subsec7.4}
+
+\begin{enonce*}{Definition 7.4.1}\etiquette[7.4.1]{VI.def7.4.1}
+Let $p:C\to I$ be a fibered $𝒰$-site and, for every
+$i\in\ob(I)$, denote by $\alpha_{i!}:C_i\to C$ the inclusion functor
+of the fiber category $C_i$ into $C$. The \emph{total topology} on
+$C$ is the coarsest topology on $C$ for which the functors
+$\alpha_{i!}$, $i\in\ob(I)$, are continuous \emph{(III \hyperref[III.prop3.6]{3.6})}. The
+category $C$ equipped with the total topology is called the
+\emph{total site}.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 7.4.2}\etiquette[7.4.2]{VI.prop7.4.2}
+Let\pageoriginale $p:C\to I$ be a fibered $𝒰$-site, let $T$ be the
+total topology on $C$, and, for every $i\in\ob(I)$, let $T_i$ be the
+topology of the fiber $C_i$.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $X$ be an object of $C$ over an object $i$ of $I$. A family
+  $(X_\beta\to X)_{\beta\in B}$ is covering for $T$ if and only if it
+  is refined by a covering family for $T_i$,
+  $(Y_{\gamma}\to X)_{\gamma\in\Gamma}$, in $C_i$.
+
+\item The topology $T$ induces the topology $T_i$ on each category
+  $C_i$.
+
+\item For every $i\in\ob(I)$, the functor $\alpha_{i!}:C_i\to C$ is
+  cocontinuous.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsubsection}{2}
+\setcounter{paragraph}{0}
+\paragraph{}\etiquette[7.4.2.1]{VI.par7.4.2.1}
+
+Property 3) follows from 1) and III \hyperref[III.def2.1]{2.1}. Let us prove 1). For every
+object $X$ of $C$, let $J(X)$ be the set of sieves of $C/X$ described
+in 1). One verifies that the $J(X)$ have properties $T$ 1), $T$ 2),
+and $T$ 3) of II \hyperref[II.def1.1]{1.1}, and hence that they define a topology $T'$ on
+$C$. The topology $T'$ is the coarsest topology on $C$ for which the
+covering families for the topologies $T_i$ are covering. Thus $T'$ is
+coarser than $T$ (III \hyperref[III.prop1.6]{1.6}). To prove that $T'=T$, it is therefore
+enough to show that, for every object $i$ of $I$, the functor
+$\alpha_{i!}:C_i\to C$ is continuous when $C$ is equipped with the
+topology $T'$; equivalently, it is enough to show that the topology
+induced by $T'$ on the category $C_i$ is $T_i$, which will prove
+property 2) at the same time. Let $T'_i$ be the topology on $C_i$
+induced by $T'$, and let $u:R\hookrightarrow X$ be a covering sieve
+for $T'_i$. By III \hyperref[III.prop3.2]{3.2}, the morphism
+$\alpha_{i!}(u):\alpha_{i!}(R)\to\alpha_{i!}(X)$ is bicovering and in
+particular covering. By the definition of $T'$, this means that the
+sieve $R\hookrightarrow X$ is covering for $T_i$. Thus $T'_i$ is
+coarser than $T_i$. To prove that $T'_i$ is finer than $T_i$, by the
+definition of the induced topology (III \hyperref[III.subsec3.1]{3.1}), it is enough to show
+that the functor $\alpha_{i!}:C_i\to C$ is continuous when $C_i$ and
+$C$ are equipped with $T_i$ and $T'$, respectively. In summary, by
+III \hyperref[III.prop1.2]{1.2} and \hyperref[III.prop1.5]{1.5}, to prove properties 1) and 2), it is enough to prove
+the following lemma:
+
+\begin{enonce*}{Lemma 7.4.2.2}\etiquette[7.4.2.2]{VI.lem7.4.2.2}
+Under the hypotheses and with the notation of
+\hyperref[VI.prop7.4.2]{7.4.2} and
+\hyperref[VI.par7.4.2.1]{7.4.2.1}, let $X$ be an object of $C$ over
+$i$, and let $R\xrightarrow{u}X$ be a morphism of
+$C^{\widehat{\phantom{,}}}_i$. The following properties are
+equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The morphism\pageoriginale $R\to X$ is bicovering for $T_i$.
+
+\item The morphism
+  $\alpha_{i!}(u):\alpha_{i!}(R)\to\alpha_{i!}(X)$ is bicovering for
+  $T'$.
+\end{enumerate}
+\end{enonce*}
+
+i) $\Rightarrow$ ii): It is clear that if $R\to X$ is bicovering for
+$T_i$, then the morphism $\alpha_{i!}(u)$ is covering for $T'$. It
+remains to show that it is bicovering (II
+\hyperref[VI.cor5.2]{5.2}). Let $Y$ be an object of $C$ over an object
+$j$ of $I$, let $m,n:Y\rightrightarrows\alpha_{i!}(R)$ be two
+morphisms of $C^{\widehat{\phantom{,}}}$ such that
+$\alpha_{i!}(u)m=\alpha_{i!}(u)n$, and set
+$f=p(\alpha_{i!}(u)m)$. Since the functor $\alpha_{i!}$ commutes with
+inductive limits (I \hyperlink{sga4.exp.I.proposition.5.4.item.3}{5.4.3}), we have (I \hyperref[I.prop3.4]{3.4}):
+$$
+\Hom_{C^{\widehat{\phantom{,}}}} (Y, \alpha_{i!} (R)) \simeq
+\varinjlim_{C_{i}/R} \Hom_C (Y, \alpha_{i!} (.)){\quoi}.
+$$
+For every object $Z$ of $C_i$, with the notation of
+\hyperref[VI.subsubsec6.1.1]{6.1.1}, we have
+$$
+\Hom_{C} (Y, Z) \simeq \coprod_{w \in \Hom(j, i)} \Hom_w (Y,
+Z){\quoi},
+$$
+and therefore
+$$
+\varinjlim_{C_{i}/R} \Hom (Y, \alpha_{i!} (.)) \simeq
+\coprod_{w \in \Hom(j, i)} \varinjlim_{C_{i}/R}
+\Hom_{w} (Y, \alpha_{i!} (.)){\quoi}.
+$$
+For every $w\in\Hom(j,i)$, however, there is an inverse image functor
+$w^{\ast}:C_i\to C_j$, and
+$\Hom_w(Y,\alpha_{i!}(.))\simeq\Hom_{C_j}(Y,w^{\ast}(.))$. Thus,
+still denoting by $w^{\ast}:C^{\widehat{\phantom{,}}}_i\to
+C^{\widehat{\phantom{,}}}_j$ the extension of $w^{\ast}$ to
+presheaves (which, according to I \hyperref[VI.lem5.4]{5.4}, should be denoted
+$(w^{\ast})_{!}$), and observing that the functor
+$w^{\ast}:C^{\widehat{\phantom{,}}}_i\to
+C^{\widehat{\phantom{,}}}_j$ commutes with inductive limits (I
+\hyperlink{sga4.exp.I.proposition.5.4.item.3}{5.4.3}), we obtain an isomorphism
+$$
+\Hom_{C^{\widehat{\phantom{,}}}} (Y, \alpha_{i!} (R)) =
+\coprod_{w \in \Hom(j, i)}
+\Hom_{C^{\widehat{\phantom{,}}}_{j}}(Y,w^{\ast}(R)){\quoi}.
+$$
+Under this isomorphism, the morphisms
+$m,n:Y\rightrightarrows\alpha_{i!}(R)$ correspond to two morphisms
+$m',n':Y\rightrightarrows f^{\ast}R$ such that
+$f^{\ast}(u)m'=f^{\ast}(u)n'$. Since the inverse image functor is a
+morphism of topoi, it is in particular continuous, and consequently
+$f^{\ast}(u)$ is bicovering (III \hyperref[III.prop3.2]{3.2}). There is therefore a covering
+family $(Y_{\delta}\xrightarrow{v_{\delta}}Y)_{\delta}$ in $C_j$
+such that $m'v_{\delta}=n'v_{\delta}$ for every $\delta$. It follows
+that $mv_{\delta}=nv_{\delta}$ for every $\delta$, and hence that
+$\alpha_{i!}(u)$ is bicovering for $T'$.
+
+ii) $\Rightarrow$ i):\pageoriginale Suppose that
+$\alpha_{i!}(R)\xrightarrow{\alpha_{i!}(u)}\alpha_{i!}(X)$ is
+bicovering. The functor $\alpha_{i!}:C_i\to C$ is cocontinuous (III
+\hyperref[III.def2.1]{2.1}). Hence $\alpha^{\ast}_{i}\alpha_{i!}(u)$ is bicovering (III
+\hyperref[III.eq2.3.2]{2.3.2} and II \hyperref[VI.cor5.3]{5.3} ii)). The functor
+$\alpha_{i!}:C_i\to C$ has property (PPF) of I \hyperref[I.prop5.14]{5.14}. We therefore
+have a Cartesian diagram in $C^{\widehat{\phantom{,}}}_i$ (I \hyperref[I.prop5.14]{5.14}
+3)):
+\[
+\xymatrix@C=2.25cm@R=1.25cm{
+R  \ar[r] \ar[d]_{u}& \alpha_i^{\ast}\alpha_{i!}(R) \ar[d]^{\alpha_i^{\ast}\alpha_{i!}(u)}\\
+X     \ar[r]          & \alpha_i^{\ast}\alpha_{i!}(X).
+}
+\]
+It follows that $u$ is bicovering (II \hyperref[VI.cor5.2]{5.2}).
+
+\begin{enonce*}[remark]{Remark 7.4.3}\etiquette[7.4.3]{VI.rem7.4.3}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Proposition \hyperref[VI.prop7.4.2]{7.4.2} can be stated and
+  proved in a slightly more general setting than that of fibered
+  sites, but apparently without useful application: instead of a
+  fibered site $p:C\to I$, one considers a fibered category
+  $p:C\to I$ whose fibers are equipped with topologies and whose
+  inverse image functors are continuous for these topologies (whereas
+  in the case of fibered sites one requires in addition that these
+  inverse image functors be morphisms of sites (IV \hyperref[IV.subsec4.9]{4.9})).
+
+\item One can prove that the total topology of a fibered site is the
+  finest topology making the functors $\alpha_{i!}:C_i\to C$
+  cocontinuous (III 2).
+
+\hypertarget{sga4.exp.VI.remark.7.4.3.item.3}{}\item Let $p:C\to I$ be a fibered $𝒰$-site over a category
+  equivalent to a $𝒰$-small category. Then the total site $C$ is a
+  $𝒰$-site (II \hyperref[II.def3.0.2]{3.0.2}). Indeed, if, for every object $i$ of $I$,
+  $(X_{\beta})_{\beta\in B_i}$ is a small topologically generating
+  family of $C_i$, then the family
+  $(X_{\beta})_{\beta\in\amalg_iB_i}$ is topologically generating for
+  $C$ and is $𝒰$-small. The topos of sheaves on the total site is
+  called the \emph{total topos} and is denoted by $\Top(C)$.
+
+\hypertarget{sga4.exp.VI.remark.7.4.3.item.4}{}\item Let $p:C\to I$ be a fibered $𝒰$-site over a small category.
+  Since the functor $\alpha_{i!}:C_i\to C$ is cocontinuous, it gives
+  rise to a morphism of topoi
+  $\alpha_i=(\alpha^{\ast}_i,\alpha^{i\ast})$ from $C^{\sim}_i$ to
+  $\Top(C)$ (IV \hyperref[IV.subsec4.7]{4.7}). Since, moreover, the functor
+  $\alpha_{i!}:C_i\to C$ is continuous, the functor
+  $\alpha^{\ast}_i:\Top(C)\to C^{\sim}_i$ admits a left adjoint,
+  again denoted by\pageoriginale
+  $\alpha_{i!}:C^{\sim}_i\to\Top(C)$, which extends the functor
+  $\alpha_{i!}:C_i\to C$ (III \hyperref[III.prop1.2]{1.2} iv)).
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Proposition 7.4.4}\etiquette[7.4.4]{VI.prop7.4.4}
+Let $p:C\to I$ be a fibered $𝒰$-site over a small category $I$.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item A presheaf $F$ on $C$ is a sheaf for the total topology if and
+  only if, for every object $i$ of $I$, the presheaf
+  $F\circ\alpha_{i!}=F|C_i$ is a sheaf on $C_i$.
+
+\item A functor $m$ from $C$ to a site $D$ is a continuous functor
+  from the total site $C$ to the site $D$ if and only if, for every
+  object $i$ of $I$, the functor
+  $m|C_i=m\circ\alpha_{i!}:C_i\to D$ is continuous.
+\end{enumerate}
+\end{enonce*}
+
+If $F$ is a sheaf for the total topology, the presheaf
+$F\circ\alpha_{i!}$ is a sheaf on $C_i$ because
+$\alpha_{i!}:C_i\to C$ is continuous. Conversely, suppose that
+$F\circ\alpha_{i!}$ is a sheaf on $C_i$ for every $i$. Let $X$ be an
+object of $C$ over an object $i$ of $I$. For every covering sieve $R$
+of $C_i/X$, we have $F(X)\simeq F\circ\alpha_{i!}(R)$ and hence
+$F(X)\simeq F(\alpha_{i!}(R))$. Let $R'\hookrightarrow X$ be the
+sieve of $C/X$ that is the image of the canonical morphism of
+presheaves $\alpha_{i!}(R)\to X$. The morphism
+$\alpha_{i!}(R)\to R'$ is an epimorphism of presheaves, and therefore
+$F(R')\to F(\alpha_{i!}(R))$ is injective. Since
+$F(R')\to F(\alpha_{i!}(R))$ is also surjective, it is bijective, and
+hence $F(X)\to F(R')$ is bijective. Since the covering sieves of $X$
+are described by \eqhyperref[VI.par7.4.2.1]{7.4.2.1}, the presheaf
+$F$ is a sheaf: returning to the construction of the associated
+sheaf (II 3), one sees that $F$ is isomorphic to its associated sheaf
+(II \hyperref[II.rem3.3]{3.3}). The second assertion follows immediately from the first and
+the definition of continuity (III \hyperref[III.def1.1]{1.1}).
+
+\setcounter{subsubsection}{4}
+\subsubsection{}\etiquette[7.4.5]{VI.subsubsec7.4.5}
+
+Let $p:C\to I$ be a fibered $𝒰$-site over a category $I$ equivalent
+to a small category, and let
+$$
+f : i \to j
+$$
+be an arrow of the index category $I$. Again denoting by
+$f:C^{\sim}_i\to C^{\sim}_j$ the morphism of topoi determined by the
+fibered-site structure, we have (with the notation of \hyperlink{sga4.exp.VI.remark.7.4.3.item.4}{7.4.3.4}) a
+diagram of morphisms of $𝒰$-topoi
+\[\vcenter{
+\xymatrix@C=2.25cm@R=1.25cm{
+C^{\sim}_i \ar[d]_{f} \ar[r]^{\alpha_i} & \Top(C)\\
+C^{\sim}_j  \ar[ru]_{\alpha_j}&
+}}\leqno{(7.4.5.1)}
+\]\etiquette[7.4.5.1]{VI.eq7.4.5.1}
+where $\Top(C)$\pageoriginale is the total topos \hyperlink{sga4.exp.VI.remark.7.4.3.item.3}{(7.4.3.3)}. The
+diagram \eqhyperref[VI.eq7.4.5.1]{7.4.5.1} \emph{is not commutative in
+general}. We shall define a canonical morphism of morphisms of topoi:
+\begin{equation*}
+\rho_f : \alpha_i \to \alpha_j \circ f{\quoi}.\tag{7.4.5.2}
+\end{equation*}\etiquette[7.4.5.2]{VI.eq7.4.5.2}
+It is enough to define such a morphism at the level of inverse images,
+\ie to define a morphism of functors
+\begin{equation*}
+\beta_f^{\ast} : f^{\ast}\circ \alpha_j^{\ast} \to
+\alpha_i^{\ast}{\quoi}, \tag{7.4.5.3}
+\end{equation*}\etiquette[7.4.5.3]{VI.eq7.4.5.3}
+or, equivalently, using the adjunction between $f^{\ast}$ and
+$f_{\ast}$, it is enough to define a morphism of functors
+\begin{equation*}
+\gamma_f : \alpha^{\ast}_j \to f_{\ast} \alpha^{\ast}_i{\quoi}.\tag{7.4.5.4}
+\end{equation*}\etiquette[7.4.5.4]{VI.eq7.4.5.4}
+Let $Y$ be an object of $C_j$ and $F$ a sheaf on the total site $C$.
+By definition,
+$\alpha^{\ast}_jF(Y)=F(\alpha_{j!}(Y))$ and
+$f_{\ast}\alpha^{\ast}_iF(Y)=F(\alpha_{i!}f^{\ast}(Y))$, where in the
+second member $f^{\ast}:C_j\to C_i$ denotes the inverse image functor
+for the fibered structure. By the definition of this inverse image
+functor, however, there is a canonical Cartesian morphism
+\begin{equation*}
+m_Y : \alpha_{i!} f^{\ast} \to \alpha_{j!}{\quoi};\tag{7.4.5.5}
+\end{equation*}\etiquette[7.4.5.5]{VI.eq7.4.5.5}
+hence, on applying the functor $F$, a map functorial in $Y$:
+\begin{equation*}
+\gamma_f (F) (Y) = F(m_Y) : \alpha_{j}^{\ast} F(Y) \to f_{\ast}
+\alpha^{\ast}_i F(Y){\quoi},\tag{7.4.5.6}
+\end{equation*}\etiquette[7.4.5.6]{VI.eq7.4.5.6}
+which defines a morphism of sheaves on $C_j$:
+\begin{equation*}
+\gamma_f (F) : \alpha_{j}^{\ast} F \to f_{\ast} \alpha^{\ast}_i
+F{\quoi};\tag{7.4.5.7}
+\end{equation*}\etiquette[7.4.5.7]{VI.eq7.4.5.7}
+whence the morphism of functors $\gamma_f$ of
+\eqhyperref[VI.eq7.4.5.4]{7.4.5.4}.
+
+Now let\pageoriginale $f:i\to j$ and $g:j\to k$ be two composable
+morphisms of $I$. There is a canonical isomorphism
+$$
+c'_{g, f} : g_{\ast} f_{\ast} \to (gf)_{\ast}
+$$
+and one immediately verifies the compatibility formula
+\begin{equation*}
+c'_{g, f} \circ g_{\ast} (\gamma_f) \circ \gamma_g =
+\gamma_{gf}{\quoi}.\tag{7.4.5.8}
+\end{equation*}\etiquette[7.4.5.8]{VI.eq7.4.5.8}
+
+\subsubsection{}\etiquette[7.4.6]{VI.subsubsec7.4.6}
+
+Introduce the fibered $𝒰$-topos
+$p^{\sim/I}:C^{\sim/I}\to I$ associated with $p:C\to I$
+(\hyperref[VI.subsubsec7.2.6]{7.2.6}) and the corresponding category
+fibered over $I^{\circ}$,
+$(p^{\sim/I})':(C^{\sim/I})'\to I^{\circ}$
+\eqhyperref[VI.eq7.1.3.2]{7.1.3.2}. The preceding considerations
+associate with every object $F$ of $\Top(C)$ a family
+$F_i=(\alpha^{\ast}_iF)_{i\in\ob(I)}$ of objects of the
+$C^{\sim}_i$, together with a family of morphisms
+$$
+\gamma_f F : F_j \to f_{\ast} F_i,\quad f\in F1(I),\quad f : i \to j{\quoi},
+$$
+subject to the compatibility conditions of
+\eqhyperref[VI.eq7.4.5.8]{7.4.5.8}. Thus with $F$ we have associated
+an $I^{\circ}$-functor from the category $I^{\circ}$ to the category
+$(C^{\sim/I})'$, \ie an object $\Theta_C(F)$ of the category
+$\Hhom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$. Since this construction
+is functorial in $F$, we obtain a functor
+\begin{equation*}
+\Theta_C : \Top(C) \to \Hhom_{I^{\circ}} (I^{\circ},
+(C^{\sim/I})'){\quoi}.\tag{7.4.6.1}
+\end{equation*}\etiquette[7.4.6.1]{VI.eq7.4.6.1}
+
+\begin{enonce*}{Proposition 7.4.7}\etiquette[7.4.7]{VI.prop7.4.7}
+Let $C\to I$ be a fibered $\mathcal{U}$-site, with $I$ equivalent to
+a small category. The functor $\Theta_C$
+\eqhyperref[VI.eq7.4.6.1]{7.4.6.1} is an equivalence of categories.
+\end{enonce*}
+
+We shall content ourselves with describing a quasi-inverse to
+$\Theta_C$. Let \\
+$\sigma\in\Hom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$, \ie an
+$I^{\circ}$-functor $i\mapsto\sigma(i)$ from $I^{\circ}$ to
+$(C^{\sim/I})'$. For every object $X$ of $C$ over
+$p(X)=i\in\ob(I)$, there is a sheaf
+$\sigma(p(X))\in\ob C^{\sim}_i$, and hence a set
+$\sigma(p(X))(X)$. Let $m:X\to Y$ be a morphism of $C$ over the
+morphism $f:i\to j$ of $I$. The morphism $m$ factors uniquely as a
+morphism $m':X\to f^{\ast}Y$ of $C_i$ followed by the canonical
+Cartesian morphism $f^{\ast}Y\to Y$. Likewise, the morphism
+$\sigma(f)$ factors uniquely as a morphism
+$\gamma_f(\sigma):\sigma(p(Y))\to f_{\ast}\sigma(p(X))$ followed by
+the canonical $I^{\circ}$-Cartesian morphism
+$f_{\ast}\sigma(p(X))\to\sigma(p(X))$. We therefore obtain a map
+from $\sigma(p(Y))(Y)$ to $\sigma(p(X))(X)$,\pageoriginale by
+composing the maps
+$$
+\sigma(p(Y))(Y) \xrightarrow{\gamma_f(\sigma)(Y)}
+f_{\ast}\sigma(p(X))(Y) =
+\sigma(p(X))(f^{\ast}Y) \xrightarrow{\sigma(p(X))(m')}
+\sigma(p(X))(X){\quoi}.
+$$
+Thus with every object $X$ of $C$ we have associated a set
+$\sigma(p(X))(X)$, and with every morphism $m:X\to Y$ a map
+$\sigma(p(Y))(Y)\to\sigma(p(X))(X)$. One verifies that this indeed
+defines a presheaf on $C$, and that this presheaf does not depend on
+the choice of inverse image functors used in its construction. It
+follows from \hyperref[VI.prop7.4.4]{7.4.4} that the presheaf
+$X\mapsto\sigma(p(X))(X)$ is a sheaf on the total site $C$, and it is
+clear that this sheaf depends functorially on the object $\sigma$ of
+$\Hhom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$. Returning to the
+definition of $\Theta_C$, it is also clear that the functor from
+$\Hhom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$ to $\Top(C)$ just
+constructed is a quasi-inverse to $\Theta_C$.
+
+\begin{enonce*}[remark]{Remark 7.4.8}\etiquette[7.4.8]{VI.rem7.4.8}
+It follows in particular from \hyperref[VI.prop7.4.7]{7.4.7} that the
+category $\Hhom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$ is a
+$𝒰$-topos. This latter fact can be seen directly. Using I \hyperref[I.lem9.21.10]{9.21.10},
+one sees immediately that conditions a), b), and c) of IV \hyperref[IV.subsubsec1.1.2]{1.1.2} are
+satisfied, and the existence of a small generating category follows
+from I \hyperref[I.cor9.25]{9.25}.
+\end{enonce*}
+
+\setcounter{subsubsection}{8}

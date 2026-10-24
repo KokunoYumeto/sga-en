@@ -1,0 +1,322 @@
+\section{Preliminaries}\etiquette[1]{Vbis.sec1}
+
+\subsection{Notation}\etiquette[1.1]{Vbis.subsec1.1}
+
+\subsubsection{}\etiquette[1.1.1]{Vbis.subsubsec1.1.1}
+Throughout what follows, $\Uu$ is a universe such that $\ZZ \in
+\Uu$: \emph{all the topoi considered will be
+$\Uu\text{-}topoi$.}
+
+Let $T$ and $T'$ be two topoi: a morphism $\varphi : T \to T'$
+consists of a pair of functors $\varphi_{\ast} : T \to T'$ and
+$\varphi^{\ast} : T'\to T$, endowed with an adjunction
+$$\Hom_{T'}(.,\varphi_{\ast}.) \isomto{\Hom}_{T}(\varphi^{\ast} . ,
+.),$$
+such that $\varphi^{\ast}$ is left exact (\ie preserves finite
+projective limits).
+
+Let $(T, \mathcal{O}_{T})$ and $(T', \mathcal{O}_{T'})$ be two
+ringed topoi: a morphism from $(T, \mathcal{O}_{T})$ to
+$(T', \mathcal{O}_{T'})$ is a pair $(\varphi, \theta)$, where
+$\varphi : T \to T'$ is a morphism of topoi and
+$\theta : \mathcal{O}_{T'} \to \varphi_{\ast} (\mathcal{O}_T)$ is a
+morphism of rings.
+
+\subsubsection{}\etiquette[1.1.2]{Vbis.subsubsec1.1.2}
+We will make constant use of the language of fibered categories as
+presented in [\SGA 1 VI]; the reader may also consult \cite{sga4.exp.Vbis.bib.4}. Let
+us merely fix some notation: if $E \to B$ is a fibered (\resp
+cofibered) functor, then, for a morphism $m : i \to j$ in $B$, we
+denote by $m^{\ast} : E_{j} \to E_i$ (\resp
+$m_{\ast} : E_i \to E_j$) the associated ``inverse image'' (\resp
+\pageoriginale ``direct image'') functor; each of these functors is
+defined up to a unique functorial isomorphism. If
+$\varphi : E \to E'$ is a $B$-functor, then, for every object $i$ of
+$B$, we denote by $\varphi_i : E_i \to E'_i$ the restriction of
+$\varphi$ to $E_i$.
+
+\subsubsection{}\etiquette[1.1.3]{Vbis.subsubsec1.1.3}
+
+Finally, we denote by $\Delta$ the following category: the objects
+of $\Delta$ are the ordered sets $[n] = \{ 0, 1, \ldots, n \}$, and
+the morphisms of $\Delta$ are all weakly increasing maps.
+$\Delta^{+}$ (\resp $\Delta^{-}$) denotes the category whose objects
+are those of $\Delta$ and whose arrows are the monomorphisms (\resp
+the epimorphisms) of $\Delta$. We will freely use, as needed, the
+classical notation introduced in connection with $\Delta$ [\cf
+\cite{sga4.exp.Vbis.bib.3} II 2].
+
+\subsection{D-topoi}\etiquette[1.2]{Vbis.subsec1.2}
+
+\begin{enonce*}{Definition 1.2.1}\etiquette[1.2.1]{Vbis.def1.2.1}
+Let $D$ be a category, and let $E \to D$ be a fibered and cofibered
+functor. We say that $E$ is bifibered in topoi over $D$, or that $E$
+is a $D$-topos, if the following conditions hold:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every object $i$ of $D$, the fiber category $E_i$ is a
+  topos.
+
+\item For every morphism $m : i \to j$ in $D$, there exists a
+  morphism of topoi $f : E_j \to E_i$ such that
+  $f_{\ast} = m^{\ast}$ and $f^{\ast} = m_{\ast}$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark}
+In view of (a), condition (b) can equivalently be expressed by saying
+that the functor $m_{\ast}$ is left exact\nde{Care must be taken here:
+in a fibered category, $m_\star$ is left adjoint to $m^\star$ and is
+therefore tautologically right exact; cf. [\SGA 1 VI.10]. This
+explains the formulas $f_{\ast} = m^{\ast}$ and
+$f^{\ast}=m_{\ast}$.}.
+\end{enonce*}
+
+When $D = \Delta$ (\resp $\Delta \times \Delta$), we speak of a
+\emph{simplicial topos} (\resp a \emph{double simplicial topos}) to
+mean a $\Delta$-topos (\resp a $\Delta \times \Delta$-topos).
+
+In practice, we will encounter $D$-topoi by means of the following
+considerations.
+
+\begin{enonce*}{Definition 1.2.2}\etiquette[1.2.2]{Vbis.def1.2.2}
+Let\pageoriginale $\mathcal{E}$ be a fibered and cofibered category
+over $D$. We say that $\mathcal{E}$ is \emph{bifibered in duals of
+topoi over $D$} if $\mathcal{E}^{\circ}$ is a $D^{\circ}$-topos.
+\end{enonce*}
+
+\hypertarget{sga4.exp.Vbis.remark.1.2.3}{}\begin{enonce*}[remark]{Remark 1.2.3}
+Explicitly, $\mathcal{E}$ is bifibered in duals of topoi over $D$ if
+and only if the following conditions hold:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every object $i$ of $D$, the opposite category
+  \sisi{}{${\mathcal{E}_i}^\circ$} of the fiber category
+  $\mathcal{E}_i$ is a topos.
+
+\item For every morphism $m : i \to j$ in $D$, the functor
+  $m^{\ast}$ is left exact\nde{Cf. the preceding note. In other
+  words, the family of functors
+  $((m_{\ast})^\circ,(m^{\ast})^\circ)$ defines a compatible system
+  of morphisms of topoi
+  $\mathcal{E}_i^\circ\rightarrow \mathcal{E}_j^\circ$.}.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{2}
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[1.2.4]{Vbis.subsubsec1.2.4}
+The reader will find examples of categories bifibered in duals of
+topoi in \hyperref[Vbis.sec4]{paragraph 4}.
+
+\subsubsection{}\etiquette[1.2.5]{Vbis.subsubsec1.2.5}
+Let $\mathcal{E} \to B$ be a category bifibered in duals of topoi
+over $B$, and let $X : D^{\circ} \to B$ be a functor. We leave it to
+the reader to verify that
+$(\fprod{D^{\circ}}{\mathcal{E}}{B})^{\circ}$ is a $D$-topos, which
+we denote by $\bar{X}$.
+
+\subsubsection{}\etiquette[1.2.6]{Vbis.subsubsec1.2.6}
+We will often say that a functor $X : D^{\circ} \to B$ is a
+$D$-\emph{object of} $B$, and we denote by $X_i$ the image under
+this functor of an object $i$ of $D$; the $D$-objects of $B$ form a
+category denoted by $D^{\circ}B$. If $S$ is an object of $B$, a
+$D$-object of $B/S$ will be called a \emph{$D$-object of $B$
+augmented toward} $S$. The datum of a $D$-object of $B$ augmented
+toward $S$ is trivially equivalent to that of a functorial morphism
+$X \to C^{D}_S$, where $X$ is a $D$-object of $B$ and $C^D_S$ is
+the constant $D$-object of $B$ with value $S$.
+
+When $D = \Delta$, we speak of a \emph{simplicial object} (\resp an
+\emph{augmented simplicial object}).
+
+We will also use \emph{double simplicial objects} (taking
+$D = \Delta \times \Delta$).
+
+\subsubsection{}\etiquette[1.2.7]{Vbis.subsubsec1.2.7}
+Now suppose\pageoriginale that the category $B$ has finite fiber
+products.
+
+Let $f : R \to S$ be an arrow in $B$: the bifunctor
+$$
+([n], X) \rightsquigarrow \Hom_{\Ens} ([n], \Hom_S (X, R))
+$$
+from $\Delta^{\circ} \times (B / S)^{\circ}$ to $\Ens$ defines a
+functor
+$$
+[n] \rightsquigarrow X_{[n]} = X_n
+$$
+by taking as $X_n$ a representative of the functor
+$$
+Z \rightsquigarrow \Hom_{\Ens} ([n], \Hom_S (Z, R))
+$$
+$(X_n \simeq \displaystyle\mathop{\overbrace{R \times_S R
+    \times \ldots \times_S R}}^{n+1 \text{ times }})$.
+
+We denote by $[R |_{f} S]$ or $[R | S]$ the semi-simplicial object
+augmented toward $S$ thus constructed.
+
+Finally, if $X$ and $X'$ are two semi-simplicial objects of $B$ (or
+of $B/S$), and if $$u : X \to X'$$ is a functorial morphism, then,
+for technical reasons, we introduce the object $$[X |_{u} X']$$
+computed in the category $\Delta^{\circ}B$. This object can be
+interpreted as a double simplicial object\nde{Explicitly, with the
+usual ordering of the indices, one has
+$$[[X |_u X']]_{(n,m)}=\displaystyle\mathop{\overbrace{X_m \times_{X'_m} X_m
+    \times \ldots \times_{X'_m} X_m}}^{n+1 \text{ times }}$$
+with the functorialities deduced from those on the factors.}
+of $B$, which we then denote by $[[X |_u X']]$: indeed, there is a
+canonical isomorphism of categories
+$$
+\Delta^{\circ} (\Delta^{\circ} B) \xrightarrow{\sim} (\Delta
+\times \Delta)^{\circ} B{\quoi}.
+$$
+
+We now return to the general notion of a $D$-topos.
+
+\subsubsection{}\etiquette[1.2.8]{Vbis.subsubsec1.2.8}
+Let $E$ be a $D$-topos: we denote by $\Ysheaf{\Gamma}(E)$ the
+category $\Hom_D (D, E)$. Let $f : D'\to D$ be a functor: the
+category $\fprod{D'}{E}{D}$ is a $D'$-topos and, by composition with
+$f$, we obtain a functor
+$$
+f^{\ast} : \Ysheaf{\Gamma} (E) \longrightarrow \Ysheaf{\Gamma} (\fprod{D'}{E}{D}){\quoi}.
+$$
+
+In\pageoriginale the case where $D'$ is reduced to an object $i$ of
+$D$ (with the identity of $i$ as its only morphism), and where $f$
+is the canonical inclusion denoted by $e_i$, we may take
+$\fprod{D'}{E}{D}$ to be the fiber category $E_i$, and $e^{\ast}_i$ is then
+identified with the ``\emph{evaluation at $i$}'' functor.
+
+\begin{enonce*}{Proposition 1.2.9}\etiquette[1.2.9]{Vbis.prop1.2.9}
+If $D'$ is a $\Uu$-small category, the functor $f^{\ast}$ has a
+right adjoint and a left adjoint (denoted by $f_{\ast}$ and $f_{!}$,
+respectively).
+\end{enonce*}
+
+This follows from a slight generalization of Kan's lemma [III 1.1],
+which we will use repeatedly.
+
+\begin{enonce*}{Lemma 1.2.10}\etiquette[1.2.10]{Vbis.lem1.2.10}
+Let $I$, $J$, and $A$ be three categories over the same category
+$B$. Suppose that $I$ is $\Uu$-small and that $A$ is fibered and
+cofibered over $B$. Let a $B$-functor $f : I \to J$ be given, and
+denote by $f^{\ast}$ the functor
+$$
+\Hom_B (J, A) \longrightarrow \Hom_B (I, A)
+$$
+defined by composition with $f$. If, in every fiber of $A$ over
+$B$, $\Uu$-inductive limits (\resp projective limits) exist, then
+$f^{\ast}$ has a left adjoint (\resp a right adjoint).
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+We give only the proof of the existence of the left adjoint, the
+\resp part of the lemma following by duality. We use the following
+fact, whose verification is left to the reader.
+\end{enonce*}
+
+\begin{enonce*}{Lemma 1.2.10.1}\etiquette[1.2.10.1]{Vbis.lem1.2.10.1}
+Let $A$ be a bifibered category over a category $B$, let $b$ be an
+object of $B$, and let $(F_{\lambda})_{\lambda \in \Lambda}$ be a
+functor from a category $\Lambda$ to the fiber $A_b$. For every $G$
+in $A_{b'}$, and every $u : b'\to b$ (\resp $u : b \to b'$) in $B$,
+there is a bijection
+$$
+\Hom_u(G, \varprojlim F_{\lambda}) \xrightarrow{\sim}
+\varprojlim \Hom_u (G, F_{\lambda})
+$$
+(\resp $\Hom_u (\varinjlim F_{\lambda}, G)
+\xrightarrow{\sim}\varprojlim \Hom_u (F_{\lambda}, G)$)
+whenever the first member is defined.
+\end{enonce*}
+
+\sisi{$+$}{} With this understood\pageoriginale, let
+$I \amalg_f J$ be the category over $B$ defined by
+$$
+\ob (I \textstyle{\amalg}_f J) = \ob (I) \amalg \ob (J)
+$$
+\begin{equation*}
+\Hom(x, y)=
+\begin{cases}
+\Hom_I(x, y) & \text{ if } x, y \in \ob (I)\\
+\Hom_J(x, y) & \text{ if } x, y \in \ob (J)\\
+\Hom_J(f(x), y) & \text{ if } x \in \ob(I) \text{ and } y \in \ob(J)\\
+∅ & \text{ if } x \in \ob(J) \text{ and } y \in
+\ob(I){\quoi}.\\
+\end{cases}
+\end{equation*}
+
+\sisi{$+$}{} The category $\Hom_B(I \amalg_f J, A)$ is equivalent
+to the category of triples consisting of a B-functor $F$ from $I$
+to $A$, a $B$-functor $G$ from $J$ to $A$, and a morphism
+$\varphi$ of $B$-functors from $F$ to
+$G \circ f = f(G)$.
+
+\sisi{$+$}{} For every object $j$ of $J$, denote by $I /j$ the
+category of objects of $I$ ``placed by $f$ over $j$'': the objects
+of $I /j$ are the pairs $(i, \alpha)$, where $i$ is an object of $I$
+and $\alpha : i \to j$ is an arrow in $I \amalg_f J/j$; the
+morphisms of $I/j$ are those of $I\amalg_{f}J/j$. If $p_I$ and $p_J$
+are the projections of $I$ and $J$ onto $B$, and if $(i, \alpha)$ is
+an object of $I/j$, denote by
+$\alpha_{\ast} : A_{p_{I}(i)} \to A_{p_{J}(j)}$ the functor
+$p_{J}(\alpha)_{\ast}$.
+
+\sisi{$+$}{} To give a $B$-functor from $I \amalg_f J$ to $A$ is
+equivalently to give $F \in \Hom_B (I, A)$,
+$G \in \Hom_B (J, A)$, and a morphism, functorial in $j$,
+$$
+\psi_j : \varinjlim_{(i, \alpha)\in I/j} \alpha_{\ast}(F(i))
+\longrightarrow G(j){\quoi}.
+$$
+(The functoriality in $j$ of the left-hand member follows from
+\hyperref[Vbis.lem1.2.10.1]{1.2.10.1}.) The left adjoint of
+$f^{\ast}$ is therefore given by the formula
+$$
+f_{!}(F) (j) = \varinjlim_{(i, \alpha)\in I/j}
+\alpha_{\ast}(F(i)){\quoi}.
+$$
+
+\begin{enonce*}{Corollary 1.2.11}\etiquette[1.2.11]{Vbis.cor1.2.11}
+Let\pageoriginale $E$ be a $D$-topos and let $i$ be an object of
+$D$; the functor $e^{\ast}_i$ has a left adjoint (\resp a right
+adjoint), given by
+$$
+e_{i!}(a)(j) = \coprod_{\alpha \in \Hom(i, j)} \alpha_{\ast}(a)
+\left( \emph{\resp} e_{i\ast} (a) (j) = \prod_{\alpha \in \Hom(j,
+  i)} \alpha^{\ast}(a)\right)
+$$
+where a is an object of $E$ over $i$.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.2.12}\etiquette[1.2.12]{Vbis.prop1.2.12}
+Let $D$ be a $\Uu$-small category and let $E$ be a $D$-topos. Then
+the category $\Ysheaf{\Gamma}(E)$ is a $\Uu$-topos.
+\end{enonce*}
+
+\sisi{$+$}{} One verifies ``fiber by fiber,'' using
+\hyperref[Vbis.lem1.2.10.1]{1.2.10.1}, that the category
+$\Ysheaf{\Gamma}(E)$ has the following properties:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Finite projective limits are representable.
+\item Coproducts indexed by an element of $\Uu$ are representable.
+  They are disjoint and universal.
+\item Equivalence relations are universally effective.
+\end{enumerate}
+
+\sisi{$+$}{} It remains to show that $\Ysheaf{\Gamma}(E)$ has a
+system of generators indexed by an element of $\Uu$. But if, for
+every object $i$ of $D$, $(G_{i\lambda})_{\lambda \in \Lambda_{i}}$
+is a system of generators of $E_i$ (where $\Lambda_i$ is a
+$\Uu$-small set), then the family
+$(e_{i!}(G_{i\lambda}))_{i, \lambda}$ is a system of generators of
+$\Ysheaf{\Gamma}(E)$.
+
+\setcounter{subsection}{2}
+\setcounter{subsubsection}{12}

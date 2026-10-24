@@ -1,0 +1,1009 @@
+
+\chapter{\texorpdfstring{$L$}{L}-functions modulo \texorpdfstring{$\ell^n$}{l n} and modulo \texorpdfstring{$p$}{p}}\label{III}
+
+In this exposé, I prove a formula analogous to the main theorem of the report on
+the trace formula (this volume; cited as ``Report'' below) for a coefficient
+ring $A$ that is torsion prime to $p$, or a field of characteristic $p$.
+Essential use will be made of \cite[XVII 5.5]{sga4}.
+
+
+
+
+
+
+
+
+
+
+\section{Symmetric tensors}\label{III:1}
+
+
+
+
+
+\subsection{}\label{III:1-1}
+
+Let $A$ be a commutative ring. For a list of properties of the functors
+$\Gamma^n:(\text{$A$-modules})\to (\text{$A$-modules})$, I refer to
+\cite[XVII 5.5.1 and 2]{sga4}. We recall only that for $M$ flat (in fact, only
+the case where $M$ is projective of finite type concerns us), one has
+\[
+  \Gamma^n M = \left(M^{\otimes n}\right)^{S_n} \qquad \text{(symmetric tensors of degree $n$).}
+\]
+
+
+
+
+
+
+\subsection{}\label{III:1-2}
+
+Let $X$ be an $S$-scheme, let $X^n/S$ be the $n$-th fiber power of $X$, and
+let $\pi$ be the projection from $X^n/S$ onto
+$(X^n/S)/S_n=\operatorname{Sym}_S^n(X)$ (assumed to exist). If $\sG$ is a
+sheaf of $A$-modules on $X$, the external tensor product of $n$ copies of
+$\sG$, namely $\sG^{\boxtimes n}$, is an $S_n$-equivariant sheaf on $X^n/S$.
+We shall have to use the \emph{external} functor $\Gamma^n$ of
+\cite[XVII 5.5.7 to 9]{sga4}. We recall only that for $\sG$ a sheaf of flat
+$A$-modules (in fact, only the constructible flat case concerns us), one has
+\[
+  \Gamma_\text{ext}^n(\sG) = \left(\pi_*\sG^{\boxtimes n}\right)^{S_n} \text{.}
+\]
+
+
+
+
+
+
+\begin{lemma_}\label{III:1-3}
+For $S=\spec(k)$, with $k$ algebraically closed, $X$ a finite disjoint union of
+copies of $S$, and $G$ a flat sheaf of $A$-modules on $X$, one has
+\[
+  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}(\sG)\right) = \Gamma^n \Gamma(X,\sG)
+\]
+\end{lemma_}
+
+Indeed,
+\begin{align*}
+  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}^n(\sG)\right)
+    &= \Gamma\left(\operatorname{Sym}_S^n(X),\pi_*\sG^{\boxtimes n}\right)^{S_n} \\
+    &= \Gamma\left(X^n/S,\sG^{\boxtimes n}\right)^{S_n}
+    = \left(\Gamma(X,\sG)^{\otimes n}\right)^{S_n}
+    = \Gamma^n \Gamma(X,\sG) \text{.}
+\end{align*}
+
+
+
+
+
+
+\subsection{}\label{III:1-4}
+
+We shall have to use the derived functors of the nonadditive functors
+$\Gamma^n$ and $\Gamma_\text{ext}^n$.
+
+The theory of such derived functors is due to Dold and Puppe
+\cite{do61}. For more complete reminders than those given below, I refer to
+\cite[XVII 5.5.3]{sga4}.
+
+Let $\cA$ be an abelian category (or even an additive category in which every
+idempotent endomorphism is the projection onto a direct factor). Denote by $N$
+the normalization functor: $N:($cosimplicial complexes of objects of
+$\cA)\to($differential complexes of objects of $\cA$, with $K^i$ for
+$i<0)$. It is an equivalence of categories. Like its inverse, it takes
+homotopic morphisms to homotopic morphisms. If $\Gamma$ is a functor
+$\cA\to\cB$, and if $K$ is a complex of objects of $\cA$, in nonnegative
+degrees ($K^i=0$ for $i<0$), we set $T K=N T N^{-1} K$.
+
+
+
+
+
+\subsection{Example}\label{III:1-5}
+
+If $K$ is concentrated in $M$ in degree $0$, $T K$ is concentrated in $T M$
+in degree $0$.
+
+
+
+
+
+
+\subsection{}\label{III:1-6}
+
+If $K$ is a bounded complex, in nonnegative degrees, of projective
+$A$-modules of finite type, the complex of $A$-modules $\Gamma^n K$ has the
+same properties.
+
+Denote by $\eD_\text{parf}^{\geqslant 0}(A)$ the subcategory of
+$\eD_\text{parf}(A)$ (Report, \ref{II:4-3}) consisting of complexes of
+tor-dimension $\leqslant 0$. One sees that $\Gamma^n$ induces a functor
+\[
+  \eL\Gamma^n : \eD_\text{parf}^{\geqslant 0}(A) \to \eD_\text{parf}^{\geqslant 0}(A) \text{.}
+\]
+
+For the analogous, but more complicated, definition of
+$\eL\Gamma_\text{ext}^n$, I refer to \cite[XVII 5.5.14]{sga4}.
+
+
+
+
+
+
+\subsection{}\label{III:1-7}
+
+Let $K$ be a bounded complex of projective $A$-modules of finite type, and let
+$u$ be an endomorphism of $K$. We denote by $\det(1-u t,K)$ the formal series
+with constant term $1$
+\[
+  \det(1-u t,K) = \prod_i \det(1-u t,K^i)^{(-1)^i} \text{.}
+\]
+
+The verification of the following properties is left to the reader.
+
+
+\subsubsection{}\label{III:1-7-1}
+
+Let $F$ be a finite filtration stable under $u$, such that the
+$\gr_F^p(K^q)$ are projective of finite type. Then
+\[
+  \det(1-u t,K) = \prod_p \det(1-u t,\gr_F^p(K)) \text{.}
+\]
+
+
+\subsubsection{}\label{III:1-7-2}
+
+If $K$ is shifted $q$ places to the left, one has
+\[
+  \det(1-u t,K[q]) = \det(1-u t,K)^{(-1)^q} \text{.}
+\]
+
+
+
+
+
+
+\begin{proposition_}\label{III:1-8}
+Let $u$ be an endomorphism of a bounded complex, in nonnegative degrees, of
+projective $A$-modules of finite type. One has \
+\begin{equation*}\tag{1.8.1}\label{III:eq:1-8-1}
+  \det(1-u t,K)^{-1} = \sum_n \tr(u,\Gamma^n K) t^n \text{.}
+\end{equation*}
+\end{proposition_}
+
+Denote the right-hand side of \eqref{III:eq:1-8-1} by $D(u,K)$.
+
+
+
+
+
+
+\begin{lemma_}\label{III:1-9}
+Let $u$ be an endomorphism of a short exact sequence of bounded complexes in
+degrees $\geqslant 0$ of projective $A$-modules of finite type
+\[
+  0 \to K' \to K \to K'' \to 0 \text{.}
+\]
+One has $D(u,K)=D(u,K')\cdot D(u,K'')$.
+\end{lemma_}
+
+If $0\to M'\to M\to M''\to 0$ is a split short exact sequence of
+$A$-modules, $\Gamma^n M$ has a natural filtration whose successive quotients
+are the $\Gamma^i M'\otimes \Gamma^j M''$ ($i+j=n$). Consequently,
+$\Gamma^n K$ has a natural filtration whose successive quotients are the
+complexes $N(N^{-1} \Gamma^i K'\otimes N^{-1}\Gamma^j K'')$ ($i+j=n$),
+canonically homotopic to the simple complexes
+$s(\Gamma^i K'\otimes \Gamma^i K'')$ obtained from the double complexes
+$\Gamma^i K'\otimes \Gamma^i K''$, and
+\[
+  \tr(u,\Gamma^n K) = \sum_{i+j=n} \tr(u,\Gamma^i K')\cdot \tr(u,\Gamma^j K'') \text{,}
+\]
+whence the lemma. From \ref{III:1-9}, one obtains by induction.
+
+
+
+
+
+
+\begin{lemma_}\label{III:1-10}
+Let $F$ be a finite filtration of $K$ stable under $u$, such that the
+$\gr_F^p(K^q)$ are projective of finite type. Then
+\[
+  D(u,K) = \prod_p D\left(u,\gr_F^p(K)\right) \text{.}
+\]
+\end{lemma_}
+
+
+
+
+
+
+\begin{lemma_}\label{III:1-11}
+Let $u$ be an endomorphism of a projective $A$-module of finite type $M$, and
+let $M[-q]$ be the complex concentrated in $M$ in degree $q$. One has
+\[
+  D\left(u,M[-q]\right) = \left(\sum \tr(u,\Gamma^n M) t^n\right)^{(-1)^q} \qquad \text{($q\geqslant 0$.)}
+\]
+\end{lemma_}
+
+
+
+
+
+
+By \ref{III:1-5}, this is true for $q=0$. Proceeding by induction, it remains
+to show that
+\[
+  D\left(u,M[-q]\right) \cdot D\left(u,M[-(q+1)]\right) = 1 \text{.}
+\]
+This formula follows from \ref{III:1-9}, applied to the complex $K$
+concentrated in $M$ in degrees $q$ and $q+1$ (with
+$d=\operatorname{id}$), and to its stupid filtration:
+\[
+  (\cdots 0 \to M \cdots) \to (\cdots M \to M) \to (\cdots M \to 0 \to 0 \cdots) \text{.}
+\]
+Indeed, $K$ is homotopic to $0$. In the derived category, one therefore has
+$\Gamma^n(K)=\Gamma^n(0)$: $0$ for $n>0$ and $A$ for $n=0$, and $D(u,K)=1$.
+
+
+
+
+
+\subsection{}\label{III:1-12}
+
+Let us prove \ref{III:1-8}. By \ref{III:1-10}, applied to the ``stupid''
+filtration of $K$ by the subcomplexes
+\[
+  0 \to \cdots \to 0 \to K^q \to K^{q+1} \to \cdots \text{,}
+\]
+one has
+\[
+  D(u,K) = \prod_q D\left(u,K^q[-q]\right) =_{\text{(\ref{III:1-10})}} \prod_q \left(\sum \tr\left(u,\Gamma^n(K^q)\right) t^n \right)^{(-1)^q} \text{.}
+\]
+It remains to prove that for $u$ an endomorphism of a projective module of
+finite type $M$, one has
+\begin{equation*}\tag{1.12.1}\label{III:eq:1-12-1}
+  \det\left(1-u t,M\right)^{-1} = \sum \tr(u,\Gamma^n M) t^n \text{.}
+\end{equation*}
+If $u=0$, both sides are equal to $1$. By adjoining to $M$ a module $N$ on
+which $u=0$, and applying \ref{III:1-9}, we reduce to the assumption that $M$
+is free. Choose a basis for it. It is then a matter of proving algebraic
+identities among the coordinates of $u$. The principle of extension of
+algebraic identities reduces us to assuming that $A$ is an algebraically
+closed field. The module $M$ then admits a filtration stable under $u$ with
+successive quotients of rank $1$, and \ref{III:1-10} reduces us to the case
+where $M$ has rank $1$. Formula \eqref{III:eq:1-12-1} then reduces to the
+identity
+\[
+  \frac{1}{1-a t} = \sum a^n t^n \text{.}
+\]
+
+
+
+
+
+\begin{corollary_}\label{III:1-13}
+Let $u$ and $u'$ be endomorphisms of bounded complexes $K$ and $K'$ of
+projective $A$-modules of finite type. If, in the derived category, $K$,
+equipped with $u$, is isomorphic to $K'$, equipped with $u'$, then
+\[
+  \det(1-u t,K) = \det(1-u' t,K') \text{.}
+\]
+\end{corollary_}
+
+Applying \ref{III:1-7-2}, we reduce to assuming that $K$ and $K'$ are in
+nonnegative degrees. One then observes that the right-hand side of
+\ref{III:1-8} has the required invariance property.
+
+
+
+
+
+
+\subsection{}\label{III:1-14}
+
+This corollary makes it possible to define $\det(1-u t,K)$ for $u$ an
+endomorphism of $K\in \ob\eD_\text{parf}(A)$. This construction is ad hoc; in
+fact, for $v$ an automorphism of $L\in\ob\eD_\text{parf}(\Lambda)$, one can
+define $\det(v)\in\Lambda^\times$, and $\det(1-u t,K)$ is obtained by taking
+$v=1-u t$, $\Lambda=A\llbracket t\rrbracket$, and
+$L=K\otimes_A\Lambda$.
+
+
+
+
+
+
+
+
+
+\section{The theorem}\label{III:2}
+
+
+
+
+
+
+\subsection{}\label{III:2-1}
+
+We retain the notation of (Report, \S\ref{II:1}). For $A$ a commutative
+Noetherian torsion ring, $X_0$ a separated scheme of finite type over
+$\dF_q$, and $\sK_0\in\ob\eD_\text{ctf}(X_0;A)$, set
+\[
+  L(X_0,\sK_0) = \prod_{x\in |X_0|} \det\left(1-F_x^* t^{\deg(x)}, \sK\right)^{-1}
+\]
+(\ref{III:1-7}, \ref{III:1-13}, and Report, \ref{II:1-5}, \ref{II:1-6}).
+
+
+
+
+
+\begin{theorem_}\label{III:2-2}
+In each of the following two cases
+\begin{enumerate}[\indent a)]
+  \item $A$ is torsion prime to $p$;
+  \item $A$ is reduced and of characteristic $p$
+\end{enumerate}
+one has
+\begin{equation*}\tag{2.2.1}\label{III:eq:2-2-1}
+  L(X_0,\sK_0) = \det\left(1-F^* t^f, \eR\Gamma_c(X,\sK)\right)^{-1} \text{.}
+\end{equation*}
+\end{theorem_}
+
+
+
+
+
+
+\subsection{Remark}\label{III:2-3}
+
+In case a), the method of Report, \S\ref{II:3} makes it possible to deduce
+from the trace formula (Report \ref{II:4-10}) that the logarithmic derivatives
+of the two sides of \eqref{III:eq:2-2-1} are equal. Since the ring $A$ is a
+torsion ring, this does not suffice to prove \ref{III:2-2}.
+
+
+
+
+
+
+\subsection{Remark}\label{III:2-4}
+
+If $A$ is a field, one has
+\[
+  L(X_0,\sK_0) = \prod_i L\left(X_0,\underline\h^i(\sK_0)\right)^{(-1)^i}
+\]
+and the spectral sequence
+$E_2^{p q} = \h_c^p(X,\underline\h^q(\sK))\Rightarrow \h_c^{p+q}(X,\sK)$ shows
+that
+\begin{align*}
+  \det\left(1-F^* t, \eR\Gamma_c(X,\sK)\right)
+    &= \prod_n \det\left(1-F^* t^f,\h_c^n(X,\sK)\right)^{(-1)^n} \\
+    &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\sK))\right)^{(-1)^{p+1}} \text{.}
+\end{align*}
+This reduces \ref{III:2-2} (for $A$ a field) to the following special case.
+
+
+\subsubsection{}\label{III:2-4-1}
+
+If $\sG_0$ is a constructible sheaf of $A$-vector spaces, one has
+\[
+  L(X_0,\sG_0) = \prod_n \det\left(1-F^* t^f,\h_c^n(X,\sG)\right)^{(-1)^{n+1}} \text{.}
+\]
+
+
+
+
+
+
+\subsection{Remark}\label{III:2-5}
+
+It is easy to reduce case b) to the case where $A$ is a field (or even a
+finite field) of characteristic $p$; cf. \ref{III:4-2}.
+
+
+
+
+
+
+\subsection{Remark}\label{III:2-6}
+
+The special case of b) where $A=\dZ/p$, and where $X$ is reduced to the
+constant sheaf $\dZ/p$ in degree $0$,
+\[
+  Z(X_0,t) = \prod_{x\in |X_0|} \left(1-t^{\deg(x)}\right)^{-1}
+      \equiv \prod_n \det\left(1-F^* t^f,\h_c^n(X,\dZ/p)\right)^{(-1)^{n+1}} \pmod p
+\]
+was proved by N. Katz \cite[XXII 3.1]{sga7}. His method, entirely different
+from the one followed here, starts from Dwork's $p$-adic theory of
+$Z(X_0,t)$.
+
+
+
+
+
+
+\subsection{Remark}\label{III:2-7}
+
+
+Contrary to what I had rashly asserted to friends, in b) one cannot omit the
+hypothesis ``$A$ reduced.'' For a counterexample, cf. \ref{III:4-5}.
+
+
+
+
+
+
+\subsection{Outline of the proof of \ref{III:2-2}}\label{III:2-8}
+
+A shift in degrees \ref{III:1-7-2} reduces us to assuming that $\sK_0$ is a
+bounded complex, in nonnegative degrees, of constructible flat sheaves of
+$A$-modules. One then has
+$\eR\Gamma_c(X,\sK)\in \ob\eD_\text{parf}^{\geqslant 0}(A)$ (Report, proof of
+\ref{II:4-9}, b). We shall use \ref{III:1-8} to expand both sides of
+\eqref{III:eq:2-2-1} as power series in $T=t^f$. The equality of the
+coefficients of $T^n$ will follow from \cite[XVII 5.5.21]{sga4} and a trace
+formula on $\operatorname{Sym}^n(X)$: in case a), the formula (Report,
+\ref{II:4-10}), and in case b), a formula to be proved in the next chapter.
+It is first necessary to reduce to the case where the symmetric powers of
+$X_0$ exist (for example, the case where $X$ is affine), using the
+multiplicativity in $X_0$ of both sides of \eqref{III:eq:2-2-1}: for $U_0$ an
+open subscheme of $X_0$, with closed complement $Y_0$, one has
+$L(X_0,\sK_0)=L(U_0,\sK_0)\cdot L(Y_0,\sK_0)$, and the analogous formula for
+the right-hand side follows from \ref{III:1-7-1} by the method of (Report
+\S\ref{II:6}A).
+
+
+
+
+
+
+\subsection{The case where $X_0$ is finite}\label{III:2-9}
+
+The multiplicativity in $X_0$ of both sides of \eqref{III:eq:2-2-1} reduces
+this case to the case where $X_0=\spec(\dF_{q^k})$. Returning to the
+definitions, one sees that \eqref{III:eq:2-2-1} is then equivalent to Report
+\ref{II:3-4}.
+
+
+
+
+
+
+\subsection{The left-hand side}\label{III:2-10}
+
+By \ref{III:1-8}, one has
+\[
+  L(X_0,\sK_0) = \prod_{x\in |X_0|} \sum_n \tr\left(F_x^*,\Gamma^n\sK\right) t^{m\deg(x)} \text{.}
+\]
+The coefficient of $T^n$ is therefore the sum, over those formal linear
+combinations $\sum_{x\in |X_0|} n_x\cdot x$ ($n_x\geqslant 0$, with almost
+all the $n_x$ zero) of elements of $|X_0|$ such that
+$\sum n_x [k(x):\dF_q] = n$, of the products
+\begin{equation*}\tag{2.10.1}\label{III:eq:2-10-1}
+  \prod_x \tr\left(F_x^*,\Gamma^{n_x} \sK\right) \text{.}
+\end{equation*}
+
+For $x\in |X_0|$, denote by $(x)$ the $0$-cycle consisting of the
+$[k(x):\dF_q]$ points of $X$ above $x$ (an orbit of $F$). The map
+$\sum n_x\mapsto \sum n_x\cdot (x)$ identifies the formal linear combinations
+above, with $\sum n_x [k(x):\dF_q]=n$, with the effective $0$-cycles of degree
+$n$ on $X$ fixed under $F$, or equivalently with the fixed points of $F$ in
+$\operatorname{Sym}^n(X)$. The coefficient of $T^n$ in $L(X_0,\sK_0)$ thus
+appears as a sum of products \eqref{III:eq:2-10-1}, indexed by
+$\operatorname{Sym}^n(X)^F$. More precisely,
+
+
+
+
+
+\begin{lemma_}\label{III:2-11}
+ $L(X_0,\sK_0) = \sum_n \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\eL\Gamma_\textnormal{ext}^n \sK\right) T^n$.
+\end{lemma_}
+
+For $Y_0$ an increasingly large finite subscheme of $X_0$, one has
+\[
+  L(X_0,\sK_0) = \lim L(Y_0,\sK_0) \text{,}
+\]
+i.e., for every $m$, there is a finite subscheme $Z_0\subset X_0$ such that
+if $Y_0\supset Z_0$, then $L(X_0,\sK_0)$ and $L(Y_0,\sK_0|Y_0)$ are congruent
+$\mod T^m$.
+It suffices for $Z_0$ to contain the closed points of degree $\leqslant m$.
+Since the same fact holds for the right-hand side, it suffices to prove
+\ref{III:2-11} for $X_0$ finite. One then has
+\begin{align*}
+  L(X_0,\sK_0)
+    &=_\text{\ref{III:2-9}} \det\left(1-F^* T,\Gamma(X,\sK)\right)^{-1} \\
+    &=_\text{\ref{III:1-8}} \sum_n \tr\left(F^*,\Gamma^n \Gamma(X,\sK)\right) T^n \\
+    &=_\text{\ref{III:1-3}} \sum_n \tr\left(F^*,\Gamma(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n(\sK)\right) T^n \\
+    &= \sum_n \sum_{x\in \operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n(\sK)\right) T^n
+\end{align*}
+(by the trace formula in the trivial case of a finite set).
+
+
+
+
+
+
+\subsection{The right-hand side}\label{III:2-12}
+
+By \ref{III:1-8} and \cite[XVII 5.5.12]{sga4}, one has
+\begin{align*}
+  \det\left(1-F^* T,\eR\Gamma_c(X,\sK)\right)^{-1}
+    &= \sum_n \tr\left(F^*,\eL\Gamma^n\eR\Gamma_c(X,\sK)\right) T^n \\
+    &= \sum_n \tr\left(F^*,\eR\Gamma_c(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n\sK)\right) T^n \text{.}
+\end{align*}
+
+
+
+
+
+
+\subsection{}\label{III:2-13}
+
+The theorem is therefore equivalent to the trace formulas
+\[
+  \tr\left(F^*,\eR\Gamma_c(\operatorname{Sym}^n(X,\Gamma_\text{ext}^n \sK)\right) = \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n\sK\right) \text{.}
+\]
+In case a), they follow from Report \ref{II:4-10}. The analogous formula in
+case b) will be proved in \S\ref{III:4}.
+
+
+
+
+
+
+
+
+
+
+\section{Artin--Schreier theory}\label{III:3}
+
+
+
+
+
+
+\subsection{}\label{III:3-1}
+
+In what follows, a coherent sheaf on a scheme $S$ will always be regarded as
+a sheaf on $S_\text{ét}$. Let $S$ be a scheme of characteristic $p>0$. If
+$G$ is a locally constant sheaf of finite-rank $\dZ/p$-vector spaces,
+$\sG=G\otimes_{\dZ/p}\sO$ is a locally free coherent sheaf on $S$. We shall
+denote by $\Phi$ both the endomorphism $f\mapsto f^p$ of $\sO$ and its tensor
+product with the identity of $G$: $\phi:\sG\to\sG$. Artin--Schreier theory
+\cite[IX 3.5]{sga4} asserts that the sequence
+\[\xymatrix{
+  0 \ar[r]
+    & \dZ/p \ar[r]
+    & \sO \ar[r]^-{\Phi-1}
+    & \sO \ar[r]
+    & 0
+}\]
+is exact. Tensoring with $G$ gives an exact sequence
+\[\xymatrix{
+  0 \ar[r]
+    & G \ar[r]
+    & \sG \ar[r]^-{\Phi-1}
+    & \sG \ar[r]
+    & 0
+}\]
+
+
+
+
+
+
+\subsection{}\label{III:3-2}
+
+Suppose that $S$ is an open subscheme of a Noetherian scheme $\bar S$. Let
+$j:S\hookrightarrow \bar S$ be the inclusion morphism, and let $I$ be a
+sheaf of ideals defining the closed complement $\bar S\setminus S$. We again
+denote by $\Phi$ the extension of $\Phi$ to $j_*\sG$ by functoriality.
+
+
+
+
+
+
+\begin{lemma_}\label{III:3-3}
+There exist coherent extensions $\bar\sG\subset j_*\sG$ of $\sG$ such that
+\begin{equation*}\tag{3.3.1}\label{III:eq:3-3-1}
+  \Phi(\bar\sG)\subset I\cdot \bar\sG\text{.}
+\end{equation*}
+If $\bar\sG$ is such an extension, the sequence
+\begin{equation*}\tag{3.3.2}\label{III:eq:3-3-2}
+\xymatrix{
+  0 \ar[r]
+    & j_! G \ar[r]
+    & \bar\sG \ar[r]^-{\Phi-1}
+    & \bar\sG \ar[r]
+    & 0
+}
+\end{equation*}
+is exact.
+\end{lemma_}
+\begin{enumerate}[a)]
+  \item \emph{Existence}: Let $\sG'\subset j_*\sG$ be a coherent extension
+    of $\sG$ to $\bar S$. For every $n$, one has
+    $\Phi(I^n \sG')\subset I^{p^n}\Phi(\sG')$. Let $n$ be large enough that
+    $I^{n(p-1)-1}\Phi(\sG')\subset \sG'$, and set $\bar\sG=I^n\sG'$.
+    One has $\Phi(\bar\sG)\subset I^{p n}\Phi(\sG')
+    =I\cdot I^n\cdot I^{n(p-1)-1}\Phi(\sG')\subset I\cdot I^n\sG'
+    = I\bar\sG$.
+  \item \emph{Kernel of $\Phi-1$}: On $S$, the assertion follows from
+    \ref{III:3-1}; it remains to verify that a section $x$ of
+    $\ker(\Phi-1)$, on $U$ étale over $\bar S$, vanishes in a neighborhood of
+    the inverse image of $\bar S\setminus S$. Indeed, since $x=\Phi(x)$, one
+    has by \eqref{III:eq:3-3-1} that $x\in I\bar\sG$; moreover,
+    $x\in I^n\bar\sG\Rightarrow x=\Phi(x)\in\Phi(I^n\bar\sG)\subset I^{n p}\bar\sG$, and $x$ lies in every $I^n\bar\sG$, hence is zero near
+    $\bar S\setminus S$.
+  \item \emph{Surjectivity of $\Phi-1$}: We may suppose $\bar S$ affine, and
+    write $\sG$ as a quotient of $\sO^n$; $\Phi$ then lifts to a $p$-linear
+    map $\widetilde\Phi:\sO^n\to\sO^n$, and it suffices to verify the
+    surjectivity of $\widetilde\Phi-1$:
+    \[\xymatrix{
+      \sO^n \ar[r]^-{\widetilde \Phi-1} \ar[d]
+        & \sO^n \ar[d] \\
+      \sG \ar[r]^-{\Phi-1}
+        & \sG
+    }\]
+    The sheaf $\sO^n$ is the sheaf of local sections of the group scheme
+    $\dG_a^n$, and $\widetilde\Phi-1$ is induced by a homomorphism from
+    $\dG_a^n$ to $\dG_a^n$. This homomorphism is étale. To verify that it is
+    surjective, it suffices to check this after every base change
+    $\spec(k)\to\bar S$ ($k$ algebraically closed), and over an algebraically
+    closed $k$, every étale homomorphism between connected groups of the same
+    dimension is surjective. Finally, an étale surjective morphism of
+    $\bar S$-schemes induces an epimorphism between the corresponding sheaves
+    on $\et{\bar S}$.
+\end{enumerate}
+
+
+
+
+
+
+\subsection{Frobenius and Frobenius}\label{III:3-4}
+
+The absolute Frobenius morphism $F_\text{abs}:S\to S$ is the identity on the
+underlying topological space of $S$, and $f\mapsto f^p$ on the structure
+sheaf. For $U/S$ étale, one has a canonical isomorphism
+$F_\text{abs}^* U=U$: the diagram
+\[\xymatrix{
+  U \ar[r]^-{F_\text{abs}} \ar[d]
+    & S \ar[d] \\
+  S \ar[r]^-{F_\text{abs}}
+    & S
+}\]
+is Cartesian. The endomorphism of the ringed site
+$(\et{\bar S},\sO)\to(\et{\bar S},\sO)$ defined by $F_\text{abs}$ can
+therefore be described as follows:
+\begin{center}
+  $F_\text{abs}^*$ is the identity on $\et S$; the homomorphism
+  $F_\text{abs}^*\sO=\sO\to\sO$ is $\Phi$.
+\end{center}
+With this description, for every étale sheaf $\sG$ on $S$, the Frobenius
+correspondence $F_\text{abs}^*\sG\to\sG$ is the identity.
+
+Giving a $p$-linear morphism of quasi-coherent sheaves
+$u:\sM\to\sN$ on $S$ is equivalent to giving a linear morphism
+$u':F_\text{abs}^*\sM\to\sN$. In particular, with the notation of
+\ref{III:3-5}, the homomorphism $\Phi:\sG\to\sG$ corresponds to
+$\Phi':F_\text{abs}^*\sG\to\sG$.
+
+
+
+
+
+
+\begin{lemma_}\label{III:3-5}
+With the notation of \ref{III:3-4}, the diagram
+\[\xymatrix{
+  F_\textnormal{abs}^* G \ar[r] \ar[d]
+    & G \ar[d] \\
+  F_\textnormal{abs}^*\sG \ar[r]^-{\Phi'}
+    & \sG
+}\]
+is commutative.
+\end{lemma_}
+
+It suffices to verify this locally. We may therefore suppose $G$ constant, in
+which case the lemma is evident.
+
+The same theory applies to the powers of $F_\text{abs}$.
+
+
+
+
+
+
+\subsection{}\label{III:3-6}
+
+Suppose now that $\bar S$ is a scheme over $\dF_q$ ($q=p^f$), and in
+accordance with the conventions of Report \S\ref{II:1}, write
+$S_0,\bar S_0,G_0,\sG_0,\bar\sG_0$ in place of $S,\dots$. Lemma
+\ref{III:3-5}, for $F_\text{abs}^F:S_0\to S_0$, gives a commutative diagram
+\[\xymatrix{
+  F^* G_0 \ar[r] \ar[d]
+    & G_0 \ar[d] \\
+  F^*\sG_0 \ar[r]^-{(\Phi^f)'} \ar[r]
+    & \sG_0
+}\qquad\text{, and then}\qquad
+\xymatrix{
+  F^*(j_! G_0) \ar[r] \ar[d]
+    & j_!G_0 \ar[d] \\
+  F^*\bar\sG_0 \ar[r]^-{(\Phi^f)'}
+    & \sG_0
+}\text{,}
+\]
+and then, by extension of scalars from $\dF_q$ to $\dF$ and passage to
+cohomology,
+\[\xymatrix{
+  F^*(j_! G) \ar[r]^-{F_*} \ar[d]
+    & j_!G \ar[d] \\
+  F^*\bar\sG \ar[r]
+    & \bar\sG
+}\qquad\text{and}\qquad
+\xymatrix{
+  \h^\bullet(\bar S,j_! G) \ar[r]^-{F^*} \ar[d]
+    & \h^\bullet(\bar S,j_!G) \ar[d] \\
+  \h^\bullet(\bar S,\bar\sG) \ar[r]
+    & \h^\bullet(\bar S,\bar\sG)
+}\text{,}
+\]
+where the second row is obtained by extension of scalars from $\dF_q$ to
+$\dF$ of the $\dF_q$-linear endomorphism $\Phi^f$ of
+$\h^\bullet(\bar S_0,\bar G_0)$.
+
+Artin--Schreier theory provides a long exact sequence
+\[\xymatrix{
+  \cdots \ar[r]
+    & \h^i(\bar S,j_! G) \ar[r]
+    & \h^i(\bar S,\bar\sG) \ar[r]^-{\Phi-1}
+    & \h^i(\bar S,\bar\sG) \ar[r]
+    & \cdots
+}\]
+where $\Phi$ is the $p$-linear extension to
+$\h^\bullet(\bar S,\bar \sG)= \h^\bullet(\bar S_0,\bar\sG_0)\otimes_{\dF_q}\dF$
+of the $p$-linear endomorphism $\Phi$ of
+$\h^\bullet(\bar S_0,\bar\sG_0)$.
+
+
+
+
+
+
+\subsection{}\label{III:3-7}
+
+If $\bar S_0$ is proper over $\dF_q$, the $\h^i(\bar S,\bar\sG)$ are
+finite-dimensional and $\Phi-1$ is surjective (cf. \ref{III:3-6}b). Thus
+\[
+  \h_c^i(S,G) = \ker\left(\Phi-1 : \h^i(\bar S,\bar G) \to \h^i(\bar S,\bar\sG)\right) \text{,}
+\]
+and $F^*$ is induced by the $\dF$-linear extension to
+$\h^i(\bar S,\bar\sG) = \h^i(\bar S_0,\bar\sG_0)\otimes_{\dF_q}\dF$ of the
+$\dF_q$-linear endomorphism $\Phi^f$ of $\h^i(\bar S_0m\bar\sG_0)$.
+
+Applying Lemma \ref{III:3-8} below, one deduces the identity
+\begin{equation*}\tag{3.7.1}\label{III:eq:3-7-1}
+  \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(\Phi^f,\h^i(\bar S_0,\bar\sG_0)\right) \text{.}
+\end{equation*}
+
+
+
+
+
+
+\begin{lemma_}\label{III:3-8}
+Let $\Phi$ be a $p$-linear endomorphism of a vector space $V$ over
+$\dF_q$: $\phi(\lambda x) = \lambda^p\phi(x)$. Set $F=\Phi^f$ ($F$ is
+linear), and again denote by $\Phi$ and $F$ the respective $p$-linear
+extensions of $\Phi$ and $F$ to $V\otimes_{\dF_q}\dF$. Then $F$ stabilizes
+$\ker(\Phi-1)\subset V\otimes_{\dF_q}\dF$ and
+\[
+  \tr\left(F,\ker(\Phi-1)\right) = \tr(F,V) = \tr\left(F,V\otimes_{\dF_q}\dF\right) \text{.}
+\]
+\end{lemma_}
+
+On $V\otimes_{\dF_q}\dF$, one has $F\Phi = \Phi F$: the $p$-linear
+endomorphism $F\Phi-\Phi F$ vanishes on $V$, hence everywhere. Write
+$V=V'+V''$, with $F$ invertible on $V'$ and nilpotent on $V''$. The theory
+of $p$-linear endomorphisms ensures that
+\[
+  \ker(\Phi-1)\otimes_{\dF_p}\dF \iso V'\otimes_{\dF_q}\dF \text{.}
+\]
+Since $\tr(F,V'') = 0$, one therefore has
+\begin{align*}
+  \tr\left(F,\ker(\Phi-1)\right)
+    &= \tr\left(F,\ker(\Phi-1)\otimes_{\dF_q}\dF\right) = \tr\left(F,V'\otimes_{\dF_q}\dF\right) \\
+    &= \tr\left(F,V\otimes_{\dF_q}\dF\right) = \tr(F,V) \text{.}
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+\section{Trace formula modulo \texorpdfstring{$p$}{p}}\label{III:4}
+
+
+
+
+
+
+\begin{theorem_}\label{III:4-1}
+Let $X_0$ be a separated scheme of finite type over $\dF_q$, let $A$ be a
+commutative reduced Noetherian ring of characteristic $p$, and let
+$\sK_0\in\ob\eD_\textnormal{ctf}(X_0,A)$. One has
+\begin{equation*}\tag{4.1.1}\label{III:eq:4-1-1}
+  \sum_{x\in X^F} \tr\left(F_x^*,\sK_x\right) = \tr\left(F^*,\eR\Gamma_c(X,\sK)\right) \text{.}
+\end{equation*}
+\end{theorem_}
+
+
+
+
+
+
+\subsection{Reduction to the case where \texorpdfstring{$A$}{A} is a finite field}\label{III:4-2}
+
+A standard passage-to-the-limit argument reduces us to the case where $A$ is
+of finite type over $\dZ/p$. For every maximal ideal $\fm$ of $A$, the image
+of each side of \eqref{III:eq:4-1-1} in $A/\fm$ is given by the same formula,
+with $\sK_0$ replaced by
+$\sK_0\lotimes_A A/\fm\in\ob\eD_\text{ctf}(X_0,A/\fm)$ (for the right-hand
+side, cf. Report \ref{II:4-12}). Since the $A/\fm$ are finite, and the
+intersection of the maximal ideals of $A$ is reduced to $0$, one obtains the
+stated reduction.
+
+
+
+
+
+
+\subsection{Reduction to the case where \texorpdfstring{$A=\dZ/p$}{A=Z/p}}\label{III:4-3}
+
+Suppose that $A$ is a finite field, and denote by $T_A'(\sK_0)$ and
+$T_A''(\sK_0)$ the two sides of \eqref{III:eq:4-1-1}. If, by restriction of
+scalars, $\sK_0$ is regarded as a complex of sheaves of $\dZ/p$-modules, one
+has
+\[
+  T_{\dZ/p}'(\sK_0) = \tr_{A/(\dZ/p)} T_A'(\sK_0)
+\]
+and likewise for $T''$. If \eqref{III:eq:4-1-1} holds for $A=\dZ/p$, one
+therefore has
+\begin{equation*}\tag{4.3.1}\label{III:eq:4-3-1}
+  \tr_{A/(\dZ/p)} T_A'(\sK_0) = \tr_{A/(\dZ/p)} T_A''(\sK_0) \text{.}
+\end{equation*}
+I claim that, for every $\lambda\in A$, one even has
+\begin{equation*}\tag{4.3.2}\label{III:eq:4-3-2}
+  \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A'(\sK_0)\right) = \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A''(\sK_0)\right) \text{,}
+\end{equation*}
+and hence $T_A'(\sK_0) = T_A''(\sK_0)$. This is clear for $\lambda=0$. For
+$\lambda$ invertible, denote by $A(\lambda)$ the inverse image on $X$ of the
+free rank-one sheaf of $A$-modules on $\spec(\dF_q)$ for which
+$F^*=\lambda$. Formula \eqref{III:eq:4-3-2} is precisely
+\eqref{III:eq:4-3-1} for $A(\lambda)\otimes_A \sK_0$.
+
+
+
+
+
+
+\begin{theorem_}\label{III:4-1bis}
+Let $\bar S_0$ be a smooth projective curve, let
+$j:S_0\hookrightarrow \bar S_0$ be a dense open subscheme of $\bar S_0$,
+and let $G_0$ be a locally constant sheaf of finite-rank $\dZ/p$-vector
+spaces on $S_0$. One has
+\begin{equation*}\tag{4.4.1}\label{III:eq:4-4-1}
+  \sum_{x\in S^F} \tr\left(F_x^*,G_x\right) = \sum_i (-1)^i \tr\left(F^*,\h_c^i(S,G)\right) \text{.}
+\end{equation*}
+\end{theorem_}
+\begin{proof}
+Apply \ref{III:3-3} to $(S_0,\bar S_0,G_0)$. The coherent extension
+$\bar\sG_0$ of $\sG_0$ whose existence is guaranteed by \ref{III:3-3} is
+locally free because it is torsion-free (we have
+$\bar\sG_0\subset j_*\sG_0$) and $\bar S_0$ is regular of dimension one. The
+$q$-linear endomorphism $\Phi^f$ of $\bar\sG_0$ can be interpreted as a
+morphism
+\[
+  u : F^*\bar\sG_0 \to \bar\sG_0 \text{.}
+\]
+It factors through $I\bar G$, where $I$ defines the closed subset
+$\bar S\setminus S$. Let $v:j_!G_0 \to \bar\sG_0$ be the unique extension of
+the natural map $G_0 \to \sG_0 = G_0\otimes_{\dZ/p}\sO$. The diagram
+\begin{equation*}\tag{4.4.2}\label{III:eq:4-4-2}
+\xymatrix{
+  F^* j_! G_0 \ar[r]^-{F^*} \ar[d]^-{F^* v}
+    & j_! G_0 \ar[d]^-v \\
+  F^*\bar \sG_0 \ar[r]^-u
+    & \bar\sG_0
+}
+\end{equation*}
+Finally, denote by $u F^*$ the composite map
+\[\xymatrix{
+  \h^\bullet(\bar S,\bar\sG) \ar[r]^-{F^*}
+    & \h^\bullet(\bar S,F^*\bar\sG) \ar[r]^-u
+    & \h^\bullet(\bar S,\bar\sG) \text{,}
+}\]
+one has by \eqref{III:eq:3-7-1}
+\begin{equation*}\tag{4.4.3}\label{III:eq:4-4-3}
+  \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(u F^*,\h^i(\bar S,\bar\sG)\right) \text{.}
+\end{equation*}
+
+For every closed point $i_x:x\hookrightarrow \bar S$ of $\bar S$, set
+$\bar\sG_x = i_x^*\bar\sG$. The Lefschetz trace formula in coherent
+cohomology (``Woods Hole fixed point formula''), applied to $F$ and $u$, says
+that
+\begin{equation*}\tag{4.4.4}\label{III:eq:4-4-4}
+  \sum_i (-1)^i \tr\left(uF^*, \h^i(\bar S,\bar\sG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\sG_x)}{\det(1-d F_x)} \text{.}
+\end{equation*}
+On the right-hand side,
+\begin{enumerate}[\indent a)]
+  \item since $d F=0$, the denominators are equal to 1;
+  \item for $x\in \bar S^F\setminus S^F$, the endomorphism $u_x$ of
+    $\bar\sG_x$ is zero, and therefore so is $\tr(u_x,\bar\sG_x)$;
+  \item for $x\in S^F$, \eqref{III:eq:4-4-4} gives a contribution
+    \[
+      \tr(u_x,\bar\sG_x) = \tr(F_x^*,G_x) \text{.}
+    \]
+    Identity \eqref{III:eq:4-4-1} therefore follows from
+    \eqref{III:eq:4-4-3} and \eqref{III:eq:4-4-4}.
+\end{enumerate}
+\end{proof}
+
+
+
+
+
+
+\subsection{A counterexample}\label{III:4-5}
+
+An example shows that the hypothesis that $A$ be reduced cannot be omitted
+from \ref{III:4-1}.
+
+Let $Y_0$ be the elliptic curve over $\dF_2$ for which the eigenvalues of
+Frobenius are $\pm \sqrt{-2}$. It has $3$ rational points and is
+supersingular. The involution $\sigma:x\mapsto -x$ therefore has only one
+fixed point, the point $0$. The quotient of $Y_0$ by $\sigma$ is a projective
+line; the quotient of $Y_0\setminus 0$ by $\sigma$ is therefore an affine
+line $\dF_0^1$, and $Y_0\setminus 0$ is an unramified double covering of
+$\dF_0^1$:
+\[
+  \pi:Y_0\setminus 0 \to \dA_0^1 \qquad \text{, $\pi=\pi\sigma$.}
+\]
+
+The sheaf $\pi_*\dZ/2$ is a free module of rank one over the algebra $A$ of
+the two-element group $\{1,\sigma\}$ over $\dZ/2$. This algebra is isomorphic
+to the algebra of numbers over $\dZ/2$.
+
+The sheaf of $A$-modules $\pi_*\dZ/2$ is our example:
+\begin{enumerate}[\indent a)]
+  \item One has
+    $\h_c^\bullet(\dA^1,\pi_*\dZ/2) = \h_c^\bullet(Y\setminus 0,\dZ/2)$.
+    Since $Y_0$ is supersingular, one has $\h^i(Y,\dZ/2)=0$ for $i>0$, and
+    the long exact sequence
+    \[
+      \cdots \to \h_c^i(Y\setminus 0,\dZ/2) \to \h^i(Y,\dZ/2) \to \h^i(\{0\},\dZ/2) \to \cdots
+    \]
+    shows that $\h_c^\bullet(Y\setminus 0,\dZ/2)=0$. Thus
+    $\h_c^\bullet(\dA^1,\pi_*\dZ/2)=0$ and
+    \[
+      \tr_A\left(F^*,\eR\Gamma_c(\dA^1,\pi_*\dZ/2)\right) = 0 \text{.}
+    \]
+  \item Since $Y_0\setminus 0$ has two rational points, at one of the
+    rational points of $\dA_1^0$, the Frobenius substitution is the identity,
+    and at the other, it is $\sigma$. Thus
+    \[
+      \sum_{x\in {\dA^1}^F} \tr\left(F^*,\pi_*\dZ/2\right) = 1+\sigma \text{,}
+    \]
+    and $1+\sigma\ne 0$.
+\end{enumerate}
+
+The equation of the covering $\pi$ is $y^2-y=x^3$.

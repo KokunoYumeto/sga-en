@@ -1,0 +1,193 @@
+\section{Faithful functors and conservative functors}\etiquette[6]{I.sec6}\pageoriginale
+
+\begin{enonce*}{Definition 6.1}\etiquette[6.1]{I.def6.1}
+Let $E$ be a category and let $(\varphi_i:E\rightarrow F_i)_{i\in I}$
+be a family of functors
+$$
+\varphi_i:E\longrightarrow F_i{\quoi}.
+$$
+The family of functors $(\varphi_i)$ is said to be faithful if, for every
+pair of objects $X$, $Y$ of $E$ and every pair of arrows
+$u$, $v:X\rightrightarrows Y$, the relation
+$\varphi_i(u)=\varphi_i(v)$ for every $i\in I$ implies $u=v$ (in other
+words, if the map $\Hom(X,Y)\rightarrow
+\Pi_i\Hom(\varphi_i(X),\varphi_i(Y))$ defined by $(\varphi_i)$ is
+injective). The family of functors $(\varphi_i)$ is said to be
+conservative if every arrow $u$ of $E$ for which $\varphi_i(u)$ is an
+isomorphism for every $i\in I$ is an isomorphism. We say that
+$(\varphi_i)$ is conservative for monomorphisms (\resp for epimorphisms,
+\resp \ldots) if the preceding condition holds whenever $u$ is a
+monomorphism (\resp an epimorphism, \resp \ldots).
+\end{enonce*}
+
+\setcounter{subsection}{1} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[6.1.1]{I.sec6.1.1}
+If we introduce the unique functor
+$$
+\varphi:E\longrightarrow F=\prod_{i\in I} F_i
+$$
+defined by the family of functors $(\varphi_i)$, it is clear that this
+family is faithful (\resp conservative, \resp conservative for
+monomorphisms, \resp\ldots) if and only if the functor $\varphi$ is
+faithful (\resp conservative, \resp\ldots) (by which we mean that the
+family consisting only of $\varphi$ is faithful, \resp conservative,
+\resp\ldots). Thus, without major inconvenience, we could restrict
+ourselves below to a family consisting of a single functor. Nevertheless,
+for ease of future reference, we shall state the following results for
+families.
+
+The\pageoriginale notions of \hyperref[I.def6.1]{6.1} are especially useful when the
+$\varphi_i$ satisfy suitable exactness properties, and in that case they
+tend to coincide:
+
+\begin{enonce*}{Proposition 6.2}\etiquette[6.2]{I.prop6.2}
+The notation is that of \hyperref[I.prop5.1]{5.1}.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item If the kernels of double arrows, or the cokernels of double arrows,
+  are representable in $E$, and if the $\varphi_i$ commute with them,
+  then one has the implication
+$$
+(\varphi_i)\mbox{ conservative } \Longrightarrow (\varphi_i)\mbox{
+    faithful}{\quoi}.
+$$
+
+\item Suppose that fiber products (\resp amalgamated sums) are
+  representable in $E$, and that the $\varphi_i$ commute with them.
+  Suppose that $(\varphi_i)$ is faithful or conservative; then for every
+  arrow $u$ of $E$, $u$ is a monomorphism (\resp an epimorphism) if and
+  only if the same holds for $\varphi_i(u)$ for every $i\in I$.
+
+\item Suppose that fiber products and amalgamated sums are representable
+  in $E$ and that the $\varphi_i$ commute with them, and that every arrow
+  in $E$ which is a bimorphism (\ie both a monomorphism and an
+  epimorphism) is an isomorphism. Then one has the implication
+$$
+(\varphi_i)\mbox{ faithful } \Longrightarrow (\varphi_i)\mbox{
+    conservative}{\quoi}.
+$$
+
+\item Suppose that fiber products (\resp amalgamated sums) are
+  representable in $E$, and that the $\varphi_i$ commute with them. Then,
+  if $(\varphi_i)$ is conservative for monomorphisms (\resp for
+  epimorphisms), it is in fact conservative.
+
+\item Let $D$ be a type of diagram, let $F:d\mapsto F(d)$ be a diagram of
+  type $D$ in $E$, let $X$ be an object of $E$, and let
+  $u=(u_d)_{d\in D}$ be a family of arrows
+$$
+X\longrightarrow F(d)\quad (\mbox{\resp  } F(d)\longrightarrow
+X){\quoi}.
+$$
+Suppose\pageoriginale that $(\varphi_i)$ is conservative, that projective
+(\resp inductive) limits of type $D$ are representable in $E$, and that
+the $\varphi_i$ commute with them. Then $u$ makes $X$ a projective
+(\resp inductive) limit of $F$ in $E$ if and only if, for every $i\in I$,
+$\varphi_i(u)$ makes $\varphi_i(X)$ a projective (\resp inductive) limit
+of $\varphi_i(D)$ in $E_i$.
+\end{enumerate}
+\end{enonce*}
+
+\noindent \emph{Proof.}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For the non-\resp statement, given a double arrow
+$u$, $v:X\rightrightarrows Y$, it suffices to express the equality $u=v$
+by the condition that the inclusion $\Ker(u,v)\rightarrow X$ is an
+isomorphism. Here and below, we omit repetition of the dual argument for
+the dual statement.
+
+\item If $(\varphi_i)$ is faithful, the condition that
+$u:X\rightarrow Y$ be a monomorphism is expressed by the equality
+$\pr_1=\pr_2$ for the fiber product $\fprod{X}{X}{Y}$. If $(\varphi_i)$
+is conservative, it is expressed by the condition that the diagonal
+morphism $\delta:X\rightarrow \fprod{X}{X}{Y}$ be an isomorphism.
+
+\setcounter{enumi}{3}
+\item Since in the latter argument the morphism $\delta$ is a
+monomorphism, we see that it would in fact have been enough to suppose
+that $(\varphi_i)$ is conservative for monomorphisms. But this then
+implies that $(\varphi_i)$ is conservative without qualification.
+Indeed, if $u\in %%
+F\ell\,E$ is such that the $\varphi_i(u)$ are isomorphisms, the preceding
+argument shows that these are monomorphisms, and hence they are
+isomorphisms by the hypothesis on $(\varphi_i)$.
+
+\setcounter{enumi}{2}
+\item This is a trivial consequence of (ii).
+
+\setcounter{enumi}{4}
+\item This is a trivial consequence of the definitions.
+\end{enumerate}
+
+We record the following consequence of (i), (ii), and (iv):
+
+\begin{enonce*}{Corollary 6.3}\etiquette[6.3]{I.cor6.3}
+Suppose\pageoriginale that fiber products and amalgamated sums are
+representable in $E$ and that the $\varphi_i$ commute with them, and that
+kernels of double arrows or cokernels of double arrows are representable
+and that the $\varphi_i$ commute with them. (It suffices, for example,
+that finite projective limits and finite inductive limits be representable
+in $E$, and that the $\varphi_i$ be exact functors.) Then the following
+conditions are equivalent:
+\begin{itemize}
+\item[a)] $(\varphi_i)$ is faithful.
+
+\item[b)] $(\varphi_i)$ is conservative.
+
+\item[c)] $(\varphi_i)$ is conservative for monomorphisms.
+
+\item[${\rm c')}$] $(\varphi_i)$ is conservative for epimorphisms.
+\end{itemize}
+\end{enonce*}
+We also record, for reference:
+
+\begin{enonce*}{Proposition 6.4}\etiquette[6.4]{I.prop6.4}
+Let $\varphi:E\rightarrow F$ be a functor with a right adjoint $\psi$
+(thus $\Hom(\varphi(X),Y)\simeq \Hom(X,\psi(Y))$). The functor $\varphi$
+(\resp $\psi$) is faithful if and only if, for every element $X$ of $E$
+(\resp every element $Y$ of $F$), the unit morphism
+$X\rightarrow \psi\varphi(X)$ is a monomorphism. The functor $\varphi$
+(\resp $\psi$) is fully faithful if and only if the preceding unit
+morphism is an isomorphism.
+\end{enonce*}
+Indeed, if $X'$, $X$ are two objects of $E$, the map
+\begin{equation*}
+\Hom(X',X)\longrightarrow
+  \Hom(\varphi(X'),\varphi(X))\tag{$\ast$}
+\end{equation*}
+is identified with the map obtained from
+\begin{equation*}
+X\longrightarrow \psi
+  \varphi (X)\tag{${\ast}{\ast}$}
+\end{equation*}
+by applying the functor $\Hom(X',-)$. Thus, for $(\ast)$ to be a
+monomorphism\pageoriginale (\resp an isomorphism) for every $X'$, with
+$X$ fixed, it is necessary and sufficient that the unit morphism
+$({\ast}{\ast})$ be a monomorphism (\resp an isomorphism).
+
+\begin{enonce*}{Proposition 6.5}\etiquette[6.5]{I.prop6.5}
+Let $p:E'\rightarrow E$ be a functor. The following conditions are %%
+equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $p$ is faithful, conservative, and fibered {\rm(SGA 1 VI 6.1).}
+
+\item $p$ is a fibered functor whose fibers are discrete categories.
+
+\item For every $X'\in \ob E'$, the functor $E'_{/X'}\rightarrow
+  E_{/p(X)}$ induced by $p$ is an equivalence of categories that is
+  surjective on objects.
+
+\item (When $E$ is a $𝒰$-category.) There exists an element
+  $F\in \ob\widehat{C}$ and an equivalence of categories over $E$
+  {\rm(SGA 1 VI 4.3)} $E'\xrightarrow{\approx}E_{/F}$ (where $E_{/F}$
+  is the full subcategory of $\widehat{E}_{/F}$ formed by the arrows
+  $X\rightarrow F$ whose source belongs to $E$).
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{5} \setcounter{subsubsection}{0}

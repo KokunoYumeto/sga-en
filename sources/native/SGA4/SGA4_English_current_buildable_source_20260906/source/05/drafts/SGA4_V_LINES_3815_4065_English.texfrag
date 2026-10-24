@@ -1,0 +1,264 @@
+\subsubsection{}\etiquette[8.1.10]{V.subsubsec8.1.10}
+Let $q:\Tt\to\Ss$ be a morphism of sites, and let
+$p:\Ll\to\Ss$ be a locally cofiltered category over $\Ss$. Define
+the category $\Ll^{\ast}$ as follows:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item An object of $\Ll^{\ast}$ is a quadruple $(V,U,\phi,\lambda)$
+such that $V\in\Ob\Tt$, $U\in\Ob\Ss$,
+$\phi\in\Hom(V,q^{\ast}U)$, and $\lambda\in\Ob\Ll_U$.
+
+\item An arrow
+$f:(V,U,\phi,\lambda)\to(V',U',\phi',\lambda')$ is a triple
+$(f_1,f_2,f_3)$, where $f_1\in\Hom(V,V')$,
+$f_2\in\Hom(U,U')$, and $f_3\in\Hom(\lambda,\lambda')$, such that
+$q^{\ast}f_2\circ\phi=\phi'\circ f_1$ and $p(f_3)=f_2$.
+
+The functor $f\mapsto f_1$ makes $\Ll^{\ast}$ a category over
+$\Tt$.
+\end{enumerate}
+
+\begin{enonce*}{Lemma 8.1.11}\etiquette[8.1.11]{V.lem8.1.11}
+The category $\Ll^{\ast}$ is locally cofiltered over $\Tt$.
+\end{enonce*}
+
+Axiom $(\Ll0)$ is trivial. Let us verify $(\Ll1)$.
+
+Let $L_i=(V,U_i,\phi_i,\lambda_i)$ be a finite family. The $\phi_i$
+define a morphism from $V$ to the sheaf
+$q^{\ast}a\prod U_i=a\prod q^{\ast}U_i$. Consequently, there are
+commutative diagrams
+\[
+\xymatrix@C=2.5cm@R=1.5cm{
+V_j \ar[r]^{f_j}\ar[d]^{\psi_j}&V\ar[d]^{\phi_i}\\
+q^{\ast}U_j\ar[r]_{q^{\ast}(p_{ij})}&q^{\ast}U_i
+}
+\]
+such\pageoriginale that the $f_j$ cover $V$.
+
+Choose $\lambda_{ji}$ such that
+$\Hom_{p_{ij}}(\lambda_{ji},\lambda_i)\neq\varnothing$. By
+$(\Ll1)$, after refining $U_j$ (and $V_j$), we may take
+$\lambda_{ji}=\lambda_j$ independently of $i$, and the
+$L_j=(V_j,U_j,\psi_j,\lambda_j)$ satisfy $(\Ll1)$.
+
+Let us verify $(\Ll2)$. Let
+$(f_1,f_2):L^1\rightrightarrows L^2$, with
+$L^i=(V^i,U^i,\phi^i,\lambda^i)$ and
+$f_i=(f,g_i,h_i)$. The $\phi^i$ define a morphism from $V^1$ to the
+sheaf
+$q^{\ast}a\Ker(U^1\rightrightarrows U^2)
+=a\Ker(q^{\ast}U^1\rightrightarrows q^{\ast}U^2)$, so there are
+commutative diagrams
+\[
+\xymatrix@C=2cm@R=1.5cm{
+V_j \ar[r]^{f_j}\ar@{-}[d]^{\psi_j}&
+V^1\ar[r]\ar@{-}[d]^{\phi^1}&V^2\ar@{-}[d]^{\phi^2}\\
+q^{\ast}U_j\ar[r]_{q^{\ast}p_j}&q^{\ast}U^1
+\ar@<2pt>[r]^{q^{\ast}g_1}\ar@<-2pt>[r]_{q^{\ast}g_2}&
+q^{\ast}U^2&\kern-1cm(g_1p_j=g_2p_j),
+}
+\]
+such that the $f_j$ cover $V^1$. Let
+$\chi_j:\lambda_j\to\lambda^1$ satisfy $p(\chi_j)=p_j$. Applying
+$(\Ll2)$ to $(h_1\chi_j,h_2\chi_j)$, and refining $U_j$ (and
+$V_j$) if necessary, we may arrange that
+$h_1\chi_j=h_2\chi_j$; the
+$L_j=(V_j,U_j,\psi_j,\lambda_j)$ then satisfy $(\Ll2)$.
+
+\begin{enonce*}{Proposition 8.1.12}\etiquette[8.1.12]{V.prop8.1.12}
+Let $t^{\ast}:\Ss^{\ast}\to\Ss$ be a locally cofiltered category
+over $\Ss$, and endow $\Ss^{\ast}$ with the topology induced from
+that of $\Ss$ by $t^{\ast}$. Then $t^{\ast}$ is an equivalence of
+sites $t:\Ss\to\Ss^{\ast}$.
+\end{enonce*}
+
+By construction, the functor
+$t^\ast:\Ff\mapsto\Ff\circ t^{\ast}$ carries sheaves on $\Ss$ to
+sheaves on $\Ss^{\ast}$. By $(\Ll0)$ and $(\Ll1)$ applied to the
+empty family, every ``sufficiently small'' object of $\Ss$ belongs
+to the image of $t^{\ast}$ (that is, the image of $t^{\ast}$ is a
+\emph{covering sieve} in $\Ss$). Hence, by the ``comparison lemma''
+(III 4), the inclusion into $\Ss$ of the full subcategory defined by
+$t^{\ast}(\Ob\Ss^{\ast})$ is an equivalence of sites. We may
+therefore suppose that $t^{\ast}$ is surjective on objects.
+
+Let $\Ff$ be a sheaf on $\Ss^{\ast}$.
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let $(f_j:U_j\to U)$ be a covering in $\Ss$, let
+$\lambda^1,\lambda^2\in\Ob\Ss^{\ast}_U$, and let
+$f_j^i\in\Hom_{f_j}(\mu_j,\lambda^i)$ for $i=1,2$. Then
+$\Ff(\lambda^1)$ and $\Ff(\lambda^2)$ have the same image in
+$\displaystyle\mathop{\prod}_j\Ff(\mu_j)$.
+
+Indeed, let\pageoriginale $x=(x_j)$ belong to the image of
+$\Ff(\lambda^1)$. For $x$ to belong to the image of
+$\Ff(\lambda^2)$, it suffices that, for every commutative diagram
+\[
+\xymatrix@C=2.5cm@R=1.5cm{
+\mu\ar[r]\ar[d]&\mu_j\ar[d]\\
+\mu_k\ar[r]&\lambda^2,
+}
+\]
+$x_j$ and $x_k$ have the same image in $\Ff(\mu)$. Since $\Ff$ is
+a sheaf, it suffices to verify this after replacing $\mu$ by the
+objects of one of its coverings. By $(\Ll2)$, we may then suppose
+that the diagrams analogous to the preceding one, with $\lambda^2$
+replaced by $\lambda^1$, also commute, in which case the assertion is
+clear.
+
+\item Let $f:U\to V$ be an arrow of $\Ss$, let
+$\lambda\in\Ob\Ss^{\ast}_U$, and let
+$\mu\in\Ob\Ss^{\ast}_V$. There then exist a covering
+$f_j:U_j\to U$, an object $\mu'\in\Ob\Ss^{\ast}_U$, and arrows in
+the diagram
+\[
+\xymatrix@C=2.5cm@R=1cm{
+&\lambda&\\
+\lambda_j\ar[ru]^{\phi_j}\ar[rd]_{\psi_j}&&\mu\\
+&\mu'\ar[ru]_{\psi}&
+}
+\]
+lying over
+$$
+U_j\xrightarrow{f_j}U\xrightarrow{f}V{\quoi}.
+$$
+By (i), there is a unique arrow $\overline f$ making the following
+diagram commute:
+\[
+\xymatrix@C=2.5cm@R=1.5cm{
+\Ff(\mu)\ar[r]^{\overline f}\ar[d]_{\psi}&
+\Ff(\lambda)\ar[d]^{\phi_j}\\
+\Ff(\mu')\ar[r]_{\psi_j}&\Ff(\lambda_j).
+}
+\]
+The arrow $\overline f$ does not change if $(f_j)$ is replaced by a
+finer covering $f_k:U_k\to U_{j(k)}$, if $\lambda_j$ is replaced by
+$\lambda_k$ equipped with
+$\phi_k\in\Hom_{f_k}(\lambda_k,\lambda_{j(k)})$, and if
+$\phi_j$ (respectively $\psi_j$) is replaced by
+$\phi_{j(k)}\circ\phi_k$ (respectively
+$\psi_{j(k)}\circ\phi_k$).\pageoriginale
+
+The reader may deduce that $\overline f$ depends only on $f$.
+
+\item Let us prove that $\overline f$ is functorial in $f$. Thus let
+$$
+W\xrightarrow{h}V\xrightarrow{g}U
+$$
+be arrows in $\Ss$, and let $\lambda^0$, $\mu^0$, and $\nu^0$
+belong respectively to $\Ob\Ss^{\ast}_U$, $\Ob\Ss^{\ast}_V$, and
+$\Ob\Ss^{\ast}_W$.
+There exists a commutative diagram
+\[
+\xymatrix@C=.5cm@R=.5cm{
+\nu^{0}& &&&&\mu^{0}&&\lambda^{0}\\
+&&\nu^{1}\ar[rrru]&&&&\mu^{1}\ar[ru]&\\
+&&&{\nu^{2}}\ar[rrru]&&&&\\
+&&&&&&&\\
+&\nu_{jk}\ar[luuuu]^(.7){e^{0}_{jk}}
+\ar[uuur]^(.7){e^{1}_{jk}}\ar[rruu]_{e^{2}_{jk}}\ar[rrrr]&&&&
+\mu_j\ar[uuur]_{f^{1}_j}\ar[uuuu]^(.3){f^{0}_j}&&
+}
+\]
+such that
+
+\begin{enumerate}
+\renewcommand{\theenumii}{\alph{enumii}}
+\renewcommand{\labelenumii}{\theenumii)}
+\item $t^{\ast}(\nu^i)$, $t^{\ast}(\mu^i)$,
+$t^{\ast}(e^i_{jk})$, and $t^{\ast}(f^i_j)$ do not depend on $i$;
+
+\item for fixed $i$, the $e^i_{jk}$ cover $W$, and the $f^i_j$
+cover $V$.
+\end{enumerate}
+
+First construct $\mu^1$, $\nu^1$, and $\nu^2$ by $(\Ll0)$, and
+the $\mu_j$ as in (ii). Let $(W'_{jk})$ be a covering of $W$ mapping
+to the covering $V_j=t^{\ast}(\mu_j)$ as required by the diagram.
+After refining $(W'_{jk})$ and applying $(\Ll0)$ and $(\Ll1)$, one
+obtains a diagram of the required type, satisfying a) and b), but
+not necessarily commutative. Refining once more and applying
+$(\Ll2)$ makes it commutative.
+
+It remains only to contemplate the following commutative diagram:
+\[
+\xymatrix@C=1.5cm@R=.25cm{
+\Ff(\lambda^{0})\ar[r]^{\bar g}&\Ff(\mu^0)\ar[rd]\ar[rr]^{\bar h}&&
+\Ff(\nu^{0})\ar[dddd]\\
+&&\Ff(\nu^1)\ar[rddd]&\\
+\Ff(\mu^{1})\ar[r]&\prod\Ff(\mu_j)\ar[rrdd]&&&\\
+&&&\\
+\Ff(\nu^2)\ar[rrr]&&&\prod\Ff(\nu_{jk})
+}
+\]
+
+\item It\pageoriginale is clear that $\overline f$ is functorial
+in $\Ff$. Thus every sheaf $\Ff$ on $\Ss^{\ast}$ is the direct
+image under $t$ of a uniquely determined presheaf $\Ff_0$ on
+$\Ss$, and every morphism of sheaves $f:\Ff\to\mathfrak g$ is the
+image of a unique morphism of presheaves
+$f_0:\Ff_0\to\mathfrak g_0$.
+\end{enumerate}
+
+It already follows that $t_{\ast}$ is fully faithful; it remains to
+prove that $\Ff_0$ is a sheaf. If $(f_j:U_j\to U)$ is a covering,
+then this covering is the image of a covering in $\Ss^{\ast}$, so
+$\Ff_0(U)$ injects into $\prod_j\Ff_0(U_j)$. If elements
+$x_j\in\Ff_0(U_j)$ glue, then a fortiori they glue in $\Ss^{\ast}$,
+and hence come from an element of $\Ff_0(U)$. This completes the
+proof of \hyperref[V.prop8.1.12]{8.1.12}.
+
+\setcounter{subsubsection}{13}
+\setcounter{paragraph}{-1}
+\paragraph{}\etiquette[8.1.13.0]{V.par8.1.13.0}
+
+Let $q:\Tt\to\Ss$ and $p:\Ll\to\Ss$ be as in
+(\hyperref[V.subsubsec8.1.10]{8.1.10}), let $\Ll^{\ast}$ be the
+category defined there, and let $\mathsf e$ be a stack on $\Tt$.
+The stack $q_{\ast}\mathsf e$ on $\Ss$ is the stack defined by
+$(q_{\ast}\mathsf e)_U=\mathsf e_{q^{\ast}U}$.
+
+If $(X_{\lambda})_{\lambda\in\Ll}$ is a local projective system
+indexed by $\Ll$ and taking values in $q_{\ast}\mathsf e$, it
+defines a local projective system
+$(X_L)_{L\in\Ll^{\ast}}$ taking values in $\mathsf e$ by the formula
+$$
+X_L=\phi^{\ast}X_{\lambda}quad\text{for }
+L=(V,U,\phi,\lambda){\quoi}.
+$$
+
+The reader may verify the following:
+
+\begin{enonce*}{Proposition 8.1.13.1}\etiquette[8.1.13.1]{V.prop8.1.13.1}
+With the preceding notation, one has
+$$
+\varprojlim_{\lambda\in\Ll}X_{\lambda}
+=\varprojlim_{L\in\Ll^{\ast}}X_L{\quoi},
+$$
+the two sides being simultaneously defined or undefined.
+\end{enonce*}
+
+Let $\Ss$ be a site, and let $p^{\ast}:\Ss^{\ast}\to\Ss$ be a
+locally filtered category over $\Ss$. If $\mathsf e$ is a stack on
+$\Ss$, then $p_{\ast}\mathsf e$ is a stack on $\Ss^{\ast}$
+(\hyperref[V.par8.1.13.0]{8.1.13.0}). Moreover, the identity functor
+$\Ss^{\ast}\to\Ss^{\ast}$ is a locally filtered category over
+$\Ss^{\ast}$, endowed with the induced topology, and every local
+inductive system $(X_{\lambda})$ indexed by $\Ss^{\ast}$ defines a
+local inductive system over $\Ss^{\ast}$ indexed by $\Ss^{\ast}$.
+
+One verifies easily:
+
+\begin{enonce*}{Proposition 8.1.14}\etiquette[8.1.14]{V.prop8.1.14}
+With\pageoriginale the preceding notation, one has
+$$
+\varprojlim_{\lambda\in\Ss^{\ast}/\Ss}X_{\lambda}
+=\varprojlim_{\lambda\in\Ss^{\ast}/\Ss^{\ast}}X_{\lambda}{\quoi},
+$$
+the two sides being simultaneously defined or undefined.
+\end{enonce*}

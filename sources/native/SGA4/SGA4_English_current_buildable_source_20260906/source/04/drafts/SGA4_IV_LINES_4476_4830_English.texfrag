@@ -1,0 +1,352 @@
+\subsection{Points of presheaf topoi $\widehat{C}$; examples of
+$𝒰$-presheaf topoi $\widehat{C}$ whose category
+of points is not equivalent to a small
+category}\etiquette[7.3]{IV.subsec7.3}
+
+Let $E$ be a $𝒰$-topos, and let $(\varphi_i)_{i\in I}$ be a filtered
+family of fiber functors on $E$. It follows from the exactness
+properties of the functors $\varinjlim$
+(\sisi{I\quad and}{\hyperrefext[I][I.prop2.8]{2.8}}) that the functor
+$\varphi=\varinjlim\varphi_i$ is also a fiber functor:
+\emph{every filtered inductive limit of fiber functors is a fiber
+functor.} Consequently, the category $\Ffib(E)$ admits $𝒰$-filtered
+inductive limits (and the inclusion functor
+$\Ffib(E)\rightarrow \Hhom(E,(𝒰\text{-}\Ens))$ commutes with them);
+in other words, the category $\Ppoint(E)$ admits $𝒰$-filtered
+projective limits. This fact was already used in Exercise
+\sisi{\hyperref[IV.exer7.1.10]{7.1.10}}{\hyperref[IV.exer7.1.11]{7.1.11}}
+to give an example of ``large'' categories of fiber functors.
+
+\hypertarget{sga4.exp.IV.subsubsection.7.3.3}{}Considerably simpler examples can be constructed, with presheaf
+topoi of the form $E=\widehat{C}$, $C\in𝒰$, by using
+\eqhyperref[IV.eq6.8.6.1]{6.8.6.1}. This immediately gives examples
+in which $\Ffib(\widehat{C})$ is not equivalent to a category
+$\in𝒰$, \ie in which the cardinal of the set of isomorphism classes
+of objects of this $𝒰$-category is not $\in𝒰$. This means
+that the category of pro-objects $\Pro-(C)$ is not equivalent to a
+category $\in 𝒰$. For example, it suffices to take
+$D=C^{\circ}$ to be the category of finite sets of the form
+$[0,n]$, where $n\geq 0$ is an\pageoriginale integer; in
+this case $\Ind(D)\simeq \Pro(C)^{\circ}$ is equivalent to the
+category of nonempty sets. The topos $E$ is then the familiar
+category of \emph{cosimplicial sets}. One could also take $C$ to be
+the category of nonempty finite sets; one then finds that the
+category of points of the presheaf topos $\widehat{C}$ of simplicial
+sets is equivalent to the category of profinite sets, or equivalently
+to the category of totally disconnected compact spaces.
+
+\subsection{Nonempty topoi without points}\etiquette[7.4]{IV.subsec7.4}
+
+The following example is due to $P$. Deligne. (For another example,
+\cf \hyperref[IV.exer7.2.6]{7.2.6} e).) Let $K$ be a compact space
+equipped with a measure $\mu$, and let $U$ be the ordered set of
+measurable subsets of $K$, modulo sets of measure zero. Make $U$
+into a category $\underline{U}$ with $\ob \underline{U}=U$, the
+morphisms of $\underline{U}$ being the ``inclusion morphisms''
+between elements of $U$. Make $\underline{U}$ into a site by taking
+the pretopology for which $\Cov(E)$ (for $E\in U$) consists of the
+\emph{countable} families of elements $E_i$ of $U$ bounded above by
+$E$, such that $E$ is the union of the $E_i$ modulo a set of measure
+zero. This gives a topos $\Top(\mu)=\underline{U}^{\sim}$ whose set
+of subobjects of the terminal object is a generating family (a topos
+which appears to have escaped the attention of probabilists). This
+topos is an ``empty topos'' (\hyperref[IV.subsec2.2]{2.2}) if and
+only if $\mu=0$. On the other hand, the category of points of this
+topos is equivalent to the discrete category defined by the set of
+points $x\in K$ such that $\mu(\{x\})\neq 0$ (proof left to the
+reader). It is therefore empty if $K$ has no such points, for
+example if $K$ is the unit interval in the real line, with the
+measure induced by Lebesgue measure.
+
+\begin{enonce*}[remark]{Exercise 7.5}\etiquette[7.5]{IV.exer7.5}
+(\emph{\sisi{Karoubian}{karoubian} categories\pageoriginale and
+morphisms of topoi})\footnote[1]{Compare
+\hyperrefext[I][I.exer8.7.8]{8.7.8}.}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $C$ be a category, let $X$ be an object of $C$, and let
+$p$ be an endomorphism of $X$. We say that $p$ is a
+\emph{projector} if $p^2=p$. Prove that, if $p$ is a projector,
+$\Ker(\id_X,p)$ is representable if and only if
+$\Coker(\id_X,p)$ is representable, and that the two objects of $C$
+so obtained are canonically isomorphic. We then say that the
+projector $p$ \emph{admits an image,} and
+$\Ker(\id_X,p)\simeq \Coker(\id_X,p)$ is called the \emph{image of
+the projector $p$}; according to the context, it is identified with
+either a subobject or a quotient object of $C$. An object isomorphic
+to $\text{Im\,} p$, for a suitable projector $p$ in $X$, is called
+a \emph{direct factor of the object $X$ of $C$.} We say that $C$ is
+a \emph{category with direct factors}, or a
+\emph{\sisi{Karoubian}{karoubian} category,} if every projector in
+an object of $C$ admits an image. If $F:C\rightarrow C'$ is a
+functor that commutes with kernels or cokernels, then $F$ sends a
+projector admitting an image to a projector admitting an
+image\nde{No condition on $F$ is needed here: every functor
+preserves projectors admitting images.}.
+
+\item Show that, for every category $C$, one can find a functor
+$\varphi:C\rightarrow \kar (C)$ from $C$ to a Karoubian category
+(determined up to equivalence) such that, for every Karoubian
+category $C'$, the functor
+$$
+f\mapsto f\circ \varphi:\Hhom(\kar(C),C')\longrightarrow \Hhom(C,C')
+$$
+is an equivalence of categories; $\kar(C)$ is called the
+\emph{Karoubi envelope} of the category $C$. (Hint: take
+$\ob \kar (C)$ to be the set of pairs $(X,p)$, with $X\in \ob C$
+and $p$ a projector in $X$, and take $\Hom((X,p),(Y,q))$ to be the
+subset of $\Hom(X,Y)$ consisting of those $f:X\rightarrow Y$ such
+that $f=qfp.$) Show that $\varphi$ is fully faithful.
+
+\item Let $F:E\rightarrow E'$ be a functor from one category to
+another. Show that if $F$ commutes with a given type of inductive or
+projective limits,\pageoriginale then the same is true of every
+direct factor of $F$. In particular, if $E$ and $E'$ are
+$𝒰$-topoi and $F$ is an inverse-image functor for a morphism of
+topoi $E'\rightarrow E$, then the same is true of every direct
+factor of $F$; consequently, the category $\Hhomtop(E',E)$ is
+Karoubian, and in particular the category $\Ppoint(E)$ is
+Karoubian.
+
+\item Show that, for every $𝒰$-category $C$, the category
+$\Ind(C)$ is Karoubian (where $\Ind(C)$ is formed using inductive
+systems in $C$ indexed by a filtered preordered set $I\in 𝒰$). (If
+$C\in 𝒰$, use, for example, the fact
+(\hyperref[IV.subsec7.3]{7.3}) that $\Ind(C)$ is equivalent to the
+category
+$\Ffib((C^{\circ})^{\widehat{\phantom{,}}})=\Ppoint((C^{\circ})^{\widehat{\phantom{,}}})^{\circ}.$)
+Deduce another construction of $\kar(C)$ as the full subcategory of
+$\Ind(C)$ formed by the images in $\Ind(C)$ of the projectors of
+objects $X$ of $C$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 7.6}\etiquette[7.6]{IV.exer7.6}
+(\emph{Essential morphisms of topoi, essential points}).
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $f:E\rightarrow F$ be a morphism of topoi. Show that the
+following conditions are equivalent:
+\begin{itemize}
+\item[i)] $f_{!}$ exists, \ie $f^{\ast}$ admits a left adjoint.
+
+\item[ii)] $f^{\ast}$ commutes with $𝒰$-projective limits.
+
+\item[${\rm ii')}$] $f^{\ast}$ commutes with $𝒰$-products.
+\end{itemize}
+We then say that $f$ is an \emph{essential morphism} from the topos
+$E$ to the topos $F$.
+
+Show that if $f$ satisfies these conditions, then the same is true
+of every direct factor of $f$. (Use \hyperref[IV.rem1.8]{1.8} and
+\hyperref[IV.exer7.5]{7.5} c).)
+
+\item Let $E$ be a topos. An \emph{essential point of the topos}
+$E$ is a point $p:P\rightarrow E$ of $E$ such that $p_{!}$ exists.
+Show that if $E=\Top(X)$, where $X$ is a topological space, and if
+$p$ is the point of $E$ defined by an $x\in X$, then $p$ is
+essential\pageoriginale if and only if $x$ has a smallest open
+neighborhood $U$ (which means, if the points of $X$ are closed, that
+$x$ is an \emph{isolated point} of $X$). For a morphism of topoi
+$f:E\rightarrow F$ to be essential (a)), it is necessary that $f$
+send essential points to essential points, and this condition is
+also sufficient when $E$ has enough essential points (\ie when the
+family of these points is conservative) (\cf d)).
+
+\item A point $p$ of the topos $E$ is essential if and only if the
+associated fiber functor is representable by an object $X$ of $E$.
+For the covariant functor $\varphi:E\rightarrow (\Ens)$ represented
+by a given object $X$ of $E$ to be a fiber functor (\ie to define a
+point, necessarily an essential point, of $E$), it is necessary and
+sufficient that $X$ be nonempty and connected
+(\hyperref[IV.subsubsec4.3.5]{4.3.5}), and projective (\ie that the
+functor $\varphi$ send epimorphisms to epimorphisms). (Hint: first
+show that $\varphi$ commutes with coproducts if and only if $X$ is
+nonempty and connected, and then use the criterion
+\hyperref[IV.prop4.9.4]{4.9.4}.) Deduce an equivalence between the
+category $\Ppointess(E)$ and the full subcategory $P$ of $E$ formed
+by the nonempty connected projective objects.
+
+\item Show that the topology on $P$ induced by that of $E$ is the
+chaotic topology. Deduce the equivalence of the following conditions
+on $E$ (due to J. E. ROOS [12 c), prop. 1]): (i) The family of
+essential points of $E$ is conservative; (ii) The full subcategory
+$P$ of $E$ formed by the nonempty connected projective objects is
+generating; (iii)~$E$ is equivalent to a presheaf topos of the form
+$\widehat{C}$, where $C$ is a category equivalent to a category
+$\in 𝒰$ (or, if one prefers, $C\in 𝒰$). (Use $c$) and the fact that,
+if $P$ is generating, the natural functor $E\rightarrow P^{\sim}$
+is an equivalence of\pageoriginale categories.)
+
+\item The category of essential points of a topos $E$ is Karoubian
+(\cf \hyperref[IV.exer7.5]{7.5} c)). Let $C$ be a category
+equivalent to a category $\in 𝒰$. Prove that the canonical fully
+faithful functor (\hyperref[IV.subsubsec4.6.2]{4.6.2})
+$$
+C\longrightarrow \Ppoint(\widehat{C})
+$$
+factors through a functor
+$$
+C\longrightarrow \Ppointess(\widehat{C}){\quoi},
+$$
+which makes $\Ppointess(\widehat{C})$ a \emph{Karoubi envelope}
+(\hyperref[IV.exer7.5]{7.5} b)) \emph{of} $C$. In particular, this
+functor is an equivalence of categories if and only if the category
+$C$ is Karoubian. (Hint: using $c$), prove that every essential point
+of $\widehat{C}$ is isomorphic to a direct factor of some
+$X\in \ob C$.)
+
+\item Let $C$ and $C'$ be two categories equivalent to categories
+$\in 𝒰$. Prove that the canonical fully faithful functor
+(\hyperref[IV.subsubsec4.6.2]{4.6.2})
+$$
+\Hhom(C,C')\longrightarrow \Hhomtop(\widehat{C},\widehat{C}')
+$$
+takes its values in the full subcategory
+$\Hhomtopess(\widehat{C},\widehat{C}')$ of essential morphisms
+\emph{of topoi} (a)), and that the induced functor
+$$
+\Hhom(C,C')\longrightarrow \Hhomtopess(\widehat{C},\widehat{C}')
+$$
+is an equivalence of categories if and only if $C$ is empty or $C'$
+is Karoubian. (Use $g$) below.)
+
+\item Let $C$ be a category equivalent to a category $\in 𝒰$, and
+let $E$ be a topos. Define an equivalence between the category
+$\Hhomtopess(\widehat{C},E)$ of essential morphisms of topoi
+$\widehat{C}\rightarrow E$, and the category
+$\Hhom(C, \Ppointess(E))$. (Use $b$)\pageoriginale and the fact that
+$\widehat{C}$ has enough essential points.)
+
+\item Let $C$ be a finite category. Prove that every point of the
+presheaf topos $\widehat{C}$ is essential, and that
+$\Ppoint(\widehat{C})$ is equivalent to a finite category. (Note
+that the Karoubi envelope of $C$ is finite, and, using
+\eqhyperref[IV.eq6.8.6.1]{6.8.6.1}, reduce to proving that if $C$ is
+a finite Karoubian category, then the canonical functor
+$C\rightarrow \Pro(C)$ is an equivalence of categories.) Using b),
+deduce that \emph{every} morphism of topoi
+$\widehat{C}'\rightarrow \widehat{C}$ is essential, and that
+$\Hhom(C,C')\rightarrow \Hhomtop(\widehat{C},\widehat{C}')$ is an
+equivalence if and only if $C$ is empty or $C'$ is Karoubian.
+
+\item Let $X$ be a topological space, and let
+$f:\Top(X)\rightarrow P$ be the morphism of topoi induced by the
+continuous map from $X$ to the one-point space. Show that $f$ is
+essential if and only if the space $X$ is \emph{locally connected},
+\ie if it satisfies the following condition: for every $x\in X$ and
+every open neighborhood $U$ of $x$, the connected component of $x$
+in $U$ is a neighborhood of $x$; or equivalently: for every open
+subset $U$ of $X$, the connected components of $U$ are open. (\cf
+\hyperref[IV.exer8.7]{8.7} l) for a generalization).
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 7.7}\etiquette[7.7]{IV.exer7.7}
+(\emph{Unusual points of a classifying topos})\footnote[1]{\cf also
+\hyperref[IV.exer7.2.6]{7.2.6} d).}.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $G$ be a monoid. The monoid $G$ contains an element $g$
+such that $g\neq e$ and $g^2=g$ if and only if the classifying topos
+$B_G$ admits an essential point that is not isomorphic to the
+trivial point (corresponding to the fiber functor ``forget the
+$G$-action''). (Use \hyperref[IV.exer7.6]{7.6} e)).
+
+\item Let $G$ be the additive monoid of the integers $\geq 0$.
+Show that every essential point of the classifying topos $B_G$ is
+isomorphic to the trivial point. Construct a point of $B_G$ that is
+not isomorphic to the trivial point. Show that the category
+$\Ppoint(B_G)$ is not equivalent to a category $\in 𝒰$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 7.8}\etiquette[7.8]{IV.exer7.8}
+(\emph{Topology on $\Point(E)$, and topoi associated with ordered
+sets}).
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $E$ be a topos. Denote by $\Point(E)$ the set of
+isomorphism classes of points of $E$. For every open $U$ of $E$,
+let $U'$ be the set\pageoriginale of classes of points $p$ of $E$
+such that $U_p\neq \phi$. Show that $U\mapsto U'$ is an
+order-preserving map from the ordered set $\Ouv(E)$ of opens of $E$
+to the set of subsets of $X=\Point(E)$, and that this map commutes
+with finite Inf and arbitrary $\Sup$. Deduce that the subsets of
+$X$ of the form $U'$ define a topology on $X$ (called the
+\emph{canonical topology on the set of classes of points of the
+topos $E$}). Show that if $E$ has enough points, the map
+$U\mapsto U'$ is an isomorphism from the ordered set $\Ouv(E)$ onto
+the ordered set $\Ouv(X)$.
+
+\item Let $\Oo\in 𝒰$ be an ordered set admitting finite Inf and
+arbitrary $\Sup$, and hence defining a category $\cat(\Oo)$ having
+finite products and arbitrary coproducts. We say that a family of
+morphisms $U_i\rightarrow U$ with common target $U$ is covering if
+$U$ is the $\Sup$ of the $U_i$. Suppose that coproducts in
+$\cat(\Oo)$ are universal, \ie that in $\Oo$ the arbitrary $\Sup$
+commute with Inf. This defines a topology on $\cat(\Oo)$, making
+it a site, and hence a topos $\cat(\Oo)^{\sim}$, also denoted simply
+by $\Oo^{\sim}$. Show that $\Oo$ is canonically isomorphic to
+$\Ouv(\Oo^{\sim})$.
+
+Show that the category $\Hhomtop(E,\Oo^{\sim})$ is equivalent to the
+category associated with the ordered set of morphisms of ordered
+sets $\Oo\rightarrow \Ouv(E)$ that commute with finite Inf and
+arbitrary $\Sup$. (Use the criterion
+\hyperref[IV.prop4.9.4]{4.9.4}.) If $\Oo'$ is an ordered set
+satisfying the same conditions as $\Oo$, deduce that
+$\Hhomtop(\Oo^{\sim}, {\Oo'}^{\sim})$ is equivalent to the category
+associated with the ordered set of all morphisms of ordered sets
+${\Oo}'\rightarrow\Oo$ that commute with finite Inf and
+arbitrary $\Sup$.
+
+\item Show\pageoriginale that the topos $E$ is equivalent to a topos
+of the form $\Oo^{\sim}$, with $\Oo$ as in b), if and only if the
+family of opens of $E$ is generating in $E$. It is equivalent to
+some $\Top(X)$ with $X\in 𝒰$ if and only if it satisfies the
+preceding condition and has enough points. Assuming the first
+condition, express the second in terms of the structure of the
+ordered set $\Oo=\Ouv(E)$, using the last assertion of b).
+
+\item Define a canonical morphism of topoi
+$$
+E\longrightarrow \Ouv(E)^{\sim}{\quoi},
+$$
+which is universal (up to equivalence) for morphisms from $E$ to
+topoi generated by their opens (\cf c)).
+
+\item Let $X'$ be a \emph{small} subset of $X=\Point(E)$, equipped
+with the topology induced by that of $X$. Define a canonical
+morphism of topoi
+$$
+\Ouv(E)^{\sim}\longrightarrow \Top(X'){\quoi},
+$$
+which is an equivalence when the family $X'$ of points of $E$ is
+conservative. Then deduce a canonical morphism of topoi
+$$
+E\longrightarrow \Top(X'){\quoi}.
+$$
+Give a universal characterization (up to equivalence) of this
+morphism of topoi with respect to morphisms from the topos $E$ to
+topoi of the form $\Top(Y)$. (Note in this connection that, up to
+equivalence, $\Top(X')$ does not depend on the chosen small
+conservative family of fiber functors, or equivalently
+(\hyperref[IV.subsec4.2]{4.2}), that $X'_{\sob}$ is independent, up
+to homeomorphism, of the choice of such a family.)
+
+\item Suppose\pageoriginale that the category $\Ppoint(E)$ is not
+equivalent to a small category (\cf \hyperref[IV.subsec7.3]{7.3}),
+and that $E$ admits a small conservative family of fiber functors.
+Show that, if such a family is taken sufficiently large, the subset
+$X'$ of $\Ppoint(E)$ that it defines is not a sober topological
+space for the induced topology.
+
+\item For the relations with Exercise \hyperref[IV.exer7.6]{7.6},
+\cf \hyperref[IV.sec8]{8}.
+\end{enumerate}
+\end{enonce*}

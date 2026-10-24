@@ -1,0 +1,157 @@
+\subsection{Ind-adjoints and pro-adjoints}\etiquette[8.11]{I.sec8.11}
+
+\subsubsection{}\etiquette[8.11.1]{I.sec8.11.1}
+Let
+\hypertarget{sga4.exp.I.equation.8.11.1.1}{}\begin{equation}
+f:C\longrightarrow C'\tag{8.11.1.1}
+\end{equation}
+be a functor between $𝒰$-categories, whence a functor
+$F \sisi{→}{↦} F\circ f$
+\hypertarget{sga4.exp.I.equation.8.11.1.2}{}\begin{equation}
+f^\ast:\widehat{C}'\longrightarrow\widehat{C}{\quoi}.\tag{8.11.1.2}
+\end{equation}
+We say that $f$ \emph{admits an ind-adjoint} if the preceding functor
+carries ind-representable functors to ind-representable functors. Since
+$f^\ast$ commutes with inductive limits, and since the full subcategory
+of $\widehat{C}'$ formed by the ind-representable functors is stable
+under small filtered inductive limits, it is equivalent to say that
+$f$ admits an ind-adjoint, or that $f^\ast$ carries objects of $C'$
+(identified with a full subcategory of $\widehat{C}'$) to
+ind-representable functors on $C$, \ie
+\hypertarget{sga4.exp.I.equation.8.11.1.3}{}\begin{equation}
+X\longmapsto \Hom(f(X),Y')\mbox{ is ind-representable for every }
+Y'\in \Ob C'{\quoi}.\tag{8.11.1.3}
+\end{equation}
+Another way to express the condition that $f$ admit an ind-adjoint is
+to say that there exists a functor
+\hypertarget{sga4.exp.I.equation.8.11.1.4}{}\begin{equation}
+g:\Ind(C')\longrightarrow \Ind(C)\tag{8.11.1.4}
+\end{equation}
+essentially induced by $f^\ast$, \ie such that there is an isomorphism
+of bifunctors
+\hypertarget{sga4.exp.I.equation.8.11.1.5}{}\begin{equation}
+\Hom_{\Ind(C)}(X,g(𝒴'))\simeq
+\Hom_{\Ind(C')}(f(X),𝒴'){\quoi},\tag{8.11.1.5}
+\end{equation}
+where\pageoriginale $X\in \Ob C$ and $𝒴'\in \Ob \Ind(C')$. In fact,
+it even suffices to have a functor
+\hypertarget{sga4.exp.I.equation.8.11.1.6}{}\begin{equation}
+g_\circ:C'\longrightarrow \Ind(C)\tag{8.11.1.6}
+\end{equation}
+and an isomorphism of bifunctors
+\hypertarget{sga4.exp.I.equation.8.11.1.7}{}\begin{equation}
+\Hom_{\Ind(C)}(X,g_\circ(Y'))\simeq \Hom_{C'}(f(X),Y')\tag{8.11.1.7}
+\end{equation}
+in $X\in \Ob C$, $Y'\in \Ob C'$. The functor $g$ (respectively
+$g_\circ$) is evidently determined up to unique isomorphism by $f$,
+and conversely $f$ can be reconstructed up to canonical isomorphism
+from the knowledge of this $g$ (respectively $g_\circ$). It is clear
+from \hyperlink{sga4.exp.I.equation.8.11.1.5}{(8.11.1.5)} that the functor $g$ commutes with inductive limits and
+that it ``extends'' the functor $g_\circ$; this therefore determines it
+up to unique isomorphism in terms of $g_\circ$
+(\hyperref[I.sec8.7.2]{8.7.2}). The functor $g$, and sometimes also the
+functor $g_\circ$ that it extends, is called the \emph{ind-adjoint
+functor of} $f$ (there is no need here to specify: on the right, since
+the other one, if it exists, will be called the pro-adjoint; cf.
+\hyperref[I.sec8.11.5]{8.11.5} below).
+
+Of course, when $f$ admits a right adjoint
+$$
+f^{\ad}:C'\longrightarrow C{\quoi},
+$$
+it admits an ind-adjoint $g$, and the latter is canonically isomorphic
+to the canonical extension of $f^{\ad}$ to ind-objects:
+\hypertarget{sga4.exp.I.equation.8.11.1.8}{}\begin{equation}
+g\simeq\Ind(f^{\ad}){\quoi}.\tag{8.11.1.8}
+\end{equation}
+The notion of an ind-adjoint is thus a natural generalization of the
+notion of a right adjoint.
+
+Now consider\pageoriginale the canonical extension
+\hypertarget{sga4.exp.I.equation.8.11.1.9}{}\begin{equation}
+\Ind(f):\Ind(C)\longrightarrow\Ind(C'){\quoi}.\tag{8.11.1.9}
+\end{equation}
+We then have:
+
+\begin{enonce*}{Proposition 8.11.2}\etiquette[8.11.2]{I.prop8.11.2}
+For the functor $f:C\rightarrow C'$ to admit an ind-adjoint, it is
+necessary and sufficient that the functor $\Ind(f)$ $\hyperlink{sga4.exp.I.equation.8.11.1.9}{(8.11.1.9)}$ admit
+a right adjoint. The latter is canonically isomorphic to the
+ind-adjoint $\hyperlink{sga4.exp.I.equation.8.11.1.4}{(8.11.1.4)}$.
+\end{enonce*}
+
+Sufficiency and the last assertion are immediate from the
+ind-adjunction formula \hyperlink{sga4.exp.I.equation.8.11.1.5}{(8.11.1.5)}. For necessity, note that by passing
+to the projective limit of this formula over the $X_i$, one obtains an
+adjunction isomorphism for the ind-objects $𝒳=(X_i)_{i\in I}$ and
+$𝒴'$:
+\hypertarget{sga4.exp.I.equation.8.11.2.1}{}\begin{equation}
+\Hom_{\Ind(C)}(𝒳, g(𝒴'))\simeq
+\Hom_{\Ind(C')}(\Ind(f)(𝒳),𝒴'){\quoi},\tag{8.11.2.1}
+\end{equation}
+\cqfd
+
+\begin{enonce*}{Corollary 8.11.3}\etiquette[8.11.3]{I.cor8.11.3}
+If $f$ admits an ind-adjoint, then $\Ind(f)$ commutes with inductive
+limits, and the ind-adjoint $g$ commutes with projective limits.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 8.11.4}\etiquette[8.11.4]{I.prop8.11.4}
+For the functor $f:C\rightarrow C'$ to admit an ind-adjoint, it is
+necessary that $f$ be \sisi{left}{right} exact, and this condition is
+sufficient when $C$ is equivalent to a small category.
+\end{enonce*}
+
+This follows from criterion \hyperlink{sga4.exp.I.equation.8.11.1.3}{(8.11.1.3)}, and from
+\hyperref[I.prop8.3.1]{8.3.1} and \hyperref[I.them8.3.3]{8.3.3} (iv).
+
+For another criterion in terms of the notion of an accessible functor,
+cf. \hyperref[I.cor8.13.3]{8.13.3}.
+
+\setcounter{subsubsection}{4}\etiquette[8.11.5]{I.sec8.11.5}
+\subsubsection{}
+Now\pageoriginale consider the functor $F\mapsto F\circ f$
+\hypertarget{sga4.exp.I.equation.8.11.5.1}{}\begin{equation}
+f^{\circ\ast}:\check{C}'\longrightarrow \check{C}\tag{8.11.5.1}
+\end{equation}
+induced by \sisi{$F$}{$f$}. We say that $f$ \emph{admits a pro-adjoint}
+if the preceding functor carries pro-representable functors to
+pro-representable functors, \ie if there exists a functor (called the
+\emph{pro-adjoint functor of $f$})
+\hypertarget{sga4.exp.I.equation.8.11.5.2}{}\begin{equation}
+g:\Pro(\sisi{C}{C'})\longrightarrow \Pro(\sisi{C'}{C}){\quoi},\tag{8.11.5.2}
+\end{equation}
+and an isomorphism of bifunctors
+\hypertarget{sga4.exp.I.equation.8.11.5.3}{}\begin{equation}
+\Hom_{\Pro(C)}(g(𝒴'),𝒳)\simeq
+\Hom_{\Pro(C')}(𝒴'\sisi{)}{},f(𝒳)){\quoi}.\tag{8.11.5.3}
+\end{equation}
+Of course, to say that $f$ admits a pro-adjoint means that $f^\circ$
+admits an ind-adjoint, so that the notions and results for ind-adjoints
+translate immediately into terms of pro-adjoints. We merely point out
+that $f$ admits a pro-adjoint if and only if
+$\Pro(f):\Pro(C)\rightarrow\Pro(C')$ admits a \emph{\sisi{right}{left}}
+adjoint, and that in this case the preceding functor $g$ is such a
+\sisi{right}{left} adjoint of $\Pro(\sisi{C}{f})$; and that for this it
+is necessary that $f$ be \emph{left} exact, this condition also being
+sufficient when $C$ is equivalent to a small category. In this case,
+$f$ is therefore exact if and only if it admits both an ind-adjoint and
+a pro-adjoint.
+
+\begin{enonce*}[remark]{Example 8.11.6}\etiquette[8.11.6]{I.exem8.11.6}
+Consider the case of a functor
+$$
+f:C\longrightarrow (\Ens){\quoi}.
+$$
+If this functor admits a pro-adjoint, it is pro-representable, and the
+converse is true if and only if the full subcategory of $\check{C}$
+formed by the pro-representable functors is stable under small products;
+this\pageoriginale is the case in particular if $C$ is equivalent to a
+small category (\hyperref[I.sec8.10.14]{8.10.14}) or if small products
+are representable in $C$ (\hyperref[I.prop8.9.5]{8.9.5} b), applied to
+$C^\circ$). Up to minor qualifications, one may thus say that for a
+functor $f:C\rightarrow C'$, the existence of a pro-adjoint is the
+\emph{natural generalization of the notion of pro-representability of
+$f$}, which is defined when $C'=(\Ens)$.
+\end{enonce*}
+

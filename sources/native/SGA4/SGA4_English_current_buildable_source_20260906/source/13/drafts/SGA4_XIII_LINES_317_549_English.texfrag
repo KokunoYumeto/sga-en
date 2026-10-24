@@ -1,0 +1,239 @@
+\section{The case of relative dimension at most one}\etiquette[2]{XIII.sec2}\pageoriginale
+
+The assertion is the following.
+
+\begin{enonce*}{Proposition 2.1}\etiquette[2.1]{XIII.prop2.1}
+With the notation of \textup{\hyperrefext[XII][XII.thm5.9]{5.9 bis}}, the
+functor $\Et(X)\rightarrow\Et(X_{\circ})$ is an equivalence of
+categories if $S$ is Noetherian and strictly local and if $f$ is
+projective of relative dimension $\leq1$.
+
+By \textup{\hyperrefext[XII][XII.lem8.5]{8.5}}, this will complete the
+proof of \textup{\hyperrefext[XII][XII.thm5.1]{5.1} (ii)}, which
+generalizes both \hyperref[XIII.prop1.1]{1.1} and
+\hyperref[XIII.prop2.1]{2.1}.
+\end{enonce*}
+
+\begin{enonce*}{Lemma 2.2}\etiquette[2.2]{XIII.lem2.2}
+Let $S$ be the spectrum of a Noetherian local ring $A$, and let $X/S$
+be projective of relative dimension $\leq n$. There exist a projective
+and flat $S$-scheme $Z/S$ of relative dimension $\leq n$ and a closed
+immersion $X\hookrightarrow Z$ over $S$.
+\end{enonce*}
+
+\noindent
+\emph{Proof.} Let $X\rightarrow\PP^N_S$ be a projective embedding over
+$S$, and let $J\subset A[x_{\circ},\ldots,x_N]$ be the homogeneous
+ideal defining $X$. Put $k=A/\mathfrak m_A$, $S_{\circ}=\Spec k$, and
+$X_{\circ}=X\otimes_Sk$. Then $X_{\circ}$ is defined by the
+homogeneous ideal
+$J_{\circ}=\Iim(J\rightarrow k[x_{\circ},\ldots,x_N])$. Since
+$\dim X_{\circ}\leq n$, it is well known that there exist elements
+$f^{\circ}_1,\ldots,f^{\circ}_{N-n}$ of $J_{\circ}$ defining a
+subscheme $Z_{\circ}$ of $\PP^N_k$ of dimension $n$. Let
+$f_i$ $(1\leq i\leq N-n)$ be elements of $J$ lifting the
+$f^{\circ}_i$, and let $Z$ be the subscheme of $\PP^N_S$ defined by
+$f_1,\ldots,f_{N-n}$. By \EGA IV 11.3, $Z$ is flat over $S$; and by
+\EGA IV 13.1.5 it has relative dimension
+$\dim Z_{\circ}=n$. This proves \hyperref[XIII.lem2.2]{2.2}.
+
+\noindent
+\emph{Proof of} \hyperref[XIII.prop2.1]{2.1}. Let $X/S$ be projective
+of relative dimension $\leq1$, with $S$ Noetherian and strictly local.
+We may assume that $X$ (and hence $X_{\circ}$) is connected. Let
+$X\rightarrow Z$ be a closed immersion over $S$, where $Z$ is
+projective, flat, and of relative dimension $\leq1$; see
+\hyperref[XIII.lem2.2]{2.2}. Let $s_{\circ}$ be the closed point of
+$S$. We have a corresponding\pageoriginale diagram of categories
+$$
+\xymatrix@C=2.5cm@R=1.25cm{
+\Et(Z)\ar[r]\ar[d]^{a}&\Et(X)\ar[d]^{b}\\
+\Et(Z_{\circ})\ar[r]^{c}&\Et(X_{\circ}).
+}
+$$
+We wish to prove that $b$ is an equivalence. By
+\hyperrefext[XII][XII.lem5.8]{5.8}, $b$ is fully faithful, so it remains
+to prove that it is essentially surjective. The functor $a$ is an
+equivalence by \hyperref[XIII.prop1.1]{1.1}; it therefore suffices to
+prove that $c$ is essentially surjective. Dropping the subscript
+${}_{\circ}$, we are reduced to the following proposition.
+
+\begin{enonce*}{Proposition 2.3}\etiquette[2.3]{XIII.prop2.3}
+Let $k$ be a separably closed field, let $Z$ be a $k$-scheme locally
+of finite type and of dimension $\leq1$, and let $X\hookrightarrow Z$
+be a connected closed subscheme. Then every étale covering of $X$ is
+induced by an étale covering of $Z$.
+\end{enonce*}
+
+\noindent
+\emph{Proof.} We may suppose that $Z$ and $X$ have dimension $1$, the
+case in which $X$ is zero-dimensional being immediate from the
+hypothesis on $k$. Then $Z=X\cup Y$, where $Y$ is the closed
+subscheme obtained as the closure of $Z-X$. Put $V=X\cap Y$; this is
+a discrete, that is, locally Artinian, scheme. The morphism
+$X\amalg Y\rightarrow Z$ is finite and surjective, hence is a strict
+descent morphism for the category of étale coverings
+(\SGA \hyperrefext[IX][IX.cor4.7]{4.7}). Clearly
+\begin{equation*}
+\fprod{(X\amalg Y)}{(X\amalg Y)}{Z}
+=X\amalg Y\amalg V^{(1)}\amalg V^{(2)}
+\quad(V^{(i)}=V){\quoi},\tag{$\ast$}
+\end{equation*}
+where $\pr_i$ sends $V^{(i)}$ to the component $X$ of $X\amalg Y$
+and sends $V^{(j)}$ to the component $Y$ when $j\neq i$.
+
+Let $X'/X$ be an étale covering of degree $n$, and let $Y''/Y$ be a
+covering of degree $n$ (for example, the trivial covering of degree
+$n$), so that $X'\amalg Y''$ is\pageoriginale a covering of
+$X\amalg Y$ of degree $n$. It is enough to find descent data for this
+covering relative to $X\amalg Y\rightarrow Z$. Inspection of
+$(\ast)$ shows that such descent data amount simply to an isomorphism
+$$
+\fprod{X'}{V}{X}=V'\xrightarrow{\sim}
+V''=\fprod{Y''}{V}{Y}{\quoi}.
+$$
+Since $k$ is separably closed, so are the residue fields of the points
+of $V$; consequently every étale covering of $V$ is completely split.
+Thus $V'\simeq V''$, which proves the result.
+
+\begin{enonce*}[remark]{Remark 2.4}\etiquette[2.4]{XIII.rem2.4}
+One may avoid the delicate result from \SGA IX and descent theory by a
+direct argument showing that the category of étale coverings of $Z$
+is equivalent to the category of triples $(X',Y',\theta)$, where
+$X'$ (respectively $Y'$) is an étale covering of $X$ (respectively
+$Y$), and $\theta$ is a $V$-isomorphism
+$\fprod{X'}{V}{X}\simeq\fprod{Y'}{V}{Y}$. This result, valid for any
+scheme $Z$ that is the union of two closed subschemes $X$ and $Y$, is
+proved directly from the analogous description of quasi-coherent
+modules on $Z$ (when $X=V(\mathfrak J)$, $Y=V(\mathfrak K)$, and
+$\mathfrak J\cap\mathfrak K=0$).
+\end{enonce*}
+
+\footnotetext[1]{This also appears in \EGA IV 21.9.11 and 21.9.12 in
+a slightly more general form; in particular, in
+\hyperref[XIII.cor3.2]{3.2} it is enough for $f$ to be \emph{separated}
+rather than proper.}
+\section{An auxiliary result on the Picard group ${}^{(*)}$}\etiquette[3]{XIII.sec3}
+
+\begin{enonce*}{Proposition 3.1}\etiquette[3.1]{XIII.prop3.1}
+Let $X$ be a Noetherian scheme and let $X_{\circ}$ be a closed
+subscheme of $X$ such that \textup{(a)} $\dim X_{\circ}\leq1$, and
+\textup{(b)} for every nonempty connected closed subset $Y$ of $X$,
+$Y_{\circ}=Y\cap X_{\circ}$ is nonempty and connected.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let $Z_{\circ}$ be the union of the sets
+$\overline{\{x\}}\cap X_{\circ}$, for $x\in\Ass\Oo_X$, that consist
+of a single point. For every Cartier divisor $D_{\circ}$ on
+$X_{\circ}$ such that $\supp(D_{\circ})$ does not meet $Z_{\circ}$,
+there exists a Cartier divisor $D$ on $X$ inducing $D_{\circ}$ (and if
+$D_{\circ}\geq0$, one may take $D\geq0$).
+
+\item Suppose there is an affine open subset $U_{\circ}$ of
+$X_{\circ}$ containing the finite set
+$\Ass\Oo_{X_{\circ}}\cup Z_{\circ}$ (this condition is automatically
+satisfied if $X_{\circ}$ admits an ample invertible sheaf). Then
+$\Pic(X)\rightarrow\Pic(X_{\circ})$ is surjective.
+\end{enumerate}
+\end{enonce*}
+
+\noindent
+\emph{Proof.}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Since $\dim X_{\circ}\leq1$, every Cartier divisor
+$D_{\circ}$ on $X_{\circ}$ plainly has discrete support, and is
+therefore the difference of two effective Cartier divisors whose
+supports are contained in that of $D_{\circ}$. We are thus reduced in
+(i) to the case where $D_{\circ}$ is effective. For every
+$x\in\Supp D_{\circ}$ it is then defined at $x$ by a non-zero-divisor
+$f_x\in\rad(\Oo_{X_{\circ},x})$. The element $f_x$ is induced by a
+section $g_x$ of $\Oo_X$ on an open neighborhood $U_x$ of $x$. I claim
+that, after shrinking $U_x$, the section $g_x$ is a non-zero-divisor
+in $\Oo_{U_x}$, that is,
+$V(g_x)\cap\Ass\Oo_{U_x}=\varnothing$.
+
+Indeed, conditions (a) and (b) imply that, for every
+$z\in\Ass\Oo_X$, the set $\overline{\{z\}}\cap X_{\circ}$ is a
+connected closed subset of $X_{\circ}$ and hence is either a single
+closed point or a connected union of one-dimensional irreducible
+components of $X_{\circ}$. Since $x\notin Z_{\circ}$, in the first
+case $x\notin\overline{\{z\}}$. In the second case, one cannot have
+both $x\in\overline{\{z\}}$ and $z\in V(g_x)$, for then $g_x$, and
+therefore $f_x$, would vanish on an irreducible component of
+$\overline{\{z\}}\cap X_{\circ}$, which is also an irreducible
+component of $X_{\circ}$; this is incompatible with $f_x$ being a
+non-zero-divisor in $\Oo_{X_{\circ},x}$. After shrinking $U_x$, we may
+therefore suppose\pageoriginale that
+$V(g_x)\cap\Ass\Oo_{U_x}=\varnothing$, so $g_x$ is a
+non-zero-divisor.
+
+Let $Y_x$ be the closure of $V(g_x)$ in $X$. The point $x$ is isolated
+in $Y_x\cap X_{\circ}\cap U_x$, hence also in
+$Y_x\cap X_{\circ}$. By condition (b), $Y_x$ has a connected
+component $Y'_x$ such that $Y'_x\cap X_{\circ}=\{x\}$. Moreover,
+$Y'_x\subset U_x$: indeed,
+$T_x=Y'_x-(Y'_x\cap U_x)$ is closed in $X$ and satisfies
+$T_x\cap X_{\circ}=\varnothing$, so condition (b) gives
+$T_x=\varnothing$. Let $D'_x$ be the Cartier divisor on $X$ induced
+by $Y'_x$ on $U_x$ and by zero on $X-Y'_x$. Then
+$D=\sum_xD'_x$ is an effective Cartier divisor on $X$ inducing
+$D_{\circ}$ on $X_{\circ}$.
+
+\item The conclusion follows from (i) and the fact that every
+invertible module $\LL_{\circ}$ on $X_{\circ}$ is isomorphic to the
+module defined by a Cartier divisor $D_{\circ}$ whose support does not
+meet $Z_{\circ}$. This last assertion means that $\LL_{\circ}$ admits
+a section on an open set $V_{\circ}$ containing
+$\Ass\Oo_{X_{\circ}}\cup Z_{\circ}$ which vanishes at no point of
+that set. It is enough to prove this after replacing $X_{\circ}$ by
+the affine open $U_{\circ}$; there it follows from the familiar fact
+that an invertible module on a semilocal scheme is isomorphic to the
+structure sheaf. Finally, if $X_{\circ}$ admits an ample invertible
+sheaf, every finite subset of $X_{\circ}$ is contained in an affine
+open subset. This proves (ii).
+\end{enumerate}
+
+We have the following corollary, which generalizes
+\hyperrefext[XII][XII.prop8.6]{8.6} and completes the proof of
+\hyperrefext[XII][XII.thm5.1]{5.1} (iii).
+
+\begin{enonce*}{Corollary 3.2}\etiquette[3.2]{XIII.cor3.2}
+Let $S$ be the spectrum of a Noetherian Henselian ring, and let
+$f:X\rightarrow S$ be a proper morphism of relative dimension
+$\leq1$. For every closed subscheme $X'_{\circ}$ of $X$ having the
+same underlying space as the closed fiber\pageoriginale $X_{\circ}$
+of $X/S$, the canonical map
+$\Pic(X)\rightarrow\Pic(X'_{\circ})$ is surjective.
+\end{enonce*}
+
+Indeed, apply the proposition to $(X,X'_{\circ})$. Condition (a) holds
+by hypothesis, and condition (b) follows from
+\hyperrefext[XII][XII.cor5.7]{5.7}. It remains to verify the existence
+of $U_{\circ}$ required in (ii); this follows because $X'_{\circ}$ is
+necessarily projective, as is every proper curve over a field.
+
+\begin{enonce*}[remark]{Remark}
+A reader who does not wish to assume or reconstruct the fact that
+proper curves over a field are projective may use the corollary only
+under the additional hypothesis that $f$ is projective; this suffices
+for the application intended here. Conversely, admitting the
+projectivity of proper algebraic curves over a field, one concludes
+that under the hypotheses of \hyperref[XIII.cor3.2]{3.2}, $X$ is
+necessarily projective over $S$. Indeed, choose an ample
+$\xi_{\circ}\in\Pic(X_{\circ})$, lift it to some
+$\xi\in\Pic(X)$, and apply \EGA III 4.7.1.
+\end{enonce*}
+
+\begin{thebibliography}{99}
+\bibitem{sga4.exp.XIII.bib.TDTE} Grothendieck A., Technique de descente et
+théorèmes d'existence en Géométrie Algébrique, in Fondements de la
+Géométrie Algébrique (Extraits du Sém. Bourbaki 1957--62), Secrétariat
+mathématique, 11, rue Pierre Curie.
+\end{thebibliography}
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

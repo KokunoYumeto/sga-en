@@ -1,0 +1,737 @@
+
+\setcounter{footnote}{9}
+
+\SGARefTarget{sga3:iv:section:3}\section*{3. Universal Effective Equivalence Relations}
+\addcontentsline{toc}{section}{3. Universal Effective Equivalence Relations}
+
+\SGARefTarget{sga3:iv:subsection:3:1}\subsection*{3.1. Equivalence Relations: Definitions}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:iv:subsection:3:1}{3.1}. Equivalence Relations: Definitions}
+
+\noindent\SGARefTarget{sga3:iv:definition:3:1:1}\textbf{Definition 3.1.1.}
+\textit{A \(\mathscr C\)-equivalence relation in an object
+\(X\in\operatorname{Ob}\mathscr C\) is a representable subfunctor \(R\) of
+the functor \(X\times X\) such that, for every
+\(S\in\operatorname{Ob}\mathscr C\), \(R(S)\) is the graph of an equivalence
+relation on \(X(S)\).}
+
+\SGARefLink{sga3:iv:definition:3:1:1}{This definition} applies in particular to the category
+\(\widehat{\mathscr C}\). If \(X\) is regarded as an object of
+\(\widehat{\mathscr C}\), then a \(\widehat{\mathscr C}\)-equivalence relation
+in \(X\) is simply a subfunctor \(R\) of \(X\times X\) such that \(R(S)\) is
+the graph of an equivalence relation on \(X(S)\), for every object \(S\) of
+\(\mathscr C\).\footnote{Editor's note: the condition is plainly necessary.
+Conversely, if \(R(S)\) is the graph of an equivalence relation for every
+\(S\in\operatorname{Ob}\mathscr C\), this equivalence relation extends to
+\(R(F)\) for every \(F\in\operatorname{Ob}\widehat{\mathscr C}\): two
+morphisms \(\varphi,\psi:F\to R\) are declared equivalent if, for every
+\(S\in\operatorname{Ob}\mathscr C\) and every \(x\in F(S)\), the elements
+\(\varphi(x)\) and \(\psi(x)\) are equivalent in \(X(S)\).}
+
+If \(R\) is a \(\mathscr C\)-equivalence relation in \(X\), let \(p_i\)
+denote the morphism from \(R\) to \(X\) induced by the projection
+\(\operatorname{pr}_i:X\times X\to X\). Thus there is a diagram
+\[
+  p_1,p_2:R\rightrightarrows X.
+\]
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:1:2}\textbf{Definition 3.1.2.}
+\textit{A morphism \(u:X\to Z\) is said to be \emph{compatible with \(R\)}
+if \(up_1=up_2\). An object of \(\mathscr C\) that is a cokernel of the pair
+\((p_1,p_2)\) is also called a \emph{quotient object} of \(X\) by \(R\), and
+is denoted \(X/R\).}
+
+Thus one has an exact diagram
+\[
+  R\overset{p_1}{\underset{p_2}{\rightrightarrows}}
+  X\xrightarrow{p}X/R,
+\]
+and \(X/R\) represents the covariant functor
+\[
+  \operatorname{Hom}_{\mathscr C}(X/R,Z)
+  =\{\text{morphisms from \(X\) to \(Z\) compatible with \(R\)}\}.
+\]
+Since quotient objects are taken in \(\mathscr C\), the quotient \(X/R\) is
+unique whenever it exists.
+
+These definitions extend at once to a
+\(\widehat{\mathscr C}\)-equivalence relation in \(X\). One should note,
+however, that the identification of the objects of \(\mathscr C\) with their
+images in \(\widehat{\mathscr C}\) does not commute with the formation of
+quotients: the quotient \(X/R\) of \(X\) by \(R\) in \(\mathscr C\) is not
+\emph{a priori} a quotient of \(X\) by \(R\) in
+\(\widehat{\mathscr C}\). One must therefore avoid identifying
+\(\mathscr C\) uncritically with its image in \(\widehat{\mathscr C}\) in
+questions involving passage to a quotient.\footnote{Editor's note: here is an
+illustration that also previews the sequel of this expos\'e. Let \(G\) be a
+\(\mathscr C\)-group, let \(H\) be a \(\mathscr C\)-subgroup, and let \(R\)
+be the equivalence relation in \(G\) defined by
+\(G\times H\to G\times G\), \((g,h)\mapsto(g,gh)\) (cf. \SGARefLink{sga3:iv:subsection:3:2}{3.2}). The functor
+\(Q\) defined by \(Q(S)=G(S)/H(S)\) is a quotient in
+\(\widehat{\mathscr C}\) (by \SGARefLink{sga3:iv:proposition:4:4:9}{4.4.9} applied to the coarsest topology; cf.
+\SGARefLink{sga3:iv:scholium:4:4:2}{4.4.2}), but it is not in general the quotient one wants. For example, when
+\(\mathscr C=\mathbf{Sch}\), there is an exact sequence of affine group
+schemes
+\[
+  1\longrightarrow\mu_2\longrightarrow\mathbf G_m
+  \xrightarrow{p}\mathbf G_m\longrightarrow1
+\]
+that identifies \(\mathbf G_m\) with the quotient \(\mathbf G_m/\mu_2\).
+Moreover, because \(p\) is finite and locally free, \(\mathbf G_m\) is the
+sheaf quotient of \(\mathbf G_m\) by \(\mu_2\) in the larger category of
+sheaves for the fppf topology; cf. \SGARefLink{sga3:iv:theorem:4:6:6:item:ii:01}{4.6.6(ii)} and \SGARefLink{sga3:iv:corollary:6:3:2}{6.3.2}. By contrast, the
+quotient \(Q\) in \(\widehat{\mathscr C}\) is not isomorphic to
+\(\mathbf G_m\), since, for example, \(Q(\mathbf Z)=\{1\}\), whereas
+\(\mathbf G_m(\mathbf Z)=\{\pm1\}\). Thus \(Q\) is not an fppf sheaf and,
+\emph{a fortiori}, is not representable.}
+
+In what follows, we shall simply say \emph{equivalence relation} to mean a
+\(\widehat{\mathscr C}\)-equivalence relation; whenever necessary, we shall
+specify that a \(\mathscr C\)-equivalence relation is intended.\footnote{Editor's
+note: even for a \(\widehat{\mathscr C}\)-equivalence relation in \(X\), the
+question of interest is the existence of a quotient in \(\mathscr C\).}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:1:3}\textbf{Definition 3.1.3.}
+\textit{If \(X\) is an object of \(\mathscr C\) over \(S\), an
+\emph{equivalence relation in \(X\) over \(S\)} is an equivalence relation
+\(R\) in \(X\) for which the structure morphism \(X\to S\) is compatible
+with \(R\).}
+
+The canonical monomorphism \(R\to X\times X\) then factors through the
+monomorphism
+\[
+  X\times_S X\longrightarrow X\times X
+\]
+and defines an equivalence relation in the object \(X\to S\) of
+\(\mathscr C_{/S}\). Whenever the quotient \(X/R\) exists, it is equipped
+with a canonical morphism to \(S\), and the corresponding object of
+\(\mathscr C_{/S}\) is a quotient of \(X\in\operatorname{Ob}\mathscr C_{/S}\)
+by the preceding equivalence relation. Conversely, if \(S\) is a squarable
+object of \(\mathscr C\) and \(Y\to S\) is a quotient of \(X\) by this
+equivalence relation in \(\mathscr C_{/S}\), then \(Y\) is a quotient of
+\(X\) by \(R\) in \(\mathscr C\). In any event, we shall never have to
+consider quotients in \(\mathscr C_{/S}\) that are not already quotients in
+\(\mathscr C\).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:1:4}\textbf{Definition 3.1.4.}
+\textit{Let \(X\) (respectively \(X'\)) be an object of \(\mathscr C\)
+equipped with an equivalence relation \(R\) (respectively \(R'\)). A morphism
+\[
+  u:X\longrightarrow X'
+\]
+is said to be \emph{compatible with \(R\) and \(R'\)} if the following
+equivalent conditions hold:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:definition:3:1:4:item:i:01} \textit{for every \(S\in\operatorname{Ob}\mathscr C\), two
+  points of \(X(S)\) congruent modulo \(R(S)\) are carried by \(u\) to two
+  points of \(X'(S)\) congruent modulo \(R'(S)\);}
+  \item[(ii)]\SGARefTarget{sga3:iv:definition:3:1:4:item:ii:01} \textit{there exists a necessarily unique morphism \(R\to R'\)
+  making the diagram}
+  \[
+    \begin{array}{ccc}
+      R & \longrightarrow & R'\\
+      \big\downarrow && \big\downarrow\\
+      X\times X & \xrightarrow{u\times u} & X'\times X'
+    \end{array}
+  \]
+  \textit{commute.}
+\end{enumerate}
+
+By the universal property of \(X/R\), whenever \(X/R\) and \(X'/R'\)
+exist there is a unique morphism \(v\) making the diagram
+\[
+  \begin{array}{ccc}
+    X & \xrightarrow{p} & X/R\\
+    {\scriptstyle u}\big\downarrow && \big\downarrow{\scriptstyle v}\\
+    X' & \xrightarrow{p'} & X'/R'
+  \end{array}
+\]
+commute.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:1:5}\textbf{Definition 3.1.5.}
+\textit{A subobject (that is, a representable subfunctor) \(Y\) of \(X\) is
+said to be \emph{stable under the equivalence relation \(R\)} if the following
+equivalent conditions hold:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:definition:3:1:5:item:i:01} \textit{for every \(S\in\operatorname{Ob}\mathscr C\), the
+  subset \(Y(S)\) of \(X(S)\) is stable under \(R(S)\);}
+  \item[(ii)]\SGARefTarget{sga3:iv:definition:3:1:5:item:ii:01} \textit{the two subobjects of \(R\) that are the inverse
+  images of \(Y\) under \(p_1\) and \(p_2\) are identical.}
+\end{enumerate}
+
+An important special case of a stable subobject of \(X\) is the following:
+the quotient \(X/R\) exists and \(Y\) is the inverse image in \(X\) of a
+subobject of \(X/R\).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:1:6}\textbf{Definition 3.1.6.}
+\textit{Let \(R\) be an equivalence relation in \(X\), and let \(X'\to X\)
+be a morphism. The equivalence relation \(R'\) in \(X'\) obtained from the
+cartesian diagram}
+\[
+  \begin{array}{ccc}
+    R' & \longrightarrow & R\\
+    \big\downarrow && \big\downarrow\\
+    X'\times X' & \longrightarrow & X\times X
+  \end{array}
+\]
+\textit{is called the equivalence relation in \(X'\) that is the
+\emph{inverse image} of the equivalence relation \(R\) in \(X\). In
+particular, if \(X'\) is a subobject of \(X\), it is called the equivalence
+relation \emph{induced} on \(X'\) by \(R\), and is denoted \(R_{X'}\).}
+
+The morphism \(X'\to X\) is compatible with \(R'\) and \(R\); hence, when
+the quotients exist, it induces a morphism \(X'/R'\to X/R\) (\SGARefLink{sga3:iv:definition:3:1:4}{3.1.4}). If
+\(X'\) is a subobject of \(X\), we shall see later that in certain cases one
+can prove that \(X'/R'\to X/R\) is a monomorphism and therefore identifies
+\(X'/R'\) with a subobject of \(X/R\). In that situation, the inverse image
+of this subobject in \(X\) is a subobject containing \(X'\) and stable under
+\(R\): the \emph{saturation} of \(X'\) with respect to the equivalence
+relation \(R\).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:3:1:7}\textbf{Proposition 3.1.7.}
+\textit{If the subobject \(Y\) of \(X\) is stable under \(R\), then for
+\(i=1,2\) the following two squares are cartesian:}
+\[
+  \begin{array}{ccc}
+    R_Y & \longrightarrow & R\\
+    {\scriptstyle p_i}\big\downarrow && \big\downarrow{\scriptstyle p_i}\\
+    Y & \longrightarrow & X.
+  \end{array}
+\]
+
+The proof is immediate.
+
+\SGARefTarget{sga3:iv:subsection:3:2}\subsection*{3.2. Equivalence Relation Defined by a Group Acting Freely}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:iv:subsection:3:2}{3.2}. Equivalence Relation Defined by a Group Acting Freely}
+
+\noindent\SGARefTarget{sga3:iv:definition:3:2:1}\textbf{Definition 3.2.1.}
+\textit{Let \(X\) be an object of \(\mathscr C\), and let \(H\) be a
+\(\mathscr C\)-group acting on \(X\), that is, equipped with a morphism of
+\(\widehat{\mathscr C}\)-groups}
+\[
+  H\longrightarrow\operatorname{Aut}(X).
+\]
+\textit{The group \(H\) is said to act \emph{freely} on \(X\) if the
+following equivalent conditions hold:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:definition:3:2:1:item:i:01} \textit{for every \(S\in\operatorname{Ob}\mathscr C\), the
+  group \(H(S)\) acts freely on \(X(S)\);}
+  \item[(ii)]\SGARefTarget{sga3:iv:definition:3:2:1:item:ii:01} \textit{the morphism of functors}
+  \[
+    H\times X\longrightarrow X\times X
+  \]
+  \textit{defined on sets by \((h,x)\mapsto(hx,x)\) is a monomorphism.}
+\end{enumerate}
+
+In \SGARefLink{sga3:iv:definition:3:2:1}{the preceding definition} the group \(H\) was assumed to act on \(X\) on
+the left. There is of course an analogous notion when the group acts on the
+right, that is, when one is given a group morphism from the opposite group
+\(H^{\circ}\) to \(\operatorname{Aut}(X)\).
+
+If \(H\) acts freely on \(X\), the image of \(H\times X\) under the
+morphism in \SGARefLink{sga3:iv:definition:3:2:1:item:ii:01}{(ii)} is an equivalence relation in \(X\), called the
+\emph{equivalence relation defined by the action of \(H\) on \(X\)}. When
+the quotient of \(X\) by this equivalence relation exists, it is denoted
+\(H\backslash X\) (or \(X/H\) when \(H\) acts on the right). It represents
+the following covariant functor: for every object \(Z\) of \(\mathscr C\),
+\[
+  \operatorname{Hom}(H\backslash X,Z)
+  =\{\text{morphisms from \(X\) to \(Z\) invariant under \(H\)}\},
+\]
+where a morphism \(f:X\to Z\) is said to be invariant under \(H\) if, for
+every \(S\in\operatorname{Ob}\mathscr C\), the corresponding morphism
+\(X(S)\to Z(S)\) is invariant under the group \(H(S)\).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:3:2:2}\textbf{Lemma 3.2.2.}
+\textit{Under the assumptions of \SGARefLink{sga3:iv:definition:3:2:1}{3.2.1}, let \(Y\) be a subobject of \(X\).
+The following conditions are equivalent:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:lemma:3:2:2:item:i:01} \textit{\(Y\) is stable under the equivalence relation defined
+  by \(H\) (\SGARefLink{sga3:iv:definition:3:1:5}{3.1.5});}
+  \item[(ii)]\SGARefTarget{sga3:iv:lemma:3:2:2:item:ii:01} \textit{for every \(S\in\operatorname{Ob}\mathscr C\), the
+  subset \(Y(S)\) of \(X(S)\) is stable under \(H(S)\);}
+  \item[(iii)]\SGARefTarget{sga3:iv:lemma:3:2:2:item:iii:01} \textit{there exists a necessarily unique morphism \(f\)
+  making the diagram}
+  \[
+    \begin{array}{ccc}
+      H\times Y & \xrightarrow{f} & Y\\
+      \big\downarrow && \big\downarrow\\
+      H\times X & \longrightarrow & X
+    \end{array}
+  \]
+  \textit{commute.}
+\end{enumerate}
+\textit{Under these conditions, \(f\) defines a morphism of
+\(\widehat{\mathscr C}\)-groups}
+\[
+  H\longrightarrow\operatorname{Aut}(Y),
+\]
+\textit{and the equivalence relation in \(Y\) defined by this action of
+\(H\) is precisely the equivalence relation induced on \(Y\) by the
+equivalence relation in \(X\) defined by the action of \(H\).}
+
+The proof is immediate. There is of course an analogous statement for a
+right action. The action of \(H\) on \(Y\) defined above will be called the
+action induced on \(Y\) by the given action of \(H\) on \(X\).
+
+Consider now two \(\mathscr C\)-groups \(H\) and \(G\), together with a
+group morphism
+\[
+  u:H\longrightarrow G.
+\]
+Then \(H\) acts on \(G\) by translations (set-theoretically,
+\(hg=u(h)g\)), and it acts freely if and only if \(u\) is a monomorphism.
+When it exists, the quotient of \(G\) by this action of \(H\) is denoted
+\(H\backslash G\). Similarly, one defines a right action of \(H\) on \(G\)
+and a quotient \(G/H\). These quotients are functorial with respect to the
+groups involved. More precisely, one has \SGARefLink{sga3:iv:lemma:3:2:3}{the following lemma}, stated for
+right quotients.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:3:2:3}\textbf{Lemma 3.2.3.}
+\textit{Let \(u:H\to G\) and \(u':H'\to G'\) be monomorphisms of
+\(\mathscr C\)-groups, and suppose that a morphism of \(\mathscr C\)-groups
+\[
+  f:G\longrightarrow G'
+\]
+is given. The following conditions are equivalent:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:lemma:3:2:3:item:i:01} \textit{\(f\) is compatible with the equivalence relations in
+  \(G\) and \(G'\) defined by \(H\) and \(H'\);}
+  \item[(ii)]\SGARefTarget{sga3:iv:lemma:3:2:3:item:ii:01} \textit{for every \(S\in\operatorname{Ob}\mathscr C\), one
+  has \(fu(H(S))\subseteq u'(H'(S))\);}
+  \item[(iii)]\SGARefTarget{sga3:iv:lemma:3:2:3:item:iii:01} \textit{there exists a necessarily unique multiplicative
+  morphism \(g:H\to H'\) such that the diagram}
+  \[
+    \begin{array}{ccc}
+      H & \xrightarrow{g} & H'\\
+      {\scriptstyle u}\big\downarrow && \big\downarrow{\scriptstyle u'}\\
+      G & \xrightarrow{f} & G'
+    \end{array}
+  \]
+  \textit{commutes.}
+\end{enumerate}
+\textit{Under these conditions, if the quotients \(G/H\) and \(G'/H'\)
+exist, there is a unique morphism \(\overline f\) making the diagram}
+\[
+  \begin{array}{ccc}
+    G & \xrightarrow{f} & G'\\
+    {\scriptstyle p}\big\downarrow && \big\downarrow{\scriptstyle p'}\\
+    G/H & \xrightarrow{\overline f} & G'/H'
+  \end{array}
+\]
+\textit{commute.}
+
+The first assertion is proved by reduction to the set-theoretic case. The
+second follows immediately from \SGARefLink{sga3:iv:lemma:3:2:3:item:i:01}{(i)}.
+
+The notions introduced above for general equivalence relations could all be
+translated into the present setting. We record only \SGARefLink{sga3:iv:lemma:3:2:4}{the following lemma},
+whose proof is immediate by reduction to the set-theoretic case.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:3:2:4}\textbf{Lemma 3.2.4.}
+\textit{Let \(u:H\to G\) be a monomorphism of \(\mathscr C\)-groups, and
+let \(G'\) be a \(\mathscr C\)-subgroup of \(G\). The subobject \(G'\) of
+\(G\) is stable under the equivalence relation defined by \(H\) if and only
+if \(u\) factors through the canonical monomorphism \(G'\to G\). Under \SGARefLink{sga3:iv:lemma:3:2:4}{this
+condition}, the action of \(H\) on \(G'\) induced by the action on \(G\)
+defined by \(u\) is precisely the action arising from the monomorphism
+\(H\to G'\) through which \(u\) factors.}
+
+\SGARefTarget{sga3:iv:subsection:3:3}\subsection*{3.3. Universally Effective Equivalence Relations}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:iv:subsection:3:3}{3.3}. Universally Effective Equivalence Relations}
+
+\noindent\SGARefTarget{sga3:iv:definition:3:3:1}\textbf{Definition 3.3.1.}
+\textit{Let \(f:X\to Y\) be a morphism. The \emph{equivalence relation
+defined by \(f\) in \(X\)}, denoted \(\mathscr R(f)\), is the
+\(\widehat{\mathscr C}\)-equivalence relation in \(X\) that is the image of
+the canonical monomorphism}
+\[
+  X\times_Y X\longrightarrow X\times X.
+\]
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:3:2}\textbf{Definition 3.3.2.}
+\textit{An equivalence relation \(R\) in \(X\) is said to be
+\emph{effective} if:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:definition:3:3:2:item:i:01} \textit{\(R\) is representable, that is, it is a
+  \(\mathscr C\)-equivalence relation;}
+  \item[(ii)]\SGARefTarget{sga3:iv:definition:3:3:2:item:ii:01} \textit{the quotient \(Y=X/R\) exists in
+  \(\mathscr C\);}\footnote{Editor's note: the words ``in
+  \(\mathscr C\)'' have been added.}
+  \item[(iii)]\SGARefTarget{sga3:iv:definition:3:3:2:item:iii:01} \textit{the diagram}
+  \[
+    R\overset{p_1}{\underset{p_2}{\rightrightarrows}}
+    X\xrightarrow{p}Y
+  \]
+  \textit{makes \(R\) the fiber square of \(X\) over \(Y\), that is,
+  \(R\) is the equivalence relation defined by \(p\).}
+\end{enumerate}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:scholium:3:3:2:1}\textbf{Scholium 3.3.2.1.}\footnote{Editor's note: the numbering
+\SGARefLink{sga3:iv:scholium:3:3:2:1}{3.3.2.1} (respectively \SGARefLink{sga3:iv:scholium:3:3:3:1}{3.3.3.1}) has been added for later reference; Remark
+\SGARefLink{sga3:iv:remark:3:3:3:2}{3.3.3.2} has also been added.}
+\textit{If \(R\) is an effective equivalence relation in \(X\), then \(p\)
+is an effective epimorphism (\SGARefLink{sga3:iv:definition:1:3}{1.3}). If \(f:X\to Y\) is an effective
+epimorphism, then \(\mathscr R(f)\) is an effective equivalence relation in
+\(X\), one quotient of which is \(Y\). Thus there is a one-to-one
+``Galois'' correspondence between effective equivalence relations in \(X\)
+and effective quotients of \(X\), that is, equivalence classes of effective
+epimorphisms with source \(X\).}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:3:3}\textbf{Definition 3.3.3.}
+\textit{An equivalence relation \(R\) in \(X\) is said to be
+\emph{universally effective} if the quotient \(Y=X/R\) exists and, for
+every \(Y'\to Y\), the fiber products \(X'=X\times_Y Y'\) and
+\(R'=R\times_Y Y'\) exist and \(R'\) is the fiber square of \(X'\) over
+\(Y'\). Equivalently, \(R\) is effective and \(p:X\to X/R\) is a universal
+effective epimorphism.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:scholium:3:3:3:1}\textbf{Scholium 3.3.3.1.}\footnotemark[14]
+\textit{As above, there is a one-to-one correspondence between universally
+effective equivalence relations in \(X\) and universal effective quotients
+of \(X\).}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:remark:3:3:3:2}\textbf{Remark 3.3.3.2.}\footnotemark[14]
+Suppose that \(\mathscr C\) is the category of \(S\)-schemes, and write
+\(\mathbf A^1_S\) for affine one-space over \(S\). Let
+\(R\subset X\times_S X\) be a universally effective equivalence relation,
+and let \(p:X\to Y\) be its quotient. Then, for every open subset \(U\) of
+\(Y\),
+\[
+  \mathcal O(U)=\operatorname{Hom}_S(U,\mathbf A^1_S)
+\]
+is the set of elements \(\varphi\) of
+\[
+  \mathcal O(p^{-1}(U))
+  =\operatorname{Hom}_S(p^{-1}(U),\mathbf A^1_S)
+\]
+such that \(\varphi\circ\operatorname{pr}_1
+=\varphi\circ\operatorname{pr}_2\). In particular, if \(R\) is defined by
+the action of a group \(H\) acting freely on the right on \(X\) (cf. \SGARefLink{sga3:iv:definition:3:2:1}{3.2.1}),
+then \(\mathcal O(U)\) is the set of all
+\(\varphi\in\mathcal O(p^{-1}(U))\) such that
+\[
+  \varphi(xh)=\varphi(x)
+\]
+for every \(S'\to S\), \(x\in X(S')\), and \(h\in H(S')\).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:3:3:4}\textbf{Proposition 3.3.4.}
+\textit{Let \(R\) be a universally effective equivalence relation in
+\(X\). Let \(f:X\to Z\) be a morphism compatible with \(R\), hence
+factoring through a morphism \(g:X/R\to Z\). The following conditions are
+equivalent:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:proposition:3:3:4:item:i:01} \textit{\(g\) is a monomorphism;}
+  \item[(ii)]\SGARefTarget{sga3:iv:proposition:3:3:4:item:ii:01} \textit{\(R\) is the equivalence relation defined by \(f\).}
+\end{enumerate}
+
+Indeed, \SGARefLink{sga3:iv:proposition:3:3:4:item:i:01}{(i)} plainly implies \SGARefLink{sga3:iv:proposition:3:3:4:item:ii:01}{(ii)}, while the converse is precisely \SGARefLink{sga3:iv:corollary:2:5}{2.5}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:3:5}\textbf{Definition 3.3.5.}
+\textit{Let \(H\) be a \(\mathscr C\)-group acting freely on \(X\). One
+says that \(H\) acts \emph{effectively}, or that the action of \(H\) on
+\(X\) is \emph{effective} (respectively \emph{universally effective}), if
+the equivalence relation in \(X\) defined by the action of \(H\) is
+effective (respectively universally effective).}
+
+\SGARefTarget{sga3:iv:subsection:3:4}\subsection*{3.4. \((M)\)-Effectivity}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:iv:subsection:3:4}{3.4}. (M)-Effectivity}
+
+In practice, universal effective epimorphisms are most often difficult to
+characterize. Nevertheless, one frequently has at hand a number of
+morphisms of this kind--in scheme theory, for example, faithfully flat
+quasi-compact morphisms. This leads to the developments below.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:para:3:4:1}\textbf{3.4.1.}
+We first state several conditions on a family \((M)\) of morphisms of
+\(\mathscr C\):
+\begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:iv:para:3:4:1:item:a:01} \((M)\) is stable under base change: every
+  \(u:T\to S\) belonging to \((M)\) is squarable (cf. \SGARefLink{sga3:iv:definition:1:4:0}{1.4.0}), and for every
+  \(S'\to S\), the base change
+  \[
+    u':T\times_S S'\longrightarrow S'
+  \]
+  belongs to \((M)\);
+  \item[(b)]\SGARefTarget{sga3:iv:para:3:4:1:item:b:01} the composite of two elements of \((M)\) belongs to \((M)\);
+  \item[(c)]\SGARefTarget{sga3:iv:para:3:4:1:item:c:01} every isomorphism belongs to \((M)\);
+  \item[(d)]\SGARefTarget{sga3:iv:para:3:4:1:item:d:01} every element of \((M)\) is an effective epimorphism.
+\end{enumerate}
+
+Conditions \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{(a)} and \SGARefLink{sga3:iv:para:3:4:1:item:b:01}{(b)} imply:
+\begin{enumerate}
+  \item[(a$'$)]\SGARefTarget{sga3:iv:para:3:4:1:item:a:prime:01} the cartesian product of two elements of \((M)\) belongs
+  to \((M)\). More precisely, let \(u:X\to Y\) and \(u':X'\to Y'\) be two
+  \(S\)-morphisms belonging to \((M)\). If \(Y\times_S Y'\) exists, then
+  \(X\times_S X'\) exists and \(u\times_Su'\) belongs to \((M)\).
+\end{enumerate}
+
+This follows from the diagram
+\[
+\begin{array}{ccccc}
+  &&Y'&\xleftarrow{u'}&X'\\
+  &&\big\uparrow&&\big\uparrow\\[-2pt]
+  X&\longleftarrow&X\times_S Y'&\longleftarrow&X\times_S X'\\
+  {\scriptstyle u}\big\downarrow&&\big\downarrow&&
+    \underset{\scriptstyle u\times_Su'}{\swarrow}\\[-2pt]
+  Y&\longleftarrow&Y\times_S Y'&&
+\end{array}
+\]
+Likewise, \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{(a)} and \SGARefLink{sga3:iv:para:3:4:1:item:d:01}{(d)} imply:
+\begin{enumerate}
+  \item[(d$'$)]\SGARefTarget{sga3:iv:para:3:4:1:item:d:prime:01} every element of \((M)\) is a universal effective
+  epimorphism.
+\end{enumerate}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:para:3:4:2}\textbf{3.4.2.}
+The family \((M_0)\) of universal effective epimorphisms satisfies
+conditions \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{(a)}--\SGARefLink{sga3:iv:para:3:4:1:item:d:01}{(d)} of \SGARefLink{sga3:iv:para:3:4:1}{3.4.1}. Indeed, \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{(a)}, \SGARefLink{sga3:iv:para:3:4:1:item:c:01}{(c)}, and \SGARefLink{sga3:iv:para:3:4:1:item:d:01}{(d)} hold by definition,
+and \SGARefLink{sga3:iv:para:3:4:1:item:b:01}{(b)} follows from \SGARefLink{sga3:iv:proposition:1:8}{1.8}. Henceforth we assume given a family \((M)\) of
+morphisms of \(\mathscr C\) satisfying these conditions; our results apply
+in particular to the family \((M_0)\).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:4:3}\textbf{Definition 3.4.3.}
+An equivalence relation \(R\) in \(X\) is said to be \emph{of type \((M)\)}
+if it is representable and \(p_1\in(M)\); conditions \SGARefLink{sga3:iv:para:3:4:1:item:b:01}{(b)} and \SGARefLink{sga3:iv:para:3:4:1:item:c:01}{(c)} then imply
+that \(p_2\in(M)\).
+
+The relation \(R\) is said to be \emph{\((M)\)-effective} if it is effective
+and the canonical morphism \(X\to X/R\) belongs to \((M)\).
+
+A quotient \(Y\) of \(X\) is said to be \emph{\((M)\)-effective} if the
+canonical morphism \(X\to Y\) belongs to \((M)\).
+
+The following consequences are immediate from \SGARefLink{sga3:iv:definition:3:4:3}{the definition}.\footnote{Editor's
+note: the numbering \SGARefLink{sga3:iv:proposition:3:4:3:1}{3.4.3.1} has been added for later reference, and the proof
+of part \SGARefLink{sga3:iv:proposition:3:4:3:1:item:i:01}{(i)} has been expanded.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:3:4:3:1}\textbf{Proposition 3.4.3.1.}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:proposition:3:4:3:1:item:i:01} \textit{An \((M)\)-effective equivalence relation is of type
+  \((M)\) and is universally effective.}
+  \item[(ii)]\SGARefTarget{sga3:iv:proposition:3:4:3:1:item:ii:01} \textit{An \((M)\)-effective quotient is universally effective
+  (cf. \SGARefLink{sga3:iv:definition:3:3:3}{3.3.3}).}
+  \item[(iii)]\SGARefTarget{sga3:iv:proposition:3:4:3:1:item:iii:01} \textit{The maps \(R\mapsto X/R\) and
+  \(p\mapsto\mathscr R(p)\) establish a one-to-one correspondence between
+  \((M)\)-effective equivalence relations in \(X\) and
+  \((M)\)-effective quotients of \(X\).}
+  \item[(iv)]\SGARefTarget{sga3:iv:proposition:3:4:3:1:item:iv:01} \textit{To be \((M_0)\)-effective is equivalent to being
+  universally effective.}
+\end{enumerate}
+
+We prove \SGARefLink{sga3:iv:proposition:3:4:3:1:item:i:01}{(i)}. Since \(R\) is \((M)\)-effective, there is a cartesian square
+\[
+  \begin{array}{ccc}
+    R & \xrightarrow{p_2} & X\\
+    {\scriptstyle p_1}\big\downarrow && \big\downarrow{\scriptstyle p}\\
+    X & \xrightarrow{p} & X/R,
+  \end{array}
+\]
+and \(p\in(M)\). By \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{3.4.1(a)}, \(p_1\) and \(p_2\) belong to \((M)\), so
+\(R\) is of type \((M)\).
+
+Set \(Y=X/R\), and let \(Y'\to Y\) be any morphism. By \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{3.4.1(a)}, the fiber
+products \(X'=X\times_Y Y'\) and \(R'=R\times_Y Y'\) exist, and the
+morphisms \(X'\to Y'\) and \(p_i':R'\to X'\) belong to \((M)\). Finally,
+since \(R=X\times_Y X\), associativity of the fiber product gives
+\[
+  R'=X\times_Y X\times_Y Y'=X'\times_{Y'}X'.
+\]
+This shows that \(R'\) is \((M)\)-effective; in particular, \(R\) is
+universally effective. This proves \SGARefLink{sga3:iv:proposition:3:4:3:1:item:i:01}{(i)}, as well as \SGARefLink{sga3:iv:proposition:3:4:3:1:item:iv:01}{(iv)}. Parts \SGARefLink{sga3:iv:proposition:3:4:3:1:item:ii:01}{(ii)} and \SGARefLink{sga3:iv:proposition:3:4:3:1:item:iii:01}{(iii)}
+follow, taking Definition \SGARefLink{sga3:iv:definition:3:3:2}{3.3.2} into account.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:para:3:4:4}\textbf{3.4.4.}
+Let \(H\) be an \(S\)-group whose structure morphism belongs to \((M)\). If
+\(H\) acts freely on the \(S\)-object \(X\), then it defines an equivalence
+relation of type \((M)\) in \(X\). Indeed, by \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{(a)}, the fiber product
+\(H\times_S X\) exists and
+\(\operatorname{pr}_2:H\times_S X\to X\) belongs to \((M)\). The action of
+\(H\) is said to be \emph{\((M)\)-effective} if the equivalence relation in
+\(X\) defined by this action is \((M)\)-effective.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:3:4:5}\textbf{Proposition 3.4.5 (\((M)\)-effectivity and base change).}
+\textit{Let \(R\) be an \((M)\)-effective equivalence relation in \(X\)
+over \(S\), and set \(Y=X/R\). Let \(S'\to S\) be a base change for which
+\(Y'=Y\times_S S'\) exists. Then \(X'=X\times_S S'\) exists,
+\(R'=R\times_S S'\) is an \((M)\)-effective equivalence relation in \(X'\)
+over \(S'\), and}
+\[
+  X'/R'\simeq (X/R)'.
+\]
+
+Indeed, the canonical morphisms \(X\to Y\) and \(R\to Y\) belong to
+\((M)\); hence, by \SGARefLink{sga3:iv:para:3:4:1:item:a:prime:01}{(a$'$)}, \(X'\) and \(R'\) are representable. By
+associativity of the fiber product, \(R'\) is the equivalence relation in
+\(X'\) defined by the canonical morphism \(X'\to Y'\), which belongs to
+\((M)\). This proves \SGARefLink{sga3:iv:proposition:3:4:5}{the assertion}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:3:4:6}\textbf{Proposition 3.4.6 (\((M)\)-effectivity and cartesian
+products).}
+\textit{Let \(R\) (respectively \(R'\)) be an \((M)\)-effective equivalence
+relation in \(X\) (respectively \(X'\)) over \(S\). If
+\((X/R)\times_S(X'/R')\) exists, then \(X\times_SX'\) exists,
+\(R\times_SR'\) is an \((M)\)-effective equivalence relation in
+\(X\times_SX'\) over \(S\), and}
+\[
+  (X\times_SX')/(R\times_SR')
+  \simeq (X/R)\times_S(X'/R').
+\]
+
+Set \(Y=X/R\) and \(Y'=X'/R'\). By \SGARefLink{sga3:iv:para:3:4:1:item:a:prime:01}{(a$'$)}, the fiber product
+\(X\times_SX'\) exists and the canonical morphism
+\[
+  q:X\times_SX'\longrightarrow Y\times_SY'
+\]
+belongs to \((M)\). The formula
+\[
+  (X\times_SX')\times_{(Y\times_SY')}(X\times_SX')
+  \simeq (X\times_YX)\times_S(X'\times_{Y'}X')
+\]
+(all unlabelled fiber products being taken over \(S\)) shows that
+\(R\times_SR'\) is the equivalence relation in \(X\times_SX'\) defined by
+\(q\), which completes the proof.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:para:3:4:7}\textbf{3.4.7.}\footnote{Editor's note: \SGARefLink{sga3:iv:para:3:4:7}{this paragraph} has been
+added.}
+Suppose that \(\mathscr C\) has a final object \(e\), and let
+\(f:G\to G'\) be a morphism of \(\mathscr C\)-groups belonging to \((M)\).
+By \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{3.4.1(a)}, the kernel \(\operatorname{Ker}(f)\) is represented by
+\(e\times_{G'}G\), and the morphism \(\operatorname{Ker}(f)\to e\) belongs
+to \((M)\).
+
+On the other hand, the equivalence relation defined by \(f\) is the same as
+that defined by the action of \(\operatorname{Ker}(f)\), say on the right,
+on \(G\): it is the image of the morphism
+\[
+  G\times\operatorname{Ker}(f)\longrightarrow G\times G
+\]
+defined on sets by \((g,h)\mapsto(g,gh)\). Consequently, Scholium \SGARefLink{sga3:iv:scholium:3:3:2:1}{3.3.2.1}
+gives \SGARefLink{sga3:iv:corollary:3:4:7:1}{the following corollary}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:3:4:7:1}\textbf{Corollary 3.4.7.1.}
+\textit{Suppose that \(\mathscr C\) has a final object \(e\), and let
+\(f:G\to G'\) be a morphism of \(\mathscr C\)-groups belonging to \((M)\).
+Then the action of \(\operatorname{Ker}(f)\) on \(G\) is
+\((M)\)-effective, and \(G'\) is the quotient
+\(G/\operatorname{Ker}(f)\).}
+
+\SGARefTarget{sga3:iv:subsection:3:5}\subsection*{3.5. Construction of Quotients by Descent}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:iv:subsection:3:5}{3.5}. Construction of Quotients by Descent}
+
+It frequently happens that one cannot construct a quotient directly, but
+can do so after a suitable base change. This subsection gives a useful
+criterion for that situation.
+
+In \SGARefLink{sga3:iv:definition:2:1}{2.1} we defined a descent datum on an object \(X'\) over \(S'\), relative
+to a morphism \(S'\to S\).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:3:5:1}\textbf{Definition 3.5.1.}
+\textit{A descent datum on \(X'\), relative to \(S'\to S\), is said to be
+\emph{effective} if \(X'\), equipped with this descent datum, is isomorphic
+to the inverse image over \(S'\) of an object \(X\) over \(S\), equipped
+with its canonical descent datum.}
+
+If \(S'\to S\) is a descent morphism (\SGARefLink{sga3:iv:definition:2:2}{2.2}), then the object \(X\) in \SGARefLink{sga3:iv:definition:3:5:1}{the
+definition} is unique up to unique isomorphism. To say that \(S'\to S\) is
+an effective descent morphism (\SGARefLink{sga3:iv:definition:2:2}{2.2}) means that it is a descent morphism and
+that every descent datum relative to it is effective.
+
+Now consider an equivalence relation \(R\) in an object \(X\) over \(S\).
+Let \(X'\), \(X''\), and \(X'''\) be the inverse images of \(X\) over
+\[
+  S',\qquad S''=S'\times_SS',\qquad
+  S'''=S'\times_SS'\times_SS',
+\]
+respectively, and let \(R'\), \(R''\), and \(R'''\) be the equivalence
+relations obtained from \(R\) by inverse image. Suppose that \(R'\) in
+\(X'\) is \((M)\)-effective, and consider the quotient
+\(Y'=X'/R'\), an object over \(S'\). By \SGARefLink{sga3:iv:proposition:3:4:5}{3.4.5}, its two inverse images over
+\(S''\) are isomorphic to \(X''/R''\). Thus the \(S'\)-object \(Y'\) has a
+canonical gluing datum. Applying in the same way the uniqueness of
+\(X'''/R'''\), one sees that this is in fact a descent datum. (In this
+argument it has been tacitly assumed that all the displayed fiber products
+exist. This holds, in particular, if \(S'\to S\) is squarable, for example
+if it is a descent morphism.)
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:3:5:2}\textbf{Proposition 3.5.2.}
+\textit{Let \(R\) be an equivalence relation in the object \(X\) over
+\(S\), and let \(S'\to S\) be a universal effective epimorphism. Assume
+that every \(S\)-morphism whose inverse image over \(S'\) belongs to
+\((M)\) itself belongs to \((M)\). The following conditions are equivalent:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:proposition:3:5:2:item:i:01} \textit{\(R\) is \((M)\)-effective in \(X\);}
+  \item[(ii)]\SGARefTarget{sga3:iv:proposition:3:5:2:item:ii:01} \textit{\(R'\) is \((M)\)-effective in \(X'\), and the
+  canonical descent datum on \(X'/R'\) is effective.}
+\end{enumerate}
+\textit{When these conditions hold, the object descended from \(X'/R'\) is
+canonically isomorphic to \(X/R\).}
+
+The implication \SGARefLink{sga3:iv:proposition:3:5:2:item:i:01}{(i)}\(\Rightarrow\)\SGARefLink{sga3:iv:proposition:3:5:2:item:ii:01}{(ii)} is simply \SGARefLink{sga3:iv:para:3:4:4}{3.4.4} translated into the
+language of descent. Once the converse is proved, the last assertion of \SGARefLink{sga3:iv:proposition:3:5:2}{the
+proposition} follows from the fact that a universal effective epimorphism is
+a descent morphism (\SGARefLink{sga3:iv:proposition:2:3}{2.3}), and hence the descended object is unique up to
+unique isomorphism.
+
+We prove \SGARefLink{sga3:iv:proposition:3:5:2:item:ii:01}{(ii)}\(\Rightarrow\)\SGARefLink{sga3:iv:proposition:3:5:2:item:i:01}{(i)}. Let \(Y'=X'/R'\), and let \(Y\) be the
+descended object. The canonical morphism
+\(p':X'\to X'/R'=Y'\) is compatible by construction with the descent data:
+its two inverse images over \(S''\) coincide with the canonical morphism
+\(X''\to X''/R''\). It is therefore the inverse image over \(S'\) of an
+\(S\)-morphism \(p:X\to Y\). Since \(p'\) belongs to \((M)\), the assumption
+on \(S'\to S\) implies that \(p\) also belongs to \((M)\). Moreover,
+because \(p'\) is compatible with the equivalence relation \(R'\), the
+morphism \(p\) is compatible with \(R\), again because a universal
+effective epimorphism is a descent morphism. Hence there is a morphism
+\[
+  R\longrightarrow X\times_YX.
+\]
+To prove that \(R\) is \((M)\)-effective and that \(Y\) is isomorphic to
+\(X/R\), it suffices to prove that this morphism is an isomorphism. After
+base change from \(S\) to \(S'\), it becomes an isomorphism because \(R'\)
+is effective; it is therefore an isomorphism for the same reason as in \SGARefLink{sga3:iv:proposition:2:4}{2.4}.
+
+Notice that the hypothesis in \SGARefLink{sga3:iv:proposition:3:5:2}{the proposition} is satisfied if \((M)\) is
+the family \((M_0)\) of universal effective epimorphisms and if
+\(\mathscr C\) has fiber products (\SGARefLink{sga3:iv:corollary:1:10}{1.10}). We obtain the following.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:3:5:3}\textbf{Corollary 3.5.3.}
+\textit{Suppose that \(\mathscr C\) has fiber products (fiber products over
+\(S\) would suffice). Let \(R\) be an equivalence relation in \(X\) over
+\(S\), and let \(S'\to S\) be a universal effective epimorphism. The
+following conditions are equivalent:}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:corollary:3:5:3:item:i:01} \textit{\(R\) is universally effective in \(X\);}
+  \item[(ii)]\SGARefTarget{sga3:iv:corollary:3:5:3:item:ii:01} \textit{\(R'\) is universally effective in \(X'\), and the
+  canonical descent datum on \(X'/R'\) is effective.}
+\end{enumerate}
+\textit{When these conditions hold, the object descended from \(X'/R'\) is
+canonically isomorphic to \(X/R\).}
+

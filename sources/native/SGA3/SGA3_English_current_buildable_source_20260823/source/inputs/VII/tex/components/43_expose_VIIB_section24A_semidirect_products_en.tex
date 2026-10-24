@@ -1,0 +1,202 @@
+
+\subsubsection*{2.4.A}
+\phantomsection
+\label{sga3:VIIB:2.4.A}
+
+Let \(G\) and \(Q\) be formal \(k\)-groups that are topologically
+flat. Suppose that there are homomorphisms
+\[
+  \sigma:Q\longrightarrow G
+  \qquad\text{and}\qquad
+  \pi:G\longrightarrow Q
+\]
+such that
+\[
+  \pi\circ\sigma=\operatorname{id}_Q.
+\]
+\footnote{\label{sga3:VIIB:nde:92}The editors added paragraphs
+2.4.A and \SGARefLink{sga3:VIIB:2.4.B}{2.4.B}, which will be useful in \SGARefLink{sga3:VIIB:5.1.3}{5.1.3} and \SGARefLink{sga3:VIIB:2.9}{2.9},
+respectively.}
+In particular, \(\sigma\) is a monomorphism, so \(Q\) is a formal
+subgroup of \(G\) \textup{(cf.\ \SGARefLink{sga3:VIIB:1.3}{Remark 1.3})}. Let
+\[
+  N=\operatorname{Ker}(\pi)
+\]
+and let \(\sigma'\) be the inclusion \(N\hookrightarrow G\).
+Then \(G\) is the semidirect product of \(N\) by \(Q\)
+\textup{(cf.\ I, \SGARefLink{sga3:i:proposition:2-3-8}{2.3.8})}. In other words, for every
+\[
+  B\in\operatorname{Ob}(\operatorname{Alf}/k),
+\]
+identify \(N(B)\) and \(Q(B)\) with their images in \(G(B)\) under
+\(\sigma'\) and \(\sigma\). Then \(N(B)\) is a normal subgroup of
+\(G(B)\), and the map
+\begin{equation}
+  \mu:N(B)\times Q(B)\longrightarrow G(B),
+  \qquad
+  (x,q)\longmapsto xq
+  \tag{1}
+  \label{sga3:VIIB:2.4.A:eq1}
+\end{equation}
+is bijective.
+
+The morphism of formal \(k\)-varieties
+\begin{equation}
+  \theta:G(B)\longrightarrow N(B),
+  \qquad
+  g\longmapsto g\cdot\sigma\pi(g^{-1})
+  \tag{2}
+  \label{sga3:VIIB:2.4.A:eq2}
+\end{equation}
+is then a retraction of \(\sigma'\), and the inverse of \(\mu\) is
+\begin{equation}
+  g\longmapsto\bigl(\theta(g),\pi(g)\bigr).
+  \tag{3}
+  \label{sga3:VIIB:2.4.A:eq3}
+\end{equation}
+If \(p:G\to G/Q\) denotes the quotient projection, then
+\[
+  p\circ\sigma':N\longrightarrow G/Q
+\]
+is an isomorphism of formal \(k\)-varieties.
+
+\smallskip
+\noindent\emph{Source note.}
+The Polo--Gille text prints
+\(\theta\circ\sigma':N\to G/Q\) here. Since
+\(\theta:G\to N\), that composite is ill-typed; the isomorphism
+with the displayed source and target is the quotient composite
+\(p\circ\sigma'\).
+
+\smallskip
+In particular, \(N\) is topologically flat over \(k\), by \SGARefLink{sga3:VIIB:1.4.thm}{1.4}
+\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}}. Let
+\[
+  \alpha:Q\times N\longrightarrow N
+\]
+and
+\[
+  \beta:G\times N=N\times Q\times N\longrightarrow N
+\]
+be the maps defined on points by
+\[
+  \alpha(q,y)=qyq^{-1},
+  \qquad
+  \beta(x,q,y)=x\alpha(q,y).
+\]
+Then the following diagram is commutative:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:2.4.A:eq4-diagram}
+  \input{native_diagrams/exp7/viib_15_95/diag_109}
+\end{center}
+
+This can be expressed as follows in terms of the affine algebras
+\(A\), \(A_0\), and \(A'\) of \(G\), \(Q\), and \(N\)
+\textup{(cf.\ \SGARefLink{sga3:VIIB:5.1.3}{5.1.3} below)}. Let
+\[
+  \rho':A\longrightarrow A',
+  \qquad
+  \rho:A\longrightarrow A_0,
+  \qquad
+  \tau:A_0\longrightarrow A
+\]
+be the homomorphisms of \(k\)-bialgebras corresponding to
+\(\sigma'\), \(\sigma\), and \(\pi\), and put
+\[
+  I=\operatorname{Ker}(\rho).
+\]
+By the preceding corollary, \(A'\) is identified with
+\[
+  A\big/\overline{A\,\tau(J_0)},
+\]
+where \(J_0\) is the augmentation ideal of \(A_0\).
+
+On the other hand, let \(B\) be the affine algebra of \(G/Q\).
+It is the kernel of the pair of morphisms
+\phantomsection
+\label{sga3:VIIB:2.4.A:affine-equalizer-pair}
+\begin{equation*}
+  A
+  \mathrel{\overset{\tau_1}
+    {\underset{(\operatorname{id}_A\widehat\otimes\rho)
+      \circ\Delta_A}{\rightrightarrows}}}
+  A\widehat\otimes_kA_0,
+\end{equation*}
+where \(\tau_1(x)=x\widehat\otimes1\). Thus
+\[
+  B
+  =
+  \bigl\{
+    x\in A
+    \mathrel{\big|}
+    \Delta_A(x)-x\widehat\otimes1
+    \in A\widehat\otimes I
+  \bigr\}.
+\]
+Let
+\[
+  \gamma=\theta^\natural:A'\longrightarrow A
+\]
+be the corresponding continuous homomorphism of \(k\)-algebras.
+It is a section of \(\rho'\), and it is an isomorphism of profinite
+\(k\)-algebras from \(A'\) onto \(B\). Moreover,
+\[
+  \tau=\pi^\natural
+\]
+identifies \(A_0\) with a sub-bialgebra of \(A\), namely the affine
+algebra of the quotient \(N\backslash G\).
+
+It follows from equations~\eqref{sga3:VIIB:2.4.A:eq1}
+and~\eqref{sga3:VIIB:2.4.A:eq3} that there is an
+isomorphism of profinite \(k\)-algebras
+\begin{equation}
+  A'\widehat\otimes_kA_0
+  \xrightarrow{\ \sim\ }
+  A,
+  \qquad
+  a'\widehat\otimes a_0
+  \longmapsto
+  \gamma(a')\tau(a_0),
+  \tag{*}
+  \label{sga3:VIIB:2.4.A:star}
+\end{equation}
+whose inverse is the map
+\[
+  a\longmapsto
+  (\rho'\widehat\otimes\rho)\Delta_A(a).
+\]
+
+Finally, identify \(A'\) with its image in \(A\) under \(\gamma\),
+so that the projection \(A\to A'\) is then \(\gamma\rho'\).
+Writing \(\Delta_{A'}\) for the comultiplication of \(A'\), one
+deduces from \hyperref[sga3:VIIB:2.4.A:eq4-diagram]{\textup{(4)}}
+that
+\[
+  \Delta_A(A')\subset A\widehat\otimes A'
+\]
+and that the following diagram is commutative:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:2.4.A:Aprime-comultiplication-square}
+  \input{native_diagrams/exp7/viib_15_95/diag_110}
+\end{center}
+Consequently, one also has
+\[
+  \gamma\rho'\circ c_A=c_{A'},
+\]
+where \(c_A\) and \(c_{A'}\) are the antipodes of \(A\) and \(A'\),
+respectively. On the other hand, writing \(m_A\) for multiplication
+in \(A\), equation~\eqref{sga3:VIIB:2.4.A:eq2} gives, for every
+\(a\in A\),
+\[
+  \gamma\rho'(a)
+  =
+  \bigl(
+    m_A
+    \circ
+    (\operatorname{id}_A\widehat\otimes\tau\rho c_A)
+    \circ
+    \Delta_A
+  \bigr)(a).
+\]

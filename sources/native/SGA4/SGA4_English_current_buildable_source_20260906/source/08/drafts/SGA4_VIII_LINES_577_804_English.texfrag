@@ -1,0 +1,224 @@
+\section{Strictly local rings and schemes}\etiquette[4]{VIII.sec4}
+
+\subsection{}\etiquette[4.1]{VIII.subsec4.1}
+
+Recall that, following Azumaya, a local ring $A$ is said to be
+\emph{henselian} if it satisfies the following equivalent conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Every finite $A$-algebra $B$ is a direct product
+$\prod_i B_i$ of local rings (the $B_i$ are then necessarily
+isomorphic to the $B_{\mathfrak m_i}$, where\pageoriginale
+$\mathfrak m_i$ runs through the maximal ideals of $B$).
+
+\item Every $A$-algebra $B$ which is the localization at a prime ideal
+$\mathfrak p$ lying over the maximal ideal $\mathfrak m$ of $A$ of
+an $A$-algebra $C$ of finite type, and such that
+$B/\mathfrak mB$ is finite over $k=A/\mathfrak m$, is finite over
+$A$.
+
+\item The same as (ii), but with $C$ assumed étale over $A$ at
+$\mathfrak p$ and $k\to B/\mathfrak mB$ an isomorphism.
+
+\item \lq\lq Hensel's lemma'' in its classical form holds for $A$, that is,
+for every monic polynomial $F\in A[T]$, writing
+$\overset{\bigdot}{F}\in k[T]$ for the corresponding reduced
+polynomial, and for every factorization
+$$
+\overset{\bigdot}{F}
+=\overset{\bigdot}{F}_1\overset{\bigdot}{F}_2
+$$
+of $\overset{\bigdot}{F}$ as a product of two relatively prime monic
+polynomials, $\overset{\bigdot}{F}_1$ and
+$\overset{\bigdot}{F}_2$ lift (necessarily uniquely) to
+$F_1,F_2\in A[T]$ such that $F=F_1F_2$.
+
+For the proof of these equivalences and the general properties of
+henselian rings, see \EGA IV 18.5.11. Recall that if $A$ is any local
+ring, one proves (Nagata) that there exists a local homomorphism
+$$
+A\to A^h
+$$
+with $A^h$ \emph{henselian}, which is \emph{universal} for local
+homomorphisms from $A$ to local
+\sisi{Noetherian}{henselian} rings. The ring $A^h$ is called the
+henselization of $A$. The construction given in \EGA IV 18.6
+(different from Nagata's) consists in setting
+$$
+A^h=\varinjlim_i A_i{\quoi},
+$$
+where $A_i$ runs through the $A$-algebras essentially of finite type
+and essentially étale\pageoriginale over $A$ (that is, localizations
+of an étale $A$-algebra) such that $A\to A_i$ is a local
+homomorphism and the residue extension $k(A_i)/k(A)$ is trivial. This
+construction shows in particular that $A^h$ is flat over $A$, and
+that if $A$ is Noetherian, then so is its henselization.
+\end{enumerate}
+
+\begin{enonce*}{Definition 4.2}\etiquette[4.2]{VIII.def4.2}
+A local ring $A$ is said to be strictly local \emph{if it satisfies
+one of the following equivalent conditions}:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $A$ is henselian (\hyperref[VIII.subsec4.1]{4.1}) and its
+residue field is separably closed.
+
+\item Every local homomorphism $A\to B$, where $B$ is a localization
+of an étale algebra over $A$, is an isomorphism.
+\end{enumerate}
+
+A scheme is called a \emph{strictly local scheme} if it is isomorphic
+to the spectrum of a strictly local ring.
+\end{enonce*}
+
+The equivalence of (i) and (ii) follows at once from
+\hyperref[VIII.subsec4.1]{4.1}. Note that, in geometric form,
+\hyperref[VIII.def4.2]{4.2} (ii) (respectively
+\hyperref[VIII.subsec4.1]{4.1} (iii)) says that for every étale
+$Y$-scheme $X$ and every point $x$ of the fiber $X_y$ (respectively
+every point of $X_y$ \emph{rational over} $k(y)$), where $y$ is the
+closed point of $Y$, there exists a section of $X$ over $Y$ passing
+through $x$ (and this section is necessarily unique).
+
+\begin{enonce*}{Definition 4.3}\etiquette[4.3]{VIII.def4.3}
+Let $X$ be a scheme, let $\Oo_{X_{\text{\rm ét}}}$ be the sheaf on
+$X_{\text{\rm ét}}$ defined by
+$$
+\Oo_{X_{\text{\rm ét}}}(X')=\Gamma(X',\Oo_{X'})
+$$
+(compare \emph{\hyperrefext[VII][VII.sec2]{2}. c)}), and let
+$u:\xi=\Spec(\Omega)\to X$ be a geometric point of $X$. The
+\emph{strictly local ring of $X$ at $\xi$}, denoted
+$\Oo_{{X,}_{\xi}}$ or simply\pageoriginale $\Oo_\xi$, is the
+fiber of the sheaf $\Oo_{X_{\text{\rm ét}}}$ at the point $\xi$.
+Its spectrum is called the \emph{strict localization of $X$ at
+$\xi$}.
+\end{enonce*}
+
+By \hyperref[VIII.prop3.9]{3.9}, the fiber $\Oo_{{X,}_{\xi}}$ has
+the description
+\begin{equation*}
+\Oo_{{X,}_{\xi}}=\varinjlim\Gamma(X',\Oo_{X'}){\quoi},
+\tag{$\ast$}
+\end{equation*}
+where $X'$ runs through the opposite filtered category of étale
+$X$-schemes pointed by $\xi$, that is, equipped with an $X$-morphism
+$\xi\to X'$. By transitivity of inductive limits, one may replace
+$\Gamma(X',\Oo_{X'})$ in the right-hand side by $\Oo_{X',x'}$,
+where $x'$ is the image of $\xi$ in $X'$, and one obtains
+\begin{equation*}
+\Oo_{{X,}_{\xi}}=\varinjlim_i A_i
+\tag{\ast\ast}
+\end{equation*}
+where $A_i$ runs through the algebras essentially of finite type and
+étale over $A=\Oo_{X,x}$, equipped with a $k$-homomorphism
+$k(A_i)\to\Omega$. (Here $x$ denotes the image of $\xi$ in $X$.)
+The transition homomorphisms between the $A_i$ are, of course, the
+local homomorphisms of $A$-algebras $A_i\to A_j$ that make the
+corresponding triangle commute:
+\[
+\xymatrix@R=1.25cm@C=1.75cm{
+k(A_i)  \ar[r] \ar[rd]& k(A_j)\ar[d]    \\
+                      &  \Omega.
+}
+\]
+This implies that if there exists an admissible homomorphism from
+$A_i$ to $A_j$, it is unique. Thus the inductive limit
+$({\ast}{\ast})$ is a limit over an upward-filtered ordered index
+set.
+
+\setcounter{subsection}{3}
+\subsection{}\etiquette[4.4]{VIII.subsec4.4}
+
+The description\pageoriginale $({\ast}{\ast})$ shows that the
+strictly local ring of $X$ at $\xi$ depends essentially only on the
+usual local ring $A=\Oo_{X,x}$ ($x=u(\xi)$) and on the extension
+$\Omega$ of $k=k(A)$. It is also called the \emph{strict
+henselization} of $A$ (relative to the given separably closed
+extension $\Omega$ of $k$), and is denoted $A^{hs}$. We refer to
+\EGA IV 18.8 for the general properties of $A^{hs}$. We merely point
+out that the construction again shows that $A^{hs}$ is flat over
+$A$, and that it is Noetherian if $A$ is. Moreover, one proves easily
+(\loccit) that the local homomorphism
+$$
+A\to A^{hs}
+$$
+together with the $k$-homomorphism
+$$
+k(A^{hs})\to\Omega
+$$
+solves the universal problem, relative to the data of $A$ and the
+extension $\Omega$ of $k$, of finding local homomorphisms
+$$
+A\to A'{\quoi},
+$$
+where $A'$ is \emph{strictly local}, equipped with a
+$k$-homomorphism
+$$
+k(A')\to\Omega{\quoi}.
+$$
+In particular, $A^{hs}$ \emph{is indeed a strictly local ring}
+(which justifies the terminology of \hyperref[VIII.def4.3]{4.3}).
+
+\subsection{}\etiquette[4.5]{VIII.subsec4.5}
+
+Keep the notation of \hyperref[VIII.def4.3]{4.3}, and choose an
+affine open neighborhood $U$ of $x$. Note that in
+\hyperref[VIII.prop3.9]{3.9} one may plainly restrict to those $X'$
+which are affine over $U$. These then form a pseudo-filtered inverse
+system of affine schemes, so that we are\pageoriginale in the general
+situation of \hyperrefext[VII][VII.sec5]{5} (see VI 5.12 b).
+By the expression $(\ast)$ for $\Oo_{X,\xi}$, there is an
+$X$-isomorphism
+\begin{equation*}
+\varprojlim_{\substack{X'\ \mbox{\rm étale}\\ \mbox{affine over }U,\\
+X'_{\xi}\mbox{\rm -pointed}}}X'\simeq\Spec\Oo_{X,\xi}
+\tag{\ast\ast\ast}
+\end{equation*}
+which makes precise the intuitive geometric meaning of
+$\Spec(\Oo_{X,\xi})$ as the \lq\lq\emph{limit of the étale
+neighborhoods of $\xi$}''.
+
+\begin{enonce*}{Proposition 4.6}\etiquette[4.6]{VIII.prop4.6}
+Let $X$ be a strictly local scheme, and let $x$ be its closed point,
+which is therefore a geometric point of $X$. Then the functor
+$F\mapsto\Gamma(X,F):\widetilde{X_{\text{\rm ét}}}\to(\Ens)$
+is canonically isomorphic to the fiber functor $F\mapsto F_x$, and
+hence commutes with arbitrary $\varinjlim$\footnote{not necessarily
+filtered!}.
+\end{enonce*}
+
+Indeed, by Definition \hyperref[VIII.def4.2]{4.2} (ii), the final
+object $X$ of the category of étale $X$-schemes pointed by $x$
+considered in \hyperref[VIII.prop3.9]{3.9} dominates every other
+object; hence $\varinjlim F(X')$ is canonically isomorphic to $F(X)$,
+as required.
+
+In particular, the functor induced by $\Gamma$ on the category of
+abelian sheaves is exact, and therefore:
+
+\begin{enonce*}{Corollary 4.7}\etiquette[4.7]{VIII.cor4.7}
+Under the hypotheses of \hyperref[VIII.prop4.6]{4.6}, for every
+abelian sheaf $F$ on $X$ one has
+$$
+H^q(X,F)=0\quad\mbox{\rm for}\quad q\neq0{\quoi}.
+$$
+\end{enonce*}
+
+\begin{enonce*}{Corollary 4.8}\etiquette[4.8]{VIII.cor4.8}
+Let $X$ be a scheme, let $\xi$ be a geometric point of $X$, let
+$\bar X=\Spec\Oo_{X,\xi}$ be the corresponding strict
+localization, let $F$ be a sheaf on $X$, and let $\bar F$ be its
+inverse image on $\bar X$. Then there is a functorial isomorphism
+$$
+F_\xi\simeq\Gamma(\bar X,\bar F){\quoi}.
+$$
+\end{enonce*}
+
+Indeed,\pageoriginale $\xi$ may also be regarded as a geometric point
+of $\bar X$, and it suffices to apply
+\hyperref[VIII.prop4.6]{4.6} and the transitivity of fibers
+(\hyperref[VIII.subsec3.4]{3.4}).
+

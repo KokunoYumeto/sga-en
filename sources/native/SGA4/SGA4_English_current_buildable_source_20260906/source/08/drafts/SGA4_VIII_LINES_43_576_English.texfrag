@@ -1,0 +1,527 @@
+\setcounter{pageoriginal}{366}
+
+
+\section{Topological invariance of the étale
+  topos}\etiquette[1]{VIII.sec1}
+
+\begin{enonce*}{Theorem 1.1}\etiquette[1.1]{VIII.thm1.1}
+Let \pageoriginale  $f : X'\to X$ be an \emph{integral surjective
+radicial} morphism. Then the base-change functor
+$$
+f^{\ast} : X_{\text{\rm ét}} \to X'_{\text{\rm ét}}
+$$
+is an equivalence of sites (\ie an equivalence of categories that is
+continuous, as is every quasi-inverse functor). Consequently, the
+functors
+\begin{align*}
+f_{\ast} : \widetilde{X'_{\text{\rm ét}}} &\to \widetilde{X_{\text{\rm ét}}}\\
+f^{\ast} : \widetilde{X_{\text{\rm ét}}} &\to \widetilde{X'_{\text{\rm
+      ét}}}
+\end{align*}
+are equivalences of categories, quasi-inverse to one another.
+\end{enonce*}
+
+The first assertion is well known (\SGA\sisi{}{ 1} IX 4.10 and 4.11) when
+$f$ is of finite presentation or when $f$ is flat; the general case
+reduces to the case in which $f$ is of finite presentation. Indeed, it
+is already known that the functor $f^{\ast}$ is fully faithful (\SGA 1 IX
+3.4). It is enough to prove that $f^{\ast}$\pageoriginale  is
+essentially surjective, \ie that every $Z'$ étale over $X'$ ``comes
+from'' a $Z$ étale over $X$. Using the fact that $f$ is a universal
+homeomorphism and the full faithfulness of $f^{\ast}$, we are reduced
+to the case where $X$, $X'$, and $Z'$ are affine, the spectra of rings
+$A$, $A'$, and $B'$. Writing $A'$ as the inductive limit of its
+finitely generated $A$-subalgebras $A'_{i}$, $B'$ comes from an étale
+algebra $B'_{i}$ over some $A'_{i}$ (\cf \EGA IV 8), which reduces us
+to the case in which $A'$ is integral and of \emph{finite type} over
+$A$, hence finite over $A$. We then have an $A$-isomorphism $A'\simeq
+A''/J$, where $A'' \simeq A [t_1, \ldots t_n]$ and $J$ is an ideal of
+$A''$. Writing $J$ as the inductive limit of its finitely generated
+subideals $J_i$, and setting $A'_i = A'' /J_i$, we again have $A' =
+\varinjlim_i A'_{i}$, so $B'$ comes from an étale algebra $B'_i$ over
+some $A'_i$ (\emph{loco citato}). On the other hand, since $\Spec
+A'\to \Spec A$ is surjective, the same holds for the $\Spec A'_i \to
+\Spec A$; moreover, one easily verifies that since $\Spec A'\to
+\Spec A$ is radicial, the same holds for $\Spec A'_i \to \Spec A$
+for sufficiently large $i$ (apply \EGA IV 1.9.9 to $\Spec
+A$\footnote{Let $S_i \subset S = \Spec A$ be the set of $s \in S$
+such that the fiber of $X_i = \Spec A'_i$ \sisi{as sets}{at $s$} is
+of separable rank 1. Then the $S_i$ are \emph{constructible} subsets
+of $S$ (\EGA IV 9.7.9) forming an increasing family; their union is
+$S$ by the hypothesis on $S'=\Spec A'\to S$ and the fact that the
+fibers of $S'_i$ are \emph{noetherian} schemes. Thus $S=S_i$ for
+sufficiently large $i$, by \EGA IV 1.9.9, \cqfd.}). This reduces us
+to the case in which $A'$ is one of the $A'_i$, hence is of finite
+presentation over $A$.
+
+This proves the first assertion of
+\sisi{\hyperref[VIII.prop2.1]{2.1}}{\hyperref[VIII.thm1.1]{1.1}}.
+The assertion that $f_{\ast}$ and $f^{\ast}$ are mutually
+quasi-inverse equivalences follows at once.
+
+\begin{enonce*}{Corollary 1.2}\etiquette[1.2]{VIII.cor1.2}
+Let $F$ be an abelian sheaf on $X$, and let $F'$ be its inverse image
+on $X'$. Then the canonical homomorphisms
+\begin{equation*}
+H^{i} (X, F) \to H^{i} (X', F')\tag{$\ast$}
+\end{equation*}
+are isomorphisms. Likewise, if $F'$ is an abelian sheaf on $X'$ and
+$F$ its direct image on $X$, the canonical homomorphisms $(\ast)$ are
+isomorphisms.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Examples 1.3}\etiquette[1.3]{VIII.exem1.3}
+Here\pageoriginale  are some frequently used applications of
+\hyperref[VIII.thm1.1]{1.1}:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $X'$ is a subscheme of $X$ having the same underlying set as
+  $X$, \ie defined by a nil-ideal $I$.
+
+\item $X$ is a scheme over a separably closed field $k$, $k'$ is an
+  algebraic closure of $k$, and $X'=X\otimes_k k'$.
+
+\item Let $X$ be a geometrically unibranch scheme (for example, an
+  algebraic curve over a field $k$ whose only singularities are
+  ``cuspidal'' singularities, thus excluding ordinary double points in
+  particular). Then, if $X'$ is the normalization of $X_{\red}$, by
+  definition $X'\to X$ is radicial, so
+  \sisi{\hyperref[VIII.prop2.1]{2.1}}{\hyperref[VIII.thm1.1]{1.1}}
+  applies.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remarks 1.4}\etiquette[1.4]{VIII.rem1.4}
+A morphism $f$ as in \hyperref[VIII.thm1.1]{1.1} is a \emph{universal
+  homeomorphism}, \ie it is a homeomorphism and remains so after every
+  base extension. Conversely, if $f$ is a universal homeomorphism, one
+  proves that $f$ satisfies the hypotheses of
+  \sisi{\hyperref[VIII.prop2.1]{2.1}}{\hyperref[VIII.thm1.1]{1.1}}
+  \footnote{\Cf \EGA IV 8.11.6 if $f$ is of finite presentation, and
+  \EGA IV 18.12.11 in the general case.}, which explains the title of
+  this section.
+
+Let us point out explicitly, in connection with Example
+\sisi{\hyperref[VIII.cor2.3]{2.3} c)}{\hyperref[VIII.exem1.3]{1.3} c)},
+that if $X$ is an algebraic curve (over an algebraically closed field
+$k$, to fix ideas) having at least one singular point that is not
+``unibranch'' (for example, an ordinary double point), then (with $X'$
+denoting the normalization of $X_{\red}$) the conclusion of
+\sisi{\hyperref[VIII.cor2.2]{2.2}}{\hyperref[VIII.cor1.2]{1.2}}
+already fails for $H^1$ with constant coefficients (compare \SGA 1 I
+11 a) and \SGA 1 IX 5).
+\end{enonce*}
+
+\section{Sheaves on the spectrum of a field}\etiquette[2]{VIII.sec2}\pageoriginale
+
+\begin{enonce*}{Proposition 2.1}\etiquette[2.1]{VIII.prop2.1}
+Let $k$ be a field, $\bar{k}$ a separable closure of $k$, $\pi =
+\Gal(\bar{k}/k)$ its topological Galois group, $X=\Spec k$, and
+$\bar{X}=\Spec\bar{k}$ (on which $\pi$ acts on the left). Consider the
+canonical functor
+$$
+i : X_{\text{\rm ét}} \to \widetilde{X_{\text{\rm ét}}}
+$$
+(defined by $i(X')(X'')=\Hom_X(X'',X')$), and the canonical functor
+$$
+j : \widetilde{X_{\text{\rm ét}}} \to \Bb_{\pi}
+$$
+from the category of sheaves on $X_{\text{\rm ét}}$ to the category
+$\Bb_{\pi}$ \emph{(\cf IV \hyperref[IV.subsec2.7]{2.7})} of (discrete) sets on which $\pi$ acts
+continuously on the left, defined by
+$$
+j(F) = \varinjlim_{\alpha} F(\Spec(k_{\alpha})) {\quoi},
+$$
+where $k_{\alpha}$ ranges over the finite subextensions of $\bar{k}$.
+Then $i$ and $j$ are equivalences of categories. (Consequently, the
+topos $\widetilde{X_{\text{\rm ét}}}$ is equivalent \emph{(IV \hyperref[IV.subsec3.4]{3.4})}
+to the ``classifying topos'' $\Bb_{\pi^{\bigdot}}$.)
+\end{enonce*}
+
+The composite functor
+$$
+ji : X_{\text{\rm ét}} \to \widetilde{X_{\text{ét}}} \to (\pi\text{-}\Ens)
+$$
+is an equivalence of categories by the fundamental theorem of Galois
+theory (in the form of \SGA I V). Since $\Bb_{\pi}$ is plainly a topos
+(II 4.14), the same is therefore true of $X_{\text{ét}}$. Moreover, a
+family $(X_i\to X)$ of morphisms in $X_{\text{ét}}$ is covering if and
+only if it is surjective, \ie its image in $\Bb_{\pi}$ is surjective,
+or, equivalently, covering for the canonical topology of $\Bb_{\pi}$.
+This shows that the topology of $X_{\text{ét}}$ is indeed its canonical
+topology. Consequently $i$ is an equivalence, and hence so is $j$.
+
+\begin{enonce*}{Corollary 2.2}\etiquette[2.2]{VIII.cor2.2}
+The functor\pageoriginale  $j$ of \hyperref[VIII.prop2.1]{2.1}
+induces an equivalence \sisi{of}{between} the category of abelian
+sheaves on $X=\Spec k$ and the category of Galois $\pi$-modules.
+\end{enonce*}
+
+Indeed, the latter are precisely the ``abelian groups'' of the topos
+$\Bb_{\pi}$. The same argument, by ``transport of structure,'' gives:
+
+\begin{enonce*}{Corollary 2.3}\etiquette[2.3]{VIII.cor2.3}
+Let $F$ be an abelian sheaf on $X=\Spec k$, and let $M=j(F)$ be the
+associated Galois $\pi$-module. Then there is a canonical isomorphism
+of $\partial$-functors in $F$:
+$$
+H^{\ast} (X, F) \simeq H^{\ast} (\pi, M){\quoi},
+$$
+(where the right-hand side denotes Galois cohomology, studied, for
+example, in Serre's course \emph{C.G.}).
+\end{enonce*}
+
+\begin{enonce*}{Corollary 2.4}\etiquette[2.4]{VIII.cor2.4}
+Suppose that $k$ is separably closed. Then the functor
+$$
+\Gamma : \widetilde{X_{\text{\rm ét}}} \to (\Ens)
+$$
+is an equivalence of categories. If $F$ is an abelian sheaf on
+$X=\Spec k$, then $H^{i}(X,F)=0$ for $i\neq0$. (In other words, the
+topos $\widetilde{X_{\text{\rm ét}}}$ is a ``punctual topos''
+\emph{(IV \hyperref[IV.subsec2.2]{2.2})}.)
+\end{enonce*}
+
+\begin{enonce*}{Corollary 2.5}\etiquette[2.5]{VIII.cor2.5}
+Let $k'$ be a separably closed extension of a separably closed field
+$k$, let $X=\Spec k$, $X'=\Spec k'$, and let $u:X'\to X$ be the
+canonical morphism. Then the functor
+$$
+u^{\ast} : \widetilde{X_{\text{\rm ét}}} \to \widetilde{X'_{\text{\rm ét}}}
+$$
+is an equivalence of categories.
+\end{enonce*}
+
+\section{Fiber functors relative to geometric points of a
+  scheme}\etiquette[3]{VIII.sec3}\pageoriginale
+
+\subsection{}\etiquette[3.1]{VIII.subsec3.1}
+
+Let $X$ be a scheme. We shall call a \emph{geometric point} of $X$
+any $X$-scheme $\xi$ that is the spectrum of a \emph{separably closed}
+field $\Omega$. The datum of such a point is therefore equivalent to
+that of an ordinary point $x\in X$ together with a \emph{separably
+closed} extension $\Omega$ of the residue field $k(x)$ of $x$. The
+case most frequent for us will be that in which $\Omega$ is a
+\emph{separable closure} of $k(x)$, which we shall then generally
+denote by $\bar{k(x)}$; the corresponding geometric point of $X$ is
+then denoted by $\bar{x}$. For a given $x\in X$, the $\bar{k(x)}$
+(resp. $\bar{x}$) are determined up to \emph{nonunique}
+$k$-isomorphism (resp. $X$-isomorphism).
+
+\begin{enonce*}[remark]{Remarks 3.2}\etiquette[3.2]{VIII.rem3.2}
+In most geometric questions, it is more natural to restrict to the
+case in which $\Omega$ is \emph{algebraically closed}. The different
+convention used here is specific to the study of the étale topology.
+It is the convention we adopted in the definition of the fundamental
+group in \SGA 1 V 7. Note, however, that the developments in
+\emph{loco citato} are equally valid with the convention adopted here
+(because the property of $\Omega$ used there is that every étale
+covering of the spectrum of $\Omega$ is trivial, \ie precisely that
+$\Omega$ is separably closed).
+\end{enonce*}
+
+\begin{enonce*}{Definition 3.3}\etiquette[3.3]{VIII.def3.3}
+Let $X$ be a scheme, let $\xi$ be a geometric point of $X$, and let
+$u:\xi\to X$ be its structural morphism. The (geometric) \emph{fiber
+functor} relative to $\xi$, denoted $F\mapsto F_{\xi}$, is the
+composite functor
+$$
+\widetilde{X_{\text{\rm ét}}} \to (\Ens)
+$$
+of
+$$
+\widetilde{X_{\text{\rm ét}}} \xrightarrow{u^{\ast}}
+\widetilde{\xi_{\text{\rm ét}}} \xrightarrow{\Gamma_{\xi}} (\Ens){\quoi}.
+$$
+\end{enonce*}
+
+Equivalently, by \hyperref[VIII.cor2.4]{2.4}, one may say that a
+geometric point $\xi$ of $X$ defines a point of the topos
+$X^{\sim}_{\text{ét}}$ (IV \hyperref[IV.def6.1]{6.1}), whose associated fiber functor
+(\loccit) is simply being taken.
+
+\setcounter{subsection}{3}
+\subsection{}\etiquette[3.4]{VIII.subsec3.4}
+
+Since the\pageoriginale  functor $\Gamma_{\xi}$ (the global-sections
+functor on $\xi$) is an \emph{equivalence} of categories \hyperref[VIII.cor2.4]{(2.4)},
+knowing the fiber functors $F\mapsto F_{\xi}$ is essentially
+equivalent to knowing the inverse-image functors $u^{\ast}$. Moreover,
+it follows at once from \hyperref[VIII.cor2.5]{2.5} that if $\xi$ is a
+geometric point of $X$ for which there exists an $X$-morphism
+$\xi'\to\xi$ (\ie $\xi'$ corresponds to a separably closed extension
+$\Omega'$ of $\Omega$), then the canonical homomorphism
+$F_{\xi}\to F_{\xi'}$ is a \emph{functorial isomorphism}
+$$
+F_{\xi} \simeq F_{\xi'}{\quoi}.
+$$
+This shows that, for the study of fiber functors, one may (after
+replacing $\Omega$ by the separable algebraic closure of $k$ in
+$\Omega$) restrict oneself to the case where $\Omega = k(\xi)$ is a
+separable closure $\bar{k(x)}$ of $k(x)$, and that the fiber functors
+corresponding to geometric points of $X$ lying over the same $x
+\in X$ are isomorphic to one another (noncanonically).
+
+In accordance with the conventions of \hyperref[VIII.subsec3.1]{3.1},
+we shall denote by $F_{\bar{x}}$
+a fiber functor corresponding to the choice of a separable closure
+$\bar{k(x)}$ of $k(x)$.
+
+Let us point out an evident transitivity property (which shows the
+technical usefulness of not restricting oneself exclusively to geometric
+points defined by separable closures of residue fields): Let $f :
+X'\to X$ be a morphism of schemes, and let $u' : \xi'\to X'$ be a
+geometric point of $X'$. Then $u = f u': \xi'\to X$ is a geometric
+point of $X$, which we shall denote by $\xi$; relative to these geometric
+points, there is an isomorphism, functorial in $F \in \Ob
+\widetilde{X_{\text{ét}}}$:
+$$
+f^{\ast} (F)_{\xi'} \simeq F_{\xi}{\quoi}.
+$$
+Indeed, this\pageoriginale  follows from the transitivity formula for
+inverse-image
+functors
+$$
+(fu')^{\ast} \xrightarrow{\sim} u'^{\ast} f^{\ast}{\quoi}.
+$$
+
+\begin{enonce*}{Theorem 3.5}\etiquette[3.5]{VIII.thm3.5}
+Let $X$ be a scheme.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item For every geometric point $\xi$ of $X$, the fiber functor $F
+  \mapsto F_{\xi}$, $\widetilde{X_{\text{\rm ét}}} \to (\Ens)$ commutes with
+  arbitrary $\varinjlim$ (indexed by categories $\in
+  \Uu$) and with finite $\varprojlim$\footnote{Thus it is indeed
+  a ``fiber functor'' in the sense of Exposé IV.}. In particular, it
+  takes sheaves of groups (\resp abelian sheaves, \etc)
+  to groups (\resp abelian groups, \etc).
+
+\item As $x$ ranges over the points of $X$, the fiber functors
+  $F_{\bar{x}}$ form a ``conservative'' family of functors, \ie if $u : F \to G$ is a homomorphism of
+  sheaves on $X$, then $u$ is an isomorphism if and only if, for
+  every $x \in X$, the corresponding homomorphism $u_{\bar{x}} :
+  F_{\bar{x}} \to G_{\bar{x}}$ is an isomorphism\footnote{Thus there are
+  ``enough fiber functors'' of the form $F \mapsto
+  F_{\bar{x}}$, in the terminology of IV \hyperref[IV.prop6.5]{6.5}.}.
+\end{enumerate}
+\end{enonce*}
+
+Taking into account the exactness properties in a), let us immediately
+note the following formal consequences of b):
+
+\begin{enonce*}{Corollary 3.6}\etiquette[3.6]{VIII.cor3.6}
+Let $u : F \to G$ be a homomorphism of sheaves. Then $u$ is a
+monomorphism (\resp an epimorphism) if and only if, for every $x
+\in X$, $u_{\bar{x}}:F_{\bar{x}}\to G_{\bar{x}}$ is injective
+(\resp surjective).
+\end{enonce*}
+
+\begin{enonce*}{Corollary 3.7}\etiquette[3.7]{VIII.cor3.7}
+Let $u$, $v : F \to G$ be two morphisms of sheaves on $X$. Then
+$u = v$ if and only if, for every $x \in X$, one has $u_{\bar{x}} =
+v_{\bar{x}} : F_{\bar{x}} \to G_{\bar{x}}$. In particular, if $u$,
+$v$ are two sections of $F$, one has\pageoriginale  $u = v$ if and
+only if
+$u_{\bar{x}} = v_{\bar{x}}$ in $F_{\bar{x}}$ for every $x \in X$.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 3.8}\etiquette[3.8]{VIII.cor3.8}
+Let $F \to G \to H$ be a sequence of two homomorphisms of sheaves on
+$X$. Then the sequence is exact if and only if, for every $x \in X$,
+the corresponding sequence $F_{\bar{x}} \to G_{\bar{x}} \to H_{\bar{x}}$
+is exact.
+\end{enonce*}
+
+We leave to the reader the task of deducing the corollaries
+\footnote{\Cf IV \hyperref[IV.exer6.5.2]{6.5.2}.}, %% issue: check that (**) is indeed present upon compilation
+which will moreover be proved in part
+in the proof that follows.
+
+Assertion a) follows from the exactness properties already noted
+in (\hyperrefext[VII][VII.subsec1.4]{1.4}) for every inverse-image functor, such as
+$u^{\ast} : \widetilde{X_{\text{ét}}} \to
+\widetilde{\xi_{\text{ét}}}$, and from the fact that
+$\widetilde{\xi_{\text{ét}}} \to (\Ens)$ is an equivalence. To
+prove b), let us note the following formula, which gives a procedure for
+\emph{computing} fiber functors:
+
+\begin{enonce*}{Proposition 3.9\footnotemark}\etiquette[3.9]{VIII.prop3.9}
+\footnotetext{\Cf IV \hyperref[IV.eq6.8.3]{6.8.3}} %% issue: check the number of * upon compilation
+Let $\xi \xrightarrow{u} X$ be a geometric
+point of $X$, and let $C_{\xi}$ be the category of ``pointed étale
+$X$-schemes at $\xi$'', \ie of pairs $(X', u')$, where
+$X'\in \Ob X_{\text{\rm ét}}$ is a scheme étale over $X$, and $u'$ is an
+$X$-morphism $\xi \to X'$. Then the opposite category $C^{0}_{\xi}$
+is filtered and, for a varying sheaf $F$ (\resp presheaf $P$)
+on $X$, there is a canonical functorial isomorphism
+$$
+F_{\xi} \simeq \varinjlim_{C^{0}_{\xi}} F(X'), (\emph{\resp}
+(aP)_{\xi} \simeq \varinjlim_{C^{0}_{\xi}} P(X')){\quoi},
+$$
+(where $aP$ = the sheaf associated with $P$).
+\end{enonce*}
+
+Indeed, let us first note that for every presheaf $P$ on
+$\xi_{\text{ét}}$,
+if $aP$ is the associated sheaf, the natural homomorphism
+$$
+P(\xi) \to aP(\xi)
+$$
+is an isomorphism, as follows, for example, immediately from the
+explicit computation of\pageoriginale  $aP$ as $L(LP)$ (II \hyperref[II.theo3.4]{3.19}). Let
+$\varphi :
+\widetilde{X_{\text{ét}}} \to \widetilde{\xi_{\text{ét}}}$ be the
+``inverse-image'' functor. Then $u^{\ast} = \varphi^{\ast}$ is nothing
+other (III \hyperref[III.prop2.3]{2.3}. (d)) than the composite $a\varphi^{\bigdot} i$, where $i :
+\widetilde{X_{\text{ét}}} \to \widehat{X_{\text{ét}}}$
+is the inclusion functor, and $a :
+\widehat{\xi_{\text{ét}}} \to
+\widetilde{\xi_{\text{ét}}}$ is the ``associated
+sheaf'' functor. By the preceding remark we find
+$$
+u^{\ast} (F) (\xi) = (\varphi^{\bigdot} i(F)) (\xi){\quoi},
+$$
+so it is enough to apply the explicit expression for
+$\varphi^{\bigdot}$ given in the relevant proof.\SGAArchiveOnly{\nde{The frozen source
+leaves the exact internal reference unspecified.}}
+The corresponding case, where one starts with a presheaf $P$ on $X$, is proved in the same way, by
+using the functorial isomorphism $\varphi^{\ast} a(P) \simeq a
+\varphi^{\ast} (P)$.\SGAArchiveOnly{\nde{The frozen source leaves the exact internal
+reference unspecified.}}
+The fact that the category $C_{\xi}$ is filtered (which remains true for \emph{every} $X$-scheme $\xi$, not
+necessarily reduced to a geometric point)
+follows immediately from the
+fact that finite projective limits exist in $C_{\xi}$, which
+follows from the fact that $X_{\text{ét}}$ is a subcategory of
+$(\Sch) /X$ stable under finite projective limits.
+
+Now let $u : F \to G$ be a homomorphism of sheaves on $X$
+such that, for every $x \in X$, $u_{\bar{x}} : F_{\bar{x}} \to
+G_{\bar{x}}$ is a monomorphism; let us prove that $u$ is a
+monomorphism. For this, we must prove that if $X'\in \Ob
+X_{\text{ét}}$, $\varphi$, $\psi \in F(X')$ are such that $u
+(\varphi) = u (\psi)$, then $\varphi = \psi$. Replacing $X$ by
+$X'$ and using the transitivity of fiber functors, we may
+suppose $X = X'$. For every $x \in X$, we then have $u
+(\varphi)_{\bar{x}} = u (\psi)_{\bar{x}}$, \ie $u_{\bar{x}}
+(\varphi_{\bar{x}}) = u_{\bar{x}} (\psi_{\bar{x}})$, hence
+$\varphi_{\bar{x}} = \psi_{\bar{x}}$ since $u_{\bar{x}}$ is a
+monomorphism. Using \hyperref[VIII.prop3.9]{3.9}, %% XXX Reference to correct}
+it follows that there exists an $X'_x \in \Ob X_{\text{ét}}$, whose image contains $x$, such
+that $\varphi$ and $\psi$ have the same inverse image on $X'_x$. Since,
+as $x$ varies in $X$, the $X'_x$ form a covering family of
+$X$, it follows that $\varphi = \psi$.
+
+This\pageoriginale proves that if the $u_{\bar{x}}$ are
+monomorphisms, then so
+is $u$. Suppose in addition that the $u_{\bar{x}}$ are
+epimorphisms; let us prove that the same holds for $u$, and hence that $u$ is
+an isomorphism. It remains to prove that for every $X'\in \Ob X_{\text{ét}}$
+and every $\psi \in G (X')$, there exists $\varphi \in F(X')$ such that
+$u(X') (\varphi) = \psi$. We may again suppose $X'= X$, and
+using \hyperref[VIII.prop3.9]{3.9}, %% XXX Reference to correct
+we see that, for every $x \in X$, \sisi{}{there} exists $X'_x \in \Ob
+X_{\text{ét}}$ such that the image of $X'_x$ in $X$ contains $x$, and a
+$\varphi_x \in F(X'_x)$ whose image in $G (X'_x)$ is
+the inverse image of $\psi$. Using the fact that $u$ is a
+monomorphism, we see that the $\varphi_{x}$ agree on the
+$\fprod{X'_x}{X'_y}{X}$ $(x, y \in X)$ and therefore come from a
+uniquely determined $\varphi \in F (X)$; one then has $u(\varphi) =
+\psi$, since the inverse images on the $X'_{x}$
+agree. \cqfd.
+
+\begin{enonce*}[remark]{Scholium 3.10}\etiquette[3.10]{VIII.sch3.10}
+Theorem \hyperref[VIII.thm3.5]{3.5} implies that the collection of
+``fiber functors''
+for the étale topology enjoys the same essential properties as
+in the usual theory of sheaves on a topological
+space. We shall use \hyperref[VIII.thm3.5]{3.5}
+and its corollaries very frequently,
+and for this reason we \sisi{}{shall} generally dispense with referring to them explicitly.
+\end{enonce*}
+
+\setcounter{subsection}{10}
+\subsection{}\etiquette[3.11]{VIII.subsec3.11}
+
+For every $x \in X$ we shall also, by abuse of language, denote by
+$x$ the $X$-scheme $\Spec k(x)$, for the usual structural morphism
+$$
+i_x : x = \Spec k(x) \to X{\quoi}.
+$$
+It gives rise to a canonical functor
+$$
+i_x^{\ast} : \widetilde{X_{\text{ét}}} \to \widetilde{x_{\text{ét}}}{\quoi}.
+$$
+If $F$ is a sheaf on $X$, we shall put $F_x = i^{\ast}_x
+(F)$; thus it is a sheaf on $x = \Spec k(x)$ (and as such
+may also be identified with an\pageoriginale étale scheme over $x$, by
+virtue of \hyperref[VIII.prop2.1]{2.1}). It depends functorially on $F$, and
+the functor $i^{\ast}_x : F \mapsto F_x$ still commutes with
+arbitrary $\varinjlim$ and finite $\varprojlim$, by virtue of
+\hyperrefext[VII][VII.subsec1.4]{1.4}.
+
+If $\bar{x} = \Spec \bar{k(x)}$, the fiber functor $F \mapsto
+F_{\bar{x}}$ is canonically isomorphic to the composite of the functor $F
+\mapsto F_x$ and the functor $j$ of \sisi{\hyperref[VIII.thm1.1]{1.1}}{\hyperref[VIII.prop2.1]{2.1}} (taking into account that the latter is
+isomorphic to the fiber functor relative to the geometric point $\Spec
+\bar{k}$ of $\Spec k$). It follows immediately from this and from
+\hyperref[VIII.thm3.5]{3.5} that the
+system of functors $(F \mapsto F_x)$ $(x \in X)$ is likewise
+conservative. Moreover, if $k(x)$ is separably closed, \ie $x =
+\bar{x}$, the notations $F_x$ and $F_{\bar{x}}$ are, strictly speaking,
+in conflict (the first denoting an object of
+$\widetilde{x_{\text{ét}}}$, the second a set), but by virtue of
+\sisi{\hyperref[VIII.thm1.1]{1.1}}{\hyperref[VIII.prop2.1]{2.1}} this conflict is inessential.
+
+\subsection{}\etiquette[3.12]{VIII.subsec3.12}
+
+The preceding remarks show that if $\bar{x} = \Spec
+\bar{k(x)}$, then, for every sheaf $F$ on $X$, the group $\pi_x = \Gal
+(\bar{k(x)}/ k(x))$ acts naturally (on the left) on
+the fiber set $F_{\bar{x}}$, so that $F \mapsto F_{\bar{x}}$
+may in fact be regarded as a functor
+$$
+\widetilde{X_{\text{ét}}} \to \Bb_{\pi_x}
+$$
+whose knowledge is essentially equivalent (thanks to
+\sisi{\hyperref[VIII.thm1.1]{1.1}}{\hyperref[VIII.prop2.1]{2.1}}) to that of the
+functor $F \mapsto F_x$.
+
+This shows, in an important special case, that contrary to what
+happens for sheaves on topological spaces, ``fiber
+functors'' generally admit nontrivial automorphisms.
+In general, we shall determine in \hyperref[VIII.thm7.9]{7.9} all the
+homomorphisms from one fiber functor to another.
+
+\begin{enonce*}[remark]{Remark 3.13}\etiquette[3.13]{VIII.rem3.13}
+Here is\pageoriginale a sometimes useful generalization
+of \hyperref[VIII.thm3.5]{3.5} b). Consider a subset $E$ of $X$ such that,
+for every étale morphism $f : X' \to X$, $E' = f^{-1} (E)$ is ``very dense'' in $X'$ (EGA IV 10.1.3), \ie for every $f$
+as above, every open subset $U$ of $X'$ which contains $E'$ is equal
+to $X'$. Then the fiber functors $F_{\bar{x}}$ on
+$\widetilde{X_{\text{\rm ét}}}$, for $x \in E$, already form a
+``conservative family'' (and consequently Corollaries
+\hyperref[VIII.cor3.6]{3.6}, \hyperref[VIII.cor3.7]{3.7}, and \hyperref[VIII.cor3.8]{3.8} remain
+valid when one restricts oneself to choosing $x \in E$ in them). This follows
+immediately by repeating the proof given for
+\hyperref[VIII.thm3.5]{3.5} b). The preceding result applies in particular
+in the following situations:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $X$ is a Jacobson scheme (EGA IV 10.4.1.), for example
+  locally of finite type over a field, or over $\Spec(𝒵)$, and $E$
+  is the set of closed points of $X$.
+
+\item $X$ is locally of finite type over a scheme $S$, and $E$ is
+  the set of points of $X$ which are closed in their fiber.
+
+\item $X$ is locally noetherian, and $E$ is the set of $x \in
+  X$ such that $\bar{x}$ is a finite set (\ie a
+  semilocal scheme of dimension $\leq 1$) \cf \EGA IV 10.5.3 and 10.5.5.
+\end{enumerate}
+\end{enonce*}

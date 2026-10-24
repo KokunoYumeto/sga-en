@@ -1,0 +1,106 @@
+\begin{proposition}\label{sga3:XXI:4.1}
+\footnote{The following numbers \(4.1\) to \(4.4\) are used in the
+proof of Theorem~\ref{sga3:XXI:5.1}. There are now simpler proofs of
+that theorem; see \emph{Groupes et algèbres de Lie}, Chapter~V,
+\S3, Theorem~1. Editors' note: The reference was made explicit and
+this note, which occurred at \(4.2\) in the original, was moved here.}
+Let \(n\) be the order of \(s_\alpha s_\beta\). Put \(u_0=0\), and,
+for \(p\in\mathbb N\), define
+\[
+\left\{
+\begin{aligned}
+u_{2p+1}&=u_{2p}+(s_\alpha s_\beta)^p(\alpha),\\
+u_{2p+2}&=u_{2p+1}+(s_\alpha s_\beta)^p s_\alpha(\beta).
+\end{aligned}
+\right.
+\]
+Then:
+\footnote{Editors' note: Let \(\rho\) be the half-sum of the positive
+roots, cf. Proposition~\ref{sga3:XXI:3.5.1}. If, as below, one puts
+\(w_0=1\), \(w_1=s_\alpha\), \(w_2=s_\beta s_\alpha\),
+\(w_3=s_\alpha s_\beta s_\alpha\), and so on, then
+\(u_k=\rho-w_k^{-1}(\rho)\). This proves \SGARefLink{sga3:XXI:4.1:item:i}{(i)}, since \(w_{2n}=1\).}
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:XXI:4.1:item:i}(i)] \(u_{k+2n}=u_k\), for every \(k\in\mathbb N\).
+\item[\SGAInlineRefTarget{sga3:XXI:4.1:item:ii}(ii)] \(u_0=0\), \(u_1=\alpha\), \(u_{2n-1}=\beta\),
+and \(u_{2n}=0\).
+\item[(iii)] If \(1<k<2n-1\), then
+\[
+ u_k=a_k\alpha+b_k\beta,
+ \qquad a_k,b_k\in\mathbb N^\ast.
+\]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Assertion \SGARefLink{sga3:XXI:4.1:item:i}{(i)} follows from \((s_\alpha s_\beta)^n=1\) and
+\(u_{2n}=0\).
+
+We prove \SGARefLink{sga3:XXI:4.1:item:ii}{(ii)} and \SGARefLink{sga3:XXI:3.6:item:iii}{(iii)}. Direct calculation gives, in the four cases,
+the following sequences of values:
+\footnote{Editors' note: The original was corrected here to agree
+with the convention \(\ell(\alpha)\le\ell(\beta)\) of \(4.0\).}
+\[
+\begin{array}{c|l}
+A_1\times A_1&0,\alpha,\beta+\alpha,\beta,0,\\[2pt]
+A_2&0,\alpha,\beta+2\alpha,2\beta+2\alpha,
+       2\beta+\alpha,\beta,0,\\[2pt]
+B_2&0,\alpha,\beta+3\alpha,2\beta+4\alpha,
+       3\beta+4\alpha,3\beta+3\alpha,2\beta+\alpha,\beta,0,\\[2pt]
+G_2&0,\alpha,\beta+4\alpha,2\beta+6\alpha,
+       4\beta+9\alpha,5\beta+10\alpha,6\beta+10\alpha,\\
+   &\quad 6\beta+9\alpha,5\beta+6\alpha,4\beta+4\alpha,
+       2\beta+\alpha,\beta,0.
+\end{array}
+\]
+\end{proof}
+
+\begin{lemma}\label{sga3:XXI:4.2}
+Put
+\[
+ w_{2p}=(s_\beta s_\alpha)^p,
+ \qquad
+ w_{2p+1}=s_\alpha(s_\beta s_\alpha)^p,
+\]
+so that \(w_0,\ldots,w_{2n-1}\) are the distinct elements of \(W\).
+Let \(u_0,\ldots,u_{2n-1}\) be the elements of \(V\) defined in
+Proposition~\ref{sga3:XXI:4.1}. For every \(x\in V^\ast\), one has
+\[
+ x-w_k(x)=n_k\alpha^\ast+m_k\beta^\ast,
+\]
+where \(n_k,m_k\in\mathbb Q\) and
+\[
+ n_k+m_k=(x,u_k).
+\]
+\footnote{Editors' note: In view of the preceding editor's note, this
+follows immediately from Propositions~\ref{sga3:XXI:3.5.1} and
+\ref{sga3:XXI:1.1.9}: one has
+\[
+ n_k+m_k=(x-w_k(x),\rho)
+ =(x,\rho-w_k^{-1}(\rho))=(x,u_k).
+\]}
+\end{lemma}
+
+\begin{proof}
+The proof is by induction on \(k\). If \(k=0\), the formula is
+trivial. We carry out, for example, the passage from \(w_{2p}\) to
+\(w_{2p+1}\). Since \(w_{2p+1}=s_\alpha w_{2p}\),
+\[
+\begin{aligned}
+x-w_{2p+1}(x)
+ &=x-w_{2p}(x)+w_{2p}(x)-s_\alpha w_{2p}(x)\\
+ &=n_{2p}\alpha^\ast+m_{2p}\beta^\ast
+   +(w_{2p}(x),\alpha)\alpha^\ast.
+\end{aligned}
+\]
+Consequently
+\[
+\begin{aligned}
+n_{2p+1}+m_{2p+1}
+ &=n_{2p}+m_{2p}
+   +\bigl((s_\beta s_\alpha)^p(x),\alpha\bigr)\\
+ &=(x,u_{2p})+\bigl(x,(s_\alpha s_\beta)^p(\alpha)\bigr)\\
+ &=(x,u_{2p+1}).
+\end{aligned}
+\]
+\end{proof}

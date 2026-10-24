@@ -1,0 +1,193 @@
+\section{Generators and Relations for an Elementary System}
+
+\paragraph{\textbf{6.1.}}
+\SGARefTarget{sga3:xx:6.1}
+Let \(S\) be a scheme and let \((G,T,\alpha)\) be an elementary
+\(S\)-system.  Let
+\[
+ X\in W(\mathfrak g^\alpha)^\times(S),
+ \qquad u=\exp(X).
+\]
+As observed in \SGARefLink{sga3:xx:3.8}{3.8}, the element \(w=w_\alpha(X)\) satisfies, in
+particular,
+\[
+ (wu)^3=e.
+\]
+\footnote{The editors added the sentence that follows.}
+Let \(s_\alpha\) denote the automorphism of \(T\) induced by
+\(\intaut(w)\).  By \SGARefLink{sga3:xx:3.1}{Theorem 3.1}\textup{\SGARefLink{sga3:xx:3.1:item:iii}{(iii)}}, for every \(S'\to S\)
+and every \(t\in T(S')\),
+\[
+ s_\alpha(t)=\intaut(w)(t)
+ =t\,\alpha^\ast\bigl(\alpha(t)^{-1}\bigr).
+\]
+
+\paragraph{\textbf{Theorem 6.2.}}
+\SGARefTarget{sga3:xx:6.2}
+\emph{Let \(H\) be a sheaf of groups over \(S\) for the fppf
+topology.  Let}
+\[
+ f_T\colon T\longrightarrow H,
+ \qquad
+ f_\alpha\colon U_\alpha\longrightarrow H
+\]
+\emph{be group morphisms, and let \(h\in H(S)\).  There exists a
+\textup{(necessarily unique)} group morphism}
+\[
+ f\colon G\longrightarrow H
+\]
+\emph{extending \(f_T\) and \(f_\alpha\) and satisfying \(f(w)=h\)
+if and only if the following conditions hold:}
+
+\emph{\textup{(i)} For every \(S'\to S\),
+\(t\in T(S')\), and \(x\in U_\alpha(S')\),}
+\begin{equation}
+\tag{1}\label{sga3:xx:theorem:6-2:equation:1}
+ f_T(t)f_\alpha(x)f_T(t)^{-1}
+ =f_\alpha(txt^{-1})
+ =f_\alpha\bigl(x^{\alpha(t)}\bigr).
+\end{equation}
+\emph{Equivalently, \(f_T\) and \(f_\alpha\) extend to a group
+morphism \(T\cdot U_\alpha\to H\).}
+
+\emph{\textup{(ii)} For every \(S'\to S\) and \(t\in T(S')\),}
+\begin{equation}
+\tag{2}\label{sga3:xx:theorem:6-2:equation:2}
+ h f_T(t)h^{-1}
+ =f_T(s_\alpha(t))
+ =f_T\!\left(t\,\alpha^\ast(\alpha(t)^{-1})\right).
+\end{equation}
+
+\emph{\textup{(iii)} The following two relations hold in \(H(S)\):}
+\begin{equation}
+\tag{3}\label{sga3:xx:theorem:6-2:equation:3}
+ h^2=f_T\bigl(\alpha^\ast(-1)\bigr),
+\end{equation}
+\begin{equation}
+\tag{4}\label{sga3:xx:theorem:6-2:equation:4}
+ \bigl(hf_\alpha(u)\bigr)^3=e.
+\end{equation}
+
+\smallskip
+\noindent\emph{Proof.}
+Write the laws on \(U_\alpha\) and \(U_{-\alpha}\) additively, while
+writing their vector-space structures multiplicatively.  If \(f\)
+has the asserted properties, then for
+\(y\in U_{-\alpha}(S')\) one necessarily has
+\[
+ f(y)
+ =f(w^{-1}wyw^{-1}w)
+ =h f_\alpha(w^{-1}yw)h^{-1}.
+\]
+Define a morphism \(f_{-\alpha}\colon U_{-\alpha}\to H\) by
+\begin{equation}
+\tag{\(\ast_1\)}\label{sga3:xx:theorem:6-2:equation:ast-1}
+ f_{-\alpha}(y)=h f_\alpha(w^{-1}yw)h^{-1}.
+\end{equation}
+It is a group morphism.  On the big cell \(\Omega\), the morphism
+\(f\) is forced to satisfy
+\[
+ f(ytx)=f_{-\alpha}(y)f_T(t)f_\alpha(x).
+\]
+This proves uniqueness.  The conditions in the statement are
+manifestly necessary; let us prove that they are sufficient.
+
+Relation \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:4}{(4)}} gives
+\[
+ h f_\alpha(u)h^{-1}h^2
+ =
+ f_\alpha(-u)h^{-1}f_\alpha(-u).
+\]
+By \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:3}{(3)}} and \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:1}{(1)}},
+\(h^2=f_T(\alpha^\ast(-1))\) commutes with \(f_\alpha(-u)\), and
+hence
+\[
+ h f_\alpha(u)h^{-1}
+ =
+ f_\alpha(-u)h f_\alpha(-u).
+\]
+By definition,
+\[
+ h f_\alpha(u)h^{-1}=f_{-\alpha}(wuw^{-1}),
+\]
+whereas \SGARefLink{sga3:xx:3.7}{3.7} gives
+\begin{equation}
+\tag{\(\ast_2\)}\label{sga3:xx:theorem:6-2:equation:ast-2}
+ wuw^{-1}=-\widetilde u,
+\end{equation}
+with \(\widetilde u\) the element paired with \(u\).  Therefore
+\begin{equation}
+\tag{\(\ast_3\)}\label{sga3:xx:theorem:6-2:equation:ast-3}
+ f_{-\alpha}(-\widetilde u)
+ =
+ f_\alpha(-u)h f_\alpha(-u).
+\end{equation}
+
+Let \(t\) be a section of \(T\) over a variable \(S'\to S\).
+Apply \(\intaut(f_T(t))\) to this identity.  On the left one
+obtains\footnote{The editors corrected the calculation that follows.}
+\[
+\begin{aligned}
+ f_T(t)f_{-\alpha}(-\widetilde u)f_T(t)^{-1}
+ &=
+ f_T(t)h f_\alpha(u)h^{-1}f_T(t)^{-1}\\
+ &=
+ h\bigl(h^{-1}f_T(t)h\bigr)f_\alpha(u)
+   \bigl(h^{-1}f_T(t)^{-1}h\bigr)h^{-1}\\
+ &=
+ h f_T(s_\alpha(t))f_\alpha(u)
+   f_T(s_\alpha(t))^{-1}h^{-1}\\
+ &=
+ h f_\alpha\bigl(\alpha(s_\alpha(t))u\bigr)h^{-1}\\
+ &=
+ h f_\alpha\bigl(\alpha(t)^{-1}u\bigr)h^{-1}\\
+ &=
+ f_{-\alpha}\bigl(-\alpha(t)^{-1}\widetilde u\bigr).
+\end{aligned}
+\]
+Here we used \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:2}{(2)}}, \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:1}{(1)}},
+\(s_\alpha(t)=t\alpha^\ast(\alpha(t)^{-1})\), and
+\(\alpha\circ\alpha^\ast=2\).
+
+The right-hand side of \((\ast_3)\), after conjugation, becomes
+\[
+ f_\alpha(-\alpha(t)u)\,
+ f_T(t)h f_T(t)^{-1}h^{-1}\,
+ h f_\alpha(-\alpha(t)u).
+\]
+Since
+\[
+ h f_T(t)^{-1}h^{-1}
+ =f_T(s_\alpha(t^{-1}))
+  =f_T\bigl(t^{-1}\,\alpha^\ast(\alpha(t))\bigr),
+\]
+this equals
+\[
+ f_\alpha(-\alpha(t)u)\,
+ f_T\bigl(\alpha^\ast(\alpha(t))\bigr)\,
+ h f_\alpha(-\alpha(t)u).
+\]
+Comparison gives
+\[
+ f_{-\alpha}\bigl(-\alpha(t)^{-1}\widetilde u\bigr)
+ =
+ f_\alpha(-\alpha(t)u)\,
+ f_T\bigl(\alpha^\ast(\alpha(t))\bigr)\,
+ h f_\alpha(-\alpha(t)u).
+\]
+Since \(\alpha\colon T\to\mathbb G_{m,S}\) is faithfully flat and
+\(H\) is a separated presheaf, \(-\alpha(t)^{-1}\) may be replaced
+by an arbitrary section of \(\mathbb G_{m,S}\).  Thus:
+
+\paragraph{\textbf{Lemma 6.2.1.}}
+\SGARefTarget{sga3:xx:6.2.1}
+\emph{For every \(S'\to S\) and every
+\(z\in\mathbb G_m(S')\),}
+\[
+ f_{-\alpha}(z\widetilde u)
+ =
+ f_\alpha(z^{-1}u)\,
+ f_T\bigl(\alpha^\ast(-z^{-1})\bigr)\,
+ h f_\alpha(z^{-1}u).
+\]
+

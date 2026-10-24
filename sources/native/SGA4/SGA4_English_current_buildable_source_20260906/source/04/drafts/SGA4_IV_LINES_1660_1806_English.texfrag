@@ -1,0 +1,142 @@
+\subsubsection{}\etiquette[4.3.5]{IV.subsubsec4.3.5}
+Notice that the functor $I\mapsto I_E$ is not necessarily fully
+faithful (or even faithful: take $E$ to be the ``empty topos''
+(\hyperref[IV.subsec2.2]{2.2})); thus a constant object of $E$ does
+not in general determine, up to unique isomorphism, the set $I$ from
+which it arises. We say that $E$ is $0$-\emph{acyclic}, or
+\emph{connected and nonempty}, if the functor $I\mapsto I_E$ is fully
+faithful. By the general properties of adjoint functors, this amounts
+to saying that the adjunction morphism
+$$
+I\longrightarrow f_{\ast}(f^{\ast}(I))=f_{\ast}(I_E)=\Hom(e_E, I_E)
+$$
+is\pageoriginale an isomorphism (so that the functor
+\eqhyperref[IV.eq4.3.3]{4.3.3} recovers the ``value'' of a constant
+object of $E$). It is easily checked that this holds if and only if
+$e_E$ is not the initial object $\phi_E$ of $E$, \ie if $E$ is not
+an ``empty topos'' (which expresses the \emph{faithfulness} of the
+functor $I\mapsto I_E$\footnote[1]{or equivalently the fact that this
+functor is conservative (\hyperrefext[I][I.cor6.3]{6.3}).}), \emph{and}
+if $e_E$ is a \emph{connected} object of $E$, \ie is not the sum of
+two objects of $E$ which are not ``empty'' (\ie which are not initial
+objects of $E$).
+
+\subsubsection{}\etiquette[4.3.6]{IV.subsubsec4.3.6}
+The functor \eqhyperref[IV.eq4.3.3]{4.3.3} is also often called the
+\emph{sections functor} and is denoted by $\Gamma_E$, $\Gamma(E,-)$,
+or simply $\Gamma$:
+\hypertarget{sga4.exp.IV.equation.4.3.6.1}{}\begin{equation*}
+\Hom(e_E,X)=\Gamma_E(X)=\Gamma(E,X)=\Gamma(X){\quoi}.\tag{4.3.6.1}
+\end{equation*}
+It commutes with arbitrary projective limits, but is not in general
+right exact; its derived functors (on abelian group objects) will be
+studied in the next exposé.
+
+\subsection{Morphisms from the ``empty topos''}\etiquette[4.4]{IV.subsec4.4}
+
+Let $\phi_{\text{top}}$ be an empty topos, corresponding to a category
+of sheaves $\Phi$ equivalent to the terminal category
+(\hyperref[IV.subsec2.2]{2.2}). Let $E$ be a topos. The category of
+functors from $E$ to $\Phi$ is clearly equivalent to the one-point
+category, and every such functor commutes with inductive and
+projective limits (without any merit in this), and hence may be
+regarded as an inverse-image functor for a morphism of topoi
+$\phi_{\text{top}}\rightarrow E$. It follows that the \emph{category
+$\Hhomtop(\phi_{\text{top}},E)$ is equivalent to the one-point
+category}, and in particular that \emph{there exists, up to
+unique\pageoriginale isomorphism, exactly one morphism of topoi}
+\begin{equation*}
+\phi_{\text{top}}\longrightarrow E{\quoi}.\tag{4.4.1}
+\end{equation*}\etiquette[4.4.1]{IV.eq4.4.1}
+This justifies to some extent the terminology ``initial topos''
+introduced in \hyperref[IV.subsec2.2]{2.2}.
+
+One may also determine the morphisms of topoi
+\begin{equation*}
+E\longrightarrow \phi_{\text{top}}{\quoi}\ ;\tag{4.4.2}
+\end{equation*}\etiquette[4.4.2]{IV.eq4.4.2}
+one checks at once that such a morphism exists if and only if the
+initial object of $E$ is also a terminal object, \ie if and only if
+$E$ itself is an ``empty topos,'' and that in this case the category
+$\Hhomtop(E,\phi_{\text{top}})$ is again equivalent to the one-point
+category. The unique morphism \eqhyperref[IV.eq4.4.2]{4.4.2} (up to
+isomorphism) is then an equivalence of topoi.
+
+\subsection{The classifying topos $B_G$ for a varying group $G$}\etiquette[4.5]{IV.subsec4.5}
+
+\subsubsection{}\etiquette[4.5.1]{IV.subsubsec4.5.1}
+Let $E$ be a topos, and let
+$$
+f:G\longrightarrow H
+$$
+be a morphism of group objects in $E$. It induces a ``restriction of
+the group of operators'' functor
+$$
+f^{\ast}:B_H\longrightarrow B_G{\quoi},
+$$
+where the notation is that of \hyperref[IV.subsec2.4]{2.4}. It is
+immediate that this functor commutes with inductive and projective
+limits; a fortiori, it may be interpreted as an inverse-image
+functor associated with a morphism of topoi
+$$
+B_f\mbox{ or } f:B_G\longrightarrow B_H{\quoi}.
+$$
+The\pageoriginale corresponding direct-image functor
+$$
+f_{\ast}:B_G\longrightarrow B_H
+$$
+is readily made explicit by the formula
+$$
+f_{\ast}(X)=\Hhom_G(H_s,X){\quoi},
+$$
+where $X$ is an object of \sisi{$X$}{$E$} with a left action of $G$,
+where $H_s$ is $H$ regarded as endowed with the left actions by $G$
+induced by \sisi{$F$}{$f$}, and where $\Hhom_G$ denotes the evident
+subobject of the object $\Hhom$ defined below
+(\hyperref[IV.subsec10.2]{10.2}); the left action of $H$ on
+$\Hhom_G(H_s,X)$ is induced by the right actions of $H$ on $H_s$ by
+\emph{right} translations.
+
+Since the inverse-image functor $f^{\ast}$ commutes with arbitrary
+\sisi{$\varinjlim$}{$\varprojlim$} (and not only with finite
+\sisi{$\varinjlim$}{$\varprojlim$}), it is itself the right adjoint of
+a functor
+$$
+f_{!}:B_G\longrightarrow B_H{\quoi},
+$$
+so that there is a sequence of three adjoint functors as in
+\hyperref[IV.subsubsec3.1.3]{3.1.3}:
+$$
+f_{!},f^{\ast}, f_{\ast}{\quoi}.
+$$
+The functor $f_{!}$ is readily made explicit by the formula
+$$
+f_{!}(X)=H\times {}^GX{\quoi},
+$$
+where the right-hand side denotes the ``contracted product'' induced
+by the actions of $G$ on $X$ (on the left) and on $H$ (on the right,
+via right translations and $f$), defined as the quotient of
+$H\times X$ by the action of $G$ given by
+$$
+g\circ (h,x)=(hg^{-1}, gx){\quoi}.
+$$
+
+The functor $f_{!}$, being a left adjoint, clearly commutes with
+inductive limits, but is not in general left exact (\ie
+it\pageoriginale cannot in turn be regarded as an inverse-image
+functor for a morphism of topoi $B_H\rightarrow B_G$). In fact, one
+checks easily that it can be left exact only if $f:G\rightarrow H$
+is an isomorphism. Likewise, the functor $f_{\ast}$, which commutes
+with projective limits, is not in general right exact and, a
+fortiori, does not in general admit a right adjoint. At least when
+$E$ is the punctual topos, \ie when $G$ and $H$ are ordinary groups,
+$f_{\ast}$ is right exact only if $f$ is an isomorphism.
+
+Given a second morphism of groups $g:H\rightarrow K$, one obtains,
+as in \hyperref[IV.subsubsec4.1.1]{4.1.1}, transitivity up to
+canonical isomorphism, so that, subject to the usual reservation, the
+classifying topos $B_G$ may be regarded as depending
+\emph{functorially} on the group $G$. We leave it to the reader to
+generalize this functorial behavior to the case where both $G$
+\emph{and} the topos $E$ vary.
+

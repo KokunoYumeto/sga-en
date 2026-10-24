@@ -1,0 +1,198 @@
+\section{Commutation of the functors $H^i(X,-)$ with filtered
+  inductive limits}\etiquette[5]{VI.sec5}\pageoriginale
+
+\begin{enonce*}{Theorem 5.1}\etiquette[5.1]{VI.thm5.1}
+Let $E'$ be an algebraic topos (\hyperref[VI.def2.3]{2.3}), let $E$ be
+a locally coherent topos (\hyperref[VI.def2.3]{2.3}), and let
+$f:E'\to E$ be a coherent morphism of topoi
+(\hyperref[VI.def3.1]{3.1}). Then, for every integer $q$, the functors
+$R^qf_{\ast}$ \emph{(V \hyperref[V.subsec5.0]{5.0})} commute with filtered inductive limits
+of abelian sheaves.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 5.2}\etiquette[5.2]{VI.cor5.2}
+Let $E'$ be a coherent topos (\hyperref[VI.def2.3]{2.3}). For every
+integer $q$, the functor $H^q(E',-)$ commutes with filtered inductive
+limits of abelian sheaves.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 5.3}\etiquette[5.3]{VI.cor5.3}
+Let $E$ be a topos (\resp an algebraic topos)
+(\hyperref[VI.def2.3]{2.3}), and let $X$ be an algebraic and coherent
+(\resp coherent) object of $E$ (\hyperref[VI.def2.3]{2.3}). For every
+integer $q$, the functor $H^q(X,-)$ commutes with filtered inductive
+limits of abelian sheaves.
+\end{enonce*}
+
+Corollary \hyperref[VI.cor5.2]{5.2} follows from
+\hyperref[VI.thm5.1]{5.1} by taking for $E$ the point topos and for
+$f:E'\to E$ the unique morphism (IV \hyperref[IV.subsec2.2]{2.2}). Let us show that
+\hyperref[VI.cor5.2]{5.2} implies \hyperref[VI.cor5.3]{5.3}. Let
+$j_X:E_{/X}\to E$ be the localization morphism. There is a canonical
+isomorphism, functorial in the abelian sheaf $F$ (V \hyperref[V.2.2.1]{2.2.1}),
+$H^q(X,F)\simeq H^q(E_{/X},j_X^{\ast}F)$. The functor $j_X^{\ast}$
+commutes with inductive limits, and the topos $E_{/X}$ is coherent
+(\hyperref[VI.subsubsec2.4.6]{2.4.6}), whence
+\hyperref[VI.cor5.3]{5.3}. Let us show that
+\hyperref[VI.cor5.3]{5.3} implies \hyperref[VI.thm5.1]{5.1}. Let
+$E_{\text{cohalg}}$ be the full subcategory of $E$ defined by the
+algebraic and coherent objects of $E$. It is a generating category
+(\hyperref[VI.subsubsec2.4.5]{2.4.5}). For every abelian sheaf $F$,
+$R^qf_{\ast}F$ is the sheaf associated with the presheaf
+$X\mapsto H^q(f^{\ast}X,F)$ $(X\in\ob C)$
+(\hyperrefext[V][V.prop5.1]{5.1}). Since $f$ is coherent,
+$f^{\ast}X$ is coherent for every object $X$ of $C$
+(\hyperref[VI.def3.1]{3.1}). By \hyperref[VI.cor5.3]{5.3}, the
+presheaf $X\mapsto H^q(f^{\ast}X,F)$ commutes with filtered inductive
+limits in the argument $F$, and \hyperref[VI.thm5.1]{5.1} follows,
+since the associated-sheaf functor commutes with inductive limits.
+(Only the following property of the morphism $f$ is used: there is a
+generating family $S$ of $E$ such that, for every $X$ of $S$,
+$f^{\ast}(X)$ is algebraic and coherent.) It therefore remains to
+prove \hyperref[VI.cor5.2]{5.2}. We already know that the functor
+$H^{\circ}(E',-)$ commutes with filtered inductive limits of abelian
+sheaves \hyperref[VI.thm1.23]{(1.2.3)}. By a classical result of \cite{sga4.exp.VI.bib.7}, to prove
+\hyperref[VI.cor5.2]{5.2} it is enough to show that a filtered
+inductive limit of sheaves acyclic for the functor $H^{\circ}(E',-)$
+is acyclic for $H^{\circ}(E',-)$. This follows from the next lemma,
+applied with $C=E'_{\coh}$.
+
+\begin{enonce*}{Lemma 5.4}\etiquette[5.4]{VI.lem5.4}
+Let\pageoriginale $E$ be a locally coherent topos
+(\hyperref[VI.def2.3]{2.3}), and let $C$ be a full generating
+subcategory of $E$, stable under fiber products, all of whose objects
+are quasi-compact (\hyperref[VI.def1.1]{1.1}). A filtered inductive
+limit of $C$-acyclic sheaves \emph{(\hyperrefext[V][V.subsec4.2]{4.2})}
+is a $C$-acyclic sheaf.
+\end{enonce*}
+
+Let $(F_i)_{i\in I}$ be a filtered inductive system of $C$-acyclic
+sheaves, and denote its inductive limit by $F$. Every object $Y$ of
+$C$ is coherent (\hyperref[VI.prop2.1]{2.1}), and consequently
+$F(Y)=\displaystyle\mathop{\varinjlim}_iF_i(Y)$ \hyperref[VI.thm1.23]{(1.2.3)}. To show that
+$F$ is $C$-acyclic, it is enough to show that
+$\check H^q(Y,F)=0$ for every $q>0$ and every $Y$ of $C$
+(\hyperrefext[V][V.prop4.3]{4.3}). Let $X$ be an object of $C$, and
+let $\Xx=(X_{\alpha}\to X)_{\alpha\in A}$ be a finite covering
+family by objects of $C$. We have
+$H^q(\Xx,F)=H^q(C^{\bigdot}(\Xx,F))$
+(\hyperrefext[V][V.subsubsec2.4.3]{2.4.3}). By the preceding and the
+fact that $C^{\bigdot}(\Xx,F)$ involves only finite products of groups
+(\hyperrefext[V][V.subsubsec2.3.3]{2.3.3}), we have
+$C^{\bigdot}(\Xx,F)=\varinjlim_iC^{\bigdot}(\Xx,F_i)$. Hence
+$$
+H^q(\Xx,F)
+=H^q\bigl(\varinjlim_iC^{\bigdot}(\Xx,F_i)\bigr)
+=\varinjlim_iH^q(C^{\bigdot}(\Xx,F_i))=0
+$$
+for $q>0$ (\hyperrefext[V][V.prop4.3]{4.3}). Consequently
+$\check H^q(X,F)=\varinjlim_{\mathfrak X}H^q(\mathfrak X,F)=0$.
+
+\begin{enonce*}{Corollary 5.5}\etiquette[5.5]{VI.cor5.5}
+Let $E$ be a coherent topos (\hyperref[VI.def2.3]{2.3}), and let
+${(X_i)_{i\in I}}$ be a decreasing filtered family of coherent
+subobjects of the final object. Denote by $\Phi$ the family of closed
+subtopoi of $E$ \emph{(IV 9)} contained in the closed complement of
+one of the $X_i$. Then $\Phi$ is a family of supports of $E$
+\emph{(\hyperrefext[V][V.def6.12]{6.12})}, and for every integer $q$
+the functors $H^q_{\Phi}(E,-)$ and $H^q_{\Phi}$
+\emph{(\hyperrefext[V][V.subsec6.13]{6.13})} commute with filtered
+inductive limits.
+\end{enonce*}
+
+Let $Z_i$ be the closed complement of $X_i$. For every abelian sheaf
+$F$, there is an exact sequence (\hyperrefext[V][V.prop6.5]{6.5}):
+$$
+0 \to H^{0}_{Z_i} (E, F) \to H^{0} (E, F) \to H^{0} (X_i, F) \to
+H^{1}_{Z_i} (E, F) \to \ldots\quad {\quoi}.
+$$
+The functors $H^q(E,F)$ and $H^q(X_i,F)$ commute with filtered
+inductive limits in $F$ (\hyperref[VI.cor5.2]{5.2},
+\hyperref[VI.cor5.3]{5.3}). Consequently $H^q_{Z_i}(E,F)$ does so as
+well, whence the analogous property for $H^q_{\Phi}(E,F)$ after
+taking the inductive limit over the $Z_i$
+(\hyperrefext[V][V.subsec6.13]{6.13}). The assertion concerning the
+functors $\mathcal H^q_{\Phi}$ follows by localization and passage to
+the associated sheaf.
+
+\begin{enonce*}[remark]{Definition 5.6}\etiquette[5.6]{VI.def5.6}
+Let\pageoriginale $E$ be a ringed topos with ring $A$, and let $q$ be
+an integer. An $A$-module $G$ is said to be of finite
+$q$-presentation if there is a family $X_i$ of objects of $E$ covering
+the final object of $E$ such that, for every $i$, there is an exact
+sequence of modules on $E_{/X_i}$:
+\begin{equation*}
+L_q \to L_{q-1} \to \cdots L_1 \to L_0 \to G_{/X_i} \to 0\tag{5.5.1}
+\end{equation*}\etiquette[5.5.1]{VI.eq5.5.1}
+where, for every $p$, $L_p=A^{n_p}_{/X_i}$, with $n_p$ an integer.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 5.7}\etiquette[5.7]{VI.prop5.7}
+Let $G$ be a sheaf of finite $q$-presentation. For every $i\leq q-1$,
+the functor $\Eext^i_A(G,-)$ commutes with filtered inductive limits
+of $A$-modules.
+\end{enonce*}
+
+The problem is local on $E$ (\hyperrefext[V][V.prop6.1]{6.1}). Thus,
+after localizing to the $E_{/X_i}$, we may suppose that there is an
+exact sequence of the form \eqhyperref[VI.eq5.5.1]{5.5.1}. Put
+$L^{\bigdot}=L_q\to\cdots\to L_1\to L_0$. We have
+$\Eext^i_A(G,F)\simeq\Hh^i(\Hhom_A(L^{\bigdot},F))$, and the functor
+$F\mapsto\Hhom_A(L^{\bigdot},F)$ commutes with inductive limits,
+which proves the proposition.
+
+\begin{enonce*}{Corollary 5.8}\etiquette[5.8]{VI.cor5.8}
+Let $(E,A)$ be a ringed topos, let $G$ be a sheaf of $A$-modules of
+finite $q$-presentation, and let $X$ be an algebraic and coherent
+object of $E$. The functors $F\mapsto\Ext^i_A(X;G,F)$, for
+$\frac{i(i-1)}{2}\leq q-1$, commute with filtered inductive limits
+in $F$.
+\end{enonce*}
+
+This follows from \hyperref[VI.prop5.7]{5.7} and
+\hyperref[VI.cor5.3]{5.3} by the spectral sequence of V \hyperref[V.6.1.3]{6.1.3}.
+
+\setcounter{subsection}{8}
+\subsection{}\etiquette[5.9]{VI.subsec5.9}
+
+Let $(E,A)$ be a ringed topos, let $\Phi$ be a family of supports of
+$E$ (\hyperrefext[V][V.def6.12]{6.12}), let $G$ be an $A$-module of
+finite $r$-presentation (\hyperref[VI.def5.6]{5.6}), and let $X$ be
+an algebraic and coherent object of $E$ (\hyperref[VI.def2.3]{2.3}).
+Taking the inductive limit over the closed subtopoi in $\Phi$ in the
+last spectral sequences of V \hyperref[V.6.9.1]{6.9.1} and V \hyperref[V.6.9.2]{6.9.2}, respectively, gives
+two spectral sequences (\hyperrefext[V][V.subsec6.13]{6.13}):
+\begin{equation*}
+\begin{cases}
+'E^{pq}_2 = \varinjlim_{Z \in \Phi} \Ext^p_A (X; G, H^q_Z F)
+\Rightarrow \Ext^{p+q}_{A, \Phi} (X; G, F){\quoi},\\
+''E^{pq}_2 = \varinjlim_{Z \in \Phi} \Eext^p_A (G, H^q_Z F)
+\Rightarrow \Eext^{p+q}_{A, \Phi} (G, F){\quoi}.
+\end{cases}\tag{5.9.1}
+\end{equation*}\etiquette[5.9.1]{VI.eq5.9.1}
+
+It follows from \hyperref[VI.prop5.7]{5.7} and
+\hyperref[VI.cor5.8]{5.8} that there are canonical isomorphisms
+\begin{equation*}
+\begin{cases}
+'E^{pq}_2 \simeq \Ext^p_A (X; G, H^q_\Phi F)&\quav
+\frac{p(p-1)}{2} \leq r - 1{\quoi},\\
+''E^{pq}_2 \simeq \Eext^p_A (G, H^q_\Phi F) &\quav p \leq r-1{\quoi}.
+\end{cases}\tag{5.9.2}
+\end{equation*}\etiquette[5.9.2]{VI.eq5.9.2}
+
+\begin{enonce*}{Corollary 5.10}\etiquette[5.10]{VI.cor5.10}
+Use\pageoriginale the hypotheses and notation of
+\hyperref[VI.cor5.5]{5.5}. Let $A$ be a ring of $E$, and let $G$ be an
+$A$-module of finite $q$-presentation. For every integer $i$ such
+that $\dfrac{i(i-1)}{2}\leq q-1$, the functors
+$F\mapsto\Ext^i_{A,\Phi}(E;G,F)$ and
+$F\mapsto\Eext^i_{A,\Phi}(G,F)$
+\emph{(\hyperrefext[V][V.subsec6.13]{6.13})} commute with filtered
+inductive limits.
+\end{enonce*}
+
+This follows from \hyperref[VI.cor5.5]{5.5} and
+\hyperref[VI.prop5.7]{5.7} by the first spectral sequences of V \hyperref[V.6.9.1]{6.9.1}
+and V \hyperref[V.6.9.2]{6.9.2}, respectively.
+

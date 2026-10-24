@@ -1,0 +1,143 @@
+\setcounter{pageoriginal}{63}
+
+\section{Introduction}\etiquette[1]{XI.sec1}\pageoriginale
+
+In Section~\hyperref[XI.sec4]{4} we shall prove that étale cohomology
+with values in a locally constant torsion sheaf agrees with classical
+cohomology for a scheme $X$ smooth over $\Spec\CC$. The proof, which is
+essentially the one given in \cite{sga4.exp.XI.bib.1}, is elementary once one has the
+theorem of Grauert recalled below (\hyperref[XI.thm4.3]{4.3} (iii)),
+which says that every finite covering of $X(\CC)$ comes from an étale
+covering of $X$; this is why we give it here, although we shall prove a
+more complete result later, using Hironaka's resolution of
+singularities theorem \cite{sga4.exp.XI.bib.3}\footnote[1]{Note, moreover, that
+  Hironaka's resolution of singularities also gives a very simple
+  proof of Grauert's result, and in this capacity may in any case be
+  regarded as underlying the comparison theorems. See in this
+  connection the exposé by Mme M. Raynaud in \SGA 1 XII (North Holland
+  Pub. Cie).}. Furthermore, the good neighborhoods constructed in
+\hyperref[XI.sec3]{Section~3} could be useful in other\pageoriginale situations.
+
+Note that étale cohomology and classical cohomology do not agree for
+sheaves that are not torsion. For example, one has
+$H^1(X_{\et},\ZZ)=0$ for every normal scheme $X$
+(\hyperrefext[IX][IX.prop3.6]{3.6} (ii)), but classical cohomology does
+not necessarily vanish.
+
+\section{Existence of sufficiently general hyperplane sections}\etiquette[2]{XI.sec2}
+
+The following result is classical, but a reference is lacking (pending
+\EGA V):
+
+\begin{enonce*}{Theorem 2.1}\etiquette[2.1]{XI.thm2.1} %Why is the statement
+Let $k$ be a field and let $V\subset \PP^n_k$ be a projective
+algebraic scheme purely of dimension $r$. Let $V'$ be the open
+subscheme of points of $V$ smooth over $\Spec k$, and let $P$ be a
+rational point of $\PP^n$. Then:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item A ``sufficiently general'' linear subspace $L$ of a given
+  dimension $d$ in $\PP^n$ meets $V$ transversely at every point of
+  $L\cap V'$.
+
+\item Let $\{H_1,\ldots,H_s\}$ $(s\leq r)$ be a system of %a
+  hypersurfaces of degree $d\geq 2$ passing through $P$, and let
+  $Y=H_1\cap\ldots \cap H_s$. If $\{H_1,\ldots,H_s\}$ is sufficiently
+  general, then $Y$ meets $V$ transversely at every point of $Y\cap
+  V'$.
+\end{enumerate}
+\end{enonce*}
+
+The phrase ``for a sufficiently general linear subspace'' means that
+there exists a dense open subset $U$ of the Grassmannian parametrizing
+the linear subspaces of dimension % 'which parametrizes'
+$d$, such that the assertion under consideration about $L$ is true
+whenever the parameter of $L$ lies in $U$. Thus this does not imply
+that such an $L$ (defined over $k$) exists if $k$ is not infinite.
+Likewise,
+the hypersurfaces of degree $d$ passing through $P$ are parametrized
+\pageoriginale by a projective space $\PP^N$, and the phrase ``for
+$\{H_1,\ldots,H_s\}$ sufficiently general'' means that there exists a
+dense open subset $U$ of $(\PP^N)^s$ such that the assertion under
+consideration is true whenever the parameter of
+$(H_1,\ldots,H_s)$ lies in $U$.
+
+Proof of (i): By induction one is reduced immediately to the case
+where $L$ is a hyperplane. Let $(V'_{\nu})$ be a finite open covering
+of $V'$. If assertion (i) is true when the symbol $V'$ is replaced by
+$V'_{\nu}$ for every $\nu$, then it is also true for $V'$, because the
+intersection of finitely many dense open subsets is again open and
+dense. We may therefore replace the situation by an affine algebraic
+scheme, say $V\subset \EE^n_k=\Spec k[x_1,\ldots,x_n]$. The hyperplane
+$L$ will be the zero set of a linear equation
+$$
+\ell(x)=a_0+\sum^n_{i=1}a_ix_i{\quoi}.
+$$
+
+Recall that a smooth scheme is locally a complete intersection. We may
+therefore replace $V'$ by an open subset of points of $V$ such that
+there exist polynomials $f_1(x),\ldots,f_{n-r}(x)$ vanishing on $V$ and
+indices $1\leq j_{\nu}\leq n$ $(\nu=1,\ldots,n-r)$ such that the
+determinant
+$$
+\left|\frac{\partial f_i}{\partial x_{j_{\nu}}}\right|\quad 
+(i,\nu=1,\ldots,n-r)
+$$
+is invertible. Say $j_{\nu}=\nu$ $(\nu=1,\ldots,n-r)$. We may then
+solve the equations
+$$
+y_j=\sum^{n-r}_{i=1}\quad c_i\quad \frac{\partial f_i}{\partial x_j}
+$$
+for\pageoriginale $c_i$ as rational functions of the variables $x_i$,
+$y_j$ $(i=1,\ldots, n-r; j=1,\ldots,n)$, and these functions $c_i(x,y)$
+are defined at every point of $V'$.
+
+Now to say that $L$ meets $V$ transversely at a point $Q$ of $V'$ is
+equivalent to saying that the value of the matrix
+$$
+\begin{bmatrix}
+\frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial
+  f_1}{\partial x_n}\\
+\vdots & &\vdots\\
+\frac{\partial f_{n-r}}{\partial x_1} & & \frac{\partial
+  f_{n-r}}{\partial x_n}\\
+a_1 & \cdots & a_n
+\end{bmatrix}
+$$
+at $Q$ has rank $n-r+1$. Thus, for $L$ to meet $V$ transversely at every
+point of $V'$, it is necessary and sufficient that the system of
+$r+1$ equations
+\begin{align*}
+a_j &= \sum^{n-r}_{i=1} c_i (x,a)\frac{\partial f_i}{\partial x_j}\qquad
+(j=n-r+1,\ldots, n)\\
+a_0 &+ \sum^n_{i=1} a_i x_i =0
+\end{align*}
+have no solution on $V'$. Such a condition is plainly constructible in
+$(a)$: Let $X=V'\times A$, where $A$ is the affine space with
+coordinates $a_0,\ldots,a_n$, and let $Y\subset X$ be the closed subset
+of solutions of these equations. The condition is that the fiber of
+$Y/A$ be empty, which is indeed a constructible\pageoriginale
+condition (\EGA IV 9.5.1). It is therefore enough % \ref
+to verify that the fiber above the generic point of $A$ is empty,
+which follows immediately from the form of the equations. This
+completes the proof of (i). (ii): Consider the rational map
+$\PP^n\rightarrow \PP^N$ given by the linear system of hypersurfaces
+of degree $d$ ($d\geq 2$) passing through $P$. It is well known (and
+easily verified) that this is a ``blowing up'' of $P$, and therefore
+gives a locally closed immersion
+$$
+f:\PP^n-\{P\}\longrightarrow \PP^N{\quoi}.
+$$
+Let $V''=V'-(\{P\}\cap V')$, let
+$\bar{V}{}''=\sisi{f}{F}(V'')$, and let $L_i$ be the hyperplane of
+$\PP^N$ corresponding to the hypersurface $H_i$
+$(i=1,\ldots,s)$. Then $V''$ is isomorphic to $\bar{V}{}''$, and by
+the definition of $f$, to say that $Y$ meets $V''$ transversely is
+equivalent to saying that $L_1\cap\ldots \cap L_s$ meets
+$\bar{V}{}''$ transversely. Putting $\bar{V}=$ the closure of
+$\bar{V}{}''$, we are reduced to assertion (i) for $\bar{V}$, which
+implies (ii) with $V''$ in place of $V'$. It remains to consider the
+point $P$, if it is a smooth point of $V$. But it is evident that if
+$\{H_1,\ldots,H_s\}$ is sufficiently general and $P$ is smooth on
+$V$, then $Y$ meets $V$ transversely at $P$, whence the result.

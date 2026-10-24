@@ -1,0 +1,329 @@
+
+\setcounter{footnote}{45}
+
+\subsection*{\SGAInlineRefTarget{sga3:iii:subsection:1-3}1.3. Extensions of group laws.}
+Consider the following situation: one has a morphism in
+\(\widehat{\mathscr C}\),
+\[
+ (\dagger)\qquad p:X\longrightarrow Y,
+\]
+and a commutative \(\widehat{\mathscr C}\)-group \(M\) acting on
+\(X\), such that \(X\) is formally principal homogeneous over \(Y\)
+under \(M_Y\).
+
+If \(g:Y\to Z\) is an arbitrary morphism in
+\(\widehat{\mathscr C}\), then \(g\circ p:X\to Z\) is invariant
+under \(M\): for every \(S\in\operatorname{Ob}\mathscr C\), the map
+\((g\circ p)(S)\) is invariant under the action of \(M(S)\) on
+\(X(S)\). Conversely, we shall assume that the following condition
+holds for \(n=1,2,3,4\):
+
+\medskip
+\noindent\((+)_{n}\): \textit{Every morphism from \(X^n\) to \(M\)
+that is invariant under the action of \(M^n\) on \(X^n\) factors
+uniquely through \(p^n:X^n\to Y^n\), where the superscript \(n\)
+denotes a Cartesian power.}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:lemma:1-3-1}\textbf{Lemma 1.3.1.}
+\begin{enumerate}
+ \item[(i)] \textit{If \(h\) is a morphism from \(Y\) to \(M\),
+ the automorphism \(u_h\) of \(X\), defined set-theoretically by
+ \(x\mapsto h(p(x))\cdot x\), preserves the fibers of \(p\) and
+ commutes with the operations of \(M\) on \(X\).\footnote{Editor's
+ note: here and below, ``commutes with \(p\) and the operations of
+ \(M\)'' has been replaced by ``preserves the fibers of \(p\) and
+ commutes with the operations of \(M\).'' The equalities that follow
+ have also been added.} Thus, for every
+ \(S\in\operatorname{Ob}\mathscr C\), \(x\in X(S)\), and
+ \(m\in M(S)\), one has}
+ \[
+  p\bigl(h(p(x))\cdot x\bigr)=p(x),
+  \qquad
+  m\cdot h(p(x))\cdot x
+   =h(p(m\cdot x))\cdot m\cdot x.
+ \]
+
+ \item[(ii)] \textit{This construction gives a bijective
+ correspondence between morphisms from \(Y\) to \(M\) and
+ automorphisms of \(X\) that preserve the fibers of \(p\) and commute
+ with the operations of \(M\).}
+\end{enumerate}
+
+The first assertion is clear, since \(p(m\cdot x)=p(x)\) and \(M\)
+is commutative. Conversely, an automorphism \(u\) of \(X\) preserving
+the fibers of \(p\) can be written set-theoretically as
+\(x\mapsto g(x)x\), where \(g\) is a certain morphism from \(X\) to
+\(M\). If \(u\) commutes with the operations of \(M\), then \(g\) is
+invariant under \(M\),\footnote{Editor's note: indeed,
+\(mg(x)x=mu(x)=u(mx)=g(mx)mx\), and hence \(g(mx)=g(x)\).} and the
+conclusion follows from condition \((+)_{1}\).
+
+Suppose now, in addition, that a group law on \(Y\) and an action of
+\(Y\) on \(M\) are given, that is, a morphism of
+\(\widehat{\mathscr C}\)-groups
+\[
+ (\ddagger)\qquad
+ f:Y\longrightarrow
+ \underline{\operatorname{Aut}}_{\widehat{\mathscr C}\text{-gr.}}(M).
+\]
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:definition:1-3-2}\textbf{Definition 1.3.2.}
+\textit{A composition law on \(X\),}
+\[
+ P:X\times X\longrightarrow X,
+\]
+\textit{is called \emph{admissible} if it satisfies the following two
+conditions:}
+
+\begin{enumerate}
+ \item[\SGAInlineRefTarget{sga3:iii:definition:1-3-2:item:i}(i)] \textit{\(P\) lifts the group law of \(Y\); that is, the
+ following diagram is commutative.}
+
+ \SGAThreeNativeDiagram[0.28\textwidth]
+  {native_diagrams/exp3/diagram_029_exp3_p029_admissible_law_square.tex}
+  {The compatibility of an admissible composition law with the group
+   law on \(Y\).}
+  {fig:exp3-p029-admissible-law-square}
+  {Polo--Gille Exp3-14oct24.pdf, component-local p. 29; combined-reader
+   p. 139; printed p. 129}
+
+ \item[\SGAInlineRefTarget{sga3:iii:definition:1-3-2:item:ii}(ii)] \textit{For every \(S\in\operatorname{Ob}\mathscr C\)
+ and all \(x,y\in X(S)\), \(m,n\in M(S)\), one has}
+ \[
+  (++)\qquad
+  P(m\cdot x,n\cdot y)
+   =m\cdot f(p(x))(n)\cdot P(x,y).
+ \]
+\end{enumerate}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:proposition:1-3-3}\textbf{Proposition 1.3.3.}
+\textit{For a group law \(\ast\) on \(X\) to be admissible, it is
+necessary and sufficient that the following four conditions hold:}
+\begin{enumerate}
+ \item[(i)] \textit{\(p:X\to Y\) is a group morphism.}
+
+ \item[(ii)] \textit{The morphism \(i:M\to X\), defined by
+ \(i(m)=m\cdot e_X\), is a group isomorphism from \(M\) onto
+ \(\ker(p)\); in other words, set-theoretically,}
+ \[
+  (m\cdot e_X)\ast(n\cdot e_X)=(mn)\cdot e_X.
+ \]
+
+ \item[(iii)] \textit{One has
+ \(m\cdot x=(m\cdot e_X)\ast x=i(m)\ast x\) for every
+ \(m\in M(S)\) and \(x\in X(S)\).}
+
+ \item[(iv)] \textit{The inner automorphisms of \(X\) act on
+ \(\ker(p)\) according to the set-theoretic formula}
+ \[
+  x\ast i(m)\ast x^{-1}=i\bigl(f(p(x))m\bigr).
+ \]
+\end{enumerate}
+The proof is immediate.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:lemma:1-3-4}\textbf{Lemma 1.3.4.}\footnote{Editor's note: the statement
+and its proof have been expanded with a view to step~\SGARefLink{sga3:iii:paragraph:2-0:equation:e}{(e)} in the proof
+of \SGARefLink{sga3:iii:proposition:1-3-6}{1.3.6}.}
+\textit{Let \(h:Y\to M\) be a morphism and let \(u_h\) be the
+automorphism \(x\mapsto h(p(x))\cdot x\) of \(X\) (cf.~\SGARefLink{sga3:iii:lemma:1-3-1}{1.3.1}). Let
+\(P\) be an admissible composition law (respectively, an admissible
+group law) on \(X\), and let \(P'\) be the composition law on \(X\)
+obtained from \(P\) by means of \(u_h\), that is,}
+\[
+ P'(x,y)=u_h^{-1}\bigl(P(u_h(x),u_h(y))\bigr).
+\]
+\textit{Then:}
+\begin{enumerate}
+ \item[\SGAInlineRefTarget{sga3:iii:lemma:1-3-4:item:i}(i)] \textit{\(P'\) is an admissible composition law
+ (respectively, an admissible group law).}
+
+ \item[\SGAInlineRefTarget{sga3:iii:lemma:1-3-4:item:ii}(ii)] \textit{For every \(x,y\in X(S)\), with
+ \(S\in\operatorname{Ob}\mathscr C\), set \(v=p(x)\) and
+ \(w=p(y)\). Then}
+ \[
+  P'(x,y)=h(vw)^{-1}\cdot h(v)\cdot f(v)(h(w))\cdot P(x,y)
+   =(\partial^1h)(p(x),p(y))\cdot P(x,y).
+ \]
+\end{enumerate}
+
+\noindent\textit{Proof.}
+One has \(u_h^{-1}=u_{h^\vee}\), where \(h^\vee:Y\to M\) is
+defined by \(h^\vee(y)=h(y)^{-1}\). By \SGARefLink{sga3:iii:definition:1-3-2:item:i}{1.3.2(i)} and \SGARefLink{sga3:iii:lemma:1-3-4:item:ii}{(ii)},
+\[
+ P(h(v)\cdot x,h(w)\cdot y)
+  =h(v)\cdot f(v)(h(w))\cdot P(x,y),
+ \qquad p(P(x,y))=vw,
+\]
+and hence
+\[
+ P'(x,y)=h(vw)^{-1}\cdot h(v)\cdot f(v)(h(w))\cdot P(x,y)
+  =(\partial^1h)(p(x),p(y))\cdot P(x,y).
+\]
+It follows immediately that \(P'\) satisfies conditions \SGARefLink{sga3:iii:lemma:1-3-4:item:i}{(i)} and \SGARefLink{sga3:iii:lemma:1-3-4:item:ii}{(ii)}
+of \SGARefLink{sga3:iii:definition:1-3-2}{1.3.2}.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:definition:1-3-5}\textbf{Definition 1.3.5.}
+\textit{Two admissible composition laws obtained from one another by
+the procedure of \SGARefLink{sga3:iii:lemma:1-3-4}{1.3.4} are called \emph{equivalent}.}\footnote{Editor's
+note: this is indeed an equivalence relation, since
+\(u_h^{-1}=u_{h^\vee}\).}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:iii:proposition:1-3-6}\textbf{Proposition 1.3.6.}
+\textit{Suppose that an admissible composition law on \(X\) exists.
+Then:}
+\begin{enumerate}
+ \item[\SGAInlineRefTarget{sga3:iii:proposition:1-3-6:item:i}(i)] \textit{There exists a canonically determined class
+ \(c\in H^3(Y,M)\), whose vanishing is necessary and sufficient for
+ the existence of an admissible associative composition law on \(X\).}
+
+ \item[\SGAInlineRefTarget{sga3:iii:proposition:1-3-6:item:ii}(ii)] \textit{If \(c=0\), the set of admissible associative
+ composition laws on \(X\) (respectively, the set of their equivalence
+ classes) is principal homogeneous under \(Z^2(Y,M)\) (respectively,
+ \(H^2(Y,M)\)).}
+\end{enumerate}
+
+The proof proceeds in several steps.
+
+\smallskip
+\noindent\textbf{(a)}
+Let \(P\) be an admissible composition law on \(X\). Since \(P\)
+lifts the associative composition law of \(Y\), there is a unique
+morphism \(a:X^3\to M\) such that
+\[
+ (*)\qquad
+ P(x,P(y,z))=a(x,y,z)\cdot P(P(x,y),z).
+\]
+Applying conditions \SGARefLink{sga3:iii:definition:1-3-2:item:i}{1.3.2(i)} and \SGARefLink{sga3:iii:proposition:1-3-6:item:ii}{(ii)}, one sees at once that \(a\) is
+invariant under the action of \(M^3\) on \(X^3\).\footnote{Editor's
+note: for \(x,y,z\in X(S)\), set \(u=p(x)\), \(v=p(y)\), and
+\(w=p(z)\). Then
+\[
+\begin{aligned}
+ P(mx,P(m'y,m''z))
+  &=P(mx,m'f(v)(m'')P(y,z))\\
+  &=mf(u)(m')f(uv)(m'')P(x,P(y,z)).
+\end{aligned}
+\]
+On the other hand, since \(p(P(x,y))=uv\), one also has
+\[
+\begin{aligned}
+ P(P(mx,m'y),m''z)
+  &=P(mf(u)(m')P(x,y),m''z)\\
+  &=mf(u)(m')f(uv)(m'')P(P(x,y),z).
+\end{aligned}
+\]
+Comparison of these equalities with \((*)\) gives
+\(a(mx,m'y,m''z)=a(x,y,z)\).}
+Condition \((+)_{3}\) therefore gives:
+
+\smallskip
+\noindent\textit{(1) There exists a unique morphism
+\(DP:Y^3\to M\) such that}
+\[
+ P(x,P(y,z))=DP(p(x),p(y),p(z))\cdot P(P(x,y),z),
+\]
+\textit{and \(P\) is associative if and only if \(DP=0\).}
+
+\smallskip
+\noindent\textbf{(b)}
+Let us compute \(P(P(P(x,y),z),t)\) step by step using the preceding
+formula. Put
+\[
+ p(x)=u,\qquad p(y)=v,\qquad p(z)=w,\qquad p(t)=h.
+\]
+One obtains\footnote{Editor's note: the diagram that follows has been
+added.} the following pentagonal diagram, in which an arrow
+\(a\xrightarrow{m}b\) means that \(b=m\cdot a\).
+
+\SGAThreeNativeDiagram[0.82\textwidth]
+  {native_diagrams/exp3/diagram_030_exp3_p030_associativity_pentagon.tex}
+ {The pentagonal comparison used to compute the associativity
+  obstruction.}
+ {fig:exp3-p030-associativity-pentagon}
+ {Polo--Gille Exp3-14oct24.pdf, component-local p. 30; combined-reader
+  p. 140; printed p. 130}
+
+Thus one finds
+\[
+\begin{aligned}
+ &DP(u,v,w)\cdot DP(u,vw,h)\cdot f(u)(DP(v,w,h))\\
+ &\qquad\cdot DP(u,v,wh)^{-1}\cdot DP(uv,w,h)^{-1}=e_M,
+\end{aligned}
+\]
+that is, \(\partial^3DP(u,v,w,h)=e_M\). Moreover, the left-hand side
+of the preceding formula can be expressed, by means of \(P\) and
+\(a\), as the value at \((x,y,z,t)\) of a certain morphism
+\(X^4\to M\).
+
+It follows from the uniqueness assertion in \((+)_{4}\) that
+\(\partial^3DP\) and \(e_M\), which factor the same morphism, are
+equal. Hence:
+
+\smallskip
+\noindent\textit{(2) \(DP\) is a cocycle; that is,
+\(DP\in Z^3(Y,M)\).}
+
+\smallskip
+\noindent\textbf{(c)}
+If \(P\) and \(P'\) are two admissible composition laws on \(X\),
+there is a unique morphism
+\[
+ b:X^2\longrightarrow M
+\]
+such that \(P'(x,y)=b(x,y)P(x,y)\). Applying \SGARefLink{sga3:iii:definition:1-3-2:item:ii}{1.3.2(ii)} to \(P\) and
+\(P'\), one sees that \(b\) is invariant under \(M^2\), and hence,
+by \((+)_{2}\):
+
+\smallskip
+\noindent\textit{\SGARefLink{sga3:iii:section:3}{(3)} For every pair \((P,P')\) of admissible
+composition laws there exists a unique morphism
+\(d(P,P'):Y^2\to M\) such that}
+\[
+ P'(x,y)=d(P,P')(p(x),p(y))\cdot P(x,y),
+\]
+\textit{and the set of admissible composition laws is thereby made
+principal homogeneous under}
+\[
+ \operatorname{Hom}(Y^2,M)=C^2(Y,M).
+\]
+
+\smallskip
+\noindent\textbf{(d)}
+Under the preceding conditions one has
+\[
+ (4)\qquad DP'-DP=\partial^2d(P,P').
+\]
+
+\smallskip
+\noindent\textbf{\SGARefLink{sga3:iii:paragraph:2-0:equation:e}{(e)}}
+The laws \(P\) and \(P'\) are equivalent if and only if there is a
+morphism
+\[
+ h\in C^1(Y,M)=\operatorname{Hom}(Y,M)
+\]
+such that \(d(P,P')=\partial^1h\). This follows from the definition of
+equivalence and from \SGARefLink{sga3:iii:lemma:1-3-4:item:ii}{1.3.4(ii)}.
+
+\smallskip
+\noindent\textbf{(f)}
+It remains only to conclude. We seek an associative \(P'\), that is,
+one for which \(DP'=e_M\). Now \(DP\) is a cocycle whose class in
+\(H^3(Y,M)\) does not depend on the chosen admissible composition law
+\(P\), by \SGARefLink{sga3:iii:section:3}{(3)} and \SGARefLink{sga3:iii:section:4}{(4)}. This class is the required obstruction \(c\).
+An appropriate \(P'\) can be chosen if and only if \(c=0\). Indeed,
+after choosing an arbitrary \(P\), one must solve, by \SGARefLink{sga3:iii:section:1}{(1)},
+\[
+ 0=DP'=DP+\partial^2d(P,P'),
+\]
+which is possible, by \SGARefLink{sga3:iii:section:3}{(3)} and \SGARefLink{sga3:iii:section:4}{(4)}, if and only if \(c=0\). Again by
+\SGARefLink{sga3:iii:section:3}{(3)} and \SGARefLink{sga3:iii:section:4}{(4)}, the set of associative laws \(P'\) is principal
+homogeneous under \(Z^2(Y,M)\). By \SGARefLink{sga3:iii:paragraph:2-0:equation:e}{(e)}, the set of associative laws
+\(P'\) modulo equivalence is principal homogeneous under
+\(H^2(Y,M)\).
+

@@ -1,0 +1,165 @@
+
+\begingroup
+\renewcommand{\thefootnote}{*}%
+\section*{6. Subfunctors and group subschemes%
+  \texorpdfstring{\protect\footnotemark}{}}
+\footnotetext{\label{note:sga3-VIB-section6-star}On the same
+theme, see also the results of Expos\'e~XI, \S6, whose natural
+place would be in the present Expos\'e~VI\(_B\). There one finds,
+in particular, representability criteria for certain group
+subfunctors of a given group scheme.
+\phantomsection\label{note:sga3-VIB-48}\textup{(48) Editor's note: we have
+inserted these results below
+(\hyperref[thm:sga3-VIB-6.5.2]{6.5.2}--%
+\hyperref[cor:sga3-VIB-6.5.5]{6.5.5}).}}
+\endgroup
+\phantomsection\label{sec:sga3-VIB-6}%
+\addcontentsline{toc}{section}{6. Subfunctors and group subschemes}
+
+\medskip
+\phantomsection\label{def:sga3-VIB-6.1}%
+\noindent\textbf{Definition 6.1.---}
+\textup{(i)} Let \(X\) be an \(S\)-functor (that is, a functor
+from \((\mathbf{Sch}/S)^\circ\) to \((\mathbf{Ens})\)), let \(G\)
+be an \(S\)-functor in groups, and let \(u\) and \(v\) be two
+\(S\)-morphisms from \(X\) to \(G\). The \emph{transporter of
+\(u\) into \(v\)}, denoted
+\(\underline{\operatorname{Transp}}(u,v)\), is the
+sub-\(S\)-functor of \(G\) defined by
+\phantomsection\label{eq:sga3-VIB-6.1-transp-uv}%
+\[
+\begin{aligned}
+\underline{\operatorname{Transp}}(u,v)(S')
+  &=
+  \bigl\{g\in G(S')\bigm|
+    (\operatorname{int}g)\circ u_{S'}=v_{S'}\bigr\}                                      \\
+  &=
+  \left\{g\in G(S')\mathrel{\left|\,\vphantom{\begin{array}{c}a\\a\end{array}}\right.}
+    \begin{array}{l}
+      g_{S''}u_{S''}(x)g_{S''}^{-1}=v_{S''}(x),\\[-1pt]
+      \text{for every \(x\in X(S'')\) and every \(S''\to S'\)}
+    \end{array}
+  \right\}.
+\end{aligned}
+\]
+In particular,
+\(\underline{\operatorname{Transp}}(u,u)\) is a group
+sub-\(S\)-functor of \(G\); it is called the
+\emph{centralizer of \(u\)} and is denoted
+\(\underline{\operatorname{Centr}}(u)\).
+
+\smallskip
+\noindent\textup{(ii)} Let \(G\) be an \(S\)-functor in groups,
+and let \(X\) and \(Y\) be two sub-\(S\)-functors of \(G\). The
+\emph{transporter of \(X\) into \(Y\)} (respectively, the
+\emph{strict transporter of \(X\) into \(Y\)}), denoted
+\(\underline{\operatorname{Transp}}_G(X,Y)\) (respectively,
+\(\underline{\operatorname{Transp}}^{\mathrm{str}}_G(X,Y)\)),
+is the sub-\(S\)-functor of \(G\) defined by
+\phantomsection\label{eq:sga3-VIB-6.1-transp-XY}%
+\[
+\begin{aligned}
+\underline{\operatorname{Transp}}_G(X,Y)(S')
+  &=
+  \bigl\{g\in G(S')\bigm|
+    (\operatorname{int}g)(X_{S'})\subset Y_{S'}\bigr\}                 \\
+  &=
+  \bigl\{g\in G(S')\bigm|
+    g_{S''}X(S'')g_{S''}^{-1}\subset Y(S'')
+    \text{ for every \(S''\to S'\)}\bigr\},
+\end{aligned}
+\]
+and, respectively,
+\phantomsection\label{eq:sga3-VIB-6.1-transpstr-XY}%
+\[
+\begin{aligned}
+\underline{\operatorname{Transp}}^{\mathrm{str}}_G(X,Y)(S')
+  &=
+  \bigl\{g\in G(S')\bigm|
+    (\operatorname{int}g)(X_{S'})=Y_{S'}\bigr\}                       \\
+  &=
+  \bigl\{g\in G(S')\bigm|
+    g_{S''}X(S'')g_{S''}^{-1}=Y(S'')
+    \text{ for every \(S''\to S'\)}\bigr\}.
+\end{aligned}
+\]
+Note that
+\phantomsection\label{eq:sga3-VIB-6.1-inversion}%
+\[
+\underline{\operatorname{Transp}}^{\mathrm{str}}_G(X,Y)
+ =
+\underline{\operatorname{Transp}}_G(X,Y)
+ \cap
+c\bigl(\underline{\operatorname{Transp}}_G(Y,X)\bigr),
+\]
+where \(c\) denotes the inversion morphism of \(G\).%
+\footnote{\label{note:sga3-VIB-49}Editor's note: if
+\(u:X\to G\) and \(v:Y\to G\) are two arbitrary morphisms of
+\(S\)-functors, let \(u(X)\) be the image functor of \(u\),
+defined by
+\[
+  u(X)(S')=u(S')\bigl(X(S')\bigr)\subset G(S');
+\]
+it is a subfunctor of \(G\), as is the image functor \(v(Y)\).
+One may then consider the transporter of the image of \(u\) into
+the image of \(v\),
+\(\underline{\operatorname{Transp}}_G(u(X),v(Y))\). Thus, in
+part~\textup{(ii)} of the definition, it is not necessary to
+restrict to subfunctors, that is, to the case in which \(u\) and
+\(v\) are monomorphisms. In the original, this restriction
+sometimes imposed repetitions in the hypotheses, such as:
+``Let \(u,v:X\to G\) be morphisms of \(S\)-functors and let
+\(w:H\to G\) and \(w':K\to G\) be monomorphisms; then
+\(\underline{\operatorname{Transp}}(u,v)\),
+\(\underline{\operatorname{Centr}}_G(w)
+ =\underline{\operatorname{Centr}}_G H\), and
+\(\underline{\operatorname{Transp}}_G(H,K)\) satisfy \(\ldots\).''
+Such repetitions can be avoided by considering
+\(\underline{\operatorname{Transp}}_G(u(X),v(Y))\). We have made
+such modifications in \hyperref[prop:sga3-VIB-6.2]{6.2} and,
+later, in \hyperref[prop:sga3-VIB-10.11]{10.11}.}
+
+\smallskip
+\noindent\textup{\SGARefLink{prop:sga3-VIB-6.2:item:iii}{(iii)}} Let \(G\) be an \(S\)-functor in groups,
+let \(H\) be a sub-\(S\)-functor of \(G\), and let
+\(i:H\to G\) be the canonical \(S\)-morphism. The
+\emph{centralizer} and \emph{normalizer of \(H\) in \(G\)} are
+the following group sub-\(S\)-functors of \(G\):
+\phantomsection\label{eq:sga3-VIB-6.1-centralizer-normalizer}%
+\[
+\underline{\operatorname{Centr}}_G H
+  =\underline{\operatorname{Centr}}(i)
+  =\underline{\operatorname{Transp}}(i,i),
+\qquad
+\underline{\operatorname{Norm}}_G H
+  =\underline{\operatorname{Transp}}^{\mathrm{str}}_G(H,H).
+\]
+Finally, the \emph{center of \(G\)} is the \(S\)-functor in
+groups
+\[
+  \underline{\operatorname{Centr}}(\operatorname{id}_G)
+  =\underline{\operatorname{Centr}}_G G;
+\]
+it is denoted \(\underline{\operatorname{Centr}}G\).
+
+\medskip
+\phantomsection\label{rem:sga3-VIB-6.1.1}%
+\noindent\textbf{Remark 6.1.1.---}%
+\footnote{\label{note:sga3-VIB-50}Editor's note: we have added
+this remark, which is used implicitly in
+\hyperref[prop:sga3-VIB-6.2]{Proposition~6.2}.}
+It follows from the definitions that the functors
+\(\underline{\operatorname{Transp}}(u,v)\) and
+\(\underline{\operatorname{Transp}}_G(X,Y)\) (and hence also
+\(\underline{\operatorname{Transp}}^{\mathrm{str}}_G(X,Y)\))
+commute with base change: for every \(S'\to S\), if
+\(G',X',Y',u',v'\) are obtained from \(G,X,Y,u,v\) by base
+change, then
+\phantomsection\label{eq:sga3-VIB-6.1.1-base-change}%
+\[
+\underline{\operatorname{Transp}}(u,v)_{S'}
+  =\underline{\operatorname{Transp}}(u',v'),
+\qquad
+\underline{\operatorname{Transp}}(X,Y)_{S'}
+  =\underline{\operatorname{Transp}}(X',Y').
+\]

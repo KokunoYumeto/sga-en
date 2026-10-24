@@ -1,0 +1,362 @@
+\section{Cohomology of a projective limit of schemes}\etiquette[5]{VII.sec5}
+
+\subsection{}\etiquette[5.1]{VII.subsec5.1}
+
+Let $I$ be an increasing filtered preordered set,
+$$
+\mathfrak{X} = (X_i)_{i \in I}
+$$
+a projective system of schemes, the transition morphisms $u_{ji} :
+X_i \to X_j$ $(i \geq j)$ being \emph{affine}. Recall (\EGA IV
+8\ldots) that under these conditions,\pageoriginale the projective limit
+$$
+X  = \varprojlim X_i
+$$
+exists in the category of schemes (and even in the category of locally
+ringed spaces) and may be constructed as follows: one chooses
+$i_{0} \in I$, so that for $i \geq i_0$ one has an
+$X_{i_0}$-isomorphism (\EGA II 1.2 and 1.3)
+$$
+X_i = \Spec 𝒜_{i}{\quoi},
+$$
+where $𝒜_i$ is a quasi-coherent Algebra on $X_{i_0}$, the
+$𝒜_i$ $(i \geq i_0)$ thus forming an inductive system of
+such Algebras. Setting
+$$
+𝒜 = \varinjlim_{i} 𝒜_i{\quoi},
+$$
+one may take
+$$
+X = \Spec 𝒜{\quoi}.
+$$
+Moreover, denoting by esp $S$ the underlying topological space of a
+scheme $S$, one proves (\EGA IV 8\ldots) that the canonical map
+$$
+\esp X \to \varprojlim \esp (X_i)
+$$
+is a \emph{homeomorphism} and that the canonical homomorphism of
+sheaves of rings
+$$
+\varinjlim_{i} \gamma^{-1}_{i} (\Oo_{X_i}) \to \Oo_X
+$$
+is bijective, where $\gamma_i : X \to X_i$ is the canonical continuous
+map.
+
+\subsection{}\etiquette[5.2]{VII.subsec5.2}
+
+Informally, the content of \EGA IV 8, 9 may be summarized by saying
+that, \emph{when $X_{i_0}$ is quasi-compact and quasi-separated},
+then ``every datum of a schematic nature on $X$, of finite presentation
+over $X$'', is equivalent\pageoriginale to a datum of the same nature
+on one of the $X_i$, ``for sufficiently large $i$''. Thus one proves
+(\EGA IV 8 $\ldots$):
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item if $i_1 \in I$ and $X'_{i_1}$, $X''_{i_1}$ are two
+schemes of finite presentation over $X_{i_1}$, then, setting for every
+$i \geq i_1$
+$$
+X'_{i} = \fprod{X'_{i_1}}{X_i}{X_{i_1}},\quad X' = \fprod{X'_{i_1}}{X}{X_{i_1}}{\quoi},
+$$
+and defining $X''_i$, $X''$ in the same way, the canonical map
+$$
+\varinjlim_{i \geq i_1} \Hom_{X_i} (X'_i, X''_i) \to
+\Hom_X (X', X'')
+$$
+is bijective.
+
+\item For every scheme $X'$ of finite presentation over $X$, there
+exist an index $i_1 \in I$, a scheme $X'_{i_1}$ of finite presentation
+over $X_{i_1}$, and an $X$-isomorphism
+$$
+X'\simeq \fprod{X'_{i_1}}{X}{X_{i_1}}{\quoi}.
+$$
+\end{enumerate}
+
+\subsection{}\etiquette[5.3]{VII.subsec5.3}
+
+The preceding result, and analogous results contained in EGA IV 8,
+may be expressed in the language of the $\varinjlim$ of fibered
+categories introduced in VI. For this purpose, consider the category
+$\Ff$ of morphisms $f : T \to S$ of finite presentation of schemes,
+and the ``target functor''
+$$
+\pi : \Ff \to (\Sch){\quoi},
+$$
+which is plainly a \emph{fibered functor}, its fiber categories being,
+moreover, equivalent to $\Uu$-small categories. Consider the inverse
+image of the fibered category $\Ff/(\Sch)$ by the functor
+$$
+i \mapsto X_i : \cat (I) \to (\Sch)
+$$
+(where\pageoriginale $\cat(I)$ is the category associated with $I$, with
+$\Hom(i, j) \neq ∅$ if and only if $i \geq j$), giving a fibered
+category
+$$
+\pi_{\mathfrak{X}} : \Ff_{\mathfrak{X}} \to \cat(I){\quoi},
+$$
+whose fiber at each $i \in I$ is canonically isomorphic to the full
+subcategory $\Ff_{X_i}$ of $(\Sch)_{/X_i}$ consisting of schemes of
+finite presentation over $X_i$, the base-change morphism
+$\Ff_i \to \Ff_{j}$ relative to $j \geq i$ being none other than
+$X'_i \mapsto X'_j = \fprod{X'_i}{X_j}{X_i}$. This being so, by
+associating to every $X'_i$ of finite presentation over $X_i$ its
+inverse image on $X$
+$$
+\varphi(X'_i) = \fprod{X'_i}{X}{X_i}{\quoi},
+$$
+one obtains a natural functor
+$$
+\varphi : \Ff_{\mathfrak{X}} \to \Ff_{X}{\quoi},
+$$
+which plainly takes every cartesian morphism of
+$\Ff_{\mathfrak{X}}$ to an isomorphism, and hence, by definition,
+factors uniquely through a canonical functor
+\begin{equation*}
+\psi : \varinjlim_{\Ff_X /\Cat I}
+\Ff_{\mathfrak{X}} \to \Ff_{X}{\quoi}.\tag{$\ast$}
+\end{equation*}
+In view of the description of the first member, the result of \EGA IV
+8 recalled above may then be stated by saying that $(\ast)$ is an
+\emph{equivalence of categories}.
+
+\subsection{}\etiquette[5.4]{VII.subsec5.4}
+
+Statement a) of \hyperref[VII.subsec5.2]{5.2}. above may be refined in various ways,
+by introducing some class $(\Mm)$ of morphisms of schemes, stable under
+base change, and stating that for a given $X_{i_1}$-morphism\pageoriginale
+$u_{i_1} : X'_{i_1} \to X''_{i_1}$, the corresponding morphism
+$u': X'\to X''$ is $\Ee (\Mm)$ if and only if there exists
+$i\geq i_{1}$ such that the $X_{i}$-morphism
+$u_{i}:X'_{i}\to X''_{i}$ is $\Ee (\Mm)$. The statement obtained in
+this way is true, for example, when $(\Mm)$ is one of the following
+classes of arrows: proper morphisms (respectively projective, \resp
+quasi-projective, \resp affine, \resp quasi-affine, \resp finite, \resp
+quasi-finite, \resp radicial, \resp surjective, \resp flat, \resp
+smooth, \resp étale, \resp unramified). The reader will find the
+corresponding statements in \EGA IV, §8 (for the first nine), §11 (for
+the flat case), and §17 (for the last three cases).
+
+\subsection{}\etiquette[5.5]{VII.subsec5.5}
+
+Now replace $\Ff \to (\Sch)$ by the fibered subcategory $\Gg$
+consisting of \emph{étale morphisms} of finite presentation, whose
+fiber category $\Gg_{S}$, for every scheme $S$, is none other than the
+category of schemes étale and of finite presentation over $S$, and
+similarly form the fibered category $\Gg_{\mathfrak{X}}$ over
+$\cat(I)$, whose fiber category at every $i \in I$ is the category
+$\Gg_{X_i}$. By \hyperref[VII.cor3.2]{3.2} (ii), the étale topoi
+$\widetilde{X_{i_{\text{ét}}}}$, $\widetilde{X_{\text{ét}}}$ are also
+canonically equivalent to $\widetilde{\Gg_{X_{i}}}$,
+$\widetilde{\Gg_{X}}$, (where each $\Gg_S$ is endowed with the
+topology induced by $S_{\text{ét}}$). Moreover, by
+\hyperref[VII.cor3.2]{3.2} (i), each $\Gg_{X_i}$ is a site of finite
+type, and is moreover equivalent to a $\Uu$-small site. In view of the
+topologies on the $\Gg_{X_i}$, $\Gg$ becomes a \emph{fibered site}
+over $\cat(I)$. This being so, we may state the following
+
+\begin{enonce*}{Lemma 5.6}\etiquette[5.6]{VII.lem5.6}
+The canonical functor
+$$
+\varinjlim_{\Gg_{\mathfrak{X}}/\cat(I)}
+\Gg_{\mathfrak{X}} \to \Gg_X
+$$
+defines\pageoriginale an equivalence, respecting the topologies, between the
+$\varinjlim$ site of the restricted étale sites
+(\hyperref[VII.cor3.2]{3.2}) of the $X_i$ and the restricted étale site
+of $X = \varprojlim_i X_i$.
+\end{enonce*}
+
+The fact that one obtains an equivalence of categories is one of the
+statements recalled in \hyperref[VII.subsec5.4]{5.4} (the one in which
+$(\Mm)$ is the class of étale morphisms in $(\Sch)$). The assertion
+concerning the topologies is obtained in the same way by taking
+$(\Mm)=$ the class of surjective morphisms in $(\Sch)$.
+
+The preceding result allows us to apply the results of VI to the
+present situation. In particular, we obtain
+
+\begin{enonce*}{Theorem 5.7}\etiquette[5.7]{VII.thm5.7}
+Let $\mathfrak{X} = (X_i)_{i \in I}$ be a projective system of
+schemes, with $I$ an increasing filtered preordered set. Suppose that
+the transition morphisms $u_{ij} : X_j \to X_i$ are affine (so that the
+scheme $X = \varprojlim X_i$ is defined
+(\hyperref[VII.subsec5.1]{5.1})), and that the $X_i$ are quasi-compact
+and quasi-separated. Consider the fibered site $\Gg$ over $\cat(I)$
+described in \hyperref[VII.subsec5.5]{5.5}, whose fiber $\Gg_i$ at
+$i \in I$ is canonically isomorphic to the ``restricted étale site''
+of $X_i$ (consisting of schemes étale and of finite presentation over
+$X_i$). Let $F$ be an abelian sheaf on $\Gg$ (\ie $(3)$ a functor
+$\Gg^{0} \to (\Ab)$ whose restriction $F_i$ to each $\Gg_i$ is a
+sheaf, \ie a sheaf on $X_i$). Let $F_{\infty} =
+\varinjlim_{i} u^{\ast}_i (F_i)$ be the induced sheaf on $X$, where
+$u_i : X \to X_i$ is the canonical morphism. Then the canonical
+homomorphisms
+$$
+\varinjlim_i H^n (X_i, F_i) \to H^n (X, F_{\infty})
+$$
+are isomorphisms.
+\end{enonce*}
+
+In\pageoriginale view of \hyperref[VII.lem5.6]{5.6}, this follows by
+combining \hyperrefext[VI][VI.thm8.7.3]{8.7.3} and
+\hyperrefext[VI][VI.prop8.5.2]{8.5.2}. We shall use
+\hyperref[VII.thm5.7]{5.7} chiefly in the following particular case,
+which is also made explicit in
+
+\begin{enonce*}{Corollary 5.8}\etiquette[5.8]{VII.cor5.8}
+With the preceding hypotheses and notation for $(X_i)_{i \in I}$,
+$X$, $u_{ij}$, $u_i$, let $i_0 \in I$, and let $F_{i_0}$ be an
+abelian sheaf on $X_{i_0}$. For every $i \geq i_0$, let
+$F_i = u_{i_0 i} {}^{\ast}(F_{i_0})$, and let moreover
+$F_{\infty} = u^{\ast}_{i_0} (F_{i_0})$. Under these conditions, the
+canonical homomorphisms
+$$
+\varinjlim_i H^n (X_i, F_i) \to H^n (X, F_{\infty})
+$$
+are isomorphisms.
+\end{enonce*}
+
+Here is, however, a sometimes useful case that follows from
+\hyperref[VII.thm5.7]{5.7} and not from \hyperref[VII.cor5.8]{5.8}:
+
+\begin{enonce*}{Corollary 5.9}\etiquette[5.9]{VII.cor5.9}
+With the hypotheses and notation of \hyperref[VII.thm5.7]{5.7} for
+$(X_i)_{i \in I}$, $X$, $u_{ij}$, $u_i$, let $G_{i_0}$ be a
+commutative group scheme locally of finite presentation over
+$X_{i_0}$ (where $i_0 \in I$ is given). For every $i \geq i_0$, let
+$G_i = \fprod{G_{i_0}}{X_i}{X_{i_0}}$, and similarly let
+$G_{\infty} = \fprod{G_{i_0}}{X}{X_{i_0}}$. Then the canonical
+homomorphisms
+$$
+\varinjlim_i H^n (X_i, G_i) \to H^n (X, G_{\infty})
+$$
+are isomorphisms.
+\end{enonce*}
+
+Indeed, we know that $G_{i_0}$ defines a sheaf on
+$(\Sch)_{/X_{i_0}}$ (\cf 2 (a)), and, supposing that $i_0$ is an
+initial object of $I$ (which we may do), hence obtaining a canonical
+functor $\Gg \to (\Sch)_{/X_{i_0}}$, composition gives a contravariant
+functor $F$ on $\Gg$, whose restriction to $\Gg_i$ is\pageoriginale
+canonically isomorphic to the sheaf on $X_i$ defined by $G_i$. In
+particular, $F$ is a sheaf on $\Gg$, and we may apply
+\hyperref[VII.thm5.7]{5.7} to it. The hypothesis that $G_{i_0}$ is
+locally of finite presentation over $X_{i_0}$ serves to ensure that the
+sheaf $F_{\infty}$ of \hyperref[VII.thm5.7]{5.7} is isomorphic, by the natural homomorphism
+$F_{\infty} \to \faisc(G_{\infty})$, to the sheaf
+$\faisc(G_{\infty})$ defined by $G_{\infty}$ (as follows immediately
+from \EGA IV 8.8.2 (i), by considering the values of the sheaves in
+question on the objects of the restricted étale site of $X$
+and applying \hyperref[VII.lem5.6]{5.6}). This completes the proof of
+\hyperref[VII.cor5.9]{5.9}.
+
+\begin{enonce*}{Corollary 5.10}\etiquette[5.10]{VII.cor5.10}
+With the hypotheses and notation of \hyperref[VII.thm5.7]{5.7} for
+$(X_i)_{i \in I}$, $X$, $u_{ij}$, $u_i$, let $F$ be a sheaf of
+commutative groups on $X$; then the canonical homomorphisms
+$$
+\varinjlim_{i} H^n (X_i, u_{i\ast} (F)) \to H^n (X, F)
+$$
+are isomorphisms.
+\end{enonce*}
+
+The statements \hyperref[VII.thm5.7]{5.7} through
+\hyperref[VII.cor5.10]{5.10} generalize to corresponding statements
+for the $\Ext^i$ of sheaves of Modules, by
+\hyperrefext[VI][VI.cor8.7.9]{8.7.9}; we shall not repeat them in the
+present particular case. On the other hand, for later reference we
+shall make explicit the variants of \hyperref[VII.cor5.8]{5.8} and \hyperref[VII.cor5.9]{5.9}
+in terms of the functors $R^n f_{\ast}$.
+
+\begin{enonce*}{Corollary 5.11}\etiquette[5.11]{VII.cor5.11}
+Let $I$ be an increasing filtered preordered set, let $(X_i)_{i \in I}$
+and $(Y_i)_{i \in I}$ be two projective systems of schemes with affine
+transition morphisms, $X = \varprojlim_{i} X_i$,
+$Y = \varprojlim_{i} Y_i$, $(f_i)_{i \in I}$ a projective system of
+quasi-compact and quasi-separated morphisms $f_i : X_i \to Y_i$,
+$i_0 \in I$, and $F_{i_0}$ a sheaf on $X_{i_0}$. For every
+$i \geq i_0$, let $F_i$ be the sheaf\pageoriginale on $X_i$ that is
+the inverse image of $F_{i_0}$. Similarly, let $f : X \to Y$ be
+deduced from $(f_i)$ and let $F$ be the sheaf on $X$ that is the inverse
+image of $F_{i_0}$. Under these conditions, the canonical homomorphism
+$$
+\varinjlim_{i} v^{\ast}_i (R^n f_{i\ast} (F_i)) \to R^n
+f_{\ast} (F)
+$$
+is an isomorphism (where $v_i : Y \to Y_i$ is the canonical morphism).
+\end{enonce*}
+
+We may suppose that $i_0$ is an initial object of $I$, and, since the
+question is local on $Y_{i_0}$, that $Y_{i_0}$ is affine, so that the
+$Y_i$ and the $X_i$ are quasi-compact and quasi-separated. We are then
+under the hypotheses for applying
+\hyperrefext[VI][VI.thm8.7.3]{8.7.3} (where one reduces to
+\hyperref[VII.cor5.8]{5.8}, in view of the computation of the
+$R^{n} f_{\ast}$ as sheaves associated with presheaves). In the same
+way one proves:
+
+\begin{enonce*}{Corollary 5.12}\etiquette[5.12]{VII.cor5.12}
+The same statement as \hyperref[VII.cor5.11]{5.11}, except that now
+$F_{i_0}$ denotes a commutative group scheme locally of finite
+presentation over $X_{i_0}$, and $F_i$, $F$ its inverse images (in the
+sense of base change for schemes).
+\end{enonce*}
+
+Note that \hyperref[VII.cor5.9]{5.9} (\resp
+\hyperref[VII.cor5.12]{5.12}) is not a particular case of
+\hyperref[VII.cor5.8]{5.8} (\resp \hyperref[VII.cor5.11]{5.11}),
+\cf \hyperref[VII.sec2]{2} a) remark \hyperref[VII.rem2.1]{2.1}.
+
+\begin{enonce*}{Corollary 5.13}\etiquette[5.13]{VII.cor5.13}
+With the notation of \hyperref[VII.cor5.11]{5.11}, let $F$ be a sheaf
+of abelian groups on $X$. Then the canonical homomorphisms
+$$
+\varinjlim_i v_i^{\ast} (R^n f_{i\ast} (u_{i\ast} (F))) \to
+R^n f_{\ast} (F)
+$$
+are isomorphisms (where $u_i : X \to X_i$ and $v_i : Y \to Y_i$ are
+the canonical homomorphisms).
+\end{enonce*}
+
+The proof is essentially the same as before.
+
+\begin{enonce*}[remark]{Remarks 5.14}\etiquette[5.14]{VII.rem5.14}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The\pageoriginale preceding limit-passage results remain valid
+for $H^{0}$ \resp $f_{\ast}$, for sheaves \emph{of sets} (instead of
+abelian sheaves), and for $H^{1}$ \resp $R^1 f_{\ast}$ for sheaves of
+groups (not necessarily commutative), where the noncommutative $H^1$
+and $R^1 f_{\ast}$ are defined as usual in terms of torsors (or
+principal homogeneous bundles) (\cf Giraud's thesis
+\footnote{cited p.\pagehyperref[page7]{7} footnote $(\ast)$}). This can
+be checked directly in the general context of VI. It is certainly
+possible (and doubtless useful) also to give a variant for the
+noncommutative $H^2$ of ``links'' studied by Giraud.
+
+\item The limit-passage results for fibered sites developed in VI
+assumed only that the base category was a filtered category, without it
+being necessary to suppose that it was associated with a filtered
+preordered set. The case of an arbitrary filtered index category is
+also the natural framework for the statements developed in the present
+${\rm n^{\circ}}$. If we have worked in an overly restrictive
+framework, it was in order to be able to give correct references to
+\EGA IV, where it is unfortunately assumed, in questions of passage to
+the limit (from §8 onward), that the index category is defined in terms
+of a filtered preordered set. We shall nevertheless assume henceforth
+that all the results used from \EGA IV are valid for arbitrary filtered
+index categories (the proofs given in \loccit being valid, essentially
+without change, in this more general case). Thus we shall also use,
+without further comment, the results of the present ${\rm n^{\circ}}$
+in the case where $I$ is replaced by an arbitrary filtered index
+category.
+\end{enumerate}
+\end{enonce*}
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

@@ -1,0 +1,379 @@
+\section{Appendix. Local direct limits (by P. Deligne)}\etiquette[8]{V.sec8}
+
+The editor recommends that the reader should, as a rule, avoid
+reading this appendix. It presents a technique which sometimes
+makes it possible to extend to topoi without enough points
+assertions which the existence of points makes trivial. This
+technique yields a sheaf-theoretic variant of D. Lazard's theorem
+asserting that flat modules over a ring are direct limits of finite
+free modules.
+
+\subsection{Locally filtering categories}\etiquette[8.1]{V.subsec8.1}
+
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[8.1.0]{V.subsubsec8.1.0}
+If $\Bb$ is a category and $p:\Aa\to\Bb$ is a category over
+$\Bb$, we shall use the following notation:
+\begin{itemize}
+\item For $U\in\Ob\Bb$, $\Aa_U$ is the fiber category $p^{-1}(U)$.
+
+\item For $f:U\to V$ in $\Bb$ and $\lambda,\mu\in\Ob\Aa$ such
+that $p(\lambda)=U$ and $p(\mu)=V$, put
+$$
+\Hom_f(\lambda,\mu)=p^{-1}(f),\quad\text{where }p:\Hom(\lambda,\mu)
+\to\Hom(U,V){\quoi}.
+$$
+\end{itemize}
+
+\begin{enonce*}{Definition 8.1.1}\etiquette[8.1.1]{V.def8.1.1}
+Let $\Ss$ be a site. A \emph{locally cofiltering category (or
+locally left filtering category)} over $\Ss$ is a category
+$p:\Ll\to\Ss$ over $\Ss$ such that:
+\begin{itemize}
+\item[($\Ll0$)] For every $f:U\to V$ in $\Ss$ and every
+$\mu\in\Ob\Ll_V$, there exists $\lambda\in\Ob\Ll_U$ such that
+$\Hom_f(\lambda,\mu)\neq\varnothing$;
+
+\item[($\Ll1$)] For every $U\in\Ob\Ss$ and every finite family
+$(\lambda_i)$ of objects of $\Ll_U$, there exist a covering
+$f_j:U_j\to U$ of $U$ and objects $\mu_j\in\Ob\Ll_{U_j}$ such that
+$\Hom_{f_j}(\mu_j,\lambda_i)\neq\varnothing$ for all $i$ and $j$;
+
+\item[($\Ll2$)] For every $f:U\to V$ in $\Ss$ and every pair of
+parallel arrows $(\phi_0,\phi_1):\lambda\rightrightarrows\mu$ over
+$f$, there exist a covering $f_j:U_j\to U$ of $U$ and arrows
+$\psi_j$ with target $\lambda$ such that $p(\psi_j)=f_j$ and
+$\phi_0\psi_j=\phi_1\psi_j$.
+\end{itemize}
+\end{enonce*}
+
+\setcounter{subsubsection}{1}
+\paragraph{}\etiquette[8.1.1.1]{V.par8.1.1.1}
+This definition simplifies when $\Ll$ is fibered over $\Ss^{\ast}$:
+the axiom
+\begin{itemize}
+\item[$(\Ll_\ast0)$] is then satisfied, and $(\Ll1)$, $(\Ll2)$ may
+be stated as follows:
+
+\item[$(\Ll'1)$] For every $U\in\Ob\Ss$ and every finite family
+$\lambda_i$ of objects of $\Ll_U$, locally on $U$ there exists a
+$\mu$ mapping to all the $\lambda_i$.
+
+\item[$(\Ll'2)$] For every $U\in\Ob\Ss$, every pair of parallel
+arrows $(\phi_0,\phi_1):\lambda\rightrightarrows\mu$ in $\Ll_U$ can,
+locally on $U$, be equalized by an arrow with target $\lambda$.
+\end{itemize}
+
+\subsubsection{}\etiquette[8.1.2]{V.subsubsec8.1.2}
+Let $\Ss$ be a site, let $\Ll$ be a category over $\Ss$, and let
+$\mathsf{e}$ be a stack over $\Ss$. Denote by
+$\sheaf{\Gamma}\mathsf{e}$ the category of global sections
+$\Hhom^{\cart}_{\Ss}(\Ss,\mathsf{e})$ of $\mathsf{e}$. If $\Ss$
+has a final object $S$, then $\sheaf{\Gamma}\mathsf{e}$ ``is none
+other than'' $\mathsf{e}_S$.
+
+\begin{enonce*}{Definition 8.1.2.1}\etiquette[8.1.2.1]{V.def8.1.2.1}
+The category of \emph{local inverse systems of objects of
+$\mathsf{e}$ indexed by $\Ll$} is the category
+$\Hhom_{\Ss}(\Ll,\mathsf{e})$.
+\end{enonce*}
+
+Denote by $c$ (``associated constant local inverse system'') the
+composite functor
+$$
+\sheaf{\Gamma}\mathsf{e}=\Hhom^{\cart}_{\Ss}(\Ss,\mathsf{e})
+\hookrightarrow\Hhom_{\Ss}(\Ss,\mathsf{e})
+\xrightarrow{u\mapsto u\circ p}\Hhom_{\Ss}(\Ll,\mathsf{e}).
+$$
+When the dependence on $\Ll$ must be made explicit, we shall write
+$c_{\Ll}$ instead.
+
+\begin{enonce*}{Definition 8.1.3}\etiquette[8.1.3]{V.def8.1.3}
+The local inverse-limit functor, denoted by
+$\varprojlim_{\lambda\in\Ll}$, is the partially defined functor
+right adjoint to the functor $c$.
+\end{enonce*}
+
+Thus the functor
+$$
+\varprojlim:\Hhom_{\Ss}(\Ll,\mathsf{e})\to
+\sheaf{\Gamma}\mathsf{e}
+$$
+satisfies
+$$
+\Hom(X,\varprojlim_{\lambda\in\Ll}X_\lambda)\simeq
+\Hom(c(X),(X_\lambda)_{\lambda\in\Ll}){\quoi}.
+$$
+
+\begin{enonce*}{Definition 8.1.4}\etiquette[8.1.4]{V.def8.1.4}
+An $\Ss$-functor $F:\Ll\to\Mm$ between locally cofiltering
+categories over $\Ss$ is said to be cofinal if it satisfies the
+following two conditions:
+\begin{itemize}
+\item[$(C\mathfrak{F}1)$] For every\pageoriginale $U\in\Ob\Ss$ and
+$\mu\in\Ob\Mm_U$, there exist a covering $f_j:U_j\to U$ of $U$ and
+objects $\lambda_j\in\Ob\Ll_{U_j}$ such that
+$\Hom_{f_j}(F(\lambda_j),\mu)\neq\varnothing$.
+
+\item[$(C\mathfrak{F}2)$] For every $f:U\to V$ in $\Ss$ and every
+pair of parallel arrows $(\phi_0,\phi_1):F(\lambda)
+\rightrightarrows\mu$ over $f$, there exist a covering
+$f_j:U_j\to U$ of $U$ and arrows $\psi_j$ with target $\lambda$ in
+$\Ll$, such that $p(\psi_j)=f_j$ and
+$\phi_0F(\psi_j)=\phi_1F(\psi_j)$.
+\end{itemize}
+\end{enonce*}
+
+The composite of two cofinal functors is cofinal; equivalences of
+locally filtering categories are cofinal (the proof is left to the
+reader).
+
+\begin{enonce*}{Proposition 8.1.5}\etiquette[8.1.5]{V.prop8.1.5}
+Let $F:\Ll\to\Mm$ be a cofinal functor between locally cofiltering
+categories over $\Ss$, let $\mathsf{e}$ be a stack over $\Ss$, and
+let $(X_\mu)_{\mu\in\Mm}$ be a local inverse system indexed by
+$\Mm$. Then the morphism, functorial in $X\in\sheaf{\Gamma}\mathsf{e}$,
+\[
+F^{\ast}:\Hom(c_{\Mm}(X),(X_\mu)_{\mu\in\Mm})\longrightarrow
+\Hom(c_{\Ll}(X),(X_{F(\lambda)})_{\lambda\in\Ll})
+\]
+is an isomorphism, so that
+$$
+F^{\ast}:\varprojlim_{\Mm}X_\mu\longrightarrow
+\varprojlim_{\Ll}X_{F(\lambda)}
+$$
+is an isomorphism, the two sides being simultaneously defined or
+undefined.
+\end{enonce*}
+
+The proof uses the following lemma, which is left to the reader:
+
+\begin{enonce*}{Lemma 8.1.6}\etiquette[8.1.6]{V.lem8.1.6}
+If $F:\Ll\to\Mm$ is cofinal, then for every $f:U\to V$ in $\Ss$
+and arrows over $f$, $\phi_i:F(\lambda_i)\to\mu$ $(i=1,2)$, there
+exist a covering $f_j:U_j\to U$ of $U$, objects
+$\lambda'_j\in\Ob\Ll_{U_j}$, and commutative diagrams
+\[
+\xymatrix@=1.25cm{
+              & F(\lambda_1)   \ar[rd]^{\phi_1}&\\
+F(\lambda'_j) \ar@{--}[ru] \ar@{--}[rd]&                & \mu\\
+              & F(\lambda_2) \ar[ru]_{\phi_2}  &
+}
+\]
+$$
+U_j\xrightarrow{f_j}U\to V
+$$
+whose projection in $\Ss$ is $(f_j,f)$.
+\end{enonce*}
+
+For every $U\in\Ob\Ss$ and $\mu\in\Mm_U$, condition
+$(C\mathfrak{F}1)$ gives a covering $f_j:U_j\to U$ of $U$ and
+arrows $\phi_j:F(\lambda_j)\to\mu$ over the $f_j$. If
+$$
+\psi=(\psi_\lambda)\in\Hom(c_{\Ll}X,
+(X_{F(\lambda)})_{\lambda\in\Ll}):\quad
+\psi_\lambda:X|p(\lambda)\to X_{F(\lambda)}
+$$
+is the image of
+$$
+\phi=(\phi_\mu)\in\Hom(c_{\Mm}X,(X_\mu)_{\mu\in\Mm}):\quad
+\phi_\mu:X|p(\mu)\to X_\mu,
+$$
+then the diagrams
+\[
+\xymatrix@=1.5cm{
+                               & X_{F(\lambda_j)}
+                               \ar[ld]_{\psi_{\lambda_j}} \ar[rd]^{\phi_j}&        \\
+X|U_j \ar[rr]_{\phi_\mu|U_j} &                  & X_\mu|U_j
+}
+\]
+commute. Thus the $\phi_\mu$ are locally determined by $\psi$; since
+$\mathsf{e}$ is a stack, it follows that $F^{\ast}$ is injective.
+To prove that $F^{\ast}$ is surjective, start with $\psi$ and
+construct a $\phi$ such that $\psi=F^{\ast}\phi$. The preceding
+construction gives the composite arrows
+$$
+\phi_{\mu,j}=\phi_j\circ\psi_{\lambda_j}:X|U_j\to X_\mu|U_j{\quoi}.
+$$
+Let us verify that these arrows glue, so that there exists
+$\phi_\mu:X|U\to X_\mu$ such that
+$\phi_\mu|U_j=\phi_{\mu,j}$. Consider a commutative diagram in
+\[
+\xymatrix@=1cm{
+                 & U_{ij}\ar[ld]_{g_i} \ar[rd]^{g_j}     &            \\
+U_i  \ar[rd]_{f_i}            &            & U_j \ar[ld]^{f_j}\\
+                 & U     &
+}
+\]
+To\pageoriginale verify that
+$\phi_{\mu,j}|U_{ij}=\phi_{\mu,i}|U_{ij}$, it is enough to do so
+locally on $U_{ij}$; by \hyperref[V.lem8.1.6]{8.1.6} and $(\Ll0)$ this reduces us to the
+case where there is a commutative diagram
+\[
+\xymatrix@=1.5cm{
+             & F(\lambda_{ij}) \ar[ld]_{F(a_{ij})} \ar[rd]^{F(a_{ji})} &\\
+F(\lambda_i) \ar[rd]_{\phi_i}&                 & F(\lambda_j) \ar[ld]^{\phi_j}\\
+             & \mu             &
+}
+\]
+over the preceding one. The diagram
+\[
+\xymatrix@R=1.5cm@C=2cm{
+  & X_{F(\lambda_{ij})} \ar[ld] \ar[rd] \ar@/_1.68pc/[dd]&\\
+X_{F(\lambda_i)}\ar[rd] & X|U_{ij}\ar[u]\ar[l]\ar[r] & X_{F(\lambda_j)} \ar[ld]\\
+                 & X_\mu &
+}
+\]
+is then commutative, and there exists a family $(\phi_\mu)$ such
+that, for every arrow $\phi:F(\lambda)\to\mu$ over
+$f:V\to U$, the diagram
+\[
+\xymatrix@=1.5cm{
+                              & X_{F(\lambda)} \ar[rd]^{\phi}      &    \\
+X|V \ar[rr]_{\phi_\mu|V} \ar[ru]^{\psi_\lambda} &
+                              & X_\mu|V
+}
+\]
+commutes. If $\sigma:\mu\to\mu'$ is an arrow of $\Mm$, then
+$(\sigma|V)(\phi_\mu|V)=(\sigma|V)\phi\cdot\psi_\lambda
+=(\sigma\phi|V)\cdot\psi_\lambda=\phi_{\mu'}|V$; hence
+$\phi=(\phi_\mu)$ is a morphism of functors such that
+$\psi=F^{\ast}\phi$, as required.
+
+If\pageoriginale $E$ is an ordered set, we shall also denote by $E$
+the category whose set of objects is $E$ and in which $\Hom(i,j)$
+is a singleton or empty according as $i\leq j$ or not.
+
+\begin{enonce*}{Proposition 8.1.7}\etiquette[8.1.7]{V.prop8.1.7}
+Let $\Ll$ be a locally cofiltering category over a site $\Ss$.
+There exist an ordered set $E$ and a functor $F$ from $E$ to $\Ll$
+such that:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $E$, regarded as a category over $\Ss$ by means of
+$pF:E\to\Ss$, is locally cofiltering.
+\item The functor $F$ is cofinal.
+\end{enumerate}
+\end{enonce*}
+
+Let $\Ll'$ be the locally cofiltering category which is the product
+of $\Ll$ with the category defined by the ordered set $\ZZ$. The
+projection from $\Ll'$ to $\Ll$ is cofinal, so it suffices to prove
+\hyperref[V.prop8.1.7]{8.1.7} for $\Ll'$.
+
+If $X$ is a finite set of arrows in $\Ll'$, denote by $X^0$ the set
+of endpoints of the arrows in $X$. Let $E$ be the set of nonempty
+finite subsets $X$ of $\mathrm{Fl}(\Ll')$ for which there exists
+$\lambda_X\in\Ob\Ll'$ satisfying:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item no arrow of $X$, except $1_{\lambda_X}$, has target
+$\lambda_X$;
+
+\item if $\mu\in X^0$, then $1_\mu\in X$ and
+$\Hom(\lambda_X,\mu)\cap X\neq\varnothing$;
+
+\item every diagram of the form
+\[
+\xymatrix@=1.75cm{
+\lambda_X \ar[r] \ar[rd]& \mu \ar[d]\\
+            & \mu'
+}
+\]
+consisting of arrows of $X$ is commutative.
+\end{enumerate}
+
+Order $E$ by the relation opposite to inclusion. If $X\in E$ and
+$\mu\in X^0$, there is a unique arrow from $\lambda_X$ to $\mu$
+which belongs to $X$. If $X,Y\in E$ and $X\supset Y$, let
+$\lambda_{X,Y}$ be the unique arrow in $X$ from $\lambda_X$ to
+$\lambda_Y$. The assignments $X\mapsto\lambda_X$ and
+$(X\supset Y)\mapsto\lambda_{X,Y}$ form a functor from $E$ to
+$\Ll'$.
+
+\begin{enonce*}{Lemma 8.1.8}\etiquette[8.1.8]{V.lem8.1.8}
+The category\pageoriginale $E$ is locally cofiltering over $\Ss$,
+and the functor $\lambda:E\to\Ll'$ is cofinal.
+\end{enonce*}
+
+We must verify the following axioms successively:
+\begin{itemize}
+\item[(i) \emph{axiom} ($\Ll0$)] Let $f:V\to U$ and $X\in E_U$.
+There exist $\lambda\in\Ob\Ll'_V$ and
+$\phi\in\Hom_f(\lambda,\lambda_X)$. Moreover, $\lambda$ may be
+chosen so that $\lambda\notin X^0$ (this is where
+$\Ll'=\Ll\times\ZZ$ is used). Let
+$X'=X\cup\{1_\lambda\}\cup Y$, where $Y$ is the set of composite
+arrows
+$\lambda\xrightarrow{\phi}\lambda_X\xrightarrow{\psi}\mu$
+$(\psi\in X)$. Then $X'\in E$, $\lambda_{X'}=\lambda$, and
+$\Hom(X',X)\neq\varnothing$.
+
+\item[(ii) \emph{axiom} ($\Ll1$)] Let $(X_i)$ be a finite family of
+objects of $E_U$. There exist a covering $f_j:U_j\to U$, objects
+$\lambda_j\in\Ob\Ll'_{U_j}$, and arrows
+$\phi_{ji}\in\Hom_{f_j}(\lambda_j,\lambda_{X_i})$. If
+$x\in X_a^0\cap X_b^0$, then for each $j$ there exist a covering
+$g_{jk}:U_{jk}\to U_j$ and arrows
+$\psi_{jk}:\lambda_{jk}\to\lambda_j$ such that
+$p(\psi_{jk})=g_{jk}$ and which equalize the pair of arrows
+$\lambda_j\rightrightarrows x$, one belonging to $X_a$ and the
+other to $X_b$. We may arrange that the $\lambda_{jk}$ belong to
+none of the $X_i^0$. Replace the $(f_j,\lambda_j,\phi_{ji})$ by the
+$(f_jg_{jk},\lambda_{jk},\phi_{ji}\psi_{jk})$, and repeat this
+construction for every $x$ in an intersection of two of the $X_i$.
+We obtain a new system $(f_j,\lambda_j,\phi_{ji})$; put
+$$
+X_j=\bigcup_iX_i\cup\{1_{\lambda_j}\}\cup Y_j,
+$$
+where $Y_j$ is the set of composite arrows
+$$
+\lambda_j\xrightarrow{\phi_{ji}}\lambda_{X_i}
+\xrightarrow{\psi}x\quad(\psi\in X_i){\quoi}.
+$$
+Then $X_j\in E_{U_j}$, and these $X_j$ satisfy $(\Ll1)$.
+
+\item[(iii) \emph{axiom} ($\Ll2$)] Trivial, since there are no
+nontrivial parallel arrows!
+
+\item[(iv) \emph{axiom} $(C\mathfrak{F}1)$] Trivial, since the
+functor $\lambda$ is surjective.
+
+\item[(v) \emph{axiom} $(C\mathfrak{F}2)$] Let $f:U\to V$ and let
+$(\phi_0,\phi_1):\lambda_X\rightrightarrows\lambda$ be a pair of
+parallel arrows over $f$. There exist a covering $f_j:U_j\to U$ of
+$U$ and arrows $\psi_j:\lambda_j\to\lambda_X$ such that
+$p(\psi_j)=f_j$, $\phi_0\psi_j=\phi_1\psi_j$, and
+$\lambda_j\notin X^0$. Let
+$X_j=X\cup\{1_{\lambda_j}\}\cup Y_j$, where $Y_j$ is the set of
+composite arrows
+$$
+\lambda_j\xrightarrow[]{\psi_j}\lambda_X\xrightarrow{\psi}\mu
+\quad(\psi\in X){\quoi}.
+$$
+Then\pageoriginale $X_j\in E_{U_j}$, and
+$F(\lambda_{X_j,X})=\psi_j$ equalizes $(\phi_0,\phi_1)$.
+\end{itemize}
+
+\setcounter{subsubsection}{9}
+\setcounter{paragraph}{-1}
+\paragraph{}\etiquette[8.1.9.0]{V.par8.1.9.0}
+
+Suppose that $\Ss$ is (the site of nonempty open subsets of) the
+one-point topological space. A locally cofiltering category over
+$\Ss$ is then simply a left filtering category (\ie one for which
+$\Ss^0$ is filtering in the sense of I \hyperref[I.def2.7]{2.7}), and cofinal functors
+correspond to cofinal functors between left filtering categories
+(I 8). Proposition \hyperref[V.prop8.1.7]{8.1.7} may then be restated
+as follows.
+
+\begin{enonce*}{Proposition 8.1.9}\etiquette[8.1.9]{V.prop8.1.9}
+For every cofiltering category $\Ll$, there exist a cofiltering
+ordered set $E$ and a cofinal functor from $E$ to $\Ll$.
+\end{enonce*}
+
+In this special case, the proof of \hyperref[V.prop8.1.7]{8.1.7}
+reduces essentially to the proof of \hyperref[V.prop8.1.9]{8.1.9}
+given in I 8.

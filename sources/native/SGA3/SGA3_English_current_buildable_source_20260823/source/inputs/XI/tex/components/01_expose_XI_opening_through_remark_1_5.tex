@@ -1,0 +1,254 @@
+
+\setcounter{footnote}{-1}
+\SGARefTarget{sga3:xi:chapter:xi}\chapter*{Exposé XI\\
+Representability Criteria\\
+Applications to Multiplicative-Type Subgroups\\
+of Affine Group Schemes}
+\addcontentsline{toc}{chapter}{Exposé XI. Representability Criteria and
+Multiplicative-Type Subgroups}
+\markboth{EXPOSÉ XI. REPRESENTABILITY CRITERIA}
+  {EXPOSÉ XI. REPRESENTABILITY CRITERIA}
+
+\begin{center}
+  \textit{by A. Grothendieck}\footnote{Editor's note: xy version of
+  December 5, 2008.}
+\end{center}
+
+\SGARefTarget{sga3:xi:section:0}\section*{0. Introduction}
+\addcontentsline{toc}{section}{0. Introduction}
+
+As we have already seen in Exposé X, nos.~4 and 5, the representability
+of certain functors---for example, functors of the form
+\(\operatorname{Hom}_S(X,Y)\) and various related constructions---plays
+an important role in many questions concerning group preschemes.
+
+Among the results that are particularly useful in this theory, besides
+the representability of quotients studied in Exposés V and
+\(\mathrm{VI}_{\mathrm B}\) and in Exposé VIII, no.~5, let us mention the
+representability of functors of the form
+\[
+  \prod_{X/S} Y/X ,
+\]
+where \(Y\) is a subobject of \(X\).  This was studied in a very
+elementary case in Exposé VIII, no.~6; variants will be given in no.~\SGARefLink{sga3:xi:section:6}{6}
+of the present exposé.  These results provide the representability of
+various centralizers, normalizers, and transporters.
+
+Less elementary representability criteria, using results that will
+appear in EGA VI, are indicated in \SGARefLink{sga3:xi:remark:6:12}{6.12} and in Exposés XV and XVI.
+There we shall give a criterion for the representability of quotients
+\(G/H\) in cases not covered by the preceding exposés; this criterion
+was not developed in the oral lectures.
+
+Our principal purpose in the present exposé is to prove Theorems \SGARefLink{sga3:xi:theorem:4:1}{4.1}
+and \SGARefLink{sga3:xi:corollary:4:2}{4.2}, which provide a typical example of a nonprojective
+construction technique, close to the technique that will be developed
+in EGA VI.  Since the oral lecture and the drafting of the present
+text, it has moreover become apparent that the affine hypotheses in
+\SGARefLink{sga3:xi:theorem:4:1}{4.1} and \SGARefLink{sga3:xi:corollary:4:2}{4.2} can be removed to a large extent (cf.\ Exposé XV), and
+that the main part of the theory developed in the following exposé can
+dispense with \SGARefLink{sga3:xi:theorem:4:1}{4.1} and \SGARefLink{sga3:xi:corollary:4:2}{4.2}.  Finally, it might be interesting to prove
+analogues of these results for a general reductive group prescheme
+(for example, a semisimple one) in place of a group of multiplicative
+type; in that case \SGARefLink{sga3:xi:theorem:4:1}{4.1} and \SGARefLink{sga3:xi:corollary:4:2}{4.2} would doubtless be the key result in the
+proof.
+
+\SGARefTarget{sga3:xi:section:1}\section*{1. Review of Smooth, Étale,
+and Unramified Morphisms}
+\addcontentsline{toc}{section}{1. Review of Smooth, Étale, and
+Unramified Morphisms}
+
+The reader is referred to EGA IV, §§17 and 18, and, pending its
+publication, to SGA 1, Exposés I, II, and III.  Certain noetherian
+hypotheses used there, which are inconvenient in applications, should
+however be replaced by finite-presentation hypotheses.
+
+\medskip
+\noindent\SGARefTarget{sga3:xi:definition:1:1}\textbf{Definition 1.1.} ---
+\textit{Let \(S\) be a prescheme and let
+\[
+  F:(\mathbf{Sch})^\circ/S\longrightarrow(\mathbf{Ens})
+\]
+be a functor.  The functor \(F\) is said to be \emph{formally smooth}
+(respectively, \emph{formally unramified}\footnote{The source notes
+that one would now rather say ``net'' in place of ``unramified.''},
+respectively, \emph{formally étale}) if, for every \(S\)-prescheme
+\(S'\) that is affine in the absolute sense and every subscheme
+\(S'_0\subset S'\) defined by a nilpotent ideal \(\mathscr J\), the map
+\[
+  F(S')\longrightarrow F(S'_0)
+\]
+is surjective (respectively, injective, respectively, bijective).}
+
+\textit{An \(S\)-prescheme \(X\) is said to be formally smooth over
+\(S\) (respectively, formally unramified over \(S\), respectively,
+formally étale over \(S\)) if the corresponding functor has that
+property.  It is said to be smooth over \(S\) (respectively,
+unramified over \(S\), respectively, étale over \(S\)) if it satisfies
+the preceding condition and is, in addition, locally of finite
+presentation over \(S\).}
+
+The usefulness of these definitions for \(X\) lies, on the one hand,
+in their remarkably simple expression in terms of the functor
+represented by \(X\) (and in practice \(X\) is often given as the
+object over \(S\) representing an explicitly described functor), and,
+on the other hand, in the remarkable local structural properties that
+they express.  We recall those properties in the following statements;
+for their proofs, see the references just cited.
+
+\medskip
+\noindent\SGARefTarget{sga3:xi:proposition:1:2}\textbf{Proposition 1.2.} ---
+\textit{Let \(X\) be a prescheme locally of finite presentation over
+\(S\).  Then:}
+
+\begin{enumerate}
+\item[(i)] \SGARefTarget{sga3:xi:proposition:1:2:item:i} \textit{\(X\) is smooth over \(S\) if and only if it is flat
+over \(S\) and its geometric fibers
+\[
+  X\otimes_S\operatorname{Spec}\kappa(s)
+\]
+are regular schemes.  More generally, \(X\) is smooth over \(S\) in a
+neighborhood of \(x\in X\) (one then says that \(X\) is smooth over
+\(S\) at \(x\)) if and only if \(X\) is flat over \(S\) at \(x\) and
+\(X_s\) is smooth over \(\kappa(s)\) at \(x\); that is,
+\[
+  X_s\otimes_{\kappa(s)}\overline{\kappa(s)}
+\]
+is regular at the points (or merely at one point) lying over \(x\).}
+
+\item[(ii)] \SGARefTarget{sga3:xi:proposition:1:2:item:ii} \textit{Suppose that \(S\), and hence \(X\), is locally
+noetherian.  Let \(x\in X\), and let \(s\in S\) be its image.  The
+smoothness of \(X\) over \(S\) at \(x\) can then be detected from the
+local homomorphism
+\[
+  A=\mathscr O_{S,s}\longrightarrow B=\mathscr O_{X,x}
+\]
+of noetherian local rings (or even from the local homomorphism
+\(\widehat A\to\widehat B\) of their completions), by the following
+characteristic property: \(B\) is flat over \(A\), and
+\(B\otimes_A k\) is geometrically regular over \(k\), the residue
+field of \(A\).  Equivalently, for every finite extension \(k'\) of
+\(k\),
+\[
+  (B\otimes_A k)\otimes_k k'=B\otimes_A k'
+\]
+is a regular semilocal ring.  When the residue-field extension
+\(k(B)/k(A)\) is trivial, these conditions are also equivalent to the
+following one: \(\widehat B\) is isomorphic, as an
+\(\widehat A\)-algebra, to an algebra of formal power series
+\[
+  \widehat A[[t_1,\ldots,t_n]].
+\]}
+\end{enumerate}
+
+Thus, from the ``formal'' point of view, the structure of \(X\) over
+\(S\) is that of the standard affine space \(S[t_1,\ldots,t_n]\) over
+\(S\).
+
+\medskip
+\noindent\SGARefTarget{sga3:xi:proposition:1:3}\textbf{Proposition 1.3.} ---
+\textit{Let \(X\) be a prescheme locally of finite presentation over
+\(S\).  Then:}
+
+\begin{enumerate}
+\item[(i)] \SGARefTarget{sga3:xi:proposition:1:3:item:i} \textit{The following conditions are equivalent:}
+  \begin{enumerate}
+  \item[(a)] \SGARefTarget{sga3:xi:proposition:1:3:item:i:item:a} \textit{\(X\) is unramified over \(S\).}
+  \item[(b)] \SGARefTarget{sga3:xi:proposition:1:3:item:i:item:b} \textit{The diagonal morphism
+  \(X\to X\times_S X\) is an open immersion.}
+  \item[(c)] \SGARefTarget{sga3:xi:proposition:1:3:item:i:item:c} \textit{\(\Omega^1_{X/S}=0\).}
+  \item[(d)] \SGARefTarget{sga3:xi:proposition:1:3:item:i:item:d} \textit{The geometric fibers of \(X/S\) are discrete and
+  reduced; that is, they are isomorphic to disjoint sums of copies of
+  the base field.}
+  \item[(e)] \SGARefTarget{sga3:xi:proposition:1:3:item:i:item:e} \textit{For every \(s\in S\), the fiber
+  \[
+    X\otimes_S\operatorname{Spec}\kappa(s)=X_s
+  \]
+  is unramified over \(\kappa(s)\), or equivalently is isomorphic to a
+  disjoint sum of spectra of finite separable extensions of
+  \(\kappa(s)\).}
+  \end{enumerate}
+
+\item[(ii)] \SGARefTarget{sga3:xi:proposition:1:3:item:ii} \textit{There are analogous pointwise conditions for
+\(X\) to be unramified over \(S\) at a given point \(x\), that is, in
+a neighborhood of that point.  For example, it is necessary and
+sufficient that \(\mathscr O_{X_s,x}\) be a finite separable extension
+of \(\kappa(s)\).  In terms of the local homomorphism
+\[
+  A=\mathscr O_{S,s}\longrightarrow B=\mathscr O_{X,x},
+\]
+this says that \(B\otimes_A k\) is a finite separable extension of
+the residue field \(k\) of \(A\); equivalently,
+\[
+  \mathfrak r(A)B=\mathfrak r(B)
+  \quad\text{and}\quad
+  k(B)/k(A)\ \text{is finite separable}.
+\]
+When \(A\), and hence \(B\), is noetherian and
+\(k(A)\xrightarrow{\sim}k(B)\), this also means that
+\(\widehat A\to\widehat B\) is surjective.}
+\end{enumerate}
+
+Thus, from the ``formal'' point of view, saying that \(X\) is
+unramified over \(S\) means that \(X\) is essentially a subprescheme
+of \(S\).  Observe also that conditions \SGARefLink{sga3:xi:proposition:1:3:item:i:item:d}{(d)} and \SGARefLink{sga3:xi:proposition:1:3:item:i:item:e}{(e)} are expressed
+solely in terms of the fibers of \(X/S\).
+
+\medskip
+\noindent\SGARefTarget{sga3:xi:proposition:1:4}\textbf{Proposition 1.4.} ---
+\textit{Let \(X\) be a prescheme locally of finite presentation over
+\(S\).  Then \(X\) is étale over \(S\) if and only if it is smooth and
+unramified over \(S\) (which is immediate from the definition), so the
+criteria in \SGARefLink{sga3:xi:proposition:1:2}{1.2} and \SGARefLink{sga3:xi:proposition:1:3}{1.3} apply.  In particular:}
+
+\begin{enumerate}
+\item[(i)] \SGARefTarget{sga3:xi:proposition:1:4:item:i} \textit{\(X\) is étale over \(S\) if and only if it is flat
+and unramified over \(S\).  There is an analogous local criterion for
+\(X\) to be étale over \(S\) at a given point \(x\).}
+
+\item[(ii)] \SGARefTarget{sga3:xi:proposition:1:4:item:ii} \textit{Suppose in addition that \(S\), and hence \(X\),
+is locally noetherian.  Whether \(X\) is étale over \(S\) at \(x\) can
+then be detected from the local homomorphism
+\[
+  A=\mathscr O_{S,s}\longrightarrow B=\mathscr O_{X,x}
+\]
+\footnote{The source prints \(\mathscr O_{X,s}\); the local ring at the
+point of \(X\) is \(\mathscr O_{X,x}\).}
+(and even from \(\widehat A\to\widehat B\)) by the following
+characteristic property: \(B\) is flat over \(A\), and \(B\otimes_A k\)
+is a finite separable extension of \(k\), the residue
+field\footnote{Editor's note: ``residue extension'' was replaced by
+``residue field.''} of \(A\).  When
+\(k(A)\xrightarrow{\sim}k(B)\), this condition simply says that
+\(\widehat A\to\widehat B\) is an isomorphism.}
+\end{enumerate}
+
+Thus, from the ``formal'' point of view, saying that \(X\) is étale
+over \(S\) simply means that \(X\) is locally isomorphic to \(S\).
+
+\medskip
+\noindent\SGARefTarget{sga3:xi:remark:1:5}\textbf{Remark 1.5.} ---
+When \(X\) is locally of finite presentation over \(S\) and a point
+\(x\in X\) is given, the fact that \(X\) is smooth (respectively,
+unramified, respectively, étale) over \(S\) at \(x\), that is, in a
+neighborhood of \(x\), can also be detected from the functor
+\[
+  X:(\mathbf{Sch})^\circ/S\longrightarrow(\mathbf{Ens})
+\]
+by the following property.  For every \(S\)-scheme \(S'\) that is the
+spectrum of a local ring, every subscheme \(S'_0\subset S'\) defined
+by a nilpotent ideal, and every \(S\)-morphism
+\(u_0:S'_0\to X\) sending the closed point \(s'\) of \(S'\) to \(x\),
+there exists at least one (respectively, at most one, respectively,
+exactly one) \(S\)-morphism \(u:S'\to X\) extending \(u_0\).
+
+This statement shows in particular that, in \SGARefLink{sga3:xi:definition:1:1}{Definition 1.1}, one may
+restrict to local schemes \(S'\), provided the functor under
+consideration is representable by a prescheme locally of finite
+presentation over \(S\).  Moreover, when \(S\) is locally noetherian,
+one may even restrict the preceding pointwise criterion to local
+artinian schemes \(S'\), and the same restriction may therefore be
+made in \SGARefLink{sga3:xi:definition:1:1}{Definition 1.1}, provided that \(S\) is locally noetherian and
+that the functor in question is represented by a prescheme locally of
+finite type over \(S\).
+

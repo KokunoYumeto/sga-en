@@ -1,0 +1,305 @@
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:7:5}\textbf{Corollary 7.5.}
+\textit{Suppose in addition that \(G_0\) is smooth over \(k\) and that
+\(p\operatorname{id}_{G_0}\) is flat. Equivalently, by the structure theory
+of algebraic groups over an algebraically closed field \(\overline{k}\),
+\(G_{\overline{k}}\) contains no subgroup isomorphic to the additive group.
+Then, for every \(\nu\geq\nu_0\) and every \(n>0\), the group
+\({}_{p^\nu}H_n\) is flat over \(S_n\).}
+
+Indeed, \(p^{\nu_0}\operatorname{id}_{Q_n}=0\) implies that
+\(p^\nu\operatorname{id}_{H_n}\) factors through \(G_n\), giving the
+commutative diagram
+\SGARefTarget{sga3:viii:diagram:7:5}
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+H_n
+  \arrow[r,"p^\nu\operatorname{id}_{H_n}"]
+  \arrow[dr,"v_n"]
+&
+H_n
+\\
+G_n
+  \arrow[u,"u_n"]
+  \arrow[r,"p^\nu\operatorname{id}_{G_n}"]
+&
+G_n
+  \arrow[u,"u_n"']
+.
+\end{tikzcd}
+\]
+We claim that \(v_n\) is flat. Since \(H_n\) and \(G_n\) are flat over
+\(S_n\), it is enough to check that \(v_0\) is flat (SGA~1, IV, 5.9).
+Thus we may take \(n=0\), so that \(S_n=\operatorname{Spec}(k)\). Since
+\(p\operatorname{id}_{G_0}\), and hence
+\(p^\nu\operatorname{id}_{G_0}\), is flat, its image is an induced open
+subgroup \(G'_0\) of \(G_0\). The map \(u_0:G_0\to H_0\) is surjective, so
+\(v_0\) takes its values in \(G'_0\) and may be regarded as a homomorphism
+to \(G'_0\). Its composite with \(u_0\) is an epimorphism; hence \(v_0\)
+itself is an epimorphism, and therefore a flat homomorphism into \(G'_0\),
+and thus into \(G_0\). Consequently \(v_n\) is flat and
+\(\ker v_n={}_{p^\nu}H_n\)%
+\begingroup
+\renewcommand{\thefootnote}{\(\dagger\)}
+\footnote[0]{English editor's note: the source prints
+\({}_{p^\nu}H\) over \(S\) here and \({}_{p^\nu}H\) over \(S_n\) in
+the proof of \SGARefLink{sga3:viii:lemma:7:7}{Lemma 7.7}. The subscripts \(n\) are supplied in both places
+because those arguments concern the base-changed family over \(S_n\).}
+\endgroup
+is flat over \(S_n\). \qed
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:remark:7:5:after:01}\textbf{Remark.}
+We did not explicitly use the assumption that \(G_0\) is smooth over \(k\).
+It is, however, an easy consequence of the flatness of
+\(p\operatorname{id}_{G_0}\)
+\emph{[the source prints \(p\operatorname{id}_{G}\)]}; this is why the
+condition was stated explicitly
+in Corollary~\SGARefLink{sga3:viii:corollary:7:5}{7.5}.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:lemma:7:6}\textbf{Lemma 7.6.}
+\textit{Let \(u:G\to H\) be a surjective monomorphism of commutative
+algebraic groups over a field \(k\) of characteristic \(p>0\), and put
+\(Q=H/G\), a purely infinitesimal group. There is an integer \(\nu_1\) such
+that, for every \(\nu\geq\nu_1\), the sequence}
+\[
+  0\longrightarrow{}_{p^\nu}G
+  \longrightarrow{}_{p^\nu}H
+  \longrightarrow Q\longrightarrow0
+\]
+\textit{is exact.}
+
+It is enough to establish exactness at \(Q\), which in turn amounts to the
+injectivity of the homomorphism
+\SGARefTarget{sga3:viii:eq:7:6:x}
+\begin{equation}
+  \tag{x}
+  \mathscr O_{Q,e}\longrightarrow
+  \mathscr O_{{}_{p^\nu}H,e}
+\end{equation}
+of local rings at the identity elements. Recall that \(Q\) is
+set-theoretically supported at the single point \(e\). There is a natural
+homomorphism
+\SGARefTarget{sga3:viii:eq:7:6:xx}
+\begin{equation}
+  \tag{xx}
+  \mathscr O_{{}_{p^\nu}H,e}
+  \longrightarrow
+  \mathscr O_{H,e}/\mathfrak m^{p^\nu},
+\end{equation}
+where \(\mathfrak m\) is the augmentation ideal, equivalently the maximal
+ideal, of \(\mathscr O_{H,e}\). Indeed,
+\(p^\nu\operatorname{id}_H\) vanishes on the kernel of the iterated
+Frobenius homomorphism \(F^\nu\). The composite of
+\SGARefLink{sga3:viii:eq:7:6:x}{(x)} and
+\SGARefLink{sga3:viii:eq:7:6:xx}{(xx)} is the
+natural composite
+\SGARefTarget{sga3:viii:eq:7:6:xxx}
+\begin{equation}
+  \tag{xxx}
+  \mathscr O_{Q,e}\longrightarrow
+  \mathscr O_{H,e}\longrightarrow
+  \mathscr O_{H,e}/\mathfrak m^{p^\nu}.
+\end{equation}
+Now \(\mathscr O_{Q,e}\to\mathscr O_{H,e}\) is injective, because
+\(H\to Q\) is an epimorphism and therefore flat. Moreover,
+\(\mathscr O_{Q,e}\) is Artinian, while
+\(\bigcap_\nu\mathfrak m^{p^\nu}=0\) in \(\mathscr O_{H,e}\), so the
+intersection of the corresponding ideals in \(\mathscr O_{Q,e}\) is also
+zero. One of them is therefore zero. Thus
+\SGARefLink{sga3:viii:eq:7:6:xxx}{(xxx)} is
+injective, and a fortiori so is
+\SGARefLink{sga3:viii:eq:7:6:x}{(x)}.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:lemma:7:7}\textbf{Lemma 7.7.}
+\textit{Under the hypotheses of \SGARefLink{sga3:viii:corollary:7:5}{7.5}, there is an integer \(\nu_1\) such
+that, for every \(\nu\geq\nu_1\) and every \(n\), the sequence of
+\(S_n\)-groups}
+\[
+  0\longrightarrow{}_{p^\nu}G_n
+  \longrightarrow{}_{p^\nu}H_n
+  \xrightarrow{\,w_n\,}Q_n
+  \longrightarrow0
+\]
+\textit{is exact. More precisely, \(w_n\) is faithfully flat and its kernel
+is \({}_{p^\nu}G_n\).}
+
+Take \(\nu_1\) as in Lemma~\SGARefLink{sga3:viii:lemma:7:6}{7.6}, applied
+to \(u_0:G_0\to H_0\), and require \(\nu_1\geq\nu_0\), where
+\(p^{\nu_0}=\operatorname{rank}Q_0\). It remains only to check that \(w_n\)
+is faithfully flat. By Corollary~\SGARefLink{sga3:viii:corollary:7:5}{7.5},
+\({}_{p^\nu}H_n\) is flat over \(S_n\), as is \(Q_n\); it is therefore
+enough to check that
+\[
+  w_0:{}_{p^\nu}H_0\longrightarrow Q_0
+\]
+is faithfully flat, equivalently an epimorphism. This follows from the
+choice of \(\nu_1\).
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:7:8}\textbf{Corollary 7.8.}
+\textit{Suppose in addition that \(H\) is separated over \(S\), or more
+generally that \({}_{p^\nu}H\) is separated over \(S\) for every \(\nu\),
+and that \({}_{p^\nu}G\) is finite over \(S\) for every \(\nu\). Then, for
+\(\nu\geq\nu_1\), the group schemes \({}_{p^\nu}G\) and
+\({}_{p^\nu}H\) are finite and flat over \(S\), and there is an exact
+sequence}
+\SGARefTarget{sga3:viii:corollary:7:8:display:exact-sequence:01}\[
+  0\longrightarrow{}_{p^\nu}G
+  \longrightarrow{}_{p^\nu}H
+  \xrightarrow{\,w\,}Q
+  \longrightarrow0.
+\]
+
+Because \(u:G\to H\) is surjective, the induced morphism
+\({}_{p^\nu}G\to{}_{p^\nu}H\) is also surjective. The source is finite over
+\(S\) and the target is separated over \(S\), hence the target is finite
+over \(S\). To prove that \({}_{p^\nu}G\) and \({}_{p^\nu}H\) are flat over
+\(S\), it is enough to prove this after every base change to \(S_n\), where
+it is contained in Corollary~\SGARefLink{sga3:viii:corollary:7:5}{7.5}.
+Finally, \SGARefLink{sga3:viii:corollary:7:8:display:exact-sequence:01}{the exact sequence above} is obtained from the exact sequences in
+Lemma~\SGARefLink{sga3:viii:lemma:7:7}{7.7} as \(n\) varies.
+
+Taking generic fibers in the sequence of
+Corollary~\SGARefLink{sga3:viii:corollary:7:8}{7.8}, and recalling that
+\(u_{s'}:G_{s'}\to H_{s'}\) is an isomorphism, gives that \(Q_{s'}\) is
+the unit group. Since \(Q\) is flat over \(S\), \(Q\) itself is the unit
+group; therefore so is \(Q_s\), and \(u_s:G_s\to H_s\) is an isomorphism.
+We have proved:
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:proposition:7:9}\textbf{Proposition 7.9.}
+\textit{Let \(u:G\to H\) be a homomorphism of group preschemes of finite
+presentation over a prescheme \(S\). Assume:}
+\begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:viii:proposition:7:9:item:a}
+  \textit{\(u\) is a monomorphism;}
+  \item[(b)]\SGARefTarget{sga3:viii:proposition:7:9:item:b}
+  \textit{\(G\) is flat over \(S\);}
+  \item[(c)]\SGARefTarget{sga3:viii:proposition:7:9:item:c}
+  \textit{for every \(s\in S\) whose residue field has characteristic
+  \(p>0\), let \(S'=\operatorname{Spec}(\mathscr O_{S,s})\), and let
+  \(u':G'\to H'\) be obtained from \(u\) by base change to \(S'\). Then
+  \(G'\) is commutative, the special fiber \(G'_0=G_s\) is smooth over
+  \(\kappa(s)\), and, for every \(\nu>0\), the group
+  \({}_{p^\nu}G'\) is finite over \(S'\) while \({}_{p^\nu}H'\) is
+  separated over \(S'\).}
+\end{enumerate}
+\textit{Under these assumptions, \(u\) is an immersion.}
+
+Indeed, the finiteness of \({}_pG'\) over \(S'\) implies the finiteness of
+its special fiber over \(\kappa(s)\). Hence
+\(G'_0\otimes_{\kappa(s)}\overline{\kappa(s)}\) contains no subgroup
+isomorphic to the additive group, and the hypotheses of
+Corollary~\SGARefLink{sga3:viii:corollary:7:5}{7.5} apply.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:remark:7:10}\textbf{Remark 7.10.}
+Examples of M. Raynaud (XVI, 1.1(a),\SGARefLink{sga3:viii:proposition:7:9:item:b}{(b)}) show that in condition \SGARefLink{sga3:viii:proposition:7:9:item:c}{(c)} one
+cannot omit either the finiteness of the \({}_{p^\nu}G'\) over \(S'\) or
+the separatedness of the \({}_{p^\nu}H'\) over \(S'\).
+
+We now seek conditions under which \(u\) is a closed immersion. Retain the
+hypotheses preceding Proposition~\SGARefLink{sga3:viii:proposition:7:9}{7.9},
+but no longer suppose that \(u\) is surjective; assume only that it is an
+isomorphism on generic fibers. We already know that \(u:G\to H\) is an open
+immersion. The same is therefore true of \(u_0:G_0\to H_0\), whose image
+contains the identity component \((H_0)^0\). Since \(G_0\) is smooth over
+\(k\) and has no additive component after extending to \(\overline{k}\),
+the same is true of \(H_0\). We use:
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:lemma:7:11}\textbf{Lemma 7.11.}
+\textit{Let \(H\) be a commutative algebraic group over a field \(k\), and
+suppose that \(H\otimes_k\overline{k}\) contains no subgroup isomorphic to
+\(\mathbf G_a\). If \(n=\deg(H/H^0)\), then}
+\[
+  {}_nH\longrightarrow H/H^0
+\]
+\textit{is surjective.}
+
+We may assume that \(k\) is algebraically closed, in which case this follows
+from the familiar fact that \(H^0(k)\) is a divisible group.
+
+Return to \(u:G\to H\), and suppose that the \({}_nG\), \(n>0\), are proper
+over \(S\), while the \({}_nH\) are separated over \(S\). The \({}_nH\)
+are also flat over \(S\). Indeed, it is enough to check flatness at the
+points above \(s\), and hence to check that
+\(n\operatorname{id}_{H_0}\) is flat. As noted above, this is equivalent to
+\((H_0)^0\) being smooth\footnote{Editor's note: the terminology has been
+updated, replacing ``simple'' by ``smooth''; see, for example, A.
+Grothendieck's note (1) in SGA~1, Expos\'e II.} over \(k\) and having no
+\(\mathbf G_a\)-component over \(\overline{k}\). Since
+\((H_0)^0=(G_0)^0\), this follows from the corresponding hypothesis on
+\(G_0\).
+
+Because \(H\) is separated over \(S\), so are the \({}_nH\). The morphism
+\({}_nG\to{}_nH\) is proper and therefore has closed image. Its image
+contains the generic fiber of \({}_nH\), because
+\(u_{s'}:G_{s'}\to H_{s'}\) is an isomorphism. Since \({}_nH\) is flat
+over \(S\), it is the schematic closure of its generic fiber. Hence
+\({}_nG\to{}_nH\), and therefore \({}_nG_0\to{}_nH_0\), is surjective.
+Together with \(G_0\supset(H_0)^0\), Lemma
+\SGARefLink{sga3:viii:lemma:7:11}{7.11} now implies that
+\(G_0\to H_0\) is surjective. Hence \(u\) is surjective. We obtain:
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:proposition:7:12}\textbf{Proposition 7.12.}
+\textit{With the notation of \SGARefLink{sga3:viii:proposition:7:9}{7.9}, suppose that conditions \SGARefLink{sga3:viii:proposition:7:9:item:a}{(a)} and \SGARefLink{sga3:viii:proposition:7:9:item:b}{(b)} hold,
+together with the stronger condition (c\(^{\prime}\)) obtained from \SGARefLink{sga3:viii:proposition:7:9:item:c}{(c)} by
+requiring, for every integer \(n>0\), not only those of the form \(p^\nu\),
+that \({}_nG'\) be finite over \(S'\) and \({}_nH'\) separated over \(S'\).
+Then \(u\) is a closed immersion.}
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:remark:7:13}\textbf{Remark 7.13.}
+\begin{enumerate}
+  \item[(a)] The separatedness hypothesis on the \({}_nH\) easily implies
+  that \(H\) itself is separated over \(S\). This is also formally contained
+  in Proposition~\SGARefLink{sga3:viii:proposition:7:12}{7.12}, by taking
+  \(G\) to be the unit \(S\)-group. If \(S\) is locally Noetherian, in
+  Proposition~\SGARefLink{sga3:viii:proposition:7:9}{7.9} it is enough to
+  assume that \(H\) is locally of finite type over \(S\), rather than of
+  finite type; the proof applies verbatim. For
+  Proposition~\SGARefLink{sga3:viii:proposition:7:12}{7.12}, one also
+  assumes that the fibers of \(H\) are of finite type.
+
+  \item[(b)]\SGAInlineRefTarget{sga3:viii:remark:7-13:item:b} Using Proposition~\SGARefLink{sga3:viii:proposition:7:12}{7.12},
+  it is not difficult to prove that if \(u:G\to H\) is a monomorphism of
+  group preschemes of finite presentation over \(S\), \(G\) is
+  diagonalizable---or, more generally, of multiplicative type---and \(H\)
+  is separated over \(S\), then \(u\) is a closed immersion. This is a
+  satisfactory generalization of the first conclusion in \SGARefLink{sga3:viii:corollary:5:7}{5.7}. If \(G\) is
+  smooth over \(S\), apply \SGARefLink{sga3:viii:proposition:7:12}{Proposition~7.12} directly; the general case
+  reduces readily to this one. If \(H\) is not assumed separated over \(S\),
+  one can still show that \(u\) is an immersion; for a torus \(G\), this
+  also follows from the material that comes next.
+
+  \item[(c)] If \(G\) is assumed to have connected fibers in
+  Proposition~\SGARefLink{sga3:viii:proposition:7:9}{7.9}, the
+  separatedness of \({}_{p^\nu}H'\) over \(S'\) may be omitted from
+  condition \SGARefLink{sga3:viii:proposition:7:9:item:c}{(c)}. Indeed, after the reductions in the proof, \(H\) may be
+  assumed flat over \(S\) and \(u\) bijective. Thus \(H\) has connected
+  fibers, and Raynaud's theorem (VI\(_B\), 5.5) implies that \(H\) is
+  separated over \(S\).\footnote{Editor's note: the attribution, which
+  appeared in SGAD 1965, should be made explicit in Expos\'e VI\(_B\), §5,
+  together with the changes between SGAD and Lecture Notes 151.}
+\end{enumerate}
+
+\SGARefTarget{sga3:viii:bibliography}\section*{Bibliography}
+\addcontentsline{toc}{section}{Bibliography}
+\footnote{Editor's note: additional references cited in this expos\'e.}
+
+\begin{description}
+  \item[\SGARefTarget{sga3:viii:bib:rg71}{[RG71]}]
+  M. Raynaud and L. Gruson, \textit{Crit\`eres de platitude et de
+  projectivit\'e}, Invent. Math. \textbf{13} (1971), 1--89.
+
+  \item[\SGARefTarget{sga3:viii:bib:to70}{[TO70]}]
+  J. Tate and F. Oort, \textit{Group schemes of prime order}, Ann. Sci.
+  \'Ec. Norm. Sup\'er. (4) \textbf{3} (1970), 1--21.
+\end{description}
+

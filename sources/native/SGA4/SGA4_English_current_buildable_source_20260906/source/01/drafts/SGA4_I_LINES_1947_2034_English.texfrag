@@ -1,0 +1,88 @@
+\subsubsection{}\etiquette[6.5.1]{I.sec6.5.1}
+Recall that a category $C$ is said to be \emph{discrete} if it is a
+\emph{groupoid} (\ie every arrow in it is invertible) and if it
+is \emph{rigid} (\ie the automorphism group of every object
+is reduced to the trivial group); equivalently, the
+category is equivalent to the category $C'$ defined by a
+set $I$ (with $\text{ob}C'=I$, and with the identity
+arrows as its only arrows). When $C$ is already assumed to be a
+groupoid, saying that $C$ is discrete amounts to saying that for
+two objects $X$, $Y$ of $C$, there exists at most one arrow from $X$
+to $Y$, \ie that $C$ is isomorphic to the category defined by a
+preordered set.
+
+The equivalence\pageoriginale of conditions (i) and (ii) of
+\hyperref[I.prop6.5]{6.5} is an immediate consequence of the preceding observations
+and of the following
+
+\begin{enonce*}{Lemma 6.5.2}\etiquette[6.5.2]{I.lem6.5.2}
+Let $p:E'\rightarrow E$ be a fibered functor. Then:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For $p$ to be conservative, it is necessary and sufficient that its
+  fiber categories be groupoids.
+
+\item For $p$ to be faithful, it is necessary and sufficient that its
+  fiber categories be ordered categories.
+\end{enumerate}
+\end{enonce*}
+
+\noindent \emph{Proof of} \hyperref[I.lem6.5.2]{6.5.2}.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Suppose $p$ is conservative. For every arrow $u$ in a fiber
+  $E'_X$, $p(u)=\id_X$ is an isomorphism, so $u$ is an
+  isomorphism in $E'$, hence also in $E'_X$ (since an inverse of
+  $u$ in $E'$ will clearly be an inverse in $E'_X$). Thus $E'_X$
+  is a groupoid. Conversely, suppose that the $E'_X$ are
+  groupoids, and let $u'$ be an arrow of $E'$ such that $p(u')$
+  is an isomorphism; let us prove that $u$ is an isomorphism. To
+  this end, note that, since $p$ is fibered, we can factor
+  $u':X'\rightarrow Y'$ as a composite $X'\rightarrow
+  u^\ast(Y')\rightarrow Y'$, where the first arrow is an
+  $X$-morphism (N.B. $X=p(X')$, $u=p(u')$), and the second is a
+  cartesian morphism over $u$. The first arrow is
+  an isomorphism since $E'_X$ is a groupoid, and the second
+  is as well, since a \emph{cartesian} %%
+morphism of a fibered category
+  is clearly an isomorphism whenever its projection is an isomorphism.
+
+\item Suppose $p$ is faithful, and let $X'$, $Y'$ be two objects of a
+  fiber category $E_X$. Then two arrows from $X'$ to $Y'$ lie
+  over the same arrow $\id_X$ of $E$, and hence are identical,
+  so $E_X$ is ordered. Conversely,\pageoriginale suppose that the
+  fiber categories are ordered, and let us prove that $p$ is
+  faithful. Thus let $u'$, $v':X'\rightrightarrows Y'$ be
+  arrows of $E'$ lying over the same arrow $u:X\rightarrow Y$
+  of $E$. They then factor as $X'\rightrightarrows
+  u^\ast(Y)\rightarrow Y'$, where the two arrows
+  $X'\rightrightarrows u^\ast(Y')$ are arrows of $E'_X$ with
+  the same source and target; they are therefore equal, and hence
+  $u'=v'$, \cqfd
+\end{enumerate}
+
+Let us return to the proof of \hyperref[I.prop6.5]{6.5}. We have proved (i)
+$\Leftrightarrow$ (ii). On the other hand, (ii) %%
+$\Leftrightarrow$ (iv) is fairly clear: indeed, on the one hand, the
+category $E_{/F}$ is fibered over $E$, with fiber categories the
+discrete categories defined by the sets $F(X)$, as
+follows immediately from the definitions; on the other hand, if $p$ is as
+in (ii), then by the sorites of SGA 1 VI 8 the fibered category
+$E'$ over $E$ is $E$-equivalent to the split category over $E$
+defined by the functor $E\rightarrow (\Cat)$ determined by the
+functor $F:E\rightarrow (\Ens)$, which assigns to every $X\in \ob E$
+the set of isomorphism classes of objects of $E'_X$. Now this
+split category is $E$-isomorphic to the category $E_{/F}$. Since
+(iv) $\Rightarrow$ (iii) is clear, it remains to prove (iii)
+$\Rightarrow$ (i). Now it is clear that for $p$ to be faithful
+(\resp conservative), it is necessary and sufficient that the induced functors
+$E'_{/X'}\rightarrow E_{/p(X)}$ be so; \textit{a fortiori}, it
+suffices that these be fully faithful; therefore it remains only to
+prove that (iii) implies that $p$ is fibered. But one
+again sees that a functor $p$ is fibered if and only if the
+induced functors $E'_{/X'}\rightarrow E_{/p(X')}$ are
+fibered. This is in particular the case if they are equivalences of categories
+that are surjective on objects.
+

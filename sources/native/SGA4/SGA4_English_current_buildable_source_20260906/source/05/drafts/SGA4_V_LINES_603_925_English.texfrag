@@ -1,0 +1,339 @@
+\subsubsection{}\etiquette[1.6.2]{V.subusbsec1.6.2}
+Let us prove 1). To fix ideas, suppose that $M$ is a flat left
+$A$-Module, and let $x:P\to E$ be a point of $E$. We shall show
+that the functor $N\mapsto N\otimes_{A_x}M_x$ from the category of
+right $A_x$-modules to the category of commutative groups is exact.
+For this it suffices to show that this functor is left exact. With
+the notation of \hyperref[V.subsec1.4]{1.4}, let $V$ be a
+neighborhood of $x$, and let $j_V:E/V\to E$ be the localization
+morphism. For every $A_x$-module $N$, we have
+$x_V^\ast x_{V\ast}N\otimes_{A_x}M_x\simeq
+x_V^\ast x_{V\ast}N\otimes_{A_x}x_V^\ast j_V^\ast M\simeq
+x_V^\ast(x_{V\ast}N\otimes_{A/V}j_V^\ast M)$ (IV \hyperref[IV.prop12.11]{12.11}).
+Consequently, the functor
+$N\mapsto x_V^\ast x_{V\ast}N\otimes_{A_x}M_x$ is left exact. It
+follows that the functor $N\mapsto N\otimes_{A_x}M_x$, being a
+filtered inductive limit of left exact functors
+(\hyperref[V.prop1.5]{1.5}), is left exact.
+
+Let us prove 2). Let
+$0\to P'\to P\to P''\to0$ be an exact sequence of $A$-Modules, and
+let us show that the sequence
+$0\to P'\otimes_A M\to P\otimes_A M\to P''\otimes_A M\to0$ is
+exact. It suffices to show that, for every $i\in I$, the sequence
+obtained by passing to the fibers at $x_i$ is exact (IV 6). But the
+sequence of fibers at $x_i$ is the sequence (IV \hyperref[IV.cor13.5]{13.5})
+$$
+0\to P'_{x_i}\otimes_{A_{x_i}}M_{x_i}\to
+P_{x_i}\otimes_{A_{x_i}}M_{x_i}\to
+P''_{x_i}\otimes_{A_{x_i}}M_{x_i}\to0,
+$$
+and since $M_{x_i}$ is flat, this sequence is exact.
+
+\begin{enonce*}{Proposition 1.7}\etiquette[1.7]{V.prop1.7}
+Let $(E,A)$ be a ringed topos, let $u:E'\to E$ be a morphism of
+topoi, and put $A'=u^{\ast}A$. Let $M$ be a right (\resp left)
+$A'$-Module. The following conditions are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $N\mapsto M\otimes_{A'}u^{\ast}N$ (\resp
+$N\mapsto u^{\ast}N\otimes_{A'}M$) from the category of left
+(\resp right) $A$-Modules to the category of abelian sheaves on $E'$
+is exact.
+\item $M$ is a flat $A'$-Module.
+\end{enumerate}
+\end{enonce*}
+
+It is clear that ii) $\Rightarrow$ i).
+
+Let us prove that i) $\Rightarrow$ ii). We give the proof only in the
+case where $E'$ possesses a conservative family of points
+$(x_i)_{i\in I}$. The general case is treated in
+(\hyperref[V.prop8.2.7]{8.2.7}). In this particular case, which
+covers most applications, we reduce\pageoriginale to the case where
+$E'$ is the punctual topos and hence where the morphism $u$, which we
+then denote by $x$, is a point of $E$
+(\hyperref[V.prop1.6]{1.6} and IV \hyperref[IV.prop11.3.1]{11.3.1}). We restrict ourselves to
+the case where $M$ is a right $A'$-Module. The case where $M$ is a
+left $A'$-Module reduces to this one by passing to opposite rings.
+Let $V$ be a neighborhood of $x$, and let $V_x$ be its fiber at $x$.
+With the notation of \hyperref[V.subsec1.4]{1.4}, there is an
+essentially commutative diagram of morphisms of topoi:
+\[
+\xymatrix@C=2.25cm@R=1.5cm{
+P \ar[r]^{j} \ar[rd]_{x_V}& P/V_{x}\ar[r]^{j_{V_x}} \ar[d]^{x/V}& P\ar[d]^{x}\\
+  & E/V \ar[r] & E\quad \sisi{,}{}
+}
+\]
+where $x/V$ is the morphism deduced from $x$ by localization over
+$V$ (IV \hyperref[IV.subsec5.10]{5.10}), and $j$ is the morphism deduced from the marked point
+of $V_x$. Let us show that the functor
+$N'\mapsto M\otimes_{A'}x_V^{\ast}N'$ is exact. We have
+$x_V^{\ast}=j^{\ast}(x/V)^{\ast}$ and
+$\id=j^{\ast}j_{V_x}^{\ast}$; consequently, there is a canonical
+isomorphism
+$$
+M\otimes_{A'}x_V^{\ast}N'\simeq
+j^{\ast}\bigl(j_{V_x}^{\ast}M\otimes_{A'/V_x}(x/V)^{\ast}N'\bigr).
+$$
+Since $j^{\ast}$ is exact and the functor $j_{V_x!}$ is exact and
+faithful (IV \hyperref[IV.prop11.3.1]{11.3.1}), it suffices to show that the functor
+$$
+N'\longmapsto j_{V_x!}\Bigl(j_{V_x}^{\ast}M\otimes_{A'/V_x}
+(x/V)^{\ast}N'\bigr)
+$$
+is exact; consequently (IV \hyperref[IV.prop12.11]{12.11}), it suffices to show that the
+functor $N'\mapsto M\otimes_{A'}x^{\ast}j_{V!}N'$ is exact. But it
+follows from the definition of the inverse image of an induced topos
+(\hyperrefext[IV][IV.eq5.10.2]{5.10.2}) that
+$j_{V_x!}(x/V)^{\ast}N'$ is equal to $x^{\ast}j_{V!}N'$, and since
+the functor $j_{V!}$ is exact
+(\hyperrefext[IV][IV.prop11.3.1]{11.3.1}), the functor
+$N'\mapsto M\otimes_{A'}j_{V_x!}(x/V)^{\ast}N'$ is exact by
+hypothesis.
+
+For every $A'$-module $Q$, there is a functorial isomorphism
+(\hyperref[V.prop1.5]{1.5}):
+$$
+Q\simeq \varinjlim_{\Vois(x)^{\circ}}x_V^{\ast}x_{V\ast}Q{\quoi}.
+$$
+By what precedes, the functor $Q\mapsto M\otimes_{A'}Q$ is a
+filtered inductive limit of left exact functors. It is therefore
+left exact, and hence $M$ is flat.
+
+\begin{enonce*}{Corollary 1.7.1}\etiquette[1.7.1]{V.cor1.7.1}
+Let $u:(E',A')\to(E,A)$ be a morphism of ringed topoi, and let $M$
+be a flat $A$-Module. Then $u^{\ast}M$ is a flat $A'$-Module.
+\end{enonce*}
+
+This follows from the criterion given in \hyperref[V.prop1.7]{1.7}
+and formula (IV \hyperlink{sga4.exp.IV.equation.13.4.5}{13.4.5}).
+
+\begin{enonce*}{Corollary 1.7.2}\etiquette[1.7.2]{V.cor1.7.2}
+Let\pageoriginale $u:(E',A')\to(E,A)$ be a morphism of ringed
+topoi. The following conditions are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The right (\resp left) $u^{-1}(A)$-Module $A'$ is flat.
+\item The functor $u^{\ast}$ from the category of left (\resp right)
+$A$-Modules to the category of left (\resp right) $A'$-Modules is
+exact.
+\end{enumerate}
+\end{enonce*}
+
+The equivalence follows from \hyperref[V.prop1.7]{1.7} and the
+definition of $u^{\ast}$ (IV \hyperref[IV.subsubsec13.2.1]{13.2.1}).
+
+\begin{enonce*}{Definition 1.8}\etiquette[1.8]{V.def1.8}
+A morphism of ringed topoi having the equivalent properties of
+\hyperref[V.cor1.7.2]{1.7.2} is called a morphism of ringed topoi
+which is left (\resp right) flat.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.9}\etiquette[1.9]{V.prop1.9}
+Let $𝒰\subset 𝒱$ be two universes, let $C$ be a $𝒰$-site, let
+$C^{\sim}_{𝒰}$ and $C^{\sim}_{𝒱}$ be the categories of $𝒰$- and
+$𝒱$-sheaves of sets, respectively, let
+$\epsilon:C^{\sim}_{𝒰}\to C^{\sim}_{𝒱}$ be the canonical inclusion
+functor, and let $A$ be a $𝒰$-sheaf of rings on $C$.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $\epsilon$ commutes with $𝒰$-small inductive and
+projective limits of Modules. The functor $\epsilon$ is conservative
+and fully faithful on the categories of Modules.
+
+\item For every object $H$ of $C^{\sim}_{𝒰}$, there is a canonical
+isomorphism $\epsilon(A_H)\simeq \epsilon(A)_{\epsilon(H)}$.
+
+\item Every injective left or right $A$-Module is carried by
+$\epsilon$ to an injective $\epsilon(A)$-Module.
+
+\item Every flat right or left $A$-Module is carried by $\epsilon$
+to a flat $\epsilon(A)$-Module.
+
+\item The functor $\epsilon$ commutes with the formation of tensor
+products and sheaves of homomorphisms.
+\end{enumerate}
+\end{enonce*}
+
+The formation of the associated sheaf is independent of the
+universe (II \hyperref[II.prop3.6]{3.6}). It then follows from the construction of
+inductive and projective limits in categories of sheaves (II \hyperref[II.theo4.1]{4.1}
+and \hyperref[II.prop6.4]{6.4}) that the functor $\epsilon$ commutes with $𝒰$-small
+projective limits of sets or Modules, which gives 1). Let us prove
+2). By taking a $𝒰$-small generating subcategory of
+$C^{\sim}_{𝒰}$, we may reduce to the case where $C$ is
+$𝒰$-small\pageoriginale (III \hyperref[III.theo4.1]{4.1}). It then follows from (II \hyperref[II.prop6.5]{6.5})
+that the free $A$-Module generated by $H$ is obtained by forming the
+presheaf of free $A$-modules generated by $H$, a construction that
+commutes with enlargement of universes, and then forming the
+associated sheaf, an operation which likewise commutes with
+enlargement of universes (II \hyperref[II.prop3.6]{3.6}). To prove 3), it suffices, by
+\hyperref[V.prop0.5]{0.5}, to show that every $𝒱$-subsheaf of a
+$𝒰$-sheaf is a $𝒰$-sheaf, which is clear.
+
+Let us prove 4). Let $M$ be a flat $A$-Module. It suffices to show
+that, for every injective $\epsilon(A)$-Module $J$, the abelian sheaf
+$\Hhom_{\epsilon(A)}(\epsilon(M),J)$ is injective
+(\hyperref[V.prop1.2]{1.2}). By \hyperref[V.prop0.5]{0.5}, $J$ is a
+subobject, hence a direct factor, of an object of the form
+$\prod_{\alpha}\epsilon(I_{\alpha})$, where the $I_{\alpha}$ are
+injective. We may therefore suppose that $J=\epsilon(I)$, where $I$
+is an injective object. If the homomorphism
+$$
+\epsilon(\Hhom_A(M,I))\longrightarrow
+\Hhom_{\epsilon(A)}(\epsilon(M),\epsilon(I))
+$$
+is an isomorphism, it follows from 3) that
+$\Hhom_{\epsilon(A)}(\epsilon(M),\epsilon(I))$ is injective. It
+therefore remains to prove 5). The fact that formation of the tensor
+product commutes with the functor $\epsilon$ follows from IV \hyperref[IV.cor12.6]{12.6} and
+the fact that formation of the associated sheaf commutes with
+enlargement of the universe (II \hyperref[II.prop3.6]{3.6}). For every object $X$ of
+$C^{\sim}_{𝒰}$ and every pair of $A$-Modules $M,N$ of
+$C^{\sim}_{𝒰}$, we therefore have
+$$
+\Hom_{C^{\sim}_{𝒱}}(\epsilon(X),\epsilon(\Hhom_A(M,N)))\simeq
+\Hom_{C^{\sim}_{𝒰}}(X,\Hhom_A(M,N))\simeq
+\Hom_A(\ZZ_X\otimes_{\ZZ}M,N)
+$$
+by the full faithfulness of $\epsilon$, and then
+$$
+\Hom_A(\ZZ_X\otimes_{\ZZ}M,N)\simeq
+\Hom_{\epsilon(A)}(\epsilon(\ZZ_X\otimes_{\ZZ}M),\epsilon(N))
+\simeq
+\Hom_{\epsilon(A)}(\epsilon(\ZZ_X)\otimes_{\ZZ}\epsilon(M),
+\epsilon(N))
+$$
+by the full faithfulness of $\epsilon$ and what precedes. Using 2)
+and IV \hyperref[IV.prop12.14]{12.14}, we finally obtain an isomorphism
+$$
+\Hom_{C^{\sim}_{𝒱}}(\epsilon(X),\epsilon(\Hhom_A(M,N)))\simeq
+\Hom_{C^{\sim}_{𝒱}}(\epsilon(X),
+\Hhom_{\epsilon(A)}(\epsilon(M),\epsilon(N)));
+$$
+hence the asserted isomorphism.
+
+\setcounter{subsection}{9}
+\subsection{}\etiquette[1.10]{V.subsec1.10}
+Let $E$ be a topos and let $\Uu=(U_i\to X)_{i\in I}$ be a small
+family of morphisms with the same target. For every finite set
+$\Delta_n=\sisi{[0,\ldots,n]}{\{0,\ldots,n\}}$, put
+$$
+S_n(\Uu)=\coprod_{f:\Delta_n\to I}
+U_{f(0)}\times_X\cdots\times_X U_{f(n)}{\quoi},
+$$
+the coproduct being taken over the set of maps from $\Delta_n$ to
+$I$. Let $m,n$ be two integers, and let\pageoriginale
+$g:\Delta_m\to\Delta_n$ be a map. We define a morphism
+\begin{equation*}
+s(g):S_n(\Uu)\to S_m(\Uu){\quoi}\sisi{,}{}\tag{1.10.1}
+\end{equation*}\etiquette[1.10.1]{V.1.10.1}
+as follows: for every $f:\Delta_n\to I$, the restriction of $s(g)$
+to
+\mbox{$U_{f(0)}\times_X\cdots\times_X U_{f(n)}$}
+is the composite of the canonical inclusion
+$$
+U_{f(g(0))}\times_X\cdots\times_X U_{f(g(m))}
+\hookrightarrow S_m(\Uu){\quoi},
+$$
+and the unique morphism
+$$
+s_f(g):U_{f(0)}\times_X\cdots\times_X U_{f(n)}\to
+U_{f(g(0))}\times_X\cdots\times_X U_{f(g(m))}
+$$
+such that, for every $i\in\Delta_m$,
+$$
+\pr_{f(g(i))}s_f(g)=\pr_{f(g(i))}
+$$
+($\pr_a$ denotes the $a$-th projection). We thus obtain a
+contravariant functor $\Delta_n\mapsto S_n$ from the category of
+finite sets to $E$; in other words, a semi-simplicial complex
+$S_∙(\Uu)$ of objects of $E$. Note that this complex is canonically
+augmented toward $X$. Every functor from $E$ to a category $C$
+carries $S_∙(\Uu)$ to a simplicial object of $C$. In particular, if
+$A$ is a Ring of $E$, the ``free $A$-Module generated by'' functor
+carries $S_∙(\Uu)$ to a simplicial complex of $A$-biModules,
+augmented toward $A_X$ and denoted by $A_∙(\Uu)$. We have
+\begin{equation*}
+A_n(\Uu)=\bigoplus_{f:\Delta_n\to I}
+A_{U_{f(0)}\times_X\cdots\times_X U_{f(n)}}{\quoi}.\tag{1.10.2}
+\end{equation*}\etiquette[1.10.2]{V.1.10.2}
+This complex will often be written
+\[
+\xymatrix@C=1cm@M=.5cm{
+  \cdots  \ar@<12pt>[r]^(.4){s_0} \ar[r]^(.4){s_1} \ar@<-12pt>[r]^(.4){s_2}&
+\displaystyle{\mathop{\bigoplus}_{i,j}} \quad A_{U_i ×_X U_j}
+ \ar@<6pt>[r]^(.55){s_0}\ar@<-6pt>[r]^(.55){s_1} &
+\displaystyle{\mathop{\bigoplus}_{i}}\quad A_{U_i} \ar@<2pt>[r]& A_X \\
+}\tag{1.10.3} %% problem (numbering in the wrong place) \XXX
+\]\etiquette[1.10.3]{V.1.10.3}
+where the arrows in \eqhyperref[V.1.10.3]{1.10.3} (except the last,
+which is the augmentation) represent the face operators of the
+simplicial complex $A_∙(\Uu)$, that is, the morphisms corresponding
+to the increasing injective maps from $\Delta_n$ into
+$\Delta_{n+1}$ ($s_i$ omits the integer $i$). To the complex
+$A_∙(\Uu)$ we associate a differential complex augmented toward
+$A_X$:
+\begin{equation}
+\cdots\xrightarrow{d}\bigoplus_{i,j}A_{U_i\times_XU_j}
+\xrightarrow{d}\bigoplus_iA_{U_i}\to A_X{\quoi},
+\sisi{\tag*{1.10.4}}{\tag{1.10.4}}
+\end{equation}\etiquette[1.10.4]{V.1.10.4}
+by\pageoriginale putting
+\begin{equation}
+d=\sum(-1)^is_i.\sisi{\tag*}{\tag}{1.10.5}
+\end{equation}\etiquette[1.10.5]{V.1.10.5}
+
+\begin{enonce*}{Proposition 1.11}\etiquette[1.11]{V.prop1.11}
+When the family $\Uu=(U_i\to X)_{i\in I}$ is epimorphic, the
+differential complex \eqhyperref[V.1.10.4]{1.10.4} is acyclic and
+gives a resolution of $A_X$.
+\end{enonce*}
+
+Denote by $\ZZ$ the constant sheaf with value $\ZZ$. By the
+definition of the ``free $A$-Module generated by'' functor, for every
+object $H$ of $E$ we have
+$$
+A_H\simeq {\ZZ}_H\otimes_{\ZZ}A{\quoi},
+$$
+hence
+$$
+A_∙(\Uu)\simeq \ZZ_∙(\Uu)\otimes_{\ZZ}A{\quoi}.
+$$
+Since the components of $\ZZ_∙(\Uu)$ are flat $\ZZ$-Modules
+(\hyperref[V.prop1.3.1]{1.3.1}), it suffices to prove the proposition
+when $A=\ZZ$.
+
+Suppose first that $E$ is the topos of sets. The augmented complex
+$S_∙(\Uu)$ is then a direct sum of augmented complexes of the form
+\[
+\xymatrix@C=.6cm@M=.18cm@R=.3cm{
+\cdots \ar@<9pt>[r] \ar@<3pt>[r] \ar@<-3pt>[r] \ar@<-9pt>[r]&
+S\times S\times S \ar@<5pt>[r]\ar[r]\ar@<-5pt>[r]&S\times S
+\ar@<2pt>[r]\ar@<-2pt>[r]&S\ar[r]&\{e\}&
+\txt{($\{e\}$ a one-element set).}
+}
+\]
+Each of these augmented complexes is homotopically trivial. Thus
+$S_∙(\Uu)$ is a homotopically trivial augmented complex, and its
+homology is therefore trivial, proving the proposition in this case.
+
+Now let $p:\text{Ens}\to E$ be a point of $E$. Since formation of
+the complex $\ZZ_∙(\Uu)$ commutes with the inverse-image functors of
+morphisms of topoi,
+$p^{\ast}(\ZZ_∙(\Uu))\simeq\ZZ_∙(p^{\ast}(\Uu))$ is a resolution of
+${\ZZ}_{p^{\ast}X}\simeq p^{\ast}({\ZZ}_X)$; this proves the
+proposition when $E$ has enough fiber functors (IV \hyperref[IV.subsec4.6]{4.6}). This holds,
+in particular, when $E$ is a topos of presheaves $C^{\wedge}$,
+since for every object $X$ of $C$, $\Gamma(X,-)$ is a fiber functor.
+In the general case, $E$ is equivalent to a topos of sheaves on a
+small site $C$ (IV 1), and the epimorphic family
+$\Uu=(U_i\to X)_{i\in I}$ is the image, under the ``associated
+sheaf'' functor, of an epimorphic family
+$\Uu'=(U'_i\to X')_{i\in I}$. Consequently,\pageoriginale
+${\ZZ}_∙(\Uu)\simeq\underline{a}{\ZZ}_∙(\Uu')$ is a resolution of
+$\underline{a}{\ZZ}_{X'}\simeq{\ZZ}_X$.
+

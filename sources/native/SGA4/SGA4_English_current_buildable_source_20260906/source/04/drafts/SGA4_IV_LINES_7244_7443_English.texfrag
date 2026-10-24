@@ -1,0 +1,198 @@
+\begin{enonce*}[remark]{Exercise 9.5.9}\etiquette[9.5.9]{IV.exer9.5.9}
+(\emph{Exactness properties of a glued topos.}) Let
+$\mathcal{U}$, $\mathcal{F}$ be two topoi, let
+$\rho:\mathcal{U}\rightarrow \mathcal{F}$ be a gluing functor, let
+$E=(\mathcal{F}, \mathcal{U},\rho)$ be the glued topos, and let
+$j:\mathcal{U}\rightarrow E$ and $i:\mathcal{F}\rightarrow E$ be the
+canonical morphisms of topoi, so that
+$\rho=i^{\ast}j_{\ast}$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Prove that $i^{\ast}$ commutes with (small) products (\ie (\hyperref[IV.rem1.8]{1.8}
+or \sisi{\hyperref[IV.rem1.8]{1.8}}{\hyperrefext[I][I.sec8]{8}}) the functor $i^{\ast}$ admits a left adjoint
+$i_{!}$) if and only if the same holds for $\rho$, \ie
+(\loccit) if and only if $\rho$ admits a left adjoint
+$\sigma:\mathcal{F}\rightarrow \mathcal{U}$ (or equivalently if and
+only if the pro-adjoint of $\rho$, restricted\pageoriginale to
+$\mathcal{F}$ \eqhyperref[IV.eq9.6.3]{9.6.3}, factors, up to isomorphism, through
+$\mathcal{U}$): one then has $\sigma=j^{\ast}i_{!}$. Thus the
+gluing functors $\rho$ having this property correspond,
+up to isomorphism, to the functors $\sigma:\mathcal{F}\rightarrow
+\mathcal{U}$ which have a right adjoint, \ie (\hyperref[IV.cor1.6]{1.6}) which
+commute with $𝒰$-small inductive limits, or equivalently which are
+continuous. When $\mathcal{F}$ is equivalent to a topos
+$C^{\sim}$, where $C$ is a $𝒰$-site, these functors
+therefore correspond, up to isomorphism, to continuous functors
+$C\rightarrow \mathcal{U}$ (\hyperrefext[III][III.prop1.2]{1.2} and \hyperrefext[III][III.prop1.7]{1.7}).
+
+\item Suppose that the functor $i_{!}$ is defined. Show that
+$i_{!}$ commutes with a specified type of small projective limits
+if and only if $\sigma:\mathcal{F}\rightarrow
+\mathcal{U}$ commutes with them. (For necessity, use the fact that $j^{\ast}$
+commutes with small projective limits; for sufficiency,
+use the equivalent description of $E$ in terms of $\sigma$
+as consisting of the triples $(Y,X,u)$ with $Y\in \Ob \mathcal{F}$, $X\in
+\Ob \mathcal{U}$, $u:\sigma (Y)\rightarrow X$.)
+
+\item Deduce from a) and b) an example of a closed embedding of topoi
+$i:\mathcal{F}\rightarrow E$ such that $i_{!}$ exists, but commutes
+neither with fiber products nor with filtered projective limits. (It
+suffices to find a continuous functor between two topoi which
+has neither of these two exactness properties.)
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 9.5.10}\etiquette[9.5.10]{IV.exer9.5.10}
+(\emph{Gluing of topoi of the form $\widehat{C}$.}) Let $C$
+be a small category, and let $E=\widehat{C}$, which is a
+$𝒰$-topos.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Recall that the opens $U$ of $E$ correspond to
+\emph{sieves} $C'$ of $C$ \sisi{(1.4.1, \hyperref[IV.subsec4.2]{4.2})}{(\hyperrefext[I][I.def4.1]{4.1}, \hyperref[IV.subsubsec8.4.4]{8.4.4})}, with $E_{/U}$
+then being equivalent to $\widehat{C'}$, and the functor
+$j^{\ast}:E\rightarrow E_{/U}$ identifying with the restriction functor
+\hyperref[IV.subsec5.4]{5.4}, \ie the inclusion morphism $j:E_{/U}\rightarrow E$ being
+$\widehat{f}:\widehat{C'}\rightarrow \widehat{C}$
+(\hyperref[IV.subsubsec4.6.1]{4.6.1}), where $f:C'\rightarrow C$ is the inclusion.
+Let $C''$ be the full subcategory of $C$ complementary to $C'$
+(\ie $\Ob C''$ is the complement of $\Ob C'$ in $\Ob C$),
+and let $g:C''\rightarrow C$ be the inclusion. Then the closed subtopos
+$\mathcal{F}$ of $E=\widehat{C}$, complementary to the open subtopos
+defined by $C'$, is canonically equivalent to
+$\widehat{C''}$, with the inclusion morphism $i:\mathcal{F}\rightarrow
+E$ identifying with $\widehat{g}:\widehat{C''}\rightarrow
+\widehat{C}$.
+
+\item Consider\pageoriginale the functor
+\begin{equation*}
+h:{C'}^0\times C''\longrightarrow (\Ens),\quad
+h(X',X'')=\Hom_C(X',X''){\quoi},\tag{9.5.10.1}
+\end{equation*}\etiquette[9.5.10.1]{IV.eq9.5.10.1}
+and note that $C$, together with its full subcategory $C'$, can be
+reconstructed up to isomorphism from the categories $C'$,
+$C''$ and the bifunctor $h$ (the latter may be chosen
+arbitrarily). (Compare \hyperref[IV.subsec9.7.1]{9.7.1} below.) The datum
+of $h$ is equivalent to that of a functor $C''\rightarrow
+\widehat{C'}=\Hhom({C'}^0,(\Ens))$, or equivalently (\hyperrefext[III][III.prop1.2]{1.2} and
+\hyperrefext[III][III.prop1.7]{1.7}) to that of a functor
+\begin{equation*}
+\sigma:\widehat{C''}\longrightarrow \widehat{C'}\tag{9.5.10.2}
+\end{equation*}\etiquette[9.5.10.2]{IV.eq9.5.10.2}
+which is continuous, \ie (\hyperref[IV.cor1.6]{1.6}) commutes with small inductive
+limits, or equivalently, admits a right adjoint
+\begin{equation*}
+\rho:\widehat{C}'\longrightarrow \widehat{C''}{\quoi}.\tag{9.5.10.3}
+\end{equation*}\etiquette[9.5.10.3]{IV.eq9.5.10.3}
+Show that $\rho$ is precisely the gluing functor
+associated with the open subtopos $\widehat{C}'$ of $E=\widehat{C}$.
+
+\item Deduce from a) and b) that if one is given a
+gluing functor \eqhyperref[IV.eq9.5.10.3]{9.5.10.3} between two presheaf categories,
+and hence a glued topos $E$, the following conditions are
+equivalent:
+\begin{itemize}
+\item[(i)] $E$ is equivalent to a topos of the form $\widehat{C}$.
+
+\item[(ii)] The functor $\rho$ commutes with small products (or equivalently, it
+admits a left adjoint \eqhyperref[IV.eq9.5.10.2]{9.5.10.2}).
+
+\item[(iii)] The inclusion morphism $i:\widehat{C''}\rightarrow E$ is ``essential,'' \ie $i^{\ast}$ commutes with products, or equivalently
+$i^{\ast}$ admits a left adjoint $i_{!}$.
+\end{itemize}
+When this is so, describe explicitly a category $C$ such that
+$E\approx \widehat{C}$ using the bifunctor \eqhyperref[IV.eq9.5.10.1]{9.5.10.1}
+defined by the restriction of \eqhyperref[IV.eq9.5.10.2]{9.5.10.2} to $C''$.
+
+\item Show that a topos obtained by gluing two punctual topoi
+need not be equivalent to a topos of the form
+$\widehat{C}$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 9.5.11}\etiquette[9.5.11]{IV.exer9.5.11}
+(Morphism from a glued topos to a topos.)
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $\rho \sisi{}{: \mathcal{U}} \rightarrow \mathcal{F}$ be a functor between two
+categories, let $E=(\mathcal{F},\mathcal{U},\rho)$\pageoriginale be the
+``glued'' category of \hyperref[IV.subsubsec9.5.1]{9.5.1}, and let $F$ be an
+arbitrary category. Consider the functor $f\mapsto \rho\circ f$:
+$$
+\bar{\rho}:\bar{\mathcal{U}}=\Hhom(F,\mathcal{U})\longrightarrow
+\bar{\mathcal{F}}=\Hhom(F,\mathcal{F}){\quoi},
+$$
+and define an equivalence of categories
+$$
+\Hhom(F,E)\xrightarrow{\approx}(\bar{\mathcal{F}},\bar{\mathcal{U}},\bar{\rho}){\quoi}.
+$$
+
+\item Let $f:F\rightarrow E$ be a functor, and consider its composites
+with the canonical functors $j^{\ast}:E\rightarrow \mathcal{U}$ and
+$i^{\ast}:E\rightarrow \mathcal{F}$. Show that $f$ commutes with a
+specified type of inductive limits (assumed to be representable in
+$\mathcal{U}$ and $\mathcal{F}$, and hence in $E$) if and only if
+$j^{\ast}f$ and $i^{\ast}f$ commute with them. Show that if $\rho$
+commutes with a specified type of projective limits (which is then
+representable in $E$), then $f$ commutes with them if and only if
+the same holds for $j^{\ast}f$ and $i^{\ast}f$.
+
+\item Now suppose that $\mathcal{U}$ and $\mathcal{F}$ are
+topoi, and that
+$\rho$ is a gluing functor. Let $F$ be a topos and
+$f:F\rightarrow E$ a functor. Conclude from b) that $f$ is an
+inverse-image functor associated with a morphism of topoi $E\rightarrow
+F$ if and only if the same holds for the functors
+$j^{\ast}f:F\rightarrow \mathcal{U}$ and $i^{\ast}f:F\rightarrow
+\mathcal{F}$. Conclude from this and from a) that there is an equivalence
+between the category $\Hhomtop(E,F)$ and the category of triples
+$(f',f'',u)$, where $f'$ (\resp $f''$) is an object of
+$\Hhomtop(\mathcal{U}, F)$ (\resp $\Hhomtop(\mathcal{F}, F)$), and where
+$u:{f''}^{\ast}\rightarrow \rho\circ {f'}^{\ast}$ is a
+homomorphism of functors $F\rightarrow \mathcal{F}$: if $f$ is an
+object of $\Hhomtop(E,F)$ and $(f',f'',u)$ is the corresponding triple,
+then $f'=f\circ j$, $f''=f\circ i$.
+
+\item Specify in what sense c) may be said to provide a
+characterization, up to equivalence (in a 2-category of topoi),
+of the topos $E$ in terms of the triple $(\mathcal{U},\mathcal{F},\rho)$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 9.5.12}\etiquette[9.5.12]{IV.exer9.5.12}
+(\emph{Gluing of two topological spaces.})
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $X$ be a topological space, let $\rho:\Top(X)\rightarrow
+(\Ens)=\Top(pt)$ be a gluing functor, \ie (\hyperrefext[I][I.sec8]{8}) a
+pro-representable functor, let $A\in \Ob \Pro(\Top(X))$ be the object which
+pro-represents it, and let $E$ be the topos obtained from $\rho$ by gluing.
+Show that $E$ is equivalent to a topos of the form $\Top(Y)$ if
+and only if $A$ is isomorphic to an object of $\Pro(\Ouv(X))$.
+Conclude\pageoriginale that if $X$ is nonempty, one can find
+$\rho$ such that $E$ is not equivalent to a topos of the form
+$\Top(Y)$.
+
+\item More generally, consider a gluing functor
+$\rho:\Top(X)\rightarrow \Top(Y)$, where $X$, $Y$ are two topological
+spaces. Deduce from it a map
+$$
+\phi:Y\longrightarrow \Ob \Pro(\Top(X))
+$$
+(the composite of $Y\rightarrow \Ob \Ppoint(\Top(Y))\rightarrow
+\Ob\Pro(\Top(Y))$ (\hyperref[IV.subsubsec6.8.5]{6.8.5}) and the pro-adjoint
+$\sigma$ of $\rho$). (N.B. for $y\in Y$, $\phi(y)$ identifies with the
+\emph{fiber at $y$ of the gluing sheaf} \eqhyperref[IV.eq9.6.4]{9.6.4}
+\emph{defined by} $\rho$.) Show that if $E$ is equivalent to a
+topos of the form $\Top(Z)$, then $\phi$ takes its values in
+the essential image of $\Pro(\Ouv(X))$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Problem}
+Is the converse true?
+\end{enonce*}

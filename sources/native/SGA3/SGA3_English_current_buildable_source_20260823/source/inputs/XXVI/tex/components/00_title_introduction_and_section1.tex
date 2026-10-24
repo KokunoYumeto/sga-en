@@ -1,0 +1,465 @@
+\chapter*{Exposé XXVI\\Parabolic Subgroups of Reductive Groups}
+\addcontentsline{toc}{chapter}{Exposé XXVI. Parabolic Subgroups of Reductive Groups}
+\begin{center}
+\large M. Demazure
+\end{center}
+
+\medskip
+
+This Exposé studies the parabolic subgroups of an \(S\)-reductive group \(G\).
+Its essential result is the conjugacy theorem (\SGARefLink{sga3:xxvi:cor:5:4}{5.4}).  Its essential tool is
+the notion of the transversal position of two parabolic subgroups, a notion
+studied systematically in §4.  Another fact plays an important role: the
+decomposition of the unipotent radical \(\rad^{u}(P)\) of a parabolic subgroup
+\(P\) into successive extensions of vector groups
+(\SGARefLink{sga3:xxvi:proposition:2-1}{2.1}).\footnote{\emph{Editor's note.} Since the Levi subgroups of \(P\) form a
+torsor under \(\rad^{u}(P)\) (\SGARefLink{sga3:xxvi:cor:1:9}{1.9}), this entails, when \(S\) is semi-local,
+that \(P\) has a Levi subgroup and hence a maximal torus (\SGARefLink{sga3:xxvi:cor:2:4}{2.4}).}
+
+Various schemes associated with \(G\) are studied in §3; §6 deals with the
+split subtori\footnote{\emph{Editor's note.} The terminology ``trivial
+torus'' has been replaced by ``split torus''.} of \(G\) and their relations
+with parabolic subgroups.
+
+Finally, in §7, we explain briefly how, over a semi-local base, one formulates
+the ``relative theory'' of reductive groups as presented over fields in the
+article of A.~Borel and J.~Tits, \emph{Groupes réductifs}, Publications
+Mathématiques de l'IHÉS, no.~27.  In that article, cited as [BT65] below, the
+reader will also find, for a base field, other results not touched upon here.
+\footnote{\emph{Editor's note.} Version of 13 October 2024.}
+
+\SGASection{1}{Recollections. Levi subgroups}
+\SGARefTarget{sga3:xxvi:section:1}
+
+\begin{sgastatement}{Definition 1.1}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, and \(P\) a
+sub-\(S\)-group-scheme of \(G\).  One says that \(P\) is a
+\emph{parabolic subgroup} of \(G\) if:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \(P\) is smooth over \(S\);
+\item for every \(s\in S\), the quotient \(\bar s\)-scheme
+\(G_{\bar s}/P_{\bar s}\) is proper (that is, by the Bible, §\SGARefLink{sga3:xxvi:corollary:6-4}{6.4},
+\SGARefLink{sga3:xxvi:prop:1:4}{Theorem~4} \(=\) [Ch05], §\SGARefLink{sga3:xxvi:subsec:6:5}{6.5}, Theorem~5, \(P_{\bar s}\) contains a
+Borel subgroup of \(G_{\bar s}\)).
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:def:1:1}
+
+\begin{sgastatement}{Proposition 1.2 \textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:cor:5.8.5}{5.8.5})}}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, and \(P\) a parabolic
+subgroup of \(G\).  Then \(P\) is closed in \(G\), has connected fibers, and
+\[
+  P=\Norm_G(P).
+\]
+Moreover, the quotient sheaf \(G/P\) is representable by an \(S\)-scheme
+that is smooth and projective over \(S\).
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:2}
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:proposition:1-3}Proposition 1.3 \textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:thm:5.3.9}{5.3.9} and 5.3.11)}}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, and \(P,P'\) two
+parabolic subgroups of \(G\).  The following conditions are equivalent:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \(P\) and \(P'\) are conjugate in \(G\), locally for the étale
+\textup{(respectively, fpqc)} topology.
+\item For every \(s\in S\), \(P_{\bar s}\) and \(P'_{\bar s}\) are conjugate
+by an element of \(G(\bar s)\).
+\item The strict transporter \(\Transt_G(P,P')\) of \(P\) into \(P'\), defined
+for every \(S'\to S\) by
+\[
+ \Transt_G(P,P')(S')
+ =\{g\in G(S')\mid \Int(g)P_{S'}=P'_{S'}\},
+\]
+is a closed subscheme of \(G\), smooth and of finite presentation over
+\(S\), and is a principal homogeneous bundle on the right under \(P\) and
+on the left under \(P'\).
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:3}
+
+\begin{sgastatement}{Proposition 1.4}
+Let \(S\) be a nonempty scheme, let \((G,T,M,R)\) be a split
+\(S\)-reductive group, and let \(R'\) be a subset of \(R\).  The following
+conditions on \(R'\) are equivalent:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item
+\[
+ \mathfrak g_{R'}=\mathfrak t\oplus
+ \bigoplus_{\alpha\in R'}\mathfrak g^\alpha
+\]
+is the Lie algebra of a parabolic subgroup of \(G\) containing \(T\)
+\textup{(necessarily unique, Exp.\ XXII, \SGARefLink{sga3:xxii:cor:5.3.5}{5.3.5})}.
+\item \(R'\) is of type \textup{(R)} \textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:def:5.4.2}{5.4.2})} and
+contains a system of positive roots.
+\item \(R'\) is a closed subset of \(R\) and satisfies: if
+\(\alpha\in R-R'\), then \(-\alpha\in R'\); equivalently,
+\(R=R'\cup(-R')\).
+\item There exist a system \(\Delta\) of simple roots and a subset
+\(A\subset\Delta\) such that \(R'\) is the union of the positive roots and
+the negative roots that are linear combinations of elements of \(A\).
+\item\SGAInlineRefTarget{sga3:xxvi:prop:1:4:item:v} \(R'\) contains a system of simple roots of \(R\); moreover, if
+\(\Delta\subset R'\) is a system of simple roots of \(R\) and
+\[
+ A=(-R')\cap\Delta,
+\]
+then \(R'\) is the union of the positive roots and the negative roots that
+are linear combinations of elements of \(A\).
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:4}
+
+One has (i)\(\Leftrightarrow\)(ii) by Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.4.5:item:ii}{5.4.5(ii)} and \SGARefLink{sga3:xxii:prop:5.5.1}{5.5.1},
+and (iii)\(\Rightarrow\)(ii) by Exp.\ XXI, \SGARefLink{sga3:XXI:3.3.6}{3.3.6} and Exp.\ XXII, \SGARefLink{sga3:xxii:thm:5.4.7}{5.4.7}.
+Clearly (v)\(\Rightarrow\)(iv)\(\Rightarrow\)(iii), while
+(iii)\(\Rightarrow\)(v) follows from Exp.\ XXI, \SGARefLink{sga3:XXI:3.3.6}{3.3.6} and 3.3.10.
+
+It remains to prove that (i) implies that \(R'\) is closed in \(R\).  This
+last assertion may be checked on any geometric fiber, so we may suppose that
+\(S\) is the spectrum of an algebraically closed field.
+
+Let \(P\) be the parabolic subgroup of \(G\) containing \(T\) whose Lie
+algebra is \(\mathfrak g_{R'}\).  Since the Borel subgroups of \(P\) are the
+Borel subgroups of \(G\) contained in \(P\), the Bible, §12.3, \SGARefLink{sga3:xxvi:theorem:4:2:1}{Theorem~1},
+and Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.4.5:item:i}{5.4.5(i)}, show that, if \(U\) denotes the unipotent radical
+of \(P\), then \(T\cdot U\) is the subgroup of \(G\) containing \(T\) whose
+Lie algebra is
+\[
+ \mathfrak g_{R''}=\mathfrak t\oplus
+ \bigoplus_{\alpha\in R''}\mathfrak g^\alpha,
+\]
+where \(R''\) is the intersection of the systems of positive roots of \(R\)
+contained in \(R'\).  In particular, \(R''\) is closed and
+\(R''\cap(-R'')=\varnothing\).
+
+On the other hand, \(H=P/U\) is reductive, the canonical image \(\bar T\)
+of \(T\) is a maximal torus of \(H\) (and \(T\to\bar T\) is an
+isomorphism), and there is an isomorphism of \(\bar T\)-modules, or
+equivalently of \(M\)-graded vector spaces,
+\[
+ \operatorname{Lie}(H)\simeq\mathfrak t\oplus
+ \bigoplus_{\alpha\in R_s}\mathfrak g^\alpha,
+\]
+where \(R_s\) is the complement of \(R''\) in \(R'\).  Thus \(R_s\)
+identifies naturally with the roots of \(H\) relative to \(\bar T\), and in
+particular \(R_s=-R_s\).  Consequently,
+\[
+ R''=\{\alpha\in R'\mid-\alpha\notin R'\},
+ \qquad
+ R_s=\{\alpha\in R'\mid-\alpha\in R'\}.
+\]
+
+We now prove that \(R'\) is closed.  Let \(\alpha,\beta\in R'\) with
+\(\alpha+\beta\in R\).  If \(\alpha,\beta\in R''\), then
+\(\alpha+\beta\in R''\) because \(R''\) is closed.  If
+\(\alpha\in R_s\), \(\beta\in R''\), and \(\alpha+\beta\notin R'\), then
+\(\alpha+\beta\in-R''\), whence
+\[
+ -\alpha=-(\alpha+\beta)+\beta\in R'',
+\]
+because \(R''\) is closed.  This gives
+\(-\alpha\in R''\cap R_s\), a contradiction.  It remains to consider
+\(\alpha,\beta\in R_s\).  If \(\alpha+\beta\notin R'\), then
+\(\alpha+\beta\in-R''\).  Since \(\alpha+\beta\ne0\), some system of
+positive roots of the root system \(R_s\) contains both \(\alpha\) and
+\(\beta\), and hence some Borel subgroup of \(H=P/U\) contains the canonical
+images of \(U_\alpha\) and \(U_\beta\).  Its inverse image in \(P\) is a
+Borel subgroup containing \(U_\alpha\), \(U_\beta\), \(U\), and therefore
+\(U_{-(\alpha+\beta)}\), which is impossible.
+
+\begin{sgastatement}{Corollary 1.5}
+A parabolic subgroup of a reductive group is of type \textup{(RC)}
+\textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:def:5.11.1}{5.11.1})}.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:cor:1:5}
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:proposition:1-6}Proposition 1.6 \textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.11.4}{5.11.4})}}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, and \(P\) a subgroup
+of \(G\) of type \textup{(RC)}.\footnote{\emph{Editor's note.}
+``Parabolic subgroup'' has been replaced by ``subgroup of type (RC)'', as
+in Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.11.4}{5.11.4}, because the statement will later be applied
+(\SGARefLink{sga3:xxvi:proposition:4-5-1}{4.5.1}, \SGARefLink{sga3:xxvi:cor:6:17}{6.17}) to \(P\cap P'\) when \(P,P'\) are parabolic and
+\(P\cap P'\) is of type (RC).}
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \(P\) has a largest invariant sub-group-scheme that is smooth and of
+finite presentation over \(S\), with connected unipotent geometric fibers.
+It is a characteristic subgroup of \(P\), called the \emph{unipotent
+radical} of \(P\) and denoted \(\rad^u(P)\).  The quotient sheaf
+\(P/\rad^u(P)\) is representable by an \(S\)-reductive group.
+\item\SGAInlineRefTarget{sga3:xxvi:proposition:1-6:item:ii} If \(T\) is a maximal torus of \(P\), then \(P\) has a reductive
+subgroup \(L\) containing \(T\) such that:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item every reductive subgroup of \(P\) containing \(T\) is contained in
+\(L\);
+\item \(P\) is the semidirect product \(L\cdot\rad^u(P)\), that is, the
+canonical morphism \(L\to P/\rad^u(P)\) is an isomorphism.
+\end{enumerate}
+Moreover, \(L\) is the unique subgroup \textup{(respectively, reductive
+subgroup)} of \(P\) containing \(T\) and satisfying (b) \textup{(respectively,
+(a))}.  Finally,
+\[
+ \Norm_P(L)=L,\qquad \Norm_P(T)=\Norm_L(T).
+\]
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:6}
+
+\paragraph{\SGARefLink{sga3:xxvi:prop:1:6}{1.7}.}
+A subgroup \(L\) of \(P\) satisfying condition \SGARefLink{sga3:xxvi:proposition:1-6:item:ii}{1.6(ii)}(b) is called a
+\emph{Levi subgroup} of \(P\).  It is a maximal reductive subgroup of
+\(P\).  Indeed, it is reductive because it is isomorphic to
+\(P/\rad^u(P)\).  If \(L'\) is a reductive subgroup of \(P\) containing
+\(L\), then, locally for the fpqc topology, \(L\) has a maximal torus
+\(T\), and \SGARefLink{sga3:xxvi:proposition:1-6:item:ii}{1.6(ii)} gives \(L'=L\).
+\SGARefTarget{sga3:xxvi:item:1:7}
+
+If \(L\) and \(L'\) are two Levi subgroups of \(P\), they are conjugate in
+\(P\), locally for the fpqc topology.  Indeed, locally one may choose
+maximal tori \(T\subset L\) and \(T'\subset L'\); after a further fpqc
+localization they are conjugate in \(P\), so one may assume \(T=T'\), and
+then \SGARefLink{sga3:xxvi:proposition:1-6:item:ii}{1.6(ii)} gives \(L=L'\).  Since
+\(P=L\cdot\rad^u(P)\) and \(\Norm_P(L)=L\), one obtains:
+
+\begin{sgastatement}{Corollary 1.8}
+Let \(P\) be a subgroup of type \textup{(RC)} of the \(S\)-reductive group
+\(G\).  If \(L,L'\) are two Levi subgroups of \(P\), there is a unique
+\(u\in\rad^u(P)(S)\) such that \(\Int(u)L=L'\).
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:cor:1:8}
+
+Let \(\Lev(P)\) denote the functor of Levi subgroups of \(P\): for
+\(S'\to S\), \(\Lev(P)(S')\) is the set of Levi subgroups of \(P_{S'}\).
+\SGARefLink{sga3:xxvi:cor:1:8}{Corollary~1.8} gives:
+
+\begin{sgastatement}{Corollary 1.9}
+Let \(P\) be a subgroup of type \textup{(RC)} of the \(S\)-reductive group
+\(G\).  Then \(\Lev(P)\) is a principal homogeneous bundle under the
+\(S\)-group \(\rad^u(P)\); in particular, it is representable by an
+\(S\)-scheme that is smooth and affine over \(S\), with integral geometric
+fibers.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:cor:1:9}
+
+Likewise, \SGARefLink{sga3:xxvi:proposition:1-6}{1.6} immediately yields:
+
+\begin{sgastatement}{Corollary 1.10}
+Let \(P\) be a subgroup of type \textup{(RC)} of the \(S\)-reductive group
+\(G\).  The functor \(\Tor(P)\) of maximal tori of \(P\) is representable
+by a smooth affine \(S\)-scheme.  The relation \(L\supset T\) defines a
+morphism
+\[
+ \Tor(P)\longrightarrow\Lev(P),
+\]
+whose fiber above \(L\in\Lev(P)(S)\) identifies with \(\Tor(L)\)
+\textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:cor:5.8.3}{5.8.3})}.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:cor:1:10}
+
+The first assertion of \SGARefLink{sga3:xxvi:cor:1:10}{1.10} follows from the other two and Exp.\ XXII,
+\SGARefLink{sga3:xxii:cor:5.8.3}{5.8.3}.
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:definition:1-11}Definition 1.11}
+Let \(S\) be a nonempty scheme, \(G\) an \(S\)-reductive group, \(P\) a
+parabolic subgroup of \(G\), and
+\[
+ \mathcal E=(T,M,R,\Delta,(X_\alpha)_{\alpha\in\Delta})
+\]
+a pinning of \(G\).  One says that \(\mathcal E\) is \emph{adapted} to
+\(P\), or is a \emph{pinning of the pair \((G,P)\)}, if \(P\supset T\) and
+the Lie algebra of \(P\) is of the form
+\[
+ \mathfrak t\oplus\bigoplus_{\alpha\in R'}\mathfrak g^\alpha,
+\]
+where \(R'\subset R\) contains \(R^+\).
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:def:1:11}
+
+In particular, if \(T\subset B\) is the Killing pair defined by the
+pinning, then \(T\subset B\subset P\).  Under these conditions set
+\(\Delta(P)=\Delta\cap(-R')\).  Exp.\ XXII, \SGARefLink{sga3:xxii:lem:5.4.3}{5.4.3} gives
+\[
+ \alpha\in\Delta(P)
+ \ \Longleftrightarrow\
+ \alpha\in\Delta\text{ and }U_{-\alpha}\subset P
+ \ \Longleftrightarrow\
+ \alpha\in\Delta\text{ and }U_{-\alpha}\cap P\ne e.
+\]
+
+\SGARefLink{sga3:xxvi:prop:1:4:item:v}{Proposition~1.4(v)} and Exp.\ XXII, \SGARefLink{sga3:xxii:lem:5.11.3}{5.11.3} and 5.10.6 now immediately give:
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:proposition:1-12}Proposition 1.12}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, \(P\) a parabolic
+subgroup of \(G\), and
+\((T,M,R,\Delta,(X_\alpha)_{\alpha\in\Delta})\) a pinning of \(G\) adapted
+to \(P\).  Let \(\Delta(P)\subset\Delta\) be as above.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The unipotent radical of \(P\) is
+\[
+ \rad^u(P)=U_{R''}=\prod_{\alpha\in R''}U_\alpha,
+\]
+where \(R''\) is the set of positive roots whose expansion in \(\Delta\)
+contains at least one element of
+\(\Delta-\Delta(P)\)\footnote{\emph{Editor's note.}
+\(\Delta(P)\) has been corrected to \(\Delta-\Delta(P)\).} with a
+nonzero coefficient.
+\item The unique Levi subgroup \(L\) of \(P\) containing \(T\) is
+\[
+ Z_{\Delta(P)}=\Centr_G(T_{\Delta(P)}),
+\]
+where \(T_{\Delta(P)}\) is the maximal torus of
+\(\bigcap_{\alpha\in\Delta(P)}\ker(\alpha)\).  Moreover,
+\(T_{\Delta(P)}=\rad(L)\).
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:12}
+
+\begin{sgastatement}{Corollary 1.13}
+Every Levi subgroup \(L\) of a parabolic subgroup \(P\) of a reductive group
+\(G\) is a \emph{critical subgroup} of \(G\); that is
+\textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:def:5.10.4}{5.10.4})},
+\[
+ L=\Centr_G(\rad(L)).
+\]
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:cor:1:13}
+
+This follows immediately from \SGARefLink{sga3:xxvi:proposition:1-12}{1.12} and the following lemma, which is
+contained in \SGARefLink{sga3:xxvi:prop:1:3}{1.4} and Exp.\ XXII, \SGARefLink{sga3:xxii:5.4.1}{5.4.1}:
+
+\begin{sgastatement}{Lemma 1.14}
+Locally for the étale topology, every pair \((G,P)\), where \(P\) is a
+parabolic subgroup of the reductive group \(G\), admits a pinning in the
+sense of \SGARefLink{sga3:xxvi:definition:1-11}{1.11}.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:lemma:1:14}
+
+We also record:
+
+\begin{sgastatement}{Proposition 1.15}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, \(P\) a parabolic
+subgroup of \(G\), and \(\mathcal E,\mathcal E'\) two pinnings of \(G\)
+adapted to \(P\).  The unique inner automorphism of \(G\) over \(S\) that
+transforms \(\mathcal E\) into \(\mathcal E'\) \textup{(Exp.\ XXIV, \SGARefLink{sga3:xxiv:1.5}{1.5})}
+comes from \(P\), via
+\[
+ P\longrightarrow P/\Centr(P)
+ =P/\Centr(G)\longrightarrow G/\Centr(G).
+\]
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:15}
+
+Indeed, it suffices to argue as in Exp.\ XXIV, \SGARefLink{sga3:xxiv:1.5}{1.5}, using:
+
+\begin{sgastatement}{Lemma 1.16 \textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:cor:5.3.14}{5.3.14} and \SGARefLink{sga3:xxii:prop:5.2.6}{5.2.6})}}
+The maximal tori \textup{(respectively, Borel subgroups, respectively,
+Killing pairs)} of a parabolic subgroup \(P\) of an \(S\)-reductive group
+\(G\) are conjugate in \(P\), locally for the étale topology.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:lemma:1:16}
+
+\begin{sgastatement}{Proposition 1.17}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, \(P,P'\) two
+parabolic subgroups of \(G\), and \(B\) a Borel subgroup contained in both
+\(P\) and \(P'\).  If \(P\) and \(P'\) are conjugate in \(G\), locally for
+the étale topology, then \(P=P'\).
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:17}
+
+Indeed, we may assume that \(g\in G(S)\) satisfies \(\Int(g)P=P'\).  The
+groups \(B\) and \(\Int(g)^{-1}B\) are then two Borel subgroups of \(P\).
+After extending \(S\), \SGARefLink{sga3:xxvi:lemma:1:16}{Lemma~1.16} lets us choose \(p\in P(S)\) with
+\(\Int(p)\Int(g^{-1})B=B\).  Hence
+\[
+ pg^{-1}\in\Norm_G(B)(S)=B(S),
+\]
+so \(g\in B(S)\cdot p\subset P(S)\), and therefore
+\(P'=\Int(g)P=P\).
+
+\begin{sgastatement}{Remark 1.18}
+If \(P,P'\) are two parabolic subgroups of \(G\) containing a common Borel
+subgroup, then \(P\cap P'\) is again a parabolic subgroup of \(G\).  Indeed,
+it is smooth along the unit section \textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.4.5}{5.4.5})} and
+contains a Borel subgroup.
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:rem:1:18}
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:proposition:1-19}Proposition 1.19}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, and \(G'\) its
+derived group \textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:thm:6.2.1}{6.2.1})}.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The assignments
+\[
+ P\longmapsto P'=P\cap G',
+ \qquad
+ P'\longmapsto P'\cdot\rad(G)=\Norm_G(P')
+\]
+are mutually inverse bijections between the parabolic subgroups of \(G\)
+and those of \(G'\).  Moreover,
+\(\rad^u(P)=\rad^u(P')\).
+\item Let \(P\) be a parabolic subgroup of \(G\) and \(P'=P\cap G'\).
+The assignments
+\[
+ L\longmapsto L'=L\cap G'=L\cap P',
+ \qquad
+ L'\longmapsto L'\cdot\rad(G)=\Centr_G(\rad(L'))
+\]
+are mutually inverse bijections between the Levi subgroups of \(P\) and
+those of \(P'\).  Moreover,
+\[
+ \rad(L')=(\rad(L)\cap G')^0.
+\]
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:19}
+
+The proof, for example by reduction to the split case, is straightforward
+and is left to the reader, together with the immediate proof of:
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:proposition:1-20}Proposition 1.20}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, \(P\) a parabolic
+subgroup of \(G\), and \(L\) a Levi subgroup of \(P\).  The assignments
+\[
+ Q\longmapsto Q\cap L=Q',
+ \qquad
+ Q'\longmapsto Q'\cdot\rad^u(P)
+\]
+are mutually inverse bijections between the parabolic subgroups of \(G\)
+contained in \(P\) and the parabolic subgroups of \(L\).  Moreover, the
+Levi subgroups of \(Q'\) are precisely the Levi subgroups of \(Q\)
+contained in \(L\).
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:20}
+
+\SGARefLink{sga3:xxvi:proposition:1-6}{Proposition~1.6} may be completed as follows.
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxvi:proposition:1-21}Proposition 1.21}
+Let \(S\) be a scheme, \(G\) an \(S\)-reductive group, and \(P\) a
+parabolic subgroup of \(G\).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \(P\) has a largest invariant subgroup that is smooth and of finite
+presentation over \(S\), with connected solvable geometric fibers.  It is
+a characteristic subgroup of \(P\), called the \emph{radical} of \(P\)
+and denoted \(\rad(P)\).  The quotient sheaf \(P/\rad(P)\) is representable
+by an \(S\)-semisimple group.
+\item If \(L\) is a Levi subgroup of \(P\), then \(\rad(P)\) is the
+semidirect product of \(\rad^u(P)\) and \(\rad(L)\); one has
+\[
+ \rad(L)=L\cap\rad(P),
+ \qquad
+ L=\Centr_G(L\cap\rad(P)),
+ \qquad
+ P/\rad(P)\simeq L/\rad(L).
+\]
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:prop:1:21}
+
+Indeed, assertion (i) being local, one may suppose that \(P\) has a Levi
+subgroup \(L\).  It is then immediate that
+\[
+ R=\rad^u(P)\cdot\rad(L)
+\]
+has the properties asserted in (i).  For (ii), it only remains to prove
+that \(\rad(L)=L\cap\rad(P)\); this follows at once because
+\(L\cap\rad(P)\) is smooth with connected fibers, \(L\) being the
+centralizer of a torus.\footnote{\emph{Editor's note.} See \SGARefLink{sga3:xix:lemma:1:4}{Exposé XIX,
+1.4}.}

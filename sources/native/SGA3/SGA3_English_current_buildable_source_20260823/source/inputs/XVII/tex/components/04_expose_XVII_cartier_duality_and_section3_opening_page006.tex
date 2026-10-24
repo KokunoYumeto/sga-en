@@ -1,0 +1,97 @@
+
+by a commutative \(S\)-group prescheme \(D(G)\), finite and flat over
+\(S\), and the canonical morphism
+\[
+  G\longrightarrow D(D(G))
+\]
+is an isomorphism.  In particular:
+\begin{enumerate}
+\item[(i)] \(D(\boldsymbol\mu_n)\simeq\mathbb Z/n\mathbb Z\), and
+  consequently \(D(\mathbb Z/n\mathbb Z)\simeq\boldsymbol\mu_n\);
+\item[(ii)] if \(S\) has characteristic \(p>0\), then
+  \(D(\boldsymbol\alpha_p)\simeq\boldsymbol\alpha_p\).
+\end{enumerate}
+
+\SGASection{3}{Unipotent groups acting on a vector space}
+\SGARefTarget{sga3:xvii:section:3}
+
+Recall (\SGARefLink{sga3:i:definition:4-6-1}{Exposé I, 4.6.1}) that if \(S\) is a prescheme and \(M\) is a
+sheaf of \(\mathcal O_S\)-modules, \(\mathbf W(M)\) denotes the
+\(S\)-functor
+\[
+  (\operatorname{Sch}/S)^\circ\longrightarrow(\operatorname{Ens})
+\]
+defined, for every \(S\)-prescheme \(S'\), by
+\[
+  \mathbf W(M)(S')
+  =\Gamma\!\left(S',M\otimes_{\mathcal O_S}\mathcal O_{S'}\right).
+\]
+
+Recall also that if an \(S\)-group \(G\) acts on an \(S\)-functor
+\(V\), the \(S\)-functor \(V^G\) of invariants of \(V\) under \(G\) is
+the subfunctor of \(V\) whose \(S'\)-valued points, for \(S'\) over
+\(S\), are those \(x\in V(S')\) such that \(x_{S''}\) is fixed under
+\(G(S'')\) for every \(S''\) over \(S'\).
+
+We then have the following lemma.
+
+\SGAStatement{\SGAInlineRefTarget{sga3:xvii:lemma:3-1}Lemma 3.1}{Let \(S\) be a prescheme, and let \(G\) be an
+\(S\)-group prescheme, affine over \(S\), defined by the
+quasi-coherent \(\mathcal O_S\)-algebra \(A\).  Suppose that \(G\) acts
+on a quasi-coherent sheaf \(M\) of \(\mathcal O_S\)-modules.  Let
+\[
+  \mu:M\longrightarrow A\otimes_{\mathcal O_S}M
+\]
+be the comorphism defining the action of \(G\) on \(M\) (\SGARefLink{sga3:i:proposition:4-7-2}{Exposé I,
+4.7.2}), and let
+\[
+  \nu:M\longrightarrow A\otimes_{\mathcal O_S}M
+\]
+be the morphism \(x\mapsto\mu(x)-1\otimes x\).  Then:
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:xvii:lemma:3-1:item:i}(i)] \(\underline M^{\,G}(S)=\Gamma\operatorname{Ker}(\nu)\);
+\item[\SGAInlineRefTarget{sga3:xvii:lemma:3-1:item:ii}(ii)] if \(S\) is the spectrum of a field \(k\), then
+  \(\underline M^{\,G}\) is of the form \(\mathbf W(N)\), where \(N\)
+  is a vector subspace of \(M\);
+\item[\SGAInlineRefTarget{sga3:xvii:lemma:3-1:item:iii}(iii)] if \(S\) is the spectrum of a field \(k\), every element
+  \(x\) of \(M\) is contained in a finite-dimensional \(k\)-vector
+  subspace of \(M\) stable under the action of \(G\).
+\end{enumerate}}
+\SGARefTarget{sga3:xvii:lemma:3:1}
+
+\SGAProof{Proof}
+Assertion \SGARefLink{sga3:xvii:lemma:3-1:item:iii}{(iii)} is recalled here for reference and was already proved
+in Exposé VI\textsubscript{B}, \SGARefLink{cor:sga3-VIB-11.2}{11.2}.
+
+For \SGARefLink{sga3:xvii:lemma:3-1:item:i}{(i)}, it is clear that \(\underline M^{\,G}(S)\) contains
+\(\Gamma\operatorname{Ker}(\nu)\).  To prove the reverse inclusion, we
+may suppose that \(S\) is affine, with ring \(B\).  Let
+\(m\in\underline M^{\,G}(S)\).  For every \(B\)-algebra \(B'\) and
+every
+\[
+  u\in\operatorname{Hom}_{B\text{-alg}}(A,B')
+\]
+(where \(u\) corresponds to an element of
+\(G(\operatorname{Spec}B')\)), we have
+\[
+  (u\otimes1_M)\nu(m)=0
+  \qquad\text{in }B'\otimes_BM.
+\]
+Taking \(B'=A\) and \(u\) to be the identity of \(A\), we obtain
+\(\nu(m)=0\).
+
+For (ii), let \(N\) be the kernel of \(\nu\), equal to
+\(\underline M^{\,G}(k)\) by \SGARefLink{sga3:xvii:lemma:3-1:item:i}{(i)}.  Every \(k\)-prescheme \(S\) is flat
+over \(k\); hence
+\[
+  \underline M^{\,G}(S)
+  =\Gamma\operatorname{Ker}(\nu\otimes_k S)
+  =\Gamma(N\otimes_k S).
+\]
+Thus \(\underline M^{\,G}\) is isomorphic to the functor
+\(\mathbf W(N)\).
+
+\SGAStatement{Proposition 3.2}{Let \(G\) be a unipotent algebraic
+group, defined over a field \(k\), acting on a \(k\)-vector space
+\(V\).  If \(V\ne0\), then \(V^G\ne0\).}
+\SGARefTarget{sga3:xvii:proposition:3:2}

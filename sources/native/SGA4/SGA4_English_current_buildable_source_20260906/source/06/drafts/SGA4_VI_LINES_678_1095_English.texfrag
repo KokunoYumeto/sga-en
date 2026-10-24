@@ -1,0 +1,403 @@
+\subsection{Case of sites}\etiquette[1.21]{VI.subsec1.21}\pageoriginale
+
+Let $C$ be a $𝒰$-site, $E$ the topos of $𝒰$-sheaves on $C$, $f$ an
+arrow of $C$, and $X$ an object of $C$. We say that $f$ is a
+\emph{quasi-compact morphism} (\resp quasi-separated morphism) \emph{of the
+site} $C$ if $\epsilon(f)$ is a quasi-compact morphism (\resp
+quasi-separated morphism) of the topos $E$; likewise, we say that $X$ is a
+\emph{quasi-separated object of the site} $C$ if $\epsilon(X)$ is a
+quasi-separated object of the topos $E$ (compare \hyperref[VI.prop1.2]{1.2}). When $C$ is a
+$𝒰$-topos endowed with its canonical topology, the canonical functor
+$\epsilon:C\to E$ is an equivalence of categories, and consequently the
+preceding definition is compatible with the earlier \hyperref[VI.def1.7]{definitions 1.7} and
+\hyperref[VI.def1.13]{1.13}. Note also that the definition under
+consideration does not change when the universe $𝒰$ is replaced by another
+universe $𝒱$ such that $C$ is also a $𝒱$-site, at least when $C$ admits a
+topologically generating family consisting of quasi-compact objects. To see
+this, we are immediately reduced to the case $𝒰\subset 𝒱$, so that $E$ is
+a $𝒱$-site, and to proving that, for every arrow $f$ of the $𝒰$-topos $E$,
+$f$ is quasi-compact (\resp quasi-separated) if and only if it defines a
+quasi-compact arrow in the topos $E'$ of $𝒱$-sheaves on $E$, and likewise
+that, for every object $X$ of $E$, $X$ is quasi-separated if and only if the
+corresponding object of $E'$ is quasi-separated. We already know (without
+any hypothesis on $E$) the analogous statement for a quasi-compact object
+(\hyperref[VI.prop1.2]{1.2}). The case ``$f$ quasi-compact'' follows from
+this, by the criterion \hyperref[VI.prop1.10]{1.10} (i), applied successively
+in $E$ and\pageoriginale in $E'$ to the same generating family
+$(X_i)_{i\in I}$ of $E$ consisting of quasi-compact objects. This also gives
+the case ``$f$ quasi-separated'', which means that the corresponding
+diagonal morphism is quasi-compact. Finally, in the case ``$X$
+quasi-separated'', we are again reduced to the case ``$X$ quasi-compact''
+by the criterion \hyperref[VI.cor1.18]{1.18}.
+
+\subsection{}\etiquette[1.22]{VI.subsec1.22}
+{\textit{\textbf{Examples.}}} Return to the example
+\hyperref[VI.subsubsec1.6.2]{1.6.2} of the category $(\Sch)$ with a topology
+$T_i$. This is a $𝒱$-site for a suitable $𝒱$, and it admits the subcategory
+of affine schemes as a topologically generating category consisting of
+quasi-compact objects. We leave it to the reader to verify that an arrow
+$f:X\to Y$ of this site is quasi-compact (\resp quasi-separated) if and only
+if it is a quasi-compact (\resp quasi-separated) morphism of schemes in the
+usual sense (\cite{sga4.exp.VI.bib.3} or \cite{sga4.exp.VI.bib.4}); likewise, an object of the site is
+quasi-compact (\resp quasi-separated) if and only if it is a quasi-compact
+(\resp quasi-separated) scheme in the usual sense of \loccit. It is in fact
+appropriate to say, as we do here, \emph{coherent morphism of schemes,
+coherent scheme}, instead of ``quasi-compact and quasi-separated morphism of
+schemes'', ``quasi-compact and quasi-separated scheme'', as is also done in
+\EGA I, $2^{\text{nd}}$ edition.
+
+\setcounter{subsection}{22}
+\subsubsection{}\etiquette[1.22.1]{VI.subsubsec1.22.1}
+
+For a given scheme $X\in 𝒰$, one may also consider the topos $\Top(X)$
+associated with the underlying topological space, or the topos
+$\Top(X_{\et})$ (\resp $\Top(X_{\text{fppf}})$) associated with the site of
+étale $X$-schemes (\resp $X$-schemes locally\pageoriginale of finite
+presentation) that are elements of $𝒰$, endowed with the étale topology
+(\resp fppf topology). It is a $𝒰$-topos admitting a generating family
+consisting of coherent objects, corresponding to the affine objects of the
+site of definition.
+
+With this understood, the final object of this topos is quasi-compact
+(\resp quasi-separated, \resp coherent) if and only if the scheme $X$ is
+quasi-compact (\resp quasi-separated, \resp coherent). Likewise, a morphism
+of the site of étalé spaces over $X$ (\resp of the site $X_{\text{et}}$ of
+étale schemes over $X$, \resp of the site $X_{\text{fppf}}$ of schemes
+locally of finite presentation over $X$) is quasi-compact (\resp
+quasi-separated, \resp coherent) if and only if it is a morphism of schemes
+that is, in the usual sense of \loccit, quasi-compact (\resp quasi-separated,
+\resp coherent).
+
+\begin{enonce*}{Theorem 1.23}\etiquette[1.23]{VI.thm1.23}
+Let $E$ be a $𝒰$-topos and $X$ an object of $E$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For $X$ to be quasi-compact, it is necessary and sufficient that, for
+  every filtered inductive system $(Y_i)_{i\in I}$ of $E$, with $I\in 𝒰$,
+  the natural map
+\begin{equation*}
+\varinjlim  \Hom(X, Y_i) \to \Hom(X, \varinjlim Y_i)\tag{1.23.1}
+\end{equation*}\etiquette[1.23.1]{VI.eq1.23.1}
+be injective.
+
+\item Suppose that $E$ admits a generating subcategory $C$ consisting of
+  quasi-compact objects. A necessary condition for $X$ to be coherent is
+  that, for every datum as in \emph{(i)}, the map \emph{\hyperref[VI.eq1.23.1]{(1.23.1)}} be
+  bijective.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item \underline{Necessity}.
+Suppose\pageoriginale that $X$ is quasi-compact. We must prove that if
+  $i\in I$ and $f_i,g_i:X\rightrightarrows Y_i$ are such that the composites
+  $f,g$ of $f_i,g_i$ with $Y_i\to Y=\varinjlim Y_j$ are equal, then there
+  exists $j\geq i$ such that the composites $f_j,g_j$ with $Y_i\to Y_j$ are
+  already equal. Since filtered inductive limits in $E$ commute with finite
+  projective limits, and in particular with kernels, we have
+$$
+\Ker (f, g) = \mathop{\lim}_{j\geq l} \Ker (f_j, g_j){\quoi}.
+$$
+By hypothesis $\Ker(f,g)=X$, so $X$ is the limit of the filtered increasing
+family of its subobjects $\Ker(f_j,g_j)$. Since $X$ is quasi-compact, it is
+equal to one of these subobjects; hence there exists $j\geq i$ such that
+$f_j=g_j$.
+
+\underline{Sufficiency}. To prove that $X$ is quasi-compact, it is equivalent
+(\hyperref[VI.subsubsec1.5.2]{1.5.2}) to prove that, for every filtered
+increasing family $(X_i)_{i\in I}$ of subobjects of $X$ whose $\varinjlim$ is
+$X$, there exists $i\in I$ such that $X_i=X$. Since every monomorphism in
+$E$ is effective (II \hyperref[II.sec4]{4.0}), it follows that
+$$
+X_i = \Ker (f_i, g_i : X \rightrightarrows X \amalg_{X_{i}} X){\quoi}.
+$$
+Let $Y_i=X\amalg_{X_i}X$, and consider the inductive system formed by the
+$Y_i$. If $Y$ is its inductive limit, then
+$Y\simeq X\amalg_{\varinjlim X_i}X=X\amalg_X X=X$.
+Consequently, for a fixed $i\in I$, $f_i,g_i$ give the same element of
+$\Hom(X,Y)$, so by hypothesis there exists $j\geq i$ such that $f_j=g_j$,
+\ie $X_j=X$, \cqfd
+
+\item It remains\pageoriginale to prove that, under the stated conditions,
+  every morphism $X\to Y$ comes from a morphism $X\to Y_i$ for a suitable
+  $i\in I$. Since $C$ generates $E$ and the $Y_i$ cover $Y$, we may cover
+  $X$ by objects $X_{\alpha}$ of $C$ in such a way that each composite
+  $X_{\alpha}\to X\to Y$ factors through one of the $Y_i$. Since $X$ is
+  quasi-compact, we may suppose that the family of the $X_{\alpha}$ is
+  finite, and hence that the morphisms $X_{\alpha}\to Y$ factor through a
+  fixed $Y_i$ as morphisms $g_{\alpha i}:X_{\alpha}\to Y_i$. Since $X$ is
+  quasi-separated, the $\fprod{X_{\alpha}}{X_{\beta}}{X}$ are quasi-compact.
+  Moreover, for every $(\alpha,\beta)$, the composites of $\pr_1$ and
+  $\pr_2$ on $\fprod{X_{\alpha}}{X_{\beta}}{X}$ with
+  $X_{\alpha},X_{\beta}\to Y_i$ are
+\[
+\xymatrix{
+\fprod{X_{\alpha}}{X_{\beta}}{X} \ar[rd] \ar[dd]& &\\
+                            &X_{\alpha} \ar[ld] \ar[rrrr]&   & & & Y_i
+\ar[lld]\\
+X    \ar[rrr]                       &          & & Y  &
+}
+\]
+such that their composites with $Y_i\to Y$ are equal. By (i), there
+  therefore exists $j\geq i$ such that the composites with $Y_i\to Y_j$ are
+  already equal. Since the set of pairs $(\alpha,\beta)$ is finite, $j$ may
+  be chosen independently of the pair. Consequently, the morphisms
+  $g_{\alpha j}$ arise by composition from a morphism $g_j:X\to Y_j$, whose
+  composite with $Y_j\to Y$ is moreover the given morphism $X\to Y$, since
+  this is so after composition with the covering maps $X_{\alpha}\to X$.
+  This completes the proof.
+\end{enumerate}
+
+\begin{enonce*}[remark]{Remarks 1.23.2}\etiquette[1.23.2]{VI.rem1.23.2}
+The hypothesis on $E$ in (ii) may be replaced by an additional hypothesis
+\emph{on} $X$, namely that $X$ admits a fundamental system of covering
+families by quasi-compact objects.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 1.24}\etiquette[1.24]{VI.cor1.24}
+Let\pageoriginale $E$ be a topos, and let $C$ be a strictly full subcategory
+of $E$ consisting of coherent objects. Using the fact that the
+$𝒰$-inductive limits in $E$ are representable, one obtains \emph{(I \hyperref[I.sec8.6.1]{8.6.1})}
+a canonical functor
+\begin{equation*}
+\Ind (C) \to E{\quoi}.\tag{1.24.1}
+\end{equation*}\etiquette[1.24.1]{VI.eq1.24.1}
+This functor is fully faithful. If $E$ admits a generating subcategory
+consisting of coherent objects, and if $C$ is stable under direct factors,
+then the following conditions are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The functor \emph{\hyperref[VI.eq1.24.1]{(1.24.1)}} is essentially surjective, \ie it is an
+  equivalence of categories.
+
+\item $C$ is a generating subcategory of $E$, stable under finite inductive
+  limits.
+
+\item The category $C$ is equal to the full subcategory $E_{\coh}$ of $E$
+  consisting of all coherent objects of $E$, and the necessary condition
+  \emph{\hyperref[VI.thm1.23]{1.23} (ii)} for an object of $E$ to be coherent
+  is also sufficient.
+\end{enumerate}
+\end{enonce*}
+
+Let $E_{PF}$ be the full subcategory of $E$ defined in I \hyperref[I.cor8.7.6]{8.7.6}. By I \hyperref[I.prop8.7.5]{8.7.5}
+a), statement \hyperref[VI.thm1.23]{1.23} (ii) is equivalent to the second
+inclusion in
+$$
+C \subset E_{\coh} \subset E_{PF}{\quoi},
+$$
+and the composite inclusion $C\supset E_{PF}$ means that \hyperref[VI.eq1.24.1]{(1.24.1)} is fully
+faithful. Since\pageoriginale, by hypothesis, the subcategory $E_{\coh}$ of
+$E$ is generating, the same is a fortiori true of $E_{PF}$; moreover, finite
+projective limits are representable in $E$, so that we may apply I \hyperref[VI.cor8.7.7]{8.7.7}.
+Condition (iii) of \hyperref[VI.cor1.24]{1.24} may also be written
+$C=E_{\coh}=E_{PF}$ and is equivalent to the condition $C=E_{PF}$, which is
+precisely condition (ii bis) of \loccit (taking into account that, by
+hypothesis, $E_{\coh}$ and hence $E_{PF}$ is a generating subcategory of
+$E$). Likewise, condition (ii) of \hyperref[VI.cor1.24]{1.24} is precisely
+condition (iii bis) of \loccit. Thus the equivalence of conditions (i),
+(ii bis), and (iii bis) in \loccit gives the equivalence of conditions (i),
+(ii), and (iii) of \hyperref[VI.cor1.24]{1.24}, \cqfd
+
+The proof (or, more precisely, the invocation of I \hyperref[I.cor8.7.7]{8.7.7} (ii bis)) also gives
+part a) of the
+
+\begin{enonce*}{Corollary 1.24.2}\etiquette[1.24.2]{VI.cor1.24.2}
+Let $E$ be a topos admitting a generating subfamily consisting of coherent
+objects, and let $E_{PF}$ be the strictly full subcategory of objects $X$ of
+$E$ such that the covariant functor $\Hom(X,-)$ represented by $X$ commutes
+with filtered inductive limits. Then:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The natural functor
+$$
+\Ind (E_{PF}) \to E
+$$
+is an equivalence of categories.
+
+\item For an object $X$ of $E$ to belong to $E_{PF}$, it is necessary and
+  sufficient that it be isomorphic to a direct factor ($=$ image of a
+  projector (\hyperref[I.sec10.6]{I, 10.6})) of the cokernel\pageoriginale of a double arrow
+  $X_1\rightrightarrows X_0$, with $X_1$ and $X_0$ coherent.
+\item The subcategory $E_{PF}$ of $E$ is stable under finite inductive
+  limits, and is equivalent to a small category.
+\end{enumerate}
+\end{enonce*}
+
+It remains to prove b) and c). The first assertion of c) is immediate from
+I \hyperref[I.prop2.8]{2.8}, and implies the ``if'' part of b) by \hyperref[VI.thm1.23]{1.23} (ii).
+For the ``only if'' part, use \hyperref[VI.thm1.23]{1.23} (i), which shows
+that $X$ is quasi-compact, whence the existence of an epimorphism
+$X_0\to X$, with $X_0$ coherent, in view of the fact that $E_{\coh}$
+generates $E$ and is stable under finite sums. Let
+$R=\fprod{X_0}{X_0}{X}$, so that $X$ identifies with the cokernel of
+$R\rightrightarrows X_0$. By a), we have $R=\varinjlim R_i$, the filtered
+inductive limit of the coker $(R_i\rightrightarrows X_0)=X_i$. By the
+hypothesis $X\in\Ob E_{PF}$, for sufficiently large $i$ the morphism
+$u_i:X'_i\to X$ admits a section $v:X\to X'_i$. Let
+$w=vu_i:X'_i\to X'_i$, so that $w^2=w$ and
+$X\simeq\Coker(w,\id_{X'_i}:X'_i\rightrightarrows X'_i)$. Since $R_i$ is
+again quasi-compact, cover it by $X_1\to R_i$, with $X_i$ coherent, whence
+$X_i\simeq\Coker(X_1\rightrightarrows X_0)$, which proves b).
+
+Finally, since $E_{PF}\subset E_{\text{qu.cpct}}$, the last assertion of c)
+follows from \hyperref[VI.subsubsec1.5.3]{1.5.3}.
+
+\begin{enonce*}{Corollary 1.25}\etiquette[1.25]{VI.cor1.25}
+Let $E$ be a topos such that the full subcategory $C$ of $E$ consisting of
+coherent objects is generating. Consider the canonical functor
+$$
+\varphi : \Ind(c) \to E{\quoi}.
+$$
+The following\pageoriginale conditions are equivalent:
+\begin{itemize}
+\item[(i)] The functor $\varphi$ is essentially surjective, \ie every object
+  of $E$ is a filtered inductive limit of coherent objects.
+
+\item[(i bis)] The functor $\varphi$ is an equivalence of categories.
+
+\item[(ii)] Every finite inductive limit in $E$ of coherent objects is a
+  coherent object.
+
+\item[(ii bis)] The cokernel in $E$ of a double arrow of coherent objects is
+  a coherent object.
+
+\item[(iii)] The converse of \emph{\hyperref[VI.thm1.23]{1.23} (ii)} holds.
+\end{itemize}
+\end{enonce*}
+
+This is a special case of \hyperref[VI.cor1.24]{1.24}, taking into account
+that $C$ is stable under finite sums (\hyperref[VI.cor1.4]{1.4}), which
+implies the equivalence of (ii) and (ii bis), and taking into account the
+
+\begin{enonce*}{Lemma 1.25.1}\etiquette[1.25.1]{VI.lem1.25.1}
+Let $E$ be a topos. Every direct factor $X'$ of a coherent object $X$ of $E$
+is coherent.
+\end{enonce*}
+
+Indeed, $X'$ is quasi-compact as a quotient of $X$
+(\hyperref[VI.prop1.3]{1.3}), and quasi-separated as a subobject of $X$
+(\hyperref[VI.cor1.15]{1.15}).
+
+\begin{enonce*}{Corollary 1.26}\etiquette[1.26]{VI.cor1.26}
+Let $E$ be a topos satisfying the equivalent conditions
+\emph{\hyperref[VI.cor1.25]{1.25}.} Then every induced topos does likewise.
+\end{enonce*}
+
+This follows immediately from criterion (ii), taking into account
+\hyperref[VI.subsubsec1.20.2]{1.20.2} and the fact that the existence of a
+generating subcategory of $E$ consisting of coherent objects plainly
+implies the same property for an induced topos.
+
+\begin{enonce*}[remark]{Remark 1.27}\etiquette[1.27]{VI.rem1.27}
+Among\pageoriginale the important examples of topoi satisfying the
+conditions of \hyperref[VI.cor1.25]{1.25}, let us mention Noetherian topoi
+(\hyperref[VI.subsec2.14]{2.14}), and the Zariski or étale topos
+(\hyperrefext[VII][VII.sec1]{1}) of a scheme $X$ (\cf IX, note p.42). But
+even when the topos $E$ is \emph{coherent} (\hyperref[VI.def2.3]{2.3}) (\ie
+the full subcategory $C$ of coherent objects is generating and stable under
+finite projective limits), it is not always true that $C$ is \emph{perfect}
+(\hyperref[VI.def2.9.1]{2.9.1}), \ie satisfies the equivalent conditions of
+\hyperref[VI.cor1.25]{1.25}; \cf \hyperref[VI.exer1.28]{1.28} below.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 1.28}\etiquette[1.28]{VI.exer1.28}
+Let $E$ be a topos and $p_1,p_2:X_1\rightrightarrows X_0$ a double arrow in
+$E$. Define an increasing sequence of subobjects $R_n$ $(n\geq0)$ of
+$X_0\times X_0$ by the condition
+$R_0=\Sup(\text{Im}(p_1,p_2),\text{Im}(p_2,p_1))$, and
+$R_n=\pr_{13}(\pr_{12}^{-1}(R_{n-1}),\pr_{23}^{-1}(R_{n-1}))$ for every
+$n\geq1$, where $\pr_{ij}$ $(1\leq i<j\leq3)$ denote the evident
+projections from the triple product of $X_0$ to the double product.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Show that one thus obtains an increasing sequence of subobjects of
+  $X_0\times X_0$, that $R=\varinjlim R_n$ is an equivalence graph (I \hyperref[I.sec10.4]{10.4})
+  in $X_0$, and that the canonical morphism
+$$
+X = \Coker (p_1, p_2) \to X_0 /R
+$$
+is an isomorphism.
+
+\item Deduce that if $X_0$ is quasi-compact and $X=\Coker(p_1,p_2)$ is
+  quasi-separated (hence coherent), then the sequence $(R_n)$ is stationary.
+  Conversely,\pageoriginale if this sequence is stationary, and if $X_0$ is
+  assumed coherent and $X_1$ quasi-compact, then $X$ is coherent. (For this
+  last point, write
+  $R_n\simeq\fprod{(R_{n-1},\pr_2)}{(R_{n-1},\pr_1)}{X_0}$ and deduce that
+  $R_n$ is quasi-compact over $X_0$ for every $n$, then use \hyperref[VI.cor1.19]{1.19}.)
+
+\item Construct an example of two maps of sets
+  $p_1,p_2:X_1\rightrightarrows X_0$ such that the sequence $(R_n)$ is not
+  stationary.
+
+\item Let $C$ be a small category in which finite inductive limits and
+  finite projective limits are representable, and in which every morphism
+  factors as an effective epimorphism followed by a monomorphism. Repeat the
+  construction of the $R_n$ for a double arrow $(p_1,p_2)$ of $C$. Endowing
+  $C$ with the canonical topology, show that the canonical functor
+  $\epsilon:C\to C^{\sim}$ is exact, and consequently commutes with the
+  formation of the $R_n$.
+
+\item Take for $C$ a small full subcategory of $(\Ens)$, stable up to
+  isomorphism under finite projective limits and finite inductive limits, and
+  containing the sets $X_0,X_1$ of c). Deduce that the topos $C^{\sim}$
+  (which is a \emph{coherent} topos (\hyperref[VI.def2.3]{2.3}), \ie is
+  generated by the subcategory of its coherent objects, which is stable
+  under finite projective limits) does not satisfy the equivalent conditions
+  of \hyperref[VI.cor1.25]{1.25}.
+
+\item Let $k$ be a field, and let $C$ be the fppf site of schemes locally of
+  finite presentation over $k$ (\SGA 3 IV 6.3). Show that there exists a
+  reduced affine scheme $X$ over $k$ admitting an automorphism $f$ that is
+  not of finite order (take, for example, the affine plane $E^2$ endowed with
+  the automorphism $f(x)=x$, $f(y)=x+y$).\pageoriginale Show that if
+  $p_1,p_2:X_1\rightrightarrows X_0$ is a double arrow in $C$ such that the
+  corresponding double arrow in $(\Ens) p_1(\bar{k}):p_2(\bar{k}):
+  X_1(\bar{k})\rightrightarrows X_0(\bar{k})$ gives a nonstationary sequence
+  $(R_n)$, then the same is true of the double arrow of $C^{\sim}$ defined by
+  $p_1,p_2$. Thus, if $X_0$ is of finite type over $k$, the cokernel in
+  $C^{\sim}$ of $(p_1,p_2)$ is not coherent. Deduce that the cokernel in
+  $C^{\sim}$ of the pair $(f,\id_X)$ is not coherent, and hence that the
+  topos $C^{\sim}$ does not satisfy the equivalent conditions of
+  \hyperref[VI.cor1.25]{1.25}. Deduce more generally that if $S$ is a
+  nonempty scheme and $C$ is the fppf site of schemes locally of finite
+  presentation over $S$, then the topos $C^{\sim}$ does not satisfy the
+  conditions of \hyperref[VI.cor1.25]{1.25}. (Care must be taken that,
+  contrary to appearances, $C^{\sim}$ is therefore Noetherian
+  (\hyperref[VI.def2.11]{2.11}) only if $S$ is empty, as follows from the
+  preceding discussion and \hyperref[VI.subsec2.14]{2.14}.)
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Definition 1.30}\etiquette[1.30]{VI.def1.30}
+Let $E$ be a topos. An object $X$ of $E$ is called a \emph{pre-Noetherian
+object}\footnote{The stronger notion of a \emph{Noetherian} object is given
+  in \hyperref[VI.def2.11]{2.11} below.} of the topos $E$ if it satisfies the
+following two equivalent conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+
+\item Every subobject of $X$ is quasi-compact.
+
+\item Every increasing sequence of subobjects of $X$ is stationary.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{30}
+\setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[1.30.1]{VI.subsubsec1.30.1}
+The equivalence of conditions (i) and (ii) is clear. Note that these
+conditions again depend only on the induced topos $E_{/X}$, and indeed only
+on the ordered set of opens of $E_{/X}$, which is isomorphic to the ordered
+set of subobjects of $X$. They are stable under passage to a subobject of
+$X$.
+
+

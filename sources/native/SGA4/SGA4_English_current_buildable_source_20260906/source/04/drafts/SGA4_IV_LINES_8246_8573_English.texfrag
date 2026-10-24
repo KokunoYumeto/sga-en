@@ -1,0 +1,334 @@
+\section{Sheaves of morphisms}\etiquette[10]{IV.sec10}\pageoriginale
+
+\begin{enonce*}{Proposition 10.1}\etiquette[10.1]{IV.prop10.1}
+Let $E$ be a topos and let $X$ and $Y$ be two objects of $E$; the
+functor
+$Z\mapsto \Hom_E(Z\times X,Y)\simeq \Hom_{E_{/Z}}(X_Z,Y_Z)$ is
+representable.
+\end{enonce*}
+
+Indeed, inductive limits are universal in $E$ (II \hyperref[II.prop4.3]{4.3}). Hence the
+functor $Z\mapsto Z\times X$ commutes with inductive limits.
+Consequently, the functor $Z\mapsto \Hom_E(Z\times X,Y)$ carries
+inductive limits in the argument $Z$ to projective limits. It is
+therefore representable \sisi{(IV~\hyperref[IV.prop1.4]{1.4} and
+\hyperref[IV.theo1.2]{1.2})}{(\hyperref[IV.cor1.2.1]{1.2.1})}.
+
+\setcounter{subsection}{1}
+\subsection{}\etiquette[10.2]{IV.subsec10.2}
+The object representing the functor $Z\mapsto \Hom_E(Z\times X,Y)$
+is denoted by $\scrHom_E(X,Y)$ (or more simply by $\scrHom(X,Y)$) and
+is called the \emph{sheaf of morphisms from $X$ to $Y$}. It is a
+bifunctor in $X$ and $Y$. We thus have a trifunctorial isomorphism
+\begin{equation*}
+\Hom_E(Z,\scrHom_E(X,Y))\simeq \Hom_E(Z\times X,
+Y){\quoi}.\tag{10.2.1}
+\end{equation*}\etiquette[10.2.1]{IV.eq10.2.1}
+
+It then follows from formula \eqhyperref[IV.eq10.2.1]{10.2.1} that the
+bifunctor $(X,Y)\mapsto \scrHom(X,Y)$ carries inductive limits in the
+argument $X$ (\resp projective limits in the argument $Y$) to
+projective limits in $E$.
+
+\begin{enonce*}{Proposition 10.3}\etiquette[10.3]{IV.prop10.3}
+Let $v:E\rightarrow E'$ be a morphism of topoi. For a variable object
+$X$ of $E$ and a variable object $Y$ of $E'$, there is a bifunctorial
+isomorphism
+\begin{equation*}
+v_{\ast}\scrHom_E(v^{\ast}Y,X)\simeq
+\scrHom_{E'}(Y,v_{\ast}X){\quoi}.\tag{10.3.1}
+\end{equation*}\etiquette[10.3.1]{IV.eq10.3.1}
+\end{enonce*}
+
+\noindent \emph{Proof}. For every object $Z$ of $E'$, we have a
+sequence of isomorphisms, functorial in all the arguments:
+\begin{alignat*}{4}
+&\Hom_{E'}(Z,v_{\ast}\scrHom_E(v^{\ast}Y,X)) &&\simeq
+&& \Hom_E(v^{\ast}Z,\scrHom_E(v^{\ast}Y,X)) &&\quad \text{(adjunction)}\\
+& \Hom_E(v^{\ast}Z,\scrHom_E(v^{\ast}Y,X)) && \simeq
+&& \Hom_E(v^{\ast}Z\times v^{\ast}Y,X) &&\quad \eqhyperref[IV.eq10.2.1]{10.2.1}\\
+&\Hom_E(v^{\ast}Z\times v^{\ast}Y,X) &&\simeq &&
+\Hom_E(v^{\ast}(Z\times Y),X) &&\quad \text{($v^{\ast}$ is left
+exact)}\\
+&\Hom_E(v^{\ast}(Z\times Y),X) &&\simeq && \Hom_{E'}(Z\times Y,
+v_{\ast}X) &&\quad \text{(adjunction)}\\
+& \Hom_{E'}(Z\times Y,v_{\ast}X) &&\simeq &&
+\Hom_{E'}(Z,\scrHom_{E'}(Y,v_{\ast}X)) &&\quad \eqhyperref[IV.eq10.2.1]{10.2.1}
+\end{alignat*}
+The two sides of \eqhyperref[IV.eq10.3.1]{10.3.1} therefore represent
+isomorphic functors, \cqfd
+
+\begin{enonce*}{Corollary 10.4}\etiquette[10.4]{IV.cor10.4}
+Let\pageoriginale $C$ be a $𝒰$-site, $X$ a $𝒰$-presheaf on
+$C$, $Y$ a $𝒰$-sheaf on $C$, and $𝒱$ a universe containing
+$𝒰$ such that $C$ is $𝒱$-small. Let
+$C^{\widehat{\phantom{,}}}_{𝒱}$ be the topos of $𝒱$-presheaves on
+$C$, and let $C^{\sim}_{𝒰}$ be the topos of $𝒰$-sheaves on $C$.
+The presheaf
+$\scrHom_{C^{\widehat{\phantom{,}}}_{𝒱}}(X,Y)$ is a $𝒰$-sheaf. Let
+$X\rightarrow \underline{a}X$ be the canonical morphism from $X$ to
+its associated sheaf. The corresponding morphism
+$\scrHom_{C^{\widehat{\phantom{,}}}_{𝒱}}(\underline{a}X,Y)\rightarrow
+\scrHom_{C^{\widehat{\phantom{,}}}_{𝒱}}(X,Y)$ is an isomorphism. There
+is a canonical isomorphism
+$\scrHom_{C^{\widehat{\phantom{,}}}_{𝒱}}(\underline{a}X,Y)\simeq
+\scrHom_{C^{\sim}_{𝒰}}(\underline{a}X,Y)$.
+\end{enonce*}
+
+\setcounter{subsection}{4} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[10.4.1]{IV.subsubsec10.4.1}
+Suppose first that $C$ is a small site and that $𝒱=𝒰$. We then have
+a morphism of topoi
+$C^{\sim}_{𝒰}\rightarrow
+C^{\widehat{\phantom{,}}}_{𝒰}$ (\sisi{IV~}{}\hyperref[IV.subsec4.8]{4.8}),
+from which \eqhyperref[IV.eq10.3.1]{10.3.1} gives the assertions in
+this case. To pass from this to the general case, note first that the
+``associated sheaf'' functor is independent of the universe
+(\hyperrefext[II][II.prop3.6]{3.6}), and that the topos of
+$𝒱$-sheaves on $C$ is equivalent to the topos of $𝒱$-sheaves on
+$C^{\sim}_{𝒰}$ (\hyperrefext[III][III.sec4]{4} and
+\hyperref[IV.sec1]{1}). It therefore suffices to prove the following
+lemma:
+
+\begin{enonce*}{Lemma 10.4.2}\etiquette[10.4.2]{IV.lem10.4.2}
+Let $E$ be a $𝒰$-topos, let $𝒱$ be a universe containing $𝒰$, let
+$E^{\sim}_{𝒱}$ be the topos of $𝒱$-sheaves on $E$, and let $X$ and
+$Y$ be two objects of $E$. There exists a canonical isomorphism
+$\scrHom_E(X,Y)\simeq \scrHom_{E^{\sim}_{𝒱}}(X,Y)$.
+\end{enonce*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}\etiquette[10.4.3]{IV.subsubsec10.4.3}
+The functor $\epsilon_E:E\rightarrow E_{\widetilde{𝒱}}$ is fully
+faithful and left exact. Consequently, for every object $Z$ of $E$,
+there is an isomorphism
+$$
+\Hom_{E_{\widetilde{𝒱}}}(\epsilon_E Z,\epsilon_E
+\scrHom_E(X,Y))\simeq \Hom_{E_{\widetilde{𝒱}}}(\epsilon_E
+Z\times \epsilon_E X,\epsilon_E Y).
+$$
+But every object of $E_{\widetilde{𝒱}}$ is an inductive limit of
+objects coming from $E$; the assertion therefore follows from
+\eqhyperref[IV.eq10.2.1]{10.2.1}.
+
+\subsection{}\etiquette[10.5]{IV.subsec10.5}
+Let $v:E\rightarrow E'$ be a morphism of topoi. We shall define four
+bifunctorial morphisms:
+\begin{alignat*}{4}
+\Phi_v & : v^{\ast}\scrHom(X,Y) &&\longrightarrow
+\scrHom(v^{\ast}X,v^{\ast}Y) &\quav
+& X \text{ and } Y \text{ objects of } E'{\quoi},\\
+\Psi_v & : v_{\ast}\scrHom(X,Y) &&\longrightarrow \scrHom(v_{\ast}X,
+v_{\ast}Y) &\quav & X \text{ and } Y \text{ objects of } E{\quoi},\\
+\Xi_v & : \scrHom(v_{!}X,Y) &&\longrightarrow
+v_{\ast}\scrHom(X,v^{\ast}Y) &\quav & X\in \ob E, Y\in \ob
+E'{\quoi},\\
+\Lambda_v & : v_{!}(X\times v^{\ast}Y) &&\longrightarrow
+v_{!}(X)\times Y & & X\in \ob E, Y\in \ob E'{\quoi},
+\end{alignat*}
+where,\pageoriginale in order to define the morphisms $\Xi_v$ and
+$\Lambda_v$, we suppose that the inverse-image functor $v^{\ast}$ of
+$v$ admits a left adjoint $v_{!}$.
+
+\subsubsection{}\etiquette[10.5.1]{IV.subsubsec10.5.1}
+\emph{Definition of} $\Psi_v$. Let $X$ be an object of $E$. There is
+an adjunction morphism $v^{\ast}v_{\ast}X\rightarrow X$, and hence,
+for every object $Z$ of $E'$, a bifunctorial morphism
+$v^{\ast}(Z\times v_{\ast}X)\rightarrow (v^{\ast}Z)\times X$. Thus,
+for every object $Y$ of $E$, there is a trifunctorial morphism
+$$
+\Hom_E((v^{\ast}Z)\times X,Y)\longrightarrow
+\Hom_E(v^{\ast}(Z\times v_{\ast}X),Y){\quoi}.
+$$
+By adjunction this gives a trifunctorial morphism
+$$
+\Hom_{E'}(Z,v_{\ast}\scrHom(X,Y))\longrightarrow \Hom_{E'}(Z,
+\scrHom(v_{\ast}X,v_{\ast}Y)){\quoi};
+$$
+and hence the morphism $\Psi_v$.
+
+\subsubsection{}\etiquette[10.5.2]{IV.subsubsec10.5.2}
+\emph{Definition of} $\Lambda_v$. For every object $X$ of $E$, there
+is an adjunction morphism $X\rightarrow v^{\ast}v_{!}X$, and hence,
+for every object $Y$ of $E'$, a bifunctorial morphism
+$X\times v^{\ast}Y\rightarrow v^{\ast}v_{!}(X)\times v^{\ast}Y
+\simeq v^{\ast}(v_{!}(X)\times Y)$; by adjunction this gives the
+morphism $\Lambda_v$.
+
+\subsubsection{}\etiquette[10.5.3]{IV.subsubsec10.5.3}
+\emph{Definition of} $\Xi_v$. Let $X$ be an object of $E$, and let
+$Z$ and $Y$ be two objects of $E'$. The morphism
+$\Lambda_v:v_{!}(X\times v^{\ast}Z)\rightarrow v_{!}(X)\times Z$
+gives a trifunctorial morphism
+$\Hom_{E'}(v_{!}(X)\times Z,Y)\rightarrow
+\Hom_{E'}(v_{!}(X\times v^{\ast}Z),Y)$; by adjunction this gives a
+trifunctorial morphism
+$$
+\Hom_{E'}(Z,\scrHom(v_{!}X,Y))\longrightarrow
+\Hom_{E'}(Z,v_{\ast}\scrHom(X,v^{\ast}Y)){\quoi};
+$$
+and hence the morphism $\Xi_v$.
+
+\subsubsection{}\etiquette[10.5.4]{IV.subsubsec10.5.4}
+\emph{Definition of} $\Phi_v$. The trifunctorial morphism of
+(\hyperref[IV.subsubsec10.5.3]{10.5.3})
+$$
+\Hom_{E'}(v_{!}(Z)\times X,Y)\longrightarrow
+\Hom_{E'}(v_{!}(Z\times v^{\ast}X),Y){\quoi},
+$$
+where $Z$ is an object of $E$ and $X,Y$ are objects of $E'$, gives,
+by adjunction, a trifunctorial morphism
+$$
+\Hom_E(Z,v^{\ast}\scrHom(X,Y))\longrightarrow
+\Hom_E(Z,\scrHom(v^{\ast}X,v^{\ast}Y)){\quoi};
+$$
+and hence a definition of the morphism $\Phi_v$. There is a second
+way to define $\Phi_v$. Let $X$, $Y$, and $Z$ be three objects of
+$E'$. The functor $v^{\ast}:E'\rightarrow E$ gives a trifunctorial
+morphism
+$$
+\Hom_{E'}(Z\times X,Y)\longrightarrow \Hom_E(v^{\ast}(Z)\times
+v^{\ast}(X),v^{\ast}Y){\quoi};
+$$
+and hence, by adjunction, a trifunctorial morphism
+$$
+\Hom_{E'}(Z,\scrHom(X,Y))\longrightarrow
+\Hom_{E'}(Z,v_{\ast}\scrHom(v^{\ast}X,v^{\ast}Y)){\quoi}.
+$$
+We\pageoriginale therefore have a bifunctorial morphism
+$$
+\scrHom(X,Y)\longrightarrow v_{\ast}\scrHom(v^{\ast}X,
+v^{\ast}Y){\quoi};
+$$
+and hence, by adjunction, a morphism which the reader may verify is
+indeed the morphism $\Phi_v$ defined above.
+
+\begin{enonce*}{Proposition 10.6}\etiquette[10.6]{IV.prop10.6}
+Let $v:E\rightarrow E'$ be a morphism of topoi.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The morphism $\Psi_v$ (\hyperref[IV.subsubsec10.5.1]{10.5.1})
+is an isomorphism for every object $Y$ of $E$ if and only if the
+adjunction morphism $v^{\ast}v_{\ast}X\rightarrow X$ is an
+isomorphism. In particular, $\Psi_v$ is an isomorphism for every pair
+of objects $(X,Y)$ if and only if the functor
+$v_{\ast}:E\rightarrow E'$ is fully faithful, \ie if $v$ is an
+embedding of topoi.
+
+\item The following conditions are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumii}{\roman{enumii}}
+\renewcommand{\labelenumii}{(\theenumii)}
+\item For every pair $(X,Y)$ of objects of $E'$, the morphism
+$\Phi_v$ (\hyperref[IV.subsubsec10.5.4]{10.5.4}) is an isomorphism.
+
+\item The functor $v^{\ast}$ admits a left adjoint $v_{!}$, and for
+every object $X$ of $E$ and every object $Y$ of $E'$, the morphism
+$\Xi_v$ (\hyperref[IV.subsubsec10.5.3]{10.5.3}) is an isomorphism.
+
+\item The functor $v^{\ast}$ admits a left adjoint $v_{!}$, and for
+every object $X$ of $E$ and every object $Y$ of $E'$, the morphism
+$\Lambda_v$ (\hyperref[IV.subsubsec10.5.2]{10.5.2}) is an isomorphism.
+\end{enumerate}
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{6} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[10.6.1]{IV.subsubsec10.6.1}
+The first assertion follows immediately from
+(\hyperref[IV.subsubsec10.5.1]{10.5.1}). It also follows immediately
+from (\hyperref[IV.subsubsec10.5.2]{10.5.2}),
+(\hyperref[IV.subsubsec10.5.3]{10.5.3}), and
+(\hyperref[IV.subsubsec10.5.4]{10.5.4}) that
+(iii) $\Leftrightarrow$ (ii) $\Leftrightarrow$ ((i) and the functor
+$v^{\ast}$ admits a left adjoint $v_{!}$). It remains to show that
+(i) implies that $v^{\ast}$ admits a left adjoint, \ie
+(\hyperref[IV.rem1.8]{1.8}) that (i) implies that $v^{\ast}$ commutes
+with small products. Let $e'$ be the final object of $E'$ and let $I$
+be a small set. Since $v^{\ast}$ is left exact, $v^{\ast}(e')$ is a
+final object of $E$, and since $v^{\ast}$ commutes with inductive
+limits, $v^{\ast}(\amalg_I e')\simeq \amalg_I v^{\ast}(e')$. For
+every object $Y$ of $E'$, we have
+$\scrHom(\amalg_I e',Y)\simeq \Pi_I\scrHom(e',Y)\simeq \Pi_IY$ and
+$\scrHom(\amalg_I v^{\ast}(e'),v^{\ast}Y)\simeq
+\Pi_I\scrHom(v^{\ast}(e'),v^{\ast}Y)\simeq
+\Pi_Iv^{\ast}Y$.\pageoriginale The functorial morphism $\Phi_v$
+therefore induces an isomorphism
+$v^{\ast}\Pi_IY\simeq \Pi_Iv^{\ast}Y$, which one checks is the
+canonical isomorphism. \cqfd
+
+\begin{enonce*}{Corollary 10.7}\etiquette[10.7]{IV.cor10.7}
+Let $E$ be a topos, let $Z$ be an object of $E$, let
+$j_Z:E_{/Z}\rightarrow E$ be the localization morphism
+(\hyperref[IV.subsec5.2]{5.2}), and let $X,Y$ be two objects of $E$.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item There is a bifunctorial isomorphism
+$$
+j^{\ast}_Z\scrHom(X,Y)\simeq \scrHom(j^{\ast}_ZX,
+j^{\ast}_ZY){\quoi}.
+$$
+
+\item Let $X'$ be an object of $E_{/Z}$. There is a bifunctorial
+isomorphism
+$$
+\scrHom_E(j_{Z!}X',Y)\simeq
+j_{Z\ast}\scrHom_{E/Z}(X',j^{\ast}_ZY){\quoi}.
+$$
+
+\item Let $Y'$ be an object of $E/Z$. When $Z$ is open in $E$, there
+is a bifunctorial isomorphism
+$$
+j_{Z\ast}\scrHom(X',Y')\simeq \scrHom(j_{Z\ast}X',
+j_{Z\ast}Y'){\quoi}.
+$$
+\end{enumerate}
+\end{enonce*}
+
+Assertions 1) and 2) are proved by noting that the morphism
+$\Lambda_{j_Z}$ is an isomorphism. For assertion 3), it suffices to
+note that $j_{Z\ast}$ is fully faithful, since $j_{Z!}$ is fully
+faithful (\hyperrefext[I][I.rem5.7]{5.7}. a)).
+
+\begin{enonce*}{Corollary 10.8}\etiquette[10.8]{IV.cor10.8}
+Let $E$ be a topos, let $X$, $Y$, and $Z$ be three objects of $E$,
+and let $j_Z:E_{/Z}\rightarrow E$ be the localization morphism.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item There is a canonical isomorphism
+$$
+j_{Z\ast}j^{\ast}_ZY\simeq \scrHom(Z,Y){\quoi}.
+$$
+
+\item There is a canonical isomorphism
+$$
+\Hom_E(Z,\scrHom(X,Y))\simeq
+\Hom_{E_{/Z}}(j^{\ast}_ZX,j^{\ast}_ZY){\quoi}.
+$$
+\end{enumerate}
+\end{enonce*}
+
+Let $e_Z$ be the final object of $E_{/Z}$ (\ie the object
+$\id_Z:Z\rightarrow Z$). It follows from
+\eqhyperref[IV.eq10.2.1]{10.2.1} that there is a canonical
+isomorphism
+$$
+\scrHom_{E/Z}(e_Z,j^{\ast}_ZY)\simeq j^{\ast}_ZY{\quoi};
+$$
+hence, by (\hyperref[IV.cor10.7]{10.7} 2), an isomorphism
+$$
+j_{Z\ast}j^{\ast}_ZY\simeq \scrHom(j_{Z!}e_Z,Y){\quoi.}
+$$
+Since $j_{Z!}e_Z=Z$, this proves 1). Let us prove 2). From
+(\hyperref[IV.cor10.7]{10.7}) we obtain a canonical\pageoriginale
+isomorphism
+$$
+\Hom_{E_{/Z}}(e_Z,j^{\ast}_Z\scrHom(X,Y))\simeq
+\Hom_{E_{/Z}}(j^{\ast}_ZX,j^{\ast}_ZY){\quoi};
+$$
+hence, by adjunction on the first member,
+$$
+\Hom_E(Z,\scrHom(X,Y))\simeq
+\Hom_{E_{/Z}}(j^{\ast}_ZX,j^{\ast}_ZY){\quoi}.
+$$
+

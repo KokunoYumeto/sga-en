@@ -1,0 +1,295 @@
+\begin{enonce*}{Proposition 8.3.6}\etiquette[8.3.6]{VI.prop8.3.6}
+We use the notation and hypotheses of \hyperref[VI.subsubsec8.3.1]{8.3.1}
+and \hyperref[VI.subsubsec8.3.2]{8.3.2}. If, for every $i\in\ob I$,
+$X\mapsto\Cov(X)$ is a pretopology on $F_i$ \emph{(II \hyperref[II.def1.3]{1.3})}, and if for
+every $X\in\ob F_i$ the covering families in $\Cov(X)$ are finite, then for
+every $Y\in\underrightarrow{F}$ the covering families in $\Cov(Y)$ are
+finite and $Y\mapsto\Cov(Y)$ is a pretopology on $\underrightarrow{F}$.
+\end{enonce*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}\etiquette[8.3.7]{VI.subsubsec8.3.7}
+The only thing to prove is that the families $Y\mapsto\Cov(Y)$ have property
+(PT2) of (II \hyperref[II.def1.3]{1.3}) (stability under composition). Let $i\in\ob I$, let $Y$
+be an object of $F_i$, and let
+$(Y_\alpha\to Y)_{\alpha\in A}\in\Cov(Y)$. In addition, let
+$i_\alpha$, $\alpha\in A$, be a family of objects of $I$; for every
+$\alpha$, let $Z_\alpha$ be an object of $F_i$; and let
+$(Z_{\alpha\beta}\xrightarrow{n_{\alpha\beta}}Z_\alpha)_{\alpha\beta\in
+B_\alpha}$ be a family in $\Cov(Z_\alpha)$. Finally, for every
+$\alpha\in A$, let an isomorphism
+$\phi:\pi(Z_\alpha)\xrightarrow{\sim}\pi(Y_\alpha)$ be given. Returning to
+the definition of the families in $\Cov(X)$ for
+$X\in\ob\underrightarrow{F}$
+(\hyperref[VI.subsubsec8.3.2]{8.3.2}), we see that we must prove that the
+family
+$$
+(\pi (Z_{\alpha \beta}) \xrightarrow{\pi(n_{\alpha}) \circ \phi_{\alpha} \circ
+  \pi(n_{\alpha \beta})} \pi(Y))_{\alpha \beta \in \mathop{\coprod}_A
+  B_{\alpha}}
+$$
+belongs to $\Cov(\pi(Y))$. We shall do this after five reductions.
+
+\setcounter{subsubsection}{7}
+\subsubsection{}\etiquette[8.3.8]{VI.subsubsec8.3.8}
+\emph{Reduction to the case in which, for every $\alpha\in A$, we have}
+$\phi_\alpha=\pi(m_\alpha)$, $m_\alpha:Z_\alpha\to Y_\alpha$.
+\emph{For every $\alpha\in A$, we have
+$\phi_\alpha=\pi(m_\alpha)\pi(s_\alpha)^{-1}$
+$(\hyperref[VI.prop6.5]{6.5})$, where $s_\alpha$ is a Cartesian morphism
+over $f_\alpha:i'_\alpha\to i_\alpha$. Thus there are commutative diagrams}
+\[
+\xymatrix@C=2.5cm@R=1.25cm{
+Z_{\alpha\beta} \ar[d]_{n_{\alpha\beta}} & f^{\ast}(Z_{\alpha\beta})
+\ar[l]_{s_{\alpha\beta}} \ar[d]^{f^{\ast}_{\alpha}(n_{\alpha\beta})}\\
+Z_{\alpha} &   f^{\ast}_{\alpha}(Z_{\alpha}) \ar[l]_{s_{\alpha}},  &
+**[l]\alpha\beta\in \displaystyle{\coprod_A} B_{\alpha},
+}
+\]
+which\pageoriginale give commutative diagrams
+\[
+\xymatrix@C=2.5cm@R=1.25cm@H=.2cm{
+\pi(Z_{\alpha\beta})  \ar[r]^{\sim} \ar[d]^{\pi(n_{\alpha\beta})}&
+\pi(f^{\ast}_{\alpha}(Z_{\alpha\beta})) \ar[d]^{\pi(f^{\ast}_{\alpha}(m_{\alpha\beta}))}\\
+\pi(Z_{\alpha})  \ar[r]^{\displaystyle\mathop{\sim}^{\pi(S_\alpha)^{-1}}} & \pi(f^{\ast}_{\alpha}(Z_{\alpha}))
+\ar[r]^{\pi(m_{\alpha})} & \pi(Y_\alpha),\quad
+\alpha\beta\in \displaystyle{\coprod_A} B_{\alpha}.}
+\]
+Since the families
+$(f^{\ast}_{\alpha}(Z_{\alpha\beta})\xrightarrow{f^{\ast}(n_{\alpha})}
+f^{\ast}(Z_{\alpha}))$ belong to
+$\Cov(f^{\ast}_{\alpha}(Z_{\alpha}))$, we may reduce to the case in which
+$\phi_\alpha=\pi(m_\alpha)$ for every $\alpha$.
+
+\subsubsection{}\etiquette[8.3.9]{VI.subsubsec8.3.9}
+
+\emph{Reduction to the case in which, for every $\alpha\in A$,
+$i_\alpha=j$ and} $p(m_\alpha)=k:j\to i$. Put
+$g_\alpha=p(m_\alpha)$. Since $I$ is cofiltered and $A$ is finite, there
+exist an object $j$ of $I$ and morphisms $h_\alpha:j\to i_\alpha$ such that,
+for every pair $(\alpha,\alpha')$, we have
+$g_\alpha h_\alpha=g_{\alpha'}h_{\alpha'}=k$. Using the inverse-image
+functors $h_\alpha^{\ast}$ as in \hyperref[VI.subsubsec8.3.8]{8.3.8}, we
+reduce to the stated case.
+
+\subsubsection{}\etiquette[8.3.10]{VI.subsubsec8.3.10}
+
+\emph{Reduction to the case in which} $i=j$ and $k:j\to i$ \emph{is the
+identity}. For every $\alpha$, there is a commutative diagram
+\[
+\xymatrix@C=2.5cm@R=1.5cm{
+Z_{\alpha}  \ar[r]^{m'_\alpha} &  k^{\ast}(Y_{\alpha}) \ar[d]_{k^{\ast}(n_{\alpha})}
+\ar[r]^{t_{\alpha}} & Y_{\alpha} \ar[d]^{n_{\alpha}}\\
+                    & k^{\ast}(Y)  \ar[r]^{t} & Y,
+}
+\]
+where the morphisms $t$ and $t_\alpha$, $\alpha\in A$, are Cartesian,
+$m'_\alpha$ lies over the identity of $j$, and
+$t_\alpha\circ m'_\alpha=m_\alpha$. Replacing the family
+$(Y_\alpha\to Y)\alpha\in A$ by the\pageoriginale family
+$(k^{\ast}(Y_\alpha)\to k^{\ast}(Y))_{\alpha\in A}\in
+\Cov(k^{\ast}(Y_\alpha))$, and the morphisms $m_\alpha$ by the morphisms
+$m'_\alpha$, we reduce to the stated case.
+
+\begin{enonce*}{Lemma 8.3.11}\etiquette[8.3.11]{VI.lem8.3.11}
+Let $j$ be an object of $I$ and let $m:X'\to X$ be a morphism of $F_j$ such
+that $\pi(m)$ is an isomorphism. There exists a morphism $\ell:j'\to j$ such
+that $\ell^{\ast}(m)$ is an isomorphism.
+\end{enonce*}
+
+Let us show that there exist a morphism $f:i\to j$ and a morphism
+$q:f^{\ast}(X)\to f^{\ast}(X')$ such that
+$f^{\ast}(m)q=\id_{f^{\ast}(X)}$ and such that $\pi(q)$ is an isomorphism.
+Indeed, there exists an isomorphism $n:\pi(X)\to\pi(X')$ such that
+$\pi(m)\circ n=\id_{\pi(X)}$. There consequently exist
+(\hyperref[VI.prop6.5]{6.5}) two morphisms
+$X\xleftarrow{s_1}Y_1\xrightarrow{q_1}X'$, where $s_1$ is Cartesian, such
+that $n=\pi(q_1)\pi(s_1)^{-1}$. Thus
+$\pi(m)\circ\pi(q_1)=\pi(s_1)$. The morphisms $mq_1$ and $s_1$ from $Y_1$
+to $X$ have the same image in $\underrightarrow{F}$. Consequently (\cf the
+description of the morphisms in the inductive limit
+(\hyperref[VI.prop6.5]{6.5})), there exists a Cartesian morphism
+$s_2:Y_2\to Y_1$ such that $mq_1s_2=s_1s_2$. Put $q_1s_2=q_2$ and denote by
+$s_3$ the Cartesian morphism $s_1s_2$. Thus $mq_2=s_3$. The morphism
+$q_2:Y_2\to X'$ factors in an essentially unique manner as
+$Y_2\xrightarrow{q}Y_3\xrightarrow{s_4}X'$, where $s_4$ is Cartesian and
+$q$ lies over the identity of $p(Y_2)$. Thus there is a commutative diagram
+\[\vcenter{
+\xymatrix@C=2.25cm@R=1.5cm{
+Y_3 \ar[d]_{s_4} & Y_2 \ar[l]_{q}\ar[d]^{s_3}\\
+X'  \ar[r]^{m} & X.          .
+}}\leqno{(8.3.11.1)}
+\]\etiquette[8.3.11.1]{VI.eq8.3.11.1}
+Put $p(s_4)=p(s_3)=f:i\to j$. We have
+$f^{\ast}(X')\simeq Y_3$, $f^{\ast}(X')\simeq Y_2$, and
+$f^{\ast}(m):Y_2\to Y_3$ makes the following diagram commutative:
+\[
+\xymatrix@C=2.25cm@R=1.5cm{
+Y_3  \ar[r]^{f^{\ast}(m)} \ar[d]_{s_4} & Y_2 \ar[d]^{s_3}\\
+X'  \ar[r]^{m} & X.
+}
+\]
+Thus\pageoriginale $s_3=s_3(f^{\ast}(m)\circ q)$; since $s_3$ is Cartesian
+and $f^{\ast}(m)\circ q$ lies over the identity of $p(Y_2)$, we have
+$f^{\ast}(m)\circ q=\id_{Y_2}$. Moreover, the commutativity of diagram
+\eqhyperref[VI.eq8.3.11.1]{8.3.11.1} shows that $\pi(q)$ is an isomorphism.
+
+Now apply the preceding result to the morphism
+$q:f^{\ast}(X)\to f^{\ast}(X')$: there exist a morphism $f':j'\to i$ and a
+morphism $q':f'^{\ast}(X')\to f'^{\ast}(X)$ such that
+$f'^{\ast}(q)q'=\id_{f'^{\ast}(f'^{\ast}(X'))}$. But on putting
+$\ell^{\ast}=ff'$, there is an isomorphism
+$f'^{\ast}f^{\ast}\simeq\ell^{\ast}$. Thus there is a morphism
+$f'^{\ast}(q):\ell^{\ast}(X)\to\ell^{\ast}(X')$ and an isomorphism
+$f'^{\ast}f^{\ast}\simeq\ell^{\ast}$. Thus there is a morphism
+$f'^{\ast}(q):\ell^{\ast}(X)\to\ell^{\ast}(X')$ and a morphism
+$q':\ell^{\ast}(X')\to\ell^{\ast}(X)$ such that
+$\ell^{\ast}(m){f'}^{\ast}(q)=\id_{\ell^{\ast}(X)}$ and
+${f'}^{\ast}(q)q'=\id_{\ell^{\ast}(X')}$. Consequently
+$\ell^{\ast}(m)$ is an isomorphism.
+
+\setcounter{subsubsection}{11}
+\subsubsection{}\etiquette[8.3.12]{VI.subsubsec8.3.12}
+\emph{End of the proof}. Since $I$ is cofiltered and $A$ finite, it follows
+from \hyperref[VI.lem8.3.11]{8.3.11} that there exists an inverse-image
+functor $\ell^{\ast}$ that takes all the morphisms $m_\alpha$,
+$\alpha\in A$, to isomorphisms. We are thus reduced to the case in which the
+$m_\alpha$ are isomorphisms. But then the covering families
+$(Z_{\alpha\beta}\to Z)_{\alpha\beta\in B_\alpha}$ are deduced by the base
+change $m_\alpha:Z_\alpha\to Y_\alpha$ from covering families
+$(Y_{\alpha\beta}\to Y_\alpha)_{\alpha\beta\in B_\alpha}\in
+\Cov(Y_\alpha)$. We are therefore reduced to the case in which
+$Z_\alpha=Y_\alpha$ and $\Phi_\alpha=\id_{\pi(Y_\alpha)}$. But in this case
+the family
+$(Y_{\alpha\beta}\xrightarrow{n_\alpha\circ n_{\alpha\beta}}Y)_{
+\alpha\beta\in\mathop{\coprod}_A B_\alpha}$ belongs to $\Cov(Y)$ (property
+(PT2)). Hence its image under $\pi$ belongs to $\Cov(\pi(Y))$
+(\hyperref[VI.subsubsec8.3.2]{8.3.2}).
+
+\begin{enonce*}{Theorem 8.3.13}\etiquette[8.3.13]{VI.thm8.3.13}
+Let $p:F\to I$ be a $𝒰$-topos fibered over an essentially small cofiltered
+category. If, for every object $i$ of $I$, the fiber topos $F_i$ is coherent
+$(\hyperref[VI.def2.3]{2.3})$, and if, for every morphism $f:i\to j$, the
+morphism of topoi
+$f\bigdot=(f^{\ast},f_{\ast}):F_i\to F_j$ is coherent
+(\hyperref[VI.def3.1]{3.1}), then the topos $\limtop{I}F_i$ is coherent and,
+for every object $i$ of $I$, the canonical morphism of topoi
+$$
+\mu_i : \limtop{I} F_i \to F_i
+$$
+is coherent.
+
+Moreover, if $F_{\coh}$ denotes the full subcategory of $F$ defined by the
+objects of $F$ that are coherent in their fiber
+(\hyperref[VI.def1.13]{1.13}), then the category $F_{\coh}$ is fibered over
+$I$, and $\underrightarrow{F}_{\coh}$ is canonically equivalent to the
+category of coherent objects of $\limtop{I}F_i$.
+\end{enonce*}
+
+For every\pageoriginale $i\in\ob I$, denote by $(F_i)_{\coh}$ the $𝒰$-site
+(endowed with the induced topology) of coherent objects of $F_i$
+(\hyperref[VI.def1.13]{1.13}). Since $F_i$ is coherent, $F_i$ is the topos
+of sheaves on $(F_i)_{\coh}$. For every morphism $f:i\to j$, the morphisms
+$f\bigdot=(f^{\ast},f_{\ast})$ are coherent, and consequently
+$f^{\ast}(F_j)_{\coh}\subset(F_i)_{\coh}$. Thus there is a fibered $𝒰$-site
+$p_{\coh}:F_{\coh}\to I$ whose fiber sites are the sites $(F_i)_{\coh}$ and
+whose associated fibered topos is equivalent to $p:F\to I$. Consequently
+(\hyperref[VI.thm8.2.3]{8.2.3}),
+\begin{equation*}
+\limtop{I, f.} F_i \approxeq
+(\underrightarrow{F}_{\coh})^{\sim}\tag{8.3.13.1}
+\end{equation*}\etiquette[8.3.13.1]{VI.eq8.3.13.1}
+Since the topoi $F_i$ are coherent, finite products and fiber products are
+representable in $(F_i)_{\coh}$ (\hyperref[VI.prop2.2]{2.2}). Moreover, the
+functors $f^{\ast}:(F_i)_{\coh}\to(F_j)_{\coh}$ are left exact. Finally,
+since the objects of $(F_i)_{\coh}$ are quasi-compact, the finite covering
+families form a pretopology. It then follows from
+(\hyperref[VI.lem8.3.4]{8.3.4}) that finite products and fiber products are
+representable in $\varprojlim_{I^{\circ},F}(F_i)_{\coh}$ (addendum to Lemma
+\hyperref[VI.lem8.3.4]{8.3.4}: show that the canonical functors
+$(F_i)_{\coh}\to\underrightarrow{F}_{\coh}$ take the final object to the
+final object), and from (\hyperref[VI.prop8.3.6]{8.3.6}) that the objects of
+$\underrightarrow{F}_{\coh}$ are quasi-compact. Consequently
+(\hyperref[VI.subsubsec2.4.5]{2.4.5}), $\limtop{I}(F_i)$ is coherent.
+Finally, the canonical morphisms
+$\mu_i:\limtop{I}(F_i)\to F_i$ are deduced, by passage to the topoi of
+sheaves, from the morphisms of sites (\hyperref[VI.thm8.2.3]{8.2.3})
+$$
+(F_i)_{\coh} \to \underrightarrow{F}_{\coh}
+$$
+and hence (\hyperref[VI.cor3.3]{3.3}) the morphisms $\mu_i$ are coherent.
+
+Let us prove the last assertion. We have \eqhyperref[VI.eq8.3.13.1]{8.3.13.1}
+$$
+\limtop{ℐ} (F_i) \simeq
+(\underrightarrow{F}_{\coh})^{\sim}{\quoi}.
+$$
+Let $X$ be a coherent object of $(F_{\coh})^{\sim}$. Since $X$ is
+quasi-compact, there exists a finite covering family
+$(Y_\alpha\to X)$, where
+$Y_\alpha\in\ob\underrightarrow{F}_{\coh}$
+(\hyperref[VI.def1.1]{1.1}). On taking an index $i\in\ob I$ sufficiently
+small, we may suppose that the $Y_\alpha$ are the images under
+$\mu_i:F_{i\coh}\to\underrightarrow{F}_{\coh}$ of a family $Y'_\alpha$;
+hence, by taking the direct sum of the $Y'_\alpha$
+(\hyperref[VI.cor1.15]{1.15}), we see that there exist an index $i\in\ob I$,
+an object $Y'\in F_{i\coh}$, and a surjective morphism
+$\mu_i(Y')\to X$. The equivalence relation
+$R=\fprod{\mu_i(Y')}{\mu_i(Y')}{X}$ is then a coherent
+object\pageoriginale because $(\underrightarrow{F}_{\coh})^{\sim}$ is a
+coherent topos (\hyperref[VI.prop2.2]{2.2}). Let us first show that $R$ is an
+object of $\underrightarrow{F}_{\coh}$. By definition, $R$ is a subobject of
+$\mu_i(Y'\times Y')$, and since $R$ is coherent, we may, after changing the
+index $i$, find an arrow $m:Z\to(Y'\times Y')$ of $F_{i\coh}$ such that
+$\text{Im}(\mu_i(m))=R$. It follows that, since $F_i$ is coherent,
+$\text{Im}(m)$ is coherent in $F_i$ (\hyperref[VI.cor1.17.1]{1.17.1}), and
+hence belongs to $F_{i\coh}$. There consequently exist an index $i$ and a
+diagram
+$\def\labelstyle{\scriptstyle} \xymatrix@C=1cm{
+R \ar@<3pt>[r]^{p_1}\ar@<-3pt>[r]_{p_2} & Y'
+}
+$
+of $F_{i\coh}$ such that
+$\def\labelstyle{\scriptstyle}
+\xymatrix@C=1cm{
+  \mu_i(R)\ar@<3pt>[r]^{\mu_i(p_1)} \ar@<-3pt>[r]_{\mu_i(p_2)}& \mu_i(Y')
+}
+$
+is an equivalence relation and such that
+$X=\mu_i(Y')/\mu_i(R)$. Put $X_i=\coker(p_1,p_2)$ and
+$R'=\fprod{Y'}{Y'}{X'_i}$. There is a canonical morphism in $F_i$,
+$u:R\to R'$. Moreover, $\mu_i^{\ast}(u)$ is an isomorphism. Thus, after
+changing the index $i$, we may suppose that $R=R'$, \ie that $R$ is an
+equivalence relation. But then $X_i$ belongs to $F_{i\coh}$
+(\hyperref[VI.cor1.17.1]{1.17.1}), and consequently
+$X=\mu_i(X_i)$ belongs to $\underrightarrow{F}_{\coh}$.
+
+\begin{enonce*}{Corollary 8.3.14}\etiquette[8.3.14]{VI.cor8.3.14}
+Let $I$ be an essentially small cofiltered category, and let $p:F\to I$ and
+$q:G\to I$ be two $𝒰$-topoi fibered over $I$ such that, for every object
+$i$ of $I$, the topoi $F_i$ and $G_i$ are coherent, and such that, for every
+morphism $f:i\to j$, the morphisms $f.:F_i\to F_j$ and $G_i\to G_j$ are
+coherent. In addition, let $m:F\to G$ be a Cartesian morphism of fibered
+$𝒰$-topoi such that, for every $i\in\ob(I)$,
+$m_i:F_i\to G_i$ is coherent. Then the morphism $\underleftarrow{m}$ deduced
+from $m$ by passage to the projective limit is coherent.
+\end{enonce*}
+
+For every object $i$ of $I$, the morphism $m_i$ induces a functor
+$m^{\ast}_{i,\coh}:G_{i,\coh}\to F_{i,\coh}$, whence a Cartesian functor
+$m^{\ast}_{\coh}=G_{\coh}\to F_{\coh}$ that is a morphism from the fibered
+site $F_{\coh}$ to the fibered site $G_{\coh}$ \hyperref[VI.thm7.4.13.1]{(7.4.13)}. The functor
+$\varinjlim_{I^{\circ}}m^{\ast}_{\coh}:
+\varinjlim_{I^{\circ}}G_{\coh}\to\varinjlim_{I^{\circ}}F_{\coh}$ is a
+morphism of sites that, on passage to the corresponding topoi, gives the
+morphism $\underleftarrow{m}$. The assertion then follows from
+\hyperref[VI.thm8.3.13]{8.3.13} and \hyperref[VI.cor3.3]{3.3}.
+
+\begin{enonce*}[remark]{Exercise 8.3.15}\etiquette[8.3.15]{VI.exe8.3.15}
+With the notation of \hyperref[VI.thm8.3.13]{8.3.13}, show that if the $F_i$,
+$i\in I$, are algebraic (\hyperref[VI.def2.3]{2.3}) and if the morphisms
+$f.:F_i\to F_j$, $f\in\text{\rm Fl}(I)$, are coherent,\pageoriginale then
+$\limtop{I}F_i$ is algebraic and
+$(\limtop{I}F_i)_{\coh}\xrightarrow{\sim}\underrightarrow{F}_{\coh}$.
+\end{enonce*}
+

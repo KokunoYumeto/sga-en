@@ -1,0 +1,39 @@
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\providecommand{\SGARefTarget}[1]{\phantomsection\label{#1}}
+\providecommand{\SGARefLink}[2]{%
+  \ifcsname r@#1\endcsname
+    \hyperref[#1]{#2}%
+  \else
+    #2%
+  \fi
+}
+
+\newcommand{\SGAThreeNativeInput}[2][0.92\textwidth]{%
+  \begin{adjustbox}{max width=#1,center,varwidth=\maxdimen}%
+    \input{#2}%
+  \end{adjustbox}%
+}
+
+\newcommand{\SGAThreeNativeDiagram}[5][0.92\textwidth]{%
+  \begin{figure}[H]
+    \centering
+    \SGAThreeNativeInput[#1]{#2}%
+    \caption{#3}
+    \label{#4}
+    \par\smallskip
+    {\footnotesize\itshape Native \TeX{} reconstruction; source locator: #5.}
+  \end{figure}%
+}

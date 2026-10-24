@@ -1,0 +1,208 @@
+\begin{enonce*}{Lemma 3.1}\etiquette[3.1]{II.lem3.1}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item For every covering sieve $i_R:R\hookrightarrow X$ and every
+$u:R\rightarrow F$, the diagram
+\[\vcenter{
+\xymatrix@L=5pt@R=1.35cm@C=3.5cm@M=.2cm{
+F\ar[r]^{\ell(F)} & LF\\
+R\ar[u]^{u}\ar@{^{(}->}_{i_R}[r] & X \ar[u]_{Z_R(u)} }}\leqno{(**)}
+\]
+is commutative.
+
+\item For every morphism $v:X\rightarrow LF$, there exists a covering
+sieve $R$ of $X$ and a morphism $u:R\rightarrow F$ such that
+$Z_R(u)=v$.
+
+\item Let $Y$ be an object of $C$, and let
+$u,v:Y\rightrightarrows F$ be two morphisms such that
+$\ell(F)\circ u=\ell(F)\circ v$. Then the kernel of the pair $(u,v)$
+is a covering sieve of $Y$.
+
+\item Let $R,R'$ be two covering sieves of $X$, and let
+$u:R\rightarrow F$, $u':R'\rightarrow F$ be two morphisms. For
+$Z_R(u)=Z_{R'}(u')$, it is necessary and sufficient that $u$ and $u'$
+coincide on a covering sieve $R''\hookrightarrow R\times_XR'$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The only nontrivial assertion is assertion 1). We must show that
+$Z_R(u)\circ i_R=\ell(F)\circ u$. For this it suffices to show
+(\hyperrefext[I][I.prop3.4]{3.4}) that the composites of these
+morphisms with every morphism $Y\xrightarrow{g}R$ ($Y$ an object
+of\pageoriginale $C$) are equal. Consider $f=i_R\circ g$ and the fiber
+product $R\times_XY$:
+\[\vcenter{
+\xymatrix@L=5pt@R=1cm@C=3.5cm@M=.2cm{
+F  \ar[r]^{\ell(F)}   & LF \\
+R \ar[u]^{u}        \ar@{^{(}->}_{i_R}[r]  & X \ar[u]_{Z_R(u)} \\
+\fprod{R}{Y}{X} \ar[u]^{g'} \ar[r]^(.35){\sim}_{i'} & Y
+\ar[lu]^{g}\ar[u]_{f}. }}
+\]
+
+In the diagram above, $i'$ is a monomorphism admitting a section.
+Consequently (\hyperref[II.def1.3]{1.3} 3) $i'$ is an isomorphism. By
+the definition of the morphism $\ell(F)$, the morphism
+$Z_{R\times_XY}(u\circ g')$ is equal to $\ell(F)\circ u\circ g$. On
+the other hand, the commutativity of diagram (*) gives the equality
+$Z_{R\times_XY}(u\circ g')=Z_R(u)\circ f$, and hence one indeed has
+$\ell(F)\circ u\circ g=Z_R(u)\circ i_R\circ g$.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 3.2}\etiquette[3.2]{II.prop3.2}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $L$ is left exact
+{\rm(\hyperrefext[I][I.cor2.3.2]{2.3.2}).}
+
+\item For every presheaf $F$, $LF$ is a separated presheaf.
+
+\item The presheaf $F$ is separated if and only if the morphism
+$\ell(F):F\rightarrow LF$ is a monomorphism. The presheaf $LF$ is then
+a sheaf.
+
+\item The following properties are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumii}{\roman{enumii}}
+\renewcommand{\labelenumii}{(\theenumii)}
+\item $\ell(F):F\rightarrow LF$ is an isomorphism.
+
+\item $F$ is a sheaf.
+\end{enumerate}
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item It suffices to show (\hyperrefext[I][I.prop3.1]{3.1}) that, for
+every object $X$ of $C$, the functor $F\mapsto LF(X)$ commutes with
+finite projective limits. By the definition of a projective limit, the
+functor
+$$
+F\longmapsto \Hom_{C^{\widehat{\phantom{,}}}}(R,F)\quad
+R\hookrightarrow X\in \ob(J(X))
+$$
+commutes\pageoriginale with projective limits, and the inductive limit
+$\varinjlim_{J(X)}$ commutes with finite projective limits because
+$J(X)$ is a cofiltered set (\hyperrefext[I][I.def2.7]{2.7}).
+
+\item Let $X$ be an object of $C$, and let
+$f,g:X\rightrightarrows LF$ be two morphisms that coincide on a
+covering sieve $R\hookrightarrow X$ of $X$. By
+\hyperref[II.lem3.1]{3.1}\quad 2), there exists a covering sieve
+$R'\hookrightarrow X$, which may always be supposed contained in $R$,
+and two morphisms $u,v:R'\rightrightarrows F$ such that
+$Z_{R'}(u)=f$ and $Z_{R'}(v)=g$. By
+\hyperref[II.lem3.1]{3.1} 1), one then has
+$\ell(F)\circ u=\ell(F)\circ v$. Consequently
+(\hyperref[II.lem3.1]{3.1} 4)) $u$ and $v$ coincide on a covering
+sieve $R''\hookrightarrow R'$. Let $w$ be the restriction of $u$ to
+$R''$. One has $Z_{R''}(w)=Z_{R'}(u)=Z_{R'}(v)$, and consequently
+$f=g$. Thus the presheaf $LF$ is separated.
+
+\item If $F$ is separated, the morphism $\ell(F)$ is a monomorphism
+because a filtered inductive limit of monomorphisms is a monomorphism.
+If $\ell(F)$ is a monomorphism, the presheaf $F$ is a subpresheaf of a
+separated presheaf, and therefore is separated. Let us show that $LF$
+is then a sheaf. Let $i:R\hookrightarrow X$ be a sieve covering an
+object $X$ of $C$, and let $u:R\rightarrow LF$ be a morphism. It
+suffices to show that $u$ factors through $X$. Put
+$R'=\fprod{F}{R}{LF}$ and $v=Z_{R'}(\pr_1)$:
+\[
+\xymatrix@L=5pt@R=1cm@C=1.5cm{
+F \ar[rr]^{\ell(F)}               && LF                      &\\
+R' \ar[u]^{\pr_1} \ar[rr]^{\pr_2}   && R \ar[r]^{i} \ar[u]_{u} & X \ar@{-}[lu]_{v}\\
+R''\ar[u]^{p_1} \ar[rr]^{p_2}     && Y  \ar[u]_{m}               &
+\quad . }
+\]
+To\pageoriginale show that $u=v\circ i$, it suffices to show (I \hyperref[I.prop3.4]{3.4})
+that for every morphism $m:Y\rightarrow R$ ($Y$ an object of $C$),
+$v\circ i\circ m=u\circ m$. Put $R''=Y\times_RR'$, and let $p_1,p_2$
+be the projections. The projection
+$\xymatrix@M=5pt{R''\ar@{^{(}->}[r]^{p_2}&Y}$ is a monomorphism and
+makes $R''$ a covering sieve of $Y$ (\hyperref[II.lem3.1]{3.1} 2)).
+One has $v\circ i\circ\pr_2=\ell(F)\circ\pr_1$
+(\hyperref[II.lem3.1]{3.1} 1)), and hence
+$v\circ i\circ\pr_2=u\circ m\circ p_2$. It follows that
+$v\circ i\circ\pr_2\circ p_1=u\circ\pr_2\circ p_1$, \ie
+$v\circ i\circ m\circ p_2=u\circ m\circ p_2$. Since the presheaf
+$LF$ is separated, one has $v\circ i\circ m=u\circ m$, \cqfd
+
+\item Clear.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 3.3}\etiquette[3.3]{II.rem3.3}
+Let $J'(X)$ be a cofinal subset of $J(X)$. One has
+$$
+LF(X)=\varinjlim_{J'(X)}\Hom_{C^{\widehat{\phantom{,}}}}(.,F){\quoi}.
+$$
+
+In particular, if the topology of $C$ is defined by a pretopology
+$X\mapsto\Cov(X)$ (\hyperref[II.subsubsec1.1.3]{1.1.3}), the functor
+$L$ can be described using the covering families of $\Cov(X)$
+(\hyperrefext[I][I.prop2.12]{2.12} and
+\hyperrefext[I][I.cor3.5]{3.5}). Writing the formulas explicitly, one
+recovers the construction of [
+\end{enonce*}
+
+\begin{enonce*}{Theorem 3.4}\etiquette[3.4]{II.theo3.4}
+Let $C$ be a $𝒰$-site. The inclusion functor
+$i:C^{\widetilde{\phantom{,}}}\hookrightarrow
+C^{\widehat{\phantom{,}}}$ from sheaves into presheaves admits a left
+adjoint $\underline{a}$, which is left exact
+(\hyperrefext[I][I.cor2.3.2]{2.3.2}):
+\[
+\xymatrix@=3cm@M=.2cm{
+ \widetilde{C}  \ar @{^{(}->} @<-1ex>[r]_{i} & C^{\widehat{\phantom{,}}} \ar@<-1ex>[l]_{\underline{a}}
+\qquad .}
+\]
+
+The functor $i\circ\underline{a}$ is canonically isomorphic to the
+functor $L\circ L$ (cf. \hyperref[II.subsubsec3.0.5]{3.0.5}). For
+every presheaf $F$, the adjunction morphism
+$F\rightarrow i\circ\underline{a}(F)$ is deduced, via the preceding
+isomorphism, from the morphism
+$\ell(LF)\ell(F):F\rightarrow L\circ L(F)$.
+\end{enonce*}
+
+\begin{enonce*}{Definition 3.5}\etiquette[3.5]{II.def3.5}
+The\pageoriginale sheaf $\underline{a}F$ is called the sheaf associated
+with the presheaf $F$.
+\end{enonce*}
+
+Theorem \hyperref[II.theo3.4]{3.4} follows immediately from Proposition
+\hyperref[II.prop3.2]{3.2}.
+
+\begin{enonce*}{Proposition 3.6}\etiquette[3.6]{II.prop3.6}
+Let $C$ be a $𝒰$-site and let $𝒱\supset𝒰$ be a universe. Denote by
+$C^{\widehat{\phantom{,}}}_{𝒰}$ and
+$C^{\widetilde{\phantom{,}}}_{𝒰}$ (respectively
+$C^{\widehat{\phantom{,}}}_{𝒱}$ and
+$C^{\widetilde{\phantom{,}}}_{𝒱}$) the categories of $𝒰$-presheaves
+and $𝒰$-sheaves (respectively $𝒱$-presheaves and $𝒱$-sheaves), and
+$\underline{a}_{𝒰}:C^{\widehat{\phantom{,}}}_{𝒰}\rightarrow
+C^{\widetilde{\phantom{,}}}_{𝒰}$ (respectively
+$\underline{a}_{𝒱}:C^{\widehat{\phantom{,}}}_{𝒱}\rightarrow
+C^{\widetilde{\phantom{,}}}_{𝒱}$) the corresponding ``associated
+sheaf'' functors. The diagram
+\[
+\xymatrix@C=3.5cm@R=1.25cm{ C^{\widehat{\phantom{a}}}_{U}
+\ar[r]^{\underline{a}_{\underline{U}}}
+\ar @{_{(}->}[d]& C^{\widetilde{\phantom{a}}}_{\underline{U}}\ar @{_{(}->}[d]\\
+C^{\widehat{\phantom{a}}}_{\underline{V}}
+\ar[r]^{\underline{a}_{\underline{V}}} &
+C^{\widetilde{\phantom{a}}}_{\underline{V}} , }
+\]
+where the vertical functors are the canonical inclusions, is
+commutative up to canonical isomorphism.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+This follows from the construction of the functors $\underline{a}_U$
+and $\underline{a}_V$ (\hyperref[II.theo3.4]{3.4} and
+\hyperref[II.subsubsec3.0.5]{3.0.5}).
+\end{enonce*}
+

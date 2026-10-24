@@ -1,0 +1,169 @@
+
+\paragraph{\textbf{Theorem 1.5.}}
+\SGARefTarget{sga3:xx:1.5}
+\emph{Let \((G,T,\alpha)\) be an \(S\)-elementary system.}
+\begin{enumerate}
+\item[\textup{\SGAInlineRefTarget{sga3:xx:1.5:item:i}(i)}] \emph{There exists a unique morphism of groups
+  with operator group \(T\)
+  \[
+    \exp\colon W(\mathfrak g^\alpha)\longrightarrow G
+  \]
+  whose induced morphism on Lie algebras is the canonical map
+  \(\mathfrak g^\alpha\to\mathfrak g\).\footnote{It will be seen
+  below, in \SGARefLink{sga3:xx:5.9}{Corollary 5.9}, that \(\exp\) is an isomorphism from
+  \(W(\mathfrak g^\alpha)\) onto a closed subgroup of \(G\).}
+  Equivalently, \(\exp\) is the unique morphism such that, for every
+  \(S'\to S\), \(t\in T(S')\), and
+  \(X,X'\in W(\mathfrak g^\alpha)(S')\),
+  \[
+  \begin{aligned}
+    \exp(X+X')&=\exp(X)\exp(X'),\\
+    \intaut(t)\bigl(\exp(X)\bigr)&=\exp\bigl(\alpha(t)X\bigr),\\
+    \Lie(\exp)(X)&=X.
+  \end{aligned}
+  \]}
+\item[\textup{\SGAInlineRefTarget{sga3:xx:1.5:item:ii}(ii)}] \emph{Define analogously, in the
+  \(S\)-elementary system \((G,T,-\alpha)\),
+  \[
+    \exp\colon W(\mathfrak g^{-\alpha})\longrightarrow G.
+  \]
+  Then the morphism
+  \[
+    W(\mathfrak g^{-\alpha})\times_S T
+      \times_S W(\mathfrak g^\alpha)\longrightarrow G,
+    \qquad
+    (Y,t,X)\longmapsto \exp(Y)\,t\,\exp(X),
+  \]
+  defined on points by the displayed formula, is an open
+  immersion.}
+\end{enumerate}
+
+Suppose for the moment that the required exponential morphisms
+exist, and prove the other assertions. We first prove \textup{\SGARefLink{sga3:xx:1.5:item:ii}{(ii)}}.
+Both sides are of finite presentation and flat over \(S\), so it is
+enough to work when \(S\) is the spectrum of an algebraically closed
+field \textup{(SGA 1, I 5.7 and VIII 5.5)}. Put \(S=\Spec(k)\), and
+choose
+\[
+  X\in\Gamma(S,\mathfrak g^\alpha)^\times,
+  \qquad
+  Y\in\Gamma(S,\mathfrak g^{-\alpha})^\times.
+\]
+It is enough to prove that
+\[
+  \mathbb G_{a,k}\times_k T\times_k\mathbb G_{a,k}
+    \longrightarrow G,
+  \qquad
+  (y,t,x)\longmapsto \exp(yY)\,t\,\exp(xX),
+\]
+is an open immersion. By \SGARefLink{sga3:xx:section:1}{1.1} and \SGARefLink{sga3:xx:1.2}{1.2}, there exist \(a,b\in k\)
+such that
+\[
+  \exp(yY)=p_{-\alpha}(ay),
+  \qquad
+  \exp(xX)=p_\alpha(bx).
+\]
+Since
+\(\exp\colon W(\mathfrak g^{-\alpha})\to G\) induces a monomorphism
+on Lie algebras, \(a\neq0\); likewise \(b\neq0\). The assertion is
+therefore reduced to \SGARefLink{sga3:xx:section:1}{1.1}.
+
+The uniqueness of \(\exp\) may be proved locally on \(S\). We reduce
+to the case in which \(\mathfrak g^\alpha\) and
+\(\mathfrak g^{-\alpha}\) are free, and then apply \SGARefLink{sga3:xx:1.2}{1.2} with
+\(Q=T\) and \(q=1\).
+
+It remains to prove existence. Faithfully flat descent, together
+with the uniqueness just proved, shows that it is enough to prove
+existence locally on \(S\) for the fpqc topology. The usual
+finite-presentation arguments reduce first to \(S\) noetherian and
+then to \(S\) noetherian local. We may therefore assume that
+\[
+  S=\Spec(A),
+\]
+where \(A\) is a complete noetherian local ring with algebraically
+closed residue field \(k\). Let
+\[
+  p_0\colon\mathbb G_{a,k}\longrightarrow G_k
+\]
+be a monomorphism of \(k\)-groups normalized by \(T_k\), with
+multiplier
+\(\alpha_0=\alpha\otimes_A k\); such a morphism exists by \SGARefLink{sga3:xx:section:1}{1.1}.
+By \SGARefLink{sga3:xx:section:1}{1.1} and \SGARefLink{sga3:xx:1.2}{1.2}, the associated morphism
+\[
+  T_k\mathbin{\cdot_{\alpha_0}}\mathbb G_{a,k}
+    \longrightarrow G_k
+\]
+is an immersion and hence, in particular, a monomorphism. We
+provisionally admit the following two lemmas.
+
+\paragraph{\textbf{Lemma 1.6.}}
+\SGARefTarget{sga3:xx:1.6}
+\emph{Let \(S\) be a scheme, \(G\) an \(S\)-group of finite
+presentation, \(T\) an \(S\)-torus, \(\alpha\) a character of \(T\)
+that is nontrivial on every fiber, and \(s_0\in S\). Let
+\[
+  f\colon T\mathbin{\cdot_\alpha}\mathbb G_{a,S}\longrightarrow G
+\]
+be an \(S\)-group morphism such that \(f_{s_0}\) is a monomorphism
+and the restriction of \(f\) to \(T\) is a monomorphism. There
+exists an open neighborhood \(U\) of \(s_0\) such that
+\(f|_U\) is a monomorphism.}
+
+\paragraph{\textbf{Lemma 1.7.}}
+\SGARefTarget{sga3:xx:1.7}
+\emph{Let \(A\) be a complete noetherian local ring with
+algebraically closed residue field \(k\), let
+\((G,T,\alpha)\) be an \(A\)-elementary system, and let
+\[
+  p_0\colon\mathbb G_{a,k}\longrightarrow G_k
+\]
+be a morphism of \(k\)-groups normalized by \(T_k\), with
+multiplier \(\alpha\otimes_A k\). There exists a group morphism
+\[
+  p\colon\mathbb G_{a,A}\longrightarrow G
+\]
+normalized by \(T\), with multiplier \(\alpha\).}
+
+Let \(p\) be the morphism asserted by \SGARefLink{sga3:xx:1.7}{1.7}, and let
+\[
+  f\colon T\mathbin{\cdot_\alpha}\mathbb G_{a,S}\longrightarrow G
+\]
+be the corresponding morphism. It satisfies the hypotheses of \SGARefLink{sga3:xx:1.6}{1.6},
+so it is a monomorphism; in particular, \(p\) is a monomorphism.
+The theorem now follows from \SGARefLink{sga3:xix:corollary:4:9}{Exposé XIX, 4.9}.
+
+\medskip
+\noindent\emph{Proof of \SGARefLink{sga3:xx:1.6}{1.6}.}
+Let
+\[
+  \epsilon\colon S\longrightarrow
+    T\mathbin{\cdot_\alpha}\mathbb G_{a,S}
+\]
+be the identity section. Since \(f\) is unramified at
+\(\epsilon(s_0)\), it is unramified at \(\epsilon(s)\) for all
+\(s\) in an open neighborhood \(U\) of \(s_0\). Hence \(f|_U\) is
+unramified \textup{(\SGARefLink{sga3:x:lemma:3:5}{Exposé X, 3.5})},\footnote{See also Exposé
+VI\(_B\), \SGARefLink{sga3:xx:2.5}{2.5}.} and its kernel \(\Ker(f)_U\) is unramified over
+\(U\). To prove that \(f|_U\) is a monomorphism, it is therefore
+enough\footnote{By EGA IV\(_4\), 17.9.1.} to prove that
+\(\Ker(f)_U\) is radicial over \(U\), which is a set-theoretic
+question. We are reduced to the following assertion.
+
+\paragraph{\textbf{Lemma 1.8.}}
+\SGARefTarget{sga3:xx:1.8}
+\emph{Let \(k\) be an algebraically closed field, and let \(N\) be
+an invariant subgroup of
+\(T\mathbin{\cdot_\alpha}\mathbb G_{a,k}\), where \(\alpha\) is a
+nontrivial character of the torus \(T\). Suppose that \(N\) is
+étale over \(k\) and that \(N\cap T=\{e\}\). Then \(N=\{e\}\).}
+
+We have
+\[
+  \intaut(t')(t,x)=\bigl(t,\alpha(t')x\bigr).
+\]
+If \((t,x)\) is a point of \(N\) with \(x\neq0\), then
+\((t,zx)\) is also a point of \(N\) for every \(z\in k^\times\).
+Thus \((t,x)\) is not isolated, contradicting the quasi-finiteness
+of \(N\). Set-theoretically, therefore, \(N\subset T\), and the
+hypothesis \(N\cap T=\{e\}\) completes the proof.

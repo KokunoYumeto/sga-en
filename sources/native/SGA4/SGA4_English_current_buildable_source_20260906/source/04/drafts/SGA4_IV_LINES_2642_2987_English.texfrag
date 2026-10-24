@@ -1,0 +1,342 @@
+\section{Induced topos}\etiquette[5]{IV.sec5}
+
+\subsection{}\etiquette[5.1]{IV.subsec5.1}
+Let $E$ be a topos and $X$ an object of $E$. Then the category
+$E_{/X}$ of objects of $E$ over $X$ is a topos, as follows, for
+example, immediately from Giraud's criterion
+\hyperref[IV.theo1.2]{1.2} ii). Alternatively, by \hyperref[IV.cor1.2.1]{1.2.1},
+one may realize $E$ as a category of sheaves $C^{\sim}$, where
+$C$ is a generating subcategory\pageoriginale of $E$ that may be
+chosen so that $X\in \ob C$; one then knows that
+$E_{/X}=C^{\sim}_{/X}$ is equivalent to $(C_{/X})^{\sim}$
+(\hyperrefext[III][III.prop5.4]{5.4}), and hence is a topos.
+
+The topos $E_{/X}$ is called the \emph{topos induced} on the object
+$X$ of $E$.
+
+\subsection{}\etiquette[5.2]{IV.subsec5.2}
+We shall define a canonical morphism of topoi
+\begin{equation*}
+j_X:E_{/X}\longrightarrow E{\quoi},\tag{5.2.1}
+\end{equation*}\etiquette[5.2.1]{IV.eq5.2.1}
+which is called the \emph{inclusion morphism} of the induced topos
+$E_{/X}$ into the ambient topos $E$, or, better (\cf
+\hyperref[IV.subsec5.7]{5.7}), the \emph{localization morphism of $E$ at $X$.}
+This morphism corresponds to a sequence of three adjoint functors
+(\cf \hyperref[IV.subsubsec3.1.3]{3.1.3})
+\begin{equation*}
+j_{X!}\quav j^{\ast}_X\quav j_{X^{\ast}}{\quoi},\tag{5.2.2}
+\end{equation*}\etiquette[5.2.2]{IV.eq5.2.2}
+which may be described explicitly as follows:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor
+$$
+j_{X!}:E_{/X}\longrightarrow E
+$$
+is the functor that \emph{forgets the structural arrow} from
+$E_{/X}$ to $E$.
+
+\item The functor
+$$
+j^{\ast}_X:E\longrightarrow E_{/X}
+$$
+is defined by
+$$
+j^{\ast}_X(Z)=(X\times Z, \pr_1){\quoi},
+$$
+where $\pr_1:X\times Z\rightarrow X$ is the first projection. It
+may also be interpreted as the \emph{base-change functor} relative
+to the morphism
+$$
+X\longrightarrow e_E{\quoi},
+$$
+where $e_E$ is the terminal object of $E$. By the definition of
+the base-change functor, it is immediate that $j^{\ast}_X$ is
+indeed right adjoint to $j_{X!}$. In particular, it commutes with
+projective limits. It also commutes with inductive
+limits,\pageoriginale by virtue of the special exactness properties
+of topoi (\hyperrefext[II][II.sec4]{4}).
+
+\item It follows from this last fact (\hyperref[IV.cor1.6]{1.6}) that $j^{\ast}_X$
+has a right adjoint
+$$
+j_{X^{\ast}}:E_{/X}\longrightarrow E{\quoi}.
+$$
+For an object $X'$ over $X$, the object $j_{X^{\ast}}(X')$ is also
+sometimes denoted by one of the symbols $\prod_{X/e_E}(X'/X)$,
+$\Hhom_{X/e_E}(X,X')$, or $\Res_{X/e_E}(X'/X)$ (``Weil
+restriction''), one or another of which is doubtless already
+familiar to the learned reader of our modest work.
+\end{enumerate}
+
+\subsection{}\etiquette[5.3]{IV.subsec5.3}
+One should note that the functor $j_{X!}$ commutes with fiber
+products and takes monomorphisms to monomorphisms, but it is not in
+general left exact for all that. It is left exact only if $X$ is a
+terminal object of $E$ (since $X=j_{X!}(X,\id_X)$ and
+$(X,\id_X)$ is a terminal object of $E_{/X}$), that is, if and only
+if $j_X$ is in fact an equivalence of topoi (and hence all the
+functors in \eqhyperref[IV.eq5.2.2]{5.2.2} are equivalences).
+\footnote[1]{For a commutation property of $j_{X!}$ under change of
+topos, \cf XVII \hyperref[XVII.lem5.1.2]{5.1.2}.}
+
+Likewise, the functor $j_{X^{\ast}}$ is not in general right exact
+and does not necessarily take epimorphisms to epimorphisms.
+
+It follows from these observations that the direction of the
+morphism of topoi relating $E_{/X}$ to $E$, for an object $X$ of the
+topos $E$, is determined without any possible ambiguity.
+
+\subsection{}\etiquette[5.4]{IV.subsec5.4}
+The functor $j^{\ast}_X$ is often called the \emph{localization
+functor} or the \emph{restriction functor}. The latter terminology
+is justified by identifying the objects of $E$ \resp of $E_{/X}$
+with the sheaves on $E$ \resp on $E_{/X}$ (\hyperref[IV.theo1.2]{1.2}
+iii)), and observing that, under this identification, the adjunction
+formula between $j_{X!}$ (the forgetful functor) and $j^{\ast}_X$
+may be interpreted as saying that $j^{\ast}_X(F)$ \emph{is\pageoriginale
+the restriction to $E_{/X}$ of the sheaf $F$ on $E$} (where
+``restriction'' is understood in the generalized sense: composition
+with the ``inclusion'' functor $j_{X!}:E_{/X}\rightarrow E$).
+In accordance with notation familiar from other contexts, we shall
+also often write, interchangeably:
+\begin{equation*}
+j^{\ast}_X(F)=F| X=F_X=\mbox{ restriction of } F\mbox{ to }
+X{\quoi}.\tag{5.4.1}
+\end{equation*}\etiquette[5.4.1]{IV.eq5.4.1}
+
+Likewise, when $E$ is of the form $C^{\sim}$, where $C$ is a
+(small) site, and $X$ is of the form $\epsilon(S)$ with $S\in
+\ob C$, so that one has the equivalence of categories recalled in
+\hyperref[IV.subsec5.1]{5.1}
+$$
+E_{/X}=C^{\sim}_{/\epsilon(S)}\xrightarrow{\approx}(C_{/S})^{\sim}
+$$
+(where $C_{/S}$ is endowed with the topology induced by that of
+$C$), the functor $j^{\ast}_X$ is identified simply with the functor
+that ``restricts'' a variable sheaf $F$ on $C$ to the category
+$C_{/S}$.
+
+These considerations also make it possible to foresee the important
+role that induced topoi and the localization morphisms
+\eqhyperref[IV.eq5.2.1]{5.2.1} will play in all questions in which one is led
+to argue by ``localization on $E$'' (\cf 8), that is, in practically
+all questions involving sites or topoi.
+
+\subsection{}\etiquette[5.5]{IV.subsec5.5}
+Let
+$$
+f:X\longrightarrow Y
+$$
+be an arrow of $E$, which thus allows us to regard $X$ (or, more
+correctly, $(X,f)$) as an object of $E_{/Y}$. It is clear that there
+is a canonical isomorphism
+\begin{equation*}
+(E_{/Y})_{/X}\xrightarrow{\sim}E_{/X}\tag{5.5.1}
+\end{equation*}\etiquette[5.5.1]{IV.eq5.5.1}
+(\emph{transitivity of induced topoi}). Applying the construction of
+\hyperref[IV.subsec5.1]{5.1} to $E_{/Y}$ in place of $E$, one therefore
+obtains a canonical morphism of topoi
+\begin{equation*}
+\loc(f)\mbox{ or } f:E_{/X}\longrightarrow E_{/Y}{\quoi},\tag{5.5.2}
+\end{equation*}\etiquette[5.5.2]{IV.eq5.5.2}
+also called the\pageoriginale \emph{localization morphism
+(associated with $f$).} When $Y$ is the terminal object of $E$, one
+essentially recovers \eqhyperref[IV.eq5.2.1]{5.2.1}. The localization morphism
+for $f$ is associated with a sequence of three adjoint functors
+\begin{equation*}
+f_{!}\quav f^{\ast}\quav f_{\ast}{\quoi},\tag{5.5.3}
+\end{equation*}\etiquette[5.5.3]{IV.eq5.5.3}
+which may be interpreted respectively as a forgetful functor, a
+restriction functor, and a functor denoted, according to preference
+(with $X'$ as argument), by $\prod_{X/Y}(X'/X)$,
+$\Hhom_{X/Y}(X,X')$, or $\Res_{X/Y}(X'/X)$.
+
+\subsection{}\etiquette[5.6]{IV.subsec5.6}
+The transitivity of the forgetful functors implies that, for two
+composable morphisms
+$$
+X\xrightarrow{f} Y \xrightarrow{g} Z
+$$
+of $E$, there is a canonical isomorphism of morphisms of topoi
+$$
+\loc(gf)\simeq \loc(g)\loc(f):E_{/X}\longrightarrow
+E_{/Y}\longrightarrow E_{/Z}{\quoi}.
+$$
+Moreover, for three composable morphisms, the preceding transitivity
+isomorphisms satisfy the usual compatibility relation. Thus, subject
+to the customary abuse of language, this allows one to regard
+$$
+X\longmapsto E_{/X}
+$$
+as a covariant functor from $E$ to the category
+($𝒱$-$𝒰$-$\text{top}$) (\hyperref[IV.subsubsec3.3.1]{3.3.1}).
+More precisely, one obtains a 2-functor (not strict in general) from
+$E$ to the 2-category ($𝒱$-$𝒰$-$\text{top}$).
+
+Before continuing with the general theory of induced topoi
+(\hyperref[IV.subsec5.10]{5.10}), let us give a few instructive examples.
+
+\subsection{}\etiquette[5.7]{IV.subsec5.7}
+Let\pageoriginale $X$ be a topological space, and hence let
+$\Top(X)$ be a topos (\hyperref[IV.subsec2.1]{2.1}). Let $X'$ be an object
+of $\Top(X)$, which it will be convenient to interpret as an
+\'etale space over $X$, $p:X'\rightarrow X$. The category
+$\Top(X)_{/X'}$ is then identified with the category of \'etale
+spaces $X''$ over $X$, equipped with an $X$-morphism
+$X''\rightarrow X'$. It is known that such a morphism makes $X''$
+an \'etale space over $X'$, and in this way one obtains a canonical
+equivalence of topoi
+$$
+\Top(X)_{/X'}\xrightarrow{\approx} \Top(X'){\quoi}.
+$$
+The localization morphism is therefore identified with a morphism
+of topoi $\Top(X')\rightarrow \Top(X)$, and one sees immediately
+that the latter is none other than the morphism
+$$
+\Top(p):\Top(X')\longrightarrow \Top(X)
+$$
+associated with the structural continuous map $p:X'\rightarrow X$.
+Intuitively, the localization morphism is thus simply the translation,
+into the language of topoi, of the \'etale map $p:X'\rightarrow X$.
+This both explains the appropriateness of the term ``localization
+morphism'' and counsels caution in using the term ``inclusion
+morphism'', which seems chiefly appropriate when $p$ is an open
+immersion. It will consequently be prudent in
+\hyperref[IV.subsec5.1]{5.1} to reserve the term ``inclusion morphism'' for
+the case where the morphism $X\rightarrow e_E$ is a monomorphism,
+\ie where $X$ is identified with a subobject of the terminal object
+of $E$.
+
+\subsection{}\etiquette[5.8]{IV.subsec5.8}
+Let $E$ be a topos, $G$ a group in $E$, and $H$ a subgroup of $G$,
+and let
+$$
+X=G/H
+$$
+be the quotient homogeneous space, regarded as an object of $E$
+with a left action by $G$, \ie as an object of the classifying topos
+$B_G$ (\hyperref[IV.subsec2.4]{2.4}). We\pageoriginale shall determine the
+induced topos
+$$
+(B_G)_{/X}\quad (X=G/H){\quoi},
+$$
+by defining an equivalence of topoi
+\begin{equation*}
+c:B_H \xrightarrow{\approx} (B_G)_{/X}{\quoi},\tag{5.8.1}
+\end{equation*}\etiquette[5.8.1]{IV.eq5.8.1}
+such that the following diagram commutes up to canonical
+isomorphism:
+\[\vcenter{
+\xymatrix@C=2cm{ B_H \ar[r]^{c} \ar[r] \ar
+@{^{(}->}@<-9pt>[rr]_{B_i}& {(B_{G})_{/X}} \ar[r]^{j_X}& B_G
+}}\leqno{(5.8.2)}
+\]\etiquette[5.8.2]{IV.eq5.8.2}
+where $j_X$ is the localization morphism in $B_G$, and where
+$$
+B_i:B_H\longrightarrow B_G
+$$
+is the morphism deduced from the inclusion $i:H\rightarrow G$
+(\hyperref[IV.subsec4.5]{4.5}).
+
+To define \eqhyperref[IV.eq5.8.1]{5.8.1}, we shall simply give the
+descriptions of the inverse-image functor $c^{\ast}$ and the
+direct-image functor $c_{\ast}$, leaving it to the reader to verify
+that these are indeed quasi-inverse equivalences and give rise to
+the commutative diagram \eqhyperref[IV.eq5.8.2]{5.8.2} of morphisms of
+topoi. Let $e$ be the subobject of $E$ underlying $X$, the image of
+the section of $X$ (over a chosen terminal object $e_E$ of $E$)
+deduced from the unit section of $G$. If $X'$ is an object of $B_G$
+over \sisi{$G$}{$X$}, then $c^{\ast}(X')$ denotes the inverse image
+of $e$ in $X'$,
+$$
+c^{\ast}(X')=\fprod{X'}{e}{X}{\quoi},
+$$
+which is stable under the left action of $H$ on $X'$, obtained by
+restricting the given action of $G$ on $X'$. This indeed defines a
+functor
+$$
+c^{\ast}:(B_G)_{/X}\longrightarrow B_H{\quoi}.
+$$
+On the other\pageoriginale hand, if $X'$ is an object of $B_H$, then
+the morphism from $X'$ to the terminal object $e_H$ of $B_H$ (\ie
+the terminal object $e_E$ of $E$ with the trivial action of $H$)
+gives, upon application of the functor $i_{!}$
+(\hyperref[IV.subsec4.5]{4.5}), a morphism in $B_G$
+$$
+i_{!}(X')\longrightarrow i_{!}(e_H)\simeq X{\quoi},
+$$
+which allows $i_{!}(X')$ to be regarded as an object of
+$(B_G)_{/X}$, and hence gives the desired functor
+$$
+c_{\ast}:X'\longmapsto (i_{!}(X')\longrightarrow
+X):B_H\longrightarrow (B_G)_{/X}{\quoi}.
+$$
+
+\setcounter{subsubsection}{2}
+\subsubsection{}\etiquette[5.8.3]{IV.subsubsec5.8.3}
+Thus, by \eqhyperref[IV.eq5.8.2]{5.8.2}, one sees that if $G$ is a group
+in a topos and $H$ a subgroup, \emph{the functor ``restriction of
+the operators from $G$ to $H$'' may be interpreted as a localization
+functor.} In particular, taking $H$ to be the unit subgroup, one sees
+that the functor that \emph{forgets the actions of $G$} may be
+interpreted as a localization functor. More generally, it follows
+that if $(X,G)$ is an object of $E$ with an action of $G$ (\ie an
+object of the classifying topos $B_G$), then the functor that
+``forgets the actions of $G$'',
+$$
+E'=(B_G)_{/(X,G)}\longrightarrow E_{/X}
+$$
+may be interpreted as a localization functor with respect to a
+suitable object $E_{G,(X,G)}$ of $E'$ covering the terminal object.
+It suffices to take $E_{G,(X,G)}=E_G\times (X,G)$, giving the
+cartesian diagram (where $E_G=G_S=G$ with the action of $G$ by left
+translation)
+\[\vcenter{
+\xymatrix@C=2cm@R=1.5cm{
+E_G \ar[d]& **[r]E_{G,(X,G)} = Z \ar[l] \ar[d]\\
+e_G & (X,G) \ar[l]          \quad , }}\leqno{(5.8.3.1)}
+\]\etiquette[5.8.3.1]{IV.eq5.8.3.1}
+and\pageoriginale to observe that, by transitivity of induced topoi,
+the induced topos $E'=((B_G)_{X/G)/Z}$ is equivalent to the topos
+$((B_G)_{/E_G})_{/Z}$; since $(B_G)_{/E_G}$ is equivalent to $E$
+by the functor $c^{\ast}$ of \eqhyperref[IV.eq5.8.1]{5.8.1} (with $H=e$),
+it suffices to verify that this equivalence takes $Z$ to the object
+$X$ of $E$ (which is immediate) in order to deduce the desired
+equivalence of categories
+$$
+E'_{/Z}\xrightarrow{\approx}E_{/X}{\quoi}.
+$$
+We leave it to the reader to verify that the composite of this
+equivalence with the localization functor
+$$
+E'=(B_G)_{/(X,G)}\longrightarrow E'_{/Z}
+$$
+is the functor that ``forgets the actions of $G$''. Thus one sees
+that, upon passing to induced topoi, the cartesian diagram above gives
+a diagram of morphisms of topoi, commutative up to canonical
+isomorphism (\hyperref[IV.subsec5.6]{5.6}):
+\[\vcenter{
+  \xymatrix@C=1.25cm@R=1cm{
+**[r](B_G)_{/E_G}\approx E \ar[d]_{j} & **[r](B_G)_{/Z} \approx
+E'_{/Z} \ar[l]_(.3){i}
+  \approx E_{/X} \ar[d]^{j'}\\
+B_G & **[r](B_G)_{/(X,G)} =  E' \ar[l]_(.5){f}\quad,
+}}\leqno{(5.8.3.2)}
+\]\etiquette[5.8.3.2]{IV.eq5.8.3.2}
+where the inverse-image functors associated with the vertical arrows
+$j$, $j'$ are the functors that ``forget the actions of $G$'', and
+where the inverse-image functor $i^{\ast}$ is identified with the
+localization functor $E\rightarrow E_{/X}$. This diagram\pageoriginale is,
+moreover, ``2-cartesian'' in the sense of \hyperref[IV.prop5.11]{5.11}
+below.
+
+\subsubsection{}\etiquette[5.8.4]{IV.subsubsec5.8.4}
+We leave it to the reader to extend the preceding considerations to
+the case of a pro-group $𝒢=(G_i)$, in the particular case where $H$
+is defined as the ``kernel'' of $𝒢\rightarrow G_{i_{\circ}}$. (In
+the case of profinite groups, this means restricting attention to
+\emph{open} subgroups $H$ of $G$, \ie subgroups that are closed and
+of \emph{finite index}.)

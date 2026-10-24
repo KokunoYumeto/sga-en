@@ -1,0 +1,237 @@
+
+\medskip
+\noindent\textbf{Proposition 1.6.E.}
+\phantomsection
+\label{sga3:VIIB:1.6.E}
+\textit{(a) Let \(X\) be a formal variety over \(k\), with affine
+algebra \(A\). The following conditions are equivalent:
+\begin{enumerate}
+\item[\textup{(i)}] \(X\) is étale over \(k\).
+\item[\textup{\SGAInlineRefTarget{sga3:VIIB:1.6.E:item:ii}(ii)}] \(X\) is topologically flat over \(k\), and the
+  diagonal morphism
+  \[
+    \Delta:X\longrightarrow X\times X
+  \]
+  is a local isomorphism; that is, for every point \(x\) of \(X\),
+  \(\Delta_X\) induces an isomorphism
+  \[
+    \mathcal O_{X\times X,\Delta(x)}
+    \xrightarrow{\ \sim\ }
+    \mathcal O_{X,x}.
+  \]
+\item[\textup{\SGAInlineRefTarget{sga3:VIIB:1.6.E:item:iii}(iii)}] For every \(x\in X\) projecting to
+  \(s\in\operatorname{Spf}(k)\), there is an isomorphism
+  \[
+    \mathcal O_{X,x}\simeq k_s[T]/(F),
+  \]
+  where \(F\in k_s[T]\) is a separable monic polynomial
+  \textup{(cf.\ \SGARefLink{sga3:VIIB:1.6.A}{1.6.A}~\SGARefLink{sga3:VIIB:1.6.E:item:ii}{(ii)})}.
+\item[\textup{\SGAInlineRefTarget{sga3:VIIB:1.6.E:item:iv}(iv)}] \(X\) is topologically flat over \(k\), and, for
+  every \(x\in X\) projecting to \(s\in\operatorname{Spf}(k)\),
+  \[
+    \mathcal O_{X,x}\widehat\otimes_k\kappa(s)
+  \]
+  is a finite separable extension of \(\kappa(s)\).
+\item[\textup{\SGAInlineRefTarget{sga3:VIIB:1.6.E:item:v}(v)}] For every open ideal \(\mathfrak l\) of \(k\),
+  each local component of
+  \[
+    A\widehat\otimes_k(k/\mathfrak l)
+  \]
+  is a finite étale algebra over the Artinian ring
+  \(k/\mathfrak l\).
+\end{enumerate}
+(b) The category
+\(\operatorname{Vaf}^{\mathrm{\acute{e}t}}/\kappa(k)\) identifies
+with the category of étale schemes over \(S_{\kappa(k)}\)
+\textup{(cf.\ \SGARefLink{sga3:VIIB:1.6.C}{1.6.C})}, and the functor \(X\mapsto X_\kappa\) induces
+an equivalence
+\[
+  \operatorname{Vaf}^{\mathrm{\acute{e}t}}/k
+  \xrightarrow{\ \sim\ }
+  \operatorname{Vaf}^{\mathrm{\acute{e}t}}/\kappa(k)
+\]
+\textup{(cf.\ SGA~1, \SGARefLink{sga3:i:definition:6-1}{I 6.1})}.}
+
+\medskip
+\noindent\textit{Proof.}
+Let \(I\) be the kernel of the multiplication morphism
+\[
+  m:A\widehat\otimes_kA\longrightarrow A.
+\]
+Suppose first that \(X\) is étale over \(k\), so that \(A\) is
+formally étale over \(k\). By EGA \(0_{\mathrm{IV}}\), 20.7.4, the
+separated completion of \(I/I^2\), for the quotient topology induced
+from \(I\), is zero; hence
+\[
+  I=I^2.
+\]
+For every \(x\in X\), the ideal \(I\) is contained in the maximal
+ideal \(\mathfrak m_{\Delta(x)}\) of
+\(A\widehat\otimes_kA\). Thus its localization
+\(I_{\mathfrak m_{\Delta(x)}}\) lies in the maximal ideal of
+\(\mathcal O_{X\times X,\Delta(x)}\). Nakayama's \SGARefLink{sga3:VIIB:0.3}{lemma 0.3} therefore
+gives
+\[
+  I_{\mathfrak m_{\Delta(x)}}=0.
+\]
+Consequently, \(\Delta:X\to X\times X\) is a local isomorphism.
+
+Suppose next that \(\Delta\) is a local isomorphism and that \(k\) is
+a field \(\kappa\). We show that every \(\mathcal O_{X,x}\) is a
+finite-dimensional étale \(\kappa\)-algebra. Replacing \(X\) by
+\(\operatorname{Spf}(\mathcal O_{X,x})\), we may assume that
+\[
+  A=\mathcal O_{X,x}
+\]
+is local. We proceed as in the proof of EGA
+\(\mathrm{IV}_4\), 17.4.1, \textup{(b)}\(\Rightarrow\)\textup{(d'')}.
+Let \(K\) be a finite normal extension of \(\kappa\) containing the
+residue field \(\kappa(x)\), and put
+\[
+  B=A\otimes_\kappa K
+   =A\widehat\otimes_\kappa K,
+  \qquad
+  X_K=\operatorname{Spf}(B)
+      =X\widehat\otimes_\kappa K.
+\]
+The two tensor products agree because \([K:\kappa]<\infty\).
+
+The morphism
+\[
+  \Delta_K:
+  X_K\longrightarrow X_K\times_KX_K
+\]
+is again a local isomorphism. Hence, for every \(y\in X_K\),
+multiplication induces an isomorphism
+\[
+  \left(
+    B_y\widehat\otimes_KB_y
+  \right)_{\mathfrak m_{\Delta_K(y)}}
+  \xrightarrow{\ \sim\ }
+  B_y.
+\]
+The residue field of \(B_y\) is \(K\); cf., for example,
+\(\mathrm{VI}_A\), \SGARefLink{sga3:VIIA:1.1.1}{1.1.1}, editors' note~(11). Moreover,
+\[
+  C=B_y\widehat\otimes_KB_y
+\]
+is already local. Indeed,
+\[
+  \mathfrak n
+  =
+  \mathfrak m_y\widehat\otimes_KB_y
+  +
+  B_y\widehat\otimes_K\mathfrak m_y
+\]
+consists of topologically nilpotent elements and therefore lies in
+the radical of \(C\), while
+\[
+  C/\mathfrak n
+  =
+  K\widehat\otimes_KK
+  =
+  K
+\]
+is a field. It follows that multiplication itself is an isomorphism
+\[
+  B_y\widehat\otimes_KB_y
+  \xrightarrow{\ \sim\ }
+  B_y.
+\]
+Choosing a pseudobasis of \(B_y\) over \(K\) that contains the unit
+element \(1\), we deduce that \(B_y=K\). Since \(B\) is finite over
+\(A\), the set \(X_K\) is finite. Thus
+\[
+  B=A\otimes_\kappa K
+\]
+is a product of finitely many copies of \(K\), and \(A\) is a finite
+étale \(\kappa\)-algebra.
+
+We have therefore shown that, over a field \(\kappa\), every profinite
+\(\kappa\)-algebra \(A\) that is étale over \(\kappa\) is a product
+of finite separable extensions \(K_i/\kappa\), endowed with the
+product topology. Consequently,
+\(\operatorname{Spf}(A)\) is the direct sum of the schemes
+\[
+  \operatorname{Spf}(K_i)=\operatorname{Spec}(K_i),
+\]
+and \(\operatorname{Vaf}^{\mathrm{\acute{e}t}}/\kappa\) identifies
+with the category of étale \(\kappa\)-schemes.
+
+The preceding argument proves
+\textup{\SGARefLink{sga3:VIIB:1.6.E:item:ii}{(ii)}}\(\Rightarrow\)\textup{\SGARefLink{sga3:VIIB:1.6.E:item:iv}{(iv)}}, because
+\(\mathcal O_{X,x}\widehat\otimes_k\kappa(s)\) is formally étale over
+\(\kappa(s)\), and also proves part~\textup{(b)}. Indeed, return to
+an arbitrary pseudocompact ring \(k\). The category
+\(\operatorname{Vaf}^{\mathrm{\acute{e}t}}/\kappa(k)\) has just been
+identified with the category of étale schemes over
+\(S_{\kappa(k)}\). By \SGARefLink{sga3:VIIB:1.6.D}{1.6.D}, to show that
+\[
+  \operatorname{Vaf}^{\mathrm{\acute{e}t}}/k
+  \longrightarrow
+  \operatorname{Vaf}^{\mathrm{\acute{e}t}}/\kappa(k)
+\]
+is an equivalence, it remains only to prove essential surjectivity.
+
+Let \(s\in\operatorname{Spf}(k)\), and let \(K/\kappa(s)\) be a
+finite separable extension. Choose a primitive element
+\(\xi\in K\), let \(n=[K:\kappa(s)]\), and choose a monic polynomial
+\[
+  F\in k_s[T]
+\]
+of degree \(n\) whose image
+\(\overline F\in\kappa(s)[T]\) is the minimal polynomial of \(\xi\).
+Since \(\overline F'\) is invertible in
+\(\kappa(s)[T]/(\overline F)\), Nakayama's lemma shows that \(F'\) is
+invertible in \(k_s[T]/(F)\). Thus \(F\) is separable, and \SGARefLink{sga3:VIIB:1.6.A}{1.6.A}~\SGARefLink{sga3:VIIB:1.6.E:item:ii}{(ii)}
+shows that
+\[
+  A=k_s[T]/(F)
+\]
+is an étale \(k_s\)-algebra satisfying
+\[
+  A\widehat\otimes_k\kappa(s)\simeq K.
+\]
+It follows that every local profinite étale \(k_s\)-algebra is free
+of finite rank over \(k_s\), and therefore is topologically free over
+\(k\). Hence every profinite étale \(k\)-algebra is topologically
+free over \(k\).
+
+Condition~\textup{\SGARefLink{sga3:VIIB:1.6.E:item:v}{(v)}} implies condition~\textup{(d)} of \SGARefLink{sga3:VIIB:1.6.B}{1.6.B}, and
+therefore implies~\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}}. We have thus proved that
+\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}}, \textup{\SGARefLink{sga3:VIIB:1.6.E:item:iii}{(iii)}}, and \textup{\SGARefLink{sga3:VIIB:1.6.E:item:v}{(v)}} are equivalent and
+imply~\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}}, which in turn implies~\textup{\SGARefLink{sga3:VIIB:1.6.E:item:iv}{(iv)}}.
+
+Finally, let \(A\) be a profinite \(k\)-algebra satisfying
+\textup{\SGARefLink{sga3:VIIB:1.6.E:item:iv}{(iv)}}. We show that \(A\) is formally étale over \(k\). We
+may suppose that \(A\) and \(k\) are local, and write \(\kappa\) for
+the residue field of \(k\). By hypothesis,
+\[
+  K=A\widehat\otimes_k\kappa
+\]
+is a finite separable extension of \(\kappa\), say of degree \(n\).
+By the preceding argument and \SGARefLink{sga3:VIIB:1.6.D}{Lemma~1.6.D}, there is a \(k\)-algebra
+\(B\), free of rank \(n\) and formally étale over \(k\), together
+with a continuous morphism
+\[
+  \phi:B\longrightarrow A
+\]
+such that
+\[
+  \phi\widehat\otimes_k\kappa
+\]
+is an isomorphism. Since \(A\) is topologically flat over \(k\), this
+implies
+\[
+  \operatorname{Coker}(\phi)\widehat\otimes_k\kappa=0
+  \qquad\text{and}\qquad
+  \operatorname{Ker}(\phi)\widehat\otimes_k\kappa=0.
+\]
+Nakayama's \SGARefLink{sga3:VIIB:0.3}{lemma 0.3} gives
+\[
+  \operatorname{Coker}(\phi)=0
+  =
+  \operatorname{Ker}(\phi).
+\]
+Thus \(\phi\) is an isomorphism \textup{(cf.\ the proof of \SGARefLink{sga3:vii:proposition:0-2-b}{0.2.B})},
+which completes the proof of \SGARefLink{sga3:VIIB:1.6.E}{1.6.E}.

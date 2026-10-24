@@ -1,0 +1,177 @@
+\setcounter{pageoriginal}{78}
+
+\section{Introduction}\etiquette[1]{XII.sec1}\pageoriginale
+
+In this exposé we prove the fundamental theorem which says, in a
+slightly more precise form, that for a \emph{proper} morphism
+$f:X\to Y$ of schemes and a torsion abelian sheaf $F$ on $X$, the
+fiber of $R^qf_*F$ at a geometric point $\xi$ of $Y$ is isomorphic to
+the cohomology $H^q(X_\xi,F|X_\xi)$ of the fiber $X_\xi$.
+
+Recall that the analogous result for a proper morphism of paracompact
+spaces is well known (Godement II 4.11) and easy. It is considerably
+more delicate for schemes. For example, in contrast with the case of
+paracompact spaces, the hypothesis that $F$ be torsion is essential.
+
+The proof proceeds in several stages. By more or less formal
+dévissage arguments, one reduces to the case where $Y$ is
+Noetherian, the relative dimension of $f$ is at most $1$, and the
+sheaf $F$ is constant. To handle this special case, one uses the
+specialization theorem for the fundamental group
+(\hyperref[XII.thm5.9]{5.9}), which is a nonabelian variant of the
+theorem stated above and can be proved directly in the case under
+consideration (\hyperrefext[XIII][XIII.sec2]{2}).
+
+\section{An example}\etiquette[2]{XII.sec2}\pageoriginale
+
+We show that the hypothesis that $F$ be torsion is necessary. Let
+$X$ be a nonsingular surface over an algebraically closed field $k$,
+let $Y$ be a nonsingular curve over $k$, and let $f:X\to Y$ be a
+proper morphism whose generic fiber is smooth and whose geometric
+fiber at a geometric point $\bar y$ of $Y$ is irreducible and has an
+ordinary double point. Let $F$ be the constant sheaf $\ZZ_X$.
+
+Recall the following fact. For any point $z$ of a scheme $Z$, let
+$i:z\to Z$ be the inclusion. Then
+$H^1(Z,i_*\ZZ_z)=0$ (\hyperrefext[IX][IX.prop3.6]{3.6} (i)). Since
+$X$ is normal, hence unibranch, it follows that
+$\ZZ_X\simeq i_*\ZZ_x$, where $i:x\to X$ is the inclusion of the
+generic point. Thus $H^1(X,\ZZ_X)=0$ and likewise
+$R^1f_*\ZZ_X=0$. But for the geometric fiber $X_\circ$ of $X/Y$
+having the ordinary double point, I claim that
+$H^1(X_\circ,\ZZ_{X_\circ})\simeq\ZZ$\footnote[1]{Compare, from the
+point of view of $\Pi_1$, with \SGA 3 X (6, Examples) and (1.6).};
+this gives the counterexample, since
+$\ZZ_{X_\circ}\simeq\ZZ_X|X_\circ$.
+
+Let $i_\circ:x_\circ\to X_\circ$ be the inclusion of the generic
+point of $X_\circ$, and let $Q$ be the singular point of $X_\circ$.
+The curve $X_\circ$ has two \lq\lq branches'' at $Q$, and it follows
+that the fiber of $i_{\circ*}(\ZZ_{x_\circ})$ at $Q$ is isomorphic to
+$\ZZ\times\ZZ$. Away from $Q$, the curve $X_\circ$ is normal, hence
+$i_{\circ*}(\ZZ_{x_\circ})\simeq\ZZ_{X_\circ}$ on
+$X_\circ-Q$. Therefore there is an exact sequence
+$$
+0\longrightarrow\ZZ_{X_\circ}\longrightarrow
+i_{\circ*}(\ZZ_{x_\circ})\longrightarrow(\ZZ)_Q
+\longrightarrow0{\quoi},
+$$
+where the last term is extension by zero of the sheaf $\ZZ$ at the
+point $Q$. All three terms have $H^0$ isomorphic to $\ZZ$, and
+$H^1(X_\circ,i_{\circ*}(\ZZ_{x_\circ}))=0$. The long exact
+cohomology sequence therefore gives
+$H^1(X_\circ,\ZZ_{X_\circ})=\ZZ$\pageoriginale.
+
+\section{Review of nonabelian $H^1$}\etiquette[3]{XII.sec3}
+
+We briefly recall some results on nonabelian cohomology that will be
+needed below. We omit most proofs, which are well known in various
+special cases and may be found in Giraud's thesis [1].
+
+Let $X$ be a scheme and $F$ a sheaf of groups on $X$. For every
+étale $X'/X$, one defines a pointed set $H^1(X',F)$, covariantly
+functorial in $F$ and contravariantly functorial in $X'$. The functor
+$H^1$ commutes with finite products of sheaves. If $f:X\to Y$ is a
+morphism, one defines a sheaf of pointed sets (that is, with a
+distinguished section) $R^1f_*F$. It is the sheaf associated with the
+presheaf of pointed sets $\Rr^1F$ which assigns to every étale
+$Y'/Y$ the set $H^1(\fprod{X}{Y'}{Y},F)$.
+
+There are the usual exact cohomology sequences; we record one of
+them:
+
+\begin{enonce*}{Proposition 3.1}\etiquette[3.1]{XII.prop3.1}
+Let $0\to F\xrightarrow{u}G$ be an injection of sheaves of groups,
+and let $C=G/F$ be the sheaf of homogeneous spaces under $G$. There
+is an exact sequence of sheaves of pointed sets
+$$
+0\to f_*F\to f_*G\to f_*C\xrightarrow{\partial}
+R^1f_*F\xrightarrow{u^1}R^1f_*G{\quoi}.
+$$
+\end{enonce*}
+
+This exact sequence is obtained, of course, by passing to the
+associated sheaves in the exact sequence of presheaves whose value
+on an étale $Y'/Y$ is
+$$
+0\to F(X')\to G(X')\to C(X')\xrightarrow{\partial}
+H^1(X',F)\to H^1(X',G){\quoi},
+$$
+where\pageoriginale $X'=\fprod{X}{Y'}{Y}$. The equivalence relation
+induced by $\partial$ is the one given by the action of $f_*G$ on
+$f_*C$. As usual, the equivalence relation induced by $u^1$ may be
+made explicit using the notion of \lq\lq twisting'' [1].
+
+\begin{enonce*}{Proposition 3.2}\etiquette[3.2]{XII.prop3.2}
+Let $X\xrightarrow{f}Y\xrightarrow{g}Z$ be morphisms of schemes. For
+every étale $Z'/Z$, putting
+$Y'=\fprod{Y}{Z'}{Z}$ and $X'=\fprod{X}{Z'}{Z}$, there is an exact
+sequence
+$$
+0\longrightarrow H^1(Y',f_*F)\longrightarrow H^1(X',F)
+\longrightarrow H^0(Y',R^1f_*F){\quoi}.
+$$
+Passing to the associated sheaves gives an exact sequence of pointed
+sheaves on $Z$:
+$$
+0\longrightarrow (R^1g_*)f_*F\longrightarrow R^1(gf)_*F
+\longrightarrow g_*(R^1f_*)F{\quoi}.
+$$
+\end{enonce*}
+
+\begin{enonce*}{Proposition 3.3}\etiquette[3.3]{XII.prop3.3}
+The family of functors of the form $H^1(X',F)$, for $X'$ étale over
+$X$, and of the form $R^1f_*F$, for an arbitrary morphism
+$f:X\to Y$, is effaceable: there exists an injection
+$F\xrightarrow{u}G$ such that all the induced morphisms
+$H^1(X',F)\to H^1(X',G)$ and $R^1f_*F\to R^1f_*G$ are zero. More
+precisely, there exists such an injection for which every
+$H^1(X',G)$, with $X'$ étale over $X$, and every pointed sheaf
+$R^1f_*G$ vanish. If $X$ is Noetherian and $F$ is a constructible
+sheaf of ind-$\LL$-groups, then such an injection exists with $G$
+also a sheaf of ind-$\LL$-groups.
+\end{enonce*}
+
+\emph{Proof.} The first assertion is presumably true in an arbitrary
+topos, but for the étale topology it is convenient to perform the
+effacement using the \lq\lq Godement resolution''
+\begin{equation*}
+F\longrightarrow G=\prod_{x\in X}i_{x*}i_x^*F{\quoi}.
+\tag{3.4}
+\end{equation*}\etiquette[3.4]{XII.eq3.4}
+Here\pageoriginale $x$ runs through the points of $X$ and
+$i_x:\bar x\to X$ is a geometric point over $x$. For $X'/X$ étale,
+one has
+$$
+G(X')=\prod_{x\in X}(i_x^*F)(\fprod{X'}{\bar x}{X})
+=\prod_{x\in X}\left(\prod_{\bar x'/\bar x}F_{\bar x'}\right){\quoi},
+$$
+where the $\bar x'$ are geometric points of $X'$. For each point of
+$X'$ there is plainly at least one $\bar x'$ above it; hence
+$F(X')\subset G(X')$ (VIII 3), and therefore $F\subset G$.
+Moreover, every étale $\bar u/\bar x$ is a disjoint union of spectra
+of separably closed fields, so $H^1(\bar u,\bar G)=0$ for every sheaf
+$\bar G$ on $\bar x$. It follows from
+\hyperref[XII.prop3.2]{3.2} that
+$H^1(X',i_{x*}i_x^*F)=0$ for every étale $X'/X$. Since $H^1$
+commutes with products, $H^1(X',G)=0$, and consequently
+$R^1f_*G=0$ for every $f:X\to Y$, by the description of $R^1f_*G$
+as the sheaf associated with the presheaf
+$Y'\mapsto H^1(\fprod{X}{Y'}{Y},G)$.
+
+Suppose in addition that $F$ is constructible and $X$ is Noetherian.
+It is immediate that there is a finite set of points
+$\{x_1,\ldots,x_n\}$ of $X$ such that
+$$
+F\longrightarrow\prod_{1\leq i\leq n}i_{x_i*}i_{x_i}^*F
+$$
+is already injective. The sheaf $i_{x_i*}i_{x_i}^*F$ is a sheaf of
+ind-finite groups (IX \hyperref[IX.def1.5]{1.5}), and hence so is the finite product
+(\hyperrefext[IX][IX.prop1.4]{1.4} and
+\hyperrefext[IX][IX.prop1.6]{1.6} (iii)). Replacing $G$ by this sheaf
+gives the last assertion.
+
+\setcounter{subsection}{4}
+\subsection{}\etiquette[3.5]{XII.subsec3.5}
+As in the case of abelian cohomology (treated in V \hyperref[V.subsec2.4]{2.4}), $H^1$ may be
+computed by the \v{C}ech procedure [1].

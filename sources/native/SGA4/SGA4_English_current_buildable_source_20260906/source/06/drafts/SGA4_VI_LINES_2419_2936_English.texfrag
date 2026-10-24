@@ -1,0 +1,507 @@
+\section{Finiteness conditions in a topos obtained by
+  gluing}\etiquette[4]{VI.sec4}
+
+The present section will not be used later in the Seminar.
+
+\subsection{}\etiquette[4.1]{VI.subsec4.1}
+Let $E$ be a topos and $U$ an open of $E$ (\ie a subobject of the final
+object of $E$), and consider the corresponding open and closed subtopoi
+of\pageoriginale $E$ (IV 9)
+$$
+E'= E_{/U}, E'' = E_{/U}{\quoi}.
+$$
+We denote by
+$$
+j : E'\to E, i : E''\to E
+$$
+the canonical morphisms of topoi. Recall (\hyperref[VI.prop3.4]{3.4}) that
+for $j$ to be a quasi-compact (\resp coherent) morphism of topoi, it is
+necessary and sufficient that the inclusion
+$$
+j : U \to e
+$$
+of $U$ into the final object of $E$ (an inclusion that we shall also denote
+by $j$) be a quasi-compact (\resp coherent) morphism in $E$; moreover,
+$j:E'\to E$ is always quasi-separated (because $j:U\to e$ is so
+(\hyperref[VI.cor1.8.1]{1.8.1})). We propose to give criteria for the topos
+$E''$ to be coherent and for the morphism of topoi $i:E''\to E$ to be
+coherent. First note:
+
+\begin{enonce*}{Proposition 4.2}\etiquette[4.2]{VI.prop4.2}
+With the notation of \hyperref[VI.subsec4.1]{4.1}, the inclusion morphism
+$i:E''\to E$ is quasi-compact, \ie for every quasi-compact object $X$ of
+$E$, the object $i^{\ast}(X)$ of $E''$ is quasi-compact; moreover, if $X$ is
+pre-Noetherian (\hyperref[VI.def1.30]{1.30}), then $i^{\ast}(X)$ is
+pre-Noetherian.
+\end{enonce*}
+
+This follows from \hyperref[VI.def1.1]{Definition 1.1} and the
+
+\begin{enonce*}{Lemma 4.2.1}\etiquette[4.2.1]{VI.lem4.2.1}
+The map\pageoriginale $Y\mapsto i^{\ast}(Y)$ induces an isomorphism of
+ordered sets between the set of subobjects of $X$ containing the subobject
+$X_U=X\times U$ of $X$, and the set of subobjects of $i^{\ast}(X)$.
+\end{enonce*}
+
+Note that since $i_{\ast}$ is conservative (because it is fully faithful)
+and left exact (in particular, it commutes with fiber products), it follows
+immediately that a morphism $u:Y\to Z$ in $E''$ is a monomorphism if and only
+if $i_{\ast}(u):i_{\ast}(Y)\to i_{\ast}(Z)$ is one. Consequently, on
+identifying (by $i_{\ast}$) $E''$ with the full subcategory of $E$ consisting
+of objects $Z$ satisfying the equivalent conditions of IV \hyperref[IV.subsec9.7]{9.7} 1), the
+subobjects in $E''$ of the object $Z$ of $E''$ identify with the subobjects
+$Y$ of $Z$ in $E$ that belong to $E''$, or, equivalently, that contain
+$Z_U\xrightarrow{\sim}U$. For $Z$ of the form
+$i_{\ast}i^{\ast}(X)=X_{\complement U}$ given by the amalgamated sum
+IV \hyperref[IV.subsubsec9.5.1]{(9.5.1)},
+$$
+i_{\ast} i^{\ast} (X) = X_{\complement U} = X \amalg_{X_U} U {\quoi},
+$$
+the datum of a subobject $Y$ of the latter in $E$ is equivalent to the datum
+of a pair consisting of a subobject $Y_1$ of $X$ and a subobject $Y_2$ of
+$U$, subject to the condition that the inverse images of these subobjects
+in $X_U$ coincide. The condition that $Y$ contain $U$ then means that
+$Y_2=U$, and the remaining condition on $Y_1$ is that it contain $X_U$.
+This therefore establishes a bijection between the set of subobjects of
+$i^{\ast}(X)$ in $E''$ and the set of subobjects of $X$ that contain $X_U$.
+It is clear\pageoriginale that this is an isomorphism of ordered sets and
+that its inverse map is indeed the one asserted in \hyperref[VI.lem4.2.1]{4.2.1}.
+
+\begin{enonce*}{Corollary 4.3}\etiquette[4.3]{VI.cor4.3}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $X$ be an object of $E$. For $X$ to be quasi-compact, it is
+  sufficient that $i^{\ast}(X)$ and $j^{\ast}(X)$ be so, and this condition
+  is also necessary if $j:U\to e$ is quasi-compact.
+
+\item Let $Y$ be an object of $E''$. For $Y$ to be quasi-compact, it is
+  sufficient that $i_{\ast}(Y)$ be so, and this condition is also necessary
+  if $U$ is quasi-compact.
+\end{enumerate}
+\end{enonce*}
+
+\noindent
+\underline{Proof}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Sufficiency follows from \hyperref[VI.def1.1]{Definition 1.1} and the fact that the pair
+  $(i^{\ast},j^{\ast})$ is conservative (IV \hyperlink{sga4.exp.IV.proposition.9.4.1.item.c}{9.11} 3)). Necessity follows from
+  the fact that $i$ and $j$ are quasi-compact (by \hyperref[VI.prop4.2]{3.14} and the hypothesis
+  that $j$ is quasi-compact).
+
+\item Since $Y\simeq i^{\ast}i_{\ast}(Y)$, sufficiency follows from
+  \hyperref[VI.prop4.2]{4.2}. Necessity follows from the sufficiency in a),
+  taking into account that $i^{\ast}i_{\ast}(Y)\simeq Y$ and
+  $j^{\ast}i_{\ast}(Y)\simeq U$.
+\end{enumerate}
+
+\begin{enonce*}{Corollary 4.4}\etiquette[4.4]{VI.cor4.4}
+Let $Y$ be an object of $E''$. If $U$ is quasi-compact or if $E$ admits a
+generating family consisting of quasi-compact objects, then for $Y$ to be
+quasi-separated (\resp coherent), it is \emph{sufficient} that
+$i_{\ast}(Y)$ be so. If $U$ is quasi-separated (\resp coherent) and if
+$j:U\to e$ is a quasi-compact morphism, then for $Y$ to be quasi-separated
+(\resp coherent), it is necessary that $i_{\ast}(Y)$ be so.
+\end{enonce*}
+
+The parenthetical\pageoriginale case follows from the non-parenthetical
+case, taking \hyperref[VI.cor4.3]{4.3} b) into account. Suppose that
+$i_{\ast}(Y)$ is quasi-separated, and let us prove that $Y$ is so under one
+of the two stated hypotheses. Thus we must prove that, for two quasi-compact
+objects $Y'$ and $Y''$ over $Y$, the fiber product
+$\fprod{Y'}{Y''}{Y}$ is quasi-compact. When $U$ is assumed quasi-compact,
+note that it is enough to prove that
+$i_{\ast}(\fprod{Y'}{Y''}{Y})$ is quasi-compact
+(\hyperref[VI.cor4.3]{4.3} b)); this follows from the fact that
+$i_{\ast}(Y')$ and $i_{\ast}(Y'')$ are so
+(\hyperref[VI.cor4.3]{4.3} b)), using here the quasi-compactness of $U$, the
+fact that $i_{\ast}$ commutes with fiber products, and the hypothesis that
+$i_{\ast}(Y)$ is quasi-separated. When $E$ is assumed to admit a generating
+family consisting of quasi-compact objects, $i_{\ast}(Y')$ is a filtered
+inductive limit of its quasi-compact subobjects ${X'}_{\alpha}$; hence
+$Y'\simeq i^{\ast}i_{\ast}(Y')$ is a filtered inductive limit of the
+subobjects $i^{\ast}({X'}_{\alpha})$, and since $Y'$ is quasi-compact, it is
+equal to one of the $i^{\ast}({X'}_{\alpha})$. Likewise, $Y''$ is of the
+form $i^{\ast}({X''}_{\beta})$, where ${X''}_{\beta}$ is a quasi-compact
+subobject of $i_{\ast}(Y'')$. But then
+$\fprod{Y'}{Y''}{Y}=
+i^{\ast}(\fprod{X'_{\alpha}}{X''_{\beta}}{i_{\ast}Y})$, and since
+$\fprod{X'_{\alpha}}{X''_{\beta}}{i_{\ast}(Y)}$ is quasi-compact by the
+hypothesis that $i_{\ast}(Y)$ is quasi-separated, it follows by
+\hyperref[VI.prop4.2]{4.2} that $\fprod{Y'}{Y''}{Y}$ is also quasi-compact.
+
+Conversely, suppose that $U$ is quasi-separated and $j:U\to e$ is
+quasi-compact, and assume that $Y$ is quasi-separated. Let us show that
+$i_{\ast}(Y)$ is also quasi-separated, \ie that for two quasi-compact
+objects $X',X''$ over $i_{\ast}(Y)$, the fiber product
+$\fprod{X'}{X''}{i_{\ast}(Y)}$ is quasi-compact. By
+\hyperref[VI.cor4.3]{4.3} a), it is enough to prove that its image under
+$i^{\ast}$ is quasi-compact\pageoriginale (which follows from
+\hyperref[VI.prop4.2]{4.2} and the hypothesis that $Y$ is quasi-separated)
+\emph{and} that its image under $j^{\ast}$ is quasi-compact. The latter is
+$j^{\ast}(X')\times j^{\ast}(X'')$, and is indeed quasi-compact because
+$j^{\ast}(X')$ and $j^{\ast}(X'')$ are so ($j$ being quasi-compact) and $U$
+is quasi-separated.
+
+\begin{enonce*}{Corollary 4.5}\etiquette[4.5]{VI.cor4.5}
+Suppose that $E$ admits a generating subcategory consisting of quasi-compact
+(\emph{\resp} pre-Noetherian) objects. Then the same is true of $E''$.
+\end{enonce*}
+
+This follows from \hyperref[VI.prop4.2]{4.2} and the
+
+\begin{enonce*}{Lemma 4.5.1}\etiquette[4.5.1]{VI.lem4.5.1}
+If $(X_{\alpha})_{\alpha}$ is a generating family in $E$, then
+$(i^{\ast}(X_{\alpha}))_{\alpha}$ is a generating family in $E''$.
+\end{enonce*}
+
+Indeed, this means that the family of functors
+$$
+Y \to \Hom (i^{\ast}(X_{\alpha}), Y)
+$$
+on $E''$ is conservative. But
+$\Hom(i^{\ast}(X_{\alpha}),Y)\simeq\Hom(X_{\alpha},i_{\ast}(Y))$, and it is
+enough to use the fact that the functor $i_{\ast}$ is conservative.
+
+\begin{enonce*}{Proposition 4.6}\etiquette[4.6]{VI.prop4.6}
+The notation is that of \hyperref[VI.subsec4.1]{4.1}.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item If $E$ admits a generating family consisting of coherent objects,
+  then the same is true of the closed subtopos $E''$, and the inclusion
+  morphism $i:E''\to E$ is coherent.
+
+\item Suppose that the morphism $j:U\to e$ in $E$ is quasi-compact.
+If\pageoriginale $E$ is locally coherent (\emph{\resp} coherent,
+\emph{\resp} quasi-separated, \emph{\resp} locally Noetherian,
+\emph{\resp} Noetherian, \emph{\resp} locally perfect, \emph{\resp}
+perfect), then the same is true of $E''$, and the inclusion morphism
+$i:E''\to E$ is coherent.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The first assertion will follow from the second and
+  \hyperref[VI.lem4.5.1]{4.5.1}. In any event,
+  \hyperref[VI.cor4.5]{4.5} implies that $E''$ admits a generating family
+  consisting of quasi-compact objects, so \hyperref[VI.prop3.2]{3.2}
+  applies and shows that it is enough to verify that, for every coherent
+  object $X$ of $E$, the object $i^{\ast}(X)$ of $E''$ is coherent. Using
+  the compatibility of the formation of the topos complementary to an open
+  with localization (IV \hyperref[IV.cor9.4.3]{9.13} b)), we reduce to the case in which $X$ is the
+  final object of $E$, and hence to proving that the final object of $E''$
+  is coherent. Now \hyperref[VI.cor4.4]{4.4} applies, so it is enough to
+  prove that $i_{\ast}(e_{E''})=e_E$ is coherent, which is indeed the case.
+
+\item Under each of the hypotheses made in b), $E$ admits a generating
+  family consisting of coherent objects, so it already follows from a) that
+  $i:E''\to E$ is coherent. Moreover, \hyperref[VI.lem4.5.1]{4.5.1} then
+  implies that $E''$ admits as a generating subcategory the full subcategory
+  ${E''}_{\coh}$ consisting of its coherent objects. Suppose that $E$ is
+  coherent, and let us show that $E''$ is also coherent, \ie
+  (\hyperref[VI.subsubsec2.4.5]{2.4.5}) that the subcategory
+  ${E''}_{\coh}$ of $E''$ is stable under finite projective limits, knowing
+  that this is so for the subcategory $E_{\coh}$ of $E$. This follows
+  immediately from the parenthetical criterion
+  \hyperref[VI.cor4.4]{4.4} (which applies because $U$ is now coherent, $e$
+  being\pageoriginale coherent and $j:U\to e$ being quasi-compact), taking
+  into account that $i_{\ast}$ is left exact. By localization, again using
+  IV \hyperref[IV.cor9.4.3]{9.13} b), we conclude that if $E$ is locally coherent, then the same is
+  true of $E''$. If $E$ is quasi-separated, then $E''$ is also
+  quasi-separated: indeed, its final object is quasi-separated by
+  \hyperref[VI.cor4.4]{4.4}, since that of $E$ is, and it remains to prove
+  that the product of two quasi-separated objects of $E''$ is
+  quasi-separated (knowing that this is so in $E$); this again follows from
+  the criterion \hyperref[VI.cor4.4]{4.4} and the fact that $i_{\ast}$
+  commutes with products (taking into account that the subobject $U$ of $e$
+  is quasi-separated, since $e$ is, so that \hyperref[VI.cor4.4]{4.4}
+  applies).
+\end{enumerate}
+
+Since a topos is locally Noetherian (\resp Noetherian) if and only if it is
+locally coherent (\resp coherent) and admits a generating family consisting
+of pre-Noetherian objects (\hyperref[VI.prop2.10]{2.10} (iii bis)), it
+follows from the preceding discussion and \hyperref[VI.cor4.5]{4.5} that if
+$E$ is locally Noetherian (\resp Noetherian), then the same is true of
+$E''$. Now suppose that $E$ is perfect, and let us prove that $E''$ is
+perfect. Since we already know that it is coherent, it remains to verify
+that it satisfies criterion \hyperref[VI.cor1.25]{1.25} (i), \ie that every
+object $Y$ of $E''$ is a filtered inductive limit of coherent objects,
+knowing that the analogous statement is true in $E$. Since $i_{\ast}(Y)$ is
+a filtered inductive limit of coherent objects $X_{\alpha}$,
+$Y\simeq i^{\ast}i_{\ast}(Y)$ is a filtered inductive limit of the coherent
+objects $i^{\ast}(X_{\alpha})$. By localization (IV \hyperref[IV.cor9.4.3]{9.13} b)), we conclude
+that if $E$ is locally perfect, then the same is true of $E''$. This
+completes the proof of \hyperref[VI.prop4.6]{4.6}.
+
+\begin{enonce*}[remark]{Remark 4.6.1}\etiquette[4.6.1]{VI.rem4.6.1}
+In fact,\pageoriginale in \hyperref[VI.prop4.6]{4.6} b), the hypothesis that
+$j:U\to e$ is quasi-compact is unnecessary, except perhaps in the case
+``$E$ quasi-separated''. Indeed, by the preceding proof it is enough to see
+that if $E$ is coherent, then $E''$ is coherent. Now $U$ is the filtered
+inductive limit of its quasi-compact subobjects $U_{\alpha}$, and in
+\hyperref[VI.sec7]{7} we shall verify that $E''$ then identifies with the
+projective-limit topos (in the sense of \hyperref[VI.sec7]{7}) of the closed
+subtopoi $E''_i$ complementary to the $E_{/U_i}$, which by
+\hyperref[VI.prop4.6]{4.6} b) are coherent topoi with coherent transition
+morphisms. It then follows that $E''$ is a coherent topos
+(\hyperref[VI.sec7]{7}).
+\end{enonce*}
+
+\begin{enonce*}{Corollary 4.7}\etiquette[4.7]{VI.cor4.7}
+Suppose that the subcategory $E_{\coh}$ of $E$ consisting of coherent
+objects is generating, and let $X$ be an object of $E$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item If $X$ is quasi-separated, then $i^{\ast}(X)$ and $j^{\ast}(X)$ are
+  quasi-separated; this condition is also sufficient if $j:U\to e$ is
+  quasi-compact.
+
+\item Suppose that $j:U\to e$ is quasi-compact. Then $X$ is coherent if and
+  only if $i^{\ast}(X)$ and $j^{\ast}(X)$ are coherent.
+
+\item Suppose that $E$ is coherent and $j:U\to e$ quasi-compact. Then $E$
+  is perfect (\hyperref[VI.def2.9.1]{2.9.1}) if and only if $E'$ and $E''$
+  are perfect.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item We noted in \hyperref[VI.subsec4.1]{4.1} that $j:E'\to E$ is
+  quasi-separated, and we know from \hyperref[VI.prop4.6]{4.6} a) that the
+  same is true of $i$, which gives necessity. For sufficiency, let $X'$ and
+  $X''$ be quasi-compact objects over $X$. We must prove that
+  $\fprod{X'}{X''}{X}$ is quasi-compact, and for this it\pageoriginale is
+  enough to prove that its images under $i^{\ast}$ and $j^{\ast}$ are so
+  (\hyperref[VI.cor4.3]{4.3} a)). Since $i$ and $j$ are quasi-compact, by
+  \hyperref[VI.prop4.2]{4.2} and the hypothesis that $j:U\to e$ is
+  quasi-compact, the conclusion follows from the fact that $i^{\ast}$ and
+  $j^{\ast}$ commute with fiber products and from the hypothesis that
+  $i^{\ast}(X)$ and $j^{\ast}(X)$ are quasi-separated.
+
+\item This follows by combining a) with \hyperref[VI.cor4.3]{4.3} a).
+
+\item Necessity was already seen (\hyperref[VI.prop4.6]{4.6} b)).
+  Sufficiency follows from the fact that, since $E$ is coherent, $E'$ and
+  $E''$ are coherent (\hyperref[VI.prop4.6]{4.6} b)), so that for any of the
+  topoi under consideration, being perfect means that the category of its
+  coherent objects is stable under finite $\varinjlim$. We therefore
+  conclude by b).
+\end{enumerate}
+
+\begin{enonce*}[remark]{Exercise 4.8}\etiquette[4.8]{VI.exer4.8}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Solve the following question (to which the writer confesses, to his
+  embarrassment, that he does not know the answer): with the notation of
+  \hyperref[VI.subsec4.1]{4.1}, if $E$ is quasi-separated
+  (\resp algebraic), is the same true of $E''$?
+
+\item Suppose that $E$ is equivalent to a topos of the form $\widehat{C}$,
+  where $C$ is a category equivalent to a category $\in 𝒰$. Prove directly,
+  using \hyperref[VI.exer2.17]{2.17} c) and IV 9.24, that if $E$ is locally
+  coherent (\resp coherent, \resp algebraic, \resp quasi-separated, \resp
+  locally Noetherian, \resp Noetherian), then the same is true of $E''$.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{8}
+\subsection{}\etiquette[4.9]{VI.subsec4.9}
+Keep the notation of \hyperref[VI.subsec4.1]{4.1}, and recall (IV \hyperref[IV.theo9.5.4]{9.16}) that
+the datum of a situation $(E,U)$ consisting of a topos $E$ and an open $U$
+of $E$ is essentially equivalent to that of a triple $(E',E'',f)$, where
+$E'$ and $E''$ are\pageoriginale topoi and
+\begin{equation*}
+f : E'\to E''\tag{4.9.1}
+\end{equation*}\etiquette[4.9.1]{VI.eq4.9.1}
+is a ``gluing functor'', \ie a functor that is \emph{left exact and
+accessible}; starting from $(E,U)$ as in \hyperref[VI.subsec4.1]{4.1}, the
+associated gluing functor is given by
+\begin{equation*}
+  f = i^{\ast} j_{\ast}{\quoi}.\tag{4.9.2}
+\end{equation*}\etiquette[4.9.2]{VI.eq4.9.2}
+
+We propose to express, in terms of the data $E'$, $E''$, and $f$, the fact
+that $E$ is a coherent (\resp perfect) topos and that $U$ is a quasi-compact
+object, or equivalently, that $E$ and $E'$ are coherent. We already know
+that this implies that $E''$ is also coherent
+(\hyperref[VI.prop4.6]{4.6} b)), so the question becomes the following:
+given two \emph{coherent} topoi $E'$ and $E''$ and a gluing functor $f$
+\eqhyperref[VI.eq4.9.1]{4.9.1}, under what conditions on $f$ is the glued
+topos $E$ coherent (\resp perfect)? We also know
+(\hyperref[VI.cor4.7]{4.7} c)) that $E$ is perfect if and only if $E$ is
+coherent and $E'$ and $E''$ are perfect; thus the parenthetical case of the
+problem reduces to the non-parenthetical case. Let us nevertheless note that
+the solution (\hyperref[VI.prop4.10]{4.10}) of the latter is more elegant if
+$E'$ is already assumed perfect.
+
+\setcounter{subsection}{9}
+\setcounter{subsubsection}{2}
+\subsubsection{}\etiquette[4.9.3]{VI.subsubsec4.9.3}
+
+First note that if $E$ is coherent, then the full subcategory $E_{\coh}$ of
+$E$ consisting of the objects $X=(X',X'',u:X''\to f(X'))$ of $E$ that are
+coherent is reconstructed as the subcategory $E_0$ of $E$ consisting of the
+$X$ for\pageoriginale which $X'=j^{\ast}(X)$ and $X''=i^{\ast}(X)$ are
+coherent (\hyperref[VI.cor4.7]{4.7} b)). A necessary condition for $E$ to be
+coherent is therefore that the preceding subcategory $E_0$ be generating.
+This condition is also sufficient, because by \hyperref[VI.cor4.3]{4.3} a),
+$E_0$ consists of quasi-compact objects; moreover, it is clear that $E_0$ is
+stable under finite projective limits, and we conclude by \hyperref[VI.subsubsec2.4.5]{3.4.5}.
+
+Recall now (IV \hyperref[IV.subsec9.6]{9.18}) that the datum of a gluing functor
+\eqhyperref[VI.eq4.9.1]{4.9.1} is equivalent to that of a \emph{sheaf} on
+$E''$ with values in $\Pro(E')^0$:
+\begin{equation*}
+G \in \Ffaisc (E'', \Pro(E')^{0}), G : {E''}^{0} \to \Pro({E'}^{0})
+\tag{4.9.4}{\quoi},
+\end{equation*}\etiquette[4.9.4]{VI.eq4.9.4}
+or equivalently to that of a functor $g=G^0$,
+\begin{equation*}
+g:E''\to \Pro (E')\tag{4.9.5}
+\end{equation*}\etiquette[4.9.5]{VI.eq4.9.5}
+that \emph{commutes with inductive limits}. If $C$ is a generating
+subcategory of $E''$, endowed with the induced topology, we know
+(II \hyperref[VI.subsec6.10]{6.10}) that the datum of $G$ is also equivalent
+(up to unique isomorphism) to that of a sheaf on $C$ with values in
+$\Pro(E')^0$
+\begin{equation*}
+G_C \in \Ffaisc (C, \Pro(E')^0), G_C : C^{\circ} \to \Pro (E')^{0}{\quoi},\tag{4.9.6}
+\end{equation*}\etiquette[4.9.6]{VI.eq4.9.6}
+or, equivalently, to that of a functor $g_C=G_C^0$,
+\begin{equation*}
+g_C : C \to \Pro (E'){\quoi},\tag{4.9.7}
+\end{equation*}\etiquette[4.9.7]{VI.eq4.9.7}
+satisfying\pageoriginale the familiar left-exactness conditions
+(II \hyperlink{sga4.exp.II.remark.6.2.item.1}{6.2.1})). Of course, $g_C$ is simply the \emph{restriction of $g$
+$\hyperref[VI.eq4.9.5]{(4.9.5)}$ to $C$}. The case of greatest interest to us is that in which we
+take $C=E''_{\coh}$, giving the objects
+\hypertarget{sga4.exp.VI.equation.4.9.8}{}\begin{align*}
+& G_0 \in \Ffaisc (E''_{\coh}, \Pro (E')^{0}), G_0 : {E''}_{\coh}^0 \to
+ \Pro (E')^0 {\quoi},\tag{4.9.8}\\
+& g_0 = G^0_0 : E''_{\coh} \to \Pro(E'){\quoi},\tag{4.9.9}
+\end{align*}\hypertarget{sga4.exp.VI.equation.4.9.9}{}
+each of which is again equivalent to the datum of $f$.
+
+\setcounter{subsubsection}{9}
+\subsubsection{}\etiquette[4.9.10]{VI.subsubsec4.9.10}
+
+Suppose that the full generating subcategory $C$ of $E''$ consists of
+quasi-compact objects and is stable in $E''$ under finite sums, passage to
+the quotient by equivalence relations, and fiber products; this is the case,
+for example, for $C=E''_{\coh}$
+(\hyperref[VI.cor1.15]{1.15} and \hyperref[VI.cor1.17.1]{1.17.1}). It is then
+immediate, if $P$ is a category in which finite projective limits are
+representable (for example $P=\Pro(E')^0$), that a functor
+$G_C:C^{\circ}\to P$ is a sheaf with values in $P$ if and only if the functor
+$g_C=G_C^0:C\to P^0$ commutes with finite sums and with passage to the
+quotient by an equivalence relation. This specifies, in particular, which
+objects are the sheaves \eqhyperref[VI.eq4.9.6]{4.9.6} (and thus expresses
+the gluing functors $f:E'\to E''$).
+
+With these reminders in place, we can give the solution to the problem posed
+in \hyperref[VI.subsec4.9]{4.9}:
+
+\begin{enonce*}{Proposition 4.10}\etiquette[4.10]{VI.prop4.10}
+Let $E'$ and $E''$\pageoriginale be two coherent topoi, and let
+$f:E'\to E''$ be a gluing functor \emph{(IV \hyperref[IV.eq9.3.6.3]{9.10})}, \ie a left exact and
+accessible functor. Let $E$ be the topos deduced from it by gluing
+\emph{(IV \hyperref[IV.theo9.5.4]{9.16})}, and denote by $E'_{\coh}$ (\resp $E'_{PF}$) the strictly
+full subcategory of $E'$ consisting of the coherent objects (\resp the
+objects $X$ such that the covariant functor $\Hom(X,-)$ represented by $X$
+commutes with small filtered inductive limits). Consider the following
+conditions:
+\begin{itemize}
+\item[(i)] $E$ is coherent.
+
+\item[(ii)] For every object $X'$ of $E'$, there exists a family of
+  morphisms
+$$
+v_{\alpha} : Y'_{\alpha} \to X'
+$$
+with target $X'$ and with coherent objects of $E'$ as sources, such that the
+family of the
+$$
+f(v_{\alpha}) : f(Y'_{\alpha}) \to f(X')
+$$
+in $E''$ is covering.
+
+\item[(ii bis)] $f$ commutes with (small) filtered inductive limits, and
+  \emph{(ii)} holds for every $X'\in\Ob E'_{PF}$.
+
+\item[(ii ter)] The canonical functor \emph{(IV \hyperref[IV.eq9.7.2.3]{9.20.1})}
+\begin{equation*}
+\pi : \Ppoint(E'') \to \Pro(E')\tag{4.10.1}
+\end{equation*}\etiquette[4.10.1]{VI.eq4.10.1}
+defined by the gluing functor $f$ factors (up to isomorphism) through
+$\Pro(E'_{\coh})$ (via the fully faithful functor
+$\Pro(E'_{\coh})\to\Pro(E')$ arising from the inclusion
+$E'_{\coh}\to E'$):
+\begin{equation*}
+\pi_0 : \Ppoint (E'') \to \Pro(E'_{\coh}){\quoi}.\tag{4.10.2}
+\end{equation*}\etiquette[4.10.2]{VI.eq4.10.2}
+
+\item[(iii)] The\pageoriginale functor $f$ commutes with (small) filtered
+  inductive limits.
+
+\item[(iii bis)] The functor $g_0$ \hyperlink{sga4.exp.VI.equation.4.9.9}{(4.9.9)} factors (up to isomorphism)
+  through a functor
+\begin{equation*}
+E''_{\coh} \to \Pro(E'_{PF}){\quoi},\tag{4.10.3}
+\end{equation*}\etiquette[4.10.3]{VI.eq4.10.3}
+via the fully faithful functor $\Pro(E'_{PF})\to\Pro(E')$ deduced from the
+inclusion $E'_{PF}\to E'$.
+
+\item[(iii ter)] The canonical functor $\pi$
+  \eqhyperref[VI.eq4.10.1]{4.10.1} factors (up to isomorphism) as
+\begin{equation*}
+\pi_1 : \Ppoint(E'') \to \Pro(E'_{PF}){\quoi}.\tag{4.10.4}
+\end{equation*}\etiquette[4.10.4]{VI.eq4.10.4}
+
+\item[(iv)] The functor $g_0$ \hyperlink{sga4.exp.VI.equation.4.9.9}{(4.9.9)} factors (up to isomorphism) through a
+  functor
+\begin{equation*}
+E''_{\coh} \to \Pro(E'_{\coh}){\quoi}.\tag{4.10.5}
+\end{equation*}\etiquette[4.10.5]{VI.eq4.10.5}
+We then have the following diagram of implications:
+\begin{equation*}
+\text{\rm (iv) $\Rightarrow$ (i) $\Leftrightarrow$ (ii) $\Leftrightarrow$ (ii bis)
+  $\Leftrightarrow$ (ii ter) $\Rightarrow$ (iii) $\Leftrightarrow$ (iii bis)
+  $\Leftrightarrow$ (iii ter)}{\quoi}.\tag{4.10.6}
+\end{equation*}\etiquette[4.10.6]{VI.eq4.10.6}
+\end{itemize}
+\end{enonce*}
+
+Let us immediately record the
+
+\begin{enonce*}{Corollary 4.11}\etiquette[4.11]{VI.cor4.11}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Suppose that $E'$ is perfect. Then all the conditions considered in
+  \hyperref[VI.prop4.10]{4.10} are equivalent; in particular, $E$ is
+  coherent if and only if $f$ commutes with filtered inductive limits, or
+  equivalently if and only if the functor $g_0$ \hyperlink{sga4.exp.VI.equation.4.9.9}{(4.9.9)} factors (up to
+  isomorphism)\pageoriginale through $\Pro(E'_{\coh})$.
+
+\item For $E$ to be perfect, it is necessary and sufficient that $E'$ and
+  $E''$ be perfect and that $f$ (\resp $g_0$) satisfy the condition stated
+  in {\rm a)}.
+\end{enumerate}
+\end{enonce*}
+
+Indeed, a) follows from the fact that $E'$ perfect means
+$E'_{\coh}=E'_{PF}$, so that (iii bis) implies (iv). Assertion b) follows,
+as is clear from the preliminary remarks of \hyperref[VI.subsec4.9]{4.9}.
+
+
+\setcounter{subsection}{11}

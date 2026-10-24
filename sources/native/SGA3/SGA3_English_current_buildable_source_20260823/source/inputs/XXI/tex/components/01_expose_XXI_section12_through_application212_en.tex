@@ -1,0 +1,233 @@
+\subsection{The map \texorpdfstring{\(p\)}{p}}
+
+\begin{lemma}\label{sga3:XXI:1.2.1}
+Let \(p:M\to M^\ast\) (respectively \(V\to V^\ast\)) be the linear map
+defined by
+\begin{equation}
+ p(x)=\sum_{u\in R^\ast}(u,x)u.
+ \tag{6}\label{sga3:XXI:eq:6}
+\end{equation}
+Write \(\ell(x)=(p(x),x)\). Then:
+\begin{align}
+ \ell(x)&\geq0,\qquad \ell(\alpha)>0
+     &&\text{for }\alpha\in R,
+ \tag{7}\label{sga3:XXI:eq:7}\\
+ \ell(wx)&=\ell(x)
+     &&\text{for }w\in W,
+ \tag{8}\label{sga3:XXI:eq:8}\\
+ (p(x),y)&=(p(y),x)
+     &&\text{for }x,y\in V,
+ \tag{9}\label{sga3:XXI:eq:9}\\
+ \ell(\alpha)\alpha^\ast&=2p(\alpha)
+     &&\text{for }\alpha\in R.
+ \tag{10}\label{sga3:XXI:eq:10}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+The first three relations are immediate.\footnote{Editors' note:
+Formula \eqref{sga3:XXI:eq:8} follows from
+\eqref{sga3:XXI:eq:4}, \eqref{sga3:XXI:eq:2}, and
+\((\mathrm{DR\,II})\).}
+We prove the last one. By \eqref{sga3:XXI:eq:1}, for \(u\in V^\ast\),
+\begin{align*}
+ (u,\alpha)^2\alpha^\ast
+  &=(u,\alpha)u-(u,\alpha)s_\alpha(u)\\
+  &=(u,\alpha)u+(u,s_\alpha(\alpha))s_\alpha(u)\\
+  &=(u,\alpha)u+(s_\alpha(u),\alpha)s_\alpha(u)
+       \qquad\bigl(s_\alpha^2=\operatorname{id}\bigr).
+\end{align*}
+Since \(s_\alpha\) permutes \(R^\ast\) by
+\((\mathrm{DR\,II})\), summing over \(u\in R^\ast\) gives the result.
+\end{proof}
+
+\begin{scholium}\label{sga3:XXI:1.2.2}
+Relation \eqref{sga3:XXI:eq:10} says that the map
+\(\alpha\mapsto\ell(\alpha)\alpha^\ast\) is the restriction to \(R\)
+of a linear map from \(M\) to \(M^\ast\). In particular,
+\[
+ (-\alpha)^\ast=-\alpha^\ast.
+\]
+\end{scholium}
+
+\begin{corollary}\label{sga3:XXI:1.2.3}
+The map \(p\) induces an isomorphism from \(\VR(R)\) onto
+\(\VR(R^\ast)\).
+\end{corollary}
+
+\begin{proof}
+The map \(p\) sends \(\VR(R)\) onto \(\VR(R^\ast)\). Hence
+\[
+ \dim\VR(R)\geq\dim\VR(R^\ast).
+\]
+Applying this inequality to the dual root datum gives
+\[
+ \dim\VR(R)=\dim\VR(R^\ast),
+\]
+so the surjective map \(p\) is also bijective.
+\end{proof}
+
+\begin{corollary}\label{sga3:XXI:1.2.4}
+One has \(\dim\VR(R)=\dim\VR(R^\ast)\), and therefore
+\[
+ \rgss(\cR)=\rgss(\cR^\ast).
+\]
+\end{corollary}
+
+\begin{corollary}\label{sga3:XXI:1.2.5}
+The bilinear form \((u,x)\) is nondegenerate on
+\(\VR(R^\ast)\times\VR(R)\), and thus puts these
+\(\mathbb Q\)-vector spaces in duality.
+\end{corollary}
+
+\begin{proof}
+If \((u,x)=0\) for every \(u\in R^\ast\), then \(p(x)=0\).
+\end{proof}
+
+\begin{corollary}\label{sga3:XXI:1.2.6}
+The symmetric bilinear form \((p(x),y)\) is positive and nondegenerate
+on \(\VR(R)\).
+\end{corollary}
+
+\begin{corollary}\label{sga3:XXI:1.2.7}
+The group \(W\) acts faithfully on \(R\) (and hence on the other sets
+listed in Scholium~\ref{sga3:XXI:1.1.13}).
+\end{corollary}
+
+\begin{proof}
+Let \(u\in V^\ast\), and suppose \(w\in W\) satisfies
+\(w(\alpha)=\alpha\) for every \(\alpha\in R\). We prove \(w(u)=u\).
+For every \(\alpha\in R\),
+\[
+ (w(u)-u,\alpha)
+ =(w(u),\alpha)-(u,\alpha)
+ =(u,w^{-1}(\alpha))-(u,\alpha)=0.
+\]
+But \(w(u)-u\in\VR(R^\ast)\). Since it is orthogonal to every root, it
+vanishes by Corollary~\ref{sga3:XXI:1.2.5}.
+\end{proof}
+
+\begin{corollary}\label{sga3:XXI:1.2.8}
+The group \(W\) is finite.
+\end{corollary}
+
+\begin{proposition}\label{sga3:XXI:1.2.9}
+The operations of \(W\) respect the correspondence between roots and
+coroots. In other words, for \(\alpha\in R\) and \(w\in W\),
+\[
+ w(\alpha^\ast)=w(\alpha)^\ast.
+\]
+\end{proposition}
+
+\begin{proof}
+It suffices to verify this for \(w=s_\beta\), \(\beta\in R\), that is,
+to verify
+\[
+ s_\beta(\alpha^\ast)=s_\beta(\alpha)^\ast.
+\]
+Now \(\ell(s_\beta(\alpha))s_\beta(\alpha)^\ast/2\) equals
+\begin{align*}
+ p(s_\beta(\alpha))
+ &=\sum_{u\in R^\ast}(u,s_\beta(\alpha))u\\
+ &=\sum_{u\in R^\ast}(s_\beta(u),\alpha)u\\
+ &=\sum_{u\in R^\ast}(u,\alpha)s_\beta(u)
+  =s_\beta(p(\alpha)).
+\end{align*}
+Since \(\ell(s_\beta(\alpha))=\ell(\alpha)\), we obtain
+\[
+ s_\beta(\alpha)^\ast
+ =s_\beta\!\left(\frac{2p(\alpha)}{\ell(\alpha)}\right)
+ =s_\beta(\alpha^\ast).
+\]
+\end{proof}
+
+\begin{corollary}\label{sga3:XXI:1.2.10}
+If \(\alpha\in R\) and \(w\in W\), then
+\[
+ ws_\alpha w^{-1}=s_{w(\alpha)}.
+\]
+\end{corollary}
+
+\begin{proof}
+For \(x\in V\),
+\[
+ ws_\alpha w^{-1}(x)
+ =x-(\alpha^\ast,w^{-1}(x))w(\alpha)
+ =x-(w(\alpha^\ast),x)w(\alpha).
+\]
+By Proposition~\ref{sga3:XXI:1.2.9}, the last expression is
+\[
+ \begin{aligned}
+ x-(w(\alpha)^\ast,x)w(\alpha)
+   &=s_{w(\alpha)}(x).
+ \end{aligned}
+\]
+\end{proof}
+
+\begin{corollary}\label{sga3:XXI:1.2.11}\leavevmode\par
+Let \(R'\subset R\). The quadruple
+\((M,M^\ast,R',R'^\ast)\) is a root datum if and only if
+\(\alpha,\beta\in R'\) implies \(s_\alpha(\beta)\in R'\).
+\end{corollary}
+
+\section{Relations between two roots}
+
+\subsection{Proportional roots}
+
+\begin{proposition}\label{sga3:XXI:2.1.1}
+Let \(\alpha\) and \(\beta\) be two roots. The following conditions are
+equivalent:
+\begin{enumerate}
+\item[(i)] there exists \(k\in\mathbb Q\) such that
+  \(\alpha=k\beta\);
+\item[(ii)] \(s_\alpha=s_\beta\).
+\end{enumerate}
+Under these conditions,
+\(\alpha^\ast=k^{-1}\beta^\ast\), and \(k\) is one of
+\[
+ 1,\ -1,\ 2,\ -2,\ \tfrac12,\ -\tfrac12.
+\]
+\end{proposition}
+
+\begin{proof}
+Assume first \SGARefLink{sga3:XXI:2.1.1:item:i:02}{(i)}. Then
+\[
+ \alpha^\ast
+ =\ell(\alpha)^{-1}2p(\alpha)
+ =k^{-2}\ell(\beta)^{-1}2k\,p(\beta)
+ =k^{-1}\beta^\ast.
+\]
+This immediately gives \(s_\alpha=s_\beta\). Conversely, if
+\(s_\alpha=s_\beta\), then
+\[
+ \alpha=s_\alpha(-\alpha)
+       =s_\beta(-\alpha)
+       =(\beta^\ast,\alpha)\beta-\alpha,
+\]
+so
+\[
+ 2\alpha=(\beta^\ast,\alpha)\beta,
+\qquad(\beta^\ast,\alpha)\in\mathbb Z;
+\]
+thus \SGARefLink{sga3:XXI:2.1.1:item:ii:02}{(ii)} implies \SGARefLink{sga3:XXI:2.1.1:item:i:02}{(i)}. Finally, if \(\alpha=k\beta\), then
+\(\alpha^\ast=k^{-1}\beta^\ast\), whence
+\[
+ (\alpha^\ast,\beta)=2k^{-1},
+ \qquad(\beta^\ast,\alpha)=2k.
+\]
+Thus \(2k\) and \(2k^{-1}\) are integers, which gives the stated list.
+\end{proof}
+
+\begin{application}\label{sga3:XXI:2.1.2}
+Root data \(\cR\) with \(\rgss(\cR)=1\) are of one of the following two
+types:
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:XXI:2.1.1:item:i:02}(i)] Type \(A_1\): there exists \(\alpha\in M\) such that the
+  roots are \(\alpha\) and \(-\alpha\). The coroots are then
+  \(\alpha^\ast\) and \(-\alpha^\ast\).
+\item[\SGAInlineRefTarget{sga3:XXI:2.1.1:item:ii:02}(ii)] Type \(A'_1\): there exists \(\alpha\in M\) such that the
+  roots are
+  \(\alpha,-\alpha,2\alpha,-2\alpha\). The coroots are then
+  \(\alpha^\ast,-\alpha^\ast,\alpha^\ast/2,-\alpha^\ast/2\).
+\end{enumerate}
+\end{application}

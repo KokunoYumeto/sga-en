@@ -1,0 +1,177 @@
+
+\setcounter{footnote}{0}
+\SGARefTarget{sga3:iv:chapter:iv}\chapter*{Expos\'e IV\\Topologies and Sheaves}
+\addcontentsline{toc}{chapter}{Expos\'e IV. Topologies and Sheaves}
+\markboth{EXPOS\'E IV. TOPOLOGIES AND SHEAVES}%
+  {EXPOS\'E IV. TOPOLOGIES AND SHEAVES}
+
+\begingroup
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\begin{center}
+  \textit{by M. Demazure}\footnote{This text develops the substance of two
+  lectures given by A.~Grothendieck, supplementing them at several important
+  points that had been passed over in silence or only briefly touched upon.}
+\end{center}
+\endgroup
+
+\setcounter{footnote}{-1}
+
+This expos\'e is intended to acquaint the reader with the essentials of the
+language of topologies and sheaves (without cohomology), a language
+particularly convenient for questions concerning the formation of quotients,
+among others.\footnote{Editor's note: version of October 13, 2024.}
+
+The first three sections develop the language of forming quotients. The
+fourth, which is the central part, presents the theory of sheaves, oriented
+mainly toward its application to questions about quotients; the fifth applies
+this theory to the formation of quotients in groups and to principal
+homogeneous bundles. The final section concerns the category of schemes more
+specifically and defines several useful topologies on that category.
+
+The reader will profitably consult \SGARefLink{sga3:iv:bib:as}{[AS]}, \SGARefLink{sga3:iv:bib:ma}{[MA]}, \SGARefLink{sga3:iv:bib:d}{[D]}, and \SGARefLink{sga3:iv:bib:sga:4}{SGA~4}; in particular,
+\SGARefLink{sga3:iv:bib:d}{[D]} for the applications of topologies to descent theory, and \SGARefLink{sga3:iv:bib:sga:4}{SGA~4} for
+questions concerning universes (which are treated especially poorly in this
+expos\'e).
+
+\SGARefTarget{sga3:iv:section:1}\section*{1. Universal Effective Epimorphisms}
+\addcontentsline{toc}{section}{1. Universal Effective Epimorphisms}
+
+Throughout the remainder of this expos\'e, a category \(\mathscr C\) is fixed.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:1:1}\textbf{Definition 1.1.}
+\textit{A morphism \(u:T\to S\) is called an \emph{epimorphism} if, for every
+object \(X\), the corresponding map}
+\[
+  X(S)=\operatorname{Hom}(S,X)
+  \longrightarrow
+  X(T)=\operatorname{Hom}(T,X)
+\]
+\textit{is injective.}\footnote{Editor's note: that is, if \(u\) is
+right-cancellable.}
+\textit{It is called a \emph{universal epimorphism} if, for every morphism
+\(S'\to S\), the fiber product \(T'=T\times_S S'\) exists and
+\(u':T'\to S'\) is an epimorphism.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:1:2}\textbf{Definition 1.2.}
+\textit{A diagram of maps of sets}
+\[
+  A\xrightarrow{u}B
+  \overset{v_1}{\underset{v_2}{\rightrightarrows}}C
+\]
+\textit{is said to be \emph{exact} if \(u\) is injective and its image consists
+of those elements \(b\in B\) for which \(v_1(b)=v_2(b)\). A diagram of the
+same form in \(\mathscr C\) is said to be \emph{exact} if, for every object
+\(X\) of \(\mathscr C\), the corresponding diagram of sets}
+\[
+  A(X)\longrightarrow B(X)\rightrightarrows C(X)
+\]
+\textit{is exact; one then also says that \(u\) makes \(A\) a \emph{kernel}
+of the pair of arrows \((v_1,v_2)\). Dually, a diagram in \(\mathscr C\)}
+\[
+  C\overset{v_1}{\underset{v_2}{\rightrightarrows}}B
+  \xrightarrow{u}A
+\]
+\textit{is said to be exact if it is exact as a diagram in the opposite
+category \(\mathscr C^{\circ}\); that is, if for every object \(X\) of
+\(\mathscr C\), the corresponding diagram of sets}
+\[
+  X(A)\longrightarrow X(B)\rightrightarrows X(C)
+\]
+\textit{is exact.}\footnote{Editor's note: this implies, in particular, that
+\(u\) is an epimorphism.}
+\textit{One also says that \(u\) makes \(A\) a \emph{cokernel} of the pair of
+arrows \((v_1,v_2)\).}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:1:3}\textbf{Definition 1.3.}
+\textit{A morphism \(u:T\to S\) is called an \emph{effective epimorphism} if
+the fiber square \(T\times_S T\) exists and the diagram}
+\[
+  T\times_S T
+  \overset{\operatorname{pr}_1}{\underset{\operatorname{pr}_2}{\rightrightarrows}}
+  T\xrightarrow{u}S
+\]
+\textit{is exact; that is, if \(u\) makes \(S\) a cokernel of
+\((\operatorname{pr}_1,\operatorname{pr}_2)\). It is called a
+\emph{universal effective epimorphism} if, for every morphism \(S'\to S\),
+the fiber product \(T'=T\times_S S'\) exists and the morphism
+\(u':T'\to S'\) is an effective epimorphism.}
+
+There are evidently implications
+\[
+\begin{array}{ccc}
+ \text{universal effective epimorphism}
+   &\Longrightarrow& \text{effective epimorphism}\\
+ \Big\Downarrow && \Big\Downarrow\\
+ \text{universal epimorphism}
+   &\Longrightarrow& \text{epimorphism},
+\end{array}
+\]
+but in general no other implication holds.\footnote{Editor's note: for
+example, if \(\mathscr C=\mathbf{Sch}\) is the category of schemes, it is
+easy to see that every universal epimorphism is surjective. Let
+\[
+  T=\coprod_{p\ \mathrm{prime}}\operatorname{Spec}(\mathbf F_p),
+  \qquad S=\operatorname{Spec}(\mathbf Z).
+\]
+Then the morphism \(u:T\to S\) is an epimorphism that is not universal. On
+the other hand, \(T\times_S T\) identifies with \(T\), so the two
+projections \(T\times_S T\to T\) coincide. Since
+\(\operatorname{id}_T\) does not descend to a morphism \(S\to T\), this
+shows that \(u\) is not an effective epimorphism.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:1:4:0}\textbf{Definition 1.4.0.}\footnote{Editor's note: the numbering
+\SGARefLink{sga3:iv:definition:1:4:0}{1.4.0} has been added for later reference.}
+We ``recall'' that a morphism \(u:T\to S\) is said to be
+\emph{squarable} if, for every morphism \(S'\to S\), the fiber product
+\(T\times_S S'\) exists.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:1:4}\textbf{Lemma 1.4.}
+\textit{Consider morphisms \(U\xrightarrow{v}T\xrightarrow{u}S\). Then:}
+\begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:iv:lemma:1:4:item:a:01} \textit{if \(u\) and \(v\) are epimorphisms, then \(uv\) is an
+    epimorphism; and if \(uv\) is an epimorphism, then \(u\) is an
+    epimorphism;}
+  \item[(b)]\SGARefTarget{sga3:iv:lemma:1:4:item:b:01} \textit{if \(u\) and \(v\) are universal epimorphisms, then
+    \(uv\) is a universal epimorphism; and if \(uv\) is a universal
+    epimorphism and \(u\) is squarable, then \(u\) is a universal
+    epimorphism.}
+\end{enumerate}
+
+Lemma~\SGARefLink{sga3:iv:lemma:1:4}{1.4} follows immediately from the definitions. We deduce:
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:1:5}\textbf{Corollary 1.5.}
+\textit{Let \(u:X\to Y\) and \(u':X'\to Y'\) be universal epimorphisms,
+and suppose that \(Y\times Y'\) exists. Then \(X\times X'\) exists and}
+\[
+  u\times u':X\times X'\longrightarrow Y\times Y'
+\]
+\textit{is a universal epimorphism.}
+
+We also record the following.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:1:6:0}\textbf{Definition 1.6.0.}\footnote{Editor's note: the numbering
+\SGARefLink{sga3:iv:definition:1:6:0}{1.6.0} has been added for later reference.}
+An object \(S\) of \(\mathscr C\) is called \emph{squarable} if its product
+with every object of \(\mathscr C\) exists. (If \(\mathscr C\) has a final
+object \(e\), this is equivalent to saying that the morphism \(S\to e\) is
+squarable; cf. \SGARefLink{sga3:iv:definition:1:4:0}{1.4.0}.)
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:1:6}\textbf{Lemma 1.6.}
+\textit{Let \(u:X\to Y\) be a morphism in \(\mathscr C_{/S}\). For it to be
+an epimorphism (respectively, a universal epimorphism, an effective
+epimorphism, or a universal effective epimorphism), it is sufficient that the
+corresponding morphism in \(\mathscr C\) have the same property; it is also
+necessary if \(S\) is assumed to be a squarable object of \(\mathscr C\).}
+
+The proof is immediate and is left to the reader. The hypothesis that \(S\)
+is squarable is used to interpret the \(\mathscr C\)-morphisms from an object
+\(Y\) of \(\mathscr C_{/S}\) to an object \(Z\) of \(\mathscr C\) as the
+\(\mathscr C_{/S}\)-morphisms from \(Y\) to \(Z\times S\).

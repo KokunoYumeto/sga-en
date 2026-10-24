@@ -1,0 +1,827 @@
+
+\makeatletter
+\@ifundefined{remarks}{%
+  \theoremstyle{remark}
+  \newtheorem{remarks}[theorem]{Remarks}%
+}{}
+\makeatother
+
+\section{The case of an arbitrary base prescheme}
+\SGARefTarget{sga3:xiii:section:3}
+
+Suppose first that the base is a field \(k\), not necessarily
+algebraically closed. Since conditions \SGARefLink{sga3:xiii:theorem:2:1}{2.1} \SGARefLink{sga3:xiii:theorem:2:1:item:i-bis}{(i bis)}, \SGARefLink{sga3:xiii:theorem:2:1:item:iv-bis}{(iv bis)}, \SGARefLink{sga3:xiii:theorem:2:1:item:v}{(v)},
+and \SGARefLink{sga3:xiii:theorem:2:1:item:vi}{(vi)} are invariant under extension of the base field, passage to
+the algebraic closure \(\overline{k}\) of \(k\) shows that they are
+equivalent to one another, and equivalent to the assertion that
+\(H_{\overline{k}}\) contains a Cartan subgroup of
+\(G_{\overline{k}}\). When \SGARefLink{sga3:xiii:theorem:2:1:item:i}{this condition} is satisfied, it is still
+true (with the notation of \SGARefLink{sga3:xiii:corollary:2:3}{2.3}) that \(k(X)\) is a finite separable
+extension of \(k(G)\), of degree \(d\) independent of every extension
+of the base. If \(U\) is the largest open subset of \(G\) such that
+\(\psi\) induces a finite étale morphism
+\[
+  \psi^{-1}(U)\longrightarrow U,
+\]
+then the formation of \(U\) commutes with extension of the base field.
+If \(\psi\) is birational, then \(U\) is also the largest open subset
+of \(G\) such that \(\psi\) induces an isomorphism
+\[
+  \psi^{-1}(U)\xrightarrow{\sim}U;
+\]
+and if \(g\in U(k)\), there is one and only one subgroup \(H'\) of
+\(G\), conjugate to \(H\) over \(\overline{k}\), such that
+\(H'\ni g\).
+
+A point \(g\in G(k)\) is called \emph{regular} if it is regular as an
+element of
+\[
+  G(\overline{k})=G_{\overline{k}}(\overline{k}).
+\]
+More generally, the construction of \SGARefLink{sga3:xiii:corollary:2:7}{2.7} gives an open subset of \(G\),
+whose formation commutes with every extension of the base field,
+called the \emph{open subset of regular points} of \(G\). It is also
+characterized by the following property: for every algebraically
+closed extension \(K\) of \(k\) and every \(g\in G(K)\), the point
+\(g\) is regular in \(G_K\) if and only if \(g\in U(K)\). If
+\(g\in U(k)\)\footnote{Editor's note: \(G(k)\) has been corrected to
+\(U(k)\).}, then \(g\) is contained in one and only one Cartan
+subgroup of \(G\), as we shall prove below under more general
+hypotheses.
+
+Let \(G\) be a smooth, separated group prescheme of finite type, with
+connected fibers over the prescheme \(S\), and consider the functor
+\SGARefTarget{sga3:xiii:section:3:display:cartan-functor}
+\[
+  \mathcal C:(\mathrm{Sch})^\circ_{/S}\longrightarrow(\mathrm{Ens})
+\]
+defined by
+\[
+  \mathcal C(S')
+  =
+  \left\{
+    \begin{array}{c}
+      \text{Cartan subgroups (XII~3.1) of \(G_{S'}\)}
+    \end{array}
+  \right\}.
+\]
+Suppose that \SGARefLink{sga3:xiii:section:3:display:cartan-functor}{this functor} is representable by a prescheme smooth over
+\(S\). In Exposé XV we give a necessary and sufficient condition for
+this to hold, but we already know that the hypothesis is satisfied if
+\(G\) is affine over \(S\) with locally constant reductive rank
+(\SGARefLink{sga3:xii:3.3}{XII~3.3}), or, more generally, if \(G\) locally admits a maximal torus
+for the fpqc topology (\SGARefLink{sga3:xii:7.1}{XII~7.1} a)); this is the case, for example, if
+\(S\) is the spectrum of a field.
+
+Let \(X\) be the Cartan subgroup of the \(\mathcal C\)-group
+prescheme \(G_{\mathcal C}\), the ``universal Cartan subgroup'' of
+\(G\). Thus, as a prescheme over \(S\), \(X\) represents the functor
+\[
+  X(S')
+  =
+  \left\{
+    \begin{array}{c}
+      (C,g)\ \bigm|\ C\text{ is a Cartan subgroup of }G_{S'},\\
+      g\text{ is a section of }C\text{ over }S'
+    \end{array}
+  \right\}.
+\]
+Consider the canonical projection morphism \((C,g)\mapsto g\),
+\[
+  \psi:X\longrightarrow G.
+\]
+We then have \SGARefLink{sga3:xiii:theorem:3:1}{the following theorem}.
+
+\begin{theorem}
+\SGARefTarget{sga3:xiii:theorem:3:1}
+Under the preceding hypotheses on \(G\), and with the preceding
+notation, let \(U\) be the set of \(g\in G\) such that \(g\) is a
+regular element of its fiber \(G_s\). Then \(U\) is open, and it is
+also the largest open subset \(U\) of \(G\) such that \(\psi\)
+induces an isomorphism
+\[
+  \psi^{-1}(U)\xrightarrow{\sim}U.
+\]
+\end{theorem}
+
+Let us first prove that \(U\) is open. By the representability of
+\(\mathcal C\) as a prescheme smooth over \(S\), and since its
+structure morphism is plainly surjective, it follows at once that
+\(G\) locally admits a Cartan subgroup for the étale topology and
+that the nilpotent rank of the fibers of \(G\) is locally constant.
+The same holds for the dimension of the fibers of \(G\). After
+localizing on \(S\), we may therefore suppose that these two integers
+are constant, say \(\rho\) and \(n\). Consider the Killing polynomial
+\[
+  P_G(t)=t^n+c_1t^{n-1}+\cdots+c_n\in A[t],
+  \qquad A=\Gamma(G,\mathcal O_G).
+\]
+The restriction of this polynomial to the fibers \(G_s\) of \(G\),
+and in particular to the fibers at the maximal points of \(S\), is
+divisible by \((t-1)^\rho\). This says that certain linear
+combinations of the \(c_i\), with integer coefficients, vanish on the
+fibers \(G_s\). When \(S\) is reduced, as we may assume in order to
+prove that \(U\) is open, it follows that these combinations
+themselves vanish. Hence the Killing polynomial itself is divisible
+by \((t-1)^\rho\), say\footnote{The source prints the undefined
+exponent \(n-r-1\). It is corrected to \(n-\rho-1\), as required by
+the degree \(n-\rho\) of the second factor.}
+\[
+  P_G(t)
+  =
+  (t-1)^\rho
+  \bigl(t^{n-\rho}+b_1t^{n-\rho-1}+\cdots+b_{n-\rho}\bigr).
+\]
+Let \(b\) be the sum of the coefficients
+\(b_0=1,b_1,\ldots,b_{n-\rho}\) of the second factor. By \SGARefLink{sga3:xiii:corollary:2:7}{2.7}, applied
+to the fibers of \(G\), we have
+\[
+  U=G_b,
+\]
+which proves that \(U\) is open.
+
+To prove that \(\psi^{-1}(U)\to U\) is an isomorphism, SGA~1,
+I~5.7 reduces us to checking this fiber by fiber. We are thereby
+reduced to the case of a base field, which may be assumed
+algebraically closed. There is then a Cartan subgroup \(C\) of \(G\).
+If \(N\) is its normalizer, the conjugacy theorem \SGARefLink{sga3:xii:7.1}{XII~7.1} a) and b)
+identifies \(\mathcal C\) with \(G/N\), and the morphism
+\(\psi:X\to G\) considered here is precisely the one defined in
+\SGARefLink{sga3:xiii:section:2}{Section~2}. The conclusion follows from \SGARefLink{sga3:xiii:theorem:2:6:item:b}{2.6 b)}. The same argument also
+shows that \(U\) is the largest open subset of \(G\) for which
+\(\psi\) induces an isomorphism \(\psi^{-1}(U)\to U\).
+
+\begin{corollary}
+\SGARefTarget{sga3:xiii:corollary:3:2}
+Under the hypotheses of \SGARefLink{sga3:xiii:theorem:3:1}{3.1}, let \(g\) be a regular section of \(G\),
+that is, suppose that \(g(s)\) is a regular point of \(G_s\) for every
+\(s\in S\). Then there is one and only one Cartan subgroup \(C\) of
+\(G\) such that \(g\) is a section of \(C\).
+\end{corollary}
+
+Indeed, the hypothesis on \(g\) says that \(g\) is a section of
+\(U\), while the conclusion says that it admits a unique lift to a
+section of \(X\). This is simply another way of saying that
+\(\psi^{-1}(U)\to U\) is an isomorphism.
+
+Observe now that the open subset \(\psi^{-1}(U)\) of the Cartan
+subgroup \(X\) of \(G_{\mathcal C}\) is precisely the open subset of
+\(X\) consisting of the points regular in \(G_{\mathcal C}\), by
+which we mean regular in their fibers. We thus obtain a natural
+``fibration'' of the dense open subset \(U\) of regular points of
+\(G\) over the prescheme \(\mathcal C\); its fibers are dense open
+subsets of Cartan subgroups of the fibers of \(G_{\mathcal C}\),
+namely their open subsets of points regular in \(G\). For example, we
+obtain \SGARefLink{sga3:xiii:corollary:3:3}{the following result}, which will be considerably sharpened in
+the next Exposé.
+
+\begin{corollary}
+\SGARefTarget{sga3:xiii:corollary:3:3}
+Let \(G\) be a smooth connected algebraic group over the field \(k\),
+and let \(\mathcal T\) be the scheme of maximal tori of \(G\), which
+is isomorphic to the scheme of Cartan subgroups of \(G\). Then the
+function field \(k(G)\) of \(G\) is isomorphic to the function field
+of a smooth connected affine nilpotent algebraic group \(C\) over the
+function field \(k(\mathcal T)\) of \(\mathcal T\), namely
+\[
+  C=\text{``the generic Cartan subgroup of \(G\)''}.
+\]
+If \(G\) is affine and has unipotent rank zero, that is, if the Cartan
+subgroups of \(G_{\overline k}\)\footnote{The source prints the
+undefined base field \(\overline K\); it is corrected to
+\(\overline k\).} are tori, then \(k(G)\) is a
+unirational extension of \(k(\mathcal T)\).
+\end{corollary}
+
+Of course, by the generic Cartan subgroup of \(G\) we mean, by an
+abuse of language, the Cartan subgroup of \(G_{k(\mathcal T)}\) that
+is the generic fiber of \(X\) over \(\mathcal T\). It remains only to
+prove the last assertion of \SGARefLink{sga3:xiii:corollary:3:3}{3.3}, which is contained in \SGARefLink{sga3:xiii:lemma:3:4}{the following
+well-known result}, due to Chevalley.
+
+\begin{lemma}
+\SGARefTarget{sga3:xiii:lemma:3:4}
+Let \(k\) be a field, \(T\) a torus over \(k\), and \(k(T)\) the
+field of rational functions on \(T\). Then \(k(T)\) is a
+unirational extension of \(k\), that is, it is contained in a purely
+transcendental extension of \(k\).
+\end{lemma}
+
+Indeed, let \(k'\) be a finite separable extension of \(k\) that
+splits\footnote{Editor's note: ``splits'' (?), or: ``over which \(T\)
+is split''.} \(T\) (\SGARefLink{sga3:x:proposition:1:4}{X~1.4}). Then \(T\otimes_k k'\) is a rational
+variety: it contains a dense open subset isomorphic to a dense open
+subset of affine \(n\)-space \(\mathbb A^n_{k'}\). Hence
+\[
+  T'
+  =
+  \prod_{\operatorname{Spec}(k')/\operatorname{Spec}(k)}
+  T_{k'}/\operatorname{Spec}(k')
+\]
+is a rational variety, since it has a dense open subset isomorphic to
+a dense open subset of
+\[
+  \prod_{\operatorname{Spec}(k')/\operatorname{Spec}(k)}
+  \mathbb A^n_{k'},
+\]
+which is isomorphic to affine \(mn\)-space over \(k\), where
+\(m=[k':k]\). Consider the norm homomorphism from \(T'\) to \(T\),
+which is defined whenever \(T\) is a commutative group scheme over
+\(k\). The composite
+\[
+  T\longrightarrow T'\longrightarrow T
+\]
+is the \(m\)-th power map on \(T\), and is therefore dominant.
+Consequently \(T'\to T\) is dominant, proving that \(T\) is
+unirational.
+
+Return to the hypotheses of \SGARefLink{sga3:xiii:theorem:3:1}{3.1}, but suppose in addition that \(G\)
+locally admits a maximal torus for the fpqc topology (\SGARefLink{sga3:xii:7.1}{XII~7.1}). Let
+\(Y\) be the maximal torus of the Cartan subgroup \(X\) of
+\(G_{\mathcal C}\). The morphism \(\psi:X\to G\) then induces a
+morphism \(Y\to G\) whose set-theoretic image consists of the
+semisimple elements of the fibers of \(G\) (XII~8). Finally, \SGARefLink{sga3:xiii:theorem:3:1}{3.1}
+shows that the restriction of \(\psi\) to the open subset
+\(Y^{\mathrm{reg}}\) of regular points of \(Y\) induces a closed
+immersion
+\[
+  Y^{\mathrm{reg}}\longrightarrow U=G^{\mathrm{reg}}.
+\]
+Making explicit the functorial meaning of
+\(Z=Y^{\mathrm{reg}}\), we obtain \SGARefLink{sga3:xiii:corollary:3:5}{the following}.
+
+\begin{corollary}
+\SGARefTarget{sga3:xiii:corollary:3:5}
+Let \(G\) be a smooth, separated \(S\)-group prescheme of finite
+type, with connected fibers over the prescheme \(S\), and suppose
+that \(G\) locally admits a maximal torus for the fpqc topology. Let
+\[
+  Z:(\mathrm{Sch})^\circ_{/S}\longrightarrow(\mathrm{Ens})
+\]
+be the functor defined by
+\[
+  Z(S')
+  =
+  \left\{
+    \begin{array}{c}
+      \text{regular sections of \(G_{S'}\) over \(S'\) that are}\\
+      \text{contained in a maximal torus of \(G_{S'}\)}
+    \end{array}
+  \right\}.
+\]
+Then \(Z\) is representable by a closed subprescheme, smooth over
+\(S\), of the open subset \(U=G^{\mathrm{reg}}\) of \(G\) introduced
+in \SGARefLink{sga3:xiii:theorem:3:1}{3.1}.
+\end{corollary}
+
+To conclude, let us record \SGARefLink{sga3:xiii:corollary:3:6}{the following result}, which sharpens the
+density theorem \SGARefLink{sga3:xiii:theorem:2:1}{2.1} \SGARefLink{sga3:xiii:theorem:2:1:item:i}{(i)} \(\Rightarrow\) \SGARefLink{sga3:xiii:theorem:2:1:item:vi}{(vi)}.
+
+\begin{corollary}
+\SGARefTarget{sga3:xiii:corollary:3:6}
+Under the hypotheses of \SGARefLink{sga3:xiii:corollary:3:5}{3.5}, let \(C\) be a Cartan subgroup of \(G\),
+and consider the morphism
+\[
+  \varphi:Z\times C\longrightarrow G
+\]
+defined by
+\[
+  \varphi(g,h)=\operatorname{ad}(g)h=ghg^{-1}.
+\]
+Then \(\varphi\) is dominant.
+\end{corollary}
+
+It plainly suffices to prove the assertion fiber by fiber, which
+reduces us to the case where \(S\) is the spectrum of an
+algebraically closed field \(k\). Let \(T\) be the maximal torus of
+\(C\), let \(t_0\in T(k)\) be regular in \(G\), and let
+\(c_0\in C(k)\) be regular in \(G\). Consider
+\(\varphi^{-1}(\varphi(t_0,c_0))\). Its \(k\)-rational points are the
+pairs \((t,c)\), with \(t\in Z(k)\) and \(c\in C(k)\), such that
+\[
+  \operatorname{ad}(t)c=\operatorname{ad}(t_0)c_0,
+  \qquad\text{that is,}\qquad
+  c=\operatorname{ad}(t^{-1}t_0)c_0.
+\]
+They are therefore in bijection with the \(t\in Z(k)\) such that
+\(\operatorname{ad}(t^{-1}t_0)c_0\in C\), or equivalently, since
+\(c_0\) is regular, such that \(t^{-1}t_0\in N\), where \(N\) is the
+normalizer of \(C\); in other words, \(t\in N\). Restricting to those
+\(t\in Z(k)\) that belong to \(C(k)\) gives an open and closed part
+of this fiber. We have therefore found a connected component of
+\(\varphi^{-1}(\varphi(t_0,c_0))\) isomorphic to \(T\). The preceding
+set-theoretic argument indeed gives an isomorphism of schemes: one
+simply replaces \(k\)-valued points by points with values in an
+arbitrary \(k\)-prescheme.
+
+It follows that the generic fiber of \(\varphi\) has dimension at
+most \(\dim T\), and therefore
+\[
+  \dim\operatorname{Im}(\varphi)
+  \geq
+  \dim(Z\times C)-\dim T
+  =
+  \dim Z+\dim C-\dim T.
+\]
+But
+\[
+  \dim Z
+  =
+  \dim Y
+  =
+  \dim\mathcal C+\dim T
+  =
+  \dim G-\dim C+\dim T.
+\]
+Thus \(\dim\operatorname{Im}(\varphi)\geq\dim G\), and \(\varphi\)
+is dominant.
+\par\hfill\textsc{q.e.d.}
+
+\begin{remarks}
+\SGARefTarget{sga3:xiii:remark:3:7}
+The argument shows in addition that the connected component at
+\((t_0,c_0)\) of the fiber
+\(\varphi^{-1}(\varphi(t_0,c_0))\) is isomorphic to \(T\). In
+particular, it is smooth over \(k\) and has the same dimension as the
+generic fiber. It follows that \(\varphi\) is in fact smooth at
+\((t_0,c_0)\), something that one should also be able to verify by
+calculating the tangent map. Consequently, under the hypotheses of
+\SGARefLink{sga3:xiii:corollary:3:6}{3.6}, the induced morphism
+\[
+  Z\times_S C^{\mathrm{reg}}\longrightarrow G^{\mathrm{reg}},
+  \qquad C^{\mathrm{reg}}=C\cap G^{\mathrm{reg}},
+\]
+is smooth. Likewise, the analogous morphism
+\[
+  Z\times T^{\mathrm{reg}}\longrightarrow Z,
+\]
+where \(T\) is a maximal torus of \(G\), is smooth. More generally,
+for every smooth connected normal algebraic subgroup \(H\) of \(C\)
+containing an element \(c_0\in G(k)\) that is regular in \(G\), the
+image of \(Z\times H\to G\) is dense in the image of
+\(G\times H\to G\).
+\end{remarks}
+
+\section{Lie algebras over a field: rank, regular elements, Cartan subalgebras}
+\SGARefTarget{sga3:xiii:section:4}
+
+In the remainder of \SGARefLink{sga3:xiii:expose}{this Exposé} we take up the theory developed by
+Chevalley in his book \emph{Théorie des Groupes de Lie III}
+(Act.\ Sc.\ Ind.\ 1226, Paris 1955); the methods of schemes allow us
+to dispense with the hypothesis of characteristic zero. We begin by
+recalling in \SGARefLink{sga3:xiii:section:4}{this section} several well-known notions and results.
+
+Let \(\mathfrak g\) be a Lie algebra over a ring \(k\). For every
+\(a\in\mathfrak g\), denote by \(\operatorname{ad}(a)\) the
+endomorphism
+\[
+  \operatorname{ad}(a)\cdot x=[a,x]
+\]
+of \(\mathfrak g\); it is a derivation of the Lie algebra
+\(\mathfrak g\). For every derivation \(D\) of \(\mathfrak g\), the
+nil-space of \(D\), that is, the union of the kernels of the iterates
+of \(D\), is a Lie subalgebra of \(\mathfrak g\), as follows from the
+Leibniz formula
+\[
+  D^m([x,y])
+  =
+  \sum_{0\leq p\leq m}
+  \binom{m}{p}[D^p x,D^{m-p}y].
+\]
+We set
+\[
+  \operatorname{Nil}(a,\mathfrak g)
+  =
+  \text{nil-space of }\operatorname{ad}(a)
+  =
+  \bigcup_{m\geq0}\operatorname{Ker}\operatorname{ad}(a)^m.
+\]
+When no confusion can arise, we write simply
+\(\operatorname{Nil}(a)\), and call it the \emph{nil-space of \(a\)
+in \(\mathfrak g\)}.
+
+\begin{proposition}
+\SGARefTarget{sga3:xiii:proposition:4:1}
+For every \(a\in\mathfrak g\), its nil-space
+\(\operatorname{Nil}(a,\mathfrak g)\) is a Lie subalgebra of
+\(\mathfrak g\), equal to its own normalizer.
+\end{proposition}
+
+It remains only to prove that it is its own normalizer. In other
+words, every element of
+\(\mathfrak g/\operatorname{Nil}(a,\mathfrak g)\) annihilated by the
+adjoint representation of \(\operatorname{Nil}(a,\mathfrak g)\) on
+this quotient must be zero. This is immediate, since every element
+of the quotient annihilated by \(\operatorname{ad}(a)\)\footnote{The
+source prints \(\operatorname{Ad}(a)\); because
+\(a\in\mathfrak g\), the endomorphism here is
+\(\operatorname{ad}(a)\).} is zero.
+
+For the remainder of \SGARefLink{sga3:xiii:section:4}{this section}, suppose that \(k\) is a field and
+that \(\mathfrak g\) is finite-dimensional over \(k\). We denote by
+\(W(\mathfrak g)\) the scheme over \(k\) defined by \(\mathfrak g\);
+its points in a \(k\)-algebra \(A\) are the elements of
+\(\mathfrak g\otimes_k A\). If \(a\in\mathfrak g\), the
+characteristic polynomial of \(\operatorname{ad}(a)\) is also called
+the \emph{characteristic polynomial}, or the \emph{Killing
+polynomial}, of \(a\) in \(\mathfrak g\):
+\[
+  P_{\mathfrak g}(a,t)
+  =
+  t^n+c_1(a)t^{n-1}+\cdots+c_n(a),
+\]
+where \(n=\operatorname{rank}_k\mathfrak g\) and \(c_i(a)\in k\).
+Taking the same polynomial for
+\(a\in\mathfrak g\otimes_k A\)\footnote{Editor's note:
+\(W\otimes_k A\) has been corrected to
+\(\mathfrak g\otimes_k A\).}, where \(A\) is any \(k\)-algebra, we
+see that the \(c_i(a)\) arise from uniquely determined sections
+\(c_i\) of the structure sheaf of \(W(\mathfrak g)\), that is, from
+elements of the symmetric algebra
+\[
+  A=\operatorname{Sym}_k(\mathfrak g^\vee),
+\]
+where \(\mathfrak g^\vee\) is the dual of the \(k\)-module
+\(\mathfrak g\). When \(k\) is infinite, the \(c_i\) are determined
+by the corresponding polynomial functions \(\mathfrak g\to k\), but
+this is no longer true when \(k\) is finite.
+
+Let \(r\) be the largest integer such that the Killing polynomial
+\[
+  P_{\mathfrak g}(t)
+  =
+  t^n+c_1t^{n-1}+\cdots+c_n
+  \in A[t]
+\]
+is divisible by \(t^r\); thus
+\[
+  P_{\mathfrak g}(t)
+  =
+  t^n+c_1t^{n-1}+\cdots+c_{n-r}t^r,
+  \qquad c_{n-r}\neq0.
+\]
+The integer \(r\) is called the \emph{nilpotent rank} of the Lie
+algebra \(\mathfrak g\). It is invariant under extension of the base
+field.
+
+\begin{proposition}
+\SGARefTarget{sga3:xiii:proposition:4:2}
+Let \(r\) be the nilpotent rank of \(\mathfrak g\), and let
+\(a\in\mathfrak g\). Then
+\[
+  \operatorname{rank}_k\operatorname{Nil}(a,\mathfrak g)\geq r,
+\]
+with equality if and only if
+\[
+  c_{n-r}(a)\neq0.
+\]
+In this case \(\operatorname{Nil}(a,\mathfrak g)\) is a nilpotent
+Lie algebra. We shall see the converse in \SGARefLink{sga3:xiii:corollary:5:7:part:b}{5.7 b)} when
+\(\mathfrak g\) is the Lie algebra of an algebraic group \(G\)
+smooth over \(k\).
+\end{proposition}
+
+The first assertion is immediate, since by definition
+\[
+  \operatorname{rank}_k\operatorname{Nil}(a,\mathfrak g)
+  =
+  \text{the multiplicity of the zero root in }P_{\mathfrak g}(a,t).
+\]
+Suppose now that \(c_{n-r}(a)\neq0\). We prove that
+\(\operatorname{Nil}(a)\) is nilpotent, which is equivalent to saying
+that \(\operatorname{ad}_{\operatorname{Nil}(a)}(x)\) is a nilpotent
+endomorphism for every \(x\in\operatorname{Nil}(a)\). We may suppose
+that \(k\) is algebraically closed. Since
+\[
+  \operatorname{ad}(a)_{\mathfrak g/\operatorname{Nil}(a)}
+\]
+is injective, there is a nonempty open subset
+\(U\subset W(\operatorname{Nil}(a))\) such that, for every
+\(x\in U(k)\), the endomorphism
+\(\operatorname{ad}(x)_{\mathfrak g/\operatorname{Nil}(a)}\) is
+injective and hence
+\(\operatorname{Nil}(x)\subset\operatorname{Nil}(a)\). We may further
+suppose that \(U\) is contained in the open subset on which
+\(c_{n-r}\) does not vanish; that open subset is nonempty because
+\(c_{n-r}(a)\neq0\). Then
+\(\operatorname{Nil}(x)\) and \(\operatorname{Nil}(a)\) have the same
+dimension, so
+\[
+  \operatorname{Nil}(x)=\operatorname{Nil}(a).
+\]
+It follows that
+\(\operatorname{ad}(x)_{\operatorname{Nil}(a)}\) is nilpotent for
+every \(x\in U(k)\). By the principle of extension of algebraic
+identities, this remains true for every
+\(x\in\operatorname{Nil}(a)\), and hence \(\operatorname{Nil}(a)\) is
+nilpotent.
+
+An element \(a\in\mathfrak g\) is called \emph{regular} if
+\(c_{n-r}(a)\neq0\), that is, if
+\[
+  \operatorname{rank}_k\operatorname{Nil}(a,\mathfrak g)=r.
+\]
+When \(k\) is infinite, this also says that
+\(\operatorname{rank}_k\operatorname{Nil}(a,\mathfrak g)\) is as
+small as possible as \(a\) varies in \(\mathfrak g\). In every case,
+the notion of a regular element of \(\mathfrak g\) is invariant under
+extension of the base field. The set of regular points of
+\(W(\mathfrak g)\), meaning those that arise from regular points with
+values in a suitable extension of \(k\), is open, since it is
+\[
+  W(\mathfrak g)_{c_{n-r}},
+\]
+the set of points at which \(c_{n-r}\) is invertible.
+
+\begin{corollary}
+\SGARefTarget{sga3:xiii:corollary:4:3}
+Let \(a\) be a regular element of \(\mathfrak g\), and let
+\(\mathfrak h\) be a Lie subalgebra of \(\mathfrak g\) containing
+\(a\). Then \(\mathfrak h\) is nilpotent if and only if
+\[
+  \mathfrak h\subset\operatorname{Nil}(a,\mathfrak g).
+\]
+In particular, \(\operatorname{Nil}(a,\mathfrak g)\) is a maximal
+nilpotent subalgebra of \(\mathfrak g\).
+\end{corollary}
+
+Since \(\operatorname{Nil}(a)\) is nilpotent, the inclusion
+\(\mathfrak h\subset\operatorname{Nil}(a)\) implies that
+\(\mathfrak h\) is nilpotent. Conversely, if \(\mathfrak h\) is
+nilpotent, it is contained in the nil-space of its element \(a\);
+that is, \(\mathfrak h\subset\operatorname{Nil}(a)\).
+
+\begin{proposition}
+\SGARefTarget{sga3:xiii:proposition:4:4}
+Suppose that \(k\) is infinite. Let \(\mathfrak d\) be a Lie
+subalgebra of \(\mathfrak g\). Consider the following conditions:
+\begin{enumerate}
+\item[(i)]\SGARefTarget{sga3:xiii:proposition:4:4:item:i}
+\(\mathfrak d\) is maximal nilpotent and contains a regular element
+of \(\mathfrak g\).
+\item[(i bis)]\SGARefTarget{sga3:xiii:proposition:4:4:item:i-bis}
+\(\mathfrak d=\operatorname{Nil}(a,\mathfrak g)\) for some regular
+element \(a\) of \(\mathfrak g\).
+\item[(ii)]\SGARefTarget{sga3:xiii:proposition:4:4:item:ii}
+\(\mathfrak d\) is nilpotent and
+\(\mathfrak d=\operatorname{Nil}(a,\mathfrak g)\) for some
+\(a\in\mathfrak g\).
+\item[(ii bis)]\SGARefTarget{sga3:xiii:proposition:4:4:item:ii-bis}
+\(\mathfrak d\) is nilpotent, and there exists \(a\in\mathfrak d\)
+such that \(\operatorname{ad}(a)_{\mathfrak g/\mathfrak d}\) is
+injective.
+\item[(iii)]\SGARefTarget{sga3:xiii:proposition:4:4:item:iii}
+\(\mathfrak d\) is nilpotent and equal to its own normalizer.
+\end{enumerate}
+Then
+\[
+  \SGARefLink{sga3:xiii:proposition:4:4:item:i}{\text{\rm(i)}}
+  \Longleftrightarrow
+  \text{\rm\SGARefLink{sga3:xiii:proposition:4:4:item:i-bis}{(i bis)}}
+  \Longrightarrow
+  \SGARefLink{sga3:xiii:proposition:4:4:item:ii}{\text{\rm(ii)}}
+  \Longleftrightarrow
+  \text{\rm\SGARefLink{sga3:xiii:proposition:4:4:item:ii-bis}{(ii bis)}}
+  \Longleftrightarrow
+  \SGARefLink{sga3:xiii:proposition:4:4:item:iii}{\text{\rm(iii)}}.
+\]
+We shall see in \SGARefLink{sga3:xiii:corollary:5:7:part:a}{5.7 a)} that if \(\mathfrak g\) is the Lie algebra of
+a smooth algebraic group, then all the preceding conditions are
+equivalent.
+\end{proposition}
+
+The equivalence of \SGARefLink{sga3:xiii:proposition:4:4:item:i}{(i)} and \SGARefLink{sga3:xiii:proposition:4:4:item:i-bis}{(i bis)} follows immediately from \SGARefLink{sga3:xiii:corollary:4:3}{4.3}, and
+these conditions plainly imply \SGARefLink{sga3:xiii:proposition:4:4:item:ii}{(ii)}. The equivalence of \SGARefLink{sga3:xiii:proposition:4:4:item:ii}{(ii)} and
+\SGARefLink{sga3:xiii:proposition:4:4:item:ii-bis}{(ii bis)} is also immediate, as is \SGARefLink{sga3:xiii:proposition:4:4:item:ii-bis}{(ii bis)} \(\Rightarrow\) \SGARefLink{sga3:xiii:proposition:4:4:item:iii}{(iii)}
+(cf. \SGARefLink{sga3:xiii:proposition:4:1}{4.1}). It remains to prove \SGARefLink{sga3:xiii:proposition:4:4:item:iii}{(iii)} \(\Rightarrow\) \SGARefLink{sga3:xiii:proposition:4:4:item:ii-bis}{(ii bis)}. This
+is the only implication that uses the infinitude of \(k\), and it
+follows at once from \SGARefLink{sga3:xiii:lemma:4:5}{the next lemma}.
+
+\begin{lemma}
+\SGARefTarget{sga3:xiii:lemma:4:5}
+Let \(\mathfrak d\) be a nilpotent Lie algebra over an infinite field
+\(k\), acting on a finite-dimensional vector space \(V\). Suppose
+that the endomorphism \(u(x)\) is not injective for every
+\(x\in\mathfrak d\). Then there is a nonzero element \(v\in V\)
+annihilated by \(\mathfrak d\).
+\end{lemma}
+
+We may suppose that \(k\) is algebraically closed and that
+\(\mathfrak d\) is finite-dimensional. Then \(V\) is known to be a
+direct sum of finitely many nonzero stable vector subspaces \(V_i\),
+\(1\leq i\leq n\), such that, for every \(i\) and every
+\(x\in\mathfrak d\), the restriction \(u(x)|_{V_i}\) has a single
+eigenvalue \(\lambda_i(x)\) (cf. Bourbaki, \emph{Groupes et Algèbres
+de Lie}, Chap.~I, \(\S\)4, Exercise~22). Let \(c_i(x)\) be the
+constant term of the characteristic polynomial of
+\(u(x)|_{V_i}\), so that
+\[
+  \lambda_i(x)=0\quad\Longleftrightarrow\quad c_i(x)=0.
+\]
+Each \(c_i\) is a polynomial function on \(\mathfrak d\), and the
+hypothesis says that \(\mathfrak d\) is the union of their zero sets.
+Thus one of the \(c_i\) is identically zero. Replacing \(V\) by
+\(V_i\), we are reduced to the case in which all \(u(x)\),
+\(x\in\mathfrak d\), are nilpotent. Engel's theorem (Bourbaki,
+loc.\ cit., Th.~1) then implies that some nonzero \(v\in V\) is
+annihilated by \(\mathfrak d\).
+\par\hfill\textsc{q.e.d.}
+
+It is easy to see, still assuming that \(k\) is infinite, that
+conditions \SGARefLink{sga3:xiii:proposition:4:4:item:i}{(i)} and \SGARefLink{sga3:xiii:proposition:4:4:item:i-bis}{(i bis)} of \SGARefLink{sga3:xiii:proposition:4:4}{4.4} are invariant under every extension
+of the base field. When they hold, \(\mathfrak d\) is called a
+\emph{Cartan subalgebra} of \(\mathfrak g\). In general, with \(k\)
+not necessarily infinite, \(\mathfrak d\) is called a Cartan
+subalgebra of \(\mathfrak g\) if it becomes one after one, and hence
+every, extension \(k\to k'\) with \(k'\) infinite. It follows in
+particular that \(\mathfrak d\) is nilpotent and equal to its own
+normalizer.
+
+\begin{proposition}
+\SGARefTarget{sga3:xiii:proposition:4:6}
+\SGARefTarget{sga3:xiii:proposition:4:6:item:a}
+\textup{a)} Let \(a\in\mathfrak g\). If \(a\) is regular, then it is
+contained in one and only one Cartan subalgebra of \(\mathfrak g\).
+We shall see the converse in \SGARefLink{sga3:xiii:theorem:6:1:part:d}{6.1 d)}, when \(k\) is algebraically
+closed and \(\mathfrak g\) is the Lie algebra of a smooth algebraic
+group.
+
+\SGARefTarget{sga3:xiii:proposition:4:6:item:b}
+\textup{b)} Let \(\mathfrak d\) be a Cartan subalgebra of
+\(\mathfrak g\), and let \(a\in\mathfrak d\). Then \(a\) is regular
+in \(\mathfrak g\) if and only if
+\(\operatorname{ad}(a)_{\mathfrak g/\mathfrak d}\) is injective.
+\end{proposition}
+
+For \SGARefLink{sga3:xiii:proposition:4:6:item:a}{a)}, if \(a\) is regular, then
+\(\operatorname{Nil}(a,\mathfrak g)\) is a Cartan subalgebra of
+\(\mathfrak g\), since this is true after an infinite extension
+\(k'\) of \(k\). It follows at once from \SGARefLink{sga3:xiii:corollary:4:3}{4.3} that every Cartan
+subalgebra of \(\mathfrak g\) containing \(a\) is equal to this one.
+For \SGARefLink{sga3:xiii:proposition:4:6:item:b}{b)}, observe that the nullity\footnote{Editor's note: that is, the
+dimension of the nil-space.} of
+\(\operatorname{ad}(a)_{\mathfrak g}\) is the sum of the nullities of
+\(\operatorname{ad}(a)_{\mathfrak d}\) and
+\(\operatorname{ad}(a)_{\mathfrak g/\mathfrak d}\). Since the first
+is \(r\), their sum is \(r\) if and only if
+\(\operatorname{ad}(a)_{\mathfrak g/\mathfrak d}\) is injective.
+\par\hfill\textsc{q.e.d.}
+
+\begin{corollary}
+\SGARefTarget{sga3:xiii:corollary:4:7}
+Let \(a\) be a regular element of \(\mathfrak g\), let
+\(\mathfrak d\) be a Cartan subalgebra of \(\mathfrak g\) containing
+\(a\), let \(A\) be a \(k\)-algebra, and let
+\(\mathfrak g_A\) and \(\mathfrak d_A\subset\mathfrak g_A\) be the
+\(A\)-Lie algebras obtained from \(\mathfrak g\) and \(\mathfrak d\)
+by base change; write \(a_A\) for the image of \(a\) in
+\(\mathfrak g_A\). Let \(u\) be an automorphism of
+\(\mathfrak g_A\). Then
+\[
+  u(\mathfrak d_A)=\mathfrak d_A
+\]
+if and only if
+\[
+  u(a_A)\in\mathfrak d_A.
+\]
+\end{corollary}
+
+The condition is plainly necessary; let us prove that it is
+sufficient. Suppose it holds. Then
+\[
+  \mathfrak d'=u^{-1}(\mathfrak d_A)
+\]
+is a Lie subalgebra containing \(a_A\), and every \(b\in\mathfrak d'\)
+is such that \(\operatorname{ad}(b)_{\mathfrak d'}\) is
+nilpotent.\footnote{The source prints
+\(\mathfrak d'=u(\mathfrak d_A)\) and
+\(\operatorname{ad}(b)_{\mathfrak d}\). Under the hypothesis
+\(u(a_A)\in\mathfrak d_A\), the inverse image
+\(u^{-1}(\mathfrak d_A)\) is the subalgebra that contains \(a_A\),
+and the nilpotence assertion concerns its restriction
+\(\operatorname{ad}(b)_{\mathfrak d'}\).}
+Indeed, \(\mathfrak d'\) is isomorphic to \(\mathfrak d_A\), which
+has this property, as follows immediately from the definition of
+``nilpotent'' in Bourbaki, \emph{Groupes et Algèbres de Lie},
+Chap.~I, \(\S\)4, Def.~1. Taking \(b=a_A\), we see that
+\(\operatorname{Nil}(b,\mathfrak g_A)\) contains \(\mathfrak d'\).
+On the other hand,
+\[
+  \operatorname{Nil}(b,\mathfrak g_A)=\mathfrak d_A.
+\]
+Moreover, \(\mathfrak d'\) is locally a direct summand of
+\(\mathfrak g_A\), since \(\mathfrak d\) is, and hence is locally a
+direct summand of \(\mathfrak d_A\). It is a projective module of the
+same rank \(r\) as \(\mathfrak d_A\), and therefore equals
+\(\mathfrak d_A\).
+\par\hfill\textsc{q.e.d.}
+
+\begin{proposition}
+\SGARefTarget{sga3:xiii:proposition:4:8}
+Let \(\mathfrak h\) be a Lie subalgebra of \(\mathfrak g\).
+
+\SGARefTarget{sga3:xiii:proposition:4:8:item:a}
+\textup{a)} If \(k\) is infinite, the following conditions are
+equivalent:
+\begin{enumerate}
+\item[(i)]\SGARefTarget{sga3:xiii:proposition:4:8:item:a:i}
+\(\mathfrak h\) contains a Cartan subalgebra \(\mathfrak d\) of
+\(\mathfrak g\).
+\item[(ii)]\SGARefTarget{sga3:xiii:proposition:4:8:item:a:ii}
+\(\mathfrak h\) contains a regular element \(a\) of \(\mathfrak g\),
+and an element \(b\) such that
+\(\operatorname{ad}(b)_{\mathfrak g/\mathfrak h}\) is injective.
+\item[(iii)]\SGARefTarget{sga3:xiii:proposition:4:8:item:a:iii}
+\(\mathfrak h\) has the same nilpotent rank as \(\mathfrak g\), and
+contains a regular element of \(\mathfrak g\).
+\end{enumerate}
+These conditions are invariant under extension of the base field
+\(k\).
+
+\SGARefTarget{sga3:xiii:proposition:4:8:item:b}
+\textup{b)} Suppose that these conditions hold after a suitable
+infinite extension \(k'\) of \(k\). For \(a\in\mathfrak h\), the
+element \(a\) is regular in \(\mathfrak g\) if and only if it is
+regular in \(\mathfrak h\) and
+\(\operatorname{ad}(a)_{\mathfrak g/\mathfrak h}\) is injective;
+equivalently, if and only if
+\[
+  \operatorname{Nil}(a,\mathfrak h)
+  =
+  \operatorname{Nil}(a,\mathfrak g)
+\]
+and this common Lie algebra is a Cartan subalgebra of
+\(\mathfrak h\).
+
+\SGARefTarget{sga3:xiii:proposition:4:8:item:c}
+\textup{c)} Under the hypotheses of \SGARefLink{sga3:xiii:proposition:4:8:item:b}{b)}, let \(\mathfrak d\) be a Lie
+subalgebra of \(\mathfrak h\). In order that \(\mathfrak d\) be a
+Cartan subalgebra of \(\mathfrak h\), it is sufficient that it be a
+Cartan subalgebra of \(\mathfrak g\). We shall see in \SGARefLink{sga3:xiii:corollary:5:8}{5.8} that \SGARefLink{sga3:xiii:proposition:4:8:item:c}{this
+condition} is also necessary when \(\mathfrak g\) is the Lie algebra
+of a smooth algebraic group \(G\), and \(\mathfrak h\) is the Lie
+algebra of a smooth algebraic subgroup \(H\) of \(G\).
+\end{proposition}
+
+Conditions \SGARefLink{sga3:xiii:proposition:4:8:item:a:ii}{(ii)} and \SGARefLink{sga3:xiii:proposition:4:8:item:a:iii}{(iii)} of \SGARefLink{sga3:xiii:proposition:4:8:item:a}{a)} are visibly invariant under extension
+of the base field \(k\), assumed infinite. In \SGARefLink{sga3:xiii:proposition:4:8:item:b}{b)} and \SGARefLink{sga3:xiii:proposition:4:8:item:c}{c)}, we may
+suppose that \(k\) is infinite, and shall do so. If \(\mathfrak h\)
+contains the Cartan subalgebra
+\[
+  \mathfrak d=\operatorname{Nil}(a,\mathfrak g),
+\]
+then \(a\) is a regular element of \(\mathfrak g\) such that
+\(\operatorname{ad}(a)_{\mathfrak g/\mathfrak h}\) is injective.
+Thus \SGARefLink{sga3:xiii:proposition:4:8:item:a:i}{(i)} \(\Rightarrow\) \SGARefLink{sga3:xiii:proposition:4:8:item:a:ii}{(ii)}. Conversely, if \SGARefLink{sga3:xiii:proposition:4:8:item:a:ii}{(ii)} holds, then a
+``sufficiently general'' element \(a\) of \(\mathfrak h\)
+simultaneously satisfies both conditions in \SGARefLink{sga3:xiii:proposition:4:8:item:a:ii}{(ii)}. Hence
+\(\operatorname{Nil}(a,\mathfrak g)\) is a Cartan subalgebra of
+\(\mathfrak g\) contained in \(\mathfrak h\), proving \SGARefLink{sga3:xiii:proposition:4:8:item:a:i}{(i)}.
+Conditions \SGARefLink{sga3:xiii:proposition:4:8:item:a:i}{(i)} and \SGARefLink{sga3:xiii:proposition:4:8:item:a:ii}{(ii)} are therefore equivalent.
+
+Suppose they hold, and let \(a\) vary in \(\mathfrak h\). Then
+\SGARefTarget{sga3:xiii:equation:4:8:x}
+\[
+\tag{x}
+  \operatorname{rank}_k\operatorname{Nil}(a,\mathfrak g)
+  =
+  \operatorname{rank}_k\operatorname{Nil}(a,\mathfrak h)
+  +
+  \operatorname{rank}_k
+  \operatorname{Nil}\bigl(
+    \operatorname{ad}(a)_{\mathfrak g/\mathfrak h}
+  \bigr).
+\]
+The two terms on the right are respectively at least \(r'\), the
+nilpotent rank of \(\mathfrak h\), and at least \(0\); moreover, both
+equalities are attained\footnote{Editor's note: ``the equality'' has
+been replaced by ``the equalities''.} for a sufficiently general
+element of \(\mathfrak h\). We also have
+\[
+  \operatorname{rank}_k\operatorname{Nil}(a,\mathfrak g)\geq r,
+\]
+where \(r\) is the nilpotent rank of \(\mathfrak g\). Equality is
+attained for a sufficiently general element of \(\mathfrak h\), and
+holds if and only if \(a\) is regular in \(\mathfrak g\).
+
+It follows that \(r=r'\), and that \(a\) is regular if and only if
+the two terms on the right-hand side of \(\SGARefLink{sga3:xiii:equation:4:8:x}{\mathrm{(x)}}\) are
+respectively \(r'\) and \(0\); that is, if and only if \(a\) is
+regular in \(\mathfrak h\) and
+\(\operatorname{ad}(a)_{\mathfrak g/\mathfrak h}\) is injective.
+This proves \SGARefLink{sga3:xiii:proposition:4:8:item:b}{b)}, and \SGARefLink{sga3:xiii:proposition:4:8:item:c}{c)} follows immediately by taking an element
+\(a\in\mathfrak d\) regular in \(\mathfrak g\), so that
+\(\operatorname{Nil}(a,\mathfrak g)=\mathfrak d\).
+
+\SGARefLink{sga3:xiii:proposition:4:8:item:b}{The preceding result} also proves \SGARefLink{sga3:xiii:proposition:4:8:item:a:i}{(i)} \(\Rightarrow\) \SGARefLink{sga3:xiii:proposition:4:8:item:a:iii}{(iii)}. Finally,
+\SGARefLink{sga3:xiii:proposition:4:8:item:a:iii}{(iii)} \(\Rightarrow\) \SGARefLink{sga3:xiii:proposition:4:8:item:a:i}{(i)}: under \SGARefLink{sga3:xiii:proposition:4:8:item:a:iii}{(iii)}, a sufficiently general
+\(a\in\mathfrak h\) is regular both in \(\mathfrak h\) and in
+\(\mathfrak g\). Thus
+\[
+  \operatorname{Nil}(a,\mathfrak h)
+  \subset
+  \operatorname{Nil}(a,\mathfrak g)
+\]
+are respectively Cartan subalgebras of \(\mathfrak h\) and
+\(\mathfrak g\). Since they have the same rank over \(k\), they are
+equal, proving \SGARefLink{sga3:xiii:proposition:4:8:item:a:i}{(i)}. This completes the proof of \SGARefLink{sga3:xiii:proposition:4:8}{4.8}.

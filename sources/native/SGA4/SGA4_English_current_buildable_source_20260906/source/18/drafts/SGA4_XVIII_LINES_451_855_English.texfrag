@@ -1,0 +1,389 @@
+
+For a general $X$, let $j:X'\rightarrow X$ be the largest open subset
+of $X$ such that $f|X'$ is a Cohen--Macaulay morphism (\cf \EGA IV
+12.1.1 (vi)). Every point $x$ of $X'$ has a neighborhood $U_{x}$ in
+$X'$ for which there exists a quasi-finite $S$-morphism $u_{x}$ from
+$U_{x}$ to $\PP^{1}_{S}$. This morphism is automatically flat (\EGA IV
+11.3.10 and 15.4.2), and $X'$ therefore satisfies the preceding
+hypotheses. Moreover, $X'$ is fiberwise dense in $X$; the morphism from
+$R^{2}(fj)_{!}\ZZ/n(1)$ to $R^{2}f_{!}\ZZ/n(1)$ is consequently an
+isomorphism, as can be checked fiberwise, and the composite arrow
+$$
+\Tr_{f}:R^{2}f_{!}\ZZ/n(1)\xleftarrow{\sim}
+R^{2}(fj)_{!}\ZZ/n(1)\xrightarrow{\Tr_{fj}}\ZZ/n
+$$
+induces \eqhyperref[XVIII.eq1.1.3.4]{1.1.3.4} on every fiber.
+
+If $F$ satisfies $nF=0$, one has (\hyperrefext[XVII][XVII.thm5.2.6]{5.2.6})
+\begin{equation*}
+R^{2}f_{!}\ZZ/n(1)\otimes F\xrightarrow{\sim}
+R^{2}f_{!}(f^{\ast}F(1))\tag{1.1.6.1}
+\end{equation*}\etiquette[1.1.6.1]{XVIII.eq1.1.6.1}%
+and $\Tr_{f}$ is defined to be the composite arrow
+$$
+\Tr_{f}:R^{2}f_{!}(f^{\ast}F(1))\xleftarrow{\sim}
+R^{2}f_{!}\ZZ/n(1) \otimes F\rightarrow F{\quoi}.
+$$
+In the general case, $\Tr_{f}$ is defined as the filtered colimit of
+the trace morphisms relative to the sheaves ${}_nF$, for $n$
+invertible on $S$. These arrows induce \eqhyperref[XVIII.eq1.1.3.4]{1.1.3.4} on every fiber
+and therefore commute with every base change, \cqfd
+
+One\pageoriginale checks fiberwise, using \hyperref[XVIII.lem1.1.4]{1.1.4},
+\hyperref[XVIII.lem1.1.5]{1.1.5}, and \eqhyperref[XVIII.eq1.1.6.1]{1.1.6.1}, the following results:
+
+\begin{enonce*}{Lemma 1.1.7}\etiquette[1.1.7]{XVIII.lem1.1.7}
+Let $f:Y\rightarrow S$ be a compactifiable flat curve over $S$, let
+$u:X\rightarrow Y$ be a quasi-finite flat morphism of finite
+presentation, and let $F$ be a torsion sheaf on $S$, of torsion prime
+to the residue characteristics of $S$. The following diagram is
+commutative:
+$$
+\xymatrix@C=1.5cm@R=1.25cm{
+R^2(fu)_! (fu)^{\ast}F(1) \ar[d]^{\Tr_{fu}}\ar@{=}[r]& R^2f_!(u_!
+u^{\ast})f^{\ast}F(1) \ar[r]^{\Tr_u}& R^2f_!f^{\ast}F(1)\ar[d]^{\Tr_f} \\
+F     \ar@{=}[rr] &&  F,
+}
+$$
+\end{enonce*}
+
+\begin{enonce*}{Lemma 1.1.8}\etiquette[1.1.8]{XVIII.lem1.1.8}
+Let $u:Y\rightarrow S$ be a quasi-finite flat morphism of finite
+presentation, let $f:X\rightarrow Y$ be an $S$-compactifiable flat
+curve \emph{(\hyperrefext[XVII][XVII.def3.2.1]{3.2.1})}, and let $F$ be as in \hyperref[XVIII.lem1.1.7]{1.1.7}. The
+following diagram is commutative\nde{This compatibility merits a few
+arguments. To verify it, one may first reduce by base change to the case
+where $S$ is the spectrum of an algebraically closed field $k$. One may
+then suppose that $Y$ is connected and nonempty, in which case $Y\to S$
+has a (unique) section $S\to Y$ that is a closed immersion defined by a
+nilpotent ideal. The arguments in the proof of \hyperref[XVIII.prop1.1.6]{1.1.6}
+allow us to suppose that $X=\mathbf{P}^1_Y$. It remains only to observe
+that the multiplicity of $Y$ equals the multiplicity of $X$ at its
+generic point. See also the proof of the commutativity of
+\eqhyperref[XVIII.eq2.9.3]{2.9.3}.}:
+$$
+\xymatrix@C=1.5cm@R=1.25cm{
+R^{2}(uf)_! (uf)^{\ast}F(1)  \ar@{=}[r] \ar[d]^{\Tr_{uf}}&
+u_!R^2f_!f^{\ast} u^{\ast}F(1) \ar[r]^{\Tr_f} &
+u_!u^{\ast}F \ar[d]^{\Tr_u}\\
+F        \ar@{=}[rr] & &  F
+}
+$$
+\end{enonce*}
+
+One similarly verifies from \eqhyperref[XVIII.eq1.1.3.2]{1.1.3.2}:
+
+\begin{enonce*}{Lemma 1.1.9}\etiquette[1.1.9]{XVIII.lem1.1.9}
+If $f:X\rightarrow S$ is a compactifiable smooth curve and the
+geometric fibers of $f$ are irreducible, then the trace morphism
+(\hyperref[XVIII.prop1.1.6]{1.1.6}) is an isomorphism.
+\end{enonce*}
+
+\subsection{$1$-acyclicity of projective
+  space}\etiquette[1.2]{XVIII.subsec1.2}
+
+In this section, the fppf topology is in principle always used
+(\hyperrefext[XVII][XVII.subsec0.10]{0.10}).
+
+\subsubsection{}\etiquette[1.2.1]{XVIII.subsubsec1.2.1}
+
+Let $\epsilon$ be a locally free module on a scheme $S$, everywhere of
+rank\pageoriginale $\geq 2$, let $p:\PP(\epsilon)\rightarrow S$ be the
+corresponding projective bundle, and let $G$ be an abelian sheaf on the
+big fppf site of $S$ (\hyperrefext[XVII][XVII.subsec0.10]{0.10}). Each pair $(K_{0},\varphi)$ consisting of a
+torsor $K_{0}$ under $G$ and a homomorphism
+$\varphi:\GG_{mS}\rightarrow G$ defines a $p^{\ast}G$-torsor
+$K(K_{0},\varphi)$ on $\PP(\epsilon)$, the sum of $K_{0}$ and the image
+under $\varphi$ of the $\GG_{m}$-torsor $\Oo(1)$\nde{In this section,
+we implicitly identify line bundles and $\GG_{m}$-torsors by the
+correspondence that associates with a line bundle the sheaf of its
+invertible sections, on which $\GG_{m}$ acts by multiplication. A reader
+concerned with details may wish to know that, following Grothendieck's
+convention, the projective scheme $\PP(\epsilon)$ is the bundle of
+hyperplanes in $\epsilon$, and likewise the punctured vector bundle
+$\VV(\epsilon)^{\ast}\to \PP(\epsilon)$ is an open subset of
+$\VV(\epsilon)$, which is the spectrum of the symmetric algebra of
+$\epsilon$.}:
+\begin{equation*}
+K(K_{0},\varphi)=K_{0}+\varphi \Oo(1){\quoi}.\tag{1.2.1.1}
+\end{equation*}\etiquette[1.2.1.1]{XVIII.eq1.2.1.1}%
+The pairs $(K_{0},\varphi)$ are made into a category by setting
+$$
+\Hom((K_{0},\varphi),(K'_{0},\varphi'))=
+\begin{cases}
+∅\quad\mbox{\rm if}\quad \varphi\neq \varphi'\\
+\Hom(K_{0},K'_{0})\quad\mbox{\rm if}\quad \varphi=\varphi'{\quoi}.
+\end{cases}
+$$
+The torsor $K(K_{0},\varphi)$ then depends functorially on
+$(K_{0},\varphi)$. It is compatible with localization and therefore
+defines a functor from the stack over $S$ of pairs $(K_{0},\varphi)$ to
+the stack over $S$ of $p^{\ast}G$-torsors on $\PP(\epsilon)$ (= the
+stack whose sections over $U/S$ are the $p^{\ast}G$-torsors on
+$\fprod{U}{\PP}{S}(\epsilon)$). These stacks are stacks in groupoids
+(= every morphism over a $U/S$ is an isomorphism).
+
+\begin{enonce*}{Theorem 1.2.2}\etiquette[1.2.2]{XVIII.thm1.2.2}
+Under the hypotheses of \hyperref[XVIII.subsubsec1.2.1]{1.2.1}, if $G$ is a flat commutative
+group scheme of finite presentation over $S$, then the functor $K$ of
+\hyperref[XVIII.subsubsec1.2.1]{1.2.1} is an equivalence.
+\end{enonce*}
+
+\setcounter{subsubsection}{2}
+\paragraph{}\etiquette[1.2.2.1]{XVIII.par1.2.2.1}
+
+This assertion is equivalent to the conjunction of
+\begin{gather*}
+G\xrightarrow{\sim} p_{\ast}p^{\ast}G\quad\mbox{\rm and}\\
+\Hhom(\GG_{m},G)\xrightarrow{\sim} R^{1}p_{\ast}p^{\ast}G{\quoi}.
+\end{gather*}
+Indeed, a morphism of stacks in groupoids is an equivalence if and
+only if it induces an isomorphism on the sheaf generated by the
+presheaf of isomorphism classes of objects (the 2\textsuperscript{nd}
+formula) and an isomorphism on the sheaf of automorphisms of any local
+object (the 1\textsuperscript{st} formula).
+
+We shall give two proofs (\hyperref[XVIII.lem1.2.4]{1.2.4} and
+\hyperref[XVIII.subsubsec1.2.5]{1.2.5}) of full faithfulness\nde{With regard to
+essential surjectivity, the reader should be warned that the proof will
+use the general proof technique explained in the introduction to the
+\EGA.}.
+
+\begin{enonce*}{Lemma 1.2.3}\etiquette[1.2.3]{XVIII.lem1.2.3}
+Let\pageoriginale $f:X\rightarrow S$ be a proper flat morphism. Suppose
+that $f_{\ast}\Oo_{X}=\Oo_{S}$ universally and
+$R^{1}f_{\ast}\Oo_{X}=0$ universally. Every $S$-morphism from $X$ to a
+finite-type $S$-group scheme $G$ then factors through $f$ and a section
+of $G$; more precisely,
+$G\xrightarrow{\sim} f_{\ast}f^{\ast}G$.
+\end{enonce*}
+
+It suffices to prove the 1\textsuperscript{st} assertion.
+
+By the rigidity lemma (\textsc{Mumford} \cite[6.1. p.~115]{sga4.exp.XVIII.bib.4}; note
+that \textsc{Mumford} does not use the Noetherian hypothesis imposed on
+$S$), it suffices to treat the case where $S$ is the spectrum of an
+algebraically closed field. Suppose first that $G$ is an abelian
+scheme, and let $G^{\ast}$ be the dual abelian scheme. Since
+$G=G^{{\ast}{\ast}}$, giving $\varphi:X\rightarrow G$ is equivalent to
+giving an invertible sheaf $\Ll$ on $X\times G^{\ast}$, trivialized
+along $X\times \{e\}$ and algebraically equivalent to zero on the
+fibers of the projection $\pr_{1}$ from $X\times G^{\ast}$ to $X$. If
+$x:S\to X$ is a rational point of $X$, then
+$\Ll\sim \pr^{\ast}_{2}(x\times G^\ast)^{\ast}\Ll\otimes \Mm$, with
+$\Mm$ trivialized along $x\times G^{\ast}$ and $X\times \{e\}$. Giving
+$\Mm$ is equivalent to giving a morphism of schemes from $G^{\ast}$ to
+$\sheafPic_{X/S}$ that takes $e$ to $e$. Since
+$H^{1}(X,\Oo_{X})=0$, one has $\sheafPic^0_{X/S}=0$\nde{This follows
+from the canonical isomorphism
+$\Lie(\sheafPic_{X/S})=H^{1}(X,\Oo_{X})=0$, obtained by comparing both
+groups with the kernel of $\Pic(X\times_k
+\Spec (k[\epsilon]))\to \Pic(X)$ (where $S=\Spec(k)$).
+For further details on the properties of Picard schemes, see
+\cite{sga4.exp.XVIII.bib.2bis}.},
+$\Mm\sim\Oo$, and $\Ll\sim \pr^{\ast}_{2}\Ll'$, with $\Ll'$
+\sisi{equivalent}{algebraically equivalent} to zero on $G^{\ast}$,
+hence defining $g\in G(S)$ such that $\varphi=g\circ f$.
+
+In the general case, $G$ is an extension of an abelian scheme $A$ by
+an affine group $G_0$. The preceding result reduces us to the case
+$A=0$, and then
+$$
+\Hom_{S}(\Spec (H^0(X,\Oo_{X}),G)\xrightarrow{\sim}
+\Hom_{S}(X,G){\quoi}.
+$$
+
+\begin{enonce*}{Lemma 1.2.4}\etiquette[1.2.4]{XVIII.lem1.2.4}
+Under the hypotheses of \hyperref[XVIII.subsubsec1.2.1]{1.2.1}, if $G$ is a group scheme
+of finite presentation over $S$ or is defined by a quasi-coherent sheaf
+on $S$, then the functor \eqhyperref[XVIII.eq1.2.1.1]{1.2.1.1} is fully faithful.
+\end{enonce*}
+
+\begin{itemize}
+\item[A.] We prove that, if $K(K_{0},\varphi)$ is isomorphic to
+$K(K'_0,\varphi')$, then $\varphi=\varphi'$. For quasi-coherent $G$,
+one has $\varphi=\varphi'=0$, and there is nothing to prove. For $G$ of
+finite presentation, by (\SGA 3 IX 5.1), it suffices\pageoriginale to
+prove the assertion when $S$ is the spectrum of an algebraically
+closed field $k$. Let $T$ be the largest subtorus of $G$, and put
+$H=G/T$. The cohomology exact sequence gives
+$$
+0\rightarrow H^{0}(\PP(\epsilon),T)\rightarrow
+H^{0}(\PP(\epsilon),G) \xrightarrow{\alpha}
+H^{0}(\PP(\epsilon),H)
+ \xrightarrow{\delta}
+H^{1}(\PP(\epsilon),T)\xrightarrow{\beta}H^{1}(\PP(\epsilon),G){\quoi}.
+$$
+By \hyperref[XVIII.lem1.2.3]{1.2.3}, $H^0(\PP(\epsilon),G)\sim G(k)$ and
+$H^0(\PP(\epsilon),H)\sim H(k)$, so $\alpha$ is surjective and
+$\delta$ is zero. If $Y(T)=\Hom(\GG_{m},T)$, then
+$T\sim G_{m}\otimes Y(T)$ and $H^{1}(\PP(\epsilon),T)\sim Y(T)$.
+Thus the injectivity of $\beta$ expresses the injectivity of the
+canonical arrow defined by $\Oo(1)$,
+$\Hom(\GG_{m},G)\simeq \Hom(\GG_{m},T)\rightarrow
+H^{1}(\PP(\epsilon),G)$, proving the assertion.
+
+\item[B.] Proving that the functor \eqhyperref[XVIII.eq1.2.1.1]{1.2.1.1} is fully faithful is
+local on $S$. We may therefore suppose that $\PP(\epsilon)/S$ has a
+section $s$\sisi{}{ and choose an isomorphism
+$s^\ast\Oo(1)\sim \Oo$\nde{This additional necessary datum, which was
+missing from the original edition, has been added in this edition.}}.
+If $K(K_{0},\varphi)$ is isomorphic to $K(K'_{0},\varphi')$, then
+$\varphi=\varphi'$ by A, and
+$K_{0}\sim s^{\ast}K(K_{0},\varphi)\sim
+s^{\ast}K(K'_{0},\varphi')\sim K'_{0}$. By the formula
+\begin{equation*}
+\Hom (K(K_{0},\varphi), K(K'_{0},\varphi'))\sim \Hom(K(K_{0}-K'_{0},\varphi-\varphi'),G_{\PP(\epsilon)}){\quoi},\tag{1.2.4.1}
+\end{equation*}\etiquette[1.2.4.1]{XVIII.eq1.2.4.1}%
+it remains only to show that
+$$
+\Hom_{\tors.}(G,G)\xrightarrow{\sim}
+\Hom_{\tors.}(p^{\ast}G,p^{\ast}G){\quoi}.
+$$
+This follows from \hyperref[XVIII.lem1.2.3]{1.2.3}.
+\end{itemize}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}\etiquette[1.2.5]{XVIII.subsubsec1.2.5}
+
+Here is another, more \sisi{Kunneth-like}{Künneth-like}, proof of full
+faithfulness. The question is local on $S$; by \eqhyperref[XVIII.eq1.2.4.1]{1.2.4.1}, it therefore
+suffices to check that
+$$
+\Hom_{\PP(\epsilon)}(G,K(G,\varphi))
+\begin{cases}
+=∅ &\text{\rm if}\quad \varphi\neq 0\\
+\xleftarrow{\sim} G(S)\ &\text{\rm if}\quad \varphi= 0{\quoi}.
+\end{cases}
+$$
+This is precisely what the following lemma says\nde{This translation
+merits some explanation. The line bundle $\Oo(1)$ on
+$\PP(\epsilon)$ becomes canonically trivialized after pullback by the
+canonical projection $\VV(\epsilon)^{\ast}\to \PP(\epsilon)$. After
+pullback to $\VV(\epsilon)^{\ast}$, the $G$-torsor $K(G,\varphi)$ is
+therefore canonically trivialized as well. \emph{Via} this
+identification, an isomorphism $G\to K(G,\varphi)$ thus induces an
+automorphism of the trivial $G$-torsor over
+$\VV(\epsilon)^{\ast}$, that is, an $S$-morphism
+$\VV(\epsilon)^{\ast}\to G$. To descend from $\PP(\epsilon)$, this
+morphism must satisfy a compatibility like the one stated, and the
+converse follows by faithfully flat descent. Strictly speaking, it
+seems to the reviewer that the correct condition should be
+$\Psi(\lambda v)=\varphi(\lambda)^{-1}\Psi(v)$, but this has no effect,
+since one can apply the lemma to $\Psi^{-1}$ instead of $\Psi$. The
+condition $\Psi(\lambda v)=\varphi(\lambda)\Psi(v)$ in the original
+edition also gives a correct statement (since $\varphi$ can be replaced
+by $\varphi^{-1}$), but it has been changed so that the proof need not
+be modified.}:
+
+\begin{enonce*}{Lemma 1.2.6}\etiquette[1.2.6]{XVIII.lem1.2.6}
+Let $\epsilon$ be a locally free module everywhere of rank $\geq 2$ on
+$S$, let $G$ be a group scheme of finite presentation over $S$, let
+$\varphi:\GG_{m}\rightarrow G$ be a group homomorphism, let
+$\VV(\epsilon)$ be the vector bundle defined by $\epsilon$, let
+$\VV(\epsilon)^{\ast}$\pageoriginale be the corresponding punctured
+vector bundle, and let $\Psi:\VV(\epsilon)^{\ast}\rightarrow G$ be an
+$S$-morphism satisfying the following identity between $S$-morphisms
+from $\GG_{m}\times \VV(\epsilon)^{\ast}$ to $G$:
+$$
+\Psi(\lambda v)=\sisi{\varphi (\lambda)\Psi(v)}{\Psi(v)\varphi(\lambda)}{\quoi}.
+$$
+Then $\varphi=e$, and $\Psi$ factors through the projection $p$ from
+$\PP(\epsilon)$ to $S$.
+\end{enonce*}
+
+It suffices to prove the second assertion. We reduce at once to the
+case where $S$ is Noetherian and then, by (\SGA 3 IX 5.1) and the
+rigidity lemma (\textsc{Mumford} \cite[6.1 p.~115]{sga4.exp.XVIII.bib.6}) applied to
+$\PP(\epsilon)$, to the case where $S$ is the spectrum of a field. Let
+$n$ be an integer, let $W_{n}$ and $G_{n}$ be the $n^{\text{\rm th}}$
+infinitesimal neighborhoods of the zero section in $\VV(\epsilon)$ and
+$G$, let $\mathfrak{g}_{n}$ be the affine algebra of $G_{n}$, and let
+$P_{n}(\Psi):\VV(\epsilon)^{\ast}\rightarrow
+\Hhom_{S}(W_{n},G)$ be the principal part of $n^{\text{\rm th}}$ order of
+$\Psi$\nde{More concretely, $P_n(\Psi)$ is the morphism corresponding
+by adjunction to the morphism $\VV(\epsilon)^{\ast}\times_S W_n\to G$
+(which we also denote by $P_n$) obtained by composing $\Psi$ with the
+morphism $\VV(\epsilon)^{\ast}\times_{S} W_n\to
+\VV(\epsilon)^\ast$ induced on these subschemes by addition on
+$\VV(\epsilon)$. In terms of the functors of points of these
+$S$-schemes, this can be interpreted more concretely by saying that,
+if $v$ is a section of $\VV(\epsilon)^{\ast}$ and $t$ a section of
+$W_n$, then $P_n(\Psi)(v,t)=\Psi(v+t)$.}.
+Every section of $\Hhom_{S}(W_{n},G)$ defines, by right translation by
+the inverse of the image of the zero section, a morphism from $W_{n}$
+to $G_{n}$ that takes $0$ to $e$; this defines
+$$
+\Psi_{1}=P_{n}(\Psi).\Psi^{-1}:\VV(\epsilon)^{\ast}\longrightarrow
+\Hhom_{S}(W_{n},G_{n}){\quoi}.
+$$
+The hypothesis implies that $\Psi_{1}$ commutes with homotheties, which
+act on the right-hand side by transport of structure from their action
+on $W_{n}\subset \VV(\epsilon)$\nde{With the notation above,
+$\Psi_1$ can be characterized by the relation
+$\Psi_1(v,t).\Psi(v)=\Psi(v+t)$. It follows at once that, if $\lambda$
+is a section of $\GG_{m}$, then
+$\Psi_1(\lambda v,\lambda t)=\Psi_1(v,t)$, which is the asserted
+commutation with homotheties provided that $\GG_{m}$ acts correctly on
+$\Hhom_S(W_n,G_n)$, namely, that a section $\lambda$ of $\GG_{m}$ acts
+by right composition with multiplication by the \emph{inverse} of
+$\lambda$ on $W_n$.}. The affine algebra of $W_{n}$ is
+$\sum^{n}_{i=0}\Sym^{i}(\epsilon)$. By homogeneity, $\Psi_{1}$ is
+therefore defined by a section, on $\PP(\epsilon)$, of the
+$\Oo_{\PP(\epsilon)}$-module
+$$
+\sum^{n}_{i=0}p^{\ast}\Hhom(\mathfrak{g}_{n},\Sym^{i}(\epsilon))(-i){\quoi}.\nde{To
+verify this assertion in detail, one may begin by defining the pullback
+of this section to $\VV(\epsilon)^{\ast}$; one then obtains
+tautologically a section $s=(s_0,\dots,s_n)$ of the trivial bundle
+obtained by tensoring the structure sheaf with the vector space
+$\sum^{n}_{i=0}\Hhom(\mathfrak{g}_{n},\Sym^{i}(\epsilon))$. It satisfies
+the relation $s_i(v)=\lambda^i s_i(\lambda v)$. This is indeed descent
+data giving the desired section on $\PP(\epsilon)$. One can also argue
+that the sections $s_i$ extend to all of $\VV(\epsilon)$ (since the
+origin is a closed subset of codimension $\geq 2$ in
+$\VV(\epsilon)$). By the density of $\GG_m$ in $\AAA^1$, the extended
+sections $s_i$ satisfy the relation
+$s_i(v)=\lambda^i s_i(\lambda v)$ for $\lambda\in\AAA^1$. Taking
+$\lambda=0$ gives $s_i=0$ for $i>0$.}
+$$
+The components of index $i>0$ of this module have no section other
+than the zero section, and it follows that
+$$
+\Psi_{1}=0.
+$$
+Since this holds for every $n$, it implies that $\Psi$ factors through
+a section of $G$.
+
+This second proof extends to prove the following analytic variant of
+\hyperref[XVIII.lem1.2.4]{1.2.4}. When $G$ is affine, the proof of
+\hyperref[XVIII.thm1.2.2]{1.2.2} can be given independently of this variant.
+
+\setcounter{subsubsection}{6}
+\subsubsection{}\etiquette[1.2.7]{XVIII.subsubsec1.2.7}
+
+Let\pageoriginale $L$ be the fraction field of a complete discrete
+valuation ring $\Oo$, let $U_{m}$ be the rigid analytic ``generic
+fiber'' group of the formal completion of $\GG_{m}$, and let
+$\Oo(1)^{\wedge}$ be the $U_{m}$-torsor on $\PP^{r}_{L}$ obtained by
+formally completing $\Oo(1)$. If $G$ is a rigid analytic group over
+$L$, the functor $(K_{0},\varphi)\mapsto
+p^{\ast}K_{0}+\varphi\Oo(1)^{\wedge}$ (\cf \hyperref[XVIII.subsubsec1.2.1]{1.2.1}) is a fully
+faithful functor from the category of pairs $(K_{0},\varphi)$
+consisting of a $G$-torsor on $\Spec(L)$ and
+$\varphi\in \Hom(U_m,G)$ to the category of $p^{\ast}G$-torsors on
+$\PP^{r}_{L}$\acorriger{The reader may find an introduction to the
+language of rigid analytic geometry in \cite{sga4.exp.XVIII.bib.5bis}. The nonexistence
+of nontrivial sections of the sheaves $\Oo(n)$ for $n<0$ in this
+context follows, for example, from a rigid version of GAGA; see
+\cite{sga4.exp.XVIII.bib.3ter}.}.
+
+\begin{enonce*}{Lemma 1.2.8}\etiquette[1.2.8]{XVIII.lem1.2.8}
+Let $k$ be a field of characteristic exponent $p$, and let
+$f:X\rightarrow \Spec(k)$ be a proper scheme over $k$ satisfying
+$H^0(X,\Oo_{X})=k$ and $\sheafPic^{\tau}_{X}=0$\nde{A definition of
+$\sheafPic^{\tau}$ in a more general setting will be found in
+\hyperref[XVIII.def1.6.4]{1.6.4}.}. For every finite-type commutative
+affine group scheme $G$ over $k$ containing no tori, one has
+$R^{1}f_{\ast}(f^{\ast}G)=0$.
+\end{enonce*}

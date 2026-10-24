@@ -1,0 +1,190 @@
+\section{Exactness properties of the category of presheaves}\etiquette[3]{I.sec3}
+
+Let $C$ be a $𝒰$-category and let $\widehat{C}$ be the
+category of presheaves on $C$. All the exactness properties of
+$\widehat{C}$ follow from the following proposition:
+
+\begin{enonce*}{Proposition 3.1}\etiquette[3.1]{I.prop3.1}
+The $𝒰$-projective and inductive limits in
+$\widehat{C}$ are representable. For every object $X$
+of $C$, the functor on $\widehat{C}$
+$$
+F\longmapsto F(X)\qquad F\in \widehat{C}
+$$
+commutes with inductive and projective limits.
+
+In other words, ``inductive and projective limits in
+$\widehat{C}$ are computed argument by argument.''
+We mention a few corollaries.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 3.2}\etiquette[3.2]{I.cor3.2}
+Let $\gamma$ be an algebraic structure defined by finite projective
+limits. The category of contravariant functors with values in
+$𝒰$-$\gamma$ is equivalent to the category of $\gamma$-objects of
+$\widehat{C}$.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 3.3}\etiquette[3.3]{I.cor3.3}
+A morphism of $\widehat{C}$ that is both a monomorphism
+and an epimorphism is an isomorphism. A morphism of
+$\widehat{C}$ factors uniquely as an epimorphism followed
+by a monomorphism. The representable inductive limits in
+$\widehat{C}$ are universal. The filtered
+$𝒰$-inductive limits in $\widehat{C}$ commute with
+finite projective limits. The canonical functor $C\rightarrow
+\widehat{C}$ commutes with representable projective
+limits.
+\end{enonce*}
+
+More\pageoriginale generally, one may say that the category
+$\widehat{C}$ inherits all the properties of the category of
+$𝒰$-sets that involve inductive and projective limits.
+
+\setcounter{subsection}{4} \setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[3.4.0]{I.sec3.4.0}
+Let $F$ be an object of $\widehat{C}$. We denote by
+$C/F$ the following category. The objects of $C/F$ are pairs consisting
+of an object $X$ of $C$ and a morphism $u$ from $X$ to $F$.
+Let $(X,u)$ and $(Y,v)$ be two objects. A morphism from $(X,u)$ to
+$(Y,v)$ is a morphism $g$ from $X$ to $Y$ such that the following
+diagram is commutative:
+\[
+\xymatrix@=1.25cm{
+X \ar[rr]^{g}\ar[rd]_{u}&   & Y\ar[ld]^{v}\\
+            & F &.
+}
+\]
+
+\begin{enonce*}{Proposition 3.4}\etiquette[3.4]{I.prop3.4}
+With the notation of \hyperref[I.sec3.4.0]{(3.4.0)}, the source functor $C/F\rightarrow
+\widehat{C}$ admits a representable inductive limit in
+$\widehat{C}$. The canonical morphism
+$$
+\mathop{\underrightarrow{\text{\rm lim source}}}_{C/F}\;
+(.)\longrightarrow F
+$$
+is an isomorphism.
+\end{enonce*}
+
+
+\begin{enonce*}{Corollary 3.5}\etiquette[3.5]{I.cor3.5}
+Let $F$ and $H$ be two objects of $\widehat{C}$. There is
+a canonical isomorphism
+$$
+\Hom(F,H)\xrightarrow{\sim}\varprojlim_{(X,u)\in \ob(C/F)}
+H(X){\quoi}.
+$$
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The corollary follows immediately from \hyperref[I.prop3.4]{3.4}
+and \hyperref[I.def1.2]{1.2}.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 3.6}\etiquette[3.6]{I.prop3.6}
+Let\pageoriginale $C$ be a $𝒰$-category, let $𝒱$ be a
+universe containing $𝒰$, and let
+$\nobreak{i:\widehat{C}_{𝒰}\rightarrow
+\widehat{C}_{𝒱}}$ be the natural inclusion functor of the
+corresponding categories of presheaves \hyperref[I.condef1.3]{(1.3)}. The functor $i$
+commutes with inductive and projective limits. Moreover, for every
+object $F$ of $\widehat{C}_{𝒰}$, every subobject of $i(F)$
+is isomorphic to the image under $i$ of a unique subobject of $F$
+(thus giving a bijection from the set of subobjects of $F$ to the
+set of subobjects of $i(F)$).
+\end{enonce*}
+
+\section{Sieves}\etiquette[4]{I.sec4}
+
+\begin{enonce*}{Definition 4.1}\etiquette[4.1]{I.def4.1}
+Let $C$ be a category. A \emph{sieve} in the category $C$ is a full
+subcategory $D$ of $C$ with the following property: every object of
+$C$ from which there exists a morphism to an object of $D$ belongs to
+$D$. If $X$ is an object of $C$, the sieves of $X$ are (by an abuse of
+language) the sieves in the category $C/X$.
+\end{enonce*}
+
+Let $𝒰$ be a universe such that $C$ is a $𝒰$-category.
+Let $\widehat{C}$ be the corresponding category of presheaves.
+To every sieve of $X$ one associates a subobject of $X$ in
+$\widehat{C}$ as follows: to every object $Y$ of $C$, one
+assigns the set of morphisms $f:Y\rightarrow X$ such that the object
+$(Y,f)$ belongs to the sieve.
+
+\begin{enonce*}{Proposition 4.2}\etiquette[4.2]{I.prop4.2}
+The map defined above establishes a %%
+bijection between the set of sieves of $X$ and the set of subobjects
+of $X$ in $\widehat{C}$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+We shall only \sisi{show that it}{describe what} is the inverse map. To every
+subfunctor $R$ of $X$ we associate the category $C/R$ of objects of
+$C$ over $R$ \sisi{(3.4)}{(\hyperref[I.prop3.4]{3.4})}. One immediately
+checks that $C/R$ is a sieve of $X$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 4.2.1}\etiquette[4.2.1]{I.rem4.2.1}
+One\pageoriginale sees likewise that the sieves of $C$ are in canonical
+bijective correspondence with the set of subfunctors of the ``terminal
+functor'' on $C$ (the ``terminal'' object of $\widehat{C}$).
+\end{enonce*}
+
+\setcounter{subsection}{2}
+\subsection{}\etiquette[4.3]{I.sec4.3}
+Let $C$ be a $𝒰$-category. By an abuse of language, we shall
+also call the subobjects of $X$ in the category $\widehat{C}$
+the sieves of $X$. This abuse of language allows us, for every presheaf
+$F$ and every sieve $R$ of $X$, to define
+$\Hom_{\widehat{C}}(R,F)$ as the set of %%
+morphisms from the functor $R$ to $F$. There is moreover a canonical
+isomorphism, functorial in $F$ \hyperref[I.cor3.5]{(3.5)}:
+$$
+\Hom_{\widehat{C}}(R,F)\xrightarrow{\sim}\varprojlim_{C/R}
+F(.){\quoi},
+$$
+which also gives a direct definition\nde{More simply, $C/R$ is identified
+with $R$, so that one has the formula $
+\Hom_{\widehat{C}}(R,F)\xrightarrow{\sim}\varprojlim_{R}
+F{\quoi}, $ where, by an abuse of notation, $F$ denotes the composite of
+$F$ and the tautological ``source'' functor $R\rightarrow C/X\rightarrow
+C$.}. Likewise, \hyperref[I.prop4.2]{Proposition 4.2} allows us to transfer the usual operations
+on functors to sieves. We mention the following:
+
+\subsubsection{}\etiquette[4.3.1]{I.4.3.1}
+\emph{Base change.} Let $R$ be a sieve of $X$ and let
+$f:Y\rightarrow X$ be a morphism of objects of $C$. The fiber product
+$\fprod{R}{Y}{X}$ is a sieve of $Y$, called the \emph{sieve
+deduced
+  from $R$ by base change.} The corresponding subcategory of $C/Y$
+is the inverse image of the subcategory of $C/X$ defined by $R$ under
+the canonical functor $C/Y\rightarrow C/X$ defined by $f$.
+
+\subsubsection{}\etiquette[4.3.2]{I.sec4.3.2}
+\emph{Order relation, intersection, union.} The inclusion relation on
+the subfunctors of $X$ is an order relation. The union and intersection
+of a family of sieves indexed by an arbitrary set may be defined as the
+least upper bound and the greatest lower bound of the family of
+corresponding subpresheaves.
+
+\subsubsection{}\etiquette[4.3.3]{I.sec4.3.3}
+\emph{Image, generated sieve.}\pageoriginale Let
+$(F_\alpha)_{\alpha\in A}$ be a family of presheaves and, for every
+$\alpha\in A$, let $f_\alpha:F_\alpha\rightarrow X$ be a morphism,
+where $X$ is an object of $C$. The \emph{image} of this family of
+morphisms is the union of the images of the $f_\alpha$. The image of
+this family is therefore a sieve of $X$. In particular, if all the
+$F_\alpha$ are objects of $C$, the image sieve will be called the
+sieve generated by the morphisms $f_\alpha$. The category $C/R$ is
+the full subcategory of $C/X$ formed by the objects $X'\rightarrow X$
+over $X$ for which there exists an $X$-morphism from $X'$ to one of the
+$F_{\alpha}$.
+
+The reader may, as an exercise, translate the relations and operations
+defined here on subfunctors into the language of the categories $C/R$.
+One will then observe that these relations and operations do not depend
+on the universe $𝒰$ for which $C$ is a $𝒰$-category, and that
+they are therefore defined for every category, without having to specify
+the universe to which the morphism sets belong; this could moreover have
+been foreseen \textit{a priori} from \hyperref[I.prop3.6]{3.6}.

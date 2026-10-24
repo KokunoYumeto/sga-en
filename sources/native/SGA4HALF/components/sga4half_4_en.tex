@@ -1,0 +1,1461 @@
+
+\chapter{The cohomology class associated with a cycle}\label{IV}
+\blfootnote{by A.\ Grothendieck, written up by P.\ Deligne}
+
+
+
+
+
+This exposé is inspired by notes of Grothendieck that formed a preliminary
+version of \cite[IV]{sga5}. It defines the cohomology class of a cycle $X$ in
+a separated smooth scheme of finite type over a field, and proves that
+intersection corresponds to the cup product.
+
+Chapter \ref{IV:1} contains some general formalities. In Chapter \ref{IV:2},
+the class of a cycle is defined in several situations more general than the
+one just mentioned. The principal compatibility not considered is that
+between the direct image of a cycle and the trace morphism in cohomology. In
+Chapter \ref{IV:3}, this formalism is used to deduce the Lefschetz trace
+formula for an endomorphism with isolated fixed points of a proper smooth
+scheme over an algebraically closed $k$---and for a Frobenius endomorphism of
+a curve.
+
+We adopt the following conventions:
+\begin{enumerate}[\indent 1)]
+  \item ``scheme'' means a separated Noetherian scheme (this is largely a
+    hypothesis of convenience).
+  \item In Chapter \ref{IV:2}, an integer $n$ is fixed, and $n$ is invertible
+    on all schemes under consideration.
+  \item In Chapter \ref{IV:3}, a prime number $\ell$ is fixed, and $\ell$ is
+    invertible on all schemes under consideration. The cohomology used is
+    always $\ell$-adic cohomology:
+    \[
+      \h^\bullet(X) = \dQ_\ell\otimes_{\dZ_\ell} \varprojlim \h^\bullet(X,\dZ/\ell^n) \text{.}
+    \]
+\end{enumerate}
+Cohomology classes of cycles, trace morphisms, \ldots{} are defined by passage
+to the limit from the case of finite coefficients $\dZ/\ell^n$ (cf.
+\cite[VI]{sga5}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Cohomology with support and cup products}\label{IV:1}
+
+This section contains reminders from general topology, which the reader is
+invited to consult only as the need arises.
+
+
+
+
+
+
+
+
+
+
+\subsection{\texorpdfstring{$H^1$}{H1} and torsors}\label{IV:1-1}
+
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-1}
+
+Let $\sF$ be an abelian sheaf on a site $X$. It is known that
+$\h^1(X,\sF)$ classifies $\sF$-torsors on $X$. We normalize ($=$ choose the
+sign of) the isomorphism $($set of isomorphism classes of
+$\sF$-torsors$)\to \h^1(X,\sF)$ in such a way that for every exact sequence
+$0\to \sF\xrightarrow\alpha\sG\xrightarrow\beta\sH\to 0$ and every
+$h\in\h^0(X,\sH)$, the $\sF$-torsor $\beta^{-1}(h)\subset \sG$, on which
+$\sF$ acts by $(f,x)\mapsto \alpha(f)+x$, has class $\partial h$.
+
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-2}
+
+Let $\sP$ be an $\sF$-torsor. If $(U_i)$ is an open covering of $X$, and
+$p_i$ a section of $\sP$ on $U_i$, one associates to $\sP$ the \v{C}ech
+cocycle
+\[
+  p_{i j} = p_j - p_i \qquad \text{($p_{i j}\in \h^0(U_i\times U_j,\sF)$).}
+\]
+If, according to the usual rule, the map
+$\operatorname{\check H}^\bullet(X,\sF)\to \h^\bullet(X,\sF)$ is defined so
+as to be a morphism of $\delta$-functors, the image of
+$(p_{i j})\in \operatorname{\check H}^1(X,\sF)$ in $\h^1(X,\sF)$ is the class
+of $\sP$, normalized as in \ref{IV:1-1-1}.
+
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-3}
+
+The definition of $\h^\bullet(X,\sF)$ is as follows: for $\sF^\bullet$ a
+resolution of $\sF$ with acyclic components,
+$\h^i(X,\sF) = \h^i\Gamma(X,\sF^\bullet)$. The $\delta$-functor structure is
+obtained by associating to a short exact sequence of sheaves a short exact
+sequence of resolutions that remains exact after application of the functor
+$\Gamma$. If $\sF^\bullet$ is a resolution of $\sF$, the connecting
+homomorphism $\partial$ associated with
+\[\xymatrix{
+  0 \ar[r]
+    & \sF \ar[r]
+    & \sF^0 \ar[r]^-d
+    & \ker(d) \ar[r]
+    & 0
+}\]
+induces the negative of the defining isomorphism
+$\h^1(X,\sF) = \Gamma\left(X,\ker(d)\right)/d \Gamma(X,\sF^0)$.
+
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-4}
+
+Let $U$ be an open part of $X$ (a subsheaf of the final sheaf), and let $D$
+be the ``closed complement.'' It is known that $\h_D^1(X,\sF)$ classifies
+the $\sF$-torsors on $X$ trivialized on $U$. For every short exact sequence
+$0\to \sF\xrightarrow\alpha \sG\xrightarrow\beta\sH\to 0$, and every
+section with support in $D$, $h\in\h_D^0(X,\sH)$, the torsor
+$\beta^{-1}(h)$, trivialized on $U$ by the section $0$, has class
+$\partial h$.
+
+The long exact sequence of cohomology with support
+\[\xymatrix{
+  \cdots \ar[r]^-\partial
+    & \h_D^i(X,\sF) \ar[r]
+    & \h^i(X,\sF) \ar[r]
+    & \h^i(U,\sF) \ar[r]^-\partial
+    & \cdots
+}\]
+is defined from the sequence of functors
+\[\xymatrix{
+  0 \ar[r]
+    & \Gamma_D \ar[r]
+    & \Gamma \ar[r]
+    & \Gamma(U,-) \ar[r]
+    & 0
+}\]
+(exact on injective sheaves). For every section $f\in \h^0(U,\sF)$,
+$\partial f\in \h_D^1(X,\sF)$ is the class of the trivial torsor $\sF$,
+trivialized on $U$ by the section $f$.
+
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-5}
+
+Let $j:U\hookrightarrow X$. If $\sF$ injects into $j_* j^* \sF$, the exact
+sequence
+\[\xymatrix{
+  0 \ar[r]
+  & \sF \ar[r]
+  & j_* j^* \sF \ar[r]
+  & j_* j^* \sF / \sF \ar[r]
+  & 0
+}\]
+gives
+$\partial:\h^0(j_* j^*\sF/\sF) = \h_D^0(j_* j^* \sF/\sF) \to \h_D^1(X,\sF)$.
+The composite map
+\[\xymatrix{
+  \h^0(U,\sF) = \h^0(X,j_* j^*\sF) \ar[r]
+    & \h^0(X,j_* j^*\sF / \sF) \ar[r]^-\partial
+    & \h_D^1(X,\sF)
+}\]
+is the negative of the map considered in \ref{IV:1-1-4}.
+
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-6}
+
+Recall that if $\sL$ is an invertible sheaf on a scheme $X$, the
+$\dG_m$-torsor corresponding to it is the sheaf
+$\operatorname{Isom}(\sO,\sL)$, on which $\dG_m$ acts by
+$(\lambda,f)\mapsto f\circ (\lambda\cdot) = \lambda f$. Recall also that if
+$D$ is a Cartier divisor on $X$, and $j:U\hookrightarrow X$ is the inclusion
+of the complementary open subscheme, the invertible sheaf $\sO(D)$ is the
+subsheaf of $j_*\sO_U$ consisting of local sections $s$ such that $s f$ lies
+in $\sO_X$, where $f$ is a local equation for $D$.
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Cup products}\label{IV:1-2}
+
+In this subsection, we develop some observations about cup products in
+cohomology with support that will be used again in [\nameref{V}] to relate
+Poincaré duality for curves and self-duality of the Jacobian.
+
+\subsubsection{}\label{IV:1-2-1}
+
+Let $X$ be a site, $Y$ a closed part of $X$, and $\sF,\sG$ two abelian
+sheaves on $X$. For example: $X$ a scheme, $Y$ a closed subscheme, and
+$\sF,\sG$ sheaves on $\et X$. Define a product
+\begin{equation*}\tag{1.2.1.1}\label{IV:eq:1-2-1-1}
+  \Gamma_Y(X,\sF)\otimes \Gamma(Y,\sG) \to \Gamma_Y(X,\sF\otimes\sG) \text{.}
+\end{equation*}
+The product of a section $s$ of $\sF$ with support in $Y$ by a section $t$ of
+$\sG$ on $Y$ is obtained as follows: locally on $X$, $t$ is the restriction
+to $Y$ of a section $t'$ of $\sG$ on $X$, and one forms the product
+$s\otimes t'$. It has support in $Y$ and does not depend on the choice of
+$t'$, which justifies the definition and permits it to be globalized.
+
+Let $i:Y\hookrightarrow X$ be the inclusion morphism. The local analogue of
+\eqref{IV:eq:1-2-1-1} is the product
+\begin{equation*}\tag{1.2.1.2}\label{IV:eq:1-2-1-2}
+  i^!\sF\otimes i^*\sG \to i^!(\sF\otimes\sG) \text{,}
+\end{equation*}
+from which \eqref{IV:eq:1-2-1-1} follows by applying $\Gamma(Y,-)$.
+
+
+
+
+
+
+\subsubsection{}\label{IV:1-2-2}
+
+Let us derive these arrows. Let $\sK$, $\sL$, and $\sM$ be in the derived
+category, with a bilinear map $\sK\lotimes\sL\to\sM$. Deriving
+\eqref{IV:eq:1-2-1-1} gives
+\begin{equation*}\tag{1.2.2.1}\label{IV:eq:1-2-2-1}
+  \eR\Gamma_Y(X,\sK) \lotimes \eR\Gamma(Y,\sL) \to \eR\Gamma_Y(X,\sM)
+\end{equation*}
+inducing
+\begin{equation*}\tag{1.2.2.2}\label{IV:eq:1-2-2-2}
+  \h_Y^i(X,\sK)\otimes \h^j(Y,\sL) \to \h_Y^{i+j}(X,\sM)
+\end{equation*}
+(the cup product). The local arrow \eqref{IV:eq:1-2-1-2} gives
+\begin{equation*}\tag{1.2.2.3}\label{IV:eq:1-2-2-3}
+  \eR i^! \sK\lotimes i^*\sL \to \eR i^!\sM \text{,}
+\end{equation*}
+from which \eqref{IV:eq:1-2-2-1} follows by applying $\eR\Gamma(Y,-)$.
+
+
+
+
+
+\subsubsection{}\label{IV:1-2-3}
+
+Above, I passed over in silence the conflicts caused by using right-derived
+functors ($\eR\Gamma$) and left-derived functors ($\lotimes$) in the same
+formula.
+\begin{enumerate}[\indent a)]
+  \item In the next subsection, all the right-derived functors under
+    consideration will have finite cohomological dimension. This makes it
+    possible to work systematically in the derived categories $\eD^-$. To
+    have complexes that are both flat and flasque, one uses canonical
+    flasque resolutions as in \cite[XVII]{sga4}.
+  \item For a more general theory, one can no longer interpret bilinear maps
+    from $\sK$ and $\sL$ to $\sM$ as morphisms from
+    $\sK\lotimes\sL$ to $\sM$. For example,
+    $\eR\Gamma_Y(X,\sK)\lotimes\eR\Gamma(Y,\sL)$ is not defined if both
+    factors lie in $\eD^+$. One solution is to work in $\eD^+$, define
+    \[
+      \operatorname{Bil}(\sK,\sL;\sM) = \varinjlim \hom(\sK'\otimes\sL',\sM') \text{,}
+    \]
+    where the limit is taken over the quasi-isomorphisms $\sK'\iso \sK$,
+    $\sL'\iso \sL$, $\sM\iso \sM'$ ($\sK'$, $\sL'$, $\sM'$ bounded
+    below), where $\hom$ means ``morphism of complexes, up to homotopy,'' and
+    systematically use such bilinear maps without ever mentioning
+    $\otimes$.
+\end{enumerate}
+
+
+
+
+
+\subsubsection{Second theme}\label{IV:1-2-4}
+
+Let $U$ be an open subscheme of $X$, and let $j:U\hookrightarrow X$ be the
+inclusion morphism. For $\sK$ in the derived category on $U$, set
+$\eR\Gamma_!(U,\sK)=\eR\Gamma(X,j_!\sK)$. For $\sK$, $\sL$, and $\sM$ on
+$U$, with a bilinear map $\sK\lotimes\sL\to\sM$, we wish to define
+\begin{equation*}\tag{1.2.4.1}\label{IV:eq:1-2-4-1}
+  \eR\Gamma(U,\sK)\lotimes\eR\Gamma_!(U,\sL)\to\eR\Gamma_!(U,\sM) \text{.}
+\end{equation*}
+At the level of sheaves and their global sections, such a product follows
+from the isomorphism
+$j_*\sF\otimes j_!\sG\xleftarrow\sim j_!(\sF\otimes \sG)$, but care must be
+taken because $\eR\Gamma_!$ is not in general the derived functor of
+$\Gamma(X,j_!-)$.
+
+We begin by defining
+\[\xymatrix{
+  \eR j_* \sK\lotimes j_! \sL
+    & \ar[l]_-\sim j_!(\sK\lotimes \sL) \ar[r]
+    & j_!\sM \text{.}
+}\]
+Applying $\eR\Gamma(X,-)$ gives
+\[\xymatrix{
+  \eR\Gamma(U,\sK)\lotimes\eR\Gamma_!(U,\sL) = \eR\Gamma(X,\eR j_*\sK)\lotimes \eR\Gamma(X,j_!\sL) \ar[r]
+    & \eR\Gamma(X,j_! \sM) \text{.}
+}\]
+
+Here again, the conflict between left and right will be resolved in the next
+subsection by working in $\eD^-$.
+
+
+
+
+
+
+\subsubsection{Coda}\label{IV:1-2-5}
+
+Let $j:U\hookrightarrow X$ be an open part, and let $i:Y\hookrightarrow U$ be
+a closed part of $U$. Let $\bar Y$ be a closed subset of $X$ such that
+$\bar Y\cap U=Y$ (for example, the complement of $U\setminus Y$). Let $\sK$
+be on $U$. Set $\eR\Gamma_{Y!}(U,\sK)=\eR\Gamma_!(Y,\eR i^!\sK)$, where
+$\eR\Gamma_!$ is relative to the inclusion of $Y$ into $\bar Y$. For every
+open subset $V$ of $U$ containing $Y$, $\eR\Gamma_{Y!}(U,\sK)$ maps to
+$\eR\Gamma_!(V,\sK)$: if $i$ also denotes the inclusion of $\bar Y$ into
+$X$, $j$ that of $Y$ into $\bar Y$, and $k$ that of $V$ into $X$, one has
+$\eR i^!\sK = j^*\eR i^! k_!(k^*\sK)$, whence a morphism
+$j_!\eR i^!\sK \to \eR i^! k_!(k^*\sK)$. Applying
+$\eR\Gamma(\bar Y,-)$ to it gives
+$\eR\Gamma_{Y!}(U,\sK)\to \eR\Gamma_{\bar Y}(k_! k^* \sK) \to \eR\Gamma(k_! k^*\sK) = \eR\Gamma_!(V,\sK)$.
+
+For $\sK,\sL,\sM$ on $U$, with a bilinear map
+$\sK\lotimes\sL\to\sM$, we wish to define
+\begin{equation*}\tag{1.2.5.1}\label{IV:eq:1-2-5-1}
+  \h^n(U,\sK)\otimes \h_!^m(Y,\sL) \to \h_{Y!}^{n+m}(U,\sM)
+\end{equation*}
+(the last group itself mapping to $\h_!^{n+m}(V,\sM)$). In the derived
+category, this means defining
+\begin{equation*}\tag{1.2.5.2}\label{IV:eq:1-2-5-2}
+  \eR\Gamma_Y(U,\sK) \lotimes \eR\Gamma_!(Y,\sL) \to \eR\Gamma_{Y!}(U,\sM) \text{.}
+\end{equation*}
+We identify $\eR\Gamma_Y$ with $\eR\Gamma(Y,\eR i^!\sK)$. The desired
+product is then of type \eqref{IV:eq:1-2-4-1}, relative to the local product
+\eqref{IV:eq:1-2-2-3} on $Y$:
+$\eR i^! \sK\lotimes\sL \to \eR i^! \sM$.
+
+
+
+
+
+
+\subsubsection{}\label{IV:1-2-6}
+
+Above, we developed the absolute formalism. There is a parallel relative
+formalism, with $\Gamma$ replaced by $f_*$ for $f$ a morphism $X\to S$.
+
+
+
+
+
+
+
+
+
+
+\subsection{The Koszul rule}\label{IV:1-3}
+
+Let $A$ be a commutative ring, and let $(V_i)_{i\in I}$ be a finite family of
+graded (or $\dZ/2$-graded) $A$-modules. Recall the definition of the graded
+tensor product $\bigotimes_{i\in I} V_i$, in the sense of the Koszul rule
+(cf. \cite[XVII 1.1]{sga4}). For each total ordering $a$ on $I$, we shall
+define a module $V(a)$. We shall also define a transitive system of
+isomorphisms $\varphi_{a b}:V(b)\iso V(a)$, and the graded tensor product of
+the $V_i$ will be the ``common value'' $\varprojlim V(a)$ of this system of
+modules. We take
+\begin{enumerate}[\indent a)]
+  \item $V(a) = \bigotimes_{i\in I} |V_i|$ (the ordinary tensor product of
+    the underlying ungraded modules of the $V_i$).
+  \item if the $x_i\in V_i$ are homogeneous, we take
+    $\varphi_{a b}(\otimes x_i) = (-1)^N \otimes x_i$, where $N$ is the sum
+    of the $\deg(x_i)\deg(x_j)$ over the pairs $(i,j)$ such that
+    $i<_a j$ and $i>_b j$.
+\end{enumerate}
+
+
+
+
+
+
+\subsubsection*{\hypertarget{sga4half.e04.example.1-3-1}{Example 1}}
+
+Take $I=\{1,2\}$, and let $a$ be the ordering in which $1<2$, and $b$ the
+ordering in which $1>2$. Let $v_i\in V_i$ be homogeneous, and denote by
+$v_1\otimes v_2$ (resp. $v_2\otimes v_1$) the image in the graded tensor
+product of the product of the $v_i$ in $V(a)$ (resp. $V(b)$). One has
+\[
+  v_1\otimes v_2 = (-1)^{\deg(v_1)\deg(v_2)} v_2\otimes v_1
+\]
+(the Koszul rule).
+
+
+
+
+
+
+\subsubsection*{\hypertarget{sga4half.e04.example.1-3-2}{Example 2}}
+
+If all the $V_i$ have degree $1$, there is a canonical isomorphism relating
+the module underlying the graded tensor product and the ordinary tensor
+product of the modules $|V_i|$ underlying the $V_i$:
+\[
+  \left|\bigotimes V_i\right| \simeq \bigotimes |V_i|\otimes_{\dZ}\bigwedge^{|I|}\dZ^I \text{.}
+\]
+
+
+
+
+
+
+\subsubsection*{\hypertarget{sga4half.e04.example.1-3-3}{Example 3}}
+
+For $A$ a field, and $X_i$ a finite family of spaces, the K\"unneth formula
+is written
+$\h^\bullet\left(\prod X_i,A\right) = \bigotimes \h^\bullet(X_i,A)$.
+
+Let $V^\vee$ be the graded dual of $V$. The canonical map
+\begin{equation*}\tag{1.3.1}\label{IV:eq:1-3-1}
+  V^\vee\otimes V = V\otimes V^\vee \to A
+\end{equation*}
+is $v'\otimes v\to v'(v)$.
+
+Suppose now that $A$ is a field, and consider only finite-dimensional vector
+spaces. The canonical isomorphism
+\begin{equation*}\tag{1.3.2}\label{IV:eq:1-3-2}
+  W\otimes V^\vee \to \hom(V,W)
+\end{equation*}
+is $w\otimes v'\mapsto \left(v\mapsto w\cdot v'(v)\right)$. Via this
+isomorphism, the composition
+$\hom(Y,Z)\otimes \hom(X,Y)\to \hom(X,Z)$ is identified with the morphism
+induced by \eqref{IV:eq:1-3-1}:
+$Z\otimes Y^\vee\otimes Y\otimes X^\vee \to Z\otimes X^\vee$.
+
+The trace of $f:V\to V$ (zero for homogeneous $f$ of degree $\ne 0$) is
+the image of $f$ under
+\begin{equation*}\tag{1.3.4}\label{IV:eq:1-3-4}
+  \tr:\hom(V,V) {\xleftarrow\sim}_\text{\eqref{IV:eq:1-3-2}} V\otimes V^\vee = V^\vee \otimes V \to_\text{\eqref{IV:eq:1-3-1}} A .
+\end{equation*}
+
+It is easily verified that, for $f$ of degree $0$,
+\begin{equation*}\tag{1.3.5}\label{IV:eq:1-3-5}
+  \tr(f,V) = \sum (-1)^i \tr(f,V^i) \text{.}
+\end{equation*}
+
+Expressing the commutativity of the two morphisms obtained by composing the
+morphisms \eqref{IV:eq:1-3-1}
+$V^\vee\otimes V\otimes W^\vee\otimes W\to k$, one finds that for homogeneous
+$f:V\to W$ and $g:W\to V$, one has
+\begin{equation*}\tag{1.3.6}\label{IV:eq:1-3-6}
+  \tr(f g) = (-1)^{\deg(f)\deg(g)} \tr(g f) \text{.}
+\end{equation*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The cohomology class associated with a cycle}\label{IV:2}
+
+
+
+
+
+
+
+
+
+
+\subsection{The class of a divisor}\label{IV:2-1}
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-1-1}
+
+Let $D$ be a Cartier divisor in a scheme $X$. Away from $D$, the invertible
+sheaf $\sO(D)$ is trivialized by the section $1$. The class $\cl(D)$ of $D$
+in $\h_D^1(X,\dG_m)$ is the class of the corresponding $\dG_m$-torsor
+trivialized on $X\setminus D$ (\ref{IV:1-1-6} and \ref{IV:1-1-4}).
+
+Let $\partial:\h^i(X\setminus D,\dG_m)\to \h_D^i(X,\dG_m)$ be the morphism
+of \ref{IV:1-1-4}. If $D$ admits a global equation $f$, multiplication by
+$f$ is an isomorphism from $\sO(D)$, trivialized by $1$ on $X\setminus D$,
+to $\sO$, trivialized by $f$ on $X\setminus D$. By \ref{IV:1-1-4}, one
+therefore has
+\begin{equation*}\tag{2.1.1}\label{IV:eq:2-1-1}
+  \cl(D) = \partial f \text{.}
+\end{equation*}
+
+For every morphism $u:X'\to X$ such that $u^* D$ is again a Cartier divisor
+(i.e., $u^{-1} D$ is disjoint from $\operatorname{Ass}(X')$), one has
+$\cl(u^* D) = u^*\cl(D)$. If such functoriality were desired for every
+morphism $u$, one would have to consider not Cartier divisors, but more
+generally invertible sheaves equipped with a section.
+
+Recall that the integer $n$ is henceforth assumed invertible on the schemes
+under consideration. Let
+$\partial:\h_D^i(X,\dG_m) \to \h_D^{i+1}(X,\dmu_n)$ be the boundary map for
+the Kummer exact sequence $0 \to \dmu_n \to \dG_m \to \dG_m \to 0$.
+
+
+
+
+
+
+\begin{definition}\label{IV:2-1-2}
+The \emph{class $\cl_n(D)$} of $D$ in $\h_D^2(X,\dmu_n)$ is
+$\partial \cl(D)$.
+\end{definition}
+
+When there is no risk of confusion, the subscript $n$ will be omitted.
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-1-3}
+
+The diagram
+\[\xymatrix{
+  \h^0(X\setminus D,\dG_m) \ar[r]^-\partial \ar[d]^-\partial
+    & \h_D^1(X,\dG_m) \ar[d]^-\partial \\
+  \h^1(X\setminus D,\dmu_n) \ar[r]^-\partial
+    & \h_D^2(X,\dmu_n)
+}\]
+is anticommutative. If $D$ admits a global equation $f$, $\cl_n(D)$ is
+therefore the negative of the image under $\partial$ of the class in
+$\h^1(X\setminus D,\dmu_n)$ of the $\dmu_n$-torsor of $n$-th roots of $f$.
+
+
+
+
+
+
+\begin{proposition}\label{IV:2-1-4}
+Let $i$ be the inclusion of $D$ into $X$. If $D$ and $X$ are regular, the
+cohomology sheaves with support $\eR^p i^! \dmu_n$ are zero for $p=0,1$, and
+$\eR^2 i^!\dmu_n = \underline{\dZ/n}$, generated by $\cl_n(D)$.
+\end{proposition}
+
+It suffices to prove that, for $X$ strictly local and $D$ defined by a regular
+parameter, one has $\h_D^p(X,\dmu_n) = 0$ for $p=0,1$ and
+$\h_D^2(X,\dmu_n) = \dZ/n$, generated by $\cl(D)$. Denoting reduced
+cohomology by $\sim$, one has
+$\widetilde\h^{p-1}(X\setminus D,\dmu_n)\iso \h_D^p(X,\dmu_n)$. The assertion
+for $p=0,1$ says that $D$ does not disconnect $X$, and for $p=2$ it follows,
+via \ref{IV:2-1-3}, from Abhyankar's lemma.
+
+This is a partial analogue of the relative theorem
+(\hyperref[I]{Étale cohomology}, \ref{I:5-3-4}). Grothendieck conjectures
+that the $\eR^p i^! \dmu_n$ vanish for $p\ne 2$, at least for $X$ excellent
+(purity conjecture), but this is known only in characteristic $0$
+(\cite[XIX]{sga4}).
+
+
+
+
+
+
+\begin{theorem}[Fundamental compatibility]\label{IV:2-1-5}
+Let $X$ be a smooth curve over an algebraically closed field $k$, let $P$ be a
+closed point of $X$, and let $\tr$ be the composite
+$\h_P^2(X,\dmu_n) \to \h_c^2(X,\dmu_n) \xrightarrow{\tr} \dZ/n$. One has
+\[
+  \tr \cl(P) = 1 \text{.}
+\]
+\end{theorem}
+
+Let $\bar X$ be the smooth projective curve completing $X$. The formula says
+that the invertible sheaf $\sO(P)$ on $\bar X$ has degree $1$.
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Cohomological method}\label{IV:2-2}
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-1}
+
+Let $X$ be a (Noetherian) scheme. Recall that a subscheme $Y$ of $X$ is said
+to be a local complete intersection of codimension $c$ if, locally (on $Y$),
+it is defined by a regular sequence of $c$ equations in $X$. For $X$ the
+spectrum of a local ring $A$ with maximal ideal $\fm$, and $Y$ with ideal
+$\fa$, this means that $\Ext^i(A/\fa,A) = 0$ for
+$i<\dim(\fa/\fm\fa)=c$, and every sequence of elements of $\fa$ whose image
+in $\fa/\fm\fa$ is a basis of $\fa/\fm\fa$ is a regular sequence of
+equations for $Y$.
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-2}
+
+Let $i:Y\hookrightarrow X$ be a local complete intersection of codimension
+$c$. We propose to define a local fundamental class $\cl(Y)$ that is a
+global section of the cohomology sheaf with support
+$\eR^{2c}i^! \dZ/n(c)$ (recall that $\dZ/n(c)=\dmu_n^{\otimes c}$).
+
+Locally, $Y$ is the intersection of a sequence of $c$ divisors $D_i$, and we
+define $\cl(Y)$ as the cup product of the $\cl(D_i)$. Each $\cl(D_i)$ has
+support in $D_i$; their product has support in $Y$. The fact that this product
+is locally independent of the choice of the $D_i$ follows from
+\ref{IV:2-2-3} below and the following invariance properties:
+\begin{enumerate}[\indent a)]
+  \item compatibility with localization;
+  \item independence of the ordering of the $D_i$ (the $\cl(D_i)$ have
+    degree $2$, which is even, so the cup product is commutative);
+  \item the product depends only on the ``flag''
+    $D_1\supset D_1\cap D_2\supset \cdots\supset Y$.
+\end{enumerate}
+To prove c), note the existence of a product (a variant of
+\ref{IV:1-2-1})
+\[
+  \h_{D_1}^\bullet(X)\otimes \h_{D_1\cap D_2}^\bullet(D_1)\otimes \cdots \otimes \h_Y^\bullet(D_1\cap \cdots \cap D_{c-1}) \to \h_Y^\bullet(X) \text{;}
+\]
+the product of the $\cl(D_i)$ is also the product of the
+($\cl(D_i)$ restricted to
+$D_1\cap \cdots \cap D_{i-1})=(\cl(D_1\cap \cdots \cap D_i)$ in
+$D_1\cap \cdots \cap D_{i-1})$.
+
+
+
+
+
+
+\begin{lemma}\label{IV:2-2-3}
+Let $A$ be a local ring with maximal ideal $\fm$, and let
+$u=(u_1,\dots,u_c)$, $v=(v_1,\dots,v_c)$ be two regular sequences generating
+the same ideal $\fa$. There is then a sequence $w_i$
+($1\leqslant i\leqslant N$) of such sequences joining them, such that
+$w_{i+1}$ is obtained from $w_i$ by a permutation or by changing only the
+last element.
+\end{lemma}
+
+Since permutations are available, it would amount to the same thing to allow
+one element, rather than the last element, to be changed. By
+\ref{IV:2-2-1}, we are thus reduced to verifying that, in the vector space
+$\fa/\fm\fa$, one can pass from one basis to another by a sequence of
+permutations and changes of basis modifying only one vector. Indeed, the
+linear group is generated by diagonal, elementary, and permutation matrices.
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-4}
+
+The same methods make it possible to define a local fundamental class for
+every $Y\subset X$ locally definable by $c$ equations (where fewer equations
+suffice, the class is zero).
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-5}
+
+One can pass from such a local fundamental class in
+$\h^0\left(Y,\eR^{2 c} i^!\dZ/n(c)\right)$ to a global fundamental class in
+$\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ when semipurity results are available:
+
+
+
+
+
+
+\begin{proposition}\label{IV:2-2-6}
+\begin{enumerate}[(i)]
+  \item If $\eR^p i^!\dZ/n=0$ for $p<2 c$, then
+    \[
+      \h_Y^{2 c}\left(X,\dZ/n(c)\right) \iso \h^0\left(Y,\eR^{2 c} i^! \dZ/n(c)\right) \text{.}
+    \]
+  \item Let $Z$ be a closed part of $Y$, with complement $V$ in $Y$, and let
+    $k$ be the inclusion of $Z$ into $X$. If $\eR^p i^! \dZ/n = 0$ for
+    $p\leqslant 2 c$, then
+    \[
+      \h_Y^{2 c}\left(X,\dZ/n(c)\right) \hookrightarrow \h_V^{2 c}\left(X,\dZ/n(c)\right) \text{.}
+    \]
+    If $\eR^p i^!\dZ/n=0$ for $p\leqslant 2 c+1$, this arrow is an
+    isomorphism.
+\end{enumerate}
+\end{proposition}
+
+The hypothesis $\eR^p i^!\dZ/n=0$ is equivalent to
+$\eR^p i^!\dZ/n(c)=0$. With this understood, (i) follows from the spectral
+sequence $\h^p(Y,\eR^q i^!)\Rightarrow \h_Y^{p+q}(X,-)$. If $k_1$ is the
+inclusion of $Z$ into $Y$, one has $k=i k_1$, whence
+$\eR k^! \dZ/n=\eR k_1^! \eR i^!$, and the long exact cohomology sequence for
+$Z\subset Y$ gives a long exact sequence
+\[\xymatrix{
+  \cdots \ar[r]
+    & \h^i\left(Z,\eR k^! \dZ/n(c)\right) \ar[r]
+    & \h_Y^i\left(X,\dZ/n(c)\right) \ar[r]
+    & \h_V^i\left(X,\dZ/n(c)\right) \ar[r]
+    & \cdots
+}\]
+from which (ii) follows.
+
+
+
+
+
+
+\subsubsection{Amplification}\label{IV:2-2-7}
+
+Proposition \ref{IV:2-2-6} remains valid for $i$ any separated morphism of
+finite type, and $2 c$ any integer (positive or negative), provided that
+$\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ is replaced there by
+$\h^{2 c}\left(Y,\eR i^!\dZ/n(c)\right)$, and likewise for $\h_V$.
+
+The following semipurity results follow from \cite[1.8, 1.10, 1.15]{sga2}.
+We recall their proof.
+
+
+
+
+
+
+\begin{theorem}\label{IV:2-2-8}
+Let there be a morphism of $S$-schemes of finite type
+\[\xymatrix{
+  Y \ar[r]^-i \ar[dr]_-f
+    & X \ar[d]^-g \\
+  & S
+}\]
+Suppose that $X$ is smooth, purely of relative dimension $N$, and that $Y$
+has fiberwise dimension $\leqslant d$. Let $c=N-d$.
+\begin{enumerate}[\indent (i)]
+  \item One has $\eR^p i^!\dZ/n=0$ for $p<2 c$; likewise with $\dZ/n$
+    replaced by a sheaf $g^* \sF$.
+  \item If, over a dense open subset $U$ of $S$, $Y$ has fiberwise dimension
+    $<d$, one has $\eR^p i^!\dZ/n=0$ for $p\leqslant 2 c$. If in addition
+    the complement $Z$ of $U$ does not locally disconnect $S$, one has
+    $\eR^pi^!\dZ/n=0$ for $p\leqslant 2 c+1$.
+\end{enumerate}
+\end{theorem}
+
+Since $\eR g^! \sF=g^*\sF(N)[2N]$, the transitivity formula
+$\eR i^!\eR g^!=\eR f^!$ shows that
+$\eR^{2 c+q} i^!(g^*\sF)=0\Leftrightarrow \eR^{-2 d+q}f^!(\sF)$. This reduces
+us to studying $f$, i.e. to assuming that $X=S$. Assertion (i) is then
+\cite[XVIII 3.17]{sga4}.
+
+Let $Y'$ be the inverse image of $Z$ in $Y$:
+\[\xymatrix{
+  Y' \ar[r]^-v \ar[d]^-f
+    & Y \ar[d]^-f \\
+  Z \ar[r]^-u
+    & S
+}\]
+By (i), the $\eR^p f^! \dZ/n$ have support in $Y'$ for
+$p\leqslant -2 d+1$; and the spectral sequence
+$\eR^a v^!\eR^b f^! \Rightarrow \eR^{a+b} (f v)^!$ shows that they coincide
+with the $\eR^p(f v)^!\dZ/n=\eR^p(u f)^!\dZ/n$. Applying (i) to $Y'/Z$ and
+to the spectral sequence
+$\eR^a f^!\eR^b u^! \Rightarrow \eR^{a+b} (u f)^!$, one finds that (ii)
+follows from the vanishing of $\eR^b u^! \dZ/n$ for $b=0$, or for $b=0$ and
+$1$, as the case may be.
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-9}
+
+Grothendieck conjectures the following absolute analogue of
+\ref{IV:2-2-8} (semipurity conjecture---a consequence of the purity
+conjecture): for $Y$ of codimension $\geqslant c$ in a regular $X$, one has
+$\h_Y^i(X,\dZ/n)=0$ for $i<2 c$, at least if $X$ is excellent.
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-10}
+
+We are now in a position to define the class of a cycle $Y$ of codimension
+$c$ in $X$ smooth over a field $k$. Write $Y=\sum d_i Y_i$, where the $Y_i$
+are reduced and irreducible. An open subset $U_i$ of $Y_i$, whose complement
+has codimension $>c$, is then a local complete intersection in $X$. This
+makes it possible to define the local fundamental class of $U_i$. By
+\ref{IV:2-2-6} and \ref{IV:2-2-8}, it comes from a unique fundamental class
+$\cl(Y_i)\in \h_{Y_i}^{2 c}\left(X,\dZ/n(c)\right)$, and we set
+\[
+  \cl(Y) = \sum d_i \cl(Y_i) \in \h_{|Y|}^{2 c}\left(X,\dZ/n(c)\right) \text{.}
+\]
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-11}
+
+In complex analytic geometry, a construction of Baum, Fulton, and
+Mac Pherson \cite{bfm75} makes it possible to define without restriction the
+cohomology class of a local complete intersection $Y\subset X$. Suppose $Y$
+is purely of codimension $c$, and let $\sN$ be the vector bundle on $Y$ that
+is the normal bundle of $Y$ in $X$. Its local sections are those of
+$(\sI/\sI^2)^\vee$, where $\sI$ is the sheaf of ideals of $Y$. Recall that
+the sheaf of $C^\infty$ functions on $X$ is defined locally, in terms of local
+embeddings of $X$ into $\dC^n$, as the restriction to $X$ of the quotient of
+the sheaf of $C^\infty$ functions on $\dC^n$ by the ideal generated by the
+real and imaginary parts of the equations defining $X$. The bundle $\sN$
+extends to a complex $C^\infty N$ vector bundle on a neighborhood $U$ of
+$Y$ in $X$, and for $U$ sufficiently small, there exist sections $f$ of $N$
+whose zero locus is $Y$ and such that, on $Y$, $d f:\sN\to N$ is the
+identity. Two choices of $N$ and $f$ are homotopic on a sufficiently small
+neighborhood of $Y$.
+
+The cohomology class $\cl(U)$ of the section $0$ of $N$ (denoted
+$z:U\to N$) is defined: $U$ is a local complete intersection in $N$, and
+$\eR^i z^!\dZ = 0$ for $i\ne 2 c$, $\eR^{2 c} z^!\dZ = \dZ$. We have
+$f^*:\h_U^\bullet(N,\dZ) \to \h_Y^\bullet(X,\dZ)$ and set
+\[
+  \cl(Y) = f^*\cl(U) \text{.}
+\]
+
+The same construction works whenever an analytic subspace $Y$ of $X$ has
+the following normal structure: a locally free sheaf $\sC$ of rank $c$ on
+$Y_\text{red}$, and an epimorphism
+$\sC\to \sI/\sI\cdot \sI_\text{red}$.
+
+
+
+
+
+
+
+
+
+
+\subsection{Homological method}\label{IV:2-3}
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-3-1}
+
+Let $f:Y\to S$ be a flat morphism of finite type with fibers of dimension
+$\leqslant d$. In \cite[XVIII 2.9]{sga4}, we defined a trace morphism
+\begin{equation*}\tag{2.3.1.1}\label{IV:eq:2-3-1-1}
+  \tr_f:\eR^{2 d} f_! \dZ/n(d) \to \dZ/n \text{.}
+\end{equation*}
+One has $\eR^i f_!\dZ/n(d)=0$ for $i>2 d$, and
+$\eR^i f^!\dZ/n=0$ for $i<-2 d$. This, together with the adjunction between
+$\eR f_!$ and $\eR f^!$, gives isomorphisms
+\begin{equation*}\tag{2.3.1.2}\label{IV:eq:2-3-1-2}
+\begin{aligned}
+  \hom\left(\eR^{2 d}f_!\dZ/n(d),\dZ/n\right)
+    &= \hom\left(\eR f_!\dZ/n(d),\dZ/n[-2 d]\right) \\
+    &= \hom\left(\dZ/n,\eR f^!\dZ/n(-d)[-2 d]\right) \\
+    &= \h^0\left(Y,\eR^{-2 d}f^!\dZ/n\right) \text{.}
+\end{aligned}
+\end{equation*}
+At least when $S$ is a point, the image of $\tr_f$ in the last two groups
+deserves the name fundamental class of $Y$ (in homology).
+
+We again denote by $\tr_f$ the image of $\tr_f$ in the second group, and the
+morphisms deduced from it by functoriality. For example, for $Y/S$ proper,
+the morphism
+\begin{equation*}\tag{2.3.1.3}\label{IV:eq:2-3-1-3}
+\xymatrix{
+  \h^i\left(Y,\dZ/n(d)\right) = \h^i\left(S,\eR f_!\dZ/n(d)\right) \ar[r]
+    & \h^{i-2 d}(S,\dZ/n) \text{.}
+}
+\end{equation*}
+
+Suppose $Y$ is contained in $X$, smooth over $S$ and purely of relative
+dimension $N$, and set $c=N-d$.
+\[\xymatrix{
+  Y \ar@{^{(}->}[r]^-i \ar[dr]_-f
+    & X \ar[d] \\
+  & S
+}\]
+One has $\eR f^! = \eR i^!\eR g^!$, and
+$\eR g^! \dZ/n=\dZ/n(-N)[-2 N]$. The fundamental class of $Y$ is identified
+with an element of
+$\h^0\left(Y,\eR i^!\dZ/n(c)[2 c]\right)=\h_Y^{2 c}\left(X,\dZ/n(c)\right)$,
+the class $\cl(Y)$ of $Y$ in $X$. We shall see below that it depends only on
+$Y\subset X$, not on the projection of $X$ onto $S$, and that for $Y$ a local
+complete intersection, it induces the local class of the preceding
+subsection.
+
+Let us make explicit the isomorphism
+\[
+  \h_Y^{2 c}\left(X,\dZ/n(c)\right) \iso \hom\left(\eR^{2 d}f_!\dZ/n(d),\dZ/n\right)
+\]
+that takes $\cl(Y)$ to $\tr_f$: via the isomorphisms
+\begin{align*}
+  \h_Y^{2 c}\left(X,\dZ/n(c)\right)
+    &= \h_Y^{2 c}\left(\eR i^!\dZ/n(c)\right) \\
+    &= \hom_Y\left(\dZ/n(d)[2 d],\eR i^!\dZ/n(N)[2 N]\right) \\
+    &= \hom_X\left(\dZ/n(d)[2 d]_Y,\dZ/n(N)[2 N]\right) \text{,}
+\end{align*}
+it is the top row of
+\[\xymatrix{
+  \h_Y^{2 c} \ar[r] \ar[dr]_-{(3)}
+    & \hom\left(\eR f_!\dZ/n(d)[2 d],\eR f_! \eR i^!\dZ/n(N)[2 N]\right) \ar[r]^-{(1)} \ar[d]^-{\tr_i} \ar@{}[dr]|-{(2)}
+    & \hom\left(\eR f_!\dZ/n(d)[2d],\dZ/n\right) \ar@{=}[d] \\
+  & \hom\left(\eR g_!\dZ/n(d)[2 d]_Y,\eR g_!\dZ/n(N)[2 N]\right) \ar[r]^-{\tr_g}
+    & \hom\left(\eR g_!\dZ/n(d)[2 d]_Y,\dZ/n\right) \text{,}
+}\]
+where (1) is the adjunction arrow $\eR f_!\eR f^!\to \text{id}$. The
+commutativity of (2) expresses the fact that the isomorphism
+$\eR f^!=\eR i^!\eR g^!$ is defined by adjunction. Finally, the arrow
+deduced from (3)
+\[
+  \h_Y^{2c}\left(X,\dZ/n(c)\right) \otimes \eR^{2 d} f_!\dZ/n(d) \to \eR^{2 N} g_!\dZ/n(N)
+\]
+is interpreted as a cup product (cf. \ref{IV:1-2}).
+
+
+
+
+
+
+\begin{definition}\label{IV:2-3-2}
+The class $\cl(Y)\in\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ is characterized by
+the property that, for every local section $u$ of
+$\eR^{2 d}f_! \dZ/n(d)$, one has
+\[
+  \tr_f(u) = \tr_g\left(\cl(Y)\smallsmile u\right) \text{.}
+\]
+\end{definition}
+
+Because $\cl(Y)$ already has an image $\tr_f$ in
+$\hom\left(\eR f_!\dZ/n(d)[2 d],\dZ/n\right)$, formula
+\ref{IV:2-3-2} holds for the arrows deduced from $\tr_f$ by functoriality.
+For example, for $X$ proper over $S$ and
+$u\in \h^\bullet(Y,\dZ/n)$, the formula holds in
+$\h^\bullet\left(S,\dZ/n(-d)\right)$. For
+$v\in \h^\bullet(X,\dZ/n)$, it gives
+\[
+  \tr_f(i^* v) = \tr_g\left(\cl(Y)\smallsmile v\right) \text{,}
+\]
+where the cup product can be computed in $\h^\bullet(X,\dZ/n)$.
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-3-3}
+
+We shall define the trace morphisms, and hence the class $\cl(Y)$, under more
+general hypotheses. Consider a diagram
+\[\xymatrix{
+  Y \ar@{^{(}->}[r] \ar[dr]_-f
+    & X \ar[d]^-g \\
+  & S
+}\]
+with $g$ smooth and purely of relative dimension $N$, and $Y$ closed in $X$
+with fiberwise dimension $\leqslant d$. Equip $Y$ in addition with a
+``weight'' $\sK$ of the following kind:
+$\sK\in\eD_{\text{parf},X}^b$ is a bounded complex of sheaves of
+$\sO$-modules on $X$, of finite $\tor$-dimension over $S$ (or over $X$,
+which amounts to the same thing), whose cohomology sheaves are coherent and
+have support in $Y$. We propose to define a morphism
+$\tr_{f,\sK}:\eR^{2 d}f_! \dZ/n(d) \to \dZ/n$. For $Y$ flat over $S$ and
+$\sK=\sO_Y$, this will be the preceding trace morphism. In general, it
+depends only on the lengths of $\sK$ at the generic points $y$ of the
+irreducible components of
+$Y$ ($\operatorname{lg}_y(\sK) = \sum (-1)^i \operatorname{lg} \h^i(\sK)_y$).
+Finally, $\cl(Y,\sK)$ will denote the class with support in $Y$ such that
+\begin{equation*}\tag{2.3.3.1}\label{IV:eq:2-3-3-1}
+  \tr_g\left(\cl(Y,\sK)\smallsmile u\right) = \tr_{f,\sK}(u) \text{.}
+\end{equation*}
+
+
+
+
+
+
+\subsubsection{}\label{IV:2-3-4}
+
+The construction of $\tr_{f,\sK}$ is parallel to that of
+\cite[XVIII.2]{sga4}; we shall indicate only its main outlines.
+
+\paragraph{A}
+$d=0$ ($f$ quasi-finite). Let $x$ be a geometric point of $Y$, $s$ its image
+in $S$, $\sK_{(x)}$ the inverse image of $\sK$ on the strict localization of
+$X$ at $x$, $\sK_{(x)s} = \sK_{(x)}\lotimes_{\sO_{S,s}^h} k(s)$ its inverse
+image on the geometric fiber at $s$, and
+$n(x)=\sum (-1)^i \dim_{k(s)} \h^i(\sK_{(x)s})$. The function
+$x\mapsto n(x)$ is a weighting of $f$, and we take the corresponding trace
+morphism \cite[XVII.6.2.5]{sga4}. Formation of the weighting $n(x)$ and of
+$\tr_{f,\sK}$ is compatible with every base change.
+
+\paragraph{B}
+General case. If $u:X\to \dA_S^d$ is such that $u i$ is quasi-finite, set
+$\tr_{f,\sK} = \tr_{\dA_S^d}\circ \tr_{u i,\sK}$. This trace morphism is
+clearly compatible with every base change $S'/S$. To prove that it does not
+depend on $u$, we may therefore suppose that $S$ is the spectrum of an
+algebraically closed field $k$. In that case, let $Y_i$ be the irreducible
+components of $Y$, and let $\operatorname{lg}_i$ be the length of $\sK$ at
+the generic point of $Y_i$. If $\alpha_i$ is the inclusion of
+$(Y_i)_\text{red}$ into $Y$, one has
+\begin{equation*}\tag{2.3.4}\label{IV:eq:2-3-4}
+  \tr_{f,\sK} = \sum \operatorname{lg}_i \tr_{Y_{i,\text{red}/S}} \alpha_i^\ast
+\end{equation*}
+(this formula follows from the analogous and easy formula for $\tr_{u i}$).
+
+This defines $\tr_{f,\sK}$ locally on $Y$; one then proceeds as in
+\cite[XVIII.2.9]{sga4}.
+
+
+
+
+
+
+\begin{lemma}\label{IV:2-3-5}
+If $g=g'g'':X\xrightarrow{g''} S'\xrightarrow{g'} S$, with $g'$ and $g''$
+smooth and purely of relative dimensions $N'$ and $N''$, and if $Y$ still
+has fiberwise codimension $\geqslant c$ over $S'$, then the class
+$\operatorname{cl}(Y,\sK)$ is the same whether computed in terms of $g$ or
+of $g''$.
+\end{lemma}
+
+Let $f'=g'' i$ and $d'=d-N'$. The formula
+$\tr_g=\tr_{g'}\tr_{g''}$ (\cite[XVIII.2.9]{sga4} Var 3) ensures the
+commutativity of
+\[\xymatrix{
+  \h_Y^{2 c}\left(X,\dZ/n(c)\right) \ar[d] \\
+  \hom_{S'}\left(\eR f_!\dZ/n(d')[2 d'],\eR g_!''\dZ/n(N'')[2 N'']\right) \ar[r] \ar[d]^-{\eR g_!'(N')}
+    & \hom_{S'}\left(\eR^{2 d'} f_!' \dZ/n,\dZ/n\right) \ar[d]^-{\tr_{g'}\circ \eR^{2 N'} g_!'} \\
+  \hom_S\left(\eR f_!\dZ/n(d)[2d],\eR g_!'\dZ/n(N)[2 N]\right) \ar[r]
+    & \hom_S\left(\eR^{2 d} f_!\dZ/n,\dZ/n\right)
+}\]
+while the analogous and easily verified formula
+$\tr_{f,\sK}=\tr_{g'}\tr_{f',\sK}$ ensures that the image of
+$\tr_{f',\sK}$ is $\tr_{f,\sK}$. The assertion follows.
+
+
+
+
+
+
+\begin{lemma}\label{IV:2-3-6}
+If $Y$ is a divisor in $X$, the class of \ref{IV:2-3-2} coincides with the
+class of \ref{IV:2-1-2}.
+\end{lemma}
+
+By semipurity (\ref{IV:2-2-6}(i) and \ref{IV:2-2-8}(i)), the problem is local
+on $Y$; using \ref{IV:2-3-5} to replace $S$ by a suitable $S'$, this allows
+us to suppose that $N=1$. Using semipurity once more
+(\ref{IV:2-2-6}(ii) and \ref{IV:2-2-8}(ii)), it suffices to prove
+\ref{IV:2-3-6} over the generic points of $S$. An étale localization then
+reduces us to assuming that $S$ is the spectrum of an algebraically closed
+field $k$. Since the classes of \ref{IV:2-3-2} and \ref{IV:2-1-2} are each
+additive in $Y$, this reduces us to the case where $Y$ is a closed point on a
+smooth curve over $k$. The fact that the characteristic property
+\ref{IV:2-3-2} is satisfied is then the fundamental compatibility
+\ref{IV:2-1-5}.
+
+
+
+
+
+
+\begin{lemma}\label{IV:2-3-7}
+The formation of $\cl(Y,\sK)$ is compatible with every base change $S'/S$.
+\end{lemma}
+
+This follows from the same assertion for the trace morphisms.
+
+
+
+
+
+
+\begin{theorem}\label{IV:2-3-8}
+(i) $\cl(Y,\sK)$ depends only on $Y\subset X$ and on the lengths of $\sK$ at
+the generic points of $Y$. This class is additive in $\sK$. For
+$\sK=\sO_Y$ and $Y$ a local complete intersection, it induces the local
+class of \ref{IV:2-2-2}.
+
+(ii) Let there be a commutative diagram
+\[\xymatrix{
+  X' \ar[r]^-u \ar[d]
+    & X \ar[d] \\
+  S' \ar[r]
+    & S
+}\]
+with $X'$ smooth over $S'$. If $u^{-1}(Y)$ still has fiberwise codimension
+$\geqslant c$, then
+\[
+  \cl\left(u^{-1}(Y),\eL u^\ast\sK\right) = u^\ast \cl(Y,\sK) \text{.}
+\]
+
+(iii) Let $Y'\subset X$ have fiberwise codimension $\geqslant c'$, let
+$\sK'$ be a weight on $Y'$, and suppose that $Y\cap Y'$ has fiberwise
+codimension $\geqslant c+c'$. Then
+\[
+\cl\left(Y\cap Y',\sK\lotimes \sK'\right) = \cl(Y,\sK) \smallsmile \cl(Y',\sK') \text{.}
+\]
+\end{theorem}
+
+
+
+
+\paragraph{(A)}
+Given $Y\subset X/S$ as above, it follows from semipurity
+(\ref{IV:2-2-6}, \ref{IV:2-2-8}) that to verify that two classes in
+$\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ coincide, it suffices to verify this
+locally at the generic points of $Y$, or even after every base change
+$s\to S$ ($s$ a geometric generic point of $S$), at the generic points of
+$Y$.
+
+\paragraph{(B) Proof of (ii) for $S=S'$ and $u$ a closed immersion}
+By localization (A), we may suppose that $X'$ is the inverse image of the
+section $0$ under a smooth morphism $v:X\to \dA_S^{N'}$
+\[\xymatrix{
+  X' \ar[r]^-u \ar[d]
+    & X \ar[d]^-v \\
+  S \ar[r]^-0
+    & \dA_S^{N'} \ar[r]^-\pi
+    & S
+}\]
+Apply \ref{IV:2-3-5} to $g=\pi v$ and \ref{IV:2-3-7} to the base change
+$S\to \dA_S^{N'}$.
+
+\paragraph{(C) In a product situation:}
+$X=X'\times_S X''$, $Y=Y'\times_S Y''$, $\sK=\sK'\lotimes_S \sK''$, one has
+$\cl(Y,\sK) = \cl(Y',\sK')\smallsmile \cl(Y'',\sK'')$ (external cup product,
+i.e. $\operatorname{pr}_1^\ast \cl(Y',\sK')\smallsmile \operatorname{pr}_2^\ast \cl(Y'',\sK'')$).
+
+The functorial properties of $\tr_g$ \cite[XVIII.2.12]{sga4} imply the
+commutativity of
+\small
+\[\xymatrix@=0.5cm{
+  \h_{X'}^{2c'}\otimes \h_{X''}^{2 c''}\ar[r] \ar[d]
+    & \hom_S\left(\eR f_!' \dZ/n(d')[2 d'],\eR g_!'\dZ/n(N')[2 N']\right)\otimes \cdots \ar[r] \ar[d]
+    & \hom_S\left(\eR^{2 d'} f_!' \dZ/n,\dZ/n\right) \otimes \cdots \ar[d] \\
+  \h_X^{2 c} \ar[r]
+    & \hom_S\left(\eR f_!\dZ/n(d)[2 d],\eR g_!\dZ/n(N)[2 N]\right) \ar[r]
+    & \hom_S\left(\eR^{2 d}f_!\dZ/n,\dZ/n\right)
+}\]
+\normalsize
+and one verifies that $\tr_f$ is the image of
+$\tr_{f'}\otimes \tr_{f''}$, whence the assertion.
+
+\paragraph{Proof of (ii)}
+(\ref{IV:2-3-7}) and a preliminary base change reduce us to assuming that
+$S=S'$. Factor $u$ through its graph:
+\[\xymatrix{
+  X' \ar[r]^-{(\text{id},u)}
+    & X'\times X \ar[r]^-{\operatorname{pr}_2}
+    & X \text{.}
+}\]
+This leads us to treat $\operatorname{pr}_2$ and $(\text{id},u)$ separately:
+the former is covered by (C) with $Y'=X'$, $\sK'=\sO_{X'}$ (with
+$\cl(Y')=1\in \h^0(X',\dZ/n)$), and the latter by (B).
+
+\paragraph{Proof of (iii)}
+Let $\delta:X\to X\times_S X$ be the diagonal inclusion. We use the formula
+$\delta^\ast(Y_1\times_S Y_2) = Y_1\cap Y_2$ to reduce to (B) and (C).
+
+\paragraph{Proof of (i)}
+The base change $S_\text{red}\to S$ replaces $X$ by $X_\text{red}$; this
+reduces us to assuming $X$ and $S$ reduced. Localization near the generic
+points of $Y$ then reduces us to the case where $Y_\text{red}$ is irreducible
+and the complete intersection of $c$ divisors $D_i$. The same localization,
+together with the definition of $\tr$ in the quasi-finite case, then shows
+that
+$\cl(Y,\sK)=\operatorname{lg}\cl(Y_\text{red},\sO_{Y_\text{red}})$, where
+$\operatorname{lg}$ is the length of $\sK$ at the generic point of $Y$.
+By (iii), one therefore has
+\[
+  \cl(Y,\sK) = \operatorname{lg} \prod_i \cl(D_i,\sO_{D_i})
+\]
+and the conclusion follows from \ref{IV:2-3-6}.
+
+
+
+
+
+
+\subsubsection{Remark}\label{IV:2-3-9}
+
+For $S$ the spectrum of a field, with the class of a cycle defined as in
+\ref{IV:2-2-10}, assertion (iii) says that if two cycles $Y'$ and $Y''$
+intersect with the correct dimension, then
+\[
+  \cl(Y'\cap Y'') = \cl(Y')\smallsmile \cl(Y'')\text{,}
+\]
+provided that the multiplicities of the components of $Y'\cap Y''$ are
+computed as alternating sums of $\tor$.
+
+
+
+
+
+
+\subsubsection{Remark}\label{IV:2-3-10}
+
+Let $X/\spec(k)$, with $k$ algebraically closed. If two cycles of codimension
+$c$ in $X$ are algebraically equivalent, the existence of the relative
+theory above implies that the images in $\h^{2 c}(X,\dZ/n(c))$ of their
+classes are the fibers, at two points of a suitable connected $S$, of a
+section over $S$ of the constant sheaf $\h^{2 c}(X,\dZ/n(c))$ (the sheaf
+$\eR^{2 c} f_\ast \dZ/n(c)$ for
+$f=\operatorname{pr}_2:X\times S\to S$): two algebraically equivalent cycles
+have the same class in $\h^{2 c}(X,\dZ/n(c))$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Application: the Lefschetz trace formula in the proper smooth case}\label{IV:3}
+
+
+
+
+
+
+\subsection{}\label{IV:3-1}
+
+Let $X$ and $Y$ be proper smooth algebraic varieties over an algebraically
+closed field $k$, purely of dimensions $N$ and $M$. Via the K\"unneth
+isomorphism $\h^\bullet(X\times Y)=\h^\bullet(X)\otimes \h^\bullet(Y)$, the
+trace morphism $\h^\bullet(X\times Y)(M)\to \h^\bullet(X)$ is simply
+$\h^\bullet(X)\otimes ($the trace morphism
+$\h^\bullet(Y)(M)\to \dQ_\ell)$. Since the morphism is homogeneous of even
+degree, there is no sign problem. We denote it by $\int_Y$.
+
+
+
+
+
+
+\subsection{}\label{IV:3-2}
+
+A class $\eta\in \h^{2 q}(X\times Y)(q)$ defines a morphism of degree
+$2(q-M)$, $\eta_{XY}:\h^\bullet(Y)(M-q)\to \h^\bullet(X)$, by the formula
+\[
+  \beta \mapsto \int_Y \eta\cdot \operatorname{pr}_2^\ast \beta \text{.}
+\]
+
+
+
+
+
+
+\begin{proposition_}\label{IV:3-3}
+Let $p$ and $q$ be two integers, with $p+q=N+M$, and let
+$\varepsilon\in \h^{2 p}(X\times Y)(p)$,
+$\eta\in \h^{2 q}(X\times Y)(q)$. With the trace of
+$\eta_{X Y}\varepsilon_{Y X}:\h^\bullet(X)\to \h^\bullet(X)$ understood in
+the sense of \ref{IV:1-3}, one has
+\[
+  \tr_{X\times Y}(\eta\cdot \varepsilon) = \tr\left(\eta_{X Y}\varepsilon_{Y X},\h^\bullet(X)\right) \text{.}
+\]
+\end{proposition_}
+
+To exorcise the signs, it is helpful to retain from the grading of
+$\h^\bullet$ only the underlying $\dZ/2$-grading. To avoid carrying Tate
+twists along, also fix an isomorphism $\dQ_\ell(1)=\dQ_\ell$. Let $\alpha_Y$
+be the homomorphism $\h^\bullet(Y)\to \h^\bullet(Y)^\vee$ (an isomorphism)
+that makes the diagram
+\[\xymatrix{
+  \h^\bullet(Y)\otimes \h^\bullet(Y) \ar[r] \ar[d]^-{\alpha_Y\otimes 1}
+    & \h^\bullet(Y) \ar[r]^-{\tr}
+    & \dQ_\ell \ar@{=}[d] \\
+  \h^\bullet(Y)^\vee \otimes \h^\bullet(Y) \ar[rr]^-{\text{(\ref{IV:eq:1-3-1})}}
+    & & \dQ_\ell \text{.}
+}\]
+commute. The map $\eta_{X Y}$ is the image of $\eta$ under
+\[\xymatrix{
+  \h^\bullet(X\times Y) = \h^\bullet(X)\otimes \h^\bullet(Y) \ar[r]^-{\alpha_Y}
+    & \h^\bullet(X) \otimes \h^\bullet(Y)^\vee \ar@{=}[r]^-{\text{(\ref{IV:eq:1-3-2})}}
+    & \hom\left(\h^\bullet(Y),\h^\bullet(X)\right) \text{,}
+}\]
+and likewise for $\varepsilon$. Definition \ref{IV:eq:1-3-4} of the trace
+then reduces \ref{IV:3-3} to the formula
+$\tr_{X\times Y}=\tr_X\otimes \tr_Y$.
+
+
+
+
+
+
+\subsection{Remark}\label{IV:3-4}
+
+The proof of \ref{IV:3-3} does not use the fact that $\alpha_X$ and
+$\alpha_Y$ are isomorphisms. It is valid without assuming $X$ and $Y$
+smooth. Outside the smooth case, however, it is difficult to find
+\emph{cohomology} classes to which one would want to apply \ref{IV:3-3}.
+
+
+
+
+
+
+\subsection{Remark}\label{IV:3-5}
+
+If $\varepsilon,\eta$ are the cohomology classes of algebraic cycles $A$ and
+$B$ on $X\times Y$, of codimensions $p$ and $q$, and $A\cap B$ has dimension
+$0$, then $\tr_{X\times Y}(\eta\varepsilon)$ is the intersection
+multiplicity $A\cdot B$, computed by an alternating sum of $\tor$
+(\ref{IV:2-3-9}).
+
+
+
+
+
+
+\begin{proposition_}\label{IV:3-6}
+For $q=M$ and $\eta=\cl(B)$ the class of a subscheme
+$B\subset X\times Y$, finite over $X$, the map $\eta_{X Y}$ is the composite
+\[\xymatrix{
+  \eta_{X Y} : \h^\bullet(Y) \ar[r]^-{\operatorname{pr}_2^\ast}
+    & \h^\bullet(B) \ar[r]^-{\tr_{B/X}}
+    & \h^\bullet(X) \text{.}
+}\]
+\end{proposition_}
+
+Indeed, by \ref{IV:3-2} and \eqref{IV:eq:2-3-3-1} for $\sK=\sO_B$, one has
+\[
+  \eta_{X Y}(\beta) = \tr_{X\times Y/X}\left(\cl(B)\cdot \operatorname{pr}_2^\ast\beta\right) = \tr_{B/X}\left(\operatorname{pr}_2^\ast \beta\right) \text{.}
+\]
+
+The most important case is that in which $B$ is the graph of a map
+$f:X\to Y$. In this case, \ref{IV:3-6} shows that $\eta_{X Y}=f^\ast$.
+
+
+
+
+
+
+\begin{corollary_}\label{IV:3-7}
+Let $f$ be an endomorphism of $X$ proper and smooth over an algebraically
+closed field $k$. Suppose that the fixed points of $f$ are isolated. Then the
+trace $\sum (-1)^i \tr(f^\ast,\h^i(X))$ is the number of fixed points of $f$,
+each counted with its multiplicity.
+\end{corollary_}
+
+In \ref{IV:3-5}, take $A=$ the graph of the identity and $B=$ the graph of
+$f$, and apply \ref{IV:3-3}, \ref{IV:3-6}.
+
+
+
+
+
+
+\begin{corollary_}\label{IV:3-8}
+Let $X$ be a curve over an algebraically closed $k$, obtained by extension of
+scalars from $X_0$ over $\dF_q$, and let $f$ be the Frobenius morphism. Then
+$\sum (-1)^i \tr\left(f^\ast,\h_c^i(X)\right)$ is the number of fixed
+points of $f$.
+\end{corollary_}
+
+One can replace $X$ by $X_\text{red}$, and hence suppose that $X$ is reduced.
+Let $U$ be the open subset of $X$ on which $X$ is smooth of dimension $1$,
+and let $\bar U$ be the smooth projective completion of $U$. The long exact
+cohomology sequences for $(X,U)$ and $(\bar U,U)$ give
+\[
+  \tr\left(f^\ast,\h_c^\bullet(X)\right) = \tr\left(f^\ast,\h_c^\bullet(U)\right) + \tr\left(f^\ast,\h_c^\bullet(X\setminus U)\right)
+\]
+and
+\[
+  \tr\left(f^\ast,\h_c^\bullet(\bar U)\right) = \tr\left(f^\ast,\h_c^\bullet(U)\right) + \tr\left(f^\ast,\h_c^\bullet(\bar U\setminus U)\right) \text{.}
+\]
+The same formulas hold for the numbers of fixed points. Since formula
+\ref{IV:3-8} is clear for a scheme of dimension $0$, this reduces us to
+proving \ref{IV:3-8} for $\bar U$. This case follows from \ref{IV:3-7}. The
+fact that $d f=0$ guarantees that all fixed points have multiplicity one.
+
+
+
+
+
+
+\subsection{Remark}\label{IV:3-9}
+
+For $X$ of dimension $\leqslant 1$ over an algebraically closed $k$, and
+$f:X\to X$ such that $d f=0$, it is not difficult to verify that
+\ref{IV:3-8} is still valid.

@@ -1,0 +1,323 @@
+
+\section*{1. Formal Varieties over a Pseudocompact Ring}
+\phantomsection
+\label{sga3:VIIB:1}
+\addcontentsline{toc}{section}{1. Formal Varieties over a Pseudocompact Ring}
+
+\medskip
+\noindent\textbf{1.1.}
+\phantomsection
+\label{sga3:VIIB:1.1}
+To every pseudocompact ring \(A\) one may associate a formal scheme
+(EGA~I, 10.4.2) as follows. Its underlying topological space is the
+set \(\Upsilon(A)\) of open prime ideals of \(A\), which are therefore
+maximal, endowed with the discrete topology. For every subset
+\(E\subset\Upsilon(A)\), the space of sections of the structure sheaf
+over \(E\) is the Cartesian product
+\[
+  \prod_{\mathfrak m\in E}A_{\mathfrak m}.
+\]
+The formal scheme so obtained is denoted by \(\operatorname{Spf}(A)\),
+the \emph{formal spectrum} of \(A\).\footnote{\label{sga3:VIIB:nde:37}%
+Cf.\ \SGARefLink{sga3:VIIB:0.1.2}{Remarks 0.1.2}.}
+
+If \(A\) and \(B\) are two pseudocompact rings, a \emph{morphism} from
+\(\operatorname{Spf}(B)\) to \(\operatorname{Spf}(A)\) consists of a
+map
+\[
+  f:\Upsilon(B)\longrightarrow\Upsilon(A)
+\]
+and a family of continuous homomorphisms
+\[
+  f_y^\natural:A_{f(y)}\longrightarrow B_y,
+  \qquad y\in\Upsilon(B).
+\]
+Such a morphism induces a continuous homomorphism
+\[
+  f^\natural:
+  A=\prod_{x\in\Upsilon(A)}A_x
+  \longrightarrow
+  B=\prod_{y\in\Upsilon(B)}B_y.
+\]
+The converse is true:
+
+\medskip
+\noindent\textbf{Proposition.}
+\phantomsection
+\label{sga3:VIIB:1.1-spf-fully-faithful}
+\textit{The contravariant functor
+\(A\mapsto\operatorname{Spf}(A)\) is fully faithful.}
+
+Indeed, let \(\phi:A\to B\) be a continuous homomorphism. The inverse
+image \(\phi^{-1}(\mathfrak n)\) of an open maximal ideal of \(B\) is
+an open prime ideal of \(A\), and hence is maximal in \(A\). We
+therefore obtain a map
+\[
+  \mathfrak n\longmapsto\phi^{-1}(\mathfrak n)
+\]
+from \(\Upsilon(B)\) to \(\Upsilon(A)\), and \(\phi\) induces a
+continuous homomorphism
+\[
+  A_{\phi^{-1}(\mathfrak n)}\longrightarrow B_{\mathfrak n}.
+\]
+Thus \(\phi\) induces a morphism of formal schemes
+\[
+  \operatorname{Spf}(\phi):
+  \operatorname{Spf}(B)\longrightarrow\operatorname{Spf}(A).
+\]
+It is readily verified that
+\[
+  \operatorname{Spf}(\phi)^\natural=\phi,
+  \qquad
+  \operatorname{Spf}(f^\natural)=f
+\]
+for every morphism
+\(f:\operatorname{Spf}(B)\to\operatorname{Spf}(A)\), which proves the
+proposition.
+
+Although we shall speak here only of formal schemes of the form
+\(\operatorname{Spf}(A)\), we shall use the language of formal schemes
+rather than that of pseudocompact rings, so as to ground our assertions
+in geometric intuition.
+
+\medskip
+\noindent\textbf{1.2.}
+\phantomsection
+\label{sga3:VIIB:1.2}
+Let \(k\) be a pseudocompact ring.
+
+\medskip
+\noindent\textbf{Definition 1.2.A.}\footnote{%
+\label{sga3:VIIB:nde:38}The editors added the numbering \SGARefLink{sga3:VIIB:1.2.A}{1.2.A}--\SGARefLink{sga3:VIIB:1.2.E}{1.2.E}
+for later reference.}
+\phantomsection
+\label{sga3:VIIB:1.2.A}
+A \emph{formal variety over \(k\)} is a formal scheme \(X\)
+over \(\operatorname{Spf}(k)\) which is isomorphic to a formal
+\(k\)-scheme \(\operatorname{Spf}(A)\) for some profinite
+\(k\)-algebra \(A\). The algebra \(A\) is then isomorphic to the
+\emph{affine algebra} of \(X\), that is, the algebra of sections of
+the structure sheaf \(\mathcal O_X\) of \(X\).
+
+We denote by \(\operatorname{Vaf}/k\) the full subcategory of the
+category of formal schemes over \(\operatorname{Spf}(k)\) whose
+objects are the formal \(k\)-varieties.\footnote{%
+\label{sga3:VIIB:nde:39}By the definition of morphisms in \SGARefLink{sga3:VIIB:1.1}{1.1}, every
+\(X\in\operatorname{Ob}(\operatorname{Vaf}/k)\) is the direct sum in
+\(\operatorname{Vaf}/k\) of the one-point formal varieties
+\(\operatorname{Spf}(\mathcal O_{X,x})\), for \(x\in X\).}
+
+By \SGARefLink{sga3:VIIB:1.1}{1.1}, the functor \(A\mapsto\operatorname{Spf}(A)\) is an
+anti-equivalence from \(\operatorname{Alp}/k\) (\SGARefLink{sga3:VIIB:0.4.1}{0.4.1}) onto
+\(\operatorname{Vaf}/k\). Hence, by the corollary of \SGARefLink{sga3:VIIB:0.4.2}{0.4.2}:
+
+\medskip
+\noindent\textbf{Proposition 1.2.B.}
+\phantomsection
+\label{sga3:VIIB:1.2.B}
+\textit{The category \(\operatorname{Vaf}/k\) has projective and
+direct limits.}\footnote{\label{sga3:VIIB:nde:40}In particular,
+cokernels exist in \(\operatorname{Vaf}/k\); see below. Moreover, a
+filtered projective limit in \(\operatorname{Vaf}/k\), all of whose
+transition morphisms are surjective, can be empty; cf.\ editor's
+note~(34).}
+
+For example, let \(X\in\operatorname{Ob}(\operatorname{Vaf}/k)\), let
+\[
+  f:Y\longrightarrow X,
+  \qquad
+  g:Z\longrightarrow X
+\]
+be two formal \(k\)-varieties over \(X\), and let \(A,B,C\) be the
+affine algebras of \(X,Y,Z\), respectively.
+By \SGARefLink{sga3:VIIB:0.4.1}{0.4.1}, the affine algebra of the fiber product \(Y\times_X Z\)
+identifies with \(B\widehat{\otimes}_A C\),\footnote{%
+\label{sga3:VIIB:nde:41}The formal variety \(Y\times_X Z\)
+is the direct sum, over \(x\in X\), of the formal varieties
+\(B_x\widehat{\otimes}_{\mathcal O_{X,x}}C_x\),
+where \(B_x\) is the product of the \(\mathcal O_{Y,y}\) for
+\(y\in Y\) such that \(f(y)=x\), and \(C_x\) is defined analogously.
+This will be used in \SGARefLink{sga3:VIIB:2.5.1:corollary}{2.5.1}.}
+Consequently, the inclusion of \(\operatorname{Vaf}/k\) into the
+category of all formal \(k\)-schemes commutes with finite projective
+limits (cf.\ EGA~I, 10.7).
+
+Direct limits of formal \(k\)-varieties correspond to projective
+limits of their affine algebras.
+
+\medskip
+\noindent\textbf{Example 1.2.C (Cokernels).}
+\phantomsection
+\label{sga3:VIIB:1.2.C}
+Let \(d,e:X\rightrightarrows Y\) be a double arrow in
+\(\operatorname{Vaf}/k\). The affine algebra of
+\(\operatorname{Coker}(d,e)\) is isomorphic to the kernel of the
+homomorphisms induced on the affine algebras of \(X\) and \(Y\).
+There is also the following construction of
+\(\operatorname{Coker}(d,e)\). Its underlying topological space is the
+cokernel of the underlying spaces.\footnote{%
+\label{sga3:VIIB:nde:42}That is, it is the quotient set of \(Y\) by
+the identifications \(d(x)=e(x)\), for every \(x\in X\), endowed with
+the quotient topology, which here is discrete.} Let \(p\) be the
+canonical projection from the set underlying \(Y\) to this cokernel,
+and let \(z\) be a point of the cokernel. The local algebra of
+\(\operatorname{Coker}(d,e)\) at \(z\) is the kernel of the double
+arrow
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:1.2.C-cokernel-double-arrow}
+  \input{native_diagrams/exp7/viib_15_95/diag_084}
+\end{center}
+where
+\[
+  q=p\circ d=p\circ e,
+\]
+and \(d^\natural\) and \(e^\natural\) are induced by the
+homomorphisms \(d_x^\natural\) and \(e_x^\natural\), in the notation
+of \SGARefLink{sga3:VIIB:1.1}{1.1}.
+
+\medskip
+\noindent\textbf{Definition 1.2.D.}
+\phantomsection
+\label{sga3:VIIB:1.2.D}
+Let \(\phi:k\to\ell\) be a homomorphism of pseudocompact
+rings and let \(X\) be a formal \(k\)-variety with affine algebra
+\(A\). The formal scheme
+\[
+  X\times_{\operatorname{Spf}(k)}\operatorname{Spf}(\ell),
+\]
+obtained by base change, is a formal \(\ell\)-variety. We also denote
+it by
+\[
+  X\widehat{\otimes}_k\ell.
+\]
+Its affine algebra is the completed tensor product
+\(A\widehat{\otimes}_k\ell\) (cf.\ 0.5 and EGA~I, \S~10).
+
+\medskip
+\noindent\textbf{Remark 1.2.E.}
+\phantomsection
+\label{sga3:VIIB:1.2.E}
+Since every formal variety over \(k\) decomposes into formal
+varieties over the local components of \(k\), \emph{in certain proofs
+we shall assume that \(k\) is a local pseudocompact ring}.
+
+We now give some examples while fixing our terminology.
+
+\medskip
+\noindent\textbf{1.2.1.}
+\phantomsection
+\label{sga3:VIIB:1.2.1}
+A \(k\)-\emph{functor} is, by definition, a covariant functor from
+\(\operatorname{Alf}/k\) to \((\mathbf{Sets})\). By \SGARefLink{sga3:VIIB:1.1}{1.1} and \SGARefLink{sga3:VIIB:0.4.2}{0.4.2},
+we may identify
+\[
+  \operatorname{Vaf}/k
+  \simeq
+  (\operatorname{Alp}/k)^\circ
+\]
+with a full subcategory of the category of \(k\)-functors by
+associating to every formal \(k\)-variety \(X\) the functor
+\[
+  \operatorname{Alf}/k\longrightarrow(\mathbf{Sets}),
+  \qquad
+  C\longmapsto
+  X(C)=
+  \operatorname{Hom}_{\operatorname{Vaf}/k}
+    \bigl(\operatorname{Spf}(C),X\bigr).
+\]
+
+We shall later encounter \(k\)-functors \(\mathbf F\) which associate
+to every object \(C\) of \(\operatorname{Alf}/k\) a \(C\)-module
+\(\mathbf F(C)\), and to every morphism
+\(\phi:C\to D\) in \(\operatorname{Alf}/k\) a \(k\)-linear map
+\[
+  \mathbf F(\phi):\mathbf F(C)\longrightarrow\mathbf F(D)
+\]
+such that, for \(x\in\mathbf F(C)\) and \(\lambda\in C\),
+\[
+  \mathbf F(\phi)(\lambda x)
+  =
+  \phi(\lambda)\mathbf F(\phi)(x).
+\]
+By \SGARefLink{sga3:i:definition:3-1}{Expos\'e I, 3.1}, such an \(\mathbf F\) is endowed with the structure
+of an \(\mathbf O_k\)-module, where \(\mathbf O_k\) denotes the
+\(k\)-functor in rings which assigns to every object \(C\) of
+\(\operatorname{Alf}/k\) its underlying ring.
+
+\medskip
+\noindent\textbf{Definitions.}
+\phantomsection
+\label{sga3:VIIB:1.2.1-definitions}
+
+\noindent\textit{\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}}
+An \(\mathbf O_k\)-module \(\mathbf F\) is called
+\emph{admissible} if every morphism \(\phi:C\to D\) in
+\(\operatorname{Alf}/k\) induces a bijection from
+\(D\otimes_C\mathbf F(C)\) onto \(\mathbf F(D)\).\footnote{%
+\label{sga3:VIIB:nde:43}The editors introduced this
+terminology; cf.\ editor's note~(47) in \SGARefLink{sga3:VIIB:1.2.3}{1.2.3}.}
+
+\smallskip
+\noindent\textit{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}}
+The module \(\mathbf F\) is called \emph{flat} if it is admissible and
+if, for every object \(C\) of \(\operatorname{Alf}/k\), the
+\(C\)-module \(\mathbf F(C)\) is flat.\footnote{%
+\label{sga3:VIIB:nde:44}It is therefore projective, since \(C\) is
+Artinian.}
+
+For example, if \(M\) is a \(k\)-module, not necessarily
+pseudocompact, we denote by \(\mathbf W(M)\), as in \SGARefLink{sga3:i:definition:4-6-1}{Expos\'e I, 4.6.1},
+the \(\mathbf O_k\)-module
+\[
+  C\longmapsto C\otimes_kM.
+\]
+Then \(\mathbf W(M)\) is flat whenever \(M\) is flat over \(k\).
+
+Moreover, the functor \(M\mapsto\mathbf W(M)\) has as right adjoint
+the functor which assigns to every \(\mathbf O_k\)-module
+\(\mathbf F\) the \(k\)-module
+\[
+  \varprojlim_{\mathfrak l}\mathbf F(k/\mathfrak l),
+\]
+where \(\mathfrak l\) ranges over the open ideals of \(k\).
+
+\medskip
+\noindent\textbf{1.2.2.}
+\phantomsection
+\label{sga3:VIIB:1.2.2}
+In what follows, an \(\mathbf O_k\)-module will always be denoted by a
+boldface letter such as \(\mathbf F\). When \(k\) is Artinian, we shall
+simply write \(F\) instead of \(\mathbf F(k)\). In that case, it is
+clear that the functor
+\[
+  \mathbf F\longmapsto F
+\]
+induces an equivalence from the category of flat
+\(\mathbf O_k\)-modules onto the category of flat \(k\)-modules! The
+purpose of this terminology is solely to allow us to reason ``as if
+\(k\) were always Artinian.''
+
+In accordance with Expos\'e I, \S~\SGARefLink{sga3:i:definition:3-1}{3.1}, we shall use analogous
+conventions for other algebraic structures. Thus an
+\(\mathbf O_k\)-algebra, respectively an \(\mathbf O_k\)-coalgebra,
+an \(\mathbf O_k\)-Lie algebra, or an \(\mathbf O_k\)-\(p\)-Lie
+algebra, consists of an \(\mathbf O_k\)-module \(\mathbf M\) together
+with, for every object \(C\) of \(\operatorname{Alf}/k\), a structure
+of \(C\)-algebra, respectively \(C\)-coalgebra, \(C\)-Lie algebra, or
+\(C\)-\(p\)-Lie algebra, on \(\mathbf M(C)\). We further require that
+for every morphism \(\phi:C\to D\) in \(\operatorname{Alf}/k\), the
+map
+\[
+  D\otimes_C\mathbf M(C)\longrightarrow\mathbf M(D)
+\]
+induced by \(\mathbf M(\phi)\) be a homomorphism of \(D\)-algebras,
+respectively of \(D\)-coalgebras, and so on.
+
+Finally, if \(\mathbf F\) and \(\mathbf G\) are two
+\(\mathbf O_k\)-modules, then \(\mathbf F\otimes_k\mathbf G\) denotes
+the \(\mathbf O_k\)-module
+\[
+  C\longmapsto\mathbf F(C)\otimes_C\mathbf G(C).
+\]
+

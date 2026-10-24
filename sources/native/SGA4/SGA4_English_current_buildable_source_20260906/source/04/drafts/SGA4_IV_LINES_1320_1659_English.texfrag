@@ -1,0 +1,323 @@
+\section{Examples of morphisms of topoi}\etiquette[4]{IV.sec4}
+
+Here we return to the examples of 2, using the notion of a
+morphism of topoi. The comments of \hyperref[IV.subsec2.0]{2.0}
+apply equally to the present section. The universe
+$𝒰$ will generally be understood.
+
+\subsection{The topos $\Top(X)$ for a varying topological space $X$}
+\etiquette[4.1]{IV.subsec4.1}\pageoriginale
+
+\subsubsection{}\etiquette[4.1.1]{IV.subsubsec4.1.1}
+Let
+$$
+f:X\longrightarrow Y
+$$
+be a continuous map of topological spaces. We shall associate with it
+canonically a morphism of topoi
+$$
+\Top(f)\mbox{ or } f:\Top(X)\rightarrow \Top(Y){\quoi},
+$$
+with the notation of \hyperref[IV.subsec2.1]{2.1}. When $\Top(X)$ is
+defined as $\Ouv(X)^{\widetilde{\phantom{,}}}$, the most convenient
+description of $\Top(f)$ is by means of the direct-image functor on
+sheaves
+$$
+f_{\ast}:\Top(X)\longrightarrow \Top(Y){\quoi},
+$$
+defined by the formula
+$$
+f_{\ast}(F)=F\circ f^{-1}{\quoi},
+$$
+where
+$$
+f^{-1}:\Ouv(Y)\longrightarrow \Ouv(X)
+$$
+is the evident functor $U\rightarrow f^{-1}(U)$. We have already noted
+that this functor is continuous and left exact, and therefore indeed
+defines the functor $f_{\ast}$ above, which admits a left adjoint
+$f^{\ast}$ that is left exact (\hyperrefext[III][III.exem1.9.1]{1.9.1}).
+Of course, strictly speaking, the morphism of topoi $\Top(f)$ depends
+on the choice of the left adjoint $f^{\ast}$ of $f_{\ast}$ and hence
+is defined only up to canonical isomorphism. In what follows we shall
+refrain from explicitly pointing out phenomena of this kind.
+
+When one adopts the ``étale spaces'' point of view in defining
+$\Top(X)$, it is the inverse-image functor
+$$
+f^{\ast}:\Top(Y)\longrightarrow \Top(X)
+$$
+that\pageoriginale is the most convenient for defining the morphism of
+topoi $\Top(f)$, by simply setting
+$$
+f^{\ast}(Y')=\fprod{X}{Y'}{Y}
+$$
+for every étale space $Y'$ over $Y$; it is clear that the fiber product
+is indeed an étale space over $X$, and that the functor $f^{\ast}$ so
+obtained is left exact and commutes with arbitrary $\varinjlim$, and
+therefore defines a morphism of topoi $\Top(f)$. For the compatibility
+of the two definitions obtained, we refer to [TF].
+
+For two composable continuous maps
+$$
+X\xrightarrow{f}Y\xrightarrow{g}Z{\quoi},
+$$
+there is a canonical isomorphism
+$\Top(gf)\simeq\Top(g)\Top(f)$ of morphisms of topoi. These
+\emph{transitivity isomorphisms}, for three composable continuous maps
+$f$, $g$, $h$, satisfy a compatibility relation which we shall refrain
+from writing here, and which is precisely the one considered in
+\SGA 1 VI 7.4 B) (for $\epsilon = (\Esp)^{\circ}$). This may be
+expressed by saying that, as $X$ varies in the category $(\Esp)$,
+$$
+X\longmapsto \Top(X)
+$$
+is a ``pseudofunctor''
+\begin{equation*}
+(𝒰\text{-}\esp)\longrightarrow
+(𝒱\text{-}𝒰\text{-}\top){\quoi},\tag{4.1.1.1}
+\end{equation*}\etiquette[4.1.1.1]{IV.eq4.1.1.1}
+or, in the terminology of 2-categories, that one has a
+\emph{non-strict} functor of 2-categories [9]. In practice, we shall
+most often permit ourselves the abuse of language consisting in
+identifying $\Top(gf)$ and $\Top(g)\Top(f)$, that is, reasoning as if
+\eqhyperref[IV.eq4.1.1.1]{4.1.1.1} were an actual functor between
+ordinary categories. We shall permit ourselves analogous abuses of
+language in the other examples treated below.\pageoriginale
+
+\subsubsection{}\etiquette[4.1.2]{IV.subsubsec4.1.2}
+The preceding considerations extend immediately to topoi associated
+with topological spaces equipped with operator groups
+(\hyperref[IV.subsec2.3]{2.3}). If $f=(f^{\es},f^{\gr})$,
+$$
+f:(X,G)\longrightarrow (Y,H)
+$$
+is a morphism of spaces with operators (where
+$$
+f^{\es}:X\longrightarrow Y\quav f^{\gr}:G\longrightarrow H
+$$
+are respectively continuous maps and group homomorphisms, compatible
+in the evident sense), one associates with it a morphism of topoi
+$$
+\Top(f)\mbox{ or } f:\Top(X,G)\longrightarrow \Top(Y,H){\quoi},
+$$
+whose definition is left to the reader. When the groups $G$ and $H$
+are trivial, one recovers the definition of
+\hyperref[IV.subsubsec4.1.1]{4.1.1}; when, on the other hand, the spaces
+$X$ and $Y$ are each reduced to a point, the inverse-image functor
+$f^{\ast}$ is the ``restriction of the operator group'' functor
+$$
+f^{\ast}:B_H\longrightarrow B_G{\quoi},
+$$
+which associates with every $H$-set the $G$-set that it defines by
+means of $f:G\rightarrow H$. We shall encounter this example again in
+other forms in \hyperref[IV.subsec4.5]{4.5} and
+\hyperref[IV.subsubsec4.6.1]{4.6.1}.
+
+\subsubsection{}\etiquette[4.1.3]{IV.subsubsec4.1.3}
+Given a continuous map $f:X\rightarrow Y$ of topological spaces, one
+also associates with it a morphism between the corresponding ``large
+topoi'' (\hyperref[IV.subsec2.5]{2.5})
+$$
+\TOP(f)\mbox{ or } f:\TOP(X)\longrightarrow \TOP(Y){\quoi},
+$$
+most conveniently defined\pageoriginale by the inverse-image functor
+$$
+f^{\ast}:\TOP(Y)\longrightarrow \TOP(X){\quoi},
+$$
+which is simply the \emph{restriction functor}. This morphism
+$\TOP(f)$ is a special case of the morphism called an ``inclusion''
+for an induced topos, which will be studied in 5. Thus, subject to the
+same qualifications as in \hyperref[IV.subsubsec4.1.1]{4.1.1}, the
+topos $\TOP(X)$ may be regarded as a functor of $X$, as $X$ varies in
+$(\Esp)$.
+
+\subsection{Fidelity properties of $X\mapsto \Top(X)$}\etiquette[4.2]{IV.subsec4.2}
+
+We propose to specify to what extent a topological space $X$ can be
+reconstructed in terms of the topos $\Top(X)$. For this purpose it is
+appropriate, for two spaces $X$ and $Y$, to describe the category of
+morphisms from $\Top(X)$ to $\Top(Y)$
+(\hyperref[IV.subsec3.2]{3.2}), so as to determine the fidelity
+properties of the ``functor'' $X\mapsto \Top(X)$. We shall merely
+state the results obtained, referring the reader to [9] for details.
+The reader who wishes to carry out the verification himself may
+consult Exercise \hyperref[IV.exer7.8]{7.8}.
+
+\subsubsection{}\etiquette[4.2.1]{IV.subsubsec4.2.1}
+Recall that a topological space $X$ is called \emph{sober} if every
+irreducible closed subset of $X$ has exactly one generic point. Almost
+all spaces used in practice are sober; this is true in particular of a
+Hausdorff space, more generally of a space all of whose points are
+closed, or of the underlying space of a scheme. With a topological
+space $X$ one associates (\loccit or \EGA $0_I$, new edition) a sober
+topological space $X_{\sob}$ and a continuous map\pageoriginale
+\begin{equation*}
+\varphi: X\longrightarrow X_{\sob}\tag{4.2.1.1}
+\end{equation*}\etiquette[4.2.1.1]{IV.eq4.2.1.1}
+which is \emph{universal} for continuous maps from $X$ to sober spaces;
+in other words, one constructs a left adjoint $X\mapsto X_{\sob}$ to
+the inclusion functor $(\Espsob)\rightarrow (\Esp)$ from the category
+of sober spaces to that of ``arbitrary'' topological spaces (the
+quotation marks serving as a reminder that a universe is involved!).
+The explicit construction takes as the points of $X_{\sob}$ the
+irreducible closed subsets of $X$, and as its open subsets the sets of
+the form $U'$, where $U$ is an open subset of $X$ and
+$U'\subset X_{\sob}$ denotes the set of irreducible closed subsets of
+$X$ that meet $U$. The map
+\eqhyperref[IV.eq4.2.1.1]{4.2.1.1} is obtained by associating with each
+$x\in X$ the closure of $\{x\}$. The space $X$ is sober if and only if
+the preceding map is bijective, and hence a homeomorphism.
+
+One checks that the functor
+$$
+\varphi^{-1}:\Ouv(X_{\sob})\longrightarrow \Ouv(X)
+$$
+induced by $\varphi$ is an isomorphism, which implies that the morphism
+of topoi
+$$
+\Top(\varphi):\Top(X)\longrightarrow \Top(X_{\sob})
+$$
+defined by $\varphi$ is also an isomorphism. This explains a priori
+why $X_{\sob}$ must necessarily enter into the question of
+reconstructing $X$ from $\Top(X)$: since the latter depends only on
+$X_{\sob}$ up to isomorphism, the question can have an affirmative
+answer only if $X$ is sober. We shall specify below
+(\hyperref[IV.subsec7.1]{7.1}) how $X_{\sob}$ can in fact be
+reconstructed\pageoriginale in terms of $\Top(X)$, by interpreting its
+points as ``points'' of the topos $\Top(X)$ (or, equivalently, as fiber
+functors).
+
+\subsubsection{}\etiquette[4.2.2]{IV.subsubsec4.2.2}
+On every topological space one should introduce the order relation
+$\leq$ for which
+$$
+x\leq y\Longleftrightarrow \bar{\{x\}}\subset \bar{\{y\}}\mbox{ \ie
+} x\in \bar{\{y\}}
+$$
+(one also expresses this by saying that $x$ is a
+\emph{specialization} of $y$, or that $y$ is a \emph{generization} of
+$x$). For a space of the form $X_{\sob}$, this is simply the inclusion
+relation among the irreducible closed subsets of $X$.
+
+With this understood, on the set of maps from a space $X$ to another
+space $Y$ one should introduce the order relation called
+``specialization'', deduced from that of $Y$, namely
+$$
+f\leq g\Longleftrightarrow f(x)\leq g(x)\mbox{ for every } x\in
+X{\quoi}.
+$$
+With these conventions, one has the following result:
+
+\subsubsection{}\etiquette[4.2.3]{IV.subsubsec4.2.3}
+\emph{Let $X$, $Y$ be two topological spaces, with $Y$ sober, and let
+$f$ and $g$ be two continuous maps from $X$ to $Y$. Then there is at
+most one morphism from $\Top(f)$ to $\Top(g)$, and such a morphism
+exists if and only if $g$ is a specialization of $f$. Finally, every
+morphism of topoi $\Top(X)\rightarrow \Top(Y)$ is isomorphic to a
+morphism of the form $\Top(f)$, where $f:X\rightarrow Y$ is a
+continuous map (uniquely determined by the first assertion).}
+
+If\pageoriginale, for an ordered set $I$, one defines the associated
+category $\cat(I)$ by declaring that, for $i\geq j$, there is exactly
+one arrow from $i$ to $j$, the preceding result may be summarized by
+saying that there is a canonical equivalence of categories
+$$
+\cat(\Hom_{(\esp)}(X,Y))\xrightarrow{\approx}\Hhomtop(\Top(X),\Top(Y))
+$$
+(where the second member is defined in \hyperref[IV.subsec3.2]{3.2}).
+
+The following is a formal consequence of these results:
+
+\begin{enonce*}{Corollary 4.2.4}\etiquette[4.2.4]{IV.cor4.2.4}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $f:X\rightarrow Y$ be a continuous map. Then
+$\Top(f):\Top(X)\rightarrow \Top(Y)$ is an equivalence of topoi if
+and only if $f_{\sob}:X_{\sob}\rightarrow Y_{\sob}$ is a
+homeomorphism (and hence, when $X$ and $Y$ are sober, if and only if
+$f$ is a homeomorphism).
+
+\item Let $X$ and $Y$ be topological spaces. The topoi $\Top(X)$ and
+$\Top(Y)$ are equivalent if and only if $X_{\sob}$ and $Y_{\sob}$ are
+homeomorphic (and hence, if $X$ and $Y$ are sober, if and only if $X$
+and $Y$ are homeomorphic).
+\end{enumerate}
+\end{enonce*}
+
+\subsection{Morphisms into the terminal topos: constant objects of a topos,
+section functors}\etiquette[4.3]{IV.subsec4.3}
+
+Let $P$ (the initial letter of ``point'') denote the standard terminal
+topos, \ie $P=(\Ens)$ (\hyperref[IV.subsec2.2]{2.2}). Let $E$ be any
+topos. We shall see that \emph{up to unique isomorphism, there exists a
+unique morphism of topoi}
+\hypertarget{sga4.exp.IV.equation.4.3.1}{}$$
+f:E\rightarrow P
+$$
+or, more precisely, that \emph{the category $\Hhomtop(E,P)$ is
+equivalent to the one-point category}: between any two objects of this
+category there is therefore a\pageoriginale unique arrow, and it is an
+isomorphism. (This justifies to some extent the name ``terminal
+topos''.) For this, recall \hyperlink{sga4.exp.IV.subsubsection.3.2.1}{(3.2.1)} that $\Hhomtop(E,P)$ is equivalent
+to the full subcategory of $\Hhom(P,E)^{\circ}$ formed by the functors
+$$
+f^{\ast}:P=(\Ens)\longrightarrow E
+$$
+that commute with $\varinjlim$ and are left exact. Let $e$ be a
+singleton set. Every set $X$ can then be written canonically as the
+``coproduct of $X$ copies of $e$'', from which it follows that the
+category of functors $g:(\Ens)\rightarrow E$ that commute with
+$\varinjlim$ is equivalent to the category $E$, by associating with
+each $g$ the object $g(e)$ of $E$. In terms of $T=g(e)$, the functor
+$g$ is reconstructed, up to unique isomorphism, by
+$g(I)=T\times I$, where one sets
+$T\times I=\amalg_{i\in I}T_i$, with $T_i=T$ for every $i\in I$. The
+fact that the functor of $I$ so defined by $T$ does indeed commute with
+$\varinjlim$ follows from the fact that it is manifestly
+\sisi{right}{left} adjoint to the functor
+$X\mapsto \Hom(T,X)$ from $E$ to $(\Ens)$. This said, for $g$ to be
+left exact, it is plainly necessary that $g(e)=T$ be a terminal object
+of $E$ (since $e$ is a terminal object of $(\Ens)$), and it follows
+easily from the fact that in $E$ ``coproducts are universal''
+(\hyperref[IV.subsubsec1.1.2]{1.1.2} b)) that this condition is also
+sufficient. Thus the category of inverse-image functors $f^{\ast}$ is
+equivalent to the category of terminal objects of $E$, which is itself
+plainly equivalent to the terminal category.
+
+It follows from the foregoing that the choice of a morphism \hyperlink{sga4.exp.IV.equation.4.3.1}{(4.3.1)}
+is essentially equivalent to the choice of a terminal object of $E$,
+say $e_E$. In terms of this object, one then has canonical
+isomorphisms of functors
+\begin{equation*}
+ f^{\ast}(I)\simeq e_E\times
+ I=\mbox{ coproduct of } I \mbox{ copies of } e_E \quad \mbox{ for } I\in \ob
+ (\Ens),\tag{4.3.2}
+\end{equation*}\etiquette[4.3.2]{IV.eq4.3.2}
+and\pageoriginale
+\begin{equation*}
+f_{\ast}(X)=\Hom(e_E,X) \quad \quad \mbox{ for } X\in \Ob E.\tag{4.3.3}
+\end{equation*}\etiquette[4.3.3]{IV.eq4.3.3}
+
+
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[4.3.4]{IV.subsubsec4.3.4}
+The preceding two functors will play an important role below. For a
+set $I$, the object $f^{\ast}(I)=e_E\times I$ of
+\eqhyperref[IV.eq4.3.2]{4.3.2} is called the \emph{constant object
+with value} $I$ in $E$ (or, when $E$ is presented as a category
+$C^{\widetilde{\phantom{,}}}$ in terms of a site $C$, the
+\emph{constant sheaf with value $I$ on $C$}). It will also often be
+denoted by $I_E$, or by $I_C$ when $E$ is defined by the site $C$. The
+fact that $I\mapsto I_E$ is the inverse-image functor of a morphism of
+topoi specifies its exactness properties, which imply in particular
+that this functor respects all the usual kinds of algebraic structure,
+transforming a group into a group object of $E$, and so on
+(\hyperref[IV.subsubsec3.1.2]{3.1.2}). If, for example, one has a
+group $G$ of $E$, one says that it is a \emph{constant group} (or,
+where appropriate, a \emph{constant sheaf of groups}) if it is
+isomorphic to a group of the form $G_{\circ E}$, where $G_{\circ}$ is
+an ordinary group. The same terminology is used for every other kind
+of ``algebraic'' structure, in the sense specified (more or less) in
+\hyperref[IV.subsubsec3.1.2]{3.1.2}.

@@ -1,0 +1,169 @@
+\begin{enonce*}{Definition 4.5}\etiquette[4.5]{II.def4.5}
+An initial object of a category $A$ is an object $\phi_A$ that
+represents the empty inductive limit, \ie such that, for every $X\in
+\ob A$, there exists a unique arrow $\phi_A\rightarrow X$. An object
+$\phi_A$ is called \emph{strict initial} if it is initial and every
+morphism with target $\phi_A$ is an isomorphism. Let $(S_i)$, $i\in I$,
+be a family of objects of a category $A$. Suppose that the sum
+$S=\amalg_{i\in I} S_i$ is representable. The sum $S$ is called
+disjoint if the structure morphisms $S_i\rightarrow S$ are
+pullbackable, if they are monomorphisms, and if, for every pair $i$,
+$j$ with $i\neq j$, the fiber product $S_i\times_S S_j$ is an initial
+object of $A$. The sum $S$ is called disjoint and
+universal\pageoriginale if it is disjoint and remains a disjoint sum
+after every base change $T\rightarrow S$; it follows that, for every
+pair $i$, $j$ with $i\neq j$, the objects $S_i\times_S S_j$ are strict
+initial objects of $A$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Example 4.5.1}\etiquette[4.5.1]{II.exem4.5.1}
+In the category of sets, sums are disjoint and universal. The same is
+therefore true in every category of presheaves of sets
+(\hyperrefext[I][I.prop3.1]{3.1}), and hence in every category of
+sheaves of sets on a $𝒰$-site (\hyperref[II.theo4.1]{4.1}); in
+particular, the initial object of $C^{\widetilde{\phantom{,}}}$ is
+strict.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 4.6}\etiquette[4.6]{II.prop4.6}
+Let $C$ be a $𝒰$-category and let $(s_i:X_i\rightarrow X)$,
+$i\in I$, be a family of morphisms of $C$. For every
+$𝒰$-topology $\Tt$ on $C$ (\hyperref[II.def3.0.2]{3.0.2}), denote by
+$C^{\widetilde{\phantom{,}}}_{\Tt}$ the corresponding category of
+sheaves and by $\epsilon_{\Tt}:C\rightarrow
+C^{\widetilde{\phantom{,}}}_{\Tt}$ the corresponding functor.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $\Tt$ be a $𝒰$-topology such that
+$$
+\coprod_{i\in I}
+\epsilon_{\Tt}(X_i)\xrightarrow{(\epsilon_{\Tt}(s_i))}\epsilon_{\Tt}(X)
+$$
+is an isomorphism. Then, for every topology $\Tt'$ finer than $\Tt$,
+the morphism
+$$
+\coprod_{i\in
+  I}\epsilon_{\Tt'}(X_i)\xrightarrow{(\epsilon_{\Tt'}(s_i))}\epsilon_{\Tt'}(X)
+$$
+is an isomorphism.
+
+\item Let $\Tt$ be a $𝒰$-topology on $C$. The following
+  properties {\rm(i)} and {\rm(ii)} are equivalent:
+\begin{itemize}
+\item[i)]
+\begin{itemize}
+\item[a)] The family $(s_i:X_i\rightarrow X)$, $i\in I$, is covering
+  for $\Tt$.
+
+\item[b)] For every $i\in I$, the diagonal morphism of presheaves
+  $\Delta_i:X_i\hookrightarrow X_i\times_X X_i$\pageoriginale
+  is sent by the associated sheaf functor (for $\Tt$) to an
+  isomorphism (as is the case if the $s_i$ are monomorphisms).
+
+\item[c)] For every pair $(i,j)$ of elements of $I$ with $i\neq j$,
+  the presheaf $X_i\times_X X_j$ is sent by the associated sheaf
+  functor (for $\Tt$) to the initial object of
+  $C^{\widetilde{\phantom{,}}}_{\Tt}$.
+\end{itemize}
+\item[ii)] $\epsilon_{\Tt}(X)$ is the sum of the
+  $\epsilon_{\Tt}(X_i)$.
+\end{itemize}
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item A sheaf for $\Tt'$ is a sheaf for $\Tt$. Consequently, for
+  every sheaf $F$ for $\Tt'$, the morphism
+$$
+\Hom_{C^{\widehat{\phantom{,}}}}(X,F)\longrightarrow \prod_{i\in I}
+\Hom_{C^{\widehat{\phantom{,}}}}(X_i,F)
+$$
+is an isomorphism, which proves the assertion.
+
+\item By definition, property ii) holds if and only if the morphism
+  of presheaves
+$$
+\Phi=(h(s_i),i\in I):\coprod_i h(X_i)\longrightarrow h(X)
+$$
+is sent by the associated sheaf functor to an isomorphism, \ie
+(\hyperref[II.prop4.2]{4.2}) if and only if $\underline{a}(\Phi)$ is
+both an epimorphism and a monomorphism of sheaves. By
+(\hyperref[II.theo4.4]{4.4}), the morphism $\underline{a}(\Phi)$ is an
+epimorphism if and only if property a) holds. The diagonal morphism
+$$
+\Delta:\coprod_i h(X_i)\longrightarrow (\coprod_i
+h(X_i))\times_{h(X)}(\coprod_i h(X_i))
+$$
+is the direct sum of a family $\Delta_{i,j}$, $(i,j)\in I\times I$,
+of morphisms defined as follows:
+\begin{itemize}
+\item[$\beta)$] When $i=j$, $\Delta_{i,i}$ is the diagonal morphism
+  $h(X_i)\rightarrow h(X_i)\times_{h(X)}h(X_i)$.
+
+\item[$\gamma)$] When $i\neq j$, $\Delta_{i,j}$ is the morphism
+  $\phi_{C^{\widehat{\phantom{,}}}}\rightarrow
+  h(X_i)\times_{h(X)}h(X_j)$ ($\phi_{C^{\widehat{\phantom{,}}}}$
+  denotes the initial object of $C^{\widehat{\phantom{,}}}$).
+\end{itemize}
+\end{enumerate}
+\end{enonce*}
+
+The\pageoriginale morphism $\underline{a}(\Phi)$ is a monomorphism if
+and only if $\underline{a}(\Delta)$ is an isomorphism, and by
+(\hyperref[II.theo4.1]{4.1}) $\underline{a}(\Delta)$ is an isomorphism
+if and only if the $\underline{a}(\Delta_{i,j})$ are isomorphisms, i.e.
+if and only if properties b) and c) hold.
+
+\begin{enonce*}{Corollary 4.6.1}\etiquette[4.6.1]{II.cor4.6.1}
+Let $C$ be a $𝒰$-category and $X$ an object of $C$.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $\Tt$ be a $𝒰$-topology on $C$. The object $X$ of $C$ is
+  sent by the associated sheaf functor (for the topology $\Tt$) to
+  the initial object of $C^{\widetilde{\phantom{,}}}_{\Tt}$ if and
+  only if the empty sieve covers $X$.
+
+\item When $X$ is a strict initial object of $C$, the sheaf associated
+  with $X$, for every $𝒰$-topology finer than the canonical topology,
+  is an initial object.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Take the indexing set $I$ in \hyperref[II.prop4.6]{4.6} 2) to
+be the empty set.
+
+\item By 1) and \hyperref[II.prop4.6]{4.6} 1), it is enough to show
+  that the empty sieve covers $X$ for the canonical topology; \ie by
+  (\hyperref[II.prop2.6]{2.6}), it is enough to show that, for every
+  object $Y\rightarrow X$ over $X$, $Y$ is an initial object of $C$,
+  which follows from the definition (\hyperref[II.def4.5]{4.5}).
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Corollary 4.6.2}\etiquette[4.6.2]{II.cor4.6.2}
+Let $C$ be a $𝒰$-site and let $(s_i:X_i\rightarrow X)$, $i\in I$,
+be a family of pullbackable morphisms of $C$ with the same target and
+having the following properties:
+\begin{itemize}
+\item[$\alpha)$] The family of the $s_i$, $i\in I$, is covering.
+
+\item[$\beta)$] For every $i\in I$, $s_i:X_i\rightarrow X$ is a
+  monomorphism.
+
+\item[$\gamma)$] For every pair $(i,j)$ of elements of $I$ with
+  $i\neq j$, $X_i\times_X X_j$ is covered by the empty sieve, \ie for
+  every sheaf $F$ on $C$, $F(X_i\times_X X_j)$ is a singleton set.
+\end{itemize}
+Then $\epsilon_C(X)$ is the sum of the $\epsilon_C(X_i)$, $i\in I$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+This follows\pageoriginale immediately from
+\hyperref[II.prop4.6]{4.6} 2) and
+\hyperref[II.cor4.6.1]{4.6.1} 1).
+\end{enonce*}

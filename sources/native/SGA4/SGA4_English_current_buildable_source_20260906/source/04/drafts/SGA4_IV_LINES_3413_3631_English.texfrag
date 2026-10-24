@@ -1,0 +1,217 @@
+\section{Points of a topos and fiber functors}\etiquette[6]{IV.sec6}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[6.0]{IV.subsec6.0}
+Let $P$ be the standard $𝒰$-\emph{punctual topos}
+(\hyperref[IV.subsec2.2]{2.2})
+$$
+P=(𝒰\text{-}\Ens){\quoi}.
+$$
+In view of the rather different intuitions attached on the one hand
+to the symbol\pageoriginale $P$, representing a geometric object of
+the nature of a point, and on the other hand to
+$(𝒰\text{-}\Ens)$, representing a ``large category'' to be
+interpreted as ``the category of sheaves on $P$,'' one should use one
+or the other symbol exclusively according to context, although from
+a strictly logical viewpoint they denote one and the same object.
+
+\begin{enonce*}{Definition 6.1}\etiquette[6.1]{IV.def6.1}
+Let $E$ be a $𝒰$-topos. A point of $E$ is a morphism of topoi
+$P\rightarrow E$ from the punctual topos $P$
+(\hyperref[IV.subsec6.0]{6.0}) to $E$. The category
+$\Hhomtop(P,E)$ (\hyperref[IV.subsec3.2]{3.2}) is called the category
+of points of $E$ and is denoted by $\Ppoints(E)$ or
+$\sheaf{\Pt}(E)$. If $p:P\rightarrow E$ is a point of $E$, with
+associated inverse-image functor
+$p^{\ast}:E\rightarrow(𝒰\text{-}\Ens)$, and if $F$ is an object of
+$E$, the set $p^{\ast}(F)$ is called the fiber of $F$ at $p$ and is
+denoted by $F_p$.
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[6.1.1]{IV.subsubsec6.1.1}
+Of course, when $F$ is a group object (\resp ring object,
+\resp\ldots) of $E$, its fiber $F_p$ at $p$ is a group (\resp a ring,
+\resp\ldots) (\hyperref[IV.subsubsec3.1.2]{3.1.2}).
+
+\setcounter{subsubsection}{1}
+
+\subsubsection{}\etiquette[6.1.2]{IV.subsubsec6.1.2}
+By \hyperlink{sga4.exp.IV.subsubsection.3.2.1}{3.2.1}, the category of points of $E$ is equivalent, via the
+functor $p\mapsto p^{\ast}$, to the \emph{opposite} of the category
+of functors
+$$
+\varphi:E\longrightarrow (𝒰\text{-}\Ens)
+$$
+which commute with $𝒰$-inductive limits and are left exact. Thus it
+amounts essentially to the same thing to give a point of $E$ or to
+give such a functor $\varphi$.
+
+\begin{enonce*}{Definition 6.2}\etiquette[6.2]{IV.def6.2}
+A fiber functor of the $𝒰$-topos $E$ is a functor
+$\varphi:E\rightarrow(𝒰\text{-}\Ens)$ which commutes with
+$𝒰$-inductive limits and is left exact. The category of fiber
+functors on $E$, denoted by $\Ffib(E)$, is the\pageoriginale full
+subcategory of $\Hhom(E,(𝒰\text{-}\Ens))$ formed by the fiber
+functors on $E$.
+\end{enonce*}
+
+\setcounter{subsection}{2}
+\subsubsection{}\etiquette[6.2.1]{IV.subsubsec6.2.1}
+By \hyperref[IV.subsubsec6.1.2]{6.1.2}, the category $\Ffib(E)$ of
+fiber functors on $E$ is therefore equivalent to the \emph{opposite}
+of the category $\Ppoint(E)$ of points of $E$, via the functor
+$p\mapsto p^{\ast}$ from the latter to the former:
+\begin{equation*}
+\Ppoint(E)\xrightarrow{\approx}\Ffib(E)^{\circ}{\quoi}.
+\tag{6.2.1.1}
+\end{equation*}\etiquette[6.2.1.1]{IV.eq6.2.1.1}
+
+A functor
+$$
+\varphi:E\longrightarrow (𝒰\text{-}\Ens)
+$$
+is a fiber functor if and only if it is the fiber functor
+$F\mapsto F_p$ associated with a point $p$ of $E$
+(\hyperref[IV.def6.1]{6.1}). In other words, the functor
+\eqhyperref[IV.eq6.2.1.1]{6.2.1.1} is surjective. Let us also note
+that a functor $\varphi$ is a fiber functor if and only if it is left
+exact and carries covering families to surjective families
+(\hyperref[IV.cor1.7]{1.7}). This last condition may also be expressed
+by saying that $\varphi$ commutes with $𝒰$-sums and carries
+epimorphisms to epimorphisms.
+
+\subsection{}\etiquette[6.3]{IV.subsec6.3}
+Let $C\in 𝒰$ be a site. A \emph{point of the site} $C$ is a point of
+the topos $C^{\sim}$, and the \emph{category of points of the site}
+$C$ is the category
+$$
+\Ppoint(C)=\Ppoint(C^{\sim}){\quoi}.
+$$
+Consider, on the other hand, the functor
+\begin{equation*}
+\varphi\longrightarrow \varphi|
+C=\varphi\circ\epsilon_C:\Ffib(C^{\sim})\longrightarrow
+\Hhom(C,(𝒰\text{-}\Ens)){\quoi},\tag{6.3.1}
+\end{equation*}\etiquette[6.3.1]{IV.eq6.3.1}
+which is fully faithful and whose essential image is the full
+subcategory $\Mmorsite((𝒰\text{-}\Ens),C)^{\circ}$
+(\hyperref[IV.prop4.9.4]{4.9.4}), which we shall also denote by
+$\Ffib(C)$. A functor
+$$
+\Psi:C\longrightarrow (𝒰\text{-}\Ens)
+$$
+is\pageoriginale called a \emph{fiber functor on the site} $C$ if it
+belongs to the essential image of \eqhyperref[IV.eq6.3.1]{6.3.1},
+just described. Such a functor is therefore \emph{continuous} (a
+fortiori (III \hyperref[III.prop1.6]{1.6}), it carries covering families to covering
+families, \ie to surjective families), and it is left exact. When
+finite projective limits are representable in $C$ (a condition
+satisfied in almost every case encountered in practice), the
+preceding properties \emph{characterize} the fiber functors on $C$:
+they are then precisely the functors
+$\Psi:C\rightarrow(𝒰\text{-}\Ens)$ which are left exact and carry
+covering families to surjective families
+(\hyperref[IV.prop4.9.4]{4.9.4}).
+
+One should retain that the functor $\varphi\rightarrow\varphi|C$ is
+an equivalence of categories
+$$
+\Ffib(C^{\sim})\xrightarrow{\approx}\Ffib(C){\quoi},
+$$
+so that \emph{it amounts essentially to the same thing to give a
+fiber functor on the topos $C^{\sim}$} (or equivalently a point of
+that topos) \emph{or to give a fiber functor on the site $C$.} Given
+a fiber functor $\Psi$ on $C$, arising up to isomorphism from a fiber
+functor $\varphi$ on $C^{\sim}$, the latter is reconstructed from
+$\Psi$, up to canonical isomorphism, by the formula
+\begin{equation*}
+\varphi(F)\simeq \varinjlim_{C_{/F}}\Psi (X){\quoi},\tag{6.3.2}
+\end{equation*}\etiquette[6.3.2]{IV.eq6.3.2}
+where $C_{/F}$ is the category of objects $X$ of $C$ endowed with a
+morphism $X\rightarrow F$ (in $\widehat{C}$), \ie an element of
+$F(X)$. Formula \eqhyperref[IV.eq6.3.2]{6.3.2} is an immediate
+consequence of the fact that $\varphi$ commutes with inductive limits
+and of the canonical isomorphism, functorial in $F$
+(\hyperrefext[II][II.cor4.1.1]{4.1.1}):
+$$
+F\simeq \varinjlim_{C_{/F}}\epsilon_C(X){\quoi}.
+$$
+More\pageoriginale generally, when $G$ is a presheaf on $C$, there
+is a canonical isomorphism, functorial in $G$:
+\begin{equation*}
+\varphi(\underline{a}G)\simeq
+\varinjlim_{C_{/G}}\Psi(X){\quoi},\tag{6.3.3}
+\end{equation*}\etiquette[6.3.3]{IV.eq6.3.3}
+where $\underline{a}G$ is the sheaf associated with $G$
+(\hyperrefext[II][II.cor4.1.1]{4.1.1}). Indeed, one has the formula
+$$
+\underline{a}G\simeq \varinjlim_{C_{/G}}\epsilon_C(X){\quoi}.
+$$
+
+\setcounter{subsection}{4} \setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[6.4.0]{IV.subsubsec6.4.0}
+We refer to \hyperrefext[I][I.def6.1]{6.1} for the notion of a
+\emph{conservative family of functors}
+$$
+\varphi_i:E\longrightarrow E_i\qquad i\in I{\quoi}.
+$$
+Note that when $E$ and the $E_i$ are $𝒰$-topoi and the functors
+$\varphi_i$ are inverse-image functors $f_i^{\ast}$ associated with
+morphisms of topoi
+$$
+f_i:E_i\longrightarrow E{\quoi},
+$$
+all the exactness properties assumed in
+\hyperrefext[I][I.prop6.2]{6.2}, \hyperrefext[I][I.cor6.3]{6.3}, and
+\hyperrefext[I][I.prop6.4]{6.4} are satisfied, provided that in
+\hyperrefext[I][I.prop6.2]{6.2} (v) $D$ is assumed finite. The
+following conditions are then equivalent: $(f_i^{\ast})_{i\in I}$ is
+conservative; it is conservative for \emph{monomorphisms}
+(\hyperrefext[I][I.def6.1]{6.1}); it is conservative for
+\emph{epimorphisms}; and it is \emph{faithful}.
+
+When\pageoriginale the family of functors $f_i^{\ast}$ is
+conservative, one also sometimes says that \emph{the family of
+morphisms of topoi $(f_i)_{i\in I}$ is conservative}. In particular:
+
+\begin{enonce*}{Definition 6.4.1}\etiquette[6.4.1]{IV.def6.4.1}
+Let $E$ be a $𝒰$-topos and let $(p_i:P\rightarrow E)_{i\in I}$ be a
+family of points of $E$. This family of points is called conservative
+if the family of associated fiber functors $F\mapsto F_{p_i}$ from
+$E$ to $(𝒰\text{-}\Ens)$ is conservative
+(\hyperref[IV.subsubsec6.4.0]{6.4.0}). The topos $E$ is said to have
+enough points if it admits a conservative family of points (\ie if
+the family of all points of the topos is conservative).
+\end{enonce*}
+
+\setcounter{subsection}{4} \setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[6.4.2]{IV.subsubsec6.4.2}
+Let us note that all $𝒰$-topoi used thus far have enough points. It
+is nevertheless possible, ``on purpose,'' to construct topoi which
+do not have enough points (\hyperref[IV.exer7.2.6]{7.2.6} e) and
+\hyperref[IV.subsec7.4]{7.4}); such a topos is necessarily not
+``empty'' in the geometric sense of \hyperref[IV.subsec2.2]{2.2}. A
+topos having enough points admits a conservative family of points
+indexed by some $I\in𝒰$ (\hyperref[IV.prop6.5]{6.5}). Note, however,
+that if $E$ is a $𝒰$-topos, the set of isomorphism classes of points
+of $E$ is not necessarily $𝒰$-small (\hyperref[IV.subsec7.3]{7.3}),
+although it is so in many cases encountered in practice. Finally,
+for an interesting existence theorem (due to P. Deligne) providing
+enough points and covering all cases arising in algebraic
+geometry\sisi{.}{, see \hyperrefext[VI][VI.sec9]{9}.}
+
+\subsubsection{}\etiquette[6.4.3]{IV.subsubsec6.4.3}
+When $(p_i)_{i\in I}$ is a conservative family of points of the
+topos $E$, the remarks of \hyperrefext[I][I.prop6.2]{6.2} apply. In
+particular, they imply that two arrows $u,v:F\rightrightarrows G$ in
+$E$ are equal if and only if, for every $i\in I$, the induced arrows
+on fibers $u_{p_i},v_{p_i}:F_{p_i}\rightrightarrows G_{p_i}$
+are\pageoriginale equal; that an arrow $u:F\rightarrow G$ in $E$ is
+a monomorphism (\resp an epimorphism) if and only if, for every
+$i\in I$, the map $u_{p_i}:F_{p_i}\rightarrow G_{p_i}$ is so; that
+an object $F$ of $E$ is initial (\resp terminal) if and only if, for
+every $i\in I$, $F_{p_i}$ is empty (\resp consists of one point); and
+that an object $F$ is a subobject of the terminal object $e_E$ if and
+only if, for every $i\in I$, $F_{p_i}$ has at most one point.
+

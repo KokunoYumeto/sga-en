@@ -1,0 +1,400 @@
+\begin{enonce*}{Definition 3.2.1}\etiquette[3.2.1]{XVII.def3.2.1}
+A morphism $f$ from an $S$-scheme $X$ to a quasi-compact,
+quasi-separated $S$-scheme $Y$ is said to be \emph{$S$-compactifiable} if there exists an
+$S$-scheme $P$ proper over $S$ and a factorization of $f$ as a
+separated quasi-finite morphism $j$ from $X$ to $\fprod{P}{Y}{S}$ followed by
+the projection from $\fprod{P}{Y}{S}$ to $Y$
+\[
+\xymatrix{
+                                & &  &\fprod{P}{Y}{S} \ar[rd]\ar[ld]& \\
+X \ar[rr]^(.7){f} \ar[rrru]^{j}\ar[rrrd]& &Y \ar[rd]&                & P\ar[ld]\\
+                                & &  &       S        &.
+}
+\]
+\end{enonce*}
+
+When $S=Y$, we shall simply speak of a compactifiable morphism.
+
+\begin{enonce*}{Proposition 3.2.2}\etiquette[3.2.2]{XVII.prop3.2.2}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item An\pageoriginale $S$-compactifiable morphism is separated and of finite
+type.
+
+\item If $Y$ is quasi-compact and quasi-separated, a separated quasi-finite
+morphism with target $Y$ is \sisi{}{$S$-}compactifiable.
+
+\item The composite of two $S$-compactifiable morphisms is again
+$S$-compactifiable.
+
+\item Let there be a diagram of quasi-compact, quasi-separated $S$-schemes
+\[
+\xymatrix{
+\fprod{X}{Y'}{Y} \ar[d]_{f'} \ar[r] & X \ar[d]^{f}      \\
+Y' \ar[r]& Y\rlap{.}
+}
+\]
+If $f$ is $S$-compactifiable, then $f'$ is $S$-compactifiable.
+
+\item Let $g$ be an $S$-compactifiable morphism;\nde{it suffices to assume that $g$ is a quasi-compact, quasi-separated morphism of $S$-schemes.} for a composite morphism
+$g\circ f$ to be $S$-compactifiable, it is necessary that $\sisi{h}{f}$ be so.
+\end{enumerate}
+\end{enonce*}
+
+Assertions (i), (ii), and (iv) are immediate. To prove (iii) and
+(v), consider a composite $f=gh$, with $g$ \sisi{}{$S$-}compactifiable.
+
+Suppose that $gh$ is \sisi{}{$S$-}compactifiable, whence a diagram
+\[
+\xymatrix{
+                     & \fprod{P}{Y}{S} \ar[d] \ar[r]^{v} & \fprod{P}{Z}{S}\ar[d] \\  X  \ar[ru]^{u} \ar[r]^{h}   & Y                \ar[r]^{g} &    Z\rlap{.}
+}
+\]
+The composite $vu$ is quasi-finite; hence $u$ is quasi-finite, and (v) is
+proved.
+
+If $h$ is compactifiable, we have a diagram
+\[
+\xymatrix{
+  &&                & &\sisi{Q\times P \times Z}{\fprod{\fprod{Q}{P}{S}}{Z}{S}} \ar[d]&\\
+  &&\fprod{Q}{Y}{S} \ar[d]\ar[rru]\ar[rdd]& & \fprod{P}{Z}{S} \ar[d]\ar[rdd] & \\
+X \ar[rrrdd]\ar[rru] \ar[rr]^{h}&& Y \sisi{\ar[rru]}{\ar[rru]|(.2)\hole} \ar[rdd]\sisi{\ar[rr]^{g}}{\ar[rr]^g|(.25)\hole}            & & Z\ar[ldd]                & \\
+  &&                &Q\ar[d]&                  &P\ar[lld] \\
+  &&                &S&                   &,
+}
+\]
+and\pageoriginale $f=fh$ factors through a separated quasi-finite morphism
+to $\fprod{(\fprod{Q}{P}{S})}{Z}{S}$.
+
+Nagata asserts in \sisi{[5]}{\cite{sga4.exp.XVII.bib.Na}} that every morphism of finite type between separated
+integral noetherian schemes is compactifiable.\nde{more generally, every separated morphism of finite type whose target is quasi-compact and quasi-separated is compactifiable. See \nderef{XVII.ndeConrad}.} The editor admits to
+not having understood the proof.
+
+Now fix a scheme $S$ and denote by $(S)$ the
+subcategory of the category of $S$-schemes whose objects are
+the quasi-compact, quasi-separated $S$-schemes and whose arrows are
+the $S$-compactifiable $S$-morphisms.\nde{Thanks to the compactification theorem, one may also work in the subcategory of the category of (absolute) schemes whose objects are the quasi-compact, quasi-separated schemes and whose arrows are the separated morphisms of finite type (\ie compactifiable morphisms). Note that the stability of compactifiable morphisms under composition is equivalent to the general form of the compactification theorem.}
+
+\begin{enonce*}{Proposition 3.2.3}\etiquette[3.2.3]{XVII.prop3.2.3}
+In the category $(S)$:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The open immersions (\resp the proper morphisms)
+define a subcategory $(S,i)$ (\resp $(S,p)$) of $(S)$ having
+the same objects as $(S)$.
+
+\item Fiber products exist in $(S,p)$ and are fiber
+products in $(S)$.
+
+\item Every morphism $f$ is the composite $f=pj$ of a proper morphism
+$p$ and an open immersion.
+\end{enumerate}
+\end{enonce*}
+
+By\pageoriginale \hyperref[XVII.prop3.2.2]{3.2.2} (iii), (iv), and (v), fiber products
+exist in $(S)$ and are fiber products in the category of
+all schemes. Since the fiber product $X=\fprod{X_1}{X_2}{Y}$ of
+two schemes proper over $Y$ is again proper over $Y$, and a
+scheme is proper over $X$ if and only if it is proper over $X_1$
+and $X_2$, condition (ii) is satisfied.
+
+If $f$ is a morphism of $(S)$, by hypothesis it admits, in $(S)$,
+a factorization $f=pj'$, where $p$ is proper and $j\sisi{}{'}$ is separated and quasi-finite.
+By \EGA IV 18.12.13, $j'$ admits a factorization
+$j'=qj$, where $q$ is finite and $j$ is an open immersion; moreover, by
+\hyperref[XVII.prop3.2.2]{3.2.2} (ii), $q$ and $j$ belong to $(S)$. We then have $f=(pq)j$,
+which proves (iii). Assertion (i) follows from \hyperref[XVII.prop3.2.2]{3.2.2} (iii).
+
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[3.2.4]{XVII.subsubsec3.2.4}
+In the rest of this \S, suppose given a category $(S)$, equipped
+with two subcategories $(S,i)$ and $(S,p)$, such that
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $\Ob(S)=\Ob(S,i)=\Ob(S,p)$;
+
+\item fiber products exist in $(S,p)$ and are fiber
+products in $(S)$;
+
+\item $\forall f\in \Fl(S)$, $\exists p\in \Fl(S,p)$, $\exists
+j\in \Fl(S,i)$, $f=pj$.
+\end{enumerate}
+
+The arrows of $(S,i)$ (\resp of $(S,p)$) will be called open
+immersions (\resp proper morphisms).
+
+\begin{enonce*}{Definition 3.2.5}\etiquette[3.2.5]{XVII.def3.2.5}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item A \emph{compactification} of a morphism $f$ of $(S)$ (\resp
+of a pair $(f,g)$, \resp of a triple $(f,g,h)$ of composable
+morphisms) is a commutative diagram \eqhyperref[XVII.eq3.2.5.1]{3.2.5.1} (\resp
+\eqhyperref[XVII.eq3.2.5.2]{3.2.5.2}, \resp \eqhyperref[XVII.eq3.2.5.3]{3.2.5.3}) whose horizontal arrows are
+open immersions and whose oblique arrows are proper.
+
+\item \emph{A\pageoriginale morphism of compactifications} is a
+  morphism of
+diagrams \eqhyperref[XVII.eq3.2.5.1]{3.2.5.1} (\resp\ldots) that is the identity on the 1\sisi{st}{\textsuperscript{st}}
+vertical column and is proper at every vertex
+$$
+\etiquette[3.2.5.1]{XVII.eq3.2.5.1}
+\etiquette[3.2.5.2]{XVII.eq3.2.5.2}
+\etiquette[3.2.5.3]{XVII.eq3.2.5.3}
+\begin{gathered}[b]
+\xymatrix{
+Y        \ar[d]_{f} \ar@{^{(}->}[r]^{i}                & \bar{Y} \ar[ld]^{\bar{f}}\\
+X      & &}\\
+\hyperref[XVII.eq3.2.5.1]{(3.2.5.1)}
+\end{gathered}\qquad
+\begin{gathered}[b]
+\xymatrix{
+Z        \ar@{^{(}->}[r]^{j} \sisi{\ar[d]}{\ar[d]_g}& \bar{Z}\ar@{^{(}->}[r]^{j'}\sisi{\ar@{-}[ld]^{\bar{g}}}{\ar[ld]^{\bar{g}}}
+&\bar{\bar{Z}} \ar[ld]^{\bar{\bar{g}}}\\
+Y \ar[d]_{f}\ar@{^{(}->}[r]^{i} & {\bar{Y}} \ar[ld]^{\bar{f}}&\\
+X      & &}\\
+\hyperref[XVII.eq3.2.5.2]{(3.2.5.2)}
+\end{gathered}\qquad
+\begin{gathered}[b]
+\xymatrix@=3em{
+\bigdot \ar@{^{(}->}[r]_(.4){\sisi{h}{k}} \ar[d]_{h}& \bigdot \ar@{^{(}->}[r]_(.4){\sisi{h}{k}'}\ar[ld]^(.4){\bar{h}} & \bigdot
+\ar@{^{(}->}[r]_(.4){\sisi{h}{k}''} \ar[ld]^(.4){\bar{\bar{h}}}&\bigdot \ar[ld]^(.4){\bar{\bar{\bar{h}}}}\\
+\bigdot \ar@{^{(}->}[r]_(.4){j}\ar[d]_{g} & \bigdot \ar@{^{(}->}[r]_(.4){j'}
+\ar[ld]^(.4){\bar{g}}& \bigdot \ar[ld]^(.4){\bar{\bar{g}}}\\
+\bigdot
+\ar@{^{(}->}[r]_(.4){i} \ar[d]_{f}&\bigdot \ar[ld]^(.4){\bar{f}}\\
+\bigdot}\\
+\hyperref[XVII.eq3.2.5.3]{(3.2.5.3)}
+\end{gathered}
+$$
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Proposition 3.2.6}\etiquette[3.2.6]{XVII.prop3.2.6}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Every morphism (\resp every pair $(f,g)$, \resp every triple
+$(f,g,h)$ of composable morphisms) admits a compactification.
+
+\item The category of compactifications of $f$ is left
+filtering.\nde{``left filtering'' means ``cofiltered'' (\hyperrefext[I][I.def2.7]{2.7}). For axioms $L_1$ and $L_2$ in the proof of \hyperref[XVII.prop3.2.6]{3.2.6}, \cf \hyperrefext[V][V.par8.1.1.1]{8.1.1.1}.}
+
+\item If diagrams $\sisi{(3.2.4.2)}{\eqhyperref[XVII.eq3.2.5.2]{3.2.5.2}}_i$ $(i=1,2)$ are
+compactifications of $(f,g)$, there exists a compactification
+$\sisi{(3.2.4.2)}{\eqhyperref[XVII.eq3.2.5.2]{3.2.5.2}}_3$ of $(f,g)$ and morphisms of compactifications from
+$\sisi{(3.2.4.2)}{\eqhyperref[XVII.eq3.2.5.2]{3.2.5.2}}_3$ to the compactifications $\sisi{(3.2.4.2)}{\eqhyperref[XVII.eq3.2.5.2]{3.2.5.2}}_i$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The case of a morphism is precisely \hyperref[XVII.subsubsec3.2.4]{3.2.4}
+(iii). Let us treat the case of a triple; with the notation of \eqhyperref[XVII.eq3.2.5.3]{3.2.5.3},
+it suffices to construct successively compactifications of $f$,
+$g$, and $h$, of $i\bar{g}$ and $j\bar{h}$, and finally of
+$j'\bar{\bar{h}}$.
+
+\item Let\pageoriginale $\eqhyperref[XVII.eq3.2.5.1]{3.2.5.1}_1$ and $\eqhyperref[XVII.eq3.2.5.1]{3.2.5.1}_2$ be two
+compactifications of $f$. The projection $\sisi{\rho}{p}$ from
+$\fprod{\bar{Y}_1}{\bar{Y}_2}{S}$ to $X$ is proper, and $Y$ maps
+to it by $(i_1,i_2)$, which (\hyperref[XVII.subsubsec3.2.4]{3.2.4} (iii)) can be compactified as
+$(i_1,i_2)=qj$. The compactification $f=(p\sisi{\cdot}{\circ} q)j$ dominates
+$\sisi{(3.2.4.1)}{\eqhyperref[XVII.eq3.2.5.1]{3.2.5.1}}_1$ and $\sisi{(3.2.4.1)}{\eqhyperref[XVII.eq3.2.5.1]{3.2.5.1}}_2$.
+
+If $r$ and $s$ are two morphisms from $\sisi{(3.2.4.1)}{\eqhyperref[XVII.eq3.2.5.1]{3.2.5.1}}_1$ to
+$\sisi{(3.2.4.1)}{\eqhyperref[XVII.eq3.2.5.1]{3.2.5.1}}_2$, the kernel $K$ of the pair of arrows
+$\bar{Y}_{1} \overset{r}{\underset{s}\rightrightarrows} \bar{Y}_{2}$ maps by
+a proper morphism to $\bar{Y}_1$, and $i_1$ factors through $K$:
+write $i_1=ki$. If $i=pi_3$ is a compactification of $i$,
+the existence of the compactification $f=(\bar{f}_1kp)i_3$ shows that
+axiom $L_2$ is satisfied.
+
+\item Apply axiom $L_1$ for filtering categories to the
+compactifications of $f$ and $g$ deduced from the $\sisi{(3.2.4.2)}{\eqhyperref[XVII.eq3.2.5.2]{3.2.5.2}}_i$
+$(i=1,2)$. We thereby obtain $\bar{Y}_3$ and $\bar{Z}_3$ giving rise to
+commutative diagrams $\eqhyperref[XVII.eq3.2.5.1]{3.2.5.1}_i$ $(i=1,2)$
+\[
+\xymatrix{
+&         &\bar{Z}_i \ar[d] \ar@{^{(}->}[r]& \bar{\bar{Z}}_i\ar[d]\\
+\bar{Z}_3 \ar[rru] \ar[d]^{\bar{g}_3} &&Y   \ar@{^{(}->}[r]      & \bar{Y}_i\\
+Y \ar@{=}[rru]\ar[r]_{i_3} & \bar{Y}_3 \ar[rru]&&\sisi{(3.2.5.1)_i}{},
+}
+\]
+and it remains to find a compactification of $i_3\bar{g}_3$ by
+$\bar{\bar{Z}}_3$, such that $\bar{\bar{Z}}_3$ can map by a
+proper morphism to $\bar{\bar{Z}}_i$, so as to give rise to
+a commutative cube $(i=1,2)$. If the target of a morphism between
+compactifications of $i_3\bar{g}_3$ has this property, its source has it
+as well, and by (ii), it will suffice to consider separately the cases
+$i=1$ and $i=2$. Let\pageoriginale $T$ be the fiber product of $\bar{Y}_3$
+and $\bar{\bar{Z}}_i$ over $\bar{Y}_i$: then $T$ occurs in a
+commutative cube analogous to the desired one, except that the arrow $k$ from
+$\bar{Z}_3$ to $T$ might not be an open
+immersion. Writing $k=pj$ ($p$ proper, $j$ an open immersion) and repla\c{}cing $T$
+by the source $\bar{\bar{Z}}_3$ of $p$, we obtain the desired
+cube.
+\end{enumerate}
+
+\begin{enonce*}{Remark 3.2.7}\etiquette[3.2.7]{XVII.rem3.2.7}
+Proposition \hyperref[XVII.prop3.2.3]{3.2.3} would still have been valid if, in Definition
+\hyperref[XVII.def3.2.1]{3.2.1} of compactifiable morphisms, we had omitted the requirement that $Y$
+be quasi-compact and quasi-separated and required instead that $j$
+be a quasi-compact open immersion and not merely a
+quasi-finite morphism.
+\end{enonce*}
+
+\subsection{Gluing}\etiquette[3.3]{XVII.subsec3.3}
+
+Recall that the hypotheses of \hyperref[XVII.subsubsec3.2.4]{3.2.4} are satisfied.
+
+\subsubsection{}\etiquette[3.3.1]{XVII.subsubsec3.3.1}
+Suppose given:
+\begin{itemize}
+\item[$\alpha$)] for each $X\in \Ob (S)$, a category $F(X)$,
+
+\item[$\beta$)] an $(S,i)$-cofibered category $F_i$ and an $(S,p)$-
+cofibered category $F_{p}$,
+
+\item[$\gamma$)] for each $X\in \Ob(S)$, isomorphisms between
+$F(X)$, $(F_{i})_X$, and $(F_{p})_X$,
+
+\item[$\delta$)] a normalized cleavage of $F_{i}$ and a normalized cleavage
+of $F_{p}$.
+\end{itemize}
+
+By (\SGA 1 VI), it ``amounts to the same thing'' to give instead $\alpha$) and:
+\begin{itemize}
+\item[(i)] For every proper morphism $p:X\rightarrow Y$, a functor
+$p_{\ast}:F(X)\rightarrow F(Y)$,
+
+\item[(ii)] for every composable pair $(p,q)$ of proper morphisms,
+an\pageoriginale isomorphism of functors
+$c_{p,q}:p_{\ast}q_{\ast}\leftrightarrow (pq)_{\ast}$,
+
+\item[(i\sisi{}{'}) and (ii\sisi{)'}{')},] analogous data for $(S,i)$,
+\end{itemize}
+these data satisfying the following conditions:
+\begin{itemize}
+\item[(a)] if $p$ is an identity, then $p_{\ast}$, $c_{p,q}$, and
+$c_{q,p}$ are identities,
+
+\item[(b)] for every composable triple of proper morphisms, we have
+\[
+c_{p,qr}\circ (p_{\ast}\ast c_{q,r})=c_{pq,r}\circ (c_{p,q}\ast
+r_{\ast}){\quoi},
+\]
+
+\item[(a\sisi{)'}{')} and (b\sisi{)'}{')},] analogous conditions for $(S,p)$.
+\end{itemize}
+
+Suppose \emph{given} in addition,
+\begin{itemize}
+\item[(iii)] for every commutative diagram $D$
+\[
+\vcenter{
+\xymatrix{
+X \ar[r]^{j'} \ar[d]^{p'}& Y\ar[d]^{p} \\
+Z \ar[r]_{j}             &           T
+}}\quad j,j' \in \Fl(S,i)\text{; }
+  p,p' \in \Fl(S,p),
+\]
+an isomorphism of functors $d(D):p_{\ast}j'_{\ast}\leftrightarrow
+j_{\ast}p'_{\ast}$.
+\end{itemize}
+
+\begin{enonce*}{Proposition 3.3.2}\etiquette[3.3.2]{XVII.prop3.3.2}
+If data {\rm (i) (ii) ${\rm (i')}$ ${\rm (ii')}$ (iii)}
+satisfy conditions {\rm (a) (b) ${\rm (a')}$ ${\rm (b')}$} as well
+as {\rm(c)} and ${\rm (c')}$ stated below, then there exists one
+and ``essentially'' only one category $F$ cofibered over $S$,
+equipped with isomorphisms $\fprod{F}{(S,i)}{S}=F_i$ and
+$\fprod{F}{(S,p)}{S}=F_p$, compatible with datum \hyperref[XVII.subsubsec3.3.1]{3.3.1} $\gamma$)
+and such that the isomorphisms $d(D)$ of {\rm(iii)} are the
+composite isomorphisms
+$j_{\ast}p'_{\ast}=(jp')_{\ast}=(pj')_{\ast}=p_{\ast}j'_{\ast}$.
+\end{enonce*}
+
+\begin{itemize}
+\item[(c)] for every commutative diagram of the following type
+\[
+\xymatrix{
+X_1 \ar@{^{(}->}[r]^{i} \ar[d]^{p_1}& X_2 \ar@{^{(}->}[r]^{i'}
+\ar[d]^{p_2}& X_3 \ar[d]^{p_3}\\
+Y_1 \ar@{^{(}->}[r]^{j}& Y_2 \ar@{^{(}->}[r]^{j'}& Y_3,\\
+}
+\]
+whose\pageoriginale horizontal arrows are open
+immersions and whose vertical arrows are proper, the following
+triangle of isomorphisms $d$ from (iii) is commutative:
+\[
+\xymatrix@R=1cm{
+p_{3{\ast}} i'_{\ast} i_{\ast} \ar[rr] \ar@{-}[rd]&  & j'_{\ast}j_{\ast}p_{1{\ast}}\ar@{-}[ld]\\
+                               &j'_{\ast}p_{2{\ast}}
+                                i_{\ast}&.
+}
+\]
+
+\item[(c')] For every commutative diagram of the following type
+\[
+\xymatrix{
+X_1  \ar[r]^{p} \ar[d]^{i_1}& X_2  \ar[r]^{p'} \ar[d]^{i_2}& X_3 \ar[d]^{i_3}          \\
+Y_1         \ar[r]^{q} & Y_2  \ar[r]^{q'} & Y_3\rlap{,}
+}
+\]
+whose horizontal arrows are proper and whose vertical
+arrows are open immersions, the following triangle
+of isomorphisms $d$ from (iii) is commutative:
+\[
+\xymatrix{
+i_{3{\ast}} p'_{\ast} p_{\ast} \ar[rr] \ar@{-}[rd]&    &q'_{\ast} q_{\ast}
+i_{1{\ast}} \\
+&q'_{\ast} i_{2{\ast}} p_{\ast}  \ar@{-}[ru]&.
+}
+\]
+\end{itemize}
+
+\setcounter{subsubsection}{2}
+\paragraph{Definition of $f_{\ast}$}\etiquette[3.3.2.1]{XVII.par3.3.2.1}\pageoriginale
+Let $f$ be a morphism from $Y$ to $X$. Each compactification of $f$,
+with diagram \sisi{(\hyperref[XVII.def3.2.5]{3.2.5} (i))}{\eqhyperref[XVII.eq3.2.5.1]{3.2.5.1}}, defines a composite functor $\bar{f}_{\ast}i_{\ast}$ from $F(Y)$ to $F(X)$. A morphism of compactifications
+defines a commutative diagram
+$$\etiquette[3.3.2.2]{XVII.eq3.3.2.2}
+\vcenter{
+\xymatrix{
+Y  \ar@{^{(}->}[r]^{i_1} \ar@{=}[d]& \bar{Y}_1  \sisi{\ar[d]}{\ar[d]^p}\\
+Y  \ar@{^{(}->}[r]^{i_2} \ar[d]        & \bar{Y}_2 \ar[ld]^{\bar{f}_2}\\
+X                         &.
+}}\leqno{(3.3.2.2)}
+$$
+Datum (iii) therefore provides us with an isomorphism
+\[
+\bar{f}_{2{\ast}} i_{2{\ast}}=\bar{f}_{2\ast} \circ
+(i_{2\ast}\circ 1_{Y{\ast}})=\bar{f}_{2{\ast}}\circ
+(p_{\ast}\circ i_{1{\ast}})=\bar{f}_{1{\ast}}\circ
+i_{1{\ast}}{\quoi}.
+\]
+Axiom ${\rm(c')}$ also ensures that the isomorphism associated with a
+composite of morphisms of compactifications is the composite of the
+isomorphisms associated with each of them. Since the category of morphisms of
+compactifications is cofiltered (\hyperref[XVII.prop3.2.6]{3.2.6} (ii)), we thereby obtain a
+transitive system of isomorphisms between the functors associated with the
+various compactifications of $f$. Choosing one of them, we
+define the functor $f_{\ast}$.
+
+\setcounter{paragraph}{2}
+\paragraph{Transitivity homomorphisms}\etiquette[3.3.2.3]{XVII.par3.3.2.3}
+
+Every compactification of a pair $(f,g)$ of composable morphisms
+(diagram \eqhyperref[XVII.eq3.2.5.2]{3.2.5.2}) defines a compactification of $f$, one of $g$,
+one of $f\circ g=(\bar{f}\bar{\bar{g}})(j'j)$, and an isomorphism
+$c_{f,g}:(fg)_{\ast}\isomto f_{\ast}g_{\ast}$, the composite of the
+isomorphisms
+\[
+(fg)_{\ast}=(\bar{g}\,\bar{\bar{g}})_{\ast}(j'j)_{\ast}=\bar{f}_{\ast}(\bar{\bar{g}}_{\ast}j'_{\ast})j_{\ast}=\bar{f}_{\ast}(i_{\ast}\bar{g}_{\ast})j_{\ast}=(\bar{f}_{\ast}i_{\ast})(\bar{g}_{\ast}j_{\ast})=f_{\ast}g_{\ast}
+\]
+(where\pageoriginale the middle isomorphism comes from (iii)).

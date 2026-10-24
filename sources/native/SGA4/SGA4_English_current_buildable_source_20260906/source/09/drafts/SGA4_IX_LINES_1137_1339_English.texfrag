@@ -1,0 +1,186 @@
+\section{Kummer and Artin--Schreier theories}\etiquette[3]{IX.sec3}\pageoriginale
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[3.0]{IX.subsec3.0}
+We denote by $(\GG_m)_X$ the sheaf represented by the multiplicative
+group $\Spec\Oo_X[t,t^{-1}]$ over $X$. Thus, for $U\to X$ étale, the
+sections of $(\GG_m)_X$ over $U$ are the invertible elements
+$\Gamma(U,\Oo_U^*)$ of $\Gamma(U,\Oo_U)$. Let $n\in\NN$. The kernel
+of the $n$-th power map on $(\GG_m)_X$ is the \lq\lq sheaf of $n$-th
+roots of unity'', denoted $(𝛍_n)_X$. Thus there is an exact sequence
+\begin{equation*}
+0\to(𝛍_n)_X\to(\GG_m)_X\xrightarrow{n}(\GG_m)_X{\quoi}.
+\tag{3.1}
+\end{equation*}\etiquette[3.1]{IX.eq3.1}
+If $n$ is invertible on $X$ (that is, if $n$ is prime to every
+residue characteristic of $X$), the $n$-th power map is surjective
+\emph{as a morphism of sheaves}:
+
+\begin{enonce*}{Kummer theory 3.2}\etiquette[3.2]{IX.Thr3.2}
+If $n\in\NN$ is invertible on $X$, there is an exact sequence
+$$
+0\to(𝛍_n)_X\to(\GG_m)_X\xrightarrow{n}(\GG_m)_X\to0.
+$$
+\end{enonce*}
+
+Indeed, let $u\in(\GG_m)_X(U)$, with $U\to X$ étale. We must find an
+étale covering $\{U_i\to U\}$ such that $u$ becomes an $n$-th power
+on every $U_i$. Since $n$ is invertible on $U$, the equation
+$$
+T^n-u=0
+$$
+is \lq\lq separable'' over $U$, that is,
+$$
+U'=\Spec\Oo_U[T]/(T^n-u)
+$$
+is étale over $U$. Since $U'\to U$ is surjective, it is a covering,
+and $u$ becomes an $n$-th power on $U'$.
+
+We point out\pageoriginale that when $n$ is invertible on $X$,
+$(𝛍_n)_X$ is a locally constant sheaf, in fact locally isomorphic to
+the sheaf $(\ZZ/n\ZZ)_X$, and is constant in important cases. Kummer
+theory therefore gives information about the cohomology of $X$ with
+values in certain constant sheaves. By definition,
+$$
+H^0(X,(\GG_m)_X)=\Gamma(X,\Oo_X^*){\quoi},
+$$
+and in dimension one we have:
+
+\begin{enonce*}{Theorem 3.3}\etiquette[3.3]{IX.thm3.3}
+(\lq\lq Hilbert's Theorem 90'') There is an isomorphism
+$$
+H^1(X,(\GG_m)_X)\xrightarrow{\sim}\Pic X{\quoi},
+$$
+where $\Pic X$ is the group of isomorphism classes of invertible
+sheaves on $X$.
+\end{enonce*}
+
+\emph{Proof.} This says that the canonical morphism
+$$
+H^1(X_{\zar},(\GG_m)_X)\longrightarrow
+H^1(X_{\text{\rm ét}},(\GG_m)_X)
+$$
+is bijective. Equivalently,
+$$
+R^1\epsilon_*(\GG_m)_X=0,
+$$
+where $\epsilon_*$ is direct image for the evident morphism of sites
+$\epsilon:X_{\et}\to X_{\zar}$ (VIII 4). We are therefore reduced to
+the case where $X$ is affine. Since $H^1$ may be computed by
+\v{C}ech cohomology (V \hyperref[V.subsec2.5]{2.5}), and since for quasi-compact $X$ it is
+enough to use quasi-compact coverings, this follows immediately from
+descent theory for sheaves (see FGA 190 or \SGA VIII 1).
+
+\setcounter{subsection}{3}
+\setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[3.3.1]{IX.subsubsec3.3.1}
+Suppose that $X$ is Noetherian and has no embedded component, and let
+$x_j$ be the maximal points of $X$. Let $R_j$ be the local Artinian
+ring of $X$ at $x_j$, and let $i_j:\Spec R_j\to X$ be the inclusion.
+There is\pageoriginale a canonical injection
+$$
+(\GG_m)_X\longrightarrow
+\prod_j i_{j^{\ast}}(\GG_m)_{\Spec R_j}
+$$
+of sheaves on $X_{\text{\rm ét}}$ (respectively $X_{\zar}$). Its
+cokernel $D$ is called the \emph{sheaf of Cartier divisors} on
+$X_{\text{\rm ét}}$ (respectively $X_{\zar}$)\footnote[1]{In
+\EGA IV 21, the word \lq\lq divisors'' is used instead of
+\lq\lq Cartier divisors''.}.
+
+\begin{enonce*}{Corollary 3.4}\etiquette[3.4]{IX.cor3.4}
+Let $X$ be Noetherian and without embedded components, let
+$\epsilon:X_{\text{\rm ét}}\to X_{\zar}$ be the canonical morphism of
+sites, and let $D$ be the sheaf of Cartier divisors on
+$X_{\text{\rm ét}}$. Then $\epsilon_*D$ is the sheaf $D_{\zar}$ of
+Cartier divisors on $X_{\zar}$, and in particular
+$$
+H^0(X_{\text{\rm ét}},D)\simeq H^0(X_{\zar},D_{\zar}){\quoi}.
+$$
+\end{enonce*}
+
+\emph{Proof.} Applying $\epsilon_*$ to the exact sequence
+$$
+0\to(\GG_m)_X\longrightarrow
+\prod_j i_{j^{\ast}}(\GG_m)_{\Spec R_j}
+\longrightarrow D\to0
+$$
+gives an exact sequence, since
+$R^1\epsilon_*(\GG_m)_X=0$ (\hyperref[IX.thm3.3]{3.3}); the first
+assertion follows.
+
+When $X$ has characteristic $p\neq0$, the following result sometimes
+replaces \hyperref[IX.Thr3.2]{3.2} in the study of $p$-torsion
+coefficients:
+
+\begin{enonce*}{Artin--Schreier theory 3.5}\etiquette[3.5]{IX.Thr3.5}
+If $X$ has characteristic $p>0$, there is an exact sequence
+$$
+0\to(\ZZ/p\ZZ)_X\to\Oo_X\xrightarrow{\mathfrak p}\Oo_X\to0{\quoi},
+$$
+where $\mathfrak p$ is the morphism of additive groups defined by
+$\mathfrak p(f)=f^p-f$.
+\end{enonce*}
+
+The kernel of $\mathfrak p$ is the sheaf of sections of $\Oo_X$ which
+locally belong to the prime field, and is therefore a constant sheaf.
+The morphism $\mathfrak p$ is\pageoriginale surjective for the étale
+topology because the equation $T^p-T-a$ ($a\in\Gamma(U,\Oo_U)$) is
+always \lq\lq separable'' in characteristic $p$, that is, defines an
+étale covering of $U$. In applying this exact sequence, we shall of
+course use VII \hyperref[VII.subsec4.2]{4.2}.
+
+\begin{enonce*}{Proposition 3.6}\etiquette[3.6]{IX.prop3.6}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let $X$ be a scheme and let $i:x\to X$ be the inclusion of a
+point. Then
+$$
+H^1(X,i_*(\ZZ)_x)=0,
+$$
+where $(\ZZ)_x$ is the \lq\lq constant sheaf'' of value $\ZZ$
+(see \hyperref[IX.subsec2.0]{2.0}).
+
+\item If $X$ is irreducible and if, for every geometric point
+$\bar x$ of $X$, the strict localization $X_{\bar x}$ of $X$ at
+$\bar x$ is irreducible (one should say that \lq\lq $X$ is
+geometrically unibranch'', see \EGA IV 18.8.14), then
+$$
+H^1(X,(\ZZ)_X)=0{\quoi}.
+$$
+\end{enumerate}
+\end{enonce*}
+
+\emph{Proof.}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The Leray spectral sequence
+$$
+E^{pq}_2=H^p(X,R^qi_*(\ZZ)_x)\Longrightarrow
+H^{p+q}(x,(\ZZ)_x)
+$$
+gives an injection
+$H^1(X,i_*(\ZZ)_x)\to H^1(x,(\ZZ)_x)$. Since
+$x=\Spec k(x)$ is the spectrum of a field, it is well known that
+$H^1(x,(\ZZ)_x)=0$. (This follows from the fact that
+$H^q(x,F)$ is torsion for $q>0$ in any case (see VII \hyperref[VII.rem2.1]{2.2} and CG),
+and from the exact sequences
+$0\to\ZZ\xrightarrow{n}\ZZ\to\ZZ/n\to0$.) This proves (i).
+
+\item Let $i:x\to X$ be the inclusion of the generic point of $X$.
+Under the hypotheses of (ii), the canonical morphism
+$(\ZZ)_X\to i_*(\ZZ)_x$ is immediately seen to be bijective (and the
+converse is also true); thus (ii) is reduced to (i).
+\end{enumerate}
+
+\begin{enonce*}[remark]{Remarks 3.7}\etiquette[3.7]{IX.rems3.7}
+In \hyperref[IX.prop3.6]{3.6} (i) and (ii), $\ZZ$ may be replaced by
+any torsion-free abelian group. On the other hand, (ii) becomes false
+if the hypothesis that $X$ is geometrically unibranch is omitted, as
+one sees, for example, by taking $X$ to be an algebraic curve over a
+field $K$ having an ordinary double point (compute $H^1(X,\ZZ)$ in
+this case!).
+\end{enonce*}
+

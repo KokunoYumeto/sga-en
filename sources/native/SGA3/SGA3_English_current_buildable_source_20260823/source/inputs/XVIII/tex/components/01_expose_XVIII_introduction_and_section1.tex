@@ -1,0 +1,211 @@
+
+\setcounter{footnote}{0}
+\SGARefTarget{sga3:xviii:chapter:xviii}\chapter*{Exposé XVIII\\
+Weil's Theorem on the Construction of a Group from a Rational Law}
+\addcontentsline{toc}{chapter}{Exposé XVIII. Weil's Theorem on the
+Construction of a Group from a Rational Law}
+\markboth{EXPOSÉ XVIII. WEIL'S THEOREM}
+  {EXPOSÉ XVIII. WEIL'S THEOREM}
+
+\begin{center}
+  \textit{by Michael Artin}
+\end{center}
+\begingroup
+\renewcommand{\thefootnote}{0}
+\footnotetext{Version of May 8, 2009.}
+\endgroup
+
+\SGARefTarget{sga3:xviii:section:0}\section*{0. Introduction}
+\addcontentsline{toc}{section}{0. Introduction}
+
+This Exposé is devoted to the well-known theorem of Weil~[1], which
+constructs a group variety from a birational law. It seems that the
+generalization of this result to the case where the base is the
+spectrum of a discrete valuation ring was already known to several
+people; see, for example,~[2]. Here we shall prove the theorem for a
+flat group of finite presentation over an arbitrary base prescheme
+\(S\). Since the hypotheses must be formulated somewhat more
+carefully, the statement is not in the form given by Weil; but when
+\(S\) is the spectrum of a field, the form given here is seen to be
+essentially equivalent to Weil's. We use the following suggestion of
+Grothendieck: given a ``group germ'' \(X\) over a prescheme \(S\), one
+should construct the group as the quotient of \(X\times_S X\) by a
+suitable equivalence relation.
+
+\SGARefTarget{sga3:xviii:section:1}\section*{1. ``Recollections'' on
+Rational Maps}
+\addcontentsline{toc}{section}{1. ``Recollections'' on Rational Maps}
+
+Let \(X/S\) be a relative prescheme and let \(U\subseteq X\) be an
+open subset. We say that \(U\) is \emph{schematically dense in \(X\)
+relative to \(S\)}, or that \(U\hookrightarrow X\) is
+\emph{relatively schematically dense}, if, for every base change
+\(S'\to S\), the open subset \(U\times_S S'\) is schematically dense
+in \(X\times_S S'\). For the definition and properties of this
+notion, we refer to Exposé IX, \S4.\begingroup
+\renewcommand{\thefootnote}{*}\footnote{See also EGA
+IV\textsubscript{3}, 11.9 and 11.10 (especially 11.10.8), where the
+term ``universally schematically dense relative to \(S\)'' is used.}
+\addtocounter{footnote}{-1}
+\endgroup
+
+\SGARefTarget{sga3:xviii:prop:1.1}\paragraph{\SGARefLink{sga3:xviii:prop:1.1}{Proposition 1.1}.}
+\textit{(i) A finite intersection, as well as a union of a nonempty
+family, of open subsets schematically dense relative to \(S\), is
+schematically dense relative to \(S\).}
+
+\textit{(ii) If \(U\subseteq X\) is schematically dense relative to
+\(S\), and if \(S\to T\) is a morphism, then
+\(U_T\subseteq X_T\) is schematically dense relative to \(T\).}
+
+\textit{(iii) Let \(U\subseteq V\subseteq X\) be open immersions. For
+\(U\) to be schematically dense in \(X\) relative to \(S\), it is
+necessary and sufficient that it be so in \(V\), and that \(V\) be so
+in \(X\).}
+
+\textit{\SGAInlineRefTarget{sga3:xviii:prop:1.1:item:iv}(iv) If \(U\subseteq X\) and \(V\subseteq Y\) are relatively
+schematically dense, then \(U\times_S V\) is schematically dense in
+\(X\times_S Y\) relative to \(S\).}
+
+In Exposé IX one finds the following criterion:
+
+\SGARefTarget{sga3:xviii:prop:1.2}\paragraph{\SGARefLink{sga3:xviii:prop:1.2}{Proposition 1.2}.}
+\textit{Let \(X/S\) be locally of finite presentation and flat, and
+let \(U\) be an open subset of \(X\). If, for every \(s\in S\), the
+fiber \(U_s\) is schematically dense in \(X_s\), then \(U\) is
+schematically dense in \(X\) relative to \(S\).}
+
+In particular:
+
+\SGARefTarget{sga3:xviii:cor:1.3}\paragraph{\SGARefLink{sga3:xviii:cor:1.3}{Corollary 1.3}.}
+\textit{Suppose that \(X/S\) is locally of finite presentation and
+flat, and that every fiber \(X_s\) is ``without embedded
+components.'' Then \(U\) is schematically dense in \(X\) relative to
+\(S\) if and only if, for every \(s\in S\), \(U_s\) is dense in
+\(X_s\) in the topological sense.}
+
+One easily deduces from the definition the following proposition.
+
+\SGARefTarget{sga3:xviii:prop:1.4}\paragraph{\SGARefLink{sga3:xviii:prop:1.4}{Proposition 1.4}.}
+\textit{Let \(U\subseteq X\) be schematically dense relative to \(S\),
+and let \(f,g:X\to Y\) be two morphisms of functors over \(S\), where
+\(Y\) satisfies one of the following conditions:}
+
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:xviii:prop:1.4:item:i}(i)] \textit{\(Y\) is a prescheme over \(S\), and every fiber
+  \(Y_s\) is separated.}
+\item[\SGAInlineRefTarget{sga3:xviii:prop:1.4:item:ii}(ii)] \textit{\(Y\) is a presheaf\footnote{Editor's note:
+  specify for which topology; a priori, the fpqc topology.} over
+  \(S\), such that the diagonal morphism
+  \(Y\to Y\times_S Y\) is representable by a closed
+  immersion.\footnote{Editor's note: Let us recall here the
+  definition of a closed immersion. A morphism of \(S\)-functors
+  \(F\to G\) is \emph{relatively representable} if, for every
+  \(S\)-morphism \(T\to G\), where \(T\) is an \(S\)-prescheme, the
+  \(T\)-functor \(F_T=F\times_G T\) is representable by a
+  \(T\)-prescheme. The French source prints \(F\times_S T\) here;
+  the fiber product over \(G\) is the one dictated by the preceding
+  morphism \(T\to G\). A morphism of \(S\)-functors \(F\to G\) is an open
+  (respectively, closed) immersion if it is relatively representable
+  and if, for every \(S\)-morphism \(T\to G\), where \(T\) is an
+  \(S\)-prescheme, the \(T\)-morphism \(F_T\to T\) is an open
+  (respectively, closed) immersion.}}
+\end{enumerate}
+
+\textit{Then, if \(f=g\) on \(U\), one has \(f=g\).}
+
+\textit{Proof.}
+In case \SGARefLink{sga3:xviii:prop:1.4:item:i}{(i)}, the standard argument following IX, \SGARefLink{sga3:ix:definition:4:1}{4.1} shows that
+\(f\) and \(g\) are equal on every fiber; hence the subprescheme
+\(\operatorname{Ker}(f,g)\) of \(X\) is set-theoretically equal to
+\(X\), and is therefore closed. Since it contains \(U\), it is equal
+to \(X\), that is, \(f=g\). Case \SGARefLink{sga3:xviii:prop:1.4:item:ii}{(ii)} is proved as in
+\textit{loc.\ cit.}\footnote{Editor's note: Give details on this
+point\ldots}
+
+\SGARefTarget{sga3:xviii:def:1.5}\paragraph{\SGARefLink{sga3:xviii:def:1.5}{Definition 1.5}.}
+\begingroup
+\renewcommand{\thefootnote}{*}
+\footnote{See EGA IV\textsubscript{4}, 20.5, where the term
+``pseudo-morphism from \(X\) to \(Y\) relative to \(S\)'' is used in
+order not to conflict with EGA I, 7.12.}
+\addtocounter{footnote}{-1}
+\endgroup
+\textit{Let \(X\) be a prescheme over \(S\), and let \(Y\) be a
+presheaf over \(S\). A \emph{rational map}
+\(f:X\dashrightarrow Y\) over \(S\) is an equivalence class of
+morphisms \(f:U\to Y\) over \(S\), where \(U\) is an open subset of
+\(X\) that is schematically dense relative to \(S\). One sets
+\[
+  (f:U\to Y)\sim(f':U'\to Y)
+\]
+if and only if there exists an open subset
+\(U''\subseteq U'\cap U\), schematically dense relative to \(S\),
+such that \(f=f'\) on \(U''\).}
+
+This definition is made in such a way that, for every base change
+\(S'\to S\), the rational map \(f\times_S S'\) may be defined in the
+obvious way.
+
+If \(U\) is an open subset of \(X\), we say that the rational map
+\(f\) is \emph{defined on \(U\)} if there exists a morphism
+representing \(f\) whose set of definition contains \(U\).
+
+\SGARefTarget{sga3:xviii:def:1.5.1}\paragraph{\SGARefLink{sga3:xviii:def:1.5.1}{Definition 1.5.1}.}
+\footnote{Editor's note: The number \SGARefLink{sga3:xviii:def:1.5.1}{1.5.1} has been added.}
+\textit{If \(Y\) satisfies one of conditions \SGARefLink{sga3:xviii:prop:1.4:item:i}{(i)}, \SGARefLink{sga3:xviii:prop:1.4:item:ii}{(ii)} of \SGARefLink{sga3:xviii:prop:1.4}{1.4}, it is
+clear that there exists a largest open subset \(U\) of \(X\) on
+which \(f\) is defined, and this \(U\) is schematically dense
+relative to \(S\). It is called the \emph{domain of definition of
+\(f\) over \(S\)}, and is denoted \(\Dom(f)\).}
+
+This notion does not in general commute with base change, but one
+has:
+
+\SGARefTarget{sga3:xviii:prop:1.6}\paragraph{\SGARefLink{sga3:xviii:prop:1.6}{Proposition 1.6}.}
+\textit{Let \(X\) be an \(S\)-prescheme and \(Y\) an \(S\)-functor
+satisfying one of hypotheses \SGARefLink{sga3:xviii:prop:1.4:item:i}{(i)}, \SGARefLink{sga3:xviii:prop:1.4:item:ii}{(ii)} of \SGARefLink{sga3:xviii:prop:1.4}{1.4}. Let
+\(f:X\dashrightarrow Y\) be a rational map over \(S\), let
+\(S'\to S\) be a flat morphism locally of finite presentation, and
+put \(f'=f\times_S S'\). Then}
+\[
+  \Dom(f')=\Dom(f)\times_S S'.
+\]
+
+\textit{Proof.}
+Put \(U=\Dom(f)\). It is clear that \(V'=\Dom(f')\) contains
+\(U\times_S S'\). Let \(V\) be the image of \(V'\); it is an open
+subset of \(X\), because \(X'\to X\) is open. We must prove that
+\(V=U\), that is, we must find a morphism \(V\to Y\) representing
+\(f\). Put \(S''=S'\times_S S'\), and
+\[
+  X''=X\times_S S'',\qquad
+  U''=U\times_S S'',\qquad
+  V''=V'\times_V V'.
+\]
+Then \(U''\) is schematically dense in \(X''\) relative to \(S''\);
+hence \(U''\) is schematically dense in \(V''\) relative to
+\(S''\), since \(U''\subseteq V''\subseteq X''\). The restriction
+of \(f':V'\to Y'\) to \(U'\) is obtained from \(f:U\to Y\) by base
+change. The two morphisms \(V''\to Y\) obtained from \(f'\) by the
+two projections agree on \(U''\), and hence agree.\begingroup
+\renewcommand{\thefootnote}{\ensuremath{\dagger}}\footnote{The
+French source prints \(S\), rather than \(S''\), in the preceding
+density assertion and the undefined symbol \(g\), rather than
+\(f'\), in this descent assertion. The base-change construction
+determines the readings used here.}
+\addtocounter{footnote}{-1}
+\endgroup Since \(V'\to V\) is flat and
+locally of finite presentation, it is an fppf covering (\SGARefLink{sga3:iv:subsection:6:3}{Exposé IV,
+6.3}), and the morphism \(V\to Y\) is obtained by descent.
+
+We shall frequently use the following triviality:
+
+\SGARefTarget{sga3:xviii:prop:1.7}\paragraph{\SGARefLink{sga3:xviii:prop:1.7}{Proposition 1.7}.}
+\textit{Let \(X/S\) be faithfully flat and locally of finite
+presentation, and let \(U\subseteq X\) be a relatively schematically
+dense open subset. Then there exists an fppf covering base change
+\(S'\to S\), and a section \(x\in X(S')\) contained in \(U(S')\).}
+
+Indeed, \(U/S\) is an fppf covering. Take \(S'=U\), and as the section
+take the \(S\)-graph of the inclusion \(U\hookrightarrow X\).

@@ -1,0 +1,97 @@
+\begin{enonce*}{Corollary 8.12.7}\etiquette[8.12.7]{I.cor8.12.7}
+Let\pageoriginale $C$ be a $𝒰$-category in which small projective
+limits are representable, and which admits a small cogenerating
+subcategory (\hyperref[I.sec7.9]{7.9},
+\hyperref[I.exem7.13]{7.13}). Then a functor
+$F:C\rightarrow (\Ens)$ is representable if and only if $F$ commutes
+with small projective limits.
+\end{enonce*}
+Necessity is clear. For sufficiency, apply
+\hyperref[I.prop8.12.5]{8.12.5} to the opposite category $C^\circ$. To
+prove first that $F$ is (strictly) pro-representable, it remains to show
+that every pair $(X,u)$, $X\in \Ob C$ and $u\in F(X)$, is dominated by
+a ``minimal'' pair. Now the family $(X_i)_{i\in I}$ of \emph{strict}
+subobjects of $X$ such that
+$u\in\Iim(F(X_i)\rightarrow F(X))$ is small
+(\hyperref[I.cor7.5]{7.5} in dual form). Since $F$ is left exact, this
+family is cofiltered (\hyperref[I.rem8.12.6]{8.12.6}), and since $F$
+commutes with small projective limits, one sees that
+$X'=\varprojlim_i X_i$ is a least object of this family. (Use the fact
+that, being left exact, $F$ carries monomorphisms to monomorphisms.) If
+$u'\in F(X')$ is the unique element whose image in $F(X)$ is $u$, one
+then sees that $(X',u')$ is a minimal pair dominating $(X,u)$. This
+proves that $F$ is pro-representable, and the conclusion then follows
+from the
+
+\begin{enonce*}{Lemma 8.12.8.1}\etiquette[8.12.8.1]{I.lem8.12.8.1}
+Let $F:C\rightarrow(\Ens)$ be a functor, where $C$ is a $𝒰$-category
+in which small projective limits are representable. For $F$ to be
+representable, it is necessary and sufficient that it be
+pro-representable and commute with small projective limits.
+\end{enonce*}
+
+Necessity\pageoriginale is clear; let us prove sufficiency. To say that
+$F$ is representable evidently means that ${}_F\backslash C$ admits an
+initial object (in fact, the initial objects of ${}_F\backslash C$ are
+precisely the isomorphisms $F\rightarrow X$, \ie the representation
+data for $F$). Now, since $F$ is pro-representable,
+$({}_F\backslash C)^\circ$ is filtered and equivalent to a small
+category, so $X=\varprojlim_{({}_F\backslash C)^\circ} X$ is
+representable in $C$, and since $F$ commutes with the limit under
+consideration, it follows that $X$ is an initial object of
+${}_F\backslash C$, \cqfd
+
+\begin{enonce*}{Corollary 8.12.8}\etiquette[8.12.8]{I.cor8.12.8}
+Under the hypotheses on $C$ of $\hyperref[I.cor8.12.7]{8.12.7}$, let $f:C\rightarrow C'$ be a
+functor from $C$ to a $𝒰$-category $C'$. For $f$ to admit a left
+adjoint, it is necessary and sufficient that $f$ commute with small
+projective limits.
+\end{enonce*}
+
+Indeed, this reduces immediately to \hyperref[I.cor8.12.7]{8.12.7}, by
+applying that statement to composite functors of the form
+$X\mapsto \Hom(Y',f(X))$.
+
+\begin{enonce*}[remark]{Examples 8.12.9}\etiquette[8.12.9]{I.exer8.12.9}
+As was pointed out in \hyperref[I.exem7.13]{7.13}, the hypotheses on
+$C$ in \hyperref[I.cor8.12.7]{8.12.7} and
+\hyperref[I.cor8.12.8]{8.12.8} are satisfied if $C$ is the category of
+$𝒰$-sheaves of sets on a topological space $X\in 𝒰$ (or, more
+generally, on a $𝒰$-site (II \hyperref[II.def3.0.2]{(3.0.2)}). We give an instructive
+example\footnote[1]{(due to H. BASS).} showing that the hypothesis of
+the existence of a small cogenerating subcategory $D$ of $C$ is not
+superfluous in \hyperref[I.cor8.12.7]{8.12.7}. Take for $C$ the
+category of groups that are elements of $𝒰$. Let $J$ be the set of
+isomorphism classes of simple groups in $C$; for every $j\in J$ choose
+a simple group $G_j$ in the class $j$, and let $I$ be the filtered
+ordered set of $𝒰$-small subsets of $J$, and, for $i\in I$, let
+$X_i=\amalg_{j\in i}G_j$. The $X_i$ then form a\pageoriginale
+projective system $(X_i)_{i\in I}$ in $C$, whose transition morphisms
+are epimorphisms, and the corresponding functor
+\begin{equation}
+F(X)=\varinjlim_i \Hom(X_i,X)\tag{$\ast$}
+\end{equation}
+takes its values in $(𝒰\text{-}\Ens)$ (although the index set $I$
+clearly does not have cardinality in $𝒰$); more precisely, let us show
+that for every small full subcategory $C_\circ$ of $C$, there exists an
+$i_\circ\in I$ such that the restriction of $F$ to $C_\circ$ is
+represented by $X_{i_\circ}$, which will prove both that $F$ takes
+values in $𝒰\text{-}\Ens$ and that it commutes with small projective
+limits. To prove our assertion, it suffices to note that for every
+$X\in \Ob C_\circ$, the cardinality of the set $J(X)$ of $j\in J$ for
+which there exists a nontrivial homomorphism from $G_j$ to $X$ is
+necessarily small, since such a morphism is necessarily a monomorphism
+($G_j$ being simple); consequently, if $i_\circ$ is the subset of $J$
+given by the union of the $J(X)$ for $X\in\ob C_\circ$, then $i_\circ$
+is small, \ie $i_\circ\in I$, and it has the required property. On the
+other hand, it is clear that $F$ is not representable, since
+$\card I\not\in 𝒰$. From this and \hyperref[I.cor8.12.7]{8.12.7} one therefore concludes that
+\emph{the category $C$ of groups in $𝒰$ admits no small full
+cogenerating subcategory.} Since, on the other hand, the object $\ZZ$
+of $C$ is a generator, it then follows from the proof of
+\hyperref[I.cor7.12]{7.12} that there exists a two-generator group $G$
+that cannot be embedded in an injective object of the category $C$ of
+groups in $𝒰$. It moreover seems plausible that $C$ has no injective
+objects other than the trivial groups.
+\end{enonce*}
+

@@ -1,0 +1,199 @@
+\subsection{First properties of the closed subtopos
+$\mathcal{F}$ and of $i:\mathcal{F}\rightarrow
+E$}\etiquette[9.4]{IV.subsec9.4}
+
+\begin{enonce*}{Proposition 9.4.1}\etiquette[9.4.1]{IV.prop9.4.1}
+The notation is that of \hyperref[IV.subsubsec9.3.2]{9.3.2} and
+\hyperref[IV.prop9.3.4]{9.3.4}.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $i_{\ast}:\mathcal{F}\rightarrow E$ carries
+epimorphic families to epimorphic families. It commutes with the
+formation of amalgamated sums and filtered inductive limits.
+
+\item For every object $X$ of $E$ such that the projection morphism
+$U\times X\rightarrow U$ is an epimorphism, the adjunction morphism
+$X\rightarrow i_{\ast}i^{\ast}X$ is an epimorphism.
+
+\hypertarget{sga4.exp.IV.proposition.9.4.1.item.c}{}\item The\pageoriginale pair of functors $(i^{\ast},j^{\ast})$ from
+$E$ to $\mathcal{F}$ and $\mathcal{U}$, respectively, is
+conservative {\rm(I \hyperref[I.def6.1]{6.1})}, \ie a morphism $m$ of $E$ is an
+isomorphism if and only if $i^{\ast}(m)$ and $j^{\ast}(m)$ are
+isomorphisms (equivalently, the pair $(i^{\ast},j^{\ast})$ is
+faithful (\hyperref[IV.subsubsec6.4.0]{6.4.0})).
+
+\item The gluing functor
+$\rho=i^{\ast}j_{\ast}:\mathcal{U}\rightarrow\mathcal{F}$ is left
+exact and accessible {\rm(\hyperrefext[I][I.def9.2]{9.2})}, or
+equivalently {\rm(\hyperrefext[I][I.sec8]{8})} it admits a pro-adjoint
+$\sigma:\Pro\mathcal{F}\rightarrow\Pro\mathcal{U}$.
+\end{enumerate}
+\end{enonce*}
+
+\noindent \emph{Proof}: a) follows from \hyperref[IV.prop9.3.3]{9.3.3} c). For b), it suffices
+to use the definition \eqhyperref[IV.eq9.3.2.2]{9.3.2.2} of
+$X_{\complement U}$, taking into account that
+$i_{\ast}i^{\ast}X=X_{\complement U}$
+(\hyperref[IV.prop9.3.4]{9.3.4}). Assertion c) follows from
+\hyperref[IV.prop9.3.3]{9.3.3} b). The functors $i^{\ast}$ and
+$j_{\ast}$ are left exact, and hence so is $\rho$. The functor
+$j_{\ast}$ is a direct-image functor for a morphism of topoi and is
+therefore accessible (\hyperrefext[I][I.prop9.5]{9.5}); note that a
+topos is an accessible category
+(\hyperrefext[I][I.rem9.11.3]{9.11.3}). Since the functor $i^{\ast}$
+commutes with inductive limits (it is an inverse-image functor), the
+functor $\rho$, being a composite of two accessible functors, is
+accessible.
+
+\begin{enonce*}{Proposition 9.4.2}\etiquette[9.4.2]{IV.prop9.4.2}
+Let $E'$ be a topos. Then the functor $h\mapsto i\circ h$,
+$$
+\Hhomtop(E',\mathcal{F})\longrightarrow \Hhomtop(E',E),
+$$
+is fully faithful, and its essential image consists of the morphisms
+of topoi $g:E'\rightarrow E$ such that $g^{\ast}(U)$ is an initial
+object $\phi_{E'}$ of $E'$.
+\end{enonce*}
+
+By \hyperref[IV.prop9.1.4]{9.1.4}, the functor in question is fully
+faithful, and $g$ belongs to its essential image if and only if, for
+every object $X'$ of $E'$, the object $g_{\ast}(X')$ of $E$ belongs
+to $\mathcal{F}$, \ie if
+\begin{equation*}
+j^{\ast}(g_{\ast}(X'))\simeq e_{\mathcal{U}}\text{ for every }X'\in
+\Ob E'{\quoi}.\tag{*}
+\end{equation*}
+Put $U'=g^{\ast}(U)$ and consider the diagram of topoi
+\[
+\xymatrix@C=1.5cm{
+E'_{/U'}\ar[r]^{j'} \ar[d]_{g_U}& E'\ar[d]^{g}\\
+E_{/U}   \ar[r]^{j}             & E\quad , }
+\]
+There\pageoriginale is plainly a canonical isomorphism
+$$
+j^{\ast}(g_{\ast}(X'))\simeq g_{U\ast}({j'}^{\ast}(X')){\quoi}.
+$$
+The functor ${j'}^{\ast}$ is also plainly essentially surjective, so
+condition (*) is equivalent to
+\begin{equation*}
+g_{U\ast}(Y')\simeq e_{\mathcal{U}}\text{ for every }Y'\in\Ob
+E'_{/U'}{\quoi}.\tag{**}
+\end{equation*}
+Using the adjunction between $g_{U\ast}$ and $g_U^{\ast}$, one sees
+immediately that this means that $g_U^{\ast}(Y)$ is an initial object
+of $E'_{/U'}$ for every object $Y$ of $E_{/U}$; or, using the fact
+that the initial object of $E'_{/U'}$ is strict
+(\hyperrefext[II][II.def4.5]{4.5}), that it suffices for this to hold
+for $Y=e_{\mathcal{U}}$, the terminal object of $\mathcal{U}$. But
+this also means that the terminal object $U'$ of $E'_{/U'}$ is
+initial, which is manifestly equivalent to $U'$ being an initial
+object $\phi_{E'}$ of $E'$, \cqfd
+
+\begin{enonce*}{Corollary 9.4.3}\etiquette[9.4.3]{IV.cor9.4.3}
+Let $g:E'\rightarrow E$ be a morphism of topoi, let
+$U'=g^{\ast}(U)$, let $\mathcal{U}'=E'_{/U'}$, and let
+$\mathcal{F}'$ be the closed subtopos of $E'$ complementary to the
+open $U'$; finally, let $i':\mathcal{F}'\rightarrow E'$ be the
+inclusion morphism. Then the morphism of topoi
+$g\circ i':\mathcal{F}'\rightarrow E$ factors, up to isomorphism,
+through a morphism of topoi
+$g_{\mathcal{F}}:\mathcal{F}'\rightarrow\mathcal{F}$, and the
+corresponding diagram of topoi
+\[\vcenter{
+\xymatrix@=.5cm{ \Ff' \ar[rr]^{i'}\ar[dd]_{g_{\Ff}}  &&
+E'\ar[dd]^{g}
+\\
+                          &            &  \\
+\Ff  \ar[rr]^(.4){i}  &  \ar@/^.5pc/[ru]  &   E }}\leqno{(9.4.3.1)}
+\]\etiquette[9.4.3.1]{IV.eq9.4.3.1}
+is $2$-Cartesian {\rm(\cf \hyperref[IV.prop5.11]{5.11}).}
+\end{enonce*}
+
+This follows formally from \hyperref[IV.prop9.4.2]{9.4.2} and the
+definitions.
+
+With the terminology introduced in \hyperref[IV.exer9.1.6]{9.1.6}
+d), one may therefore say in particular that the inverse image under
+a morphism of topoi $g:E'\rightarrow E$ of a \emph{closed} subtopos
+$\mathcal{F}$ of $E$ is a \emph{closed} subtopos $\mathcal{F}'$ of
+$E'$ (namely the closed subtopos complementary to the open
+$U'=g^{\ast}(U)$, where $U$ is the open of $E$ complementary to
+$\mathcal{F}$).
+
+\begin{enonce*}{Corollary 9.4.4}\etiquette[9.4.4]{IV.cor9.4.4}
+Let $E$ be a topos, $\mathcal{U}$ an open subtopos of $E$, and
+$\mathcal{F}$ the complementary closed subtopos.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item One has\pageoriginale
+$$
+\mathcal{U}\cap\mathcal{F}\approxeq\Top(∅)\quav
+\mathcal{U}\vee\mathcal{F}=E{\quoi},
+$$
+where $\vee$ denotes the $\Sup$ in the set of all subtopoi of $E$
+{\rm(\hyperref[IV.rem9.1.2]{9.1.2} c))}. (In the terminology
+introduced in \hyperref[IV.exer9.1.13]{9.1.13}, $\mathcal{U}$ and
+$\mathcal{F}$ are complementary subtopoi of $E$.)
+
+\item $\mathcal{U}$ (\resp $\mathcal{F}$) is the largest among the
+subtopoi $E'$ of $E$ such that
+$E'\cap\mathcal{F}\approxeq\Top(∅)$ (\resp
+$\mathcal{U}\cap E'\approxeq\Top(∅)$).
+\end{enumerate}
+\end{enonce*}
+
+\noindent \emph{Proof.}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The first relation amounts to saying that if $E'$ is a topos
+and $g:E'\rightarrow E$ is a morphism of topoi factoring, up to
+isomorphism, through both $\mathcal{U}$ and $\mathcal{F}$, then
+$E'\approxeq\Top(∅)$. By \hyperref[IV.subsubsec9.2.5]{9.2.5} and
+\hyperref[IV.prop9.4.2]{9.4.2}, the hypothesis means that
+$g^{\ast}(U)$ is both an initial and a terminal object of $E'$, which
+proves the assertion. For the second relation, note that by
+\hyperref[IV.exer9.1.7.2]{9.1.7.2} e) it is equivalent to
+\hyperref[IV.prop9.4.1]{9.4.1} c).
+
+\item Suppose that $E'\cap\mathcal{F}\approxeq\Top(∅)$. By \hyperref[IV.cor9.4.3]{9.4.3},
+$E'\cap\mathcal{F}$ is equivalent to the subtopos of $E'$
+complementary to $g^{\ast}(U)$, where $g:E'\rightarrow E$ is the
+inclusion morphism. Thus the condition means that
+$U'=g^{\ast}(U)$ is a terminal object of $E'$, \ie
+(\hyperref[IV.subsubsec9.2.5]{9.2.5}) that
+$E'\subset\mathcal{U}$. Suppose that
+$\mathcal{U}\cap E'\approxeq\Top(∅)$. By
+\hyperref[IV.prop5.11]{5.11}, $\mathcal{U}\cap E'$ is equivalent to
+$E'_{/U'}$, so the condition means that $U'$ is an initial object of
+$E'$, \ie (\hyperref[IV.prop9.4.2]{9.4.2}) that
+$E'\subset\mathcal{F}$.
+\end{enumerate}
+
+\begin{enonce*}{Corollary 9.4.5}\etiquette[9.4.5]{IV.cor9.4.5}
+Let $(\mathcal{F}_i)_{i\in I}$ be a family of closed subtopoi of the
+topos $E$, and for every $i\in I$ let $U_i$ be the open of $E$
+complementary to $\mathcal{F}_i$. Then the intersection of the
+$\mathcal{F}_i$ as subtopoi of $E$
+(\hyperref[IV.prop9.1.3]{9.1.3}) is a closed subtopos whose
+complementary open is $U=\Sup_iU_i$.
+\end{enonce*}
+
+This follows formally from the universal property of the
+intersection as a 2-product and from
+\hyperref[IV.prop9.4.2]{9.4.2}, taking into account that for a
+morphism of topoi $g:E'\rightarrow E$,
+$g^{\ast}(U)=\Sup_i g^{\ast}(U_i)$ is an initial object if and only
+if all the $g^{\ast}(U_i)$ are initial.
+
+Similarly one proves:
+
+\begin{enonce*}{Corollary 9.4.6}\etiquette[9.4.6]{IV.cor9.4.6}
+With the notation of \hyperref[IV.cor9.4.5]{9.4.5}, suppose that $I$ is finite. Then the
+supremum\pageoriginale of the subtopoi $\mathcal{F}_i$ of $E$
+{\rm(\hyperref[IV.rem9.1.2]{9.1.2} c))} is a closed subtopos of $E$,
+whose complementary open is $\bigcap_iU_i$.
+\end{enonce*}
+

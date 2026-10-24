@@ -1,0 +1,284 @@
+\subsection{Relations between the small and large topoi associated with
+a topological space $X$}\etiquette[4.10]{IV.subsec4.10}
+
+We retain the notation of \hyperref[IV.subsec2.5]{2.5}. In particular,
+$𝒱$ is a universe such that $𝒰\in 𝒱$. We depart
+from the convention of \hyperref[IV.subsec2.1]{2.1} by using
+$\Top(X)$ to denote the topos of $𝒱$-sheaves (rather than
+$𝒰$-sheaves) on $X$. Thus, we shall work with
+$𝒱$-topoi and not $𝒰$-topoi. (NB it would be
+possible to retain $𝒰$-topoi by adopting the appropriate
+convention for the definition of $\TOP(X)$, so that the latter is a
+$𝒰$-topos, \cf \hyperref[IV.subsec2.5]{2.5}). With this understood,
+we shall define TWO morphisms of topoi
+\begin{equation*}
+\begin{cases}
+ f: \Top(X)\longrightarrow \TOP(X)\\
+ g: \TOP(X)\longrightarrow \Top(X)\quav gf\simeq \id_{\Top(X)}{\quoi},
+\end{cases}\tag{4.10.1}
+\end{equation*}\etiquette[4.10.1]{IV.eq4.10.1}
+giving rise to a sequence of three adjoint functors
+\begin{equation*}
+g^{\ast}=f_{!}\quav g_{\ast}=f^{\ast}\quav
+g^{!}=f_{\ast}{\quoi},\tag{4.10.1.1}
+\end{equation*}\etiquette[4.10.1.1]{IV.eq4.10.1.1}
+with the notation of \hyperref[IV.subsubsec3.1.3]{3.1.3}. We shall
+successively define the\pageoriginale first two functors in this
+sequence, the third then being defined as the right adjoint of the
+second.
+
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[4.10.2]{IV.subsubsec4.10.2}
+The functor
+$$
+g_{\ast}=f^{\ast}:\TOP(X)\longrightarrow \Top(X)
+$$
+is defined simply as the \emph{restriction functor} from
+$(\Esp)_{/X}$ to the site $\Ouv(X)$ of open subsets of $X$; it does
+indeed take sheaves to sheaves, as follows immediately from the
+definition. Using underlined letters for sheaves on the large site of
+$X$, for such a sheaf $\underline{F}$ we denote by
+$\underline{F}_X$ its restriction to the site $\Ouv(X)$, thereby
+obtaining a functor
+\begin{equation*}
+\Restr:\underline{F}\longmapsto \underline{F}_X:\TOP(X)\longrightarrow
+\Top(X){\quoi}.\tag{4.10.2.1}
+\end{equation*}\etiquette[4.10.2.1]{IV.eq4.10.2.1}
+It is clear that this functor commutes with $𝒱$-projective
+limits, since these are computed pointwise (one could also invoke the
+existence of the left adjoint constructed in
+\hyperref[IV.subsubsec4.10.4]{4.10.4} below). I claim that it also
+commutes with $𝒱$-inductive limits. To see this, we shall give a
+very convenient interpretation of ``large'' sheaves on $X$, \ie of
+objects of $\TOP(X)$, in terms of ordinary sheaves (NB these are
+$𝒱$-sheaves) on topological spaces $X'$ over~$X$.
+
+\subsubsection{}\etiquette[4.10.3]{IV.subsubsec4.10.3}
+For a large sheaf $\underline{F}$ on $X$, and for every space $X'$
+over $X$ (understood that $X'\in 𝒰$), one defines in the
+obvious way, as in \hyperref[IV.subsubsec4.10.2]{4.10.2}, the
+``small'' sheaf $\underline{F}_{X'}$, the restriction of
+$\underline{F}$ to $X'$. If
+$$
+u:X''\longrightarrow X'
+$$
+is\pageoriginale a morphism in $(\Esp)_{/X}$, one then defines in
+the obvious way a morphism
+$u_{\ast}(\underline{F}_{X''})\rightarrow \underline{F}_{X'}$, or,
+what amounts to the same thing, a ``\emph{transition morphism}''
+\begin{equation*}
+\varphi_u :u^{\ast}(\underline{F}_{X'})\longrightarrow
+\underline{F}_{X''}{\quoi}. \tag{4.10.3.1}
+\end{equation*}\etiquette[4.10.3.1]{IV.eq4.10.3.1}
+As $u$ varies, these morphisms satisfy an evident transitivity
+condition for a composite
+$$
+X'''\xrightarrow{u}X''\xrightarrow{v}X'
+$$
+of morphisms in $(\Esp)_{/X}$, whose explicit formulation is left to
+the reader. In this way one obtains a natural functor from the
+category $\TOP(X)$ of large sheaves on $X$ to the category of systems
+$$
+(\underline{F}_{X'})\quad(X'\in \ob (\Esp)_{/X}), (\varphi_u)\quad(u\in
+Fl(\Esp)_{/X}){\quoi},
+$$
+satisfying the transitivity condition just described and, in
+addition, such that for every morphism $u:X''\rightarrow X'$ which is
+an \emph{open immersion} (or, more generally, a local homeomorphism),
+the transition morphism $\varphi_u$ is an isomorphism. Since the
+functors $u^{\ast}:\Top(X')\rightarrow \Top(X'')$ used to describe
+the $\varphi_u$ commute with $𝒱$-inductive limits, it follows at
+once that, in the preceding description of the objects of $\TOP(X)$
+in terms of ``small'' sheaves $F_{X'}$, $𝒱$-inductive limits are
+computed pointwise, \ie the functors of the form
+$\underline{F}\rightarrow \underline{F}_{X'}$ commute with
+$𝒱$-inductive limits.
+
+In particular, this holds for the functor $\underline{F}\mapsto
+\underline{F}_X$ considered in \hyperref[IV.subsubsec4.10.2]{4.10.2}.
+It therefore does have a right adjoint (\hyperref[IV.cor1.5]{1.5}). It
+remains to construct a left adjoint (whose existence also follows a
+priori from \hyperref[IV.rem1.8]{1.8}) and to verify that the latter is
+left exact. This\pageoriginale will complete the definition of the
+morphisms of topoi announced in \eqhyperref[IV.eq4.10.1]{4.10.1} in
+terms of the functors \eqhyperref[IV.eq4.10.1.1]{4.10.1.1}.
+
+\subsubsection{}\etiquette[4.10.4]{IV.subsubsec4.10.4}
+The functor
+$$
+g^{\ast}=f_{!}:\Top(X)\longrightarrow \TOP(X)
+$$
+is obtained by associating with every small sheaf $F$ on $X$ the
+system of its inverse images $(F_{X'})$, $X'\in \ob (\Esp)_{/X}$,
+under the structural morphisms $X'\rightarrow X$, the transition
+morphism $\varphi_u$ for $u:X''\rightarrow X'$ being the transitivity
+isomorphism for inverse images of sheaves
+(\hyperref[IV.subsubsec4.1.1]{4.1.1}). One sees at once that this
+gives a functor
+$$
+\Prol:\Top(X)\longrightarrow \TOP(X){\quoi},
+$$
+which is \emph{fully faithful}, and whose essential image consists of
+the large sheaves $ℱ$ on $X$ for which all the transition
+morphisms $\varphi_u$ of \sisi{4.11.3}{\eqhyperref[IV.eq4.10.3.1]{4.10.3.1}}
+are isomorphisms. We leave to the reader the task of defining an
+adjunction isomorphism between this canonical prolongation functor and
+the restriction functor of \hyperref[IV.subsubsec4.10.2]{4.10.2},
+proving that the latter is right adjoint to the former. This is
+immediate from the description in \hyperref[IV.subsubsec4.10.3]{4.10.3}
+of the category $\TOP(X)$.
+
+\begin{enonce*}[remark]{Remarks 4.10.5}\etiquette[4.10.5]{IV.rem4.10.5}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The construction in \hyperref[IV.subsubsec4.10.4]{4.10.4}
+also shows that $g^{\ast}=f_{!}$ is fully faithful (or, what amounts
+to the same thing, that $g_{\ast}=f^{\ast}$ is a localization
+functor, or again that $g^{!}=f_{\ast}$ is fully faithful). The large
+sheaves on $X$ belonging to the essential image of the functor
+$g^{\ast}=f_{!}=\Prol$ deserve the name of large \emph{étale
+sheaves} on $X$, since they form a category equivalent to the category
+of ordinary sheaves on $X$, or again to that of étale spaces
+over\pageoriginale $X$. It is moreover easy to see that if $X'$ is a
+topological space over $X$, then the large sheaf on $X$ represented by
+it is étale in the preceding sense if and only if $X'$ is an étale
+space over $X$.
+
+\item The full faithfulness of $f_{\ast}$ may also be expressed by
+saying that the adjunction morphism
+$f^{\ast}f_{\ast}\rightarrow \id_{\Top(X)}$ is an isomorphism, \ie
+that $g_{\ast}f_{\ast}\simeq \id$, \ie that $gf\simeq \id$. Thus $g$
+makes $\TOP(X)$ into a \emph{topos over} $\Top(X)$, admitting a
+``section'' $f$ over $\Top(X)$.
+
+\item The fact that the functor $g^{\ast}=f_{!}$ is fully faithful,
+exact, and commutes with $𝒱$-inductive limits partially justifies
+the very convenient point of view (due to J. \textsc{Giraud})
+according to which, in practically all questions in the theory of
+sheaves on $X$, it is harmless to replace the usual sheaves, or
+``small'' sheaves, by the associated ``large'' sheaves. This applies
+in particular to cohomological questions, since $g_{\ast}$ is exact,
+the functors $R^i g_{\ast}$ (\sisi{V\quad}{\hyperrefext[V][V.sec5]{5}})
+vanish for $i>0$, and hence (\sisi{V\quad}{\hyperrefext[V][V.prop5.4]{5.4}})
+for every \emph{large} sheaf $ℱ$ on $X$ there are canonical
+isomorphisms
+$$
+H^i(\TOP(X),ℱ)\simeq H^i(\Top(X),
+ℱ_X)=H^i(X,F){\quoi}.
+$$
+Applying this to a sheaf of the form $\Prol(F)$, where $F$ is a small
+sheaf on $X$, we obtain (since $\Prol(F)_X\simeq F$ canonically) a
+canonical isomorphism
+$$
+H^i(X,F)=H^i(\TOP(X), \Prol(F)){\quoi}.
+$$
+Thus, \emph{the cohomological invariants of $X$, computed by means of
+the small or the large topos of $X$, are essentially identical.} The
+same result is moreover valid in noncommutative cohomology.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 4.10.6}\etiquette[4.10.6]{IV.exer4.10.6}
+Let\pageoriginale $S$ be a $𝒰$-site whose topology is
+coarser than the canonical topology, and let $\underline{M}$ be a
+subset of $Fl$ $S$ satisfying the following conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The morphisms of $ℳ$ are pullbackable
+(\sisi{\hyperrefext[I][I.sec10.3]{10.3}}{\hyperrefext[I][I.sec10.7]{10.7}}),
+and $\underline{M}$ is stable under base change.
+
+\item $\underline{M}$ contains the identity arrows and is stable under
+composition.
+
+\item An arrow $u:X\rightarrow Y$ such that there exists a covering
+family $Y_i\rightarrow Y$, with the arrows
+$\fprod{X}{Y_i}{Y}\rightarrow Y_i$ in $\underline{M}$, itself belongs
+to $\underline{M}$.
+
+\item For every $X\in \ob S$, every covering family of $X$ is refined
+by a covering family $(f_i:X_i\rightarrow X)$, with
+$f_i\in \underline{M}$.
+\end{enumerate}
+
+For every $X\in \ob S$, consider the site $S(X)$ (the ``small site of
+$X$''), whose underlying category is the full subcategory of
+$S_{/X}$ consisting of the objects whose structural morphism belongs
+to $\underline{M}$, endowed with the topology induced
+(\hyperrefext[III][III.subsec3.1]{3.1}) by that of $S$.
+\begin{itemize}
+\item[$1^{\circ})$] For every arrow $u:X\rightarrow Y$ of $S$, show
+that base change by $u$ from $S(Y)$ to $S(X)$ is a continuous
+functor, hence gives a functor commuting with inductive limits
+(\sisi{III}{\hyperrefext[III][III.prop1.2]{1.2} iv)})
+$$
+S(u)^x:S(Y)^{\sim}\longrightarrow S(X)^{\sim}{\quoi}.
+$$
+
+\item[$2^{\circ})$] Define an equivalence between the topos
+$S^{\sim}$ and the category of systems
+$$
+(F_X)\quad (X\in \ob S)\quav (\varphi_u)\quad (u\in Fl S)
+$$
+consisting\pageoriginale of objects $F_X\in \ob S(X)^{\sim}$ and,
+for every arrow $u:X\rightarrow Y$ in $S$, of a morphism
+$\varphi_u:S(u)^x(F_Y)\rightarrow F_X$, these systems being subject
+to a transitivity condition for a composite $v\circ u$ of arrows of
+$S$, and to the condition that $u\in \underline{M}$ imply that
+$\varphi_u$ is an isomorphism.
+
+\item[$3^{\circ})$] Define ``restriction'' and ``prolongation''
+functors
+$$
+\Res_X:(S_{/X})^{\sim}\longrightarrow S(X)^{\sim},
+\Prol_X:S(X)^{\sim}\longrightarrow (S_{/X})^{\sim}
+$$
+
+Show that $\Res_X$ commutes with small inductive and projective limits
+and that $\Prol_X$ is \emph{fully faithful}, its essential image
+consisting of the sheaves $F$ such that $\varphi_u$ is an isomorphism
+for every arrow $u$ of $S_{/X}$.
+
+\item[$4^{\circ})$] Define an adjunction morphism making $\Res_X$ the
+right adjoint of $\Prol_X$. Deduce that there exists a morphism of
+topoi
+$$
+f:S(X)^{\sim}\rightarrow (S_{/X})^{\sim}{\quoi}
+$$
+making $S(X)^{\sim}$ a subtopos of $(S_{/X})^{\sim}$ and such that
+\begin{align*}
+f_{!} &= \Prol_X\\
+f^x &= \Res_X{\quoi}.
+\end{align*}
+
+Show that $\Prol_X$ takes abelian sheaves to abelian sheaves.
+
+\item[$5^{\circ})$] Show that if $S(X)$ admits fiber products, then
+$\Prol_X$ is exact. Deduce that there then exists a morphism of topoi
+$g:(S_{/X})^{\sim}\rightarrow S(X)^{\sim}$ which is a left retraction
+of $f$, \ie such that
+\begin{align*}
+g^x &= \Prol_X\\
+g_x &= \Res_X{\quoi}.
+\end{align*}
+(For\pageoriginale an example in which $S(X)$ does not admit fiber
+products, take for $S$ the category of schemes endowed with the étale
+topology, for $M$ the smooth morphisms, and for $X$ a Noetherian
+scheme of dimension $>0$.)
+
+\item[$6^{\circ})$] Show that for every abelian sheaf $F$ of
+$(S_{/X})^{\sim}$ there is an isomorphism
+$$
+H^q(X,F)\simeq H^q(X,\Res_X F)\qquad \forall q{\quoi}.
+$$
+Show, using hypercoverings for example, that for every abelian sheaf
+$G$ of $S(X)^{\sim}$ there is an isomorphism
+$$
+H^q(X,G)\simeq H^q(X,\Prol_X G)\qquad \forall q{\quoi}.
+$$
+
+\item[$7^{\circ})$] Buy a chocolate medal for the editor.
+\end{itemize}
+\end{enonce*}

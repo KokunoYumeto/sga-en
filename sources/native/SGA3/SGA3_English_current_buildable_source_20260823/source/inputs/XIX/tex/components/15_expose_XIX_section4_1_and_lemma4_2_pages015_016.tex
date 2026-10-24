@@ -1,0 +1,132 @@
+\SGASection{4}{Roots and vector group schemes}
+\SGARefTarget{sga3:xix:section:4}
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:xix:paragraph:4-1}4.1.}---
+Let \(S\) be a scheme and let \(F\) be a finite locally free
+\(\mathcal O_S\)-module.  The \(S\)-scheme \(\mathbb W(F)\) is smooth
+over \(S\).  Its Lie algebra is canonically isomorphic to \(F\).
+Indeed, there is a canonical isomorphism
+\[
+  \mathbb W(F)
+  \xrightarrow{\ \sim\ }
+  \operatorname{Lie}(\mathbb W(F)/S)
+  =
+  \mathbb W\bigl(\operatorname{Lie}(\mathbb W(F)/S)\bigr)
+\]
+\textup{(\SGARefLink{sga3:ii:corollary:4-4-1}{Exposé II, 4.4.1} and \SGARefLink{sga3:xix:scholium:4-4-2}{4.4.2})}.  We shall always identify
+\(F\) with \(\operatorname{Lie}(\mathbb W(F)/S)\).
+\SGARefTarget{sga3:xix:paragraph:4:1}
+
+\par\medskip\noindent
+\textbf{\textit{\SGARefLink{sga3:xix:lemma:4:2}{Lemma 4.2}.}}---
+\textit{Let \(S\) be a scheme and let \(V\) be a vector bundle over
+\(S\), smooth over \(S\).  There is then a unique isomorphism of
+\(\mathcal O_S\)-modules}
+\[
+  \exp\colon
+  \mathbb W\bigl(\operatorname{Lie}(V/S)\bigr)
+  \xrightarrow{\ \sim\ } V
+\]
+\textit{which induces the identity on Lie algebras.}
+\footnote{Editor's note: the proof in the original edition has been
+retained; it may also be expanded as follows.
+
+Let \(\mathscr F\) be a quasi-coherent \(\mathcal O_S\)-module and put
+\(V=\mathbb V(\mathscr F)\).  Write \(\pi\colon V\to S\) for the
+projection and \(\epsilon\colon S\to V\) for the zero section.  Then
+\(\Omega^1_{V/S}=\pi^*\mathscr F\), whence
+\[
+  \tag{1}\label{sga3:xix:paragraph:4-1:equation:1}
+  \omega^1_{V/S}
+  =
+  \epsilon^*\Omega^1_{V/S}
+  \simeq
+  \epsilon^*\pi^*\mathscr F
+  \simeq
+  \mathscr F,
+\]
+and therefore
+\(\operatorname{Lie}(V/S)=(\omega^1_{V/S})^\vee
+\simeq\mathscr F^\vee\).
+If \(V\) is smooth over \(S\), then by \textup{(1)}
+\(\mathscr F\) is finite locally free, and hence
+\[
+  \tag{2}\label{sga3:xix:paragraph:4-1:equation:2}
+  V=\mathbb V(\mathscr F)
+  \simeq
+  \mathbb W(\mathscr F^\vee)
+  \simeq
+  \mathbb W\bigl(\operatorname{Lie}(V/S)\bigr).
+\]
+Now let \(U\) be an \(S\)-scheme equipped with a section
+\(\tau\colon S\to U\), and suppose that an isomorphism
+\(\phi\colon V\xrightarrow{\sim}U\) of pointed \(S\)-schemes has been
+given, that is, \(\phi\circ\epsilon=\tau\) \textup{(for example, when
+\(U\) is an \(S\)-group)}.  Then \(\phi\) induces an isomorphism
+\[
+  d\phi\colon
+  \mathscr F^\vee
+  \xrightarrow{\ \sim\ }
+  \operatorname{Lie}(U/S),
+\]
+and therefore an isomorphism \(\psi\) displayed by
+\[
+\begin{tikzcd}[
+  ampersand replacement=\&,
+  column sep=huge,
+  row sep=large
+]
+  \mathbb W(\mathscr F^\vee)
+    \arrow[r,equal]
+  \&
+  \mathbb V(\mathscr F)
+    \arrow[r,"\phi","\sim"']
+  \&
+  U
+  \\
+  \&
+  \mathbb W\bigl(\operatorname{Lie}(U/S)\bigr)
+    \arrow[ul,"\sim","\mathbb W(d\phi^{-1})"']
+    \arrow[ur,"\sim","\psi"']
+  \&
+\end{tikzcd}
+\]
+which identifies \(U\) with
+\(\mathbb W(\operatorname{Lie}(U/S))\).  Since the functor
+\(\mathbb W\) is fully faithful, there is a unique isomorphism
+\[
+  \exp\colon
+  \mathbb W\bigl(\operatorname{Lie}(U/S)\bigr)
+  \xrightarrow{\ \sim\ }U
+\]
+such that
+\(\operatorname{Lie}(\psi^{-1}\circ\exp)=\operatorname{id}\).
+In fact, one sees directly that
+\(\operatorname{Lie}(\psi)=\operatorname{id}\), so that
+\(\exp=\psi\).}
+\SGARefTarget{sga3:xix:lemma:4:2}
+
+\SGAProof{Proof}
+We have \(V=\mathbb V(\mathscr F)\) for some quasi-coherent
+\(\mathcal O_S\)-module \(\mathscr F\).  Since \(V\) is smooth over
+\(S\), the module
+\(\mathscr F\simeq\omega^1_{V/S}\) is finite locally free, and hence
+\[
+  \operatorname{Lie}(V/S)
+  =
+  \mathbb V(\omega^1_{V/S})
+  \simeq
+  \mathbb W\bigl(\operatorname{Lie}(V/S)\bigr).
+\]
+Moreover, by Exposé II, loc.\ cit., there is a canonical isomorphism
+\[
+  V
+  \xrightarrow{\ \sim\ }
+  \operatorname{Lie}(V/S)
+  \simeq
+  \mathbb W\bigl(\operatorname{Lie}(V/S)\bigr),
+\]
+and the uniqueness of \(\exp\) follows at once because
+\(\mathbb W\) is fully faithful.
+\hfill\(\square\)

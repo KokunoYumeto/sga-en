@@ -1,0 +1,15 @@
+\renewcommand{\thefootnote}{\roman{footnote}} % pour mettre les notes en bas de page sous la forme (ii) et non (2), qui ressemble trop (?) a un exposant.
+
+\newcounter{pageoriginal}
+\newcommand{\pageoriginale}{\refstepcounter{pageoriginal}\marginpar{\footnotesize\textbf{\thepageoriginal}}\xspace}
+\let\pageoriginaled\pageoriginale
+
+\usepackage{ifthen}
+\newboolean{original}
+\def\sisi{\ifthenelse{\boolean{original}}}
+\setboolean{original}{false}
+
+\newcounter{cnote}
+\def\nde#1{\ifthenelse{\boolean{original}}{}{\stepcounter{cnote}\def\thefootnote{\arabic{cnote}}\protect\footnote[\value{cnote}]{N.D.E.: #1}}}
+\def\ndemark{\ifthenelse{\boolean{original}}{}{\stepcounter{cnote}\def\thefootnote{\arabic{cnote}}\protect\footnotemark[\value{cnote}]}}
+\def\ndetext#1{\ifthenelse{\boolean{original}}{}{\def\thefootnote{\arabic{cnote}}\protect\footnotetext[\value{cnote}]{N.D.E.: #1}}}

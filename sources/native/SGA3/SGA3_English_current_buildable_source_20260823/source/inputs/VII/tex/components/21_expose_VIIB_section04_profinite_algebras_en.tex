@@ -1,0 +1,216 @@
+
+\section*{0.4. Profinite Algebras}
+\phantomsection
+\label{sga3:VIIB:0.4}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:VIIB:0.4}{0.4}. Profinite Algebras}
+
+Let \(k\) be a pseudocompact ring. A \emph{topological
+\(k\)-algebra} is a commutative topological ring \(A\), together with
+a morphism of topological rings \(k\to A\). The algebra \(A\) is called
+a \emph{profinite \(k\)-algebra} if its underlying topological
+\(k\)-module is pseudocompact.
+
+Let \(\mathfrak l\) be an open \(k\)-submodule of such an \(A\). The
+composite map
+\[
+  \varphi:
+  A\times A
+  \xrightarrow{\mathrm{mult}}A
+  \longrightarrow A/\mathfrak l
+\]
+is continuous. \SGARefLink{sga3:VIIB:0.3.1}{Lemma 0.3.1} therefore gives an open \(k\)-submodule
+\(\mathfrak n\) of \(A\) such that
+\(\varphi(A\times\mathfrak n)=0\). Thus \(\mathfrak l\) contains the
+open ideal \(A\mathfrak n\), and \(A\) is a pseudocompact ring.
+
+Likewise, let \(M\) be a topological \(A\)-module whose underlying
+\(k\)-module is pseudocompact. If \(M'\) is an open \(k\)-submodule of
+\(M\), applying \SGARefLink{sga3:VIIB:0.3.1}{Lemma 0.3.1} to
+\[
+  A\times M
+  \xrightarrow{\mathrm{mult}}M
+  \longrightarrow M/M'
+\]
+shows that \(M'\) contains an open \(A\)-submodule. Hence \(M\) is also
+a pseudocompact \(A\)-module.\footnote{The editors added the following
+lemma; cf.\ editor's note~(36) in \SGARefLink{sga3:VIIB:0.5}{Proposition 0.5}.}
+Conversely:
+
+\medskip
+\noindent\textbf{Lemma.}
+\phantomsection
+\label{sga3:VIIB:0.4-restriction-lemma}
+\textit{Let \(A\) be a profinite \(k\)-algebra and \(M\) a
+pseudocompact \(A\)-module. The \(k\)-module \(M|_k\), obtained by
+restriction of scalars, is pseudocompact.}
+
+Indeed, every finite-length pseudocompact \(A\)-module is isomorphic
+to a quotient
+\[
+  A^n/L,
+\]
+where \(L\) is an open submodule of \(A^n\), and is therefore a
+pseudocompact \(k\)-module. Since \(M|_k\) is a projective limit of
+modules of this kind, it is a pseudocompact \(k\)-module.
+
+\medskip
+\noindent\textbf{0.4.1.}
+\phantomsection
+\label{sga3:VIIB:0.4.1}
+If \(A\) and \(B\) are profinite \(k\)-algebras, a \emph{morphism}
+from \(A\) to \(B\) is, by definition, a continuous homomorphism of
+\(k\)-algebras. We denote the category of profinite \(k\)-algebras by
+\[
+  \operatorname{Alp}/k.
+\]
+It plainly has projective limits: the algebra underlying a projective
+limit is the projective limit of the underlying algebras, endowed with
+the projective-limit topology.
+
+It also has finite direct limits.\footnote{In \SGARefLink{sga3:VIIB:0.4.2}{0.4.2} we shall see that
+it has arbitrary direct limits.} For example, if
+\[
+  f:A\longrightarrow B,
+  \qquad
+  g:A\longrightarrow C
+\]
+are morphisms of profinite \(k\)-algebras, the amalgamated sum of
+\(B\) and \(C\) over \(A\) has
+\[
+  B\widehat{\otimes}_A C
+\]
+as its underlying topological \(A\)-module. Here \SGARefLink{sga3:VIIB:0.4}{0.4} makes \(B\) and
+\(C\) pseudocompact \(A\)-modules via \(f\) and \(g\), and the
+multiplication is characterized by
+\[
+  (b\widehat{\otimes}c)
+  (b'\widehat{\otimes}c')
+  =
+  bb'\widehat{\otimes}cc'
+\]
+for \(b,b'\in B\) and \(c,c'\in C\).
+
+\medskip
+\noindent\textbf{Definition 0.4.2.}
+\phantomsection
+\label{sga3:VIIB:0.4.2}
+\textit{A profinite \(k\)-algebra \(C\) is said to have
+\emph{finite length} if its underlying \(k\)-module has finite length,
+and is therefore discrete. We denote by \(\operatorname{Alf}/k\) the
+full subcategory of \(\operatorname{Alp}/k\) formed by the
+\(k\)-algebras of finite length.}\footnote{Caution: \(k\) is an object
+of \(\operatorname{Alf}/k\) only when \(k\) is Artinian; cf.\ \SGARefLink{sga3:VIIB:1.2.2}{1.2.2}
+below.}
+
+For every profinite \(k\)-algebra \(A\), let \(h_A\) be the functor
+\[
+  h_A:\operatorname{Alf}/k\longrightarrow(\mathbf{Sets}),
+  \qquad
+  C\longmapsto
+  \operatorname{Hom}_{\operatorname{Alp}/k}(A,C).
+\]
+The functor \(h_A\) is left exact,\footnote{That is, it commutes with
+finite projective limits.} and the canonical projections
+\(A\to A/\mathfrak l\), where \(\mathfrak l\) ranges over the open
+ideals of \(A\), induce for every \(C\in\operatorname{Alf}/k\) an
+isomorphism
+\[
+  \varinjlim_{\mathfrak l}
+  \operatorname{Hom}_{\operatorname{Alf}/k}(A/\mathfrak l,C)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\operatorname{Alp}/k}(A,C),
+\]
+functorial in \(C\). In other words, \(h_A\) is the direct limit of the
+representable functors \(h_{A/\mathfrak l}\):
+\begin{equation}
+  h_A\simeq\varinjlim_{\mathfrak l}h_{A/\mathfrak l}.
+  \tag{\(\ast\)}
+  \label{sga3:VIIB:0.4.2-star}
+\end{equation}
+
+If \(B\) is another profinite \(k\)-algebra, the general properties of
+the bifunctor \(\operatorname{Hom}\), together with
+\[
+  \operatorname{Hom}(h_C,h_B)=h_B(C)
+\]
+for \(C\) of finite length, give isomorphisms
+\begin{align*}
+  \operatorname{Hom}_{\operatorname{Alp}/k}(B,A)
+  &\simeq
+  \varprojlim_{\mathfrak l}
+  \operatorname{Hom}_{\operatorname{Alp}/k}(B,A/\mathfrak l)
+  \\
+  &\simeq
+  \varprojlim_{\mathfrak l}
+  \operatorname{Hom}(h_{A/\mathfrak l},h_B)
+  \\
+  &\simeq
+  \operatorname{Hom}
+    \left(\varinjlim_{\mathfrak l}h_{A/\mathfrak l},h_B\right).
+\end{align*}
+Together with \eqref{sga3:VIIB:0.4.2-star}, this proves that the
+contravariant functor \(A\mapsto h_A\) is fully faithful. In fact:
+
+\medskip
+\noindent\textbf{Proposition.}
+\phantomsection
+\label{sga3:VIIB:0.4.2-proposition}
+\textit{The functor \(A\mapsto h_A\) is an anti-equivalence from
+\(\operatorname{Alp}/k\) onto the category of left-exact functors from
+\(\operatorname{Alf}/k\) to \((\mathbf{Sets})\).}
+
+By what precedes, it remains only to show that every left-exact functor
+\[
+  F:\operatorname{Alf}/k\longrightarrow(\mathbf{Sets})
+\]
+is isomorphic to a functor \(h_A\). The algebra \(A\) may be constructed
+as follows (cf.\ TDTE~II, \S~3).
+
+Because \(F\) is left exact, for every finite-length \(k\)-algebra \(C\)
+and every \(\xi\in F(C)\), there is a smallest subalgebra \(C'\) of
+\(C\) such that \(\xi\) belongs to the image of \(F(C')\) in \(F(C)\).
+If \(C'=C\), the pair \((C,\xi)\) is called \emph{minimal}.
+
+The minimal pairs form a category when a morphism from \((C,\xi)\) to
+\((D,\eta)\) is defined to be a homomorphism
+\(\phi:C\to D\) such that
+\[
+  (F\phi)(\xi)=\eta.
+\]
+Such a \(\phi\) is necessarily surjective, and the category of minimal
+pairs is left filtered. Moreover, one may restrict to pairs
+\((C,\xi)\) for which \(C\) belongs to a set containing one
+finite-length \(k\)-algebra of every isomorphism
+type.\footnote{Indeed, every discrete \(k\)-module of length \(n\) is
+isomorphic to \(k^n/L\), where \(L\) is an open submodule of \(k^n\) of
+colength \(n\). One may then consider the set of isomorphism classes of
+profinite \(k\)-algebra structures on each such module.}
+The functor \((C,\xi)\mapsto C\), from the category of minimal pairs to
+the category of profinite \(k\)-algebras, therefore has a projective
+limit; take \(A\) to be this limit.
+
+\medskip
+\noindent\textbf{Corollary.}
+\phantomsection
+\label{sga3:VIIB:0.4.2-corollary}
+\textit{The category \(\operatorname{Alp}/k\) has arbitrary direct
+limits.}
+
+Indeed, the category of left-exact functors from
+\(\operatorname{Alf}/k\) to \((\mathbf{Sets})\) has projective limits,
+computed pointwise: if \((F_i)\) is a projective system of such
+functors, then for every \(C\in\operatorname{Alf}/k\),
+\[
+  (\varprojlim_iF_i)(C)=\varprojlim_iF_i(C).
+\]
+\footnote{If \((A_i)_{i\in I}\) is a direct system in
+\(\operatorname{Alp}/k\), its direct limit in \(\operatorname{Alp}/k\)
+is the separated completion of the \(k\)-algebra \(B\), the direct
+limit of the underlying \(k\)-algebras, for the topology defined by the
+ideals \(I\) such that \(I\cap A_i\) is open in \(A_i\) for every \(i\)
+and \(\operatorname{length}_k(B/I)<\infty\). Notice, for example, that
+if \(K/k\) is an algebraic extension of fields of infinite degree and
+\((k_i)\) is the filtered direct system of finite-degree subextensions,
+then the direct limit of the system \((k_i)\) in
+\(\operatorname{Alp}/k\) is the zero ring.}
+

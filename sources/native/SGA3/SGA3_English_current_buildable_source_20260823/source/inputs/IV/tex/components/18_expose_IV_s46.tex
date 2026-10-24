@@ -1,0 +1,410 @@
+
+\setcounter{footnote}{42}
+
+\SGARefTarget{sga3:iv:subsection:4:6}\subsection*{4.6. Description of the Quotient of a Sheaf by an Equivalence Relation}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:iv:subsection:4:6}{4.6}. Quotient of a Sheaf by an Equivalence Relation}
+
+Recall that the given topology \(\mathcal T\) is assumed to be coarser than
+the canonical topology.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:4:6:1}\textbf{Proposition 4.6.1.}
+\textit{Let
+\(
+ R \mathrel{\substack{\xrightarrow{\ p_1\ }\\[-0.6ex]
+                       \xrightarrow[\ p_2\ ]{}}} X
+\)
+be a \(\widetilde{\mathscr C}\)-equivalence relation in the sheaf \(X\).
+Define \(F\in\operatorname{Ob}(\widehat{\mathscr C})\) as follows: for
+each \(S\in\operatorname{Ob}(\mathscr C)\),\footnote{Editor's note:
+\(R\times S\) denotes the equivalence relation in \(X\times S\) defined
+by \(R\times S_{\mathrm{diag}}\subset
+X\times X\times S\times S\), and \(R_Z\) denotes the equivalence
+relation that it induces on \(Z\) (cf. \SGARefLink{sga3:iv:definition:3:1:6}{3.1.6}).}}
+\[
+ F(S)=\left\{\begin{array}{l}
+ \text{sub-\(S\)-sheaves \(Z\) of \(X_S\), stable under
+ \(R\times S\), whose quotient}\cr
+ \text{by \(R_Z\) is \(S\), that is, for which
+ \(R_Z\rightrightarrows Z\to S\) is exact}
+\end{array}\right\}.
+\]
+\textit{For every sheaf \(Y\), \(\operatorname{Hom}(Y,F)\) is naturally
+identified with the set}
+\[
+ \left\{\begin{array}{l}
+ \text{sub-\(Y\)-sheaves of \(X\times Y\), stable under \(R\times Y\),}\cr
+ \text{and having quotient \(Y\)}
+ \end{array}\right\}.
+\]
+\textit{In particular, the subsheaf \(R\subset X\times X\) corresponds
+to an element \(p\in\operatorname{Hom}(X,F)\), and the exact diagram}
+\[
+ R\mathrel{\substack{\xrightarrow{\ p_1\ }\\[-0.6ex]
+                     \xrightarrow[\ p_2\ ]{}}}X\xrightarrow{p}F
+\]
+\textit{identifies \(F\) with the sheaf quotient \(X/R\).}
+
+Indeed, put \(Q=X/R\). For every sheaf \(Y\) and every morphism
+\(f\in\operatorname{Hom}(Y,Q)\), corresponding to a section
+\(s:Y\hookrightarrow Q\times Y\), consider the diagram
+\[
+\tag{*}\label{sga3:iv:proposition:4:6:1:eq:unnamed:01}
+\begin{array}{ccccc}
+ R\times Y&\rightrightarrows&X\times Y&\longrightarrow&Q\times Y\cr
+ &&\big\uparrow&&\big\uparrow\!{\scriptstyle s}\cr
+ &&Z&\longrightarrow&Y,
+\end{array}
+\]
+in which the right-hand square is cartesian. By \SGARefLink{sga3:iv:proposition:4:4:11}{4.4.11}, \(Z\) is
+immediately seen to be a sub-\(Y\)-sheaf of \(X\times Y\), stable under
+\(R\times Y\), with quotient \(Y\). Conversely, every \(Z\) of this
+kind arises from a unique section of \(Q\times Y\) over \(Y\). Taking
+\(Y\) first to be representable gives an isomorphism \(Q\simeq F\);
+taking arbitrary \(Y\) then gives the asserted description of
+\(\operatorname{Hom}(Y,F)\). Finally, the canonical morphism \(X\to Q\)
+corresponds to the sub-\(X\)-sheaf \(R\subset X\times X\), which completes
+the proof.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:4:6:2}\textbf{Corollary 4.6.2.}
+\textit{Let \(G\) be any subfunctor of \(F\) such that
+\(\operatorname{Hom}(X,G)\subset\operatorname{Hom}(X,F)\) contains
+\(R\). Then the canonical morphism \(p:X\to F\) factors through \(G\).}
+
+Since \(p\) is covering (\SGARefLink{sga3:iv:proposition:4:4:9}{4.4.9} and \SGARefLink{sga3:iv:proposition:4:4:3}{4.4.3}), it follows that \(G\) is a
+refinement of \(F\). In particular, every subsheaf \(G\) of \(F\)
+satisfying \SGARefLink{sga3:iv:corollary:4:6:2}{the preceding condition} equals \(F\) (\SGARefLink{sga3:iv:corollary:4:3:12}{4.3.12}).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:para:4:6:3}\textbf{4.6.3.}
+We now consider the case in which \(X\) and \(R\) are representable.
+We begin with some terminology. Besides the conditions \SGARefLink{sga3:iv:para:3:4:1:item:a:01}{(a)}--\SGARefLink{sga3:iv:para:3:4:1:item:d:01}{(d)}
+introduced in \SGARefLink{sga3:iv:para:3:4:1}{3.4.1}, we shall use the following conditions on a family
+\((M)\) of morphisms of \(\mathscr C\); for completeness, we repeat
+conditions \SGARefLink{sga3:iv:para:4:6:3:item:a:01}{(a)}--\SGARefLink{sga3:iv:para:4:6:3:item:c:01}{(c)}:
+\begin{enumerate}
+ \item[(a)]\SGARefTarget{sga3:iv:para:4:6:3:item:a:01} \((M)\) is stable under base change.
+ \item[(b)]\SGARefTarget{sga3:iv:para:4:6:3:item:b:01} The composite of two elements of \((M)\) belongs to \((M)\).
+ \item[(c)]\SGARefTarget{sga3:iv:para:4:6:3:item:c:01} Every isomorphism belongs to \((M)\).
+ \item[\((d_{\mathcal T})\)]\SGARefTarget{sga3:iv:para:4:6:3:item:d:mathcal:t:01} Every element of \((M)\) is covering.
+ \footnote{Editor's note: \(\mathcal T\) denotes the given topology on
+ \(\mathscr C\), which is coarser than the canonical topology.}
+ \item[\((e_{\mathcal T})\)]\SGARefTarget{sga3:iv:para:4:6:3:item:e:mathcal:t:01} Let \(f:X\to Y\) be a morphism of
+ \(\mathscr C\). If there is a refinement \(R\) of \(Y\) such that,
+ for every \(Y'\to R\), the morphism
+ \(X\times_Y Y'\to Y'\) belongs to \((M)\), then \(f\) belongs to
+ \((M)\).
+\end{enumerate}
+Conditions \SGARefLink{sga3:iv:para:4:6:3:item:a:01}{(a)} and \SGARefLink{sga3:iv:para:4:6:3:item:b:01}{(b)} imply
+\begin{enumerate}
+ \item[\((a')\)]\SGARefTarget{sga3:iv:para:4:6:3:item:aprime:01} the fiber product of two elements of \((M)\) belongs
+ to \((M)\).
+\end{enumerate}
+On the other hand, by \SGARefLink{sga3:iv:corollary:4:3:9}{4.3.9}, conditions \SGARefLink{sga3:iv:para:4:6:3:item:a:01}{(a)} and
+\SGARefLink{sga3:iv:para:4:6:3:item:d:mathcal:t:01}{\((d_{\mathcal T})\)} imply
+\begin{enumerate}
+ \item[\((d')\)]\SGARefTarget{sga3:iv:para:4:6:3:item:dprime:01} every element of \((M)\) is a universal effective
+ epimorphism.
+\end{enumerate}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:para:4:6:4}\textbf{4.6.4.}
+When \(\mathscr C\) has fiber products, the family of covering morphisms,
+denoted \((M_{\mathcal T})\), satisfies the preceding conditions. Indeed
+(cf. \SGARefLink{sga3:iv:definition:4:2:3}{4.2.3}), \SGARefLink{sga3:iv:para:4:6:3:item:a:01}{(a)} follows from \SGARefLink{sga3:iv:definition:4:2:3:item:c:1:01}{(C~1)}, \SGARefLink{sga3:iv:para:4:6:3:item:b:01}{(b)} from \SGARefLink{sga3:iv:definition:4:2:3:item:c:2:01}{(C~2)}, \SGARefLink{sga3:iv:para:4:6:3:item:c:01}{(c)} from \SGARefLink{sga3:iv:definition:4:2:3:item:c:4:01}{(C~4)},
+\SGARefLink{sga3:iv:para:4:6:3:item:d:mathcal:t:01}{\((d_{\mathcal T})\)} from \SGARefLink{sga3:iv:definition:4:2:3}{the definition}, and
+\SGARefLink{sga3:iv:para:4:6:3:item:e:mathcal:t:01}{\((e_{\mathcal T})\)} from \SGARefLink{sga3:iv:definition:4:2:3:item:c:5:01}{(C~5)}. Thus the results established below for
+a family satisfying these conditions apply in particular to
+\((M_{\mathcal T})\). In particular, \(\mathcal T\) may be taken to be
+the canonical topology and \((M)\) to be the family of universal
+effective epimorphisms.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:4:6:5}\textbf{Lemma 4.6.5.}
+\textit{Let \((M)\) be a family of morphisms satisfying conditions
+\SGARefLink{sga3:iv:para:4:6:3:item:a:01}{(a)}--\SGARefLink{sga3:iv:para:4:6:3:item:e:mathcal:t:01}{\((e_{\mathcal T})\)} above. Let \(R\) be a
+\(\mathscr C\)-equivalence relation of type \((M)\) in
+\(X\in\operatorname{Ob}(\mathscr C)\). Let \(\widetilde X\) be the
+sheaf defined by \(X\), let \(\widetilde R\) be the
+\(\widetilde{\mathscr C}\)-equivalence relation in \(\widetilde X\)
+defined by \(R\), and let \(\widetilde X/\widetilde R\) be the sheaf
+quotient. Then \(R\) is \((M)\)-effective if and only if
+\(\widetilde X/\widetilde R\) is representable. When these conditions
+hold, \(\widetilde X/\widetilde R\) is represented by the quotient
+\(X/R\).}
+
+Suppose first that \(R\) is \((M)\)-effective, and put \(Y=X/R\). The
+canonical morphism \(p:X\to Y\) belongs to \((M)\), hence is covering by
+\SGARefLink{sga3:iv:para:4:6:3:item:d:mathcal:t:01}{\((d_{\mathcal T})\)}. The corresponding morphism
+\[
+ \widetilde p:\widetilde X\longrightarrow
+ \widetilde X/\widetilde R
+\]
+is therefore a universal effective epimorphism in
+\(\widetilde{\mathscr C}\) (\SGARefLink{sga3:iv:proposition:4:4:3}{4.4.3}). Consequently it identifies
+\(\widetilde X/\widetilde R\) with the quotient of \(\widetilde X\) by
+the equivalence relation \(R'\) defined by \(\widetilde p\). Since the
+canonical functor \(\mathscr C\to\widetilde{\mathscr C}\) commutes with
+fiber products, \(R'\) is precisely \(\widetilde R\), because \(R\) is
+the equivalence relation defined by \(p\).
+
+Conversely, suppose that \(\widetilde X/\widetilde R\) is represented by
+an object \(Y\) of \(\mathscr C\). Let \(p:X\to Y\) be the morphism
+deduced from the canonical morphism
+\(\widetilde X\to\widetilde X/\widetilde R\); by \SGARefLink{sga3:iv:proposition:4:4:3}{4.4.3} it is covering.
+As before, \(R\) is plainly the equivalence relation defined by \(p\).
+It remains only to show that \(p\in(M)\). The cartesian diagram
+\[
+\begin{array}{ccccc}
+ R&\xrightarrow{\ \sim\ }&X\times_YX&\longrightarrow&X\cr
+ {\scriptstyle p_2}\searrow&&\big\downarrow\!{\scriptstyle\mathrm{pr}_2}
+ &&\big\downarrow\!{\scriptstyle p}\cr
+ &&X&\xrightarrow{p}&Y
+\end{array}
+\]
+shows that, after the covering base change \(p\), the morphism \(p\)
+becomes \(p_2\), which belongs to \((M)\). \SGARefLink{sga3:iv:lemma:4:6:5}{The assertion} follows from
+\SGARefLink{sga3:iv:para:4:6:3:item:e:mathcal:t:01}{\((e_{\mathcal T})\)}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:4:6:5:1}\textbf{Corollary 4.6.5.1.}
+\footnote{Editor's note: \SGARefLink{sga3:iv:corollary:4:6:5:1}{This corollary} has been added.}
+\textit{Let \((M)\) satisfy conditions \SGARefLink{sga3:iv:para:4:6:3:item:a:01}{(a)}--\SGARefLink{sga3:iv:para:4:6:3:item:e:mathcal:t:01}{\((e_{\mathcal T})\)} above,
+and let \(f:G\to G'\) be a morphism of \(\mathscr C\)-groups such that
+\(f\in(M)\). Suppose that \(\operatorname{Ker}(f)\) is representable
+(as is the case when \(\mathscr C\) has a final object \(e\)). Then the
+equivalence relation in \(G\) defined by
+\(H=\operatorname{Ker}(f)\) is \((M)\)-effective, and \(G'\) represents
+the sheaf quotient \(\widetilde G/\widetilde H\) for the topology
+\(\mathcal T\).}
+
+This follows from \SGARefLink{sga3:iv:lemma:4:6:5}{4.6.5} and \SGARefLink{sga3:iv:corollary:3:4:7:1}{3.4.7.1}.
+
+We can now state the main result of this subsection.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:theorem:4:6:6}\textbf{Theorem 4.6.6.}
+\textit{Let \((M)\) be a family of morphisms satisfying Axioms
+\SGARefLink{sga3:iv:para:4:6:3:item:a:01}{(a)}--\SGARefLink{sga3:iv:para:4:6:3:item:e:mathcal:t:01}{\((e_{\mathcal T})\)} of \SGARefLink{sga3:iv:para:4:6:3}{4.6.3}. Let \(R\) be a
+\(\mathscr C\)-equivalence relation of type \((M)\) (cf. \SGARefLink{sga3:iv:definition:3:4:3}{3.4.3}) in an
+object \(X\) of \(\mathscr C\). Consider the functor
+\(F\in\operatorname{Ob}(\widehat{\mathscr C})\) defined by}
+\[
+ F(S)=\left\{\begin{array}{l}
+ \text{sub-\(S\)-sheaves \(Z\) of \(X_S\), stable under \(R\times S\),}\cr
+ \text{whose quotient by \(R_Z\) is \(S\)}
+ \end{array}\right\}.
+\]
+\textit{Let \(F_0\) be the subfunctor of \(F\) defined as follows:
+\(F_0(S)\) consists of the representable \(Z\in F(S)\), that is,}
+\[
+ F_0(S)=\left\{\begin{array}{l}
+ \text{sub-\(\mathscr C/S\)-objects \(Z\) of \(X_S\), stable under
+ \(R\times S\), such that}\cr
+ \text{\(R_Z\) is \((M)\)-effective with quotient \(S\), i.e. such that}\cr
+ \text{\(Z\to S\) belongs to \((M)\) and
+ \(R_Z\simeq Z\times_S Z\)}
+ \end{array}\right\}.
+\]
+\textit{Then:}
+\begin{enumerate}
+ \item[(i)]\SGARefTarget{sga3:iv:theorem:4:6:6:item:i:01} \textit{The morphism
+ \(p\in\operatorname{Hom}(X,F)=F(X)\) defined by the subobject
+ \(R\subset X\times X\) identifies \(F\) with the sheaf quotient of
+ \(X\) by \(R\).}
+ \item[(ii)]\SGARefTarget{sga3:iv:theorem:4:6:6:item:ii:01} \textit{The following conditions are equivalent:}
+ \begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:iv:theorem:4:6:6:item:a:01} \textit{\(F\) is representable;}
+  \item[(b)]\SGARefTarget{sga3:iv:theorem:4:6:6:item:b:01} \textit{\(F_0\) is representable;}
+  \item[(c)]\SGARefTarget{sga3:iv:theorem:4:6:6:item:c:01} \textit{\(R\) is \((M)\)-effective.}
+ \end{enumerate}
+ \textit{Under these conditions, \(F=F_0=X/R\).}
+ \item[(iii)]\SGARefTarget{sga3:iv:theorem:4:6:6:item:iii:01} \textit{Let \((N)\) be a family of morphisms stable under
+ base change, such that for every covering family \(\{S_i\to S\}\) and
+ every family \(\{T_i\to S_i\}\) of morphisms in \((N)\), every
+ descent datum on the \(T_i\) relative to \(\{S_i\to S\}\) is
+ effective. Suppose that \(X\) is squarable (cf. \SGARefLink{sga3:iv:definition:1:6:0}{1.6.0}) and that
+ \(R\to X\times X\) belongs to \((N)\). Then \(F_0=F\).}
+\end{enumerate}
+
+\noindent\textit{Proof.}
+Assertion \SGARefLink{sga3:iv:theorem:4:6:6:item:i:01}{(i)} was proved in \SGARefLink{sga3:iv:proposition:4:6:1}{4.6.1}.
+
+For \SGARefLink{sga3:iv:theorem:4:6:6:item:ii:01}{(ii)}, we have already proved the equivalence of \SGARefLink{sga3:iv:theorem:4:6:6:item:a:01}{(a)} and \SGARefLink{sga3:iv:theorem:4:6:6:item:c:01}{(c)}, as well
+as the equality \(F=X/R\). It remains to prove that either \SGARefLink{sga3:iv:theorem:4:6:6:item:b:01}{(b)} or \SGARefLink{sga3:iv:theorem:4:6:6:item:c:01}{(c)}
+implies \(F_0=F\). First note, as stated in \SGARefLink{sga3:iv:theorem:4:6:6}{the theorem}, that \(F_0\) is
+indeed a subfunctor of \(F\): if \(S\in\operatorname{Ob}(\mathscr C)\)
+and \(Z\in F_0(S)\), then \(Z\to S\) is squarable, and hence
+\(Z\times_SS'\in F_0(S')\) for every \(S'\to S\). Since
+\(R\in F(X)\) belongs to \(F_0(X)\), Corollary \SGARefLink{sga3:iv:corollary:4:6:2}{4.6.2} shows that \SGARefLink{sga3:iv:theorem:4:6:6:item:b:01}{(b)}
+implies \(F_0=F\).
+
+Now suppose that \SGARefLink{sga3:iv:theorem:4:6:6:item:c:01}{(c)} holds, and let \(Q\) be an object of \(\mathscr C\)
+representing \(X/R\). Then \(X\to Q\) belongs to \((M)\). For every
+\(S\in\operatorname{Ob}(\mathscr C)\) and every \(Z\in F(S)\), diagram
+\(\SGARefLink{sga3:iv:proposition:4:6:1:eq:unnamed:01}{(*)}\) of \SGARefLink{sga3:iv:proposition:4:6:1}{4.6.1} gives
+\[
+ Z=S\times_{Q\times S}(X\times S).
+\]
+Thus \(Z\) is representable and \(Z\to S\) belongs to \((M)\), so
+\(Z\in F_0(S)\).
+
+For \SGARefLink{sga3:iv:theorem:4:6:6:item:iii:01}{(iii)}, let \(f\in\operatorname{Hom}(S,F)\) correspond to
+\(Z\in F(S)\). We must show that \(f\) factors through \(F_0\), or
+equivalently that \(Z\) is representable. This is immediate when \(f\)
+factors through \(X\), by \SGARefLink{sga3:iv:lemma:4:6:7}{the following lemma}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:4:6:7}\textbf{Lemma 4.6.7.}
+\textit{Let \(x_0\in X(S)\). The image of \(x_0\) in \(F(S)\)
+corresponds to the subsheaf \(Z\subset X_S\) defined by the two
+cartesian squares}
+\[
+\begin{array}{ccccc}
+ X_S&\xrightarrow{\mathrm{id}_{X_S}\times x_0}&
+ X_S\times_SX_S&\longrightarrow&X\times X\cr
+ \big\uparrow&&\big\uparrow&&\big\uparrow\cr
+ Z&\longrightarrow&R_S&\longrightarrow&R.
+\end{array}
+\]
+
+This follows at once from the description of the morphism \(X\to F\).
+
+Returning to the proof of \SGARefLink{sga3:iv:theorem:4:6:6}{the theorem}, suppose first that \(f\) factors
+through \(X\). Then \(Z\) is representable; moreover, since
+\(R\to X\times X\) belongs to \((N)\), so does \(Z\to X_S\).
+
+In general, \(f\) need not factor through \(X\). Since \(X\to F\) is
+covering (\SGARefLink{sga3:iv:proposition:4:4:3}{4.4.3}), however, \SGARefLink{sga3:iv:remark:4:4:8:item:vii:01}{4.4.8(vii)} gives a covering family
+\(\{S_i\to S\}\) and, for each \(i\), a morphism \(S_i\to X\) making
+the diagram
+\SGARefTarget{sga3:iv:supp:lemma:4:6:7:diagram:01}\[
+\begin{array}{ccc}
+ X&\longrightarrow&F\cr
+ \big\uparrow&&\big\uparrow\!{\scriptstyle f}\cr
+ S_i&\longrightarrow&S
+\end{array}
+\]
+commute. By the preceding argument, the morphism
+\(f_i:S_i\to F\) defined by \SGARefLink{sga3:iv:supp:lemma:4:6:7:diagram:01}{this diagram} belongs to
+\(\operatorname{Hom}(S_i,F_0)\) and corresponds to the subsheaf
+\(Z\times_SS_i\subset X_{S_i}\). The morphism
+\(Z\times_SS_i\to X_{S_i}\) belongs to \((N)\), and the family
+\(\{X_{S_i}\to X_S\}\) is covering. It therefore remains only to prove
+\SGARefLink{sga3:iv:proposition:4:6:8}{the following proposition}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:4:6:8}\textbf{Proposition 4.6.8.}
+\textit{Let \(\{S_i\to S\}\) be a covering family and let \(Z\) be a
+sheaf over \(S\). Suppose that, for every \(i\), the
+\(S_i\)-functor \(Z\times_SS_i\) is represented by an object \(T_i\).
+Then the family \((T_i)\) carries a canonical descent datum relative to
+\(\{S_i\to S\}\). The sheaf \(Z\) is representable if and only if this
+datum is effective; in that case the descended object represents \(Z\).}
+
+First observe that, by \SGARefLink{sga3:iv:proposition:4:4:3}{4.4.3}, \(\{S_i\to S\}\) is a universal effective
+epimorphic family in \(\widetilde{\mathscr C}\), and hence a descent
+family in \(\widetilde{\mathscr C}\) (\SGARefLink{sga3:iv:proposition:2:3}{2.3}). If \(Z\) is represented by
+an object \(T\), then \(T\times_SS_i\), regarded as a sheaf, is
+isomorphic to \(Z\times_SS_i\). Thus the descent datum on the \(T_i\) is
+effective, and its uniquely determined descended object is isomorphic to
+\(T\), hence represents \(Z\).
+
+Conversely, suppose that the canonical descent datum on the \(T_i\) is
+effective, and let \(T\) be the descended object. Because
+\(\{S_i\to S\}\) is a descent family in
+\(\widetilde{\mathscr C}\), there is an \(S\)-morphism \(T\to Z\) whose
+base change to each \(S_i\) is the canonical morphism
+\(T_i\to Z\times_SS_i\). This morphism is locally an isomorphism; since
+both \(T\) and \(Z\) are sheaves, \SGARefLink{sga3:iv:corollary:4:5:8}{4.5.8} implies that it is an
+isomorphism.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:4:6:9}\textbf{Corollary 4.6.9.}
+\textit{Let \(R\) be an \((M)\)-effective equivalence relation in
+\(X\). For every sheaf \(F\), the map}
+\[
+ \operatorname{Hom}(X/R,F)\longrightarrow\operatorname{Hom}(X,F)
+\]
+\textit{identifies the first set with the subset of the second consisting
+of morphisms compatible with \(R\).}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:4:6:10}\textbf{Corollary 4.6.10.}
+\textit{Let \(\mathcal T'\) be a topology coarser than \(\mathcal T\),
+for which the morphisms in \((M)\) are covering. Under the hypotheses of
+\SGARefLink{sga3:iv:theorem:4:6:6:item:iii:01}{4.6.6(iii)}, \(X/R\) is also the sheaf quotient of \(X\) by \(R\) for
+every topology lying between \(\mathcal T'\) and the canonical topology.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:remark:4:6:11}\textbf{Remark 4.6.11.}
+If, in the statement of \SGARefLink{sga3:iv:theorem:4:6:6:item:iii:01}{4.6.6(iii)}, one assumes in addition that the
+descended morphism \(T\to S\) belongs to \((N)\) whenever the hypotheses
+there are satisfied, then the inclusion morphisms \(Z\hookrightarrow X_S\)
+also belong to \((N)\). This follows immediately from the construction of
+\(Z\) by descent.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:remark:4:6:12}\textbf{Remark 4.6.12.}
+The implications
+\[
+ \text{\SGARefLink{sga3:iv:theorem:4:6:6:item:c:01}{(c)}}\Longrightarrow\text{\SGARefLink{sga3:iv:theorem:4:6:6:item:b:01}{(b)}}\Longrightarrow\text{\SGARefLink{sga3:iv:theorem:4:6:6:item:a:01}{(a)}}
+ \qquad\text{and}\qquad
+ \text{\SGARefLink{sga3:iv:theorem:4:6:6:item:c:01}{(c)}}\Longrightarrow[F_0=F=X/R]
+\]
+were proved without using the sufficiency direction of Lemma \SGARefLink{sga3:iv:lemma:4:6:5}{4.6.5}, the
+only place where condition \SGARefLink{sga3:iv:para:4:6:3:item:e:mathcal:t:01}{\((e_{\mathcal T})\)} enters. They therefore
+remain valid when \((M)\) satisfies only conditions
+\SGARefLink{sga3:iv:para:4:6:3:item:a:01}{(a)}--\SGARefLink{sga3:iv:para:4:6:3:item:d:mathcal:t:01}{\((d_{\mathcal T})\)}. The family of squarable covering morphisms is
+an example of such a family \((M)\) (compare \SGARefLink{sga3:iv:para:4:6:4}{4.6.4}). For the canonical
+topology these are precisely the universal effective epimorphisms. Hence:
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:4:6:13}\textbf{Corollary 4.6.13.}
+\textit{Let \(R\) be a universal effective equivalence relation in
+\(X\). Then the object \(X/R\) of \(\mathscr C\) is the sheaf quotient
+of \(X\) by \(R\) for the canonical topology. It represents the
+following functor: \((X/R)(S)\) is the set of
+sub-\(\mathscr C/S\)-objects \(Z\) of \(X_S\), stable under
+\(R\times S\), for which the induced equivalence relation is universal
+effective and has quotient \(S\).}
+
+Similarly, for an arbitrary topology:
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:4:6:14}\textbf{Corollary 4.6.14.}
+\textit{Let \((M)\) be the family of squarable covering morphisms. If
+\(R\) is an \((M)\)-effective equivalence relation in \(X\), then the
+object \(X/R\) of \(\mathscr C\) is the sheaf quotient of \(X\) by
+\(R\), and it represents the functor \(F_0\) of \SGARefLink{sga3:iv:theorem:4:6:6}{4.6.6}.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:scholium:4:6:15}\textbf{Scholium 4.6.15.}
+We can now make the following clarifications to \SGARefLink{sga3:iv:scholium:4:5:5}{4.5.5}. In questions
+involving inverse limits alone---fiber products, algebraic structures,
+and so forth---the results of Expos\'e I and \SGARefLink{sga3:iv:scholium:4:5:5}{4.5.5} allow us to identify
+\(\mathscr C\), without distinction, with a full subcategory of either
+\(\widetilde{\mathscr C}\) or \(\widehat{\mathscr C}\). The same is not
+true for questions that mix inverse and direct limits.
+
+Whenever both inverse and direct limits occur, and especially when
+passing to quotients (for example, when putting a group structure on the
+quotient of a group by an invariant subgroup), we shall regard the given
+category as embedded in the category of sheaves. Thus, if \(R\) is a
+\(\mathscr C\)-equivalence relation in an object \(X\) of
+\(\mathscr C\), the notation \(X/R\) will mean the sheaf quotient of
+\(X\) by \(R\), formerly denoted \(j(X)/j(R)\), and, when this sheaf is
+representable, also the object that represents it. The preceding results
+show that, in the most important cases, a quotient in \(\mathscr C\) is
+also a quotient in the category of sheaves. In any event, we shall not
+use the notation \(X/R\) for a quotient in \(\mathscr C\) that does not
+coincide with the quotient in \(\widetilde{\mathscr C}\)---for instance,
+one that is not universal. This modifies the definitions of \SGARefLink{sga3:iv:section:3}{no.~3}.
+
+To study a problem of this kind, one therefore works first in the
+category of sheaves, where all the usual results hold (cf. \SGARefLink{sga3:iv:subsection:4:4}{no.~4.4}), and
+then specializes the resulting statements to the original category,
+using the results of the present subsection and, when available,
+criteria for the effectivity of descent. Examples of this method will
+appear in the following subsections.

@@ -1,0 +1,355 @@
+\section{Derived categories}\etiquette[1]{XVII.sec1}
+
+\subsection{Exact functors (the sign rules)}\etiquette[1.1]{XVII.subsec1.1}
+
+\subsubsection{}\etiquette[1.1.1]{XVII.subsubsec1.1.1}
+For the fundamental theorems concerning derived categories, I refer
+to \textsc{Verdier} \cite{sga4.exp.XVII.bib.CD} and \cite{sga4.exp.XVII.bib.V2}. In this subsection,
+particularly careful attention has been paid to questions of signs.
+
+Recall that if $f:X\rightarrow Y$ is a morphism of complexes
+(in an additive category, which will henceforth be understood), its
+\emph{cone} $C(f)$\pageoriginale is defined by
+$$\etiquette[1.1.1.1]{XVII.eq1.1.1.1}
+C(f)^{n}=X^{n+1}\oplus Y^{n}\quad d^{n}=-d^{n+1}_X+f^{n+1}+d^{n}_Y{\quoi}.\leqno(1.1.1.1)
+$$
+When $X=0$ (\resp $Y=0$), we have $C(f)=Y$ (\resp $C(f)=X[1]$), so
+that the commutative diagram
+\[
+\xymatrix{
+0        \ar@{=}[r] \ar[d]&   0   \sisi{\ar@{=}[r]}{\ar[r]} \ar[d]&  X
+\ar@{=}[r]\ar[d]^{f}  & X \ar[d]\\
+X        \ar[r]^{f}   &  Y    \ar@{=}[r] & Y     \ar[r]        & 0
+}
+\]
+defines a ``triangle''
+\[
+X\xrightarrow{f}Y\rightarrow C(f)\xrightarrow{j}X[1]{\quoi}.
+\]
+
+In the category of complexes up to homotopy, a triangle is called
+\emph{distinguished} if it is isomorphic to a triangle of this type,
+and \emph{antidistinguished} if it becomes distinguished when the
+signs of its arrows are changed. One checks that the triangle defined
+by an exact sequence of complexes which is split in each degree
+(\cite{sga4.exp.XVII.bib.CD} p.~10, \cf the proof of
+\hyperref[XVII.lem1.1.5.4]{1.1.5.4}) is antidistinguished and that, up
+to isomorphism, every antidistinguished triangle is obtained in this
+way.
+
+\subsubsection*{${}^{\ast}$1.1.2.}\etiquette[*1.1.2]{XVII.subsubsec*1.1.2}
+Sign calculations are most easily carried out using the following
+``formal rules''. Write an element of $C(f)^{n}$ in the form
+$1\otimes x+y$ $(x\in X^{n+1}, y\in Y^{n})$, where $1$ is a
+``cell'' of dimension $1$, and set $d(1)\otimes x=f(x)$. Thus
+\[
+d(1\otimes x+y)=d1\otimes x-1\otimes dx+dy=-1\otimes
+dx+f(x)+dy{\quoi}._{\ast}
+\]
+
+\begin{enonce*}{Definition 1.1.3}\etiquette[1.1.3]{XVII.def1.1.3}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item A\pageoriginale graded functor (\hyperref[XVII.subsec0.3]{0.3})
+  from a triangulated category $\Aa$ to a triangulated category $\Bb$
+  is said to be exact if it sends distinguished triangles to
+  distinguished triangles.
+
+\item A contravariant graded functor from a triangulated category
+  $\Aa$ to a triangulated category $\Bb$ is said to be
+  \emph{exact} if, for every distinguished triangle
+  $(X,Y,Z,u,v,w)$ of $\Aa$, the triangle
+  $(F(Z),F(Y), F(X), F(v),F(u),TF(w))$ is distinguished (in this
+  definition, $FX$ is identified with $TFTX$ by means of the grading
+  of $F$).
+
+\item Let $(\Aa_i)_{i\in I}$ be a finite family of triangulated
+  categories, let $\epsilon$ be a function from $I$ to
+  $\{+1,-1\}$, and let $\Aa$ be a triangulated category. A graded
+  functor $F$ from the product of the $\Aa_i$ to $\Aa$, covariant
+  in those $i$ for which $\epsilon(i)=1$ and contravariant in those
+  for which $\epsilon(i)=-1$, is said to be \emph{exact} if, for every
+  $i\in I$, the functors from $\Aa_i$ to $\Aa$ obtained from $F$ by
+  fixing all variables except the $i$-th are exact functors.
+\end{enumerate}
+\end{enonce*}
+
+A composite of exact functors is again an exact functor.
+
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[1.1.4]{XVII.subsubsec1.1.4}
+If $(K^{n_1\ldots n_p}, d_1,\ldots,d_p)$ is a multicomplex
+(\hyperref[XVII.subsec0.4]{0.4}), its associated simple complex is
+defined by
+$$\etiquette[1.1.4.0]{XVII.eq1.1.4.0}
+K^{n}=\prod_{\sum n_i=n}K^{(n_i)}\quav d=\sum d_i{\quoi}.\leqno(1.1.4.0)
+$$
+
+When, exceptionally, it is defined using a direct sum rather than a
+product, this fact will be stated explicitly.
+
+Let $I$ be a finite set. Following \textsc{Cartan--Eilenberg} and
+\textsc{J.~P. Serre}, we shall explain how every naive $I$-fold
+complex $K$ has canonically\pageoriginale associated with it an
+$I$-fold complex (\hyperref[XVII.subsec0.4]{0.4}).
+
+For every total order $<$ on $I$, let $K(<)$ be the following
+$I$-fold complex:
+$$\etiquette[1.1.4.1]{XVII.eq1.1.4.1}
+\begin{cases}
+K(<)^{\sheafk }=K^{\sheafk }\\
+d(<)_i^{\sheafk }=(-1)^{\sum\limits_{j<i} k_j} d_i{\quoi}.
+\end{cases}\leqno{(1.1.4.1)}
+$$
+
+If $<_1$ and $<_2$ are two \sisi{total}{total} orders on $I$, the
+\emph{canonical isomorphism $\tau$ between $K(<_1)$ and $K(<_2)$} is,
+by definition, the one given by
+$$\etiquette[1.1.4.2]{XVII.eq1.1.4.2}
+\tau^{\sheafk }=(-1)^{\epsilon(<_1,<_2)},\quad\mbox{\rm where}\quad
+\epsilon(<_1,<_2)=\sum_{\substack{i<_1j\\ \sisi{i<_2 j}{j<_2 i}}}k_ik_j{\quoi}.\leqno{(1.1.4.2)}
+$$
+
+\subsubsection*{1.1.4.2.1}\etiquette[1.1.4.2.1]{XVII.par1.1.4.2.1}
+One checks that these canonical isomorphisms form a transitive system
+of isomorphisms among the $K(<)$, as $<$ ranges over the total orders
+on $I$; these $K(<)$ therefore determine an $I$-fold complex, unique
+up to a unique isomorphism, which in this subsection will be denoted by
+$K(\ast)$ and is called the \emph{$I$-fold complex associated with the
+naive $I$-fold complex $K$}. Note that $K(\ast)^{\sheafk}$ is
+\emph{not canonically isomorphic to $K^{\sheafk}$: only the choice of
+a total order on $I$ makes it possible to identify these two objects.}
+
+If $K$ is a naive $I$-fold complex and $i\in I$, let $K[1_i]$ denote
+the following naive complex, whose differentials are denoted by
+$d_j[1_i]$:
+$$\etiquette[1.1.4.3]{XVII.eq1.1.4.3}
+\begin{cases}
+K[1_i]^{\sheafk } = K^{\sheafk +1_i}\\
+d_j[1_i]^{\sheafk } = d_j^{\sheafk +1_{i}}\quad{\mbox{\rm if }} i\neq
+j\\
+d_i[1_i]^{\sheafk }= -d_i^{\sheafk +1_i}{\quoi}.
+\end{cases}\leqno{(1.1.4.3)}
+$$
+
+If\pageoriginale $K$ is an $I$-fold complex, set
+$$\etiquette[1.1.4.4]{XVII.eq1.1.4.4}
+\begin{cases}
+K[1_i]^{\sheafk } = K^{\sheafk +1_i}\\
+d_j[1_i]^{\sheafk } = -d_j[1_i]^{\sheafk +1_i}\sisi{}{.}
+\end{cases}\leqno{(1.1.4.4)}
+$$
+
+If $K$ is a naive $I$-fold complex and $<$ is a total order on $I$,
+so that $K(\ast)$ is given by \eqhyperref[XVII.eq1.1.4.1]{1.1.4.1},
+define an isomorphism $\sigma$ between $K[1_i](\ast)$ and
+$K(\ast)[1_i]$ by the formula
+$$\etiquette[1.1.4.5]{XVII.eq1.1.4.5}
+\sigma^{\sheafk }=(-1)^{\sum\limits_{j<i}k_j} \id_{K^{\sheafk +1_i}}{\quoi}.\leqno{(1.1.4.5)}
+$$
+
+\setcounter{subsubsection}{4}
+\setcounter{paragraph}{5}
+\paragraph{}\etiquette[1.1.4.6]{XVII.par1.1.4.6}
+One checks that this isomorphism is independent of the choice of the
+total order $<$; it therefore defines an \emph{isomorphism, called the
+canonical isomorphism, between} $K[1_i](\ast)$ and $K(\ast)[1_i]$.
+
+\paragraph{}\etiquette[1.1.4.7]{XVII.par1.1.4.7}
+For any $i,j\in I$, if $K$ is an $I$-fold complex or a naive $I$-fold
+complex, we identify $K[1_i][1_j]$ and $K[1_j][1_i]$ in the evident
+way.
+
+For $i\neq j$ in $I$, the following diagram of canonical
+isomorphisms of type \hyperref[XVII.par1.1.4.6]{1.1.4.6} or
+\hyperref[XVII.par1.1.4.7]{1.1.4.7} is then \emph{anticommutative}:
+$$\etiquette[1.1.4.7.1]{XVII.eq1.1.4.7.1}
+\vcenter{
+\xymatrix{
+K[1_i][1_j](\ast) \ar@{=}[r] \ar@{<->}[d]& K[1_j][1_i](\ast)
+\ar@{<->}[r] & K[1_j](\ast)[1_i]\ar@{<->}[d] \\
+K[1_i](\ast)[1_j] \ar@{<->}[r] & K(\ast)[1_i][1_j]  \ar@{=}[r]& K(\ast)[1_j][1_i]\rlap{.}
+}}\leqno{(1.1.4.7.1)}
+$$
+
+
+\subsubsection{}\etiquette[1.1.5]{XVII.subsubsec1.1.5}
+Let\pageoriginale $F:\Aa\rightarrow \Bb$ be a contravariant additive
+functor between additive categories. Its \emph{extension to complexes}
+$F:C(\Aa)\rightarrow C(\Bb)$ is defined as follows. If $K$ is a
+complex of $\Aa$, set
+$$\etiquette[1.1.5.1]{XVII.eq1.1.5.1}
+\begin{cases}
+F(K)^{k}=F(K^{-k})\\
+d^{k}_{F(K)}=(-1)^{k+1}F(d^{-k-1})\sisi{}{.}
+\end{cases}\leqno(1.1.5.1)
+$$
+
+The \emph{canonical isomorphism $\sigma$ between $F(K)[1]$ and
+$F(K[-1])$} is defined by
+$$\etiquette[1.1.5.2]{XVII.eq1.1.5.2}
+\sigma^{\sisi{\sheafk }{k}}=(-1)^{k+1}\id_{F(K^{-k-1})}{\quoi}.\leqno(1.1.5.2)
+$$
+
+If $F:\Aa\rightarrow \Bb$ and $G:\Bb\rightarrow
+\sisi{C}{\Cc}$ are two contravariant additive functors, define the
+canonical isomorphism $\rho$ between $G{\circ}F(K)$ \emph{and}
+$G(F(K))$ by
+$$\etiquette[1.1.5.3]{XVII.eq1.1.5.3}
+\rho^{k}=(-1)^{k}\sisi{}{\id_{G\circ F(K^k)}}{\quoi}.\leqno(1.1.5.3)
+$$
+
+\begin{enonce*}{Lemma 1.1.5.4}\etiquette[1.1.5.4]{XVII.lem1.1.5.4}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every contravariant additive functor
+  $F:\Aa\rightarrow \Bb$, formulas
+  \eqhyperref[XVII.eq1.1.5.1]{1.1.5.1} and
+  \eqhyperref[XVII.eq1.1.5.2]{1.1.5.2} define an exact contravariant
+  functor from $K(\Aa)$ to $K(\Bb)$.
+
+\item For every pair $(G,F)$ of composable contravariant additive
+  functors, formula \eqhyperref[XVII.eq1.1.5.3]{1.1.5.3} defines an
+  isomorphism of graded functors between the extension of $GF$ to
+  complexes and the composite of the extensions of $G$ and $F$ to
+  complexes.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+A\pageoriginale morphism of degree $i$, $f:K\rightarrow L$, may be
+regarded as any one of the following:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item a morphism from $K$ to $L[i]$;
+
+\item a morphism from $K[-i]$ to $L$;
+
+\item a family $f^{n}:K^{n}\rightarrow L^{n+i}$ which commutes or
+  anticommutes with the differentials according to the parity of $i$.
+\end{enumerate}
+\end{enonce*}
+
+If $f:K\rightarrow L[i]$ is a morphism of degree $i$, then
+$F(f):F(L)[-i]\rightarrow F(K)$ is again a morphism of degree $i$;
+for $i=1$, we have
+$$\etiquette[1.1.5.5]{XVII.eq1.1.5.5}
+F(f)^{n}=(-1)^{n+1}F(f^{-n-1}){\quoi}.\leqno(1.1.5.5)
+$$
+
+If $0\rightarrow K\xrightarrow{u} L\xrightarrow{v} M\rightarrow 0$
+is an exact sequence of complexes split degree by degree, the choice
+of a splitting allows the differential of $L$ to be written in the
+form
+\[
+d_L=d_K+d_M+f{\quoi},
+\]
+where $f$ is a morphism of degree one from $M$ to $K$. Likewise, the
+dual exact sequence
+\[
+0\longrightarrow F(M)\longrightarrow F(L)\longrightarrow
+F(K)\longrightarrow 0
+\]
+defines a morphism of degree one $f^{\ast}$ from $F(K)$ to
+$F(\sisi{L}{M})$. We have $f^{\ast}=F(f)$. It follows that the image
+under $F$ of a triangle $(K,L,M,u,v,f)$ defined by a short exact
+sequence of complexes is again a triangle of the same type and, by
+\hyperref[XVII.subsubsec1.1.1]{1.1.1}, this proves (i).
+
+Under the hypotheses of (ii), for $f$ of degree one, we have
+$G(F(f))^{n}=(-1)^{n+1}(-1)^{-n}G\circ F(f)^{n}=-G\circ F(f)^{n}$; in
+particular, the grading isomorphism $G(F(K[1]))\simeq
+G(F(K))[1]$ is the isomorphism whose components are $-1$.
+
+The\pageoriginale diagram
+\[
+\xymatrix{
+G\circ F(K)[1]  \ar@{<->}[r]^{\rho[1]} \ar@{=}[d] & G(F(K))[1] \ar@{<->}[d]\\
+G\circ F(K[1])  \ar@{<->}[r]^{\rho} & G(F(K[1]))
+}
+\]
+is therefore commutative, which proves (ii).
+
+\subsubsection{}\etiquette[1.1.6]{XVII.subsubsec1.1.6}
+Let $s=+$ or $s=-$; let $I$ be a finite set, let
+$\epsilon:I\rightarrow \{+,-\}$ be a function, let
+$(\Aa_i)_{i\in I}$ and $\Aa$ be additive categories, and let $F$ be
+a multiadditive multifunctor from the categories $\Aa_i$ to $\Aa$,
+covariant in the arguments indexed by those $i$ for which
+$\epsilon(i)=+$ and contravariant in the others. We shall define the
+extension $K^{s}(F)$ (or simply $F$) of $F$ to complexes as an exact
+multifunctor from the categories $K^{s\epsilon(i)}(\Aa_i)$
+($s\epsilon(i)=\pm$, according to the sign rule) to $K^{s}(\Aa)$,
+\footnote[1]{The construction also provides an extension of $F$ to a
+  multifunctor from the categories $C^{s\epsilon(i)}(\Aa_i)$ to
+  $C^{s}(\Aa)$.} having the same variance as $F$. We shall then explain
+in what sense this construction is compatible with the composition of
+functors. Other conventions for \emph{degrees} are possible and will
+be used; that issue is independent of the questions of \emph{sign}
+considered here.
+
+\paragraph{}\etiquette[1.1.6.1]{XVII.par1.1.6.1}
+If $F$ is contravariant in one variable, $K^{s}(F)$ is defined by the
+formulas of \hyperref[XVII.subsubsec1.1.5]{1.1.5}.
+
+\paragraph{}\etiquette[1.1.6.2]{XVII.par1.1.6.2}
+If $F$ is covariant, the functor $K^{s}(F)$ is defined, by passage to
+the quotient, from the composite of the evident functor from the
+product of the categories $C^{s}(\Aa_i)$ to the category of naive
+$I$-fold complexes, the functor
+(\hyperref[XVII.subsubsec1.1.4]{1.1.4}) from the category of naive
+$I$-fold complexes to that of\pageoriginale $I$-fold complexes
+(\hyperref[XVII.par1.1.4.2.1]{1.1.4.2.1}), and the associated simple
+complex functor \eqhyperref[XVII.eq1.1.4.0]{1.1.4.0}:
+\[
+K^{s}(F)=C^{s}(F)(\ast)_{s.a}{\quoi}.
+\]
+
+Let $K_j\in K^{s}(\Aa_j)$ be complexes, and let $i\in I$; set
+$K_j[1_i]=K_j$ for $j\neq i$, and $K_i[1_i]=K_{i}[1]$. We then have
+the evident isomorphisms
+\[
+C^{s}(F)(K_{j}[1_i])\simeq C^{s}(F)(K_j)[1_i]{\quoi},
+\]
+and
+\[
+C^{s}(F)(K_j)(\ast)[1_i]_{s.a}\simeq
+C^{s}(F)(K_j)(\ast)_{s.a}[1]{\quoi},
+\]
+whence, via \eqhyperref[XVII.eq1.1.4.5]{1.1.4.5}, a
+\emph{canonical isomorphism} $\sigma$ between
+$K^{s}(F)(K_{j}[1_i])$ and $K^{s}(F)(K_{j})[1]$. It follows from
+\hyperref[XVII.par1.1.4.7]{1.1.4.7} that these isomorphisms define a
+grading of $K^{s}(F)$.
+
+\paragraph{}\etiquette[1.1.6.3]{XVII.par1.1.6.3}
+In the general case, $F$ is the composite of the canonical
+contravariant functors $\Aa_i\rightarrow \Aa^{\circ}_i$ (for
+$\epsilon(i)=-$) with a covariant functor $F^{+}$; define the functor
+$K^{s}(F)$ by composition using
+\hyperref[XVII.par1.1.6.1]{1.1.6.1} and
+\hyperref[XVII.par1.1.6.2]{1.1.6.2}.
+
+\begin{enonce*}{Proposition 1.1.7}\etiquette[1.1.7]{XVII.prop1.1.7}
+Under the preceding hypotheses, the functor $K^{s}(F)$ is an exact
+multiadditive functor.
+\end{enonce*}
+
+It suffices to verify \hyperref[XVII.prop1.1.7]{1.1.7} under the
+hypotheses of \hyperref[XVII.par1.1.6.1]{1.1.6.1} (where the
+proposition is \hyperref[XVII.lem1.1.5.4]{1.1.5.4}~(i)) or under those
+of \hyperref[XVII.par1.1.6.2]{1.1.6.2}. To verify that the functors
+deduced from $K^{s}(F)$ by fixing all variables except the $i$-th are
+exact, one may describe $K^{s}(F)$ explicitly in terms of an order on
+$I$ for which $i$ is the least element; a distinguished triangle of
+the standard\pageoriginale form
+\eqhyperref[XVII.eq1.1.1.1]{1.1.1.1} is then sent to a distinguished
+triangle of the same form.
+
+\setcounter{subsubsection}{7}
+\subsubsection{}\etiquette[1.1.8]{XVII.subsubsec1.1.8}
+Let $I$ and $J$ be two finite sets, let $\Psi:I\rightarrow J$ be a
+surjective map, and let $\epsilon_{I}:I\rightarrow \{+,-\}$ and

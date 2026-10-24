@@ -1,0 +1,250 @@
+
+\setcounter{footnote}{0}
+\SGARefTarget{sga3:xxiv:chapter:xxiv}\chapter*{Exposé XXIV\\
+Automorphisms of Reductive Groups}
+\addcontentsline{toc}{chapter}{Exposé XXIV. Automorphisms of Reductive
+Groups}
+\markboth{EXPOSÉ XXIV. AUTOMORPHISMS OF REDUCTIVE GROUPS}
+  {EXPOSÉ XXIV. AUTOMORPHISMS OF REDUCTIVE GROUPS}
+
+\begin{center}
+  \textit{by Michel Demazure}
+\end{center}
+
+\begingroup
+\renewcommand{\thefootnote}{0}
+\footnote{Editor's note: Version dated October 13, 2024.}
+\addtocounter{footnote}{-1}
+\endgroup
+The first part of this Exposé (nos.~1 to 5) is a direct consequence of
+the existence, for a reductive group, of ``sufficiently many outer
+automorphisms'', a result which is itself a consequence of the weakest
+form of the isomorphism theorem for pinned groups. The second part
+(nos.~6 and 7) sets out two applications of the more precise results of
+the preceding Exposé; in particular, no.~7 uses the generators-and-
+relations theorem in its explicit form. Finally, we have included in
+an appendix (no.~8) results on ``Galois'' cohomology used in the text.
+
+Let us specify our cohomological notation. If \(S\) is a scheme and
+\(G\) an \(S\)-group scheme, we write \(H^1(S,G)\) for the first
+cohomology set of \(S\) with coefficients in \(G\), computed for the
+\textup{(fpqc)} topology; this is also the set of isomorphism classes
+of principal homogeneous \textup{(fpqc)} sheaves under \(G\). We write
+\(H^1_{\mathrm{\acute et}}(S,G)\) for the corresponding set for the
+étale topology; it is therefore the part of \(H^1(S,G)\) formed by
+classes of homogeneous sheaves under \(G\) which are quasi-isotrivial
+\textup{(that is, locally trivial for the étale topology)}. We write
+\(\Fib(S,G)\) for the part of \(H^1(S,G)\) formed by classes of
+representable sheaves \textup{(principal homogeneous bundles)}. Thus
+we have the inclusions
+\[
+  H^1_{\mathrm{\acute et}}(S,G)\subset H^1(S,G),
+  \qquad
+  \Fib(S,G)\subset H^1(S,G).
+\]
+
+If every principal homogeneous sheaf under \(G\) is representable
+\textup{(for example, if \(G\) is quasi-affine over \(S\); cf.\ SGA~1,
+VIII, \SGARefLink{sga3:viii:proposition:7:9}{7.9})}, then
+\[
+  \Fib(S,G)=H^1(S,G).
+\]
+
+If \(S'\to S\) is a covering morphism for the \textup{(fpqc)}
+topology, we write \(H^1(S'/S,G)\) for the kernel of the canonical map
+\[
+  H^1(S,G)\longrightarrow H^1(S',G_{S'}).
+\]
+It is known that \(H^1(S'/S,G)\) can be computed simplicially
+\textup{(TDTE~I, \S A.4)}, which implies that, when \(S'\to S\) is a
+covering for the étale topology, \(H^1(S'/S,G)\) is also the kernel of
+\[
+  H^1_{\mathrm{\acute et}}(S,G)
+  \longrightarrow
+  H^1_{\mathrm{\acute et}}(S',G_{S'}).
+\]
+
+Finally, following \SGARefLink{sga3:viii:corollary:4:5}{Exp.~VIII, 4.5}, the name ``\SGARefLink{sga3:viii:corollary:4:5}{Theorem~90}'' is given to
+the following assertion: ``every principal homogeneous sheaf under
+\(G_{m,S}\) is representable and locally trivial.'' This assertion is
+equivalent to
+\[
+  H^1(S,G_{m,S})=\operatorname{Pic}(S),
+\]
+or again to
+\[
+  H^1(S,G_{m,S})=0
+\]
+when \(S\) is local \textup{(or, more generally, semilocal)}.
+
+\SGARefTarget{sga3:xxiv:section:1}
+\section*{1. Scheme of Automorphisms of a Reductive Group}
+\addcontentsline{toc}{section}{1. Scheme of Automorphisms of a Reductive Group}
+
+\SGARefTarget{sga3:xxiv:1.0}
+\subsection*{1.0.}
+We must first make precise certain definitions from the preceding
+Exposé. Let \(S\) be a nonempty scheme, let \(G\) be a reductive
+\(S\)-group, and let
+\[
+  \mathscr R=(M,M^*,R,R^*,\Delta)
+\]
+be a pinned reduced root datum \textup{(\SGARefLink{sga3:XXIII:1.5}{Exp.~XXIII, 1.5})}. A
+\emph{pinning of \(G\) of type \(\mathscr R\)}, or an
+\(\mathscr R\)-\emph{pinning of \(G\)}, consists of:
+\begin{enumerate}
+\item[(i)] an isomorphism of \(D_S(M)\) onto a maximal torus \(T\) of
+  \(G\) \textup{(or, equivalently, a monomorphism
+  \(D_S(M)\to G\) whose image is a maximal torus \(T\) of \(G\))},
+  identifying \(R\) with a root system of \(G\) relative to \(T\)
+  \textup{(\SGARefLink{sga3:xix:definition:3-6}{Exp.~XIX, 3.6})} and \(R^*\) with the corresponding set of
+  coroots;
+\item[(ii)] for each \(\alpha\in\Delta\), an element
+  \[
+    X_\alpha\in\Gamma(S,\mathfrak g^\alpha)^\times.
+  \]
+\end{enumerate}
+The group \(G\) possesses an \(\mathscr R\)-pinning if and only if it
+is split and of type \(\mathscr R\) \textup{(\SGARefLink{sga3:xxii:def:2.7}{Exp.~XXII, 2.7})}.
+
+If \(u:G\to G'\) is an isomorphism of reductive \(S\)-groups, then
+every \(\mathscr R\)-pinning \(\mathcal E\) of \(G\) determines, by
+``transport of structure'', an \(\mathscr R\)-pinning
+\(u(\mathcal E)\) of \(G'\). If
+\(v:\mathscr R'\to\mathscr R\) is an isomorphism of pinned root data,
+then every \(\mathscr R'\)-pinning \(\mathcal E'\) of \(G'\)
+determines, by transport of structure, an \(\mathscr R\)-pinning
+\(v(\mathcal E')\) of \(G\).
+
+Call a \emph{pinned group} a triple \((G,\mathscr R,\mathcal E)\),
+where \(G\) is a reductive \(S\)-group, \(\mathscr R\) is a pinned
+reduced root datum, and \(\mathcal E\) is a pinning of \(G\) of type
+\(\mathscr R\). An isomorphism from the pinned group
+\((G,\mathscr R,\mathcal E)\) onto the pinned group
+\((G',\mathscr R',\mathcal E')\) is a pair \((u,v)\), where
+\(u:G\to G'\) is an isomorphism and
+\(v:\mathscr R'\to\mathscr R\) is an isomorphism of pinned root data,
+such that
+\[
+  u(\mathcal E)=v(\mathcal E').
+\]
+\footnote{Editor's note: Thus
+\(\Lie(u)(X_{v(\alpha)})=X'_\alpha\) for every
+\(\alpha\in R'\).}
+
+\textit{N.B.} If \(S\) is nonempty, \(v\) is uniquely determined by
+\(u\), and by an abuse of language \(u\) will also be called an
+isomorphism of the pinned groups. In particular, if
+\((G,\mathscr R,\mathcal E)\) is a pinned group, an automorphism of
+\((G,\mathscr R,\mathcal E)\) is therefore an automorphism \(u\) of
+\(G\) for which there exists an automorphism \(v\) of \(\mathscr R\)
+such that \(u(\mathcal E)=v(\mathcal E)\). It is thus an automorphism
+of \(G\) which normalizes \(T\), induces on \(T\) an automorphism of
+the form \(D_S(h)\), where \(h\) is an automorphism of \(M\), and
+permutes the elements \(X_\alpha\), \(\alpha\in\Delta\).
+\textup{(As is readily seen, the preceding conditions in fact
+characterize the automorphisms of
+\((G,\mathscr R,\mathcal E)\).)}
+
+There is an evident contravariant functor
+\[
+  \Phi:\quad
+  (G,\mathscr R,\mathcal E)\longmapsto\mathscr R,
+  \qquad
+  (u,v)\longmapsto v,
+\]
+and the principal result of the preceding Exposé
+\textup{(\SGARefLink{sga3:xxiii:theorem:4-1}{Exp.~XXIII, 4.1})} shows that this functor is fully faithful
+\textup{(we shall moreover see in the following Exposé that it is an
+equivalence of categories)}. In particular, it follows that the
+automorphism group of \((G,\mathscr R,\mathcal E)\) is canonically
+isomorphic to the automorphism group of the pinned root datum
+\(\mathscr R\) \textup{(cf.\ \SGARefLink{sga3:XXIII:5.5}{Exp.~XXIII, 5.5})}.
+
+\SGARefTarget{sga3:xxiv:1.1}
+\subsection*{1.1.}
+Let \(S\) be a scheme; endow \((\mathbf{Sch})/S\) with the
+\textup{(fpqc)} topology, and consider the \(S\)-sheaf of groups
+\(\underline{\Aut}_{S\text{-}\mathrm{gr.}}(G)\), where \(G\) is an
+\(S\)-group scheme. There is an exact sequence of \(S\)-sheaves of
+groups
+\[
+  1\longrightarrow \underline{\Centr}(G)
+  \longrightarrow G
+  \xrightarrow{\mathrm{int}}
+  \underline{\Aut}_{S\text{-}\mathrm{gr.}}(G),
+\]
+which defines a monomorphism
+\[
+  j:G/\underline{\Centr}(G)
+  \longrightarrow \underline{\Aut}_{S\text{-}\mathrm{gr.}}(G).
+\]
+The image sheaf of \(j\) is the sheaf of inner automorphisms of \(G\).
+An automorphism \(u\) of \(G\) is inner if and only if there is a
+covering family \(\{S_i\to S\}\) and, for every \(i\), an element
+\(g_i\in G(S_i)\) such that
+\[
+  \operatorname{int}(g_i)=u_{S_i}.
+\]
+In this case, if \(v\) is another automorphism of \(G\), one sees at
+once that
+\[
+  \operatorname{int}(v)u=vuv^{-1}
+\]
+is the inner automorphism defined by the family
+\(g'_i=v(g_i)\). It follows that the image of \(j\) is normal in
+\(\underline{\Aut}_{S\text{-}\mathrm{gr.}}(G)\). The quotient sheaf of
+groups, denoted \(\underline{\Autext}(G)\), is the sheaf of outer
+automorphisms of \(G\). Thus there is an exact sequence
+\[
+  1\longrightarrow G/\underline{\Centr}(G)
+  \longrightarrow \underline{\Aut}_{S\text{-}\mathrm{gr.}}(G)
+  \longrightarrow \underline{\Autext}(G)
+  \longrightarrow 1.
+\]
+All the preceding definitions are compatible with base change. They
+are naturally valid in any site.
+
+\SGARefTarget{sga3:xxiv:1.2}
+\subsection*{1.2.}
+Let \(S\) be a scheme and let \((G,\mathscr R,\mathcal E)\) be a
+pinned reductive \(S\)-group. Let \(E\) be the \textup{(abstract)}
+automorphism group of the pinned root datum \(\mathscr R\), that is,
+the group of automorphisms of \(\mathscr R\) which normalize
+\(\Delta\). By \SGARefLink{sga3:XXIII:5.5}{Exp.~XXIII, 5.5}, there is a canonical monomorphism
+\[
+  E\longrightarrow \underline{\Aut}_{S\text{-}\mathrm{gr.}}(G)
+\]
+which associates with \(h\in E\) the unique automorphism \(u\) of the
+pinned group \(G\) such that \(\Phi(u)=h\). This monomorphism
+canonically defines a monomorphism of sheaves
+\[
+  \tag{*}\label{sga3:xxiv:subsection:1-2:equation:star}
+  a:E_S\longrightarrow \underline{\Aut}_{S\text{-}\mathrm{gr.}}(G).
+\]
+An automorphism \(u\) of \(G\) is a section of the image sheaf of \(a\)
+if and only if the following conditions hold:
+\begin{enumerate}
+\item[(i)] \(u\) normalizes \(T\). It is then known that \(u\)
+  permutes the roots of \(G\) relative to \(T\). If \(\alpha\in R\),
+  then
+  \[
+    u(\alpha):t\longmapsto\alpha\bigl(u^{-1}(t)\bigr)
+  \]
+  is therefore locally on \(S\) of the form
+  \(t\longmapsto\beta(t)\), with \(\beta\in R\). The second condition
+  may then be written as follows:
+\item[(ii)] If \(\alpha\in\Delta\) and \(U\) is an open subset of
+  \(S\) such that \(u(\alpha)_U\in R\), then
+  \(u(\alpha)_U\in\Delta\) and
+  \[
+    \Lie(u_U)(X_\alpha)_U=(X_{u(\alpha)})_U.
+  \]
+\end{enumerate}
+It follows at once from the definitions that the sections of
+\(a(E_S)\) normalize the subgroups of \(G\) defined by the pinning:
+\[
+  T,\quad B,\quad B^{-},\quad U,\quad U^{-}.
+\]
+
+With these definitions in place, we have:

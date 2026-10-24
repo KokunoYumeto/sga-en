@@ -1,0 +1,124 @@
+\section[Accessible functors and small generating subcategories]{Accessible functors, cardinal filtrations, and the construction
+of small generating subcategories}\etiquette[9]{I.sec9}
+
+The present section, which is more technical in nature than the other
+sections of this exposé, will be used in this seminar only in IV 9 and
+VI 4, which are not used elsewhere in the Seminar. The reader should
+therefore omit the present section, at least on a first reading!
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[9.0]{I.sec9.0}
+All categories considered in this section are assumed to be
+$𝒰$-categories. Except for the small index categories $I,J\ldots$ that
+we shall have occasion to use, the developments that follow will apply
+primarily to ``large'' categories $E,F\ldots$ that are stable under
+small filtered inductive limits. Most often, however, it will suffice
+that a slightly weaker condition be satisfied\pageoriginale (condition
+$L$ in \hyperref[I.def9.1]{9.1} below). All cardinals considered in the
+present section are assumed to belong to $𝒰$.
+
+Following a suggestion of P. \textsc{Deligne}, we shall study, for a
+functor $f:E\rightarrow F$ between large categories, a condition that
+$f$ commute with certain types of filtered inductive limits. This
+condition is remarkably stable, and is satisfied by the most important
+functors occurring in nature. The applications we have in mind for our
+seminar are 9.13.3, 9.13.4 (used in VI 4), and especially
+\hyperref[I.cor9.25]{9.25}, which gives, in a nontrivial case, the
+existence of a small generating family in a category of sections of a
+fibered category; this result will be used in IV \hyperref[IV.theo9.5.4]{9.16}.
+
+\begin{enonce*}{Definition 9.1}\etiquette[9.1]{I.def9.1}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $I$ be a preordered set and $pi$ a cardinal. We say that $I$
+is large relative to $pi$ if $I$ is filtered and every subset of $I$
+of cardinality $\leq \pi$ has an upper bound in $I$.
+
+\item Let $E$ be a category. If $pi$ is a cardinal, we say that $E$
+satisfies condition $L_{\pi}$ if, for every small ordered set $I$ large
+relative to $\pi$, $E$ is stable under inductive limits of type $I$. We
+say that $E$ satisfies condition $L$ if there exists a cardinal
+$\pi\in 𝒰$ such that $E$ satisfies condition $L_{\pi}$.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[9.1.1]{I.sec9.1.1}
+When, in \hyperref[I.def9.1]{9.1} a), one has $\pi\geq 2$, the second
+stated condition already implies that $I$ is filtered, and if $\pi$ is
+finite, for $I$ to be large relative to $\pi$ simply means that $I$ is
+filtered. In what follows we shall be concerned almost exclusively with
+the case in which $\pi$ is infinite. Note that if $\pi,\pi'$ are two
+cardinals such that $\pi'\geq\pi$, then $I$ being large relative to
+$\pi'$ evidently implies that it is large relative to $\pi$.
+
+\subsubsection{}\etiquette[9.1.2]{I.sec9.1.2}
+As\pageoriginale announced in \hyperref[I.sec9.0]{9.0}, conditions
+$L_{\pi}$ and $L$ should be regarded as technical variants of the
+stronger condition of stability under small filtered inductive limits.
+It is clear that if $\pi,\pi'$ are cardinals such that
+$\pi'\geq\pi$, then condition $L_{\pi}$ implies condition $L_{\pi'}$.
+
+\begin{enonce*}{Definition 9.2}\etiquette[9.2]{I.def9.2}
+Let $f:E\rightarrow F$ be a functor. If $\Pi$ is a cardinal, we say
+that $f$ is $\Pi$-preaccessible (respectively $\Pi$-accessible) if $E$
+satisfies $L_{\Pi}$ (\hyperref[I.def9.1]{9.1}) and if, for every ordered
+set $I\in 𝒰$ large relative to $\Pi$, and every inductive system
+$(X_i)_{i\in I}$ in $E$ of type $I$, the canonical morphism
+$$
+\varinjlim f(X_i)\longrightarrow f(\varinjlim X_i)
+$$
+is a monomorphism (respectively an isomorphism). We say that $f$ is
+preaccessible (respectively accessible) (relative to the universe
+$𝒰$) if there exists a cardinal $\Pi\in 𝒰$ such that $f$ is
+$\Pi$-preaccessible (respectively $\Pi$-accessible).
+\end{enonce*}
+
+The category of $\Pi$-accessible (respectively accessible) functors
+from $E$ to $F$ will be denoted $\Hhom(E,F)_{\Pi}$, respectively
+$\Hhom(E,F)_{\acc}$.
+
+\setcounter{subsection}{2} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[9.2.1]{I.sec9.2.1}
+Evidently, a functor commuting with small filtered $\varinjlim$ (for
+example, a functor admitting a right adjoint) is $\Pi$-accessible for
+every cardinal $\Pi\geq 2$.
+
+\begin{enonce*}{Definition 9.3}\etiquette[9.3]{I.def9.3}
+Let $E$ be a category, $X$ an object of $E$,
+$$
+h^\circ_X:E\longrightarrow (𝒰\text{-}\Ens)
+$$
+the covariant functor it represents, and $\Pi\in 𝒰$ a cardinal. We say
+that $X$ is a \emph{$\Pi$-preaccessible (respectively
+$\Pi$-accessible) object of} $E$ if the functor
+$h^\circ_X$\pageoriginale is $\Pi$-preaccessible (respectively
+$\Pi$-accessible); we say that $X$ is \emph{preaccessible (respectively
+accessible)} if there exists a cardinal $\Pi\in 𝒰$ such that $X$ is a
+$\Pi$-preaccessible (respectively $\Pi$-accessible) object of $E$.
+\end{enonce*}
+
+\setcounter{subsection}{3} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[9.3.1]{I.sec9.3.1}
+We denote by $E_{\Pi}$ the full subcategory of $E$ formed by the
+$\Pi$-accessible objects of $E$.
+
+When \hyperref[I.def9.3]{Definition 9.3} is applied to a category of the form
+$\Hhom(C,F)$, the terminology just introduced presents \textit{a
+priori} an ambiguity with the analogous terminology introduced in \hyperref[I.def9.2]{9.2},
+when the objects of $\Hhom(C,F)$ are interpreted as functors; there
+does not, however, seem to be any serious risk of confusion.
+
+\begin{enonce*}{Definition 9.4}\etiquette[9.4]{I.def9.4}
+Let $E$ be a category and let $\pi\in 𝒰$ be a cardinal. We say that
+$E$ is a $\pi$-preaccessible (respectively $\pi$-accessible) category
+if there exists in $E$ a small full subcategory $C$ that is generating
+(\hyperref[I.def7.1]{7.1}) and whose objects are $\pi$-preaccessible
+(respectively $\pi$-accessible) (\hyperref[I.def9.3]{9.3}). We say that
+$E$ is a preaccessible (respectively accessible) category if there
+exists a cardinal $\pi\in 𝒰$ such that $E$ is $\pi$-preaccessible
+(respectively $\pi$-accessible).
+\end{enonce*}
+
+For important examples, cf. \hyperref[I.rem9.11.3]{9.11.3} below.

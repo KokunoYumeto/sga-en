@@ -1,0 +1,427 @@
+\begin{enonce*}[remark]{Exercise 5.9}\etiquette[5.9]{IV.exer5.9}
+Let $E$ be a topos, $G$ a group of $E$, $B_G$ the classifying topos
+of $G$ (\hyperref[IV.subsec2.4]{2.4}), and
+$$
+\pi:B_G\longrightarrow E
+$$
+the morphism of topoi deduced from the homomorphism from $G$ to the
+unit group $e$ of $E$ (taking into account that $B_e\approx E$).
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let
+$$
+E_G=G_s
+$$
+be the object of $B_G$ whose underlying $E$-object is $G$, with the
+actions of $G$ defined by left translations. Regard $\pi^{\ast}(G)$
+as a group of $B_G$ (it is the group $G$ of $E$ with the trivial
+action of $G$ on it). Show that the morphism of $E$
+$$
+G_s\times G\longrightarrow G_s
+$$
+defined by the right translations of $G$ on $G_s$ is compatible
+with the actions of $G$ on $G_s$ and on $G=\pi^{\ast}(G)$, and
+defines a morphism of $B_G$
+$$
+E_G\times \pi^{\ast}(G)\longrightarrow E_G{\quoi}.
+$$
+Show that this morphism equips $E_G$ with a right action of the
+$B_G$-group $\pi^{\ast}(G)$, and that this action makes $E_G$ a
+\emph{torsor} under\pageoriginale $\pi^{\ast}(G)$ (that is, the
+terminal object of $B_G$ can be covered by objects $X_i$ such that,
+for every $i$, the restriction of $E_G$ to $X_i$ is isomorphic to
+the trivial bundle with operators $(\pi^{\ast}(G)_{X_i})_d$).
+
+\item Let
+$$
+q:E'\longrightarrow E
+$$
+be a topos over $E$. For every topos $B$ over $E$, define the
+category $\Hhomtop_E(E',B)$ of morphisms of topoi from $E'$ to $B$
+compatible, up to a specified isomorphism, with the structural
+morphisms $E'\rightarrow E$ and $B\rightarrow E$. Taking $B=B_G$,
+define, by the formula $f\mapsto f^{\ast}(E_G)$, an equivalence of
+categories
+$$
+\Hhomtop_E(E',B_G)\longrightarrow \Ttors(E',q^{\ast}(G)){\quoi},
+$$
+where the right-hand side denotes the category of (right)
+$q^{\ast}(G)$-torsors on $E'$.
+
+\item Let $H$ be a subgroup of $G$, so that $\pi^{\ast}(H)$ is a
+subgroup of $\pi^{\ast}(G)$ and hence acts on $E_G$ by restriction
+of the operator group, giving a quotient object
+$$
+X=E_G/\pi^{\ast}(H){\quoi},
+$$
+which is simply the object $G/H$ endowed with the usual left action
+of $G$. Let $e_G$ be the terminal object of $B_G$ (that is, the
+terminal object $e_E$ of $E$ with the necessarily trivial action of
+$G$), and consider in $B_G$ the diagram of morphisms
+\[
+\xymatrix@C=-1cm@R=.75cm{
+E_G \ar[dd] \ar[rd]& \\
+    & \qquad\qquad\quad X = E_{G}/\pi^{*}(H)\ar[ld]\\
+e_G & }
+\]
+which,\pageoriginale upon passing to the topoi induced by $B_G$ on
+these objects, gives a diagram of morphisms of topoi, commutative up
+to canonical isomorphism (\hyperref[IV.subsec5.6]{5.6}). Show that
+this diagram is equivalent to the diagram
+\[
+\xymatrix@C=.05cm@R=.85cm{
+E & = & B_e \ar[dd] \ar[rrrd]& & &\\
+  &   &                    &  & &B_H \ar[llld]\\
+  &   & B_G                &  & & &,
+}
+\]
+whose three arrows are the arrows associated by
+\hyperref[IV.subsec4.5]{4.5} with the group morphisms
+$e\rightarrow H\rightarrow G$ in $E$. (Thus, \emph{the classifying
+topos $B_H$ may intuitively be interpreted as a homogeneous space
+over $B_G$, with group $\pi^{\ast}(G)$, associated with the universal
+torsor} (= homogeneous principal bundle) \emph{$E_G$ over $B_G$}.)
+
+\item Reconsider the example of \hyperref[IV.subsec5.7]{5.7} in the
+case where $X'$ is an \emph{\'etale covering} (locally trivial, \cf
+\hyperref[IV.subsubsec2.7.4]{2.7.4}) of $X$, interpreting it in terms
+of the considerations of the present exercise.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{9}
+\subsection{Inverse images of induced topoi}\etiquette[5.10]{IV.subsec5.10}
+
+Let
+$$
+f:E'\rightarrow E
+$$
+be a morphism of $𝒰$-topoi, let $X$ be an object of $E$, and let
+$X'=f^{\ast}(X)$ be its inverse image in $E'$. We shall define a
+diagram of morphisms of topoi
+\[\vcenter{
+\xymatrix@C=2.5cm@R=1.5cm{
+E_{/X}  \ar[d]_{j_X} & E'_{/X'} \ar[l]_{f_{/X}} \ar[d]^{j_{X'}} \\
+E      &  E'\ar[l]_{f}\quad , }}\leqno{(5.10.1)}
+\]\etiquette[5.10.1]{IV.eq5.10.1}
+where\pageoriginale $j_X$ and $j_{X'}$ are the localization
+morphisms (\hyperref[IV.subsec5.2]{5.2}), and where $f_{/X}$ is
+defined below; this diagram will be commutative up to canonical
+isomorphism. We shall define $f_{/X}$ here by means of its inverse
+image functor
+\begin{equation*}
+(f_{/X})^{\ast}:E_{/X}\longrightarrow E'_{/X'}{\quoi},\tag{5.10.2}
+\end{equation*}\etiquette[5.10.2]{IV.eq5.10.2}
+which we simply take to be the functor ``induced'' by $f^{\ast}$, in
+the evident sense. Since the inclusion functors
+$j_{X!}:E_{/X}\rightarrow E$ and
+$j_{X'!}:E'_{/X'}\rightarrow E'$ commute with $𝒰$-inductive limits
+and fiber products, and are conservative, it follows at once that
+the functor $(f_{/X})^{\ast}$ commutes with $𝒰$-inductive limits and
+fiber products, just as does the functor $f^{\ast}$ which induces
+it. Moreover, since $(f_{/X})^{\ast}$ plainly takes the terminal
+object $X$ to the terminal object $X'$, it is left exact and hence
+is associated with a morphism of topoi
+\begin{equation*}
+f_{/X}:E'_{/X'}\longrightarrow E_{/X}{\quoi},\tag{5.10.3}
+\end{equation*}\etiquette[5.10.3]{IV.eq5.10.3}
+defined up to unique isomorphism
+(\hyperref[IV.subsubsec3.1.1]{3.1.1}). On the other hand, the diagram
+deduced from \eqhyperref[IV.eq5.10.1]{5.10.1} by passing to the
+inverse-image functors is commutative (up to canonical isomorphism)
+by construction and by the fact that $f^{\ast}$ commutes with the
+products $X\times Y$. Thus \eqhyperref[IV.eq5.10.1]{5.10.1} itself
+is commutative, up to a unique isomorphism inducing the canonical
+isomorphism on the inverse-image functors of the two composites
+$f\circ j_{X'}$ and $j_X\circ f_{/X}$ \hyperlink{sga4.exp.IV.subsubsection.3.2.1}{(3.2.1)}.
+
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[5.10.4]{IV.subsubsec5.10.4}
+When $f:E'\rightarrow E$ is associated with a continuous map
+$Y'\rightarrow Y$ of topological spaces
+(\hyperref[IV.subsec4.1]{4.1}), so that $X$ is identified with an
+\'etale space over $Y$, and $X'$ with the fiber product
+$\fprod{X}{Y'}{Y}$, then, identifying the induced topoi
+$\Top(Y)_{/X}$ and $\Top(Y')_{/X'}$ with $\Top(X)$ and $\Top(X')$
+respectively (\hyperref[IV.subsec5.7]{5.7}), one sees that the
+morphism $f_{/X}$ just constructed\pageoriginale is (up to unique
+isomorphism) the morphism $\Top(X')\rightarrow\Top(X)$ deduced from
+the canonical continuous map $X'\rightarrow X$. In the light of
+this example, one may therefore say that the topos $E'_{/X'}$ plays
+the role of a fiber product of $E_{/X}$ and $E'$ over $E$. This
+intuition is made precise by the following result:
+
+\begin{enonce*}{Proposition 5.11}\etiquette[5.11]{IV.prop5.11}
+With the notation of \hyperref[IV.subsec5.10]{5.10}, the diagram
+\eqhyperref[IV.eq5.10.1]{5.10.1}, equipped with the compatibility
+isomorphism $\alpha:f\circ j_{X'}\rightarrow j_X\circ f_{/X}$, is
+``$2$-cartesian.'' More precisely, for every $𝒰$-topos $F$, if to
+each morphism of topoi $g:F\rightarrow E'_{/X'}$ one associates the
+triple $(f_{/X}\circ g, j_{X'}\circ g,
+\alpha\ast g)=(g_1,g_2,\beta)$, where
+$g_1:F\rightarrow E_{/X}$ and $g_2:F\rightarrow E'$ are morphisms
+of topoi and $\beta:j_X\circ g_1\rightarrow f\circ g_2$ is an
+isomorphism of morphisms of topoi from $F$ to $E$, then one obtains
+an equivalence between the category $\Hhomtop(F,E'_{/X'})$ and the
+category
+\sisi{$\fprod{\Hhomtop(F,E_{/X})^2}{\Hhomtop(F,E')}{\Hhomtop(F,E)}$}{$\Hhomtop(F,E_{/X})\times^{2}_{\Hhomtop(F,E)}\Hhomtop(F,E')$}
+of all triples $(g_1,g_2,\beta)$ as above.
+\end{enonce*}
+
+(NB. A $2$ has been placed above the cartesian-product sign to
+recall that this is not an ordinary fiber product of categories, but
+a ``$2$-fiber product,'' in the sense made explicit in the
+statement.)
+
+To prove \hyperref[IV.prop5.11]{5.11}, we shall describe morphisms of
+topoi explicitly by means of their associated inverse-image
+functors. For this we shall need the auxiliary results given in
+\hyperref[IV.subsubsec5.11.1]{5.11.1} through
+\hyperref[IV.prop5.12]{5.12} below.
+
+\setcounter{subsection}{11} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[5.11.1]{IV.subsubsec5.11.1}
+Consider, in general, the situation in which two categories $E$ and
+$E'$ are given, together with an object $X$ of $E$ which is assumed
+to be pullbackable, that is, such that the functor
+$$
+j:A\longmapsto A\times X:E\longrightarrow E_{/X}
+$$
+is\pageoriginale defined, and finally a left exact functor
+\begin{equation*}
+\varphi:E_{/X}\longrightarrow E'{\quoi}.\tag{$\ast$}
+\end{equation*}
+Since $E_{/X}$ has a terminal object, namely $(X,\id_X)=X$, the same
+is therefore true of $E'$, which has the terminal object
+$$
+e'\simeq \varphi(X){\quoi}.
+$$
+Having chosen the terminal object $e'$ of $E'$, we shall associate
+with every $\varphi$ as above a pair
+\begin{equation*}
+(\Psi,u),\mbox{ with } \Psi=\varphi\circ j:E\rightarrow E',\mbox{ and
+} u\in \Hom(e',\Psi(X)){\quoi}.\tag{${\ast}{\ast}$}
+\end{equation*}
+To define $u$, note that
+$$
+j(X)=X\times X
+$$
+has a canonical section $\delta_X$ over the terminal object $X$ of
+$E_{/X}$, namely the diagonal section, and define
+$$
+u=\varphi(\delta_X):\varphi(X)=e'\longrightarrow \varphi(X\times
+X)=\Psi(X){\quoi}.
+$$
+I claim that knowledge of the pair $({\ast}{\ast})$ makes it
+possible to reconstruct the functor $\varphi$ of $(\ast)$ up to
+unique isomorphism. For this, for every object
+$$
+p:X'\longrightarrow X
+$$
+of $E_{/X}$, consider the following cartesian diagram in $E_{/X}$:
+\[
+\xymatrix@C=1cm@R=1.5cm{
+X' \ar[d] \ar[r] & **[r]j(X') = X'\times X \ar[d]^{j(p)}\\
+X  \ar[r]^{\delta_X}& **[r]j(X) = X \times X   &, }
+\]
+where the first horizontal arrow is the graph morphism
+$\Gamma_p=(\id_{X'},p)$. Applying the left exact functor $\varphi$ to
+this diagram, and using the definition of $\Psi$ as $\varphi\circ
+j$, gives a cartesian diagram
+\[
+\xymatrix@C=2.25cm@R=1.25cm{
+\varphi(X',p) \ar[d] \ar[r]& \Psi (X') \ar[d]^{\Psi(p)}\\
+e'  \ar[r]          & \Psi (X) \quad , }
+\]
+or,\pageoriginale in other words, a canonical isomorphism
+\begin{equation*}
+\varphi(X',p)\simeq
+\fprod{\Psi(X')}{e'}{\Psi(X)}{\quoi}\tag{5.11.1.1}
+\end{equation*}\etiquette[5.11.1.1]{IV.eq5.11.1.1}
+It is immediately seen to be functorial in the object $(X',p)$ of
+$E_{/X}$, which describes explicitly how the functor
+$\varphi:E_{/X}\rightarrow E'$ is reconstructed, up to isomorphism,
+from the pair $(\Psi,u)$ of $({\ast}{\ast})$. Notice also that the
+functor $\Psi$ is left exact. More generally, $\Psi$ commutes with
+every type of projective limit with which $\varphi$ commutes,
+because $j$ commutes with projective limits.
+
+Conversely, suppose now that finite projective limits are
+representable in $E$ and $E'$, and start with a pair
+$$
+(\Psi,u),\Psi:E\longrightarrow E', u\in \Hom(e',\Psi(X)){\quoi},
+$$
+where the functor $\Psi$ is left exact. Formula
+\eqhyperref[IV.eq5.11.1.1]{5.11.1.1} then defines a functor
+$\varphi:E_{/X}\rightarrow E'$. One checks at once that this functor
+is left exact and, more generally, that it commutes with every type
+of projective limit representable in $E$ with which $\Psi$ commutes.
+This follows immediately from the cartesian diagram
+\[
+\xymatrix@C=2.5cm@R=1cm{ \displaystyle{\varprojlim^{E}_{I} X'_i}
+\ar[d] &
+\displaystyle{\varprojlim^{E_{/X}}_{I} X'_i} \ar[d] \ar[l]\\
+\displaystyle{\varprojlim^{E}_{I} X} & X \ar[l]_{\delta} }
+\]
+relating\pageoriginale the projective limits computed in $E$ and in
+$E_{/X}$ (where $\delta$ denotes the diagonal morphism into the
+projective limit of the constant functor with value $X$): apply the
+functor $\Psi$ to it, obtaining a cartesian diagram in $E'$, and
+compose the latter with the cartesian square deduced from
+$\Psi(X)\leftarrow e'$. The resulting composite cartesian square
+expresses the compatibility of $\varphi$ with the projective limit
+under consideration.
+
+The pair $(\Psi,u)$ is reconstructed up to isomorphism from
+$\varphi$ by observing that there is a canonical isomorphism
+\begin{equation*}
+\Psi(X')=\varphi(j(X')){\quoi},\tag{5.11.1.2}
+\end{equation*}\etiquette[5.11.1.2]{IV.eq5.11.1.2}
+deduced from \eqhyperref[IV.eq5.11.1.1]{5.11.1.1} by replacing
+$(X',p)$ there with $j(X')=(X'\times X,\pr_2)$ and observing that
+$\Psi(X'\times X)\simeq\Psi(X')\times\Psi(X)$. The preceding
+isomorphism is manifestly functorial in $X'$, that is, it gives an
+isomorphism
+$$
+\Psi\simeq \varphi\circ j{\quoi},
+$$
+and one likewise checks that, under this isomorphism,
+$u:e'\rightarrow\Psi(X)$ is identified with $\varphi(\delta_X)$.
+We have thus obtained the essential part of the following result.
+
+\begin{enonce*}{Lemma 5.11.2}\etiquette[5.11.2]{IV.lem5.11.2}
+Let $E$ and $E'$ be two categories in which finite projective limits
+are representable, let $X$ be an object of $E$, let $\Ssex(E,E')$
+be the category of left exact functors $\Psi$ from $E$ to $E'$, and
+let $\Ssex(E_{/X},E')$ be the analogous category of left exact
+functors $\varphi$ from $E_{/X}$ to $E'$. There is then an
+equivalence between the category $\Ssex(E_{/X},E')$ and the category
+$\Ssex(E,E')_{/\Gamma}$ of pairs $(\Psi,u)$, where $\Psi\in\ob
+\Ssex(E,E')$ and $u:e'\rightarrow\Psi(X)$ (with $e'$ the terminal
+object of $E'$). This equivalence, as well as a quasi-inverse
+functor, is described explicitly in
+\hyperref[IV.subsubsec5.11.1]{5.11.1}. If $\varphi$ and $(\Psi,u)$
+correspond, then $\varphi$ commutes with a given type of projective
+limit if\pageoriginale and only if $\Psi$ does. If the base-change
+functors in $E$ and $E'$ commute with a given type of inductive
+limit, then $\varphi$ commutes with inductive limits of that type if
+and only if $\Psi$ does.
+\end{enonce*}
+
+We leave it to the reader to make explicit the category structure on
+$\Ssex(E,E')_{/\Gamma}$ corresponding to the pairs $(\Psi,u)$. If
+the functor $\Gamma:\Ssex(E,E')\rightarrow(\Ens)$ is defined by
+$\Gamma(\Psi)=\Hom(e',\Psi(X))$, then $u$ in the pair $(\Psi,u)$ may
+be interpreted as an element of $\Gamma(\Psi)$, that is, as a
+homomorphism $\Psi\rightarrow\Gamma$ in the category of presheaves
+on $\Ssex(E,E')^{\circ}$. This justifies the notation
+${}_{/\Gamma}$ used in the statement of
+\hyperref[IV.subsubsec5.11.1]{5.11.1}. To finish the proof of
+\hyperref[IV.lem5.11.2]{5.11.2}, it remains to make explicit in
+\hyperref[IV.subsubsec5.11.1]{5.11.1} the functorial nature of the
+constructions considered when $\varphi$, respectively $(\Psi,u)$,
+varies. This is essentially trivial and is left to the reader. It
+also remains to verify the assertion concerning commutation with
+inductive limits; this too follows immediately from the explicit
+formulas \eqhyperref[IV.eq5.11.1.1]{5.11.1.1} and
+\eqhyperref[IV.eq5.11.1.2]{5.11.1.2} relating these functors.
+
+In particular, when $E$ and $E'$ are $𝒰$-topoi, and morphisms of
+topoi are interpreted by means of their associated inverse-image
+functors, one obtains:
+
+\begin{enonce*}{Proposition 5.12}\etiquette[5.12]{IV.prop5.12}
+Let $E$ and $E'$ be two $𝒰$-topoi, let $X$ be an object of $E$, and
+consider on $\Hhomtop(E',E)$ the contravariant functor
+$$
+\gamma:f\longmapsto
+\Gamma(E',f^{\ast}(X))=\Hom(e',f^{\ast}(X)):\Hhomtop(E',E)^{\circ}\longrightarrow
+(\Ens){\quoi}.
+$$
+There is then an equivalence of categories
+\begin{equation*}
+\Hhomtop(E',E_{/X})\xrightarrow{\approx}\Hhomtop(E',E)_{/\gamma}{\quoi},\tag{5.12.1}
+\end{equation*}\etiquette[5.12.1]{IV.eq5.12.1}
+where\pageoriginale the right-hand side is the full subcategory of
+$\Hhomtop(E',E)^{\widehat{\phantom{,}}}_{/\gamma}$ consisting of
+pairs $(f,u)$ with $f\in\Homtop(E',E)$ and $u\in\gamma(f)$, that is,
+$u\in\Gamma(E',f^{\ast}(X))$. This functor is obtained by
+associating with every morphism of topoi $h:E'\rightarrow E_{/X}$
+the pair $(f,u)$ consisting of the composite
+$$
+f=j_X\circ h:E'\rightarrow E_{/X}\rightarrow E{\quoi},
+$$
+and the morphism
+$$
+u:e'=h^{\ast}(X,\id_X)\longrightarrow
+f^{\ast}(X)=h^{\ast}(j^{\ast}_X(X))=h^{\ast}(X\times X)
+$$
+deduced from the diagonal morphism $\delta_X:X\rightarrow X\times
+X$ by applying $h^{\ast}$ to it.
+\end{enonce*}
+
+\setcounter{subsection}{12}
+\subsubsection{}\etiquette[5.12.2]{IV.subsubsec5.12.2}
+Using \hyperref[IV.prop5.12]{5.12}, the proof of
+\hyperref[IV.prop5.11]{5.11} becomes almost evident, and essentially
+reduces to the following (which will serve in place of a formal
+proof that would be no more instructive): to give a morphism of
+topoi $g:F\rightarrow E'_{/X'}$ ``amounts to the same thing'' as to
+give a morphism of topoi $g_2:F\rightarrow E'$ and a section $u$ of
+$g^{\ast}_2(X')$. But
+$g^{\ast}_2(X')=g^{\ast}_2(f^{\ast}(X))=(fg_2)^{\ast}(X)$, so giving
+$u$ is also equivalent to giving a lifting of the morphism of topoi
+$fg_2:F\rightarrow E$ to a morphism of topoi
+$g_1:F\rightarrow E_{/X}$. This expresses precisely that giving a
+morphism of topoi $g:F\rightarrow E'_{/X'}$ is essentially
+equivalent to giving a triple $(g_1,g_2,\alpha)$ as in
+\hyperref[IV.prop5.11]{5.11}.
+
+\begin{enonce*}[remark]{Remark 5.13}\etiquette[5.13]{IV.rem5.13}
+We shall see (\S 15\nde{This section does not exist. See, however,
+[16], Proposition 4.47, for a general existence statement for fiber
+products of topoi (noting that all geometric morphisms between
+Grothendieck topoi are bounded).}) that for every diagram
+\[
+\xymatrix@C=2cm@R=1.25cm{
+E_1 \ar[d]&\\
+E   & E_2 \ar[l] }
+\]
+of\pageoriginale topoi, there exists a $2$-fiber product in the sense
+of the $2$-category ($𝒱$-$𝒰$-$\Top$) of $𝒰$-topoi belonging to
+$𝒱$ (independent, up to equivalence, of the choice of a universe
+$𝒱$ such that $𝒰\in𝒱$). For natural examples of ``fiber products
+of topoi'' other than \hyperref[IV.prop5.11]{5.11}, see the final
+chapter of \textsc{Giraud}'s book [3].
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 5.14}\etiquette[5.14]{IV.exer5.14}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $F$ and $G$ be two topoi over a topos $E$. Define the
+category $\Hhomtop_E(F,G)$ of pairs $(f,\alpha)$, where
+$f:F\rightarrow G$ is a morphism of topoi and $\alpha:p\rightarrow
+q\circ f$ is an isomorphism of morphisms of topoi from $F$ to $E$
+(where $p:F\rightarrow E$ and $q:G\rightarrow E$ are the structural
+morphisms of topoi). Define pairing functors
+$\Hhomtop_E(F,G)\times\Hhomtop_E(G,H)\rightarrow\Hhomtop_E(F,H)$,
+and associativity isomorphisms.
+
+\item Let $X$ and $Y$ be two objects of a topos $E$. Define a
+natural functor from the discrete category defined by the set
+$\Hom(X,Y)$ to the category
+$\Hhomtop_E(E_{/X},E_{/Y})$. Establish compatibility with the
+composition of morphisms in $E$ and with the pairings considered in
+a).
+
+\item Prove that the functor considered in b) is an equivalence of
+categories. In particular, an object $X$ of a topos $E$ can be
+reconstructed up to unique isomorphism when one knows, ``up to
+$E$-equivalence,'' the induced topos $E_{/X}$ as a topos
+\emph{over $E$.}~\footnote[1]{This result is due to P.
+\textsc{Deligne}. The case where $E$ is the punctual topos had
+previously been treated by Mme \textsc{Hakim}.}
+\end{enumerate}
+\end{enonce*}

@@ -1,0 +1,317 @@
+
+\section*{11. Affine group schemes}
+\phantomsection\label{sec:sga3-VIB-11}%
+\addcontentsline{toc}{section}{11. Affine group schemes}
+
+\medskip
+\phantomsection\label{par:sga3-VIB-11.0}%
+\noindent\textbf{11.0. Reminders.---}%
+\footnote{\label{note:sga3-VIB-104}Editor's note: this
+paragraph of reminders has been added.}
+Let \(q:X\to S\) be a quasi-compact and quasi-separated
+morphism of schemes \textup{(cf.\ EGA~IV\(_1\), 1.1 and
+1.2)}, and let \(\mathcal F\) be a quasi-coherent
+\(\mathcal O_X\)-module. Recall that \(q_*(\mathcal F)\) is a
+quasi-coherent \(\mathcal O_S\)-module
+\textup{(EGA~I, 9.2.1)}. Moreover, by EGA~III, 1.4.15
+\textup{(completed by EGA~IV\(_1\), 1.7.21)}, one has
+\hyperref[concl:sga3-VIB-11.0-c]{\textup{(c)}} below, and the
+proof in \emph{loc.\ cit.} also gives
+\hyperref[concl:sga3-VIB-11.0-a]{\textup{(a)}} and
+\hyperref[concl:sga3-VIB-11.0-b]{\textup{(b)}}:
+\begin{enumerate}
+\item[\textup{(a)}]\phantomsection\label{concl:sga3-VIB-11.0-a}
+  If \(\mathcal F\) is a filtered direct limit of
+  quasi-coherent submodules \(\mathcal F_\alpha\), then
+  \[
+    q_*(\mathcal F)
+      =\varinjlim_\alpha q_*(\mathcal F_\alpha).
+  \]
+
+\item[\textup{\SGAInlineRefTarget{par:sga3-VIB-11.0:item:b}(b)}]\phantomsection\label{concl:sga3-VIB-11.0-b}
+  If \(\mathcal E\) is a flat \(\mathcal O_S\)-module, the
+  canonical morphism
+  \phantomsection\label{form:sga3-VIB-11.0-projection}%
+  \[
+    \mathcal E\otimes_{\mathcal O_S}q_*(\mathcal O_X)
+      \longrightarrow q_*q^*(\mathcal E)
+  \]
+  is an isomorphism.
+
+\item[\textup{(c)}]\phantomsection\label{concl:sga3-VIB-11.0-c}
+  Let \(p:S'\to S\) be a flat morphism, let
+  \(q':X'\to S'\) be obtained from \(q\) by base change, and
+  let \(\mathcal F'\) be the inverse image of \(\mathcal F\)
+  on \(X'\). Then the canonical morphism
+  \phantomsection\label{form:sga3-VIB-11.0-flat-base-change}%
+  \[
+    p^*q_*(\mathcal F)\longrightarrow q'_*(\mathcal F')
+  \]
+  is an isomorphism.
+\end{enumerate}
+
+Indeed, let \(U=\operatorname{Spec}(A)\) be an arbitrary
+affine open subset of \(S\). By hypothesis, \(q^{-1}(U)\) is
+the union of affine open subsets
+\[
+  V_i=\operatorname{Spec}(B_i),\qquad i=1,\ldots,n,
+\]
+and every intersection \(V_i\cap V_j\) is the union of
+finitely many affine open subsets
+\[
+  W_{ijk}=\operatorname{Spec}(C_{ijk}).
+\]
+Then
+\(\Gamma(U,q_*(\mathcal F))
+  =\Gamma(q^{-1}(U),\mathcal F)\)
+is the kernel of the morphism
+\phantomsection\label{form:sga3-VIB-11.0-Cech-F}%
+\[
+  \bigoplus_{i=1}^{n}\Gamma(V_i,\mathcal F)
+    \longrightarrow
+  \bigoplus_{i,j,k}\Gamma(W_{ijk},\mathcal F).
+\]
+Assertion~\hyperref[concl:sga3-VIB-11.0-a]{\textup{(a)}}
+follows, since every term above commutes with filtered direct
+limits \textup{(the \(V_i\) and \(W_{ijk}\) being affine,
+hence quasi-compact)}.
+
+Let us prove
+\hyperref[concl:sga3-VIB-11.0-b]{\textup{(b)}}. The module
+\(E=\Gamma(U,\mathcal E)\) is flat over \(A\), and
+\(\Gamma(U,q_*q^*(\mathcal E))\) is the kernel \(K(E)\) of
+the morphism
+\phantomsection\label{form:sga3-VIB-11.0-Cech-E}%
+\[
+  \bigoplus_{i=1}^{n}B_i\otimes_AE
+    \longrightarrow
+  \bigoplus_{i,j,k}C_{ijk}\otimes_AE.
+\]
+Since \(E\) is flat over \(A\), this kernel is identified
+with
+\[
+  K(A)\otimes_AE
+    =\mathcal O_X(q^{-1}(U))\otimes_AE.
+\]
+Finally, if \(U'\) is an arbitrary affine open subset of
+\(S'\) lying over \(U\), then
+\(A'=\mathcal O(U')\) is a flat \(A\)-algebra, and the same
+argument gives%
+\begingroup
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}%
+\footnote[1]{\label{note:sga3-VIB-11.0-U-prime}
+Translator's note: the French re-edition prints
+\(q'^{-1}(U)\) in the right-hand side below. Since
+\(q':X'\to S'\) and the affine open subset just introduced
+is \(U'\subset S'\), the inverse image is
+\(q'^{-1}(U')\).}%
+\endgroup
+\phantomsection\label{form:sga3-VIB-11.0-local-base-change}%
+\[
+  \mathcal F(q^{-1}(U))\otimes_AA'
+    \xrightarrow{\ \sim\ }
+  \mathcal F'(q'^{-1}(U')).
+\]
+
+\medskip
+\phantomsection\label{not:sga3-VIB-11-A}%
+\noindent\textbf{Notation.---}
+Let \(S\) be a scheme, let \(X\) be an \(S\)-scheme, and let
+\(f:X\to S\) be the structural morphism. We shall put
+\phantomsection\label{form:sga3-VIB-11-A-X}%
+\[
+  \mathcal A(X)=f_*(\mathcal O_X).
+\]
+
+\medskip
+\phantomsection\label{lem:sga3-VIB-11.1}%
+\noindent\textbf{Lemma 11.1.---}
+\emph{Let \(X\) and \(Y\) be two quasi-compact and
+quasi-separated \(S\)-schemes, and let \(f:X\to S\) and
+\(g:Y\to S\) be their structural morphisms. Then the
+canonical homomorphism}
+\phantomsection\label{form:sga3-VIB-11.1-phi}%
+\[
+  \varphi:
+  \mathcal A(X)\otimes_{\mathcal O_S}\mathcal A(Y)
+    \longrightarrow
+  \mathcal A(X\times_SY)
+\]
+\emph{is an isomorphism in each of the following cases:}%
+\footnote{\label{note:sga3-VIB-105}Editor's note: if \(k\) is
+a field and \(X\) is an infinite disjoint union of copies of
+\(S=\operatorname{Spec}k\) \textup{(so that \(X\) is not
+quasi-compact)}, then \(\mathcal A(X)=k^X\), and the
+canonical morphism
+\[
+  k^X\otimes_k k^X\longrightarrow k^{X\times X}
+\]
+is not surjective.}
+\begin{enumerate}
+\item[\textup{(a)}]\phantomsection\label{concl:sga3-VIB-11.1-a}
+  \emph{\(f\) and \(g\) are affine;}
+
+\item[\textup{(b)}]\phantomsection\label{concl:sga3-VIB-11.1-b}
+  \emph{\(g\) \textup{(or \(f\))} is flat and affine;}
+
+\item[\textup{(c)}]\phantomsection\label{concl:sga3-VIB-11.1-c}
+  \emph{\(g\) is flat and \(f_*(\mathcal O_X)\) is a flat
+  \(\mathcal O_S\)-module.}
+\end{enumerate}
+
+In case~\hyperref[concl:sga3-VIB-11.1-b]{\textup{(b)}}, we
+shall suppose that it is \(g\) that is flat and affine. Put
+\[
+  S'=\operatorname{Spec}\mathcal A(X),\qquad
+  Y'=Y\times_SS',\qquad
+  g'=g\times_SS',
+\]
+and write \(v:S'\to S\) for the structural morphism:
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-11.1-base-change}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    Y' \arrow[r] \arrow[d,"g'"'] &
+    Y \arrow[d,"g"] \\
+    \operatorname{Spec}\mathcal A(X)=S'
+      \arrow[r,"v"'] &
+    S
+  \end{tikzcd}
+\end{center}
+In cases~\hyperref[concl:sga3-VIB-11.1-a]{\textup{(a)}} and
+\hyperref[concl:sga3-VIB-11.1-b]{\textup{(b)}}, the morphism
+\(g\) is affine, and hence EGA~II, 1.5.2 gives
+\phantomsection\label{form:sga3-VIB-11.1-eq1}%
+\[
+  \tag{1}
+  g'_*(\mathcal O_{Y'})
+    =v^*g_*(\mathcal O_Y)
+    =\mathcal A(Y)\otimes_{\mathcal O_S}\mathcal O_{S'}.
+\]
+The same equality holds in
+case~\hyperref[concl:sga3-VIB-11.1-c]{\textup{(c)}}, by
+\hyperref[concl:sga3-VIB-11.0-c]{11.0\textup{(c)}}, since
+\(S'\) is flat over \(S\) and \(g\) is quasi-compact and
+quasi-separated.
+
+On the other hand, by EGA~II, 1.2.7, the morphism
+\(f:X\to S\) factors through \(v\) by means of a morphism
+\(p:X\to S'\), and
+\[
+  p_*(\mathcal O_X)=\mathcal O_{S'},
+  \qquad
+  X\times_SY=X\times_{S'}Y'.
+\]
+Since \(f\) is quasi-separated, so is \(p\)
+\textup{(EGA~IV\(_1\), 1.2.2)}; and since \(f\) is
+quasi-compact and \(v\) is quasi-separated, \(p\) is also
+quasi-compact \textup{(EGA~IV\(_1\), 1.2.4)}. Consider the
+cartesian square
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-11.1-cartesian}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    X\times_SY \arrow[r,"p'"] \arrow[d] &
+    Y' \arrow[d,"g'"] \\
+    X \arrow[r,"p"'] &
+    S'
+  \end{tikzcd}
+\end{center}
+In cases~\hyperref[concl:sga3-VIB-11.1-b]{\textup{(b)}} and
+\hyperref[concl:sga3-VIB-11.1-c]{\textup{(c)}}, the scheme
+\(Y\) is flat over \(S\), and hence \(Y'\) is flat over
+\(S'\). Applying
+\hyperref[concl:sga3-VIB-11.0-c]{11.0\textup{(c)}} once
+again, we obtain
+\phantomsection\label{form:sga3-VIB-11.1-eq2}%
+\[
+  \tag{2}
+  p'_*(\mathcal O_{X\times_SY})
+    =g'^*p_*(\mathcal O_X)
+    =g'^*(\mathcal O_{S'})
+    =\mathcal O_{Y'}.
+\]
+The same equality holds in
+case~\hyperref[concl:sga3-VIB-11.1-a]{\textup{(a)}}, because
+\(p\) and \(p'\) are then isomorphisms.
+
+Finally, since \(v\) is affine, EGA~II, 1.4.7 gives
+\[
+  v_*(\mathcal F\otimes_{\mathcal O_S}\mathcal O_{S'})
+    =\mathcal F\otimes_{\mathcal O_S}\mathcal A(X)
+\]
+for every quasi-coherent \(\mathcal O_S\)-module
+\(\mathcal F\). Combined with
+\hyperref[form:sga3-VIB-11.1-eq2]{\textup{(2)}} and
+\hyperref[form:sga3-VIB-11.1-eq1]{\textup{(1)}}, this gives
+\[
+\begin{aligned}
+  \mathcal A(X\times_SY)
+    &=v_*g'_*p'_*(\mathcal O_{X\times_SY})\\
+    &\overset{\textup{(2)}}{=}v_*g'_*(\mathcal O_{Y'})
+     \overset{\textup{(1)}}{=}
+       v_*(\mathcal A(Y)\otimes_{\mathcal O_S}\mathcal O_{S'})\\
+    &=\mathcal A(Y)\otimes_{\mathcal O_S}\mathcal A(X).
+\end{aligned}
+\]
+
+\medskip
+\phantomsection\label{cor:sga3-VIB-11.2}%
+\noindent\textbf{Corollary 11.2.---}
+\emph{The functor}
+\[
+  X\longmapsto\operatorname{Spec}\mathcal A(X),
+\]
+\emph{from the full subcategory of
+\((\mathbf{Sch}/S)\) formed by the \(S\)-schemes \(X\) that
+are flat, quasi-compact, and quasi-separated over \(S\), and
+for which \(\mathcal A(X)\) is a flat
+\(\mathcal O_S\)-module, to the category of flat affine
+\(S\)-schemes, commutes with finite products and therefore
+takes \(S\)-groups to \(S\)-groups.}
+
+\medskip
+\phantomsection\label{def:sga3-VIB-11.3}%
+\noindent\textbf{Definition 11.3.---}
+\emph{Given a flat \(S\)-group \(G\), quasi-compact and
+quasi-separated over \(S\), such that \(\mathcal A(G)\) is
+flat over \(\mathcal O_S\),}%
+\footnote{\label{note:sga3-VIB-106}Editor's note: if \(S\) is
+a regular locally Noetherian scheme of dimension at most
+\(2\), and \(X\) is an \(S\)-scheme that is flat,
+quasi-compact, and quasi-separated, then \(\mathcal A(X)\) is
+a flat \(\mathcal O_S\)-module; cf.\ \textup{[Ray70a]},
+VII, \SGARefLink{sga3:VIIB:3.2:prop}{3.2}.}
+\emph{we write \(G_{\mathrm{af}}\), and call the
+\(S\)-group}
+\[
+  G_{\mathrm{af}}=\operatorname{Spec}\mathcal A(G)
+\]
+\emph{the \emph{affine envelope} of \(G\).}
+
+\medskip
+\phantomsection\label{prop:sga3-VIB-11.3.1}%
+\noindent\textbf{Proposition 11.3.1.---}%
+\footnote{\label{note:sga3-VIB-107}Editor's note: this
+proposition has been added; see also the additional
+\hyperref[sec:sga3-VIB-12]{Section~12} below for a study of the morphism
+\(G\to G_{\mathrm{af}}\) and of its kernel.}
+\emph{The canonical morphism}
+\[
+  \tau_G:G\longrightarrow G_{\mathrm{af}}
+\]
+\emph{is a morphism of \(S\)-groups. Moreover, it has the
+following universal property:}
+\begin{enumerate}
+\item[\textup{(i)}]\phantomsection\label{concl:sga3-VIB-11.3.1-i}
+  \emph{For every morphism of \(S\)-schemes
+  \(\varphi:G\to H\), where \(H\) is affine over \(S\), there
+  is a unique morphism of \(S\)-schemes
+  \(\varphi':G_{\mathrm{af}}\to H\) such that}
+  \[
+    \varphi=\varphi'\circ\tau_G.
+  \]
+
+\item[\textup{(ii)}]\phantomsection\label{concl:sga3-VIB-11.3.1-ii}
+  \emph{If, moreover, \(H\) is an \(S\)-group and
+  \(\varphi\) is a morphism of \(S\)-groups, then the same is
+  true of \(\varphi'\).}
+\end{enumerate}

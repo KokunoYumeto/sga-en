@@ -1,0 +1,180 @@
+
+\subsubsection*{3.3.3}
+\phantomsection
+\label{sga3:VIIB:3.3.3}
+
+Continue to suppose that \(k\) is a field of characteristic \(0\).
+Let \(\overline k\) be an algebraic closure of \(k\), and let
+\(\Gamma\) be the topological Galois group of \(\overline k\) over
+\(k\).
+
+For every formal \(k\)-group \(G\), denote by
+\(\mathbf{Aut}_k(G)\) the \(k\)-group functor assigning to every
+finite-dimensional commutative \(k\)-algebra \(C\) the group of
+automorphisms of the formal \(C\)-group
+\[
+  G\widehat\otimes_k C.
+\]
+\footnote{\label{sga3:VIIB:nde:132}The original stated:
+``This \(k\)-functor is manifestly left exact
+\textup{(\(H\) is topologically flat over \(k\)!)}.'' The editors
+supplied the details that follow.}
+Since \(k\) is a field, \(G\) is topologically flat over \(k\).
+Equivalently, its affine algebra
+\[
+  A=\mathcal A(G)
+\]
+is topologically flat over \(k\), or its covariant bialgebra
+\[
+  H=\mathbf H(G)
+\]
+is flat over \(k\). The functor \(\mathbf{Aut}_k(G)\) is therefore
+a formal \(k\)-group.
+
+Indeed, \(\mathbf{Aut}_k(G)\) is the fiber product of the following
+diagram \textup{(cf.\ \SGARefLink{sga3:i:remark:1-7-3}{Exposé~I, 1.7.3})}:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:3.3.3:automorphism-fiber-product-diagram}
+  \input{native_diagrams/exp7/viib_15_95/diag_120}
+\end{center}
+The vertical arrow sends
+\[
+  (\phi,\psi)\longmapsto(\phi\circ\psi,\psi\circ\phi),
+\]
+whereas the horizontal arrow is the unit section. It is therefore
+enough to show that the \(k\)-functor \(\mathbf{End}_k(G)\) is
+represented by an object of \(\operatorname{Vaf}/k\); by \SGARefLink{sga3:VIIB:1.1}{1.1} and
+\SGARefLink{sga3:VIIB:0.4.2}{0.4.2}, this amounts to showing that it is left exact, or,
+equivalently, that it commutes with fiber products of
+\(k\)-algebras.
+
+To give an element of \(\mathbf{End}_k(G)(C)\) is equivalent to
+giving a \(k\)-algebra morphism
+\[
+  \phi:H\longrightarrow H\otimes_k C
+\]
+that also respects the coalgebra structure, that is, for which the
+usual compatibility diagrams commute. Since \(H\) is flat over
+\(k\), the functor
+\[
+  H\otimes_k -
+\]
+commutes with fiber products of \(k\)-algebras. Thus
+\(\mathbf{End}_k(G)\) is left exact and can be treated as a formal
+\(k\)-group.
+
+If \(L\) is a \(k\)-Lie algebra and
+\(G=\mathscr G(L)\), \SGARefLink{sga3:VIIB:3.3:cartier-theorem}{Theorem~3.3} shows that
+\(\mathbf{Aut}_k(G)\) is isomorphic to the \(k\)-group functor
+\(\mathbf{Aut}_k(L)\) which assigns to each finite-dimensional
+\(k\)-algebra \(C\) the group of automorphisms of the
+\(C\)-Lie algebra
+\[
+  C\otimes_k L.
+\]
+
+Now let \(G\) be an arbitrary formal \(k\)-group. We saw in \SGARefLink{sga3:VIIB:2.5.2:proposition}{2.5.2}
+that \(G\) decomposes canonically as a semidirect product of an
+étale formal group \(G_e\) and an infinitesimal formal group
+\(G_0\). This semidirect product is determined by the data of
+\[
+  L=\operatorname{Lie}(G)=\operatorname{Lie}(G_0),
+\]
+the \(\Gamma\)-group
+\[
+  M=G_e(\overline k)=G(\overline k),
+\]
+and a morphism of formal \(k\)-groups
+\[
+  \Phi:
+  G_e\longrightarrow
+  \mathbf{Aut}_k(G_0)
+  \simeq
+  \mathbf{Aut}_k(L).
+\]
+Such a morphism sends \(G_e\) into the étale part
+\(\mathbf{Aut}_k(L)_e\) of \(\mathbf{Aut}_k(L)\)
+\textup{(cf.\ \SGARefLink{sga3:VIIB:2.5.1:corollary}{2.5.1})}. It is consequently determined by a morphism
+of \(\Gamma\)-groups
+\[
+  \phi=\Phi(\overline k):
+  M\longrightarrow
+  \bigl(\mathbf{Aut}_kL\bigr)(\overline k)
+  =
+  \operatorname{Aut}_{\overline k}
+    \bigl(L\otimes_k\overline k\bigr).
+\]
+
+Let \(\Gamma\) act on \(L\otimes_k\overline k\) by
+\[
+  \gamma(\ell\otimes t)=\ell\otimes\gamma(t).
+\]
+Then \(\phi\) makes \(M\) act on
+\(L\otimes_k\overline k\) by automorphisms of
+\(\overline k\)-Lie algebras in such a way that
+\[
+  \phi\bigl(\gamma(m)\bigr)
+  =
+  \gamma\circ\phi(m)\circ\gamma^{-1}.
+\]
+Equivalently,
+\[
+  \gamma(m)(\ell\otimes t)
+  =
+  \gamma\!\left(
+    m\bigl(\ell\otimes\gamma^{-1}(t)\bigr)
+  \right)
+\]
+for every \(m\in M\), \(\gamma\in\Gamma\), and
+\(\ell\otimes t\in L\otimes_k\overline k\). We express this last
+condition by saying that \(M\) acts on
+\(L\otimes_k\overline k\) \emph{compatibly with \(\Gamma\)}.
+
+The situation can be summarized in a ``highbrow'' statement. A
+\emph{\(\Gamma\)-Lie algebra over \(k\)} is a triple
+\[
+  (L,M,\phi)
+\]
+consisting of a \(k\)-Lie algebra \(L\), a \(\Gamma\)-group \(M\),
+and an action \(\phi\) of \(M\) on
+\(L\otimes_k\overline k\) that is compatible with the actions of
+\(\Gamma\) on \(M\) and on \(L\otimes_k\overline k\).
+
+If \((L,M,\phi)\) and \((L',M',\phi')\) are two such
+\(\Gamma\)-Lie algebras, a morphism from the first to the second is
+a pair \((f,\theta)\), where
+\[
+  f:L\longrightarrow L'
+\]
+is a morphism of \(k\)-Lie algebras and
+\[
+  \theta:M\longrightarrow M'
+\]
+is a morphism of \(\Gamma\)-groups, such that
+\[
+  (f\otimes1)(m\cdot x)
+  =
+  \theta(m)\cdot(f\otimes1)(x)
+\]
+for every \(x\in L\otimes_k\overline k\) and \(m\in M\).
+We have therefore proved:
+
+\medskip
+\noindent\textbf{Theorem.}
+\phantomsection
+\label{sga3:VIIB:3.3.3:gamma-lie-equivalence}
+{\itshape Let \(k\) be a field of characteristic \(0\). The functor
+that assigns to a formal \(k\)-group \(G\) the triple
+\[
+  \bigl(
+    \operatorname{Lie}(G),
+    G(\overline k),
+    \Phi(\overline k)
+  \bigr)
+\]
+is an equivalence from the category of formal \(k\)-groups to the
+category of \(\Gamma\)-Lie algebras.}\footnote{%
+\label{sga3:VIIB:nde:133}In particular, when
+\(k=\overline k\), this recovers the
+Cartier--Gabriel--Kostant theorem mentioned in \SGARefLink{sga3:VIIB:2.9.2}{2.9.2}.}

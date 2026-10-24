@@ -1,0 +1,289 @@
+\section[A variant of Chow's lemma ${}^{(*)}$.]{A variant of Chow's lemma
+\texorpdfstring{\protect\hyperlink{sga4.exp.XII.note.section7}{${}^{(*)}$}}{(*)}.}\etiquette[7]{XII.sec7}
+
+We shall need the following variant of (\EGA II 5.6.1), stripped of
+all Noetherian and irreducibility hypotheses.
+
+\begin{enonce*}{Lemma 7.1}\etiquette[7.1]{XII.lem7.1}
+Let $S$ be a quasi-compact and quasi-separated scheme, and let
+$f:X\rightarrow S$ be a separated morphism of finite type, with $X$
+nonempty. There exists a commutative diagram
+$$
+\xymatrix@=1.25cm{
+X \ar[rd]_{f}&    &\bar{X}\ar[ll]_{\pi}\ar[ld]^{\bar{f}}\\
+  &  S &
+}
+$$
+with\pageoriginale $\pi$ projective and $\bar{f}$ quasi-projective,
+and a nonempty open subset $U$ of $X$, such that $\pi$ induces an
+isomorphism from
+$\bar{U}=\fprod{U}{\bar{X}}{X}=\pi^{-1}(U)$ onto $U$.
+\end{enonce*}
+
+\noindent
+\emph{Proof.} We first make the following observation. Let
+$i:X'\rightarrow X$ be a closed $S$-subscheme of $X$, and let
+$V\subset X'$ be a subscheme that is open in $X$ and dense in $X'$.
+If the lemma holds for $X'$, then it holds for $X$. Indeed, let
+$$
+\xymatrix@=1.25cm{
+X' \ar[rd]_{f'}&    &\bar{X}'\ar[ll]_{\pi'}\ar[ld]^{\bar{f}'}\\
+  &  S &
+}
+$$
+be a diagram as in the statement, and let $U'\neq\varnothing$ be an
+open subset of $X'$ such that $\pi'$ induces an isomorphism
+$\bar{U}'={\pi'}^{-1}(U')\rightarrow U'$. Since $V$ is dense in
+$X'$, we have $U'\cap V\neq\varnothing$, and we may therefore replace
+$U'$ by this open subset. Then $U'$ is open in $X$, and we set
+$\pi=i\pi'$, $\bar{f}=\bar{f}'$, and $U=U'$.
+
+Now $X$ admits a finite covering by nonempty affine open subsets
+$U_k$, $k=1,\ldots,n$. The hypotheses on $S$ imply that every
+$U_k\rightarrow S$ is quasi-affine, and hence, a fortiori,
+quasi-compact. We prove the lemma for every $X$ by induction on $n$.
+If the intersection $U$ of the $U_k$ is dense in $X$, we may copy the
+proof of (\EGA II 5.6, B, C, D), with the necessary changes in
+notation. If the intersection is nonempty, we reduce to the case in
+which it is dense by replacing $X$ by the closure $X'$ of $U$ (as in
+the observation above), and $U_k$ by $U'_k=U_k\cap X'$. Finally,
+suppose that $U$ is empty, and choose $r$, $1\leq r<n$, such that
+$$
+V=\bigcap_{k=1}^{r}U_k\neq\varnothing
+\qquad\hbox{but}\qquad
+V\cap U_{r+1}=\varnothing;
+$$
+this is plainly possible since $U_1\neq\varnothing$. We may now
+replace $X$ by the closure $X'$ of $V$ and each $U_k$ by
+$U_k\cap X'$, discarding the empty members. Since
+$U_{r+1}\cap X'=\varnothing$ (it is open in $X'$ and disjoint from
+the dense open $V$), the result follows from the induction
+hypothesis.
+
+\section{Final reductions}\etiquette[8]{XII.sec8}\pageoriginale
+
+\begin{enonce*}{Lemma 8.1}\etiquette[8.1]{XII.lem8.1}
+To prove any one of the assertions
+{\rm \hyperref[XII.thm5.1]{5.1} (i), (ii), (iii)}, it is enough to do
+so under the assumptions that $f$ is \emph{projective} and $S$ is
+Noetherian.
+\end{enonce*}
+
+Suppose first that \hyperref[XII.thm5.1]{5.1} has been proved when $f$
+is projective; we show how the same assertion follows for arbitrary
+$f$. Using \hyperref[XII.lem6.1]{6.1}, we are reduced to the situation
+of \hyperref[XII.cor5.5]{5.5}, with $S$ strictly local. We now apply
+\hyperref[XII.cor6.10]{6.10}, taking $Y=X_{\circ}$. Given
+$(\xi,X')$ as in \hyperref[XII.cor6.10]{6.10}, we apply Chow's lemma
+\hyperref[XII.lem7.1]{7.1} to find an $S$-morphism
+$p:\bar{X}\rightarrow X'$, with $\bar{X}$ projective over $S$, such
+that $p(\bar{X})$ contains a nonempty open subset of $X'$ (condition
+$1^{\circ}$ of \hyperref[XII.cor6.10]{6.10}). Since $p$ is
+projective, the base-change homomorphisms for $(p,h)$ are isomorphisms
+by hypothesis (condition $2^{\circ}$ of
+\hyperref[XII.cor6.10]{6.10}). Finally, since $\bar{X}$ is projective
+over $S$, the inclusion
+$\bar{Y}=\bar{X}_{\circ}\rightarrow\bar{X}$ induces, by hypothesis,
+an isomorphism on cohomology groups
+$$
+H^{i}(\bar{X},\bar{F})\longrightarrow
+H^{i}(\bar{X}_{\circ},\bar{h}^{\ast}(\bar{F})),
+$$
+which is condition $3^{\circ}$ of
+\hyperref[XII.cor6.10]{6.10}. Thus all the conditions of
+\hyperref[XII.cor6.10]{6.10} are satisfied, and the conclusion
+follows.
+
+We next show that, in order to verify any one of the three assertions
+\hyperref[XII.thm5.1]{5.1} for every situation $(f,F,g)$ with $f$
+projective, we may further assume that $S$ is Noetherian. By
+\hyperref[XII.lem6.1]{6.1}, we may suppose that $S$ is strictly local
+and that $S'\rightarrow S$ is the inclusion of the closed point; we
+are thus reduced to verifying \hyperref[XII.cor5.5]{5.5} with $S$
+strictly local. Moreover, since $X$ embeds into the projective scheme
+$\PP^r_S$, compatibility \hyperref[XII.prop4.4]{4.4} (ii) allows us
+to replace $X$ by $\PP^r_S$ and $F$ by its direct image on
+$\PP^r_S$. We are therefore reduced to the case $X=\PP^r_S$.
+
+Write $S=\Spec(A)$. The ring $A$ is the filtered direct limit of
+Noetherian Henselian local subrings $A_i$ for which the inclusions
+$A_i\rightarrow A$ are local: one may take the strict henselizations,
+at the prime ideals induced by the maximal ideal of $A$, of the
+finitely generated $\ZZ$-subalgebras of $A$. Under these conditions,
+the residue field $k$ of $A$ is likewise the filtered direct limit of
+the residue fields $k_i$ of the $A_i$ (\EGA IV 5.13.1). Set
+$S_i=\Spec(A_i)$ and $X_i=\PP^r_{S_i}$. Suppose that a direct system
+$(F_i)$ of sheaves of the type occurring in the assertion under
+consideration is given on the $X_i$, as in VII \hyperref[VII.thm5.7]{5.7}, and let $F$ be
+the sheaf it defines on $X$. Let $F_{i\circ}$ (respectively,
+$F_{\circ}$) be the sheaf induced by $F_i$ on the fiber
+$X_{i\circ}$ over the closed point $s_i$ of $S_i$ (respectively, by
+$F$ on the fiber $X_{\circ}$ over the closed point $s$ of $S$). We
+then have a commutative diagram
+$$
+\xymatrix{
+\displaystyle\mathop{\varinjlim}_{i} H^{n}(X_i,F_i) \ar[r] \ar[d]&
+H^{n}(X,F)\ar[d]\\
+\displaystyle\mathop{\varinjlim}_{i} H^{n}(X_{i\circ},F_{i\circ}) \ar[r] &
+H^{n}(X_{\circ},F_{\circ}),
+}
+$$
+whose two horizontal arrows are isomorphisms by VII \hyperref[VII.thm5.7]{5.7}. Consequently,
+to prove that the second vertical arrow is an isomorphism, it is
+enough to prove this for the first one; hence it is enough to prove
+that the homomorphisms
+$$
+H^n(X_i,F_i)\longrightarrow H^n(X_{i\circ},F_{i\circ})
+$$
+are isomorphisms. On the other hand, every sheaf $F$ of the type under
+consideration on $X$ is isomorphic to the limit of a direct system of
+the preceding kind; for example, one may take $F_i=u_{i*}(F)$, where
+$u_i:X\rightarrow X_i$ is the canonical morphism, by
+\hyperref[XII.cor5.2]{5.2} and
+\hyperrefext[IX][IX.prop1.6]{1.6} (iii). This completes the proof of
+\hyperref[XII.lem8.1]{8.1}.
+
+\begin{enonce*}{Corollary 8.2}\etiquette[8.2]{XII.cor8.2}
+Theorem {\rm \hyperref[XII.thm5.1]{5.1} (i)} is true.
+\end{enonce*}
+
+Indeed, it is enough to combine \hyperref[XII.lem8.1]{8.1}, criterion
+\hyperref[XII.prop6.5]{6.5} (i) ${\rm b'')}$, and
+\hyperref[XII.lem5.8]{5.8}.
+
+\begin{enonce*}{Lemma 8.3}\etiquette[8.3]{XII.lem8.3}
+To\pageoriginale prove any one of the assertions
+{\rm \hyperref[XII.thm5.1]{5.1} (i), (ii), (iii)}, it is enough to do
+so when $f$ is projective of relative dimension $\leq 1$ and $S$ is
+Noetherian.
+\end{enonce*}
+
+Indeed, \hyperref[XII.lem8.1]{8.1} already shows that we may restrict
+ourselves to the case in which $f$ is projective and $S$ is
+Noetherian, and an argument used above further allows us to suppose
+that $X=\PP^r_S$. We proceed by induction on $r$, noting that the
+theorem holds by hypothesis for $r=1$. We may therefore suppose that
+$r\geq2$ and that the theorem has been proved for
+$\PP^{r-1}_S\rightarrow S$ (over every base $S$). Embed
+$Z=\PP^{r-2}_S$ in $X=\PP^r_S$ in the usual way, and let
+$p:\bar{X}\rightarrow X$ be the blowup of $X$ along $Z$. A direct
+calculation (\cf \EGA V) gives a natural morphism
+$p_1:\bar{X}\rightarrow X_1=\PP^1_S$ that makes $\bar{X}$ an
+$X_1$-scheme locally isomorphic to $\PP^{r-1}_{X_1}$ (it is the
+projective bundle over $X_1$ associated with a suitable locally free
+sheaf of rank $r$ on $X_1$). On the other hand, the fibers of $p$ have
+dimension $\leq1$, as do those of $f_1:X_1\rightarrow S$. We may
+therefore apply the relative-dimension-one hypothesis to $p$ and
+$f_1$, and the induction hypothesis to $p_1$, in the commutative
+diagram
+$$
+\xymatrix{
+   & \bar{X} \ar[ld]_{p} \ar[rd]^{p_1} &          \\
+ X \ar[rd]_{f}&           & X_1\ar[ld]^{f_1}\\
+   &    S      &
+}$$
+Since $p$ is surjective, \hyperref[XII.prop6.8]{6.8} reduces us to
+proving \hyperref[XII.thm5.1]{5.1} for the composite
+$\bar{f}=fp=f_1p_1$. But we may already apply
+\hyperref[XII.thm5.1]{5.1} to both $f_1$ and $p_1$. Taking
+\hyperref[XII.prop6.11]{6.11} into account, we conclude that
+\hyperref[XII.thm5.1]{5.1} also holds for their composite $f_1p_1$.
+This completes the proof of \hyperref[XII.lem8.3]{8.3}.
+
+\begin{enonce*}{Lemma 8.4}\etiquette[8.4]{XII.lem8.4}
+To\pageoriginale prove {\rm \hyperref[XII.thm5.1]{5.1} (ii)}, it is
+enough to prove the ``specialization theorem for the fundamental
+group'' {\rm \hyperref[XII.thmbis5.9]{5.9 bis}} in the case where $f$
+is projective of relative dimension $\leq1$ and $S$ is Noetherian and
+strictly local.
+\end{enonce*}
+
+This follows at once from \hyperref[XII.lem8.3]{8.3},
+\hyperref[XII.lem6.1]{6.1}, and \hyperref[XII.prop6.5]{6.5} (ii)
+(criterion b)).
+
+The specialization theorem in the case of \hyperref[XII.lem8.4]{8.4}
+will be proved directly in the next exposé
+(\hyperrefext[XIII][XIII.sec2]{2}).
+
+\begin{enonce*}{Lemma 8.5}\etiquette[8.5]{XII.lem8.5}
+To prove {\rm \hyperref[XII.thm5.1]{5.1} (iii)}, it is enough to prove
+{\rm \hyperref[XII.thm5.1]{5.1} (ii)} and, in addition, the following
+proposition (which will be proved in the next exposé
+{\rm (\hyperrefext[XIII][XIII.sec3]{3})}, or in
+{\rm (\EGA IV 21.9.12)}):
+\end{enonce*}
+
+\begin{enonce*}{Proposition 8.6}\etiquette[8.6]{XII.prop8.6}
+Let $S$ be Henselian and Noetherian, let $f:X\rightarrow S$ be
+projective of relative dimension $\leq1$, and let $X_{\circ}$ be the
+closed fiber of $X/S$. For every scheme $Z$, let
+$\Pic Z=H^1(Z,(G_m)_Z)$ denote the Picard group of $Z$. The restriction
+homomorphism
+$$
+\Pic X\longrightarrow \Pic X_{\circ}
+$$
+is surjective.
+\end{enonce*}
+
+\noindent
+\emph{Proof of \hyperref[XII.lem8.5]{8.5}.} By
+\hyperref[XII.prop6.5]{6.5} (iii) and
+\hyperref[XII.cor8.2]{8.2}, it is enough to prove that
+$$
+\varphi^q:H^q(X,\ZZ/\ell^\nu \ZZ)\longrightarrow
+H^q(X_{\circ},\ZZ/\ell^{\nu}\ZZ)
+$$
+is surjective for every $q\geq1$ and every prime $\ell$. For $q=1$,
+surjectivity is already known from \hyperref[XII.thm5.1]{5.1} (ii).
+Moreover, since $X_{\circ}$ is a projective scheme of dimension
+$\leq1$ over a separably closed field $k$, we have
+$$
+H^q(X_{\circ},\ZZ/\ell^{\nu}\ZZ)=0
+$$
+for $q>2$ when $\ell\neq\operatorname{char} k$
+(\hyperrefext[X][X.cor4.3]{4.3}), and for $q>1$ when
+$\ell=\operatorname{char} k$ (\hyperrefext[X][X.cor5.2]{5.2}). Thus
+surjectivity is automatic for these values of $q$.
+
+It\pageoriginale remains to consider $q=2$ for a prime
+$\ell\neq\operatorname{char} k$. Put $n=\ell^{\nu}$. The sheaf
+$(\mu_n)_S$ of $n$-th roots of unity is locally isomorphic to
+$(\ZZ/n\ZZ)_S$, and, since $S$ is strictly local, there is a
+noncanonical isomorphism
+$$
+(\mu_n)_S\simeq(\ZZ/n\ZZ)_S,
+$$
+and hence $(\mu_n)_X\simeq(\ZZ/n\ZZ)_X$.
+
+Kummer theory \hyperrefext[IX][IX.Thr3.2]{3.2}, applied to $X$ and
+$X_{\circ}$, gives a morphism of exact sequences
+$$
+\xymatrix@R=1.5cm{
+\Pic X \ar[r] \ar[d]^{\epsilon}&
+H^{2}(X,(\mu_n)_X) \ar[d]^{\varphi^2}\ar[r]&
+H^{2}(X,(G_m)_X)\ar[d]\\
+\Pic X_{\circ} \ar[r]&
+H^2(X_{\circ},(\mu_n)_{X_{\circ}}) \ar[r]&
+H^2(X_{\circ},(G_m)_{X_{\circ}}).
+}
+$$
+Now $H^2(X_{\circ},(G_m)_{X_{\circ}})=0$ by
+\hyperrefext[IX][IX.thm4.6]{4.6}. Consequently, the surjectivity of
+$\epsilon$ implies that of $\varphi^2$, which proves the lemma.
+
+\begin{thebibliography}{99}
+\bibitem{sga4.exp.XII.bib.1} \textsc{Giraud} J., \emph{Cohomologie non-abélienne},
+thesis (forthcoming), and two notes in C.R., vol. 260, pp. 2392 and
+2656 (1965).
+
+\bibitem{sga4.exp.XII.bib.2} \textsc{Godement} R., \emph{Théorie des faisceaux}, Paris
+(1958).
+
+\bibitem{sga4.exp.XII.bib.3} \textsc{Verdier} J.L., \emph{Catégories dérivées},
+Institut des Hautes Études Scientifiques (1964).
+\end{thebibliography}
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

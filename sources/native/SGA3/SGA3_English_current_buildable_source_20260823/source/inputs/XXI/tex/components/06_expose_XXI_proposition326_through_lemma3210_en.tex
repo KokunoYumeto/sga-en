@@ -1,0 +1,106 @@
+\begin{proposition}\label{sga3:XXI:3.2.6}
+If \(\Delta\) is a system of simple roots, then
+\(\mathscr{P}(\Delta)\) is a system of positive roots. If \(\Delta\)
+is a system of simple roots and \(R_+\) is a system of positive roots,
+then
+\[
+ \Delta\subset R_+
+ \quad\Longleftrightarrow\quad
+ R_+=\mathscr{P}(\Delta).
+\]
+\end{proposition}
+
+\begin{proof}
+The first assertion is immediate. If \(\Delta\subset R_+\), then
+\(\mathscr{P}(\Delta)\subset R_+\) by (P 3), and therefore
+\(\mathscr{P}(\Delta)=R_+\) by
+Remark~\ref{sga3:XXI:3.2.3}. The rest is trivial.
+\end{proof}
+
+\begin{remark}\label{sga3:XXI:3.2.7}
+Systems of positive roots exist: endow \(\VR(R)\) with the structure
+of a totally ordered vector space. The set of roots that are
+\(\geq0\) for this order is a system of positive roots.
+\end{remark}
+
+\begin{theorem}\label{sga3:XXI:3.2.8}
+Let \(R_+\) be a system of positive roots. There exists a unique
+system of simple roots \(\mathscr{S}(R_+)\) such that
+\[
+ \mathscr{S}(R_+)\subset R_+,
+ \qquad\text{i.e.}\qquad
+ R_+=\mathscr{P}\bigl(\mathscr{S}(R_+)\bigr).
+\]
+\end{theorem}
+
+Uniqueness follows immediately from:
+
+\begin{lemma}\label{sga3:XXI:3.2.9}
+Let \(\Delta\) be a system of simple roots. An element
+\(\alpha\in\mathscr{P}(\Delta)\) belongs to \(\Delta\) if and only if
+\(\alpha\) is not the sum of two elements of
+\(\mathscr{P}(\Delta)\).
+\end{lemma}
+
+\begin{proof}
+This follows immediately from the definitions and
+Proposition~\ref{sga3:XXI:3.1.2}.
+\end{proof}
+
+We now prove the existence of \(\mathscr{S}(R_+)\). Consider the set
+of subsets \(T\) of \(R_+\) such that
+\[
+ T=\operatorname{ind}(T)
+ \qquad\text{and}\qquad
+ \Qp\cdot T\supset R_+.
+\]
+This set is nonempty, since it contains
+\(\operatorname{ind}(R_+)\). Let \(\Delta\) be a minimal element of
+this set under inclusion. We show that \(\Delta\) is a system of
+simple roots; by Proposition~\ref{sga3:XXI:3.1.5}\SGARefLink{sga3:XXI:3.1.5:item:i}{(i)}, it is enough to
+show that \(\Delta\) is a linearly independent subset of
+\(M\otimes\mathbb Q\).
+
+\begin{lemma}\label{sga3:XXI:3.2.10}
+If \(\alpha,\beta\in\Delta\) and
+\[
+ q\alpha+q'\beta\in R,
+ \qquad q,q'\in\mathbb Q,
+\]
+then \(qq'\geq0\).
+\end{lemma}
+
+\begin{proof}
+If \(qq'<0\), then, after interchanging \(\alpha\) and \(\beta\) if
+necessary, we may write
+\[
+ a\alpha-b\beta\in R_+,
+ \qquad a,b\in\mathbb Q^\ast_+.
+\]
+By the defining property of \(\Delta\), there is a relation
+\[
+ a\alpha-b\beta
+   =\sum_{\gamma\in\Delta}c(\gamma)\gamma,
+ \qquad c(\gamma)\in\Qp.
+\]
+If \(a\leq c(\alpha)\), this becomes
+\[
+ -\beta
+ =\frac{c(\alpha)-a}{b}\alpha
+  +\sum_{\gamma\neq\alpha}\frac{c(\gamma)}{b}\gamma.
+\]
+Thus \(-\beta\in(\Qp\cdot\Delta)\cap R\), which is contained in
+\(R_+\) by (P 3). This gives
+\(\beta\in R_+\cap(-R_+)\), contradicting (P 1).
+
+If instead \(a>c(\alpha)\), then
+\[
+ \bigl(a-c(\alpha)\bigr)\alpha
+ =b\beta+\sum_{\gamma\neq\alpha}c(\gamma)\gamma,
+\]
+which shows that
+\[
+ \Delta\subset\Qp\cdot\bigl(\Delta\setminus\{\alpha\}\bigr),
+\]
+contrary to the minimality of \(\Delta\).
+\end{proof}

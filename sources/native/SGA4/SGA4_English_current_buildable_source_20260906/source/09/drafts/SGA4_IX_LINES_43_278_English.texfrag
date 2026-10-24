@@ -1,0 +1,219 @@
+\setcounter{pageoriginal}{0}
+
+\setcounter{section}{-1}
+\section{Introduction}\etiquette[0]{IX.sec0}\pageoriginale
+
+Note that, beginning with the present exposé, in contrast to the
+preceding exposés and to the classical cohomological theory of
+topological spaces, we are obliged, for the validity of the essential
+statements, to restrict ourselves to \emph{torsion} sheaves (and often,
+more precisely, to torsion sheaves prime to the residue
+characteristics).
+
+Let us point out that in fact there is no ``reasonable'' theory of
+cohomology with integral (or even real) coefficients for varieties over
+an algebraically closed field of characteristic $p\neq 0$, analogous
+to the classical theory for the case $k=\CC$ (as Serre observed). More
+precisely, there is no contravariant functor $H^1$, defined, say, on
+the category of smooth projective schemes over an algebraically closed
+field $K$ of characteristic $p>0$, with values in the category of
+finite-dimensional vector spaces over $\RR$ (or a subfield of $\RR$),
+``commuting with products,'' \ie such that $H^1(X\times
+Y)\xleftarrow{\sim}H^1(X)\times H^1(Y)$, and such that $\dim H^1(X)=2$
+if $X$ is a connected curve of genus 1. Indeed, it would follow that
+if $X$ is an abelian variety over $K$, then the map $u\mapsto u^1$
+from $\End(X)$ to $\End(H^1(X))$ is \emph{additive}, hence a
+\emph{representation} of the opposite ring of $\End(X)$. But in
+characteristic $p$ there exist elliptic\pageoriginale curves $X$ whose
+endomorphism ring is a maximal order $A$ in a definite quaternion
+algebra over $\ZZ$ ([3], p.198), and such an algebra plainly has no
+representation in a vector space of dimension 2 over $\RR$, since
+$A\otimes_{\ZZ}\RR$ is a division algebra (the quaternion algebra).
+
+\section{The formalism of torsion sheaves}\etiquette[1]{IX.sec1}
+
+Let $T$ be a topos and $F$ an abelian sheaf on $T$. One may multiply
+by $n$ in $F$ ($n\in \ZZ$ an integer), this multiplication being
+induced by the analogous operation in (Ab). Denote by ${}_nF$ the
+kernel of this multiplication; thus ${}_nF(X)$, for $X\in \Ob T$, is
+the group of sections of $F(X)$ whose order divides $n$.
+
+We denote by $\PP$ the set of all prime numbers.
+
+\begin{enonce*}{Definition 1.1}\etiquette[1.1]{IX.def1.1}
+Let $p$ be a set of prime numbers. We say that $F$ is a $p$-torsion
+sheaf, \sisi{where}{or} a $p$-sheaf, if the canonical morphism
+$$
+\varinjlim_n {}_nF\longrightarrow F\text{ is bijective}{\quoi},
+$$
+where $n$ ranges over the set of integers such that $\ass n\subset p$,
+that is, such that the prime numbers dividing $n$ belong to $p$. If
+$p=\PP$ is the set of all prime numbers, we simply say that $F$ is a
+torsion sheaf.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.2}\etiquette[1.2]{IX.prop1.2}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $F$ is a $p$-torsion sheaf if and only if $F$ is the sheaf
+  associated with a presheaf taking values in $p$-torsion abelian
+  groups; one may take
+$$
+P=\frac{\lim(\text{\rm presheaf})}{\ass n\subset p} {}_nF{\quoi}.
+$$
+
+\item If\pageoriginale $F$ is a $p$-torsion sheaf and if $X\in \Ob T$
+  is a quasi-compact object\footnote[1]{An object $X$ of a topos is
+  called quasi-compact if every covering family $\{X_i\rightarrow X\}$
+  can be refined by a finite covering family. A morphism $u$ of
+  topoi is quasi-compact if the inverse image of every quasi-compact
+  object is again quasi-compact.}, then $F(X)$ is a $p$-torsion group.
+
+\item If $T$ is locally of finite type {\rm (VI \hyperref[VI.def1.1]{1.1})}, then $F$ is a
+  $p$-torsion sheaf if and only if $F(X)$ is a $p$-torsion group for
+  every quasi-compact $X\in \Ob T$. In this case, one has
+$$
+\varinjlim_{\ass n\subset p} H^q(T/X; {}_nF)\xrightarrow{\sim}
+H^q(T/X;F)
+$$
+for every quasi-compact $X$ and every $q$.
+
+\item If $u:T\rightarrow T'$ is a morphism of topoi and if $F'$ is a
+  $p$-torsion sheaf on $T'$, then the inverse image $u^{\ast}F'$ is a
+  $p$-torsion sheaf on $T$.
+
+\item If $u:T\rightarrow T'$ is a morphism of topoi, with $T$ and
+  $T'$ locally of finite type and $u$ quasi-compact${}^\ast$, and if
+  $F$ is a $p$-torsion sheaf on $T$, then the $R^qu_{\ast}F$ are
+  $p$-torsion sheaves on $T'$ for every $q$.
+\end{enumerate}
+\end{enonce*}
+
+\noindent
+\emph{Proof}:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Clearly, if a sheaf $F$ is $p$-torsion, then $F$ is the sheaf
+  associated with the presheaf $P$ whose group of sections $P(X)$ is
+  the subgroup of $p$-torsion elements of $F(X)$. Conversely, let
+  $F=\underline{a}P$ (II) be the sheaf associated with $P$,
+  where $P$ takes values in the category of abelian
+  $p$-torsion groups. From the exact sequence
+$$
+0\rightarrow {}_nP \rightarrow P\xrightarrow{n}P
+$$
+one deduces an exact sequence
+$$
+0\rightarrow \underline{a}({}_nP)\rightarrow F\xrightarrow{n}F{\quoi},
+$$
+whence\pageoriginale $\underline{a}({}_nP)={}_nF$. Since the functor $\underline{a}$
+commutes with inductive limits, it follows from
+$$
+\frac{\lim(\text{\rm presheaf})}{\ass n\subset p}{}_nP\xrightarrow{\sim}P
+$$
+that one also has
+$$
+\varinjlim_{\ass n\subset p} {}_nF\xrightarrow{\sim}F{\quoi}.
+$$
+
+\item Put $P=\underrightarrow{\lim(\text{\rm presheaf})}{}_n F$. Then one has
+  $P\subset F$, so $P$ is a separated presheaf, and consequently
+$$
+\underline{a}P(X)=\varinjlim (\ker(\prod_i P(X_i)\rightrightarrows)){\quoi},
+$$
+where, as usual, the limit is taken over the covering families
+$\{X_i\rightarrow X\}$. But since $X$ is quasi-compact,
+it is enough to take finite covering families. For these families,
+$\prod_iP(X_i)$ is $p$-torsion; therefore so is the $\ker$. It follows
+that $\underline{a}P(X)=F(X)$ is $p$-torsion.
+
+\item To verify that $\varinjlim {}_nF\rightarrow F$ is bijective,
+  it is enough to do so on the values at $X\in \Ob T$ for every
+  $X$ in a family of generators. We are therefore reduced to (ii) for the
+  first assertion. The second assertion is a consequence of
+
+\item A consequence of (i), since $u^{\ast}(\underline{a}P')=\underline{a}(u\cdot P')$
+
+\item An easy consequence of (iii).
+\end{enumerate}
+
+We shall also need a nonabelian variant. But there are technical
+problems in the definition (I do not know whether they are serious),
+and we shall therefore content ourselves with giving a definition for the
+étale topology of a scheme.
+
+\begin{enonce*}{Definition 1.3}\etiquette[1.3]{IX.def1.3}
+Let\pageoriginale $p$ be a set of prime numbers. A group $G$ is called
+an \emph{ind-p-group} if every finite subset of $G$
+generates a finite subgroup of order $n$, with $\ass n\subset p$. This
+is equivalent to saying that the finite subgroups $G_{\alpha}$
+of order $n_{\alpha}$, with $\ass n_{\alpha}\subset p$, form a
+filtered set, and that $G=\varinjlim G_{\alpha}$. If
+$p=\PP$, one says \emph{ind-finite group} instead of ind-p-group.
+\end{enonce*}
+
+One immediately verifies the following
+\begin{enonce*}{Proposition 1.4}\etiquette[1.4]{IX.prop1.4}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item A subgroup as well as a quotient of an ind $p$-group is
+  again an ind $p$-group.
+
+\item A filtered inductive limit of ind-$p$-groups is an
+  ind-$p$-group.
+
+\item A finite projective limit of ind-p-groups is an ind-p-group.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Definition 1.5}\etiquette[1.5]{IX.def1.5}
+Let $X$ be a scheme. A sheaf $F$ of groups on $X$ is called
+a \emph{sheaf of ind $p$-groups} (\resp of \emph{ind-finite
+  groups})
+if, for every étale $U\rightarrow X$, with $U$ quasi-compact, $F(U)$ is an
+ind $p$-group (\resp an ind-finite group).
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.6}\etiquette[1.6]{IX.prop1.6}
+Let $F$ be a sheaf of groups on the scheme $X$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $F$ is a sheaf of ind-$p$-groups if and only if, for
+  every geometric point $\xi$ of $X$, the fiber $F_{\xi}$ is an
+  ind-p-group.
+
+\item If $f:X\rightarrow X'$ is a morphism and $F'$ is a
+  sheaf of ind-p-groups on $X'$, then $f^{\ast}F'$ is a sheaf of
+  ind-p-groups.
+
+\item If $f:X\rightarrow X'$ is a quasi-compact morphism and $F$ is
+  a sheaf of ind-p-groups on $X$, then $f_{\ast}F$ is a
+  sheaf of ind-p-groups.
+\end{enumerate}
+\end{enonce*}
+
+\noindent
+\emph{Proof.}
+(i) Suppose that $F$ is a sheaf of ind-p-groups, and let
+  $\xi$ be a geometric point of $X$. Then $F_{\xi}=\varinjlim F(X')$, where
+  $X'$ ranges over a\pageoriginale pseudo-filtered system of schemes
+étale over $X$ (VIII \hyperref[VIII.prop3.9]{3.9}). It is evident that the affine $X'$ (hence
+quasi-compact) form a cofinal set, and consequently that $F_{\xi}$ is an
+inductive limit of ind $p$-groups, and hence is an ind-p-group by
+\hyperref[IX.prop1.4]{1.4} (ii). Conversely, suppose that for every $\xi$ the fiber
+$F_{\xi}$ is an ind-p-group, and let $U\rightarrow X$ be étale, with $U$
+quasi-compact. Let $S\subset F(U)$ be a finite subset. For every
+geometric point $\xi$ of $U$, the image of $S$ in $F_{\xi}$ generates
+a finite group. Since a finite group is finitely presented, one
+easily concludes that there exists a $U_{\xi}$ étale over $U$,
+pointed at $\xi$, such that $S$ generates a finite group in $F(U_{\xi})$
+(\cf VIII 4). A finite number of such $U_{\xi}$ form a covering
+of $U$, say $\{U_1,\ldots,U_n\}$. Then the image of $S$ in $\prod
+F(U_i)$ generates a finite subgroup, and since $F(U)\subset \prod
+F(U_i)$, the result follows.
+
+Assertion (ii) is trivial from (i), and (iii) is immediate.

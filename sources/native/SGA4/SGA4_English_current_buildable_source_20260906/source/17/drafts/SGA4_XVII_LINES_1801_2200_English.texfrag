@@ -1,0 +1,392 @@
+
+If these constructions are applied to $\Aa$ and to the
+subcategory $\Aa'$, one checks that $\Aa'(S^{-1})$
+is identical to the inverse-image subcategory of $\Aa(S^{-1})$
+of $\Bb'$, since if a ``formal composite'' $f_1\ldots f_n$ has as
+its composite in $\Bb$ an arrow of $\Bb'$, the image of each $f_i$
+will also be an arrow of $\Bb'$.
+
+Suppose now that $\Aa$ is a triangulated category over $\Bb$, and
+that the sets $S_x=S\cap \Fl(\Aa_x)$, for $x\in \Ob(\Bb)$, are
+saturated multiplicative systems (\cite{sga4.exp.XVII.bib.CD} \sisi{Ch.}{\chap}~I
+\S~2\sisi{. 1}{ nᵒ 1}).
+
+\begin{enonce*}{Definition 2.3.3}\etiquette[2.3.3]{XVII.def2.3.3}
+Under the preceding hypotheses, the category $\Aa/\Bb$ is said to be
+almost derivable (\resp derivable, \resp coderivable) relative to $S$
+if, for every functor $F:\Bb'\rightarrow\Bb$, the functor
+\eqhyperref[XVII.eq2.3.1]{2.3.1} is an isomorphism (\resp and if
+$\Aa(S^{-1})$ is fibered, \resp cofibered over $\Bb$).
+\end{enonce*}
+
+We\pageoriginale denote by $I$ the category of the following diagram:
+$$\etiquette[2.3.4]{XVII.eq2.3.4}
+I:\underset{0}{\times} \xrightarrow{F} \underset{1}{\times}{\quoi}.\leqno{(2.3.4)}
+$$
+
+By \hyperref[XVII.prop2.2.13]{2.2.13}, to give a triangulated category
+$\Aa$ over $I$, fibered (\resp cofibered) over $\sisi{\Aa}{I}$, is
+equivalently to give its fibers $\Aa_0$ and $\Aa_1$ and the
+triangulated inverse-image functor
+$F^{\ast}:\Aa_1\rightarrow\Aa_0$ (\resp and the triangulated
+direct-image functor $F_{\ast}:\Aa_0\rightarrow\Aa_1$). If
+$A_0\in\Ob\Aa_0$ and $A_1\in\Ob\Aa_1$, then by
+\eqhyperref[XVII.eq2.2.12.1]{2.2.12.1},
+\[
+\Hom_F(A_0,A_1)=\Hom(A_0,F^{\ast}A_1)
+\]
+(\resp $\Hom_F(A_0,A_1)=\Hom(F_{\ast}A_0,A_1)$).
+
+\begin{enonce*}{Proposition 2.3.5}\etiquette[2.3.5]{XVII.prop2.3.5}
+Let $\Aa$ be a triangulated category over $I$ and let $S$ be as in
+(\hyperref[XVII.def2.3.3]{2.3.3}).
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $\Aa$ is almost derivable relative to $S$, and
+$\Aa(S^{-1})$ is triangulated over $I$.
+
+\item If $\Aa$ is fibered (\resp cofibered), the functor $F^{\ast}$
+(\resp $F_{\ast}$) is right derivable (\resp left derivable) relative
+to $S_0$ and $S_1$ (\hyperref[XVII.def1.2.1]{1.2.1}) if and only if
+$\Aa$ is derivable (\resp coderivable) over $I$.
+\end{enumerate}
+\end{enonce*}
+
+By Lemma \hyperref[XVII.lem2.3.2]{2.3.2}, the fiber categories of
+$\Aa(S^{-1})$ are $\Aa_0(S^{-1}_0)$ and $\Aa_1(S^{-1}_1)$, where
+$S_i=S\cap\Fl(\Aa_i)$ $(i=0,1)$. With the notation of \S
+\hyperref[XVII.sec1]{1} ${\rm n^{\circ}}$ \hyperref[XVII.sec2]{2}, the
+functors $A_0\rightarrow A^{-}_0$ and $A_1\rightarrow A^{+}_1$
+identify $\Aa_0(S^{-1}_0)$ and $\Aa_1(S^{-1}_1)$ with categories of
+\ppro- and \iind-objects of $\Aa_0$ and $\Aa_1$. This makes it possible
+to define a category over $I$, with fibers $\Aa_0(S^{-1}_0)$ and
+$\Aa_1(S^{-1}_1)$, by setting, for $A_0\in\Aa_0$ and $A_1\in\Aa_1$,
+\[
+\Hom_F(A_0,A_1)=\Hom_F(A^{-}_0,A^{+}_1)=\varinjlim_{A'_0{\xrightarrow[s]{}}A_{\sisi{p}{0}}}
+\varinjlim_{A_1{\xrightarrow[t]{}}{A'_1}}\Hom(A'_0,A'_1){\quoi},
+\]
+where\pageoriginale $s$ and $t$ range over the elements of $S_0$ and
+$S_1$ with target (respectively source) $A_0$ (respectively $A_1$).
+The category $\Aa$ maps to this category, and one checks immediately
+that it satisfies the universal property of $\Aa(S^{-1})$, over $I$
+and after every base change.
+
+To verify (i), it suffices to prove that this category, namely
+$\Aa(S^{-1})$, is triangulated, and it suffices to verify condition
+\hyperref[XVII.def2.2.3]{2.2.3}~(iii). Let $(X_0,Y_0,Z_0)$ and
+$(X_1,Y_1,Z_1)$ therefore be distinguished triangles of $\Aa_0$ and
+$\Aa_1$, giving rise to the distinguished triangles
+$(X^{-}_0,Y^{-}_0,Z^{-}_0)$ and $(X^{+}_1,Y^{+}_1,Z^{+}_1)$ of
+$\Aa_0(S^{-1}_0)$ and $\Aa_1(S^{-1}_1)$.
+$$\etiquette[2.3.5.1]{XVII.eq2.3.5.1}
+\vcenter{
+\xymatrix{
+X^{-}_{0}  \ar[r]^{u} \ar[d]& X^{+}_1  \ar[d]\\
+Y^{-}_{0}  \ar[r]^{v} & Y^{+}_1\rlap{.}\\
+}}\leqno{(2.3.5.1)}
+$$
+
+By Lemma \hyperref[XVII.lem1.2.2.1]{1.2.2.1}, the triangles
+$(X^{-}_0,Y^{-}_0,Z^{-}_0)$ and $(X^{+}_1,Y^{+}_1,Z^{+}_1)$ are limits
+of distinguished triangles; there therefore exist morphisms of
+distinguished triangles
+\begin{equation*}
+\begin{split}
+(X^{-}_0,Y^{-}_0,Z^{-}_0) &\longrightarrow (X'_0, Y'_0,Z'_0)\\
+(X'_1, Y'_1, Z'_1) &\longrightarrow (X^{+}_1, Y^{+}_1, Z^{+}_1){\quoi},
+\end{split}\tag{2.3.5.2}
+\end{equation*}\etiquette[2.3.5.2]{XVII.eq2.3.5.2}%Removing this comment would introduce unwanted white space.
+and\pageoriginale a diagram
+\[
+\xymatrix{
+X'_{0}  \ar[r]^{u'} \ar[d]& X'_1 \ar[d] \\
+Y'_{0}  \ar[r]^{v'} & Y'_1\rlap{,}
+}
+\]
+compatible with \eqhyperref[XVII.eq2.3.5.1]{2.3.5.1}. Since $\Aa$ is
+triangulated over $I$, this diagram can be extended to a morphism of
+triangles
+\[
+(X'_0,Y'_0,Z'_0)\longrightarrow (X'_1, Y'_1, Z'_1){\quoi}.
+\]
+Composing the latter with the morphisms
+\eqhyperref[XVII.eq2.3.5.2]{2.3.5.2}, we see that diagram
+\eqhyperref[XVII.eq2.3.5.1]{2.3.5.1} can be extended to a morphism of
+triangles, which proves \hyperref[XVII.def2.2.3]{2.2.3}~(iii).
+
+Let us verify (ii), assuming for example that $\Aa$ is fibered over
+$I$. If $A_1\in\Ob(\Aa_1(S^{-1}_1))$, an inverse image of $A_1$ in
+$\Aa(S^{-1})$ is an object $B$ of $\Aa_0(S^{-1}_0)$ such that, in
+$\Aa_0(S^{-1}_0)$,
+\begin{align*}
+\Hom_{\Aa_0(S^{-1}_0)}(A_0,B) & =\Hom_F(A^{-}_0,
+A^{+}_1)=\Hom(A^{-}_0,
+F^{\ast}(A^{+}_1))\\
+&=\Hom_{\Aa_0(S^{-1}_0)}
+(A_0,F^{\ast}(A^{+}_1)){\quoi}.
+\end{align*}
+Such an object $B$ exists if and only if the \iInd-object
+$F^{\ast}(A^{+}_1)$ of $\Aa_0(S^{-1}_0)$ is essentially constant
+(\ie representable), and $B$ then represents this \iind-object, which
+is precisely $RF(A_1)$ (\hyperref[XVII.def1.2.1]{1.2.1}); this proves
+the assertion.
+
+\begin{enonce*}{Corollary 2.3.6}\etiquette[2.3.6]{XVII.cor2.3.6}
+With the notation of \hyperref[XVII.def2.3.3]{2.3.3}, if $\Aa$ is
+almost derivable over $\Bb$, then $\Aa(S^{-1})$ is a triangulated
+category over $\Bb$.
+\end{enonce*}
+
+First, the fiber category $\Aa(S^{-1})_x$ can be identified with
+$\Aa_x(S^{-1}_x)$: apply the hypothesis to the base change
+$\{x\}\rightarrow\Bb$. This\pageoriginale category is triangulated,
+equipped with a set $\Delta_x$ of triangles, which gives a meaning to
+the preceding statement. To verify condition \hyperref[XVII.def2.2.3]{2.2.3}~(iii), it suffices
+to do so after every base change $I\rightarrow\Bb$, and the assertion
+follows from \hyperref[XVII.prop2.3.5]{2.3.5}~(i).
+
+It follows immediately from the proof of
+\hyperref[XVII.prop2.3.5]{2.3.5}~(ii) that:
+
+\begin{enonce*}{Theorem 2.3.7}\etiquette[2.3.7]{XVII.thm2.3.7}
+\emph{(trivial duality formula).}
+
+Let $\Aa$ be a triangulated category fibered and cofibered over $I$,
+and denote by $F_{\ast}$ and $F^{\ast}$ the direct- and inverse-image
+functors. Let $S=S_0\cup S_1$ be a multiplicative system as in
+\hyperref[XVII.def2.3.3]{2.3.3}. Suppose that $LF_{\ast}$ is defined
+at $A_0\in\Ob\Aa(S^{-1}_0)$ and that $RF^{\ast}$ is defined at
+$A_1\in\Ob\Aa_1(S^{-1}_1)$. Then
+\[
+\Hom_{\Aa_0(S^{-1}_0)}(A_0,RF^{\ast}A_1)=\Hom_{\Aa\sisi{_{(S^{-1})}}{(S^{-1})}}(A_0,A_1)=\Hom_{\Aa_1(S^{-1}_1)}(LF_{\ast}A_0,A_1){\quoi}.
+\]
+\end{enonce*}
+
+The positions of the symbols $R$, $L$, ${}^{\ast}$, and ${}_{\ast}$
+in \hyperref[XVII.thm2.3.7]{2.3.7} are only apparently anomalous: in
+fact, in the category \hyperlink{sga4.exp.XVII.subsection.0.2}{0.2} of sheaves on variable sites, fibered and
+cofibered, the fiber categories are the opposites of the usual
+categories of sheaves.
+
+\subsection{Categories fibered in derived categories}\etiquette[2.4]{XVII.subsec2.4}
+
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[2.4.0]{XVII.subsubsec2.4.0}
+In this ${\rm n^{\circ}}$, $\Aa$ denotes a triangulated category
+cofibered over $\Bb$, and $S$ a multiplicative system of morphisms of
+$\Aa$, all lying over an identity, such that
+$S_x=S\cap\Fl(\Aa_x)$ is a saturated multiplicative system of $\Aa_x$
+\cite[\sisi{}{I }1.2.1]{sga4.exp.XVII.bib.CD} for every $x\in\Ob(\Bb)$.
+
+We\pageoriginale seek a criterion for $\Aa$ to be coderivable relative
+to $S$ (\hyperref[XVII.def2.3.3]{2.3.3}); this implies that
+$\Aa(S^{-1})$ is triangulated over $\Bb$ when it is equipped with the
+set of triangles isomorphic to the image of a distinguished triangle
+of $\Aa$ (\hyperref[XVII.prop2.3.5]{2.3.5}).
+
+\begin{enonce*}{Proposition 2.4.1}\etiquette[2.4.1]{XVII.prop2.4.1}
+Let $\Aa$, $\Bb$, and $S$ be as above. For $\Aa$ to be coderivable
+relative to $S$, it suffices that the following condition hold:
+\begin{itemize}
+\item[$(\ast)$] $\forall x\in\Ob\Bb$, $\forall A\in\Ob(\Aa_x)$,
+$\exists s:A'\rightarrow A$ in $S$\sisi{}{,} $\forall g$,
+$f:x\xrightarrow{f}y\xrightarrow{g}\sisi{Z}{z}$, $f_{\ast}A'$ is
+left adapted to the functor $g_{\ast}$.
+\end{itemize}
+\end{enonce*}
+
+Let $\Aa^{1}$ denote the full subcategory of $\Aa$ consisting of the
+objects all of whose direct images are adapted to all direct-image
+functors. Then \hyperref[XVII.prop1.2.2]{1.2.2} shows that $\Aa^{1}$ is
+a triangulated subcategory of $\Aa$, evidently cofibered. Set
+$S^{1}=S\cap\text{Fl}(\Aa^{1})$.
+
+\begin{enonce*}{Lemma 2.4.1.1}\etiquette[2.4.1.1]{XVII.lem2.4.1.1}
+Suppose that $S$ is stable under direct images. Then $\Aa/\Bb$ is
+coderivable and $\Aa(S^{-1})$ can be computed by a calculus of right
+fractions.
+\end{enonce*}
+
+Let us verify condition c) of \cite[I 2.2]{sga4.exp.XVII.bib.GZ}, possibly the least
+trivial of the conditions. We are given $f$ and $s$ $(s\in S)$ and
+must find
+$$\etiquette[2.4.1.2]{XVII.eq2.4.1.2}
+\vcenter{
+\xymatrix{
+A'        \ar@{-->}[r]      & B'          \\
+A  \ar[u]^{s}   \sisi{\ar[r]}{\ar[r]_f}          & B\rlap{,}  \ar@{-->}[u]^{t}
+}}\leqno{(2.4.1.2)}
+$$
+a\pageoriginale commutative diagram \eqhyperref[XVII.eq2.4.1.2]{2.4.1.2}
+with $t\in S$. Let $F$ be the image of $f$ in $\Bb$. By hypothesis,
+$F_{\ast}(s)$ still belongs to $S$, so by \textsc{Verdier} there is a
+commutative diagram
+\[
+\xymatrix{
+F_{\ast}(A')  \ar[r] & B'\\
+F_{\ast}(A)    \ar[r]_{f}\sisi{\ar[u]_{s}}{\ar[u]^{F_\ast(s)}}   & B\ar[u]_{t}
+}
+\]
+and hence also a diagram \eqhyperref[XVII.eq2.4.1.2]{2.4.1.2}.
+
+Since $\Aa(S^{-1})$ is computed by a calculus of right fractions, it
+is immediate that its formation commutes with base change
+$c:\Bb'\rightarrow\Bb$.
+
+This lemma applies in particular to $\Aa^{1}$ and $S^{1}$; the
+following lemma therefore implies \hyperref[XVII.prop2.4.1]{2.4.1}:
+
+\begin{enonce*}{Lemma 2.4.1.3}\etiquette[2.4.1.3]{XVII.lem2.4.1.3}
+Over $\Bb$, and after every base change $c:\Bb'\rightarrow\Bb$, the
+canonical functor
+$\Phi:\Aa\sisi{_1}{^1}(\sisi{{S^1}}{(S^1)}^{-1})\rightarrow\Aa(S^{-1})$
+is an equivalence of categories.
+\end{enonce*}
+
+Let us construct a quasi-inverse to $\Phi$. For each $A\in\Ob\Aa$,
+choose $s_A\in S$ with target $A$ and source $A^1\in\Ob\Aa^{1}$,
+with $s_A=\Id_A$ when $A\in\Ob\Aa^{1}$. Let $f$ be an arrow of $\Aa$
+with target $A$, source $B$, and image $F$ in $\Bb$. Since
+$s_B\in S$ and $F_{\ast}A^{1}\in\Ob\Aa^{1}$, one can find
+$B\sisi{^{1}}{'}$, \sisi{$v$ and $s\in S^{1}$}{$s\in S^1$ and $u$}
+making the following diagram commutative:
+$$\etiquette[2.4.1.4]{XVII.eq2.4.1.4}
+\vcenter{
+\xymatrix{
+A      \ar[r]^{f} &  B      \ar[r]_{s_B} & B\sisi{_1}{^1}       \\
+A\sisi{_1}{^1} \ar[u]_{s_A}\ar[r]^{a} & F_{\ast}A\sisi{_1}{^1}  \ar[u]& B'\rlap{.} \ar[l]_{s} \ar[u]_u
+}}\leqno{(2.4.1.4)}
+$$
+
+The\pageoriginale arrow $f^{1}=us^{-1}a$ of
+$\Aa^{1}(\sisi{{S^1}}{(S^1)}^{-1})$ then depends only on $f$.
+
+Let $f$ and $g$ be two composable arrows, with images $F$ and $G$ in
+$\Bb$. To prove that $(g\circ f)^{1}=g^{1}\circ f^{1}$, consider the
+following diagram, which contains diagrams
+\eqhyperref[XVII.eq2.4.1.4]{2.4.1.4} for $f$ and $g$:
+\[
+\xymatrix@C=2em{
+                      & A \ar[rr]^{f}&      & B\ar[rrr]^{g}     & &
+                      & C  &       \\
+ A^{1} \ar[ru] \ar[rr]^{a}&          &F_{\ast}A^{1}\ar[ru] \ar[rrr]^(.6){a'}& & & (GF)_{\ast}A^1\ar[ru] &
+              & &C^{1}\ar[llu]\\
+& & & B^1 \ar[rrr]^(.4){b}|(.58)\hole\ar[uu]|\hole & & & G_{\ast}B^1\ar[uu] &     \\
+&  & B'\ar[uu]^{s}\ar[rrr]^{b'}\ar[ru]_{u}       &   & &G_{\ast}B'\ar[ru]\ar[uu]^(.3){G_{\ast}s}    &  &C''\ar[ll]^{r}\ar[r]_{w} & C'\ar[llu]_t\ar[uu]_{v}\rlap{.}
+}
+\]
+
+Since $t\in S$, there exist $C''$, $r\in S^{1}$, and $w$ making the
+diagram commutative. By definition,\break
+$g^{1}\circ f^{1}=vt^{-1}b\,u\,s^{-1}a$ and
+$(g\circ f)^{1}=vw(G_{\ast}(s)r)^{-1}a'a$, and the conclusion follows
+from the commutativity of the diagram.
+
+We have thus defined a functor from $\Aa$ to
+$\Aa^{1}(\sisi{{S^1}}{(S^1)}^{-1})$; by the universal property of
+$\Aa(S^{-1})$, it factors through
+$\Psi:\Aa(S^{-1})\rightarrow\Aa^{1}(\sisi{{S^1}}{(S^1)}^{-1})$.
+The composite $\Phi\Psi$ is isomorphic to the identity because its
+composite with the functor $J:\Aa\rightarrow\Aa(S^{-1})$ is
+isomorphic to $J$. One checks similarly that $\Psi\Phi$ is isomorphic
+to the identity.
+
+\begin{enonce*}{Corollary 2.4.2}\etiquette[2.4.2]{XVII.cor2.4.2}
+With the notation of \hyperref[XVII.prop2.4.1]{2.4.1}, $\Aa$ is
+coderivable relative to $S$ provided that, for every finite set $B$
+of arrows of $\Bb$, condition $(\ast)$ holds when only direct images
+under the arrows of $B$ are considered.
+\end{enonce*}
+
+For\pageoriginale every category $\Bb'$ with a finite set of arrows, Proposition
+\hyperref[XVII.prop2.4.1]{2.4.1} is applicable after every base change
+$\Bb'\rightarrow\Bb$. We shall take for $\Bb'$ the categories of the
+following diagrams:
+\[
+  \begin{gathered}
+    *\\
+    (0)
+  \end{gathered}\qquad
+  \begin{gathered}
+    *\to*\\
+    (1)
+  \end{gathered}\qquad
+  \begin{gathered}
+    *\to*\to*\\
+    (2)
+  \end{gathered}\qquad
+  \begin{gathered}
+    *\to*\to*\to*\\
+    (3)
+  \end{gathered}
+\]
+Consider the categories $\Aa_x(S^{-1}_x)$ $(x\in\Ob\Bb)$. Given
+$f\in\Fl(\Bb)$ and $A_1,A_2$ in these categories over the source and
+target of $f$, define $\Hom_f(A_1,A_2)$ to be the analogous set defined
+after the base change of type (1) determined by $f$. Composition of
+morphisms is defined using base changes of type (3). In this way one
+constructs a category $\Aa(S^{-1})^{\ast}$ over $\Bb$, whose formation
+is compatible with every base change; using base changes of types
+(0), (1), and (2), one checks that it solves the universal problem
+defining $\Aa(S^{-1})$.
+
+The following result is dual to \hyperref[XVII.cor2.4.2]{2.4.2}.
+
+\begin{enonce*}{Proposition 2.4.3}\etiquette[2.4.3]{XVII.prop2.4.3}
+Let $\Aa$ be a triangulated category fibered over $\Bb$, and let $S$
+be as in \hyperref[XVII.prop2.4.1]{2.4.1}. For $\Aa$ to be derivable
+relative to $S$, it suffices that, for every finite set $B$ of arrows
+of $\Bb$,
+\begin{itemize}
+\item[$(\ast')$] $\forall x\in\Ob(\Bb)$, $\forall A\in\Ob(\Aa_x)$,
+$\exists s:A\rightarrow A'$ in $S$,
+$\forall g,f:Z\xrightarrow{g}Y\xrightarrow{f}X$ in $B$, $f^{\ast}A'$
+is right adapted to the functor $g^{\ast}$.
+\end{itemize}
+\end{enonce*}
+
+\section{Gluing fibered or cofibered categories}\etiquette[3]{XVII.sec3}\pageoriginale
+
+\subsection{Introduction}\etiquette[3.1]{XVII.subsec3.1}
+
+Let $f:Y\rightarrow X$ be a separated morphism of finite type from a
+scheme $Y$ to a scheme $X$, or a continuous map from a locally compact
+space to a locally compact space. One can then define a ``direct image
+with proper supports'' functor, denoted $f_{!}$, from the category of
+abelian sheaves on $Y$ to the category of abelian sheaves on $X$ (\cf
+\sisi{\hyperref[XVII.subsec5.3]{5.3}}{\hyperref[XVII.subsec6.1]{6.1}}
+in the case of schemes, and \textsc{Verdier} \cite{sga4.exp.XVII.bib.V3} for separated
+locally compact spaces). When $Y$ and $X$ are schemes of finite type
+over $\CC$, these two definitions are compatible in the evident sense.
+Unfortunately, for schemes, unlike for locally compact spaces, the
+derived functors of $f_{!}$ are pathological; one can nevertheless
+define a reasonable ``direct image with proper supports'' functor
+directly from $D^{+}(Y)$ to $D^{+}(X)$. To define it, factor $f$ as an
+open immersion followed by a proper morphism: $f=\bar f j$. The desired
+functor $Rf_{!}$ is then defined as the composite of ``extension by
+zero'' $j_{!}$ and the functor $R\bar f_{\ast}$, derived from direct
+image under $\bar f$.
+
+These ``direct image with proper supports'' functors $Rf_{!}$ are
+usable only after one verifies for them a ``variance formalism'' that
+includes, for a composite $f=gh$, a formula
+\[
+Rf_{!}=Rg_{!}Rh_{!}
+\]
+which is best expressed in terms of cofibered categories. Such a
+formalism is available separately for ``extensions by zero'' and for
+\pageoriginale direct images under proper morphisms, and the problem is to glue these
+formalisms. To avoid later being bogged down by pointless computations,
+we propose in this \S to list the elementary verifications required to
+carry out such a gluing. We do so in a slightly more abstract setting
+than is strictly necessary, in the hope that the result may be useful
+again.
+
+The construction of $Rf_{!}$ sketched above requires that the morphism
+$f$ be factorable as an open immersion followed by a proper morphism.
+Following \textsc{Hartshorne} \cite[III 8 p.~189]{sga4.exp.XVII.bib.RD}, in nᵒ
+\hyperref[XVII.sec2]{2} we introduce the appropriate notion of a
+compactifiable morphism.
+
+\subsection{Compactifiable morphisms}\etiquette[3.2]{XVII.subsec3.2}

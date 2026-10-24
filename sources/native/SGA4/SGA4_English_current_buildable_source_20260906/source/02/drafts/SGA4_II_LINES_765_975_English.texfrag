@@ -1,0 +1,208 @@
+\section{Exactness properties of the category of sheaves}\etiquette[4]{II.sec4}
+
+The exactness properties of the category of sheaves follow from the
+exactness properties of the category of presheaves via Theorem
+\hyperref[II.theo3.4]{3.4}. This section makes this philosophy explicit
+through some of the most useful standard statements.
+
+\begin{enonce*}{Theorem 4.1}\etiquette[4.1]{II.theo4.1}
+Let $C$ be a $𝒰$-site, let $\widetilde{C}$ be the category of
+sheaves, let $\underline{a}:C^{\widehat{\phantom{,}}}\rightarrow
+\widetilde{C}$ be the associated-sheaf functor, and let
+$i:\widetilde{C}\rightarrow C^{\widehat{\phantom{,}}}$ be the
+inclusion functor.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $\underline{a}$ commutes with inductive limits and is exact.
+
+\item The\pageoriginale $𝒰$-inductive limits in
+$\widetilde{C}$ are representable. For every small category $I$ and
+every functor $E:I\rightarrow \widetilde{C}$, the canonical morphism
+$$
+\varinjlim_I E\longrightarrow \underline{a}(\varinjlim_I i\circ E)
+$$
+is an isomorphism.
+
+\item The $𝒰$-projective limits in $\widetilde{C}$ are
+representable. For every object $X$ of $C$, the functor on
+$\widetilde{C}:F\mapsto F(X)$ commutes with projective limits,
+\ie the inclusion functor $i:\widetilde{C}\rightarrow \widehat{C}$
+commutes with projective limits.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+These properties follow essentially from Theorem
+\hyperref[II.theo3.4]{3.4} and from
+(\hyperrefext[I][I.prop2.11]{2.11}).
+\end{enonce*}
+
+Thus, in the category of sheaves, products indexed by an element of
+$𝒰$, fiber products, sums indexed by an element of $𝒰$, amalgamated
+sums, kernels, cokernels, images, and coimages are representable.
+
+\begin{enonce*}{Corollary 4.1.1}\etiquette[4.1.1]{II.cor4.1.1}
+Let $C$ be a $𝒰$-site and let $F$ be a sheaf of sets on $C$. The
+canonical homomorphism
+$$
+\varinjlim_{C/F} \underline{a}X\longrightarrow F
+$$
+is an isomorphism.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+This follows from (\hyperrefext[I][I.prop3.4]{3.4}) and the fact that
+$\underline{a}$ commutes with inductive limits.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 4.2}\etiquette[4.2]{II.prop4.2}
+Every morphism of $\widetilde{C}$ that is both an epimorphism and a
+monomorphism is an isomorphism.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+Let $u:G\rightarrow H$ be a morphism of $\widetilde{C}$ that is both
+an epimorphism and a monomorphism. First observe that the morphism $u$
+is a monomorphism of\pageoriginale presheaves
+(\hyperref[II.theo4.1]{4.1} 1)). Construct the amalgamated sum
+$H\amalg_G H=K$ and the two canonical morphisms $i_1$,
+$i_2:H\rightrightarrows K$ in the category of presheaves. Since $u$
+is a monomorphism of presheaves, one immediately verifies that the
+following diagram is cartesian and cocartesian
+(\hyperrefext[I][I.sec10.1]{10.1}):
+\[
+\xymatrix@C=3cm@R=1.5cm{
+G \ar[r]^{u} \ar[d]_{u}& H \ar[d]^{i_2}\\
+H \ar[r]^{i_1}& K . }
+\]
+Applying the ``associated sheaf'' functor, one therefore obtains a
+cartesian and cocartesian diagram in the category of sheaves
+(\hyperref[II.theo4.1]{4.1} 1)):
+\[\vcenter{
+\xymatrix@C=3cm@R=1.5cm{
+G \ar[r]^{u} \ar[d]_{u}& H \ar[d]^{\underline{a}i_2}\\
+H \ar[r]^{\underline{a}i_1}& \underline{a}K . }}\leqno{(*)}
+\]
+Since $u$ is an epimorphism of sheaves, the morphism
+$\underline{a}i_1$ is an isomorphism, and since diagram (*) is
+cartesian, the morphism $u$ is an isomorphism.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 4.3}\etiquette[4.3]{II.prop4.3}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The inductive limits in $C^{\widetilde{\phantom{,}}}$ that are
+representable are universal {\rm(\hyperrefext[I][I.def2.5]{2.5}).}
+
+\item Every epimorphic family {\rm(\hyperrefext[I][I.sec10.2]{10.2})}
+of morphisms is universally effective epimorphic
+(\hyperref[II.prop2.6]{2.6}).
+
+\item Every equivalence relation is universally effective {\rm(I
+\hyperref[I.sec10.6]{10.6}).}
+
+\item Filtered $𝒰$-inductive limits commute with finite projective
+limits {\rm(\hyperrefext[I][I.prop2.6]{2.6})}.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+Assertions\pageoriginale 1) through 4) hold in the category of sets,
+hence in the category of presheaves
+(\hyperrefext[I][I.prop3.1]{3.1}). Assertions 1) and 4) then follow
+immediately from the corresponding assertions for presheaves and from
+\hyperref[II.theo4.1]{4.1}. Let us prove 3). Let $p_1$, $p_2:$
+$\xymatrix{R\ar@<2pt>[r] \ar@<-2pt>[r]& X}$ be an equivalence
+relation in $C^{\widetilde{\phantom{,}}}$. The diagram
+$\xymatrix{R \ar@<2pt>[r]^{p_1} \ar@<-2pt>[r]_{p_2}&X}$ is then an
+equivalence relation of presheaves
+(\hyperref[II.cor4.1.1]{4.1.1}). There is therefore a morphism of
+presheaves $u:X\rightarrow Y$ such that the diagram
+\[
+\xymatrix@C=3cm@R=1.25cm{
+R \ar[r]^{p_2} \ar[d]_{p_1}& X\ar[d]^{u}\\
+X \ar[r]^{u}& Y }
+\]
+is cartesian and cocartesian in the category of presheaves. Applying
+the ``associated sheaf'' functor, one obtains a cartesian and
+cocartesian diagram in the category of sheaves
+(\hyperref[II.theo4.1]{4.1} 1)). It follows that
+$\xymatrix{R \ar@<2pt>[r]^{p_1} \ar@<-2pt>[r]_{p_2}&X}$ is an
+effective equivalence relation. Since every equivalence relation is
+effective by what precedes, every equivalence relation is universally
+effective. Let us prove 2). Let $(u_i:X_i\rightarrow X)$, $i\in I$,
+be an epimorphic family in $C^{\widetilde{\phantom{,}}}$. By
+(II\ \hyperref[II.prop2.6]{2.6}) and
+(\hyperrefext[I][I.prop2.12]{2.12}), it suffices to prove the following
+assertions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item For every morphism of sheaves $v:Y\rightarrow X$, the family
+of morphisms $\pr_{2,i}:X_i\times_X Y\rightarrow Y$, $i\in I$, is an
+epimorphic family in $C^{\widetilde{\phantom{,}}}$.
+
+\item For every sheaf $Z$, the following diagram of sets is exact:
+$$
+\Hom(X,Z)\rightarrow \prod_{i\in I} \Hom(X_i,Z)\rightrightarrows
+\prod_{(i,k)\in I\times I}\Hom(X_i\times_X X_k,Z)
+$$
+\end{enumerate}
+\end{enonce*}
+
+Let\pageoriginale $X'$ be the union of the images of the morphisms
+$u_i$, formed in the category of presheaves, and let
+$j:X'\hookrightarrow X$ be the canonical injection. For every
+$i\in I$, the morphism $u_i:X_i\rightarrow X$ factors as a morphism
+$u'_i:X_i\rightarrow X'$ followed by $j$, and the family
+$u'_i:X_i\rightarrow X'$, $i\in I$, is an epimorphic family in
+$C^{\widehat{\phantom{,}}}$. Since $j$ is a monomorphism, the morphism
+$\underline{a}j:\underline{a}X'\rightarrow X$ is a monomorphism of
+sheaves (\hyperref[II.theo4.1]{4.1}). Since, for every $i\in I$, one
+has $u_i=\underline{a}j\underline{a}u'_i$, $\underline{a}j$ is an
+epimorphism of sheaves. It follows that $\underline{a}j$ is an
+isomorphism (\hyperref[II.prop4.2]{4.2}). Let $v:Y\rightarrow X$ be a
+morphism of sheaves. Base change then yields a morphism
+$j_v:X'\times_X Y\rightarrow Y$ and morphisms
+$u'_{i,v}:X_i\times_X Y\rightarrow X'\times_X Y$. Since
+$\underline{a}$ commutes with fiber products, $\underline{a}j_v$ is
+an isomorphism. Since epimorphic families in
+$C^{\widehat{\phantom{,}}}$ remain epimorphic under base change, the
+family $u'_{i,v}$, $i\in I$, is epimorphic in
+$C^{\widehat{\phantom{,}}}$. Since $\underline{a}$ commutes with
+inductive limits, the family
+$\underline{a}u'_{i,v}:X_i\times_X Y\rightarrow
+\underline{a}(X'\times_X Y)$, $i\in I$, is epimorphic in
+$C^{\widetilde{\phantom{,}}}$, proving a). Let us prove b). Let $Z$
+be a sheaf. Since $\underline{a}j$ is an isomorphism, the map
+$$
+\Hom(X,Z)\longrightarrow \Hom(X',Z)
+$$
+is a bijection. Since the $u'_i$, $i\in I$, form an epimorphic family
+in $C^{\widehat{\phantom{,}}}$, the following diagram of sets is
+exact:
+$$
+\Hom(X',Z)\rightarrow \prod_{i\in I} \Hom(X_i,Z)\rightrightarrows
+\prod_{(i,k)\in I\times I}\Hom(X_i\times_{X'}X_k, Z)
+$$
+Finally, since $X'$ is a subpresheaf of $X$, the presheaf
+$X_i\times_{X'}X_k$, $(i,k)\in I\times I$, is canonically isomorphic
+to $X_i\times_X X_k$, proving b).
+
+\begin{enonce*}[remark]{Remarks 4.3.1}\etiquette[4.3.1]{II.rem4.3.1}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Proposition\pageoriginale \hyperref[II.prop4.3]{4.3} 2)
+formally gives us a second proof of \hyperref[II.prop4.2]{4.2}: it is
+clear that, in any category, a morphism that is both a universal
+effective epimorphism and a monomorphism is in fact an isomorphism.
+
+\item It follows from the preceding propositions that every morphism
+in the category of sheaves factors uniquely as an effective
+epimorphism followed by an effective monomorphism. This property
+naturally generalizes, to nonadditive categories, axiom (AB2) for
+abelian categories (coim $\simeq$ im) [Tohoku].
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{4} \setcounter{subsubsection}{-1}

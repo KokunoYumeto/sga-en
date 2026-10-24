@@ -1,0 +1,158 @@
+
+\medskip
+\noindent\textit{Proof.}
+\phantomsection
+\label{sga3:VIIB:0.2.D-proof}
+Let \((L_j)\) be the filtered decreasing family of open submodules of
+\(M\). We endow \(M/K\) with the quotient topology; that is, a basis
+of neighborhoods of \(0\) is formed by the open submodules
+\((K+L_j)/K\). Since \(K\) is closed, it is equal to the intersection
+of the \(K+L_j\), and hence the map
+\[
+  \tau:M/K\longrightarrow\varprojlim_j M/(K+L_j)
+\]
+is injective. It is also open, since the right-hand side is the
+inverse limit of the discrete modules \(M/(K+L_j)\). Moreover, for
+each \(j\), the map
+\[
+  t_j:M/L_j\longrightarrow M/(K+L_j)
+\]
+is surjective and has Artinian kernel. Thus, by the preceding lemma,
+the map \(t\) in the following commutative diagram is surjective:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:0.2.D-quotient-completion-square}
+  \input{native_diagrams/exp7/viib_15_95/diag_079}
+\end{center}
+Since \(p\) is an isomorphism because \(M\) is complete, it follows
+that \(\tau\) is surjective, and hence is an isomorphism. This proves
+\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}}.
+
+\phantomsection
+\label{sga3:VIIB:0.2.D-proof-ii-a}
+Let us prove \textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}(a)}. By the foregoing, for every \(i\) there
+is an isomorphism
+\[
+  M/M_i\xrightarrow{\sim}\varprojlim_j M/(M_i+L_j),
+\]
+so the two horizontal arrows in the following commutative diagram are
+isomorphisms:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:0.2.D-filtered-family-square}
+  \input{native_diagrams/exp7/viib_15_95/diag_080}
+\end{center}
+Moreover, for each \(j\), the family of submodules
+\((M_i+L_j)/L_j\) has a least element, since \(M/L_j\) is Artinian.
+Consequently, the morphism
+\[
+  s_j:M/L_j\longrightarrow\varprojlim_i M/(L_j+M_i)
+\]
+is surjective; therefore, by the preceding lemma, \(s\) is
+surjective. It follows that \(g\) is surjective. Finally, the kernel
+of \(g\) is the inverse limit of the \(M_i\), that is, their
+intersection. This proves \textup{\SGARefLink{sga3:VIIB:0.2.D:item:a}{(a)}}.
+
+\phantomsection
+\label{sga3:VIIB:0.2.D-proof-ii-b}
+Let us deduce \textup{(b)} from this. Since \(N\) is a closed
+submodule, and hence separated and complete, it is a pseudocompact
+module for the topology induced by that of \(M\). Therefore, by
+\textup{(a)}, the morphisms \(f\) and \(g\) in the following
+commutative exact diagram are surjective:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:0.2.D-snake-exact-diagram}
+  \input{native_diagrams/exp7/viib_15_95/diag_081}
+\end{center}
+The ``snake lemma'' then shows that the sequence
+\[
+  0\longrightarrow\ker f\longrightarrow\ker g
+  \longrightarrow\ker h\longrightarrow 0
+\]
+is exact, and the equality
+\[
+  N+\bigcap_i M_i=\bigcap_i(N+M_i)
+\]
+follows.
+
+\phantomsection
+\label{sga3:VIIB:0.2.B-proof}
+We can now prove \SGARefLink{sga3:vii:proposition:0-2-b}{Proposition~0.2.B}. Let \(f:M\to N\) be a morphism of
+pseudocompact \(A\)-modules. Then \(K=\ker(f)\) is a closed submodule
+of \(M\), and hence is separated and complete; thus \(K\), with the
+topology induced by that of \(M\), is a pseudocompact module. By
+\SGARefLink{sga3:VIIB:0.2.D}{0.2.D}\,\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}}, the module \(M/K\), endowed with the quotient
+topology, is pseudocompact.
+
+Let us show that the continuous bijective morphism
+\[
+  M/K\longrightarrow\operatorname{Im}(f)
+\]
+is bicontinuous. After identifying \(M/K\) with
+\(\operatorname{Im}(f)\), it is enough to show that the topology
+\(T\) induced by that of \(N\) is finer than the quotient topology
+\(Q\).\footnote{The French re-edition says here that \(Q\) is finer
+than \(T\); the ensuing argument proves the reverse inclusion of open
+sets, which is the one needed for bicontinuity.} Let \((L_j)\),
+respectively \((N_i)\), be the filtered
+decreasing families of open submodules of \(M\), respectively \(N\),
+and put
+\[
+  N_i'=N_i\cap\operatorname{Im}(f).
+\]
+Let \(P=(K+L_j)/K\) be a submodule of \(M/K\) open for \(Q\). Since
+\(M/(K+L_j)\) is Artinian, the family \(N_i'+P\) has a least element
+\(N_{i_0}'+P\). The \(N_i'\) are open, and hence closed, for \(T\),
+and therefore also closed for \(Q\). It follows from
+\SGARefLink{sga3:VIIB:0.2.D}{0.2.D}\,\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}\SGARefLink{sga3:VIIB:0.2.D:item:b}{(b)}} that
+\[
+  N_{i_0}'+P
+  =\bigcap_i(N_i'+P)
+  =P+\bigcap_i N_i'
+  =P,
+\]
+whence \(N_{i_0}'\subset P\). Thus \(P\) is open for \(T\), and
+\(M/K\to\operatorname{Im}(f)\) is consequently an isomorphism of
+pseudocompact modules.
+
+In particular, \(\operatorname{Im}(f)\) is complete for \(T\), and
+hence closed in \(N\). By \SGARefLink{sga3:VIIB:0.2.D}{0.2.D}\,\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}} once more,
+\(\operatorname{Coker}(f)\), endowed with the quotient topology, is
+pseudocompact. This proves that \(\operatorname{PC}(A)\) is an
+abelian category.
+
+Arbitrary inverse limits also exist in \(\operatorname{PC}(A)\): if
+\((M_i)\) is an inverse system of pseudocompact modules, its inverse
+limit has as
+underlying module the inverse limit of the underlying
+modules, endowed with the inverse-limit topology. Moreover, if one
+has a family of exact sequences in \(\operatorname{PC}(A)\),
+\[
+  0\longrightarrow K_i\longrightarrow M_i
+  \longrightarrow Q_i\longrightarrow 0,
+\]
+then the sequence
+\[
+  0\longrightarrow\prod_i K_i\longrightarrow\prod_i M_i
+  \longrightarrow\prod_i Q_i\longrightarrow 0
+\]
+is exact. Assertion \textup{\SGARefLink{sga3:vii:proposition:0-2-b:item:iii}{(iii)}} of \SGARefLink{sga3:vii:proposition:0-2-b}{0.2.B} follows, since in every
+abelian category in which arbitrary products exist, conditions
+\textup{\SGARefLink{sga3:VIIB:0.2.D:item:a}{(a)}} and \textup{\SGARefLink{sga3:VIIB:0.2.D:item:b}{(b)}} of \SGARefLink{sga3:VIIB:0.2.D}{0.2.D} are equivalent, and are
+equivalent to the exactness of filtered inverse limits
+(\textup{cf.}\ [Mi65], III, \SGARefLink{sga3:iii:subsection:1-2}{1.2}--1.9, or [Po73], Chap.~2,
+Th.~8.6).
+
+Finally, every pseudocompact module \(M\) is a submodule of the
+product
+\[
+  \prod_L M/L,
+\]
+where \(L\) ranges over the open submodules of \(M\). Thus the objects
+of finite length form a system of cogenerators of
+\(\operatorname{PC}(A)\). (Moreover, every object of length \(n\) is
+isomorphic to a quotient \(A^n/L\), where \(L\) is an open submodule
+of \(A^n\) of colength \(n\); these quotients therefore form a
+\emph{set} of cogenerators.) This completes the proof of \SGARefLink{sga3:vii:proposition:0-2-b}{0.2.B}.
+

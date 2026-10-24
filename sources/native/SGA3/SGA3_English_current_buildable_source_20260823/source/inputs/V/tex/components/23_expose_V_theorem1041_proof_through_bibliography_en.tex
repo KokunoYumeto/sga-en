@@ -1,0 +1,197 @@
+
+\medskip
+\phantomsection\label{proof:sga3-V-10.4.1-a}%
+\noindent\textit{Proof of \hyperref[thm:sga3-V-10.4.1-a]{a)}.}---
+Suppose that the fppf sheaf \(G_X/F\) is represented by an \(X\)-scheme
+\(Y\). Then, by \SGARefLink{sga3:iv:corollary:6:3:3}{Expos\'e~IV, 6.3.3}, the morphism
+\(p:G_X\to Y\) is faithfully flat and locally of finite presentation,
+and the second square in the \hyperref[fig:sga3-V-10.4.1-first-cartesian]{following diagram} is Cartesian:
+\SGAThreeDiagram[0.66\textwidth]
+  {figures/exp5/p289_theorem1041_first_cartesian.png}
+  {The Cartesian square used in the proof of
+   Theorem~\hyperref[thm:sga3-V-10.4.1-a]{10.4.1(a)}.}
+  {fig:sga3-V-10.4.1-first-cartesian}
+  {Expos\'e V, component-local p.~39 / combined-reader p.~301 /
+   re-edited header p.~289}
+The \hyperref[fig:sga3-V-10.4.1-first-cartesian]{first square} is obtained by base change along the unit section
+\(e_X:X\to G_X\). Since \(p\) is faithfully flat and locally of
+finite presentation, the same is true of \(F\to X\).
+
+Conversely, suppose \(F\) is flat over \(X\), and put
+\(X^2=X\times_SX\). The morphism \(d:G_X\to X^2\) gives the fiber
+square
+\SGAThreeDiagram[0.48\textwidth]
+  {figures/exp5/p289_theorem1041_fiber_square.png}
+  {The fiber square associated with \(d:G_X\to X^2\).}
+  {fig:sga3-V-10.4.1-fiber-square}
+  {Expos\'e V, component-local p.~39 / combined-reader p.~301 /
+   re-edited header p.~289}
+\phantomsection\label{eq:sga3-V-10.4.1-pr1-torsor}%
+The first projection
+\[
+  \operatorname{pr}_1:G_X\times_{X^2}G_X\longrightarrow G_X
+\]
+is then an \(F\times_XG_X\)-torsor over \(G_X\), and is therefore flat
+and of finite type, because \(F\) is.%
+\footnote{\label{source-note:sga3-V-10.4.1-pr1-torsor}The source PDF instead prints the morphism
+\(G_X\times_{X^2}G_X\to X^2\) and calls it an
+\(F\times_XX^2\)-torsor over \(X^2\). That morphism is not generally
+surjective. The \hyperref[eq:sga3-V-10.4.1-pr1-torsor]{first projection} to \(G_X\) is the stabilizer torsor
+and is the flatness input required by Theorem~\hyperref[thm:sga3-V-10.1.1]{10.1.1}; the English uses
+this type-correct reading.}
+By
+Theorem~\hyperref[thm:sga3-V-10.1.1]{10.1.1}, \(d\) factors uniquely
+as
+\SGAThreeDiagram[0.47\textwidth]
+  {figures/exp5/p289_theorem1041_factorization.png}
+  {The unique factorization of \(d\).}
+  {fig:sga3-V-10.4.1-factorization}
+  {Expos\'e V, component-local p.~39 / combined-reader p.~301 /
+   re-edited header p.~289}
+where \(\psi\) is faithfully flat and of finite type, and \(\tau\) is
+a monomorphism of schemes.
+
+It follows that the morphism of sheaves \(\psi:G_X\to Y\) is
+\(F\)-invariant, and hence induces a morphism
+\[
+  \bar\psi:G_X/F\longrightarrow Y.
+\]
+Moreover, because \(\psi\) is faithfully flat and of finite type, the
+monomorphism of sheaves \(\tau\) factors through the sheaf image of
+\(d\), namely \(\widetilde\Gamma\). Thus the isomorphism
+\(G_X/F\simeq\widetilde\Gamma\) factors through the monomorphism
+\(Y\to\widetilde\Gamma\). We conclude that \(Y\) represents \(G_X/F\).
+
+\medskip
+\phantomsection\label{proof:sga3-V-10.4.1-b}%
+\noindent\textit{Proof of \hyperref[thm:sga3-V-10.4.1-b]{b)}.}---
+Suppose \(F\) is flat over \(X\). By \hyperref[thm:sga3-V-10.4.1-a]{part~(a)} and \hyperref[proof:sga3-V-10.4.1-a]{its proof}, \(G_X/F\)
+is representable, and
+\[
+  p:G_X\longrightarrow G_X/F
+\]
+is faithfully flat and of finite presentation. On the other hand,
+the morphisms \(d_i:G_X\to X\), for \(i=0,1\), are faithfully flat
+and of finite presentation by hypothesis. Since
+\(d_i=\bar d_i\circ p\), it follows from EGA~IV\(_2\), 2.2.13(iii),
+and EGA~IV\(_3\), 11.3.16, that each \(\bar d_i\) is faithfully flat
+and of finite presentation.
+
+\medskip
+\phantomsection\label{thm:sga3-V-10.4.2}%
+\noindent\textbf{Theorem 10.4.2.}---%
+\footnote{\label{note:sga3-V-52}Editor's note: here too there is a
+largest open subset \(U\subset X\) satisfying the conclusions of the
+\hyperref[thm:sga3-V-10.4.2]{theorem}. Moreover, a codimension-one point \(x\in X\) belongs to
+\(U\) if and only if
+\[
+  (G_X/F)\times_X\operatorname{Spec}(\mathcal O_{X,x})
+  \longrightarrow
+  \operatorname{Spec}(\mathcal O_{X,x})
+  \times_S\operatorname{Spec}(\mathcal O_{X,x})
+\]
+is a closed immersion; see editor's \hyperref[note:sga3-V-44]{note~44}.}
+\textit{Under the hypotheses of \hyperref[sec:sga3-V-10.2]{10.2},
+suppose that \(F\) is flat over \(X\). Then there is a dense saturated
+open subset \(U\subset X\) such that the fppf quotient
+\(V=G\backslash U\) is an \(S\)-scheme of finite type and
+\(U\to V\) is faithfully flat and of finite presentation.}
+
+\medskip
+\noindent\textit{Proof.}---
+Theorem~\hyperref[thm:sga3-V-10.4.1]{10.4.1} shows that
+\(G_X/F\simeq\widetilde\Gamma\) is representable. The fppf sheaf
+\(G\backslash X\) is therefore the quotient sheaf of
+\SGAThreeDiagram[0.38\textwidth]
+  {figures/exp5/p290_theorem1042_double_arrow.png}
+  {The equivalence pair whose quotient is \(G\backslash X\).}
+  {fig:sga3-V-10.4.2-double-arrow}
+  {Expos\'e V, component-local p.~40 / combined-reader p.~302 /
+   re-edited header p.~290}
+By \hyperref[thm:sga3-V-10.4.1-b]{what precedes},
+\[
+  \bar d_i:G_X/F\longrightarrow X
+\]
+is faithfully flat and of finite presentation for \(i=0,1\), and the
+morphism
+\SGAThreeDiagram[0.53\textwidth]
+  {figures/exp5/p290_theorem1042_monomorphism_chain.png}
+  {The monomorphism from the quotient \(G_X/F\) to \(X\times_SX\).}
+  {fig:sga3-V-10.4.2-monomorphism}
+  {Expos\'e V, component-local p.~40 / combined-reader p.~302 /
+   re-edited header p.~290}
+is a monomorphism. In other words, \((\bar d_0,\bar d_1)\) is an
+equivalence pair. Consequently,
+Theorem~\hyperref[thm:sga3-V-8.1]{8.1} applies. There is therefore a
+dense saturated open subset \(U\subset X\) such that the fppf quotient
+\(V=G\backslash U\) is an \(S\)-scheme of finite type and \(U\to V\)
+is faithfully flat and of finite presentation.
+
+Taking the generic-flatness theorem into account
+(EGA~IV\(_2\), 6.9.3), we obtain the \hyperref[cor:sga3-V-10.4.3]{following result}.
+
+\medskip
+\phantomsection\label{cor:sga3-V-10.4.3}%
+\noindent\textbf{Corollary 10.4.3.}---
+\textit{Under the hypotheses of \hyperref[sec:sga3-V-10.2]{10.2},
+suppose that \(X\) is reduced. Then there is a dense saturated open
+subset \(U\subset X\) such that the fppf quotient
+\(G\backslash U\) is an \(S\)-scheme of finite type and
+\(U\to G\backslash U\) is faithfully flat and of finite
+presentation.}
+
+\section*{Bibliography\protect\footnotemark}
+\phantomsection\label{sec:sga3-V-bibliography}
+\addcontentsline{toc}{section}{Bibliography}
+\footnotetext{\label{note:sga3-V-53}Editor's note: additional references cited in this expos\'e.}
+
+\begin{description}
+\item[{[AK80]}]\phantomsection\label{bib:sga3-V-AK80} A.~B. Altman and S.~L. Kleiman,
+  \emph{Compactifying the Picard Scheme}, Adv. Math. \textbf{35}
+  (1980), 50--112.
+\item[{[An73]}]\phantomsection\label{bib:sga3-V-An73} S.~Anantharaman,
+  \emph{Sch\'emas en groupes, espaces homog\`enes et espaces
+  alg\'ebriques sur une base de dimension 1}, M\'em. Soc. Math.
+  France \textbf{33} (1973), 5--79.
+\item[{[BLR90]}]\phantomsection\label{bib:sga3-V-BLR90} S.~Bosch, W.~L\"utkebohmert, and M.~Raynaud,
+  \emph{N\'eron models}, Springer-Verlag, 1990.
+\item[{[CTS79]}]\phantomsection\label{bib:sga3-V-CTS79} J.-L.~Colliot-Th\'el\`ene and J.-J.~Sansuc,
+  \emph{Fibr\'es quadratiques et composantes connexes r\'eelles},
+  Math. Ann. \textbf{244} (1979), 105--134.
+\item[{[DG70]}]\phantomsection\label{bib:sga3-V-DG70} M.~Demazure and P.~Gabriel,
+  \emph{Groupes alg\'ebriques}, Masson \& North-Holland, 1970.
+\item[{[DR81]}]\phantomsection\label{bib:sga3-V-DR81} J.~Dixmier and M.~Raynaud,
+  \emph{Sur le quotient d'une vari\'et\'e alg\'ebrique par un groupe
+  alg\'ebrique}, pp.~327--344 in \emph{Mathematical Analysis and
+  Applications} (L.~Schwartz 65th birthday, ed. L.~Nachbin), Adv.
+  Math. Suppl. Stud., Vol.~7A, 1981.
+\item[{[Fe03]}]\phantomsection\label{bib:sga3-V-Fe03} D.~Ferrand,
+  \emph{Conducteur, descente et pincement}, Bull. Soc. Math. France
+  \textbf{131} (2003), no.~4, 553--585.
+\item[{[Hi62]}]\phantomsection\label{bib:sga3-V-Hi62} H.~Hironaka,
+  \emph{An example of a non-K\"ahlerian complex analytic deformation
+  of K\"ahlerian complex structures}, Ann. of Math. \textbf{75}
+  (1962), no.~1, 190--208.
+\item[{[KM97]}]\phantomsection\label{bib:sga3-V-KM97} S.~Keel and S.~Mori,
+  \emph{Quotient by groupoids}, Ann. of Math. \textbf{145} (1997),
+  no.~1, 193--213.
+\item[{[Ko97]}]\phantomsection\label{bib:sga3-V-Ko97} J.~Koll\'ar,
+  \emph{Quotient spaces modulo algebraic groups}, Ann. of Math.
+  \textbf{145} (1997), no.~1, 33--79.
+\item[{[Ko08]}]\phantomsection\label{bib:sga3-V-Ko08} J.~Koll\'ar,
+  \emph{Quotients by finite equivalence relations}, arXiv:0812.3608.
+\item[{[Mum65]}]\phantomsection\label{bib:sga3-V-Mum65} D.~Mumford,
+  \emph{Geometric invariant theory}, Springer-Verlag, 1965; 2nd ed.
+  with J.~Fogarty, 1982; 3rd ed. with J.~Fogarty and F.~Kirwan, 1994.
+\item[{[Mur65]}]\phantomsection\label{bib:sga3-V-Mur65} J.~P. Murre,
+  \emph{Representation of unramified functors. Applications}
+  (according to unpublished results of A.~Grothendieck), S\'em.
+  Bourbaki, Vol.~9, Exp.~294 (1965), Soc. Math. France, 1995.
+\item[{[Ray67a]}]\phantomsection\label{bib:sga3-V-Ray67a} M.~Raynaud,
+  \emph{Passage au quotient par une relation d'\'equivalence plate},
+  pp.~78--85 in \emph{Proc. Conf. Local Fields (Driebergen)}
+  (ed. T.~A. Springer), Springer-Verlag, 1967.
+\item[{[Ray67b]}]\phantomsection\label{bib:sga3-V-Ray67b} M.~Raynaud,
+  \emph{Sur le passage au quotient par un groupo\"ide plat},
+  C. R. Acad. Sci. Paris (S\'er. A) \textbf{265} (1967), 384--387.
+\end{description}

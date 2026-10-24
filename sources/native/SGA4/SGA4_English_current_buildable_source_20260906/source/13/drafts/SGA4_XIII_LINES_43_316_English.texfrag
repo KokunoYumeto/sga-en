@@ -1,0 +1,267 @@
+\setcounter{pageoriginal}{131}
+
+\section{The projective and flat case}\etiquette[1]{XIII.sec1}\pageoriginale
+
+Recall the statement of \hyperrefext[XII][XII.thm5.9]{5.9 bis} in the case
+under consideration here:
+
+\begin{enonce*}{Proposition 1.1}\etiquette[1.1]{XIII.prop1.1}
+Let $S$ be the spectrum of a Noetherian henselian ring, and let
+$f:X\rightarrow S$ be a projective and flat morphism. Let $X_{\circ}$ be
+the closed fiber of $X/S$. The restriction functor
+$$
+\Et(X)\longrightarrow \Et(X_{\circ})
+$$
+is an equivalence of categories.
+\end{enonce*}
+
+As we have already observed, it follows from
+\hyperrefext[XII][XII.prop6.5]{6.5} (i) that the functor is fully faithful.
+It remains to prove that every étale covering $Y_{\circ}$ of $X_{\circ}$ is
+induced by an étale covering $Y$ of $X$.
+
+\begin{enonce*}{Lemma 1.2}\etiquette[1.2]{XIII.lem1.2}
+Let $S$ be locally Noetherian, let $f:X\rightarrow S$ be projective and
+flat, and let $Y\subset X$ be a subscheme. The subfunctor
+$\epsilon=\prod_{X/S}Y/X$ of the terminal functor, \lq\lq which expresses
+the condition $Y=X$\rq\rq, that is, such that for $S'\rightarrow S$ one has
+$$
+\epsilon(S')=
+\begin{cases}
+\phi & \mbox{if }\quad Y'\neq X',\\
+\{\phi\} &\mbox{if }\quad Y'=X',
+\end{cases}
+$$
+(where\pageoriginale a prime denotes the effect of the base change
+$S'\rightarrow S$), is representable by a subscheme $Z$ of $S$. If
+$Y$ is open (\resp closed), then so is $Z$.
+\end{enonce*}
+
+\noindent
+\emph{Proof}. Let $Y$ be closed in an open subset $U$ of $X$, and let
+$C$ be the closed complement of $U$. Since $f$ is proper, the image of
+$C$ in $S$ is a closed subset $D$, and it is clear that the condition
+$U=X$ is represented by the open subset $S-D$ of $S$. We may therefore
+suppose that $U=X$ already, that is, that $Y$ is a closed subscheme.
+Consider the surjective morphism
+$\Oo_X\xrightarrow{\alpha}\Oo_Y$ of $\Oo_X$-modules; saying that $Y=X$
+amounts to saying that there exists a morphism
+$\Oo_Y\xrightarrow{\beta}\Oo_X$ such that the composite $\beta\alpha$ is
+the identity, that is, that there exists a section of
+$\Hhom(\Oo_Y,\Oo_X)$ lifting the identity section of
+$\Hhom(\Oo_X,\Oo_X)$. Now it follows from \EGA III 7.7.8 that the functor
+which assigns to $S'/S$ the set of sections of
+$\Hhom(\Oo_Y,\Oo_X)$ (\resp $\Hhom(\Oo_X,\Oo_X)$) is represented by a
+vector bundle $V_1$ (\resp $V_2$) over $S$. Let
+$\varphi:V_1\rightarrow V_2$ be the morphism $u\mapsto u\alpha$ induced
+by $\Oo_X\rightarrow\Oo_Y$, and let $s:S\rightarrow V_2$ be the section
+corresponding to the identity $\Oo_X\rightarrow\Oo_X$. The inverse image
+of the section $s$ under $\varphi$ is identified with a closed subscheme
+$Z$ of $S$, and it is clear that $Z$ represents the functor $\epsilon$,
+which proves the lemma.
+
+\begin{enonce*}{Lemma 1.3}\etiquette[1.3]{XIII.lem1.3}
+Let $S$ be a locally Noetherian scheme, let $f:X\rightarrow S$ be a
+projective and flat morphism, and let $E$ be a locally free sheaf on $X$.
+Let
+$$
+QE:(\Sch)/S\longrightarrow(\Ens)
+$$
+be the functor which assigns to $S'/S$ the set $QE(S')$ of quotient
+sheaves $A'$ of $E'=E\otimes_{\Oo_S}\Oo_{S'}$, endowed with the structure
+of an étale $\Oo_{X'}$-algebra. This functor is representable by a scheme
+locally of finite type over $S$.
+\end{enonce*}
+
+\noindent
+\emph{Proof}.\pageoriginale The functor $\sheaf{\Quot}(E)$, with
+$\sheaf{\Quot}(E)(S')$ equal to the set of quotients of $E'$ that are flat
+over $S'$, is representable by a scheme locally of finite type (TDTE IV,
+exp.~221), say by $Z/S$. Let $M_u$ be the \lq\lq universal\rq\rq quotient
+of $E\otimes_{\Oo_S}\Oo_Z$ over $X_Z$. The subfunctor of
+$\sheaf{\Quot}(E)$ consisting of the quotients which are flat
+\emph{over} $X'$ is represented by an open subset $U$ of $Z$. Indeed,
+let $M'$ be a quotient of $E'$, given by an $S$-morphism $S'\rightarrow
+Z$. Since $M'$ is flat over $S'$, saying that it is flat over $X'$ amounts
+to saying that, for every point $s'\in S'$, the module $M'_{s'}$ is flat
+over the fiber $X'_{s'}$ (\EGA IV 5.9), which is equivalent to
+$M_u|_{X_z}$ being flat over the fiber $X_z$ at the point $z$ which is
+the image of $s'$. But the set $U$ of $z\in Z$ such that
+$M_u|_{X_z}$ is flat over $X_z$, that is, such that $M_u$ is flat over
+$X_Z$ at every point of $X_z$, is open in $Z$ by \EGA IV 11.1.5,
+proving the assertion.
+
+It now suffices to represent the relative functor $QE/U[f]$. We are thus
+reduced to the following lemma, after replacing $S$ by $U$ and $X$ by
+$\fprod{X}{U}{S}$:
+
+\begin{enonce*}{Lemma 1.4}\etiquette[1.4]{XIII.lem1.4}
+Let $S$ be a locally Noetherian scheme, let $f:X\rightarrow S$ be a
+projective and flat morphism, and let $M$ be a locally free
+$\Oo_X$-module. The functor
+$\Alget:(\Sch)/S\rightarrow(\Ens)$, which assigns to $S'/S$ the set
+$\Alget(S')$ of algebra structures on $M'$ that are étale over
+$\Oo_{X'}$, is representable by a scheme of finite type over $S$.
+\end{enonce*}
+
+\noindent
+\emph{Proof}. For brevity, we shall say \lq\lq representable\rq\rq,
+understanding \lq\lq by a relative scheme of \emph{finite type}\rq\rq.
+All the vector bundles encountered below will be defined by
+\emph{coherent} sheaves, and hence will be of finite type. A bilinear
+composition law on $M'$ is given by a section of the locally free sheaf
+$\Hhom(M'\otimes M',M')$. Since
+$\Hhom(M'\otimes M',M')$ is flat over $S$, it follows from\pageoriginale
+\EGA III 7.7.6 that the functor \lq\lq bilinear composition law\rq\rq is
+represented by a vector bundle $Z$ over $S$. We must check that the
+additional conditions that the law be associative, commutative, and
+possess a unit section are represented by a subscheme of $Z$. By
+considering the relative functor, we may replace $S$ by $Z$, and may
+therefore suppose that a composition law on $M$ has been given and prove
+that the subfunctor of $S$ expressing the preceding conditions is
+representable by a subscheme of $S$.
+
+For associativity, the condition is that two sections of
+$\Hhom(M\otimes M\otimes M,M)$ become equal after the base change
+$S'\rightarrow S$. Let $Y$ be the fiber product of these sections over
+the vector bundle corresponding to
+$\Hhom(M\otimes M\otimes M,M)$. The scheme $Y$ is identified with a
+closed subscheme of $X$, and associativity after $S'\rightarrow S$ is
+expressed by the condition $Y'=X'$. It therefore defines a subfunctor of
+$S$ represented by a closed subscheme of $S$, by
+\hyperref[XIII.lem1.2]{1.2}. For commutativity, the condition is that two
+sections of $\Hhom(M\otimes M,M)$ become equal, which again defines a
+subfunctor of $S$ represented by a closed subscheme, by
+\hyperref[XIII.lem1.2]{1.2}. Finally, suppose, as we now may, that the law
+is already associative and commutative, and consider the condition that a
+unit section exist; such a section will then be unique. The functor whose
+value on $S'/S$ is the set of sections of $M'$ is represented by a vector
+bundle, by \EGA III 7.7.6, and it remains only to represent the subfunctor
+of this bundle corresponding to the \emph{unit sections} (taking account
+of the uniqueness just recalled). Passing to the relative situation as
+usual, we may suppose that a section $\epsilon$ of $M$ has already been
+given, and prove that the subfunctor of $S$ expressing the condition that
+it become a\pageoriginale unit section is representable. But the condition
+that $\epsilon$ be a unit is that the composite of the evident morphisms
+$M'\rightarrow M'\otimes M'\rightarrow M'$ be the identity, that is, that
+two specified sections of $\Hom(M,M)$ become equal. We conclude once
+again by \hyperref[XIII.lem1.2]{1.2}.
+
+Finally, suppose that a commutative unital algebra structure has been
+given on the locally free module $M$. The locus where it is étale is open
+in $X$ (\SGA I 4.5), and is therefore represented over $S$ by an (open)
+subscheme. This completes the proof of \hyperref[XIII.lem1.4]{1.4}, and
+hence of \hyperref[XIII.lem1.3]{1.3}.
+
+\setcounter{subsection}{4}
+\subsection{}\etiquette[1.5]{XIII.subsec1.5}
+Let $Z/S$ now be the object representing the functor considered in
+\hyperref[XIII.lem1.3]{1.3}, and consider the condition that $Z$ be smooth
+over $S$ at a point $z$. Translating \SGA I III 3.1 into the language of
+the functor $QE$, one obtains the following condition:
+
+Let $B$ be a local Artinian ring, let $\Mm=\rad B$, let $J$ be an ideal of
+$B$ such that $J\Mm=0$, put $S'=\Spec B$ and $S''=\Spec B/J$, and let
+$S'\rightarrow S$ be a morphism. We use the evident notation for the
+effects of the base changes $S'\rightarrow S$ and $S''\rightarrow S$.
+
+\begin{itemize}
+\item[$(\ast)$] For every quotient $A''$ of $E''$, endowed with the
+structure of an étale $\Oo_{X''}$-algebra and corresponding to an
+$S$-morphism $S''\rightarrow Z$ whose image is $z$, there exists a
+quotient $A'$ of $E'$, endowed with the structure of an étale
+$\Oo_{X'}$-algebra, which induces it.
+\end{itemize}
+
+Now, since $X'$ and $X''$ have the same underlying space, an algebra $A'$
+inducing $A''$ is already determined up to unique isomorphism
+(\SGA I 8.3). We\pageoriginale may therefore express condition
+$({\ast}{\ast})$ as follows:
+
+\begin{itemize}
+\item[$({\ast}{\ast})$] Let $A'$ be an étale algebra over $\Oo_{X'}$,
+and let $A''$ be the algebra induced by $A'$ on $X''$. Every surjective
+homomorphism
+$$
+E''\xrightarrow{\varphi''}A''
+$$
+corresponding to a morphism $S''\rightarrow Z$ whose image is $z$ lifts
+to a homomorphism (necessarily surjective by Nakayama's lemma)
+$$
+E'\xrightarrow{\varphi'}A'{\quoi}.
+$$
+\end{itemize}
+
+From the exact sequence
+$$
+0\longrightarrow J\longrightarrow B\longrightarrow B/J\longrightarrow
+0
+$$
+we obtain an exact sequence of sheaves on $X'$:
+$$
+0\longrightarrow J\otimes\Hhom(E',A')\longrightarrow
+\Hhom(E',A')\longrightarrow\Hhom(E'',A'')\longrightarrow
+0{\quoi}.
+$$
+The obstruction to lifting $\varphi''$ lies in
+$H^1(X',J\otimes\Hhom(E',A'))$. Let
+$S_{\circ}=\Spec B/\Mm$. Since $J\Mm=0$, one has
+$$
+J\otimes\Hhom(E',A')\simeq
+J\otimes\Hhom(E_{\circ},A_{\circ}){\quoi},
+$$
+and it is clear that
+$$
+H^1(X',J\otimes\Hhom(E_{\circ},A_{\circ}))\simeq
+J\otimes H^1(X_{\circ},\Hhom(E_{\circ},A_{\circ})){\quoi}.
+$$
+Taking account of the fact that cohomology commutes with extension of the
+base fields, we obtain:
+
+\begin{enonce*}{Corollary 1.6}\etiquette[1.6]{XIII.cor1.6}
+Let $Z/S$ be the scheme representing the functor of
+\hyperref[XIII.lem1.3]{1.3}, let
+$X_Z=\fprod{X}{Z}{S}$, and let $A_Z$ be the (\lq\lq general\rq\rq)
+quotient étale algebra of $E_Z$. Then $Z/S$ is smooth at every point
+$z_{\circ}$ such that
+$$
+H^1(X_{\circ},\Hhom(E_{\circ},A_{\circ}))=0{\quoi},
+$$
+where\pageoriginale the subscript zero denotes restriction to the fiber
+$X_{\circ}$ of $X_Z/Z$ at the point $z_{\circ}$.
+\end{enonce*}
+
+We can now complete the proof of \hyperref[XIII.prop1.1]{1.1}. With the
+notation of the proposition, let $Y_{\circ}/X_{\circ}$ be an étale
+covering, given by a sheaf of algebras $A_{\circ}$ that is étale over
+$\Oo_{X_{\circ}}$. For $n$ sufficiently large, $A_{\circ}(n)$ is
+generated by its sections (\EGA III 2.2.1). We thus have a surjection
+$$
+\Oo^N_{X_{\circ}}\longrightarrow A_{\circ}(n)\longrightarrow
+0{\quoi},
+$$
+and hence a surjection
+$$
+\Oo^N_{X_{\circ}}(-n)=E_{\circ}\longrightarrow
+A_{\circ}\longrightarrow 0{\quoi}.
+$$
+Choose $n$ sufficiently large that we also have
+\begin{equation*}
+H^1(X_{\circ},\Hhom(E_{\circ},A_{\circ}))=0{\quoi},\tag{$+$}
+\end{equation*}
+which is possible by \EGA III 2.2.1, since
+$$
+\Hhom(E_{\circ},A_{\circ})
+=[\Hhom(\Oo^N_{X_{\circ}},A_{\circ})](n)
+=[A_{\circ}(n)]^N{\quoi}.
+$$
+Put $E=\Oo^N_X(-n)$, and let $Z/S$ be the scheme representing the functor
+considered in \hyperref[XIII.lem1.3]{1.3}. The quotient $A_{\circ}$ of
+$E_{\circ}$ corresponds to a point $z_{\circ}\in Z$ in the closed fiber
+of $Z/S$, rational over $k(s)$; by \hyperref[XIII.subsec1.5]{1.5} and
+$(+)$, $Z/S$ is smooth at $z_{\circ}$. Since $S$ is the spectrum of a
+\emph{henselian} ring, there is a section of $Z/S$ through $z_{\circ}$;
+this follows, for example, immediately from the original definition
+(\SGA II 1.1) of smoothness. It follows that $A_{\circ}$ is induced by an
+algebra $A$ étale over $X$ (a quotient of $E$), which completes the proof
+of \hyperref[XIII.prop1.1]{1.1}.

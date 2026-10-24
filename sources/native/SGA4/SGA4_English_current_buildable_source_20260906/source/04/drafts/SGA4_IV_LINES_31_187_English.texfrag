@@ -1,0 +1,140 @@
+\setcounter{pageoriginal}{298}
+\setcounter{section}{-1}
+\section{Introduction}\etiquette[0]{IV.sec0}\pageoriginale
+
+\subsection{}\etiquette[0.1]{IV.subsec0.1}
+We saw in \hyperref[sga4.exp.II]{II} various exactness properties of categories of the
+form $\widetilde{𝒞}=$ the category of sheaves of sets on $𝒞$, where
+$𝒞$ is a small site. These properties can be expressed by saying
+that in many respects such categories (which we shall call
+\emph{topoi}) inherit the familiar properties of the category
+$(\Ens)$ of (small) sets. On the other hand, experience has shown
+that various situations in Mathematics should be regarded
+\emph{above all as a technical means of constructing the
+  corresponding categories of sheaves} (of sets), \ie \emph{the
+  corresponding ``topoi.''} It appears that all the genuinely
+important notions attached to a site (for example its cohomological
+invariants, studied in \hyperref[sga4.exp.V]{V}; various other ``topological''
+invariants, such as its homotopy invariants recently studied by M.
+\textsc{Artin} and B. \textsc{Mazur} [1]; and the notions studied in
+J. \textsc{Giraud}'s book on noncommutative cohomology) are in fact
+expressed directly in terms of the associated topos. From this point
+of view, two sites should be regarded as essentially equivalent when
+their associated topoi are equivalent categories. The datum of a
+site (at least in the case, especially important in practice, where
+its topology is coarser than its canonical topology) should be
+regarded as amounting to the datum of a topos $ℰ$ (namely the
+associated topos formed by the sheaves of sets on the site) together
+with a generating family of objects of $ℰ$ (\cf\pageoriginale II
+\hyperref[II.subsec4.9]{4.9}, and \hyperref[IV.cor1.2.1]{1.2.1} below). This viewpoint is
+analogous to associating a group with a system of generators and a
+system of relations among those generators, and attaching interest
+rather to the structure of that group than to the system of
+generators and relations used to generate it (which are regarded as
+auxiliary data of the situation). Moreover, the ``comparison lemma''
+III \hyperref[III.theo4.1]{4.1} provides numerous examples of pairs of sites $𝒞$, $𝒞'$ that
+are not isomorphic, and are not even equivalent as categories, but
+give rise to equivalent topoi; thus $𝒞$ and $𝒞'$ should be regarded
+as essentially equivalent.
+
+\subsection{}\etiquette[0.2]{IV.subsec0.2}
+In the present exposé we give a characterization of topoi by simple
+exactness properties (due to J. \textsc{Giraud}); we study the
+natural notion of a morphism of topoi, inspired by the notion of a
+continuous map from one topological space to another; and we develop
+in the setting of topoi certain constructions familiar from ordinary
+sheaf theory (sheaves $\Hhom$, tensor-product sheaves, supports).
+Finally, following M. \textsc{Artin}, we show how a topos can be
+reconstructed from an ``open'' part, its complementary ``closed''
+part, and a certain left exact functor connecting them, which may in
+fact be chosen almost arbitrarily.
+
+\subsection{}\etiquette[0.3]{IV.subsec0.3}
+This gives a procedure for gluing topoi which, when applied to topoi
+arising from ordinary topological spaces, will in general produce a
+topos no longer of the same type. This is a first indication of the
+remarkable stability of the notion of a topos under various natural
+constructions, a stability lacking for the notion of a topological
+space (from which the notion of a\pageoriginale topos is inspired).
+As a second remarkable example, let us also mention the relative
+classifying topos of a group in a topos (\cf [1] or
+\hyperref[IV.exer5.9]{5.9} below), inspired by the classical notion
+of the classifying space of a topological group, and the notion of a
+``moduli topos'' associated with various ``moduli problems'' in
+Algebraic Geometry or Analytic Geometry [10] [13].
+
+Other topoi, such as the \emph{étale topos} of a scheme
+(systematically studied in the present Seminar beginning with \Exp
+VII) or the \emph{crystalline topos} of a relative scheme [6], arise
+naturally when one wishes to develop usable cohomology theories for
+abstract algebraic varieties (and, more generally, schemes),
+replacing the classical Betti cohomology of algebraic varieties over
+the field of complex numbers.
+
+\subsection{}\etiquette[0.4]{IV.subsec0.4}
+Thus one may say that the notion of a topos, a natural outgrowth of
+the \emph{sheaf-theoretic viewpoint} in Topology, in turn constitutes
+a substantial enlargement of the notion of a topological
+space\footnote[1]{\Cf [9], or \hyperref[IV.subsec4.1]{4.1} and
+\hyperref[IV.subsec4.2]{4.2} below, for the precise relations between
+  the notion of a topos and that of a topological space.}, embracing
+a large number of situations which formerly were not regarded as
+belonging to topological intuition. The characteristic feature of
+such situations is the availability of a notion of ``localization,''
+a notion formalized precisely by that of a site and, ultimately, by
+that of a topos (through the topos associated with the site). As the
+term ``topos'' itself is intended precisely to suggest, it seems
+reasonable and legitimate to the authors of the present Seminar to
+regard the subject of Topology as the study of \emph{topoi} (and not
+merely of topological spaces).
+
+\subsection{}\etiquette[0.5]{IV.subsec0.5}
+It seemed useful to include in this general exposé on topoi a fairly
+large number of examples, many of which are only remotely\pageoriginale related to
+the original aim of this seminar (namely, the study of étale
+cohomology). The reader in a hurry, interested exclusively in étale
+cohomology, may of course omit these examples without inconvenience,
+as well as most of the present exposé, consulting it only when the
+need arises.
+
+\section{Definition and characterization of topoi}\etiquette[1]{IV.sec1}
+
+\begin{enonce*}{Definition 1.1}\etiquette[1.1]{IV.def1.1}
+A category $E$ is called a $𝒰$-topos, or simply a topos when no
+confusion is likely, if there exists a site $C\in 𝒰$ such that $E$ is
+equivalent to the category $C^{\widetilde{\phantom{,}}}$ of
+$𝒰$-sheaves of sets on $C$.
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[1.1.1]{IV.subsubsec1.1.1}
+Let $E$ be a $𝒰$-topos. We always regard $E$ as endowed with its
+canonical topology (\hyperrefext[II][II.def2.5]{2.5}), which therefore
+makes it a \emph{site}, and even, by \hyperref[IV.subsubsec1.1.2]{1.1.2}
+d) below, a $𝒰$-site (\hyperrefext[II][II.def3.0.2]{3.0.2}). Unless
+expressly stated otherwise, we shall consider no topology on $E$
+other than the one just specified.
+
+\subsubsection{}\etiquette[1.1.2]{IV.subsubsec1.1.2}
+We saw in \hyperrefext[II][II.prop4.8]{4.8},
+\hyperrefext[II][II.cor4.11]{4.11} that a $𝒰$-topos $E$ is a
+$𝒰$-category (\hyperrefext[I][I.def1.1]{1.1}) satisfying the following
+conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Finite projective limits are representable in $E$.
+
+\item Direct sums indexed by an element of $𝒰$ are representable in
+  $E$. They are disjoint and universal
+  (\hyperrefext[II][II.def4.5]{4.5}).
+
+\item Equivalence relations in $E$ are universally effective
+  \sisi{(\hyperrefext[I][I.sec10.9]{10.9}).}{(\hyperrefext[I][I.sec10.10]{10.10}).}
+
+\item $E$ admits a generating family
+  (\hyperrefext[II][II.subsec4.9]{4.9}) indexed by an element of $𝒰$.
+\end{enumerate}
+
+In\pageoriginale fact, we shall see that these intrinsic properties
+\emph{characterize} $𝒰$-topoi:

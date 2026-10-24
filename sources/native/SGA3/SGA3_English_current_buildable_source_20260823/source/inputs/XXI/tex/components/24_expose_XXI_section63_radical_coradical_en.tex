@@ -1,0 +1,109 @@
+\subsection{Radical and coradical}\label{sga3:XXI:6.3}
+
+Let \(\cR\) be a root datum. Put
+\[
+ N=\{x\in M\mid(\alpha^\ast,x)=0
+       \text{ for every }\alpha^\ast\in R^\ast\},
+\qquad
+ N^\ast=M^\ast/\bigl(\VR(R^\ast)\cap M^\ast\bigr).
+\]
+
+\begin{lemma}\label{sga3:XXI:6.3.1}
+Consider the canonical morphisms
+\[
+ N\longrightarrow M,
+ \qquad
+ M^\ast\longrightarrow N^\ast.
+\]
+They are transposes of one another, and \(N^\ast\) is identified with
+the dual of \(N\).
+\end{lemma}
+
+\begin{proof}
+This follows immediately from \ref{sga3:XXI:1.2.5}.
+\end{proof}
+
+\begin{definition}\label{sga3:XXI:6.3.2}
+The \emph{coradical} of \(\cR\), denoted
+\(\operatorname{corad}(\cR)\), is the trivial root datum
+\[
+ \operatorname{corad}(\cR)=(N,N^\ast,\varnothing,\varnothing).
+\]
+\end{definition}
+
+If
+\[
+ \cR^0=(M,M^\ast,\varnothing,\varnothing),
+\]
+which is a trivial root datum, there is therefore a morphism
+\[
+ \operatorname{corad}(\cR)\longrightarrow\cR^0.
+\]
+
+\begin{definition}\label{sga3:XXI:6.3.3}
+The \emph{radical} of \(\cR\), denoted
+\(\operatorname{rad}(\cR)\), is the trivial root datum
+\footnote{Editors' note: Equivalently, if
+\[
+ P=\{y\in M^\ast\mid(y,\alpha)=0\text{ for every }\alpha\in R\},
+ \qquad
+ P^\ast=M/\bigl(\VR(R)\cap M\bigr),
+\]
+then
+\(\operatorname{rad}(\cR)=(P^\ast,P,\varnothing,\varnothing)\).}
+\[
+ \operatorname{rad}(\cR)=\operatorname{corad}(\cR^\ast)^\ast.
+\]
+\end{definition}
+
+Thus there is a diagram
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=large]
+\operatorname{corad}(\cR) \arrow[rr] \arrow[dr]
+  && \operatorname{rad}(\cR) \\
+& \cR^0 \arrow[ur] &
+\end{tikzcd}
+\end{center}
+whose transpose is the corresponding diagram for \(\cR^\ast\).
+
+\begin{lemma}\label{sga3:XXI:6.3.4}
+The canonical morphism
+\[
+ u:\operatorname{corad}(\cR)\longrightarrow\operatorname{rad}(\cR)
+\]
+is an isogeny.
+\end{lemma}
+
+\begin{definition}\label{sga3:XXI:6.3.5}
+Put
+\[
+ N(\cR)=K(u)
+ =
+ M\Big/
+ \left(
+   \bigl(\VR(R)\cap M\bigr)
+   +\bigcap_{\alpha\in R}\ker(\alpha^\ast)
+ \right).
+\]
+There is then a canonical pairing
+\[
+ N(\cR)\times N(\cR^\ast)\longrightarrow\mathbb Q/\mathbb Z.
+\]
+\end{definition}
+
+\begin{lemma}\label{sga3:XXI:6.3.6}
+One has
+\[
+ \rgred\bigl(\operatorname{rad}(\cR)\bigr)
+ =
+ \rgred\bigl(\operatorname{corad}(\cR)\bigr)
+ =
+ \rgred(\cR)-\rgss(\cR),
+\]
+and the following conditions are equivalent:
+\begin{enumerate}
+\item[(i)] \(\cR\) is semisimple;
+\item[(ii)] \(\operatorname{rad}(\cR)=0\);
+\item[(iii)] \(\operatorname{corad}(\cR)=0\).
+\end{enumerate}
+\end{lemma}

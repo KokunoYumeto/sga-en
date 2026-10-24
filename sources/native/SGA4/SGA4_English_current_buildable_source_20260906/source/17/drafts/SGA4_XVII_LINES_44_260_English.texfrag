@@ -1,0 +1,222 @@
+\setcounter{pageoriginal}{251}
+
+\footnotetext[1]{The present exposé and the following one, written in
+  1968 and 1969, reproduce and supplement the oral lectures of
+  A.~\textsc{Grothendieck} (spring 1964). The author of this written
+  version, who did not attend the oral seminar, drew in part on notes
+  by A.~\textsc{Grothendieck}.}
+
+
+\section*{Introduction}\pageoriginale
+
+In this exposé we develop the formalism of cohomology with proper
+support. The questions of variance have been treated with considerable
+care, whereas they were only made plausible in the oral seminar. This
+explains the length of the exposé, whose Sections
+\hyperref[XVII.sec1]{1} to \hyperref[XVII.sec4]{4} are devoted to
+categories and general topology. The reader is very strongly advised
+to read only Sections \hyperref[XVII.sec5]{5} and
+\hyperref[XVII.sec6]{6}, where the geometric substance of the exposé
+is concentrated (\S \hyperref[XVII.sec5]{5}: construction and
+variance of cohomology with proper supports, base-change, finiteness,
+finite \tTor-dimension, and comparison theorems; \S
+\hyperref[XVII.sec6]{6}: theory of the \sisi{trace}{trace} morphism for
+a quasi-finite flat morphism).
+
+In Sections \hyperref[XVII.sec1]{1} and \hyperref[XVII.sec2]{2}, we
+``recall'' some results on derived categories. The \S
+\hyperref[XVII.sec1]{1} ${\rm n^{\circ}}$ 1 is devoted to the sign
+formalism. In the \S \hyperref[XVII.sec3]{3}, we treat the problem of
+gluing two variance formalisms. In the \S \hyperref[XVII.sec4]{4}, we
+introduce flat resolutions and study the special properties of
+\textsc{Godement}'s flasque resolutions.
+
+In\pageoriginale this exposé, the higher direct-image functors with
+proper supports $R^{q}f_{!}$, and the functor $Rf_{!}$ from which they
+arise, are defined only when $f$ is a compactifiable morphism
+(\hyperref[XVII.def3.2.1]{3.2.1}). In the appendix, written by
+\textsc{B. Saint-Donat}, it is shown how to extend the definition to
+separated morphisms of finite type with quasi-compact quasi-separated
+target.\nde{\MakeLinkTarget*{sga4.exp.XVII.editor-note.introduction.nagata-compactification}\label{XVII.ndeConrad}The Nagata compactification theorem
+ensures that every separated morphism of finite type with
+quasi-compact quasi-separated target is compactifiable. See B.~Conrad,
+``Deligne's notes on Nagata compactifications'', \emph{J. Ramanujan
+Math.\ Soc.} \textbf{22} (2007), 205--257, cited as [C] below, \hyperref[XVII.subsec4.1]{4.1}, as
+well as ``Erratum for `Deligne's notes on Nagata compactifications''',
+\emph{J. Ramanujan Math.\ Soc.} \textbf{24} (2009), 427--428.}
+
+The \S \hyperref[XVII.sec5]{5} ${\rm n^{\circ}}$
+\hyperref[XVII.sec5]{5} (cohomology of a symmetric product) will not be
+used again in this seminar. It will be used in \SGA 5 to refine the
+rationality theorem for $L$-functions.\nde{See \SGA
+4$\frac{1}{2}$, $L$-functions modulo $\ell^n$ and modulo $p$.}
+
+The \S \hyperref[XVII.sec6]{6} ${\rm n^{\circ}}$
+\hyperref[XVII.sec3]{3} (the theory of the trace for \emph{continuous}
+coefficients) will be used in Exposé XVIII only in the relatively easy
+case of smooth groups; a reader interested in the Poincaré duality
+theorem (global duality), and willing to accept a transcendental
+argument, may even dispense entirely with reading this \S
+\hyperref[XVII.sec6]{6} ${\rm n^{\circ}}$
+\hyperref[XVII.sec3]{3}, as well as most of the \S
+\refnoexpose{XVIII.sec1} of XVIII.
+
+\setcounter{section}{-1}
+\section{Terminological preliminaries}\etiquette[0]{XVII.sec0}
+
+\subsection{}\etiquette[0.1]{XVII.subsec0.1}
+The sign $=$ placed between two groups of symbols denoting objects of a
+category will sometimes mean (by abuse of notation) that these objects
+are canonically isomorphic. The category and the canonical isomorphism
+should in principle have been defined beforehand. In a diagram, the
+sign $=$ will then denote the isomorphism itself.
+
+\hypertarget{sga4.exp.XVII.subsection.0.2}{}\setcounter{subsection}{2}
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[0.2.0]{XVII.subsubsec0.2.0}
+Let $f:S\rightarrow S'$ be a morphism of sites
+(\hyperrefext[IV][IV.subsubsec4.9.3]{4.9.3}). If $U$ and $U'$ are
+objects of $S$ and $S'$, an $f$-morphism from $U$ to $U'$ will by
+definition be a morphism from $U$ to $f^{\ast}U'$. For the étale sites
+of schemes, this recovers the usual notion.
+
+\subsubsection{}\etiquette[0.2.1]{XVII.subsubsec0.2.1}
+If\pageoriginale $\mathcal{F}$ and $\mathcal{F}'$ are sheaves on $S$
+and $S'$, an $f$-morphism from $\mathcal{F}$ to $\mathcal{F}'$ will
+mean, equivalently,
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item a morphism from $f^{\ast}\mathcal{F}'$ to $\mathcal{F}$;
+
+\item a morphism from $\mathcal{F}'$ to $f_{\ast}\mathcal{F}$;
+
+\item a function which, to every $f$-morphism $\varphi$ from an object
+  $U$ of $S$ to an object $U'$ of $S'$, assigns a function from
+  $\mathcal{F}'(U')$ to $\mathcal{F}(U)$, compatibly with the
+  composition of $\varphi$ with an arrow of $S$ or of $S'$
+  \footnote{These terminologies are not compatible with identifying
+  the objects of $S$ with the associated sheaves.}.
+\end{enumerate}
+
+It follows from (i), (ii), and (iii) that sheaves of sets form a
+fibered and cofibered category over the category of sites.
+
+Likewise for sheaves of left modules on ringed sites. Likewise for
+étale sheaves on schemes; this is not immediately a special case of
+the preceding statement, since sites in fact form a 2-category and
+``the étale site of $X$'' is only a pseudofunctor in $X$
+(\hyperrefext[VII][VII.subsec1.4]{1.4}).
+
+The preceding definition makes sheaves of sets (\resp\ldots) on
+varying sites into a fibered category over the category of sites,
+whose fiber categories are the \emph{opposite categories} of the
+usual categories of sheaves of sets (\resp\ldots).
+
+\subsection{}\etiquette[0.3]{XVII.subsec0.3}
+Let $I$ be a finite set, let $\epsilon$ be a function on $I$ with
+values in $\{+1,-1\}$, let $(\Aa_i)_{i\in I}$ be a family of additive
+categories graded by translation functors $T_i$ (\cite{sga4.exp.XVII.bib.CD} I
+\sisi{1.10}{1.1.0}), and let $F$ be a multiadditive multifunctor from
+the categories $\Aa_i$ to an additive category $\Aa$ graded by the
+translation functor $T$. We suppose that $F$ is covariant (\resp
+contravariant) in the variables $i$ for which $\epsilon_i=1$ (\resp
+$\epsilon_i=-1$). Modifying and supplementing\pageoriginale
+(\cite{sga4.exp.XVII.bib.CD} \sisi{I 1.1}{II 2.1.1}), we shall say that $F$ is a
+\emph{graded functor} if we are given a family
+$(\varphi_i)_{i\in I}$ of isomorphisms of functors between $T\circ F$
+and $F\circ T_i^{\varepsilon_{i}}$, such that the following diagrams are
+anticommutative for $i\neq j$ in $I$:
+\[
+\xymatrix{
+F \circ (T_i^{\varepsilon_i}, T_j^{\varepsilon_j})  \ar[rr]^{\varphi_j
+  \ast T_i^{\varepsilon_i}} \ar[dd]^{\varphi_i\ast T_j^{\varepsilon_j}}& &T\circ F \circ T_i^{\varepsilon_i} \ar[dd]^{T\ast
+  \varphi_i}\\
+ & - & \\
+ T\circ F \circ T_j^{\varepsilon_j}  \ar[rr]^{T\ast \varphi_j} & &T\circ T
+  \circ F.
+}
+\]
+We leave it to the reader to define the composite of two graded
+functors and verify that it is again a graded functor.
+
+\subsection{}\etiquette[0.4]{XVII.subsec0.4}
+Let $\Aa$ be an additive category and let $I$ be a finite set. For
+$i\in I$, denote by $1_i$ the $i$\textsuperscript{th} basis vector of
+$\ZZ^{I}$. An \emph{$I$-fold complex} (\resp a
+\sisi{naive}{\emph{naive}} \emph{$I$-fold complex}) of $\Aa$ consists of
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item a family $(K^{k})_{k\in \ZZ^{I}}$ of objects of $\Aa$;
+
+\item for every $i\in I$ and every $k\in \ZZ^{I}$, an arrow
+  $d^{k}_i:K^{k}\rightarrow K^{k+1_i}$, these arrows satisfying
+  $d^{k+1_i}_i d^{k}_i=0$ and, for $i\neq j$,
+  $d^{k+1_j}_i d^{k}_j+d^{k+1_i}_j d^{k}_i=0$ (\resp
+  $d^{k+1_j}_i d^{k}_j=d^{k+1_i}_j d^{k}_i$).
+\end{enumerate}
+
+\subsection{}\etiquette[0.5]{XVII.subsec0.5}
+A\pageoriginale \emph{\ppro-object} of a category $\sisi{C}{\Cc}$ is a functor from
+$\sisi{C}{\Cc}$ to $(\Ens)$ which is a filtered direct limit (over a
+small filtered category) of representable functors (\cf
+\hyperrefext[I][I.sec8.10]{8.10}). Every \ppro-object is a direct limit,
+over a small filtered ordered set, of representable functors. If
+$X_{i}$ is an inverse system of objects of $\sisi{C}{\Cc}$, indexed by a
+small filtered category, we denote by $\quotprojlim X_{i}$ the
+\ppro-object $\varinjlim h^{X_i}$.
+
+\subsection{}\etiquette[0.6]{XVII.subsec0.6}
+The reader may dualize \hyperref[XVII.subsec0.5]{0.5} to the case of
+\iind-objects (\Cf \hyperrefext[I][I.sec8.2]{8.2}).
+
+\subsection{}\etiquette[0.7]{XVII.subsec0.7}
+In accordance with the new terminology, what was formerly called a
+prescheme is now called a \emph{scheme}, and what was formerly called
+a scheme is now called a \emph{separated scheme}.
+
+\subsection{}\etiquette[0.8]{XVII.subsec0.8}
+The category of \emph{ringed schemes} is the category whose objects are
+schemes whose étale site is endowed with a sheaf of rings, an arrow
+from $(S,\Aa)$ to $(T,\Bb)$ being a pair consisting of a morphism of
+schemes $f$ from $S$ to $T$ and a homomorphism $\varphi$ of sheaves of
+rings from $f^{\ast}\Bb$ to $\Aa$. The morphism of schemes $f$ is
+said to be \emph{induced by} $(f,\varphi)$.
+
+\subsection{}\etiquette[0.9]{XVII.subsec0.9}
+If $X$ is a scheme over $Y$, we denote by $(X/Y)^n$ the $n$-fold fiber
+product of $X$ over $Y$.
+
+\subsection{}\etiquette[0.10]{XVII.subsec0.10}
+Let $S$ be a scheme. The \emph{big étale site} (\resp the \emph{big
+fppf site}, \resp the \emph{big fpqc site}) of $S$ is the site
+$\Sch/{S}$, endowed with the étale topology (\resp the fppf topology,
+\resp the fpqc topology) (\SGA 3 IV 6.3). Note carefully that this is
+not a $\sisi{U}{\Uu}$-site ($\sisi{U}{\Uu}$ being the
+\sisi{finite}{fixed} universe, and $\Sch/{S}$ consisting of the schemes
+$\in \sisi{U}{\Uu}$).
+
+The\pageoriginale \emph{small fpqc site} (\resp the \emph{small fppf
+site}) of $S$ is the site of schemes flat over $S$ (\resp flat and of
+finite presentation), endowed with the fpqc topology (\resp the fppf
+topology). When it is necessary to avoid ambiguity, the \emph{small
+étale site} of $S$ will mean the site $S_{\et}$
+(\hyperrefext[VII][VII.subsec1.2]{1.2}).
+
+\subsection{}\etiquette[0.11]{XVII.subsec0.11}
+In many cases, the author has allowed himself to speak of commutative
+diagrams of morphisms of sites where one should have spoken of
+essentially commutative diagrams, \ie diagrams commutative up to
+isomorphism (\cf IV \hyperref[IV.subsubsec3.2.2]{3.2.2}). The reader may verify that the arguments we
+give also apply to the general situation.
+
+\subsection{}\etiquette[0.12]{XVII.subsec0.12}
+The terminology ``\emph{coherent scheme}'' for ``quasi-compact
+quasi-separated scheme'' has been surreptitiously introduced here and
+there by A.~Grothendieck.
+
+\subsection{}\etiquette[0.13]{XVII.subsec0.13}
+A torsion sheaf $F$ on a scheme $S$ will be said to be \emph{prime to
+the residual characteristics of} $S$ if it is the direct limit of its
+subsheaves annihilated by integers $n$ invertible on $S$.

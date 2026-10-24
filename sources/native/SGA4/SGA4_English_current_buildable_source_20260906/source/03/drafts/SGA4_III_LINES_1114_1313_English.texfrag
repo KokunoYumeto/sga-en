@@ -1,0 +1,194 @@
+\section{Comparison lemma}\etiquette[4]{III.sec4}\pageoriginale
+
+\begin{enonce*}{Theorem 4.1}\etiquette[4.1]{III.theo4.1}
+{\rm(comparison lemma)}. Let $C$ be a small category, let $C'$ be a
+site whose underlying category is a $𝒰$-category, and let
+$u:C\rightarrow C'$ be a fully faithful functor. Endow $C$ with the
+topology induced by $u$ {\rm(\hyperref[III.subsec3.1]{3.1}).} Consider
+the following properties:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Every object of $C'$ can be covered by objects coming from $C$.
+
+\item The functor $F\mapsto F\circ u$ induces an equivalence from the
+category of sheaves on $C'$ to the category of sheaves on $C$.
+\end{enumerate}
+
+We always have {\rm i) $\Rightarrow$ ii).} When $C'$ is a $𝒰$-site
+and the topology of $C'$ is coarser than the canonical topology, we
+have {\rm ii) $\Rightarrow$ i).}
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[4.1.1]{III.subsubsec4.1.1}
+Let us first prove i) $\Rightarrow$ ii). The proof proceeds in two
+steps.
+
+First step. For every presheaf $H$ on $C'$, the adjunction morphism
+$\varphi:u_{!}u^{\ast}H\rightarrow H$ {\rm(\hyperrefext[I][I.prop5.1]{5.1})} is
+bicovering {\rm(\hyperrefext[II][II.prop5.3]{5.3})}, and the functor
+$u_s:\widetilde{C'}\rightarrow \widetilde{C}$ $\hyperref[III.subsec1.11]{(1.1.1)}$ is fully
+faithful.
+
+Let $C/H$ be the small category whose objects are the objects $Y$ of
+$C$ equipped with a morphism $u(Y)\rightarrow H$, and whose
+morphisms are the commutative diagrams
+\[
+\xymatrix@=1.25cm{
+u(Y) \ar[rr]^{u(m)} \ar[rd]&     &u(Y')\ar[ld]\\
+     &  H  & .
+}
+\]
+We have $u^{\ast}H=\varinjlim_{Y\in \ob C/H} Y$
+(\hyperrefext[I][I.prop3.4]{3.4}), and hence
+(\hyperrefext[I][I.prop5.4]{5.4})
+$u_{!}u^{\ast}H=\varinjlim_{Y\in \ob C/H} u(Y)$. The adjunction
+morphism is the evident morphism arising from the description of
+$u_{!}u^{\ast}H$ as an inductive limit. The morphism $\varphi$ has
+the following property:\pageoriginale $(\ast)$ For every object $Y$
+of $C$, every morphism $m:u(Y)\rightarrow H$ factors uniquely as the
+canonical morphism $\alpha(m):u(Y)\rightarrow u_{!}u^{\ast}H$
+followed by $\varphi$. It follows immediately from i) that
+$\varphi$ is covering (\hyperrefext[II][II.prop5.1]{5.1}); let us show
+that it is bicovering. Let
+$p,q:Z\rightrightarrows u_{!}u^{\ast}H$ be two morphisms from an
+object $Z$ of $C'$ such that $\varphi p=\varphi q$. For every object
+$Y$ of $C$ and every morphism $n:u(Y)\rightarrow Z$, we have
+$\varphi pn=\varphi qn$. Property $(\ast)$ then implies that
+$pn=qn$, and since the $u(Y)$ cover $Z$, the kernel of $(p,q)$ is a
+covering sieve of $Z$. Thus $\varphi$ is bicovering
+(\hyperrefext[II][II.prop5.3]{5.3}). For every sheaf $H$ on $C'$,
+$u^{\ast}H$ is a sheaf on $C$, denoted by $u_sH$ \hyperref[III.subsec1.11]{(1.1.1)}. Moreover,
+$u^su_sH=\underline{a}'u_{!}u_sH$ (\hyperref[III.prop1.3]{1.3}), and
+the adjunction morphism $u^su_sH\rightarrow H$ is obtained by
+applying the ``associated sheaf'' functor to
+$\varphi:u_{!}u^{\ast}H\rightarrow H$. Consequently
+(\hyperrefext[II][II.prop5.3]{5.3}), the adjunction morphism
+$u^su_sH\rightarrow H$ is an isomorphism. Hence
+$u_s:\widetilde{C}'\rightarrow \widetilde{C}$ is fully faithful.
+
+\noindent \emph{Second step. The functor $u$ is cocontinuous and the
+functor $u^s:C^{\sim}\rightarrow {C'}^{\sim}$
+$(\hyperref[III.prop1.2]{1.2})$ is fully faithful. Consequently
+$u_s:{C'}^{\sim}\rightarrow C^{\sim}$ is an equivalence.} Let $Y$
+be an object of $C$ and let $i:R\hookrightarrow u(Y)$ be a covering
+sieve. Since the functor $u^{\ast}$ commutes with projective limits
+(\hyperrefext[I][I.prop5.5]{5.5}), the morphism
+$u^{\ast}(i):u^{\ast}(R)\hookrightarrow u^{\ast}u(Y)$ is a
+monomorphism. Since $u$ is fully faithful, we have
+$u^{\ast}u(Y)\simeq Y$, and thus obtain a sieve of $Y$,
+$u^{\ast}(i):u^{\ast}(R)\rightarrow Y$. To show that $u$ is
+cocontinuous, it suffices to show that
+$u^{\ast}(i):u^{\ast}(R)\hookrightarrow Y$ is a covering sieve for
+the induced topology on $C$ (\hyperref[III.def2.1]{2.1}). For this,
+it suffices to show (\hyperref[III.prop3.2]{3.2}) that for every base
+change $m:X\rightarrow Y$, the morphism
+$u_{!}(u^{\ast}(R)\times_Y X)\rightarrow u(X)$ is bicovering. But
+since $u^{\ast}$ commutes with\pageoriginale projective limits, we
+have
+$\fprod{u^{\ast}(R)}{X}{Y}=u^{\ast}(\fprod{R}{u(X)}{u(Y)})$, and
+$\fprod{R}{u(X)}{u(Y)}$ is a covering sieve of $u(X)$. It therefore
+suffices to show that for every object $Y$ of $C$ and every covering
+sieve $i:R\hookrightarrow u(Y)$, the morphism in
+${C'}^{\widehat{\phantom{,}}}$,
+$u_{!}u^{\ast}(R)\xrightarrow{u_{!}u^{\ast}(i)}u(Y)$, is
+bicovering. Now this morphism factors as the adjunction morphism
+$u_{!}u^{\ast}(R)\rightarrow R$, which is bicovering (first step),
+followed by the covering monomorphism $R\hookrightarrow u(Y)$. It is
+therefore bicovering (\hyperrefext[II][II.prop5.3]{5.3}). This shows
+that $u$ is cocontinuous. Since $u$ is continuous and fully
+faithful, it follows from \hyperref[III.prop2.6]{2.6} (used in the
+case where $C$ is small) that $u^s$ (denoted by $u_{!}$ in
+\hyperref[III.prop2.6]{2.6}) is fully faithful. Since $u^s$ and
+$u_s$ are adjoint to one another and are fully faithful, they are
+quasi-inverse functors, and hence $u_s$ is an equivalence.
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[4.1.2]{III.subsubsec4.1.2}
+Let us now prove ii) $\Rightarrow$ i). The objects $Y$ of $C$ form a
+generating family of $C^{\sim}$ (\hyperrefext[II][II.prop4.10]{4.10}),
+and consequently, for every object $X$ of $C'$, there exists an
+epimorphic family (in $C^{\sim}$)
+$v_i:Y_i\rightarrow u_s X$, $i\in I$. We have
+$u_su(Y_i)=Y_i$, and, since $u_s$ is an equivalence of categories,
+$v_i=u_s(w_i)$, where the $w_i:u(Y_i)\rightarrow X$ form an
+epimorphic family in ${C'}^{\sim}$. It then follows from
+\hyperrefext[II][II.prop5.1]{5.1} that the family
+$w_i:u(Y_i)\rightarrow X$, $i\in I$, is covering.
+
+\subsection{Completion of the proof of \hyperref[III.prop1.2]{1.2}}\etiquette[4.2]{III.subsec4.2}
+
+Let $G$ be a full subcategory of $C$ whose objects form a small
+topologically generating family of $C$ (II \hyperref[II.def3.0.1]{3.0.1}). Endow $G$ with
+the topology induced by the inclusion functor $i:G\rightarrow C$
+(\hyperref[III.subsec3.1]{3.1}). The functor
+$(u\circ i)_s=i_s\circ u_s$ \hyperref[III.subsec1.11]{(1.1.1)} has a left adjoint by the first
+part of the proof of \hyperref[III.prop1.2]{1.2}. Since $i_s$ is an
+equivalence of\pageoriginale categories (\hyperref[III.theo4.1]{4.1}),
+the functor $u_s$ has a left adjoint $u^s$, and there is a functorial
+isomorphism $u^s\simeq (u\circ i)^s\circ i_s$. Let us show that the
+diagram
+\hypertarget{sga4.exp.III.equation.4.2.1}{}\[\vcenter{
+\xymatrix@C=3cm@R=1.5cm{
+C \ar[r]^{u} \ar[d]_{\epsilon_C}& C'\ar[d]^{\epsilon_{C'}}\\
+C\widetilde{\phantom{a}} \ar[r]^{u^{s}}& \widetilde{C}'
+}}\leqno{(4.2.1)}
+\]
+commutes up to isomorphism. For every sheaf $H$ on $C'$, we have
+$\Hom_{\widetilde{C}'}(\epsilon_{C'}uX,H)\simeq u_sH(X)$ for every
+$X\in \ob C$. Moreover,
+$\Hom_{\widetilde{C}'}(u^s\epsilon_CX,H)\simeq
+\Hom_{\widetilde{C}}(\epsilon_CX,u_sH)$ by adjunction, and then
+$\Hom_{\widetilde{C}}(\epsilon_CX,u_sH)\simeq u_sH(X)$ by the
+definition of $\epsilon_C$. Hence there is an isomorphism
+$\epsilon_{C'}uX\simeq u^s\epsilon_CX$ for every $X\in \ob C$. This
+proves i) $\Rightarrow$ iv). Let us prove iv) $\Rightarrow$ i). We
+have a commutative diagram
+\hypertarget{sga4.exp.III.equation.4.2.2}{}\[\vcenter{
+\xymatrix@C=2.25cm@R=1.5cm{ G \ar[r]^{i} \ar[d]_{\epsilon_G} & C
+\ar[r]^{u} \ar[d]_{\epsilon_C}&
+C' \ar[d]_{\epsilon_{C'}}\\
+\widetilde{G} \ar[r]^{i^{s}}& \widetilde{C} \ar[r]^{u^s}&
+\widetilde{C'}, }}\leqno{(4.2.2)}
+\]
+and consequently, by the first part of the proof, the functor
+$u\circ i:G\rightarrow C'$ is continuous. It follows at once from
+\hyperref[III.theo4.1]{4.1} and \hyperref[III.def1.1]{1.1} that $u$
+is continuous, whence iv) $\Rightarrow$ i). This also gives the
+uniqueness of $u^s$, since the first part of the proof gives
+uniqueness when $C$ is small.
+
+\subsection{Completion of the proofs of \hyperref[III.prop1.5]{1.5} and \hyperref[III.prop1.7]{1.7}}\etiquette[4.3]{III.subsec4.3}
+\pageoriginale
+
+Let $u:C\rightarrow C'$ be a functor between two $𝒰$-sites, and let
+$G$ be a full subcategory of $C$ whose set of objects is a small
+topologically generating family of $C$ (II \hyperref[II.def3.0.1]{3.0.1}). Endow $G$ with
+the topology induced by the inclusion functor $i:G\rightarrow C$.
+It follows immediately from \hyperref[III.theo4.1]{4.1} and
+\hyperref[III.def1.1]{1.1} that $u$ is continuous if and only if
+$u\circ i$ is continuous. This observation and the first part of
+the proof of \hyperref[III.prop1.5]{1.5} give the general case. The
+same observation also reduces the proof of \hyperref[III.prop1.7]{1.7}
+to the case where the category $C$ is small.
+
+\subsection{Completion of the proof of \hyperref[III.prop2.3]{2.3}}\etiquette[4.4]{III.subsec4.4}
+
+Let $u:C\rightarrow C'$ be a functor between two $𝒰$-sites, and let
+$G$ be a full subcategory of $C$ whose set of objects is a small
+topologically generating family of $C$
+(\hyperrefext[II][II.def3.0.1]{3.0.1}), endowed with the topology
+induced by the inclusion functor $i:G\rightarrow C$. It follows from
+the proof of \hyperref[III.theo4.1]{4.1} (\hyperref[III.subsubsec4.1.1]{4.1.1}, second step) that
+$i$ is cocontinuous. Consequently, when $u$ is cocontinuous, the
+functor $u\circ i:G\rightarrow C'$ is cocontinuous. Moreover,
+$i^{\ast}:\widetilde{C}\rightarrow \widetilde{G}$ is an equivalence
+of categories (\hyperref[III.theo4.1]{4.1}). Therefore the functor
+$u^{\ast}:\widetilde{C}'\rightarrow \widetilde{C}$ has a right
+adjoint. This proves 3). To prove 4), it suffices to observe that
+$(u\circ i)_{\ast}\simeq u_{\ast}\circ i_{\ast}$ and that
+$i_{\ast}$ is an equivalence (\hyperref[III.theo4.1]{4.1}). The
+commutativity of \eqhyperref[III.eq2.3.2]{2.3.2} then follows from
+the commutativity of these diagrams when $C$ is small.
+

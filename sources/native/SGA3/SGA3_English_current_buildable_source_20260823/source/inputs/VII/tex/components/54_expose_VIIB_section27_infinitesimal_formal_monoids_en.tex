@@ -1,0 +1,186 @@
+
+\subsection*{2.7}
+\phantomsection
+\label{sga3:VIIB:2.7}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:VIIB:2.7:prop}{2.7}. Infinitesimal formal monoids}
+
+We conclude these generalities with a statement that goes back to
+S.~Lie and that will be used in \SGARefLink{sga3:VIIB:5.1}{5.1}. A \emph{formal monoid} over
+\(k\) is, by definition, a pair \((M,m)\) consisting of a formal
+variety \(M\) and a morphism
+\[
+  m:M\times M\longrightarrow M
+\]
+such that \(m(C)\) makes \(M(C)\) a monoid for every object \(C\)
+of \(\operatorname{Alf}/k\).\footnote{%
+\label{sga3:VIIB:nde:112}Here and in what follows, the editors have
+written ``monoid'' instead of ``monoid with identity element''
+\textup{(recall that a monoid is, by definition, a set equipped
+with an associative composition law and possessing an identity
+element)}.}
+In particular, the ``unit section,'' which assigns to every object
+\(C\) the identity element of \(M(C)\), defines a section
+\[
+  \varepsilon_M:\operatorname{Spf}(k)\longrightarrow M
+\]
+of the canonical projection
+\(M\to\operatorname{Spf}(k)\). We shall say that the formal
+monoid \(M\) is \emph{infinitesimal} if \(\varepsilon_M\) induces
+a bijection of the underlying sets.
+
+\medskip
+\noindent\textbf{Proposition.}
+\phantomsection
+\label{sga3:VIIB:2.7:prop}
+{\itshape Every topologically flat infinitesimal formal
+\(k\)-monoid \(M\) is a formal \(k\)-group.}\footnote{%
+\label{sga3:VIIB:nde:113}By the equivalence of categories in
+\SGARefLink{sga3:VIIB:1.3.5.D}{1.3.5.D}, a monoid in the category of topologically flat formal
+\(k\)-varieties ``is the same thing'' as a monoid in the category
+of flat cocommutative \(\mathbf O_k\)-coalgebras, that is, a
+cocommutative \(\mathbf O_k\)-bialgebra \textup{(in the usual
+sense, hence not necessarily equipped with an antipode)}.
+Moreover, by \SGARefLink{sga3:VIIB:1.3.6}{1.3.6}, the hypothesis that \(M\) be infinitesimal is
+equivalent to saying that the corresponding bialgebra is
+connected. Thus, if \(k\) is an Artinian ring, the proposition is
+equivalent to the following statement: every connected
+cocommutative \(k\)-bialgebra that is flat over \(k\) is a
+\(k\)-Hopf algebra, that is, it possesses an antipode. In fact,
+the cocommutativity hypothesis is superfluous; cf.\ the proof.}
+
+\textit{Proof.}
+We must show that \(M(C)\) is a group for every object \(C\) of
+\(\operatorname{Alf}/k\). We therefore reduce immediately to the
+case in which \(k\) is Artinian. Let
+\[
+  U=\mathbf H(M)
+\]
+be the coalgebra of \(M\) \textup{(\SGARefLink{sga3:VIIB:1.3.5}{1.3.5})}. The multiplication
+\[
+  m:M\times M\longrightarrow M
+\]
+induces a morphism of coalgebras
+\[
+  m_U:U\otimes U\longrightarrow U
+\]
+that makes \(U\) an associative algebra over \(k\). The identity
+element of this algebra is the image of the identity element of
+\(k\) under the map \(k\to U\) induced by the unit section
+\(\varepsilon_M\) of \(M\). Likewise, the projection
+\[
+  M\longrightarrow\operatorname{Spf}(k)
+\]
+induces a homomorphism
+\[
+  \varepsilon_U:U\longrightarrow k;
+\]
+we write \(U^+\) for the kernel of \(\varepsilon_U\).
+
+We must show that there is an antipode, that is, a morphism of
+coalgebras
+\[
+  c_U:U\longrightarrow U
+\]
+such that, for every \(u\in U\),
+\begin{equation}
+  \bigl(m_U\circ(c_U\otimes\operatorname{id}_U)
+    \circ\Delta_U\bigr)(u)
+  =
+  \varepsilon_U(u)\,1_U.
+  \tag{*}
+  \label{sga3:VIIB:2.7:antipode-left-identity}
+\end{equation}
+\phantomsection
+\label{sga3:VIIB:2.7:antipode-source-note}
+\noindent\textit{Source note.}\enspace
+In \textup{(*)}, the French re-edition prints \(c_n\) in place of
+\(c_U\), applies the left-hand side to \(x\), and retains \(u\) on
+the right after quantifying over \(u\). At the end of the proof it
+again prints
+\(m_U\circ(c_n\otimes\operatorname{id}_U)\circ\Delta_U=\eta\)
+while calling this the right-inverse identity. The global identity
+above therefore uses \(c_U\) and the single variable \(u\); below,
+\(c_n\) denotes the coherent map at the \(n\)-th stage of the
+induction, and the final right-inverse identity has the tensor
+factors in the order required by that assertion.
+
+Let \((U_n)\) be the filtration of \(U\) defined in \SGARefLink{sga3:VIIB:1.3.6}{1.3.6}, and put
+\[
+  U_n^+=U^+\cap U_n.
+\]
+Since \(M\) is infinitesimal, \(U^+\) is the union of the
+submodules \(U_n^+\).\footnote{%
+\label{sga3:VIIB:nde:114}The original continued as follows:
+``one then shows easily, by induction on \(n\), that there exists
+one and only one linear map \(c_n:U_n\to U_n\) such that the
+composite
+\[
+  m_U\circ(c_n\otimes\operatorname{id}_U)\circ\Delta_U:
+  U_n^+\longrightarrow U
+\]
+is zero.'' The editors have supplied the details of the proof,
+which rests on that of \SGARefLink{sga3:VIIB:1.3.6.A}{Lemma~1.3.6.A}.}
+Set
+\[
+  c_0(1)=1
+\]
+and
+\[
+  c_1(x)=-x
+  \qquad\text{if }x\in U_1^+,
+\]
+that is, if \(x\) is primitive. Suppose that
+\[
+  c_{n-1}:U_{n-1}\longrightarrow U
+\]
+has been constructed so as to satisfy \textup{(*)}, with
+\(c_{n-1}\) in place of \(c_U\), for every \(x\in U_{n-1}\), and
+let \(x\in U_n^+\). By the proof of \SGARefLink{sga3:VIIB:1.3.6.A}{Lemma~1.3.6.A},
+\[
+  \Delta_U(x)-x\otimes1
+  \in
+  U_{n-1}\otimes U^+;
+\]
+this is where the hypothesis that \(U\) is flat over \(k\) enters.
+We may therefore write
+\[
+  \Delta_U(x)
+  =
+  x\otimes1+\sum_i y_i\otimes z_i,
+  \qquad
+  y_i\in U_{n-1},
+\]
+and then set
+\[
+  c_n(x)
+  =
+  -\sum_i c_{n-1}(y_i)z_i.
+\]
+Together with \(c_n(1)=1\), this prescription extends
+\(c_{n-1}\) coherently to \(U_n\). In this way we obtain a
+\(k\)-linear map
+\[
+  c:U\longrightarrow U
+\]
+that is the left inverse of \(\operatorname{id}_U\) for the monoid
+law on \(\operatorname{End}_k(U)\) defined by
+\[
+  f\mathbin{\cdot}g
+  =
+  m_U\circ(f\otimes g)\circ\Delta_U;
+\]
+the identity element is the map
+\[
+  \eta:u\longmapsto\varepsilon_U(u)\,1_U.
+\]
+It follows that \(c\) is uniquely determined and is also the right
+inverse of \(\operatorname{id}_U\); that is,
+\[
+  m_U\circ(\operatorname{id}_U\otimes c)\circ\Delta_U
+  =
+  \eta,
+\]
+without any assumption that \(U\) be cocommutative. Thus
+\(c_U:=c\) is the required antipode, and \(M\) is a formal
+\(k\)-group.
+

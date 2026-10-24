@@ -1,0 +1,222 @@
+
+\medskip
+\noindent\textbf{4.1.3.}
+\phantomsection
+\label{sga3:VIIA:4.1.3}
+
+More generally, for every \(S\)-functor \(X\), define the
+\(S\)-functor \(X^{(p^n)}\) recursively in \(n\) by
+\[
+  X^{(p)}=X^{(p/S)}
+  \qquad\text{and}\qquad
+  X^{(p^n)}
+  =
+  \bigl(X^{(p^{n-1})}\bigr)^{(p)}.
+\]
+Likewise, \(\operatorname{Fr}^n(X/S)\), or simply
+\(\operatorname{Fr}^n\), denotes the composite functorial
+homomorphism
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1.3-iterated-relative-frobenius-chain}
+  \input{native_diagrams/exp7/viia_05_14/diagram_041}
+\end{center}
+By \SGARefLink{sga3:VIIA:4.1.1}{4.1.1},
+\(\operatorname{Fr}(X^{(p)}/S)\) coincides with
+\(\operatorname{Fr}(X/S)^{(p)}\); in other words, the following
+diagram commutes:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1.3-iterated-frobenius-naturality-square}
+  \input{native_diagrams/exp7/viia_05_14/diagram_042}
+\end{center}
+
+If \(G\) is a group \(S\)-functor, then \(G^{(p^n)}\) is again a
+group \(S\)-functor and
+\(\operatorname{Fr}^n(G/S)\) is a homomorphism of group
+\(S\)-functors.
+
+\medskip
+\noindent\textbf{Definition.}
+\phantomsection
+\label{sga3:VIIA:4.1.3-height-definition}
+\textit{We denote the kernel of \(\operatorname{Fr}^n(G/S)\) by
+\(\operatorname{Fr}^nG\), and say that \(G\) has height
+\(\leq n\) if \(\operatorname{Fr}^n(G/S)\) is zero, that is, if
+\(\operatorname{Fr}^nG=G\).}
+
+\medskip
+\noindent\textbf{Lemma.}
+\phantomsection
+\label{sga3:VIIA:4.1.3-characteristic-kernel-lemma}
+\textit{The group subfunctor \(\operatorname{Fr}^nG\) of \(G\) is
+characteristic: for every \(S\)-scheme \(T\), every endomorphism
+\(\varphi\) of the group \(T\)-functor \(G_T\) induces an
+endomorphism of \((\operatorname{Fr}^nG)_T\).}
+
+\begin{proof}
+By \SGARefLink{sga3:VIIA:4.1.1}{4.1.1}, the constructions of \(G^{(p^n)}\) and
+\(\operatorname{Fr}^n(G/S)\) commute with base change. We may
+therefore suppose that \(T=S\). The assertion then follows from the
+fact that \(\operatorname{Fr}^n(G/S)\) is a functorial
+homomorphism.
+\end{proof}
+
+\medskip
+\noindent\textbf{4.1.4. Examples.}
+\phantomsection
+\label{sga3:VIIA:4.1.4}
+
+\smallskip
+\noindent\textit{a)}
+Let \(M\) first be an ``abstract'' abelian group, and let
+\[
+  G=D_S(M)
+\]
+be the diagonalizable group of type \(M\) (I, \SGARefLink{sga3:i:subsection:4-4}{4.4}). For every
+\(S\)-scheme \(T\),
+\[
+  G(T)
+  =
+  \operatorname{Hom}_{(\mathbf{Ab})}
+    \bigl(M,\Gamma(T,\mathcal O_T)^\times\bigr).
+\]
+Since \(G\) is the pullback of the diagonalizable group \(D(M)\)
+over \(\mathbb F_p\), \(G^{(p)}\) identifies with \(G\), and
+\(\operatorname{Fr}(G/S)(T)\) identifies with the endomorphism
+\(x\mapsto x^p\) of \(G(T)\) (\SGARefLink{sga3:VIIA:4.1.1}{4.1.1}). In particular, when
+\(M=\mathbb Z\), one has \(D_S(M)=\mathbb G_{m,S}\). Hence:
+
+\begin{quote}
+\(\operatorname{Fr}\mathbb G_{m,S}\) is the \(S\)-group
+\(\boldsymbol\mu_{p,S}\) which associates to every \(S\)-scheme
+\(T\) the group of \(p\)-th roots of unity in
+\(\Gamma(T,\mathcal O_T)^\times\).
+\end{quote}
+
+\smallskip
+\noindent\textit{b)}
+Now let \(S\) be a scheme of characteristic \(p\), and let
+\(\mathcal E\) be a sheaf of modules on \(S\). By I, \SGARefLink{sga3:i:proposition:4-6-2}{4.6.2} there is
+a canonical isomorphism
+\[
+  \mathcal W(\mathcal E)^{(p)}
+  \xrightarrow{\sim}
+  \mathcal W(\mathcal E^{(p)}),
+\]
+where \(\mathcal E^{(p)}\) is the pullback of \(\mathcal E\) along
+\(\operatorname{fr}(S)\). For every \(S\)-scheme
+\(\pi:T\to S\), the map
+\(\operatorname{Fr}(\mathcal W(\mathcal E)/S)(\pi)\) is determined,
+by \SGARefLink{sga3:VIIA:4.1}{4.1}~\((\dagger)\), by the commutative triangle
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1.4-vector-group-frobenius-triangle}
+  \input{native_diagrams/exp7/viia_05_14/diagram_043}
+\end{center}
+where \(f'\) is the map induced by \(\operatorname{fr}(T)\).
+
+In particular, if \(\mathcal E=\mathcal O_S\), then
+\(\mathcal W(\mathcal E)\) identifies with the additive group
+\(\mathbb G_{a,S}\). In this case
+\(\mathcal E^{(p)}=\mathcal E=\mathcal O_S\), and the Frobenius
+morphism \(\operatorname{Fr}(\mathbb G_{a,S}/S)\) sends
+\(x\in\Gamma(T,\mathcal O_T)\) to \(x^p\). Thus:
+
+\begin{quote}
+\(\operatorname{Fr}\mathbb G_{a,S}\) is the \(S\)-group
+\(\boldsymbol\alpha_{p,S}\) which associates to every
+\(S\)-scheme \(T\) the group
+\[
+  \bigl\{x\in\Gamma(T,\mathcal O_T)\mid x^p=0\bigr\}.
+\]
+\end{quote}
+
+\smallskip
+\noindent\textit{c)}
+Similarly, for every quasi-coherent \(\mathcal O_S\)-algebra
+\(\mathcal A\), the scheme
+\((\operatorname{Spec}\mathcal A)^{(p)}\) identifies with
+\(\operatorname{Spec}\mathcal A^{(p)}\), the spectrum of the
+pullback of \(\mathcal A\) along \(\operatorname{fr}(S)\). If
+\(\pi\) denotes the endomorphism \(x\mapsto x^p\) of the sheaf of
+rings \(\mathcal O_S\), then
+\[
+  \mathcal A^{(p)}
+  =
+  \mathcal A\otimes_\pi\mathcal O_S,
+  \tag{44}\label{sga3:vii:paragraph:4-1-4:equation:44}
+\]
+and \(\operatorname{Fr}((\operatorname{Spec}\mathcal A)/S)\) is
+induced by the morphism of \(\mathcal O_S\)-algebras
+\[
+  \mathcal A\otimes_\pi\mathcal O_S
+  \longrightarrow
+  \mathcal A,
+  \qquad
+  a\otimes_\pi x\longmapsto a^p x.
+\]
+\footnote{\(\mathcal A\otimes_\pi\mathcal O_S\) denotes the
+\(\mathcal O_S\)-algebra obtained by extension of scalars along
+\(\pi:\mathcal O_S\to\mathcal O_S\); thus
+\(ax\otimes_\pi1=a\otimes_\pi x^p\) and
+\(x\cdot(a\otimes_\pi1)=a\otimes_\pi x\).}
+
+Finally, for every quasi-coherent \(\mathcal O_S\)-module
+\(\mathcal E\), there are canonical isomorphisms
+\[
+  \mathcal V(\mathcal E)^{(p)}
+  \xrightarrow{\sim}
+  \mathcal V(\mathcal E^{(p)})
+  \qquad\text{and}\qquad
+  \mathcal S(\mathcal E)^{(p)}
+  \xrightarrow{\sim}
+  \mathcal S(\mathcal E^{(p)}),
+\]
+where \(\mathcal S(\mathcal E)\) denotes the symmetric algebra of
+the \(\mathcal O_S\)-module \(\mathcal E\).
+
+\smallskip
+\noindent\textit{d)}
+Let \(\mathcal U\) be an \(\mathcal O_S\)-coalgebra (\SGARefLink{sga3:VIIB:3.1:lemma}{3.1}), and let
+\(S\) be a scheme of characteristic \(p\). If
+\(\mathcal U^{(p/S)}\), or \(\mathcal U^{(p)}\), denotes the
+pullback of the coalgebra \(\mathcal U\) along
+\(\operatorname{fr}(S)\), then, as in \textit{b)}, there is a
+canonical isomorphism
+\[
+  \bigl(\operatorname{Spec}^{*}\mathcal U\bigr)^{(p)}
+  \xrightarrow{\sim}
+  \operatorname{Spec}^{*}\mathcal U^{(p)}.
+\]
+If \(\mathcal U\) is a group coalgebra, then for an \(S\)-scheme
+\(T\), the value of
+\(\operatorname{Fr}(\operatorname{Spec}^{*}\mathcal U)\), that is,
+of the kernel of the Frobenius morphism
+\[
+  \operatorname{Spec}^{*}\mathcal U
+  \longrightarrow
+  \bigl(\operatorname{Spec}^{*}\mathcal U\bigr)^{(p)},
+\]
+is the set of elements \(\gamma\) of
+\[
+  \bigl(\operatorname{Spec}^{*}\mathcal U\bigr)(T)
+  =
+  \left\{
+    x\in\Gamma(T,\mathcal U_T)
+    \,\middle|\,
+    \varepsilon_{\mathcal U_T}(x)=1,\ 
+    \Delta_{\mathcal U_T}x=x\otimes x
+  \right\}
+\]
+such that the image in
+\(\Gamma(T,\mathcal U_T\otimes_{\operatorname{fr}(T)}\mathcal O_T)\)
+of the element
+\[
+  \gamma\otimes_{\operatorname{fr}(T)}1
+  \in
+  \Gamma(T,\mathcal U_T)\otimes_{\operatorname{fr}(T)}
+    \mathcal O(T)
+\]
+is equal to \(1\).
+

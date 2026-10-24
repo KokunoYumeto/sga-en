@@ -1,0 +1,29 @@
+\begin{tikzpicture}[
+  baseline=(current bounding box.center),
+  >=Stealth,
+  every node/.style={font=\normalsize}
+]
+  \node (atl) at (-3.2,2.0) {$\mathcal A$};
+  \node (atm) at (0,2.0) {$\displaystyle\bigotimes_{\mathcal O_S}^{p}\mathcal A$};
+  \node (atr) at (3.2,2.0) {$\mathcal A$};
+  \node (aml) at (-1.65,0.15) {$\Sigma^p\mathcal A$};
+  \node (amr) at (1.65,0.15) {$\mathrm S^p(\mathcal A)$};
+  \node (ab)  at (0,-1.75) {$\mathcal A\otimes_{\pi}\mathcal O_S$};
+  \node at (-4.85,0.15) {$({\mathcal A})$};
+
+  \draw[->] (atl) -- node[above] {$\Delta^p(\mathcal A)$} (atm);
+  \draw[->] (atm) -- node[above] {$m^p(\mathcal A)$} (atr);
+  \draw[->] (atl) -- node[midway,left,fill=white,inner sep=1pt]
+    {$a(\mathcal A)$} (aml);
+  \draw[->] (aml) -- node[midway,left,fill=white,inner sep=1pt]
+    {$i(\mathcal A)$} (atm);
+  \draw[->] (atm) -- node[midway,right,fill=white,inner sep=1pt]
+    {$q(\mathcal A)$} (amr);
+  \draw[->] (amr) -- node[midway,right,fill=white,inner sep=1pt]
+    {$b(\mathcal A)$} (atr);
+  \draw[->] (aml) -- node[midway,left,fill=white,inner sep=1pt]
+    {$r(\mathcal A)$} (ab);
+  \draw[->] (ab) -- node[midway,right,fill=white,inner sep=1pt]
+    {$j(\mathcal A)$} (amr);
+  \node at (3.55,-1.75) {$.$};
+\end{tikzpicture}

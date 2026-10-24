@@ -1,0 +1,264 @@
+
+\section*{4. ``Frobeniuseries''}
+\phantomsection
+\label{sga3:VIIA:4}
+\addcontentsline{toc}{section}{4. ``Frobeniuseries''}
+
+Fix a prime number \(p\), and let
+\((\mathbf{Sch}/\mathbb F_p)\) be the category of schemes of
+characteristic \(p\), that is, schemes over the prime field
+\(\mathbb F_p\). Following the general conventions of this seminar,
+we identify \((\mathbf{Sch}/\mathbb F_p)\) with a subcategory of
+\((\mathbf{Sch}/\mathbb F_p)^\wedge\) by means of the functor \(h\)
+of \SGARefLink{sga3:i:subsection:1-1}{Expos\'e I, 1.1}. We likewise use the isomorphism
+\[
+  \operatorname{Hom}(h_X,F)\xrightarrow{\sim}F(X)
+\]
+defined there to identify these sets whenever \(X\) is an
+\(\mathbb F_p\)-scheme and \(F\) is an object of
+\((\mathbf{Sch}/\mathbb F_p)^\wedge\).
+
+\medskip
+\noindent\textbf{Notation 4.0.}
+\phantomsection
+\label{sga3:VIIA:4.0}
+\footnote{The editors added the number \SGARefLink{sga3:VIIA:4.0}{4.0} for later references.}
+\textit{If \(T\) is an \(\mathbb F_p\)-scheme, a \(T\)-functor is a
+morphism \(q:F\to T\) in
+\((\mathbf{Sch}/\mathbb F_p)^\wedge\) with target \(T\). For every
+\(T\)-scheme \(r:X\to T\), the set of \(T\)-morphisms \(X\to F\),
+that is, of \(\mathbb F_p\)-morphisms \(s:X\to F\) satisfying
+\(q\circ s=r\), is denoted}
+\[
+  q(r),\qquad q(X/T),\qquad F(r),\qquad\text{or}\qquad F(X/T).
+\]
+\textit{It may also be denoted \(F(X)\) when no confusion with
+\(\operatorname{Hom}(h_X,F)\) can result.}
+
+\medskip
+\noindent\textbf{4.1.}
+\phantomsection
+\label{sga3:VIIA:4.1}
+For every scheme \(S\) of characteristic \(p\), let
+\(\operatorname{fr}(S)\), or simply \(\operatorname{fr}\), denote the
+endomorphism of \(S\) which is the identity on the underlying
+topological space and which sends a section \(x\) of \(\mathcal O_S\)
+over an open subset to \(x^p\).
+
+The assignment
+\[
+  \operatorname{fr}:S\longmapsto\operatorname{fr}(S)
+\]
+is an endomorphism of the identity functor of
+\((\mathbf{Sch}/\mathbb F_p)\).\footnote{Thus, for every morphism
+\(f:Y\to X\) of \(\mathbb F_p\)-schemes, the following square
+commutes:
+\par\noindent\parbox{\linewidth}{%
+  \centering
+  \input{native_diagrams/exp7/viia_00_04/diag_033_absolute_frobenius_naturality_square}
+  \par\vspace*{\baselineskip}
+  \vspace*{\baselineskip}
+}\par}
+This has the following consequences. If \(E\) is an
+\(\mathbb F_p\)-functor, the assignment which sends every
+\(\mathbb F_p\)-scheme \(S\) to the endomorphism
+\(E(\operatorname{fr}(S))\) of \(E(S)\) is a functorial endomorphism
+of \(E\), denoted \(\operatorname{fr}(E)\) or simply
+\(\operatorname{fr}\). This notation is compatible with the
+identification of \((\mathbf{Sch}/\mathbb F_p)\) with a subcategory
+of \((\mathbf{Sch}/\mathbb F_p)^\wedge\). Moreover,
+\(E\mapsto\operatorname{fr}(E)\) is itself an endomorphism of the
+identity functor of \((\mathbf{Sch}/\mathbb F_p)^\wedge\), again
+denoted \(\operatorname{fr}\).\footnote{The morphism
+\(\operatorname{fr}(X)\) is called the \emph{absolute} Frobenius
+morphism of \(X\), to distinguish it from the relative Frobenius
+morphism \(\operatorname{Fr}(X/S)\) introduced below.}
+
+For every \(\mathbb F_p\)-scheme \(S\) and every \(S\)-functor
+\(q:X\to S\), let \(X^{(p/S)}\), or \(X^{(p)}\), denote the pullback
+of \(X\) along \(\operatorname{fr}(S)\):
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1-frobenius-basechange-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_034_frobenius_basechange_square}
+\end{center}
+
+The commutative square
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1-absolute-frobenius-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_035_absolute_frobenius_square}
+\end{center}
+induces an \(S\)-morphism
+\[
+  \operatorname{Fr}(X/S):X\longrightarrow X^{(p/S)}
+\]
+such that
+\[
+  \operatorname{fr}(X)
+  =
+  \operatorname{pr}_X\circ\operatorname{Fr}(X/S):
+\]
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1-relative-frobenius-factorization}
+  \input{native_diagrams/exp7/viia_00_04/diag_036_relative_frobenius_factorization}
+\end{center}
+We call \(\operatorname{Fr}(X/S)\) the \emph{Frobenius morphism of
+\(X\) relative to \(S\)}. Plainly the assignment
+\[
+  \operatorname{Fr}:X\longmapsto\operatorname{Fr}(X/S)
+\]
+is a functorial homomorphism.
+
+\footnote{The editors expanded the original in the remainder of this
+paragraph.}
+Let \(r:T\to S\) be an \(S\)-scheme. For every
+\[
+  \varphi\in X(r)=\operatorname{Hom}_S(T,X),
+\]
+one has the commutative diagram
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1-point-phi-diagram}
+  \input{native_diagrams/exp7/viia_00_04/diag_037_point_phi_relative_frobenius}
+\end{center}
+By the definition of \(X^{(p/S)}\) as a fiber product,
+\(\operatorname{pr}_X\) induces a bijection
+\[
+ X^{(p/S)}(r)
+ =
+ \operatorname{Hom}_S(T,X^{(p/S)})
+ \xrightarrow{\sim}
+ \operatorname{Hom}_S(T,X)
+ =
+ X(\operatorname{fr}(S)\circ r).
+\]
+On the other hand,
+\[
+  r\circ\operatorname{fr}(T)
+  =
+  \operatorname{fr}(S)\circ r,
+\]
+because \(\operatorname{fr}\) is an endomorphism of the identity
+functor. Hence
+\[
+  \operatorname{Fr}(X/S)(r):
+  X(r)\longrightarrow X^{(p/S)}(r)
+\]
+is characterized by commutativity of
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1-pointwise-frobenius-square}
+  \input{native_diagrams/exp7/viia_00_04/diag_038_pointwise_frobenius_square}
+\end{center}
+
+For example, if \(X\) is the subscheme of \(S\) defined by a
+quasi-coherent ideal \(\mathcal I\), then \(X^{(p)}\) is the subscheme
+defined by the ideal \(\mathcal I^{\{p\}}\) generated by the \(p\)-th
+powers of local sections of \(\mathcal I\). Moreover,
+\(\operatorname{Fr}(X/S)\) is the canonical immersion
+\[
+  \operatorname{Spec}(\mathcal O_S/\mathcal I)
+  \longrightarrow
+  \operatorname{Spec}(\mathcal O_S/\mathcal I^{\{p\}}).
+\]
+\footnote{The French source prints
+\(\operatorname{Spec}(\mathcal O_X/\mathcal I)\) for the source of
+this immersion. Since \(X\subset S\) is defined by \(\mathcal I\), the
+intended source is
+\(\operatorname{Spec}(\mathcal O_S/\mathcal I)=X\), as used here.}
+
+\medskip
+\noindent\textbf{4.1.1.}
+\phantomsection
+\label{sga3:VIIA:4.1.1}
+\footnote{The editors expanded the original in this paragraph.}
+Let \(t:T\to S\) be a base change and put
+\[
+  X_T=X\times_{q,t}T.
+\]
+Consider the pullback of \(X_T\) along \(\operatorname{fr}(T)\):
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1.1-basechange-rectangle}
+  \input{native_diagrams/exp7/viia_00_04/diag_039_basechange_rectangle}
+\end{center}
+Since
+\[
+  t\circ\operatorname{fr}(T)
+  =
+  \operatorname{fr}(S)\circ t,
+\]
+\((X_T)^{(p/T)}\) identifies with the pullback of \(X^{(p/S)}\)
+along \(t\). Equivalently, there is a canonical isomorphism
+\[
+  X_T^{(p/T)}
+  \xrightarrow{\sim}
+  \bigl(X^{(p/S)}\bigr)_T.
+\]
+Under this identification,
+\(\operatorname{Fr}(X_T/T)\) identifies with the pullback
+\(\operatorname{Fr}(X/S)_T\).
+
+\medskip
+\noindent\textbf{4.1.1.1.}
+\phantomsection
+\label{sga3:VIIA:4.1.1.1}
+In particular, if \(S=\operatorname{Spec}\mathbb F_p\), then
+\(X^{(p/S)}=X\) and
+\(\operatorname{Fr}(X/S)=\operatorname{fr}(X)\). Consequently,
+\(X_T^{(p/T)}\) identifies with \(X_T\), and
+\(\operatorname{Fr}(X_T/T)\) with
+\(\operatorname{fr}(X)_T\).
+
+For example, if \(E\) is a set and \(E_T\) the constant \(T\)-scheme
+of type \(E\), then
+\[
+  E_T^{(p/T)}\simeq E_T,
+  \qquad
+  \operatorname{Fr}(E_T/T)\simeq\operatorname{id}_{E_T}.
+\]
+
+\medskip
+\noindent\textbf{4.1.2.}
+\phantomsection
+\label{sga3:VIIA:4.1.2}
+The functor \(X\mapsto X^{(p/S)}\) plainly commutes with products.
+It therefore sends an \(S\)-group \(G\) to an \(S\)-group
+\(G^{(p/S)}\). Since \(\operatorname{Fr}\) is functorial,
+\[
+  \operatorname{Fr}(G/S):G\longrightarrow G^{(p/S)}
+\]
+is a homomorphism of \(S\)-groups. We denote its kernel by
+\(\operatorname{Fr}G\).
+
+If \(r:T\to S\) is an \(S\)-scheme, the
+\hyperref[sga3:VIIA:4.1-pointwise-frobenius-square]{pointwise
+Frobenius diagram} shows that the value
+of \(\operatorname{Fr}G\) at \(r\) is the kernel of
+\[
+  G(\operatorname{fr}(T)):
+  G(r)\longrightarrow G(r\circ\operatorname{fr}(T)).
+\]
+
+When \(T=I_R\) is the scheme of dual numbers over an \(S\)-scheme
+\(R\), the absolute Frobenius of \(I_R\) factors as
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIA:4.1.2-dual-numbers-factorization}
+  \input{native_diagrams/exp7/viia_00_04/diag_040_dual_numbers_frobenius_factorization}
+\end{center}
+where \(s\) is the zero section. It follows that
+\((\operatorname{Fr}G)(I_R)\) contains the kernel
+\(\operatorname{Lie}(G/S)(R)\) of
+\[
+  G(s):G(I_R)\longrightarrow G(R),
+\]
+and hence
+\[
+  \operatorname{Lie}(G/S)
+  =
+  \operatorname{Lie}(\operatorname{Fr}G/S).
+\]
+

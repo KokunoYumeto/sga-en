@@ -1,0 +1,194 @@
+\begin{enonce*}[remark]{Exercise 8.6}\etiquette[8.6]{IV.exer8.6}
+Let\pageoriginale $f:E\rightarrow F$ be a morphism of $𝒰$-topoi.
+Consider the following relation in the argument $X\in\ob F$: the
+induced morphism $E_{/f^{\ast}(X)}\rightarrow F_{/X}$ is an
+equivalence of topoi. Prove that this relation is of local nature.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 8.7}\etiquette[8.7]{IV.exer8.7}
+(\emph{Partitions of a topos, sum of topoi}). Let $E$ be a
+$𝒰$-topos. A family $(e_i)_{i\in I}$ of opens of $E$, \ie of
+subobjects of the terminal object $e$ of $E$, is called a
+\emph{partition of} $e$ (or of the topos $E$) if the canonical
+morphism $\amalg_{i\in I}e_i\rightarrow e$ is an isomorphism, \ie
+(\hyperrefext[II][II.cor4.6.2]{4.6.2}) if $e$ is the supremum of the
+$e_i$ and $i\neq j$ implies $e_i\cap e_j=∅_E$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Show that a family $(e_i)_{i\in I}$ of objects of $E$ is a
+partition of $E$ if and only if the functor
+\begin{equation*}
+E\longrightarrow \prod_i E_{/e_i}\tag{8.7.1}
+\end{equation*}\etiquette[8.7.1]{IV.eq8.7.1}
+defined by the localization functors $E\rightarrow E_{/e_i}$ is an
+equivalence of categories.
+
+\item Conversely, let $(E_i)_{i\in I}$ be a family of $𝒰$-topoi,
+with $I\in𝒰$. Prove that $E=\Pi_{i\in I}E_i$ is a $𝒰$-topos (called
+the \emph{sum topos} of the family $(E_i)_{i\in I}$). Define a
+partition $(e_i)_{i\in I}$ of $E$ and equivalences of categories
+$E_{/e_i}\approx E_i$ in such a way that the projection functors
+$E\rightarrow E_i$ identify with the localization functors
+$E\rightarrow E_{/e_i}$.
+
+\item Let $E$ be the sum topos of the family $(E_i)_{i\in I}$. Show
+that, for every $i\in I$, the projection functor $E\rightarrow E_i$
+is of the form $u_i^{\ast}$, where
+\begin{equation*}
+u_i:E_i\longrightarrow E\tag{8.7.2}
+\end{equation*}\etiquette[8.7.2]{IV.eq8.7.2}
+is\pageoriginale a morphism of topoi. Prove that, for every
+$𝒰$-topos $F$, the functor $v\mapsto(v\circ u_i)_{i\in I}$
+\begin{equation*}
+\Hhomtop(E,F)\longrightarrow \prod_i\Hhomtop(E_i,F)\tag{8.7.3}
+\end{equation*}\etiquette[8.7.3]{IV.eq8.7.3}
+is an equivalence of categories.
+
+\item Let $(e_i)_{i\in I}$ be a partition of the topos $E$. For
+every morphism of topoi $g:F\rightarrow E$, the family
+$(f_i)_{i\in I}$, where $f_i=g^{\ast}(e_i)$, is a partition of $F$,
+and the induced morphisms $g_i:F_{/f_i}\rightarrow E_{/e_i}$ make it
+possible to reconstruct $g$ (up to unique isomorphism), the functor
+$g^{\ast}$ identifying with the Cartesian product of the functors
+$g_i^{\ast}$ (taking into account the equivalences of the type in
+\hyperref[IV.exer8.7]{8.7} 1)). Deduce a complete description of the
+category $\Hhomtop(F,E)$ in terms of categories of the form
+$\Hhomtop(F',E_i)$, where $F'$ is a topos of the form $F_{/f}$ (with
+$f$ a direct summand of the terminal object of $F$) and
+$E_i=E_{/e_i}$.
+
+\item In particular, if $F$ is connected and nonempty (\cf
+\hyperref[IV.subsubsec4.3.5]{4.3.5}), \ie if, for every partition
+$(f_i)_{i\in I}$ of $F$, there exists a unique $i\in I$ such that
+$f_i\neq\phi_F$, prove that the canonical functor
+\begin{equation*}
+\coprod_{i\in I}\Hhomtop(F,E_i)\longrightarrow
+\Hhomtop(F,E)\tag{8.7.4}
+\end{equation*}\etiquette[8.7.4]{IV.eq8.7.4}
+induced by the morphisms of topoi
+\eqhyperref[IV.eq8.7.2]{8.7.2} is an equivalence of categories. More
+particularly, the family of morphisms of topoi
+\eqhyperref[IV.eq8.7.2]{8.7.2} induces an equivalence of categories
+$$
+\coprod_{i\in I}\Ppoint(E_i)\xrightarrow{\approx}\Ppoint(E){\quoi}.
+$$
+
+\item A\pageoriginale subset $I$ of the set of opens of $E$ is
+called a \emph{reduced partition} of $E$ if the identity family
+$(e_i)_{i\in I}$ indexed by $I$ is a partition and the $e_i$ are
+different from $\phi_E$. Show that the refinement relation
+(\hyperrefext[I][I.sec4.3.2]{4.3.2}) between reduced partitions makes
+the set $P$ of reduced partitions into a $𝒰$-small ordered set in
+which the supremum of any two elements exists. This gives a strict
+projective system $(I_p)_{p\in P}$, regarded as a pro-set and denoted
+by $\pi_{\circ}(E)$. It is called the \emph{pro-$\pi_{\circ}$ of the
+topos} $E$.
+
+\item Prove that $\pi_{\circ}(E)$ pro-represents the functor
+$$
+T\longmapsto f_{\ast}f^{\ast}(T)=\Gamma(E,
+T_E):(𝒰\text{-}\Ens)\longrightarrow (𝒰\text{-}\Ens)
+$$
+associated with the canonical morphism $f:E\rightarrow P$ from $E$
+to the punctual topos $P$ (\hyperref[IV.subsec4.3]{4.3}). In
+particular, this functor is representable if and only if
+$\pi_{\circ}(E)$ is essentially constant, \ie isomorphic (as a
+pro-set) to an ``ordinary'' set, again denoted $\pi_{\circ}(E)$. The
+pro-set $\pi_{\circ}(E)$ consists of one point if and only if $E$ is
+``connected and nonempty.'' It is empty if and only if $E$ is the
+``empty topos'' (\hyperref[IV.subsec2.2]{2.2}).
+
+\item Suppose that $E$ is quasi-compact, \ie every covering of its
+terminal object $e$ admits a finite subcovering. Show that
+$\pi_{\circ}(E)$ is then a profinite set and hence may be identified
+(using the familiar equivalence between pro-objects of the category
+of finite sets and compact totally disconnected spaces) with a
+compact totally disconnected space, also denoted $\pi_{\circ}(E)$.
+
+\item Let $X$ be a topological space, and let $\pi_{\circ}(X)$ be the
+set of connected components of $X$, regarded as a constant pro-set.
+Define a canonical\pageoriginale morphism of pro-sets
+\begin{equation*}
+\pi_{\circ}(X)\longrightarrow
+\pi_{\circ}(\Top(X)){\quoi},\tag{8.7.5}
+\end{equation*}\etiquette[8.7.5]{IV.eq8.7.5}
+or equivalently a canonical map
+\begin{equation*}
+\pi_{\circ}(X)\longrightarrow \varprojlim
+\pi_{\circ}(\Top(X)){\quoi}.\tag{8.7.6}
+\end{equation*}\etiquette[8.7.6]{IV.eq8.7.6}
+Show that the first morphism is an isomorphism if and only if $X$ is
+homeomorphic to a sum space of connected spaces (which is the case,
+in particular, when $X$ is locally connected).
+
+\item Suppose that $X$ is a quasi-compact scheme. Prove that
+\eqhyperref[IV.eq8.7.6]{8.7.6} is bijective.
+
+\item Establish the ``functorial character'' in $X$ of the morphisms
+\eqhyperref[IV.eq8.7.5]{8.7.5} and
+\eqhyperref[IV.eq8.7.6]{8.7.6}, first making precise the meaning of
+this expression.
+
+
+\item (Compare \hyperref[IV.exer7.6]{7.6} i)). Show that the
+following two conditions on the $𝒰$-topos $E$ are equivalent: (i)
+The canonical morphism from $E$ to the punctual topos is
+``essential'' (Exercise \hyperref[IV.exer7.6]{7.6} a)), \ie the
+functor $I\mapsto I_E$ from $(𝒰\text{-}\Ens)$ to $E$ commutes with
+products indexed by sets in $𝒰$. (ii) For every object $X$ of $E$,
+the induced topos $E_{/X}$ has a $\pi_{\circ}(E_{/X})$ which is an
+ordinary set, \ie $X$ is isomorphic to the sum of a family of
+connected objects of $E$. In this case $E$ is called a
+\emph{locally connected topos} (compare
+\sisi{IV~}{}\hyperref[IV.exer2.7.5]{2.7.5}).
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 8.8}\etiquette[8.8]{IV.exer8.8}
+(\emph{Dominant morphisms of topoi}).
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $f:E'\rightarrow E$ be a morphism of topoi. Show that the
+following conditions are equivalent:
+
+\begin{itemize}
+\item[(i)] $f_{\ast}(\phi_{E'})=\phi_E$ (where $\phi_E$ and
+$\phi_{E'}$ denote the initial objects of $E$ and $E'$, respectively).
+
+\item[(ii)] For\pageoriginale every object $X$ of $E$ which is
+``nonempty,'' \ie not isomorphic to $\phi_E$, the object
+$f^{\ast}(X)$ is nonempty in $E'$.
+
+\item[$\rm(ii')$] As in (ii), with $X$ a subobject of the terminal
+object $e_E$ of $E$, \ie with $X$ an open of the topos $E$.
+\end{itemize}
+
+The morphism of topoi $f$ is then called \emph{dominant}.
+
+\item Let $f:X'\rightarrow X$ be a continuous map of topological
+spaces, giving a morphism of topoi
+$\Top(f):\Top(X')\rightarrow\Top(X)$
+(\hyperref[IV.subsec4.1]{4.1}). Show that $\Top(f)$ is dominant if
+and only if $f$ is dominant, \ie if $f(X')$ is dense in $X$.
+
+\item Show that if $f:E'\rightarrow E$ is a ``conservative''
+morphism of topoi (\hyperref[IV.subsubsec6.4.0]{6.4.0}), \ie if
+$f^{\ast}$ is faithful, then $f$ is dominant. Show that the converse
+need not hold, even for a localization morphism
+$E_{/U}\rightarrow E$, where $U$ is an open of the topos $E$.
+(Show that in this case $f$ is conservative only if $U$ is the
+terminal object of $E$ (and hence only if $f$ is an equivalence of
+topoi), and use the example in b).)
+
+\item Let $f:X'\rightarrow X$ be an arrow in a topos $E$. We call
+$f$ a \emph{dominant morphism} in the topos $E$ if the corresponding
+morphism of induced topoi $E_{/X'}\rightarrow E_{/X}$
+\eqhyperref[IV.eq5.5.2]{5.5.2} is dominant. Show that this property
+depends only on the image $f(X')$ of $X'$ in $X$, as an element of
+the ordered set $\ouv(X)$ of subobjects of $X$. Show that the
+morphism $E_{/X'}\rightarrow E_{/X}$ is conservative if and only if
+$f$ is covering.
+\end{enumerate}
+\end{enonce*}

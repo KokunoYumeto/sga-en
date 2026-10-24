@@ -1,0 +1,121 @@
+
+\medskip
+\noindent\textup{\SGARefLink{sga3:xiv:7:lemma3}{(3)}}
+Suppose that \(\varphi\in E/W\) is nontrivial and that \(R\) has
+one of the following types:
+\[
+  A_n\ (n\ge3\text{ odd}),\qquad
+  D_4,\qquad D_n\ (n\ge5),\qquad E_6.
+\]
+These, together with the even \(A_n\) case treated separately
+above, are exactly the cases in which \(E/W\) is nontrivial. The
+following diagrams record the corresponding Dynkin-diagram
+automorphisms.
+
+\begin{center}
+\begin{tikzpicture}[
+  x=1.05cm,
+  y=.92cm,
+  >=Latex,
+  dynkin node/.style={circle,fill=black,inner sep=2.2pt},
+  dynkin edge/.style={line width=.45pt},
+  dynkin arrow/.style={line width=.45pt}
+]
+  \node[anchor=east] at (-1.4,6.7) {\(A_n,\ n\text{ odd}\geq 3\)};
+  \foreach \x/\name in {0/aone,1.3/atwo,2.6/athree,3.9/afour,5.2/afive}
+    \node[dynkin node] (\name) at (\x,6.7) {};
+  \draw[dynkin edge] (aone)--(atwo)--(athree)--(afour)--(afive);
+  \draw[dynkin arrow,<->]
+    (aone) .. controls +(1.0,1.35) and +(-1.0,1.35) .. (afive);
+  \draw[dynkin arrow,<->]
+    (atwo) .. controls +(.65,.72) and +(-.65,.72) .. (afour);
+
+  \node[anchor=east] at (-1.4,4.3) {\(D_4\)};
+  \node[dynkin node] (dcenter) at (2.6,4.3) {};
+  \node[dynkin node] (dtop)    at (1.3,5.15) {};
+  \node[dynkin node] (dbottom) at (1.3,3.45) {};
+  \node[dynkin node] (dright)  at (4.0,4.3) {};
+  \draw[dynkin edge] (dcenter)--(dtop);
+  \draw[dynkin edge] (dcenter)--(dbottom);
+  \draw[dynkin edge] (dcenter)--(dright);
+  \draw[dynkin arrow,->]
+    (dright) .. controls +(0,1.05) and +(.75,.48) .. (dtop);
+  \draw[dynkin arrow,->]
+    (dtop) .. controls +(-1.15,-.18) and +(-1.15,.18) .. (dbottom);
+  \draw[dynkin arrow,->]
+    (dbottom) .. controls +(.75,-.48) and +(0,-1.05) .. (dright);
+
+  \node[anchor=east] at (-1.4,1.85) {\(D_n,\ n\geq 5\)};
+  \foreach \x/\name in {0/dnone,1.25/dntwo,2.5/dnthree,3.75/dnbranch}
+    \node[dynkin node] (\name) at (\x,1.85) {};
+  \node[dynkin node] (dnupper) at (4.85,2.65) {};
+  \node[dynkin node] (dnlower) at (4.85,1.05) {};
+  \draw[dynkin edge] (dnone)--(dntwo)--(dnthree)--(dnbranch);
+  \draw[dynkin edge] (dnbranch)--(dnupper);
+  \draw[dynkin edge] (dnbranch)--(dnlower);
+  \draw[dynkin arrow,<->]
+    (dnupper) .. controls +(.8,-.3) and +(.8,.3) .. (dnlower);
+
+  \node[anchor=east] at (-1.4,-.75) {\(E_6.\)};
+  \foreach \x/\name in {0/eone,1.3/etwo,2.6/ethree,3.9/efour,5.2/efive}
+    \node[dynkin node] (\name) at (\x,-.75) {};
+  \node[dynkin node] (esix) at (2.6,-1.9) {};
+  \draw[dynkin edge] (eone)--(etwo)--(ethree)--(efour)--(efive);
+  \draw[dynkin edge] (ethree)--(esix);
+  \draw[dynkin arrow,<->]
+    (eone) .. controls +(1.0,1.35) and +(-1.0,1.35) .. (efive);
+  \draw[dynkin arrow,<->]
+    (etwo) .. controls +(.65,.72) and +(-.65,.72) .. (efour);
+\end{tikzpicture}
+\end{center}
+
+Let \(S\) be a simple system of roots, not yet ordered. The group
+\(E\) is the semidirect product of \(W\) with the group
+\(\Psi\) of permutations of \(S\) preserving the Cartan matrix,
+or equivalently the Dynkin diagram. Thus \(E/W\simeq\Psi\), and
+\(\varphi\) corresponds to some \(\psi\in\Psi\).
+
+Inspection of the diagrams shows that each \(\psi\)-orbit in
+\(S\) consists of pairwise orthogonal roots. This fails for
+\(A_n\) with \(n\) even, which is why that case was separated.
+If \(\sigma\) is such an orbit, the reflections \(r_a\),
+\(a\in\sigma\), commute; write
+\[
+  \rho_\sigma=\prod_{a\in\sigma}r_a.
+\]
+Plainly \(\rho_\sigma\) commutes with \(\psi\).
+
+Choose a total order on \(S\) for which every \(\psi\)-orbit is a
+segment, and write \(S=\{a_1,\ldots,a_n\}\). Let
+\(\theta_1,\ldots,\theta_n\) and
+\(c=r_1\cdots r_n\) be defined as above. The element \(c\) is a
+product of the \(\rho_\sigma\), with the orbits in some order, so
+it commutes with \(\psi\). Put
+\[
+  f=c\psi.
+\]
+
+The automorphism \(\psi\) permutes the \(\theta_i\). Indeed,
+\(\psi(\theta_i)>0\), and, since \(c\) commutes with \(\psi\),
+\[
+  c(\psi(\theta_i))=\psi(c(\theta_i))<0.
+\]
+\SGARefLink{sga3:xiv:7:lemma5}{Lemma 5}\textup{\SGARefLink{sga3:xiv:7:lemma5:item:c}{(c)}} therefore gives
+\(\psi(\theta_i)=\theta_j\) for some \(j\).
+
+Finally, if \(a\in R\), \SGARefLink{sga3:xiv:7:lemma5}{Lemma 5} gives
+\(a=c^m\theta_i\) for some \(m,i\). Hence
+\[
+  a=f^m(\psi^{-m}\theta_i)=f^m\theta_j
+\]
+for a suitable \(j\). Thus \(f\) and the \(\theta_i\) satisfy
+both conditions of \SGARefLink{sga3:xiv:7:lemma3}{Lemma 3}, completing its proof.
+
+\paragraph{\textbf{Remark.}}
+Except in case \textup{\SGARefLink{sga3:xiv:7:lemma2}{(2)}}, one can prove that every orbit of
+\(f\) has exactly
+\[
+  h=\frac{\operatorname{Card}(R)}{n}
+\]
+elements and contains exactly one \(\theta_i\). In case
+\textup{(2)}, some of the \(\theta_i\) are superfluous.

@@ -1,0 +1,229 @@
+
+\chapter*{Expos\'e \texorpdfstring{VII\textsubscript{B}}{VII-B}\\
+Infinitesimal Study of Group Schemes}
+\phantomsection
+\label{sga3:VIIB:title}
+\addcontentsline{toc}{chapter}{Expos\'e VII-B. Infinitesimal Study of Group Schemes}
+\markboth{EXPOS\'E VII\textsubscript{B}. INFINITESIMAL STUDY OF GROUP SCHEMES}%
+  {EXPOS\'E VII\textsubscript{B}. INFINITESIMAL STUDY OF GROUP SCHEMES}
+
+\begin{center}
+  \textit{by P. Gabriel}
+\end{center}
+
+\setcounter{footnote}{-1}
+\section*{B) Formal Groups}
+\phantomsection
+\label{sga3:VIIB:B}
+\addcontentsline{toc}{section}{B) Formal Groups}
+
+\noindent\footnote{Editors' note: Version of 13 October 2024.}
+The study of formal groups is usually extremely simple. If this does not
+appear clearly in the pages that follow, the responsibility lies with an
+arithmetician who claims to know formal groups over ``something other than
+fields.''\footnote{The interest of formal groups over a complete
+Noetherian local ring appears, for example, in the work of Lubin and Tate
+(cf.\ \textup{[LT65]}). The study of formal groups over an arbitrary base,
+and of lifting and deformation questions---in particular for
+Barsotti--Tate groups (``\(p\)-divisible groups'')---has given rise to an
+abundant literature; see, for example, \textup{[LT66, Ta67, Gr74, Me72,
+La75, Fo77, Il85, Br00]}. In particular, the results of the present
+expos\'e are largely taken up again in Chapter~I of \textup{[Fo77]}.}
+We have therefore developed, for formal groups ``locally free over
+projective limits of Artinian rings,'' the generalities ordinarily stated
+for formal groups defined over a field. For a more detailed study of the
+latter, we refer to the 1964/65 Heidelberg--Strasbourg algebraic geometry
+seminar.\footnote{The editors found only such a seminar dated 1965/66 and
+entitled ``Linear Algebraic Groups,'' in which the notion of a formal group
+does not appear; see instead \textup{[De72]}.}
+
+\section*{0. Review of Pseudocompact Rings and Modules}
+\phantomsection
+\label{sga3:VIIB:0}
+\addcontentsline{toc}{section}{0. Review of Pseudocompact Rings and Modules}
+
+This section contains a few technical preliminaries. We recall and
+complete here several results from \textup{[CA]} (\emph{Des cat\'egories
+ab\'eliennes}, Bull.\ Soc.\ Math.\ France \textbf{90} (1962)).
+
+\medskip
+\noindent\textbf{0.1.}
+\phantomsection
+\label{sga3:VIIB:0.1}
+A \emph{left pseudocompact ring} is a separated, complete topological
+ring with identity which has a basis of neighborhoods of \(0\) consisting
+of left ideals \(\mathfrak l\) of finite colength, that is,
+\[
+  \operatorname{length}_A(A/\mathfrak l)<+\infty.
+\]
+We shall assume here that \(A\) is commutative, so that no distinction
+need be made ``between left and right.''
+
+In particular, the quotients \(A/\mathfrak l\) are Artinian rings, and
+\(A\) identifies with the topological projective limit of these rings,
+each endowed with the discrete topology.
+
+A complete Noetherian local ring \((A,\mathfrak m)\) is plainly
+pseudocompact.\footnote{When it is endowed with the
+\(\mathfrak m\)-adic topology.}
+
+\medskip
+\noindent\textbf{0.1.1.}
+\phantomsection
+\label{sga3:VIIB:0.1.1}
+Every closed ideal \(I\) of \(A\) is the intersection of the open ideals
+that contain it.\footnote{Indeed, if \(x\notin I\), there is an open ideal
+\(\mathfrak l\) such that
+\((x+\mathfrak l)\cap I=\varnothing\); then \(I+\mathfrak l\) is an open
+ideal that does not contain \(x\). In what follows, the editors have also
+made explicit the fact that every ``closed maximal'' ideal is maximal and
+open.}
+Every closed maximal ideal is therefore open. Moreover, if
+\(\mathfrak l\) is an open ideal of \(A\), the maximal ideals of
+\(A/\mathfrak l\) correspond bijectively to the maximal ideals
+\(\mathfrak m\) of \(A\) containing \(\mathfrak l\); the latter are thus
+open and closed. Consequently, every closed maximal ideal is an open
+maximal ideal (and hence closed), the converse being clear. We denote the
+set of these ideals by \(\Upsilon(A)\).
+
+If \(\mathfrak l\) is an open ideal of \(A\) and
+\(\mathfrak m\in\Upsilon(A)\), the localization
+\((A/\mathfrak l)_{\mathfrak m}\) is a local ring when
+\(\mathfrak m\) contains \(\mathfrak l\), and is zero otherwise. Since
+\(A/\mathfrak l\) is Artinian, it is a direct product of finitely many
+local rings; thus
+\[
+  A/\mathfrak l
+  \simeq
+  \prod_{\mathfrak m\in\Upsilon(A)}
+    (A/\mathfrak l)_{\mathfrak m}.
+\]
+It follows that there are ``canonical'' isomorphisms
+\[
+  A
+  \simeq \varprojlim_{\mathfrak l}(A/\mathfrak l)
+  \simeq \varprojlim_{\mathfrak l}
+    \prod_{\mathfrak m}(A/\mathfrak l)_{\mathfrak m}
+  \simeq \prod_{\mathfrak m}
+    \varprojlim_{\mathfrak l}(A/\mathfrak l)_{\mathfrak m}
+  \simeq \prod_{\mathfrak m}A_{\mathfrak m},
+\]
+where
+\[
+  A_{\mathfrak m}
+  =
+  \varprojlim_{\mathfrak l}(A/\mathfrak l)_{\mathfrak m}.
+\]
+This \emph{local component} \(A_{\mathfrak m}\) is a filtered
+projective limit of Artinian local rings endowed with the discrete
+topology. It is therefore a local ring which is pseudocompact for the
+projective-limit topology.\footnote{Notice that \(A_{\mathfrak m}\) is
+the localization of \(A\) at the maximal ideal \(\mathfrak m\). Indeed,
+the identity element \(e_{\mathfrak m}\) of \(A_{\mathfrak m}\) is an
+idempotent of \(A\) not belonging to \(\mathfrak m\). Since
+\(A=A_{\mathfrak m}\times B\), where
+\(B=A(1-e_{\mathfrak m})\), the ring \(A_{\mathfrak m}\) identifies with
+the localization \(A_{e_{\mathfrak m}}\), and hence also with
+\(S^{-1}A\), where \(S=A\setminus\mathfrak m\). Furthermore,
+\(e_{\mathfrak m}(1-e_{\mathfrak m})=0\), so \(\mathfrak m\) contains
+\(1-e_{\mathfrak m}\), hence also \(B\); thus \(\mathfrak m\) identifies
+with \(\mathfrak mA_{\mathfrak m}\times B\).}
+
+\medskip
+\noindent\textbf{0.1.2.}
+\phantomsection
+\label{sga3:VIIB:0.1.2}
+Let \(r(A)\) be the intersection of the open maximal ideals of \(A\),
+that is, the cartesian product of the ideals
+\(\mathfrak mA_{\mathfrak m}\) under the identification
+\[
+  A=\prod_{\mathfrak m}A_{\mathfrak m}.
+\]
+For every open ideal \(\mathfrak l\) of \(A\), the image of \(r(A)\) in
+\(A/\mathfrak l\) is contained in the radical of \(A/\mathfrak l\).
+Some power of this image is therefore zero, so
+\(r(A)^n\subset\mathfrak l\) for all sufficiently large \(n\). Thus the
+sequence \(r(A)^n\) tends to \(0\).
+
+The same is true of \(x^n\) when \(x\in r(A)\). In other words, every
+element of \(r(A)\) is topologically nilpotent, and the converse is
+clear. It follows that the sequence with general term
+\[
+  1+x+\cdots+x^n
+\]
+converges, and converges to \(1/(1-x)\), whenever \(x\in r(A)\). This
+shows that \(r(A)\) is the Jacobson radical of \(A\), that is, the
+intersection of all maximal ideals of \(A\) (cf.\ Bourbaki,
+\emph{Alg\`ebre}, Chap.~8, \S6, Th.~1).\footnote{Indeed, let
+\(x\in r(A)\). If \(\mathfrak m\) were a maximal ideal not containing
+\(x\), there would be \(y\in A\) such that
+\(1-xy\in\mathfrak m\). But \(xy\in r(A)\), so \(1-xy\) is invertible,
+a contradiction. Notice the following consequence: if
+\(\Upsilon(A)=\{\mathfrak m_1,\ldots,\mathfrak m_r\}\) is finite, then
+the \(\mathfrak m_i\) are all the maximal ideals of \(A\).}
+
+\medskip
+\noindent\textbf{Remarks.}\footnote{The editors added these remarks in
+order to compare the definition of the formal spectrum
+\(\operatorname{Spf}(A)\) given in 1.1 with those in EGA~I, 10.1.2 and
+10.4.2.}
+
+\noindent\textit{a)} If \(\mathfrak p\) is an open prime ideal of \(A\),
+then, since \(A/\mathfrak p\) is Artinian, \(\mathfrak p\) is maximal.
+Consequently, \(\Upsilon(A)\) is the set of open prime ideals of \(A\).
+
+\smallskip
+\noindent\textit{b)} Each \(\mathfrak mA_{\mathfrak m}\) is an ideal of
+definition of \(A_{\mathfrak m}\), that is, an open ideal \(I\) for
+which \(I^n\) tends to \(0\) (cf.\ EGA~0\textsubscript{I}, 7.1.2).
+Consequently,
+\[
+  \operatorname{Spec}
+    (A_{\mathfrak m}/\mathfrak mA_{\mathfrak m}),
+\]
+endowed with the topological ring \(A_{\mathfrak m}\), is an affine
+formal scheme in the sense of EGA~I, 10.1.2.
+
+\smallskip
+\noindent\textit{c)} The topological ring \(A\) is admissible in the
+sense of EGA~0\textsubscript{I}, 7.1.2 if and only if \(r(A)\) is open
+(and hence an ideal of definition), and this holds if and only if
+\(\Upsilon(A)\) is finite. In that case the affine formal scheme
+\[
+  \operatorname{Spf}(A)
+  =
+  \operatorname{Spec}(A/r(A))
+\]
+(cf.\ EGA~I, 10.1.2) has \(\Upsilon(A)\), endowed with the discrete
+topology, as its underlying space; the sections of its structure sheaf
+over a subset \(E\subset\Upsilon(A)\) form the ring
+\[
+  \prod_{\mathfrak m\in E}A_{\mathfrak m}.
+\]
+
+\smallskip
+\noindent\textit{d)} Let \(A\) be an arbitrary pseudocompact ring. In
+\SGARefLink{sga3:VIIB:1.1}{1.1} below, the space \(\Upsilon(A)\) is endowed with the discrete
+topology and with the sheaf of rings whose ring of sections over any
+subset \(E\) is
+\[
+  \prod_{\mathfrak m\in E}A_{\mathfrak m}.
+\]
+By \textit{b)}, every point then has an open neighborhood which is an
+affine formal scheme; this therefore defines a formal scheme (EGA~I,
+10.4.2), denoted by \(\operatorname{Spf}(A)\). For this formal scheme to
+be affine, it must be quasi-compact, so \(\Upsilon(A)\) must be finite;
+in that case \(\operatorname{Spf}(A)\) agrees with the definition of
+EGA~I, 10.1.2.
+
+\medskip
+\noindent\textbf{0.1.3.}
+\phantomsection
+\label{sga3:VIIB:0.1.3}
+If \(A\) and \(B\) are pseudocompact rings, a \emph{homomorphism} from
+\(A\) to \(B\) is, by definition, a continuous map compatible with
+addition, multiplication, and the identity elements. Such a
+homomorphism sends a topologically nilpotent element of \(A\) to a
+topologically nilpotent element of \(B\); it therefore maps the radical
+\(r(A)\) into the radical \(r(B)\).
+

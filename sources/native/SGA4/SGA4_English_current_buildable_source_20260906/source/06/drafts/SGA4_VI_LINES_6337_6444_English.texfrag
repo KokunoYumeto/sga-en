@@ -1,0 +1,115 @@
+\subsection{Example: local topoi}\etiquette[8.4]{VI.subsec8.4}
+
+\subsubsection{}\etiquette[8.4.1]{VI.subsubsec8.4.1}
+
+Let $X=(X_i)_{i\in I}$ be a topos fibered over a category $I$. One
+deduces from it a topos fibered over the category $\Pro(I)$ (I \hyperref[I.sec8.10]{8.10})
+by the formula
+\begin{equation*}
+X_{\sheaf{\alpha}}=\limtop{I_{\alpha}}X_{i\alpha}\tag{8.4.1.1}
+\end{equation*}\etiquette[8.4.1.1]{VI.eq8.4.1.1}
+for every pro-object $\sheaf{\alpha}=(i_{\alpha})$ of $I$ (to see
+this, one may generalize Exercise I
+\hyperref[VI.subsubsec8.2.8]{8.2.8} to pseudofunctors).
+
+\subsubsection{}\etiquette[8.4.2]{VI.subsubsec8.4.2}
+
+Let $E$ be a topos, and let $p:\text{Fl}(E)\to E$ be the fibered topos
+considered in \hyperref[VI.exem7.3.1]{7.3.1}. Extending it as in
+\hyperref[VI.subsubsec8.4.1]{8.4.1}, one obtains a fibered topos
+$\bar{\text{Fl}(E)}\to\Pro(E)$. The category $\Point(E)$ maps by a
+fully faithful functor into $\Pro(E)$ (IV \hyperref[IV.subsubsec6.8.5]{6.8.5}), whence, by base
+change (\hyperref[VI.subsubsec7.1.9]{7.1.9}), a fibered topos
+$\Loc(E)\to\Point(E)$. The fiber $\Loc_p(E)$ at a point $p$ of $E$
+is called the \emph{localization of $E$ at the point} $p$. By the
+preceding, this topos depends covariantly on the point $p$. By
+definition,
+\begin{equation*}
+\Loc_p(E)=\Limtop_{X\in\Vois(p)}E_{/X}{\quoi},\tag{8.4.2.1}
+\end{equation*}\etiquette[8.4.2.1]{VI.eq8.4.2.1}
+where $\Vois(p)$ is the category of neighborhoods of $p$ (IV \hyperref[IV.subsec6.8]{6.8}).
+
+\subsubsection{}\etiquette[8.4.3]{VI.subsubsec8.4.3}
+
+Let $m:p'\to p$ be a morphism of $\Point(E)$ (IV 6). For every
+$X\in\Vois(p)$ one thereby obtains a point $p'_X$ of $E_{/X}$ and
+hence, by the universal property of $\limtop{}$
+\hyperref[VI.subsec8.1]{8.1}, a point $\theta_p(m)$ of $\Loc_p(E)$.
+This defines a functor
+\begin{equation*}
+\theta_p:\Point(E)_{/p}\to\Point(\Loc_p(E)){\quoi},\tag{8.4.3.1}
+\end{equation*}\etiquette[8.4.3.1]{VI.eq8.4.3.1}
+which is immediately seen to be an equivalence of categories. Thus
+$\Point(\Loc_p(E))$ is canonically equivalent to the category of
+generalizations of $p$ (IV \hyperref[IV.subsubsec7.1.8]{7.1.8}). There is moreover a canonical
+equivalence of topoi
+$$
+\can\bigdot:\Loc_{\theta_p(m)}(\Loc_p(E))\to\Loc_{p'}(E){\quoi},
+$$
+which fits into a diagram commutative up to isomorphism
+\[
+\xymatrix@R=1.5cm{
+\Loc_{\theta_p(m)}(\Loc_p(E))\ar[rr]^{\can\bigdot}\ar[rd]_{\phi}
+&&\Loc_{p'}(E)\ar[ld]^{m}\\
+&\Loc_p(E)&
+}
+\]
+where $\phi$\pageoriginale is the canonical morphism of
+\eqhyperref[VI.eq8.4.2.1]{8.4.2.1}.
+
+\subsubsection{}\etiquette[8.4.4]{VI.subsubsec8.4.4}
+
+Localized topoi seem to be of interest only for topoi arising from
+algebraic geometry, or at least for topoi having suitable finiteness
+properties. Thus, when $E$ is the topos of sheaves on a separated
+topological space, one sees immediately (using, for example,
+\hyperref[VI.thm8.2.9]{8.2.9}) that the localized topoi are point
+topoi. Moreover, in this case the category $\Point(E)$ is discrete
+and the situation described in \hyperref[VI.subsubsec8.4.2]{8.4.2}
+is trivial. On the other hand, let $E=\Top(X)$ be the topos of sheaves
+for the Zariski topology on a scheme $X$, let $x$ be a point of $X$,
+let $O_x$ be the local ring of $X$ at $x$, and let
+$Y=\spec(O_x)$. One finds that
+$$
+\Loc_x(E)=\Top(Y){\quoi}.
+$$
+For other examples arising from the \'etale topology, we refer to
+Expos\'e VIII of this seminar.
+
+\subsubsection{}\etiquette[8.4.5]{VI.subsubsec8.4.5}
+
+When $E$ is locally coherent (\hyperref[VI.def2.3]{2.3}), the
+localized topoi $\Loc_p(E)$ are coherent (in
+\eqhyperref[VI.eq8.4.2.1]{8.4.2.1} one may restrict to the
+$X\in\Vois(p)$ which are algebraic and coherent, and then apply
+\hyperref[VI.thm8.3.13]{8.3.13}). For every morphism of points
+$m:p'\to p$, the morphism of topoi
+$m\bigdot:\Loc_{p'}(E)\to\Loc_p(E)$ is coherent
+(\hyperref[VI.cor8.3.14]{8.3.14}).
+
+\subsubsection{}\etiquette[8.4.6]{VI.subsubsec8.4.6}
+
+A \emph{local topos} is a topos $X$ such that the functor
+$\Gamma(X,-)=$ ``sections over $X$'' (IV \hyperref[IV.subsec4.3]{4.3}) is a fiber functor
+(IV 6). The point corresponding to this fiber functor is called the
+\emph{center} of the local topos. When $E$ is locally coherent, its
+localized topoi are local topoi (\hyperref[VI.thm8.2.3]{1.2.3},
+\hyperref[VI.prop8.5.2]{8.5.2}, and \hyperref[VI.cor8.5.7]{8.5.7}).
+The center of $\Loc_p(E)$ is canonically isomorphic to
+$\theta_p(\id_p)$ (\eqhyperref[VI.eq8.4.3.1]{8.4.3.1}). The image in
+$E$ of the center of $\Loc_p(E)$ is isomorphic to $p$. The localized
+topos $\Loc_p(E)$, equipped with the canonical morphism\pageoriginale
+$\Loc_p(E)\to E$, is the solution of the universal (2-universal!)
+problem of mapping local topoi into $E$ in such a way that the center
+maps ``to'' $p$.
+
+\subsubsection{}\etiquette[8.4.7]{VI.subsubsec8.4.7}
+
+A number of questions concerning local topoi have not been addressed
+by the editors. Thus, if $X$ is a local topos, the final object $e$ of
+$X$ has a maximal open subtopos $U\ne e$. The complement $Y$ of $U$
+is a local topos having no nontrivial open subtopos. Is such a topos a
+point topos? Let $U$ be a topos and let
+$X=(U,\Phi:U\to(\Ens))$ be a topos obtained by gluing. What conditions
+must the gluing functor $\Phi$ satisfy for $X$ to be a local topos?
+

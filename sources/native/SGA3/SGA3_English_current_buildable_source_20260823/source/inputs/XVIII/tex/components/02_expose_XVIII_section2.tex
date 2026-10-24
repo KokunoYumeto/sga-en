@@ -1,0 +1,279 @@
+\SGARefTarget{sga3:xviii:section:2}\section*{2. Local Determination of a
+Group Homomorphism}
+\addcontentsline{toc}{section}{2. Local Determination of a Group
+Homomorphism}
+
+Let \(G\) and \(H\) be groups, and let \(U\subseteq G\) be a subset
+such that \(U\cdot U=G\). If \(f\) and \(g\) are homomorphisms from
+\(G\) to \(H\) such that \(f=g\) on \(U\), then \(f=g\). Likewise:
+
+\SGARefTarget{sga3:xviii:prop:2.1}\paragraph{\SGARefLink{sga3:xviii:prop:2.1}{Proposition 2.1}.}
+\textit{Let \(S\) be a site (cf.\ Exposé IV\footnote{Editor's note:
+that is, a category endowed with a topology; cf.\ IV, \S4.2.}),
+let \(G\) be a sheaf of groups on \(S\), and let \(U\subseteq G\) be
+a subsheaf of sets such that the morphism \(U\times U\to G\)
+induced by multiplication is an epimorphism. If \(f\) and \(g\) are
+homomorphisms from \(G\) to a sheaf of groups \(H\) and are equal on
+\(U\), then \(f=g\).}
+
+\SGARefTarget{sga3:xviii:cor:2.2}\paragraph{\SGARefLink{sga3:xviii:cor:2.2}{Corollary 2.2}.}
+\textit{Let \(G\) be an \(S\)-group prescheme that is locally of
+finite presentation and flat, let \(U\subseteq G\) be a relatively
+schematically dense open subset, and let \(H\) be a sheaf of groups
+on \(S\) for the fppf topology. Then every homomorphism
+\(f:G\to H\) is determined by its restriction to \(U\).}
+
+Indeed, since \(G\) is flat over \(S\), the composition law on \(G\)
+is a flat morphism (VI\textsubscript{B}, \SGARefLink{concl:sga3-VIB-9.2-xi}{9.2(xi)}); it follows that
+\(U\times_S U\to G\) is faithfully flat and locally of finite
+presentation, hence an fppf covering, and therefore an epimorphism.
+
+\SGARefTarget{sga3:xviii:prop:2.3}\paragraph{\SGARefLink{sga3:xviii:prop:2.3}{Proposition 2.3}.}
+\textit{Let \(G\) be a group prescheme locally of finite
+presentation and flat over \(S\), let \(U\subseteq G\) be a
+relatively schematically dense open subset, and let \(H\) be a
+sheaf of groups for the fppf topology. Write \(m_G\) for the
+multiplication on \(G\) and \(m_H\) for that on \(H\).}
+
+\textit{Let \(\bar f:U\to H\) be an \(S\)-morphism, and suppose that
+there exists a relatively schematically dense open subset \(V\) of
+\(m_G^{-1}(U)\cap(U\times_S U)\) such that the following diagram is
+commutative:}
+
+\begin{center}
+\input{native_diagrams/exp18/001_proposition_2_3_compatibility_square.tex}
+\end{center}
+
+\textit{Then there exists a morphism of \(S\)-groups
+\(f:G\to H\), necessarily unique, extending \(\bar f\), in each of
+the following situations:}
+
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:xviii:prop:2.3:item:i}(i)] \textit{\(H\) is representable.}
+\item[\SGAInlineRefTarget{sga3:xviii:prop:2.3:item:ii}(ii)] \textit{The diagonal morphism
+  \(H\to H\times_S H\) is representable by a closed
+  immersion.\footnote{Editor's note: See the note at \SGARefLink{sga3:xviii:prop:1.4}{1.4}.}}
+\item[\SGAInlineRefTarget{sga3:xviii:prop:2.3:item:iii}(iii)] \textit{For every section \(a\in U(S)\), the open
+  subset
+  \(\operatorname{pr}_2((a\times_S U)\cap V)\) is relatively
+  schematically dense in \(U\)\begingroup
+  \renewcommand{\thefootnote}{*}\footnote{Or in \(G\), which is
+  equivalent by \SGARefLink{sga3:xviii:prop:1.1:item:iv}{1.1(iv)}.}
+  \addtocounter{footnote}{-1}
+  \endgroup, and this assertion remains true after every base
+  change \(S'\to S\).}
+\end{enumerate}
+
+\begin{proof}
+First note that \(V\) is relatively schematically dense in
+\(G\times_S G\). Indeed, \(V\) is relatively schematically dense in
+\[
+  m_G^{-1}(U)\cap(U\times_S G)\cap(G\times_S U),
+\]
+and each of the three factors is obtained from \(U\subseteq G\) by
+an evident base change \(G\times_S G\to G\). The assertion therefore
+follows from \SGARefLink{sga3:xviii:prop:1.1}{1.1}.
+
+To construct \(f:G\to H\), since \(U\times_S U\to G\) is an fppf
+covering, it is enough to construct a morphism \(U\times_S U\to H\)
+whose two pullbacks to
+\[
+  (U\times_S U)\times_G(U\times_S U)
+\]
+are equal. Take the morphism
+\[
+  m_H\circ(\bar f\times\bar f):U\times_S U\longrightarrow H.
+\]
+For sections \(a,b,c,d\in U(S')\), where \(S'\to S\) is arbitrary,
+such that \(ab=cd\), we must prove
+\[
+  \bar f(a)\bar f(b)=\bar f(c)\bar f(d).
+\]
+If \((a,b)\) and \((c,d)\) belong to \(V(S')\)\begingroup
+\renewcommand{\thefootnote}{\ensuremath{\ddagger}}\footnote{The
+French source prints \((a,d)\) and \((c,d)\). The first pair must be
+\((a,b)\), as required by the displayed equality and by the
+compatibility hypothesis on \(V\).}
+\addtocounter{footnote}{-1}
+\endgroup, the desired equality follows at once. Thus it holds on
+\((V\times_G V)(S')\).
+
+I claim that \(V\times_G V\) is a relatively schematically dense
+open subset of
+\[
+  (U\times_S U)\times_G(U\times_S U).
+\]
+This will complete the proof in cases \textup{\SGARefLink{sga3:xviii:prop:2.3:item:i}{(i)}} and \textup{\SGARefLink{sga3:xviii:prop:2.3:item:ii}{(ii)}}
+by \SGARefLink{sga3:xviii:prop:1.4}{1.4}, because the morphism \(f\) constructed in this way extends
+\(\bar f\), and its being a homomorphism is then evident, again by
+\SGARefLink{sga3:xviii:prop:1.4}{1.4}. Now
+\[
+  V\times_G V
+  =
+  \bigl(V\times_G(G\times_S G)\bigr)
+  \cap
+  \bigl((G\times_S G)\times_G V\bigr).
+\]
+By symmetry and \SGARefLink{sga3:xviii:prop:1.1}{1.1}, it is enough to check that
+\(V\times_G(G\times_S G)\) is relatively schematically dense in
+\((G\times_S G)\times_G(G\times_S G)\). The latter prescheme is
+isomorphic over \(S\) to \(G\times_S G\times_S G\), the isomorphism
+being given by
+\[
+  (a,b,c,d)\longmapsto(a,b,c).
+\]
+What remains is therefore the relative schematic density of
+\(V\times_S G\) in \(G\times_S G\times_S G\), which follows from
+that of \(V\) in \(G\times_S G\).
+
+It remains to treat case \textup{\SGARefLink{sga3:xviii:prop:2.3:item:iii}{(iii)}}. To prove
+\(\bar f(a)\bar f(b)=\bar f(c)\bar f(d)\), we may make an fppf
+covering base change. Suppose that, after such a base change
+\(S'\to S\), there is a section \(x\in G(S')\) such that
+\[
+  (b,x),\quad(a,bx),\quad(d,x),\quad(c,dx)
+\]
+all belong to \(V\). Then
+\[
+\begin{aligned}
+  \bar f(a)\bar f(b)\bar f(x)
+    &=\bar f(a)\bar f(bx)
+     =\bar f(abx)
+     =\bar f(cdx)\\
+    &=\bar f(c)\bar f(dx)
+     =\bar f(c)\bar f(d)\bar f(x),
+\end{aligned}
+\]
+which gives the desired equality.
+
+To find such an \(x\)\footnote{Editor's note: The beginning of the
+following sentence has been added.}, set, for every \(z\in U(S')\),
+\[
+  V_z=
+  \operatorname{pr}_{2/S'}
+  \bigl((z\times_{S'}U_{S'})\cap V_{S'}\bigr).
+\]
+The conditions imposed on \(x\) say exactly that \(x\in W\), where
+\[
+  W=
+  V_b(S')\cap V_d(S')\cap
+  b^{-1}V_a(S')\cap d^{-1}V_c(S').
+\]
+By hypothesis \textup{\SGARefLink{sga3:xviii:prop:2.3:item:iii}{(iii)}}, \(W\) is relatively schematically
+dense in \(G\). \SGARefLink{sga3:xviii:prop:1.7}{Proposition 1.7} therefore supplies such a section
+\(x\) after an fppf covering base change.
+
+Let us verify that the morphism thus constructed is multiplicative.
+Let \(a,b\in G(S')\), where \(S'\to S\) is arbitrary; after this
+base change, rename \(S'\) as \(S\). Choose an fppf covering base
+extension \(S'\to S\) and a section \(x\in G(S')\) such that
+\[
+  x\in U(S')
+  \qquad\text{and}\qquad
+  ax^{-1}\in U(S'),
+\]
+that is, \(x\in(a^{-1}U)^{-1}(S')\). Choose in addition another
+fppf covering extension \(S''\to S'\) and a section
+\(y\in G(S'')\) such that
+\[
+  y,\quad by^{-1},\quad aby^{-1}\in U(S''),
+\]
+and
+\[
+  by^{-1}\in V_x,
+  \qquad
+  xby^{-1}\in V_{ax^{-1}}.
+\]
+Then, by the definition of \(f\), over \(S''\) we have
+\[
+  f(a)=\bar f(ax^{-1})\bar f(x),\qquad
+  f(b)=\bar f(by^{-1})\bar f(y),\qquad
+  f(ab)=\bar f(aby^{-1})\bar f(y).
+\]
+Furthermore,
+\[
+\begin{aligned}
+  f(a)f(b)
+    &=\bar f(ax^{-1})\bar f(x)\bar f(by^{-1})\bar f(y)\\
+    &=\bar f(ax^{-1})\bar f(xby^{-1})\bar f(y)\\
+    &=\bar f(aby^{-1})\bar f(y)
+     =f(ab),
+\end{aligned}
+\]
+which proves multiplicativity.
+
+It is now easy to see that \(f\) extends \(\bar f\). Let
+\(a\in U(S')\); after base change, rename \(S'\) as \(S\), and choose
+an fppf covering \(S'\to S\) and sections \(x,y\in G(S')\) such that
+\[
+  (x,y),\qquad (ax,y),\qquad (a,xy)
+\]
+belong to \(V(S')\). Then
+\[
+  f(xy)=\bar f(x)\bar f(y)=\bar f(xy),
+  \qquad
+  f(axy)=\bar f(ax)\bar f(y)=\bar f(axy).
+\]
+Consequently,
+\[
+\begin{aligned}
+  f(a)
+    &=f(axy)f\bigl((xy)^{-1}\bigr)
+     =f(axy)f(xy)^{-1}\\
+    &=\bar f(axy)\bar f(xy)^{-1}
+     =\bar f(a).
+\end{aligned}
+\]
+\end{proof}
+
+\SGARefTarget{sga3:xviii:remark:2.3.1}\paragraph{\SGARefLink{sga3:xviii:remark:2.3.1}{Remark 2.3.1}.}
+In many cases hypothesis \textup{\SGARefLink{sga3:xviii:prop:2.3:item:iii}{(iii)}} holds, for it will still
+hold if \(U\) is replaced by a smaller open subset \(U'\), still
+relatively schematically dense in \(G\). For example:
+
+\SGARefTarget{sga3:xviii:prop:2.4}\paragraph{\SGARefLink{sga3:xviii:prop:2.4}{Proposition 2.4}.}
+\textit{In the situation of \SGARefLink{sga3:xviii:prop:2.3}{2.3}, suppose that every geometric fiber
+of \(G/S\) is irreducible. Put
+\[
+  U'=\operatorname{pr}_1V
+  \qquad\text{and}\qquad
+  V'=V\cap m_G^{-1}(U')\cap(U'\times_S U').
+\]
+Then \(U'\subseteq U\) is an open subset relatively schematically
+dense in \(G\), and \(U'\), \(\bar f|_{U'}\), and \(V'\) satisfy
+hypothesis \textup{\SGARefLink{sga3:xviii:prop:2.3:item:iii}{(iii)}}.}
+
+\begin{proof}
+The subset \(U'\) is open because
+\(G\times_S G\to G\) is flat and locally of finite presentation.
+All the other verifications are immediate except for hypothesis
+\textup{\SGARefLink{sga3:xviii:prop:2.3:item:iii}{(iii)}}.
+
+Let \(a\in U(S')\); after base change, rename \(S'\) as \(S\). To
+verify that
+\[
+  \operatorname{pr}_2\bigl((a\times_S U')\cap V'\bigr)
+\]
+is relatively schematically dense in \(U'\), it suffices by
+\SGARefLink{sga3:xviii:cor:1.3}{Corollary 1.3} to do so fiber by fiber. Thus it is enough to treat the
+case where \(S\) is the spectrum of a field, and in that case it is
+enough to prove that \(U'\) is nonempty, since \(G\) is irreducible
+and has no embedded components (cf.\ VI\textsubscript{A}, \SGARefLink{prop:sga3-VIA-1.1.1}{1.1.1}).
+Now
+\[
+\begin{aligned}
+  \operatorname{pr}_2\bigl((a\times_S U')\cap V'\bigr)
+  &=
+  \operatorname{pr}_2\bigl((a\times_S U')\cap V\bigr)\\
+  &\quad{}\cap
+  \operatorname{pr}_2\bigl((a\times_S U')\cap m_G^{-1}(U')\bigr).
+\end{aligned}
+\]
+The second factor on the right is dense in \(G\). It therefore
+remains only to prove that
+\[
+  \operatorname{pr}_2\bigl((a\times_S U')\cap V\bigr)
+\]
+is dense in \(G\), that is, nonempty; and this is clear because
+\(a\in U'=\operatorname{pr}_1V\).
+\end{proof}

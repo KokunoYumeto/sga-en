@@ -1,0 +1,123 @@
+\subsubsection{}\etiquette[8.12.3]{I.sec8.12.3}
+Let $F$ be a presheaf on $C$, and consider an object
+$$
+u:X\longrightarrow F
+$$
+of $C_{/F}$. We say that $u$ (or the pair $(X,u)$) is \emph{minimal}
+if, for every factorization of $u$ as
+\hypertarget{sga4.exp.I.equation.8.12.3.1}{}\begin{equation}
+X\xrightarrow{p}X'\xrightarrow{u'}F{\quoi},\tag{8.12.3.1}
+\end{equation}
+with $p$ a strict epimorphism (\hyperref[I.sec10.2]{10.2}), $p$ is an
+isomorphism. Regarding $u$ as an element of $F(X)$ \hyperref[I.prop1.4]{(1.4)}, to say that
+$u$ is minimal thus means that\pageoriginale every strict epimorphism
+$p:X\rightarrow X'$ such that $u\in
+\Iim(F(p):F(X')\rightarrow F(X))$ is an isomorphism. This notion is
+clarified by part a) of the following lemma:
+
+\begin{enonce*}{Lemma 8.12.4}\etiquette[8.12.4]{I.lem8.12.4}
+Let $F$ be a presheaf on $C$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Suppose that $F$ carries cokernels to kernels, and consider a
+morphism
+$$
+u:X\longrightarrow F{\quoi},
+$$
+with $X\in \Ob C$. For $u$ to be a monomorphism, it is sufficient,
+when cokernels of pairs of arrows are representable in $C$, that $u$ be
+minimal; this condition is also necessary if fiber products are
+representable in $C$.
+
+\item Suppose that finite $\varinjlim$ are representable in $C$. For
+the subcategory of representable subfunctors of $F$
+(\hyperref[I.8.12.1.1]{8.12.1.1}) to be filtered (not necessarily
+small) and to have $F$ as its inductive limit, it is sufficient that
+$F$ be left exact and that every morphism $u:X\rightarrow F$, with
+$X\in \Ob C$, factor as
+$$
+X\rightarrow X'\xrightarrow{u'}F{\quoi},
+$$
+with $u'$ minimal; this condition is also necessary if fiber products
+are representable in $C$.
+
+\item Suppose that $C$ admits a small generating subcategory
+(\hyperref[I.def7.1]{7.1}), and that $I$, the category of representable
+subfunctors of $F$, is filtered; then $I$ is small.
+\end{enumerate}
+\end{enonce*}
+
+\noindent \emph{Proof}.\pageoriginale
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Suppose $u$ is minimal; let us prove that $u$ is a monomorphism,
+\ie that for every pair of arrows $v,v':Y\rightrightarrows X$ such that
+$uv=uv'$, one has $v=v'$. Indeed, if $X'=\Coker(v,v')$, then $u$
+factors as $X\xrightarrow{p}X'\xrightarrow{u'}F$ (since $F$ carries
+cokernels to kernels), and since $p$ is a strict epimorphism by
+construction, it follows that $p$ is an isomorphism, \ie $v=v'$.
+Suppose that $u$ is a monomorphism; let us prove that it is minimal.
+Consider a factorization \hyperlink{sga4.exp.I.equation.8.12.3.1}{(8.12.3.1)}; since $p$ is a strict epimorphism,
+it is the cokernel of the canonical pair of arrows
+$v,v':\fprod{X}{X}{X'}\rightrightarrows X$, and since
+$(u'p)v=(u'p)v'$ and $u'p=u$ is a monomorphism, one has $v=v'$, hence
+$p$ is an isomorphism.
+
+\item Sufficiency: Since $F$ is left exact, $C_{/F}$ is filtered. Since
+we know that $F=\varinjlim_{C_{/F}}X$, by
+\hyperref[I.prop8.1.3]{8.1.3} c) it remains to prove that the full
+subcategory $I$ of $C_{/F}$ consisting of the subobjects of $F$ is
+cofinal in $C_{/F}$; by the ``sufficient'' part of a), this is precisely
+what is ensured by the hypothesis that every object of $C_{/F}$ is
+dominated by a ``minimal'' object. Necessity: Since every filtered
+inductive limit of right exact functors is again right exact, the first
+condition is trivially necessary. The second then follows from the
+``necessary'' part of a).
+
+\item A representable subfunctor $X\hookrightarrow F$ of $F$ is known
+once one knows the full subcategory $C'_{/X}$ of $C'_{/F}$, where $C'$
+is a fixed small generating subcategory of $C$. (Use the hypothesis
+that $I$ is filtered.) Since $C'_{/F}$ is small, the set of its full
+subcategories is small, whence the conclusion.
+\end{enumerate}
+
+\begin{enonce*}{Proposition 8.12.5}\etiquette[8.12.5]{I.prop8.12.5}
+Let\pageoriginale $C$ be a $𝒰$-category in which finite inductive
+limits are representable, and which admits a small generating
+subcategory (\hyperref[I.def7.1]{7.1}). Let $F$ be a presheaf on $C$.
+For $F$ to be strictly ind-representable, it is sufficient that it
+satisfy the following two conditions, and these conditions are also
+necessary if fiber products are representable in $C$:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $F$ is left exact.
+
+\item Every pair $(X,u)$, with $X\in \Ob C$ and $u\in F(X)$, is
+dominated in $C_{/F}$ by a minimal pair $\hyperref[I.sec8.12.3]{(8.12.3)}$, \ie there exists a
+minimal pair $(X',u')$ $(X'\in \Ob C, u'\in F(X'))$ and a morphism
+$f:X\rightarrow X'$ such that $u=F(f)(u')$.
+\end{enumerate}
+\end{enonce*}
+
+Sufficiency follows from \hyperref[I.prop8.12.2]{8.12.2} and
+\hyperref[I.lem8.12.4]{8.12.4} b), c), and necessity from
+\hyperref[I.prop8.3.1]{8.3.1} and \hyperref[I.lem8.12.4]{8.12.4} a).
+
+\begin{enonce*}[remark]{Remark 8.12.6}\etiquette[8.12.6]{I.rem8.12.6}
+When $F$ carries amalgamated sums in $C$ to fiber products, it is
+immediately clear that for a given pair $(X,u)$ as in b), the set of
+strict quotients $X'$ of $X$ such that
+$u\in\Iim(F(X')\rightarrow F(X))$ is filtered decreasingly; this
+implies that if the set of strict quotients of $X$ is Artinian, then
+condition b) of \hyperref[I.prop8.12.5]{8.12.5} is automatically
+satisfied. Thus, if the preceding condition on $X$ is satisfied for
+every object $X$ of $C$ (one then also says, sometimes, that the objects
+of $C^\circ$ are \emph{Artinian}), it follows from \hyperref[I.prop8.12.5]{8.12.5} that $F$ is
+strictly ind-representable if and only if $F$ is left exact; in this
+case, $F$ is therefore strictly ind-representable as soon as it is
+ind-representable (\hyperref[I.prop8.3.1]{8.3.1}).
+\end{enonce*}
+

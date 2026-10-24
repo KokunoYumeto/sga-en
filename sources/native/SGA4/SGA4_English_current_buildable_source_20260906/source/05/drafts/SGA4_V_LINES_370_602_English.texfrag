@@ -1,0 +1,254 @@
+\section{Flat modules}\etiquette[1]{V.sec1}
+
+\begin{enonce*}{Definition 1.1}\etiquette[1.1]{V.def1.1}
+Let $(E,A)$ be a ringed topos \emph{(IV \hyperref[IV.subsubsec11.1.1]{11.1.1})}. %% label
+A right (\resp left) $A$-module $M$ is said to be flat if the functor
+$M\otimes_A⋅$ (\resp $⋅\otimes_A M$) from the category of left
+(\resp right) $A$-modules to the category of abelian sheaves of
+$E$\sisi{,}{} is exact.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.2}\etiquette[1.2]{V.prop1.2}
+Let $M$ be a $B$-$A$-bimodule.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The following properties are equivalent:
+\renewcommand{\theenumii}{\roman{enumii}}
+\renewcommand{\labelenumii}{\theenumii)}
+\begin{enumerate}
+\item The module $M$ is flat as a right $A$-module.
+\item For every injective $B$-module $I$, the left $A$-module
+  $\Hhom_B(M,I)$ is injective.
+\end{enumerate}
+\item A module $M$ which is a pseudo-filtered inductive limit
+\emph{(I \hyperref[I.exem2.7.1]{2.7.1})} %% label
+of flat modules is flat.
+
+\item Finally, if
+$M_∙=\cdots\sisi{}{\to}M_{i+1}\to M_i\sisi{}{\to}\cdots$ is an
+acyclic complex of flat modules $(M_i=0$ for $i<i_0)$, then, for every
+module $F$, the complex
+$$
+M_∙\otimes_A F=\cdots\sisi{}{\to}M_{i+1}\otimes_A F\to
+M_i\otimes_A F\sisi{}{\to}\cdots
+$$
+is\pageoriginale acyclic.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+By (IV \hyperref[IV.cor12.12]{12.12}), %% label
+there is an adjunction isomorphism:
+$$
+\Hom_B(M\otimes_A\mathord\cdot,\mathord\cdot)\xrightarrow{\sim}
+\Hom_A(\mathord\cdot,\Hhom_B(M,\mathord\cdot)){\quoi}.
+$$
+It is then enough to apply \hyperref[V.prop0.2]{0.2} to obtain the
+equivalence (i) $\Leftrightarrow$ (ii). This adjunction isomorphism
+also shows that the tensor product commutes with inductive limits.
+The fact that pseudo-filtered inductive limits are exact
+(\hyperref[V.prop0.1]{0.1}) implies the second assertion. To show that
+the complex $M_∙\otimes_A F$ is acyclic, it is enough to show that,
+for every injective abelian sheaf $I$, the complex
+$\Hom^{∙}_{\ZZ}(M_∙\otimes_A F,I)$ is acyclic. By the adjunction
+formulas, this complex is isomorphic to
+$\Hom^{∙}_A(F,\Hhom_{\ZZ}(M_∙,I))$. But, by the equivalence
+(i) $\Leftrightarrow$ (ii), the complex of sheaves
+$$
+\Hhom_{\ZZ}(M_∙,I)
+$$
+is an acyclic complex whose objects are injective, whence the
+conclusion.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.3.1}\etiquette[1.3.1]{V.prop1.3.1}
+Let $(E,A)$ be a ringed topos, let $H$ be an object of $E$, and let
+$M$ be a flat $A_{/H}$-module. Then $j_{H!}M$ is a flat $A$-module.
+In particular, $A_H$ is flat on both the right and the left.
+\end{enonce*}
+
+Suppose, to fix ideas, that $M$ is a right $A_{/H}$-module. For every
+left $A$-module $P$, there is a canonical isomorphism (IV 12) %% label
+$$
+j_{H!}M\otimes_A P\simeq
+j_{H!}(M\otimes_{A_{/H}}j_H^{\ast}P){\quoi}.
+$$
+The functors $j_{H!}$ and $j_H^{\ast}$ are exact (IV \hyperref[IV.prop11.3.1]{11.3.1} and
+\hyperref[IV.subsubsec11.2.2]{11.12.2}), and, by hypothesis, the functor
+$M\otimes_{A_{/H}}-$ is exact. Consequently, the functor
+$P\longmapsto j_{H!}M\otimes_A P$ is exact, and $j_{H!}M$ is flat.
+
+\begin{enonce*}{Proposition 1.3.2}\etiquette[1.3.2]{V.prop1.3.2}
+(Projection formula for closed immersions):
+
+Let $(E,A)$ be a ringed topos, and let $i:F\to E$ be a closed subtopos
+of $E$. Set $i^{\ast}A=A_{/F}$. For every right $A_{/F}$-module $M$
+and every left $A$-module $P$, there\pageoriginale is a functorial
+isomorphism
+$$
+i_\ast(M\otimes_{A_{/F}}i^\ast P)\simeq(i_\ast M)\otimes_A P.
+$$
+\end{enonce*}
+
+Let $U$ be the open complement of $F$, and let $j:U\to E$ be the
+canonical immersion morphism. One has
+$j^{\ast}(i_\ast M\otimes_A P)\simeq
+0\otimes_{A_{/U}}j^\ast(P)$ (IV 12); consequently,
+$i_\ast M\otimes_A P$ has its support in $F$. Hence the adjunction
+morphism
+$i_\ast M\otimes_A P\to i_\ast i^\ast(i_\ast M\otimes_A P)$ is an
+isomorphism (IV 14). One has
+$i^{\ast}(i_\ast M\otimes_A P)\simeq
+i^\ast i_\ast M\otimes_{A_{/F}}i^\ast P$ (IV 12), and, since
+$i:F\to E$ is a closed immersion,
+$i^{\ast}i_\ast M\simeq M$ (IV 14); this gives the asserted
+isomorphism.
+
+\begin{enonce*}{Corollary 1.3.3}\etiquette[1.3.3]{V.cor1.3.3}
+For every flat $A_{/F}$-module $M$, $i_\ast M$ is flat.
+\end{enonce*}
+
+It follows from \hyperref[V.prop1.3.2]{1.3.2} and from (IV 14) that
+the functor $P\longmapsto(i_\ast M)\otimes_A P$ is exact.
+
+\setcounter{subsection}{3}
+\subsection{}\etiquette[1.4]{V.subsec1.4}
+Let $(E,A)$ be a ringed topos, let $x:P\to E$ be a point of $E$
+(IV \hyperref[IV.def6.1]{6.1}), and let $\Vois(x)$ be the category of neighborhoods of $x$
+(IV \hyperref[IV.subsec6.8]{6.8}). To every object $V$ of $\Vois(x)$ there corresponds an
+object of $E$, also denoted by $V$, and a point
+$x_V:P\to E/V$ of $E/V$. Moreover, to every morphism
+$u:V\to W$ in $\Vois(x)$ there corresponds an essentially
+commutative diagram of morphisms of topoi (IV \hyperref[IV.subsec6.7]{6.7})
+\[\vcenter{
+\xymatrix@C=2.5cm@R=1.5cm{
+P \ar[r]^{x_V} \ar[rd]_{x_W}& E/V \ar[d]^{j_u}\\
+& E/W\quad .
+}}\leqno{(1.4.1)}
+\]\etiquette[1.4.1]{V.eq1.4.1}
+Let $N$ be an $A_x$-module (\resp a set). From the diagram
+\eqhyperref[V.eq1.4.1]{1.4.1}, one obtains a diagram of $A_x$-modules
+(\resp sets):
+\[\vcenter{
+\xymatrix@C=2cm@R=1.5cm{
+x^{\ast}_W x_{W\ast}N \ar[r]^{\ad_W} \ar[d]_{\phi(u)}& N\\
+x^{\ast}_V x_{V\ast}N \ar[ru]_{\ad_V}&
+}}\leqno{(1.4.2)}
+\]\etiquette[1.4.2]{V.1.4.2}
+where\pageoriginale $\ad_W$ and $\ad_V$ are the adjunction morphisms.
+Moreover, one immediately checks that
+$\phi(uv)=\phi(v)\phi(u)$. Thus there is a functor from the filtered
+category $\Vois(x)^{\circ}$ to the category of $A_x$-modules
+(\resp sets), and a homomorphism
+\begin{equation}
+\Lambda(N):\varinjlim_{V\in\Vois(x)^{\circ}}
+x^{\ast}_Vx_{V\ast}N\to N{\quoi}.\tag{1.4.3}
+\end{equation}\etiquette[1.4.3]{V.1.4.3}
+
+\begin{enonce*}{Proposition 1.5}\etiquette[1.5]{V.prop1.5}
+For every $A_x$-module (\resp set) $N$, $\Lambda(N)$ is an
+isomorphism.
+\end{enonce*}
+
+This proposition is a special case of a proposition due to Deligne
+(\hyperref[V.prop8.2.6]{8.2.6}). Let us give a direct proof. By passing
+to the underlying sets, it is enough to prove the proposition when
+$N$ is a set (I \hyperref[I.prop2.8]{2.8}). %% label
+The cofiltered category $\mathrm{Fl}(\Vois(x))$ of arrows of
+$\Vois(x)$ is fibered over the category $\Vois(x)$ by the functor
+$p:\mathrm{Fl}(\Vois(x))\to\Vois(x)$ which assigns to an arrow its
+target. Let $D$ be a category and
+$F:\mathrm{Fl}(\Vois(x))\to D$ a pro-object (I \hyperref[I.sec8.10]{8.10}). %% label
+For every object $V$ of $\Vois(x)$, denote by $F_V$ the pro-object
+obtained by restricting the functor $F$ to the fiber category
+$\Vois(x)/V$. To every morphism $m:U\to V$ of $\Vois(x)$, the
+base-change functor by $m$ associates a morphism from the pro-object
+$F_U$ to the pro-object $F_V$, and the canonical morphisms of
+pro-objects $F\to F_V$ determine a morphism of pro-objects
+\begin{equation*}
+F\to\varprojlim_{V\in\Vois(x)^{\circ}}F_V\tag{1.5.1}
+\end{equation*}\etiquette[1.5.1]{V.1.5.1}
+which is immediately checked to be an isomorphism. Apply this
+observation to the pro-object of pointed sets
+\begin{equation*}
+(U,V,m)\longmapsto x^{\ast}_V(m)=F(U,V,m){\quoi}.\tag{1.5.2}
+\end{equation*}\etiquette[1.5.2]{V.1.5.2}
+One obtains an isomorphism of pro-objects
+\begin{equation*}
+F\xrightarrow{\sim}\varprojlim_{\Vois(x)}
+\varprojlim_{\Vois(x)/V}x^{\ast}_V(m){\quoi};\tag{1.5.3}
+\end{equation*}\etiquette[1.5.3]{V.1.5.3}
+hence, for every set $N$, a bijection
+\begin{equation*}
+\varinjlim_{\mathrm{Fl}(\Vois(x))^{\circ}}
+\Hom(x^{\ast}_V(m),N)\simeq
+\varinjlim_{\Vois(x)^{\circ}}
+\varinjlim_{(\Vois(x)/V)^{\circ}}
+\Hom(x^{\ast}_V(m),N).\tag{1.5.4}
+\end{equation*}\etiquette[1.5.4]{V.1.5.4}
+But,\pageoriginale for fixed $V$,
+$\varinjlim_{(\Vois(x)/V)^{\circ}}\Hom(x^{\ast}_V(m),N)$ is
+identified with $x^{\ast}_Vx_{V\ast}N$. Indeed, by IV \hyperref[IV.eq6.8.1]{6.8.1} one has
+$x^{\ast}_Vx_{V\ast}N\simeq
+\varinjlim_{\Vois(x_V)^\circ}\Hom_{E/V}(W,x_{V\ast}N)$, and hence,
+by adjunction,
+$x^{\ast}_Vx_{V\ast}N\simeq
+\varinjlim_{\Vois(x_V)^\circ}\Hom(x^{\ast}_V(W),N)$; moreover, the
+category $\Vois(x_V)$ is equivalent to the category $\Vois(x)/V$
+(IV \hyperref[IV.eq6.7.2]{6.7.2}). Finally, the canonical transition maps
+\[
+\varinjlim_{(\Vois(x)/U)^{\circ}}\Hom(x^{\ast}_U(m),N)\to
+\varinjlim_{(\Vois(x)/V)^{\circ}}\Hom(x^{\ast}_V(n),N)
+\]
+in
+\eqhyperref[V.1.5.4]{1.5.4} are identified with the canonical maps
+$x^{\ast}_Ux_{U\ast}N\to x^{\ast}_Vx_{V\ast}N$ of
+\eqhyperref[V.1.4.3]{1.4.3}, as the reader may verify. Thus there is a
+bijection
+\begin{equation*}
+\varinjlim_{\mathrm{Fl}(\Vois(x))^{\circ}}
+\Hom(x^{\ast}_V(m),N)\simeq
+\varinjlim_{\Vois(x)^{\circ}}x^{\ast}_Vx_{V\ast}N\tag{1.5.5}
+\end{equation*}\etiquette[1.5.5]{V.1.5.5}
+and the map
+$\Lambda(N):\varinjlim_{\Vois(x)^{\circ}}x^{\ast}_Vx_{V\ast}N\to N$
+of \eqhyperref[V.1.4.3]{1.4.3}, composed with the bijection
+\eqhyperref[V.1.5.5]{1.5.5}, comes from the maps
+$\Hom(x^{\ast}_V(m),N)\to N$ which assign to a map
+$r:x^{\ast}_V(m)\to N$ the image under $r$ of the distinguished point
+of $x^{\ast}_V(m)$. To prove the proposition, it is then enough to
+observe that every object $(U,V,m)$ of
+$\mathrm{Fl}(\Vois(x))$ is bounded below by $(U,U,\id_U)$, and that
+$x^{\ast}_U(\id_U)$ consists of a single element or, in other words,
+that the canonical morphism from the constant pro-object consisting
+of a single element to $F$ is an isomorphism of pro-objects.
+
+\begin{enonce*}{Proposition 1.6}\etiquette[1.6]{V.prop1.6}
+Let $(E,A)$ be a ringed topos, and let $M$ be an $A$-module.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item If $M$ is flat, then, for every point $x:P\to E$ of $E$, the
+  $A_x$-module $M_x$ is flat.
+\item Let $(x_i)_{i\in I}$ be a conservative family of points of $E$
+  such that, for every $i\in I$, $M_{x_i}$ is a flat $A_{x_i}$-module.
+\end{enumerate}
+Then $M$ is flat.
+\end{enonce*}
+
+\begin{enonce*}{Lemma 1.6.1}\etiquette[1.6.1]{V.lem1.6.1}
+Let $M$ be a flat module and let $V$ be an object of $E$. The
+$A/V$-module $j^{\ast}_VM$ is flat.
+\end{enonce*}
+
+We must show that the functor
+$P\longmapsto P\otimes_{A/V}j^{\ast}_VM$ is exact. Since the
+extension-by-zero functor $j_{V!}$ is exact and faithful
+(IV \hyperref[IV.prop11.3.1]{11.3.1}), it is enough to show that the functor
+$P\longmapsto j_{V!}(P\otimes_{A/V}j^{\ast}_VM)$ is exact. There is a
+functorial isomorphism\pageoriginale
+$j_{V!}(P\otimes_{A/V}j^{\ast}_VM)\simeq
+j_{V!}(P)\otimes_A M$ (IV \hyperref[IV.prop12.11]{12.11}); consequently, the functor
+$P\longmapsto j_{V!}(P)\otimes_A M$ is exact (IV \hyperref[IV.prop11.3.1]{11.3.1}).
+
+\setcounter{subsection}{6}
+\setcounter{subsubsection}{1}

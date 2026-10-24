@@ -1,0 +1,338 @@
+\section{Morphisms of ringed topoi}\etiquette[13]{IV.sec13}
+
+\begin{enonce*}{Definition 13.1}\etiquette[13.1]{IV.def13.1}
+Let $(E,A)$ and $(E',A')$ be two ringed topoi. A morphism of ringed
+topoi $u:(E,A)\rightarrow(E',A')$ is a pair $(m,\theta)$, where
+$m:E\rightarrow E'$ is a morphism of topoi
+\textup{(\hyperref[IV.def3.1]{3.1})} and $\theta:m^{\ast}A'\rightarrow A$ is
+a morphism of Rings.
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[13.1.1]{IV.subsubsec13.1.1}
+Since the functor $m^{\ast}:E'\rightarrow E$ is left adjoint to the
+functor $m_{\ast}:E\rightarrow E'$, giving a morphism of ringed
+topoi $(m,\theta):(E,A)\rightarrow(E',A')$ amounts to giving a
+morphism of topoi $m:E\rightarrow E'$ and a morphism of sheaves of
+rings $\Theta:A'\rightarrow m_{\ast}A$.
+
+\subsection{}\etiquette[13.2]{IV.subsec13.2}
+To\pageoriginale a morphism of ringed topoi
+$u=(m,\theta):(E,A)\rightarrow(E',A')$, we associate two notable
+functors between the categories of Modules:
+
+\subsubsection{The direct-image functor for
+  Modules:}\etiquette[13.2.1]{IV.subsubsec13.2.1}
+Let $M$ be a left (\resp right) $A$-Module. The object $m_{\ast}M$ is
+canonically endowed with an $m_{\ast}A$-Module structure; restriction
+of scalars along the canonical morphism
+$\Theta:A'\rightarrow m_{\ast}A$ therefore gives an $A'$-Module,
+denoted by $u_{\ast}(M)$ and called the \emph{direct image of $M$
+under the morphism $u$}.
+
+\subsubsection{The inverse-image functor for
+  Modules:}\etiquette[13.2.2]{IV.subsubsec13.2.2}
+Let $N$ be a left (\resp right) $A'$-Module. The object $m^{\ast}N$
+of $E$ is canonically endowed with the structure of a left (\resp
+right) $m^{\ast}A'$-Module. The left $A$-Module
+$A\otimes_{m^{\ast}A'}m^{\ast}N$ (\resp the right $A$-Module
+$m^{\ast}N\otimes_{m^{\ast}A'}A$), where $A$ is endowed with the
+$m^{\ast}A'$-Module structure defined by
+$\theta:m^{\ast}A'\rightarrow A$, is denoted by $u^{\ast}N$ and is
+called the \emph{inverse image of the Module $N$ under the morphism
+of ringed topoi} $u$.
+
+\subsubsection{}\etiquette[13.2.3]{IV.subsubsec13.2.3}
+Note that for every $A$-Module $M$, the sheaf of sets and the abelian
+sheaf underlying $u_{\ast}M$ is the sheaf $m_{\ast}M$. Thus the
+notation $u_{\ast}$ is most often also used for the functor
+$m_{\ast}$, the direct image for sheaves of sets. On the other hand,
+for an $A'$-Module $N$, the sheaf of sets or abelian sheaf underlying
+$u^{\ast}N$ is in general neither equal nor isomorphic to
+$m^{\ast}N$ (except when $\theta$ is an isomorphism). One must
+therefore distinguish between the inverse image for Modules and the
+inverse image for sheaves of sets or abelian sheaves. The notation
+$u^{-1}:E'\rightarrow E$ is most often used for the functor
+$m^{\ast}$, the inverse image for sheaves of sets. The functor
+$u^{-1}$ is called the \emph{``set-theoretic'' inverse-image functor}
+under the morphism of ringed topoi $u$, as opposed to the inverse
+image ``in the sense of Modules'' $u^{\ast}$.
+
+\begin{enonce*}{Definition 13.3}\etiquette[13.3]{IV.def13.3}
+Let $(C,A)$ and $(C',A')$ be two $𝒰$-ringed sites. A morphism of
+ringed sites $u:(C,A)\rightarrow(C',A')$ is a pair $(m,\theta)$,
+where $m$ is a morphism from the site $C$ to the site $C'$
+(\hyperref[IV.subsec4.9]{4.9}) and
+$\theta:m^{\ast}A'\rightarrow A$ is\pageoriginale a morphism of
+Rings.
+\end{enonce*}
+
+\setcounter{subsection}{3} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[13.3.1]{IV.subsubsec13.3.1}
+A morphism of ringed topoi is a morphism of $𝒰$-ringed sites. A
+morphism of ringed sites gives rise to a morphism between the
+corresponding ringed topoi (\hyperref[IV.subsubsec11.1.1]{11.1.1}
+and \hyperref[IV.subsubsec4.9.1]{4.9.1}).
+
+\begin{enonce*}{Proposition 13.4}\etiquette[13.4]{IV.prop13.4}
+Let $u:(E,A)\rightarrow(E',A')$ be a morphism of ringed topoi.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item For a variable left (\resp right) $A$-Module $M$ and a variable
+left (\resp right) $A'$-Module $N$, there are canonical
+bifunctorial isomorphisms (called adjunction isomorphisms):
+\hypertarget{sga4.exp.IV.equation.13.4.1}{}\begin{align*}
+\Hom_A(u^{\ast}N,M) &\simeq
+\Hom_{A'}(N,u_{\ast}M){\quoi},\tag{13.4.1}\\
+u_{\ast}\scrHom_A(u^{\ast}N,M) &\simeq
+\scrHom_{A'}(N,u_{\ast}M){\quoi}.\tag{13.4.2}
+\end{align*}\hypertarget{sga4.exp.IV.equation.13.4.2}{}
+
+\item For a variable object $X$ of $E'$, there is a canonical
+isomorphism, functorial in $X$:
+\begin{equation*}
+u^{\ast}A'_X\xrightarrow{\sim} A_{u^{-1}(X)}{\quoi},\tag{13.4.3}
+\end{equation*}\etiquette[13.4.3]{IV.eq13.4.3}
+where $A'_X$ and $A_{u^{-1}(X)}$ denote the generated free Modules
+(\hyperref[IV.prop11.3.3]{11.3.3}).
+
+\item When $A'$ is commutative and the canonical morphism
+$u^{-1}A'\rightarrow A$ is central (\resp when the canonical
+morphism $u^{-1}A'\rightarrow A$ is an isomorphism), there is, for a
+variable right $A'$-Module $M$ and a variable left $A'$-Module $N$,
+a canonical bifunctorial isomorphism:
+\hypertarget{sga4.exp.IV.equation.13.4.4}{}\begin{align*}
+u^{\ast}M\otimes_A u^{\ast}N &\simeq
+u^{\ast}(M\otimes_{A'}N)\tag{13.4.4}\\
+u^{\ast}M\otimes_A u^{\ast}N &\simeq
+u^{-1}(M\otimes_{A'}N){\quoi}.\tag*{(\resp (13.4.5))}
+\end{align*}\hypertarget{sga4.exp.IV.equation.13.4.5}{}
+\end{enumerate}
+\end{enonce*}
+
+First, there is a canonical isomorphism
+$\Hom_A(u^{\ast}N,M)\simeq \Hom_{u^{-1}A'}(u^{-1}N,M)$
+(\sisi{\hyperref[IV.cor12.12]{12.12}}{\hyperref[IV.prop12.14]{12.14}}),
+and then an isomorphism
+$\Hom_{u^{-1}A'}(u^{-1}N,M)\simeq
+\Hom_{A'}(N,u_{\ast}M)$
+(\hyperrefext[III][III.prop1.7]{1.7}); this gives \hyperlink{sga4.exp.IV.equation.13.4.1}{(13.4.1)}. Let us
+exhibit the isomorphism \hyperlink{sga4.exp.IV.equation.13.4.2}{(13.4.2)}. For every object $X$ of $E'$, there
+is the following sequence of functorial isomorphisms:
+\begin{alignat*}{3}
+& \Hom_{E'}(X,u_{\ast}\scrHom_A(u^{\ast}N,M))\simeq && \Hom(
+u^{-1}X,
+ \scrHom_A(u^{\ast}N,M)) &\quad& \text{(adjunction){\quoi},}\\
+&\Hom_A(u^{\ast}N,\scrHom_E(u^{-1}X,M)) \simeq &&\qquad ''\qquad ''\qquad
+''\qquad '' && (\hyperref[IV.prop12.1]{12.1}){\quoi},\\
+& \Hom_A(u^{\ast}N,\scrHom_E(u^{-1}X,M))\simeq &&\Hom_{A'}(N,
+u_{\ast}\scrHom_E(u^{-1}X,M)) && \hyperlink{sga4.exp.IV.equation.13.4.1}{(13.4.1)}{\quoi},\\
+& \Hom_{A'}(N,\scrHom_{E'}(X,u_{\ast}M))\simeq &&\qquad ''\qquad ''\qquad
+ ''\qquad '' && \eqhyperref[IV.eq10.3.1]{10.3.1}{\quoi},\\
+& \qquad ''\qquad ''\qquad ''\qquad '' \simeq &&
+ \Hom_{E'}(X,\scrHom_{A'}(N,u_{\ast}M)) &&
+ (\hyperref[IV.prop12.1]{12.1}){\quoi}.
+\end{alignat*}
+Formula \hyperlink{sga4.exp.IV.equation.13.4.5}{(13.4.5)}\pageoriginale then follows from formula \hyperlink{sga4.exp.IV.equation.13.4.2}{(13.4.2)}
+by adjunction (the definition of the tensor product
+(\hyperref[IV.prop12.7]{12.7})). Formula \hyperlink{sga4.exp.IV.equation.13.4.4}{(13.4.4)} follows from
+\hyperlink{sga4.exp.IV.equation.13.4.5}{(13.4.5)}, using the commutativity of the tensor product when the
+base ring is commutative (\hyperref[IV.subsec12.8]{12.8}). Finally,
+to prove \eqhyperref[IV.eq13.4.3]{13.4.3}, consider the sequence of
+isomorphisms
+\begin{alignat*}{3}
+& \Hom_A(u^{\ast}A'_X,M) && \simeq\Hom_{A'}(A'_X,u_{\ast}M)
+&\quad& \hyperlink{sga4.exp.IV.equation.13.4.1}{(13.4.1)}{\quoi},\\
+& \Hom_{E'}(X,u_{\ast}M) && \simeq\quad ''\qquad ''\qquad ''&&
+(\hyperref[IV.prop11.3.3]{11.3.3}){\quoi},\\
+&\quad ''\qquad ''\qquad ''&& \simeq\Hom_E(u^{-1}X,M) &&
+\text{(adjunction)}{\quoi},\\
+&\Hom_A(A_{u^{-1}X},M) &&\simeq\quad ''\qquad ''\qquad ''&&
+(\hyperref[IV.prop11.3.3]{11.3.3}){\quoi}.
+\end{alignat*}
+
+\begin{enonce*}{Corollary 13.5}\etiquette[13.5]{IV.cor13.5}
+Let $(E,A)$ be a ringed topos, let $x:P\rightarrow E$ be a point of
+$E$, and let $F\mapsto F_x$ be the associated fiber functor
+(\hyperref[IV.def6.1]{6.1}). The fiber functor at $x$ carries the
+tensor product of $A$-Modules to the (ordinary) tensor product of
+$A_x$-modules.
+\end{enonce*}
+
+The tensor product in $P$ is the ordinary tensor product of modules
+($P$, the punctual topos, is the category of sets). The assertion
+therefore follows from \hyperlink{sga4.exp.IV.equation.13.4.4}{(13.4.4)}.
+
+\begin{enonce*}{Corollary 13.6}\etiquette[13.6]{IV.cor13.6}
+Let $u:(E,A)\rightarrow(E',A')$ be a morphism of ringed topoi. The
+direct-image functor $u_{\ast}$ for right or left Modules commutes
+with projective limits and, in particular, is left exact. The
+inverse-image functor $u^{\ast}$ for right or left Modules commutes
+with inductive limits and, in particular, is right exact.
+\end{enonce*}
+
+This follows from formula \hyperlink{sga4.exp.IV.equation.13.4.1}{(13.4.1)}
+(\hyperrefext[I][I.prop2.11]{2.11}).
+
+\setcounter{subsection}{6}
+\subsection{}\etiquette[13.7]{IV.subsec13.7}
+Note that the inverse-image functor $u^{\ast}$ for Modules is not, in
+general, exact, whereas the set-theoretic inverse-image functor
+$u^{-1}$ is exact. The exactness of $u^{\ast}$ can nevertheless be
+asserted when the canonical morphism $u^{-1}A'\rightarrow A$ is flat
+(on the right\pageoriginale or on the left) (V \hyperref[V.def1.8]{1.8}). This is so, in
+particular, when the canonical morphism $u^{-1}A'\rightarrow A$ is an
+isomorphism.
+
+\subsection{}\etiquette[13.8]{IV.subsec13.8}
+Let $C$ be a $𝒰$-site and let $A'$ be a presheaf of rings on $C$;
+denote its associated sheaf by $A$. The category of presheaves of
+$A'$-modules which are sheaves is equivalent to the category of
+$A$-Modules. The notation $\Hom_{A'}(M,N)$ is sometimes used for the
+group $\Hom_A(M,N)$ (\hyperref[IV.subsubsec11.1.2]{11.1.2}).
+Likewise, and by abuse, the notations $\scrHom_{A'}(M,N)$ and
+$M\otimes_{A'}N$ are used for the sheaves $\scrHom_A(M,N)$ and
+$M\otimes_A N$. When $A'=k_E$ is the constant presheaf defined by an
+ordinary ring $k$, we also write $\scrHom_k$, $\otimes_k$ instead of
+$\scrHom_{k_E}$, $\otimes_{k_E}$.
+
+\begin{enonce*}[remark]{Exercise 13.9}\etiquette[13.9]{IV.exer13.9}
+\emph{Locally ringed topoi} (\cf [\hyperref[IV.sec9]{9}] for further
+information in the direction considered below).
+
+Let $(E,{\Oo}_E)$ be a commutatively ringed topos. For $X\in \ob E$
+and $f\in {\Oo}_E(X)$, let $X_f$ be the largest subobject of $X$ on
+which $f$ is invertible.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Show that, for $X'\in \ob E_{/X}$, $f_{X'}$ is invertible if
+and only if the structural morphism $X'\rightarrow X$ factors through
+$X_f$, and that, for $f,g\in {\Oo}_E(X)$, one has
+$$
+X_{fg}=X_f\cap X_g{\quoi}.
+$$
+
+\item Show that the following conditions (i) through (iii) are
+equivalent:
+\begin{enumerate}
+\renewcommand{\theenumii}{\roman{enumii}}
+\renewcommand{\labelenumii}{(\theenumii)}
+\item For $X\in \ob E$ and $f,g\in {\Oo}_E(X)$, one has
+$$
+X_{f+g}\subset \Sup(X_f,X_g).
+$$
+
+\item For $X\in \ob E$ and $f,g\in {\Oo}_E(X)$ such that $f+g$ is
+invertible, one has $X=\Sup(X_f,X_g)$.
+
+\item For $X\in \ob E$ and $f\in {\Oo}_E(X)$, one has
+$$
+X=\Sup(X_f,X_{1-f}){\quoi}.
+$$
+
+Show that these conditions imply the following condition (iv),
+and\pageoriginale are equivalent to it if $E$ has enough points:
+
+\item For every point $p$ of $E$, the fiber ring ${\Oo}_{E,p}$ is a
+\emph{local ring}.
+\end{enumerate}
+
+When the equivalent conditions (i) through (iii) hold, $(E,{\Oo}_E)$
+is said to be a \emph{locally ringed topos}; likewise, a ringed site
+is said to be a \emph{locally ringed site} if the corresponding
+ringed topos is a locally ringed topos.
+
+\item Let $(E,{\Oo}_E)$ and $(E',{\Oo}_{E'})$ be two locally ringed
+topoi, and let $f$ be a morphism of ringed topoi from the first to the
+second. Show that the following condition (i) implies condition (ii),
+and is equivalent to it if $E$ has enough points:
+\begin{enumerate}
+\renewcommand{\theenumii}{\roman{enumii}}
+\renewcommand{\labelenumii}{(\theenumii)}
+\item For every $X'\in \ob E'$ and $s'\in {\Oo}_{E'}(X')$, setting
+$X=f^{-1}(X')$ and $s=f^{\ast}(s')$, one has
+$$
+X_s=f^{-1}(X'_{s'}){\quoi}.
+$$
+
+\item For every point $p$ of $E$, setting $p'=f(p)$, the natural
+homomorphism on the fibers
+$$
+{\Oo}_{E',p'}\longrightarrow {\Oo}_{E,p}
+$$
+is a \emph{local} homomorphism of local rings.
+\end{enumerate}
+
+When condition (i) holds, $f$ is said to be a \emph{morphism of
+locally ringed topoi}, or also an \emph{admissible morphism of locally
+ringed topoi} if there is a risk of confusion. We denote by
+$\Hhomtoplocan(E,E')$ the full subcategory of the category
+$\Hhomtopan(E,E')$ of all morphisms of ringed topoi from $E$ to $E'$
+defined by the admissible morphisms from $E$ to $E'$.
+
+\item Suppose that $(E,{\Oo}_E)$ is the ringed topos associated with
+a ringed topological space $(X,{\Oo}_X)$
+(\hyperref[IV.subsec2.1]{2.1}). Show that $(E,{\Oo}_E)$ is locally
+ringed if and only if $(X,{\Oo}_X)$ is locally ringed, \ie if and
+only if, for every $x\in X$, the fiber ${\Oo}_{X,x}$ is a local
+ring. (Note that in criterion (iv) of b), it suffices to take $p$ in
+a \emph{conservative} family of points of $E$.) Let\pageoriginale
+$f:(X,{\Oo}_X)\rightarrow(X',{\Oo}_{X'})$ be a morphism of ringed
+spaces, where ${\Oo}_X$ and ${\Oo}_{X'}$ are sheaves of local rings.
+Show that the corresponding morphism of ringed topoi
+$\Top(X,{\Oo}_X)\rightarrow \Top(X',{\Oo}_{X'})$ is admissible if and
+only if the same is true of the morphism $f$, \ie if and only if,
+for every $x\in X$,
+$${\Oo}_{X',f(x)}\longrightarrow {\Oo}_{X,x}$$
+is a \emph{local} homomorphism of local rings.
+
+\item Let $(E,{\Oo}_E)$ and $(E',{\Oo}_{E'})$ be two locally ringed
+topoi such that $E$ has enough points and $(E',{\Oo}_{E'})$ is
+equivalent to the ringed topos defined by a \emph{scheme}
+$(X',{\Oo}_{X'})$; prove that the category $\Hhomtoplocan(E,E')$ is
+equivalent to a \emph{discrete} category, \ie that it is a rigid
+groupoid (every morphism is an isomorphism, and the automorphism
+groups of the objects are the trivial groups).
+
+\noindent (Hint: reduce to the case where $(E,{\Oo}_E)$ is the
+punctual topos ringed by a field.) Recall, on the other hand, that
+$\Hhomtop(E,E')$ is not in general equivalent to a discrete
+category, even if $E$ and $E'$ are topoi defined by schemes (and even
+if $E$ is the punctual topos), \cf
+\hyperref[IV.subsubsec4.2.3]{4.2.3}.
+
+\item Let $E$ be a locally ringed topos, and let $P$ be the ringed
+topos defined by the ringed space $\Spec k$, where $k$ is a field.
+Show that the admissible morphisms of locally ringed topoi
+$P\rightarrow E$ correspond to pairs $(p,u)$ consisting of a point
+$p$ of $E$ and an injection of $k(p)$ into $k$, where $k(p)$ is the
+residue field of the local ring ${\Oo}_{E,p}$. Generalize this to a
+statement exhibiting the admissible morphisms from a punctual
+locally ringed topos to $E$ (generalizing EGA I 2.4.4).
+
+A \emph{geometric point of a locally ringed topos} $E$ is any
+admissible morphism into $E$ from the locally ringed topos defined by
+a ringed space of the form $\Spec(k)$, where $k$ is an
+\emph{algebraically closed} field. Define the \emph{category of
+geometric points of} $E$ (with the understanding that the
+corresponding fields $k$ belong to $𝒰$), denoted by $\Pptgeom(E)$,
+and a canonical functor $\Pptgeom(E)\rightarrow \Ppoint(E)$. Show
+that this functor is faithful if\pageoriginale and only if $E$ has no
+point, \ie $\Ppoint(E)$ is the empty category.
+
+\item Let $E$ be a $𝒰$-topos and let $𝒱$ be a universe such that
+$𝒰\in 𝒱$. Define a 2-category
+$(𝒱\text{-}𝒰\text{-}\Top)_{/E}$ in terms of the object $E$ of the
+2-category $(𝒱\text{-}𝒰\text{-}\Top)$
+(\hyperref[IV.subsubsec3.3.1]{3.3.1}), following
+\hyperref[IV.exer5.14]{5.14} a). When $E$ is ringed by a Ring $A$,
+define similarly a 2-category
+$(𝒱\text{-}𝒰\text{-}\text{Topan})_{/E}$, and when $E$ is locally
+ringed, use the notion of admissible morphism (\cf c)) to define a
+2-category
+$(𝒱\text{-}𝒰\text{-}\text{Topanloc})_{/E}$ having $\Pptgeom(E)$
+(\cf f)) as a full subcategory.
+\end{enumerate}
+\end{enonce*}

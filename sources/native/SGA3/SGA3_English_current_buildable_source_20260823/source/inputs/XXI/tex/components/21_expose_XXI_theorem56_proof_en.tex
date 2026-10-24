@@ -1,0 +1,108 @@
+\begin{proof}
+Put\footnote{Editors' note: In what follows, the original argument has
+been expanded, and equality \((1)\) has been corrected.}
+\[
+ M(w)
+ =\operatorname{Card}\bigl(R^+\cap w^{-1}(-R^+)\bigr)
+ =\operatorname{Card}\{\gamma\in R^+\mid w(\gamma)\in-R^+\}.
+\]
+If \(M(w)=0\), then \(w(R^+)=R^+\), so
+\(w=1\) by Corollary~\ref{sga3:XXI:5.4}; the theorem is then
+trivial: \(m=0\), and assertions (iii)--(v) are empty.
+
+We argue by induction on \(M(w)\). Suppose \(M(w)>0\). There exists
+\(\beta_0\in\Delta\) such that \(w(\beta_0)\in-R^+\). Put
+\(\alpha_0=\alpha\), and consider
+\[
+ A=w^{-1}(R^+)\cap R_{\alpha_0,\beta_0}.
+\]
+This is a system of positive roots of
+\(R_{\alpha_0,\beta_0}\). Hence there exists
+\(w_0\in W_{\alpha_0,\beta_0}\) such that
+\[
+ w_0^{-1}\bigl(R^+_{\alpha_0,\beta_0}\bigr)=A.
+\]
+Put \(w'=ww_0^{-1}\). Lemma~\ref{sga3:XXI:3.4.9} gives
+\[
+ R^+-R^+_{\alpha_0,\beta_0}
+ =
+ w_0\bigl(R^+-R^+_{\alpha_0,\beta_0}\bigr),
+\]
+and therefore
+\begin{equation}
+\tag{1}
+\label{sga3:XXI:5.6:outside-rank-two}
+\begin{split}
+ &(R^+-R^+_{\alpha_0,\beta_0})\cap w^{-1}(-R^+)\\
+ &\qquad=
+ w_0\Bigl((R^+-R^+_{\alpha_0,\beta_0})
+             \cap w'^{-1}(-R^+)\Bigr).
+\end{split}
+\end{equation}
+On the other hand,
+\begin{equation}
+\tag{2}
+\label{sga3:XXI:5.6:beta-negative}
+ \beta_0\in
+ R^+_{\alpha_0,\beta_0}\cap w^{-1}(-R^+).
+\end{equation}
+Since
+\(w_0(R_{\alpha_0,\beta_0})=R_{\alpha_0,\beta_0}\), one has
+\[
+ w_0(-A)
+ =R_{\alpha_0,\beta_0}\cap w'^{-1}(-R^+),
+\]
+and hence
+\begin{equation}
+\tag{\(2'\)}
+\label{sga3:XXI:5.6:rank-two-empty}
+\begin{split}
+ R^+_{\alpha_0,\beta_0}\cap w'^{-1}(-R^+)
+ &=
+ R^+_{\alpha_0,\beta_0}\cap w_0(-A)\\
+ &=
+ R^+_{\alpha_0,\beta_0}\cap(-R^+_{\alpha_0,\beta_0})
+ =\varnothing.
+\end{split}
+\end{equation}
+It follows from \eqref{sga3:XXI:5.6:outside-rank-two},
+\eqref{sga3:XXI:5.6:beta-negative}, and
+\eqref{sga3:XXI:5.6:rank-two-empty} that
+\[
+ M(w')<M(w).
+\]
+
+Put \(\alpha_1=w_0(\alpha_0)\). We show that
+\(\alpha_1\in\Delta\), or equivalently that
+\(\alpha_0\in w_0^{-1}(\Delta)\). Since
+\(w(\alpha_0)\in\Delta\), we have
+\[
+ \alpha_0\in
+ w^{-1}(\Delta)\cap R_{\alpha_0,\beta_0}.
+\]
+Thus \(\alpha_0\) is a simple root of
+\[
+ A
+ =w^{-1}(R^+)\cap R_{\alpha_0,\beta_0}
+ =w_0^{-1}(R^+_{\alpha_0,\beta_0}),
+\]
+and consequently belongs to
+\[
+ w_0^{-1}\bigl(\Delta\cap R^+_{\alpha_0,\beta_0}\bigr)
+ =
+ w_0^{-1}\{\alpha_0,\beta_0\}
+\]
+by Lemma~\ref{sga3:XXI:3.4.8}. Hence
+\(\alpha_1=w_0(\alpha_0)\) equals \(\alpha_0\) or \(\beta_0\).
+If \(\alpha_1\ne\alpha_0\), then
+\(\alpha_1=\beta_0\) and
+\(w_0\in W_{\alpha_0,\alpha_1}\).
+
+Finally,
+\[
+ \beta=w'(\alpha_1)
+ \qquad\text{and}\qquad
+ M(w')<M(w),
+\]
+so the induction hypothesis completes the proof.
+\end{proof}

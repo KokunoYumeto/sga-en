@@ -1,0 +1,226 @@
+
+\medskip
+\phantomsection\label{lem:sga3-VIB-5.6.1}%
+\noindent\textbf{Lemma 5.6.1.---}
+\emph{Let \(S\) be a scheme, let \(f:X\to S\) be an \(S\)-scheme
+locally of finite presentation, let \(s\) be a point of \(S\), and
+let \(x\) be a closed point of \(X_s\). Suppose that \(f\) is
+universally open at the generic point \(z\) of an irreducible
+component \(Z\) of \(X_s\) containing \(x\), and that}
+\[
+  \dim_x(X_s)=\dim Z.
+\]
+\emph{Then there exists a commutative diagram}
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-5.6.1-statement}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    X \arrow[r,"f"] &
+    S \\
+    S''
+      \arrow[u,"h"]
+      \arrow[r,"\pi"]
+      \arrow[ur,"\phi"] &
+    S' \arrow[u,"w"']
+  \end{tikzcd}\enspace,
+\end{center}
+\emph{where \(S'\) is affine, \(w\) is \'etale, \(\pi\) is finite,
+surjective, and of finite presentation, and
+\(\phi^{-1}(s)\) consists of a single point \(s''\), such that
+\(h(s'')=x\) and \(\kappa(s'')=\kappa(x)\).}%
+\footnote{\label{note:sga3-VIB-41}Editor's note: consequently,
+\(h\) induces a section \(\sigma\) of
+\(X\times_S S''\to S''\) such that \(\sigma(s'')\) lies above
+\(x\); compare EGA~IV\(_3\), 14.5.10.}
+
+\emph{Proof.}
+First, we may suppose that \(S=\operatorname{Spec}(A)\) and
+\(X=\operatorname{Spec}(B)\), where \(B\) is an \(A\)-algebra of
+finite presentation. Let \(\mathfrak p\) and \(\mathfrak q\) be
+the prime ideals of \(A\) and \(B\) corresponding respectively to
+\(s\) and \(x\), so that
+\[
+  \mathfrak p=A\cap\mathfrak q.
+\]
+Set \(n=\dim_x(X_s)\), and choose \(t_1,\ldots,t_n\in B\) whose
+images in
+\[
+  \mathcal O_{X_s,x}=B_{\mathfrak q}/\mathfrak p B_{\mathfrak q}
+\]
+form a system of parameters. Then
+\[
+  \mathcal O_{X_s,x}/(t_1,\ldots,t_n)
+\]
+is finite-dimensional over \(\kappa(x)\), and hence also over
+\(\kappa(s)\), because \(x\) is a closed point of the algebraic
+\(\kappa(s)\)-scheme \(X_s\). Consequently, the \(S\)-morphism
+\[
+  u:X\longrightarrow\mathbb A^n_S
+    =\operatorname{Spec}\bigl(A[T_1,\ldots,T_n]\bigr),
+  \qquad T_i\longmapsto t_i,
+\]
+is of finite presentation, \(x\) is isolated in the fiber
+\(u^{-1}(u(x))\), and
+\[
+  u(x)=\tau_0(s),
+\]
+where \(\tau_0:S\to\mathbb A^n_S\) denotes the zero section of
+\(\mathbb A^n_S\to S\), corresponding to the \(A\)-algebra
+homomorphism
+\[
+  A[T_1,\ldots,T_n]\longrightarrow A,\qquad T_i\longmapsto0.
+\]
+The set of points of \(X\) that are isolated in their fibers over
+\(\mathbb A^n_S\) is open (EGA~IV\(_3\), 13.1.4). Thus, after
+shrinking \(X\), we may suppose that \(u\) is quasi-finite and
+that \(u^{-1}(u(x))=\{x\}\). By \hyperref[lem:sga3-VIB-5.6.1.0]{Lemma 5.6.1.0}, \(u\) is
+universally open at \(x\).
+
+Let
+\[
+  B_0=B/(t_1,\ldots,t_n),\qquad
+  X_0=X\times_{\mathbb A^n_S}\tau_0(S)
+      =\operatorname{Spec}(B_0),
+\]
+and let \(u_0:X_0\to S\) be obtained from \(u\) by the base change
+\(\tau_0:S\hookrightarrow\mathbb A^n_S\). Then \(u_0\) is
+quasi-finite and of finite presentation, is universally open at
+\(x\), and \(x\) is the unique point of \(X_0\) above \(s\).
+
+Let \(A'\) be the henselization of the local ring
+\[
+  A_{\mathfrak p}=\mathcal O_{S,s},
+\]
+and set
+\[
+  S'=\operatorname{Spec}(A'),\qquad
+  B'_0=B_0\otimes_A A',\qquad
+  X'_0=X_0\times_S S'=\operatorname{Spec}(B'_0).
+\]
+The closed point \(s'\) of \(S'\) is the unique point of \(S'\)
+above \(s\), and \(\kappa(s')=\kappa(s)\). The scheme \(X'_0\)
+has a unique point \(x'\) above \(s'\); moreover
+\(\kappa(x')=\kappa(x)\), and \(x'\) is also the unique point of
+\(X'_0\) above both \(s\) and \(x\). Since \(A'\) is henselian,
+EGA~IV\(_4\), 18.5.11 gives a disjoint decomposition into open and
+closed parts
+\[
+  \tag{*}\label{sga3:vi:lemma:5-6-1:equation:star}
+  X'_0=V\amalg W,
+  \qquad
+  V=\operatorname{Spec}(\mathcal O_{X'_0,x'}).
+\]
+The local ring \(\mathcal O_{X'_0,x'}\) is finite and of finite
+presentation over \(A'\). Hence the restriction \(\pi\) of
+\(u'_0\) to \(V\) is finite and of finite presentation. Moreover,
+because \(u'_0:X'_0\to S'\) is open at \(x'\),
+\[
+  u'_0(V)=\operatorname{Spec}(\mathcal O_{S',s'})=S',
+\]
+so \(\pi\) is surjective.
+
+This proves the assertion when \(S=S'\). In general, \(A'\) is
+the filtered direct limit of \(A\)-subalgebras \(A_i\) that are
+\'etale over \(A\) and for which
+\[
+  S_i=\operatorname{Spec}(A_i)
+\]
+has a unique point \(s_i\) above \(s\), with
+\(\kappa(s_i)=\kappa(s)\). We have
+\[
+  B'_0=\varinjlim_i B_i,
+  \qquad
+  B_i=B_0\otimes_A A_i.
+\]
+Set
+\[
+  X_i=\operatorname{Spec}(B_i)=X_0\times_S S_i,
+  \qquad
+  C=\mathcal O_{X'_0,x'}.
+\]
+By \((*)\), one has
+\[
+  C\simeq B'_0/fB'_0
+\]
+for some idempotent \(f\in B'_0\). There are an index \(i\) and
+an element \(f_i\in B_i\) whose image in \(B'_0\) is \(f\). Put
+\[
+  C_i=B_i/f_iB_i,\qquad V_i=\operatorname{Spec}(C_i).
+\]
+Then
+\[
+  C=C_i\otimes_{A_i}A',
+  \qquad
+  V=V_i\times_{S_i}S',
+\]
+and \(C_i\) is an \(A_i\)-algebra of finite presentation, since
+the same is true of \(B_i\). Consequently, the morphisms
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-5.6.1-limit-source}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    X'_0 \arrow[dr,"u'_0"] &
+    {} \\
+    V
+      \arrow[u,"h'"]
+      \arrow[r,"\pi"] &
+    S'
+  \end{tikzcd}
+\end{center}
+arise, by the base change \(S'\to S_i\), from morphisms of finite
+presentation
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-5.6.1-limit-descent}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    X_i \arrow[dr,"u_i"] &
+    {} \\
+    V_i
+      \arrow[u,"h_i"]
+      \arrow[r,"\pi_i"] &
+    S_i
+  \end{tikzcd}
+\end{center}
+
+For every \(j\geq i\), let
+\[
+  V_j=V_i\times_{S_i}S_j
+\]
+and let \(\pi_j:V_j\to S_j\) be the morphism of finite
+presentation obtained from \(\pi_i\) by base change. Since
+\(\pi:V\to S'\) is finite and surjective, EGA~IV\(_2\), 8.10.5
+shows that, for some \(j\), the morphism
+\(\pi_j:V_j\to S_j\) is finite and surjective. Then
+\(w:S_j\to S\) is affine and \'etale, \(S_j\) has a unique point
+\(s_j\) above \(s\), and \(V_j\) has a unique point \(x_j\) above
+\(s_j\), since \(x'\) is the unique point of
+\[
+  V=V_j\times_{S_j}S'
+\]
+above \(s'\):
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-5.6.1-final-composite}%
+  {\small
+  \begin{tikzcd}[row sep=large,column sep=large]
+    X_j
+      \arrow[r]
+      \arrow[dr,"u_j"] &
+    X_0
+      \arrow[r]
+      \arrow[dr,"u_0"] &
+    X
+      \arrow[d,"f"']
+      \arrow[dr,"u"] &
+    {} \\
+    V_j
+      \arrow[u,"h_j"]
+      \arrow[r,"\pi_j"] &
+    S_j
+      \arrow[r,"w"] &
+    S
+      \arrow[r,"\tau_0"] &
+    \mathbb A^n_S
+  \end{tikzcd}}
+\end{center}
+Thus \(x_j\) is the unique point of \(V_j\) above \(s\), its image
+under \(V_j\to X_j\to X\) is \(x\), and
+\[
+  \kappa(x_j)=\kappa(x).
+\]

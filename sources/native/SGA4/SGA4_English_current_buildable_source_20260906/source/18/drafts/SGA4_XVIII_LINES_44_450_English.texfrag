@@ -1,0 +1,389 @@
+\setcounter{pageoriginal}{480}
+\newcommand{\acorriger}[1]{\nde{#1}}
+
+\setcounter{section}{-1}
+\section{Introduction}\etiquette[0]{XVIII.sec0}\pageoriginale
+
+\subsection{}\etiquette[0.1]{XVIII.subsec0.1}
+The present exposé is devoted to Poincaré duality. This duality is
+constructed on the model of \textsc{Verdier} [1], who treats the case of
+locally compact Hausdorff topological spaces. We show a priori that the
+functor $Rf_{!}$ of Exposé XVII admits a right adjoint $Rf^{!}$ and
+establish many of its properties, before computing it more explicitly
+in the case of smooth morphisms.
+
+The possibility of such a construction seems to rest on the following
+properties of the functor $Rf_{!}$:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item For the existence of an adjoint $Rf^{!}$ and its formal
+  properties:
+\begin{itemize}
+\item[(I)] the functor $Rf_{!}$ commutes with base change;
+
+\item[(II)] the functors $R^{i}f_{!}$ commute with filtered inductive
+  limits; they vanish for sufficiently large $i$;
+
+\item[(III)] the functor $Rf_{!}$ can be computed ``at the level of
+  complexes'', \ie starting from a functor between categories of
+  complexes.
+\end{itemize}
+
+\item For the computation of this adjoint when $f$ is smooth:
+\begin{itemize}
+\item[(IV)] the computation of $Rf_{!}((\ZZ/n\ZZ)_{U})$ for
+  ``small'' $U$.
+\end{itemize}
+\end{enumerate}
+
+\subsection{}\etiquette[0.2]{XVIII.subsec0.2}
+In \hyperref[XVIII.sec3]{\S 3} nᵒ 1, which is independent of \S \hyperref[XVIII.sec1]{\S 1}, 2, we
+construct the functor $Rf^{!}$; constructions specific to the situation
+are used there, rather than only (I), (II), and (III). This makes this
+nᵒ rather unpleasant; the author confesses that he did not
+always fully understand what was happening.
+
+\S \hyperref[XVIII.sec2]{2} is devoted to point (IV); it is purely formal
+from\pageoriginale \hyperref[XVIII.sec1]{\S 1}, where the cohomology of curves is studied.
+
+In \S \hyperref[XVIII.sec1]{1}, we prove substantially more than is needed for
+\S \hyperref[XVIII.sec2]{2}, also studying the case of continuous
+coefficients. This section was profoundly influenced by \textsc{Serre}
+\cite{sga4.exp.XVIII.bib.6}. The points useful in what follows are:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item nᵒ \hyperref[XVIII.subsec1.1]{1.1}, devoted to the trace morphism in the
+  case of curves, and generalized in \hyperref[XVIII.thm2.9]{2.9};
+
+\item the vanishing theorem \hyperref[XVIII.lemfond1.6.9]{1.6.9}. A reader willing to accept a
+  transcendental argument may read nᵒ \hyperref[XVIII.subsec1.6]{1.6}, beginning
+  with \hyperref[XVIII.lem1.6.6]{1.6.6} (2\textsuperscript{nd} proof), independently of nᵒ \hyperref[XVIII.subsec1.2]{1.2}
+  to \hyperref[XVIII.subsec1.5]{1.5}\nde{On a first reading, one cannot too strongly recommend
+  following this route: after $\S$\hyperref[XVIII.subsec1.1]{1.1}, proceed
+  directly to $\S$\hyperref[XVIII.sec2]{2} and $\S$\hyperref[XVIII.sec3]{3}.}.
+  The essential ingredient in \hyperref[XVIII.lemfond1.6.9]{1.6.9} is either
+  form of Poincaré duality for smooth curves over an algebraically
+  closed field, together with the acyclicity lemma \hyperrefext[XV][XV.lem2.6]{2.6} (a preliminary
+  to the smooth base-change theorem \hyperrefext[XVI][XVI.thm1.1]{1.1}). Its conclusion is
+  generalized in \hyperref[XVIII.thm2.14]{2.14}.
+\end{enumerate}
+
+Number \hyperref[XVIII.subsec3.2]{3.2} collects the consequences of \S
+\hyperref[XVIII.sec2]{2}.
+
+\subsection{}\etiquette[0.3]{XVIII.subsec0.3}
+\textsc{Verdier}'s method in Poincaré duality makes it possible to define the
+functor $Rf^{!}$ for compactifiable $f$. The price of this generality is
+that the compatibilities to be verified are unfamiliar and sometimes,
+even for the most trivial ones, such as \hyperref[XVIII.lem3.2.3]{3.2.3}, require
+outlandish proofs. The author admits that he has not proved as many
+of them as he should have.
+
+An interested reader will have no difficulty in extending, using the
+appendix to Exposé XVII, the definition of $Rf^{!}$ to separated
+morphisms of finite type whose target is a coherent scheme (\ie a
+quasi-compact quasi-separated scheme).
+
+\subsection{}\etiquette[0.4]{XVIII.subsec0.4}
+The main result \hyperref[XVIII.thm3.2.5]{3.2.5} is stated in concrete terms that
+would make it possible to return formally to the viewpoint taken in the
+oral seminar, where the functor $Rf^{!}$ was defined only for\pageoriginale
+smoothable morphisms, by means of a factorization through a smooth
+morphism and an immersion. An outline of the proof from the oral
+seminar can be found in \textsc{Verdier} \cite{sga4.exp.XVIII.bib.8}.
+
+\section{Cohomology of curves}\etiquette[1]{XVIII.sec1}\pageoriginale
+
+\subsection{The trace morphism}\etiquette[1.1]{XVIII.subsec1.1}
+
+\subsubsection{}\etiquette[1.1.1]{XVIII.subsubsec1.1.1}
+Let $n$ be an integer $\geq 1$ and let $X$ be a scheme on which $n$ is
+invertible. The sheaf $𝛍_n$ (IX \hyperref[IX.eq3.1]{3.1}) on $X$ is then a sheaf of modules
+locally free of rank 1 over the constant sheaf of rings $\ZZ/n$.
+For $i\in \ZZ$, we denote by $\ZZ/n(i)$ its
+$i^{\text{\rm th}}$ tensor power:
+\begin{equation*}
+\ZZ/n(i)=\Hhom(\ZZ/n,\GG_{m})^{\otimes
+    i}{\quoi}.\tag{1.1.1.1}
+\end{equation*}\etiquette[1.1.1.1]{XVIII.eq1.1.1.1}
+
+If $n=dn'$, exponentiation by $d$ gives an isomorphism
+$$
+𝛍_n\otimes_{\ZZ/n}\ZZ/n'\xrightarrow{\sim}𝛍_{n'},
+$$
+and hence isomorphisms, called canonical:
+\begin{equation*}
+\ZZ/n(i)\otimes_{\ZZ/n}\ZZ/n'\xrightarrow{\sim} \ZZ/n'(i){\quoi}.\tag{1.1.1.2}
+\end{equation*}\etiquette[1.1.1.2]{XVIII.eq1.1.1.2}
+
+If $F$ is an abelian sheaf such that $nF=0$, set
+\begin{equation*}
+F(i)=F\otimes_{\ZZ/n}\ZZ/n(i){\quoi}.\tag{1.1.1.3}
+\end{equation*}\etiquette[1.1.1.3]{XVIII.eq1.1.1.3}%
+If already $n'F=0$, the isomorphism \eqhyperref[XVIII.eq1.1.1.2]{1.1.1.2} allows us to identify
+$F\otimes_{\ZZ/n}\ZZ/n(i)$ with
+${F\otimes_{\ZZ/n'}\ZZ/n'(i)}$, so that $F(i)$ depends only
+on $F$ and not on the choice of $n$. More generally, if $F$ is a
+torsion sheaf prime to the residual characteristics of X
+(\hyperrefext[XVII][XVII.subsec0.13]{0.13}), and if ${}_{m}F$ is the kernel of multiplication
+by $m$ on $F$, we define $F(i)$ to be the inductive limit, as $m$ tends
+multiplicatively to infinity through the integers invertible on $X$:
+\begin{equation*}
+F(i)=\varinjlim_{m}{}_{m}F(i){\quoi}.\tag{1.1.1.4}
+\end{equation*}\etiquette[1.1.1.4]{XVIII.eq1.1.1.4}
+
+The functor $F\mapsto F(i)$ is exact. If $f:Y\rightarrow X$ is a
+morphism of schemes (\resp a quasi-compact quasi-separated morphism
+of schemes), and if $F$ is a torsion sheaf on $X$ (\resp on $Y$),
+prime\pageoriginale to the residual characteristics of $X$, then
+$f^{\ast}(F(i))\simeq(f^{\ast}F)(i)$ (\resp
+$(f_{\ast}F)(i)\simeq f_{\ast}(F(i))$). If $\mathcal{A}$ is a sheaf of
+rings on $X$, annihilated by an integer $n$ invertible on $X$, this
+extends to an exact functor $K\mapsto K(i)$ from $D(X,\mathcal{A})$ to
+$D(X,\mathcal{A})$. This functor commutes with inverse-image functors
+and direct-image functors.
+
+The functors $F\mapsto F(i)$ are sometimes called ``\emph{Tate twist}'' functors.
+
+\begin{enonce*}{Definition 1.1.2}\etiquette[1.1.2]{XVIII.def1.1.2}
+A \emph{flat curve} over a scheme $S$ is a flat, separated morphism
+$f:X\rightarrow S$ of finite presentation whose fibers are of pure
+dimension one.
+\end{enonce*}
+
+The expression ``of pure dimension one'' does not exclude the empty
+scheme. Contrary to \EGA II 7.4.2, a curve over a field is allowed here
+to be empty, but is required to be separated.
+
+When $S$ is the spectrum of a field, we shall simply speak of a curve
+over $S$; a curve over a field is quasi-projective\nde{In \EGA II
+7.4.10, this statement is proved only under the additional assumption
+that $X$ is normal, and it is announced (\EGA II 7.4.12) that a proof in
+the general case will appear in \EGA V, which has not been published.
+The reader may fill this gap as an exercise. In any case, this has no
+bearing on the construction of the trace morphism, since it can be
+carried out first locally (on quasi-projective open subschemes) and the
+trace morphisms can then be glued as in the proof of
+\hyperref[XVIII.prop1.1.6]{1.1.6}.}.
+
+\setcounter{subsubsection}{2}
+\subsubsection{}\etiquette[1.1.3]{XVIII.subsubsec1.1.3}
+Let $X$ be a curve over an algebraically closed field $k$ of
+characteristic exponent $p$ prime to an integer $n\geq 1$. First
+suppose that $X$ is reduced, and let $\bar{X}$ be a complete curve over
+$k$ in which $X$ is a dense \emph{open subscheme}.
+
+The complement $Y=\bar{X}-X$ is of dimension $0$. The exact cohomology
+sequence (\hyperrefext[XVII][XVII.eq5.1.16.3]{5.1.16.3}) therefore induces an isomorphism
+\begin{equation*}
+H^{2}_{c}(X,\ZZ/n(1))\xrightarrow{\sim} H^{2}(\bar{X},\ZZ/n(1)){\quoi}.\tag{1.1.3.1}
+\end{equation*}\etiquette[1.1.3.1]{XVIII.eq1.1.3.1}%
+We also have an isomorphism \hyperrefext[IX][IX.cor4.7]{4.7} (given by Kummer
+theory)
+\begin{equation*}
+H^{2}(\bar{X},\ZZ/n(1))=\Pic(\bar{X})/n=(\ZZ/n)^{c}\tag{1.1.3.2}
+\end{equation*}\etiquette[1.1.3.2]{XVIII.eq1.1.3.2}%
+where $c$ denotes the set of irreducible components of $X$, or of
+$\bar{X}$, which amounts to the same thing.
+
+If\pageoriginale $X$ is no longer necessarily reduced, and if $c$ is
+the set of its irreducible components, then for $i\in c$ let $n_{i}$
+denote the multiplicity of $X$ at the generic point $\eta_{i}$ of the
+$i^{\text{\rm th}}$ irreducible component of $X$:
+$$
+n_{i}=\lg(O_{X,\eta_{i}}){\quoi}.
+$$
+
+We know that the restriction map from $H^{2}_{c}(X,\ZZ/n(1))$ to
+$H^{2}_{c}(X_{\red}, \ZZ/n(1))$ is an isomorphism. Thus,
+via \eqhyperref[XVIII.eq1.1.3.1]{1.1.3.1} and \eqhyperref[XVIII.eq1.1.3.2]{1.1.3.2} applied to
+$X_{\text{\rm red}}$, there is a canonical isomorphism between
+$H^{2}_{c}(X,\ZZ/n(1))$ and $(\ZZ/n)^{c}$. We denote by $\Tr_{X}$,
+or simply by $\Tr$, the composite map
+\begin{equation*}
+\Tr:H^{2}_{c}(X,\ZZ/n(1))\xrightarrow{\sim}(\ZZ/n)^{c}\xrightarrow{t}\ZZ/n{\quoi},\tag{1.1.3.3}
+\end{equation*}\etiquette[1.1.3.3]{XVIII.eq1.1.3.3}%
+where
+$$
+t((a_{i})_{i\in c})=\sum n_{i}a_{i}{\quoi}.
+$$
+
+If $F$ is an abelian group annihilated by $n$, there is an
+isomorphism
+$$
+H^{2}_{c}(X,F(1))\mathop{\longleftrightarrow}^{\sim}F\otimes
+H^{2}_{c}(X,\ZZ/n(1))
+$$
+and hence, via \eqhyperref[XVIII.eq1.1.3.3]{1.1.3.3}, a \emph{trace morphism}
+\begin{equation*}
+\Tr:H^{2}_{c}(X,F(1))\longrightarrow F{\quoi}.\tag{1.1.3.4}
+\end{equation*}\etiquette[1.1.3.4]{XVIII.eq1.1.3.4}
+
+If $n=n'd$, the diagram
+$$\vcenter{\etiquette[1.1.3.5]{XVIII.eq1.1.3.5}
+\xymatrix@R=1.25cm{
+0  \ar[r] & 𝛍_n  \ar[r]\ar[d]_{x^d} & \GG_m \ar[d]_{x^d} \ar[r]^{x^n} & {\GG}_m 
+\ar[r] \ar@{=}[d]& 0\\
+0  \ar[r] & 𝛍_{n'}  \ar[r] & \GG_m  \ar[r]^{x^{n'}} & {\GG}_m 
+\ar[r] & 0
+}}\leqno{(1.1.3.5)}
+$$
+is commutative, and therefore so is the diagram
+$$\vcenter{\etiquette[1.1.3.6]{XVIII.eq1.1.3.6}
+  \xymatrix@C=2cm@R=1.25cm{
+H^{2}_c(X,\ZZ/n(1)) \ar[d] \ar[r]^-{\sim} & (\ZZ/n)^{c} \ar[d]\\
+H^{2}_c(X,\ZZ/n'(1)) \ar[r]^-{\sim}  & (\ZZ/n')^{c}
+}}\leqno{(1.1.3.6)}
+$$
+by\pageoriginale the definition in \hyperrefext[IX][IX.cor4.7]{4.7} of the isomorphism
+\eqhyperref[XVIII.eq1.1.3.2]{1.1.3.2}.
+
+The map \eqhyperref[XVIII.eq1.1.3.4]{1.1.3.4} thus depends only on $F$, and not on the choice
+of the integer $n$ prime to $p$ such that $nF=0$. By passage to the
+limit, we define it for every torsion abelian group $F$ prime to $p$.
+
+The following lemma follows immediately from the definitions.
+
+\begin{enonce*}{Lemma 1.1.4}\etiquette[1.1.4]{XVIII.lem1.1.4}
+Under the preceding hypotheses, if, for $i\in c$, $U_{i}$ is a nonempty
+open subscheme of $X$ contained in its $i^{\text{\rm th}}$ irreducible
+component, the diagram
+$$
+\xymatrix@R=1.5cm@C=1.25cm{
+\displaystyle{\mathop{\oplus}_{i\in c}} H^2_c(U_i, F(1))
+\ar[rr]^{\sim} \ar[rd]_{\displaystyle{\mathop{\oplus}_{i\in c}}
+  Tr_{U_i}}& & H^2_c(X,F(1))\ar[ld]^{Tr_X}\\
+ & F &
+}
+$$
+is commutative.
+\end{enonce*}
+
+\begin{enonce*}{Lemma 1.1.5}\etiquette[1.1.5]{XVIII.lem1.1.5}
+Let $X$ and $Y$ be two curves over an algebraically closed field $k$,
+let $u:X\rightarrow Y$ be a quasi-finite flat morphism, and let $n$ be
+an integer prime to the characteristic exponent $p$ of $k$.
+
+The following diagram, in which $\Tr_{u}$ is the map
+\emph{(\hyperrefext[XVII][XVII.thm6.2.3]{6.2.3}),} is then commutative:
+$$
+\xymatrix@R=1.5cm{
+  H^2_c(X,\ZZ/n(1)) \ar[rr]^{Tr_u} \ar[rd]_{Tr_X}&              & H^2_c(Y,\ZZ/n(1)) \ar[ld]^{Tr_Y}\\
+                         & \ZZ/n &. 
+}
+$$
+\end{enonce*}
+
+Lemma \hyperref[XVIII.lem1.1.4]{1.1.4} allows us to reduce to the case where $X$ and $Y$ are
+irreducible, with $X_{\text{\rm red}}$ and $Y_{\text{\rm red}}$ smooth
+as well. If $e$ (\resp $f$) is the multiplicity of $X$ (\resp $Y$) at
+the generic point, and if $e=df$, the triangles marked $+$ in the
+following diagram are commutative:
+$$
+\vcenter{\etiquette[1.1.5.1]{XVIII.eq1.1.5.1}
+\xymatrix@R=1.5cm{
+H^2_c(X,\ZZ/n(1))
+\ar[rr]^{\sim}_(.5){{\displaystyle\mathop{\phantom{a}}_{\displaystyle\mathop{{\phantom{a}}}_{{\displaystyle\mathop{+}}}}}}  \ar[dd]_{\Tr_u} \ar[rd]_{\Tr_X}& &
+H^2_c(X_{\red},\ZZ/n(1)) \ar[dd]^{d.\Tr_{u_{\red}}} \ar[ld]^{e.\Tr_{X_{\red}}}\\
+                               & \ZZ/n &\\
+H^2_c(Y,\ZZ/n(1)) \ar[rr]^{\displaystyle\mathop{\sim}^{\displaystyle\mathop{\phantom{a}}^{{\displaystyle\mathop{\phantom{a}}^{\textstyle{+}}}}}} \ar[ru]^{\Tr_Y}&  & H^2_c(Y_{\red},\ZZ/n(1))\ar[lu]_{f.\Tr_{Y_{\red}}}, 
+}}\sisi{}{\leqno{(1.1.5.1)}}
+$$
+
+Its\pageoriginale outer boundary is commutative, as follows from the
+commutativity of the diagram
+$$
+\xymatrix@C=2cm@R=1.5cm{
+u_!\ZZ/n_X(1)           \ar[r]^{\sim} \ar[d]^{\Tr_u} &
+u_{{\red}_!}\ZZ/n_{X_{\red}}(1) \ar[d]^{d.\Tr_{u_{\red}}}\\
+\ZZ/n_Y(1)  \ar[r]^{\sim}& \ZZ/n_{Y_{\red}}(1).}
+$$
+It suffices to verify this last compatibility at the generic point of
+$Y$, which is trivial.
+
+\sisi{}{To establish the commutativity of the left-hand triangle in
+\eqhyperref[XVIII.eq1.1.5.1]{1.1.5.1}, it therefore remains only to establish that of the
+right-hand triangle. Hence we may now assume in addition that $X$ and $Y$
+are reduced\nde{This paragraph was added in this edition, and the next
+two were modified.}.}
+
+Let $\bar{X}$ and $\bar{Y}$ be the complete \sisi{non-smooth}{smooth}
+curves containing \sisi{$X_{\red}$}{$X$} and \sisi{$Y_{\red}$}{$Y$} as dense
+open subschemes (\EGA II 7.4.11). The morphism \sisi{$u_{\red}$}{$u$}
+extends to a flat morphism $\bar{u}:\bar{X}\rightarrow \bar{Y}$
+(\EGA II 7.4.9), and by \hyperref[XVIII.lem1.1.4]{1.1.4} it suffices to verify
+\hyperref[XVIII.lem1.1.5]{1.1.5} for $\bar{u}$.
+
+By (XVII \hyperref[XVII.eq6.3.18.2]{6.3.18.2}), the diagram of sheaves on $\bar{Y}$ below, in
+which $N$ denotes the norm,
+$$
+\xymatrix@R=1.25cm{
+0  \ar[r] & \bar{u}_{\ast}𝛍_n  \ar[r] \ar[d]^{\Tr_{\bar{u}}}&
+\bar{u}_{\ast}\GG_m  \ar[r]^{x^n} \ar[d]^{N}&
+\bar{u}_{\ast} \GG_m  \ar[r] \ar[d]^{N}& 0 \\
+0  \ar[r] & 𝛍_n  \ar[r] & \GG_m  \ar[r]^{x^n} & \GG_m 
+\ar[r] & 0 ,
+}
+$$
+is commutative, and hence so is the diagram
+$$
+\xymatrix@C=1.5cm@R=1.25cm{
+\Pic(\bar{X})/n \ar[r]^(.45){\sim}\ar[d]^{N}& H^2_c(\bar{X},\ZZ/n(1))
+\ar[d]^{\Tr_{\bar{u}}}\\ 
+\Pic(\bar{Y})/n \ar[r]^(.45){\sim}& H^2_c(\bar{Y},\ZZ/n(1)),\\
+}
+$$
+and\pageoriginale it remains to observe that if $\Ll$ is an invertible sheaf
+of degree 1 on $\bar{X}$, then its norm again has degree $1$ (this fact
+following from the compatibility \sisi{\EGA IV 21.10.7}{\EGA IV 21.10.17},
+taking into account the definition \EGA IV 21.5.5 of the norm of a
+divisor).
+
+\begin{enonce*}{Proposition 1.1.6}\etiquette[1.1.6]{XVIII.prop1.1.6}
+There is a unique way to define, for every compactifiable flat curve
+$f:X\rightarrow S$ and every torsion sheaf $F$ on $S$ prime to the
+residual characteristics of $S$, a trace morphism
+$$
+\Tr_{f}:R^{2}f_{!}(f^{\ast}F(1))\longrightarrow F{\quoi},
+$$
+functorial in $F$, whose formation is compatible with every base change
+\emph{(\cf \hyperrefext[XVII][XVII.thm6.2.3]{6.2.3}, (VAR 2))}, and which, when $S$ is the spectrum
+of an algebraically closed field, coincides with the trace morphism
+\eqhyperref[XVIII.eq1.1.3.4]{1.1.3.4}.
+\end{enonce*}
+
+The morphism $\Tr_{f}$ is prescribed fiber by fiber; its uniqueness is
+therefore clear.
+
+Let $p:\PP^{1}_{S}\rightarrow S$ be the projective line over $S$, and let $n$ be
+an integer invertible on $S$. We have
+$\sheafPic_{S}(\PP^{1}_{S})=\ZZ_{S}$, whence Kummer theory
+(\hyperrefext[IX][IX.Thr3.2]{3.2}) gives a morphism $\ZZ/n\rightarrow
+R^{1}p_{\ast}\ZZ/n(1)$ which one checks fiber by fiber
+(\hyperrefext[XII][XII.cor5.2]{5.2}) to be an isomorphism. Its inverse $\Tr_{p}$ induces the trace
+morphism \eqhyperref[XVIII.eq1.1.3.4]{1.1.3.4} fiber by fiber.
+
+Let $f:X\rightarrow S$ be a flat curve over $S$ such that there exists a
+quasi-finite flat $S$-morphism $u$ from $X$ to $\PP^1_S$. By
+\hyperref[XVIII.lem1.1.5]{1.1.5}, the composite morphism $\Tr_{p}\circ \Tr_{u}$
+(\hyperrefext[XVII][XVII.thm6.2.3]{6.2.3}) has, at every geometric point of $S$, the trace morphism
+\eqhyperref[XVIII.eq1.1.3.4]{1.1.3.4} as its fiber. In particular, it does not depend on the
+choice of $u$.
+
+Suppose\pageoriginale that $X$ is a union of open subschemes $U_{i}$ such
+that there exists a quasi-finite flat morphism from $U_{i}$ to
+$\PP^{1}_S$. If $\alpha_{i}$ (\resp $\alpha_{ij}$) is the inclusion of
+$U_{i}$ (\resp $U_{ij}=U_{i}\cap U_{j}$) in $X$, the sequence
+$$
+\sum R^{2}(f\alpha_{ij})_{!}\ZZ/n(1)\rightrightarrows
+\sum R^2(f\alpha_{i})_{!}\ZZ/n(1)\rightarrow
+R^{2}f_{!}\ZZ/n(1)\rightarrow 0{\quoi}.
+$$
+is exact, by (\hyperrefext[XVII][XVII.prop6.2.9]{6.2.9}) and the right exactness of
+$R^{2}f_{!}$ (since $R^{3}f_{!}=0$). One checks fiber by fiber, using
+\hyperref[XVIII.lem1.1.5]{1.1.5}, that the sum of the trace morphisms
+$\underset{i}\sum R^{2}(f\alpha_{i})_{!}\ZZ/n(1)\rightarrow
+\ZZ/n$ factors through a trace morphism $\Tr_{f}$ from
+$R^{2}f_{!}\ZZ/n(1)$ which induces \eqhyperref[XVIII.eq1.1.3.4]{1.1.3.4} fiber by fiber.

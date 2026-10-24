@@ -1,42 +1,24 @@
-# Seminar in Algebraic Geometry (SGA) — Cumulative English Edition
+# Seminar in Algebraic Geometry — English edition
 
-1. [Read the cumulative English edition — 4,211 pages](https://zenodo.org/records/23112549/files/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf?download=1).
+[Read the cumulative PDF: 4,211 pages, 2026-10-03 edition](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-10-03-english-edition/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf).
 
-2. [Complete cumulative LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.tex).
-3. [Complete editable native source projects (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_SOURCE_PROJECTS.zip).
+The collection covers fundamental groups, local and étale cohomology, group schemes, intersection theory and monodromy.
 
-English translations of the SGA seminars on algebraic geometry: fundamental groups, local and étale cohomology, group schemes, intersection theory and monodromy. The linked contents and volume bookmarks support reading across the collection; individual readers and editable LaTeX sources are also available.
+## Editable sources
 
-[French original texts and Canon](https://doi.org/10.5281/zenodo.20410947) · [Spanish edition](https://doi.org/10.5281/zenodo.21923955).
+- [SGA1](sources/native/SGA1/README.md).
+- [SGA2](sources/native/SGA2/README.md).
+- [SGA3](sources/native/SGA3/README.md).
+- [SGA4](sources/native/SGA4/README.md).
+- [SGA4HALF](sources/native/SGA4HALF/README.md).
+- [SGA5](sources/native/SGA5/README.md).
+- [SGA6](sources/native/SGA6/README.md).
+- [SGA7I](sources/native/SGA7I/README.md).
+- [SGA7II](sources/native/SGA7II/README.md).
 
-## Related editions
+## Component readers
 
-Each link goes directly to a peer edition repository; there is no central hub. Coverage describes public releases and may trail local production.
-
-| Edition | Language | Public scope |
 |---|---|---|
-| [EGA — French](https://github.com/KokunoYumeto/ega-fr) | French | Complete declared EGA I–IV scope |
-| [EGA — English](https://github.com/KokunoYumeto/ega-en) | English | Complete declared EGA 0–IV scope |
-| [EGA/FGA — Spanish](https://github.com/KokunoYumeto/ega-fga-es) | Spanish | Validated partial EGA; FGA tranches A and B |
-| [SGA — Spanish](https://github.com/KokunoYumeto/sga-es) | Spanish | Complete 13-book linked edition |
-| [SGA — English](https://github.com/KokunoYumeto/sga-en) | English | Complete published scope; SGA 6 has mixed source alignment |
-| [EGA/FGA/SGA — Brazilian Portuguese](https://github.com/KokunoYumeto/ega-fga-sga-pt-br) | Brazilian Portuguese | Validated partial release, including complete EGA III-1 and SGA 5 readers |
-| [EGA/FGA/SGA — Vietnamese](https://github.com/KokunoYumeto/ega-fga-sga-vi) | Vietnamese | Validated partial release; current public readers are EGA |
-| [FGA — English (external)](https://github.com/thosgood/fga) | English | Independently maintained external edition |
-
-[![Stable English DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21925497.svg)](https://doi.org/10.5281/zenodo.21925497)
-[![Exact release DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23112549.svg)](https://doi.org/10.5281/zenodo.23112549)
-
-A navigable English reading edition of the *Séminaires de Géométrie Algébrique* (SGA), presented as one cumulative linked reader and nine smaller component readers.
-
-## Read the English edition
-
-### [Open the 4,211-page linked reader (PDF, 34.0 MB)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf)
-
-The cumulative reader has two navigation frontmatter pages followed by 4,209 component pages, with 36,568 named destinations and 25,870 link annotations. The validated SGA 1 and SGA 7 II correction batch is present in both the individual and cumulative readers, including the earlier spectrum-notation repair. All component page streams, geometry and internal links are preserved by the cumulative assembly. SGA 2 remains 185 pages.
-
-Prefer a smaller file? Choose a volume below.
-
 | Volume | Main subject | Coverage in this release | Pages | English PDF |
 |---|---|---:|---:|---|
 | SGA 1 | Étale coverings and the fundamental group | Complete published scope; Exposé VII was never written | 260 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.tex) |
@@ -49,60 +31,28 @@ Prefer a smaller file? Choose a volume below.
 | SGA 7 I | Monodromy groups in algebraic geometry, I | **Complete published volume:** Exposés I, II, VI–IX; no separately written/published Exposés III–V exist | 289 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.tex) |
 | SGA 7 II | Monodromy groups in algebraic geometry, II | Complete reader; Exposés X–XXII | 266 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/09_SGA7II_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/09_SGA7II_EN_COMPLETE_READER.tex) |
 
-> **Why does SGA 7 I jump from II to VI?** This is the published structure, not a gap in the English edition. Grothendieck's oral Exposés I–V were not separately written; their substance was summarized in the written Exposé I. The published volume therefore contains I, II, VI, VII, VIII, and IX, all of which are included here. See [the source-authority note](SOURCE_AUTHORITY.md#sga-7-i-numbering).
+SGA 6 retains a mixed source-alignment status; it is not certified as a complete source-faithful transcription. SGA 1 has no published Exposé VII. SGA 7 I contains Exposés I, II and VI–IX.
 
-The machine-readable coverage table is [`COMPONENT_COVERAGE.tsv`](COMPONENT_COVERAGE.tsv).
+## Sources and authorship
 
-## How to navigate it
+The original SGA volumes retain their authors, seminar contributors and editors, named in the corresponding texts. The collection includes work of Alexander Grothendieck, Michèle Raynaud, Michel Raynaud, Pierre Deligne, Nicholas Katz, Michel Demazure, Michael Artin, Jean-Louis Verdier, Luc Illusie and their collaborators; this list does not replace the detailed credits in each volume.
 
-1. Open the cumulative reader in a PDF viewer with a bookmarks/sidebar panel.
-2. Use the linked table of contents to move among volumes, exposés, sections, and statements.
-3. Click numbered references in the text to follow internal and cross-volume links.
-4. Use the standalone volume PDFs when you want a faster download or a narrower search space.
-5. Return to the cumulative reader when following a reference into another SGA volume.
+SGA 1 retains the French retypesetting associated with Bas Edixhoven’s volunteer project, the Société mathématique de France and Michel Raynaud’s notes, from [arXiv math/0206203v2](https://arxiv.org/abs/math/0206203v2).
 
-## What this edition is
+The SGA 2 and SGA 3 English sources acknowledge Jacob C. Reinhold’s [English translation](https://github.com/jcreinhold/sga/tree/e7a259f3f8608ad3edf9bf6eead3fd504dd2d23e), snapshot `e7a259f3f8608ad3edf9bf6eead3fd504dd2d23e`, used for comparison and drafting. His stated CC BY 4.0 notice applies to that contribution and is preserved; it does not license the underlying French works or every contribution here. Inherited English wording remains attributed to its human source. The SGA 3 French reference is the Philippe Gille–Patrick Polo re-edition.
 
-This repository is the discoverable reading surface for one evolving English SGA DOI lineage. It gathers material that is otherwise difficult to approach as a coherent whole and makes its internal reference graph usable.
+SGA 4½ preserves Daniel Miller’s [LaTeX typesetting](https://github.com/dkmiller/sga4.5) and its original typesetter’s note. It is not attributed to AI.
 
-It is an auditable working mathematical edition—not peer review and not a claim that no error remains. Coverage and source alignment are stated rather than implied. In particular:
+Additional English translation is AI-translated; subsequent corrections, editing, reconstruction and typesetting are AI-produced. The publisher did not translate the text. The source-specific human credits and genuine third-party notices remain applicable; attribution does not establish permission or endorsement.
 
-- SGA 7 I is complete as the published volume stands; its historical numbering jump is explained above and in `SOURCE_AUTHORITY.md`.
-- SGA 6 contains layers with different source-alignment status.
-- No separate DOI is minted for each volume or exposé.
-- Rights in underlying French works, editions, typography, and third-party material remain with their respective rightsholders.
+## Rights and availability
 
-See [`SOURCE_AUTHORITY.md`](SOURCE_AUTHORITY.md) and [`LICENSE_AND_RIGHTS.md`](LICENSE_AND_RIGHTS.md).
+Rights in the original works and in any protected contributions to these derivative translations and transcriptions remain with their respective rights holders. This project does not dedicate those works or contributions to the public domain or grant a licence over them. Existing third-party notices and any permissions already granted remain applicable.
 
-## Editable sources and audit trail
+These editions are made available free of charge for non-commercial, purely educational purposes, on the presumption that the respective rights holders would not object to these translations and transcriptions being freely available alongside the French originals on [NUMDAM](https://www.numdam.org/journals/PMIHES/). This presumption is not a statement that permission has been obtained; free access to the originals does not itself grant permission to translate, adapt or republish them.
 
-The cumulative `.tex` contains the complete text of nine native documents, with explicit volume markers; it is not a thin master. Use the included splitter and modular source projects for building. For SGA 1 and SGA 7 II, the updated direct LaTeX preserves native input boundaries and reproduces the released PDF bytes. The complete native projects remain available for every volume; use the source guide for inherited engine and dependency requirements. Each individual PDF also has a direct `.tex` companion in the release.
+If you hold rights in any material presented here and object to its availability, please [open a GitHub issue](https://github.com/KokunoYumeto/sga-en/issues). The publisher will take down the affected material at the rights holder's request.
 
-Correction integration, source packaging and cumulative assembly for this edition: **OpenAI Codex — GPT-6 Astra, Ultra effort**. Earlier provenance is retained; no independent human certification is implied.
+## Historical identifiers
 
-> **3 October 2026 edition:** A verified correction batch in SGA 1 and SGA 7 II is incorporated into both the individual and cumulative readers. The other seven volume PDFs retain their prior published contents. This is a bounded integration release, not a claim that the Canon correction backlog is finished.
-
-- [Source and reproduction guide](https://github.com/KokunoYumeto/sga-en/releases/latest/download/10_SGA_EN_SOURCE_GUIDE.txt)
-- [Editable English sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/00_SGA_EN_CUMULATIVE_SOURCE_PROJECTS.zip)
-- [Evidence and provenance archive (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/latest/download/11_SGA_EN_EVIDENCE_AND_PROVENANCE.zip)
-- [SHA-256 manifest](https://github.com/KokunoYumeto/sga-en/releases/latest/download/12_SGA_EN_SHA256_MANIFEST.txt)
-- [`RELEASE_MANIFEST.json`](RELEASE_MANIFEST.json): exact files, byte sizes, hashes, and validation identities
-- [`DATACITE_RELATIONS.json`](DATACITE_RELATIONS.json): DOI relationships
-- [Latest GitHub release](https://github.com/KokunoYumeto/sga-en/releases/latest)
-
-## Original authors and editorial roles
-
-Alexander Grothendieck; Michèle Raynaud; Michel Demazure; Jean-Étienne Bertin; Pierre Gabriel; Michel Raynaud; Michael Artin; Jean-Pierre Serre; Jean-Louis Verdier; Bernard Saint-Donat; Pierre Deligne; Jean-François Boutot; Luc Illusie; Jean-Pierre Jouanolou; Christian Houzel; Pierre Berthelot; Olli Jussila; Steven Kleiman; Dock Sang Rim; Nicholas M. Katz.
-
-SGA 1 and SGA 2: Alexander Grothendieck, with additional work by Michèle Raynaud. SGA 3: directed by Michel Demazure and Alexander Grothendieck. SGA 4: directed by Michael Artin, Alexander Grothendieck and Jean-Louis Verdier. SGA 4½: Pierre Deligne. SGA 5: directed by Alexander Grothendieck and edited by Luc Illusie. SGA 6: directed by Pierre Berthelot, Alexander Grothendieck and Luc Illusie. SGA 7 I: directed by Alexander Grothendieck. SGA 7 II: Pierre Deligne and Nicholas M. Katz. The creator list also names authors of individual exposés. Additional original redactors are credited separately; Monique Hakim appears as M. Jaffe in the original SGA 2 introduction. Nicolas Bourbaki and Daniel Ferrand are credited as named collaborators, not as authors of unwritten chapters.
-
-Original note redactors: Italo Giorgiutti, Jean Giraud, Monique Hakim, Olav Arnfinn Laudal and Ionel Bucur. These historical credits do not imply participation in or endorsement of this modern translation.
-
-## Citation and stable links
-
-- Stable English-edition DOI: [10.5281/zenodo.21925497](https://doi.org/10.5281/zenodo.21925497)
-- Exact 3 October 2026 release DOI: [10.5281/zenodo.23112549](https://doi.org/10.5281/zenodo.23112549)
-- French original texts and Canon DOI: [10.5281/zenodo.20410947](https://doi.org/10.5281/zenodo.20410947)
-- Citation metadata: [`CITATION.cff`](CITATION.cff)
-
-For scholarly citation, use the stable English DOI when referring to the evolving edition and the exact release DOI when page-level reproducibility matters.
+[English SGA permanent record](https://doi.org/10.5281/zenodo.21925497) · [2026-10-03 reader record](https://doi.org/10.5281/zenodo.23112549) · [French source record](https://doi.org/10.5281/zenodo.20410947).

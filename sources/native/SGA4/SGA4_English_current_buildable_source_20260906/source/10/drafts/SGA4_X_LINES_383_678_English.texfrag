@@ -1,0 +1,298 @@
+\section{Field of fractions of a strictly local ring}\etiquette[3]{X.sec3}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[3.0]{X.subsec3.0}
+In the following sections we shall have essential need of knowing
+$\cd_{\ell}R(A)$, where $A$ is a strictly local ring, that is, a
+henselian ring with separably closed residue field. Unfortunately,
+$\cd_{\ell}R(A)$ is not known in general, for example if
+$A=\widehat{\ZZ}_p[[x]](p\neq \ell)$.
+
+It is nevertheless conjectured\SGAArchiveOnly{\nde{The frozen source states that this
+was proved by O.~Gabber but supplies no bibliographic target.}} that if
+$A$ is noetherian and $\ell$ is invertible in $A$, then one
+\sisi{will have}{has}
+\begin{equation*}
+\cd_{\ell}R(A)=\dim A\quad (\ell\mbox{ invertible in } A){\quoi},\tag{3.1}
+\end{equation*}\etiquette[3.1]{X.eq3.1}
+at least in the most important cases, for example if $A$ is an
+\emph{excellent} ring (\EGA IV 7.8.2).
+
+Note that if $\dim A=1$, \eqhyperref[X.eq3.1]{3.1} is true by
+\hyperref[X.thm2.3]{2.3}. Moreover, the inequality $\geq$ holds in any
+case by \hyperref[X.cor2.5]{2.5}. We shall prove later (XIX), using
+resolution of singularities \cite{sga4.exp.X.bib.3}, that \eqhyperref[X.eq3.1]{3.1}
+is also true if $A$ is excellent of residual\pageoriginale
+characteristic zero. Here we shall prove \eqhyperref[X.eq3.1]{3.1}
+only in the easy case of \hyperref[X.prop3.2]{3.2} below.
+
+Naturally one has $\cd_{\ell}R(A)\leq 1$ if $A$ has characteristic
+$\ell$, so this case is trivial. It remains, moreover, to analyze the
+case of unequal characteristics with residual characteristic $\ell$,
+and one does not expect \eqhyperref[X.eq3.1]{3.1} to be true in this
+\sisi{case there}{case}. It will certainly be necessary to take into
+account the rank of the module $\Omega^1_k$ ($k$ the residue field),
+\ie the degree $[k:k^{\ell}]$.\SGAArchiveOnly{\nde{The frozen source points to work of
+Gabber and Orgogozo but supplies no bibliographic target.}}
+
+\begin{enonce*}{Proposition 3.2}\etiquette[3.2]{X.prop3.2}
+Let $X$ be a prescheme of finite type over the spectrum of a field $k$
+or over the spectrum of a discrete valuation ring $R$, and let
+$\ell\in \PP$ be invertible in $k$ (\resp~$R$). Then $\hyperref[X.eq3.1]{3.1}$ is true for
+every ring $A$ that is a strict localization of $X$.
+\end{enonce*}
+
+\emph{Proof}. Take $X$ integral (one reduces to this case as usual),
+and let $n=\dim X$.
+
+Suppose that $X$ is defined over a \emph{separably closed} field $k$.
+Then for every ring $A$ that is a strict localization of $X$ at a
+\emph{closed} point, one has $\dim A=n$. Since every residue field $K$
+of $R(A)$ is identified with an algebraic extension of $R(X)$, and
+since
+$$
+\deg.\tr.(R(X)/k)=\dim X=n{\quoi},
+$$
+one has $\cd_{\ell}K\leq n$ by \hyperref[X.thm2.1]{2.1}, whence
+$\cd_{\ell}R(A)\leq n$. The opposite inequality follows from
+\hyperref[X.cor2.5]{2.5}.
+
+Now suppose that $X$ is of finite type over $\Spec R$, where $R$ is a
+discrete valuation ring, and let $A$ be the strict localization of $X$
+at a point $x$. If $x$ does not lie above the closed point of $\Spec
+R$, one reduces immediately to the case where $X$ is of finite type
+over a field (by localizing $R$). For the same reason, one may also
+suppose that the morphism $X\rightarrow \Spec R$ is dominant.
+
+Suppose\pageoriginale for the moment, in addition, that $R$ is a
+\emph{strictly local} discrete valuation ring and that the point $x$
+is \emph{closed} in $X$. Then one has $\dim A=\dim X=n$ (\EGA IV
+5.6.5). Since every residue field $K$ of $R(A)$ is identified with a
+separable extension of $R(X)$, one has
+$$
+\cd_{\ell}R(A)\leq \cd_{\ell}R(X)\leq
+\cd_{\ell}L+\deg.\tr.(R(X)/L)=1+(n-1)=n
+$$
+by \hyperref[X.thm2.1]{2.1} and \hyperref[X.thm2.2]{2.2}, where $L$ is
+the field of fractions of $R$; the result follows in this case, taking
+\hyperref[X.cor2.5]{2.5} into account.
+
+The general case is deduced from these special cases by means of the
+following lemma:
+
+\begin{enonce*}{Lemma 3.3}\etiquette[3.3]{X.lem3.3}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let $X$ be of finite type over the spectrum of a field $k$, and
+  let $A$ be a strict localization ring of $X$ at a point $x$. Then
+  there exist a separably closed field $k'$, a scheme $X'$ of finite
+  type over $\Spec k'$, and a point $x'$ closed in $X'$ such that $A$
+  is isomorphic to a strict localization ring of $X'$ at $x'$.
+
+\item Let $X$ be of finite type over $\Spec R$, where $R$ is a
+  discrete valuation ring, let $x$ be a point of $X$ above the closed
+  point of $\Spec R$, and let $A$ be a strict localization of $X$ at
+  $x$. There exist a strictly local discrete valuation ring $R'$, a
+  scheme $X'$ of finite type over $\Spec R'$, and a closed point $x'$
+  of $X'$ above the closed point of $\Spec R'$, such that $A$ is
+  isomorphic to a strict localization of $X'$ at $x'$.
+\end{enumerate}
+\end{enonce*}
+
+Proof.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item We may take $X$ affine.
+
+Let $Y$ be the closure of $x$ in $X$, with the induced reduced
+structure, and let $d=\dim Y$. By the normalization lemma (\cite{sga4.exp.X.bib.2}
+Chap. V \S 3 ${\rm n^{\circ}}$ 1), there exists a morphism
+$$
+X\longrightarrow \Spec k[y_1,\ldots, y_d]=T
+$$
+inducing\pageoriginale a \emph{finite} morphism $Y\rightarrow T$.
+Consequently, the strict localization ring of $\Oo_{X,x}$ is
+isomorphic to the strict localization of $\Oo_{X',x'}$, where
+$X'=\fprod{X}{\Spec\bar{R(T)}}{T}$, and where $x'$ is a closed point
+of $X'$.
+
+\item This case is treated similarly. We may suppose that $X$ is
+affine, with ring $A$. Let $Y$ be the closure of $x$ in $X$ with the
+induced reduced structure; it is a closed subscheme of the closed
+fiber $X_0$ of $X$ over $\Spec R$, and let $d=\dim Y$. Then, lifting
+the elements $y_1,\ldots,y_d$ of $A\otimes_R k$ considered in (i) to
+elements of $A$, one obtains a morphism
+$$
+X\longrightarrow \Spec R[y_1,\ldots,y_d]=T
+$$
+inducing a \emph{finite} morphism $Y\rightarrow T_0$. Let $R'$ be the
+strict localization of $R[y_1,\ldots,y_d]=B$ at the prime ideal
+$𝔪B$. %% specify that 𝔪 is the maximal ideal of R? \XXX
+Then $R'$ is a strictly local discrete valuation ring, and one may
+take $X'=\fprod{X}{\Spec R'}{T}$, and $x'$ a closed point of $X'$ above
+$x$.
+\end{enumerate}
+
+\section{Cohomological dimension: the case where $ℓ$ is invertible in $𝒪_X$}\etiquette[4]{X.sec4}
+
+\begin{enonce*}{Theorem 4.1}\etiquette[4.1]{X.thm4.1}
+Let $X$ be a noetherian scheme, let $\ell\in \PP$, and let $\varphi$
+be a function on $X$ with values in $\NN$ and satisfying the following
+conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every $x\in X$, $\cd_{\ell}k(x)\leq \varphi (x)$.
+
+\item Let $x\in X$ and let $y\in Y=$ the closure of $x$, with $y\neq
+x$. Let $K$ be the ring of rational functions of a strict localization
+of $Y$ above $y$. One has $\cd_{\ell}K<\varphi(x)-\varphi(y)$.
+\end{enumerate}
+Then for every $\ell$-torsion sheaf $F$ on $X$, one has
+\begin{gather*}
+H^q(X,F)=0\\
+q>\varphi(F)\mathop{=}_{\text{\rm def}}\Sup\{\varphi(x)\mid x\in X,
+F_{\bar{x}}\neq 0\}{\quoi}.\tag*{if}
+\end{gather*}
+\end{enonce*}
+
+Proof.\pageoriginale
+The hypotheses will also be satisfied by the restriction of
+$\varphi$\sisi{,}{} to any subprescheme of $X$, so by noetherian
+induction we may suppose the theorem true for every closed subprescheme
+of $X$ distinct from $X$. Let $F$ be given, and write
+$F=\varinjlim F_i$, where the $F_i$ are the constructible subsheaves
+of $F$ (\hyperrefext[IX][IX.prop2.9]{2.9} (iii)).
+
+For every $F_i$, the set of $x\in X$ such that $F_x\neq 0$ is
+constructible in $X$, and we may apply the induction hypothesis to
+every $F_i$ whose support is not dense. We thus see that the induction
+hypothesis in fact implies that the theorem is true for every $F$ that
+vanishes at at least one of the maximal points of $X$. We shall
+therefore suppose that $F$ does not satisfy this condition.
+
+Now let $i:\Spec R(X)\rightarrow X$ be the inclusion, where $R(X)$ is
+the ring of rational functions of $X$, and consider the following
+exact sequence, where $K$ and $C$ are defined as kernel and cokernel,
+respectively:
+$$
+0\longrightarrow K\longrightarrow F\longrightarrow i_{\ast}
+i^{\ast}F\longrightarrow C\longrightarrow 0{\quoi}.
+$$
+Here $K$ and $C$ vanish at every maximal point of $X$, so by (ii),
+$\varphi(K)$ (\resp $\varphi(C)$) is strictly less than
+$n=\varphi(F)$, whence $H^q(X,K)=H^q(X,C)=0$ for $q\geq n$. Thus,
+\sisi{}{,} in order to prove $H^q(X,F)=0$ for $q>n$, it is enough, by
+the cohomology exact sequences, to prove
+$H^q(X,i_{\ast}i^{\ast}F)=0$; hence we may suppose that $F$ is of the
+form $i_{\ast}G$, for a suitable $\ell$-sheaf $G$ on $\Spec R(X)$.
+
+Consider the Leray spectral sequence\sisi{.}{}
+$$
+E^{p,q}_2=H^p(X,R^qi_{\ast}G)\Longrightarrow H^{p+q}(\Spec
+R(X),G){\quoi}.
+$$
+Now $R(X)_{\text{\rm réd}}$ is the product of the fields $k(x)$ for
+$x$ maximal in $X$, so $\cd_{\ell}R(X)\leq n$ by (i); therefore the
+abutment of the spectral sequence vanishes in
+\sisi{$\dim > n$}{dimension strictly greater than $n$}.
+We\pageoriginale wish to prove that $E^{p0}_2=0$ for $p>n$. Examining
+the spectral sequence, one sees that it is enough to prove that
+$E^{pq}_2=0$ if $q>0$ and if $p>n-q-1$. Thus, by induction, it is
+enough to prove that $\varphi(R^qi_{\ast}G)<n-q$ for $q>0$. But by
+VIII \hyperref[VIII.thm5.2]{5.2}, the fiber of $R^qi_{\ast}G$ at a geometric point $\bar{y}$
+above a point $y\in X$ is precisely $H^q(\Spec K, G_K)$, where $K$ is
+the ring of rational functions of the strict localization of $X$ at
+$\bar{y}$, and $G_K$ is the induced sheaf on $\Spec K$. By (ii), one
+has $\cd_{\ell}K<n-\varphi(y)$, whence
+$(R^qi_{\ast}G)_{\bar{y}}=0$ if $q\geq n-\varphi(y)$, which gives the
+desired result.
+
+\begin{enonce*}{Corollary 4.2}\etiquette[4.2]{X.cor4.2}
+Let $X$ be a noetherian scheme, let $\ell\in \PP$, let
+$n\in \NN$, and suppose that the following conditions are satisfied:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every point $y$ of $X$ of codimension $c$, one has
+  $\cd_{\ell}k(y)\leq n-2c$.
+
+\item For every ring $A$ that is a strict localization of an
+  irreducible closed subscheme $Y$ of $X$, one has
+  $\cd_{\ell}R(A)\leq \dim A$.
+
+Then
+$$
+\cd_{\ell}X\leq n{\quoi}.
+$$
+More precisely, if $F$ is an $\ell$-sheaf that vanishes at every point
+$y$ of codimension $<s$, one has
+$$
+H^q(X,F)=0\mbox{ if } q>n-2s{\quoi}.
+$$
+\end{enumerate}
+\end{enonce*}
+
+Indeed, one may take $\varphi(y)=n-2\codim y$ and apply
+\hyperref[X.thm4.1]{4.1}, whose condition (i) (\resp (ii)) follows
+from the corresponding condition (i) (\resp (ii)) of
+(\hyperref[X.cor4.2]{4.2}), taking into account for (ii) the inequality
+$\dim \Oo_{Y,y}+\dim \Oo_{X,x}\leq \dim \Oo_{X,y}$.
+
+\begin{enonce*}{Corollary 4.3}\etiquette[4.3]{X.cor4.3}
+Let $X$ be of finite type and dimension $n$ over a field $k$, and let
+$\ell\neq \car k$. Then $\cd_{\ell}X\leq 2n+\cd_{\ell}k$.
+\end{enonce*}
+
+One\pageoriginale applies the preceding corollary, replacing $n$ there
+by $2n+cd_{\ell}k$, and using \hyperref[X.thm2.1]{2.1} and
+\hyperref[X.prop3.2]{3.2} to verify conditions (i) and (ii) of
+\hyperref[X.cor4.2]{4.2}, taking into account for (i) the inequality
+$$
+\deg.\tr.K(y)/k+\dim \Oo_{X,y}\leq \dim X{\quoi}.
+$$
+
+\begin{enonce*}{Corollary 4.4}\etiquette[4.4]{X.cor4.4}
+Let $X$ be noetherian, and let $\ell\in \PP$ be invertible on $X$.
+Suppose that condition {\rm (ii)} of $\hyperref[X.cor4.2]{4.2}$ is satisfied, and moreover
+that $\ell\neq 2$ \sisi{where}{or} that no residue field of $X$ is
+orderable. Then one has
+$$
+\cd_{\ell}X\leq \cd_{\ell}R(X)+\dim X\leq 2\cd_{\ell}R(X){\quoi}.
+$$
+\end{enonce*}
+
+Put $n=\cd_{\ell}R(X)+\dim X$ in \hyperref[X.cor4.2]{4.2}, and apply
+\hyperref[X.cor2.4]{2.4}, which implies condition (i) of
+\hyperref[X.cor4.2]{4.2}, since
+\[\cd_{\ell}k(y)\leq \cd_{\ell}R(\Oo_{X,y})-\dim \Oo_{X,y}\leq
+\cd_{\ell}R(X)-\dim\Oo_{X,y}\leq n-2\dim \Oo_{X,y}.
+\]
+The second inequality in \hyperref[X.cor4.4]{4.4} follows from
+\hyperref[X.cor2.5]{2.5}.
+
+\begin{enonce*}[remark]{Example 4.5}\etiquette[4.5]{X.exem4.5}
+The inelegant hypothesis on residue fields made in
+\hyperref[X.cor4.4]{4.4} is necessary, as is seen by taking
+$X=\Spec \RR[x,y,z]/(x^2+y^2+z^2)$, where all the other conditions are
+satisfied, with $\dim X=\cd_{\ell}R(X)=\ell=2$, but the sheaf $\ZZ/2$
+concentrated at the point $(0,0,0)$ has nonzero cohomology in every
+degree, so $\cd_{\ell}X=+\infty$.
+\end{enonce*}
+
+\setcounter{subsection}{5}
+\subsection{}\etiquette[4.6]{X.subsec4.6}
+One is also tempted to try to impose hypotheses in
+\hyperref[X.cor4.2]{4.2} only on the closed points of $X$, but this is
+not possible. For example, there exist discrete valuation rings with
+algebraically closed residue field and with function field of
+arbitrarily large cohomological dimension\footnote[1]{To see this, it
+  is enough to note that if $X$ is a smooth algebraic scheme over a
+  field $k$, admitting a point $x\in X(k)$, then one can find a
+  ``formal curve arc'' passing through $x$ whose ``algebraic envelope''
+  is $X$, and whose function field therefore contains that $K$ of $X$
+  and induces on it a discrete valuation whose residue field is $k$.}.
+The spectrum of such a ring will likewise have very large
+cohomological dimension.

@@ -1,0 +1,293 @@
+\section{Sheaves with values in a category}\etiquette[6]{II.sec6}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[6.0]{II.subsec6.0}
+Let $C$ and $D$ be two categories. A contravariant functor from
+$C$ to $D$, $F:C^{\circ}\rightarrow D$, is called a
+\emph{presheaf on $C$ with values in $D$.}
+
+\begin{enonce*}{Definition 6.1}\etiquette[6.1]{II.def6.1}
+Let $C$ be a site and $D$ a category. A presheaf
+$F:C^{\circ}\rightarrow D$ is called a \emph{sheaf on $C$ with
+values in} $D$ (or, more briefly, a sheaf with values in $D$) if, for
+every object $S$ of $D$, the presheaf of sets
+$$
+X\longmapsto \Hom_D(S,F(X))\quav X\in \ob(C)
+$$
+is a sheaf. The full subcategory of $\Hhom(C^{\circ},D)$ formed by
+the sheaves on $C$ with values in $D$ will be denoted by
+$\Hhom^{\sim}(C^{\circ},D)$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remarks 6.2}\etiquette[6.2]{II.rem6.2}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\hypertarget{sga4.exp.II.remark.6.2.item.1}{}\item The\pageoriginale condition of \hyperref[II.def6.1]{6.1} means
+  that for every object $X$ of $C$, every covering sieve $R$ of $X$,
+  and every object $S$ of $D$, one has an isomorphism
+  (\hyperrefext[I][I.cor3.5]{3.5} and \hyperref[II.def2.1]{2.1}):
+$$
+\Hom_D(S,F(X))\xrightarrow{\sim}\varprojlim_{C/R}F(.){\quoi}.
+$$
+Thus, when $D$ is the category of $𝒰$-sets, one recovers the
+definition of sheaves of sets (\loccit).
+
+\item Let $D'$ be a $𝒰$-category and let $G:D\rightarrow D'$ be a
+  functor commuting with projective limits. By composition, the
+  functor $G$ carries sheaves with values in $D$ to sheaves with
+  values in $D'$.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{3} \setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[6.3.0]{II.subsubsec6.3.0}
+Let $\gamma$ be a type of algebraic structure defined by finite
+projective limits (\hyperrefext[I][I.cor2.9]{2.9}), and let
+$𝒰-\gamma$ be the category of $\gamma$-sets belonging to $𝒰$.
+Denote by $\esj:𝒰-\gamma\rightarrow 𝒰-\Ens$ the ``underlying
+set'' functor. The functor $\esj$ commutes with projective limits and
+therefore, by the preceding remark, defines by composition the
+functors
+\begin{align*}
+&\esj^{\widehat{\phantom{,}}} :
+\Hhom(C^{\circ},𝒰-\gamma)\longrightarrow
+C^{\widehat{\phantom{,}}}\\
+&\esj^{\widetilde{\phantom{,}}} :
+\Hhom^{\sim}(C^{\circ},𝒰-\gamma) \longrightarrow
+C^{\widetilde{\phantom{,}}}{\quoi}.
+\end{align*}
+
+The functor $\esj^{\widetilde{\phantom{,}}}$ is called the
+``underlying sheaf of sets'' functor. In fact, it factors canonically
+through the category $\gamma-\widetilde{C}$ of $\gamma$-objects of
+$C^{\widetilde{\phantom{,}}}$. Denoting again by
+$\widetilde{\esj}$ the resulting functor
+$$
+\Hhom^{\sim}(C^{\circ}, 𝒰-\gamma)\longrightarrow
+\gamma-\widetilde{C},
+$$
+we may state:
+
+\begin{enonce*}{Proposition 6.3.1}\etiquette[6.3.1]{II.prop6.3.1}
+The functor $\esj^{\widetilde{\phantom{,}}}$ establishes an
+equivalence among the category of sheaves on $C$ with values in
+$𝒰-\gamma$, the category of $\gamma$-objects in the category of
+sheaves of sets, and the category of $\gamma$-objects in the category
+of presheaves of sets whose underlying presheaf is a sheaf.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The\pageoriginale proof essentially uses
+(\hyperrefext[I][I.cor3.2]{3.2}) and the fact that a finite projective
+limit of sheaves in the category of presheaves is a sheaf
+(\hyperref[II.theo4.1]{4.1}).
+\end{enonce*}
+
+\setcounter{subsection}{3} \setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[6.3.2]{II.subsubsec6.3.2}
+The preceding proposition justifies the abuse of language whereby a
+sheaf with values in $𝒰-\gamma$ is identified with the corresponding
+$\gamma$-object of $C^{\widetilde{\phantom{,}}}$. We shall
+henceforth make this abuse of language systematically.
+
+We shall use the classical terminology: \emph{sheaves of groups,
+sheaves of commutative groups} (which we shall most often call
+\emph{abelian sheaves}), \emph{sheaves of rings, sheaves of
+$A$-modules} \ldotsn
+
+\subsubsection{}\etiquette[6.3.3]{II.subsubsec6.3.3}
+We denote by
+$$
+C^{\widetilde{\phantom{,}}}_{\gamma}(\resp
+C^{\widehat{\phantom{,}}}_{\gamma})
+$$
+the category of $\gamma$-objects of $C^{\widetilde{\phantom{,}}}$
+(\resp of $C^{\widehat{\phantom{,}}}$). When $\gamma$ is the type of
+structure ``$A$-module'', we also write
+$C^{\widetilde{\phantom{,}}}_{A}$, or simply
+$\widetilde{C}_{\ab}$ when $A=\ZZ$.
+
+Suppose that $C$ is a $𝒰$-site. The ``associated sheaf'' functor is
+left exact (\hyperref[II.theo4.1]{4.1}), and therefore:
+
+\begin{enonce*}{Proposition 6.4}\etiquette[6.4]{II.prop6.4}
+The inclusion functor
+$i_{\gamma}:C^{\widetilde{\phantom{,}}}_{\gamma}\rightarrow
+C^{\widehat{\phantom{,}}}_{\gamma}$ admits a left adjoint
+$a_{\gamma}$ which is left exact; that is, one has an isomorphism
+$$
+\Hom_{C^{\widetilde{\phantom{,}}}_{\gamma}}(a_{\gamma},\;)\xrightarrow{\sim}\Hom_{C^{\widehat{\phantom{,}}}_{\gamma}}(\;,i_{\gamma}){\quoi}.
+$$
+
+Let $X$ be an object of $C^{\widehat{\phantom{,}}}_{\gamma}$. The
+underlying sheaf of sets of $a_{\gamma}(X)$ is canonically isomorphic
+to the sheaf of sets associated with the underlying presheaf of sets
+of $X$. The morphism of underlying presheaves of sets of the adjunction
+morphism $\id\rightarrow i_{\gamma}a_{\gamma}$ is identified with the
+adjunction morphism applied to the underlying presheaf of sets.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 6.5}\etiquette[6.5]{II.prop6.5}
+Suppose\pageoriginale that the functor
+$\esj:\gamma-𝒰\rightarrow 𝒰-\Ens$ admits a left adjoint
+\footnote[1]{One proves that such an adjoint always exists [C.F.]:
+  free group, free abelian group, free $A$-module \ldotsn}:
+$$
+\Hom_{𝒰-\Ens}(.,\esj(.))\xrightarrow{\sim}\Hom_{\gamma-𝒰}(\Lib(.),.){\quoi}.
+$$
+
+The functor
+$\esj^{\widetilde{\phantom{,}}}:C^{\widetilde{\phantom{,}}}_{\gamma}\rightarrow
+C^{\widetilde{\phantom{,}}}$ (\resp
+$\esj^{\widehat{\phantom{,}}}:C^{\widehat{\phantom{,}}}_{\gamma}\rightarrow
+C^{\widehat{\phantom{,}}}$) admits a left adjoint
+$\Lib^{\widetilde{\phantom{,}}}$ (\resp
+$\Lib^{\widehat{\phantom{,}}}$), and one has a canonical isomorphism
+$$
+\Lib^{\widetilde{\phantom{,}}}=a_{\gamma}\Lib^{\widehat{\phantom{,}}}
+i{\quoi}.
+$$
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The proof is formal and is left to the reader.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 6.6}\etiquette[6.6]{II.cor6.6}
+Let $(X_i)$, $i\in I$, be a generating family of
+$C^{\widetilde{\phantom{,}}}$ (\hyperref[II.subsec4.9]{4.9}). Then
+the family $\Lib^{\widetilde{\phantom{,}}}(X_i)$ is a generating
+family of $C^{\widetilde{\phantom{,}}}_{\gamma}$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The proof is formal once one observes that the functor
+$\esj^{\widetilde{\phantom{,}}}$ commutes with projective limits and
+is conservative ($\esj^{\widetilde{\phantom{,}}}(u)$ is an
+isomorphism $\Leftrightarrow$ $u$ is an isomorphism).
+\end{enonce*}
+
+\begin{enonce*}{Proposition 6.7}\etiquette[6.7]{II.prop6.7}
+Let $A$ be a $𝒰$-sheaf of rings, or a small ring, and let
+$C^{\widetilde{\phantom{,}}}_A$ (\resp
+$C^{\widehat{\phantom{,}}}_A$) be the category of sheaves (\resp of
+presheaves) of unital $A$-modules
+$(\hyperref[II.subsubsec6.3.3]{6.3.3})$ on a $𝒰$-site $C$. Then
+$C^{\widetilde{\phantom{,}}}_A$ is an abelian $𝒰$-category satisfying
+the axioms {\rm (AB 5)} (``existence of left exact filtered inductive
+limits'') and {\rm (AB 3)$^{\ast}$} (``existence of infinite
+products'') of {\rm[\textsc{Tohoku}]}. It has a family of generators
+indexed by an element of $𝒰$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+It is clear that the category $C^{\widehat{\phantom{,}}}_A$ is an
+abelian category satisfying the axioms (AB 3), (AB 4), and (AB 5)
+(\hyperrefext[I][I.prop2.8]{2.8} and
+\hyperrefext[I][I.cor3.3]{3.3}). It then follows\pageoriginale from
+\hyperref[II.prop6.4]{6.4} that the category
+$C^{\widetilde{\phantom{,}}}_A$ is an additive category in which
+kernels and cokernels are representable. More precisely, let $i_A$
+and $a_A$ be the inclusion and associated-sheaf functors, respectively,
+and let $u:X\rightarrow Y$ be a morphism of
+$C^{\widetilde{\phantom{,}}}_A$. The functor $a_A$ is left exact and
+commutes with inductive limits. The functor $i_A$ commutes with
+projective limits. Consequently the functor
+$i_Aa_A:C^{\widehat{\phantom{,}}}_A\rightarrow
+C^{\widehat{\phantom{,}}}_A$ is an additive left exact functor. One
+deduces canonical isomorphisms
+\begin{gather*}
+i_A(\Ker(u))\xrightarrow{\sim} \Ker(i_A(u)){\quoi},\tag{$\ast$}\\
+\coker(u)\xrightarrow{\sim} a_A \coker
+(i_A(u)){\quoi}.\tag{${\ast}{\ast}$}
+\end{gather*}
+Consequently there is a canonical isomorphism
+\begin{equation}\coim(u)\xrightarrow{\sim} a_A \coim (i_A (u)){\quoi}.
+\tag{${\ast}{\ast}{\ast}$}
+\end{equation}
+Let us show that the canonical morphism
+$\coim(u)\rightarrow \im(u)$ is an isomorphism. For this, by (*), it
+suffices to show that the sequence
+$$
+0\longrightarrow i_A(\coim(u))\longrightarrow i_A(Y)\longrightarrow
+i_A(\coker(u))
+$$
+is exact. Using the isomorphisms $({\ast}{\ast})$ and
+$({\ast}{\ast}{\ast})$, and observing that $a_Ai_A(Y)$ is isomorphic
+to $Y$, one sees that this sequence is isomorphic to the sequence
+$$
+0\longrightarrow i_Aa_A(\coim(i_A(u)))\longrightarrow i_Aa_Ai_A
+(Y)\longrightarrow i_Aa_A(\coker(i_A(u))){\quoi},
+$$
+which is precisely the image under the functor $i_Aa_A$ of the
+sequence
+$$
+0\longrightarrow \coim(i_A(u))\longrightarrow i_A(Y)\longrightarrow
+\coker(i_A(u)){\quoi}.
+$$
+This sequence is exact, and the functor $i_Aa_A$ is left exact. Thus
+the category $C^{\widetilde{\phantom{,}}}_A$ is an abelian category.
+The functor $a_A:C^{\widehat{\phantom{,}}}_A\rightarrow
+C^{\widetilde{\phantom{,}}}_A$\pageoriginale is left exact and
+commutes with arbitrary inductive limits. Consequently it is
+additive, exact, and commutes with inductive limits. Since the category
+$C^{\widehat{\phantom{,}}}_A$ satisfies axiom (AB 5), the same is true
+of the category $C^{\widetilde{\phantom{,}}}_A$. Finally, it is clear
+that in the category $C^{\widetilde{\phantom{,}}}_A$, products indexed
+by an element of $𝒰$ are representable, and hence axiom
+(AB 3)$^{\ast}$ is satisfied. This completes the proof of the first
+assertion.
+\end{enonce*}
+
+For every ring $A$ which is an element of $𝒰$, the functor
+$$
+\esj:𝒰-A-\mbox{module}\longrightarrow 𝒰-\Ens
+$$
+admits a left adjoint $X\longmapsto X_A$ (the free $A$-module
+generated by $X$). It
+therefore suffices to apply \hyperref[II.prop4.10]{4.10} and
+\hyperref[II.cor6.6]{6.6} to complete the proof.
+
+\begin{enonce*}[remark]{Notation 6.8}\etiquette[6.8]{II.not6.8}
+Let $H$ be a sheaf of sets. The sheaf of $A$-modules associated with
+the presheaf (\cf notation \hyperref[II.prop6.5]{6.5})
+$$
+X\longmapsto \Lib_A H(X)\qquad X\in \ob C
+$$
+is denoted by $A_H$. When $H=\underline{a}(X)$ (the sheaf associated
+with the presheaf represented by $X$), one sometimes simply writes
+$A_X$ (by abuse of notation). The proof of \hyperref[II.prop6.7]{6.7}
+shows that the family of sheaves of $A$-modules $A_X$,
+$(X\in \ob(C))$, is a generating family, indexed by an element of
+$𝒰$, of the category of sheaves of $A$-modules.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 6.9}\etiquette[6.9]{II.rem6.9}
+According to [\textsc{Tôhoku}], \hyperref[II.prop6.7]{6.7} shows that
+the category $C^{\widetilde{\phantom{,}}}_A$, when $A$ is an element
+of $𝒰$, has enough injectives. It is also known that infinite products
+are not necessarily exact in $C^{\widetilde{\phantom{,}}}_A$, and
+therefore that, in general, the category
+$C^{\widetilde{\phantom{,}}}_A$ does not have enough projectives
+[\textsc{Roos}].
+\end{enonce*}
+
+\begin{thebibliography}{99}
+\bibitem{sga4.exp.II.bib.1} M. \textsc{Artin};\pageoriginale Grothendieck's topologies.
+
+\bibitem{sga4.exp.II.bib.2} M. \textsc{Demazure}: Séminaire de Géométrie Algébrique III,
+  Exposé IV
+
+Lecture Notes. Springer-Verlag.
+
+\bibitem{sga4.exp.II.bib.3} A. \textsc{Grothendieck}: Sur quelques points d'Algèbre
+Homologique.
+
+ Tohoku Math. Journal.
+
+\bibitem{sga4.exp.II.bib.4} J.E. \textsc{Roos}: CR
+\end{thebibliography}
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

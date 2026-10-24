@@ -1,0 +1,432 @@
+\section{Inductive and projective limits of a fibered category}\etiquette[6]{VI.sec6}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[6.0]{VI.subsec6.0}
+
+We assume that the reader is familiar with the theory of fibered
+categories \cite{sga4.exp.VI.bib.5}. The essential purpose of this section is to fix
+the terminology and notation concerning fibered categories. Unless
+otherwise stated, all categories considered in this section belong to
+a fixed universe $\Uu$.
+
+Let $\Ff$, $\Gg$, and $\Ee$ be three categories, and let
+$\pi:\Ff\to\Ee$ and ${\pi}':\Gg\to\Ee$ be two functors. We denote by
+$\Hhom_{\Ee}(\Ff,\Gg)$ the category whose objects are the functors
+$u:\Ff\to\Gg$ such that the diagram
+\[
+\xymatrix@=1.75cm{
+\Ff \ar@{-}[rr]^{u} \ar[rd]_{\pi}&             &\Gg \ar[ld]^{\pi'}\\
+           & \Ee &
+}\]
+commutes, and whose morphisms are the $\Ee$-morphisms of functors,
+\ie the morphisms of functors carried by $\pi'$ to identity
+morphisms.
+
+Let $\xi$ be an object of $\Ee$. The objects $X$ of $\Ff$ such that
+$\pi(X)=\xi$ are called \emph{the objects of $\Ff$ over} $\xi$. Let
+$f:\xi\to\eta$ be a morphism of $\Ee$. The morphisms $m$ of $\Ff$
+such that $\pi(m)=f$ are called the morphisms of $\Ff$
+\emph{over}\pageoriginale $f$. Let $f:\xi\to\eta$ be a morphism of
+$\Ee$, let $X$ be an object of $\Ff$ over $\xi$, and let $Y$ be an
+object of $\Ff$ over $\eta$; we denote by $\Hom_f(X,Y)$ the set of
+morphisms from $X$ to $Y$ over $f$.
+
+\begin{enonce*}{Definition 6.1}\etiquette[6.1]{VI.def6.1}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item A morphism $m:X\to Y$ of $\Ff$ is called \emph{Cartesian} if,
+  for every morphism $p:Z\to Y$ over $\pi(m)$, there exists a unique
+  morphism $q:Z\to X$ over the identity of $\pi(X)$ such that
+  $mq=p$.
+
+\item The category $\Ff$ is called \emph{prefibered} by $\pi$ over
+  $\Ee$ if, for every morphism $f:\xi\to\eta$ of $\Ee$, every object
+  of $\Ff$ over $\eta$ is the target of a Cartesian morphism over
+  $f$.
+
+\item The category $\Ff$ is called \emph{fibered} by $\pi$ over
+  $\Ee$ if it is prefibered and the composite of any two composable
+  Cartesian morphisms of $\Ff$ is Cartesian.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[6.1.1]{VI.subsubsec6.1.1}
+
+Let $\xi$ be an object of $\Ee$. The \emph{fiber category} of $\Ff$
+at $\xi$, denoted by $\Ff_{\xi}$, is the subcategory of $\Ff$ whose
+objects are the objects of $\Ff$ over $\xi$ and whose morphisms are
+the morphisms of $\Ff$ over $\id_{\xi}$. For two objects $X$ and $Y$
+of $\Ff_{\xi}$, we denote by $\Hom_{\xi}(X,Y)$ the set of morphisms
+from $X$ to $Y$ in $\Ff_{\xi}$.
+
+\subsubsection{}\etiquette[6.1.2]{VI.subsubsec6.1.2}
+
+Let $f:\xi\to\eta$ be a morphism of $\Ee$. An object $Y$ over
+$\eta$ is the target of a Cartesian morphism over $f$ if and only if
+the set-valued functor on the fiber $\Ff_{\xi}$
+$$
+Z \mapsto \Hom_f(Z, Y)\quad Z \in \ob (\Ff_{\xi}){\quoi},
+$$
+is representable. When the category $\Ff$ is prefibered, the functor
+$$
+Y \mapsto \Hom_f(., Y)\quad Y \in \ob (\Ff_{\eta}){\quoi},
+$$
+with values in the category of presheaves of sets on $\Ff_{\xi}$,
+in fact takes its values in the category of representable functors on
+$\Ff_{\xi}$, and therefore defines, up to unique isomorphism, a
+functor $f^{\ast}:\Ff_{\eta}\to\Ff_{\xi}$, called the \emph{inverse
+image\pageoriginale functor for} $f$. Suppose that $\Ff$ is
+prefibered and choose, for every morphism $f$ of $\Ee$, a base-change
+functor $f^{\ast}$. The category $\Ff$ is then fibered over $\Ee$ if
+and only if, for every pair $f,g$ of composable morphisms of $\Ee$,
+the composite functor $f^{\ast}g^{\ast}$ is an inverse image functor.
+Let
+\begin{equation*}
+C_{f, g} : f^{\ast} g^{\ast} \to (gf)^{\ast}\tag{6.1.2.1}
+\end{equation*}\etiquette[6.1.2.1]{VI.eq6.1.2.1}
+be the canonical isomorphism. The isomorphisms $C_{f,g}$ satisfy a
+cocycle condition arising from the associativity of composition of
+morphisms in $\Ee$:
+\begin{equation*}
+C_{f, hg}(f^{\ast} \circ C_{g, h}) = C_{gh, f}(C_{f, g} \circ h^{\ast})\tag{6.1.2.2}
+\end{equation*}\etiquette[6.1.2.2]{VI.eq6.1.2.2}
+
+\subsubsection{}\etiquette[6.1.3]{VI.subsubsec6.1.3}
+
+Conversely, suppose that for every object $\xi$ of $\Ee$ one is given
+a category $\Ff_{\xi}$, for every morphism $f:\xi\to\eta$ a functor
+$f^{\ast}:\Ff_\eta\to\Ff_{\xi}$, and for every pair $(f,g)$ of
+morphisms of $\Ee$ an isomorphism of functors
+$C_{f,g}:f^{\ast}g^{\ast}\to(fg)^{\ast}$, such that the $C_{f,g}$
+satisfy condition \eqhyperref[VI.eq6.1.2.2]{6.1.2.2}. One can then
+construct, in an essentially unique way, a category $\Ff$ fibered over
+$\Ee$ whose fibers ``are'' the categories $\Ff_{\xi}$ and whose
+base-change functors may be chosen to be ``equal'' to the functors
+given in advance \cite{sga4.exp.VI.bib.5}.
+
+\subsubsection{}\etiquette[6.1.4]{VI.subsubsec6.1.4}
+Let $\Ff$ and $\Gg$ be two categories over $\Ee$. We denote by
+$$
+\Hhom_{\cart/\Ee}(\Ff, \Gg)
+$$
+the full subcategory of $\Hhom_{\Ee}(\Ff,\Gg)$ defined by the
+functors that carry Cartesian morphisms of $\Ff$ to Cartesian
+morphisms of $\Gg$. The objects of \\
+$\Hhom_{\cart/\Ee}(\Ff,\Gg)$ are called \emph{Cartesian functors}.
+
+Let $C$ and $C'$ be two categories, and let $S$ be a set of morphisms
+of the category $C$. We denote by $\Hom_{S^{-1}}(C,C')$ the set of
+functors from $C$ to $C'$ that carry the morphisms of $S$ to
+isomorphisms.
+
+Let $(\Cat)$ denote the category whose objects are the categories
+belonging to the universe and whose morphisms are the functors between
+these categories (the category $(\Cat)$ does not belong to the
+universe).
+
+Let $\Ff$ be a category over $\Ee$, and let $S$ be the set of
+Cartesian morphisms of $\Ff$. The category $\Ff$ defines two functors
+on $(\Cat)$ with values in the category\pageoriginale of sets
+belonging to the universe:
+$$
+C \mapsto \Hom_{S^{-1}}(\Ff,C)\quad C \in \ob (\Cat)
+$$
+
+$C \mapsto \Hom_{\Cart /\Ee}(\Ff,C\times\Ee) =$ \{Cartesian
+functors from $\Ff$ to $C\times\Ee$\}
+
+(the category $C\times\Ee$ is regarded as a category over $\Ee$ by
+the second projection functor).
+
+\begin{enonce*}{Proposition 6.2}\etiquette[6.2]{VI.prop6.2}
+The functors $(\Cat)\to(\Ens):$
+\begin{align*}
+C &\mapsto \Hom_{S^{-1}} (\Ff, C)\\
+C &\mapsto \Hom_{\Cart/\Ee} (\Ff, C \times \Ee)
+\end{align*}
+are canonically isomorphic. They are representable.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+To prove the first assertion, it is enough to observe that the
+Cartesian morphisms of $C\times\Ee$ are the morphisms of the form
+$m\times f$, where $m$ is an isomorphism of $C$. To prove the second
+assertion, it is enough to prove that the functor
+$\Hom_{S^{-1}}(\Ff,.)$ is representable. This follows from \cite{sga4.exp.VI.bib.1}.
+We indicate only the idea of the proof. One formally adjoins to the
+morphisms of $\Ff$ inverses of the morphisms of $S$. One considers
+the free category generated by the objects of $\Ff$, the morphisms of
+$\Ff$, and the formal inverses of the morphisms of $S$ (the path
+category). One then takes the quotient by the relations arising from
+the relations among morphisms of $\Ff$ and relations of the form
+$$
+s^{-1}s=\id\quav \text{s}s^{-1}=\id\quad s\in S{\quoi}.
+$$
+The category thus obtained is denoted by $\Ff(S^{-1})$; equipped with
+the canonical functor $Q:\Ff\to\Ff(S^{-1})$, it represents the
+functor $\Hom_{S^{-1}}(\Ff,.)$.
+\end{enonce*}
+
+\begin{enonce*}{Definition 6.3}\etiquette[6.3]{VI.def6.3}
+When $\Ff$ is fibered over $\Ee$, the functor
+$\Hom_{S^{-1}}(\Ff,.)$ is denoted by
+$\varinjlim_{\mathcal{E}^{\circ}}\Ff$ and is called the inductive-limit
+functor of $\Ff$ over $\mathcal{E}^{\circ}$. The category representing
+it is likewise denoted by
+$\varinjlim_{\mathcal{E}^{\circ}}\Ff$ and is called the inductive-limit
+category of $\Ff$ over $\Ee^{\circ}$.
+\end{enonce*}
+
+\setcounter{subsection}{4}
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[6.4.0]{VI.subsubsec6.4.0}
+
+Suppose that $\Ff$ is fibered over $\Ee$. For every morphism $f$ of
+$\Ee$, choose a base-change functor over $f$, and let
+$$
+Q :\Ff \to \varinjlim_{\mathcal{E}^{\circ}} \Ff
+$$
+be the\pageoriginale canonical functor. Composing the inclusion
+functors of the fibers of $\Ff$ into $\Ff$ with $Q$ gives, for every
+object $\xi$ of $\Ee$, a functor
+$$
+u_{\xi} : \Ff_{\xi} \to \varinjlim_{\mathcal{E}} \Ff
+$$
+and, for every morphism $f:\xi\to\eta$ of $\Ee$, a diagram that
+commutes up to canonical isomorphism:
+\[
+\xymatrix@R=1cm@C=3cm{
+\Ff_{\eta} \ar[rd]^{u_{\eta}} \ar[dd]_{f^\ast}&\\
+                   &\displaystyle\mathop{\varinjlim}_{\Ee^{0}}\Ff\\
+\Ff_{\xi} \ar[ru]_{u_{\xi}} &
+}
+\]
+The category $\varinjlim_{\mathcal{E}^{\circ}}\Ff$ then appears as
+the inductive limit \emph{in the sense of pseudofunctors} \cite{sga4.exp.VI.bib.5} of
+the pseudofunctor $\Ee^{\circ}\to\Cat$ that associates
+$\Ff_{\xi}$ with every $\xi\in\ob$, and the functor
+$f^{\ast}:\Ff_{\eta}\to\Ff_{\xi}$ with every
+$f:\xi\to\eta$. Note, however, that even when
+$\xi\mapsto\Ff_{\xi}$ is an actual functor, the category
+$\varinjlim_{\mathcal{E}^{\circ}}\Ff$ is not in general the
+inductive limit in the sense of I 2 of the functor
+$\xi\mapsto\Ff_{\xi}$ (\cf \hyperref[VI.exe6.8]{6.8}).
+
+\begin{enonce*}{Proposition 6.4}\etiquette[6.4]{VI.prop6.4}
+Let $\Ff$ be a category fibered over $\Ee$. Suppose that the category
+$\Ee$ has the following properties:
+\begin{itemize}
+\item[L1)] Every diagram
+\[
+\xymatrix@C=1.5cm@R=.65cm{
+\bigdot \ar[rd]& \\
+        & \bigdot\\
+\bigdot \ar[ru]&
+}
+\]
+can be embedded in a commutative diagram
+\[
+\xymatrix@C=1.25cm@R=1cm{
+        & \bigdot \ar[rd]&\\
+\bigdot \ar[ru]\ar[rd]&         & \bigdot\\
+        & \bigdot \ar[ru]&
+}
+\]
+
+\item[L2)] For\pageoriginale every pair of morphisms
+$u,v:\cdot\rightrightarrows\cdot$ such that there exists a morphism
+$t$ satisfying $tu=tv$, there exists a morphism $w$ satisfying
+$uw=vw$.
+
+(Note that if the category $\Ee^{\circ}$ is pseudofiltered
+\emph{(I \hyperref[I.def2.7]{2.7})}, it has properties \emph{L1)} and \emph{L2)}.) The set
+$S$ of Cartesian morphisms of $\Ff$ then has the following
+properties:
+
+\item[Fr1)] The set $S$ is stable under composition. Isomorphisms
+  belong to~$S$.
+
+\item[Fr2)] Every diagram
+\[
+\xymatrix@C=1.5cm@R=.65cm{
+\bigdot \ar[rd]& \\
+        & \bigdot\\
+\bigdot \ar[ru]^{s}&,
+}
+\]
+where $s$ belongs to $S$, can be completed to a commutative diagram
+\[
+\xymatrix@C=1.25cm@R=1cm{
+        & \bigdot \ar[rd]&\\
+\bigdot \ar[ru]^{t}\ar[rd]&         & \bigdot\\
+        & \bigdot \ar[ru]^{s}&
+}
+\]
+where $t$ belongs to $S$.
+
+\item[Fr3)] For every pair of morphisms
+$u,v:\cdot\rightrightarrows\cdot$ such that there exists a morphism
+$s\in S$ satisfying $su=sv$, there exists a morphism $t\in S$ such
+that $ut=vt$.
+\end{itemize}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+Left to the reader as an exercise.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 6.5}\etiquette[6.5]{VI.prop6.5}
+Let $\Ff$\pageoriginale be a category, and let $S$ be a set of
+morphisms of $\Ff$ having properties \emph{Fr1), Fr2), and Fr3)
+(\hyperref[VI.prop6.4]{6.4})}. For every object $X$ of $\Ff$, let
+$S(X)$ denote the category of morphisms of $S$ with target $X$. The
+category $S(X)$ is cofiltered \emph{(I \hyperref[I.def2.7]{2.7})}. The category
+$\Ff(S^{-1})$ (which represents the functor
+$\Hom_{S^{-1}}(\Ff,\cdot)$) may then be described as follows:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The objects of $\Ff(S^{-1})$ are the objects of $\Ff$.
+
+\item Let $X$ and $Y$ be two objects of $\Ff(S^{-1})$. We have
+$$
+\Hom_{\Ff(S^{-1})} (X, Y)= \varinjlim_{S(X)}
+\Hom_{\Ff} (., Y){\quoi}.
+$$
+
+\item Let $f:X\to Y$ and $g:Y\to Z$ be two morphisms of
+$\Ff(S^{-1})$. Let
+\[
+\xymatrix{
+\bigdot  \ar[d]_{t} \ar[rrd]^{f'}&\\
+X        & &Y & & t\in S
+}
+\]
+(resp.
+\[
+\xymatrix{
+\bigdot \ar[d]_{t'} \ar[rrd]^{g'}&\\
+Y                          & & Z & & t'\in S)
+}
+\]
+be a diagram in $\Ff$ whose image is $f$ (\resp $g$). Let
+\[
+\xymatrix@C=2.5cm@R=1cm{
+\bigdot \ar[rd]^{f''} \ar[d]_{t''}& \\
+\bigdot \ar[rd]^{f'}        & \bigdot \ar[d]^{t'}\\
+                            & Y      & t''\in S
+}
+\]
+be a commutative diagram whose existence is ensured by Fr2). The image
+in $\Hom_{\Ff(S^{-1})}(X,Z)$ of the diagram
+\[
+\xymatrix@C=2cm{
+\bigdot \ar[d]_{tt''} \ar[rd]^{g'f''}& \\
+X       & Z
+}
+\]
+is the composite morphism $gf$.
+
+Let\pageoriginale
+$$
+Q : \Ff \to \Ff (S^{-1})
+$$
+be the canonical functor.
+
+\item The functor $Q^{\ast}:\Ff(S^{-1})^{\widehat{\phantom{,}}}\to
+  \Ff^{\widehat{\phantom{,}}}$ ($F\mapsto F\circ Q$ \emph{I \hyperref[I.sec5.0]{5.0}})
+  is fully faithful and injective on objects.
+
+\item The functor $Q_{!}:\Ff^{\widehat{\phantom{,}}}\to
+  \Ff(S^{-1})^{\widehat{\phantom{,}}}$ (left adjoint to the functor
+  $Q^{\ast}$ \emph{(I \hyperref[I.prop5.1]{5.1})}) is left exact. (Consequently, the same is
+  true of $Q$ when finite projective limits are representable in
+  $\Ff$.)
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+For the proof, we refer to [1].
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 6.6}\etiquette[6.6]{VI.exe6.6}
+Let $\Ff$ be a category, and let $S$ be a set of morphisms of $\Ff$
+having properties Fr1), Fr2), and Fr3). For every object $X$ of
+$\Ff$, let $S(X)$ denote the category of morphisms with target $X$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The category $S(X)$ is cofiltered (I 2).
+
+\item For every object $X$ of $\Ff$, let $J_S(X)$ denote the set of
+  sieves of $X$ that contain a sieve generated by a morphism of $S$.
+  The $J_S(X)$ define a topology $T$ on $\Ff$.
+
+\item For the topology $T$, the morphisms of $S$ are bicovering
+  (II \hyperref[VI.cor5.2]{5.2}).
+
+\item For every object $X$ of $\Ff$, let $𝒥^2(X)$ denote the category
+  of bicovering morphisms with target $X$. The category $S(X)$ is
+  cofinal in $𝒥^2(X)$ (I 8).
+
+\item Let $G$ be a presheaf of sets on $\Ff$, and let $\sheaf{a}$ be
+  the associated-sheaf functor for the topology $T$. For every object
+  $X$ of $\Ff$, there is a canonical isomorphism
+$$
+\sheaf{a} G(X) \xrightarrow{\sim} \frac{\lim}{S(X)} G( \cdot ){\quoi}.
+$$
+A presheaf is a sheaf if and only if it carries every morphism of $S$
+to an isomorphism.
+
+\item Choose the associated-sheaf functor so that its restriction to
+$\Ff$ is injective on objects. Let $\underrightarrow{\Ff}$ denote the
+full subcategory of the category of sheaves of sets on $\Ff$ defined
+by the sheaves associated with representable presheaves.
+\pageoriginale The category $\underrightarrow{\Ff}$ is isomorphic to
+the category $\Ff(S^{-1})$ described in \hyperref[VI.prop6.5]{6.5}.
+The objects of $\underrightarrow{\Ff}$ form a generating family of
+the topos $\Ff^{\sim}$ of sheaves of sets on $\Ff$. The topology on
+$\underrightarrow{\Ff}$ induced by the canonical topology of
+$\Ff^{\sim}$ is the coarse topology (II \hyperref[II.subsubsec1.1.4]{1.1.4}).
+
+\item Let $Q:\Ff\to\underrightarrow{\Ff}$ be the canonical functor.
+The functor $Q$ is a morphism from the site $\underrightarrow{\Ff}$
+(with the coarse topology) to the site $\Ff$ (with the topology $T$
+of b)) (IV \hyperref[IV.exer5.9]{5.9}), and induces an isomorphism on the corresponding
+topoi.
+
+\item Let $u:\Ff\to C$ be a functor. The functor $u$ is continuous if
+and only if it carries the morphisms of $S$ to isomorphisms (III \hyperref[III.def1.1]{1.1}).
+
+\item Let $u:\Ff\to C$ be a functor carrying the morphisms of $S$ to
+isomorphisms. The functor $u$ factors uniquely as
+\[
+\xymatrix@=1.5cm{
+  \Ff\ar[rr]^{u} \ar[rd]_{Q}&  & C\\
+            & \underrightarrow{\Ff}{} \ar[ru]_{v}&
+}
+\]
+(Use III \hyperref[III.rem1.4]{1.4}.)
+
+\item Let $\Pro_S\Ff$ be the full subcategory of $\Pro\Ff$ (I 8)
+defined by the pro-objects whose transition morphisms belong to $S$.
+Show that the functor $Q$ factors as
+\[
+\xymatrix@M=.25cm@C=2cm{
+\Ff\ar@{^{(}->}[r]^{i}& \Pro_S\Ff\ar[r]^{j}&
+\Ff_{S^{-1}}
+}
+\]
+where $j$ is the restriction of $\Pro Q$ to $\Pro_S\Ff$. Show that
+the functor $j$ admits a fully faithful left adjoint
+$$
+A : \Ff_{S^{-1}} \to \Pro_S \Ff{\quoi}.
+$$
+Show that, for every object $X$ of $\Ff$, $AQ(X)$ is the pro-object
+$$
+Y \to X \in S(X) \mapsto Y{\quoi}.
+$$
+\end{enumerate}
+\end{enonce*}
+

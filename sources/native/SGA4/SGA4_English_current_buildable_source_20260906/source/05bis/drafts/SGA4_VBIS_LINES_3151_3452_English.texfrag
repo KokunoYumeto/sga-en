@@ -1,0 +1,306 @@
+\section{Applications}\etiquette[5]{Vbis.sec5}\pageoriginale
+
+\subsection{Construction of simplicial objects}\etiquette[5.1]{Vbis.subsec5.1}
+
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[5.1.0]{Vbis.subsubsec5.1.0}
+
+Up to and including \hyperref[Vbis.prop5.1.3]{5.1.3}, $H$ is a
+category in which nonempty finite inverse limits exist and in which
+finite coproducts exist and are disjoint and universal. If
+$X:\Delta^0\to H$ is a simplicial object of $H$, we denote by
+$d^k_i:X_k\to X_{k-1}$ (\resp by $s^k_i:X_k\to X_{k+1}$), for
+$i\in[k]$ and $0\leq k$, the arrows corresponding to the face
+operators $\partial^i_k:[k-1]\to[k]$ (\resp to the degeneracy
+operators $\sigma^i_k:[k]\to[k+1]$) (\cf \cite{sga4.exp.Vbis.bib.3} II 2).
+
+\begin{enonce*}{Definition 5.1.1}\etiquette[5.1.1]{Vbis.def5.1.1}
+A simplicial object $X:\Delta^0\to H$ of $H$ is
+$\sigma$-split if there exists a family of subobjects $NX_j$ of
+$X_j$ $(j\geq0)$ such that the morphisms
+$$
+h_i:\coprod_{\substack{\Hom_{\Delta^{-}}([i], [j])\\
+j\leq i}} NX_j \longrightarrow X_i
+$$
+are isomorphisms.
+\end{enonce*}
+
+Likewise, a $k$-truncated simplicial object
+$X:\Delta^0_k\to H$ is $\sigma$-split if there exist $NX_j$
+$(0\leq j\leq k)$ satisfying the preceding condition for
+$i\leq k$.
+
+The $NX_j$ are uniquely determined by $X$. Indeed, if $X$ is
+$\sigma$-split, the degeneracy operators
+$s^{k-1}_\ell:X_{k-1}\to X_k$ are isomorphisms from $X_{k-1}$
+onto direct summands of $X_k$, and
+$$
+NX_k = \mathop{\cap}_\ell\quad (\text{complement of } s^{k-1}_\ell(X_{k-1})) {\quoi}.
+$$
+For $k=0$, $NX_0=X_0$.
+
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[5.1.2]{Vbis.subsubsec5.1.2}
+For a $\sigma$-split $(n+1)$-truncated simplicial object $X$ of
+$H$, we denote by $\alpha_n(X)$ the triple consisting of
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph {enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item the restriction $i^{\ast}_n(X)$ of $X$ to $\Delta^0_n$;
+
+\item $NX_{n+1}$;\pageoriginale
+
+\item the evident map from $NX_{n+1}$ to $(\cosq_n(X))_{n+1}$.
+\end{enumerate}
+
+This triple $(Y,N,\beta)$ satisfies the following condition:
+
+\noindent
+$(\ast)$ $Y$ is a $\sigma$-split $n$-truncated simplicial object of
+$H$, and $\beta$ is a map from $N$ to $(\cosq Y)_{n+1}$.
+
+\begin{enonce*}{Proposition 5.1.3}\etiquette[5.1.3]{Vbis.prop5.1.3}
+Let $(Y,N,\beta)$ be a triple satisfying $(\ast)$ above.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman {enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Up to unique isomorphism, there exists a unique $\sigma$-split
+  $X:\Delta^0_{n+1}\to H$ such that
+  $\alpha_n(X)\simeq(Y,N,\beta)$.
+
+\item To give a morphism $f$ from $X$ to a truncated simplicial
+  object $Z:\Delta^0_{n+1}\to H$ is equivalent to giving
+\begin{enumerate}
+\renewcommand{\labelenumii}{\theenumii)}
+\item a morphism $f':Y\to i^{\ast}_n(Z)$;
+
+\item a morphism $f'':N\to Z_{n+1}$ such that the diagram
+\[
+\xymatrix@C=4cm@R=2cm{
+N  \ar[r] \ar[d]^{f''}& (\cosq_n Y)_{n+1} \ar[d]^{f'}\\
+Z_{n+1} \ar[r]& (\cosq_n Z)_{n+1}
+}
+\]
+commutes.
+\end{enumerate}
+\end{enumerate}
+\end{enonce*}
+
+Let us construct $X$.
+
+Set $Y'_{n+1}=(\cosk_nY)_{n+1}$ and denote by
+$$
+{d'}^{n+1}_i:Y'_{n+1}\to Y_n
+\quad(\textup{resp. }{s'}^n_i:Y_n\to Y'_{n+1})
+$$
+the face operators (\resp the degeneracy operators) obtained by
+functoriality.
+
+\noindent \sisi{$+$}{} Set
+$Y_{n+1}=N\coprod(\coprod_{\Hom_{\Delta^{-}_{\ell\leq n}}([n+1],
+  [\ell])}NY_{\ell})$, and let $\alpha:Y_{n+1}\to Y'_{n+1}$ be
+the arrow whose components are $\beta$ and the arrows
+$NY_{\ell}\to Y_{\ell}\to Y'_{n+1}$ for every epimorphism
+$[n+1]\to[\ell]$ with $\ell\leq n$.
+
+\noindent \sisi{$+$}{} Let\pageoriginale
+$s^n_i:Y_n\simeq
+\coprod_{\Hom_{\Delta^{-}_{\ell'\leq n}}([n],[{\ell}'])}NY_{{\ell}'}
+\to Y_{n+1}$ be the arrow induced by $\sigma^i_n$, so that
+\begin{enumerate}
+\renewcommand{\theenumi}{\Roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $\alpha\circ s^n_i={{s}'}^n_i$.
+
+Set
+
+\item $d^{n+1}_i={d'}^{n+1}_i\circ\alpha$.
+\end{enumerate}
+
+\noindent \sisi{$+$}{} To show that this defines an object of
+$\Hom(\Delta^0_{n+1},H)$, it is enough, by [\cite{sga4.exp.Vbis.bib.3}. II (2.4)], to
+verify the formulas
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $d^n_i\cdot d^{n+1}_j=d^n_{j-1}\cdot d^{n+1}_i$ \qquad $i<j$;
+
+\item $s^n_i\cdot s^{n-1}_j=s^n_{j+1}\cdot s^{n-1}_i$ \qquad $i\leq j$;
+
+\item $d^{n+1}_i\cdot s^n_j=
+\begin{cases}
+s^{n-1}_{j-1}\cdot d^n_i & i<j,\\
+\id & i=j \mbox{ or } i=j+1,\\
+s^{n-1}_{j}\cdot d^n_{i-1} & i>j+1.
+\end{cases}$
+\end{enumerate}
+
+Formulas a) and c) are evident by (I) and (II), since they are known
+to hold if $d^{n+1}_i$ is replaced by ${d'}^{n+1}_i$ and $s^n_i$
+by ${s'}^n_i$.
+
+Formula b) holds by construction.
+
+We leave it to the reader to verify that the object $X$ thus obtained
+satisfies \hyperref[Vbis.prop5.1.3]{5.1.3}.
+
+\noindent \sisi{$+$}{} Note that the functor constructed in the proof
+of \hyperref[Vbis.prop5.1.3]{5.1.3}, from the category of triples
+satisfying (\hyperref[Vbis.subsubsec5.1.2]{5.1.2}) $(\ast)$ to the
+category of $(n+1)$-truncated simplicial objects, is faithful but not
+full.
+
+Proposition \hyperref[Vbis.prop5.1.3]{5.1.3} provides a very convenient
+method for constructing simplicial objects of $H$ by induction. In
+the remainder of this section, we formalize this observation in the
+form that will be used in \hyperref[Vbis.subsec5.2]{5.2} and
+\hyperref[Vbis.subsec5.3]{5.3}.
+
+\setcounter{subsubsection}{3}
+\subsubsection{}\etiquette[5.1.4]{Vbis.subsubsec5.1.4}
+
+Let\pageoriginale $E\xrightarrow{\pi}B$ be a functor such that, for
+every object $b$ of $B$, the fiber category $E_b$ is nonempty and
+satisfies the conditions of \hyperref[Vbis.subsubsec5.1.0]{5.1.0}.
+
+Let $Q$ be a property of an object of $E$, stable under isomorphism.
+Suppose that the following conditions hold:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item \emph{For every object $b$ of $B$, there exists an object $x$ of
+  $E_b$ satisfying $Q$.}
+
+\item \emph{For every object $b$ of $B$ and every pair $(x,y)$ of
+  objects of $E_b$ satisfying $Q$, there exists an object $z$ of $E_b$
+  satisfying $Q$ and morphisms $z\to x$, $z\to y$ in $E_b$.}
+
+\item \emph{For every morphism $b'\xrightarrow{t}b$ of $B$ and every
+  object $x$ of $E_b$ satisfying $Q$, there exists an object $x'$ of
+  $E_{b'}$ satisfying $Q$ and a morphism $x'\to x$ over $t$.}
+
+Let, on the other hand, $P$ be a property of an arrow of $E$ over an
+identity, stable under isomorphism. Suppose that the following
+conditions hold:
+
+\item \emph{For every object $b$ of $B$ and every object $x$ of $E_b$,
+  there exists an arrow $y\to x$ in $E_b$ satisfying $P$.}
+
+\item \emph{For every object $b$ of $B$, every diagram in $E_b$ of
+  the form}
+\[
+\xymatrix{
+u \ar[rrrr]^{f} & & &                 &x\\
+                & & &z\ar[ru]\ar[rd] &\\
+v \ar[rrrr]_{g} & & &               & y
+}
+\]
+\emph{in which $f$ and $g$ satisfy $P$, there is a completion to a
+commutative diagram in $E_b$}
+\[
+\xymatrix@R=1.25cm{
+  & u\ar[rrrr]^{f} & & &  & x\\
+w\ar[rrrr]^{h}\ar[ru]\ar[rd] &   & & &z\ar[ru]\ar[rd] & \\
+  & v\ar[rrrr]_{g} & & &  & y
+}
+\]
+\emph{in which}\pageoriginale $h$ \emph{satisfies $P$.}
+
+\item \emph{For every morphism $b'\xrightarrow{t}b$ of $B$ and every
+  morphism $x\xrightarrow{f}y$ of $E_b$ satisfying $P$, there exists
+  a morphism $x'\xrightarrow{f'}y'$ of $E_{b'}$ satisfying $P$ and a
+  commutative diagram}
+\[
+\xymatrix@C=3cm@R=1.5cm{
+x' \ar[r]^{\alpha} \ar[d]_{f'}& x\ar[d]^{f}\\
+y' \ar[r]_{\beta}& y
+}
+\]
+\emph{in which $\alpha$ and $\beta$ are morphisms over $t$.}
+\end{enumerate}
+
+\begin{enonce*}{Definition 5.1.5}\etiquette[5.1.5]{Vbis.def5.1.5}
+With the notation of \hyperref[Vbis.subsubsec5.1.4]{5.1.4}, we say
+that an object $X$ of $\Hom(\Delta^0,E)$ satisfies condition
+\emph{(APQ)} if the following conditions hold:
+\begin{enumerate}
+\item[(i)] The image of $\pi\circ X$ is the constant simplicial object
+  defined by an object $b$ of $B$.
+
+\item[(ii)] As an object of $\Hom(\Delta^0,E_b)$, $X$ is
+  $\sigma$-split.
+
+\item[(iii)] $X_0$ satisfies condition $Q$.
+
+\item[(iv)] For every integer $n$, the arrow
+  $NX_{n+1}\to(\cosq_nX)_{n+1}$ satisfies condition $P$.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsubsection}{5}
+\subsubsection{}\etiquette[5.1.6]{Vbis.subsubsec5.1.6}
+Let $E_{(APQ)}$ denote the subcategory of $\Hom(\Delta^0,E)$ whose
+objects are the simplicial objects satisfying $(APQ)$ and whose
+morphisms are the morphisms $X\xrightarrow{\alpha}Y$ of
+$\Hom(\Delta^0,E)$ such that
+$\pi(\alpha_n):\pi(X_n)\to\pi(Y_n)$ is the same morphism of $B$ for
+every $n$. There is then a canonical functor
+$\bar{\pi}:E_{(APQ)}\to B$.
+
+\begin{enonce*}{Proposition 5.1.7}\etiquette[5.1.7]{Vbis.prop5.1.7}
+The\pageoriginale functor $\bar{\pi}$ is surjective. Moreover, for
+every object $b$ of $B$ and every pair $(X,Y)$ of objects of
+$E_{(APQ),b}$, there exists a diagram
+\[
+\xymatrix@=1.5cm{
+  & Z \ar[ld]\ar[rd]&\\
+X &   & Y
+}
+\]
+in $E_{(APQ),b}$.
+\end{enonce*}
+
+The proof follows immediately from \hyperref[Vbis.prop5.1.3]{5.1.3},
+by virtue of the hypotheses made in
+\hyperref[Vbis.subsubsec5.1.4]{5.1.4}.
+
+\begin{enonce*}{Proposition 5.1.8}\etiquette[5.1.8]{Vbis.prop5.1.8}
+Let $C$ be a category and $F$ a functor $E_{(APQ)}\to C$. We introduce
+the following conditions on $F$:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every object $b$ of $B$, the restriction of $F$ to
+  $E_{(APQ),b}$ factors through the \emph{coarse} category
+  \footnote{A category is called \emph{coarse} if, for every pair
+  $(x,y)$ of objects, $\Hom(x,y)$ consists of exactly one element.}
+  defined by the objects of $E_{(APQ),b}$.
+
+\item For every morphism $t:b'\to b$ of $B$ and every pair
+  $(X'\to X,Y'\to Y)$ of morphisms over $t$, the following diagram
+  commutes:
+\[
+\xymatrix@C=3cm@R=2cm{
+F(X')         \ar[r]  \ar[d]_{\alpha'}& F(X)\ar[d]^{\alpha}\\
+F(Y')          \ar[r] & F(Y)
+}
+\]
+where $\alpha$ and $\alpha'$ are the arrows determined by condition
+\emph{(i)}.
+\end{enumerate}
+
+Then the functor $G\mapsto G\circ\bar{\pi}$ induces an equivalence
+between the category $\Hom(B,C)$ and the full subcategory of
+$\Hom(E_{(APQ)},C)$ defined by the functors satisfying conditions
+\emph{(i) and (ii)}.
+\end{enonce*}
+
+The\pageoriginale details of the proof are left to the reader. We
+indicate only how to prove that the preceding functor is essentially
+surjective.
+
+Let $F:E_{(APQ)}\to C$ be a functor satisfying conditions (i) and
+(ii). For every object $b$ of $B$, choose an object $X$ of
+$E_{(APQ),b}$ and set $\bar{F}(b)=F(X)$; one then verifies that
+$\bar{F}(b)$ varies functorially with $b$.
+

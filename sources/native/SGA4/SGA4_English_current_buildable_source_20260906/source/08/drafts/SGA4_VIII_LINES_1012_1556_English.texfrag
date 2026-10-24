@@ -1,0 +1,541 @@
+\section{Supports}\pageoriginale\etiquette[6]{VIII.sec6}
+
+Let $U$ be a Zariski open subset of the scheme $X$. Then $U \in \Ob
+X_{\text{\rm ét}}$,
+and in fact $U$ is a subobject of the final object $X$ of $X_{\text{\rm
+    ét}}$,
+hence defines a subobject $\widetilde{U}$ of the final object of
+$\widetilde{X_{\text{\rm ét}}}$, \ie an ``open subset'' of the étale
+topos $X_{\text{\rm ét}}$
+of $X$ (IV \hyperref[IV.def8.3]{8.3}).
+
+\begin{enonce*}{Proposition 6.1}\etiquette[6.1]{VIII.prop6.1}
+The preceding map $U \mapsto \overset{\sim}{U}$ is an isomorphism
+from the ordered set of open subsets (in the Zariski sense) of $X$
+onto the set of open subsets of the étale topos
+$\widetilde{X_{\text{\rm ét}}}$.
+\end{enonce*}
+
+Since $X_{\text{\rm ét}} \to \widetilde{X_{\text{\rm ét}}}$ is fully
+faithful, it follows immediately that the map $U \mapsto \widetilde{U}$
+preserves the order structures, \ie $(U \subset V) \Leftrightarrow
+(\widetilde{U} \subset \widetilde{V})$; in particular, the preceding
+map is injective. To prove that it is surjective, consider a subsheaf
+$F$ of the final sheaf $\widetilde{X}$, and consider the objects of
+$X_{\text{ét}/ F}$, \ie the schemes $X'$ étale over $X$ such that
+$F(X') \neq ∅$. Since $X' \to X$ is étale, it is an open map
+(\EGA IV 2.4.6); in particular, its image (in the set-theoretic sense)
+$\text{Im}(X')$ is open. Let $U$ be the open subset which is the union
+of the $\text{Im}(X')$ $(X'\in \Ob X_{\text{ét} /  F})$. Since the
+family of the $X'\to U$ $(X'\in \Ob X_{\text{ét}/F})$ is
+surjective, hence covering, we conclude that $U \in \Ob
+X_{\text{ét}/F}$, hence
+$ X_{\text{ét}/F} =  X_{\text{ét}/U}$, hence $F = U$, \cqfd.
+
+In view of \hyperref[VIII.prop6.1]{6.1}, we may therefore speak
+unambiguously of an ``open subset'' of $X$, without specifying whether
+we mean this notion in the usual Zariski sense or in the sense of the
+étale topology.
+
+\begin{enonce*}{Corollary 6.2}\etiquette[6.2]{VIII.cor6.2}
+Let $U$ be an open subset of $X$, and let $j : U \to X$ be the
+canonical immersion. Then the functor
+$$
+j^{\ast} :  \widetilde{X_{\text{\rm ét}}} \to \widetilde{U_{\text{\rm ét}}}
+$$
+induces\pageoriginale an equivalence of categories
+$$
+\widetilde{X_{\text{\rm ét}}} / \widetilde{U} \to
+\widetilde{U_{\text{\rm ét}}}{\quoi}.
+$$
+\end{enonce*}
+
+Indeed, one checks immediately that for every site $C$ in which finite
+$\varprojlim$ exist, and for every subobject $U$ of the final object
+$e$ of $C$, if one considers the functor $j : C \to C_{/U}$ defined by
+$j(S) = S \times U$, then $j$ is a morphism of sites and $j^{\ast} :
+\widetilde{C} \to \widetilde{C/U}$ induces an equivalence
+$\widetilde{C}/\widetilde{U} \to \widetilde{C / U}$. It then suffices
+to combine this general fact with the fact that $U_{\text{ét}}$ is
+canonically isomorphic to $X_{\text{ét}/U}$.
+
+In pictorial terms, one can express \hyperref[VIII.cor6.2]{6.2} by
+saying that the operations of ``restriction to an open subset,'' in
+the usual sense for schemes on the one hand and in the sense of topoi
+on the other, are compatible. Here is an analogous compatibility for
+the operations of ``restriction to a closed subset'':
+
+\begin{enonce*}{Theorem 6.3}\etiquette[6.3]{VIII.thm6.3}
+Let $X$ be a scheme, let $Y$ be a closed subscheme of $X$, let $U
+= X - Y$ be endowed with the induced structure, and let $i : Y \to X$
+and $j : U \to X$ be the canonical immersions. Then the functor
+$$
+i_{\ast} : \widetilde{Y_{\text{\rm ét}}} \to \widetilde{X_{\text{\rm ét}}}
+$$
+is fully faithful, and if $F \in \Ob \widetilde{X_{\text{\rm ét}}}$,
+then $F$ is isomorphic to a sheaf of the form $i_{\ast} (G)$ if and
+only if $j^{\ast}(F)$ is isomorphic to the final sheaf
+$\widetilde{U}$ on $U$.
+\end{enonce*}
+
+Proof. Since $i_{\ast}$ and $i^{\ast}$ are adjoint to one another, the
+fact that $i_{\ast}$ is fully faithful is also equivalent to the fact
+that the functorial homomorphism
+$$
+i^{\ast} (i_{\ast}(G)) \to G
+$$
+is an\pageoriginale isomorphism, which is precisely
+\hyperref[VIII.cor5.7]{5.7}. On the other hand, if $G \in \Ob
+\widetilde{Y_{\text{ét}}}$, then one checks trivially, using
+\hyperref[VIII.cor6.2]{6.2}, that $j^{\ast} (i_{\ast}(G))$ is the final
+sheaf on $U$. Conversely, if $F \in \Ob
+\widetilde{X_{\text{ét}}}$ is such that $j^{\ast}(F)$ is the final
+sheaf, let us prove that $F$ is isomorphic to a sheaf of the form
+$i_{\ast}(G)$, or, what amounts to the same thing, that the canonical
+homomorphism
+$$
+F \to i_{\ast} i^{\ast} F
+$$
+is an isomorphism. It is enough once again to check that for every $x
+\in X$, the homomorphism induced on the geometric fibers at $\bar{x}$
+is an isomorphism. When $x \in U$, this is precisely the hypothesis
+made on $F$. When $x \in Y$, by transitivity of fibers we are reduced
+to checking that the homomorphism on the fibers at $\bar{x}$ induced
+by
+$$
+i^{\ast} (F) \to i^{\ast} (i_{\ast} i^{\ast} (F))
+$$
+is an isomorphism; but the preceding homomorphism is an isomorphism by
+\hyperref[VIII.cor5.7]{5.7}, applied to $F = i^{\ast} F$ and to $i$.
+This completes the proof of \hyperref[VIII.thm6.3]{6.3}.
+
+\begin{enonce*}{Corollary 6.4}\etiquette[6.4]{VIII.cor6.4}
+The functor $i_{\ast}$ induces an equivalence from the category of
+abelian sheaves on $Y$ to the category of abelian sheaves on $X$ whose
+restriction to $U = X - Y$ is zero.
+\end{enonce*}
+
+In accordance with common usage, we shall therefore often identify an
+abelian sheaf on $Y$ with an abelian sheaf on $X$ which is zero on $U$.
+
+\setcounter{subsection}{4}
+\subsection{}\etiquette[6.5]{VIII.subsec6.5}
+
+By virtue of \hyperref[VIII.prop6.1]{6.1}, we thus know (if $X$ is a
+scheme) how to interpret the ``open subsets'' of the topos $ℰ =
+\widetilde{X_{\text{ét}}}$ as open subsets $U$ of $X$ in the usual
+sense, and by virtue of \hyperref[VIII.thm6.3]{6.3}, under this
+identification the ``residual topos''\pageoriginale $ℰ_\complement U$
+of IV 3 is canonically equivalent to the topos
+$\widetilde{Y_{\text{ét}}}$, where $Y = X - U$ is endowed with any
+induced structure making $Y$ a scheme. We may consequently apply to
+this situation the results of IV 3, in particular the description IV
+\hyperref[IV.theo9.5.4]{3.3} of sheaves $F$ on $X$ in terms of triples
+$(F', F'', u)$, where $F'$ is a sheaf on $Y$, $F''$ is a sheaf on $U$,
+and $u$ is a homomorphism from $F'$ to $i^{\ast} j_{\ast} (F'')$. In
+what follows we shall freely use the notation $i^{!}, j_{!}$ of IV.3,
+which denotes functors
+\begin{align*}
+j_{!} : \widetilde{(U_{\text{ét}})}_{\ab} &\to
+\widetilde{(X_{\text{ét}})}_{\ab}{\quoi},\\
+i^{!} : \widetilde{(X_{\text{ét}})}_{\ab} &\to
+\widetilde{(Y_{\text{ét}})}_{\ab}{\quoi},
+\end{align*}
+where the subscript ``$\ab$'' denotes the category of abelian sheaves.
+These functors give rise to the two exact sequences IV \hyperref[IV.prop14.6]{3.7}.
+
+\subsection{}\etiquette[6.6]{VIII.subsec6.6}
+
+In view of the preceding developments and of the general terminology
+introduced in IV \hyperref[IV.subsec8.5]{8.5}, it is appropriate, for an abelian sheaf $F$ on
+$X$, or a section $\varphi$ of such a sheaf, to introduce the notion of
+the \emph{support of} $F$, \resp of $\varphi$, as the closed subset (in
+the usual, \ie Zariski, sense) complementary to the largest open subset
+on which the object in question vanishes.
+
+In the present situation, one should also replace the general notation
+\hyperrefext[V][V.prop4.3]{4.3} $H^q (ℰ_{\complement U} F)$,
+$ℋ^q_{\complement U} (F)$ by the notation $H^{q}_Y (X, F)$,
+$ℋ^{q}_Y (F)$, the first denoting an abelian group and the second an
+abelian sheaf on $Y$ (or equivalently an abelian sheaf on $X$ which is
+zero on $U$). Thus, one has $\mathcal H^q_Y(F)=R^q i^!(F)$, \etc
+
+We refer to \hyperrefext[V][V.sec6]{6} for the general properties of
+the preceding functors.
+
+\section{Specialization morphisms of fiber
+  functors}\pageoriginale
+\etiquette[7]{VIII.sec7}
+
+\subsection{}\etiquette[7.1]{VIII.subsec7.1}
+
+We saw in ${\rm N^{\circ}}$ 4 how one associates, with every geometric
+point $\xi$ of the scheme $X$, a strictly local $X$-scheme
+$$
+\bar{X}(\xi) = \Spec \Oo_{X, \xi}{\quoi},
+$$
+which in fact depends only on the geometric point above the image $x$
+of $\xi$ defined by the separable closure $\bar{k(x)}$ of $k(x)$ in
+$\Omega = k(\xi)$. In what follows we shall often restrict ourselves
+to geometric points $\xi = \Spec \Omega$ which are \emph{algebraic
+  separable} over $X$, \ie such that $\Omega$ is a separable closure
+of $k(x)$, \ie $\xi = \bar{x}$. Let us call an $X$-scheme $Z$ a
+\emph{strict localization of} $X$ if it is $X$-isomorphic to a scheme
+of the form $\Spec \Oo_{X, \bar{x}}$; thus one sees that
+$$
+\xi \mapsto \Spec \sheaf{\Oo}_{X, \xi} = \bar{X}(\xi)
+$$
+is an equivalence from the category of geometric points
+\emph{algebraic separable} over $X$ to the category of $X$-schemes
+which are strict localizations of $X$, when only isomorphisms are taken
+as morphisms in both categories.
+
+The last assertion is no longer correct when all $X$-morphisms are
+taken as morphisms, since in the second category there may be
+$X$-morphisms which are not isomorphisms. We then make the following
+
+\begin{enonce*}{Definition 7.2}\etiquette[7.2]{VIII.def7.2}
+Let $\xi$, $\xi'$ be two geometric points of the scheme $X$. A
+specialization arrow from $\xi'$ to $\xi$ is any $X$-morphism between
+the corresponding strict localizations
+$$
+\bar{X} (\xi') \to \bar{X} (\xi).
+$$
+We\pageoriginale say that $\xi$ is a specialization of $\xi'$, or
+that $\xi'$ is a generization of $\xi$, if there exists a
+specialization arrow from $\xi'$ to $\xi$.
+\end{enonce*}
+
+Note that specialization arrows compose in the evident way, so that,
+with specialization arrows as morphisms, \emph{the geometric points of
+  $X$ form a category}, equivalent (as is the full subcategory formed
+by the geometric points algebraic and separable over $X$) to the full
+subcategory of $(\Sch)_{/X}$ formed by the strict localizations of $X$.
+
+\begin{enonce*}{Lemma 7.3}\etiquette[7.3]{VIII.lem7.3}
+Let $X$ be a scheme, let $Z$ be an $X$-scheme which is isomorphic to a
+pseudo-filtered projective limit of $X$-schemes $X_{i}$ which are étale,
+with affine transition morphisms
+\emph{(\hyperrefext[VII][VII.subsec5.1]{5.1})}, let $\xi'$ be a
+geometric point of $X$, and let $Z' = \bar{X} (\xi')$ be the
+corresponding strict localization. Then:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The restriction map
+$$
+\Hom_X (Z', Z) \to \Hom_X(\xi', Z)
+$$
+is bijective.
+
+\item In order that the two sides be nonempty, it is necessary and
+  sufficient that the image $x'$ of $\xi'$ in $X$ lie in the image of
+  $Z$.
+
+\item Let $T$ be a $Z$-scheme. In order that $T$ be a strict
+  localization of $Z$, it is necessary and sufficient that it be a
+  strict localization of $X$.
+\end{enumerate}
+\end{enonce*}
+
+Proof.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item We are immediately reduced to the case where $Z$ is one of the
+  $X_i$, \ie where $Z$ is étale over $X$, and by the base change
+  $Z'\to X$ we may suppose that $Z'\xrightarrow{\sim} X$, whence the
+  conclusion follows from \hyperref[VIII.def4.2]{4.2} (ii).
+
+\item Note that if $x'$ is the image of a point $z$ of $Z$, then
+  $k(z)$ is necessarily a separable algebraic extension of $k(x')$;
+  hence there exists a $k(x')$-homomorphism from the latter into
+  $k(\xi')$, whence the conclusion.
+
+\item The proof\pageoriginale is an easy exercise left to the reader.
+\end{enumerate}
+
+From \hyperref[VIII.def7.2]{7.2} and \hyperref[VIII.lem7.3]{7.3} we
+conclude:
+
+\begin{enonce*}{Proposition 7.4}\etiquette[7.4]{VIII.prop7.4}
+Let $\xi$, $\xi'$ be two geometric points of the scheme $X$. Then the
+restriction map defines a bijection from the set
+$\Hom_{X} (\bar{X}(\xi'), \bar{X}(\xi))$ of specialization arrows from
+$\xi'$ to $\xi$ to the set of $X$-morphisms from $\xi'$ to
+$\bar{X}(\xi)$.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 7.5}\etiquette[7.5]{VIII.cor7.5}
+In order that $\xi$ be a specialization of $\xi'$, it is necessary and
+sufficient that the same hold for the images $x$, $x'$ of $\xi$,
+$\xi'$ in $X$, \ie that $x$ belong to the closure of $\{x'\}$.
+\end{enonce*}
+
+Since $\Spec \Oo_{X, \xi} \to \Spec \Oo_{X, x}$ is faithfully flat
+(\hyperref[VIII.subsec4.4]{4.4}), it is surjective, and it is therefore
+enough to apply the second assertion of \hyperref[VIII.lem7.3]{7.3}.
+
+\begin{enonce*}{Corollary 7.6}\etiquette[7.6]{VIII.cor7.6}
+For every scheme $X$, let $\sheaf{\Pt}(X)$ be the category of geometric
+points over $X$ (or equivalently of geometric points algebraic
+separable over $X$), the morphisms being specialization arrows. Let
+$\xi$ be a geometric point of a scheme $X$, and let $\bar{X}(\xi)$ be
+the corresponding strict localization. Then there is an equivalence of
+categories
+$$
+\sheaf{\Pt}(\bar{X}(\xi)) \xrightarrow{\sim} \sheaf{\Pt}(X)_{/\xi}{\quoi},
+$$
+obtained by associating with every geometric point $\xi'$ of
+$\bar{X}(\xi)$ the corresponding geometric point over $X$, together
+with the specialization morphism to $\xi$ deduced from the structural
+morphism $\xi' \to \bar{X}(\xi)$ by \hyperref[VIII.prop7.4]{7.4}.
+\end{enonce*}
+
+In other words, \emph{the datum of a generization $\xi'$ of the
+geometric point $\xi$ is essentially equivalent to the datum of a
+geometric point of $\bar{X}(\xi)$}. Note moreover that, by
+\hyperref[VIII.lem7.3]{7.3} c), the corresponding
+homomorphism\pageoriginale $\bar{X}(\xi') \to \bar{X}(\xi)$ makes
+$\bar{X}(\xi')$ the strict localization of $\bar{X}(\xi)$ relative to
+$\xi'$.
+
+\setcounter{subsection}{6}
+\subsection{}\etiquette[7.7]{VIII.subsec7.7}
+
+Now interpret, for every geometric point $\xi$ of $X$ and every sheaf
+$F$ on $X$, the fiber $F_{\xi}$ as $\Gamma (\bar{X} (\xi),
+\bar{F}(\xi))$, where $\bar{F}(\xi)$ is the inverse image of $F$ on
+$\bar{X}(\xi)$ (\hyperref[VIII.cor4.8]{4.8}). Then one sees that every
+specialization arrow
+$$
+u : \xi'\to \xi
+$$
+induces a homomorphism, functorial in $F$:
+$$
+u^{\ast} : F_{\xi} \to F_{\xi'}{\quoi},
+$$
+called the \emph{specialization homomorphism} associated with the
+specialization arrow $u$. It is evident from the transitivity of
+inverse images of sheaves that, for a composite specialization arrow,
+one has:
+$$
+(wu)^{\ast} = u^{\ast} w^{\ast}{\quoi}.
+$$
+
+\subsection{}\etiquette[7.8]{VIII.subsec7.8}
+
+If $ℰ$ is a topos, recall from Exposé IV, 6.1 and 6.2,
+that a ``fiber functor,'' or (by abuse of language) a ``point'' of the
+topos $ℰ$, is any morphism from the ``final topos'' $(\Ens)$
+(isomorphic to the category of sheaves on a space reduced to one
+point!) to $ℰ$, \ie any functor
+$$
+\varphi : ℰ \to (\Ens)
+$$
+which commutes with arbitrary inductive \sisi{lim.}{limits}, and with
+finite projective \sisi{lim.}{limits}. The set of fiber functors of
+$ℰ$ should be regarded as the set of objects of a full subcategory of
+$\Hhom(ℰ, (\Ens))$, called the \emph{category of fiber functors} of the
+topos $ℰ$, whose opposite is called the \emph{category of points of
+  $ℰ$}, and is denoted $\sheaf{\Pt}(ℰ)$, \cf (IV \hyperref[IV.def6.1]{6.1}).
+
+When $ℰ$ is of the form $\widetilde{X_{\text{ét}}}$, where $X$ is
+a scheme, we have\pageoriginale defined in
+\hyperref[VIII.def3.3]{3.3} and \hyperref[VIII.subsec7.7]{7.7} a
+functor
+\begin{equation*}
+\sheaf{\Pt} (X) \to \sheaf{\Pt} (\widetilde{X_{\text{ét}}}){\quoi},\tag{$\ast$}
+\end{equation*}
+where the first member is defined in \hyperref[VIII.cor7.6]{7.6}. With
+this understood, we have the following
+
+\begin{enonce*}{Theorem 7.9}\etiquette[7.9]{VIII.thm7.9}
+Let $X$ be a scheme. The preceding functor $(\ast)$ is an equivalence
+from the category of geometric points over $X$ (with specialization
+arrows as morphisms) to the category of points of the étale topos
+$\widetilde{X_{\text{\rm ét}}}$ (the \emph{opposite} of that of fiber
+functors on $\widetilde{X_{\text{\rm ét}}}$).
+\end{enonce*}
+
+Since this theorem will not be used later in the seminar, we confine
+ourselves here to a sketch of the proof, in which we shall allow
+ourselves certain liberties with questions of universes.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item \emph{The functor under consideration is fully faithful}. For
+  every $X \in \Ob X_{\text{ét}}$, let $\Xv :
+  \widetilde{X_{\text{ét}}} \to (\Ens)$ be defined by
+$$
+\Xv (F) = \Hom(X, F) = F(X){\quoi}.
+$$
+Note that the fiber functor
+$$
+\mathcal{E}_{\xi} : F \mapsto F_{\xi}
+$$
+can be written
+$$
+\mathcal{E}_{\xi} \simeq \varinjlim_i X^{\vee}_i{\quoi},
+$$
+where the $X_i$ are affine schemes étale over $X$, indexed by a
+certain filtered category (\cf \hyperref[VIII.def4.3]{4.3} and
+\hyperref[VIII.subsec4.5]{4.5}). Hence, for every functor $\varphi :
+\widetilde{X_{\text{ét}}} \to (\Ens)$, one has:
+$$
+\Hom(\mathcal{E}_{\xi}, \varphi) \simeq \varprojlim_{i}
+\Hom(X^{\vee}_i, \varphi){\quoi},
+$$
+and on the other hand it is well known that there is a bifunctorial
+isomorphism
+$$
+\Hom(X^{\vee}_i, \varphi) \simeq \varphi (X_i){\quoi}.
+$$
+
+When\pageoriginale $\varphi$ is of the form $\Ee_{\xi'}$, hence
+$$
+\varphi \simeq \varinjlim_j {X'}_j^{\vee}{\quoi},
+$$
+there is therefore a natural bijection
+\begin{equation*}
+\Hom (\mathcal{E}_{\xi}, \mathcal{E}_{\xi'}) \simeq
+\varprojlim_{i} \varinjlim_{j} \Hom_X (X'_j, X_i){\quoi}.\tag{$\ast$}
+\end{equation*}
+On the other hand, one has (in the category of schemes)
+$$
+\bar{X}(\xi) = \varprojlim_{i} X_i,\quad \bar{X} (\xi') =
+\varprojlim_{j} X'_j{\quoi},
+$$
+whence
+$$
+\Hom_{X} (\bar{X} (\xi'), \bar{X}(\xi)) \simeq \varprojlim_{i}
+\Hom_X (\bar{X} (\xi'), X_i){\quoi},
+$$
+and on the other hand, since $X_i$ is locally of finite presentation
+over $X$, one has
+$$
+\Hom_X (\bar{X} (\xi'), X_i) \simeq \varinjlim_{j}
+\Hom_X (X'_j, X_i){\quoi},
+$$
+whence
+\begin{equation*}
+\Hom_X (\bar{X} (\xi'), \bar{X} (\xi) ) \simeq
+\varprojlim_{i} \varinjlim_{j} \Hom_X (X'_j,
+X_i){\quoi}.\tag{${\ast}{\ast}$}
+\end{equation*}
+Comparison of $(\ast)$ and $({\ast}{\ast})$ gives the desired
+conclusion (subject to checking compatibilities, which is left to the
+reader).
+
+\item \emph{The functor under consideration is essentially
+  surjective}.
+\end{enumerate}
+
+\setcounter{subsection}{9}
+\subsubsection{}\etiquette[7.9.1]{VIII.subsubsec7.9.1}
+
+First note that if $C$ is a site in which finite $\varprojlim$ are
+representable, and $\widetilde{C} = ℰ$ is the corresponding topos, then
+every fiber functor $\varphi$ on $ℰ$ can be represented as a ``filtered
+inductive limit'' of functors of the form
+$$
+\check{Y} (F) = F(Y) = \Hom(\widetilde{Y}, F), Y \in \Ob C{\quoi},
+$$
+(where $\widetilde{Y}$ is the sheaf associated with $Y$), as follows
+\footnote{This is a special case of IV \hyperref[IV.eq6.8.3]{6.8.3}.}. Consider the
+category\pageoriginale $C_{/\varphi}$ of pairs $(Y, \xi)$, with
+$Y \in \Ob C$, $\xi \in \varphi (\widetilde{Y})$ (the morphisms being
+defined in the evident way), and note that there is an evident
+homomorphism
+\begin{equation*}
+\varinjlim_{(Y, \xi)\in C^0_{/\varphi}} \check{Y} \to
+\varphi\tag{$\ast$}
+\end{equation*}
+by observing that
+$$
+\Hom (\varinjlim_{C^0_{/\varphi}} \check{Y},\varphi) \simeq
+\varprojlim_{C_{/ \varphi}} \Hom(\check{Y}, \varphi) \simeq
+\varprojlim_{C_{/ \varphi}} \varphi (\widetilde{Y}){\quoi}.
+$$
+There is a canonical element in $\varprojlim_{C_{/
+    \varphi}} \varphi(\widetilde{Y}),$ obtained by associating with
+every $(Y, \xi)$ the element $\xi$ of $\varphi (\widetilde{Y})$. Using the fact
+that finite $\varprojlim$ exist in $C$, and that the functor $Y
+\mapsto \varphi(\widetilde{Y})$ commutes with them, one sees that in
+$C_{/\varphi}$ finite $\varprojlim$ exist; a fortiori
+$C^0_{/\varphi}$ is filtered. Using the fact that every sheaf $F$ is
+an inductive limit of sheaves of the form $\widetilde{Y}$, and using
+the fact that $\varphi$ commutes with inductive limits, one easily
+concludes that the homomorphism of functors $(\ast)$ is bijective and
+thus gives the asserted representation.
+
+\subsubsection{}\etiquette[7.9.2]{VIII.subsubsec7.9.2}
+
+Note also that if $ℰ$ is a topos and $Y$ is an object of $ℰ$, hence
+defines a topos $ℰ_{/Y}$, then the datum of a fiber functor $\varphi$
+for $ℰ_{/Y}$ is equivalent to the datum of a pair $(\varphi, \xi)$,
+where $\varphi$ is a fiber functor for $ℰ$, and $\xi \in \varphi(Y)$. With
+the fiber functor $\psi : ℰ_{/Y} \to (\Ens)$ one associates the pair
+$(\varphi, \xi)$, where $\varphi$ is the composite $Z \mapsto
+\varphi(Z) = \psi (Z \times Y)$, and where $\xi \in \varphi(Y) =
+\psi(Y \times Y)$ is the image of the unique element of $\psi(Y)$
+under the diagonal morphism of $Y \times Y$.
+
+\subsubsection{}\etiquette[7.9.3]{VIII.subsubsec7.9.3}
+
+We now return to the case of the site $C =
+X_{\text{ét}}$, and let $\varphi :
+\widetilde{X_{\text{ét}}} \to (\Ens)$ be a fiber functor on the
+étale topos of $X$. Considering\pageoriginale the restriction of
+$\varphi$ to the full subcategory of
+$\widetilde{X_{\text{ét}}}$ formed by the open subsets of this
+topos, or, what amounts to the same thing
+(\hyperref[VIII.prop6.1]{6.1}), by the open subsets $U$ of $X$, one
+obtains a map
+$$
+\varphi_0 : \Uu (X) \to \{0, 1\}
+$$
+which commutes with arbitrary suprema and finite infima. (Note that for
+$U \in \Uu (X)$, $\varphi(U)$ is either empty or consists of a single
+point, and one takes $\varphi_{0} (U) = 0$ or 1 according as one is in
+the former or the latter case.)
+
+One easily sees, using the fact that every irreducible closed subset
+of $X$ has one and only one generic point \footnote{\ie $X$ is
+\emph{sober} in the terminology of IV \hyperref[IV.subsubsec4.2.1]{4.2.1}. The assertion made is a
+special case of IV \hyperref[IV.subsubsec4.2.3]{4.2.3}.}, that $\varphi_0$ is defined by means of a
+unique $x \in X$, by the condition
+$$
+\varphi_0 (U) = 1\quad \Longleftrightarrow\quad x \in U {\quoi},
+$$
+\ie
+$$
+\varphi (U) \ne\varnothing \Leftrightarrow  x \in U {\quoi}.
+$$
+Let $F\in \Ob \widetilde{X_{\text{ét}}}$. Then the image of $F$ in
+the final sheaf $X$ is an open subset; and since
+$$
+\varphi (F) \to \varphi(U)
+$$
+is surjective, one sees that $\varphi(F) \neq ∅$ if and only if
+$\varphi(U) \neq ∅$, \ie if and only if $x \in U$. Let
+$C_{/\varphi}$ be the category of pairs $(X', \xi)$ where $X'\in \Ob
+X_{\text{ét}}$, and $\xi \in \varphi (X')$. It was pointed out in
+\hyperref[VIII.subsubsec7.9.1]{7.9.1} that $C^{0}_{/ \varphi}$ is
+filtered and connected. Moreover, by
+\hyperref[VIII.subsubsec7.9.2]{7.9.2} and by the preceding discussion
+applied to $X'$ instead of $X$, if $(X', \xi) \in \Ob
+C_{/\varphi}$, there is associated with it a unique point $x' \in
+X'$, such that for an étale morphism $X'' \to X'$, $\xi$ lies in the
+image of $\varphi (X'') \to \varphi(X')$ if and only if $x'$ lies in the
+image of $X''$. It follows that the scheme $\varprojlim$ of the $X'$
+over the category $C$ of the $(X', \xi)$ exists and is a strict
+localization $Z$ of $X$, thus corresponding to a geometric point $\xi$
+and a fiber functor $\mathcal{E}_{\xi}$. For\pageoriginale every sheaf
+$F$, one then has
+$$
+\mathcal{E}_{\xi} (F) \simeq \varinjlim_{C^0_{/\varphi}} F(X'){\quoi}.
+$$
+In view of \hyperref[VIII.subsubsec7.9.1]{7.9.1}, we conclude that
+$\varphi$ is isomorphic to $\mathcal{E}_{\xi}$, which completes the
+proof of \hyperref[VIII.thm7.9]{7.9}.

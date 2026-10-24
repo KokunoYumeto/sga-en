@@ -1,0 +1,138 @@
+\chapter*{Exposé XXV\\The Existence Theorem}
+\addcontentsline{toc}{chapter}{Exposé XXV. The Existence Theorem}
+\begin{center}
+\textit{by M. Demazure}
+\end{center}
+
+\footnote{Editors' note: Version of 13 October 2024.}
+For completeness, in this Exposé we give a proof of the existence theorem for split
+groups. Like Chevalley's original proof (``Sur certains schémas de groupes
+semi-simples'', \textit{Séminaire Bourbaki}, May 1961, no.~219), it rests on the
+existence of complex semisimple algebraic groups of every possible type. Cartier
+gave the principle of a more satisfactory proof, establishing directly the
+existence of a simply connected split semisimple \(\mathbb Z\)-group associated
+with a given Cartan matrix (unpublished).\footnote{Editors' note: Such a principle
+was also sketched by B.~Kostant \emph{[Ko66]}; a complete proof, using quantum
+groups, was given more recently by G.~Lusztig \emph{[Lu09]}.}
+Let us point out, however, that the difficulty is not to give an explicit
+construction of a group scheme, but to verify that the group so constructed
+really satisfies the required conditions---essentially, that its fibers are
+indeed smooth and reductive.
+
+\SGASection{1}{Statement of the theorem}
+\SGARefTarget{sga3:xxv:section:1}
+
+\begin{sgastatement}{Theorem 1.1}
+Let \(S\) be a nonempty scheme. The functor
+\[
+  G\longmapsto R(G)
+\]
+is an equivalence from the category of pinned reductive \(S\)-groups to the
+category of pinned reduced root data.
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:theorem:1:1}
+
+By the uniqueness theorem (Exposé XXIII, 4.1), the preceding statement is
+equivalent to the following.
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxv:corollary:1-2}Corollary 1.2 (Existence of split groups)}
+For every reduced root datum \(R\), there exists a split reductive
+\(\mathbb Z\)-group \(G\) such that \(R(G)\simeq R\).\footnote{Editors' note:
+The work \emph{[BT84]} of F.~Bruhat and J.~Tits also contains a variant of
+Chevalley's construction (\emph{loc.\ cit.}, 2.2.3--2.2.5 and \S3.2), which
+in particular gives a smooth affine \(\mathbb Z\)-group \(G\) with connected
+fibers, possessing a split maximal torus, and whose generic fiber is a reductive
+\(\mathbb Q\)-group of type \(R\). The reductivity of the geometric fibers of
+\(G\) follows from the study of the unipotent radical of a special fiber in
+\emph{loc.\ cit.}, 4.6.12 and 4.6.15 (valid for more general \(G\), associated
+with a valued root datum); but it is simpler to deduce it from the description
+of \(\mathfrak g=\operatorname{Lie}(G)\), from Exposé XIX, 1.12(iii), and from
+the existence of the elements \(w_\alpha(X)\) of \SGARefLink{sga3:xx:3.1:item:iv}{Exposé XX, 3.1(iv)}; see
+\emph{[BT84]}, 3.2.1.}
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:corollary:1:2}
+
+In particular:
+
+\begin{sgastatement}{Corollary 1.3}
+Let \(k\) be a field. For every splittable reductive \(k\)-group \(G_k\), there
+exists a reductive \(\mathbb Z\)-group \(G\) such that
+\[
+  G\otimes_{\mathbb Z}k\simeq G_k.
+\]
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:corollary:1:3}
+
+Conversely, first observe that to prove \SGARefLink{sga3:xxv:corollary:1-2}{1.2} it is enough, by \SGARefLink{sga3:xxii:prop:4.3.1}{Exposé XXII, 4.3.1},
+and \SGARefLink{sga3:XXI:6.5.10}{Exposé XXI, 6.5.10}, to consider the case in which the root datum \(R\) is
+simply connected (and even irreducible, if desired, by \SGARefLink{sga3:XXI:7.1.6}{Exposé XXI, 7.1.6}).
+
+On the other hand, under the hypotheses of \SGARefLink{sga3:xxv:corollary:1:3}{1.3} the group scheme \(G\) has
+constant type (since \(\operatorname{Spec}(\mathbb Z)\) is connected), hence type
+\(R(G_k)\). By \SGARefLink{sga3:XXIII:5.9}{Exposé XXIII, 5.9}, the validity of \SGARefLink{sga3:xxv:corollary:1:3}{1.3} for a given group \(G_k\)
+therefore entails the existence of a split \(\mathbb Z\)-group of type
+\(R(G_k)\).\footnote{Editors' note: In fact, \SGARefLink{sga3:XXIII:5.9}{Exposé XXIII, 5.9} is unnecessary:
+the present Exposé constructs, for every semisimple \(\mathbb Q\)-group
+\(G_{\mathbb Q}\), a semisimple \(\mathbb Z\)-group \(G\) of the same type as
+\(G_{\mathbb Q}\), equipped with a split maximal torus \(T\); hence \(G\) is
+split by \SGARefLink{sga3:xxii:prop:2.2}{Exposé XXII, 2.2}.}
+
+Thus, to prove \SGARefLink{sga3:xxv:corollary:1-2}{1.2} and hence \SGARefLink{sga3:xxv:theorem:1:1}{1.1}, it is enough to prove \SGARefLink{sga3:xxv:corollary:1:3}{1.3} when \(k\) has
+characteristic zero (for example, \(k=\mathbb C\)) and \(G_k\) is simply
+connected (and in particular semisimple), together with the following
+proposition.
+
+\begin{sgastatement}{Proposition 1.4}
+For every simply connected reduced root datum \(R\), there exists a semisimple
+algebraic \(\mathbb C\)-group of type \(R\).
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:proposition:1:4}
+
+One may prove \SGARefLink{sga3:xxv:proposition:1:4}{1.4} as follows. First, there exists a complex semisimple Lie
+algebra \(\mathfrak g\) of type \(R\); see, for example, N.~Jacobson,
+\textit{Lie Algebras}, Chapter VII, Theorem 5.\footnote{Editors' note:
+Let \(\Delta\) be a base of \(R\), and let \(\widetilde{\mathfrak g}\) be the
+complex Lie algebra generated by
+\((e_\alpha,f_\alpha,h_\alpha)_{\alpha\in\Delta}\), subject to the relations
+\([h_\alpha,h_\beta]=0\), \([e_\alpha,f_\beta]=h_\alpha\) if
+\(\beta=\alpha\) and \(=0\) otherwise,
+\([h_\alpha,e_\beta]=(\alpha^\ast,\beta)e_\beta\), and
+\([h_\alpha,f_\beta]=-(\alpha^\ast,\beta)f_\beta\).
+In \emph{loc.\ cit.}, \(\mathfrak g\) is defined as the quotient of
+\(\widetilde{\mathfrak g}\) by the intersection of the kernels of its
+finite-dimensional irreducible representations. In \emph{[Se66]},
+\S VI.5, Theorem 9 (see also \emph{[BLie]}, VIII, \S4.3, \SGARefLink{sga3:xxv:section:1}{Theorem 1}), it is
+shown that \(\mathfrak g\) is the quotient of \(\widetilde{\mathfrak g}\) by
+the relations
+\[
+ \operatorname{ad}(e_\alpha)^{1-(\alpha^\ast,\beta)}(e_\beta)=0,\qquad
+ \operatorname{ad}(f_\alpha)^{1-(\alpha^\ast,\beta)}(f_\beta)=0.
+\]
+For an explicit description of the structure constants, and in particular
+the choice of signs, see \SGARefLink{sga3:XXIII:6.5}{Exposé XXIII, 6.5} and 6.7, as well as
+\emph{[Ti66]}, \S4, \SGARefLink{sga3:xxv:section:1}{Theorem 1}, and, for types \(A,D,E\),
+\emph{[Sp98]}, 10.2.5.}
+Then \(G=\operatorname{Aut}(\mathfrak g)^0\) is a semisimple algebraic
+\(\mathbb C\)-group of type \(\operatorname{ad}(R)\).\footnote{Editors' note:
+One may suppose \(R\) irreducible, hence \(\mathfrak g\) simple. By a general
+argument, \(\operatorname{Lie}(G)\) is the complex Lie algebra of derivations
+of \(\mathfrak g\); see \emph{[DG70]}, \S II.4, Proposition 2.3. These
+derivations are all inner; see \emph{[BLie]}, I, \S6.1, Corollary 3 to
+\SGARefLink{sga3:xxv:section:1}{Proposition 1}. Thus \(\operatorname{Lie}(G)=\mathfrak g\), so \(G\) has no
+invariant subgroup of positive dimension and is semisimple. Its root system
+is consequently the same as that of \(\mathfrak g\). Moreover, the center of
+\(G\) acts both trivially and faithfully on \(\mathfrak g\), and is therefore
+trivial; hence \(G\) is adjoint.}
+By \textit{Bible}, \S23.1, \SGARefLink{sga3:xxv:section:1}{Proposition 1}, it follows that there exists a
+semisimple \(\mathbb C\)-group of type \(R\).
+
+The remainder of this Exposé is devoted to the proof of \SGARefLink{sga3:xxv:corollary:1:3}{1.3} when \(k\) has
+characteristic zero and \(G_k\) is semisimple. The proof proceeds in two
+stages: the construction of a ``piece of \(\mathbb Z\)-group scheme''
+(\S2), and the study of the group obtained by applying ``Weil's theorem''
+(\S3).
+
+To avoid confusion, in \S2 we shall not use the abbreviated notation \(X_k\)
+for the \(k\)-scheme \(X\otimes_{\mathbb Z}k\), where \(X\) is a
+\(\mathbb Z\)-scheme.
+

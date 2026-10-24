@@ -1,0 +1,207 @@
+\section{Sheaves of sets}\etiquette[2]{II.sec2}
+
+\begin{enonce*}{Definition 2.1}\etiquette[2.1]{II.def2.1}
+Let $C$ be a site whose underlying category is a
+$𝒰$-category. A presheaf $F$ with values in
+$𝒰-\Ens$ is said to be separated (\resp to be a sheaf) if, for
+every sieve $R$ covering an object $X$ of $C$, the map
+$$
+\Hom_{C^{\widehat{\phantom{,}}}}(X,F)\longrightarrow
+\Hom_{C^{\widehat{\phantom{,}}}}(R,F)
+$$
+is injective (\resp bijective). The full subcategory
+of $C^{\widehat{\phantom{,}}}$ whose\pageoriginale objects are
+the sheaves is called the category of sheaves
+of sets on $C$, and is most often denoted by $\widehat{C}$
+\footnote[1]{or
+  $C^{\widetilde{\phantom{,}}}$, depending on the mood of the
+  typewriter.}. When no ambiguity can result, we shall
+simply say the category of sheaves on $C$; on the other hand,
+we shall sometimes be more precise and say the category of sheaves with
+values in $𝒰-\Ens$, or the category of
+$𝒰$-sheaves.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 2.2}\etiquette[2.2]{II.prop2.2}
+Let $C$ be a $𝒰$-category, and let $\Ff=(F_i)_{i\in I}$ be a
+family of $𝒰$-presheaves on $C$. For
+each object $X$ of $C$, denote by $J_{\Ff}(X)$ the set of sieves
+$R\rightarrow X$ such that, for every morphism $Y\rightarrow X$ in
+$C$ with target $X$, the sieve $R\times_X Y$ has the following
+property: the map
+$$
+\Hom_{C^{\widehat{\phantom{,}}}}(Y,F_i)\longrightarrow
+\Hom_{C^{\widehat{\phantom{,}}}} (R\times_X Y, F_i)
+$$
+is bijective (\resp injective) for every $i\in I$. Then the
+sets $J_{\Ff}(X)$ define a topology on $C$, which is
+the finest topology for which each $F_i$ is a
+sheaf (\resp separated presheaf).
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The $J_{\Ff}(X)$ clearly satisfy axioms (T 1) and (T
+3). It remains to show that they satisfy (T 2). For this it suffices
+to show the following:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item If $R'\hookrightarrow R\hookrightarrow X$ are two sieves on
+  $X$ such that $R\in J_{\Ff}(X)$ and such that, for every
+  $Y\rightarrow R$ (where $Y$ is an object of $C$), the sieve
+  $R'\times_X Y$ belongs to $J_{\Ff}(Y)$, then the sieve
+  $R'$ belongs to $J_{\Ff}(X)$.
+
+\item If $R'\hookrightarrow R\hookrightarrow X$ are two sieves on
+  $X$ such that $R'\in J_{\Ff}(X)$, then the sieve $R$
+  belongs to $J_{\Ff}(X)$.
+\end{enumerate}
+\end{enonce*}
+
+Note that, in case 2), for every $Y\rightarrow R$ (where $Y$ is
+an object of $C$), the sieve $R'\times_X Y$ belongs to $J_{\Ff}(Y)$.
+Now, in cases 1) and 2), $R$ is the inductive limit of the objects $Y$ of
+$C$ over $R$ (I \hyperref[I.prop3.4]{3.4}). The\pageoriginale inductive limits
+in $C^{\widehat{\phantom{,}}}$ are universal
+(\hyperrefext[I][I.cor3.3]{3.3}). Consequently, in cases 1) and 2), $R'$ is the inductive limit
+of the $R'\times_X Y$. Now, in cases 1) and 2),
+$R'\times_X Y$ belongs to $J_{\Ff}(Y)$. Passing to the
+inductive limit over the objects $Y$ of $C$ over $R$, we deduce that
+the map
+$$
+\Hom_{C^{\widehat{\phantom{,}}}}(R,F_i)\longrightarrow
+\Hom_{C^{\widehat{\phantom{,}}}}(R',F_i)
+$$
+is a bijection (\resp an injection) for every $i\in I$. It
+follows that the maps
+$$
+\Hom_{C^{\widehat{\phantom{,}}}}(X,F_i)\longrightarrow
+\Hom_{C^{\widehat{\phantom{,}}}}(R',F_i)\quav
+\Hom_{C^{\widehat{\phantom{,}}}}(X,F_i)\longrightarrow
+\Hom_{C^{\widehat{\phantom{,}}}}(R,F_i)
+$$
+are, in cases 1) and 2), bijections (\resp injections).
+Moreover, hypotheses 1) and 2) are plainly stable under
+arbitrary base change $Y\rightarrow X$ ($Y$ an object of $C$).
+It then follows that, for every object $Y$ of $C$ over $X$
+and every $i\in I$, the maps
+\begin{align*}
+\Hom_{C^{\widehat{\phantom{,}}}}(Y,F_i)&\longrightarrow
+\Hom_{C^{\widehat{\phantom{,}}}}(R\times_X Y, F_i)\\
+\Hom_{C^{\widehat{\phantom{,}}}}(Y,F_i)&\longrightarrow
+\Hom_{C^{\widehat{\phantom{,}}}}(R'\times_X Y, F_i)
+\end{align*}
+are in both cases bijections (\resp injections); this
+shows that $R'$ and $R$ belong to $J_{\Ff}(X)$, \cqfd
+
+\begin{enonce*}{Corollary 2.3}\etiquette[2.3]{II.cor2.3}
+Let $C$ be a $𝒰$-category, and for every $X$ of $C$ let
+$K(X)$ be a set of sieves on $X$. Suppose that the $K(X)$
+satisfy axiom {\rm (T 1)} of {\rm(\hyperref[II.def1.1]{1.1})}. A
+presheaf $F$ is a sheaf (\resp a separated presheaf)
+for the topology generated (\hyperref[II.subsubsec1.1.6]{1.1.6})
+by the $K(X)$ if and only if, for every object $X$ of $C$
+and every sieve $R\in K(X)$, the map
+$$
+\Hom_{C^{\widehat{\phantom{,}}}}(X,F)\longrightarrow
+\Hom_{C^{\widehat{\phantom{,}}}}(R,F)
+$$
+is a bijection (\resp an injection).
+\end{enonce*}
+
+\begin{enonce*}{Corollary 2.4}\etiquette[2.4]{II.cor2.4}
+In\pageoriginale particular, let $C$ be a $𝒰$-category
+equipped with a pretopology. A presheaf $F$ is a
+sheaf (\resp a separated presheaf) if and only if,
+for every object $X$ of $C$ and every covering family
+$(X_{\alpha}\rightarrow X)$ belonging to $\Cov(X)$, the diagram
+of sets
+$$
+F(X)\rightarrow \prod_{\alpha\in A}F(X_{\alpha})\rightrightarrows
+\prod_{(\alpha,\beta)\in A\times A}F(X_{\alpha}\times_X X_{\beta})
+$$
+is exact (\resp the map
+$$
+F(X)\longrightarrow \prod_{\alpha\in A}F(X_{\alpha})
+$$
+is injective).
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+Apply \hyperref[II.cor2.3]{2.3}, then (\hyperrefext[I][I.cor3.5]{3.5}) and
+(\hyperrefext[I][I.prop2.12]{2.12}).
+
+Corollary \hyperref[II.cor2.4]{2.4} recovers the definition
+given in [1].
+\end{enonce*}
+
+\begin{enonce*}{Definition 2.5}\etiquette[2.5]{II.def2.5}
+Let $C$ be a $𝒰$-category. The canonical topology
+of $C$ is the finest topology for which the representable functors
+are sheaves (\hyperref[II.prop2.2]{2.2}). A sieve
+covering $X$ for the canonical topology will be called a universally
+strictly epimorphic sieve. A covering family for the
+canonical topology will be called a universally strictly epimorphic
+family. If, in addition, the morphisms of the covering family
+are pullbackable, the family will be called universally effective
+epimorphic $[2]$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 2.5.1}\etiquette[2.5.1]{II.rem2.5.1}
+For almost all the sites that have been used up to now,
+the topology is \emph{coarser} than the canonical topology; in
+other words, the representable functors on $C$ are
+sheaves, \ie the covering families of $C$ are universally strictly
+epimorphic. The\pageoriginale only exception to this
+rule is the site $\widehat{C}$ studied in ${\rm n^{\circ}}$ 5
+(whose topology is \emph{finer,} and most often strictly
+finer, than the canonical topology).
+\end{enonce*}
+
+\begin{enonce*}{Proposition 2.6}\etiquette[2.6]{II.prop2.6}
+A sieve $R\hookrightarrow X$ is universally strictly
+epimorphic if and only if, for every object $Y\rightarrow X$
+of $C$ over $X$, and for every object $Z$ of $C$,
+the map
+$$
+\Hom_C(Y,Z)\longrightarrow \varprojlim_{C/(Y\times_X R)}\Hom_C (.,
+Z)
+$$
+is a bijection.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+Immediate upon applying \hyperref[II.prop2.2]{2.2} and then (\hyperrefext[I][I.sec5.3]{5.3}).
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remarks 2.7}\etiquette[2.7]{II.rem2.7}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Proposition \hyperref[II.prop2.6]{2.6} gives a characterization of the universally
+  strictly epimorphic sieves of a category $C$
+  that is independent of the universe in which the presheaves take
+  their values, provided only that the morphism sets
+  $\Hom(X,Y)$ of $C$ belong to that universe. It
+  thus makes it possible to define the canonical topology for any
+  category $C$, without having to specify the universes.
+
+\item Let $C$ be a site whose underlying category is a
+  $𝒰$-category, let $F$ be a $𝒰$-presheaf, and let
+  $𝒱$ be a universe containing $𝒰$. The category
+  underlying $C$ is a $𝒱$-category, and $F$ may
+  be regarded as a $𝒱$-presheaf. The
+  $𝒰$-presheaf $F$ is a sheaf (\resp a
+  separated presheaf) if and only if the
+  $𝒱$-presheaf $F$ is a sheaf (\resp a
+  separated presheaf). In other words, the condition for a
+  presheaf $F$ to be a sheaf (\resp a separated
+  presheaf) does not depend (in the sense just\pageoriginale
+  specified) on the universe in which the presheaf $F$ takes its
+  values. In particular, let $C$ be a site and let $F$ be a
+  $𝒰$-presheaf; we say that $F$ is a sheaf (\resp a
+  separated presheaf) if there exists a universe $𝒱$
+  containing $𝒰$ such that the category $C$ is a
+  $𝒱$-category and such that $F$ is a $𝒱$-sheaf
+  (\resp a separated $𝒱$-presheaf). This property
+  does not depend on the universe $𝒱$.
+\end{enumerate}
+\end{enonce*}

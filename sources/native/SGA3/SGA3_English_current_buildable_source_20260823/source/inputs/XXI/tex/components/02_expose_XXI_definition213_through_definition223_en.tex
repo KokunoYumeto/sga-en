@@ -1,0 +1,117 @@
+\begin{definition}\label{sga3:XXI:2.1.3}
+A root \(\alpha\in R\) is called \emph{indivisible} if
+\(\alpha/2\notin R\). The root datum \(\cR\) is called
+\emph{reduced} if every root is indivisible.
+\end{definition}
+
+The root datum \(\cR\) is reduced if and only if \(\cR^\ast\) is
+reduced. If \(\alpha\) is indivisible and \(w\in W\), then
+\(w(\alpha)\) is indivisible.
+
+\begin{definition}\label{sga3:XXI:2.1.4}
+Let \(\alpha\in R\). If \(\alpha\) is indivisible, set
+\(\operatorname{ind}(\alpha)=\alpha\); otherwise set
+\(\operatorname{ind}(\alpha)=\alpha/2\).
+\end{definition}
+
+\begin{corollary}\label{sga3:XXI:2.1.5}
+If \(\alpha\in R\) is indivisible and \(k\alpha\in R\), where
+\(k\in\mathbb Q\), then \(k\in\mathbb Z\).
+\end{corollary}
+
+\begin{proposition}\label{sga3:XXI:2.1.6}
+Let \(\cR\) be a root datum. Then
+\[
+ \operatorname{ind}(\cR)
+ =\bigl(M,M^\ast,\operatorname{ind}(R),
+         \operatorname{ind}(R)^\ast\bigr)
+\]
+is a reduced root datum, and
+\[
+ W\bigl(\operatorname{ind}(\cR)\bigr)=W(\cR).
+\]
+\end{proposition}
+
+\begin{proof}
+The quadruple \(\operatorname{ind}(\cR)\) is a root datum by
+Corollary~\ref{sga3:XXI:1.2.11}, since the Weyl group permutes the
+indivisible roots. The second assertion follows from
+Proposition~\ref{sga3:XXI:2.1.1}.
+\end{proof}
+
+\begin{remark}\label{sga3:XXI:2.1.7}
+If \(\cR\) is not reduced, then
+\[
+ \operatorname{ind}(R)^\ast\neq\operatorname{ind}(R^\ast),
+ \qquad
+ \operatorname{ind}(\cR^\ast)\neq\operatorname{ind}(\cR)^\ast.
+\]
+\end{remark}
+
+\subsection{Orthogonal roots}
+
+\begin{lemma}\label{sga3:XXI:2.2.1}
+Let \(\alpha\) and \(\beta\) be two roots. Then
+\begin{equation}
+ \ell(\alpha)(\alpha^\ast,\beta)
+ =\ell(\beta)(\beta^\ast,\alpha).
+ \tag{11}\label{sga3:XXI:eq:11}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+This follows immediately from Lemma~\ref{sga3:XXI:1.2.1},
+formulas \eqref{sga3:XXI:eq:9} and \eqref{sga3:XXI:eq:10}.
+\end{proof}
+
+\begin{corollary}\label{sga3:XXI:2.2.2}
+Let \(\alpha,\beta\in R\). The following conditions are equivalent:
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:XXI:2.2.2:item:i}(i)] \((\alpha^\ast,\beta)=0\);
+\item[(i bis)] \((\beta^\ast,\alpha)=0\);
+\item[(ii)] \((p(\alpha),\beta)=0\);
+\item[(iii)] \(s_\alpha(\beta)=\beta\);
+\item[(iii bis)] \(s_\beta(\alpha)=\alpha\);
+\item[(iv)] \(s_\alpha(\beta^\ast)=\beta^\ast\);
+\item[(iv bis)] \(s_\beta(\alpha^\ast)=\alpha^\ast\);
+\item[\SGAInlineRefTarget{sga3:XXI:2.2.2:item:v}(v)] \(s_\alpha\neq s_\beta\), and \(s_\alpha\) and \(s_\beta\)
+  commute.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+All the equivalences are immediate except those involving \SGARefLink{sga3:XXI:2.2.2:item:v}{(v)}. We
+first show that \SGARefLink{sga3:XXI:2.2.2:item:i}{(i)}, together with its equivalent condition (i bis),
+implies \SGARefLink{sga3:XXI:2.2.2:item:v}{(v)}. One has
+\[
+ s_\alpha s_\beta(x)
+ =x-(\beta^\ast,x)\beta-(\alpha^\ast,x)\alpha
+   +(\beta^\ast,x)(\alpha^\ast,\beta)\alpha.
+\]
+If \((\alpha^\ast,\beta)=0\), then
+\((\beta^\ast,\alpha)=0\), and consequently
+\[
+ s_\alpha s_\beta(x)=s_\beta s_\alpha(x).
+\]
+
+Conversely, suppose \SGARefLink{sga3:XXI:2.2.2:item:v}{(v)}. Then
+\[
+ s_\alpha=s_\beta s_\alpha s_\beta
+          =s_{s_\beta(\alpha)}
+ \qquad\text{by Corollary~\ref{sga3:XXI:1.2.10}.}
+\]
+By Proposition~\ref{sga3:XXI:2.1.1}, there is a
+\(k\in\mathbb Q^\ast\) such that
+\[
+ \alpha=k\,s_\beta(\alpha)
+       =k\alpha-k(\beta^\ast,\alpha)\beta.
+\]
+Since \(s_\alpha\neq s_\beta\), the roots \(\alpha\) and \(\beta\)
+are not proportional, again by Proposition~\ref{sga3:XXI:2.1.1}.
+It follows that \((\beta^\ast,\alpha)=0\).
+\end{proof}
+
+\begin{definition}\label{sga3:XXI:2.2.3}
+Two roots satisfying the equivalent conditions of
+Corollary~\ref{sga3:XXI:2.2.2} are called \emph{orthogonal}.
+\end{definition}

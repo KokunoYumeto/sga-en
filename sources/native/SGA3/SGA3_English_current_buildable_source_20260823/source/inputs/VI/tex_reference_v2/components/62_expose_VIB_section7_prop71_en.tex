@@ -1,0 +1,191 @@
+
+\section*{7. Generated subgroups; commutator group}
+\phantomsection\label{sec:sga3-VIB-7}%
+\addcontentsline{toc}{section}{7. Generated subgroups; commutator group}
+
+Throughout this section, \(k\) denotes a fixed field.
+
+\medskip
+\phantomsection\label{prop:sga3-VIB-7.1}%
+\noindent\textbf{Proposition 7.1.---}
+\emph{Let \(G\) be a \(k\)-group, let
+\((X_i)_{i\in I}\) be a family of geometrically reduced
+\(k\)-schemes,}%
+\footnote{\label{note:sga3-VIB-68}Editor's note: here and below,
+the little-used term ``separable'' has been replaced by the
+customary term ``geometrically reduced''; see EGA~IV\(_2\),
+4.6.2.}
+\emph{and, for every \(i\in I\), let \(f_i:X_i\to G\) be a
+\(k\)-morphism.}
+\begin{enumerate}
+\item[\textup{\SGAInlineRefTarget{prop:sga3-VIB-7.1:item:i}(i)}]\phantomsection\label{concl:sga3-VIB-7.1-i}
+  \emph{There exists a smallest closed \(k\)-group subscheme of
+  \(G\) through which every \(f_i\) factors. It is denoted
+  \[
+    \Gamma_G\bigl((f_i)_{i\in I}\bigr).
+  \]
+  It is a geometrically reduced \(k\)-scheme, and hence smooth
+  when \(G\) is locally of finite type over \(k\)
+  (\hyperref[cor:sga3-VIB-1.3.1]{1.3.1}).}
+\item[\textup{\SGAInlineRefTarget{prop:sga3-VIB-7.1:item:ii}(ii)}]\phantomsection\label{concl:sga3-VIB-7.1-ii}
+  \emph{Put
+  \[
+    X=\coprod_{i\in I}X_i,
+  \]
+  and let \(f:X\to G\) be the morphism whose restriction to
+  \(X_i\) is \(f_i\), for every \(i\in I\). Put
+  \[
+    X^1=X\amalg X,
+  \]
+  and let \(f^1:X^1\to G\) be the morphism whose restrictions to
+  the two copies of \(X\) are \(f\) and \(c\circ f\),
+  respectively. For every \(n>1\), put
+  \[
+    X^n=X^1\times_kX^{n-1},
+    \qquad
+    f^n=\mu\circ(f^1\times_k f^{n-1}):X^n\longrightarrow G.
+  \]
+  Then \(\Gamma_G((f_i)_{i\in I})\) is the reduced subscheme of
+  \(G\) whose underlying space is the closure of
+  \[
+    \bigcup_{n\geq1}f^n(X^n).
+  \]}
+\item[\textup{\SGAInlineRefTarget{prop:sga3-VIB-7.1:item:iii}(iii)}]\phantomsection\label{concl:sga3-VIB-7.1-iii}
+  \emph{For every \(k\)-scheme \(S\),
+  \(\Gamma_G((f_i)_{i\in I})_S\) is the smallest closed group
+  subscheme of \(G_S\) through which every
+  \[
+    f_{i,S}:(X_i)_S\longrightarrow G_S
+  \]
+  factors.}
+\item[\textup{(iii\(^{\prime}\))}]
+  \phantomsection\label{concl:sga3-VIB-7.1-iiiprime}
+  \emph{Moreover, \(\Gamma_G((f_i)_{i\in I})_S\) is the smallest
+  group subscheme of \(G_S\), not necessarily closed, through
+  which every \(f_{i,S}\) factors.}%
+  \footnote{\label{note:sga3-VIB-69}Editor's note: the original
+  stated \textup{(iii\(^{\prime}\))} under the additional
+  hypothesis that \(G\) be locally of finite type over \(k\);
+  this hypothesis may be omitted in view of
+  \hyperref[sga3:VIA:0.5.2]{VI\(_A\), 0.5.2}.}
+\end{enumerate}
+
+First note that, to prove \textup{\SGARefLink{prop:sga3-VIB-7.1:item:i}{(i)}}, \textup{\SGARefLink{prop:sga3-VIB-7.1:item:iii}{(iii)}}, and
+\textup{(iii\(^{\prime}\))}, after defining \(X\) and \(f\) as
+in \textup{\SGARefLink{concl:sga3-VIB-7.1-ii}{(ii)}}, we are reduced to the case in which \(I\)
+consists of a single element.
+
+Let \(H\) be the reduced subscheme of \(G\) whose underlying set
+is
+\[
+  \overline{\bigcup_{n\geq1}f^n(X^n)}.
+\]
+The family of morphisms
+\[
+  f^n:X^n\longrightarrow H
+\]
+is schematically dominant (cf.\ EGA~IV\(_3\), 11.10.4), and therefore
+every closed subscheme of \(G\) through which all the \(f^n\)
+factor also contains \(H\). Moreover, by \emph{loc.\ cit.},
+11.10.7, \(H\) is geometrically reduced. To prove
+\textup{\SGARefLink{prop:sga3-VIB-7.1:item:i}{(i)}} and \textup{\SGARefLink{prop:sga3-VIB-7.1:item:ii}{(ii)}}, it is therefore enough to show
+that \(H\) is a group subscheme of \(G\), that is, that the
+restriction of \(c\) to \(H\) and the restriction of \(\mu\) to
+\(H\times_kH\) factor through the inclusion \(H\to G\).
+
+Since \(H\) is geometrically reduced, \(H\times_kH\) is reduced,
+and it is enough to verify, set-theoretically, that
+\[
+  c(H)\subset H,
+  \qquad
+  \mu(H\times_kH)\subset H.
+\]
+By EGA~IV\(_3\), 11.10.6, the union of the
+\[
+  f^n_{(H)}(X^n\times_kH)
+\]
+is schematically dense in \(H\times_kH\). Similarly, for every
+\(n\geq1\), the union of the
+\[
+  f^m_{(X^n)}(X^n\times_kX^m),
+  \qquad m\geq1,
+\]
+is schematically dense in \(X^n\times_kH\). It is therefore
+enough to prove
+\[
+  \mu\!\left(
+    f^n_{(H)}
+      \bigl(f^m_{(X^n)}(X^n\times_kX^m)\bigr)
+  \right)\subset H
+\]
+and \(c(f^n(X^n))\subset H\). But
+\[
+\begin{aligned}
+  \mu\!\left(
+    f^n_{(H)}
+      \bigl(f^m_{(X^n)}(X^n\times_kX^m)\bigr)
+  \right)
+  &=
+  \mu\!\left((f^n\times_k f^m)(X^n\times_kX^m)\right)\\
+  &=f^{n+m}(X^{n+m})\subset H.
+\end{aligned}
+\]
+Also, since \(c(f^1(X^1))\subset f^1(X^1)\), for every \(n\)
+one has
+\[
+  c(f^n(X^n))\subset f^n(X^n)\subset H.
+\]
+This proves \textup{\SGARefLink{prop:sga3-VIB-7.1:item:i}{(i)}} and \textup{\SGARefLink{prop:sga3-VIB-7.1:item:ii}{(ii)}}.
+
+We now prove \textup{\SGARefLink{concl:sga3-VIB-7.1-iii}{(iii)}}. Let \(G'\) be a closed group
+subscheme of \(G_S\) through which \(f_S\) factors. We must show
+that \(G'\) contains \(H_S\), or equivalently that
+\[
+  H_S=H_S\times_{G_S}G'.
+\]
+Put
+\[
+  H'_S=H_S\times_{G_S}G'=G'\cap H_S.
+\]
+Every \(f^n_S\) factors through both \(G'\) and \(H_S\), and
+hence through \(H'_S\). Since the family
+\[
+  f^n:X^n\longrightarrow H
+\]
+is schematically dominant, EGA~IV\(_3\), 11.10.6 implies that
+the base-changed family
+\[
+  f^n_S:X^n_S\longrightarrow H_S
+\]
+is schematically dominant as well. Because every \(f^n_S\)
+factors through \(H'_S\), EGA~IV\(_3\), 11.10.1\textup{(c)}
+gives
+\[
+  H'_S=H_S.
+\]
+This proves \textup{\SGARefLink{prop:sga3-VIB-7.1:item:iii}{(iii)}}.
+
+Finally, we show that \(H_S\) is the smallest group subscheme,
+not necessarily closed, of \(G_S\) through which \(f_S\)
+factors. Let \(G'\) be such a group subscheme and again put
+\[
+  H'_S=H_S\times_{G_S}G'.
+\]
+We must show \(H'_S=H_S\). By \textup{\SGARefLink{concl:sga3-VIB-7.1-iii}{(iii)}}, it is enough to
+show that \(H'_S\) is closed in \(H_S\). It is enough in turn to
+show that \(H_S\) and \(H'_S\) have the same underlying set, and
+for this it suffices to show, for every \(s\in S\), that
+\[
+  H'_s
+  :=H'_S\times_S\kappa(s)
+  =H_s\times_{G_s}G'_s
+  =H_s.
+\]
+By \hyperref[sga3:VIA:0.5.2]{VI\(_A\), 0.5.2}, the
+\(\kappa(s)\)-group subscheme \(G'_s\) is closed in \(G_s\).
+Hence \(H'_s\) is closed in \(H_s\), and the preceding argument,
+applied to \(H'_s\), \(H_s\), and the \(f^n_s\), shows that
+\[
+  H'_s=H_s.
+\]
+This proves \textup{(iii\(^{\prime}\))} and completes the proof.

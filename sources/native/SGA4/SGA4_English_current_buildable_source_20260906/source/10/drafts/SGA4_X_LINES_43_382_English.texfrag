@@ -1,0 +1,337 @@
+\setcounter{pageoriginal}{42}
+
+\section{Introduction}\etiquette[1]{X.sec1}\pageoriginale
+
+In this Exposé, unless expressly stated otherwise, ``sheaf'' means
+``abelian sheaf''.
+
+Let $X$ be a scheme and let $\ell\in \PP$. ``Recall'' that the
+\emph{$\ell$-cohomological dimension} of $X$ is the largest integer
+$\cd_{\ell}X=n$ (or $=\infty$ if no such number exists) such that
+$H^n(X,F)\neq 0$ for at least one $\ell$-torsion sheaf $F$ on $X$.
+If $X=\Spec A$, we write $\cd_{\ell} A=\cd_{\ell}\Spec A$. Taking
+into account the dictionary (VIII 2), %% label
+we thus recover the ``classical'' notion of [CG] when $A=k$ is a field.
+Since we plainly have the formula
+$$
+\cd_{\ell}(\coprod_i X_i)=\displaystyle{\mathop{\sup}_i} \cd_{\ell}X_i
+$$
+the classical theory may, in the evident way, be extended to an
+arbitrary artinian ring.\pageoriginale This theory is set out in
+$(CG)=$ ``\sisi{Galois cohomology}{Galois cohomology}'' %% Galois?
+by Serre. We shall add a few refinements in ${\rm n^{\circ}}$
+\hyperref[X.sec2]{2}.
+
+Consider, for example, the case of an irreducible algebraic variety
+$X$, of dimension $n$, over a separably closed field $k$, and fix
+$\ell\neq \car k$. A theorem to be found in ${\rm n^{\circ}}$
+\hyperref[X.sec4]{4} gives the upper bound $2n$ for its cohomological
+dimension; this is the ``true'' dimension of $X$ (suggested by the
+topological analogy when $k=\CC$). This result is fairly elementary
+once the theory for fields is known, and in fact the upper bound $2n$
+can be improved except when $X$ is complete: there is another upper
+bound, $2n-1$, which holds whenever $X$ is ``missing at least one
+point''. The latter is the correct ``stable upper bound'', in the sense
+that every $X$ of dimension $n$ contains an open subset of
+cohomological dimension $2n-1$. A third upper bound is obtained for an
+affine variety, where one obtains $n$ as the cohomological dimension.
+This is a generalization of one of the Lefschetz theorems for
+hyperplane sections. These last two assertions are deeper and can only
+be proved later (XIV).
+
+Note that cohomological dimension is not a local notion (in contrast
+to what happens for paracompact spaces). For example, a henselian ring
+with separably closed residue field has cohomological dimension zero,
+but if the closed point is removed, one may obtain an arbitrarily large
+number, namely $2n-1$ if $n=\dim A$ in the most important cases; this
+also agrees with the topological analogy supplied by the cohomology of
+$U-\{x\}$, where $U$ is a small open neighborhood of a point $x$ of a
+complex analytic space.
+
+\section{Auxiliary results over a field}\etiquette[2]{X.sec2}\pageoriginale
+
+We have the following
+
+\begin{enonce*}{Theorem 2.1}\etiquette[2.1]{X.thm2.1}
+Let $k'/k$ be an extension of finite type of a field $k$, and let
+$\ell\in \PP$. Then
+$$
+\cd_{\ell}k'\leqq \cd_{\ell}k+\deg.\tr.(k'/k){\quoi},
+$$
+If the inequality is strict and if $\ell\neq \car k$, then $\ell=2$,
+$k$ is orderable, and $k'$ is not orderable (\ie $-1$ is a sum of
+squares in $k'$).
+\end{enonce*}
+
+Recall that when $\ell=\car k$ one has $\cd_{\ell}k'\leqq 1$ (CG II
+\hyperref[X.thm2.2]{2.2}), so the question of equality in
+\hyperref[X.thm2.1]{2.1} scarcely arises. Moreover,
+$\cd_2k=\infty$ if $k$ is orderable. Indeed, the algebraic closure
+$\bar{k}$ of $k$ contains a subextension $\widetilde{k}$ (a maximal
+ordered subfield of $\bar{k}$) with
+$[\bar{k}:\widetilde{k}]=2$. Plainly,
+$\cd_2\widetilde{k}=\infty$, and
+$\cd_2\widetilde{k}\leqq \cd_2 k$ by (CG I Prop.~14).
+
+Proof. Almost all of this is well known. The inequality\sisi{}{,} as
+well as equality if $\cd_{\ell}k<\infty$, are results of Tate (CG II
+4.1.2). It remains to prove that $\cd_{\ell}k'<\infty$ and
+$\cd_{\ell}k=\infty$ \sisi{implies}{imply} that $k$ is orderable and
+$\ell=2$, and it is enough to treat the following two cases:
+\begin{itemize}
+\item[a)] $[k':k]<\infty$,
+
+\item[b)] $k'=k(x)$ with $x$ transcendental over $k$.
+\end{itemize}
+In case a) we may suppose $k'/k$ separable. Then the Galois group
+$H=G(\bar{k}/k')$ is an open subgroup of $G=G(\bar{k}/k)$, and by a
+result of Serre [5] one has $\cd_{\ell}H=\cd_{\ell}G$ unless $G$
+contains an element of order $\ell$. Since an algebraically closed
+field $\bar{k}$ cannot have a subfield $\widetilde{k}$ of finite index
+unless $\ell=2$ and $\widetilde{k}$ is orderable [7], the result
+follows.
+
+Consider\pageoriginale case b). Let $R$ be the henselization of
+$\Spec k[x]$ at the point $x=0$, which is a discrete valuation ring,
+and let $K$ be the fraction field of $R$. Then
+$\cd_{\ell}k(x)<\infty$ implies $\cd_{\ell}K<\infty$. It is therefore
+enough to prove that $\cd_{\ell}K<\infty$ implies
+$\cd_{\ell}k<\infty$, which is a consequence of the following theorem:
+
+\begin{enonce*}{Theorem 2.2}\etiquette[2.2]{X.thm2.2}
+\footnote{This theorem was proved recently by $Ax$
+    [1].}. Let $R$ be a henselian discrete valuation ring, with
+    fraction field $K$ and residue field $k$. Let $\ell\in
+    \PP$. We have
+$$
+\cd_{\ell}K=\cd_{\ell}k+1
+$$
+in the following two situations:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $\ell\neq \car k$.
+
+\item $\ell \neq \car K$, $k$ perfect, and $\cd_{\ell}k<\infty$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark}
+Naturally, if $\ell=\car K$ one has $\cd_{\ell}K\leq 1$ in every case
+(CG II \hyperref[X.thm2.2]{2.2}). It therefore remains to study the
+relation of $\cd_{\ell}K$ with, perhaps, the module of absolute
+differentials $\Omega^1_k$ (\EGA IV 20.4.3), in the unequal
+characteristic case when $\car k=\ell$, $k$ imperfect.
+\SGAArchiveOnly{\nde{The frozen source calls for a citation to work of Kato but supplies
+no bibliographic target.}}
+\end{enonce*}
+
+Proof of the theorem. As for Theorem (\hyperref[X.thm2.1]{2.1}), most
+of it is due to Tate. Case (ii) is treated explicitly in (CG II
+Prop.~12) if $R$ is complete, and we reduce to that case by means of the
+following lemma:
+
+\begin{enonce*}{Lemma 2.2.1}\etiquette[2.2.1]{X.lem2.2.1}
+Let $R$ be a henselian discrete valuation ring with fraction field $K$,
+and let $\widehat{K}$ be the fraction field of the completion
+$\widehat{R}$ of $R$. Then
+$$
+G(\bar{\widehat{K}}/\widehat{K})\simeq G(\bar{K}/K){\quoi}.
+$$
+\end{enonce*}
+
+Proof. This means that the functor $L\mapsto
+\widehat{L}=L\otimes_K \widehat{K}$ from\pageoriginale the category of
+étale $K$-algebras to the category of étale $\widehat{K}$-algebras is
+an equivalence. Now every étale algebra $\widehat{K}'$ over
+$\widehat{K}$ is induced by a suitable étale algebra $K'$ over $K$.
+Indeed, if $\widehat{K}'=\widehat{K}[\alpha]$ where $\alpha$ satisfies
+the separable irreducible equation $f(T)=0$ with coefficients in
+$\widehat{R}$, it is enough to take as $K'$ the algebra
+$K[\alpha_0]$, where $\alpha_0$ is a root of an equation $f_0(T)=0$
+with coefficients in $R$, with $f_0\equiv f(\widehat{m}^N)$, $N$ large
+and $\widehat{m}$ the maximal ideal of $\widehat{R}$. This is an
+application of the usual ``Newton method'' (Bourbaki,
+Alg.~Comm.~III 4.5). It remains to prove that the functor is fully
+faithful (it is plainly faithful), and this amounts to proving that if
+$K'$ is a \emph{field}, then so is $\widehat{K}'$. Let $R'$ be the
+normalization of $R$ in $K'$, which is finite over $R$ since $K'/K$ is
+separable. The ring $R'$ is a discrete valuation ring, and the
+completion of $R'$ is $\widehat{R}'=R'\otimes_R \widehat{R}$. Hence
+$\widehat{R}'$ is a discrete valuation ring, and since $K'$ is its
+total ring of fractions, it is indeed a field.
+
+Consider assertion (i) of
+\sisi{\eqhyperref[X.eq3.1]{3.1}}{\hyperref[X.thm2.2]{2.2}}.
+If $\cd_{\ell}k<\infty$, we are again reduced by
+\hyperref[X.lem2.2.1]{2.2.1}
+to (CG II Prop.~12) (the hypothesis in the statement of that
+proposition that $k$ be perfect is \sisi{used}{used} in the proof only
+in the case of residue characteristic $\ell$). It therefore remains to
+prove that $\cd_{\ell}K<\infty$ implies $\cd_{\ell}k<\infty$.
+
+Let $\bar{G}=G(\bar{k}/k)=G(\widetilde{K}/K)$, where $\widetilde{K}$ is
+the maximal unramified extension of $K$ (\ie the fraction field of the
+discrete valuation ring $\widetilde{R}$ with separably closed residue
+field, the strict henselization of $R$), let
+$G=G(\bar{K}/K)$, $H=G(\bar{K}/\widetilde{K})$, so that
+$\bar{G}=G/H$. Let $\bar{G}'\subset \bar{G}$ be an $\ell$-Sylow
+subgroup, and let $k'/k$, $K'/K$ be the extensions corresponding to
+$\bar{G}'$. We have $\cd_{\ell}k<\infty$ if and only if
+$\cd_{\ell}k'<\infty$ (CG I Prop.~14), so by replacing $R$ with its
+normalization in $K'$, we reduce to the case in which $\bar{G}$ is an
+$\ell$-group. It is then enough to prove that if
+$\cd_{\ell}G<\infty$, then $H^N(\bar{G},\ZZ/\ell)=0$ for sufficiently
+large $N$ (CG I Prop.~20).
+
+We\pageoriginale have $\cd_{\ell}H=1$ by the part of i) already proved,
+applied to $\widetilde{R}$. Moreover, we have
+\begin{equation*}
+H^1(H, 𝛍_{\ell})=H^1(\Spec \widetilde{K},
+𝛍_{\ell})=\widetilde{K}^{\ast}/\widetilde{K}^{\ast\ell}=\ZZ/\ell{\quoi}.\tag{2.2.2}
+\end{equation*}\etiquette[2.2.2]{X.eq2.2.2}
+Indeed, $H^1(\Spec \widetilde{K},
+𝛍_{\ell})=\widetilde{K}^{\ast}/\widetilde{K}^{\ast\ell}$
+by Kummer theory \hyperrefext[IX][IX.Thr3.2]{3.2}. We have an exact
+sequence
+$$
+0\longrightarrow \widetilde{R}^{\ast}\longrightarrow
+\widetilde{K}^{\ast}\longrightarrow
+\ZZ\longrightarrow 0{\quoi},
+$$
+and $\widetilde{R}^{\ast}$ is divisible by $\ell$ since
+$\widetilde{R}$ is strictly local and $\ell$ is invertible in
+$\widetilde{R}$, whence
+\sisi{\hyperref[X.lem2.2.1]{2.2.1}}{\eqhyperref[X.eq2.2.2]{2.2.2}}.
+
+Consider the Hochschild--Serre spectral sequence
+$$
+E^{pq}_2=H^p(\bar{G}, H^q(H,
+𝛍_{\ell}))\Longrightarrow
+H^{p+q}(G,𝛍_\ell){\quoi}.
+$$
+We have $E^{pq}_2=0$ if $q>1$. If, moreover,
+$\cd_{\ell}G<\infty$, the ``boundary'' morphism
+$$
+H^{n-1}(\bar{G}, H^1(H,𝛍_{\ell}))\longrightarrow
+H^{n+1}(\sisi{\bar{G}}{G}, 𝛍_{\ell})
+$$
+must be bijective for sufficiently large $n$, and it is necessary to
+prove that then
+$$
+H^{n-1}
+(\bar{G},H^1(H,𝛍_{\ell}))=H^{n-1}(\bar{G},\ZZ/\ell)=0{\quoi}.
+$$
+
+Set $R'=R[x']$ with ${x'}^{\ell}=x$, where $x$ is the local parameter
+of $R$, and let $K'$ be the fraction field of $R'$,
+$G'=G(\bar{K}/\sisi{k}{K}')$, \etcn The residue field of $R'$ is $k$,
+since we have supposed that $\bar{G}$ is an $\ell$-group, and hence that
+the $\ell$\sisi{-th}{-th} roots of unity are in $K$. We have a diagram
+$$
+\xymatrix@M=.25cm@C=1.5cm{
+H' \ar[r] \ar@{^{(}->}[d]& G' \ar[r] \ar@{^{(}->}[d]&\bar{G}\\
+H  \ar[r]& G \ar[r] & \bar{G},
+}
+$$
+whence\pageoriginale a morphism of Hochschild--Serre spectral
+sequences, which gives a commutative diagram
+$$
+\xymatrix{
+H^{n-1}(\bar{G},H^{1}(H',𝛍_l)) \ar[rd]& &\\
+                                              &
+H^{n+1}(\sisi{\bar{G}}{G},𝛍_l) &\\
+H^{n-1}(\bar{G},H^{1}(H,𝛍_l))\ar[uu]^{\varepsilon}
+\ar[ru] & &.
+}
+$$
+Since $\cd_{\ell}G<\infty$ implies $\cd_{\ell}G'<\infty$, all the
+morphisms in this diagram are isomorphisms for large $n$. But the
+morphism
+$$
+\ZZ/r=H^1(H,𝛍_{\ell})\longrightarrow
+H^1(H',𝛍_{\ell})=\ZZ/\ell
+$$
+which induces the arrow $\epsilon$ is plainly zero, and hence
+$H^{n-1}(\bar{G},\ZZ/\ell)=0$,\cqfd
+
+\begin{enonce*}{Theorem 2.3}\etiquette[2.3]{X.thm2.3}
+Let $A$ be a noetherian henselian ring of dimension $1$, and let
+$\ell\in \PP$ be invertible in $A$. Let $k$ be the residue field of
+$A$ and let $R(A)$ be the ring of rational functions
+on $\Spec A$. We have
+$$
+\cd_{\ell}R(A)\leq \cd_{\ell}k+1{\quoi},
+$$
+and equality holds if $\ell\neq 2$ or if $k$ is not orderable.
+\end{enonce*}
+
+Proof. Replacing $A$ by $A/P$ for a minimal prime ideal $P$ of $A$ and
+applying VIII 1, %% missing reference \XXX
+we see that we may suppose $A$ integral. Let $K$ be its fraction field,
+and let $R$ be its normalization, which is local and henselian, and
+hence a discrete valuation ring (it is noetherian by Krull--Akizuki
+(Bourbaki, Alg. Comm. Chap.~7, \S 2, prop.~5)), and let $k'$ be the
+residue field of $R$. It is known that $[k':k]<\infty$ (\loccit). Now
+$K$ is the fraction field of $R$, and therefore
+$$
+\cd_{\ell}K=\cd_{\ell}k'+1\leq \cd_{\ell}k+1
+$$
+by\pageoriginale \hyperref[X.thm2.2]{2.2}, with equality under the last
+hypothesis of \hyperref[X.thm2.3]{2.3}, by
+\hyperref[X.thm2.1]{2.1}.
+
+\begin{enonce*}[remark]{Example}
+Equality does not hold for $\ell=2$, when $A$ is the henselization at
+the origin of $\RR[x,y]/(x^2+y^2)$.
+\end{enonce*}
+
+\begin{enonce*}{Corollary 2.4}\etiquette[2.4]{X.cor2.4}
+Let $A$ be a noetherian local ring with residue field $k$, and let
+$\ell\in \PP$ be invertible in $A$. Suppose that $\ell\neq 2$
+\sisi{or}{or} that no residue field of $\Spec A$ is orderable. Then
+$$
+\cd_{\ell}R(A)\geq \cd_{\ell}k+\dim A{\quoi},
+$$
+where $R(A)$ is the ring of rational functions on $\Spec A$.
+\end{enonce*}
+
+Proof. We may suppose $A$ integral, \sisi{with}{with} fraction field
+$R(A)=K$. Let $x\in 𝔪_A$\sisi{ be a non-zero-divisor}{}.
+Then $\dim A/(x)=\dim A-1$. By induction on $\dim A$, we have
+$$
+\cd_{\ell}R(A/(x))\geq \cd_{\ell}k+\dim A-1{\quoi}.
+$$
+Let $k'$ be a residue field of $R(A/(x))$ such that
+$\cd_{\ell}k'=\cd_{\ell}R(A/(x))$ (\cf VIII 1), and let $P$ %% 𝔭
+be the prime ideal that is the kernel of $A\rightarrow k'$. The ring
+$A_P$ has dimension $1$. It is therefore enough to prove the
+corollary for the local ring $A_P$; that is, we are reduced to the case
+in which $\dim A=1$. Let $\widetilde{A}$ be the henselization of $A$.
+Every residue field of $R(\widetilde{A})$ identifies with a separable
+extension of $R(\widetilde{A})=K$, and therefore
+$$
+\cd_{\ell}R(A)=\cd_{\ell}K\geq \cd_{\ell}R(\widetilde{A}){\quoi}.
+$$
+We are thus reduced to the case in which $A$ is henselian of dimension
+1, which follows from \hyperref[X.thm2.3]{2.3}.
+
+\begin{enonce*}{Corollary 2.5}\etiquette[2.5]{X.cor2.5}
+Let\pageoriginale $X$ be a noetherian scheme and let $\ell\in
+\PP$ be invertible on $X$. Then
+$$
+\cd_{\ell}R(X)\geq \dim X{\quoi}.
+$$
+\end{enonce*}
+
+Indeed, let $x\in X$ be a point such that $\dim X=\dim \Oo_{X,x}$ (or
+such that $\dim \Oo_{X,x}$ is very large if $\dim X=\infty$). Let $A$
+be the strict henselization of $\Oo_{X,x}$. Then
+$\cd_{\ell}R(X)\geq \cd_{\ell}R(\Oo_{X,x})\geq \cd_{\ell}R(A)$ by
+the usual argument. Moreover, $\dim A=\dim X$ (\resp is very large).
+If $\ell=2$, and if $\ell$ is invertible on $X$, then the equation
+$T^2+1=0$ is separable over $A$, so $-1$ is a square in $A$ because
+$A$ is strictly local; hence the residue fields of $A$ are not
+orderable. Thus the hypotheses of \hyperref[X.cor2.4]{2.4} are
+satisfied for $A$ in every case, and
+$\cd_{\ell}R(A)\geq \dim A$, whence the result.

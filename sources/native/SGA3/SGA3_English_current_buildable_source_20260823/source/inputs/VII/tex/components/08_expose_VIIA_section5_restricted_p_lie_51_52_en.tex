@@ -1,0 +1,299 @@
+
+\section*{5. Restricted \texorpdfstring{\(p\)}{p}-Lie Algebras}
+\phantomsection
+\label{sga3:VIIA:5}
+\addcontentsline{toc}{section}{5. Restricted p-Lie Algebras}
+
+We first recall some results from the \emph{S\'eminaire Sophus
+Lie}.\footnote{See P.~Cartier,
+\emph{Exemples d'hyperalg\`ebres}, S\'eminaire Sophus Lie
+1955/56, Exp.~3.}
+
+\medskip
+\noindent\textbf{5.1.}
+\phantomsection
+\label{sga3:VIIA:5.1}
+
+Let \(p\) be a prime number, let \(R\) be a commutative ring of
+characteristic \(p\), and let \(A\) be an associative
+\(R\)-algebra, not necessarily commutative. For \(a,b\in A\), put
+\[
+  [a,b]=ab-ba,
+  \qquad
+  a\cdot b=L_a(b)=R_b(a).
+\]
+Then
+\[
+\begin{aligned}
+  (\operatorname{ad}x^p)(y)
+  &=[x^p,y] \\
+  &=(L_x^p-R_x^p)(y) \\
+  &=(L_x-R_x)^p(y) \\
+  &=(\operatorname{ad}x)^p(y),
+\end{aligned}
+\]
+which gives Jacobson's first formula:
+\[
+  \tag{i}\label{sga3:vii:paragraph:5-1:equation:i}
+  \operatorname{ad}(x^p)
+  =
+  (\operatorname{ad}x)^p.
+\]
+
+If \(a_1,\ldots,a_p\) are arbitrary elements of \(A\), and \(N\)
+is the symmetrization operator (cf.\ \SGARefLink{sga3:VIIA:4.2}{4.2}), then
+\begin{equation}
+  \tag{*}\label{sga3:vii:paragraph:5-1:equation:star}
+\begin{aligned}
+  N(a_1\otimes\cdots\otimes a_p)
+  &=
+  \sum_{\sigma\in\mathfrak S_p}
+    a_{\sigma(1)}\cdots a_{\sigma(p)} \\
+  &=
+  \sum_{\tau\in\mathfrak S_{p-1}}
+  [a_{\tau(1)},
+    [a_{\tau(2)},
+      [\cdots,
+        [a_{\tau(p-1)},a_p]
+      \cdots]
+    ]
+  ].
+\end{aligned}
+\end{equation}
+Here \(\sigma\) ranges over the permutations of \(p\) letters and
+\(\tau\) over those of \(p-1\) letters.
+
+Indeed, the final expression is equal to
+\[
+  \sum_{\tau}
+  \sum_{r=0}^{p-1}
+  \sum_{i_1<\cdots<i_r}
+  (-1)^s
+  a_{\tau(i_1)}\cdots a_{\tau(i_r)}
+  a_p
+  a_{\tau(j_s)}\cdots a_{\tau(j_1)},
+\]
+where \(\tau\) ranges over the permutations of \(p-1\) letters;
+\(i_1,\ldots,i_r\) ranges over the strictly increasing sequences
+in \([1,p-1]\); and \(j_1,\ldots,j_s\) is the strictly increasing
+sequence of those integers of \([1,p-1]\) which are different
+from \(i_1,\ldots,i_r\). For fixed \(r\), the sum of the terms
+\[
+  (-1)^s
+  a_{\tau(i_1)}\cdots a_{\tau(i_r)}
+  a_p
+  a_{\tau(j_s)}\cdots a_{\tau(j_1)}
+\]
+is plainly
+\[
+  (-1)^s\binom{p-1}{s}
+  \sum_{\rho}
+  a_{\rho(1)}\cdots a_{\rho(r)}
+  a_p
+  a_{\rho(r+1)}\cdots a_{\rho(p-1)},
+\]
+where \(\rho\) ranges over the permutations of \(p-1\) letters.
+But
+\[
+  (-1)^s\binom{p-1}{s}=1
+  \quad\text{in }\mathbb F_p,
+\]
+because in \(\mathbb F_p[x]\),
+\[
+  (x-1)^p=x^p-1=(x-1)(x^{p-1}+\cdots+1),
+\]
+and hence
+\[
+  (x-1)^{p-1}=x^{p-1}+\cdots+1.
+\]
+This proves \((*)\).
+
+On the other hand, if \(x_0,x_1\in A\), then
+\[
+  (x_0+x_1)^p
+  =
+  x_0^p+x_1^p+
+  \sum_z x_{z(1)}x_{z(2)}\cdots x_{z(p)},
+\]
+where \(z\) ranges over the nonconstant maps
+\([1,p]\to\{0,1\}\). It follows that
+\[
+\begin{aligned}
+  (x_0+x_1)^p
+  ={}&
+  x_0^p+x_1^p \\
+  &+
+  \sum_{0<r<p}
+  \frac{1}{r!(p-r)!}\,
+  N(
+    \underbrace{x_0,\ldots,x_0}_{r},
+    \underbrace{x_1,\ldots,x_1}_{p-r}
+  ).
+\end{aligned}
+\]
+\footnote{The editors inserted the following explanation from
+\textup{[DG70]}, III.7, \SGARefLink{sga3:VIIB:3.2:prop}{3.2}.}
+By \((*)\),
+\[
+\begin{aligned}
+  &N(
+    \underbrace{x_0,\ldots,x_0}_{r},
+    \underbrace{x_1,\ldots,x_1}_{p-r}
+  ) \\
+  &\qquad =
+  r!(p-1-r)!
+  \sum_t
+  [x_{t(1)},
+    [x_{t(2)},
+      [\cdots,
+        [x_{t(p-1)},x_1]
+      \cdots]
+    ]
+  ],
+\end{aligned}
+\]
+where \(t\) ranges over the maps
+\([1,p-1]\to\{0,1\}\) which take the value \(0\) exactly \(r\)
+times. We obtain Jacobson's second formula:
+\begin{equation}
+  \tag{ii}\label{sga3:vii:paragraph:5-1:equation:ii}
+\begin{aligned}
+  (x_0+x_1)^p
+  ={}&
+  x_0^p+x_1^p \\
+  &-
+  \sum_{0<r<p}\sum_t\frac1r
+  [x_{t(1)},
+    [x_{t(2)},
+      [\cdots,
+        [x_{t(p-1)},x_1]
+      \cdots]
+    ]
+  ],
+\end{aligned}
+\end{equation}
+where \(t\) has the same meaning.
+
+\medskip
+\noindent\textbf{5.2.}
+\phantomsection
+\label{sga3:VIIA:5.2}
+
+Let now \(\mathfrak g\) be an \(R\)-Lie algebra. A map
+\[
+  x\longmapsto x^{(p)}
+\]
+from \(\mathfrak g\) to itself is said to make \(\mathfrak g\) a
+\emph{restricted \(p\)-Lie algebra over \(R\)} if the following
+conditions hold:
+\[
+\begin{array}{ll}
+  (0) &
+  (\lambda x)^{(p)}
+  =
+  \lambda^p x^{(p)}
+  \quad
+  (\lambda\in R,\ x\in\mathfrak g), \\[0.4em]
+  (i) &
+  \operatorname{ad}x^{(p)}
+  =
+  (\operatorname{ad}x)^p
+  \quad
+  (x\in\mathfrak g),
+\end{array}
+\]
+and
+\[
+\begin{aligned}
+  (ii)\quad
+  (x_0+x_1)^{(p)}
+  ={}&
+  x_0^{(p)}+x_1^{(p)} \\
+  &-
+  \sum_{0<r<p}\sum_t\frac1r
+  [x_{t(1)},
+    [x_{t(2)},
+      [\cdots,
+        [x_{t(p-1)},x_1]
+      \cdots]
+    ]
+  ],
+\end{aligned}
+\]
+where \(t\) ranges over the maps
+\([1,p-1]\to\{0,1\}\) which take the value \(0\) exactly \(r\)
+times, and \(x_0,x_1\in\mathfrak g\). The map
+\(x\mapsto x^{(p)}\) is called the \emph{symbolic \(p\)-th power}.
+
+For example, if \(A\) is an associative \(R\)-algebra, \SGARefLink{sga3:VIIB:5.1:proposition}{5.1} shows
+that the \(R\)-module underlying \(A\), endowed with
+\[
+  [x,y]=xy-yx,
+  \qquad
+  x^{(p)}=x^p,
+\]
+is a \(p\)-Lie algebra, denoted \(A_{\mathrm{Lie}}\). We call it
+the \(p\)-Lie algebra underlying \(A\).
+
+We shall chiefly consider restricted \(p\)-Lie subalgebras of
+algebras of the form \(A_{\mathrm{Lie}}\). Here is one example.
+Let \(S\) be a scheme of characteristic \(p>0\), and let \(X\) be
+an \(S\)-scheme. Recall that a derivation of \(X\) over \(S\) is
+an endomorphism \(D\) of the sheaf of abelian groups
+\(\mathcal O_X\) such that
+\[
+  D(\lambda s)=\lambda D(s),
+  \qquad
+  D(st)=(Ds)t+s(Dt),
+\]
+whenever \(\lambda\), respectively \(s,t\), are sections of
+\(\mathcal O_S\), respectively \(\mathcal O_X\), on open subsets
+for which the formulas make sense. Leibniz's formula
+\[
+  D^n(st)
+  =
+  \sum_{i=0}^n
+  \binom ni
+  (D^is)(D^{n-i}t)
+\]
+shows that \(D^p\) is again a derivation of \(X\) over \(S\), since
+\[
+  \binom pi\equiv0\pmod p
+  \qquad(i\ne0,p).
+\]
+It follows that:
+
+\begin{quote}
+\textit{The algebra \(\operatorname{Der}_{X/S}\) of derivations of
+\(X\) over \(S\) is a restricted \(p\)-Lie subalgebra of the
+\(\Gamma(S,\mathcal O_S)\)-algebra of differential operators of
+\(X\) over \(S\).}
+\end{quote}
+
+\medskip
+\noindent\textbf{5.2.1.}
+\phantomsection
+\label{sga3:VIIA:5.2.1}
+If \(\mathfrak g\) and \(\mathfrak h\) are two restricted
+\(p\)-Lie algebras, a \emph{homomorphism}
+\[
+  h:\mathfrak g\longrightarrow\mathfrak h
+\]
+is an \(R\)-linear map such that, for \(x,y\in\mathfrak g\),
+\[
+  h([x,y])=[h(x),h(y)],
+  \qquad
+  h(x^{(p)})=h(x)^{(p)}.
+\]
+The composite of two homomorphisms is again a homomorphism, so we
+may speak of the \emph{category of restricted \(p\)-Lie algebras
+over \(R\)}.
+
+If \((X,\mathcal R)\) is a ringed space, we say that an
+\(\mathcal R\)-module \(\mathfrak g\) is endowed with the
+structure of a restricted \(p\)-Lie algebra over \(\mathcal R\) if,
+for every open subset \(U\), the module
+\(\Gamma(U,\mathfrak g)\) is a restricted \(p\)-Lie algebra over
+\(\Gamma(U,\mathcal R)\), and if all restriction maps are
+homomorphisms.
+

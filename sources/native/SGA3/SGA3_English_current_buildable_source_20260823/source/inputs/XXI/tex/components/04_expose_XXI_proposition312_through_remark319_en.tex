@@ -1,0 +1,178 @@
+\begin{proposition}\label{sga3:XXI:3.1.2}
+Let \(\alpha\) and \(\alpha_i\), \(i=1,\ldots,n\), be roots. If
+\[
+ \alpha=\sum_{i=1}^n m_i\alpha_i,
+ \qquad m_i\in\mathbb N,
+\]
+then there is a sequence \(\beta_1,\ldots,\beta_m\) of roots chosen
+from among the \(\alpha_i\), not necessarily pairwise distinct, such
+that, on setting
+\[
+ \gamma_p=\sum_{i=1}^p\beta_i,\qquad p=1,\ldots,m,
+\]
+one has \(\gamma_p\in R\) and \(\gamma_m=\alpha\).
+\end{proposition}
+
+\begin{proof}
+We argue by induction on the integer
+\(m'=\sum_i m_i\). If \(\alpha\) equals one of the \(\alpha_i\), say
+\(\alpha_{i_0}\), which necessarily happens when \(m'=1\), take
+\[
+ m=1,\qquad\beta_1=\alpha_{i_0}.
+\]
+Otherwise, Lemma~\ref{sga3:XXI:3.1.1} gives an index \(i\) for which
+\(m_i\neq0\) and \(\alpha-\alpha_i\) is a root. Then
+\(m_i-1\in\mathbb N\) and
+\[
+ \alpha-\alpha_i
+ =(m_i-1)\alpha_i+\sum_{j\neq i}m_j\alpha_j.
+\]
+Apply the induction hypothesis to \(\alpha-\alpha_i\), and append
+\(\alpha_i\) to the resulting sequence.
+\end{proof}
+
+\begin{corollary}\label{sga3:XXI:3.1.3}
+Let \(R'\subset R\). The following conditions are equivalent:
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:XXI:3.1.3:item:i}(i)] if \(\alpha,\beta\in R'\) and \(\alpha+\beta\in R\), then
+  \(\alpha+\beta\in R'\);
+\item[\SGAInlineRefTarget{sga3:XXI:3.1.3:item:ii}(ii)] \((\mathbb N\cdot R')\cap R\subset R'\).
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Clearly \SGARefLink{sga3:XXI:3.1.3:item:ii}{(ii)} implies \SGARefLink{sga3:XXI:3.1.3:item:i}{(i)}. The converse follows immediately from
+Proposition~\ref{sga3:XXI:3.1.2}.
+\end{proof}
+
+\begin{definition}\label{sga3:XXI:3.1.4}
+A set of roots satisfying the equivalent conditions of
+Corollary~\ref{sga3:XXI:3.1.3} is called \emph{closed}.
+\end{definition}
+
+\begin{proposition}\label{sga3:XXI:3.1.5}
+Let \(\Delta\subset R\) be a set of roots. The following conditions
+are equivalent:
+\begin{enumerate}
+\item[\SGAInlineRefTarget{sga3:XXI:3.1.5:item:i}(i)] the elements of \(\Delta\) are indivisible and linearly
+  independent, and
+  \[
+   R\subset(\Qp\cdot\Delta)\cup(-\Qp\cdot\Delta);
+  \]
+\item[\SGAInlineRefTarget{sga3:XXI:3.1.5:item:ii}(ii)] the elements of \(\Delta\) are linearly independent, and
+  \[
+   R\subset(\mathbb N\cdot\Delta)\cup(-\mathbb N\cdot\Delta);
+  \]
+\item[\SGAInlineRefTarget{sga3:XXI:3.1.5:item:iii}(iii)] every root can be written uniquely as a linear
+  combination of the elements of \(\Delta\), with integer
+  coefficients all of the same sign.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\footnote{Editors' note: in the argument that follows, the order was
+changed and the proof of the implication \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}\(\Rightarrow\)\SGARefLink{sga3:XXI:3.1.5:item:i}{(i)} was
+spelled out.}
+It is clear that \SGARefLink{sga3:XXI:3.1.5:item:ii}{(ii)} implies \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}. Write
+\(\alpha_1,\ldots,\alpha_n\) for the distinct elements of \(\Delta\).
+
+Assume \SGARefLink{sga3:XXI:3.1.5:item:i}{(i)}, and let \(\alpha\in R\). There is a unique expression
+\[
+ \varepsilon\alpha=\sum_i q_i\alpha_i,
+ \qquad q_i\in\Qp,\qquad\varepsilon=\pm1.
+\]
+We show that the \(q_i\) are integers. This is immediate when all but
+one of them vanish, by Corollary~\ref{sga3:XXI:2.1.5}. Otherwise,
+\(\varepsilon\alpha\) is distinct from the \(\alpha_i\), and
+Lemma~\ref{sga3:XXI:3.1.1} gives an \(i_0\) such that
+\[
+ \alpha'=\varepsilon\alpha-\alpha_{i_0}\in R,
+ \qquad q_{i_0}\neq0.
+\]
+Thus
+\[
+ \alpha'
+ =(q_{i_0}-1)\alpha_{i_0}
+  +\sum_{i\neq i_0}q_i\alpha_i.
+\]
+At least one \(q_i\), with \(i\neq i_0\), is nonzero, so \SGARefLink{sga3:XXI:3.1.5:item:i}{(i)} forces
+\(q_{i_0}-1\geq0\). Repeating this operation with \(\alpha'\), after
+finitely many steps we find that all \(q_i\) are integers. This proves
+\SGARefLink{sga3:XXI:3.1.5:item:ii}{(ii)}.
+
+Assume now \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}. We first prove that
+\(\alpha_1,\ldots,\alpha_n\) are linearly independent over
+\(\mathbb Q\). Otherwise there would be an equality
+\[
+ x=\sum_{i\in I}a_i\alpha_i
+  =\sum_{j\in J}b_j\alpha_j,
+\]
+where \(I\) and \(J\) are disjoint subsets of
+\(\{1,\ldots,n\}\), at least one of them, say \(I\), is nonempty, and
+\(a_i,b_j\in\mathbb N^\ast\). By the corollary in
+Complements~\ref{sga3:XXI:2.3.7}, one has
+\(\langle\alpha_i,\alpha_j\rangle\leq0\) for \(i\in I\) and \(j\in J\).
+Therefore \(\langle x,x\rangle\leq0\), and hence \(x=0\).
+
+Choose \(i_0\in I\). The two expressions
+\[
+ \alpha_{i_0}
+ =\alpha_{i_0}+\sum_{i\in I}a_i\alpha_i
+ =\alpha_{i_0}+\sum_{j\in J}b_j\alpha_j
+\]
+then imply, by \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}, that \(a_i=0=b_j\) for all \(i,j\), a
+contradiction. Thus the elements of \(\Delta\) are linearly
+independent over \(\mathbb Q\).
+
+It remains to show that they are indivisible. Suppose that
+\(\beta\in\Delta\) is divisible. Then \(\beta/2\in R\), so
+\[
+ \frac{\beta}{2}
+ =\varepsilon\sum_{\alpha\in\Delta}m_\alpha\alpha,
+ \qquad m_\alpha\in\mathbb N,\qquad\varepsilon=\pm1.
+\]
+Consequently,
+\[
+ \beta=2\varepsilon\sum_{\alpha\in\Delta}m_\alpha\alpha.
+\]
+Uniqueness gives \(m_\alpha=0\) for \(\alpha\neq\beta\) and
+\(2\varepsilon m_\beta=1\), a contradiction.
+\end{proof}
+
+\begin{definition}\label{sga3:XXI:3.1.6}
+A set \(\Delta\) of roots satisfying the conditions of
+Proposition~\ref{sga3:XXI:3.1.5} is called a
+\emph{system of simple roots}, or a \emph{base} of \(\cR\).
+\end{definition}
+
+If \(w\in W\) and \(\Delta\) is a system of simple roots, then
+\(w(\Delta)\) is a system of simple roots.
+
+\begin{remark}\label{sga3:XXI:3.1.7}
+This definition involves only \(R\), not \(\cR\); indeed, it involves
+only \(\operatorname{ind}(R)\).
+\end{remark}
+
+\begin{remark}\label{sga3:XXI:3.1.8}
+If \(\Delta\) is a system of simple roots, then \(\Delta\) is a basis
+of the free abelian group \(\Gamma_0(R)\). Hence
+\[
+ \operatorname{Card}(\Delta)=\rgss(\cR).
+\]
+\end{remark}
+
+\begin{remark}\label{sga3:XXI:3.1.9}
+The conditions of Proposition~\ref{sga3:XXI:3.1.5} are therefore
+equivalent to the following:
+\begin{enumerate}
+\item[(i\('\))] the elements of \(\Delta\) are indivisible, their
+  number is at most \(\rgss(\cR)\), and
+  \[
+   R\subset(\Qp\cdot\Delta)\cup(-\Qp\cdot\Delta);
+  \]
+\item[(ii\('\))] \(\operatorname{Card}(\Delta)\leq\rgss(\cR)\), and
+  \[
+   R\subset(\mathbb N\cdot\Delta)\cup(-\mathbb N\cdot\Delta).
+  \]
+\end{enumerate}
+\end{remark}

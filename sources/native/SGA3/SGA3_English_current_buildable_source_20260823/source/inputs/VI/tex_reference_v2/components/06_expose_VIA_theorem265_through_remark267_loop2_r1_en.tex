@@ -1,0 +1,247 @@
+
+One then obtains the following result ([Per75], II, Th.~\SGARefLink{prop:sga3-VIA-2.4}{2.4}; see also
+[Per76], Prop.~4.1.1).
+
+\medskip
+\phantomsection\label{thm:sga3-VIA-2.6.5}%
+\noindent\textbf{Theorem 2.6.5.}
+\textit{Let \(k\) be a field, and let \(G\) be a \(k\)-group scheme.}
+\begin{enumerate}
+\item[\SGAInlineRefTarget{thm:sga3-VIA-2.6.5:item:i}(i)] \textit{There is a unique group subscheme \(G^0\) of
+\(G\), called the \emph{identity component} of \(G\), such that:}
+  \begin{enumerate}
+  \item[\SGAInlineRefTarget{thm:sga3-VIA-2.6.5:item:a}(a)] \textit{the underlying space of \(G^0\) is the
+  irreducible component of the identity element;}
+  \item[\SGAInlineRefTarget{thm:sga3-VIA-2.6.5:item:b}(b)] \textit{\(G^0\to G\) is a flat closed immersion; that is,
+  \[
+    \mathcal O_{G,g}=\mathcal O_{G^0,g}
+    \qquad\text{for every }g\in G^0.
+  \]}
+  \end{enumerate}
+\item[\SGAInlineRefTarget{thm:sga3-VIA-2.6.5:item:ii}(ii)] \textit{Moreover, \(G^0\) is quasi-compact,
+geometrically irreducible, and is a characteristic subgroup of \(G\).}
+\item[\SGAInlineRefTarget{thm:sga3-VIA-2.6.5:item:iii}(iii)] \textit{If \(G\) is connected, then \(G=G^0\).}
+\end{enumerate}
+
+\noindent\textit{Proof.}
+\SGARefLink{thm:sga3-VIA-2.6.5:item:i}{(i)} Recall first that \(G\) is separated
+(\hyperref[sga3:VIA:0.3]{0.3}), and hence, a fortiori,
+quasi-separated. Let \(U\) be an affine open subset of \(G\) containing
+the generic point \(\omega\) of \(C^0\). By
+\hyperref[rem:sga3-VIA-2.6.3]{2.6.3} and
+\hyperref[prop:sga3-VIA-2.6.4]{2.6.4},
+\[
+  \overline U=C^0U
+\]
+is both open and closed, and, set-theoretically,
+\[
+  C^0=\overline{\{\omega\}}
+\]
+is the intersection of these open-and-closed subsets.
+
+As \(U\) runs through the affine open subsets containing \(\omega\),
+the \(G\)-schemes \(\overline U\) form a projective system whose
+transition morphisms are affine, since they are closed immersions.
+We can therefore form its projective limit \(G^0\)
+(cf.\ EGA~IV\textsubscript{3}, 8.2.2). Thus, for every affine open
+\(V\) of \(G\), \(G^0\cap V\) is the spectrum of the algebra
+\[
+  \varinjlim_U\mathcal O_G(V\cap\overline U)
+  =
+  \mathcal O_G(V)\Big/\sum_U I_{\overline U}(V),
+\]
+where \(I_{\overline U}(V)\) denotes the kernel of
+\[
+  \mathcal O_G(V)\longrightarrow
+  \mathcal O_G(V\cap\overline U).
+\]
+It follows that the underlying space of \(G^0\) is \(C^0\), and that
+\(G^0\to G\) is a closed immersion.
+
+Moreover, for every \(g\in G^0\), \(\mathcal O_{G^0,g}\) is the
+inductive limit, as \(V\) runs through the affine open subsets of
+\(G\) containing \(g\), of the \(k\)-algebras
+\[
+  \mathcal O_{G^0}(V\cap G^0)
+  =
+  \varinjlim_U\mathcal O_G(V\cap\overline U).
+\]
+This double inductive limit is identified with
+\[
+  \varinjlim_U\
+  \varinjlim_{\substack{V\\g\in V\subset\overline U}}
+  \mathcal O_G(V)
+  =
+  \mathcal O_{G,g}.
+\]
+Thus
+\[
+  \mathcal O_{G^0,g}=\mathcal O_{G,g}
+\]
+(see also EGA~IV\textsubscript{2}, 5.13.3(ii)), and consequently
+\(i:G^0\to G\) is a flat closed immersion. Conversely, this condition
+implies that \(i^*(\mathcal O_G)=\mathcal O_{G^0}\), so \(G^0\) is
+uniquely determined by conditions \SGARefLink{thm:sga3-VIA-2.6.5:item:a}{(a)} and \SGARefLink{thm:sga3-VIA-2.6.5:item:b}{(b)}. This proves \SGARefLink{thm:sga3-VIA-2.6.5:item:i}{(i)}.
+
+The first two assertions of \SGARefLink{thm:sga3-VIA-2.6.5:item:ii}{(ii)} follow from
+\hyperref[cor:sga3-VIA-2.6.2]{2.6.2}. Finally, let \(S\) be a
+\(k\)-scheme and let \(\phi\) be an automorphism of the \(S\)-group
+\(G_S\). For every \(s\in S\), \(\phi_s\) sends
+\(G^0_{\kappa(s)}\) into itself, and therefore
+\(\phi(G^0_S)\subset G^0_S\). Moreover, the closed immersion
+\[
+  i_S:G^0_S\hookrightarrow G_S
+\]
+obtained from \(i\) by base change is flat, so
+\[
+  \mathcal O_{G_S,\phi(z)}
+  =
+  \mathcal O_{G^0_S,\phi(z)}
+  \qquad\text{for every }z\in G^0_S.
+\]
+Hence \(\phi\circ i_S\) factors through \(G^0_S\). This proves that
+\(G^0\) is a characteristic subgroup of \(G\), and proves \SGARefLink{thm:sga3-VIA-2.6.5:item:ii}{(ii)}.
+Finally, \SGARefLink{thm:sga3-VIA-2.6.5:item:iii}{(iii)} is a special case of part \SGARefLink{thm:sga3-VIA-2.6.5:item:i}{(i)} of the following
+proposition.%
+\footnote{\label{note:sga3-VIA-32}Editor's note: this proposition, as
+well as the preceding results, was communicated to us by O.~Gabber.
+It will be used to correct the proof of \hyperref[thm:sga3-VIB-5.3]{Theorem~5.3} in
+Expos\'e~VI\textsubscript{B}.}
+
+\medskip
+\phantomsection\label{prop:sga3-VIA-2.6.6}%
+\noindent\textbf{Proposition 2.6.6.}
+\textit{Let \(k\) be a field, and let \(G\) be a \(k\)-group acting
+on a \(k\)-scheme \(X\) in such a way that
+\[
+  G\times X\longrightarrow X\times X,\qquad
+  (g,x)\longmapsto(gx,x)
+\]
+is surjective. Suppose that \(X\) is quasi-separated. Then:}
+\begin{enumerate}
+\item[\SGAInlineRefTarget{prop:sga3-VIA-2.6.6:item:i}(i)] \textit{Every connected component \(C\) of \(X\) is
+irreducible.}
+\item[\SGAInlineRefTarget{prop:sga3-VIA-2.6.6:item:ii}(ii)] \textit{Let \(\eta\) be the generic point of \(C\), and
+let \(L\) be the algebraic closure of \(k\) in \(\kappa(\eta)\).
+Then \(C\) is an \(L\)-scheme, is geometrically irreducible over
+\(L\), and the morphism
+\[
+  G^0_L\times_LC\longrightarrow C\times_LC
+\]
+is surjective.}
+\item[\SGAInlineRefTarget{prop:sga3-VIA-2.6.6:item:iii}(iii)] \textit{In particular, if \(C\) contains a rational
+point \(x\), then \(C\) is geometrically irreducible over \(k\), and
+\[
+  \phi:G^0\longrightarrow C,\qquad g\longmapsto gx,
+\]
+is surjective.}
+\end{enumerate}
+
+\noindent\textit{Proof.}
+\SGARefLink{prop:sga3-VIA-2.6.6:item:i}{(i)} Let \(C\) be a connected component of \(X\), let \(Y\) be an
+irreducible component of \(X\) contained in \(C\), let \(\eta\) be
+the generic point of \(Y\), and let \(U\) be an affine open subset of
+\(X\) containing \(\eta\). Since \(X\) is quasi-separated, \(U\) is
+retrocompact in \(X\). Hence, by
+\hyperref[prop:sga3-VIA-2.6.4]{2.6.4},
+\[
+  \overline U=G^0U
+\]
+is an open-and-closed subset of \(X\) which meets \(C\), and therefore
+contains \(C\). By \hyperref[rem:sga3-VIA-2.6.3]{2.6.3}, the
+intersection of the \(\overline U\), as \(U\) runs through a
+fundamental system of affine open neighborhoods of \(\eta\), is
+\(\overline{\{\eta\}}\). It follows that
+\[
+  C=\overline{\{\eta\}},
+\]
+which proves \SGARefLink{prop:sga3-VIA-2.6.6:item:i}{(i)}.
+
+The first assertion of \SGARefLink{prop:sga3-VIA-2.6.6:item:ii}{(ii)}, and also that of \SGARefLink{prop:sga3-VIA-2.6.6:item:iii}{(iii)}, follows from
+\hyperref[prop:sga3-VIA-2.6.1]{2.6.1}. We first prove the second
+assertion of \SGARefLink{prop:sga3-VIA-2.6.1:item:iii}{(iii)}. Let \(\omega\), respectively \(\eta\), denote the
+generic point of \(G^0\), respectively \(C\). Let \(z\in C\), and set
+\(K=\kappa(z)\). Since \(G^0\), respectively \(C\), is geometrically
+irreducible over \(k\), the scheme \(G^0_K\), respectively \(C_K\),
+is irreducible; denote its generic point by \(\xi\), respectively
+\(\beta\). We saw in the proof of
+\hyperref[prop:sga3-VIA-2.6.4]{2.6.4} that
+\[
+  \mu_z:G_K\longrightarrow C_K,\qquad h\longmapsto h\cdot z,
+\]
+sends \(\xi\) to \(\beta\). Likewise, \(\phi(\omega)=\eta\).
+
+Put \(L=\kappa(\xi)\), and let \(\xi_L\) and \(z_L\) be the \(L\)-points
+obtained from \(\xi\) and \(z\). Then
+\[
+  \xi_L\cdot z_L=\beta'
+\]
+is a point of \(C_L\) lying above \(\beta\in C_K\), and hence also
+above \(\eta\in C\). Consider the cartesian square
+\begin{center}
+  \phantomsection\label{diag:sga3-VIA-2.6.6-cartesian-square}%
+  \begin{tikzcd}[row sep=large,column sep=large]
+    G_L^0 \arrow[r,"\varphi_L"] \arrow[d,"\pi_{G^0}"'] &
+    C_L \arrow[d,"\pi_C"] \\
+    G^0 \arrow[r,"\varphi"'] &
+    C
+  \end{tikzcd}
+\end{center}
+Since
+\[
+  \phi_L\bigl(\pi_{G^0}^{-1}(\omega)\bigr)
+  =
+  \pi_C^{-1}(\eta)
+\]
+(cf.\ EGA~I, 3.4.8), there is a \(g\in G^0_L\) such that
+\(\phi_L(g)=\beta'\). Therefore
+\[
+  z_L
+  =
+  \xi_L^{-1}\cdot\phi_L(g)
+  =
+  \phi_L(\xi_L^{-1}g),
+\]
+whence
+\[
+  \phi\bigl(\pi_{G^0}(\xi_L^{-1}g)\bigr)
+  =
+  \pi_C(z_L)
+  =
+  z.
+\]
+This proves that \(\phi\) is surjective.
+
+We now prove the second assertion of \SGARefLink{prop:sga3-VIA-2.6.6:item:ii}{(ii)}. It is enough to show that,
+for every \(z\in C\), the morphism
+\[
+  \mu_z:
+  G^0_L\otimes_L\kappa(z)
+  \longrightarrow
+  C\otimes_L\kappa(z)
+\]
+is surjective. But this follows from \SGARefLink{prop:sga3-VIA-2.6.6:item:iii}{(iii)}, since \(z\) is a rational
+point of \(C\otimes_L\kappa(z)\).
+
+\medskip
+\phantomsection\label{rem:sga3-VIA-2.6.7}%
+\noindent\textbf{Remark 2.6.7.---}
+\textit{Under the hypotheses of \hyperref[prop:sga3-VIA-2.6.6]{2.6.6}, if \(C(k)=\varnothing\), the
+morphism
+\[
+  G^0\times_kC\longrightarrow C\times_kC
+\]
+need not be surjective. For example, let \(k=\mathbb R\) and
+\(G=\{\pm1\}_{\mathbb R}\). The \(G\)-torsor
+\[
+  X=\operatorname{Spec}\mathbb R[X]/(X^2+1)
+\]
+is connected, but
+\[
+  G^0\times_{\mathbb R}X\longrightarrow X\times_{\mathbb R}X
+\]
+is not surjective. (Here \(L=\mathbb C\), and
+\[
+  G^0\times_{\mathbb R}X\longrightarrow X\times_{\mathbb C}X
+\]
+is an isomorphism.)}

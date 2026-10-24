@@ -1,0 +1,355 @@
+\subsection{Indexed representation of a functor $J\rightarrow
+\Ind(C)$}\etiquette[8.8]{I.sec8.8}\pageoriginale
+
+\subsubsection{}\etiquette[8.8.1]{I.sec8.8.1}
+Let
+$$
+\varphi:J\longrightarrow \Ind(C)\text{ \ie } \varphi\in \Ob
+\Hhom(J,\Ind(C))
+$$
+be a functor, where $C$ is a $𝒰$-category. Recall \hyperref[I.sec8.5.4]{(8.5.4)}
+that an \emph{indexed representation of} $\varphi$ is, by
+definition, an ind-object of $\Hhom(J,C)$
+$$
+\psi:I\longrightarrow \Hhom(J,C){\quoi},
+$$
+with I an essentially small filtered category, together with a specified
+isomorphism from its inductive limit in $\Hhom(J,\Ind(C))$ to $\varphi$.
+Thus $\varphi$ admits an indexed
+representation if and only if it is isomorphic to an essentially
+small filtered inductive limit in $\Hhom(J,\Ind(C))$
+of objects of the full subcategory $\Hhom(J,C)$. We shall say that
+the category $J$ is \emph{admissible for} $C$ if every functor
+$\varphi:J\rightarrow \Ind(C)$ admits an indexed representation.
+
+Since in $\Ind(C)$ small filtered inductive limits are representable
+(\hyperref[I.prop8.5.1]{8.5.1}), the same is true in
+$\Hhom(J,\Ind(C))$, and they are computed “argument by argument”.
+Consequently, the inclusion functor
+\hypertarget{sga4.exp.I.equation.8.8.1.1}{}$$
+\displaylines{\rlap{$(8.8.1.1)$}\hfill \Hhom(J,C)\hookrightarrow
+\Hhom(J,\Ind(C))\hfill}
+$$
+extends canonically to a functor
+\hypertarget{sga4.exp.I.equation.8.8.1.2}{}$$
+\displaylines{\rlap{$(8.8.1.2)$}\hfill
+\Ind(\Hhom(J,C))\longrightarrow \Hhom(J,\Ind(C))\hfill}
+$$
+\hyperref[I.sec8.7.2]{(8.7.2)}. The objects of the essential image of this functor are
+       then precisely the $\varphi$ that admit an
+       indexed representation; thus, to say that $J$ is admissible
+       for $C$ also means that the functor \hyperlink{sga4.exp.I.equation.8.8.1.2}{(8.8.1.2)} is
+       essentially surjective. In this connection, we note:
+
+\begin{enonce*}{Proposition 8.8.2}\etiquette[8.8.2]{I.prop8.8.2}
+If\pageoriginale the category $J$ is equivalent to a
+finite category,
+the canonical functor $\hyperlink{sga4.exp.I.equation.8.8.1.2}{(8.8.1.2)}$ is fully faithful; thus
+$J$ is admissible for $C$ if and only if this functor is an equivalence
+of categories.
+\end{enonce*}
+
+By \hyperref[I.prop8.7.5]{8.7.5} a), it suffices to prove that for
+every small filtered inductive system $(\varphi_i)_{i\in I}$ in
+$\Hhom(J,C)$ and every object $\varphi$ of $\Hhom(C,J)$, the
+canonical map
+\hypertarget{sga4.exp.I.equation.8.8.2.1}{}$$
+\displaylines{\rlap{$(8.8.2.1)$}\hfill \varinjlim_i \Hom(\varphi,
+\varphi_i)\longrightarrow \Hom(\varphi, \varinjlim_i
+\varphi_i)\hfill}
+$$
+is bijective, where $\varinjlim_i \varphi_i$ denotes the inductive
+limit taken in $\Hom(J,\Ind(C))$. Now, if $\varphi$, $\psi$
+are two functors $J\rightarrow C$, there is an exact diagram
+of sets, functorial in $\varphi$ and $\psi$:
+$$
+\Hom(\varphi,\psi)\longrightarrow \prod_{X\in \Ob J}
+\Hom(\varphi(X),\psi(X))\rightrightarrows \prod_{\substack{f\in
+F\ell J\\ f:X\rightarrow Y}} \Hom(\varphi(X), \psi (Y)){\quoi}.
+$$
+Since filtered inductive limits commute with kernels of
+double arrows and with finite products, the bijectivity of
+\hyperlink{sga4.exp.I.equation.8.8.2.1}{(8.8.2.1)}
+follows when $J$ is finite. The case in which $J$ is equivalent to a
+finite category reduces immediately to the preceding case.
+
+\begin{enonce*}{Proposition 8.8.3}\etiquette[8.8.3]{I.prop8.8.3}
+Let $\varphi:J\rightarrow \Ind(C)$ be a functor, with $J$
+equivalent to a small category. For $\varphi$ to admit an
+indexed representation, the following two conditions are sufficient,
+and they are also necessary when $J$
+is equivalent to a finite category:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The category $\Hhom(J,C)_{/\varphi}$ (formed by the
+arrows in $\Hhom(J,\Ind(C))$ with target $\varphi$ and source in
+$\Hom(J,C)$) is filtered.
+
+\item For\pageoriginale every object $j$ of $J$, the functor
+\hypertarget{sga4.exp.I.equation.8.8.3.1}{}$$
+\displaylines{\rlap{$(8.8.3.1)$}\hfill \psi\longmapsto
+\psi(j):\Hhom(J,C)_{/\varphi}\longrightarrow C_{/\varphi(j)}\hfill}
+$$
+\end{enumerate}
+is cofinal, \ie satisfies conditions {\rm %%
+F 1), F 2)} of $\hyperref[I.prop8.1.3]{8.1.3}$.
+\end{enonce*}
+
+\noindent \emph{Proof}. Suppose a) and b) hold;
+let us prove that $\varphi$ admits an indexed representation. We may
+clearly suppose that $J$ is small. Let
+\hypertarget{sga4.exp.I.equation.8.8.3.2}{}$$
+\displaylines{\rlap{$(8.8.3.2)$}\hfill
+I=\Hhom(J,C)_{/\varphi}{\quoi},\hfill}
+$$
+which is a filtered category by hypothesis, and first suppose that
+$I$ is essentially small, so that the “inclusion” of $I$
+in $\Hhom(J,C)$ defines an ind-object of $\Hhom(J,C)$, $i\mapsto
+\psi_i$. Moreover, there is a canonical homomorphism
+\hypertarget{sga4.exp.I.equation.8.8.3.3}{}$$
+\displaylines{\rlap{$(8.8.3.3)$}\hfill \varinjlim_i
+\psi_i\longrightarrow \varphi{\quoi},\hfill}
+$$
+given argument by argument by the homomorphism
+$$
+\varinjlim_I \psi_i (j)\longrightarrow
+\varphi(j)=\varinjlim_{C_{/\varphi(j)}}X
+$$
+induced by the functor \hyperlink{sga4.exp.I.equation.8.8.3.1}{(8.8.3.1)}. Since %%
+the latter is cofinal, we conclude that \hyperlink{sga4.exp.I.equation.8.8.3.3}{(8.8.3.3)} is an
+isomorphism, which proves the assertion. In the case where we do not
+suppose $I$ essentially small, it is enough to construct an
+essentially small full subcategory $I'$ such that
+\hyperlink{sga4.exp.I.equation.8.8.3.3}{(8.8.3.3)} remains an isomorphism when $\varinjlim_{I'}$ is used in
+place of $\varinjlim_I$. For this purpose, it is enough that the composite functors
+$$
+I'\longrightarrow I\longrightarrow C_{/\varphi(j)}
+$$
+induced\pageoriginale by the functors \hyperlink{sga4.exp.I.equation.8.8.3.1}{(8.8.3.1)} all be
+cofinal. We then conclude by the following lemma, whose
+proof is immediate from criterion \hyperref[I.prop8.1.3]{(8.1.3 b)}) and is
+left to the reader:
+
+\begin{enonce*}{Lemma 8.8.3.4}\etiquette[8.8.3.4]{I.lem8.8.3.4}
+Let $I$ be a filtered $𝒰$-category, and let
+$$
+f_j:I\longrightarrow I_j\quad (j\in J)
+$$
+be a small family of cofinal functors from $I$ to essentially small
+filtered categories. Then there exists a
+full subcategory $I'$ of $I$ which is filtered and
+essentially small, and such that the functors induced by the
+$f_j$ are cofinal.
+\end{enonce*}
+
+Finally, let us prove necessity in \hyperref[I.prop8.8.3]{8.8.3} when
+$J$ is assumed equivalent to a finite category. An indexed representation
+of $\varphi$ by means of an essentially small filtered indexing
+category $I$ defines a functor $\psi$
+\hypertarget{sga4.exp.I.equation.8.8.3.5}{}\[
+\xymatrix@C=1.25cm@R=2cm{
+ I \ar[rr]^(.4){\psi} \ar@{-->}[rrd]^{\psi_j}&&  \Hhom(J,C)_{/\varphi} \ar@{-->}[d] &\\
+                        &     &   C_{/\varphi(j)}\quad ,\\
+}\tag{8.8.3.5}
+\]
+and it is enough to prove that $\psi$ and each of the functors $\psi_j$
+induced by it are cofinal: by \hyperref[I.prop8.1.3]{8.1.3} b), it
+will then indeed follow that $\Hhom(J,C)_{/\varphi}$ is filtered, and by
+definition \hyperref[I.def8.1.1]{8.1.1} that the vertical arrow in \hyperlink{sga4.exp.I.equation.8.8.3.5}{(8.8.3.5)} is
+also cofinal. By \hyperref[I.prop8.8.2]{8.8.2}, we may identify $\varphi$ with
+an object of $\Ind(E)$, where $E=\Hhom(J,C)$, and the fact that the functor
+$$
+\psi:I\longrightarrow E_{/\varphi}{\quoi},
+$$
+arising\pageoriginale from the ind-object $\varphi$ of $E$ indexed by $I$
+is cofinal is a general fact, which follows immediately
+from criteria (F 1) and (F 2) of \hyperref[I.prop8.1.3]{8.1.3}. The same
+argument (with $E$, $\varphi$ replaced by $C$, $\varphi(j)$)
+shows that $\psi_j$ is cofinal, which completes the proof.
+
+\begin{enonce*}[remark]{Remark 8.8.4}\etiquette[8.8.4]{I.rem8.8.4}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item In the case where $J$ is equivalent to a finite
+category, if $\varphi$ admits an indexed representation, we have seen that
+\hyperlink{sga4.exp.I.equation.8.8.3.5}{(8.8.3.5)} is a cofinal functor, which implies that the category
+$\Hhom(J,C)_{/\varphi}$ is itself essentially small.
+
+\item Suppose that in $C$ finite inductive limits are representable.
+Then the same is true in $E=\Hhom(J,C)$, and
+these limits are computed argument by argument and are also
+inductive limits in $\Hhom(J,\widehat{C})$ and \textit{a
+fortiori} in $\Hhom(J,\Ind(C))$. It follows immediately that
+condition a) of \hyperref[I.prop8.8.3]{8.8.3} is then automatically
+satisfied, and it remains only to consider condition b). I do not know whether
+it is automatically satisfied when $J$ is in addition assumed
+small.
+\end{enumerate}
+\end{enonce*}
+We now come to the main result of this section:
+
+\begin{enonce*}{Proposition 8.8.5}\etiquette[8.8.5]{I.prop8.8.5}
+Let $J$ be a category equivalent to a finite category, and
+suppose in addition that $J$ is rigid, \ie that for every $j\in \Ob J$, every
+endomorphism of $j$ is the identity. Then $J$ is admissible for
+$C$ (for any $𝒰$-category $C$), \ie every
+functor $J\rightarrow \Ind(C)$ admits an indexed representation.
+\end{enonce*}
+
+Upon \pageoriginale %%
+replacing $J$ by an equivalent category if necessary, we may suppose
+that $J$ is \emph{skeletal}, \ie that two isomorphic objects of $J$
+are equal. Then $J$ is in fact finite. We proceed by
+induction on $\text{card}\Ob J$; the case where this number is $\leq 0$
+is trivial, so we shall suppose it is $\geq 1$. Let $j_\circ$ be a
+\emph{maximal} object of $J$, \ie such that for every arrow
+$j_\circ\rightarrow j$, there exists an arrow $j\rightarrow j_\circ$;
+in view of the fact that $J$ is rigid, this implies that
+$j_\circ\rightarrow j$ is an isomorphism, and since $J$ is
+skeletal, it implies that $j_\circ=j$. Let $J'$ therefore be the full
+subcategory obtained from $J$ by removing the object $j_\circ$, and let $J''$ be the
+full subcategory consisting of the object $j_\circ$. The proposition
+then follows from the
+
+\begin{enonce*}{Lemma 8.8.5.1}\etiquette[8.8.5.1]{I.lem8.8.5.1}
+Let $J$ be a finite category, and let $J'$ and $J''$ be two full
+subcategories such that $\Ob J=\Ob J'\cup \Ob J''$, and such that for every
+$j'\in \Ob J'$ and $J''\in \Ob J''$, one has
+$\Hom(j'',j')=∅$. If $J'$ and $J''$ are admissible for
+$C$, then so is $J$.
+\end{enonce*}
+
+It is enough to prove criteria a) and b) of \hyperref[I.prop8.8.3]{8.8.3},
+which amounts to carrying out six elementary verifications, namely the
+last two filteredness conditions for
+$\Hhom(J,C)_{/\varphi}$, and conditions
+F 1) and
+F 2) for the functors \hyperlink{sga4.exp.I.equation.8.8.3.1}{(8.8.3.1)}, successively in the cases $j\in \Ob J'$ and
+$j\in \Ob J''$; the latter conditions moreover imply
+that $\Hhom(J,C)_{/\varphi}$ is nonempty. The rather
+tedious verification presents no difficulty and is left to the
+reader. (The editor sought in vain for an elegant proof
+that would circumvent these unpleasant
+verifications.)
+
+\begin{enonce*}[remark]{Exercise 8.8.6}\etiquette[8.8.6]{I.exer8.8.6}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let\pageoriginale $J$, $J'$ be two categories admissible
+for $C$, one of them being finite. Prove that $J\times J'$ is
+admissible for $C$. (Use \hyperref[I.prop8.8.2]{8.8.2}.)
+
+\item Prove that a small discrete category is admissible for
+every category $C$.
+
+\item Let $J$ be a category satisfying the following conditions:
+(i) $J$ is rigid, (ii) $\Ob J$ is countable, (iii) For any two
+objects $j$, $j'$ of $J$, $\Hom(j,j')$ is finite, (iv)
+For every object $j$ of $J$, the set of objects of $J$ that are
+bounded above by $j$, \ie that are sources of an arrow with target $j$, is
+finite. Show that $J$ is admissible for every
+$𝒰$-category $C$. (First show that $J$ can be written
+as a filtered union of finite full subcategories $J_n$,
+such that every object of $J$ bounded above by an object of $J_n$ belongs to
+$J_n$. Then verify criteria a), b) of \hyperref[I.prop8.8.3]{8.8.3}.)
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 8.8.7}\etiquette[8.8.7]{I.exer8.8.7}
+In our notation we identify an ordered set with the
+category it defines.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $C$ be an ordered set. Let $C^{\widetilde{\phantom{,}}}$
+be the set of subsets $A$ of $C$ that are filtered and such that
+$x\in A$ and $y\leq x$ imply $y\in A$. Let $L_\circ:C\rightarrow
+C^{\widetilde{\phantom{,}}}$ be the map that associates to every $x\in
+C$ the set $L_\circ(x)$ consisting of those $y\in A$ such that $y\leq x$. Show
+that $L$ is injective and that the order on $C$ is
+induced by that on $C^{\widetilde{\phantom{,}}}$. For every $A\in
+C^{\widetilde{\phantom{,}}}$, consider the inclusion
+$f(A):A\rightarrow C$, %%
+which is an ind-object of $C$; for every ind-object $\varphi:I\rightarrow
+C$ of $C$, let $g(\varphi)\in C^{\widetilde{\phantom{,}}}$ be the
+subset of $C$ consisting of the elements of $C$ bounded above by an element of
+the form $\varphi(i)$. Show\pageoriginale that one thus obtains
+two mutually quasi-inverse equivalences
+\[
+\xymatrix@C=1.5cm{ \Ind(C)
+\ar@{<->}[r]^(.5){\displaystyle\mathop{f,g}_{\approx}}&
+C^{\widetilde{\phantom{a}}}, }
+\]
+transforming the functor $L_\circ$ into the canonical functor
+$L:C\rightarrow \Ind(C)$.
+
+\item Suppose that for every $x\in C$, the set of elements
+bounding $x$ from above (\resp from below) is finite. Show that every ind-object
+(\resp pro-object) of $C$ is essentially constant, and indeed that
+for every such $\varphi:I\rightarrow C$ (\resp
+$\varphi:I^\circ\rightarrow C$) there exists an $i_\circ\in \Ob I$ such
+that the functor induced on $I_{/i_\circ}$ is constant (\ie
+takes every arrow to an isomorphism).
+
+\item Let $C\subset\NN^\circ\times
+\NN$ be formed by the pairs of natural numbers $(j,i)$ such that $i\geq
+j$. Show that $\NN^{\widetilde{\phantom{,}}}$ is isomorphic to
+the ordered set obtained from $\NN$ (identified with an ordered subset
+of $\NN^{\widetilde{\phantom{,}}}$ as in a)) by
+adjoining a greatest element $\infty$. Show that
+$C^{\widetilde{\phantom{,}}}$ is isomorphic to $\NN^\circ\times
+\NN^{\widetilde{\phantom{,}}}$. Consider the functor
+$$
+\varphi:\NN^\circ\longrightarrow C^{\widetilde{\phantom{,}}}\quav
+\varphi(j)=(j,\infty){\quoi}.
+$$
+\end{enumerate}
+\end{enonce*}
+
+\noindent Show that:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item the projective limit of $\varphi$ is not representable in
+$C^{\widetilde{\phantom{,}}}$, although filtered projective limits
+in $C$ are representable (and are essentially
+constant, by b)).
+
+\item For every functor $\psi:\NN^\circ\rightarrow
+C$, one has $\Hom(\psi,\varphi)=∅$, and \textit{a fortiori} the
+functor $\varphi$ admits no indexed
+representation.
+\end{enumerate}
+
+\begin{enonce*}[remark]{Exercise 8.8.8}\etiquette[8.8.8]{I.exer8.8.8}
+Let\pageoriginale $X=\NN\amalg \NN$ be the disjoint union of two
+copies of $\NN$, let $s$ be the symmetry of $X$, and for every $i\in \NN$,
+let $X_i$ be the subset $\Delta_{i+1}\amalg\Delta_i$ of $\NN$ (where
+$\Delta_i$ denotes the subset of $\NN$ formed by the $j$ such that $j\leq
+i$). Let $C$ be the subcategory of the category of subsets
+of $X$ whose objects are the $X_i$ and whose arrows are the
+maps between the $X_i$ induced by the identity of $X$
+or by its symmetry $s$, and let $C^{\widetilde{\phantom{,}}}$ be the
+category defined analogously, but with the additional
+object $X$.
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Show that $\Ind(C)$ is equivalent to
+$C^{\widetilde{\phantom{,}}}$, with the canonical functor $C\rightarrow
+\Ind(C)$ corresponding to the inclusion $C\rightarrow
+C^{\widetilde{\phantom{,}}}$. Show that there exists no pair
+$(Y,f)$ consisting of an object $Y$ of $C$ and an endomorphism $f$ of $Y$, together
+with a morphism of objects with endomorphism in $\Ind(C)$ from $(Y,f)$ to
+$(X,s)$.
+
+\item Deduce that if $J$ is the category having a single object
+and, in addition to the identity arrow, a single arrow of order 2, then
+the functor $J\rightarrow \Ind(C)$ defined by $(X,s)$ admits no
+indexed representation.
+\end{enumerate}
+\end{enonce*}
+ 

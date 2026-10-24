@@ -1,0 +1,229 @@
+\subsection{}\etiquette[5.10]{I.sec5.10}
+Let $C$ be a small category. For every object $X$ of
+$\widehat{C}$, let $C/X$ denote the category of arrows with target
+$X$ and source an object of $C$. The source functor defines a functor
+$j_X:C/X\rightarrow C$. Let $m:Y\rightarrow X$ be a morphism of
+$\widehat{C}$. Composition of morphisms defines a functor
+$j_m:C/Y\rightarrow C/X$. The diagram
+\[
+\xymatrix@=1.5cm{
+C/Y \ar[rr]^{j_m} \ar[rd]_{j_{Y}}&   & C/X\ar[ld]^{j_{X}}\\
+    & C &
+}
+\]
+is commutative. It follows from \hyperref[I.prop5.1]{5.1} that, for every
+object $F$ of $(C/X)^{\widehat{\phantom{,}}}$ and every object $Y$ of
+$C$, one has
+\hypertarget{sga4.exp.I.equation.5.10.1}{}$$
+\displaylines{\rlap{(5.10.1)}\hfill j_{X!}F(Y)=\coprod_{u\in
+    \Hom_{\widehat{C}}(Y,X)} F(u){\quoi}.\hfill}
+$$
+Formula \hyperlink{sga4.exp.I.equation.5.10.1}{(5.10.1)} defines $j_{X!}$ when $C$ is a $𝒰$-category, and
+one checks that the functor $j_{X!}$ thus defined is always right
+adjoint\pageoriginale to the functor
+$j^\ast_X:\widehat{C}\rightarrow
+(C/X)^{\widehat{\phantom{,}}}$ (\hyperref[I.sec5.0]{5.0}).
+
+\begin{enonce*}{Proposition 5.11}\etiquette[5.11]{I.prop5.11}
+Let $C$ be a $𝒰$-category and let $X$ be a presheaf on $C$.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor
+$$
+j_{X!}:(C/X)^{\widehat{\phantom{,}}}\longrightarrow
+\widehat{C}
+$$
+factors through the category $\widehat{C}/X$:
+$$
+(C/X)^{\widehat{\phantom{,}}}\xrightarrow{e_X}
+\widehat{C}/X\longrightarrow
+\widehat{C}{\quoi}.
+$$
+The functor $e_X$ is an equivalence of categories.
+
+\item The functor $e_{X}\circ j^\ast_X:\widehat{C}
+\to  \widehat{C}/X$ is canonically isomorphic to the functor
+  $H\mapsto (H\times X \xrightarrow{\pr_2} X)$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $f$ be the terminal object of $(C/X)^{\widehat{\phantom{,}}}$.
+There is a canonical isomorphism $f\xrightarrow{\sim}
+\varinjlim_{Y\in \ob C/X}Y$, and hence
+$j_{X!}(f)=\varinjlim_{Y\in \ob C/X}j_X(Y)$ \hyperref[I.prop5.4]{(5.4)}. But
+$j_{X!}(f)\simeq X$, which gives the factorization. To show that $e_X$
+is an equivalence, it is enough to exhibit a quasi-inverse functor. To
+every object $H\rightarrow X$ of $\widehat{C}/X$, associate the
+presheaf on $C/X$
+$$
+(Y\rightarrow X)\longmapsto
+  \Hom_{\widehat{C}/X}((Y\rightarrow X), (H\rightarrow
+  X)){\quoi}.
+$$
+
+\item The functor $e_X\circ j^\ast_X$ is right adjoint to the forgetful
+functor, and therefore the functor $e_X\circ j^\ast$ is canonically
+isomorphic to the functor $H\mapsto (H\times
+  H\xrightarrow{\pr_2}X)$.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsection}{11}
+\subsection{}\etiquette[5.12]{I.sec5.12}
+Let $m:Y\rightarrow X$ be a morphism of $\widehat{C}$.
+By \hyperref[I.prop5.11]{(5.11)}, the morphism $m$ is canonically isomorphic to the image under
+$e_X$ of an object of $(C/X)^{\widehat{\phantom{,}}}$, which we denote
+by $[m]$. By restriction to the subcategories, the functor $e_X$ defines
+an equivalence
+$$
+(C/X)/[m]\xrightarrow{e_m}C/Y{\quoi}.
+$$
+The\pageoriginale diagram
+\[
+\xymatrix{
+  (C/X)/[m]\ar[rr]^{e_m} \ar[rd]_{j_{[m]}} &       & C/Y \ar[ld]^{j_m}\\
+          & C/X   &
+}
+\]
+commutes up to canonical isomorphism.
+
+\subsection{}\etiquette[5.13]{I.sec5.13}
+
+We record a result that will be useful in Exp.~VI. Let
+$u:C\rightarrow C'$ be a functor between small categories. For every
+object $H$ of $\widehat{C}$, denote by $u/H:C/H\rightarrow C'/u_{!}H$
+the functor that assigns to every morphism $m:X\rightarrow H$ the
+morphism $u_{!}X\xrightarrow{u_{!}m}u_{!}H$ (we know
+(\hyperref[I.prop5.4]{5.4}) that we may always put $u_{!}X=uX$). The
+following diagram is commutative:
+\hypertarget{sga4.exp.I.equation.5.13.1}{}\[\vcenter{
+\xymatrix@C=3cm@R=1.75cm{
+C/H \ar[r]^{u/H}\ar[d]_{J_H} & C'/u_{!}H \ar[d]_{j_{u_{!}H}} \\
+C\ar[r]^{u}   & C'\quad. }}\leqno{(5.13.1)}
+\]
+We therefore have a diagram commutative up to isomorphism:
+and since $(u/H)_{!}$ takes the terminal object of
+$(C/H)^{\widehat{\phantom{,}}}$ to the terminal object of
+$(C'/u_{!}H)^{\widehat{\phantom{,}}}$, the diagram
+\hypertarget{sga4.exp.I.equation.5.13.3}{}\[\vcenter{
+\xymatrix@C=3.5cm@R=1.5cm{ (C/H)\widehat{\phantom{a}}
+\ar[r]^{(u/H)_!} \ar[d]_{e_H}&
+  (C'/u_!H)\widehat{\phantom{a}} \ar[d]_{e_{u_{!}H}}\\
+C\widehat{\phantom{a}}/H  \ar[r]^{u_{!}/H} &
+C'\widehat{\phantom{a}}/u_{!}H }}\leqno{(5.13.3)}
+\]
+commutes\pageoriginale up to isomorphism \hyperref[I.def6.1]{(6.1)}.
+
+\begin{enonce*}{Proposition 5.14}\etiquette[5.14]{I.prop5.14}
+Let $u:C\rightarrow C'$ be a functor between small categories. Suppose
+that $u$ has the following property:
+
+{\rm(PPF)} For every object $X$ of $C$, the functor
+$u/X:C/X\rightarrow C'/uX$ is fully faithful.
+
+Then:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $f$ be the terminal object of $\widehat{C}$. The functor $u$
+factors as
+$$
+C=C/f\xrightarrow{u/f}C'/u_{!}f\xrightarrow{j_{u_{!}f}} C'{\quoi}.
+$$
+The functor $u/f$ is fully faithful.
+
+\item The functor $u_{!}:\widehat{C}\rightarrow
+  \widehat{C'}$ factors as
+$$
+\widehat{C}=(C/f)^{\widehat{\phantom{,}}}\xrightarrow{(u/f)_{!}}
+(C'/u_{!}f)^{\widehat{\phantom{,}}}\xrightarrow{e_{u_{!}f}}\widehat{C'}/u_{!}f\longrightarrow
+\widehat{C'}{\quoi},
+$$
+where the functor $(u/f)_{!}$ is fully faithful, the functor
+$e_{u_{!}f}$ is an equivalence, and the functor
+$\widehat{C'}/u_{!}f\rightarrow\widehat{C'}$ is the forgetful functor.
+
+\item In particular, the functor $u_{!}$ is faithful, and therefore the
+unit morphism $\id\xrightarrow{\Phi}u^\ast u_{!}$ is a monomorphism.
+Moreover, for every morphism $\alpha:H\rightarrow K$ of
+$\widehat{C}$, the diagram
+\[
+\xymatrix@C=3.5cm@R=1.5cm@M=.2cm{
+H \ar@{^{(}->}[r]^{\Phi(H)}\ar[d]_{\alpha} & u^{*}u_{!}H \ar[d]^{u.u^{\bigdot}(\alpha)}\\
+K \ar@{^{(}->}[r]^{\Phi(K)} &  u^{*}u_!K }
+\]
+is cartesian.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The\pageoriginale factorization comes from diagram \hyperlink{sga4.exp.I.equation.5.13.1}{(5.13.1)}. The
+functor $u$ is faithful. Hence $u/f$ is faithful. Let us show that it is
+fully faithful. Let $X$ and $Y$ be two objects of $C$, let
+$\can_X:uX\rightarrow u_{!}f$ (\resp $\can_Y:uY\rightarrow u_{!}f$)
+be the canonical morphisms, and let
+\[
+\xymatrix@=1.25cm{
+uX \ar[rr]^{m} \ar[rd]_{\can_X}&               & uY \ar[ld]^{\can_Y}\\
+   & u^{\bigdot}f &
+}
+\]
+be a morphism of $C'/u_{!}f$. We have
+$u_{!}f=\varinjlim_{Z\in \ob C}uZ$, and therefore \hyperref[I.prop3.1]{(3.1)}
+$$
+\Hom_{\widehat{C'}}(uX,u_{!}f)=\varinjlim_{Z\in
+  \ob C}\Hom_{C'}(uX, uZ){\quoi}.
+$$
+By the definition of the inductive limit, to say that
+$\can_Ym=\can_X$ is equivalent to saying that there exist
+\begin{enumerate}
+\renewcommand{\theenumii}{\alph{enumii}}
+\renewcommand{\labelenumii}{\theenumii)}
+\item a finite sequence of objects $X_i$ of $C$, $i\in [0,n]$,
+  with $X_\circ=X$ and $X_n=Y$,
+
+\item for every $i$, a morphism $m_i:uX\rightarrow
+  uX_i$ $(m_\circ=\id_{X}, m_n=m)$,
+
+\item for every pair $(i,i+1)$, a morphism $f_i:X_i\rightarrow
+  X_{i+1}$ or else $f_i:X_{i+1}\rightarrow X_i$,
+\end{enumerate}
+such that the diagrams
+\begin{displaymath}
+\xymatrix@R=1.25cm@C=1.25cm{
+   &  uX \ar[rd]^{\;\;m_{i+1} \qquad\quad\text{ or else}} \ar[ld]_{m_i}&\\
+  uX_i\ar[rr]^{u(f_i)} &          &  uX_{i+1}
+}\qquad \xymatrix@R=1.25cm@C=1.25cm{
+      &  uX \ar[rd]^{\;\;m_{i+1}} \ar[ld]_{m_i}&\\
+ uX_i &                                        &
+   uX_{i+1}\ar[ll]_{u(f_i)}\quad ,
+}
+\end{displaymath}
+are commutative.
+
+It then follows immediately, by induction on $i$ and using property
+(PPF), that $m_i$ is of the form $u(p_i)$. In particular $m=u(p)$, and
+hence $u/f$ is fully faithful.
+
+\item The\pageoriginale factorization is immediate. The functor
+$(u/f)_{!}$ is fully faithful by \hyperref[I.prop5.6]{5.6}. The other
+assertions follow from \hyperref[I.prop5.11]{5.11}.
+
+\item The functor $u_{!}$ is the composite of the faithful forgetful
+functor and fully faithful functors. It is therefore faithful. It follows
+from the general properties of adjoint functors that the unit morphism
+$\id\rightarrow u^\ast u_{!}$ is a monomorphism. By 2), the functor
+$u_{!}$ appears as the composite of a fully faithful functor
+$v:\widehat{C}\to\widehat{C'}/u_{!}f$ and the forgetful functor. The
+functor $u^\ast$, right adjoint to $u_{!}$, is therefore the composite of
+the ``product with $u_{!}f$'' functor, right adjoint to the forgetful
+functor, and a functor $w$ right adjoint to $v$. Moreover, since $v$ is
+fully faithful, the unit morphism $\id\rightarrow wv$ is an isomorphism.
+The last assertion follows readily.
+\end{enumerate}
+\end{enonce*}
+

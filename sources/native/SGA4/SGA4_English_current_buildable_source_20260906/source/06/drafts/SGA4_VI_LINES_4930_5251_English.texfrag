@@ -1,0 +1,323 @@
+\subsubsection{}\etiquette[7.4.9]{VI.subsubsec7.4.9}
+
+Let $p:C\to I$ and $q:D\to I$ be two $𝒰$-sites fibered over a small
+category, and let $m$ be a morphism from the fibered site $C$ to the fibered
+site $D$ (\hyperref[VI.subsubsec7.2.2]{7.2.2}). Denote by
+$m^{\sim/I}:C^{\sim/I}\to D^{\sim/I}$ the corresponding morphism between
+the associated fibered $𝒰$-topoi. The morphism of fibered topoi
+$m^{\sim/I}$ is defined up to canonical isomorphism
+(\hyperref[VI.prop7.2.7]{7.2.7}). It has a corresponding direct-image
+functor $m^{\sim/I}_{\ast}:(C^{\sim/I})'\to(D^{\sim/I})'$
+(\hyperref[VI.subsubsec7.1.7]{7.1.7}), which, on passing to sections over
+$I^{\circ}$, gives a functor
+\begin{equation*}
+\Hom_{I^{\circ}} (I^{\circ}, m^{\sim/I}_{\ast}) : \Hhom_{I^{\circ}}
+(I^{\circ}, (C^{\sim/I})') \to \Hhom_{I^{\circ}} (I^{\circ},
+(D^{\sim/I})'){\quoi}.\tag{7.4.9.1}
+\end{equation*}\etiquette[7.4.9.1]{VI.eq7.4.9.1}
+
+Moreover, the functor $m$ is a continuous functor between the total sites
+(\hyperref[VI.prop7.4.4]{7.4.4}), and hence, by composition, gives a functor
+$m_{\ast}:\Top(C)\to\Top(F)$.
+
+In summary, there is a diagram of functors
+\[\vcenter{
+\xymatrix@C=2.75cm@R=1.5cm{
+\Top(C) \ar[r]^{\theta_C} \ar[d]_{m_{\ast}}& \Hhom_I^{\circ}(I^{\circ},(C^{\sim/I})') \ar[d]_{\Hom_{I^\circ}(I^{\circ},m_{\ast}^{\sim/I})}\\
+\Top(D)  \ar[r]^{\theta_D} & \Hhom_I^{\circ}(I^{\circ},(D^{\sim/I})')
+}}\leqno{(7.4.9.2)}
+\]\etiquette[7.4.9.2]{VI.eq7.4.9.2}
+
+\begin{enonce*}{Proposition 7.4.10}\etiquette[7.4.10]{VI.prop7.4.10}
+The diagram\pageoriginale \eqhyperref[VI.eq7.4.9.2]{7.4.9.2} is commutative
+up to isomorphism. When $m$ is Cartesian, $m$ is a morphism from the total
+site $C$ to the total site $D$.
+\end{enonce*}
+
+We leave it to the reader to verify that diagram
+\eqhyperref[VI.eq7.4.9.2]{7.4.9.2} is commutative up to isomorphism. To show
+that $m$ is a morphism between the total sites, it is enough, in view of
+\hyperref[VI.prop7.4.7]{7.4.7}, to show that the functor left adjoint to
+$\Hom_{I^{\circ}}(I^{\circ},m^{\sim/I}_{\ast})$ is left exact. We first
+describe the inverse-image functor of the morphism $m^{\sim/I}$
+(\hyperref[VI.prop7.2.7]{7.2.7}); for every object $i$ of $I$, denote by
+$m^{\ast}_i:D^{\sim}_i\to C^{\sim}_i$ the functor induced by
+$(m^{\sim/i})^{\ast}$ on the fibers at $i$. For every morphism $f:i\to j$
+of $I$, choose morphisms of topoi, denoted in both cases by
+$(f^{\ast},f_{\ast}):C^{\sim}_i\to C^{\sim}_j$ and
+$(f^{\ast},f_{\ast}):D^{\sim}_i\to D^{\sim}_j$. Since
+$(m^{\sim/I})^{\ast}$ is a Cartesian $I^{\circ}$-functor, for every
+$f:i\to j$ there is a canonical isomorphism
+\begin{equation*}
+m^{\ast}_i f_{\ast} \to f^{\ast} m^{\ast}_j{\quoi},\tag{7.4.10.1}
+\end{equation*}\etiquette[7.4.10.1]{VI.eq7.4.10.1}
+and since the functors $f^{\ast}$ and $f_{\ast}$ are adjoint, there are
+canonical morphisms (adjunction morphisms)
+\begin{align*}
+& \phi : \id \to f_{\ast} f^{\ast}\\
+& \psi : f^{\ast} f_{\ast} \to \id{\quoi}. \tag{7.4.10.2}
+\end{align*}\etiquette[7.4.10.2]{VI.eq7.4.10.2}
+Now consider the following sequence of functorial morphisms:
+\begin{equation*}
+m^{\ast}_j f^{\ast} \xrightarrow{(1)} f_{\ast} f^{\ast} m^{\ast}_j
+f_{\ast} \xrightarrow{(2)} f_{\ast} m^{\ast}_i f^{\ast} f_{\ast}
+\xrightarrow{(3)} f_{\ast} m^{\ast}_i{\quoi},\tag{7.4.10.3}
+\end{equation*}\etiquette[7.4.10.3]{VI.eq7.4.10.3}
+where morphism (1) is deduced from $\phi$, morphism (2) is deduced from the
+isomorphism \eqhyperref[VI.eq7.4.10.1]{7.4.10.1}), and morphism (3 is
+deduced from $\psi$. By composing the various morphisms\pageoriginale in
+the sequence \eqhyperref[VI.eq7.4.10.3]{7.4.10.3}, we obtain a functorial
+morphism
+\begin{equation*}
+\can_f : m^{\ast}_j f_{\ast} \to f_{\ast} m^{\ast}_i{\quoi}.\tag{7.4.10.4}
+\end{equation*}\etiquette[7.4.10.4]{VI.eq7.4.10.4}
+Now let $\tau$ be an object of
+$\Hhom_{I^{\circ}}(I^{\circ}(D^{\sim/I})')$. Thus, for every object $i$ of
+$I$, there is an object $\tau(i)$ of $D^{\sim}_i$, and for every morphism
+$f:i\to j$, a morphism
+\begin{equation*}
+\gamma_{f} (\tau) : \tau(j) \to f_{\ast} \tau(i){\quoi},\tag{7.4.10.5}
+\end{equation*}\etiquette[7.4.10.5]{VI.eq7.4.10.5}
+where the family of the $\gamma_f(\tau)$ has a compatibility property
+analogous to \eqhyperref[VI.eq7.4.5.8]{7.4.5.8}). Put
+$\sigma(i=m^{\ast}_i(\tau(i))$ and denote by
+\begin{equation*}
+\gamma_{f} (\sigma) : \sigma(j) \to f_{\ast} \sigma(i)\tag{7.4.10.6}
+\end{equation*}\etiquette[7.4.10.6]{VI.eq7.4.10.6}
+the composite morphism
+$m^{\ast}_j\tau(j)\xrightarrow{m_j^{\ast}\gamma_f(\tau)}
+m_j^{\ast}f_{\ast}\tau(i)\xrightarrow{\can_f(\tau(i))}
+f_{\ast}m^{\ast}_i\tau(i)$. One verifies that the $\gamma_f(\sigma)$ have
+the compatibility property of \eqhyperref[VI.eq7.4.5.8]{7.4.5.8}, and hence
+that an object of $\Hhom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$ has thus been
+defined. An ``adjoint functor chasing'' then shows that the functor from
+$\Hhom_{I^{\circ}}(I^{\circ},(D^{\sim/I})')$ to
+$\Hhom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$ just constructed is left
+adjoint to the functor
+$\Hom_{I^{\circ}}(I^{\circ},m^{\sim/I}_{\ast})$. It remains to show that
+this left adjoint commutes with finite projective limits, which follows
+immediately from the fact that projective limits in the categories of
+sections are computed fiber by fiber, and that all the functors used to
+construct this left adjoint commute with finite projective limits.
+
+\begin{enonce*}{Corollary 7.4.11}\etiquette[7.4.11]{VI.cor7.4.11}
+Let $p:C\to I$ be a $𝒰$-site fibered over a small category, let
+$p^{\sim/I}:C^{\sim/I}\to I$ be the associated fibered $𝒰$-topos
+(\hyperref[VI.subsubsec7.2.6]{7.2.6}), and let
+$\epsilon_I:C\to C^{\sim/I}$ be the canonical morphism from the fibered
+$𝒰$-site $C^{\sim/I}$ to the fibered $𝒰$-site $C$. The morphism
+$\epsilon_I$ induces an equivalence
+$\Top(\epsilon_I):\Top(C)\to\Top(C^{\sim/I})$ between the corresponding
+total topoi.
+\end{enonce*}
+
+This follows from the commutativity of diagram
+\eqhyperref[VI.eq7.4.9.2]{7.4.9.2} and from the fact that the morphism
+$\epsilon_I$ gives an equivalence between the associated fibered
+$𝒰$-topoi.
+
+\begin{enonce*}[remark]{Remark 7.4.11.1}\etiquette[7.4.11.1]{VI.rem7.4.11.1}
+It follows from \hyperref[VI.cor7.4.11]{7.4.11} that in questions concerning
+the total topos one may replace fibered sites by the corresponding fibered
+topoi.
+\end{enonce*}
+
+\begin{enonce*}{Lemma 7.4.12}\etiquette[7.4.12]{VI.lem7.4.12}
+Let\pageoriginale $p:C\to I$ be a site fibered over a small category $I$,
+and let $i$ be a final object of $I$ \emph{(I 10)}. The functor
+$\alpha_{i!}:C^{\sim}_i\to\Top(C)$ \hyperlink{sga4.exp.VI.remark.7.4.3.item.4}{(7.4.3.4)} is exact and fully faithful.
+The pairs of functors
+$\beta_i=(\alpha_{i!},\alpha^{\ast}_i):\Top(C)\to C^{\sim}_i$ and
+$\alpha_i=(\alpha_i^{\ast},\alpha_{i\ast}):C^{\sim}_i\to\Top(C)$ are
+morphisms of topoi. The composite morphism
+$\beta_i\alpha_i:C^{\sim}_i\to C^{\sim}_i$ is isomorphic to the identity
+morphism.
+\end{enonce*}
+
+For every object $j$ of $I$, denote by $f_j:j\to i$ the unique morphism from
+$j$ to $i$. Using the equivalence
+$\Theta_C:\Top(C)\xrightarrow{\sim}\Hhom_{I^{\circ}}(I^{\circ},
+(C^{\sim/I})')$ (\hyperref[VI.prop7.4.7]{7.4.7}), one sees that for every
+object $X$ of $C_i$, $\alpha_{i!(X)}$ is the section
+$j\to f^{\ast}_i(X)$, and that for every section
+$j\mapsto\sigma(j)\in\Hom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$,
+$\alpha^{\ast}_i(j\mapsto\sigma(j))$ is the object $\sigma(i)$. Hence
+$\alpha_i^{\ast}\alpha_{i!}$ is isomorphic to the identity. Therefore
+$\alpha_{i!}$ is fully faithful. Since the functors $f_j^{\ast}$ are left
+exact, the functor $\alpha_{i!}$ is left exact. Thus $\beta_i$ is a morphism
+of topoi, and since $\alpha_i^{\ast}\alpha_{i!}$ is isomorphic to the
+identity, the morphism $\beta_i\alpha_i$ is isomorphic to the identity
+morphism.
+
+
+\begin{enonce*}{Theorem 7.4.13.1}\etiquette[7.4.13.1]{VI.thm7.4.13.1}
+Let $p:C\to I$ and $q:D\to I$ be two $𝒰$-sites fibered over a small
+category $I$, and let $m:D\to C$ be an $I$-functor. For $m$ to be a morphism
+from the fibered site $C$ to the fibered site $D$
+\emph{(\hyperref[VI.subsubsec7.2.2]{7.2.2})}, it is sufficient that $m$ be a
+morphism from the total site $C$ to the total site $D$.
+\end{enonce*}
+
+\setcounter{subsubsection}{13}
+\setcounter{paragraph}{1}
+\paragraph{}\etiquette[7.4.13.2]{VI.par7.4.13.2}
+
+We must show that if an $I$-functor $m:D\to C$ is a morphism from the total
+site $C$ to the total site $D$, then $m$ is a morphism from the fibered site
+$C$ to the fibered site $D$, \ie for every object $i$ of $I$, the functor
+$m_i:D_i\to C_i$ induced by $m$ on the fibers at $i$ is a morphism from the
+site $C_i$ to the site $D_i$. The proof of this last assertion occupies
+paragraphs \hyperref[VI.par7.4.13.3]{7.4.13.3} through
+\hyperref[VI.par7.4.13.7]{7.4.13.7}.
+
+\paragraph{}\etiquette[7.4.13.3]{VI.par7.4.13.3}
+Let us show that, for every object $i$ of $I$, the functor $m_i:D_i\to C_i$
+is continuous. Indeed, there is a commutative diagram:\etiquette[133]{page133}
+\[
+\xymatrix@C=2cm@R=1.5cm{
+D_i \ar[r]^{m_i} \ar[d]_{\alpha_{i!}}& C_i \ar[d]^{\alpha_{i!}}\\
+D   \ar[r]^{m}& C
+}
+\]
+and it\pageoriginale is enough to show that, for every covering sieve
+$R\hookrightarrow X$ of $C_i/X$, the morphism
+$m_{i!}(R)\to m_i(X)$ is bicovering (III \hyperref[III.prop1.2]{1.2} and \hyperref[III.prop1.5]{1.5}). But by the
+commutativity of the diagram on page \pagehyperref[page133]{133} and the
+fact that the functors $\alpha_{i!}$ and $m$ are continuous, the morphism
+$\alpha_{i!}m_{i!}(R)\to\alpha_{i!}m_i(X)$ is bicovering. The assertion
+therefore follows from \hyperref[VI.lem7.4.2.2]{7.4.2.2}.
+
+\paragraph{}\etiquette[7.4.13.4]{VI.par7.4.13.4}
+\emph{Reduction to the case in which $C$ and $D$ are fibered $𝒰$-topoi.}
+Since the functors $m_i$ are continuous, they admit natural extensions to
+the categories of sheaves, which we denote by
+$m_i^{\ast}:D_i^{\sim}\to C_i^{\sim}$ (III \hyperref[III.prop1.2]{1.2} iv)). Let $D^{\sim/I}$ and
+$C^{\sim/I}$ be the fibered $𝒰$-topoi associated with the fibered sites $D$
+and $C$, respectively, and for every morphism $f$ of $I$, denote by
+$f^{\ast}$ the inverse-image functors for the four fibered categories $C$,
+$D$, $C^{\sim/I}$, and $D^{\sim/I}$. Since the functor $m$ is an
+$I$-functor, for every $f:i\to j$ there is a canonical morphism
+$$
+f^{\ast} mj \leftarrow m_i f^{\ast}{\quoi}.
+$$
+Since the functors $f^{\ast}$, $m_i$, and $m_j$ are continuous, by passing
+to the categories of sheaves we deduce canonical isomorphisms
+$$
+f^{\ast} m_j^{\ast} \longleftarrow m_i^{\ast} f^{\ast}{\quoi}.
+$$
+These isomorphisms have compatibility properties that make it possible to
+construct a Cartesian functor
+$m^{\ast}:D^{\sim/I}\to C^{\sim/I}$ inducing the functors $m_i^{\ast}$ on
+the fiber topoi. Moreover, the diagram
+\[
+\xymatrix@C=2.5cm@R=1.5cm{
+D \ar[r]^{m} \ar[d]_{\varepsilon_I}& C \ar[d]^{\varepsilon_I}\\
+D^{\sim/I}   \ar[r]^{m^{\ast}}& C^{\sim/I}
+}
+\]
+is commutative up to isomorphism. Since the functors $\epsilon_I$ induce
+equivalences on the total topoi (\hyperref[VI.cor7.4.11]{7.4.11}), and since
+$m$ is a morphism between the total sites, the functor
+$m^{\ast}:D^{\sim/I}\to C^{\sim/I}$ is a morphism between the total sites.
+We are therefore reduced to proving the assertion of
+\hyperref[VI.par7.4.13.2]{7.4.13.2} when $D$ and $C$ are fibered $𝒰$-topoi,
+which we assume henceforth.
+
+\paragraph{}\etiquette[7.4.13.5]{VI.par7.4.13.5}
+\emph{For every\pageoriginale object $i$ of $I$, the functor $m_i:D_i\to C_i$
+takes the final object of $D_i$ to the final object of $C_i$}. Denote by
+$m:D^{\sim}\to C^{\sim}$ the natural extension of $m$ to the total topoi
+(III \hyperref[III.prop1.2]{1.2}). Using the equivalences
+$\Theta_D:D^{\sim}\to\Hhom_{I^{\circ}}(I^{\circ},D')$
+(\hyperref[VI.prop7.4.7]{7.4.7}), one immediately verifies that $m$
+associates with every section
+$\sigma\in\Hom_{I^{\circ}}({I^{\circ}},D')$ the section
+$(i\mapsto m_i\sigma(i))\in\Hom_{I^{\circ}}({I^{\circ}},C')$. Since $m$ is
+a morphism of sites, the functor $m$ is left exact and in particular takes
+the final object of $\Hhom_{I^{\circ}}({I^{\circ}},D)$ to the final object
+of $\Hhom_{I^{\circ}}({I^{\circ}},C')$. For every object $i$ of $I$, denote
+by $e_i$ a final object of $D_i$. A final object of
+$\Hhom_{I^{\circ}}({I^{\circ}},D')$ is the section $i\mapsto e_i$. Thus the
+section $i\mapsto m_i(e_i)$ is a final object of
+$\Hhom_{I^{\circ}}({I^{\circ}},C')$, and consequently, for every object
+$i$ of $I$, $m_i(e_i)$ is a final object of $C_i$.
+
+\paragraph{}\etiquette[7.4.13.6]{VI.par7.4.13.6}
+\emph{Reduction to the case in which $i$ is a final object of} $I$. Let $i$
+be an object of $I$. The functor $\alpha_{i!}:D_i\to D$ factors as
+$$
+D_i \xrightarrow{\bar{\alpha}_{i!}} D_{/e_i} \xrightarrow{\loc(e_i)} D{\quoi},
+$$
+where $\bar{\alpha}_i$ is the evident functor and $\loc(e_i)$ the forgetful
+functor. Denote by $m/i:D_{/e_i}\to D_{m(e_i)}$ the functor that associates
+with every object $u:X\to e_i$ of $D_{/e_i}$ the object
+$m(u):m(X)\to m(e_i)$ of $C_{/m(e_i)}$. There is a commutative diagram
+\[
+\xymatrix@C=2.25cm@R=1.5cm{
+D_i \ar[r]^{m_i} \ar[d]_{\bar{\alpha}_{i!}}& C_i\ar[d]^{\bar{\alpha}_{i!}}\\
+D_{/e_i}  \ar[r]^{m/i} & C_{/m(e_i)}
+}
+\]
+Since $e_i$ and $m(e_i)$ are final objects of $D_i$ and $C_i$, respectively
+(\hyperref[VI.par7.4.13.5]{7.4.13.5}), the categories $D_{/e_i}$ and
+$C_{/m(e_i)}$ are $𝒰$-topoi fibered over $I_{/i}$, and the functor $m_{/i}$
+is an $I_{/i}$-functor. Since the property of a functor being a morphism of
+sites is local (IV \hyperref[IV.subsec4.9]{4.9}), the functor $m_{/i}$ is a morphism from the total
+site $C_{/m(e_i)}$ to the total site $D_{/(e_i)}$. We are therefore reduced
+to proving that $m_i$ is a morphism of topoi when $i$ is a final object of
+$I$, which we assume henceforth.\pageoriginale
+
+\paragraph{}\etiquette[7.4.13.7]{VI.par7.4.13.7}
+\emph{End of the proof}. Denote by $\alpha_{i!}:D_i\to D^{\sim}$,
+$m^{\sim}:D^{\sim}\to C^{\sim}$, and $\alpha_{i!}:C_i\to C^{\sim}$ the
+natural extensions to the categories of sheaves of the functors
+$\alpha_{i!}$ and $m$. There is a diagram commutative up to isomorphism:
+\[
+\xymatrix@C=2.5cm@R=1.5cm{
+D_i \ar[r]^{m_i} \ar[d]_{\alpha_{i!}}& C_i\ar[d]^{\alpha_{i!}}\\
+D^{\sim}  \ar[r]^{m^{\sim}} & C .
+}
+\]
+Since $i$ is a final object, the functor
+$\alpha_i^{\ast}\alpha_{i!}:C_i\to C_i$ is isomorphic to the identity
+(\hyperref[VI.lem7.4.12]{7.4.12}), and consequently $m_i$ is isomorphic to
+$\alpha_i^{\ast}m^{\sim}\alpha_{i!}$. Moreover, the functors
+$\alpha_i^{\ast}$, $m^{\sim}$, and $\alpha_i^{\ast}$ are left exact
+(\hyperref[VI.lem7.4.12]{7.4.12}). Consequently, $m_i$ is left exact and is
+therefore a morphism from the site $C_i$ to the site $D_i$.
+
+\begin{enonce*}[remark]{Exercise 7.4.14}\etiquette[7.4.14]{VI.exe7.4.14}
+Let $X=(X_i)_{i\in I}$ be a topos fibered over $I$ and let $T$ be a topos.
+Show that the categories $\Hhomtop(X_i,T)$ are the fibers of a fibered
+category denoted $\Hhomtop_I(X,T\times I)$. Show that the category of
+sections over $I$ of $\Hhomtop_I(X,T\times I)$ is canonically equivalent to
+$\Hhomtop_I(\Top(X),T)$, where $\Top(X)$ is the total topos of $X$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 7.4.15}\etiquette[7.4.15]{VI.exe7.4.15}
+Let $X=(X_i)_{i\in I}$ be a topos fibered over $I$. Define a Cartesian
+morphism $m$ from $X$ to the constant fibered topos with fiber $(\Ens)$.
+Show that the total topos of the constant fibered topos with fiber $(\Ens)$
+is canonically equivalent to $I^{\widehat{\phantom{,}}}$. Deduce a morphism
+of topoi
+$$
+\Top(m) :\Top(X) \to I^{\widehat{\phantom{,}}}{\quoi}.
+$$
+Let $F=(F_i)_{i\in I}$ (where $F_i=F|X_i$) be an object of $\Top(X)$
+(\hyperref[VI.prop7.4.7]{7.4.7}). Show that
+$$
+\Top(m)(F) = (i \mapsto \Gamma (X_i, F_i)){\quoi}.
+$$
+Deduce from \hyperref[VI.lem7.4.12]{7.4.12} that if $F$ is injective
+abelian, then $F_i$ is injective abelian for every $i\in\ob I$. Deduce that
+$$
+R^q \Top(m)(F) = (i \mapsto H^{q} (X_i, F_i)){\quoi}.
+$$
+Show\pageoriginale that the Cartan--Leray spectral sequence of the morphism
+$m$ (\hyperrefext[V][V.sec5]{5}) is
+$$
+H^{p+q} (\Top(X), F) \Leftarrow {\varprojlim_{I}}^{(p)} H^{q}
+(X_i, F|X_i){\quoi}.
+$$
+\end{enonce*}
+

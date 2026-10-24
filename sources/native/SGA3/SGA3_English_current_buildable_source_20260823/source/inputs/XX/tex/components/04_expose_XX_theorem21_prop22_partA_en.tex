@@ -1,0 +1,256 @@
+
+\section{Structure of elementary systems}
+\SGARefTarget{sga3:xx:section:2}
+
+\paragraph{\textbf{Theorem 2.1.}}
+\SGARefTarget{sga3:xx:2.1}
+\emph{Let \(S\) be a scheme and \((G,T,\alpha)\) an
+\(S\)-elementary system. There exist a morphism of
+\(\mathscr O_S\)-modules}
+\[
+  \mathfrak g^\alpha\otimes_{\mathscr O_S}\mathfrak g^{-\alpha}
+    \longrightarrow\mathscr O_S,
+  \qquad
+  (X,Y)\longmapsto\langle X,Y\rangle,
+\]
+\emph{and a morphism of \(S\)-groups}
+\[
+  \alpha^\ast\colon\mathbb G_{m,S}\longrightarrow T
+\]
+\emph{such that, for every \(S'\to S\) and all}
+\[
+  X\in\Gamma\bigl(S',
+    \mathfrak g^\alpha\otimes_{\mathscr O_S}\mathscr O_{S'}\bigr),
+  \qquad
+  Y\in\Gamma\bigl(S',
+    \mathfrak g^{-\alpha}\otimes_{\mathscr O_S}\mathscr O_{S'}\bigr),
+\]
+\emph{one has}
+\[
+  \exp(X)\mathbin{\cdot}\exp(Y)\in\Omega(S')
+  \quad\Longleftrightarrow\quad
+  1+\langle X,Y\rangle\in\mathbb G_m(S').
+\]
+\emph{Under these conditions,}
+\SGARefTarget{sga3:xx:2.1:F}
+\begin{equation}\tag{F}
+\begin{aligned}
+  \exp(X)\mathbin{\cdot}\exp(Y)
+   ={}&\exp\left(\frac{Y}{1+\langle X,Y\rangle}\right)
+       \alpha^\ast\bigl(1+\langle X,Y\rangle\bigr)\\
+     &{}\exp\left(\frac{X}{1+\langle X,Y\rangle}\right).
+\end{aligned}
+\end{equation}
+\emph{Moreover, the morphisms
+\((X,Y)\mapsto\langle X,Y\rangle\) and \(\alpha^\ast\) are uniquely
+determined. The first is an isomorphism, and therefore places
+\(\mathfrak g^\alpha\) and \(\mathfrak g^{-\alpha}\) in duality;
+furthermore,}
+\[
+  \alpha\circ\alpha^\ast=2,
+\]
+\emph{where \(2\) denotes squaring on \(\mathbb G_{m,S}\).}
+
+In view of the uniqueness assertions, it is enough to prove the
+theorem locally on \(S\). We may therefore assume that
+\(\mathfrak g^\alpha\) and \(\mathfrak g^{-\alpha}\) are free on
+\(S\). Choose
+\[
+  X\in\Gamma(S,\mathfrak g^\alpha)^\times,\qquad
+  Y\in\Gamma(S,\mathfrak g^{-\alpha})^\times,
+\]
+and put
+\[
+  p_\alpha(x)=\exp(xX),\qquad
+  p_{-\alpha}(y)=\exp(yY)
+\]
+for \(x,y\in\mathbb G_a(S')\), \(S'\to S\). By \SGARefLink{sga3:xx:1.5}{1.5} and \SGARefLink{sga3:xx:1.21}{1.21}, it
+is enough to prove the following proposition.
+
+\paragraph{\textbf{Proposition 2.2.}}
+\SGARefTarget{sga3:xx:2.2}
+\emph{Let \(S\) be a scheme, \(G\) an \(S\)-group, \(T\) a torus
+of \(G\), and \(\alpha\) a character of \(T\) that is nontrivial
+on every fiber. Let}
+\[
+  p_\alpha\colon\mathbb G_{a,S}\longrightarrow G,\qquad
+  p_{-\alpha}\colon\mathbb G_{a,S}\longrightarrow G
+\]
+\emph{be group monomorphisms normalized by \(T\), with
+multipliers \(\alpha\) and \(-\alpha\), respectively. Suppose
+that:}
+\begin{enumerate}
+\item[\textup{(i)}] \emph{the morphism}
+  \[
+    \mathbb G_{a,S}\times_S T\times_S\mathbb G_{a,S}
+      \longrightarrow G,
+    \qquad
+    (y,t,x)\longmapsto p_{-\alpha}(y)\,t\,p_\alpha(x),
+  \]
+  \emph{is an open immersion; denote its image by \(\Omega\);}
+\item[\textup{(ii)}] \emph{for every \(s\in S\), the groups}
+  \[
+    (p_\alpha)_s\bigl(\mathbb G_{a,\kappa(s)}\bigr)
+    \quad\text{and}\quad
+    (p_{-\alpha})_s\bigl(\mathbb G_{a,\kappa(s)}\bigr)
+  \]
+  \emph{do not commute.}
+\end{enumerate}
+\emph{Then there exist unique elements}
+\[
+  a\in\mathbb G_a(S),\qquad
+  \alpha^\ast\in
+    \operatorname{Hom}_{S\text{-gr.}}(\mathbb G_{m,S},T)
+\]
+\emph{with the following properties: for every \(S'\to S\) and
+all \(x,y\in\mathbb G_a(S')\),}
+\[
+  p_\alpha(x)p_{-\alpha}(y)\in\Omega(S')
+  \quad\Longleftrightarrow\quad
+  1+axy\in\mathbb G_m(S'),
+\]
+\emph{and, under this condition,}
+\[
+  p_\alpha(x)p_{-\alpha}(y)
+   =p_{-\alpha}\left(\frac{y}{1+axy}\right)
+      \alpha^\ast(1+axy)
+      p_\alpha\left(\frac{x}{1+axy}\right).
+\]
+\emph{Moreover, \(a\) is invertible, that is,
+\(a\in\mathbb G_m(S)\), and \(\alpha\circ\alpha^\ast=2\).}
+
+\medskip
+\noindent\emph{Proof.}
+\textup{A)} Consider the morphism
+\[
+  \mathbb G_{a,S}^{\,2}\longrightarrow G,\qquad
+  (x,y)\longmapsto p_\alpha(x)p_{-\alpha}(y).
+\]
+Let \(U\) be the inverse image of \(\Omega\). It is an open subset
+of \(\mathbb G_{a,S}^{\,2}\) containing
+\(0\times_S\mathbb G_{a,S}\) and
+\(\mathbb G_{a,S}\times_S0\). There are therefore unique
+morphisms of \(S\)-schemes
+\[
+  A\colon U\longrightarrow\mathbb G_{a,S},\qquad
+  C\colon U\longrightarrow\mathbb G_{a,S},\qquad
+  B\colon U\longrightarrow T
+\]
+satisfying the set-theoretic identity
+\[
+  p_\alpha(u)p_{-\alpha}(v)
+    =p_{-\alpha}\bigl(A(u,v)\bigr)\,
+      B(u,v)\,p_\alpha\bigl(C(u,v)\bigr).
+\]
+Immediately,
+\[
+\begin{gathered}
+  A(0,v)=v,\qquad A(u,0)=0,\qquad
+  C(u,0)=u,\qquad C(0,v)=0,\\
+  B(u,0)=B(0,v)=e.
+\end{gathered}
+\]
+
+Let \(S'\) be a separated \(S\)-scheme and let \(t\in T(S')\).
+Since \(\Omega_{S'}\) is stable under \(\intaut(t)\), the last
+formula of \SGARefLink{sga3:xx:1.16}{1.16} shows that \(U_{S'}\) is stable under the
+automorphism
+\[
+  (x,y)\longmapsto
+    \bigl(\alpha(t)x,\alpha(t)^{-1}y\bigr)
+\]
+of \(\mathbb G_{a,S'}^{\,2}\), and
+\[
+\begin{aligned}
+ A\bigl(\alpha(t)u,\alpha(t)^{-1}v\bigr)
+   &=\alpha(t)^{-1}A(u,v),\\
+ C\bigl(\alpha(t)u,\alpha(t)^{-1}v\bigr)
+   &=\alpha(t)C(u,v),\\
+ B\bigl(\alpha(t)u,\alpha(t)^{-1}v\bigr)
+   &=B(u,v).
+\end{aligned}
+\]
+Because \(\alpha\) is faithfully flat, it follows that for every
+\(S'\to S\) and every \(z\in\mathbb G_m(S')\), the open subset
+\(U_{S'}\) is stable under
+\((x,y)\mapsto(zx,z^{-1}y)\), and
+\[
+\begin{aligned}
+  A(zu,z^{-1}v)&=z^{-1}A(u,v),\\
+  C(zu,z^{-1}v)&=zC(u,v),\\
+  B(zu,z^{-1}v)&=B(u,v).
+\end{aligned}
+\]
+
+Suppose first that \(v\) is invertible. Taking \(z=v\), we see
+that if \((u,v)\) is a section of \(U\), then \((uv,1)\) is also
+a section of \(U\), and
+\[
+  A(uv,1)=v^{-1}A(u,v),\qquad
+  B(uv,1)=B(u,v).
+\]
+Let \(V\) be the open subset of \(\mathbb G_{a,S}^{\,2}\) defined
+by\footnote{The editors added the condition
+``\((1,uv)\in U(S')\)''.}
+\[
+  (u,v)\in V(S')
+  \quad\Longleftrightarrow\quad
+  (u,v),\ (uv,1),\ \text{and }(1,uv)\text{ belong to }U(S').
+\]
+
+Since \(U\) contains
+\(0\times_S\mathbb G_{a,S}\) and
+\(\mathbb G_{a,S}\times_S0\), the open subset \(V\) is a
+neighborhood of the zero section of \(\mathbb G_{a,S}^{\,2}\).
+The preceding calculation shows that, on
+\(V\cap(\mathbb G_{a,S}\times_S\mathbb G_{m,S})\), the two
+morphisms
+\[
+  (u,v)\longmapsto A(u,v),\qquad
+  (u,v)\longmapsto vA(uv,1)
+\]
+coincide, as do
+\[
+  (u,v)\longmapsto B(u,v),\qquad
+  (u,v)\longmapsto B(uv,1).
+\]
+Since
+\(\mathbb G_{a,S}\times_S\mathbb G_{m,S}\) is schematically dense
+in \(\mathbb G_{a,S}^{\,2}\), these morphisms coincide on \(V\).
+
+We have \(A(0,1)=1\). Hence there is an open subset \(W_1\) of
+\(\mathbb G_{a,S}\), containing the zero section, such that
+\(A(x,1)\) is invertible for every section \(x\) of \(W_1\). Put
+\[
+  A(x,1)^{-1}=F(x).
+\]
+If \((u,v)\in V(S')\)\footnote{Here and below, the editors replaced
+\(U(S')\) by \(V(S')\).} and \(uv\in W_1(S')\), then
+\[
+  A(u,v)=vA(uv,1)=vF(uv)^{-1}.
+\]
+The same argument applied to \(C\) gives an open subset \(W_2\)
+of \(\mathbb G_{a,S}\), containing the zero section, and an
+element \(E\in\mathscr O(W_2)^\times\)\footnote{The editors use
+\(E\) for the element denoted \(G\) in the original, since \(G\)
+already denotes the \(S\)-group under consideration.} such that
+\[
+  C(u,v)=uC(1,uv)=uE(uv)^{-1}
+\]
+whenever \((u,v)\in V(S')\) and \(uv\in W_2(S')\).
+
+Consequently, with \(W=W_1\cap W_2\), there are \(S\)-morphisms
+\[
+\begin{array}{lll}
+  F\colon W\to\mathbb G_{m,S},&\qquad&F(0)=1,\\
+  H\colon W\to T,&&H(0)=e,\\
+  E\colon W\to\mathbb G_{m,S},&&E(0)=1,
+\end{array}
+\]
+such that, if \((u,v)\in V(S')\) and \(uv\in W(S')\), then
+\SGARefTarget{sga3:xx:2.2:plus}
+\begin{equation}\tag{+}
+  p_\alpha(u)p_{-\alpha}(v)
+    =p_{-\alpha}\bigl(vF(uv)^{-1}\bigr)\,
+       H(uv)\,p_\alpha\bigl(uE(uv)^{-1}\bigr).
+\end{equation}

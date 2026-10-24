@@ -1,0 +1,93 @@
+
+\setcounter{footnote}{33}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:4:4:6}\textbf{Lemma 4.4.6.}\footnote{Editor's note: the statement of \SGARefLink{sga3:iv:lemma:4:4:6}{the
+lemma} and its proof have been given in detail.}
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:iv:lemma:4:4:6:item:i:01} \textit{Let \(\{F_i\xrightarrow{f_i}F\}\) be a family of
+    morphisms of presheaves, and let \(G\subset F\) be its presheaf image.
+    Then \SGARefLink{sga3:iv:supp:lemma:4:4:6:diagram:01}{the following diagram} in \(\widehat{\mathscr C}\) is exact:}
+    \SGARefTarget{sga3:iv:supp:lemma:4:4:6:diagram:01}\[
+      \left(\coprod_i F_i\right)\times_G
+      \left(\coprod_j F_j\right)
+      \overset{\operatorname{pr}_1}
+        {\underset{\operatorname{pr}_2}{\rightrightarrows}}
+      \coprod_i F_i\longrightarrow G.
+    \]
+    \textit{Equivalently, for every presheaf \(H\), \SGARefLink{sga3:iv:lemma:4:4:6:eq:unnamed:01}{the following diagram} of
+    sets is exact:}
+    \[
+    \tag{*}\label{sga3:iv:lemma:4:4:6:eq:unnamed:01}
+      \operatorname{Hom}(G,H)
+      \longrightarrow
+      \prod_i\operatorname{Hom}(F_i,H)
+      \overset{p}{\underset{q}{\rightrightarrows}}
+      \prod_{i,j}\operatorname{Hom}(F_i\times_G F_j,H).
+    \]
+
+  \item[(ii)]\SGARefTarget{sga3:iv:lemma:4:4:6:item:ii:01} \textit{Every covering family of morphisms of sheaves is a
+    universal effective epimorphic family.}
+\end{enumerate}
+
+\noindent\textit{Proof.}
+For \SGARefLink{sga3:iv:lemma:4:4:6:item:i:01}{(i)}, let \(H\) be a presheaf. The map
+\[
+  f^*:\operatorname{Hom}(G,H)
+  \longrightarrow\prod_i\operatorname{Hom}(F_i,H),
+  \qquad
+  \phi\longmapsto(\phi\circ f_i)_i,
+\]
+is injective. Indeed, for each \(S\in\operatorname{Ob}\mathscr C\), the map
+\(\phi(S)\) is determined by the maps \((\phi\circ f_i)(S)\), since the family
+\[
+  f_i(S):F_i(S)\longrightarrow G(S)
+\]
+is surjective. It is clear that the image of \(f^*\) is contained in
+\(\ker(p,q)\).
+
+Conversely, let \(\phi_i:F_i\to H\) be a family of morphisms such that, for
+every \(i,j\), the diagram
+\[
+\begin{array}{ccc}
+  F_i\times_G F_j&\longrightarrow&F_j\\
+  \big\downarrow&&\big\downarrow{\scriptstyle\phi_j}\\
+  F_i&\xrightarrow{\ \phi_i\ }&H
+\end{array}
+\]
+commutes. For every \(S\), the map
+\[
+  \coprod_i F_i(S)\longrightarrow H(S)
+\]
+then factors uniquely through a map \(\phi(S):G(S)\to H(S)\). These maps
+define a morphism \(\phi:G\to H\) satisfying
+\(f^*(\phi)=(\phi_i)\). This proves the exactness of \(\SGARefLink{sga3:iv:lemma:4:4:6:eq:unnamed:01}{(*)}\), and hence \SGARefLink{sga3:iv:lemma:4:4:6:item:i:01}{(i)}.
+
+We prove \SGARefLink{sga3:iv:lemma:4:4:6:item:ii:01}{(ii)}. Since covering families are stable under base change, it is
+enough to show that every covering family is effective epimorphic. Let
+\(\{F_i\to F\}\) be a covering family of morphisms of sheaves, and let \(G\)
+be its presheaf image. Because the family is covering, the monomorphism
+\(G\hookrightarrow F\) is covering as well; therefore, by \SGARefLink{sga3:iv:corollary:4:3:12}{4.3.12},
+\[
+  a(G)=F.
+\]
+Moreover, since \(G\hookrightarrow F\) is a monomorphism, the fiber products
+\(F_i\times_G F_j\) and \(F_i\times_F F_j\) coincide. Part \SGARefLink{sga3:iv:lemma:4:4:6:item:i:01}{(i)} therefore
+shows that, for every presheaf \(H\), the diagram
+\[
+\tag{**}\label{sga3:iv:lemma:4:4:6:eq:unnamed:02}
+  \operatorname{Hom}(G,H)
+  \longrightarrow
+  \prod_i\operatorname{Hom}(F_i,H)
+  \overset{p}{\underset{q}{\rightrightarrows}}
+  \prod_{i,j}\operatorname{Hom}(F_i\times_F F_j,H)
+\]
+is exact. If, in addition, \(H\) is a sheaf, then
+\[
+  \operatorname{Hom}(G,H)
+  =\operatorname{Hom}(a(G),H)
+  =\operatorname{Hom}(F,H).
+\]
+Thus \(\SGARefLink{sga3:iv:lemma:4:4:6:eq:unnamed:02}{(**)}\) shows that \(\{F_i\to F\}\) is an effective epimorphic family
+in the category \(\widetilde{\mathscr C}\) of sheaves.
+

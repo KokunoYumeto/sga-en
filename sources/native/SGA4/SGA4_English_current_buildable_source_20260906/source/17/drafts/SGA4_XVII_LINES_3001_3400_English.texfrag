@@ -1,0 +1,400 @@
+\otimes:\Mod\sisi{_d}{}(S,\Aa^{\circ})\times
+\Mod\sisi{_g}{}(S,\Aa)\longrightarrow \Mod(S,C)
+\]%For the first component of the source, take either right Aa-modules or left Aa-circ-modules.
+where $C$ is the center of $\Aa$.
+
+The recipe of \hyperref[XVII.subsubsec1.1.6]{1.1.6}, in applying which
+the simple complex associated with a double complex is defined using a
+sum, extends this functor to a functor still denoted $\otimes$:
+\[
+\otimes:K(S,\Aa^{\circ})\times K(S,\Aa)\longrightarrow
+K(S,C){\quoi}.
+\]
+
+\begin{enonce*}{Proposition 4.1.7}\etiquette[4.1.7]{XVII.prop4.1.7}
+With the preceding notation:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The tensor-product functor is left derivable
+(\hyperref[XVII.def1.2.1]{1.2.1}) to a ``total tensor product'' functor
+\[
+{}\overset{L}{\otimes}{}:D^{-}(S,\Aa^{\circ})\times
+D^{-}(S,\Aa)\longrightarrow D^{-}(S,C){\quoi}\text{;}
+\]
+
+\item a pair $(K,L)$ of bounded-above complexes is adapted to
+$\overset{L}{\otimes}$ whenever either $K$ or $L$ has flat components.
+\end{enumerate}
+\end{enonce*}
+
+The proof is standard.
+
+\begin{enonce*}{Notation 4.1.8}\etiquette[4.1.8]{XVII.not4.1.8}
+If\pageoriginale $K\in D^{-}(S,\Aa^{\circ})$ and
+$L\in D^{-}(S,\Aa)$, denote by $K\overset{L}{\otimes}L$ the total
+tensor product of $K$ and $L$. The sheaf
+$H_{k}(K\overset{L}{\otimes}L)=H^{-k}(K\overset{L}{\otimes}L)$ is
+denoted by $\Tor_k(K,L)$ and is called the $k$\textsuperscript{th}
+local hypertor of $K$ and $L$.
+\end{enonce*}
+
+Let $K\in D^{-}(S,\Aa^{\circ})$ and $L\in D^{-}(S,\Aa)$. If
+$H^{i}(K)=0$ for $i>k$ and $H^{i}(L)=0$ for $i>\ell$, one checks that
+$H^{i}(K\overset{L}{\otimes}L)=0$ for $i>k+\ell$ and that
+$H^{k+\ell}(K\overset{L}{\otimes}L)=H^{k}(K)\otimes H^{\ell}(L)$.
+Fix $K$ and regard $K\overset{L}{\otimes}L$ as a functor of $L$. If
+Definition \hyperref[XVII.def1.2.9]{1.2.9} of cohomological amplitude
+as an interval in $\ZZ$ is applied, the upper endpoint of this interval
+is trivial in nature: it is the largest integer $i$ such that
+$H^{i}(K)\neq0$. The lower endpoint is more interesting:
+
+\begin{enonce*}{Definition 4.1.9}\etiquette[4.1.9]{XVII.def4.1.9}
+A complex $K\in\Ob D^{b}(S,\Aa^{\circ})$ is said to have
+\emph{\tTor-dimension $\leq n$} if the following equivalent conditions
+hold:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item For every $\Aa$-module $L$, $\Tor_k(K,L)=0$ for $k>n$.
+
+\item For every complex of $\Aa$-modules $L$ such that $H^i(L)=0$ for
+$i<\ell$, one has $H^i(K\overset{L}{\otimes}L)=0$ for $i<\ell-n$.
+
+\item There is a quasi-isomorphism with target $K$ and source a
+\sisi{}{ bounded} complex $K'$ whose components are flat and vanish for
+$i<-n$.
+\end{enumerate}
+\end{enonce*}
+
+\setcounter{subsubsection}{9}
+\subsubsection{}\etiquette[4.1.10]{XVII.subsubsec4.1.10}
+Here are some possible variants:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item If $K\in\Ob D^{b}(S,\Aa^{\circ})$ has finite \ttor-dimension
+and $L\in\Ob D(S,\Aa)$, then the functor $\overset{L}{\otimes}$ is
+defined (\hyperref[XVII.def1.2.1]{1.2.1}) at $(K,L)$.
+
+\item If $K\in\Ob K^{b}(S,\Aa^{\circ})$ has components of finite
+\tTor-dimension, the functor $L\mapsto K\otimes L$
+$(L\in K(S,\Aa))$ is left derivable.
+
+\item If every module has finite \tTor-dimension,\nde{this condition is
+superfluous. In the case where $\Aa$ is commutative, see [KS], 18.6,
+cited in \nderef{XVII.ndeKS}.} the functor $\otimes$ derives to a
+functor
+\[
+{}\overset{L}{\otimes}{}:D(S,\Aa^{\circ})\times
+D(S,\Aa)\longrightarrow D(S,\Cc){\quoi}.
+\]
+\end{enumerate}
+
+\subsection{Godement flasque resolutions}\etiquette[4.2]{XVII.subsec4.2}\pageoriginale
+
+\subsubsection{}\etiquette[4.2.1]{XVII.subsubsec4.2.1}
+Let $S$ be a topos and $X$ a set. To give a family of point\sisi{}{s}
+of $S$ indexed by $X$ is equivalently to give a morphism
+$k:\Top(X)\rightarrow S$ from the topos defined by the discrete
+topological space $X$ to $S$. For this family to be conservative
+(IV \hyperref[IV.def6.4.1]{6.4.1}), it is necessary and sufficient that, for every sheaf $F$
+on $S$, the adjunction arrow from $F$ to $k_{\ast}k^{\ast}F$ be a
+monomorphism (\cf IV \hyperref[IV.subsubsec6.4.0]{6.4.0}).
+
+\begin{enonce*}{Definition 4.2.2}\etiquette[4.2.2]{XVII.def4.2.2}
+Let $k:\Top(X)\rightarrow S$ be a conservative family of points of a
+topos $S$. The \emph{Godement resolution}, or \emph{canonical flasque
+resolution} (relative to $X$), of an abelian sheaf $F$ on $S$, denoted
+$\Cc_X^{\ast}(F)$ (or simply $\Cc^{\ast}(F)$), is the following right
+resolution of $F$:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item $\Cc^{0}(F)=k_{\ast}k^{\ast}F$ and
+$\epsilon:F\rightarrow\Cc^{0}(F)$ is the adjunction arrow.
+
+\item Set $d^{-1}=\epsilon$; recursively, for $n\geq0$, define
+
+$\Cc^{n+1}(F)=\Cc^{0}(\coker d^{n-1})$, and define $d^n$ as the
+composite arrow
+\[
+d^{n}:\Cc^n(F)\rightarrow
+\coker(d^{n-1})\rightarrow\Cc^{0}(\coker(d^{n-1})){\quoi}.
+\]
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Proposition 4.2.3}\etiquette[4.2.3]{XVII.prop4.2.3}
+Under the hypotheses of \emph{\hyperref[XVII.def4.2.2]{4.2.2}},
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $\Cc^n(F)$ is a flasque sheaf
+\emph{\sisi{(V 3.7)}{\hyperrefext[V][V.def4.1]{4.1}}},
+
+\item $\Cc^n(F)$ is an exact functor of $F$,
+
+\item the stalk at a point $x\in X$ of the complex $\Cc^{\ast}(F)$ is
+a canonically split resolution of $F_x$.
+\end{enumerate}
+\end{enonce*}
+
+The\pageoriginale sheaves $\Cc^n(F)$ are flasque because they are
+direct images of sheaves (automatically flasque) on the discrete
+topological space $X$.
+
+The functors $k^{\ast}$ and $k_{\ast}$ are exact. Hence the functor
+$\Cc^0$ is exact. We prove by induction on $n\geq0$ that the functor
+$\mathcal{Z}^{n}(F)=\coker(d^{n-1})$ is exact, and therefore so is
+$\Cc^{n+1}=\Cc^0\mathcal{Z}^{n}$. Set $\Zz^{-1}(F)=F$. An exact
+sequence of sheaves
+\[
+0\longrightarrow F'\longrightarrow F\longrightarrow F''\longrightarrow0
+\]
+defines, for $n\geq0$, a diagram
+\[
+\xymatrix{
+        &   0   \ar[d]             &  0   \ar[d]            &  0 \ar[d]\\
+0  \ar[r] & \Zz^{n-1}(F\sisi{^1}{'})  \ar[r] \ar[d]& \Zz^{n-1}(F)  \ar[r] \ar[d]& \Zz^{n-1}(F'')
+\ar[r] \ar[d]& 0 \\
+0  \ar[r] & \Cc^n(F')  \ar[r] \ar[d]& \Cc^n(F)  \ar[r] \ar[d]&
+\Cc^n (F'')  \ar[r] \ar[d]& 0 \\
+ 0  \ar[r] & \Zz^{n}(F')  \ar[r]\ar[d] & \Zz^{n}(F)  \ar[r] \ar[d]& \Zz^{n}(F'')  \ar[r] \ar[d]&
+0\\
+        &  0               &  0             &  0      &,
+}
+\]
+whose columns are exact, as are, by the induction hypothesis, the
+first two rows. The 3\sisi{rd}{\textsuperscript{rd}} row is therefore
+exact, proving (ii).
+
+The short exact sequences
+\[
+0\longrightarrow\mathcal{Z}^{n+1}(F)\longrightarrow
+\Cc^{n}(F)\longrightarrow\mathcal{Z}^{n}(F)\longrightarrow0
+\]
+are special cases of the short exact sequence
+$$\etiquette[4.2.3.1]{XVII.eq4.2.3.1}
+0\rightarrow F\xrightarrow{\epsilon}\Cc^{0}(F)\rightarrow
+\mathcal{Z}^{0}(F)\rightarrow0\leqno(4.2.3.1)
+$$
+(make\pageoriginale the substitution $F\mapsto\mathcal{Z}^{n-1}(F)$).
+To prove (iii), it remains to show that the inverse-image sequence of
+\eqhyperref[XVII.eq4.2.3.1]{4.2.3.1} under $k$ is canonically split.
+Indeed, the composite arrow
+\[
+k^{\ast}F\xrightarrow{k^{\ast}(\epsilon)}k^{\ast}\Cc^{0}F=k^{\ast}(k_{\ast}k^{\ast})F=(k^{\ast}k_{\ast})k^{\ast}F\longrightarrow
+k^{\ast}F
+\]
+is the identity.
+
+\begin{enonce*}[remark]{Remark 4.2.4}\etiquette[4.2.4]{XVII.rem4.2.4}
+If $(x_i)_{i\in X}$ is a conservative family of points of a site, this
+family corresponds to a conservative family of points of the
+associated topos, which again makes it possible to define canonical
+flasque resolutions.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 4.2.5}\etiquette[4.2.5]{XVII.rem4.2.5}
+If $S$ is a ringed topos, the functors $\Cc^n$ carry modules to modules.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 4.2.6}\etiquette[4.2.6]{XVII.rem4.2.6}
+Let $\Ss$ be a category consisting of sites. Suppose that, for each
+$S\in\Ob\Ss$, a set $S^d$ and a conservative family
+$k_S:\Top(S^d)\rightarrow S$ of points of $S$ indexed by $S^d$ are
+given. Suppose that $S^d$ is functorial in $S$ and that the diagrams
+\[
+\xymatrix{
+\Top(S^d)   \ar[r]^{f^d} \ar[d]^{k_S}& \Top(T^d)\ar[d]^{k_T}\\
+S        \ar[r]^{f}  & T
+}
+\]
+are commutative. The corresponding canonical flasque resolutions are
+then ``functorial in $S$.''
+\end{enonce*}
+
+If\pageoriginale $\Ss$ is the category of topological spaces, one may
+take $S^d$ to be the underlying set.
+
+If $\Ss$ is the category of the étale sites of schemes $S$ locally of
+finite type over a scheme $S_0$, and if, for each $s\in S_0$,
+$\bar{k(s)}$ is an algebraic closure of $k(s)$, one may take for $S^d$
+the set of points of $S$ with values in one of the $\bar{k(s)}$.
+
+The condition ``of finite type'' may be replaced by a cardinality
+condition if the algebraic closures $\bar{k(s)}$ are replaced by
+sufficiently large algebraically closed extensions.
+
+\setcounter{subsubsection}{6}
+\subsubsection{}\etiquette[4.2.7]{XVII.subsubsec4.2.7}
+One advantage of canonical flasque resolutions is that they make it
+possible to construct complexes adapted simultaneously to functors of
+``tensor-product'' type and to functors of ``direct-image'' type.
+\sisi{It}{They} thereby give a perhaps more comprehensible
+construction of the base-change morphisms
+(\hyperref[XVII.prop4.1.5]{4.1.5}).
+
+\begin{enonce*}{Lemma 4.2.8}\etiquette[4.2.8]{XVII.lem4.2.8}
+Let $f:(S,\Aa)\rightarrow(S',\Bb)$ be a morphism of ringed sites, let
+$K\in\Ob K(S,\Aa^{\circ})$ and $L\in\Ob K(S',\Bb)$ be complexes, and
+let $k:\Top(X)\rightarrow S$ be a conservative set of points of $S$.
+Suppose that one of the following conditions holds:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The cohomologies of $K$ and $L$ are bounded above;
+
+\item $\Aa$ has finite \tTor-dimension over
+$f^{\sisi{\ast}{-1}}\Bb$, and $K\in\Ob D^b(S,\Aa^{\circ})$ has finite
+\tTor-dimension;
+
+\item $L\in\Ob D^b(S',\Bb)$ has finite \tTor-dimension.
+\end{enumerate}
+
+Then\pageoriginale the functor $(K,L)\mapsto K\otimes f^{\ast}L$ is
+derivable\sisi{}{ on the left} \emph{(\hyperref[XVII.def1.2.1]{1.2.1})} at
+$(K,L)$; denote its derived functor by
+${}\overset{\LL}{\otimes}\LL f^{\ast}$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item If $x$ is a point of $S$, then
+$(K\overset{\LL}{\otimes}\LL f^{\ast}L)_x\simeq
+K_x\overset{\LL}{\otimes}_{\Bb_{f(x)}}L_{f(x)}$.
+
+\item The pair $(K,L)$ is left adapted to
+${}\overset{\LL}{\otimes}f^{\ast}$
+\eqhyperref[XVII.def1.2.1]{1.2.1} if and only if, for every $x\in X$,
+the pair $(K_x,L_{f(x)})$ is left adapted to the functor
+$\otimes_{\Bb_{f(x)}}$.
+
+\item Under hypotheses $(a)$ or $(b)$, the functor
+$K\overset{\LL}{\otimes}f^{\ast}L$ in $L$ has cohomological amplitude
+$\subset d$ \emph{(\hyperref[XVII.def1.2.9]{1.2.9})} if and only if,
+for every $x\in X$, the complex $K_x$ of $\Bb_{f(x)}$-modules has
+\tTor-amplitude $\subset d$.\nde{hypotheses (a), (b), and (c) are all
+superfluous. \Cf \nderef{XVII.ndeKS}.}
+\end{enumerate}
+\end{enonce*}
+
+This lemma, whose proof is standard, expresses the ``pointwise nature''
+of the functor under consideration.
+
+\setcounter{subsubsection}{8}
+\subsubsection{}\etiquette[4.2.9]{XVII.subsubsec4.2.9}
+
+Let $L$ be a complex. The \emph{Godement resolution} (relative to $X$)
+of $L$ is the simple complex (\emph{defined using sums}) associated
+with the double complex $\sisi{C}{\Cc}^{\ast}L$
+(\hyperref[XVII.subsubsec1.1.4]{1.1.4}). The \emph{Godement resolution
+truncated at order} $n$, $\tau''_{\leq n}\sisi{C}{\Cc}^{\ast}L$, is
+the simple complex associated with the double complex obtained from
+$\sisi{C}{\Cc}^{\ast}L$ by truncation
+(\hyperref[XVII.subsubsec1.1.15]{1.1.15}) in the direction of the
+Godement differential. By \hyperref[XVII.prop4.2.3]{4.2.3}~(iii), $L$
+is, point by point on $X$, homotopy equivalent to the complexes
+$\tau''_{\leq n}\sisi{C}{\Cc}^{\ast}L$ and
+$\sisi{C}{\Cc}^{\ast}L$; these complexes are therefore ``as good as
+$L$'' with respect to functors of ``tensor-product'' type
+(\hyperref[XVII.lem4.2.8]{4.2.8}).
+
+\begin{enonce*}{Proposition 4.2.10}\etiquette[4.2.10]{XVII.prop4.2.10}
+Let $(S,\Aa)$ be a ringed site, let $X$ be a conservative set of
+points of $S$, and let $N,M\in\NN\cup\{\infty\}$, with $N$ or $M$
+finite. Let $A$ be the subcategory of $K(S)$ consisting of complexes
+$L$ such that:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item If $N=\infty$, then $H^i(L)=0$ for $i$ sufficiently large; if
+$M=\infty$, then $H^i(L)=0$ for $i$ sufficiently small.
+
+\item For every\pageoriginale $x\in X$ and every $\Aa_x$-module $Q$
+of \tTor-dimension $\leq N$, the complex $L_x$ is left adapted to the
+functor $\sisi{M_x}{Q}\otimes_{\Aa_x}\ast$.
+
+\item For every morphism of topoi
+$f:\sisi{X^{\sim}}{S}\rightarrow E$ of cohomological dimension
+$\leq M$, the complex $L$ is right adapted to the functor $f_{\ast}$.
+\end{enumerate}
+
+Then the inclusion of $A$ into $K(S)$ induces an equivalence between
+the category obtained from $A$ by inverting quasi-isomorphisms and the
+category $D^{\ast}(S)$, where $\ast=+$ if $N<M=\infty$, $\ast=-$ if
+$M<N=\infty$, and $\ast$ is blank if $N,M<\infty$.
+\end{enonce*}
+
+Let $K$ be a complex satisfying (a). If $N=\infty$, then the canonical
+arrow $a:K_1=\sisi{\sigma}{\tau}_{\leq i}K\rightarrow K$ is a
+quasi-isomorphism for $i$ sufficiently large. If $N<\infty$, set
+$K_1=K$. Let $K_1^{\ast}$ be a flat Cartan--Eilenberg resolution and
+set $K_2=\tau''_{\geq\sisi{}{-}N}K_1$ (truncation in the direction of
+the new differential). The composite arrow from $K_2$ to $K$ is a
+quasi-isomorphism, and $K_2$ satisfies (b).
+
+Let $K$ be a complex satisfying (a) and (b). If $M=\infty$, then
+$N<\infty$; for $i$ sufficiently large,
+$b:K\rightarrow\sisi{\sigma}{\tau}_{\geq i}K_1=K_3$ is a
+quasi-isomorphism, \sisi{from}{and} $K_3$ still satisfies (a) and (b).
+If $M<\infty$, set $K=K_3$. Let
+$K_4=\sisi{\sigma}{\tau}''_{\leq M}\sisi{C}{\Cc}^{\ast}K_3$. Then,
+by \hyperref[XVII.prop4.2.3]{4.2.3}~(iii), $K_4$ satisfies
+\sisi{(a), (c), and (b)}{(a), (b), and (c)}.
+
+The proposition therefore follows from two successive applications of
+\cite[I 2.4.2]{sga4.exp.XVII.bib.CD}.
+
+\begin{enonce*}[remark]{Variants 4.2.11}\etiquette[4.2.11]{XVII.var4.2.11}
+If $N<\infty$ (\resp if $M<\infty$, \resp if $N,M<\infty$), one could
+equally have worked with bounded-below (\resp bounded-above, \resp
+bounded) complexes.
+\end{enonce*}
+
+\setcounter{subsubsection}{11}
+\subsubsection{}\etiquette[4.2.12]{XVII.subsubsec4.2.12}
+Here\pageoriginale is how these constructions may be used to define
+the \emph{base-change morphism} of
+\hyperref[XVII.subsubsec4.1.4]{4.1.4} under hypotheses more general
+than those of \loccit, when the sites under consideration have enough
+points.
+
+Let there be a commutative diagram (\cf
+(\hyperref[XVII.subsec0.11]{0.11})) of sites
+$$\etiquette[4.2.12.1]{XVII.eq4.2.12.1}
+\vcenter{
+\xymatrix{
+X'          \ar[r]^{g'} \ar[d]^{f'}& X\ar[d]^{f}\\
+S'          \ar[r]^{g}  & S\rlap{,}
+}}\leqno{(4.2.12.1)}
+$$
+let $\Aa$ be a sheaf of rings on $S$, $\Aa'$ a sheaf of rings on
+$S'$, and $L$ a complex of $(\Aa',g^{\ast}\Aa)$-bimodules on $S'$.
+Suppose that:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item the sites $X$ and $X'$ admit conservative families of points,
+$k:Q\rightarrow X$ and $k':Q'\rightarrow X'$, fitting into a
+commutative diagram
+$$\etiquette[4.2.12.2]{XVII.eq4.2.12.2}
+\vcenter{
+\sisi{\xymatrix{
+X'         \ar[r]^{g'}  \ar[d]^{k'} & X     \ar[d]^{k}  & \\
+Q'         \ar[r]^{g'_0} & Q &.
+}}{\xymatrix{
+Q'         \ar[r]^{g'_0}  \ar[d]^{k'} & Q     \ar[d]^{k}  & \\
+X'         \ar[r]^{g'} & X \rlap{.}
+}}}\leqno{(4.2.12.2)}
+$$
+
+\item One of the following hypotheses holds:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The functors $Rf_{\ast}$ and $Rf'_{\ast}$ have finite
+cohomological dimension, and $L$ is bounded above. Set $s=-$.
+
+\item $L$ is bounded below, with components of uniformly bounded
+\tTor-dimension (as $g^{\ast}\Aa$-modules). Set
+$s=+$.

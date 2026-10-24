@@ -1,0 +1,97 @@
+For (b), if \(x''\in A''{}^G(k)\), its inverse image in \(A\)
+is a trivial principal homogeneous space under \(A'\) (because
+\(A(k)\to A''(k)\) is assumed to be surjective) on which \(G\)
+acts, and therefore defines an element
+\(d(x'')\in H^1(G,A')\).  The exactness of the sequence (1) is
+then immediate.
+
+\SGANextSectionTarget{sga3:xvii:subsection:a-2}\SGASubsection{A.2}{The Group
+\texorpdfstring{\(\operatorname{Ext}_{\mathrm{alg}}(G,A)\)}
+{Ext alg (G,A)}}
+\SGARefTarget{sga3:xvii:appendix:A:subsection:2}
+
+Let \(A\) and \(G\) be two algebraic \(k\)-groups, and let \(E\)
+and \(E'\) be two algebraic \(k\)-groups that are extensions of
+\(G\) by \(A\).  These two extensions are said to be
+\emph{isomorphic} if there is a \(k\)-morphism of groups
+\(u:E\to E'\) that makes the following diagram commutative:
+\SGARefTarget{sga3:xvii:appendix:A:diagram:A:2:isomorphic-extensions}
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+  {} & E \arrow[dr] \arrow[d,"u"] & {} \\
+  A \arrow[ur] \arrow[dr] & {} & G \\
+  {} & E' \arrow[ur] & {}
+\end{tikzcd}
+\qquad .
+\]
+
+The group \(E\) acts on \(A\) by inner automorphisms.  If \(A\)
+is commutative, this action factors through \(G\), so that \(G\)
+acts on \(A\).  Conversely, if
+\(A\in\operatorname{Ob}(\mathrm{Ab})_G\), we denote by
+\(\operatorname{Ext}_{\mathrm{alg}}(G,A)\) the set of classes of
+algebraic extensions \(E\) of \(G\) by \(A\) for which the
+action of \(G\) on \(A\) defined by \(E\) agrees with the action
+coming from the structure of \(A\) as an object of
+\((\mathrm{Ab})_G\).
+
+The set \(\operatorname{Ext}_{\mathrm{alg}}(G,A)\) is naturally a
+bifunctor, covariant in \(A\) and contravariant in \(G\).  More
+precisely:
+\begin{enumerate}
+\item[(a)] \SGARefTarget{sga3:xvii:appendix:A:subsection:2:item:a}
+  if \(f:A\to B\) is a morphism in \((\mathrm{Ab})_G\), and if
+  \(E\) represents an element of
+  \(\operatorname{Ext}_{\mathrm{alg}}(G,A)\), then
+  \(f_*(E)\in\operatorname{Ext}_{\mathrm{alg}}(G,B)\) is defined
+  to be the class of the extension of \(G\) by \(B\) equal to
+  the quotient of the semidirect product \(B\mathbin{\cdot}E\)
+  (where \(E\) acts on \(B\) through \(G\)) by the algebraic
+  subgroup that is the image of \(A\) under the morphism
+  \((f,i)\).  This quotient is representable by Exposé VI\textsubscript{A},
+  \S5, and there is therefore a commutative diagram
+  \SGARefTarget{sga3:xvii:appendix:A:diagram:A:2:pushout}
+  \[
+  \begin{tikzcd}[column sep=large,row sep=large]
+    1 \arrow[r] &
+    A \arrow[r,"i"] \arrow[d,"f"'] &
+    E \arrow[r] \arrow[d] &
+    G \arrow[r] \arrow[d,"1_G"] &
+    1 \\
+    1 \arrow[r] &
+    B \arrow[r] &
+    f_*(E) \arrow[r] &
+    G \arrow[r] &
+    1
+  \end{tikzcd}
+  \qquad .
+  \]
+
+\item[(b)] \SGARefTarget{sga3:xvii:appendix:A:subsection:2:item:b}
+  if \(g:H\to G\) is a \(k\)-morphism of algebraic
+  \(k\)-groups, and if \(E\) is an extension of \(G\) by \(A\),
+  the fiber product \(E\times_G H\) is naturally an extension
+  of \(H\) by \(A\), denoted by \(g^*(E)\).  Thus there is a
+  commutative diagram
+  \SGARefTarget{sga3:xvii:appendix:A:diagram:A:2:pullback}
+  \[
+  \begin{tikzcd}[column sep=large,row sep=large]
+    1 \arrow[r] &
+    A \arrow[r] \arrow[d,"1_A"'] &
+    g^*(E) \arrow[r] \arrow[d] &
+    H \arrow[r] \arrow[d,"g"] &
+    1 \\
+    1 \arrow[r] &
+    A \arrow[r] &
+    E \arrow[r] &
+    G \arrow[r] &
+    1
+  \end{tikzcd}
+  \qquad .
+  \]
+\end{enumerate}
+
+By adapting the proofs given in J.-P. Serre,
+\emph{Groupes algébriques et corps de classe}, Chapter VII, one
+endows \(\operatorname{Ext}_{\mathrm{alg}}(G,A)\) with a natural
+abelian-group structure, functorial in \(A\) and \(G\).

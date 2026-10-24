@@ -1,0 +1,120 @@
+\section{The case of an algebraic curve}\etiquette[4]{IX.sec4}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[4.0]{IX.subsec4.0}
+Let $X$ be a Noetherian scheme of dimension $1$. Let $R(X)$ be the
+ring of rational functions on $X$, and let
+$i:\Spec R(X)\to X$ be the inclusion. The ring $R(X)$ is Artinian,
+the product of the local rings of $X$ at its maximal points, and the
+results of VIII 2 may be applied.
+
+Let $F$ be an abelian sheaf on $\Spec R(X)$, and consider the sheaves
+$R^qi_*F$, $q>0$, on $X$. It follows at once from VIII \hyperref[VIII.thm5.2]{5.2} that the
+fiber of $R^qi_*F$ at a geometric point lying over a maximal point of
+$X$ vanishes. Since $X$ has dimension $1$, such a sheaf is of a very
+special kind:
+
+\begin{enonce*}{Lemma 4.1}\etiquette[4.1]{IX.lem4.1}
+Let $X$ be Noetherian and let $F$ be a sheaf on $X$. The following
+conditions are equivalent (a sheaf satisfying them will be called a
+\lq\lq skyscraper sheaf''):
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The fiber of $F$ at every geometric point $\bar x$ of $X$
+lying over a nonclosed point $x\in X$ vanishes.
+
+\item Every section $s\in F(X')$, where $X'\to X$ is étale of finite
+type, vanishes away from finitely many closed points of $X$.
+
+\item There is an isomorphism
+$F\simeq\bigoplus_x i_{x*}i_x^*F$, where $x$ runs through the closed
+points of $X$ and $i_x:x\to X$ is the inclusion.
+\end{enumerate}
+\end{enonce*}
+
+\emph{Proof.}\pageoriginale Suppose (i) holds and let
+$z\in F(X')$, where $X'\to X$ is étale of finite type. The support of
+$z$ (VIII \hyperref[VIII.subsec6.6]{6.6}) is then a closed subset of $X'$ consisting of
+\emph{closed} points, and is therefore finite because $X'$ is
+Noetherian. Thus (i) implies (ii). The implication (ii) to (i)
+follows from the computation of fibers (VIII \hyperref[VIII.prop3.9]{3.9}), and (iii) implies
+(i), since for every family $(G_x)$ of sheaves on the closed points
+$x$ of $X$, the sheaf $F=\bigoplus i_{x*}(G_x)$ on $X$ satisfies
+(i): fiber functors commute with direct sums, and the support of
+$i_{x*}(G_x)$ is plainly contained in $\{x\}$.
+
+It remains to prove that (ii) implies (iii). Consider the canonical
+morphism
+$$
+F\longrightarrow\prod_x i_{x*}i_x^*F{\quoi},
+$$
+where $x$ runs through the closed points of $X$. By (ii), it factors
+through
+$$
+F\longrightarrow\bigoplus_x i_{x*}i_x^*F{\quoi},
+$$
+which gives the desired morphism. We leave to the reader the
+verification that it is bijective.
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[4.1.1]{IX.subsubsec4.1.1}
+Apply the lemma to the sheaf $R^qi_*F$ introduced above. One has
+$$
+R^qi_*F\xrightarrow{\sim}
+\bigoplus_x i_{x*}i_x^*(R^qi_*F),
+$$
+where $x$ runs through the closed points of $X$. By VIII 5, the fiber
+of $R^qi_*F$ at a geometric point $\bar x$ of $X$ is
+$$
+(R^qi_*F)_{\bar x}\simeq H^q(\Spec R(X_{\bar x}),F),
+$$
+where
+$R(X_{\bar x})\simeq R(X)\otimes_{\Oo_X}\Oo_{X_{\bar x}}$,
+$X_{\bar x}$ is the strict localization of $X$ at $\bar x$ (VIII 4),
+and $F$ also denotes the sheaf induced on
+$\Spec R(X_{\bar x})$. Suppose now that the residue field of every
+closed point $x$ of $X$ is separably closed. Then (see also VI 1)
+\begin{align*}
+H^p(X,R^qi_*F)
+&\simeq H^p\left(X,\bigoplus_x i_{x*}i_x^*(R^qi_*F)\right)\\
+&\simeq \bigoplus_x H^p\left(X,i_{x*}i_x^*(R^qi_*F)\right)\\
+&\simeq \bigoplus_x H^p\left(x,i_x^*(R^qi_*F)\right)\\
+&\simeq
+\begin{cases}
+\displaystyle\bigoplus_x H^q(\Spec R(X_x),F)
+  &\mbox{if }p=0,\\
+0 &\mbox{if }p>0{\quoi}.
+\end{cases}
+\end{align*}
+Thus:
+
+\begin{enonce*}{Corollary 4.2}\etiquette[4.2]{IX.cor4.2}
+Let $X$ be a Noetherian scheme of dimension $1$ such that, for every
+closed point $x$ of $X$, the residue field $k(x)$ is separably
+closed. Let $F$ be an abelian sheaf on $\Spec R(X)$, where $R(X)$ is
+the ring of rational functions on $X$. Consider the Leray spectral
+sequence
+$$
+E^{pq}_2=H^p(X,R^qi_*F)\Longrightarrow
+H^{p+q}(\Spec R(X),F){\quoi}.
+$$
+One has
+\begin{align*}
+E^{pq}_2&=0\quad\mbox{if }p>0\mbox{ and }q>0{\quoi},\\
+E^{0q}_2&=\bigoplus_x H^q(\Spec R(X_x),F)
+  \quad\mbox{if }q>0{\quoi},
+\end{align*}
+where $x$ runs through the closed points of $X$, and $X_x$ is the
+strict localization of $X$ at $x$.
+
+The\pageoriginale spectral sequence therefore gives an exact sequence
+\begin{align*}
+0\longrightarrow H^1(X,i_*F)&\longrightarrow H^1(\Spec R(X),F)
+\longrightarrow\bigoplus_xH^1(\Spec R(X_x),F)\\
+&\longrightarrow H^2(X,i_*F)\longrightarrow H^2(\Spec R(X),F)
+\longrightarrow\bigoplus_xH^2(\Spec R(X_x),F)\\
+&\longrightarrow\cdots .
+\end{align*}
+\end{enonce*}
+

@@ -1,0 +1,279 @@
+\section{The comparison theorem}\etiquette[4]{XI.sec4}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[4.0]{XI.subsec4.0}
+Let $X$ be a scheme locally of finite type over $\Spec \CC$, and
+consider the usual topology on the space $X(\CC)$ of rational points
+of $X$. We shall denote by $X_{\cl}$ the site of \emph{local
+isomorphisms} $f:U\rightarrow X(\CC)$, that is, of morphisms $f$ of
+topological spaces having the following property:
+
+\sisi{for}{For} every $x\in U$ there exists an open neighborhood $U_x$
+such that $f_{\mid U_x}$ is a homeomorphism of $U_x$ onto an open
+neighborhood of $f(x)$.
+
+A family $\{U_{\nu}\rightarrow U\}$ of morphisms of $X_{\cl}$ is said
+to be \emph{covering} if $U$ is the union of the images of the
+$U_{\nu}$.
+
+Since an open immersion is a local isomorphism, we have a morphism
+(inclusion) of sites (IV\quad ) % a reference is missing
+\footnote{More precisely, the inclusion of categories
+  $\Ouv(X(\CC))\rightarrow X_{\cl}$ defines a morphism of
+  sites \hyperref[XI.eq4.1]{(4.1)} in the opposite direction.}
+\begin{equation*}
+\delta:X_{\cl}\longrightarrow X(\CC)\qquad
+(\ast){\quoi}.\tag{4.1}
+\end{equation*}\etiquette[4.1]{XI.eq4.1}
+Now for every local isomorphism $U\rightarrow X(\CC)$ there exists, by
+definition, a ``covering'' of $U$ by open subsets of $X(\CC)$, and one
+deduces from (\quad) that the topoi % a reference is missing
+associated with the two sites are equivalent (by $\delta_{\ast}$). In
+particular, one may replace $X(\CC)$ by $X_{\cl}$ when computing
+ordinary cohomology.
+
+Now let $f:X'\rightarrow X$ be an étale morphism of schemes. Then
+$f(\CC):X'(\CC)\rightarrow X(\CC)$ is a local isomorphism. This follows
+immediately from the\pageoriginale Jacobian criterion
+(\SGA 1 II 4.10) and the implicit function theorem. The functor
+$X'\mapsto X'(\CC)$ therefore gives a morphism of sites
+\begin{equation*}
+\epsilon:X_{\cl}\longrightarrow X_{\et}{\quoi},\tag{4.2}
+\end{equation*}\etiquette[4.2]{XI.eq4.2}
+where $X_{\et}$ is the étale site.
+
+Recall the following results\footnote{Which appear in the Exposé cited
+  in the footnote on p.~2.}: % identify the Exposés
+
+\begin{enonce*}{Theorem 4.3}\etiquette[4.3]{XI.thm4.3}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $X$ is connected and nonempty if and only if $X(\CC)$ is
+  connected and nonempty.
+
+\item The functor $\epsilon$ is fully faithful.
+
+\item (``Grauert--Remmert theorem''). The functor $\epsilon$ induces an
+  equivalence between the category of finite coverings of $X(\CC)$,
+  endowed with its usual topology as a locally compact space, and the
+  category of étale coverings of $X$.
+\end{enumerate}
+\end{enonce*}
+
+We shall accept (i) as known. It follows, for example, from (GAGA)
+\cite{sga4.exp.XI.bib.4}. Assertion (ii) follows easily from (i). Indeed, to verify the
+surjectivity assertion contained in (ii), let
+$\varphi:X'(\CC)\rightarrow X''(\CC)$ be an $X(\CC)$-morphism. We may
+suppose that all the schemes are connected and affine, and hence
+separated. Then the graph $\Gamma$ of $\varphi$ is a connected
+component of $\fprod{X'}{X''}{X}(\CC)$, whence
+$\Gamma=Y(\CC)$ for some connected component $Y$ of
+$\fprod{X'}{X''}{X}$, by (i). Then $Y$ is the graph of a morphism
+$f:X'\rightarrow X''$ inducing $\varphi$, \ie the projection
+$Y\rightarrow X'$ is an isomorphism: indeed,
+$Y(\CC)\rightarrow X(\CC)$ is an isomorphism, from which it follows
+easily that the same is true of $Y\rightarrow X'$ (which is étale,
+radicial, and surjective!). For (iii), in view of (ii), everything
+amounts to proving that every finite covering of $X(\CC)$ is of the
+form $X'(\CC)$, where $X'\rightarrow X$\pageoriginale is étale.
+
+For this, descent (\SGA 1 IX 4.7) immediately reduces us to
+the case in which $X$ is connected and normal. The problem is local on
+$X$ (for the Zariski topology), and we may therefore suppose $X$
+affine. Let $f:X\rightarrow \EE^n$ be a finite morphism, and let
+$T'\rightarrow X(\CC)$ be a connected finite covering. One checks
+immediately that the composite morphism
+$\eta':T'\rightarrow \EE^n(\CC)$ is an ``analytic covering'' in the
+sense of (\cite{sga4.exp.XI.bib.2} \S \hyperref[XI.sec2]{2}, Def.~\hyperref[XI.sec3]{3}).
+By (\cite{sga4.exp.XI.bib.2} \S \hyperref[XI.sec2]{2}, Satz 8),
+\sisi{$\eta'$}{} extends to an ``analytic covering''
+$\eta:T\rightarrow \PP^n(\CC)$, and it is enough to prove that $\eta$
+is \sisi{induced}{induced} by a suitable morphism of schemes
+$f:Y\rightarrow \PP^n$, with $Y$ normal. Now the fundamental theorem
+(\cite{sga4.exp.XI.bib.2} \S 13 Satz 42) asserts that there is a canonical normal
+analytic structure on $T$ such that $\eta$ induces a morphism of
+analytic spaces. Since $\eta$ is then a finite morphism, the direct
+image of the structure sheaf on $T$ is a sheaf $\mathfrak{a}$ of
+coherent analytic algebras on $\PP^n$. It follows from
+\sisi{(GAGA)}{GAGA} \cite{sga4.exp.XI.bib.4} % \ref
+that $\mathfrak{a}$ is the analytic sheaf associated with an algebraic
+sheaf $A$ on $\PP^n$, and we take $Y=\sheaf{\Spec}A$.
+
+We can now prove the following result:
+
+\begin{enonce*}{Theorem 4.4}\etiquette[4.4]{XI.thm4.4}
+Let $X$ be a smooth scheme over $\Spec \CC$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item There is an equivalence between the category of constructible
+  locally constant torsion sheaves on $X_{\et}$ and the category of
+  locally constant torsion sheaves with finite fibers on $X_{\cl}$,
+  the equivalence being given by the quasi-inverse functors
+  ${}_{\ast}$ and ${}^{\ast}$.
+
+\item Let $F$ be a locally constant torsion sheaf with finite fibers on
+  $X_{\cl}$, and also denote by $F$ the induced sheaf
+  $\epsilon_{\ast}F$ on $X_{\et}$. Then
+$$
+R^q\epsilon_{\ast}F=0\quad \mbox{ if } q>0{\quoi}.
+$$
+
+\item With\pageoriginale the notation of {\rm(i)}, the canonical
+  morphism
+$$
+H^q(X_{\et},F)\longrightarrow H^q(X_{\cl},F)
+$$
+is bijective for every $q$. In particular,
+$$
+H^q(X_{\et}, \ZZ/\sisi{n\ZZ}{n})\xrightarrow{\sim} H^q(X_{\cl},\ZZ/\sisi{n\ZZ}{n})
+$$
+for every $q$.
+\end{enumerate}
+\end{enonce*}
+
+Proof. For (i), note that the sheaves in question are those that are
+representable by étale coverings of $X$ (\resp by finite coverings of
+$X(\CC)$). Since there is an equivalence between the categories of
+these coverings (\hyperref[XI.thm4.3]{4.3}), assertion (i) follows
+immediately. The isomorphism of (iii) follows from (ii) and from the
+Leray spectral sequence V \hyperref[V.prop5.2]{5.2} % \ref + 5.3 instead of 5.2?
+for $\epsilon$. It remains to prove (ii).
+
+Now $R^q\epsilon_{\ast}F$ is the sheaf associated with the presheaf
+$\Rr^qF,$, where $(\Rr^qF)(X')=H^q(X'_{\cl},F)$ for
+$X'\rightarrow X$ étale. To prove that $R^q\epsilon_{\ast}F=0$ if
+$q>0$, we must therefore prove the following \sisi{lemma}{}:
+
+\begin{enonce*}{Lemma 4.5}\etiquette[4.5]{XI.lem4.5}
+Let $\xi\in H^q(X_{\cl},F)$ and $x\in X_{\cl}=X(\CC)$. There exists an
+étale morphism $X'\rightarrow X$ whose image contains $x$ and such that
+the image of $\xi$ in $H^q(X'_{\cl},F)$ is zero.
+\end{enonce*}
+
+Proof of the lemma. Induction on $n=\dim X$; the problem is local on
+$X$ for the étale topology, \sisi{}{and} we may therefore suppose $F$
+constant, and by dévissage we may even suppose that
+$F=\ZZ/\sisi{n\ZZ}{n}$. Moreover, replacing $X$ by a Zariski open
+neighborhood of $x$, we may suppose (\hyperref[XI.prop3.3]{3.3}) that
+$X$ admits an elementary fibration (\hyperref[XI.def3.1]{3.1})
+$f:X\rightarrow S$. Retain the notation of
+(\hyperref[XI.def3.1]{3.1}): by\pageoriginale direct calculation, one
+sees that $R^q{j}_{\ast}F=0$ if $q>1$, that
+$R^1j_{\cl\!\ast}F$ is the extension by $0$ of a constant sheaf on
+$Y_{\cl}$, and finally that $j_{\cl\!\ast}F$ is the constant sheaf
+$\ZZ/\sisi{n\ZZ}{n}$ on $\bar{X}$. Moreover, one may compute
+$R^q \bar{f}_{\cl\!\ast}(j_{\cl\!\ast}F)$ fiber by fiber. From the
+Leray spectral sequence
+$$
+E^{pq}_2=R^p\bar{f}_{\cl\!\ast}(R^qj_{\cl\!\ast}F)\Longrightarrow
+R^{p+q}f_{\cl\!\ast}F
+$$
+one deduces that $R^{p+q}f_{\cl\!\ast}F$ may likewise be computed fiber
+by fiber, and hence that
+
+$R^0f_{\cl\!\ast}\ZZ/\sisi{n\ZZ}{n}=\ZZ/\sisi{n\ZZ}{n}$,
+
+$R^1f_{\cl\!\ast}\ZZ/\sisi{n\ZZ}{n}$ is a locally constant torsion
+  sheaf on $S_{\cl}$,
+
+$R^qf_{\cl\!\ast}\ZZ/\sisi{n\ZZ}{n}=0$ if $q>1$.
+
+The Leray spectral sequence
+
+$E^{pq}_2=H^p(S_{\cl}, R^qf_{\cl\!\ast}F)\Longrightarrow
+H^{p+q}(X_{\cl},F)$
+
+\noindent
+thus reduces to the exact sequence
+\begin{equation*}
+\ldots\longrightarrow H^q(S_{\cl},f_{\cl\!\ast}F)\longrightarrow
+H^q(X_{\cl},F)\longrightarrow H^{q-1}(S_{\cl},
+R^1f_{\cl\!\ast}F)\longrightarrow\tag{$\ast$}
+\end{equation*}
+Let $s$ be the image of $x$ in $S$. By the induction hypothesis and by
+(i), for every class $\eta\in H^q(S_{\cl},G)$ ($G$ locally constant
+torsion, with finite fibers), there exists an ``étale neighborhood''
+$S'\rightarrow S$ of $s$ such that the image of $\eta$ in
+$H^q(S'_{\cl},G)$ is zero. Now the functors $R^qf_{\cl\!\ast}$ plainly
+commute with étale base changes, and if $S'\rightarrow S$ is an étale
+neighborhood of $s$, then
+$X'=\fprod{X}{S'}{S}\rightarrow X$ is an étale neighborhood of $x$.
+When $q\geq 1$, we therefore conclude by means of the exact sequence
+$(\ast)$, first taking $G=R^1f_{\cl\!\ast}F$ and
+then\pageoriginale $G=f_{\cl\!\ast}F$. % The proof ends here; the
+When $q=1$, note that $H^1(X_{\cl},\ZZ/n \ZZ)$ (\resp
+$H^1(X,\ZZ/n\ZZ)$) classifies the principal étale coverings
+of $X_{\cl}$ (\resp $X$), with group $\ZZ/n\ZZ$; hence, by
+\hyperref[XI.thm4.3]{4.3} (iii), the map
+$H^1(X,\ZZ/n\ZZ)\rightarrow H^1(X_{\cl},\ZZ/n\ZZ)$ is bijective,
+from which the effacement result \hyperref[XI.lem4.5]{4.5} for $q=1$
+follows at once.
+
+\begin{enonce*}[remark]{Variant 4.6}\etiquette[4.6]{XI.var4.6}
+One may also prove (\hyperref[XI.lem4.5]{4.5}) in the following elegant
+way, due to Serre: one notes that a connected good neighborhood
+(\hyperref[XI.def3.2]{3.2}) $X$ satisfies the following two conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $\pi_n(X(\CC))=0$ if $n>1$.
+
+\item $\pi_1(X(\CC))$ is an iterated extension of free groups of finite
+type.
+\end{enumerate}
+\end{enonce*}
+
+Indeed, if $X\rightarrow S$ is an elementary fibration where $S$ is a
+good neighborhood, we may suppose (i) and (ii) true for $S$ by
+induction. Now $X(\CC)\rightarrow S(\CC)$ is a locally trivial fiber
+space, as is readily seen, with fibers isomorphic to $X_0(\CC)$, where
+$X_0$ is an arbitrary fiber of $X/S$. Now $X_0$ is a connected
+nonsingular \emph{noncomplete} curve, and it is well known that this
+implies that $\pi_n(X_0(\CC))=0$ if $n>1$, and that
+$\pi_1(X_0(\CC))$ is a free group. % \ref
+Then (i) and (ii) follow from the homotopy exact sequence
+$$
+\longrightarrow \pi_0(X_0(\CC))\longrightarrow
+\pi_n (X(\CC))\longrightarrow \pi_n
+(S(\CC))\longrightarrow\ldots
+$$
+
+Thus $X(\CC)$ is a $K(\pi,1)$ space, and this implies that every
+cohomology class $\xi\in H^n(X(\CC),F)$ becomes zero on the universal
+covering of $X(\CC)$. It is enough to prove that $\xi$ already becomes
+zero on a finite covering $X'$ of $X$, which amounts to proving that
+$\pi_1=\pi_1(X(\CC))$ is\pageoriginale a \emph{good group}
+(\cf CG 1 16), %\ref
+that is, that the morphism from $\pi_1$ to its completion
+$\sisi{\widehat}{}{\pi}_1=\varprojlim_N \pi_1/N$ (where $N$ runs
+through the set of invariant subgroups % 'invariant' = 'normal'?
+of $\pi_1$ of finite index) induces a bijection
+$$
+H^q(\widehat{\pi}_1,M)\xrightarrow{\sim} H^q(\pi_1,M)
+$$
+for every continuous finite $\pi_1$-module $M$ (where the symbol on the
+left denotes the cohomology of $\widehat{\pi}_1$ as a profinite group).
+Now an iterated extension of free groups of finite type is a good group
+(\cf CG I p.~15-16, exc.~1,2), whence the result. % \ref
+
+\begin{thebibliography}{99}
+\bibitem{sga4.exp.XI.bib.1} GIRAUD J., ``Analysis Situs'', Séminaire
+Bourbaki, Exposé nᵒ~256.
+
+\bibitem{sga4.exp.XI.bib.2} GRAUERT H\sisi{.}{} and REMMERT R., ``Komplexe Räume'',
+Math, Ann. Bd. 136, p. 245 (1958).
+
+\bibitem{sga4.exp.XI.bib.3} HIRONAKA H., ``Resolution of singularities of an
+algebraic variety over a field of characteristic zero'' Annals of
+Math. Vol. 39, nᵒ~1, 2 (1964).
+
+\bibitem{sga4.exp.XI.bib.4} SERRE J.P., ``Géométrie Algébrique et Géométrie
+Analytique'', Annales de l'Institut Fourier, t. VI, p. 1-12 (1956).
+\end{thebibliography}
+
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

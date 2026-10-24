@@ -1,0 +1,628 @@
+
+\setcounter{footnote}{10}
+
+\SGARefTarget{sga3:viii:section:2}\section*{2. Scheme-theoretic Properties of Diagonalizable Groups}
+\addcontentsline{toc}{section}{2. Scheme-theoretic Properties of Diagonalizable Groups}
+
+These properties are summarized in \SGARefLink{sga3:viii:proposition:2:1}{the following proposition}.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:proposition:2:1}\textbf{Proposition 2.1.}
+\textit{Let \(S\) be a nonempty prescheme, let \(M\) be an ordinary
+commutative group, and let \(G=D(M_S)\) be the diagonalizable \(S\)-group
+defined by \(M\). Then:}
+\begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:viii:proposition:2:1:item:a:01}
+  \textit{\(G\) is faithfully flat over \(S\) and affine over \(S\)
+  (a fortiori, quasi-compact over \(S\));}
+
+  \item[(b)]\SGARefTarget{sga3:viii:proposition:2:1:item:b:01}
+  \textit{\(M\) is of finite type if and only if \(G\) is of finite type
+  over \(S\), if and only if \(G\) is of finite presentation over \(S\);}
+
+  \item[(c)]\SGARefTarget{sga3:viii:proposition:2:1:item:c:01}
+  \textit{\(M\) is finite if and only if \(G\) is finite over \(S\), if
+  and only if \(G\) is of finite type over \(S\) and is annihilated by an
+  integer \(n>0\). In that case,}
+  \[
+    \deg(G/S)=\operatorname{Card}(M);
+  \]
+
+  \item[\((c')\)]\SGARefTarget{sga3:viii:proposition:2:1:item:cprime:01}
+  \textit{\(M\) is a torsion group if and only if \(G\) is integral over
+  \(S\);}
+
+  \item[(d)]\SGARefTarget{sga3:viii:proposition:2:1:item:d:01}
+  \textit{\(M=0\) if and only if \(G\) is the unit \(S\)-group;}
+
+  \item[(e)]\SGARefTarget{sga3:viii:proposition:2:1:item:e:01}
+  \textit{\(M\) is of finite type and the order of its torsion subgroup is
+  prime to the residue characteristics of \(S\) if and only if \(G\) is
+  smooth over \(S\).}
+\end{enumerate}
+
+The verification of \SGARefLink{sga3:viii:proposition:2:1:item:a:01}{(a)}
+through \SGARefLink{sga3:viii:proposition:2:1:item:d:01}{(d)} is immediate
+and is left to the reader. Let us prove
+\SGARefLink{sga3:viii:proposition:2:1:item:e:01}{(e)}. If \(G\) is smooth
+over \(S\), it is locally of finite presentation over \(S\), hence of
+finite presentation over \(S\), since it is affine over \(S\); thus \(M\)
+is of finite type. We may therefore assume from the outset that \(M\) is
+of finite type, and hence that \(G\) is of finite presentation over
+\(S\). Then\footnote{Editor's note: this uses the fact that \(G\) is flat
+over \(S\), by \SGARefLink{sga3:viii:proposition:2:1:item:a:01}{(a)}.}
+\(G\) is smooth over \(S\) if and only if its geometric fibers are
+smooth, reducing us to the case in which \(S\) is the spectrum of an
+algebraically closed field \(k\).
+
+Write \(M=T\times L\), where \(T\) is the torsion subgroup and \(L\) is
+free, with \(L\simeq\mathbb Z^r\). Then
+\[
+  D(M)=D(T)\times D(L),
+  \qquad
+  D(L)\simeq\mathbb G_m^r,
+\]
+and \(D(L)\) is smooth over \(k\). Thus \(G=D(M)\) is smooth over \(k\)
+if and only if \(D(T)\) is smooth. Since \(D(T)\) is finite over \(k\) of
+degree equal to the order \(n\) of \(T\), this means that \(D(T)(k)\) has
+\(n\) elements. Now \(T\) is isomorphic to a sum of groups
+\(\mathbb Z/n_i\mathbb Z\), where \(n=\prod_i n_i\); consequently
+\[
+  D(T)=\prod_iD(\mathbb Z/n_i\mathbb Z)
+      =\prod_i\mu_{n_i},
+\]
+where \(\mu_{n_i}\) is the group scheme of \(n_i\)-th roots of unity.
+Hence
+\[
+  \operatorname{card}\bigl(D(T)(k)\bigr)
+  =\prod_i\operatorname{card}\bigl(\mu_{n_i}(k)\bigr).
+\]
+Here \(\operatorname{card}(\mu_{n_i}(k))\), the number of \(n_i\)-th
+roots of unity in \(k\), is at most \(n_i\), and equality holds if and
+only if \(n_i\) is prime to the characteristic \(p\) of \(k\).
+\emph{[The source prints \(\mu_i(k)\) in both occurrences.]}
+It follows
+that
+\[
+  \operatorname{card}\bigl(D(T)(k)\bigr)=n,
+  \qquad n=\prod_i n_i,
+\]
+if and only if every \(n_i\) is prime to \(p\), that is, if and only if
+\(n\) is prime to \(p\).
+\hfill\(\square\)
+
+\SGARefTarget{sga3:viii:section:3}\section*{3. Exactness Properties of the Functor
+\texorpdfstring{\(D_S\)}{D\_S}}
+\addcontentsline{toc}{section}{3. Exactness Properties of the Functor
+\texorpdfstring{\(D_S\)}{D\_S}}
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:theorem:3:1}\textbf{Theorem 3.1.}
+\textit{Let \(S\) be a prescheme, and let}
+\SGARefTarget{sga3:viii:theorem:3:1:diagram:01}
+\[
+  0\longrightarrow M'
+   \xrightarrow{u}M
+   \xrightarrow{v}M''
+   \longrightarrow0
+\]
+\textit{be an exact sequence of ordinary commutative groups. Consider the
+sequence of transposed homomorphisms}
+\SGARefTarget{sga3:viii:theorem:3:1:diagram:02}
+\[
+  0\longrightarrow D_S(M'')
+   \xrightarrow{v^t}D_S(M)
+   \xrightarrow{u^t}D_S(M')
+   \longrightarrow0.
+\]
+\begin{enumerate}
+  \item[(i)]\SGARefTarget{sga3:viii:theorem:3:1:item:i:01}
+  \textit{The homomorphism \(v^t\) induces an isomorphism from
+  \(D_S(M'')\) onto the kernel of \(u^t\), and \(u^t\) is faithfully flat
+  and quasi-compact.}
+
+  \item[(ii)]\SGARefTarget{sga3:viii:theorem:3:1:item:ii:01}%
+  \footnote{Editor's note: what follows has been added, and the proof has
+  been expanded accordingly.}
+  \textit{\(D_S(M')\) represents the quotient sheaf
+  \(D_S(M)/D_S(M'')\) for the \((\mathrm{fpqc})\) topology.}
+\end{enumerate}
+
+Let \(\mathcal M\) denote the family of faithfully flat quasi-compact
+morphisms. First,
+\SGARefLink{sga3:viii:theorem:3:1:item:ii:01}{(ii)} follows from
+\SGARefLink{sga3:viii:theorem:3:1:item:i:01}{(i)} (cf. IV,
+\SGARefLink{sga3:iv:corollary:4:6:5:1}{4.6.5.1}). Indeed, the equivalence
+relation on \(D_S(M)\) defined by \(u^t\) is the same as that defined by
+the subgroup
+\[
+  \operatorname{Ker}(u^t)=D_S(M'').
+\]
+Since \(u^t\in\mathcal M\), this equivalence relation is
+\(\mathcal M\)-effective (cf. IV,
+\SGARefLink{sga3:iv:scholium:3:3:2:1}{3.3.2.1}); therefore \(D_S(M')\)
+represents the quotient sheaf for the \((\mathrm{fpqc})\) topology (cf.
+IV, \SGARefLink{sga3:iv:lemma:4:6:5}{4.6.5}).
+
+The first assertion of
+\SGARefLink{sga3:viii:theorem:3:1:item:i:01}{(i)} is an immediate
+consequence of the definition of the functors \(D_S(-)\). More generally,
+every exact sequence
+\SGARefTarget{sga3:viii:theorem:3:1:diagram:03}
+\[
+  M'\longrightarrow M\longrightarrow M''\longrightarrow0
+\]
+with no zero on the left gives rise to an exact transposed sequence
+\SGARefTarget{sga3:viii:theorem:3:1:diagram:04}
+\[
+  0\longrightarrow D_S(M'')
+   \longrightarrow D_S(M)
+   \longrightarrow D_S(M').
+\]
+(This remains valid in the more general setting considered at the
+beginning of \(\SGARefLink{sga3:viii:section:1}{\S1}\).) On the other hand, because \(D_S(M)\) and
+\(D_S(M')\) are affine over \(S\), the morphism \(u^t\) is necessarily
+affine, and a fortiori quasi-compact, whatever the homomorphism
+\(u:M'\to M\). The second assertion of
+\SGARefLink{sga3:viii:theorem:3:1:item:i:01}{(i)} will therefore follow
+from \SGARefLink{sga3:viii:corollary:3:2:item:a:01}{part (a)} of \SGARefLink{sga3:viii:corollary:3:2}{the
+following corollary}.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:3:2}\textbf{Corollary 3.2.}
+\textit{Let \(S\) be a nonempty prescheme, let \(u:M'\to M\) be a
+homomorphism of ordinary commutative groups, and let
+\(u^t:G\to G'\) be the transposed homomorphism. Then:}
+\begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:viii:corollary:3:2:item:a:01}
+  \textit{\(u\) is a monomorphism if and only if \(u^t\) is faithfully
+  flat;}
+
+  \item[(b)]\SGARefTarget{sga3:viii:corollary:3:2:item:b:01}
+  \textit{\(u\) is an epimorphism if and only if \(u^t\) is a
+  monomorphism; in that case \(u^t\) is in fact a closed immersion.}
+\end{enumerate}
+
+To prove \SGARefLink{sga3:viii:corollary:3:2:item:a:01}{(a)}, observe
+that if \(u\) is a monomorphism, then \(\mathcal O_S(M)\), as a module
+over \(\mathcal O_S(M')\), has a nonempty basis: namely, the system of
+sections defined by any system of representatives of \(M\) modulo
+\(M'\). It is therefore faithfully flat. Conversely, if
+\(\mathcal O_S(M)\) is faithfully flat over \(\mathcal O_S(M')\), then
+\[
+  u^t:\mathcal O_S(M')\longrightarrow\mathcal O_S(M)
+\]
+is injective, which, when \(S\ne\varnothing\), implies that
+\(u:M'\to M\) is injective.
+
+To prove \SGARefLink{sga3:viii:corollary:3:2:item:b:01}{(b)}, observe
+that if \(u\) is an epimorphism, then
+\(\mathcal O_S(M')\to\mathcal O_S(M)\) is surjective, so \(u^t\) is a
+closed immersion and, a fortiori, a monomorphism. Conversely, if \(u^t\)
+is a monomorphism, then \(\operatorname{Ker}u^t\) is the unit group.
+Putting \(M''=\operatorname{Coker}u\), we have seen that
+\[
+  \operatorname{Ker}u^t\simeq D_S(M'').
+\]
+Thus \SGARefLink{sga3:viii:proposition:2:1:item:d:01}{2.1(d)} gives
+\(M''=0\), and \(u\) is an epimorphism.
+
+The usual argument now gives \SGARefLink{sga3:viii:corollary:3:3}{the following consequence} of
+\SGARefLink{sga3:viii:theorem:3:1}{3.1}.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:3:3}\textbf{Corollary 3.3.}
+\textit{Let}
+\SGARefTarget{sga3:viii:corollary:3:3:diagram:00}
+\[
+  M'\xrightarrow{u}M\xrightarrow{v}M''
+\]
+\textit{be an exact sequence of ordinary commutative groups, and consider
+the transposed sequence}
+\SGARefTarget{sga3:viii:corollary:3:3:diagram:01}
+\[
+  G''\xrightarrow{v^t}G\xrightarrow{u^t}G'.
+\]
+\textit{Then \(v^t\) induces a faithfully flat quasi-compact morphism
+from \(G''\) to \(\operatorname{Ker}u^t\), and this kernel is a
+diagonalizable group isomorphic to}
+\[
+  D_S(v(M))=D_S(\operatorname{Coker}u).
+\]
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:3:4}\textbf{Corollary 3.4.}
+\textit{Let \(S\) be a prescheme, let \(u:G\to H\) be a homomorphism of
+\(S\)-group preschemes that are locally diagonalizable, with \(H\) of
+finite type over \(S\), and put \(G'=\operatorname{Ker}u\). Then:}
+\begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:viii:corollary:3:4:item:a:01}
+  \textit{\(G'\) is locally diagonalizable, and is of finite type over
+  \(S\) if \(G\) is;}
+
+  \item[(b)]\SGARefTarget{sga3:viii:corollary:3:4:item:b:01}
+  \textit{the quotient \(G/G'\) ``exists'': more precisely, the
+  equivalence relation on \(G\) defined by \(G'\) is
+  \(\mathcal M\)-effective, where \(\mathcal M\) is the family of
+  faithfully flat quasi-compact morphisms (cf. IV,
+  \SGARefLink{sga3:iv:subsection:3:4}{3.4}). Moreover, \(G/G'\) is
+  locally diagonalizable and of finite type over \(S\);}
+
+  \item[(c)]\SGARefTarget{sga3:viii:corollary:3:4:item:c:01}
+  \textit{the homomorphism \(u:G\to H\) factors uniquely as}
+  \SGARefTarget{sga3:viii:corollary:3:4:diagram:01}
+  \[
+    G\xrightarrow{v}G/G'\xrightarrow{w}H,
+  \]
+  \textit{where \(v\) is the canonical homomorphism, and is therefore
+  faithfully flat and quasi-compact. Moreover, \(w\) is a closed
+  immersion, and a fortiori a monomorphism.}
+\end{enumerate}
+\textit{Finally, the quotient}
+\[
+  H'=H/\operatorname{Im}w
+    =\operatorname{Coker}w
+    =\operatorname{Coker}u
+\]
+\textit{exists: more precisely, the equivalence relation on \(H\)
+defined by \(G/G'\) is \(\mathcal M\)-effective, and \(H'\) is of finite
+type over \(S\).}
+
+The first assertion of
+\SGARefLink{sga3:viii:corollary:3:4:item:c:01}{(c)} follows from
+\SGARefLink{sga3:viii:corollary:3:4:item:b:01}{(b)}, by the definition
+of the quotient \(G/G'\) (cf. IV,
+\SGARefLink{sga3:iv:lemma:3:2:3}{3.2.3}).
+\footnote{Editor's note: the original has been expanded in what follows.}
+Let us show that the \((\mathrm{fpqc})\) quotient sheaf
+\(\widetilde G/\widetilde{G'}\) is representable. This can be checked
+locally on \(S\), as can all the other assertions; we may therefore
+suppose that \(G\) and \(H\) are diagonalizable, of the form \(D_S(M)\)
+and \(D_S(N)\).
+
+Since \(H\) is of finite type over \(S\), the group \(N\) is of finite
+type by \SGARefLink{sga3:viii:proposition:2:1:item:b:01}{2.1(b)}.
+Therefore, by \SGARefLink{sga3:viii:corollary:1:5}{1.5}, \(u\) is defined by a homomorphism \(u':N\to M\).
+It follows from \SGARefLink{sga3:viii:theorem:3:1}{3.1} and
+\SGARefLink{sga3:viii:corollary:3:2}{3.2} that
+\[
+  G'\simeq D_S(\operatorname{Coker}u')
+\]
+and that \(\widetilde G/\widetilde{G'}\) is represented by
+\(D_S(\operatorname{Im}u')\). Moreover, on considering the exact
+sequence
+\SGARefTarget{sga3:viii:corollary:3:4:diagram:02}
+\[
+  0\longrightarrow\operatorname{Ker}u'
+   \longrightarrow N
+   \xrightarrow{w'}\operatorname{Im}u'
+   \longrightarrow0,
+\]
+we find that \(w\) is a closed immersion and that
+\[
+  H'=H/\operatorname{Im}w=D_S(\operatorname{Ker}u').
+\]
+The latter is of finite type over \(S\), since \(N\), and hence
+\(\operatorname{Ker}u'\), is of finite type.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:remarks:3:4}\textbf{Remarks.}
+The existence result for quotients in
+\SGARefLink{sga3:viii:corollary:3:4}{3.4} will be substantially
+generalized in \(\SGARefLink{sga3:viii:section:5}{\S5}\).
+
+On the other hand, note that in \SGARefLink{sga3:viii:section:3}{the present section} and \SGARefLink{sga3:viii:section:2}{the preceding
+one}, the hypothesis \(S\ne\varnothing\) was used only to ensure the
+validity of certain converses, allowing properties of the corresponding
+ordinary groups to be deduced from certain hypotheses on diagonalizable
+\(S\)-groups. The results in the ``forward'' direction hold without any
+restriction on \(S\), and the proofs given here apply in general.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:3:5}\textbf{Corollary 3.5.}
+\textit{Let \(G\) be a diagonalizable group prescheme over \(S\), and let
+\(n\ne0\) be an integer. Then the subgroup \({}_nG\) of \(G\), the
+kernel of the homomorphism}
+\[
+  n\mathbin{\cdot}\operatorname{id}_G:G\longrightarrow G,
+\]
+\textit{is integral over \(S\), and is finite over \(S\) if \(G\) is of
+finite type over \(S\).}
+
+Indeed, if \(G=D_S(M)\), then
+\[
+  {}_nG=D_S(M/nM)
+\]
+by \SGARefLink{sga3:viii:theorem:3:1}{3.1}, and the result follows from
+\SGARefLink{sga3:viii:proposition:2:1:item:b:01}{2.1(b)},
+\SGARefLink{sga3:viii:proposition:2:1:item:c:01}{(c)}, and
+\SGARefLink{sga3:viii:proposition:2:1:item:cprime:01}{\((c')\)}.
+
+\SGARefTarget{sga3:viii:section:4}\section*{4. Torsors under a Diagonalizable Group}
+\addcontentsline{toc}{section}{4. Torsors under a Diagonalizable Group}
+
+\SGARefTarget{sga3:viii:section:4:problem:01}Let \(S\) be a prescheme and let \(G=D_S(M)\) be a diagonalizable group
+over \(S\). We shall determine the \(G\)-torsors (or principal
+homogeneous \(G\)-bundles) over \(S\) for the faithfully flat
+quasi-compact topology; cf. Expos\'e IV,
+\SGARefLink{sga3:iv:subsection:5:1}{5.1}. Recall that a prescheme \(P\)
+over \(S\), with \(S\)-operator group \(G\), is called a \emph{torsor} or
+a \emph{principal homogeneous bundle} if every point of \(S\) has an
+open neighborhood \(U\) and a faithfully flat quasi-compact morphism
+\(S'\to U\) such that
+\[
+  P'=P\times_SS'
+\]
+is isomorphic, as an object with operators, to
+\[
+  G'=G\times_SS',
+\]
+where \(G'\) acts on itself by right translations. Since \(G\) is affine
+over \(S\), SGA 1, VIII 5.6 implies that \(P\) is necessarily affine over
+\(S\). Also, because \(G\) itself is faithfully flat and quasi-compact
+over \(S\), \(P\) is principal homogeneous under \(G\) if and only if it
+is formally principal homogeneous and is, in addition, faithfully flat
+and quasi-compact over \(S\) (cf. IV,
+\SGARefLink{sga3:iv:proposition:5:1:6}{5.1.6}).
+
+Recall also (\SGARefLink{sga3:i:proposition:4-7-3}{Expos\'e I, 4.7.3}) that giving an \(S\)-prescheme \(P\), affine
+over \(S\), with \(S\)-operator group \(G=D_S(M)\), amounts to giving a
+commutative quasi-coherent algebra graded by \(M\) over \(S\). In other
+words, it amounts to giving a quasi-coherent algebra \(\mathscr A\) over
+\(S\), together with a direct-sum decomposition as a module
+\[
+  \mathscr A=\coprod_{m\in M}\mathscr A_m,
+\]
+such that
+\[
+  \mathscr A_m\mathbin{\cdot}\mathscr A_{m'}
+  \subseteq\mathscr A_{m+m'}
+  \qquad\text{for }m,m'\in M.
+\]
+With this understood, the answer to \SGARefLink{sga3:viii:section:4:problem:01}{the preceding problem} is as follows.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:proposition:4:1}\textbf{Proposition 4.1.}
+\textit{Let \(P\) be the prescheme with \(S\)-operator group
+\(G=D_S(M)\) defined by the \(M\)-graded algebra \(\mathscr A\). Then
+\(P\) is a principal homogeneous bundle under \(G\) if and only if
+\(\mathscr A\) satisfies the following conditions:}
+\begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:viii:proposition:4:1:item:a:01}
+  \textit{for every \(m\in M\), \(\mathscr A_m\) is an invertible module
+  over \(S\);}
+
+  \item[(b)]\SGARefTarget{sga3:viii:proposition:4:1:item:b:01}
+  \textit{for \(m,m'\in M\), the homomorphism}
+  \[
+    \mathscr A_m\otimes_{\mathcal O_S}\mathscr A_{m'}
+    \longrightarrow\mathscr A_{m+m'}
+  \]
+  \textit{induced by multiplication in \(\mathscr A\) is an
+  isomorphism.}
+\end{enumerate}
+
+The necessity of \SGARefLink{sga3:viii:proposition:4:1}{these conditions} follows immediately by descent, since
+they hold when \(P\) is the trivial principal homogeneous bundle, that
+is, when \(\mathscr A=\mathcal O_S(M)\). For sufficiency, note that
+\SGARefLink{sga3:viii:proposition:4:1:item:a:01}{(a)} already implies
+that \(P\) is faithfully flat over \(S\); it is in any event
+quasi-compact over \(S\), since it is affine over \(S\). It therefore
+remains to check that \(P\) is formally principal homogeneous under
+\(G\), that is, that the familiar morphism
+\SGARefTarget{sga3:viii:proposition:4:1:diagram:01}
+\[
+  P\times_SG\longrightarrow P\times_SP
+\]
+is an isomorphism. On affine algebras \SGARefLink{sga3:viii:proposition:4:1:diagram:01}{this morphism} is given explicitly
+by the homomorphism
+\SGARefTarget{sga3:viii:proposition:4:1:diagram:02}
+\[
+  \mathscr A\otimes\mathscr A
+  \longrightarrow
+  \mathscr A(M)=\mathscr A\otimes\mathcal O_S(M).
+\]
+
+In bidegree \((m,n)\), where \(m,n\in M\), it is given by
+\[
+  x_m\otimes y_n\longmapsto x_my_n\otimes e_n.
+\]
+At the level of degrees, \SGARefLink{sga3:viii:proposition:4:1:diagram:02}{this homomorphism} is compatible with the
+homomorphism \(M\times M\to M\times M\) given by
+\[
+  (m,n)\longmapsto(m+n,n),
+\]
+which is an isomorphism. This shows that
+\SGARefLink{sga3:viii:proposition:4:1:item:b:01}{(b)} expresses precisely,
+and independently of \SGARefLink{sga3:viii:proposition:4:1:item:a:01}{(a)},
+that \(P\) is formally principal homogeneous, and proves
+\SGARefLink{sga3:viii:proposition:4:1}{4.1}.
+
+Faithfully flat descent also gives:
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:4:2}\textbf{Corollary 4.2.}
+\textit{The conditions of \SGARefLink{sga3:viii:proposition:4:1}{4.1}
+imply that the homomorphism}
+\[
+  \mathcal O_S\longrightarrow\mathscr A_0
+\]
+\textit{is an isomorphism.}
+
+For example, if \(M=\mathbb Z\), then, under the conditions of
+\SGARefLink{sga3:viii:proposition:4:1}{4.1}, the algebra \(\mathscr A\)
+is essentially determined by \(\mathscr A_1=\mathscr L\), namely
+\[
+  \mathscr A\simeq\coprod_{n\in\mathbb Z}\mathscr L^{\otimes n}
+\]
+as graded algebras. Thus we recover the familiar result:
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:4:3}\textbf{Corollary 4.3.}
+\textit{The category of principal homogeneous bundles \(P\) over \(S\)
+under \(\mathbb G_{m,S}\) is equivalent to the category of invertible
+modules \(\mathscr L\) over \(S\), where the morphisms in both categories
+are the isomorphisms of the structures in question. Quasi-inverse
+functors are obtained by assigning to \(P\) the degree-\(1\) component of
+its \(\mathbb Z\)-graded affine algebra, and by assigning to
+\(\mathscr L\) the spectrum of the \(\mathbb Z\)-graded algebra}
+\[
+  \coprod_{n\in\mathbb Z}\mathscr L^{\otimes n}.
+\]
+
+In particular:
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:4:4}\textbf{Corollary 4.4.}
+\textit{The group of isomorphism classes of principal homogeneous
+bundles over \(S\) under \(\mathbb G_{m,S}\) is isomorphic to the group
+\(\operatorname{Pic}(S)\) of isomorphism classes of invertible modules
+over \(S\), that is, to}
+\[
+  H^1(S,\mathcal O_S^\times).
+\]
+
+Since \(\mathbb G_{m,S}\) is the scheme of automorphisms of the module
+\(\mathcal O_S\), Corollary \SGARefLink{sga3:viii:corollary:4:4}{4.4} is
+equivalent to \SGARefLink{sga3:viii:corollary:4:5}{the following statement}, one of the forms of Hilbert's
+``\SGARefLink{sga3:viii:corollary:4:5}{Theorem 90}.''
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:4:5}\textbf{Corollary 4.5.}
+\textit{Every principal homogeneous bundle over \(S\) under
+\(\mathbb G_m\) is locally trivial for the Zariski topology.}
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:remark:4:5:1}\textbf{Remark 4.5.1.}
+\SGARefLink{sga3:viii:corollary:4:5}{The preceding statement} is no longer true in general for a group such as
+\(\mu_n\), or for a ``twisted form'' of \(\mathbb G_m\). For example,
+the unique twisted form of \(\mathbb G_m\) over the field
+\(\mathbb R\) of real numbers has a first cohomology group equal to
+\(\mathbb Z/2\mathbb Z\).
+
+\footnote{Editor's note: what follows has been added.}
+Indeed, let \(\mathbb S^1\) be the kernel of the norm morphism
+\[
+  N:\prod_{\mathbb C/\mathbb R}\mathbb G_{m,\mathbb C}
+  \longrightarrow\mathbb G_{m,\mathbb R};
+\]
+it is a \(\mathbb C/\mathbb R\)-twisted form of
+\(\mathbb G_{m,\mathbb R}\). The equation \(N(z)=-1\) in
+\(\prod_{\mathbb C/\mathbb R}(\mathbb G_{m,\mathbb C})\) defines an
+\(\mathbb S^1\)-torsor \(X\) over \(\operatorname{Spec}(\mathbb R)\),
+locally trivial for the \(\acute{e}\)tale topology, but not trivial, since
+\(X(\mathbb R)=\varnothing\). Let us show that
+\[
+  H^1_{\mathrm{\acute et}}(\mathbb R,\mathbb S^1)
+  \simeq\mathbb Z/2\mathbb Z.
+\]
+There is an exact sequence of smooth commutative algebraic
+\(\mathbb R\)-groups
+\SGARefTarget{sga3:viii:remark:4:5:1:diagram:01}
+\[
+  1\longrightarrow\mathbb S^1
+  \longrightarrow\prod_{\mathbb C/\mathbb R}\mathbb G_{m,\mathbb C}
+  \longrightarrow\mathbb G_{m,\mathbb R}
+  \longrightarrow1,
+\]
+which gives rise to a long exact sequence in \(\acute{e}\)tale cohomology
+(or in Galois cohomology):
+\SGARefTarget{sga3:viii:remark:4:5:1:diagram:02}
+\[
+\begin{aligned}
+  0\longrightarrow\mathbb S^1(\mathbb R)
+  &\longrightarrow\mathbb C^\times
+   \xrightarrow{N}\mathbb R^\times
+   \longrightarrow H^1_{\mathrm{\acute et}}(\mathbb R,\mathbb S^1)\\
+  &\longrightarrow
+   H^1_{\mathrm{\acute et}}\!
+   \left(\mathbb R,
+     \prod_{\mathbb C/\mathbb R}\mathbb G_{m,\mathbb C}\right)
+   \longrightarrow\cdots .
+\end{aligned}
+\]
+Now (see, for example, XXIV, \SGARefLink{sga3:xxiv:proposition:8-4}{8.4}),
+\[
+  H^1_{\mathrm{\acute et}}\!
+  \left(\mathbb R,
+    \prod_{\mathbb C/\mathbb R}\mathbb G_{m,\mathbb C}\right)
+  \simeq
+  H^1_{\mathrm{\acute et}}(\mathbb C,\mathbb G_{m,\mathbb C}),
+\]
+and the latter group is zero by
+\SGARefLink{sga3:viii:corollary:4:5}{4.5} (or, in this case, because
+\(\mathbb C\) is algebraically closed). We therefore obtain an
+isomorphism
+\[
+  H^1_{\mathrm{\acute et}}(\mathbb R,\mathbb S^1)
+  \simeq\mathbb R^\times/N(\mathbb C^\times)
+  \simeq\{\pm1\}.
+\]
+
+We shall need \SGARefLink{sga3:viii:proposition:4:6}{the following result} in \SGARefLink{sga3:viii:section:5}{the next section}.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:proposition:4:6}\textbf{Proposition 4.6.}
+\textit{Under the conditions of
+\SGARefLink{sga3:viii:proposition:4:1}{4.1}, conditions
+\SGARefLink{sga3:viii:proposition:4:1:item:a:01}{(a)} and
+\SGARefLink{sga3:viii:proposition:4:1:item:b:01}{(b)} are equivalent to
+the following conditions:}
+\begin{enumerate}
+  \item[\((a')\)]\SGARefTarget{sga3:viii:proposition:4:6:item:aprime:01}
+  \textit{the homomorphism
+  \(\mathcal O_S\to\mathscr A_0\) is an isomorphism;}
+
+  \item[\((b')\)]\SGARefTarget{sga3:viii:proposition:4:6:item:bprime:01}
+  \textit{for every \(m\in M\) (it is enough to require this for the
+  members of a system of generators of \(M\)), one has}
+  \[
+    \mathscr A_m\mathbin{\cdot}\mathscr A_{-m}=\mathscr A_0.
+  \]
+\end{enumerate}
+
+The necessity is clear in view of
+\SGARefLink{sga3:viii:corollary:4:2}{4.2}.\footnote{Editor's note:
+``\SGARefLink{sga3:viii:proposition:4:1}{4.1}'' has been corrected to ``\SGARefLink{sga3:viii:corollary:4:2}{4.2}.''} We are thus reduced to proving
+\SGARefLink{sga3:viii:corollary:4:7}{the following corollary}.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:4:7}\textbf{Corollary 4.7.}
+\textit{Let}
+\[
+  A=\coprod_{n\in\mathbb Z}A_n
+\]
+\textit{be a \(\mathbb Z\)-graded ring such that}
+\[
+  A_1\mathbin{\cdot}A_{-1}=A_0.
+\]
+\textit{Then the \(A_n\) are invertible \(A_0\)-modules, and, for
+\(n,n'\in\mathbb Z\), the homomorphism}
+\[
+  A_n\otimes_{A_0}A_{n'}\longrightarrow A_{n+n'}
+\]
+\textit{induced by multiplication in \(A\) is an isomorphism.}
+
+By hypothesis there exist \(f_i\in A_1\) and \(g_i\in A_{-1}\) such that
+\SGARefTarget{sga3:viii:corollary:4:7:eq:star:01}
+\[
+  \makebox[\displaywidth][s]{%
+    \(\text{(*)}\)\hfill
+    \(\displaystyle\sum_i f_ig_i=1.\)\hfill
+    \(\phantom{\text{(*)}}\)%
+  }
+\]
+Since the assertion to be proved is local on
+\(\operatorname{Spec}(A_0)\),\footnote{Editor's note: the following
+passage has been expanded.} and since
+\(\SGARefLink{sga3:viii:corollary:4:7:eq:star:01}{(*)}\) shows that
+\(\operatorname{Spec}(A_0)\) is covered by the affine open subsets
+\(D(f_ig_i)\), we are reduced to the case in which there is an element
+\(f\in A_1\) that is invertible in \(A\). Then, for every
+\(n\in\mathbb Z\), \(f^n\) is an invertible element of \(A_n\), and
+therefore defines an isomorphism
+\[
+  A_0\xrightarrow{\ \sim\ }A_n,
+  \qquad h\longmapsto f^nh.
+\]
+Moreover,

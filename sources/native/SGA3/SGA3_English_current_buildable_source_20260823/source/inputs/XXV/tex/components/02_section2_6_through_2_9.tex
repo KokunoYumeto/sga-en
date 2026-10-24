@@ -1,0 +1,258 @@
+\SGANextSectionTarget{sga3:xxv:subsection:2-6}\SGASubsection{2.6}{}
+\SGARefTarget{sga3:xxv:paragraph:2:6}
+
+Replacing \(R^+\) by \(R^-=-R^+\), one similarly constructs the groups
+\(U^-\), \(B^-\), and \(U_\alpha\) for \(\alpha\in R^-\), together with
+isomorphisms
+\[
+ p_\alpha\colon\mathbb G_a\xrightarrow{\ \sim\ }U_\alpha,
+ \qquad \alpha\in R^-.
+\]
+Finally introduce the product scheme
+\[
+ \Omega=U^-\times T\times U.
+\]
+There is a canonical isomorphism of \(k\)-schemes
+\[
+ \Omega\otimes_{\mathbb Z}k
+ \xrightarrow{\ \sim\ }
+ U^-_k\times_kT_k\times_kU_k
+ \simeq\Omega_k,
+\]
+where \(\Omega_k\) is the ``big cell'' of \(G_k\) (\SGARefLink{sga3:xxii:prop:4.1.2}{Exposé XXII, 4.1.2}).
+
+From now on we identify \(\Omega\otimes_{\mathbb Z}k\) with \(\Omega_k\)
+by this isomorphism, and regard \(U^-\), \(T\), and \(U\) as subschemes
+of \(\Omega\) through their unit sections. Write
+\[
+ e=((0),e,(0))
+\]
+for the ``unit section'' of \(\Omega\). Our aim is now to put a
+piece-of-group law on \(\Omega\).
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxv:lemma:2-7}Lemma 2.7}
+Let \(\alpha\in\Delta\), and let \(w_{\alpha,k}\) be the element of
+\(\operatorname{Norm}_{G_k}(T_k)(k)\) defined by \(X_{\alpha,k}\); recall
+that, by definition,
+\[
+ w_{\alpha,k}
+ =p_{-\alpha,k}(-1)p_{\alpha,k}(1)p_{-\alpha,k}(-1).
+\]
+There exist an open subset \(V_\alpha\) of \(\Omega\), containing the
+section \(e\), and a morphism
+\[
+ h_\alpha\colon V_\alpha\longrightarrow\Omega
+\]
+such that:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.2em]
+\item \(h_\alpha(e)=e\);
+\item \((h_\alpha)\otimes_{\mathbb Z}k\) coincides with the restriction
+of \(\operatorname{int}(w_{\alpha,k})\) to
+\(V_\alpha\otimes_{\mathbb Z}k\subset G_k\);
+\item \(T\subset V_\alpha\), and \(h_\alpha\) sends \(T\) into \(T\).
+For every \(\beta\in R\), one has \(U_\beta\subset V_\alpha\), and
+\(h_\alpha\) sends \(U_\beta\) into \(U_{s_\alpha(\beta)}\).
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:lemma:2:7}
+
+By the definition of a Chevalley system (\SGARefLink{sga3:XXIII:6.1}{Exposé XXIII, 6.1}), for every
+\(\beta\in R\) there exists an integer \(e_\beta=\pm1\) such that
+\[
+ \operatorname{int}(w_{\alpha,k})p_{\beta,k}(x)
+ =p_{s_\alpha(\beta),k}(e_\beta x)
+\]
+for every \(x\in\mathbb G_a(S)\) and every \(S\to\operatorname{Spec}(k)\).
+
+Let \(S\) be any scheme. Write an arbitrary element of \(\Omega(S)\) in
+the form
+\[
+\left(
+ \left(\prod_{\substack{\beta\in R^-\\\beta\ne-\alpha}}
+ p_\beta(x_\beta)\right)p_{-\alpha}(x_{-\alpha}),
+ \ t,\
+ p_\alpha(x_\alpha)
+ \left(\prod_{\substack{\beta\in R^+\\\beta\ne\alpha}}
+ p_\beta(x_\beta)\right)
+\right),
+\]
+where arbitrary orders have been chosen on \(R^-\setminus\{-\alpha\}\)
+and \(R^+\setminus\{\alpha\}\), as permitted by \SGARefLink{sga3:xxv:subsection:2-5}{2.5}. Define a morphism
+\(d\colon\Omega\to\mathbb A^1_{\mathbb Z}\) by
+\[
+ d(u)=\alpha(t)+x_\alpha x_{-\alpha}.
+\]
+
+Let \(V_\alpha=\Omega_d\), the open subset of \(\Omega\) defined by the
+invertibility of \(d(u)\). It contains \(e\), \(T\), and every \(U_\beta\),
+\(\beta\in R\). Define
+\[
+ h_\alpha\colon V_\alpha\longrightarrow\Omega,\qquad
+ h_\alpha(u)=(a(u),b(u),c(u)),
+\]
+where
+\begin{align*}
+a(u)
+ &=
+\left(\prod_{\substack{\beta\in R^-\\\beta\ne-\alpha}}
+ p_{s_\alpha(\beta)}(e_\beta x_\beta)\right)
+p_{-\alpha}\!\left(-x_\alpha d(u)^{-1}\right),\\
+b(u)&=t\cdot\alpha^\ast(d(u)),\\
+c(u)
+ &=p_\alpha\!\left(-x_{-\alpha}d(u)^{-1}\right)
+\left(\prod_{\substack{\beta\in R^+\\\beta\ne\alpha}}
+ p_{s_\alpha(\beta)}(e_\beta x_\beta)\right).
+\end{align*}
+Since \(s_\alpha\) permutes the positive roots distinct from \(\alpha\)
+(respectively the negative roots distinct from \(-\alpha\)), \(c(u)\)
+(respectively \(a(u)\)) is a section of \(U\) (respectively \(U^-\)),
+so the preceding morphism is well defined. It plainly satisfies (i)
+and (iii). Assertion (ii) follows immediately from the definition of
+the \(e_\beta\), \(\beta\in R\), and \SGARefLink{sga3:xx:3.12}{Exposé XX, 3.12}.
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxv:lemma:2-8}Lemma 2.8}
+There exist open subsets \(V,V'\) of \(\Omega\) and morphisms
+\[
+ h\colon V\longrightarrow\Omega,\qquad
+ h'\colon V'\longrightarrow\Omega
+\]
+with the following properties:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.2em]
+\item \(V\) and \(V'\) contain \(e\), and \(h(e)=h'(e)=e\);
+\item\SGAInlineRefTarget{sga3:xxv:lemma:2-8:item:ii} the morphism induced by
+\[
+ h'\circ h\colon h^{-1}(V')\longrightarrow\Omega
+\]
+is the restriction of the identity morphism;
+\item\SGAInlineRefTarget{sga3:xxv:lemma:2-8:item:iii} the \(k\)-morphisms \(h\otimes_{\mathbb Z}k\) and
+\(h'\otimes_{\mathbb Z}k\) are the restrictions, to
+\(V\otimes_{\mathbb Z}k\) and \(V'\otimes_{\mathbb Z}k\), of
+automorphisms of the group \(G_k\);
+\item\SGAInlineRefTarget{sga3:xxv:lemma:2-8:item:iv} \(V\) and \(V'\) contain \(U,T,U^-\); the morphisms \(h,h'\)
+send \(U\) into \(U^-\), \(U^-\) into \(U\), and \(T\) into \(T\).
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:lemma:2:8}
+
+Let \(w^0\) be the element of the Weyl group of \(G_k\) that sends \(R^+\)
+to \(R^-\). Write
+\[
+ w^0=s_{\alpha_n}\cdots s_{\alpha_1},\qquad \alpha_i\in\Delta
+\]
+(with no relation to the numbering in \SGARefLink{sga3:xxv:subsection:2-1}{2.1}), and put
+\[
+ w_0=w_{\alpha_n,k}\cdots w_{\alpha_1,k}
+ \in\operatorname{Norm}_{G_k}(T_k)(k).
+\]
+Define recursively, for \(i\leq n\), an open subset \(V_i\) of \(\Omega\)
+and a morphism \(h_i\colon V_i\to\Omega\) by
+\[
+ V_0=\Omega,\qquad h_0=\operatorname{id},
+\]
+and, for \(i=0,\ldots,n-1\),
+\[
+ V_{i+1}=h_i^{-1}(V_{\alpha_{i+1}}),\qquad
+ h_{i+1}=h_{\alpha_{i+1}}\circ h_i,
+\]
+where \(V_{\alpha_j}\) and \(h_{\alpha_j}\) are those of \SGARefLink{sga3:xxv:lemma:2-7}{2.7}.
+
+Take \(V=V_n\) and \(h=h_n\). The conditions (i), (iii), and (iv) concerning
+\(V\) and \(h\) hold: for (i) and (iii) this follows immediately from
+\SGARefLink{sga3:xxv:lemma:2-8}{2.8}, and for (iv) from the fact that \(h\otimes_{\mathbb Z}k\) is the
+restriction of \(\operatorname{int}(w_0)\) to
+\(V\otimes_{\mathbb Z}k\).
+
+Since \((w^0)^2=1\), we also have
+\[
+ w^0=s_{\alpha_1}\cdots s_{\alpha_n}
+ =(s_{\alpha_1}^{\,3})\cdots(s_{\alpha_n}^{\,3}).
+\]
+Put
+\[
+ w'_0=(w_{\alpha_1,k})^3\cdots(w_{\alpha_n,k})^3.
+\]
+Repeating the construction above gives an open subset \(V'\) and a
+morphism \(h'\) that also satisfy (i), (iii), and (iv). Moreover,
+\(h'\otimes_{\mathbb Z}k\) is the restriction of
+\(\operatorname{int}(w'_0)\) to \(V'\otimes_{\mathbb Z}k\). For every
+simple root \(\alpha\in\Delta\), however,
+\((w_{\alpha,k})^4=e\) (\SGARefLink{sga3:xx:3.1}{Exposé XX, 3.1}), hence \(w'_0w_0=e\).
+It follows that \(h'\circ h\) induces the identity morphism on a nonempty
+open subset of \(\Omega\otimes_{\mathbb Z}k\). Since \(\Omega\) is smooth
+and of finite presentation over \(\mathbb Z\),
+\(\Omega\otimes_{\mathbb Z}k\) is schematically dense in \(\Omega\);
+this proves (ii).
+
+\begin{sgastatement}{\SGAInlineRefTarget{sga3:xxv:proposition:2-9}Proposition 2.9}
+There exist an open subset \(V_1\) of \(\Omega\times\Omega\), an open
+subset \(V_2\) of \(\Omega\), and morphisms
+\[
+ \pi\colon V_1\longrightarrow\Omega,\qquad
+ \sigma\colon V_2\longrightarrow\Omega
+\]
+having the following properties:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.2em]
+\item if \(x\in\Omega(S)\), then \((e,x)\) and \((x,e)\) are sections
+of \(V_1\), and
+\[
+ \pi(e,x)=\pi(x,e)=x;
+\]
+\item \(V_2\) contains \(e\), and \(\sigma(e)=e\);
+\item\SGAInlineRefTarget{sga3:xxv:proposition:2-9:item:iii} \(\pi_k\) and \(\sigma_k\) are the restrictions of the morphisms
+\(G_k\times_kG_k\to G_k\) and \(G_k\to G_k\) defined respectively by
+multiplication and inversion.
+\end{enumerate}
+\end{sgastatement}
+\SGARefTarget{sga3:xxv:proposition:2:9}
+
+\SGAProof
+Let \((v,t,u)\) and \((v',t',u')\) be two sections of \(\Omega\).
+By \SGARefLink{sga3:xxv:lemma:2-8:item:iv}{2.8(iv)}, \(h(u)\) is a section of \(U^-\) and \(h(v')\) a section
+of \(U\); thus \((h(u),e,h(v'))\) may be regarded as a section of
+\(\Omega\). Define \(V_1\) as the open subset of \(\Omega\times\Omega\)
+specified by
+\[
+\bigl((v,t,u),(v',t',u')\bigr)\in V_1(S)
+\quad\Longleftrightarrow\quad
+(h(u),e,h(v'))\in V'(S),
+\]
+using the notation of \SGARefLink{sga3:xxv:lemma:2-8}{2.8}. If the pair on the left is a section of
+\(V_1\), then \(h'(h(u),e,h(v'))\) is defined and is a section of
+\(\Omega\); write
+\[
+ h'(h(u),e,h(v'))=(v'',t'',u'').
+\]
+Set
+\[
+ \pi\bigl((v,t,u),(v',t',u')\bigr)
+ =
+ \bigl(v\cdot t v''t^{-1},\ tt''t',\
+ t'^{-1}u''t'\cdot u'\bigr).
+\]
+Assertion (i) follows immediately from \SGARefLink{sga3:xxv:lemma:2-8:item:ii}{2.8(ii)}. To verify the assertion
+about \(\pi\) in (iii), observe that
+\[
+ h'(h(u),e,h(v'))=uv'=v''t''u''
+\]
+whenever \(u\in U(S)\), \(v'\in U^-(S)\), and \(S\to k\), by
+\SGARefLink{sga3:xxv:lemma:2-8:item:iii}{2.8(iii)} and (ii).
+
+The morphism \(\sigma\) is constructed similarly. If \((v,t,u)\) is a
+section of \(\Omega\), then \(h(u^{-1})\) is a section of \(U^-\),
+\(h(v^{-1})\) a section of \(U\), and \(h(t^{-1})\) a section of \(T\).
+Thus
+\[
+ (h(u^{-1}),h(t^{-1}),h(v^{-1}))
+\]
+is a section of \(\Omega\).
+Define an open subset \(V_2\) of \(\Omega\) by
+\[
+ (v,t,u)\in V_2(S)
+ \quad\Longleftrightarrow\quad
+ (h(u^{-1}),h(t^{-1}),h(v^{-1}))\in V'(S),
+\]
+and define
+\[
+ \sigma(v,t,u)=h'(h(u^{-1}),h(t^{-1}),h(v^{-1})).
+\]
+The required properties of \(\sigma\) are verified in the same way.

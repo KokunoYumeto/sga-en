@@ -1,0 +1,130 @@
+\section{Functoriality of categories of presheaves}\etiquette[5]{I.sec5}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[5.0]{I.sec5.0}
+Let $C$, $C'$, and $D$ be three categories, and let $u:C\rightarrow C'$ be a
+functor. We denote by $u^\ast$ the functor \sisi{$$
+u^\ast:\Hhom({C'}^\circ,D)\longrightarrow \Hhom(C^\circ, D),
+G\longmapsto G\circ u{\quoi},
+$$}{$$u^\ast:\left\{\begin{array}{ccc}
+                      \Hhom({C'}^\circ,D) & \longrightarrow & \Hhom(C^\circ, D) \\
+                      G & \longmapsto & G\circ u{\quoi}
+                    \end{array}
+\right.$$} obtained by composition with the functor $u$. The functor
+$u^\ast$ commutes with inductive and projective limits.
+
+\begin{enonce*}{Proposition 5.1}\etiquette[5.1]{I.prop5.1}
+Suppose\pageoriginale that $C$ is small and that the
+$𝒰$-inductive (
+\resp projective) limits in $D$ are representable. The functor $u^\ast$
+has a left adjoint $u_{!}$ (\resp a right adjoint $u_\ast$). Thus there
+is an isomorphism
+\begin{gather*}
+\Hom_{\Hhom(C^\circ,D)}(F,u^\ast G)\xrightarrow{\sim}
+\Hom_{\Hhom({C'}^\circ,D)}(u_{!}F,G)\\
+(\mbox{\resp  } \Hom_{\Hhom(C^\circ,D)}(u^\ast G,F)\simeq
+\Hom_{\Hhom({C'}^\circ,D)}(G,u_\ast F){\quoi}).
+\end{gather*}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+We shall give only the proof of the existence of the left adjoint functor.
+The \resp part of the proposition will then follow formally from the
+isomorphisms
+$$
+\Hhom(C^\circ,
+D)\xrightarrow{\sim}\Hhom(C,D^\circ)^\circ\xrightarrow{\sim}\Hhom((C^\circ)^\circ,D^\circ)^\circ{\quoi}.
+$$
+\end{enonce*}
+
+Let $Y$ be an object of $C'$. Denote by $I^Y_u$ the following category.
+The objects of $I^Y_u$ are pairs $(X,m)$, where $X$ is an object of $C$
+and $m$ is a morphism $Y\rightarrow u(X)$. Let $(X,m)$ and $(X',m')$
+be two objects of $I^Y_u$. A morphism from $(X,m)$ to $(X',m')$ is a
+morphism $\xi:X\rightarrow X'$ such that $m'=u(\xi)m$. Composition of
+morphisms is defined in the evident way.
+
+Let $f:Y\rightarrow Y'$ be a morphism of $C'$. By composition, the
+morphism $f$ defines a functor $I^f_u:I^{Y'}_u\rightarrow I^Y_u$.
+
+There is moreover a functor $\pr_Y:I^Y_u\rightarrow C$ that assigns the
+object $X$ to the object $(X,m)$. Notice that the diagram
+\[\vcenter{
+\xymatrix@=1.5cm{
+       &I^{Y'}_u \ar[rr]^{I^f_u} \ar[rd]_{\pr_{Y'}}& & I^Y_u \ar[ld]^{\pr_Y}\\
+       & &   C   & \\
+}}\leqno{(*)}
+\]
+is then commutative.
+
+Now\pageoriginale let $F$ be a presheaf on $C$, and set
+\hypertarget{sga4.exp.I.equation.5.1.1}{}$$
+\displaylines{\rlap{(5.1.1)}\hfill u_{!}
+  F(Y)=\varinjlim_{I^Y_u} F\sisi{}{\circ}\pr_Y(.){\quoi}.\hfill}
+$$
+The commutativity of diagram ($^\ast$) and the functoriality of the
+inductive limit make $u_{!}F$ a presheaf on $C'$. Let us show that the %%
+functor $u_{!}$ is a left adjoint of the functor $u^\ast$. For this, we
+show that for every presheaf $G$ on $C'$, there is a functorial
+isomorphism
+$$
+\Hom(u_{!}F,G)\xrightarrow{\sim}\Hom(F,u^\ast G){\quoi}.
+$$
+Let $\xi\in \Hom(u_{!}F,G)$. Thus, for every object $X$ of $C$, there
+is a morphism
+$$
+\xi_X:u_{!}F(u(X))\longrightarrow G(u(X)){\quoi}.
+$$
+But $(u(X),\id_{u(X)})$ is an object of $I^{u(X)}_u$, and by the
+definition of the inductive limit there is a canonical morphism
+$$
+F(X)\longrightarrow u_{!}F(u(X)){\quoi}.
+$$
+For every object $X$ of $C$, we therefore obtain a morphism
+$$
+\eta_X:F(X)\longrightarrow G(u(X))
+$$
+which is visibly functorial in $X$. Hence a morphism
+$$
+\eta:F\longrightarrow u^\ast G{\quoi}.
+$$
+
+Conversely, let $\eta\in \Hom(F,u^\ast G)$. For every object $Y$ of
+$C'$, this gives a morphism of functors
+$$
+\eta_Y:F\sisi{}{\circ}\pr_Y\longrightarrow (u^\ast G)\circ\pr_Y{\quoi},
+$$
+and hence, by composition with the evident morphism from the functor
+$(u^\ast G)\circ\pr_Y$ to the constant functor $G(Y)$, a morphism
+$$
+\xi_Y:u_{!}F(Y)\longrightarrow G(Y)
+$$
+which is functorial in $Y$. Hence a morphism
+$$
+\xi:u_{!}F\longrightarrow G{\quoi}.
+$$
+
+The\pageoriginale reader will check that the two maps thus defined are
+inverse to one another, thereby completing the proof.
+
+\begin{enonce*}{Proposition 5.2}\etiquette[5.2]{I.prop5.2}
+Suppose that in $D$ the $𝒰$-inductive limits are representable,
+finite projective limits are representable, and filtered
+$𝒰$-inductive limits commute with finite projective limits. Suppose
+also that finite projective limits are representable in $C$ and that
+the functor $u$ is left exact $(\hyperref[I.cor2.3.2]{2.3.2})$. Then
+finite projective limits are representable in $\Hhom(C^\circ,D)$ and
+in $\Hhom({C'}^\circ,D)$, and the functor $u_{!}$ is left exact.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The first assertion is trivial. Let us prove the second. By the proof of
+\hyperref[I.prop5.1]{5.1}, for every presheaf $F$ on $C$ and every object $Y$ of $C'$, one has
+$$
+u_{!}F(Y)\xrightarrow{\sim} \varinjlim_{I^Y_u}
+F\sisi{}{\circ}\pr_Y{\quoi}.
+$$
+ It therefore suffices to show that the category $(I^Y_u)^\circ$
+ satisfies axioms (PS 1) and (PS 2) \hyperref[I.def2.7]{(2.7)}, and that this category is
+ connected. The verification is left to the reader.
+\end{enonce*}

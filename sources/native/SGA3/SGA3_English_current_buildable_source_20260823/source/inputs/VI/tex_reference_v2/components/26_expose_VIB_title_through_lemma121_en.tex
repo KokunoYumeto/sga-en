@@ -1,0 +1,198 @@
+
+\setcounter{footnote}{-1}
+\chapter*{Expos\'e \texorpdfstring{VI\textsubscript{B}}{VI_B}\\
+Generalities on Group Schemes}
+\phantomsection
+\label{sga3:VIB:title}
+\addcontentsline{toc}{chapter}{Expos\'e VI-B. Generalities on Group Schemes}
+\markboth{EXPOS\'E VI\textsubscript{B}. GENERALITIES ON GROUP SCHEMES}%
+  {EXPOS\'E VI\textsubscript{B}. GENERALITIES ON GROUP SCHEMES}
+
+\begin{center}
+  \textit{by J.-E. Bertin}
+\end{center}
+
+\footnote{\label{note:sga3-VIB-0}Editor's note: version of
+October 13, 2024.}
+This Expos\'e, which does not correspond to any oral lecture in the
+seminar, is intended to bring together a number of commonly used
+technical results concerning group schemes.%
+\begingroup
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}%
+\footnote[1]{This Expos\'e was quite substantially revised after its
+mimeographed edition; in particular, \hyperref[sec:sga3-VIB-10]{Sections 10} and 11 were completely
+rewritten.\textsuperscript{(1)}}%
+\endgroup
+\footnotetext[1]{Editor's note: and also \hyperref[sec:sga3-VIB-5]{Section 5}; cf.\ Editor's
+\hyperref[note:sga3-VIB-34]{notes 34} and 46.}
+\setcounter{footnote}{1}
+
+\section*{1. Morphisms of groups locally of finite type over a field}
+\phantomsection
+\label{sec:sga3-VIB-1}
+\addcontentsline{toc}{section}{1. Morphisms of groups locally of finite
+  type over a field}
+
+\medskip
+\phantomsection\label{par:sga3-VIB-1.1}%
+\noindent\textbf{1.1.---}
+Let \(A\) be an Artinian local ring, let \(G\) and \(H\) be two
+\(A\)-groups,%
+\footnote{\label{note:sga3-VIB-2}Editor's note: recall the convention
+adopted at the beginning of Expos\'e~VI\(_A\): an \(A\)-group is a
+group scheme over \(A\) (and every such scheme is separated;
+cf.\ Expos\'e~VI\(_A\), \SGARefLink{sga3:VIA:0.3}{0.3}).}
+and let \(u:G\to H\) be a morphism of \(A\)-groups. Then \(u\)
+induces a group morphism
+\[
+  u(A):G(A)\longrightarrow H(A).
+\]%
+\footnote{\label{note:sga3-VIB-3}Editor's note: we have replaced
+``homomorphism'' by ``morphism.''}
+Since \(H(A)\) acts on \(H\) by right translation, restriction along
+\(u(A)\) defines an action of \(G(A)\) on \(H\). This action is
+compatible with \(u\) and with the action of \(G(A)\) on \(G\) by
+right translation. Since \(G(A)\) acts transitively on the strictly
+rational points of \(G\) (see Expos\'e~VI\(_A\), \SGARefLink{sga3:VIA:0.4}{0.4} for the
+definition), these points ``all behave in the same way with respect
+to \(u\).'' The following properties spring from this observation.
+
+\medskip
+\phantomsection\label{prop:sga3-VIB-1.2}%
+\noindent\textbf{Proposition 1.2.---}
+\emph{Let \(u:G\to H\) be a quasi-compact morphism between
+\(A\)-groups locally of finite type over \(A\). Then the set
+\(u(G)\) is closed in \(H\), and}
+\[
+  \dim G=\dim u(G)+\dim\ker u.
+\]%
+\footnote{\label{note:sga3-VIB-4}Editor's note: this statement also
+appears in Expos\'e~VI\(_A\), \SGARefLink{prop:sga3-VIA-2.5.2}{2.5.2}.}
+
+Since \(u\) commutes with the inversion morphisms of \(G\) and \(H\),
+the image \(u(G)\) is invariant under inversion on \(H\); the same is
+therefore true of its closure \(\overline{u(G)}\) in \(H\). On the
+other hand, let \(L\) be the set of points of \(H\times_A H\) whose
+two projections belong to \(u(G)\). It is clear that \(L\) is the
+image of
+\[
+  u\times_Au:G\times_A G\longrightarrow H\times_A H.
+\]
+The multiplication morphism of \(H\) consequently sends \(L\) into
+\(u(G)\); in other words,
+\[
+  u(G)\cdot u(G)=u(G).
+\]
+\hyperref[lem:sga3-VIB-1.2.1]{Lemma~1.2.1} below shows that the closure \(\overline L\) of \(L\)
+in \(H\times_AH\) is the set of points whose two projections belong
+to \(\overline{u(G)}\). Hence
+\[
+  \overline{u(G)}\cdot\overline{u(G)}
+    =\overline{u(G)}.
+\]
+Thus the reduced subscheme of \(H\) whose underlying space is
+\(\overline{u(G)}\) is naturally equipped with a group structure in
+the category \((\mathbf{Sch}_{/k})_{\mathrm{red}}\), where \(k\) is
+the residue field of \(A\) (cf.\ Expos\'e~VI\(_A\), \SGARefLink{sga3:VIA:0.2}{0.2}).
+
+Let us prove the first assertion of \hyperref[prop:sga3-VIB-1.2]{1.2}. After replacing \(A\) by
+an algebraic closure of its residue field \(k\), we may suppose that
+\(A\) is an algebraically closed field \(k\)
+(cf.\ EGA~IV\(_2\), 2.3.12). Replacing \(u\) by
+\[
+  u_{\mathrm{red}}:G_{\mathrm{red}}\longrightarrow H_{\mathrm{red}},
+\]
+we may suppose that \(G\) and \(H\) are reduced. In this case, as we
+have just seen, \(u(G)\) is the underlying space of a reduced group
+subscheme of \(H\);%
+\begingroup
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}%
+\footnote[1]{\label{note:sga3-VIB-1.2-image-ambient}Translator's
+note: the French source prints ``a reduced group subscheme of \(G\)''
+at this point. Since \(u(G)\subset H\), and the preceding paragraph
+constructs the reduced subscheme inside \(H\), the ambient group is
+\(H\).}%
+\endgroup{}
+we may therefore suppose that \(u\) is dominant. Then \(G(k)\) acts
+transitively on the set of connected components of \(H\), and it is
+enough to prove that \(u(G)\cap H^0\) is closed. We are thus reduced
+to the case in which \(H\) is connected, hence irreducible and of
+finite type (Expos\'e~VI\(_A\), \SGARefLink{cor:sga3-VIB-2.4}{2.4}). The morphism \(u\) is then of
+finite type, since it is quasi-compact and locally of finite type.
+As \(H\) is Noetherian, \(u(G)\) is constructible
+(EGA~IV\(_1\), 1.8.5), and therefore contains an open subset \(V\)
+of \(H\) (EGA~0\(_{\mathrm{III}}\), 9.2.2). By
+Expos\'e~VI\(_A\), 0.5, we then have
+\[
+  H=V\cdot V\subset u(G)\cdot u(G)=u(G).
+\]
+
+Let us prove the second assertion. Recall first that the functor
+\(\ker u\) (cf.\ \SGARefLink{sga3:i:definition:2-3-6-1}{Expos\'e~I, 2.3.6.1}) is represented by
+\(u^{-1}(e)\), where \(e\) denotes the identity element of \(H\).
+When \(u\) is locally of finite type, \(\ker u\) is therefore
+locally of finite type over \(A\). As above, this time using
+EGA~IV\(_2\), 4.1.4, we reduce to the case in which \(A\) is an
+algebraically closed field \(k\).
+
+We may further suppose that \(G\) and \(H\) are irreducible and of
+finite type and that \(u\) is dominant. Indeed, since \(k\) is
+algebraically closed, the connected components of \(G\), on whose
+set \(G(k)\) acts transitively, clearly all have the same dimension;
+and if \(u^0\) denotes the restriction of \(u\) to \(G^0\), then
+\[
+  (\ker u)^0\subset\ker u^0,
+  \qquad
+  \dim\ker u^0=\dim\ker u.
+\]
+Likewise, \(u\) is then of finite type over \(k\). If \(\eta\) is
+the generic point of \(H\), then
+\[
+  \dim u^{-1}(\eta)=\dim G-\dim H
+\]
+(EGA~IV\(_3\), 10.6.1(ii)). By EGA~IV\(_3\), 9.2.3 and 9.2.6, the
+set of \(y\in H\) such that
+\[
+  \dim u^{-1}(y)=\dim u^{-1}(\eta)
+\]
+contains a nonempty open subset \(V\). Since \(u\) is dominant,
+\(U=u^{-1}(V)\) is a nonempty open subset of \(G\); it contains a
+closed point \(x\), because \(G\) is a Jacobson scheme
+(EGA~IV\(_3\), 10.4.7). Right translation \(r_x\) is an isomorphism
+from \(\ker u\) onto \(u^{-1}(u(x))\), and hence
+\[
+  \dim\ker u
+    =\dim u^{-1}(u(x))
+    =\dim u^{-1}(\eta)
+    =\dim G-\dim H.
+\]
+
+\medskip
+\phantomsection\label{lem:sga3-VIB-1.2.1}%
+\noindent\textbf{Lemma 1.2.1.---}
+\emph{Let \(f:X'\to X\) and \(g:Y'\to Y\) be two quasi-compact
+dominant morphisms of schemes over an Artinian local ring \(A\).
+Then}
+\[
+  f\times_Ag:X'\times_A Y'\longrightarrow X\times_A Y
+\]
+\emph{is dominant (and quasi-compact).}
+
+Indeed,
+\[
+  f\times_Ag
+    =
+  (\operatorname{id}_X\times_Ag)
+    \circ
+  (f\times_A\operatorname{id}_{Y'}).
+\]
+It is therefore enough to prove that
+\(f\times_A\operatorname{id}_{Y'}\) and
+\(\operatorname{id}_X\times_Ag\) are dominant. For this purpose we
+may replace \(A\) by its residue field \(k\). Then \(X\) and \(Y'\)
+are flat over \(A=k\), and
+\(f\times_A\operatorname{id}_{Y'}\)
+(respectively, \(\operatorname{id}_X\times_Ag\)) is obtained from
+\(f\) (respectively, \(g\)) by the flat base change \(Y'\to A\)
+(respectively, \(X\to A\)). It is therefore dominant (and
+quasi-compact) by EGA~IV\(_2\), 2.3.7.

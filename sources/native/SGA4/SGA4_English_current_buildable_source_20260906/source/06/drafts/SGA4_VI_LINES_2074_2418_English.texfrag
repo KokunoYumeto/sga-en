@@ -1,0 +1,357 @@
+\section{Finiteness conditions for a morphism of topoi}\etiquette[3]{VI.sec3}
+
+\begin{enonce*}{Definition 3.1}\etiquette[3.1]{VI.def3.1}
+Let $f:E'\to E$ be a morphism of topoi. We say that $f$ is
+\emph{quasi-compact (\resp quasi-separated)} if, for every
+quasi-compact (\resp quasi-separated) object $X$ of $E$,
+$f^{\ast}(X)$ is quasi-compact (\resp quasi-separated). We say that
+$f$ is coherent if $f$ is quasi-compact and quasi-separated.
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[3.1.1]{VI.subsubsec3.1.1}
+Note that if $f$ has any one of the preceding properties, then every
+morphism of topoi isomorphic to $f$ has the same property. It is also
+immediate that the composite of two quasi-compact (\resp
+quasi-separated, \resp coherent) morphisms of topoi is again
+quasi-compact (\resp quasi-separated, \resp coherent).
+
+\begin{enonce*}{Proposition 3.2}\etiquette[3.2]{VI.prop3.2}
+With the\pageoriginale notation of \hyperref[VI.def3.1]{3.1}, let
+$(X_i)_{i\in I}$ be a generating family of quasi-compact (\resp
+coherent) objects of $E$. In the parenthetical case, suppose that
+$E'$ admits a generating family formed by quasi-compact objects. Then
+$f$ is quasi-compact (\resp coherent) if and only if, for every
+$i\in I$, $f^{\ast}(X_i)$ is quasi-compact (\resp coherent).
+\end{enonce*}
+
+Necessity is immediate. For sufficiency in the first case, note that,
+for every quasi-compact object $X$ of $E$, there is a finite
+epimorphic family of morphisms $X_i\to X$. Hence there is a finite
+epimorphic family $f^{\ast}(X_i)\to f^{\ast}(X)$, with the
+$f^{\ast}(X_i)$ quasi-compact by hypothesis, and therefore
+$f^{\ast}(X)$ is quasi-compact (\hyperref[VI.prop1.3]{1.3}). In the
+second case, it remains to see that if $X$ is a quasi-separated
+object of $E$, then $f^{\ast}(X)$ is quasi-separated. The hypothesis
+on $X$ may be expressed (\hyperref[VI.cor1.17]{1.17}) by the
+existence of an epimorphic family of morphisms $X_i\to X$ such that
+the $\fprod{X_i}{X_j}{X}$ are quasi-compact. We then have a covering
+family $f^{\ast}(X_i)\to f^{\ast}(X)$ such that the fiber products
+$\fprod{f^{\ast}(X_i)}{f^{\ast}(X_j)}{f^{\ast}(X)}$ are
+quasi-compact (since, by the first case, $f^{\ast}$ carries
+quasi-compact objects to quasi-compact objects). As the
+$f^{\ast}(X_i)$ are coherent, the conclusion follows again from
+\hyperref[VI.cor1.17]{1.17}.
+
+\begin{enonce*}{Corollary 3.3}\etiquette[3.3]{VI.cor3.3}
+Let $C$ and $C'$ be two $𝒰$-sites in which fiber products are
+representable and every covering family admits a finite covering
+subfamily, and let $g:C\to C'$ be a morphism of sites \emph{(IV
+\hyperref[IV.subsubsec4.9.1]{4.9.1})}. Then the morphism of topoi
+$f:C^{\sim}\to{C'}^{\sim}$ defined by $g$ is coherent.
+\end{enonce*}
+
+Indeed,\pageoriginale $\epsilon_C(C)$ (\resp
+$\epsilon_{C'}(C')$) is a generating family of $C^{\sim}$ (\resp
+${C'}^{\sim}$) satisfying the corresponding conditions of
+\hyperref[VI.prop3.2]{3.2} (\hyperref[VI.cor2.1.1]{2.1.1}).
+
+\begin{enonce*}{Proposition 3.4}\etiquette[3.4]{VI.prop3.4}
+Let $E$ be a locally coherent topos (\hyperref[VI.def2.3]{2.3}), and
+let $f:X\to Y$ be an arrow of $E$, whence a morphism of induced topoi
+\emph{(IV \hyperref[IV.eq5.5.2]{(5.5.2)})} $E_{/X}\to E_{/Y}$. This morphism of topoi is
+quasi-compact (\resp quasi-separated, \resp coherent) if and only if
+$f$ is a quasi-compact (\resp quasi-separated, \resp coherent)
+morphism.
+\end{enonce*}
+
+The quasi-compact case follows immediately from the definitions
+(without any condition on $E$); the quasi-separated case is precisely
+\hyperref[VI.cor2.8]{2.8}; and the coherent case follows by combining
+the two preceding cases.
+
+\begin{enonce*}{Proposition 3.5}\etiquette[3.5]{VI.prop3.5}
+Let $f:E'\to E$ be a morphism of locally coherent topoi. Let
+$(X_i)_{i\in I}$ be a generating family in $E$ formed by coherent
+algebraic objects. The following conditions are equivalent:
+\begin{itemize}
+\item[(i)] For every quasi-compact arrow $u$ of $E$, $f^{\ast}(u)$ is
+  quasi-compact.
+
+\item[(i bis)] For every arrow $u:X_i\to X_j$, $f^{\ast}(u)$ is
+  quasi-compact.
+
+\item[(ii)] For every coherent object $Y'$ of $E'$, every coherent
+  algebraic object $Y$ of $E$, and every arrow
+  $v:Y'\to f^{\ast}(Y)$, the corresponding morphism of topoi
+$$
+f_v:{E'}_{/Y'}\to E_{/Y}
+$$
+obtained by composing\pageoriginale the localization morphism
+${E'}_{/Y'}\to{E'}_{/f^{\ast}(Y)}$ deduced from $v$
+\emph{(IV \hyperref[IV.eq5.5.2]{(5.5.2)})} with the morphism
+${E'}_{/f^{\ast}(Y)}\to E_{/Y}$ induced by $f$
+\emph{(IV \hyperref[IV.eq5.10.1]{(5.10.1)})} is coherent.
+
+\item[(ii bis)] The same condition as in \emph{(ii)}, but restricted
+  to a collection of data
+  $v_{\alpha}:{Y'}_{\alpha}\to f^{\ast}(Y_{\alpha})$ such that the
+  ${Y'}_{\alpha}$ are algebraic and cover the final object of $E'$.
+
+\item[(ii ter)] (When a generating family
+  $(X'_{i'})_{i'\in I'}$ in $E'$ formed by coherent objects is given,
+  together with, for every $i'\in I'$, an $i\in I$ and an arrow
+  $v_{i'}:X'_{i'}\to f^{\ast}(X_i)$.) For every $i'\in I'$, the
+  morphism of topoi $E'_{/{X'}_{i'}}\to E_{/X_i}$ defined by
+  $v_{i'}$ is coherent.
+\end{itemize}
+\end{enonce*}
+
+Since every arrow $X_i\to X_j$ is quasi-compact, it is clear that (i)
+$\Rightarrow$ (i bis). Conversely, suppose (i bis) holds and let us
+prove (i). Let $u:X\to Y$ be a quasi-compact arrow of $E$. In terms
+of an epimorphic family $X_i\to Y$, the hypothesis on $u$ says that
+the $\fprod{X}{X_i}{Y}$ are quasi-compact
+(\hyperref[VI.cor1.16]{1.16}), \ie that for every $i$ there exists a
+finite epimorphic family of morphisms
+$X_j\to\fprod{X}{X_i}{Y}$ (\hyperref[VI.prop1.3]{1.3}). We then have
+the corresponding epimorphic family
+$f^{\ast}(X_i)\to f^{\ast}(Y)$, such that for every $i$ there is a
+finite epimorphic family
+$f^{\ast}(X_j)\to f^{\ast}(\fprod{X}{X_i}{Y})\simeq
+\fprod{f^{\ast}(X)}{f^{\ast}(X_i)}{f^{\ast}(Y)}$, whose composite
+with the projection $\pr_2$ to $f^{\ast}(X_i)$ is a quasi-compact
+morphism $f^{\ast}(X_j)\to f^{\ast}(X_i)$ by hypothesis (i bis). It
+follows (\hyperref[VI.cor1.11]{1.11} (i)) that, for every $i$,
+$\pr_2:\fprod{f^{\ast}(X)}{f^{\ast}(X_i)}{f^{\ast}(Y)}$ is
+quasi-compact, and hence (\hyperref[VI.prop1.10]{1.10} (ii)) that
+$f^{\ast}(u):f^{\ast}(X)\to f^{\ast}(Y)$ is quasi-compact.
+
+It remains\pageoriginale to prove (i) $\Rightarrow$ (ii) and
+(ii bis) $\Rightarrow$ (i); the implication (ii) $\Rightarrow$
+(ii bis) is immediate, and (ii ter) is a special case of (ii bis).
+The implication (i) $\Rightarrow$ (ii) is immediate: indeed, an
+object $X$ of $E_{/Y}$ is quasi-compact (\resp quasi-separated) if
+and only if its structural morphism $X\to Y$ (\resp its diagonal
+morphism $X\to\fprod{X}{X}{Y}$) is quasi-compact
+(\hyperref[VI.cor2.7]{2.7}), and the same criterion of
+quasi-compactness and quasi-separatedness applies to
+$f^{\ast}_Y(X')$. Finally, let us prove (ii bis) $\Rightarrow$ (i).
+Let $u:X\to Y$ be a quasi-compact arrow in $E$; we must show that
+$f^{\ast}(u)$ is quasi-compact. Since the $Y'_{\alpha}$ cover the
+final object of $E'$, it is enough to prove that the
+$f^{\ast}(u)|Y'_{\alpha}$ are quasi-compact
+(\hyperref[VI.prop1.10]{1.10} (ii)). These morphisms are precisely
+the $f^{\ast}_{v_\alpha}(u|Y_{\alpha})$, so we are reduced to proving
+the following result.
+
+\begin{enonce*}{Corollary 3.6}\etiquette[3.6]{VI.cor3.6}
+Let $f:E'\to E$ be a coherent morphism of locally coherent topoi.
+Then, for every quasi-compact arrow $u$ of $E$, $f^{\ast}(u)$ is
+quasi-compact.
+\end{enonce*}
+
+By the implication (i bis) $\Rightarrow$ (i) of
+\hyperref[VI.prop3.5]{3.5} already proved, it is enough to show that,
+if $u:X\to Y$ is an arrow of $E$ with $X,Y$ coherent, then
+$f^{\ast}(u)$ is a quasi-compact morphism. This follows immediately
+from the hypothesis on $f$, which implies that $f^{\ast}(X)$ and
+$f^{\ast}(Y)$ are coherent as well.
+
+\begin{enonce*}{Definition 3.7}\etiquette[3.7]{VI.def3.7}
+Let $f:E'\to E$\pageoriginale be a morphism of locally coherent
+topoi. We say that $f$ is \emph{locally coherent} if it satisfies the
+equivalent conditions of \hyperref[VI.prop3.5]{3.5}.
+\end{enonce*}
+
+Observe that ``locally'' means locally on the source.
+
+\setcounter{subsection}{7}
+\setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[3.7.1]{VI.subsubsec3.7.1}
+This notion again depends only on the isomorphism class of the
+morphism of topoi $f$, and it is plainly stable under composition of
+morphisms of topoi. Moreover, by \hyperref[VI.prop3.5]{3.5}, if $f$
+is coherent then it is locally coherent; the converse holds if $E'$
+and $E$ are coherent (by \hyperref[VI.prop3.5]{3.5} (ii bis)).
+Criterion \hyperref[VI.prop3.5]{3.5} (ii bis) immediately gives the
+following criterion:
+
+\begin{enonce*}{Corollary 3.7}\etiquette[3.7]{VI.cor3.7}
+Let $f:E'\to E$ be a morphism of locally coherent topoi, let
+$(Y_i)_{i\in I}$ and $({Y'}_i)_{i\in I}$ be two families of objects
+of $E$ and $E'$, and, for every $i\in I$, let
+$v_i:Y'_i\to f^{\ast}(Y_i)$ be a morphism, whence a morphism of topoi
+$$
+f_{v_i}:E'_{/Y'_i}\to E_{/Y_i}{\quoi}.
+$$
+Suppose that the ${Y'}_i$ cover the final object of $E'$. Then $f$ is
+locally coherent if and only if, for every $i\in I$, $f_{v_i}$ is
+locally coherent.
+\end{enonce*}
+
+In particular, applying this to the identity morphism of an induced
+topos gives:
+
+\begin{enonce*}{Corollary 3.8}\etiquette[3.8]{VI.cor3.8}
+Let $E$ be a locally coherent topos, and let $v:X\to Y$ be an arrow of
+$E$. Then the morphism of induced topoi $E_{/X}\to E_{/Y}$ defined by
+$v$ is locally coherent.
+\end{enonce*}
+
+\begin{enonce*}{Remark 3.9}\etiquette[3.9]{VI.rem3.9}
+It seems\pageoriginale that all morphisms of algebraic topoi
+encountered in practice are locally coherent (which is why the term
+``locally coherent'' is probably not destined to be used very often).
+Equivalently, the morphisms between coherent topoi encountered in
+practice are coherent. Nevertheless, one can construct noncoherent
+morphisms between coherent topoi and, more particularly, a
+noncoherent morphism from the punctual topos \emph{(IV \hyperref[IV.subsec2.2]{2.2})} to a
+Noetherian topos $E$, \emph{\cf \hyperref[VI.exer2.17]{2.17} i)}.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Examples 3.10}\etiquette[3.10]{VI.exem3.10}
+(\emph{Topoi associated with schemes}.)
+Return to the example \hyperref[VI.subsec1.22]{1.22} of the category
+$(\Sch)$ with the topologies $T_i$ of \SGA IV 6.3. For every scheme
+$X$, let $X_{T_i}$ be the $𝒱$-topos defined by the induced site
+$(\Sch)_{/X}$. A morphism of schemes $f:X\to Y$ then defines a
+morphism of topoi $f_{T_i}:X_{T_i}\to Y_{T_i}$, and it follows from
+\hyperref[VI.prop3.4]{3.4} and \hyperref[VI.subsec1.22]{1.22} that
+this morphism of topoi is quasi-compact (\resp quasi-separated,
+\resp coherent) if and only if the morphism of schemes $f$ is
+quasi-compact (\resp quasi-separated, \resp coherent) in the usual
+sense of \EGA IV 1. In any event, $f_{T_i}$ is locally coherent by
+\hyperref[VI.cor3.8]{3.8}.
+
+One may also associate with a scheme $X$ the $𝒰$-topoi $\Top(X)$ and
+$\Top(X_{\text{ét}})$ as in \hyperref[VI.subsubsec1.22.1]{1.22.1},
+and to every morphism of schemes $f:X\to Y$ there are then associated
+morphisms $\Top(f)$ and $\Top(f_{\text{ét}})$ of the corresponding
+topoi. Let $T(f)$ denote either of these two morphisms of
+topoi.\pageoriginale One verifies immediately by
+\hyperref[VI.prop3.2]{3.2} that this morphism of topoi is always
+locally coherent, and that it is quasi-compact (\resp quasi-separated,
+\resp coherent) if and only if the morphism of schemes $f$ is
+quasi-compact (\resp quasi-separated, \resp coherent) in the usual
+sense.
+
+These observations show once again that the terminology introduced
+in the present section is compatible with the accepted terminology
+of scheme theory, and therefore deserves to be accepted by even the
+most recalcitrant reader.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 3.11}\etiquette[3.11]{VI.exer3.11}
+(\emph{Coherent topoi and pretopoi}.)
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph {enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item A $𝒰$-pretopos (or simply a pretopos) is a category $C$
+  satisfying the following conditions:
+\begin{enumerate}
+\renewcommand{\theenumii}{\arabic{enumii}}
+\renewcommand{\labelenumii}{\theenumii)}
+\item Finite projective limits are representable in $C$.
+
+\item Finite coproducts are representable in $C$, and they are
+  disjoint and universal.
+
+\item Equivalence relations in $C$ are effective, and every
+  epimorphism in $C$ is universally effective.
+
+\item $C$ is equivalent to a category $\in 𝒰$.
+\end{enumerate}
+Show that if $E$ is a coherent $𝒰$-topos, then the full subcategory
+$E_{\coh}$ of $E$ formed by its coherent objects is a $𝒰$-pretopos,
+and that the inclusion functor $E_{\coh}\to E$ is left exact,
+commutes with\pageoriginale finite coproducts, and commutes with
+passage to the quotient by an equivalence relation. (Use
+\hyperref[VI.subsubsec1.5.3]{1.5.3}, \hyperref[VI.cor1.15]{1.15},
+and \hyperref[VI.cor1.17.1]{1.17.1}.) Show that the topology induced
+by $E$ on $C$ is the ``precanonical'' topology, \ie the topology whose
+covering families $X_i\to X$ are those that admit a \emph{finite}
+subfamily covering for the canonical topology of $C$. Consequently,
+$E$ can be recovered up to equivalence from the pretopos
+$C=E_{\coh}$ as the topos $C^{\sim}$ (with $C$ endowed with its
+precanonical topology).
+
+\item Let $C$ be a $𝒰$-pretopos. Endow $C$ with the precanonical
+  topology. Show that every morphism $f$ of $C$ factors as $f''f'$,
+  with $f'$ an epimorphism and $f''$ a monomorphism. Show that the
+  topos $E=C^{\sim}$ is coherent and that the canonical functor
+  $\epsilon:C\to E$ induces an equivalence from $C$ to the
+  subcategory $E_{\coh}$ of $E$. (First show that $\varepsilon$ is a
+  fully faithful left exact functor commuting with finite coproducts
+  and with passage to the quotient by an equivalence relation, and
+  then that a coherent subobject in $E$ of an object of $C$ lies in
+  the essential image of $C$.) Consequently, the $𝒰$-pretopos $C$
+  can be recovered up to equivalence of categories from its associated
+  $𝒰$-topos $E=C^{\sim}$.
+
+\item Let $C$ and $C'$ be two $𝒰$-pretopoi. Show that a functor
+  $\varphi:C'\to C$ is a morphism of sites from $C$ to $C'$ (for the
+  precanonical topologies) if and only if $\varphi$ is left exact and
+  commutes with finite coproducts and with passage to a quotient by an
+  equivalence relation.
+
+\item With the\pageoriginale notation of c), suppose that $C$ and
+  $C'$ are associated with two coherent $𝒰$-topoi $E,E'$ as in a).
+  Show that the canonical functor (IV \hyperref[IV.subsubsec4.9.3]{4.9.3})
+$$
+\Mmorsite(C,C')\to\Hhomtop(E,E')
+$$
+induces an equivalence from its source (described explicitly in c))
+to the full subcategory of its target formed by the \emph{coherent}
+morphisms of topoi $E\to E'$. A quasi-inverse is obtained by
+associating with every coherent morphism of topoi $f:E\to E'$ the
+functor $E'_{\coh}=C'\to E_{\coh}=C$ induced by $f^{\ast}$.
+
+\item Let $C$ be a $𝒰$-pretopos and $E=C^{\sim}$. Express directly in
+  terms of exactness properties of $C$ the equivalent conditions of
+  \hyperref[VI.cor1.25]{1.25} (consult
+  \hyperref[VI.exer1.28]{1.28} b). Show that an object $X$ of $C$ is
+  Noetherian in $E$ if and only if every increasing sequence of
+  subobjects of $X$ in $C$ is stationary, and hence that $E$ is
+  Noetherian if and only if every object of $C$ satisfies the
+  preceding condition.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 3.12}\etiquette[3.12]{VI.exer3.12}
+A topos $E$ is called a \emph{finite} topos if there exists a finite
+category $C$ such that $E$ is equivalent to $\widehat{C}$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The topos $E$ is finite if and only if $E$ has enough essential
+  points (IV \hyperref[IV.exer7.6]{7.6} b)) and the category $\Ppointess(E)$ of essential
+  points of $E$ is equivalent to a finite category. (Use IV \hyperref[IV.exer7.6]{7.6} d)
+  and h).)
+
+\item Suppose\pageoriginale that $E$ is finite. Prove that every point
+  of $E$ is essential. Prove that the 2-functors
+  $E\mapsto\Ppoint(E)$ and $C\mapsto\widehat{C}$ establish
+  2-equivalences between the 2-category of finite topoi $E$ and the
+  2-category of Karoubian categories (IV \hyperref[IV.exer7.5]{7.5} a)) $C$ that are
+  equivalent to finite categories, and that every morphism of finite
+  topoi is essential (IV \hyperref[IV.exer7.6]{7.6} a)). (Use a) and IV \hyperref[IV.exer7.6]{7.6} h).)
+
+\item Suppose that $E=\widehat{C}$, with $C$ equivalent to a finite
+  category, and let $F$ be a coherent topos. Recall (IV \hyperref[IV.eq4.6.3.1]{(4.6.3.1)})
+  that morphisms of topoi $f:E\to F$ correspond to functors
+  $u:C\to\Ppoint(F)$. Show that $f$ is coherent if and only if $f$
+  carries every coherent point of $E$ (\hyperref[VI.def3.1]{3.1}) to
+  a coherent point of $F$, or equivalently if, for every $X\in\ob C$,
+  $u(X)$ is a \emph{coherent} point of $F$. (Use
+  \hyperref[VI.prop3.2]{3.2} and \hyperref[VI.exer2.17]{2.17} g).) Conclude that every
+  morphism $f:E\to F$ from a finite topos to a finite topos is
+  coherent.
+
+\item Let $X$ be a sober topological space (IV \hyperref[IV.subsubsec4.2.1]{4.2.1}). The topos
+  $\Top(X)$ (IV \hyperref[IV.subsec2.1]{2.1}) is finite if and only if $X$ is a finite set.
+  (Use IV \hyperref[IV.subsubsec7.1.6]{7.1.6}.)
+\end{enumerate}
+\end{enonce*}
+

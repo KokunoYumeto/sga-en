@@ -1,0 +1,250 @@
+
+\section*{9. Quotient sheaves}
+\phantomsection\label{sec:sga3-VIB-9}%
+\addcontentsline{toc}{section}{9. Quotient sheaves}
+
+The present section is essentially limited to recalling, in the
+particular case of homogeneous spaces of groups, well-known general
+facts concerning passage to the quotient by flat equivalence relations
+(cf.\ Expos\'e~IV).
+
+\medskip
+\phantomsection\label{def:sga3-VIB-9.1}%
+\noindent\textbf{Definition 9.1.---}
+\emph{Given a monomorphism \(u:G'\to G\) of \(S\)-groups, we
+write \(G/G'\) \textup{(respectively, \(G'\backslash G\))} and call it
+the \textup{right \textup{(respectively, left)} quotient sheaf of
+\(G\) by \(G'\)}, meaning the quotient sheaf, for the
+\textup{(fpqc)} topology, of \(G\) by the equivalence relation defined
+by the monomorphism}
+\phantomsection\label{form:sga3-VIB-9.1-equivalence-relations}%
+\[
+\begin{aligned}
+  G\times_S G'
+    &\xrightarrow{\ \delta\circ(\operatorname{id}_G\times u)\ }
+      G\times_S G,\\[-1mm]
+  &\hspace{7em}\textup{\emph{\textup{(respectively,}}}\\[-1mm]
+  G'\times_S G
+    &\xrightarrow{\ \gamma\circ(u\times\operatorname{id}_G)\ }
+      G\times_S G\textup{\emph{\textup{),}}}
+\end{aligned}
+\]
+\emph{where \(\delta\) \textup{(respectively, \(\gamma\))} denotes
+the automorphism of \(G\times_SG\) defined, for
+\(g,h\in G(T)\), by}
+\[
+  (g,h)\longmapsto(g,gh)
+  \qquad
+  \bigl(\textup{respectively, }(h,g)\longmapsto(hg,g)\bigr).
+\]
+
+\medskip
+\phantomsection\label{prop:sga3-VIB-9.2}%
+\noindent\textbf{Proposition 9.2.---}
+\emph{Let \(u:G'\to G\) be a monomorphism of \(S\)-groups.
+Suppose that \(G/G'\) is representable by an \(S\)-scheme \(G''\).
+Then:}
+\begin{enumerate}
+\item[\textup{(i)}]\phantomsection\label{concl:sga3-VIB-9.2-i}
+  \emph{The canonical morphism \(p:G\to G''\) is a covering for
+  the \textup{(fpqc)} topology.}
+
+\item[\textup{(ii)}]\phantomsection\label{concl:sga3-VIB-9.2-ii}
+  \emph{If \(\varepsilon''=p\circ\varepsilon\)
+  \textup{(this morphism is called the unit section of \(G''\))},
+  the following diagrams are cartesian:}
+  \begin{center}
+    \phantomsection\label{diag:sga3-VIB-9.2-cartesian}%
+    \begin{tabular}{c@{\qquad}c}
+      \begin{tikzcd}[row sep=large,column sep=large]
+        G\times_SG'
+          \arrow[r,"{\mu\circ(\operatorname{id}_G\times u)}"]
+          \arrow[d,"\operatorname{pr}_1"'] &
+        G \arrow[d,"p"] \\
+        G \arrow[r,"p"'] &
+        G''
+      \end{tikzcd},
+      &
+      \begin{tikzcd}[row sep=large,column sep=large]
+        G' \arrow[r,"u"] \arrow[d,"\pi'"'] &
+        G \arrow[d,"p"] \\
+        S \arrow[r,"\varepsilon''"'] &
+        G''
+      \end{tikzcd}.
+    \end{tabular}
+  \end{center}
+  \emph{In particular, \(u\) is an immersion.}
+
+\item[\textup{(iii)}]\phantomsection\label{concl:sga3-VIB-9.2-iii}
+  \emph{There exists on \(G''\) a unique structure of an
+  \(S\)-scheme with left operator group \(G\) such that \(p\) is a
+  morphism of \(S\)-schemes with operator group \(G\).}
+
+\item[\textup{(iv)}]\phantomsection\label{concl:sga3-VIB-9.2-iv}
+  \emph{If, in addition, \(G'\) is assumed invariant in \(G\),
+  there exists on \(G''\) a unique \(S\)-group structure such that
+  \(p\) is a morphism of \(S\)-groups.}
+
+\item[\textup{(v)}]\phantomsection\label{concl:sga3-VIB-9.2-v}
+  \emph{Let \(S_0\) be an \(S\)-scheme, and put
+  \(G_0=G\times_SS_0\) and \(G'_0=G'\times_SS_0\). Then
+  \(G_0/G'_0\) is representable by
+  \(G''_0=G''\times_SS_0\).}%
+  \footnote{\label{note:sga3-VIB-85}Editor's note: that is, the
+  quotient is universal; cf.\ Expos\'e~IV, \S3.}
+
+\item[\textup{(vi)}]\phantomsection\label{concl:sga3-VIB-9.2-vi}
+  \emph{Let \(\mathscr P\) be a property of an \(S\)-morphism.
+  Suppose that \(\mathscr P\) is stable under base change. If
+  \(p:G\to G''\) has property \(\mathscr P\), then the structural
+  morphism \(\pi':G'\to S\) has property \(\mathscr P\) as well.}
+
+\item[\textup{(vii)}]\phantomsection\label{concl:sga3-VIB-9.2-vii}
+  \emph{Let \(\mathscr P\) be a property of an \(S\)-morphism.
+  Suppose that \(\mathscr P\) is local for the \textup{(fpqc)}
+  topology \textup{(cf.\
+  \hyperref[par:sga3-VIB-2.0]{2.0} and
+  \hyperref[rem:sga3-VIB-2.1.2]{2.1.2})}. Then \(p:G\to G''\)
+  has property \(\mathscr P\) if and only if
+  \(\pi':G'\to S\) has property \(\mathscr P\).}%
+  \begingroup
+  \renewcommand{\thefootnote}{\fnsymbol{footnote}}%
+  \footnote[1]{\label{note:sga3-VIB-9.2-vii-base}
+  Translator's note: the French source prints \(S'\) as the target of
+  \(\pi'\) in this clause. No \(S'\) is defined here, and clause
+  \textup{\SGARefLink{concl:sga3-VIB-9.2-vi}{(vi)}} identifies \(\pi'\) as the structural morphism
+  \(G'\to S\); that target is used here.}%
+  \endgroup
+
+\item[\textup{(viii)}]\phantomsection\label{concl:sga3-VIB-9.2-viii}
+  \emph{Let \(\mathscr P\) be a property of an \(S\)-morphism.
+  Suppose that \(\mathscr P\) is local for the \textup{(fpqc)}
+  topology and stable under composition. If the structural
+  morphisms \(G''\to S\) and \(G'\to S\) have property
+  \(\mathscr P\), then the structural morphism \(G\to S\) has
+  property \(\mathscr P\) as well.}
+
+\item[\textup{(ix)}]\phantomsection\label{concl:sga3-VIB-9.2-ix}
+  \emph{If \(G\) is reduced, then \(G''\) is reduced.}
+
+\item[\textup{(x)}]\phantomsection\label{concl:sga3-VIB-9.2-x}
+  \emph{For \(G''\) to be separated over \(S\), it is necessary
+  and sufficient that \(u\) \textup{(or, equivalently,
+  \(\varepsilon''\))} be a closed immersion.}
+
+\item[\textup{(xi)}]\phantomsection\label{concl:sga3-VIB-9.2-xi}
+  \emph{For \(G'\) to be flat over \(S\), it is necessary and
+  sufficient that \(p\) be flat \textup{(or, equivalently,
+  faithfully flat)}.}
+
+  \emph{In this case, for \(G''\) to be flat over \(S\), it is
+  necessary and sufficient that \(G\) be flat over \(S\).}
+
+\item[\textup{(xii)}]\phantomsection\label{concl:sga3-VIB-9.2-xii}
+  \emph{For \(G'\) to be flat and locally of finite presentation
+  over \(S\), it is necessary and sufficient that \(p:G\to G''\)
+  be faithfully flat and locally of finite presentation.}
+
+  \emph{In this case, for \(G''\) to be locally of finite
+  presentation \textup{(respectively, locally of finite type, of
+  finite type, smooth, \'etale, unramified, locally quasi-finite,
+  quasi-finite)} over \(S\), it is enough that \(G\) have the same
+  property over \(S\) \textup{(and the condition is also necessary
+  in the first two cases; cf.\ \textup{(viii)})}.}
+
+\item[\textup{(xiii)}]\phantomsection\label{concl:sga3-VIB-9.2-xiii}
+  \emph{Suppose that \(G'\) is flat and of finite presentation
+  over \(S\).}
+  \begin{enumerate}
+  \item[\textup{a)}]\phantomsection\label{concl:sga3-VIB-9.2-xiii-a}
+    \emph{Then \(p\) is of finite presentation and faithfully
+    flat.}
+  \item[\textup{b)}]\phantomsection\label{concl:sga3-VIB-9.2-xiii-b}
+    \emph{Moreover, for \(G\) to be of finite presentation over
+    \(S\), it is necessary and sufficient that \(G''\) be so.}
+  \end{enumerate}
+\end{enumerate}
+
+\emph{Proof.}
+Recall that the equivalence relation under consideration is
+universally effective (IV, \SGARefLink{sga3:iv:proposition:4:4:9}{4.4.9}). Assertions
+\textup{(i)}, \textup{(iii)}, \textup{(iv)}, \textup{(v)}, and the
+first assertion of \textup{(ii)} then follow, respectively, from
+IV, \SGARefLink{sga3:iv:proposition:4:4:3}{4.4.3}, 5.2.2, 5.2.4, 3.4.5, and \SGARefLink{thm:sga3-VIA-3.3.2}{3.3.2}\textup{(iii)}. The second
+assertion of \textup{(ii)} follows from the first, as shown by the
+following cartesian diagram, since
+\[
+  (G\times_SG')\times_GS
+\]
+is isomorphic to \(G'\):
+\begin{center}
+  \phantomsection\label{diag:sga3-VIB-9.2-proof-cartesian}%
+  {\small
+  \begin{tikzcd}[row sep=large,column sep=large]
+    G'
+      \arrow[r,"{((\varepsilon\circ\pi'),\operatorname{id}_{G'})}"]
+      \arrow[d,"\pi'"'] &
+    G\times_SG'
+      \arrow[r,"{\mu\circ(\operatorname{id}_G\times u)}"]
+      \arrow[d,"\operatorname{pr}_1"] &
+    G \arrow[d,"p"] \\
+    S \arrow[r,"\varepsilon"'] &
+    G \arrow[r,"p"'] &
+    G''
+  \end{tikzcd}}
+\end{center}
+Indeed, \(\varepsilon''\) is an \(S\)-section of \(G''\), hence an
+immersion (EGA~I, 5.3.13); by the preceding cartesian diagram the same
+is true of \(u\), which completes the proof of \textup{(ii)}.
+Moreover, \textup{(vi)} is an immediate consequence of the second
+cartesian diagram in \textup{(ii)}.
+
+We prove \textup{\SGARefLink{concl:sga3-VIB-9.2-vii}{(vii)}}. By \textup{\SGARefLink{concl:sga3-VIB-9.2-i}{(i)}}, \(p\) is a covering for
+the \textup{(fpqc)} topology. Hence, by \textup{(ii)}, in order to
+show that \(p\) has property \(\mathscr P\), it is enough to show
+that the first projection
+\[
+  \operatorname{pr}_1:G\times_SG'\longrightarrow G
+\]
+has property \(\mathscr P\). This follows from the stability of
+\(\mathscr P\) under base change, since
+\(\operatorname{pr}_1\) is obtained from \(\pi'\) by base change.
+
+It is clear that \textup{(viii)} follows from \textup{(vii)}, since
+\[
+  \pi=\pi''\circ p,
+\]
+where \(\pi'':G''\to S\) denotes the structural morphism.
+
+We prove \textup{\SGARefLink{concl:sga3-VIB-9.2-ix}{(ix)}}. By \textup{\SGARefLink{concl:sga3-VIB-9.2-i}{(i)}}, \(p\) is an epimorphism.
+Since \(G\) is reduced, \(p\) factors through the immersion
+\[
+  G''_{\mathrm{red}}\longrightarrow G'',
+\]
+which is therefore also an epimorphism, and hence an isomorphism
+(IV, \SGARefLink{sga3:iv:lemma:4:4:4}{4.4.4}).
+
+We prove \textup{(x)}. If \(G''\) is separated over \(S\), then
+\(\varepsilon''\) is a closed immersion by EGA~I, 5.4.6. On the
+other hand, we saw in \textup{(ii)} that \(\varepsilon''\) is a
+closed immersion if and only if \(u\) is. Finally, if \(u\) is a
+closed immersion, then so is
+\[
+  \delta\circ(\operatorname{id}_G\times u):
+    G\times_SG'\longrightarrow G\times_SG.
+\]
+It follows from
+\hyperref[lem:sga3-VIB-9.2.1]{Lemma~9.2.1 below} that \(G''\) is
+separated over \(S\).
+
+Assertion \textup{(xi)} follows from \textup{(vii)} and
+EGA~IV\(_2\), 2.2.13.
+
+Assertion \textup{(xii)} follows from \textup{(vii)},
+EGA~IV\(_4\), 17.7.5 and 17.7.7, and the fact that \(p\) is
+universally open: for every \(s\in S\), if the underlying space of
+\(G_s\) is discrete, then the same is true of the underlying space
+of \(G''_s\).
+
+Finally, assertion \textup{(xiii)} follows from \textup{(vii)},
+\textup{(viii)}, and EGA~IV\(_4\), 17.7.5.

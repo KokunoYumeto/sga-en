@@ -1,0 +1,259 @@
+\subsection{Hypercoverings}\etiquette[7.3]{V.subsec7.3}
+
+\setcounter{subsubsection}{-1}
+\subsubsection{}\etiquette[7.3.0]{V.subsubsec7.3.0}
+Let $C$ be a site belonging to the universe $𝒰$, in which fiber
+products and products of two objects are representable. Denote by
+$C^{\wedge}$ the topos of $𝒰$-presheaves on $C$, and by
+$C^{\sim}$ the topos of $𝒰$-sheaves on $C$. An object $K$ of
+$C^{\wedge}$ is called \emph{semi-representable} if it is isomorphic
+to a coproduct of representable presheaves.
+
+Let $SR(C)$ be the full subcategory of $C^{\wedge}$ defined by the
+semi-representable objects. In the category $SR(C)$, projective
+limits indexed by finite nonempty categories are representable, and
+the inclusion functor $SR(C) \hookrightarrow C^{\wedge}$ commutes
+with these finite projective limits. By a remark already made, it
+follows that if $K_∙$ is a semi-simplicial object truncated in degree
+$n$ in $C^{\wedge}$, all of whose objects\pageoriginale are
+semi-representable, then the extension $i^+_n(K_∙)$ has
+the same property. Thus, if $K_∙$ is a semi-simplicial object of
+$C^{\wedge}$ all of whose objects are semi-representable, then, for
+every $n$, the object $\cosk_n (K_∙)$ has the same property.
+
+\subsubsection{Definitions and notation}\etiquette[7.3.1]{V.subsubsec7.3.1}
+
+\paragraph{}\etiquette[7.3.1.1]{V.par7.3.1.1}
+
+Let $p > 0$ be an integer. A semi-simplicial object $K_∙$ of
+$C^{\wedge}$ is called a \emph{hypercovering of type} $p$ of $C$,
+or, when no confusion can result, a hypercovering of type $p$, if it
+has the following properties:
+\begin{itemize}
+\item[HR1)] For every integer $n \geq 0$, $K_n$ is semi-representable.
+
+\item[HR2)] The canonical morphism $K_∙ \to \cosk_p (K_∙)$ is an
+isomorphism.
+
+\item[HR3)] For every integer $n \geq 0$, the canonical morphism of
+presheaves $K_{n + 1} \to (\cosk_n(K_∙))_{n + 1}$ is a covering
+morphism of presheaves (II \hyperref[II.rem6.2]{6.2}). The canonical morphism of
+presheaves $K_{0} \to e$, where $e$ is the final object of
+$C^{\wedge}$, is a covering morphism of presheaves.
+\end{itemize}
+
+\paragraph{}\etiquette[7.3.1.2]{V.par7.3.1.2}
+A hypercovering of type $p$ is a hypercovering of type $q$ for every
+$q \geq p$. A semi-simplicial object $K_∙$ will be called a
+\emph{hypercovering} (of $C$) if it has properties HR 1) and HR 3).
+
+\paragraph{}\etiquette[7.3.1.3]{V.par7.3.1.3}
+Denote by $HR_p$ (\resp $HR$), and call the category of
+hypercoverings of type $p$ (\resp the category of hypercoverings),
+the following category:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph {enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The objects of $HR_p$ (\resp $HR$) are the hypercoverings of
+  type $p$ (\resp the hypercoverings).
+
+\item Let $K_∙$ and $L_∙$ be two objects of $HR_p$ (\resp $HR$). A
+  morphism of $HR_p$ (\resp $HR$) with source $K_∙$ and target $L_∙$
+  is a morphism $v_∙ : K_∙ \to L_∙$ of semi-simplicial objects of
+  $C^{\wedge}$.
+\end{enumerate}
+
+\paragraph{}\etiquette[7.3.1.4]{V.par7.3.1.4}
+Let $C$ be a site in which fiber products are representable, and let
+$X$ be an object of $C$. A hypercovering of $X$ (\resp a
+hypercovering of type $p$ of $X$) means a hypercovering of the site
+$C/X$ (\resp a hypercovering of type $p$ of $C/X$). The category of
+hypercoverings of $X$ (\resp of hypercoverings of type $p$ of $X$)
+is defined similarly\pageoriginale. There is a sequence of inclusion
+functors
+$$
+\cdots HR_p \hookrightarrow HR_{p + 1} \hookrightarrow \cdots
+\hookrightarrow HR{\quoi}.
+$$
+These functors are fully faithful. We denote by $HR_{\infty}$ the
+inductive limit of the categories $HR_p$.
+
+\setcounter{paragraph}{5}
+\paragraph{}\etiquette[7.3.1.6]{V.par7.3.1.6}
+For every integer $n \geq 0$, denote by $\sheaf{\Delta}_n^c$ the
+standard semi-simplicial object of dimension $n$ with values in the
+category of sets, \ie the functor on $𝚫$ represented by the
+ordered set $[0, n]$. Also denote by $\sheaf{\Delta}_n^c$ the
+presheaf on $C$, with values in the category of semi-simplicial sets,
+that is constant with value $\sheaf{\Delta}_n$. Thus the presheaf
+$\sheaf{\Delta}_n^c$ is a presheaf of semi-simplicial sets. The two
+canonical injections from $\Delta_0$ into $\Delta_1$ define two
+morphisms of semi-simplicial presheaves:
+\[
+\xymatrix@C=2cm@M=.25cm{
+\underline{\Delta}_0^{c} \ar@<3pt>[r]^{e_{0}} \ar@<-3pt>[r]_{e_{1}} &
+\underline{\Delta}_1^c ,
+}
+\]
+and consequently define, for every semi-simplicial presheaf $K_∙$,
+two canonical injections:
+\[
+\xymatrix@C=2cm@M=.25cm{
+K_{∙} \ar@<3pt>[r]^(.45){e_{0}} \ar@<-3pt>[r]_(.45){e_{1}}&  K_{∙}
+\times \underline{\Delta}_1^c .
+}
+\]
+Two morphisms
+$
+\xymatrix@C=1cm@M=.25cm{
+K_{∙} \ar@<3pt>[r]^(.45){u_{0}} \ar@<-3pt>[r]_(.45){u_{1}}&  L_{∙}
+}
+$
+of semi-simplicial presheaves are called \emph{homotopic morphisms}
+if there exists a morphism
+$$
+v : K_∙ \times \sheaf{\Delta}_1^c \to L_∙
+$$
+such that the diagrams
+\[
+\xymatrix@R=.5cm@C=1.25cm{
+K_∙ \ar[rr]^{e_i} \ar[rdd]_{u_i}&   &K_{∙}\times \sheaf{\Delta}_1^c
+\ar[ldd]^v\\
+                                    &   & &\txt{i = 0,1}\\
+                       & L_{∙} &
+}
+\]
+are\pageoriginale commutative. The morphism $v$ is called a
+\emph{homotopy joining $u_0$ to $u_1$}. The relation ``$u_0$ and
+$u_1$ are two homotopic morphisms from $K_∙$ to $L_∙$'' is not, in
+general, an equivalence relation. Nevertheless, the equivalence
+relation generated by this relation is compatible with composition
+of morphisms. This therefore allows us to define the category of
+semi-simplicial presheaves up to homotopy by passing to the quotient
+by the equivalence relation generated by the homotopy relation.
+
+\paragraph{}\etiquette[7.3.1.7]{V.par7.3.1.7}
+In this way we define the categories $\sheaf{HR}_p$,
+$\sheaf{HR}_{\infty}$, and $\sheaf{HR}$, the \emph{categories of
+hypercoverings up to homotopy}.
+
+\begin{enonce*}{Theorem 7.3.2}\etiquette[7.3.2]{V.thm7.3.2}
+Let $C$ be a site satisfying the conditions of
+\hyperref[V.subsubsec7.3.0]{7.3.0}.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The category $\sheaf{HR}^{0}_p$ (\resp $\sheaf{HR}^{0}$) is
+  filtered \emph{(I \hyperref[I.def2.7]{2.7})}.
+
+\item Let $K_∙$ be an object of $HR_p$ (\resp of $HR$), let $n$ be
+  an integer such that $0 \leq n \leq p$ (\resp $0 \leq n$), and
+let
+$$
+u : X \to K_n
+$$
+be a covering morphism of presheaves. There exists an object $L_∙$
+of $HR_p$ (\resp of $HR$) and a morphism $f : L_∙ \to K_∙$ such that
+the morphism
+$$
+f_n : L_n \to K_n
+$$
+factors through $u$.
+
+\item The associated semi-simplicial sheaves \emph{(II \hyperref[II.def3.5]{3.5})} of
+hypercoverings are acyclic (\hyperref[V.subsubsec7.2.0]{7.2.0}) in
+strictly positive degrees. The $0$-th homology sheaf is isomorphic
+to the sheaf associated to the constant presheaf $𝒵$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+We prove 3). Let ${K}^{\sim}_{∙}$ be the semi-simplicial sheaf
+associated to $K_∙$. The ``associated sheaf'' functor commutes with
+the functor $\cosk_n$ (\hyperref[V.prop7.1.2]{7.1.2}. 2)). It follows
+that the semi-simplicial sheaf ${K}^{\sim}_{∙}$ has the following
+properties:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph {enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The canonical morphism $K_0 \to e$ is an epimorphism of
+  sheaves.
+
+\item For every integer $n \geq 0$, the canonical morphism
+  $K_{n + 1} \to (\cosk_n(K_∙))_{n + 1}$ is an epimorphism of
+  sheaves.
+\end{enumerate}
+\end{enonce*}
+
+For $n \geq 0$, put ${L_∙}_n = \cosk_n {K}^{\sim}_{∙}$. Then, for
+every $n$, there is a sequence of morphisms of semi-simplicial
+sheaves
+$$
+{K_∙}^{\sim} \xrightarrow{u_n}{L_∙}_n\xrightarrow{v_n} {L_∙}_{n - 1}
+\cdots \to {L_∙}_{0} \xrightarrow{v_0} e_∙{\quoi},
+$$
+and\pageoriginale, for every $j$, $0 \leq j \leq n$, $v_j$ has the
+properties of \hyperref[V.lem7.2.1]{7.2.1}. Moreover, the morphism
+$u_n$ induces an isomorphism on the components of degree $\leq n$.
+It then follows from \hyperref[V.lem7.2.1]{7.2.1}, by induction on
+$n$, that $K_∙$ is acyclic.
+
+To prove 1) and 2), we introduce some terminology.
+
+\begin{enonce*}{Definition 7.3.3}\etiquette[7.3.3]{V.def7.3.3}
+Let $f : X_{∙} \to Y_∙$ be a morphism of semi-simplicial presheaves.
+We say that $f$ is \emph{special of type} $p$ (\resp
+\emph{special}) if:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The objects $X_{∙}$ and $Y_∙$ are canonically isomorphic to
+  their coskeleta of order $p$, and $\cosk_p (f) = f$ (\resp no
+  conditions are imposed on $f$, \sisi{$X^{∙}$}{$X_{∙}$}, or
+  \sisi{$Y^{∙}$}{$Y_{∙}$}).
+
+\item For every integer $n$ such that $0 \leq n \leq p$ (\resp
+  $0 \leq n$), the morphism $\Phi_{n + 1}$ appearing in the diagram
+  below is covering:
+\[
+\xymatrix@C=1cm@R=1.25cm{
+X_{n+1} \ar[rrr]^{f_{n+1}} \ar[rd]^{\Phi_{n+1}} \ar[dd]       & & & Y_{n+1}\ar[dd]\\
+                                    &P_{n+1} \ar[ld] \ar[rru]& &\\
+(\cosk_n X_{∙})_{n+1}\ar[rrr]_{(\cosk_n f)_{n+1}}& & &
+(\cosk_n Y_{∙})_{n+1} .
+}
+\]
+(The vertical arrows are defined by the canonical morphisms
+$X_{∙} \to \cosk_n X_{∙}$ and $Y_∙ \to \cosk_n Y_∙$. The object
+$P_{n+1}$ is the fiber product, and $\Phi_{n+1}$ is the unique arrow
+making the diagram commutative.)
+
+\item The morphism $f_0 : X_0 \to Y_0$ is covering.
+\end{enumerate}
+
+A semi-simplicial presheaf $K_∙$ is called special of type $p$
+(\resp special) if the canonical morphism
+$$
+K_∙ \to e_{∙}\quad (e_{∙}\quad \mbox{\rm is the final semi-simplicial object})
+$$
+is special of type $p$ (\resp special), \ie if $K_∙$ satisfies
+conditions \emph{HR 2)} and \emph{HR 3)} (\resp \emph{HR 3)}) of
+\hyperref[V.par7.3.1.1]{7.3.1.1}.
+\end{enonce*}
+
+\begin{enonce*}{Lemma 7.3.4}\etiquette[7.3.4]{V.lem7.3.4}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The\pageoriginale composite of two special morphisms (\resp
+  special morphisms of type $p$) is a special morphism (\resp a
+  special morphism of type $p$).
+
+\item Let $K_∙$ be a special semi-simplicial presheaf (\resp special
+  of type $p$), let $X_{∙}\xrightarrow{f}Y_∙$ be a special morphism
+  (\resp special of type $p$), and let $u : K_∙ \to Y_∙$ be a
+  morphism of complexes. Then the fiber product $P_{∙} =
+  K_∙ ×_{Y_∙} X_∙$ is special (\resp special of type $p$).
+\end{enumerate}
+\end{enonce*}
+
+The proof of this lemma is left to the reader.
+
+\setcounter{subsubsection}{4}

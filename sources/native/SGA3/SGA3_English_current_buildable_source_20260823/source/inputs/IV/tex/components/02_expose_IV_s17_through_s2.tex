@@ -1,0 +1,449 @@
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:lemma:1:7}\textbf{Lemma 1.7.}
+\textit{With the notation of \SGARefLink{sga3:iv:lemma:1:4}{1.4}, if \(u\) and \(v\) are effective
+epimorphisms and \(v\) is a universal epimorphism, then \(uv\) is an
+effective epimorphism.}
+
+To see this, consider the diagram
+\[
+\begin{array}{ccccc}
+  S & \xleftarrow{u} & T & \leftleftarrows & T\times_S T \\
+    &                 & \scriptstyle v\,\Big\uparrow
+                      &                  & \scriptstyle v\times_Sv\,\Big\uparrow \\[-0.25em]
+    &                 & U & \leftleftarrows & U\times_S U \\
+    &                 & \substack{\uparrow\\[-0.6ex]\uparrow}
+                      & \nearrow & \\
+    &                 & U\times_T U & &
+\end{array}
+\tag{1.7.1}\label{sga3:iv:lemma:1:7:eq:1:7:1:01}
+\]
+By hypothesis, the first row and the first column are exact; moreover,
+by \SGARefLink{sga3:iv:corollary:1:5}{1.5} and \SGARefLink{sga3:iv:lemma:1:6}{1.6}, \(v\times_Sv\) is an epimorphism, since \(v\) is a
+universal epimorphism. The conclusion follows by an evident diagram chase.
+Indeed, if an element of \(X(U)\) has the same two images in
+\(X(U\times_SU)\), then it has, \textit{a fortiori}, the same two images in
+\(X(U\times_TU)\), and hence comes from an element of \(X(T)\), since the
+first column is exact.
+
+Since the first row is exact, it remains only to verify that the element in
+question has the same two images in \(X(T\times_ST)\). Because
+\(v\times_Sv\) is an epimorphism, it is enough to verify that their images in
+\(X(U\times_SU)\) are the same, which is indeed the case.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:1:8}\textbf{Proposition 1.8.}
+\textit{Consider morphisms \(U\xrightarrow{v}T\xrightarrow{u}S\). If \(u\)
+and \(v\) are universal effective epimorphisms, then \(uv\) is a universal
+effective epimorphism. If \(uv\) is a universal effective
+epimorphism and \(u\) is squarable, then \(u\) is a universal effective
+epimorphism.}
+
+The first implication follows at once from \SGARefLink{sga3:iv:lemma:1:7}{1.7}. For the second, consider \SGARefLink{sga3:iv:proposition:1:8:eq:1:8:1:01}{the
+following diagram} (of ``bisimplicial'' type):
+\[
+\begin{array}{ccccc}
+  S & \xleftarrow{u} & T & \leftleftarrows & T\times_ST \\
+  \scriptstyle uv\,\Big\uparrow
+    & & \Big\uparrow & & \Big\uparrow \\[-0.25em]
+  U & \longleftarrow & U\times_ST
+    & \leftleftarrows & U\times_ST\times_ST \\
+  \substack{\uparrow\\[-0.6ex]\uparrow}
+    & & \substack{\uparrow\\[-0.6ex]\uparrow}
+    & & \substack{\uparrow\\[-0.6ex]\uparrow} \\[-0.25em]
+  U\times_SU & \longleftarrow & U\times_SU\times_ST
+    & \leftleftarrows & U\times_SU\times_ST\times_ST .
+\end{array}
+\tag{1.8.1}\label{sga3:iv:proposition:1:8:eq:1:8:1:01}
+\]
+The first, second, and third columns are exact by the hypothesis that \(uv\)
+is a universal effective epimorphism. The second row is exact because
+\(U\times_ST\to U\) is an effective epimorphism (it has a section over
+\(U\)), and the same is true of the third row, for the same reason. An
+evident diagram chase then shows that the first row is exact, that is, that
+\(u\) is an effective epimorphism. Since the hypotheses are invariant under
+an arbitrary base change \(S'\to S\), it follows that \(u\) is in fact a
+universal effective epimorphism.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:1:9}\textbf{Corollary 1.9.}
+\textit{Let \(u:X\to Y\) and \(u':X'\to Y'\) be universal effective
+epimorphisms, and suppose that \(Y\times Y'\) exists. Then \(X\times X'\)
+exists and}
+\[
+  u\times u':X\times X'\longrightarrow Y\times Y'
+\]
+\textit{is a universal effective epimorphism.}
+
+The proof is the same as for \SGARefLink{sga3:iv:corollary:1:5}{1.5}, using the diagram
+\[
+\begin{array}{ccccc}
+   & & Y' & \xleftarrow{u'} & X' \\
+   & & \Big\uparrow & & \Big\uparrow \\[-0.25em]
+  X & \longleftarrow & X\times Y' & \longleftarrow & X\times X' \\
+  \scriptstyle u\,\Big\downarrow
+    & & \Big\downarrow & \swarrow_{\scriptstyle u\times u'} & \\[-0.25em]
+  Y & \longleftarrow & Y\times Y' & & .
+\end{array}
+\tag{1.9.1}\label{sga3:iv:corollary:1:9:eq:1:9:1:01}
+\]
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:1:10}\textbf{Corollary 1.10.}
+\textit{Let \(u:T\to S\) be a squarable morphism, and let \(S'\to S\) be a
+base-change morphism that is a universal effective epimorphism. Then \(u\)
+is a universal effective epimorphism if and only if}
+\[
+  u':T'=T\times_SS'\longrightarrow S'
+\]
+\textit{is one:}
+\[
+\begin{array}{ccc}
+  T & \xleftarrow{v'} & T' \\
+  \scriptstyle u\,\Big\downarrow & & \Big\downarrow\,\scriptstyle u' \\[-0.25em]
+  S & \xleftarrow{v} & S'.
+\end{array}
+\tag{1.10.1}\label{sga3:iv:corollary:1:10:eq:1:10:1:01}
+\]
+Only sufficiency requires proof. If \(u'\) is a universal effective
+epimorphism, then so is \(vu'\), by \SGARefLink{sga3:iv:proposition:1:8}{1.8}. Since \(vu'=uv'\), another
+application of \SGARefLink{sga3:iv:proposition:1:8}{1.8} shows that \(u\) is a universal effective epimorphism.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:remark:1:11}\textbf{Remark 1.11.}
+\textit{The same reasoning shows that in \SGARefLink{sga3:iv:corollary:1:10}{1.10} one may replace ``universal
+effective epimorphism'' by ``universal epimorphism,'' by ``universal and
+effective epimorphism,'' or simply by ``epimorphism'' (and in the last case
+the hypothesis that \(u\) be squarable is plainly unnecessary).}
+
+In the proof of \SGARefLink{sga3:iv:proposition:1:8}{1.8} we used \SGARefLink{sga3:iv:proposition:1:12}{the following result}, which deserves to be stated
+explicitly.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:1:12}\textbf{Proposition 1.12.}
+\textit{Let \(u:T\to S\) be a morphism admitting a section. Then \(u\) is an
+epimorphism; if \(T\times_ST\) exists, it is an effective epimorphism; and if,
+in addition, \(u\) is squarable, it is a universal effective epimorphism.}
+
+The first assertion is contained in \SGARefLink{sga3:iv:lemma:1:4:item:a:01}{1.4(a)}, and the third follows at once
+from the second, so it is enough to establish the second. In fact, there is a
+stronger conclusion: for every functor
+\(F:\mathscr C^{\circ}\to\mathbf{Set}\), not necessarily representable, the
+diagram of sets
+\[
+  F(S)\longrightarrow F(T)\rightrightarrows F(T\times_ST)
+\]
+is exact. This may be regarded as a special case of the formalism of
+\v{C}ech cohomology (in dimension \(0\)!), which we merely recall here.
+Assume only that \(T\times_ST\) exists, and set
+\[
+  \check H^{0}(T/S,F)
+  =\operatorname{Ker}\bigl(F(T)\rightrightarrows F(T\times_ST)\bigr).
+\]
+
+One may plainly regard \(\check H^{0}(T/S,F)\) as a contravariant functor of
+the variable \(T\) in \(\mathscr C_{/S}\): every \(S\)-morphism \(T'\to T\)
+defines a map
+\[
+\tag{+}\label{sga3:iv:proposition:1:12:eq:unnamed:01}
+  \check H^{0}(T/S,F)\longrightarrow\check H^{0}(T'/S,F).
+\]
+Fix \(T,T'\) in \(\mathscr C_{/S}\). A familiar calculation shows that, if
+there exists an \(S\)-morphism \(T'\to T\), the corresponding map \SGARefLink{sga3:iv:proposition:1:12:eq:unnamed:01}{(+)} is
+independent of the choice of that morphism.\footnote{Editor's note: this is
+the following argument, communicated by M.~Demazure. Let
+\(f,g:T'\to T\), and let \(\phi:T'\to T\times_ST\) be the morphism with
+components \(f\) and \(g\), so that \(p_1\circ\phi=f\) and
+\(p_2\circ\phi=g\). Then
+\(F(\phi):F(T\times_ST)\to F(T')\) satisfies
+\(F(\phi)\circ F(p_1)=F(f)\) and
+\(F(\phi)\circ F(p_2)=F(g)\). For every
+\(x\in\check H^0(T/S,F)\), however, one has
+\(F(p_1)(x)=F(p_2)(x)\). Applying \(F(\phi)\) to both sides gives
+\(F(f)(x)=F(g)(x)\), which shows that \(f\) and \(g\) induce the same map.}
+
+Thus \(\check H^{0}(T/S,F)\) may be regarded as a functor on the category
+associated with the set \(\operatorname{Ob}(\mathscr C_{/S})\), preordered
+by the relation of domination: \(T'\) dominates \(T\) if there exists an
+\(S\)-morphism \(T'\to T\). In particular, if \(T\) and \(T'\) are
+isomorphic in this latter category, that is, if each dominates the other,
+then \SGARefLink{sga3:iv:proposition:1:12:eq:unnamed:01}{(+)} is an isomorphism of sets. This applies in particular when \(T'\)
+is the final object of \(\mathscr C_{/S}\), essentially \(S\) itself. The
+object \(T\) always dominates \(T'=S\), while the converse holds precisely
+when \(T/S\) has a section. This proves \SGARefLink{sga3:iv:proposition:1:12}{1.12} in the stronger form announced.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:remark:1:13}\textbf{Remark 1.13.}
+\textit{For various applications, the notions introduced and the results
+stated in this expos\'e must be developed more generally for a family of
+morphisms \(u_i:T_i\to S\) with the same target, rather than for a single
+morphism \(u:T\to S\). Such a family is called \emph{epimorphic} if, for
+every object \(X\) of \(\mathscr C\), the corresponding map}
+\[
+  X(S)\longrightarrow\prod_i X(T_i)
+\]
+\textit{is injective. One similarly introduces the notion of an effective
+epimorphic family and the universal variants of these notions. Whenever
+needed below, we shall take for granted that the results of this expos\'e
+extend to this more general situation.}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:remark:1:14}\textbf{Remark 1.14.}
+\textit{Every morphism that is both a monomorphism and an effective
+epimorphism is an isomorphism.}
+
+Indeed, in the notation of \SGARefLink{sga3:iv:definition:1:3}{1.3}, the fact that \(T\to S\) is a monomorphism
+implies that the two morphisms
+\[
+  \operatorname{pr}_1,\operatorname{pr}_2:T\times_ST
+  \rightrightarrows T
+\]
+are equal (and are isomorphisms). But a diagram
+\[
+  C\overset{v}{\underset{v}{\rightrightarrows}}B\xrightarrow{u}A
+\]
+is exact only if \(u\) is an isomorphism, as follows immediately from \SGARefLink{sga3:iv:definition:1:3}{the
+definition}.\footnote{Editor's note: a monomorphism that is an epimorphism
+need not be an isomorphism. For example, in
+\(\mathscr C=\mathbf{Sch}\), the morphism
+\[
+  \operatorname{Spec}(\mathbf F_p)\amalg
+  \operatorname{Spec}(\mathbf Z[1/p])
+  \longrightarrow\operatorname{Spec}(\mathbf Z)
+\]
+is a monomorphism and a surjective epimorphism, but is not an isomorphism.}
+
+\SGARefTarget{sga3:iv:section:2}\section*{2. Descent Morphisms}
+\addcontentsline{toc}{section}{2. Descent Morphisms}
+
+Recall the following definitions.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:2:1}\textbf{Definition 2.1.}
+\textit{Let \(f:S'\to S\) be a morphism such that
+\(S''=S'\times_SS'\) exists, and let \(u':X'\to S'\) be an object over
+\(S'\). A \emph{gluing datum} on \(X'/S'\), relative to \(f\), is an
+\(S''\)-isomorphism}
+\[
+  c:X''_1\xrightarrow{\sim}X''_2,
+\]
+\textit{where \(X''_i\), for \(i=1,2\), denotes the inverse image, assumed
+to exist, of \(X'/S'\) under the projection
+\(\operatorname{pr}_i:S''\to S'\). The gluing datum \(c\) is called a
+\emph{descent datum} if it satisfies the ``cocycle condition''}
+\[
+  \operatorname{pr}_{3,1}^{*}(c)
+  =\operatorname{pr}_{3,2}^{*}(c)\,
+   \operatorname{pr}_{2,1}^{*}(c),
+\]
+\textit{where \(\operatorname{pr}_{i,j}\), for
+\(1\leq j<i\leq3\), are the canonical projections from}
+\[
+  S'''=S'\times_SS'\times_SS'
+\]
+\textit{to \(S''\) (and we now assume that \(S'''\) also exists), where
+\(\operatorname{pr}_{i,j}^{*}(c)\) is the inverse image of \(c\), viewed
+as an \(S'''\)-morphism from \(X'''_j\) to \(X'''_i\), and where, for each
+integer \(k\) from \(1\) to \(3\), \(X'''_k\) denotes the inverse image,
+assumed to exist, of \(X'/S'\) under the \(k\)-th projection
+\(q_k:S'''\to S'\).}
+
+In the second part of \SGARefLink{sga3:iv:definition:2:1}{the definition} we have therefore used customary
+identifications and abuses of notation,\footnote{Editor's note: for example,
+we have identified, on the one hand,
+\(\operatorname{pr}_{2,1}^{*}(X''_1)
+ =\operatorname{pr}_{3,1}^{*}(X''_1)\), and, on the other hand,
+\(\operatorname{pr}_{2,1}^{*}(X''_2)
+ =\operatorname{pr}_{3,2}^{*}(X''_2)\).} which experience shows to be
+harmless, but which must plainly be avoided in a rigorous exposition of
+descent theory---a theory that must itself justify, to some extent, these
+customary abuses of language. Such a formal exposition (\SGARefLink{sga3:iv:bib:d}{[D]}) was written by
+Giraud, with a view to justifying and making precise \SGARefLink{sga3:iv:bib:sga:1}{SGA~1}, Expos\'e~VII,
+which was never written. For a detailed account of the faithfully flat
+descent results used constantly in this Seminar, one may consult \SGARefLink{sga3:iv:bib:sga:1}{SGA~1},
+Expos\'e~VIII.
+
+Continue to let \(f:S'\to S\) be a morphism for which
+\(S''=S'\times_SS'\) exists, and let \(X\) be an object over \(S\) such
+that \(X'=X\times_SS'\) and \(X''=X\times_SS''\) exist. The inverse images
+of \(X'\) under \(\operatorname{pr}_i\), for \(i=1,2\), then exist and are
+canonically isomorphic; consequently, \(X'/S'\) carries a canonical gluing
+datum relative to \(f\). When \(S'''\) and \(X'''=X\times_SS'''\) exist,
+this is in fact a descent datum. If \(Y\) is another object over \(S\)
+satisfying the same conditions as \(X/S\), then for every \(S\)-morphism
+\(X\to Y\), the corresponding \(S'\)-morphism \(X'\to Y'\) is compatible
+with the canonical gluing data on \(X'\) and \(Y'\). In particular, if
+\(S'\to S\) is squarable, then
+\[
+  X\longmapsto X'=X\times_SS'
+\]
+is a functor from \(\mathscr C_{/S}\) to the ``category of objects over
+\(S'\) equipped with a descent datum relative to \(f\)''---a category whose
+definition is left to the reader and which is a full subcategory of the
+``category of objects over \(S'\) equipped with a gluing datum relative to
+\(f\).''
+
+With this understood, we make \SGARefLink{sga3:iv:definition:2:2}{the following definition}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:definition:2:2}\textbf{Definition 2.2.}
+\textit{A morphism \(f:S'\to S\) is called a \emph{descent morphism}
+(respectively, an \emph{effective descent morphism}) if \(f\) is squarable
+(that is, \(X\times_SS'\) exists for every \(X\to S\)) and the preceding
+functor}
+\[
+  X\longmapsto X'=X\times_SS'
+\]
+\textit{from the category \(\mathscr C_{/S}\) of objects over \(S\) to the
+category of objects over \(S'\) equipped with a descent datum relative to
+\(f\) is fully faithful (respectively, an equivalence of categories).}
+
+The first of these notions can be expressed using gluing data alone, and
+therefore without invoking the triple fiber product \(S'''\): \(f\) is a
+descent morphism precisely when it is squarable and \(X\mapsto X'\) is a
+fully faithful functor from \(\mathscr C_{/S}\) to the category of objects
+over \(S'\) equipped with a gluing datum relative to \(f\). Written out, this
+means that for any two objects \(X,Y\) over \(S\), \SGARefLink{sga3:iv:definition:2:2:eq:x:01}{the following diagram} of
+sets is exact:
+\[
+\tag{x}\label{sga3:iv:definition:2:2:eq:x:01}
+  \operatorname{Hom}_S(X,Y)
+  \longrightarrow \operatorname{Hom}_{S'}(X',Y')
+  \overset{p_1}{\underset{p_2}{\rightrightarrows}}
+  \operatorname{Hom}_{S''}(X'',Y'').
+\]
+
+Here \(p_i(u')\) denotes the inverse image of
+\(u'\in\operatorname{Hom}_{S'}(X',Y')\) under the projection
+\(\operatorname{pr}_i:S''\to S'\), for \(i=1,2\). Indeed, by definition,
+the kernel of the pair \((p_1,p_2)\) is precisely the set of
+\(S'\)-morphisms \(X'\to Y'\) compatible with the canonical gluing data.
+
+By the definition of the inverse images \(Y'\) and \(Y''\), there are
+canonical bijections
+\[
+  \operatorname{Hom}_{S'}(X',Y')\simeq\operatorname{Hom}_S(X',Y),
+  \qquad
+  \operatorname{Hom}_{S''}(X'',Y'')\simeq\operatorname{Hom}_S(X'',Y).
+\]
+Thus exactness of \SGARefLink{sga3:iv:definition:2:2:eq:x:01}{(x)} is equivalent to exactness of
+\[
+\tag{xx}\label{sga3:iv:definition:2:2:eq:xx:01}
+  \operatorname{Hom}_S(X,Y)
+  \longrightarrow\operatorname{Hom}_S(X',Y)
+  \rightrightarrows\operatorname{Hom}_S(X'',Y),
+\]
+which is obtained by applying \(\operatorname{Hom}_S(-,Y)\) to the diagram
+in \(\mathscr C_{/S}\)
+\[
+\tag{xxx}\label{sga3:iv:definition:2:2:eq:xxx:01}
+  X''\rightrightarrows X'\longrightarrow X,
+\]
+itself obtained from
+\[
+  S''\rightrightarrows S'\longrightarrow S
+\]
+by the base change \(X\to S\). In view of \SGARefLink{sga3:iv:lemma:1:6}{1.6}, this proves the first part of
+\SGARefLink{sga3:iv:proposition:2:3}{the following proposition}.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:2:3}\textbf{Proposition 2.3.}
+\textit{Let \(f:S'\to S\) be a morphism. If \(f\) is a universal effective
+epimorphism, then it is a descent morphism. Conversely, every descent
+morphism is a universal effective epimorphism if \(S\) is a squarable object
+of \(\mathscr C\), that is, if its product with every object of
+\(\mathscr C\) exists.}
+
+It remains to prove the converse. If \(f\) is a descent morphism, we must
+show that it is a universal effective epimorphism: for every morphism
+\(X\to S\), diagram \SGARefLink{sga3:iv:definition:2:2:eq:xxx:01}{(xxx)} must be exact, or equivalently, its image under
+\(\operatorname{Hom}(-,Z)\) must be an exact diagram of sets for every
+object \(Z\) of \(\mathscr C\). By hypothesis, \(Z\times S\) exists. Let
+\(Y\) be the object of \(\mathscr C_{/S}\) that it defines. The image of
+\SGARefLink{sga3:iv:definition:2:2:eq:xxx:01}{(xxx)} under \(\operatorname{Hom}(-,Z)\) is then isomorphic to its image
+under \(\operatorname{Hom}_S(-,Y)\), and the latter is exact by the
+hypothesis on \(f\).
+
+The results concerning descent morphisms may therefore be applied to
+universal effective epimorphisms. For example:
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:proposition:2:4}\textbf{Proposition 2.4.}
+\textit{Let \(f:S'\to S\) be a descent morphism (for example, a universal
+effective epimorphism). Then:}
+\begin{enumerate}
+  \item[(a)]\SGARefTarget{sga3:iv:proposition:2:4:item:a:01} \textit{For every \(S\)-morphism \(u:X\to Y\), the morphism
+    \(u\) is an isomorphism (respectively, a monomorphism) if and only if
+    \(u':X'\to Y'\) is one.}
+  \item[(b)]\SGARefTarget{sga3:iv:proposition:2:4:item:b:01} \textit{Let \(X,Y\) be two subobjects of \(S\), and let
+    \(X',Y'\) be their inverse images in \(S'\). Then \(X\) is contained in
+    \(Y\) (respectively, is equal to \(Y\)) if and only if the same is true
+    of \(X'\) and \(Y'\).}
+\end{enumerate}
+
+For \SGARefLink{sga3:iv:proposition:2:4:item:a:01}{(a)}, \SGARefLink{sga3:iv:definition:2:2}{the definition} shows that if \(u'\) is an isomorphism in the
+category of objects with gluing datum, then \(u\) is an isomorphism. Every
+isomorphism of objects over \(S'\) that is compatible with gluing data is,
+however, an isomorphism of objects with gluing datum: its inverse is also
+compatible with the gluing data. For \SGARefLink{sga3:iv:proposition:2:4:item:b:01}{(b)}, it remains to show that if \(X'\)
+is contained in \(Y'\), that is, if there exists an \(S'\)-morphism
+\(X'\to Y'\), then the same is true of \(X,Y\) over \(S\). Since
+\(Y'\to S'\), and hence \(Y''\to S''\), is a monomorphism, the morphism
+\(X'\to Y'\) is automatically compatible with the gluing data and therefore
+comes from an \(S\)-morphism \(X\to Y\).
+
+The proof applies more generally to two objects \(X,Y\) over \(S\), with
+\(Y\to S\) a monomorphism, when one asks whether \(X\to S\) factors through
+\(Y\): it is enough that \(X'\to S'\) factor through \(Y'\).
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:corollary:2:5}\textbf{Corollary 2.5.}
+\textit{Let \(f:S'\to S\) be a universal effective epimorphism and
+\(g:S\to T\) a morphism such that \(S\times_TS\) exists. Suppose that
+\(S''=S'\times_SS'\) is also a fiber product of \(S'\) with itself over
+\(T\), that is, that the canonical morphism}
+\[
+  S'\times_SS'\xrightarrow{\sim}S'\times_TS'
+\]
+\textit{is an isomorphism. Then \(g:S\to T\) is a monomorphism (and the
+converse is of course true).}
+
+Indeed, consider the cartesian diagram
+\[
+\begin{array}{ccc}
+  S'\times_SS' & \xrightarrow{\sim} & S'\times_TS' \\
+  \Big\downarrow & & \Big\downarrow\,\scriptstyle f \\[-0.25em]
+  S & \longrightarrow & S\times_TS ,
+\end{array}
+\tag{2.5.1}\label{sga3:iv:corollary:2:5:eq:2:5:1:01}
+\]
+where the second horizontal arrow is the diagonal morphism. By \SGARefLink{sga3:iv:corollary:1:9}{1.9}, the
+second vertical arrow \(f\) is a universal effective epimorphism; by
+hypothesis, the first horizontal arrow is an isomorphism. It follows from
+\SGARefLink{sga3:iv:proposition:2:4:item:a:01}{2.4(a)}, or equally from \SGARefLink{sga3:iv:proposition:2:4:item:b:01}{2.4(b)},\footnote{Editor's note: applied to
+\(f:S'\times_TS'\to S\times_TS=Y\).} that
+\(S\to S\times_TS\) is also an isomorphism, which says precisely that
+\(g:S\to T\) is a monomorphism.
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:remark:2:6}\textbf{Remark 2.6.}
+\textit{The notions introduced in \SGARefLink{sga3:iv:definition:2:1}{2.1} in terms of morphisms between certain
+inverse limits have an evident expression in terms of the contravariant
+functors defined by the objects \(S,S',X'\) under consideration. Subject to
+the existence of the fiber products considered in \SGARefLink{sga3:iv:definition:2:1}{2.1}, there is a one-to-one
+correspondence between gluing data (respectively, descent data) on \(X'/S'\)
+relative to \(S'\to S\), and gluing data (respectively, descent data) for the
+corresponding objects of}
+\[
+  \widehat{\mathscr C}
+  =\operatorname{Hom}(\mathscr C^{\circ},\mathbf{Set}).
+\]
+\textit{This makes it possible, if desired, to extend these notions to the
+case in which no existence hypothesis is imposed on fiber products in
+\(\mathscr C\).}
+
+\medskip
+\noindent\SGARefTarget{sga3:iv:remark:2:7}\textbf{Remark 2.7.}
+\textit{The notions introduced in \SGARefLink{sga3:iv:section:2}{this section} generalize to families of
+morphisms. They can also be presented more intrinsically by means of the
+notion of a sieve (\SGARefLink{sga3:iv:subsection:4:1}{4.1}). For these matters the reader is referred to \SGARefLink{sga3:iv:bib:d}{[D]}.}

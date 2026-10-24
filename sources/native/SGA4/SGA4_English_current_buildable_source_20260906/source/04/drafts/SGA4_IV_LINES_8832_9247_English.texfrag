@@ -1,0 +1,460 @@
+\section{Operations on modules}\etiquette[12]{IV.sec12}
+
+\begin{enonce*}{Proposition 12.1}\etiquette[12.1]{IV.prop12.1}
+Let $(E,A)$ be a ringed topos, and let $M$ and $N$ be two left
+$A$-modules (\resp right $A$-modules). The functor on $E$ which
+assigns to every object $X$ of $E$ the commutative group
+$\Hom_A(M,\scrHom_E(X,N))$ is representable by an abelian sheaf
+denoted by $\scrHom_A(M,N)$ (or sometimes $\scrHom(M,N)$ when no
+confusion can result). For every object $X$ of $E$, there is a
+canonical isomorphism
+\begin{equation*}
+\scrHom_A(M,N)(X)\simeq \Hom_{A| X}(j^{\ast}_XM,
+j^{\ast}_XN){\quoi}.\tag{12.1.1}
+\end{equation*}\etiquette[12.1.1]{IV.eq12.1.1}
+\end{enonce*}
+
+There is a canonical isomorphism
+$\scrHom_E(X,N)=j_{X\ast}j^{\ast}_XN$
+(\hyperref[IV.cor10.8]{10.8}); consequently, $\scrHom_E(X,N)$ is
+endowed, functorially in $X$, with a structure of left $A$-module
+(\resp right $A$-module). The functor
+$X\longmapsto\scrHom_E(X,N)$ transforms inductive limits in the
+argument $X$ into projective limits of $A$-modules
+(\hyperref[IV.subsec10.2]{10.2} and
+\hyperref[IV.subsubsec11.2.3]{11.2.3}); consequently, the functor
+$$
+X\longmapsto \Hom_A(M,\scrHom_E(X,N))
+$$
+transforms inductive limits\pageoriginale in the argument $X$ into
+projective limits of commutative groups, and hence into projective
+limits of the underlying sets. It is therefore representable
+(\hyperref[IV.prop1.4]{1.4} and \hyperref[IV.theo1.2]{1.2}), and the
+object representing it is endowed with the structure of an abelian
+sheaf. By definition, for every object $X$ of $E$, there is a
+canonical isomorphism
+\begin{equation*}
+\scrHom_A(M,N)(X)=\Hom(X,\scrHom_A(M,N))\simeq
+\Hom_A(M,\scrHom(X,N))\tag{12.1.2}
+\end{equation*}\etiquette[12.1.2]{IV.eq12.1.2}
+and the isomorphism (\hyperref[IV.eq12.1.1]{12.1.1}) follows from
+\eqhyperref[IV.eq12.1.2]{12.1.2}, from the isomorphism
+$\scrHom(X,N)\approx j_{X\ast}j^{\ast}_XN$
+(\hyperref[IV.cor10.8]{10.8}), and from the adjunction formulas of 10.
+
+\setcounter{subsection}{1}
+\subsection{}\etiquette[12.2]{IV.subsec12.2}
+The abelian sheaf $\scrHom_A(M,N)$ is called the \emph{sheaf of
+$A$-module homomorphisms from $M$ to $N$}. It is a bifunctor in $M$
+and $N$. It follows from its definition and from
+(\hyperref[IV.subsec10.2]{10.2}) that it transforms projective limits
+in the argument $N$ (\resp inductive limits in $M$) into projective
+limits of abelian sheaves. In particular, it is left exact in both
+arguments.
+
+\begin{enonce*}{Proposition 12.3}\etiquette[12.3]{IV.prop12.3}
+Let $(E,A)$ be a ringed topos, let $M$ and $N$ be two right
+$A$-modules (\resp left $A$-modules), and let $X$ be an object of $E$:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item There are canonical isomorphisms:
+$$
+\scrHom_A(M,N)(X)\approx \Hom_A(M, j_{X\ast}j^{\ast}_XN)\simeq
+\Hom_{A| X}(j^{\ast}_XM, j^{\ast}_XN)\simeq
+\Hom_A(j_{X!}j^{\ast}_XM, N).
+$$
+
+\item There is a canonical isomorphism:
+$$
+\Phi_X:j^{\ast}_X\scrHom_A(M,N)\simeq
+\scrHom_{A| X}(j^{\ast}_XM,j^{\ast}_XN).
+$$
+Let, in addition, $P$ be a right $A|X$-module (\resp a left
+$A|X$-module):
+
+\item There is a canonical isomorphism:
+$$
+j_{X\ast}\scrHom_{A| X}(j^{\ast}_XM,P)\simeq
+\scrHom_A(M,j_{X\ast}P).
+$$
+
+\item There is a canonical isomorphism:
+$$
+\Xi_X:\scrHom_A(j_{X!}P,N)\simeq j_{X\ast}\scrHom_{A|X}
+(P,j^{\ast}_XN).
+$$
+\end{enumerate}
+\end{enonce*}
+
+\noindent The isomorphisms in a) follow from
+\eqhyperref[IV.eq12.1.2]{12.1.2}, from the isomorphism
+$\scrHom_E(X,N)\simeq j_{X\ast}j^{\ast}_XN$
+(\hyperref[IV.cor10.8]{10.8}), and from the adjunction formulas of 10.
+
+\begin{itemize}
+\item[Proof of b).] For every object $Y$ of $E_{/X}$, there is the
+following sequence of isomorphisms:
+
+$\Hom(Y,j^{\ast}_X\scrHom_A(M,N))\simeq
+\Hom(j_{X!}Y,\scrHom_A(M,N))$ (adjunction for sheaves of sets)
+\begin{alignat*}{2}
+& \Hom(j_{X!}Y,\scrHom_A(M,N))\simeq
+\Hom_A(M,\scrHom_E(j_{X!}Y,N))
+&\quad& \hyperref[IV.eq12.1.2]{(12.1.2)}\\
+& \Hom_A(M,\scrHom_E(j_{X!}Y,N))\simeq
+\Hom_A(M,j_{X\ast}\scrHom_{E_{/X}}(Y,j^{\ast}_XN))
+&& (\hyperref[IV.cor10.7]{10.7})\\
+& \Hom_A(M,j_{X\ast}\scrHom_{E_{/X}}(Y,j^{\ast}_XN))\simeq
+\Hom_{A|X}(j^{\ast}_XM,\scrHom_E(Y,j^{\ast}_XN))
+&& \eqhyperref[IV.eq11.2.2.1]{11.2.2.1}\\
+& \Hom_{A|X}(j^{\ast}_XM,\scrHom_E(Y,j^{\ast}_XN))\simeq
+\Hom(Y,\scrHom_{A|X}(j^{\ast}_XM,j^{\ast}_XN))
+&& \hyperref[IV.eq12.1.2]{(12.1.2)}
+\end{alignat*}\pageoriginale
+
+\item[Proof of c).] For every object $Y$ of $E$, there is the
+following sequence of isomorphisms:
+\begin{alignat*}{2}
+& \Hom(Y,j_{X\ast}\scrHom_{A|X}(j^{\ast}_XM,P))\simeq
+\Hom(j^{\ast}_XY,\scrHom_{A|X}(j^{\ast}_XM,P))
+&\quad& \text{(adjunction)}\\
+& \Hom(j^{\ast}_XY,\scrHom_{A|X}(j^{\ast}_XM,P))\simeq
+\Hom_{A|X}(j^{\ast}_XM,\scrHom_{E_{/X}}(j^{\ast}_XY,P))
+&& \hyperref[IV.eq12.1.2]{(12.1.2)}\\
+& \Hom_{A|X}(j^{\ast}_XM,\scrHom_{E_{/X}}(j^{\ast}_XY,P))\simeq
+\Hom_A(M,j_{X\ast}\scrHom_{E_{/X}}(j^{\ast}_XY,P))
+&& \eqhyperref[IV.eq11.2.2.1]{11.2.2.1}\\
+& \Hom_A(M,j_{X\ast}\scrHom_{E_{/X}}(j^{\ast}_XY,P))\simeq
+\Hom_A(M,\scrHom_E(Y,j_{X\ast}P))
+&& (\hyperref[IV.prop10.3]{10.3})\\
+& \Hom_A(M,\scrHom_E(Y,j_{X\ast}P))\simeq
+\Hom(Y,\scrHom_A(M,j_{X\ast}P))
+&& \hyperref[IV.eq12.1.2]{(12.1.2)}
+\end{alignat*}
+
+\item[Proof of d).] For every object $Y$ of $E$, there is the
+following sequence of isomorphisms:
+\begin{alignat*}{2}
+& \Hom(Y,\scrHom_A(j_{X!}P,N))\simeq
+\Hom_A(j_{X!}P,\scrHom_E(Y,N))
+&\quad& \hyperref[IV.eq12.1.2]{(12.1.2)}\\
+& \Hom_A(j_{X!}P,\scrHom_E(Y,N))\simeq
+\Hom_{A|X}(P,j^{\ast}_X\scrHom_E(Y,N))
+&& (\hyperref[IV.prop11.3.1]{11.3.1})\\
+& \Hom_{A|X}(P,j^{\ast}_X\scrHom_E(Y,N))\simeq
+\Hom_{A|X}(P,\scrHom_{E_{/X}}(j^{\ast}_XY,j^{\ast}_XN))
+&& (\hyperref[IV.cor10.7]{10.7})\\
+& \Hom_{A|X}(P,\scrHom_{E_{/X}}(j^{\ast}_XY,j^{\ast}_XN))\simeq
+\Hom(j^{\ast}_XY,\scrHom_{A|X}(P,j^{\ast}_XN))
+&& \hyperref[IV.eq12.1.2]{(12.1.2)}\\
+& \Hom(j^{\ast}_XY,\scrHom_{A|X}(P,j^{\ast}_XN))\simeq
+\Hom(Y,j_{X\ast}\scrHom_{A|X}(P,j^{\ast}_XN))
+&& \text{(adjunction)}
+\end{alignat*}
+\end{itemize}
+
+\begin{enonce*}{Corollary 12.4}\etiquette[12.4]{IV.cor12.4}
+Let $C$ be a $𝒰$-site, let $A'$ be a $𝒰$-presheaf of rings on
+$C$, let $M$ be a $𝒰$-presheaf of $A'$-modules (left modules, to fix
+ideas), and let $N$ be a $𝒰$-sheaf of $A'$-modules (left modules).
+Denote by $A$ the sheaf associated with $A'$, so that the sheaves $N$
+and $\underline{a}M$ (the sheaf associated with $M$) are $A$-modules.
+The presheaf
+$X\longmapsto\Hom_{A'|X}(j^{\ast}_XM,j^{\ast}_XN)$ is a
+$𝒰$-abelian sheaf canonically isomorphic to
+$\scrHom_A(\underline{a}M,N)$.
+\end{enonce*}
+
+Indeed, it follows from \hyperrefext[III][III.prop5.5]{5.5} and
+\hyperrefext[III][III.prop2.3]{2.3} that the localization functor to
+$C_{/X}$ commutes with the associated-sheaf functors (for $C$ and
+$C_{/X}$). Consequently, there are isomorphisms, functorial in the
+variable object $X$ of $C$:
+\begin{align*}
+\Hom_{A'|X}(j^{\ast}_XM,j^{\ast}_XN)
+&\simeq \Hom_{A|X}(\underline{a}j^{\ast}_XM,j^{\ast}_XN)\\
+&\simeq \Hom_{A|X}(j^{\ast}_X\underline{a}M,j^{\ast}_XN)
+\simeq \scrHom_A(\underline{a}M,N)(X){\quoi}.
+\end{align*}
+
+\begin{enonce*}{Corollary 12.5}\etiquette[12.5]{IV.cor12.5}
+Let\pageoriginale $E$ be a topos, let $A$, $B$, and $C$ be three
+sheaves of rings on $E$, let $M$ be an $A$-$B$-bimodule, and let $N$
+be an $A$-$C$-bimodule. The abelian sheaf $\scrHom_A(M,N)$ is
+canonically endowed with a $B$-$C$-bimodule structure. In particular,
+when $A$ is a sheaf of commutative rings and $M$ and $N$ are
+$A$-modules, $\scrHom_A(M,N)$ is canonically endowed with an
+$A$-module structure. The canonical isomorphisms b), c), and d) of
+$\hyperref[IV.prop12.3]{12.3}$ are isomorphisms of bimodules.
+\end{enonce*}
+
+We shall confine ourselves to giving indications. For every object
+$X$ of $E$, one has
+$\scrHom_A(M,N)(X)\simeq\Hom_{A|X}(j^{\ast}_XM,j^{\ast}_XN)$
+(\hyperref[IV.prop12.3]{12.3}). Consequently, the commutative group\\
+$\scrHom_A(M,N)(X)$ is canonically endowed with a
+$B(X)$-$C(X)$-bimodule structure
+(\hyperref[IV.subsubsec11.1.3]{11.1.3}), which is readily checked to
+be functorial in $X$. The other assertions are left to the reader.
+
+\begin{enonce*}{Corollary 12.6}\etiquette[12.6]{IV.cor12.6}
+Let $(E,A)$ be a ringed topos, let $X$ be an object of $E$, and let
+$N$ be an $A$-module (a left module, to fix ideas). There are canonical
+isomorphisms of $A$-modules:
+$$
+\scrHom_E(X,N)\simeq j_{X\ast}j^{\ast}_XN\simeq
+\scrHom_A(A_X,N){\quoi};
+$$
+the $A$-module structure on $\scrHom_A(A_X,N)$ comes from the
+bimodule structure on $A_X$ $(\hyperref[IV.rem11.3.4]{11.3.4})$.
+\end{enonce*}
+
+The first isomorphism follows from \hyperref[IV.cor10.7]{10.7}, and
+the second from the isomorphism of $A$-modules
+$N\simeq\scrHom_A(A,N)$ and from \hyperref[IV.prop12.3]{12.3}.
+
+\begin{enonce*}{Proposition 12.7}\etiquette[12.7]{IV.prop12.7}
+Let $(E,A)$ be a ringed topos, let $M$ be a right $A$-module, and let
+$N$ be a left $A$-module. The functor which assigns to every abelian
+sheaf $P$ the commutative group
+$\Hom_A(M,\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}(N,P))$
+is representable by an abelian sheaf denoted by $M\otimes_A N$ and
+called the tensor product over $A$ of $M$ and $N$.
+\end{enonce*}
+
+There is a canonical injection of
+$\Hom_A(M,\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}(N,P))$
+into the set
+$\Hom(M,\scrHom(N,P))\simeq\Hom(M\times N,P)$; returning to the
+definitions, one sees immediately that a morphism $f$ of sheaves of
+sets from $M\times N$ to $P$ comes from an element of
+$\Hom_A(M,\scrHom_Z(N,P))$ if and only if, for every object $X$ of
+$E$, the map $f(X):M(X)\times N(X)\rightarrow P(X)$ is an
+$A(X)$-bilinear map\pageoriginale from $M(X)\times N(X)$ to $P(X)$.
+We call morphisms of sheaves of sets from $M\times N$ to $P$ having
+this property $A$-bilinear morphisms. Thus, the problem is to represent
+the functor of $A$-bilinear morphisms from $M\times N$ to $P$. To do
+this, one proceeds as in the ordinary case, \ie the case where $E$ is
+the punctual topos. Consider the eight morphisms:
+\begin{itemize}
+\item[(i):] $M\times M\times N\longrightarrow M\times N$\qquad
+$1\leq i\leq 3$
+
+\item[(i):] $M\times N\times N\longrightarrow M\times N$\qquad
+$4\leq i\leq 6$
+
+\item[(i):] $M\times A\times N\longrightarrow M\times N$\qquad
+$7\leq i\leq 8$
+\end{itemize}
+defined by the formulas:
+\begin{tabbing}
+\quad\= (1) \= $(m_1, m_2, n)$ \= $\longmapsto$ \= $(m_1+m_2, n)$\\
+\> (2) \> $(m_1, m_2, n)$ \> $\longmapsto$ \> $(m_1, n)$\\
+\> (3) \> $(m_1, m_2, n)$ \> $\longmapsto$ \> $(m_2, n)$\\
+\> (4) \> $(m, n_1, n_2)$ \> $\longmapsto$ \> $(m, n_1+n_2)$\\
+\> (5) \> $(m, n_1, n_2)$ \> $\longmapsto$ \> $(m, n_1)$\\
+\> (6) \> $(m, n_1, n_2)$ \> $\longmapsto$ \> $(m, n_2)$\\
+\> (7) \> $(m, a, n)$ \> $\longmapsto$ \> $(ma, n)$\\
+\> (8) \> $(m, a, n)$ \> $\longmapsto$ \> $(m, an)$;
+\end{tabbing}
+here formula (i) describes the map (i)$(X)$ for the variable objects
+$X$ of $E$. Let $L$ denote the ``free generated abelian sheaf''
+functor. It is clear that the largest quotient (in the sense of
+abelian sheaves) of $L(M\times N)$ which equalizes $L(1)$ with
+$L(2)+L(3)$, $L(4)$ with $L(5)+L(6)$, and $L(7)$ with $L(8)$
+represents the functor of $A$-bilinear morphisms from $M\times N$ to
+$P$.
+
+\setcounter{subsection}{7}
+
+
+
+
+
+\subsection{}\etiquette[12.8]{IV.subsec12.8}
+One observes that the functor
+$P\longmapsto
+\Hom_A(N,\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}(M,P))$
+is also canonically isomorphic to the functor of $A$-bilinear maps
+from $M\times N$ to $P$. Consequently, the tensor product
+$M\otimes_A N$ also represents the functor
+$\Hom_A(N,\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}(M,P))$.
+Thus there are isomorphisms, functorial in all the arguments:
+\hypertarget{sga4.exp.IV.equation.12.8.1}{}\begin{align*}%\etiquette[12.8.1]{IV.eq12.8.1}
+\Hom_Z(M\otimes_A N,P)
+&\simeq \Hom_A(M,\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}(N,P)){\quoi},\tag{12.8.1}\\
+\Hom_Z(M\otimes_A N,P)
+&\simeq \Hom_A(N,\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}(M,P)){\quoi}.\tag{12.8.2}
+\end{align*}\hypertarget{sga4.exp.IV.equation.12.8.2}{}
+
+\subsection{}\etiquette[12.9]{IV.subsec12.9}
+It\pageoriginale follows from \hyperref[IV.subsec12.8]{(12.8)}, or alternatively from \hyperlink{sga4.exp.IV.equation.12.8.1}{(12.8.1)}
+and (\hyperref[IV.subsec12.2]{12.2}), that the functor $\otimes_A$
+commutes with inductive limits in both arguments.
+
+\begin{enonce*}{Proposition 12.10}\etiquette[12.10]{IV.prop12.10}
+Let $C$ be a $𝒰$-site, let $A'$ be a presheaf of rings on $C$, let
+$M'$ (\resp $N'$) be a right (\resp left) $A'$-module, and let $A$,
+$M$, and $N$ be the sheaves associated with $A'$, $M'$, and $N'$
+respectively. The sheaf associated with the presheaf
+$X\longmapsto M'(X)\otimes_{A'(X)}N'(X)$ $(X\in\ob C)$ is
+canonically isomorphic to the sheaf $M\otimes_A N$.
+\end{enonce*}
+
+The presheaf $X\longmapsto M'(X)\otimes_{A'(X)}N'(X)$ can be
+constructed from the presheaves $M'$, $N'$, and $A'$ by the operations
+specified in the proof of \hyperref[IV.prop12.7]{12.7}. Since the
+``associated sheaf'' functor commutes with finite projective and
+inductive limits and with the ``free generated abelian object''
+functors, formation of the tensor product commutes with the
+``associated sheaf'' functor.
+
+\begin{enonce*}{Proposition 12.11}\etiquette[12.11]{IV.prop12.11}
+Let $(E,A)$ be a ringed topos, let $M$ be a right $A$-module, let $N$
+be a left $A$-module, and let $X$ be an object of $E$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item There is a canonical isomorphism
+$$
+j^{\ast}_X(M\otimes_A N)\simeq
+(j^{\ast}_XM)\otimes_{A|X}(j^{\ast}_XN){\quoi}.
+$$
+Let, in addition, $P$ be a right $A|X$-module and $Q$ a left
+$A|X$-module.
+
+\item There are canonical isomorphisms (projection formulas):
+\begin{align*}
+j_{X!}(P\otimes_{A|X}j^{\ast}_XN)&\simeq(j_{X!}P)\otimes_A N\\
+j_{X!}(j^{\ast}_XM\otimes_{A|X}Q)&\simeq
+M\otimes_A(j_{X!}Q){\quoi}.
+\end{align*}
+\end{enumerate}
+\end{enonce*}
+
+\begin{itemize}
+\item[Proof of a).] For every abelian sheaf $R$ on $E_{/X}$, there is
+the following sequence of isomorphisms, functorial in $R$:
+\begin{alignat*}{2}
+&\Hom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}
+(j^{\ast}_X(M\otimes_A N),R)\simeq
+\Hom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}
+(M\otimes_A N,j_{X\ast}R)
+&\quad& \eqhyperref[IV.eq11.2.2.1]{11.2.2.1}\\
+&\Hom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}
+(M\otimes_A N,j_{X\ast}R)\simeq
+\Hom_A(M,\scrHom_Z(N,j_{X\ast}R))
+&& \hyperlink{sga4.exp.IV.equation.12.8.1}{(12.8.1)}\\
+&\Hom_A(M,\scrHom_Z(N,j_{X\ast}R))\simeq
+\Hom_A(M,j_{X\ast}\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}
+(j^{\ast}_XN,R))
+&& (\hyperref[IV.prop12.3]{12.3})\\
+&\Hom_A(M,j_{X\ast}\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}
+(j^{\ast}_XN,R))\simeq
+\Hom_{A|X}(j^{\ast}_XM,
+\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}
+(j^{\ast}_XN,R))
+&& \eqhyperref[IV.eq11.2.2.1]{11.2.2.1}\\
+&\Hom_{A|X}(j^{\ast}_XM,
+\scrHom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}
+(j^{\ast}_XN,R))\simeq
+\Hom_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}
+(j^{\ast}_XM\otimes_{A|X}j^{\ast}_XN,R)
+&& \hyperlink{sga4.exp.IV.equation.12.8.1}{(12.8.1)}
+\end{alignat*}
+
+Let us exhibit\pageoriginale the first isomorphism in b). For every
+abelian sheaf $R$, there is a sequence of isomorphisms, functorial in
+$R$:
+\begin{alignat*}{2}
+&\Hom_Z(j_{X!}(P\otimes_{A|X}j^{\ast}_XN),R)\simeq
+\Hom_Z(P\otimes_{A|X}j^{\ast}_XN,j^{\ast}_XR)
+&\quad& (\hyperref[IV.prop11.3.1]{11.3.1})\\
+&\Hom_Z(P\otimes_{A|X}j^{\ast}_XN,j^{\ast}_XR)\simeq
+\Hom_{\sisi{A/X}{A|X}}(P,\scrHom_Z(j^{\ast}_XN,j^{\ast}_XR))
+&& \hyperlink{sga4.exp.IV.equation.12.8.1}{(12.8.1)}\\
+&\Hom_{A|X}(P,\scrHom_Z(j^{\ast}_XN,j^{\ast}_XR))\simeq
+\Hom_{A|X}(P,j^{\ast}_X\scrHom_Z(N,R))
+&& (\hyperref[IV.prop12.3]{12.3})\\
+&\Hom_{A|X}(P,j^{\ast}_X\scrHom_Z(N,R))\simeq
+\Hom_A(j_{X!}P,\scrHom_Z(N,R))
+&& (\hyperref[IV.prop11.3.1]{11.3.1})\\
+&\Hom_A(j_{X!}P,\scrHom_Z(N,R))\simeq
+\Hom_Z(j_{X!}P\otimes_A N,R)
+&& \hyperlink{sga4.exp.IV.equation.12.8.1}{(12.8.1)}
+\end{alignat*}
+
+The second isomorphism is obtained similarly using \hyperlink{sga4.exp.IV.equation.12.8.2}{(12.8.2)}.
+\end{itemize}
+
+\begin{enonce*}{Corollary 12.12}\etiquette[12.12]{IV.cor12.12}
+Let $E$ be a topos, let $A$, $B$, and $C$ be three sheaves of rings
+on $E$, let $M$ be a $B$-$A$-bimodule, and let $N$ be an
+$A$-$C$-bimodule. The abelian sheaf $M\otimes_A N$ is canonically
+endowed with a $B$-$C$-bimodule structure. In particular, when $A$ is
+a sheaf of commutative rings and $M$ and $N$ are $A$-modules,
+$M\otimes_AN$ is canonically endowed with an $A$-module structure.
+The isomorphisms of \hyperref[IV.prop12.11]{12.11} are isomorphisms of
+bimodules.
+\end{enonce*}
+
+For every object $X$ of $E$, $j^{\ast}_XM$ is a right $A|X$-module
+on which the ring $B(X)$ acts on the left, and likewise $j^{\ast}_XN$
+is a left $\sisi{A/X}{A|X}$-module on which $C(X)$ acts on the right. By
+functoriality, the abelian sheaf
+$j^{\ast}_XM\otimes_{\sisi{A/X}{A|X}}j^{\ast}_XN\simeq
+j^{\ast}_X(M\otimes_A N)$ is endowed with the structure of a
+$B(X)$-$C(X)$-bimodule, and this structure varies functorially in
+$X$. Consequently, $M\otimes_A N$ is endowed with a $B$-$C$-bimodule
+structure. This $B(X)$-$C(X)$-bimodule structure on
+$j^{\ast}_X(M\otimes_A N)$ is reflected in the evident way on the
+functor of ``$A$-bilinear morphisms''. One then observes that, when
+$A$ is commutative and $M$ and $N$ are $A$-modules, the right and left
+$A$-module structures so obtained are ``equal''; consequently,
+$M\otimes_A N$ is an $A$-module in this case. The last assertion is
+left to the reader.
+
+\begin{enonce*}{Corollary 12.13}\etiquette[12.13]{IV.cor12.13}
+Let $(E,A)$ be a ringed topos, let $M$ be a left\pageoriginale
+$A$-module (\resp a right $A$-module), and let $X$ be an object of
+$E$. With the notation $A_X$ of \hyperref[IV.prop11.3.3]{11.3.3},
+there is a canonical isomorphism
+$$
+A_X\otimes_AM\simeq j_{X!}j^{\ast}_XM
+\quad\text{(\resp }M\otimes_AA_X\simeq j_{X!}j^{\ast}_XM\text{)}{\quoi}.
+$$
+\end{enonce*}
+
+\noindent This follows from the projection formulas
+(\hyperref[IV.prop12.11]{12.11}).
+
+\begin{enonce*}{Proposition 12.14}\etiquette[12.14]{IV.prop12.14}
+Let $E$ be a topos, let $A$ and $B$ be two sheaves of rings on $E$,
+let $M$ be a right $A$-module, let $N$ be an $A$-$B$-bimodule, and let
+$P$ be a right $B$-module. There is a canonical isomorphism
+$$
+\Hom_B(M\otimes_A N,P)\simeq
+\Hom_A(M,\scrHom_B(N,P)){\quoi}.
+$$
+\end{enonce*}
+
+\noindent From \hyperlink{sga4.exp.IV.equation.12.8.1}{(12.8.1)} one obtains a canonical $A$-bilinear morphism
+$\scrHom_Z(N,P)\times N\rightarrow P$; hence, by restricting it to
+$\scrHom_B(N,P)\times N$ (which is a subsheaf), one obtains an
+$A$-bilinear morphism $\scrHom_B(N,P)\times N\rightarrow P$, which is
+immediately seen to be $B$-linear in the second factor. Thus there is
+a canonical morphism of $B$-modules
+$\scrHom_B(N,P)\otimes_A N\rightarrow P$; hence a canonical map,
+functorial in $M$:
+\begin{equation*}
+\Hom_A(M,\scrHom_B(N,P))\longrightarrow
+\Hom_B(M\otimes_A N,P){\quoi}.\tag{12.14.1}
+\end{equation*}\etiquette[12.14.1]{IV.eq12.14.1}
+Let us show that this morphism of functors is an isomorphism. Since
+both sides transform inductive limits in $M$ into projective limits,
+it is enough to show that \eqhyperref[IV.eq12.14.1]{12.14.1} is an
+isomorphism when $M$ ranges over a generating family of the category
+$E_A$. It is therefore enough to show that
+\eqhyperref[IV.eq12.14.1]{12.14.1} is an isomorphism when $M=A_X$,
+where $X$ is an object of $E$. The verification is then immediate.

@@ -1,0 +1,79 @@
+\begin{enonce*}{Lemma 9.21.16}\etiquette[9.21.16]{I.lem9.21.16}
+Let $I$ be an ordered set, let $\Pi$ be an infinite cardinal, and let
+$\varphi:I\rightarrow I$ be a map from $I$ to itself.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Suppose $I$ is filtered. Then, for every subset $S$ of $I$ such
+that $\card S\leq\Pi$, there exists a filtered subset $J\supset S$ of
+$I$ such that $\varphi(J)\subset J$ and $\card(J)\leq\Pi$.
+
+\item Let $\Pi'_\circ$ be a cardinal $<\Pi$, and suppose that $I$ is
+large relative to $\Pi$. Then, for every subset $S$ of $I$ such that
+$\card S\leq\Pi$, there exists a subset $J\supset S$ of $I$ large
+relative to $\Pi'_\circ$, such that $\varphi(J)\subset J$ and
+$\card J\leq\Pi$.
+\end{enumerate}
+\end{enonce*}
+
+Let us prove b), for example (the proof of a) being similar and
+simpler). Let $P$ be the set of subsets of $I$ of cardinality
+$\leq\Pi$, and let $T\mapsto i_T:P\rightarrow I$ be a map such that,
+for $T\in P$, $i_T$ is an upper bound of $T$ in $I$; the existence of
+this map merely expresses the hypothesis that $I$ is large relative to
+$\Pi$. Let $A$ be a well-ordered set such that $\card A=\Pi$, and such
+that, for every $a\in A$, the set of $a'\leq a$ has cardinality
+$<\Pi$. It follows in particular, since $\Pi'_\circ<\Pi$, that $A$
+\emph{is large relative to} $\Pi'_\circ$. Define, by transfinite
+recursion, maps
+$$
+S\longmapsto S_a:P\longrightarrow P\quad(a\in A){\quoi},
+$$
+by the following formulas:
+
+$S_\circ=S$, $S_{a+1}=S_a\cup\varphi(S_a)\cup\{i_{S_a}\}$,
+$S_a=\bigcup_{a'<a}S_{a'}$ if $a$ is a limit ordinal.
+
+Then put,\pageoriginale for $S\in P$,
+$$
+J(S)=\bigcup_{a\in A}S_a{\quoi}.
+$$
+It is then clear that $J(S)\supset S$, that $J(S)$ is stable under
+$\varphi$, that $\card J(S)\leq\Pi$ (since $\card A=\Pi$), and finally
+that $J(S)$ is large relative to $\Pi'_\circ$ (using the fact that $A$
+is large relative to $\Pi'_\circ$).
+
+This proves \hyperref[I.lem9.21.16]{9.21.16} and completes the proof of
+\hyperref[I.lem9.21.9]{9.21.9}.
+
+We also point out a variant of \hyperref[I.lem9.21.9]{9.21.9}:
+
+\begin{enonce*}{Lemma 9.21.17}\etiquette[9.21.17]{I.lem9.21.17}
+The notation is that of \hyperref[I.lem9.21.9]{9.21.9}. Let $F'$ denote
+the full subcategory $\Hhomcart_B(B,E)$ of $F=\Hhom_B(B,E)$ formed by
+the cartesian sections of $E$ over $B$. Then:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Every object of $F'$ is accessible. More precisely, let
+$\alpha\mapsto X(\alpha)$ be an element of $F'$, and let $d$ be a
+cardinal such that $d\geq\Pi'_\circ$, $d\geq c$, and such that, for
+every $\alpha\in\ob B$, $X(\alpha)$ is a $d$-accessible object of
+$E_\alpha$. Then $X$ is a $d$-accessible object of $F'$.
+
+\item Suppose $\Pi\leq c$ and that the functors
+$f^\ast:E_\beta\rightarrow E_\alpha$ are
+$\Pi'_\circ$-accessible, or that the categories $E_\alpha$ are stable
+under small filtered inductive limits and the functors
+$f^\ast:E_\beta\rightarrow E_\alpha$ commute with these inductive
+limits. Then every object $X$ of $F'$ is isomorphic to an object of the
+form $\varinjlim_I X_i$, where, for every $i\in I$, $X_i$ is an object
+of the full subcategory ${F'}^{\Pi}=F'\cap F^{\Pi}$ of $F'$, and where
+$I$ is large relative to $\Pi$.
+\end{enumerate}
+\end{enonce*}
+
+The\pageoriginale proof being entirely analogous to that of
+\hyperref[I.lem9.21.9]{9.21.9}, we shall merely indicate the points at
+which the latter must be modified. First note:
+

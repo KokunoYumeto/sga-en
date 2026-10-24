@@ -1,0 +1,398 @@
+\begin{enonce*}{Proof of 6.3.31}
+\emph{Let\pageoriginale $K$ be a $G$-torsor on
+$X$. By \hyperref[XVII.prop6.3.23]{6.3.23}, the question is local on $X$ for the
+étale topology; it therefore suffices to treat the case where $r(K)$ is trivial. The
+$G$-torsors $K$ such that $r(K)$ is trivial are identified with
+trivial $G'$-torsors $K'$ equipped with an isomorphism
+$k:H\isomto u(K')$. Put $Z=\Sym^{n}_{T}(X)$. The morphism
+of trivial torsors $k$ induces $k_{n}:H_{Z}\isomto
+u(K'_{n})$, and the corresponding $G$-torsor on $\Sym^{n}\sisi{}{_T}(X)$
+represents the descent datum under consideration.}
+\end{enonce*}
+
+\section{Appendix}\etiquette[7]{XVII.sec7}\pageoriginale
+
+\setcounter{subsection}{-1}
+\subsection{Preliminaries}\etiquette[7.0]{XVII.subsec7.0}
+
+In this appendix we shall use the results of \sisi{${\rm VI_{B}}$}{VBIS},
+whose notation we retain.
+
+\subsubsection{}\etiquette[7.0.1]{XVII.subsubsec7.0.1}
+Let $\Sch_{!}$ be the category whose objects are quasi-compact,
+quasi-separated schemes and whose morphisms are separated morphisms
+of finite type. We denote by $\Ee$ the bifibred category over
+$\Sch_{!}$, with fibre categories opposite to topoi, defined by étale
+sheaves on schemes \sisi{${\rm VI_{B}}$ (4.3.0)}{(\hyperrefext[Vbis][Vbis.subsubsec4.3.0]{4.3.0})}. Fix once and for all an
+object $R$ of $\Sch_{!}$, and denote by $\Ee_{R}$ the
+bifibred category over $\Sch_{!R}$ deduced from
+$\Ee$. Finally, let $\mathcal{A}$ be a ring in the topos
+$\sheafGamma(\Ee^{\circ}_{R})$ satisfying the following conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $\mathcal{A}$ is a \emph{cocartesian} section of
+$\Ee^{\circ}_{R}$ over $\Sch^{\circ}_{!R}$.
+
+\item For every scheme $X$ in $\Sch_{!R}$, $\mathcal{A}_{X}$ is a
+\emph{torsion} sheaf.
+\end{enumerate}
+
+With this understood, we shall work with the category
+$\sheaf{\Mod}(\sisi{}{\sheafGamma(}\Ee^{\circ}_{R}\sisi{}{)},\mathcal{A})$ (\refvb[VI B ]{Vbis.subsubsec1.3.5}).
+
+Our aim is to define, for every morphism $f:X\rightarrow Y$ in
+$\Sch_{!R}$, a functor $Rf_{!}:D(X,\mathcal{A}_X)\rightarrow
+D(Y,\mathcal{A}_{Y})$, agreeing with the previously defined functor
+when $f$ is compactifiable, and making the categories
+$D(X,\mathcal{A}_{X})$, for varying $X$, into a cofibred category
+over $\Sch_{!R}$.\nde{\MakeLinkTarget*{sga4.exp.XVII.editor-note.7.0.1.compactification}\label{XVII.ndeapp}Every morphism in $\Sch_{!}$ is compactifiable by Nagata's compactification theorem (see \nderef{XVII.ndeConrad}). This appendix shows how to avoid using the compactification theorem in the definition of $Rf_!$ by relying on Chow's lemma (\hyperref[XVII.lem7.0.6]{7.0.6}).}
+
+\subsubsection{}\etiquette[7.0.2]{XVII.subsubsec7.0.2}
+Although all the results of this appendix are stated in the setting
+specified in \hyperref[XVII.subsubsec7.0.1]{7.0.1}, they could be transcribed, with obvious
+modifications, into the following setting: take as a section of
+$\sheafGamma(\Ee^{\circ}_{R})$ the constant section whose value is
+the constant sheaf $\ZZ$, and, for every scheme $X$, restrict to the
+derived category $D^{\ast}_{\tors}(X)$ defined by complexes of sheaves
+of abelian groups whose cohomology sheaves are torsion sheaves
+(\refvb[VI B ]{Vbis.subsubsec4.3.1}).
+
+\begin{enonce*}{Lemma 7.0.3}\etiquette[7.0.3]{XVII.lem7.0.3}
+Let\pageoriginale there be given a commutative diagram of schemes
+$$\vcenter{\etiquette[7.0.3.1]{XVII.eq7.0.3.1}
+\xymatrix{
+X' \ar[rr]^{j'} \ar[d]_{f'}& & X \ar[d]^{f}\\
+Y' \ar[rr]_{j}& & Y.
+}}\leqno{(7.0.3.1)}
+$$
+where $f$ and $f'$ are proper and $j$ and $j'$ are immersions. Then,
+for every complex $K^{\bigdot}$ in $D^{+}_{\tors}(X')$, the canonical
+arrow\nde{The definition of this arrow is similar to that of \eqhyperref[XVII.eq5.1.5.2]{5.1.5.2}, up to an easy dévissage.}
+$$
+j_{!}\circ R^{+}f'\sisi{}{_*}(K^{\bigdot})\longrightarrow R^{+}f\sisi{}{_*}\circ
+j_{!}(K^{\bigdot})
+$$
+is an isomorphism.
+\end{enonce*}
+
+By the ``lemma on way-out functors'' (\cite{sga4.exp.XVII.bib.RD} I \sisi{(}{}7.1), it
+suffices to show that, for every integer $i$ and every torsion sheaf
+$F$, the arrow
+$$\etiquette[7.0.3.2]{XVII.eq7.0.3.2}
+j_{!}\circ R^{i}f'\sisi{}{_*}(F)\longrightarrow R^{i}f\sisi{}{_*}\circ j_{!}(F)\leqno(7.0.3.2)
+$$
+is an isomorphism.
+
+By replacing $j$ and $j'$ with their closed images, we are reduced to
+the case where $j$ and $j'$ are open immersions with everywhere dense
+images. The properness of $f$ and $f'$ then implies that diagram
+\eqhyperref[XVII.eq7.0.3.1]{7.0.3.1} is cartesian. Under these conditions, the proper base-change
+theorem, in the form \hyperrefext[XII][XII.cor5.2]{5.2}, shows that, for every geometric point
+$\xi$ of $Y$, the arrow
+$(j_{!}\circ R^{i}f'\sisi{}{_*}(F))_{\xi}\rightarrow (R^{i}f\sisi{}{_*}\circ
+j_{!}(F))_{\xi}$ is an isomorphism.
+
+\begin{enonce*}{Construction 7.0.4}\etiquette[7.0.4]{XVII.const7.0.4}
+\emph{Let $D$ be a category, and let $X$ and $Y$ be two $D$-objects in
+$\Sch_{!R}$ such that, for every arrow $\alpha\rightarrow \beta$ in
+$D$, the morphisms $X_{\beta}\rightarrow X_{\alpha}$ and
+$Y_{\beta}\rightarrow Y_{\alpha}$ are proper. Let $j:X\rightarrow
+Y$ be a morphism such that, for every object $\alpha$ of $D$,
+$j_{\alpha}:X_{\alpha}\rightarrow Y_{\alpha}$ is an immersion. The
+isomorphism \eqhyperref[XVII.eq7.0.3.2]{7.0.3.2} for $i=0$ satisfies the usual compatibility
+conditions and allows one to construct an \emph{exact} functor:}
+\[
+j_{!}:\Mod(\sheafGamma(\bar{X}),\mathcal{A})\longrightarrow
+\Mod(\sheafGamma(\bar{Y}),\mathcal{A})
+\]
+\emph{(\cf \sisi{(}{}\refvb{Vbis.subsubsec1.2.5} for the notation)\sisi{.}{}
+which\pageoriginale induces a triangulated functor, again denoted $j_{!}$:}
+\[
+j_{!}:D(\sheafGamma(\bar{X}),\mathcal{A})\longrightarrow
+D(\sheafGamma(\bar{Y},\mathcal{A}))
+\]
+
+\emph{Then, for every object $\alpha$ of $D$, there is a commutative
+diagram, where $j_{\alpha !}$ denotes the usual ``extension by $0$''
+functor:}
+\[
+\xymatrix{
+D(\sheafGamma(\bar{X}), \sisi{}{\Aa}) \ar[rr]^{j_!} \ar[d]_{R e^{\sisi{+}{*}}_{\alpha}}&
+&D(\sheafGamma(\bar{Y}),\Aa) \ar[d]^{R e^{\sisi{+}{*}}_{\alpha}}\\
+D(X_{\alpha}, \Aa_{X_{\alpha}})  \ar[rr]_{j_{\alpha !}} & &
+  D(Y_{\alpha},\Aa_{Y_\alpha}).
+}
+\]
+\end{enonce*}
+
+\begin{enonce*}{Construction 7.0.5}\etiquette[7.0.5]{XVII.constru7.0.5}
+Let there be given a commutative diagram in $\Sch_{!R}$
+$$\vcenter{\etiquette[7.0.5.1]{XVII.eq7.0.5.1}
+\xymatrix{
+X'   \ar[rr]^{i'} \ar[d]_{f'}&    & X \ar[d]^{f}\\
+Y'   \ar[rr]^{i} &    & Y
+}}\leqno{(7.0.5.1)}
+$$
+where $i$ and $i'$ are immersions, $f$ is a proper morphism, and $f'$
+is a proper \emph{surjective} morphism. It defines a commutative diagram
+of simplicial objects in $\Sch_{!R}$
+$$\vcenter{\etiquette[7.0.5.2]{XVII.eq7.0.5.2}
+\xymatrix{
+[X'|Y']      \ar[d]_{u_{f'}}  \ar[r]^{j} & [X|Y] \ar[d]^{u_f}\\
+C^{\Delta}_{Y'}  \ar[r]_{i} & C^{\Delta}_{Y}
+}}\leqno{(7.0.5.2)}
+$$
+where $j_{n}:[X'|Y']_{n}\rightarrow [X|Y]_{n}$ is an immersion
+for every $n$. With this notation, there is a canonical isomorphism
+\[
+i_{!}\isomto  R^{+}\bar{u}_{f\sisi{+}{*}}\circ j_{!}\circ
+L^{+}\bar{u}_{f'}\sisi{}{^*}{\quoi}.
+\]
+\end{enonce*}
+
+By replacing $i$ and $i'$ with their closed images, we may suppose that
+$i$ and $i'$ are open immersions with everywhere dense images. Diagram
+\eqhyperref[XVII.eq7.0.5.1]{7.0.5.1} is then cartesian and $f$ is \emph{surjective}. Moreover,
+for every integer $n$, $j_{n}$ is an\pageoriginale open immersion and
+the diagram
+\[
+\xymatrix{
+[X'|Y']_n        \ar[r]^{j_n} \ar[d]& [X|Y]_n \ar[d]\\
+Y'  \ar[r]_{i} & Y
+}
+\]
+is cartesian.
+
+Consequently, $L^{+}\bar{u}_{f}^{\sisi{+}{*}}\circ i_{!}$ is isomorphic to $j_{!}\circ
+L^{+}\bar{u}_{f'}^{\ast}$. Using the fact that $u_{f}$ is a
+cohomological-descent augmentation (\sisi{${\rm VI_{B}}$ (\refnoexpose{Vbis.prop4.3.2})}{\refvb{Vbis.prop4.3.2}}), we
+obtain a sequence of isomorphisms
+\[
+i_{!}\isomto R^{+}\bar{u}_{f\sisi{+}{*}}\circ
+L^{+}(\bar{u}^{\sisi{+}{*}}_{f})\circ i_{!}\isomto
+R^{+}\bar{u}_{f\ast}\circ j_{!}\circ L^{+}\bar{u}_{f'}^{\ast}
+\]
+which gives the desired isomorphism.\nde{More directly, without assuming $f'$ surjective, there is still a sequence of canonical arrows
+\[i_!\to i_! R^+\bar{u}_{f'*}L^+\bar{u}^*_{f'}\isomto  R^+\bar{u}_{f*} j_! L^+u^*_{f'},\]
+of which the second is an isomorphism (\hyperref[XVII.lem7.0.3]{7.0.3}). When $f'$ is surjective, the first is also an isomorphism by cohomological descent, and the composite agrees with the isomorphism constructed in the text.
+}
+
+Finally, we shall use the following variant of Chow's lemma, whose
+proof will appear in \EGA II, 2\sisi{nd}{\textsuperscript{nd}} edition,\nde{See [C, 2.6], cited in \nderef{XVII.ndeConrad}.} and which is an
+improvement of (\sisi{\hyperref[XVII.subsec7.1]{7.1}}{\hyperrefext[XII][XII.lem7.1]{7.1}}):
+
+\begin{enonce*}{Lemma 7.0.6}\etiquette[7.0.6]{XVII.lem7.0.6}
+Let $S$ be a quasi-compact and quasi-separated scheme and let
+$f:X\rightarrow S$ be a separated morphism of finite type. Then there
+exists a commutative diagram
+\[
+\xymatrix{
+X' \ar[rr]^{p} \ar[d]_{f'}& & X \ar[lld]^{f}\\
+S                         & &
+}
+\]
+satisfying the following conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $p$ is proper and \emph{surjective};
+
+\item there is a dense open subset $U$ of $X$ such that $p$ induces an
+isomorphism from $p^{-1}(U)$ onto $U$;
+
+\item $f'$ is quasi-projective.
+\end{enumerate}
+\end{enonce*}
+
+
+\subsection{Definition of $R^{+}f_{!}$}\etiquette[7.1]{XVII.subsec7.1}\pageoriginale
+
+\begin{enonce*}{Definition 7.1.1}\etiquette[7.1.1]{XVII.def7.1.1}
+Let $f:X\rightarrow S$ be a morphism of schemes. A
+\emph{pseudo-compactification} of $f$ consists of a commutative diagram
+$$\vcenter{
+\xymatrix{
+X_1 \ar[r]^{\sisi{}{j_1}} \ar[d]_{p_1}& T_1\ar[ldd]^{f_1}\\
+X   \ar[d]_{f}& \\
+S   &
+}}\leqno{(7.1.1.0)}
+$$\etiquette[7.1.1.0]{XVII.eq7.1.1.0}
+where $p_{1}$ is proper and surjective, $j_{1}$ is an immersion, and
+$f_{1}$ is proper.
+\end{enonce*}
+
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[7.1.2]{XVII.subsubsec7.1.2}
+Let $f:X\rightarrow S$ be a morphism in $\Sch_{!R}$. By Chow's lemma
+(\hyperref[XVII.lem7.0.6]{7.0.6}), $f$ has a pseudo-compactification
+$(p_{1},j_{1},f_{1})$. Diagram \eqhyperref[XVII.eq7.1.1.0]{7.1.1.0} defines a morphism
+\[
+[X_{1}|X]\xrightarrow{j_{1}}[T_{1}|S]
+\]
+again denoted by $j_{1}$, such that $j_{1n}$ is an immersion for every
+$n$. We then put $R^{+(1)}f_{!}=\sisi{L^{+}\bar{u}_{p_{1}}\cdot
+j_{1!}\circ R^{+}\bar{u}_{f_{1}}}{R^+\bar{u}_{f_1*}\circ j_{1!} \circ L^+\bar{u}_{p_1}^*}$, thereby obtaining a
+\emph{triangulated} functor from $D^{+}(X,\mathcal{A}_{X})$ to
+$D^{+}(S,\mathcal{A}_{S})$.
+
+\begin{enonce*}{Construction 7.1.3}\etiquette[7.1.3]{XVII.constru7.1.3}
+For every pair $((p_{1},j_{1},f_{1}),(p_{2},j_{2},f_{2}))$ of
+pseudo-compactifications of $f$, there is an isomorphism
+$\alpha_{12}:R^{+(1)}f_{!}\rightarrow R^{+(2)}f_{!}$ such that, for
+every other pseudo-compactification $(p_{3}, j_{3},f_{3})$, one has
+$\alpha_{23}\circ \alpha_{12}=\alpha_{13}$.
+\end{enonce*}
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Define a bisimplicial system $[[X_{1},X_{2}|X]]$ by setting
+\[
+[[X_{1},X_{2}|X]]_{[n]\times [m]}=[X_{1}|X]_{n}\times
+[X_{2}|X]_{n}
+\]
+Similarly, set
+\[
+[[X_{1}|X]]_{[n]\times[m]}=[X_{1}|S]_{n}{\quoi},
+\]
+all the morphisms $[[X_{1}|X]]_{[n]\times [m]}\rightarrow
+[[X_{1}|X]]_{[n]\times [m']}$ induced by morphisms
+$[m']\rightarrow [m]$ being equal to the identity. Define the
+bisimplicial systems $[[T_{1},T_{2}|S]]$ and $[[T_{1}|S]]$ in the same
+way, so that there is a commutative diagram
+\[
+\xymatrix@C=1em{
+  & & [[T_1,T_2|S]] \ar[rrrr]\ar'[dr][rrrddd]_(.2){u_{f_1f_2}}|(.38)\hole& &   & &  [[T_1|S]]\ar[lddd]^{u_{f_1}}\\
+  [[X_1,X_2|X]]
+  \ar[rrrr]\ar[rru]^{j_{12}}\ar[rrrddd]_{u_{p_1 p_2}} & &  & & [[X_1|X]]\ar[rru]_{j_1}\ar[lddd]_(.75){u_{p_1}}  \\
+  & & & & &   &\\
+  & & & & & C^{\Delta\times\Delta}_S\\
+  &&& C^{\Delta\times\Delta}_X \ar[rru]
+}
+\]
+where\pageoriginale $j_{12}$ is an immersion degree by degree. The
+computational procedure described in \sisi{VI b (\refnoexpose{Vbis.subsec2.3})}{\hyperrefext[Vbis][Vbis.subsec2.3]{2.3}} makes it possible to construct a
+morphism
+\[
+R^{+(1)} f_{!}\xrightarrow{\alpha_{1}}R^{+}\bar{u_{f_{1}f_{2}}}\sisi{}{_*}\circ
+j_{12!} \circ L^{+}\bar{u_{p_{1}p_{2}}}^{\sisi{+}{\ast}}=R^{{+}(1,2)}f_{!}
+\]
+which is obtained from a morphism of triple complexes of sheaves on
+$S$.
+
+\item $\alpha_{1}$ \emph{is an isomorphism}:
+
+To prove this, one may fix the first index $n$ coming from
+$\bigl[[T_{1},T_{2}]\bigr]_{[n]\times[m]}$ in the preceding morphism of
+triple complexes and consider the resulting morphism of double
+complexes. One checks that this morphism is precisely the isomorphism
+defined in Lemma \hyperref[XVII.constru7.0.5]{7.0.5} for the diagram
+\[
+\xymatrix{
+**[r][X_1|X]_n \times X_2  \ar[r] \ar[d] & **[r][T_1|S]_n \times
+T_2 \ar[d]\\
+**[r][X_1|X]_n             \ar[r] & **[r][T_1|S]_n
+}
+\]
+
+\item In the same way, construct an isomorphism
+\[
+R^{+(2)}f_{!}\xrightarrow{\alpha_{2}}R^{+}\bar{u_{f_{1}f_{2}}}_{\sisi{+}{*}}\circ
+j_{12!} \circ L^{+}\bar{u_{p_{1}p_{2}}}\sisi{}{^*}
+\]
+and set $\alpha_{12}=\alpha^{-1}_{2}\circ \alpha_{1}$.
+\end{enumerate}
+
+To verify the relation $\alpha_{23}\circ \alpha_{12}=\alpha_{13}$,
+one uses a trisimplicial object. We leave it to the reader to check
+that the resulting diagram is commutative:\pageoriginale
+$$
+\xymatrix{
+  R^{+(2,3)}{f_!} \ar[rd]& R^{+(2)}f_! \ar[r] \ar[l]& R^{+(1,2)}f_! \ar[ld]\\
+                &         R^{+(1,2,3)}f_!  &                  \\
+R^{+(\sisi{2}{3})}f_! \ar[uu]\sisi{}{\ar[rd]}     &                         &  R^{+(1)}f_! \ar[uu]\sisi{}{\ar[ld]}\\
+                &    R^{+(1,3)}f_! \ar[uu]        &
+}
+$$
+
+\begin{enonce*}{Construction 7.1.4}\etiquette[7.1.4]{XVII.constru7.1.4}
+Let $Z\xrightarrow{g}Y$ and $Y\xrightarrow{f}X$ be two morphisms in
+$\Sch_{!R}$. For every triple $((p_{1},j_{1},f_{1}),
+(p_{2},j_{2}g_{2}), (p_{3},j_{3},(fg)_{3}))$, where
+$(p_{1},j_{1},f_{1})$ is a pseudo-compactification of $f$,
+$(p_{2},j_{2},g_{2})$ a pseudo-compactification of $g$, and
+$(p_{3},j_{3},(fg)_{3})$ a pseudo-compactification of $fg$, there is an
+isomorphism $\sisi{R^{+(3)}fg_{!}\isomfrom  R^{+(2)}g_{!}\circ
+R^{+(1)}f_{!}}{R^{+(1)}f_!\circ R^{+(2)}g_!\isomto R^{+(3)}(fg)_!}$ compatible with the previously defined
+isomorphisms $\alpha_{ij}$.
+\end{enonce*}
+
+We proceed in several steps.
+
+\setcounter{subsubsection}{4}
+\paragraph{}\etiquette[7.1.4.1]{XVII.par7.1.4.1}
+Let $(p_{1},j_{1},f_{1})$ (\resp $(p_{2},j_{2},f_{2})$) be a
+pseudo-compactification of $f:Y\rightarrow X$ (\resp of
+$g:Z\rightarrow Y$):
+$$\vcenter{\etiquette[7.1.4.1.1]{XVII.eq7.1.4.1.1}
+\xymatrix{
+  &     & Z\ar[d]^{g}  & Z_2\ar[l]_{p_2}\ar@{^{(}->}[r]^{j_2}  & T_2 \ar[lld]^{g_2}\\
+T_1  \ar[rrd]_{f_1}& Y_1 \ar[r]^{p_1} \ar@{_{(}->}[l]_{j_1}& Y \ar[d]^{f} &      &    \\
+    &     & X        &      &
+}}\leqno{(7.1.4.1.1)}
+$$
+
+The morphism $Z'=\fprod{Z}{Y_{1}}{Y}\rightarrow Y_{1}$ obtained from
+$g$ by base change is equipped with a pseudo-compactification:
+$$\vcenter{\etiquette[7.1.4.1.2]{XVII.eq7.1.4.1.2}
+\xymatrix{
+  T'_2 = \fprod{T_2}{Y_1}{Y}   \ar[rdd]_{g'_2}& \fprod{Z_2}{Y_1}{Y} =Z'_2 \ar[d]^{p'_2}
+\ar@{_{(}->}[l]_{j'_2}\\
+&  \fprod{Z}{Y_1}{Y} = Z' \ar[d]^{g'}\\
+&    Y_1
+}}\leqno{(7.1.4.1.2)}
+$$
+
+
+Now\pageoriginale choose a \sisi{}{pseudo-}compactification of
+\sisi{$j_{1}\cdot g'_{2}$.
+$$\etiquette[7.1.4.1.3]{XVII.eq7.1.4.1.3}
+\vcenter{
+\xymatrix{
+T_{12}        \ar[d]_{g''_2} & \fprod{T_2}{Y_1}{Y}=T'_2
+\ar@{_{(}->}[l]_(.6){j'_1} \ar[d]^{g'_2}\\
+T_1            &   Y_1 \ar@{_{(}->}[l]
+}}\leqno(7.1.4.1.3)
+$$%
+}{$j_1\circ g'_2$\nde{In the original text a compactification was chosen, which is possible by the compactification theorem. Since the purpose of the appendix is to avoid that theorem (\cf \nderef{XVII.ndeapp}), the editor has taken the liberty of replacing it with a pseudo-compactification and slightly modifying \hyperref[XVII.par7.1.4.2]{7.1.4.2}. Another solution would be to restrict to pseudo-compactifications $(p_1,j_1,f_1)$ for which $f_1$ is \emph{projective}.}
+$$\etiquette[7.1.4.1.3]{XVII.eq7.1.4.1.3}
+\vcenter{
+\xymatrix{
+T_{12}        \ar[dd]_{g''_2} &T_2''\ar[d]\ar[d]^p\ar@{_{(}->}[l]_{j'_1}\\
+& \fprod{T_2}{Y_1}{Y}=T'_2\ar[d]^{g'_2}\\
+T_1            &   Y_1 \ar@{_{(}->}[l]_{j_1}
+}}\leqno(7.1.4.1.3)
+$$}%
+which defines a pseudo-compactification of the composite $fg$; denote
+the corresponding functor by $R^{+(12)}\sisi{\int g}{(fg)}_{!}$.
+
+\paragraph{}\etiquette[7.1.4.2]{XVII.par7.1.4.2}
+\emph{The preceding data make it possible to define an isomorphism}
+$R^{+(12)}\sisi{\int g}{(fg)}_{!}\isomfrom  R^{+(1)}f_{!}\sisi{\cdot}{\circ} R^{+(2)}g_{!}$:
+
+There is a commutative diagram, where $Z_2''=\fprod{T''_2}{Z'_2}{T'_2}$ and all the arrows are
+naturally deduced from \eqhyperref[XVII.eq7.1.4.1.1]{7.1.4.1.1}, \eqhyperref[XVII.eq7.1.4.1.2]{7.1.4.1.2}, and
+\eqhyperref[XVII.eq7.1.4.1.3]{7.1.4.1.3}.
+$$\etiquette[7.1.4.2.1]{XVII.eq7.1.4.2.1}
+\vcenter{
+\xymatrix{
+[T_{12}|X] \ar[rd]_{g''_2} &   &[T\sisi{'}{''}_2|Y] \ar[rd]_{g'_2\sisi{}{p}} \ar[ll]_{j'_1}&
+[Z\sisi{'}{''}_{2}|Z] \ar[r]^{r}\ar[l]_{j\sisi{'}{''}_2} \ar[d]_{l}&
+C^{\Delta}_Z \ar[d]^{g}\\
+            &    [T_1|X] \ar[rrrd]_{u_{f_1}} &  & [Y_1|Y]\ar[r]_{u_{p_1}}\ar[ll]_{j_1} & C_Y^{\Delta} \ar[d]^{f}\\
+            &       &  &   &  C_X^{\Delta}
+}}\leqno(7.1.4.2.1)
+$$
+
+We shall\pageoriginale define a natural arrow:

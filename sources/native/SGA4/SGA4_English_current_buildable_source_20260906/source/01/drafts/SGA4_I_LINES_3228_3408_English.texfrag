@@ -1,0 +1,178 @@
+\subsection{Characterization of ind-representable functors}\etiquette[8.3]{I.sec8.3}
+
+\begin{enonce*}{Proposition 8.3.1}\etiquette[8.3.1]{I.prop8.3.1}
+Let $F$ be an ind-representable presheaf on $C$. Then $F$ is
+left exact, \ie (\hyperref[I.cor2.3.2]{2.3.2}) for every finite category
+$J$ and every
+functor $\varphi:J\rightarrow C$ such that $\varinjlim \varphi$ is
+representable (\ie $\varprojlim \varphi^\circ$ is representable),
+the canonical map
+$$
+F(\varinjlim \varphi)\longrightarrow \varprojlim F\circ\varphi
+$$
+is bijective.
+\end{enonce*}
+
+Indeed,\pageoriginale since representable presheaves are
+clearly left exact, it follows at once
+from \hyperref[I.prop2.8]{2.8} that the same is true
+of every filtered inductive limit of such functors, \cqfd
+
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[8.3.2]{I.sec8.3.2}
+Given a presheaf $F$ on $C$, we shall often have occasion to work
+with the category
+\hypertarget{sga4.exp.I.equation.8.3.2.1}{}$$
+\displaylines{\rlap{$(8.3.2.1)$}\hfill C_{/F}\hookrightarrow
+\widehat{C}_{/F}{\quoi},\hfill}
+$$
+which denotes the full subcategory of the latter category formed by
+arrows $X\rightarrow F$ \emph{whose source lies in} $C$. It follows from
+\hyperref[I.prop1.4]{1.4} that the objects of this category may be identified with pairs
+$(X,u)$, where $X$ is an object of $C$ and $u\in F(X)$. A morphism from
+$(X,u)$ to $(X',u')$ is then interpreted as an arrow
+$f:X\rightarrow X'$ in $C$ such that $F(f)(u')=u$. The
+functor from $\widehat{C}_{/F}$ to $\widehat{C}$ that ``forgets the
+target'' induces a functor (called \emph{canonical}).
+\hypertarget{sga4.exp.I.equation.8.3.2.2}{}$$
+\displaylines{\rlap{$(8.3.2.2)$}\hfill C_{/F}\longrightarrow
+C{\quoi},\hfill}
+$$
+already considered in \hyperref[I.prop3.4]{3.4}, where it is proved that
+the inductive limit of this
+functor exists in $\widehat{C}$ (without any smallness condition on
+$C_{/F}$!) and is canonically isomorphic to $F$.
+
+
+\setcounter{paragraph}{2}
+\paragraph{}\etiquette[8.3.2.3]{I.sec8.3.2.3}
+Note that if finite inductive limits are
+representable in $C$, and if $F$ is left exact (\ie takes them to
+finite projective limits in $(\Ens)$), then the same is true
+in $C_{/F}$, and a fortiori (\hyperref[I.exem2.7.1]{2.7.1}) $C_{/F}$ is filtered. If,
+more generally, sums of two objects and
+cokernels of pairs of parallel arrows are representable in $C$, and if $F$
+takes them to products \resp kernels, then\pageoriginale $C_{/F}$
+is closed under the same types of finite inductive limits, hence
+it is filtered if and only if it is nonempty, \ie if and
+only if the functor $F$ is not the constant functor with
+value $∅$.
+
+\begin{enonce*}{Theorem 8.3.3}\etiquette[8.3.3]{I.them8.3.3}
+Let $C$ be a $𝒰$-category, and let $F\in \ob \widehat{C}$,
+$F:C^\circ\rightarrow (𝒰\text{-}\Ens)$ be a
+$𝒰$-presheaf on $C$. The following conditions are
+equivalent:
+\begin{itemize}
+\item[(i)] $F$ is ind-representable (\hyperref[I.sec8.2.2]{8.2.2}).
+
+\item[(ii)] The category $C_{/F}$ (\hyperref[I.sec8.3.2]{8.3.2}) is filtered and
+essentially small.
+
+\item[(iii)] (if finite inductive limits are
+representable in $C$.) The functor $F$ is left exact, and $\ob C_{/F}$
+has a small cofinal subset (\hyperref[I.sec8.1.4]{8.1.4}).
+
+\item[(iii bis)] (If sums of two objects and
+cokernels of pairs of parallel arrows are representable in $C$.) The functor $F$
+takes sums of two objects of $C$ to products, and cokernels of
+pairs of parallel arrows of $C$ to kernels; the category $C_{/F}$ is nonempty,
+\ie the functor $F$ is not the constant functor with value
+$∅$; finally, there exists a small family of objects of
+$C_{/F}$ such that every object $X$ of $C_{/F}$ is dominated by an
+object $X_i$, \ie admits an $F$-morphism $X_i\rightarrow X$.
+
+\item[(iv)] (if the category $C$ is equivalent to a small
+category.) The category $C_{/F}$ is filtered.
+
+\item[(v)] (If the category $C$ is equivalent to a small
+category, and if filtered inductive limits are representable in
+it.) The functor $F$ is left exact.
+\end{itemize}
+\end{enonce*}
+
+\noindent \emph{Proof.} (i)\pageoriginale $\Rightarrow$
+(ii). Suppose that $F$ is ind-represented by $(X_i)_{i\in I}$, with $I$
+small. Let us prove that $C_{/F}$ is filtered. Let $X$, $X'$ be two
+objects of $C_{/F}$, \ie objects of $C$ equipped with morphisms
+$X\rightarrow F$, $X'\rightarrow F$; let us prove that they have
+a common upper bound in $C_{/F}$. The morphisms $X\rightarrow
+F$, $X'\rightarrow F$ come from morphisms $X\rightarrow X_i$,
+$X'\rightarrow X'_i$, and, after replacing $i$, $i'$ by a
+common upper bound in $\Ob I$, we may assume that $i=i'$, and take
+as a common upper bound of $X$, $X'$ the object $X_i$ equipped with the
+canonical morphism $X_i\rightarrow F$. Now let $\xymatrix{
+X\ar@<2pt>[r]^{f,g}\ar@<-2pt>[r]& X' \ar@<2pt>[r]^{h} & F }$
+ be a pair of parallel arrows in $C_{/F}$; let us prove that it is
+equalized by an arrow $X'\rightarrow X''$ in $C_{/F}$. Now
+$h:X'\rightarrow F$ is given by a morphism $h_i:X'\rightarrow
+X_i$, and the condition $hf=hg$ means that there exists
+$\alpha:i\rightarrow j$ in $I$ such that
+$\varphi(\alpha)(h_if)=\varphi(\alpha)(h_ig)$, \ie after
+replacing $h_i$ by $\varphi(\alpha)h_i$, this morphism equalizes $f$ and $g$.
+This proves that $C_{/F}$ is filtered. It is then immediate
+that it is essentially small, since the objects
+$(X_i\rightarrow F)_{\in \Ob I}$ form a small family in
+$\Ob C_{/F}$ that is cofinal.
+
+(ii) $\Rightarrow$ (i). Put $I=C_{/F}$, and consider the
+canonical functor \hyperlink{sga4.exp.I.equation.8.3.2.1}{(8.3.2.1)}
+$$
+\varphi:I=C_{/F}\longrightarrow F{\quoi}.
+$$
+We know that the presheaf ind-represented by this ind-object of $C$ is
+$F$ (\hyperref[I.prop3.4]{3.4}), so $F$ is ind-representable by
+definition (\hyperref[I.sec8.2.2]{8.2.2}).
+
+(ii) $\Leftrightarrow$ (iii). Indeed, (ii) $\Rightarrow$ (iii) because
+an ind-representable functor is left exact \hyperref[I.prop8.3.1]{(8.3.1)}, and (iii)
+$\Rightarrow$ (ii) because we noted (\hyperref[I.prop8.3.1]{8.3.1}) that if $F$
+is left exact, then $C_{/F}$ is filtered, and\pageoriginale
+we apply Definition \hyperref[I.def8.1.8]{8.1.8} to conclude that this
+category is essentially small.
+
+(ii) $\Leftrightarrow$ (iii bis) is proved in the same way as (ii)
+$\Leftrightarrow$ (iii).
+
+The equivalences (ii) $\Leftrightarrow$ (iv) and (iii)
+$\Leftrightarrow$ (v) are immediate, since if $C$ is equivalent to
+a small category, then $C_{/F}$ is clearly likewise equivalent
+to a small category and \textit{a fortiori} it is
+automatically essentially small as soon as it is filtered.
+This completes the proof of \hyperref[I.them8.3.3]{8.3.3}.
+
+\begin{enonce*}[remark]{Remark 8.3.4}\etiquette[8.3.4]{I.rem8.3.4}
+Let $F:C'\rightarrow C''$ be a functor between $𝒰$-categories.
+It appears that the notion of left exactness
+(\hyperref[I.cor2.3.2]{2.3.2}) is of
+little practical interest unless finite projective
+limits are representable in $C'$. In the case where
+$C''=(𝒰\text{-}\Ens)$, and where $C'$ is $𝒰$-small,
+writing $C'$ in the form $C^\circ$ (thus $C={C'}^\circ)$, one
+should regard the ``right notion'' that replaces,
+in the general case, that of left exactness as the
+ind-representability of $F$ (regarded as a
+presheaf on
+$C^\circ$; \ie the pro-representability of $F$,
+regarded as a
+functor on $C'$, \cf \hyperref[I.sec8.10]{8.10}). This notion does indeed coincide
+with that
+of left exactness when finite projective
+limits are representable in $C'$ %%
+ \textit{i.e.} finite inductive limits in $C$ are
+representable (\hyperref[I.them8.3.3]{8.3.3}). When $C'$ is no longer assumed
+$𝒰$-small, or at least equivalent to a
+$𝒰$-small category, the two notions for a functor $F$,
+left exactness and pro-representability, no longer necessarily coincide,
+even if finite projective limits in $C'$ are
+representable (\cf \hyperref[I.exer8.12.9]{8.12.9}). In fact, it seems that
+in\pageoriginale this case, left exact functors that are not
+ind-representable should be regarded as pathological, while
+the ``good'' objects remain the ind-representable functors;
+compare \hyperref[I.cor8.13.3]{8.13.3}. For the case of functors
+$F:C'\rightarrow C''$, with $C'$ and $C''$ once again arbitrary
+$𝒰$-categories, we shall develop below
+\hyperref[I.sec8.11.5]{(8.11.5)}, more generally, a notion that ``improves'' upon
+left exactness (namely, that of a functor admitting a
+pro-adjoint).
+\end{enonce*}

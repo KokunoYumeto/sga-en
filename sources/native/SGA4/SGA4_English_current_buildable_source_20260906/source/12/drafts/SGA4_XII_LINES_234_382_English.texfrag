@@ -1,0 +1,168 @@
+\section{The base-change morphism}\etiquette[4]{XII.sec4}\pageoriginale
+
+Let
+$$
+\xymatrix@C=2.75cm@R=1.5cm{
+X \ar[d]_{f}&X'\ar[l]_{g'}\ar[d]^{f'}\\
+S&S'\ar[l]_{g}
+}
+$$
+be a Cartesian square of morphisms of schemes. From it one obtains a
+morphism of functors $\varphi=\varphi_g$
+\begin{equation*}
+g^{\ast}f_{\ast}\xrightarrow{\varphi}f'_{\ast}{g'}^{\ast}\tag{4.1}
+\end{equation*}\etiquette[4.1]{XII.eq4.1}
+as follows. Giving such a morphism is equivalent, by the adjunction
+between $g^{\ast}$ and $g_{\ast}$, to giving a morphism of functors
+\begin{equation*}
+f_{\ast}\longrightarrow g_{\ast}{f'}_{\ast}{g'}^{\ast}{\quoi}.
+\tag{4.1 adj}
+\end{equation*}\MakeLinkTarget*{sga4.exp.XII.equation.4.1-adj}\label{4.1 adj}
+We take this to be the morphism
+$$
+f_{\ast}\xrightarrow{(\id\rightarrow {g'}_{\ast}{g'}^{\ast})}
+f_{\ast}{g'}_{\ast}{g'}^{\ast}
+=g_{\ast}{f'}_{\ast}{g'}^{\ast}{\quoi},
+$$
+using
+$$
+g_{\ast}{f'}_{\ast}=(gf')_{\ast}=(fg')_{\ast}
+=f_{\ast}{g'}_{\ast}{\quoi}.
+$$
+
+There is another candidate for \eqhyperref[XII.eq4.1]{4.1}. Indeed,
+giving such a morphism is also equivalent to giving
+$$
+{f'}^{\ast}g^{\ast}f_{\ast}\longrightarrow {g'}^{\ast},
+$$
+and one may take
+$$
+{f'}^{\ast}g^{\ast}f_{\ast}\simeq
+{g'}^{\ast}f^{\ast}f_{\ast}
+\xrightarrow{(f^{\ast}f_{\ast}\rightarrow\id)}{g'}^{\ast}{\quoi}.
+$$
+
+I do not know\pageoriginale whether these two choices always coincide
+\footnote[1]{Mr. \textsc{Deligne} resolved this uncertainty in the
+affirmative, in a considerably more general context; \cf Exposé XVII.};
+in any event, we shall use only the first. We call it the
+\emph{base-change morphism.}
+
+Restricting \eqhyperref[XII.eq4.1]{4.1} to abelian sheaves
+(respectively, to sheaves of groups) gives a morphism
+$\varphi^q=\varphi^q_g$ for every $q\geq0$ (respectively, for
+$q=0,1$):
+\begin{equation*}
+g^{\ast}(R^qf_{\ast})\xrightarrow{\varphi^q}
+(R^q{f'}_{\ast}){g'}^{\ast}{\quoi}.
+\tag{4.2}
+\end{equation*}\etiquette[4.2]{XII.eq4.2}
+Indeed, this is equivalent to giving
+\begin{equation*}
+(R^qf_{\ast})\longrightarrow
+g_{\ast}(R^q{f'}_{\ast}){g'}^{\ast}{\quoi},
+\tag{4.2 adj}
+\end{equation*}\MakeLinkTarget*{sga4.exp.XII.equation.4.2-adj}\label{4.2 adj}
+and there are the following \lq\lq evident'' morphisms:
+\begin{gather*}
+(R^qf_{\ast})\xrightarrow{a}
+(R^qf_{\ast}){g'}_{\ast}{g'}^{\ast}
+\xrightarrow{b}R^q(fg')_{\ast}{g'}^{\ast}\\
+=R^q(gf')_{\ast}{g'}^{\ast}
+\xrightarrow{c}g_{\ast}(R^q{f'}_{\ast}){g'}^{\ast}{\quoi}.
+\end{gather*}
+
+\begin{enonce*}[remark]{Remark 4.3}\etiquette[4.3]{XII.rem4.3}
+Suppose that $g$ (and hence $g'$) is a closed immersion. Then the
+morphisms $b$ and $c$ above are isomorphisms (VIII \hyperref[VIII.cor5.7]{5.7}). It follows
+that \eqhyperref[XII.eq4.2]{4.2} is essentially just the morphism $a$
+above, obtained by applying $R^qf_{\ast}$ to the canonical morphism
+$F\rightarrow {g'}_{\ast}{g'}^{\ast}F$.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 4.4}\etiquette[4.4]{XII.prop4.4}
+(Composition of base-change morphisms).
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Let
+$$
+\xymatrix@C=2.5cm@R=1.5cm{
+X\ar[d]_{f}&X'\ar[l]_{g'}\ar[d]_{f'}&
+X''\ar[l]_{h'}\ar[d]_{f''}\\
+S&S'\ar[l]_{g}&S''\ar[l]_{h}
+}
+$$
+be a\pageoriginale Cartesian diagram of morphisms of schemes. Then
+the following diagram is commutative:
+$$
+\xymatrix@C=2cm@R=1.5cm{
+(gh)^{\ast}f_{\ast}\ar[rr]^{\varphi_{gh}}
+\ar[d]^{\text{\rotatebox{90}{$\backsim$}}}&&
+f''_{\ast}(g'h')^{\ast}
+\ar[d]^{\text{\rotatebox{90}{$\backsim$}}}\\
+h^{\ast}g^{\ast}f_{\ast}
+\ar[r]^{h^{\ast}\varphi_g}&
+h^{\ast}f'_{\ast}g'^{\ast}
+\ar[r]^{\varphi_h g'^{\ast}}&
+f''_{\ast}h'^{\ast}g'^{\ast}.}
+$$
+The same is true of the diagram obtained by replacing
+$f_{\ast}$, $f'_{\ast}$, and $f''_{\ast}$ by
+$R^qf_{\ast}$, $R^qf'_{\ast}$, and $R^qf''_{\ast}$, in the natural
+domains of definition of the functors in question
+\textup{(\cf $\textup{n}^{\circ}$ 3)}.
+
+\item Let
+$$
+\xymatrix@C=3.25cm@R=1.25cm{
+Y\ar[d]_{e}&Y'\ar[l]_{g''}\ar[d]^{e'}\\
+X\ar[d]_{f}&X'\ar[l]_{g'}\ar[d]^{f'}\\
+S&S'\ar[l]_{g}
+}
+$$
+be a Cartesian diagram of morphisms of schemes. Then the following
+diagram is commutative:
+$$
+\xymatrix@C=2.75cm@R=1.5cm{
+g^{\ast}(fe)_{\ast}\ar[rr]^{\varphi_g^{fe}}\ar@{=}[d]&&
+(f'e')_{\ast}g''^{\ast}\ar@{=}[d]\\
+g^{\ast}f_{\ast}e_{\ast}
+\ar[r]^{\varphi_g^f e_{\ast}}&
+f'_{\ast}g'{}^{\ast}e_{\ast}
+\ar[r]^{f'_{\ast}\varphi_{g'}^e}&
+f'_{\ast}e'_{\ast}g''^{\ast},
+}
+$$
+where the three horizontal arrows arise respectively from the
+base-change homomorphisms for $fe$, $f$, and $e$.
+
+In the abelian case, the base-change morphisms for $fe$ are induced by
+a morphism of spectral sequences
+$$
+\xymatrix{
+E^{p,q}_2=g^{\ast}(R^pf_{\ast})(R^qe_{\ast})F
+\ar@{=>}[r]\ar[d]_{\varphi}&
+g^{\ast}R^{p+q}(fe)_{\ast}F\ar[d]_{\varphi}\\
+(R^pf'_{\ast})(R^qe'_{\ast})g''^{\ast}F
+\ar@{=>}[r]&R^{p+q}(f'e')_{\ast}g''^{\ast}F,
+}
+$$
+which, on the initial terms, is induced by the base-change morphisms
+for $e$ and $f$. For a sheaf of groups, there is a morphism of exact
+sequences
+$$
+\xymatrix{
+0\ar[r]&g^{\ast}(R^1f_{\ast})e_{\ast}F
+\ar[r]\ar[d]^{\varphi}&
+g^{\ast}R^1(fe)_{\ast}F\ar[r]\ar[d]^{\varphi}&
+g^{\ast}f_{\ast}(R^1e_{\ast})F\ar[d]^{\varphi}\\
+0\ar[r]&(R^1f'_{\ast})e'_{\ast}g''^{\ast}F\ar[r]&
+R^1(f'e')_{\ast}g''^{\ast}F\ar[r]&
+f'_{\ast}(R^1e'_{\ast})g''^{\ast}F.
+}
+$$
+\end{enumerate}
+\end{enonce*}
+
+We leave the proof to the reader.

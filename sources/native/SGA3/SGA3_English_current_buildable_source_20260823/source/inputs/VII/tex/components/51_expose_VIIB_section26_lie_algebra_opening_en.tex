@@ -1,0 +1,278 @@
+
+\subsection*{2.6}
+\phantomsection
+\label{sga3:VIIB:2.6}
+\addcontentsline{toc}{subsection}{\SGARefLink{sga3:VIIB:2.6}{2.6}. Lie algebras of formal groups}
+
+We shall now study infinitesimal formal groups, to which the sections
+that follow are devoted. In this study, Lie algebras play a fundamental
+role.
+
+Suppose first that the base ring \(k\) is Artinian, and let \(G\) be a
+formal group over \(k\). The Lie algebra of \(G\) admits three different
+interpretations, all of which we shall use:
+
+\medskip
+\noindent\textbf{a)}
+Let
+\[
+  D=k[d]/(d^2)
+\]
+be the algebra of dual numbers over \(k\), and let
+\[
+  \delta:D\longrightarrow k
+\]
+be the homomorphism that annihilates \(d\). For every formal group
+\(G\) over \(k\), \(\operatorname{Lie}(G)\) is the kernel of
+\(G(\delta)\). Thus, by definition, there is an exact sequence of
+groups
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:2.6:dual-numbers-exact-sequence}
+  \input{native_diagrams/exp7/viib_15_95/diag_118}
+\end{center}
+
+\medskip
+\noindent\textbf{b)}
+Let \(A\) be the affine algebra of \(G\), and let
+\[
+  I_A=\ker\varepsilon_A
+\]
+be its augmentation ideal. The elements of \(G(D)\) are the morphisms
+of profinite \(k\)-algebras
+\[
+  f:A\longrightarrow D.
+\]
+The condition \(G(\delta)(f)=1\) is equivalent to
+\[
+  \delta\circ f=\varepsilon_A.
+\]
+Since
+\[
+  x-\varepsilon_A(x)\cdot1_A\in I_A
+  \qquad\text{for every \(x\in A\),}
+\]
+this is equivalent to \(f(I_A)\subset k\cdot d\). Hence
+\(\ker(f)\) contains \(I_A^2\), and therefore also its closure
+\(\overline{I_A^2}\). Thus \(f\) induces a continuous linear map
+\[
+  f':
+  I_A/\overline{I_A^2}
+  =
+  \omega_{G/k}
+  \longrightarrow k
+\]
+such that, for every \(x\in A\),
+\[
+  f(x)
+  =
+  \varepsilon_A(x)\cdot1_D+f'(\bar x)\cdot d,
+\]
+where \(\bar x\) denotes the image of
+\(x-\varepsilon_A(x)\cdot1_A\) in
+\(I_A/\overline{I_A^2}\). It follows that the map
+\[
+  f\longmapsto f'
+\]
+defines a bijection from \(\operatorname{Lie}(G)\) onto the
+topological dual
+\[
+  \omega_{G/k}^{\dagger}
+\]
+of \(\omega_{G/k}\) \textup{(cf.\ \SGARefLink{sga3:VIIB:0.2.2}{0.2.2})}.
+
+This bijection respects the group structures. Indeed, let \(f\) and
+\(g\) be two elements of \(\operatorname{Lie}(G)\). Their product
+\(f\cdot g\) is the composite \(h\circ\Delta_A\), where
+\[
+  h:A\widehat\otimes A\longrightarrow D
+\]
+is defined by
+\[
+  h(b\widehat\otimes b')=f(b)g(b').
+\]
+If \(a\in I_A\), then, by \SGARefLink{sga3:VIIA:2.1}{2.1}\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}},
+\[
+  \Delta_A(a)-a\widehat\otimes1-1\widehat\otimes a
+  \in
+  I_A\widehat\otimes I_A.
+\]
+Consequently,
+\[
+  (f\cdot g)(a)=f(a)+g(a)
+\]
+\textup{(cf.\ also II, \SGARefLink{sga3:ii:lemma:3-10}{3.10})}.
+
+Henceforth we identify
+\[
+  \operatorname{Lie}(G)=\omega_{G/k}^{\dagger}
+\]
+by means of the bijection \(f\mapsto f'\) just described. The group
+\(\operatorname{Lie}(G)\) is thereby endowed with a \(k\)-module
+structure.
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:VIIB:2.6:item:c}\textbf{c)}
+Let \(A^\dagger\) and \(D^\dagger\) be the \(k\)-modules dual to
+\(A\) and \(D\), and let
+\[
+  \{1_D^\dagger,d^\dagger\}
+\]
+be the basis dual to the basis \(\{1_D,d\}\) of \(D\) over \(k\);
+thus \(1_D^\dagger=\delta\).\footnote{The French authority prints
+\(1_D^*\) and \(d^*\) in the two occurrences immediately below,
+after defining \(1_D^\dagger\) and \(d^\dagger\) as the dual basis.
+The consistent \(\dagger\)-notation is used here.}
+Since \(D\) is free of finite rank over \(k\), the canonical map
+\[
+  \operatorname{Hom}_c(A,D)
+  \longrightarrow
+  \operatorname{Hom}_k(D^\dagger,A^\dagger),
+  \qquad
+  f\longmapsto{}^t f,
+\]
+is bijective. On the other hand, \({}^t f\) is determined by the
+values
+\[
+  {}^t f(1_D^\dagger)
+  \qquad\text{and}\qquad
+  {}^t f(d^\dagger)=x.
+\]
+The condition \(G(\delta)(f)=1\) is equivalent to
+\[
+  {}^t f(1_D^\dagger)=\varepsilon_A.
+\]
+Moreover, one sees readily that \(f\) is compatible with
+multiplication if and only if \textup{(cf.\ \SGARefLink{sga3:VIIB:2.3}{2.3})}
+\[
+  \tag{*}
+  \label{sga3:VIIB:2.6:primitive-relation}
+  \delta_G(x)=\phi_G(x\otimes1+1\otimes x).
+\]
+
+Finally, it is clear that a continuous linear map
+\[
+  f:A\longrightarrow D
+\]
+that is compatible with multiplication and satisfies
+\(\delta\circ f=\varepsilon_A\) sends the unit element of \(A\) to
+that of \(D\).\footnote{\label{sga3:VIIB:nde:107}Indeed,
+\(\delta\circ f=\varepsilon_A\) implies
+\(f(1)=1+\lambda d\), with \(\lambda\in k\), and then
+\[
+  f(1)=f(1)^2=1+2\lambda d
+\]
+gives \(\lambda=0\).}
+The map \(f\mapsto x\) therefore allows us to identify
+\(\operatorname{Lie}(G)\) with the set of ``primitive elements'' of
+\(\mathbf H(G)\), that is, the elements \(x\in\mathbf H(G)\)
+satisfying relation \textup{(*)}. If \(x\) and \(y\) are two such
+elements, then
+\[
+\begin{aligned}
+  \delta_G(xy)
+  &=
+  \delta_G(x)\delta_G(y)
+  \\
+  &=
+  \phi_G\bigl(
+    (x\otimes1+1\otimes x)
+    (y\otimes1+1\otimes y)
+  \bigr)
+  \\
+  &=
+  \phi_G\bigl(
+    xy\otimes1+x\otimes y+y\otimes x+1\otimes xy
+  \bigr),
+\end{aligned}
+\]
+whence
+\[
+  \delta_G(xy-yx)
+  =
+  \phi_G\bigl(
+    (xy-yx)\otimes1+1\otimes(xy-yx)
+  \bigr).
+\]
+This shows that the \(k\)-module \(\operatorname{Lie}(G)\) is
+identified with a Lie subalgebra of \(\mathbf H(G)\); we call
+\(\operatorname{Lie}(G)\) the \emph{Lie algebra} of
+\(G\).\footnote{\label{sga3:VIIB:nde:108}Comparing with
+VII\textsubscript{A}, \SGARefLink{sga3:VIIB:2.5:proposition}{2.5}, we see that if \(K\) is a group scheme of
+finite type over \(k\) and \(G\) is the formal completion of \(K\) at
+the identity---that is, if \(\mathcal A(G)\) is the completion of the
+local ring \(\mathcal O_{K,e}\) for the \(\mathfrak m\)-adic topology,
+where
+\[
+  \mathfrak m=\ker\bigl(
+    \varepsilon:\mathcal O_{K,e}\longrightarrow k
+  \bigr)
+\]
+---then \(\mathbf H(G)\) is identified with the algebra of
+distributions \(U(K)\), and \(\operatorname{Lie}(G)\) with
+\(\operatorname{Lie}(K)\). The hypothesis that \(K\) is of finite
+type over \(k\) is used to ensure that
+\(\mathfrak m/\mathfrak m^2\) is a \(k\)-module of finite length, and
+hence discrete, so that its topological dual coincides with its
+ordinary dual. In particular, when \(G\) is a finite formal
+\(k\)-group---that is, when \(\mathcal A(G)\) is a finite
+\(k\)-module---in which case \(G\) may also be regarded as the
+\(k\)-group scheme \(\operatorname{Spec}\mathcal A(G)\), the two
+definitions of \(\operatorname{Lie}(G)\) coincide.}
+
+\subsubsection*{2.6.1}
+\phantomsection
+\label{sga3:VIIB:2.6.1}
+
+Let \(k\) now be an arbitrary pseudocompact ring, and let \(G\) be a
+formal group over \(k\). We call the functor \(\operatorname{Lie}(G)\)
+that assigns to every object \(C\) of \(\operatorname{Alf}/k\) the
+\(C\)-Lie algebra of the \(C\)-formal group
+\[
+  G'=G\widehat\otimes_k C
+\]
+the \emph{\(\mathbf O_k\)-Lie algebra of \(G\)}.\footnote{%
+\label{sga3:VIIB:nde:109}The editors expanded the original in what
+follows.}
+Put
+\[
+  A'=A\widehat\otimes_k C.
+\]
+Since \(I_A\) is a direct factor of \(A\), we have
+\[
+  I_{A'}
+  =
+  I_A\widehat\otimes_k C
+  =
+  I_A\widehat\otimes_A A'.
+\]
+Moreover,
+\[
+  \omega_{G/k}=I_A\widehat\otimes_A k,
+  \qquad
+  \omega_{G'/C}=I_{A'}\widehat\otimes_{A'}C.
+\]
+It follows that
+\[
+  \omega_{G'/C}
+  =
+  \omega_{G/k}\widehat\otimes_A C,
+\]
+and hence
+\[
+\begin{aligned}
+  \operatorname{Lie}(G)(C)
+  &=
+  \operatorname{Hom}_c\bigl(
+    \omega_{G/k}\widehat\otimes_A C,C
+  \bigr),
+  \\
+  \text{i.e.}\qquad
+  \operatorname{Lie}(G)
+  &=
+  \mathbf V_k^f(\omega_{G/k}).
+\end{aligned}
+\]
+With the notation of \SGARefLink{sga3:VIIB:1.2.3.B}{1.2.3.B}, \SGARefLink{sga3:VIIB:1.2.3.E}{Proposition 1.2.3.E} therefore shows
+that \(\operatorname{Lie}(G)\) is flat over \(\mathbf O_k\) if and
+only if \(\omega_{G/k}\) is a projective pseudocompact \(k\)-module.

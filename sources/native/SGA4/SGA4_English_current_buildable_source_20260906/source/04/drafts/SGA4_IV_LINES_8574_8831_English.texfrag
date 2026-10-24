@@ -1,0 +1,273 @@
+\section{Ringed topoi, localization in ringed topoi}\etiquette[11]{IV.sec11}
+
+\setcounter{subsection}{1} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[11.1.1]{IV.subsubsec11.1.1}
+Let $𝒰$ be a universe. A $𝒰$-\emph{ringed topos} is a pair
+$(E,A)$ where $E$ is a $𝒰$-topos and $A$ is an object endowed with
+a ring structure. A $𝒰$-ringed site is a pair $(C,A)$ where $C$ is
+a $𝒰$-site and $A$ is a $𝒰$-sheaf of rings on $C$. We omit mention
+of the universe when the context leaves no room for confusion. To a
+ringed site $(C,A)$ is associated the ringed topos $(C^{\sim},A)$.
+To a ringed topos $(E,A)$ is associated the ringed site consisting
+of the site $E$ and the sheaf of rings represented by $A$.
+
+\subsubsection{}\etiquette[11.1.2]{IV.subsubsec11.1.2}
+Let $(E,A)$ be a ringed topos. We denote by ${}_AE$ (\resp $E_A$)
+the category of sheaves of unital left (\resp right) $A$-modules
+(we will also write $A$-Modules). The category ${}_AE$ (\resp
+$E_A$) is an abelian category
+(\hyperrefext[II][II.prop6.7]{6.7}). Let $M$ and $N$ be two sheaves
+of left (\resp right) $A$-modules. The commutative group of
+$A$-Module morphisms from $M$ to $N$ is denoted by $\Hom_A(M,N)$.
+
+\subsubsection{}\etiquette[11.1.3]{IV.subsubsec11.1.3}
+Let $A$, $B$, and $C$ be three rings in a topos $E$, let $M$ be a
+sheaf of $A-B$-bimodules, and let $N$ be a sheaf of
+$A-C$-bimodules. Let $e$ be a final object of $E$, and put
+$\Hom(e,B)=\Gamma(B)$ and $\Hom(e,C)=\Gamma(C)$. The
+$A-B$-bimodule structure on $M$ gives a ring homomorphism from
+$\Gamma(B)^{\circ}$ to the ring of endomorphisms of the $A$-module
+$M$; similarly, the $A-C$-bimodule structure on $N$ gives a ring
+homomorphism from $\Gamma(C)^{\circ}$ to the ring of endomorphisms
+of the $A$-module $N$. By functoriality, we deduce a
+$\Gamma(B)-\Gamma(C)$-bimodule structure on the commutative group
+$\Hom_A(M,N)$. In particular, when $A$ is a sheaf of commutative
+rings, the group $\Hom_A(M,N)$ is canonically endowed with a
+$\Gamma(A)$-module structure.
+
+\subsubsection{}\etiquette[11.1.4]{IV.subsubsec11.1.4}
+Let\pageoriginale $E$ be a topos, let $A$ and $B$ be two rings in
+$E$, let $u:A\rightarrow B$ be a morphism of sheaves of rings, and
+let $M$ be a $B$-module (a left module, to fix ideas). The sheaf $M$
+may be regarded as a sheaf of $A$-modules by means of $u$: for every
+object $X$ of $E$, $M(X)$ is endowed with the $A(X)$-module
+structure obtained from its $B(X)$-module structure and the homomorphism
+$u(X):A(X)\rightarrow B(X)$ by restriction of scalars. We thus
+obtain a functor ``\emph{restriction of scalars along} $u$''
+$$
+\Res(u):{}_BE\longrightarrow {}_AE{\quoi}.
+$$
+
+\subsubsection{}\etiquette[11.1.5]{IV.subsubsec11.1.5}
+In particular, when $A=\ZZ$ (the constant sheaf
+$\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}$, that is, the
+sheaf associated to the constant presheaf $\ZZ$) and when
+$u:\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}\rightarrow B$
+is the unique canonical morphism, we obtain a functor from ${}_BE$
+to the category
+${}_{\sisi{\underline{\underline{\ZZ}}}{\underline{\ZZ}}}E$, which
+is none other than the category of abelian sheaves, denoted by
+$E_{Ab}$. This functor is called the \emph{underlying abelian-sheaf
+functor}.
+
+\begin{enonce*}{Proposition 11.1.6}\etiquette[11.1.6]{IV.prop11.1.6}
+The restriction-of-scalars functor along $u$ commutes with inductive
+and projective limits. It is conservative.
+\end{enonce*}
+
+The proposition is true for the restriction-of-scalars functor for
+ordinary modules, that is, when $E$ is the punctual topos. It is
+therefore true when $E$ is the topos of presheaves on a small site.
+It then follows from the determination of inductive and projective
+limits by means of the associated-sheaf functor
+(\hyperrefext[II][II.prop6.4]{6.4}) that the proposition is true in
+general.
+
+\setcounter{subsection}{2} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[11.2.1]{IV.subsubsec11.2.1}
+Let $(E,A)$ be a ringed topos, let $X$ be an object of $E$, and let
+$j_X:E_{/X}\rightarrow E$ be the localization morphism
+\sisi{(\hyperref[IV.sec8]{8})}{\hyperref[IV.subsec5.2]{5.2}}.
+By \hyperrefext[III][III.prop1.7]{1.7} or
+\hyperref[IV.subsubsec3.1.2]{3.1.2}, the sheaf $j^{\ast}_XA$ is
+canonically endowed with a ring structure. The sheaf of rings
+$j^{\ast}_XA$ is most often denoted by $A|X$, or, by abuse, simply
+by $A$. Unless otherwise stated, the topos $E_{/X}$ will be ringed
+by $A|X$. The sheaf $j_{X\ast}j^{\ast}_XA$ is canonically endowed
+with a ring structure. The adjunction morphism
+$A\rightarrow j_{X\ast}j^{\ast}_XA$ is a morphism of sheaves of
+rings.
+
+\subsubsection{}\etiquette[11.2.2]{IV.subsubsec11.2.2}
+Let\pageoriginale, in addition, $M$ be an $A$-module (a left module,
+to fix ideas). The sheaf $j^{\ast}_XM$ is endowed with an
+$A|X$-module structure (\hyperrefext[III][III.prop1.7]{1.7}; or
+\hyperref[IV.subsubsec3.1.2]{3.1.2}); hence there is a functor
+$$
+j^{\ast}_X:{}_AE\longrightarrow {}_{A|X}E_{/X}
+$$
+called the restriction functor to $E_{/X}$, or also the restriction
+functor to $X$. The functor $j^{\ast}_X$ commutes with inductive and
+projective limits (\loccit). In particular, it is exact. Now let $N$
+be an $A|X$-Module. The sheaf $j_{X\ast}N$ is a sheaf of
+$j_{X\ast}A|X$-Modules (\hyperrefext[III][III.prop1.7]{1.7} or
+\hyperref[IV.subsubsec3.1.2]{3.1.2}); hence, by restriction of
+scalars along the adjunction morphism
+$A\rightarrow j_{X\ast}(A|X)$
+(\hyperref[IV.subsubsec11.1.4]{11.1.4}), it is an $A$-Module, again
+denoted by $j_{X\ast}N$. We have therefore defined a functor
+$$
+j_{X\ast}:{}_{A|X}E_{/X}\longrightarrow {}_AE
+$$
+which commutes with projective limits
+(\hyperref[IV.prop11.1.6]{11.1.6} and
+\hyperrefext[III][III.prop1.7]{1.7}). For every $A$-Module $M$, the
+adjunction morphism $M\rightarrow j_{X\ast}j^{\ast}_XM$ is a
+morphism of $A$-Modules. For every $A|X$-Module $N$ and every
+$A$-Module $M$, the adjunction morphism
+$M\rightarrow j_{X\ast}j^{\ast}_XM$ defines a morphism,
+bifunctorial in $M$ and $N$,
+\begin{equation*}
+\Hom_{A|X}(j^{\ast}_XM,N)\longrightarrow
+\Hom_A(M,j_{X\ast}N){\quoi}.\tag{11.2.2.1}
+\end{equation*}\etiquette[11.2.2.1]{IV.eq11.2.2.1}
+The latter morphism is an isomorphism; that is, the functors
+$j^{\ast}_X$ and $j_{X\ast}$ for $A$-Modules are adjoint
+(III \hyperref[III.prop1.7]{1.7}).
+
+\subsubsection{}\etiquette[11.2.3]{IV.subsubsec11.2.3}
+The functors $j^{\ast}_X$ and $j_{X\ast}$ for Modules commute with
+the ``underlying set'' functor
+(\hyperrefext[III][III.prop1.7]{1.7} 4)). They therefore commute with
+the restriction-of-scalars functors and, in particular, with the
+underlying abelian-sheaf functor.
+
+\setcounter{subsection}{3} \setcounter{subsubsection}{0}
+\begin{enonce*}{Proposition 11.3.1}\etiquette[11.3.1]{IV.prop11.3.1}
+Let $(E,A)$ be a ringed topos and let $X$ be an object of $E$. The
+functor
+$$
+j^{\ast}_X:{}_{A}E\longrightarrow {}_{A|X}E_{/X}
+$$
+admits a left adjoint, denoted by
+$j_{X!}:{}_{A|X}E_{/X}\rightarrow {}_{A}E$ and called extension by
+zero. The extension-by-zero functor is exact and faithful, and
+commutes with inductive limits. The functors $j_{X!}$ for
+Modules\pageoriginale commute with restriction-of-scalars functors
+and, in particular, they commute with the underlying abelian-sheaf
+functor.
+\end{enonce*}
+
+The existence of the functor $j_{X!}$ follows from
+\hyperrefext[III][III.prop1.7]{1.7}. Since $j_{X!}$ is a left
+adjoint, it commutes with inductive limits
+(\hyperrefext[I][I.sec2]{2}). To prove the other assertions, first
+suppose that $E$ is the topos of presheaves of sets on a small
+category $C$ containing the object $X$. We then know that $E_{/X}$
+is equivalent to the category of presheaves on $C_{/X}$ and that,
+under this equivalence, the functor
+$j^{\ast}_X:E\rightarrow E_{/X}$ is simply composition with the
+forgetful functor $C_{/X}\rightarrow C$
+(\hyperrefext[I][I.prop5.11]{5.11}). It then follows immediately
+from the explicit construction of $j_{X!}$
+(\hyperrefext[I][I.prop5.1]{5.1}) that, for every $A|X$-Module $N$
+and every object $Y$ of $C$, one has
+$$
+j_{X!}N(Y)=\bigoplus_{u\in \Hom_C(Y,X)}N(u){\quoi};
+$$
+hence $j_{X!}$ is exact, and extension by zero commutes with
+restriction-of-scalars functors in this case. In the general case,
+we may suppose that $E$ is the topos of sheaves on a small site $C$
+and that $X$ comes from an object of $C$
+(\hyperref[IV.cor1.2.1]{1.2.1}). The topos $E_{/X}$ is then
+equivalent to the topos of sheaves on $C_{/X}$ (endowed with the
+induced topology) (\hyperrefext[III][III.prop5.4]{5.4}), and the
+topos morphism $j_X:E_{/X}\rightarrow E$ comes from the forgetful
+functor $C_{/X}\rightarrow C$, which is continuous and cocontinuous
+(\hyperrefext[III][III.prop5.2]{5.2}). It then follows from
+\hyperrefext[III][III.prop1.7]{1.7} that extension by zero for
+sheaves is obtained by composing extension by zero for presheaves
+with the associated-sheaf functor; hence the assertion of exactness
+and the compatibility with restrictions of scalars.
+
+To prove faithfulness, it is equivalent to show that, for every
+$A|X$-Module $N$, the adjunction morphism
+$$
+\ad_N:N\longrightarrow j^{\ast}_X j_{X!}N
+$$
+is a monomorphism. Now, denoting by $j_{\widehat{X}!}$ the
+extension-by-zero functor for presheaves and by $\underline{a}$ the
+``associated sheaf'' functor, we have a commutative diagram
+\[
+\xymatrix@C=2.75cm@R=1.5cm{ N \ar[r]^{\ad_{N}}
+\ar[rd]_{\ad_{\hat{N}}} & j^{\ast}_{X} \underline{a}
+j_{\widehat{X}!} N \\
+                   & \underline{a} j^{\ast}_X j_{\widehat X!} N,\ar[u]
+}
+\]
+where\pageoriginale $\ad_{\widehat{N}}$ is the adjunction morphism
+for presheaves. The morphism $\ad_{\widehat{N}}$ is a monomorphism
+by what precedes, and therefore
+$\underline{a}(\ad_{\widehat{N}})$ is a monomorphism. Moreover,
+since the forgetful functor $C_{/X}\rightarrow C$ is continuous and
+cocontinuous, the canonical morphism
+$\underline{a}j^{\ast}_X\rightarrow j^{\ast}_X\underline{a}$ is an
+isomorphism (\hyperrefext[III][III.prop2.3]{2.3}). Consequently,
+$\ad_N$ is a monomorphism.
+
+\begin{enonce*}[remark]{Remark 11.3.2}\etiquette[11.3.2]{IV.rem11.3.2}
+Let $N$ be an $A|X$-Module. The sheaf of sets underlying $j_{X!}N$
+is not, in general, isomorphic to the sheaf obtained by extending
+the sheaf of sets underlying $N$ by the empty set
+(\hyperref[sga4.exp.III.terminology.5.3]{III 5.3} and \hyperref[IV.subsec5.2]{5.2}). One must
+therefore take care not to confuse the \emph{extension-by-zero}
+functor denoted by
+$j_{X!}:{}_{A|X}E_{/X}\rightarrow {}_{A}E$ in
+\hyperref[IV.prop11.3.1]{11.3.1} with the extension-by-the-empty-set
+functor, also denoted by $j_{X!}:E_{/X}\rightarrow E$, in III \hyperref[III.subsec5.3]{5.3}
+and IV \hyperref[IV.subsec5.2]{5.2}. In most cases encountered in practice, the abuse of
+notation just noted causes no confusion. When confusion is
+nevertheless possible, we will use the notations $j^{\ab}_{X!}$ and
+$j^{\ens}_{X!}$ for the extension-by-zero and
+extension-by-the-empty-set functors, respectively.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 11.3.3}\etiquette[11.3.3]{IV.prop11.3.3}
+Let $(E,A)$ be a ringed topos and let $X$ be an object of $E$. The
+$A$-Module $j_{X!}(A|X)$, most often denoted by $A_X$ or $A_{X,E}$,
+is the free $A$-Module generated by $X$
+{\rm (\hyperrefext[II][II.prop6.5]{6.5})}; that is, for every
+$A$-Module $M$, there is a canonical isomorphism, functorial in $M$:
+$$
+\Hom_E(X,M)\xleftarrow{\sim} \Hom_A (A_X, M){\quoi}.
+$$
+Let $(X_i)_{i\in I}$ be a topologically generating family of $E$
+{\rm (\hyperrefext[II][II.def3.0.1]{3.0.1}).} The family
+$(A_{X_i})_{i\in I}$ is a generating family of the category of
+$A$-Modules.
+\end{enonce*}
+
+Let $e_X$ be the final object of the topos $E_{/X}$
+$(e_X=X\xrightarrow{\id}X)$. There is an isomorphism
+$$
+\Hom_{A|X}(A|X,j^{\ast}_XM)\xrightarrow{\sim}
+\Hom_{E_{/X}}(e_X,j^{\ast}_XM){\quoi};
+$$
+deduced\pageoriginale from the unit section $e_X\rightarrow A|X$;
+hence, by adjunction, there is an isomorphism
+$$
+\Hom_A(j^{\ab}_{X!}(A|X),
+M)\xrightarrow{\sim}\Hom_E(j^{\ens}_{X!}(e_X),M){\quoi}.
+$$
+Since $j^{\ens}_{X!}(e_X)=X$, we obtain the asserted isomorphism.
+The last assertion follows from \hyperrefext[II][II.cor6.6]{6.6}.
+
+\begin{enonce*}[remark]{Remark 11.3.4}\etiquette[11.3.4]{IV.rem11.3.4}
+Let $A$ and $B$ be two sheaves of rings on a topos $E$, let $X$ be
+an object of $E$, and let $N$ be an $A|X$-$B| X$-bimodule. The
+abelian sheaf obtained by extending $N$ by zero is canonically
+endowed with an $A$-$B$-bimodule structure, as follows immediately
+from its explicit description (\hyperref[IV.prop11.3.1]{11.3.1}).
+In particular, the free $A$-module so obtained, $A_X$, is an
+$A$-bimodule.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 11.3.5}\etiquette[11.3.5]{IV.exer11.3.5}
+Let $E$ be a topos, let $X$ be an object of $E$, let
+$x:P\rightarrow E$ be a point of $E$ (\hyperref[IV.def6.1]{6.1}),
+and let $(x_i)_{i\in I}$ be the family of points of $E_{/X}$ above
+$x$ (in bijective correspondence with the fiber $X_x$
+(\hyperref[IV.eq6.7.2]{6.7.2})). Show that, for every abelian sheaf
+$M$ on $E_{/X}$, the fiber $(j_{X!}M)_x$ is canonically isomorphic
+to $\oplus_i M_{x_i}$.
+\end{enonce*}

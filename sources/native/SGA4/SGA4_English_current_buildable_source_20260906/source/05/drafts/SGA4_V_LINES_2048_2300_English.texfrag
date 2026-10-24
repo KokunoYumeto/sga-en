@@ -1,0 +1,265 @@
+\section{Local Ext and cohomology with supports}\etiquette[6]{V.sec6}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[6.0]{V.subsec6.0}
+
+Let $(E,A)$ be a ringed topos, and let $M$ be an $A$-module, a left
+module to fix ideas. The functor
+$N\longmapsto\Hhom_A(M,N)$, from the category of left $A$-modules to
+the category of abelian groups, is left exact (IV 12). Its right
+derived functors are denoted by
+\begin{equation*}
+\Eext_A^q(M,N){\quoi}.\tag{6.0.1}
+\end{equation*}\etiquette[6.0.1]{V.6.0.1}
+In particular, one has
+\begin{equation*}
+\Eext_A^{0}(M,N)=\Hhom_A(M,N){\quoi}.\tag{6.0.2}
+\end{equation*}\etiquette[6.0.2]{V.6.0.2}
+By definition, there are canonical isomorphisms
+(\hyperref[V.subsec2.1]{2.1} and IV 12)
+\begin{equation*}
+H^{0}(E,\Eext_A^{0}(M,N))=\Ext^{0}_A(E;M,N)
+=\Hom_A(M,N){\quoi}.\tag{6.0.3}
+\end{equation*}\etiquette[6.0.3]{V.6.0.3}
+More generally, for every object $X$ of $E$, one has
+(\hyperref[V.subsec2.2]{2.2})
+\begin{equation*}
+H^{0}(X,\Eext_A^{0}(M,N))=\Ext^{0}_A(X;M,N)
+=\Hom_{A|X}(M|X,N|X){\quoi}.\tag{6.0.4}
+\end{equation*}\etiquette[6.0.4]{V.6.0.4}
+
+\begin{enonce*}{Proposition 6.1}\etiquette[6.1]{V.prop6.1}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Formation of the functors $\Eext^q_A$ commutes with
+localization. More precisely, for every object $X$ of $E$, there are
+functorial isomorphisms
+\begin{equation*}
+\Eext^q_A(M,N)|X\simeq
+\Eext^q_{A|X}(M|X,N|X){\quoi}.\tag{6.1.1}
+\end{equation*}\etiquette[6.1.1]{V.6.1.1}
+
+\item The sheaf $\Eext^q_A(M,N)$ is isomorphic to the sheaf associated
+with the presheaf $X\longmapsto\Ext^q_A(X;M,N)$.
+
+\item There is a spectral sequence
+\begin{equation*}
+\Ext^{p+q}_A(E;M,N)\Longleftarrow E^{p,q}_2
+=H^p(E,\Eext^q_A(M,N)){\quoi}.\tag{6.1.2}
+\end{equation*}\etiquette[6.1.2]{V.6.1.2}
+\end{enumerate}
+More\pageoriginale generally, for every object $X$ of $E$, there is a
+spectral sequence functorial in $X$ and in the arguments $M$ and $N$:
+\begin{equation*}
+\Ext^{p+q}_A(X;M,N)\Longleftarrow E^{p,q}_2
+=H^p(X,\Eext^q_A(M,N)){\quoi}.\tag{6.1.3}
+\end{equation*}\etiquette[6.1.3]{V.6.1.3}
+\end{enonce*}
+
+By definition, \eqhyperref[V.6.1.1]{6.1.1} is an isomorphism when
+$q=0$ (IV 12). The general case follows, taking into account the fact
+that the localization functors are exact and send injective modules to
+injective modules (\hyperref[V.subsec2.2]{2.2}). The functor
+$N\longmapsto\Hhom_A(M,N)=\Eext^0_A(M,N)$ sends injective modules to
+flasque sheaves, and hence to sheaves acyclic for $H^{0}(X,⋅)$
+(\hyperref[V.prop4.10]{4.10}). The spectral sequences
+\eqhyperref[V.6.1.2]{6.1.2} and \eqhyperref[V.6.1.3]{6.1.3} are the
+spectral sequences of composite functors, in view of
+\eqhyperref[V.6.0.3]{6.0.3} and \eqhyperref[V.6.0.4]{6.0.4}. As $X$
+varies in $E$, the spectral sequence \eqhyperref[V.6.1.3]{6.1.3}
+gives a spectral sequence of presheaves and hence, upon passing to the
+associated sheaves, a spectral sequence of sheaves. Since the sheaves
+associated with the presheaves $X\longmapsto H^p(X,⋅)$ are zero when
+$p\neq0$ (\hyperref[V.prop3.1]{3.1}), this spectral sequence
+degenerates and gives the isomorphism asserted in 2).
+
+\begin{enonce*}{Proposition 6.2}\etiquette[6.2]{V.prop6.2}
+The functors $(M,N)\longmapsto\Eext^q_A(M,N)$, $q\geq0$, form a
+$\delta$-functor in the variable $M$ and in the variable $N$.
+Explicitly, for every exact sequence
+$0\to N'\to N\to N''\to0$
+(\resp $0\to M'\to M\to M''\to0$), there are long exact sequences
+\begin{equation*}
+\cdots\to\Eext^q_A(M,N')\to\Eext^q_A(M,N)\to\Eext^q_A(M,N'')
+\xrightarrow{\delta}\Eext^{q+1}_A(M,N')\to\cdots\tag{6.2.1}
+\end{equation*}\etiquette[6.2.1]{V.6.2.1}
+(\resp
+\begin{equation*}
+\cdots\to\Eext^q_A(M'',N)\to\Eext^q_A(M,N)\to\Eext^q_A(M',N)
+\xrightarrow{\delta}\Eext^{q+1}_A(M'',N)\to\cdots){\quoi}.
+\tag{6.2.2}
+\end{equation*}\etiquette[6.2.2]{V.6.2.2}
+\end{enonce*}
+
+It follows from the general properties of the functors $\Ext^q$ that,
+for every object $X$ of $E$, the functors
+$(M,N)\longmapsto\Ext^q_A(X;M,N)$, $q\geq0$, form a
+$\delta$-functor in each argument. The assertion follows by allowing
+$X$ to vary and taking the associated sheaf
+(\hyperref[V.prop6.1]{6.1}).
+
+\setcounter{subsection}{2}
+\subsection{}\etiquette[6.3]{V.subsec6.3}
+Let $(E,A)$ be a ringed topos, let $M$ be an $A$-module, let $Z$ be a
+closed subtopos of $E$ (IV 9), and let $U$ be its open complement.
+Denote by $H^{0}_Z(E,M)$ the group of sections of $M$ whose
+support\pageoriginale is contained in $Z$ (IV 14), and by
+$ℋ^{0}_Z(M)$ the subsheaf of $M$ defined by the sections of $M$
+``with supports in $Z$'' (IV 14). The functors $H^{0}_Z(E,⋅)$ and
+$ℋ^{0}_Z(⋅)$ are left exact (IV 14). Their derived functors are denoted
+by $H^q_Z(E,⋅)$ and $ℋ^q_Z(⋅)$ respectively, and are called the
+\emph{cohomology groups (\emph{\resp} sheaves) of $M$ with supports in
+$Z$}\footnote{Compare with \SGA 2 I for the case of ordinary
+topological spaces, as well as with the exposé of \textsc{Hartshorne}
+cited on p.~80 below.}.
+
+There are canonical isomorphisms (IV 14)
+\hypertarget{sga4.exp.V.equation.6.3.1}{}\begin{align*}
+H^{0}_Z(E,M)&\simeq\Hom_A(A_Z,M)\simeq
+\Ext^{0}_A(E;A_Z,M){\quoi},\tag{6.3.1}\\
+ℋ^{0}_Z(M)&\simeq\Hhom_A(A_Z,M)\simeq
+\Eext^{0}_A(A_Z,M){\quoi},\tag{6.3.2}
+\end{align*}\hypertarget{sga4.exp.V.equation.6.3.2}{}
+and hence, for every $q\geq0$, there are isomorphisms
+\hypertarget{sga4.exp.V.equation.6.3.3}{}\begin{align*}%\etiquette[6.3.3]{V.6.3.3}
+H^q_Z(E,M)&\simeq\Ext^q_A(E;A_Z,M){\quoi},\tag{6.3.3}\\
+ℋ^q_Z(M)&\simeq\Eext^q_A(A_Z,M){\quoi}.\tag{6.3.4}
+\end{align*}\hypertarget{sga4.exp.V.equation.6.3.4}{}
+Note that, since $A_Z$ is a bimodule, the sheaves
+$\Eext^q_A(A_Z,M)\simeqℋ^q_Z(M)$ are canonically endowed with
+$A$-module structures.
+
+For every object $X$ of $E$, denote by $Z_{/X}$ the closed subtopos of
+$E_{/X}$ obtained from $Z$ by localization (it is the complement of
+$U\times X$). By definition, there are canonical isomorphisms
+\begin{equation*}
+H^{0}(X,ℋ^{0}_Z(M))\simeq
+H^{0}_{Z_{/X}}(E_{/X},M|X){\quoi}.\tag{6.3.5}
+\end{equation*}\etiquette[6.3.5]{V.6.3.5}
+Set
+\begin{equation*}
+H^q_Z(X,M)\simeq H^q_{Z_{/X}}(E_{/X},M|X){\quoi}.\tag{6.3.6}
+\end{equation*}\etiquette[6.3.6]{V.6.3.6}
+Taking \hyperlink{sga4.exp.V.equation.6.3.2}{(6.3.2)} into account, there are canonical isomorphisms
+\begin{equation*}
+H^q_Z(X,M)\simeq\Ext^q_A(X;A_Z,M){\quoi}.\tag{6.3.7}
+\end{equation*}\etiquette[6.3.7]{V.6.3.7}
+
+\begin{enonce*}{Proposition 6.4}\etiquette[6.4]{V.prop6.4}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Formation\pageoriginale of the functors $ℋ^q_Z$ commutes with
+localization. More precisely, for every object $X$ of $E$ and every
+$A$-module $M$, there are canonical isomorphisms
+\begin{equation*}
+ℋ^{q}_Z(M)|X\simeqℋ^q_{Z_{/X}}(M|X){\quoi}.\tag{6.4.1}
+\end{equation*}\etiquette[6.4.1]{V.6.4.1}
+
+\item The sheaf $ℋ^q_Z(M)$ is the sheaf associated with the presheaf
+$X\longmapsto H^q_Z(X,M)$.
+
+\item There is a spectral sequence
+\begin{equation*}
+H^{p+q}_Z(E,M)\Longleftarrow H^p(E,ℋ^q_Z(M)){\quoi}.\tag{6.4.2}
+\end{equation*}\etiquette[6.4.2]{V.6.4.2}
+More generally, for every object $X$ of $E$, there is a spectral
+sequence
+\begin{equation*}
+H^{p+q}_Z(X,M)\Longleftarrow H^p(X,ℋ^q_Z(M)){\quoi}.\tag{6.4.3}
+\end{equation*}\etiquette[6.4.3]{V.6.4.3}
+\end{enumerate}
+\end{enonce*}
+
+This is simply Proposition \hyperref[V.prop6.1]{6.1} translated by
+means of the dictionary in \hyperref[V.subsec6.3]{6.3}.
+
+\begin{enonce*}{Proposition 6.5}\etiquette[6.5]{V.prop6.5}
+With the notation of \hyperref[V.subsec6.3]{6.3}, denote by
+$j:U\to E$ the canonical morphism. For every $A$-module $M$, there is
+an exact sequence of sheaves
+\begin{equation*}
+0\toℋ^{0}_Z(M)\to M\to j_\ast(M|U)\to
+ℋ^1_Z(M)\to0{\quoi},\tag{6.5.1}
+\end{equation*}\etiquette[6.5.1]{V.6.5.1}
+and, for $q\geq2$, there are isomorphisms
+\begin{equation*}
+ℋ^q_Z(M)\simeq\Eext^{q-1}_A(A_U,M)\simeq
+R^{q-1}j_\ast(M|U){\quoi}.\tag{6.5.2}
+\end{equation*}\etiquette[6.5.2]{V.6.5.2}
+There is, in addition, a long exact sequence
+\begin{equation*}
+\cdots\to H^q_Z(E,M)\to H^q(E,M)\to H^q(U,M)\to
+H^{q+1}_Z(E,M)\to\cdots
+\footnote{This exact sequence makes precise the role of the global
+cohomological invariants $H^q_Z(E,M)$ as ``cohomology groups of $E$
+\emph{modulo} the open subtopos $U$, with coefficients in $M$.''}
+\tag{6.5.3}
+\end{equation*}\etiquette[6.5.3]{V.6.5.3}
+and, more generally, for every object $X$ of $E$, there is a long
+exact sequence
+\begin{equation*}
+\cdots\to H^q_Z(X,M)\to H^q(X,M)\to H^q(X\times U,M)\to
+H^{q+1}_Z(X,M)\to\cdots.\tag{6.5.4}
+\end{equation*}\etiquette[6.5.4]{V.6.5.4}
+\end{enonce*}
+
+By the definition of $A_Z$, there is an exact sequence (IV 14)
+\begin{equation*}
+0\to A_U\to A\to A_Z\to0{\quoi}.\tag{6.5.5}
+\end{equation*}\etiquette[6.5.5]{V.6.5.5}
+The\pageoriginale functors $\Eext^q_A(A,⋅)$ vanish for $q>0$. One has
+$\Hhom_A(A_U,M)\simeq j_\ast(M|U)$ (IV 14), and hence
+(\hyperref[V.subsec2.2]{2.2})
+$\Eext^q_A(A_U,M)\simeq R^qj_\ast(M|U)$. Finally,
+$\Eext^q_A(A_Z,M)\simeqℋ^q_Z(M)$ \hyperlink{sga4.exp.V.equation.6.3.4}{(6.3.4)}. The long exact sequence
+\eqhyperref[V.6.2.2]{6.2.2} gives, in this case,
+\eqhyperref[V.6.5.1]{6.5.1} and \eqhyperref[V.6.5.2]{6.5.2}. The exact
+sequences \eqhyperref[V.6.5.3]{6.5.3} and
+\eqhyperref[V.6.5.4]{6.5.4} follow from the dictionary in
+\hyperref[V.subsec6.3]{6.3} and from the long exact sequence of the
+$\delta$-functor $\Ext^q_A(X;\mathord\cdot,M)$, $q\geq0$, associated
+with \eqhyperref[V.6.5.5]{6.5.5}.
+
+\begin{enonce*}{Proposition 6.6}\etiquette[6.6]{V.prop6.6}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Flasque sheaves are acyclic for the functors $ℋ^{0}_Z$ and
+$H^{0}_Z(X,⋅)$.
+
+\item For every $q\geq0$, the functors $ℋ^{q}_Z$ and $H^{q}_Z(X,⋅)$
+commute with restriction of scalars.
+\end{enumerate}
+\end{enonce*}
+
+Let $M$ be a flasque sheaf. The exact sequence
+\eqhyperref[V.6.5.4]{6.5.4} gives the equalities
+$H^q_Z(X,M)=0$ for every $X$ and every $q\geq2$, together with an
+exact sequence
+$$
+0\to H^{0}_Z(X,M)\to H^{0}(X,M)\to H^{0}(X\times U,M)
+\to H^1_Z(X,M)\to0{\quoi}.
+$$
+But, since the sheaf $M$ is flasque, the morphism
+$H^{0}(X,M)\to H^{0}(X\times U,M)$ is surjective
+(\hyperref[V.sec4]{4}). Consequently, $H^1_Z(X,M)=0$, and $M$ is
+acyclic for $H^{0}_Z(X,⋅)$. Passing to the associated sheaves, one
+deduces that $M$ is acyclic for the functor $ℋ^{0}_Z$
+(\hyperref[V.prop6.4]{6.4}). It is clear that the functors $ℋ^{0}_Z$
+and $H^{0}_Z(X,⋅)$ commute with restriction of scalars; since flasque
+sheaves are acyclic for both functors, assertion 2) follows.
+
+\begin{enonce*}{Proposition 6.7}\etiquette[6.7]{V.prop6.7}
+Let $(E,A)$ be a ringed topos, let $Z$ be a closed subtopos of $E$,
+let $U$ be its open complement, and let $M$ and $N$ be two
+$A$-modules. There are isomorphisms, functorial in $M$ and $N$ and
+compatible with changes of closed subtopos:
+$$
+ℋ^{0}_Z(\Hhom_A(M,N))\simeq\Hhom_A(M,ℋ^0_Z(N))
+\simeq\Hhom_A(M\otimes_AA_Z,N){\quoi}.
+$$
+\end{enonce*}
+
+This follows from (IV 14), taking \hyperlink{sga4.exp.V.equation.6.3.2}{(6.3.2)} into account.
+
+\setcounter{subsection}{7}
+\subsection{}\etiquette[6.8]{V.subsec6.8}

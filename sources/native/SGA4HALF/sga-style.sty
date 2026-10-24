@@ -1,0 +1,138 @@
+% !TEX root = sga4.5-en.tex
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % allows French characters
+\usepackage[all]{xy}        % commutative diagrams
+\usepackage[stable,symbol]{footmisc}
+
+\ifdefined\sgaoption 
+  \ifnum\sgaoption=1 % tablet version
+    \usepackage[paperwidth=6.125in,paperheight=9.25in,text={5.5in,8in},centering]{geometry}
+  \else % tree saving version
+    \usepackage[margin=1in,centering]{geometry}
+  \fi
+\else % normal version
+  \usepackage[text={5.5in,8in},centering]{geometry}
+\fi
+
+
+\usepackage{
+  amsmath,
+  amssymb,
+  amsthm,
+  bm,        % to get bold symbols to work with stmaryrd
+ % calligra,  % for sheaf hom
+  enumerate, % allows \begin{enumerate}[\indent a)]
+  lmodern,
+  mathrsfs,  % allows \mathscr
+%  microtype, % improves general appearance
+  stmaryrd   % allows \llbracket, i.e. [[t]]
+}
+%\usepackage[T1]{fontenc} % with calligra, but causes everything to crash
+\usepackage[kerning=true]{microtype} % improves general appearance
+\usepackage[backref=page,pdfpagelabels,hidelinks,hypertexnames=false]{hyperref}
+%\setcounter{secnumdepth}{6}
+
+
+% operators
+  \DeclareMathOperator{\aut}{Aut}
+  \DeclareMathOperator{\br}{Br}
+  \DeclareMathOperator{\cl}{cl}
+  \DeclareMathOperator{\cosp}{cosp}
+  \DeclareMathOperator{\dv}{div}
+  \DeclareMathOperator{\Div}{Div}
+  \DeclareMathOperator{\ext}{Ext}
+  \DeclareMathOperator{\Ext}{\mathscr{E}\!xt} % sheaf ext
+  \DeclareMathOperator{\gal}{Gal}
+  \DeclareMathOperator{\gl}{GL}
+  \DeclareMathOperator{\gr}{gr}
+  \DeclareMathOperator{\h}{H}
+  \DeclareMathOperator{\hh}{\mathsf{H}} % hypercohomology?
+  \DeclareMathOperator{\Hom}{\mathscr{H}\!om} % sheaf hom
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\ob}{Ob}
+  \DeclareMathOperator{\pgl}{PGL}
+  \DeclareMathOperator{\pic}{Pic} 
+  \DeclareMathOperator{\res}{R} % restriction of scalars
+  \DeclareMathOperator{\rHom}{\mathsf{R}\mathscr{H}\!om}
+  \DeclareMathOperator{\sh}{Sh}
+  \DeclareMathOperator{\spe}{sp} % specialisation
+  \DeclareMathOperator{\spec}{Spec}
+  \DeclareMathOperator{\swan}{Sw}
+  \DeclareMathOperator{\tor}{Tor}
+  \DeclareMathOperator{\Tor}{\mathscr{T}\!or} % sheaf tor
+  \DeclareMathOperator{\tr}{tr}
+
+
+% special symbols: a new way of defining them!
+  \newcommand{\dmu}{{\bm\mu}}
+  \newcounter{char}
+  \setcounter{char}{1}
+  \loop\ifnum\value{char}<27
+    \expandafter\edef\csname c\Alph{char}\endcsname{\noexpand\mathcal{\Alph{char}}}  % mathcal
+    \expandafter\edef\csname d\Alph{char}\endcsname{\noexpand\mathbb{\Alph{char}}}   % mathbb
+    \expandafter\edef\csname f\Alph{char}\endcsname{\noexpand\mathfrak{\Alph{char}}} % mathfrak
+    \expandafter\edef\csname e\Alph{char}\endcsname{\noexpand\mathsf{\Alph{char}}}   % mathsf
+    \expandafter\edef\csname s\Alph{char}\endcsname{\noexpand\mathscr{\Alph{char}}}  % mathscr
+    \addtocounter{char}{1}
+  \repeat
+% can't do the previous for lower-case mathfrak because \fi is already defined 
+% (otherwise, could do \alph instead of \Alph above)
+  \def\mydeff#1{\expandafter\def\csname f#1\endcsname{\mathfrak{#1}}}
+  \def\mydefallf#1{\ifx#1\mydefallf\else\mydeff#1\expandafter\mydefallf\fi}
+  \mydefallf abcdefghjklmnopqrstuvwxyz\mydefallf
+
+
+% miscellaneous operators
+  \newcommand{\an}[1]{{#1}^{\textnormal{an}}}
+  \newcommand{\const}[1]{\underline{#1}}
+  \newcommand{\et}[1]{{#1}_{\textnormal{et}}}
+  \newcommand{\iso}{\xrightarrow\sim}
+  \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
+  \DeclareMathOperator{\rhom}{\mathsf{R}\hom}
+  \renewcommand{\setminus}{\smallsetminus}
+  \newcommand{\kloos}{\textnormal{K}} % Kloosterman sum
+  \newcommand{\pr}{\mathrm{pr}} % projection map
+
+
+% theorem types
+  \newtheorem{proposition}[subsubsection]{Proposition}
+  \newtheorem{corollary}[subsubsection]{Corollary}
+  \newtheorem{definition}[subsubsection]{Definition}
+  \newtheorem{theorem}[subsubsection]{Theorem}
+  \newtheorem{lemma}[subsubsection]{Lemma}
+  
+  \newtheorem{lemma_}[subsection]{Lemma}
+  \newtheorem{corollary_}[subsection]{Corollary}
+  \newtheorem{theorem_}[subsection]{Theorem}
+  \newtheorem{proposition_}[subsection]{Proposition}
+  \newtheorem{definition_}[subsection]{Definition}
+  \newtheorem{prop-def_}[subsection]{Proposition--Definition}
+  \setcounter{tocdepth}{1}
+
+  \newtheorem*{theorem*}{Theorem}
+
+
+%\renewcommand*\thechapter{\Roman{chapter}}
+\renewcommand*\thesection{\arabic{section}}
+\renewcommand{\theequation}{\arabic{equation}}
+\setcounter{secnumdepth}{3}
+
+% allows for large external tensor product symbol
+\newcommand{\bigboxtimes}{\mathop{\vphantom{\sum}\mathchoice
+  {\vcenter{\hbox{\huge $\boxtimes$}}}
+  {\vcenter{\hbox{\Large $\boxtimes$}}}{\boxtimes}{\boxtimes}}\displaylimits}
+
+
+%\renewcommand{\bullet}{\text{\,\begin{picture}(-1,1)(-1,-2)\circle*{2}\end{picture}\ }}
+\let\oldbullet\bullet
+\renewcommand{\bullet}{\textnormal{\tiny$\oldbullet$}}
+
+
+% unmarked footnote
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}

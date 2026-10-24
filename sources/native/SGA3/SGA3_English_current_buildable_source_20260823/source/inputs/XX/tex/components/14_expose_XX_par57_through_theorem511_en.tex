@@ -1,0 +1,215 @@
+\paragraph{\textbf{5.7.}}
+\SGARefTarget{sga3:xx:5.7}
+Let \((G,T,\alpha)\) now be an arbitrary elementary \(S\)-system.
+Consider the commutative diagram
+\begin{center}
+\begin{tikzpicture}[>=stealth,
+  every node/.style={inner sep=2pt},
+  every path/.style={line width=.45pt}]
+  \node (top) at (0,2.9) {$\mathbb G_{m,S}$};
+  \node (left) at (-3.7,0) {$\mathbb G_{m,S}$};
+  \node (mid) at (0,0) {$T$};
+  \node (right) at (3.7,0) {$\mathbb G_{m,S}$};
+  \node (bottom) at (0,-2.9) {$\mathbb G_{m,S}$};
+
+  \draw[->] (top) -- node[pos=.48,above left] {$\mathrm{id}$} (left);
+  \draw[->] (top) -- node[left] {$\alpha^\ast$} (mid);
+  \draw[->] (top) -- node[pos=.48,above right] {$2$} (right);
+  \draw[->] (left) -- node[above] {$\alpha^\ast$} (mid);
+  \draw[->] (mid) -- node[above] {$\alpha$} (right);
+  \draw[->] (left) -- node[pos=.48,below left] {$2$} (bottom);
+  \draw[->] (mid) -- node[left] {$\alpha$} (bottom);
+  \draw[->] (right) -- node[pos=.48,below right] {$\mathrm{id}$} (bottom);
+\end{tikzpicture}
+\end{center}
+Combining this diagram with that of \SGARefLink{sga3:xx:5.6}{5.6} gives a commutative diagram
+\begin{center}
+\begin{tikzpicture}[>=stealth,
+  every node/.style={inner sep=2pt},
+  every path/.style={line width=.45pt}]
+  \node (top) at (0,2.9) {$\mathbb G_{m,S}$};
+  \node (left) at (-4.8,0) {$t_S(\mathbb G_{m,S})$};
+  \node (mid) at (0,0) {$T$};
+  \node (right) at (4.8,0) {$t_P(\mathbb G_{m,S})$};
+  \node (bottom) at (0,-2.9) {$\mathbb G_{m,S}$};
+
+  \draw[->] (top) -- node[pos=.5,above left] {$\alpha_S^\ast$} (left);
+  \draw[->] (top) -- node[left] {$\alpha^\ast$} (mid);
+  \draw[->] (top) -- node[pos=.5,above right] {$\alpha_P^\ast$} (right);
+  \draw[->] (left) -- node[above] {$\alpha^\ast\circ t_S^{-1}$} (mid);
+  \draw[->] (mid) -- node[above] {$t_P\circ\alpha$} (right);
+  \draw[->] (left) -- node[pos=.5,below left] {$\alpha_S$} (bottom);
+  \draw[->] (mid) -- node[left] {$\alpha$} (bottom);
+  \draw[->] (right) -- node[pos=.5,below right] {$\alpha_P$} (bottom);
+\end{tikzpicture}
+\end{center}
+Using \SGARefLink{sga3:xx:4.1}{4.1}, one obtains:
+
+\paragraph{\textbf{Proposition 5.8.}}
+\SGARefTarget{sga3:xx:5.8}
+\emph{Let \(S\) be a scheme and let \((G,T,\alpha)\) be an
+elementary \(S\)-system.  Put \(L=\mathfrak g^\alpha\), so that
+\(L^{-1}=\mathfrak g^{-\alpha}\).}
+
+\emph{\textup{(i)} There exists a unique group morphism
+\(f\colon\mathrm{SL}_L\to G\) satisfying the following equivalent
+conditions:}
+\[
+\begin{array}{ll}
+\textup{(a)}
+&
+f\begin{pmatrix}z&0\\0&z^{-1}\end{pmatrix}=\alpha^\ast(z),
+\qquad
+f\begin{pmatrix}1&X\\0&1\end{pmatrix}=\exp(X);
+\\[1.1em]
+\textup{(b)}
+&
+f\begin{pmatrix}1&X\\0&1\end{pmatrix}=\exp(X),
+\qquad
+f\begin{pmatrix}1&0\\Y&1\end{pmatrix}=\exp(Y);
+\\[1.1em]
+\textup{(c)}
+&
+f\begin{pmatrix}1&X\\0&1\end{pmatrix}=\exp(X),
+\qquad
+f\begin{pmatrix}0&X\\-X^{-1}&0\end{pmatrix}=w_\alpha(X).
+\end{array}
+\]
+
+\emph{\textup{(ii)} There exists a unique group morphism
+\(g\colon G\to\mathrm P_L\) satisfying}
+\[
+ g(t)=
+ \begin{pmatrix}\alpha(t)&0\\0&1\end{pmatrix},
+ \qquad
+ g(\exp(X))
+ =p\begin{pmatrix}1&X\\0&1\end{pmatrix}.
+\]
+\emph{Moreover,}
+\[
+ g(\exp(Y))
+ =p\begin{pmatrix}1&0\\Y&1\end{pmatrix},
+ \qquad
+ g(w_\alpha(X))
+ =p\begin{pmatrix}0&X\\-X^{-1}&0\end{pmatrix}.
+\]
+\emph{The morphism \(g\) is faithfully flat and quasi-compact, with}
+\[
+ \Ker(g)=\Ker(\alpha)=\operatorname{Centr}(G),
+\]
+\emph{and \(g\circ f\) is the canonical morphism
+\(\mathrm{SL}_L\to\mathrm P_L\).}
+
+Notice that condition \textup{(b)} in \textup{(i)} gives an explicit
+description of the duality between
+\(\mathfrak g^\alpha\) and \(\mathfrak g^{-\alpha}\).
+
+\paragraph{\textbf{Corollary 5.9.}}
+\SGARefTarget{sga3:xx:5.9}
+\emph{Let \((G,T,\alpha)\) be an elementary \(S\)-system.  The
+subgroups}
+\[
+ T\cdot U_\alpha,\qquad T\cdot U_{-\alpha},
+ \qquad U_\alpha,\qquad U_{-\alpha}
+\]
+\emph{are closed.}
+
+Since \(U_\alpha\) is a closed subgroup scheme of
+\(T\cdot U_\alpha\), it suffices to prove the assertion for the
+latter.  By Noether's theorem \textup{(\SGARefLink{sga3:iv:proposition:5:3:1}{Exposé IV, 5.3.1} and \SGARefLink{sga3:iv:lemma:6:4:1}{6.4.1})},
+it is enough to show that
+\[
+ (T\cdot U_\alpha)/\Ker(\alpha)
+\]
+is a closed subgroup of \(G/\Ker(\alpha)\).  By \SGARefLink{sga3:xx:5.8}{5.8}, this reduces to
+the evident fact that the subgroup of \(\mathrm P_L\) defined by
+\(c=0\) is closed; one may equivalently work in \(\mathrm{GL}_L\),
+by another application of Noether's theorem.  Consequently, the
+exponential morphisms of \SGARefLink{sga3:xx:1.5}{Theorem 1.5}\textup{(i)} are closed
+immersions.
+
+\smallskip
+\noindent\textbf{N.B.}\ The corollary also follows from the fact that
+\(T\cdot U_\alpha\) and \(T\cdot U_{-\alpha}\) are ``Borel
+subgroups'' of \(G\) \textup{(cf.\ \SGARefLink{sga3:xii:7.10}{Exposé XII, 7.10})}.
+
+\paragraph{\textbf{5.10.}}
+\SGARefTarget{sga3:xx:5.10}
+Let \(L\) be an invertible \(\mathcal O_S\)-module, and let
+\[
+ \mathbb G_{m,S}\xrightarrow{\ \alpha^\ast\ }T
+ \xrightarrow{\ \alpha\ }\mathbb G_{m,S}
+\]
+be a diagram of groups, where \(T\) is a torus,\footnote{This
+qualification is supplied by the editors.} such that
+\(\alpha\circ\alpha^\ast=2\).  Let \(R\) be the maximal torus of
+\(\Ker(\alpha)\), and put \(K=\alpha^{\ast-1}(R)\).  Then \(K\) is a
+subgroup of multiplicative type of \(\mathbb G_{m,S}\); since
+\(\alpha\circ\alpha^\ast=2\), it is even a subgroup of
+\(\mu_{2,S}\).  In particular,
+\[
+ K\longrightarrow\mathrm{SL}_L,
+ \qquad
+ z\longmapsto\begin{pmatrix}z&0\\0&z^{-1}\end{pmatrix}
+\]
+is central.  Hence there is a central group monomorphism
+\[
+ K\longrightarrow R\times\mathrm{SL}_L,
+ \qquad
+ z\longmapsto
+ \left(
+ \alpha^\ast(z),
+ \begin{pmatrix}z&0\\0&z^{-1}\end{pmatrix}
+ \right).
+\]
+
+Let
+\[
+ G=(R\times\mathrm{SL}_L)/K.
+\]
+This is an affine smooth group over \(S\), with connected fibers.
+The sequence
+\[
+ 1\longrightarrow K\longrightarrow
+ R\times t_S(\mathbb G_{m,S})
+ \xrightarrow{\ u\ }T\longrightarrow1,
+ \qquad
+ u(x,t_S(z))=x\alpha^\ast(z),
+\]
+is exact.  The image of \(R\times t_S(\mathbb G_{m,S})\) in \(G\)
+is therefore a torus \(T'\) isomorphic to \(T\).  If \(\alpha'\) is
+the character of \(T'\) transported from \(\alpha\), one readily
+checks that \((G,T',\alpha')\) is an elementary \(S\)-system, that
+\(\mathfrak g^{\alpha'}\) is isomorphic to \(L\), and that
+\(\alpha'^\ast\) is obtained from \(\alpha^\ast\) under the
+isomorphism \(T\xrightarrow{\sim}T'\).  Thus the object
+\[
+ \left(
+ \mathbb G_{m,S}\xrightarrow{\ \alpha'^\ast\ }T'
+ \xrightarrow{\ \alpha'\ }\mathbb G_{m,S},\,
+ \mathfrak g^{\alpha'}
+ \right)
+\]
+of the category \(\mathcal D\) defined in \SGARefLink{sga3:xx:4.2}{4.2} is isomorphic to
+\[
+ \left(
+ \mathbb G_{m,S}\xrightarrow{\ \alpha^\ast\ }T
+ \xrightarrow{\ \alpha\ }\mathbb G_{m,S},\,L
+ \right).
+ \]
+We have therefore proved:
+
+\paragraph{\textbf{Theorem 5.11.}}
+\SGARefTarget{sga3:xx:5.11}
+\emph{With the notation of \SGARefLink{sga3:xx:4.2}{4.2}, the functor}
+\[
+ (G,T,\alpha)\longmapsto
+ \left(
+ \mathbb G_{m,S}\xrightarrow{\ \alpha^\ast\ }T
+ \xrightarrow{\ \alpha\ }\mathbb G_{m,S},\,
+ \mathfrak g^\alpha
+ \right)
+\]
+\emph{is an equivalence of categories between
+\(\mathcal E\) and \(\mathcal D\).}
+

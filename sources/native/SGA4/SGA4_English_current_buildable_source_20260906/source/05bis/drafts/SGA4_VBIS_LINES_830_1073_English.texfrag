@@ -1,0 +1,277 @@
+\section{The method of cohomological descent}\etiquette[2]{Vbis.sec2}
+
+In this section, $D$ is a $\Uu$-small category.
+
+\subsection{Generalities. Notation}\etiquette[2.1]{Vbis.subsec2.1}
+
+\subsubsection{}\etiquette[2.1.1]{Vbis.subsubsec2.1.1}
+Let $(S,\mathcal{O}_S)$ be a ringed topos. The category $S\times D$,
+equipped with the canonical projection $S\times D\to D$, is a
+$D$-topos; moreover, the constant section with value $\mathcal{O}_S$
+defines a ringed $D$-topos $(S\times D,\mathcal{O}_S)$, called the
+\emph{constant ringed $D$-topos with value} $(S,\mathcal{O}_S)$. With
+this notation, the category
+$\Mod(\Ysheaf{\Gamma}(S\times D),\mathcal{O}_S)$ is identified with
+the category of covariant functors from $D$ to
+$\Mod(S,\mathcal{O}_S)$.
+
+Define an exact functor
+$$
+\epsilon^{\ast}:\Mod(S,\mathcal{O}_S)\to
+\Mod(\Ysheaf{\Gamma}(S\times D),\mathcal{O}_S)
+$$
+by associating with every module $F$ on $S$ the constant functor with
+value $F$. The functor $\epsilon^{\ast}$ has a right adjoint
+$\epsilon_\ast$, which associates with every functor
+$H:D\to\Mod(\mathcal{O}_S)$ its projective limit; the adjunction
+morphism $F\to\epsilon_\ast\epsilon^{\ast}(F)$ is the morphism from
+$F$ to the projective limit of the constant functor with value $F$.
+Thus $\epsilon^{\ast}$ is fully faithful if and only if $D$ is
+connected.
+
+\begin{enonce*}{Definition 2.1.2}\etiquette[2.1.2]{Vbis.def2.1.2}
+Let\pageoriginale $(E,A)$ be a ringed $D$-topos. An augmentation of
+$(E,A)$ is a morphism (of ringed $D$-topoi) from $(E,A)$ to a constant
+ringed $D$-topos. A ringed $D$-topos equipped with an augmentation will
+be called an augmented ringed $D$-topos.
+\end{enonce*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}\etiquette[2.1.3]{Vbis.subsubsec2.1.3}
+Let $\mathcal{E}\to B$ be a category bifibered in duals of topoi, and
+let $\mathcal{O}$ be a ring in
+$\Ysheaf{\Gamma}(\mathcal{E}^{\circ})=
+\Hom_{B^{\circ}}(B^{\circ},\mathcal{E}^{\circ})$. Let $S$ be an
+object of $B$. A functor $D^{\circ}\to B/S$, that is, a functorial
+morphism $X\xrightarrow{\theta}C^D_S$, where $X$ is a functor
+$D^{\circ}\to B$ (\cf (\hyperref[Vbis.subsubsec1.2.6]{1.2.6})),
+induces an augmentation
+$$
+\displaylines{\hfill
+\theta:(\bar{X},\mathcal{O})\longrightarrow
+(\mathcal{E}^{\circ}_S\times D,\mathcal{O}_S)
+\hfill\llap{(\cf \hyperref[Vbis.subsubsec1.3.4]{(1.3.4)}){\quoi}.}}
+$$
+which we shall denote by the same letter as the functorial morphism
+from which it arises.
+
+
+\subsection{Cohomological descent}\etiquette[2.2]{Vbis.subsec2.2}
+
+\subsubsection{}\etiquette[2.2.1]{Vbis.subsubsec2.2.1}
+Let $\theta:(E,A)\to(S\times D,\mathcal{O}_S)$ be an augmented ringed
+$D$-topos. With the notation of (\hyperref[Vbis.subsubsec1.3.6]{1.3.6})
+and (\hyperref[Vbis.subsubsec2.1.1]{2.1.1}), set
+$$
+\bar{\theta}^{\ast}=\Gamma(\theta^{\ast})\circ\epsilon^{\ast}:
+\Mod(S,\mathcal{O}_S)\to\Mod(\Ysheaf{\Gamma}(E),A)
+$$
+and
+$\bar{\theta}_\ast=\epsilon_\ast\circ\Gamma(\theta_\ast):
+\Mod(\Ysheaf{\Gamma}(E),A)\to\Mod(S,\mathcal{O}_S)$.
+
+The image of $\bar{\theta}^{\ast}$ lies in the full subcategory of
+$\Mod(\Ysheaf{\Gamma}(E),A)$ consisting of the cocartesian sections
+of $\Ysheaf{\Gamma}(D,\Ysheaf{\Mod}(E,A))$. We shall denote this
+category by
+$\Ysheaf{\Gamma}^{\text{cocart}}(D,\Ysheaf{\Mod}(E,A))$
+\nde{In other words, an augmented ringed $D$-topos is the datum of a
+compatible system of morphisms of $S$-topoi
+$$(m^\ast,m_\ast):E_j\longrightarrow E_i,$$
+where $m\in\Hom_D(i,j)$. The category of cocartesian sections is the
+category of descent data; its objects are families
+$F_i\in\text{Ob}(E_i)$ equipped with cocycles of isomorphisms
+$$F_j\isomto m^\ast F_i.$$
+The functor which associates with every object $F$ on $S$ the constant
+functor with value $F$ is the inverse image of a morphism of topoi
+$$\epsilon:\Gamma(S\times D)\longrightarrow S,$$
+inducing the morphism of ringed topoi of
+\hyperref[Vbis.subsubsec2.1.3]{2.1.3}. The pair
+$(\bar\theta_\ast,\bar\theta^\ast)$ is therefore simply induced by the
+composite of morphisms of topoi
+$\bar\theta=\epsilon\circ\Gamma(\theta):\Gamma(E)\to S$
+(cf. \hyperref[Vbis.prop1.2.15]{1.2.15}).}
+
+\begin{enonce*}{Definition 2.2.2}\etiquette[2.2.2]{Vbis.def2.2.2}
+The morphism $\theta$ is said to be an \emph{effective descent
+augmentation} if
+$$
+\sisi{}{\bar\theta^{\ast}=}
+\Gamma(\theta^{\ast})\circ\epsilon^{\ast}:
+\Mod(S,\mathcal{O}_S)\to
+\Ysheaf{\Gamma}^{\text{\rm cocart}}(D,\Ysheaf{\Mod}(E,A))
+$$
+is an equivalence of categories.
+\end{enonce*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}\etiquette[2.2.3]{Vbis.subsubsec2.2.3}
+With\pageoriginale the notation of
+(\hyperref[Vbis.subsubsec2.2.1]{2.2.1}), suppose that $\theta$ is
+flat, so that $\bar\theta^{\ast}$ is exact and passes trivially to the
+derived categories; \sisi{let $\LL^{+}(\bar\theta^{\ast})$}{we again
+denote by $\bar\theta^{\ast}$} the functor thereby obtained. With this
+notation:
+
+\begin{enonce*}{Lemma 2.2.3.1}\etiquette[2.2.3.1]{Vbis.lem2.2.3.1}
+There are two functorial morphisms
+$$
+\alpha:\id_{D^{+}(S,\mathcal{O}_S)}\to
+\sisi{\RR^{+}}{R}\bar\theta_\ast\circ
+\sisi{\LL^{+}(\bar\theta^{\ast})}{\bar\theta^{\ast}}
+\quad\mbox{and}\quad
+\beta:\sisi{\LL^{+}(\bar\theta^{\ast})}{\bar\theta^{\ast}}\circ
+\sisi{\RR^{+}}{R}\bar\theta_\ast\to
+\id_{D^{+}(\Ysheaf{\Gamma}(E),A)}
+$$
+which make these two functors adjoint.
+\end{enonce*}
+
+(\cf \cite{sga4.exp.Vbis.bib.9} (3.3)).
+
+\begin{enonce*}{Definition 2.2.4}\etiquette[2.2.4]{Vbis.def2.2.4}
+The morphism $\theta$ is said to be a \emph{1-cohomological-descent
+augmentation} if
+\begin{enumerate}
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\labelenumi}{\theenumi$^{\circ}$)}
+\item $\theta$ is flat;
+\item
+\sisi{$\LL^{+}(\bar\theta^{\ast})$}
+{$\bar\theta^{\ast}:D^{+}(S,\mathcal{O}_S)\to
+D^{+}(\Ysheaf{\Gamma}(E),A)$} is fully faithful.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Remark 2.2.5}\etiquette[2.2.5]{Vbis.rem2.2.5}
+Condition $2^{\circ}$) of the preceding definition can also be
+expressed by saying that the morphism
+$\alpha\sisi{}{:\id_{D^{+}(S,\mathcal{O}_S)}\to
+R\bar\theta_\ast\circ\bar\theta^{\ast}}$ in
+(\hyperref[Vbis.lem2.2.3.1]{2.2.3.1}) is an isomorphism.
+\sisi{}{This is what one proves in practice and what is useful.}
+\end{enonce*}
+
+\begin{enonce*}{Definition 2.2.6}\etiquette[2.2.6]{Vbis.def2.2.6}
+The morphism $\theta$ is said to be a \emph{2-cohomological-descent
+augmentation} (or an \emph{effective cohomological-descent
+augmentation}) if $\theta$ is both an effective descent augmentation
+and a 1-cohomological-descent augmentation.
+\end{enonce*}
+
+The preceding terminology is justified by the following result:
+
+\begin{enonce*}{Proposition 2.2.7}\etiquette[2.2.7]{Vbis.prop2.2.7}
+Let $\theta$ be an effective cohomological-descent augmentation. Then
+the essential image of
+$\sisi{\LL^{+}(\bar\theta^{\ast})}{\bar\theta^{\ast}}$ is the full
+subcategory of $D^{+}(\Ysheaf{\Gamma}(E),A)$ consisting of the
+complexes $F^{\bigdot}$ such that, for every $i$,
+$H^{i}(F^{\bigdot})$ is a cocartesian section of
+$\Ysheaf{\Mod}(E,A)$.
+\end{enonce*}
+
+For brevity, we shall call a complex $F^{\bigdot}$ satisfying the
+preceding conditions a \emph{cohomological descent datum}.
+
+\sisi{}{\begin{proof}}
+It is clear that, if $K^{\bigdot}\in D^{+}(S,\mathcal{O}_S)$,
+\sisi{}{then}
+$\sisi{\LL^+(\bar\theta^{\ast})}
+{\bar\theta^{\ast}(K^{\bigdot})}$ is a cohomological descent datum. It
+is therefore enough to show that, for every cohomological descent
+datum $F^{\bigdot}$, the canonical morphism
+$$
+\beta(F^{\bigdot}):
+\sisi{\LL^{+}(\bar\theta^{\ast})}{\bar\theta^{\ast}}\circ
+\sisi{\RR^{+}(\bar\theta_\ast)}{R\bar\theta_\ast}(F^{\bigdot})
+\to F^{\bigdot}
+$$
+is\pageoriginale an isomorphism in
+$D^{+}(\Ysheaf{\Gamma}(E),A)$.
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item \emph{The case where $F^{\bigdot}$ is bounded}: we argue by
+induction on the length $\ell$ of the interval of integers $i$ for
+which $H^{i}(F^{\bigdot})\neq0$:
+\begin{itemize}
+\item for $\ell\leq1$, the assertion is true because $\theta$ is of
+effective descent.
+
+\item suppose $\ell>1$, and let $n$ be the greatest integer such that
+$H^n(F^{\bigdot})\neq0$. There is a distinguished
+triangle\footnote{For every complex $K^{\bigdot}$,
+$K^{\bigdot}[-n]$ denotes the complex $T^{-n}(K^{\bigdot})$, where
+$T$ is the translation functor.}
+\[
+\xymatrix@R=1.5cm{
+          & H^{n}(F^{\bigdot})[-n] \ar[ld]&\\
+F'^{\bigdot} \ar[rr] & & F^{\bigdot} \ar[lu]
+}
+\]
+such that the induction hypothesis applies to $F'^{\bigdot}$. Since
+$\beta(H^{n}(F^{\bigdot})[-n])$ and $\beta(F'^{\bigdot})$ are
+isomorphisms, the same is true of $\beta(F^{\bigdot})$.
+\end{itemize}
+
+\item \emph{The general case}: denote by
+$\sisi{\sigma}{\tau}_{\leq n}(F^{\bigdot})$ the complex
+$$
+\ldots\to F^{n-2}\to F^{n-1}\to\Ker d^n\to0\to0\ldots{\quoi},
+$$
+(\cf \cite{sga4.exp.Vbis.bib.7} (7.1)), so that, for every $n$, there is a commutative
+diagram
+\[
+\xymatrix@R=1.5cm@C=2cm{
+\bar{\theta}^{\ast}\circ R\bar{\theta}_{\ast}
+(\tau_{\leq n}(F^{\bigdot}))
+\ar[r]^{\sim}\ar[d]&
+\tau_{\leq n}(F^{\bigdot})\ar[d]\\
+\bar{\theta}^{\ast}\circ R\bar{\theta}_{\ast}
+(F^{\bigdot})\ar[r]&F^{\bigdot}
+}
+\]
+and it is enough to see that the morphism
+$$
+\sisi{\RR^{+}(\bar\theta_\ast)}{R\bar\theta_\ast}
+(\sisi{\sigma}{\tau}_{\leq n}(F^{\bigdot}))
+\to
+\sisi{\RR^{+}(\bar\theta_\ast)}{R\bar\theta_\ast}(F^{\bigdot})
+$$
+induces\pageoriginale an isomorphism on $H^{i}$ for $i\leq n$. But
+there is a triangle
+\[
+\xymatrix{
+&F''^{\bigdot}\ar[ld]&\\
+\tau_{\leq n}(F^{\bigdot})\ar[rr]&&
+F^{\bigdot}\ar[lu]
+}
+\]
+with $H^i({F''}^{\bigdot})=0$ for $i\leq n$. It follows that
+$H^{i}(\sisi{\RR^{+}(\bar\theta_\ast)}{R\bar\theta_\ast}
+(F''^{\bigdot}))=0$ for $i\leq n$, and then that
+$H^{i}(\sisi{\RR^{+}(\bar\theta_\ast)}{R\bar\theta_\ast}
+(\sisi{\sigma}{\tau}_{\leq n}(F^{\bigdot})))\to
+H^{i}(\sisi{\RR^{+}(\bar\theta_\ast)}{R\bar\theta_\ast}
+(F^{\bigdot}))$ is an isomorphism for $i\leq n$, which completes the
+proof.
+\end{enumerate}
+
+\sisi{}{\end{proof}}
+
+We shall now present an explicit method for computing
+$$
+\sisi{\RR^{+}}{R}\bar\theta_\ast
+\sisi{}{=R\epsilon_\ast\circ R\Gamma(\theta)_\ast},
+$$
+which is very useful in proving certain criteria for cohomological
+descent and in exploiting that notion.
+
+\sisi{\subsection{A method for computing
+$R^+\epsilon_\ast$}\etiquette[2.3]{Vbis.subsec2.3}}
+{\subsection{A method for computing
+$R\epsilon_\ast$}\etiquette[2.3]{Vbis.subsec2.3}}
+
+We shall begin with two sorites.

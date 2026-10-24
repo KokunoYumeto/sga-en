@@ -1,0 +1,337 @@
+\begin{enonce*}{Proposition 6.7}\etiquette[6.7]{VI.prop6.7}
+Let\pageoriginale $\Ee$ be a cofiltered category (I \hyperref[I.sec8.7]{8.7}) and
+$\Ff\to\Ee$ a fibered category \emph{(\hyperref[VI.subsubsec6.1.3]{6.1.3})}.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $\xi$ be an object of $\Ee$, and let $\Ff/\xi$ be the category
+  fibered over $\Ee/\xi$ obtained by the base change
+  $\Ee/\xi\to\Ee$. The canonical functor
+  $\varinjlim_{\Ee/\xi}\Ff/\xi\to\varinjlim_{\Ee}\Ff$ is an equivalence of
+  categories.
+
+\item More generally, let $\Ee'\to\Ee$ be a cofinal functor \emph{(I 8)}.
+  Let $\Ff'\to\Ee'$ be the fibered category deduced from
+  $\Ff\to\Ee$ by the base change $\Ee'\hookrightarrow\Ee$. The canonical
+  functor
+$$
+\varinjlim_{\Ee'} \Ff' \to \varinjlim_{\Ee} \Ff
+$$
+is an equivalence of categories.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+Exercise.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 6.8}\etiquette[6.8]{VI.exe6.8}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $g:{\Ee}^{\circ}\to\Cat$ be a functor and $\Gg\to\Ee$ the
+  corresponding fibered category \cite{sga4.exp.VI.bib.5}. Show that there exists a
+  canonical functor
+  $\varinjlim_{\Ee^{\circ}}\Gg\to\varinjlim_{\Ee^{\circ}}g$. Show that
+  this functor is not necessarily an equivalence of categories. (One may
+  take for $g$ the constant functor whose value is the final object of Cat,
+  and for $\Ee$ the category associated with a group.)
+
+\item Suppose that the category $\Ee^{\circ}$ is pseudo-filtered. Show that
+  the canonical functor
+  $\varinjlim_{\Ee^{\circ}}\Gg\to\varinjlim_{\Ee^{\circ}}g$ is then an
+  equivalence of categories.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}{Proposition 6.9}\etiquette[6.9]{VI.prop6.9}
+Let $\Ff\to\Ee$ be a fibered category (\hyperref[VI.def6.1]{6.1}). The
+functor $(\Cat)\to(\Ens)$
+$$
+C \mapsto \Hom_{\Cart/\Ee} (C \times \Ee, \Ff)
+$$
+is represented by the category $\Hhom_{\Cart/\Ee}(\Ee,\Ff)$.
+\end{enonce*}
+
+Let $C$ be a category, let $F:C\times\Ee\to\Ff$ be a Cartesian
+$\Ee$-functor (\hyperref[VI.subsubsec6.1.4]{6.1.4}), and let $X$ be an
+object of $C$. The functor $\xi\mapsto F((X,\xi))$ is a Cartesian functor
+from $\Ee$ to $\Ff$, denoted $F'(X)$, that depends functorially on $X$.
+Hence there is a map $F\mapsto F'$ from
+$\Hom_{\Cart/\Ee}(C\Ee,\Ff)$ to
+$\Hom(C,\Hhom_{\Cart/\Ee}(\Ee,\Ff))$, functorial in $C$, which is
+immediately verified to be a bijection.
+
+\setcounter{subsection}{9}
+\subsection{}\etiquette[6.10]{VI.subsec6.10}
+
+The category\pageoriginale $\Hhom_{\Cart/}(\Ee,\Ff)$ is called the category
+of \emph{Cartesian sections} of the fibered category $\Ff$. It is also
+sometimes called the \emph{projective-limit} category of $\Ff$ over
+$\Ee^{\circ}$. It is then denoted
+$\varprojlim_{\Ee^{\circ}}\Ff$ \cite{sga4.exp.VI.bib.2}.
+
+\subsection{}\etiquette[6.11]{VI.subsec6.11}
+
+Choose a splitting of the fibered category $\Ff\to\Ee$, \ie for every arrow
+$f:\xi\to\eta$ of $\Ee$, choose a base-change functor
+$f^{\ast}:\Ff_{\eta}\to\Ff_{\xi}$. For every object $\xi$ of $\Ee$, denote
+by
+$$
+v_{\xi} : \varprojlim_{\Ee^{\circ}} \Ff \to \Ff_{\xi}
+$$
+the evaluation functor at $\xi$. For every morphism $f:\xi\to\eta$, there
+is a diagram of functors commutative up to canonical isomorphism:
+\[
+\xymatrix@C=2.25cm@R=1.25cm{
+\displaystyle\mathop{\varprojlim}_{\Ee^{\circ}} \Ff
+\ar@{-}[r]^{v_{\xi}} \ar[rd]^{v_\eta}& \Ff_{\xi} \ar[d]^{f^\ast}\\
+                                 & \Ff_\eta.
+}
+\]
+The category $\varprojlim_{\Ee^{\circ}}\Ff$ thus appears as the projective
+limit, \emph{in the sense of pseudofunctors}, of
+$\xi\mapsto\Ff_{\xi}$. Even when $\xi\mapsto\Ff_{\xi}$ is an actual
+functor (\ie even when the chosen splitting is a cleavage \cite{sga4.exp.VI.bib.5}), the
+categories $\varprojlim_{\Ee^{\circ}}\Ff$
+(\hyperref[VI.subsec6.10]{6.10}) and
+$\varprojlim_{\Ee^{\circ}}\Ff_{\xi}$ (I 2) are not equivalent in general.
+
+\section{Fibered topoi and sites}\etiquette[7]{VI.sec7}
+
+\subsection{Fibered topoi}\etiquette[7.1]{VI.subsec7.1}
+
+\begin{enonce*}{Definition 7.1.1}\etiquette[7.1.1]{VI.def7.1.1}
+Let $𝒰$ be a universe. A $𝒰$-topos fibered over a category $I$ is a category
+fibered over $I$ (\hyperref[VI.def6.1]{6.1})
+$$
+p : F \to I
+$$
+whose fibers are $𝒰$-topoi and whose inverse-image
+functors\footnote{For the fibered structure
+  (\hyperref[VI.subsubsec6.1.2]{6.1.2}).} relative to the morphisms
+$f:i\to j$ of $I$ are functors $f^{\ast}:F_j\to F_i$ that are the
+inverse-image functors of morphisms of topoi $f\bigdot:F_i\to F_j$
+\emph{(IV \hyperref[IV.subsubsec3.1.2]{3.1.2})}.
+\end{enonce*}
+
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[7.1.2]{VI.subsubsec7.1.2}
+
+Equivalently, a $𝒰$-topos fibered over a category $I$ is a fibered category
+$p:F\to I$ whose fibers are $𝒰$-topoi and whose inverse-image
+functors\pageoriginale are exact and commute with inductive limits
+(IV \hyperref[IV.cor1.6]{1.6}).
+
+
+\subsubsection{}\etiquette[7.1.3]{VI.subsubsec7.1.3}
+
+For every morphism $f:i\to j$ of $I$, choose an inverse-image functor
+$f^{\ast}:F_j\to F_i$. For every pair
+$i\xrightarrow{f}j\xrightarrow{g}k$ of composable morphisms of $I$, there is
+then a canonical isomorphism
+$c_{f,g}:f^{\ast}g^{\ast}\to(gf)^{\ast}$
+\eqhyperref[VI.eq6.1.2.1]{6.1.2.1}, and the $c_{f,g}$ have the cocycle
+property \eqhyperref[VI.eq6.1.2.2]{6.1.2.2}. In addition, for every
+$f:i\to j$, choose a right adjoint $f_{\ast}:F_i\to F_j$ to the functor
+$f^{\ast}:F_j\to F_i$. The functor $f_{\ast}:F_i\to F_j$ is defined up to
+canonical isomorphism by the property of being right adjoint to $f^{\ast}$.
+The general results on adjoint functors then give canonical isomorphisms
+\begin{equation*}
+{c'}_{g, f} : g_{\ast} f_{\ast} \to (gf)_{\ast}\tag{7.1.3.1}{\quoi}.
+\end{equation*}\etiquette[7.1.3.1]{VI.eq7.1.3.1}
+These have a cocycle property analogous to property \hyperref[VI.eq6.1.2.2]{6.2.2.2}, which we leave
+to the reader to make explicit. Applying the results of
+\hyperref[VI.subsubsec6.1.3]{6.1.3}, we then obtain a category fibered over
+$I^{\circ}$:
+\begin{equation*}
+p': F'\to I^{\circ}{\quoi}.\tag{7.1.3.2}
+\end{equation*}\etiquette[7.1.3.2]{VI.eq7.1.3.2}
+It is readily verified that the fibered category $p':F'\to I^{\circ}$ is
+independent, up to unique $I^{\circ}$-isomorphism, of the various choices
+used to construct it\footnote{\etiquette[112]{page112}The writer apologizes
+  for the nonintrinsic character of this construction.}. The fiber at every
+object $i$ of $I^{\circ}$ of the fibered category $p':F'\to I^{\circ}$ is
+canonically isomorphic to the $𝒰$-topos $F_i$ and is identified with it. The
+inverse-image functors of the fibered category $p':F'\to I^{\circ}$ are
+\emph{direct-image} functors of morphisms of topoi.
+
+\subsubsection{}\etiquette[7.1.4]{VI.subsubsec7.1.4}
+
+Let $p:F\to I$ be a fibered $𝒰$-topos. For every $f:i\to j$, choose a
+morphism of topoi (IV \hyperref[IV.subsubsec3.1.2]{3.1.2}) $f\bigdot:F_i\to F_j$ such that the
+inverse-image functor $f^{\ast}$ (under $f\bigdot$) is the inverse-image
+functor for the fibered structure (\hyperref[VI.def6.1]{6.1}). We then
+obtain cocycles $c_{f,g}$ relating these morphisms of topoi
+\eqhyperref[VI.eq7.1.3.1]{7.1.3.1} and
+\eqhyperref[VI.eq7.1.3.2]{7.1.3.2}. The collection of the morphisms
+$f.$, $f\in\text{Fl}(I)$, and the cocycles $c_{f,g}$ is called a
+\emph{bisplitting} of the fibered topos $F\to I$. Choosing a bisplitting
+makes it possible to associate with the fibered topos $F\to I$ a
+pseudofunctor $i\mapsto F_i$ from the category $I$ to the 2-category
+of\pageoriginale $𝒰$-topoi. Conversely, one can associate with it in an
+essentially unique manner (\cf \cite{sga4.exp.VI.bib.5}) a fibered $𝒰$-topos $F\to I$
+endowed with a bisplitting such that the corresponding pseudofunctor is
+canonically isomorphic to $i\mapsto F_i$. In practice, a fibered $𝒰$-topos
+$F\to I$ will most often be denoted by $(F_i)_{i\in I}$, with the implicit
+assumption that a bisplitting has been chosen. Note, however, that the
+constructions carried out on fibered topoi (such as the associated total
+topos (\hyperref[VI.subsec7.4]{7.4}) and the projective limit
+(\hyperref[VI.subsec8.1]{8.1})) depend only on the fibered topoi and not on
+any bisplittings that may have been chosen.
+
+\begin{enonce*}{Definition 7.1.5}\etiquette[7.1.5]{VI.def7.1.5}
+Let $p:F\to I$ and $q:G\to I$ be two $𝒰$-topoi fibered over $I$. A morphism
+$m$ of fibered topoi from $(F,p)$ to $(G,q)$ consists of the datum of an
+$I$-functor $m^{\ast}:G\to F$ \emph{(\hyperref[VI.subsubsec6.1.4]{6.1.4})}
+and, for every object $i$ of $I$, the datum of a right adjoint
+$m_{i\ast}:F_i\to G_i$ to the functor $m^{\ast}_i:G_i\to F_i$ obtained by
+restricting $m^{\ast}$ to the fibers at $i$. These data must moreover be
+subject to the following condition: for every object $i$ of $I$, the pair
+of adjoint functors $(m^{\ast}_i,m_{i\ast})$ is a morphism from the topos
+$F_i$ to the topos $G_i$.
+\end{enonce*}
+
+\setcounter{subsubsection}{5}
+\subsubsection{}\etiquette[7.1.6]{VI.subsubsec7.1.6}
+
+Let $m:(F,p)\to(G,q)$ be a morphism of $𝒰$-topoi fibered over $I$, and let
+$p':F'\to I^{\circ}$ and $q':G'\to I^{\circ}$ be the fibered categories
+associated by the construction of \hyperref[VI.subsubsec7.1.3]{7.1.3} with
+the fibered topoi $(F,p)$ and $(G,q)$, respectively. Choose bisplittings of
+$F$ and $G$ (\hyperref[VI.subsubsec7.1.4]{7.1.4}), denoted in both cases by
+$(f:i\to j)\mapsto f.:(f^{\ast},f_{\ast})$, from $F_i$ to $F_j$ and from
+$G_i$ to $G_j$, respectively. Since $f^{\ast}:G\to F$ is an $I$-functor,
+for every morphism $f:i\to j$ there is a morphism of functors (transition
+morphism)
+\begin{equation*}
+b_f : f^{\ast}m^{\ast}_j \to m^{\ast}_i f^{\ast}\tag{7.1.6.1}{\quoi},
+\end{equation*}\etiquette[7.1.6.1]{VI.eq7.1.6.1}
+and for every pair $i\xrightarrow{f}j\xrightarrow{g}k$ of composable
+morphisms, we have
+\begin{equation*}
+m^{\ast}_i (c_{f, g}) b^{\ast}_f f^{\ast} (b_g) = b_{gf} c_{f, g}\tag{7.1.6.2}{\quoi}.
+\end{equation*}\etiquette[7.1.6.2]{VI.eq7.1.6.2}
+Passing to adjoint functors gives morphisms
+\begin{equation*}
+b'_f : f_{\ast}m_{i \ast} \to m_{j\ast} f_{\ast}\tag{7.1.6.3}
+\end{equation*}\etiquette[7.1.6.3]{VI.eq7.1.6.3}
+that satisfy relations analogous to \eqhyperref[VI.eq7.1.6.2]{7.1.6.2}.
+Since the functors $f_{\ast}$ are\pageoriginale the inverse-image functors
+of the fibered categories $(F',p')$ and $(G',q')$
+(\hyperref[VI.subsubsec7.1.3]{7.1.3}), one can construct an
+$I^{\circ}$-functor
+\begin{equation*}
+m_{\ast} : F'\to G'\tag{7.1.6.4}{\quoi},
+\end{equation*}\etiquette[7.1.6.4]{VI.eq7.1.6.4}
+whose restrictions to the fibers are the functors $m_{i\ast}$ and whose
+transition isomorphisms are the $b'_f$. It is verified, with a little
+patience, that the functor $m_{\ast}$ so constructed does not depend on the
+choice of the morphisms of topoi $f$.\footnote{See the note at the bottom of
+  page \pagehyperref[page112]{112}.}
+
+\subsubsection{}\etiquette[7.1.7]{VI.subsubsec7.1.7}
+
+Denote by $\Homtop_I(F,G)$ the set of morphisms of fibered topoi between the
+fibered topos $(F,p)$ and the fibered topos $(G,q)$. The set
+$\Homtop_I(F,G)$ is the set of objects of a category denoted
+$\Hhomtop_I(F,G)$: if $m$ and $n$ are two morphisms of fibered topoi, a
+morphism from $m$ to $n$ is an $I$-morphism of functors from $n^{\ast}$ to
+$m^{\ast}$. By adjunction, one also obtains an $I^{\circ}$-morphism from the
+functor $m_{\ast}$ to the functor $n_{\ast}$
+(\hyperref[VI.subsubsec7.1.6]{7.1.6}). Thus, in the end, there are two
+functors
+\hypertarget{sga4.exp.VI.equation.7.1.7.1}{}\begin{align*}
+\Hhomtop_I (F, G) & \to \Hhom_I (G, F)^{\circ}\tag{7.1.7.1}\\
+\Hhomtop_I (F, G) &\to \Hhom_{I^{\circ}} (F', G')\tag{7.1.7.2}
+\end{align*}\hypertarget{sga4.exp.VI.equation.7.1.7.2}{}
+that associate with every morphism
+$(m^{\ast},(m_{i\ast})_{i\in\Ob I})$, on the one hand the functor
+$m^{\ast}\in\Hom_I(G,F)$ and, on the other hand, the functor
+$m_{\ast}\in\Hom_{I^\circ}(F',G')$ obtained by gluing the $m_{i\ast}$ as in
+(\hyperref[VI.subsubsec7.1.6]{7.1.6}). The functor $m^{\ast}:G\to F$
+\hyperlink{sga4.exp.VI.equation.7.1.7.1}{(7.1.7.1)} is called the \emph{inverse-image functor} under the morphism of
+fibered topoi $m:F\to G$; the functor $m_{\ast}:F'\to G'$ \hyperlink{sga4.exp.VI.equation.7.1.7.2}{(7.1.7.2)} is
+called the \emph{direct-image functor} under the morphism of fibered topoi
+$m:F\to G$. It follows immediately from the definitions that the functors
+$m\mapsto m^{\ast}$ and $m\mapsto m_{\ast}$ are \emph{fully faithful}, and
+that their essential images are, on the one hand, the set of $I$-functors
+from $G$ to $F$ that, fiber by fiber, are exact and commute with inductive
+limits and, on the other hand, the set of $I^0$-functors from $F'$ to $G'$
+that, fiber by fiber, are exact and commute with inductive limits and, on the
+other hand, the set of $I^0$-functors from $F'$ to $G'$ that, fiber by fiber,
+possess an exact left adjoint. This justifies the abuses of language in
+which a morphism of fibered topoi is defined by its direct image or its
+inverse image. In fact, such a morphism of fibered\pageoriginale topoi is
+then defined only up to unique isomorphism.
+
+Denote by $\Hhomtop_{\Cart/I}(F,G)$ the full subcategory of
+$\Hhomtop_I(F,G)$ generated by the morphisms $m$ such that $m_{\ast}$ (or,
+equivalently, $m^{\ast}$) is a Cartesian functor
+(\hyperref[VI.subsubsec6.1.4]{6.1.4}). Such morphisms are called
+\emph{Cartesian morphisms}. Thus there are fully faithful functors induced
+by \hyperlink{sga4.exp.VI.equation.7.1.7.1}{(7.1.7.1)} and \hyperlink{sga4.exp.VI.equation.7.1.7.2}{(7.1.7.2)}:
+\hypertarget{sga4.exp.VI.equation.7.1.7.3}{}\begin{align*}
+\Hhomtop_{\Cart/I} (F, G) & \to \Hhom_{\cart /I} (G,
+  F)^{\circ}{\quoi},\tag{7.1.7.3}\\
+\Hhomtop_{\Cart/I} (F, G) &\to \Hhom_{\cart /I^{\circ}} (F',
+  G'){\quoi}.\tag{7.1.7.4}
+\end{align*}\hypertarget{sga4.exp.VI.equation.7.1.7.4}{}
+
+\subsubsection{}\etiquette[7.1.8]{VI.subsubsec7.1.8}
+
+Let $p:F\to I$, $q:G\to I$, and $r:H\to I$ be three $𝒰$-topoi fibered over
+$I$, and let $m:F\to G$ and $n:G\to H$ be two morphisms of fibered
+$𝒰$-topoi. As in IV \hyperlink{sga4.exp.IV.subsection.3.3}{3.3}, define the composite of the two morphisms $m$ and
+$n$, denoted $nm:F\to H$, and if $𝒱$ is a universe such that $𝒰\in 𝒱$,
+define a category ($𝒱$-$𝒰$-$\Top_{/I}$) whose objects are the $𝒰$-topoi
+fibered over $I$ with fiber categories that are elements of $𝒱$, and whose
+morphisms are the morphisms of $𝒰$-topoi fibered over $I$. Moreover, as in
+IV \hyperref[IV.subsubsec3.3.2]{3.3.2}, the composition map
+$$
+\Homtop_{/I} (F, G) \times \Homtop_{/I} (G, F) \to \Homtop_{/I} (F, H)
+$$
+is the map induced on objects by a ``functor of composition of morphisms'':
+$$
+\Hhomtop_{/I} (F, G) \Hhomtop_{/I} (G, H) \to \Hhomtop_{/I} (F, H)
+$$
+and the considerations of IV \hyperlink{sga4.exp.IV.subsection.3.3}{3.3} and IV \hyperref[IV.subsec3.4]{3.4} extend without change to the
+case of fibered $U$-topoi. The reader will moreover have noticed that when
+$I$ is a one-point category (one object and one identity morphism), a
+$𝒰$-topos fibered over $I$ is ``nothing but'' a $𝒰$-topos, and a morphism
+of fibered $𝒰$-topoi is ``nothing but'' a morphism of $𝒰$-topoi; the
+preceding constructions then reduce to those of IV 3.
+
+\subsubsection{}\etiquette[7.1.9]{VI.subsubsec7.1.9}
+
+Let $p:F\to I$ be a fibered $𝒰$-topos and $\phi:J\to I$ a functor. The
+fibered category $p_J:F_J\to J$ deduced from $(F,p)$ by the base change
+$\phi:J\to I$ is a $𝒰$-topos fibered over $J$. Let $p':F'\to I^{\circ}$ and
+$(p_J)':(F_J)'\to J^{\circ}$ be the fibered categories deduced respectively
+from $(F,p)$ and $(F_J,p_J)$ by the construction of
+\hyperref[VI.subsubsec7.1.3]{7.1.3}. It is immediately verified that the
+category $((F_J)',(p_J)')$ is canonically isomorphic to the category
+$(p')_J:(F')_J\to J^{\circ}$ deduced\pageoriginale from $p':F'\to I^{\circ}$
+by the base change $\phi:J^{\circ}\to I^{\circ}$. These two categories
+fibered over $J^{\circ}$ will henceforth be identified and denoted
+$p'_j:F'_j\to J^{\circ}$. The base-change operation is functorial, and even
+2-functorial, in its argument: for every pair $p:F\to I$ and $G\to I$ of
+$𝒰$-topoi fibered over $I$, there are two commutative diagrams of categories
+and functors:
+\[\vcenter{
+\xymatrix{
+\Hhomtop_I(F,G) \ar[r] \ar[d]& \Hhom_I(G,F)^{\circ} \ar[d]\\
+\Hhomtop_J(F_J,G_J) \ar[r]& \Hhom_J(G_J,F_J)^{\circ},
+}}\leqno(7.1.9.1)
+\]\etiquette[7.1.9.1]{VI.eq7.1.9.1}
+\[\vcenter{
+\xymatrix{
+\Hhomtop_I(F,G) \ar[r] \ar[d]& \Hhom_{I^{\circ}}(F',G') \ar[d]\\
+\Hhomtop_J(F_J,G_J) \ar[r]&
+\Hhom_{J^{\circ}}(F'_{J^{\circ}},G_{J^{\circ}}),
+}}\leqno{(7.1.9.2)}
+\]\etiquette[7.1.9.2]{VI.eq7.1.9.2}
+where the vertical functors are base-change functors, and the horizontal
+functors in \eqhyperref[VI.eq7.1.9.1]{7.1.9.1} are respectively the functors
+``morphism $\mapsto$ inverse image'' \hyperlink{sga4.exp.VI.equation.7.1.7.1}{(7.1.7.1)}, while those in
+\eqhyperref[VI.eq7.1.9.2]{7.1.9.2} are the functors ``morphism $\to$ direct
+image'' \hyperlink{sga4.exp.VI.equation.7.1.7.2}{(7.1.7.2)}.
+

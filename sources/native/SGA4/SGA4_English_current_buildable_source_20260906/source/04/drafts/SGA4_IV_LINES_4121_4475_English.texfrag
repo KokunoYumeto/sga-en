@@ -1,0 +1,345 @@
+\section{Examples of fiber functors and points of topoi}\etiquette[7]{IV.sec7}\pageoriginale
+
+\subsection{The case of $\Top(X)$ for a topological space
+  $X$}\etiquette[7.1]{IV.subsec7.1}
+
+Let $x$ be a point of $X$. Regard the singleton $\{x\}$ as a
+topological space, and consider the inclusion
+$$
+i_x:\{x\}\longrightarrow X{\quoi}.
+$$
+By \hyperref[IV.subsubsec4.1.1]{4.1.1}, it defines a morphism of topoi
+(defined up to unique isomorphism)
+\begin{equation*}
+\Top(i_x):\Top(\{x\})\longrightarrow \Top(X){\quoi}.\tag{7.1.1}
+\end{equation*}\etiquette[7.1.1]{IV.eq7.1.1}
+On the other hand, one may identify $P$ with $\Top(\{x\})$
+(\hyperref[IV.subsec2.2]{2.2}), and one thereby obtains a point $p_x$ of
+$\Top(X)$:
+\begin{equation*}
+p_x:P\longrightarrow \Top(X){\quoi},\tag{7.1.2}
+\end{equation*}\etiquette[7.1.2]{IV.eq7.1.2}
+defined by $x$ up to unique isomorphism. The associated fiber functor
+is given by the familiar formula $[TF]$, which moreover follows
+immediately from \hyperrefext[I][I.prop5.1]{5.1}:
+\begin{equation*}
+p^{\ast}_x(F)=F_x=F_{p_x}=\varinjlim_{U\ni x}F(U){\quoi},\tag{7.1.3}
+\end{equation*}\etiquette[7.1.3]{IV.eq7.1.3}
+the limit being taken over the open neighborhoods $U$ of $x$ in
+$X$.
+
+Since $\Top(X)$ is known to be isomorphic to $\Top(X_{\sob})$
+(\hyperref[IV.subsubsec4.2.1]{4.2.1}), one sees more generally that every point
+of $X_{\sob}$, \ie every irreducible closed subset $Z$ of $X$,
+defines a point of $\Top(X)$, or equivalently a fiber functor on
+$\Top(X)$, which we shall still denote by $F\mapsto F_Z$. Returning to
+its definition by formula \eqhyperref[IV.eq7.1.3]{7.1.3} on $X_{\sob}$, one obtains
+\begin{equation*}
+F_Z=\varinjlim_{U\cap Z\neq \phi} F(U){\quoi},\tag{7.1.4}
+\end{equation*}\etiquette[7.1.4]{IV.eq7.1.4}
+the\pageoriginale inductive limit being taken over the open subsets
+$U$ of $X$ which meet $Z$.
+
+\setcounter{subsubsection}{4}
+\subsubsection{}\etiquette[7.1.5]{IV.subsubsec7.1.5}
+It is well known that the fiber functors $F\mapsto F_x$ $(x\in X)$
+already form a conservative family. This is especially clear from
+the interpretation of sheaves on $X$ in terms of étale spaces, since
+the fiber of $F$ at $x$ is then simply its fiber in the sense of
+spaces fibered over $X$. Note that the index set of the conservative
+family of fiber functors under consideration is $X$, and hence is
+$𝒰$-small.
+
+\subsubsection{}\etiquette[7.1.6]{IV.subsubsec7.1.6}
+By \hyperref[IV.subsubsec4.2.3]{4.2.3}, the category $\Ppoint(\Top(X))$
+is equivalent to the category associated with the set $X_{\sob}$
+ordered by the specialization relation. In other words, every fiber
+functor on $\Top(X)$ is isomorphic to a fiber functor
+$F\mapsto F_Z$, where $Z$ is a uniquely determined element of
+$X_{\sob}$, \ie a uniquely determined irreducible closed subset
+of $X$; moreover, if $Z$, $Z'\in X_{\sob}$, then the set
+$\Hom(F_Z,F_{Z'})$ is either empty or consists of a single point, the
+latter case occurring if and only if $Z$ is a specialization of $Z'$
+in $X_{\sob}$, \ie if and only if $Z\subset Z'$ as a subset of
+$X$. When $X$ itself is sober, one may replace $X_{\sob}$ by $X$
+itself in these statements.
+
+Note that the automorphism group of a fiber functor of $\Top(X)$
+(opposite to the automorphism group of the corresponding point of
+$\Top(X)$) is always the trivial group (more generally,
+\hyperref[IV.subsubsec4.2.3]{4.2.3} tells us the same thing about the
+automorphism group of every morphism of topoi associated with
+topological spaces). This is a phenomenon very special to the case
+under consideration: see the example in \hyperref[IV.subsec7.2]{7.2}, as\pageoriginale
+well as VIII 7. In the case of topoi associated with ``moduli
+problems'' (\cf for example [10]), the automorphism groups of fiber
+functors moreover have a remarkable interpretation as the
+automorphism groups of the algebraic structures (over algebraically
+closed fields) which one proposes to classify.
+
+\subsubsection{}\etiquette[7.1.7]{IV.subsubsec7.1.7}
+We have just seen how one can reconstruct a sober space $X$ (or the
+sober space $X_{\sob}$ associated with an arbitrary topological
+space), at least as a set ordered by the specialization relation,
+from the topos $\Top(X)$ (which it even suffices to know up to
+equivalence), as the set of isomorphism classes of ``points'' of
+$\Top(X)$. From what was said in \hyperref[IV.subsec2.1]{2.1}, one also
+reconstructs the topology of $X$, \ie the family of its open subsets,
+as follows: for every subobject $U$ of the terminal object $e_E$ of
+$E$, let $\Pt(U)$ be the set of $x\in X$ such that $U_x\neq\phi$
+(which moreover identifies, by \eqhyperref[IV.eq6.7.2]{6.7.2}, with the set of
+isomorphism classes of points of the induced topos $E_{/U}$). Then
+$U\mapsto \Pt(U)$ is an isomorphism of ordered sets from the set of
+subobjects of $e_E$ onto the set of open subsets of $X$.
+
+\subsubsection{}\etiquette[7.1.8]{IV.subsubsec7.1.8}
+The determination in \hyperref[IV.subsubsec7.1.6]{7.1.6} of the category of
+points of the topos $\Top(X)$ defined by a topological space $X$
+leads to the following terminology for points $p$, $p'$ of an
+arbitrary topos $E$: one says that $p$ is a \emph{specialization}
+of $p'$, or that $p'$ is a \emph{generization} of $p$, when there
+exists a morphism from $p'$ to $p$ (in the sense of the category
+$\Ppoint(E)$ of \hyperref[IV.def6.1]{6.1}). These relations are still
+transitive, but, using \hyperref[IV.subsubsec6.8.6]{6.8.6}, one easily finds
+examples in which $p$ and $p'$ are each a specialization of\pageoriginale the
+other, without $p$ and $p'$ being isomorphic (much less equal). The
+category of generizations of a point $p$ of the topos $E$, by which
+we mean the category $\Ppoint(E)_{/p}$, plays in some respects a role
+analogous to that of passing to the localization of a scheme at a
+point. This role will be made precise in
+\sisi{Chap. VI}{\hyperrefext[VI][VI.subsec8.4]{8.4}} by the construction of the topos obtained by
+localizing $E$ at the point $p$, whose category of points is
+canonically equivalent to the category of generizations of $p$.
+
+\begin{enonce*}[remark]{Exercise 7.1.9}\etiquette[7.1.9]{IV.exer7.1.9}
+Let $E$ be a $𝒰$-topos. Prove that $E$ is equivalent to a
+topos of the form $\Top(X)$, where $X$ is a topological space $\in
+𝒰$, if and only if it satisfies the following two conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The family of subobjects of the terminal object $e_E$ is
+generating for the topos $E$.
+
+\item $E$ has enough points (\hyperref[IV.prop6.5]{6.5}). (This condition is not
+superfluous: \cf \hyperref[IV.subsec7.4]{7.4}.)
+\end{enumerate}
+
+Compare with \hyperref[IV.exer7.8]{7.8} c).
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 7.1.10}\etiquette[7.1.10]{IV.exer7.1.10}
+Let $X$ be a topological space endowed with an operator group $G$
+$(X,G\in𝒰)$, and let $E=\Top(X,G)$ (\hyperref[IV.subsec2.3]{2.3}).
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Show that, for every object $(X',G)$ of $E$, the induced topos
+$E_{/(X',G)}$ is canonically equivalent to the topos $\Top(X',G)$
+(compare \hyperref[IV.subsec5.7]{5.7}).
+
+\item When $G$ acts properly and freely on $X'$ (Bourbaki,
+Gen. Top. Chap. \hyperrefext[III][III.sec4]{4}), show that the morphism of
+spaces with operators $(X',G)\rightarrow (X'/G,e)$ induces
+(\hyperref[IV.subsubsec4.1.2]{4.1.2}) an equivalence of topoi
+$$
+\Top(X',G)\longrightarrow \Top(X'/G){\quoi}.
+$$
+
+\item Deduce\pageoriginale from b) that there exists an object $Z$ of
+$E$ such that the induced topos $E_{/Z}$ is equivalent to $\Top(X)$,
+the localization functor $E\rightarrow E_{/Z}$ being isomorphic to
+the functor that ``forgets the actions of $G$''. (Imitate the
+argument of \hyperref[IV.subsubsec5.8.3]{5.8.3}.)
+
+\item Deduce from c) that every fiber functor on $E$ is induced, via
+the functor that ``forgets the actions of $G$'', by a fiber functor
+on $\Top(X)$, and can therefore be defined by a point of $X_{\sob}$.
+
+\item Determine the structure of the category $\Ppoint(E)$ (up to
+equivalence) in terms of the space with operators $(X_{\sob},G)$.
+Conclude in particular that two points of $X_{\sob}$ define
+isomorphic fiber functors on $E$ if and only if they are conjugate
+under the action of $G$.
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Exercise 7.1.11}\etiquette[7.1.11]{IV.exer7.1.11}
+Let $X\in 𝒰$ be a topological space. Prove that the
+$𝒱$-topos $\TOP(X)$ (\hyperref[IV.subsec2.5]{2.5}) has enough points.
+More precisely, for every object $X'$ of $\TOP(X)$ and every $x'\in
+X'$, define a fiber functor $F\mapsto F_{X',x'}$ on $\TOP(X)$ which
+depends only on the ``germ'' of the space $(X',x')$ over $X$, and
+prove that this family of fiber functors is conservative (and indexed
+by a $𝒱$-small index set). Show, using a suitable filtered projective
+system $(X'_i,x'_i)_{i\in I}$, with $I$ not $𝒰$-small, that one does
+not obtain in this way all the fiber functors of the $𝒱$-topos
+$\TOP(X)$. Show that the set of isomorphism classes of such fiber
+functors does not have cardinality $\in 𝒱$.
+\end{enonce*}
+
+\subsection{Points of a classifying topos
+  $B_G$}\etiquette[7.2]{IV.subsec7.2}\pageoriginale
+
+Let $E$ be a $𝒰$-topos and $G$ a group of $E$, whence a classifying
+topos $B_G$ (\hyperref[IV.subsec2.4]{2.4}). If $e$ is the unit group, the
+morphisms $e\rightarrow G\rightarrow e$ define
+(\hyperref[IV.subsec4.5]{4.5}) morphisms of topoi (taking into account that
+$B_e\approx E$)
+\begin{equation*}
+E\longrightarrow B_G \longrightarrow E{\quoi},\tag{7.2.1}
+\end{equation*}\etiquette[7.2.1]{IV.eq7.2.1}
+whose composite is isomorphic to $\id_E$; passage to the categories
+of points therefore gives functors
+\begin{equation*}
+\Ppoint(E)\longrightarrow \Ppoint(B_G)\longrightarrow
+\Ppoint(E){\quoi},\tag{7.2.2}
+\end{equation*}\etiquette[7.2.2]{IV.eq7.2.2}
+whose composite is isomorphic to the identity. Use the fact that the
+first morphism of topoi in \eqhyperref[IV.eq7.2.1]{7.2.1} identifies with a
+localization morphism relative to the object $E_G=G$ of $B_G$
+(\hyperref[IV.subsec5.8]{5.8}); by \eqhyperref[IV.eq6.7.2]{6.7.2}, it follows that the
+first functor in \eqhyperref[IV.eq7.2.2]{7.2.2} identifies with the natural
+``inclusion'' functor
+\begin{equation*}
+\Ppoint(B_G)_{/\widehat{E}_G}\longrightarrow
+\Ppoint(B_G){\quoi},\tag{7.2.3}
+\end{equation*}\etiquette[7.2.3]{IV.eq7.2.3}
+where $\widehat{E}_G$ denotes the presheaf $p'\mapsto (E_G)_{p'}$ on
+$\Ppoint(B_G)$. Since $E_G$ plainly covers the terminal object of
+$B_G$, its fibers $(E_G)_p$ are nonempty, from which it follows that
+\eqhyperref[IV.eq7.2.3]{7.2.3} is essentially surjective; this means that
+\emph{every fiber functor on $B_G$ is induced (up to isomorphism) by
+a fiber functor on $E$, via the functor that ``forgets the actions of
+$G$'' $B_G\rightarrow E$.} One concludes in particular that
+\emph{if $E$ has enough points (\resp a small conservative family of
+points),} then the same is true of $B_G$.
+
+\begin{enonce*}[remark]{Remark 7.2.4}\etiquette[7.2.4]{IV.rem7.2.4}
+One can go further and determine (up to equivalence) the structure of
+the category $C'=\Ppoint(B_G)$ in terms of the category
+$C=\Ppoint(E)$ and the presheaf of groups
+$$
+\widehat{G}:p\longmapsto G_p: C^{\circ}\longrightarrow
+(\text{Groups})
+$$
+on\pageoriginale it. Indeed, define a new category $C_1$, having the
+same objects as $C$, and such that for two objects $p$, $q$ of $C$,
+one has
+$$
+\Hom_{C_1}(p,q)=\Hom_C(p,q)\times \widehat{G}(p){\quoi},
+$$
+composition of arrows in $C_1$ being induced by that in $C$ and by
+the group law of the presheaf $\widehat{G}$. The datum of a functor
+$\varphi_1:C_1\rightarrow D$ into an arbitrary category $D$ is then
+equivalent to the datum of a functor $\varphi:C\rightarrow D$
+endowed with an action of the presheaf $\widehat{G}$ on the latter
+(\ie the datum, for every $p\in \ob C$, of an action of
+$\widehat{G}(p)$ on $\varphi(p)$, satisfying an evident functoriality
+condition as $p$ varies). Using this observation, one defines a
+canonical functor
+\begin{equation*}
+\varphi_1:C_1\longrightarrow C'{\quoi},\tag{7.2.4.1}
+\end{equation*}\etiquette[7.2.4.1]{IV.eq7.2.4.1}
+corresponding to the functor $\varphi:C\rightarrow C'$ of
+\eqhyperref[IV.eq7.2.2]{7.2.2}, which associates with every point $p$ of $E$
+the point $\varphi(p)$ induced on $B_G$, together with the natural
+actions of $\widehat{G}(p)=G_p$ on the latter, arising from the
+actions of $G_p$ on the $X_p$ as $X$ ranges over $B_G$. We leave to
+the reader the proof that \eqhyperref[IV.eq7.2.4.1]{7.2.4.1} is an equivalence
+of categories, using the structure \eqhyperref[IV.eq7.2.3]{7.2.3} of the first
+functor in \eqhyperref[IV.eq7.2.2]{7.2.2}, and noting that the natural
+inclusion functor $C\rightarrow C_1$ has an analogous structure,
+relative to the inverse image $P_1$ of the presheaf
+$P'=\widehat{E}_G$ on $C'$.
+\end{enonce*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}\etiquette[7.2.5]{IV.subsubsec7.2.5}
+One\pageoriginale concludes in particular that the \emph{isomorphism
+classes of points of $B_G$ correspond exactly to the isomorphism
+classes of points of $E$: every point of the classifying topos $B_G$
+is induced, up to a} non-unique \emph{isomorphism, by a point of
+$E$}. In particular, when $E$ is the punctual topos $P$, and hence
+$G$ is an ordinary group, the category $\Ppoint(B_G)$ is a connected
+groupoid with fundamental group $G$: every fiber functor on $B_G$ is
+isomorphic (noncanonically) to the functor $\omega$ that ``forgets
+the actions of $G$'', and the monoid of endomorphisms of the latter
+functor is the group $G$ (hence every endomorphism of $\omega$ is an
+automorphism).
+
+\begin{enonce*}[remark]{Exercise 7.2.6}\etiquette[7.2.6]{IV.exer7.2.6}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let (Tors) be the category of pairs $(\Gamma,P)\in 𝒰$,
+where $\Gamma$ is a group and $P$ is a right torsor under $\Gamma$.
+The functor $(\Gamma,P)\mapsto \Gamma$
+\begin{equation*}
+(\Tors)\longrightarrow (\Groupes)\tag{7.2.6.1}
+\end{equation*}\etiquette[7.2.6.1]{IV.eq7.2.6.1}
+is a cofibered functor. With the notation of \hyperref[IV.rem7.2.4]{7.2.4},
+consider the functor
+$$
+\widehat{G}:C^{\circ}\longrightarrow (\Groupes){\quoi},
+$$
+and let $D'$ be the cofibered category over $C^{\circ}$ obtained by
+inverse image from the cofibered category \eqhyperref[IV.eq7.2.6.1]{7.2.6.1}, and
+let $D$ be the corresponding category fibered over $C$, having the
+same fiber categories as $D'$, so that for $p\in \ob C$ one has
+$$
+D_p=\mbox{ category of right torsors under $G_p$}{\quoi}.
+$$
+Construct canonical functors
+\begin{equation*}
+D\longrightarrow C'=\Ppoint(B_G)\quav C'\longrightarrow
+D{\quoi},\tag{7.2.6.2}
+\end{equation*}\etiquette[7.2.6.2]{IV.eq7.2.6.2}
+\emph{quasi-inverse to one another.} In particular, conclude that
+the category of points of $B_G$ above a given point $p$ of $E$ is
+canonically equivalent to the category of right torsors under the
+group $G_p$.
+
+\item Let\pageoriginale $𝒢=(G_i)_{i\in I}$ be a strict
+projective system of groups of the $𝒰$-topos $E$ ($I\in
+𝒰$ a filtered preordered set), whence a classifying topos
+$B_{𝒢}$, by imitating the definition of
+\hyperref[IV.subsubsec2.7.1]{2.7.1}. Determine the category of points of
+$B_{𝒢}$ by imitating a). (NB. Replace the categories
+$(\Tors)$ and $(\Groupes)$ by the categories of projective systems
+indexed by $I$ in these categories.) Conclude that if $I$ admits a
+countable cofinal subset, then every fiber functor on $B_{𝒢}$ is
+isomorphic to a functor induced by a fiber functor on $E$ (via the
+functor that ``forgets the actions of $G$''), the latter being
+determined up to non-unique isomorphism.
+
+\item Taking $E$ to be the punctual topos, so that $𝒢$ is an
+ordinary pro-group, show that the conclusion of b) is likewise valid
+if $I$ is arbitrary but $𝒢$ is profinite (\ie the $G_i$ are
+finite): every fiber functor is isomorphic to the functor that
+``forgets the actions of $G$''.
+
+\item Still taking the case where $E$ is the punctual topos, give an
+example of a fiber functor on $B_{𝒢}$, for a suitable projective
+system $𝒢=(G_i)_{i\in I}$, which is not isomorphic to the functor
+that ``forgets the actions of $G$''.
+
+\item Regard $𝒢=(G_i)$ as a group of the topos
+$\widehat{I}$, and let $𝒯$ be a \emph{gerbe} on $I$ with
+\emph{band} $G$ [\hyperref[IV.sec3]{3}]. Show how one can
+``twist'' the classifying topos $B_G$ by means of the gerbe $T$, to
+obtain a topos $B^T_{𝒢}$, an inductive limit of subcategories
+$B^T(i)$ equivalent (noncanonically) to the classifying topoi
+$B_{G_i}$. Show that the topos $B^T_{𝒢}$ admits a fiber functor if
+and only if the gerbe $T$ is ``neutral'', by establishing an\pageoriginale
+equivalence of categories between the category of fiber functors on
+$B^T_{𝒢}$ and the category of sections of $T$ over $I$. Conclude,
+if the $G_i$ are commutative, so that gerbes on $I$ with band $𝒢$
+are classified by
+$\displaystyle{\varprojlim_I}^{(2)}G_i=H^{2}(I,𝒢)$
+(\loccit), that there is an example of a topos (not ``empty''
+(\hyperref[IV.subsec2.2]{2.2})) of the form $B^T_{𝒢}$ which has no
+points. (Take an example in which
+$\displaystyle{\varprojlim_I}^{(2)}G_i\neq 0$.)
+\end{enumerate}
+\end{enonce*}

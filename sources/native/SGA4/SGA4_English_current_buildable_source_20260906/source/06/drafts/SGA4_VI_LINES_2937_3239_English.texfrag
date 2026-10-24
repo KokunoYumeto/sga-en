@@ -1,0 +1,307 @@
+\subsection{Proof of 4.10}\etiquette[4.12]{VI.subsec4.12}
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let us spell out the condition equivalent to (i) obtained in
+  \hyperref[VI.subsubsec4.9.3]{4.9.3}, namely that the full subcategory
+  $E_0$ of $E$ is generating, \ie that for every object
+  $X = (X', X'', u : X''\to f(X'))$ of $E$, the family of all
+  morphisms
+$$
+v = (v', v'') : Y = (Y', Y'', v : Y''\to f(Y')) \to X {\quoi},
+$$
+with $Y \in \Ob E_0$, \ie with $Y'$ and $Y''$ coherent, is
+epimorphic. Since the pair of functors $(i^{\ast}, j^{\ast})$ is
+conservative, this also means that the family of corresponding
+morphisms $Y' \to X'$ is epimorphic in $E'$, and that the family of
+corresponding morphisms $Y''\to X''$ is epimorphic in $E''$. This is
+clear for the first family, as is seen by taking $Y \in \Ob E_0$
+\emph{over} $U$, \ie such that $Y'' = \varnothing_{E''}$: one obtains
+the family of all arrows in $E'$ with target $X'$ and coherent source,
+which is indeed epimorphic because $E'$ is coherent and hence the
+subcategory ${E'}_{\coh}$ is generating. It therefore remains to
+express the condition that the family $Y''\to X''$ be epimorphic for
+every given object $X$ of $E$.
+
+\item Now suppose\pageoriginale that condition (ii) is satisfied for
+  the object $X'$ under consideration. It follows that one can find
+  an epimorphic family of morphisms $Y''_{\beta} \to X''$ whose
+  composites with $u : X''\to f(X')$ each lift to a morphism
+  $Y''_{\beta} \to f({Y'_{\alpha}})$ for a suitable
+  $\alpha = \phi(\beta)$. Since $E''_{\coh}$ is a generating
+  subcategory of $E''$, we may moreover suppose the $Y''_{\beta}$
+  coherent. The commutative diagrams
+\[
+\xymatrix@C=2.25cm@R=1.25cm{
+Y''_{\beta}  \ar[r] \ar[d]& f(Y'_{\varphi(\beta)}) \ar[d]\\
+X'' \ar[r] & f(X')
+}
+\]
+then provide the required family of morphisms in $E$, giving an
+epimorphic family $Y''_{\beta} \to X''$. Thus (ii) $\Rightarrow$ (i).
+
+Conversely, suppose (i), and let us prove (ii). Apply the condition
+made explicit in a) to the object
+$$
+X = j_{\ast}(X') = (X', f(X'), \id = f(X') \xrightarrow{\sim} f(X')){\quoi}.
+$$
+Since the $Y''\to X''\simeq f(X')$ form an epimorphic family, a
+fortiori so does the family of $f(v') : f(Y') \to f(X')$. The
+conclusion follows, since the $Y'$ are coherent by hypothesis. Thus
+$$
+{\rm(i)} \Leftrightarrow {\rm(ii)}{\quoi}.
+$$
+
+\item Note\pageoriginale now that condition (iv) also means that for
+  every object $X''$ of $E''$, the pro-representable functor
+$$
+g(X'') : X'\longmapsto \Hom (X'', f(X'))
+$$
+on $E'$ is pro-represented by a pro-object whose components belong to
+${E'}_{\coh}$. Equivalently, in the category $E'_{/g(X'')}$ formed by
+pairs consisting of an object $X'$ of $E'$ and an element
+$u \in g(X'')(X') =\Hom(X'', f(X'))$, $u : X''\to f(X')$, there is a
+cofinal set of objects $(X'_{\alpha},u_{\alpha})$, with
+$u_{\alpha} : X'' \to f(X'_{\alpha})$ and
+$X'_{\alpha} \in \Ob E'_{\coh}$. Since the category
+$E'_{/g(X'')}$ is filtered, the cofinality condition simply means
+that for every object $(X',u)$, $u : X''\to f(X')$, of
+$E'_{/g(X'')}$, there is a morphism from one of the
+$(X'_{\alpha},u_{\alpha})$ to this object, \ie a morphism
+$v'_{\alpha} : X'_{\alpha} \to X'$ making the triangle
+\[\vcenter{
+\xymatrix@C=2cm@R=1.5cm{
+                      &f(X'_{\alpha}) \ar[d]^{f(v'_\alpha)}\\
+X''\ar@{-}[ru]^{u_{\alpha}} \ar[r]& f(X').
+}}\leqno{(*)}
+\]
+commutative. Thus condition (iv) is equivalent to the following:
+
+\begin{itemize}
+\item[(iv bis)] For every arrow $u : X''\to f(X')$, with
+  $X'\in \Ob E'$ and $X''\in \Ob E''_{\coh}$, there is an arrow
+  $v' : Y'\to X'$ in $E'$, with $Y'$ coherent, such that $u$ factors
+  through $f(v') : f(Y') \to f(X')$.
+
+It is clear that condition (iv bis) implies (ii), since for fixed
+$X'$ the family of $u : X''\to f(X')$ whose source is coherent is
+epimorphic. A fortiori, the same is therefore true of the family of
+all $f(v'_{\alpha})$ in the corresponding diagrams $(\ast)$. Thus
+$$
+{\rm(iv)} \Rightarrow {\rm(i)}{\quoi}.
+$$
+\end{itemize}
+
+\item Let us spell out condition (ii ter). Let $p$ be a point of
+  $E''$. By definition, $\pi(p)$ is the pro-object of $E'$ which
+  pro-represents the functor $h : X'\longmapsto f(X')_{p}$, or,
+  equivalently, the pro-object defined by the canonical functor
+  $E'_{/h} \to E'$, where $E'_{/h}$ denotes the category of pairs
+  $(X',u)$ with $X'\in \Ob E'$ and $u\in h(X')$, \ie
+  $u\in f(X')_p$. To say that this pro-object is isomorphic to a
+  pro-object coming from $\Pro(E'_{\coh})$ means that the subcategory
+  of $E'_{/h}$ formed by the $(X',u)$ with
+  $X'\in\Ob E'_{\coh}$ is cofinal. In other words, for every object
+  $(X',u)$, $u\in f(X')_p$, of $E'_{/h}$, there is an object
+  $(X'_0,u_0)$ mapping to it, with $X'_0$ coherent; that is, there is
+  a morphism $X'_0\to X'$ ($X'_0$ coherent) such that
+  $u\in\text{Im}(f(X'_0)\to f(X'))$. To say that this holds for every
+  point $p$ means that, for every object $X'$ of $E'$, the family of
+  maps $f(X'_0)\to f(X')$, with $X'_0$ coherent, is surjective on
+  every stalk. As we shall see in the appendix (10) that a coherent
+  topos $E''$ has enough points, the resulting condition also says
+  that, for every $X'\in\Ob E'$, the family
+  $f(X'_0)\to f(X')$ is epimorphic. This is precisely condition (ii),
+  and hence
+$$
+{\rm(ii)} \Leftrightarrow \text{(ii ter)}{\quoi}.
+$$
+
+\item The\pageoriginale condition that $f$ commute with filtered
+  inductive limits (condition (iii)) is equivalent, since the family
+  of fiber functors of $E''$ is conservative, to the condition that
+  the composite functors $h : X'\longmapsto f(X')_p$ do so. Let us
+  prove that this means that the pro-object $\pi(p)$ which
+  pro-represents this functor lies in the essential image of
+  $\Pro(E'_{PF})$. This will prove the implications
+$$
+{\rm(iii)} \Leftrightarrow \text{(iii ter)} \Leftarrow \text{(ii ter)}
+\Rightarrow \text{(iii bis)}{\quoi}.
+$$
+We are therefore led to prove the following lemma.
+
+\begin{enonce*}{Lemma 4.12.1}\etiquette[4.12.1]{VI.lem4.12.1}
+Let $E'$ be a topos in which the subcategory $E'_{\coh}$ is
+generating, and let $X' \in \Ob \Pro(E')$. Then $X'$ belongs to the
+essential image of $\Pro(E'_{PF})$ if and only if the functor
+$h : E'\to (\Ens)$ which it pro-represents commutes with filtered
+inductive limits.
+\end{enonce*}
+
+Since a filtered inductive limit of functors commuting with filtered
+inductive limits has the same property, sufficiency follows from the
+definition of $E'_{PF}$. For necessity, we must prove that if the
+functor $h$ commutes with filtered inductive limits, then in the
+filtered category $E'_{/h}$ of pairs $(X',u)$ with $u\in h(X')$, the
+subcategory formed by the pairs $(X',u)$ with
+$X'\in\Ob E'_{PF}$ is cofinal. That is, for every $(X',u)$ in
+$E'_{/h}$, there is a morphism $X'_0\to X'$, with
+$X'_0\in\Ob E'_{PF}$, such that
+$u\in\text{Im}(h(X'_0)\to h(X'))$.\pageoriginale But $X'$ is known to
+be a filtered inductive limit of objects $X'_i$ of $E'_{PF}$
+(\hyperref[VI.cor1.24.2]{1.24.2} a)), so $h(X')$ is the filtered
+inductive limit of the $h(X'_i)$, which proves the assertion.
+
+\item It remains only to prove the implications
+$$
+\text{(ii bis)} \Rightarrow \text{(ii)\quad and\quad (iii)}
+\Leftrightarrow \text{(iii bis)}{\quoi}.
+$$
+The first implication follows trivially from the fact that every
+object $X'$ of $E'$ is a filtered inductive limit of objects $X'_i$
+of $E'_{PF}$. For the second, it is enough to note that the family of
+functors
+$$
+Y'' \longmapsto \Hom(X'', Y'') {\quoi},
+$$
+for $X''\in\Ob {E''}_{\coh}$, is conservative and consists of
+functors commuting with filtered inductive limits
+(\hyperref[VI.thm1.23]{1.23} (ii)). Consequently, the functor
+$f : E'\to E''$ commutes with filtered inductive limits if and only
+if the composite functors
+$X'\longmapsto \Hom(X'',f(X'))=
+\Hom_{\Pro(E')}(g_0(X''),X')$ do so. By
+\hyperref[VI.lem4.12.1]{4.12.1}, this is equivalent to the fact that
+the $g_0(X'')$ lie in the essential image of $\Pro(E'_{PF})$. \cqfd
+\end{enumerate}
+
+\begin{enonce*}[remark]{Remark 4.13}\etiquette[4.13]{VI.rem4.13}
+It is useful to state in sheaf-theoretic language the meaning of
+condition \hyperref[VI.prop4.10]{4.10} (iv). Consider the commutative
+diagram of functors
+\[\vcenter{
+\xymatrix@C=2.5cm@R=1.5cm{
+\Pro(E'_{\coh})^{\circ}  \ar@{^{(}->}[r]^{\alpha}  \ar[d]^{\beta_0}&
+\Pro(E')^{\circ}_{\beta} \ar[d]^{\beta}\\
+\text{$\Ev{\coh}$} & \text{$\Ev{}$}\ar[l]^{\gamma} ,
+}}\leqno{(4.13.1)}
+\]\etiquette[4.13.1]{VI.eq4.13.1}
+where\pageoriginale the superscript circles denote opposite
+categories, and the second horizontal arrow $\gamma$ is restriction
+of functors, all the other arrows denoting the familiar fully
+faithful functors. Note that the inclusion arrow $\alpha$ \emph{does
+not in general commute with projective limits}, even finite ones.
+Thus, in general, a sheaf $F$ on a site $C$ (such as $E''$) defines a
+presheaf $\alpha\circ F$ on the same site, with values in
+$\Pro(E'')^{0}$, which need not be a sheaf. Nevertheless, if a
+\emph{presheaf} $F$ on $C$ with values in
+$\Pro(E'_{\coh})^{0}$ is such that the corresponding presheaf
+$\alpha F$ with values in $\Pro(E')^{0}$ is a sheaf, then $F$ itself
+is a sheaf. Indeed, the sheaf condition is a left-exactness property
+(II \hyperlink{sga4.exp.II.remark.6.2.item.1}{6.2.1})), and the functors $\beta$, $\beta_0$, and $\gamma$ commute
+with small projective limits.
+\end{enonce*}
+
+On the other hand, the characterization in
+\hyperref[VI.subsubsec4.9.10]{4.9.10} of sheaves on $E''_{\coh}$ with
+values in an arbitrary category $P$ shows that, for every functor
+$\alpha:P\to Q$ such that $\alpha^{0}:P^0\to Q^0$ commutes with
+\emph{finite coproducts} and with \pageoriginale
+\emph{passage to quotients by equivalence relations}, the functor
+$g\mapsto\alpha\circ g$ from $\Hom({E''}^0_{\coh},P)$ to
+$\Hom({E''}^0_{\coh},Q)$ takes sheaves to sheaves. We also know that
+in $\Pro(E'_{\coh})$ and in $\Pro(E')$, finite coproducts and
+quotients by equivalence relations are representable, and that the
+inclusion $E'_{\coh}\to E'$ commutes with them
+(\hyperref[VI.cor1.15]{1.15} and
+\hyperref[VI.cor1.17.1]{1.17.1}). The same is therefore true for the
+categories $\Pro(E'_{\coh})$ and $\Pro(E')$ and for the inclusion
+between them (I \hyperref[I.prop8.9.5]{8.9.5} b) and \hyperref[I.prop8.9.7]{8.9.7}), which is precisely $\alpha^0$,
+where $\alpha$ is the functor occurring in
+\eqhyperref[VI.eq4.13.1]{4.13.1}. It follows that if
+\begin{equation*}
+\varphi:{E''}^0_{\coh}\to\Pro(E'_{\coh})^0\tag{4.13.2}
+\end{equation*}\etiquette[4.13.2]{VI.eq4.13.2}
+is a functor, then $\varphi$ \emph{is a sheaf on $E''_{\coh}$ with
+values in $\Pro(E'_{\coh})^0$ if and only if $\alpha\circ\varphi$ is
+a sheaf on $E''_{\coh}$ with values in $\Pro(E')^0$}. Thus the
+category of gluing functors $f:E'\to E''$ satisfying condition
+\hyperref[VI.prop4.10]{4.10} (iv) is canonically equivalent to the
+category of sheaves $\varphi$ on $E''_{\coh}$ with values in
+$\Pro(E'_{\coh})^0$. Taking \hyperref[VI.prop4.10]{4.10} into account,
+we conclude that such a sheaf $\varphi$ canonically defines a gluing
+functor (up to unique isomorphism), and that the topos $E$ obtained
+from the latter is \emph{coherent}. Moreover
+(\hyperref[VI.cor4.11]{4.11}), \emph{if $E'$ is perfect}, one thereby
+obtains \emph{all} coherent topoi that can be obtained from $E'$ and
+$E''$ by gluing.
+
+Note\pageoriginale also that $E'_{\coh}$ is equivalent to a small
+category and is stable under finite projective limits. Consequently
+(I \hyperref[I.sec8.10.14]{8.10.14}), by the fully faithful functor $\beta_0$ of
+\eqhyperref[VI.eq4.13.1]{4.13.1}, $\Pro(E'_{\coh})^0$ is equivalent
+to the full subcategory of
+$\widehat{E'_{\coh}}=\Hom(E'_{\coh},(\Ens))$ formed by the left exact
+functors. Thus the data of a sheaf
+\eqhyperref[VI.eq4.13.2]{4.13.2} are equivalent to those of a functor
+\begin{equation*}
+F:{E''}_{\coh}^0\times E'_{\coh}\to(\Ens)\tag{4.13.3}
+\end{equation*}\etiquette[4.13.3]{VI.eq4.13.3}
+which is a sheaf in the first argument and left exact in the second;
+or, equivalently, to those of a functor
+\begin{equation*}
+f_0:E'_{\coh}\to E''\tag{4.13.4}
+\end{equation*}\etiquette[4.13.4]{VI.eq4.13.4}
+which is left exact. If $f$ is the gluing functor satisfying condition
+\hyperref[VI.prop4.10]{4.10} (iv) associated with $\varphi$, one
+immediately verifies that $f_0$ is canonically isomorphic to the
+restriction of $f:E'\to E''$. Thus \emph{under the conditions being
+considered, $f_0$ determines $f$} (up to canonical isomorphism). To
+summarize the content of \hyperref[VI.cor4.11]{4.11}, we finally state:
+
+\begin{enonce*}{Corollary 4.14}\etiquette[4.14]{VI.cor4.14}
+When $E'$ is a perfect topos, the category of gluing functors
+$f:E'\to E''$ which give a coherent topos $E$ by gluing is equivalent,
+under $f\mapsto f_0=f|E'_{\coh}$, to the category of left exact
+functors $f_0:E'_{\coh}\to E''$, or equivalently to the\pageoriginale
+category of sheaves $\varphi$ on the site $E''_{\coh}$ (or, what
+amounts to the same thing, on the topos $E''$) with values in the
+category $\Pro(E'_{\coh})^0$ \emph{(\cf
+\hyperref[VI.subsubsec4.9.10]{4.9.10})}.
+\end{enonce*}
+
+The first assertion can also be deduced from
+\hyperref[VI.prop4.10]{4.10} by observing that
+$E'\approxeq\Ind(E'_{\coh})$ (\hyperref[VI.cor1.25]{1.25}). Indeed,
+restriction gives an equivalence between the category of functors
+$f:E'\to P$ commuting with filtered inductive limits (where $P$ is a
+category in which small filtered inductive limits are representable)
+and the category of arbitrary functors $f:E'_{\coh}\to P$. It is
+immediate that, under these conditions, if finite projective limits
+are representable in $P$, then $f$ is left exact if and only if $f_0$
+is.
+
+\begin{enonce*}[remark]{Remarks 4.15}\etiquette[4.15]{VI.rem4.15}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The proof given for \hyperref[VI.prop4.10]{4.10} shows that
+  conditions equivalent to (ii ter) \resp (iii ter) are obtained by
+  replacing the category $\Ppoint(E'')$ by a subcategory which
+  defines a \emph{conservative} family of fiber functors.
+
+\item Taking for $E''$ the point topos (IV \hyperref[IV.subsec2.2]{2.2}), one sees immediately
+  that conditions (ii ter) and (iii ter) are equivalent \emph{only if}
+  $E'_{\coh}=E'_{PF}$, \ie if $E'$ is perfect. Thus the condition
+  ``$E$ is coherent'' is equivalent to the condition ``$f$ commutes
+  with filtered inductive limits'' only if $E'$ is perfect. On the
+  other hand, taking more generally for $E''$ a coherent topos of the
+  form $\widehat{C}$, one sees that \emph{in this case condition} (i)
+  \emph{is equivalent to} (iv) \emph{for every $E'$}. In fact, in the
+  general case the editor has been unable to construct an example in
+  which $E$ is coherent without condition (iv) being satisfied. This
+  is shameful!
+\end{enumerate}
+\end{enonce*}
+

@@ -1,0 +1,266 @@
+\section{Generators of the étale topos. Cohomology of an
+  $\protect\varinjlim$ of sheaves}\etiquette[3]{VII.sec3}
+
+\begin{enonce*}{Proposition 3.1}\etiquette[3.1]{VII.prop3.1}
+Let $X$ be a scheme, and let $C$ be a full subcategory of
+$X_{\text{\rm ét}}$ such that, for every affine scheme $X'$ étale
+over $X$, $C$ contains an object isomorphic to $X'$. Then $C$ is a
+``family of topological generators'' of the site $X_{\text{\rm ét}}$,
+and hence a family of generators of the topos
+$\widetilde{X_{\text{\rm ét}}}$. The restriction functor
+$\widetilde{X_{\text{\rm ét}}}\to\widetilde{C}$ is an equivalence of
+categories (where $C$ is equipped with the topology induced by that
+of $X_{\text{\rm ét}}$).
+\end{enonce*}
+
+Immediate\pageoriginale from the ``comparison lemma.''
+
+\begin{enonce*}{Corollary 3.2}\etiquette[3.2]{VII.cor3.2}
+Suppose that $X$ is quasi-separated. Call the full subcategory $C$ of
+$X_{\text{\rm ét}}$ formed by the schemes étale over $X$ that are of
+finite presentation over $X$, equipped with the topology induced by
+$X_{\text{\rm ét}}$, the restricted étale site of $X$. Then:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $C$ is stable under fiber products and is a site of finite type
+  if $X$ is quasi-compact.
+
+\item The restriction functor
+  $\widetilde{X_{\text{\rm ét}}}\to\widetilde{C}$ is an equivalence of
+  categories.
+\end{enumerate}
+\end{enonce*}
+
+Assertion (i) is immediate, and (ii) follows from
+\hyperref[VII.prop3.1]{3.1}, since $C$ satisfies the condition of
+\hyperref[VII.prop3.1]{3.1} by the quasi-separatedness of $X$. Indeed,
+this implies that, if $X'$ is quasi-compact, for example affine, then
+it is quasi-compact \emph{over} $X$ (\EGA IV 1.2.4, with
+$Z=\Spec\ZZ$), and hence is of finite presentation over $X$ if $X'$
+is locally of finite type over $X$.
+
+\begin{enonce*}{Proposition 3.3}\etiquette[3.3]{VII.prop3.3}
+Suppose that $X$ is quasi-compact and quasi-separated. Then the
+functors $H^q(X_{\text{\rm ét}},F)$ on the category of abelian sheaves
+on $X_{\text{\rm ét}}$ commute with $\varinjlim$.
+\end{enonce*}
+
+Indeed, by \hyperref[VII.cor3.2]{3.2} (ii), one may replace
+$X_{\text{ét}}$ by $C$. Since $X$ is quasi-compact, $X\in\Ob C$, and
+the conclusion follows from \hyperref[VII.cor3.2]{3.2} (i) and
+\hyperrefext[VI][VI.subsubsec6.1.2]{6.1.2} (3).
+
+\section{Comparison with other topologies}\etiquette[4]{VII.sec4}
+
+\setcounter{subsection}{-1}
+\subsection{}\etiquette[4.0]{VII.subsec4.0}
+
+First note that the examples of sheaves on $X_{\text{ét}}$ considered
+in ${\rm n^{\circ}}$~2 are in fact naturally \emph{restrictions} of
+sheaves\pageoriginale defined on $(\Sch)_{/X}$ equipped with its étale
+topology (or even with the fpqc topology). More generally, let
+$$
+u^{\ast} : X_{\text{ét}} \to (\Sch)_{/X}
+$$
+be the inclusion functor. It is continuous (III) and commutes with
+finite $\varprojlim$, and hence defines a \emph{morphism of sites}
+$$
+u : (\Sch)_{/X} \to X_{\text{ét}}{\quoi},
+$$
+whence a functor
+$$
+u_{\ast} : \widetilde{(\Sch)_{/X}} \to \widetilde{X_{\text{ét}}}
+$$
+on the associated categories of sheaves:
+$$
+u_{\ast}(F)=F\circ u{\quoi},
+$$
+and a left adjoint\footnote{Strictly speaking, since $(\Sch)_{/X}$ is
+a $\Uu$-category but \emph{not} a $\Uu$-site, one cannot invoke III
+for the existence of $u^{\ast}$. Nevertheless, one constructs
+$u^{\ast}$ easily by
+$$
+u^{\ast} (F) (X') = (p_{X'})^{\ast}_{\text{ét}} (F) (X')\quad (X'\in \Ob \Sch_{/X}){\quoi},
+$$
+where $p_{X'}$ denotes the structural morphism $X'\to X$. Moreover,
+to give meaning to \hyperref[VII.prop4.1]{4.1} (ii) and justify the
+indicated proof of \hyperref[VII.prop4.1]{4.1}, one must introduce a
+universe $\Vv$ such that $\Uu\in\Vv$, and regard the sheaves occurring
+in the formulas of \hyperref[VII.prop4.1]{4.1} (i) as sheaves with
+values in $\Vv\text{-}(\Ens)$. Alternatively, if one wishes to work
+only with $\Uu$-sites, one may replace $(\Sch)_{/X}$ by a full
+subcategory of $(\Sch)_{/X}$ stable under finite $\varprojlim$,
+containing the $C$ of \hyperref[VII.prop3.1]{3.1}, and
+$\Uu$-small.} to the latter:
+$$
+u^{\ast} : \widetilde{X_{\text{ét}}} \to \widetilde{\Sch_{/X}}.
+$$
+With this understood:
+
+\begin{enonce*}{Proposition 4.1}\etiquette[4.1]{VII.prop4.1}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The functor $u^{\ast}$ is fully faithful; hence, for every sheaf
+  $G$ on $X_{\text{\rm ét}}$, the canonical homomorphism
+  $G\to u_{\ast}u^{\ast}(G)$ is an isomorphism.
+
+\item Let $G$ (\resp $F$) be an abelian sheaf on
+  $X_{\text{\rm ét}}$ (\resp $(\Sch)_{/X}$). Then the following
+  canonical homomorphisms (defined, for example, as edge
+  homomorphisms of the corresponding Leray spectral sequences) are
+  isomorphisms:\pageoriginale
+\begin{gather*}
+H^{\ast} (X_{\text{\rm ét}}, F \circ u) \xrightarrow{\sim} H^{\ast}((\Sch)_{/X}, F)\\
+H^{\ast} (X_{\text{\rm ét}}, G) \xrightarrow{\sim} H^{\ast}((\Sch)_{/X}, u^{\ast}G){\quoi}.
+\end{gather*}
+\end{enumerate}
+
+\end{enonce*}
+
+Indeed, the functor $u$ is a comorphism, and one can apply (III).
+
+Thus (i) shows that, for the study of the cohomology of sheaves, it is
+essentially equivalent to work with the ``small'' étale site
+$X_{\text{ét}}$ or with the ``big'' étale site $(\Sch)_{/X}$.
+
+\setcounter{subsection}{1}
+\subsection{}\etiquette[4.2]{VII.subsec4.2}
+
+One should also introduce on $(\Sch)$ (and hence on the
+$(\Sch)_{/X}$) various topologies other than the étale topology, the
+most useful of which are defined in \SGA 3 IV 6.3. The coarsest among
+them is the \emph{Zariski topology} $(\Zar)$, defined by the
+pretopology whose covering families are the surjective families of
+open immersions; it is coarser than the étale topology. The finest of
+these topologies is the \emph{``faithfully flat quasi-compact''
+topology}, abbreviated (fpqc), which is the coarsest topology for
+which the covering families in the Zariski sense, as well as
+faithfully flat quasi-compact morphisms, are covering; the fpqc
+topology is finer than the étale topology. As already observed, the
+various examples of sheaves on $(\Sch)_{/X}$ considered in
+${\rm n^{\circ}}$~2 are in fact already sheaves for the fpqc topology.
+
+\subsubsection{}\etiquette[4.2.1]{VII.subsubsec4.2.1}
+
+One must bear in mind, however, that for an abelian sheaf $F$ on
+$(\Sch)_{/X}$ for the fpqc topology (or for a topology such as fppf,
+considered in \SGA 3), the cohomology groups of $F$ for the fpqc
+topology (\resp\ldots) are not always isomorphic to the cohomology
+groups for\pageoriginale the étale topology. This is so even if $X$ is the spectrum
+of a field $k$ and $F$ is representable by an algebraic group over
+$k$, even for $H^1$. In general, one can show that the étale topology
+gives the ``correct'' cohomology groups for coefficient groups that
+are \emph{étale}, or more generally \emph{smooth}, group schemes over
+$X$\footnote{\Cf A. Grothendieck, Le groupe de Brauer III, Th.~11.7,
+in ``Dix exposés sur la topologie des schémas,'' North-Holland
+Publishing Co.}, but this is no longer true for group schemes such as
+\emph{radicial} groups over $S$, for which one must replace the étale
+topology, still too coarse, by the fpqc or fppf topology.
+
+\subsubsection{}\etiquette[4.2.2]{VII.subsubsec4.2.2}
+
+As an example of the relations between cohomologies for different
+topologies, consider the Zariski and étale topologies. Denote by
+$X_{\Zar}$ the site of Zariski open subsets of $X$, so that there is a
+canonical inclusion functor
+$$
+u^{\ast} : X_{\Zar} \to X_{\text{ét}}
+$$
+which defines a morphism of sites
+$$
+f : X_{\text{ét}} \to X_{\Zar}{\quoi},
+$$
+whence corresponding direct image functors
+$$
+f_{\ast} : \widetilde{X_{\text{ét}}} \to \widetilde{X_{\Zar}}\quad
+(f_{\ast} (F) = F \circ u){\quoi},
+$$
+and inverse image functors
+$$
+f^{\ast} : \widetilde{X_{\Zar}} \to \widetilde{X_{\text{ét}}}{\quoi},
+$$
+adjoint to one another. Geometrically, the pair $(f_{\ast},f^{\ast})$
+should be interpreted as a morphism of topoi
+$$
+f : \widetilde{X_{\text{ét}}} \to \widetilde{X_{\Zar}}{\quoi}.
+$$
+One obtains a homomorphism of cohomological functors
+$$
+H^{\ast} (X_{\Zar}, f_{\ast} (F)) \to H^{\ast} (X_{\text{ét}}, F)
+$$
+and\pageoriginale a Leray spectral sequence
+$$
+H^{\ast} (X_{\text{ét}}, F) \Longleftarrow H^{p} (X_{\Zar}, R^q
+f_{\ast} (F)){\quoi},
+$$
+where $F$ is an abelian sheaf on $X_{\text{ét}}$. This spectral
+sequence summarizes the general relations between étale and Zariski
+cohomology. Of course, for coefficient sheaves $F$ such as constant
+coefficient sheaves, this spectral sequence is in general far from
+trivial, \ie in general $R^qf_{\ast}(F)\neq0$ (notably, take the case
+where $X$ is the spectrum of a field). Nevertheless:
+
+\begin{enonce*}{Proposition 4.3}\etiquette[4.3]{VII.prop4.3}
+Let $F$ be a sheaf of varying modules on the scheme $X$ (a sheaf for
+the Zariski topology), whence a sheaf $F_{\text{\rm ét}}$ on
+$X_{\text{\rm ét}}$ (\cf 2, c) and a homomorphism of cohomological
+functors
+$$
+H^{\ast} (X, F) \to H^{\ast} (X_{\text{\rm ét}}, F_{\text{\rm ét}}){\quoi}.
+$$
+When $F$ is quasi-coherent, the preceding homomorphism is an
+isomorphism.
+\end{enonce*}
+
+Indeed, the first member is precisely
+$H^{\ast}(X_{\Zar},f_{\ast}(F_{\text{ét}}))$, and with the preceding
+notation it is enough to prove that
+$$
+R^q f_{\ast} (F_{\text{ét}}) = 0\quad \mbox{for}\quad q > 0{\quoi}.
+$$
+By the method for computing the $R^qf_{\ast}$ and the fact that the
+affine open subsets form a basis for the topology of $X$, this follows
+immediately from:
+
+\begin{enonce*}{Corollary 4.4}\etiquette[4.4]{VII.cor4.4}
+If $X$ is affine, then
+$$
+H^{q} (X_{\text{\rm ét}}, F_{\text{\rm ét}}) = 0\quad \mbox{for}\quad q > 0{\quoi}.
+$$
+\end{enonce*}
+
+To see this, let $C=X_{\text{ét}}$, and let $C'$ be the full
+subcategory formed by the \emph{affine} $X'$. Then, by
+\hyperref[VII.prop3.1]{3.1},
+$$
+H^{q} (C, F_{\text{ét}}) \simeq H^{q} (C', F | C'){\quoi}.
+$$
+
+It is therefore\pageoriginale enough to prove that $F|C'$ is
+$C'$-acyclic (\hyperrefext[V][V.def4.1]{4.1}), or equivalently that it
+satisfies the condition of \hyperrefext[V][V.prop4.3]{4.3}, \ie that,
+for every $X'\in\Ob C'$ and every covering family
+$ℛ=(X'_i\to X')_i$ in $C'$, one has $H^q(ℛ,F)=0$ for $q>0$. One may
+suppose the family $(X'_i)_i$ finite and then, after replacing the
+$X'_i$ by their coproduct, that the covering family consists of a
+single covering morphism $X'_i\to X'$, \ie an (étale and) surjective
+morphism. We are thus reduced to proving that, if $f:X\to Y$ is a
+surjective étale morphism of affine schemes and $F$ a quasi-coherent
+module on $Y$, then
+\begin{equation*}
+H^q (X /Y, F) = 0\quad \mbox{for}\quad q > 0{\quoi}.\tag{$\ast$}
+\end{equation*}
+This is proved in TDTE I, B, \hyperref[VII.subsec1.1]{1.1} (in FGA,
+\cf reference [4] of IX).
+
+\begin{enonce*}[remark]{Remarks 4.5}\etiquette[4.5]{VII.rem4.5}
+In fact, by \loccit, for $(\ast)$ it is enough that $X\to Y$ be
+surjective and flat (rather than étale). The preceding proof then
+shows that one still has isomorphisms analogous to that of
+\hyperref[VII.prop4.3]{4.3}, with the étale site $X_{\text{ét}}$
+replaced by $(\Sch)_{/X}$ equipped with any of the topologies finer
+than the Zariski topology considered in \SGA 3 IV 6.3, for example
+the fpqc topology.
+\end{enonce*}

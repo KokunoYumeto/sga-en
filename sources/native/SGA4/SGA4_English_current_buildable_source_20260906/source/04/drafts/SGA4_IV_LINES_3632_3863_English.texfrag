@@ -1,0 +1,229 @@
+\begin{enonce*}{Proposition 6.5}\etiquette[6.5]{IV.prop6.5}
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $C$ be a $𝒰$-site and let $(\varphi_i)_{i\in I}$ be a
+family of fiber functors on $C$ (\hyperref[IV.subsec6.3]{6.3}). The
+family $(p_i)_{i\in I}$ of corresponding points of the topos
+$E=C^{\sim}$ is conservative if and only if every family
+$(X_j\rightarrow X)_{j\in J}$ in $C$ for which, for every $i\in I$,
+the corresponding family
+$(\varphi_i(X_j)\rightarrow\varphi_i(X))_{j\in J}$ is surjective is
+a covering family.
+
+\item Let $E$ be a $𝒰$-topos. If $E$ has enough points
+(\hyperref[IV.def6.4.1]{6.4.1}), then $E$ admits a $𝒰$-small
+conservative family of points.
+\end{enumerate}
+\end{enonce*}
+
+
+
+Assertion b) is a special case of \hyperrefext[I][I.prop7.7]{7.7}.
+To prove a), apply \hyperrefext[I][I.prop7.7]{7.7} to the generating
+family in $E$ formed by the $\epsilon(X)$, $X\in\ob C$. Recall
+(\hyperrefext[II][II.theo4.4]{4.4}) that the family
+$X_j\rightarrow X$ is covering if and only if the family
+$\epsilon(X_j)\rightarrow\epsilon(X)$ is epimorphic. If the family of
+points $(p_i)_{i\in I}$ is conservative, this amounts
+(\hyperref[IV.subsubsec6.4.3]{6.4.3}) to saying that, for every
+$i\in I$, the family $(X_j)_{p_i}\rightarrow(X)_{p_i}$ is
+surjective, \ie that the family
+$\varphi_i(X_j)\rightarrow\varphi_i(X)$ is surjective. This proves
+the ``only if'' part of a). For the ``if'' part, apply the criterion
+\hyperrefext[I][I.prop7.7]{7.7}, which reduces us to verifying that
+every monomorphism $F\rightarrow\epsilon(X)$\pageoriginale for which
+$F_{p_i}\rightarrow\epsilon(X)_{p_i}$ is an isomorphism for every
+$i\in I$ is an isomorphism, or equivalently an epimorphism. Now one
+can find a covering family of morphisms
+$\epsilon(X_j)\rightarrow F$, and, after refining further, one may
+suppose that the morphisms
+$\epsilon(X_j)\rightarrow\epsilon(X)$ are induced by morphisms
+$X_j\rightarrow X$. By hypothesis, for every $i\in I$, the composite
+morphisms $(X_j)_{p_i}\rightarrow F_{p_i}\rightarrow(X)_{p_i}$ form
+a surjective family (as the composite of two surjective families),
+\ie the family
+$\varphi_i(X_j)\rightarrow\varphi_i(X)$ is surjective. It follows
+from the hypothesis that the family $X_j\to X$ is covering, hence
+that the family $\epsilon(X_j)\rightarrow\epsilon(X)$ is
+epimorphic, and a fortiori that $F\rightarrow\epsilon(X)$ is an
+epimorphism.
+
+\begin{enonce*}{Corollary 6.5.1}\etiquette[6.5.1]{IV.cor6.5.1}
+Let $C$ be a category. A topology on $C$ making $C$ a $𝒰$-site with
+enough fiber functors (\ie such that the associated topos has enough
+points) is completely determined by the full subcategory $\Phi$ of
+$\Hhom(C,\Ens)$ formed by the fiber functors on $C$.
+\end{enonce*}
+
+Indeed, by \hyperref[IV.prop6.5]{6.5} a), one can then describe the
+covering families in terms of the family of fiber functors.
+
+In fact, we shall see below
+\eqhyperref[IV.subsubsec6.8.5]{6.8.5} that the
+subcategory $\Phi$ is contained in the category of pro-representable
+functors on $C$, so that
+$\Phi^{\circ}\simeq\Ppoint(C^{\sim})$ identifies, up to equivalence,
+with a full subcategory of $\Pro-C$.
+
+Compare \hyperref[IV.cor6.5.1]{6.5.1} with \textsc{Giraud}'s theorem
+\hyperrefext[II][II.theo5.5]{5.5}, which establishes a one-to-one
+correspondence between the set of topologies on $C$ and a certain set
+of full subcategories of $\Hhom(C^{\circ},\Ens)$.
+
+\begin{enonce*}[remark]{Exercise 6.5.2}\etiquette[6.5.2]{IV.exer6.5.2}
+Let\pageoriginale $C$ be a category equivalent to a category in $𝒰$,
+and let $P$ be a subcategory of $\Pro(C)$. For every $p\in P$, denote
+by $X\mapsto X_p$ the functor pro-represented by $p$. A family
+$(X_i\rightarrow X)_{i\in I}$ in $C$ is called
+$P$-\emph{covering} if, for every $p\in P$, the family
+$(X_{ip}\rightarrow X_p)_{i\in I}$ is surjective. Show that there is
+a topology $T_P$ on $C$ whose covering families are precisely the
+$P$-covering families, and that $T_P$ is the finest topology on $C$
+for which the functors $X\mapsto X_p$, $p\in P$, are fiber functors.
+Show that the topology $T_P$ makes $C$ a site with \emph{enough}
+fiber functors. Show that, for every topology $T$ on $C$, among the
+topologies $T'$ finer than $T$ which have enough fiber functors there
+is a coarsest one: it is the topology $T_P$, where $P$ is the
+strictly full subcategory of $\Pro(C)$, equivalent to
+$\Ppoint(C)$, described in
+\eqhyperref[IV.subsubsec6.8.5]{6.8.5} below.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Problem 6.5.3}\etiquette[6.5.3]{IV.prop6.5.3}
+Characterize the subcategories (strictly full, stable under
+$𝒰$-filtered projective limits, \ldots) $P$ of $\Pro(C)$ which can
+arise from a topology on $C$ as the essential image of
+$\Ppoint(C^{\sim})$ (\hyperref[IV.subsubsec6.8.5]{6.8.5}).
+\footnote[1]{\cf \hyperref[IV.exer9.1.8]{9.1.8} a) and e) for
+necessary conditions, and \hyperref[IV.exer9.1.12]{9.1.12} b) for
+necessary and sufficient conditions in the cases of $\Top(X)$, with
+$X$ a sober locally Noetherian space.}
+\end{enonce*}
+
+\setcounter{subsection}{5}
+\subsection{}\etiquette[6.6]{IV.subsec6.6}
+Let
+$$
+f:E\longrightarrow E'
+$$
+be a morphism of $𝒰$-topoi. It induces a canonical functor
+$$
+\Ppoint(f)=(p\longmapsto f\circ p):\Ppoint(E)\longrightarrow
+\Point(E'){\quoi}.
+$$
+Given two composable morphisms of topoi
+$$
+E\xrightarrow{f} E'\xrightarrow{g} E''{\quoi},
+$$
+one\pageoriginale checks immediately that
+$$
+\Ppoint(gf)=\Ppoint(g)\circ\Ppoint(f):\Ppoint(E)\longrightarrow
+\Ppoint(E')\longrightarrow \Ppoint(E''){\quoi}.
+$$
+This makes precise the functorial dependence (without any abuse of
+language for once) of $\Ppoint(E)$ on the topos $E$: if $𝒱$ is a
+universe such that $𝒰\in𝒱$, one obtains a (genuine!) functor
+$$
+\Ppoint:(𝒱\text{-}𝒰\text{-}\text{top})\longrightarrow
+(𝒱\text{-}\cat)
+$$
+from the category of $𝒰$-topoi which are elements of $𝒱$ to the
+category of categories which are elements of $𝒱$.
+
+\subsection{}\etiquette[6.7]{IV.subsec6.7}
+Let $E$ be a $𝒰$-topos. Every object $F$ of $E$ then defines a
+contravariant functor
+$$
+p\longmapsto F_p=p^{*}(F):\Ppoint(E)^{\circ}\longrightarrow
+(𝒰\text{-}\Ens){\quoi},
+$$
+and hence, for varying $F$, a canonical functor
+\begin{equation*}
+E\longrightarrow
+\Ppoint(E)^{\widehat{\phantom{,}}}=\Hhom(\Ppoint(E)^{\circ},
+(𝒰\text{-}\Ens)){\quoi},\tag{6.7.1}
+\end{equation*}\etiquette[6.7.1]{IV.eq6.7.1}
+which, by definition (\hyperref[IV.prop6.5]{6.5}), is faithful if and
+only if $E$ has enough points. (The functor
+\eqhyperref[IV.eq6.7.1]{6.7.1} bears a certain formal analogy to a
+Fourier transform\ldots)
+
+Let $X$ be an object of $E$, which therefore defines a presheaf
+$\widehat{X}$ on
+$$
+C=\Ppoint(E){\quoi}.
+$$
+We may therefore define the category
+$$
+C_{/\widehat{X}}=\Ppoint(E)_{/\widehat{X}}
+$$
+of morphisms $p\rightarrow\widehat{X}$ in the category
+$\widehat{C}$ of presheaves on $C$, \ie the category of pairs
+$(p,\xi)$ where $p$ is a point of $E$ and $\xi$ is an element of
+$\widehat{X}(p)=X_p$, the fiber of $X$ at $p$. With this understood,
+I claim that \emph{there is a canonical equivalence of categories}
+\begin{equation*}
+C'=\Ppoint(E_{/X})\xrightarrow{\approx}C_{/\widehat{X}}\quav \mbox{
+where }\quad C=\Ppoint(E){\quoi},\tag{6.7.2}
+\end{equation*}\etiquette[6.7.2]{IV.eq6.7.2}
+whose\pageoriginale composite with the inclusion functor
+$C_{/\widehat{X}}\rightarrow C$ is none other than the functor
+$$
+\Ppoint(j_X):C'=\Ppoint(E_{/X})\longrightarrow C=\Ppoint(E)
+$$
+induced functorially (\hyperref[IV.subsec6.6]{6.6}) by the
+localization morphism \eqhyperref[IV.eq5.2.1]{5.2.1}
+$$
+j_X:E_{/X}\longrightarrow E{\quoi}.
+$$
+This is simply the special case of \hyperref[IV.prop5.12]{5.12}
+obtained by taking $E'=P=(\Ens)$.
+
+\begin{enonce*}{Corollary 6.7.3}\etiquette[6.7.3]{IV.cor6.7.3}
+Let $E$ be a topos. If $E$ has enough points, then so does every
+induced topos $E_{/X}$, $X\in\ob E$. Conversely, if
+$(X_i)_{i\in I}$ is a family of objects of $E$ covering the terminal
+object and, for every $i\in I$, $E_{/X_i}$ has enough points, then
+$E$ has enough points.
+\end{enonce*}
+
+For the first assertion, let $f:X'\rightarrow X''$ be a morphism in
+$E_{/X}$ which is not an isomorphism. We prove that there exists a
+point $q$ of $E_{/X}$ such that $f_q$ is not an isomorphism. Since
+$E$ has enough points, there is a point $p$ of $E$ such that
+$f_p:X'_p\rightarrow X''_p$ is not an isomorphism. This implies that
+there exists $q\in X_p$ such that the map induced by $f_p$ on the
+fibers $X'_q$ and $X''_q$ of $X'_p$ and $X''_p$ over $X_p$ at $q$
+is not an isomorphism. But by the equivalence
+\eqhyperref[IV.eq6.7.2]{6.7.2}, $q$ may be identified with a point of
+$E_{/X}$, and the map $X'_q\rightarrow X''_q$ just considered is
+none other than the map on fibers at $q$ induced by
+$f:X'\rightarrow X''$, which proves the assertion.
+
+Conversely, suppose that the $X_i$ cover the terminal object of $E$
+and that the $E_{/X_i}$ have enough points. We prove the same for
+$E$. Let\pageoriginale $f:X'\rightarrow X''$ be a morphism in $E$
+which is not an isomorphism. There is then some $i\in I$ such that
+$f_i:X'_i\rightarrow X''_i$ is not an isomorphism, where the
+subscript $i$ denotes restriction to $X_i$. Hence there is a point
+$p_i$ of $E_{/X_i}$ such that
+$f_{ip_i}:X'_{ip_i}\rightarrow X''_{ip_i}$ is not an isomorphism.
+If $p$ denotes the image of $p_i$ in $E$ under the localization
+morphism $E_{/X_i}\rightarrow E$, this says that
+$X'_p\rightarrow X''_p$ is not an isomorphism, which proves that $E$
+has enough points.
+
+\begin{enonce*}[remark]{Remark 6.7.4}\etiquette[6.7.4]{IV.rem6.7.4}
+The preceding argument shows that if $(p_{\alpha})$ is a conservative
+family of points of $E$, then the family of points of $E_{/X}$ lying
+over one of the $p_{\alpha}$ (a family indexed by the disjoint union
+of the $X_{p_{\alpha}}$) is conservative. Likewise, if the $X_i$
+cover the terminal object of $E$ and, for every $i\in I$, $P_i$ is a
+conservative set of points of $E_{/X_i}$, then the set of points of
+$E$ which are the \emph{images} of the $p\in P_i$ under the
+localization morphisms $E_{/X_i}\rightarrow E$ (with $i\in I$ and
+$p$ varying) is conservative.
+\end{enonce*}
+
+\setcounter{subsection}{7}

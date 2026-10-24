@@ -1,0 +1,127 @@
+\begin{enonce*}{Lemma 9.21.13}\etiquette[9.21.13]{I.lem9.21.13}
+Under the preceding conditions, one can find a map
+$\varphi:I\rightarrow I$ such that $\varphi(i)\geq i$ for every
+$i\in I$, and a map $(i,f)\mapsto\lambda(i,f)$ from $I\times %%
+\mathrm{F}{}l\,B$ to $%%
+\mathrm{F}{}l\,E$, satisfying the following conditions:
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item For $i\in I$ and $(f:\alpha\rightarrow\beta)\in F\ell B$,
+$\lambda(i,f)$ is an $f$-morphism from $X(\alpha)_i$ to
+$X(\beta)_{\varphi(i)}$, making the diagram
+\[
+\xymatrix@C=3cm@R=.8cm{
+ X(\alpha)\ar[r]^{X(f)} & X(\beta)\\
+           &  X(\beta)_{\varphi(i)}\ar[u]\\
+X(\alpha)_{i} \ar[uu]\ar[ru]^{\lambda(i,f)}&
+                  \\
+\alpha \ar[r]^{f}& \beta\quad , }
+\]
+commutative, where the vertical arrows are the canonical morphisms
+deduced from \hyperlink{sga4.exp.I.equation.9.21.12}{(9.21.12)}.
+
+\item For\pageoriginale every $i\in I$, and every
+$(f:\alpha\rightarrow\beta)\in %%
+\mathrm{F}{}l\,B$, the diagram
+\[
+\xymatrix@C=3cm@R=.9cm@L=6pt{
+                      & X(\beta)_{\varphi^{2}(i)}\\
+  X(\alpha)_\varphi(i) \ar[ru]^{\lambda(\varphi(i),f)}  & X(\beta)_{\varphi(i)} \ar[u]\\
+X(\alpha)_i  \ar[ru]_{\lambda(i,f)} \ar[u]         \\
+\alpha \ar[r]^{f} & \beta\quad . }
+\]
+is commutative.
+
+\item For every pair of consecutive arrows
+$\alpha\xrightarrow{f}\beta\xrightarrow{g}\gamma$ of $B$, the
+following diagram is commutative:
+\[
+\xymatrix@C=2cm@L=6pt@R=.5cm{
+X(\alpha) \ar[r]^{X(f)}& X(\beta) \ar[r]^{X(g)}            & X(\gamma)\\
+          &                      & X(\gamma)_{\varphi^{2}(i)}\ar[u]\\
+          & X(\beta)_{\varphi(i)} \ar[uu]\ar[ru]^{\lambda(\varphi(i),g)} & X(\gamma)_{\varphi(i)}\ar[u]\\
+X(\alpha)_i \ar[uuu]\ar[ru]^{\lambda(i,f)} \ar[rru]_{\lambda(i,gf)}&
+ \\
+\alpha \ar[r]^{f}& \beta \ar[r]^{g}& \gamma\quad , }
+\]
+where the vertical arrows are those deduced from \hyperlink{sga4.exp.I.equation.9.21.12}{(9.21.12)}.
+\end{enumerate}
+\end{enonce*}
+
+One\pageoriginale should moreover note that the commutativity of the
+two upper trapezoids in c) is already contained in a), so c) in fact
+asserts the commutativity of the lower triangle of the diagram under
+consideration.
+
+Let us prove \hyperref[I.lem9.21.13]{9.21.13}. Let $i\in I$, and let
+$f:\alpha\rightarrow\beta$ be an arrow in $B$. Consider the composite
+$X(\alpha)_i\rightarrow X(\alpha)\xrightarrow{X(f)}X(\beta)\simeq
+\varinjlim_jX(\beta)_j$; it defines a morphism in $E$:
+$$
+X(\alpha)_i\rightarrow f^\ast(X(\beta))\simeq
+f^\ast(\varinjlim_jX(\beta)_j)\simeq
+\varinjlim_jf^\ast(X(\beta)_j){\quoi},
+$$
+where the last equality follows from the fact that $f^\ast$ is
+$c$-accessible \hyperlink{sga4.exp.I.equation.9.21.3}{(9.21.3 c)}%%
+ and that $I$ is large relative to $c$. By \hyperlink{sga4.exp.I.equation.9.21.4}{(9.21.4 a)}), since
+$X(\alpha)_i\in\ob C_\alpha$, the morphism under consideration
+factors through some $f^\ast(X(\beta)_j)$, where $j$ \textit{a priori}
+depends on $i$ and on $f\in %%
+\mathrm{F}{}l\,(B)$. But by \hyperlink{sga4.exp.I.equation.9.21.3}{(9.21.3 b)}), and since $I$ is large
+relative to $c$, one may choose $j$ independently of $f$, say
+$j=\varphi(i)$. Since $I$ is filtered, one may suppose
+$\varphi(i)\geq i$. One thus obtains, for $i\in I$ and
+$f\in %%
+\mathrm{F}{}l\,B$, a morphism
+$$
+X(\alpha)_i\longrightarrow f^\ast(X(\beta)_{\varphi(i)}){\quoi},
+$$
+or, equivalently, an $f$-morphism
+$$
+\lambda(i,f):X(\alpha)_i\longrightarrow
+X(\beta)_{\varphi(i)}{\quoi},
+$$
+which by construction makes the diagram
+\[\vcenter{
+\xymatrix@C=3cm{
+X(\alpha)\ar[r]^{X(f)} & X(\beta)\\
+          & X(\beta)_{\varphi(i)} \ar[u]\\
+X(\alpha)_i \ar[uu] \ar[ru]^{\lambda(i,f)}&\\
+\alpha \ar[r]^{f} & \beta \quad . }}\leqno{D(f)}
+\]
+commutative. Now\pageoriginale, for given $i,f,g$, consider the lower
+triangle of the diagram in \hyperref[I.lem9.21.13]{9.21.13} c); it is not clear that it is
+commutative, but the two composites
+$X(\alpha)_i\rightrightarrows X(\gamma)_{\varphi^2(i)}$ become equal
+after composition with
+$X(\gamma)_{\varphi^2(i)}\rightarrow X(\gamma)$, as follows from the
+commutativity of the two upper trapezoids and of the outer trapezoid,
+which are respectively the diagrams $D(f)$, $D(g)$, and $D(gf)$.
+Thus, since $X(\alpha)_i$ is $c$-accessible \hyperlink{sga4.exp.I.equation.9.21.4}{(9.21.4 a)}) and
+$X(\gamma)\simeq\varinjlim_{j\in I}X(\gamma)_j$, with $I$ large
+relative to $c$, it follows that one can find an element
+$j\geq\varphi^2(i)$ of $I$ such that the two arrows under consideration
+become equal after composition with
+$X(\gamma)_{\varphi^2(i)}\rightarrow X(\gamma)_j$. A priori, $j$
+depends on $i,f,g$. But, for fixed $i$, the set of possible pairs
+$f,g$ has cardinality $\leq c^2=c$, by \hyperlink{sga4.exp.I.equation.9.21.3}{(9.21.3 a)} and b)), and hence,
+since $I$ is large relative to $c$, one may choose $j$ independently of
+$f$ and $g$, say
+$j=\varphi'(i)\geq\varphi^2(i)\geq\varphi(i)$. For every $i\in I$
+and $f:\alpha\rightarrow\beta$, let then
+$$
+\lambda'(i,f):X(\alpha)_i\longrightarrow X(\beta)_{\varphi'(i)}
+$$
+be the composite $f$-morphism
+$X(\alpha)_i\rightarrow X(\beta)_{\varphi(i)}\rightarrow
+X(\beta)_{\varphi'(i)}$, where the second arrow is the transition
+morphism. It is then immediate from the construction that
+$(\varphi',\lambda')$ satisfies conditions \hyperref[I.lem9.21.13]{9.21.13} a) and c) for
+$(\varphi,\lambda)$. Proceeding in the same way for condition b), one
+sees that $\varphi'$ may be chosen so that this condition is also
+satisfied for $(\varphi',\lambda')$. This completes the proof of
+\hyperref[I.lem9.21.13]{(9.21.13)}.
+
+\setcounter{subsection}{21} \setcounter{subsubsection}{13}

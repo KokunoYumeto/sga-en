@@ -1,0 +1,474 @@
+
+\subsubsection*{1.3.6}
+\phantomsection
+\label{sga3:VIIB:1.3.6}
+\addcontentsline{toc}{subsubsection}{\SGARefLink{sga3:VIIB:1.3.6}{1.3.6}. Filtered flat coalgebras}
+
+In the remainder of this Expos\'e, we shall several times define a
+topologically flat formal \(k\)-variety \(X\) by exhibiting the
+coalgebra \(\mathbf H(X)\). We shall then have to interpret, by means
+of \(\mathbf H(X)\), certain geometric properties of \(X\). Here is
+one example of this situation: suppose that a section \(\sigma\) of
+the structure morphism \(X\to\operatorname{Spf}(k)\) is given, and
+ask under what condition \(\sigma\) induces an isomorphism of the
+underlying topological spaces.\footnote{\label{sga3:VIIB:nde:62}In
+\SGARefLink{sga3:VIIB:1.3.6.A}{Lemma 1.3.6.A} below, the editors supplied detailed proofs of
+parts \textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}} and \textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}} and added part \textup{\SGARefLink{sga3:VIIB:1.3.6.A:item:iii}{(iii)}}.}
+
+\textit{To begin, suppose that \(k\) is Artinian.} Let
+\((H,\Delta,\varepsilon)\) be a flat \(k\)-coalgebra, put
+\(H^+=\ker(\varepsilon)\), and let \(A=H^*\) be the profinite
+\(k\)-algebra dual to \(H\). Suppose that a morphism of
+\(k\)-coalgebras \(k\to H\) is given; that is, an element
+\(\phi\in H\) such that
+\[
+  \varepsilon(\phi)=1,
+  \qquad
+  \Delta(\phi)=\phi\otimes\phi.
+\]
+On the one hand, \(\phi\) defines a continuous algebra homomorphism
+\(\Phi:A\to k\), and hence a section
+\[
+  \sigma:\operatorname{Spf}(k)\longrightarrow\operatorname{Spf}(A)
+\]
+of the projection
+\(\operatorname{Spf}(A)\to\operatorname{Spf}(k)\).
+
+On the other hand, define \(k\)-submodules of \(H\) by setting
+\(H_0=k\phi\) and, for \(n\geq1\),
+\[
+  H_n
+  =
+  \{x\in H\mid
+    \Delta(x)-x\otimes\phi\in H_{n-1}\otimes H^+\}.
+\]
+This formula also applies when \(n=0\) if \(H_{-1}=0\). Induction on
+\(n\) shows that \(H_{n-1}\subset H_n\). We call
+\[
+  H_0\subset H_1\subset\cdots
+\]
+the \emph{filtration of \(H\) defined by \(\phi\)}.
+
+\medskip
+\noindent\textbf{Remark.}
+\phantomsection
+\label{sga3:VIIB:1.3.6.remark}
+Since
+\[
+  \Delta(H_n)
+  \subset
+  H_n\otimes H_0\oplus H_{n-1}\otimes H^+,
+\]
+we have \(\Delta(H_n)\subset H_n\otimes H\). Since \(\Delta\) is
+cocommutative---that is,
+\(\tau\circ\Delta=\Delta\), where
+\(\tau(a\otimes b)=b\otimes a\)---we likewise have
+\(\Delta(H_n)\subset H\otimes H_n\). When \(H/H_n\) is flat over
+\(k\), it follows that \(H_n\) is a subcoalgebra of \(H\)
+\textup{(see also \SGARefLink{sga3:VIIB:1.3.6.A}{1.3.6.A}\,\textup{\SGARefLink{sga3:VIIB:1.3.6.A:item:iii}{(iii)}} below)}. In general,
+however, the map
+\[
+  \Delta:H_n\longrightarrow H_n\otimes H
+\]
+does not factor through \(H_n\otimes H_n\).\footnote{
+\label{sga3:VIIB:nde:63}For example, let \(k_0\) be a field, let
+\(k=k_0[T]/(T^n)\), where \(n\geq4\), and let
+\(H=k\phi\oplus kx\), with \(\varepsilon(x)=0\) and
+\[
+  \Delta(x)
+  =
+  x\otimes\phi+\phi\otimes x+t\,x\otimes x,
+\]
+where \(t\) is the image of \(T\) in \(k\). Then
+\(H_i=k\phi\oplus t^{\,n-i}x\) for \(i=0,\ldots,n\), but for
+\(2\leq i\leq n-2\), the element
+\(\Delta(t^{\,n-i}x)\) does not belong to the image of
+\(H_i\otimes H_i\) in \(H\otimes H\).}
+
+\medskip
+\noindent\textbf{Lemma 1.3.6.A.}
+\phantomsection
+\label{sga3:VIIB:1.3.6.A}
+{\itshape Let \(k\) be an Artinian ring, let \(H\) be a flat
+\(k\)-coalgebra, and let \(A=H^*\) be its dual profinite
+\(k\)-algebra. Let \(\phi\in H\) satisfy
+\(\varepsilon(\phi)=1\) and
+\(\Delta(\phi)=\phi\otimes\phi\). Let
+\(\Phi:A\to k\) be the continuous algebra homomorphism, let
+\(\sigma:\operatorname{Spf}(k)\to\operatorname{Spf}(A)\) be the
+section of
+\(\operatorname{Spf}(A)\to\operatorname{Spf}(k)\), and let
+\((H_n)\) be the filtration of \(H\) defined by \(\phi\). Put
+\(I=\ker\Phi\).
+\begin{enumerate}
+  \item[\textup{(i)}]
+  For every \(n\geq1\), \(H_{n-1}\) is the orthogonal in \(H\) of
+  the closure \(\overline{I^n}\) of \(I^n\).
+
+  \item[\textup{(ii)}]
+  Consequently, \(\sigma\) induces a bijection of the underlying
+  sets if and only if
+  \[
+    H=\bigcup_n H_n.
+  \]
+  \footnote{\label{sga3:VIIB:nde:64}In this case the coalgebra
+  \(H\) is said to be \emph{connected}; cf.\ Addition \SGARefLink{sga3:VIIB:2.9}{2.9}.}
+
+  \item[\textup{\SGAInlineRefTarget{sga3:VIIB:1.3.6.A:item:iii}(iii)}]
+  If, in addition, every \(H/H_n\) is flat over \(k\), then for every
+  \(n\geq0\),
+  \begin{equation}
+    \Delta(H_n)
+    \subset
+    \sum_{i=0}^n H_i\otimes H_{n-i}.
+    \tag{*}
+    \label{sga3:VIIB:1.3.6.A:star}
+  \end{equation}
+  In particular, every \(H_n\) is then a subcoalgebra of \(H\).
+\end{enumerate}}
+
+\textit{Proof.}
+For every \(x\in H\), the map
+\[
+  A\longrightarrow k,\qquad f\longmapsto f(x),
+\]
+is continuous. Thus, if \(I^n\) is annihilated by \(x\), so is its
+closure \(\overline{I^n}\). For \(n\geq1\), put
+\[
+  (\overline{I^n})^\perp
+  =
+  \{x\in H\mid
+    f(x)=0\text{ for every }f\in\overline{I^n}\}.
+\]
+
+Suppose first that
+\[
+  \sigma:\mathfrak m\longmapsto\Phi^{-1}(\mathfrak m)
+\]
+is a bijection from \(\operatorname{Spf}(k)\) onto
+\(\operatorname{Spf}(A)\). Since \(I\) is contained in the
+intersection of the ideals \(\Phi^{-1}(\mathfrak m)\), it follows
+from \SGARefLink{sga3:VIIB:0.1.2}{0.1.2} that the sequence of ideals
+\((\overline{I^n})\) tends to zero. Let \(x\in H\). The submodule
+\[
+  J(x)=\{f\in A\mid f(x)=0\}
+\]
+is open and closed in \(A\); hence it contains
+\(\overline{I^n}\) for all sufficiently large \(n\). In other words,
+\(x\in(\overline{I^n})^\perp\) for all sufficiently large \(n\).
+
+Conversely, suppose that
+\[
+  H=\bigcup_n(\overline{I^n})^\perp.
+\]
+Let \(\mathfrak p\) be an open prime ideal of \(A\). By the
+definition of the topology on \(A\) \textup{(\SGARefLink{sga3:VIIB:0.2.2}{0.2.2})},
+\(\mathfrak p\) contains an open \(k\)-submodule of the form
+\[
+  \mathscr V(x_1,\ldots,x_s)
+  =
+  \{f\in A\mid f(x_1)=\cdots=f(x_s)=0\}.
+\]
+By hypothesis, there is an integer \(n\) such that
+\[
+  x_1,\ldots,x_s\in(\overline{I^n})^\perp;
+\]
+therefore \(\overline{I^n}\subset\mathfrak p\). Moreover, since
+\(k\) is Artinian,
+\[
+  \operatorname{Spf}(k)=\{\mathfrak m_1,\ldots,\mathfrak m_r\}
+\]
+is finite, and there is an integer \(t\geq1\) such that
+\[
+  \left(\prod_i\mathfrak m_i\right)^t=0.
+\]
+It follows that
+\[
+  \prod_i\Phi^{-1}(\mathfrak m_i)^t\subset I.
+\]
+Thus \(\mathfrak p\) contains the product of the ideals
+\(\Phi^{-1}(\mathfrak m_i)^{tn}\). Since \(\mathfrak p\) is prime,
+it contains, and hence equals, one of the
+\(\Phi^{-1}(\mathfrak m_i)\). We have therefore proved that
+\footnotemark
+\begin{equation}
+  \sigma\text{ is a bijection}
+  \quad\Longleftrightarrow\quad
+  H=\bigcup_n(\overline{I^n})^\perp.
+  \tag{65}
+  \label{sga3:VIIB:1.3.6:eq65}
+\end{equation}
+\footnotetext{\label{sga3:VIIB:nde:65}This remains valid without
+assuming that \(H\) is cocommutative, with \(k\) still a commutative
+Artinian ring. In that case a basis of neighborhoods of zero in
+\(A=H^*\) is given by the two-sided ideals \(J\) such that \(A/J\)
+has finite length over \(k\), and the preceding proof shows that
+\(H=\bigcup_n(\overline{I^n})^\perp\) if and only if the
+\(\Phi^{-1}(\mathfrak m_i)\) are the only open prime ideals of
+\(A\).}
+
+We also have \(H=k\phi\oplus H^+\); let
+\(\pi:H\to H^+\) be the projection with kernel \(k\phi\). For
+\(n\geq0\), let
+\[
+  \Delta^n:H\longrightarrow H^{\otimes(n+1)}
+\]
+be the iterated comultiplication, let
+\(\overline{\Delta}^{\,n}\) be the composite of \(\Delta^n\) with
+the projection
+\[
+  \pi^{\otimes(n+1)}:
+  H^{\otimes(n+1)}
+  \longrightarrow
+  (H^+)^{\otimes(n+1)},
+\]
+and put
+\[
+  H_n'
+  =
+  \ker(\overline{\Delta}^{\,n})
+  =
+  \left\{
+    x\in H\ \middle|\
+    \Delta^n(x)\in
+    \sum_{i=0}^n
+      H^{\otimes(n-i)}\otimes H_0\otimes H^{\otimes i}
+  \right\}.
+\]
+We set \(\overline{\Delta}^{\,0}=\operatorname{id}_H\), so that
+\(H_0'=H_0\). A straightforward induction on \(n\) gives
+\begin{equation}
+  H_n
+  \subset
+  H_n'
+  \subset
+  (\overline{I^{n+1}})^\perp.
+  \tag{*}
+  \label{sga3:VIIB:1.3.6.A:star-prime}
+\end{equation}
+
+Up to this point we have not used the hypothesis that \(H\) is flat
+over \(k\). Assume now that \(H\) is flat, and hence projective, over
+\(k\). Then \(A^\dagger=H\) by \SGARefLink{sga3:VIIB:0.2.2}{0.2.2}. We shall prove that
+\[
+  H_n=(\overline{I^{n+1}})^\perp.
+\]
+This is clear for \(n=0\). Suppose it has been proved for \(n<r\).
+Then \(H_{r-1}\) is the kernel of the homomorphism
+\[
+  H\longrightarrow(\overline{I^r})^\dagger.
+\]
+Since \(H^+\) is flat, the homomorphism
+\[
+  (H/H_{r-1})\otimes H^+
+  \longrightarrow
+  (\overline{I^r})^\dagger\otimes H^+
+\]
+is injective. On the other hand, the hypothesis implies that \(I\)
+is a projective pseudocompact \(k\)-module, since it is a direct
+factor of \(A=H^*\). Thus, by \SGARefLink{sga3:VIIB:0.3.6}{0.3.6},
+\[
+  \bigl(\overline{I^r}\widehat{\otimes}I\bigr)^\dagger
+  \simeq
+  (\overline{I^r})^\dagger\otimes I^\dagger
+  =
+  (\overline{I^r})^\dagger\otimes H^+.
+\]
+The exact sequence
+\[
+  \overline{I^r}\widehat{\otimes}I
+  \longrightarrow A
+  \longrightarrow A/\overline{I^{r+1}}
+  \longrightarrow0
+\]
+therefore gives, by duality, the exact sequence
+\begin{equation}
+  (\overline{I^r})^\dagger\otimes H^+
+  \xleftarrow{\ \delta\ }
+  H
+  \longleftarrow
+  (A/\overline{I^{r+1}})^\dagger
+  \longleftarrow0,
+  \tag{1}
+  \label{sga3:VIIB:1.3.6.A:eq1}
+\end{equation}
+where \(\delta\) is obtained by composing \(\Delta_H\) with the
+projection
+\begin{equation}
+  H\otimes H
+  \longrightarrow
+  H\otimes H^+
+  \longrightarrow
+  (H/H_{r-1})\otimes H^+
+  \lhook\joinrel\longrightarrow
+  (\overline{I^r})^\dagger\otimes H^+.
+  \tag{2}
+  \label{sga3:VIIB:1.3.6.A:eq2}
+\end{equation}
+For every \(u\in H\), the projection of \(\Delta(u)\) onto
+\(H\otimes H^+\) is \(\Delta(u)-u\otimes\phi\). Equations
+\textup{\SGARefLink{sga3:VIIB:1.3.6.A:eq1}{(1)}} and \textup{\SGARefLink{sga3:VIIB:1.3.6.A:eq2}{(2)}} show that if
+\[
+  u\in
+  (A/\overline{I^{r+1}})^\dagger
+  =
+  (\overline{I^{r+1}})^\perp,
+\]
+then \(\Delta(u)-u\otimes\phi\) belongs to the kernel of
+\[
+  H\otimes H^+
+  \longrightarrow
+  (H/H_{r-1})\otimes H^+,
+\]
+namely \(H_{r-1}\otimes H^+\). Thus \(u\in H_r\). This completes the
+proof of \textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}} and \textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}}, and also proves that
+\[
+  H_n=\ker(\overline{\Delta}^{\,n}).
+\]
+
+We now prove \textup{\SGARefLink{sga3:VIIB:1.3.6.A:item:iii}{(iii)}}. For \(i\geq0\), put
+\[
+  H_i^+=H_i\cap H^+.
+\]
+Let \(n\geq1\). For every \(x\in H_n\), the element
+\(\overline x=x-\varepsilon(x)\phi\) belongs to \(H_n^+\), and
+\[
+  \Delta(x)
+  =
+  \varepsilon(x)\phi\otimes\phi
+  +\overline x\otimes\phi
+  +\phi\otimes\overline x
+  +\overline{\Delta}(\overline x).
+\]
+It is therefore enough to prove that
+\[
+  \overline{\Delta}(H_n^+)
+  \subset
+  \sum_{i=1}^{n-1}H_i^+\otimes H_{n-i}^+.
+\]
+For \(i=0,\ldots,n-1\), the map
+\(\overline{\Delta}^{\,n}\) factors as follows:
+\begin{center}
+  \phantomsection
+  \label{sga3:VIIB:1.3.6.A:iterated-reduced-comultiplication}
+  \input{native_diagrams/exp7/viib_15_95/diag_089}
+\end{center}
+Moreover, since \(H^+/H_i^+\) and
+\((H^+)^{\otimes(n-i)}\) are flat, the maps \(f\) and \(g\) in this
+diagram are injective. It follows that
+\[
+  \overline{\Delta}(H_n^+)
+  \subset
+  H_i^+\otimes H^+
+  +
+  H^+\otimes H_{n-i-1}^+
+\]
+for every \(i=0,\ldots,n-1\). Part \textup{\SGARefLink{sga3:VIIB:1.3.6.A:item:iii}{(iii)}} now follows from
+the next lemma, applied with \(M=H^+\), \(E_0=0\), and
+\(E_i=H_{i-1}^+\) for \(i\geq1\).
+
+\medskip
+\noindent\textbf{Lemma 1.3.6.B.}
+\phantomsection
+\label{sga3:VIIB:1.3.6.B}
+{\itshape Let \(k\) be a ring, and let
+\[
+  0=E_0\subset E_1\subset\cdots\subset E_n\subset M
+\]
+be \(k\)-modules. Suppose that \(M/E_i\) is flat for every \(i\).
+Then
+\footnote{The French source prints \(M\otimes E_i\), rather than
+\(M\otimes E_{n-i}\), in the second summand on the left. The proof
+immediately below, in particular its use of \(M/E_{n-i+1}\), requires
+the latter indexing, which is used here.}
+\[
+  \bigcap_{i=0}^n
+    \bigl(E_i\otimes M+M\otimes E_{n-i}\bigr)
+  =
+  \sum_{i=1}^n E_i\otimes E_{n-i+1}.
+\]}
+
+\textit{Proof.}
+Denote the left-hand and right-hand sides by \(K\) and \(S\),
+respectively. Clearly \(S\subset K\); we prove the reverse inclusion.
+For \(i=0,\ldots,n\), put
+\[
+  K_i=K\cap(E_i\otimes M).
+\]
+For \(i=1,\ldots,n\), both \(M/E_{n-i+1}\) and
+\(E_i/E_{i-1}\) are flat. Consequently, the homomorphism
+\(\tau_i\) below is injective, and the composite
+\[
+  (E_i/E_{i-1})\otimes M
+  \longrightarrow
+  (E_i/E_{i-1})\otimes(M/E_{n-i+1})
+  \xhookrightarrow{\ \tau_i\ }
+  (M/E_{i-1})\otimes(M/E_{n-i+1})
+\]
+has kernel
+\[
+  (E_i/E_{i-1})\otimes E_{n-i+1}.
+\]
+The image of \(K_i\) in
+\((E_i\otimes M)/(E_{i-1}\otimes M)\) is both contained in and
+contains this kernel. Hence
+\[
+  K_i=K_{i-1}+E_i\otimes E_{n-i+1},
+\]
+which proves the lemma.
+
+To conclude this paragraph, return to an arbitrary pseudocompact ring
+\(k\).\footnote{\label{sga3:VIIB:nde:66}The editors added what
+follows; the original treated only the case in which \(k\) is
+Artinian.} Let
+\((\mathbf H,\Delta,\varepsilon)\) be a flat
+\(\mathbf O_k\)-coalgebra, put
+\(\mathbf H^+=\ker(\varepsilon)\), and let
+\[
+  A=\Gamma^*(\mathbf H)
+\]
+be the dual profinite \(k\)-algebra. Put
+\(X=\operatorname{Spf}(A)\), so that
+\(\mathbf H=\mathbf H(X)\) \textup{(cf.\ \SGARefLink{sga3:VIIB:1.3.5}{1.3.5})}. Suppose that a
+morphism of \(\mathbf O_k\)-coalgebras
+\[
+  \phi:\mathbf O_k\longrightarrow\mathbf H
+\]
+is given. It defines a continuous homomorphism of \(k\)-algebras
+\(A\to k\), and hence a section \(\sigma\) of the structure morphism
+\(X\to\operatorname{Spf}(k)\).
+
+For every object \(B\) of \(\operatorname{Alf}/k\), put
+\[
+  \mathbf H_0(B)=\phi(B)=B\phi_B,
+  \qquad
+  \phi_B=\phi(1_B)\in\mathbf H(B).
+\]
+For \(n\geq1\), define \(\mathbf O_k\)-submodules
+\(\mathbf H_n\) of \(\mathbf H\) by
+\[
+  \mathbf H_n(B)
+  =
+  \left\{
+    u\in\mathbf H(B)\ \middle|\
+    \Delta(u)-u\otimes\phi_B
+    \in
+    \mathbf H_{n-1}(B)\otimes\mathbf H^+(B)
+  \right\}.
+\]
+This gives a filtration
+\[
+  \mathbf H_0\subset\mathbf H_1\subset\cdots
+\]
+of \(\mathbf H(X)\). The preceding result gives:
+
+\medskip
+\noindent\textbf{Proposition.}
+\phantomsection
+\label{sga3:VIIB:1.3.6.proposition}
+{\itshape The section \(\sigma\) induces an isomorphism of the
+underlying topological spaces if and only if
+\[
+  \mathbf H(X)=\bigcup_n\mathbf H_n.
+\]}
+

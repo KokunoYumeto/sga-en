@@ -1,0 +1,342 @@
+\setcounter{pageoriginal}{164}
+
+\setcounter{section}{-1}
+\section{Introduction}\etiquette[0]{VI.sec0}
+
+In\pageoriginale the present exposé, we study two closely related
+types of questions.
+
+First, we undertake a systematic study of finiteness conditions for
+topoi, successively examining the notions of \emph{quasi-compactness},
+\emph{quasi-separatedness}, and \emph{coherence}
+(= quasi-compactness $+$ quasi-separatedness). These are inspired by
+the familiar analogous notions from scheme theory. We study them
+first for an object $X$ of a topos and for an arrow $u : X \to Y$ of
+a topos (\hyperref[VI.sec1]{\S 1}), then for the topos $E$ itself (\hyperref[VI.sec2]{\S 2}), and finally for
+a morphism of topoi $f : E \to E'$ (\hyperref[VI.sec3]{\S 3}). \hyperref[VI.sec4]{Section 4} studies these
+notions in the special case of a topos obtained by gluing two topoi
+(IV 9). For the subsequent sections, the essential facts to retain
+from these somewhat technical developments are the following: a
+\emph{coherent topos} is a topos equivalent to one of the form
+$C^{\sim}$, where $C$ is a small site in which finite projective
+limits are representable and every covering family admits a finite
+covering subfamily; and a \emph{coherent morphism}
+$f : E \to E'$ of coherent topoi is a morphism that can be described
+(up to equivalence) as the morphism associated with a morphism of
+sites $f : C \to C'$, where $C$ and $C'$ are as above and the
+corresponding functor $f^{\ast} : C'\to C$ is left exact.
+
+It is no doubt useful to note that, with the finiteness notions used
+here, and especially that of a coherent topos, we resolutely depart
+(and for the first time) from the topological spaces familiar to
+analysts and ``topologists''\footnote{The quotation marks indicate
+that this is a ``\ldots'' unfamiliar with the notion of a topos
+(\cf IV \hyperref[IV.subsec0.4]{0.4} for the meaning of the word ``topology'').}. Thus the
+topos associated (IV \hyperref[IV.subsec2.1]{2.1}) with a separated topological space $X$ is
+coherent only if $X$ is a finite set! In other words, the present
+exposé is directed entirely toward the types of topoi arising from
+algebraic geometry and algebra. In fact, all the topoi used thus far
+in these disciplines (except, of course, in algebraic geometry by
+transcendental methods over the field of complex numbers!) turn out
+to be locally coherent.
+
+Second, we develop two \emph{theorems on passage to the inductive
+limit} for the cohomology of topoi. One
+(\hyperref[VI.cor5.2]{5.2}) tells us that the functors
+$H^{i}(E, -)$\pageoriginale on a coherent topos commute with
+inductive limits of abelian sheaves. The other
+(\hyperref[VI.subsec8.7]{8.7}) says essentially that if a topos $X$
+is represented as a filtered projective limit of coherent topoi
+$X_i$, with coherent transition morphisms
+$f_{ij} : X_j \to X_i$, then the cohomology of $X$ (with coefficients
+in an arbitrary abelian sheaf) is computed as the inductive limit of
+the cohomologies of the $X_i$. To give this statement a precise
+meaning, the main point is to specify the notion of a ``projective
+limit of topoi,'' which is done in \S\hyperref[VI.sec7]{\S 7}, 8. This is a very useful
+geometric notion, undoubtedly also in contexts other than that of
+projective limits of schemes (which had served as the model for
+M.\textsc{Artin} in his initial definition of this notion). We show,
+for example, in (\hyperref[VI.subsec8.4]{8.4}) how the various notions
+of being ``localized at a point'' (for a Noetherian space, for a
+scheme with its usual topology, or even with its étale topology) can
+be unified by defining the localization as the projective limit of
+the ``neighborhoods'' of that point---in perfect agreement with the
+intuitive idea of localization at a point.
+
+The two limit-passage theorems will be stated again explicitly in the
+next exposé in the special setting of étale cohomology of schemes
+(\hyperrefext[VII][VII.prop3.3]{3.3} and
+\hyperref[VI.prop5.7]{5.7}); in that case, they will moreover be used
+constantly throughout the remainder of this Seminar, and practically
+everywhere étale cohomology has been used up to the present. The
+reader willing to accept these two theorems in the special case in
+which they are stated in Exposé VII, and interested exclusively in
+applications of étale cohomology, may therefore omit the present
+exposé. It is true that the notion of a \emph{constructible object} of
+a topos (\ie one whose structural morphism $X \to e$ to the final
+object $e$ is coherent) will likewise play an important role
+throughout the rest of the Seminar (whereas it plays only a very
+secondary role in the present exposé, if only because, for a coherent
+topos, it coincides with the notion of a coherent object, which takes
+center stage here). But this notion is developed independently in
+Exposé IX, in the special case of étale sheaves on schemes, without
+using the general study made in the present exposé; in that case it
+also exhibits very useful special phenomena that served as the basis
+for its treatment in IX (beginning with \hyperref[IX.def2.3]{Definition IX 2.3}). Since the
+text of IX predates the present\pageoriginale text of Exposé VI by
+five years, yet remains quite usable for the reader, we have confined
+ourselves at the end of Exposé IX to proving the equivalence between
+the notion of constructibility used in IX and the one introduced
+here.
+
+\section{Finiteness conditions for the objects and arrows of a
+  topos}\etiquette[1]{VI.sec1}
+
+\begin{enonce*}{Definition 1.1}\etiquette[1.1]{VI.def1.1}
+Let $C$ be a site. An object $X$ of $C$ is called quasi-compact if,
+for every covering family $(X_i \to X)_{i\in I}$, there is a finite
+subset $J$ of the index set $I$ such that the subfamily
+$(X_i \to X)_{i \in J}$ is still covering.
+\end{enonce*}
+
+Since a $𝒰$-topos $E$ is always regarded as a site (IV \hyperref[IV.subsubsec1.1.1]{1.1.1}), the
+preceding definition applies in particular to an object of $E$. This
+case is moreover the general one, by the following proposition.
+
+\begin{enonce*}{Proposition 1.2}\etiquette[1.2]{VI.prop1.2}
+Let $C$ be a $𝒰$-site, let $\epsilon : C \to C^{\sim}$ be the
+canonical functor, and let $X$ be an object of $C$. Then $X$ is a
+quasi-compact object of the site $C$ if and only if $\epsilon(X)$ is
+a quasi-compact object of the topos $C^{\sim}$.
+\end{enonce*}
+
+Suppose that $X$ is quasi-compact; we prove that $\epsilon(X)$ is as
+well. Let $(F_i \to \epsilon(X))_{i \in I}$ be an epimorphic family.
+For every $i \in I$, choose an epimorphic family
+$\epsilon(X_{ij}) \to F_i$, $j \in J_i$. The composite
+$\epsilon(X_{ij}) \to \epsilon(X)$ identifies with an element
+$\alpha_{ij}$ of $\epsilon(X)(X_{ij})$. In general one cannot assert
+that it comes from a morphism $X_{ij} \to X$, but, by the construction
+of the associated sheaf $\epsilon(X)$, one knows that, for fixed $i$
+and $j$, a covering family $Y_k \to X_{ij}$ can be found such that
+the images of $\alpha_{ij}$ in the $\epsilon(X)(Y_k)$ come from
+elements of $X(Y_k)$, \ie from morphisms $Y_k \to X$. Thus, after
+refining the epimorphic family $\epsilon(X_{ij}) \to F_i$, we may
+suppose that the composites
+$\epsilon(X_{ij}) \to \epsilon(X)$ come from morphisms
+$X_{ij} \to X$.\pageoriginale As $i$ and $j$ vary, the family of
+$\epsilon(X_{ij}) \to \epsilon(X)$ is epimorphic, so (II
+\hyperref[VI.cor4.4]{4.4}) the family of $X_{ij} \to X$ is covering.
+By the hypothesis on $X$, it admits a finite covering subfamily, and
+the corresponding finite family of morphisms
+$\epsilon(X_{ij}) \to \epsilon(X)$ is again epimorphic. Since these
+factor through finitely many of the morphisms
+$F_i \to \epsilon(X)$, that finite family is already epimorphic.
+This proves that $\epsilon(X)$ is quasi-compact.
+
+Conversely, the fact that quasi-compactness of $\epsilon(X)$ implies
+quasi-compactness of $X$ is trivial, by \loccit
+
+The preceding result therefore shows that the notion of
+quasi-compactness on sites reduces to the corresponding notion in
+topoi.
+
+\begin{enonce*}{Proposition 1.3}\etiquette[1.3]{VI.prop1.3}
+Let $C$ be a site and let $(X_i \to X)_{i \in I}$ be a finite
+covering family, with the $X_i$ quasi-compact. Then $X$ is
+quasi-compact.
+\end{enonce*}
+
+To see this, we may assume, by \hyperref[VI.prop1.2]{1.2}, that $C$
+is a topos. Let $(X'_j \to X)$ be a covering, \ie epimorphic, family
+in $C$. Then, for every $i \in I$, the family obtained by the base
+change $X_{i} \to X$ is epimorphic and hence (since $X_i$ is
+quasi-compact) admits a finite epimorphic subfamily, corresponding to
+a finite subset $J_i \subset J$ of the index set $J$. Set
+$J'= \bigcup_{i\in I} J_i$. Then $J'$ is a finite subset of $J$
+because $I$ is finite, and the family
+$(X'_j \to X)_{j \in {J'}}$ is already epimorphic, since it is so
+locally, \cqfd
+
+\begin{enonce*}{Corollary 1.4}\etiquette[1.4]{VI.cor1.4}
+Let\pageoriginale $(X_i)_{i \in I}$ be a family of objects of a topos
+$E$, and let $X$ be their sum. Then $X$ is quasi-compact if and only
+if all the $X_i$ are quasi-compact and all but finitely many of the
+$X_i$ are isomorphic to the ``empty object'' $∅_{E}$ of $E$.
+\end{enonce*}
+
+Sufficiency follows immediately from \hyperref[VI.prop1.3]{1.3}
+(since the sum does not change when the empty summands are omitted).
+For necessity, note that a finite subfamily $(X_i)_{i \in J}$ must
+cover $X$, which implies that, for $i \in I-J$, one has
+$X_i = \fprod{X_{i}}{\amalg_{j=J}}{X}X_{j} =
+\fprod{\amalg_{j=J}X_{i}}{X_j}{X} = ∅$ (II
+\hyperref[VI.lem4.5.1]{4.5.1}). On the other hand, to show that every
+$X_i$ is quasi-compact, note that $X \simeq X_i \amalg {X'}_i$, and
+that every covering family $Y_j \to X_i$ of $X_i$ defines a covering
+family $Y_j \amalg {X'}_i \to X_i \amalg {X'}_i = X$ of $X$. The
+latter admits a finite covering subfamily, which plainly implies that
+the corresponding finite family of $Y_j \to X_i$ is also covering;
+thus $X_i$ is quasi-compact.
+
+\begin{enonce*}[remark]{Remark 1.5.1}\etiquette[1.5.1]{VI.rem1.5.1}
+The property for an object $X$ of a topos $E$ of being quasi-compact
+depends only on the induced topos $E_{/X}$, and means that the final
+object of the latter is quasi-compact. Likewise, an object $X$ of a
+site $C$ is quasi-compact if and only if the final object of the
+induced site $C_{/X}$(III \hyperref[III.subsec5.1]{5.1}) is quasi-compact.
+\end{enonce*}
+
+\setcounter{subsection}{5}
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[1.5.2]{VI.subsubsec1.5.2}
+Let $X$ be an object of a topos $E$. Then $X$ is quasi-compact if and
+only if every filtered increasing family $(X_i)_{i \in I}$ of
+subobjects of $X$ that covers $X$ contains some $X_i$ equal to $X$.
+This condition therefore depends\pageoriginale only on the ordered
+set of subobjects of $X$ (\ie the open subsets of the induced topos
+$E_{/X}$).
+
+\subsubsection{}\etiquette[1.5.3]{VI.subsubsec1.5.3}
+Consider a generating family $(X_i)_{i \in I}$ of $E$. It follows
+from the definitions and from \hyperref[VI.prop1.3]{1.3} that, for an
+object $X$ of $E$ to be quasi-compact, it is necessary that it admit
+a covering family consisting of finitely many of the $X_i$, \ie that
+$X$ be isomorphic to a quotient object of a finite sum of objects of
+$E$; this condition is sufficient if the $X_i$ are quasi-compact.
+Note also that, under the hypothesis made on $E$, after replacing the
+generating family under consideration by a subfamily if necessary,
+we may clearly suppose that $I \in 𝒰$. Using the fact that the set of
+quotients of an object of $E$ is small (I \hyperref[I.cor7.5]{7.5}), we then find that the
+full subcategory $E_{\qc}$ of $E$ formed by the quasi-compact objects
+of $E$ is equivalent to a category $\in 𝒰$, \ie the cardinal of the set of
+isomorphism classes of objects of $E_{\qc}$ is $\in 𝒰$.
+
+\begin{enonce*}[remark]{Example 1.6.1}\etiquette[1.6.1]{VI.exem1.6.1}
+Let $X$ be a topological space. An open subset $U$ of $X$ is a
+quasi-compact object of the site $\Ouv(X)$ of open subsets of $X$ if
+and only if $U$ is a quasi-compact space for the topology induced by
+$X$. More generally, a sheaf $F$ on $X$ is a quasi-compact object of
+the topos $\Top(X)$ if and only if the étalé space $X'$ over $X$
+associated with $F$ is quasi-compact. (This follows from the preceding
+assertion, from \hyperref[VI.rem1.5.1]{1.5}, and from the fact that $\Top (X)_{/F}$ is
+equivalent to $\Top(X')$ (IV \hyperref[IV.subsec5.7]{5.7})).
+\end{enonce*}
+
+\setcounter{subsection}{6}
+\setcounter{subsubsection}{1}
+\subsubsection{}\etiquette[1.6.2]{VI.subsubsec1.6.2}
+Consider\pageoriginale on the category ($\Sch$) of schemes (elements
+of $𝒰$) one of the topologies $T_i$ of \cite{sga4.exp.VI.bib.6}
+\hyperref[VI.def6.3]{6.3} (for example, the Zariski topology, the
+étale topology, the fppf topology, or the fpqc topology). A scheme is
+quasi-compact for this topology if and only if it is a quasi-compact
+scheme in the usual sense. (With the notation of \loccit, only the
+fact that every family $\in P'$ is finite is used.)
+
+\begin{enonce*}{Definition 1.7}\etiquette[1.7]{VI.def1.7}
+Let $E$ be a topos and let $f : X \to Y$ be an arrow of $E$. We say
+that $f$ is a quasi-compact morphism if, for every arrow $Y'\to Y$
+with $Y'$ quasi-compact, the object
+$X'= \fprod{X}{Y'}{Y}$ is also quasi-compact. We say that $f$ is
+quasi-separated if the diagonal morphism
+$X \to \fprod{X}{X}{Y}$ is quasi-compact. We say that $f$ is coherent
+if $f$ is quasi-compact and quasi-separated.
+\end{enonce*}
+
+\setcounter{subsection}{7}
+\setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[1.7.1]{VI.subsubsec1.7.1}
+Unwinding the definition of a quasi-separated morphism
+$f : X \to Y$, we see that it also means that, for every pair of
+arrows $g_1, g_2 : X'\rightrightarrows X$ ``over $Y$,'' \ie such that
+$fg_1 = fg_2$, quasi-compactness of $X'$ implies quasi-compactness of
+$\Ker(g_1, g_2)$.
+
+\begin{enonce*}{Proposition 1.8}\etiquette[1.8]{VI.prop1.8}
+Let $E$ be a topos.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Every isomorphism in $E$ is a coherent morphism, \ie is
+  quasi-compact and quasi-separated. The composite of two
+  quasi-compact (\resp quasi-separated, \resp coherent) morphisms is
+  quasi-compact (\resp quasi-separated, \resp coherent).
+
+\item Let\pageoriginale $f : X \to Y$ and $g : Y' \to Y$ be
+  morphisms in $E$, and let
+  $f': X'= \fprod{X}{Y'}{Y} \to Y'$ be deduced from $f$ by the base
+  change $g$. If $f$ is quasi-compact (\resp quasi-separated, \resp
+  coherent), then so is $f'$.
+
+\item Let $f : X \to Y$ and $g : Y \to Z$ be
+  morphisms in $E$. If
+  $gf$ is quasi-separated, then $f$ is quasi-separated.
+
+\item Let $f : X \to Y$ and $g : Y \to Z$ be morphisms in $E$, with
+  $g$ quasi-separated. If $gf$ is quasi-compact (\resp coherent),
+  then $f$ is quasi-compact (\resp coherent).
+\end{enumerate}
+\end{enonce*}
+
+The proofs are well known (\Cf \EGA IV 1 or EGA I, 2nd edition).
+Statements (i) and (ii) in the quasi-compact case follow trivially
+from the definitions. In the quasi-separated case, stability under
+base change in (ii) follows immediately from the definition and the
+preceding case, as does the fact that every isomorphism is
+quasi-separated. Stability under composition $X \to Y \to Z$ follows
+from the diagram
+\[\vcenter{
+\xymatrix@R=1.5cm@C=1.5cm{
+X \ar[d] \ar@/_3.5pc/[dd]^(.2){\Delta_{X/Y}}_{\Delta_{X/Z}}&\\
+\fprod{X}{X}{Y} \ar[d]^{u} \ar[rr]&  &Y \ar[d]^{\Delta_{Y/Z}}\\
+\fprod{X}{X}{Z}  \ar[rr]&        & \fprod{Y}{Y}{Z}
+}}\leqno{(*)}
+\]
+whose square\pageoriginale is Cartesian. By hypothesis, $\Delta_{Y/Z}$ is
+quasi-compact, and hence so is $u$, which is obtained from it by base
+change; moreover, $\Delta_{X/Y}$ is quasi-compact, and therefore so is
+the composite $u\Delta_{X/Y} = \Delta_{X/Z}$. This proves (i) and
+(ii), the coherent case following by combining the two preceding
+cases. To prove the first case considered in (iv), consider the
+following diagram with Cartesian squares:
+\[\vcenter{
+\xymatrix@C=2.75cm@R=1.5cm{
+  &     X \ar[r]^{gf}          & Z\\
+  X \ar[r]^{\Gamma_f=(\id_X,f)}  \ar[d]
+  \ar@/_2pc/[rr]_(.55){f\qquad\qquad \fprod{f}{\id_{Y}}{Z}}  &\fprod{X}{Y}{Z} \ar[r]^{\pr_2}\ar[d]\ar[u]^{\pr_1}& Y\ar[u]_{g}\\
+Y \ar[r]^{\Delta_{Y/Z}}&  \fprod{Y}{Y}{Z}& \quad .
+}}\leqno{(**)}
+\]
+By hypothesis, $g$ is quasi-separated, so $\Delta_{Y/Z}$ is
+quasi-compact and hence $\Gamma_f$ is quasi-compact by base change.
+Likewise, by hypothesis $gf$ is quasi-compact, so $\pr_2$ is also
+quasi-compact by base change. Consequently,
+$f = \pr_2 \Gamma_f$ is quasi-compact as a composite of two
+quasi-compact morphisms. The corresponding case of (iv) follows
+immediately from the preceding case and (iii), which remains to be
+proved. For this, return to diagram $(\ast)$. The hypothesis that
+$gf$ is quasi-separated means that
+$\Delta_{X/Z} = u \Delta_{X/Y}$ is quasi-compact, while the conclusion
+that $f$ is quasi-separated means that $\Delta_{X/Y}$ is
+quasi-compact. This follows from (iv) once we have proved that $u$ is
+quasi-separated. But $u$ is\pageoriginale plainly a monomorphism, and indeed we
+have the following trivial result:
+
+\begin{enonce*}{Corollary 1.8.1}\etiquette[1.8.1]{VI.cor1.8.1}
+Every monomorphism is quasi-separated.
+\end{enonce*}
+
+Indeed, if $u : X \to Y$ is a monomorphism, then $\Delta_{X/Y}$ is an
+isomorphism and is therefore quasi-compact, \cqfd
+
+\begin{enonce*}{Corollary 1.8.2}\etiquette[1.8.2]{VI.cor1.8.2}
+Let $f:X \to Y$ and $f':X' \to Y'$ be two $S$-morphisms in $E$. If
+$f$ and $f'$ are quasi-compact (\resp quasi-separated, \resp
+coherent), then so is
+$\fprod{f}{f'}{S} : \fprod{X}{X'}{S} \to \fprod{Y}{Y'}{S}$.
+\end{enonce*}
+
+This follows in the usual way by combining (i) and (ii).
+
+\begin{enonce*}{Remark 1.9.1}\etiquette[1.9.1]{VI.rem1.9.1}

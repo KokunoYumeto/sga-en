@@ -1,0 +1,352 @@
+
+\setcounter{footnote}{-1}
+\chapter*{Expos\'e \texorpdfstring{VI\textsubscript{A}}{VI_A}\\
+Generalities on Algebraic Groups}
+\phantomsection
+\label{sga3:VIA:title}
+\addcontentsline{toc}{chapter}{Expos\'e VI-A. Generalities on Algebraic Groups}
+\markboth{EXPOS\'E VI\textsubscript{A}. GENERALITIES ON ALGEBRAIC GROUPS}%
+  {EXPOS\'E VI\textsubscript{A}. GENERALITIES ON ALGEBRAIC GROUPS}
+
+\begin{center}
+  \textit{by P. Gabriel}
+\end{center}
+
+\footnote{Editor's note: version of October 13, 2024.}Throughout this
+chapter, \(A\) will denote an Artinian local ring with residue field \(k\).
+A group scheme \(G\) over \(\operatorname{Spec} A\) will be called simply
+an \(A\)-\emph{group}. This \(A\)-group is said to be \emph{locally of
+finite type} if its underlying scheme is locally of finite type over \(A\);
+it is said to be \emph{algebraic} if its underlying scheme is of finite
+type over \(A\).
+
+\section*{0. Preliminary Remarks}
+\phantomsection
+\label{sga3:VIA:0}
+\addcontentsline{toc}{section}{0. Preliminary Remarks}
+
+\medskip
+\noindent\textbf{0.1.}
+\phantomsection
+\label{sga3:VIA:0.1}
+Let us first consider a group scheme \(G\) over an arbitrary scheme \(S\).
+We call the structural morphism
+\[
+  \mu:G\times_S G\longrightarrow G
+\]
+\emph{multiplication}, and we call the morphism \(c:G\to G\), defined by
+\(c(T)(x)=x^{-1}\) for every scheme \(T\) over \(S\) and every
+\(x\in G(T)\), \emph{inversion}. If \(U\) and \(V\) are subsets of the
+underlying set of \(G\), we denote by \(U\cdot V\) the image under
+multiplication of the subset of \(G\times_S G\) consisting of those points
+whose first projection belongs to \(U\) and whose second projection belongs
+to \(V\). Likewise, the notations \(U^{-1}\) and \(c(U)\) are equivalent.
+
+Let \(\operatorname{pr}_1\) be the projection of \(G\times_S G\) onto the
+first factor, and let
+\[
+  \sigma:G\times_S G\longrightarrow G\times_S G
+\]
+be the morphism with components \(\operatorname{pr}_1\) and \(\mu\). For
+every \(S\)-scheme \(T\), the map \(\sigma(T)\) is
+\[
+  (x,y)\longmapsto (x,xy);
+\]
+it follows that \(\sigma\) is an automorphism. The composite of this
+automorphism with the projection \(\operatorname{pr}_2\) of
+\(G\times_S G\) onto the second factor is the multiplication morphism.
+When \(G\) is flat over \(S\), \(\operatorname{pr}_2\), and hence \(\mu\),
+are flat morphisms; when \(G\) is smooth over \(S\),
+\(\operatorname{pr}_2\), and hence \(\mu\), are smooth morphisms, and so
+on.
+
+\medskip
+\noindent\textbf{0.2.}
+\phantomsection
+\label{sga3:VIA:0.2}
+From now on we assume that \(S\) is the spectrum of an Artinian local ring
+\(A\) with residue field \(k\). We denote by
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\) the category of reduced schemes over
+\(k\). For every scheme \(X\) over \(A\), the reduced scheme
+\(X_{\mathrm{red}}\) is an object of
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\), and the functor
+\[
+  X\longmapsto X_{\mathrm{red}}
+\]
+is right adjoint to the inclusion of
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\) into \(\mathbf{Sch}_{/A}\).
+It follows that, for every \(A\)-group \(G\), \(G_{\mathrm{red}}\) is a
+group in the category
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\).\footnote{Editor's note: the
+sentences that follow have been added.} In other words, for every reduced
+\(k\)-scheme \(T\), \(G_{\mathrm{red}}(T)\) is endowed, functorially in
+\(T\), with a group structure. One must bear in mind that
+  \(G_{\mathrm{red}}\) is not necessarily a \(k\)-group, because its
+  ``multiplication'' is only a morphism
+\stepcounter{footnote}%
+\[
+  (G_{\mathrm{red}}\times_k G_{\mathrm{red}})_{\mathrm{red}}
+  \longrightarrow
+  G_{\mathrm{red}}\text{\hyperlink{sga3:VIA:fn:red-examples}{%
+    \textsuperscript{\normalfont\thefootnote}}}.
+\]
+\footnotetext[\value{footnote}]{\hypertarget{sga3:VIA:fn:red-examples}{}Editor's note: for examples of group schemes \(G\) over a
+nonperfect field \(k\) for which \(G_{\mathrm{red}}\) is not a group scheme
+over \(k\), see \SGARefLink{ex:sga3-VIA-1.3.2}{1.3.2} below.}
+
+\footnote{Editor's note: the remainder of \SGARefLink{sga3:VIA:0.2}{0.2}, as well as \SGARefLink{sga3:VIA:0.3}{0.3}, has been
+slightly modified.}
+However, if \(k\) is a perfect field, the inclusion of
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\) into \(\mathbf{Sch}_{/k}\)
+commutes with products. Groups in
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\) may therefore be identified with
+group schemes over \(k\) whose underlying schemes are reduced. In this
+case, if \(G\) is a \(k\)-group, \(G_{\mathrm{red}}\) is a group subscheme
+of \(G\); in general, this subgroup is not normal in \(G\).
+
+For example, if \(k\) is a field of characteristic \(3\), the constant
+group \((\mathbb Z/2\mathbb Z)_k\) acts nontrivially on the diagonalizable
+group \(D_k(\mathbb Z/3\mathbb Z)\) (cf. \SGARefLink{sga3:i:subsection:4-1}{Expos\'e I, 4.1} and \SGARefLink{cor:sga3-VIB-4.4}{4.4}). If
+\(G\) denotes the semidirect product of \(D_k(\mathbb Z/3\mathbb Z)\) by
+\((\mathbb Z/2\mathbb Z)_k\) defined by this action, then
+\(G_{\mathrm{red}}\) is identified with \((\mathbb Z/2\mathbb Z)_k\) and
+is not normal in \(G\).\footnote{Editor's note: for an analogous example
+with \(G\) connected, one may take, when
+\(\operatorname{char}(k)=p>0\), the semidirect product of
+\(\alpha_{p,k}\) and \(\mathbb G_{m,k}\).}
+
+Let \(k\) be an arbitrary field, let \(k^{p^{-\infty}}\) be its perfect
+closure, and let \(H\) be a group in
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\). Then
+\[
+  (H\otimes_k k^{p^{-\infty}})_{\mathrm{red}}
+\]
+is a group scheme over the perfect field \(k^{p^{-\infty}}\). Since
+\(H\otimes_k k^{p^{-\infty}}\) and
+\((H\otimes_k k^{p^{-\infty}})_{\mathrm{red}}\) have the same underlying
+topological space, groups in \((\mathbf{Sch}_{/k})_{\mathrm{red}}\) share
+with \(k\)-groups certain topological properties that are invariant under
+extension of the base field. For example, it will follow from \hyperref[sga3:VIA:0.3]{0.3} and the
+preceding remarks that every group in
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\) is separated.
+
+In what follows, we shall encounter groups in
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\) whenever we deal with a nonempty
+locally closed subset \(U\) of an \(A\)-group \(G\) such that
+\[
+  U\cdot U=U
+  \qquad\text{and}\qquad
+  U^{-1}=U.
+\]
+Indeed, the reduced subscheme of \(G\) defined by \(U\) is then a group in
+\((\mathbf{Sch}_{/k})_{\mathrm{red}}\).
+
+\medskip
+\noindent\textbf{0.3.}
+\phantomsection
+\label{sga3:VIA:0.3}
+\textit{An \(A\)-group \(G\) is always separated, because the unit section
+\(e:\operatorname{Spec}A\to G\) is a closed immersion.}
+Indeed, let \(x\) be the unique point of \(\operatorname{Spec}A\), and let
+\(\eta:G\to\operatorname{Spec}A\) be the structural morphism. Since
+\(\eta\circ e=\operatorname{id}_{\operatorname{Spec}A}\), for every
+affine open \(U=\operatorname{Spec}B\) of \(G\) containing \(e(x)\), the
+homomorphism \(B\to A\) has a section and is therefore surjective. It
+follows that \(e\) is a closed immersion.\footnote{Editor's note: this
+argument is valid for every local ring \(A\) of dimension zero, and shows
+that, if \(S\) is a discrete scheme, every \(S\)-group is separated; cf.
+VI\textsubscript{B}, \SGARefLink{prop:sga3-VIB-5.2}{5.2}. On the other hand (cf.
+VI\textsubscript{B}, \SGARefLink{ctr:sga3-VIB-5.6.4}{5.6.4}), if \(S\) contains a nonisolated closed point
+\(s\), the \(S\)-scheme \(G\) obtained by gluing two copies of \(S\) along
+the open subset \(S-\{s\}\) is not separated over \(S\), although it
+carries an \(S\)-group structure.}
+
+The diagonal in \(G\times_A G\) is identified with the functor from
+\((\mathbf{Sch}_{/A})^\circ\) to \(\mathbf{Sets}\) which associates to
+every \(A\)-scheme \(S\) the inverse image of the identity element of
+\(G(S)\) under the map
+\[
+  \varphi(S):G(S)\times G(S)\longrightarrow G(S),
+  \qquad (x,y)\longmapsto x\cdot y^{-1}.
+\]
+We therefore have the following cartesian square. Since the diagonal
+morphism is obtained from a closed immersion by base change, it is itself
+a closed immersion.
+
+\begin{center}
+  \phantomsection
+  \label{sga3:VIA:0.3-cartesian-square}
+  \begin{tikzcd}[row sep=large,column sep=large]
+    G\times_S G
+      \arrow[r,"\varphi"]
+    &
+    G
+    \\
+    G
+      \arrow[u,"\text{diagonal morphism}"]
+      \arrow[r]
+    &
+    \operatorname{Spec}A
+      \arrow[u,"\text{unit section}"']
+  \end{tikzcd}
+\end{center}
+
+
+\medskip
+\noindent\textbf{0.4.}\footnote{Editor's note: the original has been
+expanded in what follows; in particular, \hyperref[sga3:VIA:0.4.1]{Remark 0.4.1} has been added.}
+\phantomsection
+\label{sga3:VIA:0.4}
+Let \(G\) be an \(A\)-scheme. We shall say that a point \(g\) of \(G\) is
+\emph{strictly rational over \(A\)} if there exists an \(A\)-morphism
+\[
+  s:\operatorname{Spec}A\longrightarrow G
+\]
+which sends the unique point of \(\operatorname{Spec}A\) to \(g\); that
+is, if the homomorphism \(A\to\mathcal O_{G,g}\) admits a retraction. One
+then has \(\kappa(g)=k\), so \(g\) is a closed point of \(G\). Indeed, if
+\(B\) is the ring of an affine open neighborhood of \(g\), and if
+\(\mathfrak p\) is the prime ideal of \(B\) corresponding to \(g\), then
+\(B/\mathfrak p\subset k\) is a finite \(A\)-algebra, hence an integral
+Artinian ring, and therefore a field.
+
+Suppose henceforth that \(G\) is an \(A\)-group. Such a morphism
+\(s:\operatorname{Spec}A\to G\) defines an automorphism \(r_s\) of the
+scheme \(G\) over \(A\), called \emph{right translation by \(s\)}. For
+every morphism \(\pi:S\to\operatorname{Spec}A\), the automorphism
+\(r_s(\pi)\) of \(G(S)\) is defined by
+\[
+  x\longmapsto x\cdot G(\pi)(s),
+  \qquad x\in G(S).
+\]
+Similarly, \(\ell_s\) denotes \emph{left translation by \(s\)}, namely
+the automorphism of \(G\) defined by
+\[
+  \ell_s(\pi)(x)=G(\pi)(s)\cdot x,
+  \qquad x\in G(S).
+\]
+
+The schemes \(G\otimes_A k\) and \(G\) have the same underlying
+topological space \(\underline G\), \(G\otimes_A k\) is a \(k\)-group,
+and \(s\otimes_A k\) depends only on \(g\), not on \(s\). Consequently,
+the automorphisms of \(\underline G\) induced by \(r_s\) and \(\ell_s\)
+(or by \(r_{s\otimes k}\) and \(\ell_{s\otimes k}\)) depend only on \(g\),
+not on \(s\). Thus, if \(P\) is a subset of \(\underline G\), we may write
+\[
+  r_g(P)\ \text{or}\ P\cdot g
+  \qquad
+  \bigl(\text{respectively, }\ell_g(P)\ \text{or}\ g\cdot P\bigr)
+\]
+instead of \(r_s(P)\) (respectively, \(\ell_s(P)\)), in agreement with
+\hyperref[sga3:VIA:0.1]{0.1}.
+
+\medskip
+\noindent\textbf{Remark 0.4.1.}
+\phantomsection
+\label{sga3:VIA:0.4.1}
+\textit{If \(g\) is a strictly rational point of \(G\), and if
+\(A\to A'\) is a morphism of Artinian local rings, then
+\(G'=G\otimes_A A'\) has a unique point \(g'\) above \(g\), and \(g'\) is
+strictly rational over \(A'\). Moreover, if \(P'\) denotes the inverse
+image of \(P\) in \(G'\), then \(P'\cdot g'\) is the inverse image of
+\(P\cdot g\) (cf. EGA I, 3.4.8).}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:vi:proposition:0-5}\textbf{Proposition 0.5.}\footnote{Editor's note: the original
+stated this result under the hypothesis that \(G\) be locally of finite
+type over \(A\). Since the result is useful in the general case, and
+since the proof is essentially the same, it has been stated and proved
+here in full generality. It will be used several times below.}
+\phantomsection
+\label{sga3:VIA:0.5}
+\textit{Let \(G\) be an \(A\)-group, and let \(U,V\) be two dense open
+subsets of \(G\). Then \(U\cdot V\), that is, the image of
+\(U\times_A V\) under multiplication, is the entire underlying space of
+\(G\).}
+
+\begin{proof}
+Since \(G\) and \(G\otimes_A k\) have the same underlying space, after
+replacing \(A\) by \(k\) and \(G\) by \(G\otimes_A k\), if necessary, we
+may assume that \(A=k\). Let \(g\in G\), and set \(K=\kappa(g)\). Then
+left translation \(\ell_g\) is an automorphism of \(G_K\). Since the
+projection \(G_K\to G\) is open, \(U_K\) and \(V_K\) are dense open
+subsets of \(G_K\), as is the image of \(V_K\) under \(\ell_g\).
+Consequently there exists \(v\in V_K\) such that
+\(u=\ell_g(v)\) belongs to \(U_K\).
+
+Let \(L\) be an extension of \(K\) containing \(\kappa(v)\), and hence
+\(\kappa(u)\), and let \(g_L\) and \(v_L\) be the \(L\)-points of \(G_L\)
+induced by \(g\) and \(v\). Then
+\[
+  g_L\cdot v_L=u'
+\]
+is a point of \(G_L\) above \(u\), and therefore
+\[
+  g_L=u'\cdot v_L^{-1}
+\]
+lies above \(U\cdot V\). Thus \(g\in U\cdot V\), proving the proposition.
+\end{proof}
+
+\medskip
+\noindent\textbf{Corollary 0.5.1.}\footnote{Editor's note: this corollary
+has been inserted here; cf. \SGARefLink{prop:sga3-VIA-2.4}{2.4} and \SGARefLink{cor:sga3-VIA-2.6.2}{2.6.2} below.}
+\phantomsection
+\label{sga3:VIA:0.5.1}
+\textit{If \(G\) is an irreducible \(A\)-group, then \(G\) is
+quasi-compact.}
+
+\begin{proof}
+Let \(U\) be a nonempty affine open subset of \(G\). Then \(U\) is dense
+in \(G\), so by \hyperref[sga3:VIA:0.5]{0.5} the morphism
+\[
+  \mu:U\times_A U\longrightarrow G
+\]
+is surjective. Hence \(G\) is quasi-compact, since \(U\times_A U\) is.
+\end{proof}
+
+\medskip
+\noindent\textbf{Corollary 0.5.2.}\footnote{Editor's note: this
+corollary, used implicitly in VIII, \SGARefLink{sga3:viii:corollary:6:7}{6.7}, has been added; see also
+VI\textsubscript{B}, \SGARefLink{cor:sga3-VIB-6.2.5}{6.2.5}.}
+\phantomsection
+\label{sga3:VIA:0.5.2}
+\textit{Let \(G\) be an \(A\)-group scheme, and let \(H\) be a group
+subscheme of \(G\) over \(A\). Then \(H\) is closed.}
+
+\begin{proof}
+Let \(k'\) be the perfect closure of the residue field \(k\) of \(A\).
+Since the underlying topological spaces of \(G\) and \(H\) are unchanged
+under the base change \(A\to k\to k'\), we may assume that \(A=k\) is a
+perfect field. We may then assume that \(G\) and \(H\) are reduced, hence
+geometrically reduced.
+
+Let \(\overline H\) be the closure of \(H\). Then
+\(\mu^{-1}(\overline H)\) is a closed subset of \(G\times G\) containing
+\(H\times H\). The morphisms
+\[
+  H\longrightarrow\operatorname{Spec}k
+  \qquad\text{and}\qquad
+  \overline H\longrightarrow\operatorname{Spec}k
+\]
+are universally open. Since \(H\) is dense in \(\overline H\),
+\(H\times H\) is dense in \(\overline H\times H\), and
+\(\overline H\times H\) is dense in
+\(\overline H\times\overline H\). Thus \(H\times H\) is dense in
+\(\overline H\times\overline H\). Consequently
+\[
+  \mu(\overline H\times\overline H)\subset\overline H.
+\]
+Since \(\overline H\times\overline H\) is reduced, \(\mu\) induces a
+morphism
+\[
+  \mu':\overline H\times\overline H\longrightarrow\overline H.
+\]
+
+Now let \(g\in\overline H\), and put \(K=\kappa(g)\). The projection
+\(\overline H_K\to\overline H\) is open, so \(H_K\) and
+\(\ell_g(H_K)\) are two dense open subsets of \(\overline H_K\). Hence
+there exist \(u,v\in H_K\) such that \(\ell_g(v)=u\). As in the proof of
+\SGARefLink{sga3:vi:proposition:0-5}{0.5}, it follows that \(g\) belongs to \(H\cdot H=H\). Therefore
+\(\overline H=H\).
+\end{proof}
+

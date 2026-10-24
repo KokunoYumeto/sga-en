@@ -1,0 +1,347 @@
+\section{Morphisms of topoi}\etiquette[3]{IV.sec3}\pageoriginale
+
+\begin{enonce*}{Definition 3.1}\etiquette[3.1]{IV.def3.1}
+Let $E$ and $E'$ be two $𝒰$-topoi. A morphism\nde{Some authors
+speak of a \emph{geometric morphism}.} from
+$E$ to $E'$, or sometimes (by abuse of language) a continuous map
+from $E$ to $E'$, is a triple $u=(u_{\ast}, u^{\ast},\varphi)$,
+consisting of functors
+$$
+u_{\ast}:E\longrightarrow E'\quav u^{\ast}:E'\longrightarrow E
+$$
+and an ``adjunction'' isomorphism $\varphi$ of bifunctors
+in $X'\in \Ob E'$, $Y\in \Ob E$:
+$$
+\varphi:\Hom_E (u^{\ast}(X'),Y)\xrightarrow{\sim} \Hom_{E'}(X',
+u_{\ast}(Y)){\quoi},
+$$
+where the functor $u^{\ast}$ is moreover required to be left exact,
+\ie to commute with finite projective limits. The functor $u_{\ast}$
+is called the direct-image functor for the morphism of topoi $u$,
+the functor $u^{\ast}$ is called the inverse-image functor for the
+morphism of topoi $u$, and the isomorphism $\varphi$ is called the
+adjunction isomorphism for $u$.
+\end{enonce*}
+
+\setcounter{subsection}{1}
+\subsubsection{}\etiquette[3.1.1]{IV.subsubsec3.1.1}
+Unless expressly stated otherwise, for a morphism of topoi
+$u:E\rightarrow E'$, we shall henceforth denote the corresponding
+direct- and inverse-image functors by $u_{\ast}$ and $u^{\ast}$
+\footnote[1]{It is sometimes appropriate also to write $u^{-1}$
+instead of $u^{\ast}$, \cf \hyperref[IV.subsubsec13.2.3]{13.2.3}.}.
+Note that, since $u_{\ast}$ is right adjoint to $u^{\ast}$ and
+$u^{\ast}$ is left adjoint to $u_{\ast}$ by the adjunction
+isomorphism $\varphi$, each of the two functors $u_{\ast}$,
+$u^{\ast}$ determines the other up to unique isomorphism, by the
+well-known general facts about adjoint functors [\hyperref[IV.sec14]{14}].
+In practice, depending on the circumstances, it may be more convenient
+to define a morphism of topoi $u:E\rightarrow E'$ either by specifying
+$u^{\ast}:E'\rightarrow E$, or by specifying
+$u_{\ast}:E\rightarrow E'$; in the first case, one need only verify
+that the given functor $u^{\ast}$ has\pageoriginale a right adjoint
+and is left exact. In the second case, one must verify that the given functor
+$u_{\ast}$ has a left adjoint which is left exact. In either case,
+from the partial data, by \emph{choosing} an adjoint functor and an
+adjunction isomorphism, one obtains a morphism of topoi
+$u:E\rightarrow E'$, and the latter will be ``unique up to unique
+isomorphism'' in terms of the datum $u^{\ast}$ \resp $u_{\ast}$, in
+a sufficiently clear sense which will moreover be made completely
+explicit below \hyperlink{sga4.exp.IV.subsubsection.3.2.1}{(3.2.1)}.
+
+\subsubsection{}\etiquette[3.1.2]{IV.subsubsec3.1.2}
+If $u:E\rightarrow E'$ is a morphism of topoi, it follows from the
+properties of adjoint functors (\hyperrefext[I][I.prop2.11]{2.11}) that
+the direct-image functor $u_{\ast}:E\rightarrow E'$ commutes with
+projective limits, and the functor $u^{\ast}:E'\rightarrow E$ commutes
+with inductive limits \footnote[2]{Moreover
+(\hyperref[IV.cor1.5]{1.5} and \hyperref[IV.rem1.8]{1.8}), for a given functor
+$u_{\ast}:E\rightarrow E'$ \resp $u^{\ast}:E'\rightarrow E$,
+this functor has a left adjoint (\resp a right adjoint) if and only if
+it commutes with $𝒰$-projective limits (\resp $𝒰$-inductive
+limits).}\MakeLinkTarget*{sga4.exp.IV.footnote.3.1.1.2}\label{sga4[1]}. Since the latter is assumed in addition to
+be left exact, \ie to commute with finite projective limits, we see in
+particular that $u^{\ast}$ \emph{is exact}. We may therefore say that
+\emph{it is the inverse-image functor $u^{\ast}$}, in the pair
+$(u_{\ast},u^{\ast})$, \emph{which has the most remarkable exactness
+properties.} These properties ensure that, for every type of
+algebraic structure $\Sigma$ whose data can be described in terms of
+arrows between the underlying sets and sets deduced from them by
+repeated application of operations of finite projective limits and
+arbitrary inductive limits, and for every ``object of $ℰ'$ endowed
+with a structure of type $\Sigma$'' (a notion which makes sense by
+virtue of the internal exactness properties of the topos $ℰ'$
+(\hyperrefext[II][II.theo4.1]{4.1})), its image under $u^{\ast}$ is endowed
+with the same structures. Rather than undertake the unrewarding task
+of giving a precise meaning to this statement and formally justifying
+it,\pageoriginale we advise the reader to spell it out and convince
+himself of its validity for types of structure such as groups, rings,
+modules over a ring, comodules over a coring, bialgebras over a ring,
+and torsors under a group. (In these examples, the first three types
+of structure are defined exclusively in terms of finite projective
+limits, while the other notions implicitly involve constructions
+which also use inductive limits.) Furthermore, the functor
+$u^{\ast}$ ``\emph{commutes}'' with all the usual functorial
+operations performed in terms of such structures, more precisely
+with all operations which can be expressed in terms of
+$\varinjlim$ and finite $\varprojlim$: constructions of free objects
+(free groups or modules, for example) generated by an object, tensor
+products (\cf \hyperref[IV.sec12]{\S 12} below), \etcn
+
+As for the direct-image functor $u_{\ast}:E\rightarrow E'$, since it
+commutes with projective limits, it consequently ``preserves'' every
+algebraic structure on an object (or a family of objects) of $E$
+which can be defined exclusively in terms of projective limits (such
+as the structures of group, ring, or module over a ring among the
+preceding examples). On the other hand, the functor $u_{\ast}$ is not
+in general right exact, \ie it does not in general commute with finite
+inductive limits, and it does not even in general take epimorphisms to
+epimorphisms (it is, moreover, this failure of exactness of
+$u_{\ast}$ which is the source of its cohomological properties; these
+will be studied, from the viewpoint of commutative homological
+algebra, in the following exposé). Consequently it does not, in
+general, extend to a functor on objects of the type comodule,
+\pageoriginale bialgebra, or torsor under a group, and does not in
+general commute with operations such as ``free module generated by'',
+tensor product of modules, \etc
+
+\subsubsection{}\etiquette[3.1.3]{IV.subsubsec3.1.3}
+In practice, when one is given a functor $f:E\rightarrow F$ from one
+$𝒰$-topos to another, one should make all of its exactness properties
+explicit, including the possible existence of left or right adjoint
+functors (\cf the footnote on page \pageref{sga4[1]}), in order to
+understand the ``geometric nature'' of $f$, an understanding which
+will generally be an indispensable guide to a correct geometric
+intuition of the situation. Thus, if it turns out that $f$ commutes
+with arbitrary inductive limits and finite projective limits, one
+should write $f$ in the form
+$$
+f=u^{\ast}{\quoi},
+$$
+where
+$$
+u:F\longrightarrow E
+$$
+is a morphism of topoi, \ie interpret $f$ as an ``inverse-image''
+functor for a ``continuous map'' of topoi. When $f$ commutes with
+arbitrary projective limits, so that it has a left adjoint, and if
+the latter (which a priori commutes with arbitrary inductive limits)
+\emph{also} commutes with finite projective limits, one should write
+$f$ in the form
+$$
+f=v_{\ast}{\quoi},
+$$
+where
+$$
+v:E\longrightarrow F
+$$
+is a morphism of topoi. In certain cases it may happen that $f$
+satisfies\pageoriginale both of the properties under consideration
+(\cf \hyperref[IV.subsec4.10]{4.10} for an example). In that case one
+should introduce simultaneously the morphisms of topoi
+$$
+u:F\longrightarrow E \quav v:E\longrightarrow F{\quoi},
+$$
+which give rise to a sequence of three adjoint functors
+(\hyperrefext[I][I.sec5.3]{5.3}):
+$$
+v^{\ast} \quav v_{\ast}=u^{\ast}=f\quav u_{\ast}{\quoi}.
+$$
+One must then distinguish carefully between the morphisms of topoi
+$u$ and $v$, lest one lose the geometric intuition of the situation.
+
+In this connection, note that when between two topoi $E$, $F$ one has
+a sequence of three adjoint functors
+$$
+e, f, g\; (e,g: F\rightrightarrows E, f:E\rightarrow F){\quoi},
+$$
+then $f$ commutes with arbitrary inductive and projective limits, and
+therefore can always be written in the form $u^{\ast}$, where
+$u:F\rightarrow E$ is a morphism of topoi. Thus $g$ can be written
+$g=u_{\ast}$. On the other hand, of course, $e$ can be written in the
+form $v^{\ast}$ (and then $f$ in the form $v_{\ast}$) only if it also
+commutes with finite projective limits. This will evidently be the
+case if $e$ is itself the right adjoint of a fourth functor $d$.
+Without a condition of this kind, one will often write
+$$
+e=u_{!}
+$$
+for the left adjoint of an inverse-image functor $f=u^{\ast}$ when
+such a left adjoint exists, this notation being suggested by the
+example of an open immersion $u:X\rightarrow Y$ of topological
+spaces. Similarly, if $e$ is of the form $v^{\ast}$, \ie if $f$ is
+of the form $v_{\ast}$, one sometimes writes $g=v^{!}$ for the right
+adjoint of a direct-image functor $v_{\ast}$, when this adjoint exists
+\footnote[1]{\Cf below \hyperref[IV.subsec14.4]{14.4}, in the case of
+abelian sheaves.}.
+
+\subsection{}\etiquette[3.2]{IV.subsec3.2}
+Let\pageoriginale $E$, $E'$ be two $𝒰$-topoi, and let
+$$
+u=(u_{\ast},u^{\ast},\varphi)\quav
+v=(v_{\ast},v^{\ast},\Psi):E\rightrightarrows E'
+$$
+be two morphisms of topoi from $E$ to $E'$. A \emph{morphism from
+$u$ to $v$} is any morphism from $u_{\ast}$ to $v_{\ast}$ (in the
+sense of the category $\Hhom(E,E')$ of functors from $E$ to $E'$).
+Morphisms of morphisms of topoi compose in the evident way, thereby
+defining a category, which is in fact a
+$\sheaf{\mathcal{U}}$-\emph{category} (\hyperrefext[I][I.prop7.8]{7.8}),
+denoted
+$$
+\Hhomtop(E,E'){\quoi},
+$$
+and called the \emph{category of morphisms} (or \emph{continuous
+maps}) \emph{from $E$ to $E'$}. One then has an evident functor
+$$
+u\longmapsto u_{\ast}:\Hhomtop(E,E')\longrightarrow
+\Hhom(E,E'){\quoi},
+$$
+which is fully faithful by the definition of arrows in the first
+member (but is not injective on objects).
+
+\hypertarget{sga4.exp.IV.subsubsection.3.2.1}{}\subsubsection{}
+Care must be taken that, if $u$ and $v$ are given as above, the theory
+of adjoint functors supplies a canonical bijection
+$$
+\Hom(u_{\ast},v_{\ast})\xrightarrow{\sim}\Hom(v^{\ast},
+u^{\ast}){\quoi};
+$$
+in particular, one obtains a \emph{contravariant functor} on
+$\Hhomtop(E,E')$:
+$$
+u\longmapsto u^{\ast}:\Hhomtop(E,E')^{\circ}\longrightarrow
+\Hhom(E,E'){\quoi}.
+$$
+In accordance with geometric intuition, according to which the
+direct-image functor $u_{\ast}$ ``goes in the same direction'' as the
+continuous map which gives rise to it, one should therefore define
+the direction of arrows for morphisms between morphisms of topoi
+\emph{in terms of the direct-image functors}, and not in terms of the
+inverse-image functors (although the latter, as we have seen, possess
+the exactness properties characteristic of the notion of morphism of
+topoi).
+
+\subsubsection{}\etiquette[3.2.2]{IV.subsubsec3.2.2}
+Having\pageoriginale defined the category $\Hhomtop(E,E')$ of
+morphisms from the topos $E$ to the topos $E'$, the notion of an
+\emph{isomorphism} between two morphisms $u$, $v$ from $E$ to $E'$
+is also defined. In practice there is no need to distinguish
+essentially between two isomorphic morphisms of topoi, at least when
+one has a \emph{canonical} isomorphism between the two (just as there
+is often no need to distinguish between two objects of a category
+when a canonical isomorphism between them is given). Let us point out
+in this connection that, most often, when one deals with diagrams of
+morphisms of topoi and questions of commutativity of such diagrams
+(a notion which makes sense by \hyperlink{sga4.exp.IV.subsection.3.3}{(3.3)}), one means only commutativity up
+to (``canonical'') isomorphism; by abuse of language, one then treats
+these diagrams as actually commutative diagrams.
+
+One might try to justify this abuse of language by introducing the
+set \\ $\Homtop(E,E')/\Isom$ of morphisms from $E$ to $E'$ up to
+isomorphism, and calling such an isomorphism class a morphism, instead
+of following Definition \hyperref[IV.subsec3.2]{3.2}. But this runs
+into the very serious difficulties which arise whenever one tries to
+identify two isomorphic objects of a category without having a
+canonical isomorphism between them. Experience shows that such a
+viewpoint is impracticable, and that one must retain the ``fine''
+notion \hyperref[IV.def3.1]{3.1} of a morphism between morphisms of
+topoi, even if one is sometimes obliged to struggle with
+compatibilities between canonical isomorphisms \footnote[1]{For
+examples of such struggles (apparently successful), we refer the
+reader to Mme M. \textsc{Hakim}'s book on relative schemes [9].}.
+
+\hypertarget{sga4.exp.IV.subsection.3.3}{}\setcounter{subsection}{3} \setcounter{subsubsection}{0}
+\subsubsection{}\etiquette[3.3.1]{IV.subsubsec3.3.1}
+Let\pageoriginale $E$, $E'$, $E''$ be three $𝒰$-topoi, and consider
+morphisms of topoi
+$$
+u:E\longrightarrow E'\quav v:E'\longrightarrow E''{\quoi}.
+$$
+The theory of adjoint functors then gives us an adjunction
+isomorphism between the composite functors $v_{\ast}u_{\ast}$ and
+$u^{\ast}v^{\ast}$, in terms of the adjunction isomorphisms for the
+pairs $(u_{\ast},u^{\ast})$ and $(v_{\ast},v^{\ast})$. On the other
+hand, the functor $u^{\ast}v^{\ast}$ is left exact, as the composite
+of two left exact functors. Consequently one obtains a morphism from
+$E$ to $E''$, called the \emph{composite of the morphisms $u$ and
+$v$}, and denoted $vu$:
+$$
+vu:E\longrightarrow E''{\quoi}.
+$$
+One verifies at once that composition of morphisms is associative,
+and that for every $𝒰$-topos $E$ there is a morphism from $E$ to
+itself which is a two-sided identity for composition: it is the
+morphism $(\id_E,\id_E,\varphi)$, where $\varphi$ is the evident
+adjunction isomorphism of $\id_E$ with itself. Let $𝒱$ be a universe
+such that $𝒰\in 𝒱$. One defines a category
+$$
+(𝒱\text{-}𝒰\text{-}\Top){\quoi},
+$$
+whose objects are the $𝒰$-topoi which belong to $𝒱$, whose arrows
+are morphisms between such $𝒰$-topoi, and whose composition of arrows
+is the one just described.
+
+\subsubsection{}\etiquette[3.3.2]{IV.subsubsec3.3.2}
+In fact, the composition map
+$$
+\Homtop(E, E')\times \Homtop(E',E'')\longrightarrow \Homtop(E,E'')
+$$
+is the map induced on objects by a ``functor of composition of
+morphisms'':
+$$
+\Hhomtop(E,E')\times \Hhomtop(E',E'')\longrightarrow
+\Hhomtop(E,E''){\quoi},
+$$
+whose\pageoriginale effect on arrows is the usual ``convolution
+product'' operation for morphisms between functors (here,
+direct-image functors). These composition functors satisfy a (strict)
+associativity property, for four topoi $E$, $E'$, $E''$, $E'''$,
+which refines the associativity of composition of morphisms of topoi.
+One may also say, in language which is beginning to become familiar
+[2], [9], that the $𝒰$-topoi are the objects (or 0-arrows) of a
+2-\emph{category}, whose 1-arrows are the morphisms of topoi and
+whose 2-arrows are morphisms of morphisms of topoi.
+
+It is the fact that the $𝒰$-topoi (elements of a universe $𝒱$) form
+a 2-category, rather than merely an ordinary category like ordinary
+topological spaces, which from the technical viewpoint constitutes
+the most important difference between the theory of topoi and that
+of topological spaces. This fact is the source of certain technical
+complications already alluded to, but also of facts essentially new
+in comparison with traditional topology.
+
+\subsection{}\etiquette[3.4]{IV.subsec3.4}
+The fact that the $𝒰$-topoi (elements of a universe $𝒱$) form a
+2-category (\hyperref[IV.subsubsec3.3.2]{3.3.2}) makes it possible in
+particular to define the notion of \emph{equivalence of two
+$𝒰$-topoi $E$, $E'$}: one says that $E$ and $E'$ are
+\emph{equivalent} if there exist morphisms of topoi
+$u:E\rightarrow E'$ and $v:E'\rightarrow E$ such that the composites
+$uv$ and $vu$ are isomorphic respectively to the identity morphisms
+of $E$ and $E'$; the morphisms $u$ and $v$ are then said to be
+\pageoriginale \emph{quasi-inverse equivalences of one another.}
+
+One sees at once that for the morphism of topoi $u:E\rightarrow E'$
+to be an equivalence, it is necessary and sufficient that $u_{\ast}$
+be an equivalence, or, what amounts to the same thing, that
+$u^{\ast}$ be an equivalence. (Use the fact that a functor
+$f:E\rightarrow E'$ between two topoi which is an equivalence is
+both of the form $u_{\ast}$ and of the form $v^{\ast}$, with $u$ and
+$v$ morphisms of topoi); and for $E$ and $E'$ to be equivalent in
+the sense of the preceding paragraph, it is necessary and sufficient
+that they be equivalent as categories (\ie as objects of the
+2-category $(𝒱\text{-}\cat)$). As it should, this shows that the
+notions of equivalence introduced do not depend on the choice of the
+universe $𝒱$ in \hyperref[IV.subsubsec3.3.1]{3.3.1}.
+
+\subsubsection{}\etiquette[3.4.1]{IV.subsubsec3.4.1}
+In practice, there is most often no reason to distinguish essentially
+between equivalent $𝒰$-topoi, just as there is often no reason to
+distinguish essentially between two equivalent categories---provided,
+however, that one has an explicit equivalence from one to the other,
+or at least an equivalence defined up to unique isomorphism. Here it
+is the notion of equivalence of topoi which replaces the traditional
+notion of homeomorphism between two topological spaces. See the
+example in \hyperref[IV.subsec4.2]{4.2} below for the precise relations
+between these two notions.

@@ -1,0 +1,1443 @@
+\section*{\SGAInlineRefTarget{sga3:x:section:4}4. Case of an arbitrary base. Quasi-isotriviality theorem}
+\phantomsection
+\addcontentsline{toc}{section}{4. Case of an arbitrary base. Quasi-isotriviality theorem}
+
+Let \(A\) be a local ring. Recall, following Nagata, that \(A\) is said to be
+\emph{henselian} if every algebra \(B\) finite over \(A\) is a product of local
+algebras \(B_i\) finite over \(A\).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:paragraph:4-0}Recall 4.0.}\footnote{\textit{Editors' note.} This recall has been
+spelled out, and \SGARefLink{sga3:x:remark:4-0-1}{Remark 4.0.1} has been added.}\enspace
+\emph{Let \(A\) be a henselian local ring, \(k\) its residue field,
+\(S=\operatorname{Spec}(A)\), \(S_0=\operatorname{Spec}(k)\), and \(\xi\) a
+geometric point of \(S_0\). Then the functor}
+\[
+  X\longmapsto X_0=X\times_S S_0
+\]
+\emph{is an equivalence between the category of étale coverings of \(S\) and
+the analogous category over \(S_0\) (cf.\ EGA IV\(_4\), \S~18.5).
+Consequently (cf.\ SGA 1, V),}
+\[
+  \pi_1(S_0,\xi)=\pi_1(S,\xi).
+\]
+
+Suppose in addition that \(A\) is noetherian, and write \(A'\) for its
+completion and \(S'=\operatorname{Spec}(A')\). Then \(A'\) is a complete
+noetherian local ring, hence henselian (\emph{loc.\ cit.}, 18.5.14), and the
+functor
+\[
+  X\longmapsto X'=X\times_S S'
+\]
+from the category of étale coverings of \(S\) to the analogous category over
+\(S'\) fits into a commutative diagram
+\[
+  \input{native_diagrams/exp10/004_etale_cover_equivalence_triangle}
+\]
+and is therefore also an equivalence of categories, whence
+\(\pi_1(S_0,\xi)=\pi_1(S',\xi)\).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:remark:4-0-1}Remark 4.0.1.}\enspace
+Since \(S\) is connected (\(A\) being local), it follows from \SGARefLink{sga3:x:corollary:1:2}{1.2} that the
+category of isotrivial groups of multiplicative type over \(S\) is equivalent
+to the analogous category over \(S_0\) (and also over \(S'\) if \(A\) is
+noetherian).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:lemma:4-1}Lemma 4.1.}\enspace
+\begingroup\itshape
+Let \(A\) be a henselian local ring with residue field \(k\),
+\(S=\operatorname{Spec}(A)\), and \(S_0=\operatorname{Spec}(k)\).
+
+\smallskip
+\noindent
+\(\mathrm{(i)}\) The functor
+\[
+  H\longmapsto H_0=H\times_S S_0
+\]
+is an equivalence between the category of finite groups of multiplicative type
+over \(S\) and the analogous category over \(S_0\).
+
+\smallskip
+\noindent
+\(\mathrm{(ii)}\) If, in addition, \(A\) is noetherian, writing \(A'\) for its
+completion and \(S'=\operatorname{Spec}(A')\), the functor
+\[
+  H\longmapsto H'=H\times_S S'
+\]
+is an equivalence between the category of finite groups of multiplicative type
+over \(S\) and the analogous category over \(S'\).
+\par\endgroup
+
+As in \SGARefLink{sga3:x:paragraph:4-0}{4.0}, the second assertion follows from the first; let us prove the first.
+We already know that the functor under consideration is essentially
+surjective: every group of multiplicative type \(H_0\) over
+\(S_0=\operatorname{Spec}(k)\), being finite and hence of finite type over
+\(k\), is isotrivial by \SGARefLink{sga3:x:proposition:1:4}{1.4}, and therefore comes from an isotrivial group of
+multiplicative type over \(S\), by \SGARefLink{sga3:x:remark:4-0-1}{4.0.1}.
+
+It remains to prove full faithfulness, that is, that for two finite groups
+\(G,H\) of multiplicative type over \(S\), the following map is bijective:
+\[
+  \operatorname{Hom}_{S\text{-gr.}}(G,H)
+  \longrightarrow
+  \operatorname{Hom}_{S_0\text{-gr.}}(G_0,H_0).
+\]
+In other words,\footnote{\textit{Editors' note.} What follows has been added.}
+if \(F\) denotes the \(S\)-functor
+\(\operatorname{Hom}_{S\text{-gr.}}(G,H)\), the natural map
+\[
+  \operatorname{Hom}_S(S,F)
+  \longrightarrow
+  \operatorname{Hom}_{S_0}(S_0,F_0)
+\]
+induced by the base change \(S_0\to S\) is bijective. In view of Recall \SGARefLink{sga3:x:paragraph:4-0}{4.0},
+it is enough to prove the following lemma.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:lemma:4-2}Lemma 4.2.}\enspace
+\emph{Let \(G,H\) be two finite groups of multiplicative type over a
+prescheme \(S\). Then
+\(F=\operatorname{Hom}_{S\text{-gr.}}(G,H)\) is representable by a finite
+étale scheme over \(S\).}
+
+\footnote{\textit{Editors' note.} The original has been expanded in what
+follows.}
+Let \(f:S'\to S\) be a faithfully flat quasi-compact morphism such that
+\(G'\) and \(H'\) are diagonalizable. It is enough to show that \(F_{S'}\) is
+represented by a prescheme \(X'\) étale and finite (hence affine) over \(S'\).
+Indeed, the descent datum on \(X'\) relative to \(f\) (cf.\ VIII 1.7.2) is then
+effective (by SGA 1, VIII 2.1), so there is an \(S\)-prescheme \(X\) such that
+\(X\times_S S'=X'\), representing \(F\), and \(X\) is étale and finite over
+\(S\) (cf.\ SGA 1, V 5.7 and EGA IV\(_4\), 17.7.3 (ii)).
+
+We may therefore suppose that \(G=D_S(M)\) and \(H=D_S(N)\), where \(M\) and
+\(N\) are finite commutative groups (cf.\ \SGARefLink{sga3:viii:proposition:2:1}{VIII 2.1} c)). Then
+\(K=\operatorname{Hom}_{\mathrm{gr.}}(N,M)\) is a finite abelian group and,
+by \SGARefLink{sga3:viii:corollary:1:5}{VIII 1.5}, there is an isomorphism
+\[
+  \operatorname{Hom}_{S\text{-gr.}}(G,H)\simeq K_S,
+\]
+which completes the proof of \SGARefLink{sga3:x:lemma:4-2}{4.2} and hence of \SGARefLink{sga3:x:lemma:4-1}{4.1}.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:proposition:4-3-0}Proposition 4.3.0.}\footnote{\textit{Editors' note.} This recall,
+which is used in the proof of 4.3, has been added (the reference to
+EGA IV\(_4\), 18.5.11 was not entirely satisfactory).}\enspace
+\begingroup\itshape
+Let \(S\) be a henselian local scheme, \(s\) its closed point,
+\(g:X\to S\) a morphism locally of finite type, and \(x\) an isolated point
+of the fiber \(X_s\).
+
+\smallskip
+\noindent
+\(\mathrm{(i)}\) Then \(\mathcal O_{X,x}\) is finite over
+\(\mathcal O_{S,s}\). (In particular, if the residue-field extension
+\(\kappa(x)/\kappa(s)\) is trivial, then
+\(\mathcal O_{S,s}\to\mathcal O_{X,x}\) is surjective, by Nakayama's lemma.)
+
+\smallskip
+\noindent
+\(\mathrm{(ii)}\) If \(g\) is also separated, then
+\(X'=\operatorname{Spec}(\mathcal O_{X,x})\) is an open and closed subscheme
+of \(X\); that is, there is a decomposition into a disjoint sum
+\(X=X'\amalg X''\).
+\par\endgroup
+
+\par\smallskip\noindent
+\emph{Proof.}
+By the local form of Zariski's Main Theorem found in [Pes66], or in
+[Ray70, Ch.~IV, Th.~1], \(x\) has an affine open neighborhood
+\(U=\operatorname{Spec}(B)\), of finite type and quasi-finite over
+\(A=\mathcal O_{S,s}\), and there is an open immersion
+\(U\hookrightarrow Y=\operatorname{Spec}(C)\), where \(C\) is a finite
+\(A\)-algebra. (N.B. To obtain this conclusion one may also use Chevalley's
+semicontinuity theorem (EGA IV\(_3\), 13.1.4), followed by the form of
+Zariski's Main Theorem given in \emph{loc.\ cit.}, 8.12.8.)
+
+Since \(A\) is henselian, \(Y\) is the disjoint sum of local schemes
+\(Y_1,\ldots,Y_n\), each finite over \(S\), and the points of \(Y\) above
+\(s\) are their closed points \(y_1,\ldots,y_n\). Thus \(x=y_i\) for some
+\(i\), and
+\(\mathcal O_{X,x}=\mathcal O_{U,x}=C_i\) is finite over \(A\). Moreover,
+\(X'=\operatorname{Spec}(C_i)\) is an open subscheme of \(U\), hence of
+\(X\).
+
+Suppose in addition that \(g\) is separated. Since \(X'\to S\) is finite
+(\(C_i\) being finite over \(A\)), so is the immersion \(X'\to X\)
+(cf.\ EGA II, 6.1.5 (v)); therefore \(X'\) is also closed in \(X\).
+\hfill\(\square\)
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:lemma:4-3}Lemma 4.3.}\enspace
+\begingroup\itshape
+Let \(A\) be a noetherian henselian local ring, \(A'\) its completion,
+\(S=\operatorname{Spec}(A)\), \(S'=\operatorname{Spec}(A')\), and \(s\) the
+closed point of \(S\). Let \(G,H\) be two \(S\)-preschemes in groups, with
+\(G\) of multiplicative type and of finite type over \(S\), and with \(H\)
+locally of finite type and separated over \(S\), \(H_s\) of multiplicative
+type, and \(H\) flat over \(S\) at the points of \(H_s\).
+
+Let \(G',H'\) be obtained from \(G,H\) by the base change \(S'\to S\). Then
+the following natural map is bijective:
+\par\endgroup
+\[
+  \operatorname{Hom}_{S\text{-gr.}}(G,H)
+  \xrightarrow{\ \sim\ }
+  \operatorname{Hom}_{S'\text{-gr.}}(G',H').
+\]
+
+Since \(S'\) is faithfully flat and quasi-compact over \(S\), SGA 1,
+VIII 5.2 shows that this map identifies the first member with the subset of
+the second formed by the \(u':G'\to H'\) for which the two inverse images
+\(u''_1,u''_2:G''\to H''\) of \(u'\) on
+\(S''=S'\times_S S'\), under the projections
+\(\operatorname{pr}_1,\operatorname{pr}_2:S''\to S'\), are equal.
+
+It therefore remains to prove that \(u''_1=u''_2\) for every homomorphism of
+\(S'\)-groups \(u':G'\to H'\). By the density theorem \SGARefLink{sga3:ix:corollary:4:8}{IX 4.8}, it is enough
+to prove that \(u''_1\) and \(u''_2\) agree on \({}_nG''\) for every integer
+\(n>0\). (N.B. Here the density theorem is needed essentially in a case
+where the base prescheme, namely \(S''\), is not locally noetherian.)
+
+Replacing \(G\) by \({}_nG\), this reduces us to the case in which
+\(n\cdot\operatorname{id}_G=0\) for some integer \(n>0\), and hence \(G\)
+is finite over \(S\). Likewise let \({}_nH\) be the kernel of the \(n\)-th
+power morphism \(\varphi_n\) on \(H\). (N.B. We have not assumed \(H\)
+commutative, so \(\varphi_n\), respectively \({}_nH\), need not be a group
+homomorphism, respectively a subgroup of \(H\).) Since \({}_nH\) is defined
+as the fiber product of \(\varphi_n:H\to H\) and the unit section
+\(\varepsilon:S\to H\), its formation commutes with every base change
+\(T\to S\):
+\[
+  ({}_nH)_T={}_n(H_T).
+\]
+
+\footnote{\textit{Editors' note.} The original has been expanded in what
+follows, on the basis of indications by M.\ Raynaud.}
+We use a right subscript \(m\) for reduction modulo
+\(\mathfrak m^{m+1}\), where \(\mathfrak m\) is the maximal ideal of \(A\).
+Then \(H_m\) is flat over \(S_m\) (because \(H\) is flat over \(S\) at the
+points of \(H_0\)); hence, by \SGARefLink{sga3:x:corollary:2:4}{2.4}, \(H_m\) is of multiplicative type and of
+finite type, since \(H_0\) is. Thus every
+\(({}_nH)_m={}_n(H_m)\) is a subgroup of \(H_m\), of multiplicative type,
+finite and flat over \(S_m\).
+
+In particular, \(({}_nH)_0={}_n(H_0)\) is finite over \(S_0\). Since \(S\)
+is henselian local and \({}_nH\), like \(H\), is locally of finite type and
+separated over \(S\), \SGARefLink{sga3:x:proposition:4-3-0}{Proposition 4.3.0} shows that the local rings of
+\({}_nH\) at the points of \(({}_nH)_0\) are finite over \(S\), and that
+there is a decomposition as a disjoint sum of open subsets
+\[
+  \tag{*}\label{sga3:x:lemma:4-3:equation:star}
+  {}_nH={}_nH^+\amalg{}_nH^-,
+\]
+where \(Z={}_nH^+\) is finite over \(S\), while \({}_nH^-\) lies above
+\(S-\{s\}\).
+
+Observe that for every finite \(S\)-scheme \(Y\) (such as \(G\)), every
+\(S\)-morphism \(Y\to{}_nH\) factors through \(Z\), and that the formation
+of the decomposition \((*)\) commutes with the base change \(S'\to S\),
+where \(S'=\operatorname{Spec}(A')\) and \(A'\) is the completion of \(A\).
+
+Then \(Z'=Z\times_S S'\) is finite over \(S'\), as is
+\(P'=Z'\times_{S'}Z'\). Let \(\nu\) denote the restriction to \(P'\) of
+the multiplication on \(H'\), and let \(\sigma\) be the automorphism of
+\(P'\) interchanging the two factors. Since \(P'\) is finite over \(S'\),
+while \(H'\) is separated and locally of finite type over \(S'\), EGA II
+5.4.3 and IV\(_1\) 1.1.3 show that \(Y=\nu(P')\) is a closed subscheme of
+\(H'\), universally closed and quasi-compact, hence of finite type and
+therefore proper over \(S'\). Moreover, \(Y\to S'\) has finite fibers
+(because \(P'\to S'\) does). Since \(S'\) is noetherian, \(Y\to S'\) is
+therefore finite (cf.\ EGA III, 4.4.2). Since \(Z'\subseteq Y\) and
+\(Z'_m=Y_m\) for every \(m\), Lemma IX 5.0 gives \(Z'=Y\); thus \(Z'\) is
+a subgroup of \(H'\). Similarly, the kernel
+\(K=\operatorname{Ker}(\nu,\nu\circ\sigma)\) is a closed subscheme of
+\(P'\) such that \(K_m=P'_m\) for every \(m\) (because
+\(Z'_m={}_nH_m\) is commutative). Hence \(K=P'\), that is, \(Z'\) is a
+commutative subgroup of \(H'\).
+
+On the other hand, every reduction \(Z'_m={}_nH_m\) is flat over \(S_m\).
+The ``local criterion for flatness'' (cf.\ EGA \(0_{\mathrm{III}}\),
+10.2.2, or [BAC], III \S~5, Example 1 and Th.~1) therefore shows that
+\(Z'\) is flat over \(S'\). Moreover,
+\(Z'_0={}_nH_0\) is a finite group of multiplicative type over \(S_0\),
+and hence isotrivial by \SGARefLink{sga3:x:proposition:1:4}{1.4}. It follows from \SGARefLink{sga3:x:corollary:3:8}{3.8} b) that \(Z'\) is of
+multiplicative type (and isotrivial) over \(S'\). Since \(S'\to S\) is
+faithfully flat and quasi-compact, the multiplication
+\(Z\times_S Z\to H\) factors through \(Z\) and makes \(Z\) a subgroup of
+\(H\), finite over \(S\) and of multiplicative type (because \(Z'\) is).
+
+Finally, by the observations made above concerning \((*)\), \(Z'\) is the
+``finite part'' of \({}_nH'\), and therefore \(u':G'\to{}_nH'\) takes its
+values in \(Z'\). Since \(Z\), as well as \(G={}_nG\), is finite over \(S\)
+and of multiplicative type, \SGARefLink{sga3:x:lemma:4-1}{Lemma 4.1} shows that \(u'\) comes from a
+\(u:G\to Z\), and hence \(u''_1=u''_2\). This completes the proof of \SGARefLink{sga3:x:lemma:4-3}{4.3}.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:lemma:4-4-0}Lemma 4.4.0.}\footnote{\textit{Editors' note.} This lemma, used
+several times below, has been added.}\enspace
+\begingroup\itshape
+Let \(A\) be a ring, \(S=\operatorname{Spec}(A)\), and let \(H\) be
+an \(S\)-group scheme of multiplicative type and of finite type,
+quasi-isotrivial (respectively isotrivial). Let \((A_i)\) be a filtered
+family of subrings of \(A\) whose inductive limit is \(A\), and put
+\(S_i=\operatorname{Spec}(A_i)\).
+
+Then there are an index \(i\) and an \(S_i\)-group scheme \(H_i\), of
+multiplicative type and of finite type, quasi-isotrivial (respectively
+isotrivial), such that \(H=H_i\times_{S_i}S\).
+\par\endgroup
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:theorem:4-4}Theorem 4.4.}\enspace
+\begingroup\itshape
+Let \(S\) be a prescheme, let \(H\) be an affine \(S\)-prescheme in
+groups of finite presentation over \(S\), and let \(s\in S\). Suppose:
+
+\smallskip
+\noindent
+\(\alpha)\) \(H\) is flat over \(S\) at the points of \(H_s\);
+
+\smallskip
+\noindent
+\(\beta)\) \(H_s\) is of multiplicative type.
+
+\smallskip
+Then there exist an étale morphism \(S'\to S\), a point \(s'\in S'\) above
+\(s\) such that \(\kappa(s')/\kappa(s)\) is trivial, and an open and closed
+subgroup \(G'\) of \(H'=H\times_S S'\), of multiplicative type and finite
+type, and isotrivial, such that \(G'_{s'}=H'_{s'}\).
+\par\endgroup
+
+\footnote{\textit{Editors' note.} The reductions that follow have been
+spelled out (the original said: ``One reduces at once to the case where
+\(S\) is the spectrum of a noetherian local ring \(A\), and where \(s\) is
+the closed point of \(S\).'')}
+\noindent\textbf{a)}
+Write provisionally \(T=\operatorname{Spec}(\mathcal O_{S,s})\), and let us
+show, by ``descent of the conclusions'', that one may reduce to the case
+\(S=T\). Suppose indeed that we have found an étale morphism \(g:T'\to T\),
+a point \(s'\in T'\), and a subgroup \(G'\) of \(H'=H_{T'}\) satisfying the
+conditions of the statement. Replacing \(T'\) by an affine open
+neighborhood of \(s'\), we may assume that \(T'\) is of finite presentation
+over \(T\).
+
+Since \(G'\) is isotrivial, there is a finite étale surjective morphism
+\(f:\widetilde T\to T'\) such that
+\(\widetilde G=G'\times_{T'}\widetilde T\) is isomorphic to
+\(D_{\widetilde T}(M)\), where \(M\) is a finitely generated abelian group.
+Since \(T'\), \(H\), \(\widetilde T\), and \(G'\) are of finite presentation
+over \(T=\operatorname{Spec}(\mathcal O_{S,s})\), and
+\(\mathcal O_{S,s}\) is the inductive limit of the subalgebras
+\(A_i=\mathcal O_S(S_i)\), where \(S_i\) runs through the affine open
+neighborhoods of \(s\) in \(S\), EGA IV\(_3\), 8.8.2 (and Exposé
+VI\(_{\mathrm B}\), 10.2 and 10.3) gives an index \(i\), \(S_i\)-preschemes
+\(S'_i,\widetilde T_i\) of finite presentation (respectively an
+\(S_i\)-prescheme in groups \(G'_i\) of finite presentation), and morphisms
+\[
+  g_i:S'_i\to S_i,\qquad f_i:\widetilde T_i\to S'_i,
+  \qquad
+  u_i:G'_i\to H\times_S S'_i,
+\]
+from which \(g,f\), respectively \(u:G'\to H'\), are obtained by base
+change. Taking \(i\) large enough, \(g_i\) is étale, \(f_i\) is finite
+étale surjective, and \(u_i\) is an open and closed immersion
+(cf.\ EGA IV, 8.10.5 and 17.7.8).
+
+Now \(\widetilde G\) comes from both
+\(\widetilde G_i=G'_i\times_{S'_i}\widetilde T_i\) and
+\(D_{\widetilde T_i}(M)\). By EGA IV\(_3\), 8.8.2 (i) (and
+VI\(_{\mathrm B}\), 10.2), there is an index \(j\geq i\) such that
+\(\widetilde G_j\simeq D_{\widetilde T_j}(M)\), so \(G'_j\) is an
+isotrivial group of multiplicative type. Let \(s'_j\) be the image of
+\(s'\) in \(S'_j\). Then the étale morphism
+\(S'_j\to S_j\hookrightarrow S\), the point \(s'_j\), and the open and
+closed subgroup \(G'_j\) of \(H\times_S S'_j\) satisfy the conditions of
+the statement. Thus we may assume that \(S=\operatorname{Spec}(A)\) is
+local, with closed point \(s\).
+
+\par\smallskip\noindent
+\textbf{b)}
+The ring \(A\) is the inductive limit of local rings \(A_i\) which are
+localizations of finitely generated \(\mathbb Z\)-algebras; put
+\(S_i=\operatorname{Spec}(A_i)\). Let us show that hypotheses \(\alpha\)
+and \(\beta\) ``descend'' to some \(A_i\). Since \(H\to S\) is of finite
+presentation, the set of \(x\in H\) at which \(H\) is flat over \(S\) is
+an open set \(W\). It contains \(H_s\) by hypothesis, and hence contains a
+quasi-compact open set \(V\) containing \(H_s\) (since the affine scheme
+\(H_s\) can be covered by finitely many affine open subsets contained in
+\(W\)). The open immersion \(\tau:V\hookrightarrow H\) is of finite
+presentation, so \(V\to S\) is also of finite presentation.
+
+By EGA IV\(_3\), 8.8.2 (and Exposé VI\(_{\mathrm B}\), 10.2 and 10.3),
+there are an index \(i\), an \(S_i\)-prescheme \(V_i\) of finite
+presentation (respectively an \(S_i\)-prescheme in groups \(H_i\) of
+finite presentation), and an \(S_i\)-morphism \(\tau_i:V_i\to H_i\), from
+which \(V,H,\tau\) are obtained by base change \(S\to S_i\). Taking \(i\)
+large enough, \(\tau_i\) is an open immersion and \(V_i\) is flat over
+\(S_i\), by EGA IV\(_3\), 8.10.5 and 11.2.6. Let \(s_i\) be the image of
+\(s\) in \(S_i\). Since the open immersion
+\((V_i)_{s_i}\hookrightarrow(H_i)_{s_i}\), after base change
+\(\kappa(s_i)\to\kappa(s)\), gives the equality \(V_s=H_s\), one already
+has \((V_i)_{s_i}=(H_i)_{s_i}\). Thus \(H_i\) is flat over \(S_i\) at the
+points of \((H_i)_{s_i}\). Finally, \((H_i)_{s_i}\) is of multiplicative
+type, because
+\[
+  H_s=(H_i)_{s_i}\otimes_{\kappa(s_i)}\kappa(s)
+\]
+is. Hence \((S_i,H_i,s_i)\) satisfies the hypotheses of \SGARefLink{sga3:x:theorem:4-4}{4.4}, and if the
+desired assertion holds for this triple, it also holds for \((S,H,s)\) by
+base change. We are reduced to the case in which \(A\) is local and
+noetherian. We now distinguish two cases.
+
+\par\smallskip\noindent
+\(\mathbf{1^\circ}\) \emph{\(A\) is local noetherian and henselian.}
+Let \(\widehat A\) be its completion,
+\(\widehat S=\operatorname{Spec}(\widehat A)\), and
+\(\widehat H=H\times_S\widehat S\). Applying \SGARefLink{sga3:x:theorem:3:7}{Theorem 3.7}, we find an
+isotrivial \(\widehat S\)-group \(\widehat G\) of multiplicative type and
+of finite type, together with a homomorphism
+\[
+  \widehat u:\widehat G\longrightarrow\widehat H
+\]
+which is both an open and a closed immersion, and which induces an
+isomorphism
+\[
+  \widehat u_0:\widehat G_0\xrightarrow{\ \sim\ }\widehat H_0.
+\]
+By \SGARefLink{sga3:x:remark:4-0-1}{Remark 4.0.1}, base change along \(\widehat S\to S\) induces an
+equivalence between the categories of isotrivial groups of multiplicative
+type over \(S\) and over \(\widehat S\). In particular, \(\widehat G\)
+comes from an isotrivial \(S\)-group \(G\) of multiplicative type and of
+finite type. By \SGARefLink{sga3:x:lemma:4-3}{4.3}, \(\widehat u\) comes from a homomorphism
+\[
+  u:G\longrightarrow H.
+\]
+Moreover, \(u\) is an open and closed immersion and induces an isomorphism
+\(u_0:G_0\to H_0\), since this is true after the faithfully flat
+quasi-compact base change \(\widehat S\to S\). This proves \SGARefLink{sga3:x:theorem:4-4}{4.4} in this case
+(taking \(S'=S\) and \(s'=s\) in its conclusion).
+
+\par\smallskip\noindent
+\(\mathbf{2^\circ}\) \emph{\(A\) is local noetherian.}
+The reduction to case \(1^\circ\) is immediate, by applying that case to
+the henselization \(A^h\) of \(A\). More precisely, one sees easily (using
+SGA 1, I \S~5%
+\begingroup
+\renewcommand{\thefootnote}{\(\ast\)}
+\footnote{Or EGA IV\(_4\), \S~18.6.}
+\addtocounter{footnote}{-1}
+\endgroup)
+that the local rings \(\mathcal O_{S',s'}\) of étale \(S\)-preschemes
+\(S'\), equipped with a point \(s'\) above \(s\) for which
+\(\kappa(s')/\kappa(s)\) is trivial, form a filtered inductive system whose
+inductive limit is a noetherian henselian local ring \(A^h\) (called the
+henselization of \(A\)); for details of this construction, due to Nagata in
+the normal case, see SGA 4, VIII \S~4. The standard arguments of
+EGA IV\(_3\), \S~8 then allow one, as in part a), to deduce from the known
+result over the inductive limit \(A^h\) of the \(\mathcal O_{S',s'}\) an
+analogous result over one of the pairs \((S',s')\). This proves \SGARefLink{sga3:x:theorem:4-4}{4.4}.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:4-5}Corollary 4.5.}\enspace
+\emph{Let \(S\) be a prescheme and \(H\) an \(S\)-prescheme in groups of
+multiplicative type and of finite type. Then \(H\) is quasi-isotrivial;
+that is, \(H\) is split by an étale surjective morphism \(S'\to S\).}
+
+Indeed, let \(s\in S\). By \SGARefLink{sga3:x:theorem:4-4}{4.4}, there are an étale morphism \(S'\to S\), a
+point \(s'\in S'\) above \(s\) with \(\kappa(s)=\kappa(s')\), and an
+isotrivial subgroup \(G'\) of \(H'\), of multiplicative type and of finite
+type, such that \(G'_{s'}=H'_{s'}\). Since \(G'\) and \(H'\) are of
+multiplicative type and finite type, \SGARefLink{sga3:ix:corollary:2:9}{IX 2.9} gives an open neighborhood
+\(U'\) of \(s'\) such that \(G'|_{U'}=H'|_{U'}\).
+
+\footnote{\textit{Editors' note.} The original has been expanded in what
+precedes and what follows.}
+Suppose in addition that \(S\) is henselian local, with closed point \(s\).
+By EGA IV\(_4\), 18.5.11 b), there is a section \(\sigma\) of \(S'\to S\)
+such that \(\sigma(s)=s'\). (N.B. One can see directly that
+\(B=\mathcal O_{S',s'}\) equals \(A=\mathcal O_{S,s}\) as follows. By
+4.3.0 (i), \(B\simeq A/I\). Since \(B\) is a flat \(A\)-algebra of finite
+presentation, \(I\) is a finitely generated ideal (cf.\ EGA IV\(_1\),
+1.4.7), and \(I=I\mathfrak m\), where \(\mathfrak m\) is the maximal ideal
+of \(A\); hence \(I=0\).) Thus \(H\) is already isotrivial. We obtain:
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:4-6}Corollary 4.6.}\enspace
+\begingroup\itshape
+Let \(A\) be a henselian local ring, \(k\) its residue field, and
+\(\pi\) the topological Galois group of an algebraic closure of \(k\).
+
+\smallskip
+\noindent
+\(\mathrm{(i)}\) Every group of multiplicative type and of finite type over
+\(S=\operatorname{Spec}(A)\) is isotrivial.
+
+\smallskip
+\noindent
+\(\mathrm{(ii)}\) The category of these groups over \(S\) is equivalent,
+through the functor \(H\mapsto H\otimes_A k\), to the analogous category
+over \(S_0=\operatorname{Spec}(k)\). It is therefore anti-equivalent, by
+\SGARefLink{sga3:x:proposition:1:4}{1.4}, to the category of Galois modules under \(\pi\) which are finitely
+generated as \(\mathbb Z\)-modules.
+\par\endgroup
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:4-7}Corollary 4.7.}\enspace
+\begingroup\itshape
+Under the hypotheses of \SGARefLink{sga3:x:theorem:4-4}{4.4}, suppose in addition that one of the
+following conditions holds:
+
+\smallskip
+\noindent
+a) for every generization \(t\) of \(s\), \(H_t\) is of multiplicative
+type and has the same type as \(H_s\);
+
+\smallskip
+\noindent
+b) \(H\) is commutative and the \({}_nH\), \(n>0\), are finite over \(S\)
+in a neighborhood of \(s\);
+
+\smallskip
+\noindent
+c) for every generization \(t\) of \(s\), the fiber \(H_t\) is connected.
+
+\smallskip
+Then there is an open neighborhood \(U\) of \(s\) such that \(H|_U\) is of
+multiplicative type.
+\par\endgroup
+
+Since an étale morphism is open, it is enough to show, with the notation of
+the conclusion of \SGARefLink{sga3:x:theorem:4-4}{4.4}, that there is an open neighborhood \(U'\) of \(s'\)
+such that \(G'|_{U'}=H'|_{U'}\). Put
+\(S''=\operatorname{Spec}(\mathcal O_{S',s'})\). Since \(G'\) and \(H'\)
+are of finite presentation over \(S'\), EGA IV\(_3\), 8.8.2 reduces the
+matter to showing that \(G''=H''\). We may therefore assume that \(S=S''\);
+then conditions a), b), c) become those of the following lemma, whose proof
+is the same as that of \SGARefLink{sga3:x:corollary:3:8}{3.8}.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:lemma:4-7-1}Lemma 4.7.1.}\enspace
+\begingroup\itshape
+Let \(S\) be a local scheme with closed point \(s\), let \(H\) be an
+\(S\)-group scheme of finite type, and let \(G\) be an open and closed
+subgroup of \(H\), of multiplicative type, such that \(G_s=H_s\). Suppose
+in addition that one of the following conditions holds:
+
+\smallskip
+\noindent
+a) the fibers of \(H\) are of multiplicative type and have the same type as
+\(H_s\);
+
+\smallskip
+\noindent
+b) \(H\) is commutative and the \({}_nH\), \(n>0\), are finite over \(S\);
+
+\smallskip
+\noindent
+c) the fibers of \(H\) are connected.
+
+\smallskip
+Then \(G=H\).
+\par\endgroup
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:4-8}Corollary 4.8.}\enspace
+\begingroup\itshape
+Let \(S\) be a prescheme and let \(H\) be an affine \(S\)-prescheme
+in groups, flat and of finite presentation over \(S\), with fibers of
+multiplicative type.
+
+For \(H\) to be of multiplicative type, it is necessary and sufficient that
+it satisfy one of the following two conditions (which are equivalent under
+the preceding hypotheses):
+
+\smallskip
+\noindent
+\SGAInlineRefTarget{sga3:x:corollary:4-8:item:a}a) the type of \(H_s\) (cf.\ \SGARefLink{sga3:ix:definition:1:4}{IX 1.4}) is a locally constant function of
+\(s\in S\);
+
+\smallskip
+\noindent
+\SGAInlineRefTarget{sga3:x:corollary:4-8:item:b}b) \(H\) is commutative and the \({}_nH\), \(n>0\), are finite over \(S\).
+
+\smallskip
+Moreover, a) and b) are implied by:
+
+\smallskip
+\noindent
+c) the fibers of \(H\) are connected.
+\par\endgroup
+
+In particular:
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:4-9}Corollary 4.9.}\enspace
+\begingroup\itshape
+Let \(S\) be a prescheme and \(H\) an \(S\)-prescheme in groups,
+flat and of finite presentation over \(S\). Suppose in addition that \(H\)
+is affine over \(S\) and has connected fibers.\footnote{\textit{Editors'
+note.} This result is generalized in \SGARefLink{sga3:x:theorem:8-1}{8.1}: it is enough to suppose that the
+fibers of \(H\) are affine and connected.} If \(s\in S\) is such that
+\(H_s\) is a torus, there is an open neighborhood \(U\) of \(s\) such that
+\(H|_U\) is a torus.
+
+In particular, if all the fibers of \(H\) are tori, \(H\) is a torus.
+\par\endgroup
+
+\section*{\SGAInlineRefTarget{sga3:x:section:5}5. Scheme of homomorphisms from one group of multiplicative type to
+another. Twisted constant groups and groups of multiplicative type}
+\phantomsection
+\addcontentsline{toc}{section}{5. Scheme of homomorphisms from one group of
+multiplicative type to another. Twisted constant groups and groups of
+multiplicative type}
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:definition:5-1}Definition 5.1.}\enspace
+\begingroup\itshape
+a) Let \(S\) be a prescheme and \(R\) a prescheme in groups over
+\(S\). We say that \(R\) is a \emph{twisted constant group} over \(S\) if
+it is locally isomorphic, for the faithfully flat quasi-compact topology,
+to a constant group scheme, that is, one of the form \(M_S\) for an
+ordinary group \(M\).
+
+\smallskip
+\noindent
+b) A twisted constant group \(R\) over \(S\) is said to be
+\emph{quasi-isotrivial}, respectively \emph{isotrivial}, respectively
+\emph{locally isotrivial}, respectively \emph{locally trivial},
+respectively \emph{trivial}, if in the preceding definition one can replace
+the faithfully flat quasi-compact topology by the étale topology,
+respectively the global finite étale topology, respectively the finite
+étale topology, respectively the Zariski topology, respectively the
+coarsest (or ``chaotic'') topology; cf.\ \SGARefLink{sga3:ix:definition:1:1}{IX 1.1} and \SGARefLink{sga3:x:corollary:1:2}{1.2}, and \SGARefLink{sga3:iv:subsection:6:6}{IV 6.6}.
+
+Thus, to say that \(R\) is quasi-isotrivial (respectively isotrivial) means
+that there is an étale surjective (respectively also finite) morphism
+\(S'\to S\) such that \(R'=R\times_S S'\) is a constant group over \(S'\);
+to say that \(R\) is trivial means that \(R\) is a constant group.
+
+\smallskip
+\noindent
+c) As in \SGARefLink{sga3:viii:corollary:1:4}{VIII 1.4}, one defines the \emph{type} of a twisted constant group
+\(R\) over \(S\) at a point \(s\in S\). It is an isomorphism class of
+ordinary groups and, as \(s\) varies, is a locally constant function of
+\(s\), hence a constant function if \(S\) is connected. We also say that
+\(R\) is ``of type \(M\)'' if all the fibers of \(R\) are of type \(M\).
+
+One should beware that \(R\) is quasi-compact over \(S\) only if it is
+finite over \(S\), that is, only if its type at every \(s\in S\) is a
+finite group.\footnote{\textit{Editors' note.} See \SGARefLink{sga3:x:lemma:5-12}{Lemma 5.12} below.}
+
+\smallskip
+\noindent
+d) The case of greatest interest to us is that in which \(R\) is
+commutative. We then say that \(R\) is \emph{finitely generated} if its
+type at every point \(s\in S\) is given by a finitely generated
+\(\mathbb Z\)-module. This notion must not be confused with the scheme-
+theoretic notion ``\(R\) of finite type over \(S\)'' (cf.\ above).
+\par\endgroup
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:remark:5-2}Remark 5.2.}\enspace
+We shall also have to consider \(S\)-preschemes \(X\) which are locally
+isomorphic, for the faithfully flat quasi-compact topology, to constant
+preschemes, independently of any group structure. We then call \(X\) a
+\emph{twisted constant bundle} over \(S\), and extend to these preschemes
+the terminology introduced in \SGARefLink{sga3:x:definition:5-1}{5.1}. Of course, when \(X\) is endowed with an
+\(S\)-group structure, the meaning of the expressions ``twisted constant'',
+``isotrivial'', and so on changes according as one does or does not take the
+group structure over \(S\) into account. The same applies when \(X\)
+carries any other kind of algebraic structure (for example, that of a
+Galois principal bundle, to be considered in the next section).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:proposition:5-3}Proposition 5.3.}\enspace
+\begingroup\itshape
+Let \(R\) be a commutative twisted constant group over \(S\).
+
+\smallskip
+\noindent
+\(\mathrm{(i)}\) The functor \(H=D_S(R)\) (cf.\ VIII 1) is representable
+and is a group of multiplicative type over \(S\).
+
+\smallskip
+\noindent
+\(\mathrm{(ii)}\) For every \(s\in S\), the type of \(R\) at \(s\) equals
+the type of \(H\) at \(s\).
+
+\smallskip
+\noindent
+\(\mathrm{(iii)}\) The group \(R\) is quasi-isotrivial (respectively
+isotrivial, respectively trivial, respectively locally isotrivial,
+respectively locally trivial) if and only if \(H\) is so.
+\par\endgroup
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:remark:5-3-1}Remark 5.3.1.}\footnote{\textit{Editors' note.} This remark, which
+appeared after the proof in the original, has been moved here.}\enspace
+One may be concerned that in \SGARefLink{sga3:x:proposition:5-3}{5.3} the word ``type'' is being used in two
+different senses, according as it refers to \(R\) or to \(H\). Fortunately,
+when an \(S\)-prescheme in groups \(G\) is both a twisted constant group
+and a group of multiplicative type, its type in either sense is the same,
+thanks to the fact that an ordinary finite commutative group is isomorphic
+to its dual.
+
+\par\smallskip\noindent
+\emph{Proof.}
+Covering families for the faithfully flat quasi-compact topology are
+families of effective descent for the fibered category of affine
+preschemes in groups over variable base preschemes (SGA 1, VIII 2.1).
+Consequently \(H\) is representable (and affine over \(S\)), since this is
+true ``locally''\footnote{\textit{Editors' note.} Cf.\ VIII \S~1.7.}
+(when \(R\) is constant, \(H\) is a diagonalizable group).
+
+That \(H\) is of multiplicative type is then immediate from the definition,
+as is the equality of the types of \(R\) and \(H\) at \(s\in S\). Finally,
+since
+\[
+  H_{S'}=D_{S'}(R_{S'}),
+\]
+the last assertion reduces to the ``trivial'' case, namely to checking that
+\(R\) is trivial if and only if \(H\) is trivial; this follows at once from
+the biduality theorem \SGARefLink{sga3:viii:theorem:1:2}{VIII 1.2}. \hfill\(\square\)
+
+To complete the description of the correspondence between twisted constant
+groups and groups of multiplicative type, one must start with a group of
+multiplicative type \(H\) and study \(R=D_S(H)\). If \(R\) is
+representable, it is plainly a twisted constant group and
+\(H\simeq D_S(R)\). In other words:
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:scholium:5-4-0}Scholium 5.4.0.}\enspace
+\emph{The functor \(R\mapsto D_S(R)\) is an
+anti-equivalence\footnote{\textit{Editors' note.} ``Equivalence'' has been
+corrected to ``anti-equivalence''.} between the category of twisted
+constant groups over \(S\) and the category of groups of multiplicative
+type \(H\) over \(S\) for which \(D_S(H)\) is representable.}
+
+I do not know whether this condition on \(H\) is always satisfied. We shall
+see, however, that it is satisfied when \(H\) is quasi-isotrivial, and in
+particular when \(H\) is of finite type.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:lemma:5-4}Lemma 5.4.}\enspace
+\begingroup\itshape
+Let \(S'\to S\) be a faithfully flat morphism locally of finite
+presentation, and let \(X'\) be an \(S'\)-prescheme separated, locally of
+finite presentation, and locally quasi-finite over \(S'\).
+
+Then every descent datum on \(X'\) relative to \(S'\to S\) is effective:
+there are an \(S\)-prescheme \(X\) and an \(S'\)-isomorphism
+\(X\times_S S'\simeq X'\) compatible with the descent datum.
+\par\endgroup
+
+We have already observed that the hypothesis on \(S'\to S\) implies that it
+is a covering morphism for the faithfully flat quasi-compact topology
+(\SGARefLink{sga3:iv:proposition:6:3:1:item:iv:01}{IV 6.3.1 (iv)}), and hence \emph{a fortiori} a morphism of effective
+descent.
+
+When \(X'\to S'\) is quasi-compact, and hence of finite presentation and
+quasi-finite, it is a quasi-affine morphism (cf.\ SGA 1, VIII
+6.2\footnote{\textit{Editors' note.} When \(S'\) is locally noetherian;
+EGA IV\(_3\), 8.11.2 in general.}), and effectivity follows in this case
+from SGA 1, VIII 7.9. In the general case, one reduces at once to the case
+where \(S\) and \(S'\) are affine. Cover \(X'\) by affine open subsets
+\(U'_i\), and let \(V'_i\) be the saturation of \(U'_i\) under the
+equivalence relation on \(X'\) defined by the descent datum:
+\[
+  V'_i=q_2\bigl(q_1^{-1}(U'_i)\bigr).
+\]
+Here \(q_1,q_2\) are the two projections to \(X'\) of
+\[
+  X''_1=X'\times_{S'}(S'',p_1)
+  \quad\text{and}\quad
+  X''_2=X'\times_{S'}(S'',p_2),
+\]
+respectively: \(q_1=\operatorname{pr}_1\), and \(q_2\) is obtained from the
+first projection of \(X''_2\) by means of the given descent isomorphism
+\(X''_1\simeq X''_2\). Since \(S'\to S\) is faithfully flat,
+quasi-compact, and locally of finite presentation, the same is true of
+\[
+  p_1:S''=S'\times_S S'\longrightarrow S',
+\]
+and hence of \(q_1,q_2\). These are consequently open morphisms
+(SGA 1, IV 6.6\footnote{\textit{Editors' note.} When \(S'\) is locally
+noetherian; EGA IV\(_2\), 2.4.6 in general.}). Therefore \(V'_i\) is an
+open quasi-compact part of \(X'\). By the case already proved, the induced
+descent data on the \(V'_i\) are effective; hence so is the descent datum on
+\(X'\) (SGA 1, VIII 7.2).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:5-5}Corollary 5.5.}\enspace
+\emph{A faithfully flat morphism of finite presentation \(S'\to S\) is a
+morphism of effective descent for the fibered category of twisted constant
+groups over variable base preschemes.}
+
+Indeed, this amounts to the effectivity assertion of \SGARefLink{sga3:x:lemma:5-4}{5.4} when \(X'\) is a
+constant \(S'\)-prescheme.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:theorem:5-6}Theorem 5.6.}\enspace
+\begingroup\itshape
+Let \(S\) be a prescheme, and let \(G,H\) be two quasi-isotrivial
+\(S\)-preschemes in groups of multiplicative type, with
+\(G\)\footnote{\textit{Editors' note.} \(H\) has been corrected to \(G\).}
+of finite type.
+
+Then \(\operatorname{Hom}_{S\text{-gr.}}(H,G)\) is representable and is a
+quasi-isotrivial twisted constant group over
+\(S\);\footnote{\textit{Editors' note.} What follows has been added.} for
+every \(s\in S\), if the type of \(G\) at \(s\) is \(M\) and the type of
+\(H\) at \(s\) is \(N\), then the type of
+\(\operatorname{Hom}_{S\text{-gr.}}(H,G)\) is
+\(\operatorname{Hom}_{\mathrm{gr.}}(M,N)\).
+\par\endgroup
+
+The proof proceeds as in \SGARefLink{sga3:x:lemma:4-2}{4.2}, using the fact that the assertion is known
+(\SGARefLink{sga3:viii:corollary:1:5}{VIII 1.5}) when \(G\) and \(H\) are trivial. The required effectivity
+criterion is provided by \SGARefLink{sga3:x:corollary:5-5}{5.5}, applied to an étale surjective morphism
+\(S'\to S\).
+
+Taking \(G=\mathbb G_{m,S}\), in particular, gives:
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:5-7}Corollary 5.7.}\enspace
+\begingroup\itshape
+\(\mathrm{(i)}\) Let \(H\) be a quasi-isotrivial \(S\)-group of
+multiplicative type. Then the \(S\)-group \(D_S(H)\) is representable and
+is a quasi-isotrivial twisted constant group over \(S\).
+
+\smallskip
+\noindent
+\(\mathrm{(ii)}\) The functors \(R\mapsto D_S(R)\) and
+\(H\mapsto D_S(H)\) are mutually quasi-inverse anti-equivalences between
+the category of quasi-isotrivial twisted constant \(S\)-groups and the
+category of quasi-isotrivial \(S\)-groups of multiplicative type.
+
+\smallskip
+\noindent
+\(\mathrm{(iii)}\) These functors induce anti-equivalences between the
+subcategories of isotrivial, respectively locally isotrivial, respectively
+locally trivial, respectively trivial groups.
+\par\endgroup
+
+The last assertion is included only for reference, since it is already
+contained in \SGARefLink{sga3:x:proposition:5-3}{5.3}.
+
+Moreover, by \SGARefLink{sga3:x:corollary:4-5}{4.5} every \(S\)-group of multiplicative type and of finite type
+is quasi-isotrivial. \SGARefLink{sga3:x:theorem:5-6}{Theorem 5.6} therefore gives:
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:5-8}Corollary 5.8.}\enspace
+\emph{Let \(S\) be a prescheme, and let \(G,H\) be two \(S\)-preschemes in
+groups of multiplicative type and of finite type. Then
+\(\operatorname{Hom}_{S\text{-gr.}}(H,G)\) is representable and is a
+finitely generated quasi-isotrivial twisted constant \(S\)-group.}
+
+Also, in \SGARefLink{sga3:x:proposition:5-3}{5.3}, \(R\) is finitely generated if and only if
+\(H=D_S(R)\) is of finite type (\SGARefLink{sga3:ix:proposition:2:1}{IX 2.1} b)). By \SGARefLink{sga3:x:corollary:4-5}{4.5}, \(H\) is then
+quasi-isotrivial, and hence so is \(R\). Thus:
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:5-9}Corollary 5.9.}\enspace
+\emph{The functors of \SGARefLink{sga3:x:corollary:5-7}{5.7} induce mutually quasi-inverse anti-equivalences
+between the category of \(S\)-groups \(H\) of multiplicative type and of
+finite type and the category of finitely generated twisted constant
+\(S\)-groups \(R\). Moreover, every such group \(R\) is quasi-isotrivial.}
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:5-10}Corollary 5.10.}\enspace
+\begingroup\itshape
+Let \(H,G\) be two \(S\)-preschemes in groups of multiplicative type
+and of finite type.
+
+\smallskip
+\noindent
+\(\mathrm{(i)}\)
+\(\operatorname{Isom}_{S\text{-gr.}}(H,G)\) is representable by an open and
+closed subprescheme of \(\operatorname{Hom}_{S\text{-gr.}}(H,G)\), and is
+a twisted constant \(S\)-prescheme.
+
+\smallskip
+\noindent
+\(\mathrm{(ii)}\) In particular,
+\(\operatorname{Aut}_{S\text{-gr.}}(H)\) is representable and is a twisted
+constant \(S\)-group, in general noncommutative.
+\par\endgroup
+
+This follows from \SGARefLink{sga3:x:corollary:5-8}{5.8} and \SGARefLink{sga3:viii:corollary:1:6}{VIII
+1.6}.\footnote{\textit{Editors' note.} This reference should be corrected by
+treating the functor \(\operatorname{Isom}_{S\text{-gr.}}(H,G)\) in an
+addition 1.5.1 to VIII \ldots}
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:paragraph:5-11-0}Recall 5.11.0.}\footnote{\textit{Editors' note.} This recall, used
+several times below, has been added. See also EGA I, 6.1.9; note, however,
+that the proof in \emph{loc.\ cit.} seems unnecessarily complicated.}\enspace
+Recall that if \(X\) is a locally noetherian prescheme, its connected
+components (which are always closed) are open. Indeed, let \(C\) be a
+connected component of \(X\), let \(x\in C\), and let \(U\) be a noetherian
+open neighborhood of \(x\). The prescheme \(U\) has only finitely many
+connected components, so the connected component \(U_x\) of \(x\) in
+\(U\) is open in \(U\), hence in \(X\). Since \(U_x\subseteq C\), this
+shows that \(C\) is open in \(X\).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:proposition:5-11}Proposition 5.11.}\enspace
+\begingroup\itshape
+Let \(S\) be a prescheme, let \(R\) be a commutative twisted constant
+group over \(S\), and let \(H=D_S(R)\) be the group of multiplicative type
+that it defines. Consider the following conditions:
+
+\smallskip
+\noindent
+\(\mathrm{(i)}\) \(H\) is isotrivial (that is, \(R\) is isotrivial);
+
+\smallskip
+\noindent
+\SGAInlineRefTarget{sga3:x:proposition:5-11:item:ii}\(\mathrm{(ii)}\) \(R\) is a union of open and closed subpreschemes \(R_i\)
+which are quasi-compact over \(S\) (and then necessarily finite over \(S\));
+
+\smallskip
+\noindent
+\(\mathrm{(iii)}\) the connected components of \(R\) are finite over \(S\).
+
+\smallskip
+\noindent
+a) Then \(\mathrm{(i)}\Rightarrow\mathrm{(ii)}
+\Rightarrow\mathrm{(iii)}\).\footnote{\textit{Editors' note.} Compare the
+examples of \SGARefLink{sga3:x:paragraph:1:6}{1.6} \ldots}
+
+\smallskip
+\noindent
+b) If \(S\) is locally noetherian, then
+\(\mathrm{(i)}\Leftrightarrow\mathrm{(ii)}
+\Leftrightarrow\mathrm{(iii)}\).
+
+\smallskip
+\noindent
+c) Finally, if \(R\) is finitely generated (that is, if \(H\) is of finite
+type over \(S\)), then \(\mathrm{(i)}\Leftrightarrow\mathrm{(ii)}\), at
+least when \(S\) is quasi-compact or when its connected components are
+open.
+\par\endgroup
+
+First decompose \(S\) as a prescheme sum of preschemes \(S_i\) on each of
+which \(H\) has constant type (cf.\ \SGARefLink{sga3:ix:remark:1:4:1}{IX 1.4.1}). We are reduced to the case
+where \(H\), and therefore \(R\), has constant type \(M\). We shall use:
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:lemma:5-12}Lemma 5.12.}\enspace
+\emph{Let \(S\) be a prescheme and \(R\) a twisted constant prescheme over
+\(S\). Every closed subprescheme \(Z\) of \(R\) which is quasi-compact
+over \(S\) is finite over \(S\).}
+
+Indeed, we reduce to the case where \(R\) is constant, hence of the form
+\(I_S\) for a set \(I\). It is the filtered increasing union of the
+\(J_S\), where \(J\) runs through the finite subsets of \(I\). We may also
+assume that \(S\) is affine. Then \(Z\) is quasi-compact, and is therefore
+contained in some \(J_S\). Since \(J_S\) is finite over \(S\), so is \(Z\).
+
+\SGARefLink{sga3:x:lemma:5-12}{Lemma 5.12} already proves the parenthetical assertion in
+\SGARefLink{sga3:x:proposition:5-11:item:ii}{5.11 (ii)}.\footnote{\textit{Editors' note.} The original has been expanded
+in what follows.} The implication
+\(\mathrm{(ii)}\Rightarrow\mathrm{(iii)}\) is then clear, since the
+connected components of \(R\) are closed. If \(S\) is locally noetherian,
+they are open and closed by \SGARefLink{sga3:x:paragraph:5-11-0}{5.11.0} (\(R\) being étale and hence locally of
+finite type over \(S\)); this gives
+\(\mathrm{(iii)}\Rightarrow\mathrm{(ii)}\) in that case.
+
+Let us prove \(\mathrm{(i)}\Rightarrow\mathrm{(ii)}\). Choose a finite
+étale surjective morphism \(S'\to S\) which splits \(H\), and hence \(R\)
+(cf.\ \SGARefLink{sga3:x:proposition:5-3}{5.3}), so that
+\[
+  R'\simeq M_{S'}=\coprod_{m\in M}R'_m,
+\]
+where the \(R'_m\) are disjoint open subsets of \(R'\), each
+\(S'\)-isomorphic to \(S'\). Let \(g:R'\to R\) be the projection. It is a
+finite étale surjective morphism, and hence both open and closed. The
+subsets \(R_m=g(R'_m)\) are therefore open and closed parts of \(R\), and
+are plainly quasi-compact over \(S\), since the \(R'_m\) are.
+
+Finally, suppose that \(H\) is of finite type over \(S\), and let us prove
+\(\mathrm{(ii)}\Rightarrow\mathrm{(i)}\). If the connected components of
+\(S\) are open, the matter reduces at once to the case where \(S\) is
+connected; thus we may assume that \(S\) is quasi-compact or connected.
+Since \(M\) is finitely generated, write
+\[
+  M=\mathbb Z^r\times N,
+\]
+where \(r\geq 0\) and \(N\) is a finite abelian group. Let
+\(G=D_S(M)\), and consider the preschemes
+\[
+  P=\operatorname{Isom}_{S\text{-gr.}}(H,G)
+  \subset
+  \operatorname{Hom}_{S\text{-gr.}}(H,G)=Q
+\]
+(cf.\ \SGARefLink{sga3:x:corollary:5-8}{5.8} and \SGARefLink{sga3:x:corollary:5-10}{5.10}). There are isomorphisms
+\begin{align*}
+  Q
+  &\simeq \operatorname{Hom}_{S\text{-gr.}}(M_S,R)\\
+  &\simeq
+    \operatorname{Hom}_{S\text{-gr.}}(\mathbb Z^r_S,R)
+    \times
+    \operatorname{Hom}_{S\text{-gr.}}(N_S,R)\\
+  &\simeq R^r\times E,
+\end{align*}
+where
+\[
+  E=\operatorname{Hom}_{S\text{-gr.}}(N_S,R)
+\]
+is finite over \(S\).\footnote{\textit{Editors' note.} Indeed, it is a
+twisted constant group of type \(\operatorname{End}_{\mathrm{gr.}}(N)\);
+cf.\ \SGARefLink{sga3:x:theorem:5-6}{5.6} and \SGARefLink{sga3:x:corollary:5-8}{5.8}.} It follows that \(Q\) is a union of open and closed
+subpreschemes \(Q_i\) finite over \(S\). Hence \(P\) is a union of the open
+and closed subpreschemes \(P_i=P\cap Q_i\), finite over \(S\). Since they
+are étale over \(S\), their images in \(S\) are open and closed parts
+\(S_i\), and these cover \(S\). If \(S\) is connected or quasi-compact,
+there is a finite set of indices \(i\) for which the \(S_i\) cover \(S\).
+Let \(S'\) be the union of the corresponding \(P_i\). Then
+\(S'\to S\) is finite étale surjective. Putting
+\[
+  P'=P\times_S S'
+     =\operatorname{Isom}_{S'\text{-gr.}}(H',G'),
+\]
+we see that \(P'\) has a section over \(S'\); hence there is an isomorphism
+of \(S'\)-groups
+\[
+  H'=H\times_S S'
+  \xrightarrow{\ \sim\ }
+  G'=G\times_S S'=D_{S'}(M).
+\]
+Thus \(S'\) splits \(H\), completing the proof of
+\SGARefLink{sga3:x:proposition:5-11}{5.11}.\footnote{\textit{Editors' note.} This is modulo verifying
+\(\mathrm{(ii)}\Rightarrow\mathrm{(i)}\) when \(S\) is locally noetherian
+and \(R\) is not finitely generated \ldots}
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:remark:5-11-bis}Remark 5.11 bis.}\enspace
+If \(H\) is of finite type over \(S\) and of constant type, one can also
+give the following isotriviality criterion, with no restriction on \(S\):
+\(H=D_S(R)\) is isotrivial if and only if \(R\) is the union of a sequence
+of open and closed parts finite over \(S\).\footnote{\textit{Editors'
+note.} To spell this out: since \(M\) is a finitely generated
+\(\mathbb Z\)-module, it is countable, and the proof of
+\SGARefLink{sga3:x:proposition:5-11}{5.11} \(\mathrm{(i)}\Rightarrow\mathrm{(ii)}\) shows that \(R\) is the
+union of a countable family of open and closed parts finite over \(S\).
+The converse would have to be checked \ldots}
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:lemma:5-13}Lemma 5.13.}\enspace
+\emph{Let \(S\) be a locally noetherian connected prescheme, let \(P\) be
+a quasi-isotrivial twisted constant \(S\)-prescheme, and let \(Z\) be an
+open and closed part of \(P\). If \(Z_s\) is finite for some \(s\in S\),
+then \(Z\) is finite over \(S\).}
+
+First, do not assume \(S\) connected. Let \(U\) be the set of \(s\in S\)
+for which \(Z_s\) is finite. We shall prove that \(U\) is both open and
+closed, and that \(Z|_U\) is finite over \(U\). This statement is
+essentially equivalent to \SGARefLink{sga3:x:lemma:5-13}{5.13}, but has the advantage of being local in
+\(S\) for the étale topology, say. We are therefore reduced to the case
+where \(P\) is constant, of the form \(I_S\) for a set \(I\). (N.B. The
+locally noetherian hypothesis is preserved by étale base change; this is
+where the quasi-isotriviality of \(P\) over \(S\) is used.)
+
+We may also suppose that \(S\) is connected, since its connected components
+are open (\(S\) being locally noetherian). Then necessarily \(Z=J_S\) for
+a subset \(J\subseteq I\), and consequently \(U=\varnothing\) or \(U=S\)
+according as \(J\) is infinite or finite. This proves the assertion.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:paragraph:5-14-0}Recalls 5.14.0.}\footnote{\textit{Editors' note.} The original
+treated in \SGARefLink{sga3:x:corollary:5-14}{5.14} the case where \(S\) is locally noetherian and normal, and
+observed in Remark 5.15 that the argument applies more generally when \(S\)
+is merely geometrically unibranch rather than normal. The statement of \SGARefLink{sga3:x:corollary:5-14}{5.14}
+(and also \SGARefLink{sga3:x:theorem:5-16}{5.16}) has accordingly been modified, and these ``recalls'', drawn
+from EGA IV\(_4\), 18.10.6 and 18.10.7, have been added; they show that the
+proof of 5.14 applies verbatim to the geometrically unibranch case.}\enspace
+Let \(S\) be a locally noetherian prescheme and let \(\widetilde S\) be the
+normalization of \(S_{\mathrm{red}}\) (cf.\ EGA II, 6.3.8). Recall that
+\(S\) is said to be \emph{geometrically unibranch} (cf.\ EGA
+\(0_{\mathrm{IV}}\), \S~23.2 and IV\(_2\), \S~6.15) if the canonical
+morphism \(\widetilde S\to S\) is radicial, and hence a universal
+homeomorphism. In particular, the connected components of \(S\) are
+irreducible.
+
+Suppose now that \(S\) is connected, and hence irreducible. Let \(\eta\) be
+its generic point and let \(f:P\to S\) be a flat, locally quasi-finite
+morphism. Let \(P_i\) be the irreducible components of \(P\), with generic
+points \(\xi_i\). Since \(P\) is flat over \(S\), every \(\xi_i\) lies
+above \(\eta\) (cf.\ EGA IV\(_2\), 2.3.4), and
+\[
+  (P_i)_\eta=P_i\cap P_\eta
+\]
+is the closure of \(\xi_i\) in \(P_\eta\). Since the fiber \(P_\eta\) is
+discrete, one has \((P_i)_\eta=\{\xi_i\}\). This applies in particular when
+\(f\) is étale. In that case \(P\) is also locally noetherian and
+geometrically unibranch (cf.\ EGA IV\(_4\), 17.5.7), so its irreducible
+components are its connected components and are open (and closed).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:corollary:5-14}Corollary 5.14.}\enspace
+\emph{Let \(S\) be a locally noetherian geometrically unibranch prescheme,
+and let \(P\) be a quasi-isotrivial twisted constant \(S\)-prescheme. Then
+the connected components of \(P\) are finite over \(S\).}
+
+We may plainly suppose that \(S\) is connected and hence irreducible, and
+write \(\eta\) for its generic point. By the preceding recalls, every
+connected component \(P_i\) of \(P\) is open and closed and meets the fiber
+\(P_\eta\) in a single point. \SGARefLink{sga3:x:lemma:5-13}{Lemma 5.13} therefore applies and shows that
+every \(P_i\) is finite over \(S\).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:theorem:5-16}Theorem 5.16.}\footnote{\textit{Editors' note.} Remark 5.15,
+rendered obsolete by the addition of \SGARefLink{sga3:x:paragraph:5-14-0}{5.14.0} (cf.\ the preceding editors'
+note), has been deleted, and in \SGARefLink{sga3:x:theorem:5-16}{5.16} ``normal'' has been replaced by
+``geometrically unibranch''.}\enspace
+\emph{Let \(S\) be a locally noetherian geometrically unibranch prescheme.
+Then every \(S\)-group of multiplicative type and of finite type is
+isotrivial.}
+
+Indeed, we may suppose \(S\) connected, and hence \(H\) of constant type
+\(M\). It is enough to apply \SGARefLink{sga3:x:corollary:5-14}{5.14} to
+\[
+  P=\operatorname{Isom}_{S\text{-gr.}}(H,G),
+  \qquad G=D_S(M),
+\]
+and then argue as in the proof of
+\SGARefLink{sga3:x:proposition:5-11}{5.11} \(\mathrm{(ii)}\Rightarrow\mathrm{(i)}\). Alternatively, one may
+apply \SGARefLink{sga3:x:corollary:5-14}{5.14} to \(P=R=D_S(H)\) (cf.\ \SGARefLink{sga3:x:corollary:5-9}{5.9}), and then use \SGARefLink{sga3:x:proposition:5-11}{5.11}.
+
+\section*{\SGAInlineRefTarget{sga3:x:section:6}6. Infinite Galois principal bundles and the enlarged fundamental group}
+\phantomsection
+\addcontentsline{toc}{section}{6. Infinite Galois principal bundles and the
+enlarged fundamental group}
+
+(The results of the present section and of the next will not be used again
+in the remainder of this Seminar.)
+
+Let \(S\) be a prescheme. We propose to determine the principal homogeneous
+bundles \(P\) over \(S\) whose structural group is of the form \(G_S\), the
+constant \(S\)-group defined by an ordinary group \(G\), not necessarily
+finite. We shall also call them \emph{Galois principal bundles over \(S\)
+with group \(G\)}. We use ``principal bundle'' in the sense of the
+faithfully flat quasi-compact topology (cf.\ Exposé IV, Def.~\SGARefLink{sga3:iv:definition:5:1:5}{5.1.5}). For
+such a \(P\), however, the structural morphism \(P\to S\) is necessarily
+étale and surjective, hence a covering for the étale topology; consequently
+\(P\) is also locally trivial for the étale topology (cf.\ IV,
+Prop.~\SGARefLink{sga3:iv:proposition:5:1:6}{5.1.6}).\footnote{\textit{Editors' note.} Notice that \(P\) is assumed
+to be a prescheme. In the \emph{a priori} more general case of an fpqc sheaf
+\(P\) which is a \(G_S\)-torsor, is \(P\) necessarily representable?}
+
+We assume that \(S\) is a sum of connected preschemes, that is, that its
+connected components are open; this reduces us at once to the case in which
+\(S\) is connected. Choose a ``geometric point'' \(\xi\) of \(S\), that
+is, an \(S\)-scheme \(\xi\) which is the spectrum of an algebraically
+closed field \(\Omega=\kappa(\xi)\). For every Galois principal bundle
+\(P\) over \(S\) with group \(G\), \(P_\xi\) is a Galois principal bundle
+over the algebraically closed field \(\kappa(\xi)\), and is therefore
+trivial. We refine the initial problem by asking for the category of Galois
+principal bundles over \(S\) \emph{pointed} above \(\xi\), that is, endowed
+with an \(S\)-morphism \(\xi\to P\), or equivalently with a trivialization
+of \(P_\xi\). For fixed \(G\), let
+\(\bar\pi^{\,1}(S,\xi;G)\) denote the set of classes of such bundles, up to
+an isomorphism respecting the base point. Then the set
+\(\bar\pi^{\,1}(S;G)\) of isomorphism classes of Galois principal bundles
+over \(S\) with group \(G\), without a specified base point, is the set of
+orbits of \(G\) in \(\bar\pi^{\,1}(S,\xi;G)\). Here \(G\) acts naturally
+by translating the marked point of a pointed Galois principal bundle:
+\[
+  \bar\pi^{\,1}(S;G)=\bar\pi^{\,1}(S,\xi;G)/G.
+\]
+
+Let \(S'\to S\) be any morphism which is a morphism of universal effective
+descent for the fibered category of twisted constant preschemes over a
+variable base (for example, \(S'\to S\) faithfully flat and locally of
+finite presentation, cf.\ 5.4; for other examples, cf.\ SGA 1 IX). We
+propose to determine the subsets
+\[
+  \bar\pi^{\,1}(S'/S,\xi;G)
+  \quad\text{and}\quad
+  \bar\pi^{\,1}(S'/S;G)
+\]
+of the preceding sets, formed by the Galois principal bundles over \(S\)
+which become trivial over \(S'\), or, as one says, are ``split'' by \(S'\).
+In fact, we shall determine the category of Galois principal bundles \(P\)
+over \(S\) split by \(S'\). Of course,
+\[
+  \bar\pi^{\,1}(S,\xi;G)
+  =
+  \varinjlim_{S'}\bar\pi^{\,1}(S'/S,\xi;G),
+\]
+where \(S'\) runs through a cofinal system among the \(S'/S\) which cover
+for the étale topology (for example, if \(S\) is quasi-compact, among the
+quasi-compact \(S'\) over \(S\) whose structural morphism is étale and
+surjective). Likewise, the category of Galois principal bundles over \(S\)
+is the inductive limit of the subcategories defined by the \(S'\), formed
+by the bundles split over \(S'\).
+
+By the assumption on \(S'/S\), the category of Galois principal bundles
+over \(S\) split by \(S'\) is equivalent to the category of trivial Galois
+principal bundles over \(S'\), hence of the form \(G_{S'}\), with \(G\)
+acting by right translations, equipped with descent data relative to
+\(S'\to S\). In terms of the corresponding trivial bundle \(P'\) over
+\(S'\) and its descent datum, a base point on a Galois principal bundle
+\(P\) over \(S\) split by \(S'\) amounts to a trivialization of
+\(P'\times_{S'}S'_\xi\) compatible with the induced descent datum relative
+to \(S'_\xi\to\xi\), where \(S'_\xi=S'\times_S\xi\); equivalently, it is a
+section \(\sigma\) of \(P'_\xi\) over \(S'_\xi\) compatible with the
+descent datum.
+
+It is therefore useful, for an arbitrary \(S\)-prescheme \(S'\), without
+now assuming that \(S'\to S\) is a morphism of universal effective descent
+for the fibered category of twisted constant bundles, to define
+\(\bar\pi^{\,1}(S'/S;G)\) and
+\(\bar\pi^{\,1}(S'/S,\xi;G)\) as the sets of isomorphism classes of the
+structures with descent data just specified. These functors in \(G\) then
+have a very simple simplicial description in terms of the fibered square
+and cube \(S''\) and \(S'''\) of \(S'\) over \(S\); we shall sketch it
+below (cf.\ \SGARefLink{sga3:x:paragraph:6-3}{6.3}).
+
+The important conclusion is the following.
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:proposition:6-1}Proposition 6.1.}\enspace
+\begingroup\itshape
+Suppose that the connected components of \(S'\) and \(S''\) are open, and,
+for example, that the quotient of \(\pi_0(S')\) by the equivalence relation
+induced by the two projections
+\(\pi_0(S'')\to\pi_0(S')\) is a single point.\footnote{\textit{Editors'
+note.} The hypothesis that the connected components of \(S'\) be open, as
+well as the second hypothesis, has been added. The latter says that the
+simplicial set \(K_\bullet=\pi_0(S_\bullet)\) defined in \SGARefLink{sga3:x:paragraph:6-3}{6.3} is connected.
+In fact a weaker hypothesis suffices: the cone \(\widetilde K_\bullet\) of
+a certain morphism of simplicial sets
+\(k_\bullet\to K_\bullet\) need only be connected (cf.\ \emph{loc.\ cit.}).}
+
+\smallskip
+\noindent
+\(\mathrm{(i)}\) The functor
+\[
+  G\longmapsto\bar\pi^{\,1}(S'/S,\xi;G)
+\]
+from the category of groups to the category of sets is representable by a
+group, denoted \(\pi_1(S'/S,\xi)\) and called the \emph{fundamental group
+of \(S\) at \(\xi\) relative to \(S'\to S\)}. Thus there is a functorial
+bijection
+\[
+  \bar\pi^{\,1}(S'/S,\xi;G)
+  \simeq
+  \operatorname{Hom}_{\mathrm{gr.}}\bigl(\pi_1(S'/S,\xi),G\bigr).
+\]
+
+\smallskip
+\noindent
+\(\mathrm{(ii)}\) This group has a set of generators in bijection with
+\(\pi_0(S'')\), and is described in terms of those generators by relations
+in bijection with the elements of
+\(\pi_0(S''')\).\footnote{\textit{Editors' note.} The superfluous
+hypothesis that the connected components of \(S'''\) be open has been
+deleted. On the other hand, the later description (cf.\ \ldots) gives the
+natural set of generators
+\(\pi_0(S'')\amalg\pi_0(S'_\xi)\); the relations between these generators
+arising from the \(2\)-cells then reduce it to \(\pi_0(S'')\). See, for
+example, [Kan58], \S~19 for a finer description.} In particular,
+\(\pi_1(S'/S,\xi)\) is finitely generated (respectively finitely presented)
+if \(\pi_0(S'')\) is finite (respectively if both \(\pi_0(S'')\) and
+\(\pi_0(S''')\) are finite).
+
+\smallskip
+\noindent
+\(\mathrm{(iii)}\) The category of Galois principal bundles over \(S\)
+split by \(S'\), with base point above \(\xi\), is equivalent to the
+category of ordinary groups \(G\) equipped with a homomorphism
+\(\pi_1(S'/S,\xi)\to G\).
+\par\endgroup
+
+The proof is given below; cf.\ \ldots
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:paragraph:6-2}6.2.}\enspace
+When \(S\) is a connected locally noetherian prescheme, every étale
+prescheme \(S'\) over \(S\) is locally noetherian and therefore has open
+connected components. It follows from the preceding
+discussion\footnote{\textit{Editors' note.} This deduction could be
+spelled out: \(I\) is in bijection with a cofinal set of morphisms
+\(S'\to S\) covering for the étale topology \ldots} that the functor
+\[
+  G\longmapsto\bar\pi^{\,1}(S,\xi;G)
+\]
+from ordinary groups to sets is \emph{strictly pro-representable}
+(cf.\ \emph{Séminaire Bourbaki}, February 1960, No.~195,
+\S\S~A.2 and A.3). Thus there is a projective system
+\[
+  \Pi=\Pi_1(S;\xi)=(\pi_i)_{i\in I}
+\]
+of ordinary groups over an increasing filtered index set \(I\), which is
+``strict'', meaning that its transition morphisms
+\(\pi_j\to\pi_i\) are surjective, together with an isomorphism of functors
+in \(G\)
+\[
+  \bar\pi^{\,1}(S,\xi;G)
+  \simeq
+  \varinjlim_i\operatorname{Hom}_{\mathrm{gr.}}(\pi_i,G).
+\]
+The second member is also denoted
+\(\operatorname{Hom}_{\mathrm{pro\text{-}gr.}}(\Pi,G)\)
+(cf.\ \emph{loc.\ cit.}).
+
+If the projective limit
+\[
+  \pi=\varprojlim_i\pi_i
+\]
+is ``large enough'', more precisely if the canonical homomorphisms
+\(\pi\to\pi_i\) are surjective, it is natural to equip \(\pi\) with the
+projective-limit topology of the discrete topologies on the \(\pi_i\).
+The preceding isomorphism can then also be written
+\[
+  \bar\pi^{\,1}(S,\xi;G)
+  \simeq
+  \operatorname{Hom}_{\mathrm{gr.\,top.}}(\pi,G),
+\]
+where the right-hand side is the set of homomorphisms of topological
+groups, \(G\) being given the discrete topology.
+
+The hypothesis just formulated on the projective system \(\Pi\) holds, as
+is well known, when the \(\pi_i\) are finite groups
+(cf.\ [BEns], III \S~\SGARefLink{sga3:x:remark:7-4}{7.4}, Th.~1). This last condition plainly also means
+that every Galois principal bundle over \(S\) is isotrivial, that is, split
+by a finite étale surjective morphism. This is the case when \(S\) is
+geometrically unibranch (for example normal), as follows at once from
+\SGARefLink{sga3:x:corollary:5-14}{5.14}.\footnote{\textit{Editors' note.} \SGARefLink{sga3:x:lemma:5-13}{5.13} has been corrected to \SGARefLink{sga3:x:corollary:5-14}{5.14}.}
+When the \(\pi_i\) are finite, \(\pi\) also coincides with the fundamental
+group \(\pi_1(S,\xi)\) introduced in SGA 1, V.
+
+Thus, in the favorable case in which the maps \(\pi\to\pi_i\) are
+surjective, one might call \(\pi\) the \emph{enlarged fundamental group of
+\(S\) at \(\xi\)}. Outside this favorable case, \(\pi\) itself is of
+little interest, and the role of the usual fundamental group is played by
+the projective system \(\Pi\) itself, which we call the \emph{enlarged
+fundamental pro-group of \(S\) at \(\xi\)}. (Any better terminological
+suggestion than ``enlarged'' is welcome!\footnote{\textit{Editors' note.}
+Some authors speak of the ``true'' fundamental group.}) Knowledge of this
+pro-group is more precise than knowledge of the usual fundamental group
+\(\pi_1(S,\xi)\) of SGA 1, V; more precisely, the latter is the projective
+limit of the projective system formed by the finite quotients of the
+\(\pi_i\).
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:paragraph:6-3}6.3.}\enspace
+Let us indicate briefly the ``calculation'' of \(\pi_1(S'/S,\xi)\). Let
+\(S_i\) be the \((i+1)\)-st fibered power of \(S'\) over \(S\), so that
+\(S_0=S'\), \(S_1=S''\), and so on. The evident simplicial operations
+between the \(S_i\) make \((S_i)_{i\in\mathbb N}\) a simplicial object of
+\((\mathrm{Sch})/S\).
+
+Applying to this simplicial object the functor ``set of connected
+components''
+\[
+  \pi_0:(\mathrm{Sch})/S\longrightarrow(\mathrm{Ens}),
+\]
+we obtain a simplicial set \(K_\bullet=(K_i)_{i\in\mathbb N}\), with
+\[
+  K_i=\pi_0(S_i).
+\]
+
+Likewise, the \(S_{i,\xi}\), the \((i+1)\)-st fibered powers of
+\(S'_\xi\) over \(\xi\), form a simplicial object of
+\((\mathrm{Sch})/\xi\), hence of \((\mathrm{Sch})/S\), together with a
+natural morphism of simplicial objects into \((S_i)_{i\in\mathbb N}\).
+Thus we obtain a simplicial set \(k_\bullet\), with
+\[
+  k_i=\pi_0(S_{i,\xi}),
+\]
+and a canonical morphism
+\[
+  k_\bullet\longrightarrow K_\bullet.
+\]
+Taking the cone of this morphism (cf.\ \SGARefLink{sga3:x:definition:9-5-1}{9.5.1}), we form a new simplicial set
+\[
+  \widetilde K_\bullet
+  =
+  \operatorname{Cone}(k_\bullet\longrightarrow K_\bullet).
+\]
+
+\footnote{\textit{Editors' note.} The original, which takes
+\(\widetilde K_\bullet=K_\bullet/k_\bullet\), has been corrected: on the
+one hand \(k_\bullet\) is already contractible (cf.\ \SGARefLink{sga3:x:proposition:9-7-1}{9.7.1}), and on the
+other hand \(k_\bullet\to K_\bullet\) is not in general injective. It is an
+epimorphism if \(S'/S\) is finite étale (cf.\ \SGARefLink{sga3:x:proposition:9-7-3}{9.7.3}).}
+In this way we obtain a ``pointed simplicial set'' \(\widetilde K_\bullet\),
+that is, a simplicial set equipped with a morphism
+\[
+  \widetilde\xi:e_\bullet\longrightarrow\widetilde K_\bullet,
+\]
+where \(e_\bullet\) is the final simplicial set. We may form its familiar
+combinatorial invariants
+\[
+  \pi_0(\widetilde K_\bullet,\widetilde\xi)
+  \quad\text{and}\quad
+  \pi_1(\widetilde K_\bullet,\widetilde\xi),
+\]
+whose constructions involve only the components of degree at most \(1\)
+and at most \(2\), respectively. These invariants are defined without any
+restriction on \(S\) or \(S'\). When the connected components of \(S_0\)
+and \(S_1\) are open and \(\widetilde K_\bullet\) is
+connected,\footnote{\textit{Editors' note.} The hypothesis that
+\(\widetilde K_\bullet\) be connected has been added; for the proof, see
+the addendum below (\SGARefLink{sga3:x:section:9}{Section 9}).} one checks without difficulty that
+\(\pi_1(\widetilde K_\bullet,\widetilde\xi)\) represents the functor
+\(G\mapsto\bar\pi^{\,1}(S'/S,\xi;G)\); that is,
+\[
+  \pi_1(S'/S;\xi)
+  \simeq
+  \pi_1(\widetilde K_\bullet,\widetilde\xi).
+\]
+
+We also note that if \(S'\to S\) is ``universally submersive''
+(cf.\ SGA 1, IV 2.1) and the connected components of \(S'\) are open, then
+the simplicial set \(K_\bullet\), and hence also \(\widetilde K_\bullet\),
+is connected.\footnote{\textit{Editors' note.} The sequel has been
+modified to take account of the correction made above; cf.\ Editors' note
+(53). (The original read:
+``\(\pi_0(\widetilde K_\bullet,\widetilde\xi)\) is also canonically
+isomorphic to the set \(\pi_0(S,\xi)\) of connected components of \(S\),
+pointed by the connected component of \(\xi\) in \(S\).'')}
+
+\par\medskip\noindent
+\textbf{\SGAInlineRefTarget{sga3:x:example:6-4}Examples 6.4.}\enspace
+It remains to give examples of enlarged fundamental groups. Return to the
+examples of \SGARefLink{sga3:x:paragraph:1:6}{1.6}. Let \(k\) be an algebraically closed field; let \(C_1\) be
+a complete rational curve over \(k\) with exactly one singular point, that
+point being an ordinary double point; and let \(C_2\) be a curve which is
+the union of two irreducible components, each isomorphic to
+\(\mathbb P^1_k\), meeting in exactly two points, which are ordinary double
+points of \(C_2\). In either case, the enlarged fundamental group of the
+curve is isomorphic to \(\mathbb Z\).\footnote{\textit{Editors' note.} This
+could be spelled out. First, by \SGARefLink{sga3:x:corollary:5-14}{5.14}, the enlarged fundamental group of the
+projective line \(\mathbb P^1_k\) is zero; that is,
+\(\mathbb P^1_k\) is ``truly'' simply connected. One would then have to
+extend Corollary 5.4 of SGA 1, IX, and the discussion following it, to the
+enlarged fundamental group and to the category of principal bundles not
+necessarily finite. Let \(\Gamma_1,\Gamma_2\) be two copies of
+\(\mathbb P^1_k\), and let \(a_i,b_i\) be two distinct points of
+\(\Gamma_i\). Let \(C''_2\) be the disjoint union of \(\Gamma_1\) and
+\(\Gamma_2\), and let \(C'_2\) be the curve obtained by identifying
+\(a_1\) with \(a_2\); then \(C_2\) is obtained from \(C'_2\) by also
+identifying \(b_1\) with \(b_2\). The discussion following
+\emph{loc.\ cit.}, extended to the enlarged case, shows that the enlarged
+fundamental group of \(C'_2\), respectively \(C_2\), is zero, respectively
+\(\mathbb Z\).}
+
+More generally, one should take up, simplifying and correcting them, the
+results of SGA 1, IX 5 in the setting of the enlarged fundamental group.
+The examples of \emph{loc.\ cit.}, 5.5 would give as many examples of
+enlarged fundamental pro-groups which are not profinite. Thus, if in the
+first example the ordinary double point were replaced by a double point
+with \(n\) distinct branches,\footnote{\textit{Editors' note.} This means
+an \(n\)-fold point with \(n\) distinct tangents, for example the curve
+\(X^n-Y^n=X^{n+1}\).} the enlarged fundamental group would be the free
+(discrete!) group on \(n-1\) generators.

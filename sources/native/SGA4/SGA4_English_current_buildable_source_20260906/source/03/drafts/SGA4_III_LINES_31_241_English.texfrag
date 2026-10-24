@@ -1,0 +1,205 @@
+In\pageoriginale \hyperrefext[I][I.sec5]{5}, we studied the behavior of categories of
+presheaves with respect to functors between the categories of
+arguments. In this exposé, we extend this study to the case of sites
+and categories of sheaves (${\rm n^{\circ}}$ 1 and 2). After
+introducing the induced topology (${\rm n^{\circ}}$ 3), we turn in
+${\rm n^{\circ}}$ 4 to the comparison lemma, which will play an
+important role in Exp. IV. In number 5, for the patient reader, we
+study certain commutative diagrams related to localized categories
+(of the form $C/X$). In Theorem \hyperrefext[I][I.prop5.1]{5.1}, we impose
+smallness hypotheses on the categories under consideration. In
+general, these hypotheses are not satisfied by the sites encountered
+in practice ($𝒰$-sites). This necessitates a few contortions
+(\hyperref[III.subsec4.2]{4.2}, \hyperref[III.subsec4.3]{4.3},
+\hyperref[III.subsec4.4]{4.4}).
+
+\section{Continuous functors}\etiquette[1]{III.sec1}
+
+\begin{enonce*}{Definition 1.1}\etiquette[1.1]{III.def1.1}
+Let $C$ and $C'$ be two $𝒰$-sites and let $u:C\rightarrow C'$ be a
+functor between their underlying categories. We say that $u$ is
+continuous if, for every sheaf of sets $F$ on $C'$, the presheaf
+$X\mapsto F\circ u(X)$ on $C$ is a sheaf.
+\end{enonce*}
+
+This notion of continuity depends a priori on the universe $𝒰$
+with respect to which the two sites are $𝒰$-sites. Proposition
+\hyperref[III.prop1.5]{1.5} shows that it is independent of it.
+
+\setcounter{subsection}{10}
+\subsection{}\etiquette[1.11]{III.subsec1.11}
+Denote\pageoriginale by $i:C^{\sim}\rightarrow
+C^{\widehat{\phantom{,}}}$ (\resp by $i':{C'}^{\sim}\rightarrow
+{C'}^{\widehat{\phantom{,}}}$) the canonical inclusion functor from
+sheaves into presheaves. By Definition \hyperref[III.def1.1]{1.1}, the
+functor $u$ is continuous if and only if there exists a functor
+$u_s:{C'}^{\sim}\rightarrow C^{\sim}$ such that
+$iu_s=u^\ast i'$ (where $u^\ast F=F\circ u$
+(\hyperrefext[I][I.sec5.0]{5.0})).
+
+\begin{enonce*}{Proposition 1.2}\etiquette[1.2]{III.prop1.2}
+Let $C$ be a small site, $C'$ a $𝒰$-site, and
+$u:C\rightarrow C'$ a functor between their underlying
+categories. The following properties are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $u$ is continuous.
+
+\item For every object $X$ of $C$ and every sieve $R\hookrightarrow X$
+  covering $X$, the morphism $u_{!}R\hookrightarrow u(X)$ is
+  bicovering in ${C'}^{\widehat{\phantom{,}}}$ {\rm(\hyperrefext[II][II.def5.2]{5.2}
+  and \hyperrefext[I][I.prop5.1]{5.1}).} \footnote[1]{``Covering'' in place of
+  ``bicovering'' did not necessarily suffice; \cf Example
+  \hyperref[III.exem1.9.3]{1.9.3} below.}
+
+\item For every bicovering family $H_i\rightarrow K$, $i\in I$, in
+  $C^{\widehat{\phantom{,}}}$, the family of morphisms
+  $u_{!}H_i\rightarrow u_{!}K$, $i\in I$, is bicovering in
+  ${C'}^{\widehat{\phantom{,}}}$.
+
+\item There exists a functor
+  $u^s:C^{\sim}\rightarrow
+  {C'}^{\sim}$, commuting with inductive limits and
+  ``extending $u$'', \ie such that the diagram of canonical functors
+\[
+\xymatrix@C=3cm@R=1.25cm{
+  C \ar[r]^{u} \ar[d]_{\epsilon_C} & C' \ar[d]^{\epsilon_{C'}}\\
+C{\widetilde{\phantom{A}}} \ar[r]^{u^s}&
+  C'{\widetilde{\phantom{A}}},
+}
+\]
+commutes up to isomorphism.
+\end{enumerate}
+
+Moreover, when $C$ is no longer necessarily a small site but is a
+$𝒰$-site, one still has {\rm i) $\Leftrightarrow$ iv)}, and the
+functor $u^s$ of {\rm iv)} is necessarily a left adjoint of the functor
+$u_s:\widetilde{C}'\rightarrow \widetilde{C}$, and is consequently
+determined up to a unique isomorphism.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The\pageoriginale proof of i) $\Leftrightarrow$ iv) when $C$ is a
+$𝒰$-site will be given in \hyperref[III.subsec4.2]{4.2}. Assume that
+$C$ is small. It is clear that iii) $\Rightarrow$ ii).
+\begin{itemize}
+\item[i) $\Rightarrow$ iii):] Let $H_i\rightarrow K$, $i\in I$, be a
+  bicovering family in $C^{\widehat{\phantom{,}}}$. For every sheaf
+  $F$ on $C'$, the presheaf $u^\ast F$
+  (\hyperrefext[I][I.sec5.0]{5.0}) is a sheaf on $C$. Hence
+  (\hyperrefext[II][II.prop5.3]{5.3}) the canonical map
+$$
+\Hom(K, u^\ast F)\longrightarrow \prod_i \Hom(H_i, u^\ast F){\quoi},
+$$
+is bijective. By adjunction (\hyperrefext[I][I.prop5.1]{5.1}), it follows
+that the canonical map
+$$
+\Hom(u_{!}K,F)\longrightarrow \prod_i \Hom(u_{!}H_i, F)
+$$
+is bijective. Consequently (\hyperrefext[II][II.prop5.3]{5.3}) the family
+$u_{!}H_i\rightarrow u_{!}K$, $i\in I$, is bicovering.
+
+\item[ii) $\Rightarrow$ i):] Let $X$ be an object of $C$, let
+  $R\hookrightarrow X$ be a covering sieve, and let $F$ be a sheaf on
+  $C'$. By (\hyperrefext[II][II.prop5.3]{5.3}), the map
+$$
+\Hom(u_{!}X,F)\longrightarrow \Hom(u_{!}R,F)
+$$
+is bijective. By adjunction (\hyperrefext[I][I.prop5.1]{5.1}), it follows
+that the map
+$$
+\Hom(X,u^\ast F)\longrightarrow \Hom(R, u^\ast F)
+$$
+is bijective. Consequently $u^\ast F$ is a sheaf.
+
+\item[i) $\Rightarrow$ iv):] We use the customary notation
+  $\underline{a}$ and $i$ (\resp $\underline{a}'$ and $i'$) for the
+  ``associated sheaf'' and ``inclusion into presheaves'' functors.
+  For every sheaf $G$ on $C$, set $u^sG=\underline{a}'u_{!}iG$.
+  For every sheaf $F$ on $C'$, we have the following sequence of
+  natural isomorphisms:
+\begin{align*}
+\Hom(G,u_sF) &\simeq \Hom(iG, iu_s F)\simeq \Hom(iG, u^\ast i'F)\\
+             &\simeq \Hom(u_{!}iG, i'F)\simeq \Hom(\underline{a}'u_{!} iG,
+             F){\quoi}.
+\end{align*}
+(The\pageoriginale first isomorphism follows from the full
+faithfulness of $i$; the second follows from the definition of $u_s$;
+the third and fourth are obtained by adjunction.) Consequently $u^s$
+is left adjoint to $u_s$. In particular, $u^s$ commutes with inductive
+limits. For every presheaf $K$ on $C$ and every sheaf $F$ on $C'$, we
+have the following sequence of natural isomorphisms:
+$\Hom(u^s\underline{a}K,F)\simeq
+\Hom(\underline{a}K, u_s F)\simeq \Hom(K,iu_sF)\simeq \Hom(K,u^\ast
+i'F)\simeq \Hom(u_{!}K, i'F)\simeq \Hom(\underline{a}'u_{!}K,F)$ (the
+third isomorphism follows from the definition of $u_s$; the others are
+obtained by adjunction); whence a functorial isomorphism
+$u^s\underline{a}K\simeq \underline{a}'u_{!}K$. In particular, using
+this isomorphism when $K$ is representable, and taking
+\hyperrefext[I][I.prop5.4]{5.4} 3) into account, we obtain a diagram
+commutative up to isomorphism:
+\[
+\xymatrix@C=2.75cm@R=1.25cm{
+C \ar[d]_{\epsilon_C} \ar[r]^{u}& C'\ar[d]^{\epsilon_{C'}}\\
+\widetilde{C} \ar[r]^{u^{S}}& \widetilde{C'} }
+\]
+
+\item[iv) $\Rightarrow$ ii):] Let $h:C\rightarrow
+  C^{\widehat{\phantom{,}}}$ (\resp $h':C'\rightarrow
+  {C'}^{\widehat{\phantom{,}}}$) be the functor that assigns to an
+  object the presheaf it represents. Consider the diagram:
+\[
+\xymatrix@C=2.5cm@R=1cm{
+C \ar[r]^{u}\ar[d]_{h}             &   C' \ar[d]^{h'}\\
+C{\widehat{\phantom{i}}} \ar[d]_{\underline{a}} \ar[r]^{u_!}&
+C'{\widehat{\phantom{i}}} \ar[d]^{\underline{a}'}\\
+C{\widetilde{\phantom{A}}} \ar[r]^{u^{S}}&
+C'{\widetilde{\phantom{A}}}. }
+\]
+The\pageoriginale upper square is commutative
+(\hyperref[III.rem1.4]{1.4} 3)), and we have
+$\underline{a}h=\epsilon_C$, $\underline{a}'h'=\epsilon_{C'}$. For
+every object $K$ of $C^{\widehat{\phantom{,}}}$, we have a canonical
+isomorphism (I \hyperref[I.prop3.4]{3.4}):
+$$
+\varinjlim_{(h(X)\rightarrow K)\in \ob (C/K)} h(X)\xrightarrow{\sim}
+K{\quoi}.
+$$
+Since the functors $u_{!}$, $u^s$, $\underline{a}$, and
+$\underline{a}'$ commute with inductive limits, we obtain
+isomorphisms:
+\begin{gather*}
+\varinjlim_{(h(X)\rightarrow K)\in \ob (C/K)}
+u^s\underline{a}h(X)\xrightarrow{\sim} u^s \underline{a}K{\quoi},\\
+\varinjlim_{(h(X)\rightarrow K)\in \ob (C/K)}
+\underline{a}'u_{!}h(X)\xrightarrow{\sim} \underline{a}'u_{!}K{\quoi}.
+\end{gather*}
+We have $u_{!}h=h'u$ and, by hypothesis, an isomorphism
+$\underline{a}'h'u\simeq u^s \underline{a}h$, whence an isomorphism
+$$
+u^s\underline{a}K\simeq \underline{a}'u_{!}K{\quoi},
+$$
+which is immediately seen to be functorial in $K$. The diagram
+\[
+\xymatrix@C=2.5cm@R=1.35cm{
+C\widehat{\phantom{a}} \ar[r]^{u_!} \ar[d]_{\underline{a}}&  C'\widehat{\phantom{a}}\ar[d]^{\underline{a}'}\\
+C \widetilde{\phantom{A}} \ar[r]^{u^{S}}&  C',& }
+\]
+is therefore commutative up to isomorphism. Since $\underline{a}i$ is
+isomorphic to the identity functor, we have an isomorphism
+$u^s\simeq \underline{a}'u_{!}i$, whence the uniqueness of $u^s$. Let
+$v:H\rightarrow K$ be a bicovering morphism in
+$C^{\widehat{\phantom{,}}}$. Then $\underline{a}(v)$ is an isomorphism
+(\hyperrefext[II][II.prop5.3]{5.3}), and consequently
+$\underline{a}'u_{!}(v)$ (isomorphic to $u^s\underline{a}(v)$) is an
+isomorphism. Thus $u_{!}(v)$ is carried by $\underline{a}'$ to an
+isomorphism, and consequently $u_{!}(v)$ is bicovering
+(\hyperrefext[II][II.prop5.3]{5.3}), whence ii).
+\end{itemize}
+\end{enonce*}
+
+The additional assertion,\pageoriginale in the case where $C$ is
+small, was proved in the course of the proof, \cqfd
+
+\setcounter{subsection}{2} \setcounter{subsubsection}{0}

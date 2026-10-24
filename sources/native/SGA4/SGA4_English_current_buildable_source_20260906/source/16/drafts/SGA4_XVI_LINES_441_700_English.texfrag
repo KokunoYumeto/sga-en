@@ -1,0 +1,269 @@
+\section{The relative cohomological purity theorem}\etiquette[3]{XVI.sec3}
+
+\begin{enonce*}{Definition 3.1}\etiquette[3.1]{XVI.def3.1}
+Let $S$ be a scheme. A \emph{smooth $S$-pair} $(Y,X)$ is a closed
+$S$-immersion $i:Y\rightarrow X$ of smooth $S$-preschemes, that is, a
+commutative diagram of preschemes
+$$
+\xymatrix@=1.25cm{
+Y \ar[rr]^{i} \ar[rd]_{h}&     &X\ar[ld]^{f}\\
+  & S   &
+}
+$$
+such that $f$ and $h$ are smooth and $i$ is a closed immersion. We
+write $U=X-Y$, denote by $j:U\rightarrow X$ the open immersion, and
+by $g:U\rightarrow S$ the structural morphism. The \emph{codimension}
+of $(Y,X)$ at a point $y\in Y$ is the codimension at $y$ of the fiber
+$Y_s$ in $X_s$, where $s=h(y)$.
+\end{enonce*}
+
+Thus the codimension is a locally constant function on $Y$. We shall
+express the fact that this function is in fact constant,
+\sisi{with}{of} value~$c$, by saying that ``$(Y,X)$ has
+codimension~$c$.''
+
+Let $(Y,X)$ be a smooth $S$-pair and let $y\in Y$. Recall (\SGA II
+4.10) that there exist integers $m$ and $n$, a neighborhood $X'$ of
+$y$ in $X$, and an étale morphism
+$$
+\phi:X'\longrightarrow \EE^n_S=\Spec \Oo_S[t_1,\ldots,t_n]
+$$
+such\pageoriginale that $Y'=Y\cap X'$ is the inverse image of the
+closed subscheme $\EE^m_S$ defined by the equations
+$$
+t_{m+1}=\ldots=t_n=0{\quoi}.
+$$
+This result can be expressed by saying that \emph{locally for the
+  étale topology, every smooth $S$-pair $(Y,X)$ is isomorphic to the
+  standard pair $(\EE^m_S, \EE^n_S)$ for suitable $m$ and $n$,} where
+$$
+\EE^r_S=\Spec \Oo_S[t_1,\ldots,t_r]{\quoi}.
+$$
+
+In the present section, we propose to calculate the local cohomology
+sheaves $\HH^q_Y(X,F)=(R^{q}i^{!})F$
+(\sisi{\hyperrefext[V][V.sec4]{4}}{\hyperrefext[V][V.sec6]{6}} and
+\hyperrefext[VIII][VIII.subsec6.6]{6.6}) for a smooth $S$-pair $(Y,X)$,
+with coefficients in a locally constant abelian torsion sheaf $F$
+prime to the residue characteristics. We begin with some preliminary
+considerations:
+
+\begin{enonce*}{Proposition 3.2}\etiquette[3.2]{XVI.prop3.2}
+Let
+$$
+\xymatrix@=1.25cm{
+U \ar[rr]^{j} \ar[rd]_{g}&     &X\ar[ld]^{f}\\
+  & S   &
+}
+$$
+be a commutative diagram in which $f$ is smooth and $j$ is an open
+immersion such that the fiber $U_s$ is dense in $X_s$ for every
+$s\in S$. Let $F$ be a sheaf of sets on $S$. Then the canonical
+morphism
+$$
+f^{\ast}F\longrightarrow j_{\ast}g^{\ast}F=j_{\ast}j^{\ast}f^{\ast}F
+$$
+is bijective.
+\end{enonce*}
+
+\noindent
+\emph{Proof}.\pageoriginale We readily reduce to the case where $U$ is
+quasi-compact in $X$. Let $\bar{s}$ be a geometric point of $S$, let
+$\bar{x}$ be a geometric point of $X$ lying over $\bar{s}$, let
+$\widetilde{f}:\widetilde{X}\rightarrow \widetilde{S}$ be the morphism
+of the strict localizations of $X$ and $S$ at the corresponding
+geometric points, and let
+$\widetilde{U}=\fprod{U}{\widetilde{X}}{X}$. With the evident notation,
+we have
+$$
+(f^{\ast}F)_{\bar{x}}=H^{0}(\widetilde{X},\widetilde{f}^{\ast}\widetilde{F})\simeq
+H^{0}(\widetilde{S},\widetilde{F}){\quoi}.
+$$
+Consequently, it suffices to prove that
+$\widetilde{g}:\widetilde{U}\rightarrow \widetilde{S}$ is
+$0$-acyclic, which will imply
+$$
+(j_{\ast}g^{\ast}F)_{\bar{x}}\simeq
+H^{0}(\widetilde{U},\widetilde{g}^{\ast}\widetilde{F})\simeq
+H^{0}(\widetilde{S},\widetilde{F}){\quoi}.
+$$
+Since $\widetilde{g}$ is a limit of smooth morphisms, it is locally
+$0$-acyclic (\hyperrefext[XV][XV.thm2.1]{2.1},
+\hyperrefext[XV][XV.def1.11]{1.11}), and by
+\hyperrefext[XV][XV.cor1.12]{1.12} it suffices to prove that the
+geometric fibers of $\widetilde{U}/\widetilde{S}$ are $0$-acyclic,
+that is, connected and nonempty. Let $\bar{s}'$ be a geometric point
+of $\widetilde{S}$. Then the fiber $\widetilde{X}_{\bar{s}'}$ is
+regular, connected, and nonempty, and the hypothesis implies that
+$\widetilde{U}_{\bar{s}'}$ is a dense open subset of
+$\widetilde{X}_{\bar{s}'}$, hence connected and nonempty, which proves
+the result.
+
+\begin{enonce*}{Corollary 3.2.1}\etiquette[3.2.1]{XVI.cor3.2.1}
+Under the hypotheses of \hyperref[XVI.prop3.2]{3.2}, the functor
+$X'\mapsto X'|U$ from the category of étale coverings of $X$ to the
+category of étale coverings of $U$ is fully faithful. In particular,
+for every finite group $G$, the restriction map
+$$
+H^{1}(X,G)\longrightarrow H^{1}(U,G)
+$$
+is injective.
+\end{enonce*}
+
+This\pageoriginale follows from \hyperref[XVI.prop3.2]{3.2}, by a
+standard argument which, for ease of reference, we shall spell out in
+a
+
+\begin{enonce*}{Lemma 3.2.2}\etiquette[3.2.2]{XVI.lem3.2.2}
+Let $f:X\rightarrow Y$ be a morphism of schemes, and let
+$f^{\ast}:\Et(Y)\rightarrow \Et(X)$ be the inverse-image functor
+$Y'\mapsto \fprod{Y'}{X}{Y}$ from the category $\Et(Y)$ of étale
+coverings of $Y$ to $\Et(X)$. The following conditions are equivalent:
+\begin{itemize}
+\item[(i)] $f^{\ast}$ is faithful (\resp fully faithful).
+
+\item[(ii)] For every étale covering $Y'$ of $Y$, denoting by
+  $f':X'\rightarrow Y'$ the morphism deduced from $f$ by the base
+  change $Y'\rightarrow Y$, the map $U\mapsto {f'}^{-1}(U)$ from the
+  set of clopen subsets of $Y'$ to the set of clopen subsets of $X'$
+  is injective (\resp bijective).
+
+\item[(ii bis)] With the notation of {\rm(ii)}, for every constant
+  sheaf of sets $C$ on $Y'$, the canonical map
+$$
+H^{0}(Y',C)\longrightarrow H^{0}(X',{f'}^{\ast}C)
+$$
+is injective (\resp bijective).
+
+\item[(iii)] With the notation of {\rm(ii)}, the canonical map
+$$
+\Gamma(Y'/Y)\longrightarrow \Gamma(X'/X)
+$$
+is injective (\resp bijective).
+\end{itemize}
+\end{enonce*}
+
+The proof is left to the reader (\cf \SGA 2, IX 3.1 and 3.2).
+
+\begin{enonce*}[remark]{Remarks 3.2.3}\etiquette[3.2.3]{XVI.rems3.2.3}
+One\pageoriginale can generalize Proposition
+\hyperref[XVI.prop3.2]{3.2} considerably, both for sheaves of sets, by
+weakening the hypotheses on
+$f$, and for sheaves of groups, with conclusions concerning the
+$R^{q}g_{\ast}(f^{\ast}F)$ (\cf \SGA 2 XIV 1 and \SGA 1 XIII). The
+analogous remark applies to \hyperref[XVI.cor3.4]{3.4} through
+\hyperref[XVI.cor3.6]{3.6}.
+\end{enonce*}
+
+Let us also ``recall'' the Zariski--Nagata purity theorem in its
+relative form:
+
+\begin{enonce*}{Theorem 3.3}\etiquette[3.3]{XVI.thm3.3}
+(Relative purity theorem). Let
+$$
+\xymatrix@=1.25cm{
+U \ar[rr]^{j} \ar[rd]_{g}&     &X\ar[ld]^{f}\\
+  & S   &
+}
+$$
+be a commutative diagram in which $f$ is smooth and $j$ is an open
+immersion such that, for every $s\in S$, $X_s-U_s$ has codimension
+$\geq 2$ everywhere in $X_s$. Then the functor $X'\mapsto X'|U$ from
+the category of étale coverings of $X$ to the category of étale
+coverings of $U$ is an \emph{equivalence of categories.}
+\end{enonce*}
+
+\noindent
+\emph{Proof}. We saw in \hyperref[XVI.cor3.2.1]{3.2.1} that the
+functor is fully faithful. The fact that it is
+\sisi{ess.}{essentially} surjective will follow from the classical
+theorem. Given an étale covering $U'$ of $U$, we must
+show that it extends to an étale covering $X'$ of $X$. There is an
+immediate and easy reduction first to the case where $U$ is
+quasi-compact in $X$, and then to the case where $S$ is affine and of
+finite type over $\Spec \ZZ$, $X$ is connected, and $f$ is of finite
+type.
+
+We\pageoriginale proceed by induction on $n=\dim S$, the assertion
+being a consequence of the classical theorem (\SGA 2 X 3.4) when
+$n=0$. Since uniqueness is available, we can apply the descent
+technique of \sisi{\SGA IX 4.7}{\SGA 1 IX 4.7} to the normalization
+$S\leftarrow \bar{S}$ and thereby reduce to the case where $S$ (and
+hence $X$) is normal ($\bar{S}\rightarrow S$ being finite (\EGA IV
+7.8.3 (iii) (vi)). Moreover, after enlarging $U$, we may suppose that
+$U$ is maximal among the open subsets over which $U'$ can be extended,
+and we must then prove that $U=X$. Otherwise, let $x$ be a maximal
+point of $X-U$, and put $s=f(x)$. It is enough to prove that $U'$ can
+be extended over a neighborhood of $x$. We may suppose that
+$\dim \Oo_{S,s}=n\geq 1$ and that the theorem has already been proved
+in dimension $<n$. Put $B=\Oo_{X,x}$, and let $B'$ be the normalization
+of $B$ in the ring of rational functions on the covering $U'$ of $U$;
+thus $B'$ is a finite $B$-algebra (\loccit). It plainly suffices to
+prove that $B'$ is an étale $B$-algebra.
+
+Let $A=\Oo_{S,s}$, $0\neq t\in \max A$, $A_{0}=A/tA$, and
+$B_{0}=B/tB$. By the induction hypothesis, the restriction of the
+covering to $U_{0}=U\otimes_A A_{0}$ extends to an étale covering of
+$\Spec B_{0}$, which we denote by $\Spec B^{\ast}_{0}$. After replacing
+$X$ by a suitable étale covering of a neighborhood of $x$ (which is
+permissible), we may suppose that $\Spec B^{\ast}_{0}$ is completely
+split over $\Spec B_{0}$. We are thereby reduced to the case where the
+$B_{0}$-algebra $B'_{0}$ is completely split away from the closed
+point of $\Spec B_{0}$. The hypotheses of
+\hyperrefext[XV][XV.lem3.3]{3.3} are then satisfied, which proves the
+result.
+
+\begin{enonce*}{Corollary 3.4}\etiquette[3.4]{XVI.cor3.4}
+Under the same hypotheses as in \hyperref[XVI.thm3.3]{3.3}, we have
+$(R^{1}j_{\ast})g^{\ast}F=0$ for every sheaf $F$ of ind-finite groups
+on $S$.
+\end{enonce*}
+
+We reduce\pageoriginale as usual to the case where $S$ is noetherian,
+$f$ is of finite type, and $F$ is constructible. Let
+$0\rightarrow F\rightarrow G$ be an injection of sheaves of
+ind-finite groups on $S$, and put $C=G/F$. It follows from
+\hyperref[XVI.prop3.2]{3.2} that the functor $j_{\ast}g^{\ast}$ is
+exact, so that $j_{\ast}g^{\ast}G\rightarrow j_{\ast}g^{\ast}C$ is
+surjective, and hence (\hyperrefext[XII][XII.prop3.1]{3.1}) that
+$(R^{1}j_{\ast})g^{\ast}F\rightarrow
+(R^{1}j_{\ast})g^{\ast}G$ is injective. We can therefore replace $F$
+by $G$, and thus reduce, by \hyperrefext[IX][IX.prop2.14]{2.14} and
+\hyperrefext[VIII][VIII.prop5.5]{5.5}, to the case where $F=G$ is
+constant, with value an ordinary finite group $G$.
+Let $\bar{x}$ be a geometric point of $X$, let $\widetilde{X}$ be the
+strict localization of $X$ at $\bar{x}$, and let
+$\widetilde{U}=\fprod{\widetilde{X}}{U}{X}$. It then follows from
+\hyperref[XVI.thm3.3]{3.3} that
+$$
+(R^{q}j_{\ast}g^{\ast}F)_{\bar{x}}=H^{q}(\widetilde{U},G_{\widetilde{U}})\simeq
+H^{q}(\widetilde{X},G_{\widetilde{X}}){\quoi},
+$$
+and the latter is zero, which proves the result.
+
+\begin{enonce*}{Lemma 3.5}\etiquette[3.5]{XVI.lem3.5}
+(Relative Abhyankar's lemma). Let $(Y,X)$ be a smooth $S$-pair of
+  codimension $1$, such that $Y$ is defined in $X$ by an equation
+  $t=0$. Let $U=X-Y$, and let $V/U$ be a principal Galois covering of
+  order $n$ prime to the residue characteristics of $Y$. Put
+  $X'=\Spec \Oo_X[z]/(z^n-t)$, $U'=\fprod{U}{X'}{X}$, and
+  $V'=\fprod{V}{X'}{X}$. Then the covering $V'$ extends uniquely to an
+  étale covering of $X'$.
+\end{enonce*}
+
+\noindent
+\emph{Proof}. We immediately reduce to the case where $S$, $X$, and
+$Y$ are affine and of finite type over $\Spec \ZZ$. Uniqueness is a
+special case of \hyperref[XVI.cor3.2.1]{3.2.1}. We shall deduce
+existence from \hyperrefext[XV][XV.cor1.12]{1.12}: let $\bar{s}$ be a
+geometric point of $S$ and let $\bar{x}$ be a geometric point of $Y$
+lying over $\bar{s}$. Let
+$\widetilde{f}:\widetilde{X}\rightarrow \widetilde{S}$ be the morphism
+of the corresponding strict localizations\pageoriginale induced by
+$f$, let $\widetilde{U}=\fprod{U}{\widetilde{X}}{X}$, etc\ldots By
+descent, in view of uniqueness, it plainly suffices to prove that
+$\widetilde{V}'$ extends to an étale covering of $\widetilde{X}'$, that
+is (since $\widetilde{X}'$ admits no nontrivial covering), that
+$\widetilde{V}'$ is a trivial covering of $\widetilde{U}'$.
+
+Let

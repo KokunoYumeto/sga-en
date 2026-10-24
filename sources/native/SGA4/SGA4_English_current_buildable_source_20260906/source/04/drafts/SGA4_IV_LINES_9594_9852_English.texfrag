@@ -1,0 +1,263 @@
+\section{Modules on a topos defined by gluing}\etiquette[14]{IV.sec14}
+
+\subsection{}\etiquette[14.1]{IV.subsec14.1}
+Let $(E,A)$ be a ringed topos, let $U$ be an open subtopos of $E$,
+let $F$ be the complementary closed subtopos, and let
+$j:U\rightarrow E$ and $i:F\rightarrow E$ be the canonical
+morphisms (\hyperref[IV.subsec9.3]{9.3}). The topos $U$ is ringed by
+$j^{\ast}A$ (\sisi{\hyperref[IV.subsubsec11.2.2]{11.2.2}}{\hyperref[IV.subsubsec11.2.1]{11.2.1}}),
+and the morphism of topoi $j$, completed in the evident way, becomes
+a morphism of ringed topoi. In this section, the topos $F$ will be
+ringed by the sheaf $i^{\ast}A$, denoted by $A|F$, and the morphism
+$i$, completed in the evident way, is then a morphism of ringed
+topoi.
+
+
+\subsection{}\etiquette[14.2]{IV.subsec14.2}
+We therefore have two morphisms of ringed topoi:
+$$
+j:(U,A| U)\longrightarrow (E,A)\text{ and } i:(F,A| F)\longrightarrow
+(E,A){\quoi};
+$$
+whence five functors between the corresponding categories of
+modules (left modules, to fix ideas):
+\[\vcenter{
+\xymatrix@C=2cm@R=1.5cm@M=.25cm{ ({}_{A|U}U) \ar@<14pt>[r]^{j_!}
+\ar@<-14pt>[r]^{j_{\ast}}&
+  ({}_{A}E) \ar[l]_{j^{\ast}} \ar@<7pt>[r]^{i^{\ast}} &
+  ({}_{A|F}F)\quad. \ar@<7pt>[l]_{i_{\ast}}
+}}\leqno(14.2.1)
+\]\etiquette[14.2.1]{IV.eq14.2.1}
+Each functor in diagram \eqhyperref[IV.eq14.2.1]{14.2.1} is left
+adjoint to the functor lying below it.
+
+\subsection{}\etiquette[14.3]{IV.subsec14.3}
+We\pageoriginale know that the functor $X\mapsto (j^{\ast}X,
+i^{\ast}X;i^{\ast}X\rightarrow i^{\ast}j_{\ast}j^{\ast}X)$ is an
+equivalence from $E$ to the topos $(U,F,i^{\ast}j_{\ast})$
+(\hyperref[IV.theo9.5.4]{9.5.4}). This equivalence induces an
+equivalence between the corresponding categories of modules, and
+hence the functor $P\mapsto (j^{\ast}P,i^{\ast}P;
+i^{\ast}P\rightarrow i^{\ast}j_{\ast}j^{\ast}P)$ is an equivalence,
+denoted by $\Phi$, from the category ${}_AE$ to the category
+$({}_{A| U}U,{}_{A| F}F,i^{\ast}j_{\ast})$. The functors in
+\hyperref[IV.eq14.2.1]{(14.2.1)}, composed with $\Phi$ or $\Phi^{-1}$, are then the
+functors:
+\begin{align*}
+\Phi\circ j_{\ast} &: M\mapsto (M,i^{\ast} j_{\ast}M;
+i^{\ast}j_{\ast}M\xrightarrow{\id} i^{\ast}j_{\ast}M){\quoi},\\
+j^{\ast}\circ \Phi^{-1} &: (M,N; N\rightarrow
+i^{\ast}j_{\ast}M)\mapsto M{\quoi},\\
+\Phi\circ j_{!} &: M\mapsto (M,0;0\rightarrow i^{\ast}
+j_{\ast}M){\quoi},\\
+\Phi\circ i_{\ast} &: N\mapsto (0,N;N\rightarrow 0){\quoi},\\
+i^{\ast}\circ \Phi^{-1} &: (M,N;N\rightarrow
+i^{\ast}j_{\ast}M)\mapsto N{\quoi}.
+\end{align*}
+The reader may, as an exercise, make the various adjunction
+morphisms explicit.
+
+\subsection{}\etiquette[14.4]{IV.subsec14.4}
+Denote by
+\begin{equation*}
+i^{!}:{}_AE\longrightarrow {}_{A| F}F\tag{14.4.1}
+\end{equation*}\etiquette[14.4.1]{IV.eq14.4.1}
+the functor defined by the formula
+\begin{equation*}
+i^{!}\circ
+\Phi^{-1}(M,N;N\xrightarrow{u}i^{\ast}j_{\ast}M)=\Ker(u){\quoi}.\tag{14.4.2}
+\end{equation*}\etiquette[14.4.2]{IV.eq14.4.2}
+
+\begin{enonce*}{Proposition 14.5}\etiquette[14.5]{IV.prop14.5}
+The functor $i^{!}$ is right adjoint to the functor $i_{\ast}$. The
+adjunction morphism $i_{\ast}i^{!}\rightarrow\id$ is a
+monomorphism. The functors $i^{!}$ (for varying rings) commute with
+restriction-of-scalars functors.
+\end{enonce*}
+
+It is clear that every morphism
+$$
+(0,N;0)\longrightarrow (M,N;N\xrightarrow{u}i^{\ast}j_{\ast}M)
+$$
+factors uniquely through $(0,\ker(u);0)$, which proves the
+adjunction property. The other assertions are trivial.
+
+\begin{enonce*}{Proposition 14.6}\etiquette[14.6]{IV.prop14.6}
+For\pageoriginale every object $P$ of ${}_AE$, there are exact
+sequences, functorial in $P$:
+\hypertarget{sga4.exp.IV.equation.14.6.1}{}\begin{gather}
+0\longrightarrow j_{!}j^{\ast}P\longrightarrow P\longrightarrow
+i_{\ast}i^{\ast}P\longrightarrow 0{\quoi};\tag{14.6.1}\\
+0\longrightarrow i_{\ast}i^{!}P\longrightarrow P\longrightarrow
+j_{\ast}j^{\ast}P{\quoi},\tag{14.6.2}
+\end{gather}\hypertarget{sga4.exp.IV.equation.14.6.2}{}
+where the nontrivial arrows are the adjunction arrows.
+\end{enonce*}
+
+First note that a sequence
+$$
+(M',N';u')\longrightarrow(M,N;u)\longrightarrow(M'',N'';u'')
+$$
+in $({}_{A|U}U,{}_{A|F}F;i^{\ast}j_{\ast})$ is exact if and only
+if the corresponding sequences
+\begin{align*}
+& M'\longrightarrow M\longrightarrow M''\\
+& N'\longrightarrow N\longrightarrow N''
+\end{align*}
+are exact.
+
+The sequences \hyperlink{sga4.exp.IV.equation.14.6.1}{(14.6.1)} and \hyperlink{sga4.exp.IV.equation.14.6.2}{(14.6.2)} are transformed by the
+equivalence $\Phi$ into sequences of the type in
+\eqhyperref[IV.subsec14.3]{14.3}:
+\begin{align*}
+& 0\longrightarrow (M,0;0)\longrightarrow(M,N;u)\longrightarrow
+(0,N;0)\longrightarrow 0\\
+& 0\longrightarrow(0,\ker(u);0)\longrightarrow
+(M,N,u)\longrightarrow(M,i^{\ast}j_{\ast}M;\id){\quoi}.
+\end{align*}
+The exactness of these sequences is immediate.
+
+\setcounter{subsection}{6}
+\subsection{}\etiquette[14.7]{IV.subsec14.7}
+The exact sequence \hyperlink{sga4.exp.IV.equation.14.6.2}{(14.6.2)} gives a new interpretation of the
+functor $i_{\ast}i^{!}$. Indeed, let $X$ be an object of $E$.
+Sequence \hyperlink{sga4.exp.IV.equation.14.6.2}{(14.6.2)} gives the exact sequence of abelian groups
+$$
+0\longrightarrow \Hom_E(X,i_{\ast}i^{!}P)\longrightarrow
+\Hom_E(X,P)\longrightarrow \Hom_E(X,j_{\ast}j^{\ast}P){\quoi}.
+$$
+Also denote by $U$ the open subobject of $E$ which is the final
+object of the open subtopos $U$. It follows from the adjunction
+properties of the functors $j_{\ast}$, $j^{\ast}$, and
+$j_{!}^{\ens}$ that the group $\Hom_E(X,j_{\ast}j^{\ast}P)$ is
+canonically isomorphic to $\Hom_E(X\times U,P)$, and that the
+morphism $\Hom_E(X,P)\rightarrow\Hom_E(X,j_{\ast}j^{\ast}P)$ is
+precisely the morphism defined by the monomorphism
+$X\times U\rightarrow X$ (\hyperref[IV.sec5]{5}). In other words
+(\hyperref[IV.subsubsec8.5.2]{8.5.2}):
+
+\begin{enonce*}{Proposition 14.8}\etiquette[14.8]{IV.prop14.8}
+The\pageoriginale sections of $i_{\ast}i^{!}P$ on $E_{/X}$ are the
+sections of $P$ on $E_{/X}$ whose support
+$(\hyperref[IV.subsubsec9.3.5]{9.3.5})$ is contained in $F$
+\sisi{(notation of $5.9.1$)}{}. In other words, $i_{\ast}i^{!}P$ is
+the largest subsheaf of $P$ whose support is contained in $F$.
+\end{enonce*}
+
+\setcounter{subsection}{8}
+\subsection{}\etiquette[14.9]{IV.subsec14.9}
+By abuse of language, one sometimes says that $i_{\ast}i^{!}P$ is
+the submodule of $P$ defined by the sections of $P$ supported in
+$F$. It follows from \hyperref[IV.rem8.5.3]{8.5.3} that this
+terminology merely extends to general topoi terminology used for
+topoi of sheaves on topological spaces.
+
+\begin{enonce*}{Proposition 14.10}\etiquette[14.10]{IV.prop14.10}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $P\mapsto i_{\ast}i^{\ast}P$ is isomorphic to the
+functor $P\mapsto i_{\ast}i^{\ast}A\otimes_A P$.
+
+\item The functor $P\mapsto i_{\ast}i^{!}P$ is isomorphic to the
+functor $P\mapsto\scrHom_A(i_{\ast}i^{\ast}A,P)$.
+\end{enumerate}
+\end{enonce*}
+
+The exact sequence \hyperlink{sga4.exp.IV.equation.14.6.1}{(14.6.1)}, in the particular case where $P$ is
+the $A$-module $A$, reads
+\begin{equation*}
+0\longrightarrow A_U\longrightarrow A\longrightarrow
+i_{\ast}i^{\ast}A\longrightarrow 0.\tag{14.10.1}
+\end{equation*}\etiquette[14.10.1]{IV.eq14.10.1}
+Here $A_U$ is the free $A$-module generated by the open subobject
+$U$ corresponding to the open subtopos $U$ (9 and \hyperref[IV.prop11.3.3]{11.3.3}). For
+every $A$-module $P$, the $A$-modules $j_{!}j^{\ast}P$ and
+$j_{\ast}j^{\ast}P$ are canonically isomorphic respectively to
+$A_U\otimes_A P$ and $\scrHom_A(A_U,P)$
+(\hyperref[IV.prop12.3]{12.3} and \hyperref[IV.cor12.6]{12.6}).
+Moreover, under these isomorphisms, the canonical morphisms
+$j_{!}j^{\ast}P\rightarrow P$ and
+$P\rightarrow j_{\ast}j^{\ast}P$ arise from the monomorphism
+$A_U\rightarrow A$. The exact sequence
+\hyperref[IV.eq14.10.1]{14.10.1} therefore gives two exact
+sequences (\hyperref[IV.subsec12.2]{12.2} and
+\hyperref[IV.prop12.11]{12.11}):
+\begin{align*}
+& j_{!}j^{\ast}P\longrightarrow P\longrightarrow
+i_{\ast}i^{\ast}A\otimes_AP\longrightarrow 0{\quoi},\\
+& 0\longrightarrow \scrHom_A(i_{\ast}i^{\ast}A,P)\longrightarrow
+P\longrightarrow j_{\ast}j^{\ast}P{\quoi};
+\end{align*}
+and the stated isomorphisms follow by comparison with \hyperlink{sga4.exp.IV.equation.14.6.1}{(14.6.1)} and
+\hyperlink{sga4.exp.IV.equation.14.6.2}{(14.6.2)}.
+
+\begin{thebibliography}{99}\pageoriginale
+\bibitem{sga4.exp.IV.bib.1} M. Artin and B. Mazur, Homotopy of varieties in the etale
+topology, in: Proceedings of a Conference on Local Fields,
+Driebergen 1966, Springer.
+\bibitem{sga4.exp.IV.bib.2} P. Gabriel and G. Zisman, Calculus of fractions and
+homotopy theory, Ergebnisse der Mathematik, Bd 35.
+
+\bibitem{sga4.exp.IV.bib.3} J. Giraud, Algèbre homologique non commutative,
+Grundlehren Springer 1971.
+
+\bibitem{sga4.exp.IV.bib.4} A. Grothendieck, Sur quelques points d'Algèbre
+homologique, Tohoku Math. Journal (cited as [Toh]).
+
+\bibitem{sga4.exp.IV.bib.5} A. Grothendieck, Fondements de la Géométrie
+Algébrique (collection of Bourbaki talks 1957/62), Secrétariat
+mathématique, 11 rue P. Curie, Paris.
+
+\bibitem{sga4.exp.IV.bib.6} A. Grothendieck, Crystals and the De Rham cohomology
+of schemes (notes by I. Coates and O. Jussila), in: Dix exposés sur
+la cohomologie des schémas, North Holland Pub. Cie., 1969.
+
+\bibitem{sga4.exp.IV.bib.7} A. Grothendieck, Classes de Chern des
+représentations linéaires des groupes discrets, in: Dix exposés sur
+la cohomologie des schémas, North Holland Pub. Cie., 1969.
+
+\bibitem{sga4.exp.IV.bib.8} R. Godement, Théorie des faisceaux,
+Act. Scient. Ind. ${\rm n^{\circ}}$ 1 252 (1958), Hermann (Paris)
+(cited as [TF]).
+
+\bibitem{sga4.exp.IV.bib.9} M. Hakim, Topos annelés et schémas relatifs,
+mimeographed thesis, Orsay 1967.
+
+\bibitem{sga4.exp.IV.bib.10} D. Mumford, Picard groups of moduli problems, in
+Arithmetic Algebraic Geometry, Harper's Series in Modern
+Mathematics.
+
+\bibitem{sga4.exp.IV.bib.11} Nguyen Dinh Ngoc, Thèse Sciences Mathématiques,
+Paris 1963, ${\rm n^{\circ}}$ 4 995.
+
+\bibitem{sga4.exp.IV.bib.12} J.E. Roos, Distributivité des $\varinjlim$ par
+rapport aux $\varprojlim$ des topos
+
+\begin{tabular}{@{}r@{\;}l@{\hspace{1cm}}r@{\;}l}
+a) & CR t.259 p. 969-972 & b) & CR T. 259 p. 1605-1608\\
+c) & CR t.259 p. 1801-1804 & & (August and September 1964).
+\end{tabular}
+
+\bibitem{sga4.exp.IV.bib.13} P. Deligne--D. Mumford, The irreducibility of
+the space of curves of given genus, Pub. math. ${\rm n^{\circ}}$ 36
+(1969).
+
+\bibitem{sga4.exp.IV.bib.14} B. Mitchell, Theory of categories, Academic Press
+(1965).
+
+\bibitem{sga4.exp.IV.bib.15} J. Lurie, Higher Topos Theory, Annals of Mathematics Studies, 170. Princeton University Press,
+Princeton, NJ, 2009. xviii+925 pp.
+
+\bibitem{sga4.exp.IV.bib.16} P. Johnstone, Topos theory,
+London Mathematical Society Monographs, Vol. 10.
+Academic Press [Harcourt Brace Jovanovich, Publishers], London--New York, 1977. xxiii+367 pp.
+
+\bibitem{sga4.exp.IV.bib.17} F. Borceux, G. Van den Bossche, Structure des topologies
+d'un topos, Cahiers de topologie et géométrie différentielle catégoriques,
+t. 25, n°1 (1984), p. 37--39.
+
+\end{thebibliography}
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

@@ -1,0 +1,237 @@
+\section{Localization}\etiquette[5]{III.sec5}\pageoriginale
+
+\subsection{}\etiquette[5.1]{III.subsec5.1}
+Now let $C$ be a $𝒰$-site and $X$ an object of
+$C^{\widehat{\phantom{,}}}$. Unless expressly stated otherwise, the
+category $C/X$ will be endowed with the topology $𝒯$ induced by the
+functor $j_X:C/X\rightarrow C$ (\hyperref[III.subsec3.1]{3.1}). The notation
+$C/X$ will denote the category $C/X$ endowed with the topology $𝒯$.
+Proposition \hyperrefext[I][I.prop5.11]{5.11} shows that the functor $j_{X!}$
+commutes with fiber products and consequently sends every
+monomorphism to a monomorphism. In particular, for every object
+$(Y\rightarrow X)$ of $C/X$, the functor $j_{X!}$ establishes a
+one-to-one correspondence between the sieves, in the category
+$C/X$, on the object $(Y\rightarrow X)$ and the sieves, in $C$, on
+the object $Y$.
+
+\begin{enonce*}{Proposition 5.2}\etiquette[5.2]{III.prop5.2}
+Let $C$ be a $𝒰$-site, $X$ an object of
+$C^{\widehat{\phantom{,}}}$, and $j_X:C/X\rightarrow C$ the
+corresponding continuous functor.
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item A sieve $R$ on an object $(Z\rightarrow X)$ is covering in
+$C/X$ if and only if the sieve $j_{X!}(R)\hookrightarrow Z$ is
+covering in $C$.
+
+\item The functor $j_X:C/X\rightarrow C$ is cocontinuous and
+continuous.
+
+\item Let $m:Y\rightarrow X$ be a morphism of
+$C^{\widehat{\phantom{,}}}$. We then have the commutative diagram
+\[
+\xymatrix@C=1cm@R=1.25cm{
+C/Y \ar[rr]^{j_m} \ar[rd]_{j_Y}&       &C/X \ar[ld]^{j_X}\\
+    &  C    &.
+}
+\]
+The topology induced by the functor $j_Y$ on $C/Y$ is equal to the
+topology induced by $j_m$ on $C/Y$.
+
+\item The topology induced by $j_X:C/X\rightarrow C$ is a
+$𝒰$-topology (\hyperrefext[II][II.def3.0.2]{3.0.2}).
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item If\pageoriginale the sieve $R$ on $(Z\rightarrow X)$ is
+covering, the sieve $j_{X!}(R)\hookrightarrow Z$ is covering
+(\hyperref[III.prop1.6]{1.6}).
+
+Conversely, if the sieve $j_{X!}(R)\rightarrow Z$ is covering in
+$C$, one sees that the same is true for every sieve obtained by a
+base change in $C/X$. The sieve $R$ is therefore covering
+(\hyperref[III.prop3.2]{3.2}).
+
+\item This follows immediately from 1) by applying
+\hyperref[III.def2.1]{2.1}.
+
+\item This follows immediately from the description of covering
+sieves given in 1).
+
+\item Let $(G_i)_{i\in I}$ be a small topologically generating
+family of $C$. One verifies immediately that the small family
+$(u:G_i\rightarrow X)$, $u\in \amalg_{i\in
+I}\Hom_{C^{\widehat{\phantom{,}}}}(G_i, X)$, is topologically
+generating in $C/X$.
+\end{enumerate}
+\end{enonce*}
+
+\phantomsection\MakeLinkTarget*{sga4.exp.III.terminology.5.3}\label{sga4.exp.III.terminology.5.3}\label{III.subsec5.3}%
+\noindent \emph{Terminology and notation} 5.3. By the preceding
+proposition, the functor $j_X$ is both continuous and cocontinuous.
+It therefore defines a sequence of three adjoint functors (4.3.2)
+between the categories of sheaves of sets (\hyperref[III.prop1.3]{1.3}
+and \hyperref[III.prop2.3]{2.3}):
+\begin{gather*}
+j^s_X:(C/X)^{\sim}\longrightarrow
+C^{\sim}\\
+j^{\ast}_X=j_{X,s}:C^{\sim}\longrightarrow
+(C/X)^{\sim}\\
+j_{X\ast}:(C/X)^{\sim}\longrightarrow C^{\sim}{\quoi}.
+\end{gather*}
+
+In the particular situation of Proposition \hyperref[III.prop5.2]{5.2},
+we shall use the following terminology and notation:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The functor $j_{X\ast}$ will be called the \emph{direct image
+functor.}
+
+\item The functor $j_{X,s}=j^{\ast}_X$ will be denoted by
+$j^{\ast}_X$ and will be called the \emph{restriction functor to
+$C/X$.}
+
+\item The\pageoriginale functor $j^s_X$ on sheaves of sets will be
+called the ``extension by the empty set to $C$''
+functor and will be denoted by $j_{X!}$ (\cf 2.9.2).
+\end{enumerate}
+
+Thus we have a sequence of three adjoint functors between
+$(C/X)^{\sim}$ and $C^{\sim}$:
+$$
+j_{X!},\; j^{\ast}_X,\; j_{X\ast}{\quoi}.
+$$
+
+\begin{enonce*}{Proposition 5.4}\etiquette[5.4]{III.prop5.4}
+The functor $j_{X!}:(C/X)^{\sim}\rightarrow C^{\sim}$ factors
+through the category $C^{\sim}/\underline{a}X$ ($\underline{a}$ is
+the associated sheaf functor):
+
+$(C/X)^{\sim}\xrightarrow{e^{\sim}_X} C^{\sim}/\underline{a}X\rightarrow
+C^{\sim}$. The functor
+$$
+e^{\sim}_X:(C/X)^{\sim}\longrightarrow \widetilde{C}/\underline{a}X
+$$
+is an equivalence of categories. The restriction functor to $C/X$,
+followed by the equivalence $e^{\sim}_X$, is isomorphic to the
+``base change by $\underline{a}X\rightarrow \epsilon$'' functor
+($\epsilon$ being the terminal object of $C^{\sim}$):
+$F\mapsto (F\times
+\underline{a}X\xrightarrow{\pr_2}\underline{a}X)$.
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The image under $j_{X!}$ of the terminal object of $(C/X)^{\sim}$ is
+the object $\underline{a}X$, which gives the factorization. To show
+that the functor $e^{\sim}_X$ is an equivalence, we shall confine
+ourselves to a few indications. By \hyperrefext[I][I.prop5.11]{5.11}, a
+presheaf on $C/X$ is defined by a presheaf $F$ on $C$ equipped with
+a morphism $F\rightarrow X$. One then proves that the following two
+properties are equivalent:
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+\item The presheaf on $C/X$ defined by $F\rightarrow X$ is a
+sheaf.
+
+\item The following diagram is cartesian (where $i$ and
+$\underline{a}$ denote the inclusion in the category of presheaves
+and the associated sheaf functor, respectively):
+\[
+\xymatrix@C=2.75cm@R=1cm{
+F \ar[r]\ar[d]& i\mathsf{\underline{a}}F \ar[d]\\
+X \ar[r]& i\mathsf{\underline{a}}X\quad . }
+\]
+\end{enumerate}
+
+It\pageoriginale follows immediately that $e^{\sim}_X$ is an
+equivalence. The last assertion is trivial.
+\end{enonce*}
+
+\begin{enonce*}{Proposition 5.5}\etiquette[5.5]{III.prop5.5}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi)}
+\item Let $C$ be a $𝒰$-site and $X$ an object of
+$C^{\widehat{\phantom{,}}}$. The diagram below of categories and
+functors commutes up to canonical isomorphisms:
+\[
+\xymatrix@C=1.5cm@R=1.5cm{ C/X \ar[r]^{h_X} \ar[d]&
+(C/X)\widehat{\phantom{a}} \ar[d]^{e\widehat{\phantom{a}}_X}
+\ar[r]^{\underline{a}_X}& (C/X)\widetilde{\phantom{a}} \ar[rr]^{i_X}
+\ar[d]^{e\widetilde{\phantom{a}}_X}& &
+(C/X)\widehat{\phantom{a}} \ar[d]^{e\widehat{\phantom{a}}/X}\\
+C/X \ar[r]^{h/X}& C\widehat{\phantom{a}}/X \ar[r]^{\underline{a}/X}&
+C\widetilde{\phantom{a}}/\underline{a}X \ar[r]^{i/\underline{a}X}&
+C\widehat{\phantom{a}}/i\underline{a}X \ar[r]^{\pi}&
+C\widehat{\phantom{a}}/X. }
+\]
+
+The notations $\underline{a}_X$ and $i_X$ denote the ``associated
+sheaf'' and inclusion into presheaves functors for the site $C/X$.
+The notation $\underline{a}/X$ denotes the natural extension of the
+functor $\underline{a}$ (the associated sheaf functor for the site
+$C$) to the category of arrows with target $X$; similarly for the
+notation $i/\underline{a}X$. Finally, the notation $\pi$ denotes the
+base-change functor along the canonical arrow
+$X\rightarrow i\underline{a}X$.
+
+\item Let, in addition, $m:Y\rightarrow X$ be a morphism of
+$C^{\widehat{\phantom{,}}}$. The following diagram commutes up to
+canonical isomorphism:
+\[
+\xymatrix@C=1.75cm@H=.5cm{ C\widetilde{\phantom{a}}
+/\underline{a}X/\underline{a}Y \ar@{=}[dd]&
+(C/X)\widetilde{\phantom{a}}/\underline{a}_X Y \ar[l]_{f}& \\
+& & (C/X/Y)\widetilde{\phantom{a}} \ar[lu]_{g} \ar[ld]_{e\widetilde{\phantom{a}}_m}\\
+C\widetilde{\phantom{a}}/\underline{a}Y & (C/Y)\widetilde{\phantom{a}}
+\ar[l]_{e\widetilde{\phantom{a}}_Y}&. }
+\]
+
+The\pageoriginale arrow $f$ is the natural extension of the
+equivalence $e^{\sim}/X$ to the category of arrows with target
+$\underline{a}_XY$, and is consequently an equivalence of
+categories. The arrow $g$ is precisely the equivalence of
+\hyperref[III.prop5.4]{5.4} applied to the situation $(C/X)/[m]$.
+
+\item Denote by
+$j_{\underline{a}X!}:C^{\sim}/\underline{a}X\rightarrow C^{\sim}$ the
+``forget $\underline{a}X$'' functor, and by
+$j^{\ast}_{\underline{a}X}:C^{\sim}\rightarrow C^{\sim}/\underline{a}X$ the
+``product with $\underline{a}X$'' functor. The following diagrams
+commute up to canonical isomorphism:
+\begin{displaymath}
+\xymatrix@C=2.25cm@R=1.25cm{ (C/X)^{\widetilde{\phantom{a}}}
+\ar[r]^{j_{X!}} \ar[d]   &
+  C\widetilde{\phantom{a}} \ar@{=}[d]\\
+C\widetilde{\phantom{a}}/\underline{a}X \ar[r]^{j_{\underline{a}X!}} &
+C\widetilde{\phantom{a}} } \qquad {\raisebox{-1.75cm}{,}}\qquad
+\xymatrix@C=2.5cm@R=1.25cm{
+C{\widetilde{\phantom{a}}} \ar[r]^{j_X^{\ast}} \ar@{=}[d]&  (C/X)\widetilde{\phantom{a}}\ar[d]^{e\widetilde{\phantom{a}}/X}\\
+C{\widetilde{\phantom{a}}} \ar[r]^{j_{\underline{a}X}^{\ast}} &
+C{\widetilde{\phantom{a}}}/\underline{a}X. }
+\end{displaymath}
+\end{enumerate}
+\end{enonce*}
+
+\begin{enonce*}[remark]{Proof}
+The proof of these assertions follows immediately from the
+definition of the equivalences $e^{\sim}_X$
+(\hyperref[III.prop5.4]{5.4}) and
+$e^{\widehat{\phantom{\,}}}_X$ (\hyperrefext[I][I.prop5.11]{5.11}).
+\end{enonce*}
+
+\begin{thebibliography}{99}%
+\bibitem[TF]{sga4.exp.III.bib.TF} R. Godement, théorie des faisceaux, Hermann,
+1958. Act. Scient.
+
+Ind ${\rm n^{\circ}}$ 1252, (Paris).
+\end{thebibliography}
+
+
+
+\ifx\danslelivre\undefined
+\end{document}
+\fi

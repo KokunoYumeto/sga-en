@@ -1,0 +1,228 @@
+
+\setcounter{footnote}{-1}
+\SGARefTarget{sga3:viii:chapter:viii}\chapter*{Expos\'e VIII\\Diagonalizable Groups}
+\addcontentsline{toc}{chapter}{Expos\'e VIII. Diagonalizable Groups}
+\markboth{EXPOS\'E VIII. DIAGONALIZABLE GROUPS}%
+  {EXPOS\'E VIII. DIAGONALIZABLE GROUPS}
+
+\begin{center}
+  \textit{by A. Grothendieck}\footnote{Editor's note: version \SGARefLink{sga3:viii:definition:1:1}{1.1} of
+  November 8, 2009. Additions were made in \SGARefLink{sga3:viii:theorem:1:2}{1.2}, \SGARefLink{sga3:viii:corollary:1:4}{1.4}, \SGARefLink{sga3:viii:paragraph:1-7}{1.7}, \SGARefLink{sga3:viii:theorem:3:1}{3.1}, \SGARefLink{sga3:viii:corollary:3:4}{3.4}, \SGARefLink{sga3:viii:remark:4:5:1}{4.5.1},
+  \SGARefLink{sga3:viii:theorem:6:4}{6.4}, and \SGARefLink{sga3:viii:remark:6:8}{6.8}; 1.5.1 and \SGARefLink{sga3:viii:section:7}{Section~7} remain to be revised.}
+\end{center}
+
+\SGARefTarget{sga3:viii:section:1}\section*{1. Biduality}
+\addcontentsline{toc}{section}{1. Biduality}
+
+Let \(\mathscr C\) be a category, which as usual we identify with a full
+subcategory of
+\[
+  \widehat{\mathscr C}
+  =\operatorname{Hom}(\mathscr C^{\circ},\mathbf{Set})
+\]
+(cf. Expos\'e~I). Let \(I\) be a commutative group functor, that is, an
+object of \(\widehat{\mathscr C}\) endowed with a commutative group structure
+(cf. I, \SGARefLink{sga3:i:subsection:2-1}{2.1}).\footnote{Editor's note: the original has been expanded in what
+follows.} For every \(X\in\operatorname{Ob}(\widehat{\mathscr C})\), the
+object \(\operatorname{Hom}(X,I)\) carries the commutative group structure
+induced by that of \(I\). For every group \(G\) in
+\(\widehat{\mathscr C}\), put
+\[
+  D(G)=\operatorname{Hom}_{\mathrm{gr}}(G,I),
+\]
+the subobject of \(\operatorname{Hom}(G,I)\) defined, for every
+\(S\in\operatorname{Ob}(\mathscr C)\), by
+\SGARefTarget{sga3:viii:eq:1:x}
+\begin{equation}
+  \tag{x}
+  D(G)(S)=\operatorname{Hom}_{S\text{-}\mathrm{gr}}(G_S,I_S),
+\end{equation}
+where \(G_S=G\times S\) and \(I_S=I\times S\) are regarded as
+\(S\)-groups, that is, as groups in \(\widehat{\mathscr C}_{/S}\). Thus
+\(D(G)\) is a \(\widehat{\mathscr C}\)-subgroup of
+\(\operatorname{Hom}(G,I)\). In this way we obtain a contravariant functor
+\(D\) from the category of \(\widehat{\mathscr C}\)-groups to the category
+of commutative \(\widehat{\mathscr C}\)-groups.
+
+The right-hand side of \(\SGARefLink{sga3:viii:eq:1:x}{(x)}\) may also
+be interpreted as the subset of \(\operatorname{Hom}(G\times S,I)\)
+consisting of morphisms \(G\times S\to I\) that are ``multiplicative in the
+first argument \(G\).'' Moreover, the preceding formulas remain valid when
+\(S\) is an arbitrary object of \(\widehat{\mathscr C}\), not necessarily
+one arising from \(\mathscr C\).
+
+Now take for \(S\) a group in \(\widehat{\mathscr C}\), denoted \(G'\). In
+the left-hand side \(\operatorname{Hom}(G',D(G))\) of
+\(\SGARefLink{sga3:viii:eq:1:x}{(x)}\), consider the subset
+\(\operatorname{Hom}_{\mathrm{gr}}(G',D(G))\) consisting of morphisms that
+respect the group structures of \(G'\) and \(D(G)\).
+
+It corresponds to the subset of \(\operatorname{Hom}(G\times G',I)\)
+consisting of morphisms that are multiplicative in each of the two
+arguments---which one may call \emph{bilinear morphisms from
+\(G\times G'\) to \(I\)}, or \emph{pairings of \(G\) and \(G'\) with
+values in \(I\)}. We therefore have
+\SGARefTarget{sga3:viii:eq:1:xx}
+\begin{equation}
+  \tag{xx}
+  \operatorname{Hom}_{\mathrm{gr}}(G',D(G))
+  \xrightarrow{\ \sim\ }
+  \operatorname{Hom}_{\mathrm{bil}}(G\times G',I),
+\end{equation}
+functorially in the pair \((G,G')\). Since the right-hand side is symmetric
+in \(G\) and \(G'\), this gives a functorial bijection
+\SGARefTarget{sga3:viii:eq:1:xxx}
+\begin{equation}
+  \tag{xxx}
+  \operatorname{Hom}_{\mathrm{gr}}(G',D(G))
+  \xrightarrow{\ \sim\ }
+  \operatorname{Hom}_{\mathrm{gr}}(G,D(G')).
+\end{equation}
+In other words, giving a group homomorphism \(G'\to D(G)\) ``amounts to the
+same thing'' as giving a group homomorphism \(G\to D(G')\): both amount to
+giving a pairing \(G\times G'\to I\).
+
+Apply this with \(G'=D(G)\) and with the identity homomorphism
+\(G'\to D(G)\). We obtain a canonical homomorphism
+\SGARefTarget{sga3:viii:eq:1:xxxx}
+\begin{equation}
+  \tag{xxxx}
+  G\longrightarrow D(D(G)).
+\end{equation}
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:definition:1:0}\textbf{Definition 1.0.}
+\footnote{Editor's note: the numbering \SGARefLink{sga3:viii:definition:1:0}{1.0}, \SGARefLink{sga3:viii:proposition:1:0:1}{1.0.1}, and so on has been added
+to make the definitions and statements contained here explicit.}
+\textit{The group \(G\) is called \emph{reflexive} (relative to \(I\)) if
+\SGARefLink{sga3:viii:eq:1:xxxx}{the preceding homomorphism} is an isomorphism. This implies, in particular,
+that \(G\) is commutative.}
+
+We therefore have:
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:proposition:1:0:1}\textbf{Proposition 1.0.1.}
+\textit{The functor \(D\) induces an anti-equivalence from the category of
+reflexive \(\widehat{\mathscr C}\)-groups to itself.}
+
+In particular, if \(G\) and \(H\) are reflexive groups, \(D\) induces an
+isomorphism
+\[
+  \operatorname{Hom}_{\mathrm{gr}}(G,H)
+  \xrightarrow{\ \sim\ }
+  \operatorname{Hom}_{\mathrm{gr}}(D(H),D(G)).
+\]
+It is enough, in fact, that \(H\) be reflexive, as follows from
+\(\SGARefLink{sga3:viii:eq:1:xxx}{(xxx)}\).
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:definition:1:0:2}\textbf{Definition 1.0.2.}
+\textit{As usual, a \(\mathscr C\)-group \(G\) is called \emph{reflexive} if
+it is reflexive as a \(\widehat{\mathscr C}\)-group, regardless of whether
+\(D(G)\) is representable.}
+
+Thus \(D\) gives an anti-equivalence from the category of reflexive
+\(\mathscr C\)-groups \(G\) for which \(D(G)\) is representable to itself.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:remark:1:0:3}\textbf{Remark 1.0.3.}
+To conclude these generalities, note that formation of the dual \(D(G)\)
+commutes with base extension, which therefore carries reflexive groups to
+reflexive groups.
+
+We shall henceforth work in the following setting. Let
+\(\mathscr C=(\mathbf{Sch})_{/S}\) be the category of preschemes over \(S\),
+and let \(I=\mathbf G_{m,S}\) be the ``multiplicative group over \(S\)''
+(cf. Expos\'e~I). For every ordinary group \(M\), consider the constant
+\(S\)-group \(M_S\). For every group prescheme \(J\) over \(S\), there is a
+canonical isomorphism, functorial in \(M\) and \(J\) and compatible with base
+extension,
+\[
+  \operatorname{Hom}_{S\text{-}\mathrm{gr}}(M_S,J)
+  =\operatorname{Hom}_{\mathrm{gr}}(M,J(S)).
+\]
+
+Applying this with \(J=I=\mathbf G_{m,S}\) and with a variable \(S'\) over
+\(S\), we obtain a functorial isomorphism
+\SGARefTarget{sga3:viii:eq:1:0:4}
+\begin{equation}
+  \tag{1.0.4}
+  D(M_S)(S')
+  \xrightarrow{\ \sim\ }
+  \operatorname{Hom}_{\mathrm{gr}}(M,\mathbf G_m(S')).
+\end{equation}
+We thus recover the functor already considered in I, \SGARefLink{sga3:i:subsection:4-4}{4.4}, also denoted
+\(D_S(M)\), which is representable when \(M\) is commutative, since
+\[
+  D_S(M)=D(M_S)=\operatorname{Spec}\mathscr O_S(M),
+\]
+where \(\mathscr O_S(M)\) denotes the group algebra of \(M\) over
+\(\mathscr O_S\). In general, moreover, \(D(M)\) is unchanged when \(M\)
+is replaced by its abelianization, so no information is lost by assuming
+that \(M\) is commutative.
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:definition:1:1}\textbf{Definition 1.1.}
+\textit{A group prescheme \(G\) over \(S\) is called \emph{diagonalizable}
+if it is isomorphic to a scheme of the form}
+\[
+  D_S(M)=D(M_S)
+  =\operatorname{Hom}_{S\text{-}\mathrm{gr}}(M_S,\mathbf G_m)
+\]
+\textit{for a suitable commutative group \(M\). It is called
+\emph{locally diagonalizable} if every point of \(S\) has an open
+neighborhood \(U\) such that \(G|_U\) is diagonalizable.}
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:theorem:1:2}\textbf{Theorem 1.2.}
+\textit{Let \(\Gamma\) be a constant commutative group scheme over \(S\);
+that is, suppose that it is isomorphic to a group scheme of the form \(M_S\),
+where \(M\) is an ordinary commutative group. Then \(\Gamma\) is reflexive:
+the canonical homomorphism}
+\[
+  \Gamma\longrightarrow D(D(\Gamma))
+\]
+\textit{is an isomorphism.\footnote{Editor's note: the sentence that follows
+has been added.} Hence the diagonalizable group \(D(M_S)\) is also
+reflexive.}
+
+In view of the definitions, this follows from \SGARefLink{sga3:viii:corollary:1:3}{the next statement}, applied to
+a prescheme \(S'\) over \(S\).
+
+\medskip
+\noindent\SGARefTarget{sga3:viii:corollary:1:3}\textbf{Corollary 1.3.}
+\textit{Let \(G=D(M_S)\). Every homomorphism of \(S\)-groups}
+\[
+  u:G\longrightarrow\mathbf G_{m,S}
+\]
+\textit{is defined by a unique section of \(M_S\) over \(S\), equivalently
+by a unique locally constant map from \(S\) to \(M\).}
+
+\emph{Proof.}
+By definition,
+\[
+  \mathbf G_{m,S}
+  =\operatorname{GL}(1)_S
+  =\operatorname{Aut}_{\mathscr O_S\text{-}\mathrm{mod}}(\mathscr O_S).
+\]
+Thus giving a group homomorphism \(G\to\mathbf G_{m,S}\) is equivalent to
+giving \(\mathscr O_S\) the structure of a
+\(G\)-\(\mathscr O_S\)-module compatible with its natural
+\(\mathscr O_S\)-module structure (cf. I, \SGARefLink{sga3:i:subsection:4-7}{4.7}). By I, \SGARefLink{sga3:i:proposition:4-7-3}{4.7.3}, this is also
+equivalent to giving an \(M\)-grading on \(\mathscr O_S\), that is, a direct
+sum decomposition
+\[
+  \mathscr O_S=\bigoplus_{m\in M}\mathscr L_m.
+\]
+It is well known that a direct summand of a locally free module of finite
+type is locally free of finite type. Hence, near each point of \(S\), every
+\(\mathscr L_m\) is either zero or free of rank one; in the latter case it
+identifies with \(\mathscr O_S\) on that neighborhood. Let \(S_m\) be the
+open subset of \(S\) on which the latter alternative occurs. The direct-sum
+decomposition shows that the \(S_m\) cover \(S\) and are pairwise disjoint.
+
+Consequently, giving a group homomorphism \(G\to\mathbf G_{m,S}\) is
+equivalent to giving a decomposition of \(S\) as a union of pairwise
+disjoint open subsets \(S_m\), \(m\in M\), hence to giving a locally
+constant map from \(S\) to \(M\). This proves \SGARefLink{sga3:viii:corollary:1:3}{Corollary~1.3} and therefore
+\SGARefLink{sga3:viii:theorem:1:2}{Theorem~1.2}. \qed

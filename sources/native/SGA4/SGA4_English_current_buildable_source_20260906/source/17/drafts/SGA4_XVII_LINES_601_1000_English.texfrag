@@ -1,0 +1,395 @@
+$\epsilon_{J}:J\rightarrow \{+,-\}$ be functions, and let us be given
+multiadditive multifunctors, covariant in the arguments for which
+$\epsilon=+$ and contravariant in the others:
+\begin{align*}
+G_j&: \prod_{\Psi(i)=j}\Aa_i\longrightarrow
+\Bb_j\qquad (j\in J)\\
+F&:  \prod_{j\in J} \Bb_j\longrightarrow \sisi{C}{\Cc.}
+\end{align*}
+
+Choose total orders on $I$ and $J$ such that $\Psi$ is an increasing
+map. We then define the \emph{canonical isomorphism $\rho$ between the
+  extension to complexes of $F\circ (G_j)$ and the composite of the
+  extensions to complexes of $F$ and of the $G_j$} by the formula
+$$\etiquette[1.1.8.1]{XVII.eq1.1.8.1}
+\rho^{\sheafk }=\sisi{\prod_i \eta_i^{k_i}}{(-1)^{A(\sheafk )}}:\; \mbox{\rm automorphism of }
+F\circ (G_j)(K_{i}^{k_i\epsilon\sisi{}{_I}(i)\epsilon\sisi{}{_J}(\Psi(i))}){\quoi}.\leqno(1.1.8.1)
+$$%
+where \sisi{$\eta_i=-1$ if $\epsilon_I(i)=\epsilon_{J}(\Psi(i))=-$,
+$\eta_i=1$ otherwise.}{\[
+A(\sheafk )=\sum_{\epsilon_I(i)=\epsilon_J(\Psi(i))=-} k_i + \sum_{\epsilon_J(j)=-} \sum_{\substack{\Psi(a)=\Psi(b)=j\\a<b}} k_a k_b.
+\]}%See the Erratum in SGA 4 1/2, p. 312
+
+This formula generalizes \eqhyperref[XVII.eq1.1.5.3]{1.1.5.3}; one verifies that $\rho$ does not depend
+on the orders chosen on $I$ and $J$, and is an isomorphism of graded
+functors (\cf \hyperref[XVII.lem1.1.5.4]{1.1.5.4} (ii)).
+
+These isomorphisms $\rho$ satisfy the evident cocycle condition for a
+triple composite.
+
+\subsubsection{}\etiquette[1.1.9]{XVII.subsubsec1.1.9}
+Let\pageoriginale $I$ be a finite set, let $i$ and $j$ be two distinct
+elements of $I$, let $I'=I\backslash\{i,j\}$, let $(\Aa_i)_{i\in I}$ and
+$\Aa$ be additive categories, and let $F:(\Aa_i)_{i\in
+  I}\rightarrow \Aa$ and $G:(\Aa_i)_{i\in
+  I'}\rightarrow \Aa$ be multiadditive multifunctors. Suppose that
+$\Aa_i=\Aa_j$ and that $F$ is contravariant in the $i$-th variable and
+covariant in the $j$-th. For $X$, $Y\in \Ob \Aa_i$, denote by
+$F_{X,Y}$ the multifunctor from $(\Aa_i)_{i\in I'}$ to $\Aa$
+obtained by fixing the $i$-th and $j$-th arguments:
+\[
+F_{X,Y}(\ldots)=F(\ldots\sisi{}{,} X,\ldots,Y,\ldots){\quoi}.
+\]
+A \emph{contraction morphism} $c:F\rightarrow G$ consists of, for
+every $X\in \Aa_i$, a morphism of functors
+\[
+c_{X}:F_{X,X}\longrightarrow G{\quoi},
+\]
+such that, for every arrow $f:X\rightarrow Y$ of $\Aa_i$, the diagram
+\[
+\xymatrix{
+F_{Y,X} \ar[d] \ar[r] & F_{X,X} \ar[d]^{c_X}\\
+F_{Y,Y}  \ar[r]_{c_Y}     & G
+}
+\]
+is commutative.
+
+The conventions of \hyperref[XVII.subsubsec1.1.6]{1.1.6} are motivated by the
+
+\begin{enonce*}{Lemma 1.1.9.1}\etiquette[1.1.9.1]{XVII.lem1.1.9.1}
+Let $c:F\rightarrow G$ be a contraction morphism, and let
+$(K_{\ell})_{\ell \in I}$ be complexes in the $\Aa_{\ell}$, with
+$K_{i}=K_{j}$. Let $<$ be a total order on $I$ for which $i$ is the
+predecessor of $j$. With the notation of
+\hyperref[XVII.subsubsec1.1.6]{1.1.6}, for $k\in \ZZ$, let
+\[
+c^{k}:K^{s}(F)(K_{\ell})^{k}\longrightarrow K^{s}(G)(K_{\ell})^{k}
+\]
+be\pageoriginale the morphism whose restriction to $F(\ldots
+K_{i}^{k_i}K_{j}^{k_j}\ldots)$ is $0$ if $k_i\neq k_j$, and is
+$c_{K_i^{k_i}}$ if $k_{i}=k_{j}$. Then $(c^{k})_{k\in \ZZ}$ is a
+morphism of complexes.
+\end{enonce*}
+
+We leave to the reader the verification of this lemma, as well as the
+fact that the \emph{contraction morphism} $(c^{k})$ does not depend on
+the order chosen on $I$.
+
+The standard example of a contraction morphism is the composition law
+\[
+\Hom(Y,Z)\otimes \Hom(X,Y)\longrightarrow \Hom(X,Z)\sisi{}{.}
+\]
+
+\begin{enonce*}[remark]{Examples 1.1.10}\etiquette[1.1.10]{XVII.exem1.1.10}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item Applying the definitions of \hyperref[XVII.subsubsec1.1.6]{1.1.6} to the
+  \emph{tensor-product} functor gives the usual notion of the tensor
+  product of two complexes, with differential
+\[
+d(x\otimes y)=dx\otimes y+(-1)^{\deg x}x\otimes dy{\quoi}.
+\]
+
+\item Apply the definitions of \hyperref[XVII.subsubsec1.1.6]{1.1.6} to the
+  functor $\Hom(X,Y)$, \emph{regarding $Y$ as the first variable and
+  $X$ as the second variable}, a convention that we shall always
+  follow. This convention identifies, for two complexes $X$, $Y$, the
+  $k$\sisi{-th}{-th} component of the complex $\Hom(X,Y)$ defined in
+  \hyperref[XVII.subsubsec1.1.6]{1.1.6} with $\prod_n\Hom(X^{n},Y^{n+k})$, and gives the
+  usual differential: for $f\in \Hom(X^{n},Y^{n+k})$, one has
+\[
+df=d\circ f-(-1)^{k}f\circ d{\quoi}.
+\]
+
+\item The preceding conventions have the virtue that the following
+  systems of arrows are morphisms of complexes, without any signs
+  having\pageoriginale to be inserted (\hyperref[XVII.subsubsec1.1.9]{1.1.9}):
+\begin{align*}
+& \Hom^{\bigdot}(L,M)\otimes \Hom^{\bigdot}(K,L)\longrightarrow
+  \Hom^{\bigdot}(K,M):f\otimes g\mapsto f\circ g\\
+& \Hom^{\bigdot}(L,M)\otimes L\longrightarrow M: f\otimes x\mapsto f(x){\quoi}.
+\end{align*}
+\end{enumerate}
+\end{enonce*}
+
+\subsubsection*{${}^{\ast}$1.1.10.1}\etiquette[*1.1.10.1]{XVII.par1.1.10.1}
+The convention \eqhyperref[XVII.eq1.1.4.5]{1.1.4.5}--(\hyperref[XVII.par1.1.6.2]{1.1.6.2}) is justified as follows for
+$F=\otimes$: an element of $((K\otimes L)[1])^{n}$ is written in the
+form (\hyperref[XVII.subsubsec*1.1.2]{*1.1.2}) (recalling that $(K\otimes L)[1]=C(K\otimes
+L\rightarrow 0)$ \eqhyperref[XVII.eq1.1.1.1]{1.1.1.1}) $\sum 1\otimes(x^{p}\otimes y^{q})$, an
+element of $(K[1]\otimes L)^{n}$ in the form $\sum (1\otimes
+x^{p})\otimes y^{q}$, and an element of $(K\otimes L[1])^{n}$ in the
+form $\sum x^{p}\otimes (1\otimes y^{q})$; the sign appears when
+$x^{p}$ and $1$ are interchanged. For $F=$ dual, the convention
+\eqhyperref[XVII.eq1.1.5.2]{1.1.5.2} is justified as follows: an element of $K^{\ast}[1]$ is written
+$1\otimes \omega$; its value on an element $1'\otimes x$ of $K[-1]$
+($1'$ a cell of dimension $-1$) is $<1\otimes \omega, 1'\otimes
+x>=(-1)^{\deg\omega}<1, 1'><\omega,x>=(-1)^{\deg\omega}<\omega,x>$;
+this is the convention adopted.${}_{\ast}$
+
+\begin{enonce*}[remark]{Remark 1.1.11}\etiquette[1.1.11]{XVII.rem1.1.11}
+``Recall'' that a \emph{preadditive category} is a category whose sets
+of arrows $\Hom(X,Y)$ are endowed with abelian-group structures, the
+composition of morphisms being biadditive. An \emph{additive functor}
+$F$ between preadditive categories is a functor satisfying the formula
+\[
+F(f+g)=F(f)+F(g)
+\]
+for $f$, $g\in \Hom(X,Y)$. The additive functors from a preadditive
+category $\Aa$ to another $\Bb$ form a category denoted by
+$\Hhom_{\text{\rm add}}(\Aa,\Bb)$.
+\end{enonce*}
+
+Let\pageoriginale $(D)$ be the unique preadditive category whose set of objects is
+indexed by $\ZZ$, $(X\sisi{_n}{^n})_{n\in \ZZ}$, and for which
+$$\etiquette[1.1.11.1]{XVII.eq1.1.11.1}
+\begin{cases}
+\Hom(X^{n},X^{n})=\ZZ,\;\mbox{\rm generated by the identity}\\
+\Hom(X^{n},X^{n+1})=\ZZ,\;\mbox{\rm generated by an arrow
+  denoted $d_n$}\\
+\Hom(X^{i},X^{j})=0\;\mbox{if } j-i\neq 0\;\mbox{\rm or } 1{\quoi}.
+\end{cases}\leqno(1.1.11.1)
+$$
+
+Let $D$ be the complex of $(D)$ defined by $D^{n}=X^{n}$ and
+$d^{n}=d_n$.
+
+For every preadditive category $\Aa$, the functor
+$G\mapsto G(D)$ from $\Hhom_{\text{\rm add}}((D),\Aa)$ to
+$C(\Aa)$ is an isomorphism.
+
+The construction of \hyperref[XVII.subsubsec1.1.6]{1.1.6} extends to the case of a multiadditive functor
+from preadditive categories $\Aa_i$ to an additive category $\Aa$.
+
+Let
+\[
+F^{\bigdot}=(F^{n},d^{n})_{n\in \ZZ}
+\]
+be a complex of multiadditive functors from additive categories
+$\Aa_i$ to an additive category $\Aa$. One may regard
+$F^{\bigdot}$ as a functor from $(D)$ to a category of multifunctors,
+or equivalently as a multiadditive functor
+\[
+F_1:\prod\Aa_i\times (D)\longrightarrow \Aa{\quoi}.
+\]
+The \emph{extension of $F\sisi{}{^{\bigdot}}$ to complexes} is defined by the formula
+$$\etiquette[1.1.11.2]{XVII.eq1.1.11.2}
+F^{\bigdot}(K_{1}\ldots K_{n})=F_{1}(K_{1}\ldots K_{n},D){\quoi}.\leqno(1.1.11.2)
+$$
+
+\setcounter{subsubsection}{11}
+\subsubsection{}\etiquette[1.1.12]{XVII.subsubsec1.1.12}
+Let $\Aa$ and $\Bb$ be two additive categories and let
+\[
+F^{\bigdot}=(F^{n},d^{n})_{n\in \ZZ}
+\]
+be a complex of additive functors from $\Aa$ to $\Bb$.
+Suppose that the functors\pageoriginale $F^{i}$ admit right adjoints $F_i$; let
+$\leftexp{t}{d}^{i}:F_{i+1}\rightarrow F_i$ be the transpose of
+$d^{i}$, and let $F_{\bigdot}$ be the complex of additive functors from
+$\Bb$ to $\Aa$ whose components are the $F_{i}$ and whose differential
+operator is
+\[
+(d_\bigdot)^{i}=(-1)^{i+1}\,\leftexp{t}{d}^{-i-1}:F_{-i}\longrightarrow
+F_{-i-1}{\quoi}.
+\]
+Let ${}^{t}$ be the \emph{contravariant} functor from $(D)$ to $(D)$
+given by
+\[
+\leftexp{t}{X}^{n}=X^{-n}\quav \leftexp{t}{d}^{n}=d^{-n-1}{\quoi}.
+\]
+The following diagram is commutative up to canonical isomorphism:
+$$\etiquette[1.1.12.1]{XVII.eq1.1.12.1}
+\vcenter{
+\xymatrix@C=6em{
+\mathcal{A} \times (D) \times \mathcal{B}  \ar[d]^{(\Id,{}^t,\Id)}\ar[r]^(.55){(F^{n}(A), \Id)} &
+\mathcal{B}\times \mathcal{B}  \ar[r]^{\Hom_{\mathcal{B}}}&
+(\Ab)\ar@{=}[d] \\
+\mathcal{A} \times (D) \times \mathcal{B}
+\ar[r]^(.6){(\Id,(F_{\bigdot})^n(B))} & \mathcal{A} \times \mathcal{A}
+\ar[r]^{\Hom_{\mathcal{A}}} & (\Ab) \rlap{.}
+}}\leqno{(1.1.12.1)}
+$$
+This expresses the adjunction formula
+\begin{equation*}
+\Hom(F^{n}(A),B)\overset{\sim}{\longleftrightarrow}\Hom(A,F_{n}(B)){\quoi}.
+\end{equation*}
+The general conventions of \hyperref[XVII.def1.1.3]{1.1.3} therefore give an isomorphism
+\begin{equation*}
+\Hom^{\bigdot}(F^{\bigdot}(K),L)\overset{\sim}{\longleftrightarrow}\Hom\sisi{}{^\bigdot}(K,F_{\bigdot}(L)){\quoi}.
+\end{equation*}
+
+\begin{enonce*}{Definition 1.1.13}\etiquette[1.1.13]{XVII.def1.1.13}
+If $K$ is a complex in an abelian category $\Aa$, the \emph{right
+truncation (\resp left truncation)} of $K$ in dimension $n$, denoted
+by $\tau_{\leq n}(K)$ \emph{(\resp $\tau_{\geq n}(K)$)}, means the
+following complexes:
+\begin{align*}
+\tau_{\leq n}(K) &: \ldots K^{n-2}\longrightarrow
+K^{n-1}\longrightarrow \Ker(d^n)\longrightarrow 0\\
+\tau_{\geq n}(K) &: 0\longrightarrow \coker (d^{n-1})\longrightarrow
+K^{n+1}\longrightarrow K^{n+2}\ldots.
+\end{align*}
+\end{enonce*}
+
+\begin{enonce*}{Proposition 1.1.14}\etiquette[1.1.14]{XVII.prop1.1.14}
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item $H^{i}(\tau_{\leq n}(K))=0$\pageoriginale for $i>n$, and $H^{i}(\tau_{\geq
+n}(K))=0$ for $i<n$.
+
+\item The canonical morphism $\tau_{\leq n}(K)\rightarrow K$ (\resp
+$K\rightarrow \tau_{\geq n}K$) induces isomorphisms on the $H^{i}$
+for $i\leq n$ (\resp $i\geq n$).
+\end{enumerate}
+\end{enonce*}
+
+The functor $\tau_{\leq n}$ (\resp $\tau_{\geq n}$) sends homotopic
+morphisms to homotopic morphisms. It therefore follows from
+\sisi{\hyperref[XVII.subsubsec1.1.4]{1.1.4}}{\hyperref[XVII.prop1.1.14]{1.1.14}} that the functor of \hyperref[XVII.def1.1.13]{1.1.13} remains
+meaningful in the derived category.
+
+\setcounter{subsubsection}{14}
+\subsubsection{}\etiquette[1.1.15]{XVII.subsubsec1.1.15}
+If $K$ is a double complex, with first (\resp second) differential
+$d'$ (\resp $d''$), denote by $\tau''_{\leq n}(K)$ the double
+subcomplex of $K$ such that
+\begin{equation*}
+\tau''_{\leq n}(K)^{pq}=
+\begin{cases}
+K^{pq}&\mbox{\rm if } q<n\\
+\Ker(d'') &\mbox{\rm if } q=n\\
+0 &\mbox{\rm if } q>n
+\end{cases}
+\end{equation*}
+and define $\tau''_{\geq n}(K)$, $\tau'_{\leq n}(K)$, and
+$\tau'_{\geq n}(K)$ similarly.
+
+\subsubsection{}\etiquette[1.1.16]{XVII.subsubsec1.1.16}
+We shall also have occasion to consider the ``stupid truncations'' of
+a complex $K$, defined by
+\begin{xalignat*}{2}
+\sigma_{\leq n}(K)^{i}=
+\begin{cases}
+K^{i} &\mbox{\rm if } i\leq n\\
+0 &\mbox{\rm if } i>n
+\end{cases}
+&&
+\sigma_{\geq n}(K)^{i}=
+\begin{cases}
+K^{i} &\mbox{\rm if } i\geq n\\
+0 &\mbox{\rm if } i<n{\quoi}.
+\end{cases}
+\end{xalignat*}
+
+\subsection{Derived functors}\etiquette[1.2]{XVII.subsec1.2}\pageoriginale
+
+Let $\Aa$ be a triangulated category and $S$ a saturated
+multiplicative system (\cite{sga4.exp.XVII.bib.CD} \sisi{}{I }2.1.2). If $A\in \Ob \Aa$, denote
+by $A^{+}$ and $A^{-}$ the \iind- and \ppro-objects
+((\hyperref[XVII.subsec0.5]{0.5}) and (\hyperref[XVII.subsec0.6]{0.6}))
+\begin{equation*}
+A^{+}=\quotinjlim_{A\xrightarrow{s}A'} A' \qquad A^{-}=\quotprojlim_{A'\xrightarrow{s}A}A'{\quoi},
+\end{equation*}
+where $s$ ranges over the filtered category of arrows in $S$ with
+source or target $A$, respectively.
+
+The functors $A\mapsto A^{+}$ and $A\mapsto A^{-}$ make the elements
+of $S$ invertible and define fully faithful functors from
+$\Aa(S^{-1})$ to the categories of Ind- and \ppro-objects of $\Aa$,
+respectively.
+
+\begin{enonce*}{Definition 1.2.1}\etiquette[1.2.1]{XVII.def1.2.1}
+Let $F$ be an exact covariant multifunctor from triangulated categories
+$(\Aa_i)_{0<i\leq n}$ to the triangulated category $\Aa$, and
+let $S_i$ and $S$ be saturated multiplicative systems in the
+categories $\Aa_i$ and $\Aa$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item The right derived functor $RF$ of $F$ (relative to the $S_i$ and
+$S$) is the functor from the categories $\Aa_i(S^{-1}_i)$ to the
+category of \iInd-objects of $\Aa(S^{-1})$ that makes the following
+diagram commutative.
+\[
+\xymatrix@C=5em{%csy
+  (\Aa_i)  \ar[d]\ar[r]^{(A_i)\sisi{\simarrow}{\mapsto}  F(A^{+}_i)} & \Ind
+  \Aa\ar[d] \\
+\Aa_i(S^{-1}_i)\ar[r]^{RF} & \Ind\Aa(S^{-1}).
+}
+\]
+
+\item We\pageoriginale say that $RF$ is defined at $(A_i)$ if the
+\iInd-object $RF(A_i)$ of $\Aa(S^{-1})$ is ``essentially constant,''
+\ie comes from an object of $\Aa(S^{-1})$; this object is called
+\emph{the value of} $RF$ at $(A_i)$.
+
+\item We say that $F$ is \emph{right derivable} if $RF$ is defined
+everywhere; in that case we shall again denote by $RF$ the resulting
+functor from the $\Aa_i(S^{-1}_i)$ to $\Aa(S^{-1})$.
+
+\item A family $(A_i)$ of objects of the $\Aa_i$ is said to be
+\emph{adapted to} $RF$ if the canonical morphism from $F(A_i)$ to
+$RF(A_i)$ is an isomorphism.
+\end{enumerate}
+\end{enonce*}
+
+We leave to the reader the task of defining by duality the left
+derived functor $LF$ of $F$ (with values in $\Pro \Aa(S^{-1})$) and
+of extending the preceding definitions to cases in which $F$ is
+covariant in some arguments and contravariant in others.
+
+When $RF$ is defined everywhere, the definition given here agrees
+with Verdier's (\cite{sga4.exp.XVII.bib.CD} p.~39), as is readily verified.
+
+\begin{enonce*}{Proposition 1.2.2}\etiquette[1.2.2]{XVII.prop1.2.2}
+Let $(A'_1, A_1,A''_1)$ be a distinguished triangle in $\Aa_1$, and
+let\break $A_i\in \Ob \Aa_i$ $(i\neq 1)$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item If $(A'_{1},(A_{i}))$ and $(A''_{1},(A_{i}))$ are adapted to
+  $RF$, then the family $(A_{1},(A_{i}))$ is also adapted to $RF$.
+
+\item If $RF$ is defined at $(A'_1, (A_i))$ and at $(A''_1, (A_i))$,
+it is also defined at $(A_1, (A_i))$, and the triangle
+$(RF(A'_1,(A_i)), RF(A_1,(A_i)),RF(A''_1,(A_i)))$ is distinguished in
+$\Aa(S^{-1})$.
+\end{enumerate}
+\end{enonce*}
+
+Let us prove\pageoriginale (ii) $\Rightarrow$ (i). Since $F$ is exact,
+the arrow $$(F(A'_1,(A_i)), F(A_1,(A_i)), F(A''_1,(A_i)))\rightarrow
+(RF(A'_1,(A_i)), RF(A_1,(A_i)), RF(A''_1,(A_i)))$$ is a morphism of
+distinguished triangles. By hypothesis this arrow is an isomorphism
+at two vertices; it is therefore an isomorphism at the third, as
+desired.
+
+\begin{enonce*}{Lemma 1.2.2.1}\etiquette[1.2.2.1]{XVII.lem1.2.2.1}
+If $\Delta=(X,Y,Z)$ is a distinguished triangle in a triangulated
+category $\Aa$ and $S$ is a saturated multiplicative system in $\Aa$,
+then the triangle $\Delta^{+}=(X^{+},Y^{+},Z^{+})$ in $\Ind\Aa$ is a
+limit of distinguished triangles in $\Aa$.
+\end{enonce*}
+
+Let $\mathcal{L}$ denote the category of morphisms of distinguished
+triangles with source $\Delta$ whose arrows belong to $S$.
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\item If $\Delta=(X,Y,Z)$ and $\Delta'=(X',Y',Z')$ are two
+distinguished triangles in $\Aa$, and if $f:\Delta\rightarrow \Delta'$
+is an $\Aa(S^{-1})$-morphism of triangles, there exist in $\Aa$
+morphisms of triangles $s:\Delta'\rightarrow\Delta''$ and
+$f_1:\Delta\rightarrow \Delta''$ such that the components of $s$
+belong to $S$ and the diagram
+\[
+\vcenter{
+\xymatrix{
+\Delta                \ar[rd]^{f_1}  \ar[d]_{f}  &\\
+\Delta'          \ar[r]^{s}    & \Delta''
+}}\tag{1}
+\]
+is commutative in $\Aa(S^{-1})$.

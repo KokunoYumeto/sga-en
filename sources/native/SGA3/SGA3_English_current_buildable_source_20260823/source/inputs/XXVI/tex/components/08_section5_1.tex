@@ -1,0 +1,263 @@
+\SGASection{5}{Conjugacy theorem}
+\SGARefTarget{sga3:xxvi:section:5}
+
+\begin{sgastatement}{Theorem 5.1}
+Let \(S\) be a semilocal scheme, \(G\) an \(S\)-reductive group, and
+\(P,P'\) two opposite parabolic subgroups of \(G\) \textup{(\SGARefLink{sga3:xxvi:definition:4-3-3}{4.3.3})}.
+Then
+\[
+ \rad^u(P)(S)\cdot P'\cdot P=G.
+\]
+In other words, as \(u\) runs through \(\rad^u(P)(S)\), the open
+subsets \(uP'\cdot P\) of \(G\) \textup{(\SGARefLink{sga3:xxvi:remark:4:3:6}{4.3.6})} cover all of \(G\).
+\end{sgastatement}
+\SGARefTarget{sga3:xxvi:theorem:5:1}
+
+The proof is divided into several steps.
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-1}\paragraph{\SGARefLink{sga3:xxvi:paragraph:5-1-1}{5.1.1}.}
+\SGARefTarget{sga3:xxvi:item:5:1:1}
+It is enough to prove the theorem when \(S\) is the spectrum of a
+field \(k\); this follows at once from \SGARefLink{sga3:xxvi:cor:2:6}{2.6}.
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-2}\paragraph{\SGARefLink{sga3:xxvi:paragraph:5-1-2}{5.1.2}.}
+\SGARefTarget{sga3:xxvi:item:5:1:2}
+Put \(L=P\cap P'\).  Suppose that \(L\) has a Borel subgroup \(B_L\),
+and let \(T\) be a maximal torus of \(B_L\), as in Exp.\ XXII, \SGARefLink{sga3:xxii:cor:5.9.7}{5.9.7}.
+One checks immediately that
+\[
+ B=B_L\cdot\rad^u(P)
+\]
+is a Borel subgroup of \(P\).  Let \(B'\) be the Borel subgroup of
+\(G\) opposite to \(B\) relative to \(T\), so that \(B\cap B'=T\).
+After splitting \(G\) relative to \(T\), one immediately sees that
+\(B'\subset P'\).  We claim that
+\[
+ B^u(S)\cdot B'\cdot B
+ \subset \rad^u(P)(S)\cdot P'\cdot P.                 \tag{x}\label{sga3:xxvi:theorem:5-1:equation:x}
+\]
+Indeed,
+\[
+ B^u(S)\subset P(S)
+ =\rad^u(P)(S)\cdot L(S)
+ \subset\rad^u(P)(S)\cdot P'(S),
+\]
+so it is enough to observe that \(B'\cdot B\subset P'\cdot P\).
+Thus \textup{(x)} reduces \SGARefLink{sga3:xxvi:theorem:5:1}{Theorem 5.1} to the pair \((B,B')\).
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-3}\paragraph{\SGARefLink{sga3:xxvi:paragraph:5-1-3}{5.1.3}.}
+\SGARefTarget{sga3:xxvi:item:5:1:3}
+The theorem holds when \(k\) is algebraically closed: the hypothesis
+of \SGARefLink{sga3:xxvi:paragraph:5-1-2}{5.1.2} is then satisfied, and Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.7.10}{5.7.10} applies.
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-4}\paragraph{\SGARefLink{sga3:xxvi:paragraph:5-1-4}{5.1.4}.}
+\SGARefTarget{sga3:xxvi:item:5:1:4}
+The theorem also holds when \(k\) is infinite.  Indeed, by \SGARefLink{sga3:xxvi:cor:2:7}{2.7},
+\[
+ \rad^u(P)(k)\ \text{is dense in}\ \rad^u(P)(\bar k),
+\]
+and the theorem holds over \(\bar k\).
+
+\paragraph{5.1.5.}
+\SGARefTarget{sga3:xxvi:item:5:1:5}
+We are therefore reduced to the case of a finite field \(k\).
+The scheme \(\Bor(L)\) is a smooth homogeneous space under \(L\);
+Lang's theorem \textup{(Amer.\ J. Math.\ \textbf{78} \textup{(1956)})}
+therefore shows that \(L\) has a Borel subgroup \(B_L\).
+\footnote{\emph{Editor's note.} See also \textup{[DG70]},
+\(\S\)III.5, \SGARefLink{sga3:xxvi:theorem:7-4}{7.4}.}
+By 5.1.2, we may consequently suppose that \(P=B\) and \(P'=B'\)
+are Borel subgroups.  We write \(T=B\cap B'\).
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-6}\paragraph{5.1.6.}
+\SGARefTarget{sga3:xxvi:item:5:1:6}
+Let \(K\) be an algebraic closure of \(k\).  Choose a pinning of
+\((G_K,B_K,T_K)\), and let \(R^+\), respectively \(\Delta\), be the
+set of positive, respectively simple, roots.  By Exp.\ XXII, \SGARefLink{sga3:xxii:def:5.7.2}{5.7.2},
+it is enough to prove, for every \(\alpha\in\Delta\), that
+\[
+ u_\alpha B'^{\,u}(K)
+ \subset B^u(k)B'^{\,u}(K)B(K).                       \tag{1}\label{sga3:xxvi:theorem:5-1:equation:1}
+\]
+Let \(\alpha_i\) be the distinct conjugates of \(\alpha\) over \(k\).
+They belong to \(\Delta\), since \(B\) is defined over \(k\).  Let
+\(R'\) be the set of roots which are linear combinations of the
+\(\alpha_i\), and put \(R'_- = R_-\cap R'\).  Since \(R'\) is defined
+over \(k\), there is a subtorus \(Q\) of \(T\) such that \(Q_K\) is
+the maximal torus of the common kernel of the \(\alpha_i\).
+
+Put
+\[
+ Z=\Centr_G(Q),\qquad B_Z=B\cap Z,\qquad B'_Z=B'\cap Z
+\]
+\textup{(Exp.\ XXII, \SGARefLink{sga3:xxii:cor:5.10.2}{5.10.2})}.  It is enough to verify the desired
+assertion in \(Z\), namely
+\[
+ u_\alpha B_Z'^{\,u}(K)
+ \subset B_Z^u(k)B_Z'^{\,u}(K)B_Z(K).                 \tag{2}\label{sga3:xxvi:theorem:5-1:equation:2}
+\]
+Indeed,
+\[
+ (B_Z'^{\,u})_K=\prod_{\beta\in R'_-}U_\beta.
+\]
+Let \(R''=R-R'\), and set
+\[
+ V=\prod_{\beta\in R''\cap R_-}U_\beta.
+\]
+Then
+\[
+ (B'^{\,u})_K=(B_Z'^{\,u})_K\cdot V,
+\]
+and \((B_Z)_K\) normalizes \(V\), by Exp.\ XXII, \SGARefLink{sga3:xxii:cor:5.6.7}{5.6.7}.  From
+\textup{\SGARefLink{sga3:xxvi:theorem:5-1:equation:2}{(2)}} we therefore obtain successively
+\[
+\begin{aligned}
+ u_\alpha B'^{\,u}(K)
+ &=u_\alpha B_Z'^{\,u}(K)V(K)\\
+ &\subset B_Z^u(k)B_Z'^{\,u}(K)B_Z(K)V(K)\\
+ &\subset B_Z^u(k)B_Z'^{\,u}(K)V(K)B_Z(K),
+\end{aligned}
+\]
+which immediately gives \textup{\SGARefLink{sga3:xxvi:theorem:5-1:equation:1}{(1)}}.  We are thus reduced to the case
+\(G=Z\), that is, to the case in which
+\(\operatorname{Gal}(K/k)\) acts transitively on the simple roots.
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-7}\paragraph{\SGARefLink{sga3:xxvi:paragraph:5-1-7}{5.1.7}.}
+\SGARefTarget{sga3:xxvi:item:5:1:7}
+The assertion to be proved says equivalently that \(G/B\) is the
+union of the translates, under \(B^u(k)\), of the open image of
+\(B'^{\,u}\).  This assertion is unchanged when \(G\) is replaced by
+its adjoint group, or indeed by any group having the same adjoint
+group.  We may therefore suppose that \(G\) is adjoint.
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-8}\paragraph{\SGARefLink{sga3:xxvi:paragraph:5-1-8}{5.1.8}.}
+\SGARefTarget{sga3:xxvi:item:5:1:8}
+Consider the Dynkin diagram of \(G_K\).  The Galois group acts
+transitively on it.  But this Galois group has only cyclic quotients,
+whereas the Dynkin diagram has no cycles.  The diagram is consequently
+of type \(nA_1\), with \(n\geq0\), or \(mA_2\), with \(m\geq0\).
+Using the canonical decomposition of Exp.\ XXIV, \SGARefLink{sga3:xxiv:proposition:5-9}{5.9}, we may write
+\[
+ G=\prod_{D/k}G_0,
+\]
+where \(D\) is a finite \(k\)-scheme and \(G_0\) is either a torus or
+is of type \(A_1\) or \(A_2\).
+
+By Exp.\ XXIV, \SGARefLink{sga3:xxiv:corollary:5-12}{5.12}, the group \(B\) comes from a Borel subgroup
+\(B_0\) of \(G_0\), and \(T\) comes from a maximal torus \(T_0\) of
+\(G_0\); the group \(B'\) comes from the Borel subgroup \(B'_0\) of
+\(G_0\) opposite to \(B_0\) relative to \(T_0\).  We have
+\[
+ B^{u}(k)=B_0^u(D),\qquad
+ B'^{\,u}\cdot T\cdot B^u
+ =\prod_{D/k}B_0'^{\,u}\cdot T_0\cdot B_0^u.
+\]
+It is therefore enough to prove the assertion for the triple
+\((G_0,B_0,T_0)\).
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-9}\paragraph{\SGARefLink{sga3:xxvi:paragraph:5-1-9}{5.1.9}.}
+\SGARefTarget{sga3:xxvi:item:5:1:9}
+We may consequently suppose that \(G\) has type
+\(\varnothing\), \(A_1\), or \(A_2\).  Since \(G\) has a Borel
+subgroup \(B\), it is quasi-split relative to \(B\), by Exp.\ XXIV,
+\SGARefLink{sga3:xxiv:3.9.1}{3.9.1}, and hence split if it has type \(\varnothing\) or \(A_1\).
+The theorem is already known in the split case, by Exp.\ XXII,
+\SGARefLink{sga3:xxii:prop:5.7.10}{5.7.10}, so only type \(A_2\) remains.
+
+By Exp.\ XXIV, \SGARefLink{sga3:xxiv:3.11}{3.11}, there is a morphism
+\(E\to\operatorname{Spec}(k)\), a principal Galois bundle under the
+group \(\mathbb Z/2\mathbb Z\) of automorphisms of the Dynkin diagram
+of type \(A_2\), such that
+\[
+ G=\operatorname{Q\text{-}\acute{E}p}_{E/\operatorname{Spec}(k)}
+ (A_2).
+\]
+If \(E\) has a section, \(G\) is split and the theorem follows.
+Otherwise \(E=\operatorname{Spec}(k')\), where \(k'/k\) is a quadratic
+extension.  Finally, as observed in \SGARefLink{sga3:xxvi:paragraph:5-1-7}{5.1.7}, we may suppose that \(G\)
+is simply connected, that is, that \(G\) is a form of
+\(\operatorname{SL}_{3,k}\).
+
+\SGAInlineRefTarget{sga3:xxvi:paragraph:5-1-10}\paragraph{\SGARefLink{sga3:xxvi:paragraph:5-1-10}{5.1.10}.}
+\SGARefTarget{sga3:xxvi:item:5:1:10}
+We are now in the following situation: \(k\) is a finite field and
+\(k'/k\) is a quadratic extension.  Pin
+\(\operatorname{SL}_{3,k'}\), the group of \(3\times3\) matrices of
+determinant \(1\), as follows.  Its maximal torus is the group of
+diagonal matrices, its Borel subgroup is the group of upper triangular
+matrices, and its root vectors are
+\[
+ u_\alpha=
+ \begin{pmatrix}1&1&0\\0&1&0\\0&0&1\end{pmatrix},
+ \qquad
+ u_\beta=
+ \begin{pmatrix}1&0&0\\0&1&1\\0&0&1\end{pmatrix}.
+\]
+The big cell \(\Omega\) is given by
+\[
+ \begin{pmatrix}a&b&c\\d&e&f\\g&h&i\end{pmatrix}
+ \in\Omega(S)
+ \quad\Longleftrightarrow\quad
+ a\ \text{and}\ ae-bd\ \text{are invertible},
+\]
+and
+\[
+ B^u(k)=
+ \left\{
+ \left.
+ \begin{pmatrix}1&\bar x&z\\0&1&x\\0&0&1\end{pmatrix}
+ \ \right|\
+ x,z\in k',\ z+\bar z=x\bar x
+ \right\}.
+\]
+
+We must prove inclusion \textup{\SGARefLink{sga3:xxvi:theorem:5-1:equation:1}{(1)}} of \SGARefLink{sga3:xxvi:paragraph:5-1-6}{5.1.6}.  Thus, for every
+\(a,b,c\in K\), we must find \(x,z\in k'\) such that
+\(z+\bar z=x\bar x\) and
+\[
+ \begin{pmatrix}1&\bar x&z\\0&1&x\\0&0&1\end{pmatrix}
+ \begin{pmatrix}1&1&0\\0&1&0\\0&0&1\end{pmatrix}
+ \begin{pmatrix}1&0&0\\a&1&0\\b&c&1\end{pmatrix}
+ \in\Omega(K).                                         \tag{3}\label{sga3:xxvi:theorem:5-1:equation:3}
+\]
+If \(a\ne-1\), take \(x=z=0\).  If \(a=-1\), the required conditions
+are
+\[
+ \begin{cases}
+ z+\bar z=x\bar x,\\
+ bz-\bar x\ne0,\\
+ (b+c)\bar z+bx-1\ne0.
+ \end{cases}                                           \tag{4}\label{sga3:xxvi:theorem:5-1:equation:4}
+\]
+Let \(q\geq2\) be the number of elements of \(k\).  For every
+\(m\in k\), the equation \(z+\bar z=m\), with \(z\in k'\), has
+\(q\) solutions.
+
+If \(b=0\), take \(x=1\).  It remains to solve
+\[
+ z+\bar z=1,\qquad c\bar z\ne1,
+\]
+which is always possible by the preceding observation.
+
+If \(b\ne0\), take \(x=0\).  It remains to solve
+\[
+ z+\bar z=0,\qquad z\ne0,\qquad (b+c)z\ne1.
+\]
+This is always possible when \(q\geq3\).  When \(k=\mathbb F_2\), it
+is possible if \(b+c\ne1\), by taking \(z=1\).
+
+It remains to consider \(k=\mathbb F_2\), \(b+c=1\), and \(b\ne0\).
+The system becomes
+\[
+ z+\bar z=x\bar x,\qquad bz\ne\bar x,\qquad
+ \bar z+bx\ne1.
+\]
+If \(b=1\), or respectively \(b\notin k'\), take \(x=1\); the last two
+conditions become
+\[
+ z\ne b^{-1},\qquad z\ne1-b,
+\]
+and follow from any solution of \(z+\bar z=1\).  Finally, if
+\(b\in k'-k\), take \(x=b\) and \(z=\bar b\).  This completes the
+proof.
+\SGAQED
