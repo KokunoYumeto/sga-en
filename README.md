@@ -18,7 +18,6 @@ The collection covers fundamental groups, local and étale cohomology, group sch
 
 ## Component readers
 
-|---|---|---|
 | Volume | Main subject | Coverage in this release | Pages | English PDF |
 |---|---|---:|---:|---|
 | SGA 1 | Étale coverings and the fundamental group | Complete published scope; Exposé VII was never written | 260 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.tex) |
