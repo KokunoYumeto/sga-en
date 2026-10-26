@@ -1,6 +1,6 @@
 # Seminar in Algebraic Geometry — English edition
 
-[Read the cumulative PDF: 4,211 pages, 2026-10-03 edition](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-10-03-english-edition/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf).
+[Read the cumulative PDF: 4,157 pages, 2026-10-26 edition](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-10-26-english-edition/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf).
 
 The collection covers fundamental groups, local and étale cohomology, group schemes, intersection theory and monodromy.
 
@@ -21,8 +21,8 @@ The collection covers fundamental groups, local and étale cohomology, group sch
 | Volume | Main subject | Coverage in this release | Pages | English PDF |
 |---|---|---:|---:|---|
 | SGA 1 | Étale coverings and the fundamental group | Complete published scope; Exposé VII was never written | 260 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.tex) |
-| SGA 2 | Local cohomology and Lefschetz theorems | Complete reader | 185 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.tex) |
-| SGA 3 | Group schemes | Complete reader | 1,483 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/03_SGA3_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/03_SGA3_EN_COMPLETE_READER.tex) |
+| SGA 2 | Local cohomology and Lefschetz theorems | Complete reader | 176 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/02_SGA2_EN_COMPLETE_READER.tex) |
+| SGA 3 | Group schemes | Complete reader | 1,438 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/03_SGA3_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/03_SGA3_EN_COMPLETE_READER.tex) |
 | SGA 4 | Topos theory and étale cohomology | Complete reader | 864 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/04_SGA4_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/04_SGA4_EN_COMPLETE_READER.tex) |
 | SGA 4½ | Étale cohomology | Complete reader | 175 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/05_SGA4HALF_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/05_SGA4HALF_EN_COMPLETE_READER.tex) |
 | SGA 5 | ℓ-adic cohomology and L-functions | Complete published content; all ten published exposés | 311 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/latest/download/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/latest/download/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.tex) |
@@ -37,6 +37,8 @@ SGA 6 retains a mixed source-alignment status; it is not certified as a complete
 The original SGA volumes retain their authors, seminar contributors and editors, named in the corresponding texts. The collection includes work of Alexander Grothendieck, Michèle Raynaud, Michel Raynaud, Pierre Deligne, Nicholas Katz, Michel Demazure, Michael Artin, Jean-Louis Verdier, Luc Illusie and their collaborators; this list does not replace the detailed credits in each volume.
 
 SGA 1 retains the French retypesetting associated with Bas Edixhoven’s volunteer project, the Société mathématique de France and Michel Raynaud’s notes, from [arXiv math/0206203v2](https://arxiv.org/abs/math/0206203v2).
+
+SGA 2 is AI-translated from the corrected French TeX of the re-edition edited by Yves Laszlo, *Cohomologie locale des faisceaux cohérents et théorèmes de Lefschetz locaux et globaux (SGA 2)*, Documents Mathématiques 4, Société mathématique de France, 2005 ([arXiv math/0511279v1](https://arxiv.org/abs/math/0511279v1)), and follows its numbering and labels. Most of the initial French typesetting was done by volunteers of Bas Edixhoven’s project (L. Bayle, N. Borne, O. Brinon, J. Buresi, M. Chardin, F. Ducrot, P. Graftiaux, F. Han, P. Karwasz, L. Koelblen, D. Madore, S. Morel, D. Naie, B. Osserman, J. Riou and V. Sécherre); C. Sabbah adapted it to the SMF format.
 
 The SGA 2 and SGA 3 English sources acknowledge Jacob C. Reinhold’s [English translation](https://github.com/jcreinhold/sga/tree/e7a259f3f8608ad3edf9bf6eead3fd504dd2d23e), snapshot `e7a259f3f8608ad3edf9bf6eead3fd504dd2d23e`, used for comparison and drafting. His stated CC BY 4.0 notice applies to that contribution and is preserved; it does not license the underlying French works or every contribution here. Inherited English wording remains attributed to its human source. The SGA 3 French reference is the Philippe Gille–Patrick Polo re-edition.
 
