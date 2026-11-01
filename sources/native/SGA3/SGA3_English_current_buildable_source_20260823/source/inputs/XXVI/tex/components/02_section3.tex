@@ -11,8 +11,7 @@ finite set \(A\), then
 \[
  \Of(E)\simeq\mathcal P(A)_S,
 \]
-where \(\mathcal P(A)\) denotes the power set of \(A\); the general case
-follows by descent of open-and-closed subschemes.  Plainly,
+and the general case follows by descent of open-and-closed subschemes.  Plainly,
 \[
  \Of(E_{S'})=\Of(E)_{S'},
  \qquad
@@ -90,9 +89,13 @@ pinnings in \(G\) (Exp.\ XXIV, \SGARefLink{sga3:xxiv:1.5}{1.5}), one may then ch
 gives \(\Delta(P)=\Delta(P')\), hence \(P=P'\) by \SGARefLink{sga3:xxvi:prop:1:4:item:v}{1.4(v)}.  This proves
 (i).
 
-For (ii), use the notation of Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.11.5}{5.11.5}.
-There is a canonical morphism \(\Par(G)\to\mathscr H_c\), which fits into
-the cartesian square
+For (ii), use the notation of Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.11.5}{5.11.5}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXVI,
+recalls this notation: \(\mathscr H_c\) is the functor of subgroups of \(G\)
+of type (RC), \(\mathcal C\ell_c\) the functor of their conjugacy classes,
+and \(c\ell\colon\mathscr H_c\to\mathcal C\ell_c\) the canonical projection.}
+There is a canonical morphism \(\Par(G)\to\mathscr H_c\), and it is clear
+(for example by reduction to the pinned case) that it fits into the
+cartesian square
 \[
 \begin{tikzcd}[column sep=large,row sep=large]
  \Par(G) \arrow[r,"t"] \arrow[d,hook]
@@ -217,11 +220,15 @@ reductive group \(G\) is \emph{critical} if
 \[
  H=\Centr_G(\rad(H)),
 \]
-that a subtorus \(Q\subset G\) is a \emph{\(C\)-critical torus} if
+that a subtorus \(Q\subset G\) is a \emph{critical torus} if
 \[
  Q=\rad(\Centr_G(Q)),
 \]
-and that critical subgroups and \(C\)-critical tori are in bijection via
+and that critical subgroups and critical tori\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXVI (as in
+Exposé~XXII, 5.10.4), says \emph{\(C\)-critical torus} here, to avoid a
+confusion: a critical torus \(Q\), with \(Q=\rad(\Centr_G(Q))\), need not be
+a critical subgroup, since a torus \(Q\) is a critical subgroup,
+\(Q=\Centr_G(Q)\), only when it is a maximal torus of \(G\).} are in bijection via
 \[
  H\longmapsto\rad(H),
  \qquad
@@ -234,8 +241,8 @@ only if \(R'\) is \emph{vectorial}, meaning that it is the intersection
 of \(R\) with a vector subspace of \(M\otimes\mathbb Q\)
 (Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.10.6}{5.10.6}).
 
-For arbitrary \(G\), Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.11.5}{5.11.5} defines a finite étale \(S\)-scheme
-\(\mathcal C\ell_{\mathrm{crit}}\); in the split case it is the constant
+For arbitrary \(G\), one defines as in Exp.\ XXII, \SGARefLink{sga3:xxii:prop:5.11.5}{5.11.5} a finite étale
+\(S\)-scheme \(\mathcal C\ell_{\mathrm{crit}}\); in the split case it is the constant
 scheme associated with the vectorial subsets of \(R\), modulo the action
 of the Weyl group.  If \(\Crit(G)\) denotes the functor of critical
 subgroups, there is a canonical morphism
@@ -255,12 +262,13 @@ in the cartesian square
 
 \begin{sgastatement}{Proposition 3.10}
 Let \(S\) be a scheme, \(G\) an \(S\)-reductive group,
-\(\Crit(G)\) the functor of its critical subgroups, and let
-\(\mathcal C\ell_{\mathrm{crit}}\) and
+\(\Crit(G)\) the functor of its critical subgroups,
+\(\mathcal C\ell_{\mathrm{crit}}\) the finite étale \(S\)-scheme defined
+above, and
 \[
  c\ell:\Crit(G)\longrightarrow\mathcal C\ell_{\mathrm{crit}}
 \]
-be as above.
+the morphism defined above.
 \begin{enumerate}[label=\textup{(\roman*)}]
 \item Critical subgroups \(H,H'\) of \(G\) are conjugate, locally for the
 fpqc topology, if and only if \(c\ell(H)=c\ell(H')\).
@@ -343,10 +351,10 @@ Let \(S\) be a scheme and \(G\) an \(S\)-reductive group.  Consider the
                     L\text{ a Levi subgroup of }P\},\\
  PT(S')={}&\{(P,T)\mid P\supset T,\ P\text{ parabolic in }G_{S'},\
                     T\text{ a maximal torus of }P\},\\
- CT(S')={}&\{(C,T)\mid C\supset T,\ C\text{ critical in }G_{S'},\
-                    T\text{ a maximal torus of }C\},\\
- PLT(S')={}&\{(P,L,T)\mid P\supset L\supset T,\ (P,T)\in PT(S'),\
-                    L\text{ a Levi subgroup of }P\}.
+ LT(S')={}&\{(L,T)\mid L\supset T,\ L\text{ critical in }G_{S'},\
+                    T\text{ a maximal torus of }L\},\\
+ PLT(S')={}&\{(P,L,T)\mid P\supset L\supset T,\ P\text{ parabolic in }G_{S'},\\
+           &\qquad L\text{ a Levi subgroup of }P,\ T\text{ a maximal torus of }L\}.
 \end{aligned}
 \]
 There are evident morphisms between these functors and
@@ -360,7 +368,7 @@ commutative truncated cube.
   every node/.style={font=\small},
   morph/.style={->,line width=.45pt}
 ]
-  \node (CT)     at (5.2,7.2) {\(\underline{CT}\)};
+  \node (CT)     at (5.2,7.2) {\(\underline{LT}\)};
   \node (PLT)    at (9.0,7.2) {\(\underline{PLT}\)};
   \node (Crit)   at (0.8,5.2) {\(\Crit(G)\)};
   \node (PL)     at (7.1,5.2) {\(\underline{PL}\)};
@@ -457,7 +465,7 @@ a subgroup of \(G\) is critical if and only if, locally for the étale
 topology, it is a Levi subgroup of a parabolic subgroup.
 
 In general the map \(PL(S)\to\Crit(G)(S)\) need not be surjective: a
-critical subgroup \(C\) may fail to arise over \(S\) from a parabolic
+critical subgroup \(L\) may fail to arise over \(S\) from a parabolic
 subgroup.  For example, a maximal torus need not be contained in a Borel
 subgroup, as for a nonsplit form of \(\operatorname{SL}_2\)
 \textup{(Exp.\ XX, §5)}.
@@ -474,34 +482,19 @@ whereas there is only one type of critical subgroup of rank \(1\).
 
 The analogous example for type \(A_3\) shows that, even over an
 algebraically closed field, nonisomorphic parabolic subgroups may have
-Levi subgroups of the same type.\footnote{\emph{Editor's note.}
-Concretely, in \(\operatorname{GL}_4\), the parabolics
-\[
- P=\left\{\begin{pmatrix}
- *&*&*&*\\0&*&*&*\\0&0&*&*\\0&0&0&*
- \end{pmatrix}\right\},
- \qquad
- P'=\left\{\begin{pmatrix}
- *&*&*&*\\0&*&*&*\\0&*&*&*\\0&0&0&*
- \end{pmatrix}\right\}
-\]
-are not isomorphic (their unipotent radicals are not isomorphic), while
-their Levi subgroups
-\[
- L=\left\{\begin{pmatrix}
- *&*&0&0\\ *&*&0&0\\0&0&*&0\\0&0&0&*
- \end{pmatrix}\right\},
- \quad
- L'=\left\{\begin{pmatrix}
- *&0&0&0\\0&*&*&0\\0&*&*&0\\0&0&0&*
- \end{pmatrix}\right\}
-\]
-are conjugate by
-\(
-\left(\begin{smallmatrix}
-0&0&1&0\\0&1&0&0\\1&0&0&0\\0&0&0&1
-\end{smallmatrix}\right).
-\)}
+Levi subgroups of the same type.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXVI, gives
+the example in \(\operatorname{GL}_4\). In our formulation: let \(P_1\) and
+\(P_2\) be the subgroups of block upper triangular matrices with diagonal
+blocks of sizes \((2,1,1)\) and \((1,2,1)\). Their block diagonal Levi
+subgroups \(\operatorname{GL}_2\times\mathbb G_m\times\mathbb G_m\) and
+\(\mathbb G_m\times\operatorname{GL}_2\times\mathbb G_m\) are conjugate by the
+permutation matrix exchanging the first and third basis vectors. But
+\(\rad^u(P_2)\) is a Heisenberg group, with a center of dimension~\(1\),
+whereas \(\rad^u(P_1)\), the group of matrices
+\(\left(\begin{smallmatrix}1_2&x&y\\0&1&z\\0&0&1\end{smallmatrix}\right)\)
+with \(x,y\) columns of size \(2\), has center \(\{x=0,\ z=0\}\), of
+dimension~\(2\). As the unipotent radical is a characteristic subgroup,
+\(P_1\) and \(P_2\) are not isomorphic.}
 \end{enumerate}
 \end{sgastatement}
 \SGARefTarget{sga3:xxvi:rem:3:18}

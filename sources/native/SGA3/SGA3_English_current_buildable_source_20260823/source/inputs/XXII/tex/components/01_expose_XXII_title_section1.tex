@@ -10,10 +10,6 @@ Splittings, Subgroups, Quotient Groups}
   \textit{by Michel Demazure}
 \end{center}
 
-\begingroup
-\renewcommand{\thefootnote}{0}
-\addtocounter{footnote}{-1}
-\endgroup
 This Exposé consists of two parts. The first (\S\S1--\SGARefLink{sga3:xxii:subsection:5-5}{5.5}) gathers the
 technical results needed for the proofs of the uniqueness and
 existence theorems. The second (\S5.6 to the end) will not be used in
@@ -50,7 +46,12 @@ immersion. The corresponding homomorphism}
 \textit{If
 \(p_{\alpha}:\mathbb G_{a,S}\to G\) is a monomorphism normalized by
 \(T\), with multiplier \(\alpha\), there exists a unique
-\(X_{\alpha}\in\Gamma(S,\mathfrak g^{\alpha})^{\times}\) such that
+\(X_{\alpha}\in\Gamma(S,\mathfrak g^{\alpha})^{\times}\)\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, refers here
+to \SGARefLink{sga3:xix:definition:4-4-1}{Exposé XIX, 4.4.1}, where
+\(\Gamma(S,L)^\times=\mathbb W(L)^\times(S)\) is defined for an invertible
+\(\mathcal O_S\)-module \(L\): it is the set of sections of \(L\) that
+generate \(L\) at every point of \(S\). The 1970 text writes this set with an
+asterisk in place of~\(\times\).} such that
 \(p_{\alpha}(x)=\exp_{\alpha}(xX_{\alpha})\); one has
 \(\Lie(p_{\alpha})(1)=X_{\alpha}\), and the preceding two formulas
 establish a bijective correspondence between
@@ -85,7 +86,7 @@ necessarily factors through the closed subgroup
 \]
 of \(G\) (cf. \SGARefLink{sga3:xix:paragraph:3-9}{Exposé XIX, 3.9}). Now \((Z_\alpha,T,\alpha)\) is an
 elementary \(S\)-system (\SGARefLink{sga3:xx:1.4}{Exposé XX, 1.4}), and one is reduced to the
-results of Exposé XX (\SGARefLink{sga3:xxii:def:1.5}{1.5}, \SGARefLink{sga3:xxii:prop:2.1}{2.1}, and \SGARefLink{sga3:xxii:section:5.9}{5.9}).
+results of Exposé XX (\SGARefLink{sga3:xx:1.5}{1.5}, \SGARefLink{sga3:xx:2.1}{2.1}, and \SGARefLink{sga3:xx:5.9}{5.9}).
 
 \SGARefTarget{sga3:xxii:rem:1.2}\paragraph{\SGARefLink{sga3:xxii:rem:1.2}{Remark 1.2}.}
 Part \SGARefLink{sga3:xxii:thm:1.1:item:i}{(i)} of \SGARefLink{sga3:xxii:thm:1.1}{Theorem 1.1} remains valid if one assumes only that
@@ -113,8 +114,15 @@ canonically endowed with a vector-group structure. We call it the
 are said to be \emph{paired} if \(X_\alpha X_{-\alpha}=1\). Then
 \(X_\alpha\in\Gamma(S,\mathfrak g^\alpha)^\times\), and likewise for
 \(X_{-\alpha}\). The corresponding homomorphisms \(p_\alpha\) and
-\(p_{-\alpha}\) are contragredient to one another in the sense of
-\SGARefLink{sga3:xx:1.5}{Exposé XX, 1.5}, and one has
+\(p_{-\alpha}\) are contragredient to one another,\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, refers
+here to \SGARefLink{sga3:xx:1.5}{Exposé XX, 1.5}, and spells out what this means. In our words:
+when \(U_\alpha\) and \(U_{-\alpha}\) are identified with
+\(\mathbb G_{a,S}\) by \(p_\alpha\) and \(p_{-\alpha}\), the duality
+between \(\mathfrak g^\alpha\) and \(\mathfrak g^{-\alpha}\) of
+\SGARefLink{sga3:xxii:thm:1.1}{1.1}~(ii) becomes \((x,y)\mapsto xy\), since
+\(p_\alpha(x)=\exp_\alpha(xX_\alpha)\),
+\(p_{-\alpha}(y)=\exp_{-\alpha}(yX_{-\alpha})\) and
+\(X_\alpha X_{-\alpha}=1\).} and one has
 \[
   p_\alpha(x)p_{-\alpha}(y)
   =
@@ -140,13 +148,27 @@ coroot, and the following diagram is commutative:}
 
 Trivial: transport of structure.
 
-\SGARefTarget{sga3:xxii:def:1.5}\paragraph{\SGARefLink{sga3:xxii:def:1.5}{Definitions 1.5}.}
-\textup{(a)} Under the hypotheses of \SGARefLink{sga3:xxii:thm:1.1}{1.1}, let \(s_\alpha\) denote the
+\SGARefTarget{sga3:xxii:def:1.5}\paragraph{\SGARefLink{sga3:xxii:def:1.5}{Definition 1.5}.}
+Under the hypotheses of \SGARefLink{sga3:xxii:thm:1.1}{1.1}, let \(s_\alpha\) denote the
 automorphism of \(T\) defined by
 \[
   s_\alpha(t)=t\mathbin{\cdot}\alpha^*(\alpha(t))^{-1}.
 \]
-Let \((\, ,\,)\) denote the canonical pairing
+Then \(s_\alpha\) acts on
+\(\underline{\operatorname{Hom}}_{S\text{-gr}}
+(T,\mathbb G_{m,S})\), respectively on
+\(\underline{\operatorname{Hom}}_{S\text{-gr}}
+(\mathbb G_{m,S},T)\), by the formulas
+\[
+  s_\alpha(m)=m-(\alpha^*,m)\alpha,
+  \qquad
+  s_\alpha(u)=u-(u,\alpha)\alpha^*,
+\]
+where \(m\), respectively \(u\), denotes an arbitrary section of
+\(\underline{\operatorname{Hom}}_{S\text{-gr}}(T,\mathbb G_{m,S})\),
+respectively of
+\(\underline{\operatorname{Hom}}_{S\text{-gr}}(\mathbb G_{m,S},T)\),
+and \((\, ,\,)\) denotes the canonical pairing
 \[
   \underline{\operatorname{Hom}}_{S\text{-gr}}
     (\mathbb G_{m,S},T)
@@ -158,18 +180,6 @@ Let \((\, ,\,)\) denote the canonical pairing
     (\mathbb G_{m,S},\mathbb G_{m,S})
   =\mathbb Z_S.
 \]
-Then \(s_\alpha\) acts on
-\(\underline{\operatorname{Hom}}_{S\text{-gr}}
-(T,\mathbb G_{m,S})\), respectively on
-\(\underline{\operatorname{Hom}}_{S\text{-gr}}
-(\mathbb G_{m,S},T)\), by the following formulas, where \(\chi\),
-respectively \(u\), denotes an arbitrary section of the corresponding
-scheme:
-\[
-  s_\alpha(\chi)=\chi-(\alpha^*,\chi)\alpha,
-  \qquad
-  s_\alpha(u)=u-(u,\alpha)\alpha^*.
-\]
 One has
 \[
   s_\alpha\circ s_\alpha=\operatorname{id},
@@ -177,7 +187,7 @@ One has
   s_{-\alpha}=s_\alpha.
 \]
 
-\textup{\SGAInlineRefTarget{sga3:xxii:def:1.5:item:b}(b)} If
+\SGAInlineRefTarget{sga3:xxii:def:1.5:item:b}If
 \(X\in\Gamma(S,\mathfrak g^\alpha)^\times\), then the inner
 automorphism \(w_\alpha(X)\) of \(T\), defined by
 \[
@@ -185,7 +195,7 @@ automorphism \(w_\alpha(X)\) of \(T\), defined by
   =
   \exp_\alpha(X)\exp_{-\alpha}(-X^{-1})\exp_\alpha(X)
 \]
-(cf. \SGARefLink{sga3:xx:3.1}{Exposé XX, 3.1}), coincides with \(s_\alpha\) (loc. cit.).
+(\SGARefLink{sga3:xx:3.1}{Exposé XX, 3.1}), coincides with \(s_\alpha\) (loc. cit.).
 \SGARefLink{sga3:xxii:prop:1.4}{Proposition 1.4} therefore gives the following.
 
 \SGARefTarget{sga3:xxii:cor:1.6}\paragraph{\SGARefLink{sga3:xxii:cor:1.6}{Corollary 1.6}.}
@@ -209,7 +219,7 @@ coroot is}
 \textit{Under the preceding conditions,
 \(\alpha^*=\beta^*\) implies \(\alpha=\beta\).}
 
-Indeed, if \(\alpha^*=\beta^*\), one has (cf. \SGARefLink{sga3:xx:1.4}{Exposé XXI, 1.4})
+Indeed, if \(\alpha^*=\beta^*\), one has
 \[
   s_\beta(\alpha)=\alpha-2\beta,
   \qquad
@@ -226,8 +236,7 @@ If \(\beta\ne\alpha\), there exists \(s\in S\) such that
 infinitely many distinct roots of \(G_{\bar s}\) relative to
 \(T_{\bar s}\), which is impossible.
 
-\SGARefTarget{sga3:xxii:def:1.8.0}\paragraph{\SGARefLink{sga3:xxii:def:1.8.0}{Definitions 1.8.0}.}
-If \(u:\mathbb G_{m,S}\to T\) is a homomorphism of groups, we say
+\SGARefTarget{sga3:xxii:def:1.8.0}If \(u:\mathbb G_{m,S}\to T\) is a homomorphism of groups, we say
 that \(u\) is a \emph{coroot} of \(G\) relative to \(T\) if there
 exists a root \(\alpha\) of \(G\) relative to \(T\) such that
 \(\alpha^*=u\). Consider the functor \(\mathcal R^*\) of coroots of
@@ -304,7 +313,7 @@ This was done in \SGARefLink{sga3:xix:paragraph:3:10}{Exposé XIX, 3.10}.
 \SGARefTarget{sga3:xxii:par:1.11}\paragraph{\SGARefLink{sga3:xxii:par:1.11}{1.11}.}
 Let \(T=\mathrm D_S(M)\) be a \emph{trivialized} torus. If \(M^*\)
 denotes the abelian group dual to \(M\), there are canonical
-isomorphisms (cf. \SGARefLink{sga3:viii:corollary:1:5}{Exposé VIII, 1.5})
+isomorphisms (\SGARefLink{sga3:viii:corollary:1:5}{Exposé VIII, 1.5})
 \[
   \underline{\operatorname{Hom}}_{S\text{-gr}}
     (T,\mathbb G_{m,S})
@@ -390,12 +399,12 @@ For brevity we shall sometimes write
 \(\mathcal R(G,T,M,R)=\mathcal R(G)\). We shall systematically use
 the notation \(V\), \(V(\mathcal R)\), \(W,\ldots\) of Exposé XXI.
 
-\SGARefTarget{sga3:xxii:rem:1.15}\paragraph{\SGARefLink{sga3:xxii:rem:1.15}{Remark 1.15}.}
+\SGARefTarget{sga3:xxii:rem:1.15}\paragraph{\SGARefLink{sga3:xxii:rem:1.15}{Remarks 1.15}.}
 \textup{(a)} If \(S\) is nonempty and connected, respectively if
 \(\operatorname{Pic}(S)=0\), condition \textup{(D 1)}, respectively
 condition \textup{(D 2)}, is automatically satisfied.
 
-\SGAInlineRefTarget{sga3:xxii:rem:1.15:item:b}\textup{\SGARefLink{sga3:xxii:def:1.5:item:b}{(b)}} If \((G,T,M,R)\) is a split \(S\)-group, then for every
+\SGAInlineRefTarget{sga3:xxii:rem:1.15:item:b}\textup{(b)} If \((G,T,M,R)\) is a split \(S\)-group, then for every
 nonempty \(S'\to S\), \((G_{S'},T_{S'},M,R)\) is a split
 \(S'\)-group and
 \[
@@ -407,7 +416,7 @@ nonempty \(S'\to S\), \((G_{S'},T_{S'},M,R)\) is a split
 \SGARefTarget{sga3:xxii:par:1.16}\paragraph{\SGARefLink{sga3:xxii:par:1.16}{1.16}.}
 Let \(T=\mathrm D_S(M)\) be a trivialized torus. The Lie algebra
 \(\mathfrak t\) of \(T\) identifies canonically \textup{(\SGARefLink{sga3:ii:corollary:5-1-1}{Exposé II,
-5.1.1})} with
+5.1, Corollary})} with
 \[
   \mathfrak t\simeq M^*\otimes\mathcal O_S.
 \]
@@ -574,9 +583,7 @@ datum isomorphic to the original one. But since
 comes from a unique isomorphism \(M\simeq M'\). For the same reason,
 there exists at most one root system of \(G\) relative to \(T\).
 
-\SGARefTarget{sga3:xxii:def:2.6.1}\paragraph{\SGARefLink{sga3:xxii:def:2.6.1}{Definition 2.6.1}.}
-If \(G\) is a reductive \(k\)-group, where \(k\) is algebraically
-closed, the \emph{type of \(G\)} is the isomorphism class of the root
+\SGARefTarget{sga3:xxii:def:2.6.1}We call the \emph{type of \(G\)} the isomorphism class of the root
 datum defined by any splitting of \(G\). If \(G\) is a torus of type
 \(M\) in the sense of \SGARefLink{sga3:ix:definition:1:4}{Exposé IX, 1.4}, then the type of \(G\) as a
 reductive group is given by the trivial root datum
@@ -585,7 +592,11 @@ reductive group is given by the trivial root datum
 \]
 
 By \SGARefLink{sga3:xxii:rem:1.15:item:b}{1.15(b)}, the type is invariant under an
-\textup{(algebraically closed)} extension of the base field.
+\textup{(algebraically closed)} extension of the base field.\footnote{Translator's note: the 1970 text
+refers here, and again in \SGARefLink{sga3:xxii:def:2.7}{2.7} below, to 1.17; the Gille--Polo
+re-edition (2011), Exposé~XXII, corrects both references to 1.15~(b), the
+statement actually used (a splitting remains a splitting, with the same root
+datum, after base change).}
 
 \SGARefTarget{sga3:xxii:def:2.7}\paragraph{\SGARefLink{sga3:xxii:def:2.7}{Definition 2.7}.}
 If \(G\) is a reductive \(S\)-group and \(s\in S\), the \emph{type of
@@ -602,8 +613,9 @@ then the type of \(G\) at \(s\) is the isomorphism class of
 then follows immediately from \SGARefLink{sga3:xxii:cor:2.3}{2.3}:
 
 \SGARefTarget{sga3:xxii:prop:2.8}\paragraph{\SGARefLink{sga3:xxii:prop:2.8}{Proposition 2.8}.}
-\textit{Let \(G\) be a reductive \(S\)-group, where
-\(S\ne\varnothing\). The function}
+\textit{Let \(G\) be a reductive \(S\)-group.\footnote{\upshape Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, adds
+the hypothesis \(S\ne\varnothing\). It is not needed: for \(S\) empty, every
+assertion of 2.8 holds trivially, the partition in question being empty.} The function}
 \[
   s\longmapsto\text{\textit{the type of \(G\) at \(s\)}}
 \]
@@ -624,9 +636,9 @@ maximal torus of \(G\). Then
 \[
   W_G(T)=\underline{\operatorname{Norm}}_G(T)/T
 \]
-is a finite étale \(S\)-group \textup{(\SGARefLink{sga3:xix:theorem:2-5}{Exposé XIX, 2.5})}. The
-morphism \(n\mapsto\operatorname{int}(n)\) induces, upon passage to
-the quotient, a canonical monomorphism \textup{(which is moreover an
+is a finite étale \(S\)-group \textup{(\SGARefLink{sga3:xix:theorem:2-5}{Exposé XIX, 2.5})}. Upon
+passage to the quotient from \(n\mapsto\operatorname{int}(n)\), one
+obtains a canonical monomorphism \textup{(which is moreover an
 open immersion)}
 \[
   W_G(T)\longrightarrow
@@ -687,8 +699,8 @@ groups of automorphisms of \(T\), then
   W_G(T)(S).
 \]
 
-By definition of the constant group \(W_S\) associated with \(W\)
-\textup{(cf.\ \SGARefLink{sga3:i:subsection:1:8}{Exposé I, 1.8})}, we therefore have a commutative
+By definition of the constant group \(W_S\) associated with \(W\),
+we therefore have a commutative
 diagram:
 
 \begin{center}
@@ -710,14 +722,25 @@ verify that, for every \(s\in S\), the morphism
 \[
   W_S(\bar s)\longrightarrow W_G(T)(\bar s)
 \]
-is an isomorphism.
+is an isomorphism.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, justifies this
+reduction. In our formulation: the morphism \(f\colon W_S\to W_G(T)\) is a
+morphism of étale \(S\)-schemes, hence étale (EGA~IV\textsubscript{4},
+17.3.4). If every \(f_{\bar s}\) is an isomorphism, so is every \(f_s\), so
+\(f\) is bijective and radicial; an étale radicial morphism is an open
+immersion (EGA~IV\textsubscript{4}, 17.9.1), and a surjective open immersion
+is an isomorphism.}
 The latter assertion follows, for example, from \emph{Bible},
-\S11.3, Theorem 2.
+11-07, Theorem 2.
 
 \SGARefTarget{sga3:xxii:rem:3.5}\paragraph{\SGARefLink{sga3:xxii:rem:3.5}{Remark 3.5}.}
-Using \SGARefLink{sga3:xxii:cor:2.3}{2.3}, the preceding proposition gives a new proof of the fact
-that the Weyl group of a maximal torus of a reductive \(S\)-group
-\(G\) is finite over \(S\) \textup{(Exposé XIX, 2.5(ii))}.
+Using \SGARefLink{sga3:xxii:cor:2.3}{2.3}, \SGARefLink{sga3:xxii:prop:3.4}{3.4} gives a new proof of the fact
+that the Weyl group of a maximal torus of a reductive group is finite
+\textup{(Exposé XIX, 2.5(ii))}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, spells out
+the argument. In our words: whether \(W_G(T)\) is finite over \(S\) can be
+checked after a faithfully flat base change (EGA~IV\textsubscript{2}, 2.7.1),
+in particular étale locally on \(S\); by 2.3 we may therefore assume \(G\)
+split relative to \(T\), and then \(W_G(T)\simeq W_S\) by 3.4, which is
+finite over \(S\) since \(W\) is finite.}
 
 \SGARefTarget{sga3:xxii:par:3.6}\paragraph{\SGARefLink{sga3:xxii:par:3.6}{3.6}.}
 Under the hypotheses of \SGARefLink{sga3:xxii:par:3.1}{3.1}, for every \(w\in W_G(T)(S)\), let
@@ -747,7 +770,7 @@ If \(n\in N_w(S)\), then
 \SGARefTarget{sga3:xxii:par:3.7}\paragraph{\SGARefLink{sga3:xxii:par:3.7}{3.7}.}
 In particular, if \(\alpha\) is a root of \(G\) with respect to
 \(T\), then \(N_{s_\alpha}\) is none other than what was denoted by
-\(N^\times\) in \SGARefLink{sga3:xx:3.0}{Exposé XX, 3.0}. If \(\mathfrak g^\alpha\) is free
+\(N^\times\) in \SGARefLink{sga3:xx:3.0}{Exposé XX, no.~3}. If \(\mathfrak g^\alpha\) is free
 over \(S\), we therefore have
 \[
   N_{s_\alpha}(S)\ne\varnothing.
@@ -778,7 +801,7 @@ exists \(n_w\in\underline{\operatorname{Norm}}_G(T)(S)\) such that}
 \addcontentsline{toc}{subsection}{\SGARefLink{sga3:xxii:subsection:4.1}{4.1}. The ``Big Cell''}
 
 \SGARefTarget{sga3:xxii:par:4.1.1}\paragraph{\SGARefLink{sga3:xxii:par:4.1.1}{4.1.1}.}
-Let \((G,T,M,R)\) be a split reductive \(S\)-group. Choose a system
+Let \((G,T,M,R)\) be a split \(S\)-group. Choose a system
 of positive roots \(R_+\) of the root datum \(\mathcal R(G)\)
 \textup{(\SGARefLink{sga3:XXI:3.2.1}{Exposé XXI, 3.2.1})}. Put \(R_-=-R_+\).
 
@@ -796,11 +819,11 @@ This is an open immersion. Indeed, since both sides are flat and of
 finite presentation over \(S\), it suffices to verify this on every
 geometric fiber \textup{(SGA 1, I, 5.7 and VIII, 5.4)}. We are thus
 reduced to the case in which \(S\) is the spectrum of an
-algebraically closed field. But by \emph{Bible}, \S13.4,
+algebraically closed field. But by \emph{Bible}, 13-11,
 Corollary 2 to Theorem 3, \(u\) is radicial and dominant. Since the
 tangent map of \(u\) at the origin is an isomorphism
 \textup{(definition of a root system)}, \(u\) is birational. As
-\(G\) is normal, Zariski's ``Main Theorem''
+\(G\) is normal, the Main Theorem
 \textup{(EGA III\textsubscript{1}, 4.4.9)} applies, and \(u\) is an
 open immersion.
 
@@ -810,8 +833,8 @@ independent of the ordering chosen on \(R_+\)
 open subsets of \(G\), we are reduced to proving that they have the
 same geometric points, and may therefore again suppose that \(S\)
 is the spectrum of an algebraically closed field. The assertion is
-then precisely \emph{Bible}, \S13, Proposition 1(c) and
-Theorem 1(a).
+then precisely \emph{Bible}, 13-05, Theorem 1, and 13-02,
+Proposition 1.
 
 We have therefore proved:
 
@@ -835,8 +858,14 @@ multiplication in \(G\)}
 \(\alpha\in R\), choose an isomorphism of vector groups
 \[
   p_\alpha:\mathbb G_{a,S}\xrightarrow{\;\sim\;}U_\alpha
-  \qquad\textup{(cf.\ 1.19)}.
+  \qquad\textup{(cf.\ 1.19)}.\footnotemark
 \]
+\footnotetext{Translator's note: this Exposé has no 1.19;
+the 1970 text and the Gille--Polo re-edition (2011) both print ``(cf.\ 1.19)''.
+Such isomorphisms exist because \(\mathfrak g^\alpha\) is free (condition
+\textup{(D 2)} of \SGARefLink{sga3:xxii:def:1.13}{1.13}), and they correspond to the elements
+\(X_\alpha\) of \(\Gamma(S,\mathfrak g^\alpha)^\times\) by
+\SGARefLink{sga3:xxii:thm:1.1}{1.1}~(i) and \SGARefLink{sga3:xxii:not:1.3}{1.3}.}
 Then the morphism \textup{(where
 \(N=\operatorname{Card}(R_+)=\operatorname{Card}(R_-)\))}
 \[
@@ -870,51 +899,45 @@ We write
 
 \SGARefTarget{sga3:xxii:prop:4.1.5}\paragraph{\SGARefLink{sga3:xxii:prop:4.1.5}{Proposition 4.1.5}.}
 \textit{The scheme \(\Omega_{R_+}\) is of finite presentation over
-\(S\) \textup{(hence quasi-compact in \(G\))} and is universally
-schematically dense in \(G\) relative to \(S\)
-\textup{(cf.\ \SGARefLink{sga3:xviii:section:1}{Exposé XVIII, 1})}.}
+\(S\) \textup{(hence quasi-compact in \(G\))} and is relatively
+schematically dense in \(G\)
+\textup{(\SGARefLink{sga3:xviii:section:1}{Exposé XVIII, 1})}.}
 
-The first assertion is trivial. Thus,\footnote{Editor's note: We
-have expanded the original in what follows.}
-\(\Omega_{R_+}\) is flat and of finite presentation over \(S\), and
-contains the identity section; it therefore meets every fiber of
-\(G\) in a nonempty, hence dense, open subset. The second assertion
-thus follows from Exposé XVIII, 1.3.
+The first assertion is trivial; the second follows from the fact
+that \(\Omega_{R_+}\) contains the identity section, hence meets every
+fiber of \(G\), and from \SGARefLink{sga3:xviii:cor:1.3}{Exposé XVIII, 1.3}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+details this step. In our words: \(\Omega_{R_+}\) is open in \(G\), hence flat
+and of finite presentation over \(S\), and its fiber over each \(s\in S\) is a
+nonempty open subset of \(G_s\), dense because \(G_s\) is irreducible
+(connected and smooth); this is what Exposé XVIII, 1.3 requires. The
+re-edition also refers to EGA~IV\textsubscript{3}, 11.10.10.}
 
 \SGARefTarget{sga3:xxii:cor:4.1.6}\paragraph{\SGARefLink{sga3:xxii:cor:4.1.6}{Corollary 4.1.6}.}
-\textit{Let \((G,T,M,R)\) be a split reductive \(S\)-group. Then}
+\textit{Under the hypotheses of \SGARefLink{sga3:xxii:prop:4.1.2}{4.1.2}, one has}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, adds to the
+statement the consequence that \(\underline{\operatorname{Centr}}(G)\) is
+representable by a closed diagonalizable subgroup of \(G\): the right-hand
+side below is the closed subgroup \(\mathrm D_S(M/\Gamma_0(R))\) of the split
+torus \(T=\mathrm D_S(M)\) (cf.\ \SGARefLink{sga3:xxii:rem:4.1.8}{4.1.8}), and \(T\) is closed in \(G\).}
 \[
   \underline{\operatorname{Centr}}(G)
   =
   \bigcap_{\alpha\in R}\operatorname{Ker}(\alpha).
 \]
-\textit{Consequently,
-\(\underline{\operatorname{Centr}}(G)\) is representable by a
-closed diagonalizable subgroup of \(G\).}
-\footnote{Editor's note: We have added the preceding sentence.}
 
-The second assertion follows immediately from the first. To prove
-the first, one may invoke \SGARefLink{sga3:xii:4.8}{Exposé XII, 4.8} and \SGARefLink{sga3:xii:4.11}{4.11}; alternatively,
-one may argue directly as follows.\footnote{Editor's note: We have
-expanded the original in what follows.}
-Let \(S'\to S\). If \(t\in T(S')\) and \(\alpha(t)=1\) for every
-\(\alpha\in R\), then \(\operatorname{int}(t)\) induces the identity
-on \(T_{S'}\) and on every \((U_\alpha)_{S'}\), \(\alpha\in R\),
-and therefore also on \((\Omega_{R_+})_{S'}\). By schematic density
-it consequently induces the identity on \(G_{S'}\), whence
+One may invoke \SGARefLink{sga3:xii:4.8}{Exposé XII, 4.8} and \SGARefLink{sga3:xii:4.11}{4.11}; one may also prove
+it directly as follows. It evidently suffices to prove that
 \[
-  t\in\underline{\operatorname{Centr}}(G)(S').
-\]
-Conversely, since
-\[
-  \underline{\operatorname{Centr}}_{G_{S'}}(T_{S'})
+  \underline{\operatorname{Centr}}(G)(S)
   =
-  T_{S'}
-  \qquad\textup{(cf.\ Exposé XIX, 2.8)},
+  \bigcap_{\alpha\in R}\operatorname{Ker}(\alpha)(S).
 \]
-if \(g\in G(S')\) centralizes \(T_{S'}\) and the
-\((U_\alpha)_{S'}\), then \(g\) is a section of \(T_{S'}\) on
-which every \(\alpha\in R\) vanishes.
+If \(t\in T(S)\) and \(\alpha(t)=1\) for every \(\alpha\in R\), then
+\(\operatorname{int}(t)\) induces the identity on \(T\) and on every
+\(U_\alpha\), \(\alpha\in R\), hence also on \(\Omega_{R_+}\), hence
+on \(G\) by schematic density. Conversely, if \(g\in G(S)\)
+centralizes \(T\) and the \(U_\alpha\), it is a section of \(T\)
+\textup{(\SGARefLink{sga3:xix:paragraph:2:8}{Exposé XIX, 2.8})} on which every \(\alpha\in R\)
+vanishes.
 
 \SGARefTarget{sga3:xxii:cor:4.1.7}\paragraph{\SGARefLink{sga3:xxii:cor:4.1.7}{Corollary 4.1.7}.}
 \textit{Let \(S\) be a scheme and \(G\) a reductive \(S\)-group.
@@ -926,28 +949,41 @@ of \(g\in G(S')\) such that, for every \(S''\to S'\), the inverse
 image of \(g\) in \(G(S'')\) belongs to \(T(S'')\) for every maximal
 torus \(T\) of \(G_{S''}\).}
 
-In view of \SGARefLink{sga3:xxii:cor:2.3}{2.3}, the first assertion follows from \SGARefLink{sga3:xxii:cor:4.1.6}{4.1.6} by
-descent.
-Let us prove the second assertion. Let \(H\) denote ``the
+The first assertion is trivial by descent.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+spells this out. In our words: by \SGARefLink{sga3:xxii:cor:2.3}{2.3}, \(G\) becomes split after
+an étale surjective base change \(S'\to S\), and then its center is the
+closed diagonalizable subgroup of \SGARefLink{sga3:xxii:cor:4.1.6}{4.1.6}. The center is compatible
+with base change, so this closed subscheme of \(G_{S'}\) carries a descent
+datum and descends to a closed subscheme of \(G\) (descent of affine
+morphisms, SGA~1, VIII, 2.1), which represents the center; it is of
+multiplicative type, being diagonalizable étale locally (Exposé~IX, 1.1).}
+Let us prove the second. Let \(H\) denote ``the
 intersection of the maximal tori of \(G\)'' in the preceding sense.
-Clearly,\footnote{Editor's note: We have expanded the original in
-what follows.}
+Clearly
 \[
   \underline{\operatorname{Centr}}(G)\subset H.
 \]
-By descent, it is therefore enough to prove
-\(\underline{\operatorname{Centr}}(G)=H\) when \(G\) is split.
-Since \(H\) is contained in the intersection of the maximal tori of
-\(G\) in the usual sense, this follows from the following remark:
-if \((G,T,M,R)\) is a splitting, \(\alpha\in R\), and
+To prove \(\underline{\operatorname{Centr}}(G)=H\), it suffices to prove
+that, if \(G\) is split, \(\underline{\operatorname{Centr}}(G)\) is the
+intersection of the maximal tori of \(G\) \textup{(in the usual sense)};
+this then follows from the following remark: if
 \(X\in\Gamma(S,\mathfrak g^\alpha)^\times\), then
 \[
   \operatorname{int}\bigl(\exp_\alpha(X)\bigr)(T)\cap T
   =
   \operatorname{Ker}(\alpha),
 \]
-as a trivial calculation shows. See also \SGARefLink{sga3:xii:8.6}{Exposé XII, 8.6} and \SGARefLink{sga3:xii:8.8}{8.8}
-for a more general statement.
+as a trivial calculation shows.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+spells out the reduction. In our words: \(H\) and
+\(\underline{\operatorname{Centr}}(G)\) are subsheaves of \(G\) for the étale
+topology, so by \SGARefLink{sga3:xxii:cor:2.3}{2.3} one may assume \(G\) split, say \((G,T,M,R)\); then
+each \(\mathfrak g^\alpha\) is free, so some
+\(X\in\Gamma(S,\mathfrak g^\alpha)^\times\) exists. As \(T\) and
+\(\operatorname{int}(\exp_\alpha(X))(T)\) are maximal tori, the remark gives
+\(H\subset\operatorname{Ker}(\alpha)\) for every \(\alpha\in R\), hence
+\(H\subset\underline{\operatorname{Centr}}(G)\) by
+\SGARefLink{sga3:xxii:cor:4.1.6}{4.1.6}.} \textup{(Cf.\ also \SGARefLink{sga3:xii:8.6}{Exposé XII, 8.6} and \SGARefLink{sga3:xii:8.8}{8.8}
+for a more general statement.)}
 
 \SGARefTarget{sga3:xxii:rem:4.1.8}\paragraph{\SGARefLink{sga3:xxii:rem:4.1.8}{Remark 4.1.8}.}
 In what follows, in the split case we shall systematically identify
@@ -957,8 +993,8 @@ In what follows, in the split case we shall systematically identify
   =
   D_S\bigl(M/\Gamma_0(R)\bigr),
 \]
-where \(\Gamma_0(R)\) is the subgroup of \(M\) generated by \(R\)
-\textup{(cf.\ \SGARefLink{sga3:XXI:1.1.6}{Exposé XXI, 1.1.6})}.
+where \textup{(\SGARefLink{sga3:XXI:1.1.6}{Exposé XXI})} \(\Gamma_0(R)\) is the subgroup of \(M\)
+generated by \(R\).
 \par\noindent
 If
 \(\{\alpha_1,\alpha_2,\ldots,\alpha_n\}\) is a system of simple
@@ -992,7 +1028,22 @@ set-theoretic relation:}
 \textit{for every \(q\in Q(S')\), \(x\in W(\mathcal L)(S')\), and
 \(S'\to S\). Suppose that \(f\) separates the elements of \(R\) in
 the following sense: if \(\alpha,\alpha'\in R\) and
-\(m,m'\in\mathbb Z\), then}
+\(m,m'\in\mathbb Z\), then}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, adds that
+this hypothesis is equivalent to the same implication with the equality
+checked at every geometric point of \(S\), and that it is stable under base
+change. In our check, the equivalence holds, because two characters of \(Q\)
+agree on an open and closed subset of \(S\); for the same reason the
+hypothesis is stable under base change to a nonempty \(S'\) when \(S\) is
+connected, but not in general. The proof below uses it, after shrinking
+\(S\), at the point \(\bar s\): if
+\((m\alpha\circ f)_{\bar s}=(m'\alpha'\circ f)_{\bar s}\), then
+\(m\alpha=m'\alpha'\). This holds, for instance, if \(f\) is surjective
+(4.1.10). Without it the proposition fails: let \(S=S_1\amalg S_2\),
+\(G=\mathrm{SL}_2\times\mathrm{SL}_2\), \(Q=\mathbb G_m\),
+\(\alpha_0(q)=q^2\), \(f(q)=(q,q)\) on \(S_1\) and \((q,q^3)\) on \(S_2\),
+\(p(x)=(u(x),u(x))\) on \(S_1\) and \((u(x),e)\) on \(S_2\), with \(u(x)\)
+upper unipotent; the hypothesis as printed holds, but near \(s\in S_1\) the
+image of \(p\) lies in no root group.}
 \[
   m\alpha\circ f=m'\alpha'\circ f
   \quad\Longrightarrow\quad
@@ -1097,62 +1148,51 @@ when \(f\) is surjective \textup{(that is, faithfully flat)}.
 system of positive roots of \(R\), and let \(\Omega_{R_+}\) be the
 corresponding ``big cell.''}
 
-\textit{\textup{\SGARefLink{sga3:xxii:def:1.13:item:i}{(i)}} Let \(H\) be a group-valued \(S\)-functor
+\textit{\textup{(i)} Let \(H\) be a group-valued \(S\)-functor
 that is separated
-for the fppf topology. If
+for the fppf topology.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, recalls
+the definition (\SGARefLink{sga3:iv:corollary:4:3:5}{Exposé IV, 4.3.5}): \(H\) is separated for the fppf topology if,
+for every \(S'\to S\) and every fppf covering family \((S'_i\to S')_i\), the
+map \(H(S')\to\prod_iH(S'_i)\) is injective.} If
 \(f,g:G\rightrightarrows H\) are two group homomorphisms that
 coincide on \(\Omega_{R_+}\), then \(f=g\).}
 
-\SGAInlineRefTarget{sga3:xxii:prop:4.1.11:item:ii}\textit{\textup{\SGARefLink{sga3:xxii:def:1.13:item:ii}{(ii)}} Let \(H\) be an \(S\)-sheaf of groups for the
+\SGAInlineRefTarget{sga3:xxii:prop:4.1.11:item:ii}\textit{\textup{(ii)} Let \(H\) be an \(S\)-sheaf of groups for the
 fppf topology, and let \(f:\Omega_{R_+}\to H\) be an \(S\)-morphism
 with the following property: for every \(S'\to S\) and every
 \(x,y\in\Omega_{R_+}(S')\) such that
 \(xy\in\Omega_{R_+}(S')\), one has
 \(f(xy)=f(x)f(y)\). Then there exists a group homomorphism
-\(\bar f:G\to H\), unique by \textup{\SGARefLink{sga3:xxii:def:1.13:item:i}{(i)}}, extending \(f\).}
+\(\bar f:G\to H\), unique by \textup{(i)}, extending \(f\).}
 
-Indeed, by \SGARefLink{sga3:xxii:prop:4.1.5}{4.1.5}, \textup{\SGARefLink{sga3:xxii:def:1.13:item:i}{(i)}} \textup{(respectively
-\textup{\SGARefLink{sga3:xxii:def:1.13:item:ii}{(ii)}})} follows immediately from \SGARefLink{sga3:xviii:cor:2.2}{Exposé XVIII, 2.2}
-\textup{(respectively \SGARefLink{sga3:xxii:cor:2.3}{2.3} and \SGARefLink{sga3:xxii:cor:2.4}{2.4})}.
+Indeed, by \SGARefLink{sga3:xxii:prop:4.1.5}{4.1.5}, \textup{(i)} \textup{(respectively
+\textup{(ii)})} follows immediately from \SGARefLink{sga3:xviii:cor:2.2}{Exposé XVIII, 2.2}
+\textup{(respectively \SGARefLink{sga3:xviii:prop:2.3}{2.3} and \SGARefLink{sga3:xviii:prop:2.4}{2.4})}.
 
 \SGARefTarget{sga3:xxii:rem:4.1.12}\paragraph{\SGARefLink{sga3:xxii:rem:4.1.12}{Remark 4.1.12}.}
 If \(\alpha\in R_+\), then
 \[
-  \tag{\(\dagger\)}\label{sga3:xxii:subsection:4-1:equation:dagger}
   \Omega_{R_+}\cap Z_\alpha
   =
   U_{-\alpha}\mathbin{\cdot}T\mathbin{\cdot}U_\alpha.
 \]
-Indeed,\footnote{Editor's note: We have expanded the original in
-what follows.} for every \(S'\to S\), if
+In particular, if \(X\in\Gamma(S,\mathfrak g^\alpha)\) and
+\(Y\in\Gamma(S,\mathfrak g^{-\alpha})\), one has
 \[
-  g=
-  \prod_{\beta\in R_-}p_\beta(x_\beta)
-  \mathbin{\cdot}t\mathbin{\cdot}
-  \prod_{\beta\in R_+}p_\beta(x_\beta)
-\]
-is an element of \(\Omega_{R_+}(S')\), and if
-\(t'\in T_\alpha(S')\), then
-\[
-  t'gt'^{-1}
-  =
-  \prod_{\beta\in R_-}p_\beta\bigl(\beta(t')x_\beta\bigr)
-  \mathbin{\cdot}t\mathbin{\cdot}
-  \prod_{\beta\in R_+}p_\beta\bigl(\beta(t')x_\beta\bigr).
-\]
-Since \(\alpha\) and \(-\alpha\) are the only elements of \(R\)
-whose restriction to \(T_\alpha\) is \(1\), it follows that \(g\)
-belongs to \(Z_\alpha=\operatorname{Centr}(T_\alpha)\) if and only
-if \(x_\beta=0\) for \(\beta\ne\pm\alpha\).
-
-From \((\dagger)\) and \SGARefLink{sga3:xx:2.1}{Exposé XX, 2.1}, one deduces that if
-\(X\in\Gamma(S,\mathfrak g^\alpha)\) and
-\(Y\in\Gamma(S,\mathfrak g^{-\alpha})\), then
-\[
-  \exp_\alpha(X)\exp_{-\alpha}(Y)\in\Omega_{R_+}(S)
+  \bigl(\exp_\alpha(X)\exp_{-\alpha}(Y)\in\Omega_{R_+}(S)\bigr)
   \quad\Longleftrightarrow\quad
-  1+XY\ \text{is invertible}.
+  \bigl(1+XY\ \text{invertible}\bigr).
 \]
+Indeed, \(Z_\alpha=\underline{\operatorname{Centr}}_G(T_\alpha)\), and
+\(\alpha\) and \(-\alpha\) are the only elements of \(R\) that vanish
+on \(T_\alpha\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, expands
+this argument. In our words: for \(t'\in T_\alpha(S')\) and
+\(g=\prod_{\beta\in R_-}p_\beta(x_\beta)\cdot t\cdot\prod_{\beta\in R_+}p_\beta(x_\beta)\)
+in \(\Omega_{R_+}(S')\), conjugation by \(t'\) replaces each \(x_\beta\) by
+\(\beta(t')x_\beta\); by the uniqueness of this decomposition, \(g\)
+centralizes \(T_\alpha\) if and only if \(x_\beta=0\) for every
+\(\beta\ne\pm\alpha\), which gives the first formula. The second follows from
+it and the formula of \SGARefLink{sga3:xx:2.1}{Exposé XX, 2.1} (see also \SGARefLink{sga3:xxii:not:1.3}{1.3}).}
 
 \SGARefTarget{sga3:xxii:section:4.2}
 \subsection*{\SGAInlineRefTarget{sga3:xxii:subsection:4-2}4.2. Morphisms of Split Groups}
@@ -1188,14 +1228,14 @@ Let \(p\) be the prime number, if one exists, that vanishes on
 \(\mathscr R(f)\) is a \(p\)-morphism of reduced root data in the
 sense of \SGARefLink{sga3:XXI:6.8}{Exposé XXI, 6.8}. We have thus defined a functor
 \(\mathscr R\) from the category of split \(S\)-groups to the
-category of reduced root data \textup{(equipped with
-\(p\)-morphisms)}.
+category of reduced root data \textup{[for the notion of
+\(p\)-morphism]}.
 
 \SGARefTarget{sga3:xxii:prop:4.2.3}\paragraph{\SGARefLink{sga3:xxii:prop:4.2.3}{Proposition 4.2.3}.}
 \textit{Under the hypotheses of \SGARefLink{sga3:xxii:def:4.2.1}{4.2.1}, the following properties
 hold:}
 
-\textit{\textup{\SGARefLink{sga3:xxii:def:1.13:item:i}{(i)}} For every \(\alpha\in R\), there exists a
+\textit{\textup{(i)} For every \(\alpha\in R\), there exists a
 unique isomorphism of \(\mathcal O_S\)-modules}
 \[
   f_\alpha:
@@ -1213,11 +1253,11 @@ unique isomorphism of \(\mathcal O_S\)-modules}
 \textit{for every \(X\in W(\mathfrak g^\alpha)(S')\) and every
 \(S'\to S\).}
 
-\textit{\textup{\SGARefLink{sga3:xxii:def:1.13:item:ii}{(ii)}} For every \(\alpha\in R\), one has
+\textit{\textup{(ii)} For every \(\alpha\in R\), one has
 \(q(-\alpha)=q(\alpha)\), and \(f_\alpha\) and \(f_{-\alpha}\) are
 contragredient to one another.}
 
-\textit{\textup{\SGARefLink{sga3:xxii:def:1.9:item:iii}{(iii)}} For every \(\alpha\in R\), every
+\textit{\textup{(iii)} For every \(\alpha\in R\), every
 \(Z\in W(\mathfrak g^\alpha)^*(S')\), and every \(S'\to S\), one
 has}
 \[
@@ -1263,7 +1303,7 @@ Then there is a commutative diagram of isomorphisms:}
 \end{center}
 
 This follows immediately from \SGARefLink{sga3:xxii:prop:3.4}{3.4}, \SGARefLink{sga3:XXI:6.8.4}{Exposé XXI, 6.8.4}, and
-\textup{\SGARefLink{sga3:xxii:def:1.9:item:iii}{(iii)}} above.
+\textup{(iii)} above.
 
 \SGARefTarget{sga3:xxii:rem:4.2.5}\paragraph{\SGARefLink{sga3:xxii:rem:4.2.5}{Remark 4.2.5}.}
 With the notation of \SGARefLink{sga3:xxii:prop:4.2.3}{4.2.3}, the restriction of \(f\) to
@@ -1292,27 +1332,34 @@ set-theoretic formula
 \]
 
 \SGARefTarget{sga3:xxii:prop:4.2.6}\paragraph{\SGARefLink{sga3:xxii:prop:4.2.6}{Proposition 4.2.6}.}
-\textit{\textup{\SGARefLink{sga3:xxii:def:1.13:item:i}{(i)}} The morphism \(f\) is surjective
-\textup{(\(=\) faithfully flat in the present case; cf.\
-Exposé \(\mathrm{VI_B}\), 3.11)} if and only if \(f_T\) is
-surjective.}
+\textit{\textup{(i)} The morphism \(f\) is surjective
+\textup{(\(=\) faithfully flat in the present case, cf.\
+Exposé VI)} if and only if \(f_T\) is
+surjective.}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, gives the precise
+reference, \SGARefLink{prop:sga3-VIB-3.11}{Exposé VI\textsubscript{B}, 3.11}: a homomorphism \(u\colon G\to H\) of \(S\)-groups
+locally of finite presentation, with \(G\) flat over \(S\) and \(H\) with
+reduced fibers, is flat as soon as \(u^0\colon G^0\to H^0\) is surjective. Here
+\(G\) and \(G'\) are smooth with connected fibers.}
 
 \textit{\textup{\SGAInlineRefTarget{sga3:xxii:prop:4.2.6:item:ii}(ii)} One has
 \(\operatorname{Ker}(f)\subset\Omega_{R_+}\).}
 
-We prove \textup{\SGARefLink{sga3:xxii:def:1.13:item:i}{(i)}}. If \(f\) is surjective, then
-\(f_T(T)=f(T)\) is a maximal torus of \(G'\). Indeed, \(f(T)\) is
-a subtorus of a maximal torus \(T'\) \textup{(\SGARefLink{sga3:ix:theorem:6:8}{Exposé IX, 6.8})}; to
-verify that \(f(T)=T'\), one reduces to the case of an algebraically
-closed field, where this is \emph{Bible}, \S7.3, Theorem 3\textup{(a)}.
+We prove \textup{(i)}. If \(f\) is surjective, then
+\(f(T)=f_T(T)\) is a maximal torus of \(G'\) \textup{(indeed,
+\(f_T(T)\) is a subtorus of \(T'\), \SGARefLink{sga3:ix:theorem:6:8}{Exposé IX, 6.8}; to verify that it
+is maximal, one reduces to the case of an algebraically closed
+field, where this is \emph{Bible}, 7.05, Theorem 3\textup{(a)})}, hence
+equal to \(T'\). If \(f_T\) is surjective, the preceding formula shows
+that \(f|_\Omega\) is surjective, which implies that \(f\) is
+surjective \textup{(Exposé VI)}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+details this reference. In our words: \(f\) maps \(\Omega\) onto the big cell
+\(\Omega'\) of \(G'\) relative to the system of positive roots \(d(R_+)\)
+(4.2.5), and \(\Omega'_s\) is open and dense in the connected fiber
+\(G'_s\); since the product of two dense open subsets of a group over a field
+is the whole group (Exposé VI\textsubscript{A}, 0.5), \(f(G_s)\supset\Omega'_s\cdot\Omega'_s=G'_s\)
+for every \(s\in S\).}
 
-If \(f_T\) is surjective, the preceding formula shows that \(f\)
-induces a surjection from \(\Omega=\Omega_{R_+}\) onto
-\(\Omega'=\Omega'_{d(R_+)}\). Since the fibers
-of \(G'\) are connected, it follows \textup{(cf.\ Exposé
-\(\mathrm{VI_A}\), 0.5)} that \(f\) is surjective.
-
-We prove \textup{\SGARefLink{sga3:xxii:prop:4.2.6:item:ii}{(ii)}}, and for this purpose admit a result that will
+We prove \textup{(ii)}, and for this purpose admit a result that will
 be proved below \textup{(\SGARefLink{sga3:xxii:thm:5.7.4}{5.7.4})}. For each \(w\in W\), choose an
 \(n_w\in\underline{\operatorname{Norm}}_G(T)(S)\) representing it.
 Then the open subschemes \(n_w\Omega\), for \(w\in W\), cover \(G\).
@@ -1403,11 +1450,10 @@ necessary and sufficient that \(f_T\) be an isogeny, i.e.\ that
 Indeed, by \SGARefLink{sga3:xxii:cor:4.2.8}{4.2.8}, \(\operatorname{Ker}(f)\) is finite over \(S\)
 if and only if \(\operatorname{Ker}(f_T)\) is finite over \(S\),
 and \(\operatorname{Ker}(f)\subset T\) if and only if every
-\(q(\alpha)\) is equal to \(1\). In that case
-\(\operatorname{Ker}(f)\) is central, since it is of multiplicative
-type and invariant; cf.\ \SGARefLink{sga3:ix:corollary:5:5}{Exposé IX, 5.5}.
+\(q(\alpha)\) is equal to \(1\) \textup{(\(\operatorname{Ker}(f)\) is then
+central, being of multiplicative type and normal, \SGARefLink{sga3:ix:corollary:5:5}{Exposé IX, 5.5})}.
 
-\SGARefTarget{sga3:xxii:rem:4.2.11}\paragraph{\SGARefLink{sga3:xxii:rem:4.2.11}{Remark 4.2.11}.}
+\SGARefTarget{sga3:xxii:rem:4.2.11}\paragraph{\SGARefLink{sga3:xxii:rem:4.2.11}{Remarks 4.2.11}.}
 \textup{(a)} Thus \(f:G\to G'\) is a central isogeny if and only if
 \[
   \mathscr R(f):\mathscr R(G')\longrightarrow\mathscr R(G)
@@ -1424,15 +1470,26 @@ case, with the notation of \emph{loc.\ cit.}, one has
   \operatorname{Coker}\bigl(\mathscr R(f)\bigr).
 \]
 
-\textup{\SGARefLink{sga3:xxii:def:1.5:item:b}{(b)}} If \(G\) and \(G'\) are semisimple, every morphism of
-split groups \(f:G\to G'\) is an isogeny.
+\textup{(b)} If \(G\) and \(G'\) are semisimple, every morphism of
+split groups \(f:G\to G'\) is an isogeny.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, adds a
+justification. In our words: since \(h(d(\alpha))=q(\alpha)\alpha\) and
+\({}^th(\alpha^*)=q(\alpha)d(\alpha)^*\) for \(\alpha\in R\), and since \(R\)
+spans \(M\otimes\mathbb Q\) and \(R'^*\) spans \(M'^*\otimes\mathbb Q\) (the
+groups being semisimple), both \(h\otimes\mathbb Q\) and
+\({}^th\otimes\mathbb Q\) are surjective; so \(h\) is injective with finite
+cokernel, i.e.\ \(f_T\) is an isogeny, and \(f\) is an isogeny by
+\SGARefLink{sga3:xxii:prop:4.2.10}{4.2.10}.}
 
 \textup{(c)} If \(f:G\to G'\) is faithfully flat and finite and
 \(G\) is reductive \textup{(respectively, semisimple)}, then \(G'\)
 is so as well. Indeed, \(G'\) is of finite presentation over \(S\)
 \textup{(Exposé V, 9.1)}, affine over \(S\)
 \textup{(EGA II, 6.7.1)}, smooth over \(S\)
-\textup{(Exposé VI, 9.2)}, and has connected reductive
+\textup{(Exposé VI)},\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, gives the
+reference Exposé VI, 9.2; in our edition, \SGARefLink{prop:sga3-VIB-9.2}{Exposé VI\textsubscript{B}, 9.2}~(xii): \(G'\)
+is the quotient of \(G\) by the finite flat subgroup \(\operatorname{Ker}(f)\),
+and the quotient of a smooth group by a subgroup flat and of finite
+presentation over \(S\) is smooth.} and has connected reductive
 \textup{(respectively, semisimple)} geometric fibers by \SGARefLink{sga3:xix:paragraph:1-7}{Exposé XIX,
 1.7}.
 
@@ -1465,7 +1522,9 @@ There exists an étale morphism \(S'\to S\) covering \(s\) such that
 \end{enumerate}
 
 Clearly, \textup{\SGARefLink{sga3:xxii:prop:4.2.12:item:iii}{(iii)}} is equivalent to \textup{\SGARefLink{sga3:xxii:prop:4.2.12:item:ii}{(ii)}}, and
-\textup{\SGARefLink{sga3:xxii:prop:4.2.12:item:ii}{(ii)}} implies \textup{\SGARefLink{sga3:xxii:prop:4.2.12:item:i}{(i)}} by \SGARefLink{sga3:xxii:rem:4.2.11}{4.2.11}\textup{\SGARefLink{sga3:xxii:def:1.5:item:b}{(b)}}. This is
+\textup{\SGARefLink{sga3:xxii:prop:4.2.12:item:ii}{(ii)}} implies \textup{\SGARefLink{sga3:xxii:prop:4.2.12:item:i}{(i)}} by \SGARefLink{sga3:xxii:rem:4.2.11}{4.2.11}\textup{(b)}.\footnote{Translator's
+note: the 1970 text refers to ``4.2.10 b)''; the reference is to 4.2.11~(b),
+as in the Gille--Polo re-edition (2011).} This is
 where the hypothesis that \(G\) and \(G'\) are semisimple enters;
 the other implications are valid for reductive groups.
 
@@ -1549,34 +1608,29 @@ and put}
 \[
   Q=D_S(M/N)\subset\operatorname{Centr}(G).
 \]
-\textit{Then:}
-
-\begin{enumerate}
-\item[\textup{(i)}]
-\textit{\(G'=G/Q\) is a reductive \(S\)-group, and \(T'=T/Q\) is a
-maximal torus of \(G'\);}
-
-\item[\textup{\SGAInlineRefTarget{sga3:xxii:prop:4.3.1:item:ii}(ii)}]
-\textit{if \(T'\) is identified with \(D_S(N)\), then \(R\subset N\)
-is a root system of \(G'\) relative to \(T'\),
+\textit{Then \(G'=G/Q\) is a reductive \(S\)-group, and \(T'=T/Q\) is a
+maximal torus of \(G'\); \SGAInlineRefTarget{sga3:xxii:prop:4.3.1:item:ii}if \(T'\) is identified with \(D_S(N)\),
+then \(R\subset N\) is a root system of \(G'\) relative to \(T'\),
 \((G',T',N,R)\) is a splitting of \(G'\), and
 \(\mathscr R(G')\) is canonically identified with the induced root
-datum \textup{(\SGARefLink{sga3:XXI:6.5}{Exposé XXI, 6.5})} \(\mathscr R(G)_N\);}
-
-\item[\textup{(iii)}]
-\textit{the canonical morphism \(G\to G'\) is compatible with the
-splittings, has root exponents equal to \(1\), and, by
-functoriality, induces the canonical morphism \textup{(loc. cit.)}}
+datum \textup{(\SGARefLink{sga3:XXI:6.5}{Exposé XXI, 6.5})} \(\mathscr R(G)_N\); the canonical
+morphism}
+\[
+  G\longrightarrow G'
+\]
+\textit{is compatible with the splittings, has root exponents equal
+to \(1\), and, by functoriality, gives the canonical morphism
+\textup{(loc. cit.)}}
 \[
   \mathscr R(G)_N\longrightarrow\mathscr R(G).
 \]
-\end{enumerate}
 
 We know that \(G'=G/Q\) is representable by an affine group scheme
 over \(S\) \textup{(\SGARefLink{sga3:viii:corollary:5:7}{Exposé VIII, 5.7})}, smooth over \(S\)
-\textup{(Exposé VI\textsubscript{B}, \SGARefLink{prop:sga3-VIB-9.2}{9.2})}, and with connected
+\textup{(Exposé VI)},\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, gives the
+precise reference, \SGARefLink{prop:sga3-VIB-9.2}{Exposé VI\textsubscript{B}, 9.2}; see the note to \SGARefLink{sga3:xxii:rem:4.2.11}{4.2.11}~(c).} and with connected
 reductive geometric fibers \textup{(as quotients of reductive
-groups; cf.\ \SGARefLink{sga3:xix:paragraph:1-7}{Exposé XIX, 1.7})}. Thus \(G'\) is a reductive
+groups, \SGARefLink{sga3:xix:paragraph:1-7}{Exposé XIX, 1.7})}. Thus \(G'\) is a reductive
 \(S\)-group.
 
 It is clear that
@@ -1595,7 +1649,7 @@ stable under \(Q\), and there is a canonical isomorphism
   \left(\prod_{\alpha\in R_+}U_\alpha\right).
 \]
 Moreover, \(\Omega_{R_+}/Q\) is an open subset of \(G'\) containing
-the identity section \textup{(cf.\ \SGARefLink{sga3:iv:proposition:4:7:2}{Exposé IV, 4.7.2} and \SGARefLink{sga3:iv:lemma:6:4:1}{6.4.1})}.
+the identity section \textup{(\SGARefLink{sga3:iv:proposition:4:7:2}{Exposé IV, 4.7.2} and \SGARefLink{sga3:iv:lemma:6:4:1}{6.4.1})}.
 
 It follows that, if \(\mathfrak g'\) denotes the Lie algebra of
 \(G'\) and \(\bar\alpha\) the character of \(T/Q\) induced by
@@ -1635,32 +1689,32 @@ adjoint \textup{(respectively, simply connected)} root datum, i.e.\
 \textit{\textup{\SGAInlineRefTarget{sga3:xxii:prop:4.3.4:item:i}(i)} An adjoint \textup{(respectively, simply
 connected)} reductive group is semisimple.}
 
-\textit{\textup{\SGARefLink{sga3:xxii:prop:4.3.1:item:ii}{(ii)}} If \(T\) is a maximal torus of the adjoint
+\textit{\textup{(ii)} If \(T\) is a maximal torus of the adjoint
 \textup{(respectively, simply connected)} reductive group \(G\),
 and if \(\alpha\) is a root of \(G\) relative to \(T\), then the
 infinitesimal root \(\bar\alpha\) is nonzero on every fiber
 \textup{(respectively, \(\alpha^*\) is a monomorphism and the
 infinitesimal coroot \(H_\alpha\) is nonzero on every fiber)}.}
 
-Indeed, \textup{\SGARefLink{sga3:xxii:prop:4.3.4:item:i}{(i)}} is trivial; \textup{\SGARefLink{sga3:xxii:prop:4.3.1:item:ii}{(ii)}} may be checked on
+Indeed, \textup{\SGARefLink{sga3:xxii:prop:4.3.4:item:i}{(i)}} is trivial; \textup{(ii)} may be checked on
 the geometric fibers and follows at once from \SGARefLink{sga3:XXI:6.2.8}{Exposé XXI, 6.2.8}.
 
 \SGARefTarget{sga3:xxii:prop:4.3.5}\paragraph{\SGARefLink{sga3:xxii:prop:4.3.5}{Proposition 4.3.5}.}
-\textit{\textup{\SGARefLink{sga3:xxii:prop:4.3.4:item:i}{(i)}} The reductive group \(G\) is adjoint if and
+\textit{\textup{(i)} The reductive group \(G\) is adjoint if and
 only if}
 \[
   \operatorname{Centr}(G)=\{e\}_S.
 \]
 
-\textit{\textup{\SGARefLink{sga3:xxii:prop:4.3.1:item:ii}{(ii)}} For every reductive group \(G\), the quotient
+\textit{\textup{(ii)} For every reductive group \(G\), the quotient
 group \(G/\operatorname{Centr}(G)\) is an adjoint reductive group.}
 
-Indeed, we may suppose that \(G\) is split. Then \textup{\SGARefLink{sga3:xxii:prop:4.3.4:item:i}{(i)}} is
+Indeed, we may suppose that \(G\) is split. Then \textup{(i)} is
 immediate, since
 \[
   \operatorname{Centr}(G)=D_S\bigl(M/\Gamma_0(R)\bigr),
 \]
-and \textup{\SGARefLink{sga3:xxii:prop:4.3.1:item:ii}{(ii)}} follows from \SGARefLink{sga3:xxii:prop:4.3.1}{4.3.1}.
+and \textup{(ii)} follows from \SGARefLink{sga3:xxii:prop:4.3.1}{4.3.1}.
 
 \SGARefTarget{sga3:xxii:def:4.3.6}\paragraph{\SGARefLink{sga3:xxii:def:4.3.6}{Definition 4.3.6}.}
 Let \(G\) be a reductive \(S\)-group. The \emph{adjoint group} of
@@ -1674,7 +1728,7 @@ with \(G\)} is the quotient \(G/\operatorname{rad}(G)\).
 The preceding definitions are compatible with base change. If
 \(s\in S\), then
 \(\operatorname{rad}(G)_{\bar s}\) is indeed the radical of
-\(G_{\bar s}\) in the usual sense \textup{(\SGARefLink{sga3:xii:1.6}{Exposé XIX, 1.6})}.
+\(G_{\bar s}\) in the usual sense \textup{(Exposé XIX, 1.6)}.
 
 \SGARefTarget{sga3:xxii:par:4.3.7}\paragraph{\SGARefLink{sga3:xxii:par:4.3.7}{4.3.7}.}
 If \((G,T,M,R)\) is a split group, then
@@ -1713,16 +1767,9 @@ corresponding to the canonical diagram of root data
   (\mathbb G_{m,S})^\Delta\xrightarrow{\ \sim\ }T.
 \]
 
-Indeed,
-\[
-  M=\Gamma_0(R)
-  \qquad
-  \textup{(respectively, \(M^*=\Gamma_0(R^*)\))},
-\]
-and \(\Delta\) \textup{(respectively,
-\(\{\alpha^*\}_{\alpha\in\Delta}\))} is a basis of the free
-abelian group \(\Gamma_0(R)\)
-\textup{(respectively, \(\Gamma_0(R^*)\))}; see \SGARefLink{sga3:XXI:3.1.8}{Exposé XXI, 3.1.8}.
+Indeed, \(M=\Gamma_0(R)\) \textup{(respectively, \ldots)} and \(\Delta\) is a
+basis of the free group \(\Gamma_0(R)\)
+\textup{(\SGARefLink{sga3:XXI:3.1.8}{Exposé XXI, 3.1.8})}.
 
 \SGARefTarget{sga3:xxii:rem:4.3.9}\paragraph{\SGARefLink{sga3:xxii:rem:4.3.9}{Remark 4.3.9}.}
 The radical of a reductive group is a \emph{characteristic}
@@ -1775,42 +1822,40 @@ subgroup of
     (T,\mathbb G_{m,\bar s})
 \]
 generated by \(R\). Then the
-content
+content\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, recalls
+the meaning of this word. In our words: for a nonzero element \(\alpha\) of a
+free abelian group \(L\) of finite rank, the content of \(\alpha\) in \(L\) is
+the largest integer \(c\geq1\) such that \(\alpha\in cL\); equivalently, it is
+the positive generator of the ideal of \(\mathbb Z\) formed by the values
+\(f(\alpha)\), \(f\in\operatorname{Hom}(L,\mathbb Z)\).}
 of every root \(\alpha\in R\) in the free abelian group
 \(\Gamma_0(R)\) \textup{(and hence a positive integer)} is
 invertible on \(S\).
 \end{enumerate}
 
-\SGARefTarget{sga3:xxii:reminder:5.1.1.1}
-\paragraph{Reminder \SGARefLink{sga3:xxii:reminder:5.1.1.1}{5.1.1.1}.}
-\footnote{Editor's note: This reminder was added.}
-Let us recall that, if \(G\) is a smooth connected algebraic group
-over an algebraically closed field \(k\), a \emph{Cartan subgroup}
-of \(G\) is the centralizer of a maximal torus of \(G\)
-\textup{(\SGARefLink{sga3:xii:1.0}{Exposé XII, 1.0})}, and such a subgroup is smooth and
-connected. For this, as well as for other characterizations of
-Cartan subgroups, see \emph{Bible}, \S7.1, Theorem 1 in the case
-where \(G\) is affine, and \SGARefLink{sga3:xii:6.6}{Exposé XII, Theorem 6.6} in the general
-case.
-
-If \(S\) is an arbitrary scheme and \(G\) is a smooth \(S\)-group
-of finite type, a \emph{Cartan subgroup} of \(G\) is a smooth
-\(S\)-subgroup \(C\) of \(G\) such that, for every \(s\in S\),
-\(C_{\bar s}\) is a Cartan subgroup of \(G_{\bar s}\)
-\textup{(\SGARefLink{sga3:xii:3.1}{Exposé XII, Definition 3.1})}.
-
-\SGARefTarget{sga3:xxii:rem:5.1.2}\paragraph{\SGARefLink{sga3:xxii:rem:5.1.2}{Remark 5.1.2}.}
+\SGARefTarget{sga3:xxii:rem:5.1.2}\paragraph{\SGARefLink{sga3:xxii:rem:5.1.2}{Remarks 5.1.2}.}
 \textup{\SGAInlineRefTarget{sga3:xxii:rem:5.1.2:item:a}(a)} By \SGARefLink{sga3:xii:7.1}{Exposé XII, 7.1} \textup{(where the hypothesis that
-\(G\) is separated is satisfied here because \(G\) has connected
-fibers; cf.\ Exposé VI\textsubscript{B}, \SGARefLink{cor:sga3-VIB-5.5}{5.5})}, conditions
+\(G\) is separated is unnecessary, being automatically satisfied,
+Exposé VI)}, conditions
 \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:i}{(i)}} and \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:ii}{(ii)}} imply that \(G\) locally possesses,
 for the étale topology, maximal tori \textup{(respectively, Cartan
-subgroups)}, which are locally conjugate for the étale topology.
+subgroups)},\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, inserts
+before these remarks a reminder on Cartan subgroups. In our words: over an
+algebraically closed field, a Cartan subgroup of a smooth connected algebraic
+group is the centralizer of a maximal torus (\SGARefLink{sga3:xii:1.0}{Exposé XII, 1.0}); it is smooth
+and connected (\SGARefLink{sga3:xii:6.6}{Exposé XII, 6.6}). For \(G\) smooth of finite type over a
+scheme \(S\), a Cartan subgroup of \(G\) is a smooth subgroup \(C\) such that
+\(C_{\bar s}\) is a Cartan subgroup of \(G_{\bar s}\) for every \(s\in S\)
+(\SGARefLink{sga3:xii:3.1}{Exposé XII, 3.1}).} which are locally conjugate for the étale topology.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+also gives the reason for the separation: \(G\) is smooth with connected fibers,
+and an \(S\)-group locally of finite presentation and universally open over
+\(S\), with connected fibers, is separated (and of finite presentation) over
+\(S\) (\SGARefLink{cor:sga3-VIB-5.5}{Exposé VI\textsubscript{B}, 5.5}).}
 
-\textup{\SGARefLink{sga3:xxii:def:1.5:item:b}{(b)}} The Cartan subgroups of \(G\) have connected fibers
+\textup{(b)} The Cartan subgroups of \(G\) have connected fibers
 \textup{(\SGARefLink{sga3:xii:6.6}{Exposé XII, 6.6})}.
 
-\textup{\SGARefLink{sga3:xii:6.6:item:c}{(c)}} If \(G\) is affine over \(S\), conditions
+\textup{(c)} If \(G\) is affine over \(S\), conditions
 \textup{(i)} and \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:ii}{(ii)}} are respectively equivalent to:
 \begin{enumerate}
 \item[\textup{(i$'$)}]
@@ -1821,15 +1866,20 @@ the reductive rank of the fibers of \(G\) is locally constant
 \textup{(\SGARefLink{sga3:xii:1.7}{Exposé XII, 1.7})}.
 \end{enumerate}
 
-\textup{\SGAInlineRefTarget{sga3:xxii:rem:5.1.2:item:d}(d)} By \SGARefLink{sga3:xii:8.8}{Exposé XII, 8.8} \textup{\SGARefLink{sga3:xii:8.8:item:c:02}{(c)}} and \textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:d}{(d)}},
-\(G\) has a reductive center \(Z\), and for every \(s\in S\), in
-the notation of \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:iv}{(iv)}},
+\textup{\SGAInlineRefTarget{sga3:xxii:rem:5.1.2:item:d}(d)} By \SGARefLink{sga3:xii:8.8}{Exposé XII, 8.8} \textup{\SGARefLink{sga3:xii:8.8:item:c:02}{(c)}},
+\(G\) has a reductive center \(Z\); under the conditions of
+\textup{\SGARefLink{sga3:xxii:def:5.1.1:item:iv}{(iv)}}, one has
 \[
   Z_{\bar s}
   =
-  \bigcap_{\alpha\in R}\operatorname{Ker}(\alpha),
+  \bigcap_{\alpha\in R}\operatorname{Ker}(\alpha)
+  \qquad\textup{(loc.\ cit.\ (d))},
 \]
-whence
+hence\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, replaces
+``under the conditions of (iv)'' by ``in the notation of (iv)'', observing that
+the invertibility condition of (iv) does not seem to be used here. As \(G\) is
+of type \textup{(RR)}, condition (iv) holds anyway, so the 1970 wording says the
+same thing.}
 \[
   \operatorname{Hom}_{\bar s\text{-gr.}}
     \bigl((T/Z)_{\bar s},\mathbb G_{m,\bar s}\bigr)
@@ -1864,32 +1914,18 @@ following proposition.
 \textup{(RR)}, and let \(Q\) be a central subgroup of \(G\), of
 finite presentation over \(S\), such that the quotient \(G/Q\) is
 representable \textup{(for example, \(G\) affine over \(S\) and
-\(Q\) of multiplicative type \textup{(\SGARefLink{sga3:ix:proposition:2:3}{Exposé IX, 2.3})}, or \(S\)
-artinian \textup{(Exposé VI\textsubscript{A}, \SGARefLink{thm:sga3-VIA-3.3.2}{3.3.2})})}. Then
-\(G/Q\) is an \(S\)-group of type \textup{(RR)}.}
+\(Q\) of multiplicative type, or \(S\) artinian)}. Then
+\(G/Q\) is an \(S\)-group of type \textup{(RR)}.}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+adds references for these two examples: \SGARefLink{sga3:ix:proposition:2:3}{Exposé IX, 2.3} (quotient of a
+scheme affine over \(S\) by a free action of a group of multiplicative type)
+and \SGARefLink{thm:sga3-VIA-3.3.2}{Exposé VI\textsubscript{A}, 3.3.2} (quotient of a group locally of finite type over an
+artinian local ring by a closed flat subgroup).}
 
-Indeed, \(G/Q\) is smooth over \(S\)
-\textup{(Exposé VI\textsubscript{B}, \SGARefLink{prop:sga3-VIB-9.2}{9.2})}, of finite presentation
-over \(S\) \textup{(\SGARefLink{sga3:v:proposition:9:1}{Exposé V, 9.1})}, and has connected fibers, so
-condition \textup{\SGARefLink{concl:sga3-VIB-9.2-i}{(i)}} holds. On the other hand, condition
-\textup{\SGARefLink{concl:sga3-VIB-9.2-ii}{(ii)}} follows from \SGARefLink{sga3:xii:7.6}{Exposé XII, 7.6}; it remains to verify
-conditions \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:iii}{(iii)}} and \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:iv}{(iv)}}.
-
-Put \(G'=G/Q\), let
-\[
-  u:G\longrightarrow G'
-\]
-be the canonical morphism, and let \(T'=u(T)\) be the maximal torus
-of \(G'\) that is the image of \(T\)
-\textup{(cf.\ \SGARefLink{sga3:xii:7.1}{Exposé XII, 7.1} \textup{\SGARefLink{sga3:xii:7.1:item:e}{(e)}})}. For each
-\(\alpha\in R\), again denote by \(\alpha\) the character of
-\(T'\) induced by \(\alpha\); indeed,
-\[
-  Q\cap T
-  \subset
-  \bigcap_{\alpha\in R}\operatorname{Ker}(\alpha)
-\]
-by \SGARefLink{sga3:xxii:rem:5.1.2}{5.1.2} \textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:d}{(d)}}. We first prove:
+Indeed, \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:i}{(i)}} is clear \textup{[\(G/Q\) is smooth over \(S\)
+\textup{(Exposé VI)}, of finite presentation over \(S\)
+\textup{(\SGARefLink{sga3:v:proposition:9:1}{Exposé V, 9.1})}, with connected fibers]};
+\textup{\SGARefLink{sga3:xxii:def:5.1.1:item:ii}{(ii)}} follows from \SGARefLink{sga3:xii:7.6}{Exposé XII, 7.6}; it remains to verify
+\textup{\SGARefLink{sga3:xxii:def:5.1.1:item:iii}{(iii)}} and \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:iv}{(iv)}}. We first prove:
 
 \SGARefTarget{sga3:xxii:lemma:5.1.5}
 \paragraph{\SGARefLink{sga3:xxii:lemma:5.1.5}{Lemma 5.1.5}.}
@@ -1911,7 +1947,13 @@ decomposition of \(\mathfrak g=\Lie(G)\) under
 \textup{(thus \(\mathfrak g^\alpha\) is an invertible
 \(\mathcal O_S\)-module for every \(\alpha\in R\), and \(R\) is
 the set of roots of \(G_{\bar s}\) relative to \(T_{\bar s}\), for
-every \(s\in S\))}. Then the Lie algebra \(\mathfrak g'\) of \(G'\)
+every \(s\in S\))}. Let \(G'=G/Q\), let \(u:G\to G'\) be the
+canonical morphism, and let \(T'=u(T)\) be the maximal torus of \(G'\)
+that is the image of \(T\) \textup{(\SGARefLink{sga3:xii:7.1}{Exposé XII, 7.1} \textup{\SGARefLink{sga3:xii:7.1:item:e}{(e)}})}; for each
+\(\alpha\in R\), again denote by \(\alpha\) the character of \(T'\)
+defined by \(\alpha\) \textup{(indeed,
+\(Q\cap T\subset Z=\bigcap_{\alpha\in R}\operatorname{Ker}(\alpha)\))}.
+Then the Lie algebra \(\mathfrak g'\) of \(G'\)
 decomposes under \(\operatorname{Ad}(T')\) as follows:}
 \[
   \mathfrak g'
@@ -2023,16 +2065,16 @@ is invertible on \(S\).
 \end{enumerate}
 
 \SGARefTarget{sga3:xxii:rem:5.1.7}\paragraph{\SGARefLink{sga3:xxii:rem:5.1.7}{Remarks 5.1.7}.}
-\textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:a}{(a)}} An adjoint reductive \(S\)-group is of type
+\textup{(a)} An adjoint reductive \(S\)-group is of type
 \textup{(RA)}.
 
-\textup{\SGARefLink{sga3:xxii:def:1.5:item:b}{(b)}} If \(S\) has characteristic \(0\), every group of
+\textup{(b)} If \(S\) has characteristic \(0\), every group of
 type \textup{(RR)} is of type \textup{(RA)}.
 
 \textup{(c)} The property of being of type \textup{(RA)} is stable
 under base change and is local for the fpqc topology.
 
-Remark \textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:a}{(a)}} above admits the following generalization.
+Remark \textup{(a)} above admits the following generalization.
 
 \SGARefTarget{sga3:xxii:prop:5.1.8}\paragraph{\SGARefLink{sga3:xxii:prop:5.1.8}{Proposition 5.1.8}.}
 \textit{Let \(S\) be a scheme, let \(G\) be an \(S\)-group of type
@@ -2059,18 +2101,22 @@ finite presentation with connected fibers, and let \(H\) be a group subscheme of
 \(H\) is \emph{of type \textup{(R)}} if:
 \begin{enumerate}
 \item[\textup{\SGAInlineRefTarget{sga3:xxii:def:5.2.1:item:i}(i)}]
-\(H\) is smooth and of finite presentation over \(S\), and has
-connected fibers;
+\(H\) is smooth and of finite presentation over \(S\)
+\textup{(\(=\) retrocompact in \(G\))}, and has connected fibers;
 
 \item[\textup{\SGAInlineRefTarget{sga3:xxii:def:5.2.1:item:ii}(ii)}]
 for every \(s\in S\), \(H_{\bar s}\) contains a Cartan subgroup of
 \(G_{\bar s}\).
 \end{enumerate}
 This notion is stable under base change and is local for the fpqc
-topology.
+topology.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, notes
+that the hypotheses of finite presentation on \(G\) and on \(H\) are
+automatic: a group scheme smooth over \(S\) with connected fibers is
+separated and of finite presentation over \(S\)
+(\SGARefLink{cor:sga3-VIB-5.5}{Exposé VI\textsubscript{B}, 5.5}).}
 
 \SGARefTarget{sga3:xxii:recall:5.2.2}\paragraph{Recall \SGARefLink{sga3:xxii:recall:5.2.2}{5.2.2}.}
-\textup{(cf.\ \SGARefLink{sga3:xii:7.9}{Exposé XII, 7.9})} Under the preceding conditions:
+\textup{(\SGARefLink{sga3:xii:7.9}{Exposé XII, 7.9})} Under the preceding conditions:
 \begin{enumerate}
 \item[\textup{\SGAInlineRefTarget{sga3:xxii:def:5.2.1:item:a}(a)}]
 \[
@@ -2085,10 +2131,15 @@ subgroups (respectively maximal tori) of \(H\) are Cartan subgroups
 \end{enumerate}
 
 \SGARefTarget{sga3:xxii:examples:5.2.3}\paragraph{\SGARefLink{sga3:xxii:examples:5.2.3}{Examples 5.2.3}.}
-\textup{\SGARefLink{sga3:xxii:def:5.2.1:item:a}{(a)}} \emph{Borel subgroups.} A Borel subgroup of \(G\) is a
-subgroup \(H\) of type \textup{(R)} whose geometric fibers are
-Borel subgroups of the corresponding fibers of
-\(G\).
+\textup{(a)} \emph{Borel subgroups.} A Borel subgroup of \(G\) is a
+subgroup of type \textup{(R)} whose fibers are Borel subgroups of the
+fibers of \(G\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, adds an
+equivalent form of this definition. In our words: a Borel subgroup of \(G\) is
+the same as a smooth subgroup \(H\) of \(G\), of finite presentation over \(S\),
+such that \(H_{\bar s}\) is a Borel subgroup of \(G_{\bar s}\) for every
+\(s\in S\); indeed a Borel subgroup of \(G_{\bar s}\) is connected and
+contains the centralizer of each of its maximal tori, which is a Cartan subgroup
+of \(G_{\bar s}\).}
 
 \textup{(b)} \emph{Parabolic subgroups.} A parabolic subgroup of
 \(G\) is a subgroup of type \textup{(R)} whose geometric fibers
@@ -2103,10 +2154,14 @@ subschemes of \(G\), and suppose that \(H\) is of type
 \(H\) if and only if it is a subgroup of type \textup{(R)} of
 \(G\).}
 
-Indeed,\footnote{Editor's note: We have expanded the argument that
-follows.} let \(s\in S\). Since \(H\) is of type \textup{(R)},
-every maximal torus of \(H_{\bar s}\) is a maximal torus of
-\(G_{\bar s}\), and the same therefore holds for Cartan subgroups.
+Trivial.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, gives
+the argument. In our words: let \(s\in S\); as \(H_{\bar s}\) contains a Cartan
+subgroup \(\underline{\operatorname{Centr}}(T)\) of \(G_{\bar s}\), its maximal
+tori are its conjugates of \(T\), hence maximal tori of \(G_{\bar s}\), and the
+Cartan subgroups of \(H_{\bar s}\) are Cartan subgroups of \(G_{\bar s}\);
+conversely a Cartan subgroup of \(G_{\bar s}\) contained in \(H_{\bar s}\) is
+one of \(H_{\bar s}\). So \(K_{\bar s}\) contains a Cartan subgroup of
+\(H_{\bar s}\) if and only if it contains one of \(G_{\bar s}\).}
 
 \SGARefTarget{sga3:xxii:prop:5.2.5}\paragraph{\SGARefLink{sga3:xxii:prop:5.2.5}{Proposition 5.2.5}.}
 \textit{Let \(G\) be as in \SGARefLink{sga3:xxii:def:5.2.1}{5.2.1}, let \(T\) be a maximal torus of
@@ -2117,7 +2172,12 @@ subgroup of type \textup{(R)} of \(G\) containing \(T\), then
 
 First recall that \(Z\) is a closed group subscheme of \(G\), of
 finite presentation (\SGARefLink{sga3:xi:corollary:6:11}{Exposé XI, 6.11}), with connected fibers
-(\SGARefLink{sga3:xii:6.6}{Exposé XII, 6.6}), and smooth over \(S\) (\SGARefLink{sga3:xi:corollary:2:4}{Exposé XI, 2.4}), so it
+(\SGARefLink{sga3:xii:6.6}{Exposé XII, 6.6}), and smooth over \(S\) (\SGARefLink{sga3:ix:corollary:3:3}{Exposé IX, 3.3}),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+cites here Exposé XI, 2.4, where the smoothness of such transporters is stated.
+The 1970 reference gives it too: Exposé IX, 3.3, applied to the inclusion of
+\(Q\) in \(G\), lifts the points of \(Z\) over nilpotent thickenings of affine
+schemes (infinitesimal criterion), and \(Z\) is of finite presentation over
+\(S\), so \(Z\) is smooth.} so it
 satisfies the conditions imposed in \SGARefLink{sga3:xxii:def:5.2.1}{Definition 5.2.1}. Likewise,
 \(H\cap Z\) is of finite presentation, smooth, and has connected
 fibers (since
@@ -2133,7 +2193,7 @@ be a subgroup of type \textup{(R)} of \(G\). Then \(H\) is an
 \(S\)-group of type \textup{(RR)} \textup{(respectively
 \textup{(RA)})}.}
 
-Indeed, \textup{\SGARefLink{sga3:xxii:def:5.2.1:item:i}{(i)}} is clear, \textup{\SGARefLink{sga3:xxii:def:5.2.1:item:ii}{(ii)}} follows from \SGARefLink{sga3:xxii:recall:5.2.2}{5.2.2}
+Indeed, \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:i}{(i)}} is clear, \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:ii}{(ii)}} follows from \SGARefLink{sga3:xxii:recall:5.2.2}{5.2.2}
 \textup{\SGARefLink{sga3:xxii:def:5.2.1:item:b}{(b)}}, and \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:iii}{(iii)}} and \textup{\SGARefLink{sga3:xxii:def:5.1.1:item:iv}{(iv)}}
 \textup{(respectively \textup{(iv$'$)})} are to be verified when
 \(S\) is the spectrum of an algebraically closed field. Then \(H\)
@@ -2145,17 +2205,16 @@ and the assertions to be proved follow immediately from:
 
 \SGARefTarget{sga3:xxii:lemma:5.2.7}\paragraph{\SGARefLink{sga3:xxii:lemma:5.2.7}{Lemma 5.2.7}.}
 \textit{Let \(S\) be a scheme, let \(G\) be an \(S\)-group of type
-\textup{(RR)}, and let \(T\) be a maximal torus of \(G\) equipped
-with a trivialization \(T\simeq D_S(M)\). Suppose that}
+\textup{(RR)}, and let \(T=D_S(M)\) be a trivialized maximal torus
+of \(G\). Suppose that}
 \[
   \mathfrak g
   =
   \mathfrak g^0
   \oplus
-  \coprod_{\alpha\in R}\mathfrak g^\alpha
+  \coprod_{\alpha\in R}\mathfrak g^\alpha,
 \]
-\textit{\textup{(the \(\mathfrak g^\alpha\) are then invertible
-\(\mathcal O_S\)-modules)}. Let \(H\) be a subgroup of type
+\textit{the \(\mathfrak g^\alpha\) being invertible. Let \(H\) be a subgroup of type
 \textup{(R)} containing
 \(C=\underline{\operatorname{Centr}}_G(T)\)
 \textup{(that is, containing \(T\))}. Then
@@ -2197,104 +2256,48 @@ a direct factor, containing \(\mathfrak g^0\), and stable under
 \addcontentsline{toc}{subsection}{\SGARefLink{sga3:xxii:subsection:5-3}{5.3}. Strict Transporter of Two
 Subgroups of Type (R). Applications}
 
-\SGARefTarget{sga3:xxii:recall:5.3.0}\paragraph{Recall \SGARefLink{sga3:xxii:recall:5.3.0}{5.3.0}.}
-\footnote{Editor's note: This reminder was added; it is used in the
-proofs of \SGARefLink{sga3:xxii:prop:5.3.1}{5.3.1} and \SGARefLink{sga3:xxii:cor:5.3.4}{5.3.4}.} Let \(S\) be a scheme, let \(G\) be a
-smooth \(S\)-group, put \(\mathfrak g=\Lie(G/S)\), and let
-\(\mathfrak h\) be an \(\mathcal O_S\)-submodule of \(\mathfrak g\)
-that is locally a direct factor. The \(\mathcal O_S\)-algebra
-\[
-  \mathscr A=\operatorname{Sym}(\omega^1_{G/S})
-\]
-is locally free; hence the \(S\)-scheme
-\[
-  \underline{\operatorname{Lie}}(G/S)
-  =
-  W(\mathfrak g)
-  =
-  \operatorname{Spec}(\mathscr A)
-\]
-is essentially free in the sense of \SGARefLink{sga3:viii:definition:6:1}{Exposé VIII, 6.1}. Since
-\(W(\mathfrak h)\) is a closed subscheme of
-\(\underline{\operatorname{Lie}}(G/S)\), of finite presentation
-over \(\underline{\operatorname{Lie}}(G/S)\), it follows from
-\SGARefLink{sga3:viii:examples:6:5}{Exposé VIII, 6.5} \textup{\SGARefLink{sga3:viii:examples:6:5:item:a:01}{(a)}} that
-\[
-  N=\underline{\operatorname{Norm}}_G(\mathfrak h)
-\]
-is represented by a closed group subscheme of \(G\), of finite
-presentation over \(G\). (See also the additions \SGARefLink{sga3:xxii:par:6.2.3}{6.2.3} and \SGARefLink{sga3:xxii:prop:6.2.4}{6.2.4}
-\textup{\SGARefLink{sga3:viii:examples:6:5:item:a:01}{(a)}} in Exposé VI\textsubscript{B}.) On the other hand, by
-\SGARefLink{sga3:ii:theorem:5-3-1}{Exposé II, 5.3.1},
-\[
-  \underline{\operatorname{Lie}}(N/S)
-  =
-  \underline{\operatorname{Norm}}_
-    {\underline{\operatorname{Lie}}(G/S)}(\mathfrak h).
-\]
-
-Finally, by Exposé VI\textsubscript{B}, \SGARefLink{thm:sga3-VIB-3.10}{3.10}, if \(N\) is smooth
-over \(S\) at the points of the unit section, then the group
-subfunctor \(N^0\) (defined in Exposé VI\textsubscript{B}, \SGARefLink{def:sga3-VIB-3.1}{3.1}) is
-represented by an open group subscheme of \(N\), smooth over \(S\).
-
 \SGARefTarget{sga3:xxii:prop:5.3.1}\paragraph{\SGARefLink{sga3:xxii:prop:5.3.1}{Proposition 5.3.1}.}
 \textit{Let \(S\) be a scheme, let \(G\) be an \(S\)-group of type
 \textup{(RA)} \textup{(\SGARefLink{sga3:xxii:def:5.1.6}{5.1.6})}, let \(H\) be a subgroup of type
 \textup{(R)} of \(G\), and let
 \(\mathfrak g\supset\mathfrak h\) be their Lie algebras. Then
 \(\underline{\operatorname{Norm}}_G(\mathfrak h)\)
-\textup{(which, by \SGARefLink{sga3:xxii:recall:5.3.0}{5.3.0}, is representable by a closed subscheme of
-\(G\), of finite presentation over \(S\))} is smooth over \(S\) at
-every point of the unit section, and}
+\textup{(which is in any case representable by a closed subscheme of
+\(G\) of finite presentation over \(S\))}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+justifies this in a reminder placed before 5.3.1. In our words: as \(G\) is
+smooth, \(\underline{\operatorname{Lie}}(G/S)=W(\mathfrak g)\) is essentially
+free over \(S\) (\SGARefLink{sga3:viii:definition:6:1}{Exposé VIII, 6.1}), and \(W(\mathfrak h)\) is a closed subscheme of it
+of finite presentation, \(\mathfrak h\) being locally a direct factor; so
+\(\underline{\operatorname{Norm}}_G(\mathfrak h)\) is represented by a closed
+subgroup scheme of \(G\) of finite presentation over \(S\)
+(\SGARefLink{sga3:viii:examples:6:5}{Exposé VIII, 6.5}~(a)). Its Lie algebra is the normalizer of \(\mathfrak h\)
+in \(\mathfrak g\) (\SGARefLink{sga3:ii:theorem:5-3-1}{Exposé II, 5.3.1}), and, where it is smooth along the unit
+section, its identity component is represented by an open subgroup scheme,
+smooth over \(S\) (\SGARefLink{thm:sga3-VIB-3.10}{Exposé VI\textsubscript{B}, 3.10}).} is smooth over \(S\) along
+the unit section, and one has}
 \[
-  \underline{\operatorname{Norm}}_G(\mathfrak h)^0=H.
+  H=\underline{\operatorname{Norm}}_G(\mathfrak h)^0.
 \]
 
-\footnote{Editor's note: We have expanded the original in the
-argument that follows.} \emph{Proof.} Put
+Since \(H\) is smooth and of finite presentation over \(S\), the
+proposition is equivalent \textup{(Exposé VI)} to the following fact:
+for every \(s\in S\),
 \[
-  N=\underline{\operatorname{Norm}}_G(\mathfrak h),
-  \qquad
-  \mathfrak n=\Lie(N/S).
-\]
-We have \(H\subset N\), and by \SGARefLink{sga3:ii:theorem:5-3-1}{Exposé II, 5.3.1}, for every
-\(s\in S\),
-\[
-  \mathfrak h(s)
-  \subset
-  \mathfrak n(s)
+  \operatorname{Norm}_{\mathfrak g(s)}(\mathfrak h(s))
   =
-  \operatorname{Norm}_{\mathfrak g(s)}(\mathfrak h(s)).
+  \mathfrak h(s).
 \]
-Now, by \SGARefLink{sga3:xxii:lemma:5.3.2}{5.3.2} below,
-\[
-  \mathfrak h(s)
-  =
-  \operatorname{Norm}_{\mathfrak g(s)}(\mathfrak h(s)),
-\]
-and since \(H\) is smooth over \(S\),
-\[
-  \dim_{\kappa(s)}\mathfrak h(s)=\dim H_s
-\]
-\textup{(cf.\ \textup{[DG70]}, \S II.5, Theorem 2.1)}. Hence
-\[
-  \dim_{\kappa(s)}\mathfrak n(s)
-  =
-  \dim_{\kappa(s)}\mathfrak h(s)
-  =
-  \dim H_s
-  \leq
-  \dim N_s.
-\]
-It follows that
-\[
-  N_s^0=H_s^0=H_s,
-\]
-since \(H\) has connected fibers. Consequently the group subfunctor
-\(N^0\) \textup{(defined in Exposé VI\textsubscript{B}, \SGARefLink{def:sga3-VIB-3.1}{3.1})} is
-represented by the smooth \(S\)-group \(H\). This proves \SGARefLink{sga3:xxii:prop:5.3.1}{5.3.1},
-modulo the following lemma.
+We are therefore reduced by \SGARefLink{sga3:xxii:lemma:5.2.7}{5.2.7} to proving the following.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+details the first step. In our words: put \(N=\underline{\operatorname{Norm}}_G(\mathfrak h)\).
+By \SGARefLink{sga3:ii:theorem:5-3-1}{Exposé II, 5.3.1}, the Lie algebra of \(N_s\) is
+\(\operatorname{Norm}_{\mathfrak g(s)}(\mathfrak h(s))\). If this equals
+\(\mathfrak h(s)\), then
+\(\dim\Lie(N_s)=\dim\mathfrak h(s)=\dim H_s\leq\dim N_s\leq\dim\Lie(N_s)\),
+so \(N_s\) is smooth and \(N_s^0=H_s\), \(H_s\) being smooth and connected.
+Then the monomorphism \(H\to N\), with \(H\) flat over \(S\), is flat by the
+fibrewise criterion (EGA~IV\textsubscript{3}, 11.3.10), hence an open
+immersion (EGA~IV\textsubscript{4}, 17.9.1); so \(N\) is smooth along the
+unit section and \(N^0=H\).}
 
 \SGARefTarget{sga3:xxii:lemma:5.3.2}\paragraph{\SGARefLink{sga3:xxii:lemma:5.3.2}{Lemma 5.3.2}.}
 \textit{Under the conditions of \SGARefLink{sga3:xxii:lemma:5.2.7}{5.2.7}, if \(G\) is of type
@@ -2349,34 +2352,19 @@ that \(\bar\alpha\ne0\) for every \(\alpha\in R\).
 \textit{give a bijective correspondence between the set of
 subgroups of type \textup{(R)} of \(G\) containing \(T\), and the
 set of Lie subalgebras of \(\mathfrak g\) containing
-\(\mathfrak g^0\), stable under \(T\), and whose normalizer in
-\(G\) is smooth over \(S\) at every point of the unit section.}
-
-Indeed,\footnote{Editor's note: The proof that follows was added.}
-let \(\mathfrak h\) be a Lie subalgebra of \(\mathfrak g\)
-satisfying the properties above. By \SGARefLink{sga3:xxii:recall:5.3.0}{5.3.0},
-\[
-  H=\underline{\operatorname{Norm}}_G(\mathfrak h)^0
-\]
-is a smooth \(S\)-group scheme. Moreover, since
-\[
-  C=\underline{\operatorname{Centr}}_G(T)
-\]
-stabilizes every \(\mathfrak g^\alpha\) and has connected fibers
-\textup{(\SGARefLink{sga3:xii:6.6}{Exposé XII, 6.6})}, we have \(C\subset H\). Therefore
-\(H\) is a subgroup of \(G\) of type \textup{(R)}. By \SGARefLink{sga3:ii:theorem:5-3-1}{Exposé II,
-5.3.1},
-\[
-  \underline{\operatorname{Lie}}(H)
-  =
-  \underline{\operatorname{Norm}}_{\mathfrak g}(\mathfrak h).
-\]
-Finally, by the proof of \SGARefLink{sga3:xxii:lemma:5.3.2}{5.3.2},
-\[
-  \underline{\operatorname{Norm}}_{\mathfrak g}(\mathfrak h)
-  =
-  \mathfrak h.
-\]
+\(\mathfrak g^0\) and stable under \(T\), and whose normalizer in
+\(G\) is smooth along the unit section.}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+adds a proof. In our words: by 5.3.3 and 5.3.1 the first map is injective, with
+\(\underline{\operatorname{Norm}}_G(\Lie(H/S))^0=H\). Conversely, let
+\(\mathfrak h\) have the stated properties and put
+\(H=\underline{\operatorname{Norm}}_G(\mathfrak h)^0\), a smooth subgroup scheme
+(\SGARefLink{thm:sga3-VIB-3.10}{Exposé VI\textsubscript{B}, 3.10}). The group
+\(C=\underline{\operatorname{Centr}}_G(T)\) preserves each
+\(\mathfrak g^\alpha\), hence normalizes \(\mathfrak h\), and has connected
+fibers (\SGARefLink{sga3:xii:6.6}{Exposé XII, 6.6}), so \(C\subset H\) and \(H\) is of type \textup{(R)}.
+Finally \(\Lie(H/S)=\operatorname{Norm}_{\mathfrak g}(\mathfrak h)\)
+(\SGARefLink{sga3:ii:theorem:5-3-1}{Exposé II, 5.3.1}), and this normalizer is \(\mathfrak h\) by the argument of
+5.3.2.}
 
 \SGARefTarget{sga3:xxii:cor:5.3.5}\paragraph{\SGARefLink{sga3:xxii:cor:5.3.5}{Corollary 5.3.5}.}
 \textit{Let \(S\) be a scheme, let \(G\) be an \(S\)-group of type
@@ -2390,47 +2378,34 @@ Finally, by the proof of \SGARefLink{sga3:xxii:lemma:5.3.2}{5.3.2},
 \]
 
 By virtue of the finite-presentation hypotheses, we reduce as usual
-\textup{(cf.\ EGA IV\textsubscript{3}, \S8, and Exposé
-VI\textsubscript{B}, \S10)} to the case where \(S\) is noetherian.
+to the case where \(S\) is noetherian.
 It is then enough to verify that
 \(\mathfrak h=\mathfrak h'\) implies
 \[
   H_{S'}=H'_{S'}
 \]
 for every \(S'\) that is the spectrum of an artinian quotient of a
-local ring of \(S\);\footnote{Editor's note: Indeed, let \(g\in G\),
-let \(s\) be its image in \(S\), let \(\mathfrak m\) be the maximal
-ideal of \(\mathcal O_{G,g}\), let \(\mathfrak n\) be that of
-\(\mathcal O_{S,s}\), and let \(I\) (respectively \(I'\)) be the
-kernel of the morphism from \(\mathcal O_{G,g}\) to
-\(\mathcal O_{H,g}\) (respectively \(\mathcal O_{H',g}\)), the
-latter being the zero ring if \(g\notin H\) (respectively
-\(g\notin H'\)). Since \(\mathcal O_{G,g}\) is noetherian, \(I\)
-and \(I'\) are closed for the \(\mathfrak m\)-adic topology, hence
-\emph{a fortiori} for the \(\mathfrak n\)-adic topology. It is
-therefore enough to prove
-\[
-  I+\mathfrak n^n\mathcal O_{G,g}
-  =
-  I'+\mathfrak n^n\mathcal O_{G,g}
-\]
-for every \(n\in\mathbb N\).} we are therefore reduced to the case
-where \(S\) is artinian, in which case we may apply \SGARefLink{sga3:xxii:prop:5.1.8}{5.1.8}.
-
-Let
-\[
-  u:G\longrightarrow G'=G/Z
-\]
-be the canonical morphism, and let \(T'=T/Z\) be the maximal torus
+local ring of \(S\);\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, refers
+for the reduction to EGA~IV\textsubscript{3}, \S8, and Exposé
+VI\textsubscript{B}, \S10, and justifies this step. In our words, with \(S\)
+noetherian: if \(H_{S'}=H'_{S'}\) for all such \(S'\), the immersion
+\(H\cap H'\to H\) is bijective, and at each point \(x\) of \(H\), over
+\(s\in S\), the ideal defining it in \(\mathcal O_{H,x}\) lies in
+\(\mathfrak m_s^n\mathcal O_{H,x}\) for every \(n\), where \(\mathfrak m_s\) is
+the maximal ideal of \(\mathcal O_{S,s}\); by Krull's intersection theorem
+this ideal is zero. So \(H\cap H'=H\), and likewise \(H\cap H'=H'\).} we are
+therefore reduced to the case where \(S\) is artinian, in which case we may apply \SGARefLink{sga3:xxii:prop:5.1.8}{5.1.8}.
+Put \(G'=G/Z\), and let \(T'=T/Z\) be the maximal torus
 of \(G'\) corresponding to \(T\). By \SGARefLink{sga3:xii:7.12}{Exposé XII, 7.12}, there exist
 subgroups \(H_1\) and \(H'_1\) of type \textup{(R)} of \(G'\),
 containing \(T'\), such that
 \[
   H=u^{-1}(H_1),
   \qquad
-  H'=u^{-1}(H'_1).
+  H'=u^{-1}(H'_1),
 \]
-It is enough to prove that \(H_1=H'_1\). But by \SGARefLink{sga3:xxii:lemma:5.2.7}{5.2.7} and \SGARefLink{sga3:xxii:lemma:5.1.5}{5.1.5},
+where \(u:G\to G'\) is the canonical morphism. It is enough to prove
+that \(H_1=H'_1\). But by \SGARefLink{sga3:xxii:lemma:5.2.7}{5.2.7} and \SGARefLink{sga3:xxii:lemma:5.1.5}{5.1.5},
 \[
   \Lie(H_1)=\Lie(H'_1),
 \]
@@ -2441,7 +2416,13 @@ The fact that \(H\) and \(H'\) contain the same maximal torus is
 essential for the validity of \SGARefLink{sga3:xxii:cor:5.3.5}{5.3.5} when \(G\) is not of type
 \textup{(RA)}. For example, consider the maximal tori of
 \(\operatorname{SL}_{2,k}\), where \(k\) has characteristic
-\(2\).
+\(2\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, explains
+this example. In our words: in characteristic \(2\) the Lie algebra of the
+diagonal torus of \(\operatorname{SL}_2\) consists of the matrices
+\(\operatorname{diag}(a,-a)=a\cdot1\); it is the line \(k\cdot1\), fixed by the
+adjoint action. Over an algebraically closed \(k\) all maximal tori are
+conjugate, so they all have the Lie algebra \(k\cdot1\), although they are
+distinct.}
 
 \SGARefTarget{sga3:xxii:cor:5.3.7}\paragraph{\SGARefLink{sga3:xxii:cor:5.3.7}{Corollary 5.3.7}.}
 \textit{Let \(S\) be a scheme, let \(G\) be an \(S\)-group of type
@@ -2523,8 +2504,8 @@ torus \(T\) and that \(H_0=H'_0\). But then \(H=H'\) by \SGARefLink{sga3:xxii:co
 closed group subscheme of \(G\), of finite presentation and smooth
 over \(S\).}
 
-Using now the reasoning employed in Exposé XI to deduce \SGARefLink{sga3:xi:corollary:5:4:bis}{5.4 bis}
-from \SGARefLink{sga3:xi:corollary:5:2:bis}{5.2 bis}, we obtain:
+Reasoning now as in Exposé XI, \SGARefLink{sga3:xi:corollary:5:2:bis}{5.2 bis}\(\Rightarrow\)\SGARefLink{sga3:xi:corollary:5:4:bis}{5.4 bis}, we
+obtain:
 
 \SGARefTarget{sga3:xxii:cor:5.3.11}\paragraph{\SGARefLink{sga3:xxii:cor:5.3.11}{Corollary 5.3.11}.}
 \textit{Under the hypotheses of \SGARefLink{sga3:xxii:thm:5.3.9}{5.3.9}, the following conditions are
@@ -2557,9 +2538,12 @@ equivalent:}
 We merely note that the nontrivial implication
 \textup{\SGARefLink{sga3:xxii:cor:5.3.11:item:iii}{(iii)}}\(\Rightarrow\)\textup{\SGARefLink{sga3:xxii:cor:5.3.11:item:i}{(i)}} is Hensel's lemma.
 
-Using now \textit{Bible}, \S6.4, Theorem 4
-\textup{(= [Ch05], \S6.5, Theorem 5)} and \S9.3,
-Theorem 1, we obtain from \SGARefLink{sga3:xxii:cor:5.3.10}{5.3.10} and \SGARefLink{sga3:xxii:cor:5.3.11}{5.3.11}:
+Using now \textit{Bible}, 6-09, Theorem 4, and 9-03,
+Theorem 1, we obtain from \SGARefLink{sga3:xxii:cor:5.3.10}{5.3.10} and \SGARefLink{sga3:xxii:cor:5.3.11}{5.3.11}:\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+also refers to the reprint of the Séminaire Chevalley (the \emph{Bible}):
+C.~Chevalley, \emph{Classification des groupes algébriques semi-simples},
+Collected Works, vol.~3, Springer, 2005, where the first theorem cited is
+\S6.5, Theorem~5.}
 
 \SGARefTarget{sga3:xxii:cor:5.3.12}\paragraph{\SGARefLink{sga3:xxii:cor:5.3.12}{Corollary 5.3.12}.}
 \textit{Let \(G\) be an \(S\)-group of type \textup{(RR)}. The
@@ -2574,7 +2558,7 @@ of \(G\) is a pair \(T\subset B\), where \(T\) is a maximal torus
 of \(G\) and \(B\) is a Borel subgroup of \(G\) containing \(T\).}
 
 Using now the conjugacy of maximal tori in \(B\)
-\textup{(cf.\ \SGARefLink{sga3:xxii:rem:5.1.2}{5.1.2} \textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:a}{(a)}} and \SGARefLink{sga3:xxii:prop:5.2.6}{5.2.6}, for example)}, we have:
+\textup{(\SGARefLink{sga3:xxii:rem:5.1.2}{5.1.2} \textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:a}{(a)}} and \SGARefLink{sga3:xxii:prop:5.2.6}{5.2.6}, for example)}, we have:
 
 \SGARefTarget{sga3:xxii:cor:5.3.14}\paragraph{\SGARefLink{sga3:xxii:cor:5.3.14}{Corollary 5.3.14}.}
 \textit{Let \(G\) be an \(S\)-group of type \textup{(RR)}. The
@@ -2610,14 +2594,8 @@ cf.\ \SGARefLink{sga3:xiv:4.4}{Exposé XIV, 4.4}.
 \(W_H(T)\) and \(W_N(T)\) be the corresponding Weyl groups
 \textup{(étale, quasi-finite, and separated by \SGARefLink{sga3:xix:proposition:6:3}{Exposé XIX, 6.3})}.
 There is the following exact sequence of sheaves \textup{(for the
-étale topology)}, whose morphisms are induced by}
-\[
-  \underline{\operatorname{Norm}}_H(T)
-  \longrightarrow
-  \underline{\operatorname{Norm}}_N(T)
-  \longrightarrow
-  N/H:
-\]
+étale topology)}, the morphisms being induced by the obvious
+morphisms:}
 \[
   1
   \longrightarrow W_H(T)
@@ -2668,7 +2646,7 @@ and every maximal torus \(T\) of \(G_{S'}\), the étale
   \underline{\operatorname{Norm}}_{G_{S'}}(T)/
   \underline{\operatorname{Centr}}_{G_{S'}}(T)
 \]
-\textit{is finite \textup{(cf.\ \SGARefLink{sga3:xix:proposition:6:3}{Exposé XIX, 6.3} \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:iii}{(iii)}})}.
+\textit{is finite \textup{(cf.\ \SGARefLink{sga3:xix:proposition:6:3}{Exposé XIX, 6.3} \textup{(iii)})}.
 Then the following conditions are equivalent:}
 \begin{enumerate}
   \item[\textup{\SGAInlineRefTarget{sga3:xxii:cor:5.3.18:item:i}(i)}] \textit{\(H\) is closed in \(G\);}
@@ -2681,14 +2659,15 @@ Then the following conditions are equivalent:}
   \textit{``the Weyl groups of \(H\) are finite''.}
 \end{enumerate}
 
-Indeed, we may suppose that \(H\) has a maximal torus \(T\). By
-\SGARefLink{sga3:xxii:cor:5.3.10}{5.3.10}, \(N=\underline{\operatorname{Norm}}_G(H)\) is closed in
-\(G\); therefore \(W_N(T)\) is closed in \(W_G(T)\), and hence is
-finite over \(S\). Clearly \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:i}{(i)}} implies \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:iii}{(iii)}}, and
+Indeed, we may suppose that \(H\) has a maximal torus \(T\). As
+\(W_N(T)\) is closed in \(W_G(T)\), \(W_N(T)\) is finite over \(S\).
+Clearly \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:i}{(i)}} implies \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:iii}{(iii)}},
 \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:iii}{(iii)}} implies \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:ii}{(ii)}} by the exact sequence of
-\SGARefLink{sga3:xxii:prop:5.3.16}{5.3.16}. Finally, \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:ii}{(ii)}} implies \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:i}{(i)}}, since if
-\(N/H\) is finite, it is separated, so \(H\) is closed in \(N\),
-and hence in \(G\).
+\SGARefLink{sga3:xxii:prop:5.3.16}{5.3.16}, and \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:ii}{(ii)}} implies \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:i}{(i)}}, since if
+\(N/H\) is finite, it is separated, so \(H\) is closed in \(N\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+adds the reasons left implicit: \(N=\underline{\operatorname{Norm}}_G(H)\) is
+closed in \(G\) by \SGARefLink{sga3:xxii:cor:5.3.10}{5.3.10}, so that \(W_N(T)\) is closed in \(W_G(T)\), and
+\(H\), being closed in \(N\), is closed in \(G\).}
 
 \SGARefTarget{sga3:xxii:rem:5.3.19}\paragraph{\SGARefLink{sga3:xxii:rem:5.3.19}{Remark 5.3.19}.}
 When \(G\) is reductive, the preceding conditions on \(H\) seem
@@ -2783,7 +2762,7 @@ therefore induces an immersion
 \(R''\) be two subsets of \(R\) of type \textup{(R)}.}
 \begin{enumerate}
   \item[\textup{\SGAInlineRefTarget{sga3:xxii:prop:5.4.5:item:i}(i)}]
-  \textit{\(H_{R'}\cap H_{R''}\) is smooth at every point of the
+  \textit{\(H_{R'}\cap H_{R''}\) is smooth along the
   unit section, \(R'\cap R''\) is of type \textup{(R)}, and}
   \[
     \bigl(H_{R'}\cap H_{R''}\bigr)^0
@@ -2802,11 +2781,13 @@ therefore induces an immersion
 
 Indeed, \textup{\SGARefLink{sga3:xxii:prop:5.4.5:item:ii}{(ii)}} follows immediately from \textup{\SGARefLink{sga3:xxii:prop:5.4.5:item:i}{(i)}}. To
 prove \textup{\SGARefLink{sga3:xxii:prop:5.4.5:item:i}{(i)}}, it suffices to prove that
-\(H_{R'}\cap H_{R''}\) is smooth at every point of the unit section:
-its neutral component \textup{(cf.\ Exposé
-VI\textsubscript{B}, \SGARefLink{thm:sga3-VIB-3.10}{3.10})} will then be a subgroup of type
+\(H_{R'}\cap H_{R''}\) is smooth along the unit section:
+its neutral component will then be a subgroup of type
 \textup{(R)} containing \(T\), and hence equal to
-\(H_{R'\cap R''}\). But
+\(H_{R'\cap R''}\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, refers
+here to \SGARefLink{thm:sga3-VIB-3.10}{Exposé VI\textsubscript{B}, 3.10}, by which the neutral component of an
+\(S\)-group of finite presentation that is smooth along the unit section is
+represented by an open subgroup, smooth over \(S\).} But
 \[
   \Omega_{R_+,R'}\cap\Omega_{R_+,R''}
   =
@@ -2828,7 +2809,7 @@ the assertion then follows immediately from \SGARefLink{sga3:xxii:prop:5.4.5}{5.
 We are thus led to ask which subsets \(R'\) of \(R\) are of type
 \textup{(R)}. We may suppose that the group is adjoint; one must
 then verify that \(\mathfrak g_{R'}\) is a Lie algebra and that its
-normalizer is smooth at every point of the unit section. The most
+normalizer is smooth along the unit section. The most
 important case is given by the following theorem.
 
 \SGARefTarget{sga3:xxii:thm:5.4.7}\paragraph{\SGARefLink{sga3:xxii:thm:5.4.7}{Theorem 5.4.7}.}
@@ -2845,8 +2826,16 @@ is said to be \emph{closed} if
 
 \SGARefTarget{sga3:xxii:rem:5.4.8}\paragraph{\SGARefLink{sga3:xxii:rem:5.4.8}{Remark 5.4.8}.}
 We shall see later \textup{(\SGARefLink{sga3:XXIII:6.6}{Exposé XXIII, 6.6})} that, if
-\(6\cdot1_S\ne0\)---for example, if \(S\) has residue characteristics
-different from \(2\) and \(3\)---the fact that
+\(S\) has a residue characteristic different from \(2\) and \(3\)
+\textup{(i.e.\ if \(6\) is not zero on \(S\))},\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+observes that it suffices that \(2\) and \(3\) be nonzero on \(S\). In our
+words: if \(\alpha,\beta\in R'\) and \(\alpha+\beta\in R\), then
+\([X_\alpha,X_\beta]=N_{\alpha,\beta}X_{\alpha+\beta}\) (5.4.10), where
+\(N_{\alpha,\beta}\) is, up to a unit, one of \(\pm1\), \(\pm2\), \(\pm3\); if
+\(\mathfrak g_{R'}\) is a Lie algebra and \(\alpha+\beta\notin R'\), then
+\(N_{\alpha,\beta}=0\) on \(S\), which is excluded as soon as
+\(2\cdot1_S\ne0\) and \(3\cdot1_S\ne0\). (On \(S=\operatorname{Spec}(\mathbb
+F_2\times\mathbb F_3)\) these hold while \(6\cdot1_S=0\).)} the fact that
 \(\mathfrak g_{R'}\) is a Lie algebra already implies that \(R'\)
 is closed. In that case a subset \(R'\) is of type \textup{(R)} if
 and only if it is closed. Thus \SGARefLink{sga3:xxii:thm:5.4.7}{Theorem 5.4.7} gives all the subsets
@@ -2933,7 +2922,7 @@ Differentiating the preceding formula at \(x=0\), we find
 Let us now prove \SGARefLink{sga3:xxii:thm:5.4.7}{5.4.7}. If \(R'\) is a closed subset of \(R\), then
 \(\mathfrak g_{R'}\) is a Lie subalgebra of \(\mathfrak g\), by
 \SGARefLink{sga3:xxii:rem:5.4.10}{5.4.10} and \SGARefLink{sga3:xx:2.10}{Exposé XX, 2.10}, formula \textup{(3)}. By \SGARefLink{sga3:xxii:lem:5.4.9}{5.4.9} and
-\SGARefLink{sga3:xx:2.10}{Exposé XX, 2.10}, formula \textup{\SGARefLink{sga3:xxii:section:2}{(2)}}, \(U_\alpha\) normalizes
+\SGARefLink{sga3:xx:2.10}{Exposé XX, 2.10}, formula \textup{(2)}, \(U_\alpha\) normalizes
 \(\mathfrak g_{R'}\) for every \(\alpha\in R'\). Choose a system of
 positive roots \(R_+\), and consider the open subset
 \(\Omega_{R_+}\) of \SGARefLink{sga3:xxii:prop:4.1.2}{4.1.2}. Let \(\Omega_{R_+,R'}\) be the closed
@@ -2957,11 +2946,18 @@ The canonical immersion \(\Omega_{R_+,R'}\to G\) factors through
 \]
 Suppose that \(G\) is adjoint. The tangent map of \(i\) at the
 points of the unit section is bijective by \SGARefLink{sga3:xxii:lemma:5.3.2}{5.3.2}. In particular,
-\(i\) is étale at every point of the unit section, and hence is a
-local immersion at every point of the unit section.
-Therefore
+the morphism \(i\) is smooth along the unit section \textup{(Exposé VI)},
+hence is a local immersion along the unit section; therefore
 \(\underline{\operatorname{Norm}}_G(\mathfrak g_{R'})\) is smooth
-at every point of the unit section, as was to be proved.
+along the unit section, which was to be proved.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+writes ``étale'' for ``smooth'' here and gives the precise reason: as
+\(\Omega_{R_+,R'}\) is smooth over \(S\) and the tangent map of \(i\) is bijective
+at the points of the unit section, EGA~IV\textsubscript{4}, 17.11.2 shows that
+\(i\) is étale at these points and that
+\(\underline{\operatorname{Norm}}_G(\mathfrak g_{R'})\) is smooth over \(S\)
+there; moreover, \(i\) being a monomorphism, its restriction to the largest
+open subset of \(\Omega_{R_+,R'}\) on which it is étale is an open immersion
+(EGA~IV\textsubscript{4}, 17.9.1).}
 
 \SGARefTarget{sga3:xxii:section:5.5}
 \subsection*{\SGAInlineRefTarget{sga3:xxii:subsection:5-5}5.5. Borel Subgroups of a Split Reductive Group}
@@ -2986,7 +2982,7 @@ By the definition of Borel subgroups, the first assertion may be
 verified after replacing \(S\) by the spectrum of an algebraically
 closed field. Let \(B\) be the Borel subgroup of \(G\) containing
 \(T\) and corresponding to the system of positive roots \(R_+\)
-\textup{(\emph{Bible}, \S10.4, Proposition 9)}. The Lie algebra of
+\textup{(\emph{Bible}, 10-11, Proposition 9)}. The Lie algebra of
 \(B\) is \(\mathfrak g_{R_+}\); therefore \(B=H_{R_+}\) by \SGARefLink{sga3:xxii:cor:5.3.5}{5.3.5}.
 
 For the second assertion, the morphism in the statement induces an
@@ -2998,7 +2994,7 @@ open immersion
   \longrightarrow H_{R_+}
 \]
 by \SGARefLink{sga3:xxii:lem:5.4.4}{5.4.4}. But \(i\) is surjective
-\textup{(\emph{Bible}, \S15.1, Corollary 1 to Proposition 1)}.
+\textup{(\emph{Bible}, 15-03, Corollary 1 to Proposition 1)}.
 
 \SGARefTarget{sga3:xxii:cor:5.5.2}\paragraph{\SGARefLink{sga3:xxii:cor:5.5.2}{Corollary 5.5.2}.}
 \textit{Choose an arbitrary ordering on \(R_+\), and for each
@@ -3095,11 +3091,11 @@ with \SGARefLink{sga3:xxii:lem:5.4.9}{5.4.9}, one finds
 \SGARefTarget{sga3:xxii:cor:5.5.4}\paragraph{\SGARefLink{sga3:xxii:cor:5.5.4}{Corollary 5.5.4}.}
 \textit{Let \(S\) be a scheme, let \(G\) be a reductive
 \(S\)-group, let \(T\) be a maximal torus of \(G\), and let
-\(\alpha\ne\beta\) be two roots of \(G\) relative to \(T\) such
+\(\alpha\) and \(\beta\) be two roots of \(G\) relative to \(T\) such
 that \(\alpha+\beta\) is nontrivial on every fiber. Order
-arbitrarily the set of roots \(i\alpha+j\beta\), where
+arbitrarily the set of the \(i\alpha+j\beta\), where
 \((i,j)\in\mathbb N^*\times\mathbb N^*\). For all
-\(i,j\in\mathbb N^*\) such that \(i\alpha+j\beta\in R\), there is
+\(i,j\in\mathbb N^*\), there is
 a unique morphism of \(\mathcal O_S\)-modules}
 \[
   f_{\alpha,\beta,i,j}:
@@ -3113,7 +3109,9 @@ a unique morphism of \(\mathcal O_S\)-modules}
 \(X\in\mathbf W(\mathfrak g^\alpha)(S')\),
 \(Y\in\mathbf W(\mathfrak g^\beta)(S')\), one has
 \textup{(the exponentials in the right-hand side being understood
-in the sense of \SGARefLink{sga3:xxii:rem:1.2}{1.2})}}
+in the sense of \SGARefLink{sga3:xxii:rem:1.2}{1.2})}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+spells this out. In our words: where \(\mathfrak g^{i\alpha+j\beta}=0\), on an open
+and closed part of \(S\), the corresponding factor is the unit element.}}
 \[
   \exp_\alpha(X)\exp_\beta(Y)\exp_\alpha(-X)
   =
@@ -3124,7 +3122,7 @@ in the sense of \SGARefLink{sga3:xxii:rem:1.2}{1.2})}}
       Y^{\otimes j})\bigr).
 \]
 
-The assertion is local for the fpqc topology. By \S2 we may
+The assertion is local for the fpqc topology. We may
 therefore suppose that \(G\) is split relative to \(T\), with
 \(\alpha\) and \(\beta\) constant in the splitting. Since
 \(\alpha+\beta\ne0\), there is a system of positive roots \(R_+\)
@@ -3162,7 +3160,7 @@ Indeed, \textup{\SGARefLink{sga3:xxii:cor:5.5.5:item:i}{(i)}} follows from \SGAR
 \textit{Choose on the group \(\Gamma_0(R)\) generated by the
 roots a totally ordered group structure such that the roots
 \(>0\) are the elements of \(R_+\)
-\textup{(cf. \SGARefLink{sga3:XXI:3.5.6}{Exposé XXI, 3.5.6})}
+\textup{(\SGARefLink{sga3:XXI:3.5.6}{Exposé XXI, 3.5.6})}.
 Let \(\alpha_1<\cdots<\alpha_N\) be the elements of \(R_+\).
 Consider the isomorphism}
 \[
@@ -3476,7 +3474,7 @@ conditions are equivalent:}
 \item[\textup{\SGAInlineRefTarget{sga3:xxii:prop:5.6.1:item:ii}(ii)}]
 \textit{There exists a system of positive roots \(R_+\) such that
 \(R'\subset R_+\), and hence \(H_{R'}\subset B_{R_+}\)
-\textup{(cf.\ \SGARefLink{sga3:xxii:prop:5.4.5}{5.4.5})}.}
+\textup{(\SGARefLink{sga3:xxii:prop:5.4.5}{5.4.5})}.}
 
 \item[\textup{\SGAInlineRefTarget{sga3:xxii:prop:5.6.1:item:iii}(iii)}]
 \textit{\(R'\cap(-R')=\varnothing\).}
@@ -3516,7 +3514,7 @@ scheme.
 
 Clearly \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:ii}{(ii)}} implies \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:iii}{(iii)}}, and \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:vi}{(vi)}}
 implies \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:v}{(v)}} \textup{(take \(R''=\varnothing\))}. By \SGARefLink{sga3:xxii:cor:5.4.6}{5.4.6},
-it is enough to verify that \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:i}{(i)}} implies \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:ii}{(ii)}} on
+the implication \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:i}{(i)}}\(\Rightarrow\)\textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:ii}{(ii)}} is to be verified on
 the geometric fibers. If \(S\) is the spectrum of an algebraically
 closed field, then \(H_{R'}\) is contained in a Borel subgroup
 containing \(T\), and this subgroup is therefore of the form
@@ -3529,7 +3527,7 @@ of \(T\), of codimension \(1\) in \(T\), such that
 \[
   \underline{\operatorname{Centr}}_{H_{R'}}(Q)
 \]
-is not solvable \textup{(\emph{Bible}, \S10.4, Proposition 8)}.
+is not solvable \textup{(\emph{Bible}, 10-09, Proposition 8)}.
 But \(\underline{\operatorname{Centr}}_{H_{R'}}(Q)\) has Lie algebra
 \(\mathfrak g_{R''}\), where \(R''\) is the set of roots in \(R'\)
 which vanish on \(Q\). Thus, by \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:iii}{(iii)}},
@@ -3544,19 +3542,20 @@ is therefore solvable, contrary to the hypothesis.
 Likewise, the implication from \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:ii}{(ii)}} to \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:iv}{(iv)}} may be
 checked on the geometric fibers \textup{(since the schemes in
 question are flat \(S\)-schemes of finite presentation)}. By
-\emph{Bible}, \S13.2, Theorem 1\textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:d}{(d)}}, the morphism in question
+\emph{Bible}, 13-05, Theorem 1~d), the morphism in question
 is bijective. It induces an isomorphism on the tangent spaces at the
 origin, and the conclusion follows as usual \textup{(cf.\ \SGARefLink{sga3:xxii:par:4.1.1}{4.1.1})}.
 
 The implication from \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:iv}{(iv)}} to \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:v}{(v)}} follows from
 \SGARefLink{sga3:xxii:lem:4.2.7}{4.2.7}. To prove that \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:v}{(v)}} implies \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:i}{(i)}}, we may again
 reduce to the case in which \(S\) is the spectrum of an algebraically
-closed field; the conclusion then follows from \emph{Bible}, \S10.3,
-the corollary to \SGARefLink{sga3:xxii:section:6}{Proposition 6}, and \S9.3, Corollary 3 to Theorem 1.
+closed field; the conclusion then follows from \emph{Bible}, 10-08,
+corollary to Proposition 6, and 9-05, Corollary 3 to Theorem 1.
 
 It remains only to prove the implication from \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:ii}{(ii)}} to
 \textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:vi}{(vi)}}. We may reduce to the case in which \(G\) is adjoint.
-Then, by \SGARefLink{sga3:xxii:cor:5.3.3}{5.3.3},
+Then, by \SGARefLink{sga3:xxii:cor:5.3.3}{5.3.3},\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, notes that
+the inclusion below holds because \(\mathfrak t\subset\mathfrak g_{R''}\).}
 \[
   \underline{\operatorname{Norm}}_G(H_{R''})
   =
@@ -3564,7 +3563,6 @@ Then, by \SGARefLink{sga3:xxii:cor:5.3.3}{5.3.3},
   \subset
   \underline{\operatorname{Transp}}_G
     (\mathfrak t,\mathfrak g_{R''}).
-  \tag{39}\label{sga3:xxii:subsection:5-6:equation:39}
 \]
 By \SGARefLink{sga3:xxii:prop:5.4.5}{5.4.5}, it is enough to prove
 \[
@@ -3583,24 +3581,18 @@ We first prove a lemma.
 \[
   u=\exp(x_1X_1)\cdots\exp(x_NX_N),
 \]
-\textit{where \(x_i\in\mathbb G_a(S)\). Let \(m\), with
-\(1\leq m\leq N\), be such that \(x_i=0\) for \(i<m\).}
-\begin{enumerate}
-\item[\textup{\SGAInlineRefTarget{sga3:xxii:lem:5.6.2:item:a}(a)}]
-\textit{If \(H\in\Gamma(S,\mathfrak t)\), the component of
+\textit{where \(x_i\in\mathbb G_a(S)\). Let \(m\) be an integer,
+\(1\leq m\leq N\), such that \(x_i=0\) for \(i<m\).
+\SGAInlineRefTarget{sga3:xxii:lem:5.6.2:item:a}If \(H\in\Gamma(S,\mathfrak t)\), the component of
 \(\operatorname{Ad}(u)H\) in \(\mathfrak g^{\alpha_m}\) is}
 \[
   -\overline{\alpha_m}(H)x_mX_m.
 \]
-
-\item[\textup{(b)}]
 \textit{If \(Y\in\Gamma(S,\mathfrak g^{-\alpha_m})\), the component
-of \(\operatorname{Ad}(u)Y\) in \(\mathfrak t\) is, with the notation
-of \SGARefLink{sga3:xx:2.6}{Exposé XX, 2.6},}
+of \(\operatorname{Ad}(u)Y\) in \(\mathfrak t\) is}
 \[
-  x_m\langle X_m,Y\rangle H_{\alpha_m}.
+  x_m(X_mY)H_{\alpha_m}.
 \]
-\end{enumerate}
 
 \textit{Proof.}
 Set
@@ -3625,11 +3617,9 @@ It follows immediately that, modulo \(\mathfrak u\),
 \[
   \operatorname{Ad}(u)H
   =
-  \operatorname{Ad}\bigl(\exp(x_mX_m)\bigr)H
-  =
-  H-\overline{\alpha_m}(H)x_mX_m,
+  \operatorname{Ad}\bigl(\exp(x_mX_m)\bigr)H,
 \]
-which proves the first assertion.
+which implies the first assertion.
 
 Likewise, set
 \[
@@ -3655,9 +3645,18 @@ Applying \SGARefLink{sga3:xx:2.10}{Exposé XX, 2.10}, one therefore obtains, mod
 \[
   \operatorname{Ad}(u)Y-Y
   \equiv
-  x_m\langle X_m,Y\rangle H_{\alpha_m},
+  x_m(X_mY)H_{\alpha_m},
 \]
-which proves the second assertion.
+which proves the second assertion.\footnote{Translator's note: here the
+1970 text sets \(\mathfrak u=\mathfrak g^{\alpha_1}+\cdots+\mathfrak g^{\alpha_m}\)
+and asserts that \(\operatorname{Ad}(u)Y-Y\in\mathfrak u\), then
+\(\operatorname{Ad}(u)Y-Y-x_m(X_mY)H_{\alpha_m}\in\mathfrak u\); the first
+claim is false, since \(\operatorname{Ad}(u)Y-Y\) has the component
+\(x_m(X_mY)H_{\alpha_m}\) in \(\mathfrak t\). The argument above, with
+\(\mathfrak n=\mathfrak g^{\alpha_1}+\cdots+\mathfrak g^{\alpha_N}\) and the
+factor \(u_1\), is the correction of the Gille--Polo re-edition (2011),
+Exposé~XXII; it is checked: for \(i>m\) the roots \(k\alpha_i-\alpha_m\),
+\(k\geq1\), are positive.}
 
 Let us return to the proof of inclusion \textup{\SGARefLink{sga3:xxii:subsection:5-6:equation:x}{(x)}}. Suppose that
 there exists
@@ -3688,23 +3687,13 @@ Then
 \[
   h'=\exp(x_mX_m)\cdots\exp(x_NX_N)
 \]
-still satisfies the conditions imposed above on \(h\). By \SGARefLink{sga3:xxii:lem:5.6.2}{Lemma
-5.6.2}, for every \(H\in\Gamma(S,\mathfrak t)\), the component of
-\(\operatorname{Ad}(h')H\) in \(\mathfrak g^{\alpha_m}\) is
-\[
-  -\overline{\alpha_m}(H)x_mX_m.
-\]
-\footnote{Translator's note: In this sentence the French source prints
-\(\overline{\alpha_m}(X)\); \SGARefLink{sga3:xxii:lem:5.6.2}{Lemma 5.6.2}\textup{\SGARefLink{sga3:xxii:lem:5.6.2:item:a}{(a)}} and the following
-sentence require \(H\).}
-It therefore follows from the hypothesis on \(h\) and from the
-definition of \(m\) that
-\[
-  \overline{\alpha_m}(H)=0
-  \qquad\text{for every }H\in\Gamma(S,\mathfrak t).
-\]
-This is impossible, since \(G\) is adjoint and
-\(\overline{\alpha_m}\) is nonzero on every fiber.
+still satisfies the conditions imposed above on \(h\). But by \SGARefLink{sga3:xxii:lem:5.6.2}{5.6.2},
+the component of \(\operatorname{Ad}(h')H\) in \(\mathfrak g^{\alpha_m}\) is
+\(-\overline{\alpha_m}(H)x_mX_m\) if \(H\in\Gamma(S,\mathfrak t)\). By
+the hypothesis on \(h\) and on \(m\), one therefore has
+\(\overline{\alpha_m}(H)=0\), which is impossible \textup{(since \(G\) is
+assumed adjoint, so that \(\overline{\alpha_m}\) is nonzero on every
+fiber)}.
 
 \SGARefTarget{sga3:xxii:rem:5.6.2bis}
 \SGAInlineRefTarget{sga3:xxii:remark:5-6-2-bis}\paragraph{\SGARefLink{sga3:xxii:remark:5-6-2-bis}{Remark 5.6.2 bis}.}
@@ -3730,8 +3719,14 @@ solvable. Then \(H\) is closed in \(G\), and
 \[
   \underline{\operatorname{Norm}}_G(H)/H
 \]
-is represented by a separated finite étale \(S\)-scheme. This
-follows from \SGARefLink{sga3:xxii:cor:5.3.18}{5.3.18} and either \SGARefLink{sga3:xxii:rem:3.5}{3.5} or \SGARefLink{sga3:xix:theorem:2:5}{Exposé XIX, 2.5}\textup{\SGARefLink{sga3:xix:theorem:2:5:item:ii}{(ii)}}.
+is represented by a separated finite étale \(S\)-scheme.
+
+Trivial by \SGARefLink{sga3:xxii:cor:5.3.18}{5.3.18}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+spells this out. In our words: 5.3.18 applies because the Weyl groups of the
+reductive group \(G\) are finite (\SGARefLink{sga3:xxii:rem:3.5}{3.5}, or \SGARefLink{sga3:xix:theorem:2:5}{Exposé XIX, 2.5}~(ii)), and its
+condition (iii) holds because the Weyl groups of \(H\) are trivial: in a
+connected solvable algebraic group the normalizer of a maximal torus is its
+centralizer.}
 
 \SGARefTarget{sga3:xxii:cor:5.6.4}
 \paragraph{\SGARefLink{sga3:xxii:cor:5.6.4}{Corollary 5.6.4}.}
@@ -3739,9 +3734,12 @@ follows from \SGARefLink{sga3:xxii:cor:5.3.18}{5.3.18} and either \SGARefLink{sg
 \(R'\subset R\) is closed and \(R'\cap(-R')=\varnothing\), then
 \(R'\) is contained in a system of positive roots.}
 
-\textit{Proof.}
-By \SGARefLink{sga3:xxii:thm:5.4.7}{5.4.7}, \(R'\) is of type \textup{(R)}, so the result follows from
-\SGARefLink{sga3:xxii:prop:5.6.1}{Proposition 5.6.1}.
+Indeed, \(R'\) is of type \textup{(R)} by \SGARefLink{sga3:xxii:thm:5.4.7}{5.4.7}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+observes that 5.6.4 is a statement about root systems, complementing Exposé
+XXI, and proved here by way of group schemes; for a direct proof see
+N.~Bourbaki, \emph{Groupes et algèbres de Lie}, chap.~VI, Hermann, 1968,
+\S1, no.~7, Proposition~22. The conclusion follows from (iii)\(\Rightarrow\)(ii)
+of 5.6.1.}
 
 \SGARefTarget{sga3:xxii:cor:5.6.5}
 \paragraph{\SGARefLink{sga3:xxii:cor:5.6.5}{Corollary 5.6.5}.}
@@ -3793,28 +3791,40 @@ with \(R'\cap(-R')=\varnothing\).}
 \textit{Suppose that \(R'\) is closed. If the conditions
 \(\alpha\in R'\), \(\beta\in R''\), and
 \(\alpha+\beta\in R\) imply that \(\alpha+\beta\in R'\), then
-\(H_{R''}\) normalizes \(U_{R'}\).}
+\(H_{R''}\) normalizes \(U_{R'}\).}\footnote{Translator's note: as printed (in
+1970 and in the Gille--Polo re-edition), \textup{(ii)} also needs that
+\(-\beta\notin R'\) for \(\beta\in R''\): the proof applies 5.5.2, which
+requires \(\alpha+\beta\neq0\). Without this condition \textup{(ii)} is false:
+for \(G=\mathrm{SL}_2\), \(R'=\{\alpha\}\) and \(R''=\{\alpha,-\alpha\}\), all
+the hypotheses hold, but \(H_{R''}=G\) does not normalize \(U_\alpha\). The
+uses of \textup{(ii)} in this Exposé (5.6.8~(i) and 5.11.3~(i)) satisfy the
+extra condition.}
 \end{enumerate}
 
 \textit{Proof.}
 Assertion \textup{\SGARefLink{sga3:xxii:cor:5.6.7:item:i}{(i)}} follows at once from \SGARefLink{sga3:xxii:cor:5.6.5}{5.6.5} and
 \SGARefLink{sga3:xxii:prop:5.6.1}{5.6.1}\textup{\SGARefLink{sga3:xxii:prop:5.6.1:item:vi}{(vi)}}. To prove \textup{\SGARefLink{sga3:xxii:cor:5.6.7:item:ii}{(ii)}}, it is enough, by \SGARefLink{sga3:xxii:lem:5.4.4}{5.4.4},
 to show that \(T\) and each \(U_\beta\), for \(\beta\in R''\),
-normalize \(U_{R'}\).\footnote{Editor's note: Indeed, since \(G\)
-has connected fibers, it is separated over \(S\) by Exposé
-VI\textsubscript{B}, \SGARefLink{cor:sga3-VIB-5.5}{5.5}; hence, by \SGARefLink{sga3:xi:corollary:6:11}{Exposé XI, 6.11} \textup{(see
-also Addendum \SGARefLink{cor:sga3-VIB-6.5.5}{6.5.5} in Exposé VI\textsubscript{B})},
-\(\underline{\operatorname{Norm}}_G(U_{R'})\) is represented by a
-closed subgroup scheme \(N\) of \(G\). If \(N\) contains \(T\) and
-the \(U_\beta\), for \(\beta\in R''\), it contains the big cell
-\(\Omega_{R_+,R''}\). This cell is schematically dense in
-\(H_{R''}\) by 5.4.4 and EGA IV\textsubscript{3}, 11.10.10
-\textup{(the fibers of \(H_{R''}\) are integral, and
-\(\Omega_{R_+,R''}\) contains a nonempty open subset of every
-fiber)}. It follows that \(H_{R''}\subset N\), and therefore that
-\(H_{R''}\) normalizes \(U_{R'}\).}
+normalize \(U_{R'}\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+justifies this reduction. In our words: \(G\) is separated over \(S\) (it has
+connected fibers, Exposé VI\textsubscript{B}, 5.5), so
+\(\underline{\operatorname{Norm}}_G(U_{R'})\) is represented by a closed
+subgroup scheme \(N\) of \(G\) (\SGARefLink{sga3:xi:corollary:6:11}{Exposé XI, 6.11}). If \(N\) contains \(T\) and
+the \(U_\beta\), \(\beta\in R''\), it contains the open subscheme
+\(\Omega_{R_+,R''}\) of \(H_{R''}\) (5.4.4); this meets every fiber of
+\(H_{R''}\), which is integral, in a nonempty open subset, so it is
+schematically dense in \(H_{R''}\) relative to \(S\) (cf.\
+EGA~IV\textsubscript{3}, 11.10.10), and \(H_{R''}\subset N\).}
 For \(T\) this is trivial; for \(U_\beta\) it follows from \SGARefLink{sga3:xxii:cor:5.5.2}{5.5.2} and
-\SGARefLink{sga3:XXI:3.1.2}{Exposé XXI, 3.1.2}.
+\SGARefLink{sga3:XXI:2.3.5}{Exposé XXI, 2.3.5}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+cites \SGARefLink{sga3:XXI:3.1.2}{Exposé XXI, 3.1.2} instead. What is needed is that every root
+\(i\alpha+j\beta\) (\(\alpha\in R'\), \(\beta\in R''\), \(i,j\geq1\)) lies in
+\(R'\). In our words: by XXI, 3.1.2, such a root is reached from \(\alpha\) or
+\(\beta\) by adding \(\alpha\) or \(\beta\) one at a time, every partial sum
+being a root; the first partial sum containing \(\alpha\) is \(\alpha\) or
+\(\alpha+\beta\), hence lies in \(R'\), and each later step stays in \(R'\),
+because \(R'\) is closed and by the hypothesis of (ii). With XXI, 2.3.5 the
+same follows by inspection of the root systems of rank~2.}
 
 \SGARefTarget{sga3:xxii:cor:5.6.8}
 \paragraph{\SGARefLink{sga3:xxii:cor:5.6.8}{Corollary 5.6.8}.}
@@ -3856,23 +3866,14 @@ system of positive roots, and let \(\alpha\) be a simple root of
   U_\alpha\cdot U_{\widehat\alpha}.
 \]
 
-\textit{Proof.}
-Assertion \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:ii}{(ii)}} follows from \SGARefLink{sga3:xxii:cor:5.6.5}{5.6.5}, and \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:i}{(i)}} from
-\SGARefLink{sga3:xxii:cor:5.6.7}{5.6.7}\textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:ii}{(ii)}}. Likewise, \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:iii}{(iii)}} follows from \SGARefLink{sga3:xxii:cor:5.5.2}{5.5.2}:
-indeed, if \(\beta\in R_+\), with \(\beta\neq\alpha\), no
-combination
-\[
-  i(-\alpha)+j\beta,
-  \qquad i,j>0,
-\]
-can be negative, since \(\beta\) contains at least one simple root
-different from \(\alpha\). Assertion \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:iv}{(iv)}} then follows from
-\textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:i}{(i)}} and \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:iii}{(iii)}}, because
-\[
-  U_{-\alpha}\cdot T\cdot U_\alpha
-\]
-is schematically dense in \(Z_\alpha\). Finally, the last assertion
-follows from \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:ii}{(ii)}} and its analogue for \(U_{R_-}\).
+Indeed, \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:i}{(i)}} is trivial by \SGARefLink{sga3:xxii:cor:5.6.7}{5.6.7}\textup{\SGARefLink{sga3:xxii:cor:5.6.7:item:ii}{(ii)}},
+\textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:ii}{(ii)}} is evident by \SGARefLink{sga3:xxii:cor:5.6.5}{5.6.5}, \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:iii}{(iii)}} follows from \SGARefLink{sga3:xxii:cor:5.5.2}{5.5.2}
+\textup{[indeed, if \(\beta\in R_+\), \(\beta\neq\alpha\), no combination
+\(i(-\alpha)+j\beta\) with \(i,j>0\) can be negative, since \(\beta\)
+contains at least one simple root \(\neq\alpha\)]}, and
+\textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:iv}{(iv)}} follows at once from \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:i}{(i)}} and \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:iii}{(iii)}}, since
+\(U_{-\alpha}\cdot T\cdot U_\alpha\) is schematically dense in
+\(Z_\alpha\). The last assertion is trivial by \textup{\SGARefLink{sga3:xxii:cor:5.6.8:item:ii}{(ii)}}.
 
 Let us return to the general situation.
 
@@ -3997,17 +3998,16 @@ over \(S\): for every \(s\in S\), the group
 \[
   U(\overline s)\cap T(\overline s)
 \]
-consists of elements that are both unipotent and semisimple. This
-proves the lemma.
+consists of elements that are both unipotent and semisimple.
 
-We return to the proof of \SGARefLink{sga3:xxii:prop:5.6.9}{5.6.9}\textup{\SGARefLink{sga3:xxii:prop:5.6.9:item:ii}{(ii)}}. If \(U\) is a normal
+If \(U\) is a normal
 subgroup of \(H\) as above, then the semidirect product \(T\cdot U\)
 is a subgroup of \(G\) of type \textup{(R)}, with solvable
 geometric fibers. We may therefore suppose it to be of the form
 \(H_{R''}\), with \(R''\subset R'\). It is enough to prove that
 \(U=U_{R''}\), and we are thus reduced to the case
-\(H=T\cdot U\). Since \(H/U\) is commutative, the French text says
-that \(U\) is a subsheaf of the sheaf of commutators of \(H\),
+\(H=T\cdot U\); but since the quotient \(H/U\) is commutative,
+\(U\) is a subsheaf of the sheaf of commutators of \(H\),
 which is \(H^u\).\footnote{Translator's note: The implication in the
 French is stated in the wrong direction: commutativity of \(H/U\)
 gives \(H^u\subset U\). The desired inclusion follows because
@@ -4026,11 +4026,16 @@ Let us note that we have in fact just proved:
   \qquad
   U\longmapsto T\cdot U
 \]
-\textit{are mutually inverse bijections between the set of subgroups
+\textit{are mutually inverse isomorphisms between the set of subgroups
 \(H\) of \(G\) of type \textup{(R)}, containing \(T\), and having
-solvable geometric fibers, and the set of subgroups \(U\) of \(G\),
-smooth over \(S\), normalized by \(T\), and having connected
-unipotent geometric fibers.}
+solvable geometric fibers, and the set of closed \textup{(or
+retrocompact)} subgroups \(U\) of \(G\), smooth over \(S\), normalized
+by \(T\), and having connected unipotent geometric fibers.}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+omits ``closed (or retrocompact)'', which is automatic. In our words: for such
+a \(U\), \(U\cap T=e\) by \SGARefLink{sga3:xxii:lem:5.6.10}{5.6.10}, so \(T\cdot U\) is a subgroup of type \textup{(R)}
+with solvable geometric fibers, hence closed in \(G\) by \SGARefLink{sga3:xxii:rem:5.6.3}{5.6.3}; and \(U\),
+the kernel of the projection \(T\cdot U\to T\), is closed in \(T\cdot U\),
+hence in \(G\).}
 
 In particular, when \((G,T,M,R)\) is split, the groups \(H_{R'}\)
 and \(U_{R'}\) correspond.
@@ -4040,9 +4045,10 @@ and \(U_{R'}\) correspond.
 \textit{Let \(S\) be a scheme, let \((G,T,M,R)\) be a split
 \(S\)-group \textup{(respectively, and let \(R_+\) be a system of
 positive roots of \(R\) defining the Borel subgroup \(B\))}.
-Every smooth group subscheme of \(G\) with connected unipotent
-geometric fibers \textup{(respectively, every smooth group subscheme
-of \(B^u\))}, normalized by \(T\), is locally on \(S\) of the form
+Every group subscheme of \(G\), smooth and of finite presentation,
+with connected unipotent geometric fibers \textup{(respectively, every
+group subscheme of \(B^u\), smooth and of finite presentation)},
+normalized by \(T\), is locally on \(S\) of the form
 \(U_{R'}\), where \(R'\) is a subset of \(R\) contained in a system
 of positive roots \textup{(respectively, a subset of \(R_+\))} and
 is of type \textup{(R)}.}
@@ -4050,7 +4056,7 @@ is of type \textup{(R)}.}
 \textit{Proof.}
 For the ``respectively'' case, it is enough to observe that the
 geometric fibers of the given group are unipotent and connected by
-the \emph{Bible}, \S13.2, Theorem 1\textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:d}{(d)}}.
+\emph{Bible}, 13-05, Theorem 1~d).
 \hfill\(\square\)
 
 \SGARefLink{sga3:xxii:prop:5.6.9}{Proposition 5.6.9} also has the following corollary:
@@ -4068,10 +4074,10 @@ maximal tori of \(H\):}
 \]
 \textit{Then \(\underline{\operatorname{Tor}}(H)\) is represented by
 an affine smooth \(S\)-scheme, which is a principal homogeneous
-bundle under \(H^u\) for the action}
-\[
-  (h,T)\longmapsto\operatorname{int}(h)T.
-\]
+bundle under \(H^u\) for the obvious action
+\textup{(\((h,T)\mapsto\operatorname{int}(h)T\))}.}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+observes that, for such \(H\), this recovers and makes more precise
+\SGARefLink{sga3:xii:1.10}{Exposé XII, 1.10} (representability of the functor of maximal tori).}
 
 \textit{Proof.}
 Indeed, if \(T\) and \(T'\) are two maximal tori of \(H_{S'}\), there
@@ -4081,17 +4087,23 @@ once from the equality
 \[
   \underline{\operatorname{Norm}}_G(T)\cap H^u=e
 \]
-\textup{(cf., for example, \SGARefLink{sga3:xxii:prop:5.6.1}{5.6.1})}; it is therefore enough to prove
-the existence of \(h\) locally for the étale topology. By \SGARefLink{sga3:xxii:prop:5.2.6}{5.2.6} and
-\SGARefLink{sga3:xxii:rem:5.1.2}{5.1.2}\textup{\SGARefLink{sga3:xxii:rem:5.1.2:item:a}{(a)}}, we may suppose that \(T\) and \(T'\) are conjugate
-by a section of \(H\), whence the desired conclusion because
+\textup{(cf., for example, \SGARefLink{sga3:xxii:prop:5.6.1}{5.6.1})}; it suffices to prove
+the existence of \(h\) locally for the étale topology, and we may suppose
+\(T\) and \(T'\) conjugate by a section of \(H\); but one then concludes by
 \[
-  H=H^u\cdot T
+  H=H^u\cdot T.
 \]
-by \SGARefLink{sga3:xxii:prop:5.6.9}{5.6.9}\textup{\SGARefLink{sga3:xxii:prop:5.6.9:item:iii}{(iii)}}. It follows that
+It follows that
 \(\underline{\operatorname{Tor}}(H)\) is a principal homogeneous
 sheaf under \(H^u\), which is affine and smooth over \(S\); the
-assertion follows at once.
+assertion follows at once.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+gives the references. In our words: \(T\) and \(T'\) are conjugate by a section
+of \(H\) locally for the étale topology by \SGARefLink{sga3:xxii:prop:5.2.6}{5.2.6} and \SGARefLink{sga3:xxii:rem:5.1.2}{5.1.2}~(a), and
+\(H=H^u\cdot T\) is \SGARefLink{sga3:xxii:prop:5.6.9}{5.6.9}~(iii). A sheaf that is étale locally isomorphic to the
+affine smooth \(S\)-group \(H^u\) is represented by an affine scheme, by
+descent of affine schemes (SGA~1, VIII, 2.1), which is smooth over \(S\),
+smoothness descending along faithfully flat morphisms
+(EGA~IV\textsubscript{4}, 17.7.1).}
 \hfill\(\square\)
 
 \SGARefTarget{sga3:xxii:sec:5.7}
@@ -4107,7 +4119,7 @@ maximal torus of \(B\), and
 \[
   G(k)=B(k)N(k)B(k);
 \]
-\textit{this is Bruhat's theorem \textup{(\emph{Bible}, \S13.4,
+\textit{this is Bruhat's theorem \textup{(\emph{Bible}, 13-11,
 Corollary 1 to Theorem 3)}. More precisely, with the notation of
 \SGARefLink{sga3:xxii:par:3.6}{3.6}, the sets}
 \[
@@ -4238,7 +4250,7 @@ follow from \SGARefLink{sga3:xxii:recall:5.7.1}{5.7.1} and \SGARefLink{sga3:xxii
 
 \SGARefTarget{sga3:xxii:rem:5.7.5}
 \paragraph{\SGARefLink{sga3:xxii:rem:5.7.5}{Remark 5.7.5}.}
-Assertion \textup{\SGARefLink{sga3:xxii:lem:5.7.3:item:i}{(i)}} implies that if \(S\) is the spectrum of a
+Assertion \textup{(i)} implies that if \(S\) is the spectrum of a
 field, then \(G(S)\) is the disjoint union of the sets
 \[
   B'{}^u_w(S)\cdot T(S)\cdot B^u(S).
@@ -4304,7 +4316,7 @@ else \(U_\alpha(S)\) together with a section of
 
 \textit{Proof.}
 If \(u_{-\alpha}\) is the section of \(U_{-\alpha}\) paired with
-\(u_\alpha\) \textup{(cf.\ \SGARefLink{sga3:xxii:not:1.3}{1.3})}, then \SGARefLink{sga3:xxii:thm:5.7.4}{5.7.4} \textup{\SGARefLink{sga3:xxii:thm:5.7.4:item:ii}{(ii)}} gives
+\(u_\alpha\), then \SGARefLink{sga3:xxii:thm:5.7.4}{5.7.4} \textup{\SGARefLink{sga3:xxii:thm:5.7.4:item:ii}{(ii)}} gives
 \[
   G
   =
@@ -4478,7 +4490,10 @@ respect to \(T\) \textup{(cf.\ \SGARefLink{sga3:xxii:prop:5.9.2}{5.9.2})}.
   \longrightarrow
   GL_{\mathcal O_S}(\mathfrak g),
 \]
-\textit{is a monomorphism.}
+\textit{is a monomorphism.}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII,
+adds that it is even a closed immersion: \(\operatorname{ad}(G)\) is reductive
+(\SGARefLink{sga3:xxii:prop:4.3.5}{4.3.5}) and \(GL_{\mathcal O_S}(\mathfrak g)\) is separated and of finite presentation
+over \(S\), so this follows from \SGARefLink{sga3:xvi:corollary:1:5}{Exposé XVI, 1.5}~a).}
 
 \textit{Proof.}
 We may assume that \(G\) is split. Choose a total order on
@@ -4566,196 +4581,119 @@ Reductive Group}
 representable by a quasi-projective \(S\)-scheme of finite
 presentation over \(S\).}
 
-\textit{Proof.}\footnote{Editor's note: The original is expanded in
-what follows.}
-Let
-\[
-  G'=G/\underline{\operatorname{Centr}}(G)
-\]
-be the adjoint group of \(G\) \textup{(\SGARefLink{sga3:xxii:def:4.3.6}{4.3.6})}, and let
-\(u\colon G\to G'\) be the quotient morphism. By \SGARefLink{sga3:xii:7.12}{Exposé XII, 7.12},
-the map
-\[
-  H'\longmapsto u^{-1}(H')
-\]
-is a bijection from the set of subgroups of type \textup{(R)} of
-\(G'\) onto the set of subgroups of type \textup{(R)} of \(G\);
-this remains true after every base change. Thus, replacing \(G\)
-by \(G'\), we may assume that \(G\) is adjoint. Consider the
-morphism
+\textit{Proof.}
+By \SGARefLink{sga3:xii:7.12}{Exposé XII, 7.12}, we may suppose that \(G\) is adjoint. Consider
+then the morphism
 \[
   u\colon
   \mathcal H
   \longrightarrow
   \underline{\operatorname{Grass}}(\mathfrak g)
 \]
-that assigns to every subgroup of type \textup{(R)} its Lie algebra
-\textup{(a submodule of \(\mathfrak g\) that is locally a direct
-summand)}.
-Then \(u\) is a monomorphism by \SGARefLink{sga3:xxii:cor:5.3.3}{5.3.3}. It is enough to prove that
-it is representable by an immersion of finite presentation; in
-other words, it is enough to prove the following assertion. For
-every \(S_1\to S\), given a locally direct-summand submodule
-\(\mathfrak h\) of \(\mathfrak g_{S_1}\), the morphisms
-\(S'\to S_1\) for which \(\mathfrak h_{S'}\) is the Lie algebra of
-a subgroup of type \textup{(R)} of \(G_{S'}\) are exactly those
-that factor through a certain subscheme \(\Sigma\) of finite
-presentation over \(S_1\). Replacing \(S_1\) by \(S\), we reduce
-to \(S_1=S\), and we may moreover assume that \(S\) is affine;
-then there exists an affine Noetherian scheme \(S_0\) such that
-\(G\) \textup{(respectively, \(\mathfrak h\))} is obtained by base
-change from an adjoint reductive \(S_0\)-group \(G_0\)
-\textup{(respectively, from a locally direct-summand submodule
-\(\mathfrak h_0\) of
-\(\mathfrak g_0=\operatorname{Lie}(G_0/S_0)\))}. It is enough to
-show that there exists a subscheme \(\Sigma_0\) of \(S_0\) having
-the required properties, for then
-\(\Sigma=\Sigma_0\times_{S_0}S\). Replacing \(S\) by \(S_0\), we
-may therefore suppose that \(S\) is affine and Noetherian
-\textup{(note that then every subscheme of \(S\) is of finite
-presentation over \(S\))}. Finally, after replacing \(S\) by a
-sufficiently small open subscheme, we may suppose that
-\(\mathfrak g\) is free of rank \(n\) and that \(\mathfrak h\) is
-a direct summand, free of rank \(r\).
+that associates with every subgroup of type \textup{(R)} its Lie algebra
+\textup{(which is a submodule of \(\mathfrak g\) that is locally a direct
+summand)}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, refers here to
+\SGARefLink{sga3:ii:corollary:4-11-8}{Exposé II, 4.11.8}. In our words: for a subgroup \(H\) of type \textup{(R)},
+the map \(\omega^1_{G/S}\to\omega^1_{H/S}\) is surjective, and both modules
+are locally free, \(G\) and \(H\) being smooth; so the dual map
+\(\Lie(H/S)\to\mathfrak g\) identifies \(\Lie(H/S)\) with a locally direct
+summand of \(\mathfrak g\).} It is a monomorphism by \SGARefLink{sga3:xxii:cor:5.3.3}{5.3.3}. It suffices to prove that it is
+representable by an immersion of finite presentation, in other words to
+prove the following assertion: given a submodule \(\mathfrak h\) of
+\(\mathfrak g\) that is locally a direct summand, the \(S'\to S\) such that
+\(\mathfrak h_{S'}\) is the Lie algebra of a subgroup of type \textup{(R)} of
+\(G_{S'}\) are exactly those that factor through a certain subscheme of
+finite presentation of \(S\). We may evidently suppose that \(S\) is
+noetherian and that \(\mathfrak h\) has constant rank \(r\). We must first
+express that \(\mathfrak h_{S'}\) is a Lie subalgebra of
+\(\mathfrak g_{S'}\), that is, that if one considers the fibre product
+\(\mathfrak h'\) of the diagram
+\[
+\begin{array}{ccc}
+  \mathfrak h\otimes\mathfrak h & \xrightarrow{\;[\,,\,]\;} & \mathfrak g\\
+  \big\uparrow & & \big\uparrow\\
+  \mathfrak h' & \xrightarrow{\;v\;} & \mathfrak h,
+\end{array}
+\]
+the morphism \(\mathfrak h'_{S'}\to(\mathfrak h\otimes\mathfrak h)_{S'}\)
+is an isomorphism. As \(\mathfrak h\) is locally free, this condition is
+expressed by the fact that \(S'\to S\) factors through a certain closed
+subscheme of \(S\).\footnote{Translator's note: the 1970 text has
+``\(v_{S'}\) est un isomorphisme'' and ``un certain sous-préschéma ouvert''.
+The condition is that the bracket of \(\mathfrak h_{S'}\) take its values in
+\(\mathfrak h_{S'}\): if \((e_1,\ldots,e_n)\) is a local basis of
+\(\mathfrak g\) with \((e_1,\ldots,e_r)\) a basis of \(\mathfrak h\), it is the
+vanishing of the components along \(e_{r+1},\ldots,e_n\) of the brackets
+\([e_i,e_j]\), \(i,j\leq r\), hence a closed condition; the Gille--Polo
+re-edition (2011), Exposé~XXII, states it in this form.} We therefore replace \(S\) by this subscheme, and we
+must now express \textup{(\SGARefLink{sga3:xxii:prop:5.3.1}{5.3.1})} that, if we put
+\(H=\underline{\operatorname{Norm}}_G(\mathfrak h)\) \textup{(which is a
+closed subgroup scheme of \(G\))}, \(H_{S'}\) is smooth along the unit
+section. Introducing the inverse image \(\mathfrak n_{H/G}\) of the
+conormal sheaf \(\mathcal N_{H/G}\) under the morphism
+\(e_H\colon S\to H\), we must express \textup{(SGA~1, II, 4.10)} that the
+canonical morphism
+\[
+  w\colon\mathfrak n_{H/G}\longrightarrow\omega^1_{G/S}
+\]
+is universally injective on \(S'\) \textup{(i.e.\ that \(w_{S'}\) is
+universally injective)}, and that
+\(\omega^1_{H/S}\otimes_{\mathcal O_S}\mathcal O_{S'}\) is locally free of
+rank \(r=\operatorname{rank}(\mathfrak h)\). The first condition is again
+equivalent to the fact that \(S'\to S\) factors through a certain open
+subscheme of \(S\); let us replace \(S\) by this subscheme. The second
+condition is expressed by the fact that \(S'\to S\) factors through a
+subscheme \(Z\) of \(S\) \textup{(TDTE IV, 3.6)}. Replacing \(S\) by \(Z\),
+it only remains to express that
+\((\underline{\operatorname{Norm}}_G(\mathfrak h)^0)_{s'}\) has the same
+reductive rank as \(G_{s'}\) at every point \(s'\in S'\), or, what amounts to
+the same, that \(H_s\) has the same reductive rank as \(G_s\) at every point
+\(s\) of the \textup{(set-theoretic)} image of \(S'\) in \(S\). Now this
+condition defines an open subset of \(S\)
+\textup{(\SGARefLink{sga3:xix:remark:6-2}{Exposé XIX, 6.2})}.
 
-We must first express the condition that \(\mathfrak h_{S'}\) be
-a Lie subalgebra of \(\mathfrak g_{S'}\), that is, that the
-morphism induced by the Lie bracket
-\[
-  \varphi\colon
-  \mathfrak h\otimes\mathfrak h
-  \xrightarrow{[\, ,\,]}
-  \mathfrak g
-\]
-factor through \(\mathfrak h\). If
-\((e_1,\ldots,e_n)\) is a basis of \(\mathfrak g\) such that
-\((e_1,\ldots,e_r)\) is a basis of \(\mathfrak h\), then
-\(\varphi\) is given by sections \(a_k^{ij}\) of
-\(\mathcal O_S\), where \(i,j=1,\ldots,r\) and
-\(k=1,\ldots,n\). The preceding condition is equivalent to
-requiring that \(S'\to S\) factor through the closed subscheme of
-\(S\) defined by the equations
-\[
-  a_k^{ij}=0
-  \qquad
-  \text{for \(k=r+1,\ldots,n\) and \(i,j=1,\ldots,r\).}
-\]
-We replace \(S\) by this closed subscheme.
-
-Then, by \SGARefLink{sga3:xxii:recall:5.3.0}{5.3.0},
-\[
-  N=\underline{\operatorname{Norm}}_G(\mathfrak h)
-\]
-is a closed subgroup scheme of \(G\), of finite presentation over
-\(G\). We must now express \textup{(cf.\ \SGARefLink{sga3:xxii:prop:5.3.1}{5.3.1})} the condition
-that \(N_{S'}\) be smooth at every point of the unit section, of
-relative dimension \(r=\operatorname{rank}(\mathfrak h)\), and
-that the inclusion of \(\mathfrak h_{S'}\) in
-\(\operatorname{Lie}(N_{S'}/S')\) be an equality.
-
-Since \(N\) is affine over \(S\)\footnote{Editor's note: The
-original then indicated that, denoting by
-\(\mathfrak n_{N/G}\) the inverse image of the conormal sheaf
-\(\mathcal N_{N/G}\) under the unit section \(S\to N\), the
-condition that
-\(\mathfrak n_{N_{S'}/G_{S'}}\to
-\omega^1_{G_{S'}/S'}\)
-be universally injective is equivalent to the condition that
-\(S'\to S\) factor through a certain open subscheme of \(S\). We
-were unable to justify this point, since formation of
-\(\mathcal N_{N/G}\) does not commute with base change, and we
-have replaced that argument by the one that follows, suggested by
-O.\ Gabber.}
-\textup{(being closed in \(G\))}, the unit section
-\(\varepsilon\colon S\to N\) is a closed immersion. Thus
-\(\varepsilon(S)\) is defined by a quasi-coherent ideal
-\(\mathcal J\) of \(\mathcal A(N)\). Note that
-\[
-  \mathfrak n_{S/N}=\mathcal J/\mathcal J^2
-  \simeq \varepsilon^*(\Omega^1_{N/S}),
-\]
-so its formation commutes with every base change \(S'\to S\).
-By the equivalence \textup{\((c')\Longleftrightarrow(a)\)} in
-\(\mathrm{EGA}\ \mathrm{IV}_4\), 17.12.1 \textup{(applied to
-\(f\colon N\to S\) and \(j=\varepsilon\))}, the morphism
-\(N_{S'}\to S'\) is smooth, of relative dimension \(r\), at every
-point of \(\varepsilon(S')\) if and only if
-\[
-  \mathfrak n_{S'/N'}
-  =
-  \mathfrak n_{S/N}\otimes_{\mathcal O_S}\mathcal O_{S'}
-\]
-is locally free of rank \(r\), and the morphism
-\[
-  \varphi_n(S')\colon
-  \operatorname{Sym}^n(\mathfrak n_{S'/N'})
-  \longrightarrow
-  \mathcal J_{S'}^n/\mathcal J_{S'}^{n+1}
-\]
-is an isomorphism for every \(n\geq1\). Put
-\[
-  K_n(S')=\ker\varphi_n(S').
-\]
-By \(\mathrm{TDTE}\) I, Lemma 3.6,
-\(\mathfrak n_{S/N}\otimes\mathcal O_{S'}\) is locally free of
-rank \(r\) if and only if \(S'\to S\) factors through a certain
-subscheme \(Z\) of \(S\). Replacing \(S\) by \(Z\), we may
-therefore suppose that
-\(\mathfrak n_{S/N}=\mathcal J/\mathcal J^2\) is locally free of
-rank \(r\). Then, for every \(S'\to S\),
-\[
-  (\mathcal J^2/\mathcal J^3)\otimes\mathcal O_{S'}
-  =
-  \mathcal J_{S'}^2/\mathcal J_{S'}^3,
-\]
-and consequently
-\[
-  K_2(S')=K_2(S)\otimes\mathcal O_{S'}.
-\]
-It follows that \(\varphi_2(S')\) is an isomorphism if and only if
-\(S'\to S\) factors through the closed subscheme \(S_2\) of \(S\)
-defined by the ideal generated by the image of
-\[
-  \operatorname{Sym}^2(\mathfrak n_{S/N})^*
-  \otimes K_2(S)
-  \longrightarrow
-  \mathcal O_S.
-\]
-Over \(S_2\), the module \(\mathcal J^2/\mathcal J^3\) is then
-isomorphic to \(\operatorname{Sym}^2(\mathfrak n_{S/N})\), hence
-is locally free; the same argument shows that
-\(\varphi_3(S')\) is an isomorphism if and only if \(S'\to S\)
-factors through a certain closed subscheme \(S_3\) of \(S\), and
-so on. We thus obtain that \(N_{S'}\to S'\) is smooth, of relative
-dimension \(r\), at every point of \(\varepsilon(S')\) if and only
-if \(S'\to S\) factors through the closed subscheme
-\[
-  Z=\bigcap_n S_n.
-\]
-But then, for every \(S'\to Z\),
-\(\operatorname{Lie}(N_{S'}/S')\) is locally a direct summand of
-rank \(r\) of \(\mathfrak g_{S'}\), and hence the inclusion
-\[
-  \mathfrak h_{S'}
-  \subset
-  \operatorname{Lie}(N_{S'}/S')
-\]
-is an equality. We then put \(H=N^0\).
-
-Replacing \(S\) by \(Z\), it remains only to express the condition
-that \(H_{s'}\) have the same reductive rank as \(G_{s'}\) at every
-point \(s'\in S'\), or, equivalently, that \(H_s\) have the same
-reductive rank as \(G_s\) at every point \(s\) in the
-set-theoretic image of \(S'\) in \(S\). This condition defines an
-open subset of \(S\) \textup{(\SGARefLink{sga3:xix:remark:6-2}{Exposé XIX, 6.2})}.
-\hfill\(\square\)
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~XXII; our
+formulation). The step asserting that universal injectivity of \(w_{S'}\)
+is an open condition on \(S\) is not justified as it stands, since the
+formation of the conormal sheaf of \(H\) in \(G\) does not commute with base
+change. The re-edition replaces the end of the argument by one due to
+O.~Gabber; in our words it runs as follows. Keep \(S\) noetherian, with
+\(\mathfrak h\) a Lie subalgebra. As \(G\) is affine over \(S\) and \(H\) is
+closed in \(G\), \(H=\operatorname{Spec}(\mathscr A)\) is affine over \(S\);
+the unit section is defined by an ideal \(\mathscr J\), and
+\(\mathscr A=\mathcal O_S\oplus\mathscr J\), so that the formation of
+\(\mathscr J/\mathscr J^2\) commutes with base change. By
+EGA~IV\textsubscript{4}, 17.12.1 (equivalence of a) and c')), applied to the
+unit section of \(H_{S'}\), the group \(H_{S'}\) is smooth over \(S'\) of
+relative dimension \(r\) along its unit section if and only if
+\((\mathscr J/\mathscr J^2)\otimes\mathcal O_{S'}\) is locally free of rank
+\(r\) and, for every \(n\geq1\), the canonical surjection
+\(\varphi_n\colon\operatorname{Sym}^n(\mathscr J_{S'}/\mathscr J_{S'}^2)\to
+\mathscr J_{S'}^n/\mathscr J_{S'}^{n+1}\) is injective. The first condition
+defines a locally closed subscheme \(Z_1\) of \(S\) (given by the Fitting
+ideals of \(\mathscr J/\mathscr J^2\)). Over \(Z_1\), argue by induction on
+\(n\geq2\): if the \(\mathscr J^k/\mathscr J^{k+1}\), \(k<n\), are locally
+free, then \(\mathscr A/\mathscr J^n\) is flat over \(S\), so the formation of
+\(\mathscr J^n/\mathscr J^{n+1}\) commutes with base change, and the kernel of
+\(\varphi_n\otimes\mathcal O_{S'}\) is the image of
+\(\operatorname{Ker}(\varphi_n)\otimes\mathcal O_{S'}\) in the locally free
+module \(\operatorname{Sym}^n(\mathscr J/\mathscr J^2)\otimes\mathcal O_{S'}\);
+it vanishes exactly when \(S'\to S\) factors through the closed subscheme
+\(Z_n\subset Z_{n-1}\) defined by the coordinates of the sections of
+\(\operatorname{Ker}(\varphi_n)\), over which
+\(\mathscr J^n/\mathscr J^{n+1}\simeq\operatorname{Sym}^n(\mathscr J/\mathscr J^2)\)
+is locally free. As \(S\) is noetherian, the sequence \((Z_n)\) is
+stationary, and its limit \(Z\) represents the smoothness condition. Over
+\(Z\), \(\Lie(H_{S'}/S')\) is locally free of rank \(r\) and contains
+\(\mathfrak h_{S'}\), a direct summand of \(\mathfrak g_{S'}\) of the same
+rank, so the two coincide; one concludes with \(H^0\) and Exposé XIX, 6.2, as
+above.
 
 \SGARefTarget{sga3:xxii:rem:after-5.8.1}
 \paragraph{Remark.}
-In general, the scheme \(\mathcal H\) is not smooth over \(S\). It
+In general, it is not smooth over \(S\). It
 is nevertheless smooth if \(6\) is invertible on \(S\), or if
-there exists a prime number \(p\) such that \(p\cdot1_S=0\)
-\textup{(that is, if \(S\) has characteristic \(p>0\))}.
+there exists a prime number \(p\) such that \(p\cdot1_S=0\).
 
 \SGARefTarget{sga3:xxii:cor:5.8.2}
 \paragraph{\SGARefLink{sga3:xxii:cor:5.8.2}{Corollary 5.8.2}.}
@@ -4786,7 +4724,7 @@ open. Let \(V=f(G)\), equipped with its open-subscheme structure in
 morphism with kernel \(\underline{\operatorname{Norm}}_G(H)\).
 Consequently
 \(G/\underline{\operatorname{Norm}}_G(H)\) is representable by
-\(V\) \textup{(cf.\ \SGARefLink{sga3:iv:lemma:4:6:5}{Exposé IV, 4.6.5})}.
+\(V\).
 \hfill\(\square\)
 
 \SGARefTarget{sga3:xxii:cor:5.8.3}
@@ -4810,7 +4748,7 @@ Consequently
   \textup{ (cf.\ 5.3.13)}}\}.
 \end{aligned}
 \]
-\textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:i}{(i)}}
+\textup{(i)}
 \(\underline{\operatorname{Tor}}(G)\),
 \(\underline{\operatorname{Bor}}(G)\), and
 \(\underline{\operatorname{Kil}}(G)\) are representable by smooth
@@ -4818,7 +4756,7 @@ Consequently
 fibres, and are respectively affine, projective, and affine over
 \(S\).
 
-\textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:ii}{(ii)}}
+\textup{(ii)}
 The canonical morphism
 \[
   \underline{\operatorname{Kil}}(G)
@@ -4831,7 +4769,7 @@ The canonical morphism
 is finite étale and surjective
 \textup{(respectively, affine, smooth, and surjective)}.
 
-\SGAInlineRefTarget{sga3:xxii:cor:5.8.3:item:iii}\textup{\SGARefLink{sga3:xxii:prop:5.6.9:item:iii}{(iii)}}
+\SGAInlineRefTarget{sga3:xxii:cor:5.8.3:item:iii}\textup{(iii)}
 Let \(T\) be a maximal torus of \(G\)
 \textup{(respectively, let \(B\) be a Borel subgroup of \(G\), or
 let \(B\supset T\) be a Killing pair of \(G\))}. The morphism
@@ -4873,7 +4811,7 @@ defined by
 \end{aligned}
 \]
 
-One first sees that \textup{\SGARefLink{sga3:xxii:prop:5.6.9:item:iii}{(iii)}} follows from the conjugacy theorem
+One first sees that \textup{(iii)} follows from the conjugacy theorem
 for maximal tori \textup{(respectively, Borel subgroups, respectively,
 Killing pairs)} and from the facts that
 \[
@@ -4900,20 +4838,25 @@ subschemes of \(\mathcal H\). Likewise,
 \(\underline{\operatorname{Kil}}(G)\) is locally, for the étale
 topology, representable by a scheme affine over the base
 \textup{(\SGARefLink{sga3:ix:proposition:2:3}{Exposé IX, 2.3})}, and hence is representable by an affine
-\(S\)-scheme, by descent for affine schemes.
+\(S\)-scheme, by descent for affine schemes.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, refers here to SGA~1, VIII, 2.1:
+a faithfully flat quasi-compact morphism \(S'\to S\) is a morphism of
+effective descent for schemes affine over the base.}
 
-The assertions of \textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:ii}{(ii)}} follow at once from \SGARefLink{sga3:xxii:cor:5.5.5}{5.5.5}\textup{\SGARefLink{sga3:xxii:cor:5.5.5:item:ii}{(ii)}}
+The assertions of \textup{(ii)} follow at once from \SGARefLink{sga3:xxii:cor:5.5.5}{5.5.5}\textup{\SGARefLink{sga3:xxii:cor:5.5.5:item:ii}{(ii)}}
 and \SGARefLink{sga3:xxii:cor:5.6.13}{5.6.13}. It already follows that
 \(\underline{\operatorname{Tor}}(G)\) is affine over \(S\)
 \textup{(EGA II, 6.7.1)}. It remains only to prove that
 \(\underline{\operatorname{Bor}}(G)\) is projective over \(S\). We
 already know that it is quasi-projective, so it remains to prove that
-it is proper; but it has connected fibres, and therefore, by EGA
+it is proper;\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, adds that one may suppose \(S\)
+affine and, \(\underline{\operatorname{Bor}}(G)\) being of finite presentation
+over \(S\) by \textup{(i)}, reduce to the case where \(S\) is noetherian, which
+puts one under the hypotheses of EGA~IV\textsubscript{3}, 15.7.10 (a locally
+noetherian base).} but it has connected fibres, and therefore, by EGA
 IV\(_3\), 15.7.10, one is reduced to proving this on geometric fibres.
 If \(S\) is the spectrum of an algebraically closed field, then
-\(\underline{\operatorname{Bor}}(G)=G/B\) by \textup{\SGARefLink{sga3:xxii:prop:5.6.9:item:iii}{(iii)}}, and the
-conclusion follows from \emph{Bible}, \S6.4, Theorem 4
-\textup{(or [Ch05], \S6.5, Theorem 5)}.
+\(\underline{\operatorname{Bor}}(G)=G/B\) by \textup{(iii)}, and the
+conclusion follows from \emph{Bible}, 6-09, Theorem 4.
 \hfill\(\square\)
 
 \SGARefTarget{sga3:xxii:rem:5.8.4}
@@ -4941,13 +4884,13 @@ isomorphisms
 \(P\) a subgroup scheme of \(G\), smooth and of finite presentation
 over \(S\). The following conditions are equivalent:
 
-\textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:i}{(i)}} For every \(s\in S\), \(P_{\bar s}\) is a parabolic
+\textup{(i)} For every \(s\in S\), \(P_{\bar s}\) is a parabolic
 subgroup of \(G_{\bar s}\) \textup{(that is, the quotient scheme
 \(G_{\bar s}/P_{\bar s}\) is proper over \(\bar s\), or equivalently
 \(P_{\bar s}\) contains a Borel subgroup of \(G_{\bar s}\); cf.\
-\emph{Bible}, \S6.4, Theorem 4, or [Ch05], \S6.5, Theorem 5)}.
+\emph{Bible}, 6-09, Theorem 4)}.
 
-\textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:ii}{(ii)}} The quotient sheaf \(G/P\) is representable by an
+\textup{(ii)} The quotient sheaf \(G/P\) is representable by an
 \(S\)-scheme smooth and projective over \(S\).
 
 Moreover, under these conditions, \(P\) is closed in \(G\), has
@@ -4956,20 +4899,22 @@ connected fibres, and
   P=\underline{\operatorname{Norm}}_G(P).
 \]}
 
-Clearly \textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:ii}{(ii)}} implies \textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:i}{(i)}}. If \textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:i}{(i)}} holds,
-then
+Clearly \textup{(ii)} implies \textup{(i)}. If \textup{(i)} holds,
+\(P_{\bar s}\) is connected and
 \[
-  P(\bar s)
-  =
   \underline{\operatorname{Norm}}_{G(\bar s)}(P_{\bar s})
+  =
+  P(\bar s),
 \]
-and \(P_{\bar s}\) is connected \textup{(for the first assertion,
-cf.\ \emph{Bible}, \S12.3, \SGARefLink{sga3:xxii:section:4}{Lemma 4};\footnote{Editor's note: We have
-supplied the details that follow.} the second assertion}
-\textup{follows from this, since
-\(P'=P_{\bar s}^{0}\) is a parabolic subgroup of \(G_{\bar s}\)
-normalized by \(P_{\bar s}\), whence
-\(P'(\bar s)=P(\bar s)\) and therefore \(P'=P_{\bar s}\))}. It
+as follows at once from the conjugacy of Borel subgroups \textup{(for
+the second point, cf.\ \emph{Bible}, 12-06, Lemma 4)};\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, takes the two
+points in the opposite order, proving the equality of normalizers by the same
+lemma of the \emph{Bible} and deducing connectedness from it:
+\(P'=P_{\bar s}^{0}\) contains a Borel subgroup of \(G_{\bar s}\), hence is
+parabolic, and it is normalized by \(P_{\bar s}\); so
+\(P(\bar s)\subset\underline{\operatorname{Norm}}_{G(\bar s)}(P')=P'(\bar s)\),
+and \(P'=P_{\bar s}\), both groups being smooth over the algebraically closed
+field \(\kappa(\bar s)\).} it
 follows that \(P\) is of type \textup{(R)} and that
 \[
   P=\underline{\operatorname{Norm}}_G(P),
@@ -4985,9 +4930,12 @@ of \SGARefLink{sga3:xxii:cor:5.8.3}{5.8.3}.
 
 \SGARefTarget{sga3:xxii:rem:5.8.6}
 \paragraph{\SGARefLink{sga3:xxii:rem:5.8.6}{Remark 5.8.6}.}
-The statements \SGARefLink{sga3:xxii:thm:5.8.1}{5.8.1}, \SGARefLink{sga3:xxii:cor:5.8.2}{5.8.2}, and \SGARefLink{sga3:xxii:cor:5.8.5}{5.8.5} are valid for an \(S\)-group
+The statements \SGARefLink{sga3:xxii:thm:5.8.1}{5.8.1}, \SGARefLink{sga3:xxii:cor:5.8.2}{5.8.2}, and \SGARefLink{sga3:xxii:cor:5.8.5}{5.8.5} are evidently valid for an \(S\)-group
 of type \textup{(RA)}, or for an \(S\)-group of type \textup{(RR)}
-satisfying \SGARefLink{sga3:xxii:prop:5.1.8}{5.1.8}.
+satisfying \SGARefLink{sga3:xxii:prop:5.1.8}{5.1.8}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, gives the reason:
+the proof of \SGARefLink{sga3:xxii:thm:5.8.1}{5.8.1} uses only \SGARefLink{sga3:xxii:cor:5.3.3}{5.3.3}, which holds for a group of type
+\textup{(RA)}, and \SGARefLink{sga3:xix:remark:6:2}{Exposé XIX, 6.2}, which by \SGARefLink{sga3:xii:1.7:item:b}{Exposé XII, 1.7(b)} also holds
+for groups of type \textup{(RR)}.}
 
 \SGARefTarget{sga3:xxii:rem:5.8.7}
 \paragraph{\SGARefLink{sga3:xxii:rem:5.8.7}{Remark 5.8.7}.}
@@ -5007,7 +4955,7 @@ Through the inner automorphisms of \(G\), there are canonical actions
   \bigl(\underline{\operatorname{Kil}}(G)\bigr),
 \end{aligned}
 \]
-which, in the situation of \SGARefLink{sga3:xxii:cor:5.8.3}{5.8.3}\textup{\SGARefLink{sga3:xxii:prop:5.6.9:item:iii}{(iii)}}, are identified with
+which, in the situation of \SGARefLink{sga3:xxii:cor:5.8.3}{5.8.3}\textup{\SGARefLink{sga3:xxii:cor:5.8.3:item:iii}{(iii)}}, are identified with
 the canonical actions
 \[
 \begin{aligned}
@@ -5077,7 +5025,7 @@ Let \(S\) be a scheme, \(G\) a reductive \(S\)-group, and \(B,B'\)
 two Borel subgroups of \(G\). We say that \(B\) and \(B'\) are
 \emph{in general position} \textup{(or that \(B'\) is in general
 position relative to \(B\))} if \(B\cap B'\) is a torus
-\textup{(necessarily maximal)} of \(G\).
+\textup{(maximal)} of \(G\).
 
 If \(T\) is a maximal torus of \(G\) contained in \(B\) and \(B'\),
 we say that \(B\) and \(B'\) are \emph{opposite} \textup{(relative
@@ -5118,7 +5066,7 @@ containing \(T\), then locally on \(S\) it has the form
 {\itshape Let \(S\) be a scheme, \(G\) a reductive \(S\)-group, and
 \(B\) a Borel subgroup of \(G\).
 
-\textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:i}{(i)}} If \(B'\) is a Borel subgroup of \(G\), the following
+\textup{(i)} If \(B'\) is a Borel subgroup of \(G\), the following
 conditions are equivalent:
 
 \begin{enumerate}
@@ -5141,7 +5089,7 @@ conditions are equivalent:
 is an open immersion.
 \end{enumerate}
 
-\textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:ii}{(ii)}} The functor \(\underline{\operatorname{Opp}}(B)\),
+\textup{(ii)} The functor \(\underline{\operatorname{Opp}}(B)\),
 \[
   S'\longmapsto
   \left\{
@@ -5163,7 +5111,7 @@ defined by \(B'\mapsto B\cap B'\) is an isomorphism. In particular
 \(\underline{\operatorname{Opp}}(B)\) with the structure of a
 principal homogeneous bundle under \(B^u\).}
 
-Let us first examine \textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:i}{(i)}}. We have
+Let us first examine \textup{(i)}. We have
 \(\textup{(a)}\Rightarrow\textup{(c)}\). Indeed,
 \textup{\SGARefLink{sga3:xxii:prop:5.9.3:item:c}{(c)}} is local for the étale topology; by \SGARefLink{sga3:xxii:cor:5.5.5:item:iv}{5.5.5(iv)}, one
 reduces to the case in which \(G\) is split relative to
@@ -5185,7 +5133,7 @@ Trivially,
 \]
 It remains to prove
 \(\textup{(b)}\Rightarrow\textup{(a)}\). Let us first prove
-\textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:ii}{(ii)}}. The second assertion is a formal consequence of
+\textup{(ii)}. The second assertion is a formal consequence of
 \SGARefLink{sga3:xxii:prop:5.9.2}{5.9.2}, and the third follows at once from it by \SGARefLink{sga3:xxii:cor:5.6.13}{5.6.13}. Let us prove
 the first. It is local for the étale topology, and we may therefore
 suppose that \(B\) contains a maximal torus \(T\). Let \(B'_0\) be
@@ -5212,9 +5160,9 @@ Thus there is a commutative diagram
   \input{native_diagrams/exp22/diag_007_opposite_borel_square}
 \]
 Now the morphism \(B^u\to G/B'_0\) is an open immersion
-\textup{(by \textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:i}{(i)}}, \(\textup{(a)}\Rightarrow
+\textup{(by \textup{(i)}, \(\textup{(a)}\Rightarrow
 \textup{(c\(^{\prime}\))}\))}, which completes the proof of
-\textup{\SGARefLink{sga3:xxii:cor:5.7.6:item:ii}{(ii)}}. We record at once the following corollary.
+\textup{(ii)}. We record at once the following corollary.
 
 \SGARefTarget{sga3:xxii:cor:5.9.4}
 \paragraph{\SGARefLink{sga3:xxii:cor:5.9.4}{Corollary 5.9.4}.}
@@ -5229,10 +5177,9 @@ It therefore remains only to prove
 it is enough to do so when \(S\) is the spectrum of an algebraically
 closed field \(k\). We may suppose that \(G\) is split relative to a
 maximal torus \(T\) of \(B\). Let \(B'_0\) be the Borel subgroup
-opposite to \(B\). Since the Borel subgroups of \(G\) are conjugate
-under \(G(k)\), there exists \(g\in G(k)\) such that
-\(\operatorname{int}(g)B'_0=B'\). By the Bruhat theorem
-\textup{(\SGARefLink{sga3:xxii:thm:5.7.4}{5.7.4})}, we may write
+opposite to \(B\). The Borel subgroups of \(G\) are conjugate, so
+there exists \(g\in G(k)\) such that
+\(\operatorname{int}(g)B'_0=B'\). By the Bruhat theorem, we may write
 \[
   g=bnb',
   \qquad
@@ -5278,7 +5225,8 @@ having the following properties:
 \begin{enumerate}
 \item[\textup{(i)}] Each \(U_i\) is smooth, has connected fibers,
 and is characteristic in \(B\); the inner automorphisms of \(B^u\)
-act trivially on the \textup{(sheaf)} quotients \(U_i/U_{i+1}\).
+act trivially on the \textup{(sheaf)} quotients \(U_i/U_{i+1}\),
+\(i\geq 0\).
 
 \item[\textup{(ii)}] For each \(i\geq 0\), there exists a locally
 free \(\mathcal O_S\)-module \(\mathcal E_i\) and an isomorphism of
@@ -5424,9 +5372,13 @@ that is, every principal homogeneous bundle under \(B^u\) has a
 section.}
 
 Indeed, \(S\) is a disjoint union of subschemes on each of which
-\(B^u\) has constant relative dimension. In view of
-\SGARefLink{sga3:xxii:prop:5.9.5}{5.9.5}\textup{\SGARefLink{sga3:xxii:prop:5.9.5:item:iii}{(iii)}}, we may therefore suppose that \(U_n=e\).
-By TDTE I, B.1.1, one has
+\(B^u\) has constant relative dimension. We may therefore, by
+\textup{\SGARefLink{sga3:xxii:prop:5.9.5:item:iii}{(iii)}}, suppose that there exists an \(n\) such that \(U_n=e\).
+By TDTE I, B.1.1,\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, specifies that the result used
+is the corollary on page~18 of TDTE~I, that is, of A.~Grothendieck,
+\emph{Technique de descente et théorèmes d'existence en géométrie
+algébrique.~I. Généralités. Descente par morphismes fidèlement plats},
+Séminaire Bourbaki, exposé~190, 1959/60.} one has
 \[
   H^1(S,U_i/U_{i+1})
   =
@@ -5445,12 +5397,24 @@ is a maximal torus of \(B\), then
 \]}
 
 The first assertion follows at once from \SGARefLink{sga3:xxii:cor:5.9.6}{5.9.6} and \SGARefLink{sga3:xxii:cor:5.6.13}{5.6.13}; the
-second follows from it in the standard way.
+second follows from it in the standard way.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, recalls
+the argument: there is an exact sequence of pointed sets
+\(H^1(S,B^u)\to H^1(S,B)\xrightarrow{\pi}H^1(S,B/B^u)=H^1(S,T)\)
+(J.-P.~Serre, \emph{Cohomologie galoisienne}, Lecture Notes in Math.~5,
+Springer, 1964, I, \S5.5, Proposition~38; J.~Giraud, \emph{Cohomologie non
+abélienne}, Springer, 1971, III, Proposition~3.3.1); the map
+\(H^1(S,T)\to H^1(S,B)\) is a section of \(\pi\), so \(\pi\) is surjective;
+and \(H^1(S,B^u)=0\) by \SGARefLink{sga3:xxii:cor:5.9.6}{5.9.6}. The injectivity of \(\pi\) also uses the
+twisted forms: for a \(B\)-torsor \(P\), the fibre of \(\pi\) through its
+class is the image of \(H^1(S,{}_PB^u)\) (by the twisting bijection
+\(H^1(S,{}_PB)\simeq H^1(S,B)\)), and \({}_PB^u\) is the unipotent part of the
+Borel subgroup \({}_PB\) of the reductive group \({}_PG\), so that
+\SGARefLink{sga3:xxii:cor:5.9.6}{5.9.6} applies to it.}
 
 \SGARefTarget{sga3:xxii:cor:5.9.8}
 \paragraph{\SGARefLink{sga3:xxii:cor:5.9.8}{Corollary 5.9.8}.}
 {\itshape If \(G\) is a reductive \(S\)-group, the canonical
-morphism \textup{(cf.\ \SGARefLink{sga3:xxii:cor:5.8.3}{5.8.3})}
+morphism \textup{(\SGARefLink{sga3:xxii:cor:5.8.3}{5.8.3})}
 \[
   \underline{\operatorname{Kil}}(G)
   \longrightarrow
@@ -5465,7 +5429,7 @@ affine. Then there exists a locally free \(\mathcal O_S\)-module
 \(\mathcal E\) such that \(B^u\), as a scheme, is \(S\)-isomorphic
 to \(W(\mathcal E)\).}
 
-We prove by induction on \(i\) that \(B^u/U_i\) is \(S\)-isomorphic
+Indeed, we prove by induction on \(i\) that \(B^u/U_i\) is \(S\)-isomorphic
 to
 \[
   W(\mathcal E_0\oplus\cdots\oplus\mathcal E_{i-1}).
@@ -5581,7 +5545,7 @@ assertions follow respectively from \SGARefLink{sga3:xxii:prop:5.6.1}{5.6.1}\tex
 \SGARefTarget{sga3:xxii:cor:5.10.2}
 \paragraph{\SGARefLink{sga3:xxii:cor:5.10.2}{Corollary 5.10.2}.}
 {\itshape Let \(S\) be a scheme, \(G\) a reductive \(S\)-group,
-and \(H\) a reductive \(S\)-subgroup such that, for every
+and \(H\) a reductive subgroup scheme such that, for every
 \(s\in S\), \(G_{\bar s}\) and \(H_{\bar s}\) have the same
 reductive rank. Then \(H\) is closed in \(G\),
 \(\underline{\operatorname{Norm}}_G(H)\) is smooth over \(S\), and
@@ -5665,67 +5629,42 @@ This proposition leads to the following definition:
 
 \SGARefTarget{sga3:xxii:def:5.10.4}
 \paragraph{\SGARefLink{sga3:xxii:def:5.10.4}{Definition 5.10.4}.}
-Let \(S\) be a scheme, \(G\) a reductive \(S\)-group, \(H\) a
-reductive subgroup of \(G\) of type \textup{(R)}, and \(Q\) a
-subtorus of \(G\).\footnote{Editor's note: We have modified the
-original by introducing the term ``\(C\)-critical torus'' in place
-of ``critical torus'', in order to avoid confusion in later
-references \textup{(cf.\ \SGARefLink{sga3:xxvi:item:3:9}{Exposé XXVI, 3.9})}. We have also expanded
-the statement of \SGARefLink{sga3:xxii:cor:5.10.5}{5.10.5} and added \SGARefLink{sga3:xxii:rem:5.10.5.1}{Remark 5.10.5.1}.}
-\begin{enumerate}
-\item[\textup{1)}] \(H\) is called a \emph{critical subgroup} if it
-is the centralizer of its radical.
-\item[\textup{2)}] \(Q\) is called a \emph{\(C\)-critical torus} if
-it is the radical of its centralizer.
-\end{enumerate}
+Let \(S\) be a scheme and \(G\) a reductive \(S\)-group. We say that
+the subtorus \(Q\) of \(G\) is a \emph{critical torus} if it is the
+radical of its centralizer.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, calls these tori
+\emph{C-critical}, to avoid a confusion in later references
+\textup{(\SGARefLink{sga3:xxvi:paragraph:3-9}{Exposé~XXVI, 3.9})}, and adds a remark: a torus of \(G\) is a critical
+subgroup of \(G\) if and only if it is a maximal torus. Indeed, a torus of
+type \textup{(R)} contains a maximal torus of each geometric fibre, hence is a
+maximal torus, and a maximal torus \(T\) satisfies
+\(\underline{\operatorname{Centr}}_G(T)=T=\operatorname{rad}(T)\). A critical
+torus need not be maximal: the centre of \(\mathrm{GL}_{n,S}\), \(n\geq2\), is
+a critical torus.} We say that the reductive subgroup \(H\)
+of type \textup{(R)} of \(G\) is \emph{critical} if it is the
+centralizer of its radical.
 
-\SGARefLink{sga3:xxii:prop:5.10.3}{Proposition 5.10.3} then gives:
+We then have:
 
 \SGARefTarget{sga3:xxii:cor:5.10.5}
 \paragraph{\SGARefLink{sga3:xxii:cor:5.10.5}{Corollary 5.10.5}.}
-\begin{enumerate}
-\item[\textup{(i)}] For every subtorus \(Q\) of \(G\),
-\(\underline{\operatorname{Centr}}_G(Q)\) is critical.
-
-\item[\textup{(ii)}] For every subgroup \(H\) of \(G\) of type
-\textup{(R)} with reductive fibers, \(\operatorname{rad}(H)\) is a
-\(C\)-critical torus of \(G\).
-
-\item[\textup{(iii)}] The maps
+{\itshape For every subtorus \(Q\) of \(G\),
+\(\underline{\operatorname{Centr}}_G(Q)\) is critical. For every
+subgroup \(H\) of \(G\) of type \textup{(R)} with reductive fibers,
+\(\operatorname{rad}(H)\) is a critical torus of \(G\). The maps
 \[
   Q\longmapsto\underline{\operatorname{Centr}}_G(Q),
   \qquad
   H\longmapsto\operatorname{rad}(H)
 \]
-are mutually inverse bijections between the set of \(C\)-critical
-tori of \(G\) and the set of its critical reductive subgroups of
-type \textup{(R)}.
-
-\item[\textup{(iv)}] If \(Q\) is a torus of \(G\), then
-\[
-  \operatorname{rad}\bigl(
-    \underline{\operatorname{Centr}}_G(Q)\bigr)
-\]
-is the smallest \(C\)-critical torus of \(G\) containing \(Q\).
-
-\item[\textup{(v)}] If \(H\) is a reductive subgroup of \(G\) of
-type \textup{(R)}, then
-\[
-  \underline{\operatorname{Centr}}_G\bigl(\operatorname{rad}(H)\bigr)
-\]
+are mutually inverse isomorphisms between the set of critical tori of
+\(G\) and the set of its critical reductive subgroups of type
+\textup{(R)}. If \(Q\) is a torus of \(G\),
+\(\operatorname{rad}\bigl(\underline{\operatorname{Centr}}_G(Q)\bigr)\)
+is the smallest critical torus of \(G\) containing \(Q\). If \(H\) is a
+reductive subgroup of \(G\) of type \textup{(R)},
+\(\underline{\operatorname{Centr}}_G\bigl(\operatorname{rad}(H)\bigr)\)
 is the smallest critical reductive subgroup of \(G\) of type
-\textup{(R)} containing \(H\).
-\end{enumerate}
-
-\SGARefTarget{sga3:xxii:rem:5.10.5.1}
-\paragraph{\SGARefLink{sga3:xxii:rem:5.10.5.1}{Remark 5.10.5.1}.}
-\textup{(58)}
-\begin{enumerate}
-\item[\textup{1)}] A torus \(T\) of \(G\) is a critical subgroup of
-\(G\) if and only if it is a maximal torus.
-\item[\textup{2)}] Henceforth, ``critical torus'' means
-``\(C\)-critical torus''.
-\end{enumerate}
+\textup{(R)} containing \(H\).}
 
 \SGARefTarget{sga3:xxii:prop:5.10.6}
 \paragraph{\SGARefLink{sga3:xxii:prop:5.10.6}{Proposition 5.10.6}.}
@@ -5746,7 +5685,7 @@ system of simple roots of \(R'\) is the intersection with \(R'\) of
 a system of simple roots of \(R\).
 \end{enumerate}}
 
-Indeed, by \SGARefLink{sga3:XXI:3.4.8}{Exposé XXI, 3.4.8}, conditions \textup{\SGARefLink{sga3:XXI:3.4.8:item:ii}{(ii)}} and
+Indeed, by \SGARefLink{sga3:XXI:3.4.8}{Exposé XXI, 3.4.8}, conditions \textup{(ii)} and
 \textup{\SGARefLink{sga3:xxii:prop:5.10.6:item:iii}{(iii)}} are equivalent; they are also equivalent to the
 condition that \(R'\) be the intersection of \(R\) with a
 \(\mathbf Q\)-vector subspace of \(M\otimes\mathbf Q\). This last
@@ -5859,8 +5798,8 @@ group subscheme \(H\) of \(G\) is said to be \emph{of type
 \textup{(RC)}} if it is of type \textup{(R)}, that is, if it
 satisfies the following two conditions from \SGARefLink{sga3:xxii:def:5.2.1}{5.2.1}:
 \begin{enumerate}
-\item[\textup{(i)}] \(H\) is smooth over \(S\), with connected
-fibers;
+\item[\textup{(i)}] \(H\) is smooth and of finite presentation over
+\(S\), with connected fibers;
 
 \item[\textup{(ii)}] for every \(s\in S\), \(H_{\bar s}\) contains
 a maximal torus of \(G_{\bar s}\);
@@ -5897,11 +5836,11 @@ Then \(R_1\) and \(R_2\) are closed. Consider the groups
 \(H_{R_1}\).
 
 \item[\textup{\SGAInlineRefTarget{sga3:xxii:lem:5.11.3:item:ii}(ii)}] The group \(H_{R_1}\) is reductive, and
-\(U_{R_2}\) has connected unipotent geometric fibers. Every normal
-subgroup scheme of \(H_{R'}\) that is smooth over \(S\) and has
-connected unipotent geometric fibers is contained in \(U_{R_2}\).
-Every reductive subgroup of \(H_{R'}\) that contains \(T\) is
-contained in \(H_{R_1}\).
+\(U_{R_2}\) has unipotent geometric fibers. Every normal subgroup
+scheme of \(H_{R'}\) that is smooth and of finite presentation over
+\(S\), with connected unipotent geometric fibers, is contained in
+\(U_{R_2}\), and every reductive subgroup of \(H_{R'}\) that contains
+\(T\) is contained in \(H_{R_1}\).
 
 \item[\textup{\SGAInlineRefTarget{sga3:xxii:lem:5.11.3:item:iii}(iii)}]
 \[
@@ -5941,8 +5880,8 @@ section \(w\) such that
 thus \(-\alpha\in R''\), a contradiction.
 
 Finally, if \(L\) is a reductive subgroup of \(H_{R'}\) containing
-\(T\), locally one has \(L=H_{R'''}\), where \(R'''\) is symmetric
-and contained in \(R'\); hence \(R'''\subset R_1\).
+\(T\), locally one has \(L=H_{R'''}\), where \(R'''\) is symmetric,
+hence contained in \(R_1\).
 \hfill\(\square\)
 
 \SGARefTarget{sga3:xxii:prop:5.11.4}
@@ -5998,28 +5937,27 @@ conditions. Finally,
 in particular, \(W_H(T)\) is finite over \(S\).}
 
 \textit{Proof.}
-First observe that \textup{\SGARefLink{sga3:xxii:prop:5.11.4:item:i}{(i)}} is local for the étale topology.
-Thus, by \SGARefLink{sga3:xxii:cor:5.3.18}{Corollary 5.3.18}, \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:i}{(i)}} follows from the last
-assertion of \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:iii}{(iii)}}.
+By \SGARefLink{sga3:xxii:cor:5.3.18}{5.3.18}, \textup{(i)}, which is local for the étale topology, is
+a consequence of the last assertion of \textup{(iii)}.
 
-The assertions of \textup{\SGARefLink{sga3:xxii:cor:5.3.18:item:ii}{(ii)}} are local for the étale topology.
+The assertions of \textup{(ii)} are local for the étale topology.
 We may therefore suppose ourselves in the situation of \SGARefLink{sga3:xxii:lem:5.11.3}{5.11.3},
 where they follow immediately from \textup{\SGARefLink{sga3:xxii:lem:5.11.3:item:i}{(i)}} and \textup{\SGARefLink{sga3:xxii:lem:5.11.3:item:ii}{(ii)}}.
 
 By virtue of the uniqueness assertions contained there,
-\textup{\SGARefLink{sga3:xxii:lem:5.11.3:item:iii}{(iii)}} is likewise local for the étale topology, and we may
+\textup{(iii)} is likewise local for the étale topology, and we may
 again reduce to the situation of \SGARefLink{sga3:xxii:lem:5.11.3}{5.11.3}, where properties
 \textup{\SGARefLink{sga3:xxii:prop:5.11.4:item:a}{(a)}} and \textup{\SGARefLink{sga3:xxii:prop:5.11.4:item:b}{(b)}} have been verified. The uniqueness of
 an \(L\) satisfying \textup{\SGARefLink{sga3:xxii:prop:5.11.4:item:a}{(a)}} is immediate; in view of
 \textup{\SGARefLink{sga3:xxii:prop:5.11.4:item:a}{(a)}}, the uniqueness of an \(L\) satisfying \textup{\SGARefLink{sga3:xxii:prop:5.11.4:item:b}{(b)}}
-is clear. The equality
+is clear. The relation
 \[
   \underline{\operatorname{Norm}}_H(L)=L
 \]
 is precisely \SGARefLink{sga3:xxii:lem:5.11.3:item:iii}{5.11.3(iii)}. If a section of \(H\) normalizes \(T\),
 then it normalizes \(L\), by the uniqueness of \(L\), and hence is
 a section of \(L\) by what we have just proved. This proves the
-second equality; the third is then immediate.
+second relation; the third is then trivial.
 
 \SGARefTarget{sga3:xxii:prop:5.11.5}
 \paragraph{\SGARefLink{sga3:xxii:prop:5.11.5}{Proposition 5.11.5}.}
@@ -6042,24 +5980,23 @@ surjective, and has connected geometric fibers, with the following
 property:
 
 For every \(S'\to S\) and all
-\(H,H'\in\mathcal H_c(S')\), one has
-\(\operatorname{cl}(H)=\operatorname{cl}(H')\) if and only if
-\(H\) and \(H'\) are conjugate in \(G\) locally for the étale
-topology \textup{(or, equivalently by \SGARefLink{sga3:xxii:cor:5.3.11}{5.3.11}, if for every
-\(s\in S\), \(H_{\bar s}\) and \(H'_{\bar s}\) are conjugate by an
-element of \(G(\bar s)\))}.
+\(H,H'\in\mathcal H_c(S')\), \(H\) and \(H'\) are conjugate in \(G\)
+\textup{(locally for the étale topology, or
+\textup{(\SGARefLink{sga3:xxii:cor:5.3.11}{5.3.11})} on the geometric fibers)} if and only if
+\(\operatorname{cl}(H)=\operatorname{cl}(H')\).
 
 \item[\textup{\SGAInlineRefTarget{sga3:xxii:prop:5.11.5:item:iii}(iii)}] \(\mathcal C\ell_c\) and
 \(\operatorname{cl}\) are determined \textup{(up to a unique
 isomorphism)} by the preceding conditions.
 
-\item[\textup{\SGAInlineRefTarget{sga3:xxii:prop:5.11.5:item:iv}(iv)}] If \((G,T,M,R)\) is a splitting of \(G\), let
-\(E\) be the set of conjugacy classes modulo \(W\) of closed
-subsets of \(R\). Then there is an isomorphism
+\item[\textup{\SGAInlineRefTarget{sga3:xxii:prop:5.11.5:item:iv}(iv)}] If \((G,T,M,R)\) is a splitting of \(G\), there
+exists an isomorphism
 \[
   \mathcal C\ell_c\xrightarrow{\;\sim\;}E_S
 \]
-such that, for every closed subset \(R'\) of \(R\),
+\textup{(where \(E_S\) is the constant scheme defined by the set \(E\)
+of conjugacy classes modulo \(W\) of closed subsets of \(R\))} such
+that, for every closed subset \(R'\) of \(R\),
 \(\operatorname{cl}(H_{R'})\) corresponds to the canonical image
 of \(R'\) in
 \[
@@ -6221,7 +6158,7 @@ of \(V(R^*)\) under the duality between \(V\) and \(V^*\))}.
 \[
   \operatorname{rad}(G)\times_S T'\longrightarrow T,
 \]
-is an isogeny \textup{(cf.\ \SGARefLink{sga3:xxii:def:4.2.9}{4.2.9})}.}
+is an isogeny.}
 
 Indeed, the canonical homomorphism
 \[
@@ -6361,7 +6298,10 @@ We may then write
   \subset\Omega',
 \end{aligned}
 \]
-by \SGARefLink{sga3:xxii:lemma:6.1.4}{6.1.4}. We now take
+by \SGARefLink{sga3:xxii:lemma:6.1.4}{6.1.4}.\footnote{Translator's note: the 1970 text has an equality sign in
+place of the first inclusion of this chain; only the inclusion holds in
+general, and it is all that is used. The Gille--Polo re-edition (2011),
+Exposé~XXII, writes the inclusion.} We now take
 \[
   V_w=\operatorname{int}(n_\alpha)V_{w'}\cap\Omega,
 \]
@@ -6375,14 +6315,14 @@ containing the unit section, such that for every \(S'\to S\),
   U(S')U^-(S')\cap V_0(S')\subset\Omega'(S').
 \]}
 
-Let \(n_0\) be an element of
-\(\underline{\operatorname{Norm}}_G(T)(S)\) lifting the symmetry
-\(w_0\) of the Weyl group, that is, such that
+Indeed, let \(n_0\) be an element of
+\(\underline{\operatorname{Norm}}_G(T)(S)\) lifting the symmetry of
+the Weyl group, with \(n_0^2\in T(S)\), that is, such that
 \[
   \operatorname{int}(n_0)U=U^-
-  \qquad\text{\textup{(cf.\ \SGARefLink{sga3:XXI:3.6.14}{Exposé XXI, 3.6.14})}}.
+  \qquad\text{\textup{(\SGARefLink{sga3:XXI:3.6.14}{Exposé XXI, 3.6.14})}}.
 \]
-Then \(n_0^2\in T(S)\). We show that the open subscheme
+We show that the open subscheme
 \(V_0=V_{n_0}\) of \SGARefLink{sga3:xxii:lemma:6.1.5}{6.1.5} has the required property. Indeed,
 \[
 \begin{aligned}
@@ -6470,24 +6410,29 @@ have
 \[
   \operatorname{Ker}(f)\cap\Omega=\Omega',
 \]
-which proves that \(\operatorname{Ker}(f)\) is smooth over \(S\)
-at every point of the unit section.
-By \SGARefLink{sga3:xxii:prop:5.6.9}{5.6.9}\textup{\SGARefLink{sga3:xxii:prop:5.6.9:item:ii}{(ii)}}, every morphism
-\(\phi\) from \(G\) to an \(S\)-presheaf of commutative groups
-that is separated for the fppf topology vanishes on \(U\) and on
-\(U^-\). By \SGARefLink{sga3:xx:2.7}{Exposé XX, 2.7}, \(\phi\) also vanishes on \(T'\), and
-hence on \(\Omega'\). Using the notation of \SGARefLink{sga3:xxii:prop:5.7.10}{5.7.10}, we see that the
-monoid \(U_1\) is contained in \(\operatorname{Ker}(f)(S)\), which
-shows that
+which proves that \(\operatorname{Ker}(f)\) is smooth over \(S\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, says
+``smooth over \(S\) at every point of the unit section'' here and concludes
+at the end, from the connectedness of the fibres, with
+\SGARefLink{thm:sga3-VIB-3.10}{Exposé~VI\textsubscript{B}, 3.10}. As printed, smoothness at every point follows from the
+covering below: each \(u\Omega'\), \(u\in U_1\), is an open subscheme of
+\(\operatorname{Ker}(f)\) isomorphic to
+\(\Omega'\simeq U^-\times_S T'\times_S U\), which is smooth over \(S\).}
+Every morphism \(\phi\) from \(G\) to an \(S\)-presheaf of
+commutative groups that is separated for the fppf
+topology\footnote{Translator's note: the 1970 text has ``dans un préschéma en
+groupes commutatif séparé''; the statement, and \SGARefLink{sga3:xxii:prop:5.6.9}{5.6.9}~(ii), concern
+presheaves separated for the fppf topology, as in the Gille--Polo re-edition
+(2011), Exposé~XXII.} vanishes on \(U\) and on \(U^-\), by \SGARefLink{sga3:xxii:prop:5.6.9}{5.6.9}\textup{\SGARefLink{sga3:xxii:prop:5.6.9:item:ii}{(ii)}}. It therefore also
+vanishes on \(T'\), by \SGARefLink{sga3:xx:2.7}{Exposé XX, 2.7}, and hence on \(\Omega'\). Using the
+notation of \SGARefLink{sga3:xxii:prop:5.7.10}{5.7.10}, we see that
+\(U_1\subset\operatorname{Ker}(f)(S)\), which shows that
 \[
   \operatorname{Ker}(f)
   =
-  \bigcup_{u\in U_1}u\Omega'.
+  \bigcup_{u\in U_1}u\Omega',
 \]
-It follows, on the one hand, that every \(\phi\) as above vanishes
-on \(\operatorname{Ker}(f)\), and, on the other hand, that
-\(\operatorname{Ker}(f)\) has connected fibers and is therefore
-smooth over \(S\), by Exposé \(\mathrm{VI_B}\), 3.10.
+hence that \(\operatorname{Ker}(f)\) has connected fibers and that
+every \(\phi\) as above vanishes on \(\operatorname{Ker}(f)\).
 
 \SGARefTarget{sga3:xxii:section:6.2}
 \subsection*{\SGAInlineRefTarget{sga3:xxii:subsection:6-2}6.2. The Derived Group of a Reductive Group}
@@ -6521,7 +6466,7 @@ type at \(s\in S\) is}
   \mathrm D_S\bigl(\mathrm D_S(G)\bigr),
 \]
 \textit{which is therefore an \(S\)-torus. The biduality morphism
-\textup{(cf.\ Exposé VIII, \S1)}}
+\textup{(Exposé VIII, \S1)}}
 \[
   f_0:G\longrightarrow\operatorname{corad}(G)
 \]
@@ -6533,7 +6478,7 @@ type at \(s\in S\) is}
   \operatorname{rad}(G)\longrightarrow G
   \longrightarrow\operatorname{corad}(G)
 \]
-\textit{is an isogeny \textup{(cf.\ \SGARefLink{sga3:xxii:def:4.2.9}{4.2.9})}.}
+\textit{is an isogeny.}
 
 \item[\textup{(iv)}]
 \textit{The kernel of \(f_0\), denoted}
@@ -6580,45 +6525,36 @@ which indeed implies that the fibers of \(\operatorname{der}(G)\)
 are semisimple.
 
 \SGARefTarget{sga3:xxii:rem:6.2.2}
-\paragraph{\SGARefLink{sga3:xxii:rem:6.2.2}{Remark 6.2.2}.}
+\paragraph{\SGARefLink{sga3:xxii:rem:6.2.2}{Remarks 6.2.2}.}
 \SGAInlineRefTarget{sga3:xxii:rem:6.2.2:item:a}\textup{a)} By construction, when \(G\) is split,
 \(\operatorname{der}(G)\) is the fppf subsheaf of \(G\) generated
-by the \(U_\alpha\), \(\alpha\in R\). It even suffices to take the
-\(U_\alpha\), \(\alpha\in\Delta\cup-\Delta\), where \(\Delta\) is
-a base of \(R\).
+by the \(U_\alpha\), \(\alpha\in R\). (It even suffices to take the
+\(U_\alpha\), \(\alpha\in\Delta\cup(-\Delta)\).)
 
-\textup{b)}\footnote{Editor's note: In what follows, we have
-expanded the original and removed the assertion that
-``\(\operatorname{der}(G)\) is the fppf-separated presheaf of
-commutators of \(G\).''}
-Let \(C\) be the presheaf of commutators of \(G\), that is, the
-\(S\)-functor in groups that assigns to every \(S'\to S\) the
-commutator subgroup of \(G(S')\) (that is, the subgroup of
-\(G(S')\) generated by the elements
-\(xyx^{-1}y^{-1}\), for \(x,y\in G(S')\)), and let
-\(\widetilde C\) be the associated fppf sheaf. Since the quotient
-\(G/\operatorname{der}(G)=T/T'\) is commutative,
-\(\operatorname{der}(G)\) contains \(C\), and hence
-\(\widetilde C\) \textup{(cf.\ \SGARefLink{sga3:iv:corollary:4:3:12}{Exposé IV, 4.3.12})}.
-
-On the other hand, the quotient presheaf \(G/\widetilde C\) is
-separated \textup{(\SGARefLink{sga3:iv:lemma:4:4:8:1}{Exposé IV, 4.4.8.1})}, and therefore, by
-\textup{(v)}, we have
-\(\operatorname{der}(G)\subset\widetilde C\). Thus
-\(\operatorname{der}(G)=\widetilde C\); in other words,
-\(\operatorname{der}(G)\) is the fppf sheaf of commutators of
-\(G\).
-
-Let us finally note that, since \(C\) is a subpresheaf of \(G\),
-it is separated, but it is not equal to
-\(\operatorname{der}(G)\) in general: for example,
+\textup{b)} By \textup{(v)}, \(\operatorname{der}(G)\) is indeed the fppf
+sheaf of commutators of \(G\).\footnote{Translator's note: the 1970 text
+continues ``(et même le préfaisceau séparé (fppf) \dots)''. The Gille--Polo
+re-edition (2011), Exposé~XXII, drops this parenthesis and details b). In our
+words: let \(C\) be the presheaf of commutators of \(G\) (\(C(S')\) is the
+commutator subgroup of \(G(S')\)) and \(\widetilde C\) the associated fppf
+sheaf. As \(\operatorname{corad}(G)\) is commutative,
+\(C\subset\operatorname{der}(G)\), hence
+\(\widetilde C\subset\operatorname{der}(G)\)
+(\SGARefLink{sga3:iv:corollary:4:3:12}{Exposé IV, 4.3.12}); the quotient presheaf \(G/\widetilde C\) is commutative and
+separated (\SGARefLink{sga3:iv:lemma:4:4:8:1}{Exposé IV, 4.4.8.1}), so \(\operatorname{der}(G)\subset\widetilde C\) by
+\textup{(v)}. The presheaf \(C\) itself is separated, being a subpresheaf of
+\(G\), but it differs from \(\operatorname{der}(G)\) in general:
 \(\operatorname{der}(\mathrm{SL}_2)=\mathrm{SL}_2\), whereas
-\(\mathrm{SL}_2(\mathbb F_2)\simeq\mathfrak S_3\) is not equal
-to its commutator subgroup.
+\(\mathrm{SL}_2(\mathbf F_2)\simeq\mathfrak S_3\) is not its own commutator
+subgroup.}
 
-\textup{c)} When \(S\) is the spectrum of an algebraically closed
+\textup{c)} When \(S\) is the spectrum of the algebraically closed
 field \(k\), \(\operatorname{der}(G)(k)\) is the commutator
-subgroup of \(G(k)\) \textup{(Exposé \(\mathrm{VI_B}\), 7.10)}.
+subgroup of \(G(k)\) \textup{(Exposé VI)}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, gives the
+precise reference, \SGARefLink{cor:sga3-VIB-7.10}{Exposé~VI\textsubscript{B}, 7.10}: over an algebraically closed field
+\(k\), the \(k\)-points of the commutator subgroup \((G,G)\) of \(G\), which
+by b) is \(\operatorname{der}(G)\), form the commutator subgroup of
+\(G(k)\).}
 
 \SGARefTarget{sga3:xxii:par:6.2.3}
 \paragraph{\SGARefLink{sga3:xxii:par:6.2.3}{6.2.3}.}
@@ -6641,8 +6577,12 @@ multiplication in \(G\) defines a group morphism
   u:\operatorname{rad}(G)\times_S\operatorname{der}(G)
   \longrightarrow G,
 \]
-which is covering by \SGARefLink{sga3:xxii:thm:6.2.1}{6.2.1}\textup{\SGARefLink{sga3:xxii:thm:6.2.1:item:iii}{(iii)}}, and hence surjective and
-flat \textup{(Exposé \(\mathrm{VI_B}\), 9.2\textup{(xi)})}.
+which is covering by \SGARefLink{sga3:xxii:thm:6.2.1}{6.2.1}\textup{\SGARefLink{sga3:xxii:thm:6.2.1:item:iii}{(iii)}}, hence surjective, hence
+flat \textup{(Exposé VI)}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, gives the precise
+reference, \SGARefLink{prop:sga3-VIB-9.2}{Exposé~VI\textsubscript{B}, 9.2}~(xi), with the argument: \(G\) is the fppf
+quotient of \(\operatorname{rad}(G)\times_S\operatorname{der}(G)\) by
+\(\operatorname{Ker}(u)\), which is of multiplicative type, hence flat over
+\(S\); so \(u\) is flat.}
 Its kernel is isomorphic to
 \(\operatorname{rad}(G)\cap\operatorname{der}(G)\), which is also
 the kernel of
@@ -6720,7 +6660,10 @@ Since the characters induced on \(T'\) by the
 \(\alpha\in R\) are nonzero and distinct
 \textup{(\SGARefLink{sga3:XXI:1.2.5}{Exposé XXI, 1.2.5}---which we already used in \SGARefLink{sga3:xxii:lemma:6.1.2}{6.1.2})},
 \(R\) is a root system of \(\operatorname{der}(G)\) relative to
-\(T'\). It is then immediate \textup{(since
+\(T'\).\footnote{Translator's note: the 1970 text has ``R est un système de
+racines de G par rapport à T''; the characters in question are those induced
+on \(T'\), and the conclusion concerns \(\operatorname{der}(G)\), as in the
+Gille--Polo re-edition (2011), Exposé~XXII.} It is then immediate \textup{(since
 \(U_\alpha\subset\operatorname{der}(G)\))} that the
 \(\exp\)-morphisms of \(\operatorname{der}(G)\) ``are'' those of
 \(G\), and likewise for the coroots.
@@ -6796,7 +6739,7 @@ is a maximal torus of \(G\), then
   \underline{\operatorname{Centr}}_G
     \bigl(T\cap\operatorname{der}(G)\bigr).
 \]
-The first equality is immediate \textup{(since we may reduce to
+The first assertion is trivial \textup{(since we may reduce to
 the split case)}; the second follows at once, because
 \(\operatorname{rad}(G)\) is central in \(G\), and hence
 \[
@@ -6840,36 +6783,26 @@ maps \(H\) onto a subsheaf \(f_0(H)\) of
 \]
 
 Since \(\operatorname{der}(G)\) is smooth over \(S\) with
-connected fibers,\footnote{Editor's note:
-We have expanded the original in what follows. In particular, we
-have added the conclusion, implicit in the original, that every
-subgroup of \(G\) that is smooth with connected fibers and contains
-\(\operatorname{der}(G)\) is closed in \(G\).} it follows from
-\SGARefLink{sga3:iv:proposition:5:3:1}{Exposé IV, 5.3.1} and \SGARefLink{sga3:xxii:par:6.3.1}{6.3.1}, and Exposé \(\mathrm{IV_B}\), 9.2,
-that the assignment
-\[
-  H\longmapsto f_0(H)
-\]
-establishes a bijective correspondence between the group
-subschemes \textup{(respectively, the closed group subschemes)} of
-\(G\) that contain \(\operatorname{der}(G)\), are smooth over
-\(S\), and have connected fibers, and the group subschemes
-\textup{(respectively, the closed group subschemes)} of
-\(\operatorname{corad}(G)\) that are smooth over \(S\) and have
-connected fibers.
-
-Now, if \(H'\) is a group subscheme of
-\(\operatorname{corad}(G)\), smooth over \(S\) with connected
-fibers, then \(H'\) is of finite presentation over \(S\)
-\textup{(Exposé \(\mathrm{VI_B}\), \SGARefLink{sga3:xxii:subsection:5-5}{5.5})}, and its fibers are tori
-\textup{(because those of \(\operatorname{corad}(G)\) are)}.
-Hence, by \SGARefLink{sga3:x:corollary:8-2}{Exposé X, 8.2}, \(H'\) is a subtorus of
-\(\operatorname{corad}(G)\), and is therefore closed in
-\(\operatorname{corad}(G)\) \textup{(\SGARefLink{sga3:ix:remark:2:6}{Exposé IX, 2.6})}.
-
-Consequently, every subgroup of \(G\) that is smooth with
-connected fibers and contains \(\operatorname{der}(G)\) is closed
-in \(G\).
+connected fibers, \(H\mapsto f_0(H)\) establishes a one-to-one
+correspondence between closed \textup{(respectively, retrocompact)}
+group subschemes of \(G\) containing \(\operatorname{der}(G)\),
+smooth over \(S\) and with connected fibers, and closed
+\textup{(respectively, retrocompact)} group subschemes of
+\(\operatorname{corad}(G)\), smooth over \(S\) and with connected
+fibers. Now \(\operatorname{corad}(G)\) is a torus; hence a group
+subscheme of \(\operatorname{corad}(G)\) that is smooth, with
+connected fibers, and retrocompact is a subtorus of it
+\textup{(\SGARefLink{sga3:x:corollary:8-2}{Exposé X, 8.2})}, and is therefore closed in
+\(\operatorname{corad}(G)\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, details this paragraph
+and drops the retrocompactness conditions. In our words: the correspondence
+follows from Noether's theorems (\SGARefLink{sga3:iv:proposition:5:3:1}{Exposé IV, 5.3.1} and \SGARefLink{sga3:iv:proposition:6:3:1}{6.3.1}) and
+\SGARefLink{prop:sga3-VIB-9.2}{Exposé~VI\textsubscript{B}, 9.2}. A group subscheme \(H'\) of \(\operatorname{corad}(G)\),
+smooth over \(S\) with connected fibres, is of finite presentation over \(S\)
+(\SGARefLink{cor:sga3-VIB-5.5}{Exposé~VI\textsubscript{B}, 5.5}) with tori as fibres, hence a subtorus (Exposé X, 8.2), hence
+closed in \(\operatorname{corad}(G)\) (\SGARefLink{sga3:ix:remark:2:6}{Exposé IX, 2.6}). Consequently every subgroup
+\(H\) of \(G\), smooth over \(S\) with connected fibres and containing
+\(\operatorname{der}(G)\), is closed in \(G\), being equal to
+\(f_0^{-1}(f_0(H))\).}
 
 \SGARefTarget{sga3:xxii:par:6.3.2}
 \paragraph{\SGARefLink{sga3:xxii:par:6.3.2}{6.3.2}.}
@@ -6888,8 +6821,11 @@ We have therefore proved the following proposition.
 \textit{Let \(G\) be a reductive \(S\)-group. Every group
 subscheme \(H\) of \(G\) that is normal in \(G\), has commutative
 quotient \textup{(that is, contains
-\(\operatorname{der}(G)\))}, is smooth over \(S\), and has
-connected fibers}
+\(\operatorname{der}(G)\))}, is smooth over \(S\), has connected
+fibers, and is retrocompact in \(G\)}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXII, deletes the
+hypothesis that \(H\) be retrocompact in \(G\), which is automatic: by
+\SGARefLink{cor:sga3-VIB-5.5}{Exposé~VI\textsubscript{B}, 5.5}, \(G\) and \(H\) are separated and quasi-compact over \(S\),
+so \(H\to G\) is quasi-compact (EGA~IV\textsubscript{1}, 1.1.2~(v)).}
 \textit{is closed and reductive. We have}
 \[
   \operatorname{der}(H)=\operatorname{der}(G),
@@ -6905,16 +6841,15 @@ connected fibers}
   \bigl(H\cap\operatorname{rad}(G)\bigr)
   \cdot\operatorname{der}(G).
 \]
-\textit{Moreover, the assignment \(H\mapsto f_0(H)\) defines a
-bijection between the set of subgroups \(H\) of \(G\) having the
+\textit{Moreover, the assignment \(H\mapsto f_0(H)\) defines an
+isomorphism between the set of subgroups \(H\) of \(G\) having the
 preceding properties and the set of subtori of
 \(\operatorname{corad}(G)\).}\footnote{Translator's note: The French
 source prints \(\operatorname{corad}(H)\) here; the codomain of
 \(f_0\) and the preceding correspondence require
 \(\operatorname{corad}(G)\).}
 
-By another application of Noether's theorem \textup{(\SGARefLink{sga3:iv:proposition:5:3:1}{Exposé IV,
-5.3.1} and \SGARefLink{sga3:xxii:par:6.3.1}{6.3.1})}, we deduce the following.
+By another application of Noether's theorem, we deduce the following.
 
 \SGARefTarget{sga3:xxii:prop:6.3.4}
 \paragraph{\SGARefLink{sga3:xxii:prop:6.3.4}{Proposition 6.3.4}.}
@@ -6930,41 +6865,9 @@ the intended group is \(H\).}
   \qquad
   H=(T\cap H)\cdot\operatorname{der}(G).
 \]
-\textit{Moreover, the assignment \(H\mapsto T\cap H\) is a
-bijection between the set of subgroups \(H\) of \(G\) as above
+\textit{Moreover, the assignment \(H\mapsto T\cap H\) is an
+isomorphism between the set of subgroups \(H\) of \(G\) as above
 and the set of subtori of \(T\) containing
 \(T\cap\operatorname{der}(G)\).}
 
-\clearpage
-\SGARefTarget{sga3:xxii:bibliography}
-\section*{Bibliography}
-\addcontentsline{toc}{section}{Bibliography}
 
-\begin{description}
-\SGARefTarget{sga3:xxii:bib:BLie}
-\item[{[BLie]}]
-N.~Bourbaki, \emph{Groupes et algèbres de Lie}, Chapters
-IV--VI, Hermann, 1968.
-
-\SGARefTarget{sga3:xxii:bib:Ch05}
-\item[{[Ch05]}]
-C.~Chevalley, \emph{Classification des groupes algébriques
-semi-simples} \textup{(with the collaboration of P.~Cartier,
-A.~Grothendieck, and M.~Lazard)}, \emph{Collected Works},
-vol.~3, Springer, 2005.
-
-\SGARefTarget{sga3:xxii:bib:DG70}
-\item[{[DG70]}]
-M.~Demazure and P.~Gabriel, \emph{Groupes algébriques},
-Masson \& North-Holland, 1970.
-
-\SGARefTarget{sga3:xxii:bib:Gi71}
-\item[{[Gi71]}]
-J.~Giraud, \emph{Cohomologie non abélienne},
-Springer-Verlag, 1971.
-
-\SGARefTarget{sga3:xxii:bib:Se64}
-\item[{[Se64]}]
-J.-P.~Serre, \emph{Cohomologie galoisienne},
-Springer-Verlag, 1964; 5th ed., 1994.
-\end{description}
