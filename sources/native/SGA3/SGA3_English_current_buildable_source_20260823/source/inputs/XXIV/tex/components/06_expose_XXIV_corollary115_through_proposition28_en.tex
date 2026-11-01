@@ -1,4 +1,4 @@
-Now consider the reductive \(k\)-group
+Indeed, consider the reductive \(k\)-group
 \[
   H=G\times_k\mathbb G_{m,k}.
 \]
@@ -16,76 +16,68 @@ Indeed, the \(H^i(H,-)\) are the derived functors of
   =H^0\bigl(G,H^0(\mathbb G_{m,k},-)\bigr),
 \]
 and the functor \(H^0(\mathbb G_{m,k},-)\) is exact
-(cf.\ \SGARefLink{sga3:i:theorem:5-3-1}{Exp.~I, 5.3.1} and \SGARefLink{sga3:i:theorem:5-3-3}{5.3.3}). In particular, for every \(i\),
+(cf.\ \SGARefLink{sga3:i:section:5}{Exp.~I, no.~5}). In particular, for \(i>0\),
 \[
   H^i(H,\Lie(H/k))
   =
   H^i(G,\Lie(G/k))\oplus H^i(G,k).
 \]
-Applying \SGARefLink{sga3:xxiv:1.13:item:ii}{1.13(ii)} to the reductive group \(H\) gives
-\(H^2(G,k)=0\).
+One then concludes by applying \SGARefLink{sga3:xxiv:1.13}{1.13} to the reductive group \(H\).\footnote{Translator's
+note: as 1.13~(i) holds only for adjoint groups and \(H\) is not adjoint, this argument gives
+\(H^2(G,k)=0\), by 1.13~(ii), but not \(H^1(G,k)=0\). The Gille--Polo re-edition (2011),
+Exposé~XXIV, proves the latter differently; see the addition below.}
 
-\SGARefTarget{sga3:xxiv:1.15.1}
-\medskip\noindent\textbf{Corollary 1.15.1.} ---
-\footnote{Editor's note: This corollary, drawn from remarks of
-O.~Gabber, has been added to make \SGARefLink{sga3:xxiv:1.13:item:i}{1.13(i)} more precise.}
-{\itshape Let \(k\) be a field, \(G\) a reductive \(k\)-group, \(Z\)
-its center, and \(\mathscr R=(M,M^*,R,R^*)\) the type of \(G\). Then
-\[
-  H^1(G,\Lie(G/k))
-  \simeq
-  \operatorname{Ext}^1_{\mathbb Z}(M/\Gamma_0(R),k).
-\]
-In particular, \(H^1(G,\Lie(G/k))=0\) if and only if \(Z\) is smooth
-over \(k\).}
+\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~XXIV; our formulation). The
+re-edition proves the vanishing of \(H^1(G,k)\) differently, and adds a corollary (1.15.1 there),
+drawn from remarks of O.~Gabber, which says exactly when \(H^1(G,\Lie(G/k))\) vanishes.
 
-Let \(\mathfrak g\), \(\mathfrak z\), and
-\(\mathfrak g_{\mathrm{ad}}\) be the Lie algebras of \(G\), \(Z\), and
-\(G_{\mathrm{ad}}=G/Z\), respectively. It follows from \SGARefLink{sga3:xxiv:1.15}{1.15} and its
-proof that
-\[
-  H^1(G,\mathfrak g)
-  =
-  H^1(G_{\mathrm{ad}},\mathfrak g)
-  \simeq
-  H^1(G_{\mathrm{ad}},\mathfrak g/\mathfrak z).
-\]
-Set \(C=\operatorname{Coker}(\mathfrak g\to
-\mathfrak g_{\mathrm{ad}})\). There is an exact sequence
-\[
-  0\longrightarrow\mathfrak g/\mathfrak z
-  \longrightarrow\mathfrak g_{\mathrm{ad}}
-  \longrightarrow C\longrightarrow0.
-\]
-Since \(H^1(G_{\mathrm{ad}},\mathfrak g_{\mathrm{ad}})=0\) by \SGARefLink{sga3:xxiv:1.13}{1.13}
-and
-\[
-  H^0(G_{\mathrm{ad}},\mathfrak g_{\mathrm{ad}})=0
-\]
-(cf.\ \SGARefLink{sga3:ii:theorem:5-2-3}{Exp.~II, 5.2.3}), we obtain
-\[
-  H^1(G_{\mathrm{ad}},\mathfrak g/\mathfrak z)
-  \simeq H^0(G_{\mathrm{ad}},C).
-\]
-To calculate the right-hand side, we may assume \(k\) algebraically
-closed. Let \((G,T,M,R)\) be a splitting of \(G\). Then
-\[
-  Z=D_k(M/\Gamma_0(R))
-\]
-and \(C\) is identified with
-\[
-  \operatorname{Coker}\!\left(
-    \operatorname{Hom}_{\mathbb Z}(M,k)
-    \longrightarrow
-    \operatorname{Hom}_{\mathbb Z}(\Gamma_0(R),k)
-  \right)
-  \simeq
-  \operatorname{Ext}^1_{\mathbb Z}(M/\Gamma_0(R),k),
-\]
-with trivial \(G_{\mathrm{ad}}\)-action. The corollary follows, since
-\(Z\) is not smooth over \(k\) exactly when
-\(\operatorname{char}(k)=p>0\) and \(M/\Gamma_0(R)\) has
-\(p\)-torsion (\SGARefLink{sga3:ix:proposition:2:1}{Exp.~IX, 2.1}).
+(a) \emph{One has \(H^1(G,k)=0\).} As \(G\) acts trivially on \(k\), \(H^1(G,k)\) is the group of
+homomorphisms of \(k\)-groups \(\varphi\colon G\to\mathbb G_{a,k}\). To show that such a
+\(\varphi\) is zero, we may extend scalars to an algebraic closure of \(k\), and so assume \(G\)
+split, with maximal torus \(T\). Since \(\operatorname{Hom}(\mathbb G_m,\mathbb G_a)=0\),
+\(\varphi\) vanishes on \(T\). Let \(\alpha\) be a root and \(p_\alpha\colon\mathbb G_a\to U_\alpha\)
+an isomorphism with \(tp_\alpha(x)t^{-1}=p_\alpha(\alpha(t)x)\). As \(\mathbb G_a\) is commutative,
+\(\varphi\) is invariant under conjugation, so the additive map \(f(x)=\varphi(p_\alpha(x))\)
+satisfies \(f(\alpha(t)x)=f(x)\) for \(t\in T(k)\); since \(\alpha(T(k))=k^\times\), \(f\) is
+constant on \(k^\times\), say equal to \(c\), and choosing \(x,y\in k^\times\) with \(x+y\neq0\) gives
+\(c=2c\), so \(f=0\). Thus \(\varphi\) vanishes on \(T\) and on every \(U_\alpha\), hence on the big
+cell, which is dense in \(G\) \textup{(\SGARefLink{sga3:xxii:subsection:4.1}{Exp.~XXII, 4.1})}, and
+\(\varphi=0\). (More generally, by a theorem of G.~Kempf, \(H^i(G,k)=0\) for every \(i>0\); see
+J.~C.~Jantzen, \emph{Representations of Algebraic Groups}, 2nd ed., American Mathematical
+Society, 2003, II, 4.5 and 4.11.)
+
+(b) Let \(Z\) be the center of \(G\) and \(\pi\colon G\to\operatorname{ad}(G)\) the canonical
+morphism. \emph{Then \(H^1(G,\Lie(G/k))\) is isomorphic to the cokernel of
+\(\Lie(\pi)\colon\Lie(G/k)\to\Lie(\operatorname{ad}(G)/k)\); if \(G\) is split, of type
+\((M,M^*,R,R^*)\), this cokernel is isomorphic to
+\(\operatorname{Ext}^1_{\mathbb Z}(M/\Gamma_0(R),k)\), where \(\Gamma_0(R)\) is the subgroup of
+\(M\) generated by \(R\). Consequently \(H^1(G,\Lie(G/k))=0\) if and only if \(Z\) is smooth over
+\(k\).} Indeed, let \(I\) be the scheme of dual numbers over \(k\). By
+\SGARefLink{sga3:iii:theorem:2-1}{Exp.~III, 2.1} and \SGARefLink{sga3:iii:corollary:2-11}{2.11}
+(compare \SGARefLink{sga3:iii:remark:2-10}{2.10}), \(H^1(G,\Lie(G/k))\) is the quotient of the
+group of automorphisms of \(G_I\) inducing the identity on \(G\) by the subgroup of the
+\(\operatorname{int}(g)\), with \(g\in G(I)\) inducing the unit section. By
+\SGARefLink{sga3:xxiv:1.3}{1.3}~(i) and \SGARefLink{sga3:xxiv:1.7}{1.7}, that group is
+\(\Lie(\underline{\Aut}_{k\text{-}\mathrm{gr.}}(G)/k)=\Lie(\operatorname{ad}(G)/k)\), and the
+subgroup is the image of \(\Lie(\pi)\), since \(\operatorname{int}\) factors through \(\pi\).
+The formation of this cokernel commutes with extension of the base field, so we may assume \(G\)
+split, with maximal torus \(T=D_k(M)\). Then \(Z=D_k(M/\Gamma_0(R))\)
+\textup{(\SGARefLink{sga3:xxii:rem:4.1.8}{Exp.~XXII, 4.1.8})}; \(\pi\) maps \(T\) onto the maximal
+torus \(T/Z=D_k(\Gamma_0(R))\) of \(\operatorname{ad}(G)\) by the morphism dual to the inclusion
+\(\Gamma_0(R)\subset M\), and maps each \(U_\alpha\) isomorphically onto the corresponding root
+subgroup of \(\operatorname{ad}(G)\). As \(\Lie(G/k)\) and \(\Lie(\operatorname{ad}(G)/k)\) are the
+sums of the Lie algebras of their maximal tori and of their root spaces, the cokernel of
+\(\Lie(\pi)\) is that of the restriction map
+\(\operatorname{Hom}_{\mathbb Z}(M,k)\to\operatorname{Hom}_{\mathbb Z}(\Gamma_0(R),k)\), that is,
+\(\operatorname{Ext}^1_{\mathbb Z}(M/\Gamma_0(R),k)\), as \(M\) is free. For a finitely generated
+abelian group \(N\), \(\operatorname{Ext}^1_{\mathbb Z}(N,k)\neq0\) if and only if \(k\) has
+characteristic \(p>0\) and \(N\) has \(p\)-torsion; by
+\SGARefLink{sga3:ix:proposition:2:1:item:e:01}{Exp.~IX, 2.1~(e)}, this happens for
+\(N=M/\Gamma_0(R)\) if and only if \(Z\) is not smooth. For \(G=\operatorname{SL}_{p,k}\) in
+characteristic \(p\), \(M/\Gamma_0(R)\simeq\mathbb Z/p\mathbb Z\), and one recovers the example of
+the note to 1.13.
+
 
 \SGARefTarget{sga3:xxiv:1.16}
 \medskip\noindent\textbf{Definition 1.16.} ---
@@ -93,15 +85,13 @@ with trivial \(G_{\mathrm{ad}}\)-action. The corollary follows, since
 \emph{form of \(G\) over \(S\)} is an \(S\)-group scheme \(G'\)
 locally isomorphic to \(G\) for the \textup{(fpqc)} topology. It is
 equivalent to require that \(G'\) be locally isomorphic to \(G\) for
-the étale topology (cf.\ \SGARefLink{sga3:XXIII:5.6}{Exp.~XXIII, 5.6}), or that \(G'\) be a
+the étale topology (\SGARefLink{sga3:XXIII:5.6}{Exp.~XXIII, 5.6}), or that \(G'\) be a
 reductive \(S\)-group of the same type as \(G\) at every point of
 \(S\).}
 
 \SGARefTarget{sga3:xxiv:1.17}
 \medskip\noindent\textbf{Corollary 1.17.} ---
-{\itshape Let \(S\) be a scheme and \(G\) a reductive \(S\)-group.
-\begin{enumerate}
-\item[(i)] The functor
+{\itshape Let \(S\) be a scheme and \(G\) a reductive \(S\)-group. The functor
 \[
   G'\longmapsto
   \underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}(G,G')
@@ -109,12 +99,11 @@ reductive \(S\)-group of the same type as \(G\) at every point of
 is an equivalence between the category of forms of \(G\) over \(S\)
 and the category of principal homogeneous bundles under
 \(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G)\).
-\item[(ii)] If \(S'\to S\) is a covering morphism, forms of \(G\)
+If \(S'\to S\) is a covering morphism, forms of \(G\)
 trivialized by \(S'\) correspond to bundles trivialized by \(S'\).
-\item[\SGAInlineRefTarget{sga3:xxiv:1.17:item:iii}(iii)] Every principal homogeneous sheaf under
+Every principal homogeneous sheaf under
 \(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G)\) is representable and
-quasi-isotrivial, that is, locally trivial for the étale topology.
-\end{enumerate}}
+quasi-isotrivial \textup{(}locally trivial for the étale topology\textup{)}.}
 
 The first assertion is formal in the category of sheaves, for example
 for the \textup{(fpqc)} topology. Every sheaf locally isomorphic to
@@ -147,7 +136,9 @@ trivialized by \(S'\) is isomorphic to
 \medskip\noindent\textbf{Corollary 1.19.} ---
 {\itshape Let \(S\) be a scheme and \(\mathscr R\) a pinned reduced root
 datum such that \(\operatorname{\acute{E}p}_S(\mathscr R)\)
-exists, a
+exists,\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, refers here to
+\SGARefLink{sga3:XXIII:5.11}{Exposé~XXIII, 5.11}, where \(\operatorname{\acute{E}p}_S(\mathscr R)\)
+is defined.} a
 condition which is automatically satisfied by Exp.~XXV. Put
 \[
   A_S(\mathscr R)
@@ -158,10 +149,9 @@ condition which is automatically satisfied by Exp.~XXV. Put
   \operatorname{ad}(\operatorname{\acute{E}p}_S(\mathscr R))
   \cdot E(\mathscr R)_S.
 \]
-\begin{enumerate}
-\item[\SGAInlineRefTarget{sga3:xxiv:1.19:item:i}(i)] The set of isomorphism classes of reductive \(S\)-groups
-of type \(\mathscr R\) (\SGARefLink{sga3:xxii:def:2.7}{Exp.~XXII, 2.7}) is isomorphic, by
-\SGARefLink{sga3:XXIII:5.12}{Exp.~XXIII, 5.12}, to
+The set of isomorphism classes of reductive \(S\)-groups
+of type \(\mathscr R\) (\SGARefLink{sga3:xxii:def:2.7}{Exp.~XXII, 2.7}, cf.\
+\SGARefLink{sga3:XXIII:5.12}{Exp.~XXIII, 5.12}) is isomorphic to
 \[
   H^1(S,A_S(\mathscr R))
   =
@@ -169,10 +159,9 @@ of type \(\mathscr R\) (\SGARefLink{sga3:xxii:def:2.7}{Exp.~XXII, 2.7}) is isomo
   =
   \Fib(S,A_S(\mathscr R)).
 \]
-\item[\SGAInlineRefTarget{sga3:xxiv:1.19:item:ii}(ii)] If \(S'\to S\) is a covering morphism, the subset
+If \(S'\to S\) is a covering morphism, the subset
 consisting of classes of groups splittable over \(S'\) is isomorphic
-to \(H^1(S'/S,A_S(\mathscr R))\).
-\end{enumerate}}
+to \(H^1(S'/S,A_S(\mathscr R))\).}
 
 \SGARefTarget{sga3:xxiv:1.20}
 \medskip\noindent\textbf{Remark 1.20.} ---
@@ -184,7 +173,7 @@ homogeneous bundle under \(A_S(\mathscr R)\):
     (\operatorname{\acute{E}p}_S(\mathscr R),G)=P.
 \]
 The scheme \(P\) may be interpreted as the ``scheme of pinnings of
-\(G\) of type \(\mathscr R\)'' (cf.\ \SGARefLink{sga3:xxiv:1.0}{1.0}). It is also a principal
+\(G\) of type \(\mathscr R\) (\SGARefLink{sga3:xxiv:1.0}{1.0})''. It is also a principal
 homogeneous bundle on the left under
 \(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G)\), a structure visible
 immediately from the description above.
@@ -196,8 +185,8 @@ point. The functor
 \[
   G\longmapsto G_s
 \]
-induces a bijection from the set of isomorphism classes of reductive
-\(S\)-groups onto the set of isomorphism classes of reductive
+induces a bijection from the classification of reductive
+\(S\)-groups onto that of reductive
 \(\kappa(s)\)-groups. In particular, for every reductive \(S\)-group
 \(G\), there exists a finite étale surjective morphism \(S'\to S\)
 such that \(G_{S'}\) is splittable.}
@@ -229,39 +218,16 @@ and \(X\) is a subfunctor of \(G\), set
   \underline{\Aut}_{S\text{-}\mathrm{gr}}(G,\operatorname{id}_X)
   =\underline{\Centr}_{\mathcal H}(X).
 \]
-If \(Y\) is a second subfunctor of \(G\), define
-\[
-  \underline{\Aut}_{S\text{-}\mathrm{gr}}(G,X,Y)
-  =
-  \underline{\Aut}_{S\text{-}\mathrm{gr}}(G,X)
-  \cap
-  \underline{\Aut}_{S\text{-}\mathrm{gr}}(G,Y).
-\]
-If \(G'\) is a second \(S\)-group and \(X'\) a subfunctor of \(G'\),\footnote{Translator's note: The French text prints \(G\) here; \(G'\) is required by the typing of the definition.}
-write
-\[
-  \underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}
-    (G,X;G',X')
-\]
-for the subfunctor of
-\(\underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}(G,G')\)
-defined, for every \(S'\to S\), by
-\[
-  \left\{
-    u\in
-    \underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}(G,G')(S')
-    \,\middle|\,
-    u(X_{S'})=X'_{S'}
-  \right\}.
-\]
-The notation
-\(\underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}
-(G,X,Y;G',X',Y')\), and so on, is defined similarly.\footnote{Editor's
-note: The preceding definitions have been made explicit. The original
-only said that
-\(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G,X,Y),\ldots\) and
-\(\underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}
-(G,X;G',X'),\ldots\) were defined similarly.}
+One defines similarly
+\(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G,X,Y)\), \ldots,
+\(\underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}(G,X;G',X')\), \ldots.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV,
+spells these out. In our formulation: \(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G,X,Y)\) is the
+intersection of \(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G,X)\) and
+\(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G,Y)\); for a second \(S\)-group \(G'\) with a
+subfunctor \(X'\), \(\underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}(G,X;G',X')\) is the
+subfunctor of \(\underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}(G,G')\) whose sections over
+\(S'\to S\) are the isomorphisms \(u\colon G_{S'}\to G'_{S'}\) with \(u(X_{S'})=X'_{S'}\); and
+similarly with several subfunctors.}
 
 \SGARefTarget{sga3:xxiv:2.1}
 \medskip\noindent\textbf{Proposition 2.1.} ---
@@ -285,7 +251,7 @@ Then
 \(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G,B,T)\))
 is represented by a closed subscheme of
 \(\underline{\Aut}_{S\text{-}\mathrm{gr}}(G)\), smooth over \(S\),
-and the exact sequence of \SGARefLink{sga3:xxiv:1.3}{Theorem 1.3} induces the exact sequences
+and the exact sequence of \SGARefLink{sga3:xxiv:1.3}{1.3} induces an exact sequence
 \[
   1\longrightarrow
   \operatorname{Norm}_{\operatorname{ad}(G)}(T_{\mathrm{ad}})
@@ -293,8 +259,9 @@ and the exact sequence of \SGARefLink{sga3:xxiv:1.3}{Theorem 1.3} induces the ex
   \underline{\Aut}_{S\text{-}\mathrm{gr}}(G,T)
   \longrightarrow
   \underline{\Autext}(G)
-  \longrightarrow1,
+  \longrightarrow1
 \]
+\textup{(}respectively,
 \[
   1\longrightarrow B_{\mathrm{ad}}
   \longrightarrow
@@ -303,18 +270,20 @@ and the exact sequence of \SGARefLink{sga3:xxiv:1.3}{Theorem 1.3} induces the ex
   \underline{\Autext}(G)
   \longrightarrow1,
 \]
+respectively,
 \[
   1\longrightarrow T_{\mathrm{ad}}
   \longrightarrow
   \underline{\Aut}_{S\text{-}\mathrm{gr}}(G,B,T)
   \longrightarrow
   \underline{\Autext}(G)
-  \longrightarrow1.
+  \longrightarrow1\textup{)}.
 \]}
 
-By descent of closed subschemes, we reduce immediately to the case in which \(G\) is
+By descent of closed subschemes,\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, refers here to SGA~1,
+Exposé~VIII, 1.9.} we reduce immediately to the case in which \(G\) is
 pinned and \(B\supset T\) is its canonical Killing couple
-(cf.\ \SGARefLink{sga3:xxii:cor:5.5.5:item:iv}{Exp.~XXII, 5.5.5(iv)}). Since the group \(E\) of \SGARefLink{sga3:xxiv:1.2}{1.2} normalizes
+(\SGARefLink{sga3:xxii:cor:5.5.5:item:iv}{Exp.~XXII, 5.5.5(iv)}). Since the group \(E\) of \SGARefLink{sga3:xxiv:1.2}{1.2} normalizes
 \(B\) and \(T\), the result follows at once from the normalization
 theorems in \(\operatorname{ad}(G)\) (\SGARefLink{sga3:xxii:cor:5.3.12}{Exp.~XXII, 5.3.12} and 5.6.1).
 
@@ -324,12 +293,11 @@ as in \S1, one obtains:
 
 \SGARefTarget{sga3:xxiv:2.2}
 \medskip\noindent\textbf{Corollary 2.2.} ---
-{\itshape Let \(S\) be a scheme, let \(G\) and \(G'\) be two reductive
-\(S\)-groups having the same type at every point, and let
-\(B\supset T\) (respectively, \(B'\supset T'\)) be a Killing couple
-of \(G\) (respectively, \(G'\)).
+{\itshape Let \(S\) be a scheme, and let \(G\) and \(G'\) be two reductive
+\(S\)-groups having the same type at every point.
 
-\textup{\SGARefLink{sga3:xxiv:1.19:item:i}{(i)}} The \(S\)-functor
+\textup{(i)} Let \(T\) \textup{(}respectively, \(T'\)\textup{)} be a maximal torus of \(G\)
+\textup{(}respectively, \(G'\)\textup{)}. Then the \(S\)-functor
 \[
   \underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}
     (G,T;G',T')
@@ -350,7 +318,8 @@ acts freely on this scheme, and there is a canonical isomorphism
   \underline{\operatorname{Isomext}}(G,G').
 \]
 
-\textup{\SGARefLink{sga3:xxiv:1.19:item:ii}{(ii)}} The \(S\)-functor
+\textup{(ii)} Let \(B\) \textup{(}respectively, \(B'\)\textup{)} be a Borel subgroup of \(G\)
+\textup{(}respectively, \(G'\)\textup{)}. Then the \(S\)-functor
 \[
   \underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}
     (G,B;G',B')
@@ -369,7 +338,8 @@ is a canonical isomorphism
   \underline{\operatorname{Isomext}}(G,G').
 \]
 
-\textup{\SGARefLink{sga3:xxiv:1.17:item:iii}{(iii)}} The \(S\)-functor
+\textup{(iii)} Let \(B\supset T\) \textup{(}respectively, \(B'\supset T'\)\textup{)} be a
+Killing couple of \(G\) \textup{(}respectively, \(G'\)\textup{)}. Then the \(S\)-functor
 \[
   \underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}
     (G,B,T;G',B',T')
@@ -481,10 +451,8 @@ The same applies to Borel subgroups and Killing couples.
 
 \SGARefTarget{sga3:xxiv:2.6}
 \medskip\noindent\textbf{Proposition 2.6.} ---
-{\itshape Let \(S\) be a scheme, let \(G\) and \(G'\) be two reductive
-\(S\)-groups having the same type at every point, and let \(T\)
-(respectively, \(T'\)) be a maximal torus of \(G\) (respectively,
-\(G'\)). Then \(T_{\mathrm{ad}}\) acts freely on
+{\itshape Under the conditions of \SGARefLink{sga3:xxiv:2.2}{2.2}~\textup{(i)},
+\(T_{\mathrm{ad}}\) acts freely on
 \(\underline{\operatorname{Isom}}_{S\text{-}\mathrm{gr}}
 (G,T;G',T')\), and the quotient}
 \[
@@ -508,7 +476,11 @@ and is an extension of \(\underline{\Autext}(G)\) by}
   \big/T_{\mathrm{ad}}.
 \]
 {\itshape Moreover, if \(A\) is made to act on \(T\) in the evident
-way, the bundle associated with \(P\) is precisely \(T'\).}
+way, the bundle associated with \(P\) is precisely \(T'\).}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, notes a
+consequence. In our formulation: if \(P\) has a section, it is a trivial bundle, so \(T'\) is
+isomorphic to \(T\); in particular \(T_P\) and \(T'_P\) are isomorphic, \(P_P\) having the
+diagonal section. The re-edition develops this for split semisimple groups in an added
+paragraph (4.5 there); see our addition at the end of no.~4.}
 
 The first part of the proposition follows immediately from the
 preceding results. To prove the second, observe that there is an
@@ -525,10 +497,10 @@ In an entirely analogous way, one has:
 
 \SGARefTarget{sga3:xxiv:2.7}
 \medskip\noindent\textbf{Proposition 2.7.} ---
-{\itshape Let \(S\) be a scheme, let \(G\) and \(G'\) be two reductive
-\(S\)-groups having the same type at every point, and let
-\(B\supset T\) (respectively, \(B'\supset T'\)) be a Killing couple
-of \(G\) (respectively, \(G'\)). If
+{\itshape Under the conditions of \SGARefLink{sga3:xxiv:2.2}{2.2}~\textup{(iii)},\footnote{Translator's
+note: the 1970 text has ``2.2 (ii)''; the statement concerns Killing couples \(B\supset T\),
+\(B'\supset T'\), the situation of 2.2~(iii). The Gille--Polo re-edition (2011), Exposé~XXIV,
+states these hypotheses explicitly.} if
 \[
   \underline{\Aut}_{S\text{-}\mathrm{gr}}(G,B,T)
   \big/T_{\mathrm{ad}}
@@ -544,5 +516,8 @@ with \(\underline{\operatorname{Isomext}}(G,G')\) is precisely
 inner twisted forms of one another, and let \(B\supset T\)
 (respectively, \(B'\supset T'\)) be a Killing couple of \(G\)
 (respectively, \(G'\)). Then \(T\) and \(T'\) are
-isomorphic.}
+isomorphic.}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, gives the reason. In our words: as \(G\) and \(G'\)
+are inner forms of one another, \(\underline{\operatorname{Isomext}}(G,G')\) has a section, so
+it is a trivial bundle under \(\underline{\Autext}(G)\), and \SGARefLink{sga3:xxiv:2.7}{2.7}
+identifies \(T'\) with \(T\).}
 

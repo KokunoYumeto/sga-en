@@ -11,9 +11,8 @@ be the following automorphism of \(B\):
 \[
   (G,B)\longmapsto B
 \]
-from the category of pairs \((G,B)\), where \(G\) is an
-\(S\)-semisimple group and \(B\) is a Borel subgroup of \(G\), to the
-category of \(S\)-group schemes, with isomorphisms as morphisms, is
+from the category of pairs \textup{(}\(S\)-semisimple groups, Borel subgroup\textup{)} to the
+category of \(S\)-group schemes \textup{(}the morphisms are the isomorphisms\textup{)} is
 fully faithful.}
 
 \par\medskip\noindent\SGAInlineRefTarget{sga3:xxiv:corollary:6-5}\textbf{Corollary 6.5.---}\enspace
@@ -21,7 +20,10 @@ fully faithful.}
 Borel subgroup of \(G\), and \(B'\) an \(S\)-group locally isomorphic to
 \(B\) for the \textup{(fpqc)} topology. Then \(B'\) is locally
 isomorphic to \(B\) for the local finite étale
-topology, and there exists an
+topology,\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, recalls that this topology is denoted \textup{(étf)} in
+\SGARefLink{sga3:iv:subsection:6:3}{Exposé~IV, 6.3}: the assertion means that every point of \(S\) has an open
+neighbourhood \(U\) and a finite étale surjective morphism \(V\to U\) with
+\(B'\times_SV\simeq B\times_SV\).} and there exists an
 \(S\)-semisimple group \(G'\) of which \(B'\) is a Borel subgroup.
 Moreover, \(G'\) is unique up to a unique isomorphism inducing the
 identity on \(B'\).}
@@ -48,12 +50,17 @@ If \(S\) is a scheme and \(B\) an \(S\)-group, then \(B\) can be a
 Borel subgroup of only one semisimple group, uniquely determined by
 \(B\). It remains to characterize those \(S\)-groups \(B\) which are
 Borel subgroups of semisimple
-groups.\footnote{\textit{Editors' note.} One may ask whether every
-smooth affine \(S\)-group whose geometric fibers are Borel subgroups of
-semisimple groups is itself a Borel subgroup of a semisimple
-\(S\)-group. We have suppressed the counterexample in the original,
-with \(S\) the scheme of dual numbers over a field \(k\), because it
-was erroneous, as M.~Demazure pointed out.}
+groups. The question does not seem to have a simple answer.\footnote{Translator's note:
+the 1970 text continues with an example, suppressed as erroneous in the Gille--Polo re-edition
+(2011), Exposé~XXIV, as M.~Demazure pointed out to its editors: over the dual numbers over a
+field \(k\), modify the constant \(2\) of the second commutation relation of
+\SGARefLink{sga3:XXIII:3.3.1:item:iii}{Exposé~XXIII, 3.3.1~(iii)} in the canonical Borel subgroup of a split group
+of type \(B_2\), keeping it equal to \(2\) on the special fibre; with its cohomological translation
+(Exposé~III, 3.10): \(H^2(B,\Lie(B/k))\neq0\) for a Borel subgroup \(B\) of a semisimple \(k\)-group of
+type \(B_2\). In our check no group arises: computing \(p_\beta(y)p_\alpha(x_1+x_2)\) in two ways
+forces the new constant \(c\) to satisfy \(cx_1x_2=2x_1x_2\). The re-edition asks instead whether
+every smooth affine \(S\)-group whose geometric fibres are Borel subgroups of semisimple groups is a
+Borel subgroup of a semisimple \(S\)-group.}
 
 \section*{\SGAInlineRefTarget{sga3:xxiv:section:7}7. Representability of the functors
 \(\underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(G,H)\), for
@@ -112,7 +119,8 @@ By \SGARefLink{sga3:XXIII:1.9}{Exposé XXIII, 1.9}, \(i\) is a monomorphism.
 representable and \(i\) is a closed immersion.}
 
 The usual technique of relative
-representability shows that it is enough to prove the
+representability\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, refers, for an example of this technique, to the
+proof of \SGARefLink{sga3:xxii:thm:5.8.1}{Exposé~XXII, 5.8.1}.} shows that it is enough to prove the
 following. Given sections
 \[
   v_\alpha,h_\alpha\in H(S),
@@ -132,7 +140,8 @@ are exactly those which factor through a certain closed subscheme of
 \(S\). We may plainly suppose \(S\) affine.
 
 For convenience, say that a morphism \(Y\to
-X\) of affine schemes satisfies condition \textup{(L)} if
+X\)\footnote{Translator's note: the 1970 text writes this morphism \(X\to Y\); the direction
+is corrected in the Gille--Polo re-edition (2011), Exposé~XXIV.} of affine schemes satisfies condition \textup{(L)} if
 \(Y\) is the spectrum of an \(\mathcal O(X)\)-algebra which is a free
 \(\mathcal O(X)\)-module. Within the category of affine schemes,
 products and composites of morphisms satisfying \textup{(L)} again
@@ -166,26 +175,37 @@ satisfies \textup{(L)}. Equivalently, for every ring \(A\), the ring
 \[
   A[X,Y,X^{-1},Y^{-1}]
 \]
-must be free over its subring \(A[X+Y]\).\footnote{\textit{Editors'
-note.} We have simplified the proof in the original.} Now \(A[X,Y]\)
-is free with basis \(\{1,X\}\) over
+must be free over its subring \(A[X+Y]\). Now the elements
 \[
-  B=A[X+Y,XY],
+  (XY)^p,\quad (XY)^pX,
+  \qquad p\in\mathbb Z,
 \]
-because \(X^2-(X+Y)X+XY=0\). Hence
+form a basis. Indeed, it suffices to verify that, for every \(q\in\mathbb Z\) and every family
+\(\{a_{ij}\in A\mid i,j\in\mathbb Z\}\), there are elements \(b_{n,p},c_{n,p}\in A\),
+\(0\leq n\leq q\), \(p\in\mathbb Z\), unique, such that
 \[
-  A[X^{\pm1},Y^{\pm1}]
-  =A[X,Y]_{XY}
+  \sum_{-q\leq i-j\leq q+1}a_{ij}X^iY^j
+  =
+  \sum_{\substack{0\leq n\leq q\\ p\in\mathbb Z}}
+  \Bigl(b_{n,p}(X+Y)^n(XY)^pX+c_{n,p}(X+Y)^n(XY)^p\Bigr).
 \]
-is free over
+We prove this assertion by ascending induction on \(q\). It is trivial for \(q\leq-1\); suppose
+\(q\geq0\) (and hence \(q+1>-q\)) and the assertion true for \(q-1\). Taking in both sides the
+terms of the form \(X^aY^b\) with \(a-b=q+1\), then with \(a-b=-q\), one obtains at once\footnote{Translator's note: the 1970 text prints \(a_{i,i+p}\) in the
+second relation. The Gille--Polo re-edition (2011), Exposé~XXIV, replaces this proof by a shorter
+one. In our formulation: \(A[X,Y]\) is free with basis \(1,X\) over the subring
+\(A[s,\pi]\), \(s=X+Y\), \(\pi=XY\), since \(X^2=sX-\pi\) and \(s,\pi\) are algebraically
+independent; inverting \(\pi\), \(A[X^{\pm1},Y^{\pm1}]\) is free with basis \(1,X\) over
+\(A[s][\pi,\pi^{-1}]\), which is free over \(A[s]\) with basis the \(\pi^p\), \(p\in\mathbb Z\).}
 \[
-  B_{XY}=A[X+Y,(XY)^{\pm1}]
+  a_{q+i+1,i}=b_{q,i},
+  \qquad
+  a_{i,i+q}=c_{q,i}.
 \]
-with basis \(\{1,X\}\), and free over \(A[X+Y]\) with basis
-\[
-  (XY)^p,\quad X(XY)^p,
-  \qquad p\in\mathbb Z.
-\]
+This shows first that, if there is a solution, the \(b_{q,i}\) and \(c_{q,i}\) are determined by
+the preceding relations. Subtracting then
+\(b_{q,i}(X+Y)^q(XY)^iX+c_{q,i}(X+Y)^q(XY)^i\) from both sides, one is reduced to the assertions
+of existence and uniqueness already proved by the induction hypothesis.
 
 \par\medskip\noindent\SGAInlineRefTarget{sga3:xxiv:lemma:7-1-4}\textbf{Lemma 7.1.4.---}\enspace
 \emph{Let \(\alpha\in\Delta\), and let
@@ -209,7 +229,11 @@ conditions are equivalent:
     =
     f_\alpha(\alpha(t)x)
   \]
-  for all \(t\in T(S')\), \(x\in U_\alpha(S')\), and \(S'\to S\);
+  for all \(t\in T(S')\), \(x\in U_\alpha(S')\), and \(S'\to S\);\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV,
+makes the notation explicit: the group law of \(U_\alpha\) is written additively, and, if
+\(p_\alpha\colon\mathbb G_{a,S}\to U_\alpha\) is the isomorphism with \(p_\alpha(1)=u_\alpha\),
+then \(\alpha(t)p_\alpha(z)\) stands for \(p_\alpha(\alpha(t)z)\), and \(a(t,t')u_\alpha\) for
+\(p_\alpha(\alpha(t)+\alpha(t'))=\alpha(t)u_\alpha+\alpha(t')u_\alpha\).}
 \item[\SGAInlineRefTarget{sga3:xxiv:lemma:7-1-4:item:ii}(ii)] \(f_\alpha(u_\alpha)=v_\alpha\), and
   \[
     f_\alpha(a(t,t')u_\alpha)=b(t,t')
@@ -269,7 +293,9 @@ Write \(i_1,i_2:R\to T\times_S T\) for its two projections.
   \input{native_diagrams/exp24/006_equivalence_relation_pair}
 \]
 
-For \(b\) to factor through \(a\), it is necessary and
+For \(b\) to factor through \(a\),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, adds that this amounts to
+condition (ii) of \SGARefLink{sga3:xxiv:lemma:7-1-4}{7.1.4}: a factorization of \(b\) through \(a\) is a morphism
+\(f_\alpha\colon U_\alpha\to H\) with \(f_\alpha(a(t,t')u_\alpha)=b(t,t')\).} it is necessary and
 sufficient that
 \[
   b\circ i_1=b\circ i_2.
@@ -286,8 +312,8 @@ Then the required condition is \(K=R\). Since \(H\) is separated over
 
 \subsubsection*{7.1.6.}
 
-It follows that, for an \(S\)-scheme \(S'\), an \(f_\alpha\) satisfying
-\SGARefLink{sga3:xxiv:lemma:7-1-4:item:i}{7.1.4(i)} exists over \(S'\), and is then unique, if and only if
+If \(S'\) is an \(S\)-scheme, an \(f_\alpha\) satisfying
+\SGARefLink{sga3:xxiv:lemma:7-1-4:item:i}{7.1.4(i)} exists over \(S'\) (and is then necessarily unique) if and only if
 \[
   K_{S'}=R_{S'}
 \]
@@ -297,7 +323,8 @@ and the resulting morphism satisfies
 \]
 The first condition is equivalent to requiring \(S'\to S\) to factor
 through a certain closed subscheme of \(S\) (\SGARefLink{sga3:viii:theorem:6:4}{Exposé VIII,
-6.4}). After replacing \(S\) by this closed
+6.4}).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, refers also to
+\SGARefLink{thm:sga3-VIB-6.2.3}{Exposé~VI\textsubscript{B}, 6.2.3}.} After replacing \(S\) by this closed
 subscheme, the second condition again defines a closed subscheme of
 \(S\), since it is the equality of two sections of the separated
 \(S\)-scheme \(H\).
@@ -332,23 +359,16 @@ for every \(\alpha\in\Delta\).
 
 The generators-and-relations theorem (\SGARefLink{sga3:xxiii:subsection:3-5}{Exposé XXIII, 3.5}) now shows that
 a group homomorphism \(f:G\to H\) with the required properties exists
-if and only if a certain finite set of algebraic relations among the
-sections
-\[
-  h_\alpha,\qquad
-  v_\alpha,\qquad
-  f_T\bigl(\alpha^*(-1)\bigr),
-  \qquad \alpha\in\Delta,
-\]
-is satisfied:
+if and only if a certain finite set of algebraic relations
 \[
   R_i\!\left(
-    (h_\alpha)_\alpha,
-    (v_\alpha)_\alpha,
-    \bigl(f_T(\alpha^*(-1))\bigr)_\alpha
-  \right)=e,
-  \qquad i=1,\ldots,n.
+    (h_\alpha),
+    (v_\alpha),
+    \bigl(f_T(\alpha^*(-1))\bigr)
+  \right)=e
 \]
+\textup{(}among the sections \(h_\alpha\), \(v_\alpha\), \(f_T(\alpha^*(-1))\)
+\textup{(}\(\alpha\in\Delta\)\textup{)} of \(H\)\textup{)} is satisfied.
 Because \(H\) is separated over \(S\), these relations again define a
 closed subscheme of \(S\), proving \SGARefLink{sga3:xxiv:proposition:7-1-2}{Proposition 7.1.2}.
 
@@ -369,23 +389,33 @@ Then the canonical morphism
   \longrightarrow
   \underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(T,H)
 \]
-is relatively representable by a separated morphism having
-\(\mathcal P\).}
+is representable by separated morphisms having
+\(\mathcal P\).}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, makes this explicit: for every \(S\)-scheme \(S'\)
+and every morphism \(S'\to\underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(T,H)\), the fibre
+product of \(\underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(G,H)\) with \(S'\) over
+\(\underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(T,H)\) is representable, and its morphism to
+\(S'\) is separated and has \(\mathcal P\).}
 
 Indeed, we may suppose \(G\) pinned. The structure morphism
 \(H^{2n}\to S\) has \(\mathcal P\), and \SGARefLink{sga3:xxiv:proposition:7-1-2}{7.1.2} gives the assertion.
 
 \par\medskip\noindent\SGAInlineRefTarget{sga3:xxiv:corollary:7-1-10}\textbf{Corollary 7.1.10.---}\enspace
 \emph{Let \(S\) be a scheme, \(G\) a split reductive \(S\)-group, and
-\(H\) a smooth \(S\)-group scheme with affine
+\(H\) a smooth \(S\)-group scheme, quasi-separated over \(S\), with affine
 fibers. Then
 \(\underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(G,H)\) is
 representable by an \(S\)-scheme locally of finite presentation and
 separated over \(S\).}
 
-Since \(H\) is smooth over \(S\), its neutral component \(H^0\) is
-defined; it has affine fibers and is smooth, separated, and of finite
-presentation over \(S\) (Exposé VI\textsubscript{B}, \SGARefLink{thm:sga3-VIB-3.10}{3.10} and \SGARefLink{sga3:xxiv:proposition:5-5}{5.5}).
+As \(H\) is smooth and quasi-separated over \(S\), one can consider its neutral
+component \(H^0\), which is separated, of finite presentation, and with affine fibers
+(Exposé VI).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, omits
+the hypothesis that \(H\) be quasi-separated, as superfluous. Indeed, for \(H\) smooth over \(S\),
+\(H^0\) is representable by an open subgroup scheme, smooth over \(S\)
+(\SGARefLink{thm:sga3-VIB-3.10}{Exposé~VI\textsubscript{B}, 3.10}); it is therefore universally open, locally
+of finite presentation, with connected fibres, hence separated and of finite presentation over
+\(S\) (\SGARefLink{cor:sga3-VIB-5.5}{Exposé~VI\textsubscript{B}, 5.5}); its fibres are affine, being open and closed
+subgroups of the affine fibres of \(H\).}
 Since \(G\) has connected fibers, \(H\) may be replaced by \(H^0\).
 As \(G\) and \(H\) are then of finite presentation, we may suppose
 \(S\) noetherian and apply \SGARefLink{sga3:xxiv:corollary:7-1-9}{7.1.9} with \(\mathcal P\) equal to the
@@ -395,7 +425,10 @@ representable by a separated \(S\)-scheme locally of finite type.
 
 \par\medskip\noindent\SGAInlineRefTarget{sga3:xxiv:remark:7-1-11}\textbf{Remark 7.1.11.---}\enspace
 If \(H\) is affine over \(S\), the reference to Exposé XV may be
-replaced by \SGARefLink{sga3:xi:corollary:4:2}{Exposé XI, 4.2}.
+replaced by \SGARefLink{sga3:xi:corollary:4:2}{Exposé XI, 4.2}.\footnote{Translator's note: the 1970
+text has ``Exp.~IX, 4.2''; the reference is corrected in the Gille--Polo re-edition (2011),
+Exposé~XXIV. Exposé~XI, 4.2 gives the representability of
+\(\underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(T,H)\) for \(H\) smooth and affine.}
 
 \subsection*{\SGAInlineRefTarget{sga3:xxiv:subsection:7-2}7.2. General case}
 
@@ -413,7 +446,7 @@ Then the canonical morphism
   \longrightarrow
   \underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(T,H)
 \]
-is relatively representable by a morphism satisfying \textup{(+)}.}
+is representable by morphisms satisfying \textup{(+)}.}
 
 When \(G\) is split relative to \(T\), apply 7.1.9 with
 \(\mathcal P=\textup{(+)}\). When \(G\) is locally isotrivial, for
@@ -539,18 +572,26 @@ is an isomorphism.
 \]}
 
 The first equality is valid in general for a smooth connected
-group. For a reductive group it can also be
+group (Exposé VI).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, gives the argument in place of this reference. In our
+words: \(V^G\subset V^{\mathfrak g}\) always; conversely, the closed subgroup \(C\) of \(G\) fixing
+\(V^{\mathfrak g}\) pointwise is smooth, as \(k\) has characteristic \(0\), and its Lie algebra is
+the centralizer of \(V^{\mathfrak g}\) in \(\mathfrak g\) \textup{(\SGARefLink{sga3:ii:theorem:5-3-1}{Exp.~II,
+5.3.1})}, that is, \(\mathfrak g\); as \(G\) is connected and smooth, \(C=G\), and
+\(V^{\mathfrak g}\subset V^G\).} For a reductive group it can also be
 proved as follows. We may suppose \(k\) algebraically closed, hence
 \(G\) split and generated by subgroups isomorphic to
-\(G_{m,k}\), and the assertion
+\(G_{m,k}\),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, gives the reason: the union of the maximal tori of
+\(G\) is dense in \(G\) (C.~Chevalley, \emph{Classification des groupes algébriques semi-simples},
+Collected Works, vol.~3, Springer, 2005, \S6.6, Theorem~6).} and the assertion
 for this group is immediate.
 
 The first equality shows that the functor \(H^0(G,V)\) is exact in
 \(V\) when \(G\) is semisimple: \(\mathfrak g\) is then a semisimple
-Lie algebra, and one applies \([{\rm BLie}]\), \S I.6,
+Lie algebra, and one applies Bourbaki, \emph{Lie}, Chapter~I, \S6,
 Exercise~1(b). The assertion remains true when \(G\) is reductive.
 Indeed, introducing the radical \(R\) of
-\(G\)
+\(G\)\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, notes that \(R\) is a torus; this is why \(H^0(R,-)\) is exact
+\textup{(\SGARefLink{sga3:i:theorem:5-3-3}{Exp.~I, 5.3.3})}.}
 and the semisimple quotient \(G/R\), one has
 \[
   H^0(G,V)=H^0\bigl(G/R,H^0(R,V)\bigr),
@@ -563,7 +604,7 @@ Under the preceding hypotheses, if \(G\) is semisimple, then
 \[
   H^1(\mathfrak g,V)=H^2(\mathfrak g,V)=0;
 \]
-see \([{\rm BLie}]\), \emph{loc.\ cit.}, (b) and (d).
+cf.\ Bourbaki, \emph{loc.\ cit.}, (b) and (d).
 
 \subsubsection*{7.3.4.}
 
@@ -572,10 +613,14 @@ We prove the proposition. By \SGARefLink{sga3:xxiv:corollary:7-2-3}{7.2.3},
 already representable by an \(S\)-scheme locally of finite
 presentation and separated over \(S\). To show it smooth, it suffices
 to show it infinitesimally smooth (\SGARefLink{sga3:xi:remark:1:8}{Exposé XI,
-1.8}), and this follows from \SGARefLink{sga3:iii:corollary:2-8:item:i}{Exposé III,
+1.8}),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, makes this explicit: for every local artinian \(S\)-scheme \(S'\)
+with closed point \(s'\), every homomorphism of \(\kappa(s')\)-groups \(G_{s'}\to H_{s'}\) must lift to
+a homomorphism of \(S'\)-groups \(G_{S'}\to H_{S'}\); by
+\SGARefLink{sga3:iii:corollary:2-8}{Exposé~III, 2.8}, this follows from the vanishing of
+\(H^2(G_{s'},\Lie(H_{s'}/\kappa(s')))\), given by 7.3.2.} and this follows from \SGARefLink{sga3:iii:corollary:2-8:item:i}{Exposé III,
 2.8(i)} and \SGARefLink{sga3:xxiv:lemma:7-3-2}{7.3.2}. This proves \SGARefLink{sga3:xxiv:proposition:7-3-1:item:i}{(i)}.
 
-We next show that \SGARefLink{sga3:iii:corollary:2-8:item:ii}{(ii)} follows from \SGARefLink{sga3:xxiv:proposition:7-3-1:item:iii}{(iii)}. First it is enough to prove
+We next show that (ii) follows from \SGARefLink{sga3:xxiv:proposition:7-3-1:item:iii}{(iii)}. First it is enough to prove
 that
 \(\underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(G,H)\) is
 affine over \(S\), since it is then of finite presentation, being
@@ -653,30 +698,26 @@ subgroup of \(G\times_k H\), determined by its Lie algebra, which is
 the graph of \(\Lie(u)\). Hence the map is injective. Conversely, if
 \(v:\mathfrak g\to\mathfrak h\) is a Lie algebra homomorphism, its
 graph \(\mathfrak k\) is a Lie subalgebra of
-\(\mathfrak g\times\mathfrak h\), isomorphic to \(\mathfrak g\).
-Because \(\mathfrak g\) is its own derived algebra, so is
-\(\mathfrak k\). A theorem of Chevalley
-\([{\rm Ch51}]\), \S14, Theorem~15, therefore shows that
-\(\mathfrak k\) is the Lie algebra of a connected subgroup \(K\) of
-\(G\times_k H\).\footnote{\textit{Editors' note.} See also
-\([{\rm Bo91}]\), II 7.9. We have also added the following sentence.}
-
-Since \(\mathfrak k\simeq\mathfrak g\) is semisimple, \(K\) is a
-semisimple \(k\)-group (the French prints \(G\) here; the argument
-and the following sentence require \(K\)).
-Moreover,
+\(\mathfrak g\times\mathfrak h\); as \(\mathfrak g\) is its own derived algebra,
+\(\mathfrak k\) is its own derived algebra, and therefore (Chevalley, \emph{Théorie des groupes de
+Lie}, Tome~2, \S14, Th.~15) is algebraic. It is therefore the Lie algebra of a connected subgroup
+\(K\) of \(G\times_k H\). As
 \[
   \dim K=\dim\mathfrak k=\dim\mathfrak g=\dim G,
 \]
-and \(K\cap H\) is finite because its Lie algebra is zero. Thus the
+and as \(K\cap H\) is finite (its Lie algebra being zero), the
 canonical morphism
 \[
   \operatorname{pr}_1:K\longrightarrow G
 \]
 is finite and dominant; because \(G\) is connected, it is surjective,
-and hence an isogeny. Since \(G\) is simply connected and \(K\) is
-semisimple, \SGARefLink{sga3:XXI:6.2.7}{Exposé XXI, 6.2.7} shows that \(\operatorname{pr}_1\) is an
-isomorphism. Consequently \(K\) is the graph of a \(k\)-group
+and hence an isogeny. As \(G\) is simply connected, it is an isomorphism
+(cf.\ \SGARefLink{sga3:XXI:6.2.7}{Exposé XXI, 6.2.7}),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, refers also, for
+the theorem of Chevalley, to A.~Borel, \emph{Linear Algebraic Groups}, 2nd ed., Springer, 1991, II,
+7.9, and adds that \(K\) is semisimple, which the application of Exposé~XXI, 6.2.7 requires. In our
+words: \(K\) is connected, and its Lie algebra \(\mathfrak k\simeq\mathfrak g\) is semisimple; in
+characteristic \(0\) the Lie algebra of the radical of \(K\) is a solvable ideal of \(\mathfrak k\),
+hence zero, so the radical is trivial and \(K\) is semisimple.} and \(K\) is the graph of a \(k\)-group
 homomorphism \(u:G\to H\) with \(\Lie(u)=v\).
 
 Finally, let \(u:G\to H\) be a \(k\)-group homomorphism. The tangent
@@ -692,24 +733,18 @@ identifies with \(Z^1(G,\mathfrak h)\) (\SGARefLink{sga3:ii:subsection:4-2}{Expo
     (\mathfrak g,\mathfrak h)
 \]
 at \(\Lie(u)\) identifies with \(Z^1(\mathfrak g,\mathfrak h)\). We
-must show that
+must therefore prove that the canonical map
 \[
   Z^1(G,\mathfrak h)\longrightarrow
   Z^1(\mathfrak g,\mathfrak h)
 \]
-is bijective.
-
+is bijective. But \(H^1(G,\mathfrak h)=H^1(\mathfrak g,\mathfrak h)=0\)
+\textup{(\SGARefLink{sga3:xxiv:lemma:7-3-2}{7.3.2} and \SGARefLink{sga3:xxiv:remark:7-3-3}{7.3.3})}, and this map identifies
+with the evident map
 \[
-  \input{native_diagrams/exp24/010_group_lie_cohomology_rows}
+  \mathfrak h/H^0(G,\mathfrak h)\longrightarrow\mathfrak h/H^0(\mathfrak g,\mathfrak h);
 \]
-
-By \SGARefLink{sga3:xxiv:lemma:7-3-2}{7.3.2} and \SGARefLink{sga3:xxiv:remark:7-3-3}{7.3.3},
-\[
-  \mathfrak h^G=\mathfrak h^{\mathfrak g},
-  \qquad
-  H^1(G,\mathfrak h)=0=H^1(\mathfrak g,\mathfrak h),
-\]
-which gives the desired conclusion.
+one concludes by \SGARefLink{sga3:xxiv:lemma:7-3-2}{7.3.2}.
 
 \par\medskip\noindent\SGAInlineRefTarget{sga3:xxiv:remark:7-3-6}\textbf{Remark 7.3.6.---}\enspace
 It is presumably true that, if \(S\) is locally noetherian, \(G\) a
@@ -719,34 +754,30 @@ the identity section, then every homomorphism
 \(\widehat G\to\widehat H\) comes from a unique homomorphism \(G\to H\).
 This would generalize \SGARefLink{sga3:xxiv:proposition:7-3-1:item:iii}{7.3.1(iii)}. When \(S=\operatorname{Spec}(k)\)
 and \(H\) is affine and of finite type, this follows from a theorem of
-Dieudonné \([{\rm Di57}]\), \S15, Theorem~4.\footnote{\textit{Editors'
-note.} See Exposé VII\textsubscript{B} for the definition of the formal
-groups \(\widehat G\) and \(\widehat H\). Suppose that
-\(S=\operatorname{Spec}(k)\), where \(k\) is a field. By loc. cit.,
-2.2.1, giving a morphism of formal \(k\)-groups
-\(v:\widehat G\to\widehat H\) is equivalent to giving a morphism of
-Hopf \(k\)-algebras
-\(\phi:\operatorname{Dist}(G)\to\operatorname{Dist}(H)\), where
-\(\operatorname{Dist}(G)\) denotes the algebra of distributions (at
-the origin) of \(G\); see Exposé VII\textsubscript{A}, \SGARefLink{sga3:VIIA:2.1}{2.1},
-\([{\rm DG70}]\), \S II.4, \SGARefLink{sga3:xxiv:lemma:6-1}{6.1}, or \([{\rm Ja87}]\), I 7.7. It is called
-the hyperalgebra of \(G\) in \([{\rm Di57}]\) and \([{\rm Ta75}]\).
-Theorem~4 of \([{\rm Di57}]\) (see also \([{\rm Ta75}]\), 0.3.4 (f)
-and (g)) generalizes in this context the theorem of Chevalley used in
-\SGARefLink{sga3:xxiv:subsubsection:7-3-5}{7.3.5}: one obtains a closed connected \(k\)-subgroup
-\(K\subset G\times H\) such that \(\widehat K\) equals the graph of
-\(v\). Since \(\operatorname{Dist}(K)\to\operatorname{Dist}(G)\) is an
-isomorphism, \(K\to G\) is finite étale. It follows that \(K\) is
-semisimple and then, by \SGARefLink{sga3:XXI:6.2.7}{Exposé XXI, 6.2.7}, that \(K\to G\) is an
-isomorphism (because \(G\) is simply connected; see also
-\([{\rm Ta75}]\), \SGARefLink{sga3:xxiv:1.8}{1.8} and \SGARefLink{sga3:xxiv:2.2}{2.2}). More generally, loc. cit. studies the
-\(k\)-groups \(G\) having property \textup{(SC)}: every finite étale
-morphism of \(k\)-groups \(G'\to G\), with \(G'\) connected, is an
-isomorphism. Finally, the preceding argument shows that every
-finite-dimensional \(\operatorname{Dist}(G)\)-module is, uniquely, a
-\(G\)-module; for an extension to a split reductive \(k\)-group \(G\)
-(or even to a Borel subgroup of \(G\)), see \([{\rm Ja87}]\), II 1.20
-(and the references given there).}
+Dieudonné (\emph{Lie groups and Lie hyperalgebras\ldots, VI}, Am.\ J. of Maths, 1957, p.~369,
+th.~4). However, if \(S\) is not of characteristic zero, the preceding conjecture becomes false if
+one drops the hypothesis that \(S\) be locally noetherian (otherwise one would deduce that
+\(\underline{\operatorname{Hom}}_{S\text{-}\mathrm{gr.}}(G,H)\) is always affine over \(S\), which
+is not the case, as we shall see in 7.4 below).
+
+\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~XXIV; our formulation). The re-edition explains how Dieudonné's theorem gives the
+case of a field. In our formulation: let \(S=\operatorname{Spec}(k)\), \(k\) a field. The formal groups
+\(\widehat G\), \(\widehat H\) are defined in Exposé~VII\textsubscript{B}; by \emph{loc.\ cit.}, 2.2.1, a
+homomorphism of formal \(k\)-groups \(v\colon\widehat G\to\widehat H\) amounts to a homomorphism of
+Hopf algebras \(\operatorname{Dist}(G)\to\operatorname{Dist}(H)\) between the algebras of
+distributions at the origin (Exposé~VII\textsubscript{A}, 2.1), which Dieudonné calls
+hyperalgebras. Dieudonné's theorem (see also M.~Takeuchi, \emph{On coverings and hyperalgebras of
+affine algebraic groups}, Trans.\ Amer.\ Math.\ Soc.\ \textbf{211} (1975), 249--275, 0.3.4) provides
+a closed connected subgroup \(K\subset G\times_kH\) whose formal group is the graph of \(v\). The
+projection \(K\to G\) then induces an isomorphism of distribution algebras, so it is finite and
+étale; hence \(K\) is semisimple, and \(K\to G\) is an isomorphism because \(G\) is simply connected
+\textup{(\SGARefLink{sga3:XXI:6.2.7}{Exposé~XXI, 6.2.7})}; so \(v\) comes from the homomorphism \(G\to H\) whose
+graph is \(K\). Takeuchi studies more generally the \(k\)-groups \(G\) for which every finite étale
+homomorphism \(G'\to G\) with \(G'\) connected is an isomorphism. The same argument shows that every
+finite-dimensional \(\operatorname{Dist}(G)\)-module comes from a unique \(G\)-module; for split
+reductive groups and their Borel subgroups, see J.~C.~Jantzen, \emph{Representations of Algebraic
+Groups}, 2nd ed., American Mathematical Society, 2003, II, 1.20.
 
 \subsection*{\SGAInlineRefTarget{sga3:xxiv:subsection:7-4}7.4. An example}
 
@@ -1013,9 +1044,11 @@ finite surjective étale morphism \(S'\to S\) such that
 If \(P\) is a principal homogeneous bundle under \(G\), then \(P\) is
 smooth over \(S\), hence \(P_s\) is smooth over \(\kappa(s)\).
 Consequently there is a finite separable extension \(K/\kappa(s)\)
-such that \(P_K\) has a section (EGA IV\textsubscript{4}, 17.15.10).
-Representing \(K\) as above, Hensel's lemma
-(EGA IV\textsubscript{4}, 18.5.17) shows that \(P_{S'}\) has a section.
+such that \(P_K\) has a section.
+Representing \(K\) as above, Hensel's lemma shows that \(P_{S'}\) has a section.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV,
+gives the references EGA~IV\textsubscript{4}, 17.15.10 (a smooth scheme over a field has a point over a
+finite separable extension) and 18.5.17 (Hensel's lemma), and notes that \(S'\) is again local and
+henselian, being finite over \(S\) with the field \(K\) as residue field at its closed point.}
 This proves the first assertion of (i).
 
 Conversely, if \(P\) is a principal homogeneous sheaf under \(G\) for
@@ -1135,37 +1168,26 @@ is bijective.}
 If \(G\) is commutative, the same assertion holds for every
 \(H^i\), \(i>0\), with an analogous proof.
 
-\smallskip\noindent\emph{Proof.}
 Let \(M_0\) be the quasi-coherent \(\mathcal O_{S_0}\)-module
 \[
   M_0
   =
   \Lie(G_0/S_0)\otimes_{\mathcal O_{S_0}}J.
 \]
-For every \(S_0\)-scheme \(T_0\), put
+For every \(S_0\)-scheme \(T_0\) \textup{(}respectively every \(S\)-scheme \(T\)\textup{)}, put
 \[
   M_0(T_0)
   =
   H^0\!\left(
     T_0,
     M_0\otimes_{\mathcal O_{S_0}}\mathcal O_{T_0}
-  \right),
+  \right)
+  \qquad\textup{(}\text{respectively }M(T)=M_0(T_0)\textup{)}.
 \]
-and define the \(S\)-group functors
-\[
-  M=\prod_{S_0/S}M_0,
-  \qquad
-  \overline G=\prod_{S_0/S}G_0
-\]
-by
-\[
-  M(T)=M_0(T_0),
-  \qquad
-  \overline G(T)=G_0(T_0),
-  \qquad
-  T_0=T\times_SS_0.
-\]
-By \SGARefLink{sga3:iii:corollary:0-9}{Exposé III, 0.9} and (\SGARefLink{sga3:iii:remark:0-6:equation:0-6-2}{0.6.2}), for every affine \(S\)-scheme \(T\)
+Let on the other hand \(\overline G=\prod_{S_0/S}G_0\) be the \(S\)-group functor defined by
+\(\overline G(T)=G_0(T_0)\). One knows (\SGARefLink{sga3:iii:section:0}{Exposé III, no.~0}) that for every affine
+\(S\)-scheme \(T\)\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, gives the precise references
+\SGARefLink{sga3:iii:corollary:0-9}{Exposé~III, 0.9} and (0.6.2); here \(T_0=T\times_SS_0\).}
 there is a functorial exact sequence
 \[
   1\longrightarrow M(T)\longrightarrow G(T)
@@ -1199,7 +1221,9 @@ Moreover,
   0
   \qquad(i\neq0),
 \]
-the last equality following from TDTE I, B, Lemma~1.1.
+the last equality following from TDTE I, B, Lemma~1.1.\footnote{Translator's note: the 1970 text
+has ``TDTE~II'' here too; the reference is corrected in the Gille--Polo re-edition (2011),
+Exposé~XXIV (see the note in the introduction).}
 
 Now suppose that \(G\) is not commutative. We use the exact sequence
 of nonabelian cohomology. If
@@ -1222,7 +1246,7 @@ which vanishes exactly when the class of \(v\) is in the image of
   H^2(S'/S,M_v)=0.
 \]
 
-Recall (\SGARefLink{sga3:iii:proposition:0-8}{Exposé III, 0.8}) that the action of \(G\) on \(M\) defined by
+Recall (\SGARefLink{sga3:iii:section:0}{Exposé III, no.~0}) that the action of \(G\) on \(M\) defined by
 the exact sequence above is induced functorially by the adjoint
 representation
 \[
@@ -1318,7 +1342,7 @@ family \(\{S_i\to S\}\) such that, for every \(i\),
 Then \(H^1_S(S',G')=H^1(S',G')\).}
 
 Indeed, let \(P'\) be a principal homogeneous sheaf under \(G'\), and
-put
+put, for every \(i\),
 \[
   P'_i=P'\times_{S'}(S'\times_SS_i).
 \]
@@ -1376,7 +1400,7 @@ It follows from \SGARefLink{sga3:xxiv:proposition:8-2}{8.2} that
 \hfill\(\square\)
 
 \par\medskip\noindent\SGAInlineRefTarget{sga3:xxiv:remark:8-5}\textbf{Remarks 8.5.---}\enspace
-\SGARefLink{sga3:xxiv:proposition:8-2}{Propositions 8.2} and \SGARefLink{sga3:xxiv:proposition:8-4}{8.4} may be interpreted through the following
+One can interpret \SGARefLink{sga3:xxiv:proposition:8-2}{8.2} and \SGARefLink{sga3:xxiv:lemma:8-3}{8.3} by the following
 exact sequence, where \(f:S'\to S\) is the given morphism:
 \[
   1\longrightarrow H^1(S,f_*G')
@@ -1385,7 +1409,8 @@ exact sequence, where \(f:S'\to S\) is the given morphism:
 \]
 In the commutative case, this exact sequence follows from the Leray
 spectral sequence. It remains valid in the noncommutative
-case.
+case (cf.\ Giraud's thesis).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, gives the precise reference: J.~Giraud,
+\emph{Cohomologie non abélienne}, Springer, 1971, V, 3.1.4.}
 
 In this form one sees that the result remains valid when \(f\) is
 assumed only finite, or even merely integral, provided that the
@@ -1393,7 +1418,8 @@ topology is the étale topology. Indeed, for every \(G'\),
 \[
   R^1f_*(G')=\text{the final sheaf}
 \]
-by SGA~4, VIII, 5.3.
+by SGA~4, VIII, 5.3.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIV, refers here also to J.~Giraud,
+\emph{Cohomologie non abélienne}, Springer, 1971, V, 3.1.4.}
 
 The result becomes false for a topology such as \textup{(fpqc)} or
 \textup{(fppf)}, even if
@@ -1424,52 +1450,4 @@ characteristic of \(V\). Then
 Replacing \(S'\) by \(S\amalg S'\) gives an analogous example in which
 \(S'\to S\) is étale and surjective, hence a cover for the topology
 under consideration.
-
-\section*{Bibliography}
-
-\noindent[BLie]\enspace
-N.~Bourbaki, \textit{Groupes et algèbres de Lie}, Chap.~I, Hermann,
-1960.\par
-
-\smallskip\noindent[Ch51]\enspace
-C.~Chevalley, \textit{Théorie des groupes de Lie}, t.~II,
-\textit{Groupes algébriques}, Hermann, 1951.\par
-
-\smallskip\noindent[Di57]\enspace
-J.~Dieudonné, Lie groups and Lie hyperalgebras over a field of
-characteristic \(p>0\). VI, \textit{Amer. J. Math.} \textbf{79}
-(1957), no.~2, 331--388.\footnote{\textit{Editors' note.} The editors
-have added, after these three references which appeared in the
-original, the references that follow.}\par
-
-\smallskip\noindent[Bo91]\enspace
-A.~Borel, \textit{Linear Algebraic Groups}, 2nd ed.,
-Springer-Verlag, 1991.\par
-
-\smallskip\noindent[Ch05]\enspace
-C.~Chevalley, \textit{Classification des groupes algébriques
-semi-simples}, with the collaboration of P.~Cartier,
-A.~Grothendieck, and M.~Lazard, \textit{Collected Works}, vol.~3,
-Springer, 2005.\par
-
-\smallskip\noindent[DG70]\enspace
-M.~Demazure and P.~Gabriel, \textit{Groupes algébriques}, Masson and
-North-Holland, 1970.\par
-
-\smallskip\noindent[Gi71]\enspace
-J.~Giraud, \textit{Cohomologie non abélienne}, Springer-Verlag,
-1971.\par
-
-\smallskip\noindent[Ja87]\enspace
-J.~C.~Jantzen, \textit{Representations of Algebraic Groups}, Academic
-Press, 1987; 2nd ed., American Mathematical Society, 2003.\par
-
-\smallskip\noindent[Jou83]\enspace
-J.-P.~Jouanolou, \textit{Théorèmes de Bertini et applications},
-Birkhäuser, 1983.\par
-
-\smallskip\noindent[Ta75]\enspace
-M.~Takeuchi, On coverings and hyperalgebras of affine algebraic
-groups, \textit{Trans. Amer. Math. Soc.} \textbf{211} (1975),
-249--275.\par
 
