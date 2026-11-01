@@ -129,12 +129,11 @@ all \(x,y\in\mathbb G_a(S')\),}
 Let \(U\) be the inverse image of \(\Omega\). It is an open subset
 of \(\mathbb G_{a,S}^{\,2}\) containing
 \(0\times_S\mathbb G_{a,S}\) and
-\(\mathbb G_{a,S}\times_S0\). There are therefore unique
-morphisms of \(S\)-schemes
+\(\mathbb G_{a,S}\times_S0\). There are morphisms
 \[
   A\colon U\longrightarrow\mathbb G_{a,S},\qquad
-  C\colon U\longrightarrow\mathbb G_{a,S},\qquad
-  B\colon U\longrightarrow T
+  B\colon U\longrightarrow T,\qquad
+  C\colon U\longrightarrow\mathbb G_{a,S}
 \]
 satisfying the set-theoretic identity
 \[
@@ -144,16 +143,15 @@ satisfying the set-theoretic identity
 \]
 Immediately,
 \[
-\begin{gathered}
-  A(0,v)=v,\qquad A(u,0)=0,\qquad
-  C(u,0)=u,\qquad C(0,v)=0,\\
-  B(u,0)=B(0,v)=e.
-\end{gathered}
+  A(0,v)=v,\quad A(u,0)=0,\quad
+  B(u,0)=B(0,v)=e,\quad
+  C(u,0)=u,\quad C(0,v)=0.
 \]
 
 Let \(S'\) be a separated \(S\)-scheme and let \(t\in T(S')\).
-Since \(\Omega_{S'}\) is stable under \(\intaut(t)\), the last
-formula of \SGARefLink{sga3:xx:1.16}{1.16} shows that \(U_{S'}\) is stable under the
+Since \(\Omega_{S'}\) is stable under \(\intaut(t)\),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XX, refers here to
+the last formula of \SGARefLink{sga3:xx:1.16}{1.16}, which describes \(\intaut(t)\) on \(\Omega\).}
+\(U_{S'}\) is stable under the
 automorphism
 \[
   (x,y)\longmapsto
@@ -194,48 +192,25 @@ by
 \[
   (u,v)\in V(S')
   \quad\Longleftrightarrow\quad
-  (u,v),\ (uv,1),\ \text{and }(1,uv)\text{ belong to }U(S').
+  (u,v)\in U(S')\ \text{and}\ (uv,1)\in U(S').
 \]
-
-Since \(U\) contains
-\(0\times_S\mathbb G_{a,S}\) and
-\(\mathbb G_{a,S}\times_S0\), the open subset \(V\) is a
-neighborhood of the zero section of \(\mathbb G_{a,S}^{\,2}\).
-The preceding calculation shows that, on
-\(V\cap(\mathbb G_{a,S}\times_S\mathbb G_{m,S})\), the two
-morphisms
-\[
-  (u,v)\longmapsto A(u,v),\qquad
-  (u,v)\longmapsto vA(uv,1)
-\]
-coincide, as do
-\[
-  (u,v)\longmapsto B(u,v),\qquad
-  (u,v)\longmapsto B(uv,1).
-\]
-Since
+It is a neighborhood of the zero section of
+\(\mathbb G_{a,S}^{\,2}\), and we have just seen that, on
+\(V\cap(\mathbb G_{a,S}\times_S\mathbb G_{m,S})\), the morphisms
+\((u,v)\mapsto A(u,v)\) and \((u,v)\mapsto vA(uv,1)\)
+(respectively \((u,v)\mapsto B(u,v)\) and \((u,v)\mapsto B(uv,1)\))
+coincide. Since
 \(\mathbb G_{a,S}\times_S\mathbb G_{m,S}\) is schematically dense
 in \(\mathbb G_{a,S}^{\,2}\), these morphisms coincide on \(V\).
 
-We have \(A(0,1)=1\). Hence there is an open subset \(W_1\) of
+We know that \(A(0,1)=1\); hence there is an open subset \(W\) of
 \(\mathbb G_{a,S}\), containing the zero section, such that
-\(A(x,1)\) is invertible for every section \(x\) of \(W_1\). Put
-\[
-  A(x,1)^{-1}=F(x).
-\]
-If \((u,v)\in V(S')\) and \(uv\in W_1(S')\), then
-\[
-  A(u,v)=vA(uv,1)=vF(uv)^{-1}.
-\]
-The same argument applied to \(C\) gives an open subset \(W_2\)
-of \(\mathbb G_{a,S}\), containing the zero section, and an
-element \(E\in\mathscr O(W_2)^\times\) such that
-\[
-  C(u,v)=uC(1,uv)=uE(uv)^{-1}
-\]
-whenever \((u,v)\in V(S')\) and \(uv\in W_2(S')\).
+\(A(x,1)\) is invertible for every section \(x\) of \(W\). Putting
+\(A(x,1)^{-1}=F(x)\) and arguing in the same way for \(C\), one
+deduces the following result.
 
-Consequently, with \(W=W_1\cap W_2\), there are \(S\)-morphisms
+There are an open subset \(W\) of \(\mathbb G_{a,S}\) containing the
+zero section and \(S\)-morphisms
 \[
 \begin{array}{lll}
   F\colon W\to\mathbb G_{m,S},&\qquad&F(0)=1,\\
@@ -243,7 +218,16 @@ Consequently, with \(W=W_1\cap W_2\), there are \(S\)-morphisms
   E\colon W\to\mathbb G_{m,S},&&E(0)=1,
 \end{array}
 \]
-such that, if \((u,v)\in V(S')\) and \(uv\in W(S')\), then
+such that, if \((u,v)\in U(S')\) and \(uv\in W(S')\), \(S'\to S\), then\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XX,
+details this step; it adds the condition \((1,uv)\in U(S')\) to the definition of \(V\) and states
+\((+)\), and the conditions defining \(L\) below, with \(V(S')\) in place of \(U(S')\). The
+statement as printed holds. In our formulation: for \((u,v)\in V\) with \(uv\in W\) one has
+\(A(u,v)=vF(uv)^{-1}\) and \(B(u,v)=H(uv)\), where \(H(x)=B(x,1)\); in the same way, with
+\(z=u^{-1}\) on the open subset where \((1,uv)\in U\), one has \(C(u,v)=uC(1,uv)=uE(uv)^{-1}\),
+where \(E(x)=C(1,x)^{-1}\) and \(W\) is taken small enough. The two sides of \((+)\) are morphisms into the separated open subset \(\Omega\)
+which agree on an open subset of \(\{(u,v)\in U:uv\in W\}\) containing the zero section; this open
+subset is relatively schematically dense \textup{(Exposé XVIII, 1.3)}, so they agree on all of it
+\textup{(Exposé XVIII, 1.4)}.}
 \SGARefTarget{sga3:xx:2.2:plus}
 \begin{equation}\tag{+}
   p_\alpha(u)p_{-\alpha}(v)

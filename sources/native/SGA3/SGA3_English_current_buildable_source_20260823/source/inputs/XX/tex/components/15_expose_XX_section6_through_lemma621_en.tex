@@ -3,23 +3,15 @@
 \paragraph{\textbf{6.1.}}
 \SGARefTarget{sga3:xx:6.1}
 Let \(S\) be a scheme and let \((G,T,\alpha)\) be an elementary
-\(S\)-system.  Let
-\[
- X\in W(\mathfrak g^\alpha)^\times(S),
- \qquad u=\exp(X).
-\]
-As observed in \SGARefLink{sga3:xx:3.8}{3.8}, the element \(w=w_\alpha(X)\) satisfies, in
-particular,
+\(S\)-system.  Let \(u\in U_\alpha^\times(S)\); we saw in
+\SGARefLink{sga3:xx:3.8}{3.8} that the corresponding element \(w=w_\alpha(X)\)
+\textup{(}with \(u=\exp(X)\)\textup{)} satisfies, in particular, the relation\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XX, adds here the definition of the symbol
+\(s_\alpha\) used in 6.2\,(ii): it is the automorphism of \(T\) induced by \(\intaut(w)\), namely
+\(s_\alpha(t)=t\,\alpha^\ast\bigl(\alpha(t)^{-1}\bigr)\)
+\textup{(\SGARefLink{sga3:xx:3.1}{3.1}\,\SGARefLink{sga3:xx:3.1:item:iii}{(iii)})}; by that formula it does not
+depend on the choice of \(w\).}
 \[
  (wu)^3=e.
-\]
-\footnote{The editors added the sentence that follows.}
-Let \(s_\alpha\) denote the automorphism of \(T\) induced by
-\(\intaut(w)\).  By \SGARefLink{sga3:xx:3.1}{Theorem 3.1}\textup{\SGARefLink{sga3:xx:3.1:item:iii}{(iii)}}, for every \(S'\to S\)
-and every \(t\in T(S')\),
-\[
- s_\alpha(t)=\intaut(w)(t)
- =t\,\alpha^\ast\bigl(\alpha(t)^{-1}\bigr).
 \]
 
 \paragraph{\textbf{Theorem 6.2.}}
@@ -76,14 +68,13 @@ has the asserted properties, then for
 \(y\in U_{-\alpha}(S')\) one necessarily has
 \[
  f(y)
- =f(w^{-1}wyw^{-1}w)
- =h f_\alpha(w^{-1}yw)h^{-1}.
+ =f(wwyw^{-1}w^{-1})
+ =h f_\alpha(wyw^{-1})h^{-1}.
 \]
 Define a morphism \(f_{-\alpha}\colon U_{-\alpha}\to H\) by
-\begin{equation}
-\tag{\(\ast_1\)}\label{sga3:xx:theorem:6-2:equation:ast-1}
- f_{-\alpha}(y)=h f_\alpha(w^{-1}yw)h^{-1}.
-\end{equation}
+\[
+ f_{-\alpha}(y)=h f_\alpha(wyw^{-1})h^{-1}.
+\]
 It is a group morphism.  On the big cell \(\Omega\), the morphism
 \(f\) is forced to satisfy
 \[
@@ -98,34 +89,37 @@ Relation \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:4}{(4)}} gives
  =
  f_\alpha(-u)h^{-1}f_\alpha(-u).
 \]
-By \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:3}{(3)}} and \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:1}{(1)}},
-\(h^2=f_T(\alpha^\ast(-1))\) commutes with \(f_\alpha(-u)\), and
-hence
+Now, by \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:3}{(3)}} and \textup{(i)},
+\(h^2\) commutes with \(f_\alpha(-u)\),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XX, notes here that \(h^2=h^{-2}\).
+Indeed \(h^4=f_T\bigl(\alpha^\ast(-1)^2\bigr)=e\) by \textup{(3)}; this is used, together with the
+commutation of \(h^2\) with \(f_\alpha(-u)\), to pass from the preceding relation to the next one.}
+which gives
 \[
  h f_\alpha(u)h^{-1}
  =
  f_\alpha(-u)h f_\alpha(-u).
 \]
-By definition,
+But, by definition,
 \[
- h f_\alpha(u)h^{-1}=f_{-\alpha}(wuw^{-1}),
+ h f_\alpha(u)h^{-1}=f_{-\alpha}(wuw^{-1});
 \]
-whereas \SGARefLink{sga3:xx:3.7}{3.7} gives
-\begin{equation}
-\tag{\(\ast_2\)}\label{sga3:xx:theorem:6-2:equation:ast-2}
- wuw^{-1}=-\widetilde u,
-\end{equation}
-with \(\widetilde u\) the element paired with \(u\).  Therefore
-\begin{equation}
-\tag{\(\ast_3\)}\label{sga3:xx:theorem:6-2:equation:ast-3}
+since \(w\) corresponds to \(u\), one has \(wuw^{-1}=-\widetilde u\)
+\textup{(}we write \(\widetilde u\in U_{-\alpha}^\times(S)\) for the
+element paired with \(u\), cf.\ \SGARefLink{sga3:xx:3.7}{3.7}\textup{)}; one therefore obtains
+\[
  f_{-\alpha}(-\widetilde u)
  =
  f_\alpha(-u)h f_\alpha(-u).
-\end{equation}
+\]
 
 Let \(t\) be a section of \(T\) over a variable \(S'\to S\).
-Apply \(\intaut(f_T(t))\) to this identity.  On the left one
-obtains
+Apply \(\intaut(f_T(t))\) to the preceding formula.  On the left one
+obtains\footnote{Translator's note: the 1970 text has \(f_T(t)\) in place of \(f_T(t)^{-1}\) at the
+end of the first line, and \(h^{-1}f_T(t)h\) in place of \(h^{-1}f_T(t)^{-1}h\) in the second; the
+Gille--Polo re-edition (2011), Exposé~XX, corrects these misprints and details the steps. Here
+\(h^{-1}f_T(t)h=f_T(s_\alpha(t))\) follows from \textup{(2)}, since \(h^{-1}=h\cdot h^{-2}\) and
+\(h^2\in f_T(T)\) by \textup{(3)}; the next step uses \textup{(1)} and
+\(\alpha(s_\alpha(t))=\alpha(t)^{-1}\).}
 \[
 \begin{aligned}
  f_T(t)f_{-\alpha}(-\widetilde u)f_T(t)^{-1}
@@ -136,38 +130,30 @@ obtains
    \bigl(h^{-1}f_T(t)^{-1}h\bigr)h^{-1}\\
  &=
  h f_T(s_\alpha(t))f_\alpha(u)
-   f_T(s_\alpha(t))^{-1}h^{-1}\\
- &=
- h f_\alpha\bigl(\alpha(s_\alpha(t))u\bigr)h^{-1}\\
- &=
- h f_\alpha\bigl(\alpha(t)^{-1}u\bigr)h^{-1}\\
- &=
- f_{-\alpha}\bigl(-\alpha(t)^{-1}\widetilde u\bigr).
+   f_T(s_\alpha(t))^{-1}h^{-1},
 \end{aligned}
 \]
-Here we used \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:2}{(2)}}, \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:1}{(1)}},
-\(s_\alpha(t)=t\alpha^\ast(\alpha(t)^{-1})\), and
-\(\alpha\circ\alpha^\ast=2\).
+by \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:2}{(2)}} and \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:3}{(3)}}; then
+\[
+ h f_\alpha\bigl(\alpha(s_\alpha(t))u\bigr)h^{-1}
+ =h f_\alpha\bigl(\alpha(t)^{-1}u\bigr)h^{-1}
+\]
+by \textup{\SGARefLink{sga3:xx:theorem:6-2:equation:1}{(1)}}, and finally, by construction,
+\(f_{-\alpha}\bigl(-\alpha(t)^{-1}\widetilde u\bigr)\).
 
-The right-hand side of \((\ast_3)\), after conjugation, becomes
+The right-hand side gives
 \[
- f_\alpha(-\alpha(t)u)\,
- f_T(t)h f_T(t)^{-1}h^{-1}\,
+\begin{aligned}
+ &f_\alpha(-\alpha(t)u)\,
+ f_T(t)h f_T(t)^{-1}h^{-1}h\,
+ f_\alpha(-\alpha(t)u)\\
+ &\qquad=
+ f_\alpha(-\alpha(t)u)\,f_T(t)\,
+ f_T\bigl(t^{-1}\alpha^\ast(\alpha(t))\bigr)\,
  h f_\alpha(-\alpha(t)u).
+\end{aligned}
 \]
-Since
-\[
- h f_T(t)^{-1}h^{-1}
- =f_T(s_\alpha(t^{-1}))
-  =f_T\bigl(t^{-1}\,\alpha^\ast(\alpha(t))\bigr),
-\]
-this equals
-\[
- f_\alpha(-\alpha(t)u)\,
- f_T\bigl(\alpha^\ast(\alpha(t))\bigr)\,
- h f_\alpha(-\alpha(t)u).
-\]
-Comparison gives
+Comparing the two expressions obtained gives
 \[
  f_{-\alpha}\bigl(-\alpha(t)^{-1}\widetilde u\bigr)
  =

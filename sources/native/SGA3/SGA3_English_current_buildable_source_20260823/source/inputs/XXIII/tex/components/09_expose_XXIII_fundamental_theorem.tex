@@ -3,7 +3,11 @@
 \SGARefTarget{sga3:XXIII:4.1}
 \SGAInlineRefTarget{sga3:xxiii:theorem:4-1}\SGAStatement{Theorem 4.1}{Let \(S\) be a nonempty scheme. The
 functor \(R\) of \SGARefLink{sga3:XXIII:1.6}{1.6} is fully faithful. More precisely, let \(G,G'\)
-be pinned \(S\)-groups, let \(p>0\) be an integer such that
+be pinned \(S\)-groups, let \(p>0\) be an integer\footnote{Translator's note: the 1970 text calls
+this integer \(q\), and in 4.1.4--4.1.8 also writes \(q\) and \(q_1\) for radicial
+exponents \(q(\alpha)\), which are powers of it. The Gille--Polo re-edition (2011),
+Exposé~XXIII, calls the integer \(p\) to avoid this clash (so also in the map
+\(q:R\to\{p^n\}\) below), and we follow it.} such that
 \(x\mapsto x^p\) is an endomorphism of \(\mathbf G_{a,S}\), and let
 \[
   h:R(G')\longrightarrow R(G)
@@ -71,23 +75,22 @@ Here
 \[
   h(\alpha')=q\alpha,\qquad h(\beta')=q_1\beta.
 \]
-Conditions \SGARefLink{sga3:XXIII:2.5:item:ii}{2.5(ii)} and (iii) follow from \SGARefLink{sga3:xxiii:proposition:3-1-2:item:ii}{Proposition 3.1.2(ii)},(iii).
-For (i),
+Let us show that the conditions of \SGARefLink{sga3:XXIII:2.5}{2.5} are satisfied. By
+\SGARefLink{sga3:xxiii:proposition:3-1-2:item:ii}{3.1.2~(ii)} (respectively (iii)), condition (ii) (respectively (iii))
+is trivial. Let us prove (i).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIII, justifies the
+equality \(\alpha'^*(-1)^q\beta'^*(-1)^{q_1}=\alpha'^*(-1)\beta'^*(-1)\) used below. In our
+formulation: if \(x\mapsto x^n\) is an endomorphism of \(\mathbf G_{a,S}\), then
+\(1+(-1)^n=1^n+(-1)^n=(1-1)^n=0\), so \((-1)^n=-1\) in \(\Gamma(S,\mathcal O_S)\). This
+applies to the radicial exponents \(n=q\) and \(n=q_1\), which are powers of the
+integer \(p\) of 4.1.} We have
 \[
 \begin{aligned}
  D_S(h)t_{\alpha\beta}
-  &=D_S(h)(t_\alpha t_\beta)\\
-  &={}^th(\alpha^*)(-1)\,{}^th(\beta^*)(-1)\\
-  &=\alpha'^*((-1)^q)\,\beta'^*((-1)^{q_1}).
-\end{aligned}
-\]
-The assumption on \(x\mapsto x^p\), with \(S\ne\varnothing\), implies
-that \(p=1\) or \(S\) has characteristic \(p\). Thus
-\((-1)^q=-1\): if \(q\) is even, then \(p=2\) and \(1=-1\).
-Consequently
-\[
-  D_S(h)t_{\alpha\beta}
+  &=D_S(h)(t_\alpha t_\beta)
+   ={}^th(\alpha^*)(-1)\cdot{}^th(\beta^*)(-1)\\
+  &=\alpha'^*(-1)^q\,\beta'^*(-1)^{q_1}
    =\alpha'^*(-1)\beta'^*(-1)=t'_{\alpha'\beta'}.
+\end{aligned}
 \]
 
 \SGARefTarget{sga3:XXIII:4.1.5}
@@ -140,7 +143,7 @@ and
 \[
  \{\alpha',\beta',\alpha'+\beta',\alpha'+2\beta'\},
 \]
-where \(\alpha\) and \(\beta'\) are the short simple roots. We have
+(note that the ``short'' roots are \(\alpha\) and \(\beta'\)). We have
 \[
 \begin{aligned}
  h(\alpha')&=2q\alpha,&h(\beta')&=q\beta,\\
@@ -165,11 +168,13 @@ Put
 \end{aligned}
 \]
 
-For (i), characteristic \(2\) gives \(-1=1\), hence
+We now verify the conditions of \SGARefLink{sga3:XXIII:2.5}{2.5}. For (i), characteristic \(2\)
+gives \(-1=1\), hence
 \[
  t_{\alpha\beta}=t_\alpha=\alpha^*(-1)=e
-   =\beta'^*(-1)=t'_{\beta'}=t'_{\alpha'\beta'}.
+   =\beta'^*(-1)=t'_{\beta'}=t'_{\alpha'\beta'}
 \]
+(cf.\ \SGARefLink{sga3:xxiii:proposition:3-3-1:item:i}{3.3.1~(i)}).
 For (ii), the two defining identities are
 \[
 \begin{aligned}
@@ -211,7 +216,7 @@ For (iii), the sole nontrivial relations are
  p'_{\alpha'}(y')p'_{\beta'}(x')
   &=p'_{\beta'}(x')p'_{\alpha'}(y')
     p'_{\alpha'+\beta'}(x'y')
-    p'_{\alpha'+2\beta'}(x'y'^2).
+    p'_{\alpha'+2\beta'}(x'^2y').
 \end{aligned}
 \]
 The proposed map is
@@ -355,14 +360,16 @@ Substituting \(x^{3q},y^q\) in the three displayed relations for
 thus \(\phi\) is a homomorphism.
 
 \SGARefTarget{sga3:XXIII:4.1.9}
-\SGAParagraph{4.1.9. Semisimple rank greater than \(2\)}
+\SGAParagraph{4.1.9. Semisimple rank at least \(2\)}
 For \(\alpha\in\Delta\), put \(\alpha'=d(\alpha)\). For every
 \((\alpha,\beta)\), consider the pinned rank-at-most-two groups
 \[
   Z_{\alpha\beta},\qquad Z'_{\alpha'\beta'}.
 \]
 The homomorphism \(M'\to M\) underlying \(h\) induces a
-\(p\)-morphism
+\(p\)-morphism\footnote{Translator's note: the 1970 text writes
+\(h_{\alpha\beta}:R(Z_{\alpha\beta})\to R(Z'_{\alpha'\beta'})\), and refers below to 2.5,
+twice, for the gluing statement, which is Corollary 2.4.}
 \[
   h_{\alpha\beta}:R(Z'_{\alpha'\beta'})
     \longrightarrow R(Z_{\alpha\beta}).

@@ -19,8 +19,9 @@ of the proof of \SGARefLink{sga3:xxiii:theorem:4-1}{Theorem 4.1}, without the ex
 
 \SGARefTarget{sga3:XXIII:5.2}
 \SGAStatement{Corollary 5.2 (Uniqueness theorem)}{Let \(S\) be a
-scheme and let \(G,G'\) be two splittable \(S\)-groups. If they have
-the same type, then they are isomorphic.}
+scheme and let \(G,G'\) be two splittable \(S\)-groups
+(\SGARefLink{sga3:xxii:def:1.13}{Exposé~XXII, 1.13}). If \(G\) and \(G'\) have the same
+type (\SGARefLink{sga3:xxii:par:2.6}{Exposé~XXII, 2.6}), then they are isomorphic.}
 
 \SGARefTarget{sga3:XXIII:5.3}
 \SGAStatement{Corollary 5.3}{Let \(S\) be a scheme and \(G,G'\) two
@@ -28,21 +29,29 @@ splittable \(S\)-groups. The following are equivalent:
 \begin{enumerate}
   \item[\SGAInlineRefTarget{sga3:XXIII:5.3:item:i}(i)] \(G\) and \(G'\) are isomorphic;
   \item[\SGAInlineRefTarget{sga3:XXIII:5.3:item:ii}(ii)] they are locally isomorphic for the fpqc topology;
-  \item[\SGAInlineRefTarget{sga3:XXIII:5.3:item:iii}(iii)] there is \(s\in S\) such that \(G_s\) and \(G'_s\)
-    have the same type.
+  \item[\SGAInlineRefTarget{sga3:XXIII:5.3:item:iii}(iii)] there is \(s\in S\) such that the \(\bar s\)-groups \(G_{\bar s}\) and
+    \(G'_{\bar s}\) have the same type.
 \end{enumerate}}
 
 Clearly \SGARefLink{sga3:XXIII:5.3:item:i}{(i)} implies \SGARefLink{sga3:XXIII:5.3:item:ii}{(ii)}, which implies \SGARefLink{sga3:XXIII:5.3:item:iii}{(iii)}. Conversely, \SGARefLink{sga3:XXIII:5.3:item:iii}{(iii)}
 gives
 \[
-  R(G)=R(G_s)=R(G'_s)=R(G'),
+  R(G)=R(G_{\bar s})=R(G'_{\bar s})=R(G'),
 \]
 so \SGARefLink{sga3:XXIII:5.2}{Corollary 5.2} applies.
 
 \SGARefTarget{sga3:XXIII:5.4}
 \SGAStatement{Corollary 5.4 (Uniqueness of Chevalley schemes)}{Let
-\(G,G'\) be reductive groups over \(\mathbf Z\), each possessing a
-split maximal torus. The following are equivalent:
+\(G,G'\) be two reductive \(\mathbf Z\)-groups possessing trivial maximal
+tori.\footnote{In fact, one can prove that every \(\mathbf Z\)-torus is trivial.\par
+Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIII, indicates the proof. In our formulation:
+\(\operatorname{Spec}\mathbf Z\) is noetherian and normal, so every \(\mathbf Z\)-torus
+\(T\) is isotrivial (\SGARefLink{sga3:x:theorem:5-16}{Exposé~X, 5.16}): there is a finite
+étale surjective morphism \(S'\to\operatorname{Spec}\mathbf Z\) such that \(T_{S'}\) is
+diagonalizable. By Minkowski's theorem every number field other than \(\mathbf Q\) is
+ramified at some prime, so a connected component of \(S'\) is isomorphic to
+\(\operatorname{Spec}\mathbf Z\); restricting to it shows that \(T\) is diagonalizable,
+that is, trivial.} The following are equivalent:
 \begin{enumerate}
   \item[(i)] \(G\) and \(G'\) are isomorphic;
   \item[(ii)] there is \(s\in\operatorname{Spec}\mathbf Z\) such
@@ -83,14 +92,15 @@ simple root \(\alpha\).}
 \begin{enumerate}
   \item[\SGAInlineRefTarget{sga3:XXIII:5.6:item:i}(i)] \(G,G'\) are locally isomorphic for the fpqc topology;
   \item[(i bis)] they are locally isomorphic for the étale topology;
-  \item[(ii)] \(G_s,G'_s\) are isomorphic for every \(s\in S\);
-  \item[\SGAInlineRefTarget{sga3:XXIII:5.6:item:iii}(iii)] the functions \(s\mapsto\operatorname{type}(G_s)\)
-    and \(s\mapsto\operatorname{type}(G'_s)\) are equal.
+  \item[(ii)] \(G_{\bar s},G'_{\bar s}\) are isomorphic for every \(s\in S\);
+  \item[\SGAInlineRefTarget{sga3:XXIII:5.6:item:iii}(iii)] the functions \(s\mapsto\operatorname{type}(G_{\bar s})\)
+    and \(s\mapsto\operatorname{type}(G'_{\bar s})\) are equal.
 \end{enumerate}}
 
 The implication (i bis)\(\Rightarrow\)\SGARefLink{sga3:XXIII:5.6:item:i}{(i)} is immediate;
 (i)\(\Rightarrow\)(ii) follows from the principle of finite
-extension (EGA IV\(_3\), 9.1.4); and
+extension;\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXIII, gives the reference
+EGA~IV\(_3\), 9.1.4, for this principle.} and
 (ii)\(\Rightarrow\)(iii) is immediate. For
 \SGARefLink{sga3:XXIII:5.6:item:iii}{(iii)}\(\Rightarrow\)(i bis), one may suppose \(G,G'\) splittable
 (\SGARefLink{sga3:xxii:cor:2.3}{Exposé XXII, 2.3}), and then apply \SGARefLink{sga3:XXIII:5.3}{Corollary 5.3}.
@@ -98,12 +108,17 @@ extension (EGA IV\(_3\), 9.1.4); and
 \SGARefTarget{sga3:XXIII:5.7}
 \SGAStatement{Corollary 5.7}{Let \(S\) be a scheme, \(G\) a
 reductive \(S\)-group, and \(G'\) an affine smooth \(S\)-group with
-connected fibers. If \(s\in S\) and \(G_s\simeq G'_s\), then there
+connected fibers. If \(s\in S\) and \(G_{\bar s}\simeq G'_{\bar s}\), then there
 is an étale morphism \(S'\to S\), covering \(s\), such that
 \(G_{S'}\simeq G'_{S'}\).}
 
-By Exposés XIX, \SGARefLink{sga3:XXIII:2.5}{2.5} and XXII, \SGARefLink{sga3:xxii:prop:2.1}{2.1}, one may suppose \(G,G'\)
-reductive and splittable, and \SGARefLink{sga3:XXIII:5.3}{Corollary 5.3} applies.
+By Exposés XIX, \SGARefLink{sga3:xix:theorem:2:5}{2.5} and XXII, \SGARefLink{sga3:xxii:prop:2.1}{2.1}, one may suppose \(G,G'\)
+reductive and splittable, and \SGARefLink{sga3:XXIII:5.3}{Corollary 5.3} applies.\footnote{Translator's note: the 1970 text refers to Exp.~XIX, 2.3; the
+Gille--Polo re-edition (2011), Exposé~XXIII, corrects this to XIX, 2.5, the theorem
+giving reductivity near \(s\) and a split maximal torus after an étale base change.}
+
+In the case where \(S\) is the spectrum of a field, one deduces from
+\SGARefLink{sga3:XXIII:5.6}{5.6} and \SGARefLink{sga3:XXIII:5.7}{5.7}:
 
 \SGARefTarget{sga3:XXIII:5.8}
 \SGAStatement{Corollary 5.8}{Let \(k\) be a field and \(G,G'\)
@@ -179,7 +194,7 @@ identify
     =\operatorname{\acute Ep}_S(R)\times_SS'.
 \]
 If \(\operatorname{\acute Ep}_{\operatorname{Spec}\mathbf Z}(R)\)
-exists, write it \(\operatorname{\acute Ep}(R)\); then
+exists (we shall see that this is always the case), write it \(\operatorname{\acute Ep}(R)\); then
 \[
   \operatorname{\acute Ep}_S(R)
     =\operatorname{\acute Ep}(R)

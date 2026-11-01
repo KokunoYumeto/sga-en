@@ -92,7 +92,7 @@ It suffices to verify this formula for a system of generators of
 \(\alpha\in\Delta\), by \SGARefLink{sga3:XXIII:2.1:item:i}{2.1(i)}, so it remains to treat
 \(n\in T(S')\). This is immediate from \SGARefLink{sga3:XXIII:2.1:item:ii}{2.1(ii)} when \(\alpha\) is
 simple. Otherwise choose \(w\in W\) with
-\(w^{-1}(\alpha)\in\Delta\). Writing \(w\) as a product of simple
+\(w^{-1}(\alpha)\in\Delta\). Writing \(w\) as a product of fundamental
 reflections, one reduces to showing that if the formula holds for
 \(\alpha\) and every \(n\), it also holds for
 \(w_{\alpha_0}(\alpha)\) and \(t\in T(S')\), where
@@ -124,7 +124,12 @@ roots and every \(x_\alpha\in U_\alpha(S')\),
 \]
 By \SGARefLink{sga3:xxii:cor:5.5.2}{Exposé~XXII, 5.5.2}, there are elements
 \(x_\gamma\in U_\gamma(S')\), where
-\(\gamma=i\alpha+j\beta\in R\), \(i>0\), \(j\geq0\), such that
+\(\gamma=i\alpha+j\beta\in R\), \(i>0\), \(j\geq0\),\footnote{Translator's note: the 1970 text has \(i,j>0\),
+here and in the next display; the Gille--Polo re-edition (2011), Exposé~XXIII,
+corrects this. By \SGARefLink{sga3:xxii:cor:5.5.2}{Exposé~XXII, 5.5.2},
+\(x_\beta x_\alpha x_\beta^{-1}\) is the product of \(x_\alpha\) and of factors
+\(x_\gamma\) with \(\gamma=i\alpha+j\beta\), \(i,j>0\); so the term \(\gamma=\alpha\)
+(\(i=1\), \(j=0\)) must be allowed.} such that
 \[
   x_\beta x_\alpha x_\beta^{-1}=\prod_\gamma x_\gamma.
 \]
@@ -264,7 +269,8 @@ induction hypothesis gives
   f\bigl(\operatorname{int}(n')\operatorname{int}(w_\alpha)g\bigr)
    =\operatorname{int}(f_N(n'))f(\operatorname{int}(w_\alpha)g).
 \]
-\SGARefLink{sga3:XXIII:2.1.7}{Lemma 2.1.7} gives
+Since \(\operatorname{int}(w_\alpha)g\in\Omega(S')\), one may apply
+\SGARefLink{sga3:XXIII:2.1.7}{Lemma 2.1.7}, which gives
 \[
   f(\operatorname{int}(w_\alpha)g)
    =\operatorname{int}(f_N(w_\alpha))f(g),
@@ -278,7 +284,8 @@ We now prove \SGARefLink{sga3:XXIII:2.1.2}{Proposition 2.1.2}. Let \(x,x'\in\Ome
 so \(xx'=vt(uv')t'u'\). By \SGARefLink{sga3:XXIII:2.1.6}{2.1.6} and
 \(U^-(S')\Omega(S')U(S')=\Omega(S')\), it suffices to show that
 \(f(uv')=f(u)f(v')\) whenever \(uv'\in\Omega(S')\). Choose
-\(n\in\operatorname{Norm}_G(T)(S')\) as in \SGARefLink{sga3:XXIII:2.1.5}{2.1.5}. Then
+\(n\in\operatorname{Norm}_G(T)(S')\) as in \SGARefLink{sga3:XXIII:2.1.5}{2.1.5}.\footnote{Translator's note: the 1970
+text has ``comme dans 2.1.5 (ii)''; Lemma 2.1.5 has no part (ii).} Then
 \[
 \begin{aligned}
  f(u)&=f_N(n)^{-1}f(nun^{-1})f_N(n),\\
@@ -305,7 +312,7 @@ If \(uv'\in\Omega(S')\), \SGARefLink{sga3:XXIII:2.1.8}{Lemma 2.1.8} finishes the
 \SGAStatement{Remark 2.2}{Instead of prescribing \(f_N\), one may
 prescribe a morphism \(f_T:T\to H\) and sections
 \(h_\alpha\in H(S)\), \(\alpha\in\Delta\), satisfying the conditions
-of \SGARefLink{sga3:XXIII:1.8.2}{1.8.2}. Condition \SGARefLink{sga3:XXIII:1.8.2:item:ii}{(ii)} of \SGARefLink{sga3:XXIII:2.1}{Theorem 2.1} must then be replaced by:
+of \SGARefLink{sga3:XXIII:1.8.2}{1.8.2}. Condition \SGARefLink{sga3:XXIII:2.1:item:ii}{(ii)} of \SGARefLink{sga3:XXIII:2.1}{Theorem 2.1} must then be replaced by:
 \begin{quote}
 \emph{(ii\('\)) There exists a morphism of groups
 \(F_\alpha:Z_\alpha\to H\) extending \(f_\alpha,f_{-\alpha},f_T\)
@@ -374,7 +381,8 @@ a necessarily unique morphism of groups \(f:G\to H\) inducing
     \end{equation}
     (respectively
     \(\operatorname{int}(h_\beta)f_{\alpha\beta}(x)
-     =f_{\alpha\beta}(\operatorname{int}(w_\beta)x)\)).
+     =f_{\alpha\beta}(\operatorname{int}(w_\beta)x)\)).\footnote{Translator's note: the 1970 text has
+\(\operatorname{int}(w_\alpha)x\) in this last formula.}
 \end{enumerate}}
 
 \SGAProof
@@ -432,8 +440,12 @@ If every \(\gamma_i\) is positive, condition \SGARefLink{sga3:XXIII:2.3:item:v}{
 \]
 and \(i=k\) gives the result. Otherwise there is a \(j<k\) such that
 \(\gamma_j\in R^+\) but \(\gamma_{j+1}\notin R^+\). Since
-\(\gamma_{j+1}=s_{\alpha_j}(\gamma_j)\), \SGARefLink{sga3:XXI:3.3.2}{Exposé~XXI, 3.3.2} gives
-\(\gamma_j=\alpha_j\), hence \(\gamma_j\) is \(\alpha\) or \(\beta\).
+\(\gamma_{j+1}=s_{\alpha_{j+1}}(\gamma_j)\), \SGARefLink{sga3:XXI:3.3.2}{Exposé~XXI, 3.3.2} gives
+\(\gamma_j=\alpha_{j+1}\),\footnote{Translator's note: the 1970 text has \(s_{\alpha_j}\) and
+\(\alpha_j\) here. By the definition of the \(\gamma_i\),
+\(\gamma_{j+1}=s_{\alpha_{j+1}}(\gamma_j)\); then \(n''\) carries \(\alpha\) to
+\(\gamma_j=\alpha_{j+1}\), and \(n'\) carries \(\alpha_{j+1}\) to \(n(\alpha)\).} hence
+\(\gamma_j\) is \(\alpha\) or \(\beta\).
 Decompose
 \[
  n=n'n'',\qquad
@@ -456,7 +468,10 @@ fewer than \(k\) reflections, so induction applies.
 \]}
 
 It suffices to prove that if \(n(\alpha)=\beta\), with
-\(\alpha,\beta\in\Delta\), then
+\(\alpha,\beta\in\Delta\), then\footnote{Translator's note: the 1970 text writes \(f_T(n)\) for
+\(f_N(n)\) in the statement and in this formula, and refers to Exp.~XXI, 5.1, for
+Tits's lemma, which is \SGARefLink{sga3:XXI:5.6}{Exposé~XXI, 5.6}; the Gille--Polo
+re-edition (2011), Exposé~XXIII, corrects the second point.}
 \[
   \operatorname{int}(f_N(n))\circ f_\alpha
     =f_\beta\circ\operatorname{int}(n).
@@ -546,7 +561,8 @@ this is independent of \(\alpha\), since
    =F_{\alpha\beta}|_T
    =F_{\beta\beta}|_T.
 \]
-Set
+Set\footnote{Translator's note: in this formula the 1970 text writes \(p_\alpha\) (the
+notation of 1.2) for \(f_\alpha\).}
 \[
   f_\alpha=F_{\alpha\alpha}|_{U_\alpha},\qquad
   h_\alpha=F_{\alpha\alpha}(w_\alpha),\qquad
