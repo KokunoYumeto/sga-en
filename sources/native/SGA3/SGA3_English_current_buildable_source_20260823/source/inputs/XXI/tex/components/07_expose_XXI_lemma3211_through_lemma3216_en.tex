@@ -1,22 +1,7 @@
-Recall from Complements~\ref{sga3:XXI:2.3.7} that the bilinear form on
-\(\VR(R)\) defined by
-\[
- \langle x,y\rangle=(p(x),y)
-\]
-is a Euclidean inner product. Moreover, for \(\alpha\in R\),
-\[
- \langle\alpha,y\rangle
- =\frac{\ell(\alpha)}{2}(\alpha^\ast,y),
-\]
-so \(\langle\alpha,y\rangle\) and \((\alpha^\ast,y)\) have the same
-sign.
-
 \begin{lemma}\label{sga3:XXI:3.2.11}
-If \(\alpha,\beta\in\Delta\), then
+If \(\alpha,\beta\in\Delta\) are distinct, then
 \[
- (\beta^\ast,\alpha)\leq0
- \qquad\text{and hence}\qquad
- \langle\beta,\alpha\rangle\leq0.
+ (\beta^\ast,\alpha)\leq0.
 \]
 \end{lemma}
 
@@ -26,32 +11,35 @@ Indeed,
  s_\beta(\alpha)
  =\alpha-(\beta^\ast,\alpha)\beta\in R,
 \]
-and therefore \((\beta^\ast,\alpha)\leq0\) by
-Lemma~\ref{sga3:XXI:3.2.10}.
+and one concludes by Lemma~\ref{sga3:XXI:3.2.10}.
 \end{proof}
 
-We now show that \(\Delta\) is linearly independent. Otherwise,
-Lemma~\ref{sga3:XXI:3.2.11} would imply, exactly as in the proof of
-Proposition~\ref{sga3:XXI:3.1.5}, the existence of a nontrivial
-relation
+We now show that \(\Delta\) is free. If there is a linear relation
+between elements of \(\Delta\), one may suppose it written
+\[
+ x=\sum_{\alpha\in I}m_\alpha\alpha=\sum_{\beta\in J}n_\beta\beta,
+\]
+with \(I\subset\Delta\), \(J\subset\Delta\), \(I\cap J=\varnothing\),
+\(I\neq\varnothing\), and \(m_\alpha,n_\beta\in\Qp\). Then
+\[
+ 2p(x)=\sum_{\beta\in J}n_\beta\ell(\beta)\beta^\ast,
+\]
+so
+\[
+ 0\leq2(p(x),x)
+ =\sum_{\alpha\in I,\ \beta\in J}m_\alpha n_\beta\ell(\beta)(\beta^\ast,\alpha)\leq0.
+\]
+By Corollary~\ref{sga3:XXI:1.2.6} this implies \(x=0\), hence a
+nontrivial relation
 \[
  \sum_{\alpha\in\Delta}m(\alpha)\alpha=0,
- \qquad m(\alpha)\in\mathbb N.
+ \qquad m(\alpha)\in\Qp.
 \]
-If \(m(\alpha_0)\geq1\), then
-\[
- -\alpha_0
- =\bigl(m(\alpha_0)-1\bigr)\alpha_0
-  +\sum_{\alpha\neq\alpha_0}m(\alpha)\alpha.
-\]
-By (P 3), this gives
-\(\alpha_0\in R_+\cap(-R_+)\), contradicting (P 1).
-Thus \(\Delta\) is a base of \(\cR\), completing the proof of
-Theorem~\ref{sga3:XXI:3.2.8}.
+If \(m(\alpha_0)\neq0\), then
+\(-\alpha_0\in(\Qp\cdot R_+)\cap(-R_+)=\varnothing\).
 
 \begin{corollary}\label{sga3:XXI:3.2.12}
-Let \(R_+\) be a system of positive roots, let \(\Delta\) be a base of
-\(\cR\), and let \(w\in W\). Then
+One has the relations
 \[
  \Delta\subset R_+
  \quad\Longleftrightarrow\quad
@@ -70,7 +58,8 @@ and
 \[
  \mathscr{S}\bigl(w(R_+)\bigr)=w\bigl(\mathscr{S}(R_+)\bigr),
  \qquad
- \mathscr{P}\bigl(w(\Delta)\bigr)=w\bigl(\mathscr{P}(\Delta)\bigr).
+ \mathscr{P}\bigl(w(\Delta)\bigr)=w\bigl(\mathscr{P}(\Delta)\bigr)
+ \qquad\text{if }w\in W.
 \]
 \end{corollary}
 
@@ -95,7 +84,7 @@ The following conditions are equivalent:
 \begin{proof}
 The equivalence of \SGARefLink{sga3:XXI:3.2.14:item:i}{(i)} and \SGARefLink{sga3:XXI:3.2.14:item:ii}{(ii)} follows immediately from
 Lemma~\ref{sga3:XXI:3.2.9}; the equivalence of \SGARefLink{sga3:XXI:3.2.14:item:ii}{(ii)} and \SGARefLink{sga3:XXI:3.2.14:item:iii}{(iii)} is
-immediate from Definition~\ref{sga3:XXI:3.1.4}.
+immediate.
 \end{proof}
 
 \begin{definition}\label{sga3:XXI:3.2.15}

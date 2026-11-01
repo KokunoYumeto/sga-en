@@ -1,108 +1,57 @@
 \begin{proof}
-Put\footnote{Editors' note: In what follows, the original argument has
-been expanded, and equality \((1)\) has been corrected.}
+Put
 \[
- M(w)
- =\operatorname{Card}\bigl(R^+\cap w^{-1}(-R^+)\bigr)
- =\operatorname{Card}\{\gamma\in R^+\mid w(\gamma)\in-R^+\}.
+ M(w)=\operatorname{Card}\bigl(R^+\cap w^{-1}(-R^+)\bigr).
 \]
-If \(M(w)=0\), then \(w(R^+)=R^+\), so
-\(w=1\) by Corollary~\ref{sga3:XXI:5.4}; the theorem is then
-trivial: \(m=0\), and assertions (iii)--(v) are empty.
-
-We argue by induction on \(M(w)\). Suppose \(M(w)>0\). There exists
-\(\beta_0\in\Delta\) such that \(w(\beta_0)\in-R^+\). Put
-\(\alpha_0=\alpha\), and consider
+If \(M(w)=0\), then \(w=1\) by Corollary~\ref{sga3:XXI:5.4}, and the
+theorem is trivial (\(m=0\), and assertions (iii)--(v) are empty). We
+argue by induction on \(M(w)\). If \(M(w)>0\), there exists
+\(\beta_0\in\Delta\) with \(w(\beta_0)\in-R^+\). Put
+\(\alpha_0=\alpha\), and consider the set
 \[
  A=w^{-1}(R^+)\cap R_{\alpha_0,\beta_0}.
 \]
-This is a system of positive roots of
-\(R_{\alpha_0,\beta_0}\). Hence there exists
-\(w_0\in W_{\alpha_0,\beta_0}\) such that
+It is a system of positive roots of \(R_{\alpha_0,\beta_0}\). Hence
+there exists \(w_0\in W_{\alpha_0,\beta_0}\) with
 \[
  w_0^{-1}\bigl(R^+_{\alpha_0,\beta_0}\bigr)=A.
 \]
-Put \(w'=ww_0^{-1}\). Lemma~\ref{sga3:XXI:3.4.9} gives
+Put \(w'=ww_0^{-1}\). By Lemma~\ref{sga3:XXI:3.4.9}, one has at once
 \[
- R^+-R^+_{\alpha_0,\beta_0}
- =
- w_0\bigl(R^+-R^+_{\alpha_0,\beta_0}\bigr),
+ R^+-R^+_{\alpha_0,\beta_0}=w_0\bigl(R^+-R^+_{\alpha_0,\beta_0}\bigr),
 \]
-and therefore
-\begin{equation}
-\tag{1}
-\label{sga3:XXI:5.6:outside-rank-two}
-\begin{split}
- &(R^+-R^+_{\alpha_0,\beta_0})\cap w^{-1}(-R^+)\\
- &\qquad=
- w_0\Bigl((R^+-R^+_{\alpha_0,\beta_0})
-             \cap w'^{-1}(-R^+)\Bigr).
-\end{split}
-\end{equation}
+whence\footnote{Translator's note: the 1970 text states this as the equality of
+\((R^+-R^+_{\alpha_0,\beta_0})\cap w^{-1}(-R^+)\) and
+\((R^+-R^+_{\alpha_0,\beta_0})\cap w'^{-1}(-R^+)\), which fails in general; the
+Gille--Polo re-edition (2011), Exposé~XXI, corrects it, but applies \(w_0\) to the second
+of these sets instead of the first, which also fails in general (type \(A_3\) gives
+examples with \(w_0\) of order \(3\)). The relation above holds because \(w_0\) permutes
+\(R^+-R^+_{\alpha_0,\beta_0}\) and \(w'(w_0(\delta))=w(\delta)\); only the equality of
+the cardinals of the two sets is used.}
+\[
+ \bigl(R^+-R^+_{\alpha_0,\beta_0}\bigr)\cap w'^{-1}(-R^+)
+ =w_0\Bigl(\bigl(R^+-R^+_{\alpha_0,\beta_0}\bigr)\cap w^{-1}(-R^+)\Bigr).
+\]
 On the other hand,
-\begin{equation}
-\tag{2}
-\label{sga3:XXI:5.6:beta-negative}
- \beta_0\in
- R^+_{\alpha_0,\beta_0}\cap w^{-1}(-R^+).
-\end{equation}
-Since
-\(w_0(R_{\alpha_0,\beta_0})=R_{\alpha_0,\beta_0}\), one has
 \[
- w_0(-A)
- =R_{\alpha_0,\beta_0}\cap w'^{-1}(-R^+),
-\]
-and hence
-\begin{equation}
-\tag{\(2'\)}
-\label{sga3:XXI:5.6:rank-two-empty}
-\begin{split}
  R^+_{\alpha_0,\beta_0}\cap w'^{-1}(-R^+)
- &=
- R^+_{\alpha_0,\beta_0}\cap w_0(-A)\\
- &=
- R^+_{\alpha_0,\beta_0}\cap(-R^+_{\alpha_0,\beta_0})
- =\varnothing.
-\end{split}
-\end{equation}
-It follows from \eqref{sga3:XXI:5.6:outside-rank-two},
-\eqref{sga3:XXI:5.6:beta-negative}, and
-\eqref{sga3:XXI:5.6:rank-two-empty} that
-\[
- M(w')<M(w).
+ =R^+_{\alpha_0,\beta_0}\cap w_0(-A)
+ =R^+_{\alpha_0,\beta_0}\cap\bigl(-R^+_{\alpha_0,\beta_0}\bigr)=\varnothing,
 \]
-
-Put \(\alpha_1=w_0(\alpha_0)\). We show that
-\(\alpha_1\in\Delta\), or equivalently that
-\(\alpha_0\in w_0^{-1}(\Delta)\). Since
-\(w(\alpha_0)\in\Delta\), we have
+whereas
 \[
- \alpha_0\in
- w^{-1}(\Delta)\cap R_{\alpha_0,\beta_0}.
+ \beta_0\in R^+_{\alpha_0,\beta_0}\cap w^{-1}(-R^+).
 \]
-Thus \(\alpha_0\) is a simple root of
-\[
- A
- =w^{-1}(R^+)\cap R_{\alpha_0,\beta_0}
- =w_0^{-1}(R^+_{\alpha_0,\beta_0}),
-\]
-and consequently belongs to
-\[
- w_0^{-1}\bigl(\Delta\cap R^+_{\alpha_0,\beta_0}\bigr)
- =
- w_0^{-1}\{\alpha_0,\beta_0\}
-\]
-by Lemma~\ref{sga3:XXI:3.4.8}. Hence
-\(\alpha_1=w_0(\alpha_0)\) equals \(\alpha_0\) or \(\beta_0\).
-If \(\alpha_1\ne\alpha_0\), then
-\(\alpha_1=\beta_0\) and
-\(w_0\in W_{\alpha_0,\alpha_1}\).
-
-Finally,
-\[
- \beta=w'(\alpha_1)
- \qquad\text{and}\qquad
- M(w')<M(w),
-\]
-so the induction hypothesis completes the proof.
+We have therefore proved that \(M(w')<M(w)\). Put
+\(\alpha_1=w_0(\alpha_0)\); we show that \(\alpha_1\in\Delta\), that is,
+\(\alpha_0\in w_0^{-1}(\Delta)\). We know that \(w(\alpha_0)\in\Delta\),
+hence that \(\alpha_0\in w^{-1}(\Delta)\), hence also that
+\(\alpha_0\in w^{-1}(\Delta)\cap R_{\alpha_0,\beta_0}\), hence that
+\(\alpha_0\) is a simple root of
+\(A=w_0^{-1}(R^+_{\alpha_0,\beta_0})\), and therefore belongs to
+\(w_0^{-1}(\Delta\cap R^+_{\alpha_0,\beta_0})\subset w_0^{-1}(\Delta)\)
+(see \ref{sga3:XXI:3.4.8}). Thus \(\alpha_1\) is simple and belongs to
+\(R_{\alpha_0,\beta_0}\). If \(\alpha_0\neq\alpha_1\), then
+\(\beta_0=\alpha_1\). Finally \(\beta=w'(\alpha_1)\), with
+\(M(w')<M(w)\), and one concludes by induction.
 \end{proof}

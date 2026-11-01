@@ -1,7 +1,6 @@
 \begin{lemma}\label{sga3:XXI:3.4.10}
-Let \(w\in W\). Under the conditions of
-Proposition~\ref{sga3:XXI:3.4.8}, the following conditions are
-equivalent:
+Under the preceding conditions, the following conditions on an
+element \(w\in W\) are equivalent:
 \begin{enumerate}
 \item[\SGAInlineRefTarget{sga3:XXI:3.4.10:item:i}(i)] \(w\in W_{\Delta'}\).
 \item[\SGAInlineRefTarget{sga3:XXI:3.4.10:item:ii}(ii)] For every \(m\in M\), one has \(w(m)-m\in V'\).
@@ -11,27 +10,19 @@ equivalent:
 \end{lemma}
 
 \begin{proof}
-Clearly \SGARefLink{sga3:XXI:3.4.10:item:i}{(i)} implies \SGARefLink{sga3:XXI:3.4.10:item:ii}{(ii)}, and \SGARefLink{sga3:XXI:3.4.10:item:ii}{(ii)} implies \SGARefLink{sga3:XXI:3.4.10:item:iii}{(iii)}. Suppose \SGARefLink{sga3:XXI:3.4.10:item:iii}{(iii)}.
-Write
-\[
- w=s_{\alpha_n}\cdots s_{\alpha_1},
- \qquad \alpha_i\in\Delta,
-\]
-and argue by induction on \(n\) that every \(\alpha_i\) belongs to
-\(\Delta'\). We may assume that
-\[
- w'=s_{\alpha_{n-1}}\cdots s_{\alpha_1}\in W_{\Delta'}.
-\]
-Then, for every \(\alpha\in R\),
+Clearly \SGARefLink{sga3:XXI:3.4.10:item:i}{(i)} implies \SGARefLink{sga3:XXI:3.4.10:item:ii}{(ii)}, and \SGARefLink{sga3:XXI:3.4.10:item:ii}{(ii)} implies \SGARefLink{sga3:XXI:3.4.10:item:iii}{(iii)}. We prove \SGARefLink{sga3:XXI:3.4.10:item:iii}{(iii)}\(\Rightarrow\)\SGARefLink{sga3:XXI:3.4.10:item:i}{(i)}. So let \(w\in W\),
+\(w\notin W_{\Delta'}\), with \(w(\alpha)-\alpha\in V'\) for every
+\(\alpha\in R\). Write \(w\) as a product of reflections
+\(s_{\alpha_0}s_{\alpha_1}\cdots s_{\alpha_n}\), with \(\alpha_i\in\Delta\).
+After replacing \(w\) by a partial product of the \(s_{\alpha_i}\), we may
+suppose that \(w'=s_{\alpha_1}\cdots s_{\alpha_n}\in W_{\Delta'}\). Then
 \[
  w(\alpha)-\alpha
-   =w'(\alpha)-\alpha-(\alpha_n^\ast,w'(\alpha))\alpha_n.
+   =w'(\alpha)-\alpha-\bigl(w'^{-1}(\alpha_0^\ast),\alpha\bigr)\alpha_0.
 \]
-Taking \(\alpha=w'^{-1}(\alpha_n)\), one obtains
-\(2\alpha_n\in V'\), hence \(\alpha_n\in\Delta'\). Therefore
-\[
- w=s_{\alpha_n}w'\in W_{\Delta'}.
-\]
+Taking \(\alpha=w'^{-1}(\alpha_0)\), one finds \(2\alpha_0\in V'\), hence
+\(\alpha_0\in\Delta'\), and finally \(w=s_{\alpha_0}w'\in W_{\Delta'}\),
+contrary to the hypothesis.
 \end{proof}
 
 \subsection{Miscellaneous remarks}
@@ -62,7 +53,7 @@ Hence
 \[
  s_\beta(2\rho_{R_+})=2\rho_{R_+}-2\beta
 \]
-by Lemma~\ref{sga3:XXI:3.3.2}.
+by Corollary~\ref{sga3:XXI:3.3.2}.
 \end{proof}
 
 \begin{corollary}\label{sga3:XXI:3.5.2}
@@ -79,7 +70,17 @@ Then:
   \(\alpha\in R_+\); equivalently,
   \(\rho_{R_+}^\ast\in\mathcal{C}(R_+)\), in the notation of
   Definition~\ref{sga3:XXI:3.6.8}.
-\item[(ii)] For every \(\alpha\in R\),
+\item[(ii)] For every \(\alpha\in R\),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXI, deduces (ii) from
+3.1.5 and from Proposition~\ref{sga3:XXI:3.5.1} applied to \(\cR^\ast\). In our
+formulation, this argument, and (ii), are valid when \(\cR\) is reduced: then
+\(\operatorname{ind}(R_+^\ast)=R_+^\ast\) has \(\mathscr{S}(R_+)^\ast\) as system of
+simple roots (3.2.12), so 3.5.1 gives \((\rho_{R_+}^\ast,\alpha)=1\) for
+\(\alpha\in\mathscr{S}(R_+)\), and (ii) follows by linearity. In general (ii) fails: for
+the root datum of type \(A'_1\) of 2.1.2, with \(R_+=\{\alpha,2\alpha\}\), one has
+\(\operatorname{ind}(R_+^\ast)=\{\alpha^\ast/2\}\), \(\rho_{R_+}^\ast=\alpha^\ast/4\) and
+\((\rho_{R_+}^\ast,\alpha)=1/2\), whereas \(\operatorname{ord}(\alpha)=1\). The same
+argument gives \((\rho_{R_+}^\ast,\alpha)\in\{1,\frac12\}\) for simple \(\alpha\), whence
+(i) in all cases.}
   \[
    \operatorname{ord}_{\mathscr{S}(R_+)}(\alpha)
       =(\rho_{R_+}^\ast,\alpha).
@@ -112,7 +113,17 @@ Choose a basis of the vector space \(\VR(R)\) containing
 lexicographic order with respect to this basis. Let \(R_+\) be the set
 of roots \(>0\). It is clear that \(R_+\) is a system of positive
 roots and that the
-least element of \(R_+\) not proportional to \(\alpha\) is simple.
+least element of \(R_+\) not proportional to \(\alpha\) is simple.\footnote{Translator's
+note: the 1970 text says that the two smallest elements of \(R_+\) are simple, the
+smallest being \(\alpha\) and the next of the form \(\beta=p\alpha+q\gamma\),
+\(0<q\leq1\) (in the present notation), and it ends with ``\(q^{-1}>0\), hence also
+\(-q^{-1}p>0\)''. When \(2\alpha\) is a root it comes second and is not simple, and
+\(-q^{-1}p\) may be \(0\). The corrected argument is that of the Gille--Polo
+re-edition (2011), Exposé~XXI. In our words: the elements of \(R_+\) smaller than
+\(\beta\) are \(\alpha\) and possibly \(2\alpha\), so neither \(\alpha\) nor \(\beta\) is a
+sum of two elements of \(R_+\), and both are simple by 3.2.14; the coefficients of the
+positive root \(\gamma\) with respect to \(\mathscr{S}(R_+)\) lie in \(\mathbb N\) by
+3.1.5.}
 This element has the form
 \[
  \beta=p\alpha+q\gamma,

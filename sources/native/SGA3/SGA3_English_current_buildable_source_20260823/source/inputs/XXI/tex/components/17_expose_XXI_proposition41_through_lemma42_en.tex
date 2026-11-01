@@ -1,8 +1,4 @@
 \begin{proposition}\label{sga3:XXI:4.1}
-\footnote{The following numbers \(4.1\) to \(4.4\) are used in the
-proof of Theorem~\ref{sga3:XXI:5.1}. There are now simpler proofs of
-that theorem; see \emph{Groupes et algèbres de Lie}, Chapter~V,
-\S3, Theorem~1.}
 Let \(n\) be the order of \(s_\alpha s_\beta\). Put \(u_0=0\), and,
 for \(p\in\mathbb N\), define
 \[
@@ -21,17 +17,29 @@ and \(u_{2n}=0\).
 \item[(iii)] If \(1<k<2n-1\), then
 \[
  u_k=a_k\alpha+b_k\beta,
- \qquad a_k,b_k\in\mathbb N^\ast.
+ \qquad a_k,b_k\in\mathbb N.
 \]
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-Assertion \SGARefLink{sga3:XXI:4.1:item:i}{(i)} follows from \((s_\alpha s_\beta)^n=1\) and
-\(u_{2n}=0\).
+Assertion \SGARefLink{sga3:XXI:4.1:item:i}{(i)} follows at once from \((s_\alpha s_\beta)^n=1\) and
+\(u_{2n}=0\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXI, gives another description of the \(u_k\). In
+our formulation: let \(\rho\) be half the sum of the positive roots, so that
+\((\alpha^\ast,\rho)=(\beta^\ast,\rho)=1\) by 3.5.1, and let \(w_k\) be as in 4.2 below.
+Then \(u_k=\rho-w_k^{-1}(\rho)\) for all \(k\): this holds for \(k=0\), and
+\(w_{k+1}^{-1}=w_k^{-1}s_\alpha\) or \(w_k^{-1}s_\beta\) according as \(k\) is even or
+odd, while \(\rho-s_\alpha(\rho)=\alpha\) and \(\rho-s_\beta(\rho)=\beta\), which gives
+the recursion defining the \(u_k\). As \(w_{k+2n}=w_k\), this gives (i), and also
+\(u_1=\alpha\) and \(u_{2n-1}=\beta\), since \(w_{2n-1}=s_\beta\).}
 
-We prove \SGARefLink{sga3:XXI:4.1:item:ii}{(ii)} and \SGARefLink{sga3:XXI:3.6:item:iii}{(iii)}. Direct calculation gives, in the four cases,
-the following sequences of values:
+We prove \SGARefLink{sga3:XXI:4.1:item:ii}{(ii)} and (iii). Direct calculation gives, in the four cases,
+the following sequences of values:\footnote{Translator's note: the 1970 text gives
+these sequences for types \(B_2\) and \(G_2\) with the roles of \(\alpha\) and \(\beta\)
+interchanged (for instance \(0,\alpha,2\alpha+\beta,3\alpha+3\beta,\ldots\) for \(B_2\)),
+that is, for \(\ell(\alpha)\geq\ell(\beta)\), contrary to the convention at the beginning
+of this section; the corrected values are those of the Gille--Polo re-edition (2011),
+Exposé~XXI.}
 \[
 \begin{array}{c|l}
 A_1\times A_1&0,\alpha,\beta+\alpha,\beta,0,\\[2pt]
@@ -47,45 +55,52 @@ G_2&0,\alpha,\beta+4\alpha,2\beta+6\alpha,
 \]
 \end{proof}
 
-\begin{lemma}\label{sga3:XXI:4.2}
+\begin{lemma}\label{sga3:XXI:4.2}\footnote{The following lemmas 4.2 and 4.4 are used in the
+proof of Theorem~\ref{sga3:XXI:5.1}. There are at present simpler proofs of 5.1 (see
+Bourbaki, \emph{Groupes et algèbres de Lie}, Chapter~IV). (Translator's note: the
+Gille--Polo re-edition (2011), Exposé~XXI, places this note at 4.1, extends it to 4.1--4.4,
+and gives the reference as Chapter~V, \S3, Theorem~1, of Bourbaki's book.)}
 Put
 \[
  w_{2p}=(s_\beta s_\alpha)^p,
  \qquad
  w_{2p+1}=s_\alpha(s_\beta s_\alpha)^p,
 \]
-so that \(w_0,\ldots,w_{2n-1}\) are the distinct elements of \(W\).
-Let \(u_0,\ldots,u_{2n-1}\) be the elements of \(V\) defined in
-Proposition~\ref{sga3:XXI:4.1}. For every \(x\in V^\ast\), one has
+so that the \(w_i\), \(i=0,\ldots,2n-1\), are the distinct elements of
+\(W\). Let \(x\in V^\ast\). One has
 \[
- x-w_k(x)=n_k\alpha^\ast+m_k\beta^\ast,
+ w_k(x)-x=n_k\alpha^\ast+m_k\beta^\ast,
+ \qquad n_k,m_k\in\mathbb Q,
 \]
-where \(n_k,m_k\in\mathbb Q\) and
+with
 \[
- n_k+m_k=(x,u_k).
+ n_k+m_k=-(x,u_k).
 \]
 \end{lemma}
 
 \begin{proof}
-The proof is by induction on \(k\). If \(k=0\), the formula is
+The proof is by induction on \(k\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXI, derives the lemma
+directly from the description of the \(u_k\) given in the note to 4.1. In our
+formulation: pairing with \(\rho\), which takes the value \(1\) on \(\alpha^\ast\) and
+\(\beta^\ast\), and using (4), one finds
+\(n_k+m_k=(w_k(x)-x,\rho)=(x,w_k^{-1}(\rho)-\rho)=-(x,u_k)\).} If \(k=0\), the formula is
 trivial. We carry out, for example, the passage from \(w_{2p}\) to
-\(w_{2p+1}\). Since \(w_{2p+1}=s_\alpha w_{2p}\),
+\(w_{2p+1}\). One has \(w_{2p+1}=s_\alpha w_{2p}\), whence
 \[
 \begin{aligned}
-x-w_{2p+1}(x)
- &=x-w_{2p}(x)+w_{2p}(x)-s_\alpha w_{2p}(x)\\
- &=n_{2p}\alpha^\ast+m_{2p}\beta^\ast
-   +(w_{2p}(x),\alpha)\alpha^\ast.
+w_{2p+1}(x)-x
+ &=s_\alpha w_{2p}(x)-w_{2p}(x)+w_{2p}(x)-x\\
+ &=-(w_{2p}(x),\alpha)\alpha^\ast+n_{2p}\alpha^\ast+m_{2p}\beta^\ast.
 \end{aligned}
 \]
-Consequently
+Hence
 \[
 \begin{aligned}
 n_{2p+1}+m_{2p+1}
  &=n_{2p}+m_{2p}
-   +\bigl((s_\beta s_\alpha)^p(x),\alpha\bigr)\\
- &=(x,u_{2p})+\bigl(x,(s_\alpha s_\beta)^p(\alpha)\bigr)\\
- &=(x,u_{2p+1}).
+   -\bigl((s_\beta s_\alpha)^p(x),\alpha\bigr)\\
+ &=-(x,u_{2p})-\bigl(x,(s_\alpha s_\beta)^p(\alpha)\bigr)\\
+ &=-(x,u_{2p+1}).
 \end{aligned}
 \]
 \end{proof}

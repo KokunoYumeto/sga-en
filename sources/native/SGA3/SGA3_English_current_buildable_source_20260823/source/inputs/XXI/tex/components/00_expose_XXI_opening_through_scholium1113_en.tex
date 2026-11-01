@@ -16,8 +16,7 @@ space. If \(A\) (respectively \(B\)) is a subset of \(\mathbb Q\)
 \(A\otimes B\) under the morphism
 \(\mathbb Q\otimes V\to V\), in other words the set of linear
 combinations of elements of \(B\) with coefficients in \(A\). We write
-\(-B=\{-1\}B\). We denote by \(E-F\) the set of elements of \(E\)
-that do not belong to \(F\).
+\(-B=\{-1\}B\). We denote by \(E-F\) the set \(\complement_EF\).
 
 \section{Generalities}
 
@@ -92,13 +91,12 @@ Axioms \((\mathrm{DR\,I})\) and \((\mathrm{DR\,II})\) imply
 
 \begin{lemma}\label{sga3:XXI:1.1.4}
 The map \(R\to R^\ast\) is a bijection. More generally, if
-\(\alpha,\beta\in R\) and
 \((\alpha^\ast,x)=(\beta^\ast,x)\) for every \(x\in R\), then
 \(\alpha=\beta\).
 \end{lemma}
 
 \begin{proof}
-Indeed, one then has
+One then has
 \[
  s_\beta(\alpha)=\alpha-2\beta,\qquad
  s_\alpha(\beta)=\beta-2\alpha.
@@ -106,9 +104,9 @@ Indeed, one then has
 It follows at once that
 \[
  s_\beta s_\alpha(\alpha)
-   =2\beta-\alpha=\alpha+2(\beta-\alpha),\qquad
+   =\alpha+2(\beta-\alpha),\qquad
  s_\beta s_\alpha(\beta-\alpha)
-   =s_\beta(\beta-\alpha)=\beta-\alpha.
+   =\beta-\alpha.
 \]
 Hence, by \((\mathrm{DR\,II})\),
 \[
@@ -123,7 +121,11 @@ The inverse map \(R^\ast\to R\) defines a root datum
 \[
  \cR^\ast=(M^\ast,M,R^\ast,R),
 \]
-called the \emph{dual} of \(\cR\).
+called the \emph{dual} of \(\cR\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXI, remarks here that
+\((\alpha^\ast)^\ast=\alpha\) for \(\alpha\in R\). In our words: the coroot map of
+\(\cR^\ast\) is the inverse \(R^\ast\to R\) of \(\alpha\mapsto\alpha^\ast\), so the
+coroot of the root \(\alpha^\ast\) of \(\cR^\ast\) is \(\alpha\). This is used in the
+proof of 2.2.6.}
 \end{corollary}
 
 \begin{definition}\label{sga3:XXI:1.1.6}
@@ -146,11 +148,11 @@ The \emph{semisimple rank} of \(\cR\) is the number
  \rgss(\cR)
  =\rank(R)=\rank(\Gamma_0(R))=\dim(\VR(R)).
 \]
-Thus \(\rgss(\cR)\leq\rgred(\cR)\).
-
 We shall see below that
 \(\rgss(\cR)=\rgss(\cR^\ast)\), that is, that \(\VR(R)\) and
 \(\VR(R^\ast)\) have the same dimension.
+
+Thus \(\rgss(\cR)\leq\rgred(\cR)\).
 \end{definition}
 
 \begin{definition}\label{sga3:XXI:1.1.7}\leavevmode\par

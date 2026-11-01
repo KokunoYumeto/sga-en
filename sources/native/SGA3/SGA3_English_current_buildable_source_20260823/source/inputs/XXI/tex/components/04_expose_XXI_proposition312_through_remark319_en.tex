@@ -70,13 +70,32 @@ are equivalent:
 \end{proposition}
 
 \begin{proof}
-\footnote{Editors' note: in the argument that follows, the order was
-changed and the proof of the implication \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}\(\Rightarrow\)\SGARefLink{sga3:XXI:3.1.5:item:i}{(i)} was
-spelled out.}
-It is clear that \SGARefLink{sga3:XXI:3.1.5:item:ii}{(ii)} implies \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}. Write
-\(\alpha_1,\ldots,\alpha_n\) for the distinct elements of \(\Delta\).
+Clearly \SGARefLink{sga3:XXI:3.1.5:item:ii}{(ii)}\(\Leftrightarrow\)\SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXI, states
+only (ii)\(\Rightarrow\)(iii) here and proves in detail that (iii) implies the linear
+independence of \(\Delta\), which (iii)\(\Rightarrow\)(ii) and the argument below
+require. In our formulation: assume (iii), and let \(\alpha\neq\beta\) in \(\Delta\). If
+\(\pm(\alpha-\beta)=\sum_\gamma c_\gamma\gamma\) with all \(c_\gamma\in\mathbb N\), then
+\(\alpha=\beta+\sum_\gamma c_\gamma\gamma\), respectively
+\(\beta=\alpha+\sum_\gamma c_\gamma\gamma\), would be a second expression of a root as
+in (iii); so \(\alpha-\beta\notin R\), and \((\beta^\ast,\alpha)\leq0\) by 2.3.3. Now
+let \(x=\sum_{\alpha\in I}m_\alpha\alpha=\sum_{\beta\in J}n_\beta\beta\), with
+\(I,J\subset\Delta\) disjoint and \(m_\alpha,n_\beta\in\mathbb N\). By (10),
+\(\ell(x)=\frac12\sum m_\alpha n_\beta\,\ell(\beta)(\beta^\ast,\alpha)\leq0\), so
+\(x=0\) by 1.2.6; and if \(m_\gamma>0\), then \(\gamma=\gamma+x\) gives two different
+expressions of \(\gamma\). Hence \(\Delta\) is free.} We prove
+\SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}\(\Rightarrow\)\SGARefLink{sga3:XXI:3.1.5:item:i}{(i)}. It suffices to show that \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)} implies
+that the elements of \(\Delta\) are indivisible. So let \(\beta\in\Delta\) be
+divisible. Then \(\beta/2\in R\), whence
+\[
+ \frac{\beta}{2}=\sum_i m_i\alpha_i,
+ \qquad m_i\in\mathbb Z,\quad\alpha_i\in\Delta;
+\]
+but also \(\beta/2=(1/2)\beta\), which contradicts the fact that the
+elements of \(\Delta\) are linearly independent (over \(\mathbb Q\)).
 
-Assume \SGARefLink{sga3:XXI:3.1.5:item:i}{(i)}, and let \(\alpha\in R\). There is a unique expression
+We prove \SGARefLink{sga3:XXI:3.1.5:item:i}{(i)}\(\Rightarrow\)\SGARefLink{sga3:XXI:3.1.5:item:ii}{(ii)}. Let \(\alpha\in R\), and write
+\(\alpha_1,\alpha_2,\ldots,\alpha_n\) for the distinct elements of
+\(\Delta\). There is then a unique expression
 \[
  \varepsilon\alpha=\sum_i q_i\alpha_i,
  \qquad q_i\in\Qp,\qquad\varepsilon=\pm1.
@@ -99,44 +118,6 @@ At least one \(q_i\), with \(i\neq i_0\), is nonzero, so \SGARefLink{sga3:XXI:3.
 \(q_{i_0}-1\geq0\). Repeating this operation with \(\alpha'\), after
 finitely many steps we find that all \(q_i\) are integers. This proves
 \SGARefLink{sga3:XXI:3.1.5:item:ii}{(ii)}.
-
-Assume now \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}. We first prove that
-\(\alpha_1,\ldots,\alpha_n\) are linearly independent over
-\(\mathbb Q\). Otherwise there would be an equality
-\[
- x=\sum_{i\in I}a_i\alpha_i
-  =\sum_{j\in J}b_j\alpha_j,
-\]
-where \(I\) and \(J\) are disjoint subsets of
-\(\{1,\ldots,n\}\), at least one of them, say \(I\), is nonempty, and
-\(a_i,b_j\in\mathbb N^\ast\). By the corollary in
-Complements~\ref{sga3:XXI:2.3.7}, one has
-\(\langle\alpha_i,\alpha_j\rangle\leq0\) for \(i\in I\) and \(j\in J\).
-Therefore \(\langle x,x\rangle\leq0\), and hence \(x=0\).
-
-Choose \(i_0\in I\). The two expressions
-\[
- \alpha_{i_0}
- =\alpha_{i_0}+\sum_{i\in I}a_i\alpha_i
- =\alpha_{i_0}+\sum_{j\in J}b_j\alpha_j
-\]
-then imply, by \SGARefLink{sga3:XXI:3.1.5:item:iii}{(iii)}, that \(a_i=0=b_j\) for all \(i,j\), a
-contradiction. Thus the elements of \(\Delta\) are linearly
-independent over \(\mathbb Q\).
-
-It remains to show that they are indivisible. Suppose that
-\(\beta\in\Delta\) is divisible. Then \(\beta/2\in R\), so
-\[
- \frac{\beta}{2}
- =\varepsilon\sum_{\alpha\in\Delta}m_\alpha\alpha,
- \qquad m_\alpha\in\mathbb N,\qquad\varepsilon=\pm1.
-\]
-Consequently,
-\[
- \beta=2\varepsilon\sum_{\alpha\in\Delta}m_\alpha\alpha.
-\]
-Uniqueness gives \(m_\alpha=0\) for \(\alpha\neq\beta\) and
-\(2\varepsilon m_\beta=1\), a contradiction.
 \end{proof}
 
 \begin{definition}\label{sga3:XXI:3.1.6}

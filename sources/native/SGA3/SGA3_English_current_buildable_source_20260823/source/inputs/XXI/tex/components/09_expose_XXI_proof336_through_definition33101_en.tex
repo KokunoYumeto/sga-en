@@ -28,61 +28,36 @@ argument applies.
 \end{proof}
 
 Thus, to study closed sets of roots satisfying (P 2), it is enough to
-consider those that contain a system of positive roots.
+consider those that contain the set of positive roots.
 
 \begin{proposition}\label{sga3:XXI:3.3.10}
-Let \(R_+\) be a system of positive roots, and let \(P'\) be a closed
-subset of \(R\) containing \(R_+\). Put
-\[
- \Delta=\mathscr{S}(R_+),
- \qquad
- \Delta'=\Delta\cap(-P').
-\]
-Then \(P'\) is the union of \(R_+\) and the set of roots that are
-linear combinations of the elements of \(\Delta'\) with negative
-coefficients.
+Let \(R_+\) be a system of positive roots. Let \(P'\) be closed,
+\(R_+\subset P'\subset R\). If one writes
+\(\Delta'=\mathscr{S}(R_+)\cap(-P')\), then \(P'\) is the union of
+\(R_+\) and the set of roots that are linear combinations of the
+elements of \(\Delta'\) with negative coefficients.
 \end{proposition}
 
 \begin{proof}
-We argue by induction on the order of a root
-\(\gamma\in P'\setminus R_+\). If
+We prove the assertion by induction on the order of a root
+\(\gamma\in P'\setminus R_+\). Put \(\Delta=\mathscr{S}(R_+)\). If
 \(\operatorname{ord}_\Delta(\gamma)=-1\), then
-\(-\gamma\in\Delta\), and hence \(\gamma\in-\Delta'\).
-
-Suppose that \(\operatorname{ord}_\Delta(\gamma)<-1\). By
-Proposition~\ref{sga3:XXI:3.1.2}, there exists \(\beta\in\Delta\)
-such that \(-\gamma-\beta\in R\). Then
-\[
- 0<\operatorname{ord}_\Delta(-\gamma-\beta)
-  =\operatorname{ord}_\Delta(-\gamma)-1
-  <\operatorname{ord}_\Delta(-\gamma).
-\]
-The first inequality shows that \(-\gamma-\beta\in R_+\).
-Consequently, since \(R_+\cap(-R_+)=\varnothing\), and since
-\(\gamma+\beta\) is the sum of two roots of \(P'\), the root
-\(\gamma+\beta\) belongs to \(P'\setminus R_+\) and satisfies
-\[
- \operatorname{ord}_\Delta(\gamma+\beta)
- >\operatorname{ord}_\Delta(\gamma).
-\]
-By induction, \(\gamma+\beta\) is a linear combination of the
-elements of \(\Delta'\) with negative coefficients. Since
-\(\gamma=(\gamma+\beta)-\beta\), it remains only to show that
-\(\beta\in-P'\). But \(\gamma\in P'\) and
-\(-(\gamma+\beta)\in R_+\subset P'\), so
-\[
- -\beta=\gamma-(\gamma+\beta)\in P'.
-\]
+\(-\gamma\in\mathscr{S}(R_+)\) and \(\gamma\in-\Delta'\). If
+\(\operatorname{ord}_\Delta(\gamma)<-1\), there exists
+\(\beta\in\mathscr{S}(R_+)\) such that \(\gamma+\beta\in R\) and
+\(\operatorname{ord}_\Delta(\gamma+\beta)>\operatorname{ord}_\Delta(\gamma)\)
+(apply Proposition~\ref{sga3:XXI:3.1.2} to \(-\gamma\)).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXI,
+makes two points explicit. In our formulation:
+\(\operatorname{ord}_\Delta(\gamma+\beta)=\operatorname{ord}_\Delta(\gamma)+1\leq-1\),
+so \(\gamma+\beta\) is again a root of \(P'\setminus R_+\), of larger order, to which the
+induction hypothesis applies; and the combination it gives has negative coefficients,
+so that the same holds for \(\gamma=(\gamma+\beta)-\beta\) once \(\beta\in\Delta'\).}
+Since
+\(\gamma+\beta\) is the sum of two roots of \(P'\), it is an element of
+\(P'\), hence, by the induction hypothesis, a linear combination of the
+elements of \(\Delta'\). It suffices to check that \(\beta\in-P'\).
+Now \(-\beta=\gamma-(\gamma+\beta)\); but \(\gamma\in P'\) and
+\(-(\gamma+\beta)\) is positive, hence belongs to \(P'\).
 \end{proof}
 
-\begingroup
-\renewcommand{\thetheorem}{3.3.10.1}
-\begin{definition}\label{sga3:XXI:3.3.10.1}
-\footnote{Editors' note: This definition was inserted here.}
-A subset \(R'\) of \(R\) is called \emph{symmetric} if
-\[
- -R'=R'.
-\]
-\end{definition}
-\endgroup
-\addtocounter{theorem}{-1}
+

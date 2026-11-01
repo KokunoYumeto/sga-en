@@ -1,43 +1,37 @@
-\begin{proof}[Proof of Lemma~\ref{sga3:XXI:5.2}, continued]
-Put \(m=n_{ij}\), \(s_i=s_{\alpha_i}\), and
-\(s_j=s_{\alpha_j}\). We have
-\[
- T_jT_i=(T_iT_j)^{m-1}.
-\]
-By Corollary~\ref{sga3:XXI:4.4},
-\(\operatorname{ord}_\Delta(w(\alpha))<p\) for every
-\(w\in W_{ij}\) distinct from
-\[
- 1=(s_is_j)^m
- \quad\text{and}\quad
- s_j=s_i(s_is_j)^{m-1}.
-\]
-The induction hypothesis therefore gives
-\[
-\begin{split}
- &T_j(T_iT_j)^{m-2}T_{s_i(\alpha)}
-       (T_jT_i)^{m-2}T_j\\
- &\qquad
- =T_{s_j(s_is_j)^{m-2}s_i(\alpha)}
- =T_{s_is_j(\alpha)}
- =T_{s_i(\alpha)}.
-\end{split}
-\]
-The last equality holds because \(s_j(\alpha)=\alpha\). Hence
-\[
- (T_iT_j)^{m-1}T_{s_i(\alpha)}(T_jT_i)^{m-1}
- =T_iT_{s_i(\alpha)}T_i,
-\]
-which proves \eqref{sga3:XXI:5.2:orthogonal-expanded}.
-\end{proof}
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~XXI; our
+formulation). We detail B). Let \(\alpha\in\mathscr{P}(\Delta)\) have order \(p\), and
+let \(\alpha_j\in\Delta\) be such that \(\beta=s_{\alpha_j}(\alpha)\) is positive of order
+\(\leq p\) (the case where \(\alpha\) has order \(<p\) is symmetric, as \(T_j^2=1\)). If
+\(\operatorname{ord}_\Delta(\beta)<p\), then \(T_jT_\alpha T_j=T_\beta\) is
+\eqref{sga3:XXI:5.2:construction} for the choice \(\alpha_j\), which A) allows. Otherwise
+\((\alpha_j^\ast,\alpha)=0\), so \(\beta=\alpha\), and, \(\alpha_i\) being chosen as in A),
+the relation \(T_jT_\alpha T_j=T_\alpha\) to be proved is
+\eqref{sga3:XXI:5.2:orthogonal-expanded}. Put \(\gamma=s_{\alpha_i}(\alpha)\) and
+\(m=n_{ij}\). Both sides of \eqref{sga3:XXI:5.2:orthogonal-expanded} have image
+\(s_\alpha\) in \(W\), by 1.2.10. If \(\alpha\) is a linear combination of \(\alpha_i\)
+and \(\alpha_j\), then \(T_\gamma\) is a word in \(T_i\) and \(T_j\) by
+\((\mathrm{H}_{p-1})\), and \eqref{sga3:XXI:5.2:orthogonal-expanded} follows, as in case
+(1) of A), from the theorem for \(n=2\). Otherwise all the \(w(\alpha)\),
+\(w\in W_{\alpha_i,\alpha_j}\), are positive (3.4.9). For \(1\leq k\leq2m-2\), let \(x_k\)
+be the alternating product of \(k\) factors \(s_{\alpha_i}\), \(s_{\alpha_j}\) ending
+with \(s_{\alpha_i}\) (so \(x_1=s_{\alpha_i}\), \(x_2=s_{\alpha_j}s_{\alpha_i}\), \ldots);
+since \((s_{\alpha_i}s_{\alpha_j})^m=1\), no \(x_k\) is \(1\) or \(s_{\alpha_j}\), so the
+positive roots \(x_k(\alpha)\) have order \(<p\) by 4.4, applied to \(\alpha\),
+\(\alpha_i\), \(\alpha_j\). Applying (iii) of \((\mathrm{H}_{p-1})\) along
+\(\gamma=x_1(\alpha),x_2(\alpha),\ldots,x_{2m-2}(\alpha)\) gives
+\(T_{x_{2m-2}(\alpha)}=YT_\gamma Y^{-1}\), where \(Y\) is the alternating product of
+\(2m-3\) factors \(T_j\), \(T_i\) beginning and ending with \(T_j\). Now
+\(x_{2m-2}=(s_{\alpha_j}s_{\alpha_i})^{m-1}=s_{\alpha_i}s_{\alpha_j}\), so
+\(x_{2m-2}(\alpha)=\gamma\), because \(s_{\alpha_j}(\alpha)=\alpha\); and \(Y=T_iT_jT_i\),
+because \((T_jT_i)^m=1\) and \(T_i^2=T_j^2=1\). Hence \(T_iT_jT_i\) commutes with
+\(T_\gamma\), which is \eqref{sga3:XXI:5.2:orthogonal-expanded}.
 
 \begin{lemma}\label{sga3:XXI:5.3}
-Let \(h\in\widetilde W\). Write
+Let \(h\in\widetilde W\). Write it
 \[
- h=T_{\alpha_1}\cdots T_{\alpha_m},
+ h=T_{\alpha_1}\cdots T_{\alpha_m}\qquad(\alpha_i\in\Delta)
 \]
-where the \(\alpha_i\in\Delta\), not necessarily distinct, are chosen
-so that \(m\) is minimal. Then
+in such a way that \(m\) is minimal. Then
 \[
  p(h)(\alpha_m)\in-\mathscr{P}(\Delta).
 \]
@@ -61,7 +55,7 @@ and \(s_{\alpha_k}(u)\in\mathscr{P}(\Delta)\). Necessarily
 \[
  s_{\alpha_{k+1}}\cdots s_{\alpha_{m-1}}(\alpha_m)=\alpha_k.
 \]
-Property \SGARefLink{sga3:XXI:3.6:item:iii}{(iii)} of Lemma~\ref{sga3:XXI:5.2} then gives
+Property (iii) of Lemma~\ref{sga3:XXI:5.2} then gives
 \[
  T_{\alpha_k}T_{\alpha_{k+1}}\cdots
  T_{\alpha_{m-1}}T_{\alpha_m}
@@ -76,7 +70,11 @@ Let now \(h\in\widetilde W\) satisfy
  p(h)\bigl(\mathscr{P}(\Delta)\bigr)
  \subset\mathscr{P}(\Delta).
 \]
-Lemma~\ref{sga3:XXI:5.3} gives \(p(h)=1\). This proves
+Lemma~\ref{sga3:XXI:5.3} gives \(h=1\).\footnote{Translator's note: the 1970 text,
+followed by the Gille--Polo re-edition (2011), has \(p(h)=1\). Lemma~\ref{sga3:XXI:5.3}
+gives \(h=1\), since otherwise \(h\) has an expression of minimal length \(m\geq1\) and
+\(p(h)(\alpha_m)\) is negative; this is what Theorem~\ref{sga3:XXI:5.1}, the injectivity
+of \(p\), requires.} This proves
 Theorem~\ref{sga3:XXI:5.1} and also the following two corollaries.
 
 \begin{corollary}\label{sga3:XXI:5.4}
@@ -87,7 +85,7 @@ If \(R_+\) is a system of positive roots and \(w\in W\) satisfies
 \begin{corollary}\label{sga3:XXI:5.5}
 The Weyl group acts freely and transitively on the set of systems of
 positive roots, respectively on the set of systems of simple roots,
-respectively on the set of Weyl chambers.
+respectively on the set of Weyl chambers, respectively \ldots.
 \end{corollary}
 
 Choose a system of simple roots \(\Delta\), and put

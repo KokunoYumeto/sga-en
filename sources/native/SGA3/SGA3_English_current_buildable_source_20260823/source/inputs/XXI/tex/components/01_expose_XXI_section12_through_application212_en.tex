@@ -25,7 +25,12 @@ Write \(\ell(x)=(p(x),x)\). Then:
 \end{lemma}
 
 \begin{proof}
-The first three relations are immediate.
+The first three relations are immediate.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~XXI, indicates how
+\eqref{sga3:XXI:eq:8} follows. In our formulation:
+\(\ell(x)=\sum_{u\in R^\ast}(u,x)^2\); for \(\beta\in R\), \eqref{sga3:XXI:eq:4} and
+\eqref{sga3:XXI:eq:2} give \((u,s_\beta(x))=(s_\beta^\ast(u),x)\), and \(s_\beta^\ast\)
+permutes \(R^\ast\) by \((\mathrm{DR\,II})\); hence \(\ell(s_\beta(x))=\ell(x)\), and
+\eqref{sga3:XXI:eq:8} follows, since the \(s_\beta\) generate \(W\).}
 We prove the last one. By \eqref{sga3:XXI:eq:1}, for \(u\in V^\ast\),
 \begin{align*}
  (u,\alpha)^2\alpha^\ast
@@ -122,20 +127,15 @@ to verify
 \[
  s_\beta(\alpha^\ast)=s_\beta(\alpha)^\ast.
 \]
-Now \(\ell(s_\beta(\alpha))s_\beta(\alpha)^\ast/2\) equals
+Now one has successively
 \begin{align*}
- p(s_\beta(\alpha))
- &=\sum_{u\in R^\ast}(u,s_\beta(\alpha))u\\
- &=\sum_{u\in R^\ast}(s_\beta(u),\alpha)u\\
- &=\sum_{u\in R^\ast}(u,\alpha)s_\beta(u)
-  =s_\beta(p(\alpha)).
-\end{align*}
-Since \(\ell(s_\beta(\alpha))=\ell(\alpha)\), we obtain
-\[
  s_\beta(\alpha)^\ast
- =s_\beta\!\left(\frac{2p(\alpha)}{\ell(\alpha)}\right)
- =s_\beta(\alpha^\ast).
-\]
+ &=2\ell(s_\beta(\alpha))^{-1}p(s_\beta(\alpha))\\
+ &=2\ell(\alpha)^{-1}\sum_{u\in R^\ast}(u,s_\beta(\alpha))u\\
+ &=2\ell(\alpha)^{-1}\sum_{u\in R^\ast}(s_\beta(u),s_\beta(\alpha))s_\beta(u)\\
+ &=2\ell(\alpha)^{-1}\sum_{u\in R^\ast}(u,\alpha)s_\beta(u)\\
+ &=2\ell(\alpha)^{-1}s_\beta(p(\alpha))=s_\beta(\alpha^\ast).
+\end{align*}
 \end{proof}
 
 \begin{corollary}\label{sga3:XXI:1.2.10}
@@ -146,19 +146,13 @@ If \(\alpha\in R\) and \(w\in W\), then
 \end{corollary}
 
 \begin{proof}
-For \(x\in V\),
-\[
+Indeed,
+\begin{align*}
  ws_\alpha w^{-1}(x)
- =x-(\alpha^\ast,w^{-1}(x))w(\alpha)
- =x-(w(\alpha^\ast),x)w(\alpha).
-\]
-By Proposition~\ref{sga3:XXI:1.2.9}, the last expression is
-\[
- \begin{aligned}
- x-(w(\alpha)^\ast,x)w(\alpha)
-   &=s_{w(\alpha)}(x).
- \end{aligned}
-\]
+ &=x-(\alpha^\ast,w^{-1}(x))w(\alpha)\\
+ &=x-(w(\alpha^\ast),x)w(\alpha)\\
+ &=x-(w(\alpha)^\ast,x)w(\alpha)=s_{w(\alpha)}(x).
+\end{align*}
 \end{proof}
 
 \begin{corollary}\label{sga3:XXI:1.2.11}\leavevmode\par
@@ -187,7 +181,7 @@ Under these conditions,
 \end{proposition}
 
 \begin{proof}
-Assume first \SGARefLink{sga3:XXI:2.1.1:item:i:02}{(i)}. Then
+Assume first (i). Then
 \[
  \alpha^\ast
  =\ell(\alpha)^{-1}2p(\alpha)
@@ -201,13 +195,7 @@ This immediately gives \(s_\alpha=s_\beta\). Conversely, if
        =s_\beta(-\alpha)
        =(\beta^\ast,\alpha)\beta-\alpha,
 \]
-so
-\[
- 2\alpha=(\beta^\ast,\alpha)\beta,
-\qquad(\beta^\ast,\alpha)\in\mathbb Z;
-\]
-thus \SGARefLink{sga3:XXI:2.1.1:item:ii:02}{(ii)} implies \SGARefLink{sga3:XXI:2.1.1:item:i:02}{(i)}. Finally, if \(\alpha=k\beta\), then
-\(\alpha^\ast=k^{-1}\beta^\ast\), whence
+so (ii) implies (i). Finally, if \(\alpha=k\beta\), then
 \[
  (\alpha^\ast,\beta)=2k^{-1},
  \qquad(\beta^\ast,\alpha)=2k.

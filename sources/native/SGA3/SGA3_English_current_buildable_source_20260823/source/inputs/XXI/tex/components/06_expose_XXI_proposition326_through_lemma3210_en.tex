@@ -59,44 +59,44 @@ This set is nonempty, since it contains
 this set under inclusion. We show that \(\Delta\) is a system of
 simple roots; by Proposition~\ref{sga3:XXI:3.1.5}\SGARefLink{sga3:XXI:3.1.5:item:i}{(i)}, it is enough to
 show that \(\Delta\) is a linearly independent subset of
-\(M\otimes\mathbb Q\).
+\(M\).
 
 \begin{lemma}\label{sga3:XXI:3.2.10}
-If \(\alpha,\beta\in\Delta\) and
-\[
- q\alpha+q'\beta\in R,
- \qquad q,q'\in\mathbb Q,
-\]
-then \(qq'\geq0\).
+If \(\alpha,\beta\in\Delta\) are distinct,\footnote{Translator's note: the 1970 text,
+followed by the Gille--Polo re-edition (2011), does not say that \(\alpha\) and \(\beta\)
+are distinct, here or in 3.2.11; this is needed (\(2\alpha-\alpha\in R\), and
+\((\alpha^\ast,\alpha)=2\)), and it holds wherever the two lemmas are used.}
+\(m,n\in\mathbb Q\), and
+\(m\alpha+n\beta\in R\), then \(mn\geq0\).
 \end{lemma}
 
 \begin{proof}
-If \(qq'<0\), then, after interchanging \(\alpha\) and \(\beta\) if
-necessary, we may write
+If \(mn<0\), one can write, after interchanging \(\alpha\) and
+\(\beta\) if necessary,
 \[
  a\alpha-b\beta\in R_+,
- \qquad a,b\in\mathbb Q^\ast_+.
+ \qquad a,b\in\Qp,\quad a\cdot b\neq0,
 \]
-By the defining property of \(\Delta\), there is a relation
+so that by hypothesis there is a relation
 \[
  a\alpha-b\beta
    =\sum_{\gamma\in\Delta}c(\gamma)\gamma,
  \qquad c(\gamma)\in\Qp.
 \]
-If \(a\leq c(\alpha)\), this becomes
+If \(a\leq c(\alpha)\), it can be written
 \[
  -\beta
- =\frac{c(\alpha)-a}{b}\alpha
-  +\sum_{\gamma\neq\alpha}\frac{c(\gamma)}{b}\gamma.
+ =b^{-1}\bigl(c(\alpha)-a\bigr)\alpha
+  +\sum_{\gamma\in\Delta,\ \gamma\neq\alpha}b^{-1}c(\gamma)\gamma
+ \in(\Qp\cdot R_+)\cap R,
 \]
-Thus \(-\beta\in(\Qp\cdot\Delta)\cap R\), which is contained in
-\(R_+\) by (P 3). This gives
-\(\beta\in R_+\cap(-R_+)\), contradicting (P 1).
+which, by (P 3) and (P 1), gives
+\(\beta\in R_+\cap(-R_+)=\varnothing\).
 
-If instead \(a>c(\alpha)\), then
+If on the contrary \(a>c(\alpha)\), one writes
 \[
- \bigl(a-c(\alpha)\bigr)\alpha
- =b\beta+\sum_{\gamma\neq\alpha}c(\gamma)\gamma,
+ \alpha=\bigl(a-c(\alpha)\bigr)^{-1}b\beta
+  +\sum_{\gamma\in\Delta,\ \gamma\neq\alpha}\bigl(a-c(\alpha)\bigr)^{-1}c(\gamma)\gamma,
 \]
 which shows that
 \[
