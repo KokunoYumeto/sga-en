@@ -4,8 +4,8 @@ By \hyperref[par:sga3-V-5-a]{part~a)}, we may suppose that \(d_1\) is locally fr
 Let \((Y,p)\) be a cokernel of \((d_0,d_1)\) in the category of all
 ringed spaces. The argument at the end of \hyperref[proof:sga3-V-4.1-c]{4(c)} shows that, in order to
 prove \hyperref[thm:sga3-V-4.1-i]{Theorem~4.1(i)}, it is enough to show that \(Y\) is a scheme and
-that \(p:X_0\to Y\) is a morphism of schemes. By
-Lemma~\hyperref[sga3:exp5:lemma:1.2]{1.2}, this question is local on \(Y\).
+that \(p:X_0\to Y\) is a morphism of schemes. The question is therefore
+local on \(Y\).
 Let \(y\in Y\) and choose \(x\in X_0\) with \(p(x)=y\). If \(x\) has a
 saturated affine open neighborhood \(U\), then \hyperref[sec:sga3-V-4]{Section~4} shows that
 \(p(U)\) is an affine open subset of \(Y\), and
@@ -21,8 +21,11 @@ Corollary~7.6.
   {fig:sga3-exp5-p268-affine-saturated-chain}
   {LNM 151, p.~270}
 
-By \hyperref[thm:sga3-V-4.1-b]{condition 4.1(b)}, there is an affine open subset \(V\subseteq X_0\)
-which contains \(d_1(d_0^{-1}(x))\).%
+We take for \(V\) an affine open subset of \(X_0\) containing
+\(d_1(d_0^{-1}(x))\).\footnote{Translator's note: such a \(V\) exists by the hypothesis of
+\hyperref[thm:sga3-V-4.1]{Theorem~4.1} on \(d_0d_1^{-1}(x)\), since \(d_1d_0^{-1}(x)=d_0d_1^{-1}(x)\) (see the
+note to the statement of 4.1); the Gille--Polo re-edition (2011), Exposé~V,
+says so here.}
 Put \(F=X_0\setminus V\). Since \(d_1\) is integral,
 \(d_1(d_0^{-1}(F))\) is closed, and
 \[
@@ -42,31 +45,62 @@ points of
 \[
   d_0^{-1}(V')=d_1^{-1}(V')
 \]
-at which \(d_0^\ast(f)\) vanishes. The morphism induced by \(d_1\)
-from this common inverse image to \(V'\) is locally free of rank
-\(n\).%
-Lemma~\hyperref[lem:sga3-V-4.1.1]{4.1.1} therefore shows that
-\(d_1(d_0^{-1}(Z(f)))\) is precisely the zero locus of the norm \(N\)
-of \(d_0^\ast(f)\) relative to \(d_1\). It follows that
+at which \(d_0^\ast(f)\) vanishes. On the other hand, since \(d_1\) induces
+a morphism, locally free of rank \(n\), from this common inverse image
+onto \(V'\), the set \(d_1(d_0^{-1}(Z(f)))\) is the set of points at which
+the norm \(N\) of \(d_0^\ast(f)\) relative to \(d_1\) vanishes.\footnote{Translator's note: this is the norm criterion proved in the Addition
+after 4~b), to which the Gille--Polo re-edition (2011), Exposé~V, refers
+here.} It follows that
 \[
   (V_f)'=V'\setminus d_1(d_0^{-1}(Z(f)))
 \]
 is the set of points of \(V_f\) at which \(N\) does not vanish.
 Consequently, \((V_f)'\) is affine.
 
-This proves \hyperref[thm:sga3-V-4.1-i]{Theorem~4.1(i)}; assertions \hyperref[thm:sga3-V-4.1-ii]{(ii)}, \hyperref[thm:sga3-V-4.1-iii]{(iii)}, and the first part
-of \hyperref[thm:sga3-V-4.1-iv]{(iv)} are then clear. It remains to prove the consequences stated
-at the end of \hyperref[thm:sga3-V-4.1-iv]{(iv)}; see \hyperref[bib:sga3-V-Ray67a]{[Ray67a]}, Theorem~1(iii).
+This proves \hyperref[thm:sga3-V-4.1-i]{Theorem~4.1(i)}; the other assertions are clear.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~V, adds to
+4.1~(iv), after M.~Raynaud, \emph{Passage au quotient par une relation
+d'équivalence plate}, in \emph{Proceedings of a Conference on Local Fields}
+(Driebergen, 1966), Springer, 1967, 78--85, Theorem~1~(iii): when
+\((d_0,d_1)\) is an equivalence pair, \((Y,p)\) is also the cokernel of
+\((d_0,d_1)\) in the category of sheaves for the fppf topology, and for every
+base change \(Y'\to Y\), \(Y'\) is the cokernel of the groupoid deduced from
+\(X_\ast\) by the base change \(X_0\times_YY'\to X_0\); in particular
+\(Y\times_SS'\) is the cokernel of \(X_\ast\times_SS'\) for every \(S'\to S\).
+Indeed, \(p\) is then finite, locally free and surjective, hence faithfully
+flat and of finite presentation, and \(X_1\simeq X_0\times_YX_0\); so the
+equivalence relation \(X_1\) is effective for this family of morphisms, and
+the assertions follow from \SGARefLink{sga3:iv:corollary:6:3:3}{Exposé~IV, 6.3.3} and \SGARefLink{sga3:iv:proposition:3:4:3:1}{3.4.3.1}.}
 
-By hypothesis, the groupoid \(X_\ast\) comes from an equivalence
-relation
-\[
-  i:R\longrightarrow X_0\times X_0,
-\]
-where \(i\) is an immersion. We have shown that
-\(R\) is effective (see \SGARefLink{sga3:iv:definition:3:3:2}{Expos\'e IV, 3.3.2}), and that
-\[
-  p:X_0\longrightarrow Y=X_0/R
-\]
-is surjective and finite locally free; in particular, it is faithfully
-flat and of finite presentation.
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~V; our
+formulation). The re-edition adds a Remark~5.1: \emph{under the hypotheses of
+\hyperref[thm:sga3-V-4.1]{Theorem~4.1}, if \(S\) is locally noetherian and \(X_0\) is quasi-projective
+over \(S\), then \(Y\) is quasi-projective over \(S\).} Here is an argument.
+Let \(\mathscr L\) be an invertible \(\mathcal O_{X_0}\)-module ample relative
+to \(S\). By the argument of 6.1~a) below, \(Y\) is of finite type over \(S\).
+For \(y=p(x)\in Y\), the class \(p^{-1}(y)=d_1(d_0^{-1}(x))\) is finite and lies
+in an affine open set, and an invertible module over a semi-local ring is
+free; so \(\mathscr L\) is trivial on an open neighbourhood \(U\) of \(p^{-1}(y)\), and hence
+on the saturated open neighbourhood \(X_0-d_1d_0^{-1}(X_0-U)\) of \(p^{-1}(y)\)
+(\(d_1\) is finite, hence closed). For a section \(a\) of \(\mathcal O_{X_0}\) over
+a saturated open set \(W\), put \(N(a)=N_{d_1}(d_0^\ast a)\); the argument of
+4~a), which only uses the Cartesian squares (0) and (2), shows that
+\(N(a)\) is a section of \(\mathcal O_Y\) over \(p(W)\), and by the norm criterion
+of the Addition after 4~b), \(N(a)\) vanishes at \(p(x)\) if and only if \(a\)
+vanishes at some point of \(p^{-1}(p(x))\). Applying \(N\), which is
+multiplicative, to the transition functions of \(\mathscr L\) relative to a
+covering by saturated open sets on which \(\mathscr L\) is trivial, one obtains
+an invertible \(\mathcal O_Y\)-module \(\mathscr M\) with
+\(p^\ast\mathscr M\simeq N_{d_1}(d_0^\ast\mathscr L)\) (EGA~II, 6.5), and, for every
+section \(t\) of \(\mathscr L^{\otimes k}\) over \(X_0\), a section \(N(t)\) of
+\(\mathscr M^{\otimes k}\) over \(Y\) such that \(Y_{N(t)}\) is the set of the \(y\)
+with \(p^{-1}(y)\subset(X_0)_t\). To show that \(\mathscr M\) is ample relative
+to \(S\), one may suppose \(S\) affine. Let \(y\in Y\) and let \(V\) be an open
+neighbourhood of \(y\); as \(p^{-1}(y)\) is finite, there is a section \(t\) of
+some \(\mathscr L^{\otimes k}\) with \(p^{-1}(y)\subset(X_0)_t\subset p^{-1}(V)\)
+(EGA~II, 4.5.4), and then \(y\in Y_{N(t)}\subset V\). Thus the \(Y_{N(t)}\) form
+a basis of the topology of \(Y\), \(\mathscr M\) is ample (EGA~II, 4.5.2), and
+\(Y\), being of finite type over \(S\), is quasi-projective over \(S\) (EGA~II,
+5.3.1). (The re-edition writes \(Y_{N(t)}=p((X_0)_t)\); in general only the
+inclusion \(Y_{N(t)}\subset p((X_0)_t)\) holds, which is enough.)
+\par\medskip

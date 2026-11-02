@@ -9,35 +9,26 @@
   \textit{by P. Gabriel}
 \end{center}
 
-The purpose of this expos\'e is to prove the theorems stated in TDTE~III.%
+The purpose of this expos\'e is to prove the theorems stated in TDTE~III.\footnote{Translator's note: TDTE~III is A.~Grothendieck, \emph{Technique de
+descente et théorèmes d'existence en géométrie algébrique.~III. Préschémas
+quotients}, Séminaire Bourbaki, exposé~212 (1961). The Gille--Polo
+re-edition (2011), Exposé~V, specifies the theorems meant: 5.1 and 5.3 of
+TDTE~III, which correspond to \hyperref[thm:sga3-V-4.1]{Theorem~4.1} below; 6.1 and 6.2, which correspond to
+\hyperref[thm:sga3-V-7.1]{Theorems~7.1} and~\hyperref[thm:sga3-V-8.1]{8.1}; and 7.2, which is proved in Exposé~VI\textsubscript{A}, 3.2
+and~3.3.}
 If \(X\) and \(T\) are two objects of a category~\(\mathscr C\), we write
 \(X(T)\) instead of \(\operatorname{Hom}_{\mathscr C}(T,X)\). Similarly, if
-\(\varphi:Y\to X\) is an arrow (respectively, if \(T\) is an object) of
-\(\mathscr C\), then \(\varphi(T)\) denotes the map
-\(g\mapsto\varphi\circ g\) from \(Y(T)\) to \(X(T)\):
-
-\SGAThreeDiagram[0.23\textwidth]
-  {figures/exp5/p251_phi_of_T_triangle.png}
-  {The map \(\varphi(T):Y(T)\to X(T)\).}
-  {fig:sga3-exp5-p251-phi-of-T}
-  {LNM 151, p.~251}
-
-Likewise, \(T(\varphi)\) denotes the map \(g\mapsto g\circ\varphi\) from
-\(T(X)\) to \(T(Y)\):
-
-\SGAThreeDiagram[0.23\textwidth]
-  {figures/exp5/p251_T_of_phi_triangle.png}
-  {The map \(T(\varphi):T(X)\to T(Y)\).}
-  {fig:sga3-exp5-p251-T-of-phi}
-  {LNM 151, p.~251}
-
-Finally, if \(P\) is a scheme, we denote by \(\underline P\) the underlying
+\(\varphi:Y\to X\) and \(f:U\to T\) are two arrows of \(\mathscr C\), then
+\(\varphi(T)\) denotes the map \(g\mapsto\varphi\circ g\) from \(Y(T)\) to
+\(X(T)\), and \(Y(f)\) the map \(g\mapsto g\circ f\) from \(Y(T)\) to
+\(Y(U)\). Finally, if \(P\) is a scheme, we denote by \(\underline P\) the underlying
 set of~\(P\).
 
 As an exception, in the present expos\'e we do not follow the convention on
-quotient notation stated in \SGARefLink{sga3:iv:scholium:4:6:15}{IV~4.6.15} (\emph{loc. cit.}, top of p.~227 of
-the original), because we wish to give here a construction of quotients that
-also applies to ``pre-equivalence relations''%
+quotient notation stated in \SGARefLink{sga3:iv:scholium:4:6:15}{IV~4.6.15} (\emph{loc. cit.}, top of p.~227),\footnote{Translator's note: the 1970 text has ``top of page~68''. The
+convention in question is at the top of p.~227 of the 1970 volume, the page
+given by the Gille--Polo re-edition (2011), Exposé~V.} because we wish to give here a construction of quotients that
+also applies to ``pre-equivalence relations''
 that are not equivalence relations.
 
 \section*{1. \(\mathscr C\)-groupoids}
@@ -45,7 +36,7 @@ that are not equivalence relations.
 \addcontentsline{toc}{section}{1. \texorpdfstring{\(\mathscr C\)}{C}-groupoids}
 
 \phantomsection\label{par:sga3-V-1-a}%
-\noindent\textbf{a)} Let \(\mathscr C\) be a category in which products and
+Let \(\mathscr C\) be a category in which products and
 fiber products exist. Recall first that a diagram
 
 \SGAThreeDiagram[0.39\textwidth]
@@ -65,9 +56,9 @@ arrows \(f:X_0\to T\) such that \(f d_0=f d_1\). One also says that
 \end{equation*}
 
 \phantomsection\label{par:sga3-V-1-b}%
-\noindent\textbf{b)} For example, let \(\mathscr C\) be the category
-\((\mathbf{Esp.An})\) of ringed spaces. In this case a cokernel \((Y,p)\)
-always exists, and it may be described as follows. The underlying topological
+For example, let \(\mathscr C\) be the category of ringed spaces. In this
+case a cokernel \((Y,p)\)
+always exists, and it may be described as follows. The underlying
 space of \(Y\) is obtained from \(X_0\) by identifying the points \(d_0(x)\)
 and \(d_1(x)\), and by giving \(Y\) the quotient topology. The canonical map
 \(\pi:X_0\to Y\), together with \(d_0,d_1\), then induces a pair of arrows
@@ -84,60 +75,51 @@ rings on \(Y\), one chooses the subsheaf of \(\pi_*(\mathcal O_0)\) whose
 sections \(s\) satisfy \(\delta_0(s)=\delta_1(s)\). The arrow \(p\) is
 defined in the evident way.
 
-Consider%
-\footnote{\label{note:sga3-V-3}Editor's note: \hyperref[lem:sga3-V-1.1]{Lemmas~1.1} and~\hyperref[sga3:exp5:lemma:1.2]{1.2} have been
-added; they are used several times in Sections~\hyperref[sec:sga3-V-5]{5}--\hyperref[sec:sga3-V-9]{9}.}
-the following diagram in \((\mathbf{Esp.An})\):
-
-\SGAThreeDiagram[0.18\textwidth]
-  {figures/exp5/p252_ringed_space_pair_inline.png}
-  {The pair \((d_0,d_1):X_1\rightrightarrows X_0\).}
-  {fig:sga3-exp5-p252-ringed-space-pair}
-  {Polo--Gille re-edition, Expos\'e V}
-
-\noindent Let \((Y,p)\) be its cokernel. An open subset \(U\) of \(X_0\)
-is said to be \emph{saturated} if
-\[
-  d_0^{-1}(U)=d_1^{-1}(U),
-\]
-which is equivalent to saying \(U=p^{-1}(p(U))\). In this case, since \(Y\)
-has the quotient topology, \(p(U)\) is an open subset of~\(Y\).
-
-\medskip
-\phantomsection\label{lem:sga3-V-1.1}%
-\noindent\textbf{Lemma 1.1.}
-\textit{Let \(U\) be a saturated open subset of \(X\), and set
-\(V=p(U)\). Denote by
-\(U_1=d_0^{-1}(U)=d_1^{-1}(U)\) the corresponding open subset of \(X_1\),
-and by \(\widetilde d_0,\widetilde d_1\), and \(\widetilde p\) the
-restrictions of \(d_0,d_1\) to \(U_1\), and of \(p\) to \(U\), respectively.
-Then \((V,\widetilde p)\) is a cokernel in \((\mathbf{Esp.An})\) of:}%
-\footnote{\label{note:sga3-V-4}Editor's note: this is not the case in the
-category of schemes. For example, let \(S=\operatorname{Spec}(\mathbf C)\),
-let
-\(X_0=\mathbf A^2_S=\operatorname{Spec}(\mathbf C[x_1,x_2])\), let
-\(d_1:\mathbf G_{m,S}\times_S\mathbf A^2_S\to\mathbf A^2_S\) be the
-action of \(\mathbf G_{m,S}\) on \(\mathbf A^2_S\) by homotheties, let
-\(d_0\) be the projection onto the second factor, and let
-\(U=\mathbf A^2_S\setminus\{m\}\), where \(m=(0,0)\). Then the projective
-line \(\mathbf P^1_S\) is the cokernel of
-\((\widetilde d_0,\widetilde d_1)\) in both \((\mathbf{Esp.An})\) and
-\((\mathbf{Sch})\), whereas the cokernel \(Y\) of \((d_0,d_1)\) in
-\((\mathbf{Esp.An})\) is the union of \(\mathbf P^1_S\) and the point
-\(y_0=\{p(m)\}\). The only open subset containing \(y_0\) is \(Y\), and
-\(\Gamma(Y,\mathcal O_Y)=\mathbf C\). If
-\(f:\mathbf A^2_S\to T\) is a morphism of \(S\)-schemes such that
-\(f d_0=f d_1\), and if \(V=\operatorname{Spec}(A)\) is an affine open
-subset of \(T\) containing \(t_0=f(y_0)\), then
-\(f^{-1}(V)=\mathbf A^2\), and the ring homomorphism
-\(A\to\mathbf C[x_1,x_2]\) factors through \(\mathbf C\). This shows that
-\(S=\operatorname{Spec}(\mathbf C)\) is the cokernel of \((d_0,d_1)\) in
-the category \((\mathbf{Sch}/S)\).}
-
-\SGAThreeDiagram[0.40\textwidth]
-  {figures/exp5/p252_lemma_1_1_restricted_cokernel.png}
-  {The restricted pair and its cokernel in \hyperref[lem:sga3-V-1.1]{Lemma~1.1}.}
-  {fig:sga3-exp5-p252-lemma-1-1-restricted-cokernel}
-  {Polo--Gille re-edition, Expos\'e V}
-
-The verification is easy.
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~V; our
+formulation). The re-edition inserts here two lemmas on these cokernels,
+which its versions of \S\S5--9 use. Let \(d_0,d_1\colon X_1\rightrightarrows
+X_0\) be morphisms of ringed spaces, with cokernel \((Y,p)\) as just
+described, and call an open subset \(U\) of \(X_0\) \emph{saturated} if
+\(d_0^{-1}(U)=d_1^{-1}(U)\). If \(x\in U\) and \(x=d_i(z)\), then \(z\) lies
+in \(d_i^{-1}(U)=d_{1-i}^{-1}(U)\), so \(d_{1-i}(z)\in U\); hence a chain of
+identifications that starts in \(U\) stays in \(U\), one has
+\(U=p^{-1}(p(U))\), and \(p(U)\) is open in \(Y\). (a)~For a saturated open
+\(U\), put \(U_1=d_0^{-1}(U)=d_1^{-1}(U)\); then \(p(U)\), with the
+restriction of \(p\), is the cokernel in the category of ringed spaces of
+the pair \(U_1\rightrightarrows U\) induced by \(d_0,d_1\). Indeed, by what
+precedes the two quotient sets and quotient topologies agree; and for an
+open \(V\subset p(U)\) one has \(p^{-1}(V)\subset U\) and
+\(d_0^{-1}(p^{-1}(V))\subset U_1\), so that both structure sheaves have, over
+\(V\), the same sections, namely the \(s\in\Gamma(p^{-1}(V),\mathcal O_0)\)
+with \(\delta_0(s)=\delta_1(s)\). (b)~If \(X_0,X_1\) are schemes and
+\(d_0,d_1\) morphisms of schemes, and if \(Y\) is a scheme and \(p\) a
+morphism of schemes, then \((Y,p)\) is also the cokernel of \((d_0,d_1)\) in
+the category of schemes: this is the argument at the end of 4~c) below,
+which uses only that \(p\) is surjective and that the homomorphisms
+\(\mathcal O_{p(x)}\to\mathcal O_x\) are local. (c)~Consequently, if every
+point of \(X_0\) has a saturated open neighbourhood \(U\) such that the
+cokernel in ringed spaces of the induced pair is a scheme and the quotient
+map a morphism of schemes, then by~(a) the open sets \(p(U)\), which cover
+\(Y\), are schemes and \(p\) is a morphism of schemes above each of them;
+so \(Y\) is a scheme, \(p\) is a morphism of schemes, and \((Y,p)\) is the
+cokernel in the category of schemes by~(b). Assertion~(a) fails for
+cokernels in the category of schemes; the re-edition gives the following
+example. Let \(\mathbf G_m\) act on
+\(\mathbf A^2=\operatorname{Spec}\mathbf C[x_1,x_2]\) by homotheties,
+\(d_1\) being the action and \(d_0\) the second projection of
+\(\mathbf G_m\times\mathbf A^2\). On the saturated open set
+\(\mathbf A^2-\{0\}\) the cokernel, in ringed spaces as in schemes, is the
+projective line. The cokernel \(Y\) of the whole pair in ringed spaces is
+the projective line together with the image \(y_0\) of the origin; every
+saturated open set containing the origin is all of \(\mathbf A^2\), so
+\(Y\) is the only open neighbourhood of \(y_0\), and
+\(\Gamma(Y,\mathcal O_Y)\), the ring of invariant polynomials, is
+\(\mathbf C\). In the category of \(\mathbf C\)-schemes, however, the
+cokernel is \(\operatorname{Spec}\mathbf C\): if
+\(f\colon\mathbf A^2\to T\) satisfies \(fd_0=fd_1\), the inverse image of an
+affine open neighbourhood \(\operatorname{Spec}A\) of the image of the
+origin is a saturated open set containing the origin, hence is
+\(\mathbf A^2\), and \(A\to\mathbf C[x_1,x_2]\) takes its values in the
+invariant polynomials, that is, in \(\mathbf C\).
+\par\medskip

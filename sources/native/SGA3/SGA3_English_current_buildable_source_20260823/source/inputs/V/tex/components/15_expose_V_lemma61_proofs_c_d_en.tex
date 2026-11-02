@@ -3,36 +3,23 @@ Let \(Y'\) be an open subset of \(Y\), and put
 \[
   U'=q^{-1}(Y'),\qquad X'_0=p^{-1}(Y'),
 \]
-and so forth.\footnote{\label{note:sga3-V-33}Editor's note: The argument that follows has
-been expanded, in particular the verification that \(U'\) is a
-quasi-section of the groupoid induced on \(X'_0\).}
-Then \(U'\) is an open subset of \(U\) saturated for the equivalence
-relation defined by the groupoid \(U_\ast\). It follows from
-\hyperref[lem:sga3-V-1.1]{Lemmas~1.1} and
-\hyperref[sga3:exp5:lemma:1.2]{1.2} that \(Y'\) is the cokernel, both
-in \((\mathbf{Sch}/S)\) and in the category of ringed spaces, of the
-groupoid induced by \(U_\ast\) on \(U'\). Likewise, \(X'_0\) is an
-open subset of \(X_0\) saturated for the equivalence relation defined
-by \(X_\ast\), and we have the following commutative diagram, in which
-both squares are Cartesian:
-\SGAThreeDiagram[0.58\textwidth]
-  {figures/exp5/p273_lemma61_restricted_groupoids_cartesian_corrected.png}
-  {The restricted groupoids over \(X'_0\) and \(X_0\).}
-  {fig:sga3-V-6.1-restricted-groupoids}
-  {LNM 151, pp.~274--276; lower-right \(U\) corrected from \(U'\) in the French text}
-Here \(\widetilde d_1\) is surjective and finite locally free. On the
-other hand, let \(x\in U'\). Since \(U\) is a quasi-section, the set
-\[
-  E=d_0d_1^{-1}(x)\cap U
-\]
-is finite and is contained in an affine open subset \(W\) of \(U\).
-Then \(E'=E\cap U'\) is a finite set contained in the quasi-affine
-open subset \(W\cap U'\). Consequently there is an affine open subset
-\(W'\) of \(W\cap U'\) that contains \(E'\). This proves that \(U'\)
-is a quasi-section of the groupoid \(X'_\ast\) induced by \(X_\ast\)
-on \(X'_0\). The first assertion of \hyperref[lem:sga3-V-6.1-i]{part~(i)}, applied to \(X'_\ast\)
-and \(U'\), now shows that \(Y'\) is the cokernel of \(X'_\ast\) in
-\((\mathbf{Sch}/S)\).
+and so forth. It is clear that \(U'\) is an open subset of \(U\) saturated for
+the equivalence relation defined by the groupoid \(U_\ast\). It therefore
+follows from Theorem~\hyperref[thm:sga3-V-4.1]{4.1} that \(Y'\) is the cokernel of the groupoid
+induced by \(U_\ast\) on \(U'\). Likewise, \(X'_0\) is an open subset of \(X_0\)
+saturated for the equivalence relation defined by \(X_\ast\), and
+\(U'=X'_0\cap U\). Consequently, \(U'\) is a quasi-section of the groupoid
+induced by \(X_\ast\) on \(X'_0\). What precedes then shows that \(Y'\) is also
+the cokernel of this last groupoid.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~V, details
+these steps. That \(Y'\) is the cokernel of the groupoid induced by \(U_\ast\)
+on \(U'\), in schemes and in ringed spaces, also follows from the Addition at
+the end of \S1, (a) and~(b). The open set \(U'\) satisfies condition~(1) for
+the groupoid induced on \(X'_0\), because \(X'_0\) is saturated, so that
+\(d_0^{-1}(U')\to X'_0\) is deduced from \(v\) by the base change
+\(X'_0\to X_0\); and condition~(2), because a set of pairwise equivalent points
+of \(U'\) is finite and lies in an affine open subset \(W\) of \(U\), hence in the
+quasi-affine scheme \(W\cap U'\), in which a finite set has an affine open
+neighbourhood (EGA~II, 4.5.4 and 5.1.2).}
 
 In particular, for every \(S\)-scheme \(T\), the sequence
 \begin{equation}
@@ -52,14 +39,11 @@ is exact. If \(T\) is the affine line \(\mathbf G_{a,S}\)
   &\longrightarrow
   \Gamma(p^{-1}(Y'),\mathcal O_{X_0})
   \underset{\delta_0}{\overset{\delta_1}{\rightrightarrows}}
-  \Gamma(d_0^{-1}p^{-1}(Y'),\mathcal O_{X_1})\\
-  &\hspace{9em}=
-  \Gamma(d_1^{-1}p^{-1}(Y'),\mathcal O_{X_1}),
+  \Gamma(d_0^{-1}p^{-1}(Y'),\mathcal O_{X_1}),
 \end{aligned}
 \label{eq:sga3-V-6.1-sections-exact}
 \end{equation}
-which is therefore exact for every open subset \(Y'\). This completes
-the proof of Lemma~\hyperref[lem:sga3-V-6.1-i]{6.1(i)}.
+which is therefore exact for every open subset \(Y'\).
 
 \medskip
 \phantomsection\label{par:sga3-V-6-d}%
@@ -73,9 +57,28 @@ Theorem~\hyperref[thm:sga3-V-4.1]{4.1} that
 is an isomorphism, and hence so is \(v_0\boxtimes v_1\); see the
 Cartesian squares in part~\hyperref[par:sga3-V-6-b]{(b)}. Since
 \(v\times v\) is faithfully flat and quasi-compact,
-\(d_0\boxtimes d_1\) is an isomorphism (SGA~1, VIII, \SGARefLink{sga3:viii:corollary:5:4}{5.4}).
+\(d_0\boxtimes d_1\) is an isomorphism (SGA~1, VIII, 5.4).
 
-Moreover, if \(d_0\) is flat, then \(u\) is flat. The morphism \(q\)
-is flat by Theorem~\hyperref[thm:sga3-V-4.1]{4.1}, so \(r\) is flat
-as well. Since \(v\) is faithfully flat, \(p\) is flat; being also
-surjective, it is faithfully flat.
+Moreover, \(q\) is faithfully flat, hence so is \(r\), since \(u\) is
+faithfully flat. Since \(r\) and \(v\) are faithfully flat, so is \(p\).
+
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~V; our
+formulation). The re-edition states Lemma~6.1 in a stronger form.
+(1)~The hypothesis that \(d_0\) is faithfully flat and quasi-compact is used
+only in d), and only through the flatness of \(d_0\): assertions (i)--(iii)
+hold for every \((\mathbf{Sch}/S)\)-groupoid with a quasi-section, and the
+conclusion of~(iv) holds as soon as \(d_0\) is flat. Indeed, \(u\) is then
+flat, so \(r=qu\) is flat, \(q\) being flat by \hyperref[thm:sga3-V-4.1]{4.1}; since \(r=pv\) with \(v\)
+faithfully flat, \(p\) is flat (EGA~IV\textsubscript{2}, 2.2.13~(iii)), and it is
+surjective by~(ii). (2)~If \(d_0\) is universally closed, so is \(p\): \(u\) is
+universally closed, being deduced from \(d_0\) by base change, and \(q\) is
+integral, so \(r=qu\) is universally closed; after any base change, \(r'=p'v'\)
+with \(r'\) closed and \(v'\) surjective, so \(p'(F)=r'(v'^{-1}(F))\) is closed for
+every closed set \(F\). (3)~If \(S\) is locally noetherian and \(X_0\) is only
+locally of finite type over \(S\), the argument of a) shows that \(Y\) is
+locally of finite type over \(S\), hence locally noetherian; then \(p\) is
+locally of finite type (EGA~I, 6.6.6), so that \(p\) and \(Y\to S\) are locally
+of finite presentation. If \(X_0\) is of finite type over \(S\), \(p\) and
+\(Y\to S\) are moreover of finite presentation (EGA~IV\textsubscript{1}, 1.6.2~(v)).
+\par\medskip

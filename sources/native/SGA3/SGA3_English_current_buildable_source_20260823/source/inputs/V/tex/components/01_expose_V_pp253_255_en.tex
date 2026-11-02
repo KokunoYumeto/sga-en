@@ -1,42 +1,8 @@
 
-\medskip
-\phantomsection\label{sga3:exp5:lemma:1.2}
-\noindent\textbf{Lemma 1.2.}---
-\textit{Let \(d_0,d_1:X_1\rightrightarrows X_0\) be a diagram in
-\((\mathbf{Sch})\), and let \((Y,p)\) be its cokernel in
-\((\mathbf{Esp.An})\).
-\begin{enumerate}
-\item[(i)]\phantomsection\label{lem:sga3-V-1.2-i}%
-If \(Y\) is a scheme and \(p\) is a morphism of schemes,
-  then \((Y,p)\) is a cokernel of \((d_0,d_1)\) in
-  \((\mathbf{Sch})\).
-\item[(ii)]\phantomsection\label{lem:sga3-V-1.2-ii}%
-Suppose that every point of \(X_0\) has a saturated open
-  neighborhood \(U\) with the following property. Let
-  \(\widetilde d_0\) and \(\widetilde d_1\) be the restrictions of
-  \(d_0\) and \(d_1\) to
-  \(d_0^{-1}(U)=d_1^{-1}(U)\), and let \((Q,q)\) be the cokernel of
-  \((\widetilde d_0,\widetilde d_1)\) in \((\mathbf{Esp.An})\). If
-  \(Q\) is a scheme and \(q\) is a morphism of schemes, then
-  \((Y,p)\) is a cokernel of \((d_0,d_1)\) in
-  \((\mathbf{Sch})\).
-\end{enumerate}}
-
-\hyperref[lem:sga3-V-1.2-i]{Part~(i)} is proved in \hyperref[proof:sga3-V-4.1-c]{\S4(c)}; since the proof is short, let us repeat
-it here. Let \(f:X_0\to Z\) be a morphism of schemes such that
-\(fd_0=fd_1\). By hypothesis there is a unique morphism of ringed
-spaces \(r:Y\to Z\) such that \(f=rp\). It remains to show that, for
-every \(y\in Y\), the homomorphism
-\(\mathscr O_{r(y)}\to\mathscr O_y\) induced by \(r\) is local. This
-follows because \(p\) is surjective, so \(y=p(x)\) for some \(x\), and
-because the homomorphism
-\(\mathscr O_{f(x)}\to\mathscr O_x\) induced by \(f\) is local.
-
-\hyperref[lem:sga3-V-1.2-ii]{Part~(ii)} follows from \hyperref[lem:sga3-V-1.2-i]{part~(i)} and \hyperref[lem:sga3-V-1.1]{the preceding lemma}.
 
 \medskip
 \phantomsection\label{par:sga3-V-1-c}%
-\noindent\textbf{c)} In this expos\'e we study the existence of
+In this expos\'e we study the existence of
 \(\operatorname{Coker}(d_0,d_1)\) when the double arrow
 \((d_0,d_1)\) is placed in a richer context. More precisely, let
 \[
@@ -72,7 +38,11 @@ is \(d'_1(T)\). As usual, we identify
  \simeq X_1(T)\times_{d_1(T),d_0(T)}X_1(T),
 \]
 and recall that a groupoid is a category in which every arrow is
-invertible.
+invertible.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~V, makes
+this explicit: \(X_2(T)\) is the set of pairs \((f_2,f_1)\) of arrows of
+\(X_\ast(T)\) with \(d_0(f_1)=d_1(f_2)\), that is, of composable pairs, and
+\(d'_0\), \(d'_1\), \(d'_2\) send \((f_2,f_1)\) to \(f_2\), \(f_2\circ f_1\)
+and \(f_1\) respectively.}
 
 If \(\varphi\) is an arrow of the groupoid \(X_\ast(T)\), the map
 \(f\mapsto\varphi\circ f\) is a bijection from the set of arrows \(f\)
@@ -98,7 +68,7 @@ arrows \(g\) of \(X_\ast(T)\) whose source equals the target of
 is Cartesian.
 
 On the other hand, let \(s:X_0\to X_1\) be the unique arrow of
-\(\mathscr C\) such that, for every \(T\), the map
+\(\mathscr C\) such that
 \(s(T):X_0(T)\to X_1(T)\) sends each object of \(X_\ast(T)\) to its
 identity arrow.
 The arrow \(s\) satisfies
@@ -146,15 +116,15 @@ We use associativity only indirectly, for example to ensure the
 existence of an arrow \(s\) satisfying
 \hyperref[eq:sga3-exp5-3]{(3)} and
 \hyperref[eq:sga3-exp5-3bis]{(3 bis)}, or to ensure the existence of
-an arrow
-\begin{equation}
-  \sigma:X_1\longrightarrow X_1,
-  \qquad d_0\sigma=d_1,\quad d_1\sigma=d_0.
-  \tag{\ensuremath{\dagger}}\label{eq:sga3-exp5-dagger}
-\end{equation}
-Here \(\sigma\) is chosen so that
+an arrow \(\sigma:X_1\to X_1\) such that \(d_0\sigma=d_1\) and
+\(d_1\sigma=d_0\) (one chooses \(\sigma\) so that
 \(\sigma(T):X_1(T)\to X_1(T)\) sends every arrow of \(X_\ast(T)\) to
-its inverse.
+its inverse).\footnote{Translator's note: as the Gille--Polo re-edition (2011), Exposé~V,
+points out, the families \((s(T))_T\) and \((\sigma(T))_T\) are functorial
+in \(T\), hence come from unique arrows \(s\) and \(\sigma\) of
+\(\mathscr C\) (Yoneda lemma); and \(\sigma\circ\sigma=\operatorname{id}_{X_1}\),
+since inversion is involutive, so that \(\sigma\) is an involutive
+automorphism of \(X_1\). This is used in 3~e) and in \hyperref[thm:sga3-V-4.1]{Theorem~4.1}.}
 
 By an abuse of language, we shall sometimes call a diagram
 \begin{equation*}
@@ -172,10 +142,8 @@ there exists an \(s\) satisfying
 product of \hyperref[sga3:v:lemma:1-2:equation:star]{(*)} without
 being ``the'' fiber product of
 \hyperref[sga3:v:lemma:1-2:equation:star]{(*)}.
-
-\medskip
-\phantomsection\label{sga3:exp5:terminology:c-groupoid}
-\noindent\textit{Terminology.} In place of the
+\phantomsection\label{sga3:exp5:terminology:c-groupoid}%
+In place of the
 \(\mathscr C\)-groupoid \(X_\ast\), we shall also speak of the
 \emph{groupoid \(X_\ast\) with base \(X_0\)}, or of the
 \emph{pre-equivalence relation \(X_\ast\) in \(X_0\)}.

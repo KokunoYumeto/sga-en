@@ -150,17 +150,14 @@ defines a map
 \]
 Fix \(T,T'\) in \(\mathscr C_{/S}\). A familiar calculation shows that, if
 there exists an \(S\)-morphism \(T'\to T\), the corresponding map \SGARefLink{sga3:iv:proposition:1:12:eq:unnamed:01}{(+)} is
-independent of the choice of that morphism.\footnote{Editor's note: this is
-the following argument, communicated by M.~Demazure. Let
-\(f,g:T'\to T\), and let \(\phi:T'\to T\times_ST\) be the morphism with
-components \(f\) and \(g\), so that \(p_1\circ\phi=f\) and
-\(p_2\circ\phi=g\). Then
-\(F(\phi):F(T\times_ST)\to F(T')\) satisfies
-\(F(\phi)\circ F(p_1)=F(f)\) and
-\(F(\phi)\circ F(p_2)=F(g)\). For every
-\(x\in\check H^0(T/S,F)\), however, one has
-\(F(p_1)(x)=F(p_2)(x)\). Applying \(F(\phi)\) to both sides gives
-\(F(f)(x)=F(g)(x)\), which shows that \(f\) and \(g\) induce the same map.}
+independent of the choice of that morphism.\footnote{Translator's note: the Gille--Polo re-edition (2011), Expos\'e~IV, writes
+out this calculation, which it attributes to M.~Demazure. In our formulation:
+two \(S\)-morphisms \(f,g\colon T'\to T\) define
+\((f,g)\colon T'\to T\times_ST\), whose composites with
+\(\operatorname{pr}_1\) and \(\operatorname{pr}_2\) are \(f\) and \(g\). For
+\(x\in\check H^0(T/S,F)\) one has
+\(F(\operatorname{pr}_1)(x)=F(\operatorname{pr}_2)(x)\); applying
+\(F((f,g))\) gives \(F(f)(x)=F(g)(x)\).}
 
 Thus \(\check H^{0}(T/S,F)\) may be regarded as a functor on the category
 associated with the set \(\operatorname{Ob}(\mathscr C_{/S})\), preordered
@@ -203,7 +200,18 @@ are equal (and are isomorphisms). But a diagram
   C\overset{v}{\underset{v}{\rightrightarrows}}B\xrightarrow{u}A
 \]
 is exact only if \(u\) is an isomorphism, as follows immediately from \SGARefLink{sga3:iv:definition:1:3}{the
-definition}.
+definition}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Expos\'e~IV, adds that
+a monomorphism which is an epimorphism need not be an isomorphism. Example, in
+our formulation: for a prime \(p\), the morphism of schemes
+\(u\colon\operatorname{Spec}(\mathbf F_p)\amalg\operatorname{Spec}(\mathbf Z[1/p])
+\to\operatorname{Spec}(\mathbf Z)\) is a monomorphism, its fibre square being
+its source. It is an epimorphism: if
+\(f,g\colon\operatorname{Spec}(\mathbf Z)\to X\) satisfy \(fu=gu\), they agree
+on \(D(p)\) and at \((p)\), hence map some \(D(m)\ni(p)\) into one affine open
+\(\operatorname{Spec}(A)\) of \(X\), and the two homomorphisms
+\(A\to\mathbf Z[1/m]\) are equal, since they agree after the injection
+\(\mathbf Z[1/m]\to\mathbf Z[1/mp]\). But \(u\) is not an isomorphism, its
+source being disconnected.}
 
 \SGARefTarget{sga3:iv:section:2}\section*{2. Descent Morphisms}
 \addcontentsline{toc}{section}{2. Descent Morphisms}
@@ -215,7 +223,7 @@ Recall the following definitions.
 \textit{Let \(f:S'\to S\) be a morphism such that
 \(S''=S'\times_SS'\) exists, and let \(u':X'\to S'\) be an object over
 \(S'\). A \emph{gluing datum} on \(X'/S'\), relative to \(f\), is an
-\(S''\)-isomorphism}
+isomorphism}
 \[
   c:X''_1\xrightarrow{\sim}X''_2,
 \]
@@ -235,19 +243,30 @@ to exist, of \(X'/S'\) under the projection
 \]
 \textit{to \(S''\) (and we now assume that \(S'''\) also exists), where
 \(\operatorname{pr}_{i,j}^{*}(c)\) is the inverse image of \(c\), viewed
-as an \(S'''\)-morphism from \(X'''_j\) to \(X'''_i\), and where, for each
+as an \(S'''\)-morphism from \(X'''_j\) to \(X'''_i\),\footnote{Translator's note: the 1970 text has ``from \(X'''_i\) to
+\(X'''_j\)''; the Gille--Polo re-edition (2011), Expos\'e~IV, interchanges
+the indices. With the printed reading the composite
+\(\operatorname{pr}_{3,2}^{*}(c)\,\operatorname{pr}_{2,1}^{*}(c)\) in the
+cocycle condition would not be defined, composites being written from right
+to left (as \(uv\) in 1.4).} and where, for each
 integer \(k\) from \(1\) to \(3\), \(X'''_k\) denotes the inverse image,
 assumed to exist, of \(X'/S'\) under the \(k\)-th projection
 \(q_k:S'''\to S'\).}
 
 In the second part of \SGARefLink{sga3:iv:definition:2:1}{the definition} we have therefore used customary
-identifications and abuses of notation, which experience shows to be
+identifications and abuses of notation,\footnote{Translator's note: for example (after the Gille--Polo
+re-edition (2011), Expos\'e~IV; our formulation),
+\(\operatorname{pr}_{2,1}^{*}(X''_1)\) and
+\(\operatorname{pr}_{3,1}^{*}(X''_1)\) are both identified with
+\(X'''_1\), and \(\operatorname{pr}_{2,1}^{*}(X''_2)\) and
+\(\operatorname{pr}_{3,2}^{*}(X''_1)\) with \(X'''_2\): each is an inverse
+image of \(X'\) under the same projection \(S'''\to S'\).} which experience shows to be
 harmless, but which must plainly be avoided in a rigorous exposition of
 descent theory---a theory that must itself justify, to some extent, these
 customary abuses of language. Such a formal exposition (\SGARefLink{sga3:iv:bib:d}{[D]}) was written by
-Giraud, with a view to justifying and making precise \SGARefLink{sga3:iv:bib:sga:1}{SGA~1}, Expos\'e~VII,
+Giraud, with a view to justifying and making precise SGA~1, Expos\'e~VII,
 which was never written. For a detailed account of the faithfully flat
-descent results used constantly in this Seminar, one may consult \SGARefLink{sga3:iv:bib:sga:1}{SGA~1},
+descent results used constantly in this Seminar, one may consult SGA~1,
 Expos\'e~VIII.
 
 Continue to let \(f:S'\to S\) be a morphism for which
@@ -405,10 +424,15 @@ Indeed, consider the cartesian diagram
 \tag{2.5.1}\label{sga3:iv:corollary:2:5:eq:2:5:1:01}
 \]
 where the second horizontal arrow is the diagonal morphism. By \SGARefLink{sga3:iv:corollary:1:9}{1.9}, the
-second vertical arrow \(f\) is a universal effective epimorphism; by
+second vertical arrow is a universal effective epimorphism; by
 hypothesis, the first horizontal arrow is an isomorphism. It follows from
 \SGARefLink{sga3:iv:proposition:2:4:item:a:01}{2.4(a)}, or equally from \SGARefLink{sga3:iv:proposition:2:4:item:b:01}{2.4(b)}, that
-\(S\to S\times_TS\) is also an isomorphism, which says precisely that
+\(S\to S\times_TS\) is also an isomorphism,\footnote{Translator's note: the 1970 text calls \(S\to S\times_TS\)
+``the first'' horizontal arrow; it is the second, the diagonal. The
+Gille--Polo re-edition (2011), Expos\'e~IV, also states how 2.4 is applied:
+over the base \(S\times_TS\), to the universal effective epimorphism
+\(S'\times_TS'\to S\times_TS\) and to the diagonal, whose inverse image is
+\(S'\times_SS'\to S'\times_TS'\) because the square is cartesian.} which says precisely that
 \(g:S\to T\) is a monomorphism.
 
 \medskip

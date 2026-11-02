@@ -26,8 +26,8 @@ this theory to the formation of quotients in groups and to principal
 homogeneous bundles. The final section concerns the category of schemes more
 specifically and defines several useful topologies on that category.
 
-The reader will profitably consult \SGARefLink{sga3:iv:bib:as}{[AS]}, \SGARefLink{sga3:iv:bib:ma}{[MA]}, \SGARefLink{sga3:iv:bib:d}{[D]}, and \SGARefLink{sga3:iv:bib:sga:4}{SGA~4}; in particular,
-\SGARefLink{sga3:iv:bib:d}{[D]} for the applications of topologies to descent theory, and \SGARefLink{sga3:iv:bib:sga:4}{SGA~4} for
+The reader will profitably consult \SGARefLink{sga3:iv:bib:as}{[AS]}, \SGARefLink{sga3:iv:bib:ma}{[MA]}, \SGARefLink{sga3:iv:bib:d}{[D]}, and SGA~4; in particular,
+\SGARefLink{sga3:iv:bib:d}{[D]} for the applications of topologies to descent theory, and SGA~4 for
 questions concerning universes (which are treated especially poorly in this
 expos\'e).
 
@@ -105,24 +105,21 @@ There are evidently implications
    &\Longrightarrow& \text{epimorphism},
 \end{array}
 \]
-but in general no other implication holds.\footnote{Editor's note: for
-example, if \(\mathscr C=\mathbf{Sch}\) is the category of schemes, it is
-easy to see that every universal epimorphism is surjective. Let
-\[
-  T=\coprod_{p\ \mathrm{prime}}\operatorname{Spec}(\mathbf F_p),
-  \qquad S=\operatorname{Spec}(\mathbf Z).
-\]
-Then the morphism \(u:T\to S\) is an epimorphism that is not universal. On
-the other hand, \(T\times_S T\) identifies with \(T\), so the two
-projections \(T\times_S T\to T\) coincide. Since
-\(\operatorname{id}_T\) does not descend to a morphism \(S\to T\), this
-shows that \(u\) is not an effective epimorphism.}
-
-\medskip
-\noindent\SGARefTarget{sga3:iv:definition:1:4:0}\textbf{Definition 1.4.0.}
-We ``recall'' that a morphism \(u:T\to S\) is said to be
-\emph{squarable} if, for every morphism \(S'\to S\), the fiber product
-\(T\times_S S'\) exists.
+but in general no other implication holds.\footnote{Translator's note: the Gille--Polo re-edition (2011), Expos\'e~IV, gives an
+example in the category of schemes. In our formulation: let \(T\) be the sum
+of the \(\operatorname{Spec}(\mathbf F_p)\), \(p\) prime, and
+\(u\colon T\to S=\operatorname{Spec}(\mathbf Z)\) the canonical morphism. If
+\(f,g\colon S\to X\) satisfy \(fu=gu\), then for every prime \(p\) they agree
+at \((p)\), hence map some \(D(m)\ni(p)\) into one affine open
+\(\operatorname{Spec}(A)\) of \(X\), where they are given by two homomorphisms
+\(A\to\mathbf Z[1/m]\) that agree modulo every prime not dividing \(m\), hence
+are equal; so \(u\) is an epimorphism. It is not universal: a universal
+epimorphism of schemes is surjective, since over a point \(s\) outside its
+image the base change is \(\varnothing\to\operatorname{Spec}(\kappa(s))\),
+which is not an epimorphism. Nor is it effective: \(T\times_ST=T\), so
+exactness would make \(\operatorname{id}_T\) factor through the connected
+scheme \(S\), which has no morphism to any
+\(\operatorname{Spec}(\mathbf F_p)\).}
 
 \medskip
 \noindent\SGARefTarget{sga3:iv:lemma:1:4}\textbf{Lemma 1.4.}
@@ -137,6 +134,8 @@ We ``recall'' that a morphism \(u:T\to S\) is said to be
     epimorphism.}
 \end{enumerate}
 
+Recall that a morphism \(u:T\to S\) is said to be \emph{squarable} if, for
+every morphism \(S'\to S\), the fiber product \(T\times_S S'\) exists.
 Lemma~\SGARefLink{sga3:iv:lemma:1:4}{1.4} follows immediately from the definitions. We deduce:
 
 \medskip
@@ -151,21 +150,18 @@ and suppose that \(Y\times Y'\) exists. Then \(X\times X'\) exists and}
 We also record the following.
 
 \medskip
-\noindent\SGARefTarget{sga3:iv:definition:1:6:0}\textbf{Definition 1.6.0.}
-An object \(S\) of \(\mathscr C\) is called \emph{squarable} if its product
-with every object of \(\mathscr C\) exists. (If \(\mathscr C\) has a final
-object \(e\), this is equivalent to saying that the morphism \(S\to e\) is
-squarable; cf. \SGARefLink{sga3:iv:definition:1:4:0}{1.4.0}.)
-
-\medskip
 \noindent\SGARefTarget{sga3:iv:lemma:1:6}\textbf{Lemma 1.6.}
 \textit{Let \(u:X\to Y\) be a morphism in \(\mathscr C_{/S}\). For it to be
 an epimorphism (respectively, a universal epimorphism, an effective
 epimorphism, or a universal effective epimorphism), it is sufficient that the
 corresponding morphism in \(\mathscr C\) have the same property; it is also
-necessary if \(S\) is assumed to be a squarable object of \(\mathscr C\).}
+necessary if \(S\) is assumed to be a squarable object of \(\mathscr C\),
+that is, if its product with every object of \(\mathscr C\) exists.}\footnote{Translator's note: the Gille--Polo re-edition (2011), Expos\'e~IV, makes this
+notion a separate definition (1.6.0) and observes that, when \(\mathscr C\)
+has a final object \(e\), \(S\) is squarable exactly when the morphism
+\(S\to e\) is squarable (1.4), since \(S\times_eX=S\times X\).}
 
 The proof is immediate and is left to the reader. The hypothesis that \(S\)
 is squarable is used to interpret the \(\mathscr C\)-morphisms from an object
-\(Y\) of \(\mathscr C_{/S}\) to an object \(Z\) of \(\mathscr C\) as the
+\(Y\) to an object \(Z\) as the
 \(\mathscr C_{/S}\)-morphisms from \(Y\) to \(Z\times S\).

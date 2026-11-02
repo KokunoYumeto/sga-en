@@ -19,61 +19,48 @@ Indeed, if this assertion were false, \(x\) would be distinct from
   =\delta_1^{-1}(t)\cap B
   =y\cap B=x\cap B.
 \]
-It would follow from Cohen--Seidenberg (see Bourbaki,
-\emph{Alg\`ebre commutative}, V, \S2, Corollary~1 to Proposition~1)
-that \(x\) is contained in none of the ideals
-\(\delta_0^{-1}(t)\).%
-\footnote{\label{note:sga3-V-21}Editor's note: the original has been expanded in what follows;
-in particular, Lemma~\hyperref[lem:sga3-V-4.1.1]{4.1.1}, taken from \hyperref[bib:sga3-V-DG70]{[DG70]}, III,
-\S2.4, Lemma~4.3, has been added.}
-There are at most \(n\) prime ideals \(t\) of \(A_1\) satisfying
-\(\delta_1^{-1}(t)=y\) (see \emph{loc. cit.}, Proposition~3). Hence,
-by the Prime Avoidance Lemma (\emph{loc. cit.}, II, \S1,
-Proposition~3), there would be an element \(a\in x\) belonging to none
-of the ideals \(\delta_0^{-1}(t)\).
+It would follow from Cohen--Seidenberg that \(x\) is contained in none of
+the ideals \(\delta_0^{-1}(t)\); there would therefore be an element
+\(a\in x\) belonging to none of the ideals \(\delta_0^{-1}(t)\) (for there
+are at most \(n\) prime ideals \(t\) of \(A_1\) such that
+\(\delta_1^{-1}(t)=y\)). Consequently, \(\delta_0(a)\) would belong to none
+of these ideals \(t\), so that the norm \(N_{\delta_1}(\delta_0(a))\) would
+not belong to \(y\) (this norm is computed by regarding \(A_1\) as an
+\(A_0\)-algebra through \(\delta_1\); with the notation of
+\hyperref[proof:sga3-V-4.1-a]{part~a)}, \(N_{\delta_1}(\delta_0(a))=\sigma_n\)). But this norm would
+belong to \(B\cap x=B\cap y\), a contradiction.
 
-Consequently, \(\delta_0(a)\) would belong to none of these prime
-ideals \(t\), and \hyperref[lem:sga3-V-4.1.1]{the lemma below} would imply that the norm
-\(N_{\delta_1}(\delta_0(a))\) does not belong to \(y\). Here the norm
-is computed by regarding \(A_1\) as an \(A_0\)-algebra through
-\(\delta_1\); with the notation of \hyperref[proof:sga3-V-4.1-a]{part~a)},
-\[
-  N_{\delta_1}(\delta_0(a))=\sigma_n.
-\]
-On the other hand,
-\[
-  (-1)^{n-1}\sigma_n
-  =a^n+\sum_{i=1}^{n-1}(-1)^i\sigma_i a^{n-i},
-\]
-so this norm belongs to \(B\cap x=B\cap y\), a contradiction.
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~V; our
+formulation). The re-edition details this argument as follows. By a),
+\(A_0\) is integral over \(B\); since \(\delta_0^{-1}(t)\cap B=x\cap B\), an
+inclusion \(x\subset\delta_0^{-1}(t)\) would be an equality (incomparability;
+Bourbaki, \emph{Algèbre commutative}, V, \S2, Corollary~1 to
+Proposition~1), and \(x\neq\delta_0^{-1}(t)\) by assumption. The prime ideals
+\(t\) with \(\delta_1^{-1}(t)=y\) correspond to the prime ideals of
+\(A_1\otimes_{A_0}\kappa(y)\), an algebra of dimension \(n\) over the field
+\(\kappa(y)\), so there are at most \(n\) of them; and an ideal contained in
+none of finitely many prime ideals is not contained in their union (prime
+avoidance; \emph{loc.\ cit.}, II, \S1, no.~1, Proposition~2). The norm
+\(\sigma_n\) lies in \(B\) by a), and in \(x\) because the relation proved in
+a) gives \((-1)^{n-1}\sigma_n=\sum_{i=0}^{n-1}(-1)^i\sigma_ia^{n-i}\), with
+\(\sigma_0=1\), a multiple of \(a\). Finally, the passage from
+``\(\delta_0(a)\) lies in no prime ideal \(t\) above \(y\)'' to
+``\(N_{\delta_1}(\delta_0(a))\notin y\)'' is the following criterion, which the
+re-edition takes from M.~Demazure and P.~Gabriel, \emph{Groupes
+algébriques}, Masson and North-Holland, 1970, III, \S2, Lemma~4.3:
+\emph{if \(A\to A'\) makes \(A'\) a projective \(A\)-module of rank \(n\), if
+\(\mathfrak p\) is a prime ideal of \(A\) and \(a'\in A'\), then the norm
+\(N(a')\) lies outside \(\mathfrak p\) if and only if \(a'\) lies in no prime
+ideal of \(A'\) above \(\mathfrak p\).} Indeed, the norm commutes with
+localization at \(\mathfrak p\); over the local ring \(A_{\mathfrak p}\), the
+algebra \(A'_{\mathfrak p}\) is a free module of rank \(n\), \(N(a')\) is the
+determinant of multiplication by \(a'\), and this determinant is a unit if
+and only if multiplication by \(a'\) is bijective, that is, if and only if
+\(a'\) is a unit of \(A'_{\mathfrak p}\); and since \(A'_{\mathfrak p}\) is finite
+over \(A_{\mathfrak p}\), its maximal ideals are its prime ideals above
+\(\mathfrak pA_{\mathfrak p}\), which correspond to the prime ideals of \(A'\)
+above \(\mathfrak p\).
+\par\medskip
 
-\medskip
-\phantomsection\label{lem:sga3-V-4.1.1}%
-\noindent\textbf{Lemma 4.1.1.}---
-\textit{Let \(A\to A'\) be a homomorphism of commutative rings which
-makes \(A'\) a projective \(A\)-module of rank \(n\). Let
-\(p\in\operatorname{Spec}(A)\), let \(q_1,\ldots,q_r\) be the points of
-\(\operatorname{Spec}(A')\) lying above \(p\), and let \(a\in A'\).
-Then \(a\in q_1\cup\cdots\cup q_r\) if and only if its norm \(N(a)\)
-belongs to \(p\).}
 
-Indeed, after replacing \(A\) and \(A'\) by the localizations \(A_p\)
-and \(A'_p\), we reduce to the case in which \((A,p)\) is local and
-\(A'\) is semilocal, with
-\[
-  \operatorname{Spec}(A')=\{q_1,\ldots,q_r\}.
-\]
-In this case \(A'\) is a free \(A\)-module of rank \(n\) (see
-Bourbaki, \emph{Alg\`ebre commutative}, II, \S3.2, Corollary~2 to
-Proposition~5), and \(N(a)\) is the determinant of the endomorphism
-\[
-  \ell_a:A'\longrightarrow A',\qquad a'\longmapsto aa'.
-\]
-Thus one has the equivalences
-\[
-  N(a)\notin p
-  \quad\Longleftrightarrow\quad N(a)\text{ is invertible}
-  \quad\Longleftrightarrow\quad \ell_a\text{ is invertible}
-  \quad\Longleftrightarrow\quad
-  a\notin q_1\cup\cdots\cup q_r.
-\]

@@ -9,7 +9,7 @@ that is closed relative to \(S\) has a saturated open neighborhood
 a quasi-section.}
 
 The assertion is local on \(S\), so we may suppose that \(S\) is
-affine and Noetherian and apply \hyperref[lem:sga3-V-7.2]{the preceding lemma} to the diagram
+affine and apply \hyperref[lem:sga3-V-7.2]{the preceding lemma} to the diagram
 \SGAThreeDiagram[0.30\textwidth]
   {figures/exp5/p276_lemma73_base_square.png}
   {The diagram to which \hyperref[lem:sga3-V-7.2]{Lemma~7.2} is applied.}
@@ -27,59 +27,48 @@ Let \(F_1\) and \(F_2\) be the inverse images of \(F\) under \(d_0\)
 and \(d_0d'_0=d_0d'_1\), respectively, and let
 \(\widetilde d_0,\widetilde d_1,\ldots\) denote the morphisms induced
 by \(d_0,d_1,\ldots\). We then have a commutative diagram
-\SGAThreeDiagram[0.67\textwidth]
-  {figures/exp5/p276_lemma73_F2_diagram.png}
-  {The induced diagram on \(F_2,F_1,F\).}
-  {fig:sga3-V-7.3-F-diagram}
-  {Polo--Gille re-edition, Expos\'e V}
-in which the two left-hand squares are Cartesian, the first row is
+\[
+\begin{tikzcd}[column sep=4.4em, row sep=4.2em]
+F_2
+  \arrow[r, shift left=0.9ex, "{\widetilde d'_1}"]
+  \arrow[r, shift right=0.9ex, swap, "{\widetilde d'_0}"]
+  \arrow[d, swap, "{\widetilde d'_2}"]
+&
+F_1
+  \arrow[r, "{\widetilde d_0}"]
+  \arrow[d, "{\widetilde d_1}"]
+&
+F
+\\
+X_1
+  \arrow[r, shift left=0.9ex, "d_1"]
+  \arrow[r, shift right=0.9ex, swap, "d_0"]
+&
+X_0
+&
+\end{tikzcd}
+\]
+in which the two left-hand squares are Cartesian and the first row is
 exact (cf. the diagram
-\hyperref[sga3:v:lemma:1-2:equation:0-1-2]{\((0,1,2)\)} in \hyperref[sec:sga3-V-1]{\S1}), and
-\(q,\widetilde q\) are the structure morphisms.
+\hyperref[sga3:v:lemma:1-2:equation:0-1-2]{\((0,1,2)\)} in \hyperref[sec:sga3-V-1]{\S1}).
 
 We first show that only finitely many points of \(F_1\) lie over
-\(z\).%
-\footnote{\label{note:sga3-V-39}Editor's note: Details have been added,
-and the role of the properness hypothesis on \(d_0\) and \(d_1\) in
-Theorem~\hyperref[thm:sga3-V-7.1]{7.1} has been made explicit.
-Compare the statement and proof of \hyperref[thm:sga3-V-8.1]{Theorem~8.1}, where this properness
-hypothesis is omitted.}
-Let \(s\) be the image of \(z\) in \(S\). Since \(F\) is of finite
-type over \(S\), the fiber \(\widetilde q^{-1}(s)\) is a Noetherian
-scheme. Since \(\widetilde d_0\) is proper,
-\[
-  \widetilde d_0\bigl(\widetilde d_1^{-1}(z)\bigr)
-\]
-is a closed subscheme of \(\widetilde q^{-1}(s)\) consisting of
-finitely many points. Consequently (cf. EGA~I, 6.2.2), those points
-are closed in \(\widetilde q^{-1}(s)\), and also in the fiber
-\(q^{-1}(s)\) of \(X_0\), because \(F\) is closed in \(X_0\).
-
-Let \(y\) be one of these points. Since \(q^{-1}(s)\) is of finite
-type over \(\kappa(s)\), it has affine open neighborhoods
-\[
-  \operatorname{Spec}B\quad\text{and}\quad\operatorname{Spec}C
-\]
-of \(y\) and \(z\), respectively, with \(B\) and \(C\) finitely
-generated \(\kappa(s)\)-algebras. The points \(y\) and \(z\)
-correspond to maximal ideals
-\[
-  \mathfrak p\subset B,\qquad \mathfrak q\subset C.
-\]
-The fields \(B/\mathfrak p\) and \(C/\mathfrak q\) are finite over
-\(\kappa(s)\), so
-\[
-  (B/\mathfrak p)\otimes_{\kappa(s)}(C/\mathfrak q)
-\]
-is a finite-dimensional \(\kappa(s)\)-algebra. Its maximal ideals
-correspond precisely to the points of \(X_0\times_S X_0\) whose
-second projection is \(z\) and whose first projection is \(y\).
-Thus there are only finitely many points \(u\in X_0\times_S X_0\)
-whose second projection is \(z\) and whose first projection belongs
-to
-\[
-  \widetilde d_0\bigl(\widetilde d_1^{-1}(z)\bigr).
-\]
-Finally, since \(X_1\to X_0\times_S X_0\) has finite fibers, each
-such point \(u\) is the image of only finitely many points of \(X_1\).
-This proves the assertion.
+\(z\). Indeed, let \(s\) be the image of \(z\) in \(S\); since
+\(\widetilde d_0(\widetilde d_1^{-1}(z))\) is finite, the points of this set
+are closed in the fiber of \(X_0\) over \(s\); hence there are only finitely
+many points \(u\) of \(X_0\times_SX_0\) whose second projection is \(z\) and
+whose first projection belongs to \(\widetilde d_0(\widetilde d_1^{-1}(z))\);
+finally, since \(X_1\to X_0\times_SX_0\) is quasi-finite, each such point
+\(u\) comes from only finitely many points of \(X_1\), whence the assertion.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~V, details
+this step and the role of properness in it. The set
+\(\widetilde d_0(\widetilde d_1^{-1}(z))\) is finite by the choice of \(F\); it is
+closed in the fibre \(F_s\) of \(F\) over \(s\), because
+\(\widetilde d_1^{-1}(z)\) is closed in the fibre of \(F_1\) over \(s\) (\(z\) being
+closed in its fibre) and \(\widetilde d_0\), deduced by base change from
+\(d_0=d_1\sigma\), is proper. A finite closed subset of \(F_s\), which is of
+finite type over \(\kappa(s)\), consists of closed points, and these are
+closed in the fibre of \(X_0\), \(F\) being closed in \(X_0\). If \(y\) is one of
+them, \(\kappa(y)\) and \(\kappa(z)\) are finite over \(\kappa(s)\), so the points
+of \(X_0\times_SX_0\) above \((y,z)\), which correspond to the prime ideals of
+\(\kappa(y)\otimes_{\kappa(s)}\kappa(z)\), are finite in number. Compare 8.1,
+where \(d_1\) is not assumed proper.}

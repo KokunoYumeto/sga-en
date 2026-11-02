@@ -6,14 +6,16 @@
 \SGARefTarget{sga3:iv:subsection:5:1}\subsection*{5.1. Principal Homogeneous Bundles}
 \addcontentsline{toc}{subsection}{\SGARefLink{sga3:iv:subsection:5:1}{5.1}. Principal Homogeneous Bundles}
 
-\noindent\SGARefTarget{sga3:iv:definition:5:1:0}\textbf{Definition 5.1.0.}
+\SGARefTarget{sga3:iv:definition:5:1:0}%
 We recall (III \SGARefLink{sga3:iii:definition:0:1}{0.1}) that an object \(X\) equipped with a right action of
 \(H\) is said to be \emph{formally principal homogeneous} under \(H\) if the canonical morphism of functors
 \[
   X\times H\longrightarrow X\times X,
   \qquad (x,h)\longmapsto(x,xh),
 \]
-is an isomorphism. Equivalently (cf. \emph{loc. cit.}), for every
+is an isomorphism.\footnote{Translator's note: the Gille--Polo re-edition (2011), Expos\'e~IV, notes
+that such an object is also called a \emph{pseudo-torsor}
+(EGA~IV\textsubscript{4}, 16.5.15).} Equivalently (cf. \emph{loc. cit.}), for every
 \(S\in\operatorname{Ob}\mathscr C\), the set \(X(S)\) is formally principal
 homogeneous under \(H(S)\): it is either empty or principal homogeneous
 under \(H(S)\). In particular, when \(H\) acts on itself by right
@@ -133,33 +135,24 @@ relation on \(X\) as the original action of \(H\), by the isomorphism
 \SGARefLink{sga3:iv:proposition:5:1:7}{The proposition} follows from this observation and the preceding equivalence
 \SGARefLink{sga3:iv:proposition:5:1:6:item:iv:01}{(iv)}\(\Leftrightarrow\)\SGARefLink{sga3:iv:proposition:5:1:6:item:i:01}{(i)}.
 
-\medskip
-\noindent\SGARefTarget{sga3:iv:corollary:5:1:7:1}\textbf{Corollary 5.1.7.1.}\footnote{Editor's note: this special
-case has been added as a corollary; it will be used several times in the
-following expos\'es.}
-\textit{Let \(\mathscr C\) be a category having a final object and fiber
-products, and let it be equipped with a topology \(\mathcal T\) coarser than
-the canonical topology. Let \(f:G\to H\) be a morphism of
-\(\mathscr C\)-groups, put \(K=\operatorname{Ker}(f)\), and suppose that
-\(f\) is covering for \(\mathcal T\). Then \(H\) represents the sheaf
-quotient \(G/K\), and \(f\) is a \(K_H\)-torsor. Equivalently, one may say
-that \(G\) is a \(K\)-torsor over \(H\).}
-
-Indeed, because \(f\) is covering, it is a universal effective epimorphism
-(\SGARefLink{sga3:iv:proposition:4:4:3}{4.4.3}). Hence, by \SGARefLink{sga3:iv:scholium:3:3:3:1}{3.3.3.1}, \(H\) is the quotient of \(G\) by the
-equivalence relation
-\[
-  \mathscr R(f)=G\times_HG.
-\]
-Moreover, the morphism
-\[
-  G\times K\longrightarrow G\times_HG,
-  \qquad (g,k)\longmapsto(g,gk),
-\]
-is an isomorphism of \(K_G=G\times_HK_H\)-objects; its inverse is
-\((g,g')\mapsto(g,g^{-1}g')\). Thus \(\mathscr R(f)\) is the equivalence
-relation defined by \(K\). Since \(f:G\to H\) is covering, it is a
-\(K_H\)-torsor by \SGARefLink{sga3:iv:proposition:5:1:6:item:ii:01}{5.1.6(ii)}, or directly by Definition \SGARefLink{sga3:iv:definition:5:1:5:item:ii:01}{5.1.5(ii)}.
+\par\medskip\noindent
+\SGARefTarget{sga3:iv:corollary:5:1:7:1}\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~IV;
+our formulation).  The re-edition records here, as its Corollary 5.1.7.1, a
+special case used in the following expos\'es. Let \(\mathscr C\) have a final
+object and fiber products, and a topology \(\mathcal T\) coarser than the
+canonical topology, and let \(f\colon G\to H\) be a morphism of
+\(\mathscr C\)-groups which is covering for \(\mathcal T\), with kernel \(K\).
+Then \(H\) represents the quotient sheaf \(G/K\), and \(G\), with the action
+of \(K_H=K\times H\) by right translations over \(H\), is a principal
+homogeneous bundle (a \emph{torsor}) under \(K_H\) over \(H\). Indeed, \(f\)
+is a universal effective epimorphism (\SGARefLink{sga3:iv:proposition:4:4:3}{4.4.3}), so \(H\) is the quotient of
+\(G\) by \(\mathscr R(f)=G\times_HG\); the morphism \(G\times K\to G\times_HG\),
+\((g,k)\mapsto(g,gk)\), is an isomorphism, with inverse
+\((g,g')\mapsto(g,g^{-1}g')\), so that \(\mathscr R(f)\) is the relation
+defined by \(K\) and \(G\) is formally principal homogeneous under \(K_H\)
+over \(H\); and since \(f\) is covering and \(G\times_HG\) has the diagonal
+section over \(G\), \(G\) is locally trivial over \(H\) (\SGARefLink{sga3:iv:definition:5:1:5}{5.1.5}).
+\par\medskip
 
 We can now sharpen Theorem \SGARefLink{sga3:iv:theorem:4:6:6}{4.6.6} in the case of a quotient by a group action.
 
@@ -174,7 +167,14 @@ under \(H\times_SS'\) and are principal homogeneous bundles under this
   \item[(i)]\SGARefTarget{sga3:iv:proposition:5:1:8:item:i:01} \textit{The following conditions are equivalent:}
   \begin{enumerate}
     \item[(a)]\SGARefTarget{sga3:iv:proposition:5:1:8:item:a:01} \textit{the action of \(H\) on \(X\) is
-    \((M)\)-effective and free;}
+    \((M)\)-effective;}\footnote{Translator's note: the Gille--Polo re-edition (2011), Expos\'e~IV, adds
+``and free''. The \((M)\)-effectivity of an action is defined only for a free
+action (3.3.5, 3.4.4), so a) already contains it. In either reading, the
+implication b) \(\Rightarrow\) a) needs the action to be free, as in the proof
+of 4.6.6, which uses the element of \(F_0(X)\) defined by
+\(X\times_SH\subset X\times_SX\): for schemes, with \((M)\) the faithfully flat
+quasi-compact morphisms, a nontrivial constant group \(H\) acting trivially on
+\(X=S\) gives an \(F_0\) represented by the empty scheme.}
     \item[(b)]\SGARefTarget{sga3:iv:proposition:5:1:8:item:b:01} \textit{\(F_0\) is representable.}
   \end{enumerate}
   \textit{Under these conditions, \(F_0=X/H\).}
@@ -195,7 +195,11 @@ under \(H\times_SS'\) and are principal homogeneous bundles under this
 In this subsection we are concerned with the algebraic structures that can
 be placed on the quotient (G/H) of a group by a subgroup. We first work in
 the category of sheaves on \(\mathscr C\) for an arbitrary topology. Taking
-the canonical topology and using \SGARefLink{sga3:iv:lemma:4:5:12}{4.5.12} will then give results concerning
+the canonical topology and using \SGARefLink{sga3:iv:remark:4:6:12}{4.6.12}\footnote{Translator's note: the Gille--Polo re-edition (2011),
+Expos\'e~IV, reads 4.5.12 here. The reference of the 1970 text is the one
+needed: by 4.6.12 and 4.6.13, for the canonical topology a universal effective
+quotient in \(\mathscr C\) is the quotient sheaf, which is how 5.2.2 and 5.2.4
+follow from 5.2.1 and 5.2.3.} will then give results concerning
 universal effective passage to the quotient in \(\mathscr C\).
 
 \medskip
@@ -235,8 +239,8 @@ properties.
 \noindent\SGARefTarget{sga3:iv:corollary:5:2:2}\textbf{Corollary 5.2.2.}
 \textit{Let \(u:H\to G\) be a monomorphism of \(\mathscr C\)-groups, and
 suppose that the action of \(H\) on \(G\) is universally effective. There
-is a unique \(G\)-object structure on the quotient object
-\(G/H\in\operatorname{Ob}\mathscr C\) for which \(p:G\to G/H\) is a
+is a unique \(G\)-object structure on the quotient
+\(G/H\) for which \(p:G\to G/H\) is a
 morphism of objects with an action. In the sense of \SGARefLink{sga3:iv:proposition:5:2:1}{the preceding
 proposition}, this structure is functorial in the pair \((H,G)\), with
 \(H\) acting universally effectively on \(G\).}
@@ -245,7 +249,7 @@ proposition}, this structure is functorial in the pair \((H,G)\), with
 \noindent\SGARefTarget{sga3:iv:proposition:5:2:3}\textbf{Proposition 5.2.3.}
 \textit{Let \(u:H\to G\) be a monomorphism of sheaves of groups that
 identifies \(H\) with an invariant subgroup sheaf of \(G\). There is a
-unique sheaf-of-groups structure on the quotient sheaf \(G/H\) for which
+unique sheaf-of-groups structure on the quotient \(G/H\) for which
 the canonical morphism \(p:G\to G/H\) is a group morphism. This structure
 is functorial in the pair \((H,G)\), with \(H\) invariant.}
 
@@ -256,7 +260,7 @@ The proof is similar to that of \SGARefLink{sga3:iv:proposition:5:2:1}{5.2.1}.
 \textit{Let \(u:H\to G\) be a monomorphism of \(\mathscr C\)-groups that
 identifies \(H\) with an invariant subgroup of \(G\). Suppose that the
 action of \(H\) on \(G\) is universally effective. There is a unique group
-structure on the quotient object \(G/H\in\operatorname{Ob}\mathscr C\) for
+structure on the quotient \(G/H\) for
 which the canonical morphism \(G\to G/H\) is a group morphism. This
 structure is functorial in the pair \((H,G)\), with \(H\) invariant and
 acting universally effectively.}
@@ -422,9 +426,10 @@ that \(K\to G\) belongs to \((N)\), the action of \(H\) on \(K\) is
 \(\mathscr C\)-subgroups \(K\) of \(G\) that contain \(H\) and for which
 \(K\to G\) belongs to \((N)\), and the set of \(\mathscr C\)-subgroups
 \(K'\) of \(G'\) for which \(K'\to G'\) belongs to \((N)\). Its inverse
-is}
+is}\footnote{Translator's note: the 1970 text, followed by the
+Gille--Polo re-edition (2011), Expos\'e~IV, has \(K'\mapsto K\times_{G'}G\).}
 \[
-  K'\longmapsto K\times_{G'}G.
+  K'\longmapsto K'\times_{G'}G.
 \]
 \textit{Under this correspondence, the invariant subgroups of \(G\) and
 of \(G'\) correspond.}
@@ -433,4 +438,9 @@ of \(G'\) correspond.}
 \noindent\SGARefTarget{sga3:iv:corollary:5:3:2}\textbf{Corollary 5.3.2.}
 \textit{If \(H\to G\) belongs to \((N)\), then \(\mathscr C\) has a final
 object \(e\), and the unit section \(e\to G/H\) belongs to
-\((N)\).}
+\((N)\).}\footnote{Translator's note: the Gille--Polo re-edition (2011), Expos\'e~IV, indicates
+the proof: apply the proposition with \(K=H\). In our formulation: the
+quotient \(H/H\) is then a \(\mathscr C\)-subgroup of \(G/H\) whose inclusion
+belongs to \((N)\); as the quotient sheaf \(H/H\) is the final sheaf, the
+object of \(\mathscr C\) representing it is a final object \(e\), and
+\(e\to G/H\) is the unit section.}

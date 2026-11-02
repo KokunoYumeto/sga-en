@@ -46,9 +46,13 @@
 \end{enumerate}
 
 Assertions \SGARefLink{sga3:iv:theorem:4:4:1:item:i:01}{(i)} and \SGARefLink{sga3:iv:theorem:4:4:1:item:ii:01}{(ii)} follow formally from the adjunction formula
-(\SGARefLink{sga3:iv:theorem:4:3:14}{4.3.14}), and\footnote{Editor's note: the original has been modified here.}
+(\SGARefLink{sga3:iv:theorem:4:3:14}{4.3.14}), and
 the first assertion of \SGARefLink{sga3:iv:theorem:4:4:1:item:iii:01}{(iii)} follows from \SGARefLink{sga3:iv:theorem:4:4:1:item:ii:01}{(ii)}. The second assertion of \SGARefLink{sga3:iv:theorem:4:4:1:item:iii:01}{(iii)}
-was already noted in \SGARefLink{sga3:iv:remark:4:3:16}{4.3.16}.
+was already noted in \SGARefLink{sga3:iv:remark:4:3:16}{4.3.16}.\footnote{Translator's note: the 1970 text says only that (iii) was
+already noted in 4.3.16. That remark concerns finite inverse limits; that
+\(a\) commutes with arbitrary direct limits follows from (ii), or from the
+adjunction 4.3.14. We follow the reading of the Gille--Polo re-edition (2011),
+Expos\'e~IV.}
 
 \medskip
 \noindent\SGARefTarget{sga3:iv:scholium:4:4:2}\textbf{Scholium 4.4.2.}
@@ -101,27 +105,29 @@ in the category of presheaves. Consider the presheaf
   V:S\longmapsto Y(S)\amalg_{X(S)}Y(S);
 \]
 this is the amalgamated sum of \(Y\) and \(Y\) over \(X\) in the category of
-presheaves.\footnote{Editor's note: the remainder of the proof has been
-slightly modified.}
-Let \(i_1,i_2:Y\rightrightarrows V\) be the two coordinate morphisms. If
-\(X\to Y\) is an epimorphism in the category of presheaves, then \(i_1=i_2\).
-In that case, for every \(S\), the map \(X(S)\to Y(S)\) is surjective; since
-it is also injective, it is bijective, and hence \(X\to Y\) is an
-isomorphism.
+presheaves. If \(X\to Y\) is an epimorphism of presheaves, the first
+coordinate morphism \(Y\to V\) is an isomorphism; hence \(Y(S)\to V(S)\) is
+an isomorphism for each \(S\), and hence \(X(S)\to Y(S)\) is an epimorphism of
+sets. This settles the question, since it is also a monomorphism.
 
-Finally, work in the category \(\widetilde{\mathscr C}\) of sheaves. By
-\SGARefLink{sga3:iv:theorem:4:4:1:item:ii:01}{4.4.1(ii)}, the amalgamated sum in \(\widetilde{\mathscr C}\) of the sheaves
-\(Y\) and \(Y\) over \(X\) is the sheaf \(Z\) associated with the presheaf
-\(V\). Consider the diagram
+Finally, work in the category of sheaves. The amalgamated sum \(Z\) of the
+sheaves \(Y\) and \(Y\) over \(X\) is the sheaf associated with \(V\), by
+\SGARefLink{sga3:iv:theorem:4:4:1}{4.4.1}. Now there is a commutative triangle
 \[
-  X\xrightarrow{f}Y
-  \overset{i_1}{\underset{i_2}{\rightrightarrows}}
-  V\xrightarrow{\tau}Z=a(V).
+\begin{tikzcd}[column sep=small]
+ Y \arrow[rr] \arrow[dr] && Z\\
+ & V \arrow[ur] &
+\end{tikzcd}
 \]
-We have \(i_1f=i_2f\), hence \(\tau i_1f=\tau i_2f\), and therefore
-\(\tau i_1=\tau i_2\), since \(f\) is an epimorphism in
-\(\widetilde{\mathscr C}\). By part \SGARefLink{sga3:iv:lemma:4:4:5:item:iii:01}{(iii)} of \SGARefLink{sga3:iv:lemma:4:4:5}{the following lemma}, the
-presheaf \(V\) is separated, so \(\tau\) is a monomorphism (\SGARefLink{sga3:iv:proposition:4:3:11:item:iv:01}{4.3.11(iv)}).
-Thus \(i_1=i_2\), and we saw above that this implies that \(f:X\to Y\) is an
-isomorphism. This proves Lemma~\SGARefLink{sga3:iv:lemma:4:4:4}{4.4.4}, once it has been verified that \(V\) is
-separated.
+If we know that the presheaf \(V\) is separated, we shall know that
+\(V\to Z\) is a monomorphism (\SGARefLink{sga3:iv:proposition:4:3:11:item:iv:01}{4.3.11(iv)}). As \(Y\to Z\) is an
+isomorphism by hypothesis,\footnote{Translator's note: the hypothesis is that \(f\) is an
+epimorphism of sheaves. As for presheaves, it makes the two coordinate
+morphisms \(Y\to Z\) equal, and then each of them is an isomorphism, with
+inverse the codiagonal \(Z\to Y\). The Gille--Polo re-edition (2011),
+Expos\'e~IV, argues directly with this equality: as \(V\to Z\) is a
+monomorphism, the two coordinate morphisms \(Y\to V\) are equal, which forces
+\(X(S)=Y(S)\) for every \(S\).} so is \(Y\to V\). The morphism \(X\to Y\) is
+therefore also an epimorphism of presheaves, which proves the lemma, once it
+has been verified that \(V\) is separated. This follows from
+\SGARefLink{sga3:iv:lemma:4:4:5}{the following lemma}.
