@@ -5,32 +5,31 @@
 Let \(\mathscr C\) be a category in which direct sums and fiber products
 exist and in which direct sums commute with base change (for example, the
 category of schemes). For every set \(E\) and every object \(S\) of
-\(\mathscr C\), set
-\begin{equation}
-  \tag{1.8.1}\label{sga3:i:subsection:1-8:equation:1-8-1}
-  E_S=
-  \left\{
-    \begin{aligned}
-      &\text{the direct sum of a family }(S_i)_{i\in E}\text{ of objects}\
-      &\text{of }\mathscr C\text{, all isomorphic to }S.
-    \end{aligned}
-  \right.
-\end{equation}
+\(\mathscr C\), let \(E_S\) be the direct sum of a family
+\((S_i)_{i\in E}\) of objects of \(\mathscr C\) all isomorphic to \(S\).
 This object is characterized by the formula
-\begin{equation}
-  \tag{1.8.2}\label{sga3:i:subsection:1-8:equation:1-8-2}
-  \operatorname{Hom}_{\mathscr C}(E_S,T)
-  =\operatorname{Hom}_{\mathbf{Set}}
-      \bigl(E,\operatorname{Hom}_{\mathscr C}(S,T)\bigr),
-\end{equation}
-for every \(T\in\operatorname{Ob}(\mathscr C)\).
+\[
+  \operatorname{Hom}(E_S,T)
+  =\operatorname{Hom}\bigl(E,\operatorname{Hom}(S,T)\bigr),
+  \qquad T\in\operatorname{Ob}(\mathscr C),
+\]
+where the second \(\operatorname{Hom}\) is taken in the category of sets.
 
 The object \(E_S\) has a canonical projection to \(S\), so that
 \(E\mapsto E_S\) is in fact a functor from \(\mathbf{Set}\) to
-\(\mathscr C_{/S}\).\footnote{Editor's note: in the next three paragraphs,
-the order of the sentences has been changed and a few details have been added
-concerning the role of condition \((*)\) below.} If \(S'\to S\) is an arrow
-of \(\mathscr C\), then, because direct sums commute with base change,
+\(\mathscr C_{/S}\). Suppose that, with \(\varnothing\) denoting an initial
+object of \(\mathscr C\), the diagram
+
+\begin{center}
+  \input{native_diagrams/exp1/diag_006_constant_objects_cartesian_square}
+\end{center}
+is cartesian (this is the case for the category of schemes). Then the
+functor \(E\mapsto E_S\) commutes with finite inverse limits. In
+particular,
+\[
+  E_S\mathbin{\times_S}F_S=(E\times F)_S.
+\]
+If \(S'\to S\) is an arrow of \(\mathscr C\), then
 \[
   E_{S'}=(E_S)_{S'}.
 \]
@@ -39,124 +38,61 @@ In particular, if \(\mathscr C\) has a final object \(e\), then
   E_S=(E_e)_S.
 \]
 
-The functor \(E\mapsto E_S/S\), from \(\mathbf{Set}\) to
-\(\mathscr C_{/S}\), commutes with finite products. It is enough to prove
-that
-\begin{equation}
-  \tag{\ensuremath{\times}}
-  E_S\mathbin{\times_S}F_S=(E\times F)_S.
-\end{equation}
-Indeed, by the results of \SGARefLink{sga3:i:subsection:1:7}{1.7} applied to \(\mathscr C_{/S}\), for every
-\(T\in\operatorname{Ob}(\mathscr C_{/S})\) there are natural isomorphisms
-(all unspecified \(\operatorname{Hom}\)'s being taken in
-\(\mathscr C_{/S}\))
-\begin{align*}
-  \operatorname{Hom}((E\times F)_S,T)
-  &\simeq
-    \operatorname{Hom}_{\mathbf{Set}}
-      \bigl(E\times F,\operatorname{Hom}(S,T)\bigr)\\
-  &\simeq
-    \operatorname{Hom}_{\mathbf{Set}}
-      \bigl(E,
-        \operatorname{Hom}_{\mathbf{Set}}
-          (F,\operatorname{Hom}(S,T))\bigr)\\
-  &\simeq
-    \operatorname{Hom}_{\mathbf{Set}}
-      \bigl(E,\operatorname{Hom}(F_S,T)\bigr),
-\end{align*}
-and
-\begin{align*}
-  \operatorname{Hom}(E_S\mathbin{\times_S}F_S,T)
-  &\simeq
-    \operatorname{Hom}
-      \bigl(E_S,\underline{\operatorname{Hom}}(F_S,T)\bigr)\\
-  &\simeq
-    \operatorname{Hom}_{\mathbf{Set}}
-      \bigl(E,
-        \operatorname{Hom}
-          (S,\underline{\operatorname{Hom}}(F_S,T))\bigr).
-\end{align*}
-But
-\[
-  \operatorname{Hom}
-    \bigl(S,\underline{\operatorname{Hom}}(F_S,T)\bigr)
-  \simeq \operatorname{Hom}(F_S,T),
-\]
-which proves \((\times)\).
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~I, 1.8;
+our formulation). The formula \(E_{S'}=(E_S)_{S'}\) is the commutation of
+direct sums with base change. The functor \(E\mapsto E_S\) commutes with
+finite products even when the square above is not cartesian: the one-point
+set goes to \(S\), the final object of \(\mathscr C_{/S}\), and
+\(E_S\times_SF_S\), the base change of \(E_S=\coprod_{i\in E}S_i\) by
+\(F_S\to S\), is
+\(\coprod_{i\in E}F_S=\coprod_{(i,j)\in E\times F}S=(E\times F)_S\). This
+suffices to carry structures defined by finite products (2.2). When the
+square is cartesian, \(E\mapsto E_S\) also commutes with fibre products,
+hence with finite inverse limits. First, an initial object \(\varnothing\)
+is strict: if \(X\to\varnothing\) is a morphism, the base change by it of
+the empty sum \(\varnothing\) of \(\mathscr C_{/\varnothing}\) is \(X\), and
+must be the empty sum of \(\mathscr C_{/X}\), so \(X\simeq\varnothing\).
+Now let \(u:E\to G\), \(v:F\to G\) be maps; base change gives
+\(E_S\times_{G_S}F_S=\coprod_{(i,j)\in E\times F}S_i\times_{G_S}S_j\). If
+\(u(i)\ne v(j)\), a morphism \(G_S\to S\amalg S\) sending \(S_{u(i)}\) and
+\(S_{v(j)}\) to different summands maps \(S_i\times_{G_S}S_j\) to
+\(S\times_{S\amalg S}S\simeq\varnothing\), so
+\(S_i\times_{G_S}S_j\simeq\varnothing\). If \(u(i)=v(j)=k\), base change of
+\(G_S=S_k\amalg R\) by \(S_k\to G_S\) gives
+\(S_k=(S_k\times_{G_S}S_k)\amalg(R\times_{G_S}S_k)\), the second term being
+initial by the same argument; so \(S_k\to G_S\) is a monomorphism and
+\(S_i\times_{G_S}S_j\simeq S\). Hence
+\(E_S\times_{G_S}F_S\simeq\coprod_{E\times_GF}S=(E\times_GF)_S\).
+\par\medskip
 
-Suppose that, with \(\varnothing\) denoting an initial object of
-\(\mathscr C\), the following diagram is cartesian:
-
-\begin{center}
-  \makebox[0.62\textwidth][l]{%
-    \textup{(*)}\hfill
-    \input{native_diagrams/exp1/diag_006_constant_objects_cartesian_square}%
-    \hfill\phantom{\textup{(*)}}%
-  }
-\end{center}
-This is the case for the category of schemes.
-Then the functor \(E\mapsto E_S\) commutes with finite inverse limits.
-
-Indeed, in view of \((\times)\), it is enough to show that
-\(E\mapsto E_S\) commutes with fiber products. Let \(u:E\to G\) and
-\(v:F\to G\) be two maps of sets. Since direct sums in \(\mathscr C\)
-commute with base change, one has
-\begin{equation}
-  \tag{1}\label{sga3:i:subsection:1-8:equation:1}
-  F_S\mathbin{\times_{G_S}}E_S
-  \simeq
-  \coprod_{f\in F}
-    \bigl(S_f\mathbin{\times_{G_S}}E_S\bigr)
-  \simeq
-  \coprod_{\substack{f\in F\\x\in E}}
-    \bigl(S_f\mathbin{\times_{G_S}}S_x\bigr).
-\end{equation}
-If \(v(f)\ne u(x)\), there is a morphism in \(\mathscr C_{/S}\)
-\[
-  S_f\mathbin{\times_{G_S}}S_x
-  \longrightarrow
-  S_f\mathbin{\times_{S_{v(f)}\coprod S_{u(x)}}}S_x.
-\]
-By condition \((*)\), the term on the right is \(\varnothing\). Hence
-\begin{equation}
-  \tag{2}\label{sga3:i:subsection:1-8:equation:2}
-  S_f\mathbin{\times_{G_S}}S_x\simeq\varnothing
-  \qquad\text{if }v(f)\ne u(x).
-\end{equation}
-On the other hand, if \(v(f)=u(x)\), there is a morphism in
-\(\mathscr C_{/S}\)
-\[
-  S\longrightarrow S_f\mathbin{\times_{G_S}}S_x.
-\]
-Since \(S\xrightarrow{\operatorname{id}}S\) is the final object of
-\(\mathscr C_{/S}\), it follows that
-\begin{equation}
-  \tag{3}\label{sga3:i:subsection:1-8:equation:3}
-  S_f\mathbin{\times_{G_S}}S_x\simeq S
-  \qquad\text{if }v(f)=u(x).
-\end{equation}
-Combining \SGARefLink{sga3:i:proposition:1:4:1}{(1)}, \SGARefLink{sga3:i:section:2}{(2)}, and \SGARefLink{sga3:i:section:3}{(3)}, we obtain an isomorphism functorial in \(S\):
-\[
-  F_S\mathbin{\times_{G_S}}E_S
-  \simeq \coprod_{F\times_G E}S
-  =(F\mathbin{\times_G}E)_S.
-\]
-
-An object of the form \(E_S\) is called a \emph{constant object}. There is
-a morphism, functorial in \(E\),
+An object of the form \(E_S\) is called a \emph{constant object}. Note that
+there is a morphism, functorial in \(E\),
 \[
   E\longrightarrow\Gamma(E_S/S),
 \]
 which associates with each \(i\in E\) the section of \(E_S\) over \(S\)
-defined by the isomorphism from \(S\) onto \(S_i\). Suppose condition
-\((*)\) is satisfied for every object \(S\) of \(\mathscr C\). Then
-\(E\to\Gamma(E_S/S)\) is a monomorphism whenever
-\(S\not\simeq\varnothing\).
+defined by the isomorphism from \(S\) onto \(S_i\); it is a monomorphism if
+the square above is cartesian and \(S\) is not an initial
+object.\footnote{Translator's note: the 1970 text calls this morphism a
+monomorphism without condition; the Gille--Polo re-edition (2011),
+Exposé~I, adds conditions, and some are needed. If \(S\) is an initial
+object, so is \(E_S\), and \(\Gamma(E_S/S)\) has one element. In the
+category with two objects \(A\), \(B\) and one arrow \(A\to B\) besides the
+identities, which satisfies the hypotheses of 1.8 but in which the square is
+not cartesian, \(B\amalg B=B\). Under the two conditions, if \(i\ne j\) gave
+the same section, \(S\) would map to \(S_i\times_{E_S}S_j\), which maps to
+the initial object \(S\times_{S\amalg S}S\) through a morphism
+\(E_S\to S\amalg S\) sending \(S_i\) and \(S_j\) to different summands; so
+\(S\) would be initial, the initial object being strict (Addition above).}
 
 If \(\mathscr C\) is the category of schemes, then
 \(\Gamma(E_S/S)\) is identified with the locally constant maps from the
 topological space \(S\) to the set \(E\), the preceding map associating with
-each element of \(E\) the corresponding constant map. It follows that
+each element of \(E\) the corresponding constant map.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, adds that
+\(E_S\) is separated over \(S\): the diagonal
+\(E_S\to E_S\times_SE_S=(E\times E)_S\) is the inclusion of the summands
+indexed by the diagonal of \(E\times E\), an open and closed immersion.} It follows that
 \(E_S\) may equivalently be defined as representing the functor that assigns
 to every \(S'\) over \(S\) the set of locally constant functions from the
 topological space \(S'\) to \(E\).
@@ -365,7 +301,16 @@ products, then a structure of species \((T)\) on a family
 module over it becomes the analogous pair in \(\mathscr C'\), and so on.
 
 In particular, let \(\mathscr C\) satisfy the conditions of \SGARefLink{sga3:i:subsection:1:8}{1.8}. The functor
-\(E\mapsto E_S\) defined there commutes with finite inverse limits. It
+\(E\mapsto E_S\) defined there commutes with finite inverse
+limits.\footnote{Translator's note: the 1970 text has ``commute aux limites
+projectives'', without ``finite''; infinite inverse limits are not preserved
+in general (over a field, an infinite product of two-point sets gives a
+constant scheme, with a discrete underlying space, while the product of the
+corresponding constant schemes has a Cantor set as underlying space). The
+Gille--Polo re-edition (2011), Exposé~I, adds ``finite'', and notes that
+the cartesian condition of 1.8 is included among the conditions. For
+carrying groups, rings and other structures defined by finite products,
+that condition is not needed (Addition in 1.8).} It
 therefore carries groups to \(S\)-groups (that is,
 \(\mathscr C_{/S}\)-groups), rings to \(S\)-rings, and so forth.
 
@@ -377,22 +322,18 @@ there. In other words, to give an object of \(\widehat{\mathscr C}\) a
 structure of species \((T)\) when it is viewed as a functor on
 \(\mathscr C\) is the same as to give the representable functor on
 \(\widehat{\mathscr C}\) defined by that object a structure of species
-\((T)\).\footnote{Editor's note: for group structures, for example, let
-\(\mathbf G\in\operatorname{Ob}(\widehat{\mathscr C})\). If the functor
-\[
-  \widehat{\mathscr C}\longrightarrow\mathbf{Set},
-  \qquad
-  \mathbf F\longmapsto
-  \operatorname{Hom}_{\widehat{\mathscr C}}(\mathbf F,\mathbf G)
-\]
-has a group structure, then so does its restriction to \(\mathscr C\),
-namely \(X\mapsto\mathbf G(X)\). Conversely, if \(\mathbf G\) is a
-\(\widehat{\mathscr C}\)-group, its multiplication morphism
-\(\pi_{\mathbf G}:\mathbf G\times\mathbf G\to\mathbf G\) induces, for every
-\(\mathbf F\in\operatorname{Ob}(\widehat{\mathscr C})\), a group structure
-on
-\(\operatorname{Hom}_{\widehat{\mathscr C}}(\mathbf F,\mathbf G)\),
-functorially in \(\mathbf F\).}
+\((T)\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, spells this out for
+group structures. In our formulation: an object \(\mathbf G\) of
+\(\widehat{\mathscr C}\) defines the functor
+\(\mathbf F\mapsto\operatorname{Hom}(\mathbf F,\mathbf G)\) on
+\(\widehat{\mathscr C}\), whose restriction to \(\mathscr C\) is
+\(\mathbf G\) itself (1.1); a group structure on the former restricts to a
+\(\widehat{\mathscr C}\)-group structure on \(\mathbf G\). Conversely, a
+\(\widehat{\mathscr C}\)-group structure on \(\mathbf G\) is a
+multiplication \(\mathbf G\times\mathbf G\to\mathbf G\) satisfying the group
+axioms, and composition with it makes each
+\(\operatorname{Hom}(\mathbf F,\mathbf G)\) a group, functorially in
+\(\mathbf F\); the two constructions are inverse to each other.}
 
 We shall treat two further special cases of this construction: structures
 with operator groups and modules.

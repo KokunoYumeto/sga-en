@@ -7,13 +7,14 @@
 Let \(\mathscr C\) be a category, \(\mathbf G\) a
 \(\widehat{\mathscr C}\)-group, \(\mathbf O\) a
 \(\widehat{\mathscr C}\)-ring, and \(\mathbf F\) a
-\(\mathbf G\)-\(\mathbf O\)-module. For \(n\geq 0\), set
+\(\mathbf G\)-\(\mathbf O\)-module. Set
 \[
   C^n(\mathbf G,\mathbf F)
     =\operatorname{Hom}(\mathbf G^n,\mathbf F),
   \qquad
   \underline C^{\,n}(\mathbf G,\mathbf F)
     =\underline{\operatorname{Hom}}(\mathbf G^n,\mathbf F),
+  \qquad n\geq0,
 \]
 where \(\mathbf G^0\) is the final object \(\underline{\mathbf e}\).
 Then \(\underline C^{\,n}(\mathbf G,\mathbf F)\) (respectively,
@@ -37,7 +38,10 @@ Recall that the boundary operator
     \longrightarrow
     C^{n+1}\bigl(\mathbf G(S),\mathbf F(S)\bigr)
 \]
-is given by
+is given by\footnote{Translator's note: in the middle sum the 1970 text has
+\((-1)^nf(g_1,\ldots,g_ig_{i+1},\ldots,g_n)\), misprints for
+\((-1)^if(g_1,\ldots,g_ig_{i+1},\ldots,g_{n+1})\), which the Gille--Polo
+re-edition (2011), Exposé~I, gives.}
 \begin{align*}
   \partial f(g_1,\ldots,g_{n+1})
     ={}&g_1f(g_2,\ldots,g_{n+1}) \\
@@ -50,9 +54,24 @@ It is functorial in \(S\), and hence defines a homomorphism
   \partial:C^n(\mathbf G,\mathbf F)
     \longrightarrow C^{n+1}(\mathbf G,\mathbf F)
 \]
-such that \(\partial\circ\partial=0\). We have thus defined a complex of
+such that \(\partial\circ\partial=0\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, also writes
+\(\partial\) without elements. In our formulation: if
+\(m:\mathbf G\times\mathbf G\to\mathbf G\) is the multiplication and
+\(\mu:\mathbf G\times\mathbf F\to\mathbf F\) the action, then for
+\(f:\mathbf G^n\to\mathbf F\) the morphism
+\(\partial f:\mathbf G^{n+1}\to\mathbf F\) is the alternating sum, with signs
+\((-1)^0,\ldots,(-1)^{n+1}\), of \(\mu\circ(\operatorname{id}_{\mathbf G}\times f)\),
+of the \(n\) composites of \(f\) with the morphisms
+\(\mathbf G^{n+1}\to\mathbf G^n\) multiplying two adjacent factors, and of
+the composite of \(f\) with the projection forgetting the last factor; the
+same formula, after base change, gives \(\partial\) on
+\(\underline C^{\,n}(\mathbf G,\mathbf F)(S)=C^n(\mathbf G_S,\mathbf F_S)\).}
+We have thus defined a complex of
 abelian groups (indeed, of \(\Gamma(\mathbf O)\)-modules), denoted
-\(C^*(\mathbf G,\mathbf F)\). In the same way one defines the complex of
+\(C^*(\mathbf G,\mathbf F)\).\footnote{Translator's note: this complex is often called the Hochschild
+complex; see M.~Demazure and P.~Gabriel, \textit{Groupes algébriques},
+tome~I, Masson and North-Holland, 1970, II, \S3 (a reference given in the
+Gille--Polo re-edition (2011), Exposé~I).} In the same way one defines the complex of
 \(\mathbf O\)-modules \(\underline C^{\,*}(\mathbf G,\mathbf F)\), and
 \[
   C^*(\mathbf G,\mathbf F)
@@ -69,273 +88,100 @@ the \(\widehat{\mathscr C}\)-groups) of cohomology of
   H^0(\mathbf G,\mathbf F)=\Gamma(\mathbf F^{\mathbf G}).
 \]
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:5-1-1}\textbf{Remark 5.1.1.}
-The ``set-theoretic'' description of \(\partial\) given above is convenient
-for checking that \(\partial\circ\partial=0\). One may also define
-\(\partial\) in terms of the multiplication
-\(m:\mathbf G\times\mathbf G\to\mathbf G\) and the action
-\(\mu:\mathbf G\times\mathbf F\to\mathbf F\) as follows: for every
-\(f\in C^n(\mathbf G,\mathbf F)\),
-\[
-  \partial f
-    =\mu\circ(\operatorname{id}_{\mathbf G}\times f)
-     +\sum_{i=1}^{n}(-1)^i
-       f\circ
-       \bigl(\operatorname{id}_{\mathbf G^{i-1}}\times m\times
-             \operatorname{id}_{\mathbf G^{n-i}}\bigr)
-     +(-1)^{n+1}f\circ\operatorname{pr}_{[1,n]},
-\]
-where \(\operatorname{pr}_{[1,n]}\) denotes the projection of
-\(\mathbf G^{n+1}=\mathbf G^n\times\mathbf G\) onto \(\mathbf G^n\).
-Similarly, for every \(S\in\operatorname{Ob}(\mathscr C)\) and
-\(f\in\underline C^{\,n}(\mathbf G,\mathbf F)(S)
-      =C^n(\mathbf G_S,\mathbf F_S)\),
-\[
-  \partial f
-    =\mu_S\circ(\operatorname{id}_{\mathbf G_S}\times f)
-     +\sum_{i=1}^{n}(-1)^i
-       f\circ
-       \bigl(\operatorname{id}_{\mathbf G_S^{i-1}}\times m_S\times
-             \operatorname{id}_{\mathbf G_S^{n-i}}\bigr)
-     +(-1)^{n+1}f\circ\operatorname{pr}_{[1,n]},
-\]
-where \(m_S\) and \(\mu_S\) are obtained from \(m\) and \(\mu\) by base
-change.
-\footnote{Editor's note: This remark has been added.}
-
 \subsection*{\SGAInlineRefTarget{sga3:i:subsection:5-2}5.2.}
 
-Recall (see \SGARefLink{sga3:i:section:3}{Section~3}) that
-\((\mathbf G\text{-}\mathbf O\text{-Mod.})\) is an abelian category,
-with its structure defined objectwise. Thus
-\[
-  0\longrightarrow\mathbf F'
-   \longrightarrow\mathbf F
-   \longrightarrow\mathbf F''
-   \longrightarrow0
-\]
-is an exact sequence of \(\mathbf G\)-\(\mathbf O\)-modules if and only if
-the sequence of abelian groups
-\[
-  0\longrightarrow\mathbf F'(S)
-   \longrightarrow\mathbf F(S)
-   \longrightarrow\mathbf F''(S)
-   \longrightarrow0
-\]
-is exact for every \(S\in\operatorname{Ob}(\mathscr C)\).
-\footnote{Editor's note: The preceding reminder has been added.}
-
-Suppose that \(\mathscr C\) is small. Then, by \SGARefLink{sga3:i:remark:3-2-1}{3.2.1},
-\((\mathbf G\text{-}\mathbf O\text{-Mod.})\) has enough injective objects,
-so the derived functors of the left exact functors
-\(\underline H^{\,0}\) and \(H^0\) are defined. We shall now show that
+We shall now show that
 the functors \(\underline H^{\,n}\) (respectively, \(H^n\)) are indeed the
-derived functors of \(\underline H^{\,0}\) (respectively, \(H^0\)).
-\footnote{Editor's note: The preceding sentence has been added.}
+derived functors of \(\underline H^{\,0}\) (respectively, \(H^0\)).\footnote{Translator's note: the 1970 text has no heading 5.2 here, although it
+numbers 5.2.1 and 5.2.2 and refers to 5.2 in the proof of 5.3.1; the heading
+is supplied in the Gille--Polo re-edition (2011), Exposé~I.}
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:definition:5-2-0}\textbf{Definition 5.2.0.}
-For every \(\mathbf O\)-module \(\mathbf P\), let \(E(\mathbf P)\) denote
-the object \(\underline{\operatorname{Hom}}(\mathbf G,\mathbf P)\) of
-\(\widehat{\mathscr C}\), endowed with the following
-\(\mathbf G\)-\(\mathbf O\)-module structure. For every
-\(S\in\operatorname{Ob}(\mathscr C)\),
+Let \(\mathbf P\) be an \(\mathbf O\)-module, and consider the object
+\(\underline{\operatorname{Hom}}(\mathbf G,\mathbf P)\) of
+\(\widehat{\mathscr C}\). It can be given a
+\(\mathbf G\)-\(\mathbf O\)-module structure by letting \(\mathbf G\) act on
+the first factor and \(\mathbf O\) on the second. Precisely,
+\(\underline{\operatorname{Hom}}(\mathbf G,\mathbf P)(S)
+=\operatorname{Hom}_S(\mathbf G_S,\mathbf P_S)\), and \(g\in\mathbf G(S)\)
+and \(a\in\mathbf O(S)\) act by the formulas
 \[
-  \underline{\operatorname{Hom}}(\mathbf G,\mathbf P)(S)
-    =\operatorname{Hom}_S(\mathbf G_S,\mathbf P_S),
-\]
-and \(g\in\mathbf G(S)\) and \(a\in\mathbf O(S)\) act on
-\(\phi\in\operatorname{Hom}_S(\mathbf G_S,\mathbf P_S)\) by
-\[
-  (g\cdot\phi)(h)=\phi(hg),
+  (gf)(x)=f(xg),
   \qquad
-  (a\cdot\phi)(h)=a\phi(h),
+  (af)(x)=af(x),
+  \qquad x\in\mathbf G(S').
 \]
-for every \(h\in\mathbf G(S')\), \(S'\to S\). Moreover, for every
-\(\phi\in\operatorname{Hom}_S(\mathbf G_S,\mathbf P_S)\), set
-\[
-  \varepsilon(\phi)=\phi(1)\in\mathbf P(S),
-\]
-where \(1\) denotes the unit element of \(\mathbf G(S)\).
-This defines a functor
-\[
-  E:(\mathbf O\text{-Mod.})
-    \longrightarrow(\mathbf G\text{-}\mathbf O\text{-Mod.})
-\]
-and a natural transformation \(\varepsilon:E\to\operatorname{Id}\), where
-\(\operatorname{Id}\) denotes the identity functor of
-\((\mathbf O\text{-Mod.})\).
-\footnote{Editor's note: The original has been modified so as to introduce
-\SGARefLink{sga3:i:remark:5-2-0-1}{5.2.0.1} and \SGARefLink{sga3:i:lemma:5-2-0-2}{5.2.0.2}, which will be useful in the proof of \SGARefLink{sga3:i:theorem:5-3-1}{Theorem~5.3.1}.}
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:5-2-0-1}\textbf{Remark 5.2.0.1.}
-In what follows, let \(\mathbf G_1\) and \(\mathbf G_2\) denote two copies
-of \(\mathbf G\). The morphism
-\[
-  \mathbf G_1\times E(\mathbf P)\longrightarrow E(\mathbf P),
-  \qquad
-  (g_1,\phi)\longmapsto\bigl(g_2\longmapsto\phi(g_2g_1)\bigr)
-\]
-corresponds, via the isomorphisms
-\begin{align*}
-  \operatorname{Hom}\bigl(\mathbf G_1\times E(\mathbf P),E(\mathbf P)\bigr)
-    &\simeq
-      \operatorname{Hom}\Bigl(E(\mathbf P),
-        \underline{\operatorname{Hom}}\bigl(
-          \mathbf G_1,
-          \underline{\operatorname{Hom}}(\mathbf G_2,\mathbf P)
-        \bigr)\Bigr)\\
-    &\simeq
-      \operatorname{Hom}\Bigl(E(\mathbf P),
-        \underline{\operatorname{Hom}}(
-          \mathbf G_2\times\mathbf G_1,\mathbf P)
-      \Bigr),
-\end{align*}
-to the morphism
-\[
-  \phi\longmapsto\bigl((g_2,g_1)\longmapsto\phi(g_2g_1)\bigr),
-\]
-that is, to the morphism
-\[
-  \underline{\operatorname{Hom}}(\mathbf G,\mathbf P)
-    \longrightarrow
-  \underline{\operatorname{Hom}}(\mathbf G_2\times\mathbf G_1,\mathbf P)
-\]
-induced by the multiplication
-\[
-  \mu_{\mathbf G}:\mathbf G\times\mathbf G\longrightarrow\mathbf G,
-  \qquad (g_2,g_1)\longmapsto g_2g_1.
-\]
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:lemma:5-2-0-2}\textbf{Lemma 5.2.0.2.}
-\textit{\SGAInlineRefTarget{sga3:i:lemma:5-2-0-2:item:i}(i) The functor \(E\) is right adjoint to the forgetful functor
-\[
-  (\mathbf G\text{-}\mathbf O\text{-Mod.})
-    \longrightarrow(\mathbf O\text{-Mod.}).
-\]
-More precisely, \(\varepsilon:E\to\operatorname{Id}\) induces, for every
-\(\mathbf M\in(\mathbf G\text{-}\mathbf O\text{-Mod.})\) and
-\(\mathbf P\in\operatorname{Ob}(\mathbf O\text{-Mod.})\), a bijection}
-\[
-  \operatorname{Hom}_{\mathbf G\text{-}\mathbf O\text{-Mod.}}
-    \bigl(\mathbf M,E(\mathbf P)\bigr)
-  \xrightarrow{\ \sim\ }
-  \operatorname{Hom}_{\mathbf O\text{-Mod.}}(\mathbf M,\mathbf P)
-\]
-\textit{functorial in \(\mathbf M\) and \(\mathbf P\).}
-
-\textit{\SGAInlineRefTarget{sga3:i:lemma:5-2-0-2:item:ii}(ii) Consequently, if \(\mathbf I\) is an injective object of
-\((\mathbf O\text{-Mod.})\), then \(E(\mathbf I)\) is an injective object
-of \((\mathbf G\text{-}\mathbf O\text{-Mod.})\).}
-
-\medskip
-\noindent\textit{Proof.}
-To every \(\mathbf O\)-morphism \(f:\mathbf M\to\mathbf P\), associate
-the element \(\phi_f\) of
-\(\operatorname{Hom}_{\mathbf O}(\mathbf M,E(\mathbf P))\) defined as
-follows. For every \(S\in\operatorname{Ob}(\mathscr C)\) and
-\(m\in\mathbf M(S)\), the element \(\phi_f(m)\) of
-\(\operatorname{Hom}_S(\mathbf G_S,\mathbf P_S)\) is defined, for every
-\(g\in\mathbf G(S')\), \(S'\to S\), by
-\[
-  \phi_f(m)(g)=f(gm)\in\mathbf P(S').
-\]
-Then, for every \(h\in\mathbf G(S)\), one has
-\(\phi_f(hm)=h\cdot f(m)\); that is, \(\phi_f\) is an element of
-\[
-  \operatorname{Hom}_{\mathbf G\text{-}\mathbf O\text{-Mod.}}
-    \bigl(\mathbf M,E(\mathbf P)\bigr).
-\]
-If
-\(\phi\in\operatorname{Hom}_{\mathbf G\text{-}\mathbf O\text{-Mod.}}
-  (\mathbf M,E(\mathbf P))\), and if for every \(m\in\mathbf M(S)\) we
-write \(f(m)=\phi(m)(1)\), then
-\[
-  \phi_f(m)(g)
-    =f(gm)
-    =\phi(gm)(1)
-    =(g\cdot\phi(m))(1)
-    =\phi(m)(g);
-\]
-thus \(\phi_f=\phi\). Conversely, it is clear that
-\(\phi_f(m)(1)=f(m)\). This proves \SGARefLink{sga3:i:lemma:5-2-0-2:item:i}{(i)}, and \SGARefLink{sga3:i:lemma:5-2-0-2:item:ii}{(ii)} follows at once.
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:definition:5-2-0-3}\textbf{Definition 5.2.0.3.}
-Let \(\mathbf M\) be a \(\mathbf G\)-\(\mathbf O\)-module. The identity
-map of \(\mathbf M\), considered as an \(\mathbf O\)-module, corresponds
-under the adjunction to the morphism of
+Now let \(\mathbf F\) be a \(\mathbf G\)-\(\mathbf O\)-module, and let
+\(E(\mathbf F)\) denote the object
+\(\underline{\operatorname{Hom}}(\mathbf G,\mathbf F)\) with the preceding
+\(\mathbf G\)-\(\mathbf O\)-module structure. There is a morphism of
 \(\mathbf G\)-\(\mathbf O\)-modules
 \[
-  \mu_{\mathbf M}:\mathbf M\longrightarrow E(\mathbf M)
+  \mu_{\mathbf F}:\mathbf F\longrightarrow E(\mathbf F),
 \]
-such that, for every \(S\in\operatorname{Ob}(\mathscr C)\) and
-\(m\in\mathbf M(S)\), \(\mu_{\mathbf M}(m)\) is the morphism
-\(\mathbf G_S\to\mathbf M_S\) defined as follows: for every
-\(S'\to S\) and \(g\in\mathbf G(S')\),
-\[
-  \mu_{\mathbf M}(m)(g)=g\cdot m_{S'}\in\mathbf M(S').
-\]
-Notice that \(\mu_{\mathbf M}\) is a monomorphism. Indeed,
-\(\varepsilon_{\mathbf M}:E(\mathbf M)\to\mathbf M\) is a morphism of
-\(\mathbf O\)-modules such that
-\(\varepsilon_{\mathbf M}\circ\mu_{\mathbf M}
-  =\operatorname{id}_{\mathbf M}\). Consequently, as an
-\(\mathbf O\)-module, \(\mathbf M\) is a direct summand of
-\(E(\mathbf M)\).
+defined as follows: with every arrow \(S'\to S''\) of \(\mathscr C\) one
+must associate, functorially, a map from \(\mathbf F(S')\) to the set
+\(\operatorname{Hom}(\mathbf G(S'),\mathbf F(S'))\); for this, associate
+with every \(f\in\mathbf F(S')\) the map \(k_f\) defined by
+\(k_f(g)=gf\). One checks at once that \(\mu_{\mathbf F}\) is compatible
+with the \(\mathbf G\)-\(\mathbf O\)-module structures, and that it is even
+a monomorphism.
+
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~I, 5.2.0 to
+5.2.0.3; our formulation). The construction
+\(\mathbf P\mapsto E(\mathbf P)=\underline{\operatorname{Hom}}(\mathbf G,\mathbf P)\)
+is a functor from \((\mathbf O\text{-Mod.})\) to
+\((\mathbf G\text{-}\mathbf O\text{-Mod.})\), and evaluation at the unit,
+\(\varepsilon_{\mathbf P}(f)=f(1)\), is a morphism of \(\mathbf O\)-modules
+\(E(\mathbf P)\to\mathbf P\). It makes \(E\) right adjoint to the forgetful
+functor: for a \(\mathbf G\)-\(\mathbf O\)-module \(\mathbf M\),
+\(\phi\mapsto\varepsilon_{\mathbf P}\circ\phi\) is a bijection from
+\(\operatorname{Hom}_{\mathbf G\text{-}\mathbf O}(\mathbf M,E(\mathbf P))\)
+onto \(\operatorname{Hom}_{\mathbf O}(\mathbf M,\mathbf P)\), whose inverse
+sends \(u\) to the morphism \(m\mapsto(x\mapsto u(xm))\); indeed, if
+\(\phi\) is equivariant, \(\phi(m)(x)=(x\phi(m))(1)=\phi(xm)(1)\). Hence
+\(E\) carries injective \(\mathbf O\)-modules to injective
+\(\mathbf G\)-\(\mathbf O\)-modules, the forgetful functor being exact. The
+morphism corresponding to \(\operatorname{id}_{\mathbf F}\) is
+\(\mu_{\mathbf F}\), and \(\varepsilon_{\mathbf F}\circ\mu_{\mathbf F}
+=\operatorname{id}_{\mathbf F}\); so \(\mathbf F\) is a direct summand of
+\(E(\mathbf F)\) as an \(\mathbf O\)-module.
+\par\medskip
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:proposition:5-2-1}\textbf{Proposition 5.2.1.}
 \textit{Suppose that \(\mathscr C\) is small, that finite products exist
-in \(\mathscr C\), and that \(\mathbf G\) is representable. Then the
+in \(\mathscr C\), and that \(\mathbf G\) is representable.\footnote{Translator's note: the 1970 text has only ``Supposons
+\(\mathbf G\) représentable.'' The Gille--Polo re-edition (2011),
+Exposé~I, adds the other two hypotheses. Finite products are used in the
+proof: they make \(\mathbf G^n\times\mathbf h_S\) representable, by
+\(G^n\times S\), so that
+\(\underline C^{\,n}(\mathbf G,\mathbf F)(S)=\mathbf F(G^n\times S)\) is
+exact in \(\mathbf F\), exactness being tested at each object of
+\(\mathscr C\); and \(\Gamma\) is then evaluation at the final object.
+Smallness ensures that \((\mathbf G\text{-}\mathbf O\text{-Mod.})\) has
+enough injective objects (3.2), so that derived functors are defined.
+Without it, the proof shows that the \(\underline H^{\,n}(\mathbf G,-)\) and
+\(H^n(\mathbf G,-)\) are the satellites of \(\underline H^{\,0}(\mathbf G,-)\)
+and \(H^0(\mathbf G,-)\) in the sense of A.~Grothendieck, \textit{Sur quelques points d'algèbre homologique}, Tôhoku Math.\ J.\ \textbf{9} (1957), 119--221, 2.2.} Then the
 functors \(\underline H^{\,n}(\mathbf G,-)\) (respectively,
 \(H^n(\mathbf G,-)\)) are the derived functors of the left exact functor
 \(\underline H^{\,0}(\mathbf G,-)\) (respectively,
 \(H^0(\mathbf G,-)\)) on the category of
 \(\mathbf G\)-\(\mathbf O\)-modules.}
 
-By the well-known general results,
-\footnote{Editor's note: See \([\mathrm{Gr}57,\,2.2.1]\) and
-\([\mathrm{Gr}57,\,2.3]\). The original has also been expanded in what
-follows.}
-it suffices to verify that the \(\underline H^{\,n}(\mathbf G,-)\)
-(respectively, \(H^n(\mathbf G,-)\)) form an effaceable cohomological
-functor in degrees \(>0\). Let
-\[
-  0\longrightarrow\mathbf F'
-   \longrightarrow\mathbf F
-   \longrightarrow\mathbf F''
-   \longrightarrow0
-\]
-be an exact sequence of \(\mathbf G\)-\(\mathbf O\)-modules, and let
-\(S\in\operatorname{Ob}(\mathscr C)\). By hypothesis, \(\mathbf G\) is
-represented by an object \(G\in\operatorname{Ob}(\mathscr C)\), and finite
-products exist in \(\mathscr C\); in particular, \(\mathscr C\) has a
-final object \(e\). Hence every \(\mathbf G^n\times\mathbf h_S\) is
-represented by \(G^n\times S\) (with \(G^0=e\)), and the sequence
-\[
-  0\longrightarrow\mathbf F'(G^n\times S)
-   \longrightarrow\mathbf F(G^n\times S)
-   \longrightarrow\mathbf F''(G^n\times S)
-   \longrightarrow0
-\]
-is exact. This shows that the sequence of \(\mathbf O\)-modules
-\[
-  0\longrightarrow\underline C^{\,n}(\mathbf h_G,\mathbf F')
-   \longrightarrow\underline C^{\,n}(\mathbf h_G,\mathbf F)
-   \longrightarrow\underline C^{\,n}(\mathbf h_G,\mathbf F'')
-   \longrightarrow0
-\]
-is exact. It follows that \(\underline C^{\,*}(\mathbf G,-)\), regarded as
-a functor on \((\mathbf G\text{-}\mathbf O\text{-Mod.})\) with values in
-the category of complexes of \((\mathbf O\text{-Mod.})\), is exact. Thus
-the functors \(\underline H^{\,n}(\mathbf G,-)\) are cohomological.
-
-Since \(\Gamma\) is exact, the same is true of the functors
-\(H^n(\mathbf G,-)\). It remains only to prove the following.
+By the well-known general results,\footnote{Translator's note: namely Grothendieck, \textit{loc.\ cit.}, 2.2.1 and 2.3
+(references given in the Gille--Polo re-edition (2011), Exposé~I): an
+effaceable cohomological functor is universal, and coincides with the
+derived functors when there are enough injective objects.} it suffices to verify that the
+\(\underline H^{\,n}(\mathbf G,-)\) (respectively, \(H^n(\mathbf G,-)\))
+form a cohomological functor effaceable in dimensions \(>0\). Now
+\(\underline C^{\,n}(\mathbf G,-)\), regarded as a functor on
+\((\mathbf G\text{-}\mathbf O\text{-Mod.})\) with values in the category of
+complexes of \((\mathbf O\text{-Mod.})\), is exact. This shows that the
+\(\underline H^{\,n}(\mathbf G,-)\) indeed form a cohomological functor.
+Since the functor \(\Gamma\) is exact, the same holds for the
+\(H^n(\mathbf G,-)\). It will now suffice to prove the following.
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:lemma:5-2-2}\textbf{Lemma 5.2.2.}
@@ -358,81 +204,28 @@ It is enough to show that
 \(C^*(\mathbf G,\underline{\operatorname{Hom}}(\mathbf G,\mathbf P))\)
 are homotopically trivial in degrees \(>0\). It is enough, in fact, to do
 this for the second complex, since the corresponding result for the first
-follows by base change.
-\footnote{Editor's note: The original has been expanded in what follows.}
-For every \(n\geq0\), define a morphism
+follows by base change. Now there is the following homotopy operator:
 \[
-  \sigma:
-  C^{n+1}\bigl(
-    \mathbf G,\underline{\operatorname{Hom}}(\mathbf G,\mathbf P)
-  \bigr)
-  \longrightarrow
-  C^n\bigl(
-    \mathbf G,\underline{\operatorname{Hom}}(\mathbf G,\mathbf P)
-  \bigr)
+  (sf)(g_1,g_2,\ldots,g_n)(g)=f(g,g_1,\ldots,g_n)(e),
 \]
-as follows. Let
-\(f\in C^{n+1}
-  (\mathbf G,\underline{\operatorname{Hom}}(\mathbf G,\mathbf P))\).
-For every \(S\in\operatorname{Ob}(\mathscr C)\) and
-\(g_1,\ldots,g_n\in\mathbf G(S)\), the element
-\(\sigma(f)(g_1,\ldots,g_n)\) of
-\(\operatorname{Hom}_S(\mathbf G_S,\mathbf P_S)\) is defined, for every
-\(S'\to S\) and \(x\in\mathbf G(S')\), by
-\[
-  \sigma(f)(g_1,\ldots,g_n)(x)
-    =f(x,g_1,\ldots,g_n)(e)\in\mathbf P(S'),
-\]
-where \(e\) denotes the unit element of \(\mathbf G(S')\). Then \(\sigma\)
-is a homotopy operator in degrees \(>0\). Indeed, for every
-\(g_1,\ldots,g_{n+1}\in\mathbf G(S)\) and \(x\in\mathbf G(S')\), on the
-one hand,
-\begin{align*}
-  \partial\sigma(f)(g_1,\ldots,g_{n+1})(x)
-    ={}&f(xg_1,g_2,\ldots,g_{n+1})(e)\\
-     &+\sum_{i=1}^{n}(-1)^i
-       f(x,g_1,\ldots,g_i g_{i+1},\ldots,g_{n+1})(e)\\
-     &+(-1)^{n+1}f(x,g_1,\ldots,g_n)(e),
-\end{align*}
-and, on the other hand,
-\begin{align*}
-  \sigma(\partial f)(g_1,\ldots,g_{n+1})(x)
-    ={}&\bigl(xf(g_1,g_2,\ldots,g_{n+1})\bigr)(e)
-       -f(xg_1,g_2,\ldots,g_{n+1})(e)\\
-     &+\sum_{i=1}^{n}(-1)^{i+1}
-       f(x,g_1,\ldots,g_i g_{i+1},\ldots,g_{n+1})\\
-     &+(-1)^{n+2}f(x,g_1,\ldots,g_n)(e).
-\end{align*}
-Consequently,
-\[
-  \bigl(\partial\sigma(f)+\sigma(\partial f)\bigr)
-    (g_1,\ldots,g_{n+1})(x)
-  =f(g_1,\ldots,g_{n+1})(x);
-\]
-that is, \(\partial\sigma+\sigma\partial\) is the identity map of
-\(C^{n+1}
-  (\mathbf G,\underline{\operatorname{Hom}}(\mathbf G,\mathbf P))\) for
-every \(n\geq0\).
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:5-2-3}\textbf{Remark 5.2.3.}
-The hypothesis that \(\mathscr C\) be small is used only to ensure the
-existence of the derived functors \(R^n\underline H^{\,0}\) and \(R^nH^0\).
-In every case, what precedes shows that the functors
-\(\underline H^{\,n}(\mathbf G,-)\) (respectively,
-\(H^n(\mathbf G,-)\)) form an effaceable cohomological functor in degrees
-\(>0\), and hence are the (right) satellite functors of the left exact
-functor \(\underline H^{\,0}(\mathbf G,-)\) (respectively,
-\(H^0(\mathbf G,-)\)), in the sense of \([\mathrm{Gr}57,\,2.2]\). If
-\((\mathbf G\text{-}\mathbf O\text{-Mod.})\) has enough injective objects
-(as it does when \(\mathscr C\) is small), they coincide with the derived
-functors (\emph{loc. cit.}, \SGARefLink{sga3:i:subsection:2-3}{2.3}).
-\footnote{Editor's note: This remark has been added.}
+where \(e\) denotes the unit element of \(\mathbf G(S)\) and \(f\) an
+\((n+1)\)-cochain of \(\mathbf G(S)\) with values in
+\(\underline{\operatorname{Hom}}(\mathbf G,\mathbf P)(S)\).\footnote{Translator's note: the 1970 text has \(f(g,g_0,g_1,\ldots,g_n)(e)\),
+with one argument too many; the Gille--Polo re-edition (2011), Exposé~I,
+writes the operator as above and checks that \(\partial s+s\partial\) is the
+identity on cochains of degree \(n+1\geq1\). In our formulation: evaluate
+\((\partial(sf)+s(\partial f))(g_1,\ldots,g_{n+1})\) at \(g\). The first term
+of \(\partial(sf)\), \(g_1\cdot sf(g_2,\ldots,g_{n+1})\), gives
+\(f(gg_1,g_2,\ldots,g_{n+1})(e)\), which cancels the term of \(s(\partial f)\)
+in which \(g\) and \(g_1\) are multiplied; the other terms of
+\(\partial(sf)\) cancel those of \(s(\partial f)\), whose signs are opposite
+because \(g\) occupies the first place; what remains is the first term of
+\(\partial f\), \((g\cdot f(g_1,\ldots,g_{n+1}))(e)=f(g_1,\ldots,g_{n+1})(g)\).}
 
 \subsection*{\SGAInlineRefTarget{sga3:i:subsection:5-3}5.3. Cohomology of \(G\)-\(\mathscr O_S\)-modules}
 
-Let \(S\) be a scheme, \(G\) an \(S\)-group, and \(\mathscr F\) a
-quasi-coherent \(G\)-\(\mathscr O_S\)-module. The cohomology groups of
+Let \(S\) be a scheme, \(G\) an \(S\)-group affine over \(S\), and
+\(\mathscr F\) a quasi-coherent \(G\)-\(\mathscr O_S\)-module. The cohomology groups of
 \(G\) with values in \(\mathscr F\) are defined by
 \[
   H^n(G,\mathscr F)
@@ -440,18 +233,17 @@ quasi-coherent \(G\)-\(\mathscr O_S\)-module. The cohomology groups of
 \]
 (for the notation, see \SGARefLink{sga3:i:subsection:4-6}{4.6}).
 
-Suppose that \(G\) is affine over \(S\). In view of \SGARefLink{sga3:i:proposition:4-6-4}{Proposition~4.6.4},
+In view of \SGARefLink{sga3:i:proposition:4-6-4}{Proposition~4.6.4},
 this cohomology is computed as follows: \(H^n(G,\mathscr F)\) is the
-\(n\)-th cohomology group of the complex \(C^*(G,\mathscr F)\), whose
-\(n\)-th term is
+\(n\)-th cohomology group of the complex \(C^*(G,\mathscr F)\) defined
+as follows:
 \[
-  C^n(G,\mathscr F)
-    =\Gamma\Bigl(
-       S,
-       \mathscr F\otimes
+  C^n(G,\mathscr F)=\Gamma\bigl(S,\underline C^{\,n}(G,\mathscr F)\bigr),
+  \qquad
+  \underline C^{\,n}(G,\mathscr F)
+    =\mathscr F\otimes
        \underbrace{\mathscr A(G)\otimes\cdots\otimes\mathscr A(G)}_
-                   {n\text{ times}}
-     \Bigr).
+                   {n\text{ times}}.
 \]
 If \(f\) (respectively, \(a_i\)) is a section of \(\mathscr F\)
 (respectively, of \(\mathscr A(G)\)) over an open subset of \(S\), then
@@ -465,13 +257,12 @@ If \(f\) (respectively, \(a_i\)) is a section of \(\mathscr F\)
 \end{align*}
 where
 \[
-  \Delta:\mathscr A(G)\longrightarrow\mathscr A(G)\otimes\mathscr A(G),
-  \qquad
   \mu_{\mathscr F}:\mathscr F\longrightarrow
-    \mathscr F\otimes\mathscr A(G)
+    \mathscr F\otimes\mathscr A(G),
+  \qquad
+  \Delta:\mathscr A(G)\longrightarrow\mathscr A(G)\otimes\mathscr A(G)
 \]
-describe the coalgebra structure of \(\mathscr A(G)\) and the comodule
-structure of \(\mathscr F\). Notice in passing that the cohomology of
+describe the comodule structure of \(\mathscr F\). Notice in passing that the cohomology of
 \(G\) with values in \(\mathscr F\) therefore depends only on the
 comodule structure of \(\mathscr F\), and in particular only on the
 \(S\)-monoid structure of \(G\).
@@ -483,7 +274,17 @@ In particular,
 where \(\mathscr F^G\), the \emph{sheaf of invariants of \(\mathscr F\)},
 is the sheaf whose sections over an open subset \(U\) of \(S\) are those
 sections of \(\mathscr F\) over \(U\) whose inverse image in every
-\(S'\) over \(U\) is invariant under \(G(S')\) (see \SGARefLink{sga3:i:remark:4-7-1-2}{4.7.1.2}).
+\(S'\) over \(U\) is invariant under \(G(S')\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, gives this
+definition in 4.7, with an example showing that the sheaf
+\(\mathscr F^G\) can be smaller than the functor of invariants: the natural
+morphism \(\mathbf W(\mathscr F^G)\to\mathbf W(\mathscr F)^G\) is not an
+isomorphism in general. In our formulation: let \(S=\operatorname{Spec}(\mathbb Z)\),
+let \(G\) be the constant group \(\mathbb Z/2\mathbb Z\), and let its
+generator act on \(\mathscr F=\mathcal O_S\) by \(-1\). A section \(x\) of
+\(\mathcal O_S\) over an open set with \(-x=x\) is zero, the rings of
+sections being torsion-free, so \(\mathscr F^G=0\); but for an
+\(\mathbb F_2\)-algebra \(R\), every element of \(R\) is invariant, so
+\(\mathbf W(\mathscr F)^G(\operatorname{Spec}R)=R\).}
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:theorem:5-3-1}\textbf{Theorem 5.3.1.}
@@ -492,215 +293,66 @@ affine and flat over \(S\). The functors \(H^n(G,-)\) are the derived
 functors of \(H^0(G,-)\) on the category of quasi-coherent
 \(G\)-\(\mathscr O_S\)-modules.}
 
-\medskip
-\noindent\textit{Proof.}
-Since \(G\) is affine and flat over \(S\), \SGARefLink{sga3:i:corollary:4-7-2-1}{4.7.2.1} shows that the category
-\((G\text{-}\mathscr O_S\text{-Mod.q.c.})\) is equivalent to the category
-\((\mathscr A(G)\text{-Comod.q.c.})\) of quasi-coherent
-\(\mathscr A(G)\)-comodules over \(\mathscr O_S\), and is therefore
-abelian. Moreover, since \(\mathscr A(G)\) is a flat
-\(\mathscr O_S\)-module, each functor
-\[
-  \mathscr F\longmapsto
-    \mathscr F\otimes_{\mathscr O_S}\mathscr A(G)^{\otimes n}
-\]
-is exact; since \(S\) is affine, it follows that \(C^*(G,-)\) is an exact
-functor on \((G\text{-}\mathscr O_S\text{-Mod.q.c.})\).
-\footnote{Editor's note: The original has been modified to show that the
-category \((G\text{-}\mathscr O_S\text{-Mod.q.c.})\) is abelian and has
-enough injective objects. Compare \([\mathrm{Ja}03]\), Part~I,
-3.3--3.4, 3.9, \SGARefLink{sga3:i:subsection:4-2}{4.2}, and 4.14--4.16 (bearing in mind that ``\(k\)-group
-scheme'' there means ``affine \(k\)-group scheme''; see \emph{loc. cit.},
-\SGARefLink{sga3:i:subsection:2-1}{2.1}).}
+Since \(S\) is affine, and since \(G\) is affine and flat, one sees at once
+that \(C^*(G,-)\) is indeed an exact functor on the preceding category.
 
-Let \(\Delta\) (respectively, \(\eta\)) denote the comultiplication
-(respectively, the augmentation) of \(\mathscr A(G)\). For every
-quasi-coherent \(\mathscr O_S\)-module \(\mathscr P\), let
-\[
-  \operatorname{Ind}(\mathscr P)
-    =\mathscr P\otimes_{\mathscr O_S}\mathscr A(G),
-\]
-endowed with the \(\mathscr A(G)\)-comodule structure defined by
-\[
-  \operatorname{id}_{\mathscr P}\otimes\Delta:
-  \mathscr P\otimes_{\mathscr O_S}\mathscr A(G)
-    \longrightarrow
-  \mathscr P\otimes_{\mathscr O_S}\mathscr A(G)
-    \otimes_{\mathscr O_S}\mathscr A(G).
-\]
+It remains only to construct, for every \(\mathscr F\), a monomorphism of
+\(\mathscr F\) into a \(G\)-\(\mathscr O_S\)-module \(E(\mathscr F)\) such
+that \(H^n(G,E(\mathscr F))=0\) for \(n>0\). Now consider
+\(E(\mathscr F)=\mathscr F\otimes\mathscr A(G)\), with the
+\(G\)-\(\mathscr O_S\)-module structure defined by that of
+\(\mathscr A(G)\), and the canonical homomorphism
+\(\mu_{\mathscr F}:\mathscr F\to E(\mathscr F)\); axiom (CM~1) of
+\SGARefLink{sga3:i:paragraph:4-7-2}{4.7.2} says exactly that \(\mu_{\mathscr F}\) is a morphism of
+\(G\)-\(\mathscr O_S\)-modules. It now suffices to remark that the image of
+\(\mu_{\mathscr F}\) under the functor \(\mathbf W\) is none other than the
+effacement
+\(\mu_{\mathbf W(\mathscr F)}:\mathbf W(\mathscr F)\to E(\mathbf W(\mathscr F))\)
+defined in \SGARefLink{sga3:i:subsection:5-2}{5.2} (compare the corollary to
+\SGARefLink{sga3:i:proposition:4-6-4}{Proposition~4.6.4}).\footnote{Translator's note: the 1970 text says ``le corollaire 1 à la
+proposition 4.6.4''; Proposition 4.6.4 has a single corollary.}
 
-This defines a functor
-\[
-  \operatorname{Ind}:(\mathscr O_S\text{-Mod.q.c.})
-    \longrightarrow(G\text{-}\mathscr O_S\text{-Mod.q.c.}).
-\]
-It follows from \SGARefLink{sga3:i:corollary:4-6-4-1}{4.6.4.1}, \SGARefLink{sga3:i:definition:5-2-0}{5.2.0}, and \SGARefLink{sga3:i:remark:5-2-0-1}{5.2.0.1} that there is an isomorphism of
-\(\mathbf G\)-\(\mathbf O_S\)-modules
-\[
-  \tag{*}\label{sga3:i:theorem:5-3-1:equation:star}
-  \mathbf W\bigl(\operatorname{Ind}(\mathscr P)\bigr)
-    \simeq E\bigl(\mathbf W(\mathscr P)\bigr)
-    =\underline{\operatorname{Hom}}
-       \bigl(\mathbf G,\mathbf W(\mathscr P)\bigr).
-\]
-Under this identification, the morphism
-\(\varepsilon:E(\mathbf W(\mathscr P))\to\mathbf W(\mathscr P)\)
-corresponds to the morphism of \(\mathscr O_S\)-modules
-\[
-  \operatorname{id}_{\mathscr P}\otimes\eta:
-    \operatorname{Ind}(\mathscr P)\longrightarrow\mathscr P.
-\]
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~I, 5.3.1.1
+to 5.3.1.3; our formulation). We complete the proof. As \(G\) is flat over
+\(S\), the quasi-coherent \(G\)-\(\mathscr O_S\)-modules form an abelian
+category, exactness being tested on the underlying \(\mathscr O_S\)-modules
+(Addition after 4.7.2); the functors
+\(\mathscr F\mapsto\mathscr F\otimes\mathscr A(G)^{\otimes n}\) are exact,
+and so is \(\Gamma(S,-)\) on quasi-coherent modules, \(S\) being affine; this
+gives the exactness of \(C^*(G,-)\). For a quasi-coherent
+\(\mathscr O_S\)-module \(\mathscr P\), let \(\operatorname{Ind}(\mathscr P)\)
+be \(\mathscr P\otimes\mathscr A(G)\) with the coaction
+\(\operatorname{Id}\otimes\Delta\). For every comodule \(\mathscr M\),
+\(\phi\mapsto(\operatorname{Id}\otimes\varepsilon)\circ\phi\) is a bijection
+from comodule morphisms \(\mathscr M\to\operatorname{Ind}(\mathscr P)\) onto
+\(\mathscr O_S\)-linear maps \(\mathscr M\to\mathscr P\), with inverse
+\(u\mapsto(u\otimes\operatorname{Id})\circ\mu_{\mathscr M}\), as (CM~1),
+(CM~2) and the counit axiom of \(\mathscr A(G)\) show. So
+\(\operatorname{Ind}\) is right adjoint to the exact forgetful functor and
+carries injective objects to injective objects. The module
+\(E(\mathscr F)\) above is \(\operatorname{Ind}(\mathscr F)\); by the
+corollary to 4.6.4,
+\(\mathbf W(\operatorname{Ind}(\mathscr P))\simeq
+\underline{\operatorname{Hom}}(\mathbf h_G,\mathbf W(\mathscr P))\), the
+coaction \(\operatorname{Id}\otimes\Delta\) corresponding to the action
+\((gf)(x)=f(xg)\) of 5.2, so \(H^n(G,\operatorname{Ind}(\mathscr P))=0\) for
+\(n>0\) by 5.2.2. Finally, \(S\) being affine, every quasi-coherent
+\(\mathscr F\) embeds in an injective object \(\mathscr I\) of the
+quasi-coherent modules; then
+\(\mathscr F\to\operatorname{Ind}(\mathscr F)\to\operatorname{Ind}(\mathscr I)\)
+is a monomorphism of comodules (the second map because \(\mathscr A(G)\) is
+flat) into an injective object. Hence the category has enough injective
+objects, and the \(H^n(G,-)\) are the derived functors of \(H^0(G,-)\)
+(A.~Grothendieck, Tôhoku Math.\ J.\ \textbf{9} (1957), 2.2.1 and 2.3).
+Compare J.~C.~Jantzen,
+\textit{Representations of algebraic groups}, 2nd ed., American
+Mathematical Society, 2003, Part~I, 3.3--3.4, 3.9, 4.2 and 4.14--4.16,
+where group schemes are affine (\textit{loc.\ cit.}, 2.1).
+\par\medskip
 
-We have already used the fact that the functor
-\[
-  \mathbf W:(\mathscr O_S\text{-Mod.})
-    \longrightarrow(\mathbf O_S\text{-Mod.})
-\]
-is fully faithful. By \SGARefLink{sga3:i:definition:4-7-1}{Definition~4.7.1}, the same is true of its restriction
-to \((G\text{-}\mathscr O_S\text{-Mod.})\): if \(\mathscr M\) and
-\(\mathscr M'\) are \(G\)-\(\mathscr O_S\)-modules, there is a functorial
-isomorphism
-\[
-  \operatorname{Hom}_{G\text{-}\mathscr O_S\text{-Mod.}}
-    (\mathscr M,\mathscr M')
-  \simeq
-  \operatorname{Hom}_{\mathbf G\text{-}\mathbf O_S\text{-Mod.}}
-    \bigl(\mathbf W(\mathscr M),\mathbf W(\mathscr M')\bigr).
-\]
-Consequently, \SGARefLink{sga3:i:lemma:5-2-0-2}{Lemma~5.2.0.2} gives the following result.
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:corollary:5-3-1-1}\textbf{Corollary 5.3.1.1.}
-\textit{\SGAInlineRefTarget{sga3:i:corollary:5-3-1-1:item:i}(i) The functor \(\operatorname{Ind}\) is right adjoint to the
-forgetful functor}
-\[
-  (G\text{-}\mathscr O_S\text{-Mod.q.c.})
-    \longrightarrow(\mathscr O_S\text{-Mod.q.c.}).
-\]
-\textit{More precisely, the map
-\(\operatorname{id}_{\mathscr P}\otimes\eta:
-  \operatorname{Ind}(\mathscr P)\to\mathscr P\)
-induces, for every object \(\mathscr M\) of
-\((G\text{-}\mathscr O_S\text{-Mod.q.c.})\), a bijection}
-\[
-  \operatorname{Hom}_{G\text{-}\mathscr O_S\text{-Mod.}}
-    \bigl(\mathscr M,\operatorname{Ind}(\mathscr P)\bigr)
-  \xrightarrow{\ \sim\ }
-  \operatorname{Hom}_{\mathscr O_S}(\mathscr M,\mathscr P).
-\]
-
-\textit{\SGAInlineRefTarget{sga3:i:corollary:5-3-1-1:item:ii}(ii) Consequently, if \(\mathscr I\) is an injective object of
-\((\mathscr O_S\text{-Mod.q.c.})\), then
-\(\operatorname{Ind}(\mathscr I)\) is an injective object of
-\((G\text{-}\mathscr O_S\text{-Mod.q.c.})\).}
-
-Let \(\mathscr F\) be a \(G\)-\(\mathscr O_S\)-module, and let
-\(\mu_{\mathscr F}:\mathscr F\to\operatorname{Ind}(\mathscr F)\) be the
-map defining its \(\mathscr A(G)\)-comodule structure. It follows from
-\SGARefLink{sga3:i:definition:5-2-0-3}{5.2.0.3} (or directly from axioms (CM~1) and (CM~2) of \SGARefLink{sga3:i:paragraph:4-7-2}{4.7.2}) that
-\(\mu_{\mathscr F}\) is a morphism of
-\(G\)-\(\mathscr O_S\)-modules, and that
-\[
-  (\operatorname{id}_{\mathscr F}\otimes\eta)\circ\mu_{\mathscr F}
-    =\operatorname{id}_{\mathscr F}.
-\]
-Thus \(\mathscr F\) is a direct summand of
-\(\operatorname{Ind}(\mathscr F)\) as an \(\mathscr O_S\)-module; in
-particular, \(\mu_{\mathscr F}\) is a monomorphism. By (*) and \SGARefLink{sga3:i:lemma:5-2-2}{5.2.2},
-\[
-  H^n\bigl(\mathbf G,\mathbf W(\operatorname{Ind}(\mathscr F))\bigr)
-    \simeq
-  H^n\Bigl(
-    \mathbf G,
-    \underline{\operatorname{Hom}}_S
-      \bigl(\mathbf G,\mathbf W(\mathscr F)\bigr)
-  \Bigr)
-    =0
-  \qquad(n>0).
-\]
-Therefore \(H^n(G,-)\) is effaceable for \(n>0\).
-
-Finally, since \(S\) is affine,
-\((\mathscr O_S\text{-Mod.q.c.})\) has enough injective objects. Let
-\(\mathscr F\hookrightarrow\mathscr I\) be a monomorphism of
-\(\mathscr O_S\)-modules, where \(\mathscr I\) is injective in
-\((\mathscr O_S\text{-Mod.q.c.})\). Since \(\mathscr A(G)\) is flat over
-\(\mathscr O_S\), \(\operatorname{Ind}(\mathscr F)\) is a
-\(G\)-\(\mathscr O_S\)-submodule of \(\operatorname{Ind}(\mathscr I)\).
-Hence:
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:corollary:5-3-1-2}\textbf{Corollary 5.3.1.2.}
-\textit{The abelian category \((G\text{-}\mathscr O_S\text{-Mod.q.c.})\)
-has enough injective objects.}
-
-Taking account of \([\mathrm{Gr}57,\,2.2.1\text{ and }2.3]\), already used
-in the proof of \SGARefLink{sga3:i:proposition:5-2-1}{5.2.1}, completes the proof of \SGARefLink{sga3:i:theorem:5-3-1}{Theorem~5.3.1}.
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:5-3-1-3}\textbf{Remark 5.3.1.3.}
-\SGARefLink{sga3:i:corollary:5-3-1-1}{Corollary~5.3.1.1} may also be proved by the following calculation. To every
-morphism of \(G\)-\(\mathscr O_S\)-modules
-\[
-  \phi:\mathscr M\longrightarrow
-    \mathscr P\otimes_{\mathscr O_S}\mathscr A(G)
-\]
-associate the \(\mathscr O_S\)-morphism
-\[
-  (\operatorname{id}_{\mathscr P}\otimes\eta)\circ\phi:
-    \mathscr M\longrightarrow\mathscr P.
-\]
-Conversely, to every \(\mathscr O_S\)-morphism
-\(f:\mathscr M\to\mathscr P\), associate the morphism of
-\(G\)-\(\mathscr O_S\)-modules
-\[
-  (f\otimes\operatorname{id}_{\mathscr A(G)})\circ\mu_{\mathscr M}:
-    \mathscr M\longrightarrow
-    \mathscr P\otimes_{\mathscr O_S}\mathscr A(G).
-\]
-One sees at once that
-\[
-  (\operatorname{id}_{\mathscr P}\otimes\eta)
-    \circ(f\otimes\operatorname{id}_{\mathscr A(G)})
-    \circ\mu_{\mathscr M}
-  =(f\otimes\operatorname{id}_{\mathscr O_S})
-    \circ(\operatorname{id}_{\mathscr P}\otimes\eta)
-    \circ\mu_{\mathscr M}
-  =f.
-\]
-
-On the other hand, for every \(\phi\), the following diagram is
-commutative.
-
-\begin{figure}[H]
-  \centering
-  \input{native_diagrams/exp1/diag_018_induction_adjunction_square}
-  \phantomsection\label{fig:sga3-exp1-p038-induction-adjunction-square}
-\end{figure}
-
-It follows that
-\begin{align*}
- &\Bigl(
-    \bigl((\operatorname{id}_{\mathscr P}\otimes\eta)\circ\phi\bigr)
-      \otimes\operatorname{id}_{\mathscr A(G)}
-  \Bigr)\circ\mu_{\mathscr M}\\
- &\qquad=
-  (\operatorname{id}_{\mathscr P}\otimes\eta
-     \otimes\operatorname{id}_{\mathscr A(G)})
-  \circ(\phi\otimes\operatorname{id}_{\mathscr A(G)})
-  \circ\mu_{\mathscr M}\\
- &\qquad=
-  (\operatorname{id}_{\mathscr P}\otimes\eta
-     \otimes\operatorname{id}_{\mathscr A(G)})
-  \circ(\operatorname{id}_{\mathscr P}\otimes\Delta)
-  \circ\phi
-  =\phi.
-\end{align*}
-This proves \SGARefLink{sga3:i:corollary:5-3-1-1:item:i}{Corollary~5.3.1.1(i)}, and \SGARefLink{sga3:i:corollary:5-3-1-1:item:ii}{(ii)} follows.
-
-Let \(\mathscr F\) be a \(G\)-\(\mathscr O_S\)-module. We saw above that
-axiom (CM~2) of \SGARefLink{sga3:i:proposition:4-7-2}{4.7.2} shows that, as an \(\mathscr O_S\)-module,
-\(\mathscr F\) is a direct summand of \(E(\mathscr F)\). This gives:
+Note now that axiom (CM~2) shows that, as an \(\mathscr O_S\)-module,
+\(\mathscr F\) is a direct summand of \(E(\mathscr F)\). This implies:
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:proposition:5-3-2}\textbf{Proposition 5.3.2.}
@@ -714,19 +366,18 @@ affine and flat. Suppose that every exact sequence
 \]
 of quasi-coherent \(G\)-\(\mathscr O_S\)-modules which splits as a sequence
 of \(\mathscr O_S\)-modules also splits as a sequence of
-\(G\)-\(\mathscr O_S\)-modules. Then the functors \(H^n(G,-)\) vanish for
-\(n>0\) (or, equivalently, the functor \(H^0(G,-)\) is exact).}
+\(G\)-\(\mathscr O_S\)-modules. The functors \(H^n(G,-)\), \(n>0\), vanish
+(or, equivalently, the functor \(H^0(G,-)\) is exact).}
 
-Indeed, by hypothesis, the sequence of \(G\)-\(\mathscr O_S\)-modules
+Indeed, by hypothesis, the sequence
 \[
   0\longrightarrow\mathscr F
    \longrightarrow E(\mathscr F)
    \longrightarrow E(\mathscr F)/\mathscr F
    \longrightarrow0
 \]
-is split. Thus \(\mathscr F\) is a direct summand of \(E(\mathscr F)\) as
-a \(G\)-\(\mathscr O_S\)-module, while the cohomology of the latter
-vanishes.
+is split. Thus \(\mathscr F\) is a direct summand of \(E(\mathscr F)\),
+while the cohomology of the latter vanishes.
 
 Combining this with \SGARefLink{sga3:i:proposition:4-7-4}{Proposition~4.7.4} immediately gives:
 
@@ -743,4 +394,239 @@ Combining this with \SGARefLink{sga3:i:proposition:4-7-4}{Proposition~4.7.4} imm
 \noindent\textbf{Remark.}
 \SGARefLink{sga3:i:proposition:5-3-2}{Proposition~5.3.2} remains valid when \(G\) is not necessarily flat over
 \(S\); the proof then uses relative cohomology.
+
+\par\bigskip\noindent\SGAInlineRefTarget{sga3:i:section:6}%
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~I, \S6,
+``Objets et modules \(G\)-équivariants''; our formulation). The re-edition
+ends this Exposé with a section on equivariant objects and modules, used in
+Exposés~II, III and VI\textsubscript{B}. We give its content in our own
+terms; the numbers in brackets are those of the re-edition.
+
+\par\smallskip\noindent\textit{(a) Equivariant objects} [6.1, 6.2].
+Let \(\mathbf G\) be a \(\widehat{\mathscr C}\)-group acting on an object
+\(X\) of \(\widehat{\mathscr C}\) by \(\lambda:\mathbf G\times X\to X\), and
+let \(\pi:M\to X\) be a morphism of \(\widehat{\mathscr C}\). A
+\emph{\(\mathbf G\)-equivariant structure} on \(M\) over \(X\) is an action
+\(\Lambda:\mathbf G\times M\to M\) with
+\(\pi\circ\Lambda=\lambda\circ(\operatorname{id}\times\pi)\). For
+\(U\in\operatorname{Ob}(\mathscr C)\) and \(x\in X(U)\), let
+\(M_x=\mathbf h_U\times_{x,X}M\) be the part of \(M\) above \(x\); for
+\(g\in\mathbf G(U)\), \(\Lambda\) restricts to morphisms
+\(\Lambda_x(g):M_x\to M_{gx}\) over \(U\), compatible with base change, with
+\(\Lambda_x(1)=\operatorname{id}\) and
+\(\Lambda_{hx}(g)\circ\Lambda_x(h)=\Lambda_x(gh)\); so each \(\Lambda_x(g)\)
+is an isomorphism, with inverse \(\Lambda_{gx}(g^{-1})\), and such data
+determine \(\Lambda\). If \(\mathbf O\) is a \(\widehat{\mathscr C}\)-ring and
+\(M\) an \(\mathbf O_X\)-module (Addition in 4.3), \(M\) is a
+\emph{\(\mathbf G\)-equivariant \(\mathbf O_X\)-module} if moreover the
+\(\Lambda_x(g)\) are \(\mathbf O\)-linear. In one morphism: the
+\(\Lambda_x(g)\) amount to a morphism of
+\(\mathbf O_{\mathbf G\times X}\)-modules
+\(\theta:(\mathbf G\times X)\times_{\mathrm{pr}_X}M\to(\mathbf G\times X)\times_\lambda M\),
+\((g,x,m)\mapsto(g,x,gm)\), and \(\Lambda\) is an action if and only if
+\(\theta\) is the identity above the unit section and satisfies the cocycle
+condition
+\((\pi_{\mathbf G}\times\operatorname{id}_X)^*\theta
+=(\operatorname{id}_{\mathbf G}\times\lambda)^*\theta\circ\mathrm{pr}_{23}^*\theta\)
+over \(\mathbf G\times\mathbf G\times X\), both sides going from the
+pull-back of \(M\) by \((g,h,x)\mapsto x\) to its pull-back by
+\((g,h,x)\mapsto ghx\) (at a point, \(g(hm)=(gh)m\)). If \(\theta\) is an
+isomorphism, the unit condition follows from the cocycle condition; for a
+monoid \(\mathbf G\) it must be imposed.
+
+\par\smallskip\noindent\textit{(b) Equivariant morphisms, stabilizers} [6.3].
+If \(\mathbf G\) also acts on \(Y\), a morphism \(f:Y\to X\) is equivariant
+if \(f\circ\lambda_Y=\lambda_X\circ(\operatorname{id}\times f)\); then
+\(f^*M=Y\times_{f,X}M\), with \(g(y,m)=(gy,gm)\), is a
+\(\mathbf G\)-equivariant \(\mathbf O_Y\)-module [6.3.1]. A morphism of
+\(\mathbf O_X\)-modules \(u:M\to N\) is equivariant if
+\(u\circ\Lambda_M=\Lambda_N\circ(\operatorname{id}\times u)\). For an
+arbitrary \(f:Y\to X\), \(\mathbf G\) acts on
+\(\underline{\operatorname{Hom}}(Y,X)\) by
+\(g\cdot\phi=\lambda_X(g)\circ\phi\circ\lambda_Y(g)^{-1}\); the stabilizer
+\(\underline{\operatorname{Stab}}_{\mathbf G}(f)\) of the section \(f\)
+(Addition in 2.3) consists of the \(g\) with
+\(\lambda_X(g)\circ f_T=f_T\circ\lambda_Y(g)\), and \(f\) is equivariant for
+it [6.3.2].
+
+\par\smallskip\noindent\textit{(c) Sections} [6.4].
+Let \(\mathscr C\) have a final object \(S_0\), and let \(M\) be a
+\(\mathbf G\)-equivariant \(\mathbf O_X\)-module. The functor of sections
+\(\prod_{X/S_0}M\) (Exposé~II, \SGARefLink{sga3:ii:definition:1-1}{1.1}) assigns to \(T\) the
+\(\mathbf O(X\times T)\)-module \(\operatorname{Hom}_X(X\times T,M)\). For
+\(g\in\mathbf G(T)\) and a section \(s\), put \((gs)(x,t)=g\,s(g^{-1}x,t)\)
+at the points \((x,t)\) of \(X\times T\) (with \(g\) evaluated at \(t\)).
+This is again a section, \(\mathbf G(T)\) acts in this way, functorially in
+\(T\), and \(g(\alpha s)=(g\alpha)(gs)\) for
+\(\alpha\in\mathbf O(X\times T)\), where \((g\alpha)(x,t)=\alpha(g^{-1}x,t)\)
+[6.4.1]. The functions coming from \(\mathbf O(T)\) are fixed; so
+\(\prod_{X/S_0}M\) is a \(\mathbf G\)-\(\mathbf O\)-module. For any
+\(\phi:Y\to X\), \(\phi^*M\) is equivariant for
+\(\underline{\operatorname{Stab}}_{\mathbf G}(\phi)\), by (b), whence a
+\(\underline{\operatorname{Stab}}_{\mathbf G}(\phi)\)-\(\mathbf O\)-module
+\(\prod_{Y/S_0}\phi^*M\) [6.4.2].
+
+\par\smallskip\noindent\textit{(d) Equivariant sheaves} [6.5].
+Let \(G\) be an \(S\)-group scheme acting on an \(S\)-scheme \(X\) by
+\(\lambda\), and \(\mathscr F\) an \(\mathcal O_X\)-module, not necessarily
+quasi-coherent. One calls \(\mathscr F\) \emph{\(G\)-equivariant} if
+\(\mathbf W(\mathscr F)\), the \(\mathbf O_X\)-module
+\((x:U\to X)\mapsto\Gamma(U,x^*\mathscr F)\), is \(G\)-equivariant [6.5.1].
+As \(\mathbf W\) is fully faithful (4.6.2 and the Note in 4.6.1), this
+amounts to isomorphisms \(x^*\mathscr F\simeq(gx)^*\mathscr F\) for the
+points \((g,x)\) of \(G\times_SX\), compatible with base change and
+satisfying the cocycle relation; by taking the universal point, to an
+isomorphism of \(\mathcal O_{G\times_SX}\)-modules
+\(\theta:\mathrm{pr}_X^*\mathscr F\xrightarrow{\sim}\lambda^*\mathscr F\)
+satisfying the cocycle condition of (a) on \(G\times_SG\times_SX\). The
+equivariant morphisms \(u:\mathscr E\to\mathscr F\) are those with
+\(\theta_{\mathscr F}\circ\mathrm{pr}_X^*(u)=\lambda^*(u)\circ\theta_{\mathscr E}\),
+and pull-backs by equivariant morphisms are equivariant [6.5.2]. If
+\(\mathscr F\) is quasi-coherent, \(\theta^{-1}\) induces, through the
+contravariant functor \(\mathbb V\) (4.6.3), an isomorphism
+\((G\times_SX)\times_{\mathrm{pr}_X}\mathbb V(\mathscr F)\to(G\times_SX)\times_\lambda\mathbb V(\mathscr F)\),
+whose composite with the second projection is an action of \(G\) on
+\(\mathbb V(\mathscr F)\) above that on \(X\), linear on the fibres;
+equivalently, \(\mathbf V(\mathscr F)\) is a \(G\)-equivariant
+\(\mathbf O_X\)-module. For invertible \(\mathscr F\) this is a
+\(G\)-linearization in the sense of D.~Mumford, \textit{Geometric invariant
+theory}, Springer, 1965, Chapter~1, \S3, Definition~1.6, where the
+isomorphism is written in the other direction [6.5.3].
+\SGAInlineRefTarget{sga3:i:remark:6-5-4}When \(X=S\) with the trivial action,
+a \(G\)-equivariant \(\mathcal O_S\)-module is a
+\(G\)-\(\mathcal O_S\)-module (4.7.1): if \(f:G\to S\) is the structural
+morphism, \(\theta\in\operatorname{Aut}(f^*\mathscr F)
+=\underline{\operatorname{Aut}}_{\mathbf O_S}(\mathbf W(\mathscr F))(G)\) is
+the image of the universal point under \(\rho\), and corresponds by
+adjunction to \(\mathscr F\to f_*f^*\mathscr F\), which for \(G\) affine is
+the comodule map of 4.7.2 [6.5.4, used in Exposé~VI\textsubscript{B},
+11.10~bis].
+
+\par\smallskip\noindent\textit{(e) Direct images} [6.6].
+Let \(G\) be flat over \(S\) and act on \(X\) and \(Y\), let \(p:X\to Y\) be
+equivariant, quasi-compact and quasi-separated, and let \(\mathscr F\) be a
+quasi-coherent \(G\)-equivariant \(\mathcal O_X\)-module. Then
+\(p_*\mathscr F\) is quasi-coherent (EGA~I, 9.2.1) and \(G\)-equivariant
+[6.6.1]. Indeed, put \(q=\operatorname{id}_G\times p\); the squares formed by
+\(q\), \(p\) and the pairs \((\mathrm{pr}_X,\mathrm{pr}_Y)\),
+\((\lambda_X,\lambda_Y)\) are cartesian (for the second,
+\((g,x)\mapsto(g,p(x),gx)\) identifies \(G\times_SX\) with
+\((G\times_SY)\times_{\lambda_Y,Y,p}X\)), and \(\mathrm{pr}_Y\) and
+\(\lambda_Y\) are flat, \(\lambda_Y\) being \(\mathrm{pr}_Y\) composed with
+the automorphism \((g,y)\mapsto(g,gy)\). By flat base change (EGA~III,
+1.4.15, and EGA~IV\textsubscript{1}, 1.7.21),
+\(q_*\mathrm{pr}_X^*\mathscr F=\mathrm{pr}_Y^*p_*\mathscr F\) and
+\(q_*\lambda_X^*\mathscr F=\lambda_Y^*p_*\mathscr F\), so \(q_*\theta\) is an
+isomorphism \(\mathrm{pr}_Y^*p_*\mathscr F\to\lambda_Y^*p_*\mathscr F\), and
+its cocycle condition follows in the same way over \(G\times_SG\times_SY\).
+For \(Y=S\) with the trivial action, \(p_*\mathscr F\) is therefore a
+quasi-coherent \(G\)-\(\mathcal O_S\)-module, an \(\mathscr A(G)\)-comodule
+if \(G\) is affine (4.7.2; see also Exposé~VI\textsubscript{B}, \SGARefLink{concl:sga3-VIB-11.6.1-ii}{11.6.1~(ii)},
+for \(G\) quasi-compact and quasi-separated and \(p_*\mathscr F\) flat), and
+the canonical morphism from \(\mathbf W(p_*\mathscr F)\) to the
+\(G\)-\(\mathbf O_S\)-module \(\prod_{X/S}\mathbf W(\mathscr F)\) of (c), given
+at \(f:T\to S\) by
+\(\Gamma(T,f^*p_*\mathscr F)\to\Gamma(X_T,f_X^*\mathscr F)\), is compatible
+with the actions of \(G\), and bijective for \(T\) flat over \(S\) [6.6.2;
+compare Mumford, \textit{loc.\ cit.}, p.~32].
+
+\par\smallskip\noindent\textit{(f) Stabilizers} [6.7].
+Let \(G\) act on \(X\) and \(Y\), let \(\phi:Y\to X\) be an \(S\)-morphism,
+not necessarily equivariant, and let \(\mathscr F\) be a quasi-coherent
+\(G\)-equivariant \(\mathcal O_X\)-module. Then
+\(\underline{\operatorname{Stab}}_G(\phi)=\prod_{P/G}P'\), where
+\(P=G\times_SY\), \(P'\) is the inverse image of the diagonal of \(X\) under
+\((g,y)\mapsto(\phi(y),g\phi(g^{-1}y))\), and the Weil restriction is along
+the projection \(P\to G\). So, if \(X\) is separated over \(S\) and \(Y\) is
+essentially free over \(S\), the stabilizer is a closed subgroup scheme
+\(H\) of \(G\) (Exposé~VI\textsubscript{B}, \SGARefLink{def:sga3-VIB-6.2.1}{6.2.1} and \SGARefLink{ex:sga3-VIB-6.2.4-a}{6.2.4~(a)}); then
+\(\phi^*\mathscr F\) is a quasi-coherent \(H\)-equivariant
+\(\mathcal O_Y\)-module, by (b), and if \(H\) is flat over \(S\) and
+\(Y\to S\) is quasi-compact and quasi-separated, its direct image on \(S\)
+is an \(H\)-\(\mathcal O_S\)-module, by (e). (The re-edition states this last
+point with \(G\), instead of \(H\), flat over \(S\); (e) needs the flatness
+of the group that acts.) For a section \(\tau:S\to X\) of a separated
+\(X\), the stabilizer is the closed subgroup scheme \(H=G\times_XS\), fibre
+product of \(g\mapsto g\tau\) and \(\tau\), and \(\tau^*\mathscr F\) is a
+quasi-coherent \(H\)-\(\mathcal O_S\)-module, by (b) and (d); it is an
+\(\mathscr A(H)\)-comodule if \(H\) is affine over \(S\), for instance if
+\(G\) is [6.7.1].
+
+\par\smallskip\noindent\SGAInlineRefTarget{sga3:i:subsection:6-8}\textit{(g) Equivariant sheaves on a group} [6.8].
+Let \(\pi:G\to S\) be an \(S\)-group scheme with unit section
+\(\varepsilon\), acting on itself by left translations.
+\SGAInlineRefTarget{sga3:i:proposition:6-8-1}The functors
+\(\mathscr E\mapsto\pi^*\mathscr E\) and
+\(\mathscr F\mapsto\varepsilon^*\mathscr F\) are quasi-inverse equivalences
+between the quasi-coherent \(\mathcal O_S\)-modules and the quasi-coherent
+\(G\)-equivariant \(\mathcal O_G\)-modules [6.8.1]. Indeed, as
+\(\pi\circ\pi_G=\pi\circ\mathrm{pr}_2\) on \(G\times_SG\), the identity
+\(\mathrm{pr}_2^*\pi^*\mathscr E=\pi_G^*\pi^*\mathscr E\) is a \(\theta\)
+satisfying the cocycle condition. Let
+\(\sigma=(\operatorname{id}_G,\varepsilon\pi):G\to G\times_SG\), so that
+\(\mathrm{pr}_2\circ\sigma=\varepsilon\pi\) and
+\(\pi_G\circ\sigma=\operatorname{id}_G\). For an equivariant \(\mathscr F\),
+\(\sigma^*\theta\) is an isomorphism
+\(\pi^*\varepsilon^*\mathscr F\to\mathscr F\), equivariant by the cocycle
+condition at the points \((g,h,e)\). For an equivariant morphism
+\(u:\pi^*\mathscr E\to\pi^*\mathscr E'\), applying \(\sigma^*\) to the
+condition of (d) gives \(u=\pi^*\varepsilon^*u\); with
+\(\varepsilon^*\pi^*=\operatorname{id}\), this proves the assertion.
+
+\SGAInlineRefTarget{sga3:i:remark:6-8-2}Let \(G\times_SG\) act on \(G\) by
+\((g_1,g_2)\cdot g=g_1gg_2^{-1}\). The stabilizer of \(\varepsilon\) is the
+diagonal \(H\simeq G\); so, for a quasi-coherent
+\((G\times_SG)\)-equivariant \(\mathcal O_G\)-module \(\mathscr F\),
+\(\varepsilon^*\mathscr F\) is an \(H\)-\(\mathcal O_S\)-module, by (f), and
+\(\mathscr F\mapsto\varepsilon^*\mathscr F\) is an equivalence onto the
+quasi-coherent \(G\)-\(\mathcal O_S\)-modules [6.8.2]. The re-edition
+derives this from descent (Exposé~IV, \S2; SGA~1, Exposé~VIII;
+R.~W.~Thomason, \textit{Equivariant resolution, linearization, and
+Hilbert's fourteenth problem over arbitrary base schemes}, Adv.\ Math.\
+\textbf{65} (1987), 16--34, 1.2--1.3). It also follows from the preceding
+equivalence: restricted to \(G\times1\), \(\mathscr F\) becomes
+\(\pi^*\mathscr E\), \(\mathscr E=\varepsilon^*\mathscr F\), with
+\(G\times1\) acting through identity maps of \(\mathscr E\); since
+\((1,b)=(gb^{-1}g^{-1},1)\,(gbg^{-1},b)\) and \((gbg^{-1},b)\) is conjugate
+by \((g,1)\) to the diagonal element \((b,b)\), the cocycle condition shows
+that \((g_1,g_2)\) acts at every point through the action of
+\(g_2\in H\) on \(\mathscr E\); conversely, this rule defines a
+\((G\times_SG)\)-equivariant structure on \(\pi^*\mathscr E\) for every
+\(G\)-\(\mathcal O_S\)-module \(\mathscr E\).
+
+\SGAInlineRefTarget{sga3:i:remark:6-8-3}For a quasi-coherent
+\(\mathcal O_S\)-module \(\mathscr E\), the sections of
+\(\pi_*\pi^*\mathscr E\) over an open \(V\) of \(S\) that are invariant
+under \(G\), those \(\gamma\) with \(g\gamma_{S'}=\gamma_{S'}\) for all
+\(S'\to V\) and \(g\in G(S')\), are exactly the \(\pi^*e\),
+\(e\in\Gamma(V,\mathscr E)\): invariance gives
+\(a^*\gamma=\mathrm{pr}_2^*\gamma\) over \(G_V\times_VG_V\), where
+\(a(g,h)=g^{-1}h\), and pulling back by the diagonal gives
+\(\gamma=\pi^*\varepsilon^*\gamma\). So
+\(\mathscr E\to\pi_*^G\pi^*\mathscr E\) is an isomorphism, without
+further hypothesis [6.8.3].
+
+If \(H\) is a flat \(S\)-group scheme acting on an \(S\)-scheme \(X\) flat
+over \(S\), then \(H\times_SX\) and \(H\times_SH\times_SX\) are flat over
+\(S\), so an \(H\)-equivariant structure on an \(\mathcal O_X\)-module
+\(\mathscr F\) (\(\theta\) and its cocycle condition in (d)) may be given,
+and checked, on
+the restriction of \(\mathbf W(\mathscr F)\) to points with values in
+\(S\)-schemes flat over \(S\) [6.8.4; the re-edition does not require \(X\)
+to be flat, but the universal points must be among these test schemes].
+Let \(X\) be an \(S\)-group scheme and \(Y\) a subgroup scheme of \(X\),
+flat over \(S\), with conormal sheaf \(\mathscr N_{Y/X}\) (EGA~IV\textsubscript{4},
+16.1.2). Then \(\mathscr N_{Y/X}\) is a \((Y\times_SY)\)-equivariant
+\(\mathcal O_Y\)-module, \(Y\times_SY\) acting on \(Y\) by
+\((y_1,y_2)\cdot y=y_1yy_2^{-1}\) [6.8.6]. Indeed, the conormal sheaf
+commutes with flat base change \(S'\to S\) (\textit{loc.\ cit.},
+16.2.2~(iii)) [6.8.5]; for \(S'\) flat over \(S\), a point \((y_1,y_2)\) of
+\(Y\times_SY\) with values in \(S'\) acts on \(X_{S'}\) by the automorphism
+\(x\mapsto y_1xy_2^{-1}\), which preserves \(Y_{S'}\) and so induces
+isomorphisms between the pull-backs of
+\(\mathscr N_{Y_{S'}/X_{S'}}=\mathscr N_{Y/X}\otimes\mathcal O_{Y_{S'}}\) at a
+point \(y\) and at its transform; these satisfy the cocycle relation, and
+the preceding remark applies, \(Y\) and \(Y\times_SY\) being flat over
+\(S\).
+\par\medskip
 

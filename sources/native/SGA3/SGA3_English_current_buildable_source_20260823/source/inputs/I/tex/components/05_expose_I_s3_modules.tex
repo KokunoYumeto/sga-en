@@ -23,183 +23,43 @@ two \(\mathbf O\)-modules \(\mathbf F\) and \(\mathbf F'\), hence the
 abelian group
 \(\operatorname{Hom}_{\mathbf O}(\mathbf F,\mathbf F')\), and the category
 of \(\mathbf O\)-modules, denoted \((\mathbf O\text{-Mod.})\).
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:lemma:3-1-1}\textbf{Lemma 3.1.1.}\footnotemark
-\textit{The category \((\mathbf O\text{-Mod.})\) has the structure of an
-abelian category, defined objectwise. Moreover,
-\((\mathbf O\text{-Mod.})\) satisfies axiom \(\mathrm{(AB\ 5)}\)
-(see \([\mathrm{Gr}57,\,1.5]\)); that is, arbitrary direct sums exist, and
-if \(\mathbf M\) is an \(\mathbf O\)-module, \(\mathbf N\) a submodule,
-and \((\mathbf F_i)_{i\in I}\) an increasing filtered family of submodules
-of \(\mathbf M\), then
-\[
-  \bigcup_{i\in I}(\mathbf F_i\cap\mathbf N)
-    =\left(\bigcup_{i\in I}\mathbf F_i\right)\cap\mathbf N.
-\]}
-
-Indeed, let \(f:\mathbf F\to\mathbf F'\) be a morphism of
-\(\mathbf O\)-modules. Define the \(\mathbf O\)-modules
-\(\operatorname{Ker}f\) (respectively,
-\(\operatorname{Im}f\) and \(\operatorname{Coker}f\)) by setting, for every
-\(S\in\operatorname{Ob}(\mathscr C)\),
-\[
-  (\operatorname{Ker}f)(S)=\operatorname{Ker}f(S)
-\]
-(respectively, the analogous formulas). Then \(\operatorname{Ker}f\)
-(respectively, \(\operatorname{Coker}f\)) is a kernel (respectively, a
-cokernel) of \(f\), and there is an isomorphism of \(\mathbf O\)-modules
-\[
-  \mathbf F/\operatorname{Ker}f
-    \xrightarrow{\ \sim\ }\operatorname{Im}f.
-\]
-This proves that \((\mathbf O\text{-Mod.})\) is an abelian category.
-
-Arbitrary direct sums exist and are defined objectwise. Finally, if
-\(\mathbf M\) is an \(\mathbf O\)-module, \(\mathbf N\) a submodule, and
-\((\mathbf F_i)_{i\in I}\) an increasing filtered family of submodules of
-\(\mathbf M\), then the inclusion
-\[
-  \bigcup_{i\in I}(\mathbf F_i\cap\mathbf N)
-    \subset
-  \left(\bigcup_{i\in I}\mathbf F_i\right)\cap\mathbf N
-\]
-is an equality. Indeed, if \(S\in\operatorname{Ob}(\mathscr C)\) and
-\[
-  x\in\mathbf N(S)\cap\bigcup_i\mathbf F_i(S),
-\]
-there is an \(i\in I\) such that
-\(x\in\mathbf N(S)\cap\mathbf F_i(S)\).
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:proposition:3-1-2}\textbf{Proposition 3.1.2.}\footnotemark[\value{footnote}]
-\textit{Suppose that the category \(\mathscr C\) is small, that is, that
-\(\operatorname{Ob}(\mathscr C)\) is a set. Then
-\((\mathbf O\text{-Mod.})\) has a generator, and consequently has enough
-injective objects.}
-\footnotetext{Editor's note: Statements \SGARefLink{sga3:i:lemma:3-1-1}{3.1.1} and \SGARefLink{sga3:i:proposition:3-1-2}{3.1.2} have been added to
-show that the category \((\mathbf O\text{-Mod.})\) is abelian and satisfies
-axiom \(\mathrm{(AB\ 5)}\), and moreover has enough injective objects when
-the category \(\mathscr C\) is small. An error in \SGARefLink{sga3:i:proposition:3-1-2}{3.1.2}, pointed out in 2016
-by Linyuan Liu, is corrected here.}
-
-\textit{Proof.}
-For every object \(S\) of \(\mathscr C\), define the
-\(\mathbf O\)-module \(\mathbf O_S\) as follows. For every object \(S'\),
-\(\mathbf O_S(S')\) is a direct sum of copies of \(\mathbf O(S')\) indexed
-by \(\operatorname{Hom}(S',S)\), that is,
-\[
-  \mathbf O_S(S')
-    =\bigoplus_{g:S'\to S}\mathbf O(S')g.
-\]
-For every morphism \(f:S''\to S'\), writing \(f^*\) for the ring
-homomorphism \(\mathbf O(S')\to\mathbf O(S'')\), the morphism
-\[
-  \mathbf O_S(f):\mathbf O_S(S')\longrightarrow\mathbf O_S(S'')
-\]
-sends each element \(ag\) of \(\mathbf O_S(S')\), where
-\(a\in\mathbf O(S')\) and \(g:S'\to S\), to the element
-\(f^*(a)(g\circ f)\) of \(\mathbf O_S(S'')\). It is readily checked that
-this defines a functor in \(\mathbf O\)-modules.
-
-Since \(\operatorname{Ob}(\mathscr C)\) is a set by hypothesis, we may form
-the direct sum
-\[
-  \mathbf G=\bigoplus_{S\in\operatorname{Ob}(\mathscr C)}\mathbf O_S.
-\]
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:lemma:3-1-2-1}\textbf{Lemma 3.1.2.1.}
-\textit{Let \(\mathbf F\) be an \(\mathbf O\)-module. For every
-\(S\in\operatorname{Ob}(\mathscr C)\), every element
-\(x\in\mathbf F(S)\) defines a unique morphism of \(\mathbf O\)-modules
-\[
-  \mathbf x:\mathbf O_S\longrightarrow\mathbf F
-\]
-such that \(\mathbf x(1\operatorname{id}_S)=x\).}
-
-\textit{Proof.}
-Let \(\phi:\mathbf O_S\to\mathbf F\) be a morphism of
-\(\mathbf O\)-modules such that
-\(\phi(1\operatorname{id}_S)=x\). Let \(g:S'\to S\) and
-\(a\in\mathbf O(S')\). The \(\mathbf O(S')\)-linearity and the
-commutativity of the diagram
-
-\begin{center}
-  \input{native_diagrams/exp1/diag_009_OS_g_naturality_square}
-\end{center}
-
-imply that
-\[
-  \phi(ag)
-    =a\phi(1g)
-    =a\mathbf F(g)\bigl(\phi(1\operatorname{id}_S)\bigr)
-    =a\mathbf F(g)(x).
-\]
-Thus \(\phi\), if it exists, is determined by the preceding equality.
-Conversely, if \(\phi\) is defined in this way, then for every
-\(f:S''\to S'\) one has
-\begin{align*}
-  \phi\circ\mathbf O_S(f)(ag)
-    &=\phi\bigl(f^*(a)(g\circ f)\bigr)\\
-    &=f^*(a)\mathbf F(g\circ f)(x)\\
-    &=\mathbf F(f)\bigl(a\mathbf F(g)(x)\bigr)\\
-    &=\mathbf F(f)\circ\phi(ag),
-\end{align*}
-that is, the diagram
-
-\begin{center}
-  \input{native_diagrams/exp1/diag_010_OS_f_naturality_square}
-\end{center}
-
-is commutative. This proves the lemma.
-
-Now let \(\mathbf F\) be an \(\mathbf O\)-module. For each
-\(S\in\operatorname{Ob}(\mathscr C)\), let \(F_0(S)\) be a set of
-generators of the \(\mathbf O(S)\)-module \(\mathbf F(S)\), and let
-\(\mathbf L_S\) be the direct sum, indexed by \(F_0(S)\), of copies of
-\(\mathbf O_S\). By the lemma, we obtain a morphism of
-\(\mathbf O\)-modules
-\[
-  \mathbf L_S\longrightarrow\mathbf F
-\]
-such that the morphism \(\mathbf L_S(S)\to\mathbf F(S)\) is surjective,
-and hence is an epimorphism in the category of
-\(\mathbf O(S)\)-modules.
-
-Set
-\[
-  I=\bigsqcup_{S\in\operatorname{Ob}(\mathscr C)}F_0(S).
-\]
-We then obtain a morphism of \(\mathbf O\)-modules
-\[
-  \mathbf G^{\oplus I}
-    \longrightarrow
-  \bigoplus_{S\in\operatorname{Ob}(\mathscr C)}\mathbf L_S
-    \longrightarrow
-  \mathbf F
-\]
-which is an epimorphism objectwise, and hence an epimorphism of
-\((\mathbf O\text{-Mod.})\). This shows that \(\mathbf G\) is a generator
-of \((\mathbf O\text{-Mod.})\) (see \([\mathrm{Gr}57,\,1.9.1]\)). Since
-\((\mathbf O\text{-Mod.})\) satisfies \(\mathrm{(AB\ 5)}\), it follows
-from \([\mathrm{Gr}57,\,1.10.1]\) that
-\((\mathbf O\text{-Mod.})\) has enough injective objects.
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:3-1-3}\textbf{Remark 3.1.3.}
-If \(\mathbf O_0\) is the \(\widehat{\mathscr C}\)-ring defined by
+Note that if \(\mathbf O_0\) is the \(\widehat{\mathscr C}\)-ring defined by
 \[
   \mathbf O_0(S)=\mathbb Z
 \]
 (which must not be confused with the functor associated with the constant
 object \(\mathbb Z\)), then the category of \(\mathbf O_0\)-modules is
 isomorphic to the category of commutative
-\(\widehat{\mathscr C}\)-groups.
+\(\widehat{\mathscr C}\)-groups. The category \((\mathbf O\text{-Mod.})\) is
+abelian.
+
+\par\medskip\noindent\SGAInlineRefTarget{sga3:i:lemma:3-1-1}%
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~I, 3.1.1
+and 3.1.2; our formulation). Kernels, cokernels, images and arbitrary
+direct sums of \(\mathbf O\)-modules can be formed pointwise
+(\(S\mapsto\operatorname{Ker}(u(S))\), and so on); they have the required
+universal properties, a morphism of \(\mathbf O\)-modules being a family of
+module homomorphisms compatible with the maps
+\(\mathbf F(S'')\to\mathbf F(S')\). The canonical morphism from coimage to
+image is an isomorphism, being one pointwise; so
+\((\mathbf O\text{-Mod.})\) is abelian, a sequence being exact if and only
+if it is exact at every \(S\). As filtered direct limits of modules are
+exact, it satisfies axiom \((\mathrm{AB}\,5)\) of A.~Grothendieck, \textit{Sur quelques points d'algèbre homologique}, Tôhoku Math.\ J.\ \textbf{9} (1957), 119--221, 1.5. If
+\(\mathscr C\) is small, it has a generator. For
+\(S\in\operatorname{Ob}(\mathscr C)\), let \(\mathbf O_{(S)}\) be the
+\(\mathbf O\)-module \(S'\mapsto\mathbf O(S')^{(\operatorname{Hom}(S',S))}\),
+free on \(\mathbf h_S\); by 1.1, the morphisms
+\(\mathbf O_{(S)}\to\mathbf F\) correspond to the elements
+\(x\in\mathbf F(S)\), the basis element \(\operatorname{id}_S\) going to
+\(x\). The resulting morphism
+\(\bigoplus_{S,\,x\in\mathbf F(S)}\mathbf O_{(S)}\to\mathbf F\) is surjective
+at every \(S\); so \(\bigoplus_S\mathbf O_{(S)}\) is a generator, and
+\((\mathbf O\text{-Mod.})\) has enough injective objects
+(\textit{loc.\ cit.}, 1.10.1).
+\par\medskip
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:i:definition:3-1-4}\textbf{Definition 3.1.4.}
-Notice that if \(\mathbf F\) is an \(\mathbf O\)-module, then for every
+\noindent\SGAInlineRefTarget{sga3:i:definition:3-1-4}Notice that if \(\mathbf F\) is an \(\mathbf O\)-module, then for every
 \(S\in\operatorname{Ob}(\mathscr C)\), \(\mathbf F_S\) is an
 \(\mathbf O_S\)-module. We may therefore define an abelian
 \(\widehat{\mathscr C}\)-group
@@ -249,22 +109,16 @@ One defines naturally the abelian group
 \(\operatorname{Hom}_{\mathbf G\text{-}\mathbf O}
   (\mathbf F,\mathbf F')\), and hence the additive category of
 \(\mathbf G\)-\(\mathbf O\)-modules, denoted
-\((\mathbf G\text{-}\mathbf O\text{-Mod.})\).
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:3-2-1}\textbf{Remark 3.2.1.}
-The reader will notice that \((\mathbf G\text{-}\mathbf O\text{-Mod.})\)
+\((\mathbf G\text{-}\mathbf O\text{-Mod.})\). The reader will notice that the latter
 may also be defined as the category of \(\mathbf O[\mathbf G]\)-modules,
 where \(\mathbf O[\mathbf G]\) is the algebra of the
 \(\widehat{\mathscr C}\)-group \(\mathbf G\) over the
-\(\widehat{\mathscr C}\)-ring \(\mathbf O\), whose definition is clear.
-\footnote{Editor's note: the sentence which follows has been added; it will
-be used in \SGARefLink{sga3:i:section:5}{Section~5}.}
-Consequently, by \SGARefLink{sga3:i:lemma:3-1-1}{3.1.1} and \SGARefLink{sga3:i:proposition:3-1-2}{3.1.2},
-\((\mathbf G\text{-}\mathbf O\text{-Mod.})\) is an abelian category
-satisfying axiom \(\mathrm{(AB\ 5)}\); moreover, if \(\mathscr C\) is
-small, \((\mathbf G\text{-}\mathbf O\text{-Mod.})\) has enough injective
-objects.
+\(\widehat{\mathscr C}\)-ring \(\mathbf O\), whose definition is clear.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, notes
+here that \((\mathbf G\text{-}\mathbf O\text{-Mod.})\), being the category
+of \(\mathbf O[\mathbf G]\)-modules, is therefore abelian, satisfies
+\((\mathrm{AB}\,5)\), and has enough injective objects if \(\mathscr C\) is
+small (Addition in 3.1, which applies to modules over any
+\(\widehat{\mathscr C}\)-ring, commutative or not); this is used in 5.2.}
 
 All the constructions of this section specialize immediately to the case
 where \(\mathbf G\) (or \(\mathbf O\), or both) is representable by an
@@ -279,5 +133,5 @@ in each particular case.
 
 We shall now apply what we have just done to the category of schemes, denoted
 \((\mathbf{Sch})\), and more generally to the categories
-\((\mathbf{Sch})_{/S}\), also denoted \((\mathbf{Sch}_{/S})\).
+\((\mathbf{Sch})_{/S}\).
 

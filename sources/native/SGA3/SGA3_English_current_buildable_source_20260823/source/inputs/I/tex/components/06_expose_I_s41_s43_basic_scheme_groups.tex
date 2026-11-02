@@ -25,12 +25,15 @@ scheme \(E_{\mathbb Z}\), and for every scheme \(S\), an \(S\)-scheme
 \[
   E_S=(E_{\mathbb Z})_S.
 \]
-Recall (cf. \emph{loc. cit.}) that for every \(S\)-scheme \(T\),
+Recall that for every scheme \(T\),
 \[
-  \operatorname{Hom}_S(T,E_S)
+  \operatorname{Hom}(T,E_S)
 \]
 is the set of locally constant maps from the topological space underlying
-\(T\) to \(E\).
+\(T\) to \(E\).\footnote{Translator's note: by the abuse of language stated at the beginning of
+this section, \(T\) is a scheme over \(S\) and the morphisms are
+\(S\)-morphisms; the Gille--Polo re-edition (2011), Exposé~I, writes
+\(\operatorname{Hom}_S(T,E_S)\) for an \(S\)-scheme \(T\) (compare 1.8).}
 
 The functor \(E\mapsto E_S\) commutes with finite inverse limits. In
 particular, if \(G\) is a group, then \(G_S\) is an \(S\)-group scheme;
@@ -77,7 +80,15 @@ corresponding to the morphisms of \(S\)-schemes
   e_G:S\longrightarrow G.
 \]
 The maps \(\Delta\) and \(\varepsilon\) satisfy the following conditions,
-which express that \(G\) is an \(S\)-monoid.
+which express that \(G\) is an \(S\)-monoid.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, adds that the
+inverse morphism \(G\to G\) corresponds to an endomorphism \(\tau\) of the
+\(\mathcal O_S\)-algebra \(\mathscr A(G)\) which, with \(\Delta\) and
+\(\varepsilon\), makes \(\mathscr A(G)\) a Hopf \(\mathcal O_S\)-algebra: if
+\(m\) is the multiplication of \(\mathscr A(G)\) and
+\(\eta:\mathcal O_S\to\mathscr A(G)\) its unit, the relations
+\(gg^{-1}=e=g^{-1}g\) become
+\(m\circ(\operatorname{Id}\otimes\tau)\circ\Delta=\eta\circ\varepsilon
+=m\circ(\tau\otimes\operatorname{Id})\circ\Delta\).}
 
 \medskip
 \noindent\textbf{(HA 1)}
@@ -198,71 +209,30 @@ scheme \(\operatorname{Spec}\mathbb Z[T]\), which we denote by
 \(\mathbf O\) when it is regarded as endowed with its ring-scheme
 structure.
 
-For every scheme \(S\),
-\[
-  \mathbf O_S
-    =S\times_{\operatorname{Spec}\mathbb Z}
-       \operatorname{Spec}\mathbb Z[T]
-    =\operatorname{Spec}(\mathcal O_S[T])
-\]
-is therefore an \(S\)-ring scheme affine over \(S\). (Note: in EGA~II,
+For every \(S\), one therefore has an \(S\)-ring affine over \(S\), denoted
+\(\mathbf O_S\). (Note: in EGA~II,
 1.7.13, \(\mathbf O_S\) is denoted by \(S[T]\).)
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:paragraph:4-3-3-1}\textbf{4.3.3.1.}
-\footnote{Editor's note: this paragraph has been added; it will be useful
-later (cf. II, \SGARefLink{sga3:i:subsection:1-3}{1.3}).}
-For every object \(X\) of \(\widehat{(\mathbf{Sch})}\),
-\[
-  \mathbf O(X)=\operatorname{Hom}(X,\mathbf O)
-\]
-has a ring structure, functorial in \(X\). In particular, if \(X'\) is a
-scheme and morphisms \(x:X'\to X\) and \(f:X\to\mathbf O\) are given
-(that is, \(f\in\mathbf O(X)\)), then
-\[
-  f(x)=f\circ x
-    \in\mathbf O(X')
-    =\Gamma(X',\mathcal O_{X'}).
-\]
+\par\medskip\noindent\SGAInlineRefTarget{sga3:i:paragraph:4-3-3-1}%
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~I,
+4.3.3.1; our formulation). As \(\mathbf O\) is a ring object, the set
+\(\mathbf O(X)=\operatorname{Hom}(X,\mathbf O)\) is a ring, functorially in
+\(X\), for every object \(X\) of \(\widehat{(\mathbf{Sch})}\); for a scheme
+\(X'\) it is \(\Gamma(X',\mathcal O_{X'})\), and \(f\in\mathbf O(X)\) takes at
+a point \(x:X'\to X\) the value \(f(x)=f\circ x\in\Gamma(X',\mathcal O_{X'})\).
+For a morphism \(\pi:M\to X\) of \(\widehat{(\mathbf{Sch})}\), put
+\(\mathbf O_X=\mathbf O\times X\). An \emph{\(\mathbf O_X\)-module
+structure} on \(M\) is the datum, for every \(X\)-scheme \(X'\), of an
+\(\mathbf O(X')\)-module structure on \(\operatorname{Hom}_X(X',M)\),
+functorial in \(X'\); equivalently, an addition \(M\times_XM\to M\) and a
+scalar multiplication \(\mathbf O_X\times_XM=\mathbf O\times M\to M\), both
+morphisms over \(X\), making each fibre
+\(M(x)=\{m\in M(S)\mid\pi(m)=x\}\), \(x\in X(S)\), an
+\(\mathbf O(S)\)-module. Then \(\operatorname{Hom}_X(Y,M)\) is an
+\(\mathbf O(Y)\)-module, functorially in \(Y\), for every object \(Y\) of
+\(\widehat{(\mathbf{Sch})}_{/X}\), representable or not. These definitions
+make sense for a ring object of \(\widehat{\mathscr C}\), for any category
+\(\mathscr C\).
+\par\medskip
 
-\medskip
-\noindent\textbf{Definition.}
-Let \(\pi:M\to X\) be a morphism in \(\widehat{(\mathbf{Sch})}\), and set
-\[
-  \mathbf O_X=\mathbf O\times X.
-\]
-We say that \(M\) is an \(\mathbf O_X\)-module if, for every \(X\)-scheme
-\(X'\), the set
-\[
-  \operatorname{Hom}_X(X',M)
-\]
-has been endowed with an \(\mathbf O(X')\)-module structure, functorial in
-\(X'\).
-
-This is equivalent to giving an \(X\)-abelian-group law
-\[
-  \mu:M\times_X M\longrightarrow M
-\]
-and an \emph{external law}
-\[
-  \mathbf O\times M
-    =\mathbf O_X\times_X M
-    \longrightarrow M,
-  \qquad
-  (f,m)\longmapsto f\cdot m,
-\]
-which is an \(X\)-morphism, that is,
-\(\pi(f\cdot m)=\pi(m)\), and which, for every \(x\in X(S)\), endows
-\[
-  M(x)=\{m\in M(S)\mid\pi(m)=x\}
-\]
-with an \(\mathbf O(S)\)-module structure.
-
-In that case, for every
-\(Y\in\operatorname{Ob}\bigl(\widehat{(\mathbf{Sch})}_{/X}\bigr)\),
-not necessarily representable,
-\[
-  \operatorname{Hom}_X(Y,M)=\Gamma(M_Y/Y)
-\]
-is an \(\mathbf O(Y)\)-module, functorially in \(Y\).
 

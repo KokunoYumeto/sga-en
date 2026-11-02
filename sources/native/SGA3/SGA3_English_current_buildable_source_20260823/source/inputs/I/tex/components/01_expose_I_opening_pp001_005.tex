@@ -13,7 +13,11 @@ definitions and establishes notation that will often be used in the sequel;
 the second treats group cohomology and culminates in \SGARefLink{sga3:i:theorem:5-3-3}{Theorem~5.3.3}, on the
 vanishing of the cohomology of diagonalizable groups.
 
-We choose once and for all a Universe.
+We choose once and for all a Universe.\footnote{Translator's note: on universes, see SGA~4, Exposé~I, \S0 and the
+Appendix. The Gille--Polo re-edition (2011), Exposé~I, gives this reference
+and also refers to the discussion in M.~Demazure and P.~Gabriel,
+\textit{Groupes algébriques}, tome~I, Masson and North-Holland, 1970,
+p.~xxvi.}
 All definitions and constructions will be relative to this Universe. We shall
 systematically allow ourselves the following abuse of language. To define a
 functor \(f:\mathscr C\to\mathscr C'\), we shall be content to define the
@@ -45,7 +49,7 @@ which associates with every \(X\in\operatorname{Ob}(\mathscr C)\) the functor
   \mathbf h_X(S)=\operatorname{Hom}(S,X).
 \]
 For every functor \(\mathbf F\in\operatorname{Ob}(\widehat{\mathscr C})\),
-one has (see, for example, EGA~\(0_{\mathrm{III}}\), 8.1.4) a bijection
+one has (see, for example, EGA~\(0_{\mathrm{III}}\), 8.1) a bijection
 \[
   \operatorname{Hom}(\mathbf h_X,\mathbf F)
     \xrightarrow{\ \sim\ } \mathbf F(X).
@@ -59,44 +63,53 @@ canonical map
   \operatorname{Hom}_{\widehat{\mathscr C}}
     (\mathbf h_X,\mathbf h_Y)
 \]
-is bijective; that is, the functor \(\mathbf h\) is fully faithful. It
+is bijective; the functor \(\mathbf h\) is fully faithful. It
 therefore defines an isomorphism of \(\mathscr C\) onto a full subcategory of
 \(\widehat{\mathscr C}\), and an equivalence of \(\mathscr C\) with the full
 subcategory of \(\widehat{\mathscr C}\) formed by the representable functors
 (that is, the functors isomorphic to one of the form \(\mathbf h_X\)). In the
 sequel we shall often identify \(X\) with \(\mathbf h_X\). The following
-paragraphs are intended to show that this identification can be made safely.
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:1-1-1}\textbf{Remark 1.1.1.}\footnote{Editor's note: this remark has been
-added.}
-We sometimes need the following variant. Let \(\mathscr D\) be a full
-subcategory of \(\mathscr C\), and let
-\(X,Y\in\operatorname{Ob}(\mathscr D)\). Denote by \(\mathbf h'_X\) and
-\(\mathbf h'_Y\) the restrictions of \(\mathbf h_X\) and \(\mathbf h_Y\) to
-\(\mathscr D\). Then
-\[
-  \operatorname{Hom}_{\mathscr C}(X,Y)
-  =\operatorname{Hom}_{\mathscr D}(X,Y)
-  =\operatorname{Hom}_{\widehat{\mathscr D}}
-      (\mathbf h'_X,\mathbf h'_Y).
-\]
-Thus, to give a morphism \(X\to Y\) ``is the same thing'' as to give, for
-every \(T\in\operatorname{Ob}(\mathscr D)\), a map
-\[
-  \phi(T):\operatorname{Hom}(T,X)\longrightarrow\operatorname{Hom}(T,Y)
-\]
-functorially in \(T\).
+paragraphs are intended to show that this identification can be made safely.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, adds here a
+variant. In our formulation: if \(\mathscr D\) is a full subcategory of
+\(\mathscr C\) containing \(X\) and \(Y\), and \(\mathbf h'_X\),
+\(\mathbf h'_Y\) are the restrictions of \(\mathbf h_X\), \(\mathbf h_Y\) to
+\(\mathscr D\), the bijection above, applied in \(\widehat{\mathscr D}\),
+gives \(\operatorname{Hom}(\mathbf h'_X,\mathbf h'_Y)\simeq\mathbf h'_Y(X)
+=\operatorname{Hom}(X,Y)\). Thus a morphism \(X\to Y\) is the same as a
+family of maps \(\operatorname{Hom}(T,X)\to\operatorname{Hom}(T,Y)\),
+\(T\in\operatorname{Ob}(\mathscr D)\), functorial in \(T\).}
 
 \subsection*{\SGAInlineRefTarget{sga3:i:subsection:1-2}1.2.}
 
+A monomorphism in \(\widehat{\mathscr C}\) is precisely a morphism
+\(\mathbf F\to\mathbf G\) such that, for every
+\(S\in\operatorname{Ob}(\mathscr C)\), the corresponding map of sets
+\(\mathbf F(S)\to\mathbf G(S)\) is injective.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, adds a proof and
+the corresponding statement for epimorphisms. In our formulation: a morphism
+\(u:\mathbf F\to\mathbf G\) injective at every \(S\) is clearly a
+monomorphism; conversely, if \(u\) is a monomorphism and
+\(x,y\in\mathbf F(S)\) have the same image in \(\mathbf G(S)\), the
+morphisms \(\mathbf h_S\to\mathbf F\) defined by \(x\) and \(y\) (1.1) have
+the same composite with \(u\), hence are equal, and \(x=y\). Likewise,
+\(u\) is an epimorphism if and only if every \(u(S)\) is surjective: the
+pushout \(\mathbf G\amalg_{\mathbf F}\mathbf G\) is computed pointwise, and
+the two canonical maps from \(\mathbf G(S)\) to
+\(\mathbf G(S)\amalg_{\mathbf F(S)}\mathbf G(S)\) agree only if
+\(\mathbf F(S)\to\mathbf G(S)\) is surjective.}
 We shall say that \(\mathbf F\) is a \emph{subobject} (or a subfunctor) of
 \(\mathbf G\) if \(\mathbf F(S)\) is a subset of \(\mathbf G(S)\) for every
-\(S\).\footnote{Editor's note: the order has been changed so that fiber
-products are introduced before monomorphisms.}
+\(S\).
 
 In \(\widehat{\mathscr C}\), arbitrary inverse limits exist and are computed
-pointwise:
+pointwise\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, adds two
+remarks here. Arbitrary direct limits also exist in \(\widehat{\mathscr C}\)
+and are computed pointwise, but \(\mathbf h\) does not commute with them in
+general: for instance, if \(\varnothing\) is an initial object of
+\(\mathscr C\), then \(\mathbf h_\varnothing(\varnothing)\) is not empty, so
+\(\mathbf h_\varnothing\) is not the initial object of
+\(\widehat{\mathscr C}\). And the kernel of a pair of morphisms
+\(u,v:\mathbf F\rightrightarrows\mathbf G\) is the subfunctor
+\(S\mapsto\{x\in\mathbf F(S)\mid u(x)=v(x)\}\) of \(\mathbf F\).}:
 \[
   \left(\varprojlim_i\mathbf F_i\right)(S)
     =\varprojlim_i\mathbf F_i(S).
@@ -117,36 +130,6 @@ morphism to \(\underline{\mathbf e}\), and we set
     =\mathbf F\mathbin{\times_{\underline{\mathbf e}}}\mathbf F'.
 \]
 
-The functor \(\mathbf h\) commutes with inverse limits. In particular, for
-\(X\times X'\) to exist, where
-\(X,X'\in\operatorname{Ob}(\mathscr C)\), respectively for \(\mathscr C\) to
-admit a final object \(e\), it is necessary and sufficient that
-\(\mathbf h_X\times\mathbf h_{X'}\), respectively
-\(\underline{\mathbf e}\), be representable; in that case
-\[
-  \mathbf h_X\times\mathbf h_{X'}\simeq\mathbf h_{X\times X'},
-  \qquad
-  \mathbf h_e\simeq\underline{\mathbf e}.
-\]
-
-A monomorphism in \(\widehat{\mathscr C}\) is precisely a morphism
-\(\mathbf F\to\mathbf G\) such that, for every
-\(S\in\operatorname{Ob}(\mathscr C)\), the corresponding map of sets
-\(\mathbf F(S)\to\mathbf G(S)\) is injective.\footnote{Editor's note: if
-\(\mathbf F(S)\to\mathbf G(S)\) is injective for every \(S\), it is clear
-that \(\mathbf F\to\mathbf G\) is a monomorphism. The converse follows by
-considering
-\(\mathbf F\times_{\mathbf G}\mathbf F\rightrightarrows\mathbf F\to
-\mathbf G\). Thus \(\mathbf F\to\mathbf G\) is a monomorphism if and only if
-the diagonal morphism
-\(\mathbf F\to\mathbf F\times_{\mathbf G}\mathbf F\) is an isomorphism
-(see EGA~I, 5.3.8). Similarly, a pointwise surjective morphism is an
-epimorphism, and the converse follows by considering the pushout
-\(\mathbf G\amalg_{\mathbf F}\mathbf G\); see the proof of \SGARefLink{sga3:i:paragraph:4-4-4}{Lemma~4.4.4} in
-Expos\'e~IV.}
-
-\medskip
-\noindent\textit{The functor \(\Gamma\).}
 For every \(\mathbf F\in\operatorname{Ob}(\widehat{\mathscr C})\), set
 \[
   \Gamma(\mathbf F)=\operatorname{Hom}
@@ -158,6 +141,18 @@ An element of \(\Gamma(\mathbf F)\) is therefore a family
 \(f:S'\to S''\) of \(\mathscr C\),
 \[
   \mathbf F(f)(\gamma_{S''})=\gamma_{S'}.
+\]
+
+The functor \(\mathbf h\) commutes with inverse limits. In particular, for
+\(X\times X'\) to exist, where
+\(X,X'\in\operatorname{Ob}(\mathscr C)\), respectively for \(\mathscr C\) to
+admit a final object \(e\), it is necessary and sufficient that
+\(\mathbf h_X\times\mathbf h_{X'}\), respectively
+\(\underline{\mathbf e}\), be representable; in that case
+\[
+  \mathbf h_X\times\mathbf h_{X'}\simeq\mathbf h_{X\times X'},
+  \qquad
+  \mathbf h_e\simeq\underline{\mathbf e}.
 \]
 For \(X\in\operatorname{Ob}(\mathscr C)\), set
 \(\Gamma(X)=\Gamma(\mathbf h_X)\). If \(\mathscr C\) has a final object
@@ -184,9 +179,9 @@ category \((\mathscr C_{/S})_{/f}\), which by abuse of language we denote by
 \[
   \mathscr C_{/T}\simeq(\mathscr C_{/S})_{/T}.
 \]
-This construction also applies to \(\widehat{\mathscr C}\); in particular,
-one obtains the category \(\widehat{\mathscr C}_{/\mathbf h_S}\). On the
-other hand, one may form the category \(\widehat{\mathscr C_{/S}}\).
+This construction applies in particular to the categories
+\(\widehat{\mathscr C}\), \(\widehat{\mathscr C_{/S}}\), etc.; in particular,
+one defines the category \(\widehat{\mathscr C}_{/\mathbf h_S}\).
 
 If \(f:T\to S\) is an object of \(\mathscr C_{/S}\), then \(\Gamma(f)\)
 is identified with the set \(\Gamma(T/S)\) of sections of \(T\) over \(S\),
@@ -218,7 +213,13 @@ First let \(H:\mathbf F\to\mathbf h_S\) be an object of
 \(\widehat{\mathscr C}_{/\mathbf h_S}\). We must define a functor
 \(\alpha_S(H)\) on \(\mathscr C_{/S}\). For an object
 \(f:T\to S\) of \(\mathscr C_{/S}\), define \(\alpha_S(H)(f)\) to be the
-inverse image of \(f\in\mathbf h_S(T)\) under the map
+inverse image\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, adds the
+representable case. In our formulation: if \(\mathbf F=\mathbf h_X\), then
+\(H\) is given by a morphism \(h:X\to S\), the map \(H(T)\) is
+\(g\mapsto h\circ g\), and \(\alpha_S(H)(f)\) is the set of the \(g:T\to X\)
+with \(h\circ g=f\), that is, \(\operatorname{Hom}_{\mathscr C_{/S}}(f,h)\);
+so \(\alpha_S(H)\) is the functor on \(\mathscr C_{/S}\) represented by the
+object \(h\) (compare 1.5.1).} of \(f\in\mathbf h_S(T)\) under the map
 \[
   H(T):\mathbf F(T)\longrightarrow\mathbf h_S(T).
 \]
@@ -232,7 +233,7 @@ is immediate that the assignments
   \qquad
   u\longmapsto\alpha_S(H)(u)
 \]
-define a functor on \(\mathscr C_{/S}\), hence an object \(\alpha_S(H)\) of
+define a functor on \(\mathscr C_{/S}\), hence an object of
 \(\widehat{\mathscr C_{/S}}\).
 
 Finally, let \(H:\mathbf F\to\mathbf h_S\) and
@@ -299,8 +300,8 @@ corresponding object of \(\widehat{\mathscr C_{/S}}\), then
     \simeq\Gamma(H)
     \simeq\Gamma(\mathbf F/\mathbf h_S).
 \]
-The equivalence \(\alpha_S\) also commutes with the functors \(\mathbf h\).
-That is, if \(f:T\to S\) is an object of \(\mathscr C_{/S}\), then
+The equivalence \(\alpha_S\) commutes with the functors \(\mathbf h\):
+if \(f:T\to S\) is an object of \(\mathscr C_{/S}\), then
 \(\mathbf h_f:\mathbf h_T\to\mathbf h_S\) is an object of
 \(\widehat{\mathscr C}_{/\mathbf h_S}\), and its image under \(\alpha_S\)
 is precisely \(\mathbf h_{\mathscr C_{/S}}(f)\), where

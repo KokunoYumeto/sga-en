@@ -4,14 +4,14 @@
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:paragraph:4-4-1}\textbf{4.4.1.}
 The construction of \(\mathbb G_m\) generalizes as follows. Let \(M\)
-be a commutative group, and let \(M_{\mathbb Z}\) be the group scheme
+be a commutative group, and let \(M_S\) be the \(S\)-group scheme
 associated with it by the procedure of \SGARefLink{sga3:i:subsection:4-1}{4.1}. Consider the functor defined
 by
 \[
   \mathbf D(M)(S)
     =\operatorname{Hom}_{\mathrm{groups}}(M,\mathbb G_m(S))
     \simeq
-      \underline{\operatorname{Hom}}_{S\text{-}\mathbf{Gr}}
+      \operatorname{Hom}_{S\text{-}\mathbf{Gr}}
         (M_S,\mathbb G_{m,S}).
 \]
 
@@ -131,10 +131,8 @@ finite type); see \SGARefLink{sga3:viii:proposition:2:1}{Expos\'e VIII, 2.1}.
 
 \subsection*{\SGAInlineRefTarget{sga3:i:subsection:4-5}4.5. Other examples of groups}
 
-The preceding procedure applies to the ``classical groups'' (linear
-groups \(\operatorname{GL}_n\), symplectic groups
-\(\operatorname{Sp}_n\), orthogonal groups \(\operatorname O_n\), and
-so forth). For example, one defines \(\operatorname{GL}_n\) as
+The preceding procedure applies to the ``classical groups''
+(\(\operatorname{GL}_n\), \(\operatorname{Sp}_n\), \(\operatorname O_n\), \ldots). For example, one defines \(\operatorname{GL}_n\) as
 representing the functor \(\mathbf{GL}_n\) such that
 \[
   \mathbf{GL}_n(S)
@@ -159,7 +157,7 @@ introduced in 4.3.3. This can be done in two different ways, as follows.
 \noindent\SGAInlineRefTarget{sga3:i:definition:4-6-1}\textbf{Definition 4.6.1.}
 Let \(S\) be a scheme. For every \(\mathcal O_S\)-module \(\mathscr F\),
 denote by \(\mathbf V(\mathscr F)\) and \(\mathbf W(\mathscr F)\) the
-contravariant functors on \((\mathbf{Sch})_{/S}\) defined by
+functors on \((\mathbf{Sch})_{/S}\) defined by
 \begin{align*}
   \mathbf V(\mathscr F)(S')
     &=\operatorname{Hom}_{\mathcal O_{S'}}
@@ -191,11 +189,9 @@ regard \(\mathbf V\) and \(\mathbf W\) as functors
     \longrightarrow(\mathbf O_S\text{-}\mathbf{Mod.}).
 \]
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:4-6-1-1}\textbf{Remark 4.6.1.1.}
-The reader will notice that, in what follows, every proposition involving
-only the functor \(\mathbf W\) remains valid for arbitrary
-\(\mathcal O_S\)-modules, not necessarily quasi-coherent.
+(Note: the reader will notice that, in what follows, every proposition
+involving only the functor \(\mathbf W\) remains valid without this
+restriction.)
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:proposition:4-6-2}\textbf{Proposition 4.6.2.}
@@ -246,47 +242,48 @@ Parts \SGARefLink{sga3:i:proposition:4-6-2:item:i}{(i)} and \SGARefLink{sga3:i:p
 the \(S'\) to be open subschemes of \(S\). We leave the proof to the
 reader (for \(\mathbf V\), use EGA~II, 1.7.14).
 
-Recall (cf. \SGARefLink{sga3:i:definition:3-1-4}{3.1.4}) that if \(\mathbf F\) and \(\mathbf F'\) are
-\(\mathbf O_S\)-modules, then
-\(\underline{\operatorname{Hom}}_{\mathbf O_S}(\mathbf F,\mathbf F')\)
-denotes the \(S\)-functor in abelian groups that assigns to every
-\(S'\to S\) the group
+\medskip
+\noindent\SGAInlineRefTarget{sga3:i:proposition:4-6-3}\textbf{4.6.3.}
+There are canonical morphisms in \((\mathbf O_S\text{-}\mathbf{Mod.})\):
 \[
-  \operatorname{Hom}_{\mathbf O_{S'}}(\mathbf F_{S'},\mathbf F'_{S'}).
+  \mathbf W\bigl(\mathscr{H}om_{\mathcal O_S}(\mathscr F,\mathscr F')\bigr)
+    \longrightarrow
+  \underline{\operatorname{Hom}}_{\mathbf O_S}
+    \bigl(\mathbf W(\mathscr F),\mathbf W(\mathscr F')\bigr),
 \]
+\[
+  \mathbf W\bigl(\mathscr{H}om_{\mathcal O_S}(\mathscr F,\mathscr F')\bigr)
+    \longrightarrow
+  \underline{\operatorname{Hom}}_{\mathbf O_S}
+    \bigl(\mathbf V(\mathscr F'),\mathbf V(\mathscr F)\bigr).
+\]
+This follows immediately from \SGARefLink{sga3:i:proposition:4-6-2:item:i}{(i)} and \SGARefLink{sga3:i:proposition:4-6-2:item:ii}{(ii)}.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, adds that the two targets
+are canonically isomorphic: by 4.6.2~(i) and (ii), applied over each
+\(S'\to S\), the value of each at \(S'\) is identified with
+\(\operatorname{Hom}_{\mathcal O_{S'}}(\mathscr F\otimes\mathcal O_{S'},
+\mathscr F'\otimes\mathcal O_{S'})\), compatibly with base change.}
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:proposition:4-6-3}\textbf{Proposition 4.6.3.}
-\textit{There are canonical morphisms in
-\((\mathbf O_S\text{-}\mathbf{Mod.})\):}
-\footnote{Editor's note: the isomorphism
-\(\underline{\operatorname{Hom}}_{\mathbf O_S}
-(\mathbf W(\mathscr F),\mathbf W(\mathscr F'))
-\simeq
-\underline{\operatorname{Hom}}_{\mathbf O_S}
-(\mathbf V(\mathscr F'),\mathbf V(\mathscr F))\)
-has been added.}
-
-\begin{figure}[H]
-  \centering
-  \input{native_diagrams/exp1/diag_012_prop463_canonical_morphisms}
-  \phantomsection\label{fig:sga3-exp1-p026-prop463-canonical-morphisms}
-\end{figure}
-
-This follows immediately from \SGARefLink{sga3:i:proposition:4-6-2:item:i}{4.6.2(i)} and \SGARefLink{sga3:i:proposition:4-6-2:item:ii}{(ii)}.
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:notation:4-6-3-1}\textbf{Notation 4.6.3.1.}
-Let \(\mathscr F\) be a quasi-coherent \(\mathcal O_S\)-module. By
-EGA~II, 1.7.8, the \(S\)-functor \(\mathbf V(\mathscr F)\) is
-represented by an \(S\)-scheme affine over \(S\), denoted
-\(\mathbb V(\mathscr F)\), and called the \emph{vector fibration}
-defined by \(\mathscr F\):
+Let us now consider \(\mathbf W(\mathscr F)\) and \(\mathbf V(\mathscr F)\)
+as functors over \(S\). It is known (EGA~II, 1.7.8) that
+\(\mathbf V(\mathscr F)\) is representable by an \(S\)-scheme affine over
+\(S\), denoted \(\mathbb V(\mathscr F)\), and called the \emph{vector
+bundle} defined by \(\mathscr F\):
 \[
   \mathbb V(\mathscr F)=\operatorname{Spec}(\mathcal S(\mathscr F)),
 \]
 where \(\mathcal S(\mathscr F)\) denotes the symmetric algebra of the
-\(\mathcal O_S\)-module \(\mathscr F\).
+\(\mathcal O_S\)-module \(\mathscr F\).\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, says ``vector
+fibration'' here, current usage reserving ``vector bundle'' for the locally
+trivial case: \(\mathbb V(\mathscr F)\) is locally isomorphic to
+\(\mathbb V(\mathcal O_S^r)\) exactly when \(\mathscr F\) is locally free of
+rank \(r\). It also cites two results of N.~Nitsure: for \(S\) Noetherian
+and \(\mathscr F\) coherent, \(\mathbf W(\mathscr F)\) is representable if
+and only if \(\mathscr F\) is locally free (\textit{Representability of Hom
+implies flatness}, Proc.\ Indian Acad.\ Sci.\ Math.\ Sci.\ \textbf{114}
+(2004), 7--14), and so is the \(S\)-group
+\(T\mapsto\operatorname{Aut}_{\mathcal O_T}(\mathscr F\otimes\mathcal O_T)\)
+(\textit{Representability of \(\mathrm{GL}_E\)}, same journal,
+\textbf{112} (2002), 539--542).}
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:proposition:4-6-4}\textbf{Proposition 4.6.4.}
@@ -334,7 +331,7 @@ gives
 which completes the proof.
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:i:corollary:4-6-4-1}\textbf{Corollary 4.6.4.1.}
+\noindent\textbf{Corollary.}
 \textit{There is a canonical isomorphism
 \[
   \mathbf W(\mathscr F\otimes\mathscr A)
@@ -343,35 +340,19 @@ which completes the proof.
     (\operatorname{Spec}(\mathscr A),\mathbf W(\mathscr F)).
 \]}
 
-Indeed,
-\footnote{Editor's note: the original has been expanded in what follows.}
-let \(f:S'\to S\) be an \(S\)-scheme and put
-\(X'=X\times_S S'\). There is a Cartesian square
-
-\begin{figure}[H]
-  \centering
-  \input{native_diagrams/exp1/diag_013_cor4641_cartesian_square}
-  \phantomsection\label{fig:sga3-exp1-p027-cor4641-cartesian-square}
-\end{figure}
-
-By EGA~II, 1.5.2, \(X'\) is affine over \(S'\) and
-\(\pi'_*\mathcal O_{X'}=f^*(\mathscr A)\). Hence
-\begin{align*}
-  &\underline{\operatorname{Hom}}_S
-     (\operatorname{Spec}(\mathscr A),\mathbf W(\mathscr F))(S')\\
-  &\qquad=
-  \operatorname{Hom}_{S'}
-     \bigl(\operatorname{Spec}(f^*\mathscr A),
-           \mathbf W(f^*\mathscr F)\bigr).
-\end{align*}
-By \SGARefLink{sga3:i:proposition:4-6-4}{4.6.4}, applied to \(f^*\mathscr F\),
-\(\mathscr F'=\mathcal O_{S'}\), and \(f^*\mathscr A\), this is equal
-to
-\begin{align*}
-  \Gamma(S',f^*\mathscr F\otimes f^*\mathscr A)
-    &=\Gamma(S',f^*(\mathscr F\otimes\mathscr A))\\
-    &=\mathbf W(\mathscr F\otimes\mathscr A)(S').
-\end{align*}
+Indeed, take \(\mathscr F'=\mathcal O_S\) in the preceding formula; then
+let \(S\) vary.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, details this. In
+our formulation:
+\(\underline{\operatorname{Hom}}_{\mathbf O_S}(\mathbf O_S,\mathbf W(\mathscr F))
+=\mathbf W(\mathscr F)\), so the formula gives
+\(\operatorname{Hom}_S(\operatorname{Spec}(\mathscr A),\mathbf W(\mathscr F))
+\simeq\Gamma(S,\mathscr F\otimes\mathscr A)\); for an \(S\)-scheme
+\(f:S'\to S\), \(\operatorname{Spec}(\mathscr A)\times_SS'
+=\operatorname{Spec}(f^*\mathscr A)\) (EGA~II, 1.5.2), and the same formula
+over \(S'\) gives the value
+\(\Gamma(S',f^*\mathscr F\otimes f^*\mathscr A)
+=\mathbf W(\mathscr F\otimes\mathscr A)(S')\) of both sides at \(S'\),
+functorially in \(S'\).}
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:proposition:4-6-5}\textbf{Proposition 4.6.5.}
@@ -438,135 +419,78 @@ Finally, we have the following proposition.
 is a monomorphism if and only if \(f\) identifies \(\mathscr F\)
 locally with a direct summand of \(\mathscr F'\).}
 
-The direct assertion is essentially contained in EGA~0\textsubscript{I},
-5.5.5.
-\footnote{Editor's note: the following sentence has been expanded.}
-Conversely, if \(\mathscr F\) is locally a direct summand of
-\(\mathscr F'\), then for every \(\pi:S'\to S\), the module
-\(\pi^*\mathscr F\) is a submodule of \(\pi^*\mathscr F'\), since this
-holds locally as a direct summand. Thus
-\[
-  \mathbf W(\mathscr F)(S')=\Gamma(S',\pi^*\mathscr F)
-\]
-is a submodule of
-\[
-  \mathbf W(\mathscr F')(S')=\Gamma(S',\pi^*\mathscr F').
-\]
+The direct assertion is essentially contained in (EGA~0\textsubscript{I},
+5.5.5). The converse is practically obvious.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, spells out
+the converse. In our formulation: if \(\mathscr F\) is locally a direct
+summand of \(\mathscr F'\), then for every \(\pi:S'\to S\) the morphism
+\(\pi^*\mathscr F\to\pi^*\mathscr F'\) is locally a split injection, hence
+injective, and so is \(\Gamma(S',\pi^*\mathscr F)\to\Gamma(S',\pi^*\mathscr F')\);
+thus \(\mathbf W(f)\) is injective at every \(S'\), hence a monomorphism
+(1.2).}
 
 \subsection*{\SGAInlineRefTarget{sga3:i:subsection:4-7}4.7. The category of \(G\)-\(\mathcal O_S\)-modules}
 
-Let \(G\) be an \(S\)-group and \(\mathscr F\) an
-\(\mathcal O_S\)-module; \(\mathbf W(\mathscr F)\) has a
+Let \(G\) be an \(S\)-group affine over \(S\) and \(\mathscr F\) a
+quasi-coherent \(\mathcal O_S\)-module; then \(\mathbf W(\mathscr F)\) has an
 \(\mathbf O_S\)-module structure.
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:definition:4-7-1}\textbf{Definition 4.7.1.}
 A \emph{\(G\)-\(\mathcal O_S\)-module structure} on \(\mathscr F\) is
 an \(\mathbf h_G\)-\(\mathbf O_S\)-module structure on
-\(\mathbf W(\mathscr F)\) (cf. \SGARefLink{sga3:i:definition:3-2}{3.2}). A morphism of
-\(G\)-\(\mathcal O_S\)-modules is, by definition, a morphism of the
-associated \(\mathbf h_G\)-\(\mathbf O_S\)-modules. This gives the
-category \((G\text{-}\mathcal O_S\text{-}\mathbf{Mod.})\); we denote by
-\((G\text{-}\mathcal O_S\text{-}\mathbf{Mod.q.c.})\) its full
-subcategory consisting of those \(G\)-\(\mathcal O_S\)-modules that are
-quasi-coherent as \(\mathcal O_S\)-modules.
+\(\mathbf W(\mathscr F)\) (cf. \SGARefLink{sga3:i:definition:3-2}{3.2}).
 
+A morphism of \(G\)-\(\mathcal O_S\)-modules is, by definition, a morphism
+of the associated \(\mathbf h_G\)-\(\mathbf O_S\)-modules. One may
+therefore say that the category
+\((G\text{-}\mathcal O_S\text{-}\mathbf{Mod.})\) just defined has been
+constructed by the cartesian square
+
+\begin{center}
+\begin{tikzcd}[column sep=4.5em,row sep=3.0em]
+  (G\text{-}\mathcal O_S\text{-}\mathbf{Mod.})
+    \arrow[r]
+    \arrow[d]
+  &
+  (\mathbf h_G\text{-}\mathbf O_S\text{-}\mathbf{Mod.})
+    \arrow[d]
+  \\
+  (\mathcal O_S\text{-}\mathbf{Mod.})
+    \arrow[r,"\mathbf W"]
+  &
+  (\mathbf O_S\text{-}\mathbf{Mod.})
+\end{tikzcd}
+\end{center}
+The categories \((\mathcal O_S\text{-}\mathbf{Mod.})\) and
+\((\mathbf O_S\text{-}\mathbf{Mod.})\) are abelian, but one should
+remember that in general the functor \(\mathbf W\) is neither left nor
+right exact.\footnote{Translator's note: the 1970 text has instead: ``La
+catégorie (\(G\)-\(\mathcal O_S\)-Mod.) est abélienne.'' The square does not
+give this, \(\mathbf W\) not being exact, and no proof is given; the
+Gille--Polo re-edition (2011), Exposé~I, replaces the assertion by the
+present sentence. The case where \(G\) is flat over \(S\) is treated in the
+Addition after 4.7.2.}
+
+\medskip
+\noindent\SGAInlineRefTarget{sga3:i:paragraph:4-7-2}\textbf{4.7.2.}
 By \SGARefLink{sga3:i:definition:3-2}{3.2}, giving a \(G\)-\(\mathcal O_S\)-module structure on
 \(\mathscr F\) is therefore equivalent to giving a morphism of
-\(\widehat{(\mathbf{Sch})}_{/S}\)-groups
+\(\widehat{(\mathbf{Sch})}_{/S}\)-groups\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, notes, after
+M.~Demazure and P.~Gabriel, \textit{Groupes algébriques}, tome~I, Masson
+and North-Holland, 1970, II, \S2, 1.1, that such a structure can equally be
+given on \(\mathbf V(\mathscr F)\). In our formulation: by 4.6.2, applied
+over every \(T\to S\), \(u\mapsto\mathbf V(u)\) is an anti-isomorphism of
+\(S\)-functors in groups from
+\(\underline{\operatorname{Aut}}_{\mathbf O_S}(\mathbf W(\mathscr F))\) to
+\(\underline{\operatorname{Aut}}_{\mathbf O_S}(\mathbf V(\mathscr F))\); so
+\(g\mapsto\mathbf V(\rho(g))^{-1}\) is a morphism of groups
+\(\mathbf h_G\to\underline{\operatorname{Aut}}_{\mathbf O_S}(\mathbf V(\mathscr F))\),
+and every such morphism arises in this way from a unique \(\rho\).}
 \[
   \rho:\mathbf h_G\longrightarrow
     \underline{\operatorname{Aut}}_{\mathbf O_S}
       (\mathbf W(\mathscr F)).
 \]
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:4-7-1-0}\textbf{Remark 4.7.1.0.}
-\footnote{Editor's note: this remark has been added from [DG], II,
-\SGARefLink{sga3:ii:section:2}{Section 2}, \SGARefLink{sga3:i:subsection:1-1}{1.1}.}
-Since \SGARefLink{sga3:i:proposition:4-6-2}{4.6.2} gives an anti-isomorphism of \(S\)-functors in groups
-\[
-  (\dagger)\qquad
-  \underline{\operatorname{Aut}}_{\mathbf O_S}
-    (\mathbf W(\mathscr F))
-  \simeq
-  \underline{\operatorname{Aut}}_{\mathbf O_S}
-    (\mathbf V(\mathscr F)),
-\]
-it is equivalent to give an \(\mathbf h_G\)-\(\mathbf O_S\)-module
-structure on \(\mathbf W(\mathscr F)\) or on \(\mathbf V(\mathscr F)\).
-Indeed, let
-\[
-  \rho:\mathbf h_G\longrightarrow
-  \underline{\operatorname{Aut}}_{\mathbf O_S}
-    (\mathbf W(\mathscr F))
-\]
-be as above. For every \(T\to S\) and \(g\in G(T)\), denote by
-\(\rho^*(g)\) the image of \(\rho(g)\) under the anti-isomorphism
-\((\dagger)\). Then
-\[
-  \rho^*(gh)=\rho^*(h)\circ\rho^*(g),
-\]
-so \(\rho^*\) defines a \emph{right}
-\(\mathbf h_G\)-\(\mathbf O_S\)-module structure on
-\(\mathbf V(\mathscr F)\). Setting
-\[
-  \rho^{\vee}(g)=\rho^*(g^{-1}),
-\]
-one obtains an \(\mathbf h_G\)-\(\mathbf O_S\)-module structure on
-\(\mathbf V(\mathscr F)\), whose datum is equivalent to that of
-\(\rho\).
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:4-7-1-1}\textbf{Remark 4.7.1.1.}
-One may say that the categories just defined have been constructed by
-the following Cartesian squares.
-
-\begin{figure}[H]
-  \centering
-  \input{native_diagrams/exp1/diag_014_rem4711_category_squares}
-  \phantomsection\label{fig:sga3-exp1-p028-rem4711-category-squares}
-\end{figure}
-
-The categories \((\mathcal O_S\text{-}\mathbf{Mod.})\) and
-\((\mathbf O_S\text{-}\mathbf{Mod.})\) are abelian, but one should
-remember that in general the functor \(\mathbf W\) is neither left nor
-right exact.
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:remark:4-7-1-2}\textbf{Remark 4.7.1.2.}
-\footnote{Editor's note: this remark has been added.}
-Let \(\mathscr F\) be a \(G\)-\(\mathcal O_S\)-module. The subsheaf of
-invariants \(\mathscr F^G\) is defined as follows: for every open subset
-\(U\) of \(S\),
-\[
-  \mathscr F^G(U)=\mathbf W(\mathscr F)^G(U)
-   =\bigl\{x\in\mathscr F(U)\mid
-       g\cdot x_{S'}=x_{S'}
-       \text{ for every }S'\xrightarrow{f}U,
-       \ g\in G(S')\bigr\},
-\]
-where \(x_{S'}\) denotes the image of \(x\) in
-\[
-  \Gamma(S',f^*\mathscr F)=\Gamma(U,f_*f^*\mathscr F).
-\]
-One should note that the natural morphism
-\[
-  \mathbf W(\mathscr F^G)\longrightarrow\mathbf W(\mathscr F)^G
-\]
-is not an isomorphism in general. For example, let
-\(S=\operatorname{Spec}(\mathbb Z)\), and let \(G\) be the constant
-group \(\mathbb Z/2\mathbb Z=\{1,\tau\}\) acting on
-\(\mathscr F=\mathcal O_S\) by \(\tau\cdot1=-1\). Then
-\(\mathscr F^G=0\), whereas, if \(R\) is an \(\mathbb F_2\)-algebra,
-\[
-  \mathbf W(\mathscr F)^G(\operatorname{Spec}(R))=R.
-\]
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:paragraph:4-7-2}\textbf{4.7.2.}
-From now until the end of \SGARefLink{sga3:i:subsection:4-7}{4.7}, suppose that \(G\) is affine over
-\(S\).
 By \SGARefLink{sga3:i:proposition:4-6-4}{4.6.4}, giving a morphism of \(S\)-functors
 \[
   \rho:\mathbf h_G\longrightarrow
@@ -599,102 +523,53 @@ that \(\mu\) satisfies the following axioms.
   \phantomsection\label{fig:sga3-exp1-p029-cm2-counit-composite}
 \end{figure}
 
-These axioms (CM 1) and (CM 2) are those of a right \emph{comodule}
-structure over the bialgebra \(\mathscr A(G)\).
-
-Put \(\mathscr A=\mathscr A(G)\). If \(\mathscr F\) and
-\(\mathscr F'\) are \(\mathscr A\)-comodules, a morphism of comodules
-\(f:\mathscr F\to\mathscr F'\) is a morphism of
-\(\mathcal O_S\)-modules such that the following diagram is
-
-commutative.
-
-\begin{figure}[H]
-  \centering
-  \input{native_diagrams/exp1/diag_017_comodule_morphism_square}
-  \phantomsection\label{fig:sga3-exp1-p030-comodule-morphism-square}
-\end{figure}
-
-This gives the category \((\mathscr A\text{-}\mathbf{Comod.})\); we
-denote by \((\mathscr A\text{-}\mathbf{Comod.q.c.})\) its full
-subcategory consisting of those \(\mathscr A\)-comodules that are
-quasi-coherent as \(\mathcal O_S\)-modules. We have therefore proved the
-following statement.
+These axioms (CM 1) and (CM 2) are those of the \emph{comodule}
+structure over the bialgebra \(\mathscr A(G)\).\footnote{Translator's note: as \(\mathscr A(G)\) stands on the
+right in \(\mu\), these are the axioms of a right comodule; the Gille--Polo
+re-edition (2011), Exposé~I, says so, and notes that left
+\(G\)-\(\mathcal O_S\)-modules correspond in this way to right
+\(\mathscr A(G)\)-comodules.} In summary:
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:proposition:4-7-2}\textbf{Proposition 4.7.2.}
-\textit{Let \(G\) be an \(S\)-group affine over \(S\). There are
-equivalences of categories
-\[
-  (G\text{-}\mathcal O_S\text{-}\mathbf{Mod.})
-    \simeq(\mathscr A(G)\text{-}\mathbf{Comod.}),
-\]
-\[
-  (G\text{-}\mathcal O_S\text{-}\mathbf{Mod.q.c.})
-    \simeq(\mathscr A(G)\text{-}\mathbf{Comod.q.c.}).
-\]}
+\textit{The preceding construction gives an equivalence of the category
+of quasi-coherent \(G\)-\(\mathcal O_S\)-modules (respectively, of
+\(G\)-\(\mathcal O_S\)-modules) with the category of quasi-coherent
+comodules (respectively, of comodules) over the
+\(\mathcal O_S\)-bialgebra \(\mathscr A(G)\).}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~I, adds two
+remarks. If \(S=\operatorname{Spec}(\Lambda)\) is affine and
+\(\Lambda[G]=\Gamma(S,\mathscr A(G))\), the quasi-coherent
+\(\mathscr A(G)\)-comodules correspond, through
+\(\mathscr F\mapsto\Gamma(S,\mathscr F)\), to the comodules over the
+\(\Lambda\)-bialgebra \(\Lambda[G]\), that functor being an equivalence
+between quasi-coherent \(\mathcal O_S\)-modules and \(\Lambda\)-modules
+compatible with tensor products. And Exposé~VI\textsubscript{B},
+\SGARefLink{lem:sga3-VIB-11.1}{11.1}--\SGARefLink{par:sga3-VIB-11.6}{11.6}, extends 4.7.2 to groups that are not
+necessarily affine, under flatness hypotheses on \(G\) and the modules.}
 
-If, in addition, \(S=\operatorname{Spec}(\Lambda)\) is affine and one
-sets \(\Lambda[G]=\Gamma(S,\mathscr A(G))\), there is an equivalence of
-categories
-\[
-  (\mathscr A(G)\text{-}\mathbf{Comod.q.c.})
-    \simeq(\Lambda[G]\text{-}\mathbf{Comod.}).
-\]
-\footnote{Editor's note: the preceding sentence has been added.}
-
-Suppose, moreover, that \(\mathscr A=\mathscr A(G)\) is a flat
-\(\mathcal O_S\)-module.
-\footnote{Editor's note: the following paragraph has been added from
-[Se68, \SGARefLink{sga3:i:subsection:1-3}{Section 1.3}].}
-Let \(\mathscr E\) be an \(\mathscr A\)-comodule and \(\mathscr F\) an
-\(\mathcal O_S\)-submodule of \(\mathscr E\). Since \(\mathscr A\) is
-flat over \(\mathcal O_S\), one may identify
-\(\mathscr F\otimes\mathscr A\) (respectively,
-\(\mathscr F\otimes\mathscr A\otimes\mathscr A\)) with an
-\(\mathcal O_S\)-submodule of \(\mathscr E\otimes\mathscr A\)
-(respectively, of
-\(\mathscr E\otimes\mathscr A\otimes\mathscr A\)). Suppose that
-\(\mu_{\mathscr E}\) maps \(\mathscr F\) into
-\(\mathscr F\otimes\mathscr A\). Then its restriction
-\[
-  \mu_{\mathscr F}:\mathscr F\longrightarrow
-    \mathscr F\otimes\mathscr A
-\]
-endows \(\mathscr F\) with an \(\mathscr A\)-comodule structure; one
-says that \(\mathscr F\) is a \emph{subcomodule} of \(\mathscr E\).
-Passing to the quotient, \(\mu_{\mathscr E}\) defines a morphism of
-\(\mathcal O_S\)-modules
-\[
-  \mathscr E/\mathscr F\longrightarrow
-  (\mathscr E/\mathscr F)\otimes\mathscr A,
-\]
-which endows \(\mathscr E/\mathscr F\) with an
-\(\mathscr A\)-comodule structure. If
-\(f:\mathscr E\to\mathscr E'\) is a morphism of
-\(\mathscr A\)-comodules, then \(\operatorname{Ker}f\) (respectively,
-\(\operatorname{Im}f\)) is an \(\mathscr A\)-subcomodule of
-\(\mathscr E\) (respectively, of \(\mathscr E'\)), and \(f\) induces
-an isomorphism of \(\mathscr A\)-comodules
-\[
-  \mathscr E/\operatorname{Ker}f
-    \xrightarrow{\ \sim\ }
-  \operatorname{Im}f.
-\]
-Moreover, if \(\mathscr E\) and \(\mathscr E'\) are quasi-coherent
-\(\mathcal O_S\)-modules, then so are \(\operatorname{Ker}f\) and
-\(\operatorname{Im}f\). Consequently,
-\((\mathscr A\text{-}\mathbf{Comod.})\) and
-\((\mathscr A\text{-}\mathbf{Comod.q.c.})\) are abelian categories.
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:i:corollary:4-7-2-1}\textbf{Corollary 4.7.2.1.}
-\textit{Suppose that \(G\) is affine and flat over \(S\). Then the
-category \((G\text{-}\mathcal O_S\text{-}\mathbf{Mod.q.c.})\)
-(respectively, \((G\text{-}\mathcal O_S\text{-}\mathbf{Mod.})\)),
-equivalent to the category of \(\mathscr A(G)\)-comodules that are
-quasi-coherent over \(\mathcal O_S\) (respectively, of all
-\(\mathscr A(G)\)-comodules), is abelian.}
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~I, 4.7.2.1,
+which follows J.-P.~Serre, \textit{Groupes de Grothendieck des schémas en
+groupes réductifs déployés}, Publ.\ Math.\ IHÉS \textbf{34} (1968), 37--52,
+\S1.3; our formulation). A morphism of comodules is a morphism
+\(u:\mathscr E\to\mathscr E'\) of \(\mathcal O_S\)-modules with
+\(\mu_{\mathscr E'}\circ u=(u\otimes\operatorname{Id})\circ\mu_{\mathscr E}\).
+Suppose that \(\mathscr A=\mathscr A(G)\) is a flat \(\mathcal O_S\)-module,
+that is, that \(G\) is flat over \(S\). If \(u\) is a morphism of
+comodules, \(\mu_{\mathscr E}\) maps \(\operatorname{Ker}u\) into
+\(\operatorname{Ker}(u\otimes\operatorname{Id})=(\operatorname{Ker}u)\otimes\mathscr A\),
+and the restriction is a comodule structure on \(\operatorname{Ker}u\), the
+axioms holding in \(\mathscr E\otimes\mathscr A\otimes\mathscr A\), which
+contains \((\operatorname{Ker}u)\otimes\mathscr A\otimes\mathscr A\);
+likewise \(\mu_{\mathscr E'}\) induces a comodule structure on
+\(\operatorname{Coker}u\), and \(\operatorname{Im}u\) is a subcomodule of
+\(\mathscr E'\). These are a kernel, a cokernel and an image in the category
+of comodules, and coimage and image agree since they do as
+\(\mathcal O_S\)-modules. So the comodules form an abelian category, the
+forgetful functor to \(\mathcal O_S\)-modules being exact, and so do the
+quasi-coherent comodules. By 4.7.2, the \(G\)-\(\mathcal O_S\)-modules and
+the quasi-coherent ones then form abelian categories.
+\par\medskip
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:i:paragraph:4-7-3}\textbf{4.7.3.}
@@ -748,12 +623,11 @@ by the operations of \(G\), then the grading of \(\mathscr F\) is an
 algebra grading. More precisely:
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:i:corollary:4-7-3-1}\textbf{Corollary 4.7.3.1.}
-\textit{The functor
+\noindent\SGAInlineRefTarget{sga3:i:corollary:4-7-3-1}\textit{The functor
 \(\mathscr A\mapsto\operatorname{Spec}(\mathscr A)\) induces an
 equivalence between the category of quasi-coherent
 \(\mathcal O_S\)-algebras graded by \(M\) and the category opposite to
-that of \(S\)-schemes affine over \(S\) with \(S\)-operator group
+that of \(S\)-schemes affine over \(S\) with operator \(S\)-group scheme
 \(G=D_S(M)\).}
 
 \medskip
@@ -767,7 +641,7 @@ is an exact sequence of quasi-coherent \(G\)-\(\mathcal O_S\)-modules
 that splits as a sequence of \(\mathcal O_S\)-modules, then it also
 splits as a sequence of \(G\)-\(\mathcal O_S\)-modules.}
 
-Indeed, if \(G=D_S(M)\), each \(\mathscr F_i\) is graded by the
+Indeed, each \(\mathscr F_i\) is graded by the
 \((\mathscr F_i)_m\), and for every \(m\in M\) the sequence
 \[
   0\longrightarrow(\mathscr F_1)_m\longrightarrow(\mathscr F_2)_m
