@@ -43,120 +43,84 @@ There is then a commutative diagram with exact rows:
     {native_diagrams/exp3/diagram_032_exp3_p043_lemma41_pushout.tex}
 \end{center}
 
-It is clear that the category of solutions to the problem is canonically
-isomorphic to the category of solutions to the corresponding problem for
-the sequence
+and it is clear that the category of solutions of the problem posed is
+canonically isomorphic to the category of solutions of the corresponding
+problem for the sequence\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~III, justifies the exactness of
+the lower row of the preceding diagram: \(j\) is a monomorphism, as a pushout
+of the monomorphism \(i\) in an abelian category, and its cokernel is
+\(B'/Q=A/A'=A''\). It refers for this to P.~Freyd, \emph{Abelian
+Categories}, Harper and Row, 1964, Theorem 2.5.4.}
 \[
  0\longrightarrow Q\longrightarrow B'\longrightarrow A''\longrightarrow0
 \]
-and the morphisms \(\operatorname{id}_Q\) and \(\pi:A''\to P\).
-\footnote{Editor's note: In what follows, \(A\) has been replaced by
-\(B'\), and the end of the argument has been expanded.}
-In this case, \(E\) is in bijection with the set of subobjects \(N\) of
-\(B'\) for which \(B'\to A''\) induces an isomorphism of \(N\) with the
-kernel \(C\) of \(A''\to P\); equivalently, it is the set of morphisms
-\(e:C\to B'\) lifting the canonical morphism \(C\to A''\). The abelian
-group \(G=\operatorname{Hom}(C,Q)\) acts on \(E\) by
-\(g\cdot e=g+e\), with addition in \(\operatorname{Hom}(C,B')\); if
-\(E\ne\varnothing\), this makes \(E\) a principal homogeneous set under
-\(G\).
+and the morphisms \(\operatorname{id}_Q\) and \(\pi:A''\to P\). One is
+therefore reduced to proving the lemma in the case where \(A'\to Q\) is an
+isomorphism. In this case, the set \(E\) is clearly in bijection with the set
+of subobjects \(N\) of \(A\) such that \(A\to A''\) induces an isomorphism of
+\(N\) with the kernel \(C\) of \(A''\to P\), that is, with the set of
+morphisms \(C\to A\) lifting the canonical morphism \(C\to A''\); this gives
+the desired result.\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~III, spells out this last step. In our
+words: two liftings \(C\to A\) of \(C\to A''\) differ by a morphism
+\(C\to A'=Q\), and adding such a morphism to a lifting gives a lifting, so
+the liftings form an empty or principal homogeneous set under
+\(\operatorname{Hom}(C,Q)\); a lifting exists if and only if the extension
+of \(C\) by \(Q\) obtained from \(A\) by pullback along \(C\to A''\) splits,
+that is, if and only if the image of the class of \(A\) in
+\(\operatorname{Ext}^1(C,Q)\) is zero.}
 
-We deduce the following.
+One deduces immediately from (ii):
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:iii:proposition:4-2}\textbf{Proposition 4.2.}
-\footnote{Editor's note: The statement has been rewritten so as to fit
-exactly the application made in \SGARefLink{sga3:iii:proposition:4-3}{4.3}; the proof has also been expanded,
-following indications supplied by M. Demazure.}
-\textit{Let \(S\) be a scheme, let \(S_{\mathscr J}\) be the closed
-subscheme defined by a quasi-coherent square-zero ideal \(\mathscr J\),
-let \(X\) be an \(S\)-scheme, and let \(\mathscr F\) be an
-\(\mathscr O_X\)-module. Put
+\textit{Let \((X,\mathscr O_X)\) be a ringed space, \(\mathscr J\) an ideal of
+square zero of \(\mathscr O_X\), and \(\mathscr F\) an \(\mathscr O_X\)-module.
+Put \(\mathscr F_0=\mathscr F/\mathscr J\mathscr F\), and let \(\mathscr G_0\) be
+a quotient module of \(\mathscr F_0\). Suppose given a morphism of
+\(\mathscr O_X/\mathscr J\)-modules}
 \[
- X_{\mathscr J}=X\times_S S_{\mathscr J},\qquad
- \mathscr F_{\mathscr J}
- =\mathscr F\otimes_{\mathscr O_S}\mathscr O_{S_{\mathscr J}},
+ f:\mathscr J\otimes_{\mathscr O_X/\mathscr J}\mathscr G_0\longrightarrow\mathscr Q.
 \]
-and let
-\(\mathscr G_{\mathscr J}=\mathscr F_{\mathscr J}/\mathscr H_{\mathscr J}\)
-be a quotient module of \(\mathscr F_{\mathscr J}\). Suppose given a
-morphism of \(\mathscr O_{X_{\mathscr J}}\)-modules
+\textit{Let \(\mathcal E\) be the sheaf on \(X\) defined as follows: for every
+open subset \(U\) of \(X\), \(\mathcal E(U)\) is the set of quotient modules
+\(\mathscr G\) of \(\mathscr F|_U\) such that
+\(\mathscr G/(\mathscr J|_U)\mathscr G=\mathscr G_0|_U\) and for which there is
+an isomorphism \textup{(}clearly unique\textup{)}
+\((\mathscr J|_U)\mathscr G\simeq\mathscr Q|_U\) making the diagram}
 \[
- f:\mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
-       \mathscr G_{\mathscr J}\longrightarrow\mathscr Q.
+\begin{tikzcd}[column sep=large,row sep=large]
+ (\mathscr J|_U)\otimes(\mathscr G_0|_U)
+   \arrow[r,"f|_U"]
+   \arrow[d,"\mathrm{can.}"']
+ &
+ \mathscr Q|_U
+ \\
+ (\mathscr J|_U)\mathscr G
+   \arrow[ur,"\simeq"']
+ &
+\end{tikzcd}
 \]
-Let \(\mathcal E\) be the sheaf of sets on \(X\) defined as follows: for
-each open subset \(U\) of \(X\), \(\mathcal E(U)\) is the set of quotient
-modules \(\mathscr G\) of \(\mathscr F|_U\) such that
-\(\mathscr G/\mathscr J\mathscr G=\mathscr G_{\mathscr J}|_U\) and for
-which there exists an isomorphism
+\textit{commute. Then \(\mathcal E\) is a sheaf formally principal homogeneous
+under the sheaf in commutative groups}
 \[
- h:\mathscr J\mathscr G\xrightarrow{\sim}\mathscr Q|_U
+ \mathscr A=\mathscr{H}om_{\mathscr O_X/\mathscr J}(\mathscr H_0,\mathscr Q),
 \]
-making the following diagram commute:}
-
-\begin{center}
-  \SGAThreeNativeInput[0.43\textwidth]
-    {native_diagrams/exp3/diagram_033_exp3_p043_prop42_triangle.tex}
-\end{center}
-
-\textit{The isomorphism \(h\) is then unique, since
-\(
- \mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
- (\mathscr G_{\mathscr J}|_U)\to\mathscr J\mathscr G
-\)
-is an epimorphism. Then \(\mathcal E\) is a sheaf formally principal
-homogeneous under the sheaf of commutative groups
-\[
- \mathscr A=
- \operatorname{Hom}_{\mathscr O_X}(\mathscr H_{\mathscr J},\mathscr Q)
- =\operatorname{Hom}_{\mathscr O_{X_{\mathscr J}}}
-   (\mathscr H_{\mathscr J},\mathscr Q).
-\]}
-
-\noindent\textit{Proof.}
-If \(\mathcal E(U)=\varnothing\), there is nothing to prove; we may
-therefore suppose that \(\mathcal E(U)\) contains an element
-\(\widetilde{\mathscr G}\). In the following diagram, \(h\) is an
-isomorphism and all the arrows are epimorphisms:
-
-\begin{center}
-  \SGAThreeNativeInput[0.70\textwidth]
-    {native_diagrams/exp3/diagram_034_exp3_p044_prop42_epimorphisms.tex}
-\end{center}
-
-Thus the morphism
-\[
- \mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
- (\mathscr F_{\mathscr J}|_U)\longrightarrow\mathscr Q|_U
-\]
-induces a necessarily unique epimorphism
-\(\phi:\mathscr J\mathscr F|_U\to\mathscr Q|_U\). If \(\mathscr G\)
-is an \(\mathscr O_U\)-module such that
-\(\mathscr G/\mathscr J\mathscr G=\mathscr G_{\mathscr J}|_U\) and there
-is a commutative diagram with exact rows
-
-\begin{center}
-  \SGAThreeNativeInput[0.69\textwidth]
-    {native_diagrams/exp3/diagram_035_exp3_p044_prop42_exact_rows.tex}
-\end{center}
-
-\noindent(where \(p_{\mathscr J}\) is the projection
-\(\mathscr G\to\mathscr G/\mathscr J\mathscr G
-=\mathscr G_{\mathscr J}|_U\), so that
-\(\mathscr Q|_U=\operatorname{Ker}(p_{\mathscr J})
-=\mathscr J\mathscr G\)), then \(\mathscr G\) may be identified with a
-quotient module of \(\mathscr F|_U\). Consequently, by \SGARefLink{sga3:iii:lemma:4-1:item:ii}{4.1(ii)}, the set
-\(\mathcal E(U)\) is principal homogeneous under the abelian group
-\[
- \operatorname{Hom}_{\mathscr O_X}
-  (\mathscr H_{\mathscr J},\mathscr Q)(U)
- =\operatorname{Hom}_{\mathscr O_{X_{\mathscr J}}}
-  (\mathscr H_{\mathscr J},\mathscr Q)(U).
-\]
+\textit{where one has put \(\mathscr G_0=\mathscr F_0/\mathscr H_0\).}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~III,
+restates 4.2 for an \(S\)-scheme \(X\) and an ideal \(\mathscr J\) coming from
+\(S\), as used in 4.3, and supplies a proof. In our words: if \(\mathcal E(U)\)
+contains some \(\mathscr G\), then \(f|_U\), composed with the epimorphism
+\(\mathscr J\otimes\mathscr F_0\to\mathscr J\otimes\mathscr G_0\), factors
+through the epimorphism \(\mathscr J\otimes\mathscr F_0\to\mathscr J\mathscr F\),
+via \(\mathscr J\mathscr F\to\mathscr J\mathscr G\simeq\mathscr Q\), giving
+an epimorphism \(\varphi\colon\mathscr J\mathscr F|_U\to\mathscr Q|_U\) that
+does not depend on \(\mathscr G\); and the elements of \(\mathcal E(U)\) are
+then exactly the solutions of 4.1 for
+\(0\to\mathscr J\mathscr F\to\mathscr F\to\mathscr F_0\to0\), \(\varphi\) and
+\(\mathscr F_0\to\mathscr G_0\) (in such a solution \(B\), the map from
+\(\mathscr F\) is onto, since its image contains that of \(\mathscr Q\) and maps
+onto \(\mathscr G_0\)), so that 4.1 (ii) applies on each \(U\).}
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:iii:proposition:4-3}\textbf{Proposition 4.3.} \textit{(TDTE \SGARefLink{sga3:iv:subsection:5:1}{IV 5.1}) Let \(S\) be a
+\noindent\SGAInlineRefTarget{sga3:iii:proposition:4-3}\textbf{Proposition 4.3.} \textit{(TDTE IV 5.1) Let \(S\) be a
 scheme, let \(S_{\mathscr J}\) be the closed subscheme defined by a
 quasi-coherent square-zero ideal \(\mathscr J\), let \(X\) be an
 \(S\)-scheme, and let \(\mathscr F\) be a quasi-coherent
@@ -170,14 +134,12 @@ Let
 \(\mathscr G_{\mathscr J}=\mathscr F_{\mathscr J}/\mathscr H_{\mathscr J}\)
 be a quasi-coherent quotient module of \(\mathscr F_{\mathscr J}\), flat
 over \(S_{\mathscr J}\). For each open subset \(U\) of \(X\), let
-\(\mathcal E(U)\) be the set of quasi-coherent quotient modules
-\(\mathscr G\)\footnote{Editor's note: To lighten the statement, the
-hypothesis that \(\mathscr G\) be quasi-coherent has been added here; the
-remark that this hypothesis is automatically satisfied has been moved to
-the proof, which has been expanded accordingly.} of \(\mathscr F|_U\),
+\(\mathcal E(U)\) be the set of quotient modules
+\(\mathscr G\) of the \(\mathscr O_U\)-module \(\mathscr F|_U\),
 flat over \(S\), such that
-\(\mathscr G/\mathscr J\mathscr G\simeq
-\mathscr G_{\mathscr J}|_U\). Then the \(\mathcal E(U)\) form a sheaf of
+\(\mathscr G\otimes_{\mathscr O_S}\mathscr O_{S_{\mathscr J}}\simeq
+\mathscr G_{\mathscr J}|_U\) (they are necessarily quasi-coherent, as
+extensions of two quasi-coherent modules; cf. EGA~III, 1.4.17). Then the \(\mathcal E(U)\) form a sheaf of
 sets \(\mathcal E\) on \(X\), formally principal homogeneous under the
 sheaf of commutative groups
 \[
@@ -191,121 +153,49 @@ sheaf of commutative groups
 \]}
 
 \noindent\textit{Proof.}
-Let \(\pi:X\to S\) be the structural morphism. Let \(U\) be an open
-subset of \(X\), and let \(\mathscr G\) be an \(\mathscr O_U\)-module
-flat over \(S\), such that
-\(\mathscr G/\mathscr J\mathscr G\simeq
-\mathscr G_{\mathscr J}|_U\). For every \(x\in U\), the stalk
-\(\mathscr G_x\) is a flat module over the local ring
-\(\mathscr O_{S,s}\), where \(s=\pi(x)\). Hence the morphism
-\[
- \mathscr J_s\otimes_{\mathscr O_{S,s}}
-  (\mathscr G/\mathscr J\mathscr G)_x
- =\mathscr J_s\otimes_{\mathscr O_{S,s}}\mathscr G_x
- \longrightarrow(\mathscr J\mathscr G)_x
-\]
-is bijective. We therefore have an exact sequence
-\[
- 0\longrightarrow
- \mathscr J\otimes_{\mathscr O_S}(\mathscr G_{\mathscr J}|_U)
- \longrightarrow\mathscr G\longrightarrow
- \mathscr G_{\mathscr J}|_U\longrightarrow0.
-\]
+Following the fundamental criterion of flatness (see for example SGA~1,
+IV, 5.1),\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~III, refers also to N.~Bourbaki,
+\emph{Algèbre commutative}, chap.~III, \S5, Theorem~1.} \(\mathscr G\) is
+flat over \(S\) if and only if \(\mathscr G_{\mathscr J}\) is flat over
+\(S_{\mathscr J}\) and the canonical morphism
+\(\mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}\mathscr G_{\mathscr J}
+\to\mathscr J\mathscr G\) is an isomorphism. It therefore suffices to apply
+the preceding proposition, taking for \(f\) the identity morphism of
+\(\mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}\mathscr G_{\mathscr J}
+=\mathscr J\mathscr O_X\otimes_{\mathscr O_{X_{\mathscr J}}}
+\mathscr G_{\mathscr J}\).
 
-Since
-\(\mathscr J\otimes_{\mathscr O_S}(\mathscr G_{\mathscr J}|_U)\) and
-\(\mathscr G_{\mathscr J}|_U\) are quasi-coherent
-\(\mathscr O_U\)-modules, \(\mathscr G\) is quasi-coherent as well
-(EGA III, 1.4.17).
-
-Conversely, since \(\mathscr G_{\mathscr J}\) is flat over
-\(S_{\mathscr J}\), if \(\mathscr G\) is a quasi-coherent
-\(\mathscr O_U\)-module such that
-\(\mathscr G/\mathscr J\mathscr G\simeq\mathscr G_{\mathscr J}\) and
-the morphism
-\[
- \mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
- \mathscr G_{\mathscr J}\longrightarrow\mathscr J\mathscr G
-\]
-is bijective, then \(\mathscr G\) is flat over \(S\), by the
-``fundamental criterion of flatness'' (SGA 1, IV, 5.5).
-
-Consequently, the set \(\mathcal E(U)\) considered here is the set
-considered in \SGARefLink{sga3:iii:proposition:4-2}{4.2} when \(f\) is the identity morphism of
-\(\mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
-\mathscr G_{\mathscr J}\); the conclusion therefore follows from \SGARefLink{sga3:iii:proposition:4-2}{4.2}.
-\hfill\(\square\)
-
-Retain the preceding notation.
-\footnote{Editor's note: The discussion that follows has been expanded and
-\SGARefLink{sga3:iii:corollary:4-3-1}{Corollary 4.3.1} has been added. Recall also that ``pseudo-torsor'' is
-synonymous with ``formally principal homogeneous.''}
-Let \(Y_{\mathscr J}\) be a closed subscheme of \(X_{\mathscr J}\),
-defined by a quasi-coherent ideal \(\mathscr I_{Y_{\mathscr J}}\), and
-suppose that \(Y_{\mathscr J}\) is flat over \(S_{\mathscr J}\). Applying
-\SGARefLink{sga3:iii:proposition:4-3}{4.3} to \(\mathscr F=\mathscr O_X\) and
-\[
- \mathscr G_{\mathscr J}=\mathscr O_{Y_{\mathscr J}}
- =\mathscr O_{X_{\mathscr J}}/\mathscr I_{Y_{\mathscr J}},
-\]
-we obtain the following corollary.
+Taking now \(\mathscr F=\mathscr O_X\) and reasoning as usual, one
+deduces:\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~III, makes this reasoning explicit as a
+Corollary 4.3.1. In our words: with \(\mathscr F=\mathscr O_X\) and
+\(\mathscr G_{\mathscr J}=\mathscr O_{Y_{\mathscr J}}\), 4.3 says that the closed
+subschemes \(Y\) of the open sets \(U\) of \(X\), flat over \(S\), with
+\(Y\times_SS_{\mathscr J}=Y_{\mathscr J}\cap U\), form a sheaf formally
+principal homogeneous (a pseudo-torsor) under
+\(\mathscr A=i_*\mathscr{H}om_{\mathscr O_{X_{\mathscr J}}}
+(\mathscr I_{Y_{\mathscr J}},\mathscr J\otimes\mathscr O_{Y_{\mathscr J}})\),
+\(i\colon X_{\mathscr J}\to X\); if it has sections locally, it is a torsor,
+whose class in \(H^1(X,\mathscr A)=H^1(X_{\mathscr J},
+i^{-1}\mathscr A)\) vanishes exactly when it has a global section (see
+EGA~IV\textsubscript{4}, 16.5.15).}
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:iii:corollary:4-3-1}\textbf{Corollary 4.3.1.}
-\textit{Let \(S,S_{\mathscr J},\mathscr J,X,X_{\mathscr J},
-Y_{\mathscr J}\), and \(\mathscr I_{Y_{\mathscr J}}\) be as above, and
-suppose that \(Y_{\mathscr J}\) is flat over \(S_{\mathscr J}\). Let
-\(\mathscr A_{\mathscr J}\) be the sheaf of commutative groups
+\noindent\SGAInlineRefTarget{sga3:iii:corollary:4-4}\textbf{Corollary 4.4.}
+\textit{Let \(S,S_{\mathscr J},\mathscr J,X,X_{\mathscr J}\) be as above. Let
+\(Y_{\mathscr J}\) be a closed subscheme of \(X_{\mathscr J}\), flat over
+\(S_{\mathscr J}\). Let \(E\) be the set of closed subschemes \(Y\) of \(X\),
+flat over \(S\), such that \(Y\times_S S_{\mathscr J}=Y_{\mathscr J}\).}
+\begin{enumerate}
+\item[(i)] \textit{The set \(E\) is empty or principal homogeneous under}
 \[
  \operatorname{Hom}_{\mathscr O_{X_{\mathscr J}}}
  \left(
   \mathscr I_{Y_{\mathscr J}},
-  \mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
-  \mathscr O_{Y_{\mathscr J}}
- \right)
+  \mathscr O_{Y_{\mathscr J}}\otimes_{\mathscr O_{S_{\mathscr J}}}\mathscr J
+ \right),
 \]
-on \(X_{\mathscr J}\), and put
-\(\mathscr A=i_*(\mathscr A_{\mathscr J})\), where
-\(i:X_{\mathscr J}\hookrightarrow X\) is the immersion. For each open
-subset \(U\) of \(X\), let \(\mathcal E(U)\) be the set of closed
-subschemes \(Y\) of \(U\), flat over \(S\), such that
-\[
- Y\times_S S_{\mathscr J}=Y_{\mathscr J}\cap U.
-\]
-Then \(\mathcal E\) is an \(\mathscr A\)-pseudo-torsor.}
-
-\textit{If, moreover, such a \(Y\) exists locally---that is, if every
-\(x\in X\) has an open neighborhood \(U\) with
-\(\mathcal E(U)\ne\varnothing\)---then \(\mathcal E\) is an
-\(\mathscr A\)-torsor.} The \(\mathscr A\)-torsors on \(X\) are
-parametrized by
-\[
- H^1(X,\mathscr A)=H^1(X_{\mathscr J},\mathscr A_{\mathscr J})
-\]
-(see, for example, EGA IV\textsubscript{4}, 16.5.15), and
-\(\mathcal E\) has a global section---that is,
-\(\mathcal E(X)\ne\varnothing\)---if and only if its corresponding
-cohomology class is zero. Thus we obtain:
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:iii:corollary:4-4}\textbf{Corollary 4.4.}
-\textit{Let \(S,S_{\mathscr J},\mathscr J,X,X_{\mathscr J},
-Y_{\mathscr J}\), and \(\mathscr I_{Y_{\mathscr J}}\) be as above, and
-suppose that \(Y_{\mathscr J}\) is flat over \(S_{\mathscr J}\). Let
-\(E\) be the set of closed subschemes \(Y\) of \(X\), flat over \(S\),
-such that \(Y\times_S S_{\mathscr J}=Y_{\mathscr J}\).}
-\begin{enumerate}
-\item[(i)] \textit{The set \(E\) is either empty or principal homogeneous
-under the abelian group}
-\[
- H^0(X,\mathscr A)=H^0(X_{\mathscr J},\mathscr A_{\mathscr J})
- =\operatorname{Hom}_{\mathscr O_{X_{\mathscr J}}}
- \left(
-  \mathscr I_{Y_{\mathscr J}},
-  \mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
-  \mathscr O_{Y_{\mathscr J}}
- \right).
-\]
+\textit{where \(\mathscr I_{Y_{\mathscr J}}\) is the Ideal defining
+\(Y_{\mathscr J}\) in \(X_{\mathscr J}\).}
 
 \item[(ii)] \textit{The set \(E\) is nonempty if and only if both of the
 following conditions hold:}
@@ -326,85 +216,35 @@ following conditions hold:}
 \end{enumerate}
 \end{enumerate}
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:iii:complement:4-4-1}\textbf{Complement 4.4.1.}
-\footnote{Editor's note: This complement has been added; it is useful in
-proving Proposition 4.8(ii).}
-Retain the notation of \SGARefLink{sga3:iii:corollary:4-4}{4.4}, and suppose that \(E\) contains an element
-\(Y\). Let \(\mathscr I_Y\) be the ideal of \(\mathscr O_X\) defining
-\(Y\), and let \(\mathscr I_{Y_{\mathscr J}}\) be its image in
-\(\mathscr O_{X_{\mathscr J}}\). As we saw in the proof of \SGARefLink{sga3:iii:proposition:4-2}{4.2}, there is
-a commutative diagram
-
-\begin{center}
-  \SGAThreeNativeInput[0.44\textwidth]
-    {native_diagrams/exp3/diagram_036_exp3_p046_complement441_square.tex}
-\end{center}
-
-\noindent and hence an epimorphism of \(\mathscr O_X\)-modules
-\[
- \phi:\mathscr J\mathscr O_X\longrightarrow
- \mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
- \mathscr O_{Y_{\mathscr J}}.
-\]
-Let \(\mathscr K\) be its kernel. For every element \(Y'\) of \(E\),
-the morphism \(\mathscr O_X\to\mathscr O_{Y'}\) then factors through
-\(\mathscr O_X/\mathscr K\), which is the amalgamated sum \(B'\) in the
-proof of \SGARefLink{sga3:iii:lemma:4-1}{Lemma 4.1}. If \(\mathscr I_{Y'}\) denotes the ideal of \(Y'\)
-in \(\mathscr O_X\), there is a commutative diagram
-
-\begin{center}
-  \SGAThreeNativeInput[0.80\textwidth]
-    {native_diagrams/exp3/diagram_037_exp3_p046_complement441_exact_diagram.tex}
-\end{center}
-
-Replacing \(X\) by the closed subscheme defined by \(\mathscr K\), we
-are thus reduced to the case \(\mathscr K=0\). The datum of \(Y'\) is
-then equivalent to that of the \(\mathscr O_X\)-submodule
-\(\mathscr I_{Y'}\) of \(\mathscr O_X\) which maps bijectively onto
-\(\mathscr I_{Y_{\mathscr J}}\) under the projection
-\(p:\mathscr O_X\to\mathscr O_{X_{\mathscr J}}\). Let
-\[
- f':\mathscr I_{Y_{\mathscr J}}\xrightarrow{\sim}\mathscr I_{Y'},
- \qquad
- f:\mathscr I_{Y_{\mathscr J}}\xrightarrow{\sim}\mathscr I_Y
-\]
-denote the respective inverse isomorphisms. Then \(f'-f\) is an element
-of
-\[
- \operatorname{Hom}_{\mathscr O_{X_{\mathscr J}}}
- \left(
-  \mathscr I_{Y_{\mathscr J}},
-  \mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
-  \mathscr O_{Y_{\mathscr J}}
- \right)
- =\operatorname{Hom}_{\mathscr O_{X_{\mathscr J}}}
-  (\mathscr I_{Y_{\mathscr J}},\mathscr J\mathscr O_Y),
-\]
-which we denote by \(d(Y',Y)\). Notice that
-\(d(Y,Y')=-d(Y',Y)\).
-
-For our fixed \(Y\) and variable \(Y'\), consider the morphism
-\[
- \mathscr I_{Y'}\longrightarrow\mathscr O_X\longrightarrow
- \mathscr O_Y=\mathscr O_X/\mathscr I_Y.
-\]
-Since its composite with \(\mathscr O_Y\to\mathscr O_{Y_{\mathscr J}}\)
-is zero, it takes values in
-\[
- \mathscr J\mathscr O_Y
- =\mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}
-  \mathscr O_{Y_{\mathscr J}}.
-\]
-More precisely, let \(V\) be an open subset of \(X\), let \(x'\) be a
-section of \(\mathscr I_{Y'}\) on \(V\), and let \(x_{\mathscr J}\) be
-its image in \(\Gamma(V,\mathscr I_{Y_{\mathscr J}})\). Then
-\[
- x'=f'(x_{\mathscr J})
-   =f(x_{\mathscr J})+(f'-f)(x_{\mathscr J})
-   =f(x_{\mathscr J})+d(Y',Y)(x_{\mathscr J}).
-\]
-Consequently, the morphism
-\(\mathscr I_{Y'}\to\mathscr J\mathscr O_Y\) is given by
-\(d(Y',Y)\).
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~III; our
+formulation). The re-edition adds here a complement, which it uses to prove
+4.8 (ii): an explicit description of the action in 4.4 (i). Let \(Y\) and
+\(Y'\) be two elements of \(E\), with ideals \(\mathscr I_Y\) and
+\(\mathscr I_{Y'}\) in \(\mathscr O_X\). Since \(\mathscr O_Y\) and
+\(\mathscr O_{Y'}\) are flat over \(S\), the ideals
+\(\mathscr J\mathscr O_Y\) and \(\mathscr J\mathscr O_{Y'}\) are both
+\(\mathscr J\otimes_{\mathscr O_{S_{\mathscr J}}}\mathscr O_{Y_{\mathscr J}}\),
+and the surjections \(\mathscr I_Y\to\mathscr I_{Y_{\mathscr J}}\),
+\(\mathscr I_{Y'}\to\mathscr I_{Y_{\mathscr J}}\) induced by
+\(\mathscr O_X\to\mathscr O_{X_{\mathscr J}}\) have kernels
+\(\mathscr I_Y\cap\mathscr J\mathscr O_X\) and
+\(\mathscr I_{Y'}\cap\mathscr J\mathscr O_X\), which are both the kernel
+\(\mathscr K\) of \(\mathscr J\mathscr O_X\to\mathscr J\otimes
+\mathscr O_{Y_{\mathscr J}}\). For a local section \(z\) of
+\(\mathscr I_{Y'}\), the image of \(z\) in \(\mathscr O_Y\) lies in
+\(\mathscr J\mathscr O_Y\), since \(Y\) and \(Y'\) have the same reduction;
+it depends only on the image \(\bar z\) of \(z\) in
+\(\mathscr I_{Y_{\mathscr J}}\), because two choices differ by a section of
+\(\mathscr K\subset\mathscr I_Y\). This defines an
+\(\mathscr O_{X_{\mathscr J}}\)-linear map
+\(d(Y',Y)\colon\mathscr I_{Y_{\mathscr J}}\to\mathscr J\otimes
+\mathscr O_{Y_{\mathscr J}}\), with \(d(Y,Y')=-d(Y',Y)\) and
+\(d(Y'',Y)=d(Y'',Y')+d(Y',Y)\) (lift a section of
+\(\mathscr I_{Y_{\mathscr J}}\) to \(\mathscr I_Y\), \(\mathscr I_{Y'}\),
+\(\mathscr I_{Y''}\) and compare the differences in
+\(\mathscr J\mathscr O_X\)). Moreover \(Y'\) is determined by \(Y\) and
+\(d(Y',Y)\): the ideal \(\mathscr I_{Y'}\) consists of the local sections of
+\(\mathscr O_X\) whose image in \(\mathscr O_{X_{\mathscr J}}\) is a section
+\(u\) of \(\mathscr I_{Y_{\mathscr J}}\) and whose image in \(\mathscr O_Y\) is
+\(d(Y',Y)(u)\).
 

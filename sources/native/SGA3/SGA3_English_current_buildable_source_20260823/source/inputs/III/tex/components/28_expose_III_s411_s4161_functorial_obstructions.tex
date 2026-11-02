@@ -2,11 +2,11 @@
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:iii:paragraph:4-11}\textbf{4.11.}
-We now propose to study the following situation. Let \(S\),
-\(S_{\mathscr J}\), and \(S_0\) be as in \SGARefLink{sga3:iii:proposition:4-8}{4.8}. We have three
-\(S\)-schemes \(X,X',T\), a subscheme \(Y\) of \(X\) (respectively a
-subscheme \(Y'\) of \(X'\)), and morphisms \(f:T\to X'\) and
-\(g:X'\to X\).
+We now propose to study the following situation: we have, as in
+\SGARefLink{sga3:iii:proposition:4-8}{4.8}, \(S\), \(S_{\mathscr J}\) and \(S_0\); we have two
+\(S\)-schemes \(X\) and \(X'\), a subscheme \(Y\) (respectively \(Y'\)) of
+\(X\) (respectively \(X'\)), an \(S\)-scheme \(T\), and morphisms
+\(f:T\to X'\) and \(g:X'\to X\).
 
 \begin{center}
   \SGAThreeNativeInput[0.62\textwidth]
@@ -43,14 +43,9 @@ whose relations we seek to compute.
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:iii:lemma:4-12}\textbf{Lemma 4.12.}
-\textit{Suppose that \(Y'\) is flat over \(S\), so that
-\[
- \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{Y'_0}
- =\mathscr J\mathscr O_{Y'}.
-\]
-Then:}
 \begin{enumerate}
-\item[(i)] \textit{There is a natural morphism}
+\item[(i)] \textit{Suppose that \(Y'\) is flat over \(S\). Then there is a
+natural morphism}
 \begin{align*}
  b_{f_0}:&\
  \operatorname{Hom}_{\mathscr O_{Y'_0}}
@@ -63,15 +58,14 @@ Then:}
    \otimes_{\mathscr O_Y}\mathscr O_{Y_0}),
    \mathscr J\mathscr O_T\bigr).
 \end{align*}
-\item[(ii)] \textit{There is also a natural morphism, functorial in
-\(T\),}
-\footnote{Editor's note: We have removed the hypothesis that \(Y'_0\)
-be locally complete intersection in \(X'_0\), which is superfluous by
-\SGARefLink{sga3:iii:remark:4-8-0}{4.8.0}. We have also added that \(a_{g_0}(f_0)\) is
-\lq\lq functorial in \(T\)\rq\rq, a fact that plays a crucial role in
-the proof of \SGARefLink{sga3:iii:lemma:4-17}{4.17}.}
+\item[(ii)] \textit{Suppose moreover that \(Y'_0\) is locally complete
+intersection in \(X'_0\).}\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~III, drops this
+hypothesis, here and in 4.13: for \(Y'\) flat over \(S\), the second vertical
+arrow of the second diagram below is an isomorphism without it (see the
+Addition after Remark~\SGARefLink{sga3:iii:paragraph:4-10}{4.10}).} \textit{Then there is a natural
+morphism}
 \begin{align*}
- a_{g_0}(f_0):&\
+ a_{g_0}:&\
  \operatorname{Hom}_{\mathscr O_{T_0}}
  \bigl(f_0^*(\mathscr N_{Y'/X'}
    \otimes_{\mathscr O_{Y'}}\mathscr O_{Y'_0}),
@@ -84,133 +78,67 @@ the proof of \SGARefLink{sga3:iii:lemma:4-17}{4.17}.}
 \end{align*}
 \end{enumerate}
 
-\noindent\textit{Proof.}
-\footnote{Editor's note: The proof has been expanded to make the
-\lq\lq functoriality in \(T\)\rq\rq\ of \(a_{g_0}\) explicit.}
-First note that, with \(X,X',Y,Y'\) fixed, giving a \(T\) as above is
-equivalent to giving a morphism
-\((f,f_{\mathscr J}):T\to X'\times_{X'^{+}}Y'^{+}\). Put
-\(Z=X'\times_{X'^{+}}Y'^{+}\), and let \(M\) and \(M'\) be the
-\(Z\)-functors defined, for every \(f:T\to Z\), by
-\begin{align*}
- M(T)&=
- \operatorname{Hom}_{\mathscr O_{T_0}}
- \bigl(f_0^*g_0^*(\mathscr N_{Y/X}
-   \otimes_{\mathscr O_Y}\mathscr O_{Y_0}),
-   \mathscr J\mathscr O_T\bigr),\\
- M'(T)&=
- \operatorname{Hom}_{\mathscr O_{T_0}}
- \bigl(f_0^*(\mathscr N_{Y'/X'}
-   \otimes_{\mathscr O_{Y'}}\mathscr O_{Y'_0}),
-   \mathscr J\mathscr O_T\bigr).
-\end{align*}
-
-In all cases there is a commutative diagram
+To construct \(b_{f_0}\), it suffices to exhibit an
+\(\mathscr O_{T_0}\)-morphism
+\[
+ f_0^*(\mathscr J\mathscr O_{Y'})\longrightarrow\mathscr J\mathscr O_T;
+\]
+one has in any case a diagram
 
 \begin{center}
   \SGAThreeNativeInput[0.65\textwidth]
     {native_diagrams/exp3/diagram_045_exp3_p057_412_tensor_square.tex}
 \end{center}
 
-Since \(Y'\) is flat over \(S\), the left vertical arrow is an
-isomorphism, and hence we obtain a morphism of
-\(\mathscr O_{T_0}\)-modules
-\[
- f_0^*(\mathscr J\mathscr O_{Y'})\longrightarrow
- \mathscr J\mathscr O_T.
-\]
-It induces a morphism of abelian groups
-\begin{multline*}
- \operatorname{Hom}_{\mathscr O_{T_0}}
- \bigl(f_0^*g_0^*(\mathscr N_{Y/X}
-  \otimes_{\mathscr O_Y}\mathscr O_{Y_0}),
-  f_0^*(\mathscr J\mathscr O_{Y'})\bigr)\\
- \longrightarrow M(T),
-\end{multline*}
-and, on composing with the morphism
-\begin{multline*}
- M(Y')\longrightarrow
- \operatorname{Hom}_{\mathscr O_{T_0}}
- \bigl(f_0^*g_0^*(\mathscr N_{Y/X}
-  \otimes_{\mathscr O_Y}\mathscr O_{Y_0}),
-  f_0^*(\mathscr J\mathscr O_{Y'})\bigr)
-\end{multline*}
-induced by \(f_0^*\), we obtain the morphism
-\(b_{f_0}:M(Y')\to M(T)\).
+If \(Y'\) is flat over \(S\), the first vertical arrow is an
+isomorphism, and one completes the square at once.
 
-Likewise, in all cases there is a diagram
+In the same way, one constructs \(a_{g_0}\) by exhibiting an
+\(\mathscr O_{Y'_0}\)-morphism
+\[
+ g_0^*(\mathscr N_{Y/X}\otimes_{\mathscr O_Y}\mathscr O_{Y_0})
+ \longrightarrow
+ \mathscr N_{Y'/X'}\otimes_{\mathscr O_{Y'}}\mathscr O_{Y'_0};
+\]
+now one has in any case a diagram
 
 \begin{center}
   \SGAThreeNativeInput[0.67\textwidth]
     {native_diagrams/exp3/diagram_046_exp3_p057_412_conormal_square.tex}
 \end{center}
 
-Since \(Y'\) is flat over \(S\), the second vertical arrow is an
-isomorphism by \SGARefLink{sga3:iii:remark:4-8-0:equation:4-8-0}{4.8.0}. We therefore obtain an
-\(\mathscr O_{Y'_0}\)-morphism
-\[
- i_0'^*g_0^*(\mathscr N_{Y/X}
-   \otimes_{\mathscr O_Y}\mathscr O_{Y_0})
- \longrightarrow
- \mathscr N_{Y'/X'}
-   \otimes_{\mathscr O_{Y'}}\mathscr O_{Y'_0}.
-\]
-This induces a morphism
-\(a_{g_0}(\operatorname{id}_{Y'}):M'(Y')\to M(Y')\) and, for every
-\(f:T\to Z\), a morphism \(a_{g_0}(f):M'(T)\to M(T)\), such that the
-following diagram commutes:
+if \(Y'_0\) is locally complete intersection in \(X'_0\), the second
+vertical arrow is an isomorphism and one completes the diagram.
 
-\begin{center}
-  \SGAThreeNativeInput[0.50\textwidth]
-    {native_diagrams/exp3/diagram_047_exp3_p057_412_functor_square.tex}
-\end{center}
-
-Here \(b'_{f_0}\) is defined in the same way as \(b_{f_0}\).
-\hfill\textsc{q.e.d.}
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:iii:remark:4-12-1}\textbf{Remark 4.12.1.}
-\footnote{Editor's note: This remark has been added for use in the
-proof of \SGARefLink{sga3:iii:lemma:4-17}{4.17}.}
-\textit{Let \(M_0\) and \(M'_0\) be the \(Y'_0\)-functors defined, for
-every \(f:T_0\to Y'_0\), by}
-\begin{align*}
- M_0(T)&=
- \operatorname{Hom}_{\mathscr O_{T_0}}
- \bigl(f_0^*g_0^*(\mathscr N_{Y/X}
-  \otimes_{\mathscr O_Y}\mathscr O_{Y_0}),
-  \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{T_0}\bigr),\\
- M'_0(T)&=
- \operatorname{Hom}_{\mathscr O_{T_0}}
- \bigl(f_0^*(\mathscr N_{Y'/X'}
-  \otimes_{\mathscr O_{Y'}}\mathscr O_{Y'_0}),
- \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{T_0}\bigr).
-\end{align*}
-
-Note at once that \(Z_0=Y'_0\), and that on the category of
-\(Z\)-schemes \(T\) flat over \(S\), the functors \(M\) and \(M'\)
-coincide respectively with
-\(\prod_{S_0/S}M_0\) and \(\prod_{S_0/S}M'_0\). In that case,
-\(b_{f_0}\) is simply the morphism
-\[
- f_0^*:M_0(Y'_0)\longrightarrow M(T_0)
-\]
-induced by \(f_0\). Moreover, for every morphism \(u:U\to T\), if
-\(h=f\circ u\), the following diagram commutes:
-
-\begin{center}
-  \SGAThreeNativeInput[0.50\textwidth]
-    {native_diagrams/exp3/diagram_048_exp3_p058_4121_naturality_square.tex}
-\end{center}
-
-Thus \(a_{g_0}\) becomes a morphism of functors
-\[
- \prod_{S_0/S}M'_0\longrightarrow\prod_{S_0/S}M_0.
-\]
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~III; our
+formulation). The re-edition makes explicit two properties of these
+morphisms, which are used in 4.19. Let
+\(\alpha\colon i_0'^*g_0^*(\mathscr N_{Y/X}\otimes_{\mathscr O_Y}\mathscr O_{Y_0})
+\to\mathscr N_{Y'/X'}\otimes_{\mathscr O_{Y'}}\mathscr O_{Y'_0}\) and
+\(\beta_T\colon f_0^*(\mathscr J\mathscr O_{Y'})\to\mathscr J\mathscr O_T\) be the
+morphisms just constructed, so that \(a_{g_0}(c')=c'\circ f_0^*(\alpha)\) and
+\(b_{f_0}(c)=\beta_T\circ f_0^*(c)\). (a) Change of \(T\). Let \(u\colon U\to T\)
+be an \(S\)-morphism and \(h=f\circ u\); for an \(\mathscr O_{Y'_0}\)-module
+\(\mathscr E\) and an \(\mathscr O_{T_0}\)-morphism
+\(\varphi\colon f_0^*\mathscr E\to\mathscr J\mathscr O_T\), let
+\(u^\natural(\varphi)\colon h_0^*\mathscr E\to\mathscr J\mathscr O_U\) be the
+composite of \(u_0^*(\varphi)\) with the canonical morphism
+\(u_0^*(\mathscr J\mathscr O_T)\to\mathscr J\mathscr O_U\). Since \(\alpha\) does
+not depend on \(T\), and \(\beta_U\) is the composite of \(u_0^*(\beta_T)\) with
+that canonical morphism, the morphisms attached to \(h\) satisfy
+\(a_{g_0}(u^\natural(c'))=u^\natural(a_{g_0}(c'))\) and
+\(b_{h_0}(c)=u^\natural(b_{f_0}(c))\). (b) Flat \(T\). If \(T\) is flat over
+\(S\), then \(\mathscr J\mathscr O_T=\mathscr J\otimes_{\mathscr O_{S_0}}
+\mathscr O_{T_0}\) and \(\beta_T\) is an isomorphism; the groups of the lemma
+then depend only on \(f_0\colon T_0\to Y'_0\), \(b_{f_0}\) is simply
+\(c\mapsto f_0^*(c)\), and \(a_{g_0}\) is the value at \(T_0\) of the morphism of
+functors \(c'\mapsto c'\circ f_0^*(\alpha)\), defined for all \(Y'_0\)-schemes
+\(f_0\colon T_0\to Y'_0\).
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:iii:proposition:4-13}\textbf{Proposition 4.13.}
-\textit{Suppose that \(Y'\) is flat over \(S\). Then}
+\textit{Suppose that \(Y'\) is flat over \(S\) and that \(Y'_0\) is
+locally complete intersection in \(X'_0\). Then one has the formula}
 \[
  c(X,Y,g\circ f)=a_{g_0}\bigl(c(X',Y',f)\bigr)
    +b_{f_0}\bigl(c(X,Y,g\circ i')\bigr).
@@ -237,276 +165,232 @@ There is therefore a diagram of rings and ideals
     {native_diagrams/exp3/diagram_049_exp3_p058_413_ring_ideal_diagram.tex}
 \end{center}
 
-Let us study the terms of the formula to be proved. In what follows,
-for \(x\in I_Y\) (respectively \(u\in I_{Y'}\)), write \(\bar x\)
-(respectively \(\bar u\)) for its image in \(I_Y/I_Y^2\)
-(respectively \(I_{Y'}/I_{Y'}^2\)). If \(m\) belongs to a
-\(\Lambda\)-module \(M\), write \(\bar m_0\) for its image in
-\(M_0=M/\mathscr I M\).
-
-We saw that \(c=c(X,Y,g\circ f)\) is the unique \(C_0\)-morphism
+Let us study the various terms of the formula to be proved. First
+\(c=c(X,Y,g\circ f)\). We saw that it is the unique \(C_0\)-morphism
 \[
  I_Y/I_Y^2\otimes_B C_0\longrightarrow\mathscr J C
 \]
 such that \(c(\bar x\otimes1)=f(g(x))\) for every \(x\in I_Y\).
-
-Fix \(x\in I_Y\). Since \(g_{\mathscr J}(Y'_{\mathscr J})\subset
-Y_{\mathscr J}\), one has \(g(x)\in I_{Y'}+\mathscr J A'\). Write
+So let \(x\in I_Y\), and put \(x'=g(x)\in I_{Y'}+\mathscr J A'\). Write
 \[
- g(x)=x'+\sum_i\lambda_i a'_i,
- \qquad x'\in I_{Y'},\quad \lambda_i\in\mathscr J,\quad a'_i\in A'.
+ x'=y'+\sum_i\lambda_i a'_i,
+ \qquad y'\in I_{Y'},\quad \lambda_i\in\mathscr J,\quad a'_i\in A'.
 \]
-Then
-\begin{equation*}
- \tag{1}\label{sga3:iii:proposition:4-13:equation:1}
+Hence
+\[
  c(X,Y,g\circ f)(\bar x\otimes1)
- =f(g(x))=f(x')+\sum_i\lambda_i f(a'_i).
-\end{equation*}
+ =f(x')=f(y')+\sum_i\lambda_i f(a'_i).
+\]
 
-Consider \(a_{g_0}(c(X',Y',f))\). By the definitions just given, it is
-defined by the following diagram:
+Consider now \(a_{g_0}(c(X',Y',f))\). By the definitions laid down, it
+is defined by the diagram
 
 \begin{center}
   \SGAThreeNativeInput[0.86\textwidth]
     {native_diagrams/exp3/diagram_050_exp3_p059_413_ag0_obstruction_diagram.tex}
 \end{center}
 
-Thus
-\(a_{g_0}(c(X',Y',f))(\bar x\otimes1)=f(u)\), where \(u\in I_{Y'}\)
-has image \(\bar u\) in \(I_{Y'_0}/I_{Y'_0}^2\) satisfying
+Hence \(a_{g_0}(c(X',Y',f))(\bar x\otimes1)=f(u)\), where \(u\) is an
+element of \(I_{Y'}\) lifting \(g_0(x_0)=(g(x))_0=y'_0\). One therefore
+takes \(u=y'\) and finds
 \[
- \bar u_0\otimes1=\bar g_0(\bar x_0)\otimes1
- =g_0(\bar x_0)\otimes1.
+ a_{g_0}(c(X',Y',f))(\bar x\otimes1)=f(y').
 \]
-We may therefore take \(u=x'\), which gives
-\begin{equation*}
- \tag{2}\label{sga3:iii:proposition:4-13:equation:2}
- a_{g_0}(c(X',Y',f))(\bar x\otimes1)=f(x').
-\end{equation*}
 
-Finally consider \(b_{f_0}(c(X,Y,g\circ i'))\). By hypothesis, the
-morphism of \(\Lambda_0\)-algebras \(f_0:A'_0\to C_0\) factors through
-\(B'_0\). Since \(Y'\) is flat, and hence
+Consider finally \(b_{f_0}(c(X,Y,g\circ i'))\). It is defined by the
+diagram
 \[
- \mathscr J\otimes_{\Lambda_0}B'_0\xrightarrow{\sim}\mathscr J B',
+\begin{tikzcd}[column sep=2.2em,row sep=2.6em]
+ I_Y/I_Y^2\otimes_BB'_0\arrow[r,"\bar g"]\arrow[d]
+  &\mathscr JB'\arrow[d]&\\
+ I_Y/I_Y^2\otimes_BC_0\arrow[r]
+   \arrow[drr,"{b_{f_0}(c(X,Y,g\circ i'))}"']
+  &\mathscr JB'\otimes_{B'_0}C_0
+  &\mathscr J\otimes_{\Lambda_0}C_0\arrow[l,"\sim"']\arrow[d]\\
+ &&\mathscr JC
+\end{tikzcd}
 \]
-we obtain a morphism of \(B'_0\)-modules
-\(\psi:\mathscr J B'\to\mathscr J C\) making the following diagram
-commute:
-
-\begin{center}
-  \SGAThreeNativeInput[0.74\textwidth]
-    {native_diagrams/exp3/diagram_051_exp3_p059_413_tensor_J_square.tex}
-\end{center}
-
-Let
+One therefore has at once\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~III, justifies this
+step. As \(Y'\) is flat over \(S\), \(\mathscr JB'=\mathscr J\otimes_{\Lambda_0}B'_0\);
+through this identification, the composite
+\(\mathscr JB'\to\mathscr JB'\otimes_{B'_0}C_0\to\mathscr JC\) of the diagram is
+\(\lambda\otimes b\mapsto\lambda c\), where \(c\in C\) lifts \(f_0(b)\) (the
+morphism \(f_0\colon A'_0\to C_0\) factors through \(B'_0\), and \(c\) matters
+only modulo \(\mathscr IC\), which \(\mathscr J\) annihilates); so it sends
+\(\lambda\pi'(a')\) to \(\lambda f(a')\). Since \(y'\) vanishes in \(B'\),
+\(\bar g(\bar x\otimes1)\) is the image \(\sum_i\lambda_i\pi'(a'_i)\) of \(x'\)
+in \(\mathscr JB'\), whence the value \(\sum_i\lambda_if(a'_i)\), written
+\(f(\bar g(x))\) in the text.}
 \[
- \varphi:\mathscr J B'\otimes_{B'_0}C_0\longrightarrow\mathscr J C
+ b_{f_0}(c(X,Y,g\circ i'))(\bar x\otimes1)=f(\bar g(x))
+ =\sum_i\lambda_i f(a'_i).
 \]
-be the morphism of \(C_0\)-modules induced by \(\psi\). Then, for every
-\(a'\in A'\) and \(\lambda\in\mathscr J\),
-\begin{equation*}
-\tag{\(\dagger\)}\label{sga3:iii:proposition:4-13:equation:dagger}
- \varphi(\lambda\pi'(a')\otimes1)=\lambda f(a').
-\end{equation*}
-
-The element \(b_{f_0}(c(X,Y,g\circ i'))\) is then defined by the
-commutative diagram
-
-\begin{center}
-  \SGAThreeNativeInput[0.62\textwidth]
-    {native_diagrams/exp3/diagram_052_exp3_p060_413_bf0_obstruction_diagram.tex}
-\end{center}
-
-Consequently,
-\begin{equation*}
- \tag{3}\label{sga3:iii:proposition:4-13:equation:3}
- b_{f_0}(c(X,Y,g\circ i'))(\bar x\otimes1)
- =\varphi\left(\sum_i\lambda_i\pi'(a'_i)\otimes1\right)
- =\sum_i\lambda_i f(a'_i),
-\end{equation*}
-the last equality following from \((\dagger)\). Comparison of the three
-explicit formulas \SGARefLink{sga3:iii:proposition:4-13:equation:1}{(1)}, \SGARefLink{sga3:iii:proposition:4-13:equation:2}{(2)}, and \SGARefLink{sga3:iii:proposition:4-13:equation:3}{(3)} gives the required formula.
+The comparison of the three explicit results gives the required formula.
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:iii:corollary:4-14}\textbf{Corollary 4.14.}
-\textit{Let \(Y,Y'\) be two flat subschemes of \(X\), both reducing to
+\textit{Let \(Y\) and \(Y'\) be two flat subschemes of \(X\) reducing to
 \(Y_{\mathscr J}\), and suppose that \(Y_0\) is locally complete
 intersection in \(X_0\). If \(f:T\to X\) is an \(S\)-morphism such that
 \(f_{\mathscr J}\) factors through \(Y_{\mathscr J}\to X_{\mathscr J}\),
-then}
+one has the formula}
 \[
- c(X,Y,f)-c(X,Y',f)=b_{f_0}\bigl(d(Y,Y')\bigr).
+ c(X,Y',f)-c(X,Y,f)=f^*\bigl(d(Y',Y)\bigr),
+\]
+\textit{where \(f^*\) is the natural morphism}
+\[
+ \operatorname{Hom}_{\mathscr O_{Y_0}}
+ \bigl(\mathscr N_{Y_0/X_0},\mathscr J\mathscr O_Y\bigr)
+ \longrightarrow
+ \operatorname{Hom}_{\mathscr O_{T_0}}
+ \bigl(f_0^*(\mathscr N_{Y_0/X_0}),\mathscr J\mathscr O_T\bigr).
 \]
 
-Indeed, applying the preceding formula to the diagram
+Indeed, it suffices to apply the preceding formula to the diagram
 
 \begin{center}
   \SGAThreeNativeInput[0.62\textwidth]
     {native_diagrams/exp3/diagram_053_exp3_p060_414_comparison_diagram.tex}
 \end{center}
 
-we find
-\(c(X,Y,f)-c(X,Y',f)=b_{f_0}(c(X,Y,i'))\). Moreover, by \SGARefLink{sga3:iii:proposition:4-8:item:ii}{4.8(ii)},
-\(c(X,Y,i')=d(Y,Y')\).
+and to use the relation \(c(X,Y,i')=d(Y,Y')\) (cf.
+\SGARefLink{sga3:iii:proposition:4-8:item:ii}{4.8 (ii)}).
+
+\noindent\textit{Nota.}\quad Taking \(f=i'\) in the preceding formula, one
+recovers the relation given in \SGARefLink{sga3:iii:proposition:4-8:item:ii}{4.8 (ii)}.
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:iii:proposition:4-15}\textbf{Proposition 4.15.}
-\textit{Let \(X\) be an \(S\)-group smooth over \(S\), and let \(Y\)
-be a sub-\(S\)-group flat and locally of finite presentation over \(S\).
-Then \(Y\) is locally complete intersection in \(X\) (cf. \SGARefLink{sga3:iii:definition:4-6-2}{4.6.2}).}
+\noindent\SGAInlineRefTarget{sga3:iii:proposition:4-15}\textbf{4.15.}
+We shall now consider the case where \(X\) is an \(S\)-group
+\emph{smooth} over \(S\). Note first that every sub-\(S\)-group \(Y\)
+\emph{flat} and locally of finite presentation over \(S\) is \emph{locally
+complete intersection} in \(X\).\footnote{Translator's note: the 1970 text has
+``every sub-\(S\)-group \(Y\) flat over \(S\)''; the Gille--Polo re-edition
+(2011), Exposé~III, adds ``and locally of finite presentation''. The addition
+cannot be omitted over a general base (it is automatic when \(S\) is locally
+noetherian): the ideal of a locally complete intersection is locally finitely
+generated, so \(Y\) is then locally of finite presentation over \(S\), and a
+flat closed subgroup need not be. For instance, let \(R=k^{\mathbf N}\) for a
+field \(k\) and \(I=k^{(\mathbf N)}\), the ideal of sequences with finite
+support, which is not finitely generated; every \(R\)-module is flat, and the
+ideal \(xI[x]\) of \(R[x]\) defines a closed subgroup of the additive group
+over \(R\) that is flat but not of finite presentation.}
+Let us sketch the proof of this fact. By general results (cf. in
+particular SGA~1, IV, 5.7), since \(X\) and \(Y\) are flat, one is
+reduced to verifying the assertion on the geometric fibres of \(S\),
+hence when \(S\) is the spectrum of an algebraically closed field. One
+then remarks that one is dealing with groups, so that it suffices to
+verify the assertion at the origin. Finally, to verify that \(Y\) is a
+complete intersection in \(X\) at the origin, one may content oneself
+with doing so for the formal groups \(\widehat X\) and \(\widehat Y\)
+corresponding to \(X\) and \(Y\). Since \(X\) is smooth, the
+hyperalgebra of \(\widehat X\) is a polynomial algebra, and one concludes
+by means of the structure theorem of Dieudonné, which shows that the
+hyperalgebra of \(\widehat Y\) is obtained by ``truncating'' that of
+\(\widehat X\), hence is a complete intersection in it (cf. Exp.~VII).
+Of course, when \(Y\) is also smooth over \(S\), it suffices simply to
+invoke SGA~1, II, 4.15.
 
-\noindent\textit{Proof.}
-\footnote{Editor's note: We have added to the statement the hypothesis
-that \(Y\) be locally of finite presentation over \(S\), and supplied
-the proof that follows, which is more direct than the one sketched in
-the original. For completeness, we also spell out the latter. As in
-the proof above, first reduce to the case \(S=\operatorname{Spec}(k)\),
-where \(k\) is algebraically closed. By EGA IV\textsubscript{4},
-16.9.10 and 19.3.2, it suffices to see that, for every \(y\in Y\), the
-completion of the local ring \(\mathscr O_{Y,y}\) is a quotient of a
-complete noetherian local ring by a regular sequence. By loc. cit.,
-19.3.3, the set of \(y\in Y\) with this property is an open subset
-\(U\subset Y\). Since \(Y\) is of finite type over \(k\), it suffices
-to show that \(U\) contains every closed point. Because \(Y\) is a
-\(k\)-group, a translation argument reduces this to the completion of
-\(\mathscr O_{Y,e}\), that is, to the formal group \(\widehat Y\)
-corresponding to \(Y\) (cf. Expos\'e VII\textsubscript{B}). Since \(X\)
-is smooth, the affine algebra \(\mathscr A(\widehat X)\) is a power
-series algebra \(k[[X_1,\ldots,X_n]]\). The Dieudonn\'e structure
-theorem then shows that \(\mathscr A(\widehat Y)\) is isomorphic to a
-quotient
-\[
- k[[X_1,\ldots,X_{r+s}]]/
- (X_1^{p^{n_1}},\ldots,X_r^{p^{n_r}}),
-\]
-where \(p\) is the characteristic exponent of \(k\) and \(r+s\leq n\);
-cf. Expos\'e VII\textsubscript{B}, Remark 5.5.2(b).}
-We show that the immersion \(Y\to X\) is regular in the sense of EGA
-IV\textsubscript{4}, 16.9.2. By EGA IV\textsubscript{4}, 19.5.1, this
-implies that it is regular also in the sense of 4.6.2 (indeed, by loc.
-cit., the two definitions are equivalent when \(S\) is locally
-noetherian). Thus \lq\lq regular immersion\rq\rq\ will here mean regular
-in the sense of EGA IV\textsubscript{4}, 16.9.2. Since \(X\) and \(Y\)
-are flat and locally of finite presentation over \(S\), EGA
-IV\textsubscript{4}, 19.2.4 reduces the assertion to proving that
-\(Y_s\to X_s\) is a regular immersion for every \(s\in S\). By EGA
-IV\textsubscript{4}, 19.1.5(ii), it is enough to check this on the
-geometric fibers of \(S\), and hence when \(S\) is the spectrum of an
-algebraically closed field \(k\).
+\emph{Addition} (after the Gille--Polo re-edition (2011), Exposé~III; our
+formulation). The re-edition proves the first assertion of 4.15 as follows,
+for \(Y\) flat and locally of finite presentation over \(S\). It suffices to
+show that \(Y\to X\) is a regular immersion in the sense of
+EGA~IV\textsubscript{4}, 16.9.2: a regular sequence has an acyclic Koszul
+complex (loc.\ cit., 19.5.1), so that \(Y\) is then locally complete
+intersection in the sense of the Addition after 4.6. As \(X\) and \(Y\) are
+flat and locally of finite presentation over \(S\), it suffices that each
+\(Y_s\to X_s\) (\(s\in S\)) be a regular immersion (loc.\ cit., 19.2.4); this
+may be checked after passing to an algebraic closure of the residue field,
+since quasi-regularity descends under faithfully flat quasi-compact base
+change and coincides with regularity over a field (loc.\ cit., 19.1.5 (ii)
+and 16.9.10). So let \(S=\operatorname{Spec}k\), \(k\) algebraically closed.
+The quotient \(X/Y\) exists and is smooth over \(k\), and
+\(\pi\colon X\to X/Y\) is faithfully flat (Exposé~VI\textsubscript{A},
+\SGARefLink{thm:sga3-VIA-3.2}{3.2}), with \(Y=X\times_{X/Y}\bar e\), where \(\bar e\) is the image of the unit
+section. The local ring of \(X/Y\) at \(\bar e\) is regular, so its maximal
+ideal is generated by a regular sequence and \(\bar e\to X/Y\) is a regular
+immersion; hence so is its flat base change \(Y\to X\) (loc.\ cit., 19.1.5
+(ii)). The re-edition also details the 1970 sketch. Over an algebraically
+closed field \(k\), by loc.\ cit., 16.9.10 and 19.3.2, it suffices that every
+local ring of \(Y\) be a complete intersection ring, that is, that its
+completion be the quotient of a complete regular local ring by an ideal
+generated by a regular sequence. The points where this holds form an open
+subset of \(Y\) (loc.\ cit., 19.3.3), stable under the translations by the
+points of \(Y(k)\), so it suffices to treat the origin. There the completed
+local ring of \(Y\) is a quotient of that of \(X\), a power series ring
+\(k[[x_1,\ldots,x_n]]\), and Dieudonné's theorem on formal groups over a
+perfect field shows that it is isomorphic to
+\(k[[x_1,\ldots,x_{r+s}]]/(x_1^{p^{n_1}},\ldots,x_r^{p^{n_r}})\), with
+\(r+s\leq n\) and \(p\) the characteristic exponent of \(k\) (cf.
+Exposé~VII\textsubscript{B}; the re-edition cites its Remark~5.5.2 (b)), a
+ring of the required form.
 
-By Expos\'e VI\textsubscript{A}, \SGARefLink{thm:sga3-VIA-3.2}{3.2}, the quotient \(X/Y\) exists and is
-smooth, the morphism \(\pi:X\to X/Y\) is flat, and the following square
-is cartesian:
-
-\begin{center}
-  \SGAThreeNativeInput[0.35\textwidth]
-    {native_diagrams/exp3/diagram_054_exp3_p061_415_cartesian_square.tex}
-\end{center}
-
-Here \(\bar e\) is the image in \(X/Y\) of the unit point of \(X\).
-By flat base change (cf. EGA IV\textsubscript{4}, 19.1.5(iii)), it
-therefore suffices to show that \(i\) is a regular immersion. This is
-immediate: the noetherian local ring \(\mathscr O_{X/Y,\bar e}\) is
-smooth (hence regular), so its maximal ideal is generated by a regular sequence.
+Let us now give ourselves a sub-\(S_{\mathscr J}\)-group
+\(Y_{\mathscr J}\) of \(X_{\mathscr J}\), \emph{flat} and locally of
+finite presentation over \(S_{\mathscr J}\). We know first that
+\(Y_{\mathscr J}\) is locally complete intersection in \(X_{\mathscr J}\), hence
+(\SGARefLink{sga3:iii:remark:4-6}{4.6}) that every flat\footnote{Translator's note: the 1970 text has
+``in \(X\)'' in the preceding line, a misprint, and ``every \(S\)-prescheme
+\(Y\) lifting \(Y_{\mathscr J}\)'' without ``flat'', which the Gille--Polo
+re-edition (2011), Exposé~III, adds. Flatness, assumed in 4.6, is needed:
+\(Y_{\mathscr J}\) itself is a subscheme of \(X\) lifting \(Y_{\mathscr J}\);
+for \(S=\operatorname{Spec}k[t]/(t^2)\), \(\mathscr J=t\mathscr O_S\), \(X\) the
+additive group and \(Y_{\mathscr J}\) its unit section over \(S_{\mathscr J}\),
+the ideal of \(Y_{\mathscr J}\) in the local ring \(k[t,x]_{(t,x)}/(t^2)\) of
+\(X\) at the origin is its maximal ideal, which needs two generators, while a
+sequence of that ring with acyclic Koszul complex is regular
+(EGA~IV\textsubscript{4}, 19.5.2), hence has at most one term, the ring having
+dimension one.} \(S\)-scheme \(Y\) lifting \(Y_{\mathscr J}\) is
+locally complete intersection in \(X\), and that such a \(Y\) exists if
+moreover \(Y_0\) is affine.
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:iii:paragraph:4-16}\textbf{4.16.}
-\footnote{Editor's note: We have reorganized \SGARefLink{sga3:iii:paragraph:4-16}{4.16} by collecting here,
-on the one hand, the hypotheses stated at the end of \SGARefLink{sga3:iii:proposition:4-15}{4.15} and, on the
-other, the definition of the obstruction \(DY\).}
-Let \(X\) be an \(S\)-group smooth over \(S\), and denote its group law
-by \(\mu:X\times_S X\to X\). Let \(Y_{\mathscr J}\) be a
-sub-\(S_{\mathscr J}\)-group of \(X_{\mathscr J}\), flat and locally of
-finite presentation over \(S_{\mathscr J}\). By \SGARefLink{sga3:iii:proposition:4-15}{4.15},
-\(Y_{\mathscr J}\) is locally complete intersection in \(X_{\mathscr J}\). Hence,
-by \SGARefLink{sga3:iii:proposition:4-6-5}{4.6.5}, every flat
-\(S\)-scheme \(Y\) lifting \(Y_{\mathscr J}\) is locally complete
-intersection in \(X\). For such a \(Y\), \SGARefLink{sga3:iii:remark:4-8-0}{4.8.0} gives
-\begin{equation*}
- \tag{4.16.1}\label{sga3:iii:paragraph:4-16:equation:4-16-1}
- \mathscr N_{Y/X}\otimes_{\mathscr O_Y}\mathscr O_{Y_0}
- =\mathscr N_{Y_0/X_0}
- =\mathscr N_{Y_{\mathscr J}/X_{\mathscr J}}
-   \otimes_{\mathscr O_{Y_{\mathscr J}}}\mathscr O_{Y_0}.
-\end{equation*}
-
-On the other hand, let \(\varepsilon_0:S_0\to Y_0\) be the unit
-section of \(Y_0\), and let \(\mathbf n_{Y_0/X_0}\) be the
-quasi-coherent \(\mathscr O_{S_0}\)-module
+Moreover, one has
 \[
-\mathbf n_{Y_0/X_0}=\varepsilon_0^*(\mathscr N_{Y_0/X_0}).
+ \mathscr N_{Y/X}\otimes_{\mathscr O_Y}\mathscr O_{Y_0}
+ =\mathscr N_{Y_{\mathscr J}/X_{\mathscr J}}
+   \otimes_{\mathscr O_{Y_{\mathscr J}}}\mathscr O_{Y_0}
+ =\mathscr N_{Y_0/X_0}.
 \]
-Since \(Y_0\) and \(X_0\) are \(S_0\)-groups, it is immediate that
-\(\mathscr N_{Y_0/X_0}\) is invariant under, say, left translations by
-\(Y_0\). Hence
-it is the inverse image of \(\mathbf n_{Y_0/X_0}\) under
-\(Y_0\to S_0\); that is,
-\begin{equation*}
- \tag{4.16.2}\label{sga3:iii:paragraph:4-16:equation:4-16-2}
+Since \(Y_0\) and \(X_0\) are \(S_0\)-groups, one sees easily that, if
+one denotes by \(\mathbf n_{Y_0/X_0}\) the inverse image of
+\(\mathscr N_{Y_0/X_0}\) under the unit section of \(Y_0\) (it is a
+quasi-coherent \(\mathscr O_{S_0}\)-Module), one also has
+\[
  \mathscr N_{Y_0/X_0}
-=\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0}.
-\end{equation*}
-
-Taking (\SGARefLink{sga3:iii:paragraph:4-16:equation:4-16-1}{4.16.1}) and (\SGARefLink{sga3:iii:paragraph:4-16:equation:4-16-2}{4.16.2}) into account, we deduce first from \SGARefLink{sga3:iii:proposition:4-5}{4.5} that
-the set of subschemes \(Y\) of \(X\), flat over \(S\) and lifting
-\(Y_{\mathscr J}\), is either empty or principal homogeneous under
-\begin{equation*}
- \tag{4.16.3}\label{sga3:iii:paragraph:4-16:equation:4-16-3}
+ =\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0}.
+\]
+The deviations and obstructions of \SGARefLink{sga3:iii:paragraph:4-7}{4.7} and \SGARefLink{sga3:iii:proposition:4-8}{4.8} are
+therefore elements respectively of the groups\footnote{Translator's note: the Gille--Polo re-edition (2011), Exposé~III, adds
+that when \(T\) is flat over \(S\), \(\mathscr J\mathscr O_T=\mathscr J
+\otimes_{\mathscr O_{S_0}}\mathscr O_{T_0}\), so that the second group is
+\(\operatorname{Hom}_{S_0}(T_0,N_0)\) for the functor \(N_0\) defined below; this
+is what places the obstruction \(DY\) of \SGARefLink{sga3:iii:lemma:4-17}{4.17}, where
+\(T=Y\times_SY\), in \(C^2(Y_0,N_0)\).}
+\[
  \operatorname{Hom}_{\mathscr O_{Y_0}}
-\bigl(\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0},
-       \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0}\bigr).
-\end{equation*}
-On the other hand, \SGARefLink{sga3:iii:proposition:4-8:item:i}{4.8(i)} shows that, for every such \(Y\) and every
-\(S\)-morphism \(f:T\to X\) such that
-\(f_{\mathscr J}:T_{\mathscr J}\to X_{\mathscr J}\) factors through
-\(Y_{\mathscr J}\), the obstruction \(c(X,Y,f)\) to \(f\) factoring
-through \(Y\) belongs to
+ \bigl(\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0},
+       \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{Y_0}\bigr)
+\]
+and
 \[
  \operatorname{Hom}_{\mathscr O_{T_0}}
-\bigl(\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{T_0},
+ \bigl(\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{T_0},
        \mathscr J\mathscr O_T\bigr).
 \]
-If \(T\) is also flat over \(S\), this last group is equal to
+Consider the functor in commutative groups \(N_0\) over \(S_0\) defined
+by
 \[
- \operatorname{Hom}_{\mathscr O_{T_0}}
-\bigl(\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_{T_0},
-       \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_{T_0}\bigr).
-\]
-This leads us to introduce the following group functor \(N_0\).
-
-\medskip
-\noindent\SGAInlineRefTarget{sga3:iii:definition:4-16-1}\textbf{Definition 4.16.1.}
-\textit{Let \(N_0\) be the \(S_0\)-functor in commutative groups
-defined, for every \(Z\in\operatorname{Ob}(\mathbf{Sch})_{/S_0}\), by}
-\begin{equation*}
- \tag{*}\label{sga3:iii:definition:4-16-1:equation:star}
  \operatorname{Hom}_{S_0}(Z,N_0)
  =\operatorname{Hom}_{\mathscr O_Z}
-\bigl(\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_Z,
-       \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_Z\bigr).
-\end{equation*}
-\textit{Then the set of subschemes \(Y\) of \(X\), flat over \(S\) and
-lifting \(Y_{\mathscr J}\), is either empty or principal homogeneous
-under}
+ \bigl(\mathbf n_{Y_0/X_0}\otimes_{\mathscr O_{S_0}}\mathscr O_Z,
+       \mathscr J\otimes_{\mathscr O_{S_0}}\mathscr O_Z\bigr),
+ \qquad Z\in\operatorname{Ob}(\mathbf{Sch})_{/S_0}.
+\]
+We know that the set of sub-\(S\)-schemes of \(X\), \emph{flat} over
+\(S\), lifting \(Y_{\mathscr J}\), is empty or principal homogeneous
+under
 \[
  \operatorname{Hom}_{S_0}(Y_0,N_0)=C^1(Y_0,N_0).
-\]
-
-For every such \(Y\), consider the diagram
-
-\begin{center}
-  \SGAThreeNativeInput[0.52\textwidth]
-    {native_diagrams/exp3/diagram_055_exp3_p062_4161_DY_diagram.tex}
-\end{center}
-
-and let
-\[
- DY=c\bigl(X,Y,\mu\circ(i,i)\bigr)
-\]
-be the obstruction to \(\mu\circ(i,i)\) factoring through \(Y\), that
-is, to \(Y\) being stable under the group law of \(X\). By what
-precedes, \(DY\) is an element of
-\[
- N_0(Y_0\times_{S_0}Y_0)=C^2(Y_0,N_0).
 \]
