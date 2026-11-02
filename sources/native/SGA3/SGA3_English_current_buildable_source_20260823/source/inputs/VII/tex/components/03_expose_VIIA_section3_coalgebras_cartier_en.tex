@@ -17,17 +17,23 @@ is a pair \((\mathcal U,\Delta_{\mathcal U})\) consisting of an
   \Delta_{\mathcal U}:\mathcal U\longrightarrow
   \mathcal U\otimes_{\mathcal O_S}\mathcal U,
 \]
-called the \emph{diagonal morphism} or \emph{comultiplication}, such
+called the \emph{diagonal morphism}, such
 that:
 
 \smallskip
 \noindent
-\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)} \(\sigma\circ\Delta_{\mathcal U}=\Delta_{\mathcal U}\), where
-\(\sigma(a\otimes b)=b\otimes a\).
+(i) \(\sigma\circ\Delta_{\mathcal U}=\Delta_{\mathcal U}\), where
+\(\sigma(a\otimes b)=b\otimes a\).\footnote{Translator's note: the
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A}, recalls that
+the word ``cogebra'' is also used (N.~Bourbaki, \textit{Alg\`ebre},
+chapter~III, \S11), and stresses that condition (i), cocommutativity, is
+part of the definition here and in Expos\'e~VII\textsubscript{B}: it is
+needed for the tensor product to be the product of two coalgebras (see
+below), and hence for the notion of a coalgebra in groups (3.2).}
 
 \smallskip
 \noindent
-\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)} The square
+(ii) The square
 \begin{center}
   \phantomsection
   \label{sga3:VIIA:3.1-coassociativity-square}
@@ -73,17 +79,13 @@ are commutative. Morphisms of coalgebras compose like morphisms of
 \(\mathcal O_S\)-modules, so we may speak of the
 \emph{category of \(\mathcal O_S\)-coalgebras}.
 
-\medskip
-\noindent\textbf{3.1.0.}
-\phantomsection
-\label{sga3:VIIA:3.1.0}
-This category has finite products: its final object is the
-\(\mathcal O_S\)-module \(\mathcal O_S\), with the identity as
-comultiplication. The product of two coalgebras
+This category has finite products: the final object is the
+\(\mathcal O_S\)-module \(\mathcal O_S\), the diagonal morphism being the
+identity; the product of two coalgebras
 \((\mathcal U,\Delta_{\mathcal U})\) and
 \((\mathcal V,\Delta_{\mathcal V})\) is the tensor product
-\(\mathcal U\otimes_{\mathcal O_S}\mathcal V\), whose
-comultiplication is the composite
+\(\mathcal U\otimes_{\mathcal O_S}\mathcal V\), the diagonal morphism
+being the composite
 \begin{center}
   \phantomsection
   \label{sga3:VIIA:3.1.0-product-comultiplication}
@@ -95,26 +97,25 @@ of \(\mathcal U\otimes\mathcal V\) onto the factors
 \(\operatorname{id}_{\mathcal U}\otimes\varepsilon_{\mathcal V}\)
 and
 \(\varepsilon_{\mathcal U}\otimes\operatorname{id}_{\mathcal V}\),
-respectively.\footnote{The preceding assertion was added by the
-editors. Recall also that, to show that
-\(\mathcal U\otimes\mathcal V\) is indeed the product of
-\(\mathcal U\) and \(\mathcal V\) in the category of cocommutative
-\(\mathcal O_S\)-cogebras, one argues as follows. Given an arbitrary
-\(\mathcal O_S\)-cogebra \(\mathcal E\) and cogebra morphisms
-\(f:\mathcal E\to\mathcal U\) and
-\(g:\mathcal E\to\mathcal V\), any cogebra morphism
-\(\varphi:\mathcal E\to\mathcal U\otimes\mathcal V\) satisfying
-\(\operatorname{pr}_{\mathcal U}\circ\varphi=f\) and
-\(\operatorname{pr}_{\mathcal V}\circ\varphi=g\) must equal
-\((f\otimes g)\circ\Delta_{\mathcal E}\); and this is a cogebra
-morphism if and only if it also equals
-\((g\otimes f)\circ\Delta_{\mathcal E}\).}
-The ``diagonal morphism''
-\(\mathcal U\to\mathcal U\otimes\mathcal U\), corresponding to the
-pair
-\((\operatorname{id}_{\mathcal U},
-  \operatorname{id}_{\mathcal U})\),
-is precisely the comultiplication \(\Delta_{\mathcal U}\).
+respectively.\footnote{Translator's note: the Gille--Polo re-edition
+(2011), Expos\'e~VII\textsubscript{A}, adds a verification, which we give
+in our words. If \(f:\mathcal E\to\mathcal U\) and
+\(g:\mathcal E\to\mathcal V\) are morphisms of coalgebras and
+\(\varphi:\mathcal E\to\mathcal U\otimes\mathcal V\) is a morphism of
+coalgebras with \((\mathrm{id}\otimes\varepsilon_{\mathcal V})\varphi=f\)
+and \((\varepsilon_{\mathcal U}\otimes\mathrm{id})\varphi=g\), applying
+\(\mathrm{id}\otimes\varepsilon_{\mathcal V}\otimes
+\varepsilon_{\mathcal U}\otimes\mathrm{id}\) to
+\((\varphi\otimes\varphi)\Delta_{\mathcal E}=
+\Delta_{\mathcal U\otimes\mathcal V}\varphi\) gives
+\(\varphi=(f\otimes g)\Delta_{\mathcal E}\). Conversely
+\((f\otimes g)\Delta_{\mathcal E}\) is a morphism of coalgebras because
+\(\mathcal E\) is cocommutative: the two sides of the required identity
+differ by the exchange of the two middle factors of the iterated
+diagonal of \(\mathcal E\). In particular, the morphism
+\(\mathcal U\to\mathcal U\otimes\mathcal U\) defined by
+\((\mathrm{id}_{\mathcal U},\mathrm{id}_{\mathcal U})\) is
+\(\Delta_{\mathcal U}\).}
 
 \medskip
 \noindent\textbf{3.1.1.}
@@ -146,17 +147,12 @@ diagonal morphism
 This diagonal morphism plainly makes \(\mathcal A^{*}\) into an
 \(\mathcal O_S\)-coalgebra whose augmentation is the transpose of
 the morphism \(\mathcal O_S\to\mathcal A\) defined by the unit
-section of \(\mathcal A\). Moreover, it is clear that:
-
-\begin{quote}
-\itshape
-The functor \(\mathcal A\mapsto\mathcal A^{*}\) is an
-anti-equivalence from the category of \(\mathcal O_S\)-algebras
-which are locally free and of finite type as
-\(\mathcal O_S\)-modules onto the category of
-\(\mathcal O_S\)-coalgebras which are locally free and of finite
-type as \(\mathcal O_S\)-modules.
-\end{quote}
+section of \(\mathcal A\). Moreover, it is clear that the functor
+\(\mathcal A\mapsto\mathcal A^{*}\) is an anti-equivalence from the
+category of \(\mathcal O_S\)-algebras which are locally free and of finite
+type as \(\mathcal O_S\)-modules onto the category of
+\(\mathcal O_S\)-coalgebras which are locally free and of finite type as
+\(\mathcal O_S\)-modules.
 
 \medskip
 \noindent\textbf{3.1.2.}
@@ -201,20 +197,9 @@ of \(\mathcal O_T\)-modules
   \operatorname{Hom}_{\mathcal O_T\text{-coalg.}}
     (\mathcal O_T,\mathcal U_T).
 \]
-In particular:
-
-\medskip
-\noindent\textbf{Proposition 3.1.2.1.}
-\phantomsection
-\label{sga3:VIIA:3.1.2.1}
-\textit{Let \(\mathcal A\) be a commutative
+In particular, if \(\mathcal A\) is a commutative
 \(\mathcal O_S\)-algebra which is locally free of finite type as an
-\(\mathcal O_S\)-module. Then the \(S\)-functor
-\(\operatorname{Spec}^{*}\mathcal A^{*}\) is represented by
-\(\operatorname{Spec}\mathcal A\).}
-
-Indeed, for every \(S\)-scheme \(T\), there are canonical
-isomorphisms
+\(\mathcal O_S\)-module, there are isomorphisms
 \[
   \begin{aligned}
   (\operatorname{Spec}^{*}\mathcal A^{*})(T)
@@ -225,9 +210,18 @@ isomorphisms
   \operatorname{Hom}_{\mathcal O_T\text{-alg.}}
     (\mathcal A_T,\mathcal O_T)
   \simeq
-  (\operatorname{Spec}\mathcal A)(T).
+  (\operatorname{Spec}\mathcal A)(T)
   \end{aligned}
 \]
+and \(\operatorname{Spec}^{*}\mathcal A^{*}\simeq\operatorname{Spec}\mathcal A\).\footnote{Translator's
+note: the Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A},
+adds that \(\operatorname{Spec}^{*}\mathcal U\) is a sheaf for the
+Zariski topology, the two conditions on \(x\) being local on \(T\), and
+even for the fpqc topology when \(\mathcal U\) is quasi-coherent: then
+\(T\mapsto\Gamma(T,\mathcal U_T)\) and
+\(T\mapsto\Gamma(T,(\mathcal U\otimes\mathcal U)_T)\) are fpqc sheaves by
+faithfully flat descent, and the two conditions may be checked after a
+faithfully flat quasi-compact base change.}
 
 \medskip
 \noindent\textbf{3.2.}
@@ -236,24 +230,21 @@ isomorphisms
 An \(\mathcal O_S\)-\emph{coalgebra in groups}, that is, a group in
 the category of \(\mathcal O_S\)-coalgebras, consists of an
 \(\mathcal O_S\)-coalgebra
-\((\mathcal U,\Delta_{\mathcal U})\) together with three morphisms
-of \(\mathcal O_S\)-coalgebras
+\((\mathcal U,\Delta_{\mathcal U})\) and a morphism of
+\(\mathcal O_S\)-coalgebras
 \[
-  m_{\mathcal U}:\mathcal U\otimes\mathcal U\longrightarrow\mathcal U,
-  \qquad
-  \eta_{\mathcal U}:\mathcal O_S\longrightarrow\mathcal U,
-  \qquad
-  c_{\mathcal U}:\mathcal U\longrightarrow\mathcal U,
+  m_{\mathcal U}:\mathcal U\otimes\mathcal U\longrightarrow\mathcal U.
 \]
-satisfying conditions \((\mathrm{ii})^{*}\),
-\((\mathrm{iii})^{*}\), and~(vi) below. The requirement that
-\(m_{\mathcal U}\) be a morphism of coalgebras is expressed by the
-commutativity of diagrams~(iv) and~(v):
+Such a morphism is a morphism of \(\mathcal O_S\)-modules making the
+following diagrams commutative:
 \begin{center}
   \phantomsection
   \label{sga3:VIIA:3.2-compatibility-iv-v}
   \input{native_diagrams/exp7/viia_00_04/diag_026_group_coalgebra_compatibility_iv_v}
 \end{center}
+The morphism of \(\mathcal O_S\)-coalgebras \(m_{\mathcal U}\) must
+moreover satisfy conditions \((\mathrm{ii})^{*}\),
+\((\mathrm{iii})^{*}\) and~(vi) below:
 
 \noindent
 \((\mathrm{ii})^{*}\) The square
@@ -265,17 +256,20 @@ commutativity of diagrams~(iv) and~(v):
 is commutative.
 
 \noindent
-\((\mathrm{iii})^{*}\) The two composites
+\((\mathrm{iii})^{*}\) There exists a morphism of
+\(\mathcal O_S\)-coalgebras
+\(\eta_{\mathcal U}:\mathcal O_S\to\mathcal U\) such that the composites
 \begin{center}
   \phantomsection
   \label{sga3:VIIA:3.2-unit-sequences-iii-star}
   \input{native_diagrams/exp7/viia_00_04/diag_028_group_coalgebra_unit_sequences_iii_star}
 \end{center}
-are the identity morphism of \(\mathcal U\).
+are the identity morphisms of \(\mathcal U\).
 
 \smallskip
 \noindent
-(vi) The composite
+(vi) There exists a morphism of \(\mathcal O_S\)-coalgebras
+\(c_{\mathcal U}:\mathcal U\to\mathcal U\) such that the composite
 \begin{center}
   \phantomsection
   \label{sga3:VIIA:3.2-antipode-sequence-vi}
@@ -287,8 +281,8 @@ is equal to \(\eta_{\mathcal U}\circ\varepsilon_{\mathcal U}\).
 \noindent\textbf{3.2.1.}
 \phantomsection
 \label{sga3:VIIA:3.2.1}
-The morphisms \(\eta_{\mathcal U}\) and \(c_{\mathcal U}\) are
-uniquely determined by \(m_{\mathcal U}\). Conditions
+The morphisms \(\eta_{\mathcal U}\) and \(c_{\mathcal U}\) of
+\((\mathrm{iii})^{*}\) and~(vi) are plainly unique. Conditions
 \((\mathrm{ii})^{*}\) and \((\mathrm{iii})^{*}\) simply say that
 \(m_{\mathcal U}\) makes \(\mathcal U\) into an
 \(\mathcal O_S\)-algebra whose unit section is the image under
@@ -309,7 +303,7 @@ the commutativity of the triangle
 
 On the other hand, as in every category, the antipode
 \(c_{\mathcal U}\) is an isomorphism from \(\mathcal U\) onto the
-``opposite'' group object;
+opposite coalgebra in groups;
 in particular, \(c_{\mathcal U}\) induces an algebra isomorphism
 from \(\mathcal U\) onto the opposite algebra
 \(\mathcal U^{\circ}\).
@@ -329,25 +323,16 @@ the elements
 belonging to
 \((\operatorname{Spec}^{*}\mathcal U)(T)\) form a group under the
 multiplication of the algebra \(\Gamma(T,\mathcal U_T)\), and the
-inverse of \(x\) is \(c_{\mathcal U}(x)\). By \SGARefLink{sga3:VIIA:3.1.2.1}{3.1.2.1}:
+inverse of \(x\) is \(c_{\mathcal U}(x)\).\footnote{Translator's note: the
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A}, states
+here explicitly what 3.3.1 below uses: if \(\mathcal U\) is finite and
+locally free as an \(\mathcal O_S\)-module, the \(S\)-functor in groups
+\(\operatorname{Spec}^{*}\mathcal U\) is represented by the finite locally
+free \(S\)-group \(\operatorname{Spec}\mathcal U^{*}\) (3.1.2 applied to
+the algebra \(\mathcal A=\mathcal U^{*}\), whose dual is
+\(\mathcal U\)).}
 
-\medskip
-\noindent\textbf{Scholium 3.2.2.1.}
-\phantomsection
-\label{sga3:VIIA:3.2.2.1}
-\footnote{The editors added this scholium, which is implicit in the
-original.}
-\textit{Let \(\mathcal U\) be an \(\mathcal O_S\)-coalgebra in
-groups, finite and locally free as an \(\mathcal O_S\)-module. Then
-the group-valued \(S\)-functor
-\(\operatorname{Spec}^{*}\mathcal U\) is represented by the finite
-locally free \(S\)-group \(\operatorname{Spec}\mathcal U^{*}\).}
-
-\medskip
-\noindent\textbf{Remark 3.2.2.2.}
-\phantomsection
-\label{sga3:VIIA:3.2.2.2}
-Let \(\mathcal L\) be an \(\mathcal O_S\)-Lie algebra and
+Let, for example, \(\mathcal L\) be an \(\mathcal O_S\)-Lie algebra and
 \(\mathcal U(\mathcal L)\) its enveloping algebra, that is, the
 sheaf on \(S\) associated with the presheaf assigning to every open
 subset \(V\) the enveloping algebra
@@ -357,7 +342,7 @@ subset \(V\) the enveloping algebra
 of the Lie algebra \(\Gamma(V,\mathcal L)\).
 
 Every homomorphism from \(\mathcal L\) to the Lie algebra underlying
-an associative \(\mathcal O_S\)-algebra factors uniquely through
+an \(\mathcal O_S\)-algebra factors uniquely through
 the canonical morphism
 \(\mathcal L\to\mathcal U(\mathcal L)\). Besides the functoriality
 of \(\mathcal U(\mathcal L)\) in \(\mathcal L\), this universal
@@ -385,162 +370,64 @@ of the algebra \(\mathcal U(\mathcal L)\). One then checks readily
 that the multiplication \(m\) of \(\mathcal U(\mathcal L)\) makes
 \((\mathcal U(\mathcal L),\Delta)\) into an
 \(\mathcal O_S\)-coalgebra in groups with augmentation
-\(\varepsilon\) and antipode \(c\).
+\(\varepsilon\) and antipode \(c\).\footnote{Translator's note: the
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A}, adds that
+the \(S\)-functor in groups \(\operatorname{Spec}^{*}\mathcal U(\mathcal L)\)
+is not representable in general (for \(\mathcal L=\mathcal O_S\) over a
+field of characteristic \(0\), its points over \(T\) are the
+\(\exp(ax)\), \(a\) a nilpotent section of \(\mathcal O_T\), \(x\) a
+generator of \(\mathcal L\)), whereas in characteristic \(p\) the
+restricted enveloping algebra of a finite locally free \(p\)-Lie algebra
+gives a finite locally free \(S\)-group (5.5 below).}
 
 \medskip
 \noindent\textbf{3.2.3.}
 \phantomsection
 \label{sga3:VIIA:3.2.3}
-\footnote{The editors expanded this paragraph.}
-Let \(\mathcal U\) be an \(\mathcal O_S\)-coalgebra in groups. We
-shall see that the group-valued \(S\)-functor
+Let \(\mathcal U\) be an \(\mathcal O_S\)-coalgebra in groups. One
+checks easily that \(G=\operatorname{Spec}^{*}\mathcal U\) is a good
+\(S\)-group (\SGARefLink{sga3:ii:definition:4-6}{II~4.6}). Since
 \[
-  G=\operatorname{Spec}^{*}\mathcal U
+  \Gamma(I_S,\mathcal U_{I_S})\simeq
+  \Gamma(S,\mathcal U)\oplus d\,\Gamma(S,\mathcal U),
 \]
-is \emph{very good}, in the sense of \SGARefLink{sga3:ii:definition:4-6}{Expos\'e II, 4.6} and \SGARefLink{sga3:ii:definition:4-10}{4.10}.
+an element \(u_0+du_1\) of \(\Gamma(I_S,\mathcal U_{I_S})\) belongs to
+\((\operatorname{Spec}^{*}\mathcal U)(I_S)\) if and only if
+\[
+  \Delta(u_0+du_1)=(u_0+du_1)\otimes(u_0+du_1)
+  \qquad\text{and}\qquad
+  \varepsilon(u_0+du_1)=1,
+\]
+whence
+\[
+  \Delta u_0+d\,\Delta u_1
+  =u_0\otimes u_0+(u_1\otimes u_0+u_0\otimes u_1)d
+  \qquad\text{and}\qquad
+  \varepsilon(u_0)+d\,\varepsilon(u_1)=1,
+\]
+that is,
+\[
+  \Delta u_0=u_0\otimes u_0,\qquad
+  \Delta u_1=u_1\otimes u_0+u_0\otimes u_1,\qquad
+  \varepsilon(u_0)=1,\qquad
+  \varepsilon(u_1)=0.
+\]
+In particular, \((\operatorname{Lie}G)(T)\) is the set of
+\emph{primitive} elements of \(\Gamma(T,\mathcal U_T)\), that is, of the
+elements \(u\) such that \(\Delta u=u\otimes1+1\otimes u\) (with the
+obvious abuse of notation already pointed out).
 
-Let \(\mathcal M\) be a free \(\mathcal O_S\)-module of rank \(r\),
-and let \(T\to S\) be an \(S\)-scheme. Since
-\[
-  I_T(\mathcal M)=
-  \operatorname{Spec}(\mathcal O_T\oplus\mathcal M_T),
-\]
-the morphism \(\pi:I_T(\mathcal M)\to T\) is affine, and
-\[
-  \pi_{*}\bigl(\mathcal U_{I_T(\mathcal M)}\bigr)
-  =
-  \mathcal U_T\otimes_{\mathcal O_T}
-  \pi_{*}\bigl(\mathcal O_{I_T(\mathcal M)}\bigr)
-  =
-  \mathcal U_T\otimes_{\mathcal O_T}
-  (\mathcal O_T\oplus\mathcal M_T).
-\]
-Consequently,
-\begin{equation}
-  \Gamma\bigl(I_T(\mathcal M),\mathcal U_{I_T(\mathcal M)}\bigr)
-  \simeq
-  \Gamma(T,\mathcal U_T)\otimes_{\mathcal O(T)}
-  \bigl(\mathcal O(T)\oplus\Gamma(T,\mathcal M_T)\bigr).
-  \tag{1}
-  \label{sga3:VIIA:3.2.3-eq1}
-\end{equation}
-
-Let \((d_1,\ldots,d_r)\) be a basis of \(\mathcal M\). An element
-\[
-  u_0+\sum_i u_i d_i
-  \in
-  \Gamma\bigl(I_T(\mathcal M),\mathcal U_{I_T(\mathcal M)}\bigr)
-\]
-belongs to \(G(I_T(\mathcal M))\) if and only if
-\[
-  1
-  =\varepsilon\left(u_0+\sum_i u_i d_i\right)
-  =\varepsilon(u_0)+\sum_i\varepsilon(u_i)d_i
-\]
-and
-\[
-  \left(u_0+\sum_i u_i d_i\right)
-  \otimes
-  \left(u_0+\sum_i u_i d_i\right)
-  =
-  \Delta\left(u_0+\sum_i u_i d_i\right)
-  =
-  \Delta(u_0)+\sum_i\Delta(u_i)d_i.
-\]
-Equivalently,
-\begin{equation}
-  \left\{
-  \begin{aligned}
-    \varepsilon(u_0)&=1,&
-    \Delta u_0&=u_0\otimes u_0
-      &&\bigl(\text{that is, }u_0\in G(T)\bigr),\\
-    \varepsilon(u_i)&=0,&
-    \Delta(u_i)&=u_i\otimes u_0+u_0\otimes u_i
-      &&(i=1,\ldots,r).
-  \end{aligned}
-  \right.
-  \tag{2}
-  \label{sga3:VIIA:3.2.3-eq2}
-\end{equation}
-
-Moreover, the morphism
-\(G(I_T(\mathcal M))\to G(T)\) corresponding to the zero section of
-\(I_T(\mathcal M)\to T\) is given by
-\[
-  u_0+\sum_i u_i d_i\longmapsto u_0.
-\]
-Combining this with (1) and (2), one sees that if \(\mathcal N\) is
-a second free \(\mathcal O_S\)-module of finite rank, then the
-diagram of sets
-\begin{center}
-  \phantomsection
-  \label{sga3:VIIA:3.2.3-condition-E-square}
-  \input{native_diagrams/exp7/viia_00_04/diag_031_condition_E_cartesian_square}
-\end{center}
-is cartesian; that is, \(G\) satisfies condition~(E) of \SGARefLink{sga3:ii:definition:3-5}{Expos\'e
-II, 3.5}.
-
-Write
-\[
-  \operatorname{Prim}\Gamma(T,\mathcal U_T)
-\]
-for the \(\mathcal O(T)\)-submodule of \(\Gamma(T,\mathcal U_T)\)
-formed by the \emph{primitive elements}, that is, the elements \(u\)
-satisfying, with the abuse of notation noted in \SGARefLink{sga3:VIIA:3.1.2}{3.1.2},
-\[
-  \Delta u=u\otimes1+1\otimes u,
-  \qquad
-  \varepsilon(u)=0.
-\]
-
-Since \((\operatorname{Lie}G)(T)\) is the set of elements
-\(u_0+ud\in G(I_T)\) above the unit element \(u_0=1\) of \(G(T)\),
-there is an isomorphism of \(\mathcal O(T)\)-modules, functorial in
-\(T\),
-\[
-  (\operatorname{Lie}G)(T)
-  \simeq
-  \operatorname{Prim}\Gamma(T,\mathcal U_T).
-\]
-On the other hand, \SGARefLink{sga3:VIIA:3.2.3-eq1}{(1)} yields
-\[
-  \operatorname{Prim}
-    \Gamma\bigl(I_T(\mathcal M),
-      \mathcal U_{I_T(\mathcal M)}\bigr)
-  \simeq
-  \operatorname{Prim}\Gamma(T,\mathcal U_T)
-  \otimes_{\mathcal O(T)}\mathcal O(I_T(\mathcal M)).
-\]
-It follows that the natural morphism of
-\(\mathcal O(I_T(\mathcal M))\)-modules
-\[
-  (\operatorname{Lie}G)(T)
-  \otimes_{\mathcal O(T)}\mathcal O(I_T(\mathcal M))
-  \longrightarrow
-  (\operatorname{Lie}G)(I_T(\mathcal M))
-\]
-is an isomorphism; thus \(\operatorname{Lie}G\) is a good
-\(\mathcal O_S\)-module (see Expos\'e II, Definition 4.4).
-
-Therefore \(G\) is a good group-valued \(S\)-functor (see \SGARefLink{sga3:ii:definition:4-6}{Expos\'e
-II, Definition 4.6}), and by \SGARefLink{sga3:ii:definition:4-7-2}{Expos\'e II, 4.7.2},
-\(\operatorname{Lie}G\) carries an \(\mathcal O_S\)-bilinear Lie
-bracket satisfying the Jacobi identity. It remains to show that
-\(G\) is very good, that is, that the bracket on
-\((\operatorname{Lie}G)(T)\) satisfies
-\([u,u]=0\) for every \(u\in(\operatorname{Lie}G)(T)\); see \SGARefLink{sga3:ii:definition:4-10}{Expos\'e
-II, 4.10}.
-
-Let \(u,v\) be two elements of \((\operatorname{Lie}G)(T)\), that
-is, two primitive elements of \(\Gamma(T,\mathcal U_T)\). Put
+The \(\Gamma(T,\mathcal O_T)\)-module structure of
+\((\operatorname{Lie}G)(T)\) is plainly induced by that of
+\(\Gamma(T,\mathcal U_T)\). On the other hand, consider two primitive
+elements \(u\) and \(v\) of \((\operatorname{Lie}G)(S)\), and put
 \[
   I=\operatorname{Spec}\mathcal O_S[d]/(d^2),
   \qquad
   I'=\operatorname{Spec}\mathcal O_S[d']/(d'^2).
 \]
-Since the composition law on \(G(I\times I')\) is induced by the
-multiplication in \(\mathcal U_{I\times I'}\), one has in
-\(G(I\times I')\)
+Since the composition law of \(G(I\times I')\) is induced by the
+multiplication of the algebra \(\mathcal U_{I\times I'}\), one has
 \[
   \begin{aligned}
   &(1+ud)(1+vd')(1+ud)^{-1}(1+vd')^{-1}\\
@@ -554,47 +441,53 @@ multiplication in \(\mathcal U_{I\times I'}\), one has in
 \small
 \phantomsection
 \label{sga3:VIIA:3.2.3-source-note-missing-prime}
-\emph{Translator's note.} The French re-edition prints \(1-vd\), without a prime,
+\emph{Translator's note.} The French text (1970, and the re-edition) prints \(1-vd\), without a prime,
 in the last factor of the middle expression. Since that factor is
 the inverse of \(1+vd'\), and since the displayed result is
 proportional to \(dd'\), this translation makes the required reading \(1-vd'\) explicit. Reinhold's English translation reproduces the printed missing prime.
 \end{quote}
-By the description of the bracket \([u,v]\) given before
-\SGARefLink{sga3:ii:proposition:4-8}{Proposition 4.8} of Expos\'e II, it follows that
-\[
-  [u,v]=uv-vu,
-\]
-where the right-hand side is the commutator of \(u\) and \(v\) in
-the algebra \(\Gamma(T,\mathcal U_T)\). Hence \([u,u]=0\), and we
-have proved:
+Hence the equality \([u,v]=uv-vu\), which proves that \(G\) is very good
+(\SGARefLink{sga3:ii:definition:4-10}{II~4.10}).
 
-\medskip
-\noindent\textbf{Proposition.}
-\phantomsection
-\label{sga3:VIIA:3.2.3-primitive-elements-proposition}
-\textit{Let \(\mathcal U\) be an \(\mathcal O_S\)-coalgebra in
-groups. The group-valued \(S\)-functor
-\(G=\operatorname{Spec}^{*}\mathcal U\) is very good, and there is
-an isomorphism
-\[
-  \operatorname{Lie}G
-  \simeq
-  \operatorname{Prim}\mathcal W(\mathcal U)
-\]
-of \(\mathcal O_S\)-Lie algebras, where
-\(\operatorname{Prim}\mathcal W(\mathcal U)\) denotes the functor
-which assigns to every \(T\to S\) the \(\mathcal O(T)\)-Lie algebra
-of primitive elements of
-\(\mathcal W(\mathcal U)(T)=\Gamma(T,\mathcal U_T)\).}
-\footnote{The editors added this proposition to summarize the
-preceding discussion.}
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{A}, 3.2.3; our formulation). The verification
+that \(G\) is good. Let \(T\) be an \(S\)-scheme and \(\mathcal M\) a free
+\(\mathcal O_S\)-module with basis \(d_1,\ldots,d_r\). As
+\(I_T(\mathcal M)=\operatorname{Spec}(\mathcal O_T\oplus\mathcal M_T)\) is
+affine over \(T\), the sections of \(\mathcal U\) over
+\(I_T(\mathcal M)\) are the sums \(u_0+\sum_iu_id_i\) with
+\(u_0,u_i\in\Gamma(T,\mathcal U_T)\), and the computation above, made
+with the \(r\) variables \(d_i\) (whose products vanish), shows that such
+a sum lies in \(G(I_T(\mathcal M))\) if and only if \(u_0\in G(T)\) and
+\(\varepsilon(u_i)=0\), \(\Delta u_i=u_i\otimes u_0+u_0\otimes u_i\) for
+every \(i\). These conditions bear on each \(u_i\) separately; hence, for
+a second free module \(\mathcal N\) of finite rank, the map from
+\(G(I_T(\mathcal M\oplus\mathcal N))\) to the fibre product of
+\(G(I_T(\mathcal M))\) and \(G(I_T(\mathcal N))\) over \(G(T)\) is
+bijective, which is condition (E) of \SGARefLink{sga3:ii:definition:3-5}{II~3.5}. Over \(u_0=1\) the
+conditions say that the \(u_i\) are primitive; the condition
+\(\varepsilon(u)=0\) is automatic for a primitive \(u\), since applying
+\(\mathrm{id}\otimes\varepsilon\) to \(\Delta u=u\otimes1+1\otimes u\)
+gives \(u=u+\varepsilon(u)1\). Thus the primitive elements of
+\(\Gamma(I_T(\mathcal M),\mathcal U)\) are the sums with primitive
+components, so that the natural map
+\((\operatorname{Lie}G)(T)\otimes_{\mathcal O(T)}\mathcal O(I_T(\mathcal M))
+\to(\operatorname{Lie}G)(I_T(\mathcal M))\) is bijective, that is,
+\(\operatorname{Lie}G\) is a good \(\mathcal O_S\)-module (II~4.4); so \(G\)
+is good (II~4.6). The computation of the bracket above, made over an
+arbitrary \(T\), then shows that \(\operatorname{Lie}G\) is isomorphic,
+as an \(\mathcal O_S\)-Lie algebra, to the functor which assigns to \(T\)
+the primitive elements of \(\Gamma(T,\mathcal U_T)\) with the commutator
+\(uv-vu\).
 
 \medskip
 \noindent\textbf{3.3.}
 \phantomsection
 \label{sga3:VIIA:3.3}
-Suppose finally that \(\mathcal U\) is a
-\emph{coalgebra in commutative groups}, that is, that the triangle
+Suppose finally that \(\mathcal U\) is an
+\(\mathcal O_S\)-\emph{coalgebra in commutative groups}, that is, that
+the triangle
 \begin{center}
   \phantomsection
   \label{sga3:VIIA:3.3-commutative-triangle-i-star}
@@ -602,93 +495,62 @@ Suppose finally that \(\mathcal U\) is a
 \end{center}
 is commutative, or equivalently that \(m_{\mathcal U}\) makes
 \(\mathcal U\) into a commutative \(\mathcal O_S\)-algebra.
-Conditions \SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}, \SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}, (iii), (iv), (v), (vi),
+Conditions (i), (ii), (iii), (iv), (v), (vi),
 \((\mathrm{i})^{*}\), \((\mathrm{ii})^{*}\),
-\((\mathrm{iii})^{*}\), and \((\mathrm{v})^{*}\) then also say that
+\((\mathrm{iii})^{*}\) and \((\mathrm{v})^{*}\) then also say that
 \(\mathcal U\) is a cogroup in the category of commutative
-\(\mathcal O_S\)-algebras. Thus, if in addition \(\mathcal U\) is a
-quasi-coherent \(\mathcal O_S\)-module, the affine \(S\)-scheme
-\(\operatorname{Spec}\mathcal U\) is a commutative \(S\)-group
-scheme.
+\(\mathcal O_S\)-algebras. In particular, if in addition \(\mathcal U\) is
+a quasi-coherent \(\mathcal O_S\)-module, \(\operatorname{Spec}\mathcal U\)
+is a commutative \(S\)-group scheme.
 
-In this case the diagonal morphism \(\Delta'\) of
-\(\mathcal O_S[T,T^{-1}]\) sends \(T\) to \(T\otimes T\).
-Consequently, morphisms of \(S\)-groups from
-\(\operatorname{Spec}\mathcal U\) to
-\(\mathbb G_{m,S}\) (Expos\'e I, 4.3.2) correspond bijectively to
-morphisms of unital \(\mathcal O_S\)-algebras
+A homomorphism of \(S\)-groups from \(\operatorname{Spec}\mathcal U\) to
+\(\mathbb G_{m,S}\) (I~4.3.2) is then induced by a homomorphism of unital
+\(\mathcal O_S\)-algebras
 \[
   \varphi:\mathcal O_S[T,T^{-1}]\longrightarrow\mathcal U
 \]
-such that
-\[
-  (\varphi\otimes\varphi)\circ\Delta'
-  =\Delta_{\mathcal U}\circ\varphi.
-\]
-In this situation,
-\(\varepsilon_{\mathcal U}\circ\varphi\) is the neutral element of
-\(\mathbb G_{m,S}(S)\), that is, the augmentation
-\(\varepsilon'\). Such a morphism \(\varphi\) is determined by the
-image \(\varphi(T)\), which must be an invertible element
-\(x\in\mathcal U\) satisfying
-\[
-  \Delta_{\mathcal U}x=x\otimes x,
-  \qquad
-  \varepsilon_{\mathcal U}(x)=\varepsilon'(T)=1.
-\]
-Therefore
+such that \((\varphi\otimes\varphi)\circ\Delta'=\Delta_{\mathcal U}\circ\varphi\)
+(the diagonal morphism \(\Delta'\) of \(\mathcal O_S[T,T^{-1}]\) sends
+\(T\) to \(T\otimes T\)). Such a homomorphism \(\varphi\) is determined by
+the image \(\varphi(T)\), which must be an invertible element \(x\) of
+\(\mathcal U\) such that \(\Delta_{\mathcal U}x=x\otimes x\); as
+\(\varphi\) then necessarily commutes with the augmentations, one has
+\(\varepsilon_{\mathcal U}x=1\) (the augmentation of
+\(\mathcal O_S[T,T^{-1}]\) sends \(T\) to \(1\)). Therefore
 \[
   \operatorname{Hom}_{S\text{-gr.}}
   (\operatorname{Spec}\mathcal U,\mathbb G_{m,S})
   \simeq
   (\operatorname{Spec}^{*}\mathcal U)(S).
 \]
-Since this formula remains valid after arbitrary base change, it
-gives
+Since this formula remains valid after any base change, we finally have
 \[
   \operatorname{Spec}^{*}\mathcal U
-  \simeq
+  =
   \operatorname{Hom}_{S\text{-gr.}}
-  (\operatorname{Spec}\mathcal U,\mathbb G_{m,S}).
+  (\operatorname{Spec}\mathcal U,\mathbb G_{m,S})
 \]
-We have therefore proved:
+for every quasi-coherent \(\mathcal O_S\)-coalgebra in commutative groups
+\(\mathcal U\).
 
 \medskip
-\noindent\textbf{Proposition 3.3.0.}
-\phantomsection
-\label{sga3:VIIA:3.3.0}
-\textit{If \(\mathcal U\) is an \(\mathcal O_S\)-coalgebra in
-commutative groups, quasi-coherent as an \(\mathcal O_S\)-module,
-then the affine \(S\)-scheme
-\(G=\operatorname{Spec}\mathcal U\) is a commutative \(S\)-group
-scheme, and there is an isomorphism of group-valued \(S\)-functors
-\[
-  \operatorname{Spec}^{*}\mathcal U
-  \simeq
-  \operatorname{Hom}_{S\text{-gr.}}(G,\mathbb G_{m,S}).
-\]}
-
-If, moreover, \(\mathcal U\) is locally free of finite type as an
-\(\mathcal O_S\)-module, then by \SGARefLink{sga3:VIIA:3.1.2.1}{3.1.2.1} the group-valued
-\(S\)-functor \(\operatorname{Spec}^{*}\mathcal U\) is represented
-by \(\operatorname{Spec}\mathcal U^{*}\). Hence:
-
-\medskip
-\noindent\textbf{Proposition 3.3.1 (Cartier duality).}
+\noindent\textbf{3.3.1.}
 \phantomsection
 \label{sga3:VIIA:3.3.1}
-\textit{The functor
+If one assumes moreover that \(\mathcal U\) is a locally free
+\(\mathcal O_S\)-module of finite type, \(\operatorname{Spec}^{*}\mathcal U\)
+is also representable, and one has (cf.~\SGARefLink{sga3:VIIA:3.1.2}{3.1.2})
 \[
-  \mathscr A(G)\longmapsto
-  \mathscr A(G)^{*}
-  =
-  \mathcal Hom_{\mathcal O_S\text{-Mod.}}
-  (\mathscr A(G),\mathcal O_S)
+  \operatorname{Spec}^{*}\mathcal U\simeq\operatorname{Spec}\mathcal U^{*}.
 \]
-induces a duality\textsuperscript{\(\ast\)} on the category of
-commutative finite locally free \(S\)-group schemes; it associates
-to \(G\) the \(S\)-group
-\(\operatorname{Hom}_{S\text{-gr.}}(G,\mathbb G_{m,S})\).}
+The functor
+\(\mathcal U\mapsto\mathcal U^{*}
+=\mathcal Hom_{\mathcal O_S\text{-Mod.}}(\mathcal U,\mathcal O_S)\)
+therefore induces a duality\textsuperscript{\(\ast\)} of the category of
+commutative \(S\)-group schemes which are finite and locally free over
+\(S\) (this is \emph{Cartier duality}). By \SGARefLink{sga3:VIIA:3.3}{3.3}, this duality associates
+\(\operatorname{Hom}_{S\text{-gr.}}(G,\mathbb G_{m,S})\) with an
+\(S\)-group \(G\).
 
 \begingroup
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
@@ -698,6 +560,10 @@ to \(G\) the \(S\)-group
 \(\varphi:\operatorname{Id}_{\mathscr C}\to DD\), such that the
 isomorphisms
 \(\varphi D:D\to DDD\) and
-\(D\varphi^{-1}:DDD\to D\) are inverse to one another.}
+\(D\varphi:DDD\to D\) are inverse to one another. (Translator's note:
+the Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A},
+prints \(D\varphi^{-1}\); as \(D\) is contravariant, \(D\) applied to
+\(\varphi:\operatorname{Id}_{\mathscr C}\to DD\) is already a morphism
+\(DDD\to D\), as printed in 1970.)}
 \endgroup
 

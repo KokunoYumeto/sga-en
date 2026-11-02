@@ -5,7 +5,10 @@
 \addcontentsline{toc}{section}{5. Restricted p-Lie Algebras}
 
 We first recall some results from the \emph{S\'eminaire Sophus
-Lie}.
+Lie}.\footnote{Translator's note: the Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{A}, gives the reference: P.~Cartier,
+Exemples d'hyperalg\`ebres, S\'eminaire ``Sophus Lie'', 2e ann\'ee
+(1955/56), expos\'e~3 (available on Numdam).}
 
 \medskip
 \noindent\textbf{5.1.}
@@ -38,8 +41,8 @@ which gives Jacobson's first formula:
   (\operatorname{ad}x)^p.
 \]
 
-If \(a_1,\ldots,a_p\) are arbitrary elements of \(A\), and \(N\)
-is the symmetrization operator (cf.\ \SGARefLink{sga3:VIIA:4.2}{4.2}), then
+Likewise, if \(a_1,\ldots,a_p\) are \(p\) arbitrary elements of \(A\),
+one has (cf.\ \SGARefLink{sga3:VIIA:4.2}{4.2})
 \begin{equation}
   \tag{*}\label{sga3:vii:paragraph:5-1:equation:star}
 \begin{aligned}
@@ -61,7 +64,7 @@ is the symmetrization operator (cf.\ \SGARefLink{sga3:VIIA:4.2}{4.2}), then
 Here \(\sigma\) ranges over the permutations of \(p\) letters and
 \(\tau\) over those of \(p-1\) letters.
 
-Indeed, the final expression is equal to
+Indeed, the right-hand side is equal to
 \[
   \sum_{\tau}
   \sum_{r=0}^{p-1}
@@ -90,23 +93,17 @@ is plainly
   a_p
   a_{\rho(r+1)}\cdots a_{\rho(p-1)},
 \]
-where \(\rho\) ranges over the permutations of \(p-1\) letters.
-But
+where \(\rho\) ranges over the permutations of \(p-1\) letters. On
+the other hand, the equalities
 \[
-  (-1)^s\binom{p-1}{s}=1
-  \quad\text{in }\mathbb F_p,
+  (x-1)^p=x^p-1=(x-1)(x^{p-1}+\cdots+1)
+  \qquad\text{and}\qquad
+  (x-1)^{p-1}=x^{p-1}+\cdots+1
 \]
-because in \(\mathbb F_p[x]\),
-\[
-  (x-1)^p=x^p-1=(x-1)(x^{p-1}+\cdots+1),
-\]
-and hence
-\[
-  (x-1)^{p-1}=x^{p-1}+\cdots+1.
-\]
-This proves \((*)\).
+show that \((-1)^s\binom{p-1}{s}\) is equal to \(1\) in characteristic
+\(p\), which proves \((*)\).
 
-On the other hand, if \(x_0,x_1\in A\), then
+In particular, if \(x_0\) and \(x_1\) are two elements of \(A\), then
 \[
   (x_0+x_1)^p
   =
@@ -129,30 +126,16 @@ where \(z\) ranges over the nonconstant maps
   ).
 \end{aligned}
 \]
-\footnote{The editors inserted the following explanation from
-\textup{[DG70]}, III.7, \SGARefLink{sga3:VIIB:3.2:prop}{3.2}.}
-By \((*)\),
-\[
-\begin{aligned}
-  &N(
-    \underbrace{x_0,\ldots,x_0}_{r},
-    \underbrace{x_1,\ldots,x_1}_{p-r}
-  ) \\
-  &\qquad =
-  r!(p-1-r)!
-  \sum_t
-  [x_{t(1)},
-    [x_{t(2)},
-      [\cdots,
-        [x_{t(p-1)},x_1]
-      \cdots]
-    ]
-  ],
-\end{aligned}
-\]
-where \(t\) ranges over the maps
-\([1,p-1]\to\{0,1\}\) which take the value \(0\) exactly \(r\)
-times. We obtain Jacobson's second formula:
+whence Jacobson's second formula\footnote{Translator's note: the
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A}, inserts the
+intermediate step, after M.~Demazure and P.~Gabriel, \textit{Groupes
+alg\'ebriques}, tome~I, Masson and North-Holland, 1970, II, \S7, 3.2. In
+our words: applying \((*)\) with \(a_p=x_1\), each map
+\(t:[1,p-1]\to\{0,1\}\) taking the value \(0\) exactly \(r\) times comes
+from \(r!(p-1-r)!\) permutations \(\tau\), so
+\(N(x_0,\ldots,x_0,x_1,\ldots,x_1)=r!(p-1-r)!\sum_t
+[x_{t(1)},[x_{t(2)},[\cdots,[x_{t(p-1)},x_1]\cdots]]]\); and
+\(r!(p-1-r)!/r!(p-r)!=1/(p-r)=-1/r\) in \(\mathbb F_p\).}
 \begin{equation}
   \tag{ii}\label{sga3:vii:paragraph:5-1:equation:ii}
 \begin{aligned}
@@ -170,7 +153,8 @@ times. We obtain Jacobson's second formula:
   ],
 \end{aligned}
 \end{equation}
-where \(t\) has the same meaning.
+where \(t\) ranges over the maps \([1,p-1]\to\{0,1\}\) which take the
+value \(0\) exactly \(r\) times.
 
 \medskip
 \noindent\textbf{5.2.}
@@ -220,18 +204,23 @@ and
 \]
 where \(t\) ranges over the maps
 \([1,p-1]\to\{0,1\}\) which take the value \(0\) exactly \(r\)
-times, and \(x_0,x_1\in\mathfrak g\). The map
-\(x\mapsto x^{(p)}\) is called the \emph{symbolic \(p\)-th power}.
+times, and \(x_0,x_1\in\mathfrak g\).\footnote{Translator's note: the
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A}, names the
+map \(x\mapsto x^{(p)}\) the \emph{symbolic \(p\)-th power}, the term the
+text uses below for it.}
 
-For example, if \(A\) is an associative \(R\)-algebra, \SGARefLink{sga3:VIIB:5.1:proposition}{5.1} shows
-that the \(R\)-module underlying \(A\), endowed with
+For example, if \(A\) is an \(R\)-algebra, we saw in \SGARefLink{sga3:VIIA:5.1}{5.1} that one
+obtains a \(p\)-Lie algebra \(A_{\mathrm{Lie}}\) by taking the
+\(R\)-module underlying \(A\) and setting
 \[
   [x,y]=xy-yx,
   \qquad
   x^{(p)}=x^p,
+  \qquad
+  x,y\in A.
 \]
-is a \(p\)-Lie algebra, denoted \(A_{\mathrm{Lie}}\). We call it
-the \(p\)-Lie algebra underlying \(A\).
+We say that \(A_{\mathrm{Lie}}\) is the \(p\)-Lie algebra underlying
+\(A\).
 
 We shall chiefly consider restricted \(p\)-Lie subalgebras of
 algebras of the form \(A_{\mathrm{Lie}}\). Here is one example.
@@ -259,14 +248,10 @@ shows that \(D^p\) is again a derivation of \(X\) over \(S\), since
   \binom pi\equiv0\pmod p
   \qquad(i\ne0,p).
 \]
-It follows that:
-
-\begin{quote}
-\textit{The algebra \(\operatorname{Der}_{X/S}\) of derivations of
-\(X\) over \(S\) is a restricted \(p\)-Lie subalgebra of the
-\(\Gamma(S,\mathcal O_S)\)-algebra of differential operators of
-\(X\) over \(S\).}
-\end{quote}
+It follows that the algebra \(\operatorname{Der}_{X/S}\) of
+derivations of \(X\) over \(S\) is a restricted \(p\)-Lie subalgebra of
+the algebra over \(\Gamma(S,\mathcal O_S)\) of differential operators of
+\(X\) over \(S\).
 
 \medskip
 \noindent\textbf{5.2.1.}
@@ -287,7 +272,7 @@ The composite of two homomorphisms is again a homomorphism, so we
 may speak of the \emph{category of restricted \(p\)-Lie algebras
 over \(R\)}.
 
-If \((X,\mathcal R)\) is a ringed space, we say that an
+Likewise, if \((X,\mathcal R)\) is a ringed space, we say that an
 \(\mathcal R\)-module \(\mathfrak g\) is endowed with the
 structure of a restricted \(p\)-Lie algebra over \(\mathcal R\) if,
 for every open subset \(U\), the module

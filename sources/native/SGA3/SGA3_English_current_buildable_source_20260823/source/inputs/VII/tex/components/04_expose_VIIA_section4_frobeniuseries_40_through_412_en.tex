@@ -16,23 +16,16 @@ of \SGARefLink{sga3:i:subsection:1-1}{Expos\'e I, 1.1}. We likewise use the isom
 \]
 defined there to identify these sets whenever \(X\) is an
 \(\mathbb F_p\)-scheme and \(F\) is an object of
-\((\mathbf{Sch}/\mathbb F_p)^\wedge\).
-
-\medskip
-\noindent\textbf{Notation 4.0.}
-\phantomsection
-\label{sga3:VIIA:4.0}
-\textit{If \(T\) is an \(\mathbb F_p\)-scheme, a \(T\)-functor is a
-morphism \(q:F\to T\) in
-\((\mathbf{Sch}/\mathbb F_p)^\wedge\) with target \(T\). For every
-\(T\)-scheme \(r:X\to T\), the set of \(T\)-morphisms \(X\to F\),
-that is, of \(\mathbb F_p\)-morphisms \(s:X\to F\) satisfying
-\(q\circ s=r\), is denoted}
+\((\mathbf{Sch}/\mathbb F_p)^\wedge\). If \(T\) is an
+\(\mathbb F_p\)-scheme, a \(T\)-functor is a morphism \(q:F\to T\) of
+\((\mathbf{Sch}/\mathbb F_p)^\wedge\) with target \(T\); for every
+\(T\)-scheme \(r:X\to T\), the set of morphisms \(s:X\to F\) such that
+\(q\circ s=r\) will then be denoted
 \[
-  q(r),\qquad q(X/T),\qquad F(r),\qquad\text{or}\qquad F(X/T).
+  q(r),\qquad q(X/T),\qquad F(r),\qquad\text{or}\qquad F(X/T)
 \]
-\textit{It may also be denoted \(F(X)\) when no confusion with
-\(\operatorname{Hom}(h_X,F)\) can result.}
+(or even \(F(X)\) when no confusion with \(\operatorname{Hom}(h_X,F)\) is
+possible).
 
 \medskip
 \noindent\textbf{4.1.}
@@ -42,7 +35,11 @@ For every scheme \(S\) of characteristic \(p\), let
 \(\operatorname{fr}(S)\), or simply \(\operatorname{fr}\), denote the
 endomorphism of \(S\) which is the identity on the underlying
 topological space and which sends a section \(x\) of \(\mathcal O_S\)
-over an open subset to \(x^p\).
+over an open subset to \(x^p\).\footnote{Translator's note: as the
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A}, points out,
+\(\operatorname{fr}(S)\) is nowadays called the \emph{absolute} Frobenius
+morphism of \(S\), as opposed to the \emph{relative} Frobenius morphism
+\(\operatorname{Fr}(X/S)\) introduced below.}
 
 The assignment
 \[
@@ -63,35 +60,21 @@ identity functor of \((\mathbf{Sch}/\mathbb F_p)^\wedge\), again
 denoted \(\operatorname{fr}\).
 
 For every \(\mathbb F_p\)-scheme \(S\) and every \(S\)-functor
-\(q:X\to S\), let \(X^{(p/S)}\), or \(X^{(p)}\), denote the pullback
-of \(X\) along \(\operatorname{fr}(S)\):
-\begin{center}
-  \phantomsection
-  \label{sga3:VIIA:4.1-frobenius-basechange-square}
-  \input{native_diagrams/exp7/viia_00_04/diag_034_frobenius_basechange_square}
-\end{center}
-
-The commutative square
+\(q:X\to S\), let \(X^{(p/S)}\), or \(X^{(p)}\), denote the inverse
+image \(S\times_{\operatorname{fr},q}X\) of \(X\) under the base change
+\(\operatorname{fr}(S)\). The commutative square
 \begin{center}
   \phantomsection
   \label{sga3:VIIA:4.1-absolute-frobenius-square}
   \input{native_diagrams/exp7/viia_00_04/diag_035_absolute_frobenius_square}
 \end{center}
-induces an \(S\)-morphism
-\[
-  \operatorname{Fr}(X/S):X\longrightarrow X^{(p/S)}
-\]
-such that
+induces an \(S\)-morphism \(\operatorname{Fr}(X/S)\), or \(\operatorname{Fr}\),
+from \(X\) to \(X^{(p/S)}\) such that
 \[
   \operatorname{fr}(X)
   =
-  \operatorname{pr}_X\circ\operatorname{Fr}(X/S):
+  \operatorname{pr}_2\circ\operatorname{Fr}(X/S).
 \]
-\begin{center}
-  \phantomsection
-  \label{sga3:VIIA:4.1-relative-frobenius-factorization}
-  \input{native_diagrams/exp7/viia_00_04/diag_036_relative_frobenius_factorization}
-\end{center}
 We call \(\operatorname{Fr}(X/S)\) the \emph{Frobenius morphism of
 \(X\) relative to \(S\)}. Plainly the assignment
 \[
@@ -99,46 +82,32 @@ We call \(\operatorname{Fr}(X/S)\) the \emph{Frobenius morphism of
 \]
 is a functorial homomorphism.
 
-\footnote{The editors expanded the original in the remainder of this
-paragraph.}
-Let \(r:T\to S\) be an \(S\)-scheme. For every
-\[
-  \varphi\in X(r)=\operatorname{Hom}_S(T,X),
-\]
-one has the commutative diagram
+By the definitions, for every \(S\)-scheme \(r:T\to S\), the map
+\(\operatorname{Fr}(X/S)(r)\) can therefore be characterized by the
+commutativity of the triangle\footnote{Translator's note: the
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{A}, details
+this; in our words: the horizontal bijection comes from the definition
+of \(X^{(p/S)}\) as a fibre product, an \(S\)-morphism
+\(T\to X^{(p/S)}\) being the same as a morphism \(T\to X\) above
+\(\operatorname{fr}(S)\circ r\), through \(\operatorname{pr}_2\); and
+\(\operatorname{fr}(S)\circ r=r\circ\operatorname{fr}(T)\) because
+\(\operatorname{fr}\) is an endomorphism of the identity functor. The
+triangle commutes since, for \(\varphi\in X(r)\),
+\(\operatorname{pr}_2\circ\operatorname{Fr}(X/S)\circ\varphi
+=\operatorname{fr}(X)\circ\varphi=\varphi\circ\operatorname{fr}(T)\).}
 \begin{center}
-  \phantomsection
-  \label{sga3:VIIA:4.1-point-phi-diagram}
-  \input{native_diagrams/exp7/viia_00_04/diag_037_point_phi_relative_frobenius}
-\end{center}
-By the definition of \(X^{(p/S)}\) as a fiber product,
-\(\operatorname{pr}_X\) induces a bijection
-\[
- X^{(p/S)}(r)
- =
- \operatorname{Hom}_S(T,X^{(p/S)})
- \xrightarrow{\sim}
- \operatorname{Hom}_S(T,X)
- =
- X(\operatorname{fr}(S)\circ r).
-\]
-On the other hand,
-\[
-  r\circ\operatorname{fr}(T)
-  =
-  \operatorname{fr}(S)\circ r,
-\]
-because \(\operatorname{fr}\) is an endomorphism of the identity
-functor. Hence
-\[
-  \operatorname{Fr}(X/S)(r):
-  X(r)\longrightarrow X^{(p/S)}(r)
-\]
-is characterized by commutativity of
-\begin{center}
-  \phantomsection
-  \label{sga3:VIIA:4.1-pointwise-frobenius-square}
-  \input{native_diagrams/exp7/viia_00_04/diag_038_pointwise_frobenius_square}
+\((\dagger)\qquad\)%
+\begin{tikzcd}[column sep=large,row sep=large]
+X^{(p/S)}(r)
+  \arrow[r,"\sim"]
+&
+X(\operatorname{fr}(S)\circ r)=X(r\circ\operatorname{fr}(T))
+\\
+X(r)
+  \arrow[u,"\operatorname{Fr}(X/S)(r)"]
+  \arrow[ur,"X(\operatorname{fr}(T))"']
+&
+\end{tikzcd}
 \end{center}
 
 For example, if \(X\) is the subscheme of \(S\) defined by a
@@ -161,47 +130,37 @@ intended source is
 \noindent\textbf{4.1.1.}
 \phantomsection
 \label{sga3:VIIA:4.1.1}
-\footnote{The editors expanded the original in this paragraph.}
-Let \(t:T\to S\) be a base change and put
-\[
-  X_T=X\times_{q,t}T.
-\]
-Consider the pullback of \(X_T\) along \(\operatorname{fr}(T)\):
+Consider now a base change \(t:T\to S\). Since the square
 \begin{center}
-  \phantomsection
-  \label{sga3:VIIA:4.1.1-basechange-rectangle}
-  \input{native_diagrams/exp7/viia_00_04/diag_039_basechange_rectangle}
+\begin{tikzcd}[column sep=large,row sep=large]
+T
+  \arrow[r,"\operatorname{fr}(T)"]
+  \arrow[d,"t"']
+&
+T
+  \arrow[d,"t"]
+\\
+S
+  \arrow[r,"\operatorname{fr}(S)"]
+&
+S
+\end{tikzcd}
 \end{center}
-Since
-\[
-  t\circ\operatorname{fr}(T)
-  =
-  \operatorname{fr}(S)\circ t,
-\]
-\((X_T)^{(p/T)}\) identifies with the pullback of \(X^{(p/S)}\)
-along \(t\). Equivalently, there is a canonical isomorphism
-\[
-  X_T^{(p/T)}
-  \xrightarrow{\sim}
-  \bigl(X^{(p/S)}\bigr)_T.
-\]
-Under this identification,
-\(\operatorname{Fr}(X_T/T)\) identifies with the pullback
-\(\operatorname{Fr}(X/S)_T\).
+is commutative, the inverse image of \(X\times_{q,t}T\) under
+\(\operatorname{fr}(T)\) identifies with the inverse image of
+\(S\times_{\operatorname{fr},q}X\) under \(t\); in other words, there is
+a canonical isomorphism from \(X_T^{(p/T)}\) onto
+\(\bigl(X^{(p/S)}\bigr)_T\). Clearly, under this identification,
+\(\operatorname{Fr}(X_T/T)\) identifies with the inverse image
+\(\operatorname{Fr}(X/S)_T\) of \(\operatorname{Fr}(X/S)\).
 
-\medskip
-\noindent\textbf{4.1.1.1.}
-\phantomsection
-\label{sga3:VIIA:4.1.1.1}
-In particular, if \(S=\operatorname{Spec}\mathbb F_p\), then
-\(X^{(p/S)}=X\) and
-\(\operatorname{Fr}(X/S)=\operatorname{fr}(X)\). Consequently,
+In particular, if \(S\) is the spectrum of the prime field
+\(\mathbb F_p\), then \(X^{(p/S)}\) is equal to \(X\) and
+\(\operatorname{Fr}(X/S)\) to \(\operatorname{fr}(X)\). Consequently,
 \(X_T^{(p/T)}\) identifies with \(X_T\), and
-\(\operatorname{Fr}(X_T/T)\) with
-\(\operatorname{fr}(X)_T\).
-
-For example, if \(E\) is a set and \(E_T\) the constant \(T\)-scheme
-of type \(E\), then
+\(\operatorname{Fr}(X_T/T)\) with \(\operatorname{fr}(X)_T\). Let, for
+example, \(E\) be a set and \(E_T\) the constant \(T\)-scheme of type
+\(E\); then
 \[
   E_T^{(p/T)}\simeq E_T,
   \qquad
@@ -212,38 +171,27 @@ of type \(E\), then
 \noindent\textbf{4.1.2.}
 \phantomsection
 \label{sga3:VIIA:4.1.2}
-The functor \(X\mapsto X^{(p/S)}\) plainly commutes with products.
-It therefore sends an \(S\)-group \(G\) to an \(S\)-group
-\(G^{(p/S)}\). Since \(\operatorname{Fr}\) is functorial,
-\[
-  \operatorname{Fr}(G/S):G\longrightarrow G^{(p/S)}
-\]
-is a homomorphism of \(S\)-groups. We denote its kernel by
-\(\operatorname{Fr}G\).
-
-If \(r:T\to S\) is an \(S\)-scheme, the
-\hyperref[sga3:VIIA:4.1-pointwise-frobenius-square]{pointwise
-Frobenius diagram} shows that the value
-of \(\operatorname{Fr}G\) at \(r\) is the kernel of
+The functor \(X\mapsto X^{(p/S)}\) plainly commutes with products; it
+therefore sends an \(S\)-group \(G\) to an \(S\)-group \(G^{(p/S)}\);
+moreover, since \(\operatorname{Fr}\) is a functorial homomorphism,
+\(\operatorname{Fr}(G/S)\) is a homomorphism of \(S\)-groups. We denote
+by \(\operatorname{Fr}G\) the kernel of this homomorphism: if
+\(r:T\to S\) is a scheme over \(S\), it follows from \SGARefLink{sga3:VIIA:4.1}{4.1} that the
+value of \(\operatorname{Fr}G\) at \(r\) is the kernel of the
+homomorphism
 \[
   G(\operatorname{fr}(T)):
   G(r)\longrightarrow G(r\circ\operatorname{fr}(T)).
 \]
-
-When \(T=I_R\) is the scheme of dual numbers over an \(S\)-scheme
-\(R\), the absolute Frobenius of \(I_R\) factors as
-\begin{center}
-  \phantomsection
-  \label{sga3:VIIA:4.1.2-dual-numbers-factorization}
-  \input{native_diagrams/exp7/viia_00_04/diag_040_dual_numbers_frobenius_factorization}
-\end{center}
-where \(s\) is the zero section. It follows that
-\((\operatorname{Fr}G)(I_R)\) contains the kernel
-\(\operatorname{Lie}(G/S)(R)\) of
+For example, when \(T\) is the scheme \(I_R\) of dual numbers over an
+\(S\)-scheme \(R\), \(\operatorname{fr}(I_R)\) factors as follows:
 \[
-  G(s):G(I_R)\longrightarrow G(R),
+  I_R\xrightarrow{\ \mathrm{can.}\ }R
+  \xrightarrow{\ \operatorname{fr}(R)\ }R
+  \xrightarrow{\ \mathrm{can.}\ }I_R.
 \]
-and hence
+This shows that \((\operatorname{Fr}G)(I_R)\) contains the kernel of the
+morphism \(G(I_R)\to G(R)\), and that
 \[
   \operatorname{Lie}(G/S)
   =
