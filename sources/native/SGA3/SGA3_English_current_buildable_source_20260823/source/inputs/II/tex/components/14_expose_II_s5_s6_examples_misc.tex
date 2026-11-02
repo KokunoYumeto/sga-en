@@ -21,10 +21,13 @@ There is a split exact sequence
   \longrightarrow\Gamma(S,\mathscr O_S)^\times
   \longrightarrow1,
 \]
-which shows that \(\underline{\operatorname{Lie}}(G)(S)\) identifies
-with \(\operatorname{Hom}_{\mathrm{gr}}(M,\mathscr O(S))\), endowed
-with its evident \(\mathscr O(S)\)-module structure. After base change
-we therefore obtain:
+which gives
+\[
+ \underline{\operatorname{Lie}}(G)(S)\simeq
+ \operatorname{Hom}_{\mathrm{gr}}\bigl(M,\mathbf O(S)\bigr),
+\]
+endowed with its evident \(\mathbf O(S)\)-module structure. After base
+change we therefore obtain:
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:ii:proposition:5-1}\textbf{Proposition 5.1.}
@@ -37,27 +40,28 @@ we therefore obtain:
 \]
 \textit{and}
 \[
- \mathscr Hom_{\mathrm{gr}}(\widetilde M_S,\mathscr O_S)
+ \mathscr Hom(\underline M_S,\mathscr O_S)
  \xrightarrow{\sim}
  \mathscr Lie(D_S(M)/S),
 \]
-\textit{where, in the second isomorphism, \(\widetilde M_S\) denotes
+\textit{where, in the second isomorphism, \(\underline M_S\) denotes
 the constant sheaf of groups on \(S\) defined by \(M\), and
-\(\mathscr Hom_{\mathrm{gr}}\) denotes the sheaf of homomorphisms of
-sheaves of groups.}
+\(\mathscr Hom\) the sheaf of homomorphisms of sheaves of groups.}
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:ii:corollary:5-1-1}\textbf{Corollary 5.1.1.}
-\textit{If \(M\) is free of finite type---or, as we shall say later,
-if \(D_S(M)\) is a split torus---then, with \(W\) as in \SGARefLink{sga3:i:proposition:4-6-5}{I~4.6.5},}
+\noindent\SGAInlineRefTarget{sga3:ii:corollary:5-1-1}\textbf{Corollary.}
+\textit{If \(M\) is free of finite type} (or, as we shall say later,
+if \(D_S(M)\) is a trivial torus)\textit{, then}
 \[
+\begin{aligned}
  W\bigl(\mathscr Lie(D_S(M)/S)\bigr)
-   \xrightarrow{\sim}\underline{\operatorname{Lie}}(D_S(M)/S),
- \qquad
- M^\vee\otimes_{\mathbb Z}\mathscr O_S
-   \xrightarrow{\sim}\mathscr Lie(D_S(M)/S).
+   &\xrightarrow{\sim}\underline{\operatorname{Lie}}(D_S(M)/S)
+   \qquad\textup{(see \SGARefLink{sga3:i:proposition:4-6-5}{I~4.6.5})},\\
+ M^\vee_S\otimes_{\mathbb Z}\mathscr O_S
+   &\xrightarrow{\sim}\mathscr Lie(D_S(M)/S),
+\end{aligned}
 \]
-\textit{Here \(M^\vee\) denotes the dual of the abelian group \(M\).
+\textit{where \(M^\vee\) denotes the dual of the abelian group \(M\).
 In particular,}
 \[
  \mathbf O_S\xrightarrow{\sim}
@@ -69,412 +73,219 @@ In particular,}
 
 \subsection*{\SGAInlineRefTarget{sga3:ii:subsection:5-2}5.2. Normalizers and centralizers}
 
-We first prove a few lemmas. Recall (\SGARefLink{sga3:i:lemma:3-1-1}{I~3.1.1}) that a sequence
-\[
- 0\longrightarrow F'\longrightarrow F\longrightarrow F''\longrightarrow0
-\]
-of \(\mathbf O_S\)-modules is called \emph{exact} if, for every
-\(S'\to S\), the sequence
-\[
- 0\longrightarrow F'(S')\longrightarrow F(S')
-  \longrightarrow F''(S')\longrightarrow0
-\]
-of \(\mathbf O(S')\)-modules is exact. Likewise, a sequence
-\(1\to G'\to G\to G''\to1\) of \(S\)-groups is called exact if the
-corresponding sequence of groups on \(S'\)-points is exact for every
-\(S'\to S\).
+Let us first prove some lemmas on \(\mathbf O_S\)-modules.
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:ii:lemma:5-2-1}\textbf{Lemma 5.2.1.}
-\textit{Let \(1\to G'\to G\to G''\to1\) be an exact sequence of
-\(S\)-groups.}
-\footnote{Editor's note: The statement and proof of this lemma have
-been expanded; this will be useful in \SGARefLink{sga3:ii:theorem:5-3-1}{5.3.1}.}
-\begin{enumerate}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\item \textit{The sequences}
+\textit{A sequence \(0\to F'\to F\to F''\to0\) of \(\mathbf O_S\)-modules
+is exact if and only if, for every \(S'\) over \(S\), the sequence
+\(0\to F'(S')\to F(S')\to F''(S')\to0\) of \(\mathbf O(S')\)-modules is
+exact. The sequences}
 \[
- 1\longrightarrow T_{G'/S}(\mathscr M)
- \longrightarrow T_{G/S}(\mathscr M)
- \longrightarrow T_{G''/S}(\mathscr M)\longrightarrow1
+ 0\longrightarrow T_{F'/S}(\mathscr M)\longrightarrow T_{F/S}(\mathscr M)
+ \longrightarrow T_{F''/S}(\mathscr M)\longrightarrow0
 \]
 \textit{and}
 \[
- 1\longrightarrow\underline{\operatorname{Lie}}(G'/S,\mathscr M)
- \longrightarrow\underline{\operatorname{Lie}}(G/S,\mathscr M)
- \longrightarrow\underline{\operatorname{Lie}}(G''/S,\mathscr M)
- \longrightarrow1
+ 0\longrightarrow\underline{\operatorname{Lie}}(F'/S,\mathscr M)
+ \longrightarrow\underline{\operatorname{Lie}}(F/S,\mathscr M)
+ \longrightarrow\underline{\operatorname{Lie}}(F''/S,\mathscr M)
+ \longrightarrow0
 \]
-\textit{are exact.}
-\item \textit{Let \(1\to H'\to H\to H''\to1\) be a second sequence
-of groups. It is exact if and only if}
-\[
- 1\longrightarrow G'\times_S H'
- \longrightarrow G\times_S H
- \longrightarrow G''\times_S H''\longrightarrow1
-\]
-\textit{is exact.}
-\item\SGAInlineRefTarget{sga3:ii:lemma:5-2-1:item:iii} \textit{If two of \(G',G,G''\) satisfy condition (E), then so
-does the third.}
-\item\SGAInlineRefTarget{sga3:ii:lemma:5-2-1:item:iv} \textit{If \(0\to F'\to F\to F''\to0\) is exact and two of the
-\(\mathbf O_S\)-modules \(F',F,F''\) are good, then so is the third.}
-\item \textit{If two of the \(S\)-groups \(G',G,G''\) are good, then
-so is the third.}
-\end{enumerate}
+\textit{are then exact. If two of the modules in question are good, so is
+the third. If the sequences \(0\to F'\to F\to F''\to0\) and
+\(0\to H'\to H\to H''\to0\) are exact, then so is the sequence
+\(0\to F'\times_SH'\to F\times_SH\to F''\times_SH''\to0\).}
 
-The first part of (i) is immediate, and the second follows from it.
-Likewise, (ii) is immediate. We prove (iii). For brevity, write
-\(L(\mathscr M)=\underline{\operatorname{Lie}}(G,\mathscr M)\),
-\(L'(\mathscr M)=\underline{\operatorname{Lie}}(G',\mathscr M)\),
-and similarly for \(L''\). We have the following commutative diagram.
-\footnote{Editor's note: The proofs of (iii) and (v) have been added.}
+The proofs (immediate) are left to the reader (for the last assertion
+but one, use the five lemma and the fact that
+\(T_{\mathbf O_S/S}(\mathscr M)\) is free).
 
-\SGAThreeNativeDiagram[0.93\textwidth]
-  {native_diagrams/exp2/exp2_p044_lemma521_conditionE_diagram.tex}
-  {The exact-sequence diagram used to prove \SGARefLink{sga3:ii:lemma:5-2-1:item:iii}{Lemma~5.2.1(iii)}.}
-  {fig:sga3-exp2-p044-lemma521-conditionE}
-  {Polo--Gille re-edition, Expos\'e II}
-
-The upper row is exact by (i), and the lower row is exact by (i) and
-(ii). Assertion (iii) follows.
-
-We prove (iv). There is a commutative diagram
-
-\SGAThreeNativeDiagram[0.96\textwidth]
-  {native_diagrams/exp2/exp2_p044_lemma521_good_modules_diagram.tex}
-  {The exact-sequence diagram used to prove \SGARefLink{sga3:ii:lemma:5-2-1:item:iv}{Lemma~5.2.1(iv)}.}
-  {fig:sga3-exp2-p044-lemma521-good-modules}
-  {Polo--Gille re-edition, Expos\'e II}
-
-with exact rows: the first because
-\(T_{\mathbf O_S/S}(\mathscr M)\) is a free, hence flat,
-\(\mathbf O_S\)-module, and the second by (i). Thus, if two of
-\(F',F,F''\) are good, so is the third. Finally, (v) follows from
-(iii) and (iv).
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~II; our
+formulation). The re-edition states this lemma for \(S\)-groups, a
+sequence \(1\to G'\to G\to G''\to1\) of \(S\)-groups being called exact
+if it is exact on points with values in every \(S'\to S\): (i) the
+corresponding sequences of tangent bundles \(T(\mathscr M)\) and of
+functors \(\underline{\operatorname{Lie}}(-,\mathscr M)\) are then exact;
+(ii) a product of two sequences is exact if and only if both are; (iii)
+if two of \(G'\), \(G\), \(G''\) satisfy (E), so does the third; (iv) the
+statement on good \(\mathbf O_S\)-modules above; (v) if two of
+\(G'\), \(G\), \(G''\) are good, so is the third. In our words: the first
+sequence of (i) is the given one on the points with values in the
+\(I_{S'}(\mathscr M)\); the second consists of the kernels of the
+restrictions along the zero sections, and it is exact because these
+restrictions are split by the maps \(X(S')\to X(I_{S'}(\mathscr M))\)
+induced by \(\rho\). For (iii), by (i) and (ii) the comparison maps
+\(\underline{\operatorname{Lie}}(-,\mathscr M\oplus\mathscr N)\to
+\underline{\operatorname{Lie}}(-,\mathscr M)\times_S
+\underline{\operatorname{Lie}}(-,\mathscr N)\) for \(G'\), \(G\), \(G''\)
+form a morphism of short exact sequences of groups, so if two of them are
+bijective so is the third, which is (E) by Remark~1) of 4.1; (v) follows
+from (iii) and from (iv) applied to the exact sequence of the
+\(\underline{\operatorname{Lie}}\).
+\par\medskip
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:ii:lemma:5-2-2}\textbf{Lemma 5.2.2.}
-\textit{Let \(G\) be an \(S\)-group, let \(E,H\) be two \(G\)-objects,
-and let \(F\) be a \(G\)-\(\mathbf O_S\)-module.}
-\begin{enumerate}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\item\SGAInlineRefTarget{sga3:ii:lemma:5-2-2:item:i} \textit{The canonical homomorphism
-\(E^G\times_S H^G\to(E\times_S H)^G\) is an isomorphism.}
-\item\SGAInlineRefTarget{sga3:ii:lemma:5-2-2:item:ii} \textit{If \(F\) is a good \(\mathbf O_S\)-module, then so is
-\(F^G\).}
-\end{enumerate}
+\textit{Let \(F\) and \(H\) be two \(G\)-\(\mathbf O_S\)-modules. The
+canonical homomorphism \(F^G\times_SH^G\to(F\times_SH)^G\) is an
+isomorphism. If \(F\) is good, so is \(F^G\).}
 
-The first assertion is immediate; we prove the second. For every
-\(S'\to S\), there is a commutative diagram
-
-\SGAThreeNativeDiagram[0.72\textwidth]
-  {native_diagrams/exp2/exp2_p045_lemma522_invariants_square.tex}
-  {The invariants-and-base-change square in the proof of \SGARefLink{sga3:ii:lemma:5-2-2}{Lemma~5.2.2}.}
-  {fig:sga3-exp2-p045-lemma522-invariants}
-  {Polo--Gille re-edition, Expos\'e II}
-
-and we must prove that \(\phi\) is bijective. It is plainly injective.
-To prove surjectivity, let \((t_0,\ldots,t_n)\) be a basis of the free
-\(\mathbf O(S')\)-module \(\mathbf O(I_{S'}(\mathscr M))\), and let
+Let us prove the second assertion. There is a commutative diagram
 \[
- u=\sum_{i=0}^{n}f_i\otimes t_i
+\begin{tikzcd}
+ F^G(I_S(\mathscr M)) \arrow[r] & F(I_S(\mathscr M))\\
+ F^G(S)\otimes_{\mathbf O(S)}\mathbf O(I_S(\mathscr M)) \arrow[u,"f"] \arrow[r]
+ & F(S)\otimes_{\mathbf O(S)}\mathbf O(I_S(\mathscr M)) \arrow[u,"f_1"',"\wr"]
+\end{tikzcd}
 \]
-be an element of
-\(F(S')\otimes_{\mathbf O(S')}\mathbf O(I_{S'}(\mathscr M))\) such
-that \(\phi_1(u)\) belongs to \(F^G(I_{S'}(\mathscr M))\). We show that
-each \(f_i\) belongs to \(F^G(S')\).
-
-Let \(S''\to S'\). Via the zero section \(\varepsilon_{\mathscr M}\),
-we may regard \(S''\) as lying over \(I_{S'}(\mathscr M)\). Then, for
-every \(g\in G(S'')\),
-\[
- u_{S''}=g\cdot u_{S''}
-   =\sum_{i=0}^{n}g\cdot(f_i)_{S''}\otimes(t_i)_{S''}.
-\]
-Since the \((t_i)_{S''}\) form a basis of
-\[
- \mathbf O(I_{S''}(\mathscr M))
- \simeq \mathbf O(I_{S'}(\mathscr M))
-        \otimes_{\mathbf O(S')}\mathbf O(S'')
-\]
-over \(\mathbf O(S'')\), it follows that
-\(g\cdot(f_i)_{S''}=(f_i)_{S''}\), hence \(f_i\in F^G(S')\) for all
-\(i\).
-
-\medskip
-\noindent\textbf{Notation.}
-If \(E\) is an \(S\)-group and \(F\) a sub-\(S\)-group, write \(E/F\)
-for the \(S\)-functor sending \(S'\to S\) to the set
-\(E(S')/F(S')\) of classes \(\bar x=xF(S')\). If \(E\) is commutative,
-then \(E/F\) is a commutative \(S\)-group.
-\footnote{Editor's note: These notations have been expanded.}
-
-Now let \(G\) be an \(S\)-group and \(K\) a sub-\(S\)-group, and set
-\(E=\underline{\operatorname{Lie}}(G/S,\mathscr M)\) and
-\(F=\underline{\operatorname{Lie}}(K/S,\mathscr M)\). The adjoint
-action of \(K\) on \(E\) stabilizes \(F\), and therefore induces an
-action on \(E/F\). For every \(S'\to S\),
-\[
-\begin{split}
- (E/F)^K(S')=\{\bar x\in E(S')/F(S')\mid{}&
-  \text{for every }f:S''\to S'\text{ and }k\in K(S''),\\[-2pt]
- &f^*(\bar x^{-1})\operatorname{Ad}(k)(f^*(\bar x))\in F(S'')\},
-\end{split}
-\]
-where \(f^*(\bar x)\) denotes the image of \(\bar x\) in \(E(S'')\).
+and one must show that \(f\) is bijective; now it is obviously injective;
+let us show that it is surjective. Let then
+\(u\in F(S)\otimes\mathbf O(I_S(\mathscr M))\) be such that \(f_1(u)\) is
+invariant under \(G(I_S(\mathscr M))\). Let us regard \(S\) as lying over
+\(I_S(\mathscr M)\) by the zero section. If \(S'\) is over \(S\), then
+\(u\in F(S)^{G(S')}\otimes\mathbf O(I_S(\mathscr M))\), as
+\(\mathbf O(I_S(\mathscr M))\) is free over \(\mathbf O(S)\). Letting
+\(S'\) vary, one deduces that
+\(u\in F^G(S)\otimes\mathbf O(I_S(\mathscr M))\).
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:ii:theorem:5-2-3}\textbf{Theorem 5.2.3.}
-\textit{Let \(G\) be an \(S\)-group and \(K\) a sub-\(S\)-group. Put
-(\SGARefLink{sga3:i:definition:2:3:3}{I~2.3.3})}
-\[
- N=\underline{\operatorname{Norm}}_G(K),
- \qquad
- Z=\underline{\operatorname{Centr}}_G(K),
-\]
-\textit{and let \(K\) act on
+\textit{Let \(G\) be an \(S\)-group and \(K\) a sub-\(S\)-group of \(G\).
+Write \(\underline{\operatorname{Norm}}_G(K)=N\),
+\(\underline{\operatorname{Centr}}_G(K)=Z\)
+(\SGARefLink{sga3:i:definition:2:3:3}{I~2.3.3}). Let \(K\) operate on
 \(\underline{\operatorname{Lie}}(G/S,\mathscr M)\) through the adjoint
 representation of \(G\).}
-\begin{enumerate}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\item\SGAInlineRefTarget{sga3:ii:theorem:5-2-3:item:i} \textit{If the group law of
+
+\textit{\SGAInlineRefTarget{sga3:ii:theorem:5-2-3:item:i}(i) If the group law of
 \(\underline{\operatorname{Lie}}(G/S,\mathscr M)\) is
-commutative,\footnote{This condition is automatic when \(G\) satisfies
-(E), for example when \(G\) is representable.}
+commutative,\footnote{This condition is automatically satisfied if \(G\)
+satisfies (E) (cf.~\SGARefLink{sga3:ii:proposition:3-9}{3.9}), for example if \(G\) is representable.}
 then}
 \[
- \frac{\underline{\operatorname{Lie}}(N/S,\mathscr M)}
-      {\underline{\operatorname{Lie}}(K/S,\mathscr M)}
+ \underline{\operatorname{Lie}}(N/S,\mathscr M)/
+ \underline{\operatorname{Lie}}(K/S,\mathscr M)
  =
- \left(
- \frac{\underline{\operatorname{Lie}}(G/S,\mathscr M)}
-      {\underline{\operatorname{Lie}}(K/S,\mathscr M)}
- \right)^K .
+ \bigl[\underline{\operatorname{Lie}}(G/S,\mathscr M)/
+ \underline{\operatorname{Lie}}(K/S,\mathscr M)\bigr]^K
 \]
-\item\SGAInlineRefTarget{sga3:ii:theorem:5-2-3:item:ii} \textit{If the same group law is commutative, then}
+\textit{(if \(E\) and \(F\) are two commutative \(S\)-groups, \(E/F\)
+denotes the commutative \(S\)-group defined by
+\((E/F)(S')=E(S')/F(S')\)).}\footnote{Translator's note: the Gille--Polo
+re-edition (2011), Expos\'e~II, defines \(E/F\) for any \(S\)-group \(E\)
+and sub-\(S\)-group \(F\) (a functor in sets, in groups if \(E\) is
+commutative) and writes out \((E/F)^K(S')\): the classes \(\bar x\) of
+elements \(x\in E(S')\) such that, after every base change \(S''\to S'\)
+and for every \(k\in K(S'')\), \(x^{-1}\operatorname{Ad}(k)(x)\) lies in
+\(F(S'')\).}
+
+\textit{\SGAInlineRefTarget{sga3:ii:theorem:5-2-3:item:ii}(ii) If the group law of
+\(\underline{\operatorname{Lie}}(G/S,\mathscr M)\) is commutative, then}
 \[
  \underline{\operatorname{Lie}}(Z/S,\mathscr M)
    =\underline{\operatorname{Lie}}(G/S,\mathscr M)^K .
 \]
-\item \textit{If \(G\) satisfies (E), then \(Z\) satisfies (E); if
-\(G\) and \(K\) satisfy (E), then \(N\) satisfies (E).}
-\item \textit{If \(G\) is good, then \(Z\) is good; if, moreover,
-\(G\) is very good, then \(Z\) is very good.}
-\item \textit{If \(G\) and \(K\) are good, then \(N\) is good; if,
-moreover, \(G\) is very good, then \(N\) is very good.}
-\end{enumerate}
 
-To prove (i) and (ii),\footnote{Editor's note: The proof has been
-expanded, and in particular \SGARefLink{sga3:ii:lemma:5-2-3-0}{Lemma~5.2.3.0}, implicit in the original,
-has been added.} we use the following lemma, which follows from the
-diagram of exact sequences considered in \SGARefLink{sga3:ii:definition:4-1-b}{4.1.B}, with \(G\) and \(H\)
-interchanged.
+\textit{(iii) If \(G\) satisfies (E) \textup{(}respectively if \(G\) and
+\(K\) satisfy (E)\textup{)}, then \(Z\) satisfies (E) \textup{(}respectively
+\(N\) satisfies (E)\textup{)}.}
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:ii:lemma:5-2-3-0}\textbf{Lemma 5.2.3.0.}
-\textit{Let \(G\) be an \(S\)-group, \(H\) a sub-\(S\)-group, and
-\(\mathscr M\) a free \(\mathscr O_S\)-module of finite type. Then
-\(T_{H/S}(\mathscr M)\) and
-\(\underline{\operatorname{Lie}}(G/S,\mathscr M)\) are sub-\(S\)-groups
-of \(T_{G/S}(\mathscr M)\), and}
+\textit{(iv) If \(G\) is good \textup{(}respectively if \(G\) and \(K\) are
+good\textup{)}, then \(Z\) is good \textup{(}respectively \(N\) is
+good\textup{)}. If moreover \(G\) is very good, then \(Z\)
+\textup{(}respectively \(N\)\textup{)} is very good.}
+
+Let us prove (i) and (ii). Let \(H=N\) (respectively \(Z\)). One has
 \[
- T_{H/S}(\mathscr M)\cap
- \underline{\operatorname{Lie}}(G/S,\mathscr M)
- =
- \underline{\operatorname{Lie}}(H/S,\mathscr M),
-\]
-\textit{where}
-\[
- T_{H/S}(\mathscr M)\cap
- \underline{\operatorname{Lie}}(G/S,\mathscr M)
- \mathrel{\mathop:}=
- T_{H/S}(\mathscr M)\times_{T_{G/S}(\mathscr M)}
- \underline{\operatorname{Lie}}(G/S,\mathscr M).
-\]
-
-Since the functors in (i) and (ii) commute with base extension, it is
-enough to prove the equalities on \(S\)-points. Put \(H=N\)
-(respectively, \(H=Z\)) and let \(\alpha=\pm1\). By the preceding
-lemma and the definitions of \(N\) and \(Z\) (\SGARefLink{sga3:i:definition:2:3:3}{I~2.3.3}),
-\begin{equation}
 \begin{split}
  \underline{\operatorname{Lie}}(H/S,\mathscr M)(S)
- =\bigl\{X\in{}&
- \underline{\operatorname{Lie}}(G/S,\mathscr M)(S)
- \subset G(I_S(\mathscr M))\ \bigm|\ \\
- &\text{for every }f:S'\to I_S(\mathscr M)
- \text{ and }u\in K(S'),\\
- &f^*(X^\alpha)\,u\,f^*(X^{-\alpha})\,u^{-1}\in K(S'),\\[-2pt]
- &\text{respectively }
- f^*(X)\,u\,f^*(X^{-1})\,u^{-1}=1
- \bigr\}.
+ =\bigl\{X\in{}&\underline{\operatorname{Lie}}(G/S,\mathscr M)(S)
+   \subset G(I_S(\mathscr M))\ \bigm|\\
+ &X\cdot u\cdot X^{-1}\cdot u^{-1}\in K(S')\
+   \text{(respectively }=1\text{)}\\
+ &\text{for every }u\in K(S'),\ S'\to I_S(\mathscr M)\bigr\}.
 \end{split}
-\tag{*}\label{sga3:ii:lemma:5-2-3-0:equation:star}
-\end{equation}
-Here \(f^*(X)\) denotes the image of \(X\) in \(G(S')\).
+\]
+Let \(X\in\underline{\operatorname{Lie}}(G/S,\mathscr M)(S)\). For \(X\)
+to belong to \(\underline{\operatorname{Lie}}(H/S,\mathscr M)(S)\), it
+suffices to verify the preceding condition for all \(S'\) of the form
+\(I_{S_1}(\mathscr M)\), the structural morphism coming by base extension
+from a morphism \(S_1\to S\). There is indeed a commutative diagram
+\[
+\begin{tikzcd}[row sep=small]
+ & I_{S'}(\mathscr M) \arrow[dl] \\
+ I_S(\mathscr M) \arrow[dd] & \\
+ & S' \arrow[uu,"h"'] \arrow[ul] \arrow[dl] \\
+ S &
+\end{tikzcd}
+\]
+which shows that giving an \(S'\) over \(I_S(\mathscr M)\) is equivalent
+to giving an \(S'\) over \(S\) together with a section \(h\) of
+\(I_{S'}(\mathscr M)\) over \(S'\); now if the required property holds for
+every \(u\) in \(K(I_{S'}(\mathscr M))\), it will also hold for every
+\(u\in K(S')\), since
+\(K(h)\colon K(I_{S'}(\mathscr M))\to K(S')\) is surjective.
 
-For brevity, write
-\[
- \mathfrak g=\underline{\operatorname{Lie}}(G/S,\mathscr M),\quad
- \mathfrak k=\underline{\operatorname{Lie}}(K/S,\mathscr M),\quad
- \mathfrak n=\underline{\operatorname{Lie}}(N/S,\mathscr M),\quad
- \mathfrak z=\underline{\operatorname{Lie}}(Z/S,\mathscr M).
-\]
-If \(X\in\underline{\operatorname{Lie}}(H/S,\mathscr M)(S)\), the
-equalities (*) hold for every \(f:S'\to S\), because \(f\) factors
-through \(I_S(\mathscr M)\) as
-\[
- f=\rho\circ\varepsilon_{\mathscr M}\circ f,
-\]
-where \(\rho:I_S(\mathscr M)\to S\) is the structural morphism and
-\(\varepsilon_{\mathscr M}:S\to I_S(\mathscr M)\) is the zero section.
-Consequently,
-\[
- \mathfrak n(S)/\mathfrak k(S)
-   \subset(\mathfrak g/\mathfrak k)^K(S),
- \qquad
- \mathfrak z(S)\subset\mathfrak g^K(S).
-\]
+Now every \(u\in K(I_{S'}(\mathscr M))\) can be written uniquely as
+\(Y\cdot k\), where \(k\in K(S')\) and
+\(Y\in\underline{\operatorname{Lie}}(K/S,\mathscr M)(S')\). The expression
+\(X\cdot u\cdot X^{-1}\cdot u^{-1}\) then becomes
+\(XYkX^{-1}k^{-1}Y^{-1}\), which, if
+\(\underline{\operatorname{Lie}}(G/S,\mathscr M)\) is commutative, can be
+written \(X\operatorname{Ad}(k)(X^{-1})\). But the latter lies a priori in
+\(\underline{\operatorname{Lie}}(G/S,\mathscr M)(S')\). The condition on
+\(X\) can therefore be written
+\(X\operatorname{Ad}(k)(X^{-1})\in\underline{\operatorname{Lie}}(K/S,\mathscr M)(S')\)
+(respectively \(=1\)) for every \(k\in K(S')\). This proves (ii). In the
+case \(H=N\), if \(\dot X\) denotes the image of \(X\) in \(F(S)\) (where
+we put
+\(\underline{\operatorname{Lie}}(G/S,\mathscr M)/\underline{\operatorname{Lie}}(K/S,\mathscr M)=F\)),
+the condition can be written \(\operatorname{Ad}(k)(\underline X^{-1})=\underline X^{-1}\),
+where \(\underline X\) is the image of \(X\) in \(F(S')\), which proves (i).
 
-For the reverse inclusions, assume henceforth that
-\(\mathfrak g\) is commutative. Then
-\(\mathfrak g^K\) and \((\mathfrak g/\mathfrak k)^K\) are commutative
-\(S\)-groups. Let \(X\in\mathfrak g(S)\), and write \(\bar X\) for its
-image in \((\mathfrak g/\mathfrak k)(S)\). Suppose that
-\(\bar X\in(\mathfrak g/\mathfrak k)^K(S)\) (respectively,
-\(X\in\mathfrak g^K(S)\)); we show that
-\(X\in\mathfrak n(S)\) (respectively, \(X\in\mathfrak z(S)\)).
+(iii) is then proved immediately. (iv) follows from Lemmas 5.2.1 and
+5.2.2.
 
-Let \(f:S'\to I_S(\mathscr M)\). Consider the cartesian square
-
-\SGAThreeNativeDiagram[0.48\textwidth]
-  {native_diagrams/exp2/exp2_p047_theorem523_cartesian_square.tex}
-  {The cartesian square used in the reverse-inclusion argument.}
-  {fig:sga3-exp2-p047-theorem523-cartesian}
-  {Polo--Gille re-edition, Expos\'e II}
-
-and let \(h\) be the section of \(\rho'\) defined by \(f\). It is
-enough to show that, for every \(v\in K(I_{S'}(\mathscr M))\),
-\begin{equation}
- \left.
- \begin{aligned}
- p^*(X^\alpha)\,v\,p^*(X^{-\alpha})\,v^{-1}
-     &\in K(I_{S'}(\mathscr M)),\\
- \text{respectively}\qquad
- p^*(X)\,v\,p^*(X^{-1})\,v^{-1}&=1.
- \end{aligned}
- \right\}
-\tag{**}\label{sga3:ii:lemma:5-2-3-0:equation:double-star}
-\end{equation}
-Indeed, take \(v=\rho'^*(u)\) and apply \(h^*\) to (**). This gives
-(*), because \(\rho'\circ h=\operatorname{id}_{S'}\) and
-\(p\circ h=f\).
-
-We now prove (**), writing \(X\) for \(p^*(X)\). Every
-\(v\in K(I_{S'}(\mathscr M))\) is uniquely of the form \(Yk\), with
-\(Y\in\underline{\operatorname{Lie}}(K/S,\mathscr M)(S')\) and
-\(k\in K(S')\). The expression
-\(X^\alpha vX^{-\alpha}v^{-1}\) becomes
-\[
- X^\alpha Y\bigl(kX^{-\alpha}k^{-1}\bigr)Y^{-1}
- =X^\alpha\operatorname{Ad}(k)(X^{-\alpha}),
-\]
-because \(\underline{\operatorname{Lie}}(G/S,\mathscr M)\) is
-commutative. This element lies in
-\(\underline{\operatorname{Lie}}(G/S,\mathscr M)(S')\). By
-\SGARefLink{sga3:ii:lemma:5-2-3-0}{Lemma~5.2.3.0}, condition (**) is therefore equivalent, for every
-\(k\in K(S')\), to
-\[
- \begin{cases}
- \operatorname{Ad}(k)(X)=X, & H=Z,\\
- X^\alpha\operatorname{Ad}(k)(X^{-\alpha})
-   \in\underline{\operatorname{Lie}}(K/S,\mathscr M)(S'), & H=N.
- \end{cases}
-\]
-For \(H=Z\), this follows from \(X\in\mathfrak g^K(S)\). For \(H=N\),
-the condition may equally be written
-\begin{equation}
- \operatorname{Ad}(k)(\bar X)=\bar X,
- \qquad
- \operatorname{Ad}(k)(\bar X^{-1})=\bar X^{-1}.
-\tag{*'}\label{sga3:ii:lemma:5-2-3-0:equation:star-prime}
-\end{equation}
-The second equality follows from the first because the action of \(K\)
-on \(\mathfrak g/\mathfrak k\) respects its group structure. Thus (**)
-also follows from
-\(\bar X\in(\mathfrak g/\mathfrak k)^K(S)\), proving (i) and (ii).
-
-For (iii)--(v), put
-\[
- \mathfrak g(\mathscr M)
-   =\underline{\operatorname{Lie}}(G/S,\mathscr M)
-\]
-and define \(\mathfrak k(\mathscr M)\), \(\mathfrak z(\mathscr M)\),
-and \(\mathfrak n(\mathscr M)\) similarly. If \(G/S\) satisfies (E),
-then
-\[
- \mathfrak g(\mathscr M\oplus\mathscr N)
- \simeq\mathfrak g(\mathscr M)\times_S\mathfrak g(\mathscr N),
-\]
-and hence, by \SGARefLink{sga3:ii:lemma:5-2-2:item:i}{Lemma~5.2.2(i)},
-\[
- \mathfrak g(\mathscr M\oplus\mathscr N)^K
- \simeq
- \mathfrak g(\mathscr M)^K\times_S\mathfrak g(\mathscr N)^K.
-\]
-It follows that
-\(\mathfrak z(\mathscr M\oplus\mathscr N)
-\simeq\mathfrak z(\mathscr M)\times_S\mathfrak z(\mathscr N)\), so
-\(Z\) satisfies (E). If \(K/S\) also satisfies (E), then
-\[
- (\mathfrak g/\mathfrak k)(\mathscr M\oplus\mathscr N)
- \simeq
- (\mathfrak g/\mathfrak k)(\mathscr M)
- \times_S(\mathfrak g/\mathfrak k)(\mathscr N),
-\]
-\[
- (\mathfrak g/\mathfrak k)^K(\mathscr M\oplus\mathscr N)
- \simeq
- (\mathfrak g/\mathfrak k)(\mathscr M)^K
- \times_S(\mathfrak g/\mathfrak k)(\mathscr N)^K,
-\]
-and we have the following commutative diagram.
-
-\SGAThreeNativeDiagram[0.96\textwidth]
-  {native_diagrams/exp2/exp2_p048_theorem523_exact_diagram.tex}
-  {The exact-sequence comparison proving condition (E) for \(N\).}
-  {fig:sga3-exp2-p048-theorem523-exact}
-  {LNM 151, pp.~78--79}
-
-It follows that
-\[
- \mathfrak n(\mathscr M\oplus\mathscr N)
- \simeq\mathfrak n(\mathscr M)\times_S\mathfrak n(\mathscr N),
-\]
-so \(N\) satisfies (E).
-
-Now write
-\(\mathfrak g=\mathfrak g(\mathscr O_S)
-=\underline{\operatorname{Lie}}(G/S)\), and similarly
-\(\mathfrak k,\mathfrak z,\mathfrak n\). If \(G\) is good, then
-\(\mathfrak g\) is a good \(\mathbf O_S\)-module, and \SGARefLink{sga3:ii:lemma:5-2-2:item:ii}{Lemma~5.2.2(ii)}
-shows that \(\mathfrak z\simeq\mathfrak g^K\) is good; since \(Z\)
-satisfies (E), \(Z\) is good. If \(K\) is also good, then
-\(\mathfrak k\) is good, and Lemmas~5.2.1(iv) and 5.2.2(ii) show that
-\(\mathfrak g/\mathfrak k\) and
-\((\mathfrak g/\mathfrak k)^K\) are good. From the exact sequence
-\[
- 0\longrightarrow\mathfrak k\longrightarrow\mathfrak n
- \longrightarrow(\mathfrak g/\mathfrak k)^K\longrightarrow0
-\]
-and Lemma~5.2.1(iv), \(\mathfrak n\) is good. Finally, if \(G\) is
-very good, so that \([x,x]=0\) identically for \(x\in\mathfrak g\),
-then \(Z\) and \(N\) are plainly very good. This proves (iii)--(v).
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~II; our
+formulation). The re-edition details this proof. (a) For a sub-\(S\)-group
+\(H\) of \(G\), the intersection of \(T_{H/S}(\mathscr M)\) and
+\(\underline{\operatorname{Lie}}(G/S,\mathscr M)\) in \(T_{G/S}(\mathscr M)\)
+is \(\underline{\operatorname{Lie}}(H/S,\mathscr M)\), both being given by
+the restriction along the zero section; this is what allows one to replace
+\(K(I_{S'}(\mathscr M))\) by \(\underline{\operatorname{Lie}}(K/S,\mathscr M)(S')\)
+in the condition on \(X\operatorname{Ad}(k)(X^{-1})\). (b) Since \(N\)
+consists of the \(g\) with \(gKg^{-1}=K\), the condition must also be
+checked for \(X^{-1}\); it then reads
+\(\operatorname{Ad}(k)(\underline X)=\underline X\), which follows from
+the condition for \(X\), since \(K\) acts on \(F\) by group
+automorphisms. (c) For (iii): if \(G\) satisfies (E), Lemma 5.2.2 and (ii)
+give \(\underline{\operatorname{Lie}}(Z/S,\mathscr M\oplus\mathscr N)\simeq
+\underline{\operatorname{Lie}}(Z/S,\mathscr M)\times_S
+\underline{\operatorname{Lie}}(Z/S,\mathscr N)\); if \(K\) satisfies (E) as
+well, the same holds for the \(K\)-invariants of
+\(\underline{\operatorname{Lie}}(G/S,-)/\underline{\operatorname{Lie}}(K/S,-)\),
+and the exact sequences
+\(1\to\underline{\operatorname{Lie}}(K/S,\mathscr M)\to
+\underline{\operatorname{Lie}}(N/S,\mathscr M)\to
+[\underline{\operatorname{Lie}}(G/S,\mathscr M)/\underline{\operatorname{Lie}}(K/S,\mathscr M)]^K\to1\)
+given by (i) show it for \(N\); in both cases one concludes by Remark~1)
+of 4.1. (d) For (iv): \(\underline{\operatorname{Lie}}(Z/S)=
+\underline{\operatorname{Lie}}(G/S)^K\) is good by Lemma 5.2.2; the
+quotient \(\underline{\operatorname{Lie}}(G/S)/\underline{\operatorname{Lie}}(K/S)\),
+its \(K\)-invariants and then \(\underline{\operatorname{Lie}}(N/S)\) are
+good by Lemmas 5.2.1 and 5.2.2; and the identity \([x,x]=0\) passes to the
+submodules \(\underline{\operatorname{Lie}}(Z/S)\) and
+\(\underline{\operatorname{Lie}}(N/S)\) of
+\(\underline{\operatorname{Lie}}(G/S)\).
+\par\medskip
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:ii:corollary:5-2-3-1}\textbf{Corollary 5.2.3.1.}
-\textit{If the group law of
-\(\underline{\operatorname{Lie}}(G/S)\) is commutative, then}
+\noindent\SGAInlineRefTarget{sga3:ii:corollary:5-2-3-1}\textbf{Corollary 1.}
+\textit{If the group law of \(\underline{\operatorname{Lie}}(G/S)\) is
+commutative, one has}
 \[
  \underline{\operatorname{Lie}}
    \bigl(\underline{\operatorname{Centr}}(G)/S\bigr)
@@ -482,15 +293,12 @@ then \(Z\) and \(N\) are plainly very good. This proves (iii)--(v).
 \]
 
 \medskip
-\noindent\SGAInlineRefTarget{sga3:ii:corollary:5-2-3-2}\textbf{Corollary 5.2.3.2.}
-\textit{If the group law of
-\(\underline{\operatorname{Lie}}(G/S)\) is commutative and \(K\) is a
-normal subgroup of \(G\), then}
+\noindent\SGAInlineRefTarget{sga3:ii:corollary:5-2-3-2}\textbf{Corollary 2.}
+\textit{If the group law of \(\underline{\operatorname{Lie}}(G/S)\) is
+commutative and \(K\) is a normal subgroup of \(G\), then}
 \[
- \left(
- \underline{\operatorname{Lie}}(G/S)/
- \underline{\operatorname{Lie}}(K/S)
- \right)^K
+ \bigl[\underline{\operatorname{Lie}}(G/S)/
+ \underline{\operatorname{Lie}}(K/S)\bigr]^K
  =
  \underline{\operatorname{Lie}}(G/S)/
  \underline{\operatorname{Lie}}(K/S).
@@ -504,7 +312,7 @@ Let \(G\) be a good \(S\)-group acting linearly on a good
  \rho:G\longrightarrow
  \underline{\operatorname{Aut}}_{\mathbf O_S\text{-}\mathrm{mod}}(F).
 \]
-In \SGARefLink{sga3:ii:subsection:4-7-1}{4.7.1} and \SGARefLink{sga3:ii:corollary:4-8-2}{4.8.2} we defined the corresponding linear representation
+We have defined (\SGARefLink{sga3:ii:corollary:4-8-2}{4.8, Corollary~2}) a corresponding linear representation
 \[
  \rho':
  \underline{\operatorname{Lie}}(G/S)
@@ -517,9 +325,8 @@ The sub-\(S\)-groups
 \(E\) of \(F\), and in particular for every
 \(\mathbf O_S\)-submodule \(E\).
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:ii:definition:5-3-0}\textbf{Definition 5.3.0.}
-For every \(S'\to S\), put
+\SGARefTarget{sga3:ii:definition:5-3-0}%
+One sets analogously
 \[
 \begin{split}
  \underline{\operatorname{Norm}}_{\underline{\operatorname{Lie}}(G/S)}
@@ -532,10 +339,10 @@ For every \(S'\to S\), put
       \mid \rho'(X)E_{S'}=0\}.
 \end{split}
 \]
-This construction works for every linear representation of an
-\(\mathbf O_S\)-Lie algebra in the sense of \SGARefLink{sga3:ii:scholium:4-9}{4.9}, and the two
-subobjects obtained are \(\mathbf O_S\)-submodules stable under the
-bracket.
+(Let us note that this construction can be made for every linear
+representation of an \(\mathbf O_S\)-``Lie algebra'', and that the two
+subobjects constructed are sub-\(\mathbf O_S\)-modules stable under the
+bracket.)
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:ii:theorem:5-3-1}\textbf{Theorem 5.3.1.}
@@ -550,86 +357,110 @@ bracket.
    \bigl(\underline{\operatorname{Centr}}_G(E)/S\bigr)
  =
  \underline{\operatorname{Centr}}_
-   {\underline{\operatorname{Lie}}(G/S)}(E),
+   {\underline{\operatorname{Lie}}(G/S)}(E)
 \]
-\textit{and \(\underline{\operatorname{Centr}}_G(E)\) is a good
-\(S\)-group; it is very good if \(G\) is very good.}
-\item \textit{Suppose that \(E\) is a good \(\mathbf O_S\)-module.
-Then}
+\textit{and, if \(E\) is a good \(\mathbf O_S\)-module,}
 \[
  \underline{\operatorname{Lie}}
    \bigl(\underline{\operatorname{Norm}}_G(E)/S\bigr)
  =
  \underline{\operatorname{Norm}}_
-   {\underline{\operatorname{Lie}}(G/S)}(E),
+   {\underline{\operatorname{Lie}}(G/S)}(E).
 \]
-\textit{and \(\underline{\operatorname{Norm}}_G(E)\) is a good
-\(S\)-group; it is very good if \(G\) is very good.}
+\item \textit{\(\underline{\operatorname{Centr}}_G(E)\) is good; if \(E\)
+is good, then \(\underline{\operatorname{Norm}}_G(E)\) is good. If
+moreover \(G\) is very good, then \(\underline{\operatorname{Centr}}_G(E)\)
+and \(\underline{\operatorname{Norm}}_G(E)\) are very good.}
 \end{enumerate}
-The proof is left to the reader.
+The proof is easy and is left to the reader.\footnote{Translator's note: the
+1970 text states the equality for the normalizer for every submodule
+\(E\); the Gille--Polo re-edition (2011), Expos\'e~II, adds the hypothesis
+that \(E\) be good and gives a counterexample, which we have checked: for
+\(G=\operatorname{GL}_{2,S}\) acting on \(F=\mathbf O_S^2\) and
+\(E(S')=\{(x_1,x_2)\mid x_2\text{ nilpotent}\}\),
+\(\underline{\operatorname{Norm}}_G(E)\) consists of the matrices whose
+lower left entry is nilpotent, so its Lie algebra is all of
+\(\underline{\operatorname{Lie}}(G/S)\) (an entry \(tc\) with \(t^2=0\) is
+nilpotent), whereas \(\underline{\operatorname{Norm}}_{\underline{\operatorname{Lie}}(G/S)}(E)\)
+requires that entry to be nilpotent. This \(E\) is not good:
+\(E(I_{S'})\) contains \(tF(S')\).}
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:ii:paragraph:5-3-2}\textbf{5.3.2.}
-Let \(G\) be a good \(S\)-group. The preceding results apply in
-particular to the adjoint representation. Let \(E\) be a good
-\(\mathbf O_S\)-submodule of
-\(\underline{\operatorname{Lie}}(G/S)\). It has a centralizer and a
-normalizer in \(G\), and by \SGARefLink{sga3:ii:theorem:5-3-1}{5.3.1} their Lie algebras are the usual
-centralizer and normalizer of \(E\), computed using the bracket:
+This applies in particular to the case where one takes for \(\rho\) the
+adjoint representation of \(G\). To every submodule \(E\) of
+\(\underline{\operatorname{Lie}}(G/S)\) one thus associates two subgroups
+of \(G\), its centralizer and its normalizer, whose Lie algebras are
+respectively the centralizer and (if \(E\) is good) the normalizer of
+\(E\) in \(\underline{\operatorname{Lie}}(G/S)\), computed as usual by
+means of the bracket:\footnote{Translator's note: the 1970 text has no
+hypothesis on \(E\) here; the Gille--Polo re-edition (2011), Expos\'e~II,
+requires \(E\) to be good, as the normalizer equality of 5.3.1 does. In
+the semidirect product \(F\cdot\operatorname{GL}_{2,S}\) of the example in
+our note to 5.3.1, the module \(E\) of that note, viewed in the Lie algebra,
+gives a counterexample of the same kind; it is \(\underline{\operatorname{Lie}}(K/S)\)
+for the subgroup \(K\) of \(F\) formed by the pairs \((x_1,x_2)\) with
+\(x_2\in\operatorname{Nil}(S')^2\).}
 \[
 \begin{split}
- \underline{\operatorname{Centr}}_
-   {\underline{\operatorname{Lie}}(G/S)}(E)(S')
- &=\{X\in\underline{\operatorname{Lie}}(G/S)(S')
-       \mid[X,E_{S'}]=0\},\\
  \underline{\operatorname{Norm}}_
    {\underline{\operatorname{Lie}}(G/S)}(E)(S')
  &=\{X\in\underline{\operatorname{Lie}}(G/S)(S')
-       \mid[X,E_{S'}]\subset E_{S'}\}.
+       \mid[X,E_{S'}]\subset E_{S'}\},\\
+ \underline{\operatorname{Centr}}_
+   {\underline{\operatorname{Lie}}(G/S)}(E)(S')
+ &=\{X\in\underline{\operatorname{Lie}}(G/S)(S')
+       \mid[X,E_{S'}]=0\}.
 \end{split}
 \]
 
 \medskip
 \noindent\SGAInlineRefTarget{sga3:ii:paragraph:5-3-3}\textbf{5.3.3.}
-Let \(K\) be a sub-\(S\)-group of \(G\). Then
-\(\underline{\operatorname{Lie}}(K/S)\) is an
-\(\mathbf O_S\)-submodule of
-\(\underline{\operatorname{Lie}}(G/S)\). Suppose that it is a good
-\(\mathbf O_S\)-module, as happens when \(K\) is a good \(S\)-group.
-Plainly,
+Let \(K\) then be a sub-\(S\)-group of \(G\). Then
+\(\underline{\operatorname{Lie}}(K/S)\) is a sub-\(\mathbf O_S\)-module of
+\(\underline{\operatorname{Lie}}(G/S)\), and one has obviously
 \[
+ \underline{\operatorname{Norm}}_G(K)
+ \subset
+ \underline{\operatorname{Norm}}_G
+   \bigl(\underline{\operatorname{Lie}}(K/S)\bigr),
+ \qquad
  \underline{\operatorname{Centr}}_G(K)
  \subset
  \underline{\operatorname{Centr}}_G
    \bigl(\underline{\operatorname{Lie}}(K/S)\bigr),
 \]
-\[
- \underline{\operatorname{Norm}}_G(K)
- \subset
- \underline{\operatorname{Norm}}_G
-   \bigl(\underline{\operatorname{Lie}}(K/S)\bigr).
-\]
-Hence, by \SGARefLink{sga3:ii:theorem:5-3-1}{5.3.1},
-\[
- \underline{\operatorname{Lie}}
-   \bigl(\underline{\operatorname{Centr}}_G(K)/S\bigr)
- \subset
- \underline{\operatorname{Centr}}_
-   {\underline{\operatorname{Lie}}(G/S)}
-   \bigl(\underline{\operatorname{Lie}}(K/S)\bigr),
-\]
+whence, if \(\underline{\operatorname{Lie}}(K/S)\) is good (for instance if
+\(K\) is good),
 \[
  \underline{\operatorname{Lie}}
    \bigl(\underline{\operatorname{Norm}}_G(K)/S\bigr)
  \subset
  \underline{\operatorname{Norm}}_
    {\underline{\operatorname{Lie}}(G/S)}
-   \bigl(\underline{\operatorname{Lie}}(K/S)\bigr).
+   \bigl(\underline{\operatorname{Lie}}(K/S)\bigr),
 \]
-None of these four inclusions is an equality in general; many examples
-will appear later. In particular, if \(K\) is a normal subgroup of
-\(G\), then \(\underline{\operatorname{Lie}}(K/S)\) is an ideal of
-\(\underline{\operatorname{Lie}}(G/S)\).
+and in any case
+\[
+ \underline{\operatorname{Lie}}
+   \bigl(\underline{\operatorname{Centr}}_G(K)/S\bigr)
+ \subset
+ \underline{\operatorname{Centr}}_
+   {\underline{\operatorname{Lie}}(G/S)}
+   \bigl(\underline{\operatorname{Lie}}(K/S)\bigr);
+\]
+but none of these four inclusions is a priori an equality; we shall see
+many examples of this later.
+
+It follows in particular from these inclusions that if \(K\) is a normal
+subgroup of \(G\) (and \(\underline{\operatorname{Lie}}(K/S)\) is good),
+then \(\underline{\operatorname{Lie}}(K/S)\) is an ideal of
+\(\underline{\operatorname{Lie}}(G/S)\).\footnote{Translator's note: the 1970
+text states these inclusions, and the consequence for normal subgroups,
+without hypothesis. As the normalizer inclusion is deduced from 5.3.1,
+whose normalizer part holds for good modules, the Gille--Polo re-edition
+(2011), Expos\'e~II, assumes \(\underline{\operatorname{Lie}}(K/S)\) to be
+good, which holds when \(K\) is good.}
 
 \section*{\SGAInlineRefTarget{sga3:ii:section:6}6. Miscellaneous remarks}
 \addcontentsline{toc}{section}{6. Miscellaneous remarks}
@@ -645,101 +476,64 @@ good, meaning that the \(\mathbf O_X\)-module \(T_{X/S}\) is good. If
 \subsection*{\SGAInlineRefTarget{sga3:ii:subsection:6-2}6.2.}
 There exist functors with infinitesimal endomorphisms that are not
 automorphisms and hence, a fortiori, do not satisfy condition (E).
-\footnote{Editor's note: The original has been expanded here. In
-particular, O. Gabber pointed out the correct definition of the free
-abelian monoid on a pointed set.}
-For a pointed set \((E,x_0)\), let \(M_A(E)\) be the free abelian
-monoid generated by \(E\), and let \(M_{A,P}(E,x_0)\) be the quotient
-of \(M_A(E)\) by the equivalence relation generated by
-\(m\sim x_0+m\). The assignment
-\[
- (E,x_0)\longmapsto M_{A,P}(E,x_0)
-\]
-is left adjoint to the forgetful functor from abelian monoids to
-pointed sets; \(M_{A,P}(E,x_0)\) is the free abelian monoid on the
-pointed set \((E,x_0)\).
-
-Now let \(X\) be the functor assigning to every scheme \(S\) the free
-abelian monoid on \(\mathbf O(S)\), pointed by zero. Every morphism
-\[
- f:S\longrightarrow I_{\mathbb Z}
-   =\operatorname{Spec}(\mathbb Z[\varepsilon])
-\]
-corresponds to a square-zero element \(u_f\in\mathbf O(S)\), and hence
-defines an endomorphism of \(X(S)\) by
-\(x\mapsto x+u_f\), where the sum is taken in
-\(M_{A,P}(\mathbf O(S),0)\). Thus we obtain an endomorphism
-\(\phi\) of
-\[
- X_{I_{\mathbb Z}}=X\times_{\mathbb Z}I_{\mathbb Z}
-\]
-defined, for \(f\in I_{\mathbb Z}(S)\) and \(x\in X(S)\), by
-\[
- \phi((x,f))=(x+u_f,f).
-\]
-If \(f_0:S\to I_{\mathbb Z}\) is the composite of the structural
-morphism \(S\to\operatorname{Spec}(\mathbb Z)\) and the zero section,
-then \(u_{f_0}=0\), so
-\(\phi((x,f_0))=(x,f_0)\). Thus \(\phi\) induces the identity on
-\(X\): it is an infinitesimal endomorphism of \(X\) which is plainly
-not an automorphism.
+Take, for example, for \(X(S)\) the free abelian monoid on the set
+\(\mathbf O(S)\) pointed by \(0\), that is, the free abelian monoid
+generated by the elements of \(\mathbf O(S)\) modulo the relations
+\([0]+m=m\).\footnote{Translator's note: the 1970 text takes for \(X(S)\)
+the free abelian monoid generated by the elements of \(\mathbf O(S)\); in
+it the element \(0\) of \(\mathbf O(S)\) is a generator, not the neutral
+element, so that \(x\mapsto x+0\) is not the identity and the argument
+fails. The Gille--Polo re-edition (2011), Expos\'e~II, following O.~Gabber,
+uses the free abelian monoid on the pointed set \((\mathbf O(S),0)\), the
+left adjoint of the forgetful functor from abelian monoids to pointed sets;
+with it the argument works as written, the endomorphism of
+\(X_{I_{\mathbb Z}}=X\times I_{\mathbb Z}\) being \((x,f)\mapsto(x+u_f,f)\),
+where \(u_f\) is the element of square zero defined by \(f\).} Each morphism \(S\to I_{\mathbb Z}\) defines an element of
+square zero of \(\mathbf O(S)\), say \(u\), hence an endomorphism of
+\(X(S)\) by \(x\mapsto x+u\) (sum in the free monoid). It is immediate that
+one has thus constructed an endomorphism of \(X_{I_{\mathbb Z}}\). If
+\(S\to I_{\mathbb Z}\) factors through the zero section of
+\(I_{\mathbb Z}\), then this endomorphism is the identity. It is therefore
+an infinitesimal endomorphism of \(X\) which is obviously not an
+automorphism.
 
 \subsection*{\SGAInlineRefTarget{sga3:ii:subsection:6-3}6.3.}
-There exist modules which are not good. First, the preceding
-counterexample can be modified slightly.\footnote{Editor's note: The
-following observation has been added.} Let \(F(S)\) be the free
-\(\mathbf O(S)\)-module with basis the elements of \(\mathbf O(S)\).
-Then \(F\) does not satisfy (E) relative to
-\(\operatorname{Spec}(\mathbb Z)\). Moreover, let \(G\) be the
-\(\mathbb Z\)-group defined by
-\[
- G(S)=\operatorname{GL}_n(R(S)),\qquad n\geq2,
-\]
-where \(R(S)\) is the \(\mathbf O(S)\)-algebra of the abelian group
-\(\mathbf O(S)\). Then the \(\mathbb Z\)-group
-\(\underline{\operatorname{Lie}}(G/\mathbb Z)\) is not commutative.
-
-There are also the following counterexamples.\footnote{Editor's note:
-Example (a) has been expanded and example (b) has been added.} Let
-\(S=\operatorname{Spec}(k)\), where \(k\) is a field of characteristic
-\(p>0\).
-
-\medskip
-\noindent\textit{(a)}
-Let \(F\) be the \(\mathbf O_S\)-module assigning to every \(S\)-scheme
-\(T\) the group
-\[
- F(T)=\Gamma(T,\mathscr O_T),
-\]
-with its \(\mathbf O(T)\)-module structure defined by
-\(r\cdot f=r^pf\). As an \(S\)-functor of groups, \(F\) is isomorphic
-to \(\mathbb G_{a,S}\). Thus \(F/S\) satisfies (E), and
-\[
- \underline{\operatorname{Lie}}(F/S)
- \simeq
- \underline{\operatorname{Lie}}(\mathbb G_{a,S}/S)
- \simeq\mathbf O_S.
-\]
-For each \(T\to S\), the canonical morphism
-\(F\to\underline{\operatorname{Lie}}(F/S)\) is the identity map
-\(F(T)\to\mathbf O(T)\). It respects the abelian-group structure but
-not the module structure, so \(F\) is not good (4.4.1).
-
-\medskip
-\noindent\textit{(b)}
-Let \(\alpha_{p,k}\) be the \(k\)-functor of groups defined by
-\[
- \alpha_{p,k}(T)=\{x\in\mathbf O(T)\mid x^p=0\}.
-\]
-It is represented by
-\(\operatorname{Spec}(k[X]/(X^p))\), hence is a very good \(S\)-group.
-It also carries an \(\mathbf O_S\)-module structure, but is not a good
-\(\mathbf O_S\)-module, because the canonical morphism
-\[
- \alpha_{p,k}\longrightarrow
- \underline{\operatorname{Lie}}(\alpha_{p,k}/k)=\mathbb G_{a,k}
-\]
-is not bijective.
+There exist modules which are not good. One can, for example, modify
+the preceding counterexample slightly,\footnote{Translator's note: the
+Gille--Polo re-edition (2011), Expos\'e~II, does so: the functor \(F\),
+with \(F(S)\) the free \(\mathbf O(S)\)-module on the set \(\mathbf O(S)\),
+does not satisfy (E) over \(\operatorname{Spec}(\mathbb Z)\); and for
+\(G(S)=\operatorname{GL}_n(R(S))\), \(n\geq2\), where \(R(S)\) is the
+algebra over \(\mathbf O(S)\) of the group \(\mathbf O(S)\), the group
+\(\underline{\operatorname{Lie}}(G/\mathbb Z)\) is not commutative. In our
+check: over \(\mathbb Z[t,t']\) with \(t^2=t'^2=0\), the elements
+\([t]+[t']\) and \([t+t']+[0]\) of \(F\) are distinct but have the same
+images for \(t'=0\) and for \(t=0\); and \(x=[t]-[0]\) lies in the kernel
+of \(R(\mathbb Z[t])\to R(\mathbb Z)\), with
+\(x^2=[2t]-2[t]+[0]\neq0\), so that \(1+xe_{12}\) and \(1+xe_{21}\) do not
+commute.} but one can also give one as
+follows: let \(S=\operatorname{Spec}(k)\), \(k\) a field of
+characteristic \(p\), and let \(E\) be a finite-dimensional vector space
+over \(k\). Consider the vector bundle \(\mathbf W(E)\) and endow it with
+the structure of \(\mathbf O(S)\)-module obtained by letting the scalars
+operate through the \(p\)-th power. Denote by \(F\) the
+\(\mathbf O(S)\)-module obtained. It is representable, hence satisfies
+(E). Its Lie algebra is obviously \(\mathbf W(E)\), and the canonical
+morphism \(\underline{\operatorname{Lie}}(F/S)\to F\) respects the
+abelian-group structure (it could hardly do otherwise) but not the module
+structure. The \(\mathbf O_S\)-module \(F\) is therefore not good,
+although it is representable.\footnote{Translator's note: the Gille--Polo
+re-edition (2011), Expos\'e~II, writes this example out for \(E\) of
+dimension~1 (\(F=\mathbf O_S\) with scalars acting through \(p\)-th powers,
+isomorphic to \(\mathbb G_{a,S}\) as a group, so that \(F\) satisfies (E)
+and \(\underline{\operatorname{Lie}}(F/S)\simeq\mathbf O_S\); on the
+morphism \(d\) for this \(F\), see our note to 4.3), and adds a second
+example: \(\alpha_p\), with \(\alpha_p(T)=\{x\in\mathbf O(T)\mid x^p=0\}\),
+represented by \(\operatorname{Spec}k[X]/(X^p)\), is a very good
+\(S\)-group and an \(\mathbf O_S\)-module, but not a good one, since
+\(\underline{\operatorname{Lie}}(\alpha_p/k)=\mathbb G_{a,k}\) and
+\(d\colon\alpha_p\to\mathbb G_{a,k}\) is the inclusion, which is not
+surjective.}
 
 \subsection*{\SGAInlineRefTarget{sga3:ii:subsection:6-4}6.4.}
 For a group-valued functor \(G\) over \(S\), the definitions give
@@ -748,121 +542,42 @@ For a group-valued functor \(G\) over \(S\), the definitions give
  \Longleftarrow(G\text{ is good})
  \Longleftarrow(G\text{ is very good}).
 \]
-It would be interesting to prove or disprove the reverse implications.
+It would be interesting to prove or disprove the reverse
+implications.\footnote{Translator's note: the Gille--Polo re-edition (2011),
+Expos\'e~II, recalls that \(G\) is very good if it is representable (4.11),
+and refers for criteria of representability to H.~Matsumura and F.~Oort,
+\emph{Representability of group functors, and automorphisms of algebraic
+schemes}, Invent. Math. \textbf{4} (1967), 1--25, and, for the
+automorphisms of an affine algebraic group over an algebraically closed
+field of characteristic~\(0\), to G.~Hochschild and G.~D.~Mostow,
+\emph{Automorphisms of affine algebraic groups}, J. Algebra \textbf{13}
+(1969), 535--543.}
 
-\subsection*{\SGAInlineRefTarget{sga3:ii:subsection:6-5}6.5.}
-Let \(\operatorname{Nil}\) be the \(\mathbb Z\)-functor of groups
-defined by
-\[
- \operatorname{Nil}(S)
- =\{x\in\mathbf O(S)\mid
-       \text{there exists }n\in\mathbb N\text{ with }x^n=0\}.
-\]
-\footnote{Editor's note: This paragraph has been added.}
-The functor \(\operatorname{Nil}\) is very good but not representable.
-Let \(\operatorname{Nil}^2\), \(\mathbf O_{\mathrm{red}}\), and \(F\)
-be the \(\mathbb Z\)-functors of groups assigning to \(S\),
-respectively, the ideal \(\operatorname{Nil}(S)^2\) and the groups
-\[
- \mathbf O_{\mathrm{red}}(S)
-   =\mathbf O(S)/\operatorname{Nil}(S),
- \qquad
- F(S)=\mathbf O(S)/\operatorname{Nil}(S)^2.
-\]
-It is easy to see that
-\[
- \underline{\operatorname{Lie}}
-   (\mathbf O_{\mathrm{red}}/\mathbb Z)=0,
-\]
-so the \(\mathbf O_{\mathbb Z}\)-module
-\(\mathbf O_{\mathrm{red}}\) is not good, although it is a good
-\(\mathbb Z\)-group. If \(\mathscr M,\mathscr N\) are free
-\(\mathbb Z\)-modules of finite rank, then
-\[
-\begin{split}
- \operatorname{Nil}^2(I_S(\mathscr M\oplus\mathscr N))
- \simeq{}&
- \operatorname{Nil}^2(S)
- \oplus\operatorname{Nil}(S)\otimes_{\mathbb Z}\mathscr M\\
- &\oplus\operatorname{Nil}(S)\otimes_{\mathbb Z}\mathscr N,
-\end{split}
-\]
-and hence
-\[
-\begin{split}
- F(I_S(\mathscr M\oplus\mathscr N))
- \simeq{}&F(S)
- \oplus\mathbf O_{\mathrm{red}}(S)\otimes_{\mathbb Z}\mathscr M\\
- &\oplus\mathbf O_{\mathrm{red}}(S)\otimes_{\mathbb Z}\mathscr N.
-\end{split}
-\]
-Thus \(F\) satisfies condition (E), while
-\[
- \underline{\operatorname{Lie}}(F/\mathbb Z)
-   =\mathbf O_{\mathrm{red}}.
-\]
-Since \(\mathbf O_{\mathrm{red}}\) is not a good
-\(\mathbf O_{\mathbb Z}\)-module, \(F\) is a \(\mathbb Z\)-group
-which satisfies (E) but is not good.
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~II; our
+formulation). The re-edition adds an example of a \(\mathbb Z\)-group that
+satisfies (E) but is not good. Let \(\operatorname{Nil}(S)\) be the ideal
+of nilpotent elements of \(\mathbf O(S)\); the functor \(\operatorname{Nil}\)
+is very good (it satisfies (E), and
+\(\underline{\operatorname{Lie}}(\operatorname{Nil}/\mathbb Z)=\mathbf O\),
+since \(a+\varepsilon b\) is nilpotent exactly when \(a\) is) but not
+representable. Put \(\mathbf O_{\mathrm{red}}(S)=\mathbf O(S)/\operatorname{Nil}(S)\)
+and \(F(S)=\mathbf O(S)/\operatorname{Nil}(S)^2\). Then
+\(\mathbf O_{\mathrm{red}}(I_S(\mathscr M))=\mathbf O_{\mathrm{red}}(S)\), so
+\(\underline{\operatorname{Lie}}(\mathbf O_{\mathrm{red}}/\mathbb Z)=0\): the
+\(\mathbf O_{\mathbb Z}\)-module \(\mathbf O_{\mathrm{red}}\) is not good,
+although it is a good \(\mathbb Z\)-group. For free \(\mathbb Z\)-modules
+\(\mathscr M,\mathscr N\) of finite rank, the nilpotent ideal of
+\(\mathbf O(I_S(\mathscr M\oplus\mathscr N))\) is
+\(\operatorname{Nil}(S)\oplus\mathscr M_S\oplus\mathscr N_S\), whose square
+is \(\operatorname{Nil}(S)^2\oplus\operatorname{Nil}(S)\mathscr M_S\oplus
+\operatorname{Nil}(S)\mathscr N_S\); hence
+\(F(I_S(\mathscr M\oplus\mathscr N))\simeq F(S)\oplus
+\mathbf O_{\mathrm{red}}(S)\otimes\mathscr M\oplus
+\mathbf O_{\mathrm{red}}(S)\otimes\mathscr N\). So \(F\) satisfies (E) and
+\(\underline{\operatorname{Lie}}(F/\mathbb Z)=\mathbf O_{\mathrm{red}}\),
+which is not a good module: \(F\) satisfies (E) without being good, which
+answers the first question of 6.4.
+\par\medskip
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:ii:paragraph:6-5-1}\textbf{6.5.1.}
-We now give the counterexamples announced in \SGARefLink{sga3:ii:theorem:5-3-1}{5.3.1}--\SGARefLink{sga3:ii:paragraph:5-3-3}{5.3.3}. Let \(S\)
-be a scheme, let \(F=\mathbf O_S^{\oplus2}\) with the natural action
-of the good \(S\)-group \(G=\operatorname{GL}_{2,S}\), and let \(E\)
-be the \(\mathbf O_S\)-submodule of \(F\) formed by the pairs
-\((x_1,x_2)\) for which \(x_2\) is nilpotent. Put
-\[
- N=\underline{\operatorname{Norm}}_G(E).
-\]
-Then
-\[
- \underline{\operatorname{Lie}}(N/S)
-   =\underline{\operatorname{Lie}}(G/S),
-\]
-whereas, for every \(S'\to S\),
-\[
- \underline{\operatorname{Norm}}_
-   {\underline{\operatorname{Lie}}(G/S)}(E)(S')
- =
- \left\{
- \begin{pmatrix}a&b\\x&c\end{pmatrix}
- \,\middle|\,
- a,b,c,x\in\mathbf O(S'),\ x\text{ nilpotent}
- \right\}.
-\]
-Consequently,
-\[
- \underline{\operatorname{Lie}}
-   \bigl(\underline{\operatorname{Norm}}_G(E)/S\bigr)
- \neq
- \underline{\operatorname{Norm}}_
-   {\underline{\operatorname{Lie}}(G/S)}(E).
-\]
-
-Taking the semidirect product \(G_1=F\rtimes G\) gives an analogous
-counterexample in which \(E\) is an \(\mathbf O_S\)-submodule of
-\(\underline{\operatorname{Lie}}(G_1/S)\). Moreover, with the notation
-above,
-\[
- E=\underline{\operatorname{Lie}}(K/S),
-\]
-where \(K\) is the subgroup \(\mathbf O_S\oplus\operatorname{Nil}^2\)
-of \(F\); that is, \(K(S')\) consists of the pairs \((x_1,x_2)\) with
-\(x_2\in\operatorname{Nil}(S')^2\).
-
-\section*{Bibliography}
-\addcontentsline{toc}{section}{Bibliography}
-\footnote{Editor's note: Additional references cited in this expos\'e.}
-
-\begin{description}
-\item[{[DG70]}] M. Demazure and P. Gabriel,
-  \emph{Groupes Alg\'ebriques}, Masson \& North-Holland, 1970.
-\item[{[HM69]}] G. Hochschild and G. D. Mostow,
-  \emph{Automorphisms of affine algebraic groups},
-  \emph{J. Algebra} \textbf{13} (1969), 535--543.
-\item[{[MO67]}] H. Matsumura and F. Oort,
-  \emph{Representability of group functors and automorphisms of
-  algebraic schemes}, \emph{Invent. Math.} \textbf{4} (1967), 1--25.
-\end{description}
 

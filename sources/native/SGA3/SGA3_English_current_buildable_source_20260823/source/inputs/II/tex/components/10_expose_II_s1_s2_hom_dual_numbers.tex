@@ -11,10 +11,10 @@
 We propose in this expos\'e to construct, in the theory of schemes, the
 analogues of the tangent bundles and Lie algebras of classical theory. It
 will, however, be useful not to restrict ourselves to schemes proper, but
-also to consider certain functors on the category of schemes that are not
+to consider the functors on the category of schemes that are not
 necessarily representable (for example, the functors
 \(\underline{\operatorname{Hom}}\), \(\underline{\operatorname{Norm}}\),
-and so forth). As announced in the preceding expos\'e (cf. \SGARefLink{sga3:i:subsection:1-1}{I~1.1}), we shall
+and so forth). As announced in the preceding expos\'e, \SGARefLink{sga3:i:subsection:1-1}{I~1.1}, we shall
 identify a scheme with its associated functor.
 
 On the other hand, the constructions presented below go beyond the setting
@@ -49,16 +49,14 @@ fact an object of \(\mathscr C\), with \(X\) and \(Y\) over \(Z\), and
   {fig:exp2-xy-over-zs}
   {LNM 151, p.~44}
 
-\SGAInlineRefTarget{sga3:ii:definition:1-1}\subsection*{\SGARefLink{sga3:ii:definition:1-1}{Definition 1.1}.}
-We define an object of \(\widehat{\mathscr C}_{/S}\), denoted
+\SGARefTarget{sga3:ii:definition:1-1}%
+Let us then define an object of \(\widehat{\mathscr C}_{/S}\), denoted
 \(\underline{\operatorname{Hom}}_{Z/S}(X,Y)\), by
-\begin{equation}
+\[
   \underline{\operatorname{Hom}}_{Z/S}(X,Y)(S')
-  =\operatorname{Hom}_{Z_{S'}}(X_{S'},Y_{S'})
-  =\operatorname{Hom}_{Z}(X\times_S S',Y),
-  \tag{1}\label{sga3:ii:section:1:equation:1}
-\end{equation}
-for every object \(S'\) of \(\mathscr C_{/S}\). One sees at once that
+  =\operatorname{Hom}_{Z_{S'}}(X_{S'},Y_{S'}).
+\]
+One sees at once that
 \(\underline{\operatorname{Hom}}_{Z/S}(X,Y)\) is simply the subobject of
 \(\underline{\operatorname{Hom}}_S(X,Y)\) formed by the morphisms compatible
 with \(p_X\) and \(p_Y\); that is, the kernel of the pair of morphisms
@@ -68,51 +66,32 @@ with \(p_X\) and \(p_Y\); that is, the kernel of the pair of morphisms
   \underline{\operatorname{Hom}}_S(X,Z),
 \]
 the first defined by composition with \(p_Y\), and the second being the
-constant morphism whose ``image'' is \(p_X\).
-
-As in \SGARefLink{sga3:i:subsection:1:7}{I~1.7}, for every object \(T\) of \(\widehat{\mathscr C}\) over
-\(S\), there is a natural bijection
-\begin{equation}
-  \operatorname{Hom}_S
-    \bigl(T,\underline{\operatorname{Hom}}_{Z/S}(X,Y)\bigr)
-  \simeq \operatorname{Hom}_Z(X\times_S T,Y).
-  \tag{2}\label{sga3:ii:section:1:equation:2}
-\end{equation}
-Moreover, by \SGARefLink{sga3:i:proposition:1-7-1}{I~1.7.1}, if \(E,F\) are objects of
-\(\widehat{\mathscr C}\) over \(Z\), then
+constant morphism whose ``image'' is \(p_X\). It follows from the
+definition that there are isomorphisms
 \[
-  \operatorname{Hom}_Z\bigl(E,\underline{\operatorname{Hom}}_Z(F,Y)\bigr)
-  \simeq \operatorname{Hom}_Z(E\times_ZF,Y)
-  \simeq
-  \operatorname{Hom}_Z\bigl(F,\underline{\operatorname{Hom}}_Z(E,Y)\bigr).
-\]
-Applying this with \(E=X\) and \(F=Z\times_ST\), one obtains natural
-bijections, for every object \(T\) of
-\(\widehat{\mathscr C}_{/S}\),
-\begin{equation}
 \begin{aligned}
   \operatorname{Hom}_S
-    \bigl(T,\underline{\operatorname{Hom}}_{Z/S}(X,Y)\bigr)
-  &\simeq \operatorname{Hom}_Z(X\times_ST,Y)\\
-  &\simeq
-  \begin{cases}
-    \operatorname{Hom}_Z\bigl(Z\times_ST,
-      \underline{\operatorname{Hom}}_Z(X,Y)\bigr),\\
-    \operatorname{Hom}_Z\bigl(X,
-      \underline{\operatorname{Hom}}_Z(Z\times_ST,Y)\bigr).
-  \end{cases}
+    \bigl(S',\underline{\operatorname{Hom}}_{Z/S}(X,Y)\bigr)
+  &\simeq \operatorname{Hom}_Z(X\times_SS',Y)\\
+  &\simeq \operatorname{Hom}_Z\bigl(Z\times_SS',
+      \underline{\operatorname{Hom}}_Z(X,Y)\bigr)\\
+  &\simeq \operatorname{Hom}_Z\bigl(X,
+      \underline{\operatorname{Hom}}_Z(Z\times_SS',Y)\bigr).
 \end{aligned}
-\tag{3}\label{sga3:ii:section:1:equation:3}
-\end{equation}
-These bijections are functorial in \(T\), and hence give isomorphisms of
-\(S\)-functors.\footnote{Editor's note: points \SGARefLink{sga3:ii:section:2}{(2)}, \SGARefLink{sga3:ii:section:3}{(3)}, and \SGARefLink{sga3:ii:section:4}{(4)} have been
-expanded; in particular, \SGARefLink{fig:exp2-hom-adjunction-triangle}{(4)} will be used in \SGARefLink{sga3:ii:proposition:3-11}{3.11}.}
-
-\SGAThreeNativeDiagram[0.68\textwidth]
-  {native_diagrams/exp2/exp2_p002_hom_adjunction_triangle.tex}
-  {The functorial isomorphisms (4).}
-  {fig:exp2-hom-adjunction-triangle}
-  {LNM 151, p.~44}
+\]
+Let us note in passing that the last two isomorphisms extend to the case
+where \(S'\) is no longer in \(\mathscr C\), by the procedure indicated in
+\SGARefLink{sga3:i:proposition:1-7-1}{I~1.7.1}.\footnote{Translator's note: the
+Gille--Polo re-edition (2011), Expos\'e~II, expands this passage. In our
+words: the first bijection holds as well for every object \(T\) of
+\(\widehat{\mathscr C}\) over \(S\) (cf.\ \SGARefLink{sga3:i:subsection:1:7}{I~1.7}), and all of them are
+functorial in \(T\); replacing \(T\) by \(T\times_SS''\) for variable
+\(S''\to S\), one obtains isomorphisms of \(S\)-functors
+\(\underline{\operatorname{Hom}}_S(T,\underline{\operatorname{Hom}}_{Z/S}(X,Y))
+\simeq\underline{\operatorname{Hom}}_{Z/S}(X,\underline{\operatorname{Hom}}_Z(Z\times_ST,Y))
+\simeq\underline{\operatorname{Hom}}_{Z/S}(X\times_ST,Y)\), where
+\(X\times_ST\) lies over \(Z\) through \(X\); the first is the one used in
+the proof of 3.11.}
 
 Let us point out two special cases of the definition. If \(Z=S\), then
 \[
@@ -120,46 +99,40 @@ Let us point out two special cases of the definition. If \(Z=S\), then
   =\underline{\operatorname{Hom}}_S(X,Y).
 \]
 
-On the other hand, when \(X=Z\), we set
-\begin{equation}
+On the other hand, we set
+\[
   \prod_{Z/S}Y
   =\underline{\operatorname{Hom}}_{Z/S}(Z,Y),
-  \tag{5}\label{sga3:ii:section:1:equation:5}
-\end{equation}
+\]
 so that, by definition,
 \[
   \left(\prod_{Z/S}Y\right)(S')
-  =\operatorname{Hom}_Z(Z\times_SS',Y)
-  \simeq \Gamma(Y_{S'}/Z_{S'}).
+  \simeq \Gamma(Y_{S'}/Z_{S'}).\footnotemark
 \]
-The functor
-\(\prod_{Z/S}:\widehat{\mathscr C}_{/Z}\to
-\widehat{\mathscr C}_{/S}\) is right adjoint to the base-change functor
-from \(S\) to \(Z\): for every \(S\)-functor \(U\),
-\[
-  \operatorname{Hom}_S\left(U,\prod_{Z/S}Y\right)
-  =\operatorname{Hom}_Z(U\times_SZ,Y).
-\]
-If \(\mathscr C=\mathbf{Sch}\) and \(Z\) is an \(S\)-scheme, the functor
-\(\prod_{Z/S}\) is called the ``Weil restriction of scalars.''
-\footnote{Editor's note: the preceding two sentences have been added.}
+\footnotetext{Translator's note: the Gille--Polo re-edition (2011),
+Expos\'e~II, adds here that \(\prod_{Z/S}\colon\widehat{\mathscr C}_{/Z}\to
+\widehat{\mathscr C}_{/S}\) is right adjoint to the base change
+\(U\mapsto U\times_SZ\), and that for schemes it is Weil's restriction of
+scalars. In our words: taking \(X=Z\) in the bijection
+\(\operatorname{Hom}_S(T,\underline{\operatorname{Hom}}_{Z/S}(X,Y))\simeq
+\operatorname{Hom}_Z(X\times_ST,Y)\), valid for every \(S\)-functor \(T\),
+gives \(\operatorname{Hom}_S(U,\prod_{Z/S}Y)\simeq
+\operatorname{Hom}_Z(U\times_SZ,Y)\), functorially in \(U\) and \(Y\).}
 One also has an isomorphism
-\begin{equation}
+\[
   \underline{\operatorname{Hom}}_{Z/S}(X,Y)
   \simeq
   \underline{\operatorname{Hom}}_{X/S}(X,Y\times_ZX)
   =\prod_{X/S}(Y\times_ZX),
-  \tag{6}\label{sga3:ii:section:1:equation:6}
-\end{equation}
+\]
 which gives in particular, when \(Z=S\), an isomorphism
-\begin{equation}
+\[
   \underline{\operatorname{Hom}}_S(X,Y)
   \simeq \prod_{X/S}Y_X.
-  \tag{7}\label{sga3:ii:section:1:equation:7}
-\end{equation}
+\]
 
-\SGAInlineRefTarget{sga3:ii:remark:1-2}\subsection*{\SGARefLink{sga3:ii:remark:1-2}{Remark 1.2}.}
-The functor
+\SGARefTarget{sga3:ii:remark:1-2}%
+A last remark: the functor
 \(Y\mapsto\underline{\operatorname{Hom}}_{Z/S}(X,Y)\) commutes with
 products in the following sense: there is a functorial isomorphism
 \[
@@ -168,60 +141,31 @@ products in the following sense: there is a functorial isomorphism
   \underline{\operatorname{Hom}}_{Z/S}(X,Y)
   \times_S
   \underline{\operatorname{Hom}}_{Z/S}(X,Y').
-  \tag{*}\label{sga3:ii:section:1:equation:star}
 \]
 It follows that if \(Y\) is a \(Z\)-group, respectively a \(Z\)-ring,
 and so on, then \(\underline{\operatorname{Hom}}_{Z/S}(X,Y)\) is an
 \(S\)-group, respectively an \(S\)-ring, and so on.
 
-\SGAInlineRefTarget{sga3:ii:remark:1-3}\subsection*{\SGARefLink{sga3:ii:remark:1-3}{Remark 1.3}.}
-Let \(\pi:M\to Y\) be a \(Y\)-functor in \(\mathcal O_Y\)-modules
-(cf. \SGARefLink{sga3:i:paragraph:4-3-3-1}{I~4.3.3.1}), and set
-\(H=\underline{\operatorname{Hom}}_{Z/S}(X,Y)\). Then
-\(\underline{\operatorname{Hom}}_{Z/S}(X,M)\) has a natural
-\(\mathcal O_H\)-module structure; more precisely, for every \(H'\) over
-\(H\), the set
-\[
-  \operatorname{Hom}_H
-    \bigl(H',\underline{\operatorname{Hom}}_{Z/S}(X,M)\bigr)
-\]
-has a natural \(\mathcal O(X\times_SH')\)-module structure.
-\footnote{Editor's note: this remark has been added; it is useful for
-Corollary~3.11.1.}
-
-Indeed, let \(m:M\times_YM\to M\) and
-\(\lambda:\mathcal O_Y\times_YM\to M\) denote the morphisms defining
-the structures of a \(Y\)-abelian group and an \(\mathcal O_Y\)-module.
-Let \(H'\) be an \(S\)-scheme over
-\(H=\underline{\operatorname{Hom}}_{Z/S}(X,Y)\); equivalently, one has
-been given a \(Z\)-morphism \(f:X\times_SH'\to Y\), which makes
-\(X\times_SH'\) a \(Y\)-object. Then
-\[
-  \operatorname{Hom}_H
-    \bigl(H',\underline{\operatorname{Hom}}_{Z/S}(X,M)\bigr)
-\]
-is the set of \(Z\)-morphisms \(\phi:X\times_SH'\to M\) such that
-\(\pi\circ\phi=f\), that is, the set of \(Y\)-morphisms
-\(X\times_SH'\to M\).
-
-If \(\phi,\psi\) are two such morphisms, define \(\phi+\psi\) to be the
-composite \(Y\)-morphism
-\[
-  X\times_SH'\xrightarrow{\ \phi\times\psi\ }
-  M\times_YM\xrightarrow{\ m\ }M.
-\]
-This makes \(\underline{\operatorname{Hom}}_{Z/S}(X,M)\) an abelian group
-over \(H=\underline{\operatorname{Hom}}_{Z/S}(X,Y)\).
-
-Similarly, if \(a\in\mathcal O(X\times_SH')\), that is, if
-\(a:X\times_SH'\to\mathcal O_S\) is an \(S\)-morphism, define
-\(a\phi\) to be the composite \(\lambda\circ(a\times\phi)\), where
-\(a\times\phi\) is the \(Y\)-morphism from \(X\times_SH'\) to
-\(\mathcal O_Y\times_YM\simeq\mathcal O_S\times_SM\) with components
-\(a\) and \(\phi\). This gives
-\(\operatorname{Hom}_H(H',\underline{\operatorname{Hom}}_{Z/S}(X,M))\)
-an \(\mathcal O(X\times_SH')\)-module structure, functorial in the
-\(H\)-object \(H'\).
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~II; our
+formulation). Let \(\pi\colon M\to Y\) be a \(Y\)-functor in
+\(\mathcal O_Y\)-modules (\SGARefLink{sga3:i:paragraph:4-3-3-1}{I~4.3.3.1}), and put
+\(H=\underline{\operatorname{Hom}}_{Z/S}(X,Y)\). By the isomorphisms above,
+an \(S\)-functor \(H'\) over \(H\) amounts to a \(Z\)-morphism
+\(f\colon X\times_SH'\to Y\), and an \(H\)-morphism
+\(H'\to\underline{\operatorname{Hom}}_{Z/S}(X,M)\) amounts to a
+\(Y\)-morphism \(X\times_SH'\to M\), the source lying over \(Y\) through
+\(f\). These \(Y\)-morphisms form a module over \(\mathcal O(X\times_SH')\):
+two of them are added by means of the addition \(M\times_YM\to M\), and one
+of them is multiplied by \(a\colon X\times_SH'\to\mathcal O_S\) by means of
+the scalar multiplication \(\mathcal O_Y\times_YM\to M\), since
+\(\mathcal O_Y=\mathcal O_S\times_SY\). This structure is functorial in
+\(H'\); restricting scalars along
+\(\mathcal O(H')\to\mathcal O(X\times_SH')\), it makes
+\(\underline{\operatorname{Hom}}_{Z/S}(X,M)\) an \(\mathcal O_H\)-module over
+\(H\). Likewise, if \(M\) is only a \(Y\)-group, its multiplication makes
+\(\underline{\operatorname{Hom}}_{Z/S}(X,M)\) a group over \(H\).
+\par\medskip
 
 \section*{\SGAInlineRefTarget{sga3:ii:section:2}2. The schemes \(I_S(\mathcal M)\)}
 \addcontentsline{toc}{section}{2. The schemes I S (M)}
@@ -256,92 +200,49 @@ In particular, the morphisms \(0\to\mathcal M\) and
 and a section \(\varepsilon_{\mathcal M}\) of it, called the
 \emph{zero section}.
 
-\subsection*{\SGAInlineRefTarget{sga3:ii:subsection:2-1-1}2.1.1.}
-Since \(\mathcal M\mapsto I_S(\mathcal M)\) is contravariant, every
-\(a\in\operatorname{End}_{\mathcal O_S}(\mathcal M)\) defines an
-\(S\)-endomorphism \(a^*\) of \(I_S(\mathcal M)\), and
-\[
-  1^*=\operatorname{id},\qquad (ab)^*=b^*\circ a^*,\qquad
-  0^*=\varepsilon_{\mathcal M}\circ\rho,\qquad
-  a^*\circ\varepsilon_{\mathcal M}=\varepsilon_{\mathcal M}.
-\]
-Consequently, \(I_S(\mathcal M)\) carries a right action of the
-multiplicative monoid of
-\(\operatorname{End}_{\mathcal O_S}(\mathcal M)\), commuting with the
-\(S\)-morphisms \(I_S(\mathcal M)\to I_S(\mathcal M')\) arising from
-morphisms \(\mathcal M'\to\mathcal M\); in particular, the operators
-\(a^*\) preserve the zero section.\footnote{Editor's note: what follows
-expands the original; the numbering \SGARefLink{sga3:ii:subsection:2-1-1}{2.1.1}--\SGARefLink{sga3:ii:subsection:2-1-3}{2.1.3} has also been added.}
+\SGARefTarget{sga3:ii:subsection:2-1-1}%
+On the other hand, \(\mathcal O(S)=\Gamma(S,\mathcal O_S)\) is a set of
+operators on the module \(\mathcal M\), hence on the \(S\)-scheme
+\(I_S(\mathcal M)\), and the operations of \(\mathcal O(S)\) commute with
+the \(S\)-morphisms \(I_S(\mathcal M)\to I_S(\mathcal M')\) arising, by the
+preceding functoriality, from morphisms \(\mathcal M'\to\mathcal M\); in
+particular, these operations preserve the zero section of
+\(I_S(\mathcal M)\).\footnote{Translator's note: the Gille--Polo re-edition
+(2011), Expos\'e~II, lets the whole multiplicative monoid
+\(\operatorname{End}_{\mathcal O_S}(\mathcal M)\) act. In our words: by
+contravariance each \(a\) gives an \(S\)-endomorphism \(a^*\) of
+\(I_S(\mathcal M)\), with \(1^*=\operatorname{id}\), \((ab)^*=b^*\circ a^*\),
+\(0^*=\varepsilon_{\mathcal M}\circ\rho\) and
+\(a^*\circ\varepsilon_{\mathcal M}=\varepsilon_{\mathcal M}\), so that
+\(m\cdot a=a^*(m)\) is a right action on points; the homotheties give back
+the operators above. For instance, if \(\mathcal M=\mathcal O_S^r\), an
+\(S'\)-point of \(I_S(\mathcal M)\) is an \(r\)-tuple
+\((\epsilon_1,\dots,\epsilon_r)\) of elements of \(\mathcal O(S')\) with
+\(\epsilon_i\epsilon_j=0\) for all \(i,j\), on which \(a\in\mathcal O(S)\)
+acts by \((a\epsilon_1,\dots,a\epsilon_r)\). The re-edition also notes that
+\(I_S(\mathcal M)\) has the same underlying space as \(S\), \(\mathcal M\)
+being a nil ideal.}
 
-For every \(a\in\operatorname{End}_{\mathcal O_S}(\mathcal M)\), every
-\(f:S'\to S\), and every \(m\in I_S(\mathcal M)(S')\), write
-\(m\cdot a=a^*(m)\). Then
-\[
-  m\cdot1=m,\qquad (m\cdot a)\cdot b=m\cdot(ab),\qquad
-  m\cdot0=\varepsilon_{\mathcal M}(\rho(m)),
-\]
-and if \(m=\varepsilon_{\mathcal M}(f)\), then \(m\cdot a=m\).
-
-\SGAInlineRefTarget{sga3:ii:remark:2-1-2}\subsection*{\SGARefLink{sga3:ii:remark:2-1-2}{Remark 2.1.2}.}
+\SGARefTarget{sga3:ii:remark:2-1-2}%
 Formation of \(I_S(\mathcal M)\) commutes with base extension: there are
 canonical isomorphisms
 \[
-  I_S(\mathcal M)_{S'}
-  \simeq I_{S'}(\mathcal M\otimes_{\mathcal O_S}\mathcal O_{S'}).
+  \bigl(I_S(\mathcal M)\bigr)_{S'}
+  \simeq I_{S'}(\mathcal M\otimes_{\mathcal O_S}\mathcal O_{S'}).\footnotemark
 \]
-For simplicity write \(I_{S'}(\mathcal M)=I_S(\mathcal M)_{S'}\). More
-generally, if \(X\) is an \(S\)-functor, not necessarily representable,
-write \(I_X(\mathcal M)=I_S(\mathcal M)\times_SX\).
+\footnotetext{Translator's note: the Gille--Polo re-edition (2011),
+Expos\'e~II, adds a paragraph here, used in its additions to 3.4 and 4.6. In
+our words: for an \(S\)-functor \(X\), write
+\(I_X(\mathcal M)=I_S(\mathcal M)\times_SX\). Since \(\mathcal O(S')\)
+operates on \((I_S(\mathcal M))_{S'}\), functorially in \(S'\) and
+\(\mathcal M\), every \(a\in\mathcal O(X)=\operatorname{Hom}_S(X,\mathcal O_S)\)
+defines an \(X\)-endomorphism \(a^*\) of \(I_X(\mathcal M)\), given on
+points by \((m,x)\mapsto(m\cdot a(x),x)\), where \(a(x)=a\circ x\). This is
+an action of the multiplicative monoid \(\mathcal O(X)\), functorial in
+\(\mathcal M\), which preserves the zero section \(X\to I_X(\mathcal M)\);
+and a morphism \(\pi\colon Y\to X\) carries \(a^*\) to \((a\circ\pi)^*\).}
 
-\subsection*{\SGAInlineRefTarget{sga3:ii:subsection:2-1-3}2.1.3.}
-By the preceding discussion, the multiplicative monoid of
-\(\mathcal O(S')\) acts on the \(S'\)-scheme
-\(I_{S'}(\mathcal M)\), functorially in \(\mathcal M\). In other words,
-the \(S\)-scheme \(I_S(\mathcal M)\) is an object with an operator-monoid
-structure \(\mathcal O_S\), functorial in \(\mathcal M\). Thus there is
-a morphism of \(S\)-schemes
-\[
-  \lambda:I_S(\mathcal M)\times_S\mathcal O_S
-  \longrightarrow I_S(\mathcal M),
-\]
-satisfying the evident conditions. For every \(S\)-functor \(X\), base
-change gives a morphism of \(X\)-functors
-\[
-  \lambda_X:I_X(\mathcal M)\times_S\mathcal O_S
-  \longrightarrow I_X(\mathcal M),
-\]
-making \(I_X(\mathcal M)\) an object with operator monoid
-\(\mathcal O(X)\). Every
-\(a\in\mathcal O(X)=\operatorname{Hom}_S(X,\mathcal O_S)\) defines the
-\(X\)-endomorphism
-\[
-  a^*=\lambda_X\circ
-  \bigl(\operatorname{id}_{I_X(\mathcal M)}\times(a\circ\operatorname{pr}_X)\bigr).
-\]
-Explicitly, if \(x\in X(S')\) and
-\(m\in I_S(\mathcal M)(S')=I_{S'}(\mathcal M)(S')\), then
-\(a(x)=a\circ x\in\mathcal O(S')\) and
-\[
-  (m,x)\cdot a=(m\cdot a(x),x).
-\]
-This operation is functorial in \(\mathcal M\) and preserves the zero
-section \(\varepsilon_{\mathcal M}:X\to I_X(\mathcal M)\); thus
-\(a^*\circ\varepsilon_{\mathcal M}=\varepsilon_{\mathcal M}\).
-\footnote{Editor's note: this paragraph has been added; it will be useful
-in \SGARefLink{sga3:ii:remark:3-4-2}{3.4.2} and \SGARefLink{sga3:ii:lemma:4-6-2}{4.6.2}.}
-
-The operation is also ``functorial in \(X\)'' in the following sense. If
-\(\pi:Y\to X\) is a morphism of \(S\)-functors and
-\(u:\mathcal O(X)\to\mathcal O(Y)\) the corresponding ring morphism,
-so that \(u(a)=a\circ\pi\), then the following diagram is commutative.
-
-\SGAThreeNativeDiagram[0.30\textwidth]
-  {native_diagrams/exp2/exp2_p005_operator_functoriality_square.tex}
-  {Functoriality of the operator action under \(Y\to X\).}
-  {fig:exp2-operator-functoriality}
-  {Polo--Gille re-edition, Expos\'e II}
-
-\subsection*{\SGAInlineRefTarget{sga3:ii:subsection:2-2}2.2.}
+\SGARefTarget{sga3:ii:subsection:2-2}%
 Let \(\mathcal M\) and \(\mathcal N\) be two quasi-coherent
 \(\mathcal O_S\)-modules. The commutative diagram below induces the
 corresponding diagram of \(S\)-schemes on the following page.
@@ -350,7 +251,7 @@ corresponding diagram of \(S\)-schemes on the following page.
   {native_diagrams/exp2/exp2_p005_module_sum_diamond.tex}
   {The direct-sum diagram of \(\mathcal O_S\)-modules.}
   {fig:exp2-module-sum-diamond}
-  {Polo--Gille re-edition, Expos\'e II}
+  {LNM 151, p.~46}
 
 \SGAThreeNativeDiagram[0.42\textwidth]
   {native_diagrams/exp2/exp2_p006_IS_sum_scheme_diagram.tex}
@@ -393,18 +294,18 @@ where \(\Omega^1_{X/S}\) denotes the sheaf of relative differentials of
 direct sum of \(\mathcal O_S\)-modules to the product of the corresponding
 sets, which proves the proposition.
 
-\SGAInlineRefTarget{sga3:ii:corollary:2-2-1}\subsection*{\SGARefLink{sga3:ii:corollary:2-2-1}{Corollary 2.2.1}.}
-Let \(X\) be an \(S\)-scheme and \(\mathcal M\) a finite free
-\(\mathcal O_S\)-module. The functor
-\(\underline{\operatorname{Hom}}_S(I_S(\mathcal M),X)\), as a functor
-over \(X\), is isomorphic to a finite product over \(X\) of copies of
+\SGAInlineRefTarget{sga3:ii:corollary:2-2-1}\subsection*{Corollary.}
+If \(\mathcal M\) is free of finite type, the functor
+\(\underline{\operatorname{Hom}}_S(I_S(\mathcal M),X)\) is isomorphic
+\textup{(}as a functor over \(X\)\textup{)} to a finite product
+\textup{(}over \(X\)\textup{)} of copies of
 \(\underline{\operatorname{Hom}}_S(I_S,X)\).
 
-\SGAInlineRefTarget{sga3:ii:nota:2-2-2}\subsection*{Nota 2.2.2.}
+\SGAInlineRefTarget{sga3:ii:nota:2-2-2}\subsection*{Nota.}
 It follows from the proof of the proposition that
 \(\underline{\operatorname{Hom}}_S(I_S,X)\), as an \(X\)-functor, is
 isomorphic to \(\mathbf V(\Omega^1_{X/S})\) (\SGARefLink{sga3:i:definition:4-6-1}{I~4.6.1}), and is therefore
-represented by the vector fibration
+represented by the vector bundle
 \[
   V(\Omega^1_{X/S}).
 \]
