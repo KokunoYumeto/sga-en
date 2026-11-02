@@ -11,7 +11,7 @@ and sufficient that the identity section of \(G\) be a closed
 immersion.}
 
 The condition is necessary (EGA~I, 5.4.6); it is sufficient by
-virtue of the following cartesian diagram (cf. VI\(_A\), 0.3):
+virtue of the following cartesian diagram (VI\(_A\), \SGARefLink{sga3:VIA:0.3}{0.3}):
 \begin{center}
   \phantomsection\label{diag:sga3-VIB-5.1-cartesian}%
   \begin{tikzcd}[row sep=large,column sep=huge]
@@ -31,17 +31,22 @@ virtue of the following cartesian diagram (cf. VI\(_A\), 0.3):
 \noindent\textbf{Proposition 5.2.---}
 \emph{If \(S\) is discrete, every \(S\)-group is separated.}
 
-Indeed,
+Indeed, \(S\) is then equal to
 \[
-  S=\coprod_{s\in S}\operatorname{Spec}\mathcal O_{S,s},
+  \coprod_{s\in S}\operatorname{Spec}\mathcal O_{S,s},
 \]
-and, by EGA~I, 5.5.5, it is enough to show that, for every
-\(s\in S\),
+and it is enough to show that, for every \(s\in S\),
 \[
   G\times_S\operatorname{Spec}\mathcal O_{S,s}
 \]
-is separated. This follows from VI\(_A\), \SGARefLink{sga3:VIA:0.3}{0.3}, since
-\(\mathcal O_{S,s}\) is a local ring of dimension \(0\).%
+is separated (EGA~I, 5.5.5); this follows from VI\(_A\), \SGARefLink{sga3:VIA:0.3}{0.3}, since
+\(\mathcal O_{S,s}\) is a local ring of dimension \(0\).\footnote{Translator's note: the 1970 text refers
+to VI\(_A\), 0.2, and calls \(\mathcal O_{S,s}\) an Artinian local ring; the Gille--Polo re-edition (2011),
+Expos\'e~VI\textsubscript{B}, refers to VI\(_A\), 0.3, where separation is proved, and writes ``of dimension
+\(0\)''. As \(S\) is discrete, \(\{s\}\) is open, so \(\operatorname{Spec}\mathcal O_{S,s}\) is the open
+subscheme \(\{s\}\) of \(S\) and \(\mathcal O_{S,s}\) has only one prime ideal; it need not be noetherian
+(take \(S=\operatorname{Spec}k[T_1,T_2,\ldots]/(T_1,T_2,\ldots)^2\), \(k\) a field), hence need not be
+Artinian. The argument of VI\(_A\), 0.3 only uses that the base has a single point (see the note there).}
 
 \medskip
 \phantomsection\label{thm:sga3-VIB-5.3}%
@@ -54,99 +59,79 @@ an \(S\)-scheme on which \(G\) acts in such a way that the morphism}
   \Phi:G\times_S X\longrightarrow X\times_S X,
   \qquad (g,x)\longmapsto(gx,x),
 \]
-\emph{is surjective. Suppose moreover that, for every \(s\in S\):}
+\emph{is surjective \textup{(}intuitively, \(X\) is a homogeneous space under \(G\)\textup{)}. Suppose
+moreover that, for every \(s\in S\):}
 \begin{enumerate}
 \item[\textup{(i)}] \emph{there exists an open subscheme \(U\) of
   \(X\), separated over \(S\), such that \(U_s\) is dense in
   \(X_s\);}
 \item[\textup{\SGAInlineRefTarget{thm:sga3-VIB-5.3:item:ii}(ii)}] \emph{the fiber \(X_s\) is locally of finite
   type over \(\kappa(s)\).}%
-\footnote{\label{note:sga3-VIB-34}Editor's note: we have corrected
-the original by assuming that \(G\) is universally open over \(S\)
-in a neighborhood of the identity section and by adding hypothesis
-\textup{\SGARefLink{thm:sga3-VIB-5.3:item:ii}{(ii)}}; see below for examples, due to O.\ Gabber, showing
-that the statements \hyperref[thm:sga3-VIB-5.3]{5.3} and \hyperref[cor:sga3-VIB-5.4]{5.4} of the original are false without
-additional hypotheses. We also point out that \hyperref[thm:sga3-VIB-5.3]{Theorem 5.3} is a
-reworked version of \hyperref[thm:sga3-VIB-5.3A]{Theorem 5.3A} below, which appears in the 1965
-edition of SGAD and is due to M.\ Raynaud; compare the notes
-\((*)\) in \SGARefLink{sga3:x:lemma:8-5}{Expos\'e~X, 8.5} and 8.8.
-
-\smallskip
-\phantomsection\label{thm:sga3-VIB-5.3A}%
-\noindent\textbf{Theorem 5.3A (Raynaud).---}
-\emph{Let \(G\) be an \(S\)-group locally of finite presentation,
-universally open over \(S\), and with connected fibers. Then \(G\)
-is separated over \(S\). More generally, every \(S\)-scheme \(X\)
-locally of finite presentation over \(S\), equipped with an action
-of \(G\) such that the morphism
-\(\Phi:G\times_SX\to X\times_SX\),
-\((g,x)\mapsto(gx,x)\), is surjective, is separated over \(S\).}}
+\footnote{Translator's note: the 1970 text assumes \(G\) universally open over \(S\) along the identity
+section, and has no hypothesis~(ii); both changes are due to the Gille--Polo re-edition (2011),
+Expos\'e~VI\textsubscript{B}. Without (ii) the theorem fails, even over a field (second Addition at the end
+of this section). The proof of 5.6.2 uses a neighbourhood of the identity section on which \(G\) is universally
+open, which openness along the section does not give: over a discrete valuation ring \(R\) with uniformizer
+\(t\) and residue field \(k\), the closed subgroup \(G=\operatorname{Spec}R[u]/(tu)\) of \(\mathbb G_{a,R}\),
+with trivial generic fibre and special fibre \(\mathbb G_{a,k}\), is universally open at the points of its
+identity section (they are rational in their fibres, so after any base change the points above them lie on the
+identity section), but not at the generic point of \(\mathbb G_{a,k}\), which lies in every neighbourhood of
+the identity section (compare \SGARefLink{prop:sga3-VIB-4.2}{4.2}).}
 \end{enumerate}
 \emph{Then \(X\) is separated over \(S\).}
 
 \medskip
 \phantomsection\label{cor:sga3-VIB-5.4}%
 \noindent\textbf{Corollary 5.4.---}
-\emph{Let \(S,G,X\) be as in the preliminary hypotheses of \SGARefLink{thm:sga3-VIB-5.3}{5.3}.
+\emph{Let \(S,G,X\) be as above.
 Suppose moreover that \(X\) has fibers locally of finite type and
-connected. Then:}
+connected.\footnote{Translator's note: the 1970 statement assumes only that the fibres of \(X\) are connected,
+and asserts that \(X\) is separated and quasi-compact over \(S\); its proof, given below, concerns separation.
+The Gille--Polo re-edition (2011), Expos\'e~VI\textsubscript{B}, adds the finiteness condition on the fibres,
+without which the statement fails (second Addition at the end of this section), and the condition on \(V\) in
+(ii), without which quasi-compactness fails (Addition after the proof).} Then:}
 \begin{enumerate}
 \item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-5.4:item:i}(i)}] \emph{\(X\) is separated over \(S\).}
 \item[\textup{(ii)}] \emph{If there exists an open subset \(V\) of
   \(X\), quasi-compact over \(S\), which meets every nonempty fiber
-  \(X_s\),}%
-\emph{then \(X\) is quasi-compact over \(S\).}
+  \(X_s\), then \(X\) is quasi-compact over \(S\).}
 \end{enumerate}
 
-\emph{Proof.}
-\textup{\SGARefLink{cor:sga3-VIB-5.4:item:i}{(i)}} Let \(s\in S\) be such that \(X_s\ne\varnothing\).
-The morphism
-\[
-  \Phi_s:
-  G_s\times_{\kappa(s)}X_s
-  \longrightarrow
-  X_s\times_{\kappa(s)}X_s
-\]
-obtained from \(\Phi\) by base change is surjective. Since \(X_s\)
-is connected, it is irreducible by VI\(_A\), \SGARefLink{prop:sga3-VIA-2.5.4}{2.5.4}. Thus, if \(U\)
-is an affine open subset of \(X\) such that \(U_s\) is nonempty,
-then \(U_s\) is dense in \(X_s\), and the theorem applies.
+Indeed, since \(X_s\) is connected, \(X_s\) is also irreducible (if it is nonempty),\footnote{Translator's
+note: the Gille--Polo re-edition (2011), Expos\'e~VI\textsubscript{B}, justifies this by its VI\(_A\), \SGARefLink{prop:sga3-VIA-2.5.4}{2.5.4} (in
+this edition (d) of the first Addition after VI\(_A\), 2.4.1): if a group
+locally of finite type over a field acts on a scheme \(Y\) locally of finite type in such a way that
+\((g,y)\mapsto(gy,y)\) is surjective, the connected components of \(Y\) are irreducible. This applies to
+\(G_s\) acting on \(X_s\), the morphism \(\Phi_s\) deduced from \(\Phi\) by base change being surjective.} so
+that if \(U\) is an affine open subset of \(X\) such that \(U_s\) is nonempty, \(U_s\) is dense in \(X_s\), and
+the theorem applies.
 
-To prove \textup{\SGARefLink{concl:sga3-VIA-2.5.4-ii}{(ii)}}, we may suppose that \(S\) is affine. Then
-\(V\) is quasi-compact and, by \hyperref[prop:sga3-VIB-3.5]{3.5}, there exists a quasi-compact
-open subset \(U\) of \(G\) containing \(\underline{G^0}\). Let
-\(s\in S\) be such that \(X_s\ne\varnothing\). Then \(X_s\) is
-irreducible (VI\(_A\), \SGARefLink{prop:sga3-VIA-2.6.6}{2.6.6}), and, since \(U_s\) contains
-\(\underline{G_s^0}\), the morphism
-\[
-  U_s\times_{\kappa(s)}V_s\longrightarrow X_s,
-  \qquad (g,x)\longmapsto gx,
-\]
-is surjective (VI\(_A\), \SGARefLink{prop:sga3-VIA-2.6.4}{2.6.4}). Consequently the morphism
-\[
-  U\times_SV\longrightarrow X
-\]
-is surjective, and \(X\) is therefore quasi-compact, since \(U\)
-and \(V\) are. As \(S\) was assumed affine, hence separated, it
-follows that \(X\) is quasi-compact over \(S\)
-(cf. EGA~I, 6.6.4\textup{(v)}).
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~VI\textsubscript{B}; our formulation).
+\emph{Proof of} (ii). The question being local on \(S\), let \(S\) be affine; then \(V\) is quasi-compact, and
+by \SGARefLink{prop:sga3-VIB-3.5}{3.5} some quasi-compact open subset \(U\) of \(G\) contains every
+\(\underline{G^0_s}\). If \(X_s\) is not empty, it is irreducible, as we have just seen, and \(V_s\) is a
+nonempty open subset of it, so that \(\underline{G^0_s}\cdot V_s=X_s\) by the re-edition's
+VI\(_A\), \SGARefLink{prop:sga3-VIA-2.6.4}{2.6.4} (in this edition (d) of the second Addition after
+VI\(_A\), 2.4.1). Hence
+\((g,x)\mapsto gx\) maps the quasi-compact scheme \(U\times_SV\) onto \(X\), and \(X\) is quasi-compact over the
+affine scheme \(S\). The condition on \(V\) cannot be omitted. The following example is due to O.~Gabber: let
+\(A\) be the ring \(k[T_1,T_2,\ldots]\), \(k\) a field, localized at the ideal \((T_1,T_2,\ldots)\), let
+\(S=\operatorname{Spec}A\), with closed point \(s\), and \(S^*=S-\{s\}\), which is not quasi-compact (it is the
+union of the \(D(T_i)\), and the prime ideal \((T_1,\ldots,T_n)\) lies in none of \(D(T_1),\ldots,D(T_n)\)). Let
+\(X\) be the disjoint union of the open subscheme \(S^*\) and of the closed point \(\operatorname{Spec}\kappa(s)\),
+and let the trivial group \(G=S\) act on \(X\). Then \(X\times_SX=X\), \(\Phi\) is the identity, every fibre of
+\(X\) is one rational point, and \(X\) is separated, but not quasi-compact, over \(S\).
 
-\medskip
-\phantomsection\label{rem:sga3-VIB-5.4.1}%
-\noindent\textbf{Remark 5.4.1.---}%
-\footnote{\label{note:sga3-VIB-36}Editor's note: we have added this
-remark.}
-We shall see in the course of the proof that the conclusion of
-\hyperref[thm:sga3-VIB-5.3]{Theorem 5.3} remains true if one assumes only:
-
-\begin{quote}
-\textup{(i')} there exists an open subscheme \(U\) of \(X\),
-separated over \(S\), such that \(U_s\) is dense in every
-irreducible component of \(X_s\).
-\end{quote}
-
-This follows from \textup{\SGARefLink{cor:sga3-VIB-5.4:item:i}{(i)}} if \(X_s\) locally has a finite
-number of irreducible components, as is the case under hypothesis
-\textup{(ii)}. We shall also see later that \SGARefLink{cor:sga3-VIB-5.4}{5.4} remains true under
-the hypothesis that every fiber \(X_s\) is quasi-separated and
+The re-edition also points out that 5.3 is a reworked form of a theorem of M.~Raynaud, given in the 1965 edition
+(SGAD) of this seminar, to which the footnotes to Expos\'e~X, \SGARefLink{sga3:x:lemma:8-5}{8.5} and
+\SGARefLink{sga3:x:theorem:8-8}{8.8} refer: \emph{if \(G\) is locally of finite
+presentation and universally open over \(S\), with connected fibres, every \(S\)-scheme \(X\) locally of finite
+presentation over \(S\) on which \(G\) acts with \(\Phi\) surjective is separated over \(S\)}; for instance
+\(X=G\). This follows from (i). Indeed, \(G_s\) is geometrically connected, having a rational point; so if \(F\)
+is open and closed in \(X_s\), the image of \(G_s\times F\) under the action lies in \(F\), each
+\(G_s\times C\), for \(C\) a connected component of \(F\), being connected (EGA~IV\(_2\), 4.5.8) and containing
+\(\epsilon(s)\times C\). As \(\Phi_s\) is surjective, \(F\) or \(X_s-F\) is empty: the fibres of \(X\) are
 connected.
+\par\medskip
+

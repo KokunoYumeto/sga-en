@@ -2,130 +2,181 @@
 \medskip
 \phantomsection\label{cor:sga3-VIB-1.3.1}%
 \noindent\textbf{Corollary 1.3.1.---}
-\emph{Let \(A\) be an Artinian local ring with residue field \(k\),
-and let \(G\) be a flat \(A\)-group. The following assertions are
-equivalent:}%
-\begin{enumerate}
-\item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-1.3.1:item:i}(i)}] \emph{\(G\) is locally quasi-finite
-  (respectively, unramified, smooth, or \'etale) over \(A\) at
-  some point;}
-\item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-1.3.1:item:ii}(ii)}] \emph{\(G\) is locally quasi-finite
-  (respectively, unramified, smooth, or \'etale) over \(A\).}
-\end{enumerate}
+\emph{Let \(k\) be a field and \(G\) a \(k\)-group. Then, for \(G\) to be
+locally quasi-finite (respectively, unramified, smooth, \'etale) over
+\(k\), it is necessary and sufficient that \(G\) be quasi-finite
+(respectively, unramified, smooth, \'etale) over \(k\) at one point.}
 
-\footnote{\label{note:sga3-VIB-9}Editor's note: we have added the
-sentence that follows and simplified the proof of
-\hyperref[lem:sga3-VIB-1.3.1.1]{Lemma~1.3.1.1} by invoking EGA~IV, 2.7.1 instead of
-loc.\ cit., 17.7.5.}
-\emph{Proof.}
-If \(G\) satisfies one of the conditions in \textup{\SGARefLink{cor:sga3-VIB-1.3.1:item:i}{(i)}} at a
-point \(x\), there is an open neighborhood \(U\) of \(x\) that is
-of finite type over \(A\). Consequently, it is enough to apply
-\hyperref[prop:sga3-VIB-1.3]{1.3} in the case where \(H\) is the unit \(A\)-group, taking the
-following lemma into account.
+It is enough to apply \hyperref[prop:sga3-VIB-1.3]{1.3} in the case where \(H\) is the unit
+\(k\)-group, taking into account that the set of points at which \(G\)
+is of finite type over \(k\) is open, and the following lemma.
 
 \medskip
 \phantomsection\label{lem:sga3-VIB-1.3.1.1}%
 \noindent\textbf{Lemma 1.3.1.1.---}
-\emph{Let \(A\) be an Artinian local ring and \(G\) an
-\(A\)-group. If \(G\) contains a nonempty open subset of finite
-type over \(A\), then \(G\) is locally of finite type over \(A\).}
+\emph{Let \(k\) be a field and \(G\) a \(k\)-group. If there is a nonempty
+open subset \(U\) of \(G\) such that \(U\) is locally of finite type over
+\(k\), then \(G\) is locally of finite type over \(k\).}
 
-\emph{Proof.}
-By \hyperref[lem:sga3-VIB-1.3.0]{Lemma~1.3.0}, we may suppose that \(A\) equals its residue field
-\(k\). Moreover, by \(\mathrm{fpqc}\) descent, we may suppose that
-\(k\) is algebraically closed (cf.\ EGA~IV\(_2\), 2.7.1). Let
-\(V\) be the open subset of \(G\) consisting of the points at
-which \(G\) is of finite type over \(k\); by hypothesis,
-\(V\ne\varnothing\). Since \(G\) is a Jacobson scheme, \(V\)
-contains a closed point \(x\), and to prove that \(V=G\) it is
-enough to show that every closed point \(y\) of \(G\) belongs to
-\(V\). For such a point \(y\), the translation
-\[
-  r_y\circ r_x^{-1}
-\]
-sends \(x\) to \(y\), and hence \(y\in V\).
+Let \(x\in G\) and \(y\in U\). Let \(k'\) be an extension of \(k\) that is
+a composite of the extensions \(\kappa(x)\) and \(\kappa(y)\), and put
+\(G'=G\otimes_kk'\), \(U'=U\otimes_kk'\). There are then a rational point
+\(x'\in G'\) lying over \(x\) and a rational point \(y'\in U'\) lying over
+\(y\). Then \(V'=x'\cdot y'^{-1}\cdot U'\) is an open subset containing
+\(x'\) and locally of finite type over \(k'\). The projection \(G'\to G\)
+being open (EGA~IV\(_2\), 2.4.6), the projection of \(V'\) on \(G\) is an
+open subset \(V\) of \(G\) containing \(x\) and locally of finite type over
+\(k\), by EGA~IV\(_4\), 17.7.5.\footnote{Translator's note: EGA~IV\(_2\), 2.4.6, and EGA~IV\(_4\),
+17.7.5, are statements about morphisms locally of finite presentation, and the projection \(G'\to G\)
+is one only when \(k'\) is finite over \(k\). For an arbitrary extension \(k'\) the projection is
+still open (EGA~IV\(_2\), 2.4.10), but 17.7.5 no longer applies; as \(\kappa(x)\) need not be finite
+over \(k\), the argument above proves the lemma only at the points \(x\) with \(\kappa(x)\) finite over
+\(k\). A proof for all points follows.}
+
+\medskip\noindent
+\emph{Translator's addition: a proof of Lemma~\textup{1.3.1.1} at every point.} By faithfully flat
+descent (EGA~IV\(_2\), 2.7.1), \(G\) is locally of finite type over \(k\) if \(G\otimes_k\bar k\) is
+locally of finite type over an algebraic closure \(\bar k\) of \(k\), and \(U\otimes_k\bar k\) is a
+nonempty open subset of \(G\otimes_k\bar k\) locally of finite type over \(\bar k\); so we may assume
+\(k\) algebraically closed. Let \(W\) be the open set of points at which \(G\) is locally of finite
+type over \(k\). It contains \(U\), and every automorphism of the \(k\)-scheme \(G\) maps it onto
+itself, for instance the inverse map and the translations by rational points. Being nonempty and
+locally of finite type over \(k\), \(W\) has a rational point \(a\), so \(e=a^{-1}a\in a^{-1}W=W\).
+Below, points are points with values in fields \(K\) containing \(k\), and a statement about such
+points may be checked after enlarging \(K\).
+
+(1) \emph{\(W\) is a subgroup.} The multiplication \(m\colon W\times_kW\to G\) is the open immersion
+\((g,h)\mapsto(gh,h)\) of \(W\times_kW\) into \(G\times_kW\) (a restriction of an automorphism of
+\(G\times_kG\)) followed by the projection \(G\times_kW\to G\), which is flat and locally of finite
+presentation. Hence \(m(W\times_kW)\) is open (EGA~IV\(_2\), 2.4.6) and, \(W\times_kW\) being locally
+of finite type over \(k\), it is locally of finite type over \(k\) (EGA~IV\(_4\), 17.7.5); thus
+\(m(W\times_kW)\subset W\).
+
+(2) Let \(z\in G\), \(L=\kappa(z)\), and \(\tilde z\in G(L)\) the canonical point. For a
+\(k\)-embedding \(\alpha\colon L\to K\) let \(\tilde z_\alpha\in G(K)\) be the point it defines. Let
+\(O_z\) be the image in \(G\) of the open subset \(\tilde z\cdot(W\otimes_kL)\) of \(G\otimes_kL\);
+it is open, since the projection \(G\otimes_kL\to G\) is open (EGA~IV\(_2\), 2.4.10), and it contains
+\(z\). After enlarging \(K\), every \(K\)-point of \(O_z\) is of the form \(\tilde z_\alpha w\) with
+\(w\in W(K\)). If \(z\notin W\), then \(O_z\cap W=\emptyset\): otherwise some
+\(\tilde z_\alpha=(\tilde z_\alpha w)w^{-1}\) would lie in \(W(K)\) by (1). So \(G-W\) is the union of
+the open sets \(O_z\), \(z\notin W\), and \(W\) is closed.
+
+(3) \emph{For any two \(K\)-points \(b,b'\) of \(O_z\), \(b^{-1}b'\in W(K)\).} The points
+\(\tilde z_\alpha^{-1}\tilde z_\beta\), for pairs of embeddings \((\alpha,\beta)\), are the values of a
+morphism \(\operatorname{Spec}(L\otimes_kL)\to G\). As \(k\) is algebraically closed, \(L\otimes_kL\)
+is an integral domain, so \(\operatorname{Spec}(L\otimes_kL)\) is connected; the inverse image of the
+open and closed set \(W\) contains the diagonal point, whose value is \(e\), so it is everything.
+Writing \(b=\tilde z_\alpha w\) and \(b'=\tilde z_\beta w'\), we get
+\(b^{-1}b'=w^{-1}(\tilde z_\alpha^{-1}\tilde z_\beta)w'\in W(K)\) by (1). Likewise
+\(O_z\cdot W\subset O_z\).
+
+(4) By (3), the map \((y,w)\mapsto(y,yw)\), a restriction of an automorphism of \(G\times_kG\), is an
+isomorphism of \(O_z\times_kW\) onto \(O_z\times_kO_z\) compatible with the first projections. So the
+first projection \(O_z\times_kO_z\to O_z\) is locally of finite type. If \(A\) is a nonempty affine
+open subset of \(O_z\), the projection \(A\times_kO_z\to A\) is therefore locally of finite type, and
+as \(A\to\operatorname{Spec}(k)\) is faithfully flat and quasi-compact, \(O_z\) is locally of finite
+type over \(k\) (EGA~IV\(_2\), 2.7.1). Hence \(z\in O_z\subset W\), and \(W=G\).
+
+\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~VI\textsubscript{B}; our
+formulation). \emph{Proposition~\textup{1.3}, Corollary~\textup{1.3.1} and Lemma~\textup{1.3.1.1}
+remain true over an Artinian local ring \(A\), with maximal ideal \(\mathfrak n\) and residue field
+\(k\), provided that, in \textup{1.3} and \textup{1.3.1}, the \(A\)-group \(G\) is flat over \(A\).}
+Two facts on ring homomorphisms \(A\to B\to C\) are used, \(\mathfrak n\) being nilpotent.
+
+(a) \emph{If \(C/\mathfrak nC\) is a \((B/\mathfrak nB)\)-algebra of finite type, then \(C\) is a
+\(B\)-algebra of finite type.} Indeed, if \(C'\) is the \(B\)-subalgebra of \(C\) generated by
+liftings of generators of \(C/\mathfrak nC\), then \(C=C'+\mathfrak nC\), hence
+\(C=C'+\mathfrak n^mC\) for every \(m\), and \(C=C'\).
+
+(b) \emph{If moreover \(C\) is flat over \(A\) and \(C/\mathfrak nC\) is of finite presentation over
+\(B/\mathfrak nB\), then \(C\) is of finite presentation over \(B\).} Indeed, let
+\(P=B[X_1,\ldots,X_r]\to C\) be surjective with kernel \(I\). As \(C\) is flat over \(A\),
+\(I/\mathfrak nI\) is the kernel of \(P/\mathfrak nP\to C/\mathfrak nC\), hence an ideal of finite
+type (EGA~IV\(_1\), 1.4.4); if \(J\subset I\) is generated by liftings of its generators, then
+\(I=J+\mathfrak nI\), and \(I=J\) as in (a).
+
+Now let \(u:G\to H\) be a morphism of \(A\)-groups, with \(G\) locally of finite type and flat over
+\(A\); put \(u_k=u\otimes_Ak\), and let \(x\) be a point of \(G\), which has the same underlying space
+as \(G_k=G\otimes_Ak\). \emph{Then \(u\) is quasi-finite (respectively, unramified, flat, smooth,
+\'etale) at \(x\) if and only if \(u_k\) is.} The condition is necessary by base change. Conversely,
+\(u\) and \(u_k\) have the same fibers, which settles quasi-finiteness. If \(u_k\) is flat at \(x\),
+then \(\mathcal O_{G,x}\), which is flat over \(A\), is flat over \(\mathcal O_{H,u(x)}\)
+(EGA~IV\(_3\), 11.3.10.2, \(\mathfrak n\) being nilpotent). If \(u_k\) is locally of finite
+presentation at \(x\), so is \(u\), by (b) applied to affine open neighborhoods of \(x\) and of
+\(u(x)\). The stalk at \(x\) of \(\Omega^1_{G/H}\) vanishes if its quotient by \(\mathfrak n\), the
+stalk of \(\Omega^1_{G_k/H_k}\), does; so \(u\) is unramified at \(x\) if \(u_k\) is. Smoothness at
+\(x\) means local finite presentation, flatness at \(x\) and smoothness at \(x\) of the fiber
+(EGA~IV\(_4\), 17.5.1), which gives the smooth case, and \'etale means smooth and unramified. Hence,
+if \(u\) has one of these properties at one point, so has \(u_k\); then \(u_k\) has it everywhere by
+1.3, and so has \(u\). Lemma 1.3.1.1 extends without the flatness hypothesis: if a nonempty open
+subset of \(G\) is locally of finite type over \(A\), then \(G_k\) is locally of finite type over
+\(k\) by 1.3.1.1, and (a), applied to the affine open subsets of \(G\), shows that \(G\) is locally
+of finite type over \(A\). Corollary 1.3.1 over \(A\) then follows as over a field. Flatness of
+\(G\) cannot be replaced by flatness at one point: if \(A\ne k\), the closed subscheme
+\(G=\operatorname{Spec}(A)\sqcup\operatorname{Spec}(k)\) of the constant \(A\)-group
+\((\mathbb Z/2\mathbb Z)_A=\operatorname{Spec}(A)\sqcup\operatorname{Spec}(A)\) is a subgroup, and
+\(G\) is \'etale over \(A\) at its unit point but not flat over \(A\) at its other point.
 
 \medskip
 \phantomsection\label{cor:sga3-VIB-1.3.2}%
 \noindent\textbf{Corollary 1.3.2.---}
-\emph{Let \(A\) be an Artinian local ring, and let \(u:G\to H\)
-be a morphism between \(A\)-groups locally of finite type. The
-following assertions are equivalent:
+\emph{Let \(A\) be an Artinian local ring, let \(G\) and \(H\) be two
+\(A\)-groups locally of finite type, and let \(u:G\to H\) be a morphism of
+\(A\)-groups. The following assertions are equivalent:
 \begin{enumerate}
 \item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-1.3.2:item:i}(i)}] \(u\) is universally open;
 \item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-1.3.2:item:ii}(ii)}] \(u\) is open;
 \item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-1.3.2:item:iii}(iii)}] \(u\) is open at some point of \(G\);
-\item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-1.3.2:item:iv}(iv)}] the morphism
-  \(u^0:G^0\to H^0\) induced by \(u\) is dominant;
-\item[\textup{(iv\('\))}] \(u^0\) is surjective;
+\item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-1.3.2:item:iv}(iv)}] the map \(u^0:G^0\to H^0\) induced by \(u\) is
+  dominant, or, what amounts to the same \textup{(\hyperref[prop:sga3-VIB-1.2]{1.2} and
+  Expos\'e~VI\(_A\), \SGARefLink{prop:sga3-VIA-2.4}{2.4})}, \(u^0\) is surjective;
 \item[\textup{\SGAInlineRefTarget{cor:sga3-VIB-1.3.2:item:v}(v)}] there is a connected component \(C\) of \(G\)
   such that, if \(D\) denotes the connected component of \(H\)
-  containing \(u(C)\), the induced morphism
-  \(u':C\to D\) is dominant.
+  containing \(u(C)\), the map \(u':C\to D\) induced by \(u\) is
+  dominant.
 \end{enumerate}}
 
-\emph{Proof.}
-The implications
-\[
-  \textup{(i)}\Longrightarrow\textup{(ii)}
-  \Longrightarrow\textup{(iii)}
-  \qquad\text{and}\qquad
-  \textup{(iv\('\))}\Longrightarrow\textup{(iv)}
-  \Longrightarrow\textup{(v)}
-\]
-are clear. Since \(G^0\) is of finite type over \(A\)
-(Expos\'e~VI\(_A\), \SGARefLink{cor:sga3-VIB-2.4}{2.4}), and hence Noetherian, \(u^0\) is
-quasi-compact. Thus \(u^0(G^0)\) is closed in \(H^0\) by \hyperref[prop:sga3-VIB-1.2]{1.2}, and
-therefore \textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:iv}{(iv)}} implies \textup{(iv\('\))}. On the other
-hand, \(G^0\) (respectively, \(C\)) is open in \(G\)
-(Expos\'e~VI\(_A\), \SGARefLink{cor:sga3-VIB-2.3}{2.3}), while \(H^0\) (respectively, \(D\)) is
-irreducible (Expos\'e~VI\(_A\), \SGARefLink{cor:sga3-VIA-2.4.1}{2.4.1}). Hence \textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:ii}{(ii)}}
-implies \textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:iv}{(iv)}} (respectively, \textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:iii}{(iii)}} implies
-\textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:v}{(v)}}). It remains to prove that \textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:v}{(v)}} implies
-\textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:i}{(i)}}.
+It is clear that \textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:i}{(i)}} implies \textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:ii}{(ii)}}, and that \textup{(ii)}
+implies \textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:iii}{(iii)}}. Since \(G^0\) (respectively, \(C\)) is open in
+\(G\) (Expos\'e~VI\(_A\), \SGARefLink{par:sga3-VIA-2.3}{2.3}) and \(H^0\) (respectively, \(D\)) is irreducible
+(Expos\'e~VI\(_A\), \SGARefLink{cor:sga3-VIA-2.4.1}{2.4.1}), we see that \textup{(ii)} implies
+\textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:iv}{(iv)}} (respectively, that \textup{(iii)} implies
+\textup{\SGARefLink{cor:sga3-VIB-1.3.2:item:v}{(v)}}). It therefore remains to prove that \textup{(v)} implies
+\textup{(i)} (for, \textup{(iv)} being a special case of \textup{(v)}, this will also show that
+\textup{(iv)} implies \textup{(i)}).
 
 We endow the open subset \(C\) (respectively, \(D\)) of \(G\)
-(respectively, \(H\)) with its induced scheme structure, and let
-\(u'\) denote the induced morphism \(C\to D\). Let \(k\) be the
-residue field of \(A\).%
-\footnote{\label{note:sga3-VIB-10}Editor's note: we have expanded
-the original in what follows.}
-Since the base change
-\[
-  \operatorname{Spec}k\longrightarrow\operatorname{Spec}A
-\]
-is a universal homeomorphism, we may suppose that \(A=k\). By
-hypothesis \(u'\) is dominant; and since \(C\) is of finite type
-over \(k\) (Expos\'e~VI\(_A\), 2.4.1), and hence Noetherian,
-\(u'\) is quasi-compact. By EGA~IV\(_2\), 2.3.7,
-\[
-  u'\otimes_k\bar{k}
-\]
-is again quasi-compact and dominant, where \(\bar{k}\) denotes an
-algebraic closure of \(k\). Since
-\(C\otimes_k\bar{k}\) is a union of connected components of
-\(G\otimes_k\bar{k}\), the morphism
-\[
-  u\otimes_k\bar{k}:
-  G\otimes_k\bar{k}\longrightarrow H\otimes_k\bar{k}
-\]
-satisfies assertion \textup{(v)}. In view of
-EGA~IV\(_2\), 2.6.4, we are thus reduced to the case where
-\(A=k\) is an algebraically closed field.
+(respectively, \(H\)) with its induced scheme structure, and let \(u'\)
+denote the morphism \(u':C\to D\) induced by \(u\). Let \(k\) be the
+residue field of \(A\). Since \(C\) is quasi-compact over \(A\)
+(Expos\'e~VI\(_A\), \SGARefLink{cor:sga3-VIA-2.4.1}{2.4.1}) and \(D\) is separated over \(A\)
+(Expos\'e~VI\(_A\), \SGARefLink{sga3:VIA:0.3}{0.3}),\footnote{Translator's note: here and in the
+proof of 1.4 the 1970 text cites 0.2 of Expos\'e~VI\(_A\) for the separation of \(A\)-groups, which is
+proved in 0.3 there.} \(u'\) is quasi-compact; hence \(u'\otimes_Ak\) is
+quasi-compact and dominant, and so is \(u'\otimes_A\bar k\) (where \(\bar k\)
+denotes the algebraic closure of \(k\)), by EGA~IV\(_2\), 2.3.7. Since
+\(C\otimes_A\bar k\) is a union of connected components of
+\(G\otimes_A\bar k\), it is clear that \(G\otimes_A\bar k\),
+\(H\otimes_A\bar k\) and \(u\otimes_A\bar k\) satisfy assertion \textup{(v)}.
+We are thus reduced to the case in which \(A=k\) is an algebraically
+closed field, in view of EGA~IV\(_2\), 2.6.4.\footnote{Translator's note: EGA~IV\(_2\), 2.6.4,
+concerns faithfully flat quasi-compact base changes, such as \(\operatorname{Spec}\bar k\to
+\operatorname{Spec}k\). The passage from \(A\) to \(k\) rests on the fact that, the maximal ideal of
+\(A\) being nilpotent, \(\operatorname{Spec}k\to\operatorname{Spec}A\) is a universal homeomorphism: for
+every \(H\)-scheme \(Y\), the morphisms \(u_Y\) and \(u_Y\otimes_Ak\) have the same underlying continuous
+map, so \(u\) is universally open if and only if \(u\otimes_Ak\) is. The Gille--Polo re-edition (2011),
+Expos\'e~VI\textsubscript{B}, makes this step explicit.}
 
 In this case we may further replace \(u\) by \(u_{\mathrm{red}}\),
-and are thereby reduced to the case where \(H\) is reduced. Let
-\(\xi\) (respectively, \(\eta\)) be the generic point of \(C\)
-(respectively, \(D\)). Since \(u'\) is quasi-compact and dominant,
-\[
-  u'(\xi)=\eta
-\]
-(cf.\ EGA~IV\(_1\), 1.1.5). Since \(H\) is reduced, the local
-ring \(\mathcal O_{H,\eta}\) is a field, and hence \(u'\) is flat
-at \(\xi\).%
-It follows from \SGARefLink{prop:sga3-VIB-1.3}{1.3} that \(u\) is flat. Moreover, since \(u\) is
-locally of finite type and \(H\) is locally Noetherian, \(u\) is
-locally of finite presentation. Therefore \(u\) is universally
-open by EGA~IV\(_2\), 2.4.6.
+and are thereby reduced to the case in which \(H\) is reduced. Then \(D\)
+is reduced, and the generic flatness theorem (EGA~IV\(_2\), 6.9.1) asserts
+that, since \(u'\) is dominant, \(u'\) (and hence also \(u\)) is flat at the
+generic point of \(C\), so that \(u\) is flat (\hyperref[prop:sga3-VIB-1.3]{1.3}), and therefore
+universally open (EGA~IV\(_2\), 2.4.6).\footnote{Translator's note: generic flatness is not
+needed here. Since \(u'\) is dominant, it maps the generic point \(\xi\) of \(C\) to the generic point
+\(\eta\) of \(D\), and \(\mathcal O_{D,\eta}\) is a field, \(D\) being reduced; so \(\mathcal O_{C,\xi}\)
+is flat over \(\mathcal O_{D,\eta}\). Moreover \(u\), being locally of finite type with \(H\) locally
+noetherian, is locally of finite presentation, as EGA~IV\(_2\), 2.4.6, requires. The Gille--Polo
+re-edition (2011), Expos\'e~VI\textsubscript{B}, argues in this way.}
 

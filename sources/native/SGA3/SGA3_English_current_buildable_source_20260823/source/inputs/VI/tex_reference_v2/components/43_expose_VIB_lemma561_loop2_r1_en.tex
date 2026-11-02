@@ -3,220 +3,100 @@
 \phantomsection\label{lem:sga3-VIB-5.6.1}%
 \noindent\textbf{Lemma 5.6.1.---}
 \emph{Let \(S\) be a scheme, let \(f:X\to S\) be an \(S\)-scheme
-locally of finite presentation, let \(s\) be a point of \(S\), and
-let \(x\) be a closed point of \(X_s\). Suppose that \(f\) is
-universally open at the generic point \(z\) of an irreducible
-component \(Z\) of \(X_s\) containing \(x\), and that}
+locally of finite presentation, let \(s\) be a point of \(S\), let \(x\)
+be a closed point of \(X_s\), and let \(z\) be the generic point of an
+irreducible component \(Z\) of \(X_s\) containing \(x\) and such that
 \[
-  \dim_x(X_s)=\dim Z.
+  \dim_x(X_s)=\dim Z;
 \]
-\emph{Then there exists a commutative diagram}
-\begin{center}
-  \phantomsection\label{diag:sga3-VIB-5.6.1-statement}%
-  \begin{tikzcd}[row sep=large,column sep=large]
-    X \arrow[r,"f"] &
-    S \\
-    S''
-      \arrow[u,"h"]
-      \arrow[r,"\pi"]
-      \arrow[ur,"\phi"] &
-    S' \arrow[u,"w"']
-  \end{tikzcd}\enspace,
-\end{center}
-\emph{where \(S'\) is affine, \(w\) is \'etale, \(\pi\) is finite,
-surjective, and of finite presentation, and
-\(\phi^{-1}(s)\) consists of a single point \(s''\), such that
-\(h(s'')=x\) and \(\kappa(s'')=\kappa(x)\).}%
+suppose that \(f\) is universally open at \(z\) \textup{(}hence also at
+\(x\)\textup{)}. Then there exist a morphism
+\[
+  g:S''\longrightarrow S'\longrightarrow S,
+\]
+with \(S'\to S\) \'etale of finite presentation and covering \(s\), and
+\(S''\to S'\) finite, of finite presentation and surjective, such that
+\(g^{-1}(s)\) consists of a single point \(s''\), and an
+\(S\)-morphism \(h:S''\to X\) such that \(h(s'')=x\).}
 
-\emph{Proof.}
-First, we may suppose that \(S=\operatorname{Spec}(A)\) and
-\(X=\operatorname{Spec}(B)\), where \(B\) is an \(A\)-algebra of
-finite presentation. Let \(\mathfrak p\) and \(\mathfrak q\) be
-the prime ideals of \(A\) and \(B\) corresponding respectively to
-\(s\) and \(x\), so that
+It is clear that we may suppose \(X\) affine and of finite presentation
+over \(S\), then, by passage to the limit, replace \(S\) by
+\(\operatorname{Spec}\mathcal O_{S,s}\), and then suppose \(S\) strictly
+henselian, with closed point \(s\). Let then \(n=\dim_xX_s\). The choice of
+a system of parameters of \(\mathcal O_{X_s,x}\) and the ``Main Theorem''
+then show that, after shrinking \(X\), there exists a quasi-finite
+\(S\)-morphism of finite presentation
 \[
-  \mathfrak p=A\cap\mathfrak q.
+  u:X\longrightarrow S[T_1,\ldots,T_n]=Y.
 \]
-Set \(n=\dim_x(X_s)\), and choose \(t_1,\ldots,t_n\in B\) whose
-images in
-\[
-  \mathcal O_{X_s,x}=B_{\mathfrak q}/\mathfrak p B_{\mathfrak q}
-\]
-form a system of parameters. Then
-\[
-  \mathcal O_{X_s,x}/(t_1,\ldots,t_n)
-\]
-is finite-dimensional over \(\kappa(x)\), and hence also over
-\(\kappa(s)\), because \(x\) is a closed point of the algebraic
-\(\kappa(s)\)-scheme \(X_s\). Consequently, the \(S\)-morphism
-\[
-  u:X\longrightarrow\mathbb A^n_S
-    =\operatorname{Spec}\bigl(A[T_1,\ldots,T_n]\bigr),
-  \qquad T_i\longmapsto t_i,
-\]
-is of finite presentation, \(x\) is isolated in the fiber
-\(u^{-1}(u(x))\), and
-\[
-  u(x)=\tau_0(s),
-\]
-where \(\tau_0:S\to\mathbb A^n_S\) denotes the zero section of
-\(\mathbb A^n_S\to S\), corresponding to the \(A\)-algebra
-homomorphism
-\[
-  A[T_1,\ldots,T_n]\longrightarrow A,\qquad T_i\longmapsto0.
-\]
-The set of points of \(X\) that are isolated in their fibers over
-\(\mathbb A^n_S\) is open (EGA~IV\(_3\), 13.1.4). Thus, after
-shrinking \(X\), we may suppose that \(u\) is quasi-finite and
-that \(u^{-1}(u(x))=\{x\}\). By \hyperref[lem:sga3-VIB-5.6.1.0]{Lemma 5.6.1.0}, \(u\) is
-universally open at \(x\).
+Moreover, \(u(x)\) is a closed point of \(Y_s\), and we may suppose that
+\(u^{-1}(u(x))\) has an underlying space reduced to a point. Let \(V\) be
+the subscheme of \(X\) that is the inverse image under \(u\) of a section
+of \(Y\) over \(S\) passing through \(u(x)\). Then \(V\) is quasi-finite
+over \(S\) and contains \(x\) as its only point above \(s\). Since \(S\)
+is henselian, \(V=V'\amalg V''\), with \(V'\) finite over \(S\) and
+\(V''\) above \(S-s\), so that \(V'\) is the spectrum of a local ring.
+Let us show that \(V'\to S\) is surjective. For this, we may replace \(S\)
+by the reduced closed subscheme underlying an irreducible component of
+\(S\), and then suppose \(S\) normal, hence geometrically unibranch. Since
+\(f\) is universally open at \(z\), there exists an irreducible component
+\(\mathfrak z\) of \(X\) containing \(z\) and equidimensional \emph{over}
+\(S\) (of relative dimension \(n\)) at the point \(z\). Since \(u\) is
+quasi-finite and \(Y\) is of relative dimension \(n\), \(\mathfrak z\)
+necessarily dominates \(Y\). Again because \(u\) is quasi-finite,
+\(\mathfrak z\) is also equidimensional \emph{over} \(Y\) at the point
+\(x\). Since \(\mathcal O_{Y,u(x)}\) is geometrically unibranch
+(EGA~IV\(_3\), 14.4.1.1), Chevalley's theorem tells us that \(u\) is
+universally open at \(x\); hence \(V\), and also \(V'\), are universally
+open over \(S\) at \(x\), and a fortiori \(V'\) dominates \(S\).
 
-Let
-\[
-  B_0=B/(t_1,\ldots,t_n),\qquad
-  X_0=X\times_{\mathbb A^n_S}\tau_0(S)
-      =\operatorname{Spec}(B_0),
-\]
-and let \(u_0:X_0\to S\) be obtained from \(u\) by the base change
-\(\tau_0:S\hookrightarrow\mathbb A^n_S\). Then \(u_0\) is
-quasi-finite and of finite presentation, is universally open at
-\(x\), and \(x\) is the unique point of \(X_0\) above \(s\).
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~VI\textsubscript{B}; our formulation).
+The re-edition proves 5.6.1 without Chevalley's theorem (EGA~IV\(_3\), 14.4.1), using the following lemma of
+O.~Gabber, which strengthens EGA~IV\(_3\), 14.4.1.2, and gives a proof of loc.\ cit., 14.4.1.3 (compare the
+erratum ErrIV~38 in EGA~IV\(_4\)).
+(a) \emph{Let \(A\subset B\) be integral domains, with \(B\) integral over \(A\), let \(\mathfrak q\) be a prime
+ideal of \(B\), and suppose that \(A\) is unibranch at \(\mathfrak p=\mathfrak q\cap A\). Then
+\(\pi\colon\operatorname{Spec}B\to\operatorname{Spec}A\) is open at \(\mathfrak q\).} Let \(A'\) be the
+integral closure of \(A\) in its field of fractions and \(B'\) the ring generated by \(A'\) and \(B\) in the
+field of fractions of \(B\). The morphisms \(\operatorname{Spec}B'\to\operatorname{Spec}B\) and
+\(\phi\colon\operatorname{Spec}A'\to\operatorname{Spec}A\) are integral and surjective, hence closed, and
+\(\phi^{-1}(\mathfrak p)\) is a single point \(\mathfrak p'\). So, if \(W'\) is an open neighbourhood of
+\(\mathfrak p'\), the complement of the closed set \(\phi(\operatorname{Spec}A'-W')\) is a neighbourhood of
+\(\mathfrak p\) contained in \(\phi(W')\). Hence \(\pi\) is open at \(\mathfrak q\) as soon as
+\(\operatorname{Spec}B'\to\operatorname{Spec}A'\) is open at a point above \(\mathfrak q\), and we are reduced to
+the case where \(A\) is integrally closed. Let then \(N\) be a quasi-Galois extension of the
+field of fractions \(K\) of \(A\) containing that of \(B\), \(C\) the integral closure of \(A\) in \(N\), which
+contains \(B\), and \(\Gamma=\operatorname{Aut}(N/K)\). As \(\operatorname{Spec}C\to\operatorname{Spec}B\) is
+surjective, it is enough that \(\rho\colon\operatorname{Spec}C\to\operatorname{Spec}A\) be open. If \(W\) is
+open in \(\operatorname{Spec}C\), so is \(W^*=\bigcup_{\gamma\in\Gamma}\gamma W\), and \(\rho(W)=\rho(W^*)\);
+as \(\Gamma\) permutes transitively the prime ideals of \(C\) above each prime ideal of \(A\) (Bourbaki,
+\emph{Alg\`ebre commutative}, V, \S\,2, no.\,2, th.\,2), \(W^*\) is a union of fibres of \(\rho\), so
+\(\rho(W^*)\) is the complement of the closed set \(\rho(\operatorname{Spec}C-W^*)\).
+(b) \emph{Let \(f\colon X\to Y\) be a dominant morphism of irreducible schemes, locally of finite type and
+quasi-finite at a point \(x\) such that \(y=f(x)\) is a unibranch point of \(Y\). Then \(f\) is open at
+\(x\).} We may suppose \(X\) and \(Y\) reduced. By Zariski's Main Theorem (EGA~IV\(_3\), 8.12.9), there are
+affine open neighbourhoods \(U\) of \(x\) and \(V=\operatorname{Spec}A\) of \(y\) such that \(f|_U\) factors as
+an open immersion \(U\to V'\) followed by a finite morphism \(V'\to V\); replacing \(V'\) by the closure of the
+image of \(U\), with its reduced structure, \(V'=\operatorname{Spec}B\) with \(B\) an integral domain finite over
+\(A\), and \(A\to B\) is injective since \(f\) is dominant. By (a), \(V'\to V\) is open at the image of \(x\),
+hence \(f\) is open at \(x\).
 
-Let \(A'\) be the henselization of the local ring
-\[
-  A_{\mathfrak p}=\mathcal O_{S,s},
-\]
-and set
-\[
-  S'=\operatorname{Spec}(A'),\qquad
-  B'_0=B_0\otimes_A A',\qquad
-  X'_0=X_0\times_S S'=\operatorname{Spec}(B'_0).
-\]
-The closed point \(s'\) of \(S'\) is the unique point of \(S'\)
-above \(s\), and \(\kappa(s')=\kappa(s)\). The scheme \(X'_0\)
-has a unique point \(x'\) above \(s'\); moreover
-\(\kappa(x')=\kappa(x)\), and \(x'\) is also the unique point of
-\(X'_0\) above both \(s\) and \(x\). Since \(A'\) is henselian,
-EGA~IV\(_4\), 18.5.11 gives a disjoint decomposition into open and
-closed parts
-\[
-  \tag{*}\label{sga3:vi:lemma:5-6-1:equation:star}
-  X'_0=V\amalg W,
-  \qquad
-  V=\operatorname{Spec}(\mathcal O_{X'_0,x'}).
-\]
-The local ring \(\mathcal O_{X'_0,x'}\) is finite and of finite
-presentation over \(A'\). Hence the restriction \(\pi\) of
-\(u'_0\) to \(V\) is finite and of finite presentation. Moreover,
-because \(u'_0:X'_0\to S'\) is open at \(x'\),
-\[
-  u'_0(V)=\operatorname{Spec}(\mathcal O_{S',s'})=S',
-\]
-so \(\pi\) is surjective.
-
-This proves the assertion when \(S=S'\). In general, \(A'\) is
-the filtered direct limit of \(A\)-subalgebras \(A_i\) that are
-\'etale over \(A\) and for which
-\[
-  S_i=\operatorname{Spec}(A_i)
-\]
-has a unique point \(s_i\) above \(s\), with
-\(\kappa(s_i)=\kappa(s)\). We have
-\[
-  B'_0=\varinjlim_i B_i,
-  \qquad
-  B_i=B_0\otimes_A A_i.
-\]
-Set
-\[
-  X_i=\operatorname{Spec}(B_i)=X_0\times_S S_i,
-  \qquad
-  C=\mathcal O_{X'_0,x'}.
-\]
-By \((*)\), one has
-\[
-  C\simeq B'_0/fB'_0
-\]
-for some idempotent \(f\in B'_0\). There are an index \(i\) and
-an element \(f_i\in B_i\) whose image in \(B'_0\) is \(f\). Put
-\[
-  C_i=B_i/f_iB_i,\qquad V_i=\operatorname{Spec}(C_i).
-\]
-Then
-\[
-  C=C_i\otimes_{A_i}A',
-  \qquad
-  V=V_i\times_{S_i}S',
-\]
-and \(C_i\) is an \(A_i\)-algebra of finite presentation, since
-the same is true of \(B_i\). Consequently, the morphisms
-\begin{center}
-  \phantomsection\label{diag:sga3-VIB-5.6.1-limit-source}%
-  \begin{tikzcd}[row sep=large,column sep=large]
-    X'_0 \arrow[dr,"u'_0"] &
-    {} \\
-    V
-      \arrow[u,"h'"]
-      \arrow[r,"\pi"] &
-    S'
-  \end{tikzcd}
-\end{center}
-arise, by the base change \(S'\to S_i\), from morphisms of finite
-presentation
-\begin{center}
-  \phantomsection\label{diag:sga3-VIB-5.6.1-limit-descent}%
-  \begin{tikzcd}[row sep=large,column sep=large]
-    X_i \arrow[dr,"u_i"] &
-    {} \\
-    V_i
-      \arrow[u,"h_i"]
-      \arrow[r,"\pi_i"] &
-    S_i
-  \end{tikzcd}
-\end{center}
-
-For every \(j\geq i\), let
-\[
-  V_j=V_i\times_{S_i}S_j
-\]
-and let \(\pi_j:V_j\to S_j\) be the morphism of finite
-presentation obtained from \(\pi_i\) by base change. Since
-\(\pi:V\to S'\) is finite and surjective, EGA~IV\(_2\), 8.10.5
-shows that, for some \(j\), the morphism
-\(\pi_j:V_j\to S_j\) is finite and surjective. Then
-\(w:S_j\to S\) is affine and \'etale, \(S_j\) has a unique point
-\(s_j\) above \(s\), and \(V_j\) has a unique point \(x_j\) above
-\(s_j\), since \(x'\) is the unique point of
-\[
-  V=V_j\times_{S_j}S'
-\]
-above \(s'\):
-\begin{center}
-  \phantomsection\label{diag:sga3-VIB-5.6.1-final-composite}%
-  {\small
-  \begin{tikzcd}[row sep=large,column sep=large]
-    X_j
-      \arrow[r]
-      \arrow[dr,"u_j"] &
-    X_0
-      \arrow[r]
-      \arrow[dr,"u_0"] &
-    X
-      \arrow[d,"f"']
-      \arrow[dr,"u"] &
-    {} \\
-    V_j
-      \arrow[u,"h_j"]
-      \arrow[r,"\pi_j"] &
-    S_j
-      \arrow[r,"w"] &
-    S
-      \arrow[r,"\tau_0"] &
-    \mathbb A^n_S
-  \end{tikzcd}}
-\end{center}
-Thus \(x_j\) is the unique point of \(V_j\) above \(s\), its image
-under \(V_j\to X_j\to X\) is \(x\), and
-\[
-  \kappa(x_j)=\kappa(x).
-\]
+In the proof of 5.6.1, this lemma is used as follows. The hypotheses on \((f,x,z)\) are preserved by every base
+change \(S_1\to S\), \(s_1\) and \(x_1\) being points above \(s\) and \(x\): indeed \(\dim_{x_1}X_{1,s_1}=n\)
+(EGA~IV\(_2\), 4.1.4), and as generizations lift along \(X_{1,s_1}\to X_s\), a flat morphism, there is a
+maximal point \(z_1\) of \(X_{1,s_1}\) above \(z\) specializing to \(x_1\), whose closure has dimension \(n\),
+and \(f_1\) is universally open at \(z_1\). By EGA~IV\(_3\), 14.3.3.1~(i), applied to the base changes
+\(S[T'_1,\ldots,T'_r]\to S\), it is therefore enough to prove that \(u\) is open at \(x\), that is
+(EGA~IV\(_1\), 1.10.3), that every generization of \(u(x)\) lifts to a generization of \(x\). For this, we may
+replace \(S\) by an irreducible component, with its reduced structure, and then by its normalization, the
+generizations of \(u(x)\) lifting by going-up along the integral surjective morphism so obtained; so \(S\) is
+integral and normal. Then, \(f\) being universally open at \(z\), some irreducible component \(\mathfrak z\) of
+\(X\) containing \(z\) dominates \(S\) with generic fibre of dimension \(n\) (EGA~IV\(_3\), 14.3.13); as \(u\)
+is quasi-finite, \(u\) maps its generic point to that of \(Y\), which is normal, and \(u|_{\mathfrak z}\), and
+hence \(u\), is open at \(x\) by (b). Finally, the re-edition uses the henselization of \(\mathcal O_{S,s}\)
+instead of its strict henselization, and makes the passage to the limit explicit (EGA~IV\(_3\), 8.10.5); this
+gives in addition \(S'\) affine and \(\kappa(s'')=\kappa(x)\), the residue field being unchanged by
+henselization. Note also that \(h\) defines a section of \(X\times_SS''\) over \(S''\) passing through a point
+above \(x\) (compare EGA~IV\(_3\), 14.5.10).
+\par\medskip

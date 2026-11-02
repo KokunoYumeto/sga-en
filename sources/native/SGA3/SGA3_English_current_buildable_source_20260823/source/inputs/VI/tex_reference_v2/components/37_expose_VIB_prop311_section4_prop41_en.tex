@@ -1,46 +1,40 @@
 
 \medskip
 \phantomsection\label{prop:sga3-VIB-3.11}%
-\noindent\textbf{Proposition 3.11.---}%
-\emph{Let \(u:G\to H\) be a morphism between \(S\)-groups locally
-of finite presentation. If \(u\) is flat, the induced map}
+\noindent\textbf{Proposition 3.11.---}
+\emph{Let \(G\) and \(H\) be two \(S\)-groups locally of finite
+presentation, and \(u:G\to H\) a morphism of \(S\)-groups; then, if \(u\)
+is flat, the map}
 \[
   u^0:G^0\longrightarrow H^0
 \]
-\emph{is surjective. The converse holds if \(G\) is flat over \(S\)
-and \(H\) has reduced fibers.}
+\emph{induced by \(u\) is surjective; the converse holds if \(G\) is flat
+over \(S\) and \(H\) has reduced fibers.}
 
-Suppose that \(u\) is flat. Then, for every \(s\in S\), \(u_s\) is
-flat and locally of finite presentation, hence open
-(EGA~IV\(_2\), 2.4.6). Therefore
+Suppose then that \(u\) is flat; then for every \(s\in S\), \(u_s\) is
+flat and locally of finite presentation, hence open (EGA~IV\(_2\), 2.4.6),
+so that the morphism
 \[
   u_s^0:\underline{G_s^0}\longrightarrow\underline{H_s^0}
 \]
-is surjective, by \SGARefLink{cor:sga3-VIB-1.3.2}{1.3.2}.%
-\footnote{\label{note:sga3-VIB-27}Editor's note: we have shortened
-the original by referring here to \SGARefLink{cor:sga3-VIB-1.3.2}{1.3.2}. We have also simplified
-the argument below by omitting a reference to the generic flatness
-theorem (EGA~IV\(_2\), 6.9.1), which is not needed here.}
-Thus the map
-\[
-  u^0:G^0\longrightarrow H^0
-\]
-is surjective.
+is dominant. Since \(\underline{G_s^0}\) is of finite type over \(\kappa(s)\)
+(Expos\'e~VI\(_A\), \SGARefLink{prop:sga3-VIA-2.4}{2.4}) and \(H_s\) is separated over \(\kappa(s)\)
+(Expos\'e~VI\(_A\), \SGARefLink{sga3:VIA:0.3}{0.3}),\footnote{Translator's note: the 1970 text has 0.2 here
+as well; cf.\ the note in the proof of 1.3.2.} \(u_s^0\) is quasi-compact (EGA~I, 6.6.4), hence
+surjective (\hyperref[prop:sga3-VIB-1.2]{1.2}). Hence \(u^0\) is surjective.
 
-Conversely, suppose that \(u^0:G^0\to H^0\) is surjective, that
-\(G\) is flat over \(S\), and that \(H\) has reduced fibers. Then,
-for every \(s\in S\), the morphism
-\[
-  u_s^0:\underline{G_s^0}\longrightarrow\underline{H_s^0}
-\]
-is surjective, and hence is flat at every point lying above the
-generic point \(\eta\) of \(\underline{H_s^0}\), since
-\[
-  \mathcal O_{\underline{H_s^0},\eta}
-\]
-is a field. It follows from \hyperref[prop:sga3-VIB-1.3]{1.3} that \(u_s\) is flat. Therefore
-\(u\) is flat, by the fiberwise flatness criterion
-(EGA~IV\(_3\), 11.3.11).
+Conversely, suppose that \(u^0\) is surjective, that \(G\) is flat over
+\(S\) and that \(H\) has reduced fibers. Then, for every \(s\in S\),
+\(u_s^0\) is surjective and \(H_s\) is reduced; hence
+\(\underline{H_s^0}\) is locally Noetherian and integral, and \(u_s^0\) is of
+finite type, hence flat at the generic point of \(G_s\)
+(EGA~IV\(_2\), 6.9.1), so that \(u_s\) is flat (\hyperref[prop:sga3-VIB-1.3]{1.3}), and therefore
+\(u\) is flat (EGA~IV\(_3\), 11.3.11).\footnote{Translator's note: the Gille--Polo re-edition
+(2011), Expos\'e~VI\textsubscript{B}, shortens both parts. In the first, \(u_s\) is open, so that by
+\hyperref[cor:sga3-VIB-1.3.2]{1.3.2} (condition (ii) implies (iv)) \(u_s^0\) is surjective. In the second, generic
+flatness is not needed: \(\underline{H_s^0}\) being reduced and irreducible, its local ring at the
+generic point \(\eta\) is a field, so that \(u_s\) is flat at every point over \(\eta\), in particular at the
+generic point of \(\underline{G_s^0}\), which \(u_s^0\) maps to \(\eta\).}
 
 \section*{4. Dimension of the fibers of groups locally of finite presentation}
 \phantomsection\label{sec:sga3-VIB-4}%
@@ -55,23 +49,19 @@ with an \(S\)-section \(\epsilon\), and suppose that, for every
 \[
   \dim G_s=\dim_{\epsilon(s)}G_s
 \]
-\emph{\textup{(as is the case when \(G\) is an \(S\)-group;
-\hyperref[lem:sga3-VIB-1.5]{1.5})}.}
-\begin{enumerate}
-\item[\textup{\SGAInlineRefTarget{prop:sga3-VIB-4.1:item:i}(i)}] \emph{The function}
-  \[
-    s\longmapsto\dim G_s
-  \]
-  \emph{is upper semicontinuous on \(S\).}
-\item[\textup{\SGAInlineRefTarget{prop:sga3-VIB-4.1:item:ii}(ii)}] \emph{If, moreover, \(G\) is locally of finite
-  presentation over \(S\), this function is locally constructible.}
-\end{enumerate}
+\emph{\textup{(as is the case if \(G\) is an \(S\)-group
+\textup(\hyperref[lem:sga3-VIB-1.5]{1.5}\textup))}. Then the function}
+\[
+  s\longmapsto\dim G_s
+\]
+\emph{is upper semicontinuous on \(S\). If, moreover, \(G\) is locally of
+finite presentation over \(S\), this function is locally constructible.}
 
 Let
 \[
   \pi:G\longrightarrow S
 \]
-be the structural morphism. Chevalley's semicontinuity theorem
+be the structural morphism. Chevalley's theorem
 (EGA~IV\(_3\), 13.1.3) asserts that the function
 \[
   x\longmapsto\dim_x\pi^{-1}\bigl(\pi(x)\bigr)
