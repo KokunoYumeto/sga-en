@@ -5,7 +5,7 @@
 
 Suppose now that \(C\) is Artinian, with radical \(\mathfrak r\).
 For every \(C\)-algebra \(U\) \textup{(associative and unital)}, the
-ideal \(\mathfrak rU\) therefore consists of nilpotent elements. If
+product \(\mathfrak rU\) therefore consists of nilpotent elements. If
 \(x\in\mathfrak rU\), put
 \[
   \exp_U(x)
@@ -20,10 +20,14 @@ This gives a bijection from \(\mathfrak rU\) onto
   y-\frac{y^2}{2}+\frac{y^3}{3}-\cdots.
 \]
 Moreover, the map \(\exp_U\) is plainly functorial in
-\(U\).
+\(U\).\footnote{Translator's note: that is, \(\varphi(\exp_U(x))=\exp_V(\varphi(x))\) for every homomorphism
+of \(C\)-algebras \(\varphi\colon U\to V\); applied to \(\Delta_U\) and to \(u\mapsto u\otimes1\),
+\(u\mapsto1\otimes u\), this gives the first and fourth equalities below. The third uses
+\(\exp(y+y')=\exp(y)\exp(y')\) for commuting \(y,y'\), here \(x\otimes1\) and \(1\otimes x\). The
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{B}, states these two facts.}
 
 Still assuming \(C\) Artinian, suppose that \(U\) is endowed with a
-bialgebra structure over \(C\) \textup{(cf.\ \SGARefLink{sga3:VIIA:2.2}{2.2})}. For every
+bialgebra structure over \(C\) \textup{(cf.\ \SGARefLink{sga3:VIIB:2.2}{2.2})}. For every
 primitive element \(x\in\mathfrak rU\)
 \textup{(cf.\ VII\textsubscript{A}, \SGARefLink{sga3:VIIA:3.2.3}{3.2.3})}, we then have
 \[
@@ -47,115 +51,68 @@ primitive element \(x\in\mathfrak rU\)
   \exp_U(x)\otimes\exp_U(x).
 \end{aligned}
 \]
-Thus the bijection \(\exp_U\) sends a primitive element of
-\(\mathfrak rU\) to an element \(z\in1+\mathfrak rU\) satisfying
-\[
-  \Delta_U(z)=z\otimes z.
-\]
-Conversely, if \(z\) satisfies these conditions, then, on putting
-\(x=\log_U(z)\), the preceding calculation shows that
-\[
-  \exp_{U\otimes_CU}(x\otimes1+1\otimes x)
-  =
-  z\otimes z
-  =
-  \Delta_U\bigl(\exp_U(x)\bigr)
-  =
-  \exp_{U\otimes_CU}\bigl(\Delta_U(x)\bigr);
-\]
-hence
-\[
-  x\otimes1+1\otimes x=\Delta_U(x).
-\]
-\footnote{\label{sga3:VIIB:nde:121}The editors supplied the
-details of the preceding argument and added the sentence that
-follows.}
-Furthermore, if \(z\in1+\mathfrak rU\) satisfies
-\(\Delta_U(z)=z\otimes z\), then
-\[
-  \varepsilon_U(z)^2=\varepsilon_U(z).
-\]
-Since \(\varepsilon_U(z)\) is invertible \textup{(because \(z\) is
-invertible, and \(\mathfrak r\) is nilpotent)}, it follows that
-\(\varepsilon_U(z)=1\).
+We therefore see that the bijection \(\exp_U\) transforms a primitive
+element of \(\mathfrak rU\) into an element \(z\) of \(1+\mathfrak rU\) such
+that \(\Delta_U(z)=z\otimes z\), and the converse is clear.\footnote{Translator's note: if
+\(z\in1+\mathfrak rU\) and \(\Delta_U(z)=z\otimes z\), put \(x=\log_U(z)\); the same computation gives
+\(\exp_{U\otimes U}(x\otimes1+1\otimes x)=z\otimes z=\exp_{U\otimes U}(\Delta_U(x))\), whence
+\(\Delta_U(x)=x\otimes1+1\otimes x\), \(\exp_{U\otimes U}\) being injective on \(\mathfrak r(U\otimes U)\).
+Moreover such a \(z\) has augmentation \(1\): applying \(\varepsilon_U\otimes\varepsilon_U\) gives
+\(\varepsilon_U(z)^2=\varepsilon_U(z)\), and \(\varepsilon_U(z)\in1+\mathfrak r\) is invertible. The
+Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{B}, writes this out.}
 
 In particular, let \(L\) be a Lie algebra flat over \(C\), take for
 \(U\) the enveloping algebra \(U(L)\) of \(L\) over \(C\), and
 identify \(L\) with its canonical image in \(U\). By \SGARefLink{sga3:VIIB:3.1:lemma}{Lemma~3.1},
 \(L\) is the set of primitive elements of \(U\): indeed, on every
-local component of \(C\), \(L\) is a free module. Consider the
-\(C\)-formal group
-\[
-  \mathscr G(L)=\operatorname{Spf}^{*}U(L),
-\]
-whose covariant bialgebra is \(U=U(L)\)
-\textup{(cf.\ \SGARefLink{sga3:VIIB:2.6.2:prop}{2.6.2})}. Let \(\mathfrak m\) be a maximal ideal of
-\(C\), and put
-\[
-  \overline C=C/\mathfrak m,
-  \qquad
-  \overline U=U\otimes_C\overline C.
-\]
-Since \(\mathscr G(L)\) is infinitesimal \textup{(loc.\ cit.)}, the
-unit element of \(\overline U\) is the only element
-\(\overline z\in\overline U\) such
-that
-\[
-  \varepsilon_{\overline U}(\overline z)=1,
-  \qquad
-  \Delta_{\overline U}(\overline z)
-  =
-  \overline z\otimes\overline z.
-\]
-It follows that every \(z\in U\) satisfying
-\[
-  \varepsilon_U(z)=1,
-  \qquad
-  \Delta_U(z)=z\otimes z
-\]
-necessarily belongs to \(1+\mathfrak rU\).
+local component of \(C\), \(L\) is a free module. Consider on the other hand the quotient \(\overline C=C/\mathfrak m\) of
+\(C\) by a maximal ideal \(\mathfrak m\). Since the \(\overline C\)-formal group
+\(\mathscr G(L\otimes_C\overline C)\), which has \(U(L\otimes_C\overline C)\) for
+bialgebra, is infinitesimal \textup{(\SGARefLink{sga3:VIIB:2.6.2:prop}{2.6.2})}, the unit element of
+\(U(L\otimes_C\overline C)\) is the only element \(\overline z\) such that
+\(\varepsilon(\overline z)=1\) and
+\(\Delta_{U(L\otimes_C\overline C)}(\overline z)=\overline z\otimes\overline z\).\footnote{Translator's note: the
+1970 text omits the condition \(\varepsilon(\overline z)=1\), here and in the next sentence; without it both
+statements fail, since \(0\) also satisfies \(\Delta(\overline z)=\overline z\otimes\overline z\). With it, the
+elements in question are the points of \(\mathscr G(L\otimes_C\overline C)\) with values in the field
+\(\overline C\), and those of \(\mathscr G(L)(C)\) (2.6.2). The Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{B}, adds the condition.} It follows
+that the elements \(z\) of \(U(L)\) such that \(\varepsilon_U(z)=1\) and
+\(\Delta_U(z)=z\otimes z\) necessarily belong to \(1+\mathfrak rU\).
 
-Finally, since
-\[
-  L\cap\mathfrak rU
-  =
-  \mathfrak rL
-  =
-  L\otimes_C\mathfrak r,
-\]
-we conclude that \(\exp_U\) defines a bijection from
-\(L\otimes_C\mathfrak r\) onto the group \(\mathscr G(L)(C)\).
-We summarize this as follows.
+Finally, since \(L\cap\mathfrak rU\) is identified with
+\(L\otimes_C\mathfrak r\), we see finally that \emph{\(\exp_U\) defines a
+bijection of \(L\otimes_C\mathfrak r\) onto the group
+\(\mathscr G(L)(C)\)}. We summarize:
 
 \medskip
 \noindent\textbf{Proposition 3.2.}
 \phantomsection
 \label{sga3:VIIB:3.2:prop}
-{\itshape Let \(k\) be a pseudocompact ring containing
-\(\mathbb Q\), and let \(\mathbf L\) be a flat Lie algebra over
-\(\mathbf O_k\).
-\begin{enumerate}
-\item[\textup{(i)}]
-For every object \(C\) of \(\operatorname{Alf}/k\), let
-\(\mathfrak r(C)\) denote its radical. Then the map
+{\itshape Let \(k\) be a pseudocompact ring containing \(\mathbb Q\),
+\(\mathbf L\) a Lie algebra flat over \(\mathbf O_k\), \(C\) a profinite
+\(k\)-algebra of finite length and \(\mathfrak r(C)\) the radical of \(C\).
+The map
 \[
   \exp_{U(\mathbf L(C))}:
   \mathbf L(C)\otimes_C\mathfrak r(C)
   \longrightarrow
   \mathscr G(\mathbf L)(C)
 \]
-is bijective and functorial in \(C\) and \(\mathbf L\).
+is bijective and functorial in \(C\) and \(\mathbf L\).}
 
-\item[\textup{\SGAInlineRefTarget{sga3:VIIB:3.2:prop:item:ii}(ii)}]
-The natural morphism
-\[
-  \mathbf L
-  \longrightarrow
-  \operatorname{Lie}\bigl(\mathscr G(\mathbf L)\bigr)
-\]
-\textup{(cf.\ \SGARefLink{sga3:VIIB:2.6.2:prop}{2.6.2})} is an isomorphism of Lie algebras over
-\(\mathbf O_k\).
-\end{enumerate}}
-\footnote{\label{sga3:VIIB:nde:123}The editors added part
-\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}}, which follows immediately from \SGARefLink{sga3:VIIB:3.1:lemma}{3.1}.}
+\par\medskip\noindent\SGAInlineRefTarget{sga3:VIIB:3.2:prop:item:ii}%
+\emph{Addition} (after the Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{B}; our formulation). Under the hypotheses of the
+proposition, the morphism of \(\mathbf O_k\)-Lie algebras
+\(\tau_{\mathbf L}\colon\mathbf L\to\operatorname{Lie}(\mathscr G(\mathbf L))\) of the
+Addition after \SGARefLink{sga3:VIIB:2.6.2:prop:item:iii}{2.6.2} is an isomorphism. Indeed,
+\(\operatorname{Lie}(\mathscr G(\mathbf L))(C)\) is the set of primitive elements of
+\(U(\mathbf L(C))\), and \(\mathbf L(C)\) is free over each local component
+\(C'\) of \(C\), \(U(\mathbf L(C))\) being the product of the
+\(U(\mathbf L(C'))\); so Lemma \SGARefLink{sga3:VIIB:3.1:lemma}{3.1}, applied over each \(C'\), shows that
+these primitive elements are exactly the image of \(\mathbf L(C)\). This is
+what is used, as ``\(\mathbf L=\operatorname{Lie}(\mathscr G(\mathbf L))\)'', in
+3.3, (iii)~\(\Rightarrow\)~(i), and in 3.3.2.
+
 

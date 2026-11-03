@@ -32,15 +32,14 @@ which, as in \SGARefLink{sga3:VIIB:3.2:prop}{3.2}, we identify with a subset of 
   \frac{x^{p_m}y^{q_m}}{p_m!\,q_m!}
   \\
   &=
-  \sum_{\ell\geq1}P_\ell(x,y).
+  \sum_{\ell\geq1}P_\ell(x,y),
 \end{aligned}
 \]
-Here \(P_\ell(x,y)\) denotes the sum of the monomials of total
-degree \(\ell\) in \(x\) and \(y\). For example,
+where \(P_\ell(x,y)\) denotes the sum of the monomials of total degree
+\(\ell\) in \(x\) and \(y\). We have, for example,
 \[
   P_1(x,y)=x+y,
 \]
-and
 \[
 \begin{aligned}
   P_2(x,y)
@@ -52,14 +51,14 @@ and
   \underbrace{
     \frac12\bigl(x^2+xy+yx+y^2\bigr)
   }_{m=2}
-  \\
-  &=
+  =
   \frac12(xy-yx)
   =
-  \frac12[x,y].
+  \frac12[x,y],
 \end{aligned}
 \]
-Moreover, \(P_3(x,y)\) is the sum of the following three terms:
+\phantomsection
+\label{sga3:VIIB:3.2.1:P3}
 \[
 \begin{aligned}
   P_3(x,y)
@@ -84,28 +83,19 @@ Moreover, \(P_3(x,y)\) is the sum of the following three terms:
     \frac13\left(
       x^3+x^2y+yx^2+xyx+yxy+y^2x+xy^2+y^3
     \right)
-  }_{m=3}.
-\end{aligned}
-\]
-Consequently,
-\phantomsection
-\label{sga3:VIIB:3.2.1:P3}
-\[
-  P_3(x,y)
-  =
+  }_{m=3}
+  \\
+  ={}&
   \frac1{12}
   \bigl(
     x^2y+yx^2-2xyx-2yxy+y^2x+xy^2
   \bigr)
   =
-  \frac1{12}
-  \bigl(
-    [[y,x],x]+[y,[y,x]]
-  \bigr).
+  \frac1{12}\bigl[[y,x],x\bigr]+\frac1{12}\bigl[y,[y,x]\bigr].
+\end{aligned}
 \]
 
-More generally, one can prove the Campbell--Hausdorff
-formula:
+One can show more generally that
 \phantomsection
 \label{sga3:VIIB:3.2.1:campbell-hausdorff}
 \[
@@ -136,17 +126,19 @@ formula:
     \prod_{i=1}^{m-1}
     \frac{(\operatorname{ad}x)^{p_i}}{p_i!}
     \frac{(\operatorname{ad}y)^{q_i}}{q_i!}
-  \right)(x).
+  \right)(x),
 \end{aligned}
 \]
-Here the \(p_j,q_i\in\mathbb N\) satisfy
-\[
-  p_i+q_i\geq1
-  \quad(1\leq i\leq m-1),
-  \qquad
-  p_m+\sum_{i=1}^{m-1}(p_i+q_i)=\ell-1.
-\]
-In other words, in the sums above every nonzero ``Lie monomial''
-has total degree \(\ell\). For a proof, see N.~Jacobson,
-\emph{Lie Algebras} (Interscience, 1962), \S V.5, or
-\textup{[BLie]}, II, \S6.4, Theorem~2.
+where the \(p_i,q_i\) are natural numbers such that \(p_i+q_i\geq1\) for
+\(1\leq i\leq m-1\), with \(p_m+\sum_{i=1}^{m-1}(p_i+q_i)=\ell-1\) in the first
+sum and \(\sum_{i=1}^{m-1}(p_i+q_i)=\ell-1\) in the second, so that every
+nonzero term has total degree \(\ell\) \textup{(}for a proof of this
+\emph{Campbell--Hausdorff formula}, see Jacobson, \emph{Lie Algebras}, V,
+\S~5, Interscience Publishers\textup{)}.\footnote{Translator's note: the 1970 text prints
+\(P_\ell(x,y)=\sum\frac{(-1)^{m+\ell}}{m\cdot\ell}(\operatorname{ad}y)^{q_m}(\operatorname{ad}x)^{p_m}\cdots
+(\operatorname{ad}y)^{q_1}(\operatorname{ad}x)^{p_1-1}x\), summed over the sequences of natural numbers
+\(p_1,q_1,\ldots,p_m,q_m\) with \(p_i+q_i>0\) and \(\sum(p_i+q_i)=\ell\). That formula is not correct: the
+factors \(1/(p_i!\,q_i!)\) are missing, and for \(\ell=2\) its terms add up to \(\frac14[x,y]\), not
+\(\frac12[x,y]\). The formula above, Dynkin's form of the Campbell--Hausdorff formula, is the correction
+given by the Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{B}, after N.~Bourbaki,
+\emph{Groupes et alg\`ebres de Lie}, Chap.~II, \S~6, no.~4, Th.~2.}

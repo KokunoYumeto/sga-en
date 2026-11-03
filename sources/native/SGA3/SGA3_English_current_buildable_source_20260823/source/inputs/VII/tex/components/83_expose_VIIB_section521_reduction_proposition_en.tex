@@ -3,86 +3,92 @@
 \phantomsection
 \label{sga3:VIIB:5.2.1}
 
-Let \(A\) be the affine algebra of \(G\), let \(I_A\) be its
-augmentation ideal, and put
-\[
-  I=B\cap I_A.
-\]
-By \SGARefLink{sga3:VIIB:2.4}{2.4},
-\[
-  H=\operatorname{Spf}\bigl(A/\overline{AI}\bigr)
-\]
-and
-\[
-  B
-  =
-  \left\{
-    x\in A\ \middle|\
-    \Delta(x)-x\widehat\otimes1
-    \in A\widehat\otimes\overline{AI}
-  \right\}.
-\]
-\phantomsection
-\label{sga3:VIIB:5.2.1:tensor-order-source-note}
-\noindent\textit{Translator's note.}\enspace The French text prints
-\(\Delta(x)-1\widehat\otimes x\) here. The right-quotient
-convention fixed in \SGARefLink{sga3:VIIB:5.0}{5.0} and \SGARefLink{sga3:VIIB:5.1:proposition}{Proposition~5.1}, together with the
-defining condition
-\((\operatorname{id}_A\widehat\otimes\pi)\Delta(x)
-=x\widehat\otimes1\), requires
-\(\Delta(x)-x\widehat\otimes1\), which is used above.
-
-Put
+Let \(I\) be the maximal ideal of \(B\), and put
 \[
   \omega=I/\overline{I^2}.
 \]
-For each \(r\), denote by \(I_r\) the closed subideal of \(I\)
-consisting of the elements \(x\) such that
-\[
-  x^{p^r}=0,
-\]
-and denote by \(\omega_r\) the canonical image of \(I_r\) in
-\(\omega\). We shall prove the following proposition.
-
-\medskip
-\noindent\textbf{Proposition.}
+Denote by \(I_r\) the closed vector subspace of \(I\) formed by the
+elements \(x\) such that \(x^{p^r}=0\), and by \(\omega_r\) the
+canonical image of \(I_r\) in \(\omega\).
 \phantomsection
 \label{sga3:VIIB:5.2.1:section-proposition}
-{\itshape If there exists a continuous section
+We shall see that \(B\) is isomorphic to
 \[
-  \sigma:\omega\longrightarrow I
-\]
-of the projection \(I\to I/\overline{I^2}\) such that
-\[
-  \sigma(\omega_r)\subset I_r
-\]
-for every \(r\), then \(B\) is isomorphic to
-\[
-  k[[\omega]]
-  \big/
-  \bigl((x^{p^r})\bigr)_{x\in\omega_r}.
-\]}
-
-Indeed, such a section extends to a continuous morphism
-\[
-  k[[\omega]]\longrightarrow B,
-\]
-which factors through
-\[
-  B'
-  =
-  k[[\omega]]
-  \big/
-  \bigl((x^{p^r})\bigr)_{x\in\omega_r}.
-\]
-In \SGARefLink{sga3:VIIB:5.2.2}{5.2.2}--\SGARefLink{sga3:VIIB:5.2.5}{5.2.5} we prove that the resulting morphism
-\[
-  \varphi:
-  B'
-  =
   k[[\omega]]
   \big/
   \bigl((x^{p^r})\bigr)_{x\in\omega_r}
-  \longrightarrow B
 \]
-is an isomorphism.
+whenever there exists a section \(\sigma:\omega\to I\) of the canonical
+projection of \(I\) onto \(I/\overline{I^2}\) such that
+\(\sigma(\omega_r)\subset I_r\) for every \(r\): such a section indeed
+extends to a continuous homomorphism \(k[[\omega]]\to B\), which
+factors through
+\[
+  B'
+  =
+  k[[\omega]]
+  \big/
+  \bigl((x^{p^r})\bigr)_{x\in\omega_r}.
+\]
+We prove in \SGARefLink{sga3:VIIB:5.2.2}{5.2.2} to \SGARefLink{sga3:VIIB:5.2.5}{5.2.5} that the homomorphism
+\[
+  \varphi:B'\longrightarrow B
+\]
+which it induces is bijective.
+
+What precedes applies in particular when the \emph{filtration} of
+\(\omega\) is \emph{stationary}, that is, when there exists an integer
+\(n_0\) such that \(\omega_n=\omega_{n_0}\) for \(n_0\leq n<+\infty\).
+In this case, indeed, one can construct \(\sigma\) first on
+\(\omega_1\), then on a complement \(\omega'_2\) of \(\omega_1\) in
+\(\omega_2\), then on a complement \(\omega'_3\) of \(\omega_2\) in
+\(\omega_3\), \ldots, and finally on a complement \(\omega'_\infty\) of
+\(\omega_{n_0}\) in \(\omega\). It is clear that one thus obtains an
+isomorphism of \(k[[\omega]]/((x^{p^r}))_{x\in\omega_r}\) onto the
+completed tensor product of the algebras
+\[
+\begin{gathered}
+  k[[\omega_1]]/\bigl((x^p)\bigr)_{x\in\omega_1},\quad
+  k[[\omega'_2]]/\bigl((x^{p^2})\bigr)_{x\in\omega'_2},\quad\ldots,
+  \\
+  k[[\omega'_{n_0}]]/\bigl((x^{p^{n_0}})\bigr)_{x\in\omega'_{n_0}},\quad
+  k[[\omega'_\infty]].
+\end{gathered}
+\]
+
+The filtration of \(\omega\) is evidently stationary if
+\(\omega_r=\omega\) for \(r\) large enough (case \textup{(i)}), or if
+\(\omega\) is finite-dimensional (case \textup{(ii)}). The statement
+above therefore implies our theorem.
+
+\medskip
+\noindent\emph{Addition} (after the Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{B}, 5.2.1.A--5.2.1.B; our formulation). A
+section \(\sigma\) of the required kind also exists in the following
+case, where the filtration need not be stationary. Let
+\(\omega_\infty\) be the closure of \(\bigcup_r\omega_r\). For
+\(r\geq1\), let \(S_r\) be a closed complement in \(I_r\) of
+\(I_r\cap(\overline{I^2}+I_{r-1})\); the projection \(I\to\omega\) maps
+\(S_r\) isomorphically onto a complement \(\omega'_r\) of
+\(\omega_{r-1}\) in \(\omega_r\). Let \(\theta\) be the morphism into
+\(\omega_\infty\), defined on the direct sum \(\widehat\bigoplus_rS_r\)
+of the \(S_r\) in the category of linearly compact vector spaces, which
+is the projection on each \(S_r\). If \(\theta\) is an isomorphism, one
+defines \(\sigma\) on \(\omega_\infty\) by composing \(\theta^{-1}\) with
+the morphism \(\widehat\bigoplus_rS_r\to I\) given by the inclusions,
+and on a complement of \(\omega_\infty\) in \(\omega\) by any continuous
+section; then \(\sigma(\omega_r)\subset S_1+\cdots+S_r\subset I_r\). By
+duality \textup{(0.2.2)}, \(\theta\) is an isomorphism if and only if the
+vector space \(V=\omega_\infty^\dagger\), filtered by the orthogonals
+\(V_r\) of the \(\omega_r\), is complete, that is,
+\(V\to\varprojlim_rV/V_r\) is bijective. The re-edition also asserts
+that \(\sigma\) exists when this filtration of \(V\) splits, that is,
+when \(V\) is the direct sum of subspaces \(F_r\) with
+\(V_r=\bigoplus_{i\geq r}F_i\); such a splitting exists when \(V\) has
+countable dimension (by an inductive choice of the \(F_r\), a proof
+which the re-edition credits to E.~Bouscaren), but not always: the space
+of all sequences \((u_i)_{i\in\mathbb N}\) of elements of \(k\),
+filtered by the subspaces of sequences vanishing in degrees \(<r\), has
+successive quotients of dimension \(1\) and is not of countable
+dimension. We have not been able to check that a section \(\sigma\) of
+the required kind exists in this second case.

@@ -4,99 +4,70 @@
 \phantomsection
 \label{sga3:VIIB:0.2}
 Let \(A\) be a commutative pseudocompact ring. A
-\emph{pseudocompact \(A\)-module} \(M\) is a separated, complete
+\emph{pseudocompact \(A\)-module} \(M\) is a separated, complete, unital
 topological \(A\)-module having a basis of neighborhoods of \(0\)
 consisting of submodules \(M'\) for which \(M/M'\) has finite length
-over \(A\).
-
-If \(M\) and \(N\) are pseudocompact \(A\)-modules, a
+over \(A\). If \(M\) and \(N\) are pseudocompact \(A\)-modules, a
 \emph{morphism} from \(M\) to \(N\) is, by definition, a continuous
-\(A\)-linear map. We write
+\(A\)-linear map. The pseudocompact \(A\)-modules form an abelian
+category, which has as cogenerators the pseudocompact \(A\)-modules of
+finite length (whose topology is therefore discrete). If \((M_i)\) is a
+projective system of pseudocompact modules, the projective limit of the
+\(M_i\) has as underlying module the projective limit of the underlying
+modules, and as topology the projective-limit topology. Moreover, the
+projective-limit functor is exact when the indices form a filtered
+ordered set (Axiom AB5\(^*\)). Likewise, if \(f\) is a morphism of
+pseudocompact \(A\)-modules, \(\operatorname{Coker}f\) has as underlying
+module the cokernel of the underlying modules, and the topology of
+\(\operatorname{Coker}f\) is the quotient of that of the target of \(f\)
+(cf.\ [CA], IV, \S~3).
+
+\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{B}; our formulation).
+\emph{Some details on the category \(\operatorname{PC}(A)\) of pseudocompact \(A\)-modules} (cf.\ [CA],
+IV, \S~3).
+
+(a) Let \((s_i)\colon(M_i)\to(N_i)\) be a morphism of projective systems of modules over a ring,
+indexed by a filtered ordered set, such that every \(s_i\) is surjective with Artinian kernel. Then
+\(\varprojlim_is_i\) is surjective ([CA], IV, \S~3, Lemma~1; for a proof, N.~Bourbaki, \emph{Th\'eorie
+des ensembles}, Chap.~III, \S~7, no.~4, Th.~1 and Example~2).
+
+(b) If \(K\) is a closed submodule of a pseudocompact module \(M\), then \(M/K\), with the quotient
+topology, is pseudocompact. Indeed, the submodules \((K+L)/K\), \(L\) open in \(M\), have finite
+colength, and their intersection is \(0\) because \(K=\bigcap_L(K+L)\) is closed; so the canonical map
+\(M/K\to\varprojlim_LM/(K+L)\) is injective. It is surjective by (a), applied to the maps
+\(M/L\to M/(K+L)\), whose kernels have finite length, since \(M=\varprojlim_LM/L\).
+
+\phantomsection\label{sga3:VIIB:0.2.D}%
+(c) Let \((M_i)\) be a filtered decreasing family of closed submodules of a pseudocompact module \(M\).
+Then \(M\to\varprojlim_iM/M_i\) is surjective, with kernel \(\bigcap_iM_i\). Indeed, for \(L\) open in
+\(M\), the submodules \(M_i+L\) have a smallest element, \(M/L\) having finite length; so
+\(M/L\to\varprojlim_iM/(M_i+L)\) is surjective with kernel of finite length, and by (a) and (b) the
+module \(M=\varprojlim_LM/L\) maps onto \(\varprojlim_L\varprojlim_iM/(M_i+L)=\varprojlim_iM/M_i\).
+Consequently, for every closed submodule \(N\) of \(M\),
 \[
-  \operatorname{Hom}_c(M,N)
+  N+\bigcap_iM_i=\bigcap_i(N+M_i):
 \]
-for the group of these morphisms.
+apply the snake lemma to the morphism from the exact sequence \(0\to N\to M\to M/N\to0\) to the exact
+sequence \(0\to\varprojlim_iN/(N\cap M_i)\to\varprojlim_iM/M_i\to\varprojlim_iM/(N+M_i)\), whose first
+two components are surjective by what precedes, \(N\) being pseudocompact.
 
-\medskip
-\noindent\SGAInlineRefTarget{sga3:vii:proposition:0-2-b}\textbf{Proposition 0.2.B.}\footnote{The editors have stated
-the results of this paragraph separately in the following proposition,
-and have then indicated the steps of the proof; cf.\ \textup{[CA]},
-\S~IV.3, or \textup{[DG70]}, \S~V.2.}
-\phantomsection
-\label{sga3:VIIB:0.2.B}
-{\itshape
-\begin{enumerate}
-  \item[\textup{(i)}]
-  The pseudocompact \(A\)-modules form an abelian category, denoted
-  \(\operatorname{PC}(A)\). In particular, for every morphism
-  \(f:M\to N\), the submodule \(\operatorname{Im}(f)\) is complete and
-  hence closed in \(N\).
+\phantomsection\label{sga3:vii:proposition:0-2-b}%
+(d) Let \(f\colon M\to N\) be a morphism of pseudocompact modules, with kernel \(K\). The continuous
+bijection \(M/K\to f(M)\) is a homeomorphism when \(f(M)\) carries the topology induced by \(N\); hence
+\(f(M)\) is complete, so closed in \(N\), and \(N/f(M)\) is pseudocompact by (b). In particular a
+bijective morphism of pseudocompact modules is an isomorphism. To see this, identify \(M/K\), which is
+pseudocompact by (b), with \(f(M)\), and let \(P\) be an open submodule of \(M/K\). The traces \(N'_i\)
+on \(f(M)\) of the open submodules \(N_i\) of \(N\) are closed submodules of \(M/K\) (they are open, hence
+closed, for the induced topology, which is coarser), with intersection \(0\). As \((M/K)/P\) has finite length, the submodules \(N'_i+P\) have a smallest element
+\(N'_{i_0}+P\), and by (c) \(N'_{i_0}+P=\bigcap_i(N'_i+P)=P\). So \(P\) contains \(N'_{i_0}\) and is
+open for the induced topology.
 
-  \item[\textup{(ii)}]
-  The pseudocompact \(A\)-modules of finite length, whose topology is
-  therefore discrete, form a system of cogenerators of
-  \(\operatorname{PC}(A)\).
+(e) A product of exact sequences of pseudocompact modules is exact, kernels and cokernels having as
+underlying modules those of the underlying homomorphisms. For the axiom AB5\(^*\), see A.~Grothendieck,
+\emph{Sur quelques points d'alg\`ebre homologique}, T\^ohoku Math.\ J.\ \textbf{9} (1957), 1.5.
 
-  \item[\textup{\SGAInlineRefTarget{sga3:vii:proposition:0-2-b:item:iii}(iii)}]
-  Infinite products and filtered projective limits are exact; in other
-  words, \(\operatorname{PC}(A)\) satisfies axiom
-  \((\mathrm{AB}5^{*})\).
-\end{enumerate}}
-
-For the reader's convenience, we briefly indicate the steps of the
-proof. First we use the following lemma (\textup{[CA]}, \S~IV.3,
-Lemma~1; for the proof, see \textup{[BEns]}, III, \S~\SGARefLink{sga3:VIIA:7.4}{7.4}, Theorem~1
-and Example~2).
-
-\medskip
-\noindent\textbf{Lemma 0.2.C.}
-\phantomsection
-\label{sga3:VIIB:0.2.C}
-\textit{Let \(B\) be a ring, let \(I\) be a filtered ordered set, and
-let \((M_i)\) and \((N_i)\) be two projective systems of left
-\(B\)-modules indexed by \(I\). Let
-\[
-  (s_i):(M_i)\longrightarrow(N_i)
-\]
-be a morphism of projective systems such that \(s_i\) is surjective
-and has Artinian kernel for every \(i\). Then the map}
-\[
-  \varprojlim_i s_i:
-  \varprojlim_i M_i
-  \longrightarrow
-  \varprojlim_i N_i
-\]
-\textit{is surjective.}
-
-\medskip
-\noindent\textbf{Corollary 0.2.D}
-\textit{(\textup{[CA]}, \S~IV.3, Propositions~10 and~11).}
-\phantomsection
-\label{sga3:VIIB:0.2.D}
-{\itshape Let \(M\) be a pseudocompact \(A\)-module.
-\begin{enumerate}
-  \item[\textup{(i)}]
-  If \(K\) is a closed submodule of \(M\), then \(M/K\), endowed with
-  the quotient topology, is a pseudocompact \(A\)-module.
-
-  \item[\textup{(ii)}]
-  Let \((M_i)\) be a filtered decreasing family of closed submodules
-  of \(M\).
-  \begin{enumerate}
-    \item[\textup{\SGAInlineRefTarget{sga3:VIIB:0.2.D:item:a}(a)}]
-    The canonical map
-    \[
-      M\longrightarrow\varprojlim_i M/M_i
-    \]
-    is surjective and has kernel \(\bigcap_i M_i\).
-
-    \item[\textup{\SGAInlineRefTarget{sga3:VIIB:0.2.D:item:b}(b)}]
-    For every closed submodule \(N\) of \(M\), one has
-    \[
-      N+\bigcap_i M_i
-      =
-      \bigcap_i(N+M_i).
-    \]
-  \end{enumerate}
-\end{enumerate}}
+(f) The modules of finite length even form a \emph{set} of cogenerators, up to isomorphism: \(M\) embeds
+in \(\prod_LM/L\), and a module of finite length \(n\) is the quotient of \(A^n\) by an open
+submodule.
 

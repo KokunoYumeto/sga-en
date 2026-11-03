@@ -5,246 +5,157 @@
 \addcontentsline{toc}{subsection}{\SGARefLink{sga3:VIIB:1.6}{1.6}. Étale formal varieties}
 
 To complete these generalities on formal varieties, it remains to
-define briefly the formal varieties that are étale over \(k\).
-\footnote{\label{sga3:VIIB:nde:70}\textit{Editors' note.} The original continued as follows:
-``A formal variety \(X\) over \(k\) is said to be étale if the
-diagonal morphism
-\(\Delta_X:X\to X\times X\) is a local isomorphism; that is, if
-\(\Delta_X\) induces an isomorphism from
-\(\mathcal O_{X\times X,\Delta_X(x)}\) onto
-\(\mathcal O_{X,x}\) for every point \(x\) of \(X\). It follows
-readily from SGA~I that this formulation is equivalent to each of the
-following two: the formal variety \(X\) is topologically flat and,
-for every point \(x\in X\) projecting to
-\(s\in\operatorname{Spf}(k)\),
-\(\mathcal O_{X,x}\widehat\otimes_k\kappa(s)\) is a finite separable
-extension of the residue field \(\kappa(s)\); or, if \(A\) denotes the
-affine algebra of \(X\), the local components \textup{(\SGARefLink{sga3:VIIB:0.1}{0.1})} of
-\(A\widehat\otimes_k(k/\mathfrak l)\) are finite étale algebras over
-\(k/\mathfrak l\), for every open ideal \(\mathfrak l\) of \(k\).''
-In what follows, the editors corrected the omission of the flatness
-hypothesis from the first condition above and supplied details for
-the equivalence of the conditions.}
+define briefly the étale formal varieties:
 
-\medskip
-\noindent\textbf{Recollections \SGARefLink{sga3:VIIB:1.6.A}{1.6.A}.}
+A formal variety \(X\) over \(k\) is said to be \emph{étale} if it is
+topologically flat over \(k\) and the diagonal morphism
+\(\Delta_X:X\to X\times X\) is a local isomorphism, that is, if
+\(\Delta_X\) induces an isomorphism of
+\(\mathcal O_{X\times X,\Delta_X(x)}\) onto \(\mathcal O_{X,x}\) for
+every point \(x\) of \(X\).\footnote{Translator's note: the 1970 text
+does not require \(X\) to be topologically flat in this definition; the
+condition is added in the Gille--Polo re-edition (2011),
+Exposé~VII\textsubscript{B}. It is needed for the equivalence with the two
+formulations that follow: if \(\kappa\) is a field,
+\(k=\kappa[\varepsilon]/(\varepsilon^2)\) and
+\(X=\operatorname{Spf}(\kappa)\), then
+\(\kappa\widehat\otimes_k\kappa=\kappa\), so that \(\Delta_X\) is an
+isomorphism, while \(\kappa\) is not flat over \(k\), and \(X\) satisfies
+neither of those formulations.} One sees easily with the aid of SGA~1 that
+this formulation is equivalent to each of the following two: the formal
+variety \(X\) is topologically flat and, for every point \(x\in X\)
+with projection \(s\in\operatorname{Spf}(k)\),
+\(\mathcal O_{X,x}\widehat\otimes_k\kappa(s)\) is a finite separable
+extension of the residue field \(\kappa(s)\) of \(s\); or again, if
+\(A\) denotes the affine algebra of \(X\), the local components
+\textup{(\SGARefLink{sga3:VIIB:0.1}{0.1})} of \(A\widehat\otimes_k(k/\mathfrak l)\) are finite étale
+algebras over \(k/\mathfrak l\), for every open ideal \(\mathfrak l\)
+of \(k\).
+
+\medskip\noindent
+\emph{Addition} (after the Gille--Polo re-edition (2011),
+Exposé~VII\textsubscript{B}; our formulation). The re-edition proves
+these equivalences and the properties of the functor \(X\mapsto X_e\)
+stated below (its 1.6.A--1.6.F). Here is an account, in seven steps
+\textup{(a)}--\textup{(g)}. Let \(X\) be a formal \(k\)-variety with
+affine algebra \(A\). For a point \(x\) of \(X\), that is, an open
+maximal ideal of \(A\), with image \(s\) in \(\operatorname{Spf}(k)\),
+we write \(k_s\) for the local component of \(k\) at \(s\) and
+\(\mathfrak n_s\) for its maximal ideal; the local component
+\(\mathcal O_{X,x}\) of \(A\) \textup{(\SGARefLink{sga3:VIIB:0.1.1}{0.1.1})} is a \(k_s\)-algebra.
+
+\smallskip
+\noindent\textbf{(a)}
 \phantomsection
 \label{sga3:VIIB:1.6.A}
-\textit{(i)} Recall first \textup{(cf.\ EGA \(0_{\mathrm{IV}}\),
-19.10.2)} that a topological \(k\)-algebra \(A\) is said to be
-\emph{formally étale over \(k\)}---for the given topologies on \(k\)
-and \(A\), respectively for the discrete topologies---if, for every
-discrete topological \(k\)-algebra \(C\) \textup{(not necessarily
-Artinian)} and every nilpotent ideal \(J\) of \(C\), every continuous
-morphism of \(k\)-algebras
-\[
-  A\longrightarrow C/J
-\]
-lifts uniquely to a continuous morphism \(A\to C\), where \(A\) is
-endowed with the given topology, respectively with the discrete
-topology.
+\emph{Formally étale profinite algebras.} We say that \(A\) is
+\emph{formally étale over \(k\)} if, for every \(k\)-algebra \(C\)
+with the discrete topology for which \(k\to C\) is continuous, and
+every nilpotent ideal \(J\) of \(C\), every continuous morphism of
+\(k\)-algebras \(A\to C/J\) is the reduction of exactly one continuous
+morphism of \(k\)-algebras \(A\to C\) \textup{(compare
+EGA~\(0_{\mathrm{IV}}\), 19.10.2)}. It is enough to consider ideals
+\(J\) with \(J^2=0\), since \(C\to C/J\) is a composite of finitely
+many surjections with square-zero kernels. If \(k\to k'\) is a
+morphism of pseudocompact rings and \(C\) is a discrete
+\(k'\)-algebra, the continuous \(k'\)-morphisms
+\(A\widehat\otimes_kk'\to C\) are the continuous \(k\)-morphisms
+\(A\to C\); hence \(A\widehat\otimes_kk'\) is formally étale over
+\(k'\) when \(A\) is formally étale over \(k\).
 
-This property is plainly preserved under base change. Thus, for
-every morphism \(k\to k'\) of pseudocompact rings,
-\[
-  A\widehat\otimes_k k'
-\]
-is formally étale over \(k'\). It is also enough to verify the
-lifting condition for square-zero ideals \(J\); cf.\ EGA
-\(\mathrm{IV}_4\), 17.1.2~(ii).
+Let \(F\in k[T]\) be monic of degree \(d\geq1\) and \emph{separable},
+that is, \(GF+HF'=1\) for some \(G,H\in k[T]\). Then
+\(B=k[T]/(F)\), which is free of rank \(d\), is formally étale over
+\(k\) for the product topology. Indeed, with \(C\) and \(J\) as above
+and \(J^2=0\), the morphisms \(B\to C\) lifting a given
+\(\phi:B\to C/J\) correspond to the roots of \(F\) in \(C\) that lift
+\(\phi(t)\), where \(t\) is the class of \(T\); they are continuous,
+since their kernels contain \(\mathfrak lB\), which is open,
+\(\mathfrak l\) being the kernel of \(k\to C\). If \(u\in C\) lifts
+\(\phi(t)\), then \(F(u)\in J\) and \(H(u)F'(u)\in1+J\), so \(F'(u)\)
+is invertible; as \(F(u+h)=F(u)+F'(u)h\) for \(h\in J\), the element
+\(u-F'(u)^{-1}F(u)\) is the only root of \(F\) of the form \(u+h\),
+\(h\in J\). Without the topologies, the same argument shows that \(B\)
+is an étale \(k\)-algebra \textup{(EGA~\(\mathrm{IV}_4\), 17.3.1)}.
 
-The algebra \(A\) is said to be \emph{étale over \(k\)} if it is
-formally étale over \(k\) for the discrete topologies and is, in
-addition, a \(k\)-algebra of finite presentation; cf.\ EGA
-\(\mathrm{IV}_4\), 17.3.2~(ii). In what follows, when \(k\) is a
-pseudocompact ring and \(A\) a profinite \(k\)-algebra, ``formally
-étale'' refers to the given topologies unless the contrary is stated.
-
-\smallskip
-\noindent\textit{(ii)} Recall also that if \(F\in k[T]\) is a
-separable monic polynomial of degree \(d\geq1\), meaning that the
-ideal generated by \(F\) and its derivative \(F'\) is all of
-\(k[T]\), then
-\[
-  B=k[T]/(F),
-\]
-which is free of rank \(d\) over \(k\) and is endowed with the product
-topology, is formally étale over \(k\).
-
-Indeed, let \(C\) be a discrete \(k\)-algebra, so that the kernel
-\(\mathfrak l\) of \(k\to C\) is an open ideal of \(k\); let \(J\)
-be a square-zero ideal of \(C\); and let
-\(\phi:B\to C/J\) be a continuous morphism of \(k\)-algebras. Since
-\(B\) is a free \(k\)-module of finite rank,
-\(\mathfrak lB\) is an open ideal of \(B\), and hence every lift
-\(\Phi:B\to C\) of \(\phi\) is automatically continuous.
-
-Let \(t\) be the image of \(T\) in \(B\), and choose any lift
-\(u_0\in C\) of \(\phi(t)\). Then \(F(u_0)\in J\), since
-\(\phi(t)\) is a root of \(F\). There exist \(G,H\in k[T]\) such that
-\[
-  GF+HF'=1.
-\]
-Consequently,
-\[
-  H(u_0)F'(u_0)=1-G(u_0)F(u_0).
-\]
-The right-hand side is invertible because \(F(u_0)\) is square-zero,
-and therefore \(F'(u_0)\) is invertible. We seek \(h\in J\) such that
-\(u=u_0+h\) is a root of \(F\). This is equivalent to
-\[
-  0=F(u)=F(u_0)+F'(u_0)h,
-\]
-whose unique solution is
-\[
-  h=-F'(u_0)^{-1}F(u_0)\in J.
-\]
-The same proof, with no continuity assumptions on the morphisms
-\(k\to C\), \(\phi\), and \(\Phi\), also shows that \(B\) is an
-étale \(k\)-algebra.
+If \(A=A_1\times A_2\), then \(A\) is formally étale over \(k\) if and
+only if \(A_1\) and \(A_2\) are. Indeed, the preceding argument,
+applied to \(T^2-T\), for which \((2T-1)^2-4(T^2-T)=1\), shows that
+every idempotent of \(C/J\) is the reduction of exactly one idempotent
+of \(C\). If \(e\) is the idempotent with \(A_1=Ae\), a continuous
+morphism \(\phi:A\to C/J\) and all its lifts \(\Phi\) therefore satisfy
+\(\Phi(e)=f\), where \(f\) is the idempotent lifting \(\phi(e)\), and to
+lift \(\phi\) amounts to lifting separately its restrictions
+\(A_1\to(C/J)\phi(e)\) and \(A_2\to(C/J)(1-\phi(e))\) to \(Cf\) and
+\(C(1-f)\). In the same way, if \(e\) is an idempotent of \(k\) with
+\(eA=A\), then \(A\) is formally étale over \(k\) if and only if it is
+so over the factor \(ek\) of \(k\). \textup{(EGA~\(0_{\mathrm{IV}}\),
+19.3.5~(v), states the analogue for formally smooth algebras; the
+argument given there treats a homomorphism defined on a product as the
+family of its restrictions to the factors, which is incorrect, as the
+re-edition points out. The argument by idempotents proves that
+statement as well.)}
 
 \smallskip
-\noindent\textit{(iii)} Finally, if
-\[
-  A=A_1\times\cdots\times A_n
-\]
-is a finite product, then \(A\) is formally étale over \(k\) if and
-only if every \(A_i\) is.
-It is enough to prove this for \(n=2\). Let \(e=1_{A_1}\) be the
-idempotent such that \(A_1=Ae\) and \(A_2=A(1-e)\), and suppose that
-a continuous morphism
-\[
-  \phi:A\longrightarrow C/J
-\]
-is given, where \(J\) is square-zero. The polynomial
-\(F=X^2-X\) is separable, since
-\[
-  F'=2X-1
-  \qquad\text{and}\qquad
-  (F')^2-4F=1.
-\]
-Therefore the idempotent \(\phi(e)\) of \(C/J\) lifts uniquely to an
-idempotent \(f\) of \(C\). Hence
-\[
-  C=Cf\oplus C(1-f),
-\]
-and giving a lift \(\Phi\) is equivalent to giving two morphisms
-\[
-  \Phi_1:A_1\longrightarrow Cf,
-  \qquad
-  \Phi_2:A_2\longrightarrow C(1-f),
-\]
-lifting the respective restrictions of \(\phi\). The same argument
-shows that if \(e\) is an idempotent of \(k\) and \(A=Ae\), then
-\(A\) is formally étale over \(k\) if and only if it is formally
-étale over the local component \(k_e\), identified with \(ke\).
-
-Now let \(X\) be a formal \(k\)-variety with affine algebra \(A\).
-If \(x\) is a point of \(X\), that is, an open maximal ideal
-\(\mathfrak m\) of \(A\), and \(s\) is its image in
-\(\operatorname{Spf}(k)\), we denote by \(k_{\mathfrak m}\), or
-\(k_s\), the local component of \(k\) corresponding to \(s\).
-
-\medskip
-\noindent\textbf{Definition 1.6.B.}
+\noindent\textbf{(b)}
 \phantomsection
 \label{sga3:VIIB:1.6.B}
-\textit{The following conditions are equivalent:}
-\begin{enumerate}
-\item[\textup{(a)}] \(A\) is formally étale over \(k\).
-\item[\textup{(b)}] For every \(\mathfrak m\in\Upsilon(A)\),
-  \(A_{\mathfrak m}\) is formally étale over \(k\), or equivalently
-  over \(k_{\mathfrak m}\).
-\item[\textup{(c)}] For every open ideal \(\mathfrak l\) of \(k\),
-  \[
-    A\widehat\otimes_k(k/\mathfrak l)
-    =
-    A/A\mathfrak l
-  \]
-  is formally étale over \(k/\mathfrak l\).
-\item[\textup{(d)}] For every \(\mathfrak m\in\Upsilon(A)\) and every
-  open ideal \(\mathfrak l\) of \(k_{\mathfrak m}\),
-  \(A_{\mathfrak m}/A_{\mathfrak m}\mathfrak l\) is formally étale
-  over \(k_{\mathfrak m}/\mathfrak l\).
-\end{enumerate}
+\emph{Reductions.} The following conditions are equivalent:
+\textup{(\(\alpha\))} \(A\) is formally étale over \(k\);
+\textup{(\(\beta\))} every local component \(\mathcal O_{X,x}\) of
+\(A\) is formally étale over \(k\), or, equivalently, over \(k_s\);
+\textup{(\(\gamma\))} \(A\widehat\otimes_k(k/\mathfrak l)\) is
+formally étale over \(k/\mathfrak l\) for every open ideal
+\(\mathfrak l\) of \(k\). Indeed, in \textup{(a)} the kernel
+\(\mathfrak l\) of \(k\to C\) is open, and continuous morphisms from
+\(A\) to \(C\) or to \(C/J\) are the same as continuous morphisms from
+\(A\widehat\otimes_k(k/\mathfrak l)\); this gives
+\textup{(\(\alpha\))}\(\Leftrightarrow\)\textup{(\(\gamma\))}. Next, a
+continuous morphism \(\phi:A\to C/J\) has an open kernel, which
+contains all but finitely many factors of
+\(A=\prod_x\mathcal O_{X,x}\); so \(\phi\) factors through the
+projection of \(A\) onto a finite product of local components, which
+is the quotient of \(A\) by an idempotent, and by \textup{(a)} so do the
+lifts of \(\phi\); this gives
+\textup{(\(\alpha\))}\(\Leftrightarrow\)\textup{(\(\beta\))}.
 
-We say that \(X\) is \emph{étale over \(k\)} if these conditions
-hold, and write
-\[
-  \operatorname{Vaf}^{\mathrm{\acute{e}t}}/k
-\]
-for the full subcategory of \(\operatorname{Vaf}/k\) consisting of
-formal varieties that are étale over \(k\).
-
-Indeed, suppose that
-\[
-  \phi:A\longrightarrow C/J
-\]
-is a continuous morphism of \(k\)-algebras, where \(C\) is a
-discrete \(k\)-algebra and \(J\) is square-zero. Then
-\(I=\operatorname{Ker}(\phi)\) is an open ideal of \(A\), so \(A/I\)
-is Artinian. Thus \(I\) is contained in only finitely many open
-maximal ideals
-\[
-  \mathfrak m_1,\ldots,\mathfrak m_r.
-\]
-It therefore contains the product of the components
-\(A_{\mathfrak m}\) for
-\(\mathfrak m\notin\{\mathfrak m_1,\ldots,\mathfrak m_r\}\). This
-product is \(A(1-e)\), where \(e\) is the idempotent of \(A\) for
-which
-\[
-  Ae=\prod_{i=1}^{r}A_{\mathfrak m_i}.
-\]
-Hence \(\phi(e)=1_{C/J}\), and giving a continuous lift of \(\phi\)
-is equivalent to giving a continuous lift of the induced morphism
-\[
-  Ae\simeq A/A(1-e)\longrightarrow C/J.
-\]
-
-On the other hand,
-\[
-  A\simeq\varprojlim_{\mathfrak l}A/A\mathfrak l.
-\]
-The equivalence of the stated conditions follows readily from these
-observations and the preceding recollections.
-
-\medskip
-\noindent\textbf{Definitions 1.6.C.}
-\phantomsection
-\label{sga3:VIIB:1.6.C}
-Put
-\[
-  \kappa(k)
-  =
-  \prod_{s\in\operatorname{Spf}(k)}\kappa(s),
-\]
-endowed with the product topology. Thus the formal variety
-\(\operatorname{Spf}(\kappa(k))\) is the direct sum of the schemes
-\(\operatorname{Spec}\kappa(s)\), for
-\(s\in\operatorname{Spf}(k)\). We write \(S_{\kappa(k)}\) for the
-scheme that is the direct sum of the same
-\(\operatorname{Spec}\kappa(s)\).
-
-For every formal variety \(X\) over \(k\), put
-\[
-  X_\kappa
-  =
-  X\widehat\otimes_k\kappa(k).
-\]
-This is the formal variety over \(\kappa(k)\) obtained by base
-change. It has the same points as \(X\), and if
-\(x\in X\) projects to \(s\in\operatorname{Spf}(k)\), then
-\[
-  \mathcal O_{X_\kappa,x}
-  =
-  \mathcal O_{X,x}\widehat\otimes_k\kappa(s).
-\]
-The base-change functor
-\[
-  \operatorname{Vaf}/k
-  \longrightarrow
-  \operatorname{Vaf}/\kappa(k)
-\]
-sends \(\operatorname{Vaf}^{\mathrm{\acute{e}t}}/k\) into
-\(\operatorname{Vaf}^{\mathrm{\acute{e}t}}/\kappa(k)\), by \SGARefLink{sga3:VIIB:1.6.A}{1.6.A}~\SGARefLink{sga3:vii:paragraph:5-1:equation:i}{(i)}.
+Now let \(R\) be a local ring of finite length, with maximal ideal
+\(\mathfrak n_R\) and residue field \(\kappa\), and let \(B\) be a
+local profinite \(R\)-algebra, with residue field \(L\), finite over
+\(\kappa\). \emph{Then \(B\) is formally étale over \(R\) if and only
+if \(B\) is a finite étale \(R\)-algebra, and then
+\(B\simeq R[T]/(F)\) for a monic separable \(F\).} A finite étale
+\(R\)-algebra has finite length, hence the discrete topology, and is
+formally étale \textup{(EGA~\(\mathrm{IV}_4\), 17.3.1)}. Conversely,
+let \(B\) be formally étale over \(R\). By base change,
+\(B_0=B\widehat\otimes_R\kappa\) is formally étale over \(\kappa\),
+and so is \(B_0\otimes_\kappa K\) over \(K\), where \(K\) is a finite
+normal extension of \(\kappa\) containing \(L\). The local components
+\(B'\) of \(B_0\otimes_\kappa K\), finite in number, have residue
+field \(K\), because \(K\) is normal and contains \(L\); thus
+\(B'=K\oplus\mathfrak n'\), \(\mathfrak n'\) being the maximal ideal.
+For every open ideal \(\mathfrak N\neq B'\) of \(B'\), the projection
+\(B'\to B'/(\mathfrak n'^2+\mathfrak N)\) and the composite of
+\(B'\to K\) with the structure map
+\(K\to B'/(\mathfrak n'^2+\mathfrak N)\) are two continuous
+\(K\)-morphisms that lift \(B'\to K\); hence they coincide, and
+\(\mathfrak n'\subset\mathfrak n'^2+\mathfrak N\). So
+\(\mathfrak n'\) is the closure of \(\mathfrak n'^2\), and
+\(\mathfrak n'=0\) by Nakayama's lemma \textup{(\SGARefLink{sga3:VIIB:0.3.3}{0.3.3})}. Thus
+\(B_0\otimes_\kappa K\) is a finite product of copies of \(K\); hence
+\(B_0\) is finite over \(\kappa\) and reduced, so \(B_0=L\), and
+\(L\otimes_\kappa K\) is reduced, so that \(L\) is separable over
+\(\kappa\), \(K\) containing the roots of the minimal polynomials of
+the elements of \(L\). If \(M\) is the submodule of \(B\) generated by
+liftings of a basis of \(L\) over \(\kappa\), then
+\(B=M+\mathfrak n_RB\), the ideal \(\mathfrak n_RB\) being closed since
+\(\mathfrak n_R\) is finitely generated; hence \(B=M\), \(\mathfrak n_R\)
+being nilpotent. So \(B\) is finite over \(R\), discrete and formally
+étale, that is, étale. Finally, let \(F\in R[T]\) be monic, lifting the
+minimal polynomial of a primitive element of \(L\) over \(\kappa\).
+Then \(F'\) is invertible modulo \(F\), since it is so modulo
+\((F)+\mathfrak n_RR[T]\), so \(F\) is separable, and \(R[T]/(F)\) is
+local with residue field \(L\). By formal étaleness, the residue maps
+of \(R[T]/(F)\) and \(B\) onto \(L\) lift to morphisms
+\(R[T]/(F)\to B\) and \(B\to R[T]/(F)\), whose composites, which lift
+the identity of \(L\), are the identities.

@@ -4,14 +4,11 @@
 \label{sga3:VIIB:0.4}
 \addcontentsline{toc}{subsection}{\SGARefLink{sga3:VIIB:0.4}{0.4}. Profinite Algebras}
 
-Let \(k\) be a pseudocompact ring. A \emph{topological
-\(k\)-algebra} is a commutative topological ring \(A\), together with
-a morphism of topological rings \(k\to A\). The algebra \(A\) is called
-a \emph{profinite \(k\)-algebra} if its underlying topological
-\(k\)-module is pseudocompact.
-
-Let \(\mathfrak l\) be an open \(k\)-submodule of such an \(A\). The
-composite map
+Let \(k\) be a pseudocompact ring. A topological \(k\)-algebra \(A\)
+(with unit element and commutative) is called \emph{profinite} if the
+underlying topological \(k\)-module is pseudocompact. If this is the case
+and \(\mathfrak l\) is an open \(k\)-submodule of \(A\), the composite
+map
 \[
   \varphi:
   A\times A
@@ -23,35 +20,20 @@ is continuous. \SGARefLink{sga3:VIIB:0.3.1}{Lemma 0.3.1} therefore gives an open
 \(\varphi(A\times\mathfrak n)=0\). Thus \(\mathfrak l\) contains the
 open ideal \(A\mathfrak n\), and \(A\) is a pseudocompact ring.
 
-Likewise, let \(M\) be a topological \(A\)-module whose underlying
-\(k\)-module is pseudocompact. If \(M'\) is an open \(k\)-submodule of
-\(M\), applying \SGARefLink{sga3:VIIB:0.3.1}{Lemma 0.3.1} to
+Let us consider likewise a topological \(A\)-module \(M\) whose
+underlying \(k\)-module is pseudocompact. If \(M'\) is an open
+\(k\)-submodule of \(M\), \SGARefLink{sga3:VIIB:0.3.1}{Lemma 0.3.1} applied to the map
 \[
   A\times M
   \xrightarrow{\mathrm{mult}}M
   \longrightarrow M/M'
 \]
-shows that \(M'\) contains an open \(A\)-submodule. Hence \(M\) is also
-a pseudocompact \(A\)-module.\footnote{The editors added the following
-lemma.}
-Conversely:
-
-\medskip
-\noindent\textbf{Lemma.}
-\phantomsection
-\label{sga3:VIIB:0.4-restriction-lemma}
-\textit{Let \(A\) be a profinite \(k\)-algebra and \(M\) a
-pseudocompact \(A\)-module. The \(k\)-module \(M|_k\), obtained by
-restriction of scalars, is pseudocompact.}
-
-Indeed, every finite-length pseudocompact \(A\)-module is isomorphic
-to a quotient
-\[
-  A^n/L,
-\]
-where \(L\) is an open submodule of \(A^n\), and is therefore a
-pseudocompact \(k\)-module. Since \(M|_k\) is a projective limit of
-modules of this kind, it is a pseudocompact \(k\)-module.
+shows that \(M'\) contains an open \(A\)-submodule, so that \(M\) is also
+a pseudocompact \(A\)-module.\footnote{Translator's note: conversely, every pseudocompact \(A\)-module
+\(M\) is pseudocompact over \(k\): a pseudocompact \(A\)-module of finite length is the quotient of some
+\(A^n\) by an open submodule, hence a pseudocompact \(k\)-module of finite length, and \(M\) is the
+projective limit of such modules. The Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{B}, adds
+this as a lemma.}
 
 \medskip
 \noindent\textbf{0.4.1.}
@@ -59,15 +41,11 @@ modules of this kind, it is a pseudocompact \(k\)-module.
 \label{sga3:VIIB:0.4.1}
 If \(A\) and \(B\) are profinite \(k\)-algebras, a \emph{morphism}
 from \(A\) to \(B\) is, by definition, a continuous homomorphism of
-\(k\)-algebras. We denote the category of profinite \(k\)-algebras by
-\[
-  \operatorname{Alp}/k.
-\]
-It plainly has projective limits: the algebra underlying a projective
-limit is the projective limit of the underlying algebras, endowed with
-the projective-limit topology.
-
-It also has finite direct limits. For example, if
+\(k\)-algebras. The category of profinite \(k\)-algebras plainly has
+projective limits: the algebra underlying a projective limit is the
+projective limit of the underlying algebras, and the topology is the
+projective-limit topology. Likewise, there are finite direct limits: for
+example, if
 \[
   f:A\longrightarrow B,
   \qquad
@@ -78,9 +56,9 @@ are morphisms of profinite \(k\)-algebras, the amalgamated sum of
 \[
   B\widehat{\otimes}_A C
 \]
-as its underlying topological \(A\)-module. Here \SGARefLink{sga3:VIIB:0.4}{0.4} makes \(B\) and
-\(C\) pseudocompact \(A\)-modules via \(f\) and \(g\), and the
-multiplication is characterized by
+as its underlying topological \(A\)-module (by \SGARefLink{sga3:VIIB:0.4}{0.4}, \(f\) and \(g\)
+make \(B\) and \(C\) pseudocompact \(A\)-modules); the multiplication of
+\(B\widehat{\otimes}_AC\) is plainly such that
 \[
   (b\widehat{\otimes}c)
   (b'\widehat{\otimes}c')
@@ -89,121 +67,97 @@ multiplication is characterized by
 \]
 for \(b,b'\in B\) and \(c,c'\in C\).
 
+From now on we denote by \(\operatorname{Alp}/k\) the category of
+profinite \(k\)-algebras.
+
 \medskip
-\noindent\textbf{Definition 0.4.2.}
+\noindent\textbf{0.4.2.}
 \phantomsection
 \label{sga3:VIIB:0.4.2}
-\textit{A profinite \(k\)-algebra \(C\) is said to have
-\emph{finite length} if its underlying \(k\)-module has finite length,
-and is therefore discrete. We denote by \(\operatorname{Alf}/k\) the
-full subcategory of \(\operatorname{Alp}/k\) formed by the
-\(k\)-algebras of finite length.}
-
-For every profinite \(k\)-algebra \(A\), let \(h_A\) be the functor
+A profinite \(k\)-algebra \(C\) is said to be \emph{of finite length} if
+its underlying \(k\)-module has finite length (and is therefore discrete);
+we denote by \(\operatorname{Alf}/k\) the full subcategory of
+\(\operatorname{Alp}/k\) formed by the \(k\)-algebras of finite
+length,\footnote{Translator's note: \(k\) itself, as a profinite \(k\)-algebra, belongs to
+\(\operatorname{Alf}/k\) only when \(k\) is Artinian; the Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{B}, points this out.} and, for every profinite algebra \(A\), by \(h_A\)
+the functor
 \[
   h_A:\operatorname{Alf}/k\longrightarrow(\mathbf{Sets}),
   \qquad
   C\longmapsto
   \operatorname{Hom}_{\operatorname{Alp}/k}(A,C).
 \]
-The functor \(h_A\) is left exact, and the canonical projections
-\(A\to A/\mathfrak l\), where \(\mathfrak l\) ranges over the open
-ideals of \(A\), induce for every \(C\in\operatorname{Alf}/k\) an
-isomorphism
+It is clear that \(h_A\) is a left exact functor; moreover, when
+\(\mathfrak l\) ranges over the open ideals of \(A\), the canonical
+projections of \(A\) onto \(A/\mathfrak l\) induce an isomorphism
 \[
+  \operatorname{Hom}_{\operatorname{Alp}/k}(A,C)
+  \xleftarrow{\ \sim\ }
   \varinjlim_{\mathfrak l}
   \operatorname{Hom}_{\operatorname{Alf}/k}(A/\mathfrak l,C)
-  \xrightarrow{\sim}
-  \operatorname{Hom}_{\operatorname{Alp}/k}(A,C),
 \]
-functorial in \(C\). In other words, \(h_A\) is the direct limit of the
-representable functors \(h_{A/\mathfrak l}\):
-\begin{equation}
-  h_A\simeq\varinjlim_{\mathfrak l}h_{A/\mathfrak l}.
-  \tag{\(\ast\)}
-  \label{sga3:VIIB:0.4.2-star}
-\end{equation}
-
-If \(B\) is another profinite \(k\)-algebra, the general properties of
-the bifunctor \(\operatorname{Hom}\), together with
-\[
-  \operatorname{Hom}(h_C,h_B)=h_B(C)
-\]
-for \(C\) of finite length, give isomorphisms
+whenever \(C\) has finite length. This means that \(h_A\) is the direct
+limit of the representable functors \(h_{A/\mathfrak l}\); if \(B\) is
+another profinite \(k\)-algebra, there are therefore isomorphisms
 \begin{align*}
   \operatorname{Hom}_{\operatorname{Alp}/k}(B,A)
   &\simeq
   \varprojlim_{\mathfrak l}
   \operatorname{Hom}_{\operatorname{Alp}/k}(B,A/\mathfrak l)
+  \simeq
+  \varprojlim_{\mathfrak l}h_B(A/\mathfrak l)
   \\
   &\simeq
   \varprojlim_{\mathfrak l}
   \operatorname{Hom}(h_{A/\mathfrak l},h_B)
-  \\
-  &\simeq
-  \operatorname{Hom}
-    \left(\varinjlim_{\mathfrak l}h_{A/\mathfrak l},h_B\right).
+  \simeq
+  \operatorname{Hom}(h_A,h_B),
 \end{align*}
-Together with \eqref{sga3:VIIB:0.4.2-star}, this proves that the
-contravariant functor \(A\mapsto h_A\) is fully faithful. In fact:
+which show that the contravariant functor \(A\mapsto h_A\) is fully
+faithful.
 
-\medskip
-\noindent\textbf{Proposition.}
-\phantomsection
-\label{sga3:VIIB:0.4.2-proposition}
-\textit{The functor \(A\mapsto h_A\) is an anti-equivalence from
-\(\operatorname{Alp}/k\) onto the category of left-exact functors from
-\(\operatorname{Alf}/k\) to \((\mathbf{Sets})\).}
-
-By what precedes, it remains only to show that every left-exact functor
+In fact, \(A\mapsto h_A\) is an anti-equivalence from
+\(\operatorname{Alp}/k\) onto the category of left exact functors from
+\(\operatorname{Alf}/k\) to \((\mathbf{Sets})\). Indeed, by what precedes,
+it is enough to show that every left exact functor \(F\) is isomorphic
+to a functor of the form \(h_A\); for this, the algebra \(A\) may be
+constructed as follows (TDTE~II, \S~3). Because \(F\) is left exact,
+for every finite-length \(k\)-algebra \(C\) and every \(\xi\in F(C)\),
+there is a smallest subalgebra \(C'\) of \(C\) such that \(\xi\) belongs
+to the image of \(F(C')\) in \(F(C)\); if \(C'=C\), the pair
+\((C,\xi)\) is called \emph{minimal}. The minimal pairs form a category
+when a morphism from \((C,\xi)\) to \((D,\eta)\) is defined to be a
+homomorphism \(\phi:C\to D\) such that
 \[
-  F:\operatorname{Alf}/k\longrightarrow(\mathbf{Sets})
+  (F\phi)(\xi)=\eta;
 \]
-is isomorphic to a functor \(h_A\). The algebra \(A\) may be constructed
-as follows (cf.\ TDTE~II, \S~3).
+it is clear that such a \(\phi\) is surjective, and that the category of
+minimal pairs is ``left filtered.'' Moreover, since one may plainly
+restrict to the pairs \((C,\xi)\) for which \(C\) belongs to a set
+containing finite-length \(k\)-algebras of every type,\footnote{Translator's note: the underlying
+\(k\)-module of a \(k\)-algebra of finite length \(n\) is a quotient of \(k^n\) by an open submodule,
+and each such quotient carries only a set of profinite \(k\)-algebra structures; this gives the set in
+question. The Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{B}, makes this explicit.} the
+functor \((C,\xi)\mapsto C\), from the category of minimal pairs to the
+category of profinite \(k\)-algebras, has a projective limit; one takes
+\(A\) to be this projective limit.
 
-Because \(F\) is left exact, for every finite-length \(k\)-algebra \(C\)
-and every \(\xi\in F(C)\), there is a smallest subalgebra \(C'\) of
-\(C\) such that \(\xi\) belongs to the image of \(F(C')\) in \(F(C)\).
-If \(C'=C\), the pair \((C,\xi)\) is called \emph{minimal}.
-
-The minimal pairs form a category when a morphism from \((C,\xi)\) to
-\((D,\eta)\) is defined to be a homomorphism
-\(\phi:C\to D\) such that
+The existence of an anti-equivalence from \(\operatorname{Alp}/k\) onto
+the category of left exact functors from \(\operatorname{Alf}/k\) to
+\((\mathbf{Sets})\) implies, for example, that \(\operatorname{Alp}/k\)
+has infinite direct limits: indeed, the category of left exact functors
+has projective limits, which are given by the formula
 \[
-  (F\phi)(\xi)=\eta.
+  (\varprojlim_iF_i)(C)=\varprojlim_iF_i(C),
 \]
-Such a \(\phi\) is necessarily surjective, and the category of minimal
-pairs is left filtered. Moreover, one may restrict to pairs
-\((C,\xi)\) for which \(C\) belongs to a set containing one
-finite-length \(k\)-algebra of every isomorphism
-type.
-The functor \((C,\xi)\mapsto C\), from the category of minimal pairs to
-the category of profinite \(k\)-algebras, therefore has a projective
-limit; take \(A\) to be this limit.
-
-\medskip
-\noindent\textbf{Corollary.}
-\phantomsection
-\label{sga3:VIIB:0.4.2-corollary}
-\textit{The category \(\operatorname{Alp}/k\) has arbitrary direct
-limits.}
-
-Indeed, the category of left-exact functors from
-\(\operatorname{Alf}/k\) to \((\mathbf{Sets})\) has projective limits,
-computed pointwise: if \((F_i)\) is a projective system of such
-functors, then for every \(C\in\operatorname{Alf}/k\),
-\[
-  (\varprojlim_iF_i)(C)=\varprojlim_iF_i(C).
-\]
-\footnote{\textit{Editors' note.} If \((A_i)_{i\in I}\) is a direct system in
-\(\operatorname{Alp}/k\), its direct limit in \(\operatorname{Alp}/k\)
-is the separated completion of the \(k\)-algebra \(B\), the direct
-limit of the underlying \(k\)-algebras, for the topology defined by the
-ideals \(I\) such that \(I\cap A_i\) is open in \(A_i\) for every \(i\)
-and \(\operatorname{length}_k(B/I)<\infty\). Notice, for example, that
-if \(K/k\) is an algebraic extension of fields of infinite degree and
-\((k_i)\) is the filtered direct system of finite-degree subextensions,
-then the direct limit of the system \((k_i)\) in
-\(\operatorname{Alp}/k\) is the zero ring.}
-
+when \(C\) is a \(k\)-algebra of finite length and \((F_i)\) a
+projective system of functors.\footnote{Translator's note: concretely, if \((A_i)\) is an inductive system
+in \(\operatorname{Alp}/k\) and \(B\) the inductive limit of the underlying \(k\)-algebras, its
+inductive limit in \(\operatorname{Alp}/k\) is the separated completion of \(B\) for the topology
+defined by the ideals \(I\) of \(B\) such that \(B/I\) has finite length over \(k\) and the inverse
+image of \(I\) in each \(A_i\) is open. For example, if \(k\) is a field and \(K\) an algebraic extension
+of \(k\) of infinite degree, the inductive limit in \(\operatorname{Alp}/k\) of the finite subextensions
+of \(K\) is \(0\): a nonzero \(k\)-algebra of finite length receives no homomorphism from the field
+\(K\). The Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{B}, gives this description and this
+example.}

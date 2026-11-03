@@ -3,74 +3,69 @@
 \phantomsection
 \label{sga3:VIIB:5.1.1}
 
-Consider the following category \(\mathcal C\). An object of
-\(\mathcal C\) is a pair \((A,J)\) consisting of a profinite
-\(k\)-algebra \(A\) and a closed ideal \(J\subset A\). A morphism
+Consider first the following category \(\mathcal C\): an object of
+\(\mathcal C\) is a pair \((C,J)\) formed by a profinite \(k\)-algebra
+\(C\) and a closed ideal \(J\) of \(C\); a morphism
 \[
-  \psi:(A,J)\longrightarrow(A',J')
+  \psi:(C,I)\longrightarrow(D,J)
 \]
-in \(\mathcal C\) is a continuous \(k\)-algebra homomorphism
+of \(\mathcal C\) is a continuous homomorphism of the algebra \(C\) into
+the algebra \(D\) which maps \(I\) into \(J\). If one associates with
+\((C,I)\) the pair
 \[
-  A\longrightarrow A'
+  \bigl(\operatorname{Spf}(C/I),\operatorname{Spf}C\bigr),
 \]
-that maps \(J\) into \(J'\).
+one obviously obtains an antiequivalence of \(\mathcal C\) onto the
+category of pairs \((Z,Y)\) formed by a formal \(k\)-variety \(Y\) and a
+formal subvariety \(Z\).
 
-The assignment
-\[
-  (A,J)
-  \longmapsto
-  \bigl(\operatorname{Spf}(A/J),\operatorname{Spf}(A)\bigr)
-\]
-is an antiequivalence from \(\mathcal C\) to the category of pairs
-\((Z,Y)\) consisting of a formal \(k\)-variety \(Y\) and a formal
-subvariety \(Z\subset Y\). A morphism
-\[
-  \varphi:(Z,Y)\longrightarrow(Z',Y')
-\]
-is a morphism of formal \(k\)-varieties
-\[
-  Y\longrightarrow Y'
-\]
-that maps \(Z\) into \(Z'\).
-
-A cogroup structure on an object \((A,J)\) of \(\mathcal C\)
-consists of a formal-group structure on
-\(\operatorname{Spf}(A)\) satisfying the following conditions
-\textup{(with the notation of \SGARefLink{sga3:VIIB:2.1}{2.1})}:
+A cogroup structure on an object \((C,J)\) of \(\mathcal C\) consists
+of a formal group structure on \(\operatorname{Spf}C\) such that the
+following conditions are satisfied \textup{(notation of
+\SGARefLink{sga3:VIIB:2.1}{2.1})}:
 \[
 \begin{aligned}
   \textup{(1)}\quad&
-  \Delta_A(J)
+  \Delta_CJ
   \subset
-  J\widehat\otimes_kA
+  J\widehat\otimes_kC
   +
-  A\widehat\otimes_kJ,
+  C\widehat\otimes_kJ;
   \\
   \textup{(2)}\quad&
-  \varepsilon_A(J)=0,
+  \varepsilon_C(J)=0;
   \\
   \textup{(3)}\quad&
-  c_A(J)\subset J.
+  c_C(J)\subset J.
 \end{aligned}
 \]
-These conditions also say that
-\[
-  H=\operatorname{Spf}(A/J)
-\]
-is a formal subgroup of
-\[
-  G=\operatorname{Spf}(A).
-\]
+These conditions also mean that \(\operatorname{Spf}(C/J)\) is a formal
+subgroup of \(\operatorname{Spf}C\).\footnote{Translator's note: the Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{B}, adds that a morphism of cogroups \((C',J')\to(C,J)\) then amounts to a
+homomorphism of formal groups \(\operatorname{Spf}C\to\operatorname{Spf}C'\) mapping
+\(\operatorname{Spf}(C/J)\) into \(\operatorname{Spf}(C'/J')\).}
 
-Suppose in addition that \(A\) is local; equivalently,
-\(\operatorname{Spf}(A)\) is an infinitesimal formal group. If
-\(J\ne A\), then conditions \textup{(2)} and \textup{(3)} follow
-from \textup{(1)}. Indeed, a proper closed ideal \(J\) of \(A\)
-is contained in the augmentation ideal \(I_A\), so
-\textup{(2)} holds. Moreover,
+It follows from \SGARefLink{sga3:VIIB:2.7:prop}{2.7} that conditions (2) and (3) are a
+consequence of (1) when \(C\) is local, that is, when
+\(\operatorname{Spf}C\) is an infinitesimal group, and \(J\neq C\).\footnote{Translator's
+note: the 1970 text does not state the condition \(J\neq C\); for \(J=C\), condition (1) holds and (2)
+does not. When \(J\neq C\), \(J\) lies in the maximal ideal of \(C\), which is the kernel of
+\(\varepsilon_C\), whence (2); then (1) and (2) make \(\operatorname{Spf}(C/J)\) an infinitesimal formal
+submonoid, which is a group by 2.7, whence (3). The Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{B}, adds the condition and this argument. In the application below, \(I\) is
+contained in \(I_A\).} In
+particular, if one puts \(I=\overline{AI_B}\), condition \textup{(i)} of
+Proposition 5.1 entails the relation
 \[
-  M=\operatorname{Spf}(A/J)
+  \Delta_AI_B
+  \subset
+  I\widehat\otimes_kA+A\widehat\otimes_kI,
 \]
-is a formal submonoid of \(G\). Since \(G\) is infinitesimal,
-\SGARefLink{sga3:VIIB:2.7:prop}{Proposition~2.7} shows that \(M\) is a formal subgroup of \(G\);
-hence \textup{(3)} also holds.
+whence
+\[
+  \Delta_AI
+  \subset
+  I\widehat\otimes_kA+A\widehat\otimes_kI,
+\]
+so that \(\Delta_A\) induces a diagonal morphism on \(A/I\) which makes
+\(A/I\) the affine algebra of a formal subgroup \(F\) of \(G\).

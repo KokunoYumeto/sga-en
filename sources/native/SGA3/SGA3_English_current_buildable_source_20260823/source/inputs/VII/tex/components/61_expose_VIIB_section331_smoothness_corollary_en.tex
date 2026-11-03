@@ -3,76 +3,44 @@
 \phantomsection
 \label{sga3:VIIB:3.3.1}
 
-{\itshape Let \(S\) be a locally Noetherian scheme over
-\(\mathbb Q\), and let \(G\) be an \(S\)-group scheme that is flat
-and locally of finite type.
-If \(\omega_{G/S}\) is a locally free \(\mathcal O_S\)-module,
-then \(G\) is smooth over \(S\) at every point of the unit
-section.}
+{\itshape Let \(S\) be a locally Noetherian scheme over \(\mathbb Q\),
+and \(G\) an \(S\)-group scheme locally of finite type. If
+\(\omega_{G/S}\) is a locally free \(\mathcal O_S\)-module, \(G\) is smooth
+over \(S\) along the unit section.}\footnote{Translator's note: the Gille--Polo re-edition (2011),
+Expos\'e~VII\textsubscript{B}, adds the hypothesis that \(G\) be flat over \(S\), and in the proof applies
+(iv)~\(\Rightarrow\)~(ii) of 3.3, which needs \(H\) topologically flat over \(k\). The hypothesis is not
+needed: the proof below uses condition (iii) of 3.3 (\(H\) infinitesimal, \(\omega_{H/k}\) projective), and
+the proof of (iii)~\(\Rightarrow\)~(i) does not use flatness. It gives
+\(\widehat{\mathcal O}_x\simeq k[[t_1,\ldots,t_n]]\), which is flat over \(k=\widehat{\mathcal O}_s\), so that
+\(G\) is in fact flat over \(S\) at \(x\). Compare Expos\'e~VI\textsubscript{B}, \SGARefLink{prop:sga3-VIB-1.6}{1.6},
+also stated without flatness.}
 
-\textit{Proof.}
-Let \(x\) be a point of the unit section, let \(s\) be its image
-in \(S\), and denote the local rings at \(x\) and \(s\) by
-\(\mathcal O_x\) and \(\mathcal O_s\), respectively.\footnote{%
-\label{sga3:VIIB:nde:130}The editors supplied the details of the
-argument that follows.}
-By hypothesis, \(\mathcal O_s\) and \(\mathcal O_x\) are
-Noetherian local rings. The maximal-ideal-adic topology on each
-of them therefore agrees with the ``pseudocompact'' topology
-defined by the ideals of finite colength. Write
+Indeed, let \(x\) be a point of the unit section, \(s\) its image in
+\(S\), and \(\mathcal O_x\) and \(\mathcal O_s\) the local algebras of \(x\)
+and \(s\). It suffices to show that \(\widehat{\mathcal O}_x\) is formally
+smooth over \(\widehat{\mathcal O}_s\) \textup{(EGA~IV, 6.8.6, and
+EGA~0\textsubscript{IV}, 19.3.6)}.\footnote{Translator's note: \(\mathcal O_x\) and \(\mathcal O_s\) being
+Noetherian local rings, their ideals of finite colength are those that contain a power of the maximal
+ideal; so \(\widehat{\mathcal O}_x\) and \(\widehat{\mathcal O}_s\) are the completions for the adic topologies, as
+in EGA. By EGA~IV, 6.8.6, \(G\) is smooth at \(x\) if \(\mathcal O_x\) is formally smooth over
+\(\mathcal O_s\), and by EGA~0\textsubscript{IV}, 19.3.6, this holds if \(\widehat{\mathcal O}_x\) is formally smooth
+over \(\widehat{\mathcal O}_s\). Below, \(H\) is a formal group because the formation of
+\(\widehat G/\widehat S\) commutes with products, by its definition in \SGARefLink{sga3:VIIB:1.2.6}{1.2.6}. The Gille--Polo
+re-edition (2011), Expos\'e~VII\textsubscript{B}, writes these points out and cites EGA~IV\textsubscript{4},
+17.5.3, which gives the smoothness criterion directly.} Now \(\widehat{\mathcal O}_x\) and
+\(\widehat{\mathcal O}_s\) are the local rings of \(x\) and \(s\) in
+\(\widehat G/\widehat S\) and \(\widehat S\). Putting
+\(k=\widehat{\mathcal O}_s\) and \(H=\operatorname{Spf}(\widehat{\mathcal O}_x)\), it
+is clear that \(H\) is an infinitesimal formal group over \(k\) and that
 \[
-  \widehat{\mathcal O}_x
-  \qquad\text{and}\qquad
-  \widehat{\mathcal O}_s
+  \omega_{H/k}
+  =
+  (\omega_{G/S})_s\otimes_{\mathcal O_s}\widehat{\mathcal O}_s.
 \]
-for their completions in this topology. By EGA~IV\textsubscript{4},
-17.5.3, \(G\) is smooth over \(S\) at \(x\) if and only if
-\(\widehat{\mathcal O}_x\) is formally smooth over
-\(\widehat{\mathcal O}_s\), both algebras being endowed with their
-maximal-ideal-adic topologies. It is therefore enough to prove this
-last assertion.
+Hence \(\omega_{H/k}\) is the product of a finite number of copies of
+\(k\). The corollary therefore follows from \SGARefLink{sga3:VIIB:3.3:cartier-theorem}{3.3} and from
+EGA~0\textsubscript{IV}, 19.3.4.
 
-The rings \(\widehat{\mathcal O}_x\) and
-\(\widehat{\mathcal O}_s\) are the local rings at \(x\) and \(s\)
-of the formal varieties \(\widehat G/\widehat S\) and
-\(\widehat S\) defined in \SGARefLink{sga3:VIIB:1.2.6}{1.2.6}. Put
-\[
-  k=\widehat{\mathcal O}_s,
-  \qquad
-  H=\operatorname{Spf}\bigl(\widehat{\mathcal O}_x\bigr).
-\]
-Then \(H\) is an infinitesimal formal \(k\)-variety. Since the
-formation of \(\widehat G/\widehat S\) commutes with products
-\textup{(loc.\ cit.)}, \(H\) is in fact an infinitesimal formal
-\(k\)-group.
-
-Let \(I\) be the augmentation ideal of \(\mathcal O_x\).
-By hypothesis,
-\[
-  \omega_{G/S,x}=I/I^2
-\]
-is a free \(\mathcal O_s\)-module of finite rank \(n\). Since
-\(\mathcal O_s\) is Noetherian, the module \(\omega_{H/k}\),
-which is the completion of \(\omega_{G/S,x}\), is identified with
-\[
-  \omega_{G/S,x}
-  \otimes_{\mathcal O_s}
-  \widehat{\mathcal O}_s.
-\]
-It is therefore a topologically free \(k\)-module of rank \(n\).
-By the implication \textup{(iv)}\(\Rightarrow\)\textup{\SGARefLink{sga3:vii:paragraph:5-1:equation:ii}{(ii)}} of
-\SGARefLink{sga3:VIIB:3.3:cartier-theorem}{Theorem~3.3},
-\[
-  \widehat{\mathcal O}_x
-  \simeq
-  k[[\omega_{H/k}]]
-  \simeq
-  k[[t_1,\ldots,t_n]].
-\]
-Finally, the latter formal power-series algebra is formally smooth
-over \(k\), by EGA~0\textsubscript{IV}, 19.3.3. This proves the
-corollary.
-
-Thus we recover a result obtained independently for group schemes
-locally of finite presentation over an arbitrary scheme \(S\);
-cf.\ VI\textsubscript{B}, \SGARefLink{prop:sga3-VIB-1.6}{1.6}.
+We thus recover a result obtained elsewhere for group schemes locally
+of finite presentation over a scheme \(S\).\footnote{Translator's note: Expos\'e~VI\textsubscript{B},
+\SGARefLink{prop:sga3-VIB-1.6}{1.6}; the Gille--Polo re-edition (2011), Expos\'e~VII\textsubscript{B}, gives this reference.}
