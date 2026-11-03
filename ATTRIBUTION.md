@@ -10,4 +10,4 @@ The SGA 2 and SGA 3 English sources acknowledge Jacob C. Reinhold’s [English t
 
 SGA 4½ preserves Daniel Miller’s [LaTeX typesetting](https://github.com/dkmiller/sga4.5) and its original typesetter’s note. It is not attributed to AI.
 
-Additional English translation is AI-translated; subsequent corrections, editing, reconstruction and typesetting are AI-produced. The publisher did not translate the text. The source-specific human credits and genuine third-party notices remain applicable; attribution does not establish permission or endorsement.
+Additional English translation is AI-translated; subsequent corrections, editing, reconstruction and typesetting are AI-produced. The source-specific human credits and genuine third-party notices remain applicable; attribution does not establish permission or endorsement.
