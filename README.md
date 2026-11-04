@@ -17,6 +17,8 @@ The English text is AI-translated from French texts of the seminars, volume by v
   follows, with the page numbers of the 1968 edition in the margin;
 - SGA 3 from the re-edition by Philippe Gille and Patrick Polo, then read against the original printing of 1970
   (Lecture Notes in Mathematics 151–153), which the English follows;
+- SGA 4 from the French LaTeX edition of SGA 4 distributed by Fabrice Orgogozo
+  ([normalesup.org/~forgogozo/SGA4](https://www.normalesup.org/~forgogozo/SGA4/));
 - SGA 4½ from Daniel Miller's LaTeX typesetting;
 - SGA 7 I from a recomposed PDF of the published volume.
 
@@ -65,7 +67,8 @@ reader holds all volumes with links between them:
 
 Notes headed "Translator's note" belong to this translation. In SGA 2, notes headed "Editor's note" are by Yves
 Laszlo, the editor of the re-edition. In SGA 3, Translator's notes and Additions give the mathematics that the
-re-edition by Philippe Gille and Patrick Polo adds, written independently and credited to it.
+re-edition by Philippe Gille and Patrick Polo adds, written independently and credited to it. In SGA 4, footnotes
+headed "N.D.E." are the editorial notes of the French LaTeX edition distributed by Fabrice Orgogozo, translated.
 
 The LaTeX sources in this repository are in `sources/native/`, one folder per volume, each with a README that names
 its main file: [SGA 1](sources/native/SGA1/README.md) · [SGA 2](sources/native/SGA2/README.md) ·
@@ -95,6 +98,10 @@ each volume; [SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) explains the numbering o
 - SGA 3: the re-edition by Philippe Gille and Patrick Polo (Documents Mathématiques 7 and 8, Société mathématique de
   France, 2011; for Tome II their drafts of 2008–2009), from which the English was translated; the original
   printing, Lecture Notes in Mathematics 151–153 (Springer, 1970), which the English follows.
+- SGA 4: the French LaTeX edition of SGA 4, Tomes 1–3, distributed by Fabrice Orgogozo
+  ([normalesup.org/~forgogozo/SGA4](https://www.normalesup.org/~forgogozo/SGA4/); source snapshot at git commit
+  `71766d9`), from which the English was translated, together with its TeX configuration files. Its footnotes
+  headed "N.D.E." are that edition's editorial notes, translated.
 - SGA 4½: Daniel Miller's LaTeX typesetting of the French text, with his typesetter's note (published at
   `github.com/dkmiller/sga4.5`, which is no longer online).
 - SGA 7 I: the published volume, [Springer LNM 288](https://doi.org/10.1007/BFb0068688), and the recomposed
