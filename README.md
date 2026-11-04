@@ -25,7 +25,8 @@ The English text is AI-translated from French texts of the seminars, volume by v
 Jacob C. Reinhold's English translation was used for comparison and drafting in SGA 2 and SGA 3. Recorded AI work
 includes OpenAI Codex (GPT-5.6 Sol: translation; GPT-6 Astra: corrections and assembly, September–October 2026)
 and Claude Opus 5.5
-(Anthropic: the SGA 2 and SGA 3 sources of 26 October 2026 and the SGA 3 revision of November 2026). The release
+(Anthropic: the SGA 2 and SGA 3 sources of 26 October 2026, and the translation of SGA 3 revised against the
+1970 printing in November 2026). The release
 notes record the correction rounds: spectrum notation in SGA 1 (25 September 2026), mathematical and reference
 corrections in SGA 1 and SGA 7 II (3 October 2026), references in SGA 3 (24 October 2026).
 
