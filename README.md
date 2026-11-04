@@ -15,15 +15,16 @@ The English text is AI-translated from French texts of the seminars, volume by v
 - SGA 2 from the French TeX of the re-edition edited by Yves Laszlo (Documents Mathématiques 4, Société mathématique
   de France, 2005; [arXiv math/0511279v1](https://arxiv.org/abs/math/0511279v1)), whose numbering and labels it
   follows, with the page numbers of the 1968 edition in the margin;
-- SGA 3 from the re-edition by Philippe Gille and Patrick Polo, then read against the original printing of 1970
-  (Lecture Notes in Mathematics 151–153), which the English follows;
+- SGA 3 following the original printing of 1970 (Lecture Notes in Mathematics 151–153); lemmas, proofs and
+  corrections added in the re-edition by Philippe Gille and Patrick Polo are given in notes and Additions that cite it;
 - SGA 4 from the French LaTeX edition of SGA 4 distributed by Fabrice Orgogozo
   ([normalesup.org/~forgogozo/SGA4](https://www.normalesup.org/~forgogozo/SGA4/));
 - SGA 4½ from Daniel Miller's LaTeX typesetting;
 - SGA 7 I from a recomposed PDF of the published volume.
 
 Jacob C. Reinhold's English translation was used for comparison and drafting in SGA 2 and SGA 3. Recorded AI work
-includes OpenAI Codex (GPT-6 Astra: corrections and assembly, September–October 2026) and Claude Opus 5.5
+includes OpenAI Codex (GPT-5.6 Sol: translation; GPT-6 Astra: corrections and assembly, September–October 2026)
+and Claude Opus 5.5
 (Anthropic: the SGA 2 and SGA 3 sources of 26 October 2026 and the SGA 3 revision of November 2026). The release
 notes record the correction rounds: spectrum notation in SGA 1 (25 September 2026), mathematical and reference
 corrections in SGA 1 and SGA 7 II (3 October 2026), references in SGA 3 (24 October 2026).
@@ -95,9 +96,9 @@ each volume; [SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) explains the numbering o
   [English translation](https://github.com/jcreinhold/sga/tree/e7a259f3f8608ad3edf9bf6eead3fd504dd2d23e) (snapshot
   `e7a259f3f8608ad3edf9bf6eead3fd504dd2d23e`), used for comparison and drafting. English wording taken from it
   remains attributed to him, and his CC BY 4.0 notice applies to his contribution.
-- SGA 3: the re-edition by Philippe Gille and Patrick Polo (Documents Mathématiques 7 and 8, Société mathématique de
-  France, 2011; for Tome II their drafts of 2008–2009), from which the English was translated; the original
-  printing, Lecture Notes in Mathematics 151–153 (Springer, 1970), which the English follows.
+- SGA 3: the original printing, Lecture Notes in Mathematics 151–153 (Springer, 1970), which the English follows;
+  the re-edition by Philippe Gille and Patrick Polo (Documents Mathématiques 7 and 8, Société mathématique de
+  France, 2011), cited for the lemmas, proofs and corrections it adds.
 - SGA 4: the French LaTeX edition of SGA 4, Tomes 1–3, distributed by Fabrice Orgogozo
   ([normalesup.org/~forgogozo/SGA4](https://www.normalesup.org/~forgogozo/SGA4/); source snapshot at git commit
   `71766d9`), from which the English was translated, together with its TeX configuration files. Its footnotes
