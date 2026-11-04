@@ -13,8 +13,8 @@ with connected fibres.
 \left\{
 \begin{array}{c}
 \text{subgroup preschemes \(H\) of \(G_{S'}\), smooth over \(S'\),}\\
-\text{such that every \(H_{s'}\) is the centralizer in \(G_{s'}\)}\\
-\text{of a sub-torus of \(G_{s'}\)}
+\text{such that, for every point \(s'\) of \(S'\), \(H_{\bar s'}\) is the}\\
+\text{centralizer in \(G_{\bar s'}\) of a sub-torus of \(G_{\bar s'}\)}
 \end{array}
 \right\}.
 \]
@@ -39,8 +39,9 @@ prescheme of \(G\), smooth over \(S\); \(N/H\) is represented by an
 \(S\); and \(G/N\) is represented by an \(S\)-prescheme smooth and
 quasi-projective over \(S\).
 \item\SGAInlineRefTarget{sga3:xv:proposition:7-1:item:v} Let \(G'\) be an \(S\)-group prescheme of finite presentation
-and let \(u:G\to G'\) be faithfully flat. Then \(G'\) satisfies the
-same hypotheses as \(G\) (Exposé VI\textsubscript{B}~9). If
+over \(S\), and let \(u:G\to G'\) be a faithfully flat \(S\)-group
+morphism, so that \(G'\) satisfies the same hypotheses as \(G\) (Exposé
+VI\textsubscript{B}~9). If
 \(H\in\mathcal{CT}_G(S)\), its image is represented by a subgroup
 prescheme \(H'\in\mathcal{CT}_{G'}(S)\), and \(H\to H'\) is faithfully
 flat. If \(H=\operatorname{Centr}_G(T)\) for a torus \(T\), then
@@ -59,18 +60,19 @@ central, then \(\widetilde u\) is an isomorphism, with inverse
 \SGARefTarget{sga3:xv:proposition:7:1}
 
 \medskip\noindent\textit{Proof of (ii).}
-For the first assertion we may suppose that \(S\) is local artinian,
-with closed point \(s\). Let \(H\in\mathcal{CT}(S)\), and let \(T_s\)
-be the maximal central torus of \(H_s\), which is defined over
+We may suppose that \(S\) is local artinian,
+with closed point \(s\). Let \(H\in\mathcal{CT}(S)\), and let \(T_{\bar s}\)
+be the maximal central torus of \(H_{\bar s}\), which is already defined over
 \(\kappa(s)\) (cf. \SGARefLink{sga3:xv:lemma:3:4}{Lemma 3.4}). Since
+\(H_s\in\mathcal{CT}(s)\), we have
 \[
-  H_s=\operatorname{Centr}_{G_s}(T_s),
+  H_s=\operatorname{Centr}_{G_s}(T_s).
 \]
-and \(H\) is smooth, \(T_s\) lifts uniquely to a sub-torus \(T\) of
-\(H\), central in \(H\) (Exposé \SGARefLink{sga3:ix:theorem:3:6:bis}{IX~3.6 bis} and \SGARefLink{sga3:xv:remark:5:6}{5.6}). Then
+The group \(H\) is smooth, so \(T_s\) lifts (uniquely) to a sub-torus \(T\) of
+\(H\), central in \(H\) (Exposé \SGARefLink{sga3:ix:theorem:3:6:bis}{IX~3.6 bis} and Exposé \SGARefLink{sga3:ix:theorem:5:6}{IX~5.6}). Then
 \(H'=\operatorname{Centr}_G(T)\) contains \(H\) and has the same
 fibre as \(H\). Because \(H\) is flat, \(H=H'\) (Exposé
-VI\textsubscript{B}~\SGARefLink{sga3:xv:lemma:2:5}{2.5}).
+VI\textsubscript{B}~\SGARefLink{prop:sga3-VIB-2.5}{2.5}).
 
 Suppose now that \(S\) is the spectrum of a henselian local ring,
 which the usual reductions allow us to take noetherian. Let \(s\) be
@@ -97,11 +99,17 @@ for all sufficiently large \(\ell\). This is where noetherianity of
 \(S\) is used.
 
 \medskip\noindent\textit{Proof of (i).}
-If \(H\in\mathcal{CT}(S)\), then \(H\) has connected fibres (Exposé
-\SGARefLink{sga3:xii:theorem:6-6:item:b}{XII~6.6(b)}) and equals its connected normalizer (\SGARefLink{sga3:xv:remark:6:5}{6.5}). Hence the
-present functor \(\mathcal{CT}\) is the functor of \SGARefLink{sga3:xv:paragraph:6-4-0}{6.4.0}. \SGARefLink{sga3:xv:theorem:6:4}{Theorem 6.4}
-therefore represents it by an \(S\)-prescheme of finite presentation,
-quasi-projective over \(S\). It remains to prove smoothness.
+The group \(G\) is smooth over \(S\), with connected fibres; hence, if
+\(H\in\mathcal{CT}(S)\), then \(H\) has connected fibres (Exposé
+\SGARefLink{sga3:xii:theorem:6-6:item:b}{XII~6.6(b)}) and equals its connected normalizer (\SGARefLink{sga3:xv:remark:6:5}{6.5}), so that
+the functor \(\mathcal{CT}\) defined in \SGARefLink{sga3:xv:proposition:7-1:item:i}{7.1(i)} coincides with the functor,
+also denoted \(\mathcal{CT}\), defined in \SGARefLink{sga3:xv:paragraph:6-4-0}{6.4.0}. Therefore
+(\SGARefLink{sga3:xv:theorem:6:4}{Theorem 6.4})\footnote{Translator's note: the 1970 text has
+``(6.4.1)'', a number that does not occur in this exposé; the result used is
+Theorem~6.4, to which the Gille--Polo draft re-edition (2009), Exposé~XV,
+refers.} \(\mathcal{CT}\) is represented by an \(S\)-prescheme of
+finite presentation, quasi-projective over \(S\). It remains to prove that
+this prescheme is smooth over \(S\).
 
 EGA IV~8 reduces us to affine noetherian \(S\). By Exposé XI~1.5 it
 then suffices to prove the following infinitesimal lifting property:
@@ -133,7 +141,9 @@ Smoothness of \(G\) gives \(g_1\in G(S)\) lifting \(g_0\). Put
 \(H'\in\mathcal{CT}(S)\) and \(H'_0\subseteq L_0\). By (ii),
 \(H'=\operatorname{Centr}_G(T')\) for a torus \(T'\subseteq G\).
 Since \(L\) is smooth, \(T'_0\subseteq L_0\) lifts to a torus
-\(T''\subseteq L\) (Exposé \SGARefLink{sga3:ix:theorem:3:6:bis}{IX~3.6 bis}). The group
+\(T''\subseteq L\) (Exposé \SGARefLink{sga3:ix:theorem:3:6:bis}{IX~3.6 bis}).\footnote{Translator's note: the
+1970 text refers to ``Exp.\ XI 3.6 bis'', which does not exist; the lifting
+of tori used is IX~3.6~bis, as in the proof of (i).} The group
 \(\operatorname{Centr}_L(T'')\) lies in
 \(\operatorname{Centr}_G(T'')\), has the same closed fibre as the
 latter, namely \(H'_0\), and is smooth. Hence
@@ -161,7 +171,13 @@ To prove \(H\) closed in \(G\), reduce first to affine noetherian
 \(S\), then, by EGA IV~8, to the spectrum of a complete local ring.
 Part (ii) writes \(H\) as the centralizer in \(G\) of a subgroup of
 multiplicative type, so \(H\) is closed because \(G\) is separated
-(Exposé VI\textsubscript{B}~\SGARefLink{sga3:xv:theorem:5-2}{5.2}).
+(Exposé VI\textsubscript{B}~\SGARefLink{cor:sga3-VIB-5.5}{5.5}).\footnote{Translator's note: the 1970 text
+refers to VI\textsubscript{B}~5.2, which says that every group over a discrete
+base is separated. That a group locally of finite presentation over \(S\),
+universally open over \(S\) (for instance smooth, or flat and locally of finite
+presentation) and with connected fibres is separated is
+VI\textsubscript{B}~5.5. The same correction is made below in the proofs
+of~(v), of 8.3 and of 8.1.}
 
 By (iii),
 \[
@@ -201,8 +217,11 @@ unique central subgroup of multiplicative type of \(H\) lifting
 \]
 and put \(N'=\operatorname{Norm}_G(M_\ell)\).
 
-The torus \(T_s\), and hence \((M_\ell)_s\), is characteristic in
-\(H_s\). Therefore \(N_s\) normalizes \((M_\ell)_s\), and
+Since \(\operatorname{Centr}_G(M_\ell)=H\), we have
+\(N'\subset\operatorname{Norm}_G(H)\). Moreover, one checks immediately that
+\(T_s\) (and hence also \((M_\ell)_s\)) is a characteristic subgroup of
+\(H_s\), that is, stable under \(\operatorname{Aut}_{\mathrm{gr}}(H_s)\).
+Therefore \(N_s\) normalizes \((M_\ell)_s\), and consequently
 \(N_s=N'_s\). The proof of Exposé \SGARefLink{sga3:xi:proposition:5:9}{XI~5.9} represents
 \[
   N'/H
@@ -211,7 +230,7 @@ The torus \(T_s\), and hence \((M_\ell)_s\), is characteristic in
 \]
 by an \(S\)-group \(K'\). Since \(N'\) is smooth and
 \(N'_s=N_s\), it is an open subgroup of \(N\) containing \(H\)
-(Exposé VI\textsubscript{B}~\SGARefLink{sga3:xv:lemma:2:5}{2.5}). Its image over \(U\) is an open
+(Exposé VI\textsubscript{B}~\SGARefLink{prop:sga3-VIB-2.5}{2.5}). Its image over \(U\) is an open
 subgroup of \(K\), isomorphic to \(K'|_U\). Glue \(K\) and \(K'\)
 along this open subgroup to obtain \(L\), and glue the projections
 \(N|_U\to K\) and \(N'\to K'\) to obtain \(p:N\to L\). Then
@@ -219,7 +238,9 @@ along this open subgroup to obtain \(L\), and glue the projections
 
 \medskip\noindent\textit{Proof of (v).}
 First suppose \(S=\operatorname{Spec}k\). The image \(H'\) of \(H\)
-is a smooth subgroup of \(G'\). The required assertion follows from:
+is then a smooth subgroup of \(G'\). We must show that
+\(H'\in\mathcal{CT}_{G'}(S)\), which will follow from the following more
+precise lemma:
 
 \SGAStatement{Lemma 7.2}{Let \(u:G\to G'\) be an epimorphism of
 smooth connected algebraic groups over a field \(k\), let \(T\) be a
@@ -254,20 +275,26 @@ and the image of a Cartan subgroup of \(G\) is a Cartan subgroup of
 of \(G\), and its image is a Cartan subgroup of \(G'\) contained in
 \(C'\). Thus \(u(C)=C'\), proving \(C'\subseteq H''\).
 
-This proves (v) over a field. In general, finite presentation and the
-usual reductions permit us to assume \(S\) affine noetherian, then
-local, and finally the spectrum of a complete noetherian local ring
-\(A\), by fpqc descent of subpreschemes of \(G'\).
+We now study the general case. Since \(G\), \(H\) and \(G'\) are of
+finite presentation over \(S\), to prove that \(u(H)\) is representable and
+is an element of \(\mathcal{CT}_{G'}(S)\) we reduce by the usual technique to
+the case where \(S\) is affine noetherian, then to the case where \(S\) is the
+spectrum of a local ring. By fpqc descent of subpreschemes of \(G'\), we may
+even suppose that \(S\) is the spectrum of a complete noetherian local ring
+\(A\).
 
 Use the notation of (ii). Let \(T_s\) be the maximal central torus of
-\(H_s\), and let \(M_\ell\subset H\) lift \({}_\ell T_s\), with
-\(H=\operatorname{Centr}_G(M_\ell)\). Let \(T'_s=u_s(T_s)\).
-Since \(G'\) is separated, \(u(M_\ell)\) is represented by a subgroup
-\(M'_\ell\) of multiplicative type (Exposé \SGARefLink{sga3:ix:theorem:6:8}{IX~6.8}). Put
+\(H_s\) (\(s\) being the closed point of \(S\)), let \(M_\ell\) be a subgroup
+of multiplicative type of \(H\) lifting \({}_\ell T_s\) and such that
+\(H=\operatorname{Centr}_G(M_\ell)\), and let \(T'_s=u_s(T_s)\) be the image of
+\(T_s\) in \(G'_s\).
+Since \(G'\) is separated over \(S\) (Exposé VI\textsubscript{B}~\SGARefLink{cor:sga3-VIB-5.5}{5.5}),\footnote{Translator's note: the 1970 text
+refers to VI\textsubscript{B}~5.2; see the note to the proof of (iv).} \(u(M_\ell)\) is represented by a subgroup
+\(M'_\ell\) of multiplicative type of \(G'\) (Exposé \SGARefLink{sga3:ix:theorem:6:8}{IX~6.8}). Put
 \[
   H'=\operatorname{Centr}_{G'}(M'_\ell),
 \]
-which is smooth. For every power \(\ell'\) of \(q\), a sufficiently
+which is a smooth subgroup prescheme of \(G'\). For every power \(\ell'\) of \(q\), a sufficiently
 large \(\ell\) makes \((M'_\ell)_s\) contain
 \({}_{\ell'}T'_s\). We may therefore choose \(\ell\) such that
 \[
@@ -275,7 +302,8 @@ large \(\ell\) makes \((M'_\ell)_s\) contain
 \]
 the last equality being \SGARefLink{sga3:xv:lemma:7:2}{Lemma 7.2}.
 
-The restriction \(v:H\to H'\) of \(u\) is flat. Indeed, \(H,H'\) are
+The restriction \(v\) of \(u\) to \(H\) obviously factors through \(H'\).
+We prove that \(v:H\to H'\) is flat. Indeed, \(H,H'\) are
 flat over \(S\), \(H_s\to H'_s\) is flat, and hence \(v\) is flat
 near \(H_s\) (EGA IV~11.3.10 and 11.3.1). It is therefore flat on an
 open subgroup of \(H\) (Exposé VI\textsubscript{B}~2.2), and thus
@@ -294,7 +322,7 @@ of \(G'\) (Exposé \SGARefLink{sga3:ix:theorem:6:8}{IX~6.8}). The image \(u(H)\)
 \]
 
 \medskip\noindent\textit{Proof of (vi).}
-Since \(\mathcal{CT}_G,\mathcal{CT}_{G'}\) are smooth over \(S\), it
+Since \(\mathcal{CT}_G,\mathcal{CT}_{G'}\) are smooth over \(S\) (by (i)), it
 is enough to prove faithful flatness on geometric fibres. Thus take
 \(S=\operatorname{Spec}k\), with \(k\) algebraically closed. Let
 \(H'\in\mathcal{CT}_{G'}(k)\), let \(T'\) be its maximal central
@@ -348,9 +376,10 @@ the fibres of \(G\) (Exposé \SGARefLink{sga3:xiii:corollary:2:7}{XIII~2.7}) is 
 \(G_{\mathrm{reg}}\), of finite presentation over \(S\), and every
 section of \(G_{\mathrm{reg}}\) over \(S\) is contained in a unique
 Cartan subgroup of \(G\).
-\item Let \(G'\) be an \(S\)-group prescheme of finite presentation
-and \(u:G\to G'\) faithfully flat. Then, for every Cartan subgroup
-\(C\) of \(G\), its image \(C'=u(C)\) is represented by a Cartan
+\item Let \(G'\) be an \(S\)-group prescheme of finite presentation over
+\(S\), and let \(u:G\to G'\) be a faithfully flat \(S\)-group morphism, so
+that \(G'\) is smooth over \(S\), with connected fibres. Then, if \(C\) is a
+Cartan subgroup of \(G\), its image \(C'=u(C)\) is represented by a Cartan
 subgroup of \(G'\), and \(C\to C'\) is faithfully flat.
 \item Under the conditions of (i) and (iii), the morphism
 \[
@@ -364,13 +393,7 @@ tori is given in \SGARefLink{sga3:xv:proposition:7-1}{Proposition 7.1} and Expos
 \SGARefTarget{sga3:xv:theorem:7:3}
 
 \SGAProof{Proof}
-For (i) we prove
-\[
- (\mathrm b)\Rightarrow(\mathrm c)\Rightarrow(\mathrm d)
- \Rightarrow(\mathrm e)\Rightarrow(\mathrm b)
- \Rightarrow(\mathrm a)\Rightarrow(\mathrm d).
-\]
-Assume (b), and let \(s\in S\). Since \(\mathcal C_s\) is smooth
+(i) Assume (b), and let \(s\in S\). Since \(\mathcal C_s\) is smooth
 over \(\kappa(s)\), it has points with residue field a finite
 separable extension of \(\kappa(s)\). Exposé \SGARefLink{sga3:xi:proposition:1:10}{XI~1.10} gives an open
 neighbourhood \(U\) of \(s\) and an étale surjective morphism
@@ -395,8 +418,9 @@ smooth subgroup preschemes of relative dimension \(r\) whose
 geometric fibres are centralizers of tori. By \SGARefLink{sga3:xv:proposition:7-1}{Proposition 7.1},
 \(\mathcal C\) is the open-and-closed subprescheme of
 \(\mathcal{CT}\) representing the relative-dimension-\(r\)
-subfunctor. It has all the properties in (b); affineness of its
-fibres is Exposé \SGARefLink{sga3:xii:theorem:7-1:item:d}{XII~7.1(d)}. This proves
+subfunctor. The other assertions of (b) are contained in
+\SGARefLink{sga3:xv:proposition:7-1:item:i}{7.1(i)}, except that the fibres of \(\mathcal C\) are affine,
+which follows from Exposé \SGARefLink{sga3:xii:theorem:7-1:item:d}{XII~7.1(d)}. This proves
 (e)\(\Rightarrow\)(b), and (b)\(\Rightarrow\)(a) is immediate.
 
 Finally assume (a). By \SGARefLink{sga3:xv:proposition:6-2:item:iii}{6.2(iii)}, \(\mathcal C\) commutes with filtered
@@ -406,7 +430,10 @@ enough to show that, when \(S\) is affine and \(S_0\subseteq S\) is
 defined by a nilpotent ideal, every Cartan subgroup \(C_0\) of
 \(G_0\) lifts to a Cartan subgroup of \(G\). Existence of \(C_0\)
 implies (e) on \(S_0\), hence on \(S\), which has the same underlying
-space. Since (e)\(\Rightarrow\)(b), \(\mathcal C\) is smooth.
+space. Since (e)\(\Rightarrow\)(b),\footnote{Translator's note: the 1970 text
+has ``on conclut du fait que d) \(\Rightarrow\) b)''; what has just been
+obtained is condition (e) on \(S\), and the implication used is
+(e)\(\Rightarrow\)(b).} \(\mathcal C\) is smooth.
 It is also surjective over \(S\), so (a)\(\Rightarrow\)(d).
 
 For (ii), if \(C,C'\) are Cartan subgroups, then
@@ -414,7 +441,7 @@ For (ii), if \(C,C'\) are Cartan subgroups, then
 \(S\)-prescheme (\SGARefLink{sga3:xv:proposition:7-1:item:iii}{Proposition 7.1(iii)}) with nonempty fibres
 (Exposé \SGARefLink{sga3:xii:theorem:6-6:item:a}{XII~6.6(a)},(c)). Hensel's lemma (Exposé \SGARefLink{sga3:xi:proposition:1:10}{XI~1.10}) gives local
 conjugacy for the étale topology. The assertions about regular points
-follow from Exposé \SGARefLink{sga3:xiii:theorem:3:1}{XIII~3.1} and \SGARefLink{sga3:xiii:corollary:3:2}{3.2}.
+follow from Exposé \SGARefLink{sga3:xiii:theorem:3:1}{XIII~3.1} and \SGARefLink{sga3:xiii:corollary:3:2}{3.2}, in view of (i).
 
 For (iii), \SGARefLink{sga3:xv:proposition:7-1:item:v}{Proposition 7.1(v)} represents \(u(C)\) by a smooth
 subgroup \(C'\) of \(G'\). Its fibres are Cartan subgroups of the
@@ -424,5 +451,7 @@ For (iv), faithful flatness is proved as in \SGARefLink{sga3:xv:proposition:7-1:
 If \(\ker u\) is central and \(C'\) is a Cartan subgroup of \(G'\),
 then \(C=u^{-1}(C')\) is smooth with connected fibres
 (\SGARefLink{sga3:xv:proposition:7-1:item:vi}{Proposition 7.1(vi)}), and its fibres are Cartan subgroups (Exposé
-\SGARefLink{sga3:xii:6.6:item:e}{XII~6.6(f)}). Thus \(C\) is a Cartan subgroup, and \SGARefLink{sga3:xv:proposition:7-1:item:vi}{Proposition
+\SGARefLink{sga3:xii:6.6:item:e}{XII~6.6(e)})\footnote{Translator's note: the 1970 text has
+``Exp.\ XII 6.6 f)''; Theorem~6.6 of Exposé~XII has items a) to e), and the
+statement used is e).}. Thus \(C\) is a Cartan subgroup, and \SGARefLink{sga3:xv:proposition:7-1:item:vi}{Proposition
 7.1(vi)} completes the proof.

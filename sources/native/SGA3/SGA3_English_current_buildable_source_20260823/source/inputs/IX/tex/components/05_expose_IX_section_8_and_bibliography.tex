@@ -10,24 +10,38 @@ of Groups of Multiplicative Type over a Field}
 of Sections \SGARefLink{sga3:ix:section:3}{3} through \SGARefLink{sga3:ix:section:7}{7}.}
 \endgroup
 
-\medskip
-\noindent\SGARefTarget{sga3:ix:scholium:8:0}\textbf{Scholium 8.0.}
-\footnote{Editor's note: this scholium has been added.} ---
-\textit{Let \(k\) be a field and let \(H\) be an affine \(k\)-group
-scheme. Write \(k[H]\) for its affine algebra and
-\[
-  X(H)=\operatorname{Hom}_{k\text{-}\mathrm{gr}}
-    (H,\mathbf G_{m,k})
-\]
-for the group of characters of \(H\). By the independence lemma for
-characters, \(X(H)\) is a linearly independent subset of \(k[H]\).
-Consequently, \(H\) is diagonalizable if and only if \(X(H)\) spans
-\(k[H]\) as a \(k\)-vector space.}
+\par\medskip\noindent
+\emph{Addition} (after the Gille--Polo draft re-edition (2009),
+Expos\'e~IX; our formulation). Let \(H\) be an affine group scheme over a
+field \(k\), with affine algebra \(k[H]\) and comultiplication \(\Delta\).
+A character of \(H\), that is, a homomorphism \(H\to\mathbf G_{m,k}\), is
+the same thing as an invertible element \(f\) of \(k[H]\) such that
+\(\Delta(f)=f\otimes f\); the characters form a group \(X(H)\) under
+multiplication. Distinct characters are linearly independent: in a
+relation \(\sum_{j=1}^rc_j\chi_j=0\) of minimal length, with distinct
+\(\chi_j\) and nonzero \(c_j\), one has \(r\geq2\), the \(\chi_j\) being
+invertible; applying \(\Delta\) and subtracting
+\(\chi_1\otimes\sum_jc_j\chi_j=0\), one obtains
+\(\sum_{j\geq2}c_j(\chi_j-\chi_1)\otimes\chi_j=0\), whence
+\(\chi_j=\chi_1\) for \(j\geq2\), since \(\chi_2,\ldots,\chi_r\) are
+linearly independent, which is absurd. Consequently \(H\) is
+diagonalizable if and only if its characters span the \(k\)-vector space
+\(k[H]\). Indeed, if they do, they form a basis of \(k[H]\), so that
+\(k[H]\) is the algebra \(k(X(H))\) of the group \(X(H)\), with the
+comultiplication \(\chi\mapsto\chi\otimes\chi\), and
+\(H\simeq D_k(X(H))\); conversely, the algebra \(k(M)\) of \(D_k(M)\) is
+spanned by the elements of \(M\), which are characters.
+\par
 
 \medskip
 \noindent\SGARefTarget{sga3:ix:proposition:8:1}\textbf{Proposition 8.1.} ---
 \textit{Let \(G\) be a diagonalizable group scheme (respectively, a group
-scheme of multiplicative type) over a field \(k\). Then, for
+scheme of multiplicative type) over a field \(k\).\footnote{Translator's
+note: the 1970 text has ``groupe alg\'ebrique'' (algebraic group) in place
+of ``group scheme'', and does not name the field. As the proof below reduces
+to the case of finite type by a passage to the limit, the statement is meant
+for group schemes over a field that need not be of finite type; the
+Gille--Polo draft re-edition (2009), Expos\'e~IX, states it so.} Then, for
 every subgroup scheme \(H\) of \(G\), the schemes \(H\) and \(G/H\) are
 diagonalizable (respectively, of multiplicative type).}
 
@@ -35,7 +49,20 @@ Definition \SGARefLink{sga3:ix:definition:1:1}{1.1} immediately reduces
 the assertion to the case without the parenthetical qualification. An
 easy passage to the limit, using VI\textsubscript{B} \SGARefLink{prop:sga3-VIB-11.13}{11.13} and \SGARefLink{sga3:viii:theorem:3:1}{VIII 3.1},
 reduces us to the case in which \(G\) is of finite type over
-\(k\).
+\(k\).\footnote{Translator's note: the Gille--Polo draft re-edition (2009),
+Expos\'e~IX, asks for this passage to the limit to be spelled out, pointing
+to the criterion of the Addition above, to the description of \(G/H\) as a
+projective limit in the proof of VI\textsubscript{B}
+\SGARefLink{thm:sga3-VIB-11.17}{11.17}, and to the closedness of \(H\) in
+\(G\). For \(H\) closed in \(G=D_k(M)\), one argument runs as follows. The
+algebra \(k[H]\) is a quotient of \(k(M)\), the union of the \(k(M_i)\),
+\(M_i\) ranging over the finitely generated subgroups of \(M\); the image of
+\(k(M_i)\) is the algebra of a closed subgroup of \(D_k(M_i)\), so, by the
+case of finite type, it is spanned by characters that are images of elements
+of \(M_i\). Thus \(k[H]\) is spanned by the images of the elements of \(M\),
+and \(H\simeq D_k(M/N)\), where \(N\) is the subgroup of the \(m\in M\) with
+image \(1\); \SGARefLink{sga3:viii:theorem:3:1}{VIII 3.1} then gives
+\(G/H\simeq D_k(N)\).}
 By VI\textsubscript{B} \SGARefLink{thm:sga3-VIB-11.16}{11.16}, one can find a finite
 family of nonzero elements
 \SGARefTarget{sga3:ix:eq:8:1:1}
@@ -80,115 +107,72 @@ definition of \(D_k(M)\simeq G\) that \(H\) identifies with
 \hfill\(\square\)
 
 \medskip
-\noindent\SGARefTarget{sga3:ix:proposition:8:2}\textbf{Proposition 8.2.}
-\footnote{Editor's note: both the statement and its proof have been
-expanded.} ---
-\textit{Let \(k\) be a field; let \(H\) and \(K\) be \(k\)-group schemes
-of multiplicative type and finite type; and let \(G\) be a \(k\)-group
-scheme fitting into an exact sequence
-\SGARefTarget{sga3:ix:eq:8:2:0}
-\[
-  1\longrightarrow H\longrightarrow G\longrightarrow K\longrightarrow 1
-\]
-(which implies that \(G\) is of finite type over \(k\)).}
+\noindent\SGARefTarget{sga3:ix:proposition:8:2}\textbf{Proposition 8.2.} ---
+\textit{Let \(G\) be an algebraic group over a field \(k\), an extension
+of a group \(K\) of multiplicative type by a group \(H\) of multiplicative
+type. If \(G\) is commutative or \(K\) is connected, then \(G\) is of
+multiplicative type. If \(K\) and \(H\) are diagonalizable, \(K\) being a
+torus, then \(G\) is diagonalizable.}
 
-\SGARefTarget{sga3:ix:proposition:8:2:item:i}\textit{(i) If \(G\) is commutative or \(K\) is connected, then \(G\) is
-of multiplicative type.}
-
-\SGARefTarget{sga3:ix:proposition:8:2:item:ii}\textit{(ii) If \(K\) and \(H\) are diagonalizable and \(K\) is a torus,
-then \(G\) is diagonalizable.}
-
-For the proof of \SGARefLink{sga3:ix:proposition:8:2:item:i}{(i)}, the reader is referred to \SGARefLink{sga3:xvii:proposition:7:1:1}{XVII 7.1.1}, of which
-\SGARefLink{sga3:ix:proposition:8:2:item:i}{8.2(i)} is a special case. The case
-of a field is treated in part \SGARefLink{sga3:xvii:proposition:7:1:1:item:i}{(i)} of the proof of \SGARefLink{sga3:xvii:proposition:7:1:1}{XVII 7.1.1}, without
-using the results of the later exposés.
-
-For \SGARefLink{sga3:ix:proposition:8:2:item:ii}{(ii)}, now suppose that \(K\) and \(H\) are diagonalizable:
+For the proof of the first assertion, the reader is referred to
+\SGARefLink{sga3:xvii:proposition:7:1:1}{XVII 7.1.1}, of which 8.2 is a
+special case; the case of 8.2 is treated in part
+\SGARefLink{sga3:xvii:proposition:7:1:1:item:i}{(i)} of the proof of
+\SGARefLink{sga3:xvii:proposition:7:1:1}{XVII 7.1.1}, which does not use
+the results of the later expos\'es. Suppose now that \(K\) and \(H\) are
+diagonalizable:
 \[
-  K\simeq D_k(M)
-  \qquad\text{and}\qquad
-  H\simeq D_k(N),
+  K\simeq D_k(M),
+  \qquad
+  H\simeq D_k(N).
 \]
-and suppose that \(G\) is of multiplicative type, as follows from \SGARefLink{sga3:ix:proposition:8:2:item:i}{(i)}
-when \(K\) is a torus. By \SGARefLink{sga3:x:proposition:1:4}{X 1.4}, \(G\) is isotrivial over \(k\); that is,
-there is a finite separable extension \(k'/k\) such that
+Then, by Definition \SGARefLink{sga3:ix:definition:1:1}{1.1} and the
+exactness sorite \SGARefLink{sga3:viii:theorem:3:1}{VIII 3.1}, one sees
+that the classification of the extensions \(G\) of \(K\) by \(H\) which,
+over an algebraic closure of \(k\), become isomorphic to a given
+diagonalizable extension \(G_0\) of \(K\) by \(H\)\footnote{Translator's note:
+the 1970 text has ``de \(G\)'' here in place of ``of \(K\) by \(H\)''.} is
+the same as that of
+the torsors, for the fpqc topology, under the group
+\(\underline{\operatorname{Hom}}(K,H)\), which is the constant
+\(k\)-group with value \(L=\operatorname{Hom}(N,M)\). If \(K\) is a torus,
+that is, if \(M\) is torsion-free, then so is \(L\), whence
 \[
-  G'=G\times_k k'
+  H^1(k_{\mathrm{fpqc}},L_k)
+  =\operatorname{Hom}\bigl(\operatorname{Gal}(\bar k/k),L\bigr)
+  \simeq0,
 \]
-is diagonalizable. Hence \(G'=D_{k'}(E)\) for a commutative group \(E\),
-and there is an exact sequence
-\SGARefTarget{sga3:ix:eq:8:2:1}
-\begin{equation}
-  \tag{1}
-  0\longrightarrow D_{k'}(N)\longrightarrow D_{k'}(E)
-    \longrightarrow D_{k'}(M)\longrightarrow 0.
-\end{equation}
-By \SGARefLink{sga3:viii:theorem:3:1}{VIII 3.1} and \SGARefLink{sga3:ix:theorem:3:2}{3.2}, \(M\) is therefore a subgroup of \(E\), and one has
-an exact sequence
-\SGARefTarget{sga3:ix:eq:8:2:2}
-\begin{equation}
-  \tag{2}
-  0\longrightarrow M\longrightarrow E\longrightarrow N\longrightarrow 0.
-\end{equation}
-
-For a given extension \(E_0\) of \(N\) by \(M\), consider the
-diagonalizable \(k\)-group \(G_0=D_k(E_0)\). The \(k\)-group functor
-\(A\) of automorphisms of the extension
-\SGARefTarget{sga3:ix:eq:8:2:3}
-\begin{equation}
-  \tag{3}
-  1\longrightarrow H\longrightarrow G_0\longrightarrow K\longrightarrow 1,
-\end{equation}
-that is, the group subfunctor of
-\(\operatorname{Aut}_{k\text{-}\mathrm{gr}}(G_0)\) whose points on a
-\(k\)-prescheme \(T\) are the
-\[
-  \phi\in\operatorname{Aut}_{T\text{-}\mathrm{gr}}(G_T)
-\]
-inducing the identity on \(H_T\) and \(K_T\), identifies with
-\(\operatorname{Hom}_{k\text{-}\mathrm{gr}}(K,H)\). By \SGARefLink{sga3:viii:corollary:1:5}{VIII 1.5}, this is
-the constant \(k\)-group with value
-\[
-  L=\operatorname{Hom}_{\mathrm{gr}}(N,M).
-\]
-
-It follows that the extensions \(G\) of \(K\) by \(H\) which become
-isomorphic to \SGARefLink{sga3:ix:eq:8:2:3}{(3)} over a separable closure
-\(k_s\) of \(k\) are classified in the same way as the \(k\)-torsors,
-for the étale topology, under the constant group \(L_k\). Put
-\(\Gamma=\operatorname{Gal}(k_s/k)\). Since \(L\) is a trivial
-\(\Gamma\)-module, these torsors are classified by
-\SGARefTarget{sga3:ix:eq:8:2:4}
-\[
-  H^1_{\mathrm{\acute et}}(k,L_k)
-  =H^1(\Gamma,L)
-  =\operatorname{Hom}_{\mathrm{gr.\,top.}}(\Gamma,L).
-\]
-
-If \(K\) is moreover a torus, then \(M\) is torsion-free, and hence so
-is \(L\). Therefore
-\[
-  \operatorname{Hom}_{\mathrm{gr.\,top.}}(\Gamma,L)=0,
-\]
-and every extension of \(K\) by \(H\) is already diagonalizable.
+which means that every extension of \(K\) by \(H\) is already
+diagonalizable.\footnote{Translator's note: the Gille--Polo draft
+re-edition (2009), Expos\'e~IX, states the proposition for \(H\) and \(K\) of
+finite type, as two assertions (i) and (ii), and details the proof of the
+second. In our formulation: \(G\) is then of multiplicative type by the
+first assertion, hence split by a finite separable extension of \(k\)
+(\SGARefLink{sga3:x:proposition:1:4}{X 1.4}), so that the \'etale topology
+and a separable closure \(k_s\) of \(k\) suffice. The automorphisms of the
+commutative extension \(G_0\) inducing the identity on \(H\) and on \(K\)
+are the maps \(g\mapsto f(\bar g)\,g\), where \(\bar g\) is the image of
+\(g\) in \(K\) and \(f:K\to H\) is a homomorphism; they form the group
+\(\underline{\operatorname{Hom}}(K,H)\), constant by
+\SGARefLink{sga3:viii:corollary:1:5}{VIII 1.5}. Finally
+\(H^1(\operatorname{Gal}(k_s/k),L)\) is the group of continuous
+homomorphisms \(\operatorname{Gal}(k_s/k)\to L\), which is zero when \(L\)
+is torsion-free, a profinite group having only finite images in a discrete
+group.}
 
 \medskip
-\noindent\SGARefTarget{sga3:ix:remark:8:3}\textbf{Remark 8.3.} ---
+\noindent\SGARefTarget{sga3:ix:remark:8:3}\textbf{Remarks 8.3.} ---
 \textit{As already noted in the proof of
-\SGARefLink{sga3:ix:proposition:8:2}{8.2}, \SGARefLink{sga3:ix:proposition:8:2:item:i}{the first assertion} is stated
-and proved over an arbitrary base in \SGARefLink{sga3:xvii:proposition:7:1:1}{XVII 7.1.1}. \SGARefLink{sga3:ix:proposition:8:2:item:ii}{The second assertion}
+\SGARefLink{sga3:ix:proposition:8:2}{8.2}, the first assertion is stated
+and proved over an arbitrary base in \SGARefLink{sga3:xvii:proposition:7:1:1}{XVII 7.1.1}. The second assertion
 generalizes, with essentially the same proof, to the case of an integral
 normal base scheme---or, more generally, a geometrically unibranch
 one---by using \SGARefLink{sga3:x:lemma:5-13}{X 5.13} below.}
 
 \textit{Finally, \SGARefLink{sga3:ix:proposition:8:1}{8.1} may also be
 regarded as a corollary of the distinctly less trivial result \SGARefLink{sga3:ix:theorem:6:8}{6.8}, which
-is likewise valid over an arbitrary base scheme.}
-
-\SGARefTarget{sga3:ix:bibliography}
-\section*{Bibliography}
-\addcontentsline{toc}{section}{Bibliography}
-\footnote{Editor's note: additional references cited in this exposé.}
-
-\noindent \SGARefTarget{sga3:ix:bib:bens}[BEns] N. Bourbaki, \textit{Théorie des ensembles},
-Chapters I--IV, Hermann, 1970.
+is likewise valid over an arbitrary base scheme.}\footnote{Translator's note:
+as the Gille--Polo draft re-edition (2009), Expos\'e~IX, points out, the
+proof of 6.8 given above uses 8.1, to know that the fiber \(K_s\), a closed
+subgroup of the diagonalizable group \(H_s\), is diagonalizable; deducing 8.1
+from 6.8 therefore requires another proof of that step.}

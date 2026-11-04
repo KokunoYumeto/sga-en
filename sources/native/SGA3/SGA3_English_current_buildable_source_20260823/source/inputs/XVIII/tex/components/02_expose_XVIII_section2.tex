@@ -8,7 +8,9 @@ such that \(U\cdot U=G\). If \(f\) and \(g\) are homomorphisms from
 \(G\) to \(H\) such that \(f=g\) on \(U\), then \(f=g\). Likewise:
 
 \SGARefTarget{sga3:xviii:prop:2.1}\paragraph{\SGARefLink{sga3:xviii:prop:2.1}{Proposition 2.1}.}
-\textit{Let \(S\) be a site (cf.\ Exposé IV),
+\textit{Let \(S\) be a site (Exposé IV)\footnote{Translator's note: the Gille--Polo draft re-edition (2009),
+Exposé~XVIII, explains that a site is a category endowed with a topology, and refers to
+Exposé~IV, \SGARefLink{sga3:iv:subsection:4:2}{4.2}.},
 let \(G\) be a sheaf of groups on \(S\), and let \(U\subseteq G\) be
 a subsheaf of sets such that the morphism \(U\times U\to G\)
 induced by multiplication is an epimorphism. If \(f\) and \(g\) are
@@ -19,11 +21,14 @@ homomorphisms from \(G\) to a sheaf of groups \(H\) and are equal on
 \textit{Let \(G\) be an \(S\)-group prescheme that is locally of
 finite presentation and flat, let \(U\subseteq G\) be a relatively
 schematically dense open subset, and let \(H\) be a sheaf of groups
-on \(S\) for the fppf topology. Then every homomorphism
+on \(S\) for the fppf topology. Then a homomorphism
 \(f:G\to H\) is determined by its restriction to \(U\).}
 
 Indeed, since \(G\) is flat over \(S\), the composition law on \(G\)
-is a flat morphism (VI\textsubscript{B}, \SGARefLink{concl:sga3-VIB-9.2-xi}{9.2(xi)}); it follows that
+is a flat morphism (VI\textsubscript{B})\footnote{Translator's note: the Gille--Polo draft
+re-edition (2009), Exposé~XVIII, gives the precise reference, VI\textsubscript{B},
+\SGARefLink{concl:sga3-VIB-9.2-xi}{9.2~(xi)}, to be applied to the diagonal subgroup of
+\(G\times_S G\), whose quotient is \(G\).}; it follows that
 \(U\times_S U\to G\) is faithfully flat and locally of finite
 presentation, hence an fppf covering, and therefore an epimorphism.
 
@@ -31,33 +36,36 @@ presentation, hence an fppf covering, and therefore an epimorphism.
 \textit{Let \(G\) be a group prescheme locally of finite
 presentation and flat over \(S\), let \(U\subseteq G\) be a
 relatively schematically dense open subset, and let \(H\) be a
-sheaf of groups for the fppf topology. Write \(m_G\) for the
-multiplication on \(G\) and \(m_H\) for that on \(H\).}
+sheaf of groups for the fppf topology.}
 
 \textit{Let \(\bar f:U\to H\) be an \(S\)-morphism, and suppose that
 there exists a relatively schematically dense open subset \(V\) of
-\(m_G^{-1}(U)\cap(U\times_S U)\) such that the following diagram is
+\(m_G^{-1}(U)\cap(U\times_S U)\subseteq G\times_S G\) \textup{(}\(m_G\) being the composition
+law of \(G\)\textup{)} such that the following diagram is
 commutative:}
 
 \begin{center}
 \input{native_diagrams/exp18/001_proposition_2_3_compatibility_square.tex}
 \end{center}
 
-\textit{Then there exists a morphism of \(S\)-groups
-\(f:G\to H\), necessarily unique, extending \(\bar f\), in each of
+\textit{Then \(\bar f\) is the restriction to \(U\) of a unique morphism of
+\(S\)-groups \(f:G\to H\) in each of
 the following situations:}
 
 \begin{enumerate}
 \item[\SGAInlineRefTarget{sga3:xviii:prop:2.3:item:i}(i)] \textit{\(H\) is representable.}
 \item[\SGAInlineRefTarget{sga3:xviii:prop:2.3:item:ii}(ii)] \textit{The diagonal morphism
-  \(H\to H\times_S H\) is representable by a closed
-  immersion.}
+  \(H\to H\times_S H\) is representable by closed
+  immersions.}
 \item[\SGAInlineRefTarget{sga3:xviii:prop:2.3:item:iii}(iii)] \textit{For every section \(a\in U(S)\), the open
   subset
   \(\operatorname{pr}_2((a\times_S U)\cap V)\) is relatively
   schematically dense in \(U\)\begingroup
   \renewcommand{\thefootnote}{*}\footnote{Or in \(G\), which is
-  equivalent by \SGARefLink{sga3:xviii:prop:1.1:item:iv}{1.1(iv)}.}
+  equivalent by \SGARefLink{sga3:xviii:prop:1.1:item:iii}{1.1(iii)}. [Translator's note: the 1970
+  text refers to 1.1~(iv); the equivalence is 1.1~(iii) applied to
+  \(\operatorname{pr}_2((a\times_S U)\cap V)\subseteq U\subseteq G\), the open subset \(U\) being
+  relatively schematically dense in \(G\).]}
   \addtocounter{footnote}{-1}
   \endgroup, and this assertion remains true after every base
   change \(S'\to S\).}
@@ -69,8 +77,8 @@ First note that \(V\) is relatively schematically dense in
 \[
   m_G^{-1}(U)\cap(U\times_S G)\cap(G\times_S U),
 \]
-and each of the three factors is obtained from \(U\subseteq G\) by
-an evident base change \(G\times_S G\to G\). The assertion therefore
+and all three factors on the right are obtained from \(U\subseteq G\) by
+an evident base change. The assertion therefore
 follows from \SGARefLink{sga3:xviii:prop:1.1}{1.1}.
 
 To construct \(f:G\to H\), since \(U\times_S U\to G\) is an fppf
@@ -88,14 +96,9 @@ such that \(ab=cd\), we must prove
 \[
   \bar f(a)\bar f(b)=\bar f(c)\bar f(d).
 \]
-If \((a,b)\) and \((c,d)\) belong to \(V(S')\)\begingroup
-\renewcommand{\thefootnote}{\ensuremath{\ddagger}}\footnote{The
-French source prints \((a,d)\) and \((c,d)\). The first pair must be
-\((a,b)\), as required by the displayed equality and by the
-compatibility hypothesis on \(V\).}
-\addtocounter{footnote}{-1}
-\endgroup, the desired equality follows at once. Thus it holds on
-\((V\times_G V)(S')\).
+By hypothesis, this holds if \((a,b)\) and \((c,d)\) belong to \(V(S')\), since in that case
+\(\bar f(a)\bar f(b)=\bar f(ab)\) and \(\bar f(c)\bar f(d)=\bar f(cd)\). Hence it holds whenever
+\((a,b,c,d)\in(V\times_G V)(S')\).
 
 I claim that \(V\times_G V\) is a relatively schematically dense
 open subset of
@@ -145,8 +148,7 @@ all belong to \(V\). Then
 \]
 which gives the desired equality.
 
-To find such an \(x\)\footnote{Editor's note: The beginning of the
-following sentence has been added.}, set, for every \(z\in U(S')\),
+Set, for \(z\in U(S')\),
 \[
   V_z=
   \operatorname{pr}_{2/S'}
@@ -248,7 +250,9 @@ The subset \(U'\) is open because
 All the other verifications are immediate except for hypothesis
 \textup{\SGARefLink{sga3:xviii:prop:2.3:item:iii}{(iii)}}.
 
-Let \(a\in U(S')\); after base change, rename \(S'\) as \(S\). To
+Let \(a\in U'(S')\)\footnote{Translator's note: the 1970 text has \(a\in U(S')\);
+hypothesis \textup{(iii)} for \(U'\) concerns the sections of \(U'\), and the end of the proof uses
+\(a\in U'\).}; after base change, rename \(S'\) as \(S\). To
 verify that
 \[
   \operatorname{pr}_2\bigl((a\times_S U')\cap V'\bigr)
@@ -256,14 +260,16 @@ verify that
 is relatively schematically dense in \(U'\), it suffices by
 \SGARefLink{sga3:xviii:cor:1.3}{Corollary 1.3} to do so fiber by fiber. Thus it is enough to treat the
 case where \(S\) is the spectrum of a field, and in that case it is
-enough to prove that \(U'\) is nonempty, since \(G\) is irreducible
-and has no embedded components (cf.\ VI\textsubscript{A}, \SGARefLink{prop:sga3-VIA-1.1.1}{1.1.1}).
-Now
+enough to prove that the open subset is nonempty, since \(G\) is irreducible
+and has no embedded components (VI\textsubscript{A}, \SGARefLink{prop:sga3-VIA-1.1.1}{1.1.1}).
+Now\footnote{Translator's note: the Gille--Polo draft re-edition (2009), Exposé~XVIII, writes
+\(U'\) for \(U\) in the first term on the right; both readings give the same set, since the second term
+is contained in \(U'\).}
 \[
 \begin{aligned}
   \operatorname{pr}_2\bigl((a\times_S U')\cap V'\bigr)
   &=
-  \operatorname{pr}_2\bigl((a\times_S U')\cap V\bigr)\\
+  \operatorname{pr}_2\bigl((a\times_S U)\cap V\bigr)\\
   &\quad{}\cap
   \operatorname{pr}_2\bigl((a\times_S U')\cap m_G^{-1}(U')\bigr).
 \end{aligned}

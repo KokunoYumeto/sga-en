@@ -1,11 +1,11 @@
 
 \medskip
-\noindent\textup{\SGARefLink{sga3:xiv:7:lemma3}{(3)}}
+\noindent\textup{(3)}
 Suppose that \(\varphi\in E/W\) is nontrivial and that \(R\) has
 one of the following types:
 \[
   A_n\ (n\ge3\text{ odd}),\qquad
-  D_4,\qquad D_n\ (n\ge5),\qquad E_6.
+  D_n\ (n\ge4),\qquad E_6.
 \]
 These, together with the even \(A_n\) case treated separately
 above, are exactly the cases in which \(E/W\) is nontrivial. The
@@ -21,20 +21,29 @@ automorphisms.
   dynkin edge/.style={line width=.45pt},
   dynkin arrow/.style={line width=.45pt}
 ]
-  \node[anchor=east] at (-1.4,6.7) {\(A_n,\ n\text{ odd}\geq 3\)};
-  \foreach \x/\name in {0/aone,1.3/atwo,2.6/athree,3.9/afour,5.2/afive}
+  \node[anchor=east] at (-1.4,6.7) {\(A_3\)};
+  \foreach \x/\name in {0/aone,1.3/atwo,2.6/athree}
     \node[dynkin node] (\name) at (\x,6.7) {};
-  \draw[dynkin edge] (aone)--(atwo)--(athree)--(afour)--(afive);
+  \draw[dynkin edge] (aone)--(atwo)--(athree);
   \draw[dynkin arrow,<->]
-    (aone) .. controls +(1.0,1.35) and +(-1.0,1.35) .. (afive);
-  \draw[dynkin arrow,<->]
-    (atwo) .. controls +(.65,.72) and +(-.65,.72) .. (afour);
+    (aone) .. controls +(.8,1.1) and +(-.8,1.1) .. (athree);
 
-  \node[anchor=east] at (-1.4,4.3) {\(D_4\)};
-  \node[dynkin node] (dcenter) at (2.6,4.3) {};
-  \node[dynkin node] (dtop)    at (1.3,5.15) {};
-  \node[dynkin node] (dbottom) at (1.3,3.45) {};
-  \node[dynkin node] (dright)  at (4.0,4.3) {};
+  \node[anchor=east] at (-1.4,4.3) {\(D_5\)};
+  \foreach \x/\name in {0/dnone,1.25/dntwo,2.5/dnbranch}
+    \node[dynkin node] (\name) at (\x,4.3) {};
+  \node[dynkin node] (dnupper) at (3.6,5.1) {};
+  \node[dynkin node] (dnlower) at (3.6,3.5) {};
+  \draw[dynkin edge] (dnone)--(dntwo)--(dnbranch);
+  \draw[dynkin edge] (dnbranch)--(dnupper);
+  \draw[dynkin edge] (dnbranch)--(dnlower);
+  \draw[dynkin arrow,<->]
+    (dnupper) .. controls +(.8,-.3) and +(.8,.3) .. (dnlower);
+
+  \node[anchor=east] at (-1.4,1.85) {\(D_4\)};
+  \node[dynkin node] (dcenter) at (2.6,1.85) {};
+  \node[dynkin node] (dtop)    at (1.3,2.7) {};
+  \node[dynkin node] (dbottom) at (1.3,1.0) {};
+  \node[dynkin node] (dright)  at (4.0,1.85) {};
   \draw[dynkin edge] (dcenter)--(dtop);
   \draw[dynkin edge] (dcenter)--(dbottom);
   \draw[dynkin edge] (dcenter)--(dright);
@@ -45,18 +54,7 @@ automorphisms.
   \draw[dynkin arrow,->]
     (dbottom) .. controls +(.75,-.48) and +(0,-1.05) .. (dright);
 
-  \node[anchor=east] at (-1.4,1.85) {\(D_n,\ n\geq 5\)};
-  \foreach \x/\name in {0/dnone,1.25/dntwo,2.5/dnthree,3.75/dnbranch}
-    \node[dynkin node] (\name) at (\x,1.85) {};
-  \node[dynkin node] (dnupper) at (4.85,2.65) {};
-  \node[dynkin node] (dnlower) at (4.85,1.05) {};
-  \draw[dynkin edge] (dnone)--(dntwo)--(dnthree)--(dnbranch);
-  \draw[dynkin edge] (dnbranch)--(dnupper);
-  \draw[dynkin edge] (dnbranch)--(dnlower);
-  \draw[dynkin arrow,<->]
-    (dnupper) .. controls +(.8,-.3) and +(.8,.3) .. (dnlower);
-
-  \node[anchor=east] at (-1.4,-.75) {\(E_6.\)};
+  \node[anchor=east] at (-1.4,-.75) {\(E_6\)};
   \foreach \x/\name in {0/eone,1.3/etwo,2.6/ethree,3.9/efour,5.2/efive}
     \node[dynkin node] (\name) at (\x,-.75) {};
   \node[dynkin node] (esix) at (2.6,-1.9) {};
@@ -112,7 +110,7 @@ for a suitable \(j\). Thus \(f\) and the \(\theta_i\) satisfy
 both conditions of \SGARefLink{sga3:xiv:7:lemma3}{Lemma 3}, completing its proof.
 
 \paragraph{\textbf{Remark.}}
-Except in case \textup{\SGARefLink{sga3:xiv:7:lemma2}{(2)}}, one can prove that every orbit of
+Except in case \textup{(2)}, one can prove that every orbit of
 \(f\) has exactly
 \[
   h=\frac{\operatorname{Card}(R)}{n}

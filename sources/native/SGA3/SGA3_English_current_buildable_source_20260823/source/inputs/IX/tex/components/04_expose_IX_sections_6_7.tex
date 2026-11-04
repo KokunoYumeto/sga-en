@@ -18,8 +18,11 @@ quasi-finite over \(S\). Then there is an integer \(n>0\) such that
 \]}
 
 \emph{Proof.}
-If \(S\) is the spectrum of a field \(k\), then \(G\) is finite over
-\(k\), and by VII\textsubscript{A} \SGARefLink{sga3:VIIA:8.5}{8.5} it is enough to take
+When \(S\) is the spectrum of a field \(k\), this was seen in
+VII\textsubscript{A} \SGARefLink{sga3:VIIA:8.5}{8.5}\footnote{Translator's note: the
+Gille--Polo draft re-edition (2009), Expos\'e~IX, adds that \(G\) is then
+finite over \(k\), as VII\textsubscript{A} 8.5 requires: a group quasi-finite
+and of finite type over a field is finite.}: it is enough to take
 \[
   n=\deg(G/k).
 \]
@@ -56,29 +59,35 @@ putting \(n'=p^{m-1}n_0\), we may suppose that
 \[
   G_{m-1}=G\times_S S_{m-1}.
 \]
-\footnote{Editor's note: the original has been expanded in what follows,
-with the results of Expos\'e III that are used made explicit.}
-Let \(E\) be the set of endomorphisms \(u\) of \(G\) having this
-property, and let \(K\) be the kernel of the morphism of group functors
-\[
-  G\longrightarrow \prod_{S_{m-1}/S}G
-\]
-(cf.\ \SGARefLink{sga3:iii:remark:0-1-2}{III 0.1.2}). Then
-\[
-  E=\operatorname{Hom}_{S\text{-}\mathrm{gr}}(G,K);
-\]
-in particular, the abelian group law on \(E\) is induced by that on
-\(K\). By \SGARefLink{sga3:iii:corollary:0-9}{III 0.9}, \(K\) is the \(S\)-group functor which, to every
-\(g:T\to S\), assigns the \(k\)-vector space
+The set of endomorphisms \(u\) of \(G\) having this property is in
+one-to-one correspondence with \(H^1(G,M)\), where \(M\) is the group
+functor over \(S\) defined by
 \SGARefTarget{sga3:ix:lemma:6:1:display:01}
 \[
+  T\longmapsto
   \operatorname{Hom}_{\mathscr O_{T_0}}
   \bigl(
     g_0^*(\Omega^1_{G_0/S_0}),
     \mathfrak m^m\mathscr O_T
-  \bigr).
+  \bigr)
 \]
-Thus \(pu=0\) for every \(u\in E\). It follows that
+(\(g:T\to S\) denoting the structural projection, and
+\(g_0:T_0\to S_0\) the projection deduced by the base change
+\(S_0\to S\)); cf.\ \SGARefLink{sga3:iii:section:2}{III~2}. One checks that this one-to-one
+correspondence respects the group laws, which implies that the
+endomorphisms \(u\) in question satisfy \(pu=0\).\footnote{Translator's note: the
+Gille--Polo draft re-edition (2009), Expos\'e~IX, replaces this argument by a
+more direct one. In our formulation: an endomorphism \(u\) of \(G\) induces
+\(0\) on \(G_{m-1}\) if and only if, for every \(S\)-prescheme \(T\) and
+every \(x\in G(T)\), the restriction of \(u(x)\) to \(T\times_SS_{m-1}\) is
+the unit, that is, if and only if \(u\) factors through the kernel of the
+canonical homomorphism \(G\to\prod_{S_{m-1}/S}G_{m-1}\)
+(\SGARefLink{sga3:iii:remark:0-1-2}{III 0.1.2}). These endomorphisms thus
+form the group of homomorphisms from \(G\) to this kernel, the sum being
+computed in the kernel. As the ideal \(\mathfrak m^m\) defining \(S_{m-1}\)
+has square zero, \SGARefLink{sga3:iii:corollary:0-9}{III 0.9} identifies
+this kernel with \(M\), a functor in \(k\)-vector spaces; hence
+\(pu=0\).} Thus
 \[
   pn'\cdot\operatorname{id}_G=0,
   \qquad\text{that is,}\qquad
@@ -87,7 +96,14 @@ Thus \(pu=0\) for every \(u\in E\). It follows that
 
 Suppose now that \(S\) is Noetherian; this is the case to which the
 general assertion reduces by the usual reduction to the Noetherian
-case.
+case.\footnote{Translator's note: the Gille--Polo draft re-edition (2009),
+Expos\'e~IX, spells out this reduction. In our words: \(S\) is a finite
+union of affine open subsets, and the product of integers that work on each
+of them works on \(S\), so \(S\) may be assumed affine; then \(G\), being of
+finite presentation, comes with its group law by base change from a group
+over a subring of finite type over \(\mathbb Z\), which may be taken
+commutative and quasi-finite (EGA IV\(_3\), 8.8.2 and 8.10.5), and an
+integer killing that group kills \(G\).}
 It is enough to combine the foregoing with \SGARefLink{sga3:ix:lemma:6:2}{the following lemma}.
 
 \medskip
@@ -130,7 +146,14 @@ Indeed, put \(S'=\operatorname{Spec}(\mathscr O_{S,s})\). If
   X\times_S S'=X_i\times_S S'
 \]
 for some \(i\),
-there is an open neighborhood \(V\) of \(s\) such that
+there is an open neighborhood \(V\) of \(s\)\footnote{Translator's note: the
+Gille--Polo draft re-edition (2009), Expos\'e~IX, justifies this step. In our
+words: a quasi-finite morphism is of finite type (EGA II, 6.2.3), so \(X\) is
+of finite presentation over the Noetherian prescheme \(S\), and so is
+\(X_i\), the immersion \(X_i\to X\) being of finite type (EGA I, 6.3.5); as
+\(S'\) is the projective limit of the affine open neighborhoods of \(s\), the
+immersion \(X_i\to X\), which is an isomorphism over \(S'\), is one over
+some such neighborhood (EGA IV\(_3\), 8.8.2).} such that
 \[
   X|_V=X_i|_V.
 \]
@@ -144,14 +167,14 @@ For all sufficiently large \(i\), the equality \(X|_U=X_i|_U\) shows
 that \(X_i\) is a closed subprescheme of \(X\), defined by an ideal
 \(\mathscr I^{(i)}\) whose support is contained in
 \[
-  X_s=X_0=X\times_S S_0,
+  X_0=X\times_S S_0,
 \]
 where
 \[
   S_n=\operatorname{Spec}(A/\mathfrak m^{n+1}),
   \qquad S=\operatorname{Spec}(A).
 \]
-Since \(X_0\) is quasi-finite over \(S_0\), it is a finite closed subset
+Since \(X_0\) is quasi-finite over \(S\), it is a finite closed subset
 of the Noetherian prescheme \(X\). Hence \(\mathscr I^{(i)}\) is a
 module of finite length. There is therefore an integer \(n\geq0\) such
 that
@@ -191,14 +214,24 @@ quasi-finite (respectively, unramified) over \(\kappa(t)\) at \(x\);
 that is, \(x\) is isolated in \(K_t\) (respectively, it is isolated and
 its local ring in \(K_t\) is a separable extension of \(\kappa(t)\)).
 The set \(V\) is open because \(K\) is locally of finite presentation
-over \(S\).
+over \(S\).\footnote{Translator's note: the Gille--Polo draft re-edition
+(2009), Expos\'e~IX, refers here to EGA IV\(_3\), 13.1.4, and EGA
+IV\(_4\), 17.4.1: the points isolated in their fiber form an open set, and so
+do, for a morphism locally of finite presentation, the points at which it is
+unramified, a condition that can be checked on the fiber.}
 If \(\epsilon\) denotes the unit section of \(K\), then
 \(\epsilon^{-1}(V)\) is open. By hypothesis it contains \(s\), and is
 therefore an open neighborhood \(U\) of \(s\). This \(U\) has the
 required property. Indeed, if \(t\in U\), then \(K_t\), being a group
 locally of finite type over \(\kappa(t)\), is locally quasi-finite
 (respectively, unramified) over \(\kappa(t)\) because it has that
-property at \(\epsilon(t)\); cf.\ VI\textsubscript{B} \SGARefLink{prop:sga3-VIB-1.3}{1.3}. \qed
+property at \(\epsilon(t)\); cf.\ VI\textsubscript{B} \SGARefLink{prop:sga3-VIB-1.3}{1.3}.\footnote{Translator's
+note: the 1970 text leaves the number blank (``cf.\ VI''); the Gille--Polo
+draft re-edition (2009), Expos\'e~IX, supplies VI\textsubscript{B} 1.3,
+which says that a morphism of groups over a field whose source is locally of
+finite type is locally quasi-finite (respectively, unramified) as soon as it
+is so at one point; it is applied here to the structural morphism of
+\(K_t\).} \qed
 
 Combining \SGARefLink{sga3:ix:lemma:6:1}{6.1} and
 \SGARefLink{sga3:ix:lemma:6:3}{6.3}, one obtains:
@@ -220,8 +253,8 @@ Nakayama's lemma now gives:
 
 \medskip
 \noindent\SGARefTarget{sga3:ix:corollary:6:5}\textbf{Corollary 6.5.}
-\textit{With the preceding notation, suppose that \(K_s\) is the unit
-group. Then there is an open neighborhood \(U\) of \(s\) such that
+\textit{With the preceding notation, suppose further that \(K_s\) is
+the unit group. Then there is an open neighborhood \(U\) of \(s\) such that
 \(K|_U\) is the unit group.}
 
 \medskip
@@ -248,23 +281,22 @@ Put \(K=\operatorname{Ker}(u)\). The hypothesis on \(u_s\) says that
 separated over \(S\), the group \(K\) is a closed subgroup of \(H\).
 If \(S\) is not assumed locally Noetherian, but \(G\) is assumed locally
 of finite presentation over \(S\), then \(K\) is locally of finite
-presentation over \(S\). It is therefore of finite
+presentation over \(S\).\footnote{Translator's note: the Gille--Polo draft
+re-edition (2009), Expos\'e~IX, notes that it is enough here for \(G\) to be
+locally of finite type over \(S\): then \(u:H\to G\) is locally of finite
+presentation, since \(H\) is of finite presentation over \(S\) (EGA
+IV\(_1\), 1.4.3\,(v)), and so is its base change \(K\to S\) by the unit
+section \(S\to G\).} It is therefore of finite
 presentation over \(S\), since it is separated over \(S\) (as \(H\)
 is) and quasi-compact over \(S\) (being closed in \(H\), which is
 quasi-compact over \(S\)). Corollary
-\SGARefLink{sga3:ix:corollary:6:5}{6.5} now applies. \qed
-
-\medskip
-\noindent\SGARefTarget{sga3:ix:remark:6:6:1}\textbf{Remark 6.6.1.}%
-\textit{Under the hypotheses of
-\SGARefLink{sga3:ix:corollary:6:6}{6.6}, note that if, in addition,
-\(G\) is affine over \(S\) (respectively, of finite presentation over
-\(S\)), then
+\SGARefLink{sga3:ix:corollary:6:5}{6.5} now applies. Note that when
+\(G\) is affine over \(S\) or of finite presentation over \(S\),
 \[
   H|_U\longrightarrow G|_U
 \]
-is even a closed immersion, as was observed in \SGARefLink{sga3:ix:corollary:2:5}{2.5} (respectively,
-\SGARefLink{sga3:ix:remark:2:6}{2.6}).}
+is even a closed immersion, as was observed in \SGARefLink{sga3:ix:corollary:2:5}{2.5} and
+\SGARefLink{sga3:ix:remark:2:6}{2.6}. \qed
 
 \medskip
 \noindent\SGARefTarget{sga3:ix:corollary:6:7}\textbf{Corollary 6.7.}
@@ -283,7 +315,9 @@ The argument is the same as in
 be separated over \(S\) is unnecessary in order to ensure that
 \(K=\operatorname{Ker}(u)\) is closed in \(H\), since the assumption
 that all the \(u_s\) are monomorphisms implies that \(K\) is
-set-theoretically reduced to the unit section. \qed
+set-theoretically reduced to the unit section of \(H\).\footnote{Translator's
+note: the 1970 text, like the Gille--Polo draft re-edition (2009),
+Expos\'e~IX, has ``of \(G\)''.} \qed
 
 \medskip
 \noindent\SGARefTarget{sga3:ix:theorem:6:8}\textbf{Theorem 6.8.}
@@ -308,14 +342,17 @@ is a subgroup of \(H\) of multiplicative type and of finite type, and
 \end{tikzcd}
 \]
 where \(H/K\) is of multiplicative type and of finite type,
-\(u'\) is the canonical homomorphism and is faithfully flat (and
-affine), and \(u''\) is a monomorphism.
+\(u'\) is the canonical homomorphism and is faithfully flat, and
+\(u''\) is a monomorphism.\footnote{Translator's note: the Gille--Polo
+draft re-edition (2009), Expos\'e~IX, adds that \(u'\) is affine. Indeed
+\(H\) is affine over \(S\), and \(H/K\), being of multiplicative type, is
+separated over \(S\); a morphism of \(S\)-preschemes from a prescheme affine
+over \(S\) to a prescheme separated over \(S\) is affine.}
 \end{itshape}
 
 \emph{N.B.}
-As noted in \SGARefLink{sga3:ix:remark:6:6:1}{6.6.1}, the homomorphism
-\(u''\) is a closed immersion if \(G\) is affine over \(S\), or if
-\(G\) is of finite presentation over \(S\).
+In fact, \(u''\) is a closed immersion if \(G\) is affine over \(S\) or
+of finite presentation over \(S\).
 
 \emph{Proof.}
 It is enough to prove that \(K\) is of multiplicative type; the rest
@@ -333,7 +370,10 @@ group \(K_s\) is a closed subgroup of
 \[
   H_s=D_{\kappa(s)}(M).
 \]
-By \SGARefLink{sga3:ix:proposition:8:1}{8.1},
+By \SGARefLink{sga3:ix:proposition:8:1}{8.1},\footnote{Translator's note:
+the 1970 text refers here to ``IV 4.7.5'', a number that Expos\'e~IV does
+not have; the statement used is 8.1, to which the Gille--Polo draft
+re-edition (2009), Expos\'e~IX, corrects the reference.}
 it is therefore of the form \(D_{\kappa(s)}(N)\), where \(N\) is a
 quotient of \(M\). Put
 \[
@@ -469,36 +509,20 @@ Then
 \]
 identifies with a submodule of the product \(A^M\), namely the submodule
 of families \((a_m)_{m\in M}\) of elements of \(A\) that tend to zero
-for the \(I\)-adic topology along the filter of complements of finite
-subsets of \(M\). In particular, the canonical homomorphism
+along the filter of complements of finite subsets of \(M\). In particular, the canonical homomorphism
 \[
   B\longrightarrow\widehat B
 \]
-is injective.\footnote{Editor's note: the argument that follows has
-been expanded.}
-The projective system
-\[
-  \theta(\varphi)=(\varphi_n)_{n\geq0}
-\]
-defines a homomorphism
-\[
-  \widehat\varphi:\widehat C\longrightarrow\widehat B
-\]
-such that \SGARefLink{sga3:ix:theorem:7:1:diagram:01}{the following diagram} is commutative:
-\SGARefTarget{sga3:ix:theorem:7:1:diagram:01}
-\[
-\begin{tikzcd}[column sep=large,row sep=large]
-  C
-    \arrow[r,"\varphi"]
-    \arrow[d]
-  & B
-    \arrow[d]
-  \\
-  \widehat C
-    \arrow[r,"\widehat\varphi"]
-  & \widehat B.
-\end{tikzcd}
-\]
+is injective, whence it follows at once that the map \(\theta\) of
+\SGARefLink{sga3:ix:theorem:7:1:equation:x}{\((x)\)} is injective.\footnote{Translator's
+note: the Gille--Polo draft re-edition (2009), Expos\'e~IX, spells out this
+step. In our words: for \(\varphi:C\to B\) compatible with the diagonal maps,
+the reductions \(\varphi_n=\varphi\otimes_AA_n\) define in the limit a
+homomorphism \(\widehat\varphi:\widehat C\to\widehat B\), which depends only
+on \((\varphi_n)_{n\geq0}\), and \(\varphi\) followed by \(B\to\widehat B\)
+equals \(C\to\widehat C\) followed by \(\widehat\varphi\). Since
+\(B\to\widehat B\) is injective, \(\varphi\) is determined by its
+reductions.}
 
 We prove that \(\theta\) is surjective. Let
 \((\varphi_n)_{n\geq0}\) be a projective system; we must show that it is
@@ -564,19 +588,21 @@ the last arrow is the evident canonical homomorphism. Consequently, for
 every \(f\in C\), the element \(\Phi(f)\in\widehat B\) has the property
 that its image under \(\widehat\Delta_H\) is a ``decomposable'' element
 of \(\widehat{B\otimes_A B}\), namely an element in the image of
-\(\widehat B\otimes_A\widehat B\).
-
-Let \((e_m)_{m\in M}\) be the canonical basis of \(A(M)\), and let
-\((e_{m,m'})\) be that of
-\[
-  A(M\times M)=A(M)\otimes_AA(M).
-\]
-Since
-\[
-  \Delta_H(e_m)=e_m\otimes e_m=e_{m,m}
-  \qquad (m\in M),
-\]
-it remains only to apply \SGARefLink{sga3:ix:lemma:7:2}{the following lemma}.
+\(\widehat B\otimes_A\widehat B\). It remains only to apply
+\SGARefLink{sga3:ix:lemma:7:2}{the following lemma}.\footnote{Translator's note:
+the Gille--Polo draft re-edition (2009), Expos\'e~IX, indicates how the lemma
+is applied. In our formulation: \(\widehat B\) is identified with the
+families \((a_m)\) of \(A^M\) tending to \(0\), and
+\(\widehat{B\otimes_AB}\), the completion of
+\(A(M\times M)=A(M)\otimes_AA(M)\), likewise with a submodule of
+\(A^{M\times M}\). As \(\Delta_H(e_m)=e_m\otimes e_m\) for the canonical
+basis \((e_m)\) of \(A(M)\), the map \(\widehat\Delta_H\) sends \((a_m)\) to
+the family equal to \(a_m\) at \((m,m)\) and to \(0\) off the diagonal,
+while the image of \(\widehat B\otimes_A\widehat B\) consists of families
+\(\bigl(\sum_ib^i_mc^i_{m'}\bigr)\) with finitely many \(b^i,c^i\) in
+\(\widehat B\subset A^M\). The lemma, applied to
+\(\widehat\Delta_H(\Phi(f))\), shows that \(\Phi(f)\) has finite support,
+that is, lies in \(B\).}
 
 \medskip
 \noindent\SGARefTarget{sga3:ix:lemma:7:2}\textbf{Lemma 7.2.}
@@ -620,7 +646,9 @@ Thus \((a_{m,m'})\) is viewed as the matrix of a homomorphism
 \]
 Condition \SGARefLink{sga3:ix:lemma:7:2:item:i}{(i)} gives simply
 \[
-  (u\cdot x)_m=a_mx_m.
+  (u\cdot x)_m=a_mx_m,
+  \qquad\text{that is,}\qquad
+  u\cdot x=ax.
 \]
 On the other hand, condition \SGARefLink{sga3:ix:lemma:7:2:item:ii}{(ii)} gives
 \[
@@ -754,7 +782,7 @@ in \SGARefLink{sga3:ix:theorem:7:1}{7.1} gives
 \qed
 
 \medskip
-\noindent\SGARefTarget{sga3:ix:remark:7:4}\textbf{Remark 7.4.}
+\noindent\SGARefTarget{sga3:ix:remark:7:4}\textbf{Remarks 7.4.}
 \textit{Compare \SGARefLink{sga3:ix:theorem:7:1}{7.1} with EGA III,
 5.4.1, which implies that the statement of \SGARefLink{sga3:ix:theorem:7:1}{7.1} remains true if, instead
 of assuming \(H\) of multiplicative type and \(G\) affine, one assumes
