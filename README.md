@@ -99,7 +99,9 @@ each volume; [SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) explains the numbering o
   remains attributed to him, and his CC BY 4.0 notice applies to his contribution.
 - SGA 3: the original printing, Lecture Notes in Mathematics 151–153 (Springer, 1970), which the English follows;
   the re-edition by Philippe Gille and Patrick Polo (Documents Mathématiques 7 and 8, Société mathématique de
-  France, 2011), cited for the lemmas, proofs and corrections it adds.
+  France, 2011), cited for the lemmas, proofs and corrections it adds. To read SGA 3 in French, use their edition:
+  the re-edition, the drafts of Tome II and, for Tomes I and III, their transcription of the 1970 text are free on
+  Patrick Polo's page, [webusers.imj-prg.fr/~patrick.polo/SGA3](https://webusers.imj-prg.fr/~patrick.polo/SGA3/).
 - SGA 4: the French LaTeX edition of SGA 4, Tomes 1–3, distributed by Fabrice Orgogozo
   ([normalesup.org/~forgogozo/SGA4](https://www.normalesup.org/~forgogozo/SGA4/); source snapshot at git commit
   `71766d9`), from which the English was translated, together with its TeX configuration files. Its footnotes
