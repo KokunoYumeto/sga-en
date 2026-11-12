@@ -26,9 +26,10 @@ Jacob C. Reinhold's English translation was used for comparison and drafting in 
 includes OpenAI Codex (GPT-5.6 Sol: translation; GPT-6 Astra: corrections and assembly, September–October 2026)
 and Claude Opus 5.5
 (Anthropic: the SGA 2 and SGA 3 sources of 26 October 2026, and the translation of SGA 3 revised against the
-1970 printing in November 2026). The release
+1970 printing in November 2026). GPT-6.1 Sol (OpenAI API) proposed the edits that carry the corrections of the
+scan check of the French text into SGA 4 (November 2026); each edit was checked by hand. The release
 notes record the correction rounds: spectrum notation in SGA 1 (25 September 2026), mathematical and reference
-corrections in SGA 1 and SGA 7 II (3 October 2026), references in SGA 3 (24 October 2026).
+corrections in SGA 1 and SGA 7 II (3 October 2026), references in SGA 3 (24 October 2026), the scan-check corrections in SGA 4 (12 November 2026).
 
 ## Status
 
@@ -49,23 +50,23 @@ All editions of EGA, FGA and SGA made in this project are listed in
 ## Contents
 
 The PDFs and their LaTeX are attached to the release of
-[10 November 2026](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-11-10-english-edition). The cumulative
+[12 November 2026](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-11-12-english-edition). The cumulative
 reader holds all volumes with links between them:
-[PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf) ·
-[LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/00_SGA_EN_CUMULATIVE_LINKED_READER.tex) ·
-[editable sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/00_SGA_EN_CUMULATIVE_SOURCE_PROJECTS.zip).
+[PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf) ·
+[LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/00_SGA_EN_CUMULATIVE_LINKED_READER.tex) ·
+[editable sources (ZIP)](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/00_SGA_EN_CUMULATIVE_SOURCE_PROJECTS.zip).
 
 | Volume | Subject | What it contains | Reader |
 |---|---|---|---|
-| SGA 1 | Étale coverings and the fundamental group | Complete as published; Exposé VII was never written | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.tex) |
-| SGA 2 | Local cohomology and Lefschetz theorems | Complete | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/02_SGA2_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/02_SGA2_EN_COMPLETE_READER.tex) |
-| SGA 3 | Group schemes | Complete; follows the original printing of 1970 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/03_SGA3_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/03_SGA3_EN_COMPLETE_READER.tex) |
-| SGA 4 | Topos theory and étale cohomology | Complete | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/04_SGA4_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/04_SGA4_EN_COMPLETE_READER.tex) |
-| SGA 4½ | Étale cohomology | Complete | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/05_SGA4HALF_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/05_SGA4HALF_EN_COMPLETE_READER.tex) |
-| SGA 5 | ℓ-adic cohomology and L-functions | Complete as published: all ten published exposés | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.tex) |
-| SGA 6 | Intersection theory and Riemann–Roch | Complete; only the last part of the volume has been fully compared with the French text | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/07_SGA6_EN_CURRENT_LAYERED_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/07_SGA6_EN_CURRENT_LAYERED_READER.tex) |
-| SGA 7 I | Monodromy groups, I | Complete as published: Exposés I, II and VI–IX (Exposés III–V were never written separately) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.tex) |
-| SGA 7 II | Monodromy groups, II | Complete: Exposés X–XXII | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/09_SGA7II_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-10-english-edition/09_SGA7II_EN_COMPLETE_READER.tex) |
+| SGA 1 | Étale coverings and the fundamental group | Complete as published; Exposé VII was never written | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/01_SGA1_EN_COMPLETE_PUBLISHED_SCOPE_READER.tex) |
+| SGA 2 | Local cohomology and Lefschetz theorems | Complete | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/02_SGA2_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/02_SGA2_EN_COMPLETE_READER.tex) |
+| SGA 3 | Group schemes | Complete; follows the original printing of 1970 | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/03_SGA3_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/03_SGA3_EN_COMPLETE_READER.tex) |
+| SGA 4 | Topos theory and étale cohomology | Complete | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/04_SGA4_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/04_SGA4_EN_COMPLETE_READER.tex) |
+| SGA 4½ | Étale cohomology | Complete | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/05_SGA4HALF_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/05_SGA4HALF_EN_COMPLETE_READER.tex) |
+| SGA 5 | ℓ-adic cohomology and L-functions | Complete as published: all ten published exposés | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/06_SGA5_EN_COMPLETE_PUBLISHED_CONTENT_READER.tex) |
+| SGA 6 | Intersection theory and Riemann–Roch | Complete; only the last part of the volume has been fully compared with the French text | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/07_SGA6_EN_CURRENT_LAYERED_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/07_SGA6_EN_CURRENT_LAYERED_READER.tex) |
+| SGA 7 I | Monodromy groups, I | Complete as published: Exposés I, II and VI–IX (Exposés III–V were never written separately) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/08_SGA7I_EN_EXPOSES_I_II_VI_IX_READER.tex) |
+| SGA 7 II | Monodromy groups, II | Complete: Exposés X–XXII | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/09_SGA7II_EN_COMPLETE_READER.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/09_SGA7II_EN_COMPLETE_READER.tex) |
 
 Notes headed "Translator's note" belong to this translation. In SGA 2, notes headed "Editor's note" are by Yves
 Laszlo, the editor of the re-edition. In SGA 3, Translator's notes and Additions give the mathematics that the
