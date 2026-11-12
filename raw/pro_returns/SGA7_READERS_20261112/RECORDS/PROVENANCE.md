@@ -1,0 +1,96 @@
+# Credits, rights and provenance
+
+Alexander Grothendieck, with M. Raynaud and D. S. Rim, Groupes de monodromie en géométrie algébrique I, Séminaire de géométrie algébrique du Bois-Marie 1967–1969 (SGA 7 I), Lecture Notes in Mathematics 288, Springer, 1972: Exposés I, II, VI–IX. Pierre Deligne and Nicholas Katz, Groupes de monodromie en géométrie algébrique II (SGA 7 II), Lecture Notes in Mathematics 340, Springer, 1973: Exposés X–XXII. The detailed authorship credits in the exposés are retained. The original-language Exposé VI by D. S. Rim is already English and remains English in both language readers.
+
+This build is credited to GPT-6 Astra (OpenAI, ChatGPT Pro mode). The French source is AI-transcribed; the English is AI-translated, except for Exposé VI, whose original English is retained. The edition contains AI-produced corrections. These descriptions do not transfer any human contribution to AI. The English authority is the supplied sga-en release v2026-11-12-english-edition, commit 4a4cbac; the French diplomatic and current layers, correction logs and decisions are the supplied November 2026 records. The August French layer is used only as a change-log baseline. The following source excerpts preserve the recorded credits, including contributions to other volumes of the wider SGA project; those wider credits do not assert a contribution to SGA 7.
+
+## Source references
+
+- `en/repo/README.md`
+- `en/repo/ATTRIBUTION.md`
+- `en/repo/SOURCE_AUTHORITY.md`
+- `en/evidence/supplemental_working_decisions/sga7i/INHERITED_ENGLISH_PROVENANCE_AND_ADVERSE_USE.md`
+- `codex_french_corpus_aug2026/sga7i/README.md`
+- `codex_french_corpus_aug2026/sga7ii/README.md`
+
+## Recorded credits (verbatim wording; link markup simplified in the readers)
+
+# Sources and authorship
+
+The original SGA volumes retain their authors, seminar contributors and editors, named in the corresponding texts. The collection includes work of Alexander Grothendieck, Michèle Raynaud, Michel Raynaud, Pierre Deligne, Nicholas Katz, Michel Demazure, Michael Artin, Jean-Louis Verdier, Luc Illusie and their collaborators; this list does not replace the detailed credits in each volume.
+
+SGA 1 retains the French retypesetting associated with Bas Edixhoven’s volunteer project, the Société mathématique de France and Michel Raynaud’s notes, from [arXiv math/0206203v2](https://arxiv.org/abs/math/0206203v2).
+
+SGA 2 is AI-translated from the corrected French TeX of the re-edition edited by Yves Laszlo, *Cohomologie locale des faisceaux cohérents et théorèmes de Lefschetz locaux et globaux (SGA 2)*, Documents Mathématiques 4, Société mathématique de France, 2005 ([arXiv math/0511279v1](https://arxiv.org/abs/math/0511279v1)), and follows its numbering and labels. Most of the initial French typesetting was done by volunteers of Bas Edixhoven’s project (L. Bayle, N. Borne, O. Brinon, J. Buresi, M. Chardin, F. Ducrot, P. Graftiaux, F. Han, P. Karwasz, L. Koelblen, D. Madore, S. Morel, D. Naie, B. Osserman, J. Riou and V. Sécherre); C. Sabbah adapted it to the SMF format.
+
+The SGA 2 and SGA 3 English sources acknowledge Jacob C. Reinhold’s [English translation](https://github.com/jcreinhold/sga/tree/e7a259f3f8608ad3edf9bf6eead3fd504dd2d23e), snapshot `e7a259f3f8608ad3edf9bf6eead3fd504dd2d23e`, used for comparison and drafting. His stated CC BY 4.0 notice applies to that contribution and is preserved; it does not license the underlying French works or every contribution here. Inherited English wording remains attributed to its human source. In SGA 3, lemmas, proofs and corrections added in the Philippe Gille–Patrick Polo re-edition are given in Translator's notes and Additions that cite it.
+
+SGA 4 is AI-translated from the French LaTeX edition of SGA 4, Tomes 1–3, distributed by Fabrice Orgogozo ([normalesup.org/~forgogozo/SGA4](https://www.normalesup.org/~forgogozo/SGA4/); source snapshot at git commit `71766d9`), and uses its TeX configuration files. Its footnotes headed “N.D.E.” are that edition's editorial notes, translated.
+
+SGA 4½ preserves Daniel Miller’s [LaTeX typesetting](https://github.com/dkmiller/sga4.5) and its original typesetter’s note. It is not attributed to AI.
+
+Additional English translation is AI-translated; subsequent corrections, editing, reconstruction and typesetting are AI-produced. The source-specific human credits and genuine third-party notices remain applicable; attribution does not establish permission or endorsement.
+
+
+Jacob C. Reinhold's English translation was used for comparison and drafting in SGA 2 and SGA 3. Recorded AI work
+includes OpenAI Codex (GPT-5.6 Sol: translation; GPT-6 Astra: corrections and assembly, September–October 2026)
+and Claude Opus 5.5
+(Anthropic: the SGA 2 and SGA 3 sources of 26 October 2026, and the translation of SGA 3 revised against the
+1970 printing in November 2026). GPT-6.1 Sol (OpenAI API) proposed the edits that carry the corrections of the
+scan check of the French text into SGA 4 (November 2026); each edit was checked by hand. The release
+notes record the correction rounds: spectrum notation in SGA 1 (25 September 2026), mathematical and reference
+corrections in SGA 1 and SGA 7 II (3 October 2026), references in SGA 3 (24 October 2026), the scan-check corrections in SGA 4 (12 November 2026).
+
+## SGA 7 I source authority
+
+SGA 7 I is complete as the published volume stands. The Springer volume is explicitly
+*Exposés I, II, VI, VII, VIII, IX*. Its introductory account explains that
+Grothendieck's oral Exposés I–V were not separately written: their substance was
+summarized in the written Exposé I, and there are no separately written Exposés
+III–V. The jump from II to VI is therefore historical, not a translation or packaging
+gap. The current English component includes every exposé in the published volume.
+Its existing release filename is retained to preserve stable asset links.
+
+## Inherited English
+
+The inherited witness documented in en/evidence/supplemental_working_decisions/sga7i/INHERITED_ENGLISH_PROVENANCE_AND_ADVERSE_USE.md has 278,864 bytes and SHA-256 CFCB4C17081E16F963DCBC3FA04A43C4D4065477CB37BD931233840D287AA2E9. Its exact blob first appears in the public-mirror history at commit cb420190bbc6311cff96a08a5a11a4caf483fdff, dated 2026-05-29 12:24:48+02:00, under the generic identity “Manuscript Typesetting Project”; the Git blob is 2ac760f78b6107d2d71bd2e513e5baa4e3be418d. The local working paths and address are omitted for privacy.
+
+That service identity and the surviving package metadata do not identify the translating model or human. No defensible evidence presently attributes the text specifically to Claude, Codex, ChatGPT, or a human translator. Its author/model lineage is therefore recorded as **unresolved**.
+
+This witness is retained unchanged for provenance, terminology comparison, and adverse-history purposes. It must not be merged continuously, treated as cumulative coverage, or cited as source-aligned. Individual phrases may be reused only after direct matching to the fresh French authority. The active English reader is source-first; Expos\'e VI will be taken from its already-English frozen source after a structural check.
+
+## French binding records
+
+# SGA7 I French editions
+
+This is an exact no-overwrite binding of two separate source-language editions through Tome-I EOF: `o` is the printed-diplomatic layer and `c` is the separately corrected scholarly layer. They are not a bilingual or interleaved edition. The English edition remains separate.
+
+The upstream layer proves complete 528/528 source-folio coverage and stable 267-page readers. Its own audit record is intentionally narrower than a critical edition: representative pages and consequential ambiguities were checked directly, but no exhaustive high-detail page-by-page source audit is claimed. The scan remains controlling for future adjudication.
+
+
+# SGA7 II French editions
+
+This is an exact no-overwrite binding of two separate source-language editions through Tome-II EOF: `o` is the printed-diplomatic layer and `c` is the separately corrected scholarly layer. They are not a bilingual or interleaved edition. The English edition remains separate.
+
+The bound layer covers scan indices 8--445, with 438 markers / 438 unique
+body pages and no missing or duplicate index, across Exposes X--XXII.  Gate-00
+on 2026-08-20 repaired the omitted scan index 407 / printed folio 400
+(the terminal Expose-XXI bibliography) in both French layers and rebuilt both
+readers.  The immutable closure receipt is
+`gate00_idx407_sourcekeeper_closure_20260820.json`.  Changed loci and terminal
+surfaces have direct review evidence; this binding does not silently promote
+that bounded review to an exhaustive high-detail audit of every unchanged
+printed page.
+
+
+## Missing printed front matter
+
+The tables of contents in these readers are newly generated from the transcribed text. They do not purport to transcribe the printed tables. The SGA 7 II supplied layers begin with Exposé X; its preceding printed title, publication and contents pages are unavailable in these layers. SGA 7 I preserves its transcribed general introduction but has no separately transcribed printed contents table; no absent printed title or publication pages have been reconstructed. Exposés III–V are not missing transcriptions: the source-authority record explains their historical status.
+
+## Rights statement (English)
+
+The rights in the original work belong to its author or the author's representatives or heirs. Where we hold rights, in the AI-produced transcription, translation, corrections and typesetting, they are dedicated to the public domain under CC0 1.0. This edition is published for educational, non-profit purposes, and we claim no rights we do not hold. If you hold rights in this work and object to its publication here, please open a GitHub issue and we will take it down.
+
+## Déclaration de droits (français)
+
+Les droits sur l’œuvre originale appartiennent à son auteur ou aux représentants ou héritiers de celui-ci. Dans la mesure où nous détenons des droits sur la transcription, la traduction, les corrections et la composition produites par l’intelligence artificielle, nous les dédions au domaine public sous CC0 1.0. Cette édition est publiée à des fins éducatives et non lucratives, et nous ne revendiquons aucun droit que nous ne détenons pas. Si vous détenez des droits sur cette œuvre et vous opposez à sa publication ici, veuillez ouvrir un ticket GitHub et nous la retirerons.

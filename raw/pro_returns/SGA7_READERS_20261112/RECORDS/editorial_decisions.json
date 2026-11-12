@@ -1,0 +1,889 @@
+{
+  "schema_version": 1,
+  "decisions": [
+    {
+      "item": "ED-MANUAL-7I-334",
+      "page": "7I:334",
+      "readings": "IX\\n\\n<<CONT versus no running-head paragraph",
+      "decision": "No further deletion; the requested removal is already reflected in both French layers.",
+      "reason": "Both page-334 segments begin with the continuation “et de même le morphisme induit par”. Neither IX as a standalone body paragraph nor <<CONT remains. Global issues 57 and 59 record the continuation-tag pass and removal of the running head; replaying the stale string would be wrong.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "fixes/MANUAL_7I_findings_331_335.json; conventions/GLOBAL_ISSUES_SGA.md:57,59",
+      "status": "already resolved"
+    },
+    {
+      "item": "ED-7I-356",
+      "page": "7I:179",
+      "readings": "une catégorie cofibré $\\underline{\\Psi} versus une catégorie cofibrée $\\underline{\\Psi}",
+      "decision": "Correct only the running sentence after (3.1.1), retaining the already-correct heading.",
+      "reason": "The recorded old substring is also a prefix of “une catégorie cofibrée” in the heading; this explains the two substring matches. The exact suffix before the mathematical symbol isolates one grammatical error. Catégorie is feminine. English “cofibered category” has no corresponding gender variant.",
+      "forms_affected": "FR corrected apparatus; FR plain reading",
+      "source": "fixes/MISPRINTS_7I.json:356; fixes/misprint_pass/MISPRINT_PASS_LEFT_7I.json",
+      "status": "decided"
+    },
+    {
+      "item": "ED-7II-627",
+      "page": "7II:353",
+      "readings": "l'image ... n'est pas contenu versus n'est pas contenue",
+      "decision": "Retain the corrected-layer contenue; no further body edit.",
+      "reason": "Register identifiers are zero-based. Entry 627 is the feminine agreement error, already corrected in current. Its saved unclear decision discusses the different quotient omission at entries 626 and 1018; that mismatch is not evidence against the identifiable grammar correction.",
+      "forms_affected": "FR corrected apparatus; FR plain reading",
+      "source": "fixes/MISPRINTS_7II.json:627,1017; fixes/misprint_pass/decisions_misprints_7II_006.json",
+      "status": "already correct"
+    },
+    {
+      "item": "ED-7II-1018",
+      "page": "7II:353",
+      "readings": "Printed: E^{n-1}=H^{n-1}(X_{\\bar\\eta},\\mathbb Q_\\ell(i))\\quad H^{n-1}(X,Q_\\ell(i)); current omits the equality; corrected: insert the recorded quotient slash and \\mathbb Q.",
+      "decision": "Restore the entire explanatory equality in corrected French and English, with the registered quotient reading.",
+      "reason": "The equality is present in the supplied diplomatic page. The unclear-port claim of absence applies only to the already-abridged current layer. Entry 1018 identifies the missing quotient sign and coefficient typeface; the orthogonal complement/quotient interpretation is explained in its record. Restoring the recorded equality avoids dropping authorial text. No new denominator or proof is invented. The released English also omits the equality; the exact English body repair and its printed variant are recorded in EN_EDITORIAL_BODY_PATCH_1018.json as ED-7II-1018-EN.",
+      "forms_affected": "FR and EN corrected apparatus and plain reading; printed equality in both diplomatic forms",
+      "source": "fixes/MISPRINTS_7II.json:626,1018; fr/sga7ii/diplomatic/expose_XX_body.tex:353",
+      "status": "decided"
+    },
+    {
+      "item": "ED-VI-AUTHOR",
+      "page": "7I:32–132",
+      "readings": "Original English Exposé VI in French source layers versus rewritten released English VI",
+      "decision": "Use the original English source body, with the same diplomatic/current variants, in both language editions.",
+      "reason": "Exposé VI was printed in English. The French source layers supply that original-language text; the released English component rewrites its sentences and mathematical presentation. Using the already-English authority preserves the author’s wording and every source folio. All release differences are recorded in CHANGES_EN.tsv.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "fr/sga7i/diplomatic/expose_VI_body.tex; fr/sga7i/current/expose_VI_body.tex; en/repo/SOURCE_AUTHORITY.md",
+      "status": "decided"
+    },
+    {
+      "item": "ED-en7I-C82",
+      "page": "7I:102",
+      "readings": "Diagram label \"\\text{flat}\"\\prime versus \"\\text{flat}\" (TikZ apostrophe changes label side)",
+      "decision": "Use the source-layer corrected label placement in all forms; no print-misprint variant.",
+      "reason": "C82 is zero-based FIXLOG_7I_CURRENT entry 82. The intended diagram is the pair-deformation diagram following Remark 4.6 on folio 102, not 4.1(d) on 97 as the unclear window note says. Both supplied French source layers already contain the corrected placement. ED-VI-AUTHOR carries it into English.",
+      "forms_affected": "EN all three forms",
+      "source": "fixes/FIXLOG_7I_CURRENT.jsonl:C82; port/PORT_EN7I_LOG.jsonl:C82",
+      "status": "resolved by source identity"
+    },
+    {
+      "item": "ED-en7I-C713",
+      "page": "7I:123",
+      "readings": "commute with base change versus commutes with base change",
+      "decision": "Printed commute in diplomatic; corrected commutes in both corrected forms.",
+      "reason": "The actual occurrence is Corollary 5.10(2), not Corollary 5.7(1) from the stale whole-file context. Its singular subject is J_S^p. Both readings are explicitly present in the paired original-English source pages and are included through ED-VI-AUTHOR.",
+      "forms_affected": "EN and FR all forms, variant by form",
+      "source": "fixes/FIXLOG_7I_CURRENT.jsonl:C713; fixes/MISPRINTS_7I.json:254",
+      "status": "decided"
+    },
+    {
+      "item": "ED-en7I-C874",
+      "page": "7I:379",
+      "readings": "T_\\ell(A\\prime)/T_\\ell(A\\prime_K)^f versus T_\\ell(A\\prime_K)/T_\\ell(A\\prime_K)^f",
+      "decision": "Corrected English already right at (5.5.8); restore the printed numerator only in diplomatic English.",
+      "reason": "The folio-local intended occurrence is the second member of (5.5.8). The old window note mistakenly uses an earlier similar quotient in 5.2.6. Component 145 contains exactly the corrected generic-fibre numerator. The denominator is a Tate submodule of the generic fibre of A prime, making the restored subscript correction mathematically and textually determinate.",
+      "forms_affected": "EN diplomatic and apparatus variant",
+      "source": "fixes/FIXLOG_7I_CURRENT.jsonl:C874; fixes/MISPRINTS_7I.json:609",
+      "status": "decided"
+    },
+    {
+      "item": "ED-en7II-C8",
+      "page": "7II:24",
+      "readings": "0_T versus O_T; released replacement length argument versus omitted source exact sequence",
+      "decision": "Restore a literal translation of the printed exact-sequence paragraph, with O_T in every form.",
+      "reason": "The source sequence occurs in Lemma 2.14(ii) on p.24. It is absent from the released English, which substitutes a length argument. Both corrected and diplomatic French read O_T after the transcription repair, so zero-to-O is not an edition variant. The paragraph’s separate printed missing parenthesis and cap-for-cup misprints remain variants, as recorded on the same French page.",
+      "forms_affected": "EN all three forms",
+      "source": "fixes/FIXLOG_7II_CURRENT.jsonl:C8; fr/sga7ii/diplomatic/expose_X_body.tex:24; fr/sga7ii/current/expose_X_body.tex:24",
+      "status": "decided"
+    },
+    {
+      "item": "ED-en7II-C17",
+      "page": "7II:36",
+      "readings": "\\widetilde\\tau_0/\\tau\\overset\\sim\\longrightarrow versus \\widetilde\\tau_0/\\tau\\simeq",
+      "decision": "Replace the arrow by the printed isomorphism relation in all English forms.",
+      "reason": "The actual locus is the tangent-space identification after Lemma 2.33, not the Tor calculation in 1.6 cited by the stale whole-file context. The French diplomatic and current pages agree on simeq. The released English arrow is a transcription/presentation mismatch, not a printed misprint.",
+      "forms_affected": "EN all three forms",
+      "source": "fixes/FIXLOG_7II_CURRENT.jsonl:C17; fr/sga7ii/diplomatic/expose_X_body.tex:36",
+      "status": "decided"
+    },
+    {
+      "item": "ED-en7II-C138",
+      "page": "7II:161",
+      "readings": "H^O versus H^0 in Lemma 4.18.5",
+      "decision": "Retain the already-correct English H^0; no body edit or variant.",
+      "reason": "The intended locus is the final degree-zero cohomology calculation in Lemma 4.18.5, not XIV 1.1.2 from the stale context. Component 062 has H^0 in all the pertinent factors. This is a transcription repair, also already in both French layers.",
+      "forms_affected": "EN all three forms",
+      "source": "fixes/FIXLOG_7II_CURRENT.jsonl:C138; en/sources/native/SGA7II/components/062_expose_XIV_section_4_18.tex",
+      "status": "already correct"
+    },
+    {
+      "item": "ED-en7II-C475",
+      "page": "7II:436",
+      "readings": "Final \\right), in (6.2.8) versus \\right)",
+      "decision": "Remove the final comma in (6.2.8) in all English forms.",
+      "reason": "The folio and formula tag identify this occurrence uniquely: the full component has the comma before end aligned, while both French layers omit it. The old unclear note incorrectly referred to (2.2.4.1), because its generic string had been found elsewhere in the exposé.",
+      "forms_affected": "EN all three forms",
+      "source": "fixes/FIXLOG_7II_CURRENT.jsonl:C475; fr/sga7ii/diplomatic/expose_XXII_body.tex:436",
+      "status": "decided"
+    },
+    {
+      "item": "ED-en7II-C508",
+      "page": "7II:14",
+      "readings": "n=\\#[s^*,t] versus n=\\#]s^*,t]; omitted in released English",
+      "decision": "Restore the omitted parenthesis in English; retain the closed interval diplomatically and the half-open interval in corrected forms.",
+      "reason": "The tree distance is the number of edges, not vertices. At t=s^*, n=0 but the closed interval has one element; excluding the root gives exactly n. This establishes the registered correction without needing a scan. The parenthetical is authorial text present in both French layers, so its absence from the release is repaired and logged.",
+      "forms_affected": "EN all forms; FR current retained",
+      "source": "fixes/FIXLOG_7II_CURRENT.jsonl:C508; fixes/MISPRINTS_7II.json:12; conventions/GLOBAL_ISSUES_SGA.md:4",
+      "status": "decided"
+    },
+    {
+      "item": "ED-XV-1.3.2-i",
+      "page": "7II:175",
+      "readings": "English underlined $S$- versus French non-underlined $S$-",
+      "decision": "Place $S$- outside the underline in all three English forms.",
+      "reason": "Both French layers explicitly use $S$- followed by the underlined word schéma in clause (i). Clause (ii) of the English already uses the same boundary. This repairs source presentation without changing notation or creating a diplomatic/corrected variant.",
+      "forms_affected": "EN all three forms",
+      "source": "fr/sga7ii/diplomatic/expose_XV_body.tex:175; en/sources/native/SGA7II/components/067_expose_XV_section_1_3.tex",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G52-notée",
+      "page": "7II:265",
+      "readings": "cohomologie à supports propres, notée H_c versus notées H_c",
+      "decision": "Revert notées to the printed notée while retaining the separate mathematical correction to tilde Delta.",
+      "reason": "H_c names the cohomologie, not the suites exactes. The source note explicitly identifies the pluralization as an erroneous part of correction SGA7II-FR-XVIII-011. The target remains notées in current, so a precise reversion is required.",
+      "forms_affected": "FR corrected apparatus; FR plain reading",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:52; fr/sga7ii/corrections.md:SGA7II-FR-XVIII-011",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G04",
+      "page": "7II:14",
+      "readings": "Source-layer reading: n=\\#[s^*,t] | Proposed/other reading: n=\\#]s^*,t]",
+      "decision": "Accept the current half-open interval; restore the omitted parenthesis in English under ED-en7II-C508.",
+      "reason": "For t=s^* the order is zero, whereas the closed interval has one vertex. In general distance counts edges, so exclusion of the root gives exactly n. The proposed correction is determined by the definition and Proposition 2.3, without any glyph inference.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:4",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G18-nearby-cycles",
+      "page": "7II:100",
+      "readings": "Source-layer reading: R\\Psi_\\eta(K_s) | Proposed/other reading: R\\Psi_\\eta(K_\\eta); earlier corrected K_\\eta alone",
+      "decision": "Accept the supplied current R\\Psi_\\eta(K_\\eta).",
+      "reason": "The triangle is on the special-fibre/nearby-cycle topos. The generic-fibre object must first pass through the nearby-cycle functor. The current page now contains that functor, so the earlier defective K_\\eta-only correction has already been repaired.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:18",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G19-localization",
+      "page": "7I:92",
+      "readings": "Source-layer reading: 3.13(a) | Proposed/other reading: 3.13(c)",
+      "decision": "Accept 3.13(c) in the corrected forms.",
+      "reason": "The sentence constructs quasi-coherent sheaves by localization. Corollary 3.13(c) is the localization statement; 3.13(a) is the smoothness criterion. The referent is fixed by the text.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:19",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G19-vanishing",
+      "page": "7I:93",
+      "readings": "Source-layer reading: 3.12(10) | Proposed/other reading: 3.13(b)",
+      "decision": "Accept the current reference to complete-intersection vanishing, 3.13(b).",
+      "reason": "Theorem 3.12 has only eight items. Corollary 3.13(b) states the required vanishing in degrees at least two for a relative complete intersection; the missing item 10 cannot be retained as a usable corrected reference.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:19",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G19-conormal",
+      "page": "7I:93",
+      "readings": "Source-layer reading: 3.12(7) | Proposed/other reading: 3.12(8)",
+      "decision": "Accept 3.12(8) in the corrected forms.",
+      "reason": "Item 3.12(8) identifies degree-one cotangent cohomology with the conormal Hom quotient. Item 3.12(7) states finite generation and cannot justify the displayed Hom identification.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:19",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G19-finiteness",
+      "page": "7I:93",
+      "readings": "Source-layer reading: 3.12(6) and (8) | Proposed/other reading: current: 3.12(7) and smooth vanishing, cf.3.13(a); provisional issue: 3.12(6) and (7)",
+      "decision": "Accept the more precise supplied-current references; reject the provisional 6-and-7 suggestion.",
+      "reason": "Finite generation is 3.12(7). Support on the nonsmooth locus uses smooth vanishing (3.12(5), with the smoothness criterion in 3.13(a)); tensor compatibility in 3.12(6) alone does not supply that vanishing. The actual numbered statements settle the earlier low-confidence suggestion.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:19",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G25",
+      "page": "7II:136–137",
+      "readings": "Source-layer reading: choix de t et s; B_{s,t} | Proposed/other reading: choix de t et d; B_{t,d}",
+      "decision": "Accept both supplied-current corrections together.",
+      "reason": "Section 3.1.3 chooses d and t, defines B_{t,d}, and constructs (V,T) from them. The letter s is not one of these parameters, while the ensuing proof of 3.1.5 repeatedly uses B_{t_0,d_0}. Both replacements are fixed by the local definitions, not merely a preference of notation.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:25",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G27-x-hat",
+      "page": "7I:123",
+      "readings": "Source-layer reading: \\mathfrak X_{(\\hat x)} in the supplied source layers | Proposed/other reading: earlier transcription \\mathcal X_{(\\mathfrak x)}",
+      "decision": "Keep the supplied source-layer hat reading; do not invent a further glyph correction.",
+      "reason": "The two current source pages both use the completion hat and the same completion-to-localization isomorphism. The earlier convention entry questioned the physical overstrike; without the scan that paleographic question cannot be independently resolved. The authoritative attached layers remain the printed-reading witness.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:27",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G27-missing-reference",
+      "page": "7I:128",
+      "readings": "Source-layer reading: is smooth by and therefore | Proposed/other reading: is smooth by 4.13(a) and therefore",
+      "decision": "Retain the printed blank reference in every body; record the suggested reference only as a note.",
+      "reason": "The statement lacks a number in the recorded print. More than one preceding smoothness result could support the argument, and adding 4.13(a) would manufacture a citation. No supplied source establishes the omitted numeral.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:27",
+      "status": "retained; authorial reference unresolved"
+    },
+    {
+      "item": "ED-G28",
+      "page": "7II:157",
+      "readings": "Source-layer reading: four occurrences muq | Proposed/other reading: mqu",
+      "decision": "Accept all four mqu corrections already in current.",
+      "reason": "Corollary 4.11 defines K^{mqu} for finite quasi-unipotent determination. The same summand occurs in the third table row, the definition of Psi, and both members of 4.12(iii). The explicit definitions identify one notation, so the transposition is not a new standardization.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:28",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G31",
+      "page": "7II:168,175",
+      "readings": "Source-layer reading: tags (4.2.1), (4.14.2) | Proposed/other reading: tags (1.2.1.1), (1.3.2.1)",
+      "decision": "Retain the coordinated local renumbering of the supplied current layer.",
+      "reason": "The displays occur inside Definition 1.2.1 and Corollary 1.3.2, not any section 4. The corrected tags use the source’s established nested numbering and distinguish the two unrelated displays. Diplomatic keeps both old tags; the apparatus records both changes.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:31",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G32-run-in-headings",
+      "page": "7I:163,165 (and analogous numbered headings)",
+      "readings": "Source-layer reading: Attached layers use separate paragraphs after numbered headings | Proposed/other reading: possible printed run-in headings with following prose on the same paragraph",
+      "decision": "Keep the supplied paragraph boundaries; do not make an unchecked global reflow.",
+      "reason": "The two specific changes were held at low confidence and the other headings were not verified. A text-only layer cannot establish a printed indentation or run-in break. This is a layout uncertainty, not grounds for altering any authorial wording.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:32",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G33-agreement",
+      "page": "7I:159",
+      "readings": "Source-layer reading: défini (twice) | Proposed/other reading: définie (twice)",
+      "decision": "Accept both feminine forms already present in current.",
+      "reason": "Both participles describe the explicitly feminine structure d’extension. The relative positions and paired constructions make the grammatical referent unambiguous. English defined does not carry a corresponding gender variant.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:33",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G33-diaeresis",
+      "page": "7I:145,155,160",
+      "readings": "Source-layer reading: coîncident | Proposed/other reading: coïncident",
+      "decision": "Retain the edition’s established diaeresis convention and avoid a new glyph pass.",
+      "reason": "NOTE_7I and global issue 78 expressly treat the typewriter circumflex as a substitute for diaeresis rather than an independent lexical reading. That convention is a source policy, not a new normalization decision by this build.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:33",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G36-multiplicative-group",
+      "page": "7I:177",
+      "readings": "Source-layer reading: G étant le groupe multiplicatif sur \\underline G_m | Proposed/other reading: G=\\underline G_{m,S} étant le groupe multiplicatif sur S",
+      "decision": "Accept the supplied-current clarification of the group over the stated base S.",
+      "reason": "The paragraph concerns abelian schemes P_i on S and extensions by the multiplicative group. The current reading names that group and restores its base, while the literal printed sur G_m misidentifies the base. Keep the printed wording diplomatically and identify the entire correction in the apparatus, without treating it as a recovered glyph.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:36",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G36-E-or-X",
+      "page": "7I:180",
+      "readings": "Source-layer reading: d_1^*d_0^*(E)\\simeq(d_0d_1)^*(E) | Proposed/other reading: d_1^*d_0^*(X)\\simeq(d_0d_1)^*(X)",
+      "decision": "Retain E in all bodies; record the proposed X reading without adopting it.",
+      "reason": "The preceding concrete extension is called X, but the transitivity isomorphism is valid for any extension E. Consequently the typography does not force a mathematical error. Both supplied layers retain E, and an authorial generic E remains possible.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:36",
+      "status": "retained; no determinate emendation"
+    },
+    {
+      "item": "ED-G36-psi-footnote",
+      "page": "7I:180",
+      "readings": "Source-layer reading: \\psi_{L.}(A) | Proposed/other reading: \\underline\\Psi_{L.}(A)",
+      "decision": "Retain the source-layer lowercase psi in the body.",
+      "reason": "The footnote names a category also denoted by underlined capital Psi in the main text, but the recorded low-confidence observation does not establish whether the glyph is a typist variant or an accidental change. No scan is supplied to adjudicate its shape.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:36",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G37-duplicate-number",
+      "page": "7I:183",
+      "readings": "Source-layer reading: two displays tagged (3.2.3) | Proposed/other reading: second display (3.2.3\\prime) or another new tag",
+      "decision": "Retain both printed (3.2.3) tags; distinguish their locations by description in the records.",
+      "reason": "The following source already uses (3.2.4); no unoccupied intended number is established. An editorial prime would be a new citation system, not recovery of the author’s number. The diagram and c(X,alpha) display remain distinguishable by their content.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:37",
+      "status": "retained; intended numbering unresolved"
+    },
+    {
+      "item": "ED-G37-other-loci",
+      "page": "7I:181–185",
+      "readings": "Source-layer reading: Psi_L(A); munie; peut-être; nous bornerons | Proposed/other reading: Psi_{L.}(A); context-dependent agreement; peut être; nous nous bornerons",
+      "decision": "Retain the supplied corrected-layer decisions; do not impose a blind grammar replacement.",
+      "reason": "The missing complex dot in (3.1.6) is already restored in current. The printed munie on p.182 grammatically modifies l’extension triviale and must remain feminine there. Each other recorded correction is retained at its own source-linked locus; a global replacement would conflate unlike grammatical contexts.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:37",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G38-speck",
+      "page": "7II:202",
+      "readings": "Source-layer reading: (\\mathrm{Sw}_{I\\prime},s_{I/H}) without an extra lower dot | Proposed/other reading: a possible printed dot below the opening parenthesis",
+      "decision": "Keep the supplied formula without an additional dot.",
+      "reason": "No mathematical operation is defined by the possible mark. Its status as ink, damage or punctuation is a visual-source question; neither attached layer encodes it.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:38",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G38-family",
+      "page": "7II:202",
+      "readings": "Source-layer reading: supposer que X_s est le sous-schéma | Proposed/other reading: supposer que X est le sous-schéma",
+      "decision": "Accept current X.",
+      "reason": "The ambient affine space is over S and the displayed equation includes the deformation parameter a in the maximal ideal. It defines the family X; its special fibre would set that parameter to zero. The local model determines the correction.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:38",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G41-exton-sion",
+      "page": "7I:195",
+      "readings": "Source-layer reading: extension (both attached layers) | Proposed/other reading: exton-sion (held low-confidence visual reading)",
+      "decision": "Retain the attached diplomatic reading extension, and list the alternative only in the note.",
+      "reason": "The two source layers agree. The earlier candidate was explicitly held and supplies no established printed lexical error. The scan is needed to distinguish an actual o from a damaged e and a line-end hyphen.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:41",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G42-projective-space",
+      "page": "7II:215",
+      "readings": "Source-layer reading: P^r in 2.1 and \\mathbf P^r in 2.2 | Proposed/other reading: \\mathbb P^r in both places",
+      "decision": "Preserve the supplied layer-specific typefaces; make no new global replacement.",
+      "reason": "Both symbols are explicitly defined as projective space and no mathematical reading changes. The low-confidence proposal concerns typewriter shapes, which issue 78 distinguishes from textual misprints. The build is not authorized to standardize notation merely for visual uniformity.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:42",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G45-mathematical-repair",
+      "page": "7II:237",
+      "readings": "Source-layer reading: the printed pencil in (4.2.3) | Proposed/other reading: a proposed replacement pencil with an isolated ordinary quadratic singularity",
+      "decision": "Preserve the supplied mathematical formula; do not construct a new proof or pencil.",
+      "reason": "The global record explicitly calls the proposed replacement a repair of the mathematics rather than a recovered reading. The detailed proposed formula is not supplied in the attached findings file. The recorded concern (a singular plane for n=2k+1 at least 7) is disclosed, but no conjectural replacement is inserted.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:45",
+      "status": "retained; proposed mathematical replacement unavailable"
+    },
+    {
+      "item": "ED-G47-duplicate-number",
+      "page": "7II:244",
+      "readings": "Source-layer reading: two (5.2.6) labels | Proposed/other reading: (5.2.6) followed by (5.2.6\\prime)",
+      "decision": "Accept the current editorial prime on the second display, retaining the first and all later tags.",
+      "reason": "Unlike issue 37, this specific disambiguation is already adopted in the supplied corrected layer and does not change (5.2.7), (5.2.8), or their citations. It is recorded explicitly as an editorial label, not claimed as the printed reading.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:47",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G48-inner-underlines",
+      "page": "7II:248 and other internal commas",
+      "readings": "Source-layer reading: source-layer continuous underlines through some inner commas | Proposed/other reading: stop and restart each underline around the comma",
+      "decision": "Keep the source-layer markup pending visual evidence at each occurrence.",
+      "reason": "The global record states that the typist sometimes underlined through commas and sometimes did not. Therefore a string-wide rule is not justified; each of the potential cases requires its scan. No authorial wording is changed.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:48",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G48-equation-tag",
+      "page": "7II:246",
+      "readings": "Source-layer reading: \\tag*{5.3.7.} | Proposed/other reading: \\tag{5.3.7}",
+      "decision": "Retain the printed unparenthesized 5.3.7. in all forms.",
+      "reason": "The tag is a valid, unambiguous reference as printed. Adding parentheses would be notation standardization with no correction of mathematical content. Both supplied layers already agree on tag-star.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:48",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G52-classification",
+      "page": "7II:263,265",
+      "readings": "Source-layer reading: corrections XVIII-008 and XVIII-011 classified as transcription repairs | Proposed/other reading: misprints in the printed source, except erroneous notée-to-notées change",
+      "decision": "Classify the mathematical differences as printed misprints; apply ED-G52-notée to undo the pluralization.",
+      "reason": "The later convention record explicitly reports scan confirmation that pat and the missing Delta tilde belong to the print. It supersedes the earlier correction-ledger classification. The authorial singular cohomologie governs notée independently.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:52",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G58-comma",
+      "page": "7II:332",
+      "readings": "Source-layer reading: H_s, | Proposed/other reading: H_{s,}",
+      "decision": "Keep the comma as argument punctuation; do not move it into the subscript.",
+      "reason": "The lower comma was a held visual observation, not a new index. The H_s followed by coefficient argument consistently denotes the fibre. Both layers retain ordinary argument punctuation; a physical baseline question requires the scan.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:58",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G59-checked-readings",
+      "page": "7I:338",
+      "readings": "Source-layer reading: (A_K ; A\\prime_K) and \\varphi_w | Proposed/other reading: earlier questioned readings of the subscripts or variable",
+      "decision": "Retain the supplied readings; the low-confidence query was resolved by the recorded scan check.",
+      "reason": "The final clause of global issue 59 explicitly states that both readings were checked on the scan and are as printed. It is positive closure evidence, so no new uncertainty or unrecorded normalization is introduced.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:59",
+      "status": "already resolved"
+    },
+    {
+      "item": "ED-G61-glyphs",
+      "page": "7II:362,384,389",
+      "readings": "Source-layer reading: plain Q or Fraktur-looking G in the typescript | Proposed/other reading: \\mathbb Q_\\ell and \\operatorname{Gal}",
+      "decision": "Follow the later issue-78 disposition; do not introduce new glyph variants.",
+      "reason": "Issue 78 expressly resolves the held question: typist glyph differences without a changed reading are not reproduced as independent diplomatic textual variants. The name Gal is an operator and Q_ell the same coefficient field; the user’s rule against silent notation changes precludes an additional unsourced pass.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:61",
+      "status": "superseded by issue 78"
+    },
+    {
+      "item": "ED-G63-capital-accents",
+      "page": "7II:403,409,412,415",
+      "readings": "Source-layer reading: unaccented capitals of the typescript | Proposed/other reading: accented Évidemment, Écrivant, Écrivons in the supplied layers",
+      "decision": "Keep the documented accented-capital convention.",
+      "reason": "The convention record explicitly reverted four deaccenting edits and treats the unaccented capitals as a typewriter limitation. This is an already-decided glyph convention, not a fresh correction or a different French lexical reading.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:63",
+      "status": "already resolved"
+    },
+    {
+      "item": "ED-G63-miracle",
+      "page": "7II:416",
+      "readings": "Source-layer reading: oh miracle (both attached layers) | Proposed/other reading: ô miracle (earlier held reading)",
+      "decision": "Retain oh miracle as the attached diplomatic reading.",
+      "reason": "The later supplied layers agree on oh. The earlier low-confidence record does not establish the visual reading independently; changing both layers back to ô would discard the current witness without evidence.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:63",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G63-plain-Q",
+      "page": "7II:416,418",
+      "readings": "Source-layer reading: plain Q glyph | Proposed/other reading: double-struck Q",
+      "decision": "Use the issue-78 interpretation of typist glyphs; preserve existing source-layer distinctions.",
+      "reason": "The held observation is the same case as issue 61. No new coefficient field is introduced by the shape. Existing registered layer differences remain attributed to their records, but this build makes no additional global typeface change.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:63",
+      "status": "superseded by issue 78"
+    },
+    {
+      "item": "ED-G64-psi-k",
+      "page": "7II:421",
+      "readings": "Source-layer reading: \\psi\\circ G | Proposed/other reading: \\psi_k\\circ G",
+      "decision": "Retain the printed bare psi diplomatically and the supplied-current subscript k correction.",
+      "reason": "The operator is explicitly defined as psi_k immediately before the stability sentence and in (4.5.11). Thus the intended indexed operator is textually identified, even though only a scan could determine whether the physical missing k was a print or scan defect. No unrelated psi is changed.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:64",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G64-inclusion",
+      "page": "7II:423",
+      "readings": "Source-layer reading: \\bigoplus_{A\\subseteq B}L^A | Proposed/other reading: \\bigoplus_{A\\supset B}L^A",
+      "decision": "Accept the supplied-current reversed inclusion.",
+      "reason": "Formula (4.5.20) identifies the subspace by divisibility by the product over i in B, which requires supports containing B. The following quotient by strict supersets and definition of L^B confirm that containment direction. This is not an inference from a faint glyph alone.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:64",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G64-quotient",
+      "page": "7II:423",
+      "readings": "Source-layer reading: the displayed fraction in (4.5.21) | Proposed/other reading: a slash presentation of the same quotient",
+      "decision": "Keep the displayed fraction in both layers.",
+      "reason": "Both attached layers encode the same numerator and denominator as a quotient. The proposed slash concerns the original graphic layout alone. No mathematical change follows, and without a scan the alternative typography cannot be established.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:64",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G64-subset-stroke",
+      "page": "7II:424",
+      "readings": "Source-layer reading: \\subseteq in the supplied source | Proposed/other reading: \\subset without the lower stroke",
+      "decision": "Keep the attached diplomatic subseteq reading.",
+      "reason": "The issue reports a possible overstrike, not a verified symbol. Historical subset notation may also be non-strict, so semantics do not settle the physical stroke. No inequality is silently modernized.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:64",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G64-Delta-Lambda",
+      "page": "7II:424–429",
+      "readings": "Source-layer reading: \\Delta_B throughout the defining discussion; \\Lambda_B in printed (5.0.12) | Proposed/other reading: change all seven \\Delta_B to \\Lambda_B, or retain current \\Delta_B at (5.0.12)",
+      "decision": "Keep the supplied diplomatic glyphs and the local current Delta correction; reject an unchecked all-seven replacement.",
+      "reason": "The attached layers define Delta_B in (4.5.28) and use it in the intervening argument. Current (5.0.12) refers back to that same characteristic series. The earlier global all-seven proposal requires scans of all occurrences and cannot override the later source-layer distinction. The physical glyph family remains a scan question.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:64",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G65-references",
+      "page": "7I:397",
+      "readings": "Source-layer reading: two references 5.12 a) | Proposed/other reading: 5.13 b) or 5.14 a)",
+      "decision": "Accept 5.13 b) in both occurrences, as already in current.",
+      "reason": "Proposition 5.13(b) treats essentially good reduction, including ell=p in characteristic zero, exactly the case mentioned before 6.3.3. Proposition 5.14(a) expressly assumes ell not equal to p and cannot supply the ell=p reduction in that sentence. This resolves the previously low-confidence alternatives by scope.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:65",
+      "status": "decided"
+    },
+    {
+      "item": "ED-G67-Dwork-psi",
+      "page": "7II:436–438",
+      "readings": "Source-layer reading: \\psi_q in the attached layers | Proposed/other reading: \\Psi_q suggested by the typewriter capital-form glyph",
+      "decision": "Retain psi consistently with the attached source notation; do not recase the operator.",
+      "reason": "Issue 78 excludes glyph-only substitutions from textual diplomatic variants. The operator is the same Dwork operator defined earlier in Exposé XXII; its cap-height typescript form does not introduce a second operator. No scan-backed case distinction is available.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:67",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G73-statement-underlines",
+      "page": "7II:403,405 and similar statements",
+      "readings": "Source-layer reading: source underlines sometimes include mathematical symbols and final punctuation | Proposed/other reading: split each underline around symbols and punctuation according to the print",
+      "decision": "Retain the supplied markup except for exact separately documented repairs, including ED-XV-1.3.2-i.",
+      "reason": "The global record defers these cases to the individual visual review required by issue 48; the typist did not follow one mechanically inferable rule. A broad replacement would silently modify authorial presentation at unverified loci.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:73",
+      "status": "needs the scan"
+    },
+    {
+      "item": "ED-G77-review-status",
+      "page": "7I:276–350; 7II:291–395",
+      "readings": "Source-layer reading: earlier 34 API-only recheck batches outstanding | Proposed/other reading: issue 79: all 34 rechecked in-app and applied",
+      "decision": "Treat that recheck queue as closed by issue 79; preserve actual source/fix counts.",
+      "reason": "The later dated convention record explicitly closes all 34 batches. The task checks their supplied outcomes by diff and fix-log audit; it does not claim a new scan inspection in this build.",
+      "forms_affected": "FR and EN, all three forms",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:77",
+      "status": "superseded by issue 79"
+    }
+  ],
+  "patches": [
+    {
+      "id": "ED-7I-356",
+      "language": "FR",
+      "volume": "7I",
+      "file": "expose_VII_body.tex",
+      "source_path": "fr/sga7i/current/expose_VII_body.tex",
+      "page": 179,
+      "layer": "current",
+      "old": "Nous allons définir une catégorie cofibré $\\underline{\\Psi}",
+      "new": "Nous allons définir une catégorie cofibrée $\\underline{\\Psi}",
+      "reason": "Disambiguate the grammatical error from the already-correct heading by an exact context.",
+      "expected_count": 1
+    },
+    {
+      "id": "ED-7II-1018",
+      "language": "FR",
+      "volume": "7II",
+      "file": "expose_XX_body.tex",
+      "source_path": "fr/sga7ii/current/expose_XX_body.tex",
+      "page": 353,
+      "layer": "current",
+      "old": "que son image dans $E^{n-1}(X_{\\bar{\\eta}},\\mathbb{Q}_{\\ell}(i))$ n'est pas nulle.",
+      "new": "que son image dans $E^{n-1}(X_{\\bar{\\eta}},\\mathbb{Q}_{\\ell}(i)) = H^{n-1}(X_{\\bar{\\eta}},\\mathbb{Q}_{\\ell}(i)) / H^{n-1}(X,\\mathbb{Q}_{\\ell}(i))$ n'est pas nulle.",
+      "reason": "Restore omitted printed equality, correcting only the recorded missing slash and coefficient typeface.",
+      "expected_count": 1
+    },
+    {
+      "id": "ED-en7II-C8",
+      "language": "EN",
+      "volume": "7II",
+      "file": "005_expose_X_2_12_through_2_14.tex",
+      "source_path": "en/sources/native/SGA7II/components/005_expose_X_2_12_through_2_14.tex",
+      "page": 24,
+      "layer": "all",
+      "old": "We now prove (ii).  Since $D$ is regular, its strict transform $D'$ is\nisomorphic to $D$ and meets $s^*$ with length one.  The assumption\n$\\operatorname{length}_{k(s)}(T\\cap s^*)\\leq n$ therefore implies\n\\[\n\\operatorname{length}_{k(s)}\\bigl((D'\\cup T)\\cap s^*\\bigr)\\leq n+1,\n\\]\nso that $D'\\cup T$ satisfies the hypothesis of (i).",
+      "new": "Let $I_{D'\\cap T}$ be the (principal) ideal of $\\underline{O}_{D'}$\ndefining $D'\\cap T$. Under the hypotheses (ii), the exact sequence\n\\begin{equation*}\n0\\longrightarrow I_{D'\\cap T}\\longrightarrow\\underline{O}_{D'\\cup T}\n\\longrightarrow O_T\\longrightarrow0\n\\end{equation*}\nshows that $D'\\cup T$ satisfies hypothesis (i).",
+      "reason": "Restore source exact-sequence argument in place of the released substitute argument.",
+      "expected_count": 1
+    },
+    {
+      "id": "ED-en7II-C17",
+      "language": "EN",
+      "volume": "7II",
+      "file": "009_expose_X_2_31_through_bibliography.tex",
+      "source_path": "en/sources/native/SGA7II/components/009_expose_X_2_31_through_bibliography.tex",
+      "page": 36,
+      "layer": "all",
+      "old": "\\widetilde\\tau_0/\\tau\\overset\\sim\\longrightarrow",
+      "new": "\\widetilde\\tau_0/\\tau\\simeq",
+      "reason": "The folio-local source has the isomorphism relation, not a labelled arrow.",
+      "expected_count": 1
+    },
+    {
+      "id": "ED-en7II-C475",
+      "language": "EN",
+      "volume": "7II",
+      "file": "182_expose_XXII_cohomology_of_the_structure_sheaf.tex",
+      "source_path": "en/sources/native/SGA7II/components/182_expose_XXII_cohomology_of_the_structure_sheaf.tex",
+      "page": 436,
+      "layer": "all",
+      "old": "\\mathrel{\\Big|}W_S(1)\n\\right),\n\\end{aligned}",
+      "new": "\\mathrel{\\Big|}W_S(1)\n\\right)\n\\end{aligned}",
+      "reason": "Remove the comma added by the transcription at the end of (6.2.8).",
+      "expected_count": 1
+    },
+    {
+      "id": "ED-en7II-C508",
+      "language": "EN",
+      "volume": "7II",
+      "file": "003_expose_X_section_2_opening_through_2_9_statement.tex",
+      "source_path": "en/sources/native/SGA7II/components/003_expose_X_section_2_opening_through_2_9_statement.tex",
+      "page": 14,
+      "layer": "all",
+      "old": "$t\\in S^*$ is the distance in the tree $S^*$ from $s^*$ to $t$.",
+      "new": "$t\\in S^*$ is the distance in the tree $S^*$ from $s^*$ to $t$ ($n = \\#]s^*,t]$).",
+      "reason": "Restore the omitted source cardinality parenthesis.",
+      "expected_count": 1
+    },
+    {
+      "id": "ED-XV-1.3.2-i",
+      "language": "EN",
+      "volume": "7II",
+      "file": "067_expose_XV_section_1_3.tex",
+      "source_path": "en/sources/native/SGA7II/components/067_expose_XV_section_1_3.tex",
+      "page": 175,
+      "layer": "all",
+      "old": "such that the henselized $S$-scheme of $X$ at $x$ is isomorphic to",
+      "new": "such that the henselized} $S$-\\underline{scheme of $X$ at $x$ is isomorphic to",
+      "reason": "Respect the source underline boundary, already followed by English clause (ii).",
+      "expected_count": 1
+    },
+    {
+      "id": "ED-G52-notée",
+      "language": "FR",
+      "volume": "7II",
+      "file": "expose_XVIII_body.tex",
+      "source_path": "fr/sga7ii/current/expose_XVIII_body.tex",
+      "page": 265,
+      "layer": "current",
+      "old": "« cohomologie à supports propres », notées $H^{\\cdot}_{c}$",
+      "new": "« cohomologie à supports propres », notée $H^{\\cdot}_{c}$",
+      "reason": "The notation H_c denotes cohomologie, a feminine singular noun.",
+      "expected_count": 1
+    }
+  ],
+  "english_variants": [
+    {
+      "id": "ED-en7I-C874",
+      "volume": "7I",
+      "file": "145_expose_IX_sections_5_5_and_5_6.tex",
+      "page": 379,
+      "printed": "T_\\ell(A')/T_\\ell(A'_K)^f",
+      "corrected": "T_\\ell(A'_K)/T_\\ell(A'_K)^f"
+    },
+    {
+      "id": "ED-en7II-C8-source",
+      "volume": "7II",
+      "file": "005_expose_X_2_12_through_2_14.tex",
+      "page": 24,
+      "printed": "Let $I_{D'\\cap T}$ be the (principal ideal of $\\underline{O}_{D'}$\ndefining $D'\\cap T$. Under the hypotheses (ii), the exact sequence\n\\begin{equation*}\n0\\longrightarrow I_{D'\\cap T}\\longrightarrow\\underline{O}_{D'\\cap T}\n\\longrightarrow O_T\\longrightarrow0\n\\end{equation*}\nshows that $D'\\cap T$ satisfies hypothesis (i).",
+      "corrected": "Let $I_{D'\\cap T}$ be the (principal) ideal of $\\underline{O}_{D'}$\ndefining $D'\\cap T$. Under the hypotheses (ii), the exact sequence\n\\begin{equation*}\n0\\longrightarrow I_{D'\\cap T}\\longrightarrow\\underline{O}_{D'\\cup T}\n\\longrightarrow O_T\\longrightarrow0\n\\end{equation*}\nshows that $D'\\cup T$ satisfies hypothesis (i)."
+    },
+    {
+      "id": "ED-en7II-C508",
+      "volume": "7II",
+      "file": "003_expose_X_section_2_opening_through_2_9_statement.tex",
+      "page": 14,
+      "printed": "($n = \\#[s^*,t]$)",
+      "corrected": "($n = \\#]s^*,t]$)"
+    }
+  ],
+  "unresolved_notes": [
+    {
+      "id": "ED-G27-x-hat",
+      "page": "7I:123",
+      "printed": "\\mathfrak X_{(\\hat x)} in the supplied source layers",
+      "alternative": "earlier transcription \\mathcal X_{(\\mathfrak x)}",
+      "decision": "Keep the supplied source-layer hat reading; do not invent a further glyph correction.",
+      "reason": "The two current source pages both use the completion hat and the same completion-to-localization isomorphism. The earlier convention entry questioned the physical overstrike; without the scan that paleographic question cannot be independently resolved. The authoritative attached layers remain the printed-reading witness.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:27"
+    },
+    {
+      "id": "ED-G27-missing-reference",
+      "page": "7I:128",
+      "printed": "is smooth by and therefore",
+      "alternative": "is smooth by 4.13(a) and therefore",
+      "decision": "Retain the printed blank reference in every body; record the suggested reference only as a note.",
+      "reason": "The statement lacks a number in the recorded print. More than one preceding smoothness result could support the argument, and adding 4.13(a) would manufacture a citation. No supplied source establishes the omitted numeral.",
+      "status": "retained; authorial reference unresolved",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:27"
+    },
+    {
+      "id": "ED-G32-run-in-headings",
+      "page": "7I:163,165 (and analogous numbered headings)",
+      "printed": "Attached layers use separate paragraphs after numbered headings",
+      "alternative": "possible printed run-in headings with following prose on the same paragraph",
+      "decision": "Keep the supplied paragraph boundaries; do not make an unchecked global reflow.",
+      "reason": "The two specific changes were held at low confidence and the other headings were not verified. A text-only layer cannot establish a printed indentation or run-in break. This is a layout uncertainty, not grounds for altering any authorial wording.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:32"
+    },
+    {
+      "id": "ED-G36-E-or-X",
+      "page": "7I:180",
+      "printed": "d_1^*d_0^*(E)\\simeq(d_0d_1)^*(E)",
+      "alternative": "d_1^*d_0^*(X)\\simeq(d_0d_1)^*(X)",
+      "decision": "Retain E in all bodies; record the proposed X reading without adopting it.",
+      "reason": "The preceding concrete extension is called X, but the transitivity isomorphism is valid for any extension E. Consequently the typography does not force a mathematical error. Both supplied layers retain E, and an authorial generic E remains possible.",
+      "status": "retained; no determinate emendation",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:36"
+    },
+    {
+      "id": "ED-G36-psi-footnote",
+      "page": "7I:180",
+      "printed": "\\psi_{L.}(A)",
+      "alternative": "\\underline\\Psi_{L.}(A)",
+      "decision": "Retain the source-layer lowercase psi in the body.",
+      "reason": "The footnote names a category also denoted by underlined capital Psi in the main text, but the recorded low-confidence observation does not establish whether the glyph is a typist variant or an accidental change. No scan is supplied to adjudicate its shape.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:36"
+    },
+    {
+      "id": "ED-G37-duplicate-number",
+      "page": "7I:183",
+      "printed": "two displays tagged (3.2.3)",
+      "alternative": "second display (3.2.3\\prime) or another new tag",
+      "decision": "Retain both printed (3.2.3) tags; distinguish their locations by description in the records.",
+      "reason": "The following source already uses (3.2.4); no unoccupied intended number is established. An editorial prime would be a new citation system, not recovery of the author’s number. The diagram and c(X,alpha) display remain distinguishable by their content.",
+      "status": "retained; intended numbering unresolved",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:37"
+    },
+    {
+      "id": "ED-G38-speck",
+      "page": "7II:202",
+      "printed": "(\\mathrm{Sw}_{I\\prime},s_{I/H}) without an extra lower dot",
+      "alternative": "a possible printed dot below the opening parenthesis",
+      "decision": "Keep the supplied formula without an additional dot.",
+      "reason": "No mathematical operation is defined by the possible mark. Its status as ink, damage or punctuation is a visual-source question; neither attached layer encodes it.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:38"
+    },
+    {
+      "id": "ED-G41-exton-sion",
+      "page": "7I:195",
+      "printed": "extension (both attached layers)",
+      "alternative": "exton-sion (held low-confidence visual reading)",
+      "decision": "Retain the attached diplomatic reading extension, and list the alternative only in the note.",
+      "reason": "The two source layers agree. The earlier candidate was explicitly held and supplies no established printed lexical error. The scan is needed to distinguish an actual o from a damaged e and a line-end hyphen.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:41"
+    },
+    {
+      "id": "ED-G45-mathematical-repair",
+      "page": "7II:237",
+      "printed": "the printed pencil in (4.2.3)",
+      "alternative": "a proposed replacement pencil with an isolated ordinary quadratic singularity",
+      "decision": "Preserve the supplied mathematical formula; do not construct a new proof or pencil.",
+      "reason": "The global record explicitly calls the proposed replacement a repair of the mathematics rather than a recovered reading. The detailed proposed formula is not supplied in the attached findings file. The recorded concern (a singular plane for n=2k+1 at least 7) is disclosed, but no conjectural replacement is inserted.",
+      "status": "retained; proposed mathematical replacement unavailable",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:45"
+    },
+    {
+      "id": "ED-G48-inner-underlines",
+      "page": "7II:248 and other internal commas",
+      "printed": "source-layer continuous underlines through some inner commas",
+      "alternative": "stop and restart each underline around the comma",
+      "decision": "Keep the source-layer markup pending visual evidence at each occurrence.",
+      "reason": "The global record states that the typist sometimes underlined through commas and sometimes did not. Therefore a string-wide rule is not justified; each of the potential cases requires its scan. No authorial wording is changed.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:48"
+    },
+    {
+      "id": "ED-G58-comma",
+      "page": "7II:332",
+      "printed": "H_s,",
+      "alternative": "H_{s,}",
+      "decision": "Keep the comma as argument punctuation; do not move it into the subscript.",
+      "reason": "The lower comma was a held visual observation, not a new index. The H_s followed by coefficient argument consistently denotes the fibre. Both layers retain ordinary argument punctuation; a physical baseline question requires the scan.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:58"
+    },
+    {
+      "id": "ED-G63-miracle",
+      "page": "7II:416",
+      "printed": "oh miracle (both attached layers)",
+      "alternative": "ô miracle (earlier held reading)",
+      "decision": "Retain oh miracle as the attached diplomatic reading.",
+      "reason": "The later supplied layers agree on oh. The earlier low-confidence record does not establish the visual reading independently; changing both layers back to ô would discard the current witness without evidence.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:63"
+    },
+    {
+      "id": "ED-G64-quotient",
+      "page": "7II:423",
+      "printed": "the displayed fraction in (4.5.21)",
+      "alternative": "a slash presentation of the same quotient",
+      "decision": "Keep the displayed fraction in both layers.",
+      "reason": "Both attached layers encode the same numerator and denominator as a quotient. The proposed slash concerns the original graphic layout alone. No mathematical change follows, and without a scan the alternative typography cannot be established.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:64"
+    },
+    {
+      "id": "ED-G64-subset-stroke",
+      "page": "7II:424",
+      "printed": "\\subseteq in the supplied source",
+      "alternative": "\\subset without the lower stroke",
+      "decision": "Keep the attached diplomatic subseteq reading.",
+      "reason": "The issue reports a possible overstrike, not a verified symbol. Historical subset notation may also be non-strict, so semantics do not settle the physical stroke. No inequality is silently modernized.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:64"
+    },
+    {
+      "id": "ED-G64-Delta-Lambda",
+      "page": "7II:424–429",
+      "printed": "\\Delta_B throughout the defining discussion; \\Lambda_B in printed (5.0.12)",
+      "alternative": "change all seven \\Delta_B to \\Lambda_B, or retain current \\Delta_B at (5.0.12)",
+      "decision": "Keep the supplied diplomatic glyphs and the local current Delta correction; reject an unchecked all-seven replacement.",
+      "reason": "The attached layers define Delta_B in (4.5.28) and use it in the intervening argument. Current (5.0.12) refers back to that same characteristic series. The earlier global all-seven proposal requires scans of all occurrences and cannot override the later source-layer distinction. The physical glyph family remains a scan question.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:64"
+    },
+    {
+      "id": "ED-G67-Dwork-psi",
+      "page": "7II:436–438",
+      "printed": "\\psi_q in the attached layers",
+      "alternative": "\\Psi_q suggested by the typewriter capital-form glyph",
+      "decision": "Retain psi consistently with the attached source notation; do not recase the operator.",
+      "reason": "Issue 78 excludes glyph-only substitutions from textual diplomatic variants. The operator is the same Dwork operator defined earlier in Exposé XXII; its cap-height typescript form does not introduce a second operator. No scan-backed case distinction is available.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:67"
+    },
+    {
+      "id": "ED-G73-statement-underlines",
+      "page": "7II:403,405 and similar statements",
+      "printed": "source underlines sometimes include mathematical symbols and final punctuation",
+      "alternative": "split each underline around symbols and punctuation according to the print",
+      "decision": "Retain the supplied markup except for exact separately documented repairs, including ED-XV-1.3.2-i.",
+      "reason": "The global record defers these cases to the individual visual review required by issue 48; the typist did not follow one mechanically inferable rule. A broad replacement would silently modify authorial presentation at unverified loci.",
+      "status": "needs the scan",
+      "source": "conventions/GLOBAL_ISSUES_SGA.md:73"
+    }
+  ]
+}
