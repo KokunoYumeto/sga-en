@@ -39,17 +39,20 @@ We leave it to the reader to verify that diagram
 that $m$ is a morphism between the total sites, it is enough, in view of
 \hyperref[VI.prop7.4.7]{7.4.7}, to show that the functor left adjoint to
 $\Hom_{I^{\circ}}(I^{\circ},m^{\sim/I}_{\ast})$ is left exact. We first
-describe the inverse-image functor of the morphism $m^{\sim/I}$
+describe the functor left adjoint to
+$\Hom_{I^{\circ}}(I^{\circ},m^{\sim/I}_{\ast})$. Denote by
+$(m^{\sim/I})^{\ast}:D^{\sim/I}\to C^{\sim/I}$ the inverse-image
+functor of the morphism $m^{\sim/I}$
 (\hyperref[VI.prop7.2.7]{7.2.7}); for every object $i$ of $I$, denote by
 $m^{\ast}_i:D^{\sim}_i\to C^{\sim}_i$ the functor induced by
-$(m^{\sim/i})^{\ast}$ on the fibers at $i$. For every morphism $f:i\to j$
+$(m^{\sim/I})^{\ast}$ on the fibers at $i$. For every morphism $f:i\to j$
 of $I$, choose morphisms of topoi, denoted in both cases by
 $(f^{\ast},f_{\ast}):C^{\sim}_i\to C^{\sim}_j$ and
 $(f^{\ast},f_{\ast}):D^{\sim}_i\to D^{\sim}_j$. Since
 $(m^{\sim/I})^{\ast}$ is a Cartesian $I^{\circ}$-functor, for every
 $f:i\to j$ there is a canonical isomorphism
 \begin{equation*}
-m^{\ast}_i f_{\ast} \to f^{\ast} m^{\ast}_j{\quoi},\tag{7.4.10.1}
+m^{\ast}_i f^{\ast} \to f^{\ast} m^{\ast}_j{\quoi},\tag{7.4.10.1}
 \end{equation*}\etiquette[7.4.10.1]{VI.eq7.4.10.1}
 and since the functors $f^{\ast}$ and $f_{\ast}$ are adjoint, there are
 canonical morphisms (adjunction morphisms)
@@ -64,7 +67,7 @@ f_{\ast} \xrightarrow{(2)} f_{\ast} m^{\ast}_i f^{\ast} f_{\ast}
 \xrightarrow{(3)} f_{\ast} m^{\ast}_i{\quoi},\tag{7.4.10.3}
 \end{equation*}\etiquette[7.4.10.3]{VI.eq7.4.10.3}
 where morphism (1) is deduced from $\phi$, morphism (2) is deduced from the
-isomorphism \eqhyperref[VI.eq7.4.10.1]{7.4.10.1}), and morphism (3 is
+isomorphism \eqhyperref[VI.eq7.4.10.1]{7.4.10.1}, and morphism (3) is
 deduced from $\psi$. By composing the various morphisms\pageoriginale in
 the sequence \eqhyperref[VI.eq7.4.10.3]{7.4.10.3}, we obtain a functorial
 morphism
@@ -72,15 +75,15 @@ morphism
 \can_f : m^{\ast}_j f_{\ast} \to f_{\ast} m^{\ast}_i{\quoi}.\tag{7.4.10.4}
 \end{equation*}\etiquette[7.4.10.4]{VI.eq7.4.10.4}
 Now let $\tau$ be an object of
-$\Hhom_{I^{\circ}}(I^{\circ}(D^{\sim/I})')$. Thus, for every object $i$ of
+$\Hhom_{I^{\circ}}(I^{\circ},(D^{\sim/I})')$. Thus, for every object $i$ of
 $I$, there is an object $\tau(i)$ of $D^{\sim}_i$, and for every morphism
 $f:i\to j$, a morphism
 \begin{equation*}
 \gamma_{f} (\tau) : \tau(j) \to f_{\ast} \tau(i){\quoi},\tag{7.4.10.5}
 \end{equation*}\etiquette[7.4.10.5]{VI.eq7.4.10.5}
 where the family of the $\gamma_f(\tau)$ has a compatibility property
-analogous to \eqhyperref[VI.eq7.4.5.8]{7.4.5.8}). Put
-$\sigma(i=m^{\ast}_i(\tau(i))$ and denote by
+analogous to \eqhyperref[VI.eq7.4.5.8]{7.4.5.8}. Put
+$\sigma(i)=m^{\ast}_i(\tau(i))$ and denote by
 \begin{equation*}
 \gamma_{f} (\sigma) : \sigma(j) \to f_{\ast} \sigma(i)\tag{7.4.10.6}
 \end{equation*}\etiquette[7.4.10.6]{VI.eq7.4.10.6}
@@ -138,8 +141,8 @@ For every object $j$ of $I$, denote by $f_j:j\to i$ the unique morphism from
 $j$ to $i$. Using the equivalence
 $\Theta_C:\Top(C)\xrightarrow{\sim}\Hhom_{I^{\circ}}(I^{\circ},
 (C^{\sim/I})')$ (\hyperref[VI.prop7.4.7]{7.4.7}), one sees that for every
-object $X$ of $C_i$, $\alpha_{i!(X)}$ is the section
-$j\to f^{\ast}_i(X)$, and that for every section
+object $X$ of $C_i$, $\alpha_{i!}(X)$ is the section
+$j\mapsto f^{\ast}_j(X)$, and that for every section
 $j\mapsto\sigma(j)\in\Hom_{I^{\circ}}(I^{\circ},(C^{\sim/I})')$,
 $\alpha^{\ast}_i(j\mapsto\sigma(j))$ is the object $\sigma(i)$. Hence
 $\alpha_i^{\ast}\alpha_{i!}$ is isomorphic to the identity. Therefore
@@ -234,7 +237,7 @@ associates with every section
 $\sigma\in\Hom_{I^{\circ}}({I^{\circ}},D')$ the section
 $(i\mapsto m_i\sigma(i))\in\Hom_{I^{\circ}}({I^{\circ}},C')$. Since $m$ is
 a morphism of sites, the functor $m$ is left exact and in particular takes
-the final object of $\Hhom_{I^{\circ}}({I^{\circ}},D)$ to the final object
+the final object of $\Hhom_{I^{\circ}}({I^{\circ}},D')$ to the final object
 of $\Hhom_{I^{\circ}}({I^{\circ}},C')$. For every object $i$ of $I$, denote
 by $e_i$ a final object of $D_i$. A final object of
 $\Hhom_{I^{\circ}}({I^{\circ}},D')$ is the section $i\mapsto e_i$. Thus the
@@ -249,7 +252,7 @@ $$
 D_i \xrightarrow{\bar{\alpha}_{i!}} D_{/e_i} \xrightarrow{\loc(e_i)} D{\quoi},
 $$
 where $\bar{\alpha}_i$ is the evident functor and $\loc(e_i)$ the forgetful
-functor. Denote by $m/i:D_{/e_i}\to D_{m(e_i)}$ the functor that associates
+functor. Denote by $m/i:D_{/e_i}\to C_{/m(e_i)}$ the functor that associates
 with every object $u:X\to e_i$ of $D_{/e_i}$ the object
 $m(u):m(X)\to m(e_i)$ of $C_{/m(e_i)}$. There is a commutative diagram
 \[
@@ -291,7 +294,7 @@ Let $X=(X_i)_{i\in I}$ be a topos fibered over $I$ and let $T$ be a topos.
 Show that the categories $\Hhomtop(X_i,T)$ are the fibers of a fibered
 category denoted $\Hhomtop_I(X,T\times I)$. Show that the category of
 sections over $I$ of $\Hhomtop_I(X,T\times I)$ is canonically equivalent to
-$\Hhomtop_I(\Top(X),T)$, where $\Top(X)$ is the total topos of $X$.
+$\Hhomtop(\Top(X),T)$, where $\Top(X)$ is the total topos of $X$.
 \end{enonce*}
 
 \begin{enonce*}[remark]{Exercise 7.4.15}\etiquette[7.4.15]{VI.exe7.4.15}
