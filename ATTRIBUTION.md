@@ -10,6 +10,6 @@ The SGA 2 and SGA 3 English sources acknowledge Jacob C. Reinhold’s [English t
 
 SGA 4 is AI-translated from the French LaTeX edition of SGA 4, Tomes 1–3, distributed by Fabrice Orgogozo ([normalesup.org/~forgogozo/SGA4](https://www.normalesup.org/~forgogozo/SGA4/); source snapshot at git commit `71766d9`), and uses its TeX configuration files. Its footnotes headed “N.D.E.” are that edition's editorial notes, translated.
 
-SGA 4½ preserves Daniel Miller’s [LaTeX typesetting](https://github.com/dkmiller/sga4.5) and its original typesetter’s note. It is not attributed to AI.
+SGA 4½ preserves Daniel Miller’s LaTeX typesetting and its original typesetter’s note. It is not attributed to AI. His repository (github.com/dkmiller/sga4.5) is no longer online; the French text is in [sga-fr](https://github.com/KokunoYumeto/sga-fr/tree/main/volumes/sga4_5), and a copy survives at [NomiL/sga4.5](https://github.com/NomiL/sga4.5).
 
 Additional English translation is AI-translated; subsequent corrections, editing, reconstruction and typesetting are AI-produced. The source-specific human credits and genuine third-party notices remain applicable; attribution does not establish permission or endorsement.

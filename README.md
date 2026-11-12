@@ -108,7 +108,8 @@ each volume; [SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) explains the numbering o
   `71766d9`), from which the English was translated, together with its TeX configuration files. Its footnotes
   headed "N.D.E." are that edition's editorial notes, translated.
 - SGA 4½: Daniel Miller's LaTeX typesetting of the French text, with his typesetter's note (published at
-  `github.com/dkmiller/sga4.5`, which is no longer online).
+  `github.com/dkmiller/sga4.5`, which is no longer online; the French text is in
+  [sga-fr](https://github.com/KokunoYumeto/sga-fr/tree/main/volumes/sga4_5), and a copy survives at [NomiL/sga4.5](https://github.com/NomiL/sga4.5)).
 - SGA 7 I: the published volume, [Springer LNM 288](https://doi.org/10.1007/BFb0068688), and the recomposed
   [SGA 7 I PDF](https://geotoppos.org/divers/SGA7I.pdf).
 
