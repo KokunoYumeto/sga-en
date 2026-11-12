@@ -1,0 +1,615 @@
+```json
+[
+  {
+    "id": "C507",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C508",
+    "decision": "unclear",
+    "note": "The English omits the parenthetical cardinality formula and states only the distance characterization; there is no interval notation to correct."
+  },
+  {
+    "id": "C509",
+    "decision": "apply",
+    "tr_file": "components/003_expose_X_section_2_opening_through_2_9_statement.tex",
+    "tr_old": "while $t_n$ is not proximate to $t_i$ for\n$0<i\\leq n-1$.",
+    "tr_new": "while $t_n$ is not proximate to $t_i$ for\n$0<i<n-1$."
+  },
+  {
+    "id": "C510",
+    "decision": "apply",
+    "tr_file": "components/007_expose_X_example_2_25.tex",
+    "tr_old": "\\left\\{\\begin{aligned}y^2&=xz^4,\\\\ z^3&=x^2,",
+    "tr_new": "\\left\\{\\begin{aligned}y^2&=xz^2,\\\\ z^3&=x^2,"
+  },
+  {
+    "id": "C511",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C512",
+    "decision": "already",
+    "tr_file": "components/011_expose_XI_1_1_6_through_1_2.tex",
+    "tr_old": "This long exact sequence is simply the restriction to\n$\\mathbb V(\\underline E)^*$ of the Koszul resolution of\n$\\underline O_{e(S)}$ on $\\mathbb V(\\underline E)$."
+  },
+  {
+    "id": "C513",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C514",
+    "decision": "already",
+    "tr_file": "components/011_expose_XI_1_1_6_through_1_2.tex",
+    "tr_old": "Knowing that $R^ip_*\\Omega^i_{\\mathbb P(\\underline E)/S}$ is an invertible\nsheaf for $0\\leq i\\leq r$"
+  },
+  {
+    "id": "C515",
+    "decision": "already",
+    "tr_file": "components/011_expose_XI_1_1_6_through_1_2.tex",
+    "tr_old": "\\chi\\bigl(\\mathbb P^r_k,\\Omega^j_{\\mathbb P^r_k}(n)\\bigr)\n=\\sum_{0\\leq i\\leq j}(-1)^{i-j}\n\\binom{r+1}{i}\\binom{r+n-i}{r}."
+  },
+  {
+    "id": "C516",
+    "decision": "already",
+    "tr_file": "components/012_expose_XI_proposition_1_3.tex",
+    "tr_old": "\\item \\underline{Locally on $X$, if the $s_i$ are the coordinates of $s$\nin a basis of $\\underline W^\\vee$"
+  },
+  {
+    "id": "C517",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C518",
+    "decision": "already",
+    "tr_file": "components/012_expose_XI_proposition_1_3.tex",
+    "tr_old": "\\begin{equation}\\tag{1.3.1}\n0\\longrightarrow N_{H/X}\\longrightarrow\n\\Omega^1_{X/S}\\otimes\\underline O_H\\longrightarrow\n\\Omega^1_{H/S}\\longrightarrow0\n\\end{equation}\n\ndefines a decreasing filtration on\n$\\Omega^j_{X/S}\\otimes\\underline O_H$ whose successive quotients are\n\n\\begin{equation}\\tag{1.3.2}\n\\operatorname{Gr}^k\\bigl(\\Omega^j_{X/S}\\otimes\\underline O_H\\bigr)\n\\simeq\\bigwedge^k\\underline W\\otimes\\Omega^{j-k}_{H/S}.\n\\end{equation}\n\nIt follows from (b) that one also has\n\n\\begin{equation}\\tag{1.3.3}\n\\operatorname{Gr}^k\\bigl(\\Omega^j_{X/S}\\otimes\\underline O_H\n\\otimes\\underline F\\bigr)\n=\\bigwedge^k\\underline W\\otimes\\Omega^{j-k}_{H/S}\n\\otimes\\underline F.\n\\end{equation}"
+  },
+  {
+    "id": "C519",
+    "decision": "already",
+    "tr_file": "components/012_expose_XI_proposition_1_3.tex",
+    "tr_old": "The filtration of\n$\\Omega^j_{X/S}\\otimes\\underline O_H\\otimes\\underline F$ considered\nabove defines a spectral sequence",
+    "note": "All occurrences in this passage, including (1.3.5) and (1.3.6), already use H."
+  },
+  {
+    "id": "C520",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C521",
+    "decision": "already",
+    "tr_file": "components/013_expose_XI_1_4_through_1_6.tex",
+    "tr_old": "R^if_*\\Omega^j_{Y/S}=0\n\\qquad\\underline{\\text{if }}i\\ne j\\ \\underline{\\text{ and }}\\ i+j\\ne n."
+  },
+  {
+    "id": "C522",
+    "decision": "already",
+    "tr_file": "components/013_expose_XI_1_4_through_1_6.tex",
+    "tr_old": "s\\longmapsto\\dim_{k(s)}H^i(Y_s,\\Omega^j_{Y_s})",
+    "note": "The English uses balanced notation without outer parentheses around the argument of dim."
+  },
+  {
+    "id": "C523",
+    "decision": "apply",
+    "tr_file": "components/013_expose_XI_1_4_through_1_6.tex",
+    "tr_old": "are constant on $S$, except perhaps when $i=j$;",
+    "tr_new": "are constant on $S$, except perhaps when $i+j=n$;"
+  },
+  {
+    "id": "C524",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C525",
+    "decision": "apply",
+    "tr_file": "components/013_expose_XI_1_4_through_1_6.tex",
+    "tr_old": "\\longrightarrow H^q(Y,\\mathbb Z/\\ell^m)",
+    "tr_new": "\\longrightarrow H^q\\bigl(\\mathbb P(\\underline E),\\mathbb Z/\\ell^m\\bigr)"
+  },
+  {
+    "id": "C526",
+    "decision": "already",
+    "tr_file": "components/015_expose_XI_2_1_through_2_4.tex",
+    "tr_old": "{(1+yz)^{a_i}z+y(1-z)^{a_i}}.",
+    "note": "The initial symbol is already 1; the extra factor z is a separate translation error."
+  },
+  {
+    "id": "C527",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C528",
+    "decision": "already",
+    "tr_file": "components/015_expose_XI_2_1_through_2_4.tex",
+    "tr_old": "H(a)\n&=-\\frac{1}{(1+y)(1+z)}\\left[\n\\frac{(1+y)^a-(1+z)^a}{(1+y)^az-(1+z)^ay}+1\\right]"
+  },
+  {
+    "id": "C529",
+    "decision": "already",
+    "tr_file": "components/015_expose_XI_2_1_through_2_4.tex",
+    "tr_old": "&=(y-z)\\left(-1+yz\\sum_{i,j\\geq0}\n\\binom a{i+j+2}y^iz^j\\right)"
+  },
+  {
+    "id": "C530",
+    "decision": "already",
+    "tr_file": "components/015_expose_XI_2_1_through_2_4.tex",
+    "tr_old": "-\\frac{(1+y)^a-(1+z)^a}{(1+y)^az-(1+z)^ay}\n=1+(1+y)(1+z)H(a)."
+  },
+  {
+    "id": "C531",
+    "decision": "already",
+    "tr_file": "components/015_expose_XI_2_1_through_2_4.tex",
+    "tr_old": "\\prod_{i=1}^d\\left(1+(1+y)(1+z)H(a_i)\\right)-1\\right]"
+  },
+  {
+    "id": "C532",
+    "decision": "already",
+    "tr_file": "components/015_expose_XI_2_1_through_2_4.tex",
+    "tr_old": "(1+y)^{|P|}(1+z)^{|P|}\\prod_{i\\in P}H(a_i)\\right],"
+  },
+  {
+    "id": "C533",
+    "decision": "already",
+    "tr_file": "components/015_expose_XI_2_1_through_2_4.tex",
+    "tr_old": "H(\\underline a)=\n\\sum_{\\substack{P\\subset[1,d]\\\\P\\ne\\varnothing}}\n(1+y)^{|P|-1}(1+z)^{|P|-1}\n\\prod_{i\\in P}H(a_i)."
+  },
+  {
+    "id": "C534",
+    "decision": "already",
+    "tr_file": "components/018_expose_XII_opening_through_1_3.tex",
+    "tr_old": "\\item if $n$ is odd and $\\operatorname{char}(A)=2$, then $Q$ is ordinary"
+  },
+  {
+    "id": "C535",
+    "decision": "apply",
+    "tr_file": "components/018_expose_XII_opening_through_1_3.tex",
+    "tr_old": "\\qquad (\\lambda\\text{ invertible}).",
+    "tr_new": "\\qquad (\\lambda\\text{ invertible}))."
+  },
+  {
+    "id": "C536",
+    "decision": "already",
+    "tr_file": "components/018_expose_XII_opening_through_1_3.tex",
+    "tr_old": "Suppose that $Q$ is nowhere zero on $S$.  Lemma 1.3.1 then defines a\ntransitive system of isomorphisms"
+  },
+  {
+    "id": "C537",
+    "decision": "already",
+    "tr_file": "components/018_expose_XII_opening_through_1_3.tex",
+    "tr_old": "endomorphism $[\\lambda]$ of the even part $T^+(V)$ of the tensor algebra\nof $V$, which acts as $\\lambda^r$ on $T^{2r}(V)$."
+  },
+  {
+    "id": "C538",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C539",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C540",
+    "decision": "apply",
+    "tr_file": "components/019_expose_XII_1_4_through_1_9.tex",
+    "tr_old": "$e(W_1,W_2)$ and $1-e(W_2,W_1)$.",
+    "tr_new": "$e(W_1,W_2)$ and $1-e(W_1,W_2)$."
+  },
+  {
+    "id": "C541",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C542",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C543",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C544",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C545",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C546",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C547",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C548",
+    "decision": "already",
+    "tr_file": "components/020_expose_XII_1_10_through_2_2.tex",
+    "tr_old": "$p_*\\mathcal O_Z$ that equals one on $s$ and zero elsewhere."
+  },
+  {
+    "id": "C549",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C550",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C551",
+    "decision": "already",
+    "tr_file": "components/021_expose_XII_2_3_through_2_8.tex",
+    "tr_old": "Let $W_1$ and $W_2$ be two totally isotropic subspaces of rank $m+1$ in\n$V$ such that $e(W_1)=e(W_2)$, that is, such that\n$W_1/(W_1\\cap W_2)$ has even dimension (1.12)."
+  },
+  {
+    "id": "C552",
+    "decision": "already",
+    "tr_file": "components/022_expose_XII_3_1_through_3_5.tex",
+    "tr_old": "\\eta^m\\bigl(c\\ell(\\alpha)-c\\ell(\\beta)\\bigr)=0."
+  },
+  {
+    "id": "C553",
+    "decision": "already",
+    "tr_file": "components/022_expose_XII_3_1_through_3_5.tex",
+    "tr_old": "\\operatorname{Tr}\\!\\left(\n\\eta^m(c\\ell(\\alpha)-c\\ell(\\beta))\\right)\n=\\operatorname{Tr}\\!\\left(c\\ell(\\alpha)^2-c\\ell(\\beta)^2\\right)=0."
+  },
+  {
+    "id": "C554",
+    "decision": "apply",
+    "tr_file": "components/023_expose_XII_3_6_through_bibliography.tex",
+    "tr_old": "$i\\neq n,2n$; for $n$ odd, it is an isomorphism for $i\\neq n-1$.",
+    "tr_new": "$i\\neq n,2n$; for $n$ odd, it is an isomorphism for $i\\neq n-1,2n$."
+  },
+  {
+    "id": "C555",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C556",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C557",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C558",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C559",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C560",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C561",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C562",
+    "decision": "already",
+    "tr_file": "components/029_expose_XIII_section_1_4.tex",
+    "tr_old": "continuous action of $\\operatorname{Gal}(\\bar s/s)$ (respectively\n$\\operatorname{Gal}(\\bar\\eta/\\eta)$);"
+  },
+  {
+    "id": "C563",
+    "decision": "already",
+    "tr_file": "components/029_expose_XIII_section_1_4.tex",
+    "tr_old": "every object $K$ of $D(Y\\times_sS,\\Lambda)$ a distinguished triangle\nof $D(Y\\times_s\\eta,\\Lambda)$."
+  },
+  {
+    "id": "C564",
+    "decision": "already",
+    "tr_file": "components/029_expose_XIII_section_1_4.tex",
+    "tr_old": "every object $K$ of $D(Y\\times_sS,\\Lambda)$ a distinguished triangle\nof $D(Y\\times_s\\eta,\\Lambda)$."
+  },
+  {
+    "id": "C565",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C566",
+    "decision": "already",
+    "tr_file": "components/030_expose_XIII_section_2_1_1_through_2_1_6.tex",
+    "tr_old": "\\mathrm{sp}^*i^*K \\arrow[rr] & {}\n  & R\\Psi_\\eta(K_\\eta) \\arrow[ul]"
+  },
+  {
+    "id": "C567",
+    "decision": "apply",
+    "tr_file": "components/030_expose_XIII_section_2_1_1_through_2_1_6.tex",
+    "tr_old": "of $S$, with geometric generic point $\\eta_{\\mathrm{nr}}$.",
+    "tr_new": "of $S$, with generic point $\\eta_{\\mathrm{nr}}$."
+  },
+  {
+    "id": "C568",
+    "decision": "already",
+    "tr_file": "components/030_expose_XIII_section_2_1_1_through_2_1_6.tex",
+    "tr_old": "R^i\\Psi(K_\\eta)_{(\\bar x,\\bar\\eta)}\n=\\mathbb H^i\\!\\left(\nX_{(\\bar x)}\\times_{\\eta_{\\mathrm{nr}}}\\bar\\eta,K\n\\right)."
+  },
+  {
+    "id": "C569",
+    "decision": "already",
+    "tr_file": "components/031_expose_XIII_section_2_1_7_through_2_1_8.tex",
+    "tr_old": "which, when $f$ is proper, is the inverse of (2.1.7.1)."
+  },
+  {
+    "id": "C570",
+    "decision": "apply",
+    "tr_file": "components/031_expose_XIII_section_2_1_7_through_2_1_8.tex",
+    "tr_old": "\\mathbb H^i(X_{\\bar\\eta},K)\n  \\arrow[rr, dash, \"\\sigma-1\"] \\arrow[d]\n  & {} & \\mathbb H^i(X_{\\bar\\eta},K) \\arrow[d] \\\\\n\\mathbb H^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K)) \\arrow[r]\n  & \\mathbb H^i(X_{\\bar s},R\\Phi_{\\bar\\eta}(K))\n      \\arrow[r, \"\\operatorname{Var}(\\sigma)\"]\n  & \\mathbb H^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))\n\\end{tikzcd}\n\\end{equation}\nand\n\\begin{equation}\\tag{2.1.8.8}\n\\begin{tikzcd}[column sep=small, cells={nodes={font=\\small}}]\n\\mathbb H_c^i(X_{\\bar\\eta},K)\n  \\arrow[rr, \"\\sigma-1\"]\n  & {} & \\mathbb H_c^i(X_{\\bar\\eta},K) \\\\\n\\mathbb H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K)) \\arrow[r] \\arrow[u]\n  & \\mathbb H_c^i(X_{\\bar s},R\\Phi_{\\bar\\eta}(K))\n      \\arrow[r, \"\\operatorname{Var}(\\sigma)\"]\n  & \\mathbb H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K)) \\arrow[u]\n\\end{tikzcd}\n.\\end{equation}\nIn (2.1.8.8) the English restores the bar omitted from the printed\nbottom-left $X_{\\bar s}$ and the missing closing parenthesis in the\nbottom-middle term.  In (2.1.8.7), however, the upper connector really\nis printed as a rule without an arrowhead, whereas (2.1.8.8) has an\narrow; this source-visible distinction is retained.",
+    "tr_new": "\\mathbb H^i(X_{\\bar\\eta},K)\n  \\arrow[rr, \"\\sigma-1\"] \\arrow[d]\n  & {} & \\mathbb H^i(X_{\\bar\\eta},K) \\arrow[d] \\\\\n\\mathbb H^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K)) \\arrow[r]\n  & \\mathbb H^i(X_{\\bar s},R\\Phi_{\\bar\\eta}(K))\n      \\arrow[r, \"\\operatorname{Var}(\\sigma)\"]\n  & \\mathbb H^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K))\n\\end{tikzcd}\n\\end{equation}\nand\n\\begin{equation}\\tag{2.1.8.8}\n\\begin{tikzcd}[column sep=small, cells={nodes={font=\\small}}]\n\\mathbb H_c^i(X_{\\bar\\eta},K)\n  \\arrow[rr, \"\\sigma-1\"]\n  & {} & \\mathbb H_c^i(X_{\\bar\\eta},K) \\\\\n\\mathbb H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K)) \\arrow[r] \\arrow[u]\n  & \\mathbb H_c^i(X_{\\bar s},R\\Phi_{\\bar\\eta}(K))\n      \\arrow[r, \"\\operatorname{Var}(\\sigma)\"]\n  & \\mathbb H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K)) \\arrow[u]\n\\end{tikzcd}\n.\\end{equation}\nIn (2.1.8.8) the English restores the bar omitted from the printed\nbottom-left $X_{\\bar s}$ and the missing closing parenthesis in the\nbottom-middle term.  In (2.1.8.7), the upper connector is corrected\nto an arrow, as in (2.1.8.8).",
+    "note": "Also updates the editorial remark about the corrected connector."
+  },
+  {
+    "id": "C571",
+    "decision": "already",
+    "tr_file": "components/032_expose_XIII_section_2_1_9_through_2_1_13.tex",
+    "tr_old": "(which is permissible, as one sees directly from the definitions) and\napplying Abhyankar's lemma"
+  },
+  {
+    "id": "C572",
+    "decision": "already",
+    "tr_file": "components/032_expose_XIII_section_2_1_9_through_2_1_13.tex",
+    "tr_old": "(which is permissible, as one sees directly from the definitions) and\napplying Abhyankar's lemma"
+  },
+  {
+    "id": "C573",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C574",
+    "decision": "already",
+    "tr_file": "components/032_expose_XIII_section_2_1_9_through_2_1_13.tex",
+    "tr_old": "The d\\'{e}vissage just used reduces us to the case in which $F$ is\nconstant, with value $G$.",
+    "note": "The backward reference is implicit and points to the dévissage in 2.1.10."
+  },
+  {
+    "id": "C575",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C576",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C577",
+    "decision": "already",
+    "tr_file": "components/033_expose_XIII_section_2_2.tex",
+    "tr_old": "abelian sheaf $F$ on $Y_s$, there is a trace morphism\n\\[\n\\operatorname{Tr}_u:u_!u^*F\\longrightarrow F\n\\]"
+  },
+  {
+    "id": "C578",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C579",
+    "decision": "already",
+    "tr_file": "components/035_expose_XIII_section_2_4_1_through_2_4_4.tex",
+    "tr_old": "called a smooth point of $(X,F)$ if $f$ is smooth at $x$ and $F$ is\nlocally constant in a neighborhood of $x$."
+  },
+  {
+    "id": "C580",
+    "decision": "already",
+    "tr_file": "components/036_expose_XIII_section_2_4_5_through_2_4_6_6.tex",
+    "tr_old": "\\& \\displaystyle\\bigoplus_{x\\in\\Sigma}\n       i_{x*}R\\Gamma_{\\{x\\}}R\\Psi_{\\bar\\eta}(K)\n     \\arrow[l]"
+  },
+  {
+    "id": "C581",
+    "decision": "apply",
+    "tr_file": "components/037_expose_XIII_second_2_4_6_and_bibliography.tex",
+    "tr_old": "\\subsubsection*{2.4.6. (second occurrence in the source)}",
+    "tr_new": "\\subsubsection*{2.4.7.}"
+  },
+  {
+    "id": "C582",
+    "decision": "apply",
+    "tr_file": "components/037_expose_XIII_second_2_4_6_and_bibliography.tex",
+    "tr_old": "\\begin{equation}\\tag{2.4.6.1}\n\\resizebox{\\textwidth}{!}{%\n\\begin{tikzcd}[ampersand replacement=\\&, column sep=large, row sep=large]\n{}\n  \\& 0 \\arrow[r] \\arrow[d]\n  \\& R^{n-1}\\Phi_{\\bar\\eta}(K)_x \\arrow[r] \\arrow[d]\n  \\& R^{n-1}\\Phi_{\\bar\\eta}(K)_x \\arrow[r] \\arrow[d]\n  \\& 0 \\arrow[d]\n  \\& {} \\\\\n{} \\arrow[r]\n  \\& \\mathbb H^{n-1}(X^*_{s(x)},K)\n     \\arrow[r, \"j\"] \\arrow[d, equal]\n  \\& \\mathbb H^n_{\\{x\\}}(X_s,K) \\arrow[r] \\arrow[d]\n  \\& \\underline{H}^{n}(K)_x \\arrow[r] \\arrow[d]\n  \\& \\mathbb H^n(X^*_{s(x)},K)\n     \\arrow[r] \\arrow[d, equal]\n  \\& {} \\\\\n{} \\arrow[r]\n  \\& \\mathbb H^{n-1}(X^*_{s(x)},K)\n     \\arrow[r, \"j\", \"{\\mbox{\\textcircled{1}}}\"'] \\arrow[d]\n  \\& \\mathbb H^n_{\\{x\\}}\\bigl(X_s,R\\Psi_{\\bar\\eta}(K)\\bigr)\n     \\arrow[r] \\arrow[d]\n  \\& R^n\\Psi_{\\bar\\eta}(K)_x \\arrow[r] \\arrow[d]\n  \\& \\mathbb H^n(X_{s(x)},K) \\arrow[r] \\arrow[d]\n  \\& {} \\\\\n{}\n  \\& 0 \\arrow[r]\n  \\& R^n\\Phi_{\\bar\\eta}(K)_x \\arrow[r, equal]\n  \\& R^n\\Phi_{\\bar\\eta}(K)_x \\arrow[r]\n  \\& 0\n  \\& {}\n\\end{tikzcd}}\n\\end{equation}\nThe image of the arrow \\textcircled{1} is contained in the inertia\ninvariants.\n\nThe source prints both this paragraph and the preceding paragraph as\n2.4.6, and prints both principal diagrams as (2.4.6.1).  The repeated\nnumbers are retained here; this second occurrence is the one cited in\nExpos\\'e XV, 2.2.6.",
+    "tr_new": "\\begin{equation}\\tag{2.4.7.1}\n\\resizebox{\\textwidth}{!}{%\n\\begin{tikzcd}[ampersand replacement=\\&, column sep=large, row sep=large]\n{}\n  \\& 0 \\arrow[r] \\arrow[d]\n  \\& R^{n-1}\\Phi_{\\bar\\eta}(K)_x \\arrow[r] \\arrow[d]\n  \\& R^{n-1}\\Phi_{\\bar\\eta}(K)_x \\arrow[r] \\arrow[d]\n  \\& 0 \\arrow[d]\n  \\& {} \\\\\n{} \\arrow[r]\n  \\& \\mathbb H^{n-1}(X^*_{s(x)},K)\n     \\arrow[r, \"j\"] \\arrow[d, equal]\n  \\& \\mathbb H^n_{\\{x\\}}(X_s,K) \\arrow[r] \\arrow[d]\n  \\& \\underline{H}^{n}(K)_x \\arrow[r] \\arrow[d]\n  \\& \\mathbb H^n(X^*_{s(x)},K)\n     \\arrow[r] \\arrow[d, equal]\n  \\& {} \\\\\n{} \\arrow[r]\n  \\& \\mathbb H^{n-1}(X^*_{s(x)},K)\n     \\arrow[r, \"j\", \"{\\mbox{\\textcircled{1}}}\"'] \\arrow[d]\n  \\& \\mathbb H^n_{\\{x\\}}\\bigl(X_s,R\\Psi_{\\bar\\eta}(K)\\bigr)\n     \\arrow[r] \\arrow[d]\n  \\& R^n\\Psi_{\\bar\\eta}(K)_x \\arrow[r] \\arrow[d]\n  \\& \\mathbb H^n(X^*_{s(x)},K) \\arrow[r] \\arrow[d]\n  \\& {} \\\\\n{}\n  \\& 0 \\arrow[r]\n  \\& R^n\\Phi_{\\bar\\eta}(K)_x \\arrow[r, equal]\n  \\& R^n\\Phi_{\\bar\\eta}(K)_x \\arrow[r]\n  \\& 0\n  \\& {}\n\\end{tikzcd}}\n\\end{equation}\nThe image of the arrow \\textcircled{1} is contained in the inertia\ninvariants.\n\nThe source prints both this paragraph and the preceding paragraph as\n2.4.6, and prints both principal diagrams as (2.4.6.1).  These repeated\nnumbers are corrected here to 2.4.7 and (2.4.7.1) for this paragraph\nand its diagram, the latter being the one cited in\nExpos\\'e XV, 2.2.6.",
+    "note": "Also covers C584 and updates the editorial explanation of the numbering."
+  },
+  {
+    "id": "C583",
+    "decision": "already",
+    "tr_file": "components/037_expose_XIII_second_2_4_6_and_bibliography.tex",
+    "tr_old": "\\mathbb H^n_{\\{x\\}}\\bigl(X_s,R\\Psi_{\\bar\\eta}(K)\\bigr)\n     \\arrow[r] \\arrow[d]"
+  },
+  {
+    "id": "C584",
+    "decision": "already",
+    "tr_file": "components/037_expose_XIII_second_2_4_6_and_bibliography.tex",
+    "tr_old": "\\mathbb H^n(X_{s(x)},K) \\arrow[r] \\arrow[d]",
+    "note": "covered by C582"
+  },
+  {
+    "id": "C585",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C586",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C587",
+    "decision": "already",
+    "tr_file": "components/039_expose_XIV_section_1_1_6_through_1_1_11.tex",
+    "tr_old": "and let $\\widetilde D^*$ be a universal covering\nof $D^*$."
+  },
+  {
+    "id": "C588",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C589",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C590",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C591",
+    "decision": "apply",
+    "tr_file": "components/040_expose_XIV_section_1_2_1_through_1_2_4.tex",
+    "tr_old": "As in 1.1.1, one checks that this topos does not change when $D$ is",
+    "tr_new": "As in 1.2.1, one checks that this topos does not change when $D$ is"
+  },
+  {
+    "id": "C592",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C593",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C594",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C595",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C596",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C597",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C598",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C599",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C600",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C601",
+    "decision": "already",
+    "tr_file": "components/051_expose_XIV_section_3_1_1_through_3_1_3.tex",
+    "tr_old": "Let $d\\leq r$ and $t\\leq\\tau(d)$.  Away from $0$, $B_{t,d}$ is a"
+  },
+  {
+    "id": "C602",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C603",
+    "decision": "already",
+    "tr_file": "components/051_expose_XIV_section_3_1_1_through_3_1_3.tex",
+    "tr_old": "In a sense whose precise formulation is left to the reader, $(V,T)$\nis independent of the choices of $t$ and $d$."
+  },
+  {
+    "id": "C604",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C605",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C606",
+    "decision": "already",
+    "tr_file": "components/052_expose_XIV_section_3_1_4_through_3_1_5.tex",
+    "tr_old": "and $B_{t_0,d_1}-B_{t_0,d_0}^{\\circ}$ is a bundle over $D_{t_0}$."
+  },
+  {
+    "id": "C607",
+    "decision": "already",
+    "tr_file": "components/051_expose_XIV_section_3_1_1_through_3_1_3.tex",
+    "tr_old": "Away from $0$, $B_{t,d}$ is a\nmanifold with corners, and the projection $f:B_{t,d}\\to D_t$ is a\nfibration."
+  },
+  {
+    "id": "C608",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C609",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C610",
+    "decision": "already",
+    "tr_file": "components/052_expose_XIV_section_3_1_4_through_3_1_5.tex",
+    "tr_old": "\\alpha:B_0^+-\\{x\\mid f(x)=0,\\ \\delta(x)=\\varphi_0(0)\\}\n\\xrightarrow{\\ \\sim\\ }B^+-\\{0\\}."
+  },
+  {
+    "id": "C611",
+    "decision": "already",
+    "tr_file": "components/053_expose_XIV_section_3_1_6_through_3_1_8.tex",
+    "tr_old": "B=\\{x\\mid\\delta(x)<d\\ \\text{and}\\ |f(x)|^2<t\\}."
+  },
+  {
+    "id": "C612",
+    "decision": "already",
+    "tr_file": "components/053_expose_XIV_section_3_1_6_through_3_1_8.tex",
+    "tr_old": "$U\\times_D\\widetilde D^*=\\overline B^*$ is a bundle with fiber\n$V^\\circ$ over the contractible space $\\widetilde D_t^*$."
+  },
+  {
+    "id": "C613",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C614",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C615",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C616",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C617",
+    "decision": "already",
+    "tr_file": "components/054_expose_XIV_section_3_1_9_through_3_1_10.tex",
+    "tr_old": "\\overline B^* \\arrow[l,hook',\"\\bar\\jmath\"'] \\arrow[d,\"q'\"]"
+  },
+  {
+    "id": "C618",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C619",
+    "decision": "apply",
+    "tr_file": "components/054_expose_XIV_section_3_1_9_through_3_1_10.tex",
+    "tr_old": "\\bar\\imath^*{}_1\\bar\\jmath_*(\\Lambda).",
+    "tr_new": "\\bar\\imath^*{}_1\\bar\\jmath_*(\\Lambda^*)."
+  },
+  {
+    "id": "C620",
+    "decision": "already",
+    "tr_file": "components/054_expose_XIV_section_3_1_9_through_3_1_10.tex",
+    "tr_old": "action described in 1.1.5 and acts trivially on\n${}_1\\overline C^*$."
+  },
+  {
+    "id": "C621",
+    "decision": "already",
+    "tr_file": "components/055_expose_XIV_section_3_1_11_through_3_1_13.tex",
+    "tr_old": "\\item pairs $(T_0,\\varphi)$, where $T_0:V\\xrightarrow{\\sim}V$ and\n  $\\varphi$ is a homotopy class of paths from\n  $\\operatorname{id}$ to $\\partial T_0$, up to isotopy."
+  },
+  {
+    "id": "C622",
+    "decision": "not_applicable"
+  }
+]
+```
+
+components/015_expose_XI_2_1_through_2_4.tex, (2.2): the denominator has an extra factor `z` after `(1+yz)^{a_i}`; the corrected French has no such factor.
+components/018_expose_XII_opening_through_1_3.tex, opening: stray text `ge` appears before the title.
+components/024_expose_XIII_title_introduction_through_0_2.tex, pages 83–84: `wi\nth` incorrectly splits the word “with”.
+components/029_expose_XIII_section_1_4.tex, pages 97–98: `\L\nambda` breaks the LaTeX command `\Lambda`.
+components/030_expose_XIII_section_2_1_1_through_2_1_6.tex, pages 99–100: `th\ne` incorrectly splits the word “the”.

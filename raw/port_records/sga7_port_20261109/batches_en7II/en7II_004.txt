@@ -1,0 +1,5011 @@
+# en7II_004: 115 items on 17 printed pages of SGA 7 II
+
+=================== PAGE 418 ===================
+----- English, file components/169_expose_XXII_section_4_0_through_lemma_4_2.tex, page 417 -----
+\[
+(\Theta(X))^{\sum_{j=0}^{a-1}t^{p^j}}
+\]
+
+is defined, and one has the identity of formal power series
+
+\begin{equation}\tag{4.2.3.1}
+\prod_{j=0}^{a-1}\Theta(t^{p^j}X)
+=(\Theta(X))^{\sum_{j=0}^{a-1}t^{p^j}}.
+\end{equation}
+----- English, file components/170_expose_XXII_proof_of_lemma_4_2_and_corollary_4_3.tex, page 417 -----
+\medskip
+\noindent\emph{Proof.}
+Since $E(X)\in\mathbb Z_p[[X]]$, (4.2.1) follows from the definition. For
+(4.2.2), we have
+
+\begin{equation}\tag{4.2.4}
+\log(\Theta(1))=0
+\qquad\text{by the choice of $\pi$ in (4.1.5),}
+\end{equation}
+
+and
+
+\begin{equation}\tag{4.2.5}
+\operatorname{ord}(\Theta(1)-1)=\frac1{p-1}
+\qquad\text{by (4.2.1).}
+\end{equation}
+
+By (4.2.4), there is an integer $n\geq0$ such that
+$\Theta(1)^{p^n}=1$ (this is the characterization of the kernel of the
+logarithm), and (4.2.5) implies that $n=1$.
+
+As for (4.2.3.1), after taking logarithms it follows by an immediate
+calculation, once one knows that
+$\sum_{j=0}^{a-1}t^{p^j}\in\mathbb Z_p$. But the $t^{p^j}$,
+$0\leq j\leq a-1$, are precisely the conjugates over $\mathbb Z_p$ of
+$t\in W(\mathbb F_{p^a})$; hence
+
+\[
+\sum_{j=0}^{a-1}t^{p^j}
+=\operatorname{Tr}_{W(\mathbb F_{p^a})/\mathbb Z_p}(t)\in\mathbb Z_p.
+\]
+
+Evaluating the two sides of (4.2.3.1) at $X=1$ gives the following result.
+
+\subsubsection*{Corollary 4.3.}
+Let $t\in\Omega$ satisfy $t^{p^a}=t$, and denote its residue class by
+$\bar t\in\mathbb F_{p^a}$. Then
+
+\begin{equation}\tag{4.3.1}
+\prod_{j=0}^{a-1}\Theta(t^{p^j})
+=\xi_p^{\operatorname{tr}_{\mathbb F_{p^a}/\mathbb F_p}(\bar t)}.
+\end{equation}
+----- English, file components/170_expose_XXII_proof_of_lemma_4_2_and_corollary_4_3.tex, page 418 -----
+\medskip
+\noindent\emph{Source note.}
+The print has three mutually exposed notation slips in Lemma~4.2: it writes
+$A_1=\pi$ in the coefficient expansion in (4.2.1), places the Teichmüller
+representative in $W(\mathbb F_{q^a})$ although both $t^{p^a}=t$ and
+Corollary~4.3 use $\mathbb F_{p^a}$, and prints $\sum t^j$ in the exponent
+of (4.2.3.1) although the product and the following proof use
+$\sum t^{p^j}$. The diplomatic French preserves those forms; corrected
+French and English use $B_1$, $\mathbb F_{p^a}$, and $t^{p^j}$.
+----- English, file components/171_expose_XXII_section_4_4.tex, page 418 -----
+\subsection*{4.4.}
+Recall that the residue field of the ring of integers of
+$\mathbb Q_p(\xi_p)$ is $\mathbb F_p$. Let
+
+\begin{equation}\tag{4.4.0}
+K=\text{the unramified extension of $\mathbb Q_p(\xi_p)$ with residue
+field $\mathbb F_q$},
+\end{equation}
+
+and let
+
+\begin{equation}\tag{4.4.1}
+\tau\in\operatorname{Gal}(K/\mathbb Q_p(\xi_p))
+\end{equation}
+
+be the ``Frobenius'', that is, the automorphism reducing to the Frobenius
+automorphism of $\mathbb F_q/\mathbb F_p$, $x\longmapsto x^p$.
+
+Let
+
+\begin{equation}\tag{4.4.2}
+F(X)=\sum_w A_wX^w\in K[X_1,\ldots,X_{n+2}]
+\end{equation}
+
+be the lifting of $f(X)$ whose coefficients satisfy $A_w^q=A_w$.
+Putting (4.3.1) and (4.0.9) together, and taking into account the
+definition (4.1.0) of $\chi$, one obtains
+
+\begin{equation}\tag{4.4.3}
+\begin{aligned}
+&(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+-\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad=\frac1{q^\nu}
+\sum_{(X_0,X)\in(\mu_{q^\nu-1}(\Omega))^{n+3}}
+\prod_w\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+\Theta\!\left(A_w^{p^j}X_0^{p^j}X^{p^jw}\right).
+\end{aligned}
+\end{equation}
+
+Define
+
+\[
+H(X)=H(X_0,\ldots,X_{n+2})\in K[[X_0,\ldots,X_{n+2}]]
+\]
+
+by
+
+\begin{equation}\tag{4.4.4}
+H(X)=\prod_w
+\Theta\!\left(A_wX_0X_1^{w_1}\cdots X_{n+2}^{w_{n+2}}\right).
+\end{equation}
+
+We let $\operatorname{Gal}(K/\mathbb Q_p(\xi_p))$ act on
+$K[[X_0,\ldots,X_{n+2}]]$ through its action on the coefficients; the
+componentwise action of
+$\sigma\in\operatorname{Gal}(K/\mathbb Q_p(\xi_p))$ will be denoted
+----- English, file components/171_expose_XXII_section_4_4.tex, page 419 -----
+\begin{equation}\tag{4.4.5}
+G(X)\longmapsto G^\sigma(X).
+\end{equation}
+
+In particular,
+
+\[
+H^{\tau^j}(X)=\prod_w
+\Theta\!\left(A_w^{\tau^j}X_0X_1^{w_1}\cdots
+X_{n+2}^{w_{n+2}}\right).
+\]
+
+Since $A_w^{\tau^j}=A_w^{p^j}$, formula (4.4.3) may therefore be rewritten
+as
+
+\begin{equation}\tag{4.4.6}
+\begin{aligned}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac1{q^\nu}
+\sum_{(X_0,X)\in(\mu_{q^\nu-1}(\Omega))^{n+3}}
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j}).
+\end{aligned}
+\end{equation}
+----- English, file components/172_expose_XXII_section_4_5_setup_and_operators.tex, page 419 -----
+\subsection*{4.5.}
+We shall now express the sum in (4.4.6) as a trace.
+
+For each $b\in\mathbb Q$, define a $p$-adic Banach $K$-algebra
+
+\begin{equation}\tag{4.5.1}
+L(b)=\text{the subring of $K[[X_0,\ldots,X_{n+2}]]$ consisting of the
+series}
+\end{equation}
+
+which can be written
+
+\begin{equation}\tag{4.5.2}
+\sum_{dU_0=\sum_{i\geq1}U_i}
+B_UX_0^{U_0}X_1^{U_1}\cdots X_{n+2}^{U_{n+2}},
+\qquad U=(U_0,\ldots,U_{n+2}),
+\end{equation}
+
+and which satisfy
+
+\begin{equation}\tag{4.5.3}
+\inf_U\bigl(\operatorname{ord}(B_U)-bU_0\bigr)>-\infty.
+\end{equation}
+
+It is a $p$-adic Banach algebra for the order function (the negative of the
+logarithm of the norm)
+
+\begin{equation}\tag{4.5.4}
+\inf_U\bigl(\operatorname{ord}(B_U)-bU_0\bigr)
+=\operatorname{ord}\!\left(\sum_U B_UX^U\right).
+\end{equation}
+
+It follows from (4.4.4) and (4.2.1) that
+----- French corrections on page 418 -----
+[id C349] kind word; French file expose_XXII_body.tex
+OLD: non ramifiée
+NEW: non-ramifiée
+FRENCH CONTEXT (corrected, after the fix): p^j})
+=\xi_p^{\operatorname{tr}_{\mathbb F_{p^a}/\mathbb F_p}(\bar t)}.
+\end{equation}
+
+%%%%%%%%%%  scan idx 425  |  folio 418  %%%%%%%%%%
+
+4.4. Rappelons que le corps résiduel de l'anneau des entiers de
+$\mathbb Q_p(\xi_p)$ est $\mathbb F_p$. Soient
+
+\begin{equation}\tag{4.4.0}
+K=\text{l'extension non-ramifiée de $\mathbb Q_p(\xi_p)$ à corps résiduel
+$\mathbb F_q$},
+\end{equation}
+
+\begin{equation}\tag{4.4.1}
+\tau\in\Gal(K/\mathbb Q_p(\xi_p))
+\end{equation}
+
+le "Frobenius", i.e. l'automorphisme se réduisant suivant l'automorphisme
+de Frobenius de $\mathbb F_q/\mathbb F_p$, $x\longmapsto x^p$,
+
+\begin{equ
+
+[id C350] kind punctuation; French file expose_XXII_body.tex
+OLD: $x\longmapsto x^p$.
+NEW: $x\longmapsto x^p$,
+FRENCH CONTEXT (corrected, after the fix): =\text{l'extension non-ramifiée de $\mathbb Q_p(\xi_p)$ à corps résiduel
+$\mathbb F_q$},
+\end{equation}
+
+\begin{equation}\tag{4.4.1}
+\tau\in\Gal(K/\mathbb Q_p(\xi_p))
+\end{equation}
+
+le "Frobenius", i.e. l'automorphisme se réduisant suivant l'automorphisme
+de Frobenius de $\mathbb F_q/\mathbb F_p$, $x\longmapsto x^p$,
+
+\begin{equation}\tag{4.4.2}
+\text{Soit }F(X)=\sum_wA_wX^w
+\text{ le relèvement en $K[X_1,\ldots,X_{n+2}]$ de $f(X)$}
+\end{equation}
+
+dont les coefficients vérifient $A_w^q=A_w$. Mettant ensemble (4.3.1) et
+(4.0.9), on trouve (compte tenu de la définition (4.1.0) de $\chi$) :
+
+\begin{equation}\tag{
+
+[id C351] kind formula; French file expose_XXII_body.tex
+OLD: \tag{4.4.3}
+\begin{aligned}
+NEW: \tag{4.4.3}
+\left\{
+\begin{aligned}
+FRENCH CONTEXT (corrected, after the fix): x^p$,
+
+\begin{equation}\tag{4.4.2}
+\text{Soit }F(X)=\sum_wA_wX^w
+\text{ le relèvement en $K[X_1,\ldots,X_{n+2}]$ de $f(X)$}
+\end{equation}
+
+dont les coefficients vérifient $A_w^q=A_w$. Mettant ensemble (4.3.1) et
+(4.0.9), on trouve (compte tenu de la définition (4.1.0) de $\chi$) :
+
+\begin{equation}\tag{4.4.3}
+\left\{
+\begin{aligned}
+&(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+-\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad=\frac1{q^\nu}
+\sum_{(X_0,X)\in(\mu_{q^\nu-1}(\Omega))^{n+3}}
+\prod_w\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+\Theta\!\left(A_w^{p^j}X_0^{p^j}X^{p^jw}\right).
+\end{aligned}
+\right.
+\end{equation}
+
+Définisson
+
+[id C352] kind formula; French file expose_XXII_body.tex
+OLD: \right).
+\end{aligned}
+NEW: \right).
+\end{aligned}
+\right.
+FRENCH CONTEXT (corrected, after the fix): $) :
+
+\begin{equation}\tag{4.4.3}
+\left\{
+\begin{aligned}
+&(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+-\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad=\frac1{q^\nu}
+\sum_{(X_0,X)\in(\mu_{q^\nu-1}(\Omega))^{n+3}}
+\prod_w\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+\Theta\!\left(A_w^{p^j}X_0^{p^j}X^{p^jw}\right).
+\end{aligned}
+\right.
+\end{equation}
+
+Définissons
+
+\[
+H(X)=H(X_0,\ldots,X_{n+2})\in K[[X_0,\ldots,X_{n+2}]]
+\]
+
+par
+
+\begin{equation}\tag{4.4.4}
+H(X)=\prod_w
+\Theta\!\left(A_wX_0X_1^{w_1}\cdots X_{n+2}^{w_{n+2}}\right).
+\end{equation}
+
+Nous faisons agir $\Gal(K/\mathbb Q_p(\xi_p))$ sur
+$K[[X_0,\ldots,X_{n+2}]]$ à traver
+
+=================== PAGE 419 ===================
+----- (English text of page 418: shown above in this file) -----
+----- (English text of page 419: shown above in this file) -----
+----- English, file components/172_expose_XXII_section_4_5_setup_and_operators.tex, page 420 -----
+\[
+H(X)\in L\!\left(\frac1{p-1}\right).
+\]
+
+Let us introduce some operators. For every integer $k>0$, define a
+continuous operator between Banach spaces over $K$ by
+
+\begin{equation}\tag{4.5.5}
+\left\{
+\begin{aligned}
+\psi_k:L(b)&\longrightarrow L(kb),\\
+\psi_k\!\left(\sum_U B_UX^U\right)&=\sum_U B_{kU}X^U.
+\end{aligned}
+\right.
+\end{equation}
+
+For every pair $(b,b')$ with $b'<b$, there is a ``restriction'' operator,
+which is completely continuous (that is, a uniform limit of finite-rank
+operators):
+
+\begin{equation}\tag{4.5.6}
+\left\{
+\begin{aligned}
+L(b)&\xrightarrow{\ \text{restriction}\ }L(b'),\\
+\sum_U B_UX^U&\longmapsto\sum_U B_UX^U.
+\end{aligned}
+\right.
+\end{equation}
+
+Each element $G$ of the algebra $L(b)$ gives the continuous endomorphism
+of multiplication by $G$,
+
+\begin{equation}\tag{4.5.7}
+\left\{
+\begin{aligned}
+G:L(b)&\longrightarrow L(b),\\
+\eta&\longmapsto\eta G.
+\end{aligned}
+\right.
+\end{equation}
+----- French corrections on page 419 -----
+[id C353] kind word; French file expose_XXII_body.tex
+OLD: \operatorname{card}
+NEW: \operatorname{Card}
+FRENCH CONTEXT (corrected, after the fix): 
+%%%%%%%%%%  scan idx 426  |  folio 419  %%%%%%%%%%
+
+On a en particulier
+
+\[
+H^{\tau^j}(X)=\prod_w
+\Theta\!\left(A_w^{\tau^j}X_0X_1^{w_1}\cdots
+X_{n+2}^{w_{n+2}}\right).
+\]
+
+Compte tenu de ce que $A_w^{\tau^j}=A_w^{p^j}$, (4.4.3) se récrit alors
+
+\begin{equation}\tag{4.4.6}
+\begin{aligned}
+(q^\nu-1)\operatorname{Card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac1{q^\nu}
+\sum_{(X_0,X)\in(\mu_{q^\nu-1}(\Omega))^{n+3}}
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\end{aligned}
+\end{equation}
+
+4.5. Nous allons maintenant exprimer la somme dans (4.4.6) comme une trace.
+
+Pour ch
+
+[id C354] kind punctuation; French file expose_XXII_body.tex
+OLD: H^{\tau^j}(X^{p^j}).
+NEW: H^{\tau^j}(X^{p^j})
+FRENCH CONTEXT (corrected, after the fix):  de ce que $A_w^{\tau^j}=A_w^{p^j}$, (4.4.3) se récrit alors
+
+\begin{equation}\tag{4.4.6}
+\begin{aligned}
+(q^\nu-1)\operatorname{Card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac1{q^\nu}
+\sum_{(X_0,X)\in(\mu_{q^\nu-1}(\Omega))^{n+3}}
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\end{aligned}
+\end{equation}
+
+4.5. Nous allons maintenant exprimer la somme dans (4.4.6) comme une trace.
+
+Pour chaque $b\in\mathbb Q$, on définit une $K$-algèbre de Banach $p$-adique
+
+\begin{equation}\tag{4.5.1}
+L(b)=\text{le sous-anneau de $K[[X_0,\ldots,X_{n+2}]]$ formé des séries}
+\end{equation
+
+[id C355] kind formula; French file expose_XXII_body.tex
+OLD: X_{n+2}^{U_{n+2}},
+\qquad U=(U_0,\ldots,U_{n+2}),
+NEW: X_{n+2}^{U_{n+2}}
+\qquad (U=(U_0,\ldots,U_{n+2}))
+FRENCH CONTEXT (corrected, after the fix): e.
+
+Pour chaque $b\in\mathbb Q$, on définit une $K$-algèbre de Banach $p$-adique
+
+\begin{equation}\tag{4.5.1}
+L(b)=\text{le sous-anneau de $K[[X_0,\ldots,X_{n+2}]]$ formé des séries}
+\end{equation}
+
+qui s'écrivent
+
+\begin{equation}\tag{4.5.2}
+\sum_{dU_0=\sum_{i\geq1}U_i}
+B_UX_0^{U_0}X_1^{U_1}\cdots X_{n+2}^{U_{n+2}}
+\qquad (U=(U_0,\ldots,U_{n+2}))
+\end{equation}
+
+et qui vérifient
+
+\begin{equation}\tag{4.5.3}
+\inf_U\bigl(\operatorname{ord}(B_U)-bU_0\bigr)>-\infty.
+\end{equation}
+
+C'est une algèbre de Banach $p$-adique pour la fonction d'ordinal
+(l'opposé du logarithme de la norme)
+
+\begin{equation}\tag{4.5.4}
+\inf_U\bigl(\operatorname{ord}(B_
+
+=================== PAGE 420 ===================
+----- (English text of page 419: shown above in this file) -----
+----- (English text of page 420: shown above in this file) -----
+----- English, file components/172_expose_XXII_section_4_5_setup_and_operators.tex, page 421 -----
+These operators are related by the following lemma, whose proof is found in
+[2] (see also [4]).
+----- English, file components/173_expose_XXII_dwork_trace_lemma_through_formula_4_5_12.tex, page 421 -----
+\subsubsection*{Lemma 4.5.8 (Dwork trace lemma).}
+Let $b\in\mathbb Q$, $b>0$, let $k\in\mathbb Z$, $k\geq2$, and let
+$G\in L(b/k)$. Then the composite
+
+\[
+L(b)\xrightarrow{\ \text{restriction}\ }L(b/k)
+\xrightarrow{\ \times G\ }L(b/k)
+\xrightarrow{\ \psi_k\ }L(b),
+\]
+
+denoted by $\psi_k\circ G$, is completely continuous, and its trace
+(cf. [4]) is given by
+
+\begin{equation}\tag{4.5.9}
+\operatorname{tr}(\psi_k\circ G)
+=\frac1{(k-1)^{n+2}}
+\sum_{X\in(\mu_{k-1}(\Omega))^{n+3}}G(X).
+\end{equation}
+
+Apply this lemma with
+
+\[
+\left\{
+\begin{aligned}
+k&=q^\nu,\\
+G(X)&=\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+H^{\tau^j}(X^{p^j})
+\in L\!\left(\frac{p}{(p-1)q^\nu}\right),\\
+b&=\frac1{p-1}.
+\end{aligned}
+\right.
+\]
+
+Formula (4.4.6) becomes
+
+\begin{equation}\tag{4.5.10}
+\begin{aligned}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac{(q^\nu-1)^{n+3}}{q^\nu}
+\operatorname{tr}\!\left(
+\left.\psi_{q^\nu}\circ
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\right|L\!\left(\frac1{p-1}\right)\right).
+\end{aligned}
+\end{equation}
+
+Let $L^0(b)$ be the ideal of the elements of $L(b)$ which ``vanish at
+zero'', that is, which have no constant term. It is stable under
+$\psi_k\circ G$, and evidently
+
+\begin{equation}\tag{4.5.11}
+\operatorname{tr}(\psi_k\circ G)
+=G(0)+\operatorname{tr}\!\left(\left.\psi_k\circ G\right|L^0(b)\right).
+\end{equation}
+
+Since $H(0)=1$, formula (4.5.10) may be rewritten as
+----- French corrections on page 420 -----
+[id C356] kind punctuation; French file expose_XXII_body.tex
+OLD: L(kb),\\
+NEW: L(kb)\\
+FRENCH CONTEXT (corrected, after the fix): n a
+
+\[
+H(X)\in L\!\left(\frac1{p-1}\right).
+\]
+
+%%%%%%%%%%  scan idx 427  |  folio 420  %%%%%%%%%%
+
+Introduisons des opérateurs.
+
+Pour chaque entier $k>0$, on introduit un opérateur continu d'espaces de
+Banach sur $K$
+
+\begin{equation}\tag{4.5.5}
+\left\{
+\begin{aligned}
+\psi_k:L(b)&\longrightarrow L(kb)\\
+\psi_k\!\left(\sum_U B_UX^U\right)&=\sum_U B_{kU}X^U.
+\end{aligned}
+\right.
+\end{equation}
+
+Pour chaque couple $(b,b')$, $b'<b$, il y a un
+\underline{opérateur de "restriction"} qui est complètement continu
+(i.e. une limite uniforme des opérateurs de rang fini)
+
+\begin{equation}\tag{4.5.6}
+\left\{
+
+
+[id C357] kind punctuation; French file expose_XXII_body.tex
+OLD: L(b'),\\
+NEW: L(b')\\
+FRENCH CONTEXT (corrected, after the fix): {aligned}
+\right.
+\end{equation}
+
+Pour chaque couple $(b,b')$, $b'<b$, il y a un
+\underline{opérateur de "restriction"} qui est complètement continu
+(i.e. une limite uniforme des opérateurs de rang fini)
+
+\begin{equation}\tag{4.5.6}
+\left\{
+\begin{aligned}
+L(b)&\xrightarrow{\ \text{"restriction"}\ }L(b')\\
+\sum_U B_UX^U&\longmapsto\sum_U B_UX^U.
+\end{aligned}
+\right.
+\end{equation}
+
+Chaque élément $G$ de l'algèbre $L(b)$ donne l'endomorphisme continu de la
+multiplication par $G$
+
+\begin{equation}\tag{4.5.7}
+\begin{aligned}
+G:L(b)&\longrightarrow L(b)\\
+\eta&\longmapsto\eta G.
+\end{aligned}
+\end{equat
+
+[id C358] kind formula; French file expose_XXII_body.tex
+OLD: \left\{
+\begin{aligned}
+G:L(b)&\longrightarrow L(b),\\
+\eta&\longmapsto\eta G.
+\end{aligned}
+\right.
+NEW: \begin{aligned}
+G:L(b)&\longrightarrow L(b)\\
+\eta&\longmapsto\eta G.
+\end{aligned}
+FRENCH CONTEXT (corrected, after the fix): quation}\tag{4.5.6}
+\left\{
+\begin{aligned}
+L(b)&\xrightarrow{\ \text{"restriction"}\ }L(b')\\
+\sum_U B_UX^U&\longmapsto\sum_U B_UX^U.
+\end{aligned}
+\right.
+\end{equation}
+
+Chaque élément $G$ de l'algèbre $L(b)$ donne l'endomorphisme continu de la
+multiplication par $G$
+
+\begin{equation}\tag{4.5.7}
+\begin{aligned}
+G:L(b)&\longrightarrow L(b)\\
+\eta&\longmapsto\eta G.
+\end{aligned}
+\end{equation}
+
+Ces opérateurs sont liés par le lemme suivant, dont la démonstration se
+trouve dans [2] (cf. aussi [4]).
+
+%%%%%%%%%%  scan idx 428  |  folio 421  %%%%%%%%%%
+
+\underline{Lemme 4.5.8 (ou lemme de la trace (DWORK)).}
+\underline{Soient $b\in\mathbb Q$, $b>0$, $k\in\mathbb Z$, $k\geq2$, 
+
+=================== PAGE 421 ===================
+----- (English text of page 420: shown above in this file) -----
+----- (English text of page 421: shown above in this file) -----
+----- English, file components/173_expose_XXII_dwork_trace_lemma_through_formula_4_5_12.tex, page 422 -----
+\begin{equation}\tag{4.5.12}
+\begin{aligned}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=(q^\nu-1)^{n+1}\\
+&\quad+\frac{(q^\nu-1)^{n+2}}{q^\nu}
+\operatorname{tr}\!\left(
+\left.\psi_{q^\nu}\circ
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\right|L^0\!\left(\frac1{p-1}\right)\right).
+\end{aligned}
+\end{equation}
+----- English, file components/174_expose_XXII_alpha_and_support_decomposition.tex, page 422 -----
+Consider now the $\tau^{-1}$-linear operator
+
+\begin{equation}\tag{4.5.13}
+\tau^{-1}\circ\psi_p\circ H(X):L(b)\longrightarrow L(b).
+\end{equation}
+
+Its iterates are
+
+\begin{equation}\tag{4.5.14}
+(\tau^{-1}\circ\psi_p\circ H(X))^a
+=\tau^{-a}\circ\psi_{p^a}\circ
+H(X)H^\tau(X^p)\cdots H^{\tau^{a-1}}(X^{p^{a-1}}),
+\end{equation}
+
+and, if $\operatorname{ord}(q)$ divides $a$, then $\tau^{-a}=\operatorname{id}$.
+Define the $\tau^{-1}$-linear operation
+
+\begin{equation}\tag{4.5.15}
+\left\{
+\begin{aligned}
+\alpha:L^0\!\left(\frac1{p-1}\right)
+&\longrightarrow L^0\!\left(\frac1{p-1}\right),\\
+\alpha&=\frac1p\,\tau^{-1}\circ\psi_p\circ H(X).
+\end{aligned}
+\right.
+\end{equation}
+
+Then (4.5.12) takes the form
+
+\begin{equation}\tag{4.5.16}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{n+1}
++(q^\nu-1)^{n+2}
+\operatorname{tr}\!\left(
+\left.\alpha^{\operatorname{ord}(q^\nu)}
+\right|L^0\!\left(\frac1{p-1}\right)\right).
+\end{equation}
+
+Put
+
+\begin{equation}\tag{4.5.17}
+S=\{1,\ldots,n+2\}.
+\end{equation}
+
+For every nonempty subset $A\subset S$, define the subspace
+
+\begin{equation}\tag{4.5.18}
+\begin{aligned}
+L^A(b)=\{\,&\text{series $\sum_U B_UX^U\in L(b)$ such that, for every
+monomial $X^U$ with $B_U\ne0$,}\\
+&\text{the indices $i$ for which $U_i>0$ are exactly $0$ and the
+$j\in A$}\,\}.
+\end{aligned}
+\end{equation}
+
+Then
+
+\begin{equation}\tag{4.5.19}
+L^0(b)=\bigoplus_{\substack{A\subset S\\A\ne\varnothing}}L^A(b).
+\end{equation}
+----- French corrections on page 421 -----
+[id C363] kind punctuation; French file expose_XXII_body.tex
+OLD: (cf. [4])
+NEW: [cf. [4]]
+FRENCH CONTEXT (corrected, after the fix): ).}
+\underline{Soient $b\in\mathbb Q$, $b>0$, $k\in\mathbb Z$, $k\geq2$, et
+$G\in L(b/k)$. Alors le composé}
+
+\[
+L(b)\xrightarrow{\ \text{"restriction"}\ }L(b/k)
+\xrightarrow{\ \times G\ }L(b/k)
+\xrightarrow{\ \psi_k\ }L(b),
+\]
+
+\underline{noté $\psi_k\circ G$, est complètement continu, et sa trace
+[cf. [4]] est donnée par la formule}
+
+\begin{equation}\tag{4.5.9}
+\operatorname{tr}(\psi_k\circ G)
+=\frac1{(k-1)^{n+2}}
+\sum_{X\in(\mu_{k-1}(\Omega))^{n+3}}G(X).
+\end{equation}
+
+Appliquant ce lemme au cas
+
+\[
+\left\{
+\begin{aligned}
+k&=q^\nu\\
+G(X)&=\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+H^{\tau^j}(X^{p^j
+
+[id C364] kind punctuation; French file expose_XXII_body.tex
+OLD: k&=q^\nu,\\
+NEW: k&=q^\nu\\
+FRENCH CONTEXT (corrected, after the fix): erline{noté $\psi_k\circ G$, est complètement continu, et sa trace
+[cf. [4]] est donnée par la formule}
+
+\begin{equation}\tag{4.5.9}
+\operatorname{tr}(\psi_k\circ G)
+=\frac1{(k-1)^{n+2}}
+\sum_{X\in(\mu_{k-1}(\Omega))^{n+3}}G(X).
+\end{equation}
+
+Appliquant ce lemme au cas
+
+\[
+\left\{
+\begin{aligned}
+k&=q^\nu\\
+G(X)&=\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+H^{\tau^j}(X^{p^j})
+\in L\!\left(\frac{p}{(p-1)q^\nu}\right)\\
+b&=\frac1{p-1}
+\end{aligned}
+\right.
+\]
+
+(4.4.6) se récrit
+
+\begin{equation}\tag{4.5.10}
+\begin{aligned}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\
+
+[id C365] kind punctuation; French file expose_XXII_body.tex
+OLD: {(p-1)q^\nu}\right),\\
+NEW: {(p-1)q^\nu}\right)\\
+FRENCH CONTEXT (corrected, after the fix): le}
+
+\begin{equation}\tag{4.5.9}
+\operatorname{tr}(\psi_k\circ G)
+=\frac1{(k-1)^{n+2}}
+\sum_{X\in(\mu_{k-1}(\Omega))^{n+3}}G(X).
+\end{equation}
+
+Appliquant ce lemme au cas
+
+\[
+\left\{
+\begin{aligned}
+k&=q^\nu\\
+G(X)&=\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+H^{\tau^j}(X^{p^j})
+\in L\!\left(\frac{p}{(p-1)q^\nu}\right)\\
+b&=\frac1{p-1}
+\end{aligned}
+\right.
+\]
+
+(4.4.6) se récrit
+
+\begin{equation}\tag{4.5.10}
+\begin{aligned}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac{(q^\nu-1)^{n+3}}{q^\nu}
+\operatorname{tr}\!\left(
+\left.\psi_{q^\nu}
+\prod_{j=0}^{\operatorname{
+
+[id C366] kind punctuation; French file expose_XXII_body.tex
+OLD: b&=\frac1{p-1},
+NEW: b&=\frac1{p-1}
+FRENCH CONTEXT (corrected, after the fix): tag{4.5.9}
+\operatorname{tr}(\psi_k\circ G)
+=\frac1{(k-1)^{n+2}}
+\sum_{X\in(\mu_{k-1}(\Omega))^{n+3}}G(X).
+\end{equation}
+
+Appliquant ce lemme au cas
+
+\[
+\left\{
+\begin{aligned}
+k&=q^\nu\\
+G(X)&=\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+H^{\tau^j}(X^{p^j})
+\in L\!\left(\frac{p}{(p-1)q^\nu}\right)\\
+b&=\frac1{p-1}
+\end{aligned}
+\right.
+\]
+
+(4.4.6) se récrit
+
+\begin{equation}\tag{4.5.10}
+\begin{aligned}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac{(q^\nu-1)^{n+3}}{q^\nu}
+\operatorname{tr}\!\left(
+\left.\psi_{q^\nu}
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H
+
+[id C367] kind extra; French file expose_XXII_body.tex
+OLD: \circ
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\right|L\!
+NEW: 
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\right|L\!
+FRENCH CONTEXT (corrected, after the fix): frac{p}{(p-1)q^\nu}\right)\\
+b&=\frac1{p-1}
+\end{aligned}
+\right.
+\]
+
+(4.4.6) se récrit
+
+\begin{equation}\tag{4.5.10}
+\begin{aligned}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac{(q^\nu-1)^{n+3}}{q^\nu}
+\operatorname{tr}\!\left(
+\left.\psi_{q^\nu}
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\right|L\!\left(\frac1{p-1}\right)\right).
+\end{aligned}
+\end{equation}
+
+Soit $L^0(b)$ l'idéal des éléments de $L(b)$ qui "s'annulent en $0$",
+i.e. "sans terme constant". Il est stable sous $\psi_k\circ G$, et on a
+évidemment
+
+\begin{equation}\tag{4.5.11}
+\operatorname{tr}(\psi_k\circ G)
+=G(0)+\operatorname{t
+
+[id C368] kind extra; French file expose_XXII_body.tex
+OLD: \right|L^0(b)\right)
+NEW: \right|L^0\right)
+FRENCH CONTEXT (corrected, after the fix): ).
+\end{aligned}
+\end{equation}
+
+Soit $L^0(b)$ l'idéal des éléments de $L(b)$ qui "s'annulent en $0$",
+i.e. "sans terme constant". Il est stable sous $\psi_k\circ G$, et on a
+évidemment
+
+\begin{equation}\tag{4.5.11}
+\operatorname{tr}(\psi_k\circ G)
+=G(0)+\operatorname{tr}\!\left(
+\left.\psi_k\circ G\right|L^0\right).
+\end{equation}
+
+Compte tenu de ce que $H(0)=1$, (4.5.10) se récrit
+
+\begin{equation}\tag{4.5.12}
+\begin{aligned}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=(q^\nu-1)^{n+1}\\
+&\quad+\frac{(q^\nu-1)^{n+2}}{q^\nu}
+\operatorname{tr}\!\left(
+\left.\psi_{q^\nu}\circ
+\prod_{j=0}^{\operatorname{ord}(q^\n
+
+=================== PAGE 422 ===================
+----- (English text of page 421: shown above in this file) -----
+----- (English text of page 422: shown above in this file) -----
+----- English, file components/174_expose_XXII_alpha_and_support_decomposition.tex, page 423 -----
+\medskip
+\noindent\emph{Source note.}
+The print drops $\nu$ from the factor $q^\nu-1$ in (4.5.10) and from the
+denominator $q^\nu$ in (4.5.12), although both formulas are direct rewrites
+of (4.4.6). It also transposes the formula number (4.5.14) as (5.4.14).
+The diplomatic French preserves all three printed forms; corrected French
+and English use the algebraically forced readings displayed above.
+----- English, file components/175_expose_XXII_support_quotients_and_point_counts.tex, page 423 -----
+\par\medskip
+And, for every nonempty subset $B\subset S$, one has
+
+\begin{equation}\tag{4.5.20}
+\bigoplus_{A\supset B}L^A(b)
+=L(b)\cap\left(\prod_{i\in B}X_i\right)K[[X]].
+\end{equation}
+
+Clearly every subspace $\bigoplus_{A\supset B}L^A(b)$ is stable under
+$\alpha$. It follows that the same is true of
+$\bigoplus_{A\not\supset B}L^A(b)$, which is a sum of subspaces of the
+preceding type. Define
+
+\begin{equation}\tag{4.5.21}
+\alpha_B=\text{the $\tau^{-1}$-linear endomorphism induced by $\alpha$ on}
+\quad
+\frac{\displaystyle\bigoplus_{A\supset B}
+L^A\!\left(\frac1{p-1}\right)}
+{\displaystyle\bigoplus_{\substack{A\supset B\\A\ne B}}
+L^A\!\left(\frac1{p-1}\right)}
+\simeq L^B\!\left(\frac1{p-1}\right).
+\end{equation}
+
+Explicitly, $\alpha_B$ is given by
+
+\begin{equation}\tag{4.5.22}
+\alpha_B=\frac{\tau^{-1}}p\,\psi_p\,H_B(X),
+\end{equation}
+
+an operation under which $L^B$ is stable, where $H_B(X)$ is obtained from
+$H(X)$ by substituting $X_i=0$ for $i\notin\{0\}\cup B$.
+
+Rewriting (4.5.16) once more gives
+
+\begin{equation}\tag{4.5.23}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{n+1}
++(q^\nu-1)^{n+2}
+\sum_{\substack{A\subset S\\A\ne\varnothing}}
+\operatorname{tr}\!\left((\alpha_A)^{\operatorname{ord}(q^\nu)}\right).
+\end{equation}
+
+For $A\subset S$, $A\ne\varnothing$, define the hypersurface
+
+\begin{equation}\tag{4.5.24}
+V_A\subset\mathbb P^{\operatorname{card}(A)-1}
+\simeq
+\mathbb P^{n+1}\cap
+\{X_i=0\text{ for every }i\notin A\}
+\end{equation}
+----- French corrections on page 422 -----
+[id C369] kind word; French file expose_XXII_body.tex
+OLD: si $\operatorname{ord}(q)$ divise $a$
+NEW: si $\operatorname{ord}(q)\mid a$
+FRENCH CONTEXT (corrected, after the fix): .13}
+\tau^{-1}\circ\psi_p\circ H(X):L(b)\longrightarrow L(b).
+\end{equation}
+
+On constate que ses itérés sont donnés par
+
+\begin{equation}\tag{4.5.14}
+(\tau^{-1}\circ\psi_p\circ H(X))^a
+=\tau^{-a}\circ\psi_{p^a}\circ
+H(X)H^\tau(X^p)\cdots H^{\tau^{a-1}}(X^{p^{a-1}}),
+\end{equation}
+
+et on note que, si $\operatorname{ord}(q)\mid a$, on a
+$\tau^{-a}=\operatorname{id}$. Ceci posé, on définit une opération
+$\tau^{-1}$-linéaire
+
+\begin{equation}\tag{4.5.15}
+\left\{
+\begin{aligned}
+\alpha:L^0\!\left(\frac1{p-1}\right)
+&\longrightarrow L^0\!\left(\frac1{p-1}\right)\\
+\alpha&=\frac1p\,\tau^{-1}\circ\psi_p\circ H(X),
+\end{aligned}
+\r
+
+[id C370] kind punctuation; French file expose_XXII_body.tex
+OLD: \longrightarrow L^0\!\left(\frac1{p-1}\right),\\
+NEW: \longrightarrow L^0\!\left(\frac1{p-1}\right)\\
+FRENCH CONTEXT (corrected, after the fix): X)H^\tau(X^p)\cdots H^{\tau^{a-1}}(X^{p^{a-1}}),
+\end{equation}
+
+et on note que, si $\operatorname{ord}(q)\mid a$, on a
+$\tau^{-a}=\operatorname{id}$. Ceci posé, on définit une opération
+$\tau^{-1}$-linéaire
+
+\begin{equation}\tag{4.5.15}
+\left\{
+\begin{aligned}
+\alpha:L^0\!\left(\frac1{p-1}\right)
+&\longrightarrow L^0\!\left(\frac1{p-1}\right)\\
+\alpha&=\frac1p\,\tau^{-1}\circ\psi_p\circ H(X),
+\end{aligned}
+\right.
+\end{equation}
+
+de sorte que (4.5.12) se récrit
+
+\begin{equation}\tag{4.5.16}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{n+1}
++(q^\nu-1)^{n+2}
+\operatorname{tr}\!\left(
+\left.(\alpha)^{\operatorname{ord}(q^\nu)}
+\righ
+
+[id C371] kind formula; French file expose_XXII_body.tex
+OLD: \left.\alpha^{\operatorname{ord}(q^\nu)}
+NEW: \left.(\alpha)^{\operatorname{ord}(q^\nu)}
+FRENCH CONTEXT (corrected, after the fix): &\longrightarrow L^0\!\left(\frac1{p-1}\right)\\
+\alpha&=\frac1p\,\tau^{-1}\circ\psi_p\circ H(X),
+\end{aligned}
+\right.
+\end{equation}
+
+de sorte que (4.5.12) se récrit
+
+\begin{equation}\tag{4.5.16}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{n+1}
++(q^\nu-1)^{n+2}
+\operatorname{tr}\!\left(
+\left.(\alpha)^{\operatorname{ord}(q^\nu)}
+\right|L^0\!\left(\frac1{p-1}\right)\right).
+\end{equation}
+
+Désignons par
+
+\begin{equation}\tag{4.5.17}
+S=\text{l'ensemble }\{1,\ldots,n+2\}.
+\end{equation}
+
+Pour tout sous-ensemble $A\subset S$, $A\ne\varnothing$, on définit un
+sous-espace de $L(b)$ :
+
+\begin{equation}\tag{4.5.18}
+\begin{aligned}
+
+[id C372] kind word; French file expose_XXII_body.tex
+OLD: L^A(b)=\{\,&\text{séries
+NEW: L^A(b)={}&\text{ensemble des séries
+FRENCH CONTEXT (corrected, after the fix): \right|L^0\!\left(\frac1{p-1}\right)\right).
+\end{equation}
+
+Désignons par
+
+\begin{equation}\tag{4.5.17}
+S=\text{l'ensemble }\{1,\ldots,n+2\}.
+\end{equation}
+
+Pour tout sous-ensemble $A\subset S$, $A\ne\varnothing$, on définit un
+sous-espace de $L(b)$ :
+
+\begin{equation}\tag{4.5.18}
+\begin{aligned}
+L^A(b)={}&\text{ensemble des séries $\sum B_UX^U\in L(b)$ telles que, pour chaque
+monôme $X^U$ avec $B_U\ne0$,}\\
+&\text{les $U_i>0$ sont exactement $U_0$ et les $U_j$, $j\in A$}.
+\end{aligned}
+\end{equation}
+
+On a
+
+\begin{equation}\tag{4.5.19}
+L^0(b)=\bigoplus_{\substack{A\subset S\\A\ne\varnothing}}L^A(b)
+\end{equation}
+
+%%%%%%%%%%
+
+[id C373] kind formula; French file expose_XXII_body.tex
+OLD: $\sum_U B_UX^U
+NEW: $\sum B_UX^U
+FRENCH CONTEXT (corrected, after the fix): \right).
+\end{equation}
+
+Désignons par
+
+\begin{equation}\tag{4.5.17}
+S=\text{l'ensemble }\{1,\ldots,n+2\}.
+\end{equation}
+
+Pour tout sous-ensemble $A\subset S$, $A\ne\varnothing$, on définit un
+sous-espace de $L(b)$ :
+
+\begin{equation}\tag{4.5.18}
+\begin{aligned}
+L^A(b)={}&\text{ensemble des séries $\sum B_UX^U\in L(b)$ telles que, pour chaque
+monôme $X^U$ avec $B_U\ne0$,}\\
+&\text{les $U_i>0$ sont exactement $U_0$ et les $U_j$, $j\in A$}.
+\end{aligned}
+\end{equation}
+
+On a
+
+\begin{equation}\tag{4.5.19}
+L^0(b)=\bigoplus_{\substack{A\subset S\\A\ne\varnothing}}L^A(b)
+\end{equation}
+
+%%%%%%%%%%  scan idx 43
+
+[id C374] kind extra; French file expose_XXII_body.tex
+OLD: $j\in A$}\,\}.
+NEW: $j\in A$}.
+FRENCH CONTEXT (corrected, after the fix): sous-ensemble $A\subset S$, $A\ne\varnothing$, on définit un
+sous-espace de $L(b)$ :
+
+\begin{equation}\tag{4.5.18}
+\begin{aligned}
+L^A(b)={}&\text{ensemble des séries $\sum B_UX^U\in L(b)$ telles que, pour chaque
+monôme $X^U$ avec $B_U\ne0$,}\\
+&\text{les $U_i>0$ sont exactement $U_0$ et les $U_j$, $j\in A$}.
+\end{aligned}
+\end{equation}
+
+On a
+
+\begin{equation}\tag{4.5.19}
+L^0(b)=\bigoplus_{\substack{A\subset S\\A\ne\varnothing}}L^A(b)
+\end{equation}
+
+%%%%%%%%%%  scan idx 430  |  folio 423  %%%%%%%%%%
+
+et, pour chaque sous-ensemble
+
+\[
+B\subset S,\qquad B\ne\varnothing,
+\]
+
+on a
+
+\begin{equation}\tag{4.
+
+[id C375] kind punctuation; French file expose_XXII_body.tex
+OLD: }}L^A(b).
+NEW: }}L^A(b)
+FRENCH CONTEXT (corrected, after the fix): L^A(b)={}&\text{ensemble des séries $\sum B_UX^U\in L(b)$ telles que, pour chaque
+monôme $X^U$ avec $B_U\ne0$,}\\
+&\text{les $U_i>0$ sont exactement $U_0$ et les $U_j$, $j\in A$}.
+\end{aligned}
+\end{equation}
+
+On a
+
+\begin{equation}\tag{4.5.19}
+L^0(b)=\bigoplus_{\substack{A\subset S\\A\ne\varnothing}}L^A(b)
+\end{equation}
+
+%%%%%%%%%%  scan idx 430  |  folio 423  %%%%%%%%%%
+
+et, pour chaque sous-ensemble
+
+\[
+B\subset S,\qquad B\ne\varnothing,
+\]
+
+on a
+
+\begin{equation}\tag{4.5.20}
+\bigoplus_{A\supset B}L^A(b)
+=L(b)\cap\text{ l'idéal }
+\left(\prod_{i\in B}X_i\right)K[[X]].
+\end{equation}
+
+Évidemment cha
+
+=================== PAGE 423 ===================
+----- (English text of page 422: shown above in this file) -----
+----- (English text of page 423: shown above in this file) -----
+----- English, file components/175_expose_XXII_support_quotients_and_point_counts.tex, page 424 -----
+by $f_A(X)$, the polynomial obtained from $f(X)$ by substituting $X_i=0$
+for $i\notin A$.
+
+By compatibility of the formation of the series $H$ from $f(X)$ with
+substitution of $0$ for some of the variables, (4.5.23) gives, for every
+$A\subset S$, $A\ne\varnothing$,
+
+\begin{equation}\tag{4.5.25}
+\operatorname{card}V_A^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{\operatorname{card}(A)-1}
++(q^\nu-1)^{\operatorname{card}(A)}
+\sum_{B\subset A}
+\operatorname{tr}\!\left((\alpha_B)^{\operatorname{ord}(q^\nu)}\right).
+\end{equation}
+
+On the other hand,
+
+\begin{equation}\tag{4.5.26}
+\operatorname{card}V(\mathbb F_{q^\nu})
+=\sum_{\substack{A\subset S\\A\ne\varnothing}}
+\operatorname{card}V_A^*(\mathbb F_{q^\nu}).
+\end{equation}
+
+After an easy summation, (4.5.25) therefore gives
+
+\begin{equation}\tag{4.5.27}
+\begin{aligned}
+\operatorname{card}V(\mathbb F_{q^\nu})
+={}&1+q^\nu+q^{2\nu}+\cdots
++q^{\nu(\operatorname{card}(S)-1)}\\
+&+\sum_{\substack{B\subset S\\B\ne\varnothing}}
+(q^\nu-1)^{\operatorname{card}(B)}
+q^{\nu\operatorname{card}(S-B)}
+\operatorname{tr}\!\left((\alpha_B)^{\operatorname{ord}(q^\nu)}\right).
+\end{aligned}
+\end{equation}
+
+Since $\alpha$, and hence the $\alpha_B$, are $\tau^{-1}$-linear, the
+operators $\alpha_B^{\operatorname{ord}(q)}$ are $K$-linear. Define the
+characteristic series
+
+\[
+\Delta_B(t)\in1+tK[[t]]
+\]
+
+by
+
+\begin{equation}\tag{4.5.28}
+\Delta_B(t)=\det\!\left(
+1-t\alpha_B^{\operatorname{ord}(q)}
+\mathrel{\Big|}L^B\!\left(\frac1{p-1}\right)\right).
+\end{equation}
+
+Introduce the following endomorphisms of $1+tK[[t]]$:
+
+\begin{equation}\tag{4.5.29}
+\varphi:g(t)\longmapsto g^\varphi(t)=g(qt)
+\end{equation}
+
+and
+----- French corrections on page 423 -----
+[id C376] kind symbol; French file expose_XXII_body.tex
+OLD: \bigoplus_{A\not\supset B}
+NEW: \bigoplus_{A\supsetneq B}
+FRENCH CONTEXT (corrected, after the fix): \qquad B\ne\varnothing,
+\]
+
+on a
+
+\begin{equation}\tag{4.5.20}
+\bigoplus_{A\supset B}L^A(b)
+=L(b)\cap\text{ l'idéal }
+\left(\prod_{i\in B}X_i\right)K[[X]].
+\end{equation}
+
+Évidemment chaque sous-espace $\bigoplus_{A\supset B}L^A(b)$ est stable
+par $\alpha$ ; il en résulte qu'il en est de même pour
+$\bigoplus_{A\supsetneq B}L^A(b)$, qui est somme de sous-espaces du type
+précédent.
+
+On définit
+
+\begin{equation}\tag{4.5.21}
+\alpha_B=\text{l'endomorphisme $\tau^{-1}$-linéaire induit par $\alpha$ sur}
+\quad
+\frac{\displaystyle\bigoplus_{A\supset B}
+L^A\!\left(\frac1{p-1}\right)}
+{\displaystyle\bigoplus_{A\supsetneq B}
+L^A\
+
+[id C377] kind symbol; French file expose_XXII_body.tex
+OLD: \bigoplus_{\substack{A\supset B\\A\ne B}}
+NEW: \bigoplus_{A\supsetneq B}
+FRENCH CONTEXT (corrected, after the fix): \qquad B\ne\varnothing,
+\]
+
+on a
+
+\begin{equation}\tag{4.5.20}
+\bigoplus_{A\supset B}L^A(b)
+=L(b)\cap\text{ l'idéal }
+\left(\prod_{i\in B}X_i\right)K[[X]].
+\end{equation}
+
+Évidemment chaque sous-espace $\bigoplus_{A\supset B}L^A(b)$ est stable
+par $\alpha$ ; il en résulte qu'il en est de même pour
+$\bigoplus_{A\supsetneq B}L^A(b)$, qui est somme de sous-espaces du type
+précédent.
+
+On définit
+
+\begin{equation}\tag{4.5.21}
+\alpha_B=\text{l'endomorphisme $\tau^{-1}$-linéaire induit par $\alpha$ sur}
+\quad
+\frac{\displaystyle\bigoplus_{A\supset B}
+L^A\!\left(\frac1{p-1}\right)}
+{\displaystyle\bigoplus_{A\supsetneq B}
+L^A\
+
+=================== PAGE 424 ===================
+----- (English text of page 423: shown above in this file) -----
+----- (English text of page 424: shown above in this file) -----
+----- English, file components/175_expose_XXII_support_quotients_and_point_counts.tex, page 425 -----
+\begin{equation}\tag{4.5.30}
+\delta=1-\varphi:g(t)\longmapsto
+g^\delta(t)=\frac{g(t)}{g(qt)}.
+\end{equation}
+----- English, file components/176_expose_XXII_zeta_formula_and_integrality_lemma.tex, page 425 -----
+Taking account of the identities
+
+\begin{equation}\tag{4.5.31}
+Z(t,V/\mathbb F_q)
+=\exp\!\left(
+\sum_{\nu\geq1}
+\operatorname{card}V(\mathbb F_{q^\nu})\frac{t^\nu}{\nu}
+\right)
+\end{equation}
+
+and
+
+\begin{equation}\tag{4.5.32}
+\det\!\left(1-t\alpha_B^{\operatorname{ord}(q)}\right)
+=\exp\!\left(
+-\sum_{\nu\geq1}
+\operatorname{tr}\!\left((\alpha_B)^{\nu\operatorname{ord}(q)}\right)
+\frac{t^\nu}{\nu}
+\right),
+\end{equation}
+
+formula (4.5.27) can be rewritten as
+
+\begin{equation}\tag{4.5.33}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+=\prod_{j=1}^{n+2}
+\left(
+\prod_{\substack{B\subset S\\\operatorname{card}(B)=j}}
+\Delta_B(t)
+\right)^{-(-\delta)^j\varphi^{n+2-j}}.
+\end{equation}
+
+\medskip
+\noindent\emph{Source note.}
+The print numbers (4.5.23) as (4.5.2.3), abbreviates
+$\operatorname{card}(A)$ as $\operatorname{car}(A)$ in the first exponent
+of (4.5.25), and reuses the number (4.5.23) for the final zeta identity.
+The corrected French and English layers use the sequential numbers and the
+full cardinality notation displayed above; the diplomatic French preserves
+the printed forms.
+
+\subsection*{4.6.}
+We now study the integrality of the series $\Delta_B$. Put
+
+\begin{equation}\tag{4.6.1}
+\mathcal O=\text{the ring of integers of $K$},
+\end{equation}
+
+and define a filtration on $1+t\mathcal O[[t]]$ by
+
+\begin{equation}\tag{4.6.2}
+F^i(1+t\mathcal O[[t]])
+=1+q^it\mathcal O[[q^it]]
+=\varphi^i(1+t\mathcal O[[t]]).
+\end{equation}
+
+One has
+
+\begin{align}
+\varphi(F^i)&\subset F^{i+1}, \tag{4.6.3}\\
+\delta(F^i)&\subset F^i, \tag{4.6.4}\\
+\delta&\text{ induces the identity on }F^i/F^{i+1}. \tag{4.6.5}
+\end{align}
+
+\subsubsection*{Lemma 4.6.6.}
+One has $\Delta_B(t)\in1+t\mathcal O[[t]]$; moreover, if an integer $j$
+satisfies
+
+\begin{equation}\tag{4.6.7}
+jd<\operatorname{card}(B),
+\end{equation}
+
+then
+----- French corrections on page 424 -----
+[id C378] kind punctuation; French file expose_XXII_body.tex
+OLD: certaines des variables,
+NEW: certaines des variables
+FRENCH CONTEXT (corrected, after the fix): }
+\end{equation}
+
+définie par $f_A(X)$, le polynôme déduit de $f(X)$ en y faisant la
+substitution $X_i=0$ pour $i\notin A$.
+
+%%%%%%%%%%  scan idx 431  |  folio 424  %%%%%%%%%%
+
+Compte tenu de la compatibilité de la formation de la série $H$ à partir de
+$f(X)$ à l'opération de substitution de 0 pour certaines des variables
+(4.5.23) donne, pour chaque $A\subseteq S$, $A\ne\varnothing$
+
+\begin{equation}\tag{4.5.25}
+\operatorname{card}(V_A^*(\mathbb F_{q^\nu}))
+=(q^\nu-1)^{\operatorname{card}(A)-1}
++(q^\nu-1)^{\operatorname{card}(A)}
+\sum_{B\subset A}
+\operatorname{tr}\!\left((\alpha_B)^{\operatorname{ord}(q^\nu)}\right
+
+[id C379] kind symbol; French file expose_XXII_body.tex
+OLD: pour chaque $A\subset S$
+NEW: pour chaque $A\subseteq S$
+FRENCH CONTEXT (corrected, after the fix): le polynôme déduit de $f(X)$ en y faisant la
+substitution $X_i=0$ pour $i\notin A$.
+
+%%%%%%%%%%  scan idx 431  |  folio 424  %%%%%%%%%%
+
+Compte tenu de la compatibilité de la formation de la série $H$ à partir de
+$f(X)$ à l'opération de substitution de 0 pour certaines des variables
+(4.5.23) donne, pour chaque $A\subseteq S$, $A\ne\varnothing$
+
+\begin{equation}\tag{4.5.25}
+\operatorname{card}(V_A^*(\mathbb F_{q^\nu}))
+=(q^\nu-1)^{\operatorname{card}(A)-1}
++(q^\nu-1)^{\operatorname{card}(A)}
+\sum_{B\subset A}
+\operatorname{tr}\!\left((\alpha_B)^{\operatorname{ord}(q^\nu)}\right).
+\end{equation}
+
+D'autre part, on a
+
+\beg
+
+[id C380] kind punctuation; French file expose_XXII_body.tex
+OLD: $A\ne\varnothing$,
+NEW: $A\ne\varnothing$
+FRENCH CONTEXT (corrected, after the fix): =(q^\nu-1)^{n+1}
++(q^\nu-1)^{n+2}
+\operatorname{tr}\!\left(
+\left.(\alpha)^{\operatorname{ord}(q^\nu)}
+\right|L^0\!\left(\frac1{p-1}\right)\right).
+\end{equation}
+
+Désignons par
+
+\begin{equation}\tag{4.5.17}
+S=\text{l'ensemble }\{1,\ldots,n+2\}.
+\end{equation}
+
+Pour tout sous-ensemble $A\subset S$, $A\ne\varnothing$, on définit un
+sous-espace de $L(b)$ :
+
+\begin{equation}\tag{4.5.18}
+\begin{aligned}
+L^A(b)={}&\text{ensemble des séries $\sum B_UX^U\in L(b)$ telles que, pour chaque
+monôme $X^U$ avec $B_U\ne0$,}\\
+&\text{les $U_i>0$ sont exactement $U_0$ et les $U_j$, $j\in A$}.
+\end{aligned}
+\end{equation}
+
+On a
+
+[id C381] kind formula; French file expose_XXII_body.tex
+OLD: \operatorname{card}V_A^*(\mathbb F_{q^\nu})
+=
+NEW: \operatorname{card}(V_A^*(\mathbb F_{q^\nu}))
+=
+FRENCH CONTEXT (corrected, after the fix): tin A$.
+
+%%%%%%%%%%  scan idx 431  |  folio 424  %%%%%%%%%%
+
+Compte tenu de la compatibilité de la formation de la série $H$ à partir de
+$f(X)$ à l'opération de substitution de 0 pour certaines des variables
+(4.5.23) donne, pour chaque $A\subseteq S$, $A\ne\varnothing$
+
+\begin{equation}\tag{4.5.25}
+\operatorname{card}(V_A^*(\mathbb F_{q^\nu}))
+=(q^\nu-1)^{\operatorname{card}(A)-1}
++(q^\nu-1)^{\operatorname{card}(A)}
+\sum_{B\subset A}
+\operatorname{tr}\!\left((\alpha_B)^{\operatorname{ord}(q^\nu)}\right).
+\end{equation}
+
+D'autre part, on a
+
+\begin{equation}\tag{4.5.26}
+\operatorname{card}V(\mathbb F_{q^\nu})
+=\sum_{\substack{A\subset S\\A\n
+
+[id C382] kind punctuation; French file expose_XXII_body.tex
+OLD: que $\alpha$, donc les $\alpha_B$, étant
+NEW: que $\alpha$ donc les $\alpha_B$ étant
+FRENCH CONTEXT (corrected, after the fix): F_{q^\nu})
+={}&1+q^\nu+q^{2\nu}+\cdots
++q^{\nu(\operatorname{card}(S)-1)}\\
+&+\sum_{\substack{B\subset S\\B\ne\varnothing}}
+(q^\nu-1)^{\operatorname{card}(B)}
+q^{\nu\operatorname{card}(S-B)}
+\operatorname{tr}\!\left((\alpha_B)^{\operatorname{ord}(q^\nu)}\right).
+\end{aligned}
+\end{equation}
+
+Notons que $\alpha$ donc les $\alpha_B$ étant $\tau^{-1}$-linéaire, les
+$\alpha_B^{\operatorname{ord}(q)}$ sont $K$-linéaires. Définissons alors les
+séries caractéristiques
+
+\[
+\Delta_B(t)\in1+tK[[t]]
+\]
+
+\begin{equation}\tag{4.5.28}
+\Delta_B(t)=\det\!\left(
+1-t\alpha_B^{\operatorname{ord}(q)}
+\mathrel{\Big|}L^B\!\left(\frac1{p-1}\right)\right
+
+[id C383] kind punctuation; French file expose_XXII_body.tex
+OLD: g(t)/g(qt).
+NEW: g(t)/g(qt)
+FRENCH CONTEXT (corrected, after the fix): torname{ord}(q)}
+\mathrel{\Big|}L^B\!\left(\frac1{p-1}\right)\right).
+\end{equation}
+
+Introduisons des endomorphismes de $1+tK[[t]]$
+
+\begin{equation}\tag{4.5.29}
+\varphi:g(t)\longmapsto g^\varphi(t)=g(qt)
+\end{equation}
+
+et
+
+\begin{equation}\tag{4.5.30}
+\delta=1-\varphi:g(t)\longmapsto
+g^\delta(t)=g(t)/g(qt)
+\end{equation}
+
+%%%%%%%%%%  scan idx 432  |  folio 425  %%%%%%%%%%
+
+Compte tenu de ce que
+
+\begin{equation}\tag{4.5.31}
+Z(t,V/\mathbb F_q)
+=\exp\!\left(
+\sum_{\nu\geq1}\operatorname{card}(V(\mathbb F_{q^\nu}))
+\frac{t^\nu}{\nu}\right)
+\end{equation}
+
+et
+
+\begin{equation}\tag{4.5.32}
+\det\!\left(1-t
+
+=================== PAGE 425 ===================
+----- (English text of page 424: shown above in this file) -----
+----- (English text of page 425: shown above in this file) -----
+----- English, file components/176_expose_XXII_zeta_formula_and_integrality_lemma.tex, page 426 -----
+\begin{equation}\tag{4.6.8}
+\Delta_B(t)\in F^j(1+t\mathcal O[[t]]).
+\end{equation}
+----- English, file components/177_expose_XXII_proof_of_lemma_4_6_6.tex, page 426 -----
+\noindent\emph{Proof.}
+The Banach spaces
+$L^B\!\left(\frac1{p-1}\right)$ are all of type $B(I)$ in the sense of
+Serre~[7]; that is, they admit orthonormal bases, namely the monomials
+
+\begin{equation}\tag{4.6.9}
+\pi^{U_0}X_0^{U_0}X_1^{U_1}\cdots X_{n+2}^{U_{n+2}}
+\end{equation}
+
+\noindent
+which belong to them.  To say that this is an orthonormal basis means, by
+definition, that
+
+\begin{equation}\tag{4.6.10}
+\operatorname{ord}\!\left(
+\sum_U C_U\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}
+\right)
+=\min_U\operatorname{ord}(C_U).
+\end{equation}
+
+Let
+
+\begin{equation}\tag{4.6.11}
+R_B=\text{the $\mathcal O$-submodule of
+$L^B\!\left(\frac1{p-1}\right)$ formed by the elements of order $\geq0$}.
+\end{equation}
+
+To prove the lemma, it is enough to show
+
+\begin{equation}\tag{4.6.12}
+jd<\operatorname{card}(B)
+\quad\Longrightarrow\quad
+(\alpha_B)^{\operatorname{ord}(q)}R_B\subset q^jR_B,
+\end{equation}
+
+or, a fortiori, to show
+
+\begin{equation}\tag{4.6.13}
+jd<\operatorname{card}(B)
+\quad\Longrightarrow\quad
+\alpha_B(R_B)\subset p^jR_B.
+\end{equation}
+
+By (4.5.22),
+
+\begin{equation}\tag{4.6.14}
+\alpha_B=\frac1p\,\tau^{-1}\circ\psi_p\circ H_B(X).
+\end{equation}
+
+Since
+
+\begin{equation}\tag{4.6.15}
+H(X)\in L\!\left(\frac1{p-1}\right),
+\qquad \operatorname{ord}(H(X))\geq0,
+\end{equation}
+
+we have
+
+\begin{equation}\tag{4.6.16}
+H_B(X)\,R_B\subset R_B
+\end{equation}
+
+and, plainly,
+----- French corrections on page 425 -----
+[id C384] kind formula; French file expose_XXII_body.tex
+OLD: \operatorname{card}V(\mathbb F_{q^\nu})
+NEW: \operatorname{card}(V(\mathbb F_{q^\nu}))
+FRENCH CONTEXT (corrected, after the fix): gmapsto g^\varphi(t)=g(qt)
+\end{equation}
+
+et
+
+\begin{equation}\tag{4.5.30}
+\delta=1-\varphi:g(t)\longmapsto
+g^\delta(t)=g(t)/g(qt)
+\end{equation}
+
+%%%%%%%%%%  scan idx 432  |  folio 425  %%%%%%%%%%
+
+Compte tenu de ce que
+
+\begin{equation}\tag{4.5.31}
+Z(t,V/\mathbb F_q)
+=\exp\!\left(
+\sum_{\nu\geq1}\operatorname{card}(V(\mathbb F_{q^\nu}))
+\frac{t^\nu}{\nu}\right)
+\end{equation}
+
+et
+
+\begin{equation}\tag{4.5.32}
+\det\!\left(1-t\alpha_B^{\operatorname{ord}(q)}\right)
+=\exp\!\left(
+-\sum_{\nu\geq1}
+\operatorname{tr}\!\left((\alpha_B)^{\nu\operatorname{ord}q}\right)
+\frac{t^\nu}{\nu}\right)
+\end{equation}
+
+(4.5.27) se récrit
+
+\begin{equ
+
+[id C385] kind formula; French file expose_XXII_body.tex
+OLD: {\nu\operatorname{ord}(q)}
+NEW: {\nu\operatorname{ord}q}
+FRENCH CONTEXT (corrected, after the fix): }\tag{4.5.31}
+Z(t,V/\mathbb F_q)
+=\exp\!\left(
+\sum_{\nu\geq1}\operatorname{card}(V(\mathbb F_{q^\nu}))
+\frac{t^\nu}{\nu}\right)
+\end{equation}
+
+et
+
+\begin{equation}\tag{4.5.32}
+\det\!\left(1-t\alpha_B^{\operatorname{ord}(q)}\right)
+=\exp\!\left(
+-\sum_{\nu\geq1}
+\operatorname{tr}\!\left((\alpha_B)^{\nu\operatorname{ord}q}\right)
+\frac{t^\nu}{\nu}\right)
+\end{equation}
+
+(4.5.27) se récrit
+
+\begin{equation}\tag{4.5.33}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+=\prod_{j=1}^{n+2}
+\left(
+\prod_{\substack{B\subset S\\\operatorname{card}(B)=j}}
+\Delta_B(t)
+\right)^{-(-\delta)^j\varphi^{n+2-j}}.
+\end{equation}
+
+4.6. Nous
+
+[id C386] kind punctuation; French file expose_XXII_body.tex
+OLD: \frac{t^\nu}{\nu}\right),
+NEW: \frac{t^\nu}{\nu}\right)
+FRENCH CONTEXT (corrected, after the fix): 
+et
+
+\begin{equation}\tag{4.5.30}
+\delta=1-\varphi:g(t)\longmapsto
+g^\delta(t)=g(t)/g(qt)
+\end{equation}
+
+%%%%%%%%%%  scan idx 432  |  folio 425  %%%%%%%%%%
+
+Compte tenu de ce que
+
+\begin{equation}\tag{4.5.31}
+Z(t,V/\mathbb F_q)
+=\exp\!\left(
+\sum_{\nu\geq1}\operatorname{card}(V(\mathbb F_{q^\nu}))
+\frac{t^\nu}{\nu}\right)
+\end{equation}
+
+et
+
+\begin{equation}\tag{4.5.32}
+\det\!\left(1-t\alpha_B^{\operatorname{ord}(q)}\right)
+=\exp\!\left(
+-\sum_{\nu\geq1}
+\operatorname{tr}\!\left((\alpha_B)^{\nu\operatorname{ord}q}\right)
+\frac{t^\nu}{\nu}\right)
+\end{equation}
+
+(4.5.27) se récrit
+
+\begin{equation}\tag{4.5.33}
+Z(t,V/
+
+[id C387] kind underline; French file expose_XXII_body.tex
+OLD: une filtration sur
+NEW: une \underline{filtration} sur
+FRENCH CONTEXT (corrected, after the fix): ubstack{B\subset S\\\operatorname{card}(B)=j}}
+\Delta_B(t)
+\right)^{-(-\delta)^j\varphi^{n+2-j}}.
+\end{equation}
+
+4.6. Nous allons étudier maintenant l'intégralité des séries $\Delta_B$.
+Posons
+
+\begin{equation}\tag{4.6.1}
+\mathcal O=\text{l'anneau des entiers de $K$}
+\end{equation}
+
+et définissons une \underline{filtration} sur $1+t\mathcal O[[t]]$ par
+
+\begin{equation}\tag{4.6.2}
+F^i(1+t\mathcal O[[t]])
+=1+q^it\mathcal O[[q^it]]
+=\varphi^i(1+t\mathcal O[[t]]).
+\end{equation}
+
+On a
+
+\begin{align}
+\varphi(F^i)&\subset F^{i+1} \tag{4.6.3}\\
+\delta(F^i)&\subset F^i \tag{4.6.4}\\
+\delta&\text{ induit l'identité sur }F^i/F^{i+
+
+[id C388] kind punctuation; French file expose_XXII_body.tex
+OLD: F^{i+1}, \tag{4.6.3}
+NEW: F^{i+1} \tag{4.6.3}
+FRENCH CONTEXT (corrected, after the fix): mathcal O=\text{l'anneau des entiers de $K$}
+\end{equation}
+
+et définissons une \underline{filtration} sur $1+t\mathcal O[[t]]$ par
+
+\begin{equation}\tag{4.6.2}
+F^i(1+t\mathcal O[[t]])
+=1+q^it\mathcal O[[q^it]]
+=\varphi^i(1+t\mathcal O[[t]]).
+\end{equation}
+
+On a
+
+\begin{align}
+\varphi(F^i)&\subset F^{i+1} \tag{4.6.3}\\
+\delta(F^i)&\subset F^i \tag{4.6.4}\\
+\delta&\text{ induit l'identité sur }F^i/F^{i+1}. \tag{4.6.5}
+\end{align}
+
+\underline{Lemme 4.6.6.}
+\underline{$\Delta_B(t)\in1+t\mathcal O[[t]]$, et si un entier $j$ vérifie}
+
+\begin{equation}\tag{4.6.7}
+jd<\operatorname{card}(B)
+\end{equation}
+
+\underline{a
+
+[id C389] kind punctuation; French file expose_XXII_body.tex
+OLD: F^i, \tag{4.6.4}
+NEW: F^i \tag{4.6.4}
+FRENCH CONTEXT (corrected, after the fix): $}
+\end{equation}
+
+et définissons une \underline{filtration} sur $1+t\mathcal O[[t]]$ par
+
+\begin{equation}\tag{4.6.2}
+F^i(1+t\mathcal O[[t]])
+=1+q^it\mathcal O[[q^it]]
+=\varphi^i(1+t\mathcal O[[t]]).
+\end{equation}
+
+On a
+
+\begin{align}
+\varphi(F^i)&\subset F^{i+1} \tag{4.6.3}\\
+\delta(F^i)&\subset F^i \tag{4.6.4}\\
+\delta&\text{ induit l'identité sur }F^i/F^{i+1}. \tag{4.6.5}
+\end{align}
+
+\underline{Lemme 4.6.6.}
+\underline{$\Delta_B(t)\in1+t\mathcal O[[t]]$, et si un entier $j$ vérifie}
+
+\begin{equation}\tag{4.6.7}
+jd<\operatorname{card}(B)
+\end{equation}
+
+\underline{alors on a}
+
+\begin{equation}\tag{4.6.8
+
+[id C390] kind punctuation; French file expose_XXII_body.tex
+OLD: jd<\operatorname{card}(B),
+NEW: jd<\operatorname{card}(B)
+FRENCH CONTEXT (corrected, after the fix): \begin{align}
+\varphi(F^i)&\subset F^{i+1} \tag{4.6.3}\\
+\delta(F^i)&\subset F^i \tag{4.6.4}\\
+\delta&\text{ induit l'identité sur }F^i/F^{i+1}. \tag{4.6.5}
+\end{align}
+
+\underline{Lemme 4.6.6.}
+\underline{$\Delta_B(t)\in1+t\mathcal O[[t]]$, et si un entier $j$ vérifie}
+
+\begin{equation}\tag{4.6.7}
+jd<\operatorname{card}(B)
+\end{equation}
+
+\underline{alors on a}
+
+\begin{equation}\tag{4.6.8}
+\Delta_B(t)\in F^j(1+t\mathcal O[[t]]).
+\end{equation}
+
+%%%%%%%%%%  scan idx 433  |  folio 426  %%%%%%%%%%
+
+\underline{Démonstration.}
+Les espaces de Banach
+$L^B\!\left(\frac1{p-1}\right)$ sont tous \og du type $B(I)$\fg{} au sens 
+
+=================== PAGE 426 ===================
+----- (English text of page 425: shown above in this file) -----
+----- (English text of page 426: shown above in this file) -----
+----- English, file components/177_expose_XXII_proof_of_lemma_4_6_6.tex, page 427 -----
+\begin{equation}\tag{4.6.17}
+\tau^{-1}(R_B)=R_B.
+\end{equation}
+
+Consequently, (4.6.13) follows from
+
+\begin{equation}\tag{4.6.18}
+jd<\operatorname{card}(B)
+\quad\Longrightarrow\quad
+\psi_p(R_B)\subset p^{j+1}R_B.
+\end{equation}
+
+We verify (4.6.18) monomial by monomial.  We have
+
+\begin{equation}\tag{4.6.19}
+\begin{cases}
+\psi_p\!\left(\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}\right)=0,
+&\text{unless }p\mid U_i\text{ for every }i,\\[3pt]
+\psi_p\!\left(
+\pi^{pU_0}X_0^{pU_0}\cdots X_{n+2}^{pU_{n+2}}
+\right)
+=\pi^{(p-1)U_0}
+\underbrace{\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}}_{\in R_B}.
+\end{cases}
+\end{equation}
+
+The conditions for
+$\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}$ to belong to
+$L^B\!\left(\frac1{p-1}\right)$ are
+
+\begin{equation}\tag{4.6.20}
+\begin{cases}
+dU_0=\displaystyle\sum_{i\geq1}U_i,\\
+U_i>0\Longleftrightarrow i\in B,\qquad i\geq1.
+\end{cases}
+\end{equation}
+
+In particular,
+
+\begin{equation}\tag{4.6.21}
+dU_0\geq\operatorname{card}(B).
+\end{equation}
+
+Hence
+
+\begin{equation}\tag{4.6.22}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq\frac{\operatorname{card}(B)}d>j,
+\end{equation}
+
+and, since $U_0\in\mathbb Z$,
+
+\begin{equation}\tag{4.6.23}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq j+1.
+\end{equation}
+----- French corrections on page 426 -----
+[id C391] kind punctuation; French file expose_XXII_body.tex
+OLD: sont tous du type $B(I)$ au sens
+NEW: sont tous \og du type $B(I)$\fg{} au sens
+FRENCH CONTEXT (corrected, after the fix): tion}\tag{4.6.7}
+jd<\operatorname{card}(B)
+\end{equation}
+
+\underline{alors on a}
+
+\begin{equation}\tag{4.6.8}
+\Delta_B(t)\in F^j(1+t\mathcal O[[t]]).
+\end{equation}
+
+%%%%%%%%%%  scan idx 433  |  folio 426  %%%%%%%%%%
+
+\underline{Démonstration.}
+Les espaces de Banach
+$L^B\!\left(\frac1{p-1}\right)$ sont tous \og du type $B(I)$\fg{} au sens de
+Serre [7], i.e. ils admettent des \og bases orthonormales\fg{}, à savoir, les
+monômes
+
+\begin{equation}\tag{4.6.9}
+\pi^{U_0}X_0^{U_0}X_1^{U_1}\cdots X_{n+2}^{U_{n+2}}
+\end{equation}
+
+\noindent
+qui y appartiennent. Que c'est une base \og orthonormale\fg{} veut dire par
+définition qu'on a
+
+\begin{
+
+[id C392] kind missing; French file expose_XXII_body.tex
+OLD: savoir les
+NEW: à savoir, les
+FRENCH CONTEXT (corrected, after the fix): }
+\Delta_B(t)\in F^j(1+t\mathcal O[[t]]).
+\end{equation}
+
+%%%%%%%%%%  scan idx 433  |  folio 426  %%%%%%%%%%
+
+\underline{Démonstration.}
+Les espaces de Banach
+$L^B\!\left(\frac1{p-1}\right)$ sont tous \og du type $B(I)$\fg{} au sens de
+Serre [7], i.e. ils admettent des \og bases orthonormales\fg{}, à savoir, les
+monômes
+
+\begin{equation}\tag{4.6.9}
+\pi^{U_0}X_0^{U_0}X_1^{U_1}\cdots X_{n+2}^{U_{n+2}}
+\end{equation}
+
+\noindent
+qui y appartiennent. Que c'est une base \og orthonormale\fg{} veut dire par
+définition qu'on a
+
+\begin{equation}\tag{4.6.10}
+\operatorname{ord}\!\left(
+\sum C_U\pi^{U_0}X_0^{U_0}\cdots
+
+[id C393] kind formula; French file expose_XXII_body.tex
+OLD: \sum_U C_U
+NEW: \sum C_U
+FRENCH CONTEXT (corrected, after the fix): rthonormales\fg{}, à savoir, les
+monômes
+
+\begin{equation}\tag{4.6.9}
+\pi^{U_0}X_0^{U_0}X_1^{U_1}\cdots X_{n+2}^{U_{n+2}}
+\end{equation}
+
+\noindent
+qui y appartiennent. Que c'est une base \og orthonormale\fg{} veut dire par
+définition qu'on a
+
+\begin{equation}\tag{4.6.10}
+\operatorname{ord}\!\left(
+\sum C_U\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}
+\right)
+=\min_U\operatorname{ord}(C_U).
+\end{equation}
+
+Soit
+
+\begin{equation}\tag{4.6.11}
+R_B=\text{le $\mathcal O$-sous-module de
+$L^B\!\left(\frac1{p-1}\right)$ formé des éléments d'ordre $\geq0$}.
+\end{equation}
+
+Pour démontrer le lemme, il suffit de dé
+
+[id C394] kind punctuation; French file expose_XXII_body.tex
+OLD: q^jR_B,
+NEW: q^jR_B
+FRENCH CONTEXT (corrected, after the fix): R_B=\text{le $\mathcal O$-sous-module de
+$L^B\!\left(\frac1{p-1}\right)$ formé des éléments d'ordre $\geq0$}.
+\end{equation}
+
+Pour démontrer le lemme, il suffit de démontrer
+
+\begin{equation}\tag{4.6.12}
+\text{si }jd<\operatorname{card}(B),\text{ alors }
+(\alpha_B)^{\operatorname{ord}(q)}R_B\subset q^jR_B
+\end{equation}
+
+ou, a fortiori, de démontrer
+
+\begin{equation}\tag{4.6.13}
+\text{si }jd<\operatorname{card}(B),\text{ alors }
+\alpha_B(R_B)\subset p^jR_B.
+\end{equation}
+
+Or, on a (4.5.22)
+
+\begin{equation}\tag{4.6.14}
+\alpha_B=\frac{\tau^{-1}}p\,\psi_p\circ H_B(X).
+\end{equation}
+
+Compte tenu de c
+
+[id C395] kind formula; French file expose_XXII_body.tex
+OLD: \frac1p\,\tau^{-1}\circ\psi_p
+NEW: \frac{\tau^{-1}}p\,\psi_p
+FRENCH CONTEXT (corrected, after the fix): sur}
+\quad
+\frac{\displaystyle\bigoplus_{A\supset B}
+L^A\!\left(\frac1{p-1}\right)}
+{\displaystyle\bigoplus_{A\supsetneq B}
+L^A\!\left(\frac1{p-1}\right)}
+\simeq L^B\!\left(\frac1{p-1}\right).
+\end{equation}
+
+Explicitement, on obtient $\alpha_B$ par la formule
+
+\begin{equation}\tag{4.5.22}
+\alpha_B=\frac{\tau^{-1}}p\,\psi_p\,H_B(X),
+\end{equation}
+
+opération sous laquelle $L^B$ est stable, où $H_B(X)$ se déduit de $H(X)$
+en y faisant la substitution $X_i=0$ pour $i\notin\{0\}\cup B$.
+
+Récrivons encore (4.5.16)
+
+\begin{equation}\tag{4.5.23}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{n+1}
++(q^\nu-1)^{n+2}
+\su
+
+[id C396] kind punctuation; French file expose_XXII_body.tex
+OLD: \operatorname{ord}(H(X))\geq0,
+NEW: \operatorname{ord}(H(X))\geq0
+FRENCH CONTEXT (corrected, after the fix): t{si }jd<\operatorname{card}(B),\text{ alors }
+\alpha_B(R_B)\subset p^jR_B.
+\end{equation}
+
+Or, on a (4.5.22)
+
+\begin{equation}\tag{4.6.14}
+\alpha_B=\frac{\tau^{-1}}p\,\psi_p\circ H_B(X).
+\end{equation}
+
+Compte tenu de ce que
+
+\begin{equation}\tag{4.6.15}
+H(X)\in L\!\left(\frac1{p-1}\right),
+\qquad \operatorname{ord}(H(X))\geq0
+\end{equation}
+
+on a
+
+\begin{equation}\tag{4.6.16}
+H_B(X)\cdot R_B\subset R_B
+\end{equation}
+
+et évidemment
+
+\begin{equation}\tag{4.6.17}
+\tau^{-1}(R_B)=R_B,
+\end{equation}
+
+%%%%%%%%%%  scan idx 434  |  folio 427  %%%%%%%%%%
+
+de sorte que (4.6.13) sera conséquence de
+
+\begin{equation}\tag{4.6.18}
+\
+
+[id C397] kind symbol; French file expose_XXII_body.tex
+OLD: H_B(X)\,R_B
+NEW: H_B(X)\cdot R_B
+FRENCH CONTEXT (corrected, after the fix): equation}
+
+Or, on a (4.5.22)
+
+\begin{equation}\tag{4.6.14}
+\alpha_B=\frac{\tau^{-1}}p\,\psi_p\circ H_B(X).
+\end{equation}
+
+Compte tenu de ce que
+
+\begin{equation}\tag{4.6.15}
+H(X)\in L\!\left(\frac1{p-1}\right),
+\qquad \operatorname{ord}(H(X))\geq0
+\end{equation}
+
+on a
+
+\begin{equation}\tag{4.6.16}
+H_B(X)\cdot R_B\subset R_B
+\end{equation}
+
+et évidemment
+
+\begin{equation}\tag{4.6.17}
+\tau^{-1}(R_B)=R_B,
+\end{equation}
+
+%%%%%%%%%%  scan idx 434  |  folio 427  %%%%%%%%%%
+
+de sorte que (4.6.13) sera conséquence de
+
+\begin{equation}\tag{4.6.18}
+\text{si }jd<\operatorname{card}(B),\text{ alors }
+\psi_p(R_B)\subse
+
+[id C398] kind punctuation; French file expose_XXII_body.tex
+OLD: \tau^{-1}(R_B)=R_B.
+NEW: \tau^{-1}(R_B)=R_B,
+FRENCH CONTEXT (corrected, after the fix): \psi_p\circ H_B(X).
+\end{equation}
+
+Compte tenu de ce que
+
+\begin{equation}\tag{4.6.15}
+H(X)\in L\!\left(\frac1{p-1}\right),
+\qquad \operatorname{ord}(H(X))\geq0
+\end{equation}
+
+on a
+
+\begin{equation}\tag{4.6.16}
+H_B(X)\cdot R_B\subset R_B
+\end{equation}
+
+et évidemment
+
+\begin{equation}\tag{4.6.17}
+\tau^{-1}(R_B)=R_B,
+\end{equation}
+
+%%%%%%%%%%  scan idx 434  |  folio 427  %%%%%%%%%%
+
+de sorte que (4.6.13) sera conséquence de
+
+\begin{equation}\tag{4.6.18}
+\text{si }jd<\operatorname{card}(B),\text{ alors }
+\psi_p(R_B)\subset p^{j+1}R_B.
+\end{equation}
+
+Vérifions (4.6.18) monôme par monôme. On a
+
+\begin{equation}\
+
+=================== PAGE 427 ===================
+----- (English text of page 426: shown above in this file) -----
+----- (English text of page 427: shown above in this file) -----
+----- English, file components/177_expose_XXII_proof_of_lemma_4_6_6.tex, page 428 -----
+Together with (4.6.19), this proves (4.6.18).
+----- English, file components/178_expose_XXII_ax_theorem_and_proof.tex, page 428 -----
+\section*{5. A theorem of Ax [1] (see also [4], Section 7)}
+
+\subsubsection*{Theorem 5.0.}
+Let $V$ be a hypersurface in $\mathbb P^{n+1}$ of degree $d>0$, defined
+over $\mathbb F_q$, and let $j$ be an integer.  If
+
+\begin{equation}\tag{5.0.1}
+jd<n+2,
+\end{equation}
+
+then
+
+\begin{equation}\tag{5.0.2}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]],
+\end{equation}
+
+and the reciprocal of every zero or pole of
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\end{equation}
+
+\noindent
+is of the form $q^j$ times an algebraic integer.
+
+\subsubsection*{Theorem 5.0 bis.}
+Let $V_{\mathrm{aff}}$ be a hypersurface in $\mathbb A^{n+2}$ defined by a
+homogeneous form of degree $d$, over $\mathbb F_q$.  If
+
+\begin{equation}\tag{5.0.4}
+jd<n+2,
+\end{equation}
+
+then
+
+\begin{equation}\tag{5.0.5}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+In particular,
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\equiv0\pmod{q^j},
+\end{equation}
+
+and consequently
+
+\begin{equation}\tag{5.0.6 bis}
+\operatorname{card}\bigl(V(\mathbb F_q)\bigr)
+\geq\frac{q^j-1}{q-1}>0,
+\end{equation}
+
+\noindent
+which improves the Chevalley--Warning theorem~[8].
+----- French corrections on page 427 -----
+[id C399] kind punctuation; French file expose_XXII_body.tex
+OLD: \forall i,\ p\mid U_i,
+NEW: \forall i\quad p\mid U_i
+FRENCH CONTEXT (corrected, after the fix): e
+
+\begin{equation}\tag{4.6.18}
+\text{si }jd<\operatorname{card}(B),\text{ alors }
+\psi_p(R_B)\subset p^{j+1}R_B.
+\end{equation}
+
+Vérifions (4.6.18) monôme par monôme. On a
+
+\begin{equation}\tag{4.6.19}
+\begin{cases}
+\psi_p\!\left(\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}\right)=0,
+&\text{sauf si }\forall i\quad p\mid U_i\\
+\text{et}\\[3pt]
+\psi_p\!\left(
+\pi^{pU_0}X_0^{pU_0}\cdots X_{n+2}^{pU_{n+2}}
+\right)
+=\pi^{(p-1)U_0}\cdot
+\underbrace{\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}}_{\in R_B}.
+\end{cases}
+\end{equation}
+
+Or, les conditions pour que l'on ait
+$X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}
+\in L^B\!\left(\frac1{p
+
+[id C400] kind missing; French file expose_XXII_body.tex
+OLD: \\[3pt]
+NEW: \\
+\text{et}\\[3pt]
+FRENCH CONTEXT (corrected, after the fix): 4.6.18}
+\text{si }jd<\operatorname{card}(B),\text{ alors }
+\psi_p(R_B)\subset p^{j+1}R_B.
+\end{equation}
+
+Vérifions (4.6.18) monôme par monôme. On a
+
+\begin{equation}\tag{4.6.19}
+\begin{cases}
+\psi_p\!\left(\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}\right)=0,
+&\text{sauf si }\forall i\quad p\mid U_i\\
+\text{et}\\[3pt]
+\psi_p\!\left(
+\pi^{pU_0}X_0^{pU_0}\cdots X_{n+2}^{pU_{n+2}}
+\right)
+=\pi^{(p-1)U_0}\cdot
+\underbrace{\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}}_{\in R_B}.
+\end{cases}
+\end{equation}
+
+Or, les conditions pour que l'on ait
+$X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}
+\in L^B\!\left(\frac1{p-1}\right)$ sont
+
+\
+
+[id C401] kind symbol; French file expose_XXII_body.tex
+OLD: =\pi^{(p-1)U_0}
+\underbrace
+NEW: =\pi^{(p-1)U_0}\cdot
+\underbrace
+FRENCH CONTEXT (corrected, after the fix): 
+\end{equation}
+
+Vérifions (4.6.18) monôme par monôme. On a
+
+\begin{equation}\tag{4.6.19}
+\begin{cases}
+\psi_p\!\left(\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}\right)=0,
+&\text{sauf si }\forall i\quad p\mid U_i\\
+\text{et}\\[3pt]
+\psi_p\!\left(
+\pi^{pU_0}X_0^{pU_0}\cdots X_{n+2}^{pU_{n+2}}
+\right)
+=\pi^{(p-1)U_0}\cdot
+\underbrace{\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}}_{\in R_B}.
+\end{cases}
+\end{equation}
+
+Or, les conditions pour que l'on ait
+$X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}
+\in L^B\!\left(\frac1{p-1}\right)$ sont
+
+\begin{equation}\tag{4.6.20}
+\begin{cases}
+dU_0=\displaystyle\sum_{i\geq1}U_i,\\
+\text{pour }i\geq1,\te
+
+[id C402] kind extra; French file expose_XXII_body.tex
+OLD: $\pi^{U_0}X_0^{U_0}
+NEW: $X_0^{U_0}
+FRENCH CONTEXT (corrected, after the fix): _{n+2}}\right)=0,
+&\text{sauf si }\forall i\quad p\mid U_i\\
+\text{et}\\[3pt]
+\psi_p\!\left(
+\pi^{pU_0}X_0^{pU_0}\cdots X_{n+2}^{pU_{n+2}}
+\right)
+=\pi^{(p-1)U_0}\cdot
+\underbrace{\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}}_{\in R_B}.
+\end{cases}
+\end{equation}
+
+Or, les conditions pour que l'on ait
+$X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}
+\in L^B\!\left(\frac1{p-1}\right)$ sont
+
+\begin{equation}\tag{4.6.20}
+\begin{cases}
+dU_0=\displaystyle\sum_{i\geq1}U_i,\\
+\text{pour }i\geq1,\text{ on a }U_i>0\Longleftrightarrow i\in B
+\end{cases}
+\end{equation}
+
+d'où, en particulier,
+
+\begin{equation}\tag{4.6.21}
+dU_0\geq\
+
+[id C403] kind missing; French file expose_XXII_body.tex
+OLD: \text{pour }i\geq1,\quad U_i>0
+NEW: \text{pour }i\geq1,\text{ on a }U_i>0
+FRENCH CONTEXT (corrected, after the fix): )U_0}\cdot
+\underbrace{\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}}_{\in R_B}.
+\end{cases}
+\end{equation}
+
+Or, les conditions pour que l'on ait
+$X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}
+\in L^B\!\left(\frac1{p-1}\right)$ sont
+
+\begin{equation}\tag{4.6.20}
+\begin{cases}
+dU_0=\displaystyle\sum_{i\geq1}U_i,\\
+\text{pour }i\geq1,\text{ on a }U_i>0\Longleftrightarrow i\in B
+\end{cases}
+\end{equation}
+
+d'où, en particulier,
+
+\begin{equation}\tag{4.6.21}
+dU_0\geq\operatorname{card}(B).
+\end{equation}
+
+On a donc
+
+\begin{equation}\tag{4.6.22}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq\frac{\operatorname{card}(B)}d>j
+\end{equation}
+
+
+
+[id C404] kind punctuation; French file expose_XXII_body.tex
+OLD: i\in B,
+NEW: i\in B
+FRENCH CONTEXT (corrected, after the fix): bigoplus_{\substack{A\subset S\\A\ne\varnothing}}L^A(b)
+\end{equation}
+
+%%%%%%%%%%  scan idx 430  |  folio 423  %%%%%%%%%%
+
+et, pour chaque sous-ensemble
+
+\[
+B\subset S,\qquad B\ne\varnothing,
+\]
+
+on a
+
+\begin{equation}\tag{4.5.20}
+\bigoplus_{A\supset B}L^A(b)
+=L(b)\cap\text{ l'idéal }
+\left(\prod_{i\in B}X_i\right)K[[X]].
+\end{equation}
+
+Évidemment chaque sous-espace $\bigoplus_{A\supset B}L^A(b)$ est stable
+par $\alpha$ ; il en résulte qu'il en est de même pour
+$\bigoplus_{A\supsetneq B}L^A(b)$, qui est somme de sous-espaces du type
+précédent.
+
+On définit
+
+\begin{equation}\tag{4.5.21}
+\alpha_B=\te
+
+=================== PAGE 428 ===================
+----- (English text of page 427: shown above in this file) -----
+----- (English text of page 428: shown above in this file) -----
+----- English, file components/178_expose_XXII_ax_theorem_and_proof.tex, page 429 -----
+\medskip
+\noindent\emph{Source note.}
+The print numbers the hypothesis in Theorem~5.0 bis as (5.0.7), duplicating
+the number subsequently used for the point-count identity.  The corrected
+French and English layers use the sequential number (5.0.4); the diplomatic
+French preserves the printed number.
+
+\medskip
+\noindent\emph{Proof.}
+The implication (5.0.5) $\Rightarrow$ (5.0.6) is clear on taking the
+coefficient of $t$ in the zeta function.  Assertions (5.0.4) and (5.0.2)
+are equivalent, since
+
+\begin{equation}\tag{5.0.7}
+\operatorname{card}V_{\mathrm{aff}}(\mathbb F_{q^\nu})
+=1+(q^\nu-1)\operatorname{card}V(\mathbb F_{q^\nu}),
+\end{equation}
+
+whence
+
+\begin{equation}\tag{5.0.8}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+=\frac{Z(t,V/\mathbb F_q)}
+{Z(qt,V/\mathbb F_q)(1-t)}
+\end{equation}
+
+and
+
+\begin{equation}\tag{5.0.9}
+Z(t,V/\mathbb F_q)
+=\prod_{i\geq0}
+\left[(1-q^it)Z(q^it,V_{\mathrm{aff}}/\mathbb F_q)\right].
+\end{equation}
+
+\noindent
+Assertions (5.0.2) and (5.0.3) are likewise equivalent, by the theorem of
+Fatou~[3] and the rationality of the zeta function.  Since
+
+\begin{equation}\tag{5.0.10}
+Z(t,V/\mathbb F_q)\in\mathbb Z[[t]],
+\end{equation}
+
+it is enough to prove
+
+\begin{equation}\tag{5.0.11}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in F^j(1+t\mathcal O[[t]]).
+\end{equation}
+
+In view of (4.5.33) and (4.6.4)--(4.6.5), it is enough to show, for
+$\varnothing\ne B\subset\{1,\ldots,n+2\}$, that
+
+\begin{equation}\tag{5.0.12}
+\Delta_B(t)\in F^{j+\operatorname{card}(B)-(n+2)}.
+\end{equation}
+
+We may finish the proof by applying Lemma~4.6.6 once we have proved
+----- French corrections on page 428 -----
+[id C405] kind word; French file expose_XXII_body.tex
+OLD: d'Ax
+NEW: d'AX
+FRENCH CONTEXT (corrected, after the fix): ard}(B)}d>j
+\end{equation}
+
+et, comme $U_0\in\mathbb Z$,
+
+\begin{equation}\tag{4.6.23}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq j+1.
+\end{equation}
+
+Mettant ceci ensemble avec (4.6.19), on trouve (4.6.18).
+
+%%%%%%%%%%  scan idx 435  |  folio 428  %%%%%%%%%%
+
+\section*{5. Un théorème d'AX [1], (cf. aussi [4], section 7).}
+
+\underline{Théorème 5.0.}
+\underline{Soient} $V$ \underline{une hypersurface dans} $\mathbb P^{n+1}$ \underline{de degré} $d>0$, \underline{définie
+sur} $\mathbb F_q$, \underline{et} $j$ \underline{un entier} : \underline{si on a}
+
+\begin{equation}\tag{5.0.1}
+jd<n
+
+[id C406] kind punctuation; French file expose_XXII_body.tex
+OLD: [1] (cf.
+NEW: [1], (cf.
+FRENCH CONTEXT (corrected, after the fix): B)}d>j
+\end{equation}
+
+et, comme $U_0\in\mathbb Z$,
+
+\begin{equation}\tag{4.6.23}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq j+1.
+\end{equation}
+
+Mettant ceci ensemble avec (4.6.19), on trouve (4.6.18).
+
+%%%%%%%%%%  scan idx 435  |  folio 428  %%%%%%%%%%
+
+\section*{5. Un théorème d'AX [1], (cf. aussi [4], section 7).}
+
+\underline{Théorème 5.0.}
+\underline{Soient} $V$ \underline{une hypersurface dans} $\mathbb P^{n+1}$ \underline{de degré} $d>0$, \underline{définie
+sur} $\mathbb F_q$, \underline{et} $j$ \underline{un entier} : \underline{si on a}
+
+\begin{equation}\tag{5.0.1}
+jd<n+2,
+\end{e
+
+[id C407] kind punctuation; French file expose_XXII_body.tex
+OLD: section 7)}
+NEW: section 7).}
+FRENCH CONTEXT (corrected, after the fix): 
+
+et, comme $U_0\in\mathbb Z$,
+
+\begin{equation}\tag{4.6.23}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq j+1.
+\end{equation}
+
+Mettant ceci ensemble avec (4.6.19), on trouve (4.6.18).
+
+%%%%%%%%%%  scan idx 435  |  folio 428  %%%%%%%%%%
+
+\section*{5. Un théorème d'AX [1], (cf. aussi [4], section 7).}
+
+\underline{Théorème 5.0.}
+\underline{Soient} $V$ \underline{une hypersurface dans} $\mathbb P^{n+1}$ \underline{de degré} $d>0$, \underline{définie
+sur} $\mathbb F_q$, \underline{et} $j$ \underline{un entier} : \underline{si on a}
+
+\begin{equation}\tag{5.0.1}
+jd<n+2,
+\end{equation}
+
+\underline{alo
+
+[id C408] kind underline; French file expose_XXII_body.tex
+OLD: Soient $V$ une hypersurface dans $\mathbb P^{n+1}$ de degré $d>0$, définie
+sur $\mathbb F_q$, et $j$ un entier : si on a
+NEW: \underline{Soient} $V$ \underline{une hypersurface dans} $\mathbb P^{n+1}$ \underline{de degré} $d>0$, \underline{définie
+sur} $\mathbb F_q$, \underline{et} $j$ \underline{un entier} : \underline{si on a}
+FRENCH CONTEXT (corrected, after the fix): quation}\tag{4.6.23}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq j+1.
+\end{equation}
+
+Mettant ceci ensemble avec (4.6.19), on trouve (4.6.18).
+
+%%%%%%%%%%  scan idx 435  |  folio 428  %%%%%%%%%%
+
+\section*{5. Un théorème d'AX [1], (cf. aussi [4], section 7).}
+
+\underline{Théorème 5.0.}
+\underline{Soient} $V$ \underline{une hypersurface dans} $\mathbb P^{n+1}$ \underline{de degré} $d>0$, \underline{définie
+sur} $\mathbb F_q$, \underline{et} $j$ \underline{un entier} : \underline{si on a}
+
+\begin{equation}\tag{5.0.1}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.2}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+et l'inverse de tout zéro ou pôle de
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\
+
+[id C409] kind underline; French file expose_XXII_body.tex
+OLD: alors
+
+\begin{equation}\tag{5.0.2}
+NEW: \underline{alors}
+
+\begin{equation}\tag{5.0.2}
+FRENCH CONTEXT (corrected, after the fix): , section 7).}
+
+\underline{Théorème 5.0.}
+\underline{Soient} $V$ \underline{une hypersurface dans} $\mathbb P^{n+1}$ \underline{de degré} $d>0$, \underline{définie
+sur} $\mathbb F_q$, \underline{et} $j$ \underline{un entier} : \underline{si on a}
+
+\begin{equation}\tag{5.0.1}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.2}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+et l'inverse de tout zéro ou pôle de
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\end{equation}
+
+\noindent
+\underline{est de la forme} $q^j\cdot(\text{\underline{un entier algébrique
+
+[id C410] kind punctuation; French file expose_XXII_body.tex
+OLD: \mathbb Z[[q^jt]]
+\end{equation}
+NEW: \mathbb Z[[q^jt]].
+\end{equation}
+FRENCH CONTEXT (corrected, after the fix): \mathbb P^{n+1}$ \underline{de degré} $d>0$, \underline{définie
+sur} $\mathbb F_q$, \underline{et} $j$ \underline{un entier} : \underline{si on a}
+
+\begin{equation}\tag{5.0.1}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.2}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+et l'inverse de tout zéro ou pôle de
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\end{equation}
+
+\noindent
+\underline{est de la forme} $q^j\cdot(\text{\underline{un entier algébrique}})$.
+
+\underline{Théorème 5.0.bis.}
+\underline{Soit} $V_{\mathrm{aff}}$ \underline{une
+
+[id C411] kind underline; French file expose_XXII_body.tex
+OLD: est de la forme $q^j\cdot(\text{un entier algébrique})$
+NEW: \underline{est de la forme} $q^j\cdot(\text{\underline{un entier algébrique}})$
+FRENCH CONTEXT (corrected, after the fix): 0.1}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.2}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+et l'inverse de tout zéro ou pôle de
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\end{equation}
+
+\noindent
+\underline{est de la forme} $q^j\cdot(\text{\underline{un entier algébrique}})$.
+
+\underline{Théorème 5.0.bis.}
+\underline{Soit} $V_{\mathrm{aff}}$ \underline{une hypersurface dans} $\mathbb A^{n+2}$ \underline{définie
+par une forme homogène de degré} $d$, \underline{définie sur} $\mathbb F_q$. \underline{Si on a}
+
+\begin{equation}\tag{5.0.4}
+jd<n+2,
+\end{equation}
+
+\underline
+
+[id C412] kind punctuation; French file expose_XXII_body.tex
+OLD: Théorème 5.0 bis.
+NEW: Théorème 5.0.bis.
+FRENCH CONTEXT (corrected, after the fix): )\prod_{i=0}^{n+1}(1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+et l'inverse de tout zéro ou pôle de
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\end{equation}
+
+\noindent
+\underline{est de la forme} $q^j\cdot(\text{\underline{un entier algébrique}})$.
+
+\underline{Théorème 5.0.bis.}
+\underline{Soit} $V_{\mathrm{aff}}$ \underline{une hypersurface dans} $\mathbb A^{n+2}$ \underline{définie
+par une forme homogène de degré} $d$, \underline{définie sur} $\mathbb F_q$. \underline{Si on a}
+
+\begin{equation}\tag{5.0.4}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5
+
+[id C413] kind underline; French file expose_XXII_body.tex
+OLD: Soit $V_{\mathrm{aff}}$ une hypersurface dans $\mathbb A^{n+2}$ définie
+par une forme homogène de degré $d$, définie sur $\mathbb F_q$. Si on a
+NEW: \underline{Soit} $V_{\mathrm{aff}}$ \underline{une hypersurface dans} $\mathbb A^{n+2}$ \underline{définie
+par une forme homogène de degré} $d$, \underline{définie sur} $\mathbb F_q$. \underline{Si on a}
+FRENCH CONTEXT (corrected, after the fix): 1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+et l'inverse de tout zéro ou pôle de
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\end{equation}
+
+\noindent
+\underline{est de la forme} $q^j\cdot(\text{\underline{un entier algébrique}})$.
+
+\underline{Théorème 5.0.bis.}
+\underline{Soit} $V_{\mathrm{aff}}$ \underline{une hypersurface dans} $\mathbb A^{n+2}$ \underline{définie
+par une forme homogène de degré} $d$, \underline{définie sur} $\mathbb F_q$. \underline{Si on a}
+
+\begin{equation}\tag{5.0.4}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.5}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+\underline{En particulier},
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\eq
+
+[id C414] kind underline; French file expose_XXII_body.tex
+OLD: alors
+
+\begin{equation}\tag{5.0.5}
+NEW: \underline{alors}
+
+\begin{equation}\tag{5.0.5}
+FRENCH CONTEXT (corrected, after the fix): brique}})$.
+
+\underline{Théorème 5.0.bis.}
+\underline{Soit} $V_{\mathrm{aff}}$ \underline{une hypersurface dans} $\mathbb A^{n+2}$ \underline{définie
+par une forme homogène de degré} $d$, \underline{définie sur} $\mathbb F_q$. \underline{Si on a}
+
+\begin{equation}\tag{5.0.4}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.5}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+\underline{En particulier},
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\equiv0\mod{q^j},
+\end{equation}
+
+\underline{et par suite}
+
+\begin{equation}\tag{5.0.6 bis}
+\operatorna
+
+[id C415] kind underline; French file expose_XXII_body.tex
+OLD: En particulier,
+NEW: \underline{En particulier},
+FRENCH CONTEXT (corrected, after the fix): n+2}$ \underline{définie
+par une forme homogène de degré} $d$, \underline{définie sur} $\mathbb F_q$. \underline{Si on a}
+
+\begin{equation}\tag{5.0.4}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.5}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+\underline{En particulier},
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\equiv0\mod{q^j},
+\end{equation}
+
+\underline{et par suite}
+
+\begin{equation}\tag{5.0.6 bis}
+\operatorname{card}\bigl(V(\mathbb F_q)\bigr)
+\geq\frac{q^j-1}{q-1}>0
+\end{equation}
+
+\noindent
+(\underline{ce qui am
+
+[id C416] kind formula; French file expose_XXII_body.tex
+OLD: \pmod{q^j}
+NEW: \mod{q^j}
+FRENCH CONTEXT (corrected, after the fix): egin{equation}\tag{5.0.4}
+jd<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.5}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+\underline{En particulier},
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\equiv0\mod{q^j},
+\end{equation}
+
+\underline{et par suite}
+
+\begin{equation}\tag{5.0.6 bis}
+\operatorname{card}\bigl(V(\mathbb F_q)\bigr)
+\geq\frac{q^j-1}{q-1}>0
+\end{equation}
+
+\noindent
+(\underline{ce qui améliore le th. de CHEVALLEY--WARNING} [8]).
+
+%%%%%%%%%%  scan idx 436  |  folio 429  %%%%%%%%%%
+
+\underline{
+
+[id C417] kind underline; French file expose_XXII_body.tex
+OLD: et par suite
+NEW: \underline{et par suite}
+FRENCH CONTEXT (corrected, after the fix): d<n+2,
+\end{equation}
+
+\underline{alors}
+
+\begin{equation}\tag{5.0.5}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+\underline{En particulier},
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\equiv0\mod{q^j},
+\end{equation}
+
+\underline{et par suite}
+
+\begin{equation}\tag{5.0.6 bis}
+\operatorname{card}\bigl(V(\mathbb F_q)\bigr)
+\geq\frac{q^j-1}{q-1}>0
+\end{equation}
+
+\noindent
+(\underline{ce qui améliore le th. de CHEVALLEY--WARNING} [8]).
+
+%%%%%%%%%%  scan idx 436  |  folio 429  %%%%%%%%%%
+
+\underline{Démonstration.}
+L'implication (5.0.5) $\Ri
+
+[id C418] kind underline; French file expose_XXII_body.tex
+OLD: (ce qui améliore le th. de Chevalley--Warning [8])
+NEW: (\underline{ce qui améliore le th. de CHEVALLEY--WARNING} [8])
+FRENCH CONTEXT (corrected, after the fix): line{En particulier},
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\equiv0\mod{q^j},
+\end{equation}
+
+\underline{et par suite}
+
+\begin{equation}\tag{5.0.6 bis}
+\operatorname{card}\bigl(V(\mathbb F_q)\bigr)
+\geq\frac{q^j-1}{q-1}>0
+\end{equation}
+
+\noindent
+(\underline{ce qui améliore le th. de CHEVALLEY--WARNING} [8]).
+
+%%%%%%%%%%  scan idx 436  |  folio 429  %%%%%%%%%%
+
+\underline{Démonstration.}
+L'implication (5.0.5) $\Rightarrow$ (5.0.6) est claire, en prenant le
+coefficient de $t$ dans la fonction zêta. Les assertions (5.0.4) et (5.0.2)
+sont équivalentes, compte tenu de ce que
+
+\begin{equation}\tag{5.0.7}
+\o
+
+=================== PAGE 430 ===================
+----- (English text of page 429: shown above in this file) -----
+----- English, file components/178_expose_XXII_ax_theorem_and_proof.tex, page 430 -----
+\begin{equation}\tag{5.0.13}
+jd<n+2
+\quad\Longrightarrow\quad
+\bigl(j+\operatorname{card}(B)-(n+2)\bigr)d
+<\operatorname{card}(B).
+\end{equation}
+
+This may be rewritten as
+
+\begin{equation}\tag{5.0.14}
+jd<n+2
+\quad\Longrightarrow\quad
+(j-(n+2))d<\operatorname{card}(B)(1-d).
+\end{equation}
+
+But
+
+\[
+\inf_{\varnothing\ne B\subset\{1,\ldots,n+2\}}
+\operatorname{card}(B)(1-d)
+=(n+2)(1-d),
+\]
+
+so it is enough to prove
+
+\begin{equation}\tag{5.0.15}
+jd<n+2
+\quad\Longrightarrow\quad
+(j-(n+2))d<(n+2)(1-d),
+\end{equation}
+
+which is true.
+
+\medskip
+\noindent\emph{Source note.}
+In (5.0.9) the print has the impossible factor $(1-q^if)$ rather than
+$(1-q^it)$, and the last paragraph cites Lemma~4.4.6 rather than the
+integrality lemma 4.6.6 used there.  Both are corrected above; the diplomatic
+French retains the printed forms.
+----- English, file components/179_expose_XXII_hodge_remark_conjecture_and_final_section.tex, page 430 -----
+\subsubsection*{Remark 5.1.}
+Condition
+
+\begin{equation}\tag{5.1.1}
+jd<n+2
+\end{equation}
+
+admits a cohomological interpretation.  Let $V$ be a smooth hypersurface of
+degree $d$ and dimension $n$.  As in XI, 2.1, put, for $a+b=n$,
+
+\begin{equation}\tag{5.1.2}
+h_0^{a,b}
+=\dim H^b(V,\Omega_V^a)-\delta_{a,b}
+=\dim E^{a,b}(V),
+\end{equation}
+
+where $E^{a,b}(V)$ is the bidegree-$(a,b)$ component of the vanishing Hodge
+cohomology (compare XVII, 5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\Omega_{\mathbb P^{n+1}}^a)
+\longrightarrow H^b(V,\Omega_V^a)\right).
+\end{equation}
+
+Then, by XI, 2.8,
+
+\begin{equation}\tag{5.1.4}
+jd<n+2
+\quad\Longleftrightarrow\quad
+h_0^{a,n-a}=0\quad\text{for }a<j\text{ and }a>n-j.
+\end{equation}
+----- English, file components/179_expose_XXII_hodge_remark_conjecture_and_final_section.tex, page 431 -----
+In other words, the condition says that the Hodge level (XI, 2.7) of the
+vanishing de Rham cohomology of $V$,
+
+\[
+E_{\mathrm{DR}}^n(V)
+=\operatorname{Coker}\!\left(
+H_{\mathrm{Hdg}}^n(\mathbb P^{n+1})
+\longrightarrow H_{\mathrm{Hdg}}^n(V)\right),
+\]
+
+is at most $n-2j$, or equivalently that its coniveau is at least $j$.
+On the other hand, the conclusion also says that the eigenvalues of the
+Frobenius $\mathfrak F_q$ acting on the vanishing $\ell$-adic cohomology
+($\ell\ne p$) are algebraic integers divisible by $q^j$ (XXI, A.2).
+Thus Ax's result 5.0 supports the following conjecture, suggested by the
+philosophy of the level of motives and relating the classical Hodge and
+Tate conjectures~[5].
+
+\subsubsection*{Conjecture 5.2.}
+Let $f:X\to S$ be a proper smooth morphism, with $S$ integral, of finite
+type over $\operatorname{Spec}(\mathbb Z)$, and dominant over
+$\operatorname{Spec}(\mathbb Z)$; let $i,j$ be integers.  Suppose that the
+Hodge coniveau of $H^i$ of the generic fiber of $f$ is at least $j$.  Then,
+for every point $s\in S$, the coniveau (XX, 2.0.6) of
+$H^i(X_s,\mathbb Q_\ell)$ is at least $j$.  Hence (XX, 2.2), if $s$ is a
+closed point of $S$, the eigenvalues of Frobenius acting on
+$H^i(X_s,\mathbb Q_\ell)$ are algebraic integers divisible by $q^j$, where
+$q=\operatorname{card}(k(s))$.
+
+\section*{6. End of the proof of the congruence formula}
+
+Taking account of (4.6.6) and (4.6.3)--(4.6.4), formula (4.5.33) gives
+
+\begin{equation}\tag{6.0.1}
+Z(t,V/\mathbb F_q)(1-t)
+\equiv\Delta_S(t)^{(-1)^{n+1}}
+\pmod{1+qt\mathcal O[[t]]}.
+\end{equation}
+
+We now calculate $\Delta_S(t)$ modulo $\pi\mathcal O[[t]]$.  Define, as in
+(4.6.11),
+
+\begin{equation}\tag{6.0.2}
+W_S=R_S\otimes_{\mathcal O}\mathbb F_q.
+\end{equation}
+----- French corrections on page 430 -----
+[id C419] kind formula; French file expose_XXII_body.tex
+OLD: \inf_{\varnothing\ne B\subset\{1,\ldots,n+2\}}
+NEW: \inf_{\substack{B\subset\{1,\ldots,n+2\}\\B\ne\varnothing}}
+FRENCH CONTEXT (corrected, after the fix): jd<n+2,\text{ alors }
+\bigl(j+\operatorname{card}(B)-(n+2)\bigr)d
+<\operatorname{card}(B),
+\end{equation}
+
+qui se récrit
+
+%%%%%%%%%%  scan idx 437  |  folio 430  %%%%%%%%%%
+
+\begin{equation}\tag{5.0.14}
+\text{si }jd<n+2,\text{ alors }
+(j-(n+2))d<\operatorname{card}(B)(1-d).
+\end{equation}
+
+Mais
+
+\[
+\inf_{\substack{B\subset\{1,\ldots,n+2\}\\B\ne\varnothing}}
+\operatorname{card}(B)(1-d)
+=(n+2)(1-d),
+\]
+
+de sorte qu'il suffit de démontrer
+
+\begin{equation}\tag{5.0.15}
+\text{si }jd<n+2,\text{ alors }
+(j-(n+2))d<(n+2)(1-d),
+\end{equation}
+
+ce qui est vrai.
+
+\underline{Remarque 5.1.}
+La condition
+
+\begin{equation}\tag{5.1.1}
+jd<n+2
+\end{equation}
+
+admet une
+
+[id C420] kind underline; French file expose_XXII_body.tex
+OLD: hypersurface lisse
+NEW: hypersurface \underline{lisse}
+FRENCH CONTEXT (corrected, after the fix): 
+
+de sorte qu'il suffit de démontrer
+
+\begin{equation}\tag{5.0.15}
+\text{si }jd<n+2,\text{ alors }
+(j-(n+2))d<(n+2)(1-d),
+\end{equation}
+
+ce qui est vrai.
+
+\underline{Remarque 5.1.}
+La condition
+
+\begin{equation}\tag{5.1.1}
+jd<n+2
+\end{equation}
+
+admet une interprétation cohomologique. Soit $V$ une hypersurface \underline{lisse} de
+degré $d$ et de dimension $n$. Posons, comme dans XI 2.1, pour $a+b=n$,
+
+\begin{equation}\tag{5.1.2}
+h_0^{a,b}
+=\dim H^b(V,\underline{\Omega}_V^a)-\delta_{a,b}
+=\dim E^{a,b}(V)
+\end{equation}
+
+où $E^{a,b}(V)$ est la composante de bidegré $(a,b)$ de la \og cohomologie
+évanescente de Hodge\fg{} (c
+
+[id C421] kind punctuation; French file expose_XXII_body.tex
+OLD: =\dim E^{a,b}(V),
+NEW: =\dim E^{a,b}(V)
+FRENCH CONTEXT (corrected, after the fix): 
+
+\begin{equation}\tag{5.1.1}
+jd<n+2
+\end{equation}
+
+admet une interprétation cohomologique. Soit $V$ une hypersurface \underline{lisse} de
+degré $d$ et de dimension $n$. Posons, comme dans XI 2.1, pour $a+b=n$,
+
+\begin{equation}\tag{5.1.2}
+h_0^{a,b}
+=\dim H^b(V,\underline{\Omega}_V^a)-\delta_{a,b}
+=\dim E^{a,b}(V)
+\end{equation}
+
+où $E^{a,b}(V)$ est la composante de bidegré $(a,b)$ de la \og cohomologie
+évanescente de Hodge\fg{} (comparer XVII 5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\underline{\Omega}_{\mathbb P^{n+1}}^a)
+\hookrightarrow H^b(V,\underli
+
+[id C422] kind underline; French file expose_XXII_body.tex
+OLD: H^b(V,\Omega_V^a)-
+NEW: H^b(V,\underline{\Omega}_V^a)-
+FRENCH CONTEXT (corrected, after the fix): ai.
+
+\underline{Remarque 5.1.}
+La condition
+
+\begin{equation}\tag{5.1.1}
+jd<n+2
+\end{equation}
+
+admet une interprétation cohomologique. Soit $V$ une hypersurface \underline{lisse} de
+degré $d$ et de dimension $n$. Posons, comme dans XI 2.1, pour $a+b=n$,
+
+\begin{equation}\tag{5.1.2}
+h_0^{a,b}
+=\dim H^b(V,\underline{\Omega}_V^a)-\delta_{a,b}
+=\dim E^{a,b}(V)
+\end{equation}
+
+où $E^{a,b}(V)$ est la composante de bidegré $(a,b)$ de la \og cohomologie
+évanescente de Hodge\fg{} (comparer XVII 5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\underline{\Omega}_{\mathbb P^{n+1}}^a)
+\
+
+[id C423] kind underline; French file expose_XXII_body.tex
+OLD: \Omega_{\mathbb P^{n+1}}^a
+NEW: \underline{\Omega}_{\mathbb P^{n+1}}^a
+FRENCH CONTEXT (corrected, after the fix): a,b}
+=\dim H^b(V,\underline{\Omega}_V^a)-\delta_{a,b}
+=\dim E^{a,b}(V)
+\end{equation}
+
+où $E^{a,b}(V)$ est la composante de bidegré $(a,b)$ de la \og cohomologie
+évanescente de Hodge\fg{} (comparer XVII 5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\underline{\Omega}_{\mathbb P^{n+1}}^a)
+\hookrightarrow H^b(V,\underline{\Omega}_V^a)\right).
+\end{equation}
+
+Alors, par XI, 2.8,
+
+\begin{equation}\tag{5.1.4}
+jd<n+2
+\Longleftrightarrow
+\left[h_0^{a,n-a}=0\text{ pour }a<j\text{ et }a>n-j\right],
+\end{equation}
+
+i.e. la condition signifie que le \og niveau de Hodge\fg{} (XI 2.7) de la
+\o
+
+[id C424] kind underline; French file expose_XXII_body.tex
+OLD: (V,\Omega_V^a)\right)
+NEW: (V,\underline{\Omega}_V^a)\right)
+FRENCH CONTEXT (corrected, after the fix):  E^{a,b}(V)
+\end{equation}
+
+où $E^{a,b}(V)$ est la composante de bidegré $(a,b)$ de la \og cohomologie
+évanescente de Hodge\fg{} (comparer XVII 5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\underline{\Omega}_{\mathbb P^{n+1}}^a)
+\hookrightarrow H^b(V,\underline{\Omega}_V^a)\right).
+\end{equation}
+
+Alors, par XI, 2.8,
+
+\begin{equation}\tag{5.1.4}
+jd<n+2
+\Longleftrightarrow
+\left[h_0^{a,n-a}=0\text{ pour }a<j\text{ et }a>n-j\right],
+\end{equation}
+
+i.e. la condition signifie que le \og niveau de Hodge\fg{} (XI 2.7) de la
+\og cohomologie de Hodge évanescente\fg{} de $V$ :
+
+%%%%
+
+[id C425] kind symbol; French file expose_XXII_body.tex
+OLD: \longrightarrow H^b
+NEW: \hookrightarrow H^b
+FRENCH CONTEXT (corrected, after the fix): -\delta_{a,b}
+=\dim E^{a,b}(V)
+\end{equation}
+
+où $E^{a,b}(V)$ est la composante de bidegré $(a,b)$ de la \og cohomologie
+évanescente de Hodge\fg{} (comparer XVII 5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\underline{\Omega}_{\mathbb P^{n+1}}^a)
+\hookrightarrow H^b(V,\underline{\Omega}_V^a)\right).
+\end{equation}
+
+Alors, par XI, 2.8,
+
+\begin{equation}\tag{5.1.4}
+jd<n+2
+\Longleftrightarrow
+\left[h_0^{a,n-a}=0\text{ pour }a<j\text{ et }a>n-j\right],
+\end{equation}
+
+i.e. la condition signifie que le \og niveau de Hodge\fg{} (XI 2.7) de la
+\og cohomologie de Hodg
+
+[id C426] kind formula; French file expose_XXII_body.tex
+OLD: h_0^{a,n-a}=0\text{ pour }a<j\text{ et }a>n-j,
+NEW: \left[h_0^{a,n-a}=0\text{ pour }a<j\text{ et }a>n-j\right],
+FRENCH CONTEXT (corrected, after the fix): } (comparer XVII 5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\underline{\Omega}_{\mathbb P^{n+1}}^a)
+\hookrightarrow H^b(V,\underline{\Omega}_V^a)\right).
+\end{equation}
+
+Alors, par XI, 2.8,
+
+\begin{equation}\tag{5.1.4}
+jd<n+2
+\Longleftrightarrow
+\left[h_0^{a,n-a}=0\text{ pour }a<j\text{ et }a>n-j\right],
+\end{equation}
+
+i.e. la condition signifie que le \og niveau de Hodge\fg{} (XI 2.7) de la
+\og cohomologie de Hodge évanescente\fg{} de $V$ :
+
+%%%%%%%%%%  scan idx 438  |  folio 431  %%%%%%%%%%
+\begin{equation*}
+E_{\mathrm{DR}}^n(V)
+=\operatorname{Coker}\!\left(
+H_{\mathrm{Hdg}}^n(\mathbb P^{n+1})
+\
+
+=================== PAGE 431 ===================
+----- (English text of page 430: shown above in this file) -----
+----- (English text of page 431: shown above in this file) -----
+----- English, file components/179_expose_XXII_hodge_remark_conjecture_and_final_section.tex, page 432 -----
+\medskip
+\noindent\emph{Source note.}
+The print cites (4.5.24), but the congruence follows from the terminal zeta
+identity (4.5.33).  It also defines $W_S$ using $R_B$, although the entire
+section and every following formula concern $R_S$.  The corrected French
+and English layers use (4.5.33) and $R_S$; the diplomatic French retains
+the printed forms.
+----- English, file components/180_expose_XXII_reduction_mod_p.tex, page 432 -----
+\begin{equation}\tag{6.0.3}
+\bar\alpha_S:W_S\longrightarrow W_S
+\end{equation}
+
+\noindent
+denotes the $\tau^{-1}$-linear operation induced by $\alpha_S$;
+
+\begin{equation}\tag{6.0.4}
+R_S(i)
+=\text{the submodule of $R_S$ formed by the elements of degree $i$ in $X_0$},
+\end{equation}
+
+and
+
+\begin{equation}\tag{6.0.5}
+W_S(i)=R_S(i)\otimes_{\mathcal O}\mathbb F_q.
+\end{equation}
+
+\subsubsection*{Proposition 6.0.6.}
+One has
+
+\[
+\alpha_S(R_S)\subset R_S(1)+pR_S.
+\]
+
+\noindent\emph{Proof.}
+We have the factorization (4.6.14)
+
+\begin{equation}\tag{6.0.7}
+\alpha_S=\frac1p\,\tau^{-1}\circ\psi_p\circ H(X).
+\end{equation}
+
+We know (see (4.6.15)) that
+
+\begin{equation}\tag{6.0.8}
+H(X)\,R_S\subset R_S,
+\end{equation}
+
+and plainly
+
+\begin{equation}\tag{6.0.9}
+\tau^{-1}\bigl(R_S(1)+pR_S\bigr)=R_S(1)+pR_S.
+\end{equation}
+
+It is therefore enough to verify
+
+\begin{equation}\tag{6.0.10}
+\frac1p\,\psi_p(R_S)\subset R_S(1)+pR_S,
+\end{equation}
+
+which is clear from (4.6.19).
+----- French corrections on page 431 -----
+[id C427] kind underline; French file expose_XXII_body.tex
+OLD: (XXI A.2) divisibles par
+NEW: (XXI A.2) \underline{divisibles par}
+FRENCH CONTEXT (corrected, after the fix): ightarrow H_{\mathrm{Hdg}}^n(V)\right),
+\end{equation*}
+
+
+est $\leq n-2j$, i.e. son co-niveau est $\geq j$. D'autre part, la
+conclusion signifie aussi que les valeurs propres du Frobenius
+$\mathfrak F_q$ opérant sur la cohomologie évanescente $\ell$-adique
+($\ell\ne p$) sont des entiers algébriques (XXI A.2) \underline{divisibles par} $q^j$.
+Le résultat de AX 5.0 vient donc à l'appui de la conjecture suivante,
+suggérée par le yoga du niveau des motifs, et qui met en relation les
+classiques conjectures de HODGE [5] et de TATE [5] :
+
+\underline{Conjecture} 5.2.
+\underline{Soient} $f:X\to S$ \underline{un morphisme propre et lisse}
+
+[id C428] kind word; French file expose_XXII_body.tex
+OLD: de Ax
+NEW: de AX
+FRENCH CONTEXT (corrected, after the fix): 
+
+est $\leq n-2j$, i.e. son co-niveau est $\geq j$. D'autre part, la
+conclusion signifie aussi que les valeurs propres du Frobenius
+$\mathfrak F_q$ opérant sur la cohomologie évanescente $\ell$-adique
+($\ell\ne p$) sont des entiers algébriques (XXI A.2) \underline{divisibles par} $q^j$.
+Le résultat de AX 5.0 vient donc à l'appui de la conjecture suivante,
+suggérée par le yoga du niveau des motifs, et qui met en relation les
+classiques conjectures de HODGE [5] et de TATE [5] :
+
+\underline{Conjecture} 5.2.
+\underline{Soient} $f:X\to S$ \underline{un morphisme propre et lisse}, \underline{avec} $S$ \u
+
+[id C429] kind word; French file expose_XXII_body.tex
+OLD: de Hodge [5]
+NEW: de HODGE [5]
+FRENCH CONTEXT (corrected, after the fix): rant sur la cohomologie évanescente $\ell$-adique
+($\ell\ne p$) sont des entiers algébriques (XXI A.2) \underline{divisibles par} $q^j$.
+Le résultat de AX 5.0 vient donc à l'appui de la conjecture suivante,
+suggérée par le yoga du niveau des motifs, et qui met en relation les
+classiques conjectures de HODGE [5] et de TATE [5] :
+
+\underline{Conjecture} 5.2.
+\underline{Soient} $f:X\to S$ \underline{un morphisme propre et lisse}, \underline{avec} $S$ \underline{intègre}, \underline{de type
+fini sur} $\operatorname{Spec}(\mathbb Z)$ \underline{et dominant}
+$\operatorname{Spec}(\mathbb Z)$, $i,j$ \underline{de
+
+[id C430] kind word; French file expose_XXII_body.tex
+OLD: de Tate [5]
+NEW: de TATE [5]
+FRENCH CONTEXT (corrected, after the fix): mologie évanescente $\ell$-adique
+($\ell\ne p$) sont des entiers algébriques (XXI A.2) \underline{divisibles par} $q^j$.
+Le résultat de AX 5.0 vient donc à l'appui de la conjecture suivante,
+suggérée par le yoga du niveau des motifs, et qui met en relation les
+classiques conjectures de HODGE [5] et de TATE [5] :
+
+\underline{Conjecture} 5.2.
+\underline{Soient} $f:X\to S$ \underline{un morphisme propre et lisse}, \underline{avec} $S$ \underline{intègre}, \underline{de type
+fini sur} $\operatorname{Spec}(\mathbb Z)$ \underline{et dominant}
+$\operatorname{Spec}(\mathbb Z)$, $i,j$ \underline{des entiers}. \un
+
+[id C431] kind underline; French file expose_XXII_body.tex
+OLD: \underline{Conjecture 5.2.}
+Soient $f:X\to S$ un morphisme propre et lisse, avec $S$ intègre, de type
+fini sur
+NEW: \underline{Conjecture} 5.2.
+\underline{Soient} $f:X\to S$ \underline{un morphisme propre et lisse}, \underline{avec} $S$ \underline{intègre}, \underline{de type
+fini sur}
+FRENCH CONTEXT (corrected, after the fix): ente $\ell$-adique
+($\ell\ne p$) sont des entiers algébriques (XXI A.2) \underline{divisibles par} $q^j$.
+Le résultat de AX 5.0 vient donc à l'appui de la conjecture suivante,
+suggérée par le yoga du niveau des motifs, et qui met en relation les
+classiques conjectures de HODGE [5] et de TATE [5] :
+
+\underline{Conjecture} 5.2.
+\underline{Soient} $f:X\to S$ \underline{un morphisme propre et lisse}, \underline{avec} $S$ \underline{intègre}, \underline{de type
+fini sur} $\operatorname{Spec}(\mathbb Z)$ \underline{et dominant}
+$\operatorname{Spec}(\mathbb Z)$, $i,j$ \underline{des entiers}. \underline{Supposons que le
+co-niveau de Hodge du} $H^i$ \underline{de la fibre générique de} $f$ \underline{soit} $\geq j$.
+\underline{Alors pour tout point} $s\in S$, \underli
+
+[id C432] kind underline; French file expose_XXII_body.tex
+OLD: et dominant
+$\operatorname{Spec}(\mathbb Z)$, $i,j$ des entiers. Supposons que le
+co-niveau de Hodge du $H^i$ de la fibre générique de $f$ soit $\geq j$.
+NEW: \underline{et dominant}
+$\operatorname{Spec}(\mathbb Z)$, $i,j$ \underline{des entiers}. \underline{Supposons que le
+co-niveau de Hodge du} $H^i$ \underline{de la fibre générique de} $f$ \underline{soit} $\geq j$.
+FRENCH CONTEXT (corrected, after the fix): au des motifs, et qui met en relation les
+classiques conjectures de HODGE [5] et de TATE [5] :
+
+\underline{Conjecture} 5.2.
+\underline{Soient} $f:X\to S$ \underline{un morphisme propre et lisse}, \underline{avec} $S$ \underline{intègre}, \underline{de type
+fini sur} $\operatorname{Spec}(\mathbb Z)$ \underline{et dominant}
+$\operatorname{Spec}(\mathbb Z)$, $i,j$ \underline{des entiers}. \underline{Supposons que le
+co-niveau de Hodge du} $H^i$ \underline{de la fibre générique de} $f$ \underline{soit} $\geq j$.
+\underline{Alors pour tout point} $s\in S$, \underline{le coniveau} (XX 2.0.6) \underline{de}
+$H^i(X_s,\mathbb Q_\ell)$ \underline{est} $\geq j$, \underline{donc} (XX 2.2) \underline{si} $s$ \underline{est un point
+fermé de} $S$, \underline{les valeurs propres de Frobenius opérant sur}
+$H^i(X_s,\ma
+
+[id C433] kind underline; French file expose_XXII_body.tex
+OLD: Alors pour tout point $s\in S$, le coniveau (XX 2.0.6) de
+$H^i(X_s,\mathbb Q_\ell)$ est $\geq j$, donc (XX 2.2) si $s$ est un point
+fermé de $S$, les valeurs propres de Frobenius opérant sur
+$H^i(X_s,\mathbb Q_\ell)$ sont des entiers algébriques divisibles par
+$q^j$, où $q
+NEW: \underline{Alors pour tout point} $s\in S$, \underline{le coniveau} (XX 2.0.6) \underline{de}
+$H^i(X_s,\mathbb Q_\ell)$ \underline{est} $\geq j$, \underline{donc} (XX 2.2) \underline{si} $s$ \underline{est un point
+fermé de} $S$, \underline{les valeurs propres de Frobenius opérant sur}
+$H^i(X_s,\mathbb Q_\ell)$ \underline{sont des entiers algébriques divisibles par}
+$q^j$, \underline{où} $q
+FRENCH CONTEXT (corrected, after the fix): S$ \underline{intègre}, \underline{de type
+fini sur} $\operatorname{Spec}(\mathbb Z)$ \underline{et dominant}
+$\operatorname{Spec}(\mathbb Z)$, $i,j$ \underline{des entiers}. \underline{Supposons que le
+co-niveau de Hodge du} $H^i$ \underline{de la fibre générique de} $f$ \underline{soit} $\geq j$.
+\underline{Alors pour tout point} $s\in S$, \underline{le coniveau} (XX 2.0.6) \underline{de}
+$H^i(X_s,\mathbb Q_\ell)$ \underline{est} $\geq j$, \underline{donc} (XX 2.2) \underline{si} $s$ \underline{est un point
+fermé de} $S$, \underline{les valeurs propres de Frobenius opérant sur}
+$H^i(X_s,\mathbb Q_\ell)$ \underline{sont des entiers algébriques divisibles par}
+$q^j$, \underline{où} $q=\operatorname{card}(k(s))$.
+
+\section*{6. Fin de la démonstration de la formule de congruence.}
+
+Compte tenu de (4.6.6) et (4.6.3)--(4.6.4), (4.5.33) donne une formule de
+congruence
+
+\begin{equation}\tag{6.0.1}
+Z(t,V/\mathbb F_q)(1-t)
+\equiv\Delta_S(t)^{(-1)^{n+1}}
+\mod{1+qt\mathcal O[[t]]}.
+\end{e
+
+[id C434] kind punctuation; French file expose_XXII_body.tex
+OLD: formule de congruence}
+NEW: formule de congruence.}
+FRENCH CONTEXT (corrected, after the fix):  2.2) \underline{si} $s$ \underline{est un point
+fermé de} $S$, \underline{les valeurs propres de Frobenius opérant sur}
+$H^i(X_s,\mathbb Q_\ell)$ \underline{sont des entiers algébriques divisibles par}
+$q^j$, \underline{où} $q=\operatorname{card}(k(s))$.
+
+\section*{6. Fin de la démonstration de la formule de congruence.}
+
+Compte tenu de (4.6.6) et (4.6.3)--(4.6.4), (4.5.33) donne une formule de
+congruence
+
+\begin{equation}\tag{6.0.1}
+Z(t,V/\mathbb F_q)(1-t)
+\equiv\Delta_S(t)^{(-1)^{n+1}}
+\mod{1+qt\mathcal O[[t]]}.
+\end{equation}
+
+Passons au calcul de $\Delta_S(t)$ modulo $\pi\mathcal O[[t]]$. Définissons
+(cf. (4.6.
+
+[id C435] kind formula; French file expose_XXII_body.tex
+OLD: \pmod{1+qt\mathcal O[[t]]}
+NEW: \mod{1+qt\mathcal O[[t]]}
+FRENCH CONTEXT (corrected, after the fix): les par}
+$q^j$, \underline{où} $q=\operatorname{card}(k(s))$.
+
+\section*{6. Fin de la démonstration de la formule de congruence.}
+
+Compte tenu de (4.6.6) et (4.6.3)--(4.6.4), (4.5.33) donne une formule de
+congruence
+
+\begin{equation}\tag{6.0.1}
+Z(t,V/\mathbb F_q)(1-t)
+\equiv\Delta_S(t)^{(-1)^{n+1}}
+\mod{1+qt\mathcal O[[t]]}.
+\end{equation}
+
+Passons au calcul de $\Delta_S(t)$ modulo $\pi\mathcal O[[t]]$. Définissons
+(cf. (4.6.11)) :
+
+\begin{equation}\tag{6.0.2}
+W_S=R_S\otimes_{\mathcal O}\mathbb F_q,
+\end{equation}
+
+%%%%%%%%%%  scan idx 439  |  folio 432  %%%%%%%%%%
+
+\begin{equation}\tag{6.0.3}
+\bar\alpha_S:W_S\longrig
+
+[id C436] kind punctuation; French file expose_XXII_body.tex
+OLD: \otimes_{\mathcal O}\mathbb F_q.
+NEW: \otimes_{\mathcal O}\mathbb F_q,
+FRENCH CONTEXT (corrected, after the fix): ), (4.5.33) donne une formule de
+congruence
+
+\begin{equation}\tag{6.0.1}
+Z(t,V/\mathbb F_q)(1-t)
+\equiv\Delta_S(t)^{(-1)^{n+1}}
+\mod{1+qt\mathcal O[[t]]}.
+\end{equation}
+
+Passons au calcul de $\Delta_S(t)$ modulo $\pi\mathcal O[[t]]$. Définissons
+(cf. (4.6.11)) :
+
+\begin{equation}\tag{6.0.2}
+W_S=R_S\otimes_{\mathcal O}\mathbb F_q,
+\end{equation}
+
+%%%%%%%%%%  scan idx 439  |  folio 432  %%%%%%%%%%
+
+\begin{equation}\tag{6.0.3}
+\bar\alpha_S:W_S\longrightarrow W_S
+\end{equation}
+
+\noindent
+l'opération $\tau^{-1}$-linéaire induite par $\alpha_S$,
+
+\begin{equation}\tag{6.0.4}
+R_S(i)\text{ le sous-module de $R_S$ formé des éléments
+
+[id C467] kind symbol; French file expose_XXII_body.tex
+OLD: \longrightarrow H_{\mathrm{Hdg}}^n(V)\right)
+\end{equation*}
+NEW: \hookrightarrow H_{\mathrm{Hdg}}^n(V)\right),
+\end{equation*}
+FRENCH CONTEXT (corrected, after the fix): ,
+\end{equation}
+
+i.e. la condition signifie que le \og niveau de Hodge\fg{} (XI 2.7) de la
+\og cohomologie de Hodge évanescente\fg{} de $V$ :
+
+%%%%%%%%%%  scan idx 438  |  folio 431  %%%%%%%%%%
+\begin{equation*}
+E_{\mathrm{DR}}^n(V)
+=\operatorname{Coker}\!\left(
+H_{\mathrm{Hdg}}^n(\mathbb P^{n+1})
+\hookrightarrow H_{\mathrm{Hdg}}^n(V)\right),
+\end{equation*}
+
+
+est $\leq n-2j$, i.e. son co-niveau est $\geq j$. D'autre part, la
+conclusion signifie aussi que les valeurs propres du Frobenius
+$\mathfrak F_q$ opérant sur la cohomologie évanescente $\ell$-adique
+($\ell\ne p$) sont des entiers algébriques (XXI A.2) \underline{divisibles par} $q^j$.
+Le résultat
+
+=================== PAGE 432 ===================
+----- (English text of page 431: shown above in this file) -----
+----- (English text of page 432: shown above in this file) -----
+----- English, file components/180_expose_XXII_reduction_mod_p.tex, page 433 -----
+\subsubsection*{Corollary 6.0.11.}
+One has
+\[
+\bar\alpha_S(W_S)\subset W_S(1).
+\]
+
+\subsubsection*{Corollary 6.0.12.}
+One has the congruence
+
+\[
+\Delta_S(t)\equiv
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+----- English, file components/181_expose_XXII_reduced_frobenius_operator.tex, page 433 -----
+\subsubsection*{Proposition 6.1.}
+The $\tau^{-1}$-linear operation
+$\bar\alpha_S:W_S(1)\to W_S(1)$ is equal to
+
+\begin{equation}\tag{6.1.1}
+\frac1p\,\tau^{-1}\circ\psi_p\circ(X_0f(X))^{p-1}.
+\end{equation}
+
+\noindent\emph{Proof.}
+Write
+
+\begin{equation}\tag{6.1.2}
+H(X)=1+\sum_{i\geq1}H_i(X),
+\end{equation}
+
+where
+
+\begin{equation}\tag{6.1.3}
+H_i(X)\text{ has degree $i$ in }X_0.
+\end{equation}
+
+Again by (4.6.19),
+
+\begin{equation}\tag{6.1.4}
+\frac1p\,\psi_pR_S(i)\subset pR_S
+\qquad\text{if }i\ne p.
+\end{equation}
+
+Since
+
+\begin{equation}\tag{6.1.5}
+H_i(X)\,R_S(j)\subset R_S(i+j),
+\end{equation}
+
+we have
+
+\begin{equation}\tag{6.1.6}
+\left(
+\alpha_S-\frac1p\,\tau^{-1}\circ\psi_p\circ H_{p-1}(X)
+\right)(R_S(1))
+\subset pR_S.
+\end{equation}
+
+Consequently,
+
+\begin{equation}\tag{6.1.7}
+\left[
+(\alpha_S)^{\operatorname{ord}(q)}
+-
+\left(
+\frac1p\,\tau^{-1}\circ\psi_p\circ H_{p-1}(X)
+\right)^{\operatorname{ord}(q)}
+\right]R_S(1)
+\subset pR_S.
+\end{equation}
+----- French corrections on page 432 -----
+[id C437] kind extra; French file expose_XXII_body.tex
+OLD: =\text{le sous-module
+NEW: \text{ le sous-module
+FRENCH CONTEXT (corrected, after the fix): ag{6.0.2}
+W_S=R_S\otimes_{\mathcal O}\mathbb F_q,
+\end{equation}
+
+%%%%%%%%%%  scan idx 439  |  folio 432  %%%%%%%%%%
+
+\begin{equation}\tag{6.0.3}
+\bar\alpha_S:W_S\longrightarrow W_S
+\end{equation}
+
+\noindent
+l'opération $\tau^{-1}$-linéaire induite par $\alpha_S$,
+
+\begin{equation}\tag{6.0.4}
+R_S(i)\text{ le sous-module de $R_S$ formé des éléments de degré $i$ en $X_0$},
+\end{equation}
+
+\begin{equation}\tag{6.0.5}
+W_S(i)=R_S(i)\otimes_{\mathcal O}\mathbb F_q.
+\end{equation}
+
+\underline{Proposition} 6.0.6.
+\underline{On a l'inclusion}
+
+\[
+\alpha_S(R_S)\subset R_S(1)+pR_S.
+\]
+
+\underline{Démonstration.}
+On a la fact
+
+[id C438] kind underline; French file expose_XXII_body.tex
+OLD: \underline{Proposition 6.0.6.}
+On a l'inclusion
+NEW: \underline{Proposition} 6.0.6.
+\underline{On a l'inclusion}
+FRENCH CONTEXT (corrected, after the fix): S
+\end{equation}
+
+\noindent
+l'opération $\tau^{-1}$-linéaire induite par $\alpha_S$,
+
+\begin{equation}\tag{6.0.4}
+R_S(i)\text{ le sous-module de $R_S$ formé des éléments de degré $i$ en $X_0$},
+\end{equation}
+
+\begin{equation}\tag{6.0.5}
+W_S(i)=R_S(i)\otimes_{\mathcal O}\mathbb F_q.
+\end{equation}
+
+\underline{Proposition} 6.0.6.
+\underline{On a l'inclusion}
+
+\[
+\alpha_S(R_S)\subset R_S(1)+pR_S.
+\]
+
+\underline{Démonstration.}
+On a la factorisation (4.6.14)
+
+\begin{equation}\tag{6.0.7}
+\alpha_S=\tau^{-1}\circ\frac1p\,\psi_p\circ H(X).
+\end{equation}
+
+On sait (cf. (4.6.15))
+
+\begin{equation}\tag{6.0.8}
+H(X)\cdot R_S\subset R_S,
+\end{equation}
+
+et évidemm
+
+[id C439] kind formula; French file expose_XXII_body.tex
+OLD: \frac1p\,\tau^{-1}\circ\psi_p
+NEW: \tau^{-1}\circ\frac1p\,\psi_p
+FRENCH CONTEXT (corrected, after the fix): {equation}
+
+\begin{equation}\tag{6.0.5}
+W_S(i)=R_S(i)\otimes_{\mathcal O}\mathbb F_q.
+\end{equation}
+
+\underline{Proposition} 6.0.6.
+\underline{On a l'inclusion}
+
+\[
+\alpha_S(R_S)\subset R_S(1)+pR_S.
+\]
+
+\underline{Démonstration.}
+On a la factorisation (4.6.14)
+
+\begin{equation}\tag{6.0.7}
+\alpha_S=\tau^{-1}\circ\frac1p\,\psi_p\circ H(X).
+\end{equation}
+
+On sait (cf. (4.6.15))
+
+\begin{equation}\tag{6.0.8}
+H(X)\cdot R_S\subset R_S,
+\end{equation}
+
+et évidemment
+
+\begin{equation}\tag{6.0.9}
+\tau^{-1}\bigl(R_S(1)+pR_S\bigr)=R_S(1)+pR_S,
+\end{equation}
+
+de sorte qu'il suffit de vérifier
+
+\begin{equation}\tag{6.0.10}
+\frac1p\,
+
+[id C440] kind symbol; French file expose_XXII_body.tex
+OLD: H(X)\,R_S
+NEW: H(X)\cdot R_S
+FRENCH CONTEXT (corrected, after the fix): ine{Proposition} 6.0.6.
+\underline{On a l'inclusion}
+
+\[
+\alpha_S(R_S)\subset R_S(1)+pR_S.
+\]
+
+\underline{Démonstration.}
+On a la factorisation (4.6.14)
+
+\begin{equation}\tag{6.0.7}
+\alpha_S=\tau^{-1}\circ\frac1p\,\psi_p\circ H(X).
+\end{equation}
+
+On sait (cf. (4.6.15))
+
+\begin{equation}\tag{6.0.8}
+H(X)\cdot R_S\subset R_S,
+\end{equation}
+
+et évidemment
+
+\begin{equation}\tag{6.0.9}
+\tau^{-1}\bigl(R_S(1)+pR_S\bigr)=R_S(1)+pR_S,
+\end{equation}
+
+de sorte qu'il suffit de vérifier
+
+\begin{equation}\tag{6.0.10}
+\frac1p\,\psi_pR_S\subset R_S(1)+pR_S,
+\end{equation}
+
+ce qui est clair par (4.6.19).
+
+\underline{Coro
+
+[id C441] kind underline; French file expose_XXII_body.tex
+OLD: \underline{Corollaire 6.0.11.}
+On a l'inclusion
+NEW: \underline{Corollaire} 6.0.11.
+\underline{On a l'inclusion}
+FRENCH CONTEXT (corrected, after the fix): }
+H(X)\cdot R_S\subset R_S,
+\end{equation}
+
+et évidemment
+
+\begin{equation}\tag{6.0.9}
+\tau^{-1}\bigl(R_S(1)+pR_S\bigr)=R_S(1)+pR_S,
+\end{equation}
+
+de sorte qu'il suffit de vérifier
+
+\begin{equation}\tag{6.0.10}
+\frac1p\,\psi_pR_S\subset R_S(1)+pR_S,
+\end{equation}
+
+ce qui est clair par (4.6.19).
+
+\underline{Corollaire} 6.0.11.
+\underline{On a l'inclusion}
+
+\[
+\bar\alpha_S W_S\subset W_S(1).
+\]
+
+%%%%%%%%%%  scan idx 440  |  folio 433  %%%%%%%%%%
+
+\underline{Corollaire} 6.0.12.
+\underline{On a la congruence}
+
+\[
+\Delta_S(t)\equiv
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+
+\underli
+
+[id C442] kind formula; French file expose_XXII_body.tex
+OLD: \bar\alpha_S(W_S)
+NEW: \bar\alpha_S W_S
+FRENCH CONTEXT (corrected, after the fix): n{equation}\tag{6.0.9}
+\tau^{-1}\bigl(R_S(1)+pR_S\bigr)=R_S(1)+pR_S,
+\end{equation}
+
+de sorte qu'il suffit de vérifier
+
+\begin{equation}\tag{6.0.10}
+\frac1p\,\psi_pR_S\subset R_S(1)+pR_S,
+\end{equation}
+
+ce qui est clair par (4.6.19).
+
+\underline{Corollaire} 6.0.11.
+\underline{On a l'inclusion}
+
+\[
+\bar\alpha_S W_S\subset W_S(1).
+\]
+
+%%%%%%%%%%  scan idx 440  |  folio 433  %%%%%%%%%%
+
+\underline{Corollaire} 6.0.12.
+\underline{On a la congruence}
+
+\[
+\Delta_S(t)\equiv
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+
+\underline{Proposition} 6.1.
+
+
+=================== PAGE 433 ===================
+----- (English text of page 432: shown above in this file) -----
+----- (English text of page 433: shown above in this file) -----
+----- English, file components/181_expose_XXII_reduced_frobenius_operator.tex, page 434 -----
+It remains to calculate $H_{p-1}(X)$.  From (4.4.4),
+
+\begin{equation}\tag{6.1.8}
+\begin{aligned}
+H(X)
+&=\prod_W\Theta(\pi A_WX_0X^W)\\
+&=\prod_W\exp\!\left(
+\sum_{r\geq0}\frac{(\pi A_WX_0X^W)^{p^r}}{p^r}
+\right)\\
+&=\prod_W\prod_{r\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^r}}{p^r}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{terms of degree }\geq p}\\
+&=\exp\!\left(\pi\sum_WA_WX_0X^W\right)
+\pmod{\text{terms of degree }\geq p}\\
+&=\exp(\pi X_0f(X))
+\pmod{\text{terms of degree }\geq p}.
+\end{aligned}
+\end{equation}
+
+It follows that
+
+\begin{equation}\tag{6.1.9}
+H_{p-1}(X)
+=\frac{\pi^{p-1}X_0^{p-1}}{(p-1)!}\,f(X)^{p-1}.
+\end{equation}
+
+One easily checks that
+
+\begin{equation}\tag{6.1.10}
+\frac{\pi^{p-1}}p\equiv-1\pmod p,
+\end{equation}
+
+and hence
+
+\begin{equation}\tag{6.1.11}
+\frac1p\,H_{p-1}(X)
+\equiv(X_0f(X))^{p-1}\pmod p.
+\end{equation}
+
+This completes the proof of Proposition~6.1.
+
+\subsubsection*{Corollary 6.1.12.}
+The linear operator
+\[
+(\bar\alpha_S)^{\operatorname{ord}(q)}:W_S(1)\longrightarrow W_S(1)
+\]
+is precisely
+\[
+\psi_q\circ(X_0f(X))^{q-1}.
+\]
+
+\noindent\emph{Proof.}
+By (6.1.1),
+----- French corrections on page 433 -----
+[id C443] kind underline; French file expose_XXII_body.tex
+OLD: \underline{Corollaire 6.0.12.}
+On a la congruence
+NEW: \underline{Corollaire} 6.0.12.
+\underline{On a la congruence}
+FRENCH CONTEXT (corrected, after the fix): sorte qu'il suffit de vérifier
+
+\begin{equation}\tag{6.0.10}
+\frac1p\,\psi_pR_S\subset R_S(1)+pR_S,
+\end{equation}
+
+ce qui est clair par (4.6.19).
+
+\underline{Corollaire} 6.0.11.
+\underline{On a l'inclusion}
+
+\[
+\bar\alpha_S W_S\subset W_S(1).
+\]
+
+%%%%%%%%%%  scan idx 440  |  folio 433  %%%%%%%%%%
+
+\underline{Corollaire} 6.0.12.
+\underline{On a la congruence}
+
+\[
+\Delta_S(t)\equiv
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+
+\underline{Proposition} 6.1.
+\underline{L'opération} $\tau^{-1}$-\underline{linéaire}
+$\bar\alpha_S:W_S(1)\to W_S(1)$ \underline{est égale à l'opération}
+
+\begin{
+
+[id C444] kind underline; French file expose_XXII_body.tex
+OLD: \underline{Proposition 6.1.}
+L'opération
+NEW: \underline{Proposition} 6.1.
+\underline{L'opération}
+FRENCH CONTEXT (corrected, after the fix): clusion}
+
+\[
+\bar\alpha_S W_S\subset W_S(1).
+\]
+
+%%%%%%%%%%  scan idx 440  |  folio 433  %%%%%%%%%%
+
+\underline{Corollaire} 6.0.12.
+\underline{On a la congruence}
+
+\[
+\Delta_S(t)\equiv
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+
+\underline{Proposition} 6.1.
+\underline{L'opération} $\tau^{-1}$-\underline{linéaire}
+$\bar\alpha_S:W_S(1)\to W_S(1)$ \underline{est égale à l'opération}
+
+\begin{equation}\tag{6.1.1}
+\tau^{-1}\psi_p\circ(X_0f(X))^{p-1}.
+\end{equation}
+
+\underline{Démonstration.}
+Écrivons
+
+\begin{equation}\tag{6.1.2}
+H(X)=1+\sum_{i\geq1}H_i(X)
+\end{equation}
+
+où
+
+\beg
+
+[id C445] kind underline; French file expose_XXII_body.tex
+OLD: -linéaire
+NEW: -\underline{linéaire}
+FRENCH CONTEXT (corrected, after the fix): 1. \underline{Un rappel sur les opérations ``$p$-linéaires''}
+
+1.0. Soit $V$ un espace vectoriel de dimension finie sur un corps $k$ de
+caractéristique $p>0$. Désignons par $q$ une puissance de $p$. Une application
+
+\begin{equation}\tag{1.0.1}
+\varphi:V\longrightarrow V
+\end{equation}
+
+s'appelle $q$-\underline{linéaire} si elle est additive et si elle vérifie
+
+\begin{equation}\tag{1.0.2}
+\varphi(\lambda v)=\lambda^q\varphi(v)
+\qquad \forall\lambda\in k,\ v\in V.
+\end{equation}
+
+1.0.3. On fera attention au fait que l'itéré $n$'ième $\varphi^n$ d'un
+endomorphisme $q$-linéaire est $q^n$-linéaire, et que, si $k$ n'est
+
+[id C446] kind underline; French file expose_XXII_body.tex
+OLD: est égale à l'opération
+NEW: \underline{est égale à l'opération}
+FRENCH CONTEXT (corrected, after the fix): aire} 6.0.12.
+\underline{On a la congruence}
+
+\[
+\Delta_S(t)\equiv
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+
+\underline{Proposition} 6.1.
+\underline{L'opération} $\tau^{-1}$-\underline{linéaire}
+$\bar\alpha_S:W_S(1)\to W_S(1)$ \underline{est égale à l'opération}
+
+\begin{equation}\tag{6.1.1}
+\tau^{-1}\psi_p\circ(X_0f(X))^{p-1}.
+\end{equation}
+
+\underline{Démonstration.}
+Écrivons
+
+\begin{equation}\tag{6.1.2}
+H(X)=1+\sum_{i\geq1}H_i(X)
+\end{equation}
+
+où
+
+\begin{equation}\tag{6.1.3}
+H_i(X)\text{ est de degré $i$ en $X_0$}.
+\end{equation}
+
+D'après (4.6.19) enc
+
+[id C447] kind extra; French file expose_XXII_body.tex
+OLD: \frac1p\,\tau^{-1}\circ\psi_p\circ(X_0f(X))
+NEW: \tau^{-1}\psi_p\circ(X_0f(X))
+FRENCH CONTEXT (corrected, after the fix): v
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+
+\underline{Proposition} 6.1.
+\underline{L'opération} $\tau^{-1}$-\underline{linéaire}
+$\bar\alpha_S:W_S(1)\to W_S(1)$ \underline{est égale à l'opération}
+
+\begin{equation}\tag{6.1.1}
+\tau^{-1}\psi_p\circ(X_0f(X))^{p-1}.
+\end{equation}
+
+\underline{Démonstration.}
+Écrivons
+
+\begin{equation}\tag{6.1.2}
+H(X)=1+\sum_{i\geq1}H_i(X)
+\end{equation}
+
+où
+
+\begin{equation}\tag{6.1.3}
+H_i(X)\text{ est de degré $i$ en $X_0$}.
+\end{equation}
+
+D'après (4.6.19) encore, on a
+
+\begin{equation}\tag{6.1.4}
+\frac1p\,\psi_pR_S(i
+
+[id C448] kind punctuation; French file expose_XXII_body.tex
+OLD: \sum_{i\geq1}H_i(X),
+NEW: \sum_{i\geq1}H_i(X)
+FRENCH CONTEXT (corrected, after the fix): ne{Proposition} 6.1.
+\underline{L'opération} $\tau^{-1}$-\underline{linéaire}
+$\bar\alpha_S:W_S(1)\to W_S(1)$ \underline{est égale à l'opération}
+
+\begin{equation}\tag{6.1.1}
+\tau^{-1}\psi_p\circ(X_0f(X))^{p-1}.
+\end{equation}
+
+\underline{Démonstration.}
+Écrivons
+
+\begin{equation}\tag{6.1.2}
+H(X)=1+\sum_{i\geq1}H_i(X)
+\end{equation}
+
+où
+
+\begin{equation}\tag{6.1.3}
+H_i(X)\text{ est de degré $i$ en $X_0$}.
+\end{equation}
+
+D'après (4.6.19) encore, on a
+
+\begin{equation}\tag{6.1.4}
+\frac1p\,\psi_pR_S(i)\subset pR_S
+\qquad\text{si }i\ne p.
+\end{equation}
+
+Compte tenu de ce que
+
+\begin{equation}\tag{6.1.5}
+H_i(X)\cdo
+
+[id C449] kind symbol; French file expose_XXII_body.tex
+OLD: H_i(X)\,R_S(j)
+NEW: H_i(X)\cdot R_S(j)
+FRENCH CONTEXT (corrected, after the fix): eq1}H_i(X)
+\end{equation}
+
+où
+
+\begin{equation}\tag{6.1.3}
+H_i(X)\text{ est de degré $i$ en $X_0$}.
+\end{equation}
+
+D'après (4.6.19) encore, on a
+
+\begin{equation}\tag{6.1.4}
+\frac1p\,\psi_pR_S(i)\subset pR_S
+\qquad\text{si }i\ne p.
+\end{equation}
+
+Compte tenu de ce que
+
+\begin{equation}\tag{6.1.5}
+H_i(X)\cdot R_S(j)\subset R_S(i+j),
+\end{equation}
+
+on a
+
+\begin{equation}\tag{6.1.6}
+\left(
+\alpha_S-\frac{\tau^{-1}}p\,\psi_pH_{p-1}(X)
+\right)(R_S(1))
+\subset pR_S.
+\end{equation}
+
+On a donc
+
+\begin{equation}\tag{6.1.7}
+\left[
+(\alpha_S)^{\operatorname{ord}(q)}
+-
+\left(
+\frac{\tau^{-1}}p\,\psi_p\cdot H_{p-1}(X)
+\r
+
+[id C450] kind formula; French file expose_XXII_body.tex
+OLD: \alpha_S-\frac1p\,\tau^{-1}\circ\psi_p\circ H_{p-1}(X)
+NEW: \alpha_S-\frac{\tau^{-1}}p\,\psi_pH_{p-1}(X)
+FRENCH CONTEXT (corrected, after the fix): X_0$}.
+\end{equation}
+
+D'après (4.6.19) encore, on a
+
+\begin{equation}\tag{6.1.4}
+\frac1p\,\psi_pR_S(i)\subset pR_S
+\qquad\text{si }i\ne p.
+\end{equation}
+
+Compte tenu de ce que
+
+\begin{equation}\tag{6.1.5}
+H_i(X)\cdot R_S(j)\subset R_S(i+j),
+\end{equation}
+
+on a
+
+\begin{equation}\tag{6.1.6}
+\left(
+\alpha_S-\frac{\tau^{-1}}p\,\psi_pH_{p-1}(X)
+\right)(R_S(1))
+\subset pR_S.
+\end{equation}
+
+On a donc
+
+\begin{equation}\tag{6.1.7}
+\left[
+(\alpha_S)^{\operatorname{ord}(q)}
+-
+\left(
+\frac{\tau^{-1}}p\,\psi_p\cdot H_{p-1}(X)
+\right)^{\operatorname{ord}(q)}
+\right]R_S(1)
+\subset pR_S.
+\end{equation}
+
+Calculons maintenant $H_{p-1}(X)$. On a (cf. 
+
+[id C451] kind formula; French file expose_XXII_body.tex
+OLD: \left(
+\frac1p\,\tau^{-1}\circ\psi_p\circ H_{p-1}(X)
+NEW: \left(
+\frac{\tau^{-1}}p\,\psi_p\cdot H_{p-1}(X)
+FRENCH CONTEXT (corrected, after the fix): que
+
+\begin{equation}\tag{6.1.5}
+H_i(X)\cdot R_S(j)\subset R_S(i+j),
+\end{equation}
+
+on a
+
+\begin{equation}\tag{6.1.6}
+\left(
+\alpha_S-\frac{\tau^{-1}}p\,\psi_pH_{p-1}(X)
+\right)(R_S(1))
+\subset pR_S.
+\end{equation}
+
+On a donc
+
+\begin{equation}\tag{6.1.7}
+\left[
+(\alpha_S)^{\operatorname{ord}(q)}
+-
+\left(
+\frac{\tau^{-1}}p\,\psi_p\cdot H_{p-1}(X)
+\right)^{\operatorname{ord}(q)}
+\right]R_S(1)
+\subset pR_S.
+\end{equation}
+
+Calculons maintenant $H_{p-1}(X)$. On a (cf. (4.4.4))
+
+%%%%%%%%%%  scan idx 441  |  folio 434  %%%%%%%%%%
+
+\begin{equation}\tag{6.1.8}
+\begin{aligned}
+H(X)
+&=\prod_W\Theta(A_WX_0X^W)\\
+&=\prod_W\exp\!\left(
+\sum_{n\geq0}\fr
+
+=================== PAGE 434 ===================
+----- (English text of page 433: shown above in this file) -----
+----- (English text of page 434: shown above in this file) -----
+----- English, file components/181_expose_XXII_reduced_frobenius_operator.tex, page 435 -----
+\begin{equation*}
+\begin{aligned}
+(\bar\alpha_S)^{\operatorname{ord}(q)}
+&=
+\left(
+\frac1p\,\tau^{-1}\circ\psi_p\circ(X_0f(X))^{p-1}
+\right)^{\operatorname{ord}(q)}\\
+&=
+\psi_q\circ
+\prod_{j=0}^{\operatorname{ord}(q)-1}
+\left(X_0^{p^j}f^{\tau^j}(X^{p^j})\right)^{p-1}\\
+&=
+\psi_q\circ
+\prod_{j=0}^{\operatorname{ord}(q)-1}
+(X_0f(X))^{p^j(p-1)}\\
+&=\psi_q\circ(X_0f(X))^{q-1}.
+\end{aligned}
+\end{equation*}
+
+\medskip
+\noindent\emph{Source note.}
+The first product in the printed proof has the undefined upper bound
+$\operatorname{ord}(a)-1$; the next line and the definition of $q$ require
+$\operatorname{ord}(q)-1$.  The corrected French and English layers use
+the latter; the diplomatic French preserves the print.
+
+\subsubsection*{Corollary 6.1.13.}
+Modulo $p$, one has the congruence
+
+\begin{equation*}
+Z(t,V/\mathbb F_q)
+\equiv
+\frac{
+\det\!\left(
+1-t\,\psi_q\circ(X_0f(X))^{q-1}
+\mathrel{\Big|}W_S(1)
+\right)^{(-1)^{n+1}}
+}{1-t}.
+\end{equation*}
+----- English, file components/182_expose_XXII_cohomology_of_the_structure_sheaf.tex, page 435 -----
+\subsection*{6.2.}
+It remains to calculate the cohomology groups of $\mathcal O_V$.
+Put
+
+\begin{equation}\tag{6.2.1}
+\mathfrak F_q
+=\text{the operation of raising to the $q$-th power in $\mathcal O_V$}.
+\end{equation}
+
+There is an exact sequence of sheaves on
+$\mathbb P^{n+1}=\mathbb P$,
+
+\begin{equation}\tag{6.2.2}
+0\longrightarrow\mathcal O_{\mathbb P}(-d)
+\xrightarrow{\,f\,}\mathcal O_{\mathbb P}
+\longrightarrow\mathcal O_V\longrightarrow0,
+\end{equation}
+
+and the following diagram is commutative:
+----- French corrections on page 434 -----
+[id C452] kind extra; French file expose_XXII_body.tex
+OLD: \Theta(\pi A_WX_0X^W)
+NEW: \Theta(A_WX_0X^W)
+FRENCH CONTEXT (corrected, after the fix): rd}(q)}
+-
+\left(
+\frac{\tau^{-1}}p\,\psi_p\cdot H_{p-1}(X)
+\right)^{\operatorname{ord}(q)}
+\right]R_S(1)
+\subset pR_S.
+\end{equation}
+
+Calculons maintenant $H_{p-1}(X)$. On a (cf. (4.4.4))
+
+%%%%%%%%%%  scan idx 441  |  folio 434  %%%%%%%%%%
+
+\begin{equation}\tag{6.1.8}
+\begin{aligned}
+H(X)
+&=\prod_W\Theta(A_WX_0X^W)\\
+&=\prod_W\exp\!\left(
+\sum_{n\geq0}\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}
+\right)\\
+&=\prod_W\prod_{n\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{degré }p}\\
+&\equiv\exp\!\left(\pi\sum A_WX_0X^W\right)
+\pmod{\text{degré }p}\\
+&\equiv\exp(\
+
+[id C453] kind formula; French file expose_XXII_body.tex
+OLD: \sum_{r\geq0}\frac{(\pi A_WX_0X^W)^{p^r}}{p^r}
+NEW: \sum_{n\geq0}\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}
+FRENCH CONTEXT (corrected, after the fix): \cdot H_{p-1}(X)
+\right)^{\operatorname{ord}(q)}
+\right]R_S(1)
+\subset pR_S.
+\end{equation}
+
+Calculons maintenant $H_{p-1}(X)$. On a (cf. (4.4.4))
+
+%%%%%%%%%%  scan idx 441  |  folio 434  %%%%%%%%%%
+
+\begin{equation}\tag{6.1.8}
+\begin{aligned}
+H(X)
+&=\prod_W\Theta(A_WX_0X^W)\\
+&=\prod_W\exp\!\left(
+\sum_{n\geq0}\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}
+\right)\\
+&=\prod_W\prod_{n\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{degré }p}\\
+&\equiv\exp\!\left(\pi\sum A_WX_0X^W\right)
+\pmod{\text{degré }p}\\
+&\equiv\exp(\pi X_0F(X))
+\pmod{\text{degré }p},
+\end{aligned}
+\end{equation}
+
+d'où
+
+
+
+[id C454] kind formula; French file expose_XXII_body.tex
+OLD: \prod_{r\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^r}}{p^r}\right)
+NEW: \prod_{n\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}\right)
+FRENCH CONTEXT (corrected, after the fix): bset pR_S.
+\end{equation}
+
+Calculons maintenant $H_{p-1}(X)$. On a (cf. (4.4.4))
+
+%%%%%%%%%%  scan idx 441  |  folio 434  %%%%%%%%%%
+
+\begin{equation}\tag{6.1.8}
+\begin{aligned}
+H(X)
+&=\prod_W\Theta(A_WX_0X^W)\\
+&=\prod_W\exp\!\left(
+\sum_{n\geq0}\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}
+\right)\\
+&=\prod_W\prod_{n\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{degré }p}\\
+&\equiv\exp\!\left(\pi\sum A_WX_0X^W\right)
+\pmod{\text{degré }p}\\
+&\equiv\exp(\pi X_0F(X))
+\pmod{\text{degré }p},
+\end{aligned}
+\end{equation}
+
+d'où
+
+\begin{equation}\tag{6.1.9}
+H_{p-1}(X)
+\equiv\frac{\pi^{p-1}X_0^{p-1}}{(p-1)!}\,F(X)^{p
+
+[id C455] kind formula; French file expose_XXII_body.tex
+OLD: \pi\sum_WA_WX_0X^W
+NEW: \pi\sum A_WX_0X^W
+FRENCH CONTEXT (corrected, after the fix): on}\tag{6.1.8}
+\begin{aligned}
+H(X)
+&=\prod_W\Theta(A_WX_0X^W)\\
+&=\prod_W\exp\!\left(
+\sum_{n\geq0}\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}
+\right)\\
+&=\prod_W\prod_{n\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{degré }p}\\
+&\equiv\exp\!\left(\pi\sum A_WX_0X^W\right)
+\pmod{\text{degré }p}\\
+&\equiv\exp(\pi X_0F(X))
+\pmod{\text{degré }p},
+\end{aligned}
+\end{equation}
+
+d'où
+
+\begin{equation}\tag{6.1.9}
+H_{p-1}(X)
+\equiv\frac{\pi^{p-1}X_0^{p-1}}{(p-1)!}\,F(X)^{p-1}.
+\end{equation}
+
+On constate facilement que
+
+\begin{equation}\tag{6.1.10}
+\frac{\pi^{p-1}}p\e
+
+[id C456] kind formula; French file expose_XXII_body.tex
+OLD: \pi X_0f(X)
+NEW: \pi X_0F(X)
+FRENCH CONTEXT (corrected, after the fix): )\\
+&=\prod_W\exp\!\left(
+\sum_{n\geq0}\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}
+\right)\\
+&=\prod_W\prod_{n\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{degré }p}\\
+&\equiv\exp\!\left(\pi\sum A_WX_0X^W\right)
+\pmod{\text{degré }p}\\
+&\equiv\exp(\pi X_0F(X))
+\pmod{\text{degré }p},
+\end{aligned}
+\end{equation}
+
+d'où
+
+\begin{equation}\tag{6.1.9}
+H_{p-1}(X)
+\equiv\frac{\pi^{p-1}X_0^{p-1}}{(p-1)!}\,F(X)^{p-1}.
+\end{equation}
+
+On constate facilement que
+
+\begin{equation}\tag{6.1.10}
+\frac{\pi^{p-1}}p\equiv-1\pmod p
+\end{equation}
+
+donc
+
+\begin{equation}\ta
+
+[id C457] kind symbol; French file expose_XXII_body.tex
+OLD: =\frac{\pi^{p-1}X_0^{p-1}}
+NEW: \equiv\frac{\pi^{p-1}X_0^{p-1}}
+FRENCH CONTEXT (corrected, after the fix): \!\left(\frac{(\pi A_WX_0X^W)^{p^n}}{p^n}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{degré }p}\\
+&\equiv\exp\!\left(\pi\sum A_WX_0X^W\right)
+\pmod{\text{degré }p}\\
+&\equiv\exp(\pi X_0F(X))
+\pmod{\text{degré }p},
+\end{aligned}
+\end{equation}
+
+d'où
+
+\begin{equation}\tag{6.1.9}
+H_{p-1}(X)
+\equiv\frac{\pi^{p-1}X_0^{p-1}}{(p-1)!}\,F(X)^{p-1}.
+\end{equation}
+
+On constate facilement que
+
+\begin{equation}\tag{6.1.10}
+\frac{\pi^{p-1}}p\equiv-1\pmod p
+\end{equation}
+
+donc
+
+\begin{equation}\tag{6.1.11}
+\frac1p\,H_{p-1}(X)
+\equiv(X_0f(X))^{p-1}\pmod p,
+\end{equation}
+
+ce qui achève la démonstration de 6.1.
+
+\underline{Coro
+
+[id C458] kind formula; French file expose_XXII_body.tex
+OLD: \,f(X)^{p-1}.
+NEW: \,F(X)^{p-1}.
+FRENCH CONTEXT (corrected, after the fix): n}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{degré }p}\\
+&\equiv\exp\!\left(\pi\sum A_WX_0X^W\right)
+\pmod{\text{degré }p}\\
+&\equiv\exp(\pi X_0F(X))
+\pmod{\text{degré }p},
+\end{aligned}
+\end{equation}
+
+d'où
+
+\begin{equation}\tag{6.1.9}
+H_{p-1}(X)
+\equiv\frac{\pi^{p-1}X_0^{p-1}}{(p-1)!}\,F(X)^{p-1}.
+\end{equation}
+
+On constate facilement que
+
+\begin{equation}\tag{6.1.10}
+\frac{\pi^{p-1}}p\equiv-1\pmod p
+\end{equation}
+
+donc
+
+\begin{equation}\tag{6.1.11}
+\frac1p\,H_{p-1}(X)
+\equiv(X_0f(X))^{p-1}\pmod p,
+\end{equation}
+
+ce qui achève la démonstration de 6.1.
+
+\underline{Corollaire} 6.1.12.
+\unde
+
+[id C459] kind punctuation; French file expose_XXII_body.tex
+OLD: p,
+\end{equation}
+
+donc
+NEW: p
+\end{equation}
+
+donc
+FRENCH CONTEXT (corrected, after the fix): d{\text{degré }p}\\
+&\equiv\exp(\pi X_0F(X))
+\pmod{\text{degré }p},
+\end{aligned}
+\end{equation}
+
+d'où
+
+\begin{equation}\tag{6.1.9}
+H_{p-1}(X)
+\equiv\frac{\pi^{p-1}X_0^{p-1}}{(p-1)!}\,F(X)^{p-1}.
+\end{equation}
+
+On constate facilement que
+
+\begin{equation}\tag{6.1.10}
+\frac{\pi^{p-1}}p\equiv-1\pmod p
+\end{equation}
+
+donc
+
+\begin{equation}\tag{6.1.11}
+\frac1p\,H_{p-1}(X)
+\equiv(X_0f(X))^{p-1}\pmod p,
+\end{equation}
+
+ce qui achève la démonstration de 6.1.
+
+\underline{Corollaire} 6.1.12.
+\underline{L'opérateur linéaire}
+
+\[
+(\bar\alpha_S)^{\operatorname{ord}(q)}:W_S(1)\longrightarrow W_S(1)
+\]
+
+\noindent
+\underline{n'
+
+[id C460] kind underline; French file expose_XXII_body.tex
+OLD: \underline{Corollaire 6.1.12.}
+L'opérateur linéaire
+NEW: \underline{Corollaire} 6.1.12.
+\underline{L'opérateur linéaire}
+FRENCH CONTEXT (corrected, after the fix): {p-1}X_0^{p-1}}{(p-1)!}\,F(X)^{p-1}.
+\end{equation}
+
+On constate facilement que
+
+\begin{equation}\tag{6.1.10}
+\frac{\pi^{p-1}}p\equiv-1\pmod p
+\end{equation}
+
+donc
+
+\begin{equation}\tag{6.1.11}
+\frac1p\,H_{p-1}(X)
+\equiv(X_0f(X))^{p-1}\pmod p,
+\end{equation}
+
+ce qui achève la démonstration de 6.1.
+
+\underline{Corollaire} 6.1.12.
+\underline{L'opérateur linéaire}
+
+\[
+(\bar\alpha_S)^{\operatorname{ord}(q)}:W_S(1)\longrightarrow W_S(1)
+\]
+
+\noindent
+\underline{n'est autre que} $\psi_q\circ(X_0f(X))^{q-1}$.
+
+%%%%%%%%%%  scan idx 442  |  folio 435  %%%%%%%%%%
+
+\underline{Démonstration.}
+D'après (6.1.1)
+
+\begin{equation*}
+\begin{aligned}
+(\bar\alpha_S)^{\operato
+
+[id C461] kind underline; French file expose_XXII_body.tex
+OLD: n'est autre que
+NEW: \underline{n'est autre que}
+FRENCH CONTEXT (corrected, after the fix): uation}
+
+donc
+
+\begin{equation}\tag{6.1.11}
+\frac1p\,H_{p-1}(X)
+\equiv(X_0f(X))^{p-1}\pmod p,
+\end{equation}
+
+ce qui achève la démonstration de 6.1.
+
+\underline{Corollaire} 6.1.12.
+\underline{L'opérateur linéaire}
+
+\[
+(\bar\alpha_S)^{\operatorname{ord}(q)}:W_S(1)\longrightarrow W_S(1)
+\]
+
+\noindent
+\underline{n'est autre que} $\psi_q\circ(X_0f(X))^{q-1}$.
+
+%%%%%%%%%%  scan idx 442  |  folio 435  %%%%%%%%%%
+
+\underline{Démonstration.}
+D'après (6.1.1)
+
+\begin{equation*}
+\begin{aligned}
+(\bar\alpha_S)^{\operatorname{ord}(q)}
+&=
+\left(
+\tau^{-1}\psi_p\circ(X_0f(X))^{p-1}
+\right)^{\operatorname{ord}(q)}\\
+&=
+\psi_q\circ
+\pro
+
+=================== PAGE 435 ===================
+----- (English text of page 434: shown above in this file) -----
+----- (English text of page 435: shown above in this file) -----
+----- English, file components/182_expose_XXII_cohomology_of_the_structure_sheaf.tex, page 436 -----
+\begin{equation}\tag{6.2.3}
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r] &
+\mathcal O_{\mathbb P}(-d) \arrow[r,"f"] \arrow[d,"f^{q-1}\mathfrak F_q"'] &
+\mathcal O_{\mathbb P} \arrow[r] \arrow[d,"\mathfrak F_q"'] &
+\mathcal O_V \arrow[r] \arrow[d,"\mathfrak F_q"'] &
+0\\
+0 \arrow[r] &
+\mathcal O_{\mathbb P}(-d) \arrow[r,"f"] &
+\mathcal O_{\mathbb P} \arrow[r] &
+\mathcal O_V \arrow[r] &
+0 .
+\end{tikzcd}
+\end{equation}
+
+Taking account of
+
+\begin{equation}\tag{6.2.4}
+\begin{cases}
+H^i(\mathbb P^{n+1},\mathcal O_{\mathbb P})=0,
+&i\ne0,\\
+H^i(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))=0,
+&i\ne0,n+1,
+\end{cases}
+\end{equation}
+
+the long exact cohomology sequence associated with (6.2.2) gives
+
+\begin{equation}\tag{6.2.5}
+\begin{cases}
+H^0(V,\mathcal O_V)\simeq\mathbb F_q,\\
+H^i(V,\mathcal O_V)=0,&i\ne0,n,\\
+H^n(V,\mathcal O_V)
+\simeq H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d)).
+\end{cases}
+\end{equation}
+
+The commutative diagram (6.2.3) therefore gives
+
+\begin{equation}\tag{6.2.6}
+\det\!\left(1-t\mathfrak F_q
+\mathrel{\Big|}H^0(V,\mathcal O_V)\right)=1-t
+\end{equation}
+
+and
+
+\begin{equation}\tag{6.2.7}
+\det\!\left(1-t\mathfrak F_q
+\mathrel{\Big|}H^n(V,\mathcal O_V)\right)
+=
+\det\!\left(
+1-tf^{q-1}\mathfrak F_q
+\mathrel{\Big|}
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))
+\right).
+\end{equation}
+
+It remains only to prove
+
+\begin{equation}\tag{6.2.8}
+\begin{aligned}
+&\det\!\left(
+1-tf^{q-1}\mathfrak F_q
+\mathrel{\Big|}
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))
+\right)\\
+&\qquad=
+\det\!\left(
+1-t\,\psi_q\circ(X_0f(X))^{q-1}
+\mathrel{\Big|}W_S(1)
+\right),
+\end{aligned}
+\end{equation}
+
+which is a consequence of the following proposition.
+----- English, file components/183_expose_XXII_proposition_6_3_and_bibliography.tex, page 436 -----
+\subsubsection*{Proposition 6.3.}
+There is an isomorphism
+
+\begin{equation}\tag{6.3.1}
+W_S(1)\simeq
+\operatorname{Hom}_{\mathbb F_q}\!\left(
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d)),
+\mathbb F_q\right)
+\end{equation}
+
+with respect to which the operator
+----- French corrections on page 435 -----
+[id C462] kind punctuation; French file expose_XXII_body.tex
+OLD: D'après (6.1.1),
+NEW: D'après (6.1.1)
+FRENCH CONTEXT (corrected, after the fix): on de 6.1.
+
+\underline{Corollaire} 6.1.12.
+\underline{L'opérateur linéaire}
+
+\[
+(\bar\alpha_S)^{\operatorname{ord}(q)}:W_S(1)\longrightarrow W_S(1)
+\]
+
+\noindent
+\underline{n'est autre que} $\psi_q\circ(X_0f(X))^{q-1}$.
+
+%%%%%%%%%%  scan idx 442  |  folio 435  %%%%%%%%%%
+
+\underline{Démonstration.}
+D'après (6.1.1)
+
+\begin{equation*}
+\begin{aligned}
+(\bar\alpha_S)^{\operatorname{ord}(q)}
+&=
+\left(
+\tau^{-1}\psi_p\circ(X_0f(X))^{p-1}
+\right)^{\operatorname{ord}(q)}\\
+&=
+\psi_q\circ
+\prod_{j=0}^{\operatorname{ord}(q)-1}
+\left(X_0^{p^j}f^{\tau^j}(X^{p^j})\right)^{p-1}\\
+&=
+\psi_q\circ
+\prod_{j=0}^{\operatorname{
+
+[id C463] kind extra; French file expose_XXII_body.tex
+OLD: \frac1p\,\tau^{-1}\circ\psi_p\circ(X_0f(X))^{p-1}
+NEW: \tau^{-1}\psi_p\circ(X_0f(X))^{p-1}
+FRENCH CONTEXT (corrected, after the fix): v
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+
+\underline{Proposition} 6.1.
+\underline{L'opération} $\tau^{-1}$-\underline{linéaire}
+$\bar\alpha_S:W_S(1)\to W_S(1)$ \underline{est égale à l'opération}
+
+\begin{equation}\tag{6.1.1}
+\tau^{-1}\psi_p\circ(X_0f(X))^{p-1}.
+\end{equation}
+
+\underline{Démonstration.}
+Écrivons
+
+\begin{equation}\tag{6.1.2}
+H(X)=1+\sum_{i\geq1}H_i(X)
+\end{equation}
+
+où
+
+\begin{equation}\tag{6.1.3}
+H_i(X)\text{ est de degré $i$ en $X_0$}.
+\end{equation}
+
+D'après (4.6.19) encore, on a
+
+\begin{equation}\tag{6.1.4}
+\frac1p\,\psi_pR_S(i)\subs
+
+[id C464] kind underline; French file expose_XXII_body.tex
+OLD: \underline{Corollaire 6.1.13.}
+On a la congruence mod $p$ :
+NEW: \underline{Corollaire} 6.1.13.
+\underline{On a la congruence mod} $p$ :
+FRENCH CONTEXT (corrected, after the fix): &=
+\psi_q\circ
+\prod_{j=0}^{\operatorname{ord}(q)-1}
+\left(X_0^{p^j}f^{\tau^j}(X^{p^j})\right)^{p-1}\\
+&=
+\psi_q\circ
+\prod_{j=0}^{\operatorname{ord}(q)-1}
+(X_0f(X))^{p^j(p-1)}\\
+&=\psi_q\circ(X_0f(X))^{q-1}.
+\end{aligned}
+\end{equation*}
+
+Mettant ensemble (6.1.12), (6.0.12), et (6.0.1), on trouve
+
+\underline{Corollaire} 6.1.13.
+\underline{On a la congruence mod} $p$ :
+
+\begin{equation*}
+Z(t,V/\mathbb F_q)
+\equiv
+\frac{
+\det\!\left(
+1-t\,\psi_q(X_0f(X))^{q-1}
+\mathrel{\Big|}W_S(1)
+\right)^{(-1)^{n+1}}
+}{1-t}.
+\end{equation*}
+
+\subsection*{6.2.}
+Il reste à calculer les groupes de cohomologie de $\mathcal O_V$.
+
+Posons
+
+\begin{equation}\tag{6.2.1}
+\mathfrak F_q
+=\t
+
+[id C465] kind extra; French file expose_XXII_body.tex
+OLD: 1-t\,\psi_q\circ(X_0f(X))^{q-1}
+NEW: 1-t\,\psi_q(X_0f(X))^{q-1}
+FRENCH CONTEXT (corrected, after the fix): torname{ord}(q)-1}
+(X_0f(X))^{p^j(p-1)}\\
+&=\psi_q\circ(X_0f(X))^{q-1}.
+\end{aligned}
+\end{equation*}
+
+Mettant ensemble (6.1.12), (6.0.12), et (6.0.1), on trouve
+
+\underline{Corollaire} 6.1.13.
+\underline{On a la congruence mod} $p$ :
+
+\begin{equation*}
+Z(t,V/\mathbb F_q)
+\equiv
+\frac{
+\det\!\left(
+1-t\,\psi_q(X_0f(X))^{q-1}
+\mathrel{\Big|}W_S(1)
+\right)^{(-1)^{n+1}}
+}{1-t}.
+\end{equation*}
+
+\subsection*{6.2.}
+Il reste à calculer les groupes de cohomologie de $\mathcal O_V$.
+
+Posons
+
+\begin{equation}\tag{6.2.1}
+\mathfrak F_q
+=\text{l'opération \og élévation à la puissance $q$'ième\fg{} dans $\mathcal O_V$}.
+\end{equati
+
+[id C466] kind punctuation; French file expose_XXII_body.tex
+OLD: $q$-ième
+NEW: $q$'ième
+FRENCH CONTEXT (corrected, after the fix): e}$ une $k$-base de $V$, et écrivons
+
+\begin{equation}\tag{1.1.3}
+\varphi(\underline{e})=A\underline{e},\qquad A\in\mathrm{GL}(n,k)
+\end{equation}
+
+Désignons par
+
+\begin{equation}\tag{1.1.4}
+F:\mathrm{GL}(n,k)\longrightarrow\mathrm{GL}(n,k)
+\end{equation}
+
+la flèche ``élévation des coordonnées à la $q$'ième puissance''. Alors pour
+$g\in\mathrm{GL}(n,k)$, $g\underline{e}$ est une base de $V$ formée de points fixes de
+$\varphi$ si et seulement si
+
+\begin{equation}\tag{1.1.5}
+F(g)Ag^{-1}=1.
+\end{equation}
+
+Désignons par $\bar k$ une clôture algébrique de $k$. Le
+\underline{groupe} $\mathrm{GL}(n,\bar k)$
+

@@ -1,0 +1,43 @@
+```json
+[
+  {
+    "id": "C1006",
+    "decision": "not_applicable",
+    "note": "French grammatical agreement only."
+  },
+  {
+    "id": "C1007",
+    "decision": "not_applicable",
+    "note": "French spelling correction only."
+  },
+  {
+    "id": "C1008",
+    "decision": "already",
+    "tr_file": "units/06_expose_ix/EXPOSE_IX_PART_181_ES.tex",
+    "tr_old": "subfuntor abierto del funtor de Néron--Severi\n$\\underline{\\mathrm{NS}}_{B/S}$ sobre $S$."
+  },
+  {
+    "id": "C1009",
+    "decision": "not_applicable",
+    "note": "French grammatical agreement only."
+  },
+  {
+    "id": "C1010",
+    "decision": "not_applicable",
+    "note": "French spelling correction only."
+  },
+  {
+    "id": "C1011",
+    "decision": "not_applicable",
+    "note": "French grammatical agreement only."
+  },
+  {
+    "id": "C1014",
+    "decision": "apply",
+    "tr_file": "units/08_terminal_publisher_matter/TERMINAL_PUBLISHER_MATTER_ES.tex",
+    "tr_old": "Editado por. F. W. Lawvere.",
+    "tr_new": "Editado \\sisi{por.}{por} F. W. Lawvere.",
+    "note": "Remove the period interrupting the editorial attribution in the corrected edition only."
+  }
+]
+```

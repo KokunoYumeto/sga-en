@@ -1,0 +1,199 @@
+```json
+[
+  {"id":"C723","decision":"not_applicable"},
+  {
+    "id":"C724",
+    "decision":"already",
+    "tr_file":"components/63_expose_VII_opening_through_1_1_2_1.tex",
+    "tr_old":"More precisely, the ``value at $P$'' functor induces an\nequivalence between the category of the cartesian sections in question\nand the category of bitorsors under $(G_P,G_P)$."
+  },
+  {"id":"C725","decision":"not_applicable"},
+  {"id":"C726","decision":"not_applicable"},
+  {"id":"C727","decision":"not_applicable"},
+  {"id":"C728","decision":"not_applicable"},
+  {"id":"C729","decision":"not_applicable"},
+  {
+    "id":"C730",
+    "decision":"already",
+    "tr_file":"components/69_expose_VII_proposition_1_3_5.tex",
+    "tr_old":"faithful. In particular, on a bitorsor $E$ under $(G_P,G_P)$ rigidified\nrelative to $e_P$, that is, equipped with a central section $e_E$ of\n$E_1=e_P^*(E)$,"
+  },
+  {
+    "id":"C731",
+    "decision":"already",
+    "tr_file":"components/69_expose_VII_proposition_1_3_5.tex",
+    "tr_old":"the two sides are respectively $j(xy)$ and\n$j(x)j(y)$, which are equal because $j$ is multiplicative."
+  },
+  {"id":"C732","decision":"not_applicable"},
+  {"id":"C733","decision":"not_applicable"},
+  {"id":"C734","decision":"not_applicable"},
+  {"id":"C735","decision":"not_applicable"},
+  {"id":"C736","decision":"not_applicable"},
+  {"id":"C737","decision":"not_applicable"},
+  {"id":"C738","decision":"not_applicable"},
+  {"id":"C739","decision":"not_applicable"},
+  {"id":"C740","decision":"not_applicable"},
+  {"id":"C741","decision":"not_applicable"},
+  {"id":"C742","decision":"not_applicable"},
+  {"id":"C743","decision":"not_applicable"},
+  {"id":"C744","decision":"not_applicable"},
+  {"id":"C745","decision":"not_applicable"},
+  {"id":"C746","decision":"not_applicable"},
+  {"id":"C747","decision":"not_applicable"},
+  {"id":"C748","decision":"not_applicable"},
+  {"id":"C749","decision":"not_applicable"},
+  {"id":"C750","decision":"not_applicable"},
+  {"id":"C751","decision":"not_applicable"},
+  {"id":"C752","decision":"not_applicable"},
+  {"id":"C753","decision":"not_applicable"},
+  {"id":"C754","decision":"not_applicable"},
+  {"id":"C755","decision":"not_applicable"},
+  {
+    "id":"C756",
+    "decision":"already",
+    "tr_file":"components/84_expose_VII_section_3_1.tex",
+    "tr_old":"\\underline\\Psi_{L_\\bullet}(A\\times B)\n \\longrightarrow\n \\underline\\Psi_{L_\\bullet}(A)\\times\n \\underline\\Psi_{L_\\bullet}(B)"
+  },
+  {"id":"C757","decision":"not_applicable"},
+  {"id":"C758","decision":"not_applicable"},
+  {"id":"C759","decision":"not_applicable"},
+  {"id":"C760","decision":"not_applicable"},
+  {"id":"C761","decision":"not_applicable"},
+  {
+    "id":"C762",
+    "decision":"apply",
+    "tr_file":"components/86_expose_VII_section_3_3.tex",
+    "tr_old":"\\underline\\Psi_{L_\\bullet}(A)\n \\longrightarrow\n \\underline\\Psi_{L_\\bullet}([A\\longrightarrow A''])",
+    "tr_new":"\\underline\\Psi_{L_\\bullet}(A')\n \\longrightarrow\n \\underline\\Psi_{L_\\bullet}([A\\longrightarrow A''])"
+  },
+  {
+    "id":"C763",
+    "decision":"apply",
+    "tr_file":"components/86_expose_VII_section_3_3.tex",
+    "tr_old":"$A\\longrightarrow A'$ in $\\underline C$, such that $E$ is\n\\underline{dominated by} $E_0$, meaning that there is a morphism\n$E_0\\longrightarrow E'$.",
+    "tr_new":"$A\\longrightarrow A'$ in $\\underline C$, such that $E'$ is\n\\underline{dominated by} $E_0$, meaning that there is a morphism\n$E_0\\longrightarrow E'$."
+  },
+  {"id":"C764","decision":"not_applicable"},
+  {"id":"C765","decision":"not_applicable"},
+  {
+    "id":"C766",
+    "decision":"already",
+    "tr_file":"components/86_expose_VII_section_3_3.tex",
+    "tr_old":"quasi-maximal object described in \\SGARefLink{sga7.sga7i.evii.n3-3-3}{3.3.3} is canonically isomorphic to\n$L_\\bullet$."
+  },
+  {"id":"C767","decision":"not_applicable"},
+  {"id":"C768","decision":"not_applicable"},
+  {
+    "id":"C769",
+    "decision":"already",
+    "tr_file":"components/86_expose_VII_section_3_3.tex",
+    "tr_old":"The set of isomorphism classes of such\ncocartesian functors is canonically in bijection with\n\\[\n \\Hom_{D(\\underline C)}(L'_\\bullet,L_\\bullet).\n\\]"
+  },
+  {
+    "id":"C770",
+    "decision":"already",
+    "tr_file":"components/87_expose_VII_section_3_4_opening_through_3_4_7.tex",
+    "tr_old":"If $(X,\\alpha)$ is an object of $\\underline\\Psi_{L_\\bullet}$, define\n$f^*(X,\\alpha)=(X',\\alpha')$ as follows."
+  },
+  {"id":"C771","decision":"not_applicable"},
+  {
+    "id":"C772",
+    "decision":"already",
+    "tr_file":"components/88_expose_VII_sections_3_4_8_and_3_4_9.tex",
+    "tr_old":"Consider the object $(0,\\overline u)$ of\n$\\underline\\Psi_{[L_\\bullet\\to L'_\\bullet]}$."
+  },
+  {"id":"C773","decision":"not_applicable"},
+  {"id":"C774","decision":"not_applicable"},
+  {"id":"C775","decision":"not_applicable"},
+  {"id":"C776","decision":"not_applicable"},
+  {"id":"C777","decision":"not_applicable"},
+  {"id":"C778","decision":"not_applicable"},
+  {
+    "id":"C779",
+    "decision":"apply",
+    "tr_file":"components/92_expose_VII_section_3_8_and_bibliography.tex",
+    "tr_old":"homologique}, Tohoku Mathematical Journal 9 (1956), 119--221.",
+    "tr_new":"homologique}, Tohoku Mathematical Journal 9 (1957), 119--221."
+  },
+  {
+    "id":"C780",
+    "decision":"already",
+    "tr_file":"components/94_expose_VIII_section_1.tex",
+    "tr_old":"\\longrightarrow \\Hom(P,\\uExt^1(Q,G))\\\\\n \\longrightarrow{}&\n \\Ext^2(P,\\uHom(Q,G))",
+    "note":"The connecting arrow is already at the start of the next line."
+  },
+  {"id":"C781","decision":"not_applicable"},
+  {"id":"C782","decision":"not_applicable"},
+  {
+    "id":"C783",
+    "decision":"already",
+    "tr_file":"components/94_expose_VIII_section_1.tex",
+    "tr_old":"By \\SGARefLink{sga7.sga7i.eviii.n1-4}{1.4} and \\SGARefLink{sga7.sga7i.eviii.n1-5}{1.5}, respectively, these two\nrelations give isomorphisms"
+  },
+  {"id":"C784","decision":"not_applicable"},
+  {"id":"C785","decision":"not_applicable"},
+  {"id":"C786","decision":"not_applicable"},
+  {"id":"C787","decision":"not_applicable"},
+  {"id":"C788","decision":"not_applicable"},
+  {"id":"C789","decision":"not_applicable"},
+  {"id":"C790","decision":"not_applicable"},
+  {"id":"C791","decision":"not_applicable"},
+  {"id":"C792","decision":"not_applicable"},
+  {"id":"C793","decision":"not_applicable"},
+  {"id":"C794","decision":"not_applicable"},
+  {"id":"C795","decision":"not_applicable"},
+  {"id":"C796","decision":"not_applicable"},
+  {"id":"C797","decision":"not_applicable"},
+  {
+    "id":"C798",
+    "decision":"apply",
+    "tr_file":"components/111_expose_VIII_sections_4_7_through_4_10.tex",
+    "tr_old":"functor considered in \\SGARefLink{sga7.sga7i.eviii.n1-3}{1.3} is an equivalence of categories;",
+    "tr_new":"functor considered in \\SGARefLink{sga7.sga7i.eviii.n1-3}{4.3} is an equivalence of categories;",
+    "note":"Reference text corrected; link key preserved as required."
+  },
+  {"id":"C799","decision":"not_applicable"},
+  {"id":"C800","decision":"not_applicable"},
+  {"id":"C801","decision":"not_applicable"},
+  {
+    "id":"C802",
+    "decision":"already",
+    "tr_file":"components/113_expose_VIII_sections_4_12_through_4_14.tex",
+    "tr_old":"By \\SGARefLink{sga7.sga7i.eviii.n4-7}{4.7} this group can equally be\ndescribed as the group of classes of symmetric divisorial\ncorrespondences on $(P,P)$.",
+    "note":"The English uses a separate sentence rather than parentheses."
+  },
+  {"id":"C803","decision":"not_applicable"},
+  {
+    "id":"C804",
+    "decision":"already",
+    "tr_file":"components/114_expose_VIII_section_5_opening_through_5_6.tex",
+    "tr_old":"H^1(S,Z_S)\\longrightarrow H^1(\\eta,Z_\\eta)\n\\]\nis injective."
+  },
+  {"id":"C805","decision":"not_applicable"},
+  {"id":"C806","decision":"not_applicable"},
+  {
+    "id":"C807",
+    "decision":"already",
+    "tr_file":"components/117_expose_VIII_sections_6_2_1_through_6_2_4.tex",
+    "tr_old":"For $i,j\\in\\mathbb Z$,\n$\\overline g_i$ and $\\overline g_j$ agree on $S_i'\\cap S_j'=U$ after"
+  },
+  {"id":"C808","decision":"not_applicable"},
+  {"id":"C809","decision":"not_applicable"},
+  {"id":"C810","decision":"not_applicable"},
+  {"id":"C811","decision":"not_applicable"},
+  {"id":"C812","decision":"not_applicable"},
+  {
+    "id":"C813",
+    "decision":"already",
+    "tr_file":"components/121_expose_VIII_section_7_opening_and_theorem_7_1_statement.tex",
+    "tr_old":"Then the\nfunctor $E\\mapsto E_\\eta$ from the category of biextensions of $(P,Q)$ by\n$\\underline G_{mS}$ to the category of biextensions of\n$(P_\\eta,Q_\\eta)$ by $\\underline G_{m\\eta}$ is fully faithful."
+  },
+  {"id":"C814","decision":"not_applicable"},
+  {"id":"C815","decision":"not_applicable"}
+]
+```
+components/69_expose_VII_proposition_1_3_5.tex, §1.3.5(b): both occurrences of `,qquad` lack the backslash before `qquad`.
+components/79_expose_VII_sections_2_6_and_2_7.tex, §2.7: “Every statement about bitorsors” should refer to biextensions.
+components/94_expose_VIII_section_1.tex, §1.1: the exact sequence obtained by interchanging \(P\) and \(Q\) is analogous to (1.1.4), not (1.1.3).
+components/106_expose_VIII_section_3_3.tex, proof of §3.3.1(b): `\underline G_m^{,2}` has a spurious comma in the exponent.
+components/110_expose_VIII_sections_4_5_and_4_6.tex, proof of §4.6: `\underline{\Pic}^{,0}_{Q/k}` has a spurious comma in the superscript.

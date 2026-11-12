@@ -1,0 +1,242 @@
+```json
+[
+  {
+    "id": "C395",
+    "decision": "not_applicable",
+    "note": "French plural agreement."
+  },
+  {
+    "id": "C396",
+    "decision": "not_applicable",
+    "note": "French gender agreement."
+  },
+  {
+    "id": "C397",
+    "decision": "apply",
+    "tr_file": "06/drafts/SGA4_VI_LINES_1383_1678_English.texfrag",
+    "tr_old": "$E_{\\epsilon(X)}\\approxeq(C_{/X})^{\\sim}$",
+    "tr_new": "$E_{/\\epsilon(X)}\\approxeq(C_{/X})^{\\sim}$"
+  },
+  {
+    "id": "C398",
+    "decision": "not_applicable",
+    "note": "French gender agreement."
+  },
+  {
+    "id": "C399",
+    "decision": "not_applicable",
+    "note": "French number agreement."
+  },
+  {
+    "id": "C400",
+    "decision": "not_applicable",
+    "note": "French reflexive construction; the English is correct."
+  },
+  {
+    "id": "C401",
+    "decision": "not_applicable",
+    "note": "French number agreement."
+  },
+  {
+    "id": "C402",
+    "decision": "not_applicable",
+    "note": "French gender agreement."
+  },
+  {
+    "id": "C403",
+    "decision": "not_applicable",
+    "note": "French accent."
+  },
+  {
+    "id": "C404",
+    "decision": "apply",
+    "tr_file": "06/drafts/SGA4_VI_LINES_1383_1678_English.texfrag",
+    "tr_old": "$f_i:X_i=\\fprod{X}{X_i}{Y}\\to Y_i$",
+    "tr_new": "$f_i:X_i=\\fprod{X}{Y_i}{Y}\\to Y_i$"
+  },
+  {
+    "id": "C405",
+    "decision": "apply",
+    "tr_file": "06/drafts/SGA4_VI_LINES_1383_1678_English.texfrag",
+    "tr_old": "\\emph{structure theory} that is equally explicit",
+    "tr_new": "\\emph{structure theory} that is fairly explicit"
+  },
+  {
+    "id": "C406",
+    "decision": "not_applicable",
+    "note": "French typo; the English correctly says “in the sense of”."
+  },
+  {
+    "id": "C407",
+    "decision": "apply",
+    "tr_file": "06/drafts/SGA4_VI_LINES_1383_1678_English.texfrag",
+    "tr_old": "give invariants finer than the compact space $X_{\\cons}$",
+    "tr_new": "give profinite invariants finer than the compact space $X_{\\cons}$"
+  },
+  {
+    "id": "C408",
+    "decision": "not_applicable",
+    "note": "French number agreement."
+  },
+  {
+    "id": "C409",
+    "decision": "already",
+    "tr_file": "06/drafts/SGA4_VI_LINES_1679_2073_English.texfrag",
+    "tr_old": "if, in addition, its final object is coherent (or, equivalently\n(\\hyperref[VI.subsec1.32]{1.32}), pre-Noetherian and quasi-separated)."
+  },
+  {
+    "id": "C410",
+    "decision": "already",
+    "tr_file": "06/drafts/SGA4_VI_LINES_1679_2073_English.texfrag",
+    "tr_old": "final object such that the $E_{/X_i}$ are locally Noetherian, then so\nis $E$."
+  },
+  {
+    "id": "C411",
+    "decision": "already",
+    "tr_file": "06/drafts/SGA4_VI_LINES_1679_2073_English.texfrag",
+    "tr_old": "generating subcategory Ouv(X) of $\\Top(X)$"
+  },
+  {
+    "id": "C412",
+    "decision": "not_applicable",
+    "note": "French plural agreement."
+  },
+  {
+    "id": "C413",
+    "decision": "not_applicable",
+    "note": "French gender agreement."
+  },
+  {
+    "id": "C414",
+    "decision": "not_applicable",
+    "note": "French number agreement."
+  },
+  {
+    "id": "C415",
+    "decision": "not_applicable",
+    "note": "French number agreement."
+  },
+  {
+    "id": "C416",
+    "decision": "not_applicable",
+    "note": "French gender agreement."
+  },
+  {
+    "id": "C417",
+    "decision": "not_applicable",
+    "note": "French number agreement."
+  },
+  {
+    "id": "C419",
+    "decision": "not_applicable",
+    "note": "French agreement."
+  },
+  {
+    "id": "C420",
+    "decision": "not_applicable",
+    "note": "French number agreement."
+  },
+  {
+    "id": "C421",
+    "decision": "already",
+    "tr_file": "06/drafts/SGA4_VI_LINES_2074_2418_English.texfrag",
+    "tr_old": "${E'}_{/Y'}\\to{E'}_{/f^{\\ast}(Y)}$ deduced from $v$"
+  },
+  {
+    "id": "C422",
+    "decision": "apply",
+    "tr_file": "06/drafts/SGA4_VI_LINES_2074_2418_English.texfrag",
+    "tr_old": "$f^{\\ast}_Y(X')$.",
+    "tr_new": "$f^{\\ast}_v(X')$."
+  },
+  {
+    "id": "C423",
+    "decision": "not_applicable",
+    "note": "French grammatical reformulation; the English already conveys locality on the source."
+  },
+  {
+    "id": "C424",
+    "decision": "not_applicable",
+    "note": "French number agreement."
+  },
+  {
+    "id": "C425",
+    "decision": "not_applicable",
+    "note": "French grammatical correction; the English correctly says “passage to a quotient”."
+  },
+  {
+    "id": "C431",
+    "decision": "apply",
+    "tr_file": "06/drafts/SGA4_VI_LINES_2419_2936_English.texfrag",
+    "tr_old": "E'' = E_{/U}{\\quoi}",
+    "tr_new": "E'' = E_{\\complement U}{\\quoi}"
+  },
+  {
+    "id": "C432",
+    "decision": "not_applicable",
+    "note": "French typo; the English correctly says “commutes”."
+  },
+  {
+    "id": "C433",
+    "decision": "not_applicable",
+    "note": "The wrong French word is already rendered correctly as “in”."
+  },
+  {
+    "id": "C434",
+    "decision": "not_applicable",
+    "note": "Missing French preposition; the English correctly says “consisting of”."
+  },
+  {
+    "id": "C435",
+    "decision": "not_applicable",
+    "note": "French gender agreement."
+  },
+  {
+    "id": "C437",
+    "decision": "not_applicable",
+    "note": "Duplicated French word; the English has no duplication."
+  },
+  {
+    "id": "C438",
+    "decision": "already",
+    "tr_file": "06/drafts/SGA4_VI_LINES_2937_3239_English.texfrag",
+    "tr_old": "v = (v', v'') : Y = (Y', Y'', v : Y''\\to f(Y')) \\to X {\\quoi},"
+  },
+  {
+    "id": "C439",
+    "decision": "not_applicable",
+    "note": "French spelling typo."
+  },
+  {
+    "id": "C442",
+    "decision": "apply",
+    "tr_file": "06/drafts/SGA4_VI_LINES_2937_3239_English.texfrag",
+    "tr_old": "To say that this holds for every\n  point $p$ means that, for every object $X'$ of $E'$, the family of\n  maps $f(X'_0)\\to f(X')$, with $X'_0$ coherent, is surjective on\n  every stalk.",
+    "tr_new": "To say that this holds for every\n  point $p$ means that, for every object $X'$ of $E'$, the family of\n  maps $f(X'_0)\\to f(X')$, with $X'_0\\in\\Ob E'_{\\coh/X'}$, has the\n  property that, for every point $p$ of $X''$, the family of maps\n  $f(X'_0)_p\\to f(X')_p$ is surjective."
+  },
+  {
+    "id": "C443",
+    "decision": "already",
+    "tr_file": "06/drafts/SGA4_VI_LINES_2937_3239_English.texfrag",
+    "tr_old": "the composite functors $h : X'\\longmapsto f(X')_p$ do so."
+  },
+  {
+    "id": "C444",
+    "decision": "not_applicable",
+    "note": "French grammatical connective; the English formulation is correct."
+  },
+  {
+    "id": "C445",
+    "decision": "already",
+    "tr_file": "06/drafts/SGA4_VI_LINES_2937_3239_English.texfrag",
+    "tr_old": "this is equivalent to the fact that\nthe $g_0(X'')$ lie in the essential image of $\\Pro(E'_{PF})$."
+  },
+  {
+    "id": "C446",
+    "decision": "apply",
+    "tr_file": "06/drafts/SGA4_VI_LINES_2937_3239_English.texfrag",
+    "tr_old": "\\begin{enonce*}[remark]{Remark 4.13}",
+    "tr_new": "\\begin{enonce*}[remark]{Remarks 4.13}"
+  }
+]
+```

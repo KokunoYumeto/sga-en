@@ -1,0 +1,204 @@
+```json
+[
+  {
+    "id": "C743",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B769",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B774",
+    "decision": "not_applicable",
+    "note": "French transcription comment only; no reproduced mathematical content changes."
+  },
+  {
+    "id": "D628",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B775",
+    "decision": "not_applicable",
+    "note": "Only the quotation marks are excluded from the underline; the Spanish paraphrase has no quotation marks."
+  },
+  {
+    "id": "C744",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C745",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "Ya hemos demostrado (4.2.1); véase (2.2.22)."
+  },
+  {
+    "id": "C746",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "H^{\\bullet-2}(\\Delta,\\mathbb Z_\\ell(-2))\n       \\arrow[l]\\arrow[u,\"j_*\"']",
+    "tr_new": "H^{\\bullet-\\sisi{2}{4}}(\\Delta,\\mathbb Z_\\ell(-2))\n       \\arrow[l]\\arrow[u,\"j_*\"']"
+  },
+  {
+    "id": "C747",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "\\arrow[l,\"g_*\"']\\arrow[u,equal]",
+    "tr_new": "\\arrow[l,\"\\sisi{g_*}{g^*}\"']\\arrow[u,equal]"
+  },
+  {
+    "id": "C748",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C749",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "El isomorfismo canónico $\\alpha$ de EGA II, 4.1.4, lleva el fibrado\ntautológico en\n\\[\n(\\rho i)^*\\mathcal O_{\\mathbb P^1}(1)\n\\otimes g^*\\mathcal O_\\Delta(-1).\n\\]",
+    "note": "The Spanish uses pulled-back factors and an implicit tensor base; it has no erroneous squared structure sheaf."
+  },
+  {
+    "id": "D630",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "(0\\oplus x)\\wedge(0\\oplus y)=A\\oplus B.",
+    "tr_new": "(0\\oplus x)\\sisi{\\Lambda}{\\wedge}(0\\oplus y)=A\\oplus B."
+  },
+  {
+    "id": "C750",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "&=-g_*i^*i_*\\!\\left(g^*(xy)c_1(\\underline N_{\\widetilde\\Delta/\\widetilde X})\\right)\\\\",
+    "note": "The Spanish gives the correct calculation without the erroneous reference."
+  },
+  {
+    "id": "D631",
+    "decision": "not_applicable",
+    "note": "This occurrence of the formula is omitted in Spanish, which instead refers to (4.2.3.2); there is no local product symbol to change."
+  },
+  {
+    "id": "D632",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "(a\\oplus0)\\wedge(0\\oplus y)=0\\oplus C,",
+    "tr_new": "(a\\oplus0)\\sisi{\\Lambda}{\\wedge}(0\\oplus y)=0\\oplus C,"
+  },
+  {
+    "id": "C751",
+    "decision": "not_applicable",
+    "note": "The Spanish recasts the parenthetical explanation as a separate sentence."
+  },
+  {
+    "id": "B770",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "\\underline{Se dice que $S$, provisto de $u$, satisface (LV), el teorema",
+    "tr_new": "\\underline{Se dice que $S$, provisto de} $u$\\underline{, satisface (LV), el teorema"
+  },
+  {
+    "id": "C752",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "H^{2n-i+2}\\bigl(S,\\mathbb Q_\\ell(\n  \\sisi{j+2n-2i+2}{j+n-i+1})\\bigr)\n\\right)."
+  },
+  {
+    "id": "C753",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B771",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "\\arrow[r,\"L_Y^{i+1}\"]",
+    "tr_new": "\\arrow[r,\"L_Y^{i+1}\"{yshift=7pt},\"\\sim\"]"
+  },
+  {
+    "id": "B772",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "\\arrow[r,\"L_Y^{i+1}\"]",
+    "note": "covered by B771"
+  },
+  {
+    "id": "B773",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "\\arrow[r,\"L_Y^{i+1}\"]",
+    "note": "covered by B771"
+  },
+  {
+    "id": "C754",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C755",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "\\operatorname{Ker}\\!\\left(\n H^{n+1}(\\widetilde X,\\mathbb Q_\\ell)\n \\longrightarrow H^0(\\mathbb P^1,R^{n+1}\\rho_*\\mathbb Q_\\ell)\n \\right)"
+  },
+  {
+    "id": "C756",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C757",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C758",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C759",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XVIII_ES.tex",
+    "tr_old": "(dependiente de un camino en $T$ desde $\\bar\\eta$ hasta $o$, y por\ntanto definido salvo conjugación)"
+  },
+  {
+    "id": "C760",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C761",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C762",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C763",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIX_ES.tex",
+    "tr_old": "Si se verifican las condiciones equivalentes de 3.3, el argumento de",
+    "tr_new": "Si se verifican las condiciones equivalentes de \\sisi{3.3}{3.4}, el argumento de"
+  },
+  {
+    "id": "C764",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C765",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXI_ES.tex",
+    "tr_old": "Un esquema propio sobre un cuerpo $k$",
+    "tr_new": "Un esquema propio\\sisi{}{ $X$} sobre un cuerpo $k$"
+  },
+  {
+    "id": "C766",
+    "decision": "not_applicable",
+    "note": "The Spanish places «respectivamente» outside the display and uses no enclosing parenthesis."
+  },
+  {
+    "id": "C767",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C768",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Las afirmaciones (5.0.4) y (5.0.2)\nson equivalentes",
+    "tr_new": "Las afirmaciones \\sisi{(5.0.4)}{(5.0.5)} y (5.0.2)\nson equivalentes"
+  }
+]
+```

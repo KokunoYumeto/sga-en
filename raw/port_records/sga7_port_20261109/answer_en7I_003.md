@@ -1,0 +1,690 @@
+```json
+[
+  {
+    "id": "C482",
+    "decision": "not_applicable",
+    "note": "Removal of a stray French running heading."
+  },
+  {
+    "id": "C492",
+    "decision": "not_applicable",
+    "note": "Removal of a stray French running heading."
+  },
+  {
+    "id": "C483",
+    "decision": "already",
+    "tr_file": "components/135_expose_IX_section_2_5_and_remarks_2_6.tex",
+    "tr_old": "\\end{tikzcd}\n\\qquad ,"
+  },
+  {
+    "id": "C484",
+    "decision": "already",
+    "tr_file": "components/135_expose_IX_section_2_5_and_remarks_2_6.tex",
+    "tr_old": " && V\\arrow[dl,hook',\"2\\lambda\"'] && \\\\\n U & W^\\perp=V+V^\\perp\\arrow[l,hook',\"\\mu\"']\n && W=V\\cap V^\\perp\n    \\arrow[ul,hook',\"2\\alpha\"']\n    \\arrow[dl,hook,\"2\\lambda\"]\n & 0\\arrow[l,hook',\"\\mu\"'] \\\\\n && V^\\perp\\arrow[ul,hook,\"2\\alpha\"] &&"
+  },
+  {
+    "id": "C485",
+    "decision": "already",
+    "tr_file": "components/136_expose_IX_section_3_1.tex",
+    "tr_old": "hypotheses of c), and $(K_{\\bar s})^o_{\\mathrm{red}}$ is unipotent."
+  },
+  {
+    "id": "C486",
+    "decision": "apply",
+    "tr_file": "components/136_expose_IX_section_3_1.tex",
+    "tr_old": "\\underline{If $\\operatorname{rank}K_\\eta\\leq1$ for every maximal point",
+    "tr_new": "\\underline{If $\\operatorname{rank}$} $K_\\eta\\leq1$ \\underline{for every maximal point"
+  },
+  {
+    "id": "C487",
+    "decision": "apply",
+    "tr_file": "components/136_expose_IX_section_3_1.tex",
+    "tr_old": "$\\eta$ of $S$, then $K\\longrightarrow S$ is an open immersion",
+    "tr_new": "$\\eta$ of} $S$, \\underline{then $K\\longrightarrow S$ is an open immersion"
+  },
+  {
+    "id": "C488",
+    "decision": "already",
+    "tr_file": "components/136_expose_IX_section_3_1.tex",
+    "tr_old": "$K\\longrightarrow S$ is a monomorphism (SGA 3, VI$_B$, 2.11)"
+  },
+  {
+    "id": "C489",
+    "decision": "apply",
+    "tr_file": "components/137_expose_IX_sections_3_2_through_3_4.tex",
+    "tr_old": "locally noetherian scheme of dimension $1$, let $K$ be its field of rational",
+    "tr_new": "locally noetherian scheme of dimension} $1$, \\underline{let $K$ be its field of rational"
+  },
+  {
+    "id": "C490",
+    "decision": "apply",
+    "tr_file": "components/137_expose_IX_sections_3_2_through_3_4.tex",
+    "tr_old": "model over $S$, which is a smooth separated group scheme over $S$ (and is\nquasi-projective",
+    "tr_new": "model over $S$, which is a smooth separated group scheme over $S$} (\\underline{and is\nquasi-projective"
+  },
+  {
+    "id": "C491",
+    "decision": "apply",
+    "tr_file": "components/138_expose_IX_sections_3_5_through_3_9.tex",
+    "tr_old": "\\underline{(Galois criterion for semistable\nreduction).  Suppose",
+    "tr_new": "(\\underline{Galois criterion for semistable\nreduction}).  \\underline{Suppose"
+  },
+  {
+    "id": "C493",
+    "decision": "apply",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "\\underline{such that $A_{\\widetilde K'}$ has\nsemistable reduction}",
+    "tr_new": "\\underline{such that} $A_{\\widetilde K'}$ \\underline{has\nsemistable reduction}"
+  },
+  {
+    "id": "C494",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "$\\mathbb Z_\\ell(1)=T_\\ell(\\overline K^*)$"
+  },
+  {
+    "id": "C495",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "\\underline{acts on $A^*$, and hence on $A^{*o}$, by automorphisms in a"
+  },
+  {
+    "id": "C496",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "U^{\\mathrm{ef}}=T_\\ell(A^{*o})^f(\\overline K)"
+  },
+  {
+    "id": "C497",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "$\\pi'$ on $(A^{*o}/K',\\widetilde K')$}"
+  },
+  {
+    "id": "C498",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "U^{\\mathrm{ef}}\\simeq T_\\ell(A^{*o})^f(\\overline K)\n \\simeq T_\\ell(A^{*o}_o)(\\overline k)"
+  },
+  {
+    "id": "C499",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "Consider the smooth connected group scheme $A^{*o}_o$ over the residue"
+  },
+  {
+    "id": "C500",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "$\\pi'$ acts on $A^{*o}_o$ compatibly with its action on $k'$ through"
+  },
+  {
+    "id": "C501",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "$(A^{*o}_o/k',\\overline k)$.  Thus, by transport of structure"
+  },
+  {
+    "id": "C502",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "U^{\\mathrm{ef}}=T_\\ell(A^{*o}_o)(\\overline k),"
+  },
+  {
+    "id": "C503",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "$\\Gamma$ of $G$, which acts trivially on $k'$, acts on $A^{*o}_o$ by\n$k'$-automorphisms"
+  },
+  {
+    "id": "C504",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "$\\Gamma=I/I'$ on $T_\\ell(A^{*o}_o)(\\overline k)$ is the representation"
+  },
+  {
+    "id": "C505",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "\\subset U^{\\mathrm{ef}}\\simeq T_\\ell(A^{*o}_o)(\\overline k),"
+  },
+  {
+    "id": "C506",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "where $T^*_o$ is the largest subtorus of $A^{*o}_o$."
+  },
+  {
+    "id": "C507",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "B^*_o=A^{*o}_o/T^*_o"
+  },
+  {
+    "id": "C508",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "for the abelian part of $A^{*o}_o$."
+  },
+  {
+    "id": "C509",
+    "decision": "already",
+    "tr_file": "components/139_expose_IX_sections_4_1_and_4_2.tex",
+    "tr_old": "The action of $G$ on $A^{*o}_o$\ninduces separately actions"
+  },
+  {
+    "id": "C510",
+    "decision": "apply",
+    "tr_file": "components/140_expose_IX_theorem_4_3_and_corollary_4_4.tex",
+    "tr_old": "the trace (and, more generally, every\ncoefficient of the characteristic polynomial) of $g_{U_\\ell}$",
+    "tr_new": "the trace} (\\underline{and, more generally, every\ncoefficient of the characteristic polynomial}) \\underline{of $g_{U_\\ell}$"
+  },
+  {
+    "id": "C512",
+    "decision": "apply",
+    "tr_file": "components/140_expose_IX_theorem_4_3_and_corollary_4_4.tex",
+    "tr_old": "respectively, $q^n$, $q^{n/2}$, and $1$.  For the two extreme pieces one",
+    "tr_new": "respectively, $q^n$, $q^{n/2}$, and} $1$.  \\underline{For the two extreme pieces one"
+  },
+  {
+    "id": "C513",
+    "decision": "apply",
+    "tr_file": "components/141_expose_IX_sections_4_5_through_4_7.tex",
+    "tr_old": "The (total) conductor\nexponent of $A_K$",
+    "tr_new": "\\underline{The} (total) \\underline{conductor\nexponent} of $A_K$"
+  },
+  {
+    "id": "C514",
+    "decision": "apply",
+    "tr_file": "components/141_expose_IX_sections_4_5_through_4_7.tex",
+    "tr_old": "representation of $\\Gamma$ on $\\check L$, we obtain",
+    "tr_new": "representation of $I$ on $\\check L$, we obtain"
+  },
+  {
+    "id": "C515",
+    "decision": "already",
+    "tr_file": "components/141_expose_IX_sections_4_5_through_4_7.tex",
+    "tr_old": "Taking $L=\\operatorname{Sw}$, the same is true"
+  },
+  {
+    "id": "C511",
+    "decision": "apply",
+    "tr_file": "components/142_expose_IX_section_5_1.tex",
+    "tr_old": "\\underline{5. The orthogonality theorem in the case $\\ell=p$\n(semistable case).  Duality",
+    "tr_new": "\\underline{5. The orthogonality theorem in the case $\\ell=p$}\n(\\underline{semistable case}).  \\underline{Duality"
+  },
+  {
+    "id": "C516",
+    "decision": "apply",
+    "tr_file": "components/143_expose_IX_theorem_5_2.tex",
+    "tr_old": "homomorphism of pro-$\\ell$ Barsotti--Tate groups over $S$.  If",
+    "tr_new": "homomorphism of pro}-$\\ell$ \\underline{Barsotti--Tate groups over $S$.  If"
+  },
+  {
+    "id": "C517",
+    "decision": "not_applicable",
+    "note": "French spelling correction."
+  },
+  {
+    "id": "C518",
+    "decision": "apply",
+    "tr_file": "components/145_expose_IX_sections_5_5_and_5_6.tex",
+    "tr_old": "prime number $\\ell$ (which may equal the residue characteristic of\n$S$), the pro-$\\ell$ Barsotti--Tate group",
+    "tr_new": "prime number $\\ell$} (\\underline{which may equal the residue characteristic of\n$S$}), \\underline{the pro}-$\\ell$ \\underline{Barsotti--Tate group"
+  },
+  {
+    "id": "C519",
+    "decision": "already",
+    "tr_file": "components/145_expose_IX_sections_5_5_and_5_6.tex",
+    "tr_old": "the pro-$\\ell$ Barsotti--Tate group $T_\\ell(A_K)^t$",
+    "note": "covered by C518"
+  },
+  {
+    "id": "C520",
+    "decision": "not_applicable",
+    "note": "French word-separation typo."
+  },
+  {
+    "id": "C521",
+    "decision": "apply",
+    "tr_file": "components/146_expose_IX_proposition_5_7_through_corollary_5_10.tex",
+    "tr_old": "scheme over the function field $K$ of a trait $S$, and let $\\ell$ be",
+    "tr_new": "scheme over the function field} $K$ \\underline{of a trait $S$, and let $\\ell$ be"
+  },
+  {
+    "id": "C522",
+    "decision": "already",
+    "tr_file": "components/147_expose_IX_remark_5_11_through_corollary_5_15.tex",
+    "tr_old": "a prime number, and let $X_\\eta$ be a pro-$\\ell$ Barsotti--Tate group\nover the generic point $\\eta$ of $S$.",
+    "note": "The letter ell is not underlined."
+  },
+  {
+    "id": "C523",
+    "decision": "already",
+    "tr_file": "components/147_expose_IX_remark_5_11_through_corollary_5_15.tex",
+    "tr_old": "\\bigl(\\operatorname{Fil}^i(X_\\eta)\\bigr)_{i\\geq0}\n\\]\nby strict Barsotti--Tate subgroups",
+    "note": "The mathematical object is outside prose underlining."
+  },
+  {
+    "id": "C524",
+    "decision": "already",
+    "tr_file": "components/147_expose_IX_remark_5_11_through_corollary_5_15.tex",
+    "tr_old": "reduction (respectively, virtual good reduction, respectively, virtual\ngood reduction of level $n$) over the normalization",
+    "note": "The level and closing parenthesis are not underlined."
+  },
+  {
+    "id": "C525",
+    "decision": "already",
+    "tr_file": "components/147_expose_IX_remark_5_11_through_corollary_5_15.tex",
+    "tr_old": "Let $S$ be a trait with function field $K$, let $A_K$ be an abelian",
+    "note": "The letter S is not underlined."
+  },
+  {
+    "id": "C526",
+    "decision": "already",
+    "tr_file": "components/147_expose_IX_remark_5_11_through_corollary_5_15.tex",
+    "tr_old": "(U_{\\ell\\mathbb Q_\\ell})^f\n \\stackrel{\\mathrm{def}}{=}(U_\\ell^f)_{\\mathbb Q_\\ell}",
+    "note": "The definition marker on this page is already not underlined."
+  },
+  {
+    "id": "C527",
+    "decision": "apply",
+    "tr_file": "components/148_expose_IX_section_6.tex",
+    "tr_old": "T_p(A_K)^{\\mathrm{et}}\n   &=\\bigl(T_p(A'_{K'})^{\\mathrm{ef}}\\bigr)^\\perp,\\\\\n T_p(A_K)^{\\mathrm{ef}}\n   &=\\bigl(T_p(A'_{K'})^{\\mathrm{et}}\\bigr)^\\perp.",
+    "tr_new": "T_p(A_K)^{\\mathrm{et}}\n   &=\\bigl(T_p(A'_K)^{\\mathrm{ef}}\\bigr)^\\perp,\\\\\n T_p(A_K)^{\\mathrm{ef}}\n   &=\\bigl(T_p(A'_K)^{\\mathrm{et}}\\bigr)^\\perp."
+  },
+  {
+    "id": "C528",
+    "decision": "apply",
+    "tr_file": "components/154_expose_IX_proposition_7_5_and_section_7_6.tex",
+    "tr_old": "The formation of $W^{ab}$ is compatible with the formation of\npullbacks of correspondences by morphisms of abelian schemes\n$\\overline A_K\\longrightarrow A_K$ and\n$\\overline {A'}_K\\longrightarrow A'_K$. If $W_K$ is a perfect\nduality, then so is $W^{ab}$. If $W_K$ is the divisorial\ncorrespondence on $(A_K,A_K)$ associated with a polarization of\n$A_K$, then $W^{ab}$ is associated with a polarization of $A^{ab}$.}",
+    "tr_new": "The formation of} $W^{ab}$ \\underline{is compatible with the formation of\npullbacks of correspondences by morphisms of abelian schemes}\n$\\overline A_K\\longrightarrow A_K$ \\underline{and}\n$\\overline {A'}_K\\longrightarrow A'_K$. \\underline{If} $W_K$ \\underline{is a perfect\nduality}, \\underline{then so is} $W^{ab}$. \\underline{If} $W_K$ \\underline{is the divisorial\ncorrespondence on} $(A_K,A_K)$ \\underline{associated with a polarization of}\n$A_K$, \\underline{then} $W^{ab}$ \\underline{is associated with a polarization of} $A^{ab}$."
+  },
+  {
+    "id": "C529",
+    "decision": "already",
+    "tr_file": "components/154_expose_IX_proposition_7_5_and_section_7_6.tex",
+    "tr_old": "If $W_K$ is a perfect\nduality, then so is $W^{ab}$.",
+    "note": "covered by C528"
+  },
+  {
+    "id": "C530",
+    "decision": "already",
+    "tr_file": "components/154_expose_IX_proposition_7_5_and_section_7_6.tex",
+    "tr_old": "If $W_K$ is the divisorial\ncorrespondence on $(A_K,A_K)$ associated with a polarization of\n$A_K$, then $W^{ab}$ is associated with a polarization of $A^{ab}$.}",
+    "note": "covered by C528"
+  },
+  {
+    "id": "C531",
+    "decision": "apply",
+    "tr_file": "components/155_expose_IX_section_8_1.tex",
+    "tr_old": "8. \\underline{The Raynaud extension $A_K^{\\natural o}$ in the\nnon-semistable case, and the ind-group $A_K^{\\flat}$}",
+    "tr_new": "8. \\underline{The Raynaud extension} $A_K^{\\natural o}$ \\underline{in the\nnon-semistable case}, \\underline{and the ind-group} $A_K^{\\flat}$"
+  },
+  {
+    "id": "C579",
+    "decision": "already",
+    "tr_file": "components/155_expose_IX_section_8_1.tex",
+    "tr_old": "0 \\longrightarrow T'_K \\longrightarrow {A'_K}^{\\natural o}\n \\longrightarrow B'_K \\longrightarrow 0"
+  },
+  {
+    "id": "C532",
+    "decision": "apply",
+    "tr_file": "components/158_expose_IX_section_9_2.tex",
+    "tr_old": "W'\\simeq T_{\\ell}(T'_o)(\\overline k)",
+    "tr_new": "W'\\simeq T_{\\ell}(T'_o(\\overline k))"
+  },
+  {
+    "id": "C533",
+    "decision": "not_applicable",
+    "note": "French spelling correction."
+  },
+  {
+    "id": "C580",
+    "decision": "apply",
+    "tr_file": "components/159_expose_IX_section_9_3.tex",
+    "tr_old": "Given two extensions $E$ and $F$ as in\n",
+    "tr_new": "Given two extensions} $E$ \\underline{and} $F$ \\underline{as in\n"
+  },
+  {
+    "id": "C581",
+    "decision": "apply",
+    "tr_file": "components/159_expose_IX_section_9_3.tex",
+    "tr_old": "in the abelian category $\\underline C$, consider the category",
+    "tr_new": "in the abelian category $\\mathbf C$, consider the category"
+  },
+  {
+    "id": "C582",
+    "decision": "apply",
+    "tr_file": "components/159_expose_IX_section_9_3.tex",
+    "tr_old": "$\\operatorname{EXTPAN}(E,F)$ of mixed extensions of $E$ by $F$. Then:}",
+    "tr_new": "$\\operatorname{EXTPAN}(E,F)$ of mixed extensions of} $E$ \\underline{by} $F$. \\underline{Then:}"
+  },
+  {
+    "id": "C583",
+    "decision": "apply",
+    "tr_file": "components/159_expose_IX_section_9_3.tex",
+    "tr_old": "existence of a mixed extension of $E$ by $F$.}",
+    "tr_new": "existence of a mixed extension of} $E$ \\underline{by} $F$."
+  },
+  {
+    "id": "C534",
+    "decision": "apply",
+    "tr_file": "components/159_expose_IX_section_9_3.tex",
+    "tr_old": "& \\operatorname{EXTPAN}(E',F').\n\\end{tikzcd}",
+    "tr_new": "& \\operatorname{EXTPAN}(E',F') \\quad ,\n\\end{tikzcd}"
+  },
+  {
+    "id": "C535",
+    "decision": "not_applicable",
+    "note": "French diagram-comment and layout cleanup."
+  },
+  {
+    "id": "C536",
+    "decision": "already",
+    "tr_file": "components/160_expose_IX_section_9_4.tex",
+    "tr_old": "a) \\underline{canonical isomorphisms}\n\n\\begin{equation*}\n\\operatorname{Ext}^i_\\Lambda(Q,P)",
+    "note": "The English already supplies the label (a) as a list label."
+  },
+  {
+    "id": "C584",
+    "decision": "apply",
+    "tr_file": "components/160_expose_IX_section_9_4.tex",
+    "tr_old": "H^i(S,D(H))\\simeq H^i(\\eta,D(H)_\\eta)=0",
+    "tr_new": "H^i(S,D(H))=H^i(\\eta,D(H)_\\eta)=0"
+  },
+  {
+    "id": "C537",
+    "decision": "already",
+    "tr_file": "components/160_expose_IX_section_9_4.tex",
+    "tr_old": "e)\n\\begin{equation*}\nH^1(\\eta,D(H)_\\eta)/\\operatorname{Im}H^1(S,D(H))",
+    "note": "The English already supplies the label (e) outside the display."
+  },
+  {
+    "id": "C538",
+    "decision": "apply",
+    "tr_file": "components/160_expose_IX_section_9_4.tex",
+    "tr_old": "\\underline{and hence, on combining (a) and (b), a canonical isomorphism}",
+    "tr_new": "\\underline{and hence, on combining} (a) \\underline{and} (b), \\underline{a canonical isomorphism}"
+  },
+  {
+    "id": "C539",
+    "decision": "apply",
+    "tr_file": "components/160_expose_IX_section_9_4.tex",
+    "tr_old": "henselization $S^h$ of $S$. Then the functor",
+    "tr_new": "henselization $S^h$ of} $S$. \\underline{Then the functor",
+    "note": "Applied to the matching phrase on this page."
+  },
+  {
+    "id": "C586",
+    "decision": "apply",
+    "tr_file": "components/161_expose_IX_section_9_5.tex",
+    "tr_old": "when $\\operatorname{char}K=0$ (so that\nTate's theorem [33, Theorem 4] applies), $X_\\eta$ belongs",
+    "tr_new": "when $\\operatorname{char}K=0$} (\\underline{so that\nTate's theorem [33, Theorem 4] applies}), \\underline{$X_\\eta$ belongs"
+  },
+  {
+    "id": "C587",
+    "decision": "apply",
+    "tr_file": "components/161_expose_IX_section_9_5.tex",
+    "tr_old": "is zero. Moreover,",
+    "tr_new": "is zero}. \\underline{Moreover,"
+  },
+  {
+    "id": "C540",
+    "decision": "not_applicable",
+    "note": "French prose sentence punctuation."
+  },
+  {
+    "id": "C585",
+    "decision": "not_applicable",
+    "note": "French spelling correction."
+  },
+  {
+    "id": "C541",
+    "decision": "not_applicable",
+    "note": "French prose sentence punctuation."
+  },
+  {
+    "id": "C542",
+    "decision": "not_applicable",
+    "note": "The English reformulates the French parenthetical passage; it has no parenthesis to close."
+  },
+  {
+    "id": "C543",
+    "decision": "not_applicable",
+    "note": "French diagram-comment and layout cleanup."
+  },
+  {
+    "id": "C544",
+    "decision": "apply",
+    "tr_file": "components/164_expose_IX_sections_10_3_and_10_4.tex",
+    "tr_old": "\\underline{Theorem \\SGARefTarget{sga7.sga7i.eix.n10-4}{10.4}.}",
+    "tr_new": "\\underline{Theorem} \\SGARefTarget{sga7.sga7i.eix.n10-4}{10.4}."
+  },
+  {
+    "id": "C545",
+    "decision": "apply",
+    "tr_file": "components/167_expose_IX_section_11_3.tex",
+    "tr_old": "where $R$ is a profinite group \\underline{prime to $\\ell$}.",
+    "tr_new": "where $R$ is a profinite group \\underline{prime to} $\\ell$."
+  },
+  {
+    "id": "C546",
+    "decision": "already",
+    "tr_file": "components/168_expose_IX_sections_11_4_and_11_5.tex",
+    "tr_old": "$\\Phi_o(\\ell)$ in terms of the Barsotti--Tate group $T_\\ell(A_K)$ over\n$K$; in the present case this will play the same role",
+    "note": "The page-local K is already in math mode."
+  },
+  {
+    "id": "C547",
+    "decision": "apply",
+    "tr_file": "components/168_expose_IX_sections_11_4_and_11_5.tex",
+    "tr_old": "\\Phi_o(\\ell)\\xrightarrow{\\ \\sim\\ }\\Phi(\\ell)\\times_S s.",
+    "tr_new": "\\Phi_o(\\ell)\\simeq\\Phi(\\ell)\\times_S s."
+  },
+  {
+    "id": "C548",
+    "decision": "apply",
+    "tr_file": "components/168_expose_IX_sections_11_4_and_11_5.tex",
+    "tr_old": "\\Phi'_o(\\ell)\\xrightarrow{\\ \\sim\\ }\\Phi'(\\ell)\\times_S s,",
+    "tr_new": "\\Phi'_o(\\ell)\\simeq\\Phi'(\\ell)\\times_S s,"
+  },
+  {
+    "id": "C549",
+    "decision": "apply",
+    "tr_file": "components/168_expose_IX_sections_11_4_and_11_5.tex",
+    "tr_old": "\\Phi_o\\xrightarrow{\\ \\sim\\ }\\Phi\\times_S s.",
+    "tr_new": "\\Phi_o\\simeq\\Phi\\times_S s."
+  },
+  {
+    "id": "C550",
+    "decision": "apply",
+    "tr_file": "components/169_expose_IX_section_11_6_opening_through_lemma_11_6_13.tex",
+    "tr_old": "\\Phi_o(\\ell)\\xrightarrow{\\ \\sim\\ }\n \\ker\\bigl(\\widetilde u_\\ell\\otimes D_\\ell:",
+    "tr_new": "\\Phi_o(\\ell)\\simeq\n \\ker\\bigl(\\widetilde u_\\ell\\otimes D_\\ell:"
+  },
+  {
+    "id": "C551",
+    "decision": "apply",
+    "tr_file": "components/169_expose_IX_section_11_6_opening_through_lemma_11_6_13.tex",
+    "tr_old": "\\Phi(\\ell)=\\operatorname{coker}\\widetilde u_\\ell\n \\xrightarrow{\\ \\sim\\ }\n \\ker(\\widetilde u_\\ell\\otimes D_\\ell).",
+    "tr_new": "\\Phi(\\ell)=\\operatorname{coker}\\widetilde u_\\ell\n \\simeq\n \\ker(\\widetilde u_\\ell\\otimes D_\\ell)."
+  },
+  {
+    "id": "C552",
+    "decision": "apply",
+    "tr_file": "components/169_expose_IX_section_11_6_opening_through_lemma_11_6_13.tex",
+    "tr_old": "V=M_\\ell\\otimes\\mathbb Q_\\ell\n \\xrightarrow{\\ \\sim\\ }\\check M'_\\ell\\otimes\\mathbb Q_\\ell.",
+    "tr_new": "V=M_\\ell\\otimes\\mathbb Q_\\ell\n \\simeq\\check M'_\\ell\\otimes\\mathbb Q_\\ell."
+  },
+  {
+    "id": "C588",
+    "decision": "already",
+    "tr_file": "components/171_expose_IX_sections_11_8_through_11_11.tex",
+    "tr_old": "namely $A_K^{\\flat}/{A_K^{\\flat}}^o$, is canonically isomorphic to}"
+  },
+  {
+    "id": "C589",
+    "decision": "already",
+    "tr_file": "components/171_expose_IX_sections_11_8_through_11_11.tex",
+    "tr_old": "$K$ of connected components of the group scheme $A_K^{\\flat}$,"
+  },
+  {
+    "id": "C590",
+    "decision": "apply",
+    "tr_file": "components/172_expose_IX_section_12_1_through_12_2.tex",
+    "tr_old": "\\underline{(thus a power of the characteristic\nexponent of $k$). Let $d$",
+    "tr_new": "(\\underline{thus a power of the characteristic\nexponent of $k$}). \\underline{Let $d$",
+    "note": "Applied to the page-local parenthetical clause."
+  },
+  {
+    "id": "C553",
+    "decision": "apply",
+    "tr_file": "components/172_expose_IX_section_12_1_through_12_2.tex",
+    "tr_old": "P^o\\cap E=\\underline{\\text{the zero section of }P}",
+    "tr_new": "P^o\\cap E=\\underline{\\text{the zero section of }}P"
+  },
+  {
+    "id": "C554",
+    "decision": "apply",
+    "tr_file": "components/172_expose_IX_section_12_1_through_12_2.tex",
+    "tr_old": "\n\\end{equation}\n\n\\noindent\nc)",
+    "tr_new": " \\quad .\n\\end{equation}\n\n\\noindent\nc)",
+    "note": "Adds the period to the page-local display preceding c)."
+  },
+  {
+    "id": "C555",
+    "decision": "apply",
+    "tr_file": "components/172_expose_IX_section_12_1_through_12_2.tex",
+    "tr_old": "\\underline{\\operatorname{Pic}}^o_{X_\\eta/\\eta}.\n\\end{equation}",
+    "tr_new": "\\underline{\\operatorname{Pic}}^o_{X_\\eta/\\eta} \\quad .\n\\end{equation}",
+    "note": "The period is already present; this retains the edition's display-punctuation spacing."
+  },
+  {
+    "id": "C556",
+    "decision": "already",
+    "tr_file": "components/172_expose_IX_section_12_1_through_12_2.tex",
+    "tr_old": "P^o\\xrightarrow{\\ \\sim\\ }A^o.\n\\end{equation}"
+  },
+  {
+    "id": "C557",
+    "decision": "already",
+    "tr_file": "components/176_expose_IX_section_12_8_opening_through_before_12_8_9.tex",
+    "tr_old": "\\underline S & S \\arrow[l,\"g\"']\n\\end{tikzcd}\n\\qquad ."
+  },
+  {
+    "id": "C558",
+    "decision": "not_applicable",
+    "note": "French diagram-comment and punctuation-placement cleanup."
+  },
+  {
+    "id": "C559",
+    "decision": "already",
+    "tr_file": "components/177_expose_IX_section_12_8_9_through_12_10.tex",
+    "tr_old": "& \\mathbb Z & \\qquad .\n\\end{tikzcd}"
+  },
+  {
+    "id": "C560",
+    "decision": "already",
+    "tr_file": "components/177_expose_IX_section_12_8_9_through_12_10.tex",
+    "tr_old": "& \\mathbb Z_\\ell & \\qquad ,\n\\end{tikzcd}"
+  },
+  {
+    "id": "C561",
+    "decision": "apply",
+    "tr_file": "components/179_expose_IX_section_13_3.tex",
+    "tr_old": "complex torus $(*)$\ntherefore gives rise",
+    "tr_new": "complex torus} $(*)$\n\\underline{therefore gives rise"
+  },
+  {
+    "id": "C562",
+    "decision": "apply",
+    "tr_file": "components/179_expose_IX_section_13_3.tex",
+    "tr_old": "in a neighbourhood of $s$, to a unique\nextension structure}",
+    "tr_new": "in a neighbourhood of} $s$, \\underline{to a unique\nextension structure}"
+  },
+  {
+    "id": "C563",
+    "decision": "apply",
+    "tr_file": "components/180_expose_IX_section_13_4.tex",
+    "tr_old": "constant analytic groups over $S$, with values free $\\mathbb Z$-modules",
+    "tr_new": "constant analytic groups over} $S$, \\underline{with values free $\\mathbb Z$-modules"
+  },
+  {
+    "id": "C564",
+    "decision": "not_applicable",
+    "note": "French prose punctuation; the English uses a different sentence construction."
+  },
+  {
+    "id": "C565",
+    "decision": "already",
+    "tr_file": "components/181_expose_IX_section_13_5.tex",
+    "tr_old": "T_\\ell(A_{\\underline O})\\times T_\\ell(A'_{\\underline O})\n \\longrightarrow\\mathbb Z_\\ell(1)_S"
+  },
+  {
+    "id": "C566",
+    "decision": "already",
+    "tr_file": "components/181_expose_IX_section_13_5.tex",
+    "tr_old": "$W_{\\underline O}$ of $(A_{\\underline O},A'_{\\underline O})$."
+  },
+  {
+    "id": "C567",
+    "decision": "already",
+    "tr_file": "components/181_expose_IX_section_13_5.tex",
+    "tr_old": "the algebraic results concerning the\n$T_\\ell(A_{\\underline O})$ can be used"
+  },
+  {
+    "id": "C568",
+    "decision": "apply",
+    "tr_file": "components/182_expose_IX_section_14_1.tex",
+    "tr_old": "G_K^{\\mathrm{an}} \\arrow[r] & A_K^{\\mathrm{an}}\n\\end{tikzcd}\n\\end{equation}",
+    "tr_new": "G_K^{\\mathrm{an}} \\arrow[r] & A_K^{\\mathrm{an}}\n\\end{tikzcd} \\quad ,\n\\end{equation}",
+    "note": "Adds the comma to the page-local diagram (14.1.11)."
+  },
+  {
+    "id": "C569",
+    "decision": "not_applicable",
+    "note": "French diagram-comment clarification."
+  },
+  {
+    "id": "C570",
+    "decision": "already",
+    "tr_file": "components/183_expose_IX_section_14_2.tex",
+    "tr_old": "$\\underline M_K^{\\mathrm{an}}$ is torsion-free and\n$G_K^{\\mathrm{an}}$ is $n$-divisible"
+  },
+  {
+    "id": "C571",
+    "decision": "apply",
+    "tr_file": "components/183_expose_IX_section_14_2.tex",
+    "tr_old": "one finds that \\underline{the monodromy\nhomomorphism}",
+    "tr_new": "one finds that the \\underline{monodromy\nhomomorphism}"
+  },
+  {
+    "id": "C572",
+    "decision": "apply",
+    "tr_file": "components/184_expose_IX_section_14_3.tex",
+    "tr_old": "T_\\ell(G_U) \\arrow[r] \\arrow[d,equal]",
+    "tr_new": "T_\\ell(G_U) \\arrow[r] \\arrow[d,dash,\"\\wr\"']",
+    "note": "Corrects the vertical identification in (14.3.5.3)."
+  },
+  {
+    "id": "C573",
+    "decision": "not_applicable",
+    "note": "French diagram-comment correction; the corresponding sign is handled by C572."
+  },
+  {
+    "id": "C575",
+    "decision": "already",
+    "tr_file": "components/185_expose_IX_sections_14_4_and_14_5.tex",
+    "tr_old": "applied to the pullback to $S'$ of the situation over $S$, since the",
+    "note": "The missing phrase is already translated."
+  }
+]
+```
+
+components/133_expose_IX_section_2_2.tex, proof of 2.2.5: “the rightmost term” should be the middle term of (*); otherwise the argument does not prove the asserted equality.
+components/140_expose_IX_theorem_4_3_and_corollary_4_4.tex, 4.3(b) and its proof: `f_q^{,n}` contains a spurious comma in the exponent.
+components/172_expose_IX_section_12_1_through_12_2.tex, 12.1(c): the Néron universal property concerns the generic fibre, not “its special fibre.”
+components/183_expose_IX_section_14_2.tex, paragraph following (14.2.4): the previously considered biextension is in 14.1, not 4.1.
+components/184_expose_IX_section_14_3.tex, 14.3.5: “In 7.22” should refer to 7.2.2.
+components/185_expose_IX_sections_14_4_and_14_5.tex, 14.4.3: the uniqueness result is 14.3.4, not the linked 4.3.

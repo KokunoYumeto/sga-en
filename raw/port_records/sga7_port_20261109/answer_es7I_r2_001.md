@@ -1,0 +1,596 @@
+```json
+[
+  {
+    "id": "C606",
+    "decision": "already",
+    "tr_file": "units/01_expose_i/EXPOSE_I_ES.tex",
+    "tr_old": "resolución de singularidades al modo de Hironaka"
+  },
+  {
+    "id": "C607",
+    "decision": "apply",
+    "tr_file": "units/01_expose_i/EXPOSE_I_ES.tex",
+    "tr_old": "Sean $\\eta$ un punto geométrico genérico de $S$",
+    "tr_new": "Sean $\\sisi{\\eta}{\\bar\\eta}$ un punto geométrico genérico de $S$"
+  },
+  {
+    "id": "C608",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C609",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C610",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C611",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C612",
+    "decision": "apply",
+    "tr_file": "units/01_expose_i/EXPOSE_I_ES.tex",
+    "tr_old": "$\\phi^i_{gl} = H^i_{X_s}(\\bar{X}\\;,\\Lambda)$",
+    "tr_new": "$\\phi^i_{gl} = H^{\\sisi{i}{i+1}}_{X_s}(\\bar{X}\\;,\\Lambda)$"
+  },
+  {
+    "id": "C613",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C614",
+    "decision": "apply",
+    "tr_file": "units/01_expose_i/EXPOSE_I_ES.tex",
+    "tr_old": "Para $S$ la normalización de $S$ en $\\bar{\\eta}$",
+    "tr_new": "Para $\\sisi{S}{\\bar{S}}$ la normalización de $S$ en $\\bar{\\eta}$"
+  },
+  {
+    "id": "C615",
+    "decision": "apply",
+    "tr_file": "units/01_expose_i/EXPOSE_I_ES.tex",
+    "tr_old": "bajo las hipótesis de 4.5, (a) es aplicable para $m =$ $\\infty$",
+    "tr_new": "bajo las hipótesis de 4.5, \\sisi{(a)}{(1)} es aplicable para $m =$ $\\infty$"
+  },
+  {
+    "id": "C616",
+    "decision": "apply",
+    "tr_file": "units/01_expose_i/EXPOSE_I_ES.tex",
+    "tr_old": "para los $\\phi^i_{\\Lambda}$ relativos a $\\Lambda'$",
+    "tr_new": "para los $\\phi^i_{\\sisi{\\Lambda}{\\Lambda'}}$ relativos a $\\Lambda'$"
+  },
+  {
+    "id": "C617",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C618",
+    "decision": "already",
+    "tr_file": "units/01_expose_i/EXPOSE_I_ES.tex",
+    "tr_old": "(por tanto, $V_{\\ell}(A^{*})^{I}$ y $V_{\\ell}(A)_{I}$) están en dualidad"
+  },
+  {
+    "id": "C619",
+    "decision": "already",
+    "tr_file": "units/02_expose_ii/EXPOSE_II_ES.tex",
+    "tr_old": "sustituir el abierto considerado por $U \\cap U_1$",
+    "note": "«El abierto considerado» designa U."
+  },
+  {
+    "id": "C620",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C621",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C622",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C623",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_10_ES.tex",
+    "tr_old": "entonces\n$[\\underline A(k[\\varepsilon])]$ está provisto canónicamente de una\nestructura de espacio vectorial"
+  },
+  {
+    "id": "C624",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_11_ES.tex",
+    "tr_old": "a\\mathrel{\\mathop{\\rightleftarrows}^{\\gamma}_{\\alpha_1}}h_*a,"
+  },
+  {
+    "id": "C625",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_11_ES.tex",
+    "tr_old": "a' \\arrow[dr,\"\\alpha\"'] & & a' \\arrow[dl,\"\\alpha_1\"]",
+    "tr_new": "a' \\arrow[dr,\"\\alpha\"'] & & \\sisi{a'}{a'_1} \\arrow[dl,\"\\alpha_1\"]"
+  },
+  {
+    "id": "C626",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_11_ES.tex",
+    "tr_old": "$\\gamma:a'\\longrightarrow a'$ tal que\n$\\alpha=\\alpha_1\\gamma$.",
+    "tr_new": "$\\gamma:a'\\longrightarrow \\sisi{a'}{a'_1}$ tal que\n$\\alpha=\\alpha_1\\gamma$."
+  },
+  {
+    "id": "C627",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_11_ES.tex",
+    "tr_old": "$\\widetilde f:R'\\times_RR'\\longrightarrow k[\\ker f]$"
+  },
+  {
+    "id": "C628",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_11_ES.tex",
+    "tr_old": "=(\\pi_2)_*\\bigl((1\\times\\widetilde f)_*a''\\bigr),"
+  },
+  {
+    "id": "C629",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_11_ES.tex",
+    "tr_old": "$\\gamma=\\alpha'_1\\gamma':a'\\longrightarrow a'$. Entonces",
+    "tr_new": "$\\gamma=\\alpha'_1\\gamma':a'\\longrightarrow \\sisi{a'}{a'_1}$. Entonces"
+  },
+  {
+    "id": "C630",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_12_ES.tex",
+    "tr_old": "\\underline{donde} $\\underline{m}_\\Lambda$ \\underline{y $M$ son los ideales maximales de\n$\\Lambda$ y $R$, respectivamente.",
+    "note": "La conjunción española ya separa los dos ideales."
+  },
+  {
+    "id": "C631",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C632",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C633",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C634",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C635",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C636",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C637",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_15_ES.tex",
+    "tr_old": "Sea $C_{\\Lambda,K}$ su subcategoría plena\nconstituida por los pares $(R,s)$"
+  },
+  {
+    "id": "C638",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_15_ES.tex",
+    "tr_old": "f(x+v\\varepsilon)\n =x+\\bigl(u(v)+D(dx)\\bigr)\\varepsilon,"
+  },
+  {
+    "id": "C639",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_16_ES.tex",
+    "tr_old": "[\\underline A((1,D))]:"
+  },
+  {
+    "id": "C640",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C641",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_16_ES.tex",
+    "tr_old": "\\arrow[d,\"{F(i,D)}\"]",
+    "tr_new": "\\arrow[d,\"{\\sisi{F(i,D)}{F(i\\,D)}}\"]"
+  },
+  {
+    "id": "C642",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_16_ES.tex",
+    "tr_old": "Sea $x:K'^{\\,n}\\longrightarrow V$ un morfismo"
+  },
+  {
+    "id": "C643",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_16_ES.tex",
+    "tr_old": "\\qquad a\\in V\\otimes A,"
+  },
+  {
+    "id": "C644",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_16_ES.tex",
+    "tr_old": "uG(D)&=G(uD)\n   \\qquad\\text{para todo }u:V\\longrightarrow W."
+  },
+  {
+    "id": "C645",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_17_ES.tex",
+    "tr_old": "\\varphi_2-\\varphi_1=Ds."
+  },
+  {
+    "id": "C646",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C647",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C648",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_19_ES.tex",
+    "tr_old": "\\underline A\\xrightarrow{\\ \\varphi\\ }\\underline B\n \\xrightarrow{\\ \\psi\\ }\\underline C"
+  },
+  {
+    "id": "C649",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C650",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_19_ES.tex",
+    "tr_old": "(cf. 1.13)",
+    "tr_new": "(cf. \\sisi{1.13}{1.14})"
+  },
+  {
+    "id": "C651",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_19_ES.tex",
+    "tr_old": "[\\underline A(R_1\\times_RR_2)]\\longrightarrow"
+  },
+  {
+    "id": "C652",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_20_ES.tex",
+    "tr_old": "P(g):R'\\longrightarrow R'\\times_k k[\\operatorname{Ker}f],\n \\qquad r'\\longmapsto(r',r'(0));",
+    "note": "La redacción española no abre el paréntesis explicativo del original."
+  },
+  {
+    "id": "C653",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C654",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_22_ES.tex",
+    "tr_old": "\\operatorname{Hom}_{\\xi^{\\#}}:\n (R_0\\amalg R_0,\\underline C)\\longrightarrow(\\mathrm{Sets})"
+  },
+  {
+    "id": "C655",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C656",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_22_ES.tex",
+    "tr_old": "(\\xi,\\varphi)(S):\n \\underline h_{(R_0,R_1,\\ldots)}(S)\\longrightarrow\\underline F(S)"
+  },
+  {
+    "id": "C657",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C658",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C659",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_23_ES.tex",
+    "tr_old": "\\operatorname{Hom}((T,g),(S_1,f_1))\n \\times_{\\operatorname{Hom}((T,g),(S,f))}\n \\operatorname{Hom}((T,g),(S_2,f_2))"
+  },
+  {
+    "id": "C660",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_22_ES.tex",
+    "tr_old": "(\\xi,\\varphi)(S):\n \\underline h_{(R_0,R_1,\\ldots)}(S)\\longrightarrow\\underline F(S)",
+    "note": "El contexto corresponde al pasaje de la p. 62, mostrado antes en el lote."
+  },
+  {
+    "id": "C661",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C662",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_25_ES.tex",
+    "tr_old": "[\\underline h(k[\\varepsilon])]\n &=\\operatorname{Coker}\\!\\left(\n   \\operatorname{Hom}_{\\Lambda\\text{-alg}}(R_1,k[\\varepsilon])"
+  },
+  {
+    "id": "C663",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C664",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C665",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_26_ES.tex",
+    "tr_old": "\\operatorname{Isom}_{\\underline A(R_0)}",
+    "tr_new": "\\operatorname{Isom}_{\\underline A(\\sisi{R_0}{R_1})}"
+  },
+  {
+    "id": "C666",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_27_ES.tex",
+    "tr_old": "Para $B'\\longrightarrow B$ en $\\operatorname{Cov}(B)$, definamos\n\\[\n H^0(\\{B'\\longrightarrow B\\},F)="
+  },
+  {
+    "id": "C667",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_27_ES.tex",
+    "tr_old": "H^0(\\{B'\\longrightarrow B\\},F)=\n \\ker\\!\\left("
+  },
+  {
+    "id": "C668",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_27_ES.tex",
+    "tr_old": "Los funtores derivados por la derecha de\n$H^0(\\{B'\\longrightarrow B\\},-)$"
+  },
+  {
+    "id": "C669",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_27_ES.tex",
+    "tr_old": "\\check{\\underline H}^{\\,0}_{A|R}:\n \\overset{\\vee}{\\underline C}_{A|R}\n \\longrightarrow\\overset{\\vee}{\\underline C}_{A|R}"
+  },
+  {
+    "id": "C670",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_27_ES.tex",
+    "tr_old": "\\check H^1(A|R,F)=H^1(A|R,F),"
+  },
+  {
+    "id": "C671",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_27_ES.tex",
+    "tr_old": "\\check H^1\\bigl(A|R,\\underline H^1_{A|R}(F)\\bigr)"
+  },
+  {
+    "id": "C672",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_28_ES.tex",
+    "tr_old": "el diagrama $(*)$ de \\sisi{2.1(a)}{3.1(a)}"
+  },
+  {
+    "id": "C673",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_28_ES.tex",
+    "tr_old": "diagrama $(**)$ de \\sisi{2.1(a)}{3.1(a)}"
+  },
+  {
+    "id": "C674",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C675",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C676",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C677",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_28_ES.tex",
+    "tr_old": "\\longrightarrow H^1(B|R,F')\\longrightarrow H^1(B|R,F)"
+  },
+  {
+    "id": "C678",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_28_ES.tex",
+    "tr_old": "por (b), y por\ntanto\n\\[\n 0\\longrightarrow F'(P)\\longrightarrow F(P)\n \\longrightarrow F''(P)\\longrightarrow0"
+  },
+  {
+    "id": "C679",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_28_ES.tex",
+    "tr_old": "\\widetilde{\\underline P}_{A|R}=\n \\overset{\\vee}{\\underline P}_{A|R}."
+  },
+  {
+    "id": "C680",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_30_ES.tex",
+    "tr_old": "\\operatorname{Tor}_i^R(X,S)=0\\qquad(0<i\\leq n).",
+    "tr_new": "\\operatorname{Tor}_i^R(X,S)=0\\qquad(0<i\\sisi{\\leq}{<} n)."
+  },
+  {
+    "id": "C681",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C682",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_31_ES.tex",
+    "tr_old": "(*)\\quad\\cdots\\longrightarrow\n H^i(A\\otimes_RB|A,F_A)\n \\longrightarrow H^i(A\\otimes_RB|R,F)"
+  },
+  {
+    "id": "C683",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C684",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C685",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_32_ES.tex",
+    "tr_old": "\\xrightarrow{\\operatorname{Hom}(\\Delta,M)}\n \\operatorname{Hom}_A(\\overline I,M)\\longrightarrow0."
+  },
+  {
+    "id": "C686",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C687",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_33_ES.tex",
+    "tr_old": "\\underline{Lema 3.11.} Hay un isomorfismo\n\\[\n D^2(A|R,M)\\simeq\n \\operatorname{Coker}\\bigl(\n H^1(K_I,M)\\longrightarrow\n \\operatorname{Hom}_A(H_1(K_I),M)\\bigr)."
+  },
+  {
+    "id": "C688",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_33_ES.tex",
+    "tr_old": " &=\\operatorname{Coker}\\bigl(\n   H^1(K_I,M)\\longrightarrow\n   \\operatorname{Hom}_A(H_1(K_I),M)\\bigr).\n\\end{align*}"
+  },
+  {
+    "id": "C689",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_34_ES.tex",
+    "tr_old": "0\\longrightarrow D^0(A|R,M)\\longrightarrow D^0(A|S,M)\n\\longrightarrow D^0(R|S,M)\\longrightarrow D^1(A|R,M)\\\\\n\\longrightarrow D^1(A|S,M)\\longrightarrow D^1(R|S,M)\n\\longrightarrow\\cdots\\longrightarrow D^n(A|R,M)\\\\\n\\longrightarrow D^n(A|S,M)\\longrightarrow D^n(R|S,M)\n\\longrightarrow\\cdots"
+  },
+  {
+    "id": "C690",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C691",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C692",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C693",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C694",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_43_ES.tex",
+    "tr_old": "\\bigl(k[\\varepsilon];\nX_0\\times_{\\operatorname{Spec}(k)}\\operatorname{Spec}(k[\\varepsilon]),\nY\\bigr)."
+  },
+  {
+    "id": "C695",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_43_ES.tex",
+    "tr_old": "=H^0(Y_0,\\underline D^1_{Y_0|X_0}),"
+  },
+  {
+    "id": "C696",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_43_ES.tex",
+    "tr_old": "\\operatorname{Aut}_{R}\\!\\left(\n(X'\\otimes_{R'}R,Y'\\otimes_{R'}R)\\mid X_0\n\\right)"
+  },
+  {
+    "id": "C697",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_47_ES.tex",
+    "tr_old": "+\\sum_{i=1}^r\n\\dim\\underline M_{\\operatorname{Spec}(\\widehat{\\mathcal O}_{X_0,x_i})}.",
+    "tr_new": "+\\sisi{\\sum_{i=1}^r\n\\dim\\underline M_{\\operatorname{Spec}(\\widehat{\\mathcal O}_{X_0,x_i})}}{\\sum_{c=1}^r\n\\dim\\underline M_{\\operatorname{Spec}(\\widehat{\\mathcal O}_{X_0,x_c})}}.",
+    "note": "Se conserva la lectura española diplomática y se usa c en la suma corregida."
+  },
+  {
+    "id": "C698",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_47_ES.tex",
+    "tr_old": "\\prod_{i=1}^r\n[\\underline M_{\\operatorname{Spec}(\\widehat{\\mathcal O}_{X_0,x_i})}\n  (k[\\varepsilon])]",
+    "note": "El producto ya está explícito mediante \\prod."
+  },
+  {
+    "id": "C699",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C700",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "A_0=k[x_1,\\ldots,x_n]/(f_1,\\ldots,f_r)=S/J,"
+  },
+  {
+    "id": "C701",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "supongamos que $A_0$ solo tiene puntos no lisos\naislados"
+  },
+  {
+    "id": "C702",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "G_j=F_j-\\sum_{i=1}^d t_iP_{ij},"
+  },
+  {
+    "id": "C703",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_49_ES.tex",
+    "tr_old": "$D(X_0,\\mathcal O_{X_0})$"
+  },
+  {
+    "id": "C704",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_49_ES.tex",
+    "tr_old": "Para un objeto $X$ de $\\underline F$, su grupo"
+  },
+  {
+    "id": "C705",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_49_ES.tex",
+    "tr_old": "\\Longrightarrow\n\\operatorname{Ext}^{p+q}(X_0;L_\\bullet,I_{X_0})."
+  },
+  {
+    "id": "C706",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C707",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C708",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_51_ES.tex",
+    "tr_old": "U \\arrow[r,hook,\"i\"] \\arrow[d,\"f\"']\n  & U' \\arrow[dl] \\\\"
+  },
+  {
+    "id": "C709",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C710",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_51_ES.tex",
+    "tr_old": "\\det\\left(\\frac{\\partial f_i}{\\partial x_j}\\right)(x)"
+  },
+  {
+    "id": "C711",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_53_ES.tex",
+    "tr_old": "$\\mathcal E=\\varprojlim_\\nu\\mathcal E_\\nu$"
+  },
+  {
+    "id": "C712",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_55_ES.tex",
+    "tr_old": "\\widehat{\\Omega_{A_\\nu|R_\\nu}}\n\\xrightarrow{\\ \\sim\\ }\n\\widehat{\\widehat\\Omega_{A_\\nu|R_\\nu}},",
+    "tr_new": "\\widehat{\\Omega_{A_\\nu|R_\\nu}}\n\\xrightarrow{\\ \\sim\\ }\n\\sisi{\\widehat{\\widehat\\Omega_{A_\\nu|R_\\nu}}}{\\widehat{\\Omega_{\\widehat A_\\nu|R_\\nu}}},"
+  },
+  {
+    "id": "C713",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "C714",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "x\\notin\\operatorname{Supp}\n \\bigl(\\mathcal O_X/\\underline I_{X|Y}\\bigr)."
+  }
+]
+```
+units/03_expose_vi/EXPOSE_VI_PART_16_ES.tex, p. 48: la fórmula posterior al diagrama dice `F(i,D)(...)`; el original corregido dice `F(i\,D)(...)`. C641 solo corrige la etiqueta del diagrama.
+units/03_expose_vi/EXPOSE_VI_PART_19_ES.tex, p. 53: el blanco de la aplicación de semihomogeneidad es un producto fibrado de conjuntos de clases; el original usa las clases del producto fibrado 2-categórico, que no son equivalentes en general.

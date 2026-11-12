@@ -1,0 +1,778 @@
+```json
+[
+  {
+    "id": "B369",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "si $\\operatorname{ord}(q)$ divide a $a$",
+    "tr_new": "si $\\operatorname{ord}(q)\\mid a$"
+  },
+  {
+    "id": "B370",
+    "decision": "not_applicable",
+    "note": "Puntuación entre las líneas de una definición; no cambia el significado."
+  },
+  {
+    "id": "B371",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\operatorname{tr}\\!\\left(\n\\left.\\alpha^{\\operatorname{ord}(q^\\nu)}\n\\right|L^0\\!\\left(\\frac1{p-1}\\right)\\right).",
+    "tr_new": "\\operatorname{tr}\\!\\sisi{\\left(\n\\left.(\\alpha)^{\\operatorname{ord}(q^\\nu)}\n\\right|L^0\\!\\left(\\frac1{p-1}\\right)\\right.}{\\left(\n\\left.(\\alpha)^{\\operatorname{ord}(q^\\nu)}\n\\right|L^0\\!\\left(\\frac1{p-1}\\right)\\right)}.",
+    "note": "Incluye la restauración diplomática de D456."
+  },
+  {
+    "id": "B372",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "L^A(b)=\\{\\,&\\text{series $\\sum_U B_UX^U\\in L(b)$ tales que, para cada\nmonomio $X^U$ con $B_U\\ne0$,}\\\\\n&\\text{los índices $i$ para los que $U_i>0$ son exactamente $0$ y los\n$j\\in A$}\\,\\}.",
+    "tr_new": "L^A(b)={}&\\text{conjunto de las series $\\sum B_UX^U\\in L(b)$ tales que, para cada\nmonomio $X^U$ con $B_U\\ne0$,}\\\\\n&\\text{los índices $i$ para los que $U_i>0$ son exactamente $0$ y los\n$j\\in A$}.",
+    "note": "Incluye B373 y B374."
+  },
+  {
+    "id": "B373",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "L^A(b)=\\{\\,&\\text{series $\\sum_U B_UX^U\\in L(b)$ tales que, para cada",
+    "note": "covered by B372"
+  },
+  {
+    "id": "B374",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "&\\text{los índices $i$ para los que $U_i>0$ son exactamente $0$ y los\n$j\\in A$}\\,\\}.",
+    "note": "covered by B372"
+  },
+  {
+    "id": "B375",
+    "decision": "not_applicable",
+    "note": "El español termina aquí la frase."
+  },
+  {
+    "id": "D456",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\operatorname{tr}\\!\\left(\n\\left.\\alpha^{\\operatorname{ord}(q^\\nu)}\n\\right|L^0\\!\\left(\\frac1{p-1}\\right)\\right).",
+    "note": "covered by B371"
+  },
+  {
+    "id": "B376",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\bigoplus_{A\\not\\supset B}L^A(b)",
+    "tr_new": "\\bigoplus_{A\\supsetneq B}L^A(b)"
+  },
+  {
+    "id": "B377",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\bigoplus_{\\substack{A\\supset B\\\\A\\ne B}}",
+    "tr_new": "\\bigoplus_{A\\supsetneq B}"
+  },
+  {
+    "id": "D463",
+    "decision": "not_applicable",
+    "note": "Desliz gramatical francés."
+  },
+  {
+    "id": "B378",
+    "decision": "not_applicable",
+    "note": "La coma corresponde a la construcción de la frase española."
+  },
+  {
+    "id": "B379",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "con la sustitución por $0$ de algunas variables, (4.5.23) da, para todo\n$A\\subset S$, $A\\ne\\varnothing$,",
+    "tr_new": "con la sustitución por $0$ de algunas variables, (4.5.23) da, para todo\n$A\\subseteq S$, $A\\ne\\varnothing$,"
+  },
+  {
+    "id": "B380",
+    "decision": "not_applicable",
+    "note": "Puntuación de la frase introductoria."
+  },
+  {
+    "id": "B381",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{4.5.25}\n\\operatorname{card}V_A^*(\\mathbb F_{q^\\nu})\n=",
+    "tr_new": "\\begin{equation}\\tag{4.5.25}\n\\operatorname{card}(V_A^*(\\mathbb F_{q^\\nu}))\n="
+  },
+  {
+    "id": "B382",
+    "decision": "not_applicable",
+    "note": "Las comas delimitan el inciso español «y por tanto los…»."
+  },
+  {
+    "id": "B383",
+    "decision": "not_applicable",
+    "note": "Puntuación final de frase."
+  },
+  {
+    "id": "D468",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\sum_{B\\subset A}\n\\operatorname{tr}\\!\\left((\\alpha_B)^{\\operatorname{ord}(q^\\nu)}\\right).",
+    "tr_new": "\\sum_{B\\subset A}\n\\operatorname{tr}\\!\\left(\\sisi{(\\alpha_B))}{(\\alpha_B)}^{\\operatorname{ord}(q^\\nu)}\\right)."
+  },
+  {
+    "id": "D470",
+    "decision": "not_applicable",
+    "note": "Uso del guion en la composición francesa."
+  },
+  {
+    "id": "B384",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\operatorname{card}V(\\mathbb F_{q^\\nu})\\frac{t^\\nu}{\\nu}",
+    "tr_new": "\\operatorname{card}(V(\\mathbb F_{q^\\nu}))\\frac{t^\\nu}{\\nu}"
+  },
+  {
+    "id": "B385",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\operatorname{tr}\\!\\left((\\alpha_B)^{\\nu\\operatorname{ord}(q)}\\right)",
+    "tr_new": "\\operatorname{tr}\\!\\left((\\alpha_B)^{\\nu\\operatorname{ord}q}\\right)"
+  },
+  {
+    "id": "B386",
+    "decision": "not_applicable",
+    "note": "Puntuación de la frase española que continúa tras la fórmula."
+  },
+  {
+    "id": "B387",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "y definamos una filtración sobre",
+    "tr_new": "y definamos una \\underline{filtración} sobre"
+  },
+  {
+    "id": "B388",
+    "decision": "not_applicable",
+    "note": "Puntuación enumerativa, sin cambio matemático."
+  },
+  {
+    "id": "B389",
+    "decision": "not_applicable",
+    "note": "Puntuación enumerativa, sin cambio matemático."
+  },
+  {
+    "id": "B390",
+    "decision": "not_applicable",
+    "note": "Puntuación de la construcción «si… entonces»."
+  },
+  {
+    "id": "B391",
+    "decision": "not_applicable",
+    "note": "Comillas tipográficas francesas."
+  },
+  {
+    "id": "B392",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "admiten bases\nortonormales, a saber, los monomios"
+  },
+  {
+    "id": "B393",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\sum_U C_U\\pi^{U_0}X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}}",
+    "tr_new": "\\sum C_U\\pi^{U_0}X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}}"
+  },
+  {
+    "id": "B394",
+    "decision": "not_applicable",
+    "note": "Puntuación de la frase que continúa con «o»."
+  },
+  {
+    "id": "B395",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\alpha_B=\\frac1p\\,\\tau^{-1}\\circ\\psi_p\\circ H_B(X).",
+    "tr_new": "\\alpha_B=\\frac{\\tau^{-1}}p\\,\\psi_p\\circ H_B(X)."
+  },
+  {
+    "id": "B396",
+    "decision": "not_applicable",
+    "note": "Puntuación de frase."
+  },
+  {
+    "id": "B397",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "H_B(X)\\,R_B\\subset R_B",
+    "tr_new": "H_B(X)\\cdot R_B\\subset R_B"
+  },
+  {
+    "id": "B398",
+    "decision": "not_applicable",
+    "note": "El español cierra la frase y comienza otra con «En consecuencia»."
+  },
+  {
+    "id": "D482",
+    "decision": "not_applicable",
+    "note": "Errata léxica francesa en «d'ordre»."
+  },
+  {
+    "id": "B399",
+    "decision": "not_applicable",
+    "note": "Puntuación y espaciado franceses del cuantificador; el español usa «para todo»."
+  },
+  {
+    "id": "B400",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "&\\text{salvo si }p\\mid U_i\\text{ para todo }i,\\\\[3pt]",
+    "tr_new": "&\\text{salvo si }p\\mid U_i\\text{ para todo }i,\\\\\n\\text{y}\\\\[3pt]"
+  },
+  {
+    "id": "B401",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "=\\pi^{(p-1)U_0}\n\\underbrace",
+    "tr_new": "=\\pi^{(p-1)U_0}\\cdot\n\\underbrace"
+  },
+  {
+    "id": "B402",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Las condiciones para que\n$\\pi^{U_0}X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}}$ pertenezca a",
+    "tr_new": "Las condiciones para que\n$X_0^{U_0}\\cdots X_{n+2}^{U_{n+2}}$ pertenezca a"
+  },
+  {
+    "id": "B403",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "U_i>0\\Longleftrightarrow i\\in B,\\qquad i\\geq1.",
+    "tr_new": "\\text{para }i\\geq1,\\text{ se tiene }U_i>0\\Longleftrightarrow i\\in B.",
+    "note": "Incluye B404."
+  },
+  {
+    "id": "B404",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "U_i>0\\Longleftrightarrow i\\in B,\\qquad i\\geq1.",
+    "note": "covered by B403"
+  },
+  {
+    "id": "D488",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\psi_p\\!\\left(\\pi^{U_0}X_0^{U_0}",
+    "tr_new": "\\psi_p\\!\\left(\\pi^{U_0}\\sisi{X}{X_0}^{U_0}"
+  },
+  {
+    "id": "B405",
+    "decision": "not_applicable",
+    "note": "Capitalización tipográfica de un apellido; se conserva la convención española."
+  },
+  {
+    "id": "B406",
+    "decision": "not_applicable",
+    "note": "Puntuación del encabezado."
+  },
+  {
+    "id": "B407",
+    "decision": "not_applicable",
+    "note": "El español no pone punto final en este encabezado."
+  },
+  {
+    "id": "B408",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Sea $V$ una hipersuperficie de $\\mathbb P^{n+1}$ de grado $d>0$,\ndefinida sobre $\\mathbb F_q$, y sea $j$ un entero. Si",
+    "tr_new": "\\underline{Sea} $V$ \\underline{una hipersuperficie de} $\\mathbb P^{n+1}$ \\underline{de grado} $d>0$,\n\\underline{definida sobre} $\\mathbb F_q$, \\underline{y sea} $j$ \\underline{un entero}. \\underline{Si}"
+  },
+  {
+    "id": "B409",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "entonces\n\n\\begin{equation}\\tag{5.0.2}",
+    "tr_new": "\\underline{entonces}\n\n\\begin{equation}\\tag{5.0.2}"
+  },
+  {
+    "id": "B410",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{5.0.2}\nZ(t,V/\\mathbb F_q)\\prod_{i=0}^{n+1}(1-q^it)\n\\in1+q^jt\\mathbb Z[[q^jt]]."
+  },
+  {
+    "id": "B411",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "es de la forma $q^j$ por un entero algebraico.",
+    "tr_new": "\\underline{es de la forma} $q^j$ por \\underline{un entero algebraico}."
+  },
+  {
+    "id": "B412",
+    "decision": "not_applicable",
+    "note": "Separación tipográfica de «bis» en el encabezado español."
+  },
+  {
+    "id": "B413",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Sea $V_{\\mathrm{aff}}$ una hipersuperficie de $\\mathbb A^{n+2}$ definida\npor una forma homogénea de grado $d$, sobre $\\mathbb F_q$. Si",
+    "tr_new": "\\underline{Sea} $V_{\\mathrm{aff}}$ \\underline{una hipersuperficie de} $\\mathbb A^{n+2}$ \\underline{definida\npor una forma homogénea de grado} $d$, \\underline{sobre} $\\mathbb F_q$. \\underline{Si}"
+  },
+  {
+    "id": "B414",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "entonces\n\n\\begin{equation}\\tag{5.0.5}",
+    "tr_new": "\\underline{entonces}\n\n\\begin{equation}\\tag{5.0.5}"
+  },
+  {
+    "id": "B415",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "En particular,\n\n\\begin{equation}\\tag{5.0.6}",
+    "tr_new": "\\underline{En particular},\n\n\\begin{equation}\\tag{5.0.6}"
+  },
+  {
+    "id": "B416",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\equiv0\\pmod{q^j},",
+    "tr_new": "\\equiv0\\mod{q^j},"
+  },
+  {
+    "id": "B417",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "y, por consiguiente,\n\n\\begin{equation}\\tag{5.0.6 bis}",
+    "tr_new": "\\underline{y, por consiguiente},\n\n\\begin{equation}\\tag{5.0.6 bis}"
+  },
+  {
+    "id": "B418",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "lo que mejora el teorema de Chevalley--Warning~[8].",
+    "tr_new": "\\underline{lo que mejora el teorema de Chevalley--Warning}~[8].",
+    "note": "Se conserva la capitalización española de los apellidos."
+  },
+  {
+    "id": "D504",
+    "decision": "not_applicable",
+    "note": "Coma de la construcción condicional, sin cambio matemático."
+  },
+  {
+    "id": "B419",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\inf_{\\varnothing\\ne B\\subset\\{1,\\ldots,n+2\\}}",
+    "tr_new": "\\inf_{\\substack{B\\subset\\{1,\\ldots,n+2\\}\\\\B\\ne\\varnothing}}"
+  },
+  {
+    "id": "B420",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Sea $V$ una hipersuperficie lisa\nde grado $d$ y dimensión $n$.",
+    "tr_new": "Sea $V$ una hipersuperficie \\underline{lisa}\nde grado $d$ y dimensión $n$."
+  },
+  {
+    "id": "B421",
+    "decision": "not_applicable",
+    "note": "La coma enlaza con «donde» en la frase española."
+  },
+  {
+    "id": "B422",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "H^b(V,\\Omega_V^a)-\\delta_{a,b}",
+    "tr_new": "H^b(V,\\underline{\\Omega}_V^a)-\\delta_{a,b}"
+  },
+  {
+    "id": "B423",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\Omega_{\\mathbb P^{n+1}}^a",
+    "tr_new": "\\underline{\\Omega}_{\\mathbb P^{n+1}}^a"
+  },
+  {
+    "id": "B424",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "(V,\\Omega_V^a)\\right)",
+    "tr_new": "(V,\\underline{\\Omega}_V^a)\\right)"
+  },
+  {
+    "id": "B425",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\longrightarrow H^b",
+    "tr_new": "\\hookrightarrow H^b"
+  },
+  {
+    "id": "B426",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "h_0^{a,n-a}=0\\quad\\text{para }a<j\\text{ y }a>n-j.",
+    "tr_new": "\\left[h_0^{a,n-a}=0\\quad\\text{para }a<j\\text{ y }a>n-j\\right]."
+  },
+  {
+    "id": "D517",
+    "decision": "unclear",
+    "note": "El contexto remite a (4.5.16), ya tratado en D456, pero la página indicada contiene (5.1.3). No es seguro qué cierre debe suprimirse."
+  },
+  {
+    "id": "B427",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "son enteros algebraicos divisibles por $q^j$ (XXI~A.2).",
+    "tr_new": "son enteros algebraicos \\underline{divisibles por} $q^j$ (XXI~A.2)."
+  },
+  {
+    "id": "B428",
+    "decision": "not_applicable",
+    "note": "Capitalización tipográfica del apellido."
+  },
+  {
+    "id": "B429",
+    "decision": "not_applicable",
+    "note": "Capitalización tipográfica del apellido."
+  },
+  {
+    "id": "B430",
+    "decision": "not_applicable",
+    "note": "Capitalización tipográfica del apellido."
+  },
+  {
+    "id": "B431",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Sea $f:X\\to S$ un morfismo propio y liso, con $S$ integral, de tipo finito\nsobre",
+    "tr_new": "\\underline{Sea} $f:X\\to S$ \\underline{un morfismo propio y liso}, \\underline{con} $S$ \\underline{integral}, \\underline{de tipo finito\nsobre}",
+    "note": "Se conserva el formato español del encabezado."
+  },
+  {
+    "id": "B432",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "y dominante sobre\n$\\operatorname{Spec}(\\mathbb Z)$; sean $i,j$ enteros. Supongamos que el\nconivel de Hodge de $H^i$ de la fibra genérica de $f$ es al menos $j$.",
+    "tr_new": "\\underline{y dominante sobre}\n$\\operatorname{Spec}(\\mathbb Z)$; \\underline{sean} $i,j$ \\underline{enteros}. \\underline{Supongamos que el\nconivel de Hodge de} $H^i$ \\underline{de la fibra genérica de} $f$ \\underline{es al menos} $j$."
+  },
+  {
+    "id": "B433",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Entonces, para todo punto $s\\in S$, el conivel (XX~2.0.6) de\n$H^i(X_s,\\mathbb Q_\\ell)$ es al menos $j$. Por tanto (XX~2.2), si $s$ es\nun punto cerrado de $S$, los valores propios de Frobenius sobre\n$H^i(X_s,\\mathbb Q_\\ell)$ son enteros algebraicos divisibles por $q^j$,\ndonde $q=\\operatorname{card}(k(s))$.",
+    "tr_new": "\\underline{Entonces, para todo punto} $s\\in S$, \\underline{el conivel} (XX~2.0.6) \\underline{de}\n$H^i(X_s,\\mathbb Q_\\ell)$ \\underline{es al menos} $j$. \\underline{Por tanto} (XX~2.2), \\underline{si} $s$ \\underline{es\nun punto cerrado de} $S$, \\underline{los valores propios de Frobenius sobre}\n$H^i(X_s,\\mathbb Q_\\ell)$ \\underline{son enteros algebraicos divisibles por} $q^j$,\n\\underline{donde} $q=\\operatorname{card}(k(s))$."
+  },
+  {
+    "id": "B434",
+    "decision": "not_applicable",
+    "note": "El español no pone punto final en este encabezado."
+  },
+  {
+    "id": "B435",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\pmod{1+qt\\mathcal O[[t]]}",
+    "tr_new": "\\mod{1+qt\\mathcal O[[t]]}"
+  },
+  {
+    "id": "B436",
+    "decision": "not_applicable",
+    "note": "La sintaxis española separa las definiciones de otro modo."
+  },
+  {
+    "id": "B467",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\longrightarrow H_{\\mathrm{Hdg}}^n(V)",
+    "tr_new": "\\hookrightarrow H_{\\mathrm{Hdg}}^n(V)"
+  },
+  {
+    "id": "D521",
+    "decision": "not_applicable",
+    "note": "Punto añadido en la frase francesa, no cambio del número de referencia."
+  },
+  {
+    "id": "D529",
+    "decision": "not_applicable",
+    "note": "El español no utiliza el paréntesis exterior de «(cf. …)»."
+  },
+  {
+    "id": "B437",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "R_S(i)\n=\\text{el submódulo",
+    "tr_new": "\\sisi{R_S(t)}{R_S(i)}\n\\text{ el submódulo",
+    "note": "Incluye la restauración diplomática de D532."
+  },
+  {
+    "id": "B438",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\subsubsection*{Proposición 6.0.6.}\nSe tiene",
+    "tr_new": "\\subsubsection*{Proposición 6.0.6.}\n\\underline{Se tiene}",
+    "note": "Se conserva el formato español del encabezado."
+  },
+  {
+    "id": "B439",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\alpha_S=\\frac1p\\,\\tau^{-1}\\circ\\psi_p\\circ H(X).",
+    "tr_new": "\\alpha_S=\\tau^{-1}\\circ\\frac1p\\,\\psi_p\\circ H(X)."
+  },
+  {
+    "id": "B440",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "H(X)\\,R_S\\subset R_S,",
+    "tr_new": "H(X)\\cdot R_S\\subset R_S,"
+  },
+  {
+    "id": "B441",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\subsubsection*{Corolario 6.0.11.}\nSe tiene",
+    "tr_new": "\\subsubsection*{Corolario 6.0.11.}\n\\underline{Se tiene}",
+    "note": "Se conserva el formato español del encabezado."
+  },
+  {
+    "id": "B442",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\bar\\alpha_S(W_S)\\subset W_S(1).",
+    "tr_new": "\\bar\\alpha_S W_S\\subset W_S(1)."
+  },
+  {
+    "id": "D532",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{6.0.4}\nR_S(i)",
+    "note": "covered by B437"
+  },
+  {
+    "id": "D533",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica o gramatical francesa en «formé»."
+  },
+  {
+    "id": "B443",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\subsubsection*{Corolario 6.0.12.}\nSe tiene la congruencia",
+    "tr_new": "\\subsubsection*{Corolario 6.0.12.}\n\\underline{Se tiene la congruencia}",
+    "note": "Se conserva el formato español del encabezado."
+  },
+  {
+    "id": "B444",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\subsubsection*{Proposición 6.1.}\nLa operación",
+    "tr_new": "\\subsubsection*{Proposición 6.1.}\n\\underline{La operación}",
+    "note": "Se conserva el formato español del encabezado."
+  },
+  {
+    "id": "B445",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$\\tau^{-1}$-lineal\n$\\bar\\alpha_S:W_S(1)\\to W_S(1)$",
+    "tr_new": "$\\sisi{\\tau^{1}}{\\tau^{-1}}$-\\underline{lineal}\n$\\bar\\alpha_S:W_S(1)\\to W_S(1)$",
+    "note": "Incluye la restauración diplomática de D543."
+  },
+  {
+    "id": "B446",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "es igual a\n\n\\begin{equation}\\tag{6.1.1}",
+    "tr_new": "\\underline{es igual a}\n\n\\begin{equation}\\tag{6.1.1}"
+  },
+  {
+    "id": "B447",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{6.1.1}\n\\frac1p\\,\\tau^{-1}\\circ\\psi_p\\circ(X_0f(X))^{p-1}.",
+    "tr_new": "\\begin{equation}\\tag{6.1.1}\n\\tau^{-1}\\psi_p\\circ(X_0f(X))^{p-1}."
+  },
+  {
+    "id": "B448",
+    "decision": "not_applicable",
+    "note": "La coma enlaza con «donde» en la frase española."
+  },
+  {
+    "id": "B449",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "H_i(X)\\,R_S(j)",
+    "tr_new": "H_i(X)\\cdot R_S(j)"
+  },
+  {
+    "id": "B450",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\alpha_S-\\frac1p\\,\\tau^{-1}\\circ\\psi_p\\circ H_{p-1}(X)",
+    "tr_new": "\\alpha_S-\\frac{\\tau^{-1}}p\\,\\psi_pH_{p-1}(X)"
+  },
+  {
+    "id": "B451",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\left(\n\\frac1p\\,\\tau^{-1}\\circ\\psi_p\\circ H_{p-1}(X)",
+    "tr_new": "\\left(\n\\frac{\\tau^{-1}}p\\,\\psi_p\\cdot H_{p-1}(X)"
+  },
+  {
+    "id": "D543",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$\\tau^{-1}$-lineal\n$\\bar\\alpha_S:W_S(1)\\to W_S(1)$",
+    "note": "covered by B445"
+  },
+  {
+    "id": "B452",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\Theta(\\pi A_WX_0X^W)",
+    "tr_new": "\\Theta(A_WX_0X^W)"
+  },
+  {
+    "id": "B453",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\sum_{r\\geq0}\\frac{(\\pi A_WX_0X^W)^{p^r}}{p^r}",
+    "tr_new": "\\sum_{n\\geq0}\\frac{\\sisi{}{(}\\pi A_WX_0X^W)^{p^n}}{p^n}",
+    "note": "Incluye la restauración diplomática de D551 en (6.1.8)."
+  },
+  {
+    "id": "B454",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\prod_{r\\geq0}\n\\exp\\!\\left(\\frac{(\\pi A_WX_0X^W)^{p^r}}{p^r}\\right)",
+    "tr_new": "\\prod_{n\\geq0}\n\\exp\\!\\left(\\frac{(\\pi A_WX_0X^W)^{p^n}}{p^n}\\right)"
+  },
+  {
+    "id": "B455",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\pi\\sum_WA_WX_0X^W",
+    "tr_new": "\\pi\\sum A_WX_0X^W"
+  },
+  {
+    "id": "B456",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\pi X_0f(X)",
+    "tr_new": "\\pi X_0F(X)"
+  },
+  {
+    "id": "B457",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "=\\frac{\\pi^{p-1}X_0^{p-1}}",
+    "tr_new": "\\equiv\\frac{\\pi^{p-1}X_0^{p-1}}"
+  },
+  {
+    "id": "B458",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\,f(X)^{p-1}.",
+    "tr_new": "\\,F(X)^{p-1}."
+  },
+  {
+    "id": "B459",
+    "decision": "not_applicable",
+    "note": "La coma enlaza con «y, por tanto» en la frase española."
+  },
+  {
+    "id": "B460",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\subsubsection*{Corolario 6.1.12.}\nEl operador lineal",
+    "tr_new": "\\subsubsection*{Corolario 6.1.12.}\n\\underline{El operador lineal}",
+    "note": "Se conserva el formato español del encabezado."
+  },
+  {
+    "id": "B461",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "es precisamente\n\\[\n\\psi_q\\circ(X_0f(X))^{q-1}.",
+    "tr_new": "\\underline{es precisamente}\n\\[\n\\psi_q\\circ(X_0f(X))^{q-1}."
+  },
+  {
+    "id": "D551",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\sum_{r\\geq0}\\frac{(\\pi A_WX_0X^W)^{p^r}}{p^r}",
+    "note": "covered by B453"
+  },
+  {
+    "id": "D558",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\equiv(X_0f(X))^{p-1}\\pmod p.",
+    "tr_new": "\\equiv\\sisi{(X_0f(X)^{p-1}}{(X_0f(X))^{p-1}}\\pmod p."
+  },
+  {
+    "id": "B462",
+    "decision": "not_applicable",
+    "note": "Puntuación de la introducción española."
+  },
+  {
+    "id": "B463",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\left(\n\\frac1p\\,\\tau^{-1}\\circ\\psi_p\\circ(X_0f(X))^{p-1}\n\\right)^{\\operatorname{ord}(q)}",
+    "tr_new": "\\left(\n\\tau^{-1}\\psi_p\\circ(X_0f(X))^{p-1}\n\\right)^{\\operatorname{ord}(q)}",
+    "note": "Segunda aparición, en la demostración del Corolario 6.1.12."
+  },
+  {
+    "id": "B464",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\subsubsection*{Corolario 6.1.13.}\nMódulo $p$, se tiene la congruencia",
+    "tr_new": "\\subsubsection*{Corolario 6.1.13.}\n\\underline{Módulo} $p$, \\underline{se tiene la congruencia}",
+    "note": "Se conserva el formato español del encabezado."
+  },
+  {
+    "id": "B465",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\frac{\n\\det\\!\\left(\n1-t\\,\\psi_q\\circ(X_0f(X))^{q-1}",
+    "tr_new": "\\frac{\n\\det\\!\\left(\n1-t\\,\\psi_q(X_0f(X))^{q-1}"
+  },
+  {
+    "id": "B466",
+    "decision": "not_applicable",
+    "note": "Forma francesa del ordinal; el español ya usa «$q$-ésima»."
+  },
+  {
+    "id": "D563",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\psi_q\\circ\n\\prod_{j=0}^{\\sisi{\\operatorname{ord}(a)}{\\operatorname{ord}(q)}-1}",
+    "tr_new": "\\sisi{\\psi_q}{\\psi_q\\circ}\n\\prod_{j=0}^{\\sisi{\\operatorname{ord}(a)}{\\operatorname{ord}(q)}-1}"
+  },
+  {
+    "id": "D564",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\psi_q\\circ\n\\prod_{j=0}^{\\operatorname{ord}(q)-1}",
+    "tr_new": "\\sisi{\\psi_q}{\\psi_q\\circ}\n\\prod_{j=0}^{\\operatorname{ord}(q)-1}"
+  },
+  {
+    "id": "D568",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\longrightarrow\\mathcal O_V\\longrightarrow0,",
+    "tr_new": "\\longrightarrow\\mathcal O_V\\longrightarrow\\sisi{\\mathcal O}{0},"
+  },
+  {
+    "id": "D569",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\mathcal O_V \\arrow[r] \\arrow[d,\"\\mathfrak F_q\"'] &\n0\\\\",
+    "tr_new": "\\mathcal O_V \\arrow[r] \\arrow[d,\"\\mathfrak F_q\"'] &\n\\sisi{\\mathcal O}{0}\\\\"
+  },
+  {
+    "id": "D570",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\mathcal O_V \\arrow[r] &\n0 .",
+    "tr_new": "\\mathcal O_V \\arrow[r] &\n\\sisi{\\mathcal O}{0} ."
+  }
+]
+```
+
+units/EXPOSE_XXII_ES.tex, p. 430: «cohomología de De Rham evanescente» traduce «cohomologie de Hodge évanescente»; debería decir «cohomología de Hodge evanescente».

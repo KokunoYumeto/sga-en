@@ -1,0 +1,756 @@
+```json
+[
+  {
+    "id": "C119",
+    "decision": "not_applicable",
+    "note": "Sentence-ending punctuation only."
+  },
+  {
+    "id": "C120",
+    "decision": "apply",
+    "tr_file": "components/054_expose_XIV_section_3_1_9_through_3_1_10.tex",
+    "tr_old": "\\Lambda\\xrightarrow{\\sim}Rq_*\\Lambda",
+    "tr_new": "\\Lambda\\xrightarrow{\\approx}Rq_*\\Lambda"
+  },
+  {
+    "id": "C121",
+    "decision": "apply",
+    "tr_file": "components/054_expose_XIV_section_3_1_9_through_3_1_10.tex",
+    "tr_old": "\\Lambda\\xrightarrow{\\sim}Rq'_*\\Lambda",
+    "tr_new": "\\Lambda\\xrightarrow{\\approx}Rq'_*\\Lambda"
+  },
+  {
+    "id": "C122",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation after the display."
+  },
+  {
+    "id": "C131",
+    "decision": "already",
+    "tr_file": "components/058_expose_XIV_section_3_2_10_through_3_2_11.tex",
+    "tr_old": "\\draw[->] (1.43,1.12)--(.83,1.12)\n      node[below] {$1$};"
+  },
+  {
+    "id": "C132",
+    "decision": "already",
+    "tr_file": "components/058_expose_XIV_section_3_2_10_through_3_2_11.tex",
+    "tr_old": "\\draw[->] (-.85,.85)--(-1.16,1.16);\n    \\draw[->] (-.85,-.85)--(-1.17,-1.17);\n    \\node[above left] at (-1.02,-.98) {$\\delta$};\n    \\draw[->] (.85,-.85)--(1.17,-1.17);"
+  },
+  {
+    "id": "C133",
+    "decision": "not_applicable",
+    "note": "Only changes which side of the arrows carries their labels."
+  },
+  {
+    "id": "C134",
+    "decision": "apply",
+    "tr_file": "components/059_expose_XIV_section_4_1_through_4_4.tex",
+    "tr_old": "for every coherent sheaf $\\mathcal F$ on $\\bar X^*$,",
+    "tr_new": "for every coherent sheaf $\\mathfrak F$ on $\\bar X^*$,"
+  },
+  {
+    "id": "C135",
+    "decision": "apply",
+    "tr_file": "components/059_expose_XIV_section_4_1_through_4_4.tex",
+    "tr_old": "H^q\\bigl(\\bar j^{-1}p^{-1}(V),\\mathcal F\\bigr)=0",
+    "tr_new": "H^q\\bigl(\\bar j^{-1}p^{-1}(V),\\mathfrak F\\bigr)=0"
+  },
+  {
+    "id": "C136",
+    "decision": "apply",
+    "tr_file": "components/059_expose_XIV_section_4_1_through_4_4.tex",
+    "tr_old": "complex vector spaces on $X^*$ (a complex local system).  The\nquasi-isomorphism}",
+    "tr_new": "complex vector spaces on $X^*$} (\\underline{a complex local system}).  \\underline{The\nquasi-isomorphism}"
+  },
+  {
+    "id": "C137",
+    "decision": "not_applicable",
+    "note": "The English recasts the Poincare-lemma parenthesis as an unparenthesized phrase."
+  },
+  {
+    "id": "C123",
+    "decision": "apply",
+    "tr_file": "components/061_expose_XIV_section_4_9_through_4_17.tex",
+    "tr_old": "\\underline{Let $K$ be the field of germs at $0$ of meromorphic\nfunctions on $D$, and let $K^m$ (respectively, $K^{mu}$ and $K^{mqu}$)\nbe the $K$-algebra of germs at $0$ of holomorphic functions on\n$\\widetilde D^*$ which have moderate growth at $0$ and finite\ndetermination (respectively, unipotent finite determination and\nquasi-unipotent finite determination).  Then the following are bases\nover $K$:}",
+    "tr_new": "\\underline{Let $K$ be the field of germs at $0$ of meromorphic\nfunctions on $D$, and let $K^m$} (\\underline{respectively, $K^{mu}$ and $K^{mqu}$})\n\\underline{be the} $K$-\\underline{algebra of germs at $0$ of holomorphic functions on\n$\\widetilde D^*$ which have moderate growth at $0$ and finite\ndetermination (respectively, unipotent finite determination and\nquasi-unipotent finite determination}).  \\underline{Then the following are bases\nover $K$:}"
+  },
+  {
+    "id": "C124",
+    "decision": "already",
+    "tr_file": "components/061_expose_XIV_section_4_9_through_4_17.tex",
+    "tr_old": "be the $K$-algebra of germs at $0$ of holomorphic functions on",
+    "note": "covered by C123"
+  },
+  {
+    "id": "C125",
+    "decision": "already",
+    "tr_file": "components/061_expose_XIV_section_4_9_through_4_17.tex",
+    "tr_old": "quasi-unipotent finite determination).  Then the following are bases",
+    "note": "covered by C123"
+  },
+  {
+    "id": "C126",
+    "decision": "apply",
+    "tr_file": "components/062_expose_XIV_section_4_18.tex",
+    "tr_old": "$H^*(U^*,V)=\\bigwedge\\nolimits^*\\mathbb C^d$.",
+    "tr_new": "$H^*(U^*,V)=\\overset{*}{\\Lambda}\\mathbb C^d$."
+  },
+  {
+    "id": "C127",
+    "decision": "apply",
+    "tr_file": "components/062_expose_XIV_section_4_18.tex",
+    "tr_old": "complex $\\mathrm{s}K$ associated (using direct sums)",
+    "tr_new": "complex $\\underline{\\underline{\\mathrm{s}}}K$ associated (using direct sums)"
+  },
+  {
+    "id": "C128",
+    "decision": "apply",
+    "tr_file": "components/062_expose_XIV_section_4_18.tex",
+    "tr_old": "Nevertheless, $\\mathrm{s}K$ is the",
+    "tr_new": "Nevertheless, $\\underline{\\underline{\\mathrm{s}}}K$ is the"
+  },
+  {
+    "id": "C129",
+    "decision": "apply",
+    "tr_file": "components/062_expose_XIV_section_4_18.tex",
+    "tr_old": "$\\mathrm{s}\\,\\sigma_{p\\geq p_0}(K)$ whose terms are",
+    "tr_new": "$\\underline{\\underline{\\mathrm{s}}}\\,\\sigma_{p\\geq p_0}(K)$ whose terms are"
+  },
+  {
+    "id": "C130",
+    "decision": "apply",
+    "tr_file": "components/062_expose_XIV_section_4_18.tex",
+    "tr_old": "(\\mathrm{s}\\,\\sigma_{p\\geq p_0}K)^n",
+    "tr_new": "(\\underline{\\underline{\\mathrm{s}}}\\,\\sigma_{p\\geq p_0}K)^n"
+  },
+  {
+    "id": "C138",
+    "decision": "unclear",
+    "note": "The supplied context is XIV 1.1.2, outside these English pages. The degree-zero terms on page 161 already use 0, but the intended occurrence cannot be identified securely."
+  },
+  {
+    "id": "C139",
+    "decision": "already",
+    "tr_file": "components/062_expose_XIV_section_4_18.tex",
+    "tr_old": "\\arrow[l,\"\\sim\"',\"4.12\"]"
+  },
+  {
+    "id": "C140",
+    "decision": "already",
+    "tr_file": "components/062_expose_XIV_section_4_18.tex",
+    "tr_old": "\\arrow[l,\"\\sim\"',\"4.18.4\"]"
+  },
+  {
+    "id": "C141",
+    "decision": "already",
+    "tr_file": "components/062_expose_XIV_section_4_18.tex",
+    "tr_old": "H^*(\\bar U^*,V)\\arrow[ll,\"\\sim\"']"
+  },
+  {
+    "id": "C142",
+    "decision": "apply",
+    "tr_file": "components/064_expose_XV_title_through_1_1_4.tex",
+    "tr_old": "proper ideals of $A$, and let $\\delta'$",
+    "tr_new": "proper ideals of $A$}, \\underline{and let $\\delta'$"
+  },
+  {
+    "id": "C143",
+    "decision": "apply",
+    "tr_file": "components/064_expose_XV_title_through_1_1_4.tex",
+    "tr_old": "contained in $J^n(X/S)$.  Suppose",
+    "tr_new": "contained in $J^n(X/S)$}.  \\underline{Suppose"
+  },
+  {
+    "id": "C144",
+    "decision": "apply",
+    "tr_file": "components/064_expose_XV_title_through_1_1_4.tex",
+    "tr_old": "that is, $s\\in X(A/I)$.  Denote",
+    "tr_new": "that is, $s\\in X(A/I)$}.  \\underline{Denote"
+  },
+  {
+    "id": "C145",
+    "decision": "apply",
+    "tr_file": "components/064_expose_XV_title_through_1_1_4.tex",
+    "tr_old": "\\underline{There exists a versal henselian $S$-deformation of $X_0$",
+    "tr_new": "\\underline{There exists a versal henselian} $S$-\\underline{deformation of $X_0$"
+  },
+  {
+    "id": "C146",
+    "decision": "apply",
+    "tr_file": "components/064_expose_XV_title_through_1_1_4.tex",
+    "tr_old": "a versal formal\n$S$-deformation of $X_0$",
+    "tr_new": "a versal formal}\n$S$-\\underline{deformation of $X_0$"
+  },
+  {
+    "id": "C147",
+    "decision": "apply",
+    "tr_file": "components/065_expose_XV_section_1_2_1_through_1_2_6_reduction.tex",
+    "tr_old": "$k$-scheme $Y$, and let $k'$",
+    "tr_new": "}$k$-\\underline{scheme $Y$, and let $k'$"
+  },
+  {
+    "id": "C148",
+    "decision": "apply",
+    "tr_file": "components/065_expose_XV_section_1_2_1_through_1_2_6_reduction.tex",
+    "tr_old": "There then exist a $k'$-scheme\n$Y_0\\subset\\mathbb A_{k'}^{n+1}$",
+    "tr_new": "There then exist a} $k'$-\\underline{scheme\n$Y_0\\subset\\mathbb A_{k'}^{n+1}$"
+  },
+  {
+    "id": "C149",
+    "decision": "apply",
+    "tr_file": "components/065_expose_XV_section_1_2_1_through_1_2_6_reduction.tex",
+    "tr_old": "$k$-isomorphism $\\varphi$ between the henselization",
+    "tr_new": "}$k$-\\underline{isomorphism $\\varphi$ between the henselization"
+  },
+  {
+    "id": "C150",
+    "decision": "apply",
+    "tr_file": "components/066_expose_XV_section_1_2_7_through_1_2_12.tex",
+    "tr_old": "Q(x_i)\\equiv0\\pmod{\\delta^2\\mathfrak q+(f)}",
+    "tr_new": "Q(\\chi_i)\\equiv0\\pmod{\\delta^2\\mathfrak q+(f)}"
+  },
+  {
+    "id": "C151",
+    "decision": "apply",
+    "tr_file": "components/067_expose_XV_section_1_3.tex",
+    "tr_old": "the henselized $S$-scheme of $X$ at $x$",
+    "tr_new": "the henselized} $S$-\\underline{scheme of $X$ at $x$"
+  },
+  {
+    "id": "C152",
+    "decision": "already",
+    "tr_file": "components/068_expose_XV_section_2_1_1_through_lemma_2_1_3.tex",
+    "tr_old": "T \\arrow[r,\"t\"'] & k ."
+  },
+  {
+    "id": "C153",
+    "decision": "not_applicable",
+    "note": "Arrow-label placement only."
+  },
+  {
+    "id": "C154",
+    "decision": "not_applicable",
+    "note": "Arrow-label placement only."
+  },
+  {
+    "id": "C155",
+    "decision": "already",
+    "tr_file": "components/069_expose_XV_section_2_1_3_through_2_1_6.tex",
+    "tr_old": "& H^i(Y) \\arrow[r,\"\\partial\"]\n  & {} ."
+  },
+  {
+    "id": "C156",
+    "decision": "not_applicable",
+    "note": "Arrow-label placement only."
+  },
+  {
+    "id": "C157",
+    "decision": "not_applicable",
+    "note": "Arrow-label placement only."
+  },
+  {
+    "id": "C158",
+    "decision": "already",
+    "tr_file": "components/069_expose_XV_section_2_1_3_through_2_1_6.tex",
+    "tr_old": "& H^i(X^*_{(O)}) \\arrow[r]\n  & {} ."
+  },
+  {
+    "id": "C159",
+    "decision": "apply",
+    "tr_file": "components/071_expose_XV_section_2_2_1_through_2_2_4.tex",
+    "tr_old": "Q(\\underline x)=\\sum_{i\\leq j}a_{ij}x_ix_j+\\sum_i b_ix_i+c.",
+    "tr_new": "Q(\\underline{\\mathbf{x}})=\\sum_{i\\leq j}a_{ij}x_ix_j+\\sum_i b_ix_i+c."
+  },
+  {
+    "id": "C160",
+    "decision": "apply",
+    "tr_file": "components/073_expose_XV_section_2_2_5_D_through_F.tex",
+    "tr_old": "Let $\\phi$ be the natural map",
+    "tr_new": "Let $\\varphi$ be the natural map"
+  },
+  {
+    "id": "C161",
+    "decision": "apply",
+    "tr_file": "components/073_expose_XV_section_2_2_5_D_through_F.tex",
+    "tr_old": "\\phi(\\delta)=(-1)^m\\,2\\,\\delta'.",
+    "tr_new": "\\varphi(\\delta)=(-1)^m\\,2\\,\\delta'."
+  },
+  {
+    "id": "C162",
+    "decision": "apply",
+    "tr_file": "components/073_expose_XV_section_2_2_5_D_through_F.tex",
+    "tr_old": "\\phi(\\delta)=0.",
+    "tr_new": "\\varphi(\\delta)=0."
+  },
+  {
+    "id": "C163",
+    "decision": "apply",
+    "tr_file": "components/074_expose_XV_section_2_2_6_through_2_2_7.tex",
+    "tr_old": "$H^n_{\\{x_0\\}}(X_s,R\\Psi_{\\bar\\eta}(\\Lambda(m)))$ with the",
+    "tr_new": "$\\mathbb H^n_{\\{x_0\\}}(X_s,R\\psi_{\\bar\\eta}(\\Lambda(m)))$ with the"
+  },
+  {
+    "id": "C164",
+    "decision": "already",
+    "tr_file": "components/074_expose_XV_section_2_2_6_through_2_2_7.tex",
+    "tr_old": "$H^n_{\\{x_0\\}}(X_s,R\\Psi_{\\bar\\eta}(\\Lambda(m)))$ with the",
+    "note": "covered by C163"
+  },
+  {
+    "id": "C165",
+    "decision": "apply",
+    "tr_file": "components/074_expose_XV_section_2_2_6_through_2_2_7.tex",
+    "tr_old": "& H^n_{\\{x_0\\}}\\bigl(X_s,R\\Psi_{\\bar\\eta}(\\Lambda(m))\\bigr)",
+    "tr_new": "& H^n_{\\{x_0\\}}\\bigl(X_s,R\\psi_{\\bar\\eta}(\\Lambda(m))\\bigr)"
+  },
+  {
+    "id": "C166",
+    "decision": "not_applicable",
+    "note": "Sentence-ending punctuation only."
+  },
+  {
+    "id": "C167",
+    "decision": "apply",
+    "tr_file": "components/076_expose_XV_section_3_2.tex",
+    "tr_old": "(-1)^{m+1}2b\\det(a_{ij})",
+    "tr_new": "(-1)^{m+1}\\cdot2b\\det(a_{ij})"
+  },
+  {
+    "id": "C168",
+    "decision": "apply",
+    "tr_file": "components/077_expose_XV_section_3_3_1_through_3_3_3.tex",
+    "tr_old": "isomorphic to an $S$-scheme defined in $\\mathbb A^{n+1}_S$ by an",
+    "tr_new": "isomorphic to an $S$-scheme defined in $A^{n+1}_S$ by an"
+  },
+  {
+    "id": "C169",
+    "decision": "apply",
+    "tr_file": "components/077_expose_XV_section_3_3_1_through_3_3_3.tex",
+    "tr_old": "on $(X/S,x_0)$: in a neighborhood of $x_0$ there is a section",
+    "tr_new": "on $(X/S,x_0)$: in a neighborhood of $x$ there is a section"
+  },
+  {
+    "id": "C170",
+    "decision": "apply",
+    "tr_file": "components/077_expose_XV_section_3_3_1_through_3_3_3.tex",
+    "tr_old": "\\mathcal O_{s(\\operatorname{Spec}(A/(b)))}.",
+    "tr_new": "\\mathcal O_{s(\\operatorname{Spec}(A/b))}."
+  },
+  {
+    "id": "C171",
+    "decision": "already",
+    "tr_file": "components/077_expose_XV_section_3_3_1_through_3_3_3.tex",
+    "tr_old": "isomorphic to an $S$-scheme defined in $\\mathbb A^{n+1}_S$ by an",
+    "note": "covered by C168"
+  },
+  {
+    "id": "C172",
+    "decision": "already",
+    "tr_file": "components/077_expose_XV_section_3_3_1_through_3_3_3.tex",
+    "tr_old": "X^*_{s(x)}=X_{s(x)}-\\{x\\}=\\widetilde X_{s(x)}-Y."
+  },
+  {
+    "id": "C173",
+    "decision": "apply",
+    "tr_file": "components/077_expose_XV_section_3_3_1_through_3_3_3.tex",
+    "tr_old": "& H^n_{\\{x\\}}\\bigl(X_s,R\\Psi_{\\bar\\eta}(\\Lambda(m))\\bigr)",
+    "tr_new": "& H^n_{\\{x\\}}\\bigl(X_s,R\\psi_{\\bar\\eta}(\\Lambda(m))\\bigr)"
+  },
+  {
+    "id": "C174",
+    "decision": "apply",
+    "tr_file": "components/077_expose_XV_section_3_3_1_through_3_3_3.tex",
+    "tr_old": "\\pm\\delta\\in\nH^n_{\\{x\\}}\\bigl(X_s,R\\Psi_{\\bar\\eta}(\\Lambda(m))\\bigr).",
+    "tr_new": "\\pm\\delta\\in\nH^n_{\\{x\\}}\\bigl(X_s,R\\psi_{\\bar\\eta}(\\Lambda(m))\\bigr)."
+  },
+  {
+    "id": "C175",
+    "decision": "not_applicable",
+    "note": "Sentence-ending punctuation only."
+  },
+  {
+    "id": "C176",
+    "decision": "apply",
+    "tr_file": "components/078_expose_XV_section_3_3_4_through_proposition_3_3_6.tex",
+    "tr_old": "H^n_{\\{x\\}}\\bigl(X_s,R\\Psi_{\\bar\\eta}(\\Lambda(m))\\bigr).",
+    "tr_new": "H^n_{\\{x\\}}\\bigl(X_s,R\\psi_{\\bar\\eta}(\\Lambda(m))\\bigr).",
+    "note": "The page-192 occurrence; the supplied French context points to an earlier occurrence."
+  },
+  {
+    "id": "C177",
+    "decision": "apply",
+    "tr_file": "components/079_expose_XV_proofs_3_3_5_3_3_6_A_through_C.tex",
+    "tr_old": "\\in H^n_{\\{0\\}}\\bigl(X_0,R\\Psi_{\\mathrm{cl}\\eta}(\\mathbb Z)\\bigr).",
+    "tr_new": "\\in H^n_{\\{0\\}}\\bigl(X_0,R\\psi_{\\mathrm{cl}\\eta}(\\mathbb Z)\\bigr)."
+  },
+  {
+    "id": "C178",
+    "decision": "apply",
+    "tr_file": "components/079_expose_XV_proofs_3_3_5_3_3_6_A_through_C.tex",
+    "tr_old": "H^n_{\\{0\\}}\\bigl(X_0,R\\Psi_{\\mathrm{cl}\\eta}(\\mathbb Z)\\bigr)\n\\otimes\\mathbb Z_\\ell",
+    "tr_new": "H^n_{\\{0\\}}\\bigl(X_0,R\\psi_{\\mathrm{cl}\\eta}(\\mathbb Z)\\bigr)\n\\otimes\\mathbb Z_\\ell"
+  },
+  {
+    "id": "C179",
+    "decision": "apply",
+    "tr_file": "components/079_expose_XV_proofs_3_3_5_3_3_6_A_through_C.tex",
+    "tr_old": "$H^n_{\\{0\\}}(X_0,R\\Psi_{\\mathrm{cl}\\eta}(\\mathbb Z))$, and coincide",
+    "tr_new": "$H^n_{\\{0\\}}(X_0,R\\psi_{\\mathrm{cl}\\eta}(\\mathbb Z))$, and coincide"
+  },
+  {
+    "id": "C180",
+    "decision": "already",
+    "tr_file": "components/081_expose_XV_section_3_4_summary.tex",
+    "tr_old": "\\underline{The $\\delta_x$ are pairwise orthogonal.  When $n$ is even,}"
+  },
+  {
+    "id": "C181",
+    "decision": "apply",
+    "tr_file": "components/081_expose_XV_section_3_4_summary.tex",
+    "tr_old": "\\underline{The action of the inertia group $I$ is given by}",
+    "tr_new": "\\underline{The action of the inertia group} $I$ \\underline{is given by}"
+  },
+  {
+    "id": "C182",
+    "decision": "apply",
+    "tr_file": "components/082_expose_XVI_title_through_1_5.tex",
+    "tr_old": "{\\Large\\underline{The Milnor Formula}}\\par",
+    "tr_new": "{\\Large\\underline{\\underline{The Milnor Formula}}}\\par"
+  },
+  {
+    "id": "C183",
+    "decision": "not_applicable",
+    "note": "Sentence-ending punctuation only."
+  },
+  {
+    "id": "C184",
+    "decision": "not_applicable",
+    "note": "Sentence-ending punctuation only."
+  },
+  {
+    "id": "C185",
+    "decision": "already",
+    "tr_file": "components/084_expose_XVI_sections_1_11_through_1_12.tex",
+    "tr_old": "(\\mathbb Z/\\ell)^{I/H}\\right)\\\\\n&=\\dim_{\\mathbb Z/\\ell}\\operatorname{Hom}_I\\!\\left("
+  },
+  {
+    "id": "C186",
+    "decision": "not_applicable",
+    "note": "The English uses its own heading punctuation."
+  },
+  {
+    "id": "C187",
+    "decision": "not_applicable",
+    "note": "The English uses a section heading rather than the French underlined-heading layout."
+  },
+  {
+    "id": "C188",
+    "decision": "apply",
+    "tr_file": "components/086_expose_XVI_section_2_1.tex",
+    "tr_old": "\\underline{Let $S$ be a smooth connected projective curve over an\nalgebraically closed field $k$, let $X$ be a smooth proper variety\nover $k$, purely of dimension $n+1$, and let $f:X\\to S$ be a\nmorphism which is smooth away from a finite set $F$ of points of\n$X$.  Then the Euler--Poincar\\'e characteristics in \\'etale\ncohomology of $S$, $X$, and the geometric generic fiber\n$X_{\\bar\\eta}$ of $f$ satisfy}",
+    "tr_new": "\\underline{Let} $S$ \\underline{be a smooth connected projective curve over an\nalgebraically closed field} $k$, \\underline{let} $X$ \\underline{be a smooth proper variety\nover} $k$, \\underline{purely of dimension} $n+1$, \\underline{and let} $f:X\\to S$ \\underline{be a\nmorphism which is smooth away from a finite set} $F$ \\underline{of points of}\n$X$.  \\underline{Then the Euler--Poincar\\'e characteristics in \\'etale\ncohomology of} $S$, $X$, \\underline{and the geometric generic fiber}\n$X_{\\bar\\eta}$ \\underline{of} $f$ \\underline{satisfy}"
+  },
+  {
+    "id": "C189",
+    "decision": "apply",
+    "tr_file": "components/086_expose_XVI_section_2_1.tex",
+    "tr_old": "\\chi(X)=\\int_Xc_{n+1}(\\Theta_X)\n=(-1)^{n+1}\\int_Xc_{n+1}(\\Omega_X^1).",
+    "tr_new": "\\chi(X)=\\int c_{n+1}(\\Theta_X)\n=(-1)^{n+1}\\int c_{n+1}(\\Omega_X^1)."
+  },
+  {
+    "id": "C190",
+    "decision": "not_applicable",
+    "note": "The English already introduces the following display with its own punctuation."
+  },
+  {
+    "id": "C191",
+    "decision": "apply",
+    "tr_file": "components/087_expose_XVI_section_2_2.tex",
+    "tr_old": "\\begin{align*}\n&\\sum_q(-1)^q\\left(\n\\dim(R^qf_*\\mathbb Z/\\ell)_{\\bar\\eta}\n-\\dim(R^qf_*\\mathbb Z/\\ell)_s\\right)\\\\\n&\\hspace{4em}=\\sum_{x\\in F(s)}\\sum_q(-1)^q\n\\dim\\Phi^q_{\\bar\\eta}(\\mathbb Z/\\ell)_x,\n\\end{align*}",
+    "tr_new": "\\begin{equation}\\tag{a}\n\\begin{aligned}\n&\\sum_q(-1)^q\\left(\n\\dim(R^qf_*\\mathbb Z/\\ell)_{\\bar\\eta}\n-\\dim(R^qf_*\\mathbb Z/\\ell)_s\\right)\\\\\n&\\hspace{4em}=\\sum_{x\\in F(s)}\\sum_q(-1)^q\n\\dim\\Phi^q_{\\bar\\eta}(\\mathbb Z/\\ell)_x,\n\\end{aligned}\n\\end{equation}"
+  },
+  {
+    "id": "C192",
+    "decision": "apply",
+    "tr_file": "components/087_expose_XVI_section_2_2.tex",
+    "tr_old": "\\[\n\\sum_q(-1)^q\\dim\\operatorname{Sw}\n(R^qf_*\\mathbb Z/\\ell)_{\\bar\\eta}\n=\\sum_{x\\in F(s)}\\sum_q(-1)^q\n\\dim\\operatorname{Sw}\\Phi^q_{\\bar\\eta}(\\mathbb Z/\\ell)_x.\n\\]",
+    "tr_new": "\\begin{equation}\\tag{b}\n\\sum_q(-1)^q\\dim\\operatorname{Sw}\n(R^qf_*\\mathbb Z/\\ell)_{\\bar\\eta}\n=\\sum_{x\\in F(s)}\\sum_q(-1)^q\n\\dim\\operatorname{Sw}\\Phi^q_{\\bar\\eta}(\\mathbb Z/\\ell)_x.\n\\end{equation}"
+  },
+  {
+    "id": "C193",
+    "decision": "apply",
+    "tr_file": "components/088_expose_XVI_sections_2_3_through_proposition_2_5.tex",
+    "tr_old": "Then the total number (1.8) of vanishing cycles",
+    "tr_new": "Then the} total \\underline{number (1.8) of vanishing cycles"
+  },
+  {
+    "id": "C194",
+    "decision": "apply",
+    "tr_file": "components/088_expose_XVI_sections_2_3_through_proposition_2_5.tex",
+    "tr_old": "there is an $S$-isomorphism\nbetween the henselization",
+    "tr_new": "there is an} $S$-\\underline{isomorphism\nbetween the henselization"
+  },
+  {
+    "id": "C195",
+    "decision": "apply",
+    "tr_file": "components/090_expose_XVII_title_introduction_and_section_1.tex",
+    "tr_old": "{\\Large\\underline{Lefschetz Pencils: Existence Theorem}}\\par",
+    "tr_new": "{\\Large\\underline{\\underline{Lefschetz Pencils: Existence Theorem}}}\\par"
+  },
+  {
+    "id": "C196",
+    "decision": "apply",
+    "tr_file": "components/090_expose_XVII_title_introduction_and_section_1.tex",
+    "tr_old": "\\widehat{\\mathcal O}_{Y,y}",
+    "tr_new": "\\widehat{\\underline O}_{Y,y}"
+  },
+  {
+    "id": "C197",
+    "decision": "apply",
+    "tr_file": "components/091_expose_XVII_section_2.tex",
+    "tr_old": "Let $\\mathbb P^r$ denote projective $r$-space over $k$,",
+    "tr_new": "Let $P^r$ denote projective $r$-space over $k$,"
+  },
+  {
+    "id": "C198",
+    "decision": "apply",
+    "tr_file": "components/092_expose_XVII_section_3_1.tex",
+    "tr_old": "J_{n-1}(\\mathcal Y/\\check{\\mathbb P}^{r})",
+    "tr_new": "J_{n-1}(\\mathcal Y/\\check P^{r})"
+  },
+  {
+    "id": "C199",
+    "decision": "apply",
+    "tr_file": "components/093_expose_XVII_section_3_2_and_proposition_3_3.tex",
+    "tr_old": "an $H$ exists because $\\dim X\\leq r-1$.",
+    "tr_new": "an $H$ exists because $\\dim\\check X\\leq r-1$."
+  },
+  {
+    "id": "C200",
+    "decision": "apply",
+    "tr_file": "components/093_expose_XVII_section_3_2_and_proposition_3_3.tex",
+    "tr_old": "$\\dim(X\\cap H)\\leq r-1$",
+    "tr_new": "$\\dim\\check{(X\\mathbin{\\cdot}G)}\\leq r-1$",
+    "note": "Retains G as specified by the corrected French."
+  },
+  {
+    "id": "C201",
+    "decision": "apply",
+    "tr_file": "components/096_expose_XVII_proposition_3_5_and_opening_proof.tex",
+    "tr_old": "identical:}",
+    "tr_new": "identical}:"
+  },
+  {
+    "id": "C202",
+    "decision": "apply",
+    "tr_file": "components/096_expose_XVII_proposition_3_5_and_opening_proof.tex",
+    "tr_old": "one of the following two conditions holds:}",
+    "tr_new": "one of the following two conditions holds}:"
+  },
+  {
+    "id": "C203",
+    "decision": "apply",
+    "tr_file": "components/097_expose_XVII_lemma_3_6.tex",
+    "tr_old": "a closed point of $\\mathbb P(N)$, and\nlet $T_L$",
+    "tr_new": "a closed point of $\\mathbb P(N)$}, \\underline{and\nlet $T_L$"
+  },
+  {
+    "id": "C204",
+    "decision": "already",
+    "tr_file": "components/097_expose_XVII_lemma_3_6.tex",
+    "tr_old": "of $\\mathbb P^r$ with values in $k[\\epsilon]/(\\epsilon^2)$ of the\nform"
+  },
+  {
+    "id": "C205",
+    "decision": "apply",
+    "tr_file": "components/105_expose_XVII_lemma_5_3_and_first_proof.tex",
+    "tr_old": "\\begin{equation}\\tag{5.3.7}",
+    "tr_new": "\\begin{equation}\\tag*{5.3.7.}"
+  },
+  {
+    "id": "C206",
+    "decision": "apply",
+    "tr_file": "components/106_expose_XVII_completion_5_3_and_lemma_5_4.tex",
+    "tr_old": "\\underline{Let $a>0$ be an integer and let",
+    "tr_new": "\\underline{Let} $a>0$ \\underline{be an integer and let"
+  },
+  {
+    "id": "C207",
+    "decision": "apply",
+    "tr_file": "components/106_expose_XVII_completion_5_3_and_lemma_5_4.tex",
+    "tr_old": "\\underline{Let $S_i\\in A$ be the $i$-th elementary symmetric\nfunction}",
+    "tr_new": "\\underline{Let $S_i\\in A$ be the} $i$-\\underline{th elementary symmetric\nfunction}"
+  },
+  {
+    "id": "C208",
+    "decision": "already",
+    "tr_file": "components/107_expose_XVII_proof_5_4_through_proposition_5_7_2.tex",
+    "tr_old": "\\qquad\\text{in }\\operatorname{CH}(\\mathbb P^r)."
+  },
+  {
+    "id": "C209",
+    "decision": "already",
+    "tr_file": "components/107_expose_XVII_proof_5_4_through_proposition_5_7_2.tex",
+    "tr_old": "C(N)\\,C(X)=C(\\mathbb P^r)|_X\n\\qquad\\text{in }\\operatorname{CH}(X).",
+    "note": "CH is already upright."
+  },
+  {
+    "id": "C210",
+    "decision": "already",
+    "tr_file": "components/109_expose_XVIII_title_introduction_and_section_1.tex",
+    "tr_old": "{\\large SGA 7 --- EXPOS\\'E XVIII}\\par"
+  },
+  {
+    "id": "C211",
+    "decision": "apply",
+    "tr_file": "components/109_expose_XVIII_title_introduction_and_section_1.tex",
+    "tr_old": "$\\mathfrak F$ be a $\\mathbb Z_\\ell$-sheaf (respectively, a\n$\\mathbb Q_\\ell$-sheaf) on $X$. Suppose",
+    "tr_new": "$\\mathfrak F$ be a} $\\mathbb Z_\\ell$-\\underline{sheaf} (respectively, a\n$\\mathbb Q_\\ell$-\\underline{sheaf}) \\underline{on $X$. Suppose"
+  },
+  {
+    "id": "C212",
+    "decision": "apply",
+    "tr_file": "components/109_expose_XVIII_title_introduction_and_section_1.tex",
+    "tr_old": "\\underline{is an isomorphism of $\\mathbb Z_\\ell$-sheaves (respectively,\n$\\mathbb Q_\\ell$-sheaves) on $S$. Then, for every morphism",
+    "tr_new": "\\underline{is an isomorphism of} $\\mathbb Z_\\ell$-\\underline{sheaves} (respectively,\n$\\mathbb Q_\\ell$-\\underline{sheaves}) \\underline{on $S$. Then, for every morphism"
+  },
+  {
+    "id": "C213",
+    "decision": "already",
+    "tr_file": "components/110_expose_XVIII_section_2_1.tex",
+    "tr_old": "\\check{\\mathbb P}(\\underline N_{\\Delta|X})\n  \\arrow[ld,\"\\text{canonical projection}\"]\\\\\n{} & \\Delta & {}\n\\end{tikzcd}."
+  },
+  {
+    "id": "C214",
+    "decision": "not_applicable",
+    "note": "French transcription comment only."
+  },
+  {
+    "id": "C215",
+    "decision": "already",
+    "tr_file": "components/110_expose_XVIII_section_2_1.tex",
+    "tr_old": "{} & \\Delta \\arrow[r,hook] & X & {}\n\\end{tikzcd},"
+  },
+  {
+    "id": "C216",
+    "decision": "not_applicable",
+    "note": "French transcription comment only."
+  },
+  {
+    "id": "C217",
+    "decision": "already",
+    "tr_file": "components/111_expose_XVIII_theorem_2_2_through_part_1.tex",
+    "tr_old": "X & \\Delta \\arrow[l,\"j\"']\n\\end{tikzcd}."
+  },
+  {
+    "id": "C218",
+    "decision": "not_applicable",
+    "note": "French transcription comment only."
+  },
+  {
+    "id": "C219",
+    "decision": "already",
+    "tr_file": "components/111_expose_XVIII_theorem_2_2_through_part_1.tex",
+    "tr_old": "E_2^{p+2,q-1}(g)\n\\end{tikzcd}."
+  },
+  {
+    "id": "C220",
+    "decision": "already",
+    "tr_file": "components/111_expose_XVIII_theorem_2_2_through_part_1.tex",
+    "tr_old": "E_{s+1}^{p,q}(g)\n\\end{tikzcd},"
+  },
+  {
+    "id": "C221",
+    "decision": "already",
+    "tr_file": "components/111_expose_XVIII_theorem_2_2_through_part_1.tex",
+    "tr_old": "E_{s+1}^{p+s+1,q-s}(g)\n\\end{tikzcd}."
+  },
+  {
+    "id": "C222",
+    "decision": "already",
+    "tr_file": "components/112_expose_XVIII_theorem_2_2_completion_and_corollary_2_3.tex",
+    "tr_old": "diagram\n\\begin{center}\n\\resizebox{\\textwidth}{!}{%\n\\begin{tikzcd}[ampersand replacement=\\&,column sep=small,row sep=large]\n(2.2.25)",
+    "note": "There is no redundant pair of numbers before the diagram."
+  },
+  {
+    "id": "C223",
+    "decision": "not_applicable",
+    "note": "Sentence-ending punctuation only."
+  },
+  {
+    "id": "C224",
+    "decision": "not_applicable",
+    "note": "French transcription comment only."
+  },
+  {
+    "id": "C230",
+    "decision": "not_applicable",
+    "note": "French transcription comment only; the English diagram already labels the inclusion j."
+  },
+  {
+    "id": "C225",
+    "decision": "apply",
+    "tr_file": "components/114_expose_XVIII_section_4_opening_and_proposition_4_2.tex",
+    "tr_old": "\\textup{(4.2.1)} \\underline{The homomorphisms of $\\mathbb Z_\\ell$-modules}",
+    "tr_new": "\\textup{(4.2.1)} \\underline{The homomorphisms of} $\\mathbb Z_\\ell$\\underline{-modules}"
+  },
+  {
+    "id": "C226",
+    "decision": "not_applicable",
+    "note": "French transcription comment only."
+  },
+  {
+    "id": "C227",
+    "decision": "not_applicable",
+    "note": "Sentence-ending punctuation only."
+  },
+  {
+    "id": "C228",
+    "decision": "not_applicable",
+    "note": "Blank-line change only."
+  },
+  {
+    "id": "C229",
+    "decision": "already",
+    "tr_file": "components/117_expose_XVIII_section_5_2.tex",
+    "tr_old": "(5.2.4.6) is equivalent to nondegeneracy of the bilinear form\n\\begin{equation}\\tag{5.2.4.7}",
+    "note": "The English identifies the assertion by the display number."
+  },
+  {
+    "id": "C231",
+    "decision": "apply",
+    "tr_file": "components/119_expose_XVIII_lemmas_5_4_and_5_5.tex",
+    "tr_old": "\\underline{Suppose that one smooth hyperplane section of $X$ (and hence\nevery such section, by Corollary 5.2.7) satisfies (LV)---for example, suppose\nthat $X$ satisfies (LV), cf. Lemma 5.2.4---and suppose that $\\rho$ satisfies\ncondition (A).  Then every fiber (including every singular fiber) satisfies\n(LV), and the sheaves $R^i\\rho_*\\mathbb Q_\\ell(j)$ are constant for\n$i\\neq n-1$.}",
+    "tr_new": "\\underline{Suppose that one smooth hyperplane section of $X$} (\\underline{and hence\nevery such section, by Corollary 5.2.7}) \\underline{satisfies (LV)---for example, suppose\nthat $X$ satisfies (LV), cf. Lemma 5.2.4---and suppose that $\\rho$ satisfies\ncondition (A).  Then every fiber} (\\underline{including every singular fiber}) \\underline{satisfies\n(LV), and the sheaves $R^i\\rho_*\\mathbb Q_\\ell(j)$ are constant for\n$i\\neq n-1$.}"
+  },
+  {
+    "id": "C232",
+    "decision": "already",
+    "tr_file": "components/119_expose_XVIII_lemmas_5_4_and_5_5.tex",
+    "tr_old": "Then every fiber (including every singular fiber) satisfies",
+    "note": "covered by C231"
+  },
+  {
+    "id": "C233",
+    "decision": "already",
+    "tr_file": "components/124_expose_XVIII_section_5_8_1_through_definition_5_8_3.tex",
+    "tr_old": "U\\arrow[l,\"\\nu\"'].\n\\end{tikzcd}"
+  },
+  {
+    "id": "C234",
+    "decision": "already",
+    "tr_file": "components/125_expose_XVIII_theorem_5_8_4_and_lemma_5_8_5.tex",
+    "tr_old": "H^1(U,\\nu^*E^{n-1}\\rho_*\\mathbb Q_\\ell(j)).\n\\end{tikzcd}\n\\end{equation}\nBy (5.7.1)"
+  },
+  {
+    "id": "C235",
+    "decision": "not_applicable",
+    "note": "French transcription comment only."
+  }
+]
+```
+
+components/080_expose_XV_proofs_3_3_5_3_3_6_D_through_F.tex, page 194: both occurrences of `\check{\mathbb P}^{,r}` contain a stray comma in the exponent.
+components/081_expose_XV_section_3_4_summary.tex, page 195: `(-1)^m,2` has a comma instead of the multiplication dot shown in the French context.
+components/083_expose_XVI_sections_1_6_through_1_10.tex, formula (1.7.1): `\mathbb Z/\ell,,V` has a duplicated comma.
+components/093_expose_XVII_section_3_2_and_proposition_3_3.tex, page 219: “henselian modules” should be “henselian moduli.”

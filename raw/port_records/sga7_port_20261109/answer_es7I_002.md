@@ -1,0 +1,760 @@
+```json
+[
+  {
+    "id": "B94",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "y\n$f_1,\\ldots,f_r$ es una sucesión $S$-regular."
+  },
+  {
+    "id": "B95",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "generado por las\nclases de $f_1,\\ldots,f_r$"
+  },
+  {
+    "id": "B96",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "porque estos elementos forman una\nsucesión $S$-regular.",
+    "note": "La traducción sustituye la lista repetida por «estos elementos»."
+  },
+  {
+    "id": "B97",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "p_i:J/J^2\\longrightarrow A_0\\qquad(1\\leq i\\leq d)",
+    "note": "El intervalo de índices reemplaza la enumeración."
+  },
+  {
+    "id": "B98",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "$P_{ij}\\in\\Lambda[x_1,\\ldots,x_n]$"
+  },
+  {
+    "id": "B99",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "R=\\Lambda[[t_1,\\ldots,t_d]],"
+  },
+  {
+    "id": "B100",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "B=R[x_1,\\ldots,x_n]/(G_1,\\ldots,G_r),"
+  },
+  {
+    "id": "B101",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "El álgebra $R[x_1,\\ldots,x_n]$ es plana sobre $R$"
+  },
+  {
+    "id": "B102",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "las imágenes de\n$G_1,\\ldots,G_r$ módulo $\\mathfrak m_R$"
+  },
+  {
+    "id": "B103",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "forman la sucesión regular\n$f_1,\\ldots,f_r$ en"
+  },
+  {
+    "id": "B104",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_48_ES.tex",
+    "tr_old": "$k\\otimes_RR[x_1,\\ldots,x_n]$."
+  },
+  {
+    "id": "B105",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_53_ES.tex",
+    "tr_old": "\\noindent\\textbf{Definición 5.6.}\nSea $S$ un esquema formal noetheriano y $\\mathfrak X$ un esquema\nformal $S$-ádico esencialmente de tipo finito.",
+    "note": "S ya está en modo matemático y fuera de cualquier subrayado."
+  },
+  {
+    "id": "D130",
+    "decision": "unclear",
+    "note": "La mención independiente del ideal en la prosa no aparece en español; solo aparece la fórmula de D131."
+  },
+  {
+    "id": "D131",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_53_ES.tex",
+    "tr_old": "\\underline I_{\\mathfrak X}^p(\\mathcal E)(U)\n=I_{\\mathfrak X(U)}^p\\bigl(\\mathcal E(U)\\bigr).",
+    "tr_new": "\\underline I_{\\mathfrak X}^{\\sisi{P}{p}}(\\mathcal E)(U)\n=I_{\\mathfrak X(U)}^{\\sisi{P}{p}}\\bigl(\\mathcal E(U)\\bigr)."
+  },
+  {
+    "id": "D132",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_53_ES.tex",
+    "tr_old": "\\underline I_{\\mathfrak X}^p(\\mathcal E)\n=\\varprojlim_\\nu\\underline I_{X_\\nu}^p(\\mathcal E_\\nu).",
+    "tr_new": "\\underline I_{\\mathfrak X}^{\\sisi{P}{p}}(\\mathcal E)\n=\\varprojlim_\\nu\\underline I_{X_\\nu}^{\\sisi{P}{p}}(\\mathcal E_\\nu)."
+  },
+  {
+    "id": "B106",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_53_ES.tex",
+    "tr_old": "\\noindent\\textbf{Definición 5.6.}\nSea $S$ un esquema formal noetheriano y $\\mathfrak X$ un esquema\nformal $S$-ádico esencialmente de tipo finito.",
+    "note": "Mismo pasaje que B105."
+  },
+  {
+    "id": "B107",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_54_ES.tex",
+    "tr_old": "\\noindent\\textbf{(3)} Sea $S$ un esquema noetheriano ordinario y\n$X$ un $S$-esquema esencialmente de tipo finito.",
+    "note": "S ya está en modo matemático y sin subrayar."
+  },
+  {
+    "id": "B108",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_54_ES.tex",
+    "tr_old": "\\Omega_{\\mathfrak X'|S'}\n\\simeq\n\\mathcal O_{S'}\\widehat\\otimes_{\\mathcal O_S}"
+  },
+  {
+    "id": "B109",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_54_ES.tex",
+    "tr_old": "\\mathcal O_{\\mathfrak X_{(x)}}\n\\widehat\\otimes_{\\mathcal O_{\\mathfrak X}}\n\\Omega_{\\mathfrak X|S}\n\\simeq\\Omega_{\\mathfrak X_{(x)}|S}."
+  },
+  {
+    "id": "B110",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_54_ES.tex",
+    "tr_old": "\\mathfrak X\\to S\\text{ es formalmente liso en }x\n&\\Longleftrightarrow\n X_\\nu\\to S_\\nu\\text{ es formalmente liso en }x"
+  },
+  {
+    "id": "B111",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_54_ES.tex",
+    "tr_old": "X_\\nu\\to S_\\nu\\text{ es formalmente liso en }x\n \\text{ para todo }\\nu \\\\\n&\\Longleftrightarrow\n x\\notin J_{X_\\nu}^n(X_\\nu|S_\\nu)"
+  },
+  {
+    "id": "B112",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_54_ES.tex",
+    "tr_old": "x\\notin J_{X_\\nu}^n(X_\\nu|S_\\nu)\n \\text{ para todo }\\nu \\\\\n&\\Longleftrightarrow\n x\\notin\\varinjlim_\\nu J_{X_\\nu}^n(X_\\nu|S_\\nu)"
+  },
+  {
+    "id": "B113",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_55_ES.tex",
+    "tr_old": "\\Omega_{A_\\nu|R_\\nu}\n\\longrightarrow\\widehat\\Omega_{A_\\nu|R_\\nu}",
+    "tr_new": "\\Omega_{A_\\nu|R_\\nu}\n\\longrightarrow\\Omega_{\\widehat A_\\nu|R_\\nu}"
+  },
+  {
+    "id": "D141",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_55_ES.tex",
+    "tr_old": "\\mathfrak X_{(\\widehat{x})}\n=\\varinjlim_\\nu",
+    "tr_new": "\\mathfrak X_{(\\widehat{\\sisi{X}{x}})}\n=\\varinjlim_\\nu"
+  },
+  {
+    "id": "D142",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_55_ES.tex",
+    "tr_old": "\\mathfrak X_{(\\widehat{x})}\n\\longrightarrow\\mathfrak X_{(x)}",
+    "tr_new": "\\mathfrak X_{(\\widehat{\\sisi{X}{x}})}\n\\longrightarrow\\mathfrak X_{(x)}"
+  },
+  {
+    "id": "D144",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_55_ES.tex",
+    "tr_old": "\\varprojlim_\\nu\n \\widehat{\\widehat\\Omega_{A_\\nu|R_\\nu}}.",
+    "tr_new": "\\varprojlim_\\nu\n \\sisi{\\widehat{\\Omega_{\\widehat A_\\nu|R_\\nu}}}{\\widehat{\\widehat\\Omega_{A_\\nu|R_\\nu}}}."
+  },
+  {
+    "id": "D145",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_55_ES.tex",
+    "tr_old": "\\widehat{\\widehat\\Omega_{\n   \\mathcal O_{X_\\nu,x}|\\mathcal O_{S_\\nu,y}}}",
+    "tr_new": "\\sisi{\\widehat{\\Omega_{\n   \\widehat{\\mathcal O}_{X_\\nu,x}|\\mathcal O_{S_\\nu,y}}}}{\\widehat{\\widehat\\Omega_{\n   \\mathcal O_{X_\\nu,x}|\\mathcal O_{S_\\nu,y}}}}"
+  },
+  {
+    "id": "B114",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "\\noindent\\textbf{(2)} La formación de $J_S^p(\\mathfrak X|S)$\nconmuta con el cambio de base:"
+  },
+  {
+    "id": "B115",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "J_{S'}^p(\\mathfrak X'|S')\n=J_S^p(\\mathfrak X|S)\\times_SS'."
+  },
+  {
+    "id": "B116",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "J_{\\mathfrak X}^p(\\mathfrak X|S)\n=\\coprod_{1\\leq i\\leq m}\\mathfrak Y^{(i)}"
+  },
+  {
+    "id": "B117",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "=\\coprod_{1\\leq i\\leq m}\\mathfrak Y^{(i)}",
+    "note": "La unión disjunta de esta página ya usa \\coprod."
+  },
+  {
+    "id": "B118",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "\\coprod_{1\\leq i\\leq m}\\mathfrak Y^{(i)}"
+  },
+  {
+    "id": "B119",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "\\underline I_S^p(\\mathfrak X|S)\n=\\prod_{1\\leq i\\leq m}\n \\underline I_S^0"
+  },
+  {
+    "id": "B120",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "\\underline I_S^0\\bigl(f_*\\mathcal O_{\\mathfrak Y^{(i)}}\\bigr)."
+  },
+  {
+    "id": "B121",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "\\mathcal O_{\\mathfrak Y^{(i)}}\\bigr)",
+    "tr_new": "\\mathcal O_{\\mathfrak Y(i)}\\bigr)"
+  },
+  {
+    "id": "B122",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "\\underline I_S^p(\\mathfrak X|S)\n=\\prod_{1\\leq i\\leq m}\n \\underline I_S^p(\\mathfrak X_{(x_i)}|S)\n=\\prod_{1\\leq i\\leq m}\n \\underline I_S^p(\\mathfrak X_{(\\widehat{x_i})}|S)."
+  },
+  {
+    "id": "B123",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "\\underline I_S^p(\\mathfrak X_{(\\widehat{x_i})}|S)."
+  },
+  {
+    "id": "B124",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "\\operatorname{Supp}\n f_*\\mathcal O_{J_{\\mathfrak X}^p(\\mathfrak X|S)}\n=\\bigl|J_S^p(\\mathfrak X|S)\\bigr|,"
+  },
+  {
+    "id": "B125",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "J_{\\mathfrak X_{(\\widehat{x})}}^p\n (\\mathfrak X_{(\\widehat{x})}|S)\n\\xrightarrow{\\ \\sim\\ }\nJ_{\\mathfrak X_{(x)}}^p(\\mathfrak X_{(x)}|S)."
+  },
+  {
+    "id": "B126",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_56_ES.tex",
+    "tr_old": "$x\\in J_{\\mathfrak X}^p(\\mathfrak X|S)$, del isomorfismo"
+  },
+  {
+    "id": "B127",
+    "decision": "not_applicable",
+    "note": "Supresión de una división de palabra inglesa."
+  },
+  {
+    "id": "B128",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_58_ES.tex",
+    "tr_old": "Sea $A_0$ un $k$-álgebra local esencialmente de tipo finito tal que",
+    "note": "k ya está en modo matemático y sin subrayar."
+  },
+  {
+    "id": "B129",
+    "decision": "not_applicable",
+    "note": "La edición española usa un rótulo de demostración en cursiva con punto, no dos puntos subrayados."
+  },
+  {
+    "id": "B130",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_58_ES.tex",
+    "tr_old": "\\Omega_{\\widehat A|R}\\longrightarrow0",
+    "tr_new": "\\widehat\\Omega_{\\widehat A|R}\\longrightarrow0"
+  },
+  {
+    "id": "D162",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_58_ES.tex",
+    "tr_old": "\\xrightarrow{\\ dF\\ }",
+    "tr_new": "\\sisi{\\overset{dF}{\\relbar\\joinrel\\relbar\\joinrel\\relbar}}{\\xrightarrow{\\ dF\\ }}"
+  },
+  {
+    "id": "D163",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_58_ES.tex",
+    "tr_old": "\\widehat A\\,dx_n\n \\longrightarrow",
+    "tr_new": "\\widehat A\\,dx_n\n \\sisi{\\relbar\\joinrel\\relbar\\joinrel\\relbar\\joinrel\\relbar\\joinrel\\relbar}{\\longrightarrow}"
+  },
+  {
+    "id": "B135",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_59_ES.tex",
+    "tr_old": "como esquemas formales $R$-ádicos si y solo si",
+    "note": "R ya está en modo matemático y sin subrayar."
+  },
+  {
+    "id": "B136",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "Sea $X_0$ un $k$-esquema de tipo finito cuyos puntos no lisos sean\naislados, y sea",
+    "note": "k ya está en modo matemático y sin subrayar."
+  },
+  {
+    "id": "B137",
+    "decision": "not_applicable",
+    "note": "La traducción no reproduce el inciso parentético cuya puntuación se deja fuera del subrayado."
+  },
+  {
+    "id": "B138",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "$(R,\\mathfrak X_{(\\widehat z_i)})$ es una deformación de este tipo,"
+  },
+  {
+    "id": "B139",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "\\mathfrak X_{(\\widehat z_i)}\n  \\arrow[r] \\arrow[d]"
+  },
+  {
+    "id": "B140",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "J_{\\mathfrak X_{(\\widehat z_i)}}\n   (\\mathfrak X_{(\\widehat z_i)}|R)"
+  },
+  {
+    "id": "B141",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "&=J_R(\\mathfrak X_{(\\widehat z_i)}|R)\\\\"
+  },
+  {
+    "id": "B142",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "J_{\\mathfrak Y_i}(\\mathfrak Y_i|R_i)\n \\times_{\\operatorname{Spf}(R_i)}\\operatorname{Spf}(R),"
+  },
+  {
+    "id": "B143",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "=I_R(\\mathfrak X_{(\\widehat z_i)}|R)\n=(t_i),"
+  },
+  {
+    "id": "B144",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "\\underline M_{X_0,(\\widehat z_1)}\\times\\cdots\\times\n\\underline M_{X_0,(\\widehat z_m)}"
+  },
+  {
+    "id": "B145",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "\\mathfrak X_{(\\widehat z_i)}\n \\xrightarrow{\\ \\sim\\ }"
+  },
+  {
+    "id": "B146",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "\\mathfrak Y_i\\times_{\\operatorname{Spf}(R_i)}\n \\operatorname{Spf}(R)"
+  },
+  {
+    "id": "B147",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "\\operatorname{Spf}(R)\n \\longrightarrow\\mathfrak Y_i"
+  },
+  {
+    "id": "B148",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "$\\mathfrak Y_i\\longrightarrow\\operatorname{Spec}(\\Lambda)$ es\nformalmente liso."
+  },
+  {
+    "id": "B149",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "$\\mathfrak X_{(\\widehat z_i)}\\longrightarrow\n\\operatorname{Spec}(\\Lambda)$"
+  },
+  {
+    "id": "B150",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "$\\mathfrak X\\longrightarrow\\operatorname{Spec}(\\Lambda)$ es\nformalmente liso."
+  },
+  {
+    "id": "B151",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_61_ES.tex",
+    "tr_old": "Para (5), $R$ es formalmente liso sobre $\\Lambda$"
+  },
+  {
+    "id": "D194",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_60_ES.tex",
+    "tr_old": "\\operatorname{Spf}(R)\\longrightarrow\\operatorname{Spf}(R_i)",
+    "tr_new": "\\operatorname{Spf}(R)\\sisi{\\overset{\\ \\operatorname{Spf}(\\varphi_i)\\ }{\\relbar\\joinrel\\relbar\\joinrel\\relbar\\joinrel\\relbar}}{\\longrightarrow}\\operatorname{Spf}(R_i)"
+  },
+  {
+    "id": "B152",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_61_ES.tex",
+    "tr_old": "ninguna singularidad cuadrática no degenerada de dimensión par en\ncaracterística $2$.",
+    "note": "La condición se expresa en palabras, sin el operador mal compuesto."
+  },
+  {
+    "id": "D199",
+    "decision": "apply",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_61_ES.tex",
+    "tr_old": "\\chi(\\underline D^0_{X_0})\n&=\\chi",
+    "tr_new": "\\chi(\\underline D^0_{\\sisi{X^0_0}{X_0}})\n&=\\chi"
+  },
+  {
+    "id": "B131",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_62_ES.tex",
+    "tr_old": "Sea $X$ un $k$-esquema de tipo finito.",
+    "note": "k ya queda fuera de cualquier subrayado."
+  },
+  {
+    "id": "B132",
+    "decision": "already",
+    "tr_file": "units/03_expose_vi/EXPOSE_VI_PART_62_ES.tex",
+    "tr_old": "Sea $X_0$ un $k$-esquema de tipo finito cuyos puntos no lisos sean\naislados, supongamos que",
+    "note": "k ya queda fuera de cualquier subrayado."
+  },
+  {
+    "id": "B133",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "\\underline{BIEXTENSIONES DE HACES DE GRUPOS}",
+    "tr_new": "\\underline{\\underline{BIEXTENSIONES DE HACES DE GRUPOS}}"
+  },
+  {
+    "id": "B134",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "$\\underline{RHom}$",
+    "tr_new": "$\\mathrm{R}\\underline{\\mathrm{Hom}}$"
+  },
+  {
+    "id": "D169",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "\\sisi{G_p = GxP}{G_P=G\\times P}",
+    "tr_new": "\\sisi{G_P = G\\times P}{G_P=G\\times P}",
+    "note": "Incluye D170."
+  },
+  {
+    "id": "D170",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "\\sisi{G_p = GxP}{G_P=G\\times P}",
+    "note": "covered by D169"
+  },
+  {
+    "id": "D171",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "\\sisi{\\underline{T}_{/p}}{\\underline T_{/P}}",
+    "tr_new": "\\sisi{\\underline{T}_{/P}}{\\underline T_{/P}}"
+  },
+  {
+    "id": "D172",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "sobre $P$, de grupo\n$\\sisi{G_p}{G_P}$,",
+    "tr_new": "sobre $P$, de grupo\n$\\sisi{G_P}{G_P}$,"
+  },
+  {
+    "id": "D173",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "bajo $(\\sisi{G_p}{G_P},\\sisi{G_p}{G_P})$. Recordemos",
+    "tr_new": "bajo $(\\sisi{G_P}{G_P},\\sisi{G_P}{G_P})$. Recordemos"
+  },
+  {
+    "id": "D174",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "$\\sisi{G_p}{G_P}$, y que la acción izquierda induce un isomorfismo de",
+    "tr_new": "$\\sisi{G_P}{G_P}$, y que la acción izquierda induce un isomorfismo de"
+  },
+  {
+    "id": "D175",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "$\\sisi{G_p}{G_P}$ con el grupo de automorfismos\nde $E_d$",
+    "tr_new": "$\\sisi{G_P}{G_P}$ con el grupo de automorfismos\nde $E_d$"
+  },
+  {
+    "id": "D176",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "la acción derecha de $\\sisi{G_p}{G_P}$ sobre $E$",
+    "tr_new": "la acción derecha de $\\sisi{G_P}{G_P}$ sobre $E$"
+  },
+  {
+    "id": "D177",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "la acción izquierda de\n$\\sisi{G_p}{G_P}$ sobre $E$",
+    "tr_new": "la acción izquierda de\n$\\sisi{G_P}{G_P}$ sobre $E$"
+  },
+  {
+    "id": "D178",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "$\\sisi{G_p^{\\;o}}{G_P^{\\;o}}$ de $\\sisi{G_p}{G_P}$",
+    "tr_new": "$\\sisi{G_P^{\\;o}}{G_P^{\\;o}}$ de $\\sisi{G_P}{G_P}$"
+  },
+  {
+    "id": "D179",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "$(\\sisi{G_p}{G_P},\\sisi{G_p}{G_P})$ equivale\nmanifiestamente",
+    "tr_new": "$(\\sisi{G_P}{G_P},\\sisi{G_P}{G_P})$ equivale\nmanifiestamente"
+  },
+  {
+    "id": "D180",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "bitorsor $E$ bajo $(\\sisi{G_p}{G_P},\\sisi{G_p}{G_P})$ equivale al dato,",
+    "tr_new": "bitorsor $E$ bajo $(\\sisi{G_P}{G_P},\\sisi{G_P}{G_P})$ equivale al dato,"
+  },
+  {
+    "id": "D204",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "$(\\sisi{G_p}{G_P},\\sisi{G_p}{G_P})$\nsobre $P$ equivale",
+    "tr_new": "$(\\sisi{G_P}{G_P},\\sisi{G_P}{G_P})$\nsobre $P$ equivale"
+  },
+  {
+    "id": "D205",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_63_ES.tex",
+    "tr_old": "$(\\sisi{G_p}{G_P},\\sisi{G_p}{G_P})$. Este enunciado",
+    "tr_new": "$(\\sisi{G_P}{G_P},\\sisi{G_P}{G_P})$. Este enunciado"
+  },
+  {
+    "id": "D206",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_64_ES.tex",
+    "tr_old": "$(\\sisi{G_p}{G_P},\\sisi{G_p}{G_P})$ sobre\n$E$",
+    "tr_new": "$(\\sisi{G_P}{G_P},\\sisi{G_P}{G_P})$ sobre\n$E$"
+  },
+  {
+    "id": "B155",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_64_ES.tex",
+    "tr_old": "$\\times^{G}_{S}$",
+    "tr_new": "$\\overset{G_S}{\\times}$"
+  },
+  {
+    "id": "B156",
+    "decision": "not_applicable",
+    "note": "Punto final de la presentación francesa del diagrama, sin cambio matemático."
+  },
+  {
+    "id": "B157",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_64_ES.tex",
+    "tr_old": "$p=pr_1,p' = pr_2$",
+    "tr_new": "$p=\\mathrm{pr}_1,p' = \\mathrm{pr}_2$"
+  },
+  {
+    "id": "D210",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_64_ES.tex",
+    "tr_old": "S=P$\\times$P$\\times$P,\n$p=pr_1$,$p'=pr_2$,$p''=pr_3$.",
+    "tr_new": "\\sisi{$S=P\\times P\\times P$}{S=P$\\times$P$\\times$P},\n\\sisi{$p=\\mathrm{pr}_1$}{$p=pr_1$},\\sisi{$p'=\\mathrm{pr}_2$}{$p'=pr_2$},\\sisi{$p''=\\mathrm{pr}_3$}{$p''=pr_3$}."
+  },
+  {
+    "id": "B153",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_65_ES.tex",
+    "tr_old": "con el funtor imagen inversa f* por un morfismo de",
+    "tr_new": "con el funtor imagen inversa $f^*$ por un morfismo de"
+  },
+  {
+    "id": "B154",
+    "decision": "not_applicable",
+    "note": "Coma de enlace de la presentación francesa del diagrama, sin cambio matemático."
+  },
+  {
+    "id": "D203",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "D211",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_69_ES.tex",
+    "tr_old": "$P\\times e_p\\times e_p$",
+    "tr_new": "$P\\times e_P\\times e_P$"
+  },
+  {
+    "id": "D212",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_69_ES.tex",
+    "tr_old": "$e_p\\times P\\times e_p$",
+    "tr_new": "$e_P\\times P\\times e_P$"
+  },
+  {
+    "id": "D213",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_69_ES.tex",
+    "tr_old": "$e_p\\times e_p\\times P$",
+    "tr_new": "$e_P\\times e_P\\times P$"
+  },
+  {
+    "id": "D214",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_70_ES.tex",
+    "tr_old": "$\\sisi{e_p}{e_P}\\times G$ \\underline{es trivial}",
+    "tr_new": "$\\sisi{e_P}{e_P}\\times G$ \\underline{es trivial}"
+  },
+  {
+    "id": "D215",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_70_ES.tex",
+    "tr_old": "y a $\\sisi{e_p}{e_P}\\times G$ del morfismo",
+    "tr_new": "y a $\\sisi{e_P}{e_P}\\times G$ del morfismo"
+  },
+  {
+    "id": "B158",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_70_ES.tex",
+    "tr_old": "\n\nVII\n\ndefinida por",
+    "tr_new": "\n\ndefinida por"
+  },
+  {
+    "id": "B159",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_71_ES.tex",
+    "tr_old": "cartesianas $P\\times P$, $P\\times P\\times P$, etc."
+  },
+  {
+    "id": "B160",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_71_ES.tex",
+    "tr_old": "la misma conclusión se aplica a $P\\times P$,\n$P\\times P\\times P$, etc."
+  },
+  {
+    "id": "B161",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_71_ES.tex",
+    "tr_old": "todo morfismo de $P$, $P\\times P$,\n$P\\times P\\times P$, etc., a $G$"
+  },
+  {
+    "id": "D217",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_70_ES.tex",
+    "tr_old": "\\sisi{PxP}{P\\times P}",
+    "tr_new": "\\sisi{P\\times P}{P\\times P}"
+  },
+  {
+    "id": "B162",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_71_ES.tex",
+    "tr_old": "1.3.8.2. El caso más interesante en que se satisface (1.3.8.1), y\nsigue satisfaciéndose después de toda extensión de la base, es aquel",
+    "note": "No aparece el encabezado espurio VII."
+  },
+  {
+    "id": "B163",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_71_ES.tex",
+    "tr_old": "$S$-morfismo $P\\times G\\longrightarrow G$"
+  },
+  {
+    "id": "D223",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "B168",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_73_ES.tex",
+    "tr_old": "\\underline{funtoriales en $S$}",
+    "tr_new": "\\underline{funtoriales en} $S$"
+  },
+  {
+    "id": "D229",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_73_ES.tex",
+    "tr_old": "\\varphi_{p,p';q}\\wedge\\mathrm{id}",
+    "tr_new": "\\sisi{\\varphi_{p,p;q}}{\\varphi_{p,p';q}}\\wedge\\mathrm{id}"
+  },
+  {
+    "id": "B164",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_80_ES.tex",
+    "tr_old": "El funtor de imagen inversa $f^*$ transforma una"
+  },
+  {
+    "id": "B165",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_80_ES.tex",
+    "tr_old": "una biextensión $f^*(E)$ de\n$(f^*P,f^*Q)$ por $f^*G$"
+  },
+  {
+    "id": "B166",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_80_ES.tex",
+    "tr_old": "de extensión sobre $f^*(E)$ inducidas por las de $E$"
+  },
+  {
+    "id": "B167",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_80_ES.tex",
+    "tr_old": "$E\\mapsto f^*(E)$ da un funtor canónico"
+  },
+  {
+    "id": "B169",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_80_ES.tex",
+    "tr_old": "En lo que sigue utilizaremos sin más mención el hecho de que toda\nconstrucción hecha con biextensiones es compatible con las imágenes",
+    "note": "No aparece el encabezado espurio VII."
+  },
+  {
+    "id": "B170",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_80_ES.tex",
+    "tr_old": "Entonces $f^*(E)$ se denomina la \\underline{biextensión inducida}"
+  },
+  {
+    "id": "B171",
+    "decision": "already",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_80_ES.tex",
+    "tr_old": "Llamamos a este el \\underline{stack de biextensiones sobre\n$\\underline T$}.",
+    "note": "No aparece el encabezado espurio VII."
+  },
+  {
+    "id": "B172",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_81_ES.tex",
+    "tr_old": "\\underline{Proposición 2.9.3. Supongamos que todo morfismo de uno de\nlos productos (2.9.2) a $G$ que sea trivial sobre cada factor de ese\nproducto (inmerso mediante las secciones identidad como acaba de\nexplicarse) es trivial. Entonces:}",
+    "tr_new": "\\underline{Proposición 2.9.3. Supongamos que todo morfismo de uno de\nlos productos (2.9.2) a $G$ que sea trivial sobre cada factor de ese\nproducto (inmerso mediante las secciones identidad como acaba de\nexplicarse}) \\underline{es trivial. Entonces:}"
+  },
+  {
+    "id": "D234",
+    "decision": "apply",
+    "tr_file": "units/04_expose_vii/EXPOSE_VII_PART_81_ES.tex",
+    "tr_old": "$(\\sisi{e_p}{e_P},e_Q)$",
+    "tr_new": "$(\\sisi{e_P}{e_P},e_Q)$"
+  },
+  {
+    "id": "D235",
+    "decision": "not_applicable",
+    "note": "Puntuación de la frase francesa; el español conserva su separación en oraciones."
+  }
+]
+```
+
+units/04_expose_vii/EXPOSE_VII_PART_80_ES.tex, pp. 170–171: el comando `\underline` está partido como `\underlin` seguido de `e T'`, lo que rompe la fórmula del funtor entre categorías de biextensiones.

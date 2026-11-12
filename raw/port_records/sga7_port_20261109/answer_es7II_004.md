@@ -1,0 +1,659 @@
+```json
+[
+  {
+    "id": "B275",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "V^{1-\\varphi}\\otimes_{\\mathbb F_q}\\mathbb F_{q^n}",
+    "tr_new": "(V^{1-\\varphi})\\otimes_{\\mathbb F_q}\\mathbb F_{q^n}"
+  },
+  {
+    "id": "B276",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Sea $e$ una base de $V$ sobre $k$",
+    "tr_new": "Sea $\\underline{e}$ una base de $V$ sobre $k$"
+  },
+  {
+    "id": "B277",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\varphi(e)=Ae,",
+    "tr_new": "\\varphi(\\underline{e})=A\\underline{e},"
+  },
+  {
+    "id": "B278",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B279",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "la base $ge$ de $V$",
+    "tr_new": "la base $g\\underline{e}$ de $V$"
+  },
+  {
+    "id": "B280",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B281",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B282",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{1.1.8}\n\\begin{aligned}\n\\mathrm{GL}(n,\\bar k)&\\longrightarrow\\mathrm{GL}(n,\\bar k),\\\\\ng&\\longmapsto F(g^{-1})\\,g\n\\end{aligned}\n\\end{equation}",
+    "tr_new": "\\begin{equation}\\tag{1.1.8}\n\\begin{aligned}\n\\sisi{\\mathrm{Gl}}{\\mathrm{GL}}(n,\\bar k)&\\longrightarrow\\sisi{\\mathrm{Gl}}{\\mathrm{GL}}(n,\\bar k),\\\\\ng&\\longrightarrow F(g^{-1})\\,g\n\\end{aligned}\n\\end{equation}",
+    "note": "Also carries D344 in the diplomatic branch."
+  },
+  {
+    "id": "D344",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\mathrm{GL}(n,\\bar k)&\\longrightarrow\\mathrm{GL}(n,\\bar k),\\\\",
+    "note": "covered by B282"
+  },
+  {
+    "id": "B283",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B284",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{1.1.9}\n\\begin{aligned}\n\\mathrm{GL}(n,k)&\\longrightarrow\\mathrm{GL}(n,k),\\\\\ng&\\longmapsto F(g^{-1})\\,g\n\\end{aligned}\n\\end{equation}",
+    "tr_new": "\\begin{equation}\\tag{1.1.9}\n\\begin{aligned}\n\\mathrm{GL}(n,k)&\\longrightarrow\\mathrm{GL}(n,k),\\\\\ng&\\longrightarrow F(g^{-1})\\,g\n\\end{aligned}\n\\end{equation}"
+  },
+  {
+    "id": "B285",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{2.0.1}\n\\mathfrak F_p:H^i(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^i(\\bar X,\\mathcal O_{\\bar X})\n\\end{equation}",
+    "tr_new": "\\begin{equation}\\tag{2.0.1}\n\\overline{\\mathfrak F}_p:H^{\\cdot}(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^{\\cdot}(\\bar X,\\mathcal O_{\\bar X})\n\\end{equation}",
+    "note": "Also carries B286."
+  },
+  {
+    "id": "B286",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{2.0.1}\n\\mathfrak F_p:H^i(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^i(\\bar X,\\mathcal O_{\\bar X})\n\\end{equation}",
+    "note": "covered by B285"
+  },
+  {
+    "id": "B287",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\[\nH^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\]",
+    "tr_new": "\\[\nH^{\\cdot}_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\]"
+  },
+  {
+    "id": "B288",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\mathfrak F_p:\\mathcal O_{\\bar X}\\longrightarrow\\mathcal O_{\\bar X},\n\\qquad \\mathfrak F_p(f)",
+    "tr_new": "\\overline{\\mathfrak F}_p:\\mathcal O_{\\bar X}\\longrightarrow\\mathcal O_{\\bar X},\n\\qquad \\overline{\\mathfrak F}_p(f)"
+  },
+  {
+    "id": "B289",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}.",
+    "tr_new": "(H^i(\\bar X,\\mathcal O_{\\bar X}))^{1-\\overline{\\mathfrak F}_p}.",
+    "note": "Also carries B290."
+  },
+  {
+    "id": "B290",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}.",
+    "note": "covered by B289"
+  },
+  {
+    "id": "B291",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B292",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "espacio vectorial de\ndimensión finita sobre $k$ porque $\\bar X$ es propio.",
+    "tr_new": "espacio vectorial \\underline{de\ndimensión finita} sobre $k$ porque $\\bar X$ es propio."
+  },
+  {
+    "id": "D357",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B293",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B294",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B295",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$(\\mathrm{Fr}_q^X)^*\\otimes_{\\mathbb F_p}k$",
+    "tr_new": "$\\mathrm{fr}_q^{X*}\\otimes_{\\mathbb F_p}k$"
+  },
+  {
+    "id": "B296",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$\\mathrm{Fr}_q^X:\\bar X\\longrightarrow\\bar X$",
+    "tr_new": "$\\mathrm{fr}_q^X:\\bar X\\longrightarrow\\bar X$"
+  },
+  {
+    "id": "B297",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Frobenius sobre $k$ (cf.~SGA~5, XVIII~2.3.4).",
+    "note": "The citation is already outside any underline."
+  },
+  {
+    "id": "B298",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "y también una extensión $k$-lineal, denotada de nuevo por\n$\\overline{\\mathfrak F}_q$",
+    "tr_new": "y también una extensión $k$-lineal, denotada de nuevo por\n$\\mathfrak F_q$"
+  },
+  {
+    "id": "B299",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B300",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\tag{2.2.11}\n\\overline{\\mathfrak F}_q",
+    "tr_new": "\\tag{2.2.11}\n\\mathfrak F_q"
+  },
+  {
+    "id": "D360",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "al automorfismo inducido por $\\varphi_q^{-1}$ en el miembro de la\nderecha.",
+    "tr_new": "al automorfismo inducido por $\\sisi{\\varphi_q^{-1}\\otimes_{\\mathbb F_q}k}{\\varphi_q^{-1}}$ en el miembro de la\nderecha.",
+    "note": "Makes the misprinted tensor factor explicit only in the diplomatic branch."
+  },
+  {
+    "id": "D364",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B301",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Todos conmutan con $\\mathfrak F_p$, por lo que",
+    "tr_new": "Todos conmutan con $\\overline{\\mathfrak F}_p$, por lo que"
+  },
+  {
+    "id": "B302",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}$. Por (2.2.13),",
+    "tr_new": "$H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\overline{\\mathfrak F}_p}$. Por (2.2.13),"
+  },
+  {
+    "id": "B303",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "son inversos el uno del otro sobre",
+    "tr_new": "son inversos el uno del otro \\underline{sobre}"
+  },
+  {
+    "id": "B304",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B305",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q,",
+    "tr_new": "H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\overline{\\mathfrak F}_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q,"
+  },
+  {
+    "id": "B306",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q$",
+    "tr_new": "$H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\overline{\\mathfrak F}_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q$"
+  },
+  {
+    "id": "B307",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "En consecuencia, el automorfismo\ninducido por $\\mathfrak F_q$ sobre",
+    "tr_new": "En consecuencia, el automorfismo\ninducido por $\\varphi_q$ sobre"
+  },
+  {
+    "id": "B360",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "D368",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "D369",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$\\mathfrak F_q\\otimes\\varphi_q$",
+    "tr_new": "$\\sisi{\\mathfrak F_k\\otimes\\varphi_k}{\\mathfrak F_q\\otimes\\varphi_q}$"
+  },
+  {
+    "id": "B308",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B309",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "«reducción módulo $p$»",
+    "tr_new": "«reducción módulo $p\\mathbb Z[[t]]$»"
+  },
+  {
+    "id": "B310",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B311",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B312",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "D377",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "D381",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "D383",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\operatorname{Tr}\\!\\left(\\mathfrak F_q\\mid H^i(X,\\mathcal O_X)\\right)",
+    "tr_new": "\\operatorname{Tr}\\!\\left(\\mathfrak F_q\\mid H^i(X,\\mathcal O_X)\\sisi{\\right.}{\\right)}"
+  },
+  {
+    "id": "B313",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B314",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$H^i(X,\\Omega^\\bullet_{X/\\mathbb F_q})$",
+    "tr_new": "$\\mathbb H^i(X,\\Omega^\\bullet_{X/\\mathbb F_q})$"
+  },
+  {
+    "id": "B315",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "(SGA~4,\nXVII~5.1.9(iii))",
+    "note": "The citation is already outside any underline."
+  },
+  {
+    "id": "B316",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B317",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B318",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\end{equation}\n\ny\n\n\\begin{equation}\\tag{3.4.3}",
+    "tr_new": "\\end{equation}\n\n\\begin{equation}\\tag{3.4.3}"
+  },
+  {
+    "id": "B319",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\prod_i\\det\\!\\left(1-t\\varphi_q^{-1}\\mid",
+    "tr_new": "\\prod\\det\\!\\left(1-t\\varphi_q^{-1}\\mid"
+  },
+  {
+    "id": "B320",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B361",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B321",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B322",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B323",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "r\\,\\operatorname{card}\\{y\\in X\\mid\\deg(y)=r\\}",
+    "tr_new": "r.\\operatorname{card}\\{y\\in X\\mid\\deg(y)=r\\}"
+  },
+  {
+    "id": "D393",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\bigoplus_{i_0<\\cdots<i_q}",
+    "tr_new": "\\sisi{\\bigoplus_q}{\\bigoplus_{i_0<\\cdots<i_q}}"
+  },
+  {
+    "id": "B324",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\bigcap_i(\\mathbb P^n-H_i)=\\mathbb P^n-\\bigcup_iH_i",
+    "tr_new": "\\bigcap(\\mathbb P^n-H_i)=\\mathbb P^n-\\bigcup_iH_i",
+    "note": "Carries the index removal while retaining the Spanish display layout."
+  },
+  {
+    "id": "B325",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$\\mathbb P^n-\\bigcap_iH_i$ permite",
+    "tr_new": "$\\mathbb P^n-\\bigcap H_i$ permite"
+  },
+  {
+    "id": "B326",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$\\mathbb P^n-\\bigcap_iH_i$. Por",
+    "tr_new": "$\\mathbb P^n-\\bigcap H_i$. Por"
+  },
+  {
+    "id": "B327",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "para $\\bigcap_iH_i$, y por tanto",
+    "tr_new": "para $\\bigcap H_i$, y por tanto"
+  },
+  {
+    "id": "B328",
+    "decision": "not_applicable",
+    "note": "Only abbreviates French prose."
+  },
+  {
+    "id": "B329",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B330",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "D404",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "q^\\nu,&x=0,\\\\",
+    "tr_new": "q^\\nu,&\\sisi{\\chi}{x}=0,\\\\"
+  },
+  {
+    "id": "D405",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "0,&x\\ne0.",
+    "tr_new": "0,&\\sisi{\\chi}{x}\\ne0."
+  },
+  {
+    "id": "D406",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$x=(x_1,\\ldots,x_{n+2})\\in",
+    "tr_new": "$\\sisi{\\chi=(\\chi_1,\\ldots,\\chi_{n+2})}{x=(x_1,\\ldots,x_{n+2})}\\in"
+  },
+  {
+    "id": "B331",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B332",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B333",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B334",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B335",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "f(X)=\\sum_w a_wX^w,",
+    "tr_new": "f(X)=\\sum a_wX^w,"
+  },
+  {
+    "id": "B336",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$\\sum_iw_i=d$",
+    "tr_new": "$\\sum w_i=d$"
+  },
+  {
+    "id": "B337",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\chi(a_wx_0X^w)",
+    "tr_new": "\\chi(a_wx_0x^w)"
+  },
+  {
+    "id": "B362",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "D407",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\tag{4.0.4}\n1+\\sum_{x_0",
+    "tr_new": "\\tag{4.0.4}\n1+\\sum_{\\sisi{X_0}{x_0}"
+  },
+  {
+    "id": "D415",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\exp\\!\\left(2\\pi i\\,\\operatorname{tr}_{\\mathbb F_{q^\\nu}/\\mathbb F_p}(x)\\right)",
+    "tr_new": "\\exp\\!\\left(2\\pi i\\,\\operatorname{tr}_{\\mathbb F_{q^\\nu}/\\mathbb F_p}(x)\\sisi{\\right.}{\\right)}"
+  },
+  {
+    "id": "B338",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B339",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B340",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B341",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B342",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "Definamos la exponencial de Artin--Hasse",
+    "tr_new": "Definamos \\underline{la exponencial de Artin--Hasse}"
+  },
+  {
+    "id": "B343",
+    "decision": "not_applicable",
+    "note": "Retain the Spanish edition's dash typography."
+  },
+  {
+    "id": "B344",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\subsubsection*{Lema 4.2.}",
+    "note": "The heading number is not underlined."
+  },
+  {
+    "id": "B345",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{4.2.3}\nt=t^{p^a};\n\\end{equation}",
+    "note": "The number is already a separate, un-underlined equation tag."
+  },
+  {
+    "id": "D423",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B346",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "está definida, y se tiene la identidad de series formales",
+    "note": "The corresponding phrase is already not underlined."
+  },
+  {
+    "id": "B347",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B348",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\subsubsection*{Corolario 4.3.}",
+    "note": "The heading number is not underlined."
+  },
+  {
+    "id": "D426",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B349",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B350",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B351",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\begin{equation}\\tag{4.4.3}\n\\begin{aligned}\n&(q^\\nu-1)\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n-\\frac{(q^\\nu-1)^{n+2}}{q^\\nu}\\\\\n&\\quad=\\frac1{q^\\nu}\n\\sum_{(X_0,X)\\in(\\mu_{q^\\nu-1}(\\Omega))^{n+3}}\n\\prod_w\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}\n\\Theta\\!\\left(A_w^{p^j}X_0^{p^j}X^{p^jw}\\right).\n\\end{aligned}\n\\end{equation}",
+    "tr_new": "\\begin{equation}\\tag{4.4.3}\n\\left\\{\n\\begin{aligned}\n&(q^\\nu-1)\\operatorname{card}V^*(\\mathbb F_{q^\\nu})\n-\\frac{(q^\\nu-1)^{n+2}}{q^\\nu}\\\\\n&\\quad=\\frac1{q^\\nu}\n\\sum_{(X_0,X)\\in(\\mu_{q^\\nu-1}(\\Omega))^{n+3}}\n\\prod_w\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}\n\\Theta\\!\\left(A_w^{p^j}X_0^{p^j}X^{p^jw}\\right).\n\\end{aligned}\n\\right.\n\\end{equation}",
+    "note": "Also carries B352."
+  },
+  {
+    "id": "B352",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\Theta\\!\\left(A_w^{p^j}X_0^{p^j}X^{p^jw}\\right).\n\\end{aligned}",
+    "note": "covered by B351"
+  },
+  {
+    "id": "D431",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "$\\chi$, se obtiene",
+    "tr_new": "$\\sisi{X}{\\chi}$, se obtiene"
+  },
+  {
+    "id": "B353",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\tag{4.4.6}\n\\begin{aligned}\n(q^\\nu-1)\\operatorname{card}",
+    "tr_new": "\\tag{4.4.6}\n\\begin{aligned}\n(q^\\nu-1)\\operatorname{Card}"
+  },
+  {
+    "id": "B354",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B355",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "X_{n+2}^{U_{n+2}},\n\\qquad U=(U_0,\\ldots,U_{n+2}),",
+    "tr_new": "X_{n+2}^{U_{n+2}}\n\\qquad (U=(U_0,\\ldots,U_{n+2}))"
+  },
+  {
+    "id": "D437",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "A_w^{\\tau^j}X_0X_1^{w_1}",
+    "tr_new": "A_w^{\\tau^j}X_0X_1^{\\sisi{w}{w_1}}"
+  },
+  {
+    "id": "B356",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B357",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B358",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\left\\{\n\\begin{aligned}\nG:L(b)&\\longrightarrow L(b),\\\\\n\\eta&\\longmapsto\\eta G.\n\\end{aligned}\n\\right.",
+    "tr_new": "\\begin{aligned}\nG:L(b)&\\longrightarrow L(b)\\\\\n\\eta&\\longmapsto\\eta G.\n\\end{aligned}"
+  },
+  {
+    "id": "B363",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B364",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B365",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B366",
+    "decision": "not_applicable"
+  },
+  {
+    "id": "B367",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\circ\n\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}H^{\\tau^j}(X^{p^j})\n\\right|L\\!",
+    "tr_new": "\n\\prod_{j=0}^{\\operatorname{ord}(q^\\nu)-1}H^{\\tau^j}(X^{p^j})\n\\right|L\\!"
+  },
+  {
+    "id": "B368",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "\\operatorname{tr}\\!\\left(\\left.\\psi_k\\circ G\\right|L^0(b)\\right)",
+    "tr_new": "\\operatorname{tr}\\!\\left(\\left.\\psi_k\\circ G\\right|L^0\\right)"
+  },
+  {
+    "id": "D449",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "&\\quad+\\frac{(\\sisi{q}{q^\\nu}-1)^{n+3}}{q^\\nu}\n\\operatorname{tr}\\!\\left(\n\\left.\\psi_{q^\\nu}",
+    "tr_new": "&\\quad+\\frac{(\\sisi{q}{q^\\nu}-1)^{n+3}}{q^\\nu}\n\\operatorname{tr}\\!\\left(\n\\left.\\psi_{\\sisi{q}{q^\\nu}}"
+  },
+  {
+    "id": "D452",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XXII_ES.tex",
+    "tr_old": "&\\quad+\\frac{(q^\\nu-1)^{n+2}}{\\sisi{q}{q^\\nu}}\n\\operatorname{tr}\\!\\left(\n\\left.\\psi_{q^\\nu}",
+    "tr_new": "&\\quad+\\frac{(q^\\nu-1)^{n+2}}{\\sisi{q}{q^\\nu}}\n\\operatorname{tr}\\!\\left(\n\\left.\\psi_{\\sisi{q}{q^\\nu}}"
+  }
+]
+```
+units/EXPOSE_XXII_ES.tex, p. 407: «La Proposición~1.1.10» denomina proposición al Corolario 1.1.10.
+units/EXPOSE_XXII_ES.tex, p. 408: «la Proposición~1.0.10» trata como proposición la fórmula (1.0.10).

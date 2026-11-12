@@ -1,0 +1,707 @@
+```json
+[
+  {
+    "id": "B0",
+    "decision": "unclear",
+    "note": "El título de la exposición no aparece en las páginas españolas suministradas."
+  },
+  {
+    "id": "D1",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "D2",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "$\\underline{O}_{Z_o}$\\underline{-módulos",
+    "tr_new": "$\\sisi{O_{\\mathbb{Z}_o}}{\\underline{O}_{Z_o}}$\\underline{-módulos"
+  },
+  {
+    "id": "D3",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "&=-\\sum_{i<j}(a_i-a_j)^2(D_i,D_j)-\\sum_i a_i^2(D_i,Z).",
+    "tr_new": "&=-\\sum_{i<j}(a_i-a_j)^2\\sisi{(D_i\\ D_j)}{(D_i,D_j)}-\\sum_i a_i^2(D_i,Z)."
+  },
+  {
+    "id": "D4",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "$\\underline O_{\\sisi{a}{s}}$",
+    "tr_new": "$\\underline O_s$"
+  },
+  {
+    "id": "B1",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "{} & S & {}\n\\end{tikzcd}\n\\end{center}\nSe tiene",
+    "tr_new": "{} & S & {}\n\\end{tikzcd}\n\\qquad .\n\\end{center}\nSe tiene"
+  },
+  {
+    "id": "B2",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "\\underline{O} \\arrow[r] & \\underline{O}_D \\arrow[r] & 0\n\\end{tikzcd}\n\\end{center}",
+    "tr_new": "\\underline{O} \\arrow[r] & \\underline{O}_D \\arrow[r] & 0\n\\end{tikzcd}\n\\qquad ,\n\\end{center}"
+  },
+  {
+    "id": "D7",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "B3",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "n_i=\\frac12\\sum_{j\\ne i}\\sisi{n_i}{n_j}(D_i,D_j).",
+    "tr_new": "n_i=\\frac12\\sum_{j\\ne i}\\sisi{n_i}{n_j}(D_i\\ D_j)."
+  },
+  {
+    "id": "B4",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "$(D_{i_k},D_{i_{k+1}})\\ne0$",
+    "tr_new": "$(D_{i_k}\\ D_{i_{k+1}})\\ne0$"
+  },
+  {
+    "id": "B5",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "$(D_i,D_j)$ son cero o uno.",
+    "tr_new": "$(D_i D_j)$ son cero o uno."
+  },
+  {
+    "id": "B6",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "\\noindent (i)\\quad $S_0=S$"
+  },
+  {
+    "id": "D12",
+    "decision": "not_applicable",
+    "note": "Concordancia gramatical francesa."
+  },
+  {
+    "id": "B7",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "del ideal de $\\underline{O}_{S'}$ que define $\\nu^*$:"
+  },
+  {
+    "id": "B8",
+    "decision": "unclear",
+    "note": "La versión española sustituye esta sucesión exacta por otro argumento; no aparece el término corregido."
+  },
+  {
+    "id": "B9",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "=n(D',s^*)+\\operatorname{long}_{k(s)}(D'\\cap T).\n\\end{equation}"
+  },
+  {
+    "id": "B10",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "\\nu(t)[k(t):k].\n\\end{aligned}\n\\end{equation}"
+  },
+  {
+    "id": "B11",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "g_*\\underline{O}_{S'}(-\\nu^*)=qJ^{\\nu(s)}."
+  },
+  {
+    "id": "B12",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "\\nu(t)[k(t):k(s)]\n\\leq\\nu(s)."
+  },
+  {
+    "id": "B13",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "&=\\sum_{\\substack{t\\in S^*\\\\t\\ \\mathrm{sobre}\\ D}}\n\\nu(t)[k(t):k]."
+  },
+  {
+    "id": "B14",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "\\subsection*{2.15}\nFragmentos de la discusión precedente"
+  },
+  {
+    "id": "D21",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "\\varinjlim_{S'\\in I}\\operatorname{Irr}\\bigl(f^{-1}(s)\\bigr)",
+    "tr_new": "\\varinjlim_{\\sisi{s'}{S'}\\in I}\\operatorname{Irr}\\bigl(f^{-1}(s)\\bigr)"
+  },
+  {
+    "id": "D22",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "B15",
+    "decision": "not_applicable",
+    "note": "Presentación tipográfica de las cabeceras de la tabla francesa."
+  },
+  {
+    "id": "B16",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "\\underline{Si $k$ es de característica cero, toda derivación de $A_s$ se\nextiende a una derivación de $\\widetilde A_s$.}",
+    "tr_new": "\\underline{Si $k$ es de característica} cero, \\underline{toda derivación de $A_s$ se\nextiende a una derivación de $\\widetilde A_s$.}"
+  },
+  {
+    "id": "B17",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_X_ES.tex",
+    "tr_old": "\\widetilde\\tau_0/\\tau\\overset\\sim\\longrightarrow",
+    "tr_new": "\\widetilde\\tau_0/\\tau\\simeq",
+    "note": "Identificación del espacio tangente en la página 36."
+  },
+  {
+    "id": "D25",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "D26",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "B18",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "\\underline{COHOMOLOGÍA DE LAS INTERSECCIONES COMPLETAS}",
+    "tr_new": "\\underline{\\underline{COHOMOLOGÍA DE LAS INTERSECCIONES COMPLETAS}}"
+  },
+  {
+    "id": "B19",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "\\underline{1. Cohomología del espacio proyectivo y de las\nintersecciones completas}",
+    "tr_new": "1. \\underline{Cohomología del espacio proyectivo y de las\nintersecciones completas}"
+  },
+  {
+    "id": "B20",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "{} & S\\arrow[ul,bend right,\"e\"'] & {}\n\\end{tikzcd}\n\\qquad ."
+  },
+  {
+    "id": "B21",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "S\\arrow[ul,bend right,\"e\"']",
+    "tr_new": "S\\arrow[ul,bend left,\"e\"]"
+  },
+  {
+    "id": "D32",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "p_*\\bigwedge^{i-1}\\underline E(n-i+1)\\right),",
+    "tr_new": "p_*\\bigwedge^{i-1}\\underline E(n-i+1)\\sisi{\\right.}{\\right)},"
+  },
+  {
+    "id": "B22",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "&&\\underline{\\text{para }}i+j<d-c, \\tag{i}"
+  },
+  {
+    "id": "B23",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "&S&{}\n\\end{tikzcd}\n\\qquad .",
+    "note": "El diagrama de la página 46 ya lleva punto final."
+  },
+  {
+    "id": "B24",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "y una sección $s$ de $\\underline W^\\vee$"
+  },
+  {
+    "id": "B25",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "\\item \\underline{Si $\\ell$ es primo con la característica de $k$, entonces\nla $\\ell$-torsión de $\\operatorname{NS}(Y)$ se identifica con la\n$\\ell$-torsión de $H^2(Y,\\mathbb Z_\\ell(1))$.}",
+    "tr_new": "\\item \\underline{Si} $\\ell$ \\underline{es primo con la característica de $k$, entonces\nla} $\\ell$-\\underline{torsión de $\\operatorname{NS}(Y)$ se identifica con la}\n$\\ell$-\\underline{torsión de $H^2(Y,\\mathbb Z_\\ell(1))$.}"
+  },
+  {
+    "id": "B26",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "la $\\ell$-torsión de $\\operatorname{NS}(Y)$",
+    "note": "covered by B25"
+  },
+  {
+    "id": "B27",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "$\\ell$-torsión de $H^2(Y,\\mathbb Z_\\ell(1))$.}",
+    "note": "covered by B25"
+  },
+  {
+    "id": "D39",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "\\sum_{p,q\\geq0}(-1)^p(yz)^pz^qz^d",
+    "tr_new": "\\sum_{p,q\\geq0}(-1)^p(yz)^p\\sisi{z.^q}{z^q}z^d"
+  },
+  {
+    "id": "D40",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "\\sum_{p,q\\geq0}(-1)^q h_0^{p,q}(\\underline a)(yz)^pz^qz^d",
+    "tr_new": "\\sum_{p,q\\geq0}(-1)^q h_0^{p,q}(\\underline a)(yz)^p\\sisi{z.^q}{z^q}z^d"
+  },
+  {
+    "id": "B28",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "\\underline{Aquí $\\lfloor\\ \\rfloor$ designa la parte entera del cociente.}",
+    "tr_new": "\\underline{Aquí $\\lfloor\\ \\rfloor$ designa la parte entera del cociente}."
+  },
+  {
+    "id": "B29",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "\\underline{El conjunto de las series formales que satisfacen (*) es\nestable por suma y multiplicación.}",
+    "tr_new": "\\underline{El conjunto de las series formales que satisfacen (*) es\nestable por suma y multiplicación}."
+  },
+  {
+    "id": "B30",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XI_ES.tex",
+    "tr_old": "$0\\leq\\ell<n$, congruente con $n$ módulo dos. El nivel de Hodge de"
+  },
+  {
+    "id": "B31",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "\\underline{CUÁDRICAS}",
+    "tr_new": "\\underline{\\underline{CUÁDRICAS}}"
+  },
+  {
+    "id": "D45",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "s\\bigl(\\rho((e,0))\\bigr)",
+    "tr_new": "s\\bigl(\\rho((e,0))\\sisi{\\bigr.}{\\bigr)}"
+  },
+  {
+    "id": "D46",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "s\\bigl(\\rho((0,f))\\bigr)",
+    "tr_new": "s\\bigl(\\rho((0,f))\\sisi{\\bigr.}{\\bigr)}"
+  },
+  {
+    "id": "B32",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "\\underline{Lema 1.10.}",
+    "tr_new": "\\underline{Lema} 1.10."
+  },
+  {
+    "id": "B33",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "C(Q) \\arrow[rr,dash,\"\\sim\"] \\arrow[d,dash,\"\\wr\"]"
+  },
+  {
+    "id": "B34",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "\\underline{Proposición 1.12.}",
+    "tr_new": "\\underline{Proposición} 1.12."
+  },
+  {
+    "id": "B35",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "\\begin{enumerate}[label=(\\roman*),leftmargin=2.6em]\n\\item $\\Omega_X^n\\simeq\\mathcal O_X(-n)$."
+  },
+  {
+    "id": "B36",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "\\underline{Una cuádrica lisa de dimensión $n$ sobre un esquema $S$ es un\n$S$-esquema $f:X\\longrightarrow S$, propio y liso sobre $S$, cuyas fibras\ngeométricas son cuádricas lisas.}",
+    "tr_new": "\\underline{Una cuádrica lisa de dimensión $n$ sobre un esquema $S$ es un}\n$S$-\\underline{esquema $f:X\\longrightarrow S$, propio y liso sobre $S$, cuyas fibras\ngeométricas son cuádricas lisas.}"
+  },
+  {
+    "id": "D52",
+    "decision": "not_applicable",
+    "note": "Errata gramatical francesa."
+  },
+  {
+    "id": "B37",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "\\text{(a)}\\quad &\\eta^m=c\\ell(\\alpha)+c\\ell(\\beta)"
+  },
+  {
+    "id": "B38",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "\\text{(b)}\\quad &\n\\begin{cases}"
+  },
+  {
+    "id": "B39",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "\\text{(c)}\\quad &\\eta\\bigl(c\\ell(\\alpha)-c\\ell(\\beta)\\bigr)=0."
+  },
+  {
+    "id": "B40",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XII_ES.tex",
+    "tr_old": "{} & S & \\mathord{.}\n\\end{tikzcd}"
+  },
+  {
+    "id": "D57",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "B41",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\underline{EL FORMALISMO DE LOS CICLOS EVANESCENTES}",
+    "tr_new": "\\underline{\\underline{EL FORMALISMO DE LOS CICLOS EVANESCENTES}}"
+  },
+  {
+    "id": "B42",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "X_t=(\\varphi^*X)_0\\xrightarrow[\\Gamma]{\\sim}"
+  },
+  {
+    "id": "B43",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\operatorname{cone}(S^1\\longrightarrow\\mathrm{pt})",
+    "tr_new": "\\operatorname{cone}(S^1\\longrightarrow P^t)"
+  },
+  {
+    "id": "B44",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\item \\underline{$\\alpha$ es un morfismo de $F_0$ al haz de invariantes por\n$T$ de $F_t$}.",
+    "tr_new": "\\item \\underline{$\\alpha$ es un morfismo de $F_0$ al haz de invariantes por}\n$T$ \\underline{de $F_t$}."
+  },
+  {
+    "id": "B45",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "Sea $\\mathcal F$ un haz de conjuntos sobre (el sitio étale de) $\\bar Y$. Una\nacción de $G$ sobre $\\mathcal F$ \\underline{compatible} con la acción de $G$\nsobre $\\bar Y$ es una acción de $G$ por automorfismos del par\n$(\\bar Y,\\mathcal F)$ que induce la acción dada sobre $\\bar Y$. En otras\npalabras, es un sistema de isomorfismos\n\\begin{equation*}\n\\sigma(g):u(g)_*\\mathcal F\\longrightarrow\\mathcal F\n\\end{equation*}\nque satisface $\\sigma(gh)=\\sigma(g)\\,\\sigma(h)$. Si $G$ actúa sobre\n$\\mathcal F$, entonces, para todo $U$ étale sobre $Y$, con\n$\\bar U=U\\otimes_k\\bar k$ étale sobre $\\bar Y$, el grupo $G$ actúa sobre\n$\\mathcal F(\\bar U)$.\n\n\\medskip\n\\noindent\\underline{Definición 1.1.2.}\\quad\n\\underline{Diremos que $G$ actúa continuamente sobre $\\mathcal F$ si, para\ntodo $U$ cuasicompacto y étale sobre $Y$, la acción de $G$ sobre el conjunto\ndiscreto $\\mathcal F(\\bar U)$ es continua.}\n\nSería equivalente considerar únicamente los $U$ afines.\n\nSi $\\mathcal F$ es un haz de conjuntos sobre $Y$, con imagen inversa\n$\\bar{\\mathcal F}$ sobre $\\bar Y$, entonces\n$\\operatorname{Gal}(\\bar k/k)$ actúa sobre $\\bar{\\mathcal F}$ por transporte\nde estructura, compatiblemente con su acción sobre $\\bar Y$.\n\n\\medskip\n\\noindent\\underline{Recordatorio 1.1.3.}\n\\begin{enumerate}[label=(\\roman*),leftmargin=2.7em]\n\\item \\underline{La acción de $\\operatorname{Gal}(\\bar k/k)$ sobre\n$\\bar{\\mathcal F}$ es continua.}",
+    "tr_new": "Sea $\\mathfrak F$ un haz de conjuntos sobre (el sitio étale de) $\\bar Y$. Una\nacción de $G$ sobre $\\mathfrak F$ \\underline{compatible} con la acción de $G$\nsobre $\\bar Y$ es una acción de $G$ por automorfismos del par\n$(\\bar Y,\\mathfrak F)$ que induce la acción dada sobre $\\bar Y$. En otras\npalabras, es un sistema de isomorfismos\n\\begin{equation*}\n\\sigma(g):u(g)_*\\mathfrak F\\longrightarrow\\mathfrak F\n\\end{equation*}\nque satisface $\\sigma(gh)=\\sigma(g)\\,\\sigma(h)$. Si $G$ actúa sobre\n$\\mathfrak F$, entonces, para todo $U$ étale sobre $Y$, con\n$\\bar U=U\\otimes_k\\bar k$ étale sobre $\\bar Y$, el grupo $G$ actúa sobre\n$\\mathfrak F(\\bar U)$.\n\n\\medskip\n\\noindent\\underline{Definición} 1.1.2.\\quad\n\\underline{Diremos que $G$ actúa continuamente sobre $\\mathfrak F$ si, para\ntodo $U$ cuasicompacto y étale sobre $Y$, la acción de $G$ sobre el conjunto\ndiscreto $\\mathfrak F(\\bar U)$ es continua.}\n\nSería equivalente considerar únicamente los $U$ afines.\n\nSi $\\mathfrak F$ es un haz de conjuntos sobre $Y$, con imagen inversa\n$\\bar{\\mathfrak F}$ sobre $\\bar Y$, entonces\n$\\operatorname{Gal}(\\bar k/k)$ actúa sobre $\\bar{\\mathfrak F}$ por transporte\nde estructura, compatiblemente con su acción sobre $\\bar Y$.\n\n\\medskip\n\\noindent\\underline{Recordatorio 1.1.3.}\n\\begin{enumerate}[label=(\\roman*),leftmargin=2.7em]\n\\item \\underline{La acción de $\\operatorname{Gal}(\\bar k/k)$ sobre\n$\\bar{\\mathfrak F}$ es continua.}"
+  },
+  {
+    "id": "B47",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "Sea $\\mathcal F$ un haz de conjuntos sobre (el sitio étale de) $\\bar Y$.",
+    "note": "covered by B45"
+  },
+  {
+    "id": "B48",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\item \\underline{El funtor}\n\\begin{equation*}\n\\mathcal F\\longmapsto\\bar{\\mathcal F},\n\\end{equation*}\n\\underline{donde $\\bar{\\mathcal F}$ está provisto de la acción de\n$\\operatorname{Gal}(\\bar k/k)$, es una equivalencia de la categoría de los\nhaces de conjuntos sobre $Y$ con la categoría de los haces de conjuntos sobre\n$\\bar Y$ provistos de una acción continua de $\\operatorname{Gal}(\\bar k/k)$\ncompatible con la acción de $\\operatorname{Gal}(\\bar k/k)$ sobre $\\bar Y$.}\n\\end{enumerate}\n\nEscribamos $\\bar k$ como límite directo de extensiones galoisianas finitas\n$k_i$. Sean\n\\begin{equation*}\n\\varphi_i:Y_i=Y\\otimes_k k_i\\longrightarrow Y,\n\\qquad\n\\bar\\varphi:\\bar Y\\longrightarrow Y\n\\end{equation*}\nlas proyecciones. Para $U$ étale sobre $Y$, supuesto afín, pongamos\n$U_i=U\\otimes_k k_i$. Entonces\n\\begin{equation*}\n\\bar{\\mathcal F}(\\bar U)\n=\\varinjlim_i(\\varphi_i^*\\mathcal F)(U_i).\n\\end{equation*}\nSobre $(\\varphi_i^*\\mathcal F)(U_i)$, el grupo\n$\\operatorname{Gal}(\\bar k/k)$ actúa a través de\n$\\operatorname{Gal}(k_i/k)$, lo que demuestra (i).\n\nEl funtor de (ii) tiene por adjunto a derecha el funtor\n\\begin{equation*}\n\\mathcal G\\longmapsto\n(\\bar\\varphi_*\\mathcal G)^{\\operatorname{Gal}(\\bar k/k)}.\n\\end{equation*}\nPara todo $\\mathcal F$ sobre $Y$ se tiene\n\\begin{equation*}\n\\bar\\varphi_*\\bar\\varphi^*\\mathcal F\n=\\varinjlim_i\\varphi_{i*}\\varphi_i^*\\mathcal F.\n\\end{equation*}\nPor tanto, para demostrar que\n\\begin{equation*}\n\\mathcal F\\xrightarrow{\\sim}\n(\\bar\\varphi_*\\bar\\varphi^*\\mathcal F)^{\n  \\operatorname{Gal}(\\bar k/k)},\n\\end{equation*}\nbasta demostrar, para todo $i$, que\n\\begin{equation*}\n\\mathcal F\\xrightarrow{\\sim}\n(\\varphi_{i*}\\varphi_i^*\\mathcal F)^{\n  \\operatorname{Gal}(k_i/k)}.\n\\end{equation*}\nBasta incluso demostrar que esta flecha se convierte en un isomorfismo tras\nextender los escalares de $k$ a $k_i$; entonces\n$\\operatorname{Spec}(k_i)$ se convierte en una suma de copias de\n$\\operatorname{Spec}(k)$ permutadas de manera simplemente transitiva por\n$\\operatorname{Gal}(k_i/k)$, y la afirmación se vuelve trivial.\n\nEl funtor exacto de (ii) es, pues, plenamente fiel. Para concluir queda\ncomprobar que la flecha\n\\begin{equation*}\n\\bar\\varphi^*(\\bar\\varphi_*\\mathcal G)^{\n  \\operatorname{Gal}(\\bar k/k)}\\longrightarrow\\mathcal G\n\\end{equation*}\nes un epimorfismo. Sea $\\bar\\varphi_i:\\bar Y\\longrightarrow Y_i$. La\nhipótesis implica que\n\\begin{equation*}\n\\varinjlim_i\n\\bar\\varphi_i^*(\\bar\\varphi_{i*}\\mathcal G)^{\n  \\operatorname{Gal}(\\bar k/k_i)}\n\\longrightarrow\\mathcal G\n\\end{equation*}",
+    "tr_new": "\\item \\underline{El funtor}\n\\begin{equation*}\n\\mathfrak F\\longmapsto\\bar{\\mathfrak F},\n\\end{equation*}\n\\underline{donde $\\bar{\\mathfrak F}$ está provisto de la acción de\n$\\operatorname{Gal}(\\bar k/k)$, es una equivalencia de la categoría de los\nhaces de conjuntos sobre $Y$ con la categoría de los haces de conjuntos sobre\n$\\bar Y$ provistos de una acción continua de $\\operatorname{Gal}(\\bar k/k)$\ncompatible con la acción de $\\operatorname{Gal}(\\bar k/k)$ sobre $\\bar Y$.}\n\\end{enumerate}\n\nEscribamos $\\bar k$ como límite directo de extensiones galoisianas finitas\n$k_i$. Sean\n\\begin{equation*}\n\\varphi_i:Y_i=Y\\otimes_k k_i\\longrightarrow Y,\n\\qquad\n\\bar\\varphi:\\bar Y\\longrightarrow Y\n\\end{equation*}\nlas proyecciones. Para $U$ étale sobre $Y$, supuesto afín, pongamos\n$U_i=U\\otimes_k k_i$. Entonces\n\\begin{equation*}\n\\bar{\\mathfrak F}(\\bar U)\n=\\varinjlim_i(\\varphi_i^*\\mathfrak F)(U_i).\n\\end{equation*}\nSobre $(\\varphi_i^*\\mathfrak F)(U_i)$, el grupo\n$\\operatorname{Gal}(\\bar k/k)$ actúa a través de\n$\\operatorname{Gal}(k_i/k)$, lo que demuestra (i).\n\nEl funtor de (ii) tiene por adjunto a derecha el funtor\n\\begin{equation*}\n\\mathfrak G\\longmapsto\n(\\bar\\varphi_*\\mathfrak G)^{\\operatorname{Gal}(\\bar k/k)}.\n\\end{equation*}\nPara todo $\\mathfrak F$ sobre $Y$ se tiene\n\\begin{equation*}\n\\bar\\varphi_*\\bar\\varphi^*\\mathfrak F\n=\\varinjlim_i\\varphi_{i*}\\varphi_i^*\\mathfrak F.\n\\end{equation*}\nPor tanto, para demostrar que\n\\begin{equation*}\n\\mathfrak F\\xrightarrow{\\sim}\n(\\bar\\varphi_*\\bar\\varphi^*\\mathfrak F)^{\n  \\operatorname{Gal}(\\bar k/k)},\n\\end{equation*}\nbasta demostrar, para todo $i$, que\n\\begin{equation*}\n\\mathfrak F\\xrightarrow{\\sim}\n(\\varphi_{i*}\\varphi_i^*\\mathfrak F)^{\n  \\operatorname{Gal}(k_i/k)}.\n\\end{equation*}\nBasta incluso demostrar que esta flecha se convierte en un isomorfismo tras\nextender los escalares de $k$ a $k_i$; entonces\n$\\operatorname{Spec}(k_i)$ se convierte en una suma de copias de\n$\\operatorname{Spec}(k)$ permutadas de manera simplemente transitiva por\n$\\operatorname{Gal}(k_i/k)$, y la afirmación se vuelve trivial.\n\nEl funtor exacto de (ii) es, pues, plenamente fiel. Para concluir queda\ncomprobar que la flecha\n\\begin{equation*}\n\\bar\\varphi^*(\\bar\\varphi_*\\mathfrak G)^{\n  \\operatorname{Gal}(\\bar k/k)}\\longrightarrow\\mathfrak G\n\\end{equation*}\nes un epimorfismo. Sea $\\bar\\varphi_i:\\bar Y\\longrightarrow Y_i$. La\nhipótesis implica que\n\\begin{equation*}\n\\varinjlim_i\n\\bar\\varphi_i^*(\\bar\\varphi_{i*}\\mathfrak G)^{\n  \\operatorname{Gal}(\\bar k/k_i)}\n\\longrightarrow\\mathfrak G\n\\end{equation*}"
+  },
+  {
+    "id": "B46",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "s \\arrow[r, hook, \"i\"] & S & \\eta \\arrow[l, hook, \"j\"']\n\\end{tikzcd}\n."
+  },
+  {
+    "id": "B49",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\begin{equation*}\n\\bar\\varphi^*(\\sisi{\\varphi_*}{\\bar\\varphi_*}\\mathcal G)^{\n  \\operatorname{Gal}(\\bar k/k)}\n=\n\\bar\\varphi_i^*\\!\\left(\n  \\varphi_i^*\\varphi_{i*}\n  \\left((\\bar\\varphi_{i*}\\mathcal G)^{\n    \\operatorname{Gal}(\\bar k/k_i)}\\right)^{\n    \\operatorname{Gal}(k_i/k)}\n\\right),\n\\end{equation*}\ny la conclusión se sigue observando, mediante el mismo argumento de descenso\ngaloisiano que arriba, que para $\\mathcal G'$ sobre $Y_i$, provisto de una\nacción de $\\operatorname{Gal}(k_i/k)$ compatible con su acción sobre $Y_i$,\nse tiene\n\\begin{equation*}\n\\varphi_i^*(\\varphi_{i*}\\mathcal G')^{\n  \\operatorname{Gal}(k_i/k)}\n\\xrightarrow{\\sim}\\mathcal G'.\n\\end{equation*}",
+    "tr_new": "\\begin{equation*}\n\\bar\\varphi^*(\\sisi{\\varphi_*}{\\bar\\varphi_*}\\mathfrak G)^{\n  \\operatorname{Gal}(\\bar k/k)}\n=\n\\bar\\varphi_i^*\\!\\left(\n  \\varphi_i^*\\varphi_{i*}\n  \\left((\\bar\\varphi_{i*}\\mathfrak G)^{\n    \\operatorname{Gal}(\\bar k/k_i)}\\right)^{\n    \\operatorname{Gal}(k_i/k)}\n\\right),\n\\end{equation*}\ny la conclusión se sigue observando, mediante el mismo argumento de descenso\ngaloisiano que arriba, que para $\\mathfrak G'$ sobre $Y_i$, provisto de una\nacción de $\\operatorname{Gal}(k_i/k)$ compatible con su acción sobre $Y_i$,\nse tiene\n\\begin{equation*}\n\\varphi_i^*(\\varphi_{i*}\\mathfrak G')^{\n  \\operatorname{Gal}(k_i/k)}\n\\xrightarrow{\\sim}\\mathfrak G'.\n\\end{equation*}"
+  },
+  {
+    "id": "B50",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\subsubsection*{Construcción 1.2.4.}",
+    "note": "El número no está subrayado en la presentación española."
+  },
+  {
+    "id": "B51",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "s \\arrow[r, hook] & S & \\eta \\arrow[l, hook']\n\\end{tikzcd}\n."
+  },
+  {
+    "id": "B52",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "  & \\bar X' & X'_{\\bar\\eta} \\arrow[l, hook', \"\\bar j\"']\n\\end{tikzcd}\n\\end{equation}",
+    "tr_new": "  & \\bar X' & X'_{\\bar\\eta} \\arrow[l, hook', \"\\bar j\"']\n\\end{tikzcd}\n\\qquad .\n\\end{equation}"
+  },
+  {
+    "id": "D69",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "  & \\bar X \\arrow[d, \"f\"]",
+    "tr_new": "  & \\sisi{X}{\\bar X} \\arrow[d, \"f\"]"
+  },
+  {
+    "id": "B53",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "Consideremos el diagrama conmutativo (1.3.2.1)\n\\begin{equation}\\tag{1.3.2.1}",
+    "tr_new": "Consideremos el diagrama conmutativo (1.3.2.1)\n\\begin{equation}\\notag"
+  },
+  {
+    "id": "B54",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "X_s \\arrow[r, hook, \"i\"] & X & X_\\eta \\arrow[l, hook', \"j\"']\n\\end{tikzcd}\n\\end{equation}",
+    "tr_new": "X_s \\arrow[r, hook, \"i\"] & X & X_\\eta \\arrow[l, hook', \"j\"']\n\\end{tikzcd}\n\\qquad .\n\\end{equation}",
+    "note": "Diagrama repetido en la página 99."
+  },
+  {
+    "id": "B55",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "X' \\arrow[r, \"f\"] \\arrow[d, \"p\"'] & X \\arrow[d, \"p\"]",
+    "tr_new": "X' \\arrow[r, \"f\"] \\arrow[d, \"p\"] & X \\arrow[d, \"p\"]"
+  },
+  {
+    "id": "D73",
+    "decision": "not_applicable",
+    "note": "Errata ortográfica francesa."
+  },
+  {
+    "id": "B56",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "{} & \\mathbb H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K)) \\arrow[ur] & {}\n\\end{tikzcd}\n."
+  },
+  {
+    "id": "B57",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "  & \\mathbb H_c^i(X_{\\bar s},R\\Psi_{\\bar\\eta}(K)) \\arrow[u]\n\\end{tikzcd}\n."
+  },
+  {
+    "id": "B58",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\Psi F \\arrow[rr, equal] & {} & \\Psi F.\n\\end{tikzcd}"
+  },
+  {
+    "id": "B59",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "X \\arrow[rr, \"u\"] \\arrow[dr, \"f\"'] & {} & Y \\arrow[dl, \"g\"] \\\\\n{} & S & {}\n\\end{tikzcd}\n\\end{center}",
+    "tr_new": "X \\arrow[rr, \"u\"] \\arrow[dr, \"f\"'] & {} & Y \\arrow[dl, \"g\"] \\\\\n{} & S & {}\n\\end{tikzcd}\n\\qquad .\n\\end{center}",
+    "note": "Diagrama de 2.2.3 en la página 108."
+  },
+  {
+    "id": "B60",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "  \\& Rg_!g^* \\arrow[r, \"\\operatorname{Tr}_g\"]\n  \\& K.\n\\end{tikzcd}}"
+  },
+  {
+    "id": "B61",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\arrow[r] \\arrow[d, \"\\sigma-1\"']",
+    "tr_new": "\\arrow[r] \\arrow[d, \"\\sigma-1\"]"
+  },
+  {
+    "id": "B62",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\arrow[d, \"{\\bigoplus i_{x*}\\operatorname{Var}(\\sigma)}\"']",
+    "tr_new": "\\arrow[d, \"{\\bigoplus i_{x*}\\operatorname{Var}(\\sigma)}\"]"
+  },
+  {
+    "id": "B63",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\arrow[r, \"\\sim\"] \\arrow[d, \"\\sigma-1\"']",
+    "tr_new": "\\arrow[r, \"\\sim\"] \\arrow[d, \"\\sigma-1\"]"
+  },
+  {
+    "id": "B64",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIII_ES.tex",
+    "tr_old": "\\arrow[d, \"{\\bigoplus\\operatorname{Var}(\\sigma)}\"']",
+    "tr_new": "\\arrow[d, \"{\\bigoplus\\operatorname{Var}(\\sigma)}\"]"
+  },
+  {
+    "id": "B65",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "\\underline{COMPARACIÓN CON LA TEORÍA TRASCENDENTE}",
+    "tr_new": "\\underline{\\underline{COMPARACIÓN CON LA TEORÍA TRASCENDENTE}}"
+  },
+  {
+    "id": "B66",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "Para el disco estándar, de centro $0$, y $t\\in D^*$"
+  },
+  {
+    "id": "B67",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "$(dz)_0\\ne0$"
+  },
+  {
+    "id": "B68",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "$T^*=T\\setminus\\{0\\}$"
+  },
+  {
+    "id": "B69",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "$f:D'\\hookrightarrow T$ que satisface $f(0)=0$"
+  },
+  {
+    "id": "B70",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "$Y\\times_S S$ del Exposé XIII",
+    "tr_new": "$Y\\times_s S$ del Exposé XIII"
+  },
+  {
+    "id": "B71",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "\\Psi_\\eta:(\\text{haces sobre }X^*)\n\\longrightarrow(\\text{haces sobre }X_0\\times\\mathcal D^*)"
+  },
+  {
+    "id": "B72",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "R\\Psi:D^+(X)\\longrightarrow D^+(X_0\\times\\mathcal D)"
+  },
+  {
+    "id": "B73",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "R\\Psi_\\eta:D^+(X^*)\\longrightarrow D^+(X_0\\times\\mathcal D^*)"
+  },
+  {
+    "id": "B74",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "R\\Phi:D^+(X)\\longrightarrow D^+(X_0\\times\\mathcal D^*)"
+  },
+  {
+    "id": "B75",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "$\\mathbb R^n\\times S\\longrightarrow S$"
+  },
+  {
+    "id": "B76",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "\\subsubsection*{1.3.4. Preliminar.}",
+    "note": "La puntuación del encabezado español no está subrayada."
+  },
+  {
+    "id": "B77",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "Sea $D$ un disco orientado, sea $0\\in D$, y pongamos\n$D^*=D\\setminus\\{0\\}$. Un \\underline{espacio topológico} $\\mathcal X^*$\nsobre $\\mathcal D^*$ es un funtor\n\\[\n(\\text{recubrimientos universales de }D^*)\n\\longrightarrow(\\text{espacios topológicos}).\n\\]\nUna vez elegido un recubrimiento universal $\\widetilde D^*$, esto equivale a\nun espacio topológico $X_\\eta$ provisto de una acción de $\\pi_1(D^*)$; cuando\n$\\widetilde D^*$ es el recubrimiento universal de $(D^*,t)$, lo denotamos por\n$\\mathcal X_t^*$.\n\nUn \\underline{haz} sobre $\\mathcal X^*$ es un funtor\n\\[\n(\\text{recubrimientos universales de }D^*)\n\\longrightarrow\n(\\text{espacios topológicos provistos de un haz}),\n\\]\no, equivalentemente, un haz $\\pi_1(D^*)$-equivariante sobre $X_\\eta$.\n\nA $\\mathcal X^*$ asociamos el espacio topológico\n\\[\n\\beta^*\\mathcal X^*\n=X_\\eta\\times\\widetilde D^*/\\pi_1(D^*)\n\\]\nsobre $D^*$. Todo haz $F$ sobre $\\mathcal X^*$ desciende a un haz\n$\\beta^*F$ sobre $\\beta^*\\mathcal X^*$, dando un diagrama conmutativo de topoi\n\\[\n\\begin{tikzcd}\n\\beta^*\\mathcal X^* \\arrow[r] \\arrow[d]\n  & \\mathcal X^* \\arrow[d] \\\\\nD^* \\arrow[r, \"\\beta\"]\n  & \\mathcal D^*.\n\\end{tikzcd}\n\\]",
+    "tr_new": "Sea $D$ un disco orientado, sea $0\\in D$, y pongamos\n$D^*=D\\setminus\\{0\\}$. Un \\underline{espacio topológico} $\\mathfrak X^*$\nsobre $\\mathfrak D^*$ es un funtor\n\\[\n(\\text{recubrimientos universales de }D^*)\n\\longrightarrow(\\text{espacios topológicos}).\n\\]\nUna vez elegido un recubrimiento universal $\\widetilde D^*$, esto equivale a\nun espacio topológico $X_\\eta$ provisto de una acción de $\\pi_1(D^*)$; cuando\n$\\widetilde D^*$ es el recubrimiento universal de $(D^*,t)$, lo denotamos por\n$\\mathfrak X_t^*$.\n\nUn \\underline{haz} sobre $\\mathfrak X^*$ es un funtor\n\\[\n(\\text{recubrimientos universales de }D^*)\n\\longrightarrow\n(\\text{espacios topológicos provistos de un haz}),\n\\]\no, equivalentemente, un haz $\\pi_1(D^*)$-equivariante sobre $X_\\eta$.\n\nA $\\mathfrak X^*$ asociamos el espacio topológico\n\\[\n\\beta^*\\mathfrak X^*\n=X_\\eta\\times\\widetilde D^*/\\pi_1(D^*)\n\\]\nsobre $D^*$. Todo haz $F$ sobre $\\mathfrak X^*$ desciende a un haz\n$\\beta^*F$ sobre $\\beta^*\\mathfrak X^*$, dando un diagrama conmutativo de topoi\n\\[\n\\begin{tikzcd}\n\\beta^*\\mathfrak X^* \\arrow[r] \\arrow[d]\n  & \\mathfrak X^* \\arrow[d] \\\\\nD^* \\arrow[r, \"\\beta\"]\n  & \\mathfrak D^*.\n\\end{tikzcd}\n\\]"
+  },
+  {
+    "id": "B78",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "$\\mathcal X_t^*$.\n\nUn \\underline{haz} sobre $\\mathcal X^*$ es un funtor",
+    "note": "covered by B77"
+  },
+  {
+    "id": "B79",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "A $\\mathcal X^*$ asociamos el espacio topológico\n\\[\n\\beta^*\\mathcal X^*",
+    "note": "covered by B77"
+  },
+  {
+    "id": "B80",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "Todo haz $F$ sobre $\\mathcal X^*$ desciende a un haz",
+    "note": "covered by B77"
+  },
+  {
+    "id": "B81",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "$\\beta^*F$ sobre $\\beta^*\\mathcal X^*$, dando un diagrama conmutativo de topoi",
+    "note": "covered by B77"
+  },
+  {
+    "id": "B82",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "\\beta^*\\mathcal X^* \\arrow[r] \\arrow[d]\n  & \\mathcal X^* \\arrow[d]",
+    "note": "covered by B77"
+  },
+  {
+    "id": "B83",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "D^* \\arrow[r, \"\\beta\"]\n  & \\mathcal D^*.",
+    "note": "covered by B77"
+  },
+  {
+    "id": "B84",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "  & \\mathcal D^*.\n\\end{tikzcd}"
+  },
+  {
+    "id": "B85",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "Un \\underline{espacio topológico} $\\mathcal X$ sobre $\\mathcal D$ consiste en",
+    "tr_new": "Un \\underline{espacio topológico} $\\mathfrak X$ sobre $\\mathfrak D$ consiste en"
+  },
+  {
+    "id": "B86",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "\\item un espacio topológico $\\mathcal X^*$ sobre $\\mathcal D^*$;",
+    "tr_new": "\\item un espacio topológico $\\mathfrak X^*$ sobre $\\mathfrak D^*$;"
+  },
+  {
+    "id": "B87",
+    "decision": "apply",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "Un \\underline{haz} sobre $\\mathcal X$ consiste en un haz $F_0$ sobre $X_0$,\nun haz sobre $\\mathcal X^*$ dado por $F_\\eta$, y un morfismo equivariante",
+    "tr_new": "Un \\underline{haz} sobre $\\mathfrak X$ consiste en un haz $F_0$ sobre $X_0$,\nun haz sobre $\\mathfrak X^*$ dado por $F_\\eta$, y un morfismo equivariante"
+  },
+  {
+    "id": "B88",
+    "decision": "already",
+    "tr_file": "units/EXPOSE_XIV_ES.tex",
+    "tr_old": "un haz sobre $\\mathcal X^*$ dado por $F_\\eta$, y un morfismo equivariante",
+    "note": "covered by B87"
+  }
+]
+```
+
+units/EXPOSE_X_ES.tex, p. 1: falta el título «Intersecciones sobre las superficies regulares», independientemente del doble subrayado de B0.
+units/EXPOSE_XIII_ES.tex, p. 95: la afirmación editorial «la barra de su $\bar X$ central superior es visible en el impreso» contradice la lectura impresa indicada en D69.

@@ -1,0 +1,731 @@
+```json
+[
+  {
+    "id": "C236",
+    "decision": "not_applicable",
+    "note": "French transcription comment only."
+  },
+  {
+    "id": "C237",
+    "decision": "not_applicable",
+    "note": "French transcription comment only."
+  },
+  {
+    "id": "C241",
+    "decision": "already",
+    "tr_file": "components/126_expose_XVIII_section_5_8_6_and_corollary_5_8_7.tex",
+    "tr_old": "{} & \\mathbb P^1 & S\\arrow[l,\"\\pi\"'] ."
+  },
+  {
+    "id": "C242",
+    "decision": "already",
+    "tr_file": "components/126_expose_XVIII_section_5_8_6_and_corollary_5_8_7.tex",
+    "tr_old": "{} & \\mathbb P^1 & V\\arrow[l,\"\\pi\\mu\"'] &{} .",
+    "note": "English ends the preceding sentence here and begins “We still have”; a period is appropriate."
+  },
+  {
+    "id": "C238",
+    "decision": "apply",
+    "tr_file": "components/128_expose_XVIII_section_6_opening_through_6_1_2_proof_opening.tex",
+    "tr_old": "\\section*{6. \\underline{Application of the local theory of vanishing cycles}\\\\\n\\underline{(Picard--Lefschetz)}}",
+    "tr_new": "\\section*{6. \\underline{Application of the local theory of vanishing cycles}\\\\\n(\\underline{Picard}--\\underline{Lefschetz})}"
+  },
+  {
+    "id": "C239",
+    "decision": "already",
+    "tr_file": "components/129_expose_XVIII_proof_6_1_through_bertini.tex",
+    "tr_old": "\\arrow[ur,\"\\bar\\eta\\longrightarrow o\"'] & {} .\n\\end{tikzcd}"
+  },
+  {
+    "id": "C240",
+    "decision": "apply",
+    "tr_file": "components/129_expose_XVIII_proof_6_1_through_bertini.tex",
+    "tr_old": "\\begin{equation}\\tag{6.1.5}",
+    "tr_new": "\\begin{equation}\\notag"
+  },
+  {
+    "id": "C243",
+    "decision": "already",
+    "tr_file": "components/134_expose_XIX_opening_through_corollary_1_5.tex",
+    "tr_old": "\\subsubsection*{Theorem 1.4.}",
+    "note": "English heading conventions already leave the number un-underlined."
+  },
+  {
+    "id": "C244",
+    "decision": "already",
+    "tr_file": "components/134_expose_XIX_opening_through_corollary_1_5.tex",
+    "tr_old": "\\subsubsection*{Corollary 1.5.}",
+    "note": "The number is not underlined."
+  },
+  {
+    "id": "C245",
+    "decision": "already",
+    "tr_file": "components/135_expose_XIX_section_2.tex",
+    "tr_old": "\\subsubsection*{Proposition 2.1.}",
+    "note": "The number is not underlined."
+  },
+  {
+    "id": "C251",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation after a figure; English introduces the figure with a colon."
+  },
+  {
+    "id": "C246",
+    "decision": "already",
+    "tr_file": "components/139_expose_XX_opening_through_corollary_1_4.tex",
+    "tr_old": "{} & S & {}\n\\end{tikzcd}\n\\qquad ."
+  },
+  {
+    "id": "C247",
+    "decision": "already",
+    "tr_file": "components/139_expose_XX_opening_through_corollary_1_4.tex",
+    "tr_old": "{} \\arrow[d, \"z\"'] \\\\\n{}"
+  },
+  {
+    "id": "C248",
+    "decision": "already",
+    "tr_file": "components/140_expose_XX_sections_1_5_through_1_7.tex",
+    "tr_old": "& X \\arrow[l, \"f\" description]\n\\end{tikzcd}\n\\qquad ,"
+  },
+  {
+    "id": "C249",
+    "decision": "apply",
+    "tr_file": "components/143_expose_XX_sections_3_3_and_3_4.tex",
+    "tr_old": "Condition (B) is satisfied if the operation $\\wedge$ of [4, 1.4.2.1]",
+    "tr_new": "Condition (B) is satisfied if the operation $\\Lambda$ of [4, 1.4.2.1]"
+  },
+  {
+    "id": "C250",
+    "decision": "apply",
+    "tr_file": "components/143_expose_XX_sections_3_3_and_3_4.tex",
+    "tr_old": "It is conjectured that $\\wedge$ is\nalways algebraic",
+    "tr_new": "It is conjectured that $\\Lambda$ is\nalways algebraic"
+  },
+  {
+    "id": "C252",
+    "decision": "apply",
+    "tr_file": "components/145_expose_XX_proof_of_theorem_4_1.tex",
+    "tr_old": "\\xrightarrow{\\ \\underline{\\operatorname{grif}}\\ }",
+    "tr_new": "\\xrightarrow{\\ \\operatorname{grif}\\ }"
+  },
+  {
+    "id": "C253",
+    "decision": "already",
+    "tr_file": "components/146_expose_XX_section_5_and_references.tex",
+    "tr_old": "\\noindent\\textbf{(5.0.2)} $Z^i_{\\mathrm{alg}}(S)$"
+  },
+  {
+    "id": "C254",
+    "decision": "already",
+    "tr_file": "components/148_expose_XXI_theorem_1_1_and_proposition_1_1_5.tex",
+    "tr_old": "\\subsubsection*{Theorem 1.1.}",
+    "note": "The number is not underlined."
+  },
+  {
+    "id": "C255",
+    "decision": "already",
+    "tr_file": "components/148_expose_XXI_theorem_1_1_and_proposition_1_1_5.tex",
+    "tr_old": "\\subsubsection*{Proposition 1.1.5.}",
+    "note": "The number is not underlined."
+  },
+  {
+    "id": "C256",
+    "decision": "apply",
+    "tr_file": "components/151_expose_XXI_theorem_1_3_general_case.tex",
+    "tr_old": "for the associated bundle of lines in $E$.",
+    "tr_new": "for the associated bundle of lines in $\\mathbb E$."
+  },
+  {
+    "id": "C257",
+    "decision": "apply",
+    "tr_file": "components/152_expose_XXI_theorem_1_4.tex",
+    "tr_old": "&\\qquad+(-1)^{n-1}\\operatorname{tr}\\!\\left(\\mathfrak F_q\\ \\middle|\\\n \\frac{H^{n-1}(X.H,\\mathcal O_{X.H})}\n      {H^{n-1}(X,\\mathcal O_X)}\\right).",
+    "tr_new": "&\\qquad+(-1)^{n-1}\\operatorname{tr}\\!\\left(\\mathfrak F_q\\ \\middle|\\\n \\left(\\frac{H^{n-1}(X.H,\\mathcal O_{X.H})}\n      {H^{n-1}(X,\\mathcal O_X)}\\right)\\right)."
+  },
+  {
+    "id": "C258",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation between lines of a display, without mathematical effect."
+  },
+  {
+    "id": "C259",
+    "decision": "already",
+    "tr_file": "components/154_expose_XXI_section_3_opening_through_corollary_3_1.tex",
+    "tr_old": "Under the hypotheses of 3.0, with $k=\\mathbb F_q$, there is a congruence\nmodulo $p$",
+    "note": "The parameter p is not underlined."
+  },
+  {
+    "id": "C260",
+    "decision": "already",
+    "tr_file": "components/158_expose_XXI_theorem_5_2_2_through_corollary_5_3_setup.tex",
+    "tr_old": "Y\n\\end{tikzcd}\n\\qquad ."
+  },
+  {
+    "id": "C261",
+    "decision": "already",
+    "tr_file": "components/158_expose_XXI_theorem_5_2_2_through_corollary_5_3_setup.tex",
+    "tr_old": "\\item If $\\underline G$ is $T$-integral, then $j_*\\underline G$ is\n  $T$-integral.",
+    "note": "Neither occurrence of T is underlined."
+  },
+  {
+    "id": "C262",
+    "decision": "already",
+    "tr_file": "components/158_expose_XXI_theorem_5_2_2_through_corollary_5_3_setup.tex",
+    "tr_old": "\\item If $G_x^\\vee$ is $T$-integral for every $x\\in U$, then\n  $(j_*\\underline G)_x^\\vee$ is $T$-integral for every $x\\in X$.",
+    "note": "Neither occurrence of T is underlined."
+  },
+  {
+    "id": "C263",
+    "decision": "already",
+    "tr_file": "components/158_expose_XXI_theorem_5_2_2_through_corollary_5_3_setup.tex",
+    "tr_old": "U \\arrow[r,hook,\"j\"'] & X & Y \\arrow[l,hook']\n\\end{tikzcd}\n\\qquad ,"
+  },
+  {
+    "id": "C264",
+    "decision": "already",
+    "tr_file": "components/160_expose_XXI_theorem_5_4.tex",
+    "tr_old": "dimension $n$, and let $\\underline G$ be a constructible $E$-sheaf on $X$.",
+    "note": "E is already in math mode and outside any underline."
+  },
+  {
+    "id": "C265",
+    "decision": "already",
+    "tr_file": "components/161_expose_XXI_section_5_5.tex",
+    "tr_old": "dimension at most $n$, and let $\\underline G$ be a constructible $E$-sheaf\non $X$ such that $\\log|\\underline G|\\leq\\lambda$",
+    "note": "E is already in math mode and outside any underline."
+  },
+  {
+    "id": "C266",
+    "decision": "already",
+    "tr_file": "components/162_expose_XXI_section_5_6.tex",
+    "tr_old": "type over $\\mathbb F_q$, and let $\\underline G$ be a constructible\n$T$-integral $E$-sheaf on $X$.",
+    "note": "E and T are already in math mode and outside any underline."
+  },
+  {
+    "id": "C267",
+    "decision": "already",
+    "tr_file": "components/162_expose_XXI_section_5_6.tex",
+    "tr_old": "If $\\dim X\\leq N$, then the $E$-sheaves\n$R^if_*\\underline G$ on $Y$ are $T$-integral.",
+    "note": "E and T are already in math mode and outside any underline."
+  },
+  {
+    "id": "C268",
+    "decision": "already",
+    "tr_file": "components/162_expose_XXI_section_5_6.tex",
+    "tr_old": "Y & {}\n\\end{tikzcd}\n\\qquad ."
+  },
+  {
+    "id": "C269",
+    "decision": "not_applicable",
+    "note": "French terminology only; both forms mean “structure sheaf”."
+  },
+  {
+    "id": "C270",
+    "decision": "already",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "\\subsubsection*{Proposition 1.1.}",
+    "note": "The number is not underlined."
+  },
+  {
+    "id": "C271",
+    "decision": "not_applicable",
+    "note": "French accent only."
+  },
+  {
+    "id": "C272",
+    "decision": "apply",
+    "tr_file": "components/163_expose_XXII_title_introduction_and_section_1_0.tex",
+    "tr_old": "If $k$ is\nperfect, then",
+    "tr_new": "\\underline{If} $k$ \\underline{is\nperfect}, then"
+  },
+  {
+    "id": "C273",
+    "decision": "apply",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "\\text{the $\\mathbb F_q$-vector space of fixed points of $\\varphi$}",
+    "tr_new": "\\text{\\underline{the $\\mathbb F_q$-vector space of fixed points of} $\\varphi$}"
+  },
+  {
+    "id": "C274",
+    "decision": "apply",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "\\begin{equation}\\tag{1.1.1}\nV\\xleftarrow{\\ \\sim\\ }\nV^{1-\\varphi}\\otimes_{\\mathbb F_q}k.",
+    "tr_new": "\\begin{equation}\\tag{1.1.1}\nV\\xleftarrow{\\ \\sim\\ }\n(V^{1-\\varphi})\\otimes_{\\mathbb F_q}k."
+  },
+  {
+    "id": "C359",
+    "decision": "not_applicable",
+    "note": "French accent only."
+  },
+  {
+    "id": "C275",
+    "decision": "apply",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "V^{1-\\varphi^n}\\xleftarrow{\\ \\sim\\ }\nV^{1-\\varphi}\\otimes_{\\mathbb F_q}\\mathbb F_{q^n}.",
+    "tr_new": "V^{1-\\varphi^n}\\xleftarrow{\\ \\sim\\ }\n(V^{1-\\varphi})\\otimes_{\\mathbb F_q}\\mathbb F_{q^n}."
+  },
+  {
+    "id": "C276",
+    "decision": "apply",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "Let $e$ be a $k$-basis of $V$, and write",
+    "tr_new": "Let $\\underline{e}$ be a $k$-basis of $V$, and write"
+  },
+  {
+    "id": "C277",
+    "decision": "apply",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "\\varphi(e)=Ae,",
+    "tr_new": "\\varphi(\\underline{e})=A\\underline{e},"
+  },
+  {
+    "id": "C278",
+    "decision": "not_applicable",
+    "note": "Terminal sentence punctuation in a display."
+  },
+  {
+    "id": "C279",
+    "decision": "apply",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "the basis $ge$ of $V$ consists of fixed points of",
+    "tr_new": "the basis $g\\underline{e}$ of $V$ consists of fixed points of"
+  },
+  {
+    "id": "C280",
+    "decision": "not_applicable",
+    "note": "Display punctuation without mathematical effect."
+  },
+  {
+    "id": "C281",
+    "decision": "not_applicable",
+    "note": "Display punctuation without mathematical effect."
+  },
+  {
+    "id": "C282",
+    "decision": "apply",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "\\begin{equation}\\tag{1.1.8}\n\\begin{aligned}\n\\mathrm{GL}(n,\\bar k)&\\longrightarrow\\mathrm{GL}(n,\\bar k),\\\\\ng&\\longmapsto F(g^{-1})\\,g",
+    "tr_new": "\\begin{equation}\\tag{1.1.8}\n\\begin{aligned}\n\\mathrm{GL}(n,\\bar k)&\\longrightarrow\\mathrm{GL}(n,\\bar k),\\\\\ng&\\longrightarrow F(g^{-1})\\,g"
+  },
+  {
+    "id": "C283",
+    "decision": "not_applicable",
+    "note": "Display punctuation without mathematical effect."
+  },
+  {
+    "id": "C284",
+    "decision": "apply",
+    "tr_file": "components/164_expose_XXII_proposition_1_1_through_proposition_1_2_opening.tex",
+    "tr_old": "\\begin{equation}\\tag{1.1.9}\n\\begin{aligned}\n\\mathrm{GL}(n,k)&\\longrightarrow\\mathrm{GL}(n,k),\\\\\ng&\\longmapsto F(g^{-1})\\,g",
+    "tr_new": "\\begin{equation}\\tag{1.1.9}\n\\begin{aligned}\n\\mathrm{GL}(n,k)&\\longrightarrow\\mathrm{GL}(n,k),\\\\\ng&\\longrightarrow F(g^{-1})\\,g"
+  },
+  {
+    "id": "C285",
+    "decision": "apply",
+    "tr_file": "components/165_expose_XXII_proposition_1_2_completion_through_corollary_2_1.tex",
+    "tr_old": "\\begin{equation}\\tag{2.0.1}\n\\mathfrak F_p:H^i(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^i(\\bar X,\\mathcal O_{\\bar X})",
+    "tr_new": "\\begin{equation}\\tag{2.0.1}\n\\overline{\\mathfrak F}_p:H^{\\cdot}(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^{\\cdot}(\\bar X,\\mathcal O_{\\bar X})"
+  },
+  {
+    "id": "C286",
+    "decision": "already",
+    "tr_file": "components/165_expose_XXII_proposition_1_2_completion_through_corollary_2_1.tex",
+    "tr_old": "\\begin{equation}\\tag{2.0.1}\n\\mathfrak F_p:H^i(\\bar X,\\mathcal O_{\\bar X})\n\\longrightarrow H^i(\\bar X,\\mathcal O_{\\bar X})",
+    "note": "covered by C285"
+  },
+  {
+    "id": "C287",
+    "decision": "apply",
+    "tr_file": "components/165_expose_XXII_proposition_1_2_completion_through_corollary_2_1.tex",
+    "tr_old": "\\[\nH^i_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\]",
+    "tr_new": "\\[\nH^{\\cdot}_{\\mathrm{et}}(\\bar X,\\mathbb Z/p\\mathbb Z)\n\\]"
+  },
+  {
+    "id": "C288",
+    "decision": "apply",
+    "tr_file": "components/165_expose_XXII_proposition_1_2_completion_through_corollary_2_1.tex",
+    "tr_old": "\\mathfrak F_p:\\mathcal O_{\\bar X}\\longrightarrow\\mathcal O_{\\bar X},\n\\qquad \\mathfrak F_p(f)=f^p.",
+    "tr_new": "\\overline{\\mathfrak F}_p:\\mathcal O_{\\bar X}\\longrightarrow\\mathcal O_{\\bar X},\n\\qquad \\overline{\\mathfrak F}_p(f)=f^p."
+  },
+  {
+    "id": "C289",
+    "decision": "apply",
+    "tr_file": "components/165_expose_XXII_proposition_1_2_completion_through_corollary_2_1.tex",
+    "tr_old": "\\simeq\nH^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}.",
+    "tr_new": "\\simeq\n(H^i(\\bar X,\\mathcal O_{\\bar X}))^{1-\\overline{\\mathfrak F}_p}."
+  },
+  {
+    "id": "C290",
+    "decision": "already",
+    "tr_file": "components/165_expose_XXII_proposition_1_2_completion_through_corollary_2_1.tex",
+    "tr_old": "\\simeq\nH^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}.",
+    "note": "covered by C289"
+  },
+  {
+    "id": "C291",
+    "decision": "not_applicable",
+    "note": "English conventionally uses a colon to introduce the displayed sequence."
+  },
+  {
+    "id": "C292",
+    "decision": "apply",
+    "tr_file": "components/165_expose_XXII_proposition_1_2_completion_through_corollary_2_1.tex",
+    "tr_old": "this is a finite-dimensional\n$k$-vector space because",
+    "tr_new": "this is a \\underline{finite-dimensional}\n$k$-vector space because"
+  },
+  {
+    "id": "C293",
+    "decision": "not_applicable",
+    "note": "French exclamatory punctuation only."
+  },
+  {
+    "id": "C294",
+    "decision": "not_applicable",
+    "note": "French prose punctuation; English uses its own coordination."
+  },
+  {
+    "id": "C295",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "$(\\mathrm{Fr}_q^X)^*\\otimes_{\\mathbb F_p}k$",
+    "tr_new": "$\\mathrm{fr}_q^{X*}\\otimes_{\\mathbb F_p}k$"
+  },
+  {
+    "id": "C296",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "$\\mathrm{Fr}_q^X:\\bar X\\longrightarrow\\bar X$",
+    "tr_new": "$\\mathrm{fr}_q^X:\\bar X\\longrightarrow\\bar X$"
+  },
+  {
+    "id": "C297",
+    "decision": "already",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "Frobenius\n$k$-endomorphism (cf. SGA~5, XVIII~2.3.4).",
+    "note": "The reference is not underlined."
+  },
+  {
+    "id": "C298",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "and also a $k$-linear extension, again denoted by\n$\\overline{\\mathfrak F}_q$,",
+    "tr_new": "and also a $k$-linear extension, again denoted by\n$\\mathfrak F_q$,"
+  },
+  {
+    "id": "C299",
+    "decision": "not_applicable",
+    "note": "Prose punctuation before a display; the supplied context also points to another passage."
+  },
+  {
+    "id": "C300",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "\\tag{2.2.11}\n\\overline{\\mathfrak F}_q",
+    "tr_new": "\\tag{2.2.11}\n\\mathfrak F_q"
+  },
+  {
+    "id": "C301",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "They all commute with $\\mathfrak F_p$, so",
+    "tr_new": "They all commute with $\\overline{\\mathfrak F}_p$, so"
+  },
+  {
+    "id": "C302",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "and\n$H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}$. By (2.2.13),",
+    "tr_new": "and\n$H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\overline{\\mathfrak F}_p}$. By (2.2.13),"
+  },
+  {
+    "id": "C303",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "$\\mathfrak F_q$ and $\\varphi_q$ are inverse to one another on",
+    "tr_new": "$\\mathfrak F_q$ and $\\varphi_q$ are inverse to one another \\underline{on}"
+  },
+  {
+    "id": "C304",
+    "decision": "not_applicable",
+    "note": "French accent only."
+  },
+  {
+    "id": "C305",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "\\simeq\nH^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q,",
+    "tr_new": "\\simeq\nH^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\overline{\\mathfrak F}_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q,"
+  },
+  {
+    "id": "C306",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "$H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\mathfrak F_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q$.",
+    "tr_new": "$H^i(\\bar X,\\mathcal O_{\\bar X})^{1-\\overline{\\mathfrak F}_p}\n\\otimes_{\\mathbb F_p}\\mathbb F_q$."
+  },
+  {
+    "id": "C307",
+    "decision": "apply",
+    "tr_file": "components/166_expose_XXII_section_2_2_through_proposition_2_2_5.tex",
+    "tr_old": "Consequently the automorphism induced by\n$\\mathfrak F_q$ on\n$H^i(\\bar X,\\mathcal O_{\\bar X})_{\\mathrm{ss}}$",
+    "tr_new": "Consequently the automorphism induced by\n$\\varphi_q$ on\n$H^i(\\bar X,\\mathcal O_{\\bar X})_{\\mathrm{ss}}$"
+  },
+  {
+    "id": "C360",
+    "decision": "not_applicable",
+    "note": "French accent only."
+  },
+  {
+    "id": "C308",
+    "decision": "not_applicable",
+    "note": "French prose punctuation; English uses a parenthetical construction."
+  },
+  {
+    "id": "C309",
+    "decision": "apply",
+    "tr_file": "components/167_expose_XXII_section_3_opening_through_theorem_3_3.tex",
+    "tr_old": "under the ``reduction modulo $p$''\nmap",
+    "tr_new": "under the ``reduction modulo $p\\mathbb Z[[t]]$''\nmap"
+  },
+  {
+    "id": "C310",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation between equivalent displayed statements."
+  },
+  {
+    "id": "C311",
+    "decision": "not_applicable",
+    "note": "Terminal sentence punctuation in a display."
+  },
+  {
+    "id": "C312",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation around an equivalence; no mathematical change."
+  },
+  {
+    "id": "C313",
+    "decision": "not_applicable",
+    "note": "French prose punctuation; English recasts the sentence."
+  },
+  {
+    "id": "C314",
+    "decision": "apply",
+    "tr_file": "components/167_expose_XXII_section_3_opening_through_theorem_3_3.tex",
+    "tr_old": "$H^i(X,\\Omega^\\bullet_{X/\\mathbb F_q})$, on which",
+    "tr_new": "$\\mathbb H^i(X,\\Omega^\\bullet_{X/\\mathbb F_q})$, on which"
+  },
+  {
+    "id": "C315",
+    "decision": "already",
+    "tr_file": "components/168_expose_XXII_theorem_3_4_through_lemma_3_9.tex",
+    "tr_old": "$H_c^i$ étale cohomology with proper supports (SGA~4, XVII~5.1.9(iii)), one\nhas",
+    "note": "The reference is not underlined."
+  },
+  {
+    "id": "C316",
+    "decision": "not_applicable",
+    "note": "French accent only."
+  },
+  {
+    "id": "C317",
+    "decision": "not_applicable",
+    "note": "French prose punctuation; English uses “For the moment, write”."
+  },
+  {
+    "id": "C318",
+    "decision": "apply",
+    "tr_file": "components/168_expose_XXII_theorem_3_4_through_lemma_3_9.tex",
+    "tr_old": "\\end{equation}\n\nand\n\n\\begin{equation}\\tag{3.4.3}",
+    "tr_new": "\\end{equation}\n\n\\begin{equation}\\tag{3.4.3}"
+  },
+  {
+    "id": "C319",
+    "decision": "apply",
+    "tr_file": "components/168_expose_XXII_theorem_3_4_through_lemma_3_9.tex",
+    "tr_old": "\\prod_i\\det\\!\\left(1-t\\varphi_q^{-1}\\mid",
+    "tr_new": "\\prod\\det\\!\\left(1-t\\varphi_q^{-1}\\mid"
+  },
+  {
+    "id": "C320",
+    "decision": "not_applicable",
+    "note": "French prose punctuation; English retains its conventional conditional comma."
+  },
+  {
+    "id": "C361",
+    "decision": "not_applicable",
+    "note": "French accent only."
+  },
+  {
+    "id": "C321",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation after a displayed spectral sequence."
+  },
+  {
+    "id": "C322",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation after a displayed formula."
+  },
+  {
+    "id": "C323",
+    "decision": "apply",
+    "tr_file": "components/168_expose_XXII_theorem_3_4_through_lemma_3_9.tex",
+    "tr_old": "=\\sum_{r\\mid n}r\\,\\operatorname{card}\\{y\\in X\\mid\\deg(y)=r\\},",
+    "tr_new": "=\\sum_{r\\mid n}r.\\operatorname{card}\\{y\\in X\\mid\\deg(y)=r\\},"
+  },
+  {
+    "id": "C324",
+    "decision": "apply",
+    "tr_file": "components/168_expose_XXII_theorem_3_4_through_lemma_3_9.tex",
+    "tr_old": "\\bigcap_i(\\mathbb P^n-H_i)=\\mathbb P^n-\\bigcup_iH_i",
+    "tr_new": "\\bigcap(\\mathbb P^n-H_i)=\\mathbb P^n-\\bigcup_iH_i",
+    "note": "Carries over the index removal while retaining English display layout."
+  },
+  {
+    "id": "C325",
+    "decision": "apply",
+    "tr_file": "components/168_expose_XXII_theorem_3_4_through_lemma_3_9.tex",
+    "tr_old": "$\\{\\mathbb P^n-H_i\\}$ of $\\mathbb P^n-\\bigcap_iH_i$",
+    "tr_new": "$\\{\\mathbb P^n-H_i\\}$ of $\\mathbb P^n-\\bigcap H_i$"
+  },
+  {
+    "id": "C326",
+    "decision": "apply",
+    "tr_file": "components/168_expose_XXII_theorem_3_4_through_lemma_3_9.tex",
+    "tr_old": "$\\mathbb P^n-\\bigcap_iH_i$. By Lemmas~3.8 and 3.6",
+    "tr_new": "$\\mathbb P^n-\\bigcap H_i$. By Lemmas~3.8 and 3.6"
+  },
+  {
+    "id": "C327",
+    "decision": "apply",
+    "tr_file": "components/168_expose_XXII_theorem_3_4_through_lemma_3_9.tex",
+    "tr_old": "$\\bigcap_iH_i$, and hence for every projective $X$.",
+    "tr_new": "$\\bigcap H_i$, and hence for every projective $X$."
+  },
+  {
+    "id": "C328",
+    "decision": "not_applicable",
+    "note": "French abbreviations only; the meaning is unchanged."
+  },
+  {
+    "id": "C329",
+    "decision": "not_applicable",
+    "note": "Introductory punctuation in a display, without mathematical effect."
+  },
+  {
+    "id": "C330",
+    "decision": "not_applicable",
+    "note": "Cases punctuation only; English retains its typography."
+  },
+  {
+    "id": "C331",
+    "decision": "not_applicable",
+    "note": "Cases punctuation only; English retains its typography."
+  },
+  {
+    "id": "C332",
+    "decision": "not_applicable",
+    "note": "French prose punctuation; English recasts the sentence."
+  },
+  {
+    "id": "C333",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation after a displayed formula."
+  },
+  {
+    "id": "C334",
+    "decision": "not_applicable",
+    "note": "French accent only."
+  },
+  {
+    "id": "C335",
+    "decision": "apply",
+    "tr_file": "components/169_expose_XXII_section_4_0_through_lemma_4_2.tex",
+    "tr_old": "f(X)=\\sum_w a_wX^w,",
+    "tr_new": "f(X)=\\sum a_wX^w,"
+  },
+  {
+    "id": "C336",
+    "decision": "apply",
+    "tr_file": "components/169_expose_XXII_section_4_0_through_lemma_4_2.tex",
+    "tr_old": "where $w=(w_1,\\ldots,w_{n+2})$, $\\sum_iw_i=d$, and",
+    "tr_new": "where $w=(w_1,\\ldots,w_{n+2})$, $\\sum w_i=d$, and"
+  },
+  {
+    "id": "C337",
+    "decision": "apply",
+    "tr_file": "components/169_expose_XXII_section_4_0_through_lemma_4_2.tex",
+    "tr_old": "\\prod_w\\chi(a_wx_0X^w).",
+    "tr_new": "\\prod_w\\chi(a_wx_0x^w)."
+  },
+  {
+    "id": "C362",
+    "decision": "not_applicable",
+    "note": "French accent only."
+  },
+  {
+    "id": "C338",
+    "decision": "not_applicable",
+    "note": "Punctuation between items of a displayed list."
+  },
+  {
+    "id": "C339",
+    "decision": "not_applicable",
+    "note": "Punctuation between items of a displayed list."
+  },
+  {
+    "id": "C340",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation after a displayed formula."
+  },
+  {
+    "id": "C341",
+    "decision": "not_applicable",
+    "note": "Sentence punctuation before a parenthetical remark."
+  },
+  {
+    "id": "C342",
+    "decision": "apply",
+    "tr_file": "components/169_expose_XXII_section_4_0_through_lemma_4_2.tex",
+    "tr_old": "Define the Artin--Hasse exponential",
+    "tr_new": "Define \\underline{the Artin--Hasse exponential}"
+  },
+  {
+    "id": "C343",
+    "decision": "not_applicable",
+    "note": "Name-separator typography; retain the English edition's en dash."
+  },
+  {
+    "id": "C344",
+    "decision": "already",
+    "tr_file": "components/169_expose_XXII_section_4_0_through_lemma_4_2.tex",
+    "tr_old": "\\subsubsection*{Lemma 4.2.}",
+    "note": "The number is not underlined."
+  },
+  {
+    "id": "C345",
+    "decision": "already",
+    "tr_file": "components/169_expose_XXII_section_4_0_through_lemma_4_2.tex",
+    "tr_old": "\\begin{equation}\\tag{4.2.3}\nt=t^{p^a};",
+    "note": "English places the number in an equation tag, without underlining."
+  },
+  {
+    "id": "C346",
+    "decision": "already",
+    "tr_file": "components/169_expose_XXII_section_4_0_through_lemma_4_2.tex",
+    "tr_old": "is defined, and one has the identity of formal power series",
+    "note": "The phrase is not underlined."
+  },
+  {
+    "id": "C347",
+    "decision": "not_applicable",
+    "note": "French prose punctuation around a parenthetical remark."
+  },
+  {
+    "id": "C348",
+    "decision": "already",
+    "tr_file": "components/170_expose_XXII_proof_of_lemma_4_2_and_corollary_4_3.tex",
+    "tr_old": "\\subsubsection*{Corollary 4.3.}",
+    "note": "The number is not underlined."
+  }
+]
+```

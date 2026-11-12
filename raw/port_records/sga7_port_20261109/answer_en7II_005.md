@@ -1,0 +1,231 @@
+```json
+[
+  {
+    "id": "C468",
+    "decision": "apply",
+    "tr_file": "components/182_expose_XXII_cohomology_of_the_structure_sheaf.tex",
+    "tr_old": "\\begin{equation}\\tag{6.2.4}\n\\begin{cases}\nH^i(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P})=0,",
+    "tr_new": "\\begin{equation}\\tag{6.2.4}\n\\begin{cases}\nH^0(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P})\\simeq\\mathbb F_q,\\\\\nH^i(\\mathbb P^{n+1},\\mathcal O_{\\mathbb P})=0,"
+  },
+  {
+    "id": "C469",
+    "decision": "not_applicable",
+    "note": "The English uses commas to punctuate cases and their conditions."
+  },
+  {
+    "id": "C470",
+    "decision": "not_applicable",
+    "note": "French sentence punctuation."
+  },
+  {
+    "id": "C471",
+    "decision": "not_applicable",
+    "note": "The English uses commas to punctuate cases and their conditions."
+  },
+  {
+    "id": "C472",
+    "decision": "apply",
+    "tr_file": "components/182_expose_XXII_cohomology_of_the_structure_sheaf.tex",
+    "tr_old": "=\n\\det\\!\\left(\n1-tf^{q-1}\\mathfrak F_q\n\\mathrel{\\Big|}",
+    "tr_new": "=\n\\det\\!\\left(\n1-t(f^{q-1}\\mathfrak F_q)\n\\mathrel{\\Big|}"
+  },
+  {
+    "id": "C473",
+    "decision": "apply",
+    "tr_file": "components/182_expose_XXII_cohomology_of_the_structure_sheaf.tex",
+    "tr_old": "&\\det\\!\\left(\n1-tf^{q-1}\\mathfrak F_q\n",
+    "tr_new": "&\\det\\!\\left(\n1-t(f^{q-1}\\mathfrak F_q)\n"
+  },
+  {
+    "id": "C474",
+    "decision": "apply",
+    "tr_file": "components/182_expose_XXII_cohomology_of_the_structure_sheaf.tex",
+    "tr_old": "&\\qquad=\n\\det\\!\\left(\n1-t\\,\\psi_q\\circ(X_0f(X))^{q-1}\n\\mathrel{\\Big|}W_S(1)",
+    "tr_new": "&\\qquad=\n\\det\\!\\left(\n1-t\\,\\psi_q\\cdot(X_0f(X))^{q-1}\n\\mathrel{\\Big|}W_S(1)"
+  },
+  {
+    "id": "C475",
+    "decision": "unclear",
+    "note": "The supplied context identifies (2.2.4.1), which is not shown. The generic OLD also matches (6.2.8), so the intended occurrence is uncertain."
+  },
+  {
+    "id": "C476",
+    "decision": "apply",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "\\subsubsection*{Proposition 6.3.}\nThere is an isomorphism",
+    "tr_new": "\\subsubsection*{\\underline{Proposition} 6.3.}\n\\underline{There is an isomorphism}"
+  },
+  {
+    "id": "C477",
+    "decision": "apply",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "with respect to which the operator",
+    "tr_new": "\\underline{with respect to which the operator}"
+  },
+  {
+    "id": "C478",
+    "decision": "apply",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "is the transpose of\n\n\\begin{equation}\\tag{6.3.3}",
+    "tr_new": "\\underline{is the transpose of}\n\n\\begin{equation}\\tag{6.3.3}"
+  },
+  {
+    "id": "C479",
+    "decision": "apply",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "&\\quad X_1^{W_1}\\cdots X_{n+2}^{W_{n+2}},\n\\qquad W_i\\in\\mathbb Z,\\quad\\sum_iW_i=-d,\\\\",
+    "tr_new": "&\\quad X_1^{W_1}\\cdots X_{n+2}^{W_{n+2}}\n\\qquad\\text{with }W_i\\in\\mathbb Z\\text{ satisfying }\\sum W_i=-d,\\\\"
+  },
+  {
+    "id": "C480",
+    "decision": "already",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "\\qquad W_i\\in\\mathbb Z,\\quad\\sum_iW_i=-d,\\\\",
+    "note": "covered by C479"
+  },
+  {
+    "id": "C481",
+    "decision": "not_applicable",
+    "note": "The English retains punctuation between the clauses of the displayed quotient description."
+  },
+  {
+    "id": "C482",
+    "decision": "apply",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "(\\pi X_0)X_1^{U_1}\\cdots X_{n+2}^{U_{n+2}},\n\\qquad\n\\sum_iU_i=d,\\quad U_i>0\\ \\forall i.",
+    "tr_new": "(\\pi X_0)X_1^{U_1}\\cdots X_{n+2}^{U_{n+2}}\n\\text{ satisfying }\n\\sum U_i=d,\\quad U_i>0\\ \\forall_i."
+  },
+  {
+    "id": "C483",
+    "decision": "already",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "\\sum_iU_i=d,\\quad U_i>0\\ \\forall i.",
+    "note": "covered by C482"
+  },
+  {
+    "id": "C484",
+    "decision": "already",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "U_i>0\\ \\forall i.",
+    "note": "covered by C482"
+  },
+  {
+    "id": "C485",
+    "decision": "apply",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "\\operatorname{class}\\!\\left(\n\\pi X_0X_1^{U_1}\\cdots X_{n+2}^{U_{n+2}}\n\\right),",
+    "tr_new": "\\text{class of }\\pi X_0X_1^{U_1}\\cdots X_{n+2}^{U_{n+2}},"
+  },
+  {
+    "id": "C486",
+    "decision": "not_applicable",
+    "note": "The comma separating a case value from its condition follows the English convention."
+  },
+  {
+    "id": "C487",
+    "decision": "not_applicable",
+    "note": "The English consistently punctuates cases and their conditions with commas."
+  },
+  {
+    "id": "C488",
+    "decision": "apply",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "$\\psi_q\\circ(X_0f(X))^{q-1}$ is the transpose of",
+    "tr_new": "$\\psi_q\\cdot(X_0f(X))^{q-1}$ is the transpose of"
+  },
+  {
+    "id": "C489",
+    "decision": "apply",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "$f(X)^{q-1}\\mathfrak F_q$, which proves Proposition~6.3.",
+    "tr_new": "$f(X)^{q-1}\\cdot \\mathfrak F_q$, which proves Proposition~6.3."
+  },
+  {
+    "id": "C490",
+    "decision": "not_applicable",
+    "note": "The English bibliography uses mixed-case surnames rather than French all-capital author styling."
+  },
+  {
+    "id": "C491",
+    "decision": "not_applicable",
+    "note": "The English bibliography independently uses italic titles."
+  },
+  {
+    "id": "C492",
+    "decision": "not_applicable",
+    "note": "The English bibliography uses mixed-case surnames rather than French all-capital author styling."
+  },
+  {
+    "id": "C493",
+    "decision": "not_applicable",
+    "note": "The English bibliography independently uses italic titles."
+  },
+  {
+    "id": "C494",
+    "decision": "not_applicable",
+    "note": "The English bibliography uses mixed-case surnames rather than French all-capital author styling."
+  },
+  {
+    "id": "C495",
+    "decision": "not_applicable",
+    "note": "The English bibliography independently uses italic titles."
+  },
+  {
+    "id": "C496",
+    "decision": "not_applicable",
+    "note": "The English bibliography uses mixed-case surnames rather than French all-capital author styling."
+  },
+  {
+    "id": "C497",
+    "decision": "not_applicable",
+    "note": "The English bibliography independently uses italic titles."
+  },
+  {
+    "id": "C498",
+    "decision": "not_applicable",
+    "note": "The English bibliography uses mixed-case surnames rather than French all-capital author styling."
+  },
+  {
+    "id": "C499",
+    "decision": "already",
+    "tr_file": "components/183_expose_XXII_proposition_6_3_and_bibliography.tex",
+    "tr_old": "\\item A.~Grothendieck, \\emph{Le Groupe de Brauer III}, in",
+    "note": "A comma already separates the author's name from the title."
+  },
+  {
+    "id": "C500",
+    "decision": "not_applicable",
+    "note": "The English bibliography independently uses italic titles."
+  },
+  {
+    "id": "C501",
+    "decision": "not_applicable",
+    "note": "The English bibliography uses mixed-case surnames rather than French all-capital author styling."
+  },
+  {
+    "id": "C502",
+    "decision": "not_applicable",
+    "note": "The English bibliography independently uses italic titles."
+  },
+  {
+    "id": "C503",
+    "decision": "not_applicable",
+    "note": "The English bibliography uses mixed-case surnames rather than French all-capital author styling."
+  },
+  {
+    "id": "C504",
+    "decision": "not_applicable",
+    "note": "The English bibliography independently uses italic titles."
+  },
+  {
+    "id": "C505",
+    "decision": "not_applicable",
+    "note": "The English bibliography uses mixed-case surnames rather than French all-capital author styling."
+  },
+  {
+    "id": "C506",
+    "decision": "not_applicable",
+    "note": "The English bibliography independently uses italic titles."
+  }
+]
+```

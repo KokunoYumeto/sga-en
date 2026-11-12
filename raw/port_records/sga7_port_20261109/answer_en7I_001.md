@@ -1,0 +1,745 @@
+```json
+[
+  {
+    "id": "C0",
+    "decision": "apply",
+    "tr_file": "components/01_expose_I_opening_through_0_0.tex",
+    "tr_old": "\\underline{Summary of the First Lectures by A. Grothendieck}",
+    "tr_new": "\\underline{\\underline{Summary of the First Lectures by A. Grothendieck}}"
+  },
+  {
+    "id": "C1",
+    "decision": "apply",
+    "tr_file": "components/02_expose_I_0_1_through_1_4.tex",
+    "tr_old": "$\\mathrm{GL}(n,\\mathbb{Q}_\\ell)$. Suppose that the following condition holds:}",
+    "tr_new": "$\\mathrm{GL}(n,\\mathbb{Q}_\\ell)$}. \\underline{Suppose that the following condition holds:}"
+  },
+  {
+    "id": "C2",
+    "decision": "apply",
+    "tr_file": "components/04_expose_I_section_3.tex",
+    "tr_old": "These formulas are identical to those which, over $\\mathbf C$, give the",
+    "tr_new": "These formulas are identical to those which, over $\\mathbb C$, give the"
+  },
+  {
+    "id": "C3",
+    "decision": "already",
+    "tr_file": "components/05_expose_I_section_4.tex",
+    "tr_old": "a) On $X_s-X'_s$, one has $\\phi^{-1}=\\Lambda$, and the other\n$\\phi^i$ vanish;"
+  },
+  {
+    "id": "C4",
+    "decision": "already",
+    "tr_file": "components/05_expose_I_section_4.tex",
+    "tr_old": "b) on $X'_s$, the $\\phi^i$ and $\\psi^i$ relative to $X/S$ or to"
+  },
+  {
+    "id": "C5",
+    "decision": "already",
+    "tr_file": "components/05_expose_I_section_4.tex",
+    "tr_old": "$X'/S$ coincide, and $\\phi^{-1}=0$."
+  },
+  {
+    "id": "C6",
+    "decision": "already",
+    "tr_file": "components/05_expose_I_section_4.tex",
+    "tr_old": "To prove, in certain cases, that the $\\phi^i$ vanish for small\n$i$, we shall use local duality"
+  },
+  {
+    "id": "C7",
+    "decision": "apply",
+    "tr_file": "components/05_expose_I_section_4.tex",
+    "tr_old": "\\underline{More precisely, let $x$ be a point of $X_s$ whose",
+    "tr_new": "\\underline{More precisely}, \\underline{let $x$ be a point of $X_s$ whose"
+  },
+  {
+    "id": "C8",
+    "decision": "apply",
+    "tr_file": "components/05_expose_I_section_4.tex",
+    "tr_old": "point in its fibre. Then $\\phi^i_x=0$ for $i\\ne n$.}",
+    "tr_new": "point in its fibre}. \\underline{Then $\\phi^i_x=0$ for $i\\ne n$.}"
+  },
+  {
+    "id": "C9",
+    "decision": "apply",
+    "tr_file": "components/05_expose_I_section_4.tex",
+    "tr_old": "$\\phi^n_x$ is a flat $\\Lambda$-module.}",
+    "tr_new": "$\\phi^n_x$ is a flat }$\\Lambda$-\\underline{module}."
+  },
+  {
+    "id": "C10",
+    "decision": "already",
+    "tr_file": "components/06_expose_I_section_5.tex",
+    "tr_old": "strict localization at the generic point of the special fibre of an\n$\\mathbb A^n_S$"
+  },
+  {
+    "id": "C11",
+    "decision": "already",
+    "tr_file": "components/04_expose_I_section_3.tex",
+    "tr_old": "regular divisor in $\\Spec(A)$ defined by a parameter $x$.",
+    "note": "The passage is on English page 10, shown earlier in the batch."
+  },
+  {
+    "id": "C12",
+    "decision": "apply",
+    "tr_file": "components/07_expose_I_section_6.tex",
+    "tr_old": "& \\operatorname{Im}(T-1)^r \\arrow[u]\n\\end{tikzcd}\n\\end{equation}",
+    "tr_new": "& \\operatorname{Im}(T-1)^r \\arrow[u]\n\\end{tikzcd}\\quad .\n\\end{equation}"
+  },
+  {
+    "id": "C13",
+    "decision": "apply",
+    "tr_file": "components/08_expose_II_complete.tex",
+    "tr_old": "let $f:\\bigsqcup U_i\\longrightarrow X$ be the canonical morphism.",
+    "tr_new": "let $f:\\coprod U_i\\longrightarrow X$ be the canonical morphism."
+  },
+  {
+    "id": "C14",
+    "decision": "apply",
+    "tr_file": "components/09_expose_VI_opening_through_1_1.tex",
+    "tr_old": "$(R,X)\\longmapsto R$ defines a cofibered groupoid over",
+    "tr_new": "$(R,X)\\mathrel{\\mapstochar\\rightsquigarrow} R$ defines a cofibered groupoid over"
+  },
+  {
+    "id": "C15",
+    "decision": "already",
+    "tr_file": "components/10_expose_VI_1_2_through_1_3.tex",
+    "tr_old": "(2) \\underline{Let}\n\\[\n\\begin{tikzcd}[column sep=large]\n& R \\\\"
+  },
+  {
+    "id": "C16",
+    "decision": "already",
+    "tr_file": "components/10_expose_VI_1_2_through_1_3.tex",
+    "tr_old": "in a cofibered category $\\underline A$ over $\\underline C_\\Lambda$.\nPut $R=P(a)$"
+  },
+  {
+    "id": "C17",
+    "decision": "already",
+    "tr_file": "components/10_expose_VI_1_2_through_1_3.tex",
+    "tr_old": "\\quad\\text{in }\\underline C_\\Lambda,\n\\]\nwhere $R_2\\longrightarrow R$ is surjective"
+  },
+  {
+    "id": "C18",
+    "decision": "already",
+    "tr_file": "components/10_expose_VI_1_2_through_1_3.tex",
+    "tr_old": "If $\\underline A$ is a semi-homogeneous\ncofibered groupoid over $\\underline C_\\Lambda$, then\n$[\\underline A(k[\\varepsilon])]$ is canonically endowed"
+  },
+  {
+    "id": "C19",
+    "decision": "apply",
+    "tr_file": "components/11_expose_VI_1_4_through_1_6.tex",
+    "tr_old": "$a'\\xrightarrow{\\alpha}a$ be a $\\pi_1$-map. Then there exists a map\n$a\\xrightarrow{\\beta}a'$",
+    "tr_new": "$a'\\xrightarrow{\\alpha}a$ be a }$\\pi_1$-\\underline{map. Then there exists a map\n$a\\xrightarrow{\\beta}a'$"
+  },
+  {
+    "id": "C20",
+    "decision": "already",
+    "tr_file": "components/11_expose_VI_1_4_through_1_6.tex",
+    "tr_old": "$k[\\ker f]\\simeq k[\\varepsilon]$."
+  },
+  {
+    "id": "C21",
+    "decision": "apply",
+    "tr_file": "components/12_expose_VI_1_7_through_1_8.tex",
+    "tr_old": "\\underline{where $m_\\Lambda$ and $M$ are the maximal ideals of\n$\\Lambda$ and $R$, respectively.",
+    "tr_new": "\\underline{where }$\\underline{m}_\\Lambda$\\underline{ and $M$ are the maximal ideals of\n$\\Lambda$ and $R$, respectively."
+  },
+  {
+    "id": "C22",
+    "decision": "already",
+    "tr_file": "components/13_expose_VI_pro_categories_through_1_10.tex",
+    "tr_old": "$\\alpha_i\\varphi_i=\\varphi_{i-1}$ for all $i<n$."
+  },
+  {
+    "id": "C23",
+    "decision": "already",
+    "tr_file": "components/16_expose_VI_lemma_1_18.tex",
+    "tr_old": "\\arrow[d,\"{F(D)}\"]"
+  },
+  {
+    "id": "C24",
+    "decision": "already",
+    "tr_file": "components/16_expose_VI_lemma_1_18.tex",
+    "tr_old": "\\arrow[d,\"{F(i,D)}\"]"
+  },
+  {
+    "id": "C25",
+    "decision": "apply",
+    "tr_file": "components/19_expose_VI_2_3_through_2_7.tex",
+    "tr_old": " \\xi:\\underline h_R\\longrightarrow\\underline A\n\\]\nis smooth, where $R=P(\\xi)$.",
+    "tr_new": " \\widetilde\\xi:\\underline h_R\\longrightarrow\\underline A\n\\]\nis smooth, where $R=P(\\xi)$."
+  },
+  {
+    "id": "C26",
+    "decision": "apply",
+    "tr_file": "components/19_expose_VI_2_3_through_2_7.tex",
+    "tr_old": "\\underline h_R\\xrightarrow{\\ \\xi\\ }\\underline A",
+    "tr_new": "\\underline h_R\\xrightarrow{\\ \\widetilde\\xi\\ }\\underline A"
+  },
+  {
+    "id": "C27",
+    "decision": "apply",
+    "tr_file": "components/19_expose_VI_2_3_through_2_7.tex",
+    "tr_old": "\\arrow[l,\"{\\sim}\"']",
+    "tr_new": "\\arrow[l,\"{\\sim}\"]"
+  },
+  {
+    "id": "C28",
+    "decision": "already",
+    "tr_file": "components/20_expose_VI_2_8_through_2_9.tex",
+    "tr_old": "$\\widehat{\\underline C}_\\Lambda$-isomorphism\n\\[\n \\rho:\\widehat\\varphi(a')\\xrightarrow{\\ \\sim\\ }b'"
+  },
+  {
+    "id": "C29",
+    "decision": "apply",
+    "tr_file": "components/20_expose_VI_2_8_through_2_9.tex",
+    "tr_old": "\\arrow[d,\"{\\beta_{n+1}}\"']",
+    "tr_new": "\\arrow[d,\"{\\beta_{n+1}}\"]"
+  },
+  {
+    "id": "C30",
+    "decision": "apply",
+    "tr_file": "components/20_expose_VI_2_8_through_2_9.tex",
+    "tr_old": "\\arrow[dl,\"{\\sim}\"']",
+    "tr_new": "\\arrow[dl,\"{\\sim}\"]"
+  },
+  {
+    "id": "C31",
+    "decision": "already",
+    "tr_file": "components/19_expose_VI_2_3_through_2_7.tex",
+    "tr_old": "\\arrow[dl,\"{\\pi_1}\"'] \\arrow[dr,\"{\\pi_2}\"]",
+    "note": "The context identifies Remark 2.6(a), on English page 52 shown earlier."
+  },
+  {
+    "id": "C32",
+    "decision": "apply",
+    "tr_file": "components/24_expose_VI_2_12_c_through_2_14.tex",
+    "tr_old": "R_1\\otimes_{R_0\\widehat\\otimes_\\Lambda R_0}\n       (T\\widehat\\otimes_\\Lambda T).",
+    "tr_new": "R_1\\otimes_{R_0\\widehat\\otimes_\\Lambda R_0}\n       (T\\otimes_\\Lambda T)."
+  },
+  {
+    "id": "C33",
+    "decision": "not_applicable",
+    "note": "Dehyphenation of a print line break."
+  },
+  {
+    "id": "C34",
+    "decision": "apply",
+    "tr_file": "components/24_expose_VI_2_12_c_through_2_14.tex",
+    "tr_old": "\\underline h_{R_0} \\arrow[u,\"\\epsilon\"']",
+    "tr_new": "\\underline h_{R_0} \\arrow[u,\"\\epsilon\"]"
+  },
+  {
+    "id": "C35",
+    "decision": "apply",
+    "tr_file": "components/24_expose_VI_2_12_c_through_2_14.tex",
+    "tr_old": "& \\underline h_{R_0} \\arrow[u,\"\\epsilon\"]",
+    "tr_new": "& \\underline h_{R_0} \\arrow[u,\"\\epsilon\"']"
+  },
+  {
+    "id": "C36",
+    "decision": "not_applicable",
+    "note": "Dehyphenation of a print line break."
+  },
+  {
+    "id": "C37",
+    "decision": "not_applicable",
+    "note": "Dehyphenation of a print line break."
+  },
+  {
+    "id": "C38",
+    "decision": "already",
+    "tr_file": "components/25_expose_VI_2_15_through_2_17.tex",
+    "tr_old": "minimally smooth functor. If $A$ and $B$ are homogeneous, then",
+    "note": "The period is already outside underlining."
+  },
+  {
+    "id": "C39",
+    "decision": "already",
+    "tr_file": "components/25_expose_VI_2_15_through_2_17.tex",
+    "tr_old": "If $A$ and $B$ are homogeneous, then\n$\\varphi$ is a $\\underline C_\\Lambda$-equivalence.",
+    "note": "The comma is already outside underlining."
+  },
+  {
+    "id": "C40",
+    "decision": "apply",
+    "tr_file": "components/25_expose_VI_2_15_through_2_17.tex",
+    "tr_old": " \\operatorname{Isom}_\\xi:\n \\widehat{\\underline C}_{R\\widehat\\otimes_\\Lambda R}\n \\longrightarrow(\\mathrm{Sets})",
+    "tr_new": " \\operatorname{Isom}_\\xi:\n \\underline C_{R\\widehat\\otimes_\\Lambda R}\n \\longrightarrow(\\mathrm{Sets})"
+  },
+  {
+    "id": "C41",
+    "decision": "apply",
+    "tr_file": "components/25_expose_VI_2_15_through_2_17.tex",
+    "tr_old": "$\\widehat{\\underline C}_{R\\widehat\\otimes_\\Lambda R}$-equivalence,",
+    "tr_new": "$\\underline C_{R\\widehat\\otimes_\\Lambda R}$-equivalence,"
+  },
+  {
+    "id": "C42",
+    "decision": "apply",
+    "tr_file": "components/25_expose_VI_2_15_through_2_17.tex",
+    "tr_old": "in $\\widehat{\\underline C}_{R\\widehat\\otimes_\\Lambda R}$, with",
+    "tr_new": "in $\\underline C_{R\\widehat\\otimes_\\Lambda R}$, with"
+  },
+  {
+    "id": "C43",
+    "decision": "not_applicable",
+    "note": "Dehyphenation of a print line break."
+  },
+  {
+    "id": "C44",
+    "decision": "already",
+    "tr_file": "components/27_expose_VI_section_3_opening_through_3_1_b.tex",
+    "tr_old": "such that, for every surjective arrow $B'\\longrightarrow B$ in\n$\\underline C_{A|R}$, the sequence"
+  },
+  {
+    "id": "C45",
+    "decision": "already",
+    "tr_file": "components/27_expose_VI_section_3_opening_through_3_1_b.tex",
+    "tr_old": "The restriction functor $\\widetilde j$, as well as $j^{\\vee}$, is\nexact"
+  },
+  {
+    "id": "C46",
+    "decision": "already",
+    "tr_file": "components/28_expose_VI_3_1_c_through_3_4.tex",
+    "tr_old": "\\item Suppose that $A$ is noetherian. If",
+    "note": "The period is already outside underlining."
+  },
+  {
+    "id": "C47",
+    "decision": "already",
+    "tr_file": "components/28_expose_VI_3_1_c_through_3_4.tex",
+    "tr_old": "$F\\in\\operatorname{Ob}(\\widetilde{\\underline C}_{A|R})$ is of\nfinite type"
+  },
+  {
+    "id": "C48",
+    "decision": "already",
+    "tr_file": "components/28_expose_VI_3_1_c_through_3_4.tex",
+    "tr_old": "$F\\in\\operatorname{Ob}(\\widetilde{\\underline C}_{P|R})$."
+  },
+  {
+    "id": "C49",
+    "decision": "already",
+    "tr_file": "components/28_expose_VI_3_1_c_through_3_4.tex",
+    "tr_old": "in $\\widetilde{\\underline C}_{A|R}$ is exact if and only if"
+  },
+  {
+    "id": "C50",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "\\item If $\\operatorname{Tor}_1^R(B,S)=0$, then the canonical map"
+  },
+  {
+    "id": "C51",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "\\item Suppose that $B'$ is flat over $R$. If\n\\[\n \\operatorname{Tor}_i^R(C,S)=0\\quad(0<i<n)"
+  },
+  {
+    "id": "C52",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "\\qquad\\text{and}\\qquad\n \\operatorname{Tor}_i^R(B,S)=0\\quad(0<i\\leq n),"
+  },
+  {
+    "id": "C53",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "then\n\\[\n \\operatorname{Tor}_i^R(B'\\times_BC,S)=0\\qquad(0<i<n)."
+  },
+  {
+    "id": "C54",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "(i) If $\\operatorname{Tor}_1^R(B,S)=0$, then"
+  },
+  {
+    "id": "C55",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "Let $A$ and $S$ be $R$-algebras. If\n$\\operatorname{Tor}_1^R(A,S)=0$",
+    "note": "$R$ and its following hyphen are already un-underlined."
+  },
+  {
+    "id": "C56",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "In particular, if $S$ is flat over $R$, then",
+    "note": "The translation already leaves $R$ outside underlining."
+  },
+  {
+    "id": "C57",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "Let $P\\longrightarrow B$ be a surjective map of $R$-algebras,",
+    "note": "$R$ and its following hyphen are already un-underlined."
+  },
+  {
+    "id": "C58",
+    "decision": "already",
+    "tr_file": "components/29_expose_VI_3_5_through_3_6.tex",
+    "tr_old": "Let $A$ and $S$ be $R$-algebras. If\n$\\operatorname{Tor}_1^R(A,S)=0$",
+    "note": "Same passage as C55; $R$ and the hyphen are already un-underlined."
+  },
+  {
+    "id": "C59",
+    "decision": "already",
+    "tr_file": "components/31_expose_VI_corollaries_3_8_and_3_9.tex",
+    "tr_old": "Let $A$ and $B$ be $R$-algebras such that",
+    "note": "The hyphen is already un-underlined."
+  },
+  {
+    "id": "C60",
+    "decision": "already",
+    "tr_file": "components/31_expose_VI_corollaries_3_8_and_3_9.tex",
+    "tr_old": "Let $A$ be an $R$-algebra such that\n$\\operatorname{Tor}_i^R(A,A)=0$",
+    "note": "The hyphen is already un-underlined."
+  },
+  {
+    "id": "C61",
+    "decision": "already",
+    "tr_file": "components/32_expose_VI_definition_and_lemma_3_10.tex",
+    "tr_old": "Let $A$ be an $R$-algebra. For every\n$A$-module $M$, set",
+    "note": "The hyphen is already un-underlined."
+  },
+  {
+    "id": "C62",
+    "decision": "already",
+    "tr_file": "components/32_expose_VI_definition_and_lemma_3_10.tex",
+    "tr_old": "$A$-module $M$, set\n\\[\n D^i(A|R,M)=H^i(A|R,\\operatorname{Der}_R(-,M)).",
+    "note": "The hyphen is already un-underlined."
+  },
+  {
+    "id": "C63",
+    "decision": "already",
+    "tr_file": "components/33_expose_VI_lemma_3_11.tex",
+    "tr_old": "D^1(P_A^{(1)}|R,M)\n   \\mathrel{\\substack{\\longrightarrow\\\\[-.6ex]\\longrightarrow\\\\[-.6ex]\\longrightarrow}}\n   D^1(P_A^{(2)}|R,M)"
+  },
+  {
+    "id": "C64",
+    "decision": "already",
+    "tr_file": "components/34_expose_VI_theorem_3_12_statement.tex",
+    "tr_old": "and $M$ is an $A$-module of finite type, then\n$D^i(A|R,M)$ is an $A$-module of finite type for every $i$."
+  },
+  {
+    "id": "C65",
+    "decision": "already",
+    "tr_file": "components/36_expose_VI_corollary_3_13.tex",
+    "tr_old": " D^i(S^{-1}A|R,S^{-1}M)\n \\xrightarrow{\\ \\sim\\ }S^{-1}D^i(A|R,M)\n \\qquad(i\\geq0).",
+    "note": "The English uses a parenthetical range, with no incorrectly italicized words."
+  },
+  {
+    "id": "C73",
+    "decision": "already",
+    "tr_file": "components/37_expose_VI_3_14_through_3_16.tex",
+    "tr_old": "Let $R$ be noetherian and let $X$ be an $R$-scheme of finite type.",
+    "note": "$R$ and the hyphen are already un-underlined."
+  },
+  {
+    "id": "C74",
+    "decision": "already",
+    "tr_file": "components/37_expose_VI_3_14_through_3_16.tex",
+    "tr_old": "\\operatorname{Supp}\\underline D^i_{X|R}(\\underline E)\n \\subset X^{\\mathrm{Sing}}"
+  },
+  {
+    "id": "C75",
+    "decision": "already",
+    "tr_file": "components/37_expose_VI_3_14_through_3_16.tex",
+    "tr_old": "\\subset X^{\\mathrm{Sing}}\n \\qquad(i>0),"
+  },
+  {
+    "id": "C76",
+    "decision": "already",
+    "tr_file": "components/37_expose_VI_3_14_through_3_16.tex",
+    "tr_old": "X^{\\mathrm{Sing}}\n =\\{x\\in X\\mid X\\text{ is not smooth over }R\\text{ at }x\\}."
+  },
+  {
+    "id": "C77",
+    "decision": "already",
+    "tr_file": "components/37_expose_VI_3_14_through_3_16.tex",
+    "tr_old": "\\underline{\\operatorname{Hom}}_{\\mathcal O_X}\n \\bigl((I/I^2)\\otimes_R\\mathcal O_X,\\underline E\\bigr)\n\\longrightarrow0,"
+  },
+  {
+    "id": "C78",
+    "decision": "already",
+    "tr_file": "components/37_expose_VI_3_14_through_3_16.tex",
+    "tr_old": "where $I=\\ker(S\\longrightarrow R)$."
+  },
+  {
+    "id": "C79",
+    "decision": "already",
+    "tr_file": "components/37_expose_VI_3_14_through_3_16.tex",
+    "tr_old": "\\underline D^1_{R|S}(\\underline E)\n =\\underline{\\operatorname{Hom}}_{\\mathcal O_X}"
+  },
+  {
+    "id": "C80",
+    "decision": "already",
+    "tr_file": "components/18_expose_VI_section_2_opening_through_2_2.tex",
+    "tr_old": "$R\\in\\operatorname{Ob}(\\widehat{\\underline C}_\\Lambda)$.",
+    "note": "The supplied context identifies the end of 2.2(d), on English page 51 shown earlier."
+  },
+  {
+    "id": "C66",
+    "decision": "already",
+    "tr_file": "components/40_expose_VI_lemma_4_4.tex",
+    "tr_old": "& A_2 \\arrow[r,\"j_{A_2}\"]\n& A_0 \\arrow[r]\n& 0.\n\\end{tikzcd}",
+    "note": "The English already prints the period at the end of the bottom row."
+  },
+  {
+    "id": "C67",
+    "decision": "already",
+    "tr_file": "components/40_expose_VI_lemma_4_4.tex",
+    "tr_old": "& A_2 \\arrow[r,\"j_{A_2}\"]\n& A_0 \\arrow[r]\n& 0.\n\\end{tikzcd}",
+    "note": "Same passage as C66; the period is already present."
+  },
+  {
+    "id": "C68",
+    "decision": "apply",
+    "tr_file": "components/41_expose_VI_theorem_4_5.tex",
+    "tr_old": "If $(R,\\mathcal X)$ is a formal versal deformation of $X_0$, then for",
+    "tr_new": "If $(R,\\mathfrak X)$ is a formal versal deformation of $X_0$, then for"
+  },
+  {
+    "id": "C69",
+    "decision": "apply",
+    "tr_file": "components/41_expose_VI_theorem_4_5.tex",
+    "tr_old": "$(S,\\mathcal Y)\\in\\operatorname{Ob}(\\widehat{\\underline M}_{X_0})$",
+    "tr_new": "$(S,\\mathfrak Y)\\in\\operatorname{Ob}(\\widehat{\\underline M}_{X_0})$"
+  },
+  {
+    "id": "C70",
+    "decision": "apply",
+    "tr_file": "components/41_expose_VI_theorem_4_5.tex",
+    "tr_old": "(\\varphi,\\Phi):(R,\\mathcal X)\\longrightarrow(S,\\mathcal Y)",
+    "tr_new": "(\\varphi,\\Phi):(R,\\mathfrak X)\\longrightarrow(S,\\mathfrak Y)"
+  },
+  {
+    "id": "C71",
+    "decision": "apply",
+    "tr_file": "components/41_expose_VI_theorem_4_5.tex",
+    "tr_old": "\\mathcal Y \\arrow[r,\"\\Phi\"] \\arrow[d]\n& \\mathcal X \\arrow[d]",
+    "tr_new": "\\mathfrak Y \\arrow[r,\"\\Phi\"] \\arrow[d]\n& \\mathfrak X \\arrow[d]"
+  },
+  {
+    "id": "C72",
+    "decision": "apply",
+    "tr_file": "components/41_expose_VI_theorem_4_5.tex",
+    "tr_old": "Furthermore, a formal versal deformation $(R,\\mathcal X)$ of $X_0$",
+    "tr_new": "Furthermore, a formal versal deformation $(R,\\mathfrak X)$ of $X_0$"
+  },
+  {
+    "id": "C81",
+    "decision": "already",
+    "tr_file": "components/42_expose_VI_remarks_4_6_and_pair_deformations.tex",
+    "tr_old": "there are affine schemes $X_0$ over $k$ having a\nnonisolated nonsmooth point"
+  },
+  {
+    "id": "C82",
+    "decision": "unclear",
+    "note": "The context identifies the diagram in 4.1(d), on page 97, whose English text is not supplied. The similar diagrams on pages 95 and 102 are different occurrences."
+  },
+  {
+    "id": "C83",
+    "decision": "already",
+    "tr_file": "components/43_expose_VI_lemma_4_7_through_theorem_4_9.tex",
+    "tr_old": "Let $X_0$ be a $k$-scheme of finite type and $Y_0$ a closed",
+    "note": "$k$ and its following hyphen are already un-underlined."
+  },
+  {
+    "id": "C84",
+    "decision": "already",
+    "tr_file": "components/44_expose_VI_localization_and_completion_intro.tex",
+    "tr_old": "\\mathfrak X=\\varinjlim_\\nu\\mathfrak X_\\nu,\n\\qquad\n\\mathfrak X_\\nu",
+    "note": "Reversed by C88; the final corrected French retains \\nu."
+  },
+  {
+    "id": "C85",
+    "decision": "already",
+    "tr_file": "components/44_expose_VI_localization_and_completion_intro.tex",
+    "tr_old": "\\operatorname{Spec}(R/\\mathfrak m^{\\nu+1}),",
+    "note": "Reversed by C89; the final corrected French retains \\nu."
+  },
+  {
+    "id": "C86",
+    "decision": "already",
+    "tr_file": "components/44_expose_VI_localization_and_completion_intro.tex",
+    "tr_old": "\\mathfrak X_{(x_0)}\n=\\varinjlim_\\nu\n \\operatorname{Spec}(\\mathcal O_{\\mathfrak X_\\nu,x_0})",
+    "note": "Reversed by C90; the final corrected French retains \\nu."
+  },
+  {
+    "id": "C87",
+    "decision": "already",
+    "tr_file": "components/44_expose_VI_localization_and_completion_intro.tex",
+    "tr_old": "\\mathfrak X_{(\\widehat{x}_0)}\n=\\varinjlim_\\nu\n \\operatorname{Spec}(\\widehat{\\mathcal O}_{\\mathfrak X_\\nu,x_0}).",
+    "note": "Reversed by C91; the final corrected French retains \\nu."
+  },
+  {
+    "id": "C88",
+    "decision": "already",
+    "tr_file": "components/44_expose_VI_localization_and_completion_intro.tex",
+    "tr_old": "\\mathfrak X=\\varinjlim_\\nu\\mathfrak X_\\nu,\n\\qquad\n\\mathfrak X_\\nu"
+  },
+  {
+    "id": "C89",
+    "decision": "already",
+    "tr_file": "components/44_expose_VI_localization_and_completion_intro.tex",
+    "tr_old": "\\operatorname{Spec}(R/\\mathfrak m^{\\nu+1}),"
+  },
+  {
+    "id": "C90",
+    "decision": "already",
+    "tr_file": "components/44_expose_VI_localization_and_completion_intro.tex",
+    "tr_old": "\\mathfrak X_{(x_0)}\n=\\varinjlim_\\nu\n \\operatorname{Spec}(\\mathcal O_{\\mathfrak X_\\nu,x_0})"
+  },
+  {
+    "id": "C91",
+    "decision": "already",
+    "tr_file": "components/44_expose_VI_localization_and_completion_intro.tex",
+    "tr_old": "\\mathfrak X_{(\\widehat{x}_0)}\n=\\varinjlim_\\nu\n \\operatorname{Spec}(\\widehat{\\mathcal O}_{\\mathfrak X_\\nu,x_0})."
+  },
+  {
+    "id": "C92",
+    "decision": "already",
+    "tr_file": "components/47_expose_VI_corollary_4_13.tex",
+    "tr_old": "$(R_1,\\mathfrak X_1),\\ldots,(R_r,\\mathfrak X_r)$"
+  },
+  {
+    "id": "C93",
+    "decision": "already",
+    "tr_file": "components/47_expose_VI_corollary_4_13.tex",
+    "tr_old": "\\operatorname{Spec}(\\mathcal O_{X_0,x_1}),\\ldots,\n\\operatorname{Spec}(\\mathcal O_{X_0,x_r}),"
+  },
+  {
+    "id": "C94",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "and\n$f_1,\\ldots,f_r$ is an $S$-regular sequence."
+  },
+  {
+    "id": "C95",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "classes of $f_1,\\ldots,f_r$, because these elements form an",
+    "note": "The English expresses the residue classes in words and already uses a proper ellipsis."
+  },
+  {
+    "id": "C96",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "because these elements form an\n$S$-regular sequence.",
+    "note": "The translated clause uses a pronoun rather than repeating the list."
+  },
+  {
+    "id": "C97",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "p_i:J/J^2\\longrightarrow A_0\\qquad(1\\leq i\\leq d)",
+    "note": "The English uses an inequality range rather than the dotted list."
+  },
+  {
+    "id": "C98",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "$P_{ij}\\in\\Lambda[x_1,\\ldots,x_n]$ such that"
+  },
+  {
+    "id": "C99",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "R=\\Lambda[[t_1,\\ldots,t_d]],"
+  },
+  {
+    "id": "C100",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "B=R[x_1,\\ldots,x_n]/(G_1,\\ldots,G_r),"
+  },
+  {
+    "id": "C101",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "The algebra $R[x_1,\\ldots,x_n]$ is flat over $R$"
+  },
+  {
+    "id": "C102",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "$G_1,\\ldots,G_r$ modulo $\\mathfrak m_R$ form the regular sequence"
+  },
+  {
+    "id": "C103",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "$f_1,\\ldots,f_r$ in\n$k\\otimes_RR[x_1,\\ldots,x_n]$."
+  },
+  {
+    "id": "C104",
+    "decision": "already",
+    "tr_file": "components/48_expose_VI_4_14_and_4_15.tex",
+    "tr_old": "$k\\otimes_RR[x_1,\\ldots,x_n]$."
+  },
+  {
+    "id": "C105",
+    "decision": "already",
+    "tr_file": "components/53_expose_VI_5_5_through_5_6.tex",
+    "tr_old": "Let $S$ be a noetherian formal scheme and $\\mathfrak X$ an $S$-adic\nformal scheme essentially of finite type. Define",
+    "note": "$S$ is already in math mode, and it and the hyphen are un-underlined."
+  },
+  {
+    "id": "C106",
+    "decision": "already",
+    "tr_file": "components/53_expose_VI_5_5_through_5_6.tex",
+    "tr_old": "Let $S$ be a noetherian formal scheme and $\\mathfrak X$ an $S$-adic\nformal scheme essentially of finite type. Define",
+    "note": "Same passage as C105; $S$ and the hyphen are already un-underlined."
+  },
+  {
+    "id": "C107",
+    "decision": "already",
+    "tr_file": "components/54_expose_VI_corollary_5_7.tex",
+    "tr_old": "$X$ an $S$-scheme essentially of finite type. Given a closed",
+    "note": "$S$ is already in math mode, and it and the hyphen are un-underlined."
+  },
+  {
+    "id": "C108",
+    "decision": "already",
+    "tr_file": "components/54_expose_VI_corollary_5_7.tex",
+    "tr_old": "\\Omega_{\\mathfrak X'|S'}\n\\simeq\n\\mathcal O_{S'}\\widehat\\otimes_{\\mathcal O_S}"
+  },
+  {
+    "id": "C109",
+    "decision": "already",
+    "tr_file": "components/54_expose_VI_corollary_5_7.tex",
+    "tr_old": "\\widehat\\otimes_{\\mathcal O_{\\mathfrak X}}\n\\Omega_{\\mathfrak X|S}\n\\simeq\\Omega_{\\mathfrak X_{(x)}|S}."
+  },
+  {
+    "id": "C110",
+    "decision": "already",
+    "tr_file": "components/54_expose_VI_corollary_5_7.tex",
+    "tr_old": "\\mathfrak X\\to S\\text{ is formally smooth at }x\n&\\Longleftrightarrow\n X_\\nu\\to S_\\nu\\text{ is formally smooth at }x",
+    "note": "The English uses its long logical-equivalence arrow."
+  },
+  {
+    "id": "C111",
+    "decision": "already",
+    "tr_file": "components/54_expose_VI_corollary_5_7.tex",
+    "tr_old": "\\text{ for every }\\nu \\\\\n&\\Longleftrightarrow\n x\\notin J_{X_\\nu}^n(X_\\nu|S_\\nu)",
+    "note": "The English uses its long logical-equivalence arrow."
+  },
+  {
+    "id": "C112",
+    "decision": "already",
+    "tr_file": "components/54_expose_VI_corollary_5_7.tex",
+    "tr_old": "&\\Longleftrightarrow\n x\\notin\\varinjlim_\\nu J_{X_\\nu}^n(X_\\nu|S_\\nu)",
+    "note": "The English uses its long logical-equivalence arrow."
+  },
+  {
+    "id": "C113",
+    "decision": "apply",
+    "tr_file": "components/55_expose_VI_remark_5_8.tex",
+    "tr_old": "\\Omega_{A_\\nu|R_\\nu}\n\\longrightarrow\\widehat\\Omega_{A_\\nu|R_\\nu}",
+    "tr_new": "\\Omega_{A_\\nu|R_\\nu}\n\\longrightarrow\\Omega_{\\widehat A_\\nu|R_\\nu}"
+  }
+]
+```
+components/23_expose_VI_2_11_and_2_12_ab.tex, page 64: the top diagram object `(S_1\times_SS_2,,f_1\times s_2(v))` contains an extra comma.
+components/20_expose_VI_2_8_through_2_9.tex, page 58: `$\alpha_n:a'_{n}\longrightarrow a_n$` should name `\alpha'_n`, as in the adjacent diagrams.

@@ -1,0 +1,3192 @@
+# en7II_r2_003: 33 items on 25 printed pages of SGA 7 II
+
+=================== PAGE 267 ===================
+----- English, file components/112_expose_XVIII_theorem_2_2_completion_and_corollary_2_3.tex, page 266 -----
+\subsubsection*{Remark 2.2.24.}
+Let us sketch a second, distinctly simpler proof of (2.2.2), valid when $X$
+is \underline{proper} over $k$. More generally, without any hypothesis on
+$X$, one obtains the corresponding result (2.2.26) in cohomology with proper
+supports. The exact sequences of cohomology with proper supports, denoted
+$H_c^\bullet$, for the pairs
+$(\widetilde X,\widetilde\Delta)$ and $(X,\Delta)$ form the commutative
+diagram
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=small,row sep=large]
+(2.2.25) \& {} \arrow[r] \&
+H_c^i(\widetilde X-\widetilde\Delta,\mathbb Z_\ell)
+  \arrow[r] \&
+H_c^i(\widetilde X,\mathbb Z_\ell)
+  \arrow[r] \&
+H_c^i(\widetilde\Delta,\mathbb Z_\ell)
+  \arrow[r] \&
+H_c^{i+1}(\widetilde X-\widetilde\Delta,\mathbb Z_\ell)
+\\
+(2.2.26) \& {} \arrow[r] \&
+H_c^i(X-\Delta,\mathbb Z_\ell)
+  \arrow[r]
+  \arrow[u,"\wr" left] \&
+H_c^i(X,\mathbb Z_\ell)
+  \arrow[r]
+  \arrow[u,hook,"f^*" right] \&
+H_c^i(\Delta,\mathbb Z_\ell)
+  \arrow[r]
+  \arrow[u,hook,"g^*" right] \&
+H_c^{i+1}(X-\Delta,\mathbb Z_\ell)
+  \arrow[u,"\wr" left]
+\end{tikzcd}}
+\end{center}
+The quotient of the acyclic complex (2.2.25) by the acyclic subcomplex
+(2.2.26) gives the \underline{acyclic} complex
+\begin{equation}\tag{2.2.27}
+\longrightarrow 0\longrightarrow
+\frac{H_c^i(\widetilde X,\mathbb Z_\ell)}
+     {f^*H_c^i(X,\mathbb Z_\ell)}
+\longrightarrow
+\frac{H_c^i(\widetilde\Delta,\mathbb Z_\ell)}
+     {g^*H_c^i(\Delta,\mathbb Z_\ell)}
+\longrightarrow0\longrightarrow.
+\end{equation}
+Thus, without considering spectral sequences, one finds that (2.2.20) is an
+isomorphism. The arguments just given then apply and yield (2.2.2).
+----- English, file components/112_expose_XVIII_theorem_2_2_completion_and_corollary_2_3.tex, page 267 -----
+\subsubsection*{Corollary 2.3.}
+\underline{Set}
+\[
+b_q(X)=\dim_{\mathbb Q_\ell}H^q(X,\mathbb Q_\ell),
+\qquad
+\chi(X)=\sum_q(-1)^qb_q(X).
+\]
+\underline{Then}\footnote{The print has $b_{q-j}(\Delta)$ in (2.3.1).
+The decomposition (2.2.2) shifts cohomological degree by $2j$, so the
+correct summand is $b_{q-2j}(\Delta)$.}
+\begin{equation}\tag{2.3.1}
+b_q(\widetilde X)
+=b_q(X)+\sum_{j=1}^{r}b_{q-2j}(\Delta),
+\end{equation}
+\begin{equation}\tag{2.3.2}
+\chi(\widetilde X)=\chi(X)+r\,\chi(\Delta).
+\end{equation}
+----- English, file components/113_expose_XVIII_section_3.tex, page 267 -----
+\section*{3. The blow-up associated with a pencil}
+
+\subsection*{3.1.}
+Let $X$ be projective, smooth, and irreducible over an algebraically closed
+field $k$, of dimension $n$, and let
+$D=\{H_\tau\}_{\tau\in\mathbb P^1}$ be a pencil of hypersurfaces whose axis
+meets $X$ transversely, in $\Delta$.
+We consider the blow-up of $X$ along $\Delta$, which we shall now describe
+explicitly.\footnote{The print writes $u$ for the dimension in this sentence.
+Section 3.2 immediately denotes the same dimension by $n$, which also
+governs the signs in (3.2.3)--(3.2.4); that notation is used here.}
+
+In terms of equations, let $(\lambda,\mu)$ be homogeneous coordinates on
+$\mathbb P^1$, and let $F$ and $G$ be two linear forms such that $F=G=0$
+defines the axis of the pencil.  The pencil is written
+\begin{equation}\tag{3.1.1}
+\lambda F-\mu G.
+\end{equation}
+By definition, the subscheme $\Delta$ is the intersection of $X$ with the
+linear subvariety $G=F=0$.  By 2.1.6,
+\begin{equation}\tag{3.1.2}
+\widetilde X
+=\{(x,(\lambda,\mu))\in X\times\mathbb P^1
+       \mid \lambda F-\mu G=0\};
+\end{equation}
+it is the scheme-theoretic closure, in $X\times\mathbb P^1$, of the graph of
+the map
+\begin{equation}\tag{3.1.3}
+\begin{tikzcd}[row sep=large,column sep=huge]
+X-\Delta \arrow[r] & \mathbb P^1 \\
+x \arrow[r] & (G(x),F(x)).
+\end{tikzcd}
+\end{equation}
+The great advantage of $\widetilde X$ is that it is projective (being
+embedded in $X\times\mathbb P^1$) and smooth (because $\Delta$ is smooth)
+over $k$, and admits a morphism $\rho$ to $\mathbb P^1$, namely
+\begin{equation}\tag{3.1.4}
+\rho:\widetilde X\longrightarrow X\times\mathbb P^1
+\xrightarrow{\operatorname{pr}_2}\mathbb P^1,
+\end{equation}
+whose fibers are the hyperplane sections of $X$ by the members of our
+pencil:
+\[
+\rho^{-1}(t)=X_t\overset{\mathrm{def}}{=}X\
+----- English, file components/113_expose_XVIII_section_3.tex, page 268 -----
+cdot H_t.
+\]
+
+\subsection*{3.2. The degree of the dual variety: topological method}
+
+Suppose in addition that the pencil of 3.1 is such that
+\begin{equation}\tag{3.2.1}
+X_t\text{ is smooth for every }t\text{ in a nonempty open subset of }
+\mathbb P^1,
+\end{equation}
+and
+\begin{equation}\tag{3.2.2}
+\text{if $X_t$ is singular, its only singularities are nondegenerate
+quadratic singularities (XVII 1.1).}
+\end{equation}
+These conditions hold in particular for a \underline{Lefschetz pencil}
+(XVII 2.21) if $\operatorname{char}k\ne2$ or if $X$ has even dimension.
+
+Let $\eta$ be the generic point of $\mathbb P^1$, let $\bar\eta$ be a
+geometric point above it, let $n=\dim X$, and let $\chi$ be the
+Euler--Poincar\'e characteristic with coefficients in $\mathbb Q_\ell$.
+The Euler--Poincar\'e formula XVI 2.1 applied to $\rho$ gives
+\begin{equation}\tag{3.2.3}
+\chi(\widetilde X)
+=\chi(\mathbb P^1)\,\chi(X_{\bar\eta})
+ +(-1)^n\sum_{\substack{\text{singular points}\\
+                         \text{of the fibers}}}1,
+\end{equation}
+which, in view of (2.2.2), can be rewritten
+\begin{equation}\tag{3.2.4}
+(-1)^n
+\left[\begin{array}{c}
+\text{total number of}\\[3pt]
+\text{singular points}
+\end{array}\right]
+=\chi(X)+\chi(\Delta)-2\chi(X_{\bar\eta}).
+\end{equation}
+Notice that the quantity
+$\chi(X)+\chi(\Delta)-2\chi(X_{\bar\eta})$ is independent of the particular
+choice of pencil.  It depends only on the embedding of $X$ in some
+$\mathbb P^r$, and indeed only on the Chern class of
+$\underline{\mathcal O}_X(1)$; see XVII 5.7.
+----- French corrections on page 267 -----
+[id C743] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: des coordonnés homogènes
+NEW: des coordonnées homogènes
+FRENCH CONTEXT (corrected, after the fix): ghtarrow \mathbb{P}^r
+\end{equation*}
+\begin{equation*}
+x \in X- \Delta \longrightarrow (G_0(x),\ldots,G_r(x)),
+\end{equation*}
+et on obtient $\widetilde{X}$ comme l'adhérence de son graphe dans $X \times \mathbb{P}^r$. De façon
+%%%%%%%%%%  scan idx 267  |  folio 260  %%%%%%%%%%
+concrète, en termes des coordonnées homogènes $\lambda_0,\ldots,\lambda_r$ dans $\mathbb{P}^r$, $\widetilde{X}$ s'obtient comme le schéma de $X \times \mathbb{P}^r$ défini par les équations
+
+\begin{equation}\tag{2.1.6.1}
+\lambda_i \; G_j(X) - \lambda_j G_i(X) \qquad 0 \leq i < j \leq r \qquad .
+\end{equation}
+On voit par ces équations que le p
+
+=================== PAGE 268 ===================
+----- (English text of page 267: shown above in this file) -----
+----- (English text of page 268: shown above in this file) -----
+----- English, file components/113_expose_XVIII_section_3.tex, page 269 -----
+5 and 5.7.6.
+
+\subsubsection*{3.2.5.}
+Let us make this explicit in a concrete case.  Take $X=\mathbb P^2$ and let
+$\{H_\tau\}$ be a pencil of plane curves of degree $d$ satisfying 3.1,
+(3.2.1), and (3.2.2).  Then
+\begin{equation}\tag{3.2.6}
+\begin{array}{ll}
+\chi(X)=3 & \text{(by 1.2)},\\[4pt]
+\chi(X_{\bar\eta})=-d(d-3) & \text{(see SGA 5 VII 7.3)},\\[4pt]
+\chi(\Delta)=d^2,&
+\end{array}
+\end{equation}
+whence
+\begin{equation}\tag{3.2.7}
+\text{the total number of singular points is }3(d-1)^2.
+\end{equation}
+Take the special case $d=3$ and consider the family of elliptic curves
+(in characteristic different from $3$)
+\begin{equation}\tag{3.2.8}
+X^3+Y^3+Z^3+3\mu XYZ.
+\end{equation}
+The four singular fibers lie over $\mu^3=-1$ and $\mu=\infty$,
+respectively,\footnote{The print says that the finite parameters are the
+cube roots of unity.  With the printed plus sign in (3.2.8), the Hesse
+factorization gives $\mu^3=-1$; cube roots of $+1$ correspond to the
+polynomial with coefficient $-3\mu$.}
+and each singular fiber is the union of three lines as follows:
+\begin{equation}\tag{3.2.9}
+\begin{tikzcd}[row sep=4.5em,column sep=4.5em]
+{} & {} \arrow[dl,dash,shorten <=-9mm,shorten >=-9mm]
+        \arrow[dr,dash,shorten <=-9mm,shorten >=-9mm] & {} & {} \\
+{} \arrow[rr,dash,shorten <=-11mm,shorten >=-11mm] & {} & {} & {,}
+\end{tikzcd}
+\end{equation}
+It has exactly three singular points, all nondegenerate quadratic
+singularities.  Altogether this gives twelve singular points and verifies
+(3.2.7) in this example.
+----- French corrections on page 268 -----
+[id C769] kind word; French file expose_XVIII_body.tex
+OLD: particulierdu
+NEW: particulier du
+FRENCH CONTEXT (corrected, after the fix):  que dans (3.2.3).
+(-1)^{n} \left[\begin{array}{c} \text{nombre total des} \\[4pt] \text{points singuliers} \end{array}\right] = \chi(X) + \chi(\Delta) - 2\,\chi(X_{\bar{\eta}})
+\end{equation}
+On remarquera que la quantité $\chi(X) + \chi(\Delta) - 2\chi\,(X_{\bar{\eta}})$ est indépendante du choix particulier du pinceau, et ne dépend que du plongement de $X$ dans un $\mathbb{P}^r$, et même seulement de la classe de Chern de $\underline{O}_X(1)$, cf. [XVII, 5.7.5 et 5.7.6].
+
+
+%%%%%%%%%%  scan idx 276  |  folio 269  %%%%%%%%%%
+
+3.2.5. Explicitons ceci dans un cas concret. Prenons $X = \mathbb{P}^2$ , $\{H_\t
+
+=================== PAGE 271 ===================
+----- English, file components/113_expose_XVIII_section_3.tex, page 270 -----
+\subsubsection*{Proposition 3.2.10.}
+\underline{Let $X\hookrightarrow\mathbb P^r$ be a Lefschetz embedding}
+(XVII 2.3), \underline{and suppose that $n=\dim X$ is even, or that
+$\operatorname{char}k\ne2$.  Then every Lefschetz pencil, regarded as a
+line in $\check{\mathbb P}^{r}$, meets $\check X$ in}
+\begin{equation}\tag{3.2.11}
+(-1)^n\bigl[\chi(X)+\chi(\Delta)-2\chi(X_{\bar\eta})\bigr]
+\end{equation}
+\underline{points, and meets it transversely} (EGA IV 17.13.7).
+
+\underline{Proof.}
+By hypothesis, every singularity of a fiber of the Lefschetz pencil is a
+nondegenerate quadratic singularity.  Formula (3.2.4) therefore shows that
+the number of singular fibers in the pencil $D$---each containing exactly
+one singular point---is the number (3.2.11).  Now the fiber $X_\tau$ is
+singular if and only if $\tau\in\check X\cap D$.
+
+To see that the intersection is transverse, observe that (3.2.11) is
+\underline{independent} of the particular Lefschetz pencil.  Since the
+generic pencil is a Lefschetz pencil, (3.2.11) is the degree of $\check X$;
+that is, its degree as a hypersurface in $\check{\mathbb P}^{r}$, taken by
+convention to be $0$ if $\dim\check X\le r-2$.  If a line $D$ meets a
+hypersurface of degree $d>0$ in $d$ distinct points $x_i$
+($1\le i\le d$), the intersection must be transverse.  Indeed, the local
+intersection multiplicity
+\[
+\mu_i=\operatorname{length}_{x_i}(D\cap\check X)
+\]
+is at least $1$, while $\sum_{i=1}^d\mu_i=d$.  Hence $\mu_i=1$ for every
+$i$; equivalently, $D\cap\check X$ is smooth, which is precisely
+transversality.\footnote{The print denotes the local length by
+$\operatorname{rg}$; the standard lo
+----- English, file components/113_expose_XVIII_section_3.tex, page 271 -----
+cal-length notation and the stated
+intersection-multiplicity argument require $\operatorname{lg}$ (or,
+equivalently, $\operatorname{length}$).}
+
+\subsubsection*{Remark 3.2.12.}
+For a Lefschetz pencil $D$ already assumed to meet $\check X$ transversely
+(a condition satisfied in any case by sufficiently general $D$), the
+result 3.2.10 may also be regarded as the conjunction of XVII 5.7.2 and
+the fact that $\deg\varphi=1$ contained in XVII 3.5.  Of course, the fact
+proved here that \underline{every} Lefschetz pencil $D$ meets $\check X$
+transversely---by means of the Euler--Poincar\'e formula XVI 2.1---may also
+be verified directly and elementarily, using the fact that the axis of
+$D$ meets $X$ transversely.
+----- English, file components/114_expose_XVIII_section_4_opening_and_proposition_4_2.tex, page 271 -----
+\section*{4. Cohomology of the blow-up associated with a pencil}
+
+\subsection*{4.1.}
+We return to the situation of 3.1, summarized by the commutative diagram
+(see 2.1.6.3):
+\begin{equation}\tag{4.1.1}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,row sep=huge,column sep=huge]
+X\times\mathbb P^1
+  \& \widetilde X
+      \arrow[l,hook',"f\times\rho"]
+      \arrow[d,"f"]
+      \arrow[dl,"\rho"']
+  \& \widetilde\Delta
+      \arrow[l,hook',"i"]
+      \arrow[d,"g"]
+      \arrow[r,"{(g,\rho_i)}","\sim"']
+  \& \Delta\times\mathbb P^1 \\
+\mathbb P^1 \& X \& \Delta\arrow[l,hook',"j"] \& {}
+\end{tikzcd}}
+\end{equation}
+We begin by making (2.2.2) more explicit in this case.
+
+\subsection*{Proposition 4.2.}
+\underline{Under the hypotheses of 3.1:}
+----- English, file components/114_expose_XVIII_section_4_opening_and_proposition_4_2.tex, page 272 -----
+\smallskip
+\noindent
+\textup{(4.2.1)} \underline{The homomorphisms of} $\mathbb Z_\ell$\underline{-modules}
+\[
+\begin{tikzcd}[column sep=huge]
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+  \arrow[r,shift left=.7ex,"f_*\oplus(1-f^*f_*)"]
+& H^\bullet(X,\mathbb Z_\ell)\oplus
+   \operatorname{Ker}\!\left(f_*:H^\bullet(\widetilde X,\mathbb Z_\ell)
+       \to H^\bullet(X,\mathbb Z_\ell)\right)
+  \arrow[l,shift left=.7ex,"f^*+\operatorname{incl}"']
+\end{tikzcd}
+\]
+\underline{are mutually inverse isomorphisms.}
+
+\smallskip
+\noindent
+\textup{(4.2.2)} \underline{The homomorphisms of $\mathbb Z_\ell$-modules}
+\[
+\begin{tikzcd}[column sep=huge]
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+  \arrow[r,shift left=.7ex,"f_*\oplus(-g_*i^*)"]
+& H^\bullet(X,\mathbb Z_\ell)\oplus
+   H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+  \arrow[l,shift left=.7ex,"f^*+i_*g^*"']
+\end{tikzcd}
+\]
+\underline{are mutually inverse isomorphisms.}\footnote{The print omits
+the minus sign before $g_*i^*$ in (4.2.2), (4.2.6), (4.2.9), and
+(4.2.10).  But Lemma 4.3 gives
+$g_*i^*i_*g^*=-\mathrm{id}$, and the printed product calculation itself
+uses $-g_*i^*$.  The sign is therefore restored consistently.}
+
+\smallskip
+\noindent
+\textup{(4.2.3)} \underline{The algebra structure on}
+\[
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1)),
+\]
+\underline{transported by (4.2.2) from the cup product on}
+$H^\bullet(\widetilde X,\mathbb Z_\ell)$,
+\underline{is expressed, for}
+\[
+a,b\in H^\bullet(X,\mathbb Z_\ell),
+\qquad
+x,y\in H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1)),
+\]
+\underline{by the formulas}
+\begin{equation}\tag{4.2.3.1}
+(0\oplus x)\wedge(0\oplus y)
+=-j_*(xy)\oplus2xy\,c_1(\underline{\mathcal O}_\Delta(1)),
+\end{equation}
+\begin{equation}\tag{4.2.3.2}
+(a\oplus0)\wedge(b\oplus0)=ab\oplus0,
+\end{equation}
+\begin{equation}\tag{4.2.3.3}
+(a\oplus0)\wedge(0\oplus y)=0\oplus j^*(a)y,
+\end{equation}
+\begin{equation}\tag{4.2.3.4}
+(0\oplus x)\wedge(b\oplus0)=0\oplus xj^*(b).
+\end{equation}
+\underline{In particular, if}
+\[
+a\oplus x\in H^\bullet(X,\mathbb Z_\ell)
+  \oplus H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\]
+and
+\[
+b\oplus y\in H^{2n-\bullet}(X,\mathbb Z_\ell)
+  \oplus H^{2n-2-\bullet}(\Delta,\
+----- French corrections on page 271 -----
+[id C774] kind other; French file expose_XVIII_body.tex
+OLD: \end{equation*}
+NEW: \end{equation*}
+% STRUCTURE: sous « \longrightarrow H^{\bullet}(X,\mathbb{Z}_{\ell})) » le tirage montre une flèche verticale
+%   descendante tracée à la main (pointe incomplète) et, au-dessous, des caractères dactylographiés très pâles
+%   et cassés, illisibles (peut-être « H^{\bullet}(X,\mathbb{Z}_{\ell}) ») : vestige apparent d'une première
+%   disposition verticale effacée, remplacée par la flèche horizontale ; non reproduit.
+FRENCH CONTEXT (corrected, after the fix): },\mathbb{Z}_{\ell}) \; \begin{array}{c} \xrightarrow{\;f_{*}\oplus(1-f^{*}f_{*})\;} \\ \xleftarrow{\;f^{*}+\mathrm{ind}\;} \end{array} \; H^{\bullet}(X,\mathbb{Z}_{\ell}) \oplus \mathrm{Ker}(f_{*}:H^{\bullet}(\widetilde{X},\mathbb{Z}_{\ell}) \longrightarrow H^{\bullet}(X,\mathbb{Z}_{\ell})) \quad 
+\end{equation*}
+% STRUCTURE: sous « \longrightarrow H^{\bullet}(X,\mathbb{Z}_{\ell})) » le tirage montre une flèche verticale
+%   descendante tracée à la main (pointe incomplète) et, au-dessous, des caractères dactylographiés très pâles
+%   et cassés, illisibles (peut-être « H^{\bullet}(X,\mathbb{Z}_{\ell}) ») : vestige apparent d'une première
+%   disposition verticale effacée, remplacée par la flèche horizontale ; non reproduit.
+
+%%%%%%%%%%  scan idx 279  |  folio 272  %%%%%%%%%%
+
+ \underline{sont des isomorphismes, inverses l'un de l'autre.}
+
+(4.2.2) \underline{Les homomorphismes de} $\mathbb{Z}_{\ell}$\underline{-modules}
+
+\begin{center}
+\begin{tikzcd}[column sep=huge]
+% Correction éditoriale de signe : le calcul 4.3.2 d
+
+=================== PAGE 272 ===================
+----- (English text of page 271: shown above in this file) -----
+----- (English text of page 272: shown above in this file) -----
+----- English, file components/114_expose_XVIII_section_4_opening_and_proposition_4_2.tex, page 273 -----
+mathbb Z_\ell(-1)),
+\]
+\underline{then}
+\begin{equation}\tag{4.2.3.5}
+(a\oplus x)\wedge(b\oplus y)=ab-j_*(xy).
+\end{equation}
+In other words, the total intersection matrix of
+$H^\bullet(\widetilde X,\mathbb Z_\ell)$ is
+\[
+\left(
+\begin{array}{c|c}
+\begin{array}{c}
+\text{total intersection}\\[-1pt]
+\text{matrix on $X$}
+\end{array} & 0\\ \hline
+0 &
+-\begin{array}{c}
+\text{total intersection}\\[-1pt]
+\text{matrix on $\Delta$}
+\end{array}
+\end{array}
+\right).
+\]
+
+\underline{Proof.}
+We have already proved (4.2.1); see (2.2.22).  For (4.2.2), first observe
+that, since $g:\widetilde\Delta\to\Delta$ is a projective-line bundle, the
+sequence
+\begin{equation}\tag{4.2.4}
+0\longrightarrow H^\bullet(\Delta,\mathbb Z_\ell)
+\xrightarrow{g^*}H^\bullet(\widetilde\Delta,\mathbb Z_\ell)
+\xrightarrow{g_*}H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\longrightarrow0
+\end{equation}
+is exact, by (1.2.2).  Together with (2.2.26), this gives the commutative
+diagram of exact sequences
+\begin{equation}\tag{4.2.5}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=huge]
+0\arrow[r]
+  \&H^\bullet(X,\mathbb Z_\ell)
+       \arrow[r,"f^*"]\arrow[d,"j^*" right]
+  \&H^\bullet(\widetilde X,\mathbb Z_\ell)
+       \arrow[r,"g_*i^*"]\arrow[d,"i^*" right]
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+       \arrow[r]\arrow[d,equal]
+  \&0\\
+0\arrow[r]
+  \&H^\bullet(\Delta,\mathbb Z_\ell)
+       \arrow[r,"g^*"]
+  \&H^\bullet(\widetilde\Delta,\mathbb Z_\ell)
+       \arrow[r,"g_*"]
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+       \arrow[r]
+  \&0.
+\end{tikzcd}}
+\end{equation}
+In view of the splitting (4
+----- French corrections on page 272 -----
+[id C775] kind underline; French file expose_XVIII_body.tex
+OLD: \underline{déduite par ``transport de structure'' par}
+NEW: \underline{déduite par} ``\underline{transport de structure}'' \underline{par}
+FRENCH CONTEXT (corrected, after the fix): f^{*}+i_{*}g^{*}
+%   printed BELOW the shaft. No hooks, no iso labels, no double heads, nothing dashed.
+\underline{sont des isomorphismes, inverses l'un de l'autre.}
+
+(4.2.3) \underline{La structure d'algèbre sur} $H^{\bullet}(X,\mathbb{Z}_{\ell}) \oplus H^{\bullet-2}(\Delta,\mathbb{Z}_{\ell}(-1))$ \underline{déduite par} ``\underline{transport de structure}'' \underline{par} (4.2.2) \underline{du cup-produit dans} $H^{\bullet}(\widetilde{X},\mathbb{Z}_{\ell})$, \underline{s'exprime, en termes des éléments}
+
+\begin{equation*}
+% Réparation de transcription : restauration de la parenthèse imprimée.
+a,b \in H^{\bullet}(X,\mathbb{Z}_{\ell}) \;,\; x,y \in H^{\bullet-2}(\Delt
+
+=================== PAGE 273 ===================
+----- (English text of page 272: shown above in this file) -----
+----- (English text of page 273: shown above in this file) -----
+----- English, file components/114_expose_XVIII_section_4_opening_and_proposition_4_2.tex, page 274 -----
+.2.1), this yields the isomorphism
+\begin{equation}\tag{4.2.6}
+f_*\oplus(-g_*i^*):
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+\xrightarrow{\sim}
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1)).
+\end{equation}
+The transpose of (4.2.5), after the degree reversal
+$\bullet\mapsto2n-\bullet$, gives the commutative diagram of exact sequences
+\begin{equation}\tag{4.2.7}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=large]
+0
+  \&H^\bullet(X,\mathbb Z_\ell)\arrow[l]
+  \&H^\bullet(\widetilde X,\mathbb Z_\ell)\arrow[l,"f_*"']
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+       \arrow[l,"i_*g^*"']
+  \&0\arrow[l]\\
+0
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-2))
+       \arrow[l]\arrow[u,"j_*"']
+  \&H^{\bullet-2}(\widetilde\Delta,\mathbb Z_\ell(-1))
+       \arrow[l,"g_*"']\arrow[u,"i_*"']
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+       \arrow[l,"g_*"']\arrow[u,equal]
+  \&0\arrow[l]
+\end{tikzcd}}
+\end{equation}
+and hence the isomorphism
+\begin{equation}\tag{4.2.8}
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\xrightarrow[\sim]{\ f^*+i_*g^*\ }
+H^\bullet(\widetilde X,\mathbb Z_\ell).
+\end{equation}
+----- English, file components/115_expose_XVIII_completion_of_section_4.tex, page 274 -----
+It remains to prove that the composite
+\begin{equation}\tag{4.2.9}
+\begin{aligned}
+&H^\bullet(X,\mathbb Z_\ell)\oplus
+ H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+ \xrightarrow{\ f^*+i_*g^*\ }
+ H^\bullet(\widetilde X,\mathbb Z_\ell)\\[-2pt]
+&\hspace{55mm}\xrightarrow{\ f_*\oplus(-g_*i^*)\ }
+ H^\bullet(X,\mathbb Z_\ell)\oplus
+ H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\end{aligned}
+\end{equation}
+is the identity.  Now
+\[
+f_*f^*=\mathrm{id}\quad\text{on }H^\bullet(X,\mathbb Z_\ell)
+\quad\text{by (2.2.18)},
+\]
+\[
+g_*i^*f^*=0\quad\text{by (4.2.5)},
+\qquad
+f_*i_*g^*=0\quad\text{by (4.2.7)}.
+\]
+It therefore suffices to prove
+\begin{equation}\tag{4.2.10}
+-g_*i^*i_*g^*(x)=x
+\quad\text{for }x\in H^\bullet(\Delta,\mathbb Z_\ell(-1)).
+\end{equ
+----- French corrections on page 273 -----
+[id C744] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: totalede
+NEW: totale de
+FRENCH CONTEXT (corrected, after the fix):  \oplus H^{2n-2-\bullet}(\Delta,\mathbb{Z}_{\ell}(-1)) \quad , 
+\end{equation*}
+
+%%%%%%%%%%  scan idx 280  |  folio 273  %%%%%%%%%%
+
+ \underline{on a}
+
+\begin{equation}\tag{4.2.3.5}
+(a \oplus x) \wedge (b \oplus y) \;=\; ab - j_{*}(xy) \quad .
+\end{equation}
+Autrement dit, la matrice d'intersection totale de $H^{\bullet}(\widetilde{X},\ \mathbb{Z}_{\ell})$ s'écrit :
+
+\begin{equation*}
+\left(
+\begin{array}{c|c}
+\left(\begin{array}{l}\mbox{la matrice totale}\\ \mbox{des intersections sur } X\end{array}\right) & 0 \\ \hline
+0 & -\left(\begin{array}{l}\mbox{la matrice totale}\\ \mbox{des intersections}\\ \
+
+[id C745] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: (4.2.1) ;(cf. 2.2.22)).
+NEW: (4.2.1) ;(cf. (2.2.22)).
+FRENCH CONTEXT (corrected, after the fix): ay}{l}\mbox{la matrice totale}\\ \mbox{des intersections sur } X\end{array}\right) & 0 \\ \hline
+0 & -\left(\begin{array}{l}\mbox{la matrice totale}\\ \mbox{des intersections}\\ \mbox{sur } \Delta\end{array}\right)
+\end{array}
+\right) .
+\end{equation*}
+\underline{Démonstration.}  On a déjà démontré (4.2.1) ;(cf. (2.2.22)). Pour (4.2.2), remarquons d'abord que, $g : \widetilde{\Delta} \longrightarrow \Delta$ étant un fibré projectif de rang un, la suite
+
+\begin{equation}\tag{4.2.4}
+0 \longrightarrow H^{\bullet}(\Delta,\mathbb{Z}_{\ell}) \stackrel{g^{*}}{\longrightarrow} H^{\bullet}(\widetilde{\Delta},\ \mathbb{Z}_{\el
+
+=================== PAGE 274 ===================
+----- (English text of page 273: shown above in this file) -----
+----- (English text of page 274: shown above in this file) -----
+----- English, file components/115_expose_XVIII_completion_of_section_4.tex, page 275 -----
+ation}
+
+To verify (4.2.10), first observe that
+$i:\widetilde\Delta\hookrightarrow\widetilde X$ is the inclusion of a
+smooth subvariety of codimension one.  Thus (SGA 5 VII)
+\begin{equation}\tag{4.2.11}
+i^*i_*(x)=c_1(\underline N_{\widetilde\Delta/\widetilde X})\,x,
+\end{equation}
+and
+\begin{equation}\tag{4.2.12}
+i_*(x)i_*(y)
+=i_*\!\left(xy\,c_1(\underline N_{\widetilde\Delta/\widetilde X})\right).
+\end{equation}
+Write
+$\xi_X=\underline{\mathcal O}_X(1)$,
+$\xi_\Delta=\underline{\mathcal O}_\Delta(1)$, and
+$\xi_{\mathbb P^1}=\underline{\mathcal O}_{\mathbb P^1}(1)$.
+By EGA II 8.1.7, if $\widetilde{\mathfrak J}$ is the ideal of
+$\widetilde\Delta$ in $\widetilde X$, then
+\begin{equation}\tag{4.2.13}
+\begin{aligned}
+\underline{\check N}_{\widetilde\Delta/\widetilde X}
+&\simeq\widetilde{\mathfrak J}/\widetilde{\mathfrak J}^{,2}
+ \simeq\widetilde{\mathfrak J}
+       \otimes_{\underline{\mathcal O}_{\widetilde X}}
+       \underline{\mathcal O}_{\widetilde\Delta}\\
+&\simeq\underline{\mathcal O}_{\widetilde X}(1)
+       \otimes_{\underline{\mathcal O}_{\widetilde X}}
+       \underline{\mathcal O}_{\widetilde\Delta}
+ =\underline{\mathcal O}_{\widetilde\Delta}(1).
+\end{aligned}
+\end{equation}
+Here $\widetilde\Delta$ is viewed as
+$\mathbb P(\mathfrak J/\mathfrak J^2)$, where $\mathfrak J$ is the ideal of
+$\Delta$ in $X$.  Since $\Delta$ is the intersection of $X$ with two given
+hyperplanes, there is a canonical isomorphism
+\[
+\mathfrak J/\mathfrak J^2\simeq
+\underline{\mathcal O}_\Delta^{,2}(-1),
+\]
+which induces
+\[
+\widetilde\Delta=\mathbb P(\mathfrak J/\mathfrak J^2)
+\simeq\mathbb P(\underline{\mathcal O}_\Delta^{,2}(-1))
+\xrightarrow[\sim]{\alpha}
+\mathbb P(\underline{\mathcal O}_\Delta^{,2})
+\simeq\Delta\times\mathbb P^1.
+\]
+The canonical isomorphism $\alpha$ of EGA II 4.1.4 carries the tautological
+line bundle to
+\[
+(\rho i)^*\underline{\mathcal O}_{\mathbb P^1}(1)
+\otimes g^*\underline{\mathcal O}_\Delta(-1).
+\]
+Consequently, (4.2.13) becomes
+\begin{equation}\tag{4.2.14}
+\underline{\check N}_{\widetilde\Delta/\widetilde X}
+\simeq(\rho i)^*\underline{\mathcal O}_{\mathbb P^1}(1)
+       \otimes g^*\underline{\mathcal O}_\Delta(-1).
+\end{equation}
+----- French corrections on page 274 -----
+[id C746] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: 0 & H^{\cdot-2}(\Delta,\mathbb{Z}_\ell(-2)) \arrow[l] \arrow[u, "j_*"']
+NEW: 0 & H^{\cdot-4}(\Delta,\mathbb{Z}_\ell(-2)) \arrow[l] \arrow[u, "j_*"']
+FRENCH CONTEXT (corrected, after the fix): stackrel{\sim}{\longrightarrow} 2n-.$)
+
+\begin{equation}\tag{4.2.7}
+\begin{tikzcd}[column sep=large, row sep=large]
+0 & H^{\cdot}(X,\mathbb{Z}_\ell) \arrow[l] & H^{\cdot}(\widetilde{X},\mathbb{Z}_\ell) \arrow[l, "f_*"'] & H^{\cdot-2}(\Delta,\mathbb{Z}_\ell(-1)) \arrow[l, "i_*g^*"'] & 0 \arrow[l] \\
+0 & H^{\cdot-4}(\Delta,\mathbb{Z}_\ell(-2)) \arrow[l] \arrow[u, "j_*"'] & H^{\cdot-2}(\widetilde{\Delta},\mathbb{Z}_\ell(-1)) \arrow[l, "g_*"'] \arrow[u, "i_*"'] & H^{\cdot-2}(\Delta,\mathbb{Z}_\ell(-1)) \arrow[l, "g^*"'] \arrow[u, equal] & 0 \arrow[l]
+\end{tikzcd}
+\end{equation}
+% STRUCTURE: Two rows of five nodes each; 10 nodes total, exactly as printed. ROW 1 (left 
+
+[id C747] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: \arrow[l, "g_*"'] \arrow[u, equal]
+NEW: \arrow[l, "g^*"'] \arrow[u, equal]
+FRENCH CONTEXT (corrected, after the fix): rrow[l, "f_*"'] & H^{\cdot-2}(\Delta,\mathbb{Z}_\ell(-1)) \arrow[l, "i_*g^*"'] & 0 \arrow[l] \\
+0 & H^{\cdot-4}(\Delta,\mathbb{Z}_\ell(-2)) \arrow[l] \arrow[u, "j_*"'] & H^{\cdot-2}(\widetilde{\Delta},\mathbb{Z}_\ell(-1)) \arrow[l, "g_*"'] \arrow[u, "i_*"'] & H^{\cdot-2}(\Delta,\mathbb{Z}_\ell(-1)) \arrow[l, "g^*"'] \arrow[u, equal] & 0 \arrow[l]
+\end{tikzcd}
+\end{equation}
+% STRUCTURE: Two rows of five nodes each; 10 nodes total, exactly as printed. ROW 1 (left to right):
+%   (1,1) 0 ; (1,2) H^{\cdot}(X,\mathbb{Z}_\ell) ; (1,3) H^{\cdot}(\widetilde{X},\mathbb{Z}_\ell) ;
+%   (1,4) H^{\cdot-2}(\Delta,\mathbb{Z}_\ell(-1)) ; (1,5
+
+=================== PAGE 275 ===================
+----- (English text of page 274: shown above in this file) -----
+----- (English text of page 275: shown above in this file) -----
+----- English, file components/115_expose_XVIII_completion_of_section_4.tex, page 276 -----
+\subsection*{Lemma 4.3.}
+\underline{One has}
+\[
+c_1(\underline N_{\widetilde\Delta/\widetilde X})
+=g^*c_1(\xi_\Delta)-(\rho i)^*c_1(\xi_{\mathbb P^1}).
+\]
+Return now to the proof of (4.2.10).  By (4.2.11) and Lemma 4.3, it is enough
+to prove
+\[
+g_*\!\left(g^*(x)\left[(\rho i)^*c_1(\xi_{\mathbb P^1})
+                       -g^*c_1(\xi_\Delta)\right]\right)=x.
+\]
+By (4.2.4), $g_*g^*=0$, while
+\[
+\begin{tikzcd}[column sep=huge]
+\widetilde\Delta\arrow[r,"g\times\rho_i","\sim"']
+  &\Delta\times\mathbb P^1,
+\end{tikzcd}
+\]
+so
+\begin{equation}\tag{4.3.1}
+g_*\!\left(g^*(x)(\rho i)^*c_1(\xi_{\mathbb P^1})\right)=x,
+\end{equation}
+and hence
+\begin{equation}\tag{4.3.2}
+g_*\!\left(g^*(x)c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)
+=-x.
+\end{equation}
+----- French corrections on page 275 -----
+[id C748] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: est l'Idéal $\widetilde{\Delta}$ dans
+NEW: est l'Idéal de $\widetilde{\Delta}$ dans
+FRENCH CONTEXT (corrected, after the fix): ) \;=\; i_*(xy \ c_1(\underline{N}_{\widetilde{\Delta}/\widetilde{X}})) \qquad .
+\end{equation}
+Ecrivons $\xi_X = \underline{O}_X(1)$, $\xi_\Delta = \underline{O}_\Delta(1)$ , $\xi_{\mathbb{P}^1} = \underline{O}_{\mathbb{P}^1}(1)$, etc . En vertu de EGA II 8.1.7, on a, si $\widetilde{\mathfrak{J}}$ est l'Idéal de $\widetilde{\Delta}$ dans $\widetilde{X}$
+
+\begin{equation}\tag{4.2.13}
+\underline{\check{N}}_{\widetilde{\Delta}/\widetilde{X}} \;\simeq\; \widetilde{\mathfrak{J}}/\widetilde{\mathfrak{J}}^2 \;\simeq\; \widetilde{\mathfrak{J}} \otimes_{\underline{O}_{\widetilde{X}}} O_{\widetilde{\Delta}} \;\simeq\; \underline{O}_{\widetil
+
+[id C749] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: \otimes_{\underline{O}^2_\Delta}
+NEW: \otimes_{\underline{O}_\Delta}
+FRENCH CONTEXT (corrected, after the fix): A II 4.1.4. Par loc. cit. cet isomorphisme transforme
+
+\begin{equation*}
+\underline{O}_{\widetilde{\Delta}}(1) = \underline{O}_{\mathbb{P}(\mathfrak{J}/\mathfrak{J}^2)}(1) = \underline{O}_{\mathbb{P}(\underline{O}^2_\Delta(-1))}(1) \ \text{en} \ \underline{O}_{\mathbb{P}(\underline{O}^2_\Delta)}(1) \otimes_{\underline{O}_\Delta} \underline{O}_\Delta(-1) = \underline{O}_{\mathbb{P}^1}(1) \otimes_K \underline{O}_\Delta(-1),
+\end{equation*}
+de sorte que (4.2.13) s'écrit
+
+\begin{equation}\tag{4.2.14}
+% Réparation de transcription : l'imprimé porte rho i; la base est P^1.
+\check{N}_{\widetilde{\Delta}/\widetilde{X}} \;\simeq\; 
+
+=================== PAGE 277 ===================
+----- (English text of page 276: shown above in this file) -----
+----- English, file components/115_expose_XVIII_completion_of_section_4.tex, page 277 -----
+We now compute the algebra structure on
+\[
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\]
+transported from the cup product by (4.2.2).  Let $a,b$ belong to
+$H^\bullet(X,\mathbb Z_\ell)$ and $x,y$ to
+$H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))$.  Begin with (4.2.3.1), and write
+\[
+(0\oplus x)\wedge(0\oplus y)=A\oplus B.
+\]
+By (4.2.12) and (4.3.2),
+\[
+\begin{aligned}
+A
+&=f_*\!\left((i_*g^*x)(i_*g^*y)\right)\\
+&=f_*i_*\!\left(g^*(xy)c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)\\
+&=j_*g_*\!\left(g^*(xy)c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)
+=-j_*(xy),
+\end{aligned}
+\]
+and
+\[
+\begin{aligned}
+B
+&=-g_*i^*\!\left((i_*g^*x)(i_*g^*y)\right)\\
+&=-g_*i^*i_*\!\left(g^*(xy)c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)\\
+&=-g_*\!\left(g^*(xy)c_1(\underline N_{\widetilde\Delta/\widetilde X})^2\right).
+\end{aligned}
+\]
+Lemma 4.3 gives
+\[
+\begin{aligned}
+c_1(\underline N_{\widetilde\Delta/\widetilde X})^2
+&=g^*\!\left(c_1(\xi_\Delta)^2\right)
+ -2g^*c_1(\xi_\Delta)(\rho i)^*c_1(\xi_{\mathbb P^1}),
+\end{aligned}
+\]
+because $c_1(\xi_{\mathbb P^1})^2=0$.  Therefore, by (4.2.4) and (4.3.1),
+\[
+B=0+2xy\,c_1(\xi_\Delta),
+\]
+which proves (4.2.3.1).  Formula (4.2.3.2) expresses the fact that $f^*$ is
+an algebra homomorphism.
+----- English, file components/115_expose_XVIII_completion_of_section_4.tex, page 278 -----
+To prove (4.2.3.3), the projection formula shows that
+$\operatorname{Ker}f_*$ is stable under multiplication by
+$\operatorname{im}f^*$.  Hence
+\[
+(a\oplus0)\wedge(0\oplus y)=0\oplus C,
+\]
+where
+\begin{equation}\tag{4.3.3}
+C=-g_*i^*\!\left(f^*(a)i_*g^*(y)\right).
+\end{equation}
+Using (4.3.2),
+\[
+\begin{aligned}
+C
+&=-g_*\!\left(i^*f^*(a)g^*(y)
+      c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)\\
+&=-g_*\!\left(g^*j^*(a)g^*(y)
+      c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)\\
+&=j^*(a)y.
+\end{aligned}
+\]
+This proves (4.2.3.3).  Finally, (4.2.3.4) follows from (4.2.3.3) by graded
+commutativity of the cup product.
+----- English, file components/116_expose_XVIII_section_5_1.tex, page 278 -----
+\section*{5. Cohomological study of the morphism
+$\rho:\widetilde X\longrightarrow\mathbb P^1$ associated with a pencil}
+
+\subsection*{5.1. The restriction homomorphism
+$H^*(\widetilde X)\longrightarrow H^*(Y)$}
+
+Let $Y$ denote one of the smooth fibers of
+$\rho:\widetilde X\to\mathbb P^1$, say
+\[
+Y=\rho^{-1}(t_0)=X\mathbin{\cdot}H_{t_0}.
+\]
+We have the commutative diagram
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=huge]
+\mathbb P^1
+  \& {} \& \widetilde X\arrow[ll,"\rho"']\arrow[d,"f"]
+  \& {} \& \widetilde\Delta
+       \arrow[ll,hook',"i"]\arrow[d,"g"]
+       \arrow[r,phantom,"\simeq"]
+  \& \Delta\times\mathbb P^1 \\
+\mathrm{Sp}(k)=\{t_0\}\arrow[u,hook]
+  \& {} \& X
+  \& {} \& \Delta
+       \arrow[ll,hook',"j"]
+       \arrow[ur,hook,"{\ell=\mathrm{id}\times\{t_0\}}"']
+       \arrow[dlll,hook,"h"]
+  \& {} \\
+{} \& Y\arrow[ul]\arrow[uur,"k"]\arrow[ur,"m"']
+  \& {} \& {} \& {} \& {}
+\end{tikzcd}}
+\end{center}
+
+\subsection*{Proposition 5.1.1.}
+\underline{Under the hypotheses of (3.1), with $Y$ denoting a smooth
+fiber:}
+----- French corrections on page 277 -----
+[id C750] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: &= -g_*i^*(i_*(g^*(xy)\, c_1(\underline{N}_{\widetilde{\Delta}/\widetilde{X}}))) \qquad \text{par (4.3.2)}
+NEW: &= -g_*i^*(i_*(g^*(xy)\, c_1(\underline{N}_{\widetilde{\Delta}/\widetilde{X}}))) \qquad \text{par (4.2.12)}
+FRENCH CONTEXT (corrected, after the fix): ext{par (4.2.12)} \\
+&= j_*g_*(g^*(xy)\, c_1\, (N_{\widetilde{\Delta}/\widetilde{X}})) \\
+&= j_*(-xy) \qquad\qquad \text{par (4.3.2)} \;.
+\end{aligned}
+\end{equation*}
+
+%%%%%%%%%%  scan idx 284  |  folio 277  %%%%%%%%%%
+
+\begin{equation*}
+\begin{aligned}
+?' &= -g_*i^*(i_*g^*(x) \wedge i_*g^*(y)) \\
+&= -g_*i^*(i_*(g^*(xy)\, c_1(\underline{N}_{\widetilde{\Delta}/\widetilde{X}}))) \qquad \text{par (4.2.12)} \\
+&= -g_*(g^*(xy)(c_1(N_{\widetilde{\Delta}/\widetilde{X}}))^2) \qquad \text{par (4.3.2)} \quad ,
+\end{aligned}
+\end{equation*}
+or,
+
+\begin{equation*}
+\begin{aligned}
+(c_1(\underline{N}_{\widetilde{\Delta}/\widetilde{X}}))^2 &= (g^*c_1(\underline{O}_{\Delta}(1)) - (\rho i)^* (c_1(\xi_{\mathbb{P}^1
+
+=================== PAGE 281 ===================
+----- English, file components/116_expose_XVIII_section_5_1.tex, page 280 -----
+\underline{Proof.}
+The smooth subschemes $\widetilde\Delta$ and $Y$ of $\widetilde X$
+intersect transversely in $\Delta$; in other words, the square of smooth
+schemes
+\begin{equation}\tag{5.1.4}
+\begin{tikzcd}[column sep=large,row sep=large]
+\Delta\arrow[r,"\ell"]\arrow[d,hook,"h"]
+  &\widetilde\Delta\arrow[d,hook,"i"]\\
+Y\arrow[r,"k"']&\widetilde X
+\end{tikzcd}
+\end{equation}
+is Cartesian.  It therefore implies the formula [SGA 5, IV]
+\begin{equation}\tag{5.1.5}
+h_*\ell^*=k^*i_* ,\qquad \ell_*h^*=i^*k_*.
+\end{equation}
+The composite
+\[
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\xrightarrow{\ f^*+i_*g^*\ }
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+\xrightarrow{\ k^*\ }
+H^\bullet(Y,\mathbb Z_\ell)
+\]
+is the sum of
+$k^*f^*=m^*$ and
+$k^*i_*g^*=h_*\ell^*g^*$ by (5.1.5).  Since
+$g\ell=\mathrm{id}_\Delta$, this proves (5.1.2).
+
+The composite
+\[
+H^{\bullet-2}(Y,\mathbb Z_\ell(-1))
+\xrightarrow{\ k_*\ }
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+\xrightarrow{\ f_*\oplus(-g_*i^*)\ }
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\]
+is the sum of
+\[
+f_*k_*=m_*
+\qquad\text{and}\qquad
+-g_*i^*k_*=-g_*\ell_*h^*=-h^*,
+\]
+which proves (5.1.3).
+
+\subsection*{Corollary 5.1.6.}
+\underline{Under the hypotheses of 5.1.1, for $i\leq n-1$, the images
+of}
+\[
+m^*:H^i(X,\mathbb Z_\ell)\longrightarrow H^i(Y,\mathbb Z_\ell)
+\]
+\underline{and of}
+\[
+k^*:H^i(\widetilde X,\mathbb Z_\ell)
+   \longrightarrow H^i(Y,\mathbb Z_\ell)
+\]
+\underline{are equal.}
+----- English, file components/116_expose_XVIII_section_5_1.tex, page 281 -----
+\underline{Proof.}
+By the weak Lefschetz theorem for hyperplane sections (SGA 5, VII 7.1),
+for $i\leq n-1$ the map
+\begin{equation}\tag{5.1.7}
+H^{i-2}(X,\mathbb Z_\ell(-1))
+\xrightarrow{\ j^*\ }
+H^{i-2}(\Delta,\mathbb Z_\ell(-1))
+\end{equation}
+is an isomorphism.  Thus, by (5.1.2), the image of $k^*$ is the sum of
+the image of $m^*$ and the image of the composite
+\[
+H^{i-2}(X,\mathbb Z_\ell(-1))
+\xrightarrow{\ j^*\ }
+H^{i-2}(\Delta,\mathbb Z_\ell(-1))
+\xrightarrow{\ h_*\ }
+H^i(Y,\mathbb Z_\ell).
+\]
+But the projection formula gives
+\[
+\begin{aligned}
+h_*j^*(x)
+ &=h_*\bigl(h^*m^*(x)\bigr)
+  =m^*(x)h_*(1)
+  =\xi_Y\,m^*(x)\\
+ &=m^*(x\xi_X),
+ \qquad\text{since }m^*(\xi_X)=\xi_Y.
+\end{aligned}
+\]
+Consequently $\operatorname{Im}k^*\subset\operatorname{Im}m^*$, and
+the reverse inclusion follows directly from (5.1.2).  This proves the
+corollary.
+----- English, file components/117_expose_XVIII_section_5_2.tex, page 281 -----
+\subsection*{5.2. The hard Lefschetz theorem (LV)}
+
+\subsubsection*{5.2.1.}
+Let $S$ be projective of dimension $n$ over the algebraically closed field
+$k$, and let $S\hookrightarrow\mathbb P$ be a projective embedding.  Denote by
+\[
+u\in H^2(S,\mathbb Z_\ell(1))
+\]
+the cohomology class of a hyperplane section.  Thus $u$ is the pullback along
+$S\hookrightarrow\mathbb P$ of the first Chern class of
+$\underline{\mathcal O}_{\mathbb P}(1)$ in
+$H^2(\mathbb P,\mathbb Z_\ell(1))$.  Write
+\[
+L_S:H^\bullet(S,\mathbb Q_\ell(j))
+   \longrightarrow H^{\bullet+2}(S,\mathbb Q_\ell(j+1))
+\]
+for multiplication by $u$.
+
+\subsubsection*{5.2.2.}
+\underline{We say that $S$ (equipped with $u$) satisfies (LV), the hard
+Lefschetz theorem, if, for every (or for one) integer $j$ and every integer
+$i>0$, the maps}
+\[
+L_S^i:H^{n-i}(S,\mathbb Q_\ell(j))
+\longrightarrow H^{n+i}(S,\mathbb Q_\ell(i+j))
+\]
+\underline{are isomorphisms.}
+----- English, file components/117_expose_XVIII_section_5_2.tex, page 282 -----
+\subsubsection*{5.2.2.1.}
+It is conjectured that this condition holds when $S$ is smooth.  It is true
+when $k$ has characteristic zero [6].  The specialization theorem
+[SGA 4, XVI 2.2] therefore gives the same conclusion when $S$, together with
+its projective embedding, lifts to characteristic zero.  In particular, it
+holds for a smooth complete intersection.  It is also known for a smooth $S$
+of dimension at most two [2], and for an abelian variety, either directly
+(Lieberman [4] and [2]) or by Mumford's theorem [5] that a polarized abelian
+variety lifts, together with its polarization, to characteristic zero.
+
+Recall that, for a projective variety $S$ and $i\leq n$, the primitive part of
+cohomology is defined by
+\begin{equation}\tag{5.2.2.2}
+\operatorname{Prim}^i(S,\mathbb Q_\ell(j))
+=\operatorname{Ker}\!\left(
+L^{n-i+1}:H^i(S,\mathbb Q_\ell(j))
+\longrightarrow
+H^{2n-i+2}(S,\mathbb Q_\ell(j+n-i+1))
+\right).
+\end{equation}
+If $S$ satisfies (LV), then for $i\leq n$ one has the decomposition
+\begin{equation}\tag{5.2.2.3}
+H^i(S,\mathbb Q_\ell(j))
+\xleftarrow[\sim]{\ 1+L\ }
+\operatorname{Prim}^i(S,\mathbb Q_\ell(j))
+\oplus H^{i-2}(S,\mathbb Q_\ell(j-1)).
+\end{equation}
+
+\subsection*{Proposition 5.2.3.}
+\underline{Let $X$ be smooth and projective and suppose that it satisfies
+(LV).  Let $\tau:Y\hookrightarrow X$ be the inclusion of a smooth hyperplane
+section.  Then}
+\begin{equation}\tag{5.2.3.1}
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+=\operatorname{Ker}\!\left(
+\tau^*:H^n(X,\mathbb Q_\ell(j))
+\longrightarrow H^n(Y,\mathbb Q_\ell(j))
+\right).
+\end{equation}
+----- French corrections on page 281 -----
+[id C751] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: $H^2(\mathbb{P}\ \ , \mathbb{Z}_{\ell}(1))$, et désignons par
+NEW: $H^2(\mathbb{P}\ \ , \mathbb{Z}_{\ell}(1))$), et désignons par
+FRENCH CONTEXT (corrected, after the fix):  \in H^2(S,\mathbb{Z}_{\ell}(1))
+\end{equation*}
+la ``classe de cohomologie d'une section hyperplane '' (de sorte que $u$ s'obtient comme l'image réciproque par le plongement $S \hookrightarrow \mathbb{P}$ de la première classe de Chern de $\underline{O}_{\mathbb{P}}$ (1), classe qui se trouve dans $H^2(\mathbb{P}\ \ , \mathbb{Z}_{\ell}(1))$), et désignons par
+
+\begin{equation*}
+L_S : H^{\bullet}(S,\mathbb{Q}_{\ell}(j)) \longrightarrow H^{\bullet+2}(S,\mathbb{Q}_{\ell}(j+1))
+\end{equation*}
+l'opération ``multiplication par u''.
+
+5.2.2. \underline{On dit  que} $S$ (\underline{muni de} $u$) \underline{vérifie} (LV), (le ``théorème de Lefschetz vache'') \un
+
+[id C770] kind underline; French file expose_XVIII_body.tex
+OLD: (\underline{muni de u})
+NEW: (\underline{muni de} $u$)
+FRENCH CONTEXT (corrected, after the fix): 1), classe qui se trouve dans $H^2(\mathbb{P}\ \ , \mathbb{Z}_{\ell}(1))$), et désignons par
+
+\begin{equation*}
+L_S : H^{\bullet}(S,\mathbb{Q}_{\ell}(j)) \longrightarrow H^{\bullet+2}(S,\mathbb{Q}_{\ell}(j+1))
+\end{equation*}
+l'opération ``multiplication par u''.
+
+5.2.2. \underline{On dit  que} $S$ (\underline{muni de} $u$) \underline{vérifie} (LV), (le ``théorème de Lefschetz vache'') \underline{si pour tout} (\underline{ou un})\underline{entier} $j$ \underline{et tout entier} $i > 0$, \underline{les applications}
+
+\begin{equation*}
+L_S^i : H^{n-i}(S,\mathbb{Q}_{\ell}(j)) \longrightarrow H^{n+i}(S,\mathbb{Q}_{\ell}(i
+
+=================== PAGE 282 ===================
+----- (English text of page 281: shown above in this file) -----
+----- (English text of page 282: shown above in this file) -----
+----- English, file components/117_expose_XVIII_section_5_2.tex, page 283 -----
+\underline{Proof.}
+The projection formula for $\tau:Y\to X$ gives the commutative diagram
+\begin{equation}\tag{5.2.3.2}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^n(X,\mathbb Q_\ell(j))
+  \arrow[rr,"L"]\arrow[dr,"\tau^*"']
+  & {} &
+H^{n+2}(X,\mathbb Q_\ell(j+1))
+  \arrow[dl,"\tau_*"]\\
+{} & H^n(Y,\mathbb Q_\ell(j)) & {}
+\end{tikzcd}
+\end{equation}
+By duality and weak Lefschetz,
+\[
+\tau_*:H^n(Y,\mathbb Q_\ell(j))
+\longrightarrow H^{n+2}(X,\mathbb Q_\ell(j+1))
+\]
+is the transpose of an isomorphism and hence is itself an isomorphism.  The
+assertion follows.
+
+\subsection*{Lemma 5.2.4.}
+\underline{Let $X$ be smooth and projective, and let
+$\tau:Y\hookrightarrow X$ be the inclusion of a smooth hyperplane section.
+Then $X$ satisfies (LV) if and only if the following two conditions hold:}
+
+\smallskip
+\noindent
+\textup{5.2.4.1.} \underline{$Y$ satisfies (LV).}
+
+\smallskip
+\noindent
+\textup{5.2.4.2.} \underline{The restriction of the cup product on
+$H^{n-1}(Y,\mathbb Q_\ell)$ to the subspace
+$\operatorname{Im}H^{n-1}(X,\mathbb Q_\ell)$ is nondegenerate.}
+----- French corrections on page 282 -----
+[id C752] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: H^{2n-i+2}(S,\mathbb{Q}_\ell(j+n-i+1)).
+NEW: H^{2n-i+2}(S,\mathbb{Q}_\ell(j+n-i+1))).
+FRENCH CONTEXT (corrected, after the fix): n caractéristique nulle).
+
+Rappelons que pour une variété $S$ projective, on définit pour $i \leq n$ la ``\underline{partie primitive}'' de la cohomologie :
+
+\begin{equation}\tag{5.2.2.2}
+\mathrm{Prim}^i(S,\mathbb{Q}_\ell(j)) = \mathrm{Ker}\ (L^{n-i+1} \ :\ H^i(S,\mathbb{Q}_\ell(j)) \longrightarrow H^{2n-i+2}(S,\mathbb{Q}_\ell(j+n-i+1))).
+\end{equation}
+\underline{Si} $S$ vérifie (LV), on a pour $i \leq n$ la décomposition :
+
+\begin{equation}\tag{5.2.2.3}
+H^i(S,\mathbb{Q}_\ell(j)) \ \xleftarrow[\sim]{\ 1+L\ }\ \mathrm{Prim}^i(S,\mathbb{Q}_\ell(j)) \oplus H^{i-2}(S,\mathbb{Q}_\ell(j-1)) \qquad .
+\end{equation}
+\underline{Proposition}
+
+=================== PAGE 285 ===================
+----- English, file components/117_expose_XVIII_section_5_2.tex, page 284 -----
+\underline{Proof.}
+We have
+\begin{equation}\tag{5.2.4.3}
+\left\{
+\begin{aligned}
+L_X&=\tau_*\tau^*,\\[1ex]
+L_Y&=\tau^*\tau_* \qquad\text{(by 4.2.11),}
+\end{aligned}
+\right.
+\end{equation}
+and consequently
+\begin{equation}\tag{5.2.4.4}
+L_X^{i+1}=\tau_*L_Y^i\tau^*.
+\end{equation}
+In the commutative diagram
+\begin{equation}\tag{5.2.4.5}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^{n-i-1}(X,\mathbb Q_\ell(j))
+  \arrow[r,"L_X^{i+1}"]\arrow[d,"\tau^*"]
+  &H^{n+i+1}(X,\mathbb Q_\ell(j+i+1))\\
+H^{n-1-i}(Y,\mathbb Q_\ell(j))
+  \arrow[r,"L_Y^i"]
+  &H^{n-1+i}(Y,\mathbb Q_\ell(j+i))\arrow[u,"\tau_*"']
+\end{tikzcd}
+\end{equation}
+$\tau^*$ is an isomorphism for $i\geq1$ by weak Lefschetz, and $\tau_*$ is
+an isomorphism by duality.  Hence $X$ satisfies (LV) if and only if $Y$
+satisfies (LV) and
+\begin{equation}\tag{5.2.4.6}
+L_X:H^{n-1}(X,\mathbb Q_\ell(j))
+\longrightarrow H^{n+1}(X,\mathbb Q_\ell(j+1))
+\end{equation}
+is an isomorphism.
+----- English, file components/117_expose_XVIII_section_5_2.tex, page 285 -----
+It remains to identify (5.2.4.6) with 5.2.4.2.  Let
+$a,b\in H^{n-1}(X,\mathbb Q_\ell(j))$.  By Poincaré duality on $X$,
+(5.2.4.6) is equivalent to nondegeneracy of the bilinear form
+\begin{equation}\tag{5.2.4.7}
+\begin{aligned}
+H^{n-1}(X,\mathbb Q_\ell(j))\times
+H^{n-1}(X,\mathbb Q_\ell(j))
+&\longrightarrow H^{2n}(X,\mathbb Q_\ell(2j+1)),\\
+(a,b)&\longmapsto a\,L_X(b).
+\end{aligned}
+\end{equation}
+But by (5.2.4.3) and the projection formula,
+\[
+aL_X(b)=a\tau_*\tau^*(b)
+=\tau_*\bigl(\tau^*(a)\tau^*(b)\bigr).
+\]
+This proves the equivalence of (5.2.4.7) and 5.2.4.2.
+
+\subsection*{Corollary 5.2.5.}
+\underline{Let $X$ be smooth and projective of dimension $n$, and let
+$\tau:Y\hookrightarrow X$ be the inclusion of a smooth hyperplane section.
+Suppose that $X$ satisfies (LV).  Then, for $q\geq n$, the map}
+\[
+\tau^*:H^q(X,\mathbb Q_\ell(j))
+\longrightarrow H^q(Y,\mathbb Q_\ell(j))
+\]
+\underline{is surjective.}
+
+\underline{Proof.}
+By (5.2.4.3), for $i\geq0$ one has
+\[
+L_Y^{i+1}=\tau^*L_X^i\tau_*,
+\]
+and hence the commutative diagram
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^{n-i}(X,\mathbb Q_\ell(j+1))
+  \arrow[r,"L_X^i"]
+  &H^{n+i}(X,\mathbb Q_\ell(j+i+1))\arrow[d,"\tau^*"]\\
+H^{n-i-2}(Y,\mathbb Q_\ell(j))
+  \arrow[u,"\tau_*"']\arrow[r,"L_Y^{i+1}"]
+  &H^{n+i}(Y,\mathbb Q_\ell(j+i+1)).
+\end{tikzcd}
+\end{center}
+This gives the required result.
+----- English, file components/117_expose_XVIII_section_5_2.tex, page 286 -----
+\subsection*{Lemma 5.2.6.}
+\underline{Let $f:F\to B$ be a smooth proper morphism with $B$ connected.
+Let $\underline{\mathcal O}_F(1)$ be a relatively ample invertible sheaf on
+$F$, and equip each geometric fiber $F_{\bar b}$ with the ample invertible
+sheaf induced by $\underline{\mathcal O}_F(1)$.  If one geometric fiber
+satisfies (LV), then so do all the others.}
+
+\underline{Proof.}
+Let
+$\xi_F\in H^2(F,\mathbb Z_\ell(1))$ be the first Chern class of
+$\underline{\mathcal O}_F(1)$.  This class and its powers
+$\xi_F^i\in H^{2i}(F,\mathbb Z_\ell(i))$ induce, by cup product, the
+homomorphisms
+\begin{equation}\tag{5.2.6.1}
+\xi_F^i:R^{n-i}f_*\mathbb Q_\ell(j)
+\longrightarrow R^{n+i}f_*\mathbb Q_\ell(j+i),
+\end{equation}
+where $n$ is the relative dimension of the fibers.  By proper base change
+[SGA 4, XII 5.2], all geometric fibers satisfy (LV) if and only if all the
+maps (5.2.6.1) are isomorphisms.  By the specialization theorem
+[SGA 4, XVI 2.2], the sheaves $R^if_*\mathbb Q_\ell(j)$ are twisted constant
+sheaves.  Thus the maps (5.2.6.1) are isomorphisms if and only if they are so
+over one given geometric point.
+
+\subsection*{Corollary 5.2.7.}
+\underline{Let $X$ be smooth and projective.  If one smooth hyperplane
+section satisfies (LV), then every smooth hyperplane section does.}
+----- French corrections on page 285 -----
+[id C753] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: \underline{l'inclusion d'une section hyperplan lisse}
+NEW: \underline{l'inclusion d'une section hyperplane lisse}
+FRENCH CONTEXT (corrected, after the fix): egin{equation*}
+a.L_X(b) = a.\tau_*(\tau^*(b)) = \tau_*(\tau^*(a).\tau^*(b)),
+\end{equation*}
+d'où l'équivalence de (5.2.4.7) et (5.2.4.2).
+
+\underline{Corollaire} 5.2.5. \underline{Soient} $X$ \underline{projectif et lisse}, \underline{de dimension} $n$, \underline{et} $\tau : Y \hookrightarrow X$ \underline{l'inclusion d'une section hyperplane lisse}. \underline{Supposons que} $X$ \underline{satisfait à la condition} (LV). \underline{Alors pour} $i \geq n$, \underline{la flèche}
+
+\begin{equation*}
+\tau^* : H^i(X,\mathbb{Q}_\ell(j)) \longrightarrow H^i(Y,\mathbb{Q}_\ell(j))
+\end{equation*}
+\underline{est surjective.}
+
+\underline{Démonstration}. 
+
+[id C771] kind missing; French file expose_XVIII_body.tex
+OLD: \arrow[r, "L_Y^{i+1}"]
+NEW: \arrow[r, "L_Y^{i+1}"{yshift=7pt}, "\sim"]
+FRENCH CONTEXT (corrected, after the fix): 
+L_Y^{i+1} \;=\; \tau^* \, L_X^i \, \tau_* \quad ,
+\end{equation*}
+d'où le diagramme commutatif
+
+\begin{center}
+\begin{tikzcd}[column sep=huge, row sep=huge]
+H^{n-i}(X,\mathbb{Q}_\ell(j+1)) \arrow[r, "L_X^i"] & H^{n+i}(X,\mathbb{Q}_\ell(j+i+1)) \arrow[d, "\tau^*"] \\
+H^{n-i-2}(Y,\mathbb{Q}_\ell(j)) \arrow[r, "L_Y^{i+1}"{yshift=7pt}, "\sim"] \arrow[u, "\tau_*"'] & H^{n+i}(Y,\mathbb{Q}_\ell(j+i+1))
+\end{tikzcd}
+\end{center}
+% STRUCTURE: Untagged commutative square, 4 nodes and 4 arrows exactly as printed. NODES: (top-left)
+%   H^{n-i}(X,\mathbb{Q}_\ell(j+1)); (top-right) H^{n-i}(X,\mathbb{Q}_\ell(j+i+1)) — the exponent is
+%   printed wi
+
+[id C772] kind other; French file expose_XVIII_body.tex
+OLD: no iso
+%   labels,
+NEW: no iso
+%   labels other than the $\sim$ on arrow (4),
+FRENCH CONTEXT (corrected, after the fix): %   set to the RIGHT of the shaft; (3) top-right -> bottom-right, vertical, plain solid arrow pointing
+%   DOWN, label \tau^* set to the RIGHT of the shaft; (4) bottom-left -> bottom-right, horizontal, plain
+%   solid arrow pointing RIGHT, label L_Y^{i+1} set ABOVE the shaft. No hooked/mono arrows, no iso
+%   labels other than the $\sim$ on arrow (4), no double-headed (twoheadrightarrow) arrows, no dashed arrows, no commutativity marker
+%   inside the square. A hand-drawn wavy pen stroke runs between the label L_Y^{i+1} and the bottom
+%   arrow shaft; it is the isomorphism mark of arrow (4), read as $\sim$ as on folio 276, and is set directly ab
+
+[id C773] kind other; French file expose_XVIII_body.tex
+OLD: it is an ink artifact of the typescript, carries no label, and is not reproduced.
+NEW: it is the isomorphism mark of arrow (4), read as $\sim$ as on folio 276, and is set directly above the shaft, below the raised label.
+FRENCH CONTEXT (corrected, after the fix): t ABOVE the shaft. No hooked/mono arrows, no iso
+%   labels other than the $\sim$ on arrow (4), no double-headed (twoheadrightarrow) arrows, no dashed arrows, no commutativity marker
+%   inside the square. A hand-drawn wavy pen stroke runs between the label L_Y^{i+1} and the bottom
+%   arrow shaft; it is the isomorphism mark of arrow (4), read as $\sim$ as on folio 276, and is set directly above the shaft, below the raised label.
+ce qui donne le résultat voulu, cqfd.
+
+
+%%%%%%%%%%  scan idx 293  |  folio 286  %%%%%%%%%%
+
+\underline{Lemme} 5.2.6. \underline{Soit} $f : F \longrightarrow B$ \underline{un morphisme propre et lisse, avec} $B$ \underline{connexe. Désignons par} $\underline{O}_F(1)$ \underline{un module relativemen
+
+=================== PAGE 286 ===================
+----- (English text of page 285: shown above in this file) -----
+----- (English text of page 286: shown above in this file) -----
+----- English, file components/117_expose_XVIII_section_5_2.tex, page 287 -----
+\underline{Proof.}
+The universal family of smooth hyperplane sections of $X$ satisfies the
+hypotheses of Lemma 5.2.6.
+----- English, file components/118_expose_XVIII_section_5_3.tex, page 287 -----
+\subsection*{5.3. Condition (A)}
+
+\subsubsection*{5.3.1.}
+Let
+\[
+\rho:\widetilde X\longrightarrow\mathbb P^1
+\]
+be the ``fibration'' associated with a pencil whose axis meets $X$
+transversely and whose generic fiber is assumed to be smooth.
+
+Let $U$ be a nonempty open subset of $\mathbb P^1$ over which $\rho$ is
+smooth, and let
+\begin{equation}\tag{5.3.1.1}
+\nu:U\hookrightarrow\mathbb P^1
+\end{equation}
+be the inclusion.  Since the sheaves
+$R^i\rho_*\mathbb Q_\ell(j)$ are \underline{twisted constant over $U$}, the
+sheaves
+\[
+\nu_*\nu^*R^i\rho_*\mathbb Q_\ell(j)
+\]
+are seen to be essentially \underline{independent} of the choice of $U$;
+the canonical ``adjunction'' homomorphisms
+\begin{equation}\tag{5.3.2}
+R^i\rho_*\mathbb Q_\ell(j)
+\longrightarrow
+\nu_*\nu^*R^i\rho_*\mathbb Q_\ell(j)
+\end{equation}
+are likewise independent of the choice of $U$.
+----- French corrections on page 286 -----
+[id C754] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: si et seulement ils le sont au-dessus d'un point géométrique donné
+NEW: si et seulement s'ils le sont au-dessus d'un point géométrique donné
+FRENCH CONTEXT (corrected, after the fix): fibres géométriques satisfont à la condition (LV) si et seulement si toutes les flèches (5.2.6.1) sont des isomorphismes. Or, par le théorème de spécialisation [SGA 4 XVI 2.2], les faisceaux $R^i f_*\mathbb{Q}_\ell(j)$ sont constants tordus, de sorte que les flèches (5.2.6.1) sont des isomorphismes si et seulement s'ils le sont au-dessus d'un point géométrique donné, cqfd.
+
+\underline{Corollaire} 5.2.7. \underline{Soit} $X$ \underline{projective et lisse. Si une section hyperplane lisse vérifie} (LV), \underline{il en est de même pour} toute \underline{section hyperplane lisse.}
+
+\underline{Démonstration}. En effet, la famille universelle des sections hyperpla
+
+=================== PAGE 292 ===================
+----- English, file components/120_expose_XVIII_theorem_5_6_and_computation.tex, page 291 -----
+\noindent
+\textup{(Note.)}\quad
+\underline{This remains valid if, instead of assuming that $X$ satisfies
+(LV), one assumes only that a smooth hyperplane section $Y$ does.}
+
+\subsubsection*{5.6.2.}
+\underline{Let $\eta$ denote the generic point of $\mathbb P^1$,
+$\bar\eta$ the geometric generic point, $X_{\bar\eta}$ the geometric generic
+fiber of $\rho$, and $\pi$ the Galois group of
+$k(\bar\eta)/k(\eta)$.}
+
+\underline{For $q\neq n-1$ there are canonical isomorphisms}
+\begin{align}
+E_2^{0,q}
+ &=H^0(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+ \simeq H^q(X_{\bar\eta},\mathbb Q_\ell),
+ \tag{5.6.2.1}\\
+E_2^{2,q}
+ &=H^2(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+ \simeq H^q(X_{\bar\eta},\mathbb Q_\ell(-1)),
+ \tag{5.6.2.2}\\
+E_2^{p,q}
+ &=H^p(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)=0,
+ \qquad p\neq0,2.
+ \tag{5.6.2.3}
+\end{align}
+\underline{For $q=n-1$ one has}
+\begin{align}
+E_2^{0,n-1}
+ &=H^0(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell)
+ \simeq H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)^\pi
+ \simeq H^{n-1}(X,\mathbb Q_\ell),
+ \tag{5.6.2.4}\\
+E_2^{2,n-1}
+ &=H^2(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell)
+ \simeq H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(-1))^\pi
+ \simeq H^{n-1}(X,\mathbb Q_\ell(-1)).
+ \tag{5.6.2.5}
+\end{align}
+\underline{(The missing value $E_2^{1,n-1}$ will be found in 5.7 below.)}
+
+\underline{Proof.}
+By (5.4.3), Theorem 1.1 applies and gives (5.6.1).  The first three
+formulas (5.6.2.1)--(5.6.2.3) follow from the constancy of
+$R^q\rho_*\mathbb Q_\ell$ for $q\neq n-1$ (Lemma 5.4); for (5.6.2.3) one
+also uses, of course, the simple connectedness of $\mathbb P^1$.
+----- English, file components/120_expose_XVIII_theorem_5_6_and_computation.tex, page 292 -----
+The first isomorphism in (5.6.2.4) follows from
+\[
+R^{n-1}\rho_*\mathbb Q_\ell
+\overset{\sim}{\longrightarrow}
+\nu_*\nu^*R^{n-1}\rho_*\mathbb Q_\ell.
+\]
+Thus
+\[
+H^0(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell)
+\simeq
+H^0(U,\nu^*R^{n-1}\rho_*\mathbb Q_\ell),
+\]
+and $\nu^*R^{n-1}\rho_*\mathbb Q_\ell$ is a
+\textquotedblleft twisted constant\textquotedblright{} sheaf on $U$, hence
+corresponds to the $\pi$-module
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$.  The second isomorphism in
+(5.6.2.4) follows from degeneration together with Corollary 5.1.6.
+
+We turn to (5.6.2.5).  Let $F^\bullet$ denote the filtration on
+$H^\bullet(\widetilde X,\mathbb Q_\ell)$ defined by the spectral sequence.
+By degeneration,
+$F^2H^{n+1}(\widetilde X,\mathbb Q_\ell)=E_2^{2,n-1}$ and
+$\operatorname{gr}^1H^{n+1}(\widetilde X,\mathbb Q_\ell)=E_2^{1,n}=0$
+by (5.6.2.3).  Consequently (cf. 5.1.0),
+\begin{align}
+E_2^{2,n-1}
+ &=F^1H^{n+1}(\widetilde X,\mathbb Q_\ell) \notag\\
+ &=\operatorname{Ker}\!\left(
+ H^{n+1}(\widetilde X,\mathbb Q_\ell)
+ \longrightarrow H^0(\mathbb P^1,R^{n+1}\rho_*\mathbb Q_\ell)
+ \right) \notag\\
+ &\overset{(A)}{=}
+ \operatorname{Ker}\!\left(
+ k^*:H^{n+1}(\widetilde X,\mathbb Q_\ell)
+ \longrightarrow H^{n+1}(X_{\bar\eta},\mathbb Q_\ell)
+ \right).
+\tag{5.6.3}
+\end{align}
+By (5.1.2), $k^*$ may be written as
+\begin{equation}\tag{5.6.4}
+H^{n+1}(X,\mathbb Q_\ell)
+\oplus H^{n-1}(\Delta,\mathbb Q_\ell(-1))
+\xrightarrow{\ m^*+h_*\ }
+H^{n+1}(X_{\bar\eta},\mathbb Q_\ell).
+\end{equation}
+Using (5.2.2.3), this becomes
+\begin{equation}\tag{5.6.5}
+\begin{split}
+&\operatorname{Prim}^{n-1}(X,\mathbb Q_\ell(-1))
+\oplus H^{n-3}(X,\mathbb Q_\ell(-2))
+\oplus H^{n-1}(\Delta,\mathbb Q_\ell(-1))\\
+&\hspace{35mm}\xrightarrow{\ m^*L+m^*L^2+h_*\ }
+H^{n+1}(X_{\bar\eta},\mathbb Q_\ell).
+\end{split}
+\end{equation}
+\footnote{The printed (5.6.5) omits several closing parentheses and the plus
+sign before the third-summand map $h_*$.  The three displayed source
+summands and (5.6.4) force the corrected three-term map shown here.}
+Now the map
+\[
+H^{n-3}(X,\mathbb Q_\ell(-2))
+\xrightarrow{\ m^*L^2\ }
+H^{n+1}(X_{\bar\eta},\mathbb Q_\ell)
+\]
+is an isomorphism by (LV), since
+$m^*L_X^2=L_{X_{\bar\eta}}^2m^*$ (cf. 5.2.4 and 5.2.5).  Hence the kernel
+of (5.6.5) identifies, by $\operatorname{pr}_1\oplus\operator
+----- English, file components/120_expose_XVIII_theorem_5_6_and_computation.tex, page 293 -----
+name{pr}_3$,
+with
+\[
+\operatorname{Prim}^{n-1}(X,\mathbb Q_\ell(-1))
+\oplus H^{n-1}(\Delta,\mathbb Q_\ell(-1)).
+\]
+By (LV) and weak Lefschetz,
+\[
+H^{n-1}(\Delta,\mathbb Q_\ell(-1))
+\xleftarrow[\sim]{\,L\,}
+H^{n-3}(\Delta,\mathbb Q_\ell(-2))
+\xleftarrow[\sim]{\ }
+H^{n-3}(X,\mathbb Q_\ell(-2)).
+\]
+Together with (5.2.2.3), this gives
+\begin{equation}\tag{5.6.6}
+E_2^{2,n-1}\simeq H^{n-1}(X,\mathbb Q_\ell(-1)).
+\end{equation}
+The other isomorphism in (5.6.2.5) follows by twisting (5.6.2.4).
+
+\subsubsection*{Remark 5.6.7.}
+The assertion (5.6.1) can be proved under substantially weaker hypotheses,
+as Deligne explained to me:
+----- English, file components/121_expose_XVIII_theorem_5_6_8_first_proof.tex, page 293 -----
+\subsection*{Theorem 5.6.8.}
+\underline{Let $X$ be smooth of dimension $n$ over an algebraically closed
+field $k$, and let}
+\[
+\rho:X\longrightarrow\mathbb P^1_k
+\]
+\underline{be a projective morphism whose generic fiber is smooth.  Suppose
+that:}
+
+\smallskip
+\noindent
+\textup{(5.6.8.1)}\quad
+\underline{the geometric generic fiber, equipped with the restriction of the
+relatively ample invertible sheaf $\underline{\mathcal O}_X(1)$, satisfies
+(LV);}
+
+\smallskip
+\noindent
+\textup{(5.6.8.2)}\quad
+\underline{the maps (5.3.2) are isomorphisms for $i\neq n$ and are
+surjective for $i=n$ (a condition satisfied in particular when $\rho$ arises
+from a Lefschetz pencil, cf. 5.3.4).  Then the Leray spectral sequence}
+\[
+E_2^{p,q}=H^p(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+\Longrightarrow H^{p+q}(X,\mathbb Q_\ell)
+\]
+\underline{degenerates.}
+----- French corrections on page 292 -----
+[id C755] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: \longrightarrow H^0(\mathbb{P}^1,R^{n+1}\rho_*\mathbb{Q}_{\ell})
+NEW: \longrightarrow H^0(\mathbb{P}^1,R^{n+1}\rho_*\mathbb{Q}_{\ell}))
+FRENCH CONTEXT (corrected, after the fix): detilde{X},\mathbb{Q}_{\ell}) = E_2^{2,n-1}$, et $\mathrm{gr}^1H^{n+1}(\widetilde{X},\mathbb{Q}_{\ell}) = E_2^{1,n} = 0$ (5.6.2.3), de sorte que (cf. 5.1.0)
+
+\begin{equation}\tag{5.6.3}
+E_2^{2,n-1} = F^1H^{n+1}(\widetilde{X},\mathbb{Q}_{\ell}) = \mathrm{Ker}(H^{n+1}(\widetilde{X},\mathbb{Q}_{\ell}) \longrightarrow H^0(\mathbb{P}^1,R^{n+1}\rho_*\mathbb{Q}_{\ell}))
+\end{equation}
+\begin{equation*}
+(\text{par }(A)) = \mathrm{Ker}(k^* : H^{n+1}(\widetilde{X},\mathbb{Q}_{\ell}) \longrightarrow H^{n+1}(X_{\overline{\eta}},\mathbb{Q}_{\ell})) \quad .
+\end{equation*}
+Par (5.1.2), $k^*$ se récrit
+
+\begin{equation}\tag{5.6.4}
+H^{n+1}(X,\mathbb{Q}_{\ell}) \oplus H^{n-
+
+=================== PAGE 301 ===================
+----- English, file components/123_expose_XVIII_theorem_5_7.tex, page 300 -----
+nd{equation}
+
+On the other hand, the inclusion of
+$F^2H^n(\widetilde X,\mathbb Q_\ell)
+=H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1))$
+in $H^n(\widetilde X,\mathbb Q_\ell)$ is the Gysin map $k_*$.
+\footnote{The print has $F^2H^N$ in the first sentence and omits the
+Tate twist $(-1)$ from the displayed source of the Gysin map.  The
+surrounding identifications and the degree-two Gysin shift force the readings
+shown here.}
+Strictly speaking, the Gysin map is defined only as a map
+\[
+H^{i-2}(X_{\bar\eta},\mathbb Q_\ell(-1))
+\longrightarrow
+H^i(X\times_k k(\bar\eta),\mathbb Q_\ell),
+\]
+but, in view of the canonical isomorphism (SGA 4 XII 5.4)
+\[
+H^i(X,\mathbb Q_\ell)\xrightarrow{\sim}
+H^i(X\otimes_kK,\mathbb Q_\ell)
+\]
+for every algebraically closed field $K/k$, we hope the reader will allow
+us such abuses.
+By (5.1.3), the Gysin map is expressed as
+\begin{equation}\tag{5.7.8}
+H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1))
+\xrightarrow{\;m_*\oplus(-h^*)\;}
+H^n(X,\mathbb Q_\ell)
+\oplus H^{n-2}(\Delta,\mathbb Q_\ell(-1)).
+\end{equation}
+By weak Lefschetz,
+\[
+m_*H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1))
+=m_*m^*H^{n-2}(X,\mathbb Q_\ell(-1))
+=L_XH^{n-2}(X,\mathbb Q_\ell(-1))
+\]
+is the orthogonal complement of the primitive part.  Hence we have the
+commutative diagram
+\begin{equation}\tag{5.7.9}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+F^2H^n(\widetilde X,\mathbb Q_\ell)
+  \arrow[r,hook]
+& F^1H^n(\widetilde X,\mathbb Q_\ell)
+  \arrow[d,"\wp f_*\oplus(-g_*i^*)","\wr"']
+\\
+H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1))
+  \arrow[u,"k_*"',"\wr"]
+  \arrow[r,"0\oplus h^*"]
+& \operatorname{Prim}^n(X,\mathbb Q_\ell)
+  \oplus H^{n-2}(\Delta,\mathbb Q_\ell(-1)).
+\end{tikzcd}
+\end{equation}
+This proves (5.7.1), as required.
+----- English, file components/123_expose_XVIII_theorem_5_7.tex, page 301 -----
+\subsection*{Remark 5.7.10.}
+In 5.7, hypothesis (A) may be replaced by the weaker assumption that, for
+$q=n$, the maps
+\begin{equation}\tag{5.7.11}
+H^q(\widetilde X,\mathbb Q_\ell)\longrightarrow
+H^0(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+\end{equation}
+and
+\begin{equation}\tag{5.7.12}
+H^q(\widetilde X,\mathbb Q_\ell)\longrightarrow
+H^q(X_{\bar\eta},\mathbb Q_\ell)
+\end{equation}
+have the same kernel, as our proof shows.  Without this condition, the
+conclusion can fail; cf. 5.9.
+----- English, file components/124_expose_XVIII_section_5_8_1_through_definition_5_8_3.tex, page 301 -----
+\section*{5.8. The Griffiths homomorphism}
+
+\subsection*{5.8.1.}
+Let $f:T\to S$ be a morphism of schemes.  The Leray spectral sequence
+defines a filtration $(F^i)$ on the groups
+$H^\bullet(T,\mathbb Q_\ell(j))$.  Define
+\begin{equation}\tag{5.8.1.1}
+\operatorname{Prim}^\bullet(T/S,\mathbb Q_\ell(j))
+=F^1H^\bullet(T,\mathbb Q_\ell(j)).
+\end{equation}
+Because the Leray spectral sequence lies in the first quadrant, we have
+\begin{equation}\tag{5.8.1.2}
+E_\infty^{0,\bullet}\lhook\joinrel\longrightarrow E_2^{0,\bullet},
+\end{equation}
+and hence
+\begin{equation}\tag{5.8.1.3}
+\operatorname{Prim}^\bullet(T/S,\mathbb Q_\ell(j))
+=\ker\!\left(
+H^\bullet(T,\mathbb Q_\ell(j))
+\longrightarrow H^0(S,R^\bullet f_*\mathbb Q_\ell(j))
+\right).
+\end{equation}
+For the same reason,
+\begin{equation}\tag{
+----- English, file components/124_expose_XVIII_section_5_8_1_through_definition_5_8_3.tex, page 302 -----
+5.8.1.4}
+E_\infty^{1,\bullet}\lhook\joinrel\longrightarrow E_2^{1,\bullet}.
+\end{equation}
+The composite
+\begin{equation}\tag{5.8.1.5}
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{Prim}^i(T/S,\mathbb Q_\ell(j))
+=F^1H^i(T,\mathbb Q_\ell(j))
+  \arrow[r]
+&
+\operatorname{gr}^1H^i(T,\mathbb Q_\ell(j))
+=E_\infty^{1,i-1}
+  \arrow[d,hook]
+\\
+{}
+&
+H^1(S,R^{i-1}f_*\mathbb Q_\ell(j))
+=E_2^{1,i-1}
+\end{tikzcd}
+\end{equation}
+will be denoted
+\footnote{The print has a baseline dot in place of the degree index in
+(5.8.1.6).  The source and target of (5.8.1.5) force $R^{i-1}f_*$.}
+\begin{equation}\tag{5.8.1.6}
+U^i:\operatorname{Prim}^i(T/S,\mathbb Q_\ell(j))
+\longrightarrow H^1(S,R^{i-1}f_*\mathbb Q_\ell(j)).
+\end{equation}
+----- French corrections on page 301 -----
+[id C756] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: l'hypothèse (A) peut-être remplacée par celle
+NEW: l'hypothèse (A) peut être remplacée par celle
+FRENCH CONTEXT (corrected, after the fix): l $0 \oplus h^*$ printed ABOVE the shaft. Tag (5.7.9) sits in the left margin
+%   at the vertical mid-height of the diagram. No dashed, no double-headed, no equality arrows.
+ce qui donne bien (5.7.1), cqfd.
+
+
+%%%%%%%%%%  scan idx 308  |  folio 301  %%%%%%%%%%
+
+\underline{Remarque} 5.7.10. Dans 5.7, l'hypothèse (A) peut être remplacée par celle, plus faible, que pour $q = n$, les flèches
+
+\begin{equation}\tag{5.7.11}
+H^q(\widetilde{X},\mathbb{Q}_\ell) \longrightarrow H^0(\mathbb{P}^1,R^q\rho_*\mathbb{Q}_\ell)
+\end{equation}
+et
+
+\begin{equation}\tag{5.7.12}
+H^q(\widetilde{X},\mathbb{Q}_\ell) \longrightarrow H^q(X_{\overline{\eta}},\mathbb{
+
+=================== PAGE 311 ===================
+----- English, file components/126_expose_XVIII_section_5_8_6_and_corollary_5_8_7.tex, page 310 -----
+pi_U"']
+&S\arrow[d,"\pi"]\\
+U\arrow[r,hook,"\nu"]
+&\mathbb P^1
+\end{tikzcd}
+\]
+we obtain
+\[
+\mu^*\pi^*E^{n-1}\rho_*\mathbb Q_\ell(j)
+=\pi_U^*\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j).
+\]
+Consequently, (5.8.7.3) factors as
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j)) \arrow[r]
+&H^1(U,\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j))
+  \arrow[d,"\pi_U^*"] \\
+{}
+&H^1(V,\pi_U^*\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j)).
+\end{tikzcd}
+\]
+By (5.8.4), it is enough to verify that
+\[
+\pi_U^*:H^1(U,\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j))
+\longrightarrow
+H^1(V,\pi_U^*\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j))
+\]
+is injective.  Since $\pi_U:V\to U$ is finite and flat, trace theory
+[SGA 4 XVII 6.2] supplies, for every $\mathbb Q_\ell$-sheaf $F$ on $U$
+(for example $F=\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j)$), a map
+\[
+\operatorname{tr}_{\pi_U}:H^1(V,\pi_U^*F)\longrightarrow H^1(U,F)
+\]
+such that
+\[
+\operatorname{tr}_{\pi_U}\circ\pi_U^*
+=\deg(\pi_U)\,\operatorname{id}.
+\]
+It follows that $H^*(U,F)\to H^*(V,\pi_U^*F)$ is injective, completing
+the proof.
+\footnote{The print drops the twist $
+----- English, file components/126_expose_XVIII_section_5_8_6_and_corollary_5_8_7.tex, page 311 -----
+(j)$ from one base-change display and
+the frozen transcription corrupts both the source and target of the trace
+map.  The corrected formulas are the standard finite-flat pullback--trace
+identities used by the concluding argument.}
+----- English, file components/127_expose_XVIII_section_5_9.tex, page 311 -----
+\subsection*{5.9. \underline{An example in which hypothesis} (A)
+\underline{is not satisfied}.}
+
+Let $X$ be a smooth quadric surface in $\mathbb P^3$.  Then $X$ satisfies
+(LV) (5.2.4).  Take a pencil (a Lefschetz pencil, if desired) of
+\underline{hyperplanes} whose generic member and axis meet $X$
+transversely.  Then (as Deligne pointed out to me) \underline{the projection}
+\[
+\rho:\widetilde X\longrightarrow\mathbb P^1
+\]
+\underline{does not satisfy} (A).  Indeed,
+$R^2\rho_*\mathbb Q_\ell$ is not constant: the singular fibers are singular
+conics, hence reducible, and in a Lefschetz pencil each is the union of two
+lines meeting at one point (this is the definition of a Lefschetz pencil in
+this simple case).  Thus
+\[
+\dim_{\mathbb Q_\ell}H^2(\text{singular fiber},\mathbb Q_\ell)=2,
+\]
+whereas
+\[
+\dim_{\mathbb Q_\ell}H^2(\text{smooth fiber},\mathbb Q_\ell)=1.
+\]
+----- English, file components/127_expose_XVIII_section_5_9.tex, page 312 -----
+Moreover, the conclusion of Theorem 5.8.4 is false here.  Let
+$U\xhookrightarrow{\nu}\mathbb P^1$ be a nonempty open subset over which
+$\rho$ is smooth.  Since the fibers of $\rho$ over $U$ are smooth curves of
+genus zero, we have
+\[
+\nu^*R^1\rho_*\mathbb Q_\ell=0
+\]
+and hence
+\[
+H^1(U,\nu^*R^1\rho_*\mathbb Q_\ell)=0.
+\]
+Consequently, the Griffiths homomorphism
+\[
+\operatorname{Prim}^2(X,\mathbb Q_\ell)
+\xrightarrow{\operatorname{Grif}}
+H^1(U,\nu^*R^1\rho_*\mathbb Q_\ell)
+\]
+is zero.  But on a quadric surface,
+\[
+\dim_{\mathbb Q_\ell}\operatorname{Prim}^2(X,\mathbb Q_\ell)=1.
+\]
+Likewise, the conclusion of 5.7 fails here.
+----- English, file components/128_expose_XVIII_section_6_opening_through_6_1_2_proof_opening.tex, page 312 -----
+\section*{6. \underline{Application of the local theory of vanishing cycles}\\
+(\underline{Picard}--\underline{Lefschetz})}
+
+\subsection*{Proposition 6.1.}
+\underline{Let $Z$ be a hypersurface in projective space $\mathbb P^r_k$,
+$r\geq2$, where $k$ is an algebraically closed field.  Let}
+\[
+i_o:D_o\lhook\joinrel\longrightarrow\mathbb P^r
+\]
+\underline{be the inclusion of a line which meets $Z$ only in its smooth
+locus and meets it transversely.  Choose a geometric point $\bar a$ of
+$D_o-D_o\cap Z$, and denote by}
+\[
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\]
+\underline{the quotient of $\pi_1(D_o-D_o\cap Z,\bar a)$ classifying the
+étale coverings of $D_o-D_o\cap Z$ which are tamely ramified at every point
+of $D_o\
+----- French corrections on page 311 -----
+[id C757] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: sont chacun la réunion de deux droites
+NEW: sont chacune la réunion de deux droites
+FRENCH CONTEXT (corrected, after the fix): r Deligne) \underline{la projection} $\rho : \widetilde{X} \longrightarrow \mathbb{P}^1$ \underline{ne vérifie pas} (A). En effet, $R^2\rho_*\mathbb{Q}_\ell$ n'est pas constant, car les fibres singulières sont des courbes coniques singulières, donc sont réductibles, et pour un pinceau de Lefschetz, sont chacune la réunion de deux droites qui se coupent en un point (c'est la définition d'un pinceau de Lefschetz dans ce cas simple). Donc
+
+\begin{equation*}
+\dim_{\mathbb{Q}_\ell}\left(\, H^2\,(\text{fibre sing.},\ \mathbb{Q}_\ell)\right) = 2
+\end{equation*}
+bien que
+
+\begin{equation*}
+\dim_{\mathbb{Q}_\ell}\left(\, H^2\,(\text{fibre l
+
+=================== PAGE 312 ===================
+----- (English text of page 311: shown above in this file) -----
+----- (English text of page 312: shown above in this file) -----
+----- English, file components/128_expose_XVIII_section_6_opening_through_6_1_2_proof_opening.tex, page 313 -----
+cap Z$.  Then:}
+
+\subsubsection*{6.1.1.}
+\underline{The canonical homomorphism}
+\begin{equation}\tag{6.1.1.1}
+i_{o*}:\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a)
+\end{equation}
+\underline{is surjective.}
+
+\subsubsection*{6.1.2.}
+\underline{Every choice of a geometric point $\bar x_o\in D_o\cap Z$ and
+of a ``path'' in $D_o$ from $\bar x_o$ to $\bar a$ determines a
+homomorphism}
+\begin{equation}\tag{6.1.2.1}
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\end{equation}
+\underline{whose image is ``the'' inertia group at $\bar x_o$.  Composing
+this morphism with $i_{o*}$ gives a homomorphism}
+\begin{equation}\tag{6.1.2.2}
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a).
+\end{equation}
+\underline{If $Z$ is irreducible, all these homomorphisms are conjugate to
+one another.}
+
+\underline{Proof.}
+Let $T$ be the subscheme of the Grassmannian formed by the lines in
+$\mathbb P^r$ which
+\begin{enumerate}[label=(\roman*)]
+\item pass through $\bar a$;
+\item meet $Z$ only in its smooth locus, and meet it there transversely.
+\end{enumerate}
+Let $\eta$ be its generic point, and let
+\[
+i_\eta:D_\eta\longrightarrow\mathbb P^r\otimes_k k(\eta)
+\]
+be the corresponding line (thus a line ``joining $\bar a$ to the generic
+point of $\mathbb P^r_k$'').  Choose also a geometric point $\bar\eta$ over
+$\eta$, and write $D_{\bar\eta}$ for the corresponding ``geometric'' line.
+Let $o\in T$ be the point corresponding to the given line $D_o$.
+----- French corrections on page 312 -----
+[id C758] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: \underline{Application de la théorie locale des cycles evanescents}
+NEW: \underline{Application de la théorie locale des cycles évanescents}
+FRENCH CONTEXT (corrected, after the fix): {R}^1\rho_*\mathbb{Q}_\ell)
+\end{tikzcd}
+\end{equation*}
+
+est nul. Mais sur une surface quadratique, on a
+
+\begin{equation*}
+\dim_{\mathbb{Q}_\ell} \left( \mathrm{Prim}^2(\mathrm{X},\mathbb{Q}_\ell) \right) = 1 \quad .
+\end{equation*}
+
+On voit de même que la conclusion de 5.7 est ici en défaut.
+
+6. \underline{Application de la théorie locale des cycles évanescents} (\underline{Picard}-\underline{Lefschetz}).
+
+\underline{Proposition} 6.1. \underline{Désignons par} Z \underline{une hypersurface dans l'espace projectif} $\mathbb{P}^r_k$ , $r \geq 2$, k \underline{étant un corps algébriquement clos}. \underline{Soit}
+
+\begin{equation*}
+i_o : \mathrm{D}_o \lhook\j
+
+=================== PAGE 314 ===================
+----- (English text of page 313: shown above in this file) -----
+----- English, file components/129_expose_XVIII_proof_6_1_through_bertini.tex, page 314 -----
+By [SGA 1, XIII 2.8], there is a specialization homomorphism (depending on
+a path in $T$ from $\bar\eta$ to $o$, and hence defined up to conjugacy)
+\begin{equation}\tag{6.1.3}
+\pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\xrightarrow{\ \bar\eta\longrightarrow o\ }
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\end{equation}
+such that the following assertions hold.
+
+\subsubsection*{6.1.4.}
+The local-monodromy homomorphisms (6.1.2.1)
+\[
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\]
+are obtained by composing the specialization arrow (6.1.3) with the local
+monodromy homomorphisms for $D_{\bar\eta}$:
+\begin{equation}\tag{6.1.4.1}
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\xrightarrow{\ \bar\eta\longrightarrow o\ }
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a).
+\end{equation}
+
+\subsubsection*{6.1.5.}
+The following diagram is commutative:
+\begin{equation}\notag
+\begin{tikzcd}[column sep=huge,row sep=huge]
+{} & \pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a) & {} \\
+\pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a)
+  \arrow[ur,"i_{\eta*}"]
+& {}
+& \pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+  \arrow[ul,"i_{o*}"'] \\
+{} & \pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+  \arrow[uu,"i_{\bar\eta*}"']
+  \arrow[ul]
+  \arrow[ur,"\bar\eta\longrightarrow o"'] & {} .
+\end{tikzcd}
+\end{equation}
+----- English, file components/129_expose_XVIII_proof_6_1_through_bertini.tex, page 315 -----
+Assume this for the moment, and first prove 6.1.1.  By the commutativity of
+6.1.5, it is enough to prove that
+\[
+i_{\bar\eta*}:
+\pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a)
+\]
+is surjective.  For this, it is enough to prove that the analogous
+homomorphism of the \underline{ordinary} fundamental groups
+\begin{equation}\tag{6.1.6}
+i_{\bar\eta*}:
+\pi_1(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\longrightarrow
+\pi_1(\mathbb P^r-Z,\bar a)
+\end{equation}
+is surjective.  In other words, for every étale covering
+$E\to\mathbb P^r-Z$ with $E$ connected (and hence irreducible, since
+$\mathbb P^r-Z$ is smooth and therefore unibranch [EGA IV, 18.10.3]), its
+inverse image
+\[
+E_{\bar\eta}
+=E\times_{\mathbb P^r-Z}(D_{\bar\eta}-D_{\bar\eta}\cap Z)
+\]
+over $D_{\bar\eta}-D_{\bar\eta}\cap Z$ must remain geometrically
+irreducible.  It is enough to use the following variant of Bertini's theorem
+([EGA V, citation left blank in the source]) for the composite
+$E\to\mathbb P^r-Z\lhook\joinrel\longrightarrow\mathbb P^r$ and $s=1$.
+
+\subsubsection*{6.1.6.1. Bertini's theorem.}
+Let $k$ be a field, let $\mathbb P^r=\mathbb P^r_k$, and let
+$f:X\to\mathbb P^r$ be a nonconstant morphism, where $X$ is a geometrically
+irreducible algebraic scheme.  For every integer
+$s<\dim\overline{f(X)}$, let $L_t$ denote the \underline{generic} linear
+subspace of codimension $s$ in $\mathbb P^r$.  Then
+$X_t=f^{-1}(L_t)$ is geometrically irreducible.
+----- French corrections on page 314 -----
+[id C759] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: entre $\bar{\eta}$ et $O$ dans $T$
+NEW: entre $\bar{\eta}$ et $o$ dans $T$
+FRENCH CONTEXT (corrected, after the fix): ns par $\mathrm{D}_{\overline{\eta}}$ la droite ``géométrique'' correspondante. Soit o le point de T correspondant à la droite donnée $\mathrm{D}_o$ .
+
+
+%%%%%%%%%%  scan idx 321  |  folio 314  %%%%%%%%%%
+
+D'après (SGA 1, XIII 2.8), il existe un homomorphisme de spécialisation (dépendant d'un chemin entre $\bar{\eta}$ et $o$ dans $T$, donc défini à conjugaison près)
+
+\begin{equation}\tag{6.1.3}
+\pi_1^{\mathrm{mod}}(D_{\bar{\eta}} - D_{\bar{\eta}} \cap Z, \bar{a}) \xrightarrow{\ \bar{\eta} \longrightarrow o\ } \pi_1^{\mathrm{mod}}(D_o - D_o \cap Z, \bar{a})
+\end{equation}
+tel que l'on ait :
+
+% Print: singular « homomorphisme » a
+
+=================== PAGE 327 ===================
+----- English, file components/132_expose_XVIII_sections_6_5_and_6_6.tex, page 326 -----
+]
+----- English, file components/133_expose_XVIII_corollary_6_7_and_bibliography.tex, page 326 -----
+\subsubsection*{Corollary 6.7.}
+Under the hypotheses of 6.6, suppose that $X$ satisfies condition
+(LV).  Then:
+
+\medskip
+\noindent
+\textup{6.7.1.} The representation of
+$\pi_1(D-D\cap\check X)$ on
+$E^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$ is absolutely irreducible.
+
+\medskip
+\noindent
+\textup{6.7.2.} If $n$ is even, every finite-index subgroup of
+$\pi_1(D-D\cap\check X)$ acts absolutely irreducibly on
+$E^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$.
+
+\subsubsection*{Proof.}
+We may replace the module in question by its twist
+\[
+E=E^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m)).
+\]
+Let
+$\bar E=E\otimes_{\mathbb Q_\ell}\bar{\mathbb Q}_\ell$, and choose
+$0\ne\chi\in\bar E$.  To prove 6.7.1, we must show that the
+$\bar{\mathbb Q}_\ell$-linear subspace of $\bar E$ generated by $\chi$
+and its conjugates under $\pi$ is all of $\bar E$.  By 6.6.1 and 6.6.2,
+it is enough to prove that this subspace contains one of the vanishing
+cycles $\delta_i$.
+----- English, file components/133_expose_XVIII_corollary_6_7_and_bibliography.tex, page 327 -----
+Since $X$ satisfies (LV), the restriction of the cup-product form to
+\[
+H^{n-1}(X,\mathbb Q_\ell(m))
+\lhook\joinrel\longrightarrow
+H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))
+\]
+is nondegenerate; hence so is its restriction to the orthogonal
+$E^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))$.  By 6.6.1, there is therefore
+at least one $i$ such that
+\[
+\chi\cdot\delta_i\ne0.
+\]
+For this $i$, 6.5 supplies an element $\sigma_i$ of the inertia group at
+$s_i$ such that
+\begin{equation}\tag{6.7.3}
+\sigma_i(\chi)-\chi
+=\text{a nonzero multiple of }\delta_i.
+\end{equation}
+This proves 6.7.1.
+
+For 6.7.2, $n-1$ is odd, so $\delta_i\cdot\delta_i=0$.  Iterating
+6.5.2 gives, for every $k$,
+\begin{equation}\tag{6.7.4}
+\sigma_i^k(\chi)
+=\chi+k\,\sigma_i(\chi\cdot\delta_i)\delta_i.
+\end{equation}
+Thus a $\mathbb Q_\ell$-subspace $M$ of $E$ is stable under the action
+of $\pi$ if and only if it is stable under a finite-index subgroup:
+both conditions are equivalent to
+\[
+\chi\in M
+\quad\Longrightarrow\quad
+\delta_i\in M\quad\text{for every $i$ with }
+\chi\cdot\delta_i\ne0.
+\]
+The assertion therefore reduces to 6.7.1.
+
+\subsection*{Bibliography}
+
+\begin{description}
+\item[{[1]}] P. Deligne, \emph{Théorème de Lefschetz et critères de
+dégénérescence de suites spectrales}, Publ. Math. IHÉS \textbf{35}
+(1968), 259--278.
+
+\item[{[2]}] S. Kleiman, \emph{Algebraic cycles and the Weil
+conjectures}, in \emph{Dix exposés sur la cohomologie des schémas},
+North-Holland, 1968.
+
+\item[{[3]}] S. Lefschetz, \emph{L'analyse situs et la géométrie
+algébrique}, Gauthier-Villars, Paris, 1924.
+
+\item[{[4]}] D. Lieberman, \emph{Higher Picard Varieties}, Amer. J.
+Math. \textbf{90} (4) (1968), 1165--1199.\footnote{The print gives the
+journal volume as 15; the article appeared in volume 90.}
+
+\item[{[5]}] D. Mumford, unpublished.
+
+\item[{[6]}] A. Weil, \emph{Variétés kählériennes}, Hermann, Paris,
+1958.
+\end{description}
+----- English, file components/134_expose_XIX_opening_through_corollary_1_5.tex, page 327 -----
+\clearpage
+\begin{center}
+{\large SGA
+----- English, file components/134_expose_XIX_opening_through_corollary_1_5.tex, page 328 -----
+ 7 --- EXPOS\'E XIX}\par
+\vspace{2em}
+{\Large\underline{The Noether Theorem}}\par
+\vspace{1.5em}
+{\large by P. Deligne}
+\end{center}
+
+\section*{Contents}
+
+\noindent 1. Statement of the theorems. \hfill 1
+
+\noindent 2. A complement to XVIII. \hfill 4
+
+\noindent 3. Proof of 1.3. \hfill 5
+
+\noindent 4. A second complement to XVIII. \hfill 8
+
+\noindent 5. The exceptional cases of the Noether theorem. \hfill 11
+
+\section*{1. Statement of the theorems}
+
+The present expos\'e updates Lefschetz's proof [3, p.~108] of the Noether
+theorem (1.2) stated below.
+
+\subsubsection*{1.1.}
+Let $k$ be an algebraically closed field of characteristic $p$.  Let
+$d\geq1$ and let
+\[
+\underline a=(a_i)_{1\leq i\leq d}
+\]
+be a sequence of integers at least $1$.  A complete intersection $V$ of
+dimension $n$ and multidegree $\underline a$ in the projective space
+$\mathbb P^{n+d}$ over $k$ will be called \underline{generic} if, after an
+extension of $k$, it is projectively isomorphic to a complete intersection
+defined by equations whose coefficients are algebraically independent over
+the prime field.  In what follows, unless expressly stated otherwise, we
+suppose that $d\geq1$ and $a_i\geq2$.
+
+\subsubsection*{Theorem 1.2.}
+Let $V\subset\mathbb P^{2+d}$ be a generic complete-intersection surface of
+multidegree $\underline a$.  Suppose that
+\[
+\underline a\ne(2),(3),(2,2).
+\]
+Then every (reduced) curve on $V$ is the scheme-theoretic intersection of
+$V$ with a hypersurface of $\mathbb P^{2+d}$.
+----- French corrections on page 327 -----
+[id C760] kind misprint_pass; French file expose_XVIII_body.tex
+OLD: si et seulement il l'est sous un sous-groupe d'indice fini
+NEW: si et seulement s'il l'est sous un sous-groupe d'indice fini
+FRENCH CONTEXT (corrected, after the fix): a_i.\delta_i = 0$, et, pour toute puissance $k$-ième de $\sigma_i$, on a, en itérant 6.5.2,
+
+\begin{equation}\tag{6.7.4}
+\sigma_i^k(\chi) = \chi + k\,\sigma_i(\chi.\delta_i)\,\delta_i \quad .
+\end{equation}
+Donc un sous-espace $\mathbb{Q}_\ell$-vectoriel $M$ de $E$ est stable sous l'action de $\pi$ si et seulement s'il l'est sous un sous-groupe d'indice fini, car les deux conditions équivalent à la condition
+
+\begin{equation*}
+\chi \in M \implies \forall_i \text{ tel que le cup-produit } \chi.\delta_i \neq 0, \text{ alors } \delta_i \in M.
+\end{equation*}
+Donc on est ramené à l'énoncé 6.7.1 déjà prouvé.
+
+
+\underline{BIBLIOGRAPHIE}
+
+[1] P. DELIGNE. Théo
+
+=================== PAGE 332 ===================
+----- English, file components/134_expose_XIX_opening_through_corollary_1_5.tex, page 331 -----
+er zero or the whole space, which proves
+1.4.
+
+\subsubsection*{Corollary 1.5.}
+Let $V\subset\mathbb P^{2n+d}$ be a generic complete intersection of even
+dimension $2n$ and multidegree $\underline a$.  Then either
+\begin{enumerate}[label=(\alph*)]
+\item every algebraic cohomology class in
+  $H^{2n}(V,\mathbb Q_\ell(n))$ is a rational multiple of $\eta^n$; or
+\item $H^{2n}(V,\mathbb Q_\ell(n))$ is generated by algebraic cohomology
+  classes.
+\end{enumerate}
+If (b) holds, then for every complete intersection of dimension $2n$ and
+multidegree $\underline a$ over an algebraically closed field of
+characteristic $p$, the group $H^{2n}(V,\mathbb Q_\ell(n))$ is generated by
+algebraic classes.
+
+Apply 1.4 with $X$ a generic complete intersection of dimension $2n+1$ and
+multidegree $(a_1,\ldots,a_{d-1})$, and with $\ell$ a generic pencil of
+sections of $X$ by hypersurfaces of degree $a_d$ (cf. XVII 2.4).  One could
+equally take $X$ of multidegree $(a_1,\ldots,a_d)$ and $\ell$ a generic
+pencil of hyperplane sections.  The final assertion follows because an
+algebraic cohomology class remains algebraic under specialization.
+----- English, file components/135_expose_XIX_section_2.tex, page 331 -----
+\section*{2. A complement to XVIII}
+
+\subsubsection*{Proposition 2.1.}
+Let $X\subset\mathbb P$ be a smooth projective variety, pure of odd
+dimension $2n+1$ over an algebraically closed field $k$, and let
+$\ell\subset\check{\mathbb P}$ be a generic Lefschetz pencil of hyperplane
+sections of $X$.  Let $s$ be a geometric point of $\ell$, let $H_s$ be the
+corresponding hyperplane section, let $S\subset\ell$ be the set of exceptional
+values of the pencil, and let $\pi_1(\ell-S,s)$ be the monodromy group.
+Suppose that $X$ satisfies condition (LV).  Then the representation of
+$\pi_1(\ell-S,s)$ on the vanishing cohomology
+\[
+\operatorname{Ev}(H_s,\mathbb Q_\ell)
+\subset H^{2n}(H_s,\mathbb Q_\ell)
+\]
+is absolutely irreducible.\footnote{The print says that $X$ has even
+dimension $2n$.  The displayed degree $H^{2n}(H_s)$, the reflection formula,
+Remark 2.2, and the application to Theorem 1.4 all force odd dimension
+$2n+1$.}
+----- English, file components/135_expose_XIX_section_2.tex, page 332 -----
+Recall that $\operatorname{Ev}(H_s,\mathbb Q_\ell)$ is the orthogonal
+complement of the image of $H^{2n}(X,\mathbb Q_\ell)$ in
+$H^{2n}(H_s,\mathbb Q_\ell)$, and that this image equals the subgroup of
+monodromy invariants (XVIII 5.6.10).
+
+\subsubsection*{Proof.}
+The projective line $\mathbb P^1$ is simply connected.  Hence
+$\pi_1(\ell-S,s)$ is topologically generated by the inertia subgroups at the
+points of $S$ and their conjugates.  Its image in
+$\operatorname{GL}(H^{2n}(H_s,\mathbb Q_\ell))$ is therefore topologically
+generated by the transformations
+\[
+x\longmapsto x-(-1)^n(x\cdot\delta)\delta,
+\]
+where $\delta$ is conjugate to a vanishing cycle.\footnote{The print gives
+$H^n(H_s)$ at this point, although every surrounding occurrence and the
+statement of the proposition use the middle degree $H^{2n}(H_s)$.}
+Consequently, the image of $H^{2n}(X,\mathbb Q_\ell)$ in
+$H^{2n}(H_s,\mathbb Q_\ell)$ is the orthogonal complement of the subspace
+generated by the vanishing cycles and their conjugates; thus
+$\operatorname{Ev}(H_s,\mathbb Q_\ell)$ is generated by those cycles and
+their conjugates.
+
+For a \underline{generic} Lefschetz pencil, the arguments of XVIII §6 show
+that the vanishing cycles attached to the different points of $S$ are
+conjugate to one another.
+
+Let $W\subset\operatorname{Ev}(H_s,\mathbb Q_\ell)$ be a nonzero invariant
+subspace.  There exist a conjugate $\delta$ of a vanishing cycle and an
+element $v\in W$ such that $(v,\delta)\ne0$; this is where condition (LV) is
+used.  Since
+\[
+v-(-1)^n(v\cdot\delta)\delta\in W,
+\]
+we have $\delta\in W$.\footnote{The print uses the undefined exponent $m$ in
+this second occurrence; the immediately preceding reflection and the
+Picard--Lefschetz formula give $n$.}  The subspace $W$, containing one
+vanishing cycle and all its conjugates, is therefore
+$\operatorname{Ev}(H_s,\mathbb Q_\ell)$.  The argument remains valid after
+extending the coefficient field $\mathbb Q_\ell$, proving absolute
+irreducibility.
+
+\subsubsection*{Remark 2.2.}
+If condition (LV) is omitted, the preceding arguments still show that every
+invariant subspace of $H^{2n}(H_s,\mathbb Q_\ell)$ either contains
+$\operatorname{Ev}(H_s,\mathbb Q_\ell)$ or is contained in the image of
+$H^{2n}(X,\mathbb Q_\ell)$.  The same assertion holds for $X$ of even
+dimension (and for every Lefschetz pencil).
+----- English, file components/136_expose_XIX_section_3.tex, page 332 -----
+\section*{3. Proof of 1.3}
+----- English, file components/136_expose_XIX_section_3.tex, page 333 -----
+\subsubsection*{3.1.}
+Under the hypotheses of the theorem, it remains to prove that 1.5(b) does
+not hold.  The case $h^{0,2n}\ne0$ will be treated by Katz in XXI 4.1 (the
+condition $h^{0,2n}\ne0$ is equivalent to
+\[
+  \sum_i a_i-(2n+r+1)\geq0,
+\]
+this number being the integer $m$ such that
+$\Omega_V^{2n}\simeq\mathcal O(m)$).
+\footnote{The print writes $d_i$ in this sum, although the multidegree is
+denoted by $(a_i)$.}
+The results of the present expos\'e will not be used again in the remainder
+of the seminar, so there is no vicious circle.
+
+\subsubsection*{3.2.}
+When $k=\mathbb C$, one proves 1.3 by observing that if 1.5(b) holds, the
+cohomology of $V$ is purely of type $(n,n)$, since algebraic cohomology is
+of type $(n,n)$.  This occurs only in the exceptional cases excluded in
+1.3 (XI 2.9).  By the Lefschetz principle, 1.3 is therefore true in
+characteristic zero.
+
+\subsubsection*{Proposition 3.3.}
+Assume the hypotheses of 1.4, and suppose that (b) holds.  Let
+$\operatorname{Ev}(V,\mathbb Q)$ be the $\mathbb Q$-vector subspace of
+$\operatorname{Ev}(V,\mathbb Q_\ell(n))$ generated by the algebraic
+cohomology classes.
+
+\begin{enumerate}[label=(\alph*)]
+\item There is an isomorphism
+  \[
+  \operatorname{Ev}(V,\mathbb Q)\otimes\mathbb Q_\ell
+  \xrightarrow{\ \sim\ }
+  \operatorname{Ev}(V,\mathbb Q_\ell(n)).
+  \]
+  On $\operatorname{Ev}(V,\mathbb Q)$ the intersection form is rational
+  and definite, of sign $(-1)^n$.
+\item The vanishing cycles and their conjugates belong to
+  $\operatorname{Ev}(V,\mathbb Q)$; there they form an irreducible root
+  system of type $A$, $D$, or $E$.
+\item The monodromy group (the image of $\pi_1(\ell-S,\bar s)$ in
+  $\operatorname{GL}(\operatorname{Ev}(V,\mathbb Q))$) is finite; it is the
+  Weyl group of the root system in (b).\footnote{The print repeatedly says
+  ``groupe de Weil''; the group attached to a root system is its Weyl
+  group.}
+\end{enumerate}
+
+Apart from definiteness of the intersection form, (a) follows because the
+intersection form is nondegenerate on
+$\operatorname{Ev}(V,\mathbb Q_\ell(n))$ (by (LV)) and rational on
+$\operatorname{Ev}(V,\mathbb Q)$.
+
+Condition 1.4(b) says equivalently that there are algebraic cycles on $V$,
+modulo numerical equivalence, which are not invariant under monodromy; this
+condition is therefore independent of $\ell$.  Let $x$ be such an algebraic
+cycle, and let $\delta$ be the vanishing cycle associated with $s_0\in S$
+and with a path $c$ from $\bar s$ (which defines $V$) to $s_0$.  For a
+suitable $c$, $(x,\delta)\ne0$.  The Galois transform
+\[
+  \sigma(x)=x-(-1)^n(x,\delta)\delta
+\]
+is again algebraic; hence $(x,\delta)\delta$ is algebraic, the image of a
+cycle $y$ independent of $\ell$.  The rational number
+\[
+  \frac{(-1)^n}{2}(y,y)=(x,\delta)^2
+\]
+is consequently independent of $\ell$.  It is a square in every
+$\mathbb Q_\ell$, hence a square in $\mathbb Q$; thus, up to sign,
+$(x,\delta)$ belongs to $\mathbb Q$ and is independent of $\ell$.  This
+shows not only that $\delta\in\operatorname{Ev}(V,\mathbb Q)$, but also that
+the algebraic cycle modulo numerical equivalence
+\[
+  \pm\delta=\frac{\sigma(x)-x}{(x,\delta)}
+\]
+is independent of $\ell$.
+----- French corrections on page 332 -----
+[id C761] kind misprint_pass; French file expose_XIX_body.tex
+OLD: leur conjugués:
+NEW: leurs conjugués:
+FRENCH CONTEXT (corrected, after the fix): ell))$ est donc (topologiquement) engendrée par les $x \longrightarrow x - (-1)^n(x\ \delta)\delta$ , pour $\delta$ conjugué à un cycle évanescent. L'image de $H^{2n}(X, \mathbb{Q}_\ell)$ dans $H^{2n}(H_s, \mathbb{Q}_\ell)$ est donc l'orthogonal du sous-espace engendré par les cycles évanescents et leurs conjugués: $\mathrm{Ev}(H_s, \mathbb{Q}_\ell)$ est engendré par les cycles évanescents et leurs conjugués.
+
+Pour un pinceau de Lefschetz \underline{générique} , les arguments du n° 6 de XVIII montrent encore que les cycles évanescents $\delta$ relatifs aux différents points de $S$ sont conjugués entre eux.
+
+S
+
+[id C762] kind misprint_pass; French file expose_XIX_body.tex
+OLD: leur conjugués.
+NEW: leurs conjugués.
+FRENCH CONTEXT (corrected, after the fix): e des invariants sous le groupe de monodromie (XVIII 5.6.10).
+
+
+%%%%%%%%%%  scan idx 339  |  folio 332  %%%%%%%%%%
+
+La droite projective $\mathbb{P}^1$ est simplement connexe. Le groupe $\pi_1(\ell - S, s)$ est donc (topologiquement) engendré par les sous-groupes d'inertie en les points de $S$ - et leurs conjugués. Son image dans $\mathrm{GL}(H^{2n}(H_s, \mathbb{Q}_\ell))$ est donc (topologiquement) engendrée par les $x \longrightarrow x - (-1)^n(x\ \delta)\delta$ , pour $\delta$ conjugué à un cycle évanescent. L'image de $H^{2n}(X, \mathbb{Q}_\ell)$ dans $H^{2n}(H_s, \mathbb{Q}_\ell)$ est donc l'orthogonal d
+
+=================== PAGE 335 ===================
+----- English, file components/136_expose_XIX_section_3.tex, page 334 -----
+
+
+An algebraic cycle on a variety $V$ is always defined over a finite
+extension of any field of definition of $V$.  It follows that
+$\pi_1(\ell-S,s)$ acts on $\operatorname{Ev}(V,\mathbb Q)$ through a finite
+group.  This group is generated by the reflections associated with the
+vanishing cycles $\delta$ and their conjugates (XVIII 6.6.1 and Section 2).
+The cycles $\delta$ and their conjugates therefore form a root system whose
+Weyl group is the monodromy group.  Moreover, all roots of this root system
+are conjugate under the Weyl group; it is of type $A$, $D$, or $E$.
+
+Up to a scalar, the intersection form is the unique invariant form under
+the Weyl group.  It is therefore definite.  Its sign is determined by
+computing
+\[
+  (\delta,\delta)=2(-1)^n.
+\]
+
+\subsubsection*{Proposition 3.4.}
+If $k=\mathbb C$, then under the hypotheses of 1.4 the following conditions
+are equivalent:
+\begin{enumerate}[label=(\roman*)]
+\item the monodromy group is finite;
+\item the vanishing cohomology $\operatorname{Ev}(V)$ is purely of type
+  $(n,n)$.
+\end{enumerate}
+
+Let $\widetilde X\to\ell$ be the family whose fibers are the hyperplane
+sections in the pencil $\ell$, and let $V_s$ be the fiber at
+$s\in\ell(\mathbb C)$.  The $\operatorname{Ev}(V_s)$ form an algebraic
+variation of Hodge structures on $\ell$.  By the fixed-part theorem
+[2, 4.1.2], applied to a finite covering of $\ell$ (cf. [2, 4.1.3.3]), (i)
+implies that the Hodge structure on $\operatorname{Ev}(V_s)$ is locally
+constant.  The monodromy group therefore acts by automorphisms of the Hodge
+structure.  For a Picard--Lefschetz transformation $T$,
+$\operatorname{Im}(T-1)$ is a rank-one Hodge substructure, hence is of type
+$(n,n)$ and is generated by a vanishing cycle $\delta$.  Since the
+vanishing cycles are of type $(n,n)$, all of
+$\operatorname{Ev}(V_s)$ is of that type.
+----- English, file components/136_expose_XIX_section_3.tex, page 335 -----
+Conversely, if $\operatorname{Ev}(V)$ is purely of type $(n,n)$, the
+intersection form on $\operatorname{Ev}(V)$ is definite and the monodromy
+group is finite (cf. [2, 4.1.3.3]).
+
+\subsubsection*{Remark 3.5.}
+If the equivalent conditions of 3.3 hold, the argument of 3.3 shows that
+the vanishing cycles and their conjugates form a root system of type $A$,
+$D$, or $E$, whose Weyl group is the monodromy group.
+
+\subsubsection*{3.6.}
+Let us prove 1.3 when $k$ has finite characteristic different from $2$.
+Let $S=\operatorname{Spec}(\mathcal V)$ be the spectrum of a discrete
+valuation ring of mixed characteristic with residue field $k$, and let
+$X\subset\mathbb P_S^{2n+d}$ be a complete intersection of relative
+dimension $2n+1$ and multidegree $(a_1,\ldots,a_{d-1})$ over $S$.  Let
+$\ell$ be a Lefschetz pencil of sections of $X$ by hypersurfaces of degree
+$a_d$ (in the special fiber, $\ell_s$ is a Lefschetz pencil for $X_s$).
+Let
+\[
+  f:\widetilde X\longrightarrow\ell\simeq\mathbb P^1_S
+\]
+be the family whose fibers are the sections in the pencil.  The exceptional
+locus $T\subset\ell$ is \`etale over $S$ (XVII 6; here one uses
+$p\ne2$).  The sheaf $R^{2n}f_*\mathbb Q_\ell$ is locally constant on
+$\ell-T$; it is therefore tamely ramified, and its monodromy is the same in
+characteristic $p$ as in characteristic zero.  If 1.5(b) holds, it follows
+from 3.3(c) and 3.4 that the cohomology group $H^{2n}(V)$ of complex
+complete intersections of dimension $2n$ and multidegree
+$\underline a$ is purely of type $(n,n)$.  This occurs only in the cases
+excluded by 1.3 (XI 2.9).
+----- English, file components/137_expose_XIX_section_4.tex, page 335 -----
+\section*{4. A second complement to XVIII}
+
+In this section we work over $\mathbb C$ and with integral, classical
+cohomology.  Using methods closer to Lefschetz's, we revisit some of the
+results of XVIII.  There they were proved only after tensoring with
+$\mathbb Q$ (or rather with $\mathbb Q_\ell$, which amounts to the same
+thing).
+----- English, file components/137_expose_XIX_section_4.tex, page 336 -----
+\subsubsection*{4.1.}
+Let $X\subset\mathbb P$ be a smooth complex projective variety, pure of
+dimension $n+1$, and let $\ell$ be a Lefschetz pencil of hyperplane
+sections of $X$, with axis $A$.  We also write $\ell$ for the parameter
+space of the pencil, which is isomorphic to $\mathbb P^1$.  Let
+$S\subset\ell$ be the set of exceptional values.  For $s\in\ell$, write
+$H_s$ for the corresponding hyperplane section of $X$ (of dimension $n$).
+
+Let $T(A)$ be a closed tubular neighborhood of $A\cap X$ in $X$, whose
+boundary is transverse to every $H_s$.
+
+Choose two points $0,\infty\in\ell-S$, and let
+$\alpha:\ell\to\mathbb P^1(\mathbb C)$ be an orientation-preserving
+diffeomorphism that sends $0$ to $0$, $\infty$ to $\infty$, and $S$ to the
+circle of radius one centered at $0$.
+\footnote{The print gives $\ell-S$ as the domain of $\alpha$, although the
+same sentence evaluates $\alpha$ on $S$; the required domain is $\ell$.}
+The composite $\alpha f$ of $\alpha$ with the projection to $\ell$ makes
+$X-T(A)^\circ$ a singular fibration in manifolds with boundary over
+$\mathbb P^1(\mathbb C)$ (one singularity above each point of
+$\alpha(S)$).  Write $c_s$ for the straight segment joining $0$ to
+$\alpha(s)$.
+
+Suppressing $\alpha$ from the notation, the picture is
+\begin{center}
+\begin{tikzpicture}[x=1.2cm,y=1.2cm]
+  \coordinate (O) at (0,0);
+  \coordinate (L) at (-1.8,1.8);
+  \coordinate (S2) at (0,2.8);
+  \coordinate (S1) at (2.2,2.0);
+  \draw (O)--(L);
+  \draw (O)--(S2);
+  \draw (O)--(S1);
+  \node[right] at (O) {$0$};
+  \node[above right] at (S2) {$s_2$};
+  \node[above right] at (S1) {$s_1$};
+  \node[right] at (0,1.65) {$c_2$};
+  \node[below right] at (1.25,1.14) {$c_1$};
+  \fill (-0.73,0.76) circle (0.035);
+  \fill (-0.55,0.91) circle (0.035);
+  \fill (-0.37,1.03) circle (0.035);
+\end{tikzpicture}
+\end{center}
+
+Near $s\in S$ and the singular point $x_s$ of $H_s\subset X$, suitable
+local coordinates put us in the situation studied in XIV 3.2.  If
+$\alpha$ is chosen holomorphic near $s$, one can even choose local
+coordinates on $X$ and $\ell$ in which $f$ is written
+$\sum z_i^2$ and $\alpha^{-1}(c_s)$ is given by ``the $z_i$ are real and
+positive.''  Above the intersection of a neighborhood of $s$ with
+$\alpha^{-1}(c_s)-\{s\}$, consider the bundle of real spheres
+$\Delta'_s\subset X$ defined by ``the $z_i$ are real.''  As $t\to s$, the
+fiber $\Delta'_{st}$ of $\Delta'_s$ at $t$ tends to $x_s$.
+
+Let $\Delta_s$ denote the union of $\{x_s\}$ and a sphere bundle over
+$\alpha^{-1}(c_s)-\{s\}$, contained in $X-T(A)$ and extending
+$\Delta'_s$.  Then $\Delta_s$ is an embedded disk in $X$ whose boundary
+$H_0\cap\Delta_s$ is a sphere representing the vanishing cycle $\delta_s$
+at $s$, transported to $H_0$ along the path $\alpha^{-1}(c_s)$.
+----- French corrections on page 335 -----
+[id C763] kind misprint_pass; French file expose_XIX_body.tex
+OLD: conditions équivalentes de 3.3 sont vérifiées
+NEW: conditions équivalentes de 3.4 sont vérifiées
+FRENCH CONTEXT (corrected, after the fix): m{Ev}(V_s)$ tout entier l'est.
+
+Réciproquement, si $\mathrm{Ev}(V)$ est purement de type $(n, n)$ , la forme d'intersection sur $\mathrm{Ev}(V)$ est définie et le groupe de monodromie fini (cf. [2] 4.1.3.3).
+
+
+%%%%%%%%%%  scan idx 342  |  folio 335  %%%%%%%%%%
+
+\underline{Remarque} 3.5 \quad Si les conditions équivalentes de 3.4 sont vérifiées, on voit comme en 3.3 que les cycles évanescents (et leurs conjugués) forment un système de racines de type $A$, $D$ ou $E$ dont le groupe de monodromie est le groupe de Weyl.
+
+3.6. \quad Prouvons 1.3 pour $k$ de caractéristique finie $\neq 2$ . Soient $S = \mathrm{Spec}(V)$ le spectre d'un anneau 
+
+=================== PAGE 337 ===================
+----- (English text of page 336: shown above in this file) -----
+----- English, file components/137_expose_XIX_section_4.tex, page 337 -----
+Apply Morse theory to the function $|\alpha f|^2$ to study how the
+homotopy type of
+\[
+ \{x\in X\mid x\in T(A)\ \text{or}\ |\alpha f(x)|^2\leq r\}
+\]
+changes as $r$ increases.  Put
+\[
+ X^- = \{x\in X\mid x\in T(A)\ \text{or}\ \alpha f(x)\ne\infty\}.
+\]
+One finds that the inclusions
+\[
+ H_0\cup\bigcup_{s\in S}\Delta_s
+ \hookrightarrow
+ T(A)\cup H_0\cup\bigcup_{s\in S}\Delta_s
+ \hookrightarrow X^-
+\]
+are homotopy equivalences.  Morse theory also shows that $X-X^-$ can be
+deformation-retracted onto a subcomplex of real dimension at most $n$.
+Altogether this gives the following result.
+
+\subsubsection*{Theorem 4.2.}
+There exists a compact subcomplex $\Sigma$ of real dimension at most $n$ in
+$H_\infty^{\mathrm{aff}}=H_\infty-A$ such that the inclusion
+\[
+ H_0\cup\bigcup_{s\in S}\Delta_s\longrightarrow X-\Sigma
+\]
+is a homotopy equivalence.
+
+\subsubsection*{4.3.}
+Removing $\Sigma$ has no effect on the cohomology, homology, or homotopy
+groups of $X$ in degrees $i\leq n$.  Since
+$H_0\cup\bigcup_{s\in S}\Delta_s$ is obtained from $H_0$ by attaching
+$(n+1)$-disks along spheres representing the vanishing cycles, homology
+gives\footnote{The print writes $V_0$ in this sequence and in the diagram
+below, but Section 4 defines the fiber as $H_0$.}
+\[
+ \mathbb Z^S\longrightarrow H_n(H_0)\longrightarrow H_n(X)
+ \longrightarrow0.
+\]
+The analogous exact sequence in cohomology, together with the sequence
+deduced from it by Poincar\'e duality, forms the commutative diagram
+\begin{equation}\tag{4.3.1}
+\begin{tikzcd}[row sep=large,column sep=large]
+{} & \mathbb Z^S & {} & {} \\
+\mathbb Z^S \arrow[r,"{\sum n_s\delta_s}"] &
+H^n(H_0) \arrow[u,"{(\ ,\delta_s)}"'] \arrow[r] &
+H^{n+2}(X) \arrow[r] & 0 \\
+{} & H^n(X) \arrow[u] \arrow[ur,"{\eta\wedge}"'] & {} & {} \\
+{} & 0 \arrow[u] & {} & {}
+\end{tikzcd}
+\end{equation}
+----- English, file components/138_expose_XIX_section_5_and_bibliography.tex, page 337 -----
+\section*{5. The exceptional cases of the Noether theorem}
+----- English, file components/138_expose_XIX_section_5_and_bibliography.tex, page 338 -----
+In this section we continue to work over $\mathbb C$, with integral
+cohomology.
+
+\subsubsection*{5.1.}
+Let $2n$, $d$, and $\underline a=(a_1,\ldots,a_d)$, with $d\geq1$ and
+$a_i\geq2$, be such that the middle cohomology of smooth complete
+intersections $V$ of dimension $2n$ and multidegree $\underline a$ is
+purely of type $(n,n)$.  In other words, either $n=0$, or
+$(2n;\underline a)$ is one of $(2n;2)$, $(2n;2,2)$, and $(2;3)$
+(XI 2.9).
+
+Suppose that $V$ is obtained from a complete intersection
+$X\subset\mathbb P^{2n+d}$ (respectively,
+$X\subset\mathbb P^{2n+d+1}$) of dimension $2n+1$ and multidegree
+$(a_1,\ldots,a_{d-1})$ (respectively, $(a_1,\ldots,a_d)$) by taking a
+section by a hypersurface of degree $a_d$ (respectively, a hyperplane
+section) belonging to a Lefschetz pencil $\ell$.
+
+By (4.3.1), the vanishing part $\operatorname{Ev}(V)$ of $H^{2n}(V)$,
+which equals its primitive part, is generated over $\mathbb Z$ by the
+vanishing cycles.  It is the orthogonal complement of the power $\eta^n$
+of the cohomology class $\eta$ of a hyperplane section.
+
+Since the intersection form on $H^{2n}(V)$ is unimodular and
+$\eta^n$\footnote{The print has $\eta^{2n}$ in the primitivity assertion,
+but that class lies in degree $4n$; both the surrounding discussion and the
+next display require $\eta^n\in H^{2n}(V)$.} is not $b y$, with $b>1$, for
+another cohomology class $y$ (XI 1.6(iv)), the
+discriminant of the intersection form on $\operatorname{Ev}(V)$ is
+\[
+ (\eta^n,\eta^n)=\prod_i a_i.
+\]
+----- French corrections on page 337 -----
+[id C764] kind misprint_pass; French file expose_XIX_body.tex
+OLD: en attachant des $n+1$-disque le long de sphères
+NEW: en attachant des $n+1$-disques le long de sphères
+FRENCH CONTEXT (corrected, after the fix): a_s \longrightarrow X - \Sigma
+\end{equation*}
+\underline{soit une équivalence d'homotopie.}
+
+4.3 \quad La soustraction de $\Sigma$ est sans effet sur les groupes de cohomologie, d'homologie ou d'homotopie d'indice $i \leq n$ de $X$ . Puisque $H_o \cup \bigcup_{s \in S} \Delta_s$ se déduit de $H_o$ en attachant des $n+1$-disques le long de sphères représentant les cycles évanescents, on trouve en homologie
+
+\begin{equation*}
+\mathbb{Z}^S \longrightarrow H_n(H_o) \longrightarrow H_n(X) \longrightarrow 0 \ .
+\end{equation*}
+La suite exacte analogue en cohomologie, et celle qui s'en déduit par dualité de Poincaré, forment un diagramme commutati
+
+=================== PAGE 365 ===================
+----- English, file components/147_expose_XXI_title_introduction_and_definition_1_0.tex, page 364 -----
+\vspace{1.5cm}
+\section*{Contents}
+\begin{description}
+\item[0.] Introduction \hfill 1
+\item[1.] The Hasse--Witt matrix of a complete intersection \hfill 2
+\item[2.] Coniveau over a finite field of definition \hfill 14
+\item[3.] Application to complete intersections \hfill 16
+\item[4.] Conclusions \hfill 19
+\item[5.] Integrality theorems \hfill 21
+\end{description}
+
+\clearpage
+\section*{0. Introduction}
+
+Let $X$ be a smooth projective variety of dimension $n\geq3$, let $Y(d)$
+be a section by a hypersurface of degree $d$, and let
+$E^{n-1}(Y(d),\mathbb Q_\ell)$ be the ``vanishing'' cohomology of $Y(d)$
+(XVIII~5.4.4).  The aim of this exposé is to prove that, for $d$
+sufficiently large and $Y(d)$ sufficiently general, it is not true that the
+whole of $E^{n-1}(Y(d),\mathbb Q_\ell)$ ``comes'' from the groups $H^i$,
+$i<n-1$, of smooth proper algebraic varieties by means of algebraic
+correspondences.  In characteristic zero this follows trivially from the
+Hodge bigrading on complex cohomology and from the fact that, in coherent
+cohomology,
+\begin{equation*}
+\dim H^{n-1}(Y(d),\mathcal O_{Y(d)})\longrightarrow\infty
+\qquad\text{as }d\longrightarrow\infty.
+\end{equation*}
+The print has the evident typographical forms \emph{et de démontrer} and
+\emph{suffisament}; the readings used above are \emph{est de démontrer} and
+\emph{suffisamment}.
+----- English, file components/147_expose_XXI_title_introduction_and_definition_1_0.tex, page 365 -----
+In characteristic $p$, the method again relates the coherent group
+$H^{n-1}(Y(d),\mathcal O_{Y(d)})$ to the étale group
+$H^{n-1}_{\mathrm{et}}(Y(d),\mathbb Q_\ell)$.  To do so, one works over a
+finite base field.  The two are then linked by the zeta function of $Y(d)$:
+this function is expressed in terms of $\ell$-adic cohomology, while its
+``reduction modulo $p$'' is expressed in terms of coherent cohomology
+(cf.~XXII~3.9).  For complete intersections this method works without
+difficulty, owing to the detailed knowledge of both kinds of cohomology
+(étale and coherent) in that case.  It yields the main result, Theorem~4.2,
+as a consequence of a result on Hasse--Witt operations, Theorem~1.4 (see
+1.0).
+
+There are heuristic arguments due to A. Grothendieck, based on the yoga of
+crystalline cohomology, which make the general statement plausible for every
+smooth projective $X$, by essentially the same method.
+
+Even in the special case of complete intersections, the proof makes
+essential use in 2.2 of Theorem~2.1 on the integrality of the eigenvalues of
+Frobenius, recently proved by P. Deligne and proved here in the Appendix
+(\S 5).  The print calls this ``Appendix I,'' while the title and the document
+structure identify Deligne's Appendix as \S 5.
+
+\section*{1. The Hasse--Witt matrix of a complete intersection}
+----- English, file components/147_expose_XXI_title_introduction_and_definition_1_0.tex, page 366 -----
+\subsubsection*{Definition 1.0.}
+A proper scheme over a field $k$ of characteristic exponent $p$ is called
+\emph{special} if the additive $p$-linear operation
+\begin{equation}\tag{1.0.1}
+\mathfrak F_p:\mathcal O_X\longrightarrow\mathcal O_X,
+\qquad g\longmapsto g^p,
+\end{equation}
+induces a nilpotent operation
+\begin{equation}\tag{1.0.2}
+\mathfrak F_p:H^{\dim X}(X,\mathcal O_X)
+\longrightarrow H^{\dim X}(X,\mathcal O_X).
+\end{equation}
+Equivalently, if
+$M=\dim_k H^{\dim X}(X,\mathcal O_X)$, the $p^M$-linear operation
+\begin{equation}\tag{1.0.3}
+\mathfrak F_p^M=\mathfrak F_{p^M}:\mathcal O_X\longrightarrow\mathcal O_X,
+\qquad g\longmapsto g^{p^M},
+\end{equation}
+annihilates $H^{\dim X}(X,\mathcal O_X)$.
+
+Recall from \textup{[2]} that, for every $i\in\mathbb Z$, the homomorphism
+\begin{equation*}
+H^i(X,\mathcal O_X)\xrightarrow{\ \mathfrak F_p\ }H^i(X,\mathcal O_X)
+\end{equation*}
+induced by (1.0.1) is classically called the \emph{Hasse--Witt
+homomorphism} on $H^i(X,\mathcal O_X)$.  Notice that, when $p=1$, saying
+that $X$ is non-special means simply that
+$H^{\dim X}(X,\mathcal O_X)\ne0$.
+----- English, file components/148_expose_XXI_theorem_1_1_and_proposition_1_1_5.tex, page 366 -----
+\subsubsection*{Theorem 1.1.}
+Fix a characteristic exponent $p$, a dimension $n\geq1$, an integer
+$r\geq1$, and a multidegree $(d_1,\dots,d_r)$.  If
+\begin{equation}\tag{1.1.0}
+\sum_{i=1}^{r}d_i\geq(n+r)+1,
+\end{equation}
+then, among all complete intersections of dimension $n$ in
+$\mathbb P^{n+r}$ having multidegree $(d_1,\dots,d_r)$ in characteristic
+$p$, a ``sufficiently general'' member is non-special in the sense of 1.0.
+----- French corrections on page 365 -----
+[id C765] kind misprint_pass; French file expose_XXI_body.tex
+OLD: \underline{Un schéma propre sur un corps} $k$
+NEW: \underline{Un schéma propre} $X$ \underline{sur un corps} $k$
+FRENCH CONTEXT (corrected, after the fix): omplètes, la démonstration utilise de façon essentielle (2.2) le théorème d'intégralité des valeurs propres de Frobenius 2.1, démontré récemment par P. DELIGNE et prouvé ici dans l'Appendice ($\S$ 5).
+
+
+1. \underline{La matrice de Hasse-Witt d'une intersection complète}
+
+\underline{Définition} 1.0. \underline{Un schéma propre} $X$ \underline{sur un corps} $k$ \underline{d'exposant caractéristique} $p$ \underline{s'appelle} spécial \underline{si l'opération additive} $p$-\underline{linéaire}
+
+\begin{equation}\tag{1.0.1}
+\mathfrak{F}_p : \mathcal{O}_X \longrightarrow \mathcal{O}_X \quad , \quad g \longmapsto g^p
+\end{equation}
+\underline{induit une opérat
+
+=================== PAGE 395 ===================
+----- English, file components/161_expose_XXI_section_5_5.tex, page 394 -----
+\medskip
+\noindent\emph{Proof.}
+If $n\leq0$, the theorem is trivial.  If $n=1$, its cases $i=0$ and $i=2$
+follow from Lemma~5.2.1, while the case $i=1$ follows from
+Lemma~5.5.1.  We then proceed by induction on $n$, as in the proof of
+Theorem~5.2.2.
+
+\subsubsection*{Corollary 5.5.3.}
+Let $X$ be a separated scheme of finite type and dimension $n$ over
+$\mathbb F_q$.  Then the eigenvalues $\alpha$ of the geometric Frobenius
+endomorphism $F$ of $\underline H_c^i(X,\mathbb Q_\ell)$ are algebraic
+integers.  Moreover:
+\begin{enumerate}[label=(\roman*)]
+\item for $\ell'\ne p$, $\alpha$ is an $\ell'$-adic unit;
+\item for $i>n$, $\alpha$ is divisible by $q^{i-n}$;
+\item for $i\leq n$ (respectively, $i\geq n$),
+  $q^i\alpha^{-1}$ (respectively, $q^n\alpha^{-1}$) is an algebraic integer;
+\item for $0<i$, the complex absolute values of $\alpha$ satisfy
+  \[
+  |\alpha|\leq q^{i-\frac12}
+  \qquad\text{and}\qquad
+  |\alpha|\leq q^n.
+  \]
+\end{enumerate}
+
+\medskip
+\noindent\emph{Proof.}
+By Theorem~5.2.2, $\alpha$ and $q^{n-i}\alpha$ are algebraic integers.
+Assertions (i)--(iii) then follow from Theorem~5.4.  For $i>n$, assertion
+(iv) follows from Theorem~5.5.2.  To obtain (iv) when $i\leq n$, we must
+combine Theorem~5.5.2 with the Riemann hypothesis for curves.
+----- English, file components/161_expose_XXI_section_5_5.tex, page 395 -----
+We argue by induction on $n$, the case $n=0$ being trivial.  If $U$ is an
+open subset of $X$ whose complement $Z$ has dimension less than $n$, the
+exact sequence
+\[
+\underline H_c^i(U,\mathbb Q_\ell)\longrightarrow
+\underline H_c^i(X,\mathbb Q_\ell)\longrightarrow
+\underline H_c^i(Z,\mathbb Q_\ell)
+\]
+shows that it is enough to prove the desired assertion for $U$.  After
+first replacing $X$ by $X_{\mathrm{red}}$, this reduces us to the case in
+which $X$ is smooth and affine and there is a smooth morphism
+$f:X\longrightarrow S$ satisfying:
+\begin{enumerate}[label=(\alph*)]
+\item $\dim S\leq n-1$;
+\item the fibers of $f$ are purely one-dimensional.
+\end{enumerate}
+Since the fibers of $f$ are affine curves, one has
+\[
+R^0f_!\mathbb Q_\ell=0.
+\]
+By Weil~[4],
+\begin{equation}\tag{5.5.3.1}
+\log\bigl|R^1f_!\mathbb Q_\ell\bigr|\leq\frac12,
+\end{equation}
+and Lemma~5.2.1 applied to the fibers of $f$ gives
+\begin{equation}\tag{5.5.3.2}
+\log\bigl|R^2f_!\mathbb Q_\ell\bigr|\leq1.
+\end{equation}
+The Leray spectral sequence for $f$ reduces here to a long exact sequence;
+the relevant part is
+\[
+\underline H_c^{i-2}(S,R^2f_!\mathbb Q_\ell)\longrightarrow
+\underline H_c^i(X,\mathbb Q_\ell)\longrightarrow
+\underline H_c^{i-1}(S,R^1f_!\mathbb Q_\ell).
+\]
+By (5.5.3.1) (respectively, (5.5.3.2)) and Theorem~5.5.2, the complex
+absolute values of the eigenvalues $\alpha$ of Frobenius on
+$\underline H_c^{i-1}(S,R^1f_!\mathbb Q_\ell)$ (respectively, on
+$\underline H_c^{i-2}(S,R^2f_!\mathbb Q_\ell)$) satisfy
+\[
+|\alpha|\leq q^{i-1+\frac12}=q^{i-\frac12}
+\]
+(respectively,
+\[
+|\alpha|\leq q^{i-2+1}=q^{i-1}\leq q^{i-\frac12}).
+\]
+The corollary follows.
+----- English, file components/161_expose_XXI_section_5_5.tex, page 396 -----
+\medskip
+\noindent\emph{Source note.}
+The diplomatic French preserves three printed slips: the coefficient
+$c_k$ is said to belong to $\sigma Z$ although the displayed series and
+the factor $1/k$ make it a coefficient of $\log\sigma Z$; the proof of
+Theorem 5.5.2 refers to itself rather than to the parallel induction in
+Theorem 5.2.2; and the proof of Corollary 5.5.3 says to prove Theorem 5.2.2
+for $U$ although the argument is proving assertion (iv) of the corollary.
+The corrected French and English give the coherent readings.  Direct scan
+comparison also restores the notation underlines omitted by the inherited
+French TeX in the statement of Theorem 5.5.2.
+----- English, file components/162_expose_XXI_section_5_6.tex, page 396 -----
+\subsection*{5.6.}
+To obtain results analogous to the preceding ones for cohomology without
+supports, it seems necessary to have resolution of singularities available.
+In dimension at most $1$, the problem is solved by Corollary~5.3.
+
+\subsubsection*{Theorem 5.6.}
+Let $N$ be an integer, and suppose that strong resolution of singularities
+in the sense of Hironaka is available for schemes of finite type over
+$\mathbb F_q$ of dimension at most $N$ (at present one may therefore take
+$N=2$~[1]).  Let $f:X\longrightarrow Y$ be a morphism of schemes of finite
+type over $\mathbb F_q$, and let $\underline G$ be a constructible
+$T$-integral $E$-sheaf on $X$.  If $\dim X\leq N$, then the $E$-sheaves
+$R^if_*\underline G$ on $Y$ are $T$-integral.
+
+\medskip
+\noindent\emph{Proof.}
+We argue by induction on the dimension $n\leq N$ of $X$.  Let
+$j:U\hookrightarrow X$ be an open subset of $X$, smooth and affine, such
+that $\underline G|_U$ is twisted constant and the dimension of its
+complement $Z$ is less than $n$.  By resolution of singularities, the
+sheaves $R^ij_*(j^*\underline G)$ are constructible
+(SGA~5, Expos\'e~I; [2]); for $i>0$ they are supported on $Z$, and for
+$i=0$, $j_*(j^*\underline G)$ differs from $\underline G$ only on $Z$.
+The induction hypothesis therefore shows that it is enough to prove the
+theorem for the sheaf $j^*\underline G$ and the morphisms $j$ and
+$f\circ j$.  Thus we may further suppose that $X$ is smooth and affine and
+that $\underline G$ is twisted constant, that is, comes from a continuous
+representation of the fundamental group of $X$ on a fini
+----- French corrections on page 395 -----
+[id C766] kind misprint_pass; French file expose_XXI_body.tex
+OLD: (\mathrm{resp.} \; |\alpha| \leq q^{i-2+1} \quad = q^{i-1} \leq q^{i-\frac{1}{2}} \qquad .
+NEW: (\mathrm{resp.} \; |\alpha| \leq q^{i-2+1} \quad = q^{i-1} \leq q^{i-\frac{1}{2}}) \qquad .
+FRENCH CONTEXT (corrected, after the fix): mplexes des valeurs propres $\alpha$ de Frobenius agissant sur $\underline{H}^{i-1}_c(S,R^1 f_! \mathbb{Q}_\ell)$ (resp. sur $\underline{H}^{i-2}_c(S,R^2 f_! \mathbb{Q}_\ell)$) vérifient
+
+\begin{equation*}
+|\alpha| \leq q^{i-1+\frac{1}{2}} \quad = q^{i-\frac{1}{2}}
+\end{equation*}
+\begin{equation*}
+(\mathrm{resp.} \; |\alpha| \leq q^{i-2+1} \quad = q^{i-1} \leq q^{i-\frac{1}{2}}) \qquad .
+\end{equation*}
+Le corollaire en résulte.
+
+
+%%%%%%%%%%  scan idx 403  |  folio 396  %%%%%%%%%%
+
+Pour obtenir quelques résultats analogues aux précédents, en cohomologie sans supports, il semble nécessaire de disposer de la résolution des singularités. En dimension $\leq 1$, la solution du problème 
+
+=================== PAGE 398 ===================
+----- English, file components/162_expose_XXI_section_5_6.tex, page 397 -----
+te-dimensional
+$E$-vector space.
+
+Let $R$ be the ring of integers of $E$, let $\lambda$ be a uniformizer, let
+$e$ be the absolute ramification index, and choose an integer
+$b>e/(\ell-1)$.  Since $X$ is smooth, hence normal, and its fundamental
+group is profinite, there is a twisted-constant $R$-sheaf
+$\underline G^\circ$ such that
+\[
+\underline G\simeq\underline G^\circ\otimes_R E.
+\]
+Let $p:X'\longrightarrow X$ be the \'etale covering that trivializes the
+locally constant sheaf
+$\underline G^\circ\otimes_R R/\lambda^b$.  The sheaf $\underline G$ is a
+direct summand of $p_*p^*\underline G$, so it is enough to prove the theorem
+for $p^*\underline G$ and $f\circ p$.  It remains to treat the case in which
+the following conditions hold:
+\[
+(*)\quad
+\begin{minipage}{0.82\linewidth}
+$X$ is smooth and affine, and there is a twisted-constant $R$-sheaf
+$\underline G^\circ$ such that
+$\underline G\simeq\underline G^\circ\otimes_R E$ and
+$\underline G^\circ\otimes_R R/\lambda^b$ is constant.
+\end{minipage}
+\]
+----- English, file components/162_expose_XXI_section_5_6.tex, page 398 -----
+Factor $f$ as a proper morphism followed by an open immersion,
+$f=\bar f\circ j$:
+\begin{center}
+\begin{tikzcd}
+X \arrow[r,hook,"j",swap] \arrow[d,"f"'] &
+X' \arrow[dl,"\bar f"]\\
+Y & {}
+\end{tikzcd}
+\qquad .
+\end{center}
+The theorem has already been proved for $\bar f$ (5.2), so it is enough to
+prove it for $j$.  Applying resolution of singularities to $X'$, we may
+suppose that $X'$ is smooth and that $X$ is the complement in $X'$ of a
+normal-crossings divisor which is a union of smooth divisors.  Hypothesis
+$(*)$ implies that $\underline G$ is tamely ramified along this divisor.
+We then have:
+
+\subsubsection*{Lemma 5.6.1.}
+Let $X$ be a smooth scheme of finite type over $\mathbb F_q$, let $D$ be a
+normal-crossings divisor in $X$ which is a union of smooth divisors $D_i$,
+let $j:U\hookrightarrow X$ be the complement of $D$ in $X$, and let
+$\underline G$ be a twisted-constant $E$-sheaf on $U$, tamely ramified
+along $D$.  If $\underline G$ is $T$-integral, then the sheaves
+$R^ij_*\underline G$ are $T$-integral.
+
+We shall admit the following result (cf. SGA~1, Expos\'e~XIII).
+
+\subsubsection*{Lemma 5.6.2.}
+\begin{enumerate}[label=(\roman*)]
+\item Under the hypotheses of Lemma~5.6.1, let $D'$ be a component of $D$,
+  let $D''$ be the union of the other components, and put
+  $U'=X-D''$ and $D^{\prime\circ}=D'\cap U'$:
+  \begin{center}
+  \begin{tikzcd}
+  {} & D^{\prime\circ}
+    \arrow[r,hook,"j'_D",swap] \arrow[d,"i^\circ"] &
+    D' \arrow[d,"i"]\\
+  U \arrow[r,hook,"j_1",swap] &
+    U' \arrow[r,hook,"j'",swap] & X
+  \end{tikzcd}
+  \qquad .
+  \end{center}
+  Then the base-change map
+  \[
+  i^*Rj'_*(Rj_{1*}\underline G)
+  \longrightarrow
+  Rj'_{D*}\,i^{\circ *}(Rj_{1*}\underline G)
+  \]
+  is an isomorphism, and the sheaves
+  $i^{\circ *}Rj_{1*}\underline G$ are twisted constant and tamely ramified
+  along $D'-D^{\prime\circ}$.
+
+\item If $C$ is a smooth curve on $X$, transverse to $D$ at a smooth point
+  $x$ of $D$,
+  \begin{center}
+  \begin{tikzcd}
+  C\cap U \arrow[r,"j_c",swap] \arrow[d,"k'"] &
+    C \arrow[d,"k"]\\
+  U \arrow[r,"j",swap] & X
+  \end{tikzcd}
+  \qquad ,
+  \end{center}
+  then the base-change map
+  \[
+  k^*Rj_*\underline G\longrightarrow Rj_{c*}\,k^{\prime *}\underline G
+  \]
+  is an isomorphism at $x$.
+\end{enumerate}
+----- English, file components/162_expose_XXI_section_5_6.tex, page 399 -----
+Let us deduce Lemma~5.6.1 from Lemma~5.6.2 by induction on the dimension,
+temporarily admitting Lemma~5.6.1 for curves.  Lemma~5.6.2(ii) and this
+hypothesis show that the sheaves $R^ij_*\underline G$ are $T$-integral at
+every smooth point of $D$.  In particular, in the notation of
+Lemma~5.6.2(i), the sheaves $R^ij_{1*}\underline G$ are $T$-integral.
+Lemma~5.6.2(i), together with the induction hypothesis applied to
+$i^{\circ *}Rj_{1*}\underline G$ and to $j'_D$, therefore shows that the
+sheaves $i^*R^ij_*\underline G$ are $T$-integral, whichever component $D'$
+of $D$ is chosen.  This proves Lemma~5.6.1.
+
+It remains to handle curves.  Under the hypotheses of Lemma~5.6.1, let $x$
+be a point of $X-U$, let $\mathfrak G$ be the Galois group of the fraction
+field of $\widehat{\mathcal O}_{x,X}$, and let $\mathfrak J$ be the inertia
+group.  Denote again by $\underline G$ the representation of $\mathfrak G$
+defined by the sheaf, and let $\bar x$ be a geometric point of $X$ localized
+at $x$.  There are isomorphisms of Galois
+$\mathfrak G/\mathfrak J$-modules
+\[
+(j_*\underline G)_{\bar x}\simeq\underline G^{\mathfrak J},
+\]
+\[
+(R^1j_*\underline G)_{\bar x}\simeq\underline G_{\mathfrak J}(-1),
+\]
+and
+\[
+(R^ij_*\underline G)_{\bar x}=0\qquad\text{for }i\geq2.
+\]
+The assertion follows from Corollary~5.3(a) and Lemma~5.3.1.
+----- French corrections on page 398 -----
+[id C767] kind misprint_pass; French file expose_XXI_body.tex
+OLD: \underline{sont constant tordus, modérément ramifiés le long de}
+NEW: \underline{sont constants tordus, modérément ramifiés le long de}
+FRENCH CONTEXT (corrected, after the fix):  the separate prose block that follows).
+.
+
+\underline{Alors, la flèche de changement de base}
+
+\begin{equation*}
+i^* Rj'_* (Rj_{1*} \underline{G}) \longrightarrow Rj'_{D*}\, i^{o*} (Rj_{1*}\underline{G})
+\end{equation*}
+\underline{est un isomorphisme, et les faisceaux} $i^{o*}Rj_{1*}\underline{G}$ \underline{sont constants tordus, modérément ramifiés le long de} $D' - D^{\prime o}$.
+
+(ii) \underline{Si} $C$ \underline{est une courbe lisse sur} $X$, \underline{transversale à} $D$ \underline{en un point lisse} $x$ \underline{de} $D$,
+
+\begin{center}
+\begin{tikzcd}
+C \cap U \arrow[r, "j_c", swap] \arrow[d, "k'"] & C \arrow[d, "k"] \\
+U \arrow[r, "j", swap] & 
+
+=================== PAGE 429 ===================
+----- English, file components/177_expose_XXII_proof_of_lemma_4_6_6.tex, page 428 -----
+Together with (4.6.19), this proves (4.6.18).
+----- English, file components/178_expose_XXII_ax_theorem_and_proof.tex, page 428 -----
+\section*{5. A theorem of Ax [1] (see also [4], Section 7)}
+
+\subsubsection*{Theorem 5.0.}
+\underline{Let} $V$ \underline{be a hypersurface in} $\mathbb P^{n+1}$ \underline{of degree} $d>0$, \underline{defined
+over} $\mathbb F_q$, \underline{and let} $j$ \underline{be an integer}.  \underline{If}
+
+\begin{equation}\tag{5.0.1}
+jd<n+2,
+\end{equation}
+
+\underline{then}
+
+\begin{equation}\tag{5.0.2}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]],
+\end{equation}
+
+and the reciprocal of every zero or pole of
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\end{equation}
+
+\noindent
+\underline{is of the form} $q^j$ times \underline{an algebraic integer}.
+
+\subsubsection*{Theorem 5.0.bis.}
+\underline{Let} $V_{\mathrm{aff}}$ \underline{be a hypersurface in} $\mathbb A^{n+2}$ \underline{defined by a
+homogeneous form of degree} $d$, \underline{over} $\mathbb F_q$.  \underline{If}
+
+\begin{equation}\tag{5.0.4}
+jd<n+2,
+\end{equation}
+
+\underline{then}
+
+\begin{equation}\tag{5.0.5}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+\underline{In particular},
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\equiv0\mod{q^j},
+\end{equation}
+
+\underline{and consequently}
+
+\begin{equation}\tag{5.0.6 bis}
+\operatorname{card}\bigl(V(\mathbb F_q)\bigr)
+\geq\frac{q^j-1}{q-1}>0,
+\end{equation}
+
+\noindent
+\underline{which improves the Chevalley--Warning theorem}~[8].
+----- English, file components/178_expose_XXII_ax_theorem_and_proof.tex, page 429 -----
+\medskip
+\noindent\emph{Source note.}
+The print numbers the hypothesis in Theorem~5.0 bis as (5.0.7), duplicating
+the number subsequently used for the point-count identity.  The corrected
+French and English layers use the sequential number (5.0.4); the diplomatic
+French preserves the printed number.
+
+\medskip
+\noindent\emph{Proof.}
+The implication (5.0.5) $\Rightarrow$ (5.0.6) is clear on taking the
+coefficient of $t$ in the zeta function.  Assertions (5.0.4) and (5.0.2)
+are equivalent, since
+
+\begin{equation}\tag{5.0.7}
+\operatorname{card}V_{\mathrm{aff}}(\mathbb F_{q^\nu})
+=1+(q^\nu-1)\operatorname{card}V(\mathbb F_{q^\nu}),
+\end{equation}
+
+whence
+
+\begin{equation}\tag{5.0.8}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+=\frac{Z(t,V/\mathbb F_q)}
+{Z(qt,V/\mathbb F_q)(1-t)}
+\end{equation}
+
+and
+
+\begin{equation}\tag{5.0.9}
+Z(t,V/\mathbb F_q)
+=\prod_{i\geq0}
+\left[(1-q^it)Z(q^it,V_{\mathrm{aff}}/\mathbb F_q)\right].
+\end{equation}
+
+\noindent
+Assertions (5.0.2) and (5.0.3) are likewise equivalent, by the theorem of
+Fatou~[3] and the rationality of the zeta function.  Since
+
+\begin{equation}\tag{5.0.10}
+Z(t,V/\mathbb F_q)\in\mathbb Z[[t]],
+\end{equation}
+
+it is enough to prove
+
+\begin{equation}\tag{5.0.11}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in F^j(1+t\mathcal O[[t]]).
+\end{equation}
+
+In view of (4.5.33) and (4.6.4)--(4.6.5), it is enough to show, for
+$\varnothing\ne B\subset\{1,\ldots,n+2\}$, that
+
+\begin{equation}\tag{5.0.12}
+\Delta_B(t)\in F^{j+\operatorname{card}(B)-(n+2)}.
+\end{equation}
+
+We may finish the proof by applying Lemma~4.6.6 once we have proved
+----- English, file components/178_expose_XXII_ax_theorem_and_proof.tex, page 430 -----
+\begin{equation}\tag{5.0.13}
+jd<n+2
+\quad\Longrightarrow\quad
+\bigl(j+\operatorname{card}(B)-(n+2)\bigr)d
+<\operatorname{card}(B).
+\end{equation}
+
+This may be rewritten as
+
+\begin{equation}\tag{5.0.14}
+jd<n+2
+\quad\Longrightarrow\quad
+(j-(n+2))d<\operatorname{card}(B)(1-d).
+\end{equation}
+
+But
+
+\[
+\inf_{\varnothing\ne B\subset\{1,\ldots,n+2\}}
+\operatorname{card}(B)(1-d)
+=(n+2)(1-d),
+\]
+
+so it is enough to prove
+
+\begin{equation}\tag{5.0.15}
+jd<n+2
+\quad\Longrightarrow\quad
+(j-(n+2))d<(n+2)(1-d),
+\end{equation}
+
+which is true.
+
+\medskip
+\noindent\emph{Source note.}
+In (5.0.9) the print has the impossible factor $(1-q^if)$ rather than
+$(1-q^it)$, and the last paragraph cites Lemma~4.4.6 rather than the
+integrality lemma 4.6.6 used there.  Both are corrected above; the diplomatic
+French retains the printed forms.
+----- English, file components/179_expose_XXII_hodge_remark_conjecture_and_final_section.tex, page 430 -----
+\subsubsection*{Remark 5.1.}
+Condition
+
+\begin{equation}\tag{5.1.1}
+jd<n+2
+\end{equation}
+
+admits a cohomological interpretation.  Let $V$ be a \underline{smooth} hypersurface of
+degree $d$ and dimension $n$.  As in XI, 2.1, put, for $a+b=n$,
+
+\begin{equation}\tag{5.1.2}
+h_0^{a,b}
+=\dim H^b(V,\underline{\Omega}_V^a)-\delta_{a,b}
+=\dim E^{a,b}(V),
+\end{equation}
+
+where $E^{a,b}(V)$ is the bidegree-$(a,b)$ component of the vanishing Hodge
+cohomology (compare XVII, 5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\underline{\Omega}_{\mathbb P^{n+1}}^a)
+\hookrightarrow H^b(V,\underline{\Omega}_V^a)\right).
+\end{equation}
+
+Then, by XI, 2.8,
+
+\begin{equation}\tag{5.1.4}
+jd<n+2
+\quad\Longleftrightarrow\quad
+\left[h_0^{a,n-a}=0\quad\text{for }a<j\text{ and }a>n-j\right].
+\end{equation}
+----- French corrections on page 429 -----
+[id C768] kind misprint_pass; French file expose_XXII_body.tex
+OLD: Les assertions (5.0.4) et (5.0.2)
+sont équivalentes
+NEW: Les assertions (5.0.5) et (5.0.2)
+sont équivalentes
+FRENCH CONTEXT (corrected, after the fix): rac{q^j-1}{q-1}>0
+\end{equation}
+
+\noindent
+(\underline{ce qui améliore le th. de CHEVALLEY--WARNING} [8]).
+
+%%%%%%%%%%  scan idx 436  |  folio 429  %%%%%%%%%%
+
+\underline{Démonstration.}
+L'implication (5.0.5) $\Rightarrow$ (5.0.6) est claire, en prenant le
+coefficient de $t$ dans la fonction zêta. Les assertions (5.0.5) et (5.0.2)
+sont équivalentes, compte tenu de ce que
+
+\begin{equation}\tag{5.0.7}
+\operatorname{card}V_{\mathrm{aff}}(\mathbb F_{q^\nu})
+=1+(q^\nu-1)\operatorname{card}V(\mathbb F_{q^\nu}),
+\end{equation}
+
+d'où
+
+\begin{equation}\tag{5.0.8}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+=\frac{Z(t,V/\mathbb F_q)}
+{Z(qt,V/\mathbb F_q)(1-t)}
+\
+
