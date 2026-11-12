@@ -9,7 +9,7 @@ This folder holds the English readers build of SGA 7 (*Monodromy Groups in Algeb
 
 `RECORDS/` holds the build records: change logs, apparatus registers and counts, the French–English glossary and its attestations, editorial decisions, provenance, input verification, compilation logs and the build scripts. Start with `RECORDS/README.md`.
 
-The same build also made the French readers (texte diplomatique, texte corrigé avec apparat, texte de lecture); they are not in this repository.
+The same build also made the French readers (texte diplomatique, texte corrigé avec apparat, texte de lecture), in the French repository: https://github.com/KokunoYumeto/sga-fr/tree/main/raw/pro_returns/SGA7_READERS_20261112
 
 ## Who made it
 
