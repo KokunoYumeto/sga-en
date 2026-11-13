@@ -1,0 +1,35 @@
+--- checkpoint/work/finitude_verdier/build_components.py
++++ SGA4HALF_READERS_RECORDS.zip/work/finitude_verdier/build_components.py
+@@ -12,6 +12,9 @@
+  for lang in ['fr','en']:
+   src=ROOT/'source'/('fr/codex_dip/sga4.5-'+part+'.tex' if lang=='fr' else 'en/sources/components/sga4half_'+part+'_en.tex')
+   text=src.read_text()
++  if part=='8':
++   anchor=r'\section{Catégories triangulées:' if lang=='fr' else r'\section{Triangulated categories:'
++   text=text.replace(anchor,(W/('contents_263_'+lang+'.tex')).read_text()+'\n'+anchor,1)
+   pages=[p for p in P if first<=int(p['printed_page'])<=last]
+   starts=[];cursor=0
+   for p in pages:
+@@ -29,6 +32,13 @@
+     if op['id']=='S45-SOL-1035':
+      old=old.replace(r'\item ','');new=new.replace(r'\item ','')
+     if old not in body and relax(old) in body:old=relax(old);new=relax(new)
++    if op['mode']=='all_scoped':
++     n=body.count(old)
++     if n==0:REPORT.append(dict(lang=lang,page=p['printed_page'],id=op['id'],status='FAILED',count=n,old=old))
++     else:
++      body=body.replace(old,new)
++      REPORT.append(dict(lang=lang,page=p['printed_page'],id=op['id'],status='applied',count=n,before=old,after=new))
++     continue
+     # Explicit local selector for the second definition, not paragraph4.1.
+     sel=body.index(r'\label{VII:4-2}') if op['id']=='S45-SOL-1047' else 0
+     n=body[sel:].count(old)
+@@ -45,6 +55,8 @@
+   dest.write_text(output)
+ 
+ apply('7',233,261)
++apply('8',262,311)
++apply('erratum',312,312)
+ (W/'build_report.json').write_text(json.dumps(REPORT,ensure_ascii=False,indent=2))
+ print('Applied',sum(r['status']=='applied' for r in REPORT),'failed',sum(r['status']=='FAILED' for r in REPORT))
+ for r in REPORT:

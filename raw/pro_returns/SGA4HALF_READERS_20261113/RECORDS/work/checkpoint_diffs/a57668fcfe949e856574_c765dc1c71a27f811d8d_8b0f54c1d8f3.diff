@@ -1,0 +1,20 @@
+--- checkpoint/scripts/unpack_inputs.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/unpack_inputs.py
+@@ -127,6 +127,8 @@
+     rows = []
+     seen = set()
+     for source_row in source_rows:
++        if None in source_row or any(value is None for value in source_row.values()):
++            raise InputError(f"{archive}: a manifest row has the wrong number of columns.")
+         name = str(relative_path(source_row.get("path_in_zip", ""), member=True))
+         if PurePosixPath(name).parts[0] not in expected["prefixes"]:
+             raise InputError(f"{archive}: manifest payload has an unexpected top-level directory.")
+@@ -223,7 +225,7 @@
+         archive_results.append(dict(archive=name, bytes=expected["bytes"], sha256=expected["sha256"],
+                                     verified=True, payload_files=len(rows), payload_bytes=expected["payload_bytes"]))
+         inventory.append((name, rows))
+-    stage_parent = output_dir.parent
++    stage_parent = output_dir if output_dir == ROOT else output_dir.parent
+     if not verify_only:
+         check_no_symlinks(stage_parent)
+         stage_parent.mkdir(parents=True, exist_ok=True)

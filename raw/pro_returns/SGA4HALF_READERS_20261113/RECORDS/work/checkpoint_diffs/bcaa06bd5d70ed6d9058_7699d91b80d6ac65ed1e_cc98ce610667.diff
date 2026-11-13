@@ -1,0 +1,32 @@
+--- checkpoint/scripts/assemble_readers.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/assemble_readers.py
+@@ -32,9 +32,11 @@
+     apply_glossary=module.apply_glossary
+ for lang in ['fr','en']:
+     dest=OUT/lang.upper();dest.mkdir(parents=True,exist_ok=True)
+-    chunks=[]
++    chunks=[];component_hashes={}
+     for c in COMPONENTS:
+-        text=component_path(c,lang).read_text()
++        source=component_path(c,lang)
++        component_hashes[source.relative_to(ROOT).as_posix()]=hashlib.sha256(source.read_bytes()).hexdigest()
++        text=source.read_text()
+         if apply_glossary:
+             text,changes=apply_glossary(text,language=lang,component=c['key']);glossary_changes.extend(changes)
+         # Optional, reviewed terminology corrections are applied in a separate,
+@@ -55,6 +57,7 @@
+         if c['key']=='introduction':chunks.append('% BEGIN ORIGINAL GENERAL CONTENTS\n'+(ROOT/f'work/common/general_contents_{lang}.tex').read_text()+'\n% END ORIGINAL GENERAL CONTENTS\n')
+     raw='\n'.join(chunks)
+     prepared=prepare_body(raw,lang)
++    prepared['input_component_sha256']=component_hashes
+     layout_module=ROOT/'work/rapport_cycle/layout_repairs.py'
+     if layout_module.exists():
+         spec=importlib.util.spec_from_file_location('edition_layout',layout_module)
+@@ -75,6 +78,7 @@
+         summary[name]=dict(language=lang,mode=mode,master=bool(master),tex=p.relative_to(ROOT).as_posix(),
+                            sha256=hashlib.sha256(p.read_bytes()).hexdigest(),variant_occurrences=len(prepared['entries']),
+                            single_source_template_sha256=hashlib.sha256(template.encode()).hexdigest())
++        summary[name]['input_component_sha256']=component_hashes
+ (WORK/'ASSEMBLY_VALIDATION.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+ (WORK/'GLOSSARY_CHANGES_APPLIED.json').write_text(json.dumps(glossary_changes,ensure_ascii=False,indent=2))
+ (WORK/'LAYOUT_CHANGES_APPLIED.json').write_text(json.dumps(layout_changes,ensure_ascii=False,indent=2))

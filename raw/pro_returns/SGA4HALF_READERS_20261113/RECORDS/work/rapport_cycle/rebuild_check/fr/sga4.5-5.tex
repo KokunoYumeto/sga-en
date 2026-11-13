@@ -1,0 +1,757 @@
+% !TEX root = sga4.5.tex
+
+\PrintPage{154}\chapter{Dualité}\label{V}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On trouvera dans cet exposé quelques théorèmes et compatibilités, tous 
+relatifs à la dualité de Poincaré. Au paragraphe \ref{V:1}, le théorème de 
+bidualité locale en dimension $1$ \PrintCite{(SGA~5 I 5.1)}{\cite[I.5.1]{sga5}} et quelques calculs de 
+duaux. Au paragraphe \ref{V:2}, une démonstration très économique de la dualité 
+de Poincaré sur les courbes, que m'a apprise M.\ Artin. Au paragraphe 
+\ref{V:3}, une compatibilité qui fait le lien entre deux définitions de 
+l'accouplement qui donne lieu à la dualité de Poincaré pour les courbes: par 
+cup-produit, ou par autodualité de la jacobienne. Au paragraphe \ref{V:4}, 
+enfin, la preuve de la compatibilité du titre. 
+
+Dans tout l'exposé, les schémas seront noethériens et séparés, et $n$ 
+est un entier inversible sur tous les schémas considérés. 
+
+
+
+
+
+
+
+
+
+
+\begin{center}\textbf{Sommaire}\end{center}
+\begin{tabular}{p{0.84\textwidth}r}
+1. Bidualité locale, en dimension $1$ & \var{1}{2}{S45-ASTRA-R-0056}\\
+2. La dualité de Poincaré pour les courbes, d'après M.\ Artin & 5\\
+3. Dualité de Poincaré et jacobienne & 8\\
+4. Compatibilité SGA 4 XVIII 3.1.10.3 & \var{12}{13}{S45-ASTRA-R-0057}
+\end{tabular}
+
+\PrintPage{155}\section{Bidualité locale, en dimension \texorpdfstring{$1$}{1}}\label{V:1}
+
+
+
+
+
+\subsection{}\label{V:1-1}
+
+Soit $S$ un schéma régulier purement de dimension $1$. Nous nous proposons 
+de montrer que le complexe réduit à $\dZ/n$ en degré $0$ est 
+dualisant, i.e. que pour $\sK\in \ob\eD_c^b(S,\dZ/n)$ (${}_c$ pour 
+constructible), si on pose $D\sK=\rHom(\sK,\dZ/n)$, alors $D\sK$ est encore 
+constructible à cohomologie bornée, et que le morphisme canonique $\alpha$ 
+de $\sK$ dans $D D\sK$ est un isomorphisme. 
+
+Pour $\sK$ dans $\eD^-$, et $\sL$ quelconque, on a 
+\[
+  \hom(\sK\lotimes \sL,\dZ/n) = \var{\hom(\sL,\Hom(\sK,\dZ/n))}{\hom(\sL,\rHom(\sK,\dZ/n))}{S45-SOL-0634} \text{.}
+\]
+Le morphisme de $\sK$ dans $DD\sK$ est défini en supposant $D\sK$ dans 
+$\eD^-$; si $\beta:D\sK\lotimes\sK\to \dZ/n$ est l'accouplement canonique, il 
+est défini par l'accouplement 
+$\sK\lotimes D\sK=D\sK\lotimes \sK \xrightarrow\beta \dZ/n$. 
+
+
+
+
+
+\subsection{}\label{V:1-2}
+
+Soit $f:X\to S$ un morphisme séparé de type fini. Posons 
+$\sK_X=\eR f^!\dZ/n$. Pour $\sK\in \ob\eD^-(X,\dZ/n)$, on pose 
+$D\sK = \rHom(\sK,\sK_X)$. L'adjonction entre $\eR f_!$ et $\eR f^!$ 
+assure que
+\[
+  \eR f_\ast D\sK = \eR f_\ast \rHom(\sK,\eR f^! \dZ/n) = \rHom(\eR f_! \sK,\dZ/n) = D\eR f_! \sK \text{.}
+\]
+L'accouplement correspondant entre $\eR f_! \sK$ et $\eR f_\ast D\sK$ est le composé 
+\[\xymatrix{
+  \eR f_! \sK\lotimes \eR f_\ast D\sK \ar[r] 
+    & \eR f_! (\sK\lotimes D\sK) \ar[r] 
+    & \eR f_! \eR f^! \dZ/n \ar[r] 
+    & \dZ/n \text{.}
+}\]
+La symétrie de cette description montre que, pour $f$ propre, le diagramme 
+\begin{equation*}\tag{1.2.1}\label{V:eq:1-2-1}
+\xymatrix{
+  \eR f_\ast \sK \ar[r] \ar[d] 
+    & D D \eR f_\ast \sK \ar[d]^-\wr \\
+  \eR f_\ast D D \sK \ar[r]^\sim 
+    & D\eR f_\ast D\sK
+}
+\end{equation*}
+est commutatif. 
+
+\PrintPage{156}Si $f$ est l'inclusion d'un point fermé, on sait que 
+$\eR f^!\dZ/n=\dZ/n(-1)[-2]$ -- soit, à torsion et décalage près, $\dZ/n$. 
+Sur le spectre d'un corps, ce complexe est dualisant (dualité de Pontrjagin 
+pour les $\dZ/n$-modules). D'après \eqref{V:eq:1-2-1}, on a donc 
+$\sK\iso D D\sK$ pour $\sK$ de la forme $\eR f_!\sL$ -- et donc lorsque le 
+support de $\underline\h^*(\sK)$ est fini. 
+
+
+
+
+
+\begin{theorem_}\label{V:1-3}
+Soient $j:U\hookrightarrow S$ un ouvert dense de $S$ et $\sF$ un faisceau 
+localement constant constructible de $\dZ/n$-modules sur $U$. On a 
+$D j_\ast \sF = j_\ast D \sF$, i.e. $\Hom(j_\ast \sF,\dZ/n) = j_\ast\Hom(\sF,\dZ/n_U)$ et $\Ext^i(j_\ast\sF,\dZ/n) = 0$ pour $i>0$.
+\end{theorem_}
+
+Sur $U$, $\Ext^i(j_\ast\sF,\dZ/n)=0$ pour $i>0$, car $\sF$ est localement 
+constant (et $\dZ/n$ un $\dZ/n$-module injectif), tandis que pour $i=0$ 
+c'est le dual $\sF^\vee$ de $\sF$. On vérifie que 
+$\var{\hom(j_\ast\sF,\dZ/n)=j_\ast\sF^\vee}{\Hom(j_\ast\sF,\dZ/n)=j_\ast\sF^\vee}{S45-ASTRA-R-0045}$, et il reste à vérifier la nullité 
+des $\Ext^i$ ($i>0$) en les points de $S-U$. Le problème est local 
+en ces points. Ceci nous ramène à supposer que $S$ est un trait strictement 
+local et, que $U$ est réduit à son point générique $\eta$. Soit 
+$I=\gal(\bar\eta/\eta)$. Le faisceau $\sF$ s'identifie au module galoisien 
+$\sF_{\bar\eta}$, et la fibre spéciale de $j_\ast \sF$ à 
+$\sF_{\bar\eta}^I$. 
+
+Soit $i$ l'inclusion du point fermé $s$, et appliquons $D$ aux suites 
+exactes 
+\[\xymatrix{
+  0 \ar[r] 
+    & j_! \sF \ar[r] 
+    & j_\ast \sF \ar[r] 
+    & i_\ast \sF_{\bar\eta}^I \ar[r] 
+    & 0 \\
+  0 \ar[r] 
+    & j_! \sF_{\bar\eta}^I \ar[r] \ar[u] 
+    & \sF_{\bar\eta}^I \ar[r] \ar[u] 
+    & i_\ast \sF_{\bar\eta}^I \ar[r] \ar[u]
+    & 0 \text{.}
+}\]
+
+On obtient un morphisme de triangles 
+\[\xymatrix{
+  i_\ast\left(\sF_{\bar\eta}^I\right)^\vee (-1)[-2] \ar[r] \ar@{=}[d] 
+    & D j_\ast\sF \ar[r] \ar[d] 
+    & \eR j_\ast \sF^\vee \ar[d] \\
+  i_\ast\left(\sF_{\bar\eta}^I\right)^\vee(-1)[-2] \ar[r] 
+    & \left(\sF_{\bar\eta}^I\right)^\vee \ar[r] 
+    & \var{\eR j_\ast \sF_{\bar\eta}^I}{\eR j_\ast\left(\sF_{\bar\eta}^I\right)^\vee}{S45-SOL-0639}\text{.}
+}\]
+La suite exacte longue déduite de la première ligne fournit la nullité des 
+$\Ext^i$ ($i>2$) et, prenant la fibre en $s$, on trouve 
+\PrintPage{157}\[\xymatrix@=0.7cm{
+  0 \ar[r] 
+    & \left(\underline\h^1 D j_\ast\sF\right)_s \ar[r] 
+    & \h^1\left(I,\sF_{\bar\eta}^\vee\right) \ar[r]^-\partial \ar[d] 
+    & \left(\sF_{\bar\eta}^I\right)^\vee(-1) \ar[r] \ar@{=}[d] 
+    & \left(\underline\h^2 D j_\ast\sF\right)_s \ar[r] 
+    & 0 \\
+  & 0 \ar[r] 
+    & \h^1\left(I,(\sF_{\bar\eta}^I)^\vee\right) \ar[r]^-\partial 
+    & \left(\sF_{\bar\eta}^I\right)^\vee(-1) \ar[r] 
+    & 0 \text{.}
+}\]
+Puisque 
+$\left(\sF_{\bar\eta}^I\right)^\vee = \left(\sF_{\bar\eta}^\vee\right)_I$, 
+posant $M=\sF_{\bar\eta}^\vee$, il faut finalement vérifier que 
+\[\xymatrix{
+  \h^1(I,M) \ar[r]^-\sim 
+    & \h^1(I,M_I) \text{.}
+}\]
+Si $p$ est l'exposant caractéristique résiduel, $I$ est extension d'un 
+groupe isomorphe à $\widehat\dZ_{p'} = \varprojlim_{(m,p)=1} \dZ/m$ par un 
+$p$-groupe $P$. Puisque $P$ est premier à l'ordre de $M$, on a 
+$\h^i(P,M)=0$ ($i>0$) et $(M_I)^P=(M^P)_I$. Ceci permet de remplacer $M$ par 
+$M^P$ et $I$ par $I/P$. On a enfin un isomorphisme fonctoriel 
+$\h^1(\widehat\dZ_{p'},M)\sim ($coinvariants de $\widehat\dZ_{p'}$, dans $M)$, 
+d'où le théorème. 
+
+
+
+
+
+\begin{theorem_}\label{V:1-4}
+Pour $\sK\in \ob\eD_c^b(S,\dZ/n)$, on a $\sK\iso D D \sK$.
+\end{theorem_}
+
+Par dévissage, on se ramène à supposer que $\sK$ est réduit à un 
+faisceau constructible $\sF$ en degré $0$, et que $\sF$ est soit à support 
+fini (\ref{V:1-2}), soit de la forme $j_\ast\sF_1$ comme en \ref{V:1-3}. Dans 
+ce second cas, \ref{V:1-3} nous ramène à la bidualité locale pour $\sF$ 
+localement constant sur $U$. 
+
+
+
+
+
+
+
+
+
+
+\PrintPage{158}\section{La dualité de Poincaré pour les courbes, d'après M.\ Artin}\label{V:2}
+
+
+
+
+
+\subsection{}\label{V:2-1}
+
+Soit $X$ une courbe projective et lisse sur $k$ algébriquement clos. On pose 
+$\sK_X=\dZ/n(1)[2]$ et, pour $\sK\in\ob \eD_c^b(X,\dZ/n)$, 
+$D\sK=\rHom(\sK,\sK_X)$. Pour $M$ un $\dZ/n$-module, on pose aussi 
+$D M = \hom(M,\dZ/n)$; de même pour les complexes de modules. Le morphisme 
+trace $\h^0(X,\sK_X) \to \dZ/n$, ou $\eR\Gamma(X,\sK_X)\to \dZ/n$, définit un 
+accouplement $\eR\Gamma(X,\sK)\lotimes\eR\Gamma(X,D\sK) \to \dZ/n$. La dualité 
+de Poincaré entre cohomologie et cohomologie à supports propres d'un ouvert 
+$j:U\hookrightarrow X$ de $X$ dit que, pour $\sK=j_!\dZ/n$, cet accouplement 
+identifie chaque facteur au dual de l'autre. 
+
+J'expose ci-dessous une démonstration, qui m'a été communiquée par 
+M.\ Artin, de ce que pour $\sK\in\ob\eD_c^b(X,\dZ/n)$, cet accouplement est 
+toujours parfait, i.e. définit un isomorphisme
+\begin{equation*}\tag{2.1.1}\label{V:eq:2-1-1}
+\xymatrix{
+  \eR\Gamma(X,\sK) \ar[r]^-\sim 
+    & D \eR\Gamma(X,D\sK) \text{.}
+}
+\end{equation*}
+
+Pour tout faisceau constructible $\sF$, posons 
+\[
+  '\h^i(X,\sF) = \text{$\dZ/n$-dual de $\h^{-i}(X,D\sF)$.}
+\]
+Que \eqref{V:eq:2-1-1} soit un isomorphisme équivaut au 
+
+
+
+
+
+\begin{theorem_}\label{V:2-2}
+Pour $\sF$ un faisceau constructible de $\dZ/n$-modules, on a 
+\begin{equation*}\tag{2.2.1}\label{V:eq:2-2-1}
+\xymatrix{
+  \h^i(X,\sF) \ar[r]^-\sim 
+    & '\h^i(X,\sF) \text{.}
+}
+\end{equation*}
+\end{theorem_}
+
+
+
+
+
+\begin{lemma_}\label{V:2-3}
+Soit $f:X\to Y$ un morphisme génériquement étale entre courbes lisses sur 
+$k$. On a $\sK_X=f^\ast\sK_Y=\eR f^!\sK_Y$, avec $\tr_f$ pour flèche 
+d'adjonction $\eR f_!\eR f^!\sK_Y\to \sK_Y$.
+\end{lemma_}
+
+% NOTE: \rhom or \rHom ? originally \rhom
+On se ramène à vérifier que pour $f$ fini, on a 
+$f_\ast \eR f^!\sK_Y = \var{\rhom(f_\ast\dZ/n,\sK_Y)}{\rHom(f_\ast\dZ/n,\sK_Y)}{S45-ASTRA-R-0048}$ est $\var{f_\ast\dZ/n}{f_\ast\dZ/n(1)[2]}{S45-SOL-0642}$, avec $\tr_f$ 
+pour flèche d'adjonction. La nullité des $\Ext^i$ ($i>0$) résulte de 
+\ref{V:1-3}, et l'assertion en résulte. 
+
+\PrintPage{159}On peut dire, plus explicitement, que $\eR f^!$ est le foncteur dérivé du 
+foncteur $f^!:f^!\sF(U)=\hom(f_!\dZ_U,\sF)$ et que \ref{V:1-3} implique la 
+nullité des $\eR^i f^!\dZ/n$ pour $i>0$.
+
+
+
+
+
+\begin{corollary_}\label{V:2-4}
+Soit $f:X'\to X$ un morphisme génériquement étale de courbes 
+projectives et lisses sur $k$. On a $'\h^i(X,f_\ast \sF)='\h^i(X',\sF)$; cet 
+isomorphisme est fonctoriel et le diagramme 
+\[\xymatrix{
+  \h^i(X,f_\ast\sF) \ar[r] \ar@{=}[d] 
+    & '\h^i(X,f_\ast\sF) \ar@{=}[d] \\
+  \h^i(X',\sF) \ar[r] 
+    & '\h^i(X',\sF) 
+}\]
+est commutatif.
+\end{corollary_}
+
+L'isomorphisme est donné par \ref{V:1-2}: $D f_\ast\sF=f_\ast D\sF$. 
+
+
+
+
+
+\subsection{}\label{V:2-5}
+
+Prouvons \ref{V:2-2}. Si $\sF$ est réduit à $\dZ/n$ en un point, prolongé 
+par $0$, on a $\h^*(D\sF) = \ext^*(\sF,\sK_X)=\dZ/n$ en degré 
+$0$, et dans l'accouplement $\h^*(\sF)\otimes\h^*(D\sF) \to \dZ/n$, 
+on a $1\otimes 1\mapsto 1$ (\hyperref[IV]{Cycle}, \ref{IV:2-1-5}): la dualité 
+est parfaite. Le cas où $\sF$ est à support fini se traite de même. 
+
+Pour $\sF$ constructible quelconque, $\sA$ le sous-faisceau de ses sections à 
+support fini, et $\sG=\sF/\sA$, la suite exacte 
+\begin{equation*}\label{V:eq:2-5-1}\tag{2.5.1}
+\xymatrix{
+  0 \ar[r] 
+    & \sA \ar[r] 
+    & \sF \ar[r] 
+    & \sG \ar[r] 
+    & 0 
+}
+\end{equation*}
+fournit un diagramme 
+\begin{equation*}\tag{2.5.2}\label{V:eq:2-5-2}
+\xymatrix@=.5cm{
+  & & 0 \ar[r] 
+    & \h^0(X,\sA) \ar[r] \ar[d]^-\wr 
+    & \h^0(X,\sF) \ar[r] \ar[d] 
+    & \h^0(X,\sG) \ar[r] \ar[d] 
+    & 0 \\
+  0 \ar[r] 
+  & '\h^{-1}(X,\sF) \ar[r] 
+  & '\h^{-1}(X,\sG) \ar[r] 
+  & '\h^0(X,\sA) \ar[r] 
+  & '\h^0(X,\sF) \ar[r] 
+  & '\h^0(X,\sG) \ar[r] 
+  & 0 
+}
+\end{equation*}
+et des isomorphismes compatibles $\h^i(X,\sF)\iso \h^i(X,\sG)$, 
+$'\h^i(X,\sF) \iso '\h^i(X,\sG)$ ($i\ne 0,-1$). Si $j:U\to X$ est un ouvert sur 
+lequel $\sF$ est localement constant, on a une suite exacte 
+\PrintPage{160}\begin{equation*}\tag{2.5.3}\label{V:eq:2-5-3}
+\xymatrix{
+  0 \ar[r] 
+    & \sG \ar[r] 
+    & j_\ast j^\ast \sF \ar[r] 
+    & \sB \ar[r] 
+    & 0
+}
+\end{equation*}
+avec $\sB$ à support fini. Puisque 
+$'\h^i(X,j_\ast j^\ast\sF) = D \h^{2-i} (X,j_\ast(j^\ast\sF)^\vee(1))$ 
+d'après \ref{V:1-3}, cet $'\h^i=0$ pour $i<0$ et \eqref{V:eq:2-5-2} et la 
+suite exacte longue définie par \eqref{V:eq:2-5-3} montrent que $'\h^i$ est 
+toujours nul pour $i<0$. 
+
+Si $\sF=\dZ/n$, le théorème est vrai pour $i=0$ et $2$. Ceci exprime que, 
+pour $X$ connexe, le morphisme trace: $\h^2(X,\dmu_n) \iso \dZ/n$ est un 
+isomorphisme. D'après \ref{V:2-4}, le théorème reste vrai pour $i=0$ et 
+$\sF=f_\ast\dZ/n$. 
+
+Pour $\sF$ à nouveau quelconque et $\sG$ comme plus haut, il existe 
+$f:X'\to X$ comme en \ref{V:2-4} tel que $\sG$ se plonge dans $f_\ast\dZ/n$:
+\[\xymatrix{
+  0 \ar[r] 
+    & \sG \ar[r] 
+    & f_\ast\dZ/n \ar[r] 
+    & \sQ \ar[r] 
+    & 0 \text{.}
+}\]
+Changeant $X'$ en un $X''/X'$, on peut supposer que 
+$\h^i(X,\sG) \to \h^i(X,f_\ast\dZ/n) = \h^i(X',\dZ/n)$ est nul pour $i>0$. 
+Considérons alors 
+\small
+\[\xymatrix@=.3cm{
+  0 \ar[r] 
+    & \h^0(X,\sG) \ar[r] \ar[d] 
+    & \h^0(X',\dZ/n) \ar[r] \ar[d]^-\wr 
+    & \h^0(X,\sQ) \ar[r] \ar[d] 
+    & \h^1(X,\sG) \ar[r]^-0 \ar[d] 
+    & \h^1(X',\dZ/n) \ar[r] \ar[d] 
+    & \h^1(X,\sQ) \ar[r] \ar[d] 
+    & \cdots \\
+  0 \ar[r] 
+    & '\h^0(X,\sG) \ar[r] 
+    & '\h^0(X',\dZ/n) \ar[r] 
+    & '\h^0(X,\sQ) \ar[r] 
+    & '\h^1(X,\sG) \ar[r] 
+    & '\h^1(X',\dZ/n) \ar[r] 
+    & '\h^1(X,\sQ) \ar[r] 
+    & \cdots
+}\]
+\normalsize
+
+L'isomorphisme en $\h^0(X')$ fournit $\h^0(X,\sG)\hookrightarrow '\h^0(X,\sG)$, 
+et la même injectivité pour $\sF$ \eqref{V:eq:2-5-2}. On applique cela à $\sQ$ pour trouver que $\h^0(X,\sG) \iso '\h^0(X,\sG)$. De même pour $\sF$ \eqref{V:eq:2-5-2}. Appliqué à $\sQ$, 
+cela donne $\h^1(X,\sG)\hookrightarrow '\h^1(X,\sG)$. On applique cela à 
+$\h^1(X',\dZ/n)$. Ce groupe ayant même ordre que 
+$'\h^1(X',\dZ/n)=D(\h^1(X',\dZ/n)(1))$, on trouve un isomorphisme, et 
+$\h^1(X,\sG) \iso '\h^1(X,\sG)$. De même pour $\sF$. Pour $i=2$, on sait 
+déjà que $\h^2(X',\dZ/n) \iso '\h^2(X',\dZ/n)$, et on procède de même, 
+puis on s'arrête, faute de combattants. 
+
+
+
+
+
+
+
+
+
+
+\PrintPage{161}\section{Dualité de Poincaré pour les courbes}\label{V:3}
+
+Dans ce paragraphe, nous prouvons la compatibilité (\hyperref[I]{Arcata}  
+\ref{I:eq:6-2-3-3}). 
+
+
+
+
+
+\subsection{}\label{V:3-1}
+
+Les notations sont celles de (\hyperref[I]{Arcata} \ref{I:6-2-3}): $\bar X$ est 
+une courbe projective, lisse et connexe sur un corps algébriquement clos $k$, 
+$D$ est un diviseur réduit sur $\bar X$, $0$ un point de 
+$X=\bar X-D$ 
+\[\xymatrix{
+  X \ar@{^{(}->}[r]^-j 
+    & \bar X 
+    & \ar[l]_-i D \text{,}
+}\]
+et $\pic_D(\bar X)=\h^1(\bar X,_D\dG_m)$ où $_D\dG_m$ est le faisceau des 
+sections de $\dG_m$ congrues à $1\mod D$. On rappelle que 
+$\h_c^1(X,\dmu_n) = \pic_D^0(\bar X)_n$, et que $x\to \sO(x)$ définit une 
+application canonique $f:X\to \pic_D(\bar X)$. On pose 
+$f_0(x)=f(x)-f(0):X\to \pic_D^0(\bar X)$.
+
+Notons encore $j$ l'inclusion de $X\times X$ dans $X\times \bar X$. La 
+diagonale $\Delta$ de $X\times X$ est fermée dans $X\times \bar X$; elle 
+définit une classe dans 
+$\h_\Delta^2(X\times X,\dmu_n)=\h_\Delta^2(X\times \bar X,j_!\dmu_n)$. On note 
+$c$ son image dans $\h^2(X\times \bar X,j_!\dmu_n)$. 
+
+La formule de K\"unneth assure que 
+\[
+  \h^*(X\times \bar X,j_!\dmu_n) = \h^*(X,\dZ/n)\otimes \h^*(\bar X,j_!\dmu_n) = \h^*(X,\dZ/n)\otimes \h_c^*(X,\dmu_n) \text{.}
+\]
+Nous nous proposons de calculer la $(1,1)$-composante de $c$, 
+\[
+  c^{1,1} \in \h^1(X,\dZ/n)\otimes \h_c^1(X,\dmu_n) = \h^1(X,\h_c^1(X,\dmu_n)) = \h^1\left(X,\pic_D^0(\bar X)_n\right) \text{.}
+\]
+
+La suite exacte 
+\[\xymatrix{
+  0 \ar[r] 
+    & \pic_D^0(\bar X)_n \ar[r] 
+    & \pic_D^0(\bar X) \ar[r]^-{x\to x^n} 
+    & \pic_D^0(\bar X) \ar[r] 
+    & 0 
+}\]
+fait de $\pic_D^0(\bar X)$ un $\pic_D^0(\bar X)_n$-torseur sur 
+$\pic_D^0(\bar X)$. Notons, $u$ la classe, dans 
+$\h^1(X,\h_c^1(X,\dmu_n))=\h^1(X,\pic_D^0(\bar X)_n)$, de son image 
+réciproque par $f_0$. 
+
+
+
+
+
+\PrintPage{162}\begin{proposition_}\label{V:3-2}
+Avec les notations précédentes, $c^{1,1}=-u$.
+\end{proposition_}
+
+Soit $e$ la différence des images dans $\h^2(X\times \bar X,j_!\dmu_n)$ des 
+classes de cohomologie de $\Delta$ et $X\times\{0\}$. La classe de $X\times\{0\}$ étant de type de 
+K\"unneth $(0,2)$, on a $c^{1,1}=e^{1,1}$. Soit la suite spectrale de Leray 
+pour $\pr_1:X\times \bar X\to X$ et le faisceau $j_!\dmu_n$: 
+\[
+  E_2^{pq} = \h^p(X,\eR^q {\pr_1}_\ast j_!\dmu_n) = \h^p(X,\h_c^q(X,\dmu_n)) \Rightarrow \h^{p+q}(X\times \bar X,j_!\dmu_n) \text{.}
+\]
+Elle dégénère: c'est le produit tensoriel de $\h^*(X)$ par la 
+suite spectrale de Leray (triviale) pour $\bar X\to \spec(k)$ et le faisceau 
+$j_!\dmu_n$. Le diviseur $\Delta-X\times\{0\}$ est fibre par fibre de degré 
+$0$, de sorte que l'image de $e$ dans $E^{02}$ est nulle. On peut donc parler 
+de son image $\bar e$ dans $E^{1,1}$, et il nous faut montrer que 
+$\bar e = -u$. 
+
+Soit $\sG$ sur $X\times\bar X$ le sous-faisceau de $\dG_m$ formé des sections 
+locales dont la restriction au sous-schéma $X\times D$ est $1$. On a encore 
+une suite exacte 
+\begin{equation*}\tag{3.2.1}\label{V:eq:3-2-1}
+\xymatrix{
+  0 \ar[r] 
+    & j_!\dmu_n \ar[r] 
+    & \sG \ar[r] 
+    & \sG \ar[r] 
+    & 0 
+}
+\end{equation*}
+et $e$ est l'image par $\partial$ de la classe $e_1\in \h^1(X\times\bar X,\sG)$ 
+du faisceau inversible $\sO(\Delta-X\times\{0\})$ trivialisé par $1$ sur 
+$X\times D$. 
+
+L'image directe par $\eR\pr_{1\ast}$ du triangle distingué défini par 
+\var{\eqref{V:eq:2-2-1}}{\eqref{V:eq:3-2-1}}{S45-SOL-0655} est un triangle distingué 
+\begin{equation*}\tag{3.2.2}\label{V:eq:3-2-2}
+\xymatrix{
+  & \ar[r]^-\partial 
+    & \eR \pr_{1\ast} j_!\dmu_n \ar[r] 
+    & \var{\eR \pr_{2\ast}\sG}{\eR \pr_{1\ast}\sG}{S45-SOL-0656}\ar[r] 
+    & \var{\eR \pr_{2\ast}\sG}{\eR \pr_{1\ast}\sG}{S45-SOL-0656}\ar[r]^-\partial 
+    & 
+}
+\end{equation*}
+et le diagramme 
+\[\xymatrix{
+  \h^1(X\times \bar X,\sG) \ar[r]^-\partial \ar@{=}[d]^-{(1)} 
+    & \h^2(X\times \bar X,j_!\dmu_n) \ar@{=}[d] \\
+  \h^1(X,\eR\pr_{1\ast} \sG) \ar[r]^-\partial 
+    & \h^2(X,\eR\pr_{1\ast} j_!\dmu_n) 
+}\]
+est commutatif: notre problème devient celui d'identifier l'image dans 
+$E^{11}=\h^1(X,\h_c^1(X,\dmu_n))$ (l'image dans $E^{02}$ étant nulle) de 
+l'image par 
+\PrintPage{163}$\partial_{\text{\eqref{V:eq:3-2-2}}}:\h^1(X,\eR\pr_{1\ast}\sG) \to \h^2(X,\eR\pr_{1\ast} j_!\dmu_n)$ 
+de la classe, encore notée $e_1$, qui correspond à $e_1$ par 
+(1). 
+
+Le faisceau $\eR^1\pr_{1\ast}\sG$ est défini par le schéma en 
+groupe sur $X$ image réciproque du groupe algébrique $\pic_D(\bar X)$ sur 
+$\spec(k)$, et l'image de $e_1$ dans 
+$\h^0(X,\eR^1\pr_\ast\sG) = \hom(X,\pic_D(\bar X))$ est $f_0$. 
+
+Représentons le triangle \eqref{V:eq:3-2-2} comme défini par une suite 
+exacte courte de complexes de faisceaux.
+\[\xymatrix{
+  0 \ar[r] 
+    & \sA \ar[r] 
+    & \sB \ar[r] 
+    & \sC \ar[r] 
+    & 0 \text{.}
+}\]
+Soit $\sB'$ le sous-faisceau de 
+\[
+  \tau_{\leqslant 1} \sB : \cdots \sB^0 \to \ker(d) \to 0 \cdots
+\]
+obtenu en remplaçant ${\sB'}^1=\ker(d)$ par l'image réciproque, par 
+$\ker(d)\to \underline\h^1(\sB) = \pic_D(\bar X)$ sur $X$, de 
+$\pic_D^0(\bar X)$ sur $X$. Soient $\sA'=\sA\cap \sB'$ et $\sC'$ l'image de 
+$\sB'$. On a $\sA'=\tau_{\leqslant 1}(\sA)$, et $\sC'$ se déduit de $\sC$ 
+comme $\sB'$ de $\sB$, d'où un diagramme commutatif de suites exactes courtes 
+\begin{equation*}\tag{\var{3.2.2}{3.2.3}{S45-SOL-0657}}\label{V:eq:3-2-3}
+\xymatrix{
+  0 \ar[r] 
+    & \sA \ar[r] 
+    & \sB \ar[r] 
+    & \sC \ar[r] 
+    & 0 \\
+  0 \ar[r] 
+    & \tau_{\leqslant 1} \sA \ar[r] \ar[u] \ar[d] 
+    & \sB' \ar[r] \ar[u] \ar[d] 
+    & \sC' \ar[r] \ar[u] \ar[d] 
+    & 0 \\
+  0 \ar[r] 
+    & \h_c^1(X,\dmu_n)[-1] \ar[r] 
+    & \pic_D^0(\bar X)[-1] \ar[r] 
+    & \pic_D^0(\bar X)[-1] \ar[r] 
+    & 0
+}
+\end{equation*}
+où la dernière ligne doit être vue comme \var{une suite exactes de complexes}{une suite exacte de complexes}{S45-SOL-0659} 
+de faisceaux réduits au degré $1$ sur $X$. On a 
+\begin{enumerate}[a)]
+  \item $e\in \hh^2(X,\sA)$ provient de 
+    $\widetilde e\in \hh^2(X,\tau_{\leqslant 1}\sA)$ (car son image dans 
+    $E^{02}$ est nulle). On cherche l'image $\bar e$ de $\widetilde e$ dans 
+    $\hh^2(X,\h_c^1(X,\dmu_n)[-1]) = \h^1(X,\h_c^1(X,\dmu_n))$.
+  \item $e_1\in \hh^1(X,\sC)$ provient de $\widetilde e_1\in \hh^1(X,\sC')$, 
+    car son image $f_0$ dans $\h^0(X,\pic_D(\bar X))$ est dans 
+    $\h^0(X,\pic_D^0(\bar X))$. On peut prendre 
+    $\widetilde e=\partial \widetilde e_1$. 
+  \item \PrintPage{164}On a donc $\bar e = \partial f_0$, où $\partial $ est défini par 
+    \eqref{V:eq:3-2-2}, et où on utilise les isomorphismes usuels 
+    $\hh^2(X,\sF[-1]) = \h^1(X,\sF)$. Ces isomorphismes anticommutent à 
+    $\partial$, de sorte que $\bar e=-\partial f_0$, pour $\partial$ défini 
+    par la suite exacte 
+    \[\xymatrix{
+      0 \ar[r] 
+        & \h_c^1(X,\dmu_n) \ar[r] 
+        & \pic_D^0(\bar X) \ar[r] 
+        & \pic_D^0(\bar X) \ar[r] 
+        & 0 
+    }\]
+    On conclut par (\hyperref[IV]{Cycles}, \ref{IV:1-1-1}). 
+\end{enumerate}
+
+
+
+
+
+\subsection{}\label{V:3-3}
+
+Pour tout homomorphisme $\varphi:\h_c^1(X,\dmu_n)\to \dZ/n$, soit 
+$\varphi(u)\in \h^1(X,\dZ/n)$ l'image de $u$ par 
+$\varphi:\h^1(X,\h_c^1(X,\dmu_n)) \to \h^1(X,\dZ/n)$. Si 
+$x\in \h_c^1(X,\dmu_n)$, le cup-produit $\varphi(u)\smallsmile x$ est dans 
+$\h_c^2(X,\dmu_n)$. On se propose de prouver que 
+
+
+
+
+
+\begin{proposition_}\label{V:3-4}
+$\tr(\varphi(u)\smallsmile x) = \varphi(x)$.
+\end{proposition_}
+
+Cette identité se déduit, par application de $\varphi$, de 
+\begin{equation*}\tag{3.4.1}\label{V:eq:3-4-1}
+  \tr(u\smallsmile x) = x 
+\end{equation*}
+où $\tr$ est cette fois l'application 
+\[\xymatrix{
+  \tr:\h_c^2(X,\h_c^1(X,\dmu_n)\otimes\dmu_n) \ar[r] 
+    & \h_c^1(X,\dmu_n) \text{,}
+}\]
+de sorte que $x\mapsto \tr(u\smallsmile x)$ est l'application composée 
+\small
+\begin{equation*}\tag{3.4.2}\label{V:eq:3-4-2}
+\begin{aligned}
+&\xymatrix{
+  \h_c^1(X,\dmu_n) \ar[r]^-{u\otimes x} 
+    & \h^1(X,\h_c^1(X,\dmu_n)) \otimes \h_c^1(X,\dmu_n) 
+    & \ar[l]_-\sim \h^1(X,\dZ/n)\otimes \h_c^1(X,\dmu_n) \otimes \h_c^1(X,\dmu_n)} \\ &\xymatrix{
+    \ar[r]^-{(1)} 
+      & \h_c^2(X,\dmu_n) \otimes \h_c^1(X,\dmu_n) \ar[r]^-{\tr\otimes\operatorname{id}} 
+      & \h_c^1(X,\dmu_n)
+}
+\end{aligned}
+\end{equation*}
+\normalsize
+où (1) est donné par 
+$a\otimes b\otimes c\mapsto (a\smallsmile c)\otimes b$. 
+
+Exprimons ce morphisme en terme du morphisme trace 
+$\tr:\h_c^3(X\times X,\dmu_n^{\otimes 2}) \to \h_c^1(X,\dmu_n)$ relatif à la 
+seconde projection. Pour $x\in \h_c^3$, $\tr(x)$ se calcule ainsi: de ses 
+composantes de K\"unneth, on ne garde que celle de type $(2,1)$, et on applique 
+$\tr:\h_c^2(X,\dmu_n) \to \dZ/n$. 
+
+\PrintPage{165}Notons $u'$ l'image de $u$ par l'application 
+\begin{align*}
+&\xymatrix{
+  \h^1(X,\h_c^1(X,\dmu_n)) 
+    & \ar[l]_-\sim \h^1(X,\dZ/n) \otimes \h_c^1(X,\dmu_n) = \h^1(X,\dZ/n)\otimes \h^1(\bar X,j_!\dmu_n)
+} \\
+&\xymatrix{
+  \ar[r] 
+    & \h^2(X\times \bar X,\dZ/n\boxtimes j_!\dmu_n) \text{.}
+}
+\end{align*}
+Vu la relation entre K\"unneth et cup-produit, on a 
+\[
+  \tr(u\smallsmile x) = -\tr(u'\smallsmile \pr_1^\ast x) \text{.}
+\]
+Le second cup-produit est celui de (\hyperref[IV]{Cycle} \ref{IV:1-2-4}):
+\[\xymatrix{
+  \h^2(X\times \bar X,\dZ/n\boxtimes j_!\dmu_n) \otimes \h^1(\bar X\times \bar X,j_!\dmu_n\boxtimes \dZ/n) \ar[r] 
+    & \h^3(\bar X\times \bar X,j_!\dmu_n \boxtimes j_!\dmu_n) \text{.}
+}\]
+Le signe -- provient de la permutation de deux symboles de degré $1$ dans 
+(1). Puisque $c\smallsmile\pr_1^\ast x$ et 
+$c^{1,1}\smallsmile \pr_1^\ast x$ ont même $(2,1)$-composante de 
+K\"unneth, et que $\var{u'=c^{1,1}}{u'=-c^{1,1}}{S45-SOL-0664}$, on a 
+\[
+  \tr(u\smallsmile x) = \tr(c\smallsmile \pr_1^\ast x) \text{.}
+\]
+Le cup-produit à droite peut cette fois s'interpréter comme le 
+cup-produit (\hyperref[IV]{Cycle} \ref{IV:1-2-5}) de 
+$\cl(\Delta)\in \h_\Delta^2(X\times X,\dmu_n)$ par 
+$\pr_1^\ast x\in \h_c^1(\Delta,\dmu_n)$. Sur $\Delta$, on a 
+$\pr_1=\pr_2$, d'où 
+\[
+  \tr(c\smallsmile \pr_1^\ast x) = \tr(\cl(\Delta)\smallsmile \pr_1^\ast x) = \tr(\cl(\Delta)\smallsmile \pr_2^\ast x) = \tr(\cl(\Delta))\smallsmile x = x \text{.}
+\]
+
+
+
+
+
+
+
+
+
+
+\PrintPage{166}\section{Compatibilité SGA 4 XVIII 3.1.10.3}\label{V:4}
+
+Dans \PrintCite{SGA~4 XVIII}{\cite[XVIII]{sga4}}, en proie au découragement, je n'ai pas vérifié 
+la compatibilité du titre. Bien qu'elle s'avère n'être que fumée, je me 
+crois tenu de réparer ici cette lacune. Pour $f:X\to S$ séparé de type 
+fini, il s'agissait de vérifier que le morphisme d'adjonction 
+$\eR f_!\eR f^!\sL\to \sL$ est compatible à toute localisation étale 
+$k:V\to S$. Désignant par $k$ et $f$ plusieurs flèches, comme ci-dessous, 
+il s'agit de vérifier une commutativité:
+\[\xymatrix{
+  X_V \ar[r]^-k \ar[d]^-f 
+    & X \ar[d]^-f \\
+  V \ar[r]^-k 
+    & S 
+} \qquad 
+\xymatrix{
+  k^\ast \eR f_! \eR f^!\sL \ar[r]^-{k^\ast(\text{adj})} \ar[d]^-\sim 
+    & k^\ast \sL \ar@{=}[d] \\
+  \eR f_! \eR f^! k^\ast \sL \ar[r]^-{\text{adj}} 
+    & k^\ast \sL \text{.}
+}\]
+Au niveau des complexes, la commutativité voulue s'écrit (loc. cit.) 
+\[\xymatrix{
+  k^\ast f_!^\bullet f^!_\bullet \sL \ar[r] \ar[d]^-{(1)} 
+    & k^\ast \sL \ar@{=}[d] \\
+  f_!^\bullet f^!_\bullet k^\ast \sL \ar[r] 
+    & k^\ast \sL \text{.}
+}\]
+On la vérifie composante par composante, ce qui ramène à une 
+compatibilité analogue, pour $\sL$ un faisceau et pour chacune des paires de foncteurs 
+adjoints $(f_i^!,f_!^i)$, notés simplement $f^!$ et $f_!$. La flèche (1) 
+est définie à partir de l'isomorphisme $(2):k^\ast f_!=f_! k^\ast$, et d'un 
+morphisme $(3):k^\ast f^! \to f^! k^\ast$ qui s'en déduit. Dans loc. cit., on 
+introduit d'abord un morphisme $(4):k_! f_!\to f_! k_!$, déduit de $(2)$ par 
+adjonction de $k^\ast=k^!$ et de 
+$k_!:k_! f_!\to k_! f_! k^\ast k_!=k_! k^\ast f_! k_! \to f_! k_!$, et on 
+déduit $(3)$ de $(4)$ par adjonction. Il revient au même de déduire $(3)$ 
+de $(2)$ par adjonction de $f_!$ et 
+$f^!:k^\ast f^! \to f^! f_! k^\ast f^!= f^! k^\ast f_! f^! \to f^! k^\ast$. 
+
+Écrivant $k$ pour $k^\ast$ et omettant $\sL$, la commutativité est alors 
+celle du bord extérieur de 
+\[\xymatrix@=.5cm{
+  k f_! f^! \ar[r] \ar@{=}[d]
+    & f_! k f^! \ar[r] 
+    & f_! f^! f_! k f^! \ar[r] 
+    & f_! f^! k f_! f^! \ar@{=}[d] \\
+  k f_! f^! \ar[d] 
+    & & & \ar[lll] f_! f^! k f_! f^! \ar[d] \\
+  k 
+    & & & \ar[lll] f_! f^! k \text{.}
+}\]
+\PrintPage{167}En première ligne, on trouve un homomorphisme 
+$k f_! f^! \to f_! f^! k f_! f^!$, défini parce que $k f_! f^!$ est de la 
+forme $f_! X$ ($X=k f^!$); il admet pour rétraction le morphisme 
+d'adjonction en seconde ligne, et la commutativité du carré inférieur est la 
+fonctorialité de ce morphisme d'adjonction. 
+
+
+
+

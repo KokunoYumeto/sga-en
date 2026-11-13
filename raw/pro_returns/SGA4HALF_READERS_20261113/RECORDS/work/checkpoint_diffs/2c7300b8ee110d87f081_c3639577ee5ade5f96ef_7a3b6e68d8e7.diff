@@ -1,0 +1,318 @@
+--- checkpoint/work/finitude_verdier/review_steps.py
++++ SGA4HALF_READERS_RECORDS.zip/work/finitude_verdier/review_steps.py
+@@ -353,7 +353,7 @@
+ en(1122,r'\subsubsection{}\label{VIII:1-2-4}',r'\subsubsection{Uniqueness of $\eK(\cA)$}\label{VIII:1-2-4}')
+ dec(1123,'The paragraph introducing the matrix prints ci-dessus, not si-dessus.')
+ dec(1124,'The lower-right matrix entry visibly has Y. The decomposition Y=X+Z requires d_Z in that corner. Preserve the printed Y as a mathematical misprint in diplomatic forms.')
+-variant(1124,r'0 & d_{Y^\bullet}',r'0 & d_{Y^\bullet}',r'0 & d_{Z^\bullet}',r'0 & d_{Z^\bullet}',r'0 & d_{Y^\bullet}',r'0 & d_{Z^\bullet}')
++variant(1124,r'0 & d_{Y^\bullet}',r'd_{Y^\bullet}',r'd_{Z^\bullet}',r'0 & d_{Z^\bullet}',r'd_{Y^\bullet}',r'd_{Z^\bullet}',prefix='0 & ')
+ dec(1125,'The definition ending273 says est dit, with final t.')
+ page(271,r'\subsubsection{}\label{VIII:1-2-3}',r'\subsubsection{}\label{VIII:1-2-3}')
+ page(272,'triangulée \n    correspondante', 'corresponding triangulated subcategory', 'Page271 ends with la sous-catégorie; triangulée correspondante begins272. The corresponding adjective group starts the English marker.')
+@@ -394,4 +394,306 @@
+ for op in OPS:
+  if op['lang']=='fr' and op['id']==key(1124):op['old']=r'0 & d_{Z^\bullet}'
+  if op['lang']=='fr' and op['id']==key(1126):op['old']=r'P^\ast(Z^\bullet,f)'
++# Direct scans pp.280–282: calculus of fractions and quotient structure.
++dec(1138,'The printed universal-property sentence omits a determiner before morphisme. Add tout in the corrected French forms; English takes morphisms to isomorphisms already expresses the universal condition.')
++variant(1138,'transformant morphisme de $S$', 'transformant morphisme de $S$', 'transformant tout morphisme de $S$')
++dec(1139,'The scan cites [C.G.G.] at this point, without the section1.1 or Gabriel–Zisman identification. Restore the literal citation while preserving the inherited cite key as hidden source metadata.',new=r'\PrintCite{[C.G.G.]}{\cite[1.1]{gz67}}')
++en(1139,r'\cite[1.1]{gz67}',r'\PrintCite{[C.G.G.]}{\cite[1.1]{gz67}}')
++dec(1140,'There is no footnote or call at this point on280. The English speculation about a lost work is Miller’s editorial addition and must be removed from all six forms.')
++en(1140,'\\footnote{The original text references [C.G.G] here. Most\nlikely, this is the lost work \\emph{Catégories et foncteurs} by Chevalley,\nGabriel and Grothendieck, referenced in\\cite{sc72}. }','')
++dec(1141,'The scan prints the complete word système; the e is absent from the TeX accent sequence.')
++dec(1142,'The second reference is the literal C.G.G., again with no bibliographic identification. Restore it in both languages, retaining the existing key only as source metadata.',new=r'\PrintCite{C.G.G.}{\cite{gz67}}')
++en(1142,r'by \cite{gz67}',r'by \PrintCite{C.G.G.}{\cite{gz67}}')
++dec(1143,'The opening sentence of3.2 reads sont les objets, with the plural article.')
++dec(1144,'The lower-case y in the Miller transcription is a capital Y in the scan and in the adjoining diagram. The inherited diplomatic source already repairs it.')
++OPS[:]=[op for op in OPS if not(op['id']==key(1144) and op['lang']=='fr')]
++dec(1145,'The scan has et un objet de S_Y, without naming that object. The subsequent source(t) and diagram show that the omitted variable is t; insert it only in corrected forms.')
++variant(1145,r'un objet de $S_Y$, $\underline b$',r'un objet de $S_Y$, $\underline b$',r'$t$ un objet de $S_Y$, $\underline b$', 'let an object\n    of $S_Y$', 'let an object\n    of $S_Y$', 'let $t$ be an object\n    of $S_Y$')
++dec(1146,'The completed diagram explicitly includes t′∈S to the left of its upper arrow, in addition to the t′ arrow label. Restore the omitted membership condition.')
++en(1146,r'\[\xymatrix{',r"\[t'\in S\qquad\xymatrix{")
++dec(1147,'The translation functor is described as noterons encore T; restore the omitted encore and its English again.')
++en(1147,'denoted by $T$, satisfying','again denoted by $T$, satisfying')
++dec(1148,'The scan reads autre. Replace the spurious initial q; the printed lack of plural agreement is separately recorded.')
++dec(1149,'The category A[S^{-1}] is munie, with the final e printed.')
++dec(1150,'Definition3-3 starts A une catégorie triangulée, with the feminine article.')
++dec(1151,'The thick closure is la plus petite sous-catégorie, with final e on petite.')
++own(280,'Definition of the set-valued functor H_Y',r'H_Y:s\leadsto\hom(\operatorname{source}(s),Y)',r'H_Y:s\mapsto\hom(\operatorname{source}(s),Y)','Restore the printed wavy arrow in both languages.','symbol','The functor’s elementwise arrow is visibly wavy, as in the earlier examples.',fr_old=r'H_Y:s\mapsto',fr_new=r'H_Y:s\leadsto',en_old=r'H_Y:s\mapsto',en_new=r'H_Y:s\leadsto')
++own(280,'Reference for inductive limits','Grothendieck Topologies',r'\cite{ar62}','Restore the quoted title while retaining the citation key.','missing','The final paragraph of280 names the work Grothendieck Topologies explicitly; a bare numeric citation loses those printed words.',fr_old=r'\cite{ar62}',fr_new=r"\PrintCite{``Grothendieck Topologies''}{\cite{ar62}}",en_old=r'\cite{ar62}',en_new=r"\PrintCite{``Grothendieck Topologies''}{\cite{ar62}}")
++sid=own(282,'Description of distinguished triangles','ne sont autre que','ne sont qutre que','ne sont autres que','misprint_in_print','The scan has singular autre governed by plural triangles. Correct the agreement only after restoring the actual printed initial letter. The English has no corresponding agreement defect.')
++variant(sid,'ne sont autre que','ne sont autre que','ne sont autres que')
++page(280,r'$(\cA[S^{-1}],Q)$ résout',r'$(\cA[S^{-1}],Q)$ solves', 'Le couple/The pair ends279; its displayed-in-text ordered pair begins280.')
++page(281,'On constatera alors, avec plaisir', 'One then observes with pleasure', 'The Grothendieck Topologies reference ends280; the FR1–FR3 observation begins281.')
++page(282,'Nous noterons $Q$ le foncteur évident', 'We denote by $Q$ the evident functor', 'The completed composition construction and category assertion end281.')
++# Direct scans pp.283–285: subcategory and quotient-functor properties.
++dec(1152,'The end of4-1 prints d’une manière unique; restore the feminine article.')
++dec(1153,'The opening of Theorem4-2 describes B as une sous-catégorie triangulée.')
++dec(1154,'The theorem’s first condition visibly contains the composite s∘s′, with both s letters. The inherited diplomatic source already has this repair.')
++OPS[:]=[op for op in OPS if not(op['id']==key(1154) and op['lang']=='fr')]
++dec(1155,'The final word in4-2(c) is équivalentes, agreeing with propriétés.')
++dec(1156,'The opening of4-2(d) prints propriétés with the acute accent.')
++dec(1157,'The setup for section5 has A une catégorie triangulée.')
++dec(1158,'The same setup has B une sous-catégorie épaisse.')
++dec(1159,'The canonical map in5-1(d) has a Q above its arrow. Restore this map label in both languages.')
++en(1159,r'\hom_\cA(X,Y) \to',r'\hom_\cA(X,Y) \xrightarrow{Q}')
++dec(1160,'The word complète between the diagrams has a grave accent on è, not a literal backtick.')
++dec(1161,'The reversal instruction in5-2(b) reads le sens des flèches, with the plural article.')
++page(283,'pleine engendrée par les objets dont tous les translatés', 'full\nsubcategory generated by the objects all of whose translates', 'Page282 ends sous-catégorie; the modifier pleine and the remainder of4-1 begin283.')
++page(284,'\\[\\xymatrix{\n      \\cB/\\cN\\cap \\cB', '\\[\\xymatrix{\n      \\cB/\\cN\\cap \\cB', 'The displayed quotient functor in4-2(d) starts284; its introduction is on283.')
++page(285,r'\item Tout morphisme $f:X\to Y$ qui se factorise',r'\item Every morphism $f:X\to Y$ that factors', 'Page285 starts with5-1(c); items(a) and(b) are on284.')
++# Direct scans pp.286–288: orthogonals and adjunction conditions.
++sid=own(286,'Proposition5-2(c), condition after the completed diagram','où f=i∘h et où g∘i=0','où f=i∘h et où g∘i=0','Require N′ to be an object of B.','misprint_in_print','The scan omits N′∈B. Without it the condition is vacuous: choose N′=X, h=id_X and i=f. The equivalence with surjectivity therefore requires this omitted membership hypothesis. Accept the later corrected-tree proposal.')
++variant(sid,r'où $f=i\circ h$ et où $g\circ i=0$.',r'où $f=i\circ h$ et où $g\circ i=0$.',r"où $N'$ est un objet de $\cB$, $f=i\circ h$ et $g\circ i=0$.",r'in which $f=i\circ h$ and $g\circ i=0$.',r'in which $f=i\circ h$ and $g\circ i=0$.',r"in which $N'$ is an object of $\cB$, $f=i\circ h$, and $g\circ i=0$.")
++dec(1162,'The top diagram of287 has Hom(Y,X) on the left and Hom(Q(Y),Q(X)) on the right. These orders are already restored in the inherited diplomatic and English sources.')
++dec(1163,'Definition6-1 spells orthogonales; the inherited diplomatic source already repairs the wrong vowel.')
++dec(1164,'Proposition6-3 reads les objets libres à droite, with the plural s.')
++dec(1165,'The two multiplicative systems are both denoted by capital S in the print; the inherited diplomatic source already has this repair.')
++dec(1166,'The object considered in6-4 is capital X throughout the scan; the inherited diplomatic source already has this repair.')
++for n in [1162,1163,1165,1166]:OPS[:]=[op for op in OPS if not(op['id']==key(n) and op['lang']=='fr')]
++sid=own(288,'Proposition6-4(vi), category of objects under X',r'\cB^\bot/X',r'\cB^\bot/X',r'X\backslash\cB^\bot','misprint_in_print','The printed slash category repeats the notation for objects over X, whereas the same clause explicitly says under X and asks for an initial object. The corrected-tree replacement X\\B⊥ gives the comma category described by the words and the adjunction. Preserve the printed slash in diplomatic forms.')
++variant(sid,r'La catégorie $\cB^\bot/X$',r'La catégorie $\cB^\bot/X$',r'La catégorie $X\backslash\cB^\bot$',r'The category $\cB^\bot/X$',r'The category $\cB^\bot/X$',r'The category $X\backslash\cB^\bot$')
++page(286,r'où $g\circ f=0$ et où $N$',r'in which $g\circ f=0$ and $N$', 'The short X→N→Y diagram ends285; its hypotheses begin286.')
++page(287,'\\[\\xymatrix{\n      \\hom_\\cA(Y,X)', '\\[\\xymatrix{\n      \\hom_\\cA(Y,X)', 'The dual canonical Hom map begins287; its introductory sentence is on286.')
++page(288,r'(resp. $\hom_\cA(X,Y)=0$)',r'(respectively $\hom_\cA(X,Y)=0$)', 'Page287 ends with Hom(Y,X)=0; the parenthetical dual condition begins288.')
++# Direct scans pp.289–291: adjunction triangles and ChapterII opening.
++dec(1167,'The sentence after6-5 prints mot, not omt. The inherited diplomatic source already corrects this transposition.')
++dec(1168,'Page290 begins sont exacts. The inherited diplomatic source already corrects the adjective’s gender.')
++for n in [1167,1168]:OPS[:]=[op for op in OPS if not(op['id']==key(n) and op['lang']=='fr')]
++dec(1169,'The first textual isomorphism on290 visibly uses capital I^⊥. The inclusion functor was defined as lowercase i^⊥ on289, and the later triangle uses that lowercase symbol, so this is a print misprint.')
++variant(1169,r'Q^\ast\circ Q\iso i^\bot\circ ^\ast i^\bot',r'Q^\ast\circ Q\iso I^\bot\circ ^\ast i^\bot',r'Q^\ast\circ Q\iso i^\bot\circ ^\ast i^\bot',r'Q^\ast\circ Q\iso i^\bot\circ ^\ast i^\bot',r'Q^\ast\circ Q\iso I^\bot\circ ^\ast i^\bot',r'Q^\ast\circ Q\iso i^\bot\circ ^\ast i^\bot')
++dec(1170,'The lower-right vertex of the first diagram repeats the same capital I^⊥ misprint. Correct it consistently with the functor i^⊥.')
++variant(1170,r'& & i^\bot\circ ^\ast i^\bot',r'I^\bot\circ ^\ast i^\bot',r'i^\bot\circ ^\ast i^\bot',r'& & i^\bot\circ ^\ast i^\bot',r'I^\bot\circ ^\ast i^\bot',r'i^\bot\circ ^\ast i^\bot',prefix='& & ')
++dec(1171,'The distinguished-triangle introduction has only one le. The inherited diplomatic source already removes the duplicate.')
++OPS[:]=[op for op in OPS if not(op['id']==key(1171) and op['lang']=='fr')]
++dec(1172,'The final identity visibly adds a small round subscript to the left X. There is no distinguished object X_0, and the right side is evaluated at arbitrary X. Remove the subscript in corrected forms while retaining the printed final δ notation.')
++variant(1172,r'\delta(T X_0) = - T \delta(X)',r'\delta(T X_0) = - T \delta(X)',r'\delta(T X) = - T \delta(X)',r'\partial(TX)=-T\partial(X)',r'\delta(TX_0)=-T\delta(X)',r'\delta(TX)=-T\delta(X)')
++dec(1173,'The final parenthesis says X objet qcq, the ordinary abbreviation for quelconque. It does not contain a composition of two q morphisms.')
++own(290,'Final uniqueness sentence and its parenthesis','Un tel morphisme δ…(X objet qcq, T translation)','Codex corrected tree substitutes ∂ and X∈Ob A','Retain the final printed δ notation and translate objet qcq as any object.','codex_rejected','The two connecting-morphism notations are unambiguous in this immediately adjacent sentence, and qcq explicitly means quelconque. Substituting a different symbol and a formal domain clause is unnecessary normalization. The stray subscript is separately corrected underS45-SOL-1172.',en_old=r'Such a morphism $\partial$ is unique',en_new=r'Such a morphism $\delta$ is unique')
++en(O[-1]['id'],r'($X\in\operatorname{Ob}\cA$, $T$ the',r'($X$ any object, $T$ the',page=290)
++dec(1174,'The top of291 has the separate ChapterII heading Applications aux catégories abéliennes above the first section. These words were missing from Miller and must be restored.',new='\\section*{Chapitre II: Applications aux catégories abéliennes}\n\n\\section{Les catégories dérivées d\'une catégorie abélienne}')
++en(1174,r'\section{Derived categories of an abelian category}', '\\section*{Chapter II: Applications to abelian categories}\n\n\\section{Derived categories of an abelian category}')
++dec(1175,'The opening reference explicitly reads chapitre1,§1,n°2.2, not2.3. Restore the full printed coordinate and point it to the existing label for2.2.','accepted with a corrected reading',reading='du chapitre1, §1, n°2.2',new=r'chapitre~1, \S~1, n\textsuperscript{o}~\hyperref[VIII:1-2-2]{2.2}')
++en(1175,r'\ref{VIII:1-2-3}',r'Chapter~1, \S~1, no.~\hyperref[VIII:1-2-2]{2.2}')
++dec(1176,'The underlined1.1 heading is the singular Notation. The English source also needs its heading singularized.')
++en(1176,r'\subsubsection{Notation}',r'\subsubsection{Notation}')
++page(289,'On a alors \n\\[\\xymatrix@=0.5cm', 'Then\n\\[\\xymatrix@=0.5cm', 'The implication diagram and its introduction are on289; all six conditions are on288.')
++page(290,'sont exacts. De plus:', 'are exact. Moreover:', 'Page289 ends Tous ces foncteurs; the predicate sont exacts begins290. The inherited diplomatic source already has the correct adjective.')
++page(291,r"\section{Les catégories dérivées d'une catégorie abélienne}",r'\section{Derived categories of an abelian category}', 'ChapterII and its opening section start291. The missing separate chapter heading is inserted at this boundary.')
++# Direct scans pp.292–294: derived categories, cohomological dimension and exact triples.
++OPS[:]=[op for op in OPS if not(op['id']==key(1176) and op['lang']=='en')]
++dec(1177,'The first natural-functor formula on292 omits(A) after K^{b,b}; the second formula and the definition on291 include it. Restore the argument only in corrected forms.')
++variant(1177,r'\eK^{b,b}(\cA)',r'\eK^{b,b}',r'\eK^{b,b}(\cA)',r'\eK^{b,b}(\cA)',r'\eK^{b,b}',r'\eK^{b,b}(\cA)')
++for op in OPS:
++ if op['id']==key(1177):
++  row=r'\eD^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{+,b}(\cA)/\eK^{+,\varnothing}(\cA)'
++  op['old']=row;op['new']=row.replace(r'\eK^{b,b}(\cA)',op['new'],1)
++dec(1178,'The first sentence on293 has noté, but the subject is the feminine restriction. Correct the agreement in French; English denoted is unaffected.')
++variant(1178,'sera encore noté $D$','sera encore noté $D$','sera encore notée $D$')
++dec(1179,'The scan reads restreint, with the e before i. The inherited diplomatic source already repairs this transposition.')
++dec(1180,'The print includes m=0 in the vanishing claim. At m=0 the identity of a nonzero object survives under the fully faithful embedding stated immediately above, so the correct range is m>0.')
++variant(1180,r'$m\geqslant 0$',r'$m\geqslant 0$',r'$m>0$',r'$m>0$',r'$m\geqslant 0$',r'$m>0$')
++dec(1181,'The text after the second Hom formula says pour tout couple. The inherited diplomatic source already has pour.')
++dec(1182,'The projective analogue sentence includes the article un in the scan. It is already present in the inherited diplomatic and English sources.')
++for n in [1179,1181,1182]:OPS[:]=[op for op in OPS if not(op['id']==key(n) and op['lang']=='fr')]
++dec(1183,'The functor name in the last display of294 is a handwritten lowercase π, following the ρ and σ names above. The enlarged crop confirms the lower-case form; restore π in both languages.')
++en(1183,r'\Pi:\eE(\cA)',r'\pi:\eE(\cA)')
++page(292,'Les foncteurs naturels:','The natural functors\n\\begin{align*}', 'The first diagram and its fully faithful conclusion end291; the two natural-functor formulas begin292.')
++page(293,'La ``restriction\'\' de $D$', 'The “restriction” of $D$', 'The canonical functor D display ends292. Its restriction starts293.')
++page(294,'Le foncteur quasi-inverse est un adjoint', 'The quasi-inverse functor is a right adjoint', 'The I^+→D^+ equivalence display ends293; the quasi-inverse assertion begins294.')
++# Direct scans pp.295–297: exact triples, resolutions and hyper-Ext.
++dec(1184,'The assignment from the exact sequence to its triangle uses a wavy arrow in the print; restore leadsto in both languages.')
++en(1184,r'\mapsto',r'\leadsto')
++dec(1185,'The factorization sentence prints noterons. The inherited diplomatic source already restores the missing o.')
++OPS[:]=[op for op in OPS if not(op['id']==key(1185) and op['lang']=='fr')]
++dec(1186,'The scan prints et un isomorphisme. The criterion is the assertion that f is an isomorphism, so est is required; preserve the conjunction in diplomatic French and English.')
++variant(1186,r'un morphisme $f:X^\bullet \to Y^\bullet$ et un',r'un morphisme $f:X^\bullet \to Y^\bullet$ et un',r'un morphisme $f:X^\bullet \to Y^\bullet$ est un', 'a morphism $f:X^\\bullet \\to Y^\\bullet$ is\nan isomorphism', 'a morphism $f:X^\\bullet \\to Y^\\bullet$ and\nan isomorphism', 'a morphism $f:X^\\bullet \\to Y^\\bullet$ is\nan isomorphism')
++dec(1187,'The cohomology map in Definition1.7 explicitly has X^bullet and Y^bullet in its two arguments. Restore both bullets. The earlier1.6 display lacks them in the print and is retained as printed.')
++en(1187,'\\h^i(X) \\to \\h^i(Y)\n\\]\nis an isomorphism.\n\\end{definition}', '\\h^i(X^\\bullet) \\to \\h^i(Y^\\bullet)\n\\]\nis an isomorphism.\n\\end{definition}')
++dec(1188,'The opening parenthesis of Definition1.8 includes de before K(A); restore that word. The English already contains the corresponding of.')
++dec(1189,'The scan uses the normal abbreviation resp., not reps.; the inherited diplomatic source already repairs it.')
++OPS[:]=[op for op in OPS if not(op['id']==key(1189) and op['lang']=='fr')]
++dec(1190,'The print spells ambiguité without the required diaeresis on ï. Correct the French spelling; English ambiguity is unchanged.')
++variant(1190,'ambiguité','ambiguité','ambiguïté')
++dec(1191,'The print has ou without the grave accent. This is the relative adverb describing the sequence, so où is required, not the alternative conjunction.')
++variant(1191,r"d'objets de $\cA$ ou pour",r"d'objets de $\cA$ ou pour",r"d'objets de $\cA$ où pour")
++dec(1192,'The line after the exact sequences says pour tout i; the inherited diplomatic source already restores the final r.')
++OPS[:]=[op for op in OPS if not(op['id']==key(1192) and op['lang']=='fr')]
++own(295,'Exact sequence in the assignment to a distinguished triangle','Unlabelled maps between X,Y,Z','Corrected tree adds u and v labels','Retain the unlabelled arrows in all forms.','codex_rejected','As on272, the two consecutive maps are identified by source and target in the triangle. The print has no labels. Adding them is a clarification rather than a certain correction of a misprint.')
++own(297,'Definition2.1, hyper-Ext assignment',r'(X^\bullet,Y^\bullet)\leadsto\ext^i(X^\bullet,Y^\bullet)',r'(X^\bullet,Y^\bullet)\mapsto\ext^i(X^\bullet,Y^\bullet)','Restore the printed wavy arrow in both languages.','symbol','The mapping arrow in the definition is visibly wavy, continuing the typescript’s elementwise-functor convention.',fr_old=r'(X^\bullet,Y^\bullet)\mapsto',fr_new=r'(X^\bullet,Y^\bullet)\leadsto',en_old=r'(X^\bullet,Y^\bullet)\mapsto',en_new=r'(X^\bullet,Y^\bullet)\leadsto')
++page(295,'de la forme ($\\deg \\delta(S)=1$):', 'of the following form ($\\deg \\delta(S)=1$):', 'The name π and its source/target are at the foot of294; the assignment diagram and its introduction begin295.')
++page(296,r'\begin{definition}\label{VIII:3-1-8}',r'\begin{definition}\label{VIII:3-1-8}')
++page(297,r'\subsection{Etude des $\ext$}',r'\subsection{Study of $\ext$}', 'The resolution proposition ends296; the study of Ext opens297.')
++# Direct scans pp.298–300: Ext comparison formulas and derived-functor definition.
++dec(1193,'The bounded-above assertion is numbered2 in the scan. The inherited diplomatic and English sources already include that number.')
++dec(1194,'In the bounded-below assertion the printed limit is indexed by all Qis. The companion bounded-above formula uses Qis^-; the corresponding strengthened bounded-below formula requires Qis^+. Retain the omitted plus diplomatically and restore it in corrected forms.')
++variant(1194,r'\ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}}',r'\ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}}',r'\ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}^+}',r'\ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}}',r'\ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}}',r'\ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}^+}')
++dec(1195,'The assertion with X bounded above and Y bounded is numbered3. Both inherited sources already contain the number.')
++dec(1196,'The assertion about enough injectives is numbered4, already retained in the inherited sources.')
++dec(1197,'The print uses singular injectif after suffisamment de. Correct to injectifs in French; the English already uses the ordinary plural.')
++variant(1197,"suffisamment d'injectif et", "suffisamment d'injectif et", "suffisamment d'injectifs et")
++dec(1198,'The finite-cohomological-dimension assertion is numbered5, already retained in both inherited sources.')
++for n in [1193,1195,1196,1198]:OPS[:]=[op for op in OPS if not(op['id']==key(n) and op['lang']=='fr')]
++dec(1199,'The scan does have local§2, but Miller flattens the two internal chapters into one book chapter. NOTE_45 expressly permits this heading and numbering style. Resetting the section counter at this point would disrupt that hierarchy; the chapter wording itself is restored separately under1174.','rejected',reading='§2 : Les foncteurs dérivés')
++dec(1200,'Definition1.1 prints est un morphisme, with the final s+t in the copula. The inherited et is a transcription error; English already says is.')
++dec(1201,'The Fex paragraph prints les morphismes, with the plural article.')
++dec(1202,'The final paragraph joins the two abelian categories and Φ with et, not de.')
++own(298,'Proposition2.3(1), continued chain of four isomorphisms','The second isomorphism links the first limit to the next-line limit.','Miller’s second arrow ends in an empty diagram cell.','Retain the inherited French arrow repair and apply it to English.','diagram','The scan gives one consecutive chain of four expressions, continued on a second line. The inherited diplomatic French redirects the arrow to the next-line expression, preserving that chain; the English still had the old empty endpoint.',en_old='& \\varinjlim_{(\\mathsf{Qis}/X^\\bullet)^\\circ} \\hom_{\\eK(\\cA)}(-,Y^\\bullet) \\ar[r]^-\\sim\n    & \\\\',en_new='& \\varinjlim_{(\\mathsf{Qis}/X^\\bullet)^\\circ} \\hom_{\\eK(\\cA)}(-,Y^\\bullet) \\ar[dl]^-\\sim\n      \\\\')
++page(298,r'\begin{proposition}\label{VIII:3-2-3}',r'\begin{proposition}\label{VIII:3-2-3}', 'The proposition heading and its numbered first assertion start298; the preceding explanatory paragraph ends297.')
++page(299,'et une seule (à isomorphisme près dans', 'unique up\nto isomorphism in', 'Page298 ends résolution injective; et une seule and the uniqueness qualification begin299.')
++page(300,r'\section{Les foncteurs dérivés}',r'\section{Derived functors}')
++# Direct scans pp.301–303: representability and distinct total/cohomological notation.
++dec(1203,'Definition1.2 uses the French foncteur, with o, not u.')
++dec(1204,'Its second sentence reads sera appelé; the final a is present.')
++dec(1205,'The historical footnote spells pratique, without c.')
++dec(1206,'The bottom line of301 ends d’où un, after the Foco parenthesis. Page302 starts foncteur%(resp.%′) and then Definition1.4. The old automatic cut placed Definition1.4 on301; exact markers now follow the scan.',new='Place PrintPage302 immediately before foncteur%(resp.%′), after d’où un.')
++# Restore the alphabet distinction throughout both cohomological definitions.
++fr8=(W.parents[1]/'source/fr/codex_dip/sga4.5-8.tex').read_text();en8=(W.parents[1]/'source/en/sources/components/sga4half_8_en.tex').read_text()
++fstart=fr8.index(r'\begin{definition}\label{VIII:4-1-4}');fend=fr8.index(r'\subsubsection{Remarques}\label{VIII:4-1-6}',fstart)
++estart=en8.index(r'\begin{definition}\label{VIII:4-1-4}');eend=en8.index(r'\subsubsection{Remarks}\label{VIII:4-1-6}',estart)
++fchunk=fr8[fstart:fend];echunk=en8[estart:eend]
++own(302,'Definitions1.4 and1.5, all cohomological derived-functor names','Ordinary R and L, contrasted with doubled total-derived letters on301','eR and eL used for both kinds','Restore ordinary roman R/L for cohomological functors in both languages.','font','The scan distinguishes two different functors by alphabet: the total functors on301 have doubled/underlined letters, while every cohomological functor on302 uses ordinary R or L. The distinction is mathematically explicit in the comparison on303.',fr_old=fchunk,fr_new=fchunk.replace(r'\eR',r'\mathrm{R}').replace(r'\eL',r'\mathrm{L}'),en_old=echunk,en_new=echunk.replace(r'\eR',r'\mathrm{R}').replace(r'\eL',r'\mathrm{L}'))
++dec(1207,'The unbounded cohomological definition prints H∘Kf with no exponent. It is the zero-cohomology functor, as in the immediately preceding bounded definition; restore the omitted0 in corrected forms.')
++variant(1207,r'\h{}\circ \eK f',r'\h{}\circ \eK f',r'\h^0{}\circ \eK f',r'\h{}\circ \eK f',r'\h{}\circ \eK f',r'\h^0{}\circ \eK f')
++dec(1208,'The first démontrer on303 has the full accented é; the transcription lost the vowel.')
++dec(1209,'The R in R^+f(dérivé cohomologique) is visibly ordinary, while the surrounding total-derived symbols have doubled strokes. Restore this explicit distinction in both languages.')
++en(1209,r'$\eR^+ f$ (cohomological derived)',r'$\mathrm{R}^+ f$ (cohomological derived)')
++dec(1210,'The final word of1.6 is vérifiées, with the i after f.')
++dec(1211,'The added hypothesis uses une U-catégorie, with the feminine article.')
++dec(1212,'The printed French word is univers, with no final e.')
++dec(1213,'The scan prints entiers rationnel, with no plural s on the adjective. Correct this French agreement; rational integers is already plural in English.')
++variant(1213,'entiers rationnel soit','entiers rationnel soit','entiers rationnels soit')
++dec(1214,'The hypothesis on B uses généralement with a after r.')
++dec(1215,'The U-site parenthesis says objets, with b, not n.')
++own(303,'Comparison in1.6 and formula in2.1','Ordinary R on the cohomological side and in RF(X)','eR on both sides and in the cohomological formula','Restore the two further ordinary R occurrences in French and English.','font','These are the cohomological functor of Definition1.4: in1.6 it is compared with H^0 of the total functor, and in2.1 it is computed by a direct limit. The scan uses the ordinary letter at both locations.',fr_old='isomorphe au foncteur \n$\\eR^+ f$',fr_new='isomorphe au foncteur \n$\\mathrm{R}^+ f$',en_old=r'is isomorphic to $\eR^+ f$',en_new=r'is isomorphic to $\mathrm{R}^+ f$')
++sid=O[-1]['id']
++OPS.append(dict(lang='fr',page=303,id=sid,old=r'\eR F(X) =',new=r'\mathrm{R} F(X) =',mode='repair'))
++en(sid,r'\eR F(X) =',r'\mathrm{R} F(X) =',page=303)
++fstart=fr8.index('\\begin{align*}\n  \\Psi  &\\mapsto');fend=fr8.index(r'\end{align*}',fstart)+len(r'\end{align*}')
++estart=en8.index('\\begin{align*}\n  \\Psi  &\\mapsto');eend=en8.index(r'\end{align*}',estart)+len(r'\end{align*}')
++fchunk=fr8[fstart:fend];echunk=en8[estart:eend]
++own(301,'The two representing-functor assignments','Wavy arrows after Ψ','mapsto','Restore leadsto in both assignments and both languages.','symbol','Both elementwise assignments visibly use the wavy arrow of the typescript.',fr_old=fchunk,fr_new=fchunk.replace(r'\mapsto',r'\leadsto'),en_old=echunk,en_new=echunk.replace(r'\mapsto',r'\leadsto'))
++own(302,'The two cohomological representing-functor assignments','Wavy arrows after G','mapsto','Restore leadsto in both assignments and both languages.','symbol','The two inline arrows from G are wavy in the scan, parallel to the total-derived assignments on301.',fr_old=r'$G\mapsto \hom(F,G\circ Q)$',fr_new=r'$G\leadsto \hom(F,G\circ Q)$',en_old=r'$G\mapsto \hom(F,G\circ Q)$',en_new=r'$G\leadsto \hom(F,G\circ Q)$')
++sid=O[-1]['id']
++OPS.append(dict(lang='fr',page=302,id=sid,old=r'$G\mapsto \hom(G\circ Q,F)$',new=r'$G\leadsto \hom(G\circ Q,F)$',mode='repair'))
++en(sid,r'$G\mapsto \hom(G\circ Q,F)$',r'$G\leadsto \hom(G\circ Q,F)$',page=302)
++page(301,r'$Q:\eK^\ast(\cA)\to \eD^\ast(\cA)$',r'$Q:\eK^\ast(\cA)\to \eD^\ast(\cA)$','Page300 ends Le foncteur canonique; page301 starts the formula naming Q, followed by nous donne…')
++page(302,"foncteur $\\%$ (resp. $\\%'$) \n$\\mathsf{Foco}","functor $\\%$ (respectively $\\%'$)\n$\\mathsf{Foco}",'The phrase d’où un/and hence a ends301; the cohomological representing functor begins302. Definition1.4 is wholly on302.')
++page(303,'générales. Mais \nsans autres hypothèses', 'general, but without further hypotheses', 'The adjective générales/general begins303, continuing plus/more at the foot of302.')
++# Direct scans pp.304–306: existence theorem, its two corollaries and cohomological dimension.
++fstart=fr8.index('En particulier soit $f:\\cA\\to \\cB$ un foncteur additif. Les foncteurs');fend=fr8.index(r'\subsubsection{Remarques}\label{VIII:4-2-2}',fstart)
++estart=en8.index('In particular, let $f:\\cA\\to \\cB$ be an additive functor. The functors');eend=en8.index(r'\subsubsection{Remarks}\label{VIII:4-2-2}',estart)
++fchunk=fr8[fstart:fend];echunk=en8[estart:eend]
++own(304,'Consequence of Proposition2.1, cohomological functors','Ordinary R, R^+ and R^i','eR throughout the paragraph','Restore the ordinary R of the cohomological functors in both languages.','font','The paragraph applies the cohomological existence theorem and visibly uses ordinary letters, distinct from the doubled total-derived letters in the theorem below.',fr_old=fchunk,fr_new=fchunk.replace(r'\eR',r'\mathrm{R}'),en_old=echunk,en_new=echunk.replace(r'\eR',r'\mathrm{R}'))
++dec(1216,'Remarks2.2 prints ensembles d’objet. The sets consist of objects, so the French noun takes the plural; English sets of objects is already correct.')
++variant(1216,"ensembles d'objet sont", "ensembles d'objet sont", "ensembles d'objets sont")
++dec(1217,'The scan numbers the remarks2.2 and the theorem2.2, then continues with Definition2.3. Every later reference explicitly names Theorem2.2 and is unambiguous. Miller’s flattened hierarchy and stable label are allowed by NOTE_45; treating the repeated number as a proven misprint is not justified.','rejected',reading='2.2. Théorème')
++dec(1218,'The introduction of N prints désigne, including the accented vowel.')
++dec(1219,'Item(b) starts Le foncteur, with c. This text begins305, after item(a) at the foot of304.')
++dec(1220,'The proof cites chap.I§2n°4 th.2. The inherited abbreviated-reference target is correct; repair the malformed accented word to théorème without changing that target.')
++# Elementwise arrows in item(d) are a common transcription repair, before its variants.
++fstart=fr8.index(r'\item Le foncteur $X\mapsto \eR\Phi');fend=fr8.index(r'\item Le foncteur $\h^0',fstart)
++estart=en8.index(r'\item The functor $X\mapsto \eR\Phi');eend=en8.index(r'\item The functor $\h^0',estart)
++fchunk=fr8[fstart:fend];echunk=en8[estart:eend]
++own(305,'Theorem item(d), four elementwise assignments','Wavy arrows after X','mapsto','Restore all four wavy arrows in both languages.','symbol','The four assignments in item(d) use wavy arrows in the scan, including both limit formulas.',fr_old=fchunk,fr_new=fchunk.replace(r'\mapsto',r'\leadsto'),en_old=echunk,en_new=echunk.replace(r'\mapsto',r'\leadsto'))
++dec(1221,'Item(c) prints Q∘Φ(Y), but Φ(Y) belongs to K(B) and must be sent to D(B) by Q′. Q has source K(A). The corrected-tree and English reading Q′ is justified by these explicitly given domains.')
++variant(1221,r'$Q\circ \Phi(Y)$',r'$Q\circ \Phi(Y)$',r"$Q'\circ \Phi(Y)$",r"$Q'\circ \Phi(Y)$",r'$Q\circ \Phi(Y)$',r"$Q'\circ \Phi(Y)$")
++dec(1222,'The right-derived limit formula likewise prints Q rather than Q′ before Φ. Its values lie in K(B), so the target-category quotient is Q′.')
++variant(1222,r'\varinjlim_{X/\mathsf{Qis}^\ast} Q\circ\Phi(-)',r'\varinjlim_{X/\mathsf{Qis}^\ast} Q\circ\Phi(-)',r"\varinjlim_{X/\mathsf{Qis}^\ast} Q'\circ\Phi(-)",r"\varinjlim_{X/\mathsf{Qis}^\ast} Q'\circ\Phi(-)",r'\varinjlim_{X/\mathsf{Qis}^\ast} Q\circ\Phi(-)',r"\varinjlim_{X/\mathsf{Qis}^\ast} Q'\circ\Phi(-)")
++dec(1223,'The enlarged scan crop shows a right-pointing arrow beneath Lim in the left-derived formula. The dual construction is a limit over quasi-isomorphisms into X, hence an inverse limit; reverse the limit direction in corrected forms.')
++variant(1223,r'\varinjlim_{\mathsf{Qis}^\ast/X}',r'\varinjlim_{\mathsf{Qis}^\ast/X}',r'\varprojlim_{\mathsf{Qis}^\ast/X}',r'\varinjlim_{\mathsf{Qis}^\ast/X}',r'\varinjlim_{\mathsf{Qis}^\ast/X}',r'\varprojlim_{\mathsf{Qis}^\ast/X}')
++dec(1224,'The left-derived formula also prints Q∘Φ. As in(c) and the right-derived formula, Q′ is required by the source and target categories.')
++# Select the Q factor without swallowing the adjacent limit-direction variant.
++variant(1224,r'Q\circ \Phi(-)',r'Q\circ \Phi(-)',r"Q'\circ \Phi(-)",r"Q'\circ \Phi(-)",r'Q\circ \Phi(-)',r"Q'\circ \Phi(-)")
++dec(1225,'The printed reference to Theorem2.2 is correct for the theorem’s printed heading on304. There is no wrong target to repair. Miller’s stable label already identifies that theorem, and its different generated number is an allowed numbering style.','rejected',reading='Alors le théorème2.2 s’applique')
++dec(1226,'The final sentence of Corollary1 explicitly repeats the theorem number2.2. Restore the missing reference with the existing label for that theorem. This is a transcription omission, not a print-error correction.')
++en(1226,'then the theorem applies,','then Theorem \\ref{VIII:4-2-3} applies,')
++dec(1227,'The last line of the corollary says en prenant pour C, not sur C.')
++dec(1228,'Corollary2 names the existence theorem2.2 of this section. Miller’s old target2-4-3 led to a different corollary; the inherited diplomatic source already redirects it to4-2-3, as does English.')
++OPS[:]=[op for op in OPS if not(op['id']==key(1228) and op['lang']=='fr')]
++dec(1229,'The description of C reads les objets en tout degré, with en rather than et.')
++fstart=fr8.index(r'\begin{definition}\label{VIII:4-2-5}');fend=fr8.index(r'\end{definition}',fstart)+len(r'\end{definition}')
++estart=en8.index(r'\begin{definition}\label{VIII:4-2-5}');eend=en8.index(r'\end{definition}',estart)+len(r'\end{definition}')
++fchunk=fr8[fstart:fend];echunk=en8[estart:eend]
++own(306,'Definition of cohomological dimension and f-acyclic objects','Ordinary R and L throughout','eR and eL throughout','Restore ordinary cohomological R/L in the definition, in both languages.','font','Every R/L in the scanned definition is the ordinary cohomological letter, including existence conditions and vanishing groups. The preceding total-derived theorem retains its distinct doubled notation.',fr_old=fchunk,fr_new=fchunk.replace(r'\eR',r'\mathrm{R}').replace(r'\eL',r'\mathrm{L}'),en_old=echunk,en_new=echunk.replace(r'\eR',r'\mathrm{R}').replace(r'\eL',r'\mathrm{L}'))
++page(304,'En particulier soit $f:\\cA\\to \\cB$ un foncteur additif. Les foncteurs','In particular, let $f:\\cA\\to \\cB$ be an additive functor. The functors','The direct-limit formula ends303; its particular consequence begins304.')
++page(305,r'\item Le fonteur $\eR \Phi$',r'\item The functor $\eR \Phi$','Item(b) of the existence theorem begins305; item(a) ends304.')
++page(306,r'\begin{definition}\label{VIII:4-2-5}',r'\begin{definition}\label{VIII:4-2-5}','The definition of cohomological dimension begins306; Corollary1 ends305.')
++# Direct scans pp.307–308: continuation of Corollary2, products and composition.
++for op in OPS:
++ if op['id']==key(1226) and op['lang']=='en':
++  op['old']='Then the\ntheorem applies without';op['new']='Then Theorem \\ref{VIII:4-2-3} applies without'
++dec(1230,'The corollary continuation on307 prints possède en plus. Restore the missing initial letters and remove the stray bracket.')
++dec(1231,'The paragraph before the composition formula prints pas vrai, with masculine impersonal agreement.')
++dec(1232,'The final sentence is the singular Enoncé analogue. Restore French analogue and make the English statement singular as well.')
++en(1232,'There are analogous statements for left derived functors.','There is an analogous statement for left derived functors.')
++page(307,'Si de plus $f$ est de dimension cohomologique finie à droite', 'If, in addition, $f$ has finite right (respectively left) cohomological', 'All numbered conditions of Corollary2 end306; its additional finite-dimension clause begins307.')
++page(308,'de ces produits se déduisent immédiatement', 'of these\nproducts follow immediately', 'Page307 ends Les propriétés/The properties; the rest of that sentence begins308.')
++# Direct scans pp.309–310: derived Hom and sheaf tensor products.
++dec(1233,'The source variable is Y^bullet, and its assignment arrow is visibly wavy. Restore both the missing bullet and the arrow shape in both languages.','accepted with a corrected reading',reading=r'Y^\bullet\leadsto\hom^\bullet(X^\bullet,Y^\bullet)',new=r'$Y^\bullet\leadsto')
++en(1233,r'$Y\mapsto',r'$Y^\bullet\leadsto')
++dec(1234,'The flatness definition prints pour toute. The inherited diplomatic source already repairs the final letter.')
++OPS[:]=[op for op in OPS if not(op['id']==key(1234) and op['lang']=='fr')]
++dec(1235,'The first arrow in the printed short exact sequence points left, from Y′ to0. Exactness in the stated order and the tensor sequence immediately below require0→Y′. Preserve the arrow reversal diplomatically.')
++variant(1235,r'0 \ar[r]',r'0 \ar@{<-}[r]',r'0 \ar[r]',r'0 \ar[r]',r'0 \ar@{<-}[r]',r'0 \ar[r]')
++dec(1236,'The sheaf A_U is prolongé, with no u after g; English extended already matches.')
++sid=own(275,'Superscript on the complex Hom functor','Hom with a hollow-circle superscript','Hom with a filled bullet superscript','Retain the hollow circle diplomatically; use the complex bullet in corrected forms.','misprint_in_print','The enlarged275 crop shows the same hollow circle as the adjacent opposite-category superscript. Page309 explicitly refers back to this construction and writes Hom with a filled bullet, consistently with the complex-valued functor and its arguments. The distinct printed glyph is retained diplomatically rather than silently normalized.')
++variant(sid,r'\hom^\bullet:\eK(\cA)^\circ',r'\hom^\circ:\eK(\cA)^\circ',r'\hom^\bullet:\eK(\cA)^\circ',r'\hom^\bullet:\eK(\cA)^\circ',r'\hom^\circ:\eK(\cA)^\circ',r'\hom^\bullet:\eK(\cA)^\circ')
++sid=own(309,'Domain of the exact functor X↦RHom(X,Y)',r'\eK(\cA)',r'\eK(\cA)',r'\eK(\cA)^\circ','misprint_in_print','RHom(-,Y) is contravariant in X; the ensuing bifunctor has D(A)^circ explicitly. The scan omits the opposite-category superscript in this display. Accept the corrected-tree repair and propagate it to English.')
++variant(sid,r'\eK(\cA)',r'\eK(\cA)',r'\eK(\cA)^\circ',r'\eK(\cA)',r'\eK(\cA)',r'\eK(\cA)^\circ')
++for op in OPS:
++ if op['id']==sid:
++  op['old']=r'\eK(\cA) &\to \eD(\mathsf{Ab})';op['new']+=r' &\to \eD(\mathsf{Ab})'
++own(309,'Assignment in the contravariant exact functor','Wavy arrow from X^bullet','mapsto','Restore the printed wavy arrow in both languages.','symbol','The arrow on the second line of the functor display is visibly wavy.',fr_old=r'X^\bullet &\mapsto \rhom',fr_new=r'X^\bullet &\leadsto \rhom',en_old=r'X^\bullet &\mapsto \rhom',en_new=r'X^\bullet &\leadsto \rhom')
++own(310,'Definition of the total tensor product','Wavy arrow from(X,Y)','mapsto','Restore the printed wavy arrow in both languages.','symbol','The elementwise tensor assignment uses the same wavy arrow convention as the Hom construction.',fr_old=r'(X,Y) &\mapsto X\lotimes Y',fr_new=r'(X,Y) &\leadsto X\lotimes Y',en_old=r'(X,Y) &\mapsto X\lotimes Y',en_new=r'(X,Y) &\leadsto X\lotimes Y')
++page(309,r'\section{Exemples}',r'\section{Examples}','The Examples section and Hom heading both begin309; the composition discussion and its final sentence end308.')
++page(310,r'dériver le \nfoncteur $\hom$'.replace(r'\n','\n'),r'be\nderived with respect to the first argument.'.replace(r'\n','\n'),'Page309 ends on peut; dériver le foncteur Hom begins310. In English the modal can ends309 and be derived begins310.')
++# Direct scans pp.311–312: sheaf Hom, inverse-image adjunction and the complete erratum.
++dec(1237,'The phrase complexe des homomorphismes locaux identifies a sheaf Hom complex. Under Miller’s stated convention it must use Hom, not ordinary hom; propagate that distinction to English.')
++en(1237,r'\hom^\bullet(X,Y)',r'\Hom^\bullet(X,Y)')
++dec(1238,'The scan reverses E and E′ in both object hypotheses and both Hom categories of the final adjunction. Since f*:E′→E and f_*:E→E′, X belongs to D^-(E′), Y to D^+(E), the left Hom is in D(E), and the right Hom in D(E′). Correct all four positions consistently. The printed module-category notation is underlined E, restored in both branches.')
++fstart=fr8.index('Soient $X$ un objet de $\\eD^-(E,\\sA)$ et $Y$ un objet de');fend=fr8.index('}\\]',fstart)+3
++oldfr=fr8[fstart:fend]
++estart=en8.index("Let $X$ be an object of $\\eD^-(E',\\sA')$");eend=en8.index('}\\]',estart)+3
++olden=en8[estart:eend]
++printedfr=oldfr.replace(r'\eD^-(E,\sA)',r'\eD^-(\underline E)').replace(r"\eD^+(E',\sA')",r"\eD^+(\underline{E}')").replace(r"\eD(E',\sA')",r"\eD(\underline{E}')").replace(r'\eD(E,\sA)',r'\eD(\underline E)')
++correctedfr=printedfr.replace(r'\eD^-(\underline E)',r"\eD^-(\underline{E}')").replace(r"\eD^+(\underline{E}')",r'\eD^+(\underline E)').replace(r'\hom_{\eD(\underline E)}(X',r"\hom_{\eD(\underline{E}')}(X").replace(r"\hom_{\eD(\underline{E}')}(\eL",r'\hom_{\eD(\underline E)}(\eL')
++correcteden=olden.replace(r"\eD^-(E',\sA')",r"\eD^-(\underline{E}')").replace(r'\eD^+(E,\sA)',r'\eD^+(\underline E)').replace(r"\eD(E',\sA')",r"\eD(\underline{E}')").replace(r'\eD(E,\sA)',r'\eD(\underline E)')
++printeden=correcteden.replace(r"\eD^-(\underline{E}')",r'\eD^-(\underline E)').replace(r'\eD^+(\underline E)',r"\eD^+(\underline{E}')").replace(r"\hom_{\eD(\underline{E}')}(X",r'\hom_{\eD(\underline E)}(X').replace(r'\hom_{\eD(\underline E)}(\eL',r"\hom_{\eD(\underline{E}')}(\eL")
++variant(1238,oldfr,printedfr,correctedfr,olden,printeden,correcteden)
++# Preserve author's module-category notation rather than the inherited modern substitution.
++for p in [310,311]:
++ sid=own(p,'Module-category notation throughout the page',r'\underline E;\underline{E}\prime;\eD^\pm(\underline E)',r'\mathsf{Mod}(E);\eD^\pm(E,\sA)','Restore underlined E and its derived-category arguments throughout both languages.','notation','The scan explicitly distinguishes the ringed site E from its module category underlined E. Mod(E) and D(E,A) are different notation, not merely different macros for the same printed sign. Restore the author’s actual notation in all forms; no print-error apparatus applies.')
++ maps=[(r'\mathsf{Mod}(E)',r'\underline E'),(r"\mathsf{Mod}(E')",r"\underline{E}'"),(r'\eD^-(E,\sA)',r'\eD^-(\underline E)'),(r'\eD^+(E,\sA)',r'\eD^+(\underline E)'),(r'\eD(E,\sA)',r'\eD(\underline E)')]
++ for lang in ['fr','en']:
++  for old,new in maps:
++   # Only substitutions present in this page outside the final restored variant.
++   if p==310 and old not in [r'\mathsf{Mod}(E)',r'\eD^-(E,\sA)']:continue
++   OPS.append(dict(lang=lang,page=p,id=sid,old=old,new=new,mode='all_scoped'))
++sid=own(311,'Derived complex of local Hom in the opening paragraph and tensor-Hom adjunction','Derived sheaf Hom','mathsf{Rhom}','Use rHom for the derived sheaf Hom in both languages.','font','The opening sentence explicitly defines local homomorphisms, and the adjunction uses that same sheaf-valued derived Hom. Miller’s convention distinguishes it by the rHom macro; ordinary Rhom is the wrong functor notation here.')
++for lang in ['fr','en']:OPS.append(dict(lang=lang,page=311,id=sid,old=r'\mathsf{Rhom}',new=r'\rHom',mode='all_scoped'))
++dec(1239,'The erratum title explicitly includes the bibliographic parenthesis tome3, Lecture Notes305. Restore all of those words, with an English translation of the volume designation.')
++en(1239,r'\chapter{Errata for SGA 4, Volume 3}',r'\chapter{Erratum for SGA 4 (Volume 3, Lecture Notes 305)}')
++dec(1240,'The first locator is line14, written l.14, rather than a section1.14. The English already identifies a line.')
++dec(1241,'The printed word is Arpès, with the r and p transposed. Correct it to Après in French; English After is unchanged.')
++variant(1241,'Arpès','Arpès','Après')
++dec(1242,'The exponent of K_i uses capital Ψ, visibly matching the indexing function in the sums below. Restore its case in both languages.')
++en(1242,r'k_i\varepsilon(i)\varepsilon(\psi(i))',r'k_i\varepsilon(i)\varepsilon(\Psi(i))')
++dec(1243,'The first summation condition uses the same capital Ψ. Restore that literal symbol in both languages.')
++en(1243,r'\sum_{\varepsilon(i) = \varepsilon(\psi(i))=-}',r'\sum_{\varepsilon(i) = \varepsilon(\Psi(i))=-}')
++dec(1244,'The inner sum also has capital Ψ(a)=Ψ(b)=j. Restore both letters consistently.')
++en(1244,r'\psi(a)=\psi(b)=j',r'\Psi(a)=\Psi(b)=j')
++dec(1245,'The deleted line is identified as p.34 l.9, using lower-case l for line. The English already says line9.')
++dec(1246,'The replacement lines are p.34 l.12,13, again with the line abbreviation l. English already identifies these as lines.')
++dec(1247,'The final locator reads p.99 l-1, a negative line locator. Restore the l in French and retain the minus in English, whose inherited l.1 incorrectly means the first line.')
++en(1247,r'\paragraph{XVIII p.99, l.1}',r'\paragraph{XVIII p.99, l.-1}')
++page(311,r'La catégorie $\mathsf{Mod}(E)$ ayant suffisamment',r'Since the category $\mathsf{Mod}(E)$ has enough injectives','Page310 ends with the local hyper-Tor definition. The local Hom construction begins311, followed by the inverse-image example and adjunction.')
++page(312,r'\chapter{Erratum pour SGA 4, tome 3}',r'\chapter{Errata for SGA 4, Volume 3}','The full printed erratum occupies312, the final scan page. Every title, locator, formula and instruction has been compared.')
++
++# The high-resolution302 crop confirms literal percent-shaped functor symbols.
++d=next(d for d in D if d['id']==key(1206))
++d['printed_reading']=r"Page301 ends d’où un; page302 starts foncteur $\%$ (resp. $\%'$)."
++d['change_made']=r"Place \PrintPage{302} immediately before foncteur $\%$ (resp. $\%'$), following d’où un."
++d['reason']+=' The high-resolution crop shows an actual percent-shaped glyph (two loops and a diagonal), represented by TeX \\%; it is not a placeholder for an unread character and is distinct from the subsequent R/L derived-functor symbols.'
++
++next(d for d in D if d['id']==key(1206))['fix_new']=next(d for d in D if d['id']==key(1206))['change_made']
++next(d for d in D if d['id']==key(1238))['change_made']=r"X\in\eD^-(\underline{E}'), Y\in\eD^+(\underline E); the left Hom is in \eD(\underline E), the right Hom in \eD(\underline{E}')."
+ save()

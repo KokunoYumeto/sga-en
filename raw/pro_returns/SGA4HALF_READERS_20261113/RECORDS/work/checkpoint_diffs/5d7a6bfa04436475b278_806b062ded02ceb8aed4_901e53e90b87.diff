@@ -1,0 +1,28 @@
+--- checkpoint/scripts/reader_frontmatter.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/reader_frontmatter.py
+@@ -18,7 +18,7 @@
+     names={
+       'fr':{0:'Texte diplomatique',1:'Texte corrigé avec apparat',2:'Texte de lecture'},
+       'en':{0:'Diplomatic text',1:'Corrected text with apparatus',2:'Reading text'}}
+-    form=('Master annoté' if fr else 'Annotated master') if master else names[lang][mode]
++    form=r'\ifnum\EditionIsMaster=1\relax '+('Master annoté' if fr else 'Annotated master')+r'\else '+names[lang][mode]+r'\fi'
+     heading='Cohomologie étale' if fr else 'Étale cohomology'
+     authorcredit=('avec la collaboration de' if fr else 'with the collaboration of')
+     text=rf"""
+@@ -40,7 +40,7 @@
+ \vspace{{0.7cm}}
+ Lecture Notes in Mathematics 569, Springer, 1977\\[0.4em]
+ {'Édition vérifiée sur l’imprimé' if fr else 'Edition checked against the printed volume'}\\
+-13 November 2026
++{'13 novembre 2026' if fr else '13 November 2026'}
+ \end{{titlepage}}
+ """
+     if fr:
+@@ -186,6 +186,5 @@
+ accompanying audit records document the scan check, variants and source
+ differences.
+ """
+-    if master:
+-        text+=('\nCe master contient les deux lectures de chaque variante; son PDF montre la forme corrigée avec apparat.\n' if fr else '\nThis master contains both readings of every variant; its PDF displays the corrected form with apparatus.\n')
++    text+='\n\\ifnum\\EditionIsMaster=1\\relax\n'+('Ce master contient les deux lectures de chaque variante; son PDF montre la forme corrigée avec apparat.\n' if fr else 'This master contains both readings of every variant; its PDF displays the corrected form with apparatus.\n')+'\\fi\n'
+     return text+'\n\\clearpage\n'

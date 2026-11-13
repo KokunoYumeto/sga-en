@@ -1,0 +1,421 @@
+\documentclass[oneside]{book}
+% Inlined baseline: Daniel Miller style, as preserved in the diplomatic tree.
+% !TEX root = sga4.5.tex
+
+\usepackage[T1]{fontenc}
+\IfFileExists{callig15.tfm}{\usepackage{calligra}}{%
+  \providecommand\calligra{\itshape}}
+\usepackage[utf8]{inputenc} % allows French characters
+\usepackage[all]{xy}        % commutative diagrams
+\usepackage[stable,symbol]{footmisc}
+
+\ifdefined\sgaoption 
+  \ifnum\sgaoption=1 % tablet version
+    \usepackage[paperwidth=6.125in,paperheight=9.25in,text={5.5in,8in},centering]{geometry}
+  \else % tree saving version
+    \usepackage[margin=1in,centering]{geometry}
+  \fi
+\else % normal version
+  \usepackage[text={5.5in,8in},centering]{geometry}
+\fi
+
+
+\usepackage{
+  amsmath,
+  amssymb,
+  amsthm,
+  bm,        % to get bold symbols to work with stmaryrd
+ % calligra,  % for sheaf hom
+  enumerate, % allows \begin{enumerate}[\indent a)]
+  lmodern,
+  mathrsfs  % allows \mathscr
+%  microtype, % improves general appearance
+}
+%\usepackage[T1]{fontenc} % with calligra, but causes everything to crash
+\usepackage[kerning=true]{microtype} % improves general appearance
+\usepackage[backref=page,pdfpagelabels]{hyperref}
+%\setcounter{secnumdepth}{6}
+
+
+
+\IfFileExists{stmaryrd.sty}{\usepackage{stmaryrd}}{%
+  \providecommand\llbracket{[\! [}%
+  \providecommand\rrbracket{]\! ]}}
+% operators
+  \DeclareMathOperator{\aut}{Aut}
+  \DeclareMathOperator{\br}{Br}
+  \DeclareMathOperator{\cl}{cl}
+  \DeclareMathOperator{\cosp}{cosp}
+  \DeclareMathOperator{\dv}{div}
+  \DeclareMathOperator{\Div}{Div}
+  \DeclareMathOperator{\ext}{Ext}
+  \DeclareMathOperator{\Ext}{\mathscr{E}\text{\kern -2pt {\calligra\large xt}}\,\,} % sheaf ext
+  \DeclareMathOperator{\gal}{Gal}
+  \DeclareMathOperator{\gl}{GL}
+  \DeclareMathOperator{\gr}{gr}
+  \DeclareMathOperator{\h}{H}
+  \DeclareMathOperator{\hh}{\mathsf{H}} % hypercohomology?
+  \DeclareMathOperator{\Hom}{\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,} % sheaf hom
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\ob}{Ob}
+  \DeclareMathOperator{\pgl}{PGL}
+  \DeclareMathOperator{\pic}{Pic} 
+  \DeclareMathOperator{\res}{R} % restriction of scalars
+  \DeclareMathOperator{\rHom}{\mathsf{R}\vspace{-1pt}\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,}
+  \DeclareMathOperator{\sh}{Sh}
+  \DeclareMathOperator{\spe}{sp} % specialisation
+  \DeclareMathOperator{\spec}{Spec}
+  \DeclareMathOperator{\swan}{Sw}
+  \DeclareMathOperator{\tor}{Tor}
+  \DeclareMathOperator{\Tor}{\mathscr{T}\text{\kern -4pt {\calligra\large or}}\,} % sheaf tor
+  \DeclareMathOperator{\tr}{tr}
+
+
+% special symbols: a new way of defining them!
+  \newcommand{\dmu}{{\bm\mu}}
+  \newcounter{char}
+  \setcounter{char}{1}
+  \loop\ifnum\value{char}<27
+    \expandafter\edef\csname c\Alph{char}\endcsname{\noexpand\mathcal{\Alph{char}}}  % mathcal
+    \expandafter\edef\csname d\Alph{char}\endcsname{\noexpand\mathbb{\Alph{char}}}   % mathbb
+    \expandafter\edef\csname f\Alph{char}\endcsname{\noexpand\mathfrak{\Alph{char}}} % mathfrak
+    \expandafter\edef\csname e\Alph{char}\endcsname{\noexpand\mathsf{\Alph{char}}}   % mathsf
+    \expandafter\edef\csname s\Alph{char}\endcsname{\noexpand\mathscr{\Alph{char}}}  % mathscr
+    \addtocounter{char}{1}
+  \repeat
+% can't do the previous for lower-case mathfrak because \fi is already defined 
+% (otherwise, could do \alph instead of \Alph above)
+  \def\mydeff#1{\expandafter\def\csname f#1\endcsname{\mathfrak{#1}}}
+  \def\mydefallf#1{\ifx#1\mydefallf\else\mydeff#1\expandafter\mydefallf\fi}
+  \mydefallf abcdefghjklmnopqrstuvwxyz\mydefallf
+
+
+% miscellaneous operators
+  \newcommand{\an}[1]{{#1}^{\textnormal{an}}}
+  \newcommand{\const}[1]{\underline{#1}}
+  \newcommand{\et}[1]{{#1}_{\textnormal{et}}}
+  \newcommand{\iso}{\xrightarrow\sim}
+  \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
+  \DeclareMathOperator{\rhom}{\mathsf{R}\hom}
+  \renewcommand{\setminus}{\smallsetminus}
+  \newcommand{\kloos}{\textnormal{K}} % Kloosterman sum
+  \newcommand{\pr}{\mathrm{pr}} % projection map
+
+
+% theorem types
+  \newtheoremstyle{sga-source}
+    {\topsep}{\topsep}{\itshape}{}{\bfseries}{.}
+    {5pt plus 1pt minus 1pt}
+    {\thmname{#1} \thmnumber{(#2)}\thmnote{ (#3)}}
+  \theoremstyle{sga-source}
+  \newtheorem{proposition}[subsubsection]{Proposition}
+  \newtheorem{corollary}[subsubsection]{Corollaire}
+  \newtheorem{definition}[subsubsection]{Définition}
+  \newtheorem{theorem}[subsubsection]{Théorème}
+  \newtheorem{lemma}[subsubsection]{Lemme}
+
+  % Source-local heading punctuation used in the admitted Arcata pages.
+  \newtheoremstyle{sga-source-dash}
+    {\topsep}{\topsep}{\itshape}{}{\bfseries}{ --}
+    {5pt plus 1pt minus 1pt}
+    {\thmname{#1} \thmnumber{(#2)}\thmnote{ (#3)}}
+  \theoremstyle{sga-source-dash}
+  \newtheorem{theoremdash}[subsubsection]{Théorème}
+  \newtheorem{propositiondash}[subsubsection]{Proposition}
+  \newtheorem{corollarydash}[subsubsection]{Corollaire}
+  \newtheorem{definitiondash}[subsubsection]{Définition}
+
+  \newtheoremstyle{sga-source-dotdash}
+    {\topsep}{\topsep}{\itshape}{}{\bfseries}{. --}
+    {5pt plus 1pt minus 1pt}
+    {\thmname{#1} \thmnumber{(#2)}\thmnote{ (#3)}}
+  \theoremstyle{sga-source-dotdash}
+  \newtheorem{theoremdotdash}[subsubsection]{Théorème}
+  \newtheorem{propositiondotdash}[subsubsection]{Proposition}
+  \newtheorem{corollarydotdash}[subsubsection]{Corollaire}
+  \newtheorem{definitiondotdash}[subsubsection]{Définition}
+  \newtheorem{lemmadotdash}[subsubsection]{Lemme}
+
+  \newtheoremstyle{sga-source-number-note-dash}
+    {\topsep}{\topsep}{\itshape}{}{\bfseries}{ --}
+    {5pt plus 1pt minus 1pt}
+    {\thmnumber{(#2)}\thmnote{ #3}}
+  \theoremstyle{sga-source-number-note-dash}
+  \newtheorem{sourcenameddash}[subsubsection]{}
+
+  \newtheoremstyle{sga-source-note-number-dotdash}
+    {\topsep}{\topsep}{\itshape}{}{\bfseries}{. --}
+    {5pt plus 1pt minus 1pt}
+    {\thmnote{#3 }\thmnumber{(#2)}}
+  \theoremstyle{sga-source-note-number-dotdash}
+  \newtheorem{sourcenamedfirstdotdash}[subsubsection]{}
+
+  \newtheoremstyle{sga-source-example-dotdash}
+    {\topsep}{\topsep}{\normalfont}{}{\bfseries}{. --}
+    {5pt plus 1pt minus 1pt}
+    {\thmnote{#3 }\thmnumber{(#2)}}
+  \theoremstyle{sga-source-example-dotdash}
+  \newtheorem{sourceexampledotdash}[subsubsection]{}
+
+  \newtheoremstyle{sga-source-inline-number}
+    {\topsep}{\topsep}{\normalfont}{}{\bfseries}{}
+    {0.75em}
+    {\thmnumber{(#2)}}
+  \theoremstyle{sga-source-inline-number}
+  \newtheorem{sourceinline}[subsubsection]{}
+
+  \newenvironment{sourcebareinline}
+    {\refstepcounter{subsubsection}%
+     \par\addvspace{\topsep}%
+     \noindent\textbf{\thesubsubsection.}\hspace{0.75em}\ignorespaces}
+    {\par\addvspace{\topsep}}
+
+  \newtheoremstyle{sga-source-bare-number}
+    {\topsep}{\topsep}{\itshape}{}{\bfseries}{.}
+    {5pt plus 1pt minus 1pt}
+    {\thmname{#1} \thmnumber{#2}}
+  \theoremstyle{sga-source-bare-number}
+  \newtheorem{sourcelemmabarenumber}[subsubsection]{Lemme}
+  \theoremstyle{sga-source}
+  
+  \newtheorem{lemma_}[subsection]{Lemme}
+  \newtheorem{corollary_}[subsection]{Corollaire}
+  \newtheorem{theorem_}[subsection]{Théorème}
+  \newtheorem{proposition_}[subsection]{Proposition}
+  \newtheorem{definition_}[subsection]{Définition}
+  \newtheorem{prop-def_}[subsection]{Proposition-définition}
+  \setcounter{tocdepth}{1}
+
+  \newtheorem*{theorem*}{Théorème}
+
+
+\renewcommand*\thechapter{\Roman{chapter}}
+\renewcommand*\thesection{\Roman{section}}
+\renewcommand*\thesubsection{\arabic{subsection}}
+\renewcommand*\thesubsubsection{\arabic{subsection}.\arabic{subsubsection}}
+\renewcommand{\theequation}{\arabic{equation}}
+\setcounter{secnumdepth}{3}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{%
+  \ifnum\pdfstrcmp{#1}{section}=0
+    \csname the#1\endcsname.\quad
+  \else\ifnum\pdfstrcmp{#1}{subsection}=0
+    \csname the#1\endcsname.\quad
+  \else\ifnum\pdfstrcmp{#1}{subsubsection}=0
+    (\csname the#1\endcsname)\quad
+  \else
+    \csname the#1\endcsname\quad
+  \fi\fi\fi}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{3em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil
+      \nobreak\hb@xt@\@pnumwidth{\hss #2\kern-\p@\kern\p@}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\makeatother
+
+% allows for large external tensor product symbol
+\newcommand{\bigboxtimes}{\mathop{\vphantom{\sum}\mathchoice
+  {\vcenter{\hbox{\huge $\boxtimes$}}}
+  {\vcenter{\hbox{\Large $\boxtimes$}}}{\boxtimes}{\boxtimes}}\displaylimits}
+
+
+%\renewcommand{\bullet}{\text{\,\begin{picture}(-1,1)(-1,-2)\circle*{2}\end{picture}\ }}
+\let\oldbullet\bullet
+\renewcommand{\bullet}{\textnormal{\tiny$\oldbullet$}}
+
+
+% unmarked footnote
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\DeclareUnicodeCharacter{00A0}{~}
+\DeclareUnicodeCharacter{00B1}{\ensuremath{\pm}}
+\DeclareUnicodeCharacter{00B2}{\ensuremath{{}^2}}
+\DeclareUnicodeCharacter{00B3}{\ensuremath{{}^3}}
+\DeclareUnicodeCharacter{00B9}{\ensuremath{{}^1}}
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{0393}{\ensuremath{\Gamma}}
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{0398}{\ensuremath{\Theta}}
+\DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}
+\DeclareUnicodeCharacter{039E}{\ensuremath{\Xi}}
+\DeclareUnicodeCharacter{03A0}{\ensuremath{\Pi}}
+\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
+\DeclareUnicodeCharacter{03A5}{\ensuremath{\Upsilon}}
+\DeclareUnicodeCharacter{03A6}{\ensuremath{\Phi}}
+\DeclareUnicodeCharacter{03A8}{\ensuremath{\Psi}}
+\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
+\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
+\DeclareUnicodeCharacter{03B5}{\ensuremath{\varepsilon}}
+\DeclareUnicodeCharacter{03B6}{\ensuremath{\zeta}}
+\DeclareUnicodeCharacter{03B7}{\ensuremath{\eta}}
+\DeclareUnicodeCharacter{03B8}{\ensuremath{\theta}}
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
+\DeclareUnicodeCharacter{03BA}{\ensuremath{\kappa}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
+\DeclareUnicodeCharacter{03BE}{\ensuremath{\xi}}
+\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
+\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
+\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{03C8}{\ensuremath{\psi}}
+\DeclareUnicodeCharacter{03C9}{\ensuremath{\omega}}
+\DeclareUnicodeCharacter{1D62}{\ensuremath{{}^i}}
+\DeclareUnicodeCharacter{202F}{\,}
+\DeclareUnicodeCharacter{2032}{\ensuremath{\prime}}
+\DeclareUnicodeCharacter{2033}{\ensuremath{\prime\prime}}
+\DeclareUnicodeCharacter{2070}{\ensuremath{{}^0}}
+\DeclareUnicodeCharacter{207A}{\ensuremath{{}^+}}
+\DeclareUnicodeCharacter{207B}{\ensuremath{{}^-}}
+\DeclareUnicodeCharacter{2080}{\ensuremath{{}_0}}
+\DeclareUnicodeCharacter{2081}{\ensuremath{{}_1}}
+\DeclareUnicodeCharacter{2082}{\ensuremath{{}_2}}
+\DeclareUnicodeCharacter{2102}{\ensuremath{\mathbb C}}
+\DeclareUnicodeCharacter{2113}{\ensuremath{\ell}}
+\DeclareUnicodeCharacter{211A}{\ensuremath{\mathbb Q}}
+\DeclareUnicodeCharacter{211D}{\ensuremath{\mathbb R}}
+\DeclareUnicodeCharacter{2124}{\ensuremath{\mathbb Z}}
+\DeclareUnicodeCharacter{2190}{\ensuremath{\leftarrow}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
+\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}}
+\DeclareUnicodeCharacter{21D4}{\ensuremath{\Leftrightarrow}}
+\DeclareUnicodeCharacter{21DD}{\ensuremath{\leadsto}}
+\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
+\DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2205}{\ensuremath{\varnothing}}
+\DeclareUnicodeCharacter{2208}{\ensuremath{\in}}
+\DeclareUnicodeCharacter{2209}{\ensuremath{\notin}}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{2218}{\ensuremath{\circ}}
+\DeclareUnicodeCharacter{221E}{\ensuremath{\infty}}
+\DeclareUnicodeCharacter{2229}{\ensuremath{\cap}}
+\DeclareUnicodeCharacter{222A}{\ensuremath{\cup}}
+\DeclareUnicodeCharacter{223C}{\ensuremath{\sim}}
+\DeclareUnicodeCharacter{2243}{\ensuremath{\simeq}}
+\DeclareUnicodeCharacter{2245}{\ensuremath{\cong}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\ne}}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\leqslant}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geqslant}}
+\DeclareUnicodeCharacter{2282}{\ensuremath{\subset}}
+\DeclareUnicodeCharacter{2283}{\ensuremath{\supset}}
+\DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}
+\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
+\DeclareUnicodeCharacter{2297}{\ensuremath{\otimes}}
+\DeclareUnicodeCharacter{22A5}{\ensuremath{\perp}}
+
+% EditionMode: 0 = diplomatic; 1 = corrected with apparatus; 2 = reading.
+\providecommand\EditionMode{1}
+\providecommand\EditionLanguage{fr}
+\usepackage{xcolor}
+\usepackage{marginnote}
+\setlength{\marginparwidth}{0.55in}
+\setlength{\marginparsep}{0.12in}
+\definecolor{EditionAppColor}{rgb}{0.18,0.25,0.42}
+\makeatletter
+% The apparatus is indexed by source occurrence before TeX runs: no counters
+% can be incremented twice by math/diagram measuring passes.
+\DeclareRobustCommand{\EditionVariantMark}[2]{%
+  \ifx\relax#1\relax\else
+    \ifmmode
+      \hbox{\raisebox{0.7ex}{\normalfont\scriptsize\color{EditionAppColor}%
+        \hyperlink{apparatus:#1}{\EditionShortOccurrence{#1}}}}%
+    \else
+      \textsuperscript{\normalfont\scriptsize\color{EditionAppColor}%
+        \hyperlink{apparatus:#1}{\EditionShortOccurrence{#1}}}%
+    \fi
+  \fi}
+\def\EditionShortOccurrence#1{\expandafter\EditionShortOccurrenceAux#1\@nil}
+\def\EditionShortOccurrenceAux#1-#2\@nil{\number#2\relax}
+% IMPORTANT: Neither branch is put in a group, box, or math wrapper. A branch
+% may be only \left. or \left|, matched by a later \right outside this macro.
+\DeclareRobustCommand{\var}[4][]{%
+  \ifnum\EditionMode=0\relax
+    \expandafter\@firstoftwo
+  \else
+    \expandafter\@secondoftwo
+  \fi
+  {#2}{\ifnum\EditionMode=1\relax\EditionVariantMark{#1}{#4}\fi#3}}
+\providecommand\CurrentPrintPage{}
+\DeclareRobustCommand{\PrintPage}[1]{%
+  \gdef\CurrentPrintPage{#1}%
+  \hypertarget{printpage:\EditionLanguage:#1}{}%
+  \marginnote{\normalfont\sffamily\scriptsize\color{black!65}%
+    \ifnum\EditionMode=2\relax#1\else[p.~#1]\fi}}
+\DeclareRobustCommand{\MathPage}[1]{\PrintPage{#1}}
+% Metadata-only cite execution. No global bibliography is introduced.
+\newcommand{\EditionRememberCite}[2][]{%
+  \if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi}
+\DeclareRobustCommand{\PrintCite}[2]{%
+  \begingroup\let\cite\EditionRememberCite
+    \setbox\z@=\hbox{#2}%
+  \endgroup#1}
+% Preserve existing label names while restoring their original local numbers.
+\let\EditionOriginalLabel\label
+\renewcommand{\label}[1]{%
+  \@ifundefined{EditionLabelNumber@#1}{\EditionOriginalLabel{#1}}{%
+    \begingroup
+      \protected@edef\@currentlabel{\csname EditionLabelNumber@#1\endcsname}%
+      \EditionOriginalLabel{#1}%
+    \endgroup}}
+\expandafter\def\csname EditionLabelNumber@I:5-2-4\endcsname{2.3.1}
+\expandafter\def\csname EditionLabelNumber@I:5-2-5\endcsname{2.3.2}
+\expandafter\def\csname EditionLabelNumber@I:5-2-6\endcsname{2.3.3}
+\expandafter\def\csname EditionLabelNumber@I:5-2-7\endcsname{2.3.4}
+\expandafter\def\csname EditionLabelNumber@III:4-1bis\endcsname{4.1bis}
+\expandafter\def\csname EditionLabelNumber@I:1-6-6\endcsname{%
+  \ifnum\EditionMode=0\relax6.5\else6.6\fi}
+% PDF bookmarks contain the selected reading and no editorial markers.
+% prepare_body assigns an explicit optional occurrence identifier to every
+% variant. Parsing that known form directly remains fully expandable inside
+% hyperref's PDF-string conversion (unlike an \@ifnextchar look-ahead).
+\def\EditionPDFVar[#1]#2#3#4{\ifnum\EditionMode=0\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{#2}{#3}}
+\pdfstringdefDisableCommands{%
+  \let\var\EditionPDFVar
+  \def\PrintPage#1{}\def\MathPage#1{}%
+  \def\PrintCite#1#2{#1}%
+  \def\EditionVariantMark#1#2{}}
+\makeatother
+\hypersetup{hidelinks,bookmarksopen=true,bookmarksnumbered=true}
+
+\renewcommand{\chaptername}{Exposé}\renewcommand{\appendixname}{Annexe}\renewcommand{\bibname}{Bibliographie}\renewcommand{\proofname}{Démonstration}\renewcommand{\contentsname}{Table des matières}
+\begin{document}\ifnum\EditionMode=1\relax
+\clearpage
+\chapter*{Apparat des corrections}
+\markboth{Apparat des corrections}{Apparat des corrections}
+\addcontentsline{toc}{chapter}{Apparat des corrections}
+Chaque numéro correspond à un lieu précis du texte corrigé. Les fragments qui ne peuvent pas être composés isolément (délimiteur ouvert, commande mathématique incomplète, fragment de diagramme) sont reproduits exactement en notation TeX. Les réparations de transcription communes aux trois formes ne figurent pas ici. Les justifications complètes sont consignées dans \texttt{MISPRINTS\_45.tsv}.
+\begingroup\small
+\begin{description}
+\item[\hypertarget{apparatus:FR-0311}{311}] Page \hyperlink{printpage:fr:311}{311}\quad\texttt{S45-SOL-1238}
+\par\noindent\textbf{Imprimé:} {\footnotesize\ttfamily\raggedright Soient \$X\$ un objet de \$\textbackslash{}\allowbreak{}eD\textasciicircum{}\allowbreak{}-\allowbreak{}(\allowbreak{}\textbackslash{}\allowbreak{}underline E)\allowbreak{}\$ et \$Y\$ un objet de  \$\textbackslash{}\allowbreak{}eD\textasciicircum{}\allowbreak{}+\allowbreak{}(\allowbreak{}\textbackslash{}\allowbreak{}underline\{\allowbreak{}E\}\allowbreak{}')\allowbreak{}\$; il existe un isomorphisme fonctoriel:  \textbackslash{}\allowbreak{}[\allowbreak{}\textbackslash{}\allowbreak{}xymatrix\{\allowbreak{}   \textbackslash{}\allowbreak{}hom\_\allowbreak{}\{\allowbreak{}\textbackslash{}\allowbreak{}eD(\allowbreak{}\textbackslash{}\allowbreak{}underline\{\allowbreak{}E\}\allowbreak{}')\allowbreak{}\}\allowbreak{}(\allowbreak{}\textbackslash{}\allowbreak{}eL\textasciicircum{}\allowbreak{}-\allowbreak{} f\textasciicircum{}\allowbreak{}\textbackslash{}\allowbreak{}ast(\allowbreak{}X)\allowbreak{},\allowbreak{}Y)\allowbreak{} \textbackslash{}\allowbreak{}ar[\allowbreak{}r]\allowbreak{}\textasciicircum{}\allowbreak{}-\allowbreak{}\textbackslash{}\allowbreak{}sim      \& \textbackslash{}\allowbreak{}hom\_\allowbreak{}\{\allowbreak{}\textbackslash{}\allowbreak{}eD(\allowbreak{}\textbackslash{}\allowbreak{}underline E)\allowbreak{}\}\allowbreak{}(\allowbreak{}X,\allowbreak{}\textbackslash{}\allowbreak{}eR\textasciicircum{}\allowbreak{}+\allowbreak{} f\_\allowbreak{}\textbackslash{}\allowbreak{}ast(\allowbreak{}Y)\allowbreak{})\allowbreak{} \textbackslash{}\allowbreak{}text\{\allowbreak{}.\}\allowbreak{} \}\allowbreak{}\textbackslash{}\allowbreak{}]\allowbreak{}\par}
+\par\noindent\textbf{Corrigé:} {\footnotesize\ttfamily\raggedright Soient \$X\$ un objet de \$\textbackslash{}\allowbreak{}eD\textasciicircum{}\allowbreak{}-\allowbreak{}(\allowbreak{}\textbackslash{}\allowbreak{}underline\{\allowbreak{}E\}\allowbreak{}')\allowbreak{}\$ et \$Y\$ un objet de  \$\textbackslash{}\allowbreak{}eD\textasciicircum{}\allowbreak{}+\allowbreak{}(\allowbreak{}\textbackslash{}\allowbreak{}underline E)\allowbreak{}\$; il existe un isomorphisme fonctoriel:  \textbackslash{}\allowbreak{}[\allowbreak{}\textbackslash{}\allowbreak{}xymatrix\{\allowbreak{}   \textbackslash{}\allowbreak{}hom\_\allowbreak{}\{\allowbreak{}\textbackslash{}\allowbreak{}eD(\allowbreak{}\textbackslash{}\allowbreak{}underline E)\allowbreak{}\}\allowbreak{}(\allowbreak{}\textbackslash{}\allowbreak{}eL\textasciicircum{}\allowbreak{}-\allowbreak{} f\textasciicircum{}\allowbreak{}\textbackslash{}\allowbreak{}ast(\allowbreak{}X)\allowbreak{},\allowbreak{}Y)\allowbreak{} \textbackslash{}\allowbreak{}ar[\allowbreak{}r]\allowbreak{}\textasciicircum{}\allowbreak{}-\allowbreak{}\textbackslash{}\allowbreak{}sim      \& \textbackslash{}\allowbreak{}hom\_\allowbreak{}\{\allowbreak{}\textbackslash{}\allowbreak{}eD(\allowbreak{}\textbackslash{}\allowbreak{}underline\{\allowbreak{}E\}\allowbreak{}')\allowbreak{}\}\allowbreak{}(\allowbreak{}X,\allowbreak{}\textbackslash{}\allowbreak{}eR\textasciicircum{}\allowbreak{}+\allowbreak{} f\_\allowbreak{}\textbackslash{}\allowbreak{}ast(\allowbreak{}Y)\allowbreak{})\allowbreak{} \textbackslash{}\allowbreak{}text\{\allowbreak{}.\}\allowbreak{} \}\allowbreak{}\textbackslash{}\allowbreak{}]\allowbreak{}\par}
+\smallskip
+\end{description}
+\endgroup
+\fi
+\end{document}

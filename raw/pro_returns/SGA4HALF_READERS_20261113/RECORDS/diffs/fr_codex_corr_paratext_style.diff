@@ -1,0 +1,40 @@
+--- source/fr/codex_corr/sga-style.sty
++++ deliverables/FR/SGA4HALF_FR_corrige_apparat.tex#style [paratext_style]
+@@ -1,7 +1,8 @@
+ % !TEX root = sga4.5.tex
+ 
+ \usepackage[T1]{fontenc}
+-\usepackage{calligra}
++\IfFileExists{callig15.tfm}{\usepackage{calligra}}{%
++  \providecommand\calligra{\itshape}}
+ \usepackage[utf8]{inputenc} % allows French characters
+ \usepackage[all]{xy}        % commutative diagrams
+ \usepackage[stable,symbol]{footmisc}
+@@ -25,16 +26,19 @@
+  % calligra,  % for sheaf hom
+   enumerate, % allows \begin{enumerate}[\indent a)]
+   lmodern,
+-  mathrsfs,  % allows \mathscr
++  mathrsfs  % allows \mathscr
+ %  microtype, % improves general appearance
+-  stmaryrd   % allows \llbracket, i.e. [[t]]
+ }
+ %\usepackage[T1]{fontenc} % with calligra, but causes everything to crash
+ \usepackage[kerning=true]{microtype} % improves general appearance
+-\usepackage[backref=page,pdfpagelabels]{hyperref}
++\usepackage[backref=page,pdfpagelabels,hypertexnames=false]{hyperref}
+ %\setcounter{secnumdepth}{6}
+ 
+ 
++
++\IfFileExists{stmaryrd.sty}{\usepackage{stmaryrd}}{%
++  \providecommand\llbracket{[\! [}%
++  \providecommand\rrbracket{]\! ]}}
+ % operators
+   \DeclareMathOperator{\aut}{Aut}
+   \DeclareMathOperator{\br}{Br}
+@@ -236,3 +240,4 @@
+   \addtocounter{footnote}{-1}%
+   \endgroup
+ }
++

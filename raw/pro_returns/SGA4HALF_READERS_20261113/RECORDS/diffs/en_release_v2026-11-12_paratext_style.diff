@@ -1,0 +1,200 @@
+--- source/en/sources/sga-style.sty
++++ deliverables/EN/SGA4HALF_EN_corrected_apparatus.tex#style [paratext_style]
+@@ -1,6 +1,8 @@
+-% !TEX root = sga4.5-en.tex
++% !TEX root = sga4.5.tex
+ 
+ \usepackage[T1]{fontenc}
++\IfFileExists{callig15.tfm}{\usepackage{calligra}}{%
++  \providecommand\calligra{\itshape}}
+ \usepackage[utf8]{inputenc} % allows French characters
+ \usepackage[all]{xy}        % commutative diagrams
+ \usepackage[stable,symbol]{footmisc}
+@@ -24,16 +26,19 @@
+  % calligra,  % for sheaf hom
+   enumerate, % allows \begin{enumerate}[\indent a)]
+   lmodern,
+-  mathrsfs,  % allows \mathscr
++  mathrsfs  % allows \mathscr
+ %  microtype, % improves general appearance
+-  stmaryrd   % allows \llbracket, i.e. [[t]]
+ }
+ %\usepackage[T1]{fontenc} % with calligra, but causes everything to crash
+ \usepackage[kerning=true]{microtype} % improves general appearance
+-\usepackage[backref=page,pdfpagelabels,hidelinks,hypertexnames=false]{hyperref}
++\usepackage[backref=page,pdfpagelabels,hypertexnames=false]{hyperref}
+ %\setcounter{secnumdepth}{6}
+ 
+ 
++
++\IfFileExists{stmaryrd.sty}{\usepackage{stmaryrd}}{%
++  \providecommand\llbracket{[\! [}%
++  \providecommand\rrbracket{]\! ]}}
+ % operators
+   \DeclareMathOperator{\aut}{Aut}
+   \DeclareMathOperator{\br}{Br}
+@@ -42,25 +47,25 @@
+   \DeclareMathOperator{\dv}{div}
+   \DeclareMathOperator{\Div}{Div}
+   \DeclareMathOperator{\ext}{Ext}
+-  \DeclareMathOperator{\Ext}{\mathscr{E}\!xt} % sheaf ext
++  \DeclareMathOperator{\Ext}{\mathscr{E}\text{\kern -2pt {\calligra\large xt}}\,\,} % sheaf ext
+   \DeclareMathOperator{\gal}{Gal}
+   \DeclareMathOperator{\gl}{GL}
+   \DeclareMathOperator{\gr}{gr}
+   \DeclareMathOperator{\h}{H}
+   \DeclareMathOperator{\hh}{\mathsf{H}} % hypercohomology?
+-  \DeclareMathOperator{\Hom}{\mathscr{H}\!om} % sheaf hom
++  \DeclareMathOperator{\Hom}{\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,} % sheaf hom
+   \DeclareMathOperator{\im}{im}
+   \DeclareMathOperator{\ob}{Ob}
+   \DeclareMathOperator{\pgl}{PGL}
+   \DeclareMathOperator{\pic}{Pic} 
+   \DeclareMathOperator{\res}{R} % restriction of scalars
+-  \DeclareMathOperator{\rHom}{\mathsf{R}\mathscr{H}\!om}
++  \DeclareMathOperator{\rHom}{\mathsf{R}\vspace{-1pt}\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,}
+   \DeclareMathOperator{\sh}{Sh}
+   \DeclareMathOperator{\spe}{sp} % specialisation
+   \DeclareMathOperator{\spec}{Spec}
+   \DeclareMathOperator{\swan}{Sw}
+   \DeclareMathOperator{\tor}{Tor}
+-  \DeclareMathOperator{\Tor}{\mathscr{T}\!or} % sheaf tor
++  \DeclareMathOperator{\Tor}{\mathscr{T}\text{\kern -4pt {\calligra\large or}}\,} % sheaf tor
+   \DeclareMathOperator{\tr}{tr}
+ 
+ 
+@@ -96,27 +101,126 @@
+ 
+ 
+ % theorem types
++  \newtheoremstyle{sga-source}
++    {\topsep}{\topsep}{\itshape}{}{\bfseries}{.}
++    {5pt plus 1pt minus 1pt}
++    {\thmname{#1} \thmnumber{(#2)}\thmnote{ (#3)}}
++  \theoremstyle{sga-source}
+   \newtheorem{proposition}[subsubsection]{Proposition}
+   \newtheorem{corollary}[subsubsection]{Corollary}
+   \newtheorem{definition}[subsubsection]{Definition}
+   \newtheorem{theorem}[subsubsection]{Theorem}
+   \newtheorem{lemma}[subsubsection]{Lemma}
++
++  % Source-local heading punctuation used in the admitted Arcata pages.
++  \newtheoremstyle{sga-source-dash}
++    {\topsep}{\topsep}{\itshape}{}{\bfseries}{ --}
++    {5pt plus 1pt minus 1pt}
++    {\thmname{#1} \thmnumber{(#2)}\thmnote{ (#3)}}
++  \theoremstyle{sga-source-dash}
++  \newtheorem{theoremdash}[subsubsection]{Theorem}
++  \newtheorem{propositiondash}[subsubsection]{Proposition}
++  \newtheorem{corollarydash}[subsubsection]{Corollary}
++  \newtheorem{definitiondash}[subsubsection]{Definition}
++
++  \newtheoremstyle{sga-source-dotdash}
++    {\topsep}{\topsep}{\itshape}{}{\bfseries}{. --}
++    {5pt plus 1pt minus 1pt}
++    {\thmname{#1} \thmnumber{(#2)}\thmnote{ (#3)}}
++  \theoremstyle{sga-source-dotdash}
++  \newtheorem{theoremdotdash}[subsubsection]{Theorem}
++  \newtheorem{propositiondotdash}[subsubsection]{Proposition}
++  \newtheorem{corollarydotdash}[subsubsection]{Corollary}
++  \newtheorem{definitiondotdash}[subsubsection]{Definition}
++  \newtheorem{lemmadotdash}[subsubsection]{Lemma}
++
++  \newtheoremstyle{sga-source-number-note-dash}
++    {\topsep}{\topsep}{\itshape}{}{\bfseries}{ --}
++    {5pt plus 1pt minus 1pt}
++    {\thmnumber{(#2)}\thmnote{ #3}}
++  \theoremstyle{sga-source-number-note-dash}
++  \newtheorem{sourcenameddash}[subsubsection]{}
++
++  \newtheoremstyle{sga-source-note-number-dotdash}
++    {\topsep}{\topsep}{\itshape}{}{\bfseries}{. --}
++    {5pt plus 1pt minus 1pt}
++    {\thmnote{#3 }\thmnumber{(#2)}}
++  \theoremstyle{sga-source-note-number-dotdash}
++  \newtheorem{sourcenamedfirstdotdash}[subsubsection]{}
++
++  \newtheoremstyle{sga-source-example-dotdash}
++    {\topsep}{\topsep}{\normalfont}{}{\bfseries}{. --}
++    {5pt plus 1pt minus 1pt}
++    {\thmnote{#3 }\thmnumber{(#2)}}
++  \theoremstyle{sga-source-example-dotdash}
++  \newtheorem{sourceexampledotdash}[subsubsection]{}
++
++  \newtheoremstyle{sga-source-inline-number}
++    {\topsep}{\topsep}{\normalfont}{}{\bfseries}{}
++    {0.75em}
++    {\thmnumber{(#2)}}
++  \theoremstyle{sga-source-inline-number}
++  \newtheorem{sourceinline}[subsubsection]{}
++
++  \newenvironment{sourcebareinline}
++    {\refstepcounter{subsubsection}%
++     \par\addvspace{\topsep}%
++     \noindent\textbf{\thesubsubsection.}\hspace{0.75em}\ignorespaces}
++    {\par\addvspace{\topsep}}
++
++  \newtheoremstyle{sga-source-bare-number}
++    {\topsep}{\topsep}{\itshape}{}{\bfseries}{.}
++    {5pt plus 1pt minus 1pt}
++    {\thmname{#1} \thmnumber{#2}}
++  \theoremstyle{sga-source-bare-number}
++  \newtheorem{sourcelemmabarenumber}[subsubsection]{Lemma}
++  \theoremstyle{sga-source}
+   
+   \newtheorem{lemma_}[subsection]{Lemma}
+   \newtheorem{corollary_}[subsection]{Corollary}
+   \newtheorem{theorem_}[subsection]{Theorem}
+   \newtheorem{proposition_}[subsection]{Proposition}
+   \newtheorem{definition_}[subsection]{Definition}
+-  \newtheorem{prop-def_}[subsection]{Proposition--Definition}
++  \newtheorem{prop-def_}[subsection]{Proposition-definition}
+   \setcounter{tocdepth}{1}
+ 
+   \newtheorem*{theorem*}{Theorem}
+ 
+ 
+-%\renewcommand*\thechapter{\Roman{chapter}}
+-\renewcommand*\thesection{\arabic{section}}
++\renewcommand*\thechapter{\Roman{chapter}}
++\renewcommand*\thesection{\Roman{section}}
++\renewcommand*\thesubsection{\arabic{subsection}}
++\renewcommand*\thesubsubsection{\arabic{subsection}.\arabic{subsubsection}}
+ \renewcommand{\theequation}{\arabic{equation}}
+ \setcounter{secnumdepth}{3}
++\makeatletter
++\renewcommand{\@seccntformat}[1]{%
++  \ifnum\pdfstrcmp{#1}{section}=0
++    \csname the#1\endcsname.\quad
++  \else\ifnum\pdfstrcmp{#1}{subsection}=0
++    \csname the#1\endcsname.\quad
++  \else\ifnum\pdfstrcmp{#1}{subsubsection}=0
++    (\csname the#1\endcsname)\quad
++  \else
++    \csname the#1\endcsname\quad
++  \fi\fi\fi}
++\renewcommand*\l@chapter[2]{%
++  \ifnum \c@tocdepth >\m@ne
++    \addpenalty{-\@highpenalty}%
++    \vskip 1.0em \@plus\p@
++    \setlength\@tempdima{3em}%
++    \begingroup
++      \parindent \z@ \rightskip \@pnumwidth
++      \parfillskip -\@pnumwidth
++      \leavevmode \bfseries
++      \advance\leftskip\@tempdima
++      \hskip -\leftskip
++      #1\nobreak\hfil
++      \nobreak\hb@xt@\@pnumwidth{\hss #2\kern-\p@\kern\p@}\par
++      \penalty\@highpenalty
++    \endgroup
++  \fi}
++\makeatother
+ 
+ % allows for large external tensor product symbol
+ \newcommand{\bigboxtimes}{\mathop{\vphantom{\sum}\mathchoice
+@@ -136,3 +240,4 @@
+   \addtocounter{footnote}{-1}%
+   \endgroup
+ }
++

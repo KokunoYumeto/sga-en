@@ -1,0 +1,13 @@
+from audit_helpers import *
+reasons={803:'The proof visibly refers to 1.19.1, with a numeral 1 rather than a letter a.',804:'The final equality in Remark 4.4 visibly has q, not 1. Restore the print before making the distinct mathematical correction recorded as 0805.',805:'The print has |tau|=q. The preceding product with the conjugate equals q, so the absolute value is q^{1/2}; mark this mathematical misprint separately from the transcription error 0804.',806:'The phrase is printed un produits de corps. Singular agreement requires produit.',807:'The scan explicitly says de degré N_i sur F_q, et on pose. Restore the omitted base field.',808:'The equality in 4.5.1 is annotated dfn below the equals sign. Restore that defining marker.',809:'The phrase visibly reads l’ensemble V(B) des points de V.',810:'The scan has les schémas ... suivant, without plural s. The adjective refers to plural schémas; correct to suivants.',811:'Between the projective-space names Q and P the scan contains only spacing. Supply et only in the corrected form; the TeX has silently supplied it already.',812:'The final paragraph has an isomorphism sign under V* and G_m^I, not an equality sign. Restore simeq.',813:'The source reads M est une A-algèbre séparable, with feminine article.',814:'The beginning of 4.8 reads M=k une algèbre étale.',815:'The last line of the page is the explicit transition Dès lors, missing entirely in Miller. Restore it before the next-page display.'}
+for n,reason in reasons.items():decide(n,reason)
+page(197,r'\begin{proof}[Preuve]'+'\nLe faisceau',r'\begin{proof}'+'\nThe sheaf')
+page(198,'Après quelques préliminaires','After some preliminaries')
+page(199,'Le cas qui nous intéresse','The case of interest')
+variant(197,'S45-SOL-0805',r'|\tau(\chi,\psi)|=q',r'|\tau(\chi,\psi)|=q^{1/2}','The product with the conjugate is the square of the absolute value.',en_old=r'|\tau(\chi,\psi)|=q',en_new=r'|\tau(\chi,\psi)|=q^{1/2}',place='Remark 4.4, final equality')
+variant(197,'S45-SOL-0806','un produits de corps','un produit de corps','Singular agreement.',place='4.5')
+variant(198,'S45-SOL-0810',r'les schémas déduits de $V$ suivant',r'les schémas déduits de $V$ suivants','Plural agreement of the adjective with schémas.',place='4.6, before a–c')
+variant(198,'S45-SOL-0811',r'$Q$ $P$ sur',r'$Q$ et $P$ sur','Restore the missing conjunction joining the two projective spaces.',en_old=r'$Q$ $P$ over',en_new=r'$Q$ and $P$ over',place='4.6(c)')
+for n,p in [(17,197),(18,198),(19,199)]:
+ own(n,p,'Unit-group notation',r'^\ast',r'^\times',r'^\ast','symbol','Printed unit-group superscripts are asterisks.')
+ append('notation_units',{'page':str(p),'source':f'S45-ASTRA-S-{n:04}','replace':r'^\times','with':r'^\ast'})

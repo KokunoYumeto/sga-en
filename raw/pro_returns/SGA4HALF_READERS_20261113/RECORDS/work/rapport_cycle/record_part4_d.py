@@ -1,0 +1,4 @@
+from record import *
+page(138,r'\section{La classe de cohomologie associée à un cycle}',[553,554],start_en=r'\section{The cohomology class associated to a cycle}')
+page(139,r'est anticommutatif.',range(555,566),start_en='is anticommutative.',overrides={562:dict(fix_old=r'(\hyperref[I]{Cohomologie étale}, \ref{I:5-3-4})',fix_new=r'(\hyperref[I]{Arcata}, V \ref{I:5-3-4})',change_made='Restore printed part name Arcata and explicit V before theorem3.4.'),565:dict(reason='The scan reads ordinary Ext between A-modules. Use Miller ordinary-functor macro ext, not the sheaf macro Ext introduced by Codex corrected tree.')})
+variant('S45-SOL-0561',139,r'$D$ ne disconnecte par $X$',r'$D$ ne disconnecte par $X$',r'$D$ ne disconnecte pas $X$','The negative statement requires pas; retain the printed verb disconnecte rather than introducing Codex’s unneeded lexical replacement.')

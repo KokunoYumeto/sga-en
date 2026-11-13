@@ -1,0 +1,43 @@
+--- checkpoint/work/sommes/finish_components.py
++++ SGA4HALF_READERS_RECORDS.zip/work/sommes/finish_components.py
+@@ -77,6 +77,19 @@
+ op(211,'en',own(63),r'a $\ell$-adic cohomology argument',r'an $\ell$-adic cohomology argument')
+ op(218,'en',own(64),'a odd character','an odd character')
+ op(226,'en',own(65),'are easy to calculated easily','are easy to calculate')
++op(209,'en',own(66),'every ideal $a$ has a power','every ideal has a power')
++op(209,'en',own(67),'also called \nWeil Hecke characters','called by Weil \nHecke characters')
++op(175,'en',own(68),'after a \nextension','after an \nextension')
++op(181,'en',own(69),r'$x\mapsto (y\mapsto F x\cdot y\cdot x^{-1})$)',r'$x\mapsto (y\mapsto F x\cdot y\cdot x^{-1})$')
++op(181,'en',own(70),'conjugation class','conjugacy class')
++op(189,'en',own(71),r'and $\sF$ as in',r'and $\sF$ be as in')
++op(199,'en',own(72),'projective system of groups','inverse system of groups')
++op(229,'en',own(73),'by methods \n$p$-adic methods','by \n$p$-adic methods')
++op(183,'en',own(74),r'\cite[XXI, 5.2.2 et 5.4]',r'\cite[XXI, 5.2.2 and 5.4]')
++op(211,'en',own(74),r'\cite[II 2.1 et 2.2]',r'\cite[II 2.1 and 2.2]')
++op(204,'en',sol(842),'or equivalently as','more often written in the form')
++op(216,'en',sol(908),'places of degree greater than $1$','places of degree $1$')
++op(216,'en',sol(908),'disregard \nthem','disregard \nthe others')
+ 
+ # Prepare exact English phrasing for semantic variants, preserving the source meaning.
+ op(178,'en',sol(707),r'$\h_c^i(X,\sF)$ and $\h^{2n-i}(X,\sF^\vee)(n)$',r'$\h_c^i(X,\sF)$ and $\h^{2n-i}(X,\sF^\vee)(2n)$')
+@@ -93,6 +106,20 @@
+  op(195,L,sol(794)+';'+sol(795),old,new)
+ 
+ # All remaining variants are inserted with an explicit per-row resolution.
++# A restored literal bibliographic reference must not acquire a second numeric
++# citation. Preserve Miller's key in PrintCite's source-only second argument.
++citation_ids={own(n) for n in (10,12,13,15,42,43,44,46,47)}
++for r in readj('edits'):
++ if r['source'] not in citation_ids:continue
++ old=r['new'];m=re.search(r'\s*(\\cite(?:\[[^\]]*\])?\{[^}]+\})$',old)
++ if m:
++  new=r'\PrintCite{'+old[:m.start()]+r'}{'+m.group(1)+'}'
++  op(int(r['page']),r['lang'],r['source'],old,new)
++for L,phrase in [('fr','en préparation'),('en','in preparation')]:
++ old=r'P.~Deligne, \emph{La conjecture de Weil II}, '+phrase+r' \cite{de80}'
++ new=r'\PrintCite{P.~Deligne, \emph{La conjecture de Weil II}, '+phrase+r'}{\cite{de80}}'
++ op(177,L,sol(702),old,new)
++
+ VARLOG=[]
+ for r in readj('variants'):
+  p=int(r['page']);id=r['id']

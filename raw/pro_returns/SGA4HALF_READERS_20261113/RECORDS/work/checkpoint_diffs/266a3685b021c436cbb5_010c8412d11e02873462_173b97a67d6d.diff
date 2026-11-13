@@ -1,0 +1,77 @@
+--- checkpoint/work/verification/verify_final.py
++++ SGA4HALF_READERS_RECORDS.zip/work/verification/verify_final.py
+@@ -1,4 +1,4 @@
+-#![runtime file] python3
++# Invoke this script with python3.
+ """Independent structural, coverage, compilation, and privacy gate.
+ 
+ Run from any directory. The default preliminary report records unavailable
+@@ -19,7 +19,7 @@
+ }
+ LOCAL_PATH=re.compile(r'(?<![\w:])/(?:workspace|home|root|mnt|tmp|private|Users|usr|var|etc|opt|Applications|Volumes|Library|srv|run|media)(?:/[^\s<>"\]\[{}]*)?(?![\w])|(?<![\w:])[A-Za-z]:/[^\s<>"\]\[{}]+|(?<![\w:])[A-Za-z]:(?:\\)+(?:Users|Documents and Settings|Windows|Program Files|ProgramData|Temp|tmp|workspace|home|projects?|build|work)(?:\\)+[^\s<>"\]\[{}]+',re.I)
+ EMAIL=re.compile(r'[A-Za-z0-9_.+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}')
+-CHECKS=[];VARIANTS=[];MARKERS=[];READERS=[];COVERAGE=[];PRIVACY=[]
++CHECKS=[];VARIANTS=[];MARKERS=[];READERS=[];COVERAGE=[];PRIVACY=[];PDF_CHECKED_HASHES=set()
+ 
+ def relative(p):
+  try:return Path(p).resolve().relative_to(ROOT).as_posix()
+@@ -156,6 +156,7 @@
+ 
+ def inspect_tex(reg,ids,metadata):
+  reports={};canonical={};component_occurrences={}
++ page_table={r['printed_page']:r for r in reg.get('PAGES_CHECKED.tsv',[])}
+  op=ROOT/'work/records/VARIANT_OCCURRENCES.json'
+  if need(op,'records'): 
+   for lang in FILES:component_occurrences[lang]=[r for r in readjson(op) if r['language']==lang]
+@@ -187,6 +188,12 @@
+    pp=markers(s);seq=[r['page'] for r in pp]
+    check(scope,'314 original-page markers in order',seq==ORDER,314,len(seq))
+    item['tex_page_markers']=len(pp)
++   if master:
++    badlocations=[]
++    for marker in pp:
++     r=page_table.get(marker['page'],{})
++     if r.get('master_'+lang)!=p.name or str(marker['line'])!=r.get('master_line_'+lang) or s[marker['end']:marker['end']+240].strip()!=r.get('master_marker_context_'+lang):badlocations.append(marker['page'])
++    check(scope,'page-table master lines and contexts match actual markers',not badlocations,314,{'checked':len(pp),'mismatches':badlocations})
+    try:vv=variants(s)
+    except ValueError as e:check(scope,'balanced variant parsing',False,detail=str(e));continue
+    check(scope,'variant identities unique and complete',[v['occurrence'] for v in vv]==wanted,EXPECTED[lang],len(vv))
+@@ -271,6 +278,7 @@
+     for link in page.get_links():
+      if link.get('kind')==fitz.LINK_GOTO and link.get('page',-1)<0:missing_links.append(n)
+    privacy_text(relative(pdf)+' [metadata]',json.dumps(doc.metadata,ensure_ascii=False))
++   PDF_CHECKED_HASHES.add(item['pdf_sha256'])
+    check(scope,'PDF contains no unresolved double-question references',not double_questions,actual=double_questions)
+    check(scope,'PDF internal links have destinations',not missing_links,actual=missing_links)
+    item['pdf_text_replacement_characters']=replacement_chars
+@@ -371,15 +379,27 @@
+   for m in rx.finditer(text):
+    PRIVACY.append(dict(file=file,kind=kind,line=text.count('\n',0,m.start())+1,pdf_page=pdf_page,value_sha256=digest(m[0]),context=clean(text[max(0,m.start()-50):min(len(text),m.end()+50)].replace('\n',' '))))
+ def inspect_privacy(extra_roots):
+- candidates=set()
++ candidates=set();pdfs=set()
+  for folder in [ROOT/'deliverables',ROOT/'work/records',ROOT/'work/glossary',ROOT/'work/build']+[ROOT/p for p in extra_roots]:
+   if not folder.exists():continue
+-  if folder.is_file():candidates.add(folder);continue
++  if folder.is_file():
++   (pdfs if folder.suffix.lower()=='.pdf' else candidates).add(folder);continue
+   for p in folder.rglob('*'):
+    if not p.is_file() or '__pycache__' in p.parts:continue
+    # Raw TeX runtime logs, aux/out files, and intermediate images are excluded.
+-   if p.suffix.lower() in ['.tex','.tsv','.csv','.json','.jsonl','.md','.diff'] or p.name.endswith('.log.txt'):candidates.add(p)
++   if p.suffix.lower()=='.pdf':pdfs.add(p)
++   elif p.suffix.lower() in ['.tex','.sty','.bib','.py','.sh','.tsv','.csv','.json','.jsonl','.md','.diff','.txt']:candidates.add(p)
+  for p in sorted(candidates):privacy_text(relative(p),p.read_text(errors='replace'))
++ for p in sorted(pdfs):
++  h=digest(p.read_bytes())
++  if h in PDF_CHECKED_HASHES:continue
++  try:
++   import fitz
++   with fitz.open(p) as doc:
++    for n,page in enumerate(doc,1):privacy_text(relative(p),page.get_text(),pdf_page=n)
++    privacy_text(relative(p)+' [metadata]',json.dumps(doc.metadata,ensure_ascii=False))
++   PDF_CHECKED_HASHES.add(h)
++  except Exception as e:check('privacy','additional PDF readable',False,detail=relative(p)+': '+clean(e))
+  check('privacy','distributable text/PDF scan has no paths or addresses',not PRIVACY,0,len(PRIVACY),detail='Raw runtime .log/.aux/.out files excluded; sanitized .log.txt files included. Hit values are hashed and redacted in this report.')
+  return len(candidates)
+ 

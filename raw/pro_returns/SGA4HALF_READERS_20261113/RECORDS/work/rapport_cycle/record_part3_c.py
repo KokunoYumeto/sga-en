@@ -1,0 +1,4 @@
+from record import *
+page(116,r'\section{Le Théorème}',range(465,468),start_en=r'\section{The theorem}',overrides={467:dict(change_made='Retain already repaired French exponent p+q; repair English if necessary.',reason='The full page visibly gives (-1)^(p+q); the French Codex baseline already agrees.')})
+page(117,r'\subsection{Remarque}\label{III:2-5}',range(468,475),start_en=r'\subsection{Remark}\label{III:2-5}',overrides={468:dict(change_made='Retain Codex-repaired K and propagate to English.'),469:dict(change_made='Retain Codex-repaired au; English already expresses this.'),470:dict(fix_old=r'en degré $0$;',fix_new=r'en degré $0$:',change_made='Codex already repaired en; restore the printed colon.')})
+variant('S45-SOL-0471',117,'à degré positifs','à degré positifs','à degrés positifs','The print omits plural s in degré.')

@@ -1,0 +1,11 @@
+--- checkpoint/scripts/tex_audit.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/tex_audit.py
+@@ -18,7 +18,7 @@
+ 
+ def variants(s):
+     rows=[]
+-    for m in re.finditer(r'\\var\s*\{',s):
++    for m in re.finditer(r'\\var(?:\[[^\]]*\])?\s*\{',s):
+         # Nested variant nodes are forbidden in this edition.
+         a,end=group(s,m.end()-1);b,end=group(s,end);ident,end=group(s,end)
+         pages=re.findall(r'\\(?:PrintPage|MathPage)\{([^}]+)\}',s[:m.start()])

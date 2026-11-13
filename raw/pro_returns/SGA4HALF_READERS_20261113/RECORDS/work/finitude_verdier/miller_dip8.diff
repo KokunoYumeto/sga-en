@@ -1,0 +1,171 @@
+--- 
+
++++ 
+
+@@ -32,3 +32,3 @@
+
+ Soient $X$, $Y$, $Z$ trois objets de $\cA$, $\alpha\in \hom^i(X,Y)$, 
+-$\beta\in \hom^j(X,Y)$. Nous définirons le composé $\beta\circ\alpha$ 
++$\beta\in \hom^j(Y,Z)$. Nous définirons le composé $\beta\circ\alpha$ 
+ appartenant à $\hom^{i+j}(X,Z)$ par: 
+@@ -101,3 +101,3 @@
+
+ morphisme $u:X\to Y$ est contenu dans un triangle distingué 
+-$(X,Y,Z,u,v,w)$. Le triangle $(X,X,0,\operatorname{id}_{X'},0,0)$ est 
++$(X,Y,Z,u,v,w)$. Le triangle $(X,X,0,\operatorname{id}_X,0,0)$ est 
+ distingué. 
+@@ -182,6 +182,6 @@
+
+   \item $(f,g,h)$ étant un morphisme de triangle distingué et $f,g$ des 
+-    isomorphismes. 
++    isomorphismes, $h$ est un isomorphisme. 
+   \item Les triangles distingués construits sur un morphisme 
+-    (\hyperlink{VIII:TR1}{TR1}), sont tour isomorphismes (\emph{mais les 
+-    isomorphismes ne sont pas, en général, uniquoment déterminés}). 
++    (\hyperlink{VIII:TR1}{TR1}), sont tous isomorphes (\emph{mais les 
++    isomorphismes ne sont pas, en général, uniquement déterminés}). 
+   \item Lorsque dans un triangle distingué, un des morphismes admet un noyau 
+@@ -415,3 +415,3 @@
+
+     d_{X^\bullet} & \varphi_n \\
+-    0 & d_{Y^\bullet} 
++    0 & d_{Z^\bullet} 
+   \end{pmatrix}
+@@ -521,3 +521,3 @@
+
+ et $Z^\bullet$ un objet de $\eC(\cA')$ (resp. $\eC(\cA)$). Le morphisme 
+-$P^\ast(f,Z^\bullet)$ (resp. $P^\bullet(Z^\bullet,f)$) est alors homotope à 
++$P^\ast(f,Z^\bullet)$ (resp. $P^\ast(Z^\bullet,f)$) est alors homotope à 
+ zéro. On en déduit que $P^\ast$ définit d'une manière unique un 
+@@ -786,3 +786,3 @@
+
+     élément de $\hom(\operatorname{source}(s),Y)$ dont l'image est $a$ et 
+-    un objet de $S_y$, $\underline b$ un élément de 
++    un objet de $S_Y$, $\underline b$ un élément de 
+     $\hom(\operatorname{source}(t),Z)$ dont l'image est $b$. On a alors un 
+@@ -894,3 +894,3 @@
+
+         est un élément de $S$, il existe un morphisme $s':R'\to R$ où 
+-        $s\circ'$ est un élément de $S\cap \cB$; et 
++        $s\circ s'$ est un élément de $S\cap \cB$; et 
+         $R'\in\operatorname{Ob}\cB$. 
+@@ -1033,4 +1033,4 @@
+
+     \[\xymatrix{
+-      \hom_\cA(X,Y) \ar[r]^-Q 
+-        & \hom_{\cA/\cB}(Q(X),Q(Y)) 
++      \hom_\cA(Y,X) \ar[r]^-Q 
++        & \hom_{\cA/\cB}(Q(Y),Q(X)) 
+     }\]
+@@ -1067,3 +1067,3 @@
+
+ Deux sous-catégories triangulées $\cN$ et $\cN'$ d'une catégorie 
+-triangulée $\cA$ sont dites \emph{orthagonales} si pour tout objet $X$ de 
++triangulée $\cA$ sont dites \emph{orthogonales} si pour tout objet $X$ de 
+ $\cN$ et tout objet $Y$ de $\cN'$, on a: 
+@@ -1109,4 +1109,4 @@
+
+ épaisse de $\cA$, $\cB^\bot$ l'orthogonale à droite de $\cB$, $S(\cB)$, 
+-$s(\cB^\bot)$ les systèmes multiplicatifs correspondants, $Q$ et $Q^\bot$ les 
+-foncteurs canoniques de passage au quotient. Considérons pour un objet $x$ de 
++$S(\cB^\bot)$ les systèmes multiplicatifs correspondants, $Q$ et $Q^\bot$ les 
++foncteurs canoniques de passage au quotient. Considérons pour un objet $X$ de 
+ $\cA$, les propriétés suivantes: 
+@@ -1156,3 +1156,3 @@
+
+ 
+-La proposition est encore vraie lorsqu'on remplace le mot droite par le omt 
++La proposition est encore vraie lorsqu'on remplace le mot droite par le mot 
+ gauche. 
+@@ -1180,3 +1180,3 @@
+
+ $Q$. De même soient $^\ast i^\bot$ et $^\ast Q^\bot$ les adjoints à gauche 
+-de $i^\bot$ et de $Q^\bot$. Tous ces foncteurs sont exactes. De plus: 
++de $i^\bot$ et de $Q^\bot$. Tous ces foncteurs sont exacts. De plus: 
+ 
+@@ -1202,3 +1202,3 @@
+
+ Enfin, il existe un morphisme fonctoriel de degré $1$: 
+-$\partial:i^\bot\circ ^\ast i^\bot \to i\circ i^\ast$ tel que le le triangle 
++$\partial:i^\bot\circ ^\ast i^\bot \to i\circ i^\ast$ tel que le triangle 
+ suivant soit distingué $(\deg\partial=1$): 
+@@ -1301,3 +1301,3 @@
+
+ La ``restriction'' de $D$ à la sous-catégorie pleine $\cA$ de $\eC(\cA)$ 
+-sera encore noté $D$. Le foncteur $D$ restrient à $\cA$ est pleinement 
++sera encore noté $D$. Le foncteur $D$ restreint à $\cA$ est pleinement 
+ fidèle. Le foncteur $D$ se factorise d'une manière unique par $\eK(\cA)$. 
+@@ -1312,3 +1312,3 @@
+
+ \[
+-  \hom_{\eD(\cA)}(D(X),T^m D(Y)) = 0 \qquad\text{pout tout couple $X,Y$ d'objets de $\cA$.} 
++  \hom_{\eD(\cA)}(D(X),T^m D(Y)) = 0 \qquad\text{pour tout couple $X,Y$ d'objets de $\cA$.} 
+ \]
+@@ -1341,3 +1341,3 @@
+
+ 
+-On a énoncé analogue concernant les projectifs. 
++On a un énoncé analogue concernant les projectifs. 
+ 
+@@ -1396,3 +1396,3 @@
+
+ \]
+-se factorise d'une manière unique par un foncteur que nous noterns encore 
++se factorise d'une manière unique par un foncteur que nous noterons encore 
+ $\h^0$ 
+@@ -1432,3 +1432,3 @@
+
+ Soient $\sigma$ un ensemble d'objets de $\cA$, $X^\bullet$ un objet de 
+-$\eC(\cA)$ (resp. $\eK(\cA)$). Une re\'solution droite (reps. gauche) de type 
++$\eC(\cA)$ (resp. $\eK(\cA)$). Une re\'solution droite (resp. gauche) de type 
+ $\sigma$ de $X^\bullet$, est un quasi-isomorphisme $X^\bullet \to V^\bullet$ 
+@@ -1460,3 +1460,3 @@
+
+     \end{align*}
+-    d'objets de $\cA$ ou pout tout $i$, $0\leqslant i\leqslant n-1$, $Y^i$ est 
++    d'objets de $\cA$ ou pour tout $i$, $0\leqslant i\leqslant n-1$, $Y^i$ est 
+     un objet de $\sigma$, l'objet $Y^n$ soit un objet de $\sigma$. Alors tout 
+@@ -1538,4 +1538,4 @@
+
+   \ext^0(X^\bullet,Y^\bullet) = \hom_{\eD(\cA)}(Q(X^\bullet),Q(Y^\bullet)) \ar[r]^-\sim 
+-    & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) \ar[r]^-\sim 
+-    & \\
++    & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) \ar[dl]^-\sim 
++      \\
+   \varinjlim_{Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(X^\bullet,-) \ar[r]^-\sim 
+@@ -1543,3 +1543,3 @@
+
+ }\]
+-Si $X^\bullet$ est un objet de $\eK^-(\cA)$: 
++2. Si $X^\bullet$ est un objet de $\eK^-(\cA)$: 
+ \[
+@@ -1551,3 +1551,3 @@
+
+ \]
+-Si $X^\bullet$ est un objet de $\eK^-(\cA)$ et si $Y^\bullet$ est un 
++3. Si $X^\bullet$ est un objet de $\eK^-(\cA)$ et si $Y^\bullet$ est un 
+ objet de $\eK^b(\cA)$: 
+@@ -1561,3 +1561,3 @@
+
+ \]
+-Si la catégorie $\cA$ possède suffisamment d'injectif et si 
++4. Si la catégorie $\cA$ possède suffisamment d'injectif et si 
+ $Y^\bullet$ est un objet de $\eK^+(\cA)$, $Y^\bullet$ admet une 
+@@ -1573,3 +1573,3 @@
+
+ On a de même un énoncé analogue pour les projectifs. 
+-Si la catégorie $\cA$ admet suffisamment d'injectifs et si $\cA$ est 
++5. Si la catégorie $\cA$ admet suffisamment d'injectifs et si $\cA$ est 
+ de \emph{dimension cohomologique finie}, tout objet $Y^\bullet$ de 
+@@ -1889,3 +1889,3 @@
+
+   \item Tout objet $X$ de $\cA$ s'injecte dans (resp. est quotient de) un objet 
+-    de $\sigma$. Les hypothèses du théorème \ref{VIII:2-4-3} sont 
++    de $\sigma$. Les hypothèses du théorème \ref{VIII:4-2-3} sont 
+     vérifiées en prenant $\ast=+$ (resp. $\ast=-$) et en prenant pour 
+@@ -2033,3 +2033,3 @@
+
+ $\sA$-modules. Un objet $X$ de $\mathsf{Mod}(E)$ est dit 
+-\emph{$\sA$-plat} si pout toute suite exacte: 
++\emph{$\sA$-plat} si pour toute suite exacte: 
+ \[\xymatrix{

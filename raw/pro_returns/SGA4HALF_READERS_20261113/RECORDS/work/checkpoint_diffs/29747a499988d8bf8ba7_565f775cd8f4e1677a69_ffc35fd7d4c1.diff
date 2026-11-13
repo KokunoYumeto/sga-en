@@ -1,0 +1,20 @@
+--- checkpoint/scripts/package_readers.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/package_readers.py
+@@ -35,6 +35,8 @@
+             allowed=p.suffix in TEXT or folder=='build' and 'visual_qa' in p.parts and p.suffix=='.png'
+             if allowed and not excluded(rel):result['RECORDS'][rel]=p
+     p=ROOT/'work/manifest_verification.json';result['RECORDS'][p.relative_to(ROOT).as_posix()]=p
++    requirements=ROOT/'requirements-rebuild.txt'
++    if requirements.exists():result['RECORDS'][requirements.name]=requirements
+     # Principal tables and reports also appear at the root for quick inspection.
+     for p in (ROOT/'work/records').iterdir():
+         if p.is_file() and p.suffix in {'.tsv','.json','.md'}:result['RECORDS'][p.name]=p
+@@ -52,7 +54,7 @@
+         for name,source in items.items():
+             dest=STAGE/group/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,dest)
+         if group!='RECORDS':
+-            (STAGE/group/('READERS_'+group+'.md')).write_text('# SGA4½ '+group+' readers\n\nThe deliverables folder contains the diplomatic, corrected-with-apparatus, reading, and annotated-master source/PDF pairs. Each TeX file is standalone. Extract all three final archives into one project directory for the full audit and rebuild project; consult README.md in the records archive. The original printed text pages III–IV and1–312 are all included. The master PDF shows the corrected apparatus form.\n')
++            (STAGE/group/('READERS_'+group+'.md')).write_text('# SGA 4½ '+group+' readers\n\nThe deliverables folder contains the diplomatic, corrected with apparatus, reading, and annotated master source/PDF pairs. Each TeX file is standalone. Extract all three final archives into one project directory for the full audit and rebuild project; consult README.md in the records archive. The original printed text pages III–IV and 1–312 are all included. The master PDF shows the corrected apparatus form.\n')
+     summary={}
+     for group in mapping:
+         base=STAGE/group;rows=[]

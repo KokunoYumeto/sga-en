@@ -1,0 +1,43 @@
+--- checkpoint/scripts/build_arcata_fr.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/build_arcata_fr.py
+@@ -63,7 +63,7 @@
+  # These accepted readings are handled explicitly below because the reviewed
+  # decision preserves original label names or spans several printed places.
+  if d['id'] in {'S45-SOL-0054','S45-SOL-0199','S45-SOL-0201','S45-SOL-0204','S45-SOL-0205'}:continue
+- if d['id'] in {'S45-SOL-0020','S45-SOL-0059','S45-SOL-0104','S45-SOL-0106','S45-SOL-0137','S45-SOL-0158','S45-SOL-0161','S45-SOL-0172','S45-SOL-0179','S45-SOL-0226'}:continue
++ if d['id'] in {'S45-SOL-0020','S45-SOL-0059','S45-SOL-0104','S45-SOL-0106','S45-SOL-0137','S45-SOL-0158','S45-SOL-0161','S45-SOL-0172','S45-SOL-0179','S45-SOL-0206','S45-SOL-0226'}:continue
+  local=BASE_PAGE[p]
+  oms=matches(local,old);nms=matches(local,new)
+  oms=[m for m in oms if not any(n.start()<=m.start() and m.end()<=n.end() for n in nms)]
+@@ -78,6 +78,8 @@
+ # Shared repairs established by the independent full-page review.
+ patch(r'\sh(\et X)\to \sh(\et Y)',r'\sh_{\mathrm{Ab}}(\et X)\to \sh_{\mathrm{Ab}}(\et Y)',23,'S45-ASTRA-A-0009')
+ patch('Kunneth','Künneth',27,'S45-ASTRA-A-0010')
++patch('résolution,est','résolution, est',65,'S45-ASTRA-A-0025')
++patch('Etant donnés','Étant donnés',54,'S45-ASTRA-A-0019',all=True)
+ patch(r"{k'}^\times",r"{k'}^*",14,'S45-ASTRA-A-0005',all=True)
+ patch(r'\item (composition) Si $f:X\to S$',r'\item Si $f:X\to S$',19,'S45-ASTRA-A-0006')
+ patch(r"\item Si $f:X\to S$ et $g:Y\to S$ sont deux morphismes étales",r"\item (composition) Le composé de deux morphismes étales est un morphisme étale."+'\n'+r"  \item Si $f:X\to S$ et $g:Y\to S$ sont deux morphismes étales",19,'S45-SOL-0054')
+@@ -85,7 +87,7 @@
+ for old,new in [(r'\sO_U^\times',r'\sO_U^*'),(r'\h^0(X,\sO_X)^\times',r'\h^0(X,\sO_X)^*'),(r'k^\times',r'k^*')]:
+  patch(old,new,20,'S45-SOL-0059')
+ # These readings are already repaired in Codex using equivalent link/macro forms.
+-for ident,needle in [('0020',r'\hyperref[I:1-1]{1}'),('0104','La connaissance du groupe de Brauer'),('0106',r'\emph{Corps locaux} ou'),('0137',r'\hyperlink{cite.ega}{[EGA III, 4.1]}'),('0158',r'\hyperref[I:3-3-6]{(cf. III.3.6)}'),('0161',r'\an{}'),('0172',r'\hyperref[I:2-3-1]{(II 3.1.)}'),('0226',r'\hyperref[VII:1-1]{1.1}),')]:
++for ident,needle in [('0020',r'\hyperref[I:1-1]{1}'),('0104','La connaissance du groupe de Brauer'),('0106',r'\emph{Corps locaux} ou'),('0137',r'\hyperlink{cite.ega}{[EGA III, 4.1]}'),('0158',r'\hyperref[I:3-3-6]{(cf. III.3.6)}'),('0161',r'\an{}'),('0172',r'\hyperref[I:2-3-1]{(II 3.1.)}'),('0206','Prouvons 2.3.'),('0226',r'\hyperref[VII:1-1]{1.1}),')]:
+  assert matches(text,needle),(ident,needle)
+  LOG.append(dict(id='S45-SOL-'+ident,status='verified in Codex base',after=needle))
+ patch(r'\h^\bullet(X,\dZ/n)',r'\h^*(X,\dZ/n)',69,'S45-SOL-0229')
+@@ -145,6 +147,13 @@
+ text=text.replace(r'\input{opening}',opening).replace(r'\input{toc-i}',toc)
+ text+='\n'+(OUT/'arcata_bibliography.tex').read_text()
+ 
++# Independent propagation review, with an explicitly conjectural reference
++# correction recorded as a variant rather than a silent transcription repair.
++supplement=ROOT/'work/rapport_cycle/records/arcata_review_supplement.json'
++if supplement.exists():
++ for op in json.loads(supplement.read_text())['operations']:
++  if op['language']=='fr':patch(op['before'],op['after'],op['page'],op['id'])
++
+ # Exact boundaries established from the scans. A marker inside a display is
+ # moved to its opening delimiter when the entire display starts the page.
+ anchors={int(p['printed_page']):p['start_fr'] for p in PG if p['printed_page'].isdigit() and 4<=int(p['printed_page'])<=75}

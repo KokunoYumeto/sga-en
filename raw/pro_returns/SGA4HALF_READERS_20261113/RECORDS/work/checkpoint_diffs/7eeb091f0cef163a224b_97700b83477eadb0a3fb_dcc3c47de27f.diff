@@ -1,0 +1,10 @@
+--- checkpoint/scripts/edition_catalog.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/edition_catalog.py
+@@ -32,5 +32,6 @@
+     return [json.loads(x) for x in path.read_text().splitlines() if x.strip()]
+ 
+ def all_rows(name):
+-    return [dict(x,record_owner=owner) for owner in OWNERS
++    return [dict(x,record_owner=owner) for owner in OWNERS+(['glossary'] if name=='own_findings' else [])
++            if (ROOT/'work'/owner/(name+'.jsonl')).exists()
+             for x in read_jsonl(ROOT/'work'/owner/(name+'.jsonl'))]

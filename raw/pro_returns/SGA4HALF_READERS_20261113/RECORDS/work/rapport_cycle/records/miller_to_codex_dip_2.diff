@@ -1,0 +1,219 @@
+--- fr/miller_src/sga4.5-2.tex
++++ fr/codex_dip/sga4.5-2.tex
+@@ -114,7 +114,7 @@
+ }\]
+ En particulier, la correspondance sur $f_{0*}\sF_0$ déduite la correspondance 
+ de Frobenius de $(X_0,\sF_0)$ est la correspondance de Frobenius de 
+-$(U_0,f_{0*}\sF_0)$. 
++$(Y_0,f_{0*}\sF_0)$. 
+ 
+ 
+ 
+@@ -132,7 +132,7 @@
+     $F^*\eR^i f_*\sF \iso \eR^i f_*\sF \xrightarrow{F^*} \eR^if_*\sF$ déduite 
+     par fonctorialité de la correspondance Frobenius; 
+   \item la correspondance $F^*\eR^if_*\sF\to\eR^if_*\sF$ image réciproque sur 
+-    $Y$ de la correspondance de Frobenius sur $\eR^ii f_{0*}\sF_0$. 
++    $Y$ de la correspondance de Frobenius sur $\eR^i f_{0*}\sF_0$. 
+ \end{enumerate}
+ 
+ On déduit de (\ref{II:1-3}) que ces correspondances coïncident. Elles 
+@@ -396,7 +396,7 @@
+ La catégorie abélienne des \emph{$\dQ_\ell$-faisceaux} sur $X$ est le 
+ quotient de celle des $\dZ_\ell$-faisceaux par la sous-catégorie de 
+ $\dZ_\ell$-faisceaux de torsion. En termes équivalents, ses objets sont les 
+-$\dZ_\ell$-faisceaux et, notant $\sF\otimes\dZ_\ell$ le $\dZ_\ell$-faisceaux 
++$\dZ_\ell$-faisceaux et, notant $\sF\otimes\dQ_\ell$ le $\dZ_\ell$-faisceaux 
+ $\sF$, vu comme objet de le catégorie des $\dQ_\ell$-faisceaux, on a 
+ \[
+   \hom(\sF\otimes\dQ_\ell,\sG\otimes\dQ_\ell) = \hom(\sF,\sG)\otimes_{\dZ_\ell}\dQ_\ell \text{.}
+@@ -700,7 +700,7 @@
+ On par $\Lambda^\natural$ le quotient du groupe additif de $\Lambda$ par le 
+ sous-groupe engendré par les commutateurs $a b - b a$. Si $f$ est un 
+ endomorphisme du $\Lambda$-module à gauche libre $\Lambda^n$, de matrice 
+-$f_i^j$, on note $\tr(f)$ l'image de $\sum f_i^f$ dans $\Lambda^\natural$. 
++$f_i^j$, on note $\tr(f)$ l'image de $\sum_i f_i^i$ dans $\Lambda^\natural$. 
+ Si $f$ et $g$ sont deux homomorphismes 
+ $f:\Lambda^n \leftrightarrows \Lambda^m : g$, on vérifie aussitôt que 
+ $\tr(f g) = \tr(g f)$. 
+@@ -709,7 +709,7 @@
+ Écrivons $P$ comme facteur direct d'une module libre $\Lambda^n$: cela signifie 
+ choisir un module $P'$, et un isomorphisme $\alpha:P\oplus P'\iso \Lambda^n$, 
+ soit encore choisir un homomorphisme $a:P\to \Lambda^n$, et une rétraction 
+-$b:\Lambda^n\to P$ (prendre $P=\ker(b)$). Soit 
++$b:\Lambda^n\to P$ (prendre $P'=\ker(b)$). Soit 
+ $f'=\alpha(f\oplus 0)\alpha^{-1} =af b$. On pose $\tr(f) = \tr(f')$. Cet 
+ élément de $\Lambda^\natural$ ne dépend que de $f$: si un autre choix 
+ $c:P\leftrightarrows \Lambda^m:d$ est fait, on a $a=a(dc)(ba)$, d'où 
+@@ -753,7 +753,7 @@
+ 
+ D'après \eqref{II:eq:4-2-1}, si $f$ est homotope à zéro, $\tr(f) = 0$: 
+ \begin{equation*}\tag{4.3.2}\label{II:eq:4-3-2}
+-  f = d H + h D \rightarrow \tr(f) = 0 \text{.}
++  f = d H + H d \rightarrow \tr(f) = 0 \text{.}
+ \end{equation*}
+ 
+ Soit $\mathsf{K}_\text{parf}(\Lambda)$ la catégorie d'objets les complexes 
+@@ -784,8 +784,10 @@
+ de type fini, et de flèches les morphismes de complexes respectant la 
+ filtration, pris à une homotopie respectant la filtration près. Le foncteur 
+ $\mathsf{KF}_\text{parf}(\Lambda)\to\mathsf{DF}(\Lambda)$ est pleinement fidèle; 
+-son image essentielle $\mathsf{DF}_\text{parf}(\Lambda)$ est presque tous nuls; 
+-si $(K,F)$ est dans $\mathsf{D}_\text{parf}(\Lambda)$, alors $K$ est dans 
++son image essentielle $\mathsf{DF}_\text{parf}(\Lambda)$ est formée des $(K,F)$ dans 
++$\mathsf{DF}(\Lambda)$ tels que les $\gr_F^p(K)$ soient dans 
++$\mathsf{D}_\text{parf}(\Lambda)$ et presque tous nuls; si $(K,F)$ est dans 
++$\mathsf{DF}_\text{parf}(\Lambda)$, alors $K$ est dans 
+ $\mathsf{D}_\text{parf}(\Lambda)$. 
+ 
+ D'après \eqref{II:eq:4-2-2}, si $f$ est un endomorphisme de 
+@@ -814,7 +816,7 @@
+ 
+ \begin{lemma}\label{II:4-5-1} 
+ Soient $\Lambda$ un anneau noethérien à gauche, et $K\in\ob\eD^-(\Lambda)$. 
+-Pour que $K$ soit dans $\mathsf{DF}_\text{parf}(\Lambda)$, il faut et il suffit 
++Pour que $K$ soit dans $\mathsf{D}_\text{parf}(\Lambda)$, il faut et il suffit 
+ qu'il soit de tor-dimension finie et que les $\h^i(K)$ soient de type fini.
+ \end{lemma}
+ 
+@@ -828,15 +830,15 @@
+ \]
+ et pour tout $\Lambda$-module à droite $N$, 
+ $\h^{-r-k}(N\lotimes_\Lambda K) = \h^{-r-k}(N\otimes_\Lambda K) 
+-= \tor_k(N,K^r/\im d)$ pour $k\geqslant 1$. 
+-
+-Par hypothèse, ces groupes sont nuls; le module $K^r/\im d$ est donc plat de 
++= \tor_k(N,K^{-r}/\im d)$ pour $k\geqslant 1$. 
++
++Par hypothèse, ces groupes sont nuls; le module $K^{-r}/\im d$ est donc plat de 
+ présentation finie, i.e. projectif de type fini. Le quotient 
+ \[
+-  0 \to K^r/\im(d) \to K^{r+1} \to K^{r+2}\to \cdots 
++  0 \to K^{-r}/\im(d) \to K^{-r+1} \to K^{-r+2}\to \cdots 
+ \]
+ de $K$ est quasi-isomorphe à $K$, et ceci montre que 
+-$K\in\ob\mathsf{DF}_\text{parf}(\Lambda)$. 
++$K\in\ob\mathsf{D}_\text{parf}(\Lambda)$. 
+ 
+ 
+ 
+@@ -863,7 +865,7 @@
+ 
+ \begin{lemma_}\label{II:4-7}
+ Si un complexe $\sK$ de faisceaux de $\Lambda$-modules est tel que les 
+-$\h^i(\sK))$ soient constructibles, et nuls pour $i$ grand, il existe un 
++$\h^i(\sK)$ soient constructibles, et nuls pour $i$ grand, il existe un 
+ quasi-isomorphisme $\sK'\to \sK$, avec $\sK'$ borné supérieurement à 
+ composantes constructibles et plates.
+ \end{lemma_}
+@@ -894,7 +896,7 @@
+ }\]
+ 
+ Alors, $\sB$ est constructible, $u$ est surjectif, et pour avancer d'un pas, il 
+-suffit de construire $K^n$ plat et constructible et $v:\sK^n\to \sA$ tel que u
++suffit de construire ${\sK'}^n$ plat et constructible et $v:{\sK'}^n\to \sA$ tel que
+ $u v$ soit surjectif. Que ce soit possible est garanti par le lemme suivant. 
+ 
+ 
+@@ -949,12 +951,12 @@
+       E_2^{p q} = \eR^p f_! \h^q(\sK) \rightarrow \h^{p+q} \eR f_! \sK \text{.}
+     \]
+     et le théorème de finitude pour $\eR f_!$, montrent que 
+-    $\eR f_!\sK\in \ob \eD^b(X,\Lambda)$ et est à cohomologie constructible. 
++    $\eR f_!\sK\in \ob \eD^b(Y,\Lambda)$ et est à cohomologie constructible. 
+     Reste à prouver la tor-dimension finie (\ref{II:4-6}). 
+   \item Si $\sK$ est de tor-dimension $\leqslant -r$, il en est de même pour 
+     $\eR f_! \sK$: on a $\h^i(N\lotimes \eR f_! \sK) = \h^i(\eR f_!(N\lotimes \sK))$, 
+     et, dans la suite spectrale ci-dessus pour $N\lotimes \sK$, les 
+-    $E_2^{p q}$ sont nuls pour $q<r-s$ fortiori pour $p+q<r$. 
++    $E_2^{p q}$ sont nuls pour $q<r$, a fortiori pour $p+q<r$. 
+ \end{enumerate}
+ 
+ Prouvons \eqref{II:eq:4-9-1}, en restant au niveau des complexes. 
+@@ -1018,13 +1020,13 @@
+ résulte de \eqref{II:eq:4-9-1} que la flèche naturelle 
+ \begin{equation*}\tag{4.11.1}\label{II:eq:4-11-1}
+ \xymatrix{
+-  K_n\lotimes_{\dZ/\ell^{n+1}} \dZ/\ell^n \ar[r] & K_{n+1} \text{,}
++  K_n\lotimes_{\dZ/\ell^{n+1}} \dZ/\ell^n \ar[r] & K_{n-1} \text{,}
+ }
+ \end{equation*}
+ est un isomorphisme. Le problème de la définition de cette flèche est 
+ discuté en \ref{II:4-12}. 
+ 
+-On peut maintenant invoquer \cite[XI.3.3]{sga5} (p. 31, 1-2 à la fin; ce 
++On peut maintenant invoquer \cite[XV.3.3]{sga5} (p. 31, 1-2 à la fin; ce 
+ passage est indépendant du reste de \cite{sga5}) pour réaliser chaque 
+ $K_n$ par un complexe borné de $\dZ/\ell^{n+1}$-modules libres de type fini, 
+ et les flèches \eqref{II:eq:4-11-1} par des \emph{isomorphismes de complexes} 
+@@ -1118,7 +1120,7 @@
+ sur les autres. On note encore $F^*$ leur limite projective, et les 
+ endomorphismes qui s'en déduisent. Puisque 
+ $\h_c^i(X,\sG) = \h^i(K)\otimes\dQ_\ell = \h^i(K\otimes\dQ_\ell)$, on a (avec 
+-la convention de signe de (?.1) 
++la convention de signe de .1) 
+ \[
+   \tr\left(F^*, \h_c^\bullet(X,\sG)\right) = \tr\left(F^*,K^\bullet\otimes\dQ_\ell\right) = \varprojlim_n \tr\left(F^*,K_n^\bullet\right) = \varprojlim_n \tr\left(F^*,\eR\Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\right) \text{.}
+ \]
+@@ -1239,7 +1241,7 @@
+ $f$ dans $F$; l'hypothèse de multiplicité un assure donc que 
+ \[
+   \tr\left(f^*,\h_c^\bullet(U,\dQ_\ell)\right) 
+-    = v_F(f) - v_U(f) \text{,}
++    = v(f) - v_F(f) = v_U(f) \text{,}
+ \]
+ comme promis. 
+ 
+@@ -1291,7 +1293,7 @@
+ par un élément de $A$ passe au quotient pour définir une structure de 
+ $A$-module sur $A^\natural$. Si $H$ est un groupe fini, $P$ un $A[H]$-module 
+ projectif et $M$ un $\Lambda[H]$-module, projectif en tant que $\Lambda$-module, 
+-on sait que le $\Lambda$-module $P\otimes_A H$, muni de l'action diagonale de 
++on sait que le $\Lambda$-module $P\otimes_A M$, muni de l'action diagonale de 
+ $H$, est un $\Lambda[H]$-module projectif. En effet: 
+ \begin{enumerate}[\indent a)]
+   \item I suffit de le vérifier par $P=A[H]$. 
+@@ -1310,7 +1312,7 @@
+ 
+ 
+ \begin{proposition_}\label{II:5-8}
+-Avec les notations précédentes, si $u$ est un endomorphisme de $F$ et 
++Avec les notations précédentes, si $u$ est un endomorphisme de $P$ et 
+ $v$ un endomorphisme de $M$, on a 
+ \[
+   \tr_\Lambda^H(u\otimes v) = \tr_A^H(u)\tr_\Lambda(v) \text{.}
+@@ -1398,7 +1400,7 @@
+ $x\mapsto h x \operatorname{ad} g(h)^{-1}$). 
+ 
+ Sous cette forme, les propriétés des traces nous ramènent aussitôt au 
+-cas où $P=\Lambda[H]$. L'endomorphisme $Y$ a alors la forme 
++cas où $P=\Lambda[H]$. L'endomorphisme $\gamma$ a alors la forme 
+ $x\mapsto \sigma(x) a$, avec $a=\sum a_h h$ dans $\Lambda[H]$. Il suffit de 
+ traiter le cas universel où lles $a_h$ sont des indéterminées. Dans ce 
+ cas, $\Lambda=\dZ\langle a_h\rangle_{h\in H}$ (polynômes non commutatifs) et 
+@@ -1454,21 +1456,21 @@
+ $\Lambda[G^+]$-modules, pour $G^+=H\times \dN$. Les formules \ref{II:5-10} 
+ et \eqref{II:eq:5-9-2}, amplifiées par \ref{II:5-11-1}, fournissent donc 
+ \[
+-  \tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \sum_h' \tr_A^{Z_g}\left(h F^*,\eR\Gamma_c(U,f_* A)\right)\cdot \tr_\Lambda(h,M)
++  \tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \sum_h' \tr_A^{Z_h}\left(h F^*,\eR\Gamma_c(U,f_* A)\right)\cdot \tr_\Lambda(h,M)
+ \]
+ où $\sum'$ est une somme sur les classes de conjugaison dans $H$, De plus, 
+ \[
+-  |Z_h|\cdot \tr_A^{Z_h}\left(h F^*,\eR\Gamma_c(U,f_ A)\right) = \tr_A\left((F h^{-1})^*,\eR\Gamma_c(V,A)\right) \text{.}
++  |Z_h|\cdot \tr_A^{Z_h}\left(h F^*,\eR\Gamma_c(U,f_* A)\right) = \tr_A\left((F h^{-1})^*,\eR\Gamma_c(V,A)\right) \text{.}
+ \]
+ Cette formule reste vraie pour $A=\dZ/\ell^m$, avec $m$ de plus en plus grand. 
+ Passant à limite, on trouve que 
+-$\tr_A^{Z_g}\left(h F^*,\eR\Gamma_c(U,f^* A)\right)$ vaut 
++$\tr_A^{Z_h}\left(h F^*,\eR\Gamma_c(U,f_* A)\right)$ vaut 
+ \[
+   \frac{1}{|Z_h|} \sum (-1)^i \tr\left((F h^{-1})^*,\h_c^i(V,\dQ_\ell)\right)
+ \]
+ (un élément de $\dZ_\ell$), et
+ \begin{equation*}\tag{5.12.1}\label{II:eq:5-12-1}
+-\tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \sum_h' \frac{1}{|Z_h|} \tr\left((F h^{-1})^*,\h_c^i(V,\dQ_\ell)\right)\cdot \tr_\Lambda(h,M) \text{.} 
++\tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \sum_h' \frac{1}{|Z_h|} \tr\left((F h^{-1})^*,\h_c^\bullet(V,\dQ_\ell)\right)\cdot \tr_\Lambda(h,M) \text{.} 
+ \end{equation*}
+ 
+ 

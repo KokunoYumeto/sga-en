@@ -1,0 +1,83 @@
+--- checkpoint/scripts/export_changes.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/export_changes.py
+@@ -774,6 +774,60 @@
+                         })
+             assembly = any(x in historical['file'] for x in
+                            ['sga4.5.tex', 'sga-style.sty', 'sga-sources.bib'])
++            assembly_evidence = []
++            assembly_status = ''
++            if canonical == 'SGA45-TX-0002':
++                assembly_status = ('Superseded by the requested mode policy: the inherited '
++                                   'typesetter note appears in diplomatic/corrected forms '
++                                   'and is omitted in the reading form')
++                for lang, text in self.masters.items():
++                    needle = r'\ifnum\EditionMode=2\relax\else'
++                    at = text.index(needle, text.index(r'\begin{document}'))
++                    assembly_evidence.append({
++                        'language': lang, 'file': MASTER_FILES[lang],
++                        'line': text[:at].count('\n') + 1,
++                        'witness': text[at:at + len(needle) + 160],
++                        'meaning': 'Actual final note-inclusion guard and heading.',
++                    })
++            elif canonical in {'SGA45-TX-0009', 'SGA45-TX-0055'}:
++                assembly_status = ('Generated contents program replaced by the restored '
++                                   'original general contents; inherited generated-TOC '
++                                   'presentation choices are inactive')
++                for lang, text in self.masters.items():
++                    assert not re.search(r'\\tableofcontents\b', text)
++                    needle = r'\label{OriginalContents}'
++                    at = text.index(needle)
++                    assembly_evidence.append({
++                        'language': lang, 'file': MASTER_FILES[lang],
++                        'line': text[:at].count('\n') + 1,
++                        'witness': text[max(0, at - 70):at + 160],
++                        'meaning': 'Actual restored original contents; no tableofcontents call.',
++                    })
++            elif canonical == 'SGA45-TX-0040':
++                assembly_status = 'French proof-heading declaration retained in the final inlined preamble'
++                needle = r'\renewcommand{\proofname}{Démonstration}'
++                text = self.masters['fr']
++                at = text.index(needle)
++                assembly_evidence.append({
++                    'language': 'fr', 'file': MASTER_FILES['fr'],
++                    'line': text[:at].count('\n') + 1, 'witness': needle,
++                    'meaning': 'Exact final presentation declaration.',
++                })
++            elif canonical in {'SGA45-TX-0001', 'SGA45-TX-0177', 'SGA45-TX-0329'}:
++                assembly_status = ('Historical global-BibTeX repair is inactive in the readers: '
++                                   'the global bibliography program was removed, while '
++                                   'source citation keys and printed local bibliographies remain')
++                for lang, text in self.masters.items():
++                    assert not re.search(r'\\bibliography\s*\{', text)
++                    m = re.search(r'\\PrintCite\{[^\n]+', text)
++                    assert m
++                    assembly_evidence.append({
++                        'language': lang, 'file': MASTER_FILES[lang],
++                        'line': text[:m.start()].count('\n') + 1,
++                        'witness': m[0],
++                        'meaning': 'A final printed-literal citation retaining its source key; '
++                                   'the complete source contains no bibliography invocation.',
++                    })
+             related_changes = []
+             for row in self.rows['fr']:
+                 if row['baseline'] != 'codex_corr':
+@@ -782,7 +836,10 @@
+                 if exact_id or set(pages) & set(row['page'].split(';')) or (
+                         assembly and row['comparison_scope'] != 'component'):
+                     related_changes.append(row['change_id'])
+-            if source_variants:
++            if assembly_status:
++                status = assembly_status
++                association = 'verified final assembly source evidence'
++            elif source_variants:
+                 status = 'Explicit final variant source ID; both readings recorded'
+                 association = 'exact source ID in final annotated source'
+             elif any('rejected' in r['kind'] for r in linked):
+@@ -810,6 +867,7 @@
+                 'current_crosswalk_status': status, 'association_level': association,
+                 'printed_pages': pages, 'final_source_anchors': anchors,
+                 'stable_label_anchors': label_anchors,
++                'assembly_evidence': assembly_evidence,
+                 'explicit_current_records': linked,
+                 'final_variants': source_variants,
+                 'related_change_rows': related_changes,

@@ -1,0 +1,42 @@
+--- checkpoint/work/finitude_verdier/journal.py
++++ SGA4HALF_READERS_RECORDS.zip/work/finitude_verdier/journal.py
+@@ -16,13 +16,13 @@
+ def page(p,fr,en,reason='',math=False,after_fr=None,after_en=None):
+  P.append(dict(printed_page=str(p),pdf_page=p+39,checked_against_scan=True,findings=sum(1 for d in D if int(d['printed_page'])==p)+sum(1 for o in O if o['page']==p),start_fr=fr,start_en=en,reason=reason or 'Full printed page read against the French source; page start located directly from the scan.',math=math,after_fr=after_fr,after_en=after_en))
+ 
+-def variant(n,old,printed,corrected,en_old=None,en_printed=None,en_corrected=None,reason=None):
++def variant(n,old,printed,corrected,en_old=None,en_printed=None,en_corrected=None,reason=None,prefix=''):
+  sid=key(n) if isinstance(n,int) else n
+  d=next((d for d in D if d['id']==sid),None)
+  p=int(d['printed_page']) if d else next(o['page'] for o in O if o['id']==sid)
+  V.append(dict(id=sid,source=sid,page=p,place=d['region'] if d else next(o['place'] for o in O if o['id']==sid),printed=printed,corrected=corrected,reason=reason or (d['reason'] if d else next(o['reason'] for o in O if o['id']==sid)),kind='misprint_in_print',english_applicable=en_old is not None,english_printed=en_printed,english_corrected=en_corrected))
+- OPS.append(dict(lang='fr',page=p,id=sid,old=old,new='\\var{'+printed+'}{'+corrected+'}{'+sid+'}',mode='variant'))
+- if en_old is not None: OPS.append(dict(lang='en',page=p,id=sid,old=en_old,new='\\var{'+en_printed+'}{'+en_corrected+'}{'+sid+'}',mode='variant'))
++ OPS.append(dict(lang='fr',page=p,id=sid,old=old,new=prefix+'\\var{'+printed+'}{'+corrected+'}{'+sid+'}',mode='variant'))
++ if en_old is not None: OPS.append(dict(lang='en',page=p,id=sid,old=en_old,new=prefix+'\\var{'+en_printed+'}{'+en_corrected+'}{'+sid+'}',mode='variant'))
+ 
+ def en(n,old,new,page=None):
+  sid=key(n) if isinstance(n,int) else n
+@@ -37,6 +37,22 @@
+  return sid
+ 
+ def save():
++ for page_row in P:
++  p=int(page_row['printed_page'])
++  page_row['findings']=sum(int(d['printed_page'])==p for d in D)+sum(o['page']==p for o in O)
++ for d in D:
++  ops=[o for o in OPS if o['id']==d['id']]
++  vv=next((v for v in V if v['id']==d['id']),None)
++  if d['verdict']=='rejected':d['forms_affected']='none'
++  elif d['kind'] in ['marker','page_cut']:
++   d['forms_affected']='FR and EN: page-boundary markers in all three forms'
++  elif vv:
++   d['forms_affected']='FR: diplomatic retains printed; corrected and reading correct'
++   d['forms_affected']+=('; EN: diplomatic retains printed; corrected and reading correct' if vv['english_applicable'] else '; EN: no semantic difference')
++  else:d['forms_affected']='FR: all three forms'+('; EN: all three forms' if any(o['lang']=='en' for o in ops) else '; EN: existing translation already expresses the print')
++ for v in V:
++  if v['id']=='S45-SOL-1035':
++   for k in ['printed','corrected','english_printed','english_corrected']:v[k]=v[k].replace(r'\item ','')
+  for name,rows in [('decisions',D),('pages',P),('own_findings',O),('variants',V)]:
+   (W/(name+'.jsonl')).write_text(''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in rows))
+  (W/'operations.json').write_text(json.dumps(OPS,ensure_ascii=False,indent=2))

@@ -1,0 +1,992 @@
+"""Reconstruction-checked changes to text, paratext and the source assembly.
+
+The component comparisons select the corrected branch of every variant.  The
+paratext comparisons also inventory the actual conditional source program: all
+three front-matter branches remain in each delivered single-source reader.
+Only privacy redaction and explicitly documented source projections intervene.
+Running this module as a script writes the registers; importing it has no side
+effects.
+"""
+from pathlib import Path
+import argparse
+import collections
+import csv
+import difflib
+import hashlib
+import json
+import re
+
+from edition_catalog import ROOT, COMPONENTS, PAGE_ORDER, PAGE_RANK, all_rows
+from tex_audit import group, marker_rows, resolve, variants
+
+RELEASE = 'release_v2026-11-12'
+RELEASE_FILE = 'source/en/release_v2026-11-12/05_SGA4HALF_EN_COMPLETE_READER.tex'
+MASTER_FILES = {
+    'fr': 'deliverables/FR/SGA4HALF_FR_corrige_apparat.tex',
+    'en': 'deliverables/EN/SGA4HALF_EN_corrected_apparatus.tex',
+}
+EMAIL = re.compile(r'[\w.+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}')
+PRIVATE_PATH = re.compile(
+    r'(?:[A-Za-z]:\\Users\\[^\s"<>]+|/(?:home|root|workspace|mnt)/[^\s"<>]+)'
+)
+CODEX_ID = re.compile(r'SGA45-(?:TX|CORR)-\d{4}[A-Z]?')
+FIELDS = [
+    'change_id', 'baseline', 'part', 'page', 'place', 'before', 'after',
+    'source', 'operation', 'before_start', 'before_end', 'after_start',
+    'after_end', 'ai_translated', 'change_class', 'english_prose_before',
+    'english_prose_after', 'source_relation', 'comparison_scope',
+    'before_file', 'after_file', 'evidence',
+]
+
+
+def sanitize(s):
+    return PRIVATE_PATH.sub('[private path omitted]',
+                            EMAIL.sub('[email address omitted]', str(s)))
+
+
+def sanitized_object(value):
+    if isinstance(value, str):
+        return sanitize(value)
+    if isinstance(value, list):
+        return [sanitized_object(x) for x in value]
+    if isinstance(value, dict):
+        return {sanitize(k): sanitized_object(v) for k, v in value.items()}
+    return value
+
+
+def digest(s):
+    return hashlib.sha256(s.encode()).hexdigest()
+
+
+def read(path):
+    return (ROOT / path).read_text()
+
+
+def norm(s):
+    return re.sub(r'\s+', ' ', s).strip()
+
+
+def pages_in(value):
+    result = []
+    for token in re.split(r'[,;]', str(value)):
+        token = token.strip()
+        if token in PAGE_RANK:
+            result.append(token)
+        elif (m := re.fullmatch(r'(\d+)\s*[–—-]\s*(\d+)', token)):
+            result.extend(str(n) for n in range(int(m[1]), int(m[2]) + 1)
+                          if str(n) in PAGE_RANK)
+    return list(dict.fromkeys(result))
+
+
+def mask(s):
+    """Blank text without changing source offsets or line numbers."""
+    return ''.join('\n' if ch == '\n' else ' ' for ch in s)
+
+
+def mask_ranges(s, ranges):
+    chars = list(s)
+    for start, end in ranges:
+        chars[start:end] = mask(s[start:end])
+    return ''.join(chars)
+
+
+def prose_lines(s, exclude_citations=False):
+    """Conservative prose projection, with line coordinates left unchanged.
+
+    This is a classification aid, not a semantic equivalence checker.  Complete
+    source hunks remain in the registers.  Math is masked using the whole
+    component, so a hunk beginning in the middle of a display is not mistaken
+    for newly translated prose.
+    """
+    # Source comments, followed by complete math/diagram regions.
+    s = re.sub(r'(?m)(?<!\\)%[^\n]*', lambda m: mask(m[0]), s)
+    ranges = []
+    pos = 0
+    token = re.compile(
+        r'(?<!\\)\$|\\\[|\\\(|'
+        r'\\begin\{(equation\*?|align\*?|alignat\*?|gather\*?|multline\*?|'
+        r'eqnarray\*?|displaymath|math|tikzcd|CD)\}'
+    )
+    while (m := token.search(s, pos)):
+        start, body = m.start(), m.end()
+        if m[0] == '$':
+            delimiter = '$$' if s.startswith('$$', start) else '$'
+            body = start + len(delimiter)
+            end = body
+            depth = 0
+            while end < len(s):
+                if s[end] == '\\' and end + 1 < len(s) and s[end + 1] in '{}$%\\':
+                    end += 2
+                    continue
+                if s[end] == '{':
+                    depth += 1
+                elif s[end] == '}':
+                    depth -= 1
+                elif s.startswith(delimiter, end) and depth == 0:
+                    break
+                end += 1
+            end = min(len(s), end + len(delimiter))
+        else:
+            delimiter = (r'\]' if m[0] == r'\[' else r'\)' if m[0] == r'\('
+                         else r'\end{' + m[1] + '}')
+            end = s.find(delimiter, body)
+            end = len(s) if end < 0 else end + len(delimiter)
+        ranges.append((start, end))
+        pos = end
+    s = mask_ranges(s, ranges)
+    # Local layout repairs can assign a TeX length directly, for example
+    # emergencystretch=1.5em. The unit is not an English word.
+    s = re.sub(r'(?<![A-Za-z])[-+]?(?:\d+(?:\.\d*)?|\.\d+)'
+               r'(?:em|ex|pt|pc|in|cm|mm|bp|sp)\b',
+               lambda m: mask(m[0]), s)
+
+    invisible = {
+        'PrintPage', 'MathPage', 'label', 'ref', 'eqref', 'pageref', 'nameref',
+        'cite', 'nocite', 'url', 'bibliography', 'bibliographystyle',
+        'index', 'tag', 'hspace', 'vspace', 'rule', 'cline', 'ensuremath',
+        'xymatrix', 'pdfbookmark', 'phantomsection', 'setcounter',
+    }
+    ranges = []
+    command = re.compile(r'\\([A-Za-z]+|.)')
+    for m in command.finditer(s):
+        name = m[1]
+        p = m.end()
+        while p < len(s) and s[p].isspace():
+            p += 1
+        if p < len(s) and s[p] == '*':
+            p += 1
+        # Link targets, citation keys and alternative PDF strings are metadata.
+        try:
+            if name in {'hyperlink', 'hypertarget', 'href'}:
+                target, e = group(s, p)
+                if exclude_citations and name == 'hyperlink' and target.startswith('cite.'):
+                    _, e = group(s, e)
+                ranges.append((m.start(), e))
+                continue
+            if name in {'PrintCite', 'texorpdfstring'}:
+                _, q = group(s, p)
+                _, e = group(s, q)
+                if exclude_citations and name == 'PrintCite':
+                    ranges.append((m.start(), e))
+                else:
+                    ranges.extend([(m.start(), p), (q, e)])
+                continue
+            if name == 'hyperref' and p < len(s) and s[p] == '[':
+                e = s.find(']', p)
+                if e >= 0:
+                    ranges.append((m.start(), e + 1))
+                    continue
+            if name in {'begin', 'end'}:
+                env, e = group(s, p)
+                if name == 'begin' and env in {'tabular', 'tabular*', 'array'}:
+                    try:
+                        _, e = group(s, e)
+                    except ValueError:
+                        pass
+                # Non-text list labels such as [{[}1{]}] are not prose.
+                q = e
+                while q < len(s) and s[q].isspace():
+                    q += 1
+                if q < len(s) and s[q] == '[':
+                    close = s.find(']', q)
+                    if close >= 0:
+                        e = close + 1
+                ranges.append((m.start(), e))
+                continue
+            if name in invisible:
+                if p < len(s) and s[p] == '[':
+                    close = s.find(']', p)
+                    if close >= 0:
+                        p = close + 1
+                _, e = group(s, p)
+                ranges.append((m.start(), e))
+                continue
+        except ValueError:
+            pass
+        ranges.append((m.start(), m.end()))
+    s = mask_ranges(s, ranges)
+    # Single letters are retained: changing "a" to "the" is a prose change.
+    words = re.compile(r"[^\W\d_]+(?:['’][^\W\d_]+)*", re.UNICODE)
+    return [words.findall(line) for line in s.splitlines(True)]
+
+
+def flatten_words(lines, start, end):
+    return [word for line in lines[start:end] for word in line]
+
+
+def safe_resolve(s):
+    try:
+        return resolve(s)
+    except ValueError:
+        # Historical operation snippets may be partial TeX arguments.
+        return s
+
+
+class Exporter:
+    def __init__(self, output):
+        self.output = output
+        self.diffs = output / 'diffs'
+        self.diffs.mkdir(parents=True, exist_ok=True)
+        self.sol = all_rows('decisions')
+        self.own = all_rows('own_findings')
+        self.meta = all_rows('variants')
+        self.pages = all_rows('pages')
+        self.release = read(RELEASE_FILE)
+        self.rows = {'fr': [], 'en': []}
+        self.proof = []
+        self.partitions = []
+        self.prepared = {lang: read(f'work/build/prepared_body_{lang}.tex')
+                         for lang in ['fr', 'en']}
+        self.masters = {lang: read(path) for lang, path in MASTER_FILES.items()}
+        self.translation_operations = self.load_translation_operations()
+
+    def load_translation_operations(self):
+        found = []
+        paths = [ROOT / 'work/arcata/en_build.json']
+        paths += sorted((ROOT / 'work/rapport_cycle').glob('en_changes_*.json'))
+        for path in paths:
+            if not path.exists():
+                continue
+            for row in json.loads(path.read_text()):
+                if row.get('ai_translated'):
+                    found.append({
+                        'id': row.get('id', ''),
+                        'page': str(row.get('page', '')),
+                        'after': safe_resolve(row.get('after', row.get('new', ''))),
+                        'record': path.relative_to(ROOT).as_posix(),
+                    })
+        path = ROOT / 'work/sommes/restorations.jsonl'
+        if path.exists():
+            for line in path.read_text().splitlines():
+                row = json.loads(line)
+                if row.get('AI_translated') and row.get('en'):
+                    found.append({
+                        'id': row.get('id', row.get('source', '')),
+                        'page': str(row['page']), 'after': safe_resolve(row['en']),
+                        'record': path.relative_to(ROOT).as_posix(),
+                    })
+        return found
+
+    def sources_for(self, pages, old, new):
+        explicit = []
+        candidates = []
+        for row in self.meta:
+            if row['id'] in old or row['id'] in new:
+                explicit.append(row['id'])
+            if set(pages) & set(pages_in(row['page'])):
+                candidates.extend(row.get('sources', [row['id']]))
+        for row in self.sol:
+            if str(row['printed_page']) in pages and row['verdict'] != 'rejected':
+                candidates.extend([row['id']] + row.get('codex_ids', []))
+        for row in self.own:
+            if set(pages) & set(pages_in(row['page'])):
+                candidates.append(row['id'])
+        ids = list(dict.fromkeys(explicit + candidates))
+        return (';'.join(ids) or 'EDITION-ASSEMBLY',
+                'Explicit source ID in hunk; remaining IDs are reviewed-page associations.'
+                if explicit else
+                'Reviewed-page association, not an assertion that every listed decision caused every token in this hunk.')
+
+    def classify(self, language, category, old_words, new_words, pages, old, new,
+                 component=None, bibliography=False, prose_changed=True,
+                 only_citation_prose=False):
+        if language != 'en':
+            return '', 'French source change'
+        if category in {'main_scaffold', 'preamble', 'style'}:
+            return '', 'TeX assembly or style; no new translation asserted'
+        if category == 'apparatus':
+            return '', 'Generated critical apparatus and editorial explanation'
+        if category == 'frontmatter':
+            return ('AI-produced editorial notices; not classified as a translation of authorial prose',
+                    'Editorial credits, rights and mode instructions')
+        if not prose_changed or old_words == new_words:
+            return '', 'Math/reference/TeX/layout or punctuation only; prose words unchanged'
+        if category == 'typesetter_note':
+            return ('AI-produced editorial heading revision; inherited note wording is recorded verbatim',
+                    'Inherited English typesetter note and attribution')
+        if bibliography:
+            return ('AI-translated: English heading and publication-status words where supplied; '
+                    'bibliographic titles, names and data are transcribed, not newly translated',
+                    'Bibliographic transcription with limited translated wording')
+        if category == 'general_contents':
+            return ('AI-translated: restored original general contents',
+                    'New translation of restored authorial contents')
+        # A full citation literal often restores titles/names, not English prose.
+        if only_citation_prose and (r'\PrintCite' in new or r'\hyperlink{cite.' in new):
+            return ('AI-translated: any added English connective/publication description only; '
+                    'quoted titles and names retain their source language',
+                    'Reference display restoration, possibly mixed with English prose')
+        if not new_words:
+            return '', 'Deleted prose or wording; no new English translation'
+        old_count, new_count = collections.Counter(old_words), collections.Counter(new_words)
+        if old_count == new_count:
+            return ('AI-produced revision of existing English word order; no new passage',
+                    'English wording correction')
+        changed_words = set((old_count - new_count) + (new_count - old_count))
+        navigation_words = {'chapter', 'section', 'no', 'nos', 'exposé', 'i', 'ii',
+                            'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
+                            'a', 'b', 'c', 'd', 'and', 'cf', 'th'}
+        if (re.search(r'\\(?:ref|eqref|nameref|hyperref)\b', old + new) and
+                changed_words and all(w.lower() in navigation_words for w in changed_words)):
+            return ('AI-produced reference wording; no newly translated authorial passage',
+                    'Reference/navigation wording')
+        explicit = []
+        joined = norm(new)
+        for row in self.translation_operations:
+            if not (set(pages) & set(pages_in(row['page']))):
+                continue
+            candidate = norm(row['after'])
+            if candidate and (candidate in joined or joined in candidate):
+                explicit.append(row['id'])
+        if explicit or not old_words or component == 'ariane':
+            evidence = '; '.join(dict.fromkeys(explicit))
+            return ('AI-translated: newly supplied or restored English prose'
+                    + (f' ({evidence})' if evidence else ''),
+                    'New translation of restored authorial prose')
+        word_ops = difflib.SequenceMatcher(None, old_words, new_words,
+                                          autojunk=False).get_opcodes()
+        added = sum(l - k for op, i, j, k, l in word_ops if op != 'equal')
+        removed = sum(j - i for op, i, j, k, l in word_ops if op != 'equal')
+        if added >= 8 and added >= removed + 5:
+            return ('AI-translated: added English prose within a mixed correction hunk',
+                    'Restored English prose mixed with existing wording')
+        return ('AI-produced revision of existing English wording; '
+                'no complete newly translated passage inferred',
+                'English wording correction')
+
+    def diff(self, before, after, *, language, baseline, key, part, category,
+             before_file, after_file, pages=None, source='', evidence='',
+             component=None):
+        before, after = sanitize(before), sanitize(after)
+        a, b = before.splitlines(True), after.splitlines(True)
+        old_prose = prose_lines(before) if language == 'en' else [[] for _ in a]
+        new_prose = prose_lines(after) if language == 'en' else [[] for _ in b]
+        old_without_cites = (prose_lines(before, exclude_citations=True)
+                             if language == 'en' else old_prose)
+        new_without_cites = (prose_lines(after, exclude_citations=True)
+                             if language == 'en' else new_prose)
+        old_offsets, new_offsets = [0], [0]
+        for line in old_prose:
+            old_offsets.append(old_offsets[-1] + len(line))
+        for line in new_prose:
+            new_offsets.append(new_offsets[-1] + len(line))
+        all_old_words = flatten_words(old_prose, 0, len(old_prose))
+        all_new_words = flatten_words(new_prose, 0, len(new_prose))
+        word_ops = difflib.SequenceMatcher(None, all_old_words, all_new_words,
+                                          autojunk=False).get_opcodes()
+        changed_old = set()
+        changed_new = set()
+        for tag, i, j, k, l in word_ops:
+            if tag != 'equal':
+                changed_old.update(range(i, j))
+                changed_new.update(range(k, l))
+        ops = difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes()
+        rebuilt = []
+        rows = []
+        current = (pages or ['unnumbered'])[0]
+        line_pages = []
+        for line in b:
+            anchors = re.findall(r'\\(?:PrintPage|MathPage)\{([^}]+)\}', line)
+            if anchors:
+                current = anchors[-1]
+            line_pages.append(current)
+        # Component bibliographies are authorial text, with untranslated titles.
+        bib_start = None
+        bibs = list(re.finditer(r'\\(?:section|chapter)\*?\{Bibliography\}|'
+                               r'\\textbf\{Bibliography\.?\}', after))
+        if bibs:
+            # The Arcata contents also says Bibliography. The final actual
+            # heading, not its earlier contents entry, starts this region.
+            bib_start = after[:bibs[-1].start()].count('\n')
+        for op, i, j, k, l in ops:
+            rebuilt.extend(a[i:j] if op == 'equal' else b[k:l])
+            if op == 'equal':
+                continue
+            old, new = ''.join(a[i:j]), ''.join(b[k:l])
+            hpages = list(dict.fromkeys(line_pages[k:l] or
+                                       line_pages[max(0, k - 1):k] or
+                                       (pages or ['unnumbered'])[:1]))
+            nearby = ''.join(b[max(0, k - 8):l + 2])
+            labels = re.findall(r'\\label\{([^}]+)\}', nearby)
+            related, relation = self.sources_for(hpages, old, new)
+            if source:
+                related, relation = source, 'Explicit source/assembly record for this comparison.'
+            old_words = flatten_words(old_prose, i, j)
+            new_words = flatten_words(new_prose, k, l)
+            prose_changed = (any(n in changed_old for n in range(old_offsets[i], old_offsets[j]))
+                             or any(n in changed_new for n in range(new_offsets[k], new_offsets[l])))
+            bibliography = (bib_start is not None and l > bib_start and
+                            (k >= bib_start or not flatten_words(new_prose, k, bib_start)))
+            ai, kind = self.classify(
+                language, category, old_words, new_words, hpages, old, new,
+                component=component, bibliography=bibliography,
+                prose_changed=prose_changed,
+                only_citation_prose=(flatten_words(old_without_cites, i, j) ==
+                                     flatten_words(new_without_cites, k, l)))
+            rows.append({
+                'baseline': baseline, 'part': part, 'page': ';'.join(hpages),
+                'place': labels[-1] if labels else
+                         f'{key}: before lines {i + 1}–{j}; after lines {k + 1}–{l}',
+                'before': old, 'after': new, 'source': related, 'operation': op,
+                'before_start': i + 1, 'before_end': j,
+                'after_start': k + 1, 'after_end': l,
+                'ai_translated': ai, 'change_class': kind,
+                'english_prose_before': ' '.join(old_words) if language == 'en' else '',
+                'english_prose_after': ' '.join(new_words) if language == 'en' else '',
+                'source_relation': relation, 'comparison_scope': category,
+                'before_file': before_file, 'after_file': after_file,
+                'evidence': ('Every equal and changed opcode reconstructs this complete '
+                             'comparison unit exactly. ' + evidence).strip(),
+            })
+        assert ''.join(rebuilt) == after, (language, baseline, key, 'reconstruction')
+        filename = f'{language}_{baseline}_{key}.diff'
+        (self.diffs / filename).write_text(''.join(difflib.unified_diff(
+            a, b, fromfile=before_file or f'{baseline}/absent',
+            tofile=after_file + f' [{key}]')))
+        self.proof.append({
+            'language': language, 'baseline': baseline,
+            'component': key, 'category': category, 'diff': filename,
+            'change_rows': len(rows), 'before_sha256': digest(before),
+            'after_sha256': digest(after), 'exact_reconstruction': True,
+            'before_file': before_file, 'after_file': after_file,
+            'privacy_redacted_comparison': True,
+        })
+        self.rows[language].extend(rows)
+
+    def partition(self, text, spans, source):
+        spans = sorted(spans, key=lambda x: x[1])
+        cursor = 0
+        pieces = []
+        entries = []
+        for key, start, end in spans:
+            assert cursor <= start <= end <= len(text), (source, key, cursor, start, end)
+            placeholder = '% AUDIT-REGION ' + key + '\n'
+            assert placeholder not in text
+            pieces.extend([text[cursor:start], placeholder])
+            entries.append((placeholder, text[start:end]))
+            cursor = end
+        pieces.append(text[cursor:])
+        projected = ''.join(pieces)
+        restored = projected
+        for placeholder, content in entries:
+            assert restored.count(placeholder) == 1
+            restored = restored.replace(placeholder, content, 1)
+        assert restored == text, ('source partition reconstruction', source)
+        self.partitions.append({
+            'source': source, 'source_sha256': digest(text),
+            'projection_sha256': digest(projected),
+            'regions': [{'name': key, 'start': start, 'end': end,
+                         'sha256': digest(text[start:end])}
+                        for key, start, end in spans],
+            'exact_roundtrip': True,
+        })
+        return projected
+
+    def component_before(self, component, language, baseline):
+        if language == 'en':
+            name = re.escape(component['en'])
+            m = re.search(r'% BEGIN INCLUDED components/' + name +
+                          r'\n(.*?)% END INCLUDED components/' + name,
+                          self.release, re.S)
+            return m[1] if m else '', RELEASE_FILE
+        source = f'source/fr/{baseline}/{component["fr"]}'
+        path = ROOT / source
+        if not path.exists():
+            return '', source + ' (absent from supplied tree)'
+        s = path.read_text()
+        for name in ['opening', 'toc-i']:
+            included = path.parent / (name + '.tex')
+            if included.exists():
+                s = s.replace(r'\input{' + name + '}', included.read_text())
+        return s, source
+
+    def components(self):
+        for language in ['fr', 'en']:
+            for component in COMPONENTS:
+                m = re.search(r'% BEGIN COMPONENT ' + re.escape(component['key']) +
+                              r'\n(.*?)\n% END COMPONENT ' +
+                              re.escape(component['key']) + r'\n',
+                              self.prepared[language], re.S)
+                assert m, (language, component['key'])
+                after = resolve(m[1])
+                for baseline in (['miller_src', 'codex_corr'] if language == 'fr'
+                                 else [RELEASE]):
+                    before, before_file = self.component_before(component, language, baseline)
+                    self.diff(
+                        before, after, language=language, baseline=baseline,
+                        key=component['key'], part=component['name'], category='component',
+                        before_file=before_file,
+                        after_file=MASTER_FILES[language] + '#component-' + component['key'],
+                        pages=component['pages'], component=component['key'],
+                        evidence=('Corrected variant branches are selected. opening.tex and '
+                                  'toc-i.tex are expanded when the supplied French component '
+                                  'includes them; original local bibliographies and contents '
+                                  'are included. Decision IDs are page associations unless '
+                                  'explicitly present in the hunk.'))
+
+    def target_regions(self, language):
+        s = self.masters[language]
+        begin = s.index(r'\begin{document}')
+        body_start = begin + len(r'\begin{document}')
+        spans = [('preamble', 0, begin)]
+        components = []
+        for component in COMPONENTS:
+            m = re.search(r'% BEGIN COMPONENT ' + re.escape(component['key']) +
+                          r'\n(.*?)\n% END COMPONENT ' +
+                          re.escape(component['key']) + r'\n', s, re.S)
+            assert m, ('master component', language, component['key'])
+            prepared = re.search(r'% BEGIN COMPONENT ' + re.escape(component['key']) +
+                                 r'\n(.*?)\n% END COMPONENT ' +
+                                 re.escape(component['key']) + r'\n',
+                                 self.prepared[language], re.S)
+            assert prepared and prepared[1] == m[1], (
+                'final master/prepared component mismatch', language, component['key'])
+            spans.append(('component-' + component['key'], m.start(1), m.end(1)))
+            components.append(m)
+        first = components[0].start()
+        note_open = r'\ifnum\EditionMode=2\relax\else' + '\n'
+        note_start = s.rfind(note_open, body_start, first)
+        assert note_start >= 0, ('typesetter note wrapper', language)
+        note_content_start = note_start + len(note_open)
+        note_end = s.index(r'\clearpage\fi', note_content_start)
+        spans += [('frontmatter', body_start, note_start),
+                  ('typesetter-note', note_content_start, note_end)]
+        contents = re.search(r'% BEGIN ORIGINAL GENERAL CONTENTS\n(.*?)'
+                             r'\n% END ORIGINAL GENERAL CONTENTS\n', s, re.S)
+        assert contents
+        spans.append(('original-general-contents', contents.start(1), contents.end(1)))
+        apparatus = read(f'work/build/apparatus_{language}.tex')
+        app_start = s.index(apparatus, components[-1].end())
+        assert s.count(apparatus) == 1
+        spans.append(('apparatus', app_start, app_start + len(apparatus)))
+        preamble = s[:begin]
+        style_header = '% Inlined baseline: Daniel Miller style, as preserved in the diplomatic tree.\n'
+        style_start = preamble.index(style_header) + len(style_header)
+        style_end = preamble.index(r'\DeclareUnicodeCharacter', style_start)
+        style = preamble[style_start:style_end]
+        preamble_projection = self.partition(
+            preamble, [('inlined-style', style_start, style_end)],
+            MASTER_FILES[language] + '#preamble')
+        return {
+            'main_scaffold': self.partition(s, spans, MASTER_FILES[language]),
+            'preamble': preamble_projection, 'style': style,
+            'frontmatter': s[body_start:note_start],
+            'typesetter_note': s[note_content_start:note_end],
+            'general_contents': contents[1], 'apparatus': apparatus,
+        }
+
+    def baseline_regions(self, language, baseline):
+        if language == 'fr':
+            main_file = f'source/fr/{baseline}/sga4.5.tex'
+            style_file = f'source/fr/{baseline}/sga-style.sty'
+            note_file = f'source/fr/{baseline}/sga4.5-note.tex'
+            s = read(main_file)
+        else:
+            main_file = RELEASE_FILE
+            style_file = 'source/en/sources/sga-style.sty'
+            note_file = RELEASE_FILE + '#components/sga4half_note_en.tex'
+            s = self.release
+        begin = s.index(r'\begin{document}')
+        body_start = begin + len(r'\begin{document}')
+        spans = [('preamble', 0, begin)]
+        if language == 'fr':
+            candidates = [m for m in re.finditer(r'\\include\{(?:sga4\.5-note|sga4\.5-intro)\}', s)]
+            assert candidates
+            first = min(m.start() for m in candidates)
+            note = read(note_file)
+            included = r'\include{sga4.5-note}' in s
+        else:
+            ms = list(re.finditer(r'% BEGIN INCLUDED components/([^\n]+)\n(.*?)'
+                                  r'% END INCLUDED components/\1', s, re.S))
+            assert ms
+            first = ms[0].start()
+            notes = [m for m in ms if m[1] == 'sga4half_note_en.tex']
+            assert len(notes) == 1
+            note = notes[0][2]
+            included = True
+            for m in ms:
+                key = ('typesetter-note' if m[1] == 'sga4half_note_en.tex' else
+                       'component-' + next(c['key'] for c in COMPONENTS if c['en'] == m[1]))
+                spans.append((key, m.start(2), m.end(2)))
+        spans.append(('frontmatter', body_start, first))
+        contents = re.search(r'\\tableofcontents\b', s)
+        assert contents
+        return {
+            'main_scaffold': self.partition(s, spans, main_file),
+            'preamble': s[:begin], 'style': read(style_file),
+            'frontmatter': s[body_start:first], 'typesetter_note': note,
+            'general_contents': contents[0], 'apparatus': '',
+            'main_file': main_file, 'style_file': style_file,
+            'note_file': note_file, 'note_included': included,
+        }
+
+    def paratext(self):
+        for language in ['fr', 'en']:
+            target = self.target_regions(language)
+            for baseline in (['miller_src', 'codex_corr'] if language == 'fr'
+                             else [RELEASE]):
+                old = self.baseline_regions(language, baseline)
+                for key in ['main_scaffold', 'preamble', 'style', 'frontmatter',
+                            'typesetter_note', 'general_contents', 'apparatus']:
+                    before_file = old['main_file']
+                    if key == 'style':
+                        before_file = old['style_file']
+                    elif key == 'typesetter_note':
+                        before_file = old['note_file']
+                    explanation = {
+                        'main_scaffold': (
+                            'Actual source-master control flow and include/inline wrappers '
+                            'are compared after replacing separately compared regions by '
+                            'named audit placeholders. The recorded source partitions '
+                            'round-trip to every original master byte. The removed global '
+                            'bibliography commands are visible here.'),
+                        'preamble': (
+                            'Actual source-main preamble versus final preamble with only '
+                            'the separately compared inlined style replaced by an audit '
+                            'placeholder. Title metadata, package declarations, edition '
+                            'macros, Unicode declarations and language settings are included.'),
+                        'style': (
+                            'Complete supplied sga-style.sty versus the actual final '
+                            'inlined style slice; additional edition macros are in the '
+                            'preamble comparison. ' +
+                            ('The released English source refers to sga-style; its supplied '
+                             'companion is source/en/sources/sga-style.sty. The release '
+                             'directory does not contain a second independent style witness.'
+                             if language == 'en' else '')),
+                        'frontmatter': (
+                            'Actual title/credit/pagination source before the first note or '
+                            'Introduction versus the complete conditional front-matter '
+                            'source in the delivered reader. Mode 1 selects the corrected '
+                            'form; the other branches are retained by the required '
+                            'single-source architecture. The old title/author/date '
+                            'definitions are additionally captured in the preamble.'),
+                        'typesetter_note': (
+                            'Actual stored note text versus the final note text. The source '
+                            'master ' + ('includes' if old['note_included'] else 'does not include') +
+                            ' this baseline note. Inclusion and the final reading-mode '
+                            'omission are recorded in the main-scaffold comparison; '
+                            'a stored but inactive Codex note is not treated as an active '
+                            'reader passage.'),
+                        'general_contents': (
+                            'The actual inherited tableofcontents instruction is the '
+                            'before witness; no unavailable generated .toc text is invented. '
+                            'The after witness is the restored original unnumbered contents '
+                            'transcribed from scan physical page 5.'),
+                        'apparatus': (
+                            'This generated critical apparatus is genuinely absent from '
+                            'the supplied baseline reader. Its complete actual source is '
+                            'recorded, including the mode guard and all entries; it is not '
+                            'an empty descriptive inventory.'),
+                    }[key]
+                    source = {
+                        'general_contents': 'S45-ASTRA-A-0032',
+                        'apparatus': 'work/records/MISPRINTS_45.tsv;work/records/VARIANT_OCCURRENCES.json',
+                        'frontmatter': 'scripts/reader_frontmatter.py;source/en/repo_records/ATTRIBUTION.md;source/en/repo_records/LICENSE_AND_RIGHTS.md',
+                        'typesetter_note': old['note_file'] + ';scripts/assemble_readers.py',
+                        'style': old['style_file'] + ';scripts/edition_tex.py;POLICY-NOTE45',
+                        'preamble': 'scripts/edition_tex.py;scripts/assemble_readers.py',
+                        'main_scaffold': old['main_file'] + ';scripts/assemble_readers.py;POLICY-NOTE45',
+                    }[key]
+                    self.diff(
+                        old[key], target[key], language=language, baseline=baseline,
+                        key='paratext_' + key, part='Source assembly and paratext',
+                        category=key, before_file=before_file,
+                        after_file=MASTER_FILES[language] + '#' + key,
+                        pages=['unnumbered'], source=source, evidence=explanation)
+
+    def crosswalk(self):
+        """Navigation/evidence crosswalk; page association is never a verdict."""
+        original = list(csv.DictReader((ROOT / 'source/fr/codex_records/dec.csv').open()))
+        assert len(original) == 475
+        pdf_pages = {int(row['pdf_page']): str(row['printed_page']) for row in self.pages}
+        references = collections.defaultdict(list)
+        for collection, rows in [('decisions', self.sol), ('own_findings', self.own),
+                                 ('variants', self.meta)]:
+            for row in rows:
+                for ident in set(CODEX_ID.findall(json.dumps(row, ensure_ascii=False))):
+                    references[ident].append({
+                        'id': row['id'], 'register': collection,
+                        'page': str(row.get('printed_page', row.get('page', ''))),
+                        'kind': row.get('kind', ''), 'reason': row.get('reason', ''),
+                        'decision': row.get('change_made', row.get('change', '')),
+                    })
+        master_markers = {lang: {r['page']: r for r in marker_rows(s)}
+                          for lang, s in self.masters.items()}
+        actual_variants = {lang: variants(self.prepared[lang]) for lang in ['fr', 'en']}
+        repetitions = collections.Counter()
+        result = []
+        for index, historical in enumerate(original, 1):
+            ident = historical['id']
+            repetitions[ident] += 1
+            canonical = ('SGA45-CORR-0011B'
+                         if ident == 'SGA45-CORR-0011' and repetitions[ident] == 2
+                         else ident)
+            loc = historical['locator']
+            numbers = []
+            # Only explicit scan-physical coordinates are converted. Ambiguous
+            # "p56" and "printed contents p10" remain literal source locators.
+            for m in re.finditer(r'physical\s+pp?\.?\s*(\d+)(?:\s*[-–—]\s*(\d+))?',
+                                 loc, re.I):
+                lo, hi = int(m[1]), int(m[2] or m[1])
+                numbers.extend(range(lo, hi + 1))
+            pages = [pdf_pages[n] for n in numbers if n in pdf_pages]
+            linked = references.get(canonical, [])
+            for row in linked:
+                pages.extend(pages_in(row['page']))
+            pages = sorted(set(pages), key=PAGE_RANK.__getitem__)
+            source_variants = []
+            for lang, rows in actual_variants.items():
+                for v in rows:
+                    if canonical in v['source'].split(';'):
+                        source_variants.append({
+                            'language': lang, 'page': v['page'],
+                            'printed': v['printed'], 'corrected': v['corrected'],
+                            'source': v['source'],
+                        })
+                        if v['page'] and v['page'] not in pages:
+                            pages.append(v['page'])
+            anchors = []
+            for page in pages:
+                for lang in ['fr', 'en']:
+                    r = master_markers[lang].get(page)
+                    if r:
+                        anchors.append({
+                            'language': lang, 'printed_page': page,
+                            'file': MASTER_FILES[lang], 'line': r['line'],
+                            'witness': r['start'],
+                            'meaning': 'Navigation witness at reviewed original-page boundary; '
+                                       'not by itself proof of this historical decision.',
+                        })
+            # Stable label targets help rows with no explicit physical page.
+            label_ids = set(re.findall(r'\bI:[A-Za-z0-9:_.-]+',
+                                       ' '.join(historical.values())))
+            label_anchors = []
+            for label in sorted(label_ids):
+                needle = r'\label{' + label + '}'
+                for lang, text in self.masters.items():
+                    at = text.find(needle)
+                    if at >= 0:
+                        label_anchors.append({
+                            'language': lang, 'label': label,
+                            'file': MASTER_FILES[lang],
+                            'line': text[:at].count('\n') + 1,
+                            'witness': text[max(0, at - 100):at + len(needle) + 180],
+                        })
+            assembly = any(x in historical['file'] for x in
+                           ['sga4.5.tex', 'sga-style.sty', 'sga-sources.bib'])
+            assembly_evidence = []
+            assembly_status = ''
+            if canonical == 'SGA45-TX-0002':
+                assembly_status = ('Superseded by the requested mode policy: the inherited '
+                                   'typesetter note appears in diplomatic/corrected forms '
+                                   'and is omitted in the reading form')
+                for lang, text in self.masters.items():
+                    needle = r'\ifnum\EditionMode=2\relax\else'
+                    at = text.index(needle, text.index(r'\begin{document}'))
+                    assembly_evidence.append({
+                        'language': lang, 'file': MASTER_FILES[lang],
+                        'line': text[:at].count('\n') + 1,
+                        'witness': text[at:at + len(needle) + 160],
+                        'meaning': 'Actual final note-inclusion guard and heading.',
+                    })
+            elif canonical in {'SGA45-TX-0009', 'SGA45-TX-0055'}:
+                assembly_status = ('Generated contents program replaced by the restored '
+                                   'original general contents; inherited generated-TOC '
+                                   'presentation choices are inactive')
+                for lang, text in self.masters.items():
+                    assert not re.search(r'\\tableofcontents\b', text)
+                    needle = r'\label{OriginalContents}'
+                    at = text.index(needle)
+                    assembly_evidence.append({
+                        'language': lang, 'file': MASTER_FILES[lang],
+                        'line': text[:at].count('\n') + 1,
+                        'witness': text[max(0, at - 70):at + 160],
+                        'meaning': 'Actual restored original contents; no tableofcontents call.',
+                    })
+            elif canonical == 'SGA45-TX-0040':
+                assembly_status = 'French proof-heading declaration retained in the final inlined preamble'
+                needle = r'\renewcommand{\proofname}{Démonstration}'
+                text = self.masters['fr']
+                at = text.index(needle)
+                assembly_evidence.append({
+                    'language': 'fr', 'file': MASTER_FILES['fr'],
+                    'line': text[:at].count('\n') + 1, 'witness': needle,
+                    'meaning': 'Exact final presentation declaration.',
+                })
+            elif canonical in {'SGA45-TX-0001', 'SGA45-TX-0177', 'SGA45-TX-0329'}:
+                assembly_status = ('Historical global-BibTeX repair is inactive in the readers: '
+                                   'the global bibliography program was removed, while '
+                                   'source citation keys and printed local bibliographies remain')
+                for lang, text in self.masters.items():
+                    assert not re.search(r'\\bibliography\s*\{', text)
+                    m = re.search(r'\\PrintCite\{[^\n]+', text)
+                    assert m
+                    assembly_evidence.append({
+                        'language': lang, 'file': MASTER_FILES[lang],
+                        'line': text[:m.start()].count('\n') + 1,
+                        'witness': m[0],
+                        'meaning': 'A final printed-literal citation retaining its source key; '
+                                   'the complete source contains no bibliography invocation.',
+                    })
+            related_changes = []
+            for row in self.rows['fr']:
+                if row['baseline'] != 'codex_corr':
+                    continue
+                exact_id = canonical in row['source'].split(';')
+                if exact_id or set(pages) & set(row['page'].split(';')) or (
+                        assembly and row['comparison_scope'] != 'component'):
+                    related_changes.append(row['change_id'])
+            if assembly_status:
+                status = assembly_status
+                association = 'verified final assembly source evidence'
+            elif source_variants:
+                status = 'Explicit final variant source ID; both readings recorded'
+                association = 'exact source ID in final annotated source'
+            elif any('rejected' in r['kind'] for r in linked):
+                status = 'Historical correction reversed by an explicit current decision'
+                association = 'explicit current decision ID plus final source navigation'
+            elif linked:
+                status = 'Explicit current decision cross-reference; inspect stated adjudication'
+                association = 'explicit current decision ID plus final source navigation'
+            elif historical['status'] == 'rejected_false_positive':
+                status = 'Historical rejected candidate; no application inferred'
+                association = 'historical rejection plus final source navigation'
+            elif historical['layer'] == 'operation' or re.fullmatch(r'bd.*|p\d+ one-page.*',
+                                                                   historical['file']):
+                status = 'Historical operation/build event; no authorial-text retention claim'
+                association = 'historical source record only'
+            else:
+                status = 'Mapped to final source for inspection; retention not independently certified by this crosswalk'
+                association = ('printed-page or stable-label navigation' if anchors or label_anchors
+                               else 'source-file/assembly navigation')
+            result.append({
+                'codex_row': index, 'historical_id': ident,
+                'historical_id_occurrence': repetitions[ident],
+                'canonical_id': canonical,
+                **{k: v for k, v in historical.items() if k != 'id'},
+                'current_crosswalk_status': status, 'association_level': association,
+                'printed_pages': pages, 'final_source_anchors': anchors,
+                'stable_label_anchors': label_anchors,
+                'assembly_evidence': assembly_evidence,
+                'explicit_current_records': linked,
+                'final_variants': source_variants,
+                'related_change_rows': related_changes,
+                'relevant_final_files': ([MASTER_FILES['fr'], MASTER_FILES['en']]
+                                         if assembly or not anchors else
+                                         list(dict.fromkeys(a['file'] for a in anchors))),
+                'limitations': (
+                    'Historical accepted status is preserved as historical metadata, not '
+                    'reasserted as the current verdict. Page-linked hunks may concern other '
+                    'changes on the same page. English page anchors locate the corresponding '
+                    'passage and do not certify a translation equivalence. Ambiguous '
+                    'unqualified page locators are not silently converted to scan coordinates.'
+                ),
+            })
+        return sanitized_object(result)
+
+    def write(self):
+        for language, rows in self.rows.items():
+            for index, row in enumerate(rows, 1):
+                row['change_id'] = f'S45-CHANGE-{language.upper()}-{index:05d}'
+            with (self.output / f'CHANGES_{language.upper()}.tsv').open('w', newline='') as f:
+                writer = csv.DictWriter(f, fieldnames=FIELDS, delimiter='\t')
+                writer.writeheader()
+                writer.writerows(sanitized_object(rows))
+        crosswalk = self.crosswalk()
+        (self.output / 'CODEX_475_CROSSWALK.json').write_text(
+            json.dumps(crosswalk, ensure_ascii=False, indent=2) + '\n')
+        with (self.output / 'CODEX_475_CROSSWALK.tsv').open('w', newline='') as f:
+            fields = list(crosswalk[0])
+            writer = csv.DictWriter(f, fieldnames=fields, delimiter='\t')
+            writer.writeheader()
+            for row in crosswalk:
+                writer.writerow({k: json.dumps(v, ensure_ascii=False)
+                                 if isinstance(v, (list, dict)) else v
+                                 for k, v in row.items()})
+        components = [p for p in self.proof if p['category'] == 'component']
+        paratext = [p for p in self.proof if p['category'] != 'component']
+        assert len(components) == 3 * len(COMPONENTS)
+        assert len(paratext) == 21
+        summary = {
+            'fr_rows': len(self.rows['fr']), 'en_rows': len(self.rows['en']),
+            'components': components, 'paratext': paratext,
+            'source_partitions': self.partitions,
+            'all_component_reconstructions_exact': all(p['exact_reconstruction'] for p in components),
+            'all_paratext_reconstructions_exact': all(p['exact_reconstruction'] for p in paratext),
+            'all_master_partition_roundtrips_exact': all(p['exact_roundtrip'] for p in self.partitions),
+            'english_change_classes': dict(collections.Counter(
+                r['change_class'] for r in self.rows['en'])),
+            'codex_crosswalk': {
+                'rows': len(crosswalk), 'unique_historical_ids': len(set(r['historical_id'] for r in crosswalk)),
+                'association_counts': dict(collections.Counter(r['association_level'] for r in crosswalk)),
+                'duplicate_policy': 'The second historical SGA45-CORR-0011 row and its explicit '
+                                    'alias row both map to SGA45-CORR-0011B; all475 rows remain distinct.',
+            },
+            'scope': (
+                'Complete corrected components, including restored contents and local '
+                'bibliographies, are compared to both French baselines and the released '
+                'English. The actual source-main scaffold, preamble, complete inlined style, '
+                'title/credits/rights/conditional front matter, typesetter note, original '
+                'general contents and generated apparatus are separately diffed with actual '
+                'before/after text. Source partitions round-trip to the complete source '
+                'masters. Only mandatory privacy redaction affects comparison text.'
+            ),
+            'limitations': [
+                'This is a source-text diff, not a pixel diff of inherited and final PDFs. '
+                'The source main retains all three conditional front-matter branches and '
+                'the note omission guard, even though corrected mode selects one branch.',
+                'The inherited generated table of contents is represented by the supplied '
+                'tableofcontents instruction; no unavailable runtime .toc is fabricated. '
+                'Removal of the inherited global bibliography program is recorded in the '
+                'main scaffold; restored authorial bibliographies are fully compared inside components.',
+                'The English release refers to an external sga-style.sty. Its supplied '
+                'source companion is used; the release directory contains no independent '
+                'frozen copy of that style.',
+                'Prose-word classification masks complete math regions and non-visible '
+                'TeX metadata. It distinguishes new/restored English prose, revisions, '
+                'bibliographic transcription, editorial prose and non-prose changes; '
+                'it does not certify semantic equivalence or infer the authorship of quoted titles.',
+                'Decision IDs associated by printed page are explicitly marked as page '
+                'associations, not exact causal attribution of every token.',
+                'The475-row Codex crosswalk is a source-navigation and explicit-ID evidence '
+                'crosswalk, not475 newly adjudicated verdicts. Historical accept/reject '
+                'statuses are preserved, and weaker matches remain explicitly uncertified.',
+            ],
+        }
+        (self.output / 'CHANGE_COVERAGE_VALIDATION.json').write_text(
+            json.dumps(sanitized_object(summary), ensure_ascii=False, indent=2) + '\n')
+        # Every public file produced by this exporter is checked after serialization.
+        outputs = list(self.output.glob('CHANGES_*.tsv'))
+        outputs += [self.output / 'CHANGE_COVERAGE_VALIDATION.json',
+                    self.output / 'CODEX_475_CROSSWALK.json',
+                    self.output / 'CODEX_475_CROSSWALK.tsv']
+        outputs += list(self.diffs.glob('*.diff'))
+        for path in outputs:
+            s = path.read_text()
+            assert not EMAIL.search(s), ('email in export', path.name)
+            assert not PRIVATE_PATH.search(s), ('private path in export', path.name)
+        print(json.dumps({
+            'fr_rows': summary['fr_rows'], 'en_rows': summary['en_rows'],
+            'exact_component_reconstruction_checks': len(components),
+            'exact_paratext_reconstruction_checks': len(paratext),
+            'exact_source_partition_roundtrips': len(self.partitions),
+            'codex_crosswalk_rows': len(crosswalk),
+            'english_change_classes': summary['english_change_classes'],
+        }, ensure_ascii=False))
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', default='work/records',
+                        help='Project-relative output directory; default work/records.')
+    args = parser.parse_args()
+    output = (ROOT / args.output).resolve()
+    assert output.is_relative_to(ROOT), 'Output must remain project-relative.'
+    exporter = Exporter(output)
+    exporter.components()
+    exporter.paratext()
+    exporter.write()
+
+
+if __name__ == '__main__':
+    main()

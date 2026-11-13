@@ -1,0 +1,40 @@
+--- checkpoint/scripts/write_readme.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/write_readme.py
+@@ -27,7 +27,7 @@
+ 
+ ## Counts and completion gates
+ ''']
+-lines.append(f"- Required scanned text pages checked: **{counts['pages']} / 314**; unnumbered original contents checked additionally.\n- Sol findings decided: **{counts['sol_findings']} / 1,247**—**{counts['sol_verdicts']['accepted']} accepted**, **{counts['sol_verdicts']['accepted with a corrected reading']} accepted with a corrected reading**, **{counts['sol_verdicts']['rejected']} rejected**.\n- Independent findings: **{counts['own_findings']}**, each with an explicit reason.\n- Original-print variant occurrences and register rows: **312 French**; corresponding English variants: **218**.\n- Combined Sol/own implementation coverage: **{verification['coverage_rows']} two-language evidence rows**, covering every finding in each language. A no-change decision has an explicit preservation or unchanged-translation witness.\n- Final independent verification: **{verification['result']}**, **{verification['counts'].get('pass',0)} checks passed**, **{verification['counts'].get('fail',0)} failed**, **{verification['counts'].get('pending',0)} pending**.\n- Every reader PDF has **314 original-page destinations**. Corrected/master PDFs have 312 French or 218 English apparatus destinations; diplomatic and reading PDFs have none.\n")
++lines.append(f"- Required scanned text pages checked: **{counts['pages']} / 314**; unnumbered original contents checked additionally.\n- Sol findings decided: **{counts['sol_findings']:,} / 1,247**—**{counts['sol_verdicts']['accepted']:,} accepted**, **{counts['sol_verdicts']['accepted with a corrected reading']} accepted with a corrected reading**, **{counts['sol_verdicts']['rejected']} rejected**.\n- Independent findings: **{counts['own_findings']}**, each with an explicit reason.\n- Original-print variant occurrences and register rows: **312 French**; corresponding English variants: **218**.\n- Combined Sol/own implementation coverage: **{verification['coverage_rows']:,} two-language evidence rows**, covering every finding in each language. A no-change decision has an explicit preservation or unchanged-translation witness.\n- Final independent verification: **{verification['result']}**, **{verification['counts'].get('pass',0)} checks passed**, **{verification['counts'].get('fail',0)} failed**, **{verification['counts'].get('pending',0)} pending**.\n- Every reader PDF has **314 original-page destinations**. Corrected/master PDFs have 312 French or 218 English apparatus destinations; diplomatic and reading PDFs have none.\n")
+ lines+=['| Part | Printed pages | Sol rows | FR variants | EN variants |','|---|---:|---:|---:|---:|']
+ for c in COMPONENTS:
+     pset=set(c['pages']);n=sum(d['printed_page'] in pset for d in sol)
+@@ -84,7 +84,8 @@
+ | `VARIANT_OCCURRENCES.json` | 530 French/English component-level variant occurrences |
+ | `CHANGES_FR.tsv` | Corrected French differences against both Miller and Codex corrected witnesses |
+ | `CHANGES_EN.tsv` | Corrected English differences against the English released on 12 November 2026, including new translations |
+-| `diffs/` | Full, reconstructible component and paratext source comparisons |
++| `work/records/diffs/` | Full, reconstructible component and paratext source comparisons |
++| `CODEX_475_CROSSWALK.tsv` | Navigation from all 475 historical Codex decisions to current evidence and recorded adjudications |
+ | `DECISIONS.tsv` | Original page boundaries, four cut reports, notation decisions, provenance discrepancy and presentation policy |
+ | `APPARATUS_COUNTS.md` | Entry counts per part, language, form and recorded kind |
+ | `GLOSSARY_SGA4HALF_FR_EN.tsv` | French terms/notation, English renderings, reproducible counts and first places |
+@@ -112,8 +113,7 @@
+ All eight deliverable sources are standalone flattened files using the standard `book` class and an inlined adaptation of Miller’s style. They require no sibling `.sty`, component `\\input`, external bibliography run, or scan image. The supplied build used three pdfLaTeX passes per reader. The final PDF/source SHA-256 values are captured at compile time and independently matched to the delivered artifacts.
+ 
+ | Reader basename | PDF pages | Errors | Warnings | Overfull boxes | Largest overflow, pt | Underfull boxes |
+-|---|---:|---:|---:|---:|---:|---:|
+-''')
++|---|---:|---:|---:|---:|---:|---:|''')
+ for item in reader_rows:
+     d=read('work/build/'+item['reader']+'.compile.json')['final']
+     maximum=max([float(re.search(r'[0-9.]+',x).group()) for x in d['overfull']],default=0)
+@@ -129,7 +129,7 @@
+ 
+ The four original input ZIPs are needed to rebuild the source comparisons and component repairs from their witnesses. They are not duplicated in the final archives. All 1,775 input-manifest entries were checked for byte size and SHA-256 before review; `work/manifest_verification.json` records that result without private source-machine paths.
+ 
+-For a quick standalone build, run pdfLaTeX three times on any delivered `.tex` from its own directory. For the complete source reconstruction, put the four original archives in `upload`, extract these final archives into a common directory, and follow `REBUILD.md` and `scripts/rebuild_all.py --help`. The safe unpacker verifies archive names, manifest byte sizes and hashes before extraction. The rebuild driver uses final retained ledgers and idempotent component builders, not the historical append-only recording scripts. Frozen, reviewed transcriptions and translations are explicit build inputs where applicable. Two isolated component replays reproduced all 22 component files byte for byte and left all 54 frozen inputs unchanged; see `work/reproducibility/COMPONENT_REPLAY_VALIDATION.json`. Safe extraction tests are recorded in `work/reproducibility/UNPACK_VALIDATION.json`.
++For a quick standalone build, run pdfLaTeX three times on any delivered `.tex` from its own directory. For the complete source reconstruction, put the four original archives in `upload`, extract these final archives into a common directory, and follow `work/reproducibility/REBUILD.md` and `python3 scripts/rebuild_all.py --help`. The safe unpacker verifies archive names, manifest byte sizes and hashes before extraction. The rebuild driver uses final retained ledgers and idempotent component builders, not the historical append-only recording scripts. Frozen, reviewed transcriptions and translations are explicit build inputs where applicable. Two isolated component replays reproduced all 22 component files byte for byte and left all 54 frozen inputs unchanged; see `work/reproducibility/COMPONENT_REPLAY_VALIDATION.json`. Safe extraction tests are recorded in `work/reproducibility/UNPACK_VALIDATION.json`.
+ 
+ Run `python3 work/verification/verify_arcata_own.py` before `python3 work/verification/verify_final.py --strict`; the rebuild driver performs both checks in that order. Add `--privacy-root` with the project-relative staging directory to include its files in the final privacy scan. The driver documentation lists the preceding component, glossary, assembly, compilation, and export steps. Scripts use their project-relative locations and do not embed the original user’s paths. Retained compile logs have absolute runtime paths and addresses removed, including line-wrapped embedded-font tokens. Final archive preflight checks safe member names, ZIP integrity, all distributable text, and PDF text/metadata.
+ 

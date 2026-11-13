@@ -1,0 +1,1546 @@
+% !TEX root = sga4.5.tex
+
+
+\PrintPage{233}\chapter{Théorèmes de finitude en cohomologie \texorpdfstring{$\ell$}{l}-adique}\label{VII}
+
+
+
+
+
+
+
+
+
+
+\section{Énoncé des théorèmes}\label{VII:1}
+
+Dans tout cet exposé, $S$ sera un schéma noethérien et $A$ un anneau 
+noethérien à gauche, de torsion annulé par un entier inversible sur $S$. 
+Notre résultat principal est le suivant. 
+
+
+
+
+
+\begin{theorem_}\label{VII:1-1}
+On suppose $S$ régulier de dimension $0$ ou $1$. Soient $f:X\to Y$ un 
+morphisme de $S$-schémas de type fini et $\sF$ un faisceau constructible de 
+$A$-modules à gauche sur $X$. Alors, les faisceaux $\eR^i f_\ast \sF$ sont 
+constructibles. 
+\end{theorem_}
+
+La preuve sera donnée au paragraphe \ref{VII:2} et en \ref{VII:3-10}. 
+
+
+
+
+
+\subsection{Remarque}\label{VII:1-2}
+
+En caractéristique $0$, ce résultat est moins général que 
+\cite[XIX paragraphe 5]{sga4}, qui prouve la conclusion du théorème pour 
+tout morphisme de type fini de schémas excellents de caractéristique $0$. 
+La démonstration de \cite[XIX]{sga4} utilise d'une part la résolution des  
+singularités, d'autre part que les schémas soient d'égale 
+caractéristique (pour pouvoir déduire de la résolution le ``théorème 
+de pureté''). 
+
+
+
+
+
+
+\subsection{Remarque}\label{VII:1-3}
+
+Nous dirons qu'un complexe $K\in\ob\eD(X,A)$ est \emph{constructible} si ses 
+faisceaux de cohomologie sont constructibles et nous noterons avec un indice 
+$c$ la sous-catégorie de $\eD(X,A)$ (ou $\eD^+$, $\eD^-$, $\eD^b$) formée 
+des complexes constructibles. Dans le langage des catégories dérivées, 
+que nous utiliserons librement, \ref{VII:1-1} dit que 
+$\eR f_\ast:\eD^+(X,A) \to \eD^+(Y,A)$ envoie $\eD_c^+$ dans $\eD_c^+$. 
+Explicitons: 
+\begin{enumerate}[\indent a)]
+  \item Pour $K$ réduit à un faisceau $\sF$ en degré $0$, on a 
+    $\sH^i\eR f_\ast K = \eR^i f_\ast \sF$; l'énoncé dérivé implique 
+    donc le théorème. 
+  \item Dans l'autre sens, on invoque la suite spectrale 
+\PrintPage{234}    \[
+      \var{E_1^{p q}}{E_2^{p q}}{S45-SOL-0981} = \eR^q f_\ast \sH^p(K) \Rightarrow \sH^{p+q} \eR f_\ast K \text{.} 
+    \]
+\end{enumerate}
+
+Parler le langage des catégories \var{dérivées à l'avantage}{dérivées a l'avantage}{S45-SOL-0982} de remplacer par 
+une simple formule de transitivité $\eR(f g)_\ast = \eR f_\ast \eR g_\ast$ 
+une suite spectrale de Leray 
+$E_2^{p q} = \eR^p f_\ast \eR^q g_\ast \Rightarrow \eR^{p+q} (f g)_\ast$. 
+
+Sous les hypothèses de \ref{VII:1-1}, il résulte de \cite[X]{sga4} que 
+$\eR f_\ast$ est de dimension cohomologique finie. Cela permet ci-dessus de 
+remplacer $\eD^+$ par $\eD$, $\eD^-$ ou $\eD^b$. 
+
+
+
+
+
+\subsection{Les idées de la démonstration}\label{VII:1-4}
+\begin{enumerate}[\indent a)]
+  \item La dualité de Poincaré permet de traiter le cas où $X$ est 
+    lisse, $\sF$ localement constant, et $Y=S$. L'hypothèse de dimension 
+    appara\"it pour calculer des $\rHom$ sur $S$.
+  \item On factorise $f$ en $g j$: $g$ propre et $j$ plongement ouvert. On a 
+    $\eR f_\ast = \eR g_\ast \eR j_\ast$ et le théorème de finitude pour 
+    les morphismes propres contrôle $\eR g_\ast$. Dévissant, on se ramène 
+    à supposer $X$ lisse, $\sF$ localement constant, $f$ un plongement ouvert 
+    et $Y$ propre sur $S$. 
+  \item Une récurrence sur $\dim X$ (avec changement de $S$) permet, grosso 
+    modo, de supposer le théorème vrai en dehors d'une partie de $Y$ finie 
+    sur $S$. Notant $a:X\to S$ et $b:Y\to S$ les morphismes structuraux, on 
+    montre alors que si le théorème était faux pour $\sF$ et 
+    $\eR f_\ast$, il le serait aussi pour $\sF$ et 
+    $\eR b_\ast \eR f_\ast = \eR a_\ast$: contradiction. 
+\end{enumerate}
+
+
+
+
+
+\begin{corollary_}\label{VII:1-5}
+Sous les hypothèses du théorème, les catégories $\eD_c(X,A)$ et 
+$\eD_c(Y,A)$ sont transformées l'une en l'autre par les $4$ opérations 
+$\eR f_\ast$, $\eR f_!$, $f^\ast$, $\eR f^!$. 
+\end{corollary_}
+
+$\eR f_\ast$ est traité ci-dessus, $\eR f_!$ en \cite[XVII 5.3]{sga4}, 
+$f^\ast$ est clair. Reste $\eR f^!$. Le problème est local, ce qui permet de 
+supposer que $f$ se factorise en $X\overset{i}{\hookrightarrow} Z \xrightarrow g Y$ ($i$ 
+plongement fermé et $g$ lisse, purement de dimension relative $n$). La 
+dualité de Poincaré $\var{\eR g^! K(n)[2 n]}{\eR g^! K \iso g^\ast K(n)[2 n]}{S45-SOL-0989}$ et la transitivité 
+$\eR f^! = \eR i^! \eR g^!$ \PrintPage{235}nous ramènent à prouver \ref{VII:1-5} pour $i$. 
+Pour tout $L\in \eD(Z,A)$, si $j$ est l'inclusion dans $Z$ de $U=Z\setminus X$, 
+$i_\ast \eR i^! L$ est le mapping cylinder de $\var{K\to \eR j_\ast j^\ast K}{L\to \eR j_\ast j^\ast L}{S45-SOL-0990}$ et 
+\ref{VII:1-5} pour $i$ résulte de \ref{VII:1-1} pour $j$. 
+
+
+
+
+
+\begin{corollary_}\label{VII:1-6}
+Soit $X$ comme dans le théorème, et supposons $A$ commutatif. Alors, si 
+$\sF$ et $\sG$ sont des faisceaux constructibles de $A$-modules sur $X$, les 
+$\Ext_A^i(\sF,\sG)$ sont constructibles: $\rHom$ envoie 
+$\eD_c^-(X,A)\times \eD_c^+(X,A)$ dans $\eD_c^+(X,A)$. 
+\end{corollary_}
+
+Par dévissage de $\sF$, on se ramène à supposer $\sF$ de la forme 
+$j_!\sF_1$ ($j:Y\hookrightarrow X$ un plongement localement fermé et $\sF_1$ 
+localement constant sur $Y$). On a alors 
+\[
+  \rHom(j_! \sF_1,\sG) = \var{\eR j_\ast \Hom(\sF_1,\eR j^! \sG)}{\eR j_\ast \rHom(\sF_1,\eR j^! \sG)}{S45-SOL-0992} \text{:} 
+\]
+d'après \ref{VII:1-3}, nous sommes ramenés au cas où $\sF$ est localement 
+constant -- voire constant puisque le problème est local. Pour $\sF$ 
+localement constant constructible, on a $\Hom(\sF,\sG)_x=\hom(\sF_x,\sG_x)$, 
+et de même pour $\rHom$. Pour $\sF$ constant, on peut donc calculer les 
+$\Ext^i$ à l'aide d'une résolution projective de type fini de sa valeur 
+constante, et les $\Ext^i$ sont constructibles si $\sG$ l'est -- d'où le 
+corollaire. 
+
+
+
+
+
+\subsection{Remarque}\label{VII:1-7}
+
+Puisque $\eR f_\ast$ est de dimension cohomologique finie, il transforme 
+complexes de tor-dimension finie (resp. $\leqslant d$) en complexes de 
+tor-dimension finie (resp. $\leqslant d$) \cite[XVII 5.2.11]{sga4}. 
+\cite[XVII 5.2.10]{sga4} et la preuve de \ref{VII:1-5} montrent alors que la 
+tor-dimension finie est stable par les $4$ opérations $\eR f_\ast$, 
+$\eR f_!$, $f^\ast$, $\eR f^!$. Une variante de celle de \ref{VII:1-6} 
+(dévisser $K$ selon une partition de $X$ pour supposer les faisceaux de 
+cohomologie localement constants, puis se localiser pour remplacer $K$ par un 
+complexe fini de faisceaux localement libres de type fini) montre alors que, 
+pour $A$ commutatif, $\rHom$ induit 
+\[
+  \rHom:\eD_\text{ctf}^b(X,A)\times \eD_\text{tf}^b(X,A) \to \eD_\text{tf}^+(X,A) 
+\]
+(t.f.: tor-dimension finie). 
+
+
+
+
+
+\PrintPage{236}\subsection{}\label{VII:1-8}
+
+Sous les hypothèses du théorème, la même méthode nous permet de 
+prouver un théorème de bidualité locale $K\iso D D K$ (paragraphe 
+\ref{VII:4}). Nous prouvons aussi un théorème de finitude pour les 
+faisceaux de cycles évanescents. Pour $S$ quelconque, on obtient encore un 
+théorème ``générique'': 
+
+
+
+
+
+\begin{theorem_}\label{VII:1-9}
+\var{Soit $F:X\to Y$ un morphisme de $S$-schémas de type fini}{Soit $f:X\to Y$ un morphisme de $S$-schémas de type fini}{S45-SOL-0996} et $\sF$ un faisceau 
+constructible de $A$-modules sur $X$. Il existe un ouvert dense $U$ de $S$ tel 
+que 
+\begin{enumerate}[\indent (i)]
+  \item Au-dessus de $U$, les $\eR^i f_\ast \sF$ sont constructibles, et nuls 
+    sauf un nombre fini d'entre eux. 
+  \item La formation des $\eR^i f_\ast \sF$ est compatible à tout 
+    changement de base $S' \to U\subset S$. 
+\end{enumerate}
+\end{theorem_}
+
+Pour $S$ le spectre d'un corps, on a $U=S$. 
+
+Si $S$ est le spectre d'un corps, un argument de passage à la limite fournit 
+la compatibilité aux $S$-changements de base des $\eR^i f_\ast$ pour tout 
+morphisme quasi-compact quasi-séparé de $S$-schémas et tout faisceau 
+$\sF$. 
+
+
+
+
+
+\begin{corollary_}\label{VII:1-10}
+Soient $X$ un schéma de type fini sur $k$ séparablement clos et $\sF$ un 
+faisceau constructible de $A$-modules. Alors, les $\h^i(X,\sF)$ sont de type 
+fini. 
+\end{corollary_}
+
+C'est le cas particulier $S=\spec(k)$, $Y=S$. 
+
+\begin{corollary_}\label{VII:1-11}
+Soient $X$ et $Y$ deux schémas de type fini sur $k$ séparablement clos et 
+$K\in \ob\eD^-(X,A^\circ)$, $L\in \ob\eD^-(Y,A)$ des complexes de faisceaux de 
+modules à droite et à gauche. La flèche de K\"unneth 
+\[
+  \eR \Gamma(X,K) \lotimes \eR \Gamma(Y,L) \to \eR\Gamma(X\times Y,\pr_1^\ast K \lotimes \pr_2^\ast L) 
+\]
+est un isomorphisme. 
+\end{corollary_}
+
+On procède comme en \cite[XVII 5.4.3]{sga4}: 
+\PrintPage{237}\[\xymatrix{
+  X\times Y \ar[r]^-{\text{pr}_1} \ar[d]^-{\text{pr}_2} 
+    & X \ar[d]^-a \\
+  Y \ar[r]^-b 
+    & \spec(k) 
+}\]
+changeant de base par $b$, on trouve que 
+$\eR\pr_{2,\ast}{} \pr_1^\ast K$ est 
+$b^\ast \eR\Gamma(X,K)$. On a alors (cf. \cite[XVII 5.2.11]{sga4} et preuve) 
+
+\begin{align*}
+  \eR\Gamma(X\times Y,\pr_1^\ast K\lotimes \pr_2^\ast L) 
+    &= \eR\Gamma(Y,\eR \pr_{2,\ast}(\pr_1^\ast K\lotimes \pr_2^\ast L)) \\
+    &= \eR\Gamma(Y,(\eR\pr_{2,\ast}\pr_1^\ast K)\lotimes L) \\
+    &= \eR\Gamma(Y,b^\ast \eR\Gamma(X,K)\lotimes L) \\
+    &= \eR\Gamma(X,K)\lotimes \eR\Gamma(Y,L) 
+\end{align*}
+
+
+
+
+
+\subsection{}\label{VII:1-12}
+
+Enfin, comme contre-partie locale de \ref{VII:1-9}(ii), nous prouverons un 
+théorème d'acyclicité locale générique (\ref{VII:2-13}). 
+
+
+
+
+
+
+
+
+
+
+\PrintPage{238}\section{Théorèmes génériques}\label{VII:2}
+
+Dans ce paragraphe, nous prouvons \ref{VII:1-9} et le théorème 
+d'acyclicité locale générique \ref{VII:2-13}. Pour prouver \ref{VII:1-9}, 
+on se ramène aussitôt à supposer $S$ intègre. Soit $\eta$ son point 
+générique. 
+
+
+
+
+
+\subsection{}\label{VII:2-1}
+
+Nous commencerons par prouver \ref{VII:1-9} sous les hypothèses 
+additionnelles suivantes: $X$ est lisse sur $S$, purement de dimension relative 
+$n$, $A=\dZ/m$, $\sF$ est localement constant et $Y=S$. Soit 
+$\sF'=\Hom(\sF,\dZ/m)$. Nous allons montrer que si les $\eR^i f_! \sF'$ sont 
+localement constants, les conclusions de \ref{VII:1-9} valent pour $U=S$. 
+Rappelons que si $\sL$ est un faisceau localement constant constructible, les 
+$\Ext^i(\sL,\sG)$ se calculent fibre par fibre, et sont constructibles si $\sG$ 
+l'est. Rappelons aussi que $\dZ/m$ est un $\dZ/m$-module injectif, et est le 
+module dualisant, de sorte que $\sF=\rHom(\sF',\dZ/m)$. La dualité de 
+Poincaré 
+\[
+  \eR f_\ast \rHom(K,\eR f^! L) = \rHom(\eR f_! K,L) \text{,} 
+\]
+pour $K=\sF'$, $L=\dZ/m$, $\eR f^! L = \dZ/m[2n](n)$, fournit donc 
+\[
+  \eR^{2n-i} f_\ast \sF = \Hom(\eR^i f_! \sF',\dZ/m)(-n) \text{.} 
+\]
+
+Le faisceau au second membre est localement constant, de formation compatible 
+à tout changement de base -- d'où l'assertion. 
+
+
+
+
+
+\subsection{}\label{VII:2-2}
+
+Prouvons \ref{VII:1-9} sous les hypothèses additionnelles: $X$ est lisse sur 
+$S$, $\sF$ est localement constant et $Y=S$. 
+\begin{enumerate}[a)]
+  \item Décomposant $X$ en composantes connexes, on se ramène à supposer 
+    qu'il est purement d'une dimension relative $n$ sur $S$. 
+  \item Décomposant $A$ en produit, on se ramène à supposer que 
+    $\ell^m A=0$, avec $\ell$ premier inversible sur $S$; on filtre alors $\sF$ 
+    par les $\ell^k \sF$ pour se ramener, par la suite spectrale 
+    correspondante, au cas où $\ell\sF=0$. On peut alors remplacer $A$ par 
+    $A/\ell A$ et supposer que $\ell A=0$. 
+\PrintPage{239}  \item Remplaçant $S$ par $U$ convenable, on peut supposer qu'il existe un 
+    revêtement galoisien fini étale $X_1/X$, de groupe de Galois $G$, \var{telle 
+    que l'image réciproque}{tel 
+    que l'image réciproque}{S45-SOL-0998} $\sF_1$ de $\sF$ sur $X_1$ soit un faisceau 
+    constant, de valeur constante $F$. Notant $f_1$ la projection de $X_1$ sur 
+    $S$, on a alors 
+    \[
+      \eR^i {f_1}_\ast \sF_1 = (\eR^i {f_1}_\ast \dZ/\ell)\otimes_{\dZ/\ell} F \text{.} 
+    \]
+    On dispose aussi de la suite spectrale de Hochschild-Serre (ou: de Leray 
+    pour le recouvrement $X_1/X$) 
+    \[
+      \underline\h^p(G,\eR^q {f_1}_\ast \sF_1) \Rightarrow \eR^{p+q} f_\ast \sF \text{.} 
+    \]
+    D'après \ref{VII:2-1}, on peut supposer, quitte à rétrécir $U$, que 
+    les $\eR^i {f_1}_\ast \dZ/\ell$ sont localement constants, de formation 
+    compatible à tout changement de base. La même propriété vaut alors 
+    pour les $\eR^i f_\ast \sF$. Enfin, si $\bar\eta$ est un point 
+    géométrique localisé au point générique $\eta$ de $S$, les 
+    $\eR^i f_\ast\sF$ sont presque tous nuls, car les 
+    $(\eR^i f_\ast \sF)_{\bar\eta} = \h^i(X_{\bar \eta},\sF)$ le sont. 
+\end{enumerate}
+
+
+
+
+
+\subsection{}\label{VII:2-3}
+
+Prouvons par récurrence sur $n$ que 
+\begin{equation*}\tag{$\ast_n$}\label{VII:eq:2-3-1}
+  \begin{array}{c}
+    \text{Les conclusions de \ref{VII:1-9} sont vraies lorsque $\dim{X_\eta}\leqslant n$} \\
+    \text{et que $f$ est un plongement ouvert d'image dense.}
+  \end{array}
+\end{equation*}
+
+Pour $n=0$, quitte à rétrécir $S$, on a $X=Y$: $(\ast_0)$ est évident. 
+Supposons ($\ast_{n-1})$, et prouvons \eqref{VII:eq:2-3-1}. Dans 
+($\ast_{n-1}$), on peut remplacer ``plongement ouvert'' par ``plongement'' 
+comme on le voit en factorisant en plongement ouvert et plongement fermé. 
+
+
+
+
+
+\begin{lemma_}\label{VII:2-4}
+Quitte à rétrécir $S$, les conclusions de \ref{VII:1-9} valent au-
+dessus de $Y'\subset Y$, le complément $Y_1$ de $Y'$ étant fini sur $S$. 
+\end{lemma_}
+
+L'assertion est locale sur $Y$, qu'on peut supposer affine: $\var{Y\subset \dA_S^n}{Y\subset \dA_S^N}{S45-SOL-0999}$. 
+L'hypothèse de récurrence ($\ast_{n-1}$) s'applique à 
+\PrintPage{240}\[\xymatrix{
+  X \ar[r]^-f \ar[dr] 
+    & Y \ar[d]^-{\pr_i} \\
+  & \dA_S^1 
+}\]
+Il existe donc pour chaque $i$ un ouvert dense $U_i$ de $\dA_S^1$ tel que les 
+conclusions de \ref{VII:1-9} valent au-dessus de $\pr_i^{-1}(U_i)$; \var{elle valent}{elles valent}{S45-SOL-1001} 
+au-dessus de la réunion des $\pr_i^{-1}(U_i)$, et \ref{VII:2-4} en résulte. 
+
+
+
+
+
+\addtocounter{subsection}{1} % a section is skipped in the original
+\subsection{}\label{VII:2-6}
+
+Prouvons \eqref{VII:eq:2-3-1} pour $X$ lisse sur $S$ et $\sF$ localement 
+constant sur $X$. Le problème étant local sur $Y$, on peut supposer $Y$ 
+affine, puis projectif (remplacer $Y$ par son adhérence dans un espace 
+projectif). Soient $i:Y_1\hookrightarrow Y$ et $j:Y' \to Y$ garantis par 
+\ref{VII:2-4}. 
+\[\xymatrix{
+  X \ar@{^{(}->}[r]^-f \ar[dr]_-a 
+    & Y \ar[d]^-b 
+    & \ar[l]_-i \ar[dl]^-{b_1} Y_1 \\
+  & S 
+}\] 
+quitte à rétrécir $S$, on sait que $j^\ast \eR f_\ast \sF$ est 
+constructible, de formation compatible à tout changement de base en $S$; on 
+sait aussi que $\eR a_\ast \sF = \eR b_\ast \eR f_\ast \sF$ est constructible, 
+de formation compatible à tout changement de base. 
+
+Appliquons $\eR b_\ast$ au triangle défini par la suite exacte 
+\begin{equation*}\tag{1}\label{VII:eq:2-6-1}
+\xymatrix{
+  0 \ar[r] 
+    & j_! j^\ast \eR f_\ast \sF \ar[r] 
+    & \eR f_\ast \sF \ar[r] 
+    & i_! i^\ast \eR f_\ast \sF \ar[r] 
+    & 0 \text{:} 
+}
+\end{equation*}
+on obtient un triangle 
+\begin{equation*}\tag{2}\label{VII:eq:2-6-2}
+\xymatrix{
+  \ar[r] 
+    & \eR b_\ast j_! j^\ast \eR f_\ast \sF \ar[r] 
+    & \eR a_\ast \sF \ar[r] 
+    & {b_1}_\ast i^\ast \eR f_\ast \sF \ar[r] 
+    & 
+}
+\end{equation*}
+dans lequel les deux premiers termes sont constructibles, de formation 
+compatible à tout changement de base en $S$ (pour le 1er, d'après le 
+théorème de finitude pour le morphisme propre $b$). Il en va donc de 
+même pour le troisième. Puisque $b_1$ est fini, on en déduit que 
+$i^\ast \eR f_\ast \sF$ est constructible de formation compatible à tout 
+\var{changement de Base en $S$, et de même}{changement de base en $S$, et de même}{S45-SOL-1004} pour $\eR f_\ast \sF$ par 
+\eqref{VII:eq:2-6-1}. 
+
+
+
+
+
+\PrintPage{241}\subsection{}\label{VII:2-7}
+
+Prouvons \eqref{VII:eq:2-3-1} en général. On commence par se ramener au cas 
+où dans $X$ existe un ouvert dense $V$ lisse sur $S$. Pour $S$ spectre d'un 
+corps parfait, il suffit de remplacer $X$ par $X_\text{red}$ (et $Y$ par 
+$Y_\text{red}$). En général, il faut rapetisser $S$, faire un changement de 
+base fini radiciel et surjectif $S' \to S$, et remplacer $X$ et $Y$ par 
+$X_\text{red}$ et $Y_\text{red}$. La topologie étale étant insensible aux 
+morphismes finis radiciels et surjectifs, ceci est innocent. Quitte à 
+rétrécir $V$, on peut supposer $\sF$ localement constant sur $V$ 
+\[\xymatrix{
+  V \ar@{^{(}->}[r]^j 
+    & X \ar@{^{(}->}[r]^-f 
+    & Y \text{.} 
+}\]
+Définissons $\Delta$ par le triangle 
+\begin{equation*}\tag{1}\label{VII:eq:2-7-1}
+\xymatrix{
+  \ar[r] 
+    & \sF \ar[r] 
+    & \eR j_\ast j^\ast \sF \ar[r] 
+    & \Delta \ar[r] 
+    & \text{.} 
+}
+\end{equation*}
+Les faisceaux de cohomologie de $\Delta$ sont à support dans $X\setminus V$, 
+et $\dim(X\setminus V)_\eta < n$. L'hypothèse de récurrence permet donc de 
+supposer que $\eR f_\ast \Delta$ est constructible. Appliquons $\eR f_\ast$ au 
+triangle \eqref{VII:eq:2-7-1}; on trouve un triangle 
+\[\xymatrix{
+  \ar[r] 
+    & \eR f_\ast \sF \ar[r] 
+    & \eR(f j)_\ast j^\ast \sF \ar[r] 
+    & \eR f_\ast \Delta \ar[r] 
+    & 
+}\]
+dans lequel deux des sommets sont constructibles de formation compatible à 
+tout changement de base en $S$. Le troisième l'est donc également. 
+
+
+
+
+
+\subsection{}\label{VII:2-8}
+
+Prouvons \ref{VII:1-9}. Le problème est local sur $Y$, qu'on peut supposer 
+affine. Prenant un recouvrement affine de $X$ et invoquant sa suite spectrale 
+de Leray, on se ramène à avoir $X$ également affine. Tout ceci pour 
+assurer qu'on puisse factoriser $f$ en un plongement ouvert suivi d'un 
+morphisme propre: $f=g j$, d'où $\eR f_\ast = \eR g_\ast \eR j_\ast$. Le 
+plongement ouvert est justiciable d'un \eqref{VII:eq:2-3-1}, le morphisme 
+propre du théorème de finitude. 
+
+Les corollaires suivants se prouvent comme au paragraphe 1. 
+
+
+
+
+
+\begin{corollary_}\label{VII:2-9}
+Sous les hypothèses du théorème, pour $K$ dans $\eD_c^b(X,A)$ ou 
+$\eD_c^b(Y,A)$ respectivement, il existe un ouvert non vide $U$ de $S$ 
+au-dessus duquel $\eR f_\ast K$, $\eR f_! K$, $f^\ast K$, $\eR f^! K$ soient 
+dans $\eD_c^b(Y,A)$ ou $\eD_c^b(X,A)$, et de formation \PrintPage{242}compatible à tout 
+changement de base $S' \to U\subset S$. 
+\end{corollary_}
+
+
+
+
+
+\begin{corollary_}\label{VII:2-10}
+Soit $X$ comme dans le théorème, et supposons $A$ commutatif. Alors, si 
+$\sF$ et $\sG$ sont des faisceaux constructibles de $A$-modules sur $X$, 
+au-dessus d'un ouvert dense $U$ de $S$, les $\Ext_A^i(\sF,\sG)$ sont encore 
+constructibles, de formation compatible à tout changement de base 
+$S' \to U\subset S$. 
+\end{corollary_}
+
+
+
+
+
+\subsection{}\label{VII:2-11}
+
+Si $x$ est un point géométrique d'un schéma $X$, nous noterons $X_x$ 
+l'henselisé strict de $X$ en $x$. Pour $f:X\to S$ et $t$ un point 
+géométrique de $S$, nous noterons $X_t$ la fibre géométrique de $X$ en 
+$t$. Enfin, pour $x$ un point géométrique de $X$, et $t$ un point 
+géométrique de $S_{f(x)}$, $(X_x)_t$ est la fibre en $t$ de 
+$X_x \to S_{f(x)}$. 
+
+
+
+
+
+\begin{definition_}\label{VII:2-12}
+Soient $f:X\to S$ et $K\in \ob\eD^+(X,A)$. On dit que $f$ est \emph{localement 
+acyclique en $x$, rel. $K$}, si pour tout point géométrique $t$ de 
+$S_{f(x)}$ on a $K_x=\eR\Gamma(X_x,K)\iso \eR\Gamma(X_{x,t},K)$. On dit que $f$ 
+est \emph{localement acyclique, rel. $K$}, si c'est vrai pour tout $x$, et 
+\emph{universellement localement acyclique, rel. $K$}, si cela reste vrai 
+après tout changement de base $S' \to S$.
+\end{definition_}
+
+
+
+
+
+\begin{theorem_}\label{VII:2-13}
+Soit $f:X\to S$ un morphisme de type fini et $\sF$ constructible sur $X$. Il 
+existe un ouvert dense $U$ de $S$ au-dessus duquel $f$ est universellement 
+localement acyclique, rel. $\sF$. 
+\end{theorem_}
+
+Nous admettrons le résultat suivant, prouvé dans l'appendice. 
+
+
+
+
+
+\begin{lemma_}\label{VII:2-14}
+Soit $X\xrightarrow f S_1 \xrightarrow g S_2$. Si $g$ est lisse, et $f$ 
+universellement localement acyclique rel. $K$, alors $g f$ l'est aussi. 
+\end{lemma_}
+
+On se ramène à supposer $S$ intègre, de point générique $\eta$, et 
+on procède par récurrence sur $\dim{X_\eta}$. On commence par déduire de 
+l'hypothèse de récurrence que 
+\begin{equation*}\tag{A}\label{VII:eq:2-14-1}
+  \begin{array}{c}
+    \text{Quitte à rétrécir $S$, il existe $T\subset X$, fini sur $S$, tel que $f$} \\
+    \text{soit universellement localement acyclique en dehors de $T$.} 
+  \end{array}
+\end{equation*}
+
+\PrintPage{243}Cette question étant locale, on se localise sur $X$ et on factorise $f$ en 
+$X\xrightarrow u \dA_S^1 \to S$. L'hypothèse de récurrence 
+s'applique à $u$ et on conclut par \ref{VII:2-14} et les arguments habituels. 
+
+Pour prouver le théorème, on peut supposer $X$ propre, puisque le 
+problème est local. On rétrécit $S$ pour que les $\eR^i f_\ast \sF$ 
+soient localement constants et que \eqref{VII:eq:2-14-1} soit applicable, et on 
+utilise le lemme suivant. 
+
+
+
+
+
+\begin{lemma_}\label{VII:2-15}
+Soient $f:X\to S$, propre, et $\sF$ constructible. On suppose que les 
+$\eR^i f_\ast \sF$ sont localement constants et que, en dehors de $T\subset X$ 
+fini sur $S$, $f$ soit localement acyclique rel. à $\sF$. Alors, $f$ est 
+localement acyclique rel. à $\sF$. 
+\end{lemma_}
+
+Soient $s$ un point géométrique de $S$, $S_s$ le localisé strict de $S$ 
+en $s$ et $t$ un point géométrique de $S_s$. Soient $X_{(s)}$ l'image 
+réciproque de $X$ sur $S_s$, $\bar j:X_t \to X_{(s)}$ et 
+$i:X_s \hookrightarrow X_{(s)}$. Notant encore $\sF$ l'image réciproque de 
+$\sF$ sur $X_{(s)}$ ou $X_t$, il faut prouver que 
+$i^\ast \sF \iso i^\ast \eR \bar j_\ast \sF$. Soit $\Delta$ le mapping cylinder 
+de cette application. Ses faisceaux de cohomologie sont à support dans $T_s$. 
+Pour prouver que $\Delta=0$, il suffit donc de prouver que 
+$\eR\Gamma(X_s,\Delta)=0$. C'est là le mapping cylinder de 
+$(\eR f_\ast \sF)_s = \eR\Gamma(X_s,i^\ast \sF) \to \eR\Gamma(X_s,i^\ast \eR\bar j_\ast \sF) = \eR\Gamma(X_{(s)},\eR\bar j_\ast \sF) = \eR\Gamma(X_t,\sF) = (\eR f_\ast \sF)_t$. 
+Ce morphisme de spécialisation est par hypothèse un isomorphisme, et 
+$\Delta=0$. 
+
+
+
+
+
+\begin{corollary_}\label{VII:2-16}
+Pour $S$ le spectre d'un corps, tout $S$-schéma $X$ est universellement 
+localement acyclique, rel. $K$, quel que soit $K\in\ob\eD^+(X,A)$. 
+\end{corollary_}
+
+Se déduit de \ref{VII:2-13} par passage à la limite (possible, car $U$ de 
+\var{\ref{VII:2-13} est toujours égal à $S$.}{\ref{VII:2-13} est toujours égal à $S$).}{S45-SOL-1015} 
+
+
+
+
+
+
+
+
+
+
+\PrintPage{244}\section{Preuve de \texorpdfstring{\ref{VII:1-1}}{1.1} et constructibilité des faisceaux de cycles évanescents}\label{VII:3}
+
+
+
+
+
+\subsection{}\label{VII:3-1}
+
+Soit $S$ un trait strictement local (le spectre d'un anneau de valuation 
+discrète hensélien à corps résiduel séparablement clos). On note $s$ et 
+$\eta$ ses points fermé et générique, et $\bar\eta$ un point 
+géométrique localisé en $\eta$ (une clôture séparable de $k(\eta)$). 
+Soient $X$ sur $S$ et $\sF$ un faisceau sur $X_\eta$. Rappelons la 
+définition des faisceaux de cycles évanescents $\eR^i \Psi_\eta(\sF)$ (des 
+faisceaux sur $X_s$, munis d'une action de $\gal(\bar\eta/\eta)$). Soient 
+$i:X_s\hookrightarrow X$, $j:X_\eta \hookrightarrow X$, et $\bar j$ le 
+composé $X_{\bar\eta}\to X_\eta \hookrightarrow X$; on a 
+\[
+  \eR^i \Psi_\eta(\sF) = i^\ast \eR^i \bar j_\ast (\bar j^\ast \sF) \text{.} 
+\]
+
+Voici le théorème principal de ce numéro. Il améliore 
+\cite[XIII 2.3.1, 2.4.2]{sga7}. 
+
+
+
+
+
+\begin{theorem_}\label{VII:3-2}
+On suppose $X$ de type fini sur $S$ et $\sF$ constructible. Alors, les 
+faisceaux de cycles évanescents $\eR^i \Psi_\eta(\sF)$ sont constructibles. 
+\end{theorem_}
+
+On procède par récurrence sur la dimension $n$ de $X_\eta$. On peut par 
+ailleurs supposer -- et on suppose -- $X_\eta$ dense dans $X$ (remplacer $X$ 
+par $\bar X_\eta$ ne change pas les $\eR^i \Psi$, qui sont à support dans 
+$\bar X_\eta$). 
+
+
+
+
+
+\begin{lemma_}\label{VII:3-3}
+Si \ref{VII:3-2} est vrai en dimension de $X_\eta<n$, et que $\dim X_\eta=n$, 
+il existe des sous-faisceaux constructibles $\sG_i$ des $\eR^i \Psi_\eta(\sF)$ 
+tels que les supports des sections locales de $\eR^i\Psi_\eta(\sF)/\sG_i$ soient 
+finis. 
+\end{lemma_}
+
+Soit $s'$ un point générique géométrique de la droite affine sur $s$, 
+et soit $S'$ le localisé strict en $s'$ de la droite affine $\dA_S^1$ sur 
+$S$. C'est encore un trait strictement local, et les uniformisantes pour $S$ 
+sont des uniformisantes pour $S'$. 
+\PrintPage{245}\[\xymatrix{
+  & \spec(k') \ar[rr] \ar[dd] \ar[dr] 
+    & & (S',\eta',s') \ar[dr] \ar[dd] \\
+  \bar\eta' \ar[ur] \ar[dr] 
+    & & \dA_{\bar S}^1 \ar[d]  
+    & & \dA_S^1 \ar[dl] \\
+  & \bar\eta\ar@{^{(}->}[r] 
+    & \bar S \ar[r] 
+    & (S,\eta,s) 
+}\]
+Soit $k'=k(\bar\eta)\otimes_{k(\eta)}k(\eta')$. Si $\bar S$ est le normalisé 
+de $S$ dans $\bar\eta$, $k'$ est le corps des fractions du localisé strict 
+de $\dA_{\bar S}^1$ en $s'$; c'est donc un corps, et 
+$\gal(\bar\eta/\eta)=\gal(k'/\eta')$. Soit $\bar\eta'$ le spectre d'une 
+clôture algébrique de $k'$. Le groupe de Galois $P=\gal(\bar\eta'/k')$ est 
+un pro-$p$-groupe, pour $p$ l'exposant caractéristique de $k(s)$. 
+
+
+
+
+
+\begin{lemma_}\label{VII:3-4}
+Pour tout schéma $X'$ sur $S'$, et tout faisceau $\sF$ sur 
+$X_\eta'=X_{\eta'}'$, on a entre les faisceaux de cycles évanescents pour 
+$X'/S'$ et pour $X'/S$ la relation 
+$\eR^i \Psi_\eta(\sF) =\eR^i\Psi_{\eta'}(\sF)^P$. 
+\end{lemma_}
+
+Le diagramme suivant compare les morphismes utilisés dans la définition de 
+$\eR\Psi$ pour $X'/S'$ et $X'/S$: 
+\[\xymatrix{
+  X_{\bar\eta'} \ar[rr] \ar[d] 
+    & & X_{\eta'}' \ar@{=}[dd] \ar@{^{(}->}[dr] 
+    & & S' \\ 
+  X_{\eta'}\times_{\eta'}\spec(k') \ar@{=}[d] \ar[urr] 
+    & & & X \ar[ur] \ar[dr] \\
+  X_{\bar\eta}' \ar[rr] 
+    & & X_\eta' \ar@{^{(}->}[ur] 
+    & & S
+}\]
+et le lemme résulte de la suite spectrale de Hochschild-Serre, compte tenu de 
+ce que $P$ est un pro-$p$-groupe, avec $p$ inversible dans $A$. 
+
+Prouvons \ref{VII:3-3}. La question est locale; ceci permet de supposer $X$ 
+affine, $X\subset \dA_S^n$. Soient $f$ \var{l'une des projection }{l'une des projections }{S45-SOL-1023}
+$X\subset \dA_S^n\to \dA_S^1$, $X'$ le ``localisé'' $X\times_{\dA_S^1} S'$ de $X$, 
+et $\sF'$ l'image inverse de $\sF$ sur $X'$ 
+\[\xymatrix{
+  \sF'\text{ sur }X' \ar[r] \ar[d]^-\lambda 
+    & S' \ar[d]^-\lambda \\
+  \sF \text{ sur }X \ar[r]^-f 
+    & \dA_S^1 \ar[r] 
+    & S \text{.} 
+}\]
+\PrintPage{246}On a, sur $X_s'=X_{s'}'$, 
+\[
+  \lambda^\ast \eR^i\Psi_\eta(\sF) = \eR^i \Psi_\eta(\sF') = \eR^i\Psi_{\eta'}(\sF')^P \text{:} 
+\]
+ce faisceau est constructible, car l'hypothèse de récurrence s'applique à 
+$X'/S'$, et on utilise le lemme suivant appliqué à $X_s\subset \dA_s^n$ et 
+aux faisceaux de cycles évanescents. 
+
+
+
+
+
+\begin{lemma_}\label{VII:3-5}
+Soient $\dA^n$ l'espace affine type de dimension $n$ sur un corps $k$, 
+$X\subset \dA^n$, $\sF$ un faisceau de $A$-modules sur $X$ et $\bar\eta$ un 
+point générique géométrique de $\dA^1$. Soient $X_{\bar\eta,i}$ la 
+fibre générique géométrique de 
+$X\subset \dA^n\xrightarrow{\pr_i} \dA^1$ et $\sF_{\bar\eta,i}$ la restriction 
+de $\sF$ à $X_{\bar\eta,i}$. Si les $\sF_{\bar\eta,i}$ sont constructibles, 
+il existe $\sF'\subset \sF$, constructible, tel que les sections locales de 
+$\sF/\sF'$ soient à support fini. 
+\end{lemma_}
+
+Par passage à la limite, pour chaque $i$
+\begin{enumerate}[a)]
+  \item Il existe un voisinage étale $U$ de $\bar\eta$ et un faisceau 
+    constructible $\sH$ sur $X_{U,i} = X\times_{\dA^1,\pr_i} U$ de restriction 
+    $\sF_{\bar\eta,i}$ à $X_{\bar\eta,i}$. 
+  \item Pour $U$ convenable, l'isomorphisme 
+    $\sH_{\bar\eta,i} \iso \sF_{\bar\eta,i}$ provient de $u:\sH\to \sF_{U,i}$ 
+    où $\sF_{U,i}$ est l'image réciproque de $\sF$ sur $X_{U,i}$. Soit 
+    $\varphi:X_{U,i} \to X$. Le morphisme $u$ définit 
+    $v_i:\varphi_! \sH \to \sF$, d'image $\sF_i'$. On a 
+    $(\sF/\sF_i')_{\bar\eta,i} = 0$ et on prend pour $\sF'$ la somme des 
+    $\sF_i'$. 
+\end{enumerate}
+
+
+
+
+
+\subsection{}\label{VII:3-6}
+
+Prouvons \ref{VII:3-2} en dimension $n$. On peut supposer $X$ affine (car le 
+problème est local sur $X_s$), puis projectif sur $S$ (prendre l'adhérence 
+de $X$ dans un plongement projectif). On a alors une suite spectrale 
+\cite[I 2.2.3]{sga7} (la suite spectrale de Leray pour $\bar j$, compte tenu du 
+théorème de changement de base pour le morphisme propre $X\to S$). 
+\begin{equation*}\tag{1}\label{VII:eq:3-6-1}
+  E_2^{p q} = \var{\h^p(X_s,\eR^i\Psi_\eta(\sF))}{\h^p(X_s,\eR^q\Psi_\eta(\sF))}{S45-SOL-1031} \Rightarrow \h^{p+q}(X_{\bar\eta},\sF) \text{.} 
+\end{equation*}
+\PrintPage{247}Soit $\sG^q\subset \eR^q \Psi_\eta(\sF)$ comme en \ref{VII:3-3}, et soit 
+$\sH^q$ le faisceau quotient. On a $\h^i(X_s,\sH^q)=0$ pour $i\ne 0$, et pour 
+que $\sH^q$, donc $\eR^q\Psi_\eta(\sF)$ soit constructible, il suffit que 
+$\h^0(X_s,\sH^q)$ soit de type fini. 
+
+Calculons \eqref{VII:eq:3-6-1} modulo modules de type fini (i.e. dans la 
+catégorie quotient de celle des $A$-modules par la sous-catégorie épaisse 
+des $A$-modules de type fini). La suite exacte longue de cohomologie déduite 
+de $0 \to \sG^q \to \eR^q\Psi_\eta(\sF) \to \sH^q \to 0$ fournit, par 
+\ref{VII:1-10} appliqué à $\sG^q$, que $E_2^{p q} \sim \h^p(X_s,\sH^q)$. 
+En particulier, $E_2^{p q}\sim 0$ pour $p\ne 0$, 
+$E_2^{0 q}\sim \h^q(X_{\bar\eta},\sF) \sim 0$, et ceci achève la 
+démonstration. 
+
+Des arguments parallèles fournissent le résultat suivant, qui améliore 
+\cite[XIII 2.1.12, 2.4.2]{sga7}. 
+
+
+
+
+
+\begin{proposition_}\label{VII:3-7}
+La formation des faisceaux de cycles évanescents est compatible aux 
+changements de traits. 
+\end{proposition_}
+
+Soient $g:(S',\eta',s') \to (S,\eta,s)$ un morphisme (surjectif) de traits 
+strictement locaux, $X/S$, $\sF$ sur $X_\eta$, de torsion premier à la 
+caractéristique résiduelle et $(X',\sF')$ leurs images réciproques sur 
+$S'$. Notant encore $g$ les morphismes parallèles à $g$, tels 
+$X_{s'}' \to X_s$, il faut prouver que 
+\begin{equation*}\tag{3.7.1}\label{VII:eq:3-7-1}
+\xymatrix{
+  g^\ast \eR\Psi_\eta(\sF) \ar[r]^-\sim 
+    & \eR\Psi_{\eta'}(\sF') \text{.} 
+}
+\end{equation*}
+Ce morphisme est défini par le diagramme commutatif 
+\[\xymatrix{
+  X_{s'}' \ar@{^{(}->}[r]^-{i'} \ar[d]^-g 
+    & X' \ar[d]^-g 
+    & X_{\bar\eta'}' \ar[l]_-{\bar j'} \ar[d]^-g \\
+  X_s \ar@{^{(}->}[r]^-i 
+    & X 
+    & \ar[l]_-{\bar j} X_{\bar\eta} 
+}\]
+
+Un passage à la limite ramène à supposer $X$ de type fini sur $S$, et on 
+procède par récurrence sur $\dim{X_\eta}$. La question étant locale, on 
+peut supposer $X$ affine, puis projectif. Supposons \eqref{VII:eq:3-7-1} pour 
+$\dim{X_\eta}<n$. Pour $\dim{X_\eta}=n$, il résulte alors des deux 
+assertions suivantes, où $\Delta$ est le mapping cylinder de 
+\eqref{VII:eq:3-7-1}. 
+
+\PrintPage{248}\begin{enumerate}[(A)]
+  \item Le support des sections locales des faisceaux de cohomologie de 
+    $\Delta$ est fini. 
+    \phantomsection\hypertarget{VII:3-A}{}
+  \item \var{$\eR\Gamma(X_s,\Delta)=0$}{$\eR\Gamma(X_{s'}',\Delta)=0$}{S45-SOL-1035}, donc $\Delta=0$, d'après 
+    (\hyperlink{VII:3-A}{A}). 
+    \phantomsection\hypertarget{VII:3-B}{}
+\end{enumerate}
+
+
+
+
+
+\subsection{}\label{VII:3-8}
+
+La preuve de (\hyperlink{VII:3-A}{A}) est parallèle à celle de 
+\ref{VII:3-3}. On se localise sur $X$ et on considère des applications 
+$X\to \dA_S^1$; notant $S(x)$ l'hensélisé strict de $\dA_S^1$ au point 
+générique de la fibre spéciale, on applique l'hypothèse de récurrence 
+à $X_1/S(x)$ ($X_1=X\times_{\dA^1} S(x)$) et à $S'(x)$. Prenant les 
+invariants par un pro-$p$-groupe, on trouve que $\Delta$ est nul sur la fibre 
+générique géométrique de $X_{s'} \to \dA_{s'}^1$. Ceci étant vrai, 
+localement sur $X$ et pour toute projection, on a (\hyperlink{VII:3-A}{A}). 
+
+
+
+
+
+\subsection{}\label{VII:3-9}
+
+Pour (\hyperlink{VII:3-B}{B}), la propreté de $X$ sur $S$ assure que 
+\[
+  \eR\Gamma(X_{s'}',\eR\Psi_{\eta'}(\sF')) = \eR\Gamma(X_{\bar\eta'}',\sF') 
+\]
+et
+\[
+  \eR\Gamma(X_s,\eR\Psi_\eta(\sF)) = \eR\Gamma(X_{\bar\eta},\sF) \text{.} 
+\]
+On a 
+$\eR\Gamma(X_s,\eR\Psi_\eta(\sF))\iso \eR\Gamma(X_{s'}',g^\ast\eR\Psi_\eta(\sF))$
+(invariance par changement de corps séparablement clos de base); 
+$\eR\Gamma(X_{s'}', \Delta)$ est donc le mapping cylinder de 
+$\eR\Gamma(X_{\bar\eta},\sF) \to \eR\Gamma(X_{\bar\eta'}',\sF')$, un 
+isomorphisme par le même théorème d'invariance. 
+
+
+
+
+
+\subsection{}\label{VII:3-10}
+
+Prouvons \ref{VII:1-1}. On se ramène à supposer $S$ connexe, donc 
+intègre. Si $\dim S=0$, ($S$ spectre d'un corps); on applique \ref{VII:1-9}, 
+\ref{VII:1-10}. Si $S$ est de dimension $1$, le théorème \ref{VII:1-9} 
+assure que \var{les $\eR^i f_\ast \sF$ sont constructible au-dessus}{les $\eR^i f_\ast \sF$ sont constructibles au-dessus}{S45-SOL-1042} du complément 
+d'un ensemble fini $T$ de points de $S$. Il reste à voir que \var{leur restriction 
+aux $Y_t$}{leurs restrictions 
+aux $Y_t$}{S45-SOL-1043} ($t\in T$) sont constructibles. Il suffit de le voir après 
+localisation en $t$: on peut supposer que $S$ est un trait strictement local. 
+Le cas essentiel est le suivant. 
+
+
+
+
+
+\begin{lemma_}\label{VII:3-11}
+Soient $X$ de type fini sur $S$, $j:X_\eta\hookrightarrow X$, 
+$i:X_s\hookrightarrow X$ et $\sF$ constructible sur $X_\eta$. Alors, 
+$i^\ast\eR j_\ast \sF$ est constructible. 
+\end{lemma_}
+
+Soit $I=\gal(\bar\eta/\eta)$ le groupe d'inertie. On sait que c'est une 
+extension de $\widehat\dZ_{p'}(1)$ par un pro-$p$-groupe $P$ ($p$ exposant 
+caractéristique du corps résiduel). \PrintPage{249}La suite spectrale de Hochschild-Serre 
+donne 
+\[
+  E_2^{p q} = \sH^p(I,\eR^q\Psi_\eta(\sF))\Rightarrow i^\ast \eR^{p+q}j_\ast\sF \text{.} 
+\]
+Soit $R_t^q = \eR^q\Psi_\eta(\sF)^P$ ($t$ pour modéré). Si $\sigma$ est un 
+générateur de $\widehat\dZ_{p'}(1)$, on a 
+$E_2^{0 q} = \ker(\sigma-1,R_t^q)$, 
+$E_2^{1 q} = \operatorname{coker}(\sigma-1,R_t^q)$ et $E_2^{p q} = 0$ pour 
+$p\ne 0,1$. Ces faisceaux sont constructibles, puisque les faisceaux de cycles 
+évanescents le sont, et \ref{VII:3-11} en résulte. 
+
+
+
+
+
+\subsection{}\label{VII:3-12}
+
+Traitons le cas général, $S$ étant toujours un trait strictement 
+hensélien. Si $X=X_\eta$, $f$ est le composé $X\to Y_\eta \to Y$ et on 
+applique \ref{VII:1-9} et \ref{VII:3-11}. Dans le cas général, soit 
+$j:X_\eta\hookrightarrow X$ et soit $\Delta$ le mapping cylinder de 
+$\sF \to \eR j_\ast j^\ast \sF$. Ses faisceaux de cohomologie sont à support 
+dans $X_s$; d'après \ref{VII:1-9} appliqué à $X_s \to Y_s$, 
+$\eR f_\ast \Delta$ est donc constructible. Le complexe 
+$\eR f_\ast \eR j_\ast j^\ast \sF = \eR(f j)_\ast j^\ast \sF$ l'est 
+également, et on conclut par le triangle 
+\[\xymatrix{
+  \ar[r] 
+    & \eR f_\ast \sF \ar[r] 
+    & \eR f_\ast \eR j_\ast j^\ast \sF \ar[r] 
+    & \eR f_\ast \Delta \ar[r] 
+    & \text{.} 
+}\]
+
+
+
+
+
+
+
+
+
+
+\PrintPage{250}\section{Bidualité locale}\label{VII:4}
+
+
+
+
+
+\subsection{}\label{VII:4-1}
+
+Soit $S$ régulier de dimension $0$ ou $1$ et posons $K_S=A$ (faisceau 
+constant de valeur $A$). Pour $K\in\ob\eD_\text{ctf}^b(S,A)$, on pose 
+$D K=\rHom(K,K_S)\in\ob\eD^+(S,A^\circ)$ (un complexe de faisceaux de 
+$A$-\var{modules à droites}{modules à droite}{S45-SOL-1045}). On a encore $D K\in\ob\eD_\text{ctf}^b(S,A^0)$, et 
+un calcul explicite, possible car $S$ est de dimension $1$ montre que 
+$K\iso D D K$ (pour $A=\dZ/n$, \hyperref[V]{Dualité} \ref{V:1-4}). 
+
+
+
+
+
+\subsection{}\label{VII:4-2}
+
+On supposera que $A$ est commutatif, hypothèse sans doute inutile. Pour 
+$a:X\to S$ de type fini sur $S$, on pose $K_X=\eR a^! K_S$. Pour 
+\var{$K\in\ob\eD_\text{ctf}^b(S,A)$, on pose}{$K\in\ob\eD_\text{ctf}^b(X,A)$, on pose}{S45-SOL-1047} 
+$D K=\rHom(K,K_X)\in\ob\eD_\text{ctf}^b(X,A)$. Notre résultat principal est 
+le suivant 
+
+
+
+
+
+\begin{theorem_}\label{VII:4-3}
+On a $K\iso D D K$ ($K\in \ob\eD_\textnormal{ctf}^b(X,A)$). 
+\end{theorem_}
+
+
+
+
+
+\begin{lemma_}\label{VII:4-4}
+Si $a$ est propre, on a $\eR a_\ast K \iso \eR a_\ast D D K$. 
+\end{lemma_}
+
+La dualité de Poincaré 
+\[
+  \eR a_\ast \rHom(K,\eR a^! K_S) = \rHom(\eR a_! K,K_S) 
+\]
+nous fournit un isomorphisme $\eR a_\ast D = D \eR a_! = D \eR a_\ast$. Le 
+lemme résulte de la commutativité du diagramme (\hyperref[V]{Dualité}, 
+\ref{V:1-2}) 
+\[\xymatrix{
+  \eR a_\ast K \ar[r] \ar[d]^-\wr 
+    & \eR a_\ast D D K \ar[d]^-\wr \\
+  D D \eR a_\ast K \ar[r]^-\sim 
+    & D \eR a_\ast D K \text{.} 
+}\]
+
+
+
+
+
+\subsection{}\label{VII:4-5}
+
+On voit par localisation qu'il suffit de traiter les cas où $S$ est spectre 
+d'un corps, ou un trait. Pour $S$ spectre d'un corps, on procède par 
+récurrence sur $\dim X$. Le problème étant local, on peut supposer $X$ 
+propre. Par ailleurs, l'hypothèse de récurrence assure, par les arguments 
+habituels, que le mapping cylinder $\Delta$ de $K\to D D K$ a des faisceaux de 
+cohomologie en gratte-ciel. Le lemme assure alors que $\eR a_\ast \Delta=0$, 
+donc que $\Delta=0$. 
+
+
+
+
+
+\PrintPage{251}\subsection{}\label{VII:4-6}
+
+Pour $S$ un trait, on sait déjà que \ref{VII:4-3} vaut sur la fibre 
+générique (\ref{VII:4-5}). On peut aussi supposer $X$ propre sur $S$ et on 
+procède par récurrence sur $\dim{X_s}$, $X$ propre sur $S$. Le mapping 
+cylinder $\Delta$ a encore des faisceaux de cohomologie en gratte ciel, sur 
+$X_s$, et on conclut comme plus haut. 
+
+
+
+
+
+\subsection{}\label{VII:4-7}
+
+Supposons que $A=\dZ/m$. On a alors une variante de la théorie 
+précédente, en prenant $K$ quelconque dans $\eD_c^b(X,A)$. Le complexe 
+$\eR a^! \dZ/m$ est de dimension injective finie \cite[XVIII 3.1.7]{sga4}. Ceci 
+assure que $D K$ est encore dans $\eD_c^b(X,A)$. Pour prouver la bidualité 
+locale sur $S$, on utilise que $\dZ/m$ est le $\dZ/m$-module dualisant. 
+Ensuite, on procède comme ci-devant. 
+
+
+
+
+
+
+
+
+
+
+\PrintPage{252}\section{Appendice, par L.\ Illusie}\label{VII:5}
+
+Dans cet appendice, qui reprend certaines parties de feu \cite[II]{sga5}, et 
+une lettre de P.\ Deligne à l'auteur, nous prouvons \ref{VII:2-14} ainsi que 
+diverses généralisations et variantes des théorèmes de spécialisation 
+\cite[XVI 2.1]{sga4} et (\hyperref[I]{Cohomologie étale} \ref{I:5-1-7}). 
+
+Les schémas et morphismes considérés seront supposés quasi-compacts et 
+quasi-séparés. Si $X$ est un schéma et $x$ un point géométrique de 
+$X$, on notera $X(x)$ le localisé strict de $X$ en $x$. 
+
+On fixe un schéma de base $S$ et un faisceau d'anneaux $A$ sur $S$ (non 
+nécessairement commutatif ni noethérien). Si $X$ est un $S$-schéma, on 
+écrira $\eD(X)$ pour $\eD(X,A_X)$. 
+
+
+
+
+
+\subsection{Propreté cohomologique}\label{VII:5-1}
+
+
+
+
+
+\begin{proposition}\label{VII:5-1-1}
+Soient $f:X\to Y$ un $S$-morphisme et $E\in\ob \eD^+(X)$. Les conditions 
+suivantes sont équivalentes: 
+\begin{enumerate}[\indent (i)]
+  \item La formation de $\eR f_\ast E$ commute à tout changement de base 
+    fini $S'\to S$.
+  \item La formation de $\eR f_\ast E$ commute à tout changement de base 
+    quasi-fini (ou limite projective de morphismes quasi-finis) $S'\to S$. 
+  \item Pour toute flèche de spécialisation $i:t\to S(s)$ 
+    (\hyperref[I]{Cohomologie étale}, \ref{I:5-1-2}), si l'on désigne par 
+    $\bar S$ le normalisé dans $k(\bar t)$ du schéma intègre 
+    adhérence de $i(t)$ dans $S(s)$ (d'après 
+    \cite[IV, 6.15.5, 18.5.11, 18.8.16]{ega} $\bar S$ est donc local 
+    intègre, de point fermé radiciel sur $s$), $\bar f:\bar X\to \bar Y$ 
+    le morphisme déduit de $f$ par le changement de base $\bar S\to S$, 
+    $f_s:X_s\to Y_s$ la fibre de $f$ en $s$, alors la flèche de changement 
+    de base 
+    \[
+      (\eR \bar f_\ast (E|\bar X))|Y_s \to \eR {f_s}_\ast(E|X_s) 
+    \]
+    est un isomorphisme. 
+\end{enumerate}
+\end{proposition}
+
+\PrintPage{253}L'équivalence de (i) et (ii) résulte du théorème principal de Zariski, 
+et il est clair que (ii) implique (iii). Prouvons que (iii) implique (ii). Pour 
+tout $S'\to S$, limite projective de morphismes quasi-finis, et tout point 
+géométrique $s$ de $S'$, notons $C(S',s)$ le cône de la flèche de 
+changement de base 
+\[
+  (\eR f_\ast'(E|X'))|Y_s \to \eR{f_s}_\ast (E|X_s) \text{,} 
+\]
+où $f':X'\to Y'$ est le morphisme déduit de $f$ par le changement de base 
+$S'\to S$ et $f_s:X_s\to Y_s$ la fibre de $f$ en $s$. Il s'agit de prouver que, 
+pour tout $(S',s)$ comme ci-dessus, $C(S',s)$ est acyclique. On va montrer, par 
+récurrence sur $N$, que $\h^i C(S',s) = 0$ pour $i\leqslant N$. Par le Main 
+Theorem, passage à la limite, et nettoyage de morphismes radiciels, on peut 
+supposer que $S$ et $S'$ sont strictement locaux, $S'$ intègre, de point 
+fermé $s$, $S'\to S$ fini. Soient $t$ un point géométrique générique 
+de $S'$, et $\bar S$ le normalisé de $S'$ dans $k(t)$. Soit $\bar S_\bullet$ 
+le schéma simplicial cosquelette de $\bar S\to S'$ 
+($\bar S_0=\bar S$,\ldots $\bar S_n=(\bar S/S')^{n+1}$,\ldots), 
+$\var{X_\bullet=X\times_S \bar S_\bullet}{\bar X_\bullet=X\times_S \bar S_\bullet}{S45-SOL-1056}$. $g_\bullet:\bar X_\bullet \to X'$ la 
+projection canonique. \var{Posons $G|X'=G'$. Le bicomplexe 
+${g_\bullet}_\ast g_\bullet^\ast G'$, de colonnes les 
+${g_n}_\ast g_n^\ast G'$ est une résolution de $G'$}{Posons $E|X'=E'$. Le bicomplexe 
+${g_\bullet}_\ast g_\bullet^\ast E'$, de colonnes les 
+${g_n}_\ast g_n^\ast E'$ est une résolution de $E'$}{S45-ASTRA-V-0004} \cite[VIII 8]{sga4}. On 
+peut donc représenter $C(S',s)$ par un bicomplexe dont les colonnes 
+s'identifient aux $C(\bar S_n,s)$. D'après (iii), $C(\bar S_0,s)=C(\bar S,s)$ 
+est acyclique. D'autre part, pour $n>0$, on a $\h^i C(\bar S_n,s)=0$ pour 
+$i\leqslant N$ par l'hypothèse de récurrence. On en conclut que 
+$\h^i C(S',s)=0$ pour $i\leqslant N+1$, ce qui achève la démonstration. 
+
+
+
+
+
+\subsubsection{Remarques}\label{VII:5-1-2}
+
+Soit $(f,E)$ vérifiant la condition (i) de \ref{VII:5-1-1}. 
+\begin{enumerate}[a)]
+  \item Si $E\in \ob \eD^b(X)$, et $f_\ast$ est de dimension cohomologique 
+    finie, alors, pour tout $F\in \ob\eD^-(S,A^\circ)$, la flèche canonique 
+    \begin{equation*}\tag{$*$}\label{VII:eq:5-1-1-1}
+      \eR f_\ast(E)\lotimes_A q^\ast F \to \eR f_\ast(E\lotimes_A p^\ast F) \text{,} 
+    \end{equation*}
+    où $p:X\to S$, $q:Y\to S$ sont les projections, est un isomorphisme. 
+    Même conclusion avec $E\in\ob\eD^-(X)$. 
+\end{enumerate} 
+
+Par dévissage, il suffit en effet de vérifier l'assertion pour $F$ de la 
+forme $i_! A_{S'}$, avec $i:S'\to S$ quasi-fini. Par le Main Theorem, on se 
+ramène à supposer $i$ fini, la conclusion équivaut alors à la 
+commutation de $\eR f_\ast(E)$ au \PrintPage{254}changement de base par $i$. 
+\begin{enumerate}[a)]
+\setcounter{enumi}{1}
+  \item On suppose $A$ noethérien, constructible. Alors, pour tout 
+    $F\in\ob\eD^b(S,A^\circ)$, constructible et de tor-dimension finie, la 
+    flèche \eqref{VII:eq:5-1-1-1} ci-dessus est un isomorphisme. 
+\end{enumerate}
+
+On se ramène en effet, par dévissage, au cas où $F$ est de la forme 
+$i_! M$, avec $i:S'\to S$ localement fermé, $A$ localement constant sur $S'$, 
+$M$ constructible, de tor-dimension finie, et à cohomologie localement 
+constante sur $S'$. Changeant de base de $S$ à $S'$, on est donc ramené au 
+cas où $F$ est parfait \cite[I]{sga6}, donc finalement, par localisation et 
+dévissage, au cas où $F=A$, pour lequel la conclusion est triviale. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-1-3}
+
+Soient $f:X\to Y$ un $S$-morphisme, et $E\in\ob\eD^+(X)$. Nous dirons que 
+$(f,E)$ est \emph{cohomologiquement propre} rel.\ à $S$ si la formation de 
+$\eR f_\ast E$ commute à tout changement de base $S'\to S$. Il revient au 
+même de dire qu'après tout changement de base $S'\to S$, la formation de 
+$\eR f_\ast' E'$ (où $f'=f\times_S S'$, $E'=$image inverse de $E$ sur 
+$X\times_S S'$) commute à tout changement de base fini $S'' \to S'$ (cf. 
+\cite[XII 6.1]{sga4}). Voici quelques exemples de propreté cohomologique 
+(pour une étude de la notion analogue pour les faisceaux d'ensembles ou de 
+groupes non commutatifs, le lecteur se reportera à \cite[XIII]{sga1}). 
+\begin{enumerate}[{1.3.}1.]
+  \item On suppose $A$ de torsion et $f$ propre. Alors, pour tout 
+    $E\in\ob\eD^+(X)$, $(f,E)$ est cohomologiquement propre rel.\ à $S$ 
+    (théorème de changement de base propre, \cite[XII 5.1]{sga4}). 
+  \item On suppose $S$ fini, $X$ et $Y$ de type fini sur $S$, et $A$ annulé 
+    par un entier inversible sur $S$. Alors, pour tout $E\in\ob\eD^+(X)$, 
+    $(f,E)$ est cohomologiquement propre rel.\ à $S$ 
+    (\ref{VII:1-9}). 
+  \item On suppose $A$ constant, noethérien, annulé par un entier $n$ 
+    inversible sur $S$, $f:X=Y\setminus D\to Y$ l'inclusion du complément 
+    d'un diviseur $D$ sur $Y$, à croisements normaux rel. à $S$ 
+    \cite[XIII 2.1]{sga1}. Soit $E$ un faisceau de $A$-modules sur $X$ 
+    vérifiant l'une des conditions suivantes: 
+\PrintPage{255}    \begin{enumerate}[(i)]
+      \item $E$ est localement constant constructible et modérément 
+        ramifié le long de $D$; 
+      \item $E$ est localement pour la topologie étale sur $Y$ et sur $S$ 
+        l'image inverse d'un faisceau de $A$-modules sur $S$. 
+    \end{enumerate}
+    Alors $(f,E)$ est cohomologiquement propre rel.\ à $S$, et $\eR f_\ast E$ est 
+    constructible (comparer avec \cite[XIII 2.4]{sga1}). 
+\end{enumerate} 
+
+Esquissons la démonstration dans le cas (i). La question est locale au 
+voisinage d'un point $y$ de $Y$. On peut supposer $D$ somme de diviseurs 
+lisses, $D=\sum_{i=1}^m D_i$. En vertu du lemme d'Abhyankar relatif 
+\cite[XIII 5.5]{sga1}, on peut, au voisinage de $y$, trivialiser $E$ par un 
+revêtement fini $\widetilde Y\to Y$ de la forme 
+$\widetilde Y=Y[T_1,\dots,T_r]/(T_1^{n_1}-t_1,\dots,T_r^{n_r}-t_r)$ où les 
+$t_i$ sont des équations locales des diviseurs lisses passant par $y$, et les 
+$n_i$ des entiers premiers à la car.\ de $k(y)$. L'image inverse 
+\var{$\widetilde D$ de $D$ dans $Y$}{$\widetilde D$ de $D$ dans $\widetilde Y$}{S45-SOL-1062} est encore à croisements normaux rel.\ à 
+$S$, et si $g:\widetilde X=\widetilde Y\setminus \widetilde D\to X$ est la 
+projection, $g^\ast E$ est constant. Comme $E$ s'injecte dans $g_\ast g^\ast E$ 
+et que le quotient est modérément ramifié, un dévissage facile ramène 
+au cas où $E$ est constant. Notons $p:X\to S$, $q:Y\to S$ les 
+projections, et, pour $1\leqslant i\leqslant m$, $\var{f_i:Y\setminus D_i \to D}{f_i:Y\setminus D_i \to Y}{S45-SOL-1063}$ 
+l'inclusion canonique. Du théorème de pureté relatif \cite[XVI 3.7]{sga4} 
+on déduit aisément, par récurrence sur $m$, que, pour tout $A$-module 
+localement constant $M$ sur $S$, la flèche canonique 
+\begin{equation*}\tag{1.3.3.1}\label{VII:eq:5-1-3-3-1} % originally 1.3.3.1
+  \eR f_\ast (\dZ/n)\lotimes q^\ast M\to \eR f_\ast (p^\ast M) 
+\end{equation*}
+est un isomorphisme, et que d'autre part on a: 
+\begin{align*}\tag{1.3.3.2}\label{VII:eq:5-1-3-3-2}
+  {f_i}_\ast(\dZ/n) &= \dZ/n \text{,} \\
+  \eR^1 {f_i}_\ast (\dZ/n) &= (\dZ/n)(-1)_{D_i} \text{,} 
+\end{align*}
+un isomorphisme canonique étant donné par la classe fondamentale $\cl(D_i)$ 
+(\hyperref[IV]{Cycle} \ref{IV:2-1-4}), 
+\begin{align*}
+  \eR^q {f_i}_\ast(\dZ/n) &= 0\text{ pour $q>1$,} \\
+  \eR f_\ast (\dZ/n) &= \bigotimes^\eL \eR {f_i}_\ast (\dZ/n) \text{ , i.e.:} \\
+  \eR^1 f_\ast(\dZ/n) &= \bigoplus_{i=1}^m (\dZ/n)(-1)_{D_i} \text{,} \\
+  \textstyle\bigwedge^\ast \eR^1 f_\ast(\dZ/n) &\iso \eR^\ast f_\ast (\dZ/n) \text{.} 
+\end{align*}
+\PrintPage{256}La conclusion de 1.3.3, dans le cas (i), résulte donc de 
+\eqref{VII:eq:5-1-3-3-1} et \eqref{VII:eq:5-1-3-3-2}. Dans le cas (ii), on se 
+ramène, par passage à la limite, au cas où $E=p^\ast M$, avec $M$ 
+constructible, puis, par dévissage et changement de base (utilisant (i)), au 
+cas $M$ constant, déjà traité. 
+
+Il découle de la démonstration précédente que \eqref{VII:eq:5-1-3-3-1} 
+est un isomorphisme pour tout $M\in\ob\eD^+(S)$. 
+
+On comparera les formules \eqref{VII:eq:5-1-3-3-2} aux formules analogues en 
+cohomologie entière dans le \mbox{cas} $S=\spec(\dC)$ (voir par exemple 
+\cite[3.1]{de71-2}), qui résultent de ce que, localement pour la topologie 
+classique, le complément de $D$ a le type d'homotopie d'un tore. 
+
+Par passage à la limite, on déduit de \eqref{VII:eq:5-1-3-3-2} des formules 
+similaires en cohomologie $\ell$-adique, i.e. avec $\dZ/n$ remplacé par 
+$\dZ_\ell$ ($\ell$ un nombre premier inversible sur $S$). Supposons 
+$q:Y\to S$ propre et lisse. Il découle alors des conjectures de Weil 
+\cite{de74,de80} que la suite spectrale de Leray 
+\[
+  E_2^{i j} = \eR^i q_\ast \eR^j f_\ast \dZ_\ell \Rightarrow \eR^\ast p_\ast \dZ_\ell 
+\]
+dégénère en $E_3$ modulo torsion \cite[\S 6]{de71-1}. Le même 
+phénomène se produit en cohomologie entière dans le cas 
+$S=\spec(\dC)$, voir (loc.\ cit.) et \cite[3.2.13]{de71-2}. 
+
+
+
+
+
+\subsection{Spécialisation et cospécialisation}\label{VII:5-2}
+
+Soient $f:X\to S$ et $E\in\ob\eD^+(X)$. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-1}
+
+Supposons que la formation de $\eR f_\ast E$ commute à tout changement de 
+base fini. Pour toute spécialisation $u:t\to S(s)$ de points géométriques 
+de $S$, on définit alors une flèche, dite \emph{flèche de 
+spécialisation}, 
+\begin{equation*}\tag{2.1.1}\label{VII:eq:5-2-1-1}
+  \spe(u):\eR\Gamma(X_s,E|X_s) \to \eR\Gamma(X_t,E|X_t) \text{,}
+\end{equation*}
+de la manière suivante. Soient, comme en \ref{VII:5-1-1}(iii), $\bar S$ le 
+normalisé dans $k(t)$ de l'adhérence de $u(t)$ dans $S(s)$, et 
+$\bar f:\bar X\to \bar S$ le morphisme déduit de $f$ par le changement de 
+base $\bar S\to S$. D'après la partie triviale (i)$\Rightarrow$(iii) de 
+\ref{VII:5-1-1}, la flèche de changement de base
+\PrintPage{257}\begin{equation*}\tag{2.1.2}\label{VII:eq:5-2-1-2}
+  \var{\eR\Gamma(\bar X,E|\bar X) (=\eR\bar f_\ast (E|\bar X)_s \to}{\eR\Gamma(\bar X,E|\bar X) (=\eR\bar f_\ast (E|\bar X)_s) \to}{S45-SOL-1070} \eR\Gamma(X_s,E|X_s) 
+\end{equation*}
+est un isomorphisme. On définit \eqref{VII:eq:5-2-1-1} comme composée de 
+l'inverse de \eqref{VII:eq:5-2-1-2} et de la flèche de restriction 
+\begin{equation*}\tag{2.1.3}\label{VII:eq:5-2-1-3}
+  \eR\Gamma(\bar X,E|\bar X) \to \eR\Gamma(X_t,E|X_t) \text{.}
+\end{equation*}
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-2}
+
+Supposons que $f$ soit localement acyclique rel.\ à $E$ (\hyperref[VII]{Th. finitude} \ref{VII:2-12}). 
+Pour toute spécialisation $u:t\to S(s)$ de points géométriques de $S$, on 
+définit alors une flèche, dite \emph{flèche de cospécialisation}, 
+\begin{equation*}\tag{2.2.1}\label{VII:eq:5-2-2-1}
+  \cosp(u):\eR\Gamma(X_t,E|X_t) \to \eR\Gamma(X_s,E|X_s) \text{,} 
+\end{equation*}
+définie de la manière suivante. Soient $g:X_t\to X$, $g':\bar X\to X$ les 
+flèches canoniques. Il découle de l'hypothèse d'acyclicité locale que 
+la flèche canonique 
+\begin{equation*}\tag{2.2.2}\label{VII:eq:5-2-2-2}
+  \eR g_\ast'(E|\bar X)\to \eR g_\ast(E|X_t) 
+\end{equation*}
+est un isomorphisme. En effet, on peut supposer $S$ strictement local, 
+intègre, de point fermé $s$, $t$ étant un point géométrique 
+générique. Calculons la fibre de \eqref{VII:eq:5-2-2-2} en un point 
+géométrique $x$ de $X$, d'image $y$ dans $S$. Quitte à remplacer $S$ par 
+le localisé strict de $S$ en $y$, on peut supposer que $y=s$. Comme 
+$\bar S\to S$ est limite projective de morphismes finis, et radiciel en $s$, on 
+trouve que $\eR g_\ast'(E|\bar X)_x = E_x$ et que la fibre de 
+\eqref{VII:eq:5-2-2-2} en $x$ s'identifie à la restriction 
+$E_x=\eR\Gamma(X(x),E)\to \eR\Gamma(X(x)_t,E|X(x)_t)$, laquelle est un 
+isomorphisme par hypothèse. Appliquant $\eR\Gamma(X,-)$ à 
+\eqref{VII:eq:5-2-2-2}, on en déduit que la flèche de restriction 
+\eqref{VII:eq:5-2-1-3} est un isomorphisme. On définit \eqref{VII:eq:5-2-2-1} 
+comme composée de l'inverse de \eqref{VII:eq:5-2-1-3} et de la flèche de 
+changement de base \eqref{VII:eq:5-2-1-2}. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-3}
+
+Si $s'' \xrightarrow{u'} s' \xrightarrow u s$ sont des flèches de 
+spécialisation de points géométriques de $S$, on vérifie que l'on a 
+\begin{align*}
+  \var{\spe(u')\spe(u'')}{\spe(u')\spe(u)}{S45-SOL-1076} &= \spe(u u') \text{,} \\
+  \cosp(u) \cosp(u') &= \cosp(u u') \text{,} 
+\end{align*}
+chaque fois que les deux membres sont définis. 
+
+
+
+
+
+\PrintPage{258}\subsubsection{}\label{VII:5-2-4}
+
+Supposons que la formation de $\eR f_\ast E$ commute à tout changement de 
+base fini, et que $f$ soit localement acyclique rel.\ à $E$. Il découle des 
+définitions que, pour toute spécialisation $u:t\to S(s)$ de points 
+géométriques de $S$; les flèches $\spe(u)$ et $\cosp(u)$ sont des 
+isomorphismes, inverses l'un de l'autre. 
+
+Les hypothèses précédentes sont vérifiées notamment lorsque $A$ est 
+noethérien, annulé par un entier $n$ inversible sur $S$, $f$ propre et 
+lisse, et $E$ à cohomologie localement constante (propreté cohomologique 
+des morphismes propres (\ref{VII:5-1-3}), et locale acyclicité des morphismes 
+lisses \cite[XV]{sga4}). On retrouve le ``théorème de spécialisation'' 
+\cite[XVI 2.1]{sga4}. 
+
+D'autre part, \ref{VII:5-1-1} a la conséquence suivante: 
+
+
+
+
+
+\begin{proposition}\label{VII:5-2-5}
+Supposons que $f$ soit localement acyclique relativement à $E$, et que, pour 
+toute spécialisation $u:t\to S(s)$, la flèche de cospécialisation 
+$\cosp(u)$ soit un isomorphisme. Alors la formation de $\eR f_\ast E$ commute 
+à tout changement de base fini. 
+\end{proposition}
+
+Compte tenu de \ref{VII:5-2-4}, \ref{VII:5-2-5} généralise 
+(\hyperref[I]{Arcata} V \ref{I:5-1-7}). 
+
+
+
+
+
+\begin{corollary}\label{VII:5-2-6}
+Supposons que $f$ soit localement acyclique rel.\ à $E$. Soit $x$ un point 
+géométrique de $X$, d'image $s$ dans $S$, notons $f_{(x)}:X(x)\to S(s)$ le 
+morphisme induit par $f$. Alors la formation de $\eR {f_{(x)}}_\ast(E|X(x))$ 
+commute à tout changement de base fini $S'\to S(s)$. 
+\end{corollary}
+
+Il suffit, d'après \ref{VII:5-2-5}, de vérifier que les flèches de 
+cospécialisation pour $(f_{(x)},E|X(x))$ sont des isomorphismes. Par 
+transitivité des flèches de cospécialisation (\ref{VII:5-2-3}), il suffit 
+de montrer que, si $u:t\to S(s)$ est une spécialisation, alors 
+$\cosp(u):\eR\Gamma(X(x)_t,E|X(x)_t)\to \eR\Gamma(X(x)_s,E|X(x)_s)$ est un 
+isomorphisme. Mais, comme $s$ est fermé dans $S(s)$, $X(x)_s$ est strictement 
+local de point fermé $x$, $\eR\Gamma(X(x)_s,E|X(x)_s)=E_x$, et 
+$\cosp(u)$ est un isomorphisme, inverse de l'isomorphisme de restriction 
+$E_x\to \eR\Gamma(X(x)_t,E|X(x)_t)$. 
+
+
+
+
+
+\PrintPage{259}\begin{corollary}\label{VII:5-2-7}
+Soient $f:X\to Y$ un $S$-morphisme, $p:X\to S$, $q:Y\to S$ les projections, et 
+$E\in\ob\eD^+(X)$. On suppose $A$ localement constant, $f$ localement acyclique 
+rel.\ à $E$, et $q$ localement acyclique en tout point géométrique $y$ de 
+$Y$ rel.\ à tout faisceau localement constant au voisinage de $y$. Alors $p$ 
+est localement acyclique rel. à $E$. 
+\end{corollary}
+
+Soient $x$ un point géométrique de $X$, d'images $y$ et $s$ dans $Y$ et 
+$S$, $t\to S(s)$ une spécialisation, $f_{(x)}:X(x)\to Y(y)$ le morphisme 
+induit par $f$. Il s'agit de montrer que la restriction 
+\begin{equation*}\tag{$*$}\label{VII:eq:5-2-7-1}
+  E_x \to \eR\Gamma(X(x)_t,E|X(x)_t) 
+\end{equation*}
+est un isomorphisme. On peut supposer $A$ constant. D'après \ref{VII:5-2-4} et 
+\ref{VII:5-2-6}, pour toute spécialisation $z\to Y(y)$, la flèche de 
+spécialisation 
+\[
+  E_x = \eR {f_{(x)}}_\ast (E|X(x))_y \to \eR {f_{(x)}}_\ast (E|X(x))_z = \eR\Gamma(X(x)_z,E|X(x)_z) 
+\]
+est un isomorphisme, autrement dit $\eR{f_{(x)}}_\ast(E|X(x))$ est constant de 
+valeur $E_x$. L'hypothèse d'acyclicité sur $q$ entra\^ine donc que la 
+restriction 
+\[
+  E_x \to \eR\Gamma(Y(y)_t,(E_x)|Y(y)_t) = \var{\eR\Gamma(Y(y)_t,(\eR {f_{(x)}}_\ast (E|X(x))|Y(y)_t)}{\eR\Gamma\left(Y(y)_t,\left(\eR {f_{(x)}}_\ast (E|X(x))\right)|Y(y)_t\right)}{S45-SOL-1085}
+\]
+est un isomorphisme. Mais cette flèche s'identifie à 
+\eqref{VII:eq:5-2-7-1}, d'où la conclusion. 
+
+L'hypothèse de \ref{VII:5-2-7} sur $q$ est vérifiée notamment lorsque $q$ 
+est lisse, et que $A$ est annulé par un entier $n$ inversible sur $S$ 
+\cite[XV]{sga4}. D'autre part, si les hypothèses de \ref{VII:5-2-7} sont 
+vérifiées après tout changement de base $S'\to S$, on conclut alors que 
+$p$ est universellement localement acyclique rel.\ à $E$. De ces remarques 
+découle en particulier l'énoncé \ref{VII:2-14}. 
+
+
+
+
+
+\begin{corollary}\label{VII:5-2-8}
+Soient $f:X\to S$ et $E\in \ob\eD^+(X)$. On suppose que $f$ est universellement 
+localement acyclique rel.\ à $E$, que la formation de $\eR f_\ast E$ commute 
+à tout changement de base fini, et que pour tout morphisme $s'\to s$, où 
+$s$ est un point géométrique de $S$ et $s'$ le spectre d'un corps 
+séparablement clos, la flèche de changement de base 
+$\eR\Gamma(X_s,E|X_s)\to \eR\Gamma(X_{s'},E|X_{s'})$ est un isomorphisme. 
+\PrintPage{260}Alors $(f,E)$ est cohomologiquement propre (\ref{VII:5-1-3}). 
+\end{corollary}
+
+Soit $f':X'\to S'$ le morphisme déduit de $f$ par un changement de base 
+$S'\to S$, il s'agit de voir que la formation de $\var{\eR f_\ast'(E X')}{\eR f_\ast'(E|X')}{S45-SOL-1086}$ commute 
+à tout changement de base fini. D'après \ref{VII:5-2-5}, il suffit de 
+montrer que, pour toute spécialisation $u':t'\to S'(s')$, la flèche de 
+cospécialisation $\cosp(u')$: 
+$\eR\Gamma(X_{t'}',E|X_{t'}') \to \eR\Gamma(X_{s'}',E|X_{s'}')$ est un 
+isomorphisme. Soient $s$ (resp.\ $t$) le point géométrique \var{image de $s$ 
+(resp.\ $t$) dans $S$}{image de $s'$ 
+(resp.\ $t'$) dans $S$}{S45-SOL-1087}, $u:t\to S(s)$ la spécialisation définie par $u'$. 
+On voit aisément qu'on a un carré commutatif 
+\[\xymatrix{
+  \eR\Gamma(X_t,E|X_t) \ar[r]^-{\cosp(u)} \ar[d] 
+    & \eR\Gamma(X_s,E|X_s) \ar[d] \\
+  \eR\Gamma(X_{t'}',E|X_{t'}') \ar[r]^-{\cosp(u')} 
+    & \eR\Gamma(X_{s'}',E|X_{s'}') 
+}\]
+où les flèches verticales sont les flèches de changement de base. Par 
+hypothèse, celles-ci sont des isomorphismes. D'autre part (\ref{VII:5-2-4}) 
+$\cosp(u)$ est un isomorphisme, donc $\cosp(u')$ est un isomorphisme, ce qui 
+achève la démonstration. 
+
+Voici un exemple d'application de \ref{VII:5-2-8}. Supposons $A$ annulé par 
+un entier $n$ inversible sur $S$, $f$ localement de type fini et 
+universellement localement acyclique. Soient $x$ un point géométrique de 
+$X$, d'image $s$ dans $S$, $f_{(x)}:X(x)\to S(s)$ le morphisme induit par $f$. 
+Il résulte de \ref{VII:5-2-6} et \ref{VII:1-9} (par passage à la limite) 
+que les hypothèses de \ref{VII:5-2-8} sont vérifiées par le couple 
+$(f_{(x)},E|X(x))$, qui est donc cohomologiquement propre. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-9}
+
+Supposons $A$ constant. Soient $f:X\to S$, et $E\in\ob\eD^+(X)$ un complexe de 
+tor-dimension finie. Nous dirons que $f$ est \emph{fortement localement 
+acyclique} rel.\ à $E$ si, pour tout point géométrique $x$ de $X$, 
+d'image $s$ dans $S$, toute spécialisation $t\to S(s)$, et tout 
+$A^\circ$-module $M$, la flèche de restriction 
+\[
+  E_x\lotimes_A M \to \var{\eR\Gamma(X(x)_t,(E|X(x)_t)\lotimes_A M}{\eR\Gamma(X(x)_t,(E|X(x)_t)\lotimes_A M)}{S45-SOL-1089} 
+\]
+est un isomorphisme. J'ignore si ``localement acyclique'' implique 
+``fortement localement acyclique.'' 
+
+
+
+
+
+\PrintPage{261}\begin{proposition}\label{VII:5-2-10}
+Sous les hypothèses de \ref{VII:5-2-9}, supposons $A$ noethérien de 
+torsion, $S$ noethérien, et $f$ fortement localement acyclique rel.\ à $E$. 
+Alors, pour tout diagramme à carrés cartésiens 
+\[\xymatrix{
+  X \ar[d]^-f 
+    & \ar[l]_-j X' \ar[d]^-{f'} 
+    & \ar[l]_-{j'} X'' \ar[d]^-{f''} \\
+  S 
+    & \ar[l]_-i S' 
+    & \ar[l]_-{i'} S'' \text{,} 
+}\]
+avec $i$ quasi-fini et $i'$ immersion ouverte, et tout 
+$F\in\ob\eD^+(S'',A^\circ)$, la flèche canonique 
+\begin{equation*}\tag{$*$}\label{VII:eq:5-2-10-1}
+  j^\ast E \lotimes {f'}^\ast \eR i_\ast' F \to \eR j_\ast' ((j j')^\ast E\lotimes {f''}^\ast F) 
+\end{equation*}
+est un isomorphisme. 
+\end{proposition}
+
+On comparera cet énoncé avec \cite[XV 1.17]{sga4}. 
+
+Démontrons \ref{VII:5-2-10}. On se ramène facilement à$S=S'$, 
+strictement local, et $F$ constructible, concentré en degré $0$. On 
+résout alors $F$ à droite par des sommes finies de faisceaux de la forme 
+$u_\ast M$, où $u:t\to S$ est un point géométrique et $M$ un 
+$A^\circ$-module. L'hypothèse implique que \eqref{VII:eq:5-2-10-1} est un 
+isomorphisme pour $F=u_\ast M$, d'où le résultat. 
+
+
+
+
+
+\begin{center}\textbf{Bibliographie.}\end{center}
+\begin{description}
+\item[{[1]}] P. Deligne, Théorie de Hodge I, Actes Cong. int. math., 1970, t. I, 425--430.
+\item[{[2]}] P. Deligne, Théorie de Hodge II, Pub. Math. IHES n\textsuperscript{o} 40, 1972, 1--57.
+\item[{[3]}] P. Deligne, La conjecture de Weil I, Pub. Math. IHES n\textsuperscript{o} 43, 1974, 273--307.
+\item[{[4]}] P. Deligne, La conjecture de Weil II, à paraître.
+\end{description}

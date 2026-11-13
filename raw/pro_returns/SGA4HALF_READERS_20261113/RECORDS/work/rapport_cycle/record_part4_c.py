@@ -1,0 +1,5 @@
+from record import *
+page(136,r'\subsubsection{}\label{IV:1-2-6}',[549],start_en=r'\subsubsection{}\label{IV:1-2-6}')
+page(137,r'\subsubsection*{Exemple 3}',range(550,553),start_en=r'\subsubsection*{Example 3}',own=[dict(id='S45-ASTRA-R-0028',place='Example3 Künneth formula',printed_reading=r'\h^*(\prod X_i,A)=\bigotimes\h^*(X_i,A)',tex_reading='Two degree bullets',change='Restore the two printed asterisks.',kind='symbol',reason='Both total-cohomology degrees visibly appear as asterisks in the example.')])
+variant('S45-SOL-0552',137,r'V^\vee\otimes V\otimes W^\vee\otimes W\to k',r'V^\vee\otimes V\otimes W^\vee\otimes W\to k',r'V^\vee\otimes V\otimes W^\vee\otimes W\to A','The ground field in the surrounding definition is A, including the evaluation maps1.3.1 and1.3.4; k has not been introduced.',english_applicability=True)
+append('patches.jsonl',dict(id='S45-ASTRA-R-0028',page='137',old=r'\h^\bullet',new=r'\h^*',reason='Two directly checked cohomology stars.',kind='symbol',multiple=True))

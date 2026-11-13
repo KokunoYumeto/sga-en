@@ -1,0 +1,183 @@
+--- source/fr/codex_corr/sga4.5.tex
++++ deliverables/FR/SGA4HALF_FR_corrige_apparat.tex#preamble [paratext_preamble]
+@@ -1,18 +1,165 @@
+-\documentclass[oneside]{book} % add option draft to highlight overful hbox
+-\usepackage{sga-style}
+-\hypersetup{hidelinks}
+-\renewcommand{\chaptername}{Exposé}
+-\renewcommand{\bibname}{Bibliographie}
+-\renewcommand{\proofname}{Démonstration}
++\documentclass[oneside]{book}
++% Inlined baseline: Daniel Miller style, as preserved in the diplomatic tree.
++% AUDIT-REGION inlined-style
++\DeclareUnicodeCharacter{00A0}{~}
++\DeclareUnicodeCharacter{00B1}{\ensuremath{\pm}}
++\DeclareUnicodeCharacter{00B2}{\ensuremath{{}^2}}
++\DeclareUnicodeCharacter{00B3}{\ensuremath{{}^3}}
++\DeclareUnicodeCharacter{00B9}{\ensuremath{{}^1}}
++\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
++\DeclareUnicodeCharacter{0393}{\ensuremath{\Gamma}}
++\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
++\DeclareUnicodeCharacter{0398}{\ensuremath{\Theta}}
++\DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}
++\DeclareUnicodeCharacter{039E}{\ensuremath{\Xi}}
++\DeclareUnicodeCharacter{03A0}{\ensuremath{\Pi}}
++\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
++\DeclareUnicodeCharacter{03A5}{\ensuremath{\Upsilon}}
++\DeclareUnicodeCharacter{03A6}{\ensuremath{\Phi}}
++\DeclareUnicodeCharacter{03A8}{\ensuremath{\Psi}}
++\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
++\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
++\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
++\DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
++\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
++\DeclareUnicodeCharacter{03B5}{\ensuremath{\varepsilon}}
++\DeclareUnicodeCharacter{03B6}{\ensuremath{\zeta}}
++\DeclareUnicodeCharacter{03B7}{\ensuremath{\eta}}
++\DeclareUnicodeCharacter{03B8}{\ensuremath{\theta}}
++\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
++\DeclareUnicodeCharacter{03BA}{\ensuremath{\kappa}}
++\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
++\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
++\DeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
++\DeclareUnicodeCharacter{03BE}{\ensuremath{\xi}}
++\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
++\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
++\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
++\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
++\DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
++\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
++\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
++\DeclareUnicodeCharacter{03C8}{\ensuremath{\psi}}
++\DeclareUnicodeCharacter{03C9}{\ensuremath{\omega}}
++\DeclareUnicodeCharacter{1D62}{\ensuremath{{}^i}}
++\DeclareUnicodeCharacter{202F}{\,}
++\DeclareUnicodeCharacter{2032}{\ensuremath{\prime}}
++\DeclareUnicodeCharacter{2033}{\ensuremath{\prime\prime}}
++\DeclareUnicodeCharacter{2070}{\ensuremath{{}^0}}
++\DeclareUnicodeCharacter{207A}{\ensuremath{{}^+}}
++\DeclareUnicodeCharacter{207B}{\ensuremath{{}^-}}
++\DeclareUnicodeCharacter{2080}{\ensuremath{{}_0}}
++\DeclareUnicodeCharacter{2081}{\ensuremath{{}_1}}
++\DeclareUnicodeCharacter{2082}{\ensuremath{{}_2}}
++\DeclareUnicodeCharacter{2102}{\ensuremath{\mathbb C}}
++\DeclareUnicodeCharacter{2113}{\ensuremath{\ell}}
++\DeclareUnicodeCharacter{211A}{\ensuremath{\mathbb Q}}
++\DeclareUnicodeCharacter{211D}{\ensuremath{\mathbb R}}
++\DeclareUnicodeCharacter{2124}{\ensuremath{\mathbb Z}}
++\DeclareUnicodeCharacter{2190}{\ensuremath{\leftarrow}}
++\DeclareUnicodeCharacter{2192}{\ensuremath{\to}}
++\DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
++\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}}
++\DeclareUnicodeCharacter{21D4}{\ensuremath{\Leftrightarrow}}
++\DeclareUnicodeCharacter{21DD}{\ensuremath{\leadsto}}
++\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
++\DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
++\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
++\DeclareUnicodeCharacter{2205}{\ensuremath{\varnothing}}
++\DeclareUnicodeCharacter{2208}{\ensuremath{\in}}
++\DeclareUnicodeCharacter{2209}{\ensuremath{\notin}}
++\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
++\DeclareUnicodeCharacter{2218}{\ensuremath{\circ}}
++\DeclareUnicodeCharacter{221E}{\ensuremath{\infty}}
++\DeclareUnicodeCharacter{2229}{\ensuremath{\cap}}
++\DeclareUnicodeCharacter{222A}{\ensuremath{\cup}}
++\DeclareUnicodeCharacter{223C}{\ensuremath{\sim}}
++\DeclareUnicodeCharacter{2243}{\ensuremath{\simeq}}
++\DeclareUnicodeCharacter{2245}{\ensuremath{\cong}}
++\DeclareUnicodeCharacter{2260}{\ensuremath{\ne}}
++\DeclareUnicodeCharacter{2264}{\ensuremath{\leqslant}}
++\DeclareUnicodeCharacter{2265}{\ensuremath{\geqslant}}
++\DeclareUnicodeCharacter{2282}{\ensuremath{\subset}}
++\DeclareUnicodeCharacter{2283}{\ensuremath{\supset}}
++\DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}
++\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
++\DeclareUnicodeCharacter{2297}{\ensuremath{\otimes}}
++\DeclareUnicodeCharacter{22A5}{\ensuremath{\perp}}
+ 
++% EditionMode: 0 = diplomatic; 1 = corrected with apparatus; 2 = reading.
++\providecommand\EditionMode{1}
++\providecommand\EditionLanguage{fr}
++\usepackage{xcolor}
++\usepackage{marginnote}
++\setlength{\marginparwidth}{0.55in}
++\setlength{\marginparsep}{0.12in}
++\definecolor{EditionAppColor}{rgb}{0.18,0.25,0.42}
++\makeatletter
++% The apparatus is indexed by source occurrence before TeX runs: no counters
++% can be incremented twice by math/diagram measuring passes.
++\DeclareRobustCommand{\EditionVariantMark}[2]{%
++  \ifx\relax#1\relax\else
++    \ifmmode
++      \hbox{\raisebox{0.7ex}{\normalfont\scriptsize\color{EditionAppColor}%
++        \hyperlink{apparatus:#1}{\EditionShortOccurrence{#1}}}}%
++    \else
++      \textsuperscript{\normalfont\scriptsize\color{EditionAppColor}%
++        \hyperlink{apparatus:#1}{\EditionShortOccurrence{#1}}}%
++    \fi
++  \fi}
++\def\EditionShortOccurrence#1{\expandafter\EditionShortOccurrenceAux#1\@nil}
++\def\EditionShortOccurrenceAux#1-#2\@nil{\number#2\relax}
++% IMPORTANT: Neither branch is put in a group, box, or math wrapper. A branch
++% may be only \left. or \left|, matched by a later \right outside this macro.
++\DeclareRobustCommand{\var}[4][]{%
++  \ifnum\EditionMode=0\relax
++    \expandafter\@firstoftwo
++  \else
++    \expandafter\@secondoftwo
++  \fi
++  {#2}{\ifnum\EditionMode=1\relax\EditionVariantMark{#1}{#4}\fi#3}}
++\providecommand\CurrentPrintPage{}
++\DeclareRobustCommand{\PrintPage}[1]{%
++  \gdef\CurrentPrintPage{#1}%
++  \hypertarget{printpage:\EditionLanguage:#1}{}%
++  \marginnote{\normalfont\sffamily\scriptsize\color{black!65}%
++    \ifnum\EditionMode=2\relax#1\else[p.~#1]\fi}}
++\DeclareRobustCommand{\MathPage}[1]{\PrintPage{#1}}
++% Metadata-only cite execution. No global bibliography is introduced.
++\newcommand{\EditionRememberCite}[2][]{%
++  \if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi}
++\DeclareRobustCommand{\PrintCite}[2]{%
++  \begingroup\let\cite\EditionRememberCite
++    \setbox\z@=\hbox{#2}%
++  \endgroup#1}
++% Preserve existing label names while restoring their original local numbers.
++\let\EditionOriginalLabel\label
++\renewcommand{\label}[1]{%
++  \@ifundefined{EditionLabelNumber@#1}{\EditionOriginalLabel{#1}}{%
++    \begingroup
++      \protected@edef\@currentlabel{\csname EditionLabelNumber@#1\endcsname}%
++      \EditionOriginalLabel{#1}%
++    \endgroup}}
++\expandafter\def\csname EditionLabelNumber@I:5-2-4\endcsname{2.3.1}
++\expandafter\def\csname EditionLabelNumber@I:5-2-5\endcsname{2.3.2}
++\expandafter\def\csname EditionLabelNumber@I:5-2-6\endcsname{2.3.3}
++\expandafter\def\csname EditionLabelNumber@I:5-2-7\endcsname{2.3.4}
++\expandafter\def\csname EditionLabelNumber@III:4-1bis\endcsname{4.1bis}
++\expandafter\def\csname EditionLabelNumber@I:1-6-6\endcsname{%
++  \ifnum\EditionMode=0\relax6.5\else6.6\fi}
++% PDF bookmarks contain the selected reading and no editorial markers.
++% prepare_body assigns an explicit optional occurrence identifier to every
++% variant. Parsing that known form directly remains fully expandable inside
++% hyperref's PDF-string conversion (unlike an \@ifnextchar look-ahead).
++\def\EditionPDFVar[#1]#2#3#4{\ifnum\EditionMode=0\relax\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi{#2}{#3}}
++\pdfstringdefDisableCommands{%
++  \let\var\EditionPDFVar
++  \def\PrintPage#1{}\def\MathPage#1{}%
++  \def\PrintCite#1#2{#1}%
++  \def\EditionVariantMark#1#2{}}
++\makeatother
++\hypersetup{hidelinks,bookmarksopen=true,bookmarksnumbered=true}
+ 
++\renewcommand{\chaptername}{Exposé}\renewcommand{\appendixname}{Annexe}\renewcommand{\bibname}{Bibliographie}\renewcommand{\proofname}{Démonstration}\renewcommand{\contentsname}{Table des matières}
+ 
+-
+-
+-\title{Séminaire de Géométrie Algébrique du Bois-Marie \\ \vspace{20pt}
+-Cohomologie Étale \\ \vspace{20pt}
+-(SGA $4\frac 1 2$)}
+-\author{par P. Deligne \vspace{10pt}\\ 
+-avec la collaboration de J.F. Boutot, \\ A. Grothendieck, L. Illusie et J.L. Verdier}
+-\date{1977}
+-
++\providecommand\EditionIsMaster{0}

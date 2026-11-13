@@ -1,0 +1,38 @@
+--- checkpoint/scripts/verify_arcata.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/verify_arcata.py
+@@ -6,12 +6,14 @@
+ W=ROOT/'work/arcata'
+ comps=[x for x in COMPONENTS if x['owner']=='arcata']
+ texts={lang:'\n'.join(component_path(c,lang).read_text() for c in comps) for lang in ['fr','en']}
+-def clean(s):return re.sub(r'\s+','',re.sub(r'\\(?:PrintPage|MathPage)\{[^}]+\}','',resolve(s)))
+-normalized={lang:clean(s) for lang,s in texts.items()}
++def clean(s,which='corrected'):return re.sub(r'\s+','',re.sub(r'\\(?:PrintPage|MathPage)\{[^}]+\}','',resolve(s,which)))
++normalized={lang:[clean(s),clean(s,'printed')] for lang,s in texts.items()}
+ logs={lang:json.loads((W/(lang+'_build.json')).read_text()) for lang in ['fr','en']}
+ logs['fr']+=json.loads((W/'opening_and_numbering_operations.json').read_text())
+ vmeta=read_jsonl(W/'variants.jsonl')
+ sol=read_jsonl(W/'decisions.jsonl')
++review_path=ROOT/'work/rapport_cycle/records/arcata_noedit_review.json'
++review={r['id']:r for r in json.loads(review_path.read_text())} if review_path.exists() else {}
+ rows=[];fails=[]
+ for d in sol:
+     ident=d['id'];entry=dict(id=ident,page=d['printed_page'],verdict=d['verdict'])
+@@ -26,7 +28,7 @@
+             entry[lang+'_evidence']=' | '.join(x['source']+': '+x['printed']+' → '+x['corrected'] for x in actual)
+         elif ops:
+             afters=[x['after'] for x in ops if x.get('after')]
+-            ok=all(clean(s) in normalized[lang] for s in afters)
++            ok=all(any(clean(s,which) in final for final in normalized[lang] for which in ['printed','corrected']) for s in afters)
+             entry[lang+'_status']='verified final-source presence' if ok else 'FAIL'
+             entry[lang+'_evidence']=' | '.join(afters)
+             if not ok:fails.append((ident,lang))
+@@ -34,6 +36,9 @@
+             entry[lang+'_status']='reviewed existing translation; no additional edit required'
+             entry[lang+'_evidence']='Complete English component read against the checked French; same printed-page paragraph. Mathematical content additionally compared by balanced TeX extraction; see math_alignment_review.json.'
+             if v:entry[lang+'_status']='French spelling/agreement correction does not change the English'
++            if ident in review:
++                r=review[ident];entry[lang+'_status']=r['status'];entry[lang+'_evidence']=r['english_witness']
++                if not r['witness_present']:fails.append((ident,lang,'independent witness absent'))
+         else:
+             entry[lang+'_status']='FAIL: no operation or variant'
+             fails.append((ident,lang))

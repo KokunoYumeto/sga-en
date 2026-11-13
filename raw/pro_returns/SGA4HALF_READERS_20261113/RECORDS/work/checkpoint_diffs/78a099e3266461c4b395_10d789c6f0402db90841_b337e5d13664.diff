@@ -1,0 +1,14 @@
+--- checkpoint/scripts/build_arcata_en.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/build_arcata_en.py
+@@ -123,6 +123,11 @@
+ text+='\n'+bib
+ LOG.append(dict(id='S45-ASTRA-A-0028',page='74–75',status='applied',before='',after=bib,ai_translated=False))
+ 
++supplement=ROOT/'work/rapport_cycle/records/arcata_review_supplement.json'
++if supplement.exists():
++ for op in json.loads(supplement.read_text())['operations']:
++  if op['language']=='en':p(op['before'],op['after'],op['page'],op['id'],ai=op.get('ai_translated',False))
++
+ anchors={
+ 4:r'\chapter{Étale cohomology: the starting points}',5:r'\begingroup',6:r'\section{Grothendieck topologies}\label{I:1}',
+ 7:r'Given a family $\{U_i\}$',8:r'\item a vector bundle $E_U$',9:r'isomorphism $\rho_{yx}',10:'From this point of view, descent techniques',

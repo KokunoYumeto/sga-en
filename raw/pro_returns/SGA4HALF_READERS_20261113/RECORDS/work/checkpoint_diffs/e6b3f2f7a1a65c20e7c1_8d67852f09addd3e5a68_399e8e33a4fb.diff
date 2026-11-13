@@ -1,0 +1,37 @@
+--- checkpoint/scripts/check_unpack_inputs.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/check_unpack_inputs.py
+@@ -11,6 +11,7 @@
+ import shutil
+ import stat
+ import tempfile
++import warnings
+ import zipfile
+ 
+ from unpack_inputs import ROOT, ARCHIVES, InputError, file_rows, relative_path, verify
+@@ -29,14 +30,18 @@
+     text = io.StringIO()
+     writer = csv.writer(text, delimiter="\t", lineterminator="\n")
+     writer.writerow(["path_in_zip", "source", "bytes", "sha256", "role"])
+-    with zipfile.ZipFile(stream, "w") as zf:
+-        zf.writestr("MANIFEST.tsv", text.getvalue())
+-        for name in extra:
+-            info = zipfile.ZipInfo(name)
+-            if mode:
+-                info.create_system = 3
+-                info.external_attr = mode << 16
+-            zf.writestr(info, b"")
++    with warnings.catch_warnings():
++        # Duplicate entries are an intentional negative fixture. Keep the
++        # expected standard-library warning out of retained diagnostics.
++        warnings.filterwarnings("ignore", message="Duplicate name:", category=UserWarning)
++        with zipfile.ZipFile(stream, "w") as zf:
++            zf.writestr("MANIFEST.tsv", text.getvalue())
++            for name in extra:
++                info = zipfile.ZipInfo(name)
++                if mode:
++                    info.create_system = 3
++                    info.external_attr = mode << 16
++                zf.writestr(info, b"")
+     stream.seek(0)
+     return zipfile.ZipFile(stream)
+ 

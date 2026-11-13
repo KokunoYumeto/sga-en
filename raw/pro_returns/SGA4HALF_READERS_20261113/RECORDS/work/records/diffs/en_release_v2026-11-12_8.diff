@@ -1,0 +1,868 @@
+--- source/en/release_v2026-11-12/05_SGA4HALF_EN_COMPLETE_READER.tex
++++ deliverables/EN/SGA4HALF_EN_corrected_apparatus.tex#component-8 [8]
+@@ -1,8 +1,36 @@
+ 
+-\chapter{Derived categories}\label{VIII}
++\chapter{Derived categories}\label{VIII}\PrintPage{262}
++\begin{center}Institut des Hautes Études Scientifiques\end{center}
++Some results (State 0)\footnote{This text was written in 1963 (except for a very small number of changes, indicated in footnotes, and for the addition of a few footnotes in 1976).}
+ \blfootnote{by Jean-Louis Verdier}
+ 
+-\section{Triangulated categories: definitions and examples}\label{VIII:1}
++\PrintPage{263}\begin{center}\textbf{Contents}\end{center}
++\begin{center}\textbf{Chapter 1: Triangulated categories}\end{center}
++\noindent\textbf{\S~1: Definitions and examples}\par
++\noindent No.~1\quad Definition of triangulated categories. First properties.\dotfill 1\par
++\noindent No.~2\quad Examples of triangulated categories\dotfill 5\par
++\noindent No.~3\quad Examples of exact functors and cohomological functors.\dotfill 10\par
++\medskip\noindent\textbf{\S~2: Quotient categories}\par
++\noindent No.~1\quad Thick categories. Multiplicative systems\dotfill 13\par
++\noindent No.~2\quad Equivalent universal problems\dotfill 15\par
++\noindent No.~3\quad Calculus of fractions\dotfill 16\par
++\noindent No.~4\quad Properties of quotient categories\dotfill 19\par
++\noindent No.~5\quad Properties of the functor of passage to the quotient\dotfill 21\par
++\noindent No.~6\quad Orthogonality.\dotfill 24\par
++\begin{center}\textbf{Chapter 2: Applications to abelian categories}\end{center}
++\noindent\textbf{\S~1: Derived categories}\par
++\noindent No.~1\quad The derived categories of an abelian category\dotfill 28\par
++\noindent No.~2\quad Study of Ext.\dotfill 34\par
++\medskip\noindent\textbf{\S~2: Derived functors}\par
++\noindent No.~1\quad Definitions of derived functors\dotfill 37\par
++\noindent No.~2\quad Existence of derived functors\dotfill 40\par
++\noindent No.~3\quad Cup product. Composition.\dotfill 44\par
++\medskip\noindent\textbf{\S~3: Examples}\par
++\noindent No.~1\quad The functor $\Hom$\dotfill 46\par
++\noindent No.~2\quad $\Tor$ of sheaves\dotfill 47\par
++\noindent No.~3\quad The left derived functor of inverse image.\dotfill 48\par
++
++\section{Triangulated categories: definitions and examples}\label{VIII:1}\PrintPage{264}
+ 
+ \subsection{Definition of triangulated categories}\label{VIII:1-1}
+ 
+@@ -28,19 +56,19 @@
+ morphism is named or denoted without its degree being specified, it will
+ always mean a morphism of degree zero.
+ 
+-Let $\cA$ and $\cA'$ be two additive categories graded by the functors $T$
++Let $\cA$ and $\cA'$ be two additive categories graded by the \PrintPage{265}functors $T$
+ and $T'$, and let $F$ be an additive functor from $\cA$ to $\cA'$. We say
+ that $F$ \emph{is graded} if an isomorphism of
+ functors\footnote{Text amended in 1976: the original text required an
+ equality $F\circ T=T'\circ F$. The case of functors in several variables is
+-discussed in \cite[XVIII 0.2]{sga4}. It raises a problem of signs.}
++discussed in \PrintCite{SGA~4 XVII 0.3}{\cite[XVII 0.3]{sga4}}. It raises a problem of signs.}
+ has been specified:
+ \[
+-  F\circ T = T'\circ F
++  F\circ T \simeq T'\circ F
+ \]
+ 
+ The definition of morphisms of graded functors is given in
+-\ref{VIII:4-1-1}.
++Chapter~2, \S~2, no.~1.
+ 
+ Let $\cA$ be an additive category graded by the functor $T$. A triangle is
+ a collection of three objects $X$, $Y$, $Z$ and three morphisms
+@@ -67,7 +95,7 @@
+     & T(X')
+ }\]
+ 
+-\subsubsection{}\label{VIII:1-1-1}
++\subsubsection{}\label{VIII:1-1-1}\PrintPage{266}
+ 
+ A \emph{triangulated category} is an additive category graded by a
+ translation functor and equipped with a family of triangles, called the
+@@ -99,7 +127,7 @@
+ \phantomsection\hypertarget{VIII:TR4}{}
+ 
+ \[\xymatrix{
+-  & Z' \ar[dl]|{\deg=1} \\
++  & Z' \ar[dl]|{\deg 1} \\
+   X \ar[rr]^-u
+     & & Y \ar[ul]_-i
+ }\quad
+@@ -109,7 +137,7 @@
+     & & Z \ar[ul]
+ }\quad
+ \xymatrix{
+-  & Y' \ar[dl]|{\deg=1} \\
++  & Y' \ar[dl]|{\deg 1} \\
+   X \ar[rr]^-w
+     & & Z \ar[ul]
+ }\]
+@@ -121,7 +149,7 @@
+   \item $(Z',Y',X',f,g,T(i) j)$ is a distinguished triangle.
+ \end{enumerate}
+ 
+-If $\cC$ and $\cC'$ are two triangulated categories, an \emph{exact
++\PrintPage{267}If $\cC$ and $\cC'$ are two triangulated categories, an \emph{exact
+ functor} from $\cC$ to $\cC'$ is an additive graded functor that takes
+ distinguished triangles to distinguished triangles. Morphisms of exact
+ functors are morphisms of graded functors.
+@@ -133,6 +161,8 @@
+ \begin{proposition}\label{VIII:1-1-2}
+ Let $(X,Y,Z,u,v,w)$ be a distinguished triangle and let $M$ be an object
+ of a triangulated category. Then the following sequences are exact:
++\begingroup
++\small
+ \[\xymatrix{
+   \cdots \ar[r]
+     & \hom^i(M,X) \ar[r]^-{\hom(M,u)}
+@@ -149,6 +179,7 @@
+     & \hom^{i+1}(Z,M) \ar[r]
+     & \cdots
+ }\]
++\endgroup
+ \end{proposition}
+ 
+ From this proposition one obtains statements of the following kind:
+@@ -160,7 +191,7 @@
+     isomorphisms are not, in general, uniquely determined}).
+   \item When one of the morphisms in a distinguished triangle has a kernel
+     or a cokernel, the latter splits; that is, the triangle is of the form
+-    \[\xymatrix{
++    \PrintPage{268}\[\xymatrix{
+       & Z+T(X) \ar[dl] \\
+       X+Y \ar[rr]
+         & & Y+Z \ar[ul]
+@@ -190,7 +221,7 @@
+ \end{align*}
+ On morphisms the functor $T$ acts as follows: for every morphism
+ $f:X^\bullet \to Y^\bullet$, the morphism
+-$T(f):T(X^\bullet) \to T(Y^\bullet)$ is defined by
++$T(f):T(X^\bullet) \to T(Y^\bullet)$ is defined \PrintPage{269}by
+ \[
+   T(f)_i = f_{i+1} \text{.}
+ \]
+@@ -217,7 +248,7 @@
+     }\]
+     in which the objects of $Y^\bullet$ have first degree zero and the
+     objects of $X^\bullet$ have first degree $-1$.
+-  \item $v$ is the image, under the functor: double complex $\mapsto$
++  \item $v$ is the image, under the functor: double complex $\leadsto$
+     simple complex, of the following morphism of double complexes:
+     \[\xymatrix{
+       \cdots \ar[r]
+@@ -235,7 +266,7 @@
+     }\]
+   \item $w$ is the negative of the image, under the same functor, of the
+     following morphism of double complexes:
+-    \[\xymatrix{
++    \PrintPage{270}\[\xymatrix{
+       \cdots \ar[r]
+         & 0 \ar[r]
+         & X^\bullet \ar[r]
+@@ -282,7 +313,7 @@
+ the category $\eK(\cA)$ triangulated by the family of triangles defined
+ above.
+ 
+-\subsubsection{}\label{VIII:1-2-3}
++\subsubsection{}\label{VIII:1-2-3}\PrintPage{271}
+ 
+ There is also a whole arsenal of subcategories:
+ \begin{itemize}
+@@ -304,7 +335,7 @@
+     full subcategories generated by these families of objects. They are
+     triangulated subcategories.
+ 
+-    We shall also use the triangulated subcategories $\eK^{+,b}(\cA)$,
++    We shall also speak of the triangulated subcategories $\eK^{+,b}(\cA)$,
+     $\eK^{+,\varnothing}(\cA)$, \ldots etc \ldots (the first superscript
+     gives information about the objects of the complexes, and the second
+     about the cohomology objects).
+@@ -312,12 +343,12 @@
+     of $\cA$ stable under isomorphisms and direct sums. Let $O(\cA)$ denote
+     the full subcategory of $\eC(\cA)$ generated by the complexes whose
+     objects in every degree belong to $O$. Let $\underline O(\cA)$ denote
+-    the corresponding triangulated subcategory of $\eK(\cA)$. When $\cA$
++    the \PrintPage{272}corresponding triangulated subcategory of $\eK(\cA)$. When $\cA$
+     is abelian, one may take for $O$ either the set $I$ of injectives or
+     the set $P$ of projectives.
+ \end{itemize}
+ 
+-\subsubsection{}\label{VIII:1-2-4}
++\subsubsection{Uniqueness of $\eK(\cA)$}\label{VIII:1-2-4}
+ 
+ The category $\eK(\cA)$ is uniquely determined by the data of $\eC(\cA)$
+ and the family $\sC$. More precisely, every graded additive functor from
+@@ -354,7 +385,7 @@
+ 
+ Let $0 \to X^\bullet \to Y^\bullet \to Z^\bullet \to 0$ be a semi-split
+ sequence. Choose a splitting, that is, for every $n$ an isomorphism
+-\[
++\PrintPage{273}\[
+   (Y^\bullet)^n \simeq (X^\bullet)^n + (Z^\bullet)^n \text{.}
+ \]
+ The matrix of the differential of $Y^\bullet$ in the above direct-sum
+@@ -389,7 +420,7 @@
+ \begin{definition}
+ Let $\cA$ be a triangulated category and let $\cB$ be an abelian category.
+ An additive functor $F:\cA\to \cB$ is called a \emph{cohomological
+-functor} if, for every distinguished triangle $(X,Y,Z,u,v,w)$, the
++functor} \PrintPage{274}if, for every distinguished triangle $(X,Y,Z,u,v,w)$, the
+ sequence
+ \[\xymatrix{
+   F(X) \ar[r]^-{F(u)}
+@@ -436,7 +467,7 @@
+ \[
+   P:\cA\times \cA'\to \cA''
+ \]
+-be a bilinear functor (that is, additive in each argument separately).
++be a bilinear functor (that is, additive in each argument \PrintPage{275}separately).
+ It induces the bilinear functor
+ \[
+   P^\ast:\eC(\cA)\times \eC(\cA') \to \eC(\cA'')
+@@ -462,7 +493,7 @@
+ the functor
+ \begin{align*}
+   \cA^\circ\times \cA &\to \mathsf{Ab} \\
+-  (X,Y) &\mapsto \hom(X,Y)
++  (X,Y) &\leadsto \hom(X,Y)
+ \end{align*}
+ 
+ The preceding construction then gives a functor
+@@ -473,7 +504,7 @@
+ $\h^0:\eK(\mathsf{Ab})\to \mathsf{Ab}$, plainly gives back the functor
+ $\hom_{\eK(\cA)}$.
+ 
+-\section{Quotient categories}\label{VIII:2}
++\section{Quotient categories}\label{VIII:2}\PrintPage{276}
+ 
+ \subsection{Thick subcategories. Multiplicative systems of morphisms}\label{VIII:2-1}
+ 
+@@ -513,9 +544,9 @@
+   Z \ar[r]^-f
+     & X
+ }\]
+-can be completed to a commutative diagram
+-\[\xymatrix{
+-  P \ar[r]^-g \ar[d]^-{t\in S}
++\PrintPage{277}can be completed to a commutative diagram
++\[\xymatrix{
++  P \ar[r]^-g \ar[d]^-t_-{t\in S}
+     & Y \ar[d]^-{s\in S} \\
+   Z \ar[r]^-f
+     & X
+@@ -549,7 +580,7 @@
+ A morphism $f$ belongs to $S$ if and only if there exist two morphisms $g$
+ and $g'$ such that $g\circ f\in S$ and $f\circ g'\in S$.
+ 
+-The intersection of an arbitrary family of saturated multiplicative
++\PrintPage{278}The intersection of an arbitrary family of saturated multiplicative
+ systems is a saturated multiplicative system.
+ 
+ The set of saturated multiplicative systems will be denoted by $\sS$.
+@@ -576,7 +607,7 @@
+ generated by the objects of $\cA$ that $F$ takes to zero objects of
+ $\cA'$. Then $S(F)$ is a saturated multiplicative system and $\cB(F)$ is
+ a thick subcategory. Moreover, $S(F) = \varphi(\cB(F))$. Now let $\cA$ be
+-a triangulated category, let $\cB$ be a thick subcategory, and let
++a \PrintPage{279}triangulated category, let $\cB$ be a thick subcategory, and let
+ $S=\varphi(\cB)$ be the corresponding saturated multiplicative system.
+ The following two universal problems are equivalent.
+ 
+@@ -609,16 +640,14 @@
+ multiplicative system. Denote by $\cA[S^{-1}]$ the category of fractions
+ of $\cA$ with respect to the set of morphisms $S$, and by $Q$ the
+ canonical functor from $\cA$ to $\cA[S^{-1}]$. The pair
+-$(\cA[S^{-1}],Q)$ solves the following problem: every functor from $\cA$
++\PrintPage{280}$(\cA[S^{-1}],Q)$ solves the following problem: every functor from $\cA$
+ to an arbitrary category (not necessarily additive) that takes morphisms
+ of $S$ to isomorphisms factors uniquely through $(\cA[S^{-1}],Q)$. Such
+ a pair always exists, without any hypothesis on the set of morphisms $S$
+-\cite[1.1]{gz67}\footnote{The original text references [C.G.G] here. Most
+-likely, this is the lost work \emph{Catégories et foncteurs} by Chevalley,
+-Gabriel and Grothendieck, referenced in\cite{sc72}. }. However, because the
++\PrintCite{[C.G.G.]}{\cite[1.1]{gz67}}. However, because the
+ set of morphisms $S$ is a saturated multiplicative system, it has
+ properties \hyperlink{VIII:FR1}{FR1}, \hyperlink{VIII:FR2}{FR2}, and
+-\hyperlink{VIII:FR3}{FR3}. Consequently, by \cite{gz67}, the category
++\hyperlink{VIII:FR3}{FR3}. Consequently, by \PrintCite{C.G.G.}{\cite{gz67}}, the category
+ $\cA[S^{-1}]$ can be obtained by a right or left calculus of fractions.
+ We recall how $\cA[S^{-1}]$ is obtained by a right calculus of fractions.
+ (The left calculus of fractions is obtained by reversing the arrows.)
+@@ -632,15 +661,15 @@
+     $\cA$ one associates, functorially in $Y$, the following set-valued
+     functor on $S_X^\circ$ ($S_X^\circ$ denotes the opposite category):
+     \[
+-      H_Y:s\mapsto \hom(\operatorname{source}(s),Y) \text{.}
++      H_Y:s\leadsto \hom(\operatorname{source}(s),Y) \text{.}
+     \]
+     Set
+     \[
+       \hom_{\cA[S^{-1}]}(X,Y) = \varinjlim_{S_X^\circ} H_Y \text{.}
+     \]
+-    For all matters concerning direct limits, we refer to \cite{ar62}.
+-
+-    One then observes with pleasure, using \hyperlink{VIII:FR1}{FR1},
++    For all matters concerning direct limits, we refer to \PrintCite{``Grothendieck Topologies''}{\cite{ar62}}.
++
++    \PrintPage{281}One then observes with pleasure, using \hyperlink{VIII:FR1}{FR1},
+     \hyperlink{VIII:FR2}{FR2}, and \hyperlink{VIII:FR3}{FR3}, that the
+     category $S_X^\circ$ has properties L1, L2, and L3. Direct limits
+     therefore have all the good properties of direct limits over filtered
+@@ -649,7 +678,7 @@
+     element of $\hom_{\cA[S^{-1}]}(X,Y)$, and let $b$ be an element of
+     $\hom_{\cA[S^{-1}]}(Y,Z)$. Let $s$ be an object of $S_X$, let
+     $\underline a$ be an element of
+-    $\hom(\operatorname{source}(s),Y)$ whose image is $a$, and let an object
++    $\hom(\operatorname{source}(s),Y)$ whose image is $a$, and let $t$ be an object
+     of $S_Y$, $\underline b$ be an element of
+     $\hom(\operatorname{source}(t),Z)$ whose image is $b$. There is then a
+     diagram
+@@ -666,7 +695,7 @@
+     }
+     \end{equation*}
+     which, by \hyperlink{VIII:FR2}{FR2}, can be completed to a diagram
+-    \[\xymatrix{
++    \[t'\in S\qquad\xymatrix{
+       & & \bullet \ar[dl]_-{t'} \ar[dr]^-{\underline c} \\
+       & \bullet \ar[dl]_-s \ar[dr]^-{\underline a}
+         & & \bullet \ar[dl]_-t \ar[dr]^-{\underline b} \\
+@@ -683,11 +712,11 @@
+     One further checks that this defines a category $\cA[S^{-1}]$.
+ \end{itemize}
+ 
+-We denote by $Q$ the evident functor $\cA\to \cA[S^{-1}]$.
++\PrintPage{282}We denote by $Q$ the evident functor $\cA\to \cA[S^{-1}]$.
+ 
+ Since $\cA$ is additive, $\cA[S^{-1}]$ is an additive category. Moreover,
+ using \hyperlink{VIII:FR4}{FR4}, one proves that there exists a unique
+-translation functor on $\cA[S^{-1}]$, denoted by $T$, satisfying
++translation functor on $\cA[S^{-1}]$, again denoted by $T$, satisfying
+ \[
+   Q\circ T = T\circ Q \text{.}
+ \]
+@@ -716,7 +745,7 @@
+ \subsubsection{}\label{VIII:2-4-1}
+ 
+ Let $\cA$ be a triangulated category and let $H$ be a cohomological functor
+-with values in an abelian category $\cG$. Let $\cB_H$ be the full
++with values in an abelian category $\cG$. Let $\cB_H$ be the \PrintPage{283}full
+ subcategory generated by the objects all of whose translates are taken by
+ $H$ to zero objects of $\cG$, and let $S_H$ be the set of morphisms all of
+ whose translates are taken by $H$ to isomorphisms of $\cG$. Then $\cB_H$
+@@ -744,7 +773,7 @@
+     reversing the arrows are equivalent.
+   \item If properties (i) and (ii) hold, or if properties (i)' and (ii)'
+     hold, the canonical functor
+-    \[\xymatrix{
++    \PrintPage{284}\[\xymatrix{
+       \cB/\cN\cap \cB \ar[r] & \cA/\cN
+     }\]
+     is faithful.
+@@ -777,11 +806,11 @@
+     $s:Z\to X$ in $S$ satisfying $f\circ s=0$ is zero.
+   \item Every morphism $f:X\to Y$ for which there exists a morphism
+     $s:Y\to Z$, $s\in S$, satisfying $s\circ f=0$ is zero.
+-  \item Every morphism $f:X\to Y$ that factors through an object of $\cB$
++  \item \PrintPage{285}Every morphism $f:X\to Y$ that factors through an object of $\cB$
+     is zero.
+   \item The canonical map
+     \[
+-      \hom_\cA(X,Y) \to \hom_{\cA/\cB}(Q(X),Q(Y))
++      \hom_\cA(X,Y) \xrightarrow{Q} \hom_{\cA/\cB}(Q(X),Q(Y))
+     \]
+     is injective.
+ \end{enumerate}
+@@ -813,7 +842,7 @@
+         & N \ar[r]^-g
+         & Y
+     }\]
+-    in which $g\circ f=0$ and $N$ is an object of $\cB$ can be completed
++    \PrintPage{286}in which $g\circ f=0$ and $N$ is an object of $\cB$ can be completed
+     to a diagram
+     \[\xymatrix{
+       & N' \ar[d]^-i \\
+@@ -821,7 +850,7 @@
+         & N \ar[r]^-g
+         & Y
+     }\]
+-    in which $f=i\circ h$ and $g\circ i=0$.
++    in which $N'$ is an object of $\cB$, $f=i\circ h$, and $g\circ i=0$.
+   \item The assertion obtained by reversing the arrows in (c) and
+     interchanging $X$ and $Y$.
+   \item The canonical map
+@@ -847,7 +876,7 @@
+ Similarly, the following two assertions are equivalent:
+ \begin{enumerate}[(a)']
+   \item For every object $Y$ of $\cA$, the canonical map
+-    \[\xymatrix{
++    \PrintPage{287}\[\xymatrix{
+       \hom_\cA(Y,X) \ar[r]^-Q
+         & \hom_{\cA/\cB}(Q(Y),Q(X))
+     }\]
+@@ -883,7 +912,7 @@
+ Let $\cN$ be a triangulated subcategory of a triangulated category $\cA$.
+ The full category $\cN^\bot$ (respectively $^\bot\cN$) generated by the
+ objects $X$ of $\cA$ such that, for every object $Y$ of $\cN$,
+-$\hom_\cA(Y,X)=0$ (respectively $\hom_\cA(X,Y)=0$), is a thick subcategory
++$\hom_\cA(Y,X)=0$ \PrintPage{288}(respectively $\hom_\cA(X,Y)=0$), is a thick subcategory
+ of $\cA$. By an abuse of language, the category $\cN^\bot$ is called the
+ right orthogonal of $\cN$.
+ \end{proposition}
+@@ -913,10 +942,10 @@
+     target $X$ has an initial object.
+   \item The category $\cB/X$ of objects of $\cB$ over $X$ has a final
+     object.
+-  \item The category $\cB^\bot/X$ of objects of $\cB^\bot$ under $X$ has
++  \item The category $X\backslash\cB^\bot$ of objects of $\cB^\bot$ under $X$ has
+     an initial object.
+ \end{enumerate}
+-Then
++\PrintPage{289}Then
+ \[\xymatrix@=0.5cm{
+   & & & & (iv) \\
+   (i) \ar@{<=>}[r]
+@@ -960,7 +989,7 @@
+ Suppose the properties of Propositions \ref{VIII:2-6-5} and
+ \ref{VIII:2-6-6} hold. Let $i^\ast$ and $Q^\ast$ be the right adjoints of
+ $i$ and $Q$. Similarly, let $^\ast i^\bot$ and $^\ast Q^\bot$ be the left
+-adjoints of $i^\bot$ and $Q^\bot$. All these functors are exact. Moreover:
++adjoints of $i^\bot$ and $Q^\bot$. All these functors \PrintPage{290}are exact. Moreover:
+ 
+ There is a functorial isomorphism
+ $Q^\ast\circ Q\iso i^\bot\circ ^\ast i^\bot$ such that the following
+@@ -990,16 +1019,18 @@
+   & \operatorname{id}{} \ar[ul]
+ }\]
+ 
+-Such a morphism $\partial$ is unique and satisfies
+-$\partial(TX)=-T\partial(X)$ ($X\in\operatorname{Ob}\cA$, $T$ the
++Such a morphism $\delta$ is unique and satisfies
++$\delta(TX)=-T\delta(X)$ ($X$ any object, $T$ the
+ translation).
+ \end{proposition}
+ 
++\section*{Chapter II: Applications to abelian categories}\PrintPage{291}
++
+ \section{Derived categories of an abelian category}\label{VIII:3}
+ 
+ \subsection{Derived categories}\label{VIII:3-1}
+ 
+-We use the notation of \ref{VIII:1-2-3}. We shall also use the following
++We use the notation of Chapter~1, \S~1, no.~\hyperref[VIII:1-2-2]{2.2}. We shall also use the following
+ notation.
+ 
+ \subsubsection{Notation}\label{VIII:3-1-1}
+@@ -1022,7 +1053,7 @@
+ }\]
+ are fully faithful.
+ 
+-The natural functors
++\PrintPage{292}The natural functors
+ \begin{align*}
+   \eD^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{+,b}(\cA)/\eK^{+,\varnothing}(\cA) \\
+   \eD^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{-,b}(\cA) / \eK^{-,\varnothing}(\cA)
+@@ -1055,7 +1086,7 @@
+ \[
+   D : \eC(\cA) \to \eD(\cA) \text{.}
+ \]
+-The “restriction” of $D$ to the full subcategory $\cA$ of $\eC(\cA)$
++\PrintPage{293}The “restriction” of $D$ to the full subcategory $\cA$ of $\eC(\cA)$
+ will again be denoted by $D$. The functor $D$ restricted to $\cA$ is fully
+ faithful. The functor $D$ factors uniquely through $\eK(\cA)$. Let $X$
+ and $Y$ be two objects of $\cA$.
+@@ -1085,7 +1116,7 @@
+ \[
+   \eI^+(\cA) \to \eD^+(\cA)  \text{.}
+ \]
+-The quasi-inverse functor is a right adjoint of $Q^+$.
++\PrintPage{294}The quasi-inverse functor is a right adjoint of $Q^+$.
+ \end{proposition}
+ 
+ If, in addition, $\cA$ has finite cohomological dimension, the preceding
+@@ -1117,12 +1148,12 @@
+ \begin{proposition}\label{VIII:3-1-5}
+ There exists a unique functor
+ \[
+-  \Pi:\eE(\cA) \to \mathsf{TrD}(\cA)
+-\]
+-of the following form ($\deg \delta(S)=1$):
++  \pi:\eE(\cA) \to \mathsf{TrD}(\cA)
++\]
++\PrintPage{295}of the following form ($\deg \delta(S)=1$):
+ \[
+ (S=0 \to X^\bullet \to Y^\bullet \to Z^\bullet \to 0)
+-\mapsto
++\leadsto
+ \xymatrix{
+   & D(Z^\bullet) \ar[dl]_-{\delta(S)} \\
+   D(X^\bullet) \ar[rr]^-{D(u)}
+@@ -1156,7 +1187,7 @@
+ $\eK(\cA)$) is called a \emph{quasi-isomorphism} if, for every integer
+ $i$,
+ \[
+-  \h^i(f):\h^i(X) \to \h^i(Y)
++  \h^i(f):\h^i(X^\bullet) \to \h^i(Y^\bullet)
+ \]
+ is an isomorphism.
+ \end{definition}
+@@ -1164,7 +1195,7 @@
+ By the preceding proposition, the quasi-isomorphisms are the morphisms
+ that become isomorphisms in $\eD(\cA)$.
+ 
+-\begin{definition}\label{VIII:3-1-8}
++\PrintPage{296}\begin{definition}\label{VIII:3-1-8}
+ Let $\sigma$ be a set of objects of $\cA$ and let $X^\bullet$ be an
+ object of $\eC(\cA)$ (respectively $\eK(\cA)$). A right (respectively
+ left) resolution of type $\sigma$ of $X^\bullet$ is a quasi-isomorphism
+@@ -1198,7 +1229,7 @@
+ \end{enumerate}
+ \end{proposition}
+ 
+-\subsection{Study of $\ext$}\label{VIII:3-2}
++\subsection{Study of $\ext$}\label{VIII:3-2}\PrintPage{297}
+ 
+ Let $X^\bullet$ and $Y^\bullet$ be two objects of $\eC(\cA)$
+ (respectively $\eK(\cA)$), and let
+@@ -1208,7 +1239,7 @@
+ \begin{definition}\label{VIII:3-2-1}
+ We call the \emph{$i$th hyper-Ext}, and denote by
+ \[
+-  (X^\bullet,Y^\bullet)\mapsto \ext^i(X^\bullet,Y^\bullet)
++  (X^\bullet,Y^\bullet)\leadsto \ext^i(X^\bullet,Y^\bullet)
+ \]
+ the functor $\hom_{\eD(\cA)}(D(X^\bullet),T^i D(Y^\bullet))$
+ (respectively
+@@ -1247,12 +1278,12 @@
+ The following proposition summarizes the various equivalent definitions
+ of $\ext^i$.
+ 
+-\begin{proposition}\label{VIII:3-2-3}
++\PrintPage{298}\begin{proposition}\label{VIII:3-2-3}
+ 1. There are isomorphisms of functors
+ \[\xymatrix{
+   \ext^0(X^\bullet,Y^\bullet) = \hom_{\eD(\cA)}(Q(X^\bullet),Q(Y^\bullet)) \ar[r]^-\sim
+-    & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) \ar[r]^-\sim
+-    & \\
++    & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) \ar[dl]^-\sim
++      \\
+   \varinjlim_{Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(X^\bullet,-) \ar[r]^-\sim
+     & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ \times Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(-,-) \text{.}
+ }\]
+@@ -1262,7 +1293,7 @@
+ \]
+ If $Y^\bullet$ is an object of $\eK^+(\cA)$,
+ \[
+-  \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(X^\bullet,-)
++  \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}^+} \hom_{\eK(\cA)}(X^\bullet,-)
+ \]
+ 3. If $X^\bullet$ is an object of $\eK^-(\cA)$ and $Y^\bullet$ is an object
+ of $\eK^b(\cA)$,
+@@ -1275,7 +1306,7 @@
+   \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{(\mathsf{Qis}^b/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet)
+ \]
+ 4. If the category $\cA$ has enough injectives and $Y^\bullet$ is an object
+-of $\eK^+(\cA)$, then $Y^\bullet$ has an injective resolution, unique up
++of $\eK^+(\cA)$, then $Y^\bullet$ has an injective resolution, \PrintPage{299}unique up
+ to isomorphism in $\eK^+(\cA)$,
+ \[
+   Y^\bullet \to I(Y^\bullet)
+@@ -1302,7 +1333,7 @@
+ On making explicit the isomorphism of Proposition
+ \ref{VIII:3-2-3}(3), one recovers the Yoneda definition.
+ 
+-\section{Derived functors}\label{VIII:4}
++\section{Derived functors}\label{VIII:4}\PrintPage{300}
+ 
+ \subsection{Definition of derived functors}\label{VIII:4-1}
+ 
+@@ -1334,7 +1365,7 @@
+ $\Phi:\eK^\ast(\cA)\to \eK^{\ast'}(\cB)$ be an exact functor ($\ast$ and
+ $\ast'$ denote one of the signs $+$, $-$, $b$, or $v$, “empty”). By
+ composition, the canonical functor
+-$Q:\eK^\ast(\cA)\to \eD^\ast(\cA)$ gives a functor
++\PrintPage{301}$Q:\eK^\ast(\cA)\to \eD^\ast(\cA)$ gives a functor
+ \[\xymatrix{
+   \mathsf{Fex}(\eD^\ast(\cA),\eD^{\ast'}(\cB)) \ar[r]
+     & \mathsf{Fex}(\eK^\ast(\cA),\eD^{\ast'}(\cB))
+@@ -1344,8 +1375,8 @@
+ (respectively $\%'$)
+ $\mathsf{Fex}(\eD^\ast(\cA),\eD^{\ast'}(\cB)) \to \mathsf{Ab}$:
+ \begin{align*}
+-  \Psi  &\mapsto \hom(Q'\circ \Phi,\Psi\circ Q) \\
+-  (\text{respectively }\Psi &\mapsto \hom(\Psi\circ Q,Q'\circ \Phi)\text{ ).}
++  \Psi  &\leadsto \hom(Q'\circ \Phi,\Psi\circ Q) \\
++  (\text{respectively }\Psi &\leadsto \hom(\Psi\circ Q,Q'\circ \Phi)\text{ ).}
+ \end{align*}
+ 
+ \begin{definition}\label{VIII:4-1-2}
+@@ -1355,7 +1386,7 @@
+ (respectively $\%'$) is called the total right (respectively left) derived
+ functor of $\Phi$ and is denoted by $\eR \Phi$ (respectively
+ $\eL \Phi$).\footnote{A more manageable definition (and one equivalent in
+-practice) is given in \cite[XVII 1.2]{sga4}.}
++practice) is given in \PrintCite{SGA~4 XVII 1.2}{\cite[XVII 1.2]{sga4}}.}
+ \end{definition}
+ 
+ \subsubsection{Notation}\label{VIII:4-1-3}
+@@ -1374,18 +1405,18 @@
+     & \mathsf{Foco}(\eK^\ast(\cA),\cB)
+ }\]
+ (where $\mathsf{Foco}(-,-)$ denotes the category of cohomological
+-functors), and hence a functor $\%$ (respectively $\%'$)
++functors), and hence a \PrintPage{302}functor $\%$ (respectively $\%'$)
+ $\mathsf{Foco}(\eD^\ast(\cA),\cB) \to \mathsf{Ab}$ given by
+-$G\mapsto \hom(F,G\circ Q)$ (respectively
+-$G\mapsto \hom(G\circ Q,F)$).
++$G\leadsto \hom(F,G\circ Q)$ (respectively
++$G\leadsto \hom(G\circ Q,F)$).
+ 
+ \begin{definition}\label{VIII:4-1-4}
+ We say that the functor $F$ admits a \emph{right cohomological derived
+ functor} (respectively left cohomological derived functor) if the functor
+ $\%$ (respectively $\%'$) is representable. An object representing $\%$
+ (respectively $\%'$) is called the right (respectively left)
+-cohomological derived functor and is denoted by $\eR F$ (respectively
+-$\eL F$).
++cohomological derived functor and is denoted by $\mathrm{R} F$ (respectively
++$\mathrm{L} F$).
+ \end{definition}
+ 
+ \subsubsection{Notation}\label{VIII:4-1-5}
+@@ -1395,26 +1426,26 @@
+ \[
+   \h^0{}\circ \eK^+ f:\eK^+(\cA) \to \cB
+ \]
+-is denoted by $\eR^+ f$. When no confusion can result, the functor
+-$\eR^+ f\circ T^i$ ($T$ is the translation functor) is denoted by
+-$\eR^i f$. The right cohomological derived functor of
+-$\h{}\circ \eK f$ is denoted by $\eR f$. When no confusion can result,
+-the functor $\eR f\circ T^i$ is denoted by $\eR^i f$.
+-
+-The functors $\eL^- f$, $\eL f$, and $\eL^i f$ are defined similarly.
++is denoted by $\mathrm{R}^+ f$. When no confusion can result, the functor
++$\mathrm{R}^+ f\circ T^i$ ($T$ is the translation functor) is denoted by
++$\mathrm{R}^i f$. The right cohomological derived functor of
++$\h^0{}\circ \eK f$ is denoted by $\mathrm{R} f$. When no confusion can result,
++the functor $\mathrm{R} f\circ T^i$ is denoted by $\mathrm{R}^i f$.
++
++The functors $\mathrm{L}^- f$, $\mathrm{L} f$, and $\mathrm{L}^i f$ are defined similarly.
+ 
+ \subsubsection{Remarks}\label{VIII:4-1-6}
+ 
+ As we shall see in the next subsection, these definitions include the
+ classical definition of derived functors when the categories have enough
+ injectives or projectives and the complexes are suitably bounded. They are
+-nevertheless more general, but without further hypotheses they are not
++nevertheless more \PrintPage{303}general, but without further hypotheses they are not
+ very manageable. For example, let $f:\cA\to \cB$ be an additive functor
+ between two abelian categories. Suppose that the functors $\eR^+ f$ and
+ $\eR f$ exist. I do not know how to prove that $\eR f$ induces on
+ $\eD^+(\cA)$ the functor $\eR^+ f$. Suppose, in addition, that the functor
+-$\eR^+ f$ (cohomological derived) exists. I do not know how to prove that
+-the functor $\h^0{}\circ \eR^+ f$ is isomorphic to $\eR^+ f$. In practice,
++$\mathrm{R}^+ f$ (cohomological derived) exists. I do not know how to prove that
++the functor $\h^0{}\circ \eR^+ f$ is isomorphic to $\mathrm{R}^+ f$. In practice,
+ however, these properties will hold.
+ 
+ \subsection{Existence of derived functors}\label{VIII:4-2}
+@@ -1433,14 +1464,14 @@
+ Let $X$ be an object of $\eD^\ast(\cA)$, and let $\underline X$ be the
+ object of $\eK^\ast(\cA)$ above $X$. There is a functorial isomorphism
+ \[
+-  \eR F(X) = \varinjlim_{\underline X/\mathsf{Qis}^\ast} F(-) \text{.}
+-\]
+-\end{proposition}
+-
+-In particular, let $f:\cA\to \cB$ be an additive functor. The functors
+-$\eR f$ and $\eR^+ f$ exist and are calculated as above. The functor
+-$\eR f$ induces on $\eD^+(\cA)$ the functor $\eR^+ f$. Since no confusion
+-can then result, we shall use the notation $\eR^i f$.
++  \mathrm{R} F(X) = \varinjlim_{\underline X/\mathsf{Qis}^\ast} F(-) \text{.}
++\]
++\end{proposition}
++
++\PrintPage{304}In particular, let $f:\cA\to \cB$ be an additive functor. The functors
++$\mathrm{R} f$ and $\mathrm{R}^+ f$ exist and are calculated as above. The functor
++$\mathrm{R} f$ induces on $\eD^+(\cA)$ the functor $\mathrm{R}^+ f$. Since no confusion
++can then result, we shall use the notation $\mathrm{R}^i f$.
+ 
+ \subsubsection{Remarks}\label{VIII:4-2-2}
+ 
+@@ -1467,7 +1498,7 @@
+ \begin{enumerate}[a)]
+   \item Then $\Phi$ admits a total right (respectively left) derived
+     functor.
+-  \item The functor $\eR \Phi$ (respectively $\eL \Phi$) is obtained as
++  \item \PrintPage{305}The functor $\eR \Phi$ (respectively $\eL \Phi$) is obtained as
+     follows:
+ 
+     The restriction of the functor
+@@ -1481,11 +1512,11 @@
+     $\cC$, and let $X\to Y$ (respectively $Y\to X$) be a
+     quasi-isomorphism. The object $\eR\Phi\circ Q(X)$ (respectively
+     $\eL \Phi\circ Q(X)$) is isomorphic to $Q'\circ \Phi(Y)$.
+-  \item The functor $X\mapsto \eR\Phi\circ Q(X)$ (respectively
+-    $X\mapsto \eL \Phi\circ Q(X)$) is isomorphic to the functor
+-    $X\mapsto \varinjlim_{X/\mathsf{Qis}^\ast} Q'\circ\Phi(-)$
++  \item The functor $X\leadsto \eR\Phi\circ Q(X)$ (respectively
++    $X\leadsto \eL \Phi\circ Q(X)$) is isomorphic to the functor
++    $X\leadsto \varinjlim_{X/\mathsf{Qis}^\ast} Q'\circ\Phi(-)$
+     (respectively
+-    $X\mapsto \varinjlim_{\mathsf{Qis}^\ast/X} Q'\circ \Phi(-)$).
++    $X\leadsto \varprojlim_{\mathsf{Qis}^\ast/X} Q'\circ \Phi(-)$).
+   \item The functor $\h^0{}\circ \Phi:\eK^\ast(\cA)\to \cB$ admits a
+     right (respectively left) cohomological derived functor, which is
+     precisely $\h^0{}\circ\eR\Phi$ (respectively
+@@ -1498,28 +1529,27 @@
+ preceding theorem and that $\cA$ has enough injectives (respectively
+ projectives). Then Theorem \ref{VIII:4-2-3} applies with $\cC$ the
+ category of complexes of injectives (respectively projectives). Suppose
+-in addition that $\cA$ has finite cohomological dimension. Then the
+-theorem applies without restriction on $\ast$, with $\cC$ the category
++in addition that $\cA$ has finite cohomological dimension. Then Theorem \ref{VIII:4-2-3} applies without restriction on $\ast$, with $\cC$ the category
+ of complexes of injectives (respectively projectives).
+ \end{corollary}
+ 
+-\begin{definition}\label{VIII:4-2-5} % originally 2.4
++\PrintPage{306}\begin{definition}\label{VIII:4-2-5} % originally 2.4
+ Let $\cA$ and $\cB$ be two abelian categories and let $f:\cA\to \cB$ be
+ an additive functor.
+ 
+ We say that $f$ has \emph{finite cohomological dimension} on the right
+-(respectively left) if $\eR^+ f$ (respectively $\eL^- f$)
++(respectively left) if $\mathrm{R}^+ f$ (respectively $\mathrm{L}^- f$)
+ exists and there is an integer $m\geqslant 0$ such that, for every integer
+-$n>m$, $\eR^n f$ (respectively $\eL^{-n} f$) is zero on the objects
++$n>m$, $\mathrm{R}^n f$ (respectively $\mathrm{L}^{-n} f$) is zero on the objects
+ arising from $\cA$ under the functor $D$. The
+ \emph{cohomological dimension} on the right (respectively left) of $f$ is then the
+-least integer $m$ having this property. If $\eR^+ f$ (respectively
+-$\eL^- f$) exists and $f$ does not have finite cohomological dimension,
++least integer $m$ having this property. If $\mathrm{R}^+ f$ (respectively
++$\mathrm{L}^- f$) exists and $f$ does not have finite cohomological dimension,
+ we say that $f$ has infinite cohomological dimension.
+ 
+ An object $X$ of $\cA$ is said to be \emph{$f$-acyclic} on the right
+ (respectively on the left) if, for every integer $n>0$,
+-$\eR^n f(D(X)) = 0$ (respectively $\eL^{-n} f(D(X))=0$).
++$\mathrm{R}^n f(D(X)) = 0$ (respectively $\mathrm{L}^{-n} f(D(X))=0$).
+ \end{definition}
+ 
+ \begin{corollary}\label{VIII:4-2-3-2} % originally corollary 2
+@@ -1539,7 +1569,7 @@
+     objects.
+ \end{enumerate}
+ 
+-If, in addition, $f$ has finite right (respectively left) cohomological
++\PrintPage{307}If, in addition, $f$ has finite right (respectively left) cohomological
+ dimension, the set of right (respectively left) $f$-acyclic objects has,
+ in addition to properties (1) and (2) above, property (2) of Proposition
+ \ref{VIII:3-1-9}. Theorem \ref{VIII:4-2-3} then applies to the functor
+@@ -1567,7 +1597,7 @@
+   F^i(D(X^\bullet))\times \ext^j(X^\bullet,Y^\bullet) \to F^{i+j}(D(Y^\bullet)) \text{.}
+ \]
+ By definition, when these pairings are applied to cohomological derived
+-functors, they are precisely the Yoneda products. The properties of these
++functors, they are precisely the Yoneda products. The properties \PrintPage{308}of these
+ products follow immediately from this definition. We shall not develop
+ them here.
+ 
+@@ -1594,23 +1624,23 @@
+ }\]
+ \end{proposition}
+ 
+-There are analogous statements for left derived functors.
+-
+-\section{Examples}\label{VIII:6} % originally chapter 2, section 3
++There is an analogous statement for left derived functors.
++
++\section{Examples}\label{VIII:6}\PrintPage{309} % originally chapter 2, section 3
+ 
+ \subsection{The functor \texorpdfstring{$\mathsf{Rhom}^\bullet$}{Hom*}}\label{VIII:6-1}
+ 
+ Let $\cA$ be an abelian category with enough injectives.
+ 
+-The functor $Y\mapsto \hom^\bullet(X^\bullet,Y^\bullet)$
++The functor $Y^\bullet\leadsto \hom^\bullet(X^\bullet,Y^\bullet)$
+ (\ref{VIII:1-3}), where $X^\bullet$ is an object of $\eK(\cA)$ and
+ $Y^\bullet$ an object of $\eK^+(\cA)$, has a total right derived functor
+ (Corollary \ref{VIII:4-2-3-1}), denoted by
+ $\rhom^\bullet(X^\bullet,-)$. Let $Y$ be an object of $\eD^+(\cA)$.
+ The functor
+ \begin{align*}
+-  \eK(\cA) &\to \eD(\mathsf{Ab}) \\
+-  X^\bullet &\mapsto \rhom^\bullet(X^\bullet,Y)
++  \eK(\cA)^\circ &\to \eD(\mathsf{Ab}) \\
++  X^\bullet &\leadsto \rhom^\bullet(X^\bullet,Y)
+ \end{align*}
+ is exact and vanishes on acyclic complexes, hence gives an exact
+ bifunctor
+@@ -1624,15 +1654,15 @@
+ $\mathsf{Rhom}^\bullet$ extends to
+ $\eD(\cA)^\circ\times \eD(\cA)$ (loc. cit.).
+ 
+-If, in addition, $\cA$ has enough projectives, the functor $\hom$ can be
++If, in addition, $\cA$ has enough projectives, the functor $\hom$ can \PrintPage{310}be
+ derived with respect to the first argument. The two definitions coincide
+ on their common domain of validity.
+ 
+ \subsection{\texorpdfstring{$\Tor$}{Tor} of sheaves}\label{VIII:6-2}
+ 
+ Let $E$ be a ringed site (in particular, a ringed topological space), let
+-$\sA$ be its sheaf of rings, and let $\mathsf{Mod}(E)$ be the category of
+-$\sA$-modules. An object $X$ of $\mathsf{Mod}(E)$ is said to be
++$\sA$ be its sheaf of rings, and let $\underline E$ be the category of
++$\sA$-modules. An object $X$ of $\underline E$ is said to be
+ \emph{$\sA$-flat} if, for every exact sequence
+ \[\xymatrix{
+   0 \ar[r]
+@@ -1648,22 +1678,22 @@
+ “extended by zero outside $U$.” Thus Theorem \ref{VIII:4-2-3} applies,
+ and one can define the functor
+ \begin{align*}
+-  \eD^-(E,\sA) \times \eD^-(E,\sA) &\to \eD^-(E,\sA) \\
+-  (X,Y) &\mapsto X\lotimes Y
++  \eD^-(\underline E) \times \eD^-(\underline E) &\to \eD^-(\underline E) \\
++  (X,Y) &\leadsto X\lotimes Y
+ \end{align*}
+ the total tensor product, which is the left derived functor of the tensor
+ product. Passing to cohomology defines the $\Tor_i^\sA(X,Y)$, the local
+ hyper-Tor groups.
+ 
+-Since the category $\mathsf{Mod}(E)$ has enough injectives, one can derive
+-the functor $\hom^\bullet(X,Y)$, the complex of local homomorphisms, and
+-thus obtain $\mathsf{Rhom}(X,Y)$ ($X\in \eD$, $Y\in \eD^+$).
+-
+-Let $X$ and $Y$ be two objects of $\eD^-(E,\sA)$ and let $Z$ be an object
+-of $\eD^+(E,\sA)$. There is a functorial isomorphism
+-\[\xymatrix{
+-  \hom_{\eD(E,\sA)}(X\lotimes Y,Z) \ar[r]^-\sim
+-    &\hom_{\eD(E,\sA)}(X,\mathsf{Rhom}(Y,Z)) \text{.}
++\PrintPage{311}Since the category $\underline E$ has enough injectives, one can derive
++the functor $\Hom^\bullet(X,Y)$, the complex of local homomorphisms, and
++thus obtain $\rHom(X,Y)$ ($X\in \eD$, $Y\in \eD^+$).
++
++Let $X$ and $Y$ be two objects of $\eD^-(\underline E)$ and let $Z$ be an object
++of $\eD^+(\underline E)$. There is a functorial isomorphism
++\[\xymatrix{
++  \hom_{\eD(\underline E)}(X\lotimes Y,Z) \ar[r]^-\sim
++    &\hom_{\eD(\underline E)}(X,\rHom(Y,Z)) \text{.}
+ }\]
+ 
+ \subsection{Left derived functor of the inverse image}\label{VIII:6-3}
+@@ -1671,15 +1701,15 @@
+ Let $f:E\to E'$ be a map of ringed topological spaces. The inverse-image
+ functor
+ \[
+-  f^\ast:\mathsf{Mod}(E') \to \mathsf{Mod}(E)
++  f^\ast:\underline{E}' \to \underline E
+ \]
+ is not necessarily exact. But one knows how to define $f^\ast$-flat
+ objects, and there are enough such objects. Thus one can define the
+ functor $\eL^- f^\ast$. There is likewise a duality formula:
+ 
+-Let $X$ be an object of $\eD^-(E',\sA')$ and let $Y$ be an object of
+-$\eD^+(E,\sA)$. There is a functorial isomorphism
+-\[\xymatrix{
+-  \hom_{\eD(E,\sA)}(\eL^- f^\ast(X),Y) \ar[r]^-\sim
+-    & \hom_{\eD(E',\sA')}(X,\eR^+ f_\ast(Y)) \text{.}
+-}\]
++Let $X$ be an object of $\eD^-(\underline{E}')$ and let $Y$ be an object of
++$\eD^+(\underline E)$. There is a functorial isomorphism
++\[\xymatrix{
++  \hom_{\eD(\underline E)}(\eL^- f^\ast(X),Y) \ar[r]^-\sim
++    & \hom_{\eD(\underline{E}')}(X,\eR^+ f_\ast(Y)) \text{.}
++}\]

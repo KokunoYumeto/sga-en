@@ -1,0 +1,1436 @@
+--- source/fr/miller_src/sga4.5-8.tex
++++ deliverables/FR/SGA4HALF_FR_corrige_apparat.tex#component-8 [8]
+@@ -1,6 +1,8 @@
+ % !TEX root = sga4.5.tex
+ 
+-\chapter{Catégories dérivées}\label{VIII}
++\chapter{Catégories dérivées}\label{VIII}\PrintPage{262}
++\begin{center}Institut des hautes études scientifiques\end{center}
++Quelques résultats (État 0)\footnote{Ce texte a été rédigé en 1963 (sauf pour un très petit nombre de changements, signalés en bas de page, et pour l'addition de quelques notes de bas de page, en 1976).}
+ \blfootnote{par Jean-Louis Verdier}
+ 
+ 
+@@ -12,7 +14,33 @@
+ 
+ 
+ 
+-\section{Catégories triangulées: définitions et exemples}\label{VIII:1}
++\PrintPage{263}\begin{center}\textbf{Sommaire}\end{center}
++\begin{center}\textbf{Chapitre 1 : Catégories triangulées}\end{center}
++\noindent\textbf{\S~1 : Définitions et exemples}\par
++\noindent n\textsuperscript{o}~1\quad Définition des catégories triangulées. Premières propriétés.\dotfill 1\par
++\noindent n\textsuperscript{o}~2\quad Exemples de catégories triangulées\dotfill 5\par
++\noindent n\textsuperscript{o}~3\quad Exemples de foncteurs exacts et de foncteurs cohomologiques.\dotfill 10\par
++\medskip\noindent\textbf{\S~2 : Catégories quotients}\par
++\noindent n\textsuperscript{o}~1\quad Catégories épaisses. Systèmes multiplicatifs\dotfill 13\par
++\noindent n\textsuperscript{o}~2\quad Problèmes universels équivalents\dotfill 15\par
++\noindent n\textsuperscript{o}~3\quad Calcul de fractions\dotfill 16\par
++\noindent n\textsuperscript{o}~4\quad Propriétés des catégories quotients\dotfill 19\par
++\noindent n\textsuperscript{o}~5\quad Propriétés du foncteur de passage au quotient\dotfill 21\par
++\noindent n\textsuperscript{o}~6\quad Orthogonalité.\dotfill 24\par
++\begin{center}\textbf{Chapitre 2 : Applications aux catégories abéliennes}\end{center}
++\noindent\textbf{\S~1 : Les catégories dérivées}\par
++\noindent n\textsuperscript{o}~1\quad Les catégories dérivées d'une catégorie abélienne\dotfill 28\par
++\noindent n\textsuperscript{o}~2\quad Étude des Ext.\dotfill 34\par
++\medskip\noindent\textbf{\S~2 : Les foncteurs dérivés}\par
++\noindent n\textsuperscript{o}~1\quad Définitions des foncteurs dérivés\dotfill 37\par
++\noindent n\textsuperscript{o}~2\quad Existence des foncteurs dérivés\dotfill 40\par
++\noindent n\textsuperscript{o}~3\quad Cup-produit. Composition.\dotfill 44\par
++\medskip\noindent\textbf{\S~3 : Exemples}\par
++\noindent n\textsuperscript{o}~1\quad Le foncteur $\Hom$\dotfill 46\par
++\noindent n\textsuperscript{o}~2\quad $\Tor$ de faisceaux\dotfill 47\par
++\noindent n\textsuperscript{o}~3\quad Le foncteur dérivé gauche de l'image réciproque.\dotfill 48\par
++
++\section{Catégories triangulées: définitions et exemples}\label{VIII:1}\PrintPage{264}
+ 
+ 
+ 
+@@ -24,16 +52,16 @@
+ \addtocounter{subsubsection}{-1}
+ \subsubsection{}\label{VIII:1-1-0}
+ 
+-Soient $\cA$ un catégorie additive, $T$ un automorphisme additif de $\cA$. 
++Soient $\cA$ une catégorie additive, $T$ un automorphisme additif de $\cA$. 
+ $X$ et $Y$ étant deux objets de $\cA$, nous poserons 
+ \[
+   \hom^i(X,Y) = \hom_\cA(X,T^i(Y)) \qquad i\in \dZ 
+ \]
+ Soient $X$, $Y$, $Z$ trois objets de $\cA$, $\alpha\in \hom^i(X,Y)$, 
+-$\beta\in \hom^j(X,Y)$. Nous définirons le composé $\beta\circ\alpha$ 
++$\beta\in \hom^j(Y,Z)$. Nous définirons le composé $\beta\circ\alpha$ 
+ appartenant à $\hom^{i+j}(X,Z)$ par: 
+ \[
+-  \beta\circ \alpha = \beta\circ T^i(\alpha) \text{.}
++  \beta\circ \alpha = T^i(\beta)\circ\alpha \text{.}
+ \]
+ On vérifie qu'on obtient ainsi une nouvelle catégorie dont les groupes de 
+ morphismes entre les objets sont gradués. Cette nouvelle catégorie sera 
+@@ -44,23 +72,23 @@
+ Lorsqu'on nommera ou notera un morphisme sans spécifier le degré, il 
+ s'agira toujours d'un morphisme de degré zéro. 
+ 
+-Soient $\cA$ et $\cA'$ deux catégories additives graduées par les foncteurs
++Soient $\cA$ et $\cA'$ deux catégories additives graduées par les \PrintPage{265}foncteurs
+ $T$ et $T'$, $F$ un foncteur additif de $\cA$ dans $\cA'$. On dira que $F$ 
+ \emph{est gradué} si l'on s'est donné un isomorphisme de 
+ foncteurs\footnote{Texte modifié en 1976: le texte original demandait une 
+ égalité $F\circ T=T'\circ F$. Le cas des foncteurs à plusieurs variables 
+-est discuté dans \cite[XVIII 0.2]{sga4}. Il pose un problème de signes.} 
+-\[
+-  F\circ T = T'\circ F 
++est discuté dans \PrintCite{SGA~4 XVII 0.3}{\cite[XVII 0.3]{sga4}}. Il pose un problème de signes.} 
++\[
++  F\circ T \simeq T'\circ F 
+ \]
+ 
+ La définition des morphismes de foncteurs gradués est donnée au 
+-\ref{VIII:4-1-1}. 
+-
+-$\cA$ étant une categorie additive graduée par le foncteur $T$, on 
+-appellers triangle, un ensemble de trois objets $X$, $Y$, $Z$ et de trois 
++chap.~2, \S~2, n\textsuperscript{o}~1. 
++
++$\cA$ étant une catégorie additive graduée par le foncteur $T$, on 
++appellera triangle, un ensemble de trois objets $X$, $Y$, $Z$ et de trois 
+ morphismes $u:X\to Y$, $v:Y\to Z$, $w:Z\to T(X)$ ($\deg w=1$). Pour désigner 
+-les triangles on utilisera la notation: $(X,Y,Z,u,v,w)$ on bien le diagramme: 
++les triangles on utilisera la notation: $(X,Y,Z,u,v,w)$ ou bien le diagramme: 
+ \[\xymatrix{
+   & Z \ar[dl]_-w \\
+   X \ar[rr]^-u 
+@@ -86,7 +114,7 @@
+ 
+ 
+ 
+-\subsubsection{}\label{VIII:1-1-1}
++\subsubsection{}\label{VIII:1-1-1}\PrintPage{266}
+ 
+ On appelle \emph{catégorie triangulée} une catégorie additive graduée 
+ par un foncteur de translation, munie d'une famille de triangles qu'on appelle 
+@@ -97,9 +125,9 @@
+ \paragraph{TR1}
+ \phantomsection\hypertarget{VIII:TR1}{}
+ 
+-Tout triangle isomorphe à triangle distingué est distingué. Tout 
++Tout triangle isomorphe à un triangle distingué est distingué. Tout 
+ morphisme $u:X\to Y$ est contenu dans un triangle distingué 
+-$(X,Y,Z,u,v,w)$. Le triangle $(X,X,0,\operatorname{id}_{X'},0,0)$ est 
++$(X,Y,Z,u,v,w)$. Le triangle $(X,X,0,\operatorname{id}_X,0,0)$ est 
+ distingué. 
+ 
+ 
+@@ -122,7 +150,7 @@
+ \phantomsection\hypertarget{VIII:TR4}{}
+ 
+ \[\xymatrix{
+-  & Z' \ar[dl]|{\deg=1} \\
++  & Z' \ar[dl]|{\deg 1} \\
+   X \ar[rr]^-u 
+     & & Y \ar[ul]_-i 
+ }\quad
+@@ -132,7 +160,7 @@
+     & & Z \ar[ul] 
+ }\quad
+ \xymatrix{
+-  & Y' \ar[dl]|{\deg=1} \\
++  & Y' \ar[dl]|{\deg 1} \\
+   X \ar[rr]^-w 
+     & & Z \ar[ul] 
+ }\]
+@@ -144,12 +172,12 @@
+   \item $(Z',Y',X',f,g,T(i) j)$ soit un triangle distingué
+ \end{enumerate}
+ 
+-$\cC$ et $\cC'$ étant deux catégories triangulées, on appelle 
++\PrintPage{267}$\cC$ et $\cC'$ étant deux catégories triangulées, on appelle 
+ \emph{foncteur exact} de $\cC$ dans $\cC'$, tout foncteur additif, gradué, 
+ transformant les triangles distingués en triangles distingués. Les 
+ morphismes de foncteurs exacts sont les morphismes de foncteurs gradués. 
+ 
+-On déduit immédiatement dex axiomes \hyperlink{VIII:TR1}{TR1}, 
++On déduit immédiatement des axiomes \hyperlink{VIII:TR1}{TR1}, 
+ \hyperlink{VIII:TR2}{TR2}, \hyperlink{VIII:TR3}{TR3} la propriété suivante: 
+ 
+ 
+@@ -159,6 +187,8 @@
+ \begin{proposition}\label{VIII:1-1-2}
+ Soient $(X,Y,Z,u,v,w)$ un triangle distingué et $M$ un objet d'une 
+ catégorie triangulée. On a alors les suites exactes: 
++\begingroup
++\small
+ \[\xymatrix{
+   \cdots \ar[r] 
+     & \hom^i(M,X) \ar[r]^-{\hom(M,u)} 
+@@ -175,18 +205,19 @@
+     & \hom^{i+1}(Z,M) \ar[r] 
+     & \cdots
+ }\]
++\endgroup
+ \end{proposition}
+ 
+ On déduit alors de cette proposition des énoncés du genre: 
+ \begin{itemize}
+   \item $(f,g,h)$ étant un morphisme de triangle distingué et $f,g$ des 
+-    isomorphismes. 
++    isomorphismes, $h$ est un isomorphisme. 
+   \item Les triangles distingués construits sur un morphisme 
+-    (\hyperlink{VIII:TR1}{TR1}), sont tour isomorphismes (\emph{mais les 
+-    isomorphismes ne sont pas, en général, uniquoment déterminés}). 
++    (\hyperlink{VIII:TR1}{TR1}), sont tous isomorphes (\emph{mais les 
++    isomorphismes ne sont pas, en général, uniquement déterminés}). 
+   \item Lorsque dans un triangle distingué, un des morphismes admet un noyau 
+     ou un conoyau, celui-ci se scinde i.e. il est de la forme: 
+-    \[\xymatrix{
++    \PrintPage{268}\[\xymatrix{
+       & Z+T(X) \ar[dl] \\
+       X+Y \ar[rr] 
+         & & Y+Z \ar[ul]
+@@ -228,12 +259,11 @@
+ \end{align*}
+ Sur les morphismes le foncteur $T$ agit de la manière suivante: pour tout 
+ morphisme $f:X^\bullet \to Y^\bullet$, le morphisme 
+-$T(f):T(X^\bullet) \to T(Y^\bullet)$ est défini par 
++$T(f):T(X^\bullet) \to T(Y^\bullet)$ est défini \PrintPage{269}par 
+ \[
+   T(f)_i = f_{i+1} \text{.}
+ \]
+-On vérifie immédiatement que $T$ est un automorphisme additif de 
+-$\eC(\cA)$. Les morphismes de degré $n$, définis à l'aide de ce foncteur 
++On vérifie immédiatement que $T$ est un automorphisme additif de $\eC(\cA)$. Les morphismes de degré $n$, définis à l'aide de ce foncteur 
+ de translation, sont alors les morphismes qui augmentent le degré de $n$, et 
+ qui commutent ou anticommutent avec la différentielle suivant la parité de 
+ $n$. On retrouve ainsi la définition généralement adoptée. 
+@@ -252,9 +282,9 @@
+         & 0 \ar[r] 
+         & \cdots 
+     }\]
+-    o'ù les objets de $Y^\bullet$ sont les objets de premier degré zéro, 
++    où les objets de $Y^\bullet$ sont les objets de premier degré zéro, 
+     et les objets de $X^\bullet$, les objets de premier degré $-1$. 
+-  \item $v$ est l'image par le foncteur: complexe double $\mapsto$ complexe 
++  \item $v$ est l'image par le foncteur: complexe double $\leadsto$ complexe 
+     simple, du morphisme de doubles complexes: 
+     \[\xymatrix{
+       \cdots \ar[r] 
+@@ -272,7 +302,7 @@
+     }\]
+   \item $w$ est l'opposé de l'image, par le même foncteur, du morphisme de 
+     doubles complexes: 
+-    \[\xymatrix{
++    \PrintPage{270}\[\xymatrix{
+       \cdots \ar[r] 
+         & 0 \ar[r] 
+         & X^\bullet \ar[r] 
+@@ -295,9 +325,9 @@
+ \subsubsection{}\label{VIII:1-2-2}
+ 
+ L'ensemble des morphismes homotopes à zéro est un idéal bilatère (si 
+-$f$ et $g$ sont composables et si $f$ ou $g$ homotope à zéro, la composé 
++$f$ et $g$ sont composables et si $f$ ou $g$ est homotope à zéro, le composé 
+ est homotope à zéro. Si $f$ et $g$ sont homotopes à zéro, le morphisme 
+-$f\oplus g$ est homotope à zéro). Pour tout couple d'objet $X^\bullet$, 
++$f\oplus g$ est homotope à zéro). Pour tout couple d'objets $X^\bullet$, 
+ $Y^\bullet$ on désigne par $\operatorname{Htp}(X^\bullet,Y^\bullet)$ le 
+ sous-groupe de $\hom_{\eC(\cA)}(X^\bullet,Y^\bullet)$ des morphismes homotopes 
+ à zéro. $\eK(\cA)$ sera alors la catégorie dont les objets sont les 
+@@ -317,7 +347,7 @@
+ 
+ On appellera triangle distingué dans $\eK(\cA)$, tout triangle 
+ \emph{isomorphe} à un triangle provenant de $\sC$. La famille des triangles 
+-distingués vérifie les axioms \hyperlink{VIII:TR1}{TR1}, 
++distingués vérifie les axiomes \hyperlink{VIII:TR1}{TR1}, 
+ \hyperlink{VIII:TR2}{TR2}, \hyperlink{VIII:TR3}{TR3} et 
+ \hyperlink{VIII:TR4}{TR4}. Par abus de notation $\eK(\cA)$ désignera la 
+ catégorie $\eK(\cA)$ triangulée par la famille de triangles définie 
+@@ -327,7 +357,7 @@
+ 
+ 
+ 
+-\subsubsection{}\label{VIII:1-2-3}
++\subsubsection{}\label{VIII:1-2-3}\PrintPage{271}
+ 
+ On définit de plus tout un arsenal de sous-catégories: 
+ \begin{itemize}
+@@ -335,7 +365,7 @@
+     degré négatif, sauf au plus un nombre fini, sont nuls. On définit de 
+     même les complexes bornés supérieurement, les complexes bornés. On 
+     désignera par $\eK^+(\cA)$, $\eK^-(\cA)$, $\eK^b(\cA)$ les 
+-    sous-catégories pleines de $\eK(\cA)$ engendrées par ses familles 
++    sous-catégories pleines de $\eK(\cA)$ engendrées par ces familles 
+     d'objets. Ces sous-catégories sont des ``\emph{sous-catégories 
+     triangulées}'' de $\eK(\cA)$: tout triangle distingué dont deux des 
+     objets sont des objets de la sous-catégorie, est isomorphe à un 
+@@ -350,7 +380,7 @@
+     sous-catégories pleines engendrées par ces familles d'objets. Ce sont 
+     des sous-catégories triangulées. 
+     
+-    On paiera aussi des sous-catégories triangulées $\eK^{+,b}(\cA)$, 
++    On parlera aussi des sous-catégories triangulées $\eK^{+,b}(\cA)$, 
+     $\eK^{+,\varnothing}(\cA)$, \ldots etc \ldots (le premier signe en 
+     exposant donne des renseignements sur les objets des complexes, le 
+     deuxième signe sur les objets de cohomologie). 
+@@ -358,7 +388,7 @@
+     ensemble d'objets de $\cA$ stable par isomorphisme et par somme directe. 
+     $O(\cA)$ désignera la sous-catégorie pleine de $\eC(\cA)$ engendrée 
+     par les complexes dont les objets en tout degré sont des objets de $O$. 
+-    On notera $\underline O(\cA)$ la sous-catégorie triangulée 
++    On notera $\underline O(\cA)$ la sous-catégorie \PrintPage{272}triangulée 
+     correspondante dans $\eK(\cA)$. $\cA$ étant abélienne, on pourra 
+     prendre pour ensemble $O$, l'ensemble $I$ des injectifs ou l'ensemble $P$ 
+     des projectifs. 
+@@ -368,7 +398,7 @@
+ 
+ 
+ 
+-\subsubsection{}\label{VIII:1-2-4}
++\subsubsection{Unicité de $\eK(\cA)$}\label{VIII:1-2-4}
+ 
+ $\eK(\cA)$ est uniquement déterminée par la donnée de $\eC(\cA)$ et de la 
+ famille $\sC$. De manière précise: tout foncteur additif gradué de 
+@@ -405,15 +435,15 @@
+ 
+ Soit $0 \to X^\bullet \to Y^\bullet \to Z^\bullet \to 0$ une suite 
+ semi-scindée. Choisissons un scindage i.e. pour tout $n$ un isomorphisme 
+-\[
++\PrintPage{273}\[
+   (Y^\bullet)^n \simeq (X^\bullet)^n + (Z^\bullet)^n \text{.}
+ \]
+ La matrice de la différentielle de $Y^\bullet$, dans la décomposition en 
+-somme directe si-dessus est de la forme: 
++somme directe ci-dessus est de la forme: 
+ \[
+   \begin{pmatrix}
+     d_{X^\bullet} & \varphi_n \\
+-    0 & d_{Y^\bullet} 
++    0 & d_{Z^\bullet} 
+   \end{pmatrix}
+ \]
+ où $\varphi_n$ est un morphisme de $(Z^\bullet)^n$ dans 
+@@ -452,7 +482,7 @@
+ 
+ \begin{definition}
+ Soient $\cA$ une catégorie triangulée, $\cB$ une catégorie abélienne. 
+-Un foncteur additif $F:\cA\to \cB$ est die \emph{foncteur cohomologique} si 
++Un foncteur additif $F:\cA\to \cB$ est dit \emph{foncteur cohomologique} \PrintPage{274}si 
+ pour tout triangle distingué $(X,Y,Z,u,v,w)$ la suite 
+ \[\xymatrix{
+   F(X) \ar[r]^-{F(u)} 
+@@ -470,7 +500,7 @@
+     & F^i(X) \ar[r] 
+     & F^i(Y) \ar[r] 
+     & F^i(Z) \ar[r] 
+-    & F^{i+-}(X) \ar[r] 
++    & F^{i+1}(X) \ar[r] 
+     & \cdots 
+ }\]
+ 
+@@ -506,7 +536,7 @@
+   P:\cA\times \cA'\to \cA''
+ \]
+ un foncteur bilinéaire (i.e. additif par rapport à chacun des arguments 
+-séparément). On en déduit alors le foncteur bilinéaire: 
++\PrintPage{275}séparément). On en déduit alors le foncteur bilinéaire: 
+ \[
+   P^\ast:\eC(\cA)\times \eC(\cA') \to \eC(\cA'') 
+ \]
+@@ -519,7 +549,7 @@
+ 
+ Soient $f$ un morphisme de $\eC(\cA)$ (resp. $\eC(\cA')$) homotope à zéro 
+ et $Z^\bullet$ un objet de $\eC(\cA')$ (resp. $\eC(\cA)$). Le morphisme 
+-$P^\ast(f,Z^\bullet)$ (resp. $P^\bullet(Z^\bullet,f)$) est alors homotope à 
++$P^\ast(f,Z^\bullet)$ (resp. $P^\ast(Z^\bullet,f)$) est alors homotope à 
+ zéro. On en déduit que $P^\ast$ définit d'une manière unique un 
+ foncteur: 
+ \[
+@@ -527,11 +557,11 @@
+ \]
+ $P^\bullet$ est un bi-foncteur exact. 
+ 
+-En particulier, soit $\cA$ un catégorie additive. On peut prendre pour $P$ le 
++En particulier, soit $\cA$ une catégorie additive. On peut prendre pour $P$ le 
+ foncteur: 
+ \begin{align*}
+   \cA^\circ\times \cA &\to \mathsf{Ab} \\
+-  (X,Y) &\mapsto \hom(X,Y) 
++  (X,Y) &\leadsto \hom(X,Y) 
+ \end{align*}
+ 
+ On obtient alors par la construction précédente un foncteur 
+@@ -560,7 +590,7 @@
+ 
+ 
+ 
+-\section{Les catégories quotients}\label{VIII:2}
++\section{Les catégories quotients}\label{VIII:2}\PrintPage{276}
+ 
+ 
+ 
+@@ -599,13 +629,13 @@
+ 
+ 
+ \begin{definition}
+-Soit $\cA$ un catégorie triangulée. Un ensemble $S$ de morphismes de $\cA$ 
+-est appelé \emph{système multiplicatif de morphismes} si'il posède les 
++Soit $\cA$ une catégorie triangulée. Un ensemble $S$ de morphismes de $\cA$ 
++est appelé \emph{système multiplicatif de morphismes} s'il possède les 
+ cinq propriétés suivantes: 
+ 
+ \paragraph{FR1}
+ \phantomsection\hypertarget{VIII:FR1}{}
+-Si $f,g\in S$ et si $f$ et $g$ sont composables, $f\circ g\in S$. Pout tout 
++Si $f,g\in S$ et si $f$ et $g$ sont composables, $f\circ g\in S$. Pour tout 
+ objet $X$ de $\cA$, le morphisme identique de $X$ est un élément de $S$. 
+ 
+ \paragraph{FR2}
+@@ -616,9 +646,9 @@
+   Z \ar[r]^-f 
+     & X 
+ }\]
+-se complète en un diagramme commutatif 
+-\[\xymatrix{
+-  P \ar[r]^-g \ar[d]^-{t\in S} 
++\PrintPage{277}se complète en un diagramme commutatif 
++\[\xymatrix{
++  P \ar[r]^-g \ar[d]^-t_-{t\in S} 
+     & Y \ar[d]^-{s\in S} \\
+   Z \ar[r]^-f 
+     & X 
+@@ -636,12 +666,12 @@
+ 
+ \paragraph{FR4}
+ \phantomsection\hypertarget{VIII:FR4}{}
+-Soit $T$ le foncteur de translation de $\cA$. Par tout élément $s$ de $S$, 
++Soit $T$ le foncteur de translation de $\cA$. Pour tout élément $s$ de $S$, 
+ $T(s)\in S$. 
+ 
+ \paragraph{FR5}
+ \phantomsection\hypertarget{VIII:FR5}{}
+-$(X,Y,Z,u,v,w)$, $(X',Y',Z',u',v',w')$ étant deux triangles distinguées, 
++$(X,Y,Z,u,v,w)$, $(X',Y',Z',u',v',w')$ étant deux triangles distingués, 
+ $f$ et $g$ deux éléments de $S$ tels que le couple $(f,g)$ soit un 
+ morphisme de $u$ dans $u'$, il existe un morphisme $h\in S$, tel que 
+ $(f,g,h)$ soit un morphisme de triangle. 
+@@ -653,8 +683,8 @@
+ Un morphisme $f$ appartient à $S$ si et seulement s'il existe deux 
+ morphismes $g$ et $g'$ tels que $g\circ f\in S$ et $f\circ g'\in S$. 
+ 
+-L'intersection d'une famille quelconque de systèmes multiplicatifs saturés 
+-un système multiplicatif saturé. 
++\PrintPage{278}L'intersection d'une famille quelconque de systèmes multiplicatifs saturés 
++est un système multiplicatif saturé. 
+ 
+ L'ensemble des systèmes multiplicatifs saturés sera noté $\sS$. 
+ 
+@@ -684,12 +714,12 @@
+ \subsection{Problèmes universels}\label{VIII:2-2}
+ 
+ Soient $\cA$ et $\cA'$ deux catégories triangulées et $F$ un foncteur 
+-exacte de $\cA$ dans $\cA'$. Soient $S(F)$ l'ensemble des morphismes de $\cA$ 
++exact de $\cA$ dans $\cA'$. Soient $S(F)$ l'ensemble des morphismes de $\cA$ 
+ qui sont transformés par $F$ en isomorphismes et $\cB(F)$ la sous-catégorie 
+ pleine engendrée par les objets de $\cA$ qui sont transformés par $F$ en 
+ objets nuls de $\cA'$. $S(F)$ est un système multiplicatif saturé et 
+ $\cB(F)$ est une sous-catégorie épaisse. De plus $S(F) = \varphi(\cB(F))$. 
+-Soient alors $\cA$ une catégorie triangulée, $\cB$ une sous-catégorie 
++Soient alors $\cA$ une \PrintPage{279}catégorie triangulée, $\cB$ une sous-catégorie 
+ épaisse et $S=\varphi(\cB)$ le système multiplicatif saturé 
+ correspondant. Les deux problèmes universels ci-dessous sont équivalents. 
+ 
+@@ -733,20 +763,17 @@
+ 
+ \subsubsection{}\label{VIII:2-3-1}
+ 
+-Soient $\cA$ un catégorie triangulée, $S$ un système multiplicatif 
++Soient $\cA$ une catégorie triangulée, $S$ un système multiplicatif 
+ saturé. Désignons par $\cA[S^{-1}]$ la catégorie de fraction de $\cA$ 
+ pour l'ensemble de morphismes $S$ et $Q$ le foncteur canonique de $\cA$ dans 
+-$\cA[S^{-1}]$. Le couple $(\cA[S^{-1}],Q)$ résout le problème suivant: Tout 
++$\cA[S^{-1}]$. Le couple \PrintPage{280}$(\cA[S^{-1}],Q)$ résout le problème suivant: Tout 
+ foncteur de $\cA$ dans une catégorie quelconque (non nécessairement 
+-additive) transformant morphisme de $S$ en isomorphisme, se factorise, d'une 
++additive) transformant tout morphisme de $S$ en isomorphisme, se factorise, d'une 
+ manière unique, par $(\cA[S^{-1}],Q)$. Un tel couple existe toujours, sans 
+-hypothèse sur l'ensemble de morphismes $S$ \cite[1.1]{gz67}\footnote{The 
+-original text references [C.G.G] here. Most likely, this is the lost work 
+-\emph{Catégories et foncteurs} by Chevalley, Gabriel and Grothendieck, 
+-referenced in\cite{sc72}. }. Cependant l'ensemble 
+-de morphismes $S$, étant un syst\`me multiplicatif saturé, possède les 
++hypothèse sur l'ensemble de morphismes $S$ \PrintCite{[C.G.G.]}{\cite[1.1]{gz67}}. Cependant l'ensemble 
++de morphismes $S$, étant un système multiplicatif saturé, possède les 
+ propriétés \hyperlink{VIII:FR1}{FR1}, \hyperlink{VIII:FR2}{FR2}, 
+-\hyperlink{VIII:FR3}{FR3}. Par suite, d'après \cite{gz67}, la catégorie 
++\hyperlink{VIII:FR3}{FR3}. Par suite, d'après \PrintCite{C.G.G.}{\cite{gz67}}, la catégorie 
+ $\cA[S^{-1}]$ peut s'obtenir par un calcul de fractions, à droite ou à 
+ gauche. Nous allons rappeler comment on obtient $\cA[S^{-1}]$ par un calcul de 
+ fractions à droite. (Le calcul de fractions à gauche s'obtient par le 
+@@ -758,7 +785,7 @@
+ 
+ \subsubsection{}\label{VIII:2-3-2}
+ 
+-Les objets de $\cA[S^{-1}]$ sont le objets de $\cA$. 
++Les objets de $\cA[S^{-1}]$ sont les objets de $\cA$. 
+ \begin{itemize}
+   \item Pour tout objet $X$ de $\cA$, désignons par $S_X$ la catégorie des 
+     flèches appartenant à $S$, ayant pour but $X$. A tout objet $Y$ de 
+@@ -766,16 +793,16 @@
+     $S_X^\circ$ à valeur dans la catégorie des ensembles: 
+     ($S_X^\circ$ désigne la catégorie opposée) 
+     \[
+-      H_Y:s\mapsto \hom(\operatorname{source}(s),Y) \text{.}
++      H_Y:s\leadsto \hom(\operatorname{source}(s),Y) \text{.}
+     \]
+     On pose alors: 
+     \[
+       \hom_{\cA[S^{-1}]}(X,Y) = \varinjlim_{S_X^\circ} H_Y \text{.}
+     \]
+     Pour tout ce qui concerne les limites inductives, on se référera à 
+-    \cite{ar62}. 
++    \PrintCite{``Grothendieck Topologies''}{\cite{ar62}}. 
+     
+-    On constatera alors, avec plaisir en utilisant \hyperlink{VIII:FR1}{FR1}, 
++    \PrintPage{281}On constatera alors, avec plaisir en utilisant \hyperlink{VIII:FR1}{FR1}, 
+     \hyperlink{VIII:FR2}{FR2}, \hyperlink{VIII:FR3}{FR3} que la catégorie 
+     $S_X^\circ$ possède les propriétés L1, L2, L3. Les limites inductives 
+     possèdent donc toutes les bonnes propriétés des limites inductives 
+@@ -784,7 +811,7 @@
+     $\hom_{\cA[S^{-1}]}(X,Y)$ et $b$ un élément de 
+     $\hom_{\cA[S^{-1}]}(Y,Z)$. Soient $s$ un objet de $S_X$, $\underline a$ un 
+     élément de $\hom(\operatorname{source}(s),Y)$ dont l'image est $a$ et 
+-    un objet de $S_y$, $\underline b$ un élément de 
++    $t$ un objet de $S_Y$, $\underline b$ un élément de 
+     $\hom(\operatorname{source}(t),Z)$ dont l'image est $b$. On a alors un 
+     diagramme: 
+     \begin{equation*}\tag{1}\label{VIII:eq:2-3-2-1}
+@@ -801,7 +828,7 @@
+     \end{equation*}
+     que, d'après \hyperlink{VIII:FR2}{FR2}, on peut compléter en un 
+     diagramme: 
+-    \[\xymatrix{
++    \[t'\in S\qquad\xymatrix{
+       & & \bullet \ar[dl]_-{t'} \ar[dr]^-{\underline c} \\
+       & \bullet \ar[dl]_-s \ar[dr]^-{\underline a} 
+         & & \bullet \ar[dl]_-t \ar[dr]^-{\underline b} \\
+@@ -818,20 +845,20 @@
+     vérifie de plus qu'on a ainsi défini une catégorie $\cA[S^{-1}]$. 
+ \end{itemize}
+ 
+-Nous noterons $Q$ le foncteur évident: $\cA\to \cA[S^{-1}]$. 
++\PrintPage{282}Nous noterons $Q$ le foncteur évident: $\cA\to \cA[S^{-1}]$. 
+ 
+ $\cA$ étant une catégorie additive, $\cA[S^{-1}]$ est une catégorie 
+ additive. De plus, on démontre en utilisant \hyperlink{VIII:FR4}{FR4} qu'il 
+ existe un et un seul foncteur de translation sur $\cA[S^{-1}]$, que nous 
+-noterons $T$, vérifiant la relation: 
++noterons encore $T$, vérifiant la relation: 
+ \[
+   Q\circ T = T\circ Q \text{.}
+ \]
+ Enfin, à l'aide de \hyperlink{VIII:FR5}{FR5}, on démontre qu'il existe une 
+ et une seule structure triangulée sur $\cA[S^{-1}]$ telle que le foncteur $Q$ 
+-soit exact. Les triangles distingués de $\cA[S^{-1}]$ ne sont qutre que les 
++soit exact. Les triangles distingués de $\cA[S^{-1}]$ ne sont autres que les 
+ triangles isomorphes aux images, par $Q$, des triangles distingués de $\cA$. 
+-En désignant par $\cA_S$, la catégorie $\cA[S^{-1}]$ muni de cette 
++En désignant par $\cA_S$, la catégorie $\cA[S^{-1}]$ munie de cette 
+ structure triangulée, on démontre sans difficulté que le couple 
+ $(\cA_S,Q)$ est une solution au \hyperlink{VIII:prob2}{problème 2}. 
+ 
+@@ -840,12 +867,12 @@
+ 
+ 
+ \begin{definition}\label{VIII:2-3-3}
+-Soient $\cA$ un catégorie triangulée, $\cB$ une sous-catégorie épaisse 
++Soient $\cA$ une catégorie triangulée, $\cB$ une sous-catégorie épaisse 
+ de $\cA$, $(Q,\cA/\cB)$ la solution du \hyperlink{VIII:prob1}{problème 1} 
+ (\S \ref{VIII:2-2}). $\cA/\cB$ sera appelée la \emph{catégorie quotient} de 
+ $\cA$ par $\cB$. $Q$ sera appelé le foncteur canonique de passage au 
+ quotient. Plus généralement soit $\cN$ une sous-catégorie triangulée de 
+-$\cA$ et soit $\underline\cN$ la plus petit sous-catégorie épaisse 
++$\cA$ et soit $\underline\cN$ la plus petite sous-catégorie épaisse 
+ contenant $\cN$. La catégorie quotient de $\cA$ par $\cN$: $\cA/\cN$ sera par 
+ définition $\cA/\underline\cN$. 
+ \end{definition}
+@@ -869,12 +896,12 @@
+ 
+ Soient $\cA$ une catégorie triangulée et $H$ un foncteur cohomologique à 
+ valeur dans une catégorie abélienne $\cG$. Soient $\cB_H$ la 
+-sous-catégorie pleine engendrée par les objets dont tous les translatés 
++sous-catégorie \PrintPage{283}pleine engendrée par les objets dont tous les translatés 
+ sont transformés par $H$ en objets nuls de $\cG$ et $S_H$ l'ensemble des 
+ morphismes dont tous les translatés sont transformés par $H$ en 
+ isomorphismes de $\cG$. $\cB_H$ est une sous-catégorie épaisse de $\cA$; 
+ $S_H$ est un système multiplicatif saturé. De plus $S_H=\varphi(\cB_H)$ 
+-(\S \ref{VIII:2-1}). Le foncteur $H$ se factorise d'un manière unique par 
++(\S \ref{VIII:2-1}). Le foncteur $H$ se factorise d'une manière unique par 
+ $(Q,\cA/\cB_H)$. 
+ 
+ 
+@@ -882,7 +909,7 @@
+ 
+ 
+ \begin{theorem}\label{VIII:2-4-2}
+-Soient $\cA$ une catégorie triangulée, $\cB$ un sous-catégorie 
++Soient $\cA$ une catégorie triangulée, $\cB$ une sous-catégorie 
+ triangulée, $\cN$ une sous-catégorie épaisse de $\cA$, $S=\varphi(\cN)$ 
+ le système multiplicatif saturé correspondant. 
+ \begin{enumerate}[(a)]
+@@ -892,16 +919,16 @@
+     \begin{enumerate}[(i)]
+       \item Pour tout objet $X$ de $\cB$ et tout morphisme $s:R\to X$ où $s$ 
+         est un élément de $S$, il existe un morphisme $s':R'\to R$ où 
+-        $s\circ'$ est un élément de $S\cap \cB$; et 
++        $s\circ s'$ est un élément de $S\cap \cB$; et 
+         $R'\in\operatorname{Ob}\cB$. 
+       \item Tout morphisme d'un objet $X$ de $\cB$ dans un objet $Y$ de $\cN$ 
+         se factorise par un objet de $\cN\cap \cB$. 
+     \end{enumerate}
+   \item Les propriétés (i)' et (ii)' obtenues à partir de (i) et (ii) en 
+-    renversant les flèches sont équivalents. 
+-  \item Si les proprietés (i) et (ii) sont vérifiées ou bien si les 
++    renversant les flèches sont équivalentes. 
++  \item Si les propriétés (i) et (ii) sont vérifiées ou bien si les 
+     propriétés (i)' et (ii)' sont vérifiées, le foncteur canonique 
+-    \[\xymatrix{
++    \PrintPage{284}\[\xymatrix{
+       \cB/\cN\cap \cB \ar[r] & \cA/\cN
+     }\]
+     est fidèle. 
+@@ -936,7 +963,7 @@
+ 
+ \subsection{Propriétés du foncteur de passage au quotient}\label{VIII:2-5}
+ 
+-Soient $\cA$ un catégorie triangulée, $\cB$ un sous-catégorie épaisse, 
++Soient $\cA$ une catégorie triangulée, $\cB$ une sous-catégorie épaisse, 
+ $S$ le système multiplicatif correspondant, $Q:\cA\to \cA/\cB$ le foncteur 
+ canonique de passage au quotient. 
+ 
+@@ -952,11 +979,11 @@
+     $S$, vérifiant $f\circ s=0$, est un morphisme nul.
+   \item Tout morphisme $f:X\to Y$, tel qu'il existe un morphisme $s:Y\to Z$, 
+     $s\in S$, vérifiant $s\circ f=0$, est un morphisme nul. 
+-  \item Tout morphisme $f:X\to Y$ qui se factorise par un objet de $\cB$ est 
++  \item \PrintPage{285}Tout morphisme $f:X\to Y$ qui se factorise par un objet de $\cB$ est 
+     nul. 
+   \item L'application canonique: 
+     \[
+-      \hom_\cA(X,Y) \to \hom_{\cA/\cB}(Q(X),Q(Y))
++      \hom_\cA(X,Y) \xrightarrow{Q} \hom_{\cA/\cB}(Q(X),Q(Y))
+     \]
+     est injective. 
+ \end{enumerate}
+@@ -976,7 +1003,7 @@
+       X 
+         & & Y 
+     }\]
+-    se compl`ete en un diagramme: $(s,t\in S$): 
++    se complète en un diagramme: $(s,t\in S$): 
+     \[\xymatrix{
+       & Z' \ar[d]_-t \\
+       & Z \ar[dl]_-s \ar[dr]^-f \\
+@@ -984,7 +1011,7 @@
+         & & Y 
+     }\]
+     où $f\circ t$ se factorise par $(X,s\circ t)$. 
+-  \item Assertion obtenue en renversant le sens de flèches dans (a) et en 
++  \item Assertion obtenue en renversant le sens des flèches dans (a) et en 
+     permutant $X$ et $Y$. 
+   \item Tout diagramme: 
+     \[\xymatrix{
+@@ -992,7 +1019,7 @@
+         & N \ar[r]^-g 
+         & Y 
+     }\]
+-    où $g\circ f=0$ et où $N$ est un objet de $\cB$, se complète en un 
++    \PrintPage{286}où $g\circ f=0$ et où $N$ est un objet de $\cB$, se complète en un 
+     diagramme: 
+     \[\xymatrix{
+       & N' \ar[d]^-i \\
+@@ -1000,7 +1027,7 @@
+         & N \ar[r]^-g 
+         & Y 
+     }\]
+-    où $f=i\circ h$ et où $g\circ i=0$. 
++    où $N'$ est un objet de $\cB$, $f=i\circ h$ et $g\circ i=0$. 
+   \item Assertion obtenue en changeant le sens des flèches dans (c) et en 
+     permutant $X$ et $Y$. 
+   \item L'application canonique: 
+@@ -1030,9 +1057,9 @@
+ De même, les deux assertions suivantes sont équivalentes: 
+ \begin{enumerate}[(a)']
+   \item Pour tout objet $Y$ de $\cA$, l'application canonique: 
+-    \[\xymatrix{
+-      \hom_\cA(X,Y) \ar[r]^-Q 
+-        & \hom_{\cA/\cB}(Q(X),Q(Y)) 
++    \PrintPage{287}\[\xymatrix{
++      \hom_\cA(Y,X) \ar[r]^-Q 
++        & \hom_{\cA/\cB}(Q(Y),Q(X)) 
+     }\]
+     est un isomorphisme. 
+   \item Tout morphisme d'un objet de $\cB$ dans $X$ est nul. 
+@@ -1065,7 +1092,7 @@
+ 
+ \begin{definition}\label{VIII:2-6-1}
+ Deux sous-catégories triangulées $\cN$ et $\cN'$ d'une catégorie 
+-triangulée $\cA$ sont dites \emph{orthagonales} si pour tout objet $X$ de 
++triangulée $\cA$ sont dites \emph{orthogonales} si pour tout objet $X$ de 
+ $\cN$ et tout objet $Y$ de $\cN'$, on a: 
+ \[
+   \hom_\cA(X,Y) = 0 
+@@ -1082,7 +1109,7 @@
+ Soit $\cN$ une sous-catégorie triangulée d'une catégorie triangulée 
+ $\cA$. La catégorie pleine $\cN^\bot$ (resp. $^\bot\cN$) engendrée par les 
+ objets $X$ de $\cA$ tels que pour tout objet $Y$ de $\cN$ on ait 
+-$\hom_\cA(Y,X)=0$ (resp. $\hom_\cA(X,Y)=0$), est une sous-catégorie épaisse 
++$\hom_\cA(Y,X)=0$ \PrintPage{288}(resp. $\hom_\cA(X,Y)=0$), est une sous-catégorie épaisse 
+ de $\cA$. La catégorie $\cN^\bot$ est appelée par abus de langage, 
+ l'orthogonale à droite de $\cN$. 
+ \end{proposition}
+@@ -1095,7 +1122,7 @@
+ 
+ \begin{proposition}\label{VIII:2-6-3}
+ Soit $\cB\subset\cA$, une sous-catégorie épaisse d'une catégorie 
+-triangulée $\cA$. La catégorie pleine engendrée par les objets libre à 
++triangulée $\cA$. La catégorie pleine engendrée par les objets libres à 
+ droite sur $\cA/\cB$ (resp. à gauche), n'est autre que l'orthogonale à 
+ droite (resp. à gauche) de $\cB$. 
+ \end{proposition}
+@@ -1107,8 +1134,8 @@
+ \begin{proposition}\label{VIII:2-6-4}
+ Soient $\cA$ une catégorie triangulée, $\cB$ une sous-catégorie 
+ épaisse de $\cA$, $\cB^\bot$ l'orthogonale à droite de $\cB$, $S(\cB)$, 
+-$s(\cB^\bot)$ les systèmes multiplicatifs correspondants, $Q$ et $Q^\bot$ les 
+-foncteurs canoniques de passage au quotient. Considérons pour un objet $x$ de 
++$S(\cB^\bot)$ les systèmes multiplicatifs correspondants, $Q$ et $Q^\bot$ les 
++foncteurs canoniques de passage au quotient. Considérons pour un objet $X$ de 
+ $\cA$, les propriétés suivantes: 
+ \begin{enumerate}[(i)]
+   \item $X$ s'envoie par un morphisme de $S(\cB)$ dans un objet de $\cB^\bot$. 
+@@ -1119,10 +1146,10 @@
+     $X$, admet un objet initial. 
+   \item La catégorie $\cB/X$ des objets de $\cB$ au-dessus de $X$, admet un 
+     objet final. 
+-  \item La catégorie $\cB^\bot/X$ des objets de $\cB^\bot$ au-dessous de $X$ 
++  \item La catégorie $X\backslash\cB^\bot$ des objets de $\cB^\bot$ au-dessous de $X$ 
+     admet un objet initial. 
+ \end{enumerate}
+-On a alors 
++\PrintPage{289}On a alors 
+ \[\xymatrix@=0.5cm{
+   & & & & (iv) \\
+   (i) \ar@{<=>}[r] 
+@@ -1154,7 +1181,7 @@
+ \end{enumerate}
+ \end{proposition}
+ 
+-La proposition est encore vraie lorsqu'on remplace le mot droite par le omt 
++La proposition est encore vraie lorsqu'on remplace le mot droite par le mot 
+ gauche. 
+ 
+ 
+@@ -1178,7 +1205,7 @@
+ Supposons vérifiées les propriétés des propositions \ref{VIII:2-6-5} et 
+ \ref{VIII:2-6-6}. Soient $i^\ast$ et $Q^\ast$ les adjoints à droite de $i$ et 
+ $Q$. De même soient $^\ast i^\bot$ et $^\ast Q^\bot$ les adjoints à gauche 
+-de $i^\bot$ et de $Q^\bot$. Tous ces foncteurs sont exactes. De plus: 
++de $i^\bot$ et de $Q^\bot$. Tous ces foncteurs \PrintPage{290}sont exacts. De plus: 
+ 
+ Il existe un isomorphisme fonctoriel 
+ $Q^\ast\circ Q\iso i^\bot\circ ^\ast i^\bot$ tel que le diagramme ci-après 
+@@ -1200,7 +1227,7 @@
+ }\]
+ 
+ Enfin, il existe un morphisme fonctoriel de degré $1$: 
+-$\partial:i^\bot\circ ^\ast i^\bot \to i\circ i^\ast$ tel que le le triangle 
++$\partial:i^\bot\circ ^\ast i^\bot \to i\circ i^\ast$ tel que le triangle 
+ suivant soit distingué $(\deg\partial=1$): 
+ \[\xymatrix{
+   i^\bot \circ ^\ast i^\bot \ar[rr]^-\partial 
+@@ -1209,7 +1236,7 @@
+ }\]
+ 
+ Un tel morphisme $\delta$ est unique et vérifie 
+-$\delta(T X_0) = - T \delta(X)$ ($X$ objet $q\circ q$, $T$ translation). 
++$\delta(T X) = - T \delta(X)$ ($X$ objet qcq, $T$ translation). 
+ \end{proposition}
+ 
+ 
+@@ -1226,6 +1253,8 @@
+ 
+ 
+ 
++\section*{Chapitre II: Applications aux catégories abéliennes}\PrintPage{291}
++
+ \section{Les catégories dérivées d'une catégorie abélienne}\label{VIII:3}
+ 
+ 
+@@ -1234,10 +1263,10 @@
+ 
+ \subsection{Les catégories dérivées}\label{VIII:3-1}
+ 
+-On utilise les notations du \ref{VIII:1-2-3}. On utilisera de plus les 
++On utilise les notations du chapitre~1, \S~1, n\textsuperscript{o}~\hyperref[VIII:1-2-2]{2.2}. On utilisera de plus les 
+ notations suivantes: 
+ 
+-\subsubsection{Notations}\label{VIII:3-1-1}
++\subsubsection{Notation}\label{VIII:3-1-1}
+ 
+ Soit $\cA$ une catégorie abélienne. On pose: 
+ \begin{align*}
+@@ -1261,7 +1290,7 @@
+ }\]
+ sont pleinement fidèles. 
+ 
+-Les foncteurs naturels: 
++\PrintPage{292}Les foncteurs naturels: 
+ \begin{align*}
+   \eD^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{+,b}(\cA)/\eK^{+,\varnothing}(\cA) \\
+   \eD^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{-,b}(\cA) / \eK^{-,\varnothing}(\cA) 
+@@ -1298,19 +1327,19 @@
+ \[
+   D : \eC(\cA) \to \eD(\cA) \text{.}
+ \]
+-La ``restriction'' de $D$ à la sous-catégorie pleine $\cA$ de $\eC(\cA)$ 
+-sera encore noté $D$. Le foncteur $D$ restrient à $\cA$ est pleinement 
++\PrintPage{293}La ``restriction'' de $D$ à la sous-catégorie pleine $\cA$ de $\eC(\cA)$ 
++sera encore notée $D$. Le foncteur $D$ restreint à $\cA$ est pleinement 
+ fidèle. Le foncteur $D$ se factorise d'une manière unique par $\eK(\cA)$. 
+ Soient $X$ et $Y$ deux objets de $\cA$. 
+ 
+-On vérifie sans difficulté que pour tout $m\geqslant 0$, les groupes: 
++On vérifie sans difficulté que pour tout $m>0$, les groupes: 
+ \[
+   \hom_{\eD(\cA)}(D(X),T^{-m} D(Y)) \qquad \text{($T$ est le foncteur translation)} 
+ \]
+ sont nuls. La dimension cohomologique de $\cA$ sera le plus petit des entiers 
+ $n$ tels que pour tout $m>n$ on ait: 
+ \[
+-  \hom_{\eD(\cA)}(D(X),T^m D(Y)) = 0 \qquad\text{pout tout couple $X,Y$ d'objets de $\cA$.} 
++  \hom_{\eD(\cA)}(D(X),T^m D(Y)) = 0 \qquad\text{pour tout couple $X,Y$ d'objets de $\cA$.} 
+ \]
+ S'il n'y a pas de tels entiers, on dira que la dimension cohomologique de $\cA$ 
+ est infinie. 
+@@ -1333,13 +1362,13 @@
+ \[
+   \eI^+(\cA) \to \eD^+(\cA)  \text{.}
+ \]
+-Le foncteur quasi-inverse est un adjoint à droite de $Q^+$. 
++\PrintPage{294}Le foncteur quasi-inverse est un adjoint à droite de $Q^+$. 
+ \end{proposition}
+ 
+ Si de plus $\cA$ est de dimension cohomologique finie, l'assertion 
+ précédente est encore vraie lorsqu'on y supprime les exposants $+$. 
+ 
+-On a énoncé analogue concernant les projectifs. 
++On a un énoncé analogue concernant les projectifs. 
+ 
+ La démonstration de la proposition \ref{VIII:3-1-4} s'appuie sur 
+ \ref{VIII:2-6-4}. 
+@@ -1369,12 +1398,12 @@
+ \begin{proposition}\label{VIII:3-1-5}
+ Il existe un et un seul foncteur: 
+ \[
+-  \Pi:\eE(\cA) \to \mathsf{TrD}(\cA) 
+-\]
+-de la forme ($\deg \delta(S)=1$): 
++  \pi:\eE(\cA) \to \mathsf{TrD}(\cA) 
++\]
++\PrintPage{295}de la forme ($\deg \delta(S)=1$): 
+ \[
+ (S=0 \to X^\bullet \to Y^\bullet \to Z^\bullet \to 0) 
+-\mapsto 
++\leadsto 
+ \xymatrix{
+   & D(Z^\bullet) \ar[dl]_-{\delta(S)} \\
+   D(X^\bullet) \ar[rr]^-{D(u)} 
+@@ -1394,13 +1423,13 @@
+ \[
+   \h^0:\eK(\cA) \to \cA 
+ \]
+-se factorise d'une manière unique par un foncteur que nous noterns encore 
++se factorise d'une manière unique par un foncteur que nous noterons encore 
+ $\h^0$ 
+ \[
+   \h^0:\eD(\cA) \to \cA \text{.}
+ \]
+ Sur $\eD(\cA)$ le foncteur $\h^0$ et ses translatés $\h^i$ forment un 
+-système conservatif, i.e. un morphisme $f:X^\bullet \to Y^\bullet$ et un 
++système conservatif, i.e. un morphisme $f:X^\bullet \to Y^\bullet$ est un 
+ isomorphisme si et seulement si pour tout entier $i$ 
+ \[
+   \h^i(f):\h^i(X) \to \h^i(Y) 
+@@ -1416,7 +1445,7 @@
+ Un morphisme $f:X^\bullet \to Y^\bullet$ de $\eC(\cA)$ (resp. de $\eK(\cA)$) 
+ est appelé un \emph{quasi-isomorphisme} lorsque pour tout entier $i$ 
+ \[
+-  \h^i(f):\h^i(X) \to \h^i(Y) 
++  \h^i(f):\h^i(X^\bullet) \to \h^i(Y^\bullet) 
+ \]
+ est un isomorphisme. 
+ \end{definition}
+@@ -1428,9 +1457,9 @@
+ 
+ 
+ 
+-\begin{definition}\label{VIII:3-1-8}
++\PrintPage{296}\begin{definition}\label{VIII:3-1-8}
+ Soient $\sigma$ un ensemble d'objets de $\cA$, $X^\bullet$ un objet de 
+-$\eC(\cA)$ (resp. $\eK(\cA)$). Une re\'solution droite (reps. gauche) de type 
++$\eC(\cA)$ (resp. de $\eK(\cA)$). Une re\'solution droite (resp. gauche) de type 
+ $\sigma$ de $X^\bullet$, est un quasi-isomorphisme $X^\bullet \to V^\bullet$ 
+ (resp. $V^\bullet \to X^\bullet$) où $V^\bullet$ est un complexe dont tous 
+ les objets appartiennent à $\sigma$. On dira \emph{résolution injective} 
+@@ -1439,7 +1468,7 @@
+ \end{definition}
+ 
+ De manière générale, on se permettra de supprimer les mots ``droite'' ou 
+-``gauche'' lorsqu'aucune ambiguité n'en résultera. 
++``gauche'' lorsqu'aucune ambiguïté n'en résultera. 
+ 
+ 
+ 
+@@ -1458,7 +1487,7 @@
+       Y^0 &\to Y^1 \to \cdots \to Y^{n-1} \to Y^n \to 0 \\
+       \text{(resp. } 0 &\to Y^n \to Y^{n-1} \to \cdots \to Y^1 \to Y^0 \text{)} 
+     \end{align*}
+-    d'objets de $\cA$ ou pout tout $i$, $0\leqslant i\leqslant n-1$, $Y^i$ est 
++    d'objets de $\cA$ où pour tout $i$, $0\leqslant i\leqslant n-1$, $Y^i$ est 
+     un objet de $\sigma$, l'objet $Y^n$ soit un objet de $\sigma$. Alors tout 
+     objet de $\eC(\cA)$ admet une résolution droite (resp. gauche) de type 
+     $\sigma$. 
+@@ -1474,7 +1503,7 @@
+ 
+ 
+ 
+-\subsection{Etude des $\ext$}\label{VIII:3-2}
++\subsection{Etude des $\ext$}\label{VIII:3-2}\PrintPage{297}
+ 
+ Soient $X^\bullet$ et $Y^\bullet$ deux objets de $\eC(\cA)$ (resp. $\eK(\cA)$) 
+ et $D:\eC(\cA) \to \eD(\cA)$ (resp. $Q:\eK(\cA) \to \eD(\cA)$) le foncteur 
+@@ -1487,7 +1516,7 @@
+ \begin{definition}\label{VIII:3-2-1}
+ On appelle \emph{$i$-ème hyper-ext} et on note: 
+ \[
+-  (X^\bullet,Y^\bullet)\mapsto \ext^i(X^\bullet,Y^\bullet) 
++  (X^\bullet,Y^\bullet)\leadsto \ext^i(X^\bullet,Y^\bullet) 
+ \]
+ le foncteur: $\hom_{\eD(\cA)}(D(X^\bullet),T^i D(Y^\bullet))$ (resp. 
+ $\hom_{\eD(\cA)}(Q(X^\bullet),T^i Q(Y^\bullet))$). 
+@@ -1532,24 +1561,24 @@
+ 
+ 
+ 
+-\begin{proposition}\label{VIII:3-2-3}
++\PrintPage{298}\begin{proposition}\label{VIII:3-2-3}
+ 1. Il existe des isomorphismes de foncteurs: 
+ \[\xymatrix{
+   \ext^0(X^\bullet,Y^\bullet) = \hom_{\eD(\cA)}(Q(X^\bullet),Q(Y^\bullet)) \ar[r]^-\sim 
+-    & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) \ar[r]^-\sim 
+-    & \\
++    & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) \ar[dl]^-\sim 
++      \\
+   \varinjlim_{Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(X^\bullet,-) \ar[r]^-\sim 
+     & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ \times Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(-,-) \text{.}
+ }\]
+-Si $X^\bullet$ est un objet de $\eK^-(\cA)$: 
++2. Si $X^\bullet$ est un objet de $\eK^-(\cA)$: 
+ \[
+   \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{(\mathsf{Qis}^-/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) 
+ \]
+ Si $Y^\bullet$ est un objet de $\eK^+(\cA)$: 
+ \[
+-  \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(X^\bullet,-) 
+-\]
+-Si $X^\bullet$ est un objet de $\eK^-(\cA)$ et si $Y^\bullet$ est un 
++  \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}^+} \hom_{\eK(\cA)}(X^\bullet,-) 
++\]
++3. Si $X^\bullet$ est un objet de $\eK^-(\cA)$ et si $Y^\bullet$ est un 
+ objet de $\eK^b(\cA)$: 
+ \[
+   \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}^b} \hom_{\eK(\cA)}(X^\bullet,-) 
+@@ -1559,9 +1588,9 @@
+ \[
+   \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{(\mathsf{Qis}^b/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) 
+ \]
+-Si la catégorie $\cA$ possède suffisamment d'injectif et si 
++4. Si la catégorie $\cA$ possède suffisamment d'injectifs et si 
+ $Y^\bullet$ est un objet de $\eK^+(\cA)$, $Y^\bullet$ admet une 
+-résolution injective et une seule (à isomorphisme près dans 
++résolution injective \PrintPage{299}et une seule (à isomorphisme près dans 
+ $\eK^+(\cA)$): 
+ \[
+   Y^\bullet \to I(Y^\bullet) 
+@@ -1571,7 +1600,7 @@
+   \ext^0(X^\bullet,Y^\bullet) \iso \hom_{\eK(\cA)}(X^\bullet,I(Y^\bullet)) \text{.}
+ \]
+ On a de même un énoncé analogue pour les projectifs. 
+-Si la catégorie $\cA$ admet suffisamment d'injectifs et si $\cA$ est 
++5. Si la catégorie $\cA$ admet suffisamment d'injectifs et si $\cA$ est 
+ de \emph{dimension cohomologique finie}, tout objet $Y^\bullet$ de 
+ $\eK(\cA)$ admet une résolution injective et une seule: 
+ \[
+@@ -1597,7 +1626,7 @@
+ 
+ 
+ 
+-\section{Les foncteurs dérivés}\label{VIII:4}
++\section{Les foncteurs dérivés}\label{VIII:4}\PrintPage{300}
+ 
+ 
+ 
+@@ -1617,7 +1646,7 @@
+ \begin{definition}\label{VIII:4-1-1}
+ Soient $\cC$ et $\cC'$ deux catégories graduées (on désigne par $T$ le 
+ foncteur de translation de $\cC$ et de $\cC'$), $F$ et $G$ deux foncteurs 
+-gradués de $\cC$ dans $\cC'$. Un \emph{morphisme de foncteurs gradués} et 
++gradués de $\cC$ dans $\cC'$. Un \emph{morphisme de foncteurs gradués} est 
+ un morphisme de foncteurs: 
+ \[
+   u:F\to G 
+@@ -1635,13 +1664,13 @@
+ 
+ Soient $\cC$ et $\cC'$ deux catégories triangulées. On désigne par 
+ $\mathsf{Fex}(\cC,\cC')$ la catégorie des foncteurs exacts de $\cC$ dans 
+-$\cC'$, le morphismes entre deux foncteurs étant les morphismes de foncteurs 
++$\cC'$, les morphismes entre deux foncteurs étant les morphismes de foncteurs 
+ gradués. 
+ 
+-Soient $\cA$ et $\cB$ deux catégories abéliennes de 
++Soient $\cA$ et $\cB$ deux catégories abéliennes et 
+ $\Phi:\eK^\ast(\cA)\to \eK^{\ast'}(\cB)$ un foncteur exact ($\ast$ et $\ast'$ 
+ désignent l'un des signes $+$, $-$, $b$, ou $v$ ``vide''). Le foncteur 
+-canonique $Q:\eK^\ast(\cA)\to \eD^\ast(\cA)$ nous donne, par composition, un 
++canonique \PrintPage{301}$Q:\eK^\ast(\cA)\to \eD^\ast(\cA)$ nous donne, par composition, un 
+ foncteur 
+ \[\xymatrix{
+   \mathsf{Fex}(\eD^\ast(\cA),\eD^{\ast'}(\cB)) \ar[r] 
+@@ -1652,8 +1681,8 @@
+ $\%$ (resp. $\%'$): 
+ $\mathsf{Fex}(\eD^\ast(\cA),\eD^{\ast'}(\cB)) \to \mathsf{Ab}$: 
+ \begin{align*}
+-  \Psi  &\mapsto \hom(Q'\circ \Phi,\Psi\circ Q) \\
+-  (\text{resp. }\Psi &\mapsto \hom(\Psi\circ Q,Q'\circ \Phi)\text{ ).} 
++  \Psi  &\leadsto \hom(Q'\circ \Phi,\Psi\circ Q) \\
++  (\text{resp. }\Psi &\leadsto \hom(\Psi\circ Q,Q'\circ \Phi)\text{ ).} 
+ \end{align*}
+ 
+ 
+@@ -1661,12 +1690,12 @@
+ 
+ 
+ \begin{definition}\label{VIII:4-1-2}
+-On dira que $\Phi$ admet un \emph{functeur dérivé total} à droite (resp. 
++On dira que $\Phi$ admet un \emph{foncteur dérivé total} à droite (resp. 
+ à gauche) si le foncteur $\%$ (resp. $\%'$) est représentable. Un objet 
+-représentant le foncteur $\%$ (resp. $\%'$) ser appelé foncteur dérivé 
++représentant le foncteur $\%$ (resp. $\%'$) sera appelé foncteur dérivé 
+ total à droite (resp. à gauche) de $\Phi$ et sera noté 
+ $\eR \Phi$ (resp. $\eL \Phi$).\footnote{Une définition plus maniable (et en 
+-practique équivalente) est donnée dans \cite[XVII 1.2]{sga4}.}
++pratique équivalente) est donnée dans \PrintCite{SGA~4 XVII 1.2}{\cite[XVII 1.2]{sga4}}.}
+ \end{definition}
+ 
+ 
+@@ -1688,9 +1717,9 @@
+     & \mathsf{Foco}(\eK^\ast(\cA),\cB) 
+ }\]
+ ($\mathsf{Foco}(-,-)$ désigne la catégorie des foncteurs cohomologiques) 
+-d'où un foncteur $\%$ (resp. $\%'$) 
+-$\mathsf{Foco}(\eD^\ast(\cA),\cB) \to \mathsf{Ab}$, $G\mapsto \hom(F,G\circ Q)$ 
+-(resp. $G\mapsto \hom(G\circ Q,F)$). 
++d'où un \PrintPage{302}foncteur $\%$ (resp. $\%'$) 
++$\mathsf{Foco}(\eD^\ast(\cA),\cB) \to \mathsf{Ab}$, $G\leadsto \hom(F,G\circ Q)$ 
++(resp. $G\leadsto \hom(G\circ Q,F)$). 
+ 
+ 
+ 
+@@ -1701,7 +1730,7 @@
+ à droite (resp. à gauche) si le foncteur $\%$ (resp. $\%'$) est 
+ représentable. Un objet représentant le foncteur $\%$ (resp. $\%'$) sera 
+ appelé foncteur dérivé cohomologique à droite (resp. à gauche) et 
+-sera noté $\eR F$ (resp. $\eL F$). 
++sera noté $\mathrm{R} F$ (resp. $\mathrm{L} F$). 
+ \end{definition}
+ 
+ 
+@@ -1715,13 +1744,13 @@
+ \[
+   \h^0{}\circ \eK^+ f:\eK^+(\cA) \to \cB 
+ \]
+-sera noté $\eR^+ f$. Lorsqu'aucune confusion n'en résultera le foncteur 
+-$\eR^+ f\circ T^i$ ($T$ est le foncteur de translation) sera noté: 
+-$\eR^i f$. Le foncteur dérivé cohomologique à droite du foncteur 
+-$\h{}\circ \eK f$ sera noté $\eR f$. Lorsqu'aucune confusion n'en résultera 
+-le foncteur $\eR f\circ T^i$ sera noté $\eR^i f$. 
+-
+-On définit de même les foncteurs $\eL^- f$, $\eL f$, $\eL^i f$. 
++sera noté $\mathrm{R}^+ f$. Lorsqu'aucune confusion n'en résultera le foncteur 
++$\mathrm{R}^+ f\circ T^i$ ($T$ est le foncteur de translation) sera noté: 
++$\mathrm{R}^i f$. Le foncteur dérivé cohomologique à droite du foncteur 
++$\h^0{}\circ \eK f$ sera noté $\mathrm{R} f$. Lorsqu'aucune confusion n'en résultera 
++le foncteur $\mathrm{R} f\circ T^i$ sera noté $\mathrm{R}^i f$. 
++
++On définit de même les foncteurs $\mathrm{L}^- f$, $\mathrm{L} f$, $\mathrm{L}^i f$. 
+ 
+ 
+ 
+@@ -1732,14 +1761,14 @@
+ Ces définitions contiennent, ainsi que nous le verrons dans le numéro 
+ suivant, la définition classique des foncteurs dérivés lorsque les 
+ catégories ont suffisamment d'injectifs ou de projectifs et que les complexes 
+-sont convenablement limités. Elles sont cependant plus générales. Mais 
++sont convenablement limités. Elles sont cependant plus \PrintPage{303}générales. Mais 
+ sans autres hypothèses elles sont peu maniables. Par exemple, soit 
+ $f:\cA\to \cB$ un foncteur additif entre deux catégories abéliennes. 
+ Supposons que les foncteurs $\eR^+ f$ et $\eR f$ existent. Je ne sais pas 
+-d\'montrer que $\eR f$ induit sur $\eD^+(\cA)$ le foncteur $\eR^+ f$. Supposons 
+-de plus que le foncteur $\eR^+ f$ (dérivé cohomologique) existe. Je ne sais 
++démontrer que $\eR f$ induit sur $\eD^+(\cA)$ le foncteur $\eR^+ f$. Supposons 
++de plus que le foncteur $\mathrm{R}^+ f$ (dérivé cohomologique) existe. Je ne sais 
+ pas démontrer que le foncteur $\h^0{}\circ \eR^+ f$ est isomorphe au foncteur 
+-$\eR^+ f$. Cependant dans la pratique ces propriétés seront vérifées. 
++$\mathrm{R}^+ f$. Cependant dans la pratique ces propriétés seront vérifiées. 
+ 
+ 
+ 
+@@ -1758,28 +1787,28 @@
+ 
+ \begin{proposition}\label{VIII:4-2-1}
+ Les hypothèses sont celles de la définition \ref{VIII:4-1-4}. Supposons 
+-en outre que $\cA$ soit un $\sU$-catégorie, où $\sU$ est un universe tel 
+-que l'ensemble $\dZ$ des entiers rationnel soit un élément de $\sU$, telle 
++en outre que $\cA$ soit une $\sU$-catégorie, où $\sU$ est un univers tel 
++que l'ensemble $\dZ$ des entiers rationnels soit un élément de $\sU$, telle 
+ que l'ensemble des objets de $\cA$ soit un élément de $\sU$. Supposons 
+ de plus que la catégorie $\cB$ soit la catégorie des $\sU$-groupes 
+-abéliens ou plus générelement la catégorie des faisceaux de 
++abéliens ou plus généralement la catégorie des faisceaux de 
+ $\sU$-groupes abéliens sur un $\sU$-site quelconque. (Un $\sU$-site est une 
+-$\sU$-catégorie, dont l'ensemble des onjets est un élément de $\sU$, 
++$\sU$-catégorie, dont l'ensemble des objets est un élément de $\sU$, 
+ munie d'une topologie.) Le foncteur $F$ admet un foncteur dérivé 
+ cohomologique à droite. Ce foncteur se calcule de la manière suivante: 
+ 
+ Soient $X$ un objet de $\eD^\ast(\cA)$, $\underline X$ l'objet de 
+ $\eK^\ast(\cA)$ au-dessus de $X$. On a alors un isomorphisme fonctoriel: 
+ \[
+-  \eR F(X) = \varinjlim_{\underline X/\mathsf{Qis}^\ast} F(-) \text{.}
++  \mathrm{R} F(X) = \varinjlim_{\underline X/\mathsf{Qis}^\ast} F(-) \text{.}
+ \]
+ \end{proposition}
+ 
+-En particulier soit $f:\cA\to \cB$ un foncteur additif. Les foncteurs 
+-$\eR f$ et $\eR^+ f$ existent et se calculent de la manière indiquée 
+-ci-dessus. Le foncteur $\eR f$ induit sur $\eD^+(\cA)$ le foncteur 
+-$\eR^+ f$. Comme aucune confusion ne peut alors en résulter, nous 
+-emploierons la notation $\eR^i f$. 
++\PrintPage{304}En particulier soit $f:\cA\to \cB$ un foncteur additif. Les foncteurs 
++$\mathrm{R} f$ et $\mathrm{R}^+ f$ existent et se calculent de la manière indiquée 
++ci-dessus. Le foncteur $\mathrm{R} f$ induit sur $\eD^+(\cA)$ le foncteur 
++$\mathrm{R}^+ f$. Comme aucune confusion ne peut alors en résulter, nous 
++emploierons la notation $\mathrm{R}^i f$. 
+ 
+ 
+ 
+@@ -1792,7 +1821,7 @@
+ à faire sur la catégorie $\cB$, pour assurer la validité de la 
+ proposition \ref{VIII:4-2-1} sont des hypothèses d'existence et d'exactitude 
+ des limites inductives suivant les $\sU$-catégories pseudo-filtrantes, dont 
+-les ensembles d'objet sont éléments de $\sU$. La proposition 
++les ensembles d'objets sont éléments de $\sU$. La proposition 
+ \ref{VIII:4-2-1} introduit une dissymétrie entre les foncteurs dérivés 
+ droits et les foncteurs dérivés gauches tout au moins dans la pratique. 
+ 
+@@ -1803,7 +1832,7 @@
+ \begin{theorem}\label{VIII:4-2-3} % labelled 4.2.2 in original
+ Les données sont celles de la définition \ref{VIII:4-1-2}. On se donne de 
+ plus une sous-catégorie triangulée pleine de $\eK^\ast(\cA)$: $\cC$, et on 
+-d\'signe par $\cN$ la sous-catégorie triangulée pleine des objets de $\cC$ 
++désigne par $\cN$ la sous-catégorie triangulée pleine des objets de $\cC$ 
+ qui sont acycliques. Supposons que 
+ \begin{enumerate}[(1)]
+   \item Tout objet de $\cN$ soit transformé par $\Phi$ en objet acyclique 
+@@ -1814,7 +1843,7 @@
+ \begin{enumerate}[a)]
+   \item Alors $\Phi$ admet un foncteur dérivé total à droite (resp. 
+     à gauche). 
+-  \item Le fonteur $\eR \Phi$ (resp. $\eL \Phi$) s'obtient de la manière 
++  \item \PrintPage{305}Le foncteur $\eR \Phi$ (resp. $\eL \Phi$) s'obtient de la manière 
+     suivante: 
+     
+     La restriction du foncteur 
+@@ -1822,16 +1851,16 @@
+     s'annule sur les objets de $\cN$, donc se factorise par $\cC/\cN$. On 
+     obtient ainsi un foncteur $\Phi':\cC/\cN\to \eD^{\ast'}(\cB)$. Mais le 
+     foncteur naturel: $\cC/\cN\to \eD^\ast(\cA)$ est une équivalence de 
+-    catégories (th\'or\`me \ref{VIII:2-4-2}). D'où en composant avec le 
++    catégories (théorème \ref{VIII:2-4-2}). D'où en composant avec le 
+     foncteur quasi-inverse le foncteur $\eR\Phi$ (resp. $\eL \Phi$). 
+   \item Soit $X$ un objet de $\eK^\ast(\cA)$. Soient $Y$ un objet de $\cC$ et 
+     $X\to Y$ (resp. $Y\to X$) un quasi-isomorphisme. L'objet 
+     $\eR\Phi\circ Q(X)$ (resp. $\eL \Phi\circ Q(X)$) est isomorphe à 
+-    $Q\circ \Phi(Y)$. 
+-  \item Le foncteur $X\mapsto \eR\Phi\circ Q(X)$ (resp. 
+-    $X\mapsto \eL \Phi\circ Q(X)$) est isomorphe au foncteur: 
+-    $X\mapsto \varinjlim_{X/\mathsf{Qis}^\ast} Q\circ\Phi(-)$ (resp. 
+-    $X\mapsto \varinjlim_{\mathsf{Qis}^\ast/X} Q\circ \Phi(-)$). 
++    $Q'\circ \Phi(Y)$. 
++  \item Le foncteur $X\leadsto \eR\Phi\circ Q(X)$ (resp. 
++    $X\leadsto \eL \Phi\circ Q(X)$) est isomorphe au foncteur: 
++    $X\leadsto \varinjlim_{X/\mathsf{Qis}^\ast} Q'\circ\Phi(-)$ (resp. 
++    $X\leadsto \varprojlim_{\mathsf{Qis}^\ast/X} Q'\circ \Phi(-)$). 
+   \item Le foncteur $\h^0{}\circ \Phi:\eK^\ast(\cA)\to \cB$, admet un 
+     foncteur dérivé cohomologique à droite (resp. à gauche) qui n'est 
+     autre que le foncteur $\h^0{}\circ\eR\Phi$ (resp. $\h^0{}\circ \eL\Phi$). 
+@@ -1847,8 +1876,8 @@
+ précédent, et que $\cA$ possède suffisamment d'injectifs (resp. de 
+ projectifs). Alors le théorème \ref{VIII:4-2-3} s'applique en prenant pour 
+ $\cC$ la catégorie des complexes injectifs (resp. projectifs). Supposons de 
+-plus que $\cA$ soit de dimension cohomologique finie, alors le théorème 
+-s'applique, sans restriction sur $\ast$, en prenant sur $\cC$ la catégorie 
++plus que $\cA$ soit de dimension cohomologique finie, alors le théorème \ref{VIII:4-2-3} 
++s'applique, sans restriction sur $\ast$, en prenant pour $\cC$ la catégorie 
+ des complexes injectifs (resp. projectifs). 
+ \end{corollary}
+ 
+@@ -1856,22 +1885,22 @@
+ 
+ 
+ 
+-\begin{definition}\label{VIII:4-2-5} % originally 2.4
++\PrintPage{306}\begin{definition}\label{VIII:4-2-5} % originally 2.4
+ Soient $\cA$ et $\cB$ deux catégories abéliennes et $f:\cA\to \cB$ un 
+ foncteur additif. 
+ 
+ On dira que $f$ est de \emph{dimension cohomologique finie} à droite (resp. 
+-à gauche) si $\eR^+ f$ (resp. $\eL^- f$) existe et s'il existe un entier 
+-$m\geqslant 0$ tel que pour tout entier $n>m$, $\eR^n f$ (resp. 
+-$\eL^{-n} f$) soit nul sur les objets provenant de $\cA$ par le foncteur $D$. 
++à gauche) si $\mathrm{R}^+ f$ (resp. $\mathrm{L}^- f$) existe et s'il existe un entier 
++$m\geqslant 0$ tel que pour tout entier $n>m$, $\mathrm{R}^n f$ (resp. 
++$\mathrm{L}^{-n} f$) soit nul sur les objets provenant de $\cA$ par le foncteur $D$. 
+ La \emph{dimension cohomologique} à droite (resp. à gauche) de $f$ est 
+ alors le plus petit des entiers $m$ possédant la propriété ci-dessus. Si 
+-$\eR^+ f$ (resp. $\eL^- f$) existe et si $f$ n'est pas de dimension 
++$\mathrm{R}^+ f$ (resp. $\mathrm{L}^- f$) existe et si $f$ n'est pas de dimension 
+ cohomologique finie, on dira que $f$ est de dimension cohomologique infinie. 
+ 
+ Un objet $X$ de $\cA$ sera dit \emph{$f$-acyclique} à droite (resp. à 
+-gauche) si pour tout entier $n>0$, $\eR^n f(D(X)) = 0$ (resp. 
+-$\eL^{-n} f(D(X))=0$). 
++gauche) si pour tout entier $n>0$, $\mathrm{R}^n f(D(X)) = 0$ (resp. 
++$\mathrm{L}^{-n} f(D(X))=0$). 
+ \end{definition}
+ 
+ 
+@@ -1887,16 +1916,16 @@
+     $\in\operatorname{Ob}{\eK^-(\cA)}$) d'objets de $\sigma$, est transformé 
+     par $f$ en complexe acyclique. 
+   \item Tout objet $X$ de $\cA$ s'injecte dans (resp. est quotient de) un objet 
+-    de $\sigma$. Les hypothèses du théorème \ref{VIII:2-4-3} sont 
++    de $\sigma$. Les hypothèses du théorème \ref{VIII:4-2-3} sont 
+     vérifiées en prenant $\ast=+$ (resp. $\ast=-$) et en prenant pour 
+-    catégorie $\cC$, la catégorie des complexes dont les objets et tout 
++    catégorie $\cC$, la catégorie des complexes dont les objets en tout 
+     degré sont des éléments de $\sigma$. Les éléments de $\sigma$ 
+     sont des objets $f$-acycliques à droite (resp. à gauche). 
+ \end{enumerate}
+ 
+-Si de plus $f$ est de dimension cohomologique finie à droite (resp. à 
++\PrintPage{307}Si de plus $f$ est de dimension cohomologique finie à droite (resp. à 
+ gauche), l'ensemble des objets $f$-acycliques à droite (resp. à gauche) 
+-[pssède en plus des propriétés (1) et (2) ci-dessus, la propriété 
++possède en plus des propriétés (1) et (2) ci-dessus, la propriété 
+ (2) de proposition \ref{VIII:3-1-9}. Le Théorème \ref{VIII:4-2-3} 
+ s'applique alors au foncteur $\eK f$ en prenant pour catégorie $\cC$ la 
+ catégorie des complexes dont les objets sont $f$-acycliques à droite 
+@@ -1931,14 +1960,14 @@
+ \]
+ Ces accouplements, appliqués aux foncteurs dérivés cohomologiques, ne 
+ sont autres, par définition, que les produits de Yoneda. Les propriétés 
+-de ces produits se déduisent immédiatement de cette définition. Nous ne 
++\PrintPage{308}de ces produits se déduisent immédiatement de cette définition. Nous ne 
+ les développerons pas ici. 
+ 
+ Soient $\cA$, $\cA'$, $\cA''$ trois catégories abéliennes et 
+ $f:\cA\to \cA'$, $g:\cA'\to \cA''$ deux foncteurs additifs. Supposons que les 
+ foncteurs $\eR^+ f$ et $\eR^+ g$ existent. Je ne sais pas en déduire que le 
+ foncteur $\eR^+ g\circ f$ existe et même si ce dernier foncteur existe, il 
+-n'est probablement pas vraie en général que l'on ait la formule: 
++n'est probablement pas vrai en général que l'on ait la formule: 
+ \[\xymatrix{
+   \eR^+ g\circ f\ar[r]^-\sim 
+     & \eR^+ g \circ \eR^+ f 
+@@ -1961,23 +1990,23 @@
+ }\]
+ \end{proposition}
+ 
+-Enoncé analogues pour les foncteurs dérivés gauches. 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-\section{Exemples}\label{VIII:6} % originally chapter 2, section 3
++Enoncé analogue pour les foncteurs dérivés gauches. 
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++\section{Exemples}\label{VIII:6}\PrintPage{309} % originally chapter 2, section 3
+ 
+ 
+ 
+@@ -1992,14 +2021,14 @@
+ 
+ Soit $\cA$ une catégorie abélienne, possédant suffisamment d'injectifs. 
+ 
+-Le foncteur: $Y\mapsto \hom^\bullet(X^\bullet,Y^\bullet)$ (\ref{VIII:1-3}) 
++Le foncteur: $Y^\bullet\leadsto \hom^\bullet(X^\bullet,Y^\bullet)$ (\ref{VIII:1-3}) 
+ où $X^\bullet$ est un objet de $\eK(\cA)$ et $Y^\bullet$ un objet de 
+ $\eK^+(\cA)$, admet un foncteur dérivé total à droite 
+ (Corollaire \ref{VIII:4-2-3-1}) qui sera noté $\rhom^\bullet(X^\bullet,-)$.  
+ Soit $Y$ un objet de $\eD^+(\cA)$ le foncteur 
+ \begin{align*}
+-  \eK(\cA) &\to \eD(\mathsf{Ab}) \\
+-  X^\bullet &\mapsto \rhom^\bullet(X^\bullet,Y) 
++  \eK(\cA)^\circ &\to \eD(\mathsf{Ab}) \\
++  X^\bullet &\leadsto \rhom^\bullet(X^\bullet,Y) 
+ \end{align*}
+ est exact et s'annule sur les complexes acycliques, d'où un bi-foncteur 
+ exact 
+@@ -2013,7 +2042,7 @@
+ $\mathsf{Rhom}^\bullet$ se prolonge à $\eD(\cA)^\circ\times \eD(\cA)$ 
+ (loc. cit.). 
+ 
+-Si en outre $\cA$ possède suffisamment de projectifs on peut dériver le 
++Si en outre $\cA$ possède suffisamment de projectifs on peut \PrintPage{310}dériver le 
+ foncteur $\hom$ par rapport au premier argument. Les deux définitions 
+ co\"incident dans leur domaine commun de validité. 
+ 
+@@ -2029,9 +2058,9 @@
+ \subsection{\texorpdfstring{$\Tor$}{Tor} de faisceaux}\label{VIII:6-2}
+ 
+ Soient $E$ un site annelé (en particulier un espace topologique annelé) 
+-$\sA$ le faisceau d'anneaux et $\mathsf{Mod}(E)$ la catégorie des 
+-$\sA$-modules. Un objet $X$ de $\mathsf{Mod}(E)$ est dit 
+-\emph{$\sA$-plat} si pout toute suite exacte: 
++$\sA$ le faisceau d'anneaux et $\underline E$ la catégorie des 
++$\sA$-modules. Un objet $X$ de $\underline E$ est dit 
++\emph{$\sA$-plat} si pour toute suite exacte: 
+ \[\xymatrix{
+   0 \ar[r] 
+     & Y' \ar[r] 
+@@ -2042,25 +2071,25 @@
+ la suite: $0 \to Y'\otimes_\sA X \to Y\otimes_\sA X \to Y''\otimes_\sA X\to 0$ 
+ est exacte. Il existe suffisamment d'objets $\sA$-plats: les sommes directes 
+ d'objets $\sA_U$, où $U$ est un objet de $E$ et $\sA_U$ le faisceau 
+-$\sA$ ``prolongué par zéro en dehors de $U$.'' Le théorème 
++$\sA$ ``prolongé par zéro en dehors de $U$.'' Le théorème 
+ \ref{VIII:4-2-3} s'applique donc et on peut définir le foncteur 
+ \begin{align*}
+-  \eD^-(E,\sA) \times \eD^-(E,\sA) &\to \eD^-(E,\sA) \\
+-  (X,Y) &\mapsto X\lotimes Y 
++  \eD^-(\underline E) \times \eD^-(\underline E) &\to \eD^-(\underline E) \\
++  (X,Y) &\leadsto X\lotimes Y 
+ \end{align*}
+ produit tensoriel total, dérivé gauche du foncteur produit tensoriel. 
+ On définit ainsi en passant à la cohomologie les $\Tor_i^\sA(X,Y)$: 
+ hyper-tor locaux. 
+ 
+-La catégorie $\mathsf{Mod}(E)$ ayant suffisamment d'injectifs, on peut 
+-dériver le foncteur: $\hom^\bullet(X,Y)$: complexe des homomorphismes locaux,  
+-d'où $\mathsf{Rhom}(X,Y)$ ($X\in \eD$, $Y\in \eD^+$). 
+-
+-Soient $X$ et $Y$ deux objets de $\eD^-(E,\sA)$, $Z$ un objet de 
+-$\eD^+(E,\sA)$. Il existe un isomorphisme fonctoriel: 
+-\[\xymatrix{
+-  \hom_{\eD(E,\sA)}(X\lotimes Y,Z) \ar[r]^-\sim 
+-    &\hom_{\eD(E,\sA)}(X,\mathsf{Rhom}(Y,Z)) \text{.}
++\PrintPage{311}La catégorie $\underline E$ ayant suffisamment d'injectifs, on peut 
++dériver le foncteur: $\Hom^\bullet(X,Y)$: complexe des homomorphismes locaux,  
++d'où $\rHom(X,Y)$ ($X\in \eD$, $Y\in \eD^+$). 
++
++Soient $X$ et $Y$ deux objets de $\eD^-(\underline E)$, $Z$ un objet de 
++$\eD^+(\underline E)$. Il existe un isomorphisme fonctoriel: 
++\[\xymatrix{
++  \hom_{\eD(\underline E)}(X\lotimes Y,Z) \ar[r]^-\sim 
++    &\hom_{\eD(\underline E)}(X,\rHom(Y,Z)) \text{.}
+ }\]
+ 
+ 
+@@ -2077,31 +2106,31 @@
+ Soit $f:E\to E'$ une application d'espaces topologiques annelés. Le 
+ foncteur image réciproque: 
+ \[
+-  f^\ast:\mathsf{Mod}(E') \to \mathsf{Mod}(E) 
++  f^\ast:\underline{E}' \to \underline E 
+ \]
+ n'est pas nécessairement exact. Mais on sait définir des objets 
+ $f^\ast$-plats et il existe suffisamment de tels objets. On sait donc 
+ définir le foncteur $\eL^- f^\ast$. On a de même une formule de dualité: 
+ 
+-Soient $X$ un objet de $\eD^-(E,\sA)$ et $Y$ un objet de 
+-$\eD^+(E',\sA')$; il existe un isomorphisme fonctoriel: 
+-\[\xymatrix{
+-  \hom_{\eD(E',\sA')}(\eL^- f^\ast(X),Y) \ar[r]^-\sim 
+-    & \hom_{\eD(E,\sA)}(X,\eR^+ f_\ast(Y)) \text{.}
+-}\]
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
++Soient $X$ un objet de $\eD^-(\underline{E}')$ et $Y$ un objet de 
++$\eD^+(\underline E)$; il existe un isomorphisme fonctoriel: 
++\[\xymatrix{
++  \hom_{\eD(\underline E)}(\eL^- f^\ast(X),Y) \ar[r]^-\sim 
++    & \hom_{\eD(\underline{E}')}(X,\eR^+ f_\ast(Y)) \text{.}
++}\]
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++

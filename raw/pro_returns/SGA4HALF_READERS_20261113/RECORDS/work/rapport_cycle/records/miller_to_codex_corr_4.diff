@@ -1,0 +1,442 @@
+--- fr/miller_src/sga4.5-4.tex
++++ fr/codex_corr/sga4.5-4.tex
+@@ -22,11 +22,11 @@
+ Nous faisons les conditions suivantes:
+ \begin{enumerate}[\indent 1)]
+   \item ``schéma'' signifie schéma noethérien séparé (ceci est 
+-    largement un hypothèse de commodité).
++    largement une hypothèse de commodité).
+   \item Dans le Chapitre \ref{IV:2}, on fixe un entier $n$, et $n$ est inversible sur 
+     tous les schémas considérés.
+   \item Dans le Chapitre \ref{IV:3}, on fixe un nombre premier $\ell$, et $\ell$ est 
+-    inversible sur tout les schémas considérés. La cohomologie utilisée 
++    inversible sur tous les schémas considérés. La cohomologie utilisée 
+     est toujours la cohomologie $\ell$-adique:
+     \[
+       \h^\bullet(X) = \dQ_\ell\otimes_{\dZ_\ell} \varprojlim \h^\bullet(X,\dZ/\ell^n) \text{.}
+@@ -80,10 +80,10 @@
+ Soit $\sF$ un faisceau abélien sur un site $X$. On sait que $\h^1(X,\sF)$ 
+ classifie les $\sF$-torseurs sur $X$. Nous normaliserons ($=$choisirons le 
+ signe) de l'isomorphisme $($ensemble des classes d'isomorphisme de 
+-$F$-torseurs$)\to \h^1(X,\sF)$ de telle sorte que pour toute suite exacte 
++$\sF$-torseurs$)\to \h^1(X,\sF)$ de telle sorte que pour toute suite exacte 
+ $0\to \sF\xrightarrow\alpha\sG\xrightarrow\beta\sH\to 0$ et tout 
+ $h\in\h^0(X,\sH)$, le $\sF$-torseur $\beta^{-1}(h)\subset \sG$, sur lequel 
+-$F$ agit par $(f,x)\mapsto \alpha(f)+x$, soit de classe $\partial h$. 
++$\sF$ agit par $(f,x)\mapsto \alpha(f)+x$, soit de classe $\partial h$. 
+ 
+ 
+ 
+@@ -92,7 +92,7 @@
+ \subsubsection{}\label{IV:1-1-2}
+ 
+ Soit $\sP$ un $\sF$-torseur. Si $(U_i)$ est un recouvrement ouvert de $X$, et 
+-$p_i$ un section de $\sP$ sur $U_i$, on associe à $\sP$ le cocycle de 
++$p_i$ une section de $\sP$ sur $U_i$, on associe à $\sP$ le cocycle de 
+ \v{C}ech
+ \[
+   p_{i j} = p_j - p_i \qquad \text{($p_{i j}\in \h^0(U_i\times U_j,\sF)$).}
+@@ -217,7 +217,7 @@
+ 
+ \subsubsection{}\label{IV:1-2-1}
+ 
+-Soient $X$ un site, $Y$ un partie fermée de $X$, et $\sF,\sG$ deux faisceaux 
++Soient $X$ un site, $Y$ une partie fermée de $X$, et $\sF,\sG$ deux faisceaux 
+ abéliens sur $X$. Par exemple: $X$ un schéma, $Y$ un sous-schéma fermé 
+ et $\sF,\sG$ des faisceaux sur $\et X$. Définissons un produit 
+ \begin{equation*}\tag{1.2.1.1}\label{IV:eq:1-2-1-1}
+@@ -273,10 +273,10 @@
+     systématiquement dans les catégories dérivées $\eD^-$. Pour disposer 
+     de complexes à la fois plats et flasques, on utilise les résolutions 
+     flasques canoniques comme en \cite[XVII]{sga4}. 
+-  \item Pour une théorie plus générale, il cesse d'être d'interpréter 
++  \item Pour une théorie plus générale, il cesse d'être possible d'interpréter 
+     les applications bilinéaires de $\sK$ et $\sL$ dans $\sM$ comme des 
+     morphismes de $\sK\lotimes\sL$ dans $\sM$. Par exemple, 
+-    $\eR\Gamma_Y(X,\sK)\lotimes\eR\Gamma(Y,\sL)$ n'est pas défini si des deux 
++    $\eR\Gamma_Y(X,\sK)\lotimes\eR\Gamma(Y,\sL)$ n'est pas défini si les deux 
+     facteurs sont dans $\eD^+$. Une solution est de travailler dans $\eD^+$, de 
+     définir 
+     \[
+@@ -329,7 +329,7 @@
+ \subsubsection{Coda}\label{IV:1-2-5}
+ 
+ Soient $j:U\hookrightarrow X$ une partie ouverte et $i:Y\hookrightarrow U$ une 
+-partie fermée de $U$. Soit $\bar Y$ une fermé de $X$ tel que 
++partie fermée de $U$. Soit $\bar Y$ un fermé de $X$ tel que 
+ $\bar Y\cap U=Y$, (par exemple, le complément de $U\setminus Y$). Soit $\sK$ 
+ sur $U$. On pose $\eR\Gamma_{Y!}(U,\sK)=\eR\Gamma_!(Y,\eR i^!\sK)$ où 
+ $\eR\Gamma_!$ est relatif à l'inclusion de $Y$ dans $\bar Y$. Pour tout ouvert 
+@@ -349,10 +349,10 @@
+ (ce dernier groupe lui-même s'envoyant dans $\h_!^{n+m}(V,\sM)$). Dans la 
+ catégorie dérivée, il s'agit de définir 
+ \begin{equation*}\tag{1.2.5.2}\label{IV:eq:1-2-5-2}
+-  \eR\Gamma_Y(U,\sK) \lotimes \eR\Gamma_!(R,\sL) \to \eR\Gamma_{Y!}(U,\sM) \text{.}
++  \eR\Gamma_Y(U,\sK) \lotimes \eR\Gamma_!(Y,\sL) \to \eR\Gamma_{Y!}(U,\sM) \text{.}
+ \end{equation*}
+ On identifie $\eR\Gamma_Y$ à $\eR\Gamma(Y,\eR i^!\sK)$. Le produit cherché 
+-est alors du type \eqref{IV:eq:1-2-4-1} relatif au produit locale 
++est alors du type \eqref{IV:eq:1-2-4-1} relatif au produit local 
+ \eqref{IV:eq:1-2-2-3} sur $Y$: $\eR i^! \sK\lotimes\sL \to \eR i^! \sM$. 
+ 
+ 
+@@ -362,7 +362,7 @@
+ \subsubsection{}\label{IV:1-2-6}
+ 
+ Ci-dessus, on a déroulé le sorite absolu. On a un sorite relatif 
+-parallèle, avec $\Gamma$ remplacé par $f_*$ par $f$ un morphisme $X\to S$. 
++parallèle, avec $\Gamma$ remplacé par $f_*$ pour $f$ un morphisme $X\to S$. 
+ 
+ 
+ 
+@@ -413,7 +413,7 @@
+ 
+ \subsubsection*{Exemple 2}
+ 
+-Si les $V_i$ sont tous de degré $1$, on a , reliant le module sous-jacent au 
++Si les $V_i$ sont tous de degré $1$, on a, reliant le module sous-jacent au 
+ produit tensoriel gradué, et le produit tensoriel ordinaire des modules 
+ $|V_i|$ sous-jacents aux $V_i$, un isomorphisme canonique 
+ \[
+@@ -446,7 +446,7 @@
+ s'identifie au morphisme induit par \eqref{IV:eq:1-3-1}: 
+ $Z\otimes Y^\vee\otimes Y\otimes X^\vee \to Z\otimes X^\vee$. 
+ 
+-La trace de $f:V\to V^\vee$ (nulle pour $f$ homogène de degré $\ne 0$) est 
++La trace de $f:V\to V$ (nulle pour $f$ homogène de degré $\ne 0$) est 
+ l'image de $f$ par 
+ \begin{equation*}\tag{1.3.4}\label{IV:eq:1-3-4}
+   \tr:\hom(V,V) {\xleftarrow\sim}_\text{\eqref{IV:eq:1-3-2}} V\otimes V^\vee = V^\vee \otimes V \to_\text{\eqref{IV:eq:1-3-1}} A .
+@@ -458,7 +458,7 @@
+ \end{equation*}
+ 
+ Si on exprime que les deux morphismes composés de morphismes 
+-\eqref{IV:eq:1-3-1} $V^\vee\otimes V\otimes W^\vee\otimes W\to k$ commutent, on 
++\eqref{IV:eq:1-3-1} $V^\vee\otimes V\otimes W^\vee\otimes W\to A$ commutent, on 
+ trouve que, pour $f:V\to W$ et $g:W\to V$ homogènes, on a 
+ \begin{equation*}\tag{1.3.6}\label{IV:eq:1-3-6}
+   \tr(f g) = (-1)^{\deg(f)\deg(g)} \tr(g f) \text{.}
+@@ -564,17 +564,17 @@
+ 
+ \begin{proposition}\label{IV:2-1-4}
+ Soit $i$ l'inclusion de $D$ dans $X$. Si $D$ et $X$ sont réguliers, les 
+-faisceaux de cohomologie à support $\eR^p i^! \dmu_n$ sont nuls pour $p=0,2$, 
++faisceaux de cohomologie à support $\eR^p i^! \dmu_n$ sont nuls pour $p=0,1$, 
+ et $\eR^2 i^!\dmu_n = \underline{\dZ/n}$, engendré par 
+ $\cl_n(D)$. 
+ \end{proposition}
+ 
+ Il suffit de prouver que, pour $X$ strictement locale et $D$ défini par un 
+-paramètre régulier, on a $\h_D^p(X,d\mu_n) = 0$ pour $p=0,1$ et 
+-$\h^2(X,\dmu_n) = \dZ/n$ engendré par $\cl(D)$. Notant par 
++paramètre régulier, on a $\h_D^p(X,\dmu_n) = 0$ pour $p=0,1$ et 
++$\h_D^2(X,\dmu_n) = \dZ/n$ engendré par $\cl(D)$. Notant par 
+ $\sim$ la cohomologie réduite, on a 
+ $\widetilde\h^{p-1}(X\setminus D,\dmu_n)\iso \h_D^p(X,\dmu_n)$. L'assertion 
+-pour $p=0,1$ exprime que $D$ ne disconnecte par $X$, et pour $p=2$ résulte, 
++pour $p=0,1$ exprime que $D$ ne déconnecte pas $X$, et pour $p=2$ résulte, 
+ via \ref{IV:2-1-3}, du lemme d'Abhyankar. 
+ 
+ Ceci est un analogue partiel du théorème relatif 
+@@ -587,7 +587,7 @@
+ 
+ 
+ \begin{theorem}[Compatibilité fondamentale]\label{IV:2-1-5}
+-Soient $X$ uen courbe lisse sur un corps algébriquement clos $k$, $P$ un 
++Soient $X$ une courbe lisse sur un corps algébriquement clos $k$, $P$ un 
+ point fermé de $X$ et $\tr$ le composé $\h_P^2(X,\dmu_n) \to \h_c^2(X,\dmu_n) \xrightarrow{\tr} \dZ/n$. On a 
+ \[
+   \tr \cl(P) = 1 \text{.}
+@@ -618,7 +618,7 @@
+ est dit d'intersection complète locale, de codimension $c$, si, localement 
+ (sur $Y$), il est défini par une suite régulière de $c$ équations dans 
+ $X$. Pour $X$ le spectre d'un anneau locale $A$ d'idéal maximal $\fm$ et 
+-$Y$ d'idéal $\fa$, cela signifie que $\exp^i(A/\fa,A) = 0$ pour 
++$Y$ d'idéal $\fa$, cela signifie que $\Ext^i(A/\fa,A) = 0$ pour 
+ $i<\dim(\fa/\fm\fa)=c$, et toute suite d'éléments de $\fa$, d'image dans 
+ $\fa/\fm\fa$ une base de $\fa/\fm\fa$, est une suite régulière 
+ d'équations pour $Y$. 
+@@ -718,7 +718,7 @@
+ 
+ L'hypothèse $\eR^p i^!\dZ/n=0$ équivaut à $\eR^p i^!\dZ/n(c)=0$. Ceci dit, 
+ (i) se lit sur la suite spectrale 
+-$\h^p(Y,\eR^q i^!)\Rightarrow \h_Y^{p+q}(X,-)$. Si $k_1$ l'inclusion de $Z$ dans 
++$\h^p(Y,\eR^q i^!)\Rightarrow \h_Y^{p+q}(X,-)$. Si $k_1$ est l'inclusion de $Z$ dans 
+ $Y$, on a $k=i k_1$, d'où $\eR k^! \dZ/n=\eR k_1^! \eR i^!$, et la suite exacte 
+ longue de cohomologie pour $Z\subset Y$ fournit une suite exacte longue 
+ \[\xymatrix{
+@@ -751,7 +751,7 @@
+ \begin{theorem}\label{IV:2-2-8}
+ Soit un morphisme de $S$-schémas de type fini 
+ \[\xymatrix{
+-  X \ar[r]^-i \ar[dr]_-f 
++  Y \ar[r]^-i \ar[dr]_-f 
+     & X \ar[d]^-g \\
+   & S
+ }\]
+@@ -826,12 +826,12 @@
+ En géométrie analytique complexe, une construction de Baum, Fulton et 
+ Mac Pherson \cite{bfm75} permet de définir sans restriction la classe de 
+ cohomologie d'une intersection complète locale $Y\subset X$. Supposons $Y$ 
+-purement de codimension $c$, et soit $\sN$ le fibré vectoriel sur $Y$ fibré 
++purement de codimension $c$, et soit $\sN$ le fibré vectoriel 
+ normal de $Y$ dans $X$. Ses sections locales sont celles de $(\sI/\sI^2)^\vee$, 
+-d'où $\sI$ est le faisceau d'idéaux de $Y$. Rappelons que le faisceau des 
++où $\sI$ est le faisceau d'idéaux de $Y$. Rappelons que le faisceau des 
+ fonctions $C^\infty$ sur $X$ est défini localement, en terme de plongements 
+ locaux de $X$ dans $\dC^n$, comme la restriction à $X$ du quotient du 
+-faisceaux des fonctions $C^\infty$ sur $\dC^n$ par l'idéal engendré par les 
++faisceau des fonctions $C^\infty$ sur $\dC^n$ par l'idéal engendré par les 
+ parties réelles et imaginaires des équations qui définissent $X$. Le 
+ fibré $\sN$ se prolonge en un fibré vectoriel complexe $C^\infty N$ sur un 
+ voisinage $U$ de $Y$ dans $X$, et pour $U$ assez petit, il existe des sections 
+@@ -868,7 +868,7 @@
+ 
+ \subsubsection{}\label{IV:2-3-1}
+ 
+-Soit $f:Y\to X$ un morphisme plat de type fini, à fibres de dimension 
++Soit $f:Y\to S$ un morphisme plat de type fini, à fibres de dimension 
+ $\leqslant d$. Dans \cite[XVIII 2.9]{sga4}, nous avons défini un morphisme 
+ trace 
+ \begin{equation*}\tag{2.3.1.1}\label{IV:eq:2-3-1-1}
+@@ -876,7 +876,7 @@
+ \end{equation*}
+ On a $\eR^i f_!\dZ/n(d)=0$ pour $i>2 d$, et $\eR^i f^!\dZ/n=0$ pour $i<-2 d$. 
+ Ceci, et l'adjonction entre $\eR f_!$ et $\eR f^!$, fournissent des isomorphismes 
+-\begin{equation*}\tag{2.1.3.2}\label{IV:eq:2-1-3-2}
++\begin{equation*}\tag{2.3.1.2}\label{IV:eq:2-3-1-2}
+ \begin{aligned}
+   \hom\left(\eR^{2 d}f_!\dZ/n(d),\dZ/n\right) 
+     &= \hom\left(\eR f_!\dZ/n(d),\dZ/n[-2 d]\right) \\
+@@ -904,7 +904,7 @@
+     & X \ar[d] \\
+   & S
+ }\]
+-On a $\eR f^! = \eR i^!\eR g^!$, et $\eR g^! \dZ/n=\dZ/n(-N)[-2 N]$. La classe 
++On a $\eR f^! = \eR i^!\eR g^!$, et $\eR g^! \dZ/n=\dZ/n(N)[2 N]$. La classe 
+ fondamentale de $Y$ s'identifie à un élément de 
+ $\h^0\left(Y,\eR i^!\dZ/n(c)[2 c]\right)=\h_Y^{2 c}\left(X,\dZ/n(c)\right)$, la 
+ classe $\cl(Y)$ de $Y$ dans $X$. Nous verrons plus loin qu'elle ne dépend que 
+@@ -921,12 +921,12 @@
+   \h_Y^{2 c}\left(X,\dZ/n(c)\right) 
+     &= \h_Y^{2 c}\left(\eR i^!\dZ/n(c)\right) \\
+     &= \hom_Y\left(\dZ/n(d)[2 d],\eR i^!\dZ/n(N)[2 N]\right) \\
+-    &= \hom_X\left(\dZ/n(d)[2 d]_Y,\dZ/n(N)[2 n]\right) \text{,}
++    &= \hom_X\left(\dZ/n(d)[2 d]_Y,\dZ/n(N)[2 N]\right) \text{,}
+ \end{align*}
+ c'est la ligne supérieure de 
+ \[\xymatrix{
+   \h_Y^{2 c} \ar[r] \ar[dr]_-{(3)} 
+-    & \hom\left(\eR f_!\dZ/n(d)[2 d],\eR f_! \eR i^!\dZ/n(N)[2 n]\right) \ar[r]^-{(1)} \ar[d]^-{\tr_i} \ar@{}[dr]|-{(2)}
++    & \hom\left(\eR f_!\dZ/n(d)[2 d],\eR f_! \eR i^!\dZ/n(N)[2 N]\right) \ar[r]^-{(1)} \ar[d]^-{\tr_i} \ar@{}[dr]|-{(2)}
+     & \hom\left(\eR f_!\dZ/n(d)[2d],\dZ/n\right) \ar@{=}[d] \\
+   & \hom\left(\eR g_!\dZ/n(d)[2 d]_Y,\eR g_!\dZ/n(N)[2 N]\right) \ar[r]^-{\tr_g} 
+     & \hom\left(\eR g_!\dZ/n(d)[2 d]_Y,\dZ/n\right) \text{,}
+@@ -935,7 +935,7 @@
+ commutativité (2) exprime que l'isomorphisme $\eR f^!=\eR i^!\eR g^!$ est 
+ défini par adjonction. Enfin, la flèche déduite de (3)
+ \[
+-  \h_Y^{2c}\left(X,\dZ/n(c)\right) \otimes \eR^{2 d} g_!\dZ/n(d) \to \eR^{2 N} g_!\dZ/n(N)
++  \h_Y^{2c}\left(X,\dZ/n(c)\right) \otimes \eR^{2 d} f_!\dZ/n(d) \to \eR^{2 N} g_!\dZ/n(N)
+ \]
+ s'interprète comme un cup-produit (cf. \ref{IV:1-2}). 
+ 
+@@ -945,7 +945,7 @@
+ 
+ \begin{definition}\label{IV:2-3-2}
+ La classe $\cl(Y)\in\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ a pour propriété 
+-caractéristique que, pour tout section locale $u$ de $\eR^{2 d}f_! \dZ/n(d)$, 
++caractéristique que, pour toute section locale $u$ de $\eR^{2 d}f_! \dZ/n(d)$, 
+ on a 
+ \[
+   \tr_f(u) = \tr_g\left(\cl(Y)\smallsmile u\right) \text{.}
+@@ -953,7 +953,7 @@
+ \end{definition}
+ 
+ Du fait que $\cl(Y)$ ait déjà une image $\tr_f$ dans 
+-$\hom\left(\eR f_!\dZ/n(d)[2 d],\dZ/n\right)$, le formule \ref{IV:2-3-2} vaut 
++$\hom\left(\eR f_!\dZ/n(d)[2 d],\dZ/n\right)$, la formule \ref{IV:2-3-2} vaut 
+ pour les flèches déduites de $\tr_f$ par fonctorialité. Par exemple, 
+ pour $X$ sur $S$ propre et $u\in \h^\bullet(Y,\dZ/n)$, la formule vaut dans 
+ $\h^\bullet\left(S,\dZ/n(-d)\right)$. Pour $v\in \h^\bullet(X,\dZ/n)$, elle 
+@@ -969,7 +969,7 @@
+ 
+ \subsubsection{}\label{IV:2-3-3}
+ 
+-Nous allons définir les morphisme trace, et donc la classe $\cl(Y)$, sous des 
++Nous allons définir les morphismes trace, et donc la classe $\cl(Y)$, sous des 
+ hypothèses plus générales. Soit donc un diagramme 
+ \[\xymatrix{
+   Y \ar@{^{(}->}[r] \ar[dr]_-f 
+@@ -986,7 +986,7 @@
+ plat sur $S$ et $\sK=\sO_Y$, ce sera le morphisme trace précédent. En 
+ général, il ne dépend que des longueurs de $\sK$ aux points 
+ génériques $y$ des composantes irréductibles de 
+-$Y(\operatorname{lg}_y(\sK) = \sum (-1)^i \operatorname{lg} \h^i(\sK)_y)$. 
++$Y$ ($\operatorname{lg}_y(\sK) = \sum (-1)^i \operatorname{lg} \h^i(\sK)_y$). 
+ % NOTE: notation is not clear, is it a calligraphic H?
+ Enfin, on notera $\cl(Y,\sK)$ la classe à support dans $Y$ telle que 
+ \begin{equation*}\tag{2.3.3.1}\label{IV:eq:2-3-3-1}
+@@ -1000,11 +1000,11 @@
+ \subsubsection{}\label{IV:2-3-4}
+ 
+ La construction de $\tr_{f,\sK}$ est parallèle à celle de 
+-\cite[XVIII.2]{sga4}; nour n'en indiquerons que les grandes lignes.
++\cite[XVIII.2]{sga4}; nous n'en indiquerons que les grandes lignes.
+ 
+ \paragraph{A}
+ $d=0$ ($f$ quasi-fini). Soit $x$ un point géométrique de $Y$. $s$ son image 
+-dans $S$, $\sK_{(x)}$ l'image réciproque de $\sK$ sur le localisé stricte 
++dans $S$, $\sK_{(x)}$ l'image réciproque de $\sK$ sur le localisé strict 
+ de $X$ en $x$, $\sK_{(x)s} = \sK_{(x)}\lotimes_{\sO_{S,s}^h} k(s)$ son image 
+ réciproque sur la fibre géométrique en $s$, et 
+ $n(x)=\sum (-1)^i \dim_{k(s)} \h^i(\sK_{(x)s})$. La fonction $x\mapsto n(x)$ 
+@@ -1013,7 +1013,7 @@
+ formation compatible à tout changement de base. 
+ 
+ \paragraph{B}
+-Cas général. Si $u:Z\to \dA_S^d$ est tel que $u i$ soit quasi-fini, on pose 
++Cas général. Si $u:X\to \dA_S^d$ est tel que $u i$ soit quasi-fini, on pose 
+ $\tr_{f,\sK} = \tr_{\dA_S^d}\circ \tr_{u i,\sK}$. Ce morphisme trace est 
+ clairement compatible à tout changement de base $S'/S$. Pour prouver qu'il ne 
+ dépend pas de $u$, on peut donc supposer que $S$ est le spectre d'un corps 
+@@ -1044,7 +1044,7 @@
+ Soient $f'=g'' i$ et $d'=d-N'$. La formule $\tr_g=\tr_{g'}\tr_{g''}$ 
+ (\cite[XVIII.2.9]{sga4} Var 3) assure la commutativité de 
+ \[\xymatrix{
+-  \h_X^{2 c}\left(Z,\dZ/n(c)\right) \ar[d] \\
++  \h_Y^{2 c}\left(X,\dZ/n(c)\right) \ar[d] \\
+   \hom_{S'}\left(\eR f_!\dZ/n(d')[2 d'],\eR g_!''\dZ/n(N'')[2 N'']\right) \ar[r] \ar[d]^-{\eR g_!'(N')} 
+     & \hom_{S'}\left(\eR^{2 d'} f_!' \dZ/n,\dZ/n\right) \ar[d]^-{\tr_{g'}\circ \eR^{2 N'} g_!'} \\
+   \hom_S\left(\eR f_!\dZ/n(d)[2d],\eR g_!'\dZ/n(N)[2 N]\right) \ar[r] 
+@@ -1071,7 +1071,7 @@
+ étale nous ramène alors à supposer $S$ spectre d'un corps 
+ algébriquement clos $k$. Les classes \ref{IV:2-3-2} et \ref{IV:2-1-2} étant 
+ chacune additive en $Y$, ceci nous ramène au cas où $Y$ est un point 
+-fermé sur un courbe lisse sur $k$. Que la propriété caractéristique 
++fermé sur une courbe lisse sur $k$. Que la propriété caractéristique 
+ \ref{IV:2-3-2} soit vérifiée est alors la compatibilité fondamentale 
+ \ref{IV:2-1-5}. 
+ 
+@@ -1126,7 +1126,7 @@
+ (\ref{IV:2-2-6}, \ref{IV:2-2-8}) que pour vérifier que deux classes dans 
+ $\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ coïncident, il suffit de le vérifier 
+ localement aux points génériques de $Y$, voire même après tout 
+-changement de bas $s\to S$ ($s$ point géométrique générique de $S$), 
++changement de base $s\to S$ ($s$ point géométrique générique de $S$), 
+ aux points génériques de $Y$. 
+ 
+ % (2.3.8.2)
+@@ -1145,8 +1145,8 @@
+ 
+ % (2.3.8.3)
+ \paragraph{(C) Dans une situation produit:}
+-$X=X'\times_S X''$, $Y=Y'\times_S Y''$, $\sK=\sK\lotimes_S \sK''$, on a 
+-$\cl(Y,\sK) = \cl(Y,\sK')\smallsmile \cl(Y'',\sK'')$ (cup-produit extérieur, 
++$X=X'\times_S X''$, $Y=Y'\times_S Y''$, $\sK=\sK'\lotimes_S \sK''$, on a 
++$\cl(Y,\sK) = \cl(Y',\sK')\smallsmile \cl(Y'',\sK'')$ (cup-produit extérieur, 
+ i.e. $\operatorname{pr}_1^\ast \cl(Y',\sK')\smallsmile \operatorname{pr}_2^\ast \cl(Y'',\sK'')$). 
+ 
+ Des propriétés fonctorielles de $\tr_g$ \cite[XVIII.2.12]{sga4} résulte 
+@@ -1173,7 +1173,7 @@
+     & X \text{.}
+ }\]
+ Ceci nous amène à traiter séparément $\operatorname{pr}_2$, justiciable 
+-de (C) pour $X'=X'$, $\sK'=\sO_{x'}$ (avec $\cl(Y')=1\in \h^0(X,\dZ/n)$), et 
++de (C) pour $Y'=X'$, $\sK'=\sO_{X'}$ (avec $\cl(Y')=1\in \h^0(X',\dZ/n)$), et 
+ $(\text{id},u)$, justiciable de (B). 
+ 
+ \paragraph{Preuve de (iii)}
+@@ -1184,13 +1184,13 @@
+ \paragraph{Preuve de (i)}
+ Le changement de base $S_\text{red}\to S$ remplace $X$ par $X_\text{red}$; ceci 
+ nous ramène à supposer $X$ et $S$ réduits. Une localisation au voisinage 
+-des points génériques de $Y$ nour ramène ensuite au cas où 
+-$Y_\text{red}$ est irréductibles et l'intersection complète de $c$ 
++des points génériques de $Y$ nous ramène ensuite au cas où 
++$Y_\text{red}$ est irréductible et l'intersection complète de $c$ 
+ diviseurs $D_i$. La même localisation, et la définition de $\tr$ dans le 
+-cas quasi-fini. montre ensuite que 
++cas quasi-fini, montre ensuite que 
+ $\cl(Y,\sK)=\operatorname{lg}\cl(Y_\text{red},\sO_{Y_\text{red}})$, où 
+ $\operatorname{lg}$ est la longueur de $\sK$ au point générique de $Y$. 
+-D'après (iv), on a donc 
++D'après (iii), on a donc 
+ \[
+   \cl(Y,\sK) = \operatorname{lg} \prod_i \cl(D_i,\sO_{D_i})
+ \]
+@@ -1223,7 +1223,7 @@
+ leurs classes sont les fibres, en deux points de $S$ connexe convenable, d'une 
+ section sur $S$ du faisceau constant $\h^{2 c}(X,\dZ/n(c))$ (le faisceau 
+ $\eR^{2 c} f_\ast \dZ/n(c)$ pour $f=\operatorname{pr}_2:X\times S\to S$): deux 
+-cycles algébriquement équivalentes ont même classe dans 
++cycles algébriquement équivalents ont même classe dans 
+ $\h^{2 c}(X,\dZ/n(c))$. 
+ 
+ 
+@@ -1269,7 +1269,7 @@
+ \subsection{}\label{IV:3-2}
+ 
+ Une classe $\eta\in \h^{2 q}(X\times Y)(q)$ définit un morphisme de degré 
+-$2(q-N)$ $\eta_{XY}:\h^\bullet(Y)(N-q)\to \h^\bullet(X)$, par la formule 
++$2(q-M)$ $\eta_{XY}:\h^\bullet(Y)(M-q)\to \h^\bullet(X)$, par la formule 
+ \[
+   \beta \mapsto \int_Y \eta\cdot \operatorname{pr}_2^\ast \beta \text{.}
+ \]
+@@ -1280,7 +1280,7 @@
+ 
+ \begin{proposition_}\label{IV:3-3}
+ Soient $p$ et $q$ deux entiers, avec $p+q=N+M$, et 
+-$\varepsilon\in \h^{2 p}(X\times Y)(p)$, $\eta\in \h^{2 q}(X\times Y)(p)$. La 
++$\varepsilon\in \h^{2 p}(X\times Y)(p)$, $\eta\in \h^{2 q}(X\times Y)(q)$. La 
+ trace de $\eta_{X Y}\varepsilon_{Y X}:\h^\bullet(X)\to \h^\bullet(X)$ étant 
+ entendue au sens \ref{IV:1-3}, on a alors 
+ \[
+@@ -1290,7 +1290,7 @@
+ 
+ Pour exorciser les signes, il y a intérêt à ne retenir de la graduation 
+ de $\h^\bullet$ que la $\dZ/2$-graduation sous-jacente. Pour éviter de 
+-trainer avec soi les twist à la Tate, on fixe de plus un isomorphisme 
++traîner avec soi les twists à la Tate, on fixe de plus un isomorphisme 
+ $\dQ_\ell(1)=\dQ_\ell$. Soit $\alpha_Y$ l'homomorphisme 
+ $\h^\bullet(Y)\to \h^\bullet(Y)^\vee$ (un isomorphisme) rendant commutatif le 
+ diagramme 
+@@ -1305,7 +1305,7 @@
+ \[\xymatrix{
+   \h^\bullet(X\times Y) = \h^\bullet(X)\otimes \h^\bullet(Y) \ar[r]^-{\alpha_Y} 
+     & \h^\bullet(X) \otimes \h^\bullet(Y)^\vee \ar@{=}[r]^-{\text{(\ref{IV:eq:1-3-2})}} 
+-    & \hom\left(\h^\bullet(X),\h^\bullet(Y)\right) \text{,}
++    & \hom\left(\h^\bullet(Y),\h^\bullet(X)\right) \text{,}
+ }\]
+ et de même pour $\varepsilon$. La définition \ref{IV:eq:1-3-4} de la trace 
+ ramène alors \ref{IV:3-3} à la formule 
+@@ -1317,7 +1317,7 @@
+ 
+ \subsection{Remarque}\label{IV:3-4}
+ 
+-La preuve de \ref{IV:3-4} n'utilise pas que $\alpha_X$ et $\alpha_Y$ soient des 
++La preuve de \ref{IV:3-3} n'utilise pas que $\alpha_X$ et $\alpha_Y$ soient des 
+ isomorphismes. Elle vaut sans supposer $X$ et $Y$ lisses. Toutefois, en dehors 
+ du cas lisse, il est difficile de trouver des classes de \emph{cohomologie} 
+ auxquelles on veuille appliquer \ref{IV:3-3}. 
+@@ -1376,9 +1376,9 @@
+ 
+ 
+ \begin{corollary_}\label{IV:3-8}
+-Soient $X$ un courbe sur $k$ algébriquement clos, déduit par extension des 
++Soient $X$ une courbe sur $k$ algébriquement clos, déduit par extension des 
+ scalaires de $X_0$ sur $\dF_q$, et $f$ le morphisme de Frobenius. Alors, 
+-$\sum (-1)^i \tr\left(f^\ast,\h_c^\bullet(X)\right)$ est le nombre de points 
++$\sum (-1)^i \tr\left(f^\ast,\h_c^i(X)\right)$ est le nombre de points 
+ fixes de $f$.
+ \end{corollary_}
+ 
+@@ -1393,7 +1393,7 @@
+ \[
+   \tr\left(f^\ast,\h_c^\bullet(\bar U)\right) = \tr\left(f^\ast,\h_c^\bullet(U)\right) + \tr\left(f^\ast,\h_c^\bullet(\bar U\setminus U)\right) \text{.}
+ \]
+-Le mêmes formules valent pour les nombres de points fixes. La formule 
++Les mêmes formules valent pour les nombres de points fixes. La formule 
+ \ref{IV:3-8} étant claire pour un schéma de dimension $0$, ceci ramène 
+ à prouver \ref{IV:3-8} pour $\bar U$. Ce cas est justiciable de \ref{IV:3-7}. 
+ Le fait que $d f=0$ garantit que les points fixes sont tous de 

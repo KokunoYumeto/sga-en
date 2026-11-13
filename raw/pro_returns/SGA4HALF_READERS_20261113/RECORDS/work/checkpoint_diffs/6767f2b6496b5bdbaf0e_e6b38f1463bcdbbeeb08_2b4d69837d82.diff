@@ -1,0 +1,97 @@
+--- checkpoint/scripts/build_arcata_fr.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/build_arcata_fr.py
+@@ -19,12 +19,28 @@
+ LOG=[]
+ text=(SOURCE/'fr/codex_dip/sga4.5-1.tex').read_text()
+ original=text
++_before=(SOURCE/'fr/miller_src/sga4.5-1.tex').read_text().splitlines(True)
++_after=original.splitlines(True)
++_ops=difflib.SequenceMatcher(None,_before,_after,autojunk=False).get_opcodes()
++BASE_PAGE={}
++for _p in range(6,74):
++ _a,_b=PAGES[str(_p)]['lines'];_a-=1;_covered=[]
++ for _kind,_i,_j,_k,_l in _ops:
++  if _j>_a and _i<_b:
++   if _kind=='equal':_covered.extend(_after[_k+max(_a-_i,0):_k+min(_b-_i,_j-_i)])
++   else:_covered.extend(_after[_k:_l])
++ BASE_PAGE[str(_p)]=''.join(_covered)
+ def patch(old,new,page,ident,all=False,optional=False):
+  global text
+  ms=matches(text,old)
+  if not ms:
+   status='already present' if matches(text,new) else 'unmatched'
+   LOG.append(dict(id=ident,page=str(page),status=status,before=old,after=new));return
++ # A prefix of an already-applied replacement is not an outstanding old reading.
++ ns=matches(text,new)
++ ms=[m for m in ms if not any(n.start()<=m.start() and m.end()<=n.end() for n in ns)] if old!=new else ms
++ if not ms:
++  LOG.append(dict(id=ident,page=str(page),status='already present',before=old,after=new));return
+  if not all and len(ms)>1:
+   if str(page) in PAGES:
+    target=PAGES[str(page)]['lines'][0]
+@@ -47,12 +63,23 @@
+  # These accepted readings are handled explicitly below because the reviewed
+  # decision preserves original label names or spans several printed places.
+  if d['id'] in {'S45-SOL-0054','S45-SOL-0199','S45-SOL-0201','S45-SOL-0204','S45-SOL-0205'}:continue
+- if d['id'] in {'S45-SOL-0020','S45-SOL-0059','S45-SOL-0104','S45-SOL-0106','S45-SOL-0158','S45-SOL-0161','S45-SOL-0172','S45-SOL-0179'}:continue
++ if d['id'] in {'S45-SOL-0020','S45-SOL-0059','S45-SOL-0104','S45-SOL-0106','S45-SOL-0137','S45-SOL-0158','S45-SOL-0161','S45-SOL-0172','S45-SOL-0179','S45-SOL-0206','S45-SOL-0226'}:continue
++ local=BASE_PAGE[p]
++ oms=matches(local,old);nms=matches(local,new)
++ oms=[m for m in oms if not any(n.start()<=m.start() and m.end()<=n.end() for n in nms)]
++ if not oms and nms:
++  LOG.append(dict(id=d['id'],page=p,status='verified in Codex page',before=old,after=new));continue
++ if not oms and d['kind']=='extra':
++  LOG.append(dict(id=d['id'],page=p,status='verified absent in Codex page',before=old,after=new));continue
++ if not oms:
++  LOG.append(dict(id=d['id'],page=p,status='unmatched',before=old,after=new));continue
+  patch(old,new,p,d['id'])
+ 
+ # Shared repairs established by the independent full-page review.
+ patch(r'\sh(\et X)\to \sh(\et Y)',r'\sh_{\mathrm{Ab}}(\et X)\to \sh_{\mathrm{Ab}}(\et Y)',23,'S45-ASTRA-A-0009')
+ patch('Kunneth','Künneth',27,'S45-ASTRA-A-0010')
++patch('résolution,est','résolution, est',65,'S45-ASTRA-A-0025')
++patch('Etant donnés','Étant donnés',54,'S45-ASTRA-A-0019',all=True)
+ patch(r"{k'}^\times",r"{k'}^*",14,'S45-ASTRA-A-0005',all=True)
+ patch(r'\item (composition) Si $f:X\to S$',r'\item Si $f:X\to S$',19,'S45-ASTRA-A-0006')
+ patch(r"\item Si $f:X\to S$ et $g:Y\to S$ sont deux morphismes étales",r"\item (composition) Le composé de deux morphismes étales est un morphisme étale."+'\n'+r"  \item Si $f:X\to S$ et $g:Y\to S$ sont deux morphismes étales",19,'S45-SOL-0054')
+@@ -60,7 +87,7 @@
+ for old,new in [(r'\sO_U^\times',r'\sO_U^*'),(r'\h^0(X,\sO_X)^\times',r'\h^0(X,\sO_X)^*'),(r'k^\times',r'k^*')]:
+  patch(old,new,20,'S45-SOL-0059')
+ # These readings are already repaired in Codex using equivalent link/macro forms.
+-for ident,needle in [('0020',r'\hyperref[I:1-1]{1}'),('0104','La connaissance du groupe de Brauer'),('0106',r'\emph{Corps locaux} ou'),('0158',r'\hyperref[I:3-3-6]{(cf. III.3.6)}'),('0161',r'\an{}'),('0172',r'\hyperref[I:2-3-1]{(II 3.1.)}')]:
++for ident,needle in [('0020',r'\hyperref[I:1-1]{1}'),('0104','La connaissance du groupe de Brauer'),('0106',r'\emph{Corps locaux} ou'),('0137',r'\hyperlink{cite.ega}{[EGA III, 4.1]}'),('0158',r'\hyperref[I:3-3-6]{(cf. III.3.6)}'),('0161',r'\an{}'),('0172',r'\hyperref[I:2-3-1]{(II 3.1.)}'),('0206','Prouvons 2.3.'),('0226',r'\hyperref[VII:1-1]{1.1}),')]:
+  assert matches(text,needle),(ident,needle)
+  LOG.append(dict(id='S45-SOL-'+ident,status='verified in Codex base',after=needle))
+ patch(r'\h^\bullet(X,\dZ/n)',r'\h^*(X,\dZ/n)',69,'S45-SOL-0229')
+@@ -100,7 +127,7 @@
+ ('SGA45-CORR-0019',54,r'\h^0\left(X_t^x,\dZ/n\right)',r'\h^0\left(\widetilde X_t^x,\dZ/n\right)',r'\h^0\left(X_t^x,\dZ/n\right)'),
+ ('SGA45-CORR-0021',59,'algèbres locales étale','algèbres locales étales','algèbres locales étale'),
+ ('S45-ASTRA-A-0020',56,r'\h^*(X,\varepsilon_*\x27 \dZ/n)',r'\h^*(\widetilde X,\varepsilon_*\x27 \dZ/n)',r'\h^*(X,\varepsilon_*\x27 \dZ/n)'),
+-('S45-ASTRA-A-0021',45,r'un entier $n\geqslant 0$',r'un entier $n>0$',r'un entier $n\geqslant 0$'),
++('S45-ASTRA-A-0021',45,r'$n$ un entier $\geqslant 0$',r'$n$ un entier $>0$',r'$n$ un entier $\geqslant 0$'),
+ ('S45-SOL-0209',61,r'\widehat X=A\llbracket T\rrbracket',r'\widehat X=\spec A\llbracket T\rrbracket',r'\widehat X=A\llbracket T\rrbracket'),
+ ('S45-SOL-0217',64,r'\dA_S^{n-1}',r'\dA_S^{N-1}',r'\dA_S^{n-1}'),
+ ('S45-SOL-0244',70,'corps de classe géométrique','corps de classes géométrique','corps de classes géométrique'),
+@@ -120,13 +147,20 @@
+ text=text.replace(r'\input{opening}',opening).replace(r'\input{toc-i}',toc)
+ text+='\n'+(OUT/'arcata_bibliography.tex').read_text()
+ 
++# Independent propagation review, with an explicitly conjectural reference
++# correction recorded as a variant rather than a silent transcription repair.
++supplement=ROOT/'work/rapport_cycle/records/arcata_review_supplement.json'
++if supplement.exists():
++ for op in json.loads(supplement.read_text())['operations']:
++  if op['language']=='fr':patch(op['before'],op['after'],op['page'],op['id'])
++
+ # Exact boundaries established from the scans. A marker inside a display is
+ # moved to its opening delimiter when the entire display starts the page.
+ anchors={int(p['printed_page']):p['start_fr'] for p in PG if p['printed_page'].isdigit() and 4<=int(p['printed_page'])<=75}
+ anchors.update({
+- 23:r'Le foncteur $f_*:',28:r"d'équivalence. C'est ce groupe",30:r'\[\xymatrix{ 1 \ar[r] & \bar K^*',
++ 23:r'Le foncteur $f_*:',26:r'\[ \h^q(\et X,\sF)',28:r"d'équivalence. C'est ce groupe",30:r'\[\xymatrix{ 1 \ar[r] & \bar K^*',
+  33:r'\begin{align*} \h^0(X,\dG_m)',34:r'\[ \h^q(X, j_* \dG_{m,\eta})',36:r"d'obtenir en corollaire la",
+- 38:r'de $P$ un $\dP_S^1$-schéma',41:r'$\Gamma(X,\sO_X)$',42:r'\[ \operatorname{Rev.et}(X)',
++ 38:r'de $P$ un $\dP_S^1$-schéma',41:r'$\Gamma(X,\sO_X)$ pour la topologie',42:r'\[ \operatorname{Rev.et}(X)',
+  43:r"à $X_0'$.",44:r'sur $\cC$ à valeurs',46:r"que $n$ est une puissance d'un nombre premier",47:r'tel point, $t_0\in\sO_{X_0,x}$',
+  49:r'\var{le }{}{SGA45-CORR-0015}théorème',53:r'\[ \cosp^* : \h^*(X_t,\dZ)',
+  55:r"\[\xymatrix{ X_t \ar[r]^-{\varepsilon'} \ar[d]",58:r'point géométrique $t$ de $S$',

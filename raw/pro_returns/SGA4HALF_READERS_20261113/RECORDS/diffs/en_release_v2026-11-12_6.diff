@@ -1,0 +1,2128 @@
+--- source/en/release_v2026-11-12/05_SGA4HALF_EN_COMPLETE_READER.tex
++++ deliverables/EN/SGA4HALF_EN_corrected_apparatus.tex#component-6 [6]
+@@ -1,5 +1,6 @@
+ 
+-\chapter{Applications of the trace formula to trigonometric sums}\label{VI}
++
++\chapter{Applications of the trace formula to trigonometric sums}\label{VI}\PrintPage{168}
+ \chaptermark{Applications to trigonometric sums}
+ 
+ 
+@@ -23,18 +24,22 @@
+ defined by Jacobi sums. In Section $7$, we study a 
+ generalization of Kloosterman sums to several variables. Finally, 
+ Section $8$ gives some indications of other uses that have been, or can be, 
+-made of these methods. 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-\section*{Notations}\label{VI:0}
++made of these methods.
++
++\begin{center}\textbf{Contents}\end{center}
++\begin{tabular}{p{0.86\textwidth}r}
++1. Principles & 2\\
++2. Dictionary & 16\\
++3. Sums in one variable & 22\\
++4. Gauss sums and Jacobi sums & 29\\
++5. Hecke characters & 41\\
++6. Hecke characters defined by Jacobi sums & 46\\
++7. Generalized Kloosterman sums & 52\\
++8. Other applications & 63
++\end{tabular}
++
++
++\section*{Notations}\label{VI:0}\PrintPage{169}
+ 
+ 
+ 
+@@ -113,7 +118,8 @@
+ 
+ 
+ 
+-\subsection{}\label{VI:1-2}
++
++\subsection{}\label{VI:1-2}\PrintPage{170}
+ 
+ Let $A$ be a finite group. An \emph{$A$-torsor} on a scheme $X$ is a 
+ sheaf $T$ on $X$, equipped with a right action of $A$, which, locally 
+@@ -133,7 +139,7 @@
+ $E_\lambda$-sheaf $\sF$, smooth of rank $\dim(V)$, equipped with a morphism of 
+ sheaves 
+ \begin{equation*}\tag{1.2.2}\label{VI:eq:1-2-2}
+-  \rho:T\to \underline{\operatorname{Isom}}(V,\sF) \text{.}
++  \rho:T\to \underline{\operatorname{Isom}}(V,\sF)
+ \end{equation*}
+ such that $\rho(t a) = \rho(t) \rho(a)$. We denote it by $\rho(T)$. For 
+ $\tau:A\to B$ and $\rho$ a representation of $B$, we have a canonical 
+@@ -141,13 +147,13 @@
+ 
+ In this paragraph (except the appendix), we only consider the case where $A$ 
+ is commutative and where $V=E_\lambda$: $\rho$ is a character 
+-$A\to E_\lambda^\times$, and $\rho(T)$ is a smooth $E_\lambda$-sheaf of rank 
++$A\to E_\lambda^\ast$, and $\rho(T)$ is a smooth $E_\lambda$-sheaf of rank 
+ one. The morphism \eqref{VI:eq:1-2-2} is interpreted as an everywhere 
+ nonzero morphism 
+ \begin{equation*}\tag{1.2.3}\label{VI:eq:1-2-3}
+   \rho:T\to \rho(T) 
+ \end{equation*}
+-such that $\rho(t a) = \rho(a)\rho(t)$. 
++such that $\rho(t a) = \rho(a)\cdot\rho(t)$. 
+ 
+ 
+ 
+@@ -167,6 +173,7 @@
+ The sheaf $T$ of local sections of $\pi$ is then an $A$-torsor on 
+ $G$. 
+ 
++\PrintPage{171}
+ If $X$ is a scheme over $S$ and $f,g$ are two $S$-morphisms from $X$ to $G$, 
+ the fact that $T$ is defined by an extension gives a canonical isomorphism 
+ \begin{equation*}\tag{1.3.1}\label{VI:eq:1-3-1}
+@@ -220,7 +227,8 @@
+ specify them with a subscript $0$ or $1$.
+ 
+ 
+-\paragraph{Examples}
++
++\paragraph{Examples}\PrintPage{172}
+ For $G_0=\dG_a$ or $\dG_m$, the sequences \eqref{VI:eq:1-4-1} are written 
+ \begin{align*}\tag{1.4.2}\label{VI:eq:1-4-2}
+ &\xymatrix{
+@@ -293,7 +301,7 @@
+ 
+ \begin{definition_}\label{VI:1-7}
+ Let $f_0:X_0\to G_0$ be a morphism and 
+-$\chi:G_0(\dF_q)\to E_\lambda^\times$ a character. We set 
++$\chi:G_0(\dF_q)\to E_\lambda^\ast$ a character. We set 
+ $\sF(\chi,f_0) = \chi^{-1}(f_0^\ast (L_0(G_0))) = f_0^\ast\chi^{-1}(L_0(G_0))$. 
+ \end{definition_}
+ 
+@@ -305,7 +313,8 @@
+       \tag{1.7.2}\label{VI:eq:1-7-2}
+       \sF(\chi'\chi'',f_0) &= \sF(\chi',f_0)\otimes \sF(\chi'',f_0) \text{.}
+     \end{align*}
+-    This follows from the definition of $\chi(T)$, for $T$ a torsor, combined 
++    \PrintPage{173}
++This follows from the definition of $\chi(T)$, for $T$ a torsor, combined 
+     with \eqref{VI:eq:1-3-1} for \eqref{VI:eq:1-7-1}. 
+   \item For $g_0:Y_0\to X_0$ a morphism, we have 
+     \begin{equation*}\tag{1.7.3}\label{VI:eq:1-7-3}
+@@ -314,7 +323,7 @@
+     In particular, $\sF(\chi,f_0) = f_0^\ast \sF(\chi)$, where $\sF(\chi)$ 
+     denotes $\sF(\chi,\operatorname{id}_{G_0})$. 
+   \item For $u_0:G_0\to H_0$ a morphism, and 
+-    $\chi:H_0(\dF_q) \to E_\lambda^\times$, we have 
++    $\chi:H_0(\dF_q) \to E_\lambda^\ast$, we have 
+     \begin{equation*}\tag{1.7.4}\label{VI:eq:1-7-4}
+       \sF(\chi,u_0 f_0) = \sF(\chi u_0,f_0) \text{.}
+     \end{equation*}
+@@ -347,7 +356,7 @@
+ \subsection{Abuse of notations}\label{VI:1-8}
+ 
+ (i) If $\Xi$ denotes the composite map 
+-$\chi f_0:X_0(\dF_q) \to E_\lambda^\times$, we will sometimes write $\sF(\Xi)$ 
++$\chi f_0:X_0(\dF_q) \to E_\lambda^\ast$, we will sometimes write $\sF(\Xi)$ 
+ instead of $\sF(\chi,f_0)$. By \eqref{VI:eq:1-7-1} through \eqref{VI:eq:1-7-5}, 
+ there is little risk of ambiguity. For example:
+ \begin{enumerate}[a)]
+@@ -358,6 +367,7 @@
+     $\sF(\prod \chi_i f_0^i)$ for $\sF(\chi,f_0)$. 
+ \end{enumerate}
+ 
++\PrintPage{174}
+ With this notation, \eqref{VI:eq:1-7-4} shows that the notation 
+ $\sF(\chi u_0 f_0)$ is unambiguous, \eqref{VI:eq:1-7-1} \eqref{VI:eq:1-7-2} 
+ \eqref{VI:eq:1-7-5} express the multiplicativity of $\sF(\Xi)$ with respect to $\Xi$, 
+@@ -366,7 +376,7 @@
+ (ii) If $X$ is a scheme over an extension $k$ of $\dF_q$, and $f$ is a 
+ morphism of $X$ into $G_0\otimes_{\dF_q} k$, we shall again denote by $\sF(\chi,f)$, 
+ $\sF(\chi f)$, or $\sF(\chi)$ (for $f$ an inclusion) the inverse image under 
+-$f$ of the $E_\lambda$-sheaf obtained from $\chi^{-1}(L_0(G))$ by extension of 
++$f$ of the $E_\lambda$-sheaf obtained from $\chi^{-1}(L_0(G_0))$ by extension of 
+ scalars from $\dF_q$ to $k$. If $f_0$ is the composite 
+ $X\to G_0\otimes_{\dF_q} k \to G_0$, this is again the $\sF(\chi,f_0)$ of 
+ \ref{VI:1-7}. If $k$ is a finite extension of $\dF_q$, we have 
+@@ -379,10 +389,10 @@
+ 
+ 
+ 
+-\begin{theorem_}\label{VI:1-9}
++\subsection{Scholium}\label{VI:1-9}
+ Let $S_0$ be a separated scheme of finite type over $\dF_q$, let $G_0$ be a 
+ connected commutative algebraic group over $\dF_q$, let $f_0:S_0\to G_0$ be a morphism, and let 
+-$\chi:G_0(\dF_q) \to E_\lambda^\times$. We have 
++$\chi:G_0(\dF_q) \to E_\lambda^\ast$. We have 
+ \begin{equation*}\tag{1.9.1}\label{VI:eq:1-9-1}
+   \sum_{s\in S_0(\dF_q)} \chi f_0(s) = \tr(F^\ast,\h_c^\bullet(S,\sF(\chi,f_0))) 
+ \end{equation*}
+@@ -390,7 +400,7 @@
+ \begin{equation*}\tag{1.9.2}\label{VI:eq:1-9-2}
+   \sum_{s\in S_0(\dF_{q^n})} \chi\circ N_{\dF_{q^n}/\dF_q} f_0(s) = \tr({F^\ast}^n, \h_c^\bullet\left(S,\sF(\chi,f_0))\right) \text{.}
+ \end{equation*}
+-\end{theorem_}
++
+ 
+ 
+ 
+@@ -423,7 +433,8 @@
+ 
+ 
+ 
+-\subsection{Example}\label{VI:1-10}
++
++\subsection{Example}\label{VI:1-10}\PrintPage{175}
+ 
+ A nonsingular projective quadric of odd dimension over \texorpdfstring{$\dF_q$}{Fq} has the same number of rational points as projective space of the same dimension over \texorpdfstring{$\dF_q$}{Fq}.
+ 
+@@ -470,7 +481,7 @@
+ manipulations of trigonometric sums into cohomological terms. This dictionary 
+ will be given in \hyperref[VI:2]{Section 2}. Since the cohomological statement is more 
+ ``geometric,'' it can sometimes be applied 
+-to situations where the classical argument only applies after a 
++to situations where the classical argument only applies after an 
+ extension of the finite base field. Here is an example (a special case of a 
+ theorem of Kazhdan).
+ 
+@@ -481,6 +492,7 @@
+ is divisible by $q$.
+ \end{theorem_}
+ 
++\PrintPage{176}
+ First suppose that $\rho$, $Y$, and $f$ are defined over $\dF_q$. 
+ 
+ 
+@@ -505,9 +517,9 @@
+ Frobenius, it is most convenient to use the Galois point of view 
+ (\hyperref[II]{Report} \ref{II:1-8}) and note that the Frobenius substitution 
+ $\varphi$ acts on $\dQ_\ell(1)$ by multiplication by $q$. The 
+-eigenvalues of $F^\ast$ on $\h_c^p(X,\dQ_\ell)$ are therefore obtained by 
++eigenvalues of $F^\ast$ on $\h_c^i(X,\dQ_\ell)$ are therefore obtained by 
+ multiplying by $q$ the eigenvalues of $F^\ast$ acting on $\h_c^{i-2}(Y,\dQ_\ell)$. We 
+-know that the latter are algebraic integers \cite[XXI 5.2.2]{sga7}; hence 
++know that the latter are algebraic integers \PrintCite{SGA~7 XXI 5.2.2}{\cite[XXI 5.2.2]{sga7}}; hence 
+ 
+ \begin{equation*}\tag{$*$}\label{VI:eq:*}
+   \substack{\displaystyle\text{the eigenvalues of $F^\ast$ acting on $\h_c^i(X,\dQ_\ell)$ are} \\
+@@ -526,7 +538,9 @@
+ \end{equation*}
+ 
+ This assertion implies \eqref{VI:eq:*}. The number of rational points of 
+-$X_0$, namely $\sum (-1)^i \tr(F^\ast,\h^i(X,\dQ_\ell))$, is therefore an 
++$X_0$, namely 
++\[\sum (-1)^i \tr(F^\ast,\h_c^i(X,\dQ_\ell))\text{,}\]
++ is therefore an 
+ algebraic integer divisible by $q$. It follows that, as a rational integer, 
+ it is divisible by $q$. 
+ 
+@@ -534,17 +548,18 @@
+ 
+ 
+ 
+-\subsection{}\label{VI:1-14}
++
++\subsection{}\label{VI:1-14}\PrintPage{177}
+ 
+ Formula \ref{VI:1-9-3} controls the dependence on $n$ of the trigonometric 
+ sum on the left-hand side. It implies identities between a 
+ trigonometric sum and those which are deduced from it by ``extension of 
+ scalars.'' The most famous of these identities is that of 
+-Hasse--Davenport. Let $\chi:\dF_q^\times \to \dC^\times$ and 
+-$\psi:\dF_q\to \dC^\times$ be characters, with $\psi$ nontrivial, and 
++Hasse--Davenport. Let $\chi:\dF_q^\ast \to \dC^\ast$ and 
++$\psi:\dF_q\to \dC^\ast$ be characters, with $\psi$ nontrivial, and 
+ define the Gauss sum $\tau(\chi,\psi)$ by 
+ \begin{equation*}\tag{1.14.1}\label{VI:eq:1-14-1}
+-  \tau(\chi,\psi) = - \sum_{x\in \dF_q^\times} \psi(x) \chi^{-1}(x) \text{.}
++  \tau(\chi,\psi) = - \sum_{x\in \dF_q^\ast} \psi(x) \chi^{-1}(x) \text{.}
+ \end{equation*}
+ 
+ 
+@@ -563,7 +578,7 @@
+ characteristic $\ell\ne p$. Identity \eqref{VI:eq:1-15-1} is an identity in 
+ $E$. Proving it in $\dC$ is equivalent to proving it in $E_\lambda$. We 
+ shall prove it in $E_\lambda$, regarding $\chi$ and $\psi$ as taking values 
+-in $E_\lambda^\times$.
++in $E_\lambda^\ast$.
+ 
+ Apply \ref{VI:1-9-3} with $X_0=\dG_m$ over $\dF_q$ and 
+ $G_0=\dG_m\times \dG_a$. The groups $\h_c^i(\dG_m,\sF(\chi^{-1}\psi))$ vanish for 
+@@ -573,7 +588,7 @@
+ the unique eigenvalue of $(F^\ast)^n$ on $\h_c^1$, and \eqref{VI:eq:1-15-1} 
+ follows. 
+ 
+-Similar examples are given in Weil \cite[App V]{we74}. 
++Similar examples are given in Weil \PrintCite{[7, App V, 3rd ed.]}{\cite[App V, 3rd ed.]{we74}}. 
+ 
+ 
+ 
+@@ -586,12 +601,13 @@
+ $F_x^\ast$ (\hyperref[II]{Report} \ref{II:1-2}) are algebraic numbers 
+ all of whose complex conjugates have absolute value 
+ $q_x^{n/2}$, where $q_x$ is the number of elements of $k(x)$. The 
+-following theorem will be proved in \cite{de80}. 
+-
+-
+-
+-
+-
++following theorem will be proved in \PrintCite{P.~Deligne, \emph{La conjecture de Weil II}, in preparation}{\cite{de80}}. 
++
++
++
++
++
++\PrintPage{178}
+ \begin{theorem_}\label{VI:1-17}
+ If $\sF_0$ is pointwise pure of weight $n$, then for any eigenvalue $\alpha$ 
+ of the endomorphism $F^\ast$ of $\h_c^i(X,\sF)$, there exists an integer 
+@@ -617,13 +633,13 @@
+     \[
+       \h_c^i(S,\sF) = 0 \qquad \text{for $i\notin [0,2n]$.}
+     \]
+-  \item The group $\h_c^0(X,\sF)$ is the group of global sections of $\sF$ 
++  \item The group $\h_c^0(S,\sF)$ is the group of global sections of $\sF$ 
+     on $S$ whose support is proper. If $S$ is connected, not proper and 
+     $\sF$ is smooth, this group is zero; the same holds if $S$ is connected, 
+     $\sF$ is smooth of rank one, and is nonconstant.
+   \item If $S$ is smooth and purely of dimension $n$, and $\sF$ is smooth, 
+     Poincaré duality says that the vector spaces 
+-    $\h_c^i(X,\sF)$ and $\h^{2n-i}(X,\sF^\vee)(n)$ are dual to each other 
++    $\h_c^i(S,\sF)$ and $\h^{2n-i}(S,\sF^\vee)(n)$ are dual to each other 
+     (for the effect of a Tate twist on the eigenvalues of Frobenius, 
+     cf. the $2$nd part of the proof of \ref{VI:1-13}).
+   \item If $\dim S=n$, Poincaré duality allows us to compute 
+@@ -634,7 +650,7 @@
+     of cohomology, $\h_c^i(S\setminus U,\sF) = 0$ for $i=2n,2n-1$. 
+     Poincaré duality therefore gives 
+     \[
+-      \h_c^{2n}(S,\sF) \iso \left(\h^0(U,\sF^\vee)(n)\right)^\vee \text{.}
++      \h_c^{2n}(S,\sF) \simeq \left(\h^0(U,\sF^\vee)(n)\right)^\vee \text{.}
+     \]
+     
+     Let $U$ be connected, and let $u$ be a geometric point of $U$. The 
+@@ -642,12 +658,13 @@
+     $\pi_1(U,u)$ on $\sF_u$, and $\h^0(U,\sF^\vee)$ is 
+     $(\sF_u^\vee)^{\pi_1(U,u)}=((\sF_u)_{\pi_1(U,u)})^\vee$ (dual of 
+     coinvariants). We therefore have 
+-    \[
++    \PrintPage{179}
++\[
+       \h_c^{2n}(S,\sF) \simeq (\sF_u)_{\pi_1(U,u)}(-n) \text{.}
+     \]
+   \item These remarks often allow the calculation of $b_0$ and $b_{2n}$. 
+     Computing the other $b_i$ can be difficult. If $b_{2n}=0$ and 
+-    $b_{2n-1}=0$, the bound \eqref{VI:eq:1-17-1} is a Lang--Weil bound, 
++    $b_{2n-1}\ne 0$, the bound \eqref{VI:eq:1-17-1} is a Lang--Weil bound, 
+     with, for large $q$, a gain of $\sqrt q$ over the 
+     trivial $O(q^n)$ bound. One should bear in mind, however, that 
+     \eqref{VI:eq:1-17-1} does not formally imply the trivial bound 
+@@ -668,7 +685,7 @@
+ 
+ \begin{proposition_}\label{VI:1-19}
+ Let $\bar X$ be a proper scheme over an algebraically closed field $k$, 
+-let $j:X\hookrightarrow \bar X$ be an open immersion with domain $X$, and let $\sF$ be an $E_\lambda$-sheaf 
++let $j:X\hookrightarrow \bar X$ be an open subset of $\bar X$, and let $\sF$ be an $E_\lambda$-sheaf 
+ on $X$. Assume that 
+ \begin{enumerate}[\indent a)]
+   \item $(j_\ast\sF)_x = 0$ for $x\in \bar X\setminus X$, i.e. 
+@@ -691,6 +708,7 @@
+   E_2^{pq} = \h^p(\bar X,\eR^q j_\ast \sF) \Rightarrow \h^{p+q}(X,\sF) 
+ \]
+ degenerates, by b) into isomorphisms 
++\PrintPage{180}
+ \[
+   \h^i(\bar X,j_\ast\sF) \iso \h^i(X,\sF) \text{,}
+ \]
+@@ -718,19 +736,22 @@
+ Let $X_0$ be a smooth affine scheme, purely of dimension $n$, over $\dF_q$, and let 
+ $\sF_0$ be a smooth $E_\lambda$-sheaf, pointwise pure of weight $m$, on $X_0$. We 
+ assume that the maps $\h_c^i(X,\sF) \to \h^i(X,\sF)$ are 
+-isomorphisms (cf. \ref{VI:1-17}). Then, $\h_c^i(X,\sF) = 0$ for $i\ne n$, and 
++isomorphisms (cf. \ref{VI:1-19}). Then, $\h_c^i(X,\sF) = 0$ for $i\ne n$, and 
+ the complex conjugates of the eigenvalues of $F^\ast$ on $\h_c^n(X,\sF)$ 
+ are of absolute value $q^{(m+n)/2}$. 
+ \end{proposition_}
+ 
++\begingroup
++\emergencystretch=2em\relax
+ Poincaré duality pairs $\h_c^i(X,\sF)$ (resp. 
+ $\h_c^i(X,\sF^\vee)$) with $\h^{2n-i}(X,\sF^\vee(n))$ (resp. 
+-$\h^{2n-i}(X,\sF(n))$). According to \cite[XIV 3.2]{sga4}, the ordinary $\h^i$ groups 
++$\h^{2n-i}(X,\sF(n))$). According to \PrintCite{SGA~4 XIV 3.2}{\cite[XIV 3.2]{sga4}}, the ordinary $\h^i$ groups 
+ vanish for $i>n$. By duality, the $\h_c^i$ are zero for $i<n$; since 
+ $\h_c^i(X,\sF) \iso \h^i(X,\sF)$, these groups are zero for $i\ne n$. 
+ Apply \ref{VI:1-17} to $\sF_0$ and to $\sF_0^\vee(n)$ (of weight 
+ $-m-2n$). We find that the complex conjugates $\alpha$ of the eigenvalues 
+-of $F^\ast$ on $\h_c^n(X,\sF) = \h_c^n(X,\sF^\vee(n))^\vee$ satisfy 
++of $F^\ast$ on $\h_c^n(X,\sF) = \h_c^n(X,\sF^\vee(n))^\vee$ satisfy\par
++\endgroup 
+ \begin{align*}
+   |\alpha| &\leqslant q^{(m+n)/2} && \text{and} \\
+   |\alpha^{-1}| &\leqslant q^{((-m-2n)+n)/2} = q^{-(m+n)/2} \text{,}
+@@ -753,7 +774,8 @@
+ 
+ 
+ 
+-\subsection*{Appendix. The Lang isogeny in the noncommutative case}
++
++\subsection*{Appendix. The Lang isogeny in the noncommutative case}\PrintPage{181}
+ 
+ 
+ 
+@@ -764,7 +786,7 @@
+ $x\mapsto F x\cdot x^{-1}$ from $G_0$ to itself. It is a morphism of 
+ $G_0$-homogeneous spaces if, on the source, $G_0$ acts by left translation 
+ $x\mapsto (y\mapsto x y)$, and on the target by 
+-$x\mapsto (y\mapsto F x\cdot y\cdot x^{-1})$). We have $\fL(xy) = \fL(x)$ for 
++$x\mapsto (y\mapsto F x\cdot y\cdot x^{-1})$. We have $\fL(xy) = \fL(x)$ for 
+ $y\in G_0(\dF_q)$, and $\fL$ induces an isomorphism $G_0/G_0(\dF_q)\iso G_0$. 
+ 
+ As in the commutative case, $\fL$ therefore makes $G_0$ a $G_0(\dF_q)$-torsor 
+@@ -803,15 +825,16 @@
+   \item If $F g\cdot g^{-1} \in G_0(\dF_q)$, we have 
+     $g^{-1} (F g\cdot g^{-1}) g = g^{-1} F g\in G_0(\dF_q)$.
+   \item Let $\gamma\in G_0(\dF_q)$, and $g$ such that 
+-    $F g\cdot g^{-1} = \gamma$. The conjugation class of $\gamma'=g^{-1} Fg$ 
++    $F g\cdot g^{-1} = \gamma$. The conjugacy class of $\gamma'=g^{-1} Fg$ 
+     in $G_0(\dF_q)$ only depends on that of $\gamma$. 
+-  \item The map induced by $\gamma\mapsto \gamma'$ on the set 
++  \item The map $\prime$, induced by $\gamma\mapsto \gamma'$ on the set 
+     $G_0(\dF_q)^\natural$ of conjugacy classes of $G_0(\dF_q)$ 
+-    is bijective. Its inverse is the corresponding map for the opposite 
++    is bijective. Its inverse is the map $\prime$ for the opposite 
+     group. 
+ \end{enumerate}
+ \end{lemma_}
+ 
++\PrintPage{182}
+ (i) If $\gamma= F g\cdot g^{-1}\in G_0(\dF_q)$, the identities $F g=\gamma g$ 
+ and 
+ $F\gamma=\gamma$ give $F(g^{-1} F g) = (F g)^{-1} F F g = g^{-1} \gamma^{-1} F(\gamma g) = g^{-1} \gamma^{-1} F \gamma F g = g^{-1} F g$, 
+@@ -847,7 +870,7 @@
+ \subsection{An example}\label{VI:1-26}
+ 
+ For $G_0=\operatorname{SL}(2)$, $q$ odd, 
+-$\alpha\in \dF_q^\times\setminus {\dF_q^\times}^2$, and $\bar\gamma$ is the 
++$\alpha\in \dF_q^\ast\setminus {\dF_q^\ast}^2$, and $\bar\gamma$ is the 
+ conjugacy class of $-1(1+N)$, with $N^2=0$, then $\bar\gamma'$ is the 
+ conjugacy class of $-1\cdot (1+\alpha N)$, so that $\bar\gamma'\ne \bar\gamma$ 
+ if $N\ne 0$. 
+@@ -861,7 +884,8 @@
+ 
+ 
+ 
+-\section{Dictionary}\label{VI:2}
++
++\section{Dictionary}\label{VI:2}\PrintPage{183}
+ 
+ Elementary manipulations of trigonometric sums can often 
+ be seen, via the trace formula, as counterparts of statements 
+@@ -877,7 +901,7 @@
+ 
+ ``A sum of algebraic integers is an algebraic integer'' has as its 
+ cohomological analogue the following theorem, proved in 
+-\cite[XXI 5.2.2]{sga7} (see the use of \ref{VI:2-1}$^\ast$ in 
++\PrintCite{SGA~7 XXI 5.2.2}{\cite[XXI 5.2.2]{sga7}} (see the use of \ref{VI:2-1}$^\ast$ in 
+ \ref{VI:1-13}). 
+ 
+ 
+@@ -898,7 +922,7 @@
+ \subsection{}\label{VI:2-2}
+ 
+ Other integrality results are proved in 
+-\cite[XXI, 5.2.2 et 5.4]{sga7}: if $\dim(X_0)\leqslant n$, and $\alpha$ is 
++\PrintCite{SGA~7 XXI, 5.2.2 and 5.4}{\cite[XXI, 5.2.2 and 5.4]{sga7}}: if $\dim(X_0)\leqslant n$, and $\alpha$ is 
+ an eigenvalue of $F^\ast$ on $\h_c^i(X,\sF)$, we have: 
+ \begin{enumerate}[a)]
+   \item under the assumptions of \ref{VI:2-1}$^\ast$, and if $i>n$, then 
+@@ -928,7 +952,8 @@
+ 
+ 
+ 
+-\subsection*{2.3*}\label{VI:2-3*}
++
++\subsection*{2.3*}\label{VI:2-3*}\PrintPage{184}
+ 
+ Let $f:X\to Y$ be a morphism of separated schemes of finite type over an 
+ algebraically closed field $k$, and let $\sF$ be an $E_\lambda$-sheaf on $X$. The 
+@@ -959,7 +984,7 @@
+     \end{align*}
+     while that for $\eR^q f_! \sF$ reads 
+     \begin{align*}\tag{2$_q$}\label{VI:eq:2_q} 
+-      \sum_{y\in Y_0(\dF_q)} \tr(F_y^\ast,\eR^q f_! \sF) = \tr(F^\ast, \h_c^\bullet(Y,\eR^q f_! \sF)) \text{.}
++      \sum_{y\in Y_0(\dF_q)} \tr(F_y^\ast,\eR^q f_! \sF) = \tr(F^\ast,\h_c^\bullet(Y,\eR^q f_! \sF)) \text{.}
+     \end{align*}
+ \end{enumerate}
+ 
+@@ -972,6 +997,7 @@
+ \[
+   \sum_{\substack{x\in X_0(\dF_q) \\ f(x) = y}} \tr(F_x^\ast,\sF_0) = \sum (-1)^q \tr(F_y^\ast,\eR^q f_! \sF) \text{.}
+ \]
++\PrintPage{185}
+ Taking the alternating sum of the identities \eqref{VI:eq:2_q}, we therefore find 
+ \begin{align*}\tag{2}\label{VI:eq:2}
+   \sum_{y\in Y_0(\dF_q)} \sum_{\substack{x \in X_0(\dF_q) \\ f(x) = y}} \tr(F_x^\ast,\sF_0) = \tr(F^\ast,\h_c^\bullet(Y,\eR^\bullet f_! \sF)) \text{.}
+@@ -1047,6 +1073,7 @@
+ }
+ \end{align*}
+ 
++\PrintPage{186}
+ More generally, given a finite filtration of $X$ by closed subsets 
+ $X_p$ ($p\in \dZ$; assume that $X_p\supset X_{p+1}$, that $X_p=X$ 
+ for $p$ sufficiently small, and that $X_p=\varnothing$ for $p$ sufficiently large), there is a 
+@@ -1094,13 +1121,14 @@
+ 
+ \subsection{}\label{VI:2-7}
+ 
+-Let $A$ be a finite commutative group, and $\chi:A \to E_\lambda^\times$ a 
++Let $A$ be a finite commutative group, and $\chi:A \to E_\lambda^\ast$ a 
+ nontrivial character. We have 
+ \begin{align*}\tag{2.7.1}\label{VI:eq:2-7-1}
+   \sum_{a\in A} \chi(a) = 0 \text{.}
+ \end{align*}
+ We will prove the cohomological analogue of \eqref{VI:eq:2-7-1} by transposing 
+ the following proof: if $x\in A$, $a\mapsto x a$ is a permutation of $A$, and 
++\PrintPage{187}
+ \begin{align*}
+   \sum_{a\in A}\chi(a) = \sum_{a\in A} \chi(x a) &= \chi(x) \sum_{a\in A} \chi(a) && \text{, whence} \\
+   (\chi(x)-1)\sum_{a\in A}\chi(a) &= 0 \text{,}
+@@ -1113,7 +1141,7 @@
+ 
+ \begin{theorem*}[2.7*]\label{VI:2-7*}
+ Let $G_0$ be a connected commutative algebraic group over $\dF_q$ and 
+-$\chi:G_0(\dF_q) \to E_\lambda^\times$ a nontrivial character. We have 
++$\chi:G_0(\dF_q) \to E_\lambda^\ast$ a nontrivial character. We have 
+ \begin{align*}\tag{2.7.1*}\label{VI:eq:2-7-1*}
+   \h_c^\bullet(G,\sF(\chi)) = 0 \text{.}
+ \end{align*}
+@@ -1130,7 +1158,7 @@
+ $\rho(g)$. A homotopy argument (Lemma \ref{VI:2-8} below) shows that 
+ $\rho_H(g) = \rho_H(e)$, and hence is the identity. On the other hand, for 
+ $g\in G_0(\dF_q)$, $\rho_H(g)$ is multiplication by 
+-$\chi^{-1}(g)$: on $\h^\bullet(G,\sF(\chi))$, multiplication by 
++$\chi^{-1}(g)$: on $\h_c^\bullet(G,\sF(\chi))$, multiplication by 
+ $(\chi^{-1}(g)-1)$ is zero. Taking $g$ such that $\chi(g)\ne 1$, we obtain 
+ \ref{VI:2-7*}. 
+ 
+@@ -1154,7 +1182,8 @@
+ \end{lemma_}
+ 
+ Indeed, $\eR^p \pr_{1!} \pr_2^\ast\sF$ is the 
+-constant sheaf on $Y$ with fiber $\h_c^p(X,\sF)$, and $\rho_H(y)^\ast$ is the 
++constant sheaf on $Y$ with fiber \PrintPage{188}
++$\h_c^p(X,\sF)$, and $\rho_H(y)^\ast$ is the 
+ fiber at $y$ of the endomorphism 
+ \[\xymatrix{
+   \eR^p \pr_{1!} \pr_2^\ast \sF \ar[r]^-{\rho^\ast} 
+@@ -1182,7 +1211,8 @@
+ 
+ 
+ 
+-\section{Sums in one variable}\label{VI:3}
++
++\section{Sums in one variable}\label{VI:3}\PrintPage{189}
+ 
+ 
+ 
+@@ -1209,7 +1239,7 @@
+ Cohomological methods here lead us to compute the groups 
+ $\h_c^i(X,\sF)$, where $\sF_0$ is an $E_\lambda$-sheaf on a curve $X_0$ over 
+ $\dF_q$. These groups vanish for $i\ne 0,1,2$, and for 
+-$i=0,2$, they have a simple interpretation (\ref{VI:1-8} a,b,c). Furthermore, the 
++$i=0,2$, they have a simple interpretation (\ref{VI:1-18} a,b,c). Furthermore, the 
+ Euler-Poincaré characteristic 
+ $\chi_c(\sF) = \sum (-1)^i \dim \h_c^i(X,\sF)$ (which is also equal to 
+ $\chi(\sF) = \sum (-1)^i \dim \h^i(X,\sF)$) can be computed in terms of 
+@@ -1227,7 +1257,7 @@
+ \begin{align*}\tag{3.2.1}\label{VI:eq:3-2-1}
+   \chi_c(\sF) = \operatorname{rg}(\sF) \cdot \chi(X) - \sum_{s\in S} \swan_s(\sF) 
+ \end{align*}
+-\cite{ra65}. 
++\PrintCite{(Séminaire Bourbaki 286, February 1965)}{\cite{ra65}}. 
+ 
+ 
+ 
+@@ -1235,7 +1265,7 @@
+ 
+ \subsection{}\label{VI:3-3}
+ 
+-Let $\bar X$, $j:X\hookrightarrow\bar X$ and $\sF$ as in \ref{VI:3-2}. The 
++Let $\bar X$, $j:X\hookrightarrow\bar X$ and $\sF$ be as in \ref{VI:3-2}. The 
+ Poincaré duality theorem takes the particularly convenient form: 
+ $\h^i(\bar X,j_\ast \sF)$ and $\h^{2-i}(\bar X,j_\ast(\sF^\vee(1)))$ are 
+ dual to each other (\hyperref[V]{Duality}, \ref{V:1-3}). 
+@@ -1244,7 +1274,8 @@
+ 
+ 
+ 
+-\subsection{}\label{VI:3-4}
++
++\subsection{}\label{VI:3-4}\PrintPage{190}
+ 
+ Take $k=\dF$, and suppose that $X$, $\bar X$, and $\sF$ arise from 
+ $X_0$, $\bar X_0$, and $\sF_0$ over $\dF_q$. If $\sF_0$ becomes trivial on a 
+@@ -1267,7 +1298,7 @@
+   \prod_i \det(-F^\ast,\h^i(X,\sF))^{(-1)^i} 
+ \]
+ from \emph{local} information on $\sF_0$. This is explained in 
+-\cite{de73}. For trivial $\sF_0$ on a finite covering of $X_0$, it is 
++\PrintCite{[2]}{\cite{de73}}. For trivial $\sF_0$ on a finite covering of $X_0$, it is 
+ the expression of the constant in the functional equation of an Artin 
+ $L$-function as a product of local constants. 
+ 
+@@ -1287,18 +1318,19 @@
+   S_f' = \sum_{\substack{x\in X_0(\dF_q) \\ f(x)\ne \infty}} \psi(f(x)) 
+   \text{.}
+ \]
+-This sum is zero for $f$ of the form $g^p-g$. This suggests modifying 
++For $f$ of the form $g^p-g$, this sum equals $\#\{x\in X_0(\dF_q)\mid f(x)\ne\infty\}$. This suggests modifying 
+ the sum $S_f'$ as follows: 
+ \begin{enumerate}[\indent a)]
+-  \item for any closed point $x$ of $X_0$, set $v_x(f) = $ the order of the 
++  \item for every closed point $x$ of $X_0$, set $v_x(f) = $ the order of the 
+     pole of $f$ at $x$ if $f(x)=\infty$, and $v_x(f)=0$ otherwise; also set 
+     $v_x^\ast(f) = \inf v_x(f+g^p-g)$ (the infimum being over $g$). 
+   \item If $v_x^\ast(f)=0$, $x\in X_0(\dF_q)$, and $f+g^p-g$ is 
+     regular at $x$, put $\psi(f(x)) = \psi((f+g^p-g)(x))$. Finally set 
+-    \begin{equation*}\tag{3.5.1}\label{VI:eq:3-5-1}
++    \PrintPage{191}
++\begin{equation*}\tag{3.5.1}\label{VI:eq:3-5-1}
+       S_f = \sum'_{x\in X_0(\dF_q)} \psi(f(x)) \text{,}
+     \end{equation*}
+-    where $(-)'$ indicates that the sum runs over those $x$ for which 
++    where $\prime$ indicates that the sum runs over those $x$ for which 
+     $v_x^\ast(f)=0$. 
+ \end{enumerate}
+ 
+@@ -1310,7 +1342,7 @@
+ 
+ We begin by passing from complex coefficients to $\ell$-adic coefficients, replacing $\psi$ by 
+ a character of the form $\psi_0\circ \tr_{\dF_q/\dF_p}$, with 
+-$\psi_0:\dF_p\hookrightarrow E_\lambda^\times$. For $j:U_0\hookrightarrow X_0$ 
++$\psi_0:\dF_p\hookrightarrow E_\lambda^\ast$. For $j:U_0\hookrightarrow X_0$ 
+ the inclusion of the open where $f\ne\infty$, we then prove that 
+ \begin{equation*}\tag{3.5.3}\label{VI:eq:3-5-3}
+   S_f = \sum (-1)^i \tr(F^\ast,\h^i(X,j_\ast \sF(\psi f))) \text{.} 
+@@ -1336,22 +1368,23 @@
+ \end{equation*}
+ After reduction to the case $v_x(f)=v_x^\ast(f)$ (hence $p\nmid v_x(f)$) 
+ and extension of scalars to $\dF$, this formula can be found in 
+-\cite[4.4]{se61}.
++\PrintCite{(J.P.~Serre, Sur les corps locaux à corps résiduel algébriquement clos, Bull.~SMF \textbf{89} (1961), p.~105--154, n\textsuperscript{o}4.4)}{\cite[4.4]{se61}}.
+ 
+ Finally, we check that the sheaf $\sF(\psi f)$ on $U$ is nonconstant if 
+ $f$ is not of the form $g^p-g+c^{t e}$: since $\psi_0$ is injective, the 
+ triviality of $\sF(\psi f)=\sF(\psi_0 f)$ (\ref{VI:1-8}.ii) is equivalent to 
+ that of the $\dF_p$-torsor on $U$ defined by $T^p-T-f=0$. If it were trivial, 
+-the torsor on $U_0$ defined by the same equation would be the inverse image of an 
+-$\dF_q$-torsor on $\spec(\dF_q)$, with equation $T^p-T-\lambda=0$, and the 
++the torsor on $U_0$ defined by the same equation \PrintPage{192}
++would be the inverse image of an 
++$\dF_p$-torsor over $\spec(\dF_q)$, with equation $T^p-T-\lambda=0$, and the 
+ $\dF_p$-torsor equation $T^p-T-(f-\lambda)=0$ on $U_0$ would be trivial 
+ and $f$ would therefore be of the form $g^p-g+\lambda$. The 
+-$\h^i(\bar X,j_\ast \sF(\psi f))$ therefore vanish for $i\ne 1$, and formula 
++$\h^i(X,j_\ast \sF(\psi f))$ therefore vanish for $i\ne 1$, and formula 
+ \eqref{VI:eq:3-5-3} reduces to 
+ \begin{equation*}\tag{3.5.5}\label{VI:eq:3-5-5}
+-  S_f = -\tr(F^\ast,\h^1(\bar X,j_\ast \sF(\psi f))) 
+-\end{equation*}
+-and, by \eqref{VI:eq:3-2-1} and \eqref{VI:eq:3-5-4}, the dimension of $\h^1$ is 
++  S_f = -\tr(F^\ast,\h^1(X,j_\ast \sF(\psi f))) 
++\end{equation*}
++and, by \eqref{VI:eq:3-2-1} and \eqref{VI:eq:3-5-4}, the dimension of this $\h^1$ is 
+ $2 g-2+\sum_{v_x^\ast(f)>0} [k(x):\dF_q](1+v_x^\ast(f))$; moreover, $-S_f$ 
+ is the sum of this many eigenvalues of $F^\ast$, each having complex 
+ absolute value $q^{1/2}$. 
+@@ -1380,9 +1413,9 @@
+ \end{enumerate} 
+ 
+ Passing to cohomology, we find that $\h^1(X,\sF)$ and $\h^1(X,\sG)$ are in 
+-perfect duality with values in $E_\lambda(1)$, and that the bilinear form 
++perfect duality with values in $E_\lambda(-1)$, and that the bilinear form 
+ $\alpha\cdot \sigma^\ast\beta$ on $\h^1(X,\sF)$ is \emph{alternating}: 
+-$\sigma^\ast$ acts trivially on $E_\lambda(1)$, and 
++$\sigma^\ast$ acts trivially on $E_\lambda(-1)$, and 
+ \[
+   \alpha\cdot \sigma^\ast \beta = \sigma^\ast(\alpha\cdot \sigma^\ast \beta) = \sigma^\ast \alpha\cdot \beta = -\beta\cdot \sigma^\ast \alpha \text{.} 
+ \]
+@@ -1395,17 +1428,18 @@
+ 
+ 
+ 
+-\subsection{Example}\label{VI:3-7}
++
++\subsection{Example}\label{VI:3-7}\PrintPage{193}
+ 
+ This applies to the Kloosterman sums 
+-$\sum_{x\in \dF_q^\times} \psi\left(x+\frac a x\right)$ (take 
++$\sum_{x\in \dF_q^\ast} \psi\left(x+\frac a x\right)$ (take 
+ $X_0=\dP^1$, $f=x+\frac a x$, $\sigma x=-x$; the poles of $f$ are $0$ and 
+ $\infty$, and at each of them $v_x^\ast(f)=1$; the dimension of $\h^1$ is 
+ $-2+2+2=2$). We therefore have (for $a\ne 0$) 
+ \[
+   \sum_{\substack{x y=a \\ x,y\in \dF_{q^n}}} \exp\left(\frac{2\pi i}{p} \tr_{\dF_{q^n}/\dF_p}(x+y)\right) = -(\alpha^n+\bar\alpha^n) \qquad \text{, }\alpha\bar \alpha = q \text{.} 
+ \]
+-This result is due to L.\ Carlitz \cite{ca69}. 
++This result is due to L.\ Carlitz \PrintCite{(Kloosterman sums and finite field extension, Acta Arith.~\textbf{16} (1969/70), p.~179--193, MR~\textbf{40}~4213)}{\cite{ca69}}. 
+ 
+ We now give an application of a Lang--Weil method. 
+ 
+@@ -1418,7 +1452,7 @@
+ $d$, which is not of the form $Q^p-Q+C^{te}$. Again setting 
+ $\psi(x) = \exp\left(\frac{2\pi i}{p} \tr_{\dF_q/\dF_p}(x)\right)$, we have 
+ \[
+-  \left|\sum_{x_i\in \dF_q} \psi P(x_1,\dots,x_n)\right| \leqslant (d+1) q^{n-\frac 1 2} \text{.}
++  \left|\sum_{x_i\in \dF_q} \psi P(x_1,\dots,x_n)\right| \leqslant (d-1) q^{n-\frac 1 2} \text{.}
+ \]
+ \end{proposition_}
+ 
+@@ -1449,8 +1483,9 @@
+ of variables if necessary, we may assume that $P_d(1,0,\ldots,0)\ne 0$, i.e. 
+ that the coefficient of $X_1^d$ in $P$ is nonzero. A polynomial in $1$ 
+ variable 
+-\[
+-  S(X) = \sum_{i=0}^d a_i x^i \text{,} 
++\PrintPage{194}
++\[
++  S(X) = \sum_{i=0}^d a_i X^i \text{,} 
+ \]
+ with $a_d\ne 0$ ($p\nmid d$) is never of the form $Q^p-Q+C^{t e}$, and 
+ the \eqref{VI:eq:3-5-2} estimate is reduced to 
+@@ -1485,6 +1520,7 @@
+   P(X_1,x_2,\dots,x_n) = (S_1(x_2,\dots,x_n)-\lambda) X_1^{d-1} + \text{terms of lower degree in $X_1$} 
+ \]
+ and if $S_1(x_2,\dots,x_n)\ne \lambda$, we therefore have 
++\PrintPage{195}
+ \[
+   \left| \sum_{x_1} \psi P(x_1,\dots,x_n)\right| \leqslant (d-2) q^{1/2} \text{.} 
+ \]
+@@ -1493,23 +1529,24 @@
+   \left|\sum \psi P(x_1,\dots,x_n)\right| 
+     &\leqslant \left|\sum_{S_1=\lambda} \psi P(x_1,\dots,x_n)\right| + \sum_{S_1(X_2,\dots,X_n)\ne\lambda} \left| \sum_{x_1} \psi P(x_1,\dots,x_n)\right| \\
+     &\leqslant q^{n-1} + (q^{n-1}-q^{n-2})(d-2) q^{1/2} \\
+-    &< (d-2) q^{n-1/2} + q^{n-1} \\
++    &\leqslant (d-2) q^{n-1/2} + q^{n-1} \\
+     &< (d-1) q^{n-1/2} \text{.}
+ \end{align*}
+ 
+ Another result of this nature is given by R.A.\ Smith 
+-\cite{sm70}. 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-\section{Gauss and Jacobi sums}\label{VI:4}
++\PrintCite{(Mathematika \textbf{17} (1970), p.~328--332)}{\cite{sm70}}. 
++
++
++
++
++
++
++
++
++
++
++
++\section{Gauss and Jacobi sums}\label{VI:4}\PrintPage{196}
+ 
+ 
+ 
+@@ -1518,16 +1555,16 @@
+ \subsection{}\label{VI:4-1}
+ 
+ Let $k$ be a finite field of characteristic $p$, let $\chi$ be a character of 
+-$k^\times$, and let $\psi$ be a nontrivial character of the additive group of $k$. 
++$k^\ast$, and let $\psi$ be a nontrivial character of the additive group of $k$. 
+ We take the following as the definition of Gauss sums: 
+ \begin{equation*}\tag{4.1.1}\label{VI:eq:4-1-1}
+-  \tau(\chi,\psi) = -\sum_{x\in k^\times} \psi(x) \chi^{-1}(x) 
++  \tau(\chi,\psi) = -\sum_{x\in k^\ast} \psi(x) \chi^{-1}(x) 
+ \end{equation*}
+ (note the sign). Classically, $\chi$ and $\psi$ are complex-valued. 
+-We take them to have values in $E_\lambda^\times$ (see the proof of 
++We take them to have values in $E_\lambda^\ast$ (see the proof of 
+ \ref{VI:1-15}). Regard $-\tau(\chi,\psi)$ as a sum over the rational 
+ points of the scheme $\dG_m$ over $k$. By Section \ref{VI:1}, 
+-we have $-\tau(\chi,\psi) = \tr(F^\ast,\h_c^\ast(\dG_m,\sF(\psi \chi^{-1}))$. Moreover,
++we have $-\tau(\chi,\psi) = \tr(F^\ast,\h_c^\ast(\dG_m,\sF(\psi \chi^{-1})))$. Moreover,
+ 
+ \begin{proposition_}\label{VI:4-2}
+ The cohomology of $\dG_m$ with coefficients in $\sF(\psi\chi^{-1})$ satisfies 
+@@ -1540,14 +1577,14 @@
+ \end{proposition_}
+ \begin{proof}[Proof]
+ For any $n$ prime to $p$, denote by $K_n$ the $\dmu_n$-torsor on $\dG_m$ 
+-defined by the exact K\"ummer sequence 
++defined by the exact Kummer sequence 
+ $0 \to \dmu_n \to \dG_m \xrightarrow{x^n} \dG_m \to 0$. If $k$ has $q$ 
+-elements, then over $k$ one has $\dmu_{q-1}=k^\times$, and the Lang torsor on 
++elements, then over $k$ one has $\dmu_{q-1}=k^\ast$, and the Lang torsor on 
+ $\dG_m/k$ is $K_{q-1}$. Hence $\sF(\chi^{-1})=\chi(K_{q-1})$. 
+ Assertion \ref{VI:4-2}(ii) follows from (i,iii), which in turn follow from 
+ the following geometric statement, where $\sF(\psi)$ denotes the sheaf 
+ on $\dG_m/\dF$ obtained by extending scalars from $k$ to $\dF$ in 
+-$\sF(\psi)$ on $\dG_m/k$ (\ref{VI:1-8}.b). 
++$\sF(\psi)$ on $\dG_m/k$ (\ref{VI:1-8}(ii)). 
+ \end{proof}
+ 
+ 
+@@ -1555,13 +1592,14 @@
+ 
+ 
+ \begin{proposition_}\label{VI:4-3}
+-Let $\chi:\dmu_n \to E_\lambda^\times$. The cohomology of $\dG_m$ with 
++Let $\chi:\dmu_n \to E_\lambda^\ast$. The cohomology of $\dG_m$ with 
+ coefficients in $\sF(\psi)\otimes \chi(K_n)$ satisfies 
+ \begin{enumerate}[\indent (i)]
+   \item $\h_c^i=0$ for $i\ne 1$, and $\dim \h_c^1{} = 1$. 
+   \item If $\chi$ is nontrivial, we have $\h_c^\bullet{}\iso \h^\bullet{}$. 
+ \end{enumerate}
+ \end{proposition_}
++\PrintPage{197}
+ \begin{proof}[Proof]
+ The sheaf $\sF(\psi)$ is the restriction to $\dG_m$ of a sheaf locally 
+ constant on $\dG_a$, wildly ramified at infinity, with Swan conductor 
+@@ -1571,7 +1609,7 @@
+ The sheaf $\sF(\psi)\otimes\chi(K_n)$ is therefore ramified at $\infty$; 
+ applying \ref{VI:1-18}(b,c), we find that 
+ $\h_c^i(\dG_m,\sF(\psi)\otimes \chi(K_n))=0$ for $i\ne 1$. If $\chi\ne 1$, it 
+-is ramified at $0$ and $\infty$, and (ii) follows from \ref{VI:1-19}.a. 
++is ramified at $0$ and $\infty$, and (ii) follows from \ref{VI:1-19}.1. 
+ 
+ The Swan conductors are $0$ at $0$ and $1$ at $\infty$. By 
+ \eqref{VI:eq:3-2-1}, the Euler--Poincaré characteristic is therefore $-1$, 
+@@ -1584,12 +1622,15 @@
+ 
+ \subsection{Remark}\label{VI:4-4}
+ 
++\begingroup
++\emergencystretch=2em\relax
+ If $\chi$ is nontrivial, \ref{VI:4-2}(iii) and Poincaré duality 
+ show that $\h_c^1(\dG_m,\sF(\psi\chi^{-1}))$ and 
+ $\h_c^1(\dG_m,\sF(\psi^{-1}\chi))$ are in duality (duality with values 
+ in $E_\lambda(-1)$). We therefore have 
+ $\tau(\chi,\psi)\cdot \tau(\chi^{-1},\psi^{-1}) = q$, i.e. 
+-$|\tau(\chi,\psi)|=q^{1/2}$. 
++$|\tau(\chi,\psi)|=q^{1/2}$.\par
++\endgroup 
+ 
+ 
+ 
+@@ -1600,31 +1641,32 @@
+ If $k$ is an extension of degree $N$ of $\dF_q$, we can also regard 
+ \eqref{VI:eq:4-1-1} as a sum in $N$ variables over $\dF_q$. More 
+ generally, let $k$ be an étale algebra over $\dF_q$, of degree $N$ over 
+-$\dF_q$. It is a product of fields $k_i$ of degrees $N_i$, and we set 
++$\dF_q$. It is a product of fields $k_i$ of degrees $N_i$ over $\dF_q$, and we set 
+ \begin{equation*}\tag{4.5.1}\label{VI:eq:4-5-1}
+-  \varepsilon(k) = (-1)^{\sum (N_i+1)} \text{.} 
++  \varepsilon(k) \underset{\mathrm{dfn}}{=} (-1)^{\sum (N_i+1)} \text{.} 
+ \end{equation*}
+ This is the sign of the permutation of $S=\hom_{\dF_q}(k,\dF)$ induced by the 
+ Frobenius substitution $\varphi\in \gal(\dF/\dF_q)$. 
+ 
+-Let $\psi:\dF_q\to E_\lambda^\times$ be a nontrivial character, and let 
+-$\chi:k^\times \to E_\lambda^\times$. We set 
++Let $\psi:\dF_q\to E_\lambda^\ast$ be a nontrivial character, and let 
++$\chi:k^\ast \to E_\lambda^\ast$. We set 
+ \begin{equation*}\tag{4.5.2}\label{VI:eq:4-5-2}
+-  \tau_{\dF_q}(\chi,\psi) = (-1)^N \sum_{x\in k^\times} \psi \tr_{k/\dF_q}(x) \cdot \chi^{-1}(x) \text{.} 
+-\end{equation*}
+-
+-If $\chi$ has coordinates $\chi_i:k_i^\times \to E_\lambda^\times$, we 
++  \tau_{\dF_q}(\chi,\psi) = (-1)^N \sum_{x\in k^\ast} \psi \tr_{k/\dF_q}(x) \cdot \chi^{-1}(x) \text{.} 
++\end{equation*}
++
++If $\chi$ has coordinates $\chi_i:k_i^\ast \to E_\lambda^\ast$, we 
+ have the elementary identity 
+ \begin{equation*}\tag{4.5.3}\label{VI:eq:4-5-3}
+   \tau_{\dF_q}(\chi,\psi) = \varepsilon(k) \prod \tau(\chi_i,\psi\circ \tr_{k_i/\dF_q}) \text{.}
+ \end{equation*}
+ 
++\PrintPage{198}
+ After some preliminaries, we give in \ref{VI:4-10} a 
+ cohomological interpretation of the sums \eqref{VI:eq:4-5-2}. In 
+ \ref{VI:4-12}, we will interpret the Hasse--Davenport identity as a 
+ twisted form (cf. \ref{VI:1-12}) of the following special case of 
+ \eqref{VI:eq:4-5-3}: for $k=\dF_q^N$, and $\chi$ a character of 
+-$\dF_q^\times$, we have 
++$\dF_q^\ast$, we have 
+ $\tau_{\dF_q}(\chi\circ N_{k/\dF_q},\psi)=\tau(\chi,\psi)^N$. 
+ 
+ 
+@@ -1671,11 +1713,12 @@
+     \end{equation*}
+ \end{enumerate}
+ 
+-If $M=A^I$, $I$ a finite set, then $V\simeq \dG_a^I$, $V^\ast=\dG_m^I$, 
++If $M=A^I$, $I$ a finite set, then $V\simeq \dG_a^I$, $V^\ast\simeq \dG_m^I$, 
+ $V^\ast/\dG_m$ is the torus $\dG_m^I/(\dG_m\text{ diagonal})$, $N$ and $T$ 
+ are given by $\prod x_i$ and $\sum x_i$, and $Q$ is therefore the projective 
+ hyperplane with equation $\sum x_i=0$ in $P$. 
+ 
++\PrintPage{199}
+ The case of interest is that in which $M$ is finite étale over $A$. The 
+ previous description then applies locally to $\spec(A)$ (for the 
+ étale topology) and we can write $V^\ast=\dG_m^I$, for $I$ a locally 
+@@ -1702,12 +1745,12 @@
+     & 0 
+ }\]
+ is exact. It defines a $G_n$-torsor $K_n(G)$ (or simply $K_n$) on 
+-$G$. For $\chi:G_n \to E_\lambda^\times$ a homomorphism from the étale 
+-$S$-sheaf $G_n$ to the constant sheaf $E_\lambda^\times$, we denote by 
++$G$. For $\chi:G_n \to E_\lambda^\ast$ a homomorphism from the étale 
++$S$-sheaf $G_n$ to the constant sheaf $E_\lambda^\ast$, we denote by 
+ $\sK_n(\chi)$ the $E_\lambda$-sheaf $\chi^{-1}(K_n)$. 
+ 
+ The $K_n$ torsors form an inverse system of torsors under the 
+-projective system of groups $G_n$ (transition morphisms 
++inverse system of groups $G_n$ (transition morphisms 
+ $x\mapsto x^d:G_{n d}\to G_n$). This expresses the commutativity of the diagrams 
+ \[\xymatrix{
+   0 \ar[r] 
+@@ -1736,16 +1779,16 @@
+ $\dF$ obtained by extension of scalars. 
+ 
+ We put $I=\hom(k,\dF)$; then $V\sim \dG_a^I$ and $T$ is given by 
+-$(x_i)\mapsto \sum x_i$. 
++$(x_i)\mapsto \sum x_i$. Consequently, 
++\PrintPage{200}
+ \begin{equation*}\tag{4.8.1}\label{VI:eq:4-8-1}
+   \sF(\psi\circ \tr_{k/\dF_q}) = T^\ast \sF(\psi) = \bigotimes_i \pr_i^\ast \sF(\psi) \text{.} 
+ \end{equation*}
+ Since $V^\ast\sim \dG_m^I$, a character $\chi$ of $V_n^\ast\sim \dmu_n^I$, 
+-with values in $E_\lambda^\times$, amounts to a family 
++with values in $E_\lambda^\ast$, amounts to a family 
+ $(\chi_i)_{i\in I}$ of characters of $\dmu_n$ indexed by $I$. It is 
+ defined over $\dF_q$ if, for all $\sigma\in \gal(\dF/\dF_q)$, we have 
+-$\chi_{\sigma_i} = \chi_i\circ \sigma^{-1}$. It then defines a 
+-$E_\lambda$-sheaf $\sK_n((\chi_i)_{i\in I})$ on $V_0^\ast$. If the product 
++$\chi_{\sigma_i} = \chi_i\circ \sigma^{-1}$. It then defines an $E_\lambda$-sheaf $\sK_n((\chi_i)_{i\in I})$ on $V_0^\ast$. If the product 
+ of the $\chi_i$ is trivial, $\chi$ factors through a character of 
+ $(V_0^\ast/\dG_m)_n$ and $\sK_n((\chi_i)_{i\in I})$ is the inverse image 
+ of a sheaf, denoted in the same way, on $V_0^\ast/\dG_m$. This construction 
+@@ -1765,14 +1808,14 @@
+         & V_0^\ast \ar[r] \ar@{=}[d] 
+         & 0 \\
+       0 \ar[r] 
+-        & k^\times \ar[r] 
++        & k^\ast \ar[r] 
+         & V_0^\ast \ar[r]^-\fL 
+         & V_0^\ast \ar[r] 
+         & 0 \text{;} 
+     }\]
+-    if $\chi$ is a character $\chi:k^\times \to E_\lambda^\times$, we have 
++    if $\chi$ is a character $\chi:k^\ast \to E_\lambda^\ast$, we have 
+     $\sF(\chi) = \sK_n(\chi\circ\tau)$. 
+-  \item For sufficiently divisible $n$, $\tau$ identifies $k^\times$ with the coinvariants 
++  \item For sufficiently divisible $n$, $\tau$ identifies $k^\ast$ with the coinvariants 
+     of $\gal(\dF/\dF_q)$ acting on $V_n^\ast\sim \dmu_n^I$. 
+   \item For $k$ a field, $N=[k:\dF_q]$, $\omega\in I$ an embedding of $k$ 
+     in $\dF$, and $n=q^N-1$, the index component $\omega$ of 
+@@ -1786,14 +1829,15 @@
+ $\dF_q$. In this case, $n$ is ``sufficiently divisible'' if $q^N-1\mid n$. 
+ Choose an embedding $\omega$ of $k$ into $\dF$; then $I$ is identified 
+ with $\dZ/N$: the element $i\in \dZ/N$ corresponds to $\omega_i=\omega^{q^i}$. Via 
+-the isomorphism $V_0^\ast(\dF) = {\dF^\times}^I$, we have 
++the isomorphism $V_0^\ast(\dF) = {\dF^\ast}^I$, we have 
+ \begin{enumerate}[\indent a)]
+-  \item $x\in k^\times$ corresponds to $(\omega_i(x))\in {\dF^\times}^I$; 
++  \item $x\in k^\ast$ corresponds to $(\omega_i(x))\in {\dF^\ast}^I$; 
+   \item $F((x_i)_{i\in \dZ/N})=(x_{i-1}^q)_{i\in \dZ/N}$. 
+ \end{enumerate}
+ 
++\PrintPage{201}
+ A character $\chi=(\chi_i)$ of $V_n^\ast\sim \dmu_n^I$ is defined over 
+-$\dF_q$ if $\chi_{-i}(x) =\chi_0(x^{q^i})$ ($i\in \dZ$). If $q^N-1\mid n$, there are 
++$\dF_q$ if $\chi_{-i} =\chi_0(x^{q^i})$ ($i\in \dZ$). If $q^N-1\mid n$, there are 
+ $q^N-1$ such characters: $\chi_0$ factors through $\dmu_{q^N-1}$ and 
+ determines the $\chi_i$. To prove (ii), it is therefore sufficient to verify (i) 
+ and (iii) (or its corollary (iv)) which ensures that $\chi\mapsto \chi\circ \tau$ 
+@@ -1804,8 +1848,8 @@
+ the $x\mapsto x^n$ operator. If $\alpha$ is the cyclic permutation operator 
+ $(x_i)\mapsto (x_{i-1})$, we have 
+ $q^N-1=(q\alpha)^N-1 = (q\alpha-1)((q\alpha)^{N-1}+\cdots + 1)$. This 
+-determines $\tau$: we have $\tau((x_i)) = \prod_{0\leqslant j<N} x_{i-j}^{q^j}$, 
+-and the induced map from $(V_0^\ast)_n$ to $k^\times$ is [as in a) above] 
++determines $\tau$: we have $\tau((x_i)) = (\prod_{0\leqslant j<N} x_{i-j}^{q^j})$, 
++and the induced map from $(V_0^\ast)_n$ to $k^\ast$ is [as in a) above] 
+ $(x_i)\mapsto \prod x_{-i}^{q^i}$; hence (iii) follows. 
+ 
+ 
+@@ -1844,8 +1888,9 @@
+ \end{enumerate}
+ \end{proposition_}
+ 
++\PrintPage{202}
+ We have $V^\ast\sim \dG_m^I$, 
+-$\sK((\chi_i)) = \bigotimes_i \pr_i^\ast \chi_i(K_n(\dG_m))$ and 
++$\sK_n((\chi_i)) = \bigotimes_i \pr_i^\ast \chi_i(K_n(\dG_m))$ and 
+ $\sF(\psi\circ \tr_{k/\dF_q})=T^\ast \sF(\psi) = \bigotimes_i \pr_i^\ast \sF(\psi)$. 
+ The K\"unneth formula then applies, and \ref{VI:4-11} follows from 
+ \ref{VI:4-3}. 
+@@ -1862,20 +1907,20 @@
+ the sign $\varepsilon(\sigma)$. We deduce a second proof 
+ of the identity of Hasse-Davenport. 
+ 
+-If $\chi$ is a character of $\dF_q^\times$, the fact that, over $\dF$, $N$ 
++If $\chi$ is a character of $\dF_q^\ast$, the fact that, over $\dF$, $N$ 
+ is given by $(x_i)\mapsto \prod x_i$ gives 
+ $\sF(\chi\circ N)=N^\ast\sF(\chi) = \bigotimes_i \pr_i^\ast\sF(\chi)$ 
+ and the K\"unneth formula gives 
+ \[
+-  \h_c^\bullet(V^\ast,\sF(\chi^{-1}\circ N,\psi\circ \tr)) \sim \h_c^\bullet(\dG_m,\sF(\chi^{-1}\psi))^{\otimes I} \text{,} 
++  \h_c^\bullet(V^\ast,\sF(\chi^{-1}\circ N\cdot \psi\circ \tr)) \sim \h_c^\bullet(\dG_m,\sF(\chi^{-1}\psi))^{\otimes I} \text{,} 
+ \]
+ where the tensor product on the right-hand side is taken in the sense of 
+ \ref{VI:2-4*}*. Since $\h_c^1(\dG_m,\sF(\psi\chi^{-1}))$ is of dimension 
+ $1$, its tensor power $\otimes I$, in the ordinary sense, depends only on 
+-the cardinality $n$ of $I$. Applying (\hyperref[IV]{Cycle}, \ref{IV:1-3} Example 
++the cardinality $N$ of $I$. Applying (\hyperref[IV]{Cycle}, \ref{IV:1-3} Example 
+ 2), we obtain a canonical isomorphism 
+ \begin{equation*}\tag{4.12.1}\label{VI:eq:4-12-1}
+-  \h_c^N\left(V^\ast,\sF(\chi^{-1}\circ N)\otimes T^\ast \sF(\psi)\right) \sim \h_c^1(\dG_m,\sF(\psi\chi^{-1})) \otimes_\dZ \textstyle \bigwedge^N \dZ^I \text{.}
++  \h_c^N\left(V^\ast,\sF(\chi^{-1}\circ N)\otimes T^\ast \sF(\psi)\right) \sim \h_c^1(\dG_m,\sF(\psi\chi^{-1}))^{\otimes N} \otimes_\dZ \textstyle \bigwedge^N \dZ^I \text{.}
+ \end{equation*}
+ To compute the action of $F^\ast$, it is most convenient to adopt the Galois 
+ point of view and observe that, since the isomorphism \eqref{VI:eq:4-12-1} is 
+@@ -1895,6 +1940,7 @@
+ 
+ If $k$ is a field, $\varphi$ is a cyclic permutation of $I$, 
+ $\varepsilon(k) = (-1)^{N+1}$, and we obtain the Hasse--Davenport identity: 
++\PrintPage{203}
+ \[
+   \tau\left(\chi\circ N_{k/\dF_q},\psi\circ \tr_{k/\dF_q}\right) = (-1)^{N+1} \tau_{\dF_q}\left(\chi\circ N_{k/\dF_q},\psi\right) = \tau(\chi,\psi)^N \text{.} 
+ \]
+@@ -1907,7 +1953,7 @@
+ For $\chi\circ \tau=(\chi_i)_{i\in I}$ as in \ref{VI:4-9}(i), the
+ following conditions are equivalent 
+ \begin{enumerate}[\indent (i)]
+-  \item $\chi| \dF_q^\times$ is trivial. 
++  \item $\chi| \dF_q^\ast$ is trivial. 
+   \item The product of $\chi_i$ is trivial. 
+   \item $\sF(\chi) = \sK_n((\chi_i))$ is the inverse image of a unique 
+     sheaf on $V^\ast/\dG_m$. 
+@@ -1916,8 +1962,8 @@
+ \end{enumerate}
+ \end{lemma_}
+ 
+-(i)$\Rightarrow$(ii). We regard $\chi$ as a character of 
+-$V^\ast/\dG_m(\dF_q)=k^\times/\dF_q^\times$, and we take $\sF(\chi)$ on 
++(i)$\Rightarrow$(iii). We regard $\chi$ as a character of 
++$V^\ast/\dG_m(\dF_q)=k^\ast/\dF_q^\ast$, and we take $\sF(\chi)$ on 
+ $V^\ast/\dG_m$. 
+ 
+ (ii)$\Rightarrow$(iii). Likewise, we regard $(\chi_i)$ as a character 
+@@ -1926,7 +1972,7 @@
+ is trivial. 
+ 
+ (iv)$\Rightarrow$(i), (ii). This inverse image is 
+-$\sF(\chi|\dF_q^\times)$ and $\sK_n(\prod \chi_i)$. 
++$\sF(\chi|\dF_q^\ast)$ and $\sK_n(\prod \chi_i)$. 
+ 
+ 
+ 
+@@ -1935,10 +1981,22 @@
+ \subsection{}\label{VI:4-14}
+ 
+ Let $k$ be an étale algebra over $\dF_q$, of 
+-dimension $N+1$, and let $\chi$ be a nontrivial character of $k^\times$, trivial on 
+-$\dF_q^\times$. The Jacobi sum $J(\chi)$ is defined by 
++dimension $N+1$, and let $\chi$ be a nontrivial character of $k^\ast$, trivial on 
++$\dF_q^\ast$. The Jacobi sum $J(\chi)$ is defined by 
+ \begin{equation*}\tag{4.14.1}\label{VI:eq:4-14-1}
+-  J(\chi) = (-1)^{N-1} \sum_{\substack{x\in k^\times/\dF_q^\times \\ \tr(x)=0}} \chi^{-1}(x) \text{.} 
++  J(\chi) = (-1)^{N-1} \sum_{\substack{x\in k^\ast/\dF_q^\ast \\ \tr(x)=0}} \chi^{-1}(x) \text{.} 
++\end{equation*}
++
++The most frequently considered case is that in which $k$ is the sum of $N+1$
++copies of $\dF_q$; $\chi$ then corresponds to $(N+1)$ characters
++$\chi_0,\ldots,\chi_N$ of $\dF_q^\ast$, not all trivial, whose product is $1$.
++In this case, a section of the quotient $k^\ast/\dF_q^\ast$ of $k^\ast$
++is the set of $(x_0,\ldots,x_N)\in(\dF_q^\ast)^{N+1}$ with $x_0=1$;
++for such an $x$, the condition $\tr(x)=0$ becomes $\sum_{i=1}^{N}x_i=-1$.
++The Jacobi sum is therefore
++\begin{equation*}\tag{4.14.2}\label{VI:eq:4-14-2}
++ J(\chi)=(-1)^{N-1}\sum_{\substack{x_1,\ldots,x_N\in\dF_q^\ast\\\sum x_i=-1}}
++ \chi_1^{-1}(x_1)\cdots\chi_N^{-1}(x_N) \text{.}
+ \end{equation*}
+ 
+ We have the following identity between Gauss sums and Jacobi sums. 
+@@ -1947,6 +2005,7 @@
+ 
+ 
+ 
++\PrintPage{204}
+ \begin{proposition_}\label{VI:4-15}
+ For $\chi$ as above and $\psi$ a nontrivial additive character of 
+ $\dF_q$, we have 
+@@ -1959,9 +2018,9 @@
+ \begin{equation*}\tag{4.15.1}\label{VI:eq:4-15-1}
+   q J(\chi) = \prod_i \tau(\chi_i,\psi) \text{,} 
+ \end{equation*}
+-or equivalently as 
++more often written in the form 
+ \begin{align*}
+-  \chi_0(-1) J(\chi) &= (-1)^{N-1} \sum_{\substack{x_1,\dots,x_N\in \dF_q^\times \\ \sum x_i = 1}} \prod_{i=1}^N \chi_i^{-1}(x_i) = \tau(\chi_0^{-1},\psi)^{-1} \prod_{i=1}^N \tau(\chi_i,\psi) \\
++  \chi_0(-1) J(\chi) &= (-1)^{N-1} \sum_{\substack{x_1,\dots,x_N\in \dF_q^\ast \\ \sum x_i = 1}} \prod_{i=1}^N \chi_i^{-1}(x_i) = \tau(\chi_0^{-1},\psi)^{-1} \prod_{i=1}^N \tau(\chi_i,\psi) \\
+   \chi_0^{-1} &= \prod_{i=1}^N \chi_i 
+ \end{align*}
+ 
+@@ -1971,12 +2030,12 @@
+ 
+ \begin{proof}[Proof of \ref{VI:4-15}]
+ \[
+-  \tau_{\dF_q}(\chi,\psi) = (-1)^{N+1} \sum_{x\in k^\times} \chi(x)^{-1} \psi \tr(x) = (-1)^{N+1} \sum_{x\in k^\times/\dF_q^\times} \chi(x)^{-1} \sum_{\lambda\in \dF_q^\times} \psi(\lambda \tr x) \text{.}
+-\]
+-The sum $\sum_{\lambda\in \dF_q^\times} \psi(\lambda \tr x)$ equals $q-1$ if 
++  \tau_{\dF_q}(\chi,\psi) = (-1)^{N+1} \sum_{x\in k^\ast} \chi(x)^{-1} \psi \tr(x) = (-1)^{N+1} \sum_{x\in k^\ast/\dF_q^\ast} \chi(x)^{-1} \sum_{\lambda\in \dF_q^\ast} \psi(\lambda \tr x) \text{.}
++\]
++The sum $\sum_{\lambda\in \dF_q^\ast} \psi(\lambda \tr x)$ equals $q-1$ if 
+ $\tr(x)=0$, and $-1$ if $\tr(x)\ne 0$. Therefore, 
+ \[
+-  \tau_{\dF_q}(\chi,\psi) = (-1)^{N+1} \left(q\sum_{\substack{x\in k^\times/\dF_q^\times \\ \tr(x)=0}} \chi(x)^{-1} - \sum_{x\in k^\times/\dF_q^\times} \chi(x)^{-1}\right) \text{.}
++  \tau_{\dF_q}(\chi,\psi) = (-1)^{N+1} \left(q\sum_{\substack{x\in k^\ast/\dF_q^\ast\\\tr(x)=0}} \chi(x)^{-1} - \sum_{x\in k^\ast/\dF_q^\ast} \chi(x)^{-1}\right) \text{.}
+ \]
+ The second term on the right-hand side is zero, since it is the sum of the values 
+ of a character, and \ref{VI:4-15} follows. 
+@@ -1995,10 +2054,11 @@
+   \item $\h_c^i=0$ for $i\ne N-1$, and $\dim \h_c^{N-1}{}=1$. 
+   \item On $\h_c^{N-1}$, $F^\ast$ is multiplication by $J(\chi)$. 
+   \item $\h_c^{N-1}$ is canonically isomorphic to 
+-    $\h_c^{N+1}\left(V^\ast,\sF(\chi^{-1},\psi\circ \tr_{k/\dF_q})\right)(1)$. 
++    $\h_c^{N+1}\left(V^\ast,\sF(\chi^{-1}\cdot \psi\circ \tr_{k/\dF_q})\right)(1)$. 
+ \end{enumerate}
+ \end{proposition_}
+ 
++\PrintPage{205}
+ Assertion (ii) follows from (i) and the trace formula; (i) and (iii) 
+ follow from \ref{VI:4-11} and the following more geometric statement. 
+ 
+@@ -2042,7 +2102,7 @@
+ \xymatrix{
+   \ar[r] 
+     & \eR^i \pi_! T^\ast \sF(\psi) \ar[r] 
+-    & \eR^i \bar\pi_! (T v_0)^\ast \sF(\psi) \ar[r] 
++    & \eR^i \bar\pi_! (T v)^\ast \sF(\psi) \ar[r] 
+     & (E_\lambda\text{ for $i=0$, $0$ otherwise}) \ar[r] 
+     & 
+ }
+@@ -2050,23 +2110,24 @@
+ 
+ The inverse image $\bar\pi^{-1}(Q_0)$ is the blow-up $\widetilde W_0$ of 
+ $W_0$ at $0$; $T_0 v_0$ vanishes on $\widetilde W_0$; hence 
+-$(T v_0)^\ast \sF(\psi)=E_\lambda$ on $\bar\pi^{-1}(Q_0)$ and, since $\bar\pi$ is an 
++$(T v)^\ast \sF(\psi)=E_\lambda$ on $\bar\pi^{-1}(Q_0)$ and, since $\bar\pi$ is an 
+ affine-line fibration, 
+ \begin{equation*}\tag{4.17.4}\label{VI:eq:4-17-4}
+-  \eR^i \bar\pi_! (T v_0)^\ast \sF(\psi)|Q = 
++  \eR^i \bar\pi_! (T v)^\ast \sF(\psi)|Q = 
+     \begin{cases}
+       0 & \text{for $i\ne 2$} \\
+       E_\lambda(-1) & \text{for $i=2$.} 
+     \end{cases} 
+ \end{equation*}
+ 
+-If $x\in P$, $x\notin Q$, the line $D=\pi^{-1}(x)$ is mapped 
+-isomorphically onto $\dG_a$ by $T v_0$; therefore (by 
++If $x\in P$, $x\notin Q$, the line $D=\bar\pi^{-1}(x)$ is mapped 
++isomorphically onto $\dG_a$ by $T v$; therefore (by 
+ \ref{VI:2-7}*) 
++\PrintPage{206}
+ \begin{align} \notag 
+-  \h_c^\bullet(D,(T v_0)^\ast \sF(\psi)) &= \h_c^\bullet(\dG_a,\sF(\psi)) = 0 && \text{and} \\
++  \h_c^\bullet(D,(T v)^\ast \sF(\psi)) &= \h^\bullet(\dG_a,\sF(\psi)) = 0 && \text{and} \\
+   \tag{4.17.5}\label{VI:eq:4-17-5}
+-  \eR^i \bar\pi_! (T v_0)^\ast \sF(\psi) 
++  \eR^i \bar\pi_! (T v)^\ast \sF(\psi) 
+     &= \begin{cases} 
+          0 & \text{for $i\ne 2$} \\
+          E_\lambda(-1)_Q & \text{for $i=2$} 
+@@ -2094,7 +2155,7 @@
+ Leray spectral sequence of $\pi:V^\ast\to V^\ast/\dG_m$. Applying 
+ \eqref{VI:eq:4-17-1} and \eqref{VI:eq:4-17-6}, we obtain as initial terms 
+ $E_2^{p,1} = \h_c^p(V^\ast/\dG_m,\sK_n(\chi_i)) = 0$ (because $(\chi_i)\ne 1$) 
+-and $E_2^{p,2} = \h_c^p(W^\ast/\dG_m,\sK(\chi_i))(-1)$. 
++and $E_2^{p,2} = \h_c^p(W^\ast/\dG_m,\sK_n(\chi_i)(-1))$. 
+ 
+ The spectral sequence reduces to an isomorphism, and \ref{VI:4-17} follows. 
+ 
+@@ -2110,7 +2171,7 @@
+ étale of constant rank $N$ over $A$, and let $n$ be invertible in $A$. 
+ Let $a$ be the projection of $W^\ast/\dG_m$ to $\spec(A)$. Let also $\chi$ be 
+ a character (morphism of sheaves) 
+-$\chi:(V^\ast/\dG_m)_n \to E_\lambda^\times$, and $\sK_n(\chi)$ the sheaf 
++$\chi:(V^\ast/\dG_m)_n \to E_\lambda^\ast$, and $\sK_n(\chi)$ the sheaf 
+ corresponding. Locally for the étale topology, we can regard $\chi$ 
+ as a family of characters $(\chi_i)_{i\in I}$ of $\dmu_n$, whose product is 
+ trivial.
+@@ -2129,7 +2190,8 @@
+ \begin{proof}[Proof]
+ The scheme $W^\ast/\dG_m$ is the complement of a relative normal-crossings 
+ divisor in the scheme $Q$, which is proper and smooth over $\spec(A)$, and 
+-$\sK_n(\chi)$ is locally constant on $W^\ast/\dG_m$ and is tamely ramified 
++$\sK_n(\chi)$ is \PrintPage{207}
++locally constant on $W^\ast/\dG_m$ and is tamely ramified 
+ along the boundary. Consequently, the $\eR^i a_!$ and 
+ $\eR^i a_\ast$ are smooth sheaves, compatible with every change of 
+ base. A standard argument then reduces us to the case in which $A$ is a 
+@@ -2150,7 +2212,8 @@
+ 
+ 
+ 
+-\section{Hecke characters}\label{VI:5}
++
++\section{Hecke characters}\label{VI:5}\PrintPage{208}
+ 
+ 
+ 
+@@ -2158,18 +2221,18 @@
+ 
+ \subsection{}\label{VI:5-1}
+ 
+-Let $F$ be a number field (of finite degree over $\dQ$) and let $k$ be a field of 
++Let $F$ be a number field (of finite degree over $\dQ$) and $k$ a field of 
+ characteristic $0$. Here are several equivalent descriptions of an 
+-\emph{algebraic} homomorphism $\alpha:F^\times \to k^\times$. 
++\emph{algebraic} homomorphism $\alpha:F^\ast \to k^\ast$. 
+ \begin{enumerate}[(i)]
+-  \item Let $\{e_i\}$ be a basis of $F$ over $\dQ$. The homomorphism $\alpha$ is 
++  \item Let $e_i$ be a basis of $F$ over $\dQ$. The homomorphism $\alpha$ is 
+     algebraic if it is given by a formula 
+-    $\alpha(\sum x^i e_i) = A(x^i)$, $A\in k(X^i)$. 
++    $\alpha(\sum x^i e_i) = A(x^i)$, where $A\in k(X^i)$. 
+ \end{enumerate}
+ 
+-This means that $\alpha$ agrees on $F^\times$ with a rational map defined over $k$ 
++This means that $\alpha$ agrees on $F^\ast$ with a rational map defined over $k$ 
+ from $\res_{F/\dQ}(\dG_m)$ to $\dG_m$. By the Zariski density of 
+-$F^\times$, and because a rational homomorphism is defined everywhere, such 
++$F^\ast$, and because a rational homomorphism is defined everywhere, such 
+ a map is a homomorphism of group schemes: 
+ \begin{enumerate}[(i)]
+ \setcounter{enumi}{1}
+@@ -2191,7 +2254,7 @@
+ $\bar k$, the character group of $\res_{F/\dQ}(\dG_m)$ is $\dZ^I$, with basis 
+ the embeddings of $F$ into $\bar k$. The characters defined over $k$ 
+ are those invariant under $\gal(\bar k/k)$; they can be described either as 
+-those sending $F^\times$ into $k^\times\subset \bar k$, or in terms of 
++those sending $F^\ast$ into $k^\ast\subset \bar k$, or in terms of 
+ orbits of $\gal(\bar k/k)$ on $I$, which in turn correspond to the factors of 
+ $F\otimes k$. 
+ \begin{enumerate}[(i)]
+@@ -2200,9 +2263,10 @@
+     $\alpha=\prod_{\omega\in I} \omega^{n_\omega}$. The allowed families of exponents 
+     $(n_\omega)$ are those such that $n_\omega=n_{\omega'}$ for 
+     $\omega$ and $\omega'$ in the same orbit of $\gal(\bar k/k)$. Equivalently, these 
+-    are those such that $\prod_\omega \omega(x)^{n_\omega}\in k$ for every 
++    are those such that $\prod \omega(x)^{n_\omega}\in k$ for every 
+     $x\in F$. 
+-  \item Write $F\otimes k=\prod_{j\in J} F_j$, where the $F_j$ are fields. 
++  
++\item \PrintPage{209}Write $F\otimes k=\prod_{j\in J} F_j$, where the $F_j$ are fields. 
+     Then $\alpha$ can be written $\alpha=\prod N_{F_j/k}^{m_j}$. 
+ \end{enumerate}
+ 
+@@ -2217,10 +2281,10 @@
+ \subsection{}\label{VI:5-2}
+ 
+ Let $k$ be a number field, and let $\alpha$ be an algebraic homomorphism 
+-from $F^\times$ to $k^\times$. There is then a unique 
++from $F^\ast$ to $k^\ast$. There is then a unique 
+ homomorphism, also denoted $\alpha$, of the group $I(F)$ 
+ of fractional ideals of $F$ to that of $k$, such that $\alpha((x))=(\alpha(x))$. 
+-Uniqueness follows from the fact that every ideal $a$ has a power that is 
++Uniqueness follows from the fact that every ideal has a power that is 
+ principal, and that $I(k)$ is torsion-free. To prove 
+ existence, we use for example \ref{VI:5-1}(v): we have 
+ $\alpha(a) = \prod N_{F_j/k}^{m_j}((a))$. 
+@@ -2231,16 +2295,16 @@
+ 
+ \subsection{}\label{VI:5-3}
+ 
+-Let us recall the definition of algebraic Hecke characters, also called 
+-Weil Hecke characters (or gr\"ossencharaktere) of type $A_0$. Let $F$ be 
++Let us recall the definition of algebraic Hecke characters, called by Weil 
++Hecke characters (or gr\"ossencharaktere) of type $A_0$. Let $F$ be 
+ a number field, let $\fm$ be an ideal of $F$ (i.e., of the ring of integers of 
+ $F$), let $I_\fm$ be the group of fractional ideals of $F$ prime to $\fm$, 
+ and let $k$ be a field of characteristic $0$. A homomorphism 
+-$\chi:I_\fm \to k^\times$ is an \emph{algebraic Hecke character} (of 
++$\chi:I_\fm \to k^\ast$ is an \emph{algebraic Hecke character} (of 
+ conductor $\leqslant \fm$) if there exists an algebraic homomorphism 
+-$\chi_\text{alg}:F^\times \to k^\times$ satisfying 
++$\chi_\text{alg}:F^\ast \to k^\ast$ satisfying 
+ \begin{equation*}\tag{$*$}\label{VI:eq:5-3-1}
+-\text{For $x\in F^\times$, prime to $\fm$, totally positive, and 
++\text{For $x\in F^\ast$, prime to $\fm$, totally positive, and 
+ $\equiv 1\pmod\fm$, one has $\chi((x))=\chi_\text{alg}(x)$.}
+ \end{equation*}
+ 
+@@ -2248,7 +2312,7 @@
+ is entirely determined by $\chi$. This is the \emph{algebraic part} 
+ of $\chi$. If $\chi((x))=\chi_\text{alg}(x)$ for $x$ totally positive and 
+ $\equiv 1\pmod{\fm'}$, $\chi$ extends to a Hecke character of 
+-conductor $\leqslant \inf(\fm,\fm')$: $I_{\fm+\fm'}\to k^\times$. We 
++conductor $\leqslant \inf(\fm,\fm')$: $I_{\fm+\fm'}\to k^\ast$. We 
+ identify Hecke characters that coincide on their common domain of 
+ definition, and we call \emph{conductor} of $\chi$ the smallest $\fm'$ 
+ such that $\chi$ is of conductor $\leqslant \fm'$. 
+@@ -2257,14 +2321,15 @@
+ 
+ 
+ 
+-\subsection{Remark}\label{VI:5-4}
++
++\subsection{Remark}\label{VI:5-4}\PrintPage{210}
+ 
+ If an algebraic Hecke character $\chi$ takes its values in a 
+ subfield $k'$ of $k$, it is already a Hecke character with values in 
+ $k'$: it suffices to observe that $\chi_\text{alg}:\res_{F/\dQ}(\dG_m) \to \dG_m$ 
+ is already defined over $k'$, and this follows from the Zariski density 
+ in $\res_{F/\dQ}(\dG_m)$ of the set of totally positive $x$ 
+-$\equiv 1\pmod\fm$. We can always take for $k'$ a subfield of $k$ of 
++$\equiv 1(\fm)$. We can always take for $k'$ a subfield of $k$ of 
+ finite degree over $\dQ$. 
+ 
+ 
+@@ -2277,9 +2342,9 @@
+ $\chi_\text{alg}(\varepsilon) = \chi((\varepsilon)) = 1$. The homomorphism 
+ $\chi_\text{alg}$ therefore factors through the quotient $T_\fm$ of 
+ $\res_{F/\dQ}(\dG_m)$ by the Zariski closure of the group 
+-$E_\fm\subset F^\times$ of totally positive units $\equiv 1\pmod\fm$. 
+-
+-According to Serre \cite[II.3]{se68}, if $k$ is an algebraic closure of 
++$E_\fm\subset F^\ast$ of totally positive units $\equiv 1\pmod\fm$. 
++
++According to Serre \PrintCite{[5, II.3]}{\cite[II.3]{se68}}, if $k$ is an algebraic closure of 
+ $\dQ$, and $\fm$ is large enough, the characters $\prod \omega^{n_\omega}$ 
+ of $\res_{F/\dQ}(\dG_m)$ of the form $\chi_\text{alg}$ are characterized 
+ as follows: there must exist an integer $N$, the \emph{weight} of $\chi$ (or 
+@@ -2290,9 +2355,8 @@
+   saying that $\chi_\text{alg}$ is of the form $\chi_1\circ N_{F/F_1}$, and that 
+   $\chi_1|F_1'=(N_{F_1'/\dQ})^N$. 
+ 
+-If $\chi$ is of weight $N$, for any ideal $\fa$ of $F$, $\chi(\fa)$ is a 
+-algebraic number all of whose conjugates have absolute value 
+-$N(\fa)^{N/2}$ \cite[II.3 prop.2]{se68}. 
++If $\chi$ is of weight $N$, for any ideal $\fa$ of $F$, $\chi(\fa)$ is an algebraic number all of whose complex conjugates have absolute value 
++$N(\fa)^{N/2}$ \PrintCite{[5, II.3 prop.2]}{\cite[II.3 prop.2]{se68}}. 
+ 
+ 
+ 
+@@ -2306,12 +2370,12 @@
+ \begin{equation*}\tag{5.6.1}\label{VI:eq:5-6-1}
+   \chi_\text{alg}(\fa) = (\chi(\fa)) \text{,} 
+ \end{equation*}
+-so that $\chi_\text{alg}(\fa)$ is principal. Since the group of 
+-  ideal classes of $k$ is torsion, it is enough to prove the $n$-th power 
++so that $\chi_\text{alg}(\fa)$ is principal. Since the group of fractional ideals of $k$ is torsion-free, it is enough to prove the $n$-th power 
+ of \eqref{VI:eq:5-6-1}, for a suitable $n\ne 0$; this allows us 
+ to replace $\fa$ by $\fa^n$, therefore to assume $\fa=(x)$, with $x$ totally 
+ positive $\equiv 1\pmod\fm$. All that remains is to use the definitions. 
+ 
++\PrintPage{211}
+ Together with \ref{VI:5-5}, this shows that $\chi_\text{alg}$ determines the 
+ valuations of $\chi(\fa)$ at all places of $k$. 
+ 
+@@ -2324,17 +2388,17 @@
+ Serre's group $S_\fm$ can be characterized as the 
+ group of multiplicative type whose group of characters (on any 
+ field) is the group of algebraic Hecke characters of conductor 
+-$\leqslant \fm$ (see \cite[II 2.1 et 2.2]{se68}). Its relation with 
+-$\ell$-adic representations is explained in \cite[II 2.3]{se68}.
+-
+-
+-
+-
+-
+-\begin{theorem_}[{\cite{se68}}]\label{VI:5-8}
++$\leqslant \fm$ (see \PrintCite{[5, II 2.1 and 2.2]}{\cite[II 2.1 and 2.2]{se68}}). Its relation with 
++$\ell$-adic representations is explained in \PrintCite{[5, II 2.3]}{\cite[II 2.3]{se68}}.
++
++
++
++
++
++\begin{theorem_}[{\PrintCite{[5]}{\cite{se68}}}]\label{VI:5-8}
+ Let $\chi$ be an algebraic Hecke character of $F$ with values in $E_\lambda$, for 
+ $E_\lambda$ a finite extension of $\dQ_\ell$. There is then a unique 
+-  homomorphism $\chi_\lambda:\gal(\bar F/F)^\textnormal{ab} \to E_\lambda^\times$, such 
++  homomorphism $\chi_\lambda:\gal(\bar F/F)^\textnormal{ab} \to E_\lambda$, such 
+ that 
+ \begin{enumerate}[\indent (i)]
+   \item $\chi_\lambda$ is unramified outside the conductor $\ff$ of 
+@@ -2358,8 +2422,8 @@
+ $\lambda$-adic representation to arise from a Hecke character, 
+ and in the next section we apply it to Jacobi sums. We 
+ thereby recover, in a somewhat generalized form, Weil's results 
+-\cite{we52,we74-2}, with the second part of Weil's proof 
+-replaced by a $\ell$-adic cohomology argument. 
++\PrintCite{[8, 9]}{\cite{we52,we74-2}}, with the second part of Weil's proof 
++replaced by an $\ell$-adic cohomology argument. 
+ 
+ 
+ 
+@@ -2368,17 +2432,18 @@
+ \begin{theorem_}\label{VI:5-10}
+ Let $F$ and $k$ be two number fields, let $\lambda$ be a place of $k$ of 
+ residue characteristic $\ell$, and let 
+-$\chi_\lambda:\gal(\bar F/F)^\textnormal{ab}\to k_\lambda^\times$ be a 
++$\chi_\lambda:\gal(\bar F/F)^\textnormal{ab}\to k_\lambda^\ast$ be a 
+ homomorphism, unramified outside $\ell$ and a finite set $S$ of 
+ places. We assume that there exists a set $T$ of places (containing $S$ and the 
+ places above $\ell$), of density $0$, and an algebraic homomorphism 
+-$\chi_0:F^\times \to k^\times$ such that 
++$\chi_0:F^\ast \to k^\ast$ such that 
+ \begin{enumerate}[(i)]
+   \item For $\bar k$ an algebraic closure of $k$, 
+-    $\chi_0:F^\times \to k^\times \hookrightarrow \bar k^\times$ is of the type 
++    $\chi_0:F^\ast \to k^\ast \hookrightarrow \bar k^\ast$ is of the type 
+     considered in \ref{VI:5-5}, of weight $N$; 
+-  \item For $\fp$ prime $\notin T$, $\chi_\lambda(F_\fp)$ lies in 
+-    $k^\times$, $(\chi_\lambda(F_\fp))=\chi_0(\fp)$, and all complex conjugates 
++  
++\item \PrintPage{212}For $\fp$ prime $\notin T$, $\chi_\lambda(F_\fp)$ lies in 
++    $k^\ast$, $(\chi_\lambda(F_\fp))=\chi_0(\fp)$, and all complex conjugates 
+     of $\chi_\lambda(F_\fp)$ have absolute value $(N \fp)^{N/2}$. 
+ \end{enumerate}
+ 
+@@ -2391,13 +2456,13 @@
+ (\ref{VI:5-5}). After enlarging $T$ if necessary, we may suppose that the conductor of 
+ $\chi'$ is supported in $T$. Let $\lambda'$ be a place of $k'$ above 
+ $\lambda$, and let $\chi_{\lambda'}$ be the composite 
+-$\gal(\bar F/F)^\text{ab}\to k_\lambda^\times \to {k'}_{\lambda'}^\times$, and 
+-$\chi_{\lambda'}':\gal(\bar F/F)^\text{ab}\to {k'}_{\lambda'}^\times$ defined 
++$\gal(\bar F/F)^\text{ab}\to k_\lambda^\ast \to {k'}_{\lambda'}^\ast$, and 
++$\chi_{\lambda'}':\gal(\bar F/F)^\text{ab}\to {k'}_{\lambda'}^\ast$ defined 
+ by $\chi'$ (\ref{VI:5-8}). Set 
+ $\varepsilon = \chi_{\lambda'} \cdot {\chi'}_{\lambda'}^{-1}$.
+ 
+ Hypothesis (ii), together with \ref{VI:5-5}, \ref{VI:5-6}, and \ref{VI:5-8}, ensures that 
+-for $\fp\notin T$, we have $\varepsilon(F_\fp)\in {k'}^\times$, and that in every 
++for $\fp\notin T$, we have $\varepsilon(F_\fp)\in {k'}^\ast$, and that in every 
+ completion of $k'$ this number has absolute value $1$. It follows that 
+ $\varepsilon(F_\fp)$ belongs to the finite group $\dmu$ of roots of unity 
+ in $k'$. By the Chebotarev density theorem and the density-zero hypothesis 
+@@ -2413,7 +2478,7 @@
+ a priori taking values in $k'$, in fact takes values in $k$. If 
+ $\sigma\in \gal(k'/k)$, $\chi'$ and ${\chi'}^\sigma$ coincide on every prime 
+ ideal $\fp\notin T$, since 
+-$\chi'(\fp) = \chi'_{\lambda'}(F_\fp) = \chi_{\lambda'}(F_\fp) \in k^\times$. 
++$\chi'(\fp) = \chi'_{\lambda'}(F_\fp) = \chi_{\lambda'}(F_\fp) \in k^\ast$. 
+ The characters $\chi_{\lambda'}'$, and ${\chi_{\lambda'}'}^\sigma$, coincide 
+ on a dense subset of $\gal(\bar F/F)^\text{ab}$ and hence are equal. Thus 
+ $\chi'={\chi'}^\sigma$, so $\chi'$ takes values in $k$. 
+@@ -2427,7 +2492,8 @@
+ 
+ 
+ 
+-\section{Hecke characters defined by Jacobi sums}\label{VI:6}
++
++\section{Hecke characters defined by Jacobi sums}\label{VI:6}\PrintPage{213}
+ 
+ The idea of this section is as follows. Consider a Gauss sum 
+ $\tau_{\dF_q}(\chi,\psi)$. Both this sum and the corresponding sheaf 
+@@ -2435,11 +2501,11 @@
+ base field $\dF_q$: 
+ \begin{enumerate}[\indent a)]
+   \item because the additive character $\psi$ and the sheaf 
+-    $\sf(\psi)$ occur in it; 
++    $\sF(\psi)$ occur in it; 
+   \item because $\sF(\chi)$ is defined from the exact Lang sequence 
+     \[\xymatrix{
+       0 \ar[r] 
+-        & k^\times \ar[r] 
++        & k^\ast \ar[r] 
+         & V^\ast \ar[r] 
+         & V^\ast \ar[r] 
+         & 0 \text{.} 
+@@ -2450,12 +2516,12 @@
+ $\ell$-adic representations of $\gal(\bar F/F)$ whose Frobenius eigenvalues 
+ are Gauss sums. 
+ 
+-If $\chi$ is trivial on $\dF_q^\times$, the sum $\tau_{\dF_q}(\chi,\psi)$ 
++If $\chi$ is trivial on $\dF_q^\ast$, the sum $\tau_{\dF_q}(\chi,\psi)$ 
+ is independent of $\psi$ and is $q$ times a Jacobi sum. The latter is 
+ related to the cohomology of $W^\ast/\dG_m$, with coefficients in a sheaf 
+ obtained from $\chi$: thus $\psi$, and with it difficulty a), disappear. To 
+ resolve b), it suffices to describe the sheaves in question by means of 
+-exact K\"ummer sequences (which make sense in every characteristic). This is 
++exact Kummer sequences (which make sense in every characteristic). This is 
+ possible by \ref{VI:4-9}. 
+ 
+ Once the $\ell$-adic representations have been found, we use 
+@@ -2471,14 +2537,15 @@
+ If $E$ is a field with algebraic closure $\bar E$, and $\lambda$ is 
+ a character, of order dividing $n$, of $\mu_d(\bar E)$, we denote by $_n\lambda$ the 
+ character of $\mu_n(\bar E)$ such that $\lambda$ and $_n \lambda$ induce the 
+-same character of $\widehat\dZ(1)_{\bar E} = \varinjlim \mu_n(\bar E)$. The 
++same character of $\widehat\dZ(1)_{\bar E} = \varprojlim \mu_m(\bar E)$. The 
+ same notation is used when $\lambda$ is a character of $\widehat\dZ(1)_{\bar E}$.
+ 
+ Let $F$ and $k$ be two number fields, $\bar F$ an algebraic closure of 
+ $F$, $I$ a finite set equipped with an action of $\gal(\bar F/F)$ and 
+ $\lambda=(\lambda_i)_{i\in I}$ a family of characters 
+-$\lambda_i:\widehat\dZ(1)_{\bar F} \to k^\times$. It is assumed that 
+-$\lambda_i\ne 1$ ($i\in I$), that the product of $\lambda_i$ is trivial and that 
++$\lambda_i:\widehat\dZ(1)_{\bar F} \to k^\ast$. It is assumed that 
++$\lambda_i\ne 1$ ($i\in I$), that \PrintPage{214}
++the product of $\lambda_i$ is trivial and that 
+ the family $\lambda$ is defined over $F$, i.e. that for every 
+ $\sigma\in \gal(\bar F/F)$, we have 
+ $\lambda_{\sigma(i)}=\lambda_i\circ \sigma^{-1}$. 
+@@ -2490,7 +2557,7 @@
+ embeddings of $E_\alpha$ in $\bar F$. If the characters $\lambda_i$, for 
+ $i\in \alpha$, are of order $d_\alpha$, the field $E_\alpha$ contains the 
+ $d_\alpha$-th roots of $1$ and there exists 
+-$\lambda_\alpha:\mu_{d_\alpha}(E_\alpha) \hookrightarrow k^\times$ such that, if 
++$\lambda_\alpha:\mu_{d_\alpha}(E_\alpha) \hookrightarrow k^\ast$ such that, if 
+ $i\in \alpha$ corresponds to the embedding $\sigma_i$ of $E_\alpha$ in $\bar F$, 
+ then $_{d_\alpha} \lambda_i = \lambda_\alpha \sigma_i^{-1}$. 
+ 
+@@ -2503,18 +2570,18 @@
+ Let $n>0$ be a multiple of the $d_\alpha$, let $\Sigma$ be the set of places of $F$ 
+ at which $E/F$ ramifies or which divide $n$, let $\mu$ be a place of $k$ of 
+ residue characteristic $\ell$, and let $A$ be the ring of elements of $F$ 
+-integral outside $\Sigma$ and $\ell$. The integral closure $M$ of $A$ 
++integral outside $\Sigma$ and $\ell$. The integral closure $M$ of $A$ in $E$ 
+ is finite étale of rank $N=|I|$ over $A$. With the notation of \ref{VI:4-6}, 
+ \ref{VI:4-8}, $_n \lambda_i$ define 
+ \[
+-  _n\lambda:(V^\ast/\dG_m)_n \to k^\times \subset k_\mu^\times \text{.} 
++  _n\lambda:(V^\ast/\dG_m)_n \to k^\ast \subset k_\mu^\ast \text{.} 
+ \]
+ 
+ Let $a$ be the projection of $W^\ast/\dG_m$ onto $\spec(A)$. By 
+ \ref{VI:4-20}, the sheaf $\eR^{N-2} a_! \sK_n(_n \lambda)$ is smooth of rank 
+ one; it defines an $\ell$-adic representation 
+ \[
+-  j_\mu[\lambda]:\gal(\bar F/F)^\text{ab} \to k_\mu^\times 
++  j_\mu[\lambda]:\gal(\bar F/F)^\text{ab} \to k_\mu^\ast 
+ \]
+   (or simply $j_\mu$) unramified outside $\Sigma$ and $\ell$. 
+ 
+@@ -2534,27 +2601,28 @@
+     decomposition of $e$ as a product of fields has the form 
+     $e=\prod_{\beta\in D} e_\beta$, where $\sigma_i$ ($i\in \beta$) 
+     are identified with the embeddings of $e_\beta$ into $\bar f$. For $\beta\in D$, 
+-    denote by $\alpha(\beta)$ the element of $C$ containing $\beta$, and put 
++    denote by $\alpha(\beta)$ the element of $C$ \PrintPage{215}
++containing $\beta$, and put 
+     $d_\beta=d_{\alpha(\beta)}$. Let 
+     \[\xymatrix{
+       \lambda_\beta : \mu_{d_\beta}(e_\beta) 
+         & \ar[l]_-\sim \mu_{d_\beta}(E_{\alpha(\beta)}) \ar[r]^-{\lambda_{\alpha(\beta)}} 
+-        & k^\times \text{.} 
++        & k^\ast \text{.} 
+     }\]
+-  \item If $i\in \beta$ corresponds to the embedding $\sigma_i$ of $e_\beta$ into 
++  \item If $i\in I$ corresponds to the embedding $\sigma_i$ of $e_\beta$ into 
+     $\bar f$, the reduction 
+-    $_{d_\beta} \bar\lambda_i:\mu_{d_\beta}(\bar f) \to k^\times$ 
++    $_{d_\beta} \bar\lambda_i:\mu_{d_\beta}(\bar f) \to k^\ast$ 
+     of $_{d_\beta} \lambda_i$ is 
+     $\lambda_\beta \circ \sigma_i^{-1}$. 
+ \end{enumerate}
+ 
+ Let $q_\beta$ be the number of elements of $e_\beta$, 
+   $\chi_\beta={}_{q_\beta-1}\lambda_\beta$, and 
+-$\chi:e^\times \to k^\times$ the character with coordinates $\chi_\beta$. On the 
++$\chi:e^\ast \to k^\ast$ the character with coordinates $\chi_\beta$. On the 
+ affine space over $A/\fp$ defined by $e$ (\ref{VI:4-6}), or rather on the torus 
+-$e_\beta^\times$, we have isomorphisms 
++$e_\beta^\ast$, we have isomorphisms 
+   $\sK_n((_n\bar\lambda_i)_{i\in\beta}) = \sK_{d_\beta}((\lambda_\beta \circ \sigma_i^{-1})_{i\in\beta}) =\sK_{q_\beta-1}((\chi_\beta\circ \sigma_i^{-1})_{i\in\beta}) = \sF(\chi_\beta)$ (\ref{VI:4-9}). 
+-  On $e^\times$, we therefore have $\sK_n((_n\bar\lambda_i)_{i\in I}) = \sF(\chi)$, 
++  On $e^\ast$, we therefore have $\sK_n((_n\bar\lambda_i)_{i\in I}) = \sF(\chi)$, 
+ and this isomorphism descends to the reduction modulo $\fp$ of $V^\ast/\dG_m$. 
+ It follows that
+ 
+@@ -2570,9 +2638,9 @@
+ Let us rewrite the formulas linking $(\lambda_i)_{i\in I}$ to 
+   $(\chi_\beta)_{\beta\in D}$: for $i\in \beta\subset \alpha$, 
+ \begin{align*}
+-  _{d_\alpha} \lambda_i &= \lambda_\alpha\circ \sigma_i^{-1} && \lambda_\alpha:\mu_{d_\alpha}(E_\alpha) \to k^\times \\
+-  \lambda_\beta &= \text{reduction of $\lambda_\alpha$} && :\mu_{d_\alpha}(e_\beta) \to k^\times \\
+-  \chi_\beta &= {}_{q_\beta-1}\lambda_\beta: x\mapsto \lambda_\beta(x^{(q_\beta-1)/d_\alpha}) && :e_\beta^\times \to k^\times 
++  _{d_\alpha} \lambda_i &= \lambda_\alpha\circ \sigma_i^{-1} && \lambda_\alpha:\mu_{d_\alpha}(E_\alpha) \to k^\ast \\
++  \lambda_\beta &= \text{reduction of $\lambda_\alpha$} && :\mu_{d_\alpha}(e_\beta) \to k^\ast \\
++  \chi_\beta &= {}_{q_\beta-1}\lambda_\beta: x\mapsto \lambda_\beta(x^{(q_\beta-1)/d_\alpha}) && :e_\beta^\ast \to k^\ast 
+ \end{align*}
+ 
+ 
+@@ -2581,11 +2649,11 @@
+ 
+ \begin{theorem_}\label{VI:6-5}
+ The representation $j_\mu$ is defined by an algebraic Hecke character 
+-of $F$ with values in $k^\times$. 
++of $F$ with values in $k^\ast$. 
+ \end{theorem_}
+ 
+ We shall verify this using \ref{VI:5-10}. Here we follow Weil's 
+-proof \cite{we52,we74-2}, using Stickelberger's theorem, 
++proof \PrintCite{[8, 9]}{\cite{we52,we74-2}}, using Stickelberger's theorem, 
+ and I shall give only a few indications. 
+ 
+ 
+@@ -2594,14 +2662,15 @@
+ 
+ \subsection{}\label{VI:6-6}
+ 
+-Given $j:\gal(\bar F/F) \to k_\lambda^\times$ and a finite extension 
++Given $j:\gal(\bar F/F) \to k_\lambda^\ast$ and a finite extension 
+ $F'/F$, one verifies using \ref{VI:5-10} that $j$ is defined by a 
+ Hecke character if and only if $j|\gal(\bar F/F')$ is. This 
+ remark allows us, in \ref{VI:6-5}, to reduce to the case where Galois acts 
+ trivially on $I$ and where $F$ contains the $n$-th roots of 
++\PrintPage{216}
+ unity. We may then reduce to the case $F=\dQ(\sqrt[n]{1})$ and 
+ take $k=F$. In this case, each $_n \lambda_i$ is defined by 
+-$a_i\in \dZ/n$: it is $x\mapsto x^{a_i}:\mu_n \to k^\times$. We have 
++$a_i\in \dZ/n$: it is $x\mapsto x^{a_i}:\mu_n \to k^\ast$. We have 
+ $\sum a_i=0$, and $a_i\ne 0$. 
+ 
+ 
+@@ -2610,17 +2679,16 @@
+ 
+ \subsection{}\label{VI:6-7}
+ 
+-In a number field, the places of degree greater than $1$ always form a 
+-set of density $0$. By applying \ref{VI:5-10}, we may therefore disregard 
+-them and use Stickelberger only for a prime field. Let 
+-$p$ be prime, let $0<a<p-1$, and let $\widetilde x:\dF_p^\times \to \dQ_p^\times$ be the 
++In a number field, the places of degree $1$ always form a set of density $1$. By applying \ref{VI:5-10}, we may therefore disregard 
++the others and use Stickelberger only for a prime field. Let 
++$p$ be prime, let $0<a<p-1$, and let $\widetilde x:\dF_p^\ast \to \dQ_p^\ast$ be the 
+ ``multiplicative lift'' character; put 
+-  $g=-\sum_{x\in \dF_p^\times} \widetilde x^{-a} \zeta^x\in \dQ_p(\zeta)$, for 
++  $g=-\sum_{x\in \dF_p^\ast} \widetilde x^{-a} \zeta^x\in \dQ_p(\zeta)$, for 
+ $\zeta$ a $p$-th root of $1$. Again denote by $x$ the integer in $[0,p-1]$ 
+   lifting $x$, and expand $\zeta^x=(1+\pi)^x$ by the binomial formula. 
+   We find $g=-\sum_{i=0}^{p-1} A_i\pi^i$ with $A_i\in \dZ_p$, whose reduction 
+-$\mod p$ is the sum $\sum_{x\in \dF_p^\times} x^{-a} \binom x i$. For $b$ not 
+-divisible by $p-1$, we have $\sum_{x\in \dF_p^\times} x^b=0$. If $i<a$, 
++$\mod p$ is the sum $\sum_{x\in \dF_p^\ast} x^{-a} \binom x i$. For $b$ not 
++divisible by $p-1$, we have $\sum_{x\in \dF_p^\ast} x^b=0$. If $i<a$, 
+ $\binom x i$ is a polynomial in $x$ of degree $i<a$, whence 
+ $A_i\equiv 0\pmod p$. Likewise, $A_a\equiv \frac{p-1}{a!} \pmod p$, and 
+ $g\sim \frac{\pi^a}{a!}$: the valuation of $g$ is given by 
+@@ -2632,10 +2700,10 @@
+ 
+ \subsection{}\label{VI:6-8}
+ 
+-Let $\sigma_i$ ($i\in (\dZ/n)^\times$) be the element of 
++Let $\sigma_i$ ($i\in (\dZ/n)^\ast$) be the element of 
+ $\gal(\dQ(\sqrt[n]{1})/\dQ)$ such that $\sigma_i(\zeta)=\zeta^i$ for $\zeta^n=1$, 
+ and write the group of algebraic homomorphisms 
+-$\dQ(\sqrt[n]{1})^\times \to \dQ(\sqrt[n]{1})^\times$ additively. For $\lambda$ as in 
++$\dQ(\sqrt[n]{1})^\ast \to \dQ(\sqrt[n]{1})^\ast$ additively. For $\lambda$ as in 
+ \ref{VI:6-6}, defined by a family 
+ $(a_i)_{i\in I}$ of nonzero integers $\mod n$ whose sum is zero, 
+ \ref{VI:5-10}, \eqref{VI:eq:4-15-1} and \ref{VI:6-7} 
+@@ -2643,9 +2711,9 @@
+ $j[a]$ and that, if $N$ denotes the norm, its algebraic part is 
+ given by 
+ \begin{equation*}\tag{6.8.1}\label{VI:eq:6-8-1}
+-  (N j[a])_\text{alg} = \sum_{i\in (\dZ/n)^\times} \sum_{j\in I} \left\langle \frac{i a_j}{n} \right\rangle \sigma_i^{-1} 
+-\end{equation*}
+-  where $\langle \cdot \rangle$ is the fractional part. 
++  (N j[a])_\text{alg} = \sum_{i\in (\dZ/n)^\ast} \sum_{j\in I} \left\{ \frac{i a_j}{n} \right\} \sigma_i^{-1} 
++\end{equation*}
++  where $\{\ \}$ is the fractional part. 
+ 
+ 
+ 
+@@ -2657,11 +2725,12 @@
+ the family of $_n \lambda_i$ is constructed as follows: 
+ \begin{enumerate}[a)]
+   \item Take a finite family $(A_j)_{j\in J}$ of orbits of 
+-    $\gal(\dQ(\sqrt[n]{1})/F)=H\subset (\dZ/n)^\times$ in $\dZ/n$. Assume that 
++    $\gal(\dQ(\sqrt[n]{1})/F)=H\subset (\dZ/n)^\ast$ in $\dZ/n$. Assume that 
+     $A_j\ne\{0\}$ and that $\sum_{j\in J} \sum_{a\in A_j} a=0$. 
+-  \item Take $I=\sqcup_{j\in J} A_j$; Galois acts on each $A_j$. 
++  
++\item \PrintPage{217}Take $I=\sqcup_{j\in J} A_j$; Galois acts on each $A_j$. 
+   \item Take $\bar F\supset \dQ(\sqrt[n]{1})$, $k=\dQ(\sqrt[n]{1})$ and, if 
+-    $i\in I$ corresponds to $a\in A_j\subset (\dZ/n)^\times$, 
++    $i\in I$ corresponds to $a\in A_j\subset\dZ/n$, 
+     $_n\lambda_i(x)=x^a$. 
+ \end{enumerate}
+ 
+@@ -2670,7 +2739,7 @@
+ $F\subset \dQ(\sqrt[n]{1})$, with $F_1$ an extension of $F$) by restriction to 
+ $\gal(\bar F/F_1)$ and multiplication by a character of order two. 
+ 
+-For $a\in \gal(k/\dQ)=(\dZ/n)^\times$, $a$ transforms the family of $A_j$ 
++For $a\in \gal(k/\dQ)=(\dZ/n)^\ast$, $a$ transforms the family of $A_j$ 
+ into the family of $a A_j$. If $a\in H$, the family of $A_j$ is therefore preserved, 
+ and the $j_\mu(F_\fp)$ are invariant under $H$: 
+ 
+@@ -2684,7 +2753,7 @@
+ \end{proposition_}
+ 
+ Let us again take $F=\dQ(\sqrt[n]{1})$ and consider the Hecke characters 
+-$j[a]$ defined by a family $(a_i)_{i\in I}$, $i\in \dZ/n$, 
++$j[a]$ defined by a family $(a_i)_{i\in I}$, $a_i\in \dZ/n$, 
+ $a_i\ne 0$, $\sum a_i=0$. The following theorem was obtained 
+ independently by Vishik. 
+ 
+@@ -2708,35 +2777,36 @@
+ 
+ \begin{lemma_}\label{VI:6-12}
+ Write $\sum x_j \sigma_j$ for the elements of the group algebra 
+-  $\dQ[(\dZ/n)^\times]$, and let $X$ be the subgroup consisting of those for which 
++  $\dQ[(\dZ/n)^\ast]$, and let $X$ be the subgroup consisting of those for which 
+ $x_j+x_{-j}=C^{\underline{t e}}$. Then $X$ is generated over $\dQ$ by 
+ $N=\sum \sigma_j$ and by the elements 
+-  $g_a=\sum \left\langle \frac{i a}{n}\right\rangle \sigma_i^{-1}$ 
++  $g_a=\sum \left\{ \frac{i a}{n}\right\} \sigma_i^{-1}$ 
+ ($a\in \dZ/n$, $a\ne 0$). 
+ \end{lemma_}
+ 
++\PrintPage{218}
+ Both $X$ and $Y=\langle N,(g_a)\rangle$ are ideals of the group 
+ algebra, and it suffices to check that they are annihilated by the same 
+-complex characters $\chi$ of $(\dZ/n)^\times$. This amounts to saying that a 
+-odd character $(\chi(j)=-\chi(-j)$) never annihilates all the $g_a$. If 
++complex characters $\chi$ of $(\dZ/n)^\ast$. This amounts to saying that an odd character $(\chi(j)=-\chi(-j)$) never annihilates all the $g_a$. If 
+ $\chi$ is primitive, we have 
+ \[
+   \chi(g_1) = \sum \frac i n \chi^{-1}(i) = -L(\chi,0)\ne 0 \text{.} 
+ \]
+ In the general case, if $\chi$ comes from a primitive character of 
+-  $(\dZ/d)^\times$, $\chi(g_{n/d})$ reduces to an analogous sum over 
+-  $(\dZ/d)^\times$, hence the lemma. 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-\section{Generalized Kloosterman sums}\label{VI:7}
++  $(\dZ/d)^\ast$, $\chi(g_{n/d})$ reduces to an analogous sum over 
++  $(\dZ/d)^\ast$, hence the lemma. 
++
++
++
++
++
++
++
++
++
++
++
++\section{Generalized Kloosterman sums}\label{VI:7}\PrintPage{219}
+ 
+ 
+ 
+@@ -2755,7 +2825,7 @@
+   \kloos_{n,0} = (-1)^{n-1} \text{.} 
+ \end{equation*}
+ The interesting case is $a\ne 0$. The $x_i$ then belong to 
+-$\dF_q^\times$. In this case we shall prove the bound 
++$\dF_q^\ast$. In this case we shall prove the bound 
+ \begin{equation*}\tag{7.1.3}\label{VI:eq:7-1-3}
+   \left|\kloos_{n,a}\right| \leqslant n q^{\frac{n-1}{2}} \text{.} 
+ \end{equation*}
+@@ -2764,10 +2834,10 @@
+ following identities: 
+ \begin{align*}\tag{7.1.4}\label{VI:eq:7-1-4}
+   \kloos_{n,a} &= \sum_{x_1} \psi(x_1) \sum_{x_2\dotsm x_n = a/x_1} \psi(x_2+\cdots + x_n) \\ \notag
+-    &= \sum_{x\in \dF_q^\times} \psi(x) \kloos_{n-1,a/x} \qquad (a\ne 0,n\geqslant 2) \\ \tag{7.1.5}\label{VI:eq:7-1-5}
++    &= \sum_{x\in \dF_q^\ast} \psi(x) \kloos_{n-1,a/x} \qquad (a\ne 0,n\geqslant 2) \\ \tag{7.1.5}\label{VI:eq:7-1-5}
+   \sum_a \kloos_{n,a} &= \sum_a \sum_{x_1 \dotsm x_n = a} \psi\left(\sum x_i\right) = \sum_{x_1,\dots,x_n} \psi\left(\sum x_i\right) = 0 
+ \end{align*}
+-For $\chi$ a nontrivial character of $\dF_q^\times$, 
++For $\chi$ a nontrivial character of $\dF_q^\ast$, 
+ \begin{equation*}\tag{7.1.6}\label{VI:eq:7-1-6}
+   \sum \chi(a) \kloos_{n,a} = \sum_{x_1,\dots,x_n} \chi\left(\prod x_i\right) \cdot \psi\left(\sum x_i\right) = (-\tau(\chi^{-1},\psi))^n 
+ \end{equation*}
+@@ -2784,6 +2854,7 @@
+ \[
+   \kloos_{k,a} = \sum_{N_{k/\dF_q}(x)=a} \psi \tr(x) \text{.} 
+ \]
++\PrintPage{220}
+ We likewise have 
+ \begin{align*}\tag{7.2.1}\label{VI:eq:7-2-1}
+   \kloos_{k,0} &= (-1)^{n-1} \cdot \varepsilon(k) \\ \tag{7.2.2}\label{VI:eq:7-2-2}
+@@ -2791,15 +2862,15 @@
+   \sum_a \chi(a) \kloos_{k,a} &= (-1)^n \tau_{\dF_q}\left(\chi^{-1}\circ N_{k/\dF_q},\psi\right) \text{.} 
+ \end{align*}
+ 
+-By Fourier inversion on $\dF_q^\times$, we deduce an expression of 
++By Fourier inversion on $\dF_q^\ast$, we deduce an expression of 
+ $\kloos_{k,a}$ in terms of Gauss sums: 
+ \begin{align*} 
+-  \kloos_{k,a} &= \frac{1}{q-1} \sum_\chi \chi(a) \sum_{b\in \dF_q^\times} \chi^{-1}(b) \kloos_{k,b} \\ \tag{7.2.4}\label{VI:eq:7-2-4}
++  \kloos_{k,a} &= \frac{1}{q-1} \sum_\chi \chi(a) \sum_{b\in \dF_q^\ast} \chi^{-1}(b) \kloos_{k,b} \\ \tag{7.2.4}\label{VI:eq:7-2-4}
+   (-1)^n \kloos_{k,a} &= \frac{1}{q-1} \left(\varepsilon(k) + \sum_{\chi\ne 1} \chi(a) \tau_{\dF_q}\left(\chi\circ N_{k/\dF_q},\psi\right) \right) \text{.} 
+ \end{align*}
+ 
+ The Hasse--Davenport identity now makes it possible to compare $\kloos_{k,a}$ 
+-with $\kloos_{n,a} = \kloos_{\dF_{q^n},a}$: 
++with $\kloos_{n,a} = \kloos_{\dF_q^n,a}$: 
+ \begin{equation*}\tag{7.2.5}\label{VI:eq:7-2-5}
+   \kloos_{k,a} = \varepsilon(k) \kloos_{n,a} \text{.} 
+ \end{equation*}
+@@ -2829,7 +2900,8 @@
+   \item $\h_c^i=0$ for $i\ne n-1$; 
+   \item $\h_c^\bullet{} \iso \h^\bullet{}$; 
+   \item for $a\ne 0$, $\dim \h_c^{n-1}{}=n$; 
+-  \item for $a=0$, $\h_c^{n-1}{}$ is canonically isomorphic to $E_\lambda$. 
++  
++\item \PrintPage{221}for $a=0$, $\h_c^{n-1}{}$ is canonically isomorphic to $E_\lambda$. 
+ \end{enumerate}
+ \end{theorem_}
+ 
+@@ -2840,7 +2912,7 @@
+ \subsection{}\label{VI:7-5}
+ 
+ As usual, this theorem also controls the dependence of 
+-$\kloos_{n,a}$ on $q$: for each $a\in \dF_q^\times$, there are $n$ Frobenius 
++$\kloos_{n,a}$ on $q$: for each $a\in \dF_q^\ast$, there are $n$ Frobenius 
+ eigenvalues $\alpha_1,\dots,\alpha_n$, of complex absolute value 
+ $q^{\frac{n-1}{2}}$, such that 
+ \[
+@@ -2868,7 +2940,7 @@
+ 
+ \subsection{}\label{VI:7-7}
+ 
+-Let us verify the case $a=0$ of \ref{VI:7-5}. The hypersurface $V_0$ is the union 
++Let us verify the case $a=0$ of \ref{VI:7-4}. The hypersurface $V_0$ is the union 
+ of the coordinate hyperplanes $x_i=0$. Let us compute the Leray spectral sequence 
+ \eqref{VI:eq:2-6-1*} for this covering of $V_0$, for cohomology with or 
+ without supports and with coefficients in $\sF(\psi)$. By \ref{VI:2-7*}*, all 
+@@ -2895,7 +2967,8 @@
+     $\dA^1\setminus \{0\}$. 
+   \item Its extension by $0$ to $\dP^1$ is the direct image of its 
+     restriction to $\dA^1\setminus \{0\}$. 
+-  \item At $0$, the monodromy is unipotent, with a single Jordan block.
++  
++\item \PrintPage{222}At $0$, the monodromy is unipotent, with a single Jordan block.
+   \item At $\infty$, wild inertia acts without fixed points $\ne 0$, and the 
+     Swan conductor is $1$. 
+   \item We have $\eR^i \pi_! \sF(\psi\sigma) \iso \eR^i \pi_\ast \sF(\psi\sigma)$ 
+@@ -2908,7 +2981,7 @@
+ 
+ The fiber of $\eR^i \pi_! \sF(\psi\sigma)$ at $a$ is 
+ $\h_c^i(V_a,\sF(\psi\sigma))$, and on the dense open subset of $\dA^1$ where the 
+-  $\eR^i \pi_!\sF(\psi\sigma)$ are locally constant, the fiber of 
++  $\eR^i \pi_!\sF(\psi^{-1}\sigma)$ are locally constant, the fiber of 
+ $\eR^i \pi_\ast \sF(\psi\sigma)$ is $\h^i(V_a,\sF(\psi\sigma))$ 
+ (\hyperref[VII]{Finiteness\ Theorem} \ref{VII:2-1}). The hypothesis \ref{VI:7-4}($n$) 
+ therefore gives us the following. 
+@@ -2923,7 +2996,7 @@
+   \item For $i=n-1$, the fiber of this sheaf at any point $a\ne 0$ has 
+     constant rank $n$. At $0$, it has rank $1$. 
+   \item On a dense open $U$, we have 
+-    $\eR^i \pi_! \sF(\psi\sigma) \iso \eR^i \pi_\ast \sF(\psi\sigma)$. 
++    $\eR^i \pi_! \sF(\psi) \iso \eR^i \pi_\ast \sF(\psi)$. 
+ \end{enumerate}
+ \end{lemma_}
+ 
+@@ -2952,6 +3025,7 @@
+   \end{array}
+ \end{equation*}
+ 
++\PrintPage{223}
+ The long exact cohomology sequence of 
+ \[\xymatrix{
+   0 \ar[r] 
+@@ -3005,7 +3079,8 @@
+ 
+ 
+ 
+-\subsection{}\label{VI:7-11}
++
++\subsection{}\label{VI:7-11}\PrintPage{224}
+ 
+ Let $\swan_0$ and $\swan_\infty$ be the Swan conductors at $0$ and at 
+ $\infty$ of $\eR^{n-1} \pi_! \sF(\psi\sigma)$. We have 
+@@ -3043,7 +3118,7 @@
+ 
+ Let $i$ be the inclusion of $\dG_m$ into $\dP^1$, and let $\Delta$ be the mapping cylinder 
+ of 
+-  $\delta:i_!(\sG\otimes \eR^{n-1}\pi_! \sF(\psi\sigma))\to \eR i_\ast (\sG\otimes \eR^{n-1} \pi_! \sF(\psi\sigma))$
++  $\delta:i_!(\sG\otimes \eR^{n-1}\pi_! \sF(\psi))\to \eR i_\ast (\sG\otimes \eR^{n-1} \pi_! \sF(\psi\sigma))$
+ (where $\eR^{n-1} \pi_! = \eR^{n-1}\pi_\ast$). Reasoning as in 
+ \ref{VI:7-10}, we deduce from \eqref{VI:eq:7-12-2} that $\Delta=0$. In 
+ particular 
+@@ -3065,7 +3140,8 @@
+ 
+ 
+ 
+-\subsection{}\label{VI:7-13}
++
++\subsection{}\label{VI:7-13}\PrintPage{225}
+ 
+ For $n=1$, \ref{VI:7-4} is trivial. To complete the proof of \ref{VI:7-4} and 
+ \ref{VI:7-8}, we still have to prove that \ref{VI:7-8}, for a given value 
+@@ -3073,7 +3149,7 @@
+   treated (\ref{VI:7-7}), we assume that $a\ne 0$. We shall write $x_0,\dots,x_n$ for 
+ the coordinates of $\dA^{n+1}$. Let $g=x_0:V_a\to \dG_m$, $\tau$ 
+ the involution $x\mapsto a x^{-1}$ of $\dG_m$, and let $\pi$, as above, be the 
+-product of the coordinates: $\dA^{n+1} \to \dA^1$, with $\sigma$ their sum. We 
++product of the coordinates: $\dA^n \to \dA^1$, with $\sigma$ their sum. We 
+ shall denote by $\sF(\psi\sigma)$ the sheaf $\sF(\psi(\sum x_i))$ both on $\dA^{n+1}$ 
+ and on $\dA^n$. 
+ 
+@@ -3101,12 +3177,12 @@
+   \item wildly ramified at $0$ and $\infty$, without invariants under wild 
+     inertia; 
+   \item of Swan conductor $1$ at $0$ and $n$ (the rank of 
+-    $\eR^q \pi_! \sF(\psi\sigma))$ at $\infty$. 
++    $\eR^q \pi_! \sF(\psi))$ at $\infty$. 
+ \end{enumerate}
+ We have $'E_2^{p q} \iso ''E_2^{p q}$, and $'E_2^{p q}=0$ except for $p=1$ and 
+ $q=n-1$. The Euler-Poincaré formula finally gives 
+ \[
+-  \dim{'E_2^{1,n-1}} = 1+n \text{;} 
++  \dim{'E_2^{p q}} = 1+n \text{;} 
+ \]
+ this completes the proof. 
+ \end{proof}
+@@ -3118,19 +3194,19 @@
+ \subsection{Remark}\label{VI:7-15}
+ 
+ The isomorphism obtained in \ref{VI:7-14} 
++\PrintPage{226}
+ \begin{equation*}\tag{7.15.1}\label{VI:eq:7-15-1}
+   \h_c^n(V_a^n,\sF(\psi\sigma)) = \h_c^1(\dG_m,\sF(\psi)\otimes \tau^\ast \eR^{n-1} \pi_! \sF(\psi\sigma)) 
+ \end{equation*}
+ allows us, with the notation of \ref{VI:7-5}, to calculate the product $\det(F)$ 
+-of the Frobenius eigenvalues $\alpha_i$. The formalism of \cite{de73} 
++of the Frobenius eigenvalues $\alpha_i$. The formalism of \PrintCite{[2]}{\cite{de73}} 
+ applies, since $\sF(\psi)$ and $\eR^{n-1} \pi_! \sF(\psi\sigma)$ 
+ belong to infinite compatible systems of $\ell$-adic 
+ representations. This reduces us to local problems, which can be 
+-simplified by noting that (cf. \cite[9.5]{de73}) 
++simplified by noting that (cf. \PrintCite{[2, 9.5]}{\cite[9.5]{de73}}) 
+ \begin{enumerate}[\indent a)]
+   \item the global constants for 
+-    $\sF(\psi)$ and $\tau^\ast \eR^{n-1} \pi_! \sF(\psi\sigma)$ are easy to 
+-    calculated easily, since the cohomology of these sheaves is elementary. 
++    $\sF(\psi)$ and $\tau^\ast \eR^{n-1} \pi_! \sF(\psi)$ are easy to calculate, since the cohomology of these sheaves is elementary. 
+   \item at every point, for either of these sheaves, the 
+     corresponding $\ell$-adic representation of the decomposition group 
+     has unramified semisimplification. 
+@@ -3147,7 +3223,7 @@
+ 
+ \subsection{Remark}\label{VI:7-16}
+ 
+-For $p=2$, the sheaf $\sf(\psi)$ is orthogonal. For $a\ne 0$ and $n$ 
++For $p=2$, the sheaf $\sF(\psi)$ is orthogonal. For $a\ne 0$ and $n$ 
+ odd, we deduce from \ref{VI:7-4}(ii) and Poincaré duality a 
+ symmetric bilinear form on $\h_c^{n-1}(V_a^{n-1},\sF(\psi))$ with 
+ values in $\bar\dQ_\ell(1-n)$. With respect to this form, $F$ is an 
+@@ -3156,7 +3232,7 @@
+ of the eigenvalues of $F$ is therefore $q^{\frac{n-1}{2}}$, and the others 
+ occur in pairs of roots $\alpha$, $\bar\alpha$ whose product is $q^{n-1}$. 
+ 
+-For $n=3$, L.\ Carlitz \cite{ca69-2} obtained a more precise result, 
++For $n=3$, L.\ Carlitz \PrintCite{[1]}{\cite{ca69-2}} obtained a more precise result, 
+ equivalent to the following proposition. 
+ 
+ 
+@@ -3170,11 +3246,12 @@
+ \]
+ \end{proposition_}
+ 
++\PrintPage{227}
+ The second tensor power of $\h_c^1(V_a^1,\sF(\psi\sigma))$ is 
+ $\h_c^2(V_a^1\times V_a^1,\sF(\psi\sigma)\boxtimes \sF(\psi\sigma))$ 
+-(K\"unneth), with the symmetry $x\otimes y\mapsto y\otimes x$ represented 
++(K\"unneth), with the symmetry $x\otimes y\to y\otimes x$ represented 
+ geometrically by $-\tau^\ast$, where $\tau$ is the automorphism 
+-$(x,y)\mapsto (y,x)$ of $V_a\times V_a$. If $X'$ is the quotient of 
++$(x,y)\to (y,x)$ of $V_a\times V_a$. If $X'$ is the quotient of 
+ $V_a^1\times V_a^1$ by $\{\operatorname{id}{},\tau\}$ and $\pi$ is the 
+ projection of $V_a^1\times V_a^1$ onto $X'$, the group 
+ $\operatorname{Sym}^2 \h_c^1(V_a^1,\sF(\psi\sigma))$ is therefore identified with the 
+@@ -3193,9 +3270,9 @@
+ \end{equation*}
+ 
+ Let us compute $X$, $s$ and $\varepsilon(P)$. On $V_a^1\times V_a^1$, put 
+-$x_1=x_1\circ\pr_1$, $x_2=x_2\circ\pr_2$, $x_1'=x_1\circ \pr_2$, 
+-$x_2'=x_2\circ \pr_1$. We have $x_1 x_2=x_1'x_2'=a$. Identify functions on 
+-$X'$ with functions on $X$ invariant under $\tau$. Let $s_1=x_1+x_1'$, 
++$x_1=x_1\circ\pr_1$, $x_2=x_2\circ\pr_1$, $x_1'=x_1\circ \pr_2$, 
++$x_2'=x_2\circ \pr_2$. We have $x_1 x_2=x_1'x_2'=a$. Identify functions on 
++$X'$ with functions on $V_a^1\times V_a^1$ invariant under $\tau$. Let $s_1=x_1+x_1'$, 
+ $s_2=x_2+x_2'$, $p_1=x_1 x_1'$, $p_2=x_2 x_2'$. We have $s_1 p_2 = a s_2$, 
+ $s_2 p_1 = a s_1$ and $X$ is defined in $X'$ by $s_1\ne 0$, $s_2\ne 0$. On 
+ $X$, we therefore have $p_1 = a s_1 s_2^{-1}$, and $(s_1,s_2)$ identifies $X$ with 
+@@ -3222,9 +3299,10 @@
+ 
+ 
+ 
+-\subsection{Remark}\label{VI:7-18}
+-
+-For $\chi$ a multiplicative character of $\dF_q^\times$, and $a\ne 0$, the 
++
++\subsection{Remark}\label{VI:7-18}\PrintPage{228}
++
++For $\chi$ a multiplicative character of $\dF_q^\ast$, and $a\ne 0$, the 
+ method of \ref{VI:7-14} applies to the study of the sum 
+ \[
+   S = \sum_{x_0\dotsm x_n = a} \chi(x_0) \psi(x_0+\cdots + x_n) 
+@@ -3232,14 +3310,14 @@
+ (replace the sheaf $\sF(\psi)$ on $\dG_m$ by $\sF(\chi\cdot \psi)$). We 
+ again find a cohomology group of dimension $n+1$, and 
+ $|S|\leqslant (n+1)q^{n/2}$. Such sums were considered by 
+-Salie and Mordell \cite{mo73}.
+-
+-One may hope that our methods make it possible to study the sums 
++Salié and Mordell \PrintCite{(Mordell, Some exponential sums, Proc.~Int.~Conf.~on number theory, Moscow September 1971, p.~30--34)}{\cite{mo73}}.
++
++One may hope that our methods also make it possible to study the sums 
+ \[
+   S_{k,\chi,a} = \sum_{N(x)=a} \chi(x) \psi \tr(x) 
+ \]
+-($k$ an étale algebra over $\dF_q$, $a\in \dF_q^\times$, $\chi$ a character of 
+-$k^\times$). The analog of \ref{VI:7-4} (for $a\ne 0$) should be true. 
++($k$ an étale algebra over $\dF_q$, $a\in \dF_q^\ast$, $\chi$ a character of 
++$k^\ast$). The analog of \ref{VI:7-4} (for $a\ne 0$) should be true. 
+ 
+ 
+ 
+@@ -3247,9 +3325,9 @@
+ 
+ \subsection{}\label{VI:7-19}
+ 
+-The symmetric group $S_n$ acts on $\dA^n$, preserving $V_a$ and 
+-the map $\sigma$, and hence also the sheaf $\sf(\psi\sigma)$, the inverse 
+-image under $\sigma$ of the sheaf $\sf(\psi)$ on $\dG_a$. It therefore acts 
++The symmetric group $\mathfrak{S}_n$ acts on $\dA^n$, preserving $V_a$ and 
++the map $\sigma$, and hence also the sheaf $\sF(\psi\sigma)$, the inverse 
++image under $\sigma$ of the sheaf $\sF(\psi)$ on $\dG_a$. It therefore acts 
+ on $\h_c^{n-1}(V_a,\sF(\psi\sigma))$. Formula \eqref{VI:eq:7-2-5} admits 
+ the following cohomological interpretation.
+ 
+@@ -3258,7 +3336,7 @@
+ 
+ 
+ \begin{proposition_}\label{VI:7-20}
+-The action of $S_n$ on $\h_c^{n-1}(V_a,\sF(\psi\sigma))$ is multiplication 
++The action of $\mathfrak{S}_n$ on $\h_c^{n-1}(V_a,\sF(\psi\sigma))$ is multiplication 
+ by the sign character. 
+ \end{proposition_}
+ 
+@@ -3266,15 +3344,16 @@
+ by $-1$. Since $\tau^2=1$, the only possible eigenvalues of $\tau$ are 
+ $\pm 1$. Let $V_a/\tau$ be the quotient of $V_a$ for 
+ $\{\operatorname{id},\tau\}$. The map $\sigma$, and hence the sheaf 
+-$\sf(\psi\sigma)$, descend to the quotient, and the subspace of 
+-  $\h_c^{n-1}(V_a,\sF(\psi\sigma))$ fixed by 
++$\sF(\psi\sigma)$, descend to the quotient, and the subspace of 
++  $\h_c^{n-1}(V_a,\sF(\psi))$ fixed by 
+ $\tau$ is $\h_c^{n-1}(V_a/\tau,\sF(\psi\sigma))$. We must prove that 
+ this cohomology is zero. 
+ 
+ Suppose $a\ne 0$. For $\tau=(1,2)$ the quotient $V_a/\tau$ is identified 
+ with $\dG_a\times \dG_m^{n-2}$, the quotient map being 
+ $(x_1,x_2,x_3,\dots,x_n)\mapsto (x_1+x_2,x_3,\dots,x_n)$. Indeed, $x_1$ and 
+-$x_2$ are determined up to order by $x_1+x_2$ and 
++$x_2$ are determined \PrintPage{229}
++up to order by $x_1+x_2$ and 
+ $x_1x_2 = a/x_3\dotsm x_n$. In the coordinates $(t,x_3,\dots,x_n)$, the 
+ sheaf takes the form 
+ $\sF(\psi(t+x_3+\cdots + x_n)) = \sF(\psi(t))\otimes \sF(\psi(x_3+\cdots + x_n))$. 
+@@ -3290,8 +3369,8 @@
+ \subsection{}\label{VI:7-21}
+ 
+ The sums $\kloos_{n,a}$ in this section were studied by 
+-S.\ Sperber, in his thesis, and in \cite{sp77} by methods 
+-$p$-adic methods inspired by Dwork and by Bombieri's article \cite{bo66}. 
++S.\ Sperber, in his thesis, and in \PrintCite{(p-adic hypergeometric functions I, II, forthcoming)}{\cite{sp77}} by 
++$p$-adic methods inspired by Dwork and by Bombieri's article \PrintCite{(on exponential sums in finite fields, Ann.~J.~Math.~\textbf{88} (1966))}{\cite{bo66}}. 
+ For $p\ne 2$, these methods determine the dependence on $q$ in \ref{VI:7-5}, 
+ the functional equation $\alpha_i = q^{n-1} \beta_i^{-1}$ between the 
+ Frobenius eigenvalues for the sums $\kloos_{n,a}$ and 
+@@ -3311,7 +3390,8 @@
+ 
+ 
+ 
+-\section{Other applications}\label{VI:8}
++
++\section{Other applications}\label{VI:8}\PrintPage{230}
+ 
+ 
+ 
+@@ -3325,7 +3405,7 @@
+ is expressed in terms of algebraic cycles; this is the case for rational 
+ surfaces, quadrics, smooth intersections of two quadrics of 
+ odd dimension, flag varieties\ldots. This is not, however, 
+-always the case; in Lusztig's beautiful article \cite{lu76}, algebraic cycles 
++always the case; in Lusztig's beautiful article \PrintCite{``Coxeter orbits and eigenspaces of Frobenius (Inv.~Math., forthcoming)''}{\cite{lu76}}, algebraic cycles 
+ do not appear. 
+ 
+ 
+@@ -3341,7 +3421,7 @@
+ of $G\to G/B$ to prove the same result for $G$. It can be expressed 
+ conveniently in terms of \emph{the} maximal torus $T$ of $G$ and the action 
+ \emph{of the} Weyl group $W$ on $T$ (for the definition \emph{of the} maximal 
+-torus, cf. \cite[VIII \S 2 Rem.2]{bo05} or \cite[p.105]{dl76}). It is 
++torus, cf. \PrintCite{Bourbaki, Lie VIII \S 5 Remark~2}{\cite[VIII \S 5 Rem.2]{bo05}} or \PrintCite{[3, p.105]}{\cite[p.105]{dl76}}). It is 
+ the exterior algebra on its primitive part, which agrees up to a shift 
+ with the quotient $I(\h^\bullet(B G,\dQ_\ell))$ of the cohomology of 
+ $B G$ formed by the ``indecomposable elements,'' and 
+@@ -3360,6 +3440,7 @@
+   \left|G_0(\dF_q)\right| = \deg_G(F) \cdot \det\left(1-{F^\ast}^{-1},I(\operatorname{Sym}^\bullet(X\otimes \dQ)^W)\right) \text{.}
+ \end{equation*}
+ 
++\PrintPage{231}
+ The same formula applies to the Ree and Suzuki groups; these groups are 
+ of the form $G^F$ (reductive $G$, $F^2$ a Frobenius), and it suffices to 
+ verify that the Lefschetz trace formula holds for $F$ acting 
+@@ -3373,10 +3454,27 @@
+ 
+ \subsection{}\label{VI:8-3}
+ 
+-The trace formula was used by Deligne--Lusztig \cite{dl76}, 
+-Kazhdan \cite{ka77} and Springer \cite{sp76} in the study of 
++The trace formula was used by Deligne--Lusztig \PrintCite{[3]}{\cite{dl76}}, 
++Kazhdan \PrintCite{[4]}{\cite{ka77}} and Springer \PrintCite{[6]}{\cite{sp76}} in the study of 
+ complex representations of finite groups $G_0(\dF_q)$, for $G_0$ 
+ reductive over $\dF_q$. The work of Kazhdan and Springer contains 
+ admirable examples of how the trace formula permits ``analytic 
+ continuation'' from a split situation to a nonsplit situation 
+ (see \ref{VI:1-13}).
++
++
++\section*{Bibliography}\PrintPage{232}
++\begin{enumerate}[{[}1{]}]
++\item L.~Carlitz -- A note on exponential sums, Pac.~J.~Math.~\textbf{30} (1969), p.~35--37. MR~\textbf{39}~6839.
++\item P.~Deligne -- Les constantes des équations fonctionnelles des fonctions $L$.
++Proc.~Antwerpen conf.~Vol.~2, p.~501--597, Lecture Notes~349 (Springer Verlag).
++\item P.~Deligne and G.~Lusztig -- Representations of reductive groups over finite fields,
++Ann.~of Math.~\textbf{103}, 1 (1976), p.~103--161.
++\item D.~Kazhdan -- Proof of Springer's Hypothesis (preprint Harvard).
++\item J.P.~Serre -- Abelian $\ell$-adic representations and elliptic curves, Benjamin (1968).
++\item T.A.~Springer -- Trigonometrical sums, Green functions and representations of
++Weyl groups, (Preprint Utrecht).
++\item A.~Weil -- Basic number theory, Springer Verlag.
++\item A.~Weil -- Jacobi sums as ``gr\"ossencharaktere'', Trans.~AMS~\textbf{73} (1952), p.~487--495.
++\item A.~Weil -- Sommes de Jacobi et caractères de Hecke.
++\end{enumerate}

@@ -1,0 +1,17 @@
+--- checkpoint/work/sommes/complete_alignment.py
++++ SGA4HALF_READERS_RECORDS.zip/work/sommes/complete_alignment.py
+@@ -11,9 +11,12 @@
+  (68,'1.12, English indefinite article','après extension du corps fini de base','after a extension','after an extension','Repair the indefinite article before extension in the English translation; no source-content change.'),
+  (69,'1.22, end of formula for the target action',r'$x\mapsto (y\mapsto F x\cdot y\cdot x^{-1})$',r'$x\mapsto (y\mapsto F x\cdot y\cdot x^{-1})$)', 'Remove the second closing parenthesis in English.','The full scan p181, directly re-inspected, prints only the closing parenthesis belonging to the inner map. The further parenthesis in the English component is an extra transcription mark; the French component already has the correct punctuation.'),
+  (70,'1.24(ii), English group-theoretic term','classe de conjugaison','conjugation class','conjugacy class','Use the same English term conjugacy class as in part(iii) and the proof on182; the source uses the same French term throughout.'),
+- (71,'3.3, opening sentence','Soient ... comme en 3.2','Let ... as in','Let ... be as in','Restore the missing English verb in the opening instruction; all mathematical arguments and references remain the same.')]:
++ (71,'3.3, opening sentence','Soient ... comme en 3.2','Let ... as in','Let ... be as in','Restore the missing English verb in the opening instruction; all mathematical arguments and references remain the same.'),
++ (72,'4.7, two uses of système projectif in one sentence','système projectif de torseurs sous le système projectif de groupes','inverse system of torsors under the projective system of groups','inverse system of torsors under the inverse system of groups','The same French technical term is used twice in one sentence. Use inverse system for both, consistently with every other occurrence in the SGA4HALF English components; the supplied SGA7 glossary admits both terms, while SGA4 uses projective system.'),
++ (73,'7.21, description of Sperber’s methods','par des méthodes p-adiques','by methods p-adic methods','by p-adic methods','Remove the duplicated English noun; the French has only one occurrence of méthodes.'),
++ (74,'2.2 and 5.7, connecting word within citation postnotes','et','et','and','Translate the two French conjunctions inadvertently retained in the English citation postnotes; citation keys and reference numbers are unchanged.')]:
+  id=f'S45-ASTRA-S-{n:04}'
+- page={68:175,69:181,70:181,71:189}.get(n,209)
++ page={68:175,69:181,70:181,71:189,72:199,73:229,74:183}.get(n,209)
+  entry=dict(id=id,page=str(page),place=place,printed_reading=pr,tex_reading=tex,change=change,kind='extra' if n==69 else 'translation',reason=why)
+  if id not in ids:rs.append(entry)
+  else:rs=[entry if r['id']==id else r for r in rs]

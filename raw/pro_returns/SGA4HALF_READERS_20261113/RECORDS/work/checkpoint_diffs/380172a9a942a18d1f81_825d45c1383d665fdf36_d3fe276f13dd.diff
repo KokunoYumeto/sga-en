@@ -1,0 +1,24 @@
+--- checkpoint/work/finitude_verdier/build_components.py
++++ SGA4HALF_READERS_RECORDS.zip/work/finitude_verdier/build_components.py
+@@ -32,6 +32,13 @@
+     if op['id']=='S45-SOL-1035':
+      old=old.replace(r'\item ','');new=new.replace(r'\item ','')
+     if old not in body and relax(old) in body:old=relax(old);new=relax(new)
++    if op['mode']=='all_scoped':
++     n=body.count(old)
++     if n==0:REPORT.append(dict(lang=lang,page=p['printed_page'],id=op['id'],status='FAILED',count=n,old=old))
++     else:
++      body=body.replace(old,new)
++      REPORT.append(dict(lang=lang,page=p['printed_page'],id=op['id'],status='applied',count=n,before=old,after=new))
++     continue
+     # Explicit local selector for the second definition, not paragraph4.1.
+     sel=body.index(r'\label{VII:4-2}') if op['id']=='S45-SOL-1047' else 0
+     n=body[sel:].count(old)
+@@ -49,6 +56,7 @@
+ 
+ apply('7',233,261)
+ apply('8',262,311)
++apply('erratum',312,312)
+ (W/'build_report.json').write_text(json.dumps(REPORT,ensure_ascii=False,indent=2))
+ print('Applied',sum(r['status']=='applied' for r in REPORT),'failed',sum(r['status']=='FAILED' for r in REPORT))
+ for r in REPORT:

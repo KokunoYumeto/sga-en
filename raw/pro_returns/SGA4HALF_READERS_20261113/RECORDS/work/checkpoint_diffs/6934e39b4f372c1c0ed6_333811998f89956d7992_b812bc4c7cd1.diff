@@ -1,0 +1,172 @@
+--- checkpoint/scripts/export_changes.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/export_changes.py
+@@ -90,7 +90,7 @@
+     return ''.join(chars)
+ 
+ 
+-def prose_lines(s):
++def prose_lines(s, exclude_citations=False):
+     """Conservative prose projection, with line coordinates left unchanged.
+ 
+     This is a classification aid, not a semantic equivalence checker.  Complete
+@@ -158,13 +158,18 @@
+         # Link targets, citation keys and alternative PDF strings are metadata.
+         try:
+             if name in {'hyperlink', 'hypertarget', 'href'}:
+-                _, e = group(s, p)
++                target, e = group(s, p)
++                if exclude_citations and name == 'hyperlink' and target.startswith('cite.'):
++                    _, e = group(s, e)
+                 ranges.append((m.start(), e))
+                 continue
+             if name in {'PrintCite', 'texorpdfstring'}:
+                 _, q = group(s, p)
+                 _, e = group(s, q)
+-                ranges.extend([(m.start(), p), (q, e)])
++                if exclude_citations and name == 'PrintCite':
++                    ranges.append((m.start(), e))
++                else:
++                    ranges.extend([(m.start(), p), (q, e)])
+                 continue
+             if name == 'hyperref' and p < len(s) and s[p] == '[':
+                 e = s.find(']', p)
+@@ -283,7 +288,8 @@
+                 'Reviewed-page association, not an assertion that every listed decision caused every token in this hunk.')
+ 
+     def classify(self, language, category, old_words, new_words, pages, old, new,
+-                 component=None, bibliography=False, prose_changed=True):
++                 component=None, bibliography=False, prose_changed=True,
++                 only_citation_prose=False):
+         if language != 'en':
+             return '', 'French source change'
+         if category in {'main_scaffold', 'preamble', 'style'}:
+@@ -306,13 +312,24 @@
+             return ('AI-translated: restored original general contents',
+                     'New translation of restored authorial contents')
+         # A full citation literal often restores titles/names, not English prose.
+-        if (r'\PrintCite' in new or r'\hyperlink{cite.' in new) and (
+-                len(new_words) - len(old_words) > 0):
++        if only_citation_prose and (r'\PrintCite' in new or r'\hyperlink{cite.' in new):
+             return ('AI-translated: any added English connective/publication description only; '
+                     'quoted titles and names retain their source language',
+                     'Reference display restoration, possibly mixed with English prose')
+         if not new_words:
+             return '', 'Deleted prose or wording; no new English translation'
++        old_count, new_count = collections.Counter(old_words), collections.Counter(new_words)
++        if old_count == new_count:
++            return ('AI-produced revision of existing English word order; no new passage',
++                    'English wording correction')
++        changed_words = set((old_count - new_count) + (new_count - old_count))
++        navigation_words = {'chapter', 'section', 'no', 'nos', 'exposé', 'i', 'ii',
++                            'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
++                            'a', 'b', 'c', 'd', 'and', 'cf', 'th'}
++        if (re.search(r'\\(?:ref|eqref|nameref|hyperref)\b', old + new) and
++                changed_words and all(w.lower() in navigation_words for w in changed_words)):
++            return ('AI-produced reference wording; no newly translated authorial passage',
++                    'Reference/navigation wording')
+         explicit = []
+         joined = norm(new)
+         for row in self.translation_operations:
+@@ -344,6 +361,10 @@
+         a, b = before.splitlines(True), after.splitlines(True)
+         old_prose = prose_lines(before) if language == 'en' else [[] for _ in a]
+         new_prose = prose_lines(after) if language == 'en' else [[] for _ in b]
++        old_without_cites = (prose_lines(before, exclude_citations=True)
++                             if language == 'en' else old_prose)
++        new_without_cites = (prose_lines(after, exclude_citations=True)
++                             if language == 'en' else new_prose)
+         old_offsets, new_offsets = [0], [0]
+         for line in old_prose:
+             old_offsets.append(old_offsets[-1] + len(line))
+@@ -399,7 +420,9 @@
+             ai, kind = self.classify(
+                 language, category, old_words, new_words, hpages, old, new,
+                 component=component, bibliography=bibliography,
+-                prose_changed=prose_changed)
++                prose_changed=prose_changed,
++                only_citation_prose=(flatten_words(old_without_cites, i, j) ==
++                                     flatten_words(new_without_cites, k, l)))
+             rows.append({
+                 'baseline': baseline, 'part': part, 'page': ';'.join(hpages),
+                 'place': labels[-1] if labels else
+@@ -751,6 +774,60 @@
+                         })
+             assembly = any(x in historical['file'] for x in
+                            ['sga4.5.tex', 'sga-style.sty', 'sga-sources.bib'])
++            assembly_evidence = []
++            assembly_status = ''
++            if canonical == 'SGA45-TX-0002':
++                assembly_status = ('Superseded by the requested mode policy: the inherited '
++                                   'typesetter note appears in diplomatic/corrected forms '
++                                   'and is omitted in the reading form')
++                for lang, text in self.masters.items():
++                    needle = r'\ifnum\EditionMode=2\relax\else'
++                    at = text.index(needle, text.index(r'\begin{document}'))
++                    assembly_evidence.append({
++                        'language': lang, 'file': MASTER_FILES[lang],
++                        'line': text[:at].count('\n') + 1,
++                        'witness': text[at:at + len(needle) + 160],
++                        'meaning': 'Actual final note-inclusion guard and heading.',
++                    })
++            elif canonical in {'SGA45-TX-0009', 'SGA45-TX-0055'}:
++                assembly_status = ('Generated contents program replaced by the restored '
++                                   'original general contents; inherited generated-TOC '
++                                   'presentation choices are inactive')
++                for lang, text in self.masters.items():
++                    assert not re.search(r'\\tableofcontents\b', text)
++                    needle = r'\label{OriginalContents}'
++                    at = text.index(needle)
++                    assembly_evidence.append({
++                        'language': lang, 'file': MASTER_FILES[lang],
++                        'line': text[:at].count('\n') + 1,
++                        'witness': text[max(0, at - 70):at + 160],
++                        'meaning': 'Actual restored original contents; no tableofcontents call.',
++                    })
++            elif canonical == 'SGA45-TX-0040':
++                assembly_status = 'French proof-heading declaration retained in the final inlined preamble'
++                needle = r'\renewcommand{\proofname}{Démonstration}'
++                text = self.masters['fr']
++                at = text.index(needle)
++                assembly_evidence.append({
++                    'language': 'fr', 'file': MASTER_FILES['fr'],
++                    'line': text[:at].count('\n') + 1, 'witness': needle,
++                    'meaning': 'Exact final presentation declaration.',
++                })
++            elif canonical in {'SGA45-TX-0001', 'SGA45-TX-0177', 'SGA45-TX-0329'}:
++                assembly_status = ('Historical global-BibTeX repair is inactive in the readers: '
++                                   'the global bibliography program was removed, while '
++                                   'source citation keys and printed local bibliographies remain')
++                for lang, text in self.masters.items():
++                    assert not re.search(r'\\bibliography\s*\{', text)
++                    m = re.search(r'\\PrintCite\{[^\n]+', text)
++                    assert m
++                    assembly_evidence.append({
++                        'language': lang, 'file': MASTER_FILES[lang],
++                        'line': text[:m.start()].count('\n') + 1,
++                        'witness': m[0],
++                        'meaning': 'A final printed-literal citation retaining its source key; '
++                                   'the complete source contains no bibliography invocation.',
++                    })
+             related_changes = []
+             for row in self.rows['fr']:
+                 if row['baseline'] != 'codex_corr':
+@@ -759,7 +836,10 @@
+                 if exact_id or set(pages) & set(row['page'].split(';')) or (
+                         assembly and row['comparison_scope'] != 'component'):
+                     related_changes.append(row['change_id'])
+-            if source_variants:
++            if assembly_status:
++                status = assembly_status
++                association = 'verified final assembly source evidence'
++            elif source_variants:
+                 status = 'Explicit final variant source ID; both readings recorded'
+                 association = 'exact source ID in final annotated source'
+             elif any('rejected' in r['kind'] for r in linked):
+@@ -787,6 +867,7 @@
+                 'current_crosswalk_status': status, 'association_level': association,
+                 'printed_pages': pages, 'final_source_anchors': anchors,
+                 'stable_label_anchors': label_anchors,
++                'assembly_evidence': assembly_evidence,
+                 'explicit_current_records': linked,
+                 'final_variants': source_variants,
+                 'related_change_rows': related_changes,

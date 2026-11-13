@@ -1,0 +1,8 @@
+from record import *
+page(129,r'\chapter{La classe',range(527,532),start_en=r'\chapter{The cohomology class')
+page(130,r'\begin{center}\textbf{Sommaire}',[],start_en=r'\begin{center}\textbf{Contents}',own=[dict(id='S45-ASTRA-R-0026',place='Entire printed contents page',printed_reading='Nine numbered summary entries, sections1–3 and subsections1.1–1.3,2.1–2.3; pages3,3,5,8,10,10,11,16,23.',tex_reading='Entire page omitted',change='Restore contents in French and translate the same entries into English.',kind='missing',reason='Full page130 was viewed. It is a printed contents page absent from supplied source and PAGES inventory.')])
+page(131,r'\section{Cohomologie à support',range(532,537),start_en=r'\section{Cohomology with supports',own=[dict(id='S45-ASTRA-R-0027',place='1.1.2–1.1.3, total-cohomology and resolution superscripts',printed_reading='Six total-degree asterisks on Cech H,H,F',tex_reading=r'\bullet',change='Restore the six printed degree asterisks, retaining fixed numeric degrees.',kind='symbol',reason='Each of the two cohomology degree markers, the Cech marker, and three resolution markers was compared against the page image.')])
+append('patches.jsonl',dict(id='S45-ASTRA-R-0027',page='131',old=r'\bullet',new='*',reason='Six directly checked asterisk degree markers.',kind='symbol',multiple=True))
+page(132,r'\subsubsection{}\label{IV:1-1-4}',[537,538],start_en=r'\subsubsection{}\label{IV:1-1-4}')
+page(133,r'\subsection{Cup-produits}',[539,540],start_en=r'\subsection{Cup products}')
+variant('S45-SOL-0539',133,'qui nous reservirons','qui nous reservirons','qui nous resserviront','The plural subject remarques requires resserviront; the printed form also omits the doubled s.')

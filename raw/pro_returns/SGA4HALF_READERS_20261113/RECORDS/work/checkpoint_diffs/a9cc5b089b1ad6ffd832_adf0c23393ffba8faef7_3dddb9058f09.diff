@@ -1,0 +1,45 @@
+--- checkpoint/scripts/checkpoint.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/checkpoint.py
+@@ -1,6 +1,10 @@
+ """Create immutable progress archives; raw inputs and regenerable rasters omitted."""
+ from pathlib import Path
+-import zipfile,json,re,hashlib
++import zipfile,json,re,hashlib,argparse
++from archive_preflight import module as privacy
++parser=argparse.ArgumentParser(description=__doc__)
++parser.add_argument('--milestone',default='Progress checkpoint')
++args=parser.parse_args()
+ ROOT=Path(__file__).resolve().parents[1]
+ OUT=ROOT/'output';OUT.mkdir(exist_ok=True)
+ owners=['arcata','rapport_cycle','sommes','finitude_verdier']
+@@ -8,18 +12,28 @@
+ n=1+max([int(p.stem.rsplit('_',1)[1]) for p in existing],default=0)
+ target=OUT/f'SGA4HALF_READERS_checkpoint_{n:02}.zip'
+ counts={}
+-for owner in owners+['common','records','build']:
++for owner in owners:
+     counts[owner]={}
+     for name in ['pages','decisions','own_findings','variants']:
+         p=ROOT/'work'/owner/(name+'.jsonl')
+         counts[owner][name]=len(p.read_text().splitlines()) if p.exists() else 0
+ include=[]
+ include.extend(p for p in (ROOT/'scripts').rglob('*') if p.is_file() and '__pycache__' not in p.parts)
+-for owner in owners:
++for owner in owners+['common','records','build','glossary','verification','tex_infrastructure_test','reproducibility']:
+     include.extend(p for p in (ROOT/'work'/owner).rglob('*') if p.is_file() and p.suffix in {'.json','.jsonl','.tsv','.csv','.tex','.py','.md','.txt','.sty','.bib'} and '__pycache__' not in p.parts)
+ include.append(ROOT/'work/manifest_verification.json')
++include.append(ROOT/'requirements-rebuild.txt')
+ for folder in ['deliverables']:
+     include.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and p.suffix in {'.tex','.pdf','.md','.tsv','.json','.py','.sty','.bib','.sh'} and '__pycache__' not in p.parts)
++privacy_failures=[]
++for p in sorted(set(include)):
++    if p.exists() and p.suffix!='.pdf':
++        data=p.read_text(errors='replace')
++        if privacy.LOCAL_PATH.search(data) or privacy.EMAIL.search(data):privacy_failures.append(p.relative_to(ROOT).as_posix())
++assert not privacy_failures,('Privacy preflight rejected unpublished candidate',privacy_failures)
++counts['milestone']=args.milestone
++visual=ROOT/'work/verification/FINAL_VISUAL_QA.json'
++if visual.exists():counts['completed_reader_visual_checks']=json.loads(visual.read_text()).get('readers',0)
+ with zipfile.ZipFile(target,'x',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+     for p in sorted(set(include)):
+         if p.exists():z.write(p,p.relative_to(ROOT))

@@ -1,0 +1,371 @@
+--- en/sources/components/sga4half_5_en.tex
++++ en/sga4half_5_en.tex
+@@ -1,9 +1,9 @@
+ 
+-\chapter{Duality}\label{V}
++\PrintPage{154}\chapter{Duality}\label{V}
+ 
+ This exposé contains several theorems and compatibility results, all related
+ to Poincaré duality. In Section \ref{V:1}, we give the local biduality theorem
+-in dimension $1$ \cite[I.5.1]{sga5}, together with some computations of
++in dimension $1$ \PrintCite{(SGA~5 I 5.1)}{\cite[I.5.1]{sga5}}, together with some computations of
+ duals. In Section \ref{V:2}, we give a very economical proof of Poincaré
+ duality for curves, taught to me by M.\ Artin. In Section \ref{V:3}, we prove
+ a compatibility linking two definitions of the pairing giving rise to
+@@ -15,21 +15,29 @@
+ an integer invertible on every scheme under consideration.
+ 
+ 
+-\section{Local biduality in dimension \texorpdfstring{$1$}{1}}\label{V:1}
++\begin{center}\textbf{Contents}\end{center}
++\begin{tabular}{p{0.84\textwidth}r}
++1. Local biduality in dimension $1$ & \var{1}{2}{S45-ASTRA-R-0056}\\
++2. Poincaré duality for curves, after M.\ Artin & 5\\
++3. Poincaré duality and the Jacobian & 8\\
++4. Compatibility SGA 4 XVIII 3.1.10.3 & \var{12}{13}{S45-ASTRA-R-0057}
++\end{tabular}
++
++\PrintPage{155}\section{Local biduality in dimension \texorpdfstring{$1$}{1}}\label{V:1}
+ 
+ 
+ \subsection{}\label{V:1-1}
+ 
+ Let $S$ be a regular scheme, purely of dimension $1$. We shall show that the
+ complex with value $\dZ/n$ concentrated in degree $0$ is dualizing; that is,
+-for $\sK\in \ob\eD_c^b(S,\dZ/n)$ (where $(-)_c$ means constructible), if we
++for $\sK\in \ob\eD_c^b(S,\dZ/n)$ (where ${}_c$ means constructible), if we
+ put $D\sK=\rHom(\sK,\dZ/n)$, then $D\sK$ is again
+ constructible with bounded cohomology, and the canonical morphism $\alpha$
+ from $\sK$ to $D D\sK$ is an isomorphism.
+ 
+ For $\sK$ in $\eD^-$ and arbitrary $\sL$, we have
+ \[
+-  \hom(\sK\lotimes \sL,\dZ/n) = \hom(\sL,\Hom(\sK,\dZ/n)) \text{.}
++  \hom(\sK\lotimes \sL,\dZ/n) = \var{\hom(\sL,\Hom(\sK,\dZ/n))}{\hom(\sL,\rHom(\sK,\dZ/n))}{S45-SOL-0634} \text{.}
+ \]
+ The morphism from $\sK$ to $DD\sK$ is defined when $D\sK$ lies in $\eD^-$:
+ if $\beta:D\sK\lotimes\sK\to \dZ/n$ is the canonical pairing, it is the
+@@ -43,8 +51,12 @@
+ $\sK_X=\eR f^!\dZ/n$. For $\sK\in \ob\eD^-(X,\dZ/n)$, put
+ $D\sK = \rHom(\sK,\sK_X)$. The adjunction between $\eR f_!$ and $\eR f^!$
+ gives
+-\[\xymatrix{
+-  \eR f_\ast \sK\lotimes \eR f_\ast D\sK \ar[r]
++\[
++  \eR f_\ast D\sK = \eR f_\ast \rHom(\sK,\eR f^! \dZ/n) = \rHom(\eR f_! \sK,\dZ/n) = D\eR f_! \sK \text{.}
++\]
++The corresponding pairing between $\eR f_!\sK$ and $\eR f_\ast D\sK$ is the composite
++\[\xymatrix{
++  \eR f_! \sK\lotimes \eR f_\ast D\sK \ar[r]
+     & \eR f_! (\sK\lotimes D\sK) \ar[r]
+     & \eR f_! \eR f^! \dZ/n \ar[r]
+     & \dZ/n \text{.}
+@@ -60,27 +72,27 @@
+ \end{equation*}
+ is commutative.
+ 
+-If $f$ is the inclusion of a closed point, we know that
++\PrintPage{156}If $f$ is the inclusion of a closed point, we know that
+ $\eR f^!\dZ/n=\dZ/n(-1)[-2]$---that is, up to a twist and a shift, $\dZ/n$.
+ Over the spectrum of a field this complex is dualizing (Pontryagin duality
+ for $\dZ/n$-modules). By \eqref{V:eq:1-2-1}, we therefore have
+ $\sK\iso D D\sK$ for $\sK$ of the form $\eR f_!\sL$, and hence whenever the
+-support of $\underline\h^\bullet(\sK)$ is finite.
++support of $\underline\h^*(\sK)$ is finite.
+ 
+ 
+ \begin{theorem_}\label{V:1-3}
+ Let $j:U\hookrightarrow S$ be a dense open subscheme of $S$, and let $\sF$
+ be a locally constant constructible sheaf of $\dZ/n$-modules on $U$. Then
+-$\eD j_\ast \sF = j_\ast D \sF$; that is,
+-$\Hom(j_\ast \sF,\dZ/n) = j_\ast\Hom(\sF,\dZ/n)$ and
++$D j_\ast \sF = j_\ast D \sF$; that is,
++$\Hom(j_\ast \sF,\dZ/n) = j_\ast\Hom(\sF,\dZ/n_U)$ and
+ $\Ext^i(j_\ast\sF,\dZ/n) = 0$ for $i>0$.
+ \end{theorem_}
+ 
+ On $U$, $\Ext^i(j_\ast\sF,\dZ/n)=0$ for $i>0$, since $\sF$ is locally
+ constant (and $\dZ/n$ is an injective $\dZ/n$-module), while for $i=0$ it is
+ the dual $\sF^\vee$ of $\sF$. One checks that
+-$\hom(j_\ast\sF,\dZ/n)=j_\ast\sF^\vee$, and it remains to verify the
+-vanishing of the $\Ext^i$ for $i>0$ at the points of $S\setminus U$. The
++$\var{\hom(j_\ast\sF,\dZ/n)=j_\ast\sF^\vee}{\Hom(j_\ast\sF,\dZ/n)=j_\ast\sF^\vee}{S45-ASTRA-R-0045}$, and it remains to verify the
++vanishing of the $\Ext^i$ for $i>0$ at the points of $S-U$. The
+ problem is local at these points. We are thus reduced to assuming that $S$
+ is a strictly local trait and that $U$ consists of its generic point $\eta$.
+ Let $I=\gal(\bar\eta/\eta)$. The sheaf $\sF$ is identified with the Galois
+@@ -109,13 +121,13 @@
+     & \eR j_\ast \sF^\vee \ar[d] \\
+   i_\ast\left(\sF_{\bar\eta}^I\right)^\vee(-1)[-2] \ar[r]
+     & \left(\sF_{\bar\eta}^I\right)^\vee \ar[r]
+-    & \eR j_\ast \sF_{\bar\eta}^I \text{.}
++    & \var{\eR j_\ast \sF_{\bar\eta}^I}{\eR j_\ast\left(\sF_{\bar\eta}^I\right)^\vee}{S45-SOL-0639}\text{.}
+ }\]
+ The long exact sequence arising from the first row gives the vanishing of the
+ $\Ext^i$ for $i>2$, and, on taking the fiber at $s$, we find
+-\[\xymatrix@=0.7cm{
+-  0 \ar[r]
+-    & \left(\underline\h^1(D j_\ast\sF)\right)_s \ar[r]
++\PrintPage{157}\[\xymatrix@=0.7cm{
++  0 \ar[r]
++    & \left(\underline\h^1 D j_\ast\sF\right)_s \ar[r]
+     & \h^1\left(I,\sF_{\bar\eta}^\vee\right) \ar[r]^-\partial \ar[d]
+     & \left(\sF_{\bar\eta}^I\right)^\vee(-1) \ar[r] \ar@{=}[d]
+     & \left(\underline\h^2 D j_\ast\sF\right)_s \ar[r]
+@@ -152,7 +164,7 @@
+ constant on $U$.
+ 
+ 
+-\section{Poincaré duality for curves, after M.\ Artin}\label{V:2}
++\PrintPage{158}\section{Poincaré duality for curves, after M.\ Artin}\label{V:2}
+ 
+ 
+ \subsection{}\label{V:2-1}
+@@ -205,11 +217,10 @@
+ \end{lemma_}
+ 
+ We reduce to checking that, for $f$ finite,
+-$f_\ast \eR f^!\sK_Y = \rHom(f_\ast\dZ/n,\sK_Y)$ is $f_\ast\dZ/n$, with
+-$\tr_f$ as the adjunction morphism. The vanishing of the $\Ext^i$ for $i>0$
++$f_\ast \eR f^!\sK_Y = \var{\rhom(f_\ast\dZ/n,\sK_Y)}{\rHom(f_\ast\dZ/n,\sK_Y)}{S45-ASTRA-R-0048}$ is $\var{f_\ast\dZ/n}{f_\ast\dZ/n(1)[2]}{S45-SOL-0642}$, with $\tr_f$ as the adjunction morphism. The vanishing of the $\Ext^i$ for $i>0$
+ follows from \ref{V:1-3}, and the assertion follows.
+ 
+-More explicitly, $\eR f^!$ is the derived functor of the functor
++\PrintPage{159}More explicitly, $\eR f^!$ is the derived functor of the functor
+ $f^!:f^!\sF(U)=\hom(f_!\dZ_U,\sF)$, and \ref{V:1-3} implies the vanishing of
+ $\eR^i f^!\dZ/n$ for $i>0$.
+ 
+@@ -233,8 +244,8 @@
+ \subsection{}\label{V:2-5}
+ 
+ We prove \ref{V:2-2}. If $\sF$ is $\dZ/n$ at one point, extended by $0$,
+-then $\h^\bullet(D\sF) = \ext^\bullet(\sF,\sK_X)=\dZ/n$ in degree $0$, and
+-in the pairing $\h^\bullet(\sF)\otimes\h^\bullet(D\sF) \to \dZ/n$, one has
++then $\h^*(D\sF) = \ext^*(\sF,\sK_X)=\dZ/n$ in degree $0$, and
++in the pairing $\h^*(\sF)\otimes\h^*(D\sF) \to \dZ/n$, one has
+ $1\otimes 1\mapsto 1$ (\hyperref[IV]{Cycle}, \ref{IV:2-1-5}): the duality is
+ perfect. The case in which $\sF$ has finite support is treated in the same
+ way.
+@@ -270,7 +281,7 @@
+ and compatible isomorphisms $\h^i(X,\sF)\iso \h^i(X,\sG)$,
+ $'\h^i(X,\sF) \iso '\h^i(X,\sG)$ for $i\ne 0,-1$. If $j:U\to X$ is an
+ open subscheme on which $\sF$ is locally constant, there is an exact sequence
+-\begin{equation*}\tag{2.5.3}\label{V:eq:2-5-3}
++\PrintPage{160}\begin{equation*}\tag{2.5.3}\label{V:eq:2-5-3}
+ \xymatrix{
+   0 \ar[r]
+     & \sG \ar[r]
+@@ -301,7 +312,7 @@
+     & 0 \text{.}
+ }\]
+ After replacing $X'$ by an $X''/X'$, we may assume that
+-$\h^i(X,\sF) \to \h^i(X,f_\ast\dZ/n) = \h^i(X',\dZ/n)$ is zero for $i>0$.
++$\h^i(X,\sG) \to \h^i(X,f_\ast\dZ/n) = \h^i(X',\dZ/n)$ is zero for $i>0$.
+ Consider then
+ \small
+ \[\xymatrix@=.3cm{
+@@ -326,7 +337,7 @@
+ 
+ The isomorphism at $\h^0(X')$ gives
+ $\h^0(X,\sG)\hookrightarrow '\h^0(X,\sG)$, and the same injectivity for
+-$\sF$ by \eqref{V:eq:2-5-2}. Applied to $\sQ$, this gives
++$\sF$ by \eqref{V:eq:2-5-2}. Applying this to $\sQ$, we find that $\h^0(X,\sG)\iso '\h^0(X,\sG)$. The same holds for $\sF$ by \eqref{V:eq:2-5-2}. Applied to $\sQ$, this gives
+ $\h^1(X,\sG)\hookrightarrow '\h^1(X,\sG)$. We apply this to
+ $\h^1(X',\dZ/n)$. This group has the same order as
+ $'\h^1(X',\dZ/n)=D(\h^1(X',\dZ/n)(1))$, so we obtain an isomorphism, and
+@@ -335,7 +346,7 @@
+ same way, then stop for lack of combatants.
+ 
+ 
+-\section{Poincaré duality for curves}\label{V:3}
++\PrintPage{161}\section{Poincaré duality for curves}\label{V:3}
+ 
+ In this section we prove the compatibility
+ (\hyperref[I]{Arcata} \ref{I:eq:6-2-3-3}).
+@@ -346,7 +357,7 @@
+ We use the notation of (\hyperref[I]{Arcata} \ref{I:6-2-3}): $\bar X$ is a
+ smooth, connected, projective curve over an algebraically closed field $k$,
+ $D$ is a reduced divisor on $\bar X$, and $0$ is a point of
+-$X=\bar X\setminus D$,
++$X=\bar X-D$,
+ \[\xymatrix{
+   X \ar@{^{(}->}[r]^-j
+     & \bar X
+@@ -366,7 +377,7 @@
+ 
+ The K\"unneth formula gives
+ \[
+-  \h^\bullet(X\times \bar X,j_!\dmu_n) = \h^\bullet(X,\dZ/n)\otimes \h^\bullet(\bar X,j_!\dmu_n) = \h^\bullet(X,\dZ/n)\otimes \h_c^\bullet(X,\dmu_n) \text{.}
++  \h^*(X\times \bar X,j_!\dmu_n) = \h^*(X,\dZ/n)\otimes \h^*(\bar X,j_!\dmu_n) = \h^*(X,\dZ/n)\otimes \h_c^*(X,\dmu_n) \text{.}
+ \]
+ We shall compute the $(1,1)$-component of $c$,
+ \[
+@@ -377,7 +388,7 @@
+ \[\xymatrix{
+   0 \ar[r]
+     & \pic_D^0(\bar X)_n \ar[r]
+-    & \pic_D^0(\bar X) \ar[r]^n
++    & \pic_D^0(\bar X) \ar[r]^-{x\to x^n}
+     & \pic_D^0(\bar X) \ar[r]
+     & 0
+ }\]
+@@ -387,7 +398,7 @@
+ under $f_0$.
+ 
+ 
+-\begin{proposition_}\label{V:3-2}
++\PrintPage{162}\begin{proposition_}\label{V:3-2}
+ With the preceding notation, $c^{1,1}=-u$.
+ \end{proposition_}
+ 
+@@ -399,14 +410,14 @@
+ \[
+   E_2^{pq} = \h^p(X,\eR^q {\pr_1}_\ast j_!\dmu_n) = \h^p(X,\h_c^q(X,\dmu_n)) \Rightarrow \h^{p+q}(X\times \bar X,j_!\dmu_n) \text{.}
+ \]
+-It degenerates: it is the tensor product of $\h^\bullet(X)$ with the
++It degenerates: it is the tensor product of $\h^*(X)$ with the
+ (trivial) Leray spectral sequence for $\bar X\to \spec(k)$ and the sheaf
+ $j_!\dmu_n$. Fiber by fiber, the divisor $\Delta-X\times\{0\}$ has degree
+ $0$, so the image of $e$ in $E^{02}$ is zero. We may therefore speak of its
+ image $\bar e$ in $E^{1,1}$, and we must show that $\bar e = -u$.
+ 
+ Let $\sG$ on $X\times\bar X$ be the subsheaf of $\dG_m$ consisting of local
+-sections whose restriction to the closed subscheme $X\times D$ is $1$.
++sections whose restriction to the subscheme $X\times D$ is $1$.
+ There is again an exact sequence
+ \begin{equation*}\tag{3.2.1}\label{V:eq:3-2-1}
+ \xymatrix{
+@@ -422,13 +433,13 @@
+ $\sO(\Delta-X\times\{0\})$, trivialized by $1$ on $X\times D$.
+ 
+ Applying $\eR\pr_{1\ast}$ to the distinguished triangle defined by
+-\eqref{V:eq:3-2-1} gives a distinguished triangle
++\var{\eqref{V:eq:2-2-1}}{\eqref{V:eq:3-2-1}}{S45-SOL-0655} gives a distinguished triangle
+ \begin{equation*}\tag{3.2.2}\label{V:eq:3-2-2}
+ \xymatrix{
+   & \ar[r]^-\partial
+     & \eR \pr_{1\ast} j_!\dmu_n \ar[r]
+-    & \eR \pr_{1\ast}\sG \ar[r]
+-    & \eR \pr_{1\ast}\sG \ar[r]^-\partial
++    & \var{\eR \pr_{2\ast}\sG}{\eR \pr_{1\ast}\sG}{S45-SOL-0656}\ar[r]
++    & \var{\eR \pr_{2\ast}\sG}{\eR \pr_{1\ast}\sG}{S45-SOL-0656}\ar[r]^-\partial
+     &
+ }
+ \end{equation*}
+@@ -442,13 +453,13 @@
+ is commutative. Our problem is thus to identify the image in
+ $E^{11}=\h^1(X,\h_c^1(X,\dmu_n))$ (the image in $E^{02}$ being zero) of the
+ image under
+-$\partial_{\text{\eqref{V:eq:3-2-2}}}:\h^1(X,\eR\pr_{1\ast}\sG) \to \h^2(X,\eR\pr_{1\ast} j_!\dmu_n)$
++\PrintPage{163}$\partial_{\text{\eqref{V:eq:3-2-2}}}:\h^1(X,\eR\pr_{1\ast}\sG) \to \h^2(X,\eR\pr_{1\ast} j_!\dmu_n)$
+ of the class, still denoted by $e_1$, corresponding to $e_1$ under (1).
+ 
+ The sheaf $\eR^1\pr_{1\ast}\sG$ is defined by the group scheme over $X$
+ obtained by pulling back the algebraic group $\pic_D(\bar X)$ over
+ $\spec(k)$, and the image of $e_1$ in
+-$\h^0(X,\eR^1\pr_{1\ast}\sG) = \hom(X,\pic_D(\bar X))$ is $f_0$.
++$\h^0(X,\eR^1\pr_\ast\sG) = \hom(X,\pic_D(\bar X))$ is $f_0$.
+ 
+ Represent the triangle \eqref{V:eq:3-2-2} by a short exact sequence of
+ complexes of sheaves:
+@@ -463,13 +474,13 @@
+ \[
+   \tau_{\leqslant 1} \sB : \cdots \sB^0 \to \ker(d) \to 0 \cdots
+ \]
+-obtained by replacing the degree-one term $\ker(d)$ by the inverse image, under
++obtained by replacing ${\sB'}^1=\ker(d)$ by the inverse image, under
+ $\ker(d)\to \underline\h^1(\sB) = \pic_D(\bar X)$ over $X$, of
+ $\pic_D^0(\bar X)$ over $X$. Let $\sA'=\sA\cap \sB'$ and let $\sC'$ be the
+ image of $\sB'$. We have $\sA'=\tau_{\leqslant 1}(\sA)$, and $\sC'$ is
+ obtained from $\sC$ in the same way as $\sB'$ from $\sB$. Hence there is a
+ commutative diagram of short exact sequences
+-\begin{equation*}\tag{3.2.3}\label{V:eq:3-2-3}
++\begin{equation*}\tag{\var{3.2.2}{3.2.3}{S45-SOL-0657}}\label{V:eq:3-2-3}
+ \xymatrix{
+   0 \ar[r]
+     & \sA \ar[r]
+@@ -489,7 +500,7 @@
+ }
+ \end{equation*}
+ where the last row is to be viewed as an exact sequence of complexes of
+-sheaves concentrated in degree $1$ on $X$.
++sheaves concentrated in degree $1$ on $X$. We have
+ \begin{enumerate}[a)]
+   \item $e\in \hh^2(X,\sA)$ comes from
+     $\widetilde e\in \hh^2(X,\tau_{\leqslant 1}\sA)$ (because its image in
+@@ -499,7 +510,7 @@
+     $\widetilde e_1\in \hh^1(X,\sC')$, because its image $f_0$ in
+     $\h^0(X,\pic_D(\bar X))$ lies in $\h^0(X,\pic_D^0(\bar X))$. We may
+     take $\widetilde e=\partial \widetilde e_1$.
+-  \item Thus $\bar e = \partial f_0$, where $\partial$ is defined by
++  \item \PrintPage{164}Thus $\bar e = \partial f_0$, where $\partial$ is defined by
+     \eqref{V:eq:3-2-2}, and where we use the usual isomorphisms
+     $\hh^2(X,\sF[-1]) = \h^1(X,\sF)$. These isomorphisms anticommute with
+     $\partial$, so that $\bar e=-\partial f_0$, for $\partial$ defined by
+@@ -556,12 +567,12 @@
+ $a\otimes b\otimes c\mapsto (a\smallsmile c)\otimes b$.
+ 
+ We express this morphism in terms of the trace morphism
+-$\tr:\h_c^3(X\times X,\dmu_n^{\otimes 2}) \to \h_c^2(X,\dmu_n)$ relative to
++$\tr:\h_c^3(X\times X,\dmu_n^{\otimes 2}) \to \h_c^1(X,\dmu_n)$ relative to
+ the second projection. For $x\in \h_c^3$, $\tr(x)$ is computed as follows:
+ among its K\"unneth components, retain only the component of type $(2,1)$,
+ and apply $\tr:\h_c^2(X,\dmu_n) \to \dZ/n$.
+ 
+-Let $u'$ be the image of $u$ under the map
++\PrintPage{165}Let $u'$ be the image of $u$ under the map
+ \begin{align*}
+ &\xymatrix{
+   \h^1(X,\h_c^1(X,\dmu_n))
+@@ -586,7 +597,7 @@
+ The minus sign comes from permuting two symbols of degree $1$ in (1). Since
+ $c\smallsmile\pr_1^\ast x$ and $c^{1,1}\smallsmile \pr_1^\ast x$ have the
+ same $(2,1)$-component in the K\"unneth decomposition, and since
+-$u'=-c^{1,1}$, one has
++$\var{u'=c^{1,1}}{u'=-c^{1,1}}{S45-SOL-0664}$, one has
+ \[
+   \tr(u\smallsmile x) = \tr(c\smallsmile \pr_1^\ast x) \text{.}
+ \]
+@@ -600,9 +611,9 @@
+ \]
+ 
+ 
+-\section{Compatibility with SGA 4 XVIII 3.1.10.3}\label{V:4}
+-
+-In \cite[XVIII]{sga4}, overcome by discouragement, I did not verify the
++\PrintPage{166}\section{Compatibility with SGA 4 XVIII 3.1.10.3}\label{V:4}
++
++In \PrintCite{SGA~4 XVIII}{\cite[XVIII]{sga4}}, overcome by discouragement, I did not verify the
+ compatibility announced in the title. Although it turns out to be no more
+ than smoke, I feel bound to remedy that omission here. For $f:X\to S$
+ separated and of finite type, the point was to verify that the adjunction
+@@ -628,17 +639,17 @@
+   f_!^\bullet f^!_\bullet k^\ast \sL \ar[r]
+     & k^\ast \sL \text{.}
+ }\]
+-It is checked component by component, reducing the problem to a
++It is checked component by component, reducing the problem to an analogous
+ compatibility for $\sL$ a sheaf and for each pair of adjoint functors
+ $(f_i^!,f_!^i)$, denoted simply by $f^!$ and $f_!$. The arrow (1) is defined
+ using the isomorphism $(2):k^\ast f_!=f_! k^\ast$, and a morphism
+ $(3):k^\ast f^! \to f^! k^\ast$ deduced from it. In loc. cit., one first
+ introduces a morphism $(4):k_! f_!\to f_! k_!$, deduced from $(2)$ by the
+ adjunction of $k^\ast=k^!$ and
+-$k_!:k_! f_!\to k_! f_! k^\ast k_!\to k_! k^\ast f_! k_! \to f_! k_!$, and
++$k_!:k_! f_!\to k_! f_! k^\ast k_!=k_! k^\ast f_! k_! \to f_! k_!$, and
+ then deduces $(3)$ from $(4)$ by adjunction. Equivalently, one may deduce
+ $(3)$ from $(2)$ by the adjunction of $f_!$ and
+-$f^!:k^\ast \to f^! f_! k^\ast f^!\to f^! k^\ast f_! f^! \to f^! k^\ast$.
++$f^!:k^\ast f^! \to f^! f_! k^\ast f^!= f^! k^\ast f_! f^! \to f^! k^\ast$.
+ 
+ Writing $k$ for $k^\ast$ and omitting $\sL$, the required commutativity is
+ that of the outer boundary of
+@@ -652,7 +663,7 @@
+   k
+     & & & \ar[lll] f_! f^! k \text{.}
+ }\]
+-In the first row, we find a homomorphism
++\PrintPage{167}In the first row, we find a homomorphism
+ $k f_! f^! \to f_! f^! k f_! f^!$, defined because $k f_! f^!$ is of the
+ form $f_! X$ (with $X=k f^!$). It admits the adjunction morphism in the
+ second row as a retraction, and the commutativity of the lower square is the

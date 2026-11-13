@@ -1,0 +1,1742 @@
+--- source/en/release_v2026-11-12/05_SGA4HALF_EN_COMPLETE_READER.tex
++++ deliverables/EN/SGA4HALF_EN_corrected_apparatus.tex#component-1 [1]
+@@ -1,8 +1,114 @@
+ 
+-\chapter{Étale cohomology: the starting points}\label{I}
++\chapter{Étale cohomology: the starting points}\label{I}\PrintPage{4}
+ \blfootnote{by P.\ Deligne, written up by J.F.\ Boutot}
+ 
+-\section{Grothendieck topologies}\label{I:1}
++This work takes up six lectures given by P. Deligne at Arcata in August 1974
++(AMS Summer School on algebraic geometry), under the title ``Inputs of etale
++cohomology''. A seventh lecture became the ``report on the trace formula'',
++in this same volume. The aim of the lectures was to give proofs of the
++fundamental theorems in étale cohomology, stripped of the surrounding
++non-sense in SGA 4. We have not sought to state the theorems in their most
++general form, nor to follow the sometimes ingenious dévissages that their
++proofs require. On the contrary, we have emphasized the ``irreducible''
++cases which remain to be treated after all the dévissages have been made.
++
++We hope that this text, which makes no claim to originality, will help the
++reader to consult the three volumes of SGA 4 profitably.
++
++\medskip
++\noindent\underline{Convention.} We shall consider only quasi-compact
++schemes (= finite unions of affine open subsets) which are quasi-separated
++(= such that the intersection of two affine open subsets is quasi-compact),
++and shall simply call them schemes.
++
++\newpage
++
++\PrintPage{5}\begingroup
++\small
++\setlength{\parindent}{0pt}
++\begin{center}
++  \textbf{Contents}
++\end{center}
++
++\hyperref[I:1]{\textbf{I. Grothendieck topologies}}\dotfill
++  \hyperref[I:1]{6}\par
++\hspace*{1.5em}\hyperref[I:1-1]{1 Sieves}\dotfill
++  \hyperref[I:1-1]{I-1}\par
++\hspace*{1.5em}\hyperref[I:1-2]{2 Sheaves}\dotfill
++  \hyperref[I:1-2]{I-2}\par
++\hspace*{1.5em}\hyperref[I:1-3]{3 Stacks}\dotfill
++  \hyperref[I:1-3]{I-2}\par
++\hspace*{1.5em}\hyperref[I:1-4]{4 Faithfully flat descent}\dotfill
++  \hyperref[I:1-4]{I-4}\par
++\hspace*{1.5em}\hyperref[I:1-5]{5 A special case: Hilbert’s theorem 90}\dotfill
++  \hyperref[I:1-5]{I-8}\par
++\hspace*{1.5em}\hyperref[I:1-6]{6 Grothendieck topologies}\dotfill
++  \hyperref[I:1-6]{I-10}\par
++
++\hyperref[I:2]{\textbf{II. The étale topology}}\dotfill
++  \hyperref[I:2]{18}\par
++\hspace*{1.5em}\hyperref[I:2-1]{1 The étale topology}\dotfill
++  \hyperref[I:2-1]{II-1}\par
++\hspace*{1.5em}\hyperref[I:2-2]{2 Examples of sheaves}\dotfill
++  \hyperref[I:2-2]{II-2}\par
++\hspace*{1.5em}\hyperref[I:2-3]{3 Fibres, direct images}\dotfill
++  \hyperref[I:2-3]{II-5}\par
++\hspace*{1.5em}\hyperref[I:2-4]{4 Galois cohomology}\dotfill
++  \hyperref[I:2-4]{II-7}\par
++
++\hyperref[I:3]{\textbf{III. The cohomology of curves}}\dotfill
++  \hyperref[I:3]{27}\par
++\hspace*{1.5em}\hyperref[I:3-1]{1 The Brauer group}\dotfill
++  \hyperref[I:3-1]{III-1}\par
++\hspace*{1.5em}\hyperref[I:3-2]{2 Tsen’s theorem}\dotfill
++  \hyperref[I:3-2]{III-4}\par
++\hspace*{1.5em}\hyperref[I:3-3]{3 Cohomology of smooth curves}\dotfill
++  \hyperref[I:3-3]{III-6}\par
++\hspace*{1.5em}\hyperref[I:3-4]{4 Dévissages}\dotfill
++  \hyperref[I:3-4]{III-10}\par
++
++\hyperref[I:4]{\textbf{IV. The proper base change theorem}}\dotfill
++  \hyperref[I:4]{39}\par
++\hspace*{1.5em}\hyperref[I:4-1]{1 Introduction}\dotfill
++  \hyperref[I:4-1]{IV-1}\par
++\hspace*{1.5em}\hyperref[I:4-2]{2 Proof for $q=0$ or $1$ and $F=\mathbb Z/n$}\dotfill
++  \hyperref[I:4-2]{IV-2}\par
++\hspace*{1.5em}\hyperref[I:4-3]{3 Constructible sheaves}\dotfill
++  \hyperref[I:4-3]{IV-5}\par
++\hspace*{1.5em}\hyperref[I:4-4]{4 End of the proof}\dotfill
++  \hyperref[I:4-4]{IV-7}\par
++\hspace*{1.5em}\hyperref[I:4-5]{5 Cohomology with proper support}\dotfill
++  \hyperref[I:4-5]{IV-9}\par
++\hspace*{1.5em}\hyperref[I:4-6]{6 Applications}\dotfill
++  \hyperref[I:4-6]{IV-12}\par
++
++\hyperref[I:5]{\textbf{V. Local acyclicity of smooth morphisms}}\dotfill
++  \hyperref[I:5]{52}\par
++\hspace*{1.5em}\hyperref[I:5-1]{1 Locally acyclic morphisms}\dotfill
++  \hyperref[I:5-1]{V-3}\par
++\hspace*{1.5em}\hyperref[I:5-2]{2 Local acyclicity of a smooth morphism}\dotfill
++  \hyperref[I:5-2]{V-7}\par
++\hspace*{1.5em}\hyperref[I:5-3]{3 Applications}\dotfill
++  \hyperref[I:5-3]{V-11}\par
++
++\hyperref[I:6]{\textbf{VI. Poincaré duality}}\dotfill
++  \hyperref[I:6]{66}\par
++\hspace*{1.5em}\hyperref[I:6-1]{1 Introduction}\dotfill
++  \hyperref[I:6-1]{VI-1}\par
++\hspace*{1.5em}\hyperref[I:6-2]{2 The case of curves}\dotfill
++  \hyperref[I:6-2]{VI-3}\par
++\hspace*{1.5em}\hyperref[I:6-3]{3 The general case}\dotfill
++  \hyperref[I:6-3]{VI-5}\par
++\hspace*{1.5em}\hyperref[I:6-4]{4 Variants and applications}\dotfill
++  \hyperref[I:6-4]{VI-7}\par
++
++\hyperref[I:bib]{\textbf{Bibliography}}\dotfill
++  \hyperref[I:bib]{74}\par
++\endgroup
++
++\newpage
++
++\section{Grothendieck topologies}\label{I:1}\PrintPage{6}
+ 
+ Grothendieck topologies first appeared as the foundation of Grothendieck's
+ theory of descent (cf. SGA 1 VI, VIII); their use in the corresponding
+@@ -15,9 +121,9 @@
+ (\ref{I:1-5}).
+ 
+ The reader will find a more complete, but concise, exposition of the
+-formalism in Giraud \cite{gi64}. M. Artin's notes, “Grothendieck
+-topologies” \cite{ar62} (Chapters I to III), also remain useful. The
+-866 pages of Exposés I to V of SGA 4 are valuable when one considers exotic
++formalism in Giraud \PrintCite{[5]}{\cite{gi64}}. M. Artin's notes, “Grothendieck
++topologies” \PrintCite{[1]}{\cite{ar62}} (Chapters I to III), also remain useful. The
++866 pages of Exposés I to VI of SGA 4 are valuable when one considers exotic
+ topologies, such as the one giving rise to crystalline cohomology; in order
+ to use the étale topology, which is so close to classical intuition, it is
+ not essential to read them.
+@@ -35,7 +141,7 @@
+ \emph{covering} if the union of all the open subsets belonging to it is
+ equal to $X$.
+ 
+-Given a family $\{U_i\}$ of open subsets of $X$, the sieve generated by
++\PrintPage{7}Given a family $\{U_i\}$ of open subsets of $X$, the sieve generated by
+ $\{U_i\}$ is, by definition, the set of open subsets $U$ of $X$ such that
+ $U$ is contained in one of the $U_i$.
+ 
+@@ -83,7 +189,7 @@
+ Let $\cU$ be a sieve of open subsets of $X$. A vector bundle given
+ $\cU$-locally on $X$ consists of
+ \begin{enumerate}[\indent a)]
+-  \item a vector bundle $E_U$ on each $U\in \cU$,
++  \item \PrintPage{8}a vector bundle $E_U$ on each $U\in \cU$,
+   \item if $V\subset U$, an isomorphism
+     $\rho_{U,V}:E_V\iso E_U|V$, satisfying
+   \item if $W\subset V\subset U$, the diagram
+@@ -119,7 +225,7 @@
+ \begin{enumerate}[\indent a)]
+   \item a vector bundle $E$ on $Z$,
+   \item if $x$ and $y$ are two points of $Z$ such that
+-    $\pi(x)=\pi(y)$, an isomorphism $\rho_{yx}:E_x\iso E_y$ between the
++    $\pi(x)=\pi(y)$, an \PrintPage{9}isomorphism $\rho_{yx}:E_x\iso E_y$ between the
+     fibres of $E$ at $x$ and $y$, depending continuously on $(x,y)$,
+     and such that
+   \item if $x$, $y$, and $z$ are three points of $Z$ such that
+@@ -138,9 +244,9 @@
+ 
+ \subsubsection{}\label{I:1-3-4}
+ 
+-If in \ref{I:1} one replaces “open subset of $X$” by “subset of $X$,”
++If in \ref{I:1-1} one replaces “open subset of $X$” by “subset of $X$,”
+ one obtains the notion of a sieve of subspaces of $X$. In this setting
+-there are also patching theorems. For example, let $X$ be a space and
++there are also patching theorems. For example, let $X$ be a normal space and
+ let $\cC$ be a sieve of subspaces of $X$ generated by a locally finite
+ closed covering of $X$. Then the functor $E\mapsto E_\cC$ from vector
+ bundles on $X$ to vector bundles given $\cC$-locally is an equivalence
+@@ -155,7 +261,7 @@
+ 
+ In the setting of schemes, the Zariski topology is not fine enough for the
+ study of nonlinear problems, and one is led to replace the open immersions
+-in the preceding definitions by more general morphisms. From this point of
++in the preceding definitions by more general morphisms. \PrintPage{10}From this point of
+ view, descent techniques appear as localization techniques. Thus the
+ following descent statement can be expressed by saying that the properties
+ under consideration are local for the faithfully flat topology (a morphism
+@@ -181,7 +287,7 @@
+ structural morphism $\varphi:\spec(B)\to\spec(A)$ (if $V(\fa)$ is
+ nonempty, then $\varphi^{-1}(V(\fa))=V(\fa B)$ is nonempty).
+ 
+-(ii) For every family $(x_i)$ of elements of $M_{(B)}$, there exists a
++(ii) For every finite family $(x_i)$ of elements of $M_{(B)}$, there exists a
+ finitely generated submodule $M'$ of $M$ such that $M'_{(B)}$ contains
+ the $x_i$. If $M_{(B)}$ is of finite type and the $x_i$ generate
+ $M_{(B)}$, then $M'_{(B)}=M_{(B)}$, and hence $M'=M$ and $M$ is of
+@@ -196,7 +302,7 @@
+ presentation,” and the rank can be tested after extension of scalars to
+ fields.
+ 
+-\subsubsection{}\label{I:1-4-3}
++\subsubsection{}\label{I:1-4-3}\PrintPage{11}
+ 
+ Let $X$ be a scheme and let $\cS$ be a class of $X$-schemes stable under
+ fibre products over $X$. A class $\cU\subset\cS$ is a \emph{sieve} on
+@@ -227,8 +333,7 @@
+ \end{enumerate}
+ 
+ If $E$ is a quasi-coherent module on $X$, we write $E_\cU$ for the
+-module given $\cU$-locally whose value is $\varphi_U^*E$ on
+-$\varphi:U\to X$ and such that, for every morphism $\psi:V\to U$, the
++module given $\cU$-locally whose value is $\varphi_U^*E$ on $\varphi_U:U\to X$ and such that, for every morphism $\psi:V\to U$, the
+ restriction isomorphism $\rho_\psi$ is the canonical isomorphism
+ $E_V=(\varphi_U\circ\psi)^*E\iso\psi^*\varphi_U^*E=\psi^*E_U$.
+ 
+@@ -240,7 +345,7 @@
+ modules on $X$ to the category of quasi-coherent modules given
+ $\cU$-locally.
+ \end{theorem}
+-\begin{proof}
++\PrintPage{12}\begin{proof}
+ We treat only the case in which $X$ is affine and $\cU$ is generated by
+ an affine $X$-scheme $U$ faithfully flat over $X$. The reduction to this
+ case is formal. Put $X=\spec(A)$ and $U=\spec(B)$.
+@@ -282,13 +387,13 @@
+     & M'''
+ }\]
+ over the diagram of rings
+-\[\xymatrix{
++\PrintPage{13}\[\xymatrix{
+   B \ar@<3pt>[r]|-{\partial_0} \ar@<-3pt>[r]|-{\partial_1}
+     & B\otimes_A B \ar@<6pt>[r]|-{\partial_0} \ar[r]|-{\partial_1} \ar@<-6pt>[r]|-{\partial_2}
+     & B\otimes_A B\otimes_A B
+ }\]
+ (more precisely, $\partial_i(bm)=\partial_i(b)\cdot\partial_i(m)$, the
+-usual identities such as $\partial_0\partial_1=\partial_0\partial_0$
++usual identities such as $\partial_1\partial_0=\partial_0\partial_0$
+ hold, and “cartesian” means that the morphisms
+ $\partial_i:M'\otimes_{B,\partial_i}(B\otimes_A B)\to M''$ and
+ $M''\otimes_{B\otimes_A B,\partial_i}(B\otimes_A B\otimes_A B)\to M'''$
+@@ -306,8 +411,7 @@
+   (M' \ar@<2pt>[r] \ar@<-2pt>[r]
+     & M'' \ar@<-4pt>[r] \ar[r] \ar@<4pt>[r]
+     & M''') \ar@{|->}[r]
+-    & \ker(M' \ar@<2pt>[r] \ar@<-2pt>[r]
+-    & M''')\text{.}
++    & \ker(M' \ar@<2pt>[r] \ar@<-2pt>[r] & M'')\text{.}
+ }\]
+ We must prove that the adjunction maps
+ \[
+@@ -329,7 +433,7 @@
+ 
+ Let $k$ be a field, let $k'$ be a Galois extension of $k$, and let
+ $G=\gal(k'/k)$. Then the homomorphism
+-\begin{align*}
++\PrintPage{14}\begin{align*}
+   k'\otimes_k k' &\to \oplus_{\sigma\in G} k' \\
+   x\otimes y     &\mapsto \{x\cdot \sigma(y)\}_{\sigma\in G}
+ \end{align*}
+@@ -358,24 +462,24 @@
+ 
+ In particular, if $V'$ has dimension $1$ and $v'\in V'$ is nonzero, then
+ $\varphi_\sigma$ is determined by the constant
+-$c(\sigma)\in {k'}^\times$ such that
++$c(\sigma)\in {k'}^*$ such that
+ $\varphi_\sigma(v')=c(\sigma)v'$, and condition c) becomes
+ \[
+   c(\tau\sigma) = c(\tau)\cdot \tau(c(\sigma))\text{.}
+ \]
+ By the proposition, there exists a nonzero invariant vector
+-$v=\mu v'$, $\mu\in {k'}^\times$. Hence, for every $\sigma\in G$,
++$v=\mu v'$, $\mu\in {k'}^*$. Hence, for every $\sigma\in G$,
+ \[
+   c(\sigma) = \mu\cdot \sigma(\mu^{-1})\text{.}
+ \]
+ In other words, every $1$-cocycle of $G$ with values in
+-${k'}^\times$ is a coboundary:
++${k'}^*$ is a coboundary:
+ 
+ \begin{corollary}\label{I:1-5-3}
+-One has $\h^1(G,{k'}^\times)=0$.
++One has $\h^1(G,{k'}^*)=0$.
+ \end{corollary}
+ 
+-\subsection{Grothendieck topologies}\label{I:1-6}
++\subsection{Grothendieck topologies}\label{I:1-6}\PrintPage{15}
+ 
+ We now transpose the definitions of the preceding paragraphs to an
+ abstract setting that encompasses both topological spaces and schemes.
+@@ -415,7 +519,7 @@
+ 
+ \subsubsection{}\label{I:1-6-3}
+ 
+-Given a site $\cS$, a presheaf on $\cS$ is a contravariant functor
++Given a site $\cS$, a presheaf on $\cS$ is a \PrintPage{16}contravariant functor
+ $\sF$ from $\cS$ to the category of sets. For every object $U$ of
+ $\cS$, the elements of $\sF(U)$ are called sections of $\sF$ over
+ $U$. For every morphism $V\to U$ and every $s\in\sF(U)$, we denote by
+@@ -453,7 +557,7 @@
+     category of sheaves on $\cS$ is equivalent to the category of sheaves
+     on $X$ in the usual sense.
+   \item Let $X$ be a scheme and let $\cS$ be the category of schemes over
+-    $X$. The fpqc (faithfully flat quasi-compact) topology on $\cS$ is
++    $X$. \PrintPage{17}The fpqc (faithfully flat quasi-compact) topology on $\cS$ is
+     the Grothendieck topology for which a sieve on an $X$-scheme $U$ is
+     covering if it is generated by a finite family of flat morphisms whose
+     images cover $U$.
+@@ -466,7 +570,7 @@
+ $\h^0(X,\sF)$, form the group $\sF(X)$. The functor
+ $\sF\mapsto\Gamma\sF$ is a left exact functor from the category of
+ abelian sheaves on $\cS$ to the category of abelian groups; its derived
+-functors (or satellites) are denoted by $\h^i(X,-)$. These cohomology
++functors (or satellites) are denoted by $\h^i(X,\bullet)$. These cohomology
+ groups represent the obstructions to passing from the local to the global.
+ By definition, if $0\to\sF\to\sG\to\sH\to0$ is an exact sequence of
+ abelian sheaves, then there is a long exact cohomology sequence:
+@@ -485,7 +589,7 @@
+     & \cdots
+ }\]
+ 
+-\subsubsection{}\label{I:1-6-6}
++\subsubsection*{6.6}\label{I:1-6-6}
+ 
+ Given an abelian sheaf $\sF$ on $\cS$, an \emph{$\sF$-torsor} is a
+ sheaf $\sG$ equipped with an action $\sF\times\sG\to\sG$ of $\sF$
+@@ -497,7 +601,7 @@
+ One can show that $\h^1(X,\sF)$ may be interpreted as the set of
+ isomorphism classes of $\sF$-torsors.
+ 
+-\section{The étale topology}\label{I:2}
++\section{The étale topology}\label{I:2}\PrintPage{18}
+ 
+ We specialize the definitions of the preceding chapter to the étale
+ topology of a scheme $X$ (\ref{I:2-1}, \ref{I:2-2}, \ref{I:2-3}). When
+@@ -522,20 +626,17 @@
+   \item $B$ is a flat $A$-module and $\Omega_{B/A}=0$ (where
+     $\Omega_{B/A}$ denotes the module of relative differentials).
+   \item Let $B=A[X_1,\dotsc,X_n]/I$ be a presentation of $B$. Then, for
+-    every prime ideal $\fp$ of $A[X_1,\dotsc,X_n]$ containing $I$, there
+-    exist polynomials $P_1,\dotsc,P_n\in I$ such that $I_\fp$ is generated
+-    by the images of $P_1,\dotsc,P_n$ and
+-    $\det(\partial P_i/\partial X_j)\notin\fp$.
++    every prime ideal $\mathfrak r$ of $A[X_1,\dotsc,X_n]$ containing $I$, there exist polynomials $P_1,\dotsc,P_n\in I$ such that $I_{\mathfrak r}$ is generated by the images of $P_1,\dotsc,P_n$ and $\det(\partial P_i/\partial X_j)\notin\mathfrak r$.
+ \end{enumerate}
+ \end{definition}
+-(cf. \cite[I]{sga1} or \cite[V]{ra70})
++(cf. \PrintCite{SGA~1 I}{\cite[I]{sga1}} or \PrintCite{M.\ \textsc{Raynaud}, \emph{Anneaux Locaux Henséliens}, Chapter V}{\cite[V]{ra70}})
+ 
+ A morphism of schemes $f:X\to S$ is called \emph{étale} if, for every
+ $x\in X$, there exist an affine open neighbourhood $U=\spec(A)$ of
+ $f(x)$ and an affine open neighbourhood $V=\spec(B)$ of $x$ in
+ $X\times_SU$ such that $B$ is an étale $A$-algebra.
+ 
+-\subsubsection{Examples}\label{I:2-1-2}
++\subsubsection{Examples}\label{I:2-1-2}\PrintPage{19}
+ \begin{enumerate}[\indent a)]
+   \item If $A$ is a field, an $A$-algebra $B$ is étale if and only if it
+     is a finite product of separable extensions of $A$.
+@@ -549,6 +650,7 @@
+ \begin{enumerate}[\indent a)]
+   \item (base change) If $f:X\to S$ is an étale morphism, then so is
+     $f_{S'}:X\times_SS'\to S'$ for every morphism $S'\to S$.
++  \item (composition) The composite of two étale morphisms is an étale morphism.
+   \item If $f:X\to S$ and $g:Y\to S$ are two étale morphisms, then every
+     $S$-morphism from $X$ to $Y$ is étale.
+   \item (descent) Let $f:X\to S$ be a morphism. If there exists a
+@@ -578,8 +680,8 @@
+ \[
+   \h^0(X,\dZ/n)=\left(\dZ/n\right)^{\pi_0(X)}\text{.}
+ \]
+-Moreover, $\h^1(X,\dZ/n)$ is the set of isomorphism classes of
+-$\dZ/n$-torsors (\ref{I:1-6-6}), in other words, of finite Galois étale
++\PrintPage{20}Moreover, $\h^1(X,\dZ/n)$ is the set of isomorphism classes of
++$\dZ/n$-torsors (\hyperref[I:1-6-6]{I.6.6}), in other words, of finite Galois étale
+ coverings of $X$ with group $\dZ/n$. In particular, if $X$ is connected
+ and $\pi_1(X)$ is its fundamental group for a chosen base point, then
+ \[
+@@ -589,15 +691,15 @@
+ \subsubsection{Multiplicative group}\label{I:2-2-2}
+ 
+ We denote by $\dG_{m,X}$ (or $\dG_m$ if there is no ambiguity) the sheaf
+-defined by $U\mapsto\Gamma(U,\sO_U^\times)$; it is indeed a sheaf by the
++defined by $U\mapsto\Gamma(U,\sO_U^*)$; it is indeed a sheaf by the
+ faithfully flat descent theorem (\ref{I:1-4-5}). By definition,
+ \[
+-  \h^0(X,\dG_m) = \h^0(X,\sO_X)^\times\text{;}
++  \h^0(X,\dG_m) = \h^0(X,\sO_X)^*\text{;}
+ \]
+ in particular, if $X$ is reduced, connected, and proper over an
+ algebraically closed field $k$, then
+ \[
+-  \h^0(X,\dG_m) = k^\times\text{.}
++  \h^0(X,\dG_m) = k^*\text{.}
+ \]
+ 
+ \begin{proposition}\label{I:2-2-3}
+@@ -628,7 +730,7 @@
+ Moreover, by (\ref{I:1-4-2}.ii) and (\ref{I:1-4-5}),
+ \begin{enumerate}[\indent a)]
+ \setcounter{enumi}{2}
+-  \item the notion of an invertible sheaf is local for the étale topology.
++  \item \PrintPage{21}the notion of an invertible sheaf is local for the étale topology.
+ \end{enumerate}
+ 
+ It follows formally from a), b), and c) that $*$ is an equivalence between
+@@ -654,7 +756,7 @@
+ $\zeta\in k$ defines an isomorphism $i\mapsto\zeta^i$ from $\dZ/n$ to
+ $\dmu_n$.
+ 
+-The relation between cohomology with coefficients in $\dmu_m$ and
++The relation between cohomology with coefficients in $\dmu_n$ and
+ cohomology with coefficients in $\dG_m$ is given by the cohomology exact
+ sequence deduced from the following theorem.
+ 
+@@ -667,14 +769,14 @@
+ \end{theorem}
+ \begin{proof}
+ Let $U\to X$ be an étale morphism and let
+-$a\in\dG_m(U)=\Gamma(U,\sO_U^\times)$. Since $n$ is invertible on $U$,
++$a\in\dG_m(U)=\Gamma(U,\sO_U^*)$. Since $n$ is invertible on $U$,
+ the equation $T^n-a=0$ is separable; in other words,
+ $U'=\spec\left(\sO_U[T]/(T^n-a)\right)$ is étale over $U$. Moreover,
+ $U'\to U$ is surjective and this element has an $n$th root on $U'$, which proves
+ the result.
+ \end{proof}
+ 
+-\subsection{Fibres, direct images}\label{I:2-3}
++\subsection{Fibres, direct images}\label{I:2-3}\PrintPage{22}
+ 
+ \subsubsection{}\label{I:2-3-1}
+ 
+@@ -709,7 +811,7 @@
+ over the étale neighbourhoods of $\bar x$.
+ 
+ A homomorphism of sheaves $\sF\to\sG$ is a mono-/epi-/isomorphism if and
+-only if the induced morphisms $\sF_{\bar x}\to\sG_{\bar x}$ on fibres
++only if the induced homomorphisms $\sF_{\bar x}\to\sG_{\bar x}$ on fibres
+ have the corresponding property at every geometric point of $X$. If $X$
+ is of finite type over an algebraically closed field, it suffices that
+ this hold at the rational points of $X$.
+@@ -719,8 +821,8 @@
+ If $f:X\to Y$ is a morphism of schemes and $\sF$ is a sheaf on
+ $\et X$, the \emph{direct image} $f_*\sF$ of $\sF$ under $f$ is the
+ sheaf on $\et Y$ defined by
+-$f_*\sF(V)=\sF(X\times_YV)$ for every $V$ étale over $Y$. The functor
+-$f_*:\sh(\et X)\to\sh(\et Y)$ is left exact. Its right derived functors
++$f_*\sF(V)=\sF(X\times_YV)$ for every $V$ étale over $Y$. \PrintPage{23}The functor
++$f_*:\sh_{\mathrm{Ab}}(\et X)\to\sh_{\mathrm{Ab}}(\et Y)$ is left exact. Its right derived functors
+ $\eR^qf_*$ are called the higher direct images. If $\bar y$ is a
+ geometric point of $Y$, then
+ \[
+@@ -764,7 +866,7 @@
+ \end{align*}
+ \end{theorem}
+ 
+-\begin{corollary}\label{I:2-3-5}
++\PrintPage{24}\begin{corollary}\label{I:2-3-5}
+ If $\eR^qf_*\sF=0$ for every $q>0$, then
+ $\h^p(Y,f_*\sF)=\h^p(X,\sF)$ (resp.
+ $\eR^pg_*(f_*\sF)=\eR^p(gf)_*\sF$) for every $p\geqslant0$.
+@@ -783,8 +885,8 @@
+ $\widetilde X=X\times_Y\widetilde Y$. By the preceding discussion, it
+ suffices to prove that $\h^q(\widetilde X,\sF)=0$ for every $q>0$. But
+ $\widetilde X$ is the spectrum of a product of strictly henselian local
+-rings (cf. \cite[I]{ra70}), and the functor
+-$\Gamma(\widetilde X,-)$ is exact because every surjective étale
++rings (cf. \PrintCite{\emph{Anneaux locaux henséliens}, Chapter I}{\cite[I]{ra70}}), and the functor
++$\Gamma(\widetilde X,\cdot)$ is exact because every surjective étale
+ $\widetilde X$-scheme admits a section. This proves the assertion.
+ 
+ \subsection{Galois cohomology}\label{I:2-4}
+@@ -806,7 +908,7 @@
+ the Galois group of $\bar K/K$, where $\bar K$ is a separable closure of
+ $K$.
+ 
+-\subsubsection{}\label{I:2-4-2}
++\subsubsection{}\label{I:2-4-2}\PrintPage{25}
+ 
+ More precisely, let $K$ be a field, let $\bar K$ be a separable closure
+ of $K$, and let $G=\gal(\bar K/K)$ be the topological Galois group. To
+@@ -858,13 +960,13 @@
+ of every element of $E$ is an open subgroup of $G$. The inverse functor
+ is described in the evident way: let $A$ be a finite étale
+ $K$-algebra, let $U=\spec(A)$, and let
+-$U(\bar K)=\hom_K(A,\bar K)$ be the corresponding $G$-set; then
++$U(\bar K)=\hom_K(A,\bar K)$ be the $G$-set corresponding to $A$; then
+ $\sF(U)=\hom_{G\text{-set}}(U(\bar K),\sF_{\bar K})$.
+ 
+ In particular, if $X=\spec(K)$, then $\sF(X)=\sF_{\bar K}^G$. Restricting
+ to abelian sheaves and passing to derived functors gives canonical
+ isomorphisms
+-\[
++\PrintPage{26}\[
+   \h^q(\et X,\sF) = \h^q(G,\sF_{\bar K})
+ \]
+ 
+@@ -876,18 +978,18 @@
+   \item The sheaf $\dmu_n$ of $n$th roots of unity corresponds to the
+     group $\dmu_n(\bar K)$ of $n$th roots of unity in $\bar K$, with
+     the natural action of $G$.
+-  \item The sheaf $\dG_m$ corresponds to the group $\bar K^\times$ with
++  \item The sheaf $\dG_m$ corresponds to the group $\bar K^*$ with
+     the natural action of $G$.
+ \end{enumerate}
+ 
+-\section{The cohomology of curves}\label{I:3}
+-
+-For topological spaces, unwindings using the K\"unneth formula and
++\section{The cohomology of curves}\label{I:3}\PrintPage{27}
++
++For topological spaces, dévissages using the K\"unneth formula and
+ simplicial decompositions reduce the calculation of cohomology to the
+ interval $I=[0,1]$, for which $\h^0(I,\dZ)=\dZ$ and
+ $\h^q(I,\dZ)=0$ for $q>0$.
+ 
+-In our case, the unwindings lead to more complicated objects, namely curves
++In our case, the dévissages lead to more complicated objects, namely curves
+ over an algebraically closed field; in this chapter we calculate their
+ cohomology. The situation is more complicated than in the topological case,
+ because the cohomology groups vanish only for $q>2$. The essential
+@@ -916,7 +1018,7 @@
+ with them by c) are $K$-isomorphic. If the algebras have the same
+ dimension, this is equivalent to their being $K$-isomorphic. Tensor product
+ induces, on passing to the quotient, an abelian group structure on the set
+-of equivalence classes. This group is classically called the
++\PrintPage{28}of equivalence classes. This group is classically called the
+ \emph{Brauer group} of $K$ and is denoted by $\br(K)$.
+ 
+ \subsubsection{}\label{I:3-1-2}
+@@ -938,26 +1040,26 @@
+ \]
+ 
+ On the other hand, the exact sequence
+-\begin{equation*}\tag{3.1.2.1}\label{I:eq:3-1-2-1}
+-  1 \to \bar K^\times \to \gl(n,\bar K) \to \pgl(n,\bar K) \to 1\text{,}
++\begin{equation*}\tag{*}\label{I:eq:3-1-2-1}
++  1 \to \bar K^* \to \gl(n,\bar K) \to \pgl(n,\bar K) \to 1\text{,}
+ \end{equation*}
+ defines a coboundary operator
+ \[
+-  \Delta_n : \h^1\left(G,\pgl(n,\bar K)\right) \to \h^2(G,\bar K^\times)\text{.}
++  \Delta_n : \h^1\left(G,\pgl(n,\bar K)\right) \to \h^2(G,\bar K^*)\text{.}
+ \]
+ 
+ Composing $\theta_n$ and $\Delta_n$ gives a map
+ \[
+-  \delta_n : \br(n,K) \to \h^2(G,\bar K^\times)\text{.}
++  \delta_n : \br(n,K) \to \h^2(G,\bar K^*)\text{.}
+ \]
+ It is readily checked that the maps $\delta_n$ are compatible and define
+ a group homomorphism
+ \[
+-  \delta : \br(K) \to \h^2(G,\bar K^\times)\text{.}
+-\]
+-
+-\begin{proposition}\label{I:3-1-3}
+-The homomorphism $\delta:\br(K)\to\h^2(G,\bar K^\times)$ is bijective.
++  \delta : \br(K) \to \h^2(G,\bar K^*)\text{.}
++\]
++
++\PrintPage{29}\begin{proposition}\label{I:3-1-3}
++The homomorphism $\delta:\br(K)\to\h^2(G,\bar K^*)$ is bijective.
+ \end{proposition}
+ 
+ This follows from the next two lemmas.
+@@ -965,30 +1067,30 @@
+ \begin{lemma}\label{I:3-1-4}
+ The map
+ $\Delta_n:\h^1\left(G,\pgl(n,\bar K)\right)\to
+-\h^2(G,\bar K^\times)$ is injective.
++\h^2(G,\bar K^*)$ is injective.
+ \end{lemma}
+ 
+-By \cite{se94}, Corollary to Proposition I-44, it suffices to check that
++By \PrintCite{[14]}{\cite{se94}}, Corollary to Proposition I-44, it suffices to check that
+ whenever the exact sequence (\ref{I:eq:3-1-2-1}) is twisted by an element
+ of $\h^1\left(G,\pgl(n,\bar K)\right)$, the $\h^1$ of the middle group
+ is trivial. This middle group is the group of $\bar K$-points of the
+ multiplicative group of a central simple algebra $A$ of rank $n^2$ over
+-$K$. To prove that $\h^1(G,A_{\bar K}^\times)=0$, interpret $A^\times$
++$K$. To prove that $\h^1(G,A_{\bar K}^*)=0$, interpret $A^*$
+ as the automorphism group of the free $A$-module $L$ of rank $1$, and
+ $\h^1$ as the set of “forms” of $L$---$A$-modules of rank $n^2$ over
+ $K$, which are automatically free.
+ 
+ \begin{lemma}\label{I:3-1-5}
+-Let $\alpha\in\h^2(G,\bar K^\times)$, let $K'$ be a finite extension of
++Let $\alpha\in\h^2(G,\bar K^*)$, let $K'$ be a finite extension of
+ $K$ contained in $\bar K$, let $n=[K':K]$, and let
+ $G'=\gal(\bar K/K')$. If the image of $\alpha$ in
+-$\h^2(G',\bar K^\times)$ is zero, then $\alpha$ belongs to the image of
++$\h^2(G',\bar K^*)$ is zero, then $\alpha$ belongs to the image of
+ $\Delta_n$.
+ \end{lemma}
+ 
+ First note that
+ \[
+-  \h^2(G',\bar K^\times) \simeq \h^2\left(G,(\bar K\otimes_K K')^\times\right)\text{.}
++  \h^2(G',\bar K^*) \simeq \h^2\left(G,(\bar K\otimes_K K')^*\right)\text{.}
+ \]
+ (Geometrically, if $x=\spec(K)$, $x'=\spec(K')$, and
+ $\pi:x'\to x$ is the canonical morphism, then
+@@ -999,19 +1101,19 @@
+ Moreover, the choice of a basis of $K'$ as a vector space over $K$
+ defines a homomorphism
+ \[
+-  (\bar K\otimes_K K')^\times \to \gl(n,\bar K)
++  (\bar K\otimes_K K')^* \to \gl(n,\bar K)
+ \]
+ that sends an element $x$ to the endomorphism of $\bar K\otimes_KK'$
+ given by multiplication by $x$. There is then a commutative diagram with
+ exact rows:
+-\[\xymatrix{
++\PrintPage{30}\[\xymatrix{
+   1 \ar[r]
+-    & \bar K^\times \ar[r] \ar@{=}[d]
+-    & (\bar K\otimes_K K')^\times \ar[r] \ar[d]
+-    & (\bar K\otimes_K K')^\times / \bar K^\times \ar[r] \ar[d]
++    & \bar K^* \ar[r] \ar@{=}[d]
++    & (\bar K\otimes_K K')^* \ar[r] \ar[d]
++    & (\bar K\otimes_K K')^* / \bar K^* \ar[r] \ar[d]
+     & 1 \\
+   1 \ar[r]
+-    & \bar K^\times \ar[r]
++    & \bar K^* \ar[r]
+     & \gl(n,\bar K) \ar[r]
+     & \pgl(n,\bar K) \ar[r]
+     & 1
+@@ -1019,25 +1121,27 @@
+ The lemma follows from the commutative diagram obtained by passing to
+ cohomology:
+ \[\xymatrix{
+-  \h^1\left(G,(\bar K\otimes_K K')^\times/\bar K^\times\right) \ar[r] \ar[d]
+-    & \h^2(G,\bar K^\times) \ar[r] \ar@{=}[d]
+-    & \h^2\left(G,(\bar K\otimes_K K')^\times\right) \\
++  \h^1\left(G,(\bar K\otimes_K K')^*/\bar K^*\right) \ar[r] \ar[d]
++    & \h^2(G,\bar K^*) \ar[r] \ar@{=}[d]
++    & \h^2\left(G,(\bar K\otimes_K K')^*\right) \\
+   \h^1\left(G,\pgl(n,\bar K)\right) \ar[r]^-{\Delta_n}
+-    & \h^2(G,\bar K^\times) \text{.}
+-}\]
++    & \h^2(G,\bar K^*) \text{.}
++}\]
++
++The knowledge of the Brauer group, and in particular of its vanishing, is extremely important in Galois cohomology, as the following proposition shows.
+ 
+ \begin{proposition}\label{I:3-1-6}
+ Let $K$ be a field, let $\bar K$ be an algebraic closure of $K$, and let
+ $G=\gal(\bar K/K)$. Suppose that $\br(K')=0$ for every finite extension
+ $K'$ of $K$. Then:
+ \begin{enumerate}[\indent i)]
+-  \item $\h^q(G,\bar K^\times)=0$ for every $q>0$.
++  \item $\h^q(G,\bar K^*)=0$ for every $q>0$.
+   \item $\h^q(G,\sF)=0$ for every torsion $G$-module $\sF$ and every
+     $q\geqslant2$.
+ \end{enumerate}
+ \end{proposition}
+ 
+-(For the proof, cf. \cite{se94}.)
++(For the proof, cf. J.P. Serre, \emph{Corps locaux} or \PrintCite{\emph{Cohomologie galoisienne}}{\cite{se94}}.)
+ 
+ \subsection{Tsen's theorem}\label{I:3-2}
+ 
+@@ -1046,7 +1150,7 @@
+ $f(x_1,\dotsc,x_n)$ of degree $d<n$ has a nontrivial zero.
+ \end{definition}
+ 
+-\begin{proposition}\label{I:3-2-2}
++\PrintPage{31}\begin{proposition}\label{I:3-2-2}
+ If a field $K$ is $C_1$, then $\br(K)=0$.
+ \end{proposition}
+ 
+@@ -1078,15 +1182,15 @@
+ 
+ First suppose that $K=k(X)$. Let
+ \[
+-  f(T) = \sum a_{i_1,\dotsc i_n} T_1^{i_1} \dotsm T_n^{i_n}
++  f(\underline T) = \sum a_{i_1,\dotsc i_n} T_1^{i_1} \dotsm T_n^{i_n}
+ \]
+ be a homogeneous polynomial of degree $d<n$ with coefficients in
+ $k(X)$. After multiplying the coefficients by a common denominator, we
+ may suppose that they lie in $k[X]$. Let
+ $\delta=\sup\deg(a_{i_1\dotsc i_n})$. We seek a nontrivial zero in
+ $k[X]$ by the method of undetermined coefficients, writing each $T_i$
+-($i=1,\dotsc,n$) as a polynomial of degree $N$ in $X$. The equation
+-$f(T)=0$ then becomes a system of homogeneous equations in the
++($i=1,\dotsc,n$) as a polynomial of degree $N$ in $X$. \PrintPage{32}The equation
++$f(\underline T)=0$ then becomes a system of homogeneous equations in the
+ $n\times(N+1)$ coefficients of the polynomials $T_i(X)$, expressing the
+ vanishing of the coefficients of the polynomial in $X$ obtained by
+ replacing $T_i$ with $T_i(X)$. This polynomial has degree at most
+@@ -1097,13 +1201,13 @@
+ 
+ To prove the theorem in general, it plainly suffices to prove it when
+ $K$ is a finite extension of the purely transcendental extension
+-$k(X)$ of $k$. Let $f(T)=f(T_1,\dotsc,T_n)$ be a homogeneous
++$k(X)$ of $k$. Let $f(\underline T)=f(T_1,\dotsc,T_n)$ be a homogeneous
+ polynomial of degree $d<n$ with coefficients in $K$. Let
+ $s=[K:k(X)]$ and let $e_1,\dotsc,e_s$ be a basis of $K$ over $k(X)$.
+ Introduce $sn$ new variables $U_{ij}$ such that
+-$T_i=\sum U_{ij}e_j$. For $f(T)$ to have a nontrivial zero in $K$, it
+-suffices that the polynomial $g(U_{ij})=N_{K/k(X)}(f(T))$ have a nontrivial
+-zero in $k(X)$. But $g$ is a polynomial of degree $sd$ in $sn$
++$T_i=\sum U_{ij}e_j$. For $f(\underline T)$ to have a nontrivial zero in $K$, it
++suffices that the polynomial $g(U_{ij})=N_{K/k(X)}(f(\underline T))$ have a nontrivial
++zero in $k(X)$. But $g$ is a homogeneous polynomial of degree $sd$ in $sn$
+ variables, which proves the result.
+ 
+ \begin{corollary}\label{I:3-2-4}
+@@ -1112,7 +1216,7 @@
+ $\h^q(\spec(K),\dG_m)$ vanish for every $q>0$.
+ \end{corollary}
+ 
+-\subsection{Cohomology of smooth curves}
++\subsection{Cohomology of smooth curves}\label{I:3-3}
+ 
+ From now on, unless expressly stated otherwise, all cohomology groups are
+ étale cohomology groups.
+@@ -1120,8 +1224,8 @@
+ \begin{proposition}\label{I:3-3-1}
+ Let $k$ be an algebraically closed field and let $X$ be a connected
+ nonsingular projective curve over $k$. Then
+-\begin{align*}
+-  \h^0(X,\dG_m) &= k^\times \text{,} \\
++\PrintPage{33}\begin{align*}
++  \h^0(X,\dG_m) &= k^* \text{,} \\
+   \h^1(X,\dG_m) &= \pic(X) \text{,} \\
+   \h^q(X,\dG_m) &= 0 \text{ for $q\geqslant 2$.}
+ \end{align*}
+@@ -1129,13 +1233,13 @@
+ 
+ Let $\eta$ be the generic point of $X$, let $j:\eta\to X$ be the
+ canonical morphism, and let $\dG_{m,\eta}$ be the multiplicative group of
+-the function field $K(X)$. For every closed point $x$ of $X$, let
++the function field $K(X)$ of $X$. For every closed point $x$ of $X$, let
+ $i_x:x\to X$ be the canonical immersion and let $\dZ_x$ be the constant
+ sheaf with value $\dZ$ on $x$. Thus $j_*\dG_{m,\eta}$ is the sheaf of
+ nonzero meromorphic functions on $X$ and
+ $\oplus_{x\in X}i_{x*}\dZ_x$ is the sheaf of divisors; hence there is an
+ exact sequence of sheaves:
+-\begin{equation*}\tag{3.3.1.1}\label{I:eq:3-3-1-1}
++\begin{equation*}\tag{*}\label{I:eq:3-3-1-1}
+ \xymatrix{
+   0 \ar[r]
+     & \dG_m \ar[r]
+@@ -1165,7 +1269,7 @@
+ \end{lemma}
+ 
+ Indeed, (\ref{I:3-3-2}) and the Leray spectral sequence for $j$ give
+-\[
++\PrintPage{34}\[
+   \h^q(X, j_* \dG_{m,\eta}) = \h^q(\eta,\dG_{m,\eta})
+ \]
+ for every $q\geqslant0$, and the right-hand side vanishes for $q>0$ by
+@@ -1196,13 +1300,13 @@
+ \]
+ which is precisely the exact sequence
+ \[
+-  1 \to k^\times \to k(X)^\times\to \Div(X) \to \pic(X) \to 1\text{.}
++  1 \to k^* \to k(X)^*\to \Div(X) \to \pic(X) \to 1\text{.}
+ \]
+ Proposition \ref{I:3-3-1} implies that the cohomology groups of $X$ with
+ values in $\dZ/n$, for $n$ prime to the characteristic of $k$, have
+ reasonable values:
+ 
+-\begin{corollary}\label{I:3-3-5}
++\PrintPage{35}\begin{corollary}\label{I:3-3-5}
+ If $X$ has genus $g$ and $n$ is invertible in $k$, then
+ $\h^q(X,\dZ/n)$ vanishes for $q>2$ and is free over $\dZ/n$ of ranks
+ $1,2g,1$ for $q=0,1,2$. Replacing $\dZ/n$ by the isomorphic group
+@@ -1227,15 +1331,14 @@
+ \[\xymatrix{
+   0 \ar[r]
+     & \h^0(X,\dmu_n) \ar[r]
+-    & k^\times \ar[r]^-n
+-    & k^\times \ar[r]
++    & k^* \ar[r]^-n
++    & k^* \ar[r]
+     & 0
+ }\]
+ \[\xymatrix{
+   0 \ar[r]
+     & \h^1(X,\dmu_n) \ar[r]
+-    & \pic(X) \ar[r]^-n
+-    & \h^2(X,\dmu_n) \ar[r]
++    & \pic(X) \ar[r]^-n & \pic(X) \ar[r] & \h^2(X,\dmu_n) \ar[r]
+     & 0\text{.}
+ }\]
+ Moreover, there is an exact sequence
+@@ -1252,10 +1355,10 @@
+ $\dZ/n\dZ$-module of rank $2g$ (because $n$ is invertible in $k$);
+ this proves the corollary.
+ 
+-A clever unwinding using the “trace method” yields the following
++A clever dévissage using the “trace method” \PrintPage{36}yields the following
+ proposition as a corollary.
+ 
+-\begin{proposition}[{\cite[IX 5.7]{sga4}}]\label{I:3-3-6}
++\begin{proposition}[{\PrintCite{SGA~4 IX 5.7}{\cite[IX 5.7]{sga4}}}]\label{I:3-3-6}
+ Let $k$ be an algebraically closed field, let $X$ be an algebraic curve
+ over $k$, and let $\sF$ be a torsion sheaf on $X$. Then:
+ \begin{enumerate}[\indent i)]
+@@ -1265,9 +1368,9 @@
+ \end{proposition}
+ 
+ For the proof, as well as for an exposition of the “trace method,” we
+-refer to \cite[IX 5]{sga4}.
+-
+-\subsection{Unwindings}\label{I:3-4}
++refer to \PrintCite{SGA~4 IX 5}{\cite[IX 5]{sga4}}.
++
++\subsection{Dévissages}\label{I:3-4}
+ 
+ To calculate the cohomology of varieties of dimension $>1$, one uses
+ fibrations by curves, thereby reducing to the study of morphisms whose
+@@ -1295,10 +1398,10 @@
+     & \ar@{_{(}->}[l]_-i \ar[dl]^-g Y \\
+   & S
+ }\]
+-satisfying the following conditions:
++\PrintPage{37}satisfying the following conditions:
+ \begin{enumerate}[\indent i)]
+   \item $j$ is an open immersion, dense in every fibre, and
+-    $X=\bar X\setminus Y$.
++    $X=\bar X- Y$.
+   \item $\bar f$ is smooth and projective, with irreducible geometric
+     fibres of dimension $1$.
+   \item $g$ is an étale covering and no fibre of $g$ is empty.
+@@ -1307,7 +1410,7 @@
+ A \emph{good neighbourhood} relative to $S$ is an $S$-scheme $X$ for
+ which there exist $S$-schemes $X=X_n,\dotsc,X_0=S$ and elementary
+ fibrations $f_i:X_i\to X_{i-1}$, $i=1,\dotsc,n$. One can show
+-\cite[XI 3.3]{sga4} that if $X$ is a smooth scheme over an algebraically
++\PrintCite{SGA~4 XI 3.3}{\cite[XI 3.3]{sga4}} that if $X$ is a smooth scheme over an algebraically
+ closed field $k$, then every rational point of $X$ has an open
+ neighbourhood that is a good neighbourhood (relative to $\spec(k)$).
+ 
+@@ -1333,7 +1436,7 @@
+ $u:P\to\dP_S^n$ be the blow-up with centre $Y$; the fibres of $u$ have
+ dimension $\leqslant1$. Moreover, there is a natural morphism
+ $v:P\to\dP_S^1$ extending the rational map $\varphi$, and $v$ makes
+-$P$ a $\dP_S^1$-scheme locally isomorphic to the standard projective
++\PrintPage{38}$P$ a $\dP_S^1$-scheme locally isomorphic to the standard projective
+ space $\dP^{n-1}$, which may in turn be projected onto a $\dP^1$, and
+ so on.
+ 
+@@ -1345,7 +1448,7 @@
+ this map are the hyperplane sections of $X$ by the hyperplanes of the
+ pencil.
+ 
+-\section{The proper base change theorem}\label{I:4}
++\section{The proper base change theorem}\label{I:4}\PrintPage{39}
+ 
+ \subsection{Introduction}\label{I:4-1}
+ 
+@@ -1366,15 +1469,15 @@
+ elementary. Since $f$ is closed, the $f^{-1}(V)$, with $V$ ranging over
+ the neighbourhoods of $s$, form a fundamental system of neighbourhoods
+ of $X_s$, and one checks that
+-$\h^\bullet(X_s,\sF)=\varinjlim_U\h^\bullet(U,\sF)$, where $U$ ranges
++$\h^*(X_s,\sF)=\varinjlim_U\h^*(U,\sF)$, where $U$ ranges
+ over the neighbourhoods of $X_s$. In practice, $X_s$ even has a
+ fundamental system $\cU$ of neighbourhoods $U$ of which it is a
+ deformation retract, and for $\sF$ constant one therefore has
+-$\h^\bullet(X_s,\sF)=\h^\bullet(U,\sF)$. Figuratively speaking, the
++$\h^*(X_s,\sF)=\h^*(U,\sF)$. Figuratively speaking, the
+ special fibre swallows the general fibre.
+ 
+ For schemes the proof is more delicate, and it is essential to suppose
+-that $\sF$ is torsion (\cite[XII.2]{sga4}). In view of the description of
++that $\sF$ is torsion (\PrintCite{SGA~4 XII.2}{\cite[XII.2]{sga4}}). In view of the description of
+ the fibres of $\eR^qf_*\sF$ (\ref{I:2-3-3}), Theorem
+ (\ref{I:4-1-1}) is essentially equivalent to the following theorem.
+ 
+@@ -1385,12 +1488,12 @@
+ $\h^q(X,\sF)\iso\h^q(X_0,\sF)$.
+ \end{theorem}
+ 
+-By passage to the limit, it suffices to prove the theorem when $A$ is the
++\PrintPage{40}By passage to the limit, it suffices to prove the theorem when $A$ is the
+ strict henselization of a finitely generated $\dZ$-algebra at a prime
+ ideal. We first treat the case $q=0$ or $1$ and $\sF=\dZ/n$
+ (\ref{I:4-2}). An argument based on constructible sheaves (\ref{I:4-3})
+ shows moreover that it suffices to consider constant $\sF$. On the other
+-hand, the unwinding in (\ref{I:3-4-3}) allows us to suppose that $X_0$
++hand, the dévissage in (\ref{I:3-4-3}) allows us to suppose that $X_0$
+ is a curve; in that case it remains only to prove the theorem for $q=2$
+ (\ref{I:4-4}).
+ 
+@@ -1422,17 +1525,19 @@
+ is bijective.
+ 
+ Let $\fm$ denote the maximal ideal of $A$, let
+-$\Gamma(X,\sO_X)^\wedge$ denote the completion of $\Gamma(X,\sO_X)$
++$\Gamma(X,\sO_X)^\wedge$ denote the completion of \PrintPage{41}$\Gamma(X,\sO_X)$
+ for the $\fm$-adic topology, and, for every integer $n\geqslant0$, let
+ $X_n=X\otimes_AA/\fm^{n+1}$. By the finiteness theorem for proper
+-morphisms \cite[III.3.2]{ega}, $\Gamma(X,\sO_X)$ is a finite
++morphisms \PrintCite{EGA III.3.2}{\cite[III.3.2]{ega}}, $\Gamma(X,\sO_X)$ is a finite
+ $A$-algebra; since $A$ is henselian, the canonical map
+ \[
+   \operatorname{Idem} \Gamma(X,\sO_X) \to \operatorname{Idem}\Gamma(X,\sO_X)^\wedge
+ \]
+-is bijective. In particular, the canonical map
+-\[
+-  \operatorname{Idem} \Gamma(X,\sO_X)^\wedge \to \varprojlim \operatorname{Idem}\Gamma(X_n,\sO_{X_n})
++is bijective.
++
++By the comparison theorem for proper morphisms \PrintCite{[EGA III, 4.1]}{\cite[III.4.1]{ega}}, the canonical map
++\[ \Gamma(X,\sO_X)^\wedge \to \varprojlim \Gamma(X_n,\sO_{X_n}) \]
++is bijective. In particular, the canonical map \[ \operatorname{Idem} \Gamma(X,\sO_X)^\wedge \to \varprojlim \operatorname{Idem}\Gamma(X_n,\sO_{X_n})
+ \]
+ is bijective. But since $X_n$ and $X_0$ have the same underlying
+ topological space, the canonical map
+@@ -1449,7 +1554,7 @@
+ Let $A$ be a noetherian henselian local ring and let $S=\spec(A)$. Let
+ $f:X\to S$ be a proper morphism, and let $X_0$ be the closed fibre of $f$. Then
+ the restriction functor
+-\[
++\PrintPage{42}\[
+   \operatorname{Rev.et}(X) \to \operatorname{Rev.et}(X_0)
+ \]
+ is an equivalence of categories.
+@@ -1466,11 +1571,11 @@
+ 
+ It remains to show that every étale covering $X_0'$ of $X_0$ extends to
+ an étale covering of $X$. Étale coverings are insensitive to nilpotent
+-elements \cite[ch.1]{sga1}; consequently, $X_0'$ lifts uniquely to an
++elements \PrintCite{SGA~1 ch.1}{\cite[ch.1]{sga1}}; consequently, $X_0'$ lifts uniquely to an
+ étale covering $X_n'$ of $X_n$ for every $n\geqslant0$, in other words,
+ to an étale covering $\fX'$ of the formal scheme $\fX$ obtained by
+ completing $X$ along $X_0$. By Grothendieck's algebraization theorem for
+-formal coherent sheaves (the existence theorem, \cite[III.5]{ega}),
++formal coherent sheaves (the existence theorem, \PrintCite{EGA III.5}{\cite[III.5]{ega}}),
+ $\fX'$ is the formal completion of an étale covering $\bar X'$ of
+ $\bar X=X\otimes_A\hat A$.
+ 
+@@ -1486,7 +1591,7 @@
+ of $\bar X'$, there exists $\xi\in\sF(A)$ having the same image as
+ $\bar\xi$ in $\sF(A/\fm)$. In other words, there exists an étale
+ covering $X'$ of $X$ whose restriction to $X_0$ is isomorphic to
+-$X_0'$.
++\PrintPage{43}$X_0'$.
+ 
+ \subsection{Constructible sheaves}\label{I:4-3}
+ 
+@@ -1522,20 +1627,20 @@
+ 
+ Indeed, if $j:U\to X$ is an étale scheme of finite type over $X$, an
+ element $\xi\in\sF(U)$ such that $n\xi=0$ defines a homomorphism of
+-sheaves $j_!\const{\dZ/n}\to\sF$ whose image (the smallest subsheaf of
++sheaves $j_!\const{\dZ/n}_U\to\sF$ whose image (the smallest subsheaf of
+ $\sF$ for which $\xi$ is a local section) is a constructible subsheaf
+ of $\sF$. Clearly $\sF$ is the direct limit of such subsheaves.
+ 
+ \begin{definition}\label{I:4-3-4}
+-Let $\cC$ be an abelian category and let $T$ be a functor from $\cC$ to
++Let $\cC$ be an abelian category and let $T$ be a functor \PrintPage{44}from $\cC$ to
+ the category of abelian groups. The functor $T$ is called
+ \emph{effaceable} in $\cC$ if, for every object $A$ of $\cC$ and every
+ $\alpha\in T(A)$, there exists a monomorphism $u:A\to M$ in $\cC$ such
+-that $T(u)\alpha=0$.
++that $T(u).\alpha=0$.
+ \end{definition}
+ 
+ \begin{lemma}\label{I:4-3-5}
+-The functors $\h^q(X,-)$ for $q>0$ are effaceable in the category of
++The functors $\h^q(X,\cdot)$ for $q>0$ are effaceable in the category of
+ constructible sheaves on $X$.
+ \end{lemma}
+ 
+@@ -1548,7 +1653,7 @@
+ runs over the points of $X$ and $i_x:\bar x\to X$ is a geometric point
+ centred at $x$. By (\ref{I:4-3-3}), $\sG$ is a direct limit of
+ constructible sheaves, whence the lemma, because the functors
+-$\h^q(X,-)$ commute with direct limits.
++$\h^q(X,\cdot)$ commute with direct limits.
+ 
+ \begin{lemma}\label{I:4-3-6}
+ Let $\varphi^\bullet:T^\bullet\to{T'}^\bullet$ be a morphism of
+@@ -1569,9 +1674,8 @@
+ 
+ The proof is by induction on $q$ and presents no difficulty.
+ 
+-\begin{proposition}\label{I:4-3-7}
+-Let $X_0$ be a subscheme of $X$. Suppose that, for every
+-$n>0$ and every scheme $X'$ finite over $X$, the canonical map
++\PrintPage{45}\begin{proposition}\label{I:4-3-7}
++Let $X_0$ be a subscheme of $X$. Suppose that, for every $n\geqslant0$ and every scheme $X'$ finite over $X$, the canonical map
+ \[
+   \h^q(X',\dZ/n) \to \h^q(X_0',\dZ/n)\text{,}
+ \]
+@@ -1586,8 +1690,8 @@
+ 
+ By passage to the limit, it suffices to prove the assertion for
+ constructible $\sF$. Apply Lemma (\ref{I:4-3-6}) with $\cC$ the category
+-of constructible sheaves on $X$, $T^q=\h^q(X,-)$,
+-${T'}^q=\h^q(X_0,-)$, and $\cE$ the set of constructible sheaves of the
++of constructible sheaves on $X$, $T^q=\h^q(X,\cdot)$,
++${T'}^q=\h^q(X_0,\cdot)$, and $\cE$ the set of constructible sheaves of the
+ form $\prod p_{i*}C_i$, where $p_i:X_i'\to X$ is finite and $C_i$ is a
+ finite constant sheaf on $X_i'$.
+ 
+@@ -1606,7 +1710,7 @@
+ 
+ The cases $q=0$ and $1$ were treated above, and
+ $\h^q(X_0,\dZ/n)=0$ for $q\geqslant3$; it therefore suffices to treat
+-$q=2$. We may clearly suppose that $n$ is a power of a prime. If
++$q=2$. We may clearly suppose \PrintPage{46}that $n$ is a power of a prime. If
+ $n=p^r$, where $p$ is the characteristic of the residue field of $S$,
+ Artin--Schreier theory shows that $\h^2(X_0,\dZ/p^r)=0$. If
+ $n=\ell^r$, $\ell\ne p$, Kummer theory gives a commutative diagram
+@@ -1641,7 +1745,7 @@
+ 
+ Every divisor on $X_0$ is a linear combination of divisors whose support
+ is concentrated at a single nonisolated closed point of $X_0$. Let $x$
+-be such a point, let $t_0\in\sO_{X_0,x}$ be a regular nonunit in
++\PrintPage{47}be such a point, let $t_0\in\sO_{X_0,x}$ be a regular nonunit in
+ $\sO_{X_0,x}$, and let $D_0$ be the divisor concentrated at $x$ with
+ local equation $t_0$. Let $U$ be an open neighbourhood of $x$ in $X$
+ on which there is a section $t\in\Gamma(U,\sO_U)$ lifting $t_0$. Let
+@@ -1656,8 +1760,8 @@
+ After replacing $U$ by a smaller open neighbourhood of $x$, we may
+ suppose that $Y=Y_1$, in other words, that $Y$ is closed in $X$. We then
+ define a divisor $D$ on $X$ lifting $D_0$ by setting
+-$D|X\setminus Y=0$ and $D|U=\dv(t)$; this makes sense because $t$ is
+-invertible on $U\setminus Y$.
++$D|X- Y=0$ and $D|U=\dv(t)$; this makes sense because $t$ is
++invertible on $U- Y$.
+ 
+ \subsubsection{Remark}\label{I:4-4-2}
+ 
+@@ -1675,13 +1779,13 @@
+ theorem of Nagata, there exist a scheme $\bar X$ proper over $k$ and an
+ open immersion $j:X\to\bar X$. For every torsion sheaf $\sF$ on $X$,
+ let $j_!\sF$ denote the extension by $0$ of $\sF$ to $\bar X$, and
+-define the groups of \emph{cohomology with proper support} by
++define the groups of \emph{cohomology with proper support} $\h_c^q(X,\sF)$ by setting
+ \[
+   \h_c^q(X,\sF)=\h^q(\bar X, j_! \sF) \text{.}
+ \]
+ \end{definition}
+ 
+-Let us show that this definition is independent of the chosen
++\PrintPage{48}Let us show that this definition is independent of the chosen
+ compactification $j:X\to\bar X$. Let $j_1:X\to\bar X_1$ and
+ $j_2:X\to\bar X_2$ be two compactifications. Then $X$ maps into
+ $\bar X_1\times\bar X_2$ by $x\mapsto(j_1(x),j_2(x))$, and
+@@ -1714,10 +1818,10 @@
+   \h^q(\bar X_2, j_{2!} \sF) = \h^q(\bar X_1, j_{1!} \sF) \text{.}
+ \]
+ 
+-To prove the lemma, argue fibre by fibre using the base change theorem
++To prove the lemma, argue fibre by fibre using the \PrintPage{49}base change theorem
+ (\ref{I:4-1-1}) for $p$. The result is immediate because above a point
+ of $X$, $p$ is an isomorphism, whereas above a point of
+-$\bar X_1\setminus X$, $j_{2!}\sF$ vanishes on the fibre of $p$.
++$\bar X_1- X$, $j_{2!}\sF$ vanishes on the fibre of $p$.
+ 
+ \subsubsection{}\label{I:4-5-3}
+ 
+@@ -1749,11 +1853,11 @@
+     & S' \ar[l]^-g
+ }\]
+ is a cartesian diagram, there is a canonical isomorphism
+-\begin{equation*}\tag{4.5.4.1}\label{I:eq:4-5-4-1}
++\begin{equation*}\tag{5.4.1}\label{I:eq:4-5-4-1}
+   g^* (\eR^q f_! \sF) \simeq \eR^q f'_!({g'}^* \sF) \text{.}
+ \end{equation*}
+ 
+-\subsection{Applications}\label{I:4-6}
++\subsection{Applications}\label{I:4-6}\PrintPage{50}
+ 
+ \begin{theorem}[Vanishing theorem]\label{I:4-6-1}
+ Let $f:X\to S$ be a separated morphism of finite type whose fibres have
+@@ -1763,12 +1867,12 @@
+ 
+ By the base change theorem, we may suppose that $S$ is the spectrum of a
+ separably closed field. If $\dim X=n$, there exists an affine open
+-$U$ of $X$ such that $\dim(X\setminus U)<n$. We then have an exact
+-sequence $0\to\sF_U\to\sF\to\sF_{X\setminus U}\to0$, and induction on
++$U$ of $X$ such that $\dim(X- U)<n$. We then have an exact
++sequence $0\to\sF_U\to\sF\to\sF_{X- U}\to0$, and induction on
+ $n$ reduces us to proving the theorem for $X=U$ affine. The method of
+ fibration by curves (\ref{I:3-4-1}) and the base change theorem then
+ reduce us to a curve over a separably closed field, for which the desired
+-result follows from Tsen's theorem (\ref{I:3-3-6}).
++result follows from Tsen's theorem (cf. \ref{I:3-3-6}).
+ 
+ \begin{theorem}[Finiteness theorem]\label{I:4-6-2}
+ Let $f:X\to S$ be a separated morphism of finite type and let $\sF$ be
+@@ -1786,7 +1890,7 @@
+ and vanish for $q>2$ (\ref{I:4-6-1}). Replacing $\dZ/n$ by the sheaf
+ $\dmu_n$, which is locally isomorphic to it (over $S$), there are
+ canonical isomorphisms
+-\begin{equation*}\tag{4.6.2.1}\label{I:eq:4-6-2-1}
++\begin{equation*}\tag{6.2.1}\label{I:eq:4-6-2-1}
+ \begin{aligned}
+   \eR^0 f_* \dmu_n &= \dmu_n \\
+   \eR^1 f_* \dmu_n &= \const\pic(X/S)_n \\
+@@ -1794,10 +1898,10 @@
+ \end{aligned}
+ \end{equation*}
+ 
+-\begin{theorem}[Comparison with classical cohomology]\label{I:4-6-3}
++\PrintPage{51}\begin{theorem}[Comparison with classical cohomology]\label{I:4-6-3}
+ Let $f:X\to S$ be a separated morphism of schemes of finite type over
+ $\dC$, and let $\sF$ be a torsion sheaf on $X$. Denote by a superscript
+-$\an{(-)}$ the functor passing to the usual topological spaces, and by
++$\an{}$ the functor passing to the usual topological spaces, and by
+ $\eR^q\an f_!$ the derived functors of direct image with proper support
+ under $\an f$. Then
+ \[
+@@ -1810,14 +1914,14 @@
+ \]
+ \end{theorem}
+ 
+-Unwindings using the base change theorem reduce us to the case in which
++Dévissages using the base change theorem reduce us to the case in which
+ $X$ is a smooth proper curve, $S=$ a point, and $\sF=\dZ/n$. The
+ cohomology groups in question then vanish for $q\ne0,1,2$, and we invoke
+-\cite{se55}: indeed, if $X$ is proper over $\dC$, then
++\PrintCite{GAGA}{\cite{se55}}: indeed, if $X$ is proper over $\dC$, then
+ $\pi_0(X)=\pi_0(\an X)$ and $\pi_1(X)=$ the profinite completion of
+ $\pi_1(\an X)$, which proves the assertion for $q=0,1$. For $q=2$,
+ one uses the Kummer exact sequence and the fact that, again by
+-\cite{se55}, $\pic(X)=\pic(\an X)$.
++\PrintCite{GAGA}{\cite{se55}}, $\pic(X)=\pic(\an X)$.
+ 
+ \begin{theorem}[Cohomological dimension of affine schemes]\label{I:4-6-4}
+ Let $X$ be an affine scheme of finite type over a separably closed field
+@@ -1825,7 +1929,7 @@
+ $\h^q(X,\sF)=0$ for $q>\dim(X)$.
+ \end{theorem}
+ 
+-For the very elegant proof, we refer to \cite{sga4}, XIV \S 2 and 3.
++For the very elegant proof, we refer to \PrintCite{SGA~4}{\cite{sga4}}, XIV \S 2 and 3.
+ 
+ \subsubsection{Remark}\label{I:4-6-5}
+ 
+@@ -1837,45 +1941,45 @@
+ $\dim(X)$. Thus $X$ is obtained by attaching handles of index less than
+ $\dim(X)$, which gives the classical analogue of (\ref{I:4-6-4}).
+ 
+-\section{Local acyclicity of smooth morphisms}\label{I:5}
++\section{Local acyclicity of smooth morphisms}\label{I:5}\PrintPage{52}
+ 
+ Let $X$ be a complex analytic variety and let $f:X\to D$ be a morphism
+ from $X$ to the disk. Write $[0,t]$ for the closed line segment in $D$
+-with endpoints $0$ and $t$, and $(0,t]$ for the half-open segment. If
++with endpoints $0$ and $t$, and $]0,t]$ for the half-open segment. If
+ $f$ is \emph{smooth}, the inclusion
+ \[
+-  j : f^{-1}\left((0,t]\right) \hookrightarrow f^{-1}\left([0,t]\right)
++  j : f^{-1}\left(]0,t]\right) \hookrightarrow f^{-1}\left([0,t]\right)
+ \]
+ is a homotopy equivalence; the special fibre
+ $X_0=f^{-1}(0)$ can be pushed into $f^{-1}([0,t])$.
+ 
+-In practice, for sufficiently small $t$, $f^{-1}((0,t])$ will be a
+-bundle over $(0,t]$, so that the inclusion
+-\[
+-  X_t = f^{-1}(t) \hookrightarrow f^{-1}\left((0,t]\right)
++In practice, for sufficiently small $t$, $f^{-1}(]0,t])$ will be a
++bundle over $]0,t]$, so that the inclusion
++\[
++  X_t = f^{-1}(t) \hookrightarrow f^{-1}\left(]0,t]\right)
+ \]
+ will also be a homotopy equivalence. The \emph{cospecialization morphism}
+ is then the homotopy class of maps
+ \[
+-  \cosp : X_0 \hookrightarrow f^{-1}\left([0,t]\right) \xleftarrow\sim f^{-1}\left((0,t]\right) \xleftarrow\sim X_t \text{.}
++  \cosp : X_0 \hookrightarrow f^{-1}\left([0,t]\right) \xleftarrow\sim f^{-1}\left(]0,t]\right) \xleftarrow\sim X_t \text{.}
+ \]
+ Figuratively speaking,
+ for a smooth morphism the general fibre swallows the special fibre.
+ 
+ No longer suppose that $f$ is necessarily smooth (but suppose that
+-$f^{-1}((0,t])$ is a bundle over $(0,t]$). A morphism
+-$\cosp^\bullet$ can still be defined in cohomology whenever
++$f^{-1}(]0,t])$ is a bundle over $]0,t]$). A morphism
++$\cosp^*$ can still be defined in cohomology whenever
+ $j_*\dZ=\dZ$ and $\eR^qj_*\dZ=0$ for $q>0$. Under these hypotheses,
+ the Leray spectral sequence for $j$ shows that
+ \[
+-  \h^\bullet\left(f^{-1}\left([0,t]\right),\dZ\right) \iso \h^\bullet\left(f^{-1}\left((0,t]\right),\dZ\right)
+-\]
+-and $\cosp^\bullet$ is the composite morphism
+-\[
+-  \cosp^\bullet : \h^\bullet(X_t,\dZ)
+-    \xleftarrow\sim \h^\bullet\left(f^{-1}\left((0,t]\right),\dZ\right)
+-    \xleftarrow\sim \h^\bullet\left(f^{-1}\left([0,t]\right),\dZ\right)
+-    \to \h^\bullet(X_0,\dZ)
++  \h^*\left(f^{-1}\left([0,t]\right),\dZ\right) \iso \h^*\left(f^{-1}\left(]0,t]\right),\dZ\right)
++\]
++and $\cosp^*$ is the composite morphism
++\PrintPage{53}\[
++  \cosp^* : \h^*(X_t,\dZ)
++    \xleftarrow\sim \h^*\left(f^{-1}\left(]0,t]\right),\dZ\right)
++    \xleftarrow\sim \h^*\left(f^{-1}\left([0,t]\right),\dZ\right)
++    \to \h^*(X_0,\dZ)
+ \]
+ The fibre of $\eR^qj_*\dZ$ at a point $x\in X_0$ is calculated as
+ follows. In an ambient space, take a ball $B_\varepsilon$ centred at $x$
+@@ -1883,7 +1987,7 @@
+ $\eta$ put $E=X\cap B_\varepsilon\cap f^{-1}(\eta t)$; this is the
+ \emph{vanishing-cycle variety} at $x$. One has
+ \[
+-  (\eR^q j_* \dZ)_x \xleftarrow\sim \h^q\left(X\cap B_\varepsilon\cap f^{-1}\left((0,\eta t]\right),\dZ\right) \xrightarrow\sim \h^q(E,\dZ)
++  (\eR^q j_* \dZ)_x \xleftarrow\sim \h^q\left(X\cap B_\varepsilon\cap f^{-1}\left(]0,\eta t]\right),\dZ\right) \xrightarrow\sim \h^q(E,\dZ)
+ \]
+ and the cospecialization morphism is defined in cohomology whenever the
+ vanishing-cycle varieties are acyclic
+@@ -1904,10 +2008,10 @@
+ 
+ Throughout what follows, we fix an integer $n$, and “scheme” means
+ “scheme on which $n$ is invertible.” A “geometric point” will always mean
+-an “algebraic geometric point” (\ref{I:2-3-1})
++an “algebraic geometric point” (II \ref{I:2-3-1})
+ $x:\spec(k)\to X$, with $k$ algebraically closed.
+ 
+-\subsection{Locally acyclic morphisms}\label{I:5-1}
++\subsection{Locally acyclic morphisms}\label{I:5-1}\PrintPage{54}
+ 
+ \subsubsection{Notation}\label{I:5-1-1}
+ 
+@@ -1932,8 +2036,8 @@
+ 
+ The morphism $f$ is called \emph{locally acyclic} if the reduced
+ cohomology of every vanishing-cycle variety $\widetilde X_t^x$ vanishes:
+-\begin{equation*}\tag{5.1.3.1}\label{I:eq:5-1-3-1}
+-  \hat\h^\bullet(\widetilde X_t^x,\dZ/n) = 0\text{,}
++\begin{equation*}\tag{1.3.1}\label{I:eq:5-1-3-1}
++  \hat\h^*(\widetilde X_t^x,\dZ/n) = 0\text{,}
+ \end{equation*}
+ i.e. $\h^0\left(\widetilde X_t^x,\dZ/n\right)=\dZ/n$ and
+ $\h^q(\widetilde X_t^x,\dZ/n)=0$ for $q>0$.
+@@ -1952,7 +2056,7 @@
+ \begin{lemma}\label{I:5-1-5}
+ Let $f:X\to S$ be a locally acyclic morphism. For every geometric point
+ $t$ of $S$ giving rise to a cartesian diagram
+-\[\xymatrix{
++\PrintPage{55}\[\xymatrix{
+   X_t \ar[r]^-{\varepsilon'} \ar[d]
+     & X \ar[d]^-f \\
+   t \ar[r]^-\varepsilon
+@@ -1975,7 +2079,7 @@
+ The local rings of $S'$ are normal with separably closed fraction fields.
+ They are therefore strictly henselian, and the local acyclicity of $f'$
+ (\ref{I:5-1-4}) gives
+-$i'_*\dZ/n={f'}^*i_*\dZ/n$ and $\eR^q i'_*\dZ/n=0$ for $q>0$. Since $\alpha$
++$i'_*\dZ/n=\dZ/n$ and $\eR^q i'_*\dZ/n=0$ for $q>0$. Since $\alpha$
+ is integral, it follows that
+ \[
+   \eR^q\varepsilon_*'\dZ/n
+@@ -1992,12 +2096,12 @@
+ $t\to\widetilde S^s$, we shall define canonical homomorphisms, called
+ cospecialization maps,
+ \[
+-  \cosp^\bullet : \h^\bullet(X_t,\dZ/n) \to \h^\bullet(X_s,\dZ/n)\text{,}
++  \cosp^* : \h^*(X_t,\dZ/n) \to \h^*(X_s,\dZ/n)\text{,}
+ \]
+ relating the cohomology of the general fibre $X_t=X\times_St$ to that of
+ the special fibre $X_s=X\times_Ss$.
+ 
+-Consider the cartesian diagram
++\PrintPage{56}Consider the cartesian diagram
+ \[\xymatrix{
+   X_t \ar[d] \ar[r]^-{\varepsilon'}
+     & \widetilde X \ar[d]^-{f'}
+@@ -2011,9 +2115,9 @@
+ the restrictions to $X_s$ of the sheaves $\eR^q\varepsilon_*'\dZ/n$ are
+ $\dZ/n$ for $q=0$ and $0$ for $q>0$. By (\ref{I:5-1-5}), we even know
+ that $\eR^q\varepsilon_*'\dZ/n=0$ for $q>0$. We define
+-$\cosp^\bullet$ as the composite map
+-\begin{equation*}\tag{5.1.6.1}\label{I:eq:5-1-6-1}
+-  \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(\widetilde X,\varepsilon_*' \dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
++$\cosp^*$ as the composite map
++\begin{equation*}\tag{1.6.1}\label{I:eq:5-1-6-1}
++  \h^*(X_t,\dZ/n) \simeq \h^*(\widetilde X,\varepsilon_*' \dZ/n) \to \h^*(X_s,\dZ/n) \text{.}
+ \end{equation*}
+ 
+ \paragraph{Variant}
+@@ -2022,7 +2126,7 @@
+ and let $X'/S'$ be obtained from $X/S$ by base change. Diagram
+ \eqref{I:eq:5-1-6-1} may also be written
+ \[
+-  \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(X',\dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
++  \h^*(X_t,\dZ/n) \simeq \h^*(X',\dZ/n) \to \h^*(X_s,\dZ/n) \text{.}
+ \]
+ 
+ \begin{theorem}\label{I:5-1-7}
+@@ -2039,7 +2143,7 @@
+ $q\geqslant0$.
+ \end{theorem}
+ 
+-To prove the theorem, we may clearly suppose that
++\PrintPage{57}To prove the theorem, we may clearly suppose that
+ $S=\widetilde S^s$. We shall in fact show that, for every sheaf of
+ $\dZ/n\dZ$-modules $\sF$ on $S$, the canonical homomorphism
+ $\varphi^q(\sF):(\eR^qf_*f^*\sF)_s\to\h^q(X_s,f^*\sF)$ is bijective.
+@@ -2086,7 +2190,7 @@
+ \begin{corollary}\label{I:5-1-9}
+ Let $S$ be the spectrum of a strictly henselian noetherian local ring and
+ let $f:X\to S$ be a locally acyclic morphism. Suppose that for every
+-geometric point $t$ of $S$ one has $\h^0(X_t,\dZ/n)=\dZ/n$ and
++\PrintPage{58}geometric point $t$ of $S$ one has $\h^0(X_t,\dZ/n)=\dZ/n$ and
+ $\h^q(X_t,\dZ/n)=0$ for $q>0$ (in other words, the geometric fibres of
+ $f$ are acyclic). Then $f_*\dZ/n=\dZ/n$ and
+ $\eR^qf_*\dZ/n=0$ for $q>0$.
+@@ -2122,7 +2226,7 @@
+ that $S$ is noetherian, and the transitivity of local acyclicity
+ (\ref{I:5-1-10}) shows that it suffices to treat $d=1$.
+ 
+-Let $s$ be a geometric point of $S$ and $x$ a geometric point of $X$
++\PrintPage{59}Let $s$ be a geometric point of $S$ and $x$ a geometric point of $X$
+ centred at a closed point of $X_s$. We must show that the geometric fibres
+ of $\widetilde X^x\to\widetilde S^s$ are acyclic. Henceforth put
+ $S=\widetilde S^s=\spec(A)$ and $X=\widetilde X^x$. Then
+@@ -2153,12 +2257,12 @@
+ has $A\{T\}\otimes_AA'\iso A'\{T\}$: indeed, the left-hand side is
+ henselian local (because $A'$ is finite over $A$ and local) and is a
+ limit of local étale algebras over
+-$A'\{T\}=A\{T\}\otimes_AA'$. Thus $X_{t'}$ is still the fibre at $t'$
+-of $X=\spec\left(A'\{T\}\right)$ over $S'=\spec(A')$. The local scheme
++$A'[T]=A[T]\otimes_AA'$. Thus $X_{t'}$ is still the fibre at $t'$
++of $X'=\spec\left(A'\{T\}\right)$ over $S'=\spec(A')$. The local scheme
+ $X'$ is normal, hence integral; its localization $X_{t'}$ is still
+ integral, and a fortiori connected.
+ 
+-\begin{proposition}\label{I:5-2-3}
++\PrintPage{60}\begin{proposition}\label{I:5-2-3}
+ Let $A$ be a strictly henselian local ring, $S=\spec(A)$, and
+ $X=\spec\left(A\{T\}\right)$. Let $\bar t$ be a geometric point of $S$
+ and $X_{\bar t}$ the corresponding geometric fibre. Then every Galois
+@@ -2166,11 +2270,14 @@
+ the residue field of $A$ is trivial.
+ \end{proposition}
+ 
++\begingroup
++\renewcommand*{\thesubsubsection}{2.3.1}
+ \begin{lemma}[Zariski--Nagata purity theorem in dimension $2$] \label{I:5-2-4} % originally 5.2.3.1
+ Let $C$ be a regular local ring of dimension $2$ and let $C'$ be a
+ finite normal $C$-algebra étale over the open complement of the closed
+ point of $\spec(C)$. Then $C'$ is étale over $C$.
+ \end{lemma}
++\endgroup
+ 
+ Indeed, $C'$ is normal of dimension $2$, and hence
+ $\operatorname{prof}(C')=2$. Since
+@@ -2179,15 +2286,18 @@
+ is ramified is then defined by an equation, the discriminant; since it
+ contains no point of height $1$, it is empty.
+ 
++\begingroup
++\renewcommand*{\thesubsubsection}{2.3.2}
+ \begin{lemma}[Special case of Abhyankar's lemma]\label{I:5-2-5} % originally 5.2.3.2
+ Let $S=\spec(V)$ be a trait, let $\pi$ be a uniformizer, let $\eta$ be
+ the generic point of $S$, let $X$ be smooth over $S$, irreducible, and
+ of relative dimension $1$, let $\widetilde X_\eta$ be a Galois étale
+ covering of $X_\eta$ of degree $n$ invertible on $S$, and let
+-$S_1=\spec\left(V[\pi^{1/n}]\right)$. Use a subscript $(-)_1$ to denote
++$S_1=\spec\left(V[\pi^{1/n}]\right)$. Use a subscript ${}_1$ to denote
+ base change from $S$ to $S_1$. Then $\widetilde X_{1\eta}$ extends to an
+ étale covering of $X_1$.
+ \end{lemma}
++\endgroup
+ 
+ Let $\widetilde X_1$ be the normalization of $X_1$ in
+ $\widetilde X_{1\eta}$. By the structure of the tame inertia groups of
+@@ -2196,12 +2306,15 @@
+ on the general fibre and at the generic points of the special fibre. By
+ (\ref{I:5-2-4}), it is étale everywhere.
+ 
+-\subsubsection{}\label{I:5-2-6} % originally 5.2.3.3
+-
+-Let $t$ denote the point over which $\bar t$ lies. We are free to replace
++\begingroup
++\renewcommand*{\thesubsubsection}{2.3.3}
++\subsubsection{}\label{I:5-2-6}
++\endgroup % originally 5.2.3.3
++
++Let us prove \ref{I:5-2-3}. Let $t$ denote the point over which $\bar t$ lies. We are free to replace
+ $A$ by the normalization of $A$ in a finite separable extension $k(t')$ of
+ $k(t)$ in $k(\bar t)$ (cf. \ref{I:5-2-2}). This and a preliminary
+-passage to the limit allow us to suppose that
++passage to the limit \PrintPage{61}allow us to suppose that
+ \begin{enumerate}[\indent a)]
+   \item $A$ is normal and noetherian, and $t$ is the generic point of $S$.
+   \item The étale covering under consideration of $X_{\bar t}$ comes from
+@@ -2212,7 +2325,7 @@
+   \item The complement of $U$ has codimension $\geqslant2$ (at the price
+     of enlarging $k(t)$, by applying (\ref{I:5-2-5}) to the discrete
+     valuation rings obtained by localizing $S$ at the points of
+-    $S\setminus U$ of codimension $1$ in $S$; there are only finitely many
++    $S- U$ of codimension $1$ in $S$; there are only finitely many
+     such points).
+   \item The covering $\widetilde X_U$ is trivial over the subscheme $T=0$.
+     (This may require enlarging $k(t)$ once more.)
+@@ -2221,6 +2334,8 @@
+ Under these conditions, we shall show that the covering
+ $\widetilde X_U$ is trivial.
+ 
++\begingroup
++\renewcommand*{\thesubsubsection}{2.3.4}
+ \begin{lemma}\label{I:5-2-7} % originally 5.2.3.4
+ Let $A$ be a normal noetherian strictly henselian local ring, let $U$
+ be an open subset of $\spec(A)$ whose complement has codimension
+@@ -2228,11 +2343,12 @@
+ $X=\spec\left(A\{T\}\right)$, and let $V'$ be an étale covering of
+ $V$. If $V'$ is trivial over $T=0$, then $V'$ is trivial.
+ \end{lemma}
++\endgroup
+ 
+ Let $B=\Gamma(V',\sO)$. Since $V'$ is the inverse image of $V$ in
+ $\spec(B)$, it suffices to show that $B$ is finite étale over $A\{T\}$
+ (and hence split, since $A\{T\}$ is strictly henselian). Let
+-$\widehat X=\spec A\llbracket T\rrbracket$, and denote by $(-)^\wedge$ base
++$\widehat X=\spec A\llbracket T\rrbracket$, and denote by ${}^\wedge$ base
+ change from $X$ to $\widehat X$. The scheme $\widehat X$ is faithfully
+ flat over $X$. Hence
+ $\Gamma(\widehat V',\sO)=B\otimes_{A\{T\}}A\llbracket T\rrbracket$,
+@@ -2247,7 +2363,7 @@
+ \[
+   \varphi : \Gamma(\widehat V',\sO) \to \varprojlim_m \Gamma(V_m',\sO) = \left(\varprojlim_m \Gamma(V_m,\sO)\right)^n \text{.}
+ \]
+-By hypothesis, the complement of $U$ has depth $\geqslant2$: one has
++\PrintPage{62}By hypothesis, the complement of $U$ has depth $\geqslant2$: one has
+ $\Gamma(V_m,\sO)=A[T]/(T^{m+1})$, and $\varphi$ is a homomorphism from
+ $\widehat B$ to $A\llbracket T\rrbracket^n$. Over $U$, it provides $n$
+ distinct sections of $\widehat V'/\widehat V$; hence $\widehat V'$ is
+@@ -2269,7 +2385,7 @@
+ This follows immediately from the definition of the cospecialization maps
+ and the finiteness and proper base change theorems.
+ 
+-\begin{theorem}[Base change by a smooth morphism]\label{I:5-3-2}
++\PrintPage{63}\begin{theorem}[Base change by a smooth morphism]\label{I:5-3-2}
+ Let
+ \[\xymatrix{
+   X' \ar[r]^-{g'} \ar[d]^-{f'}
+@@ -2311,7 +2427,7 @@
+ 
+ \begin{theorem}[Relative purity]\label{I:5-3-4}
+ Let
+-\begin{equation*}\tag{5.3.4.1}\label{I:eq:5-3-4-1}\xymatrix{
++\PrintPage{64}\begin{equation*}\tag{3.4.1}\label{I:eq:5-3-4-1}\xymatrix{
+   U \ar@{^{(}->}[r]^-j \ar[dr]
+     & X \ar[d]^-f
+     & \ar@{_{(}->}[l]_-i Y \ar[dl]^-h \\
+@@ -2319,7 +2435,7 @@
+ }\end{equation*}
+ be a commutative diagram with $f$ smooth of pure relative dimension $N$,
+ $h$ smooth of pure relative dimension $N-1$, $i$ a closed immersion,
+-and $U=X\setminus Y$. If $n$ is prime to the residue characteristics of
++and $U=X- Y$. If $n$ is prime to the residue characteristics of
+ $S$, then
+ \begin{equation*}
+ \begin{aligned}
+@@ -2349,18 +2465,12 @@
+ $\eR^qg_*\dZ/n=\dZ/n$ for $q=0$ and $0$ for $q>0$. For $f$, on the
+ other hand, \eqref{I:eq:4-6-2-1} gives
+ \[
+-  \eR^q f_* \dZ/n =
+-  \begin{cases}
+-    \dZ/n & q=0,\\
+-    0 & q=1,\\
+-    \dZ/n(-1) & q=2,\\
+-    0 & q>2.
+-  \end{cases}
++  \eR^q f_* \dZ/n = \dZ/n,0,\dZ/n(-1),0 \text{ for $q>2$.}
+ \]
+ It is readily checked that $j_*\dZ/n=\dZ/n$, and that the
+-$\eR^qj_*\dZ/n=0$ are concentrated on $i(T)$ for $q>0$. The Leray
++$\eR^qj_*\dZ/n$ are concentrated on $i(T)$ for $q>0$. The Leray
+ spectral sequence
+-$E_2^{pq}=\eR^pf_*\eR^qj_*\dZ/n\Rightarrow\eR^{p+q}g_*\dZ/n$ therefore
++\PrintPage{65}$E_2^{pq}=\eR^pf_*\eR^qj_*\dZ/n\Rightarrow\eR^{p+q}g_*\dZ/n$ therefore
+ reduces to
+ \[\xymatrix{
+   i^* \eR^q j_* \dZ/n & 0 & \cdots \\
+@@ -2375,7 +2485,7 @@
+ 
+ \subsubsection{}\label{I:5-3-5}
+ 
+-We refer to \cite[XVI.4,5]{sga4} for proofs of the following applications
++We refer to \PrintCite{SGA~4 XVI.4,5}{\cite[XVI.4,5]{sga4}} for proofs of the following applications
+ of the acyclicity theorem (\ref{I:5-2-1}).
+ 
+ \begin{theorem}\label{I:5-3-6} % originally 5.3.5.1
+@@ -2396,12 +2506,12 @@
+ 
+ The proof uses resolution of singularities and (\ref{I:5-3-4}). It is
+ generalized to a morphism of finite type between excellent schemes of
+-characteristic $0$ in \cite[XIX.5]{sga4}. Another proof, independent of
++characteristic $0$ in \PrintCite{SGA~4 XIX.5}{\cite[XIX.5]{sga4}}. Another proof, independent of
+ resolution, is given in this volume (\nameref{VII}, \ref{VII:1-1})
+ and applies to a morphism of schemes of finite type over a field or over
+ a Dedekind ring.
+ 
+-\section{Poincaré duality}
++\section{Poincaré duality}\label{I:6}\PrintPage{66}
+ 
+ \subsection{Introduction}\label{I:6-1}
+ 
+@@ -2413,7 +2523,7 @@
+ \begin{enumerate}[\indent A]
+   \item The cohomology of $X$ is the \v Cech cohomology associated with
+     the covering $\cU$. It is the cohomology of the complex
+-    \begin{equation}\label{I:eq:6-1}
++    \begin{equation}\tag{1}\label{I:eq:6-1}
+       0 \to \dZ^{A_0} \to \dZ^{A_1} \to \cdots
+     \end{equation}
+     where
+@@ -2422,7 +2532,7 @@
+     $U_a=U_{i_0}\cap\cdots\cap U_{i_k}$ and let $j_a$ be the inclusion
+     of $U_a$ into $X$. The constant sheaf $\dZ$ on $X$ admits the
+     (left) resolution
+-    \begin{equation}\label{I:eq:6-2}
++    \begin{equation}\tag{2}\label{I:eq:6-2}
+       \xymatrix{
+         \cdots \ar[r]
+           & \displaystyle\bigoplus_{a\in A_1} j_{a!}\dZ \ar[r]
+@@ -2431,7 +2541,7 @@
+         & & \dZ \text{.}
+       }
+     \end{equation}
+-    The compactly supported cohomology $\h_c^\bullet(X,j_{a!}\dZ)$ is
++    The compactly supported cohomology $\h_c^*(X,j_{a!}\dZ)$ is
+     precisely the cohomology with proper support of the (oriented) ball
+     $U_a$:
+       \[
+@@ -2445,7 +2555,7 @@
+ The hypercohomology spectral sequence for the complex
+ \eqref{I:eq:6-2} and cohomology with proper support therefore says that
+ $\h_c^i(X)$ is the $(i-N)$th cohomology group of the complex
+-\begin{equation}\label{I:eq:6-3}
++\PrintPage{67}\begin{equation}\tag{3}\label{I:eq:6-3}
+   \cdots \to \dZ^{A_1} \to \dZ^{A_0} \to 0 \text{.}
+ \end{equation}
+ This complex is dual to the complex \eqref{I:eq:6-1}, whence Poincaré
+@@ -2456,7 +2566,7 @@
+   \item the existence of a theory of cohomology with proper support;
+   \item the fact that every point $x$ of a manifold $X$ of pure dimension
+     $N$ has a fundamental system of open neighbourhoods $U$ for which
+-    \begin{equation}\label{I:eq:6-4}
++    \begin{equation}\tag{4}\label{I:eq:6-4}
+       \h_c^i(U) = \begin{cases}
+                     0   & \text{for $i\ne N$,} \\
+                     \dZ & \text{for $i=N$.}
+@@ -2469,7 +2579,7 @@
+ $k$, $n$ invertible on $X$, and $x$ a closed point of $X$, the key
+ point is to calculate the projective limit over the étale neighbourhoods
+ $U$ of $x$:
+-\begin{equation}\label{I:eq:6-5}
++\begin{equation}\tag{5}\label{I:eq:6-5}
+   \varprojlim \h_c^i(U,\dZ/n)
+     = \begin{cases}
+         0     & \text{if $i\ne 2N$} \\
+@@ -2478,7 +2588,7 @@
+ \end{equation}
+ 
+ Just as for topological manifolds one must first treat directly the case
+-of an open ball (or even simply the interval $(0,1)$), here one must
++of an open ball (or even simply the interval $]0,1[$), here one must
+ first treat directly the case of curves (\ref{I:6-2}). The local
+ acyclicity theorem for smooth morphisms then reduces
+ \eqref{I:eq:6-5} to this special case (\ref{I:6-3}).
+@@ -2489,13 +2599,13 @@
+ $\dZ/n$-modules of rank one. We denote its $N$th tensor power by
+ $\dZ/n(N)$ ($N\in\dZ$). The intrinsic form of the second line of
+ \eqref{I:eq:6-5} is
+-\begin{equation}\label{I:eq:6-5'}
++\PrintPage{68}\begin{equation}\tag{5'}\label{I:eq:6-5'}
+   \varprojlim \h_c^{2N} \left(U,\dZ/n(N)\right) = \dZ/n \text{,}
+ \end{equation}
+ and $\dZ/n(N)$ is called the \emph{orientation sheaf} of $X$. Since the
+ sheaf $\dZ/n(N)$ is constant and isomorphic to $\dZ/n$, it may be taken
+-outside the limit sign (with $N$ fixed), and one may instead write
+-\begin{equation}\label{I:eq:6-5''}
++outside the symbol $\h$, and one may instead write
++\begin{equation}\tag{5''}\label{I:eq:6-5''}
+   \varprojlim \h_c^{2N} (U,\dZ/n) = \dZ/n(-N) \text{,}
+ \end{equation}
+ and Poincaré duality will take the form of a perfect duality, with values
+@@ -2514,7 +2624,7 @@
+     & \dZ/n
+ }\]
+ Let $D$ be a reduced divisor of $\bar X$ and let
+-$X=\bar X\setminus D$:
++$X=\bar X- D$:
+ \[\xymatrix{
+   X \ar@{^{(}->}[r]^-j
+     & \bar X
+@@ -2531,7 +2641,7 @@
+ }\]
+ For disconnected $\bar X$, similarly
+ \[
+-  \h_c^2(X,\dmu_n) = (\dZ/n)^{\pi_0(X)}
++  \h_c^2(X,\dmu_n) \simeq (\dZ/n)^{\pi_0(X)}
+ \]
+ and the \emph{trace morphism} is defined to be the sum
+ \[\xymatrix{
+@@ -2539,7 +2649,7 @@
+     & \dZ/n\text{.}
+ }\]
+ 
+-\begin{theorem}\label{I:6-2-2}
++\PrintPage{69}\begin{theorem}\label{I:6-2-2}
+ The pairing $\tr(a\smallsmile b)$ identifies each of the two groups
+ $\h^i(X,\dZ/n)$ and $\h_c^{2-i}(X,\dmu_n)$ with the dual (with values
+ in $\dZ/n$) of the other.
+@@ -2561,7 +2671,7 @@
+ This specialization principle reduces (\ref{I:6-2-2}) to the case in
+ which $k$ has characteristic $0$. By (\ref{I:5-3-3}), this case reduces
+ to $k=\dC$. Finally, when $k=\dC$, the groups
+-$\h^\bullet(X,\dZ/n)$ and $\h_c^\bullet(X,\dmu_n)$ agree with the
++$\h^*(X,\dZ/n)$ and $\h_c^*(X,\dmu_n)$ agree with the
+ groups of the same name calculated for the classical topological space
+ $X_{\textnormal{cl}}$, and, through the isomorphism
+ $\dZ/n\to\dmu_n:x\mapsto\exp\left(\frac{2\pi ix}{n}\right)$, the trace
+@@ -2575,7 +2685,7 @@
+ Here is another, related to the autoduality of the Jacobian.
+ 
+ Return to the notation of (\ref{I:6-2-1}). We may suppose---and do
+-suppose---that $X$ is connected. The cases $i=0$ and $i=2$ being
++suppose---that $X$ is connected. The cases $i=0$ or $2$ being
+ trivial, we also suppose that $i=1$. Define $_D\dG_m$ by the exact
+ sequence $0\to_D\dG_m\to\dG_m\to i_*\dG_m\to0$ (sections of $\dG_m$
+ congruent to $1\mod D$). The group $\h^1(\bar X,_D\dG_m)$ classifies
+@@ -2587,10 +2697,10 @@
+ the torus $\dG_m^D/(\text{diagonal $\dG_m$})$.
+ 
+ \begin{enumerate}[\indent a)]
+-  \item The exact sequence
+-    $0\to j_!\dmu_n\to_D\dG_m\xrightarrow{n}_D\dG_m\to0$ gives an
++  \item \PrintPage{70}The exact sequence
++    $0\to j_!\dmu_n\to_D\dG_m\xrightarrow{x\mapsto x^n}_D\dG_m\to0$ gives an
+     isomorphism
+-    \begin{equation*}\tag{6.2.3.1}\label{I:eq:6-2-3-1}
++    \begin{equation*}\tag{2.3.1}\label{I:eq:6-2-3-1}
+       \h_c^1(X,\dmu_n) = \pic_D^0(\bar X)_n \text{.}
+     \end{equation*}
+   \item The map sending $x\in X(k)$ to the class of the invertible sheaf
+@@ -2614,16 +2724,16 @@
+     & \pic_D^0(\bar X) \ar[r]
+     & 0
+ }\]
+-Geometric class field theory (as presented in Serre \cite{se59}) shows
++Geometric class field theory (as presented in Serre \PrintCite{[15]}{\cite{se59}}) shows
+ that the map $v\mapsto f_0^*(\bar v)$
+-\begin{equation*}\tag{6.2.3.2}\label{I:eq:6-2-3-2}
++\begin{equation*}\tag{2.3.2}\label{I:eq:6-2-3-2}
+   \hom\left(\pic_D^0(\bar X)_n,\dZ/n\right) \to \h^1(X,\dZ/n)
+ \end{equation*}
+ is an isomorphism. To deduce (\ref{I:6-2-2}) from
+-\eqref{I:eq:6-2-3-1} and \eqref{I:eq:6-2-3-2}, it remains to know that
++\eqref{I:eq:6-2-3-1} \eqref{I:eq:6-2-3-2}, it remains to know that
+ \begin{equation*}\tag{2.3.3}\label{I:eq:6-2-3-3}
+-  \tr\left(u \smallsmile f_0^*(\bar v)\right) = -v(u) \text{.}
+-\end{equation*}
++  \tr\left(u \smallsmile f_0^*(\bar v)\right) = -v(u) \text{.} \end{equation*}
++This compatibility is proved in (\hyperref[V]{Duality}, \ref{V:3-2} and \ref{V:3-4}).
+ 
+ 
+ \subsection{The general case}\label{I:6-3}
+@@ -2634,10 +2744,10 @@
+ \[
+   \tr : \h_c^{2N}\left(X,\dZ/n(N)\right) \to \dZ/n\text{.}
+ \]
+-The definition is a painful unwinding starting from the case of curves
+-\cite[XVIII \S 2]{sga4}. One then has:
+-
+-\begin{theorem}\label{I:6-3-1}
++The definition is a painful dévissage starting from the case of curves
++\PrintCite{SGA~4 XVIII \S 2}{\cite[XVIII \S 2]{sga4}}. One then has:
++
++\PrintPage{71}\begin{theorem}\label{I:6-3-1}
+ The pairing $\tr(a\smallsmile b)$ identifies each of the groups
+ $\h_c^i\left(X,\dZ/n(N)\right)$ and $\h^{2N-i}(X,\dZ/n)$ with the dual
+ of the other.
+@@ -2646,15 +2756,15 @@
+ Let $x\in X$ be a closed point and let $X_x$ be the strict localization
+ of $X$ at $x$. For $U$ ranging over the étale neighbourhoods of $x$,
+ put
+-\begin{equation*}\tag{6.3.1.1}\label{I:eq:6-3-1-1}
+-  \h_c^\bullet(X_x,\dZ/n) = \varprojlim \h_c^\bullet(U,\dZ/n) \text{.}
++\begin{equation*}\tag{1}\label{I:eq:6-3-1-1}
++  \h_c^*(X_x,\dZ/n) = \varprojlim \h_c^*(U,\dZ/n) \text{.}
+ \end{equation*}
+ It would be preferable to consider instead the pro-object
+-$\text{“}\varprojlim\text{”}\h_c^\bullet(U,\dZ/n)$, but since the
++$\text{“}\varprojlim\text{”}\h_c^*(U,\dZ/n)$, but since the
+ groups involved are finite, the difference is inessential. As we tried
+ to explain in the introduction, (\ref{I:6-3-1}) follows from the facts
+ that
+-\begin{equation*}\tag{6.3.1.2}\label{I:eq:6-3-1-2}
++\begin{equation*}\tag{2}\label{I:eq:6-3-1-2}
+ \begin{aligned}
+   \h_c^i(X_x,\dZ/n) &= 0 \text{ for $i\ne 2N$ and that } \\
+   \tr : \h_c^{2 N}\left(X_x,  \dZ/n(N)\right) &\iso \dZ/n \text{ is an isomorphism.}
+@@ -2669,7 +2779,7 @@
+ Because the “cohomology with proper support” under consideration is
+ defined as limits \eqref{I:eq:6-3-1-1}, the existence of such a spectral
+ sequence raises various passage-to-the-limit problems, treated in too much
+-detail in \cite[XVIII]{sga4}. For every geometric point $z$ of $Y_y$,
++detail in \PrintCite{SGA~4 XVIII}{\cite[XVIII]{sga4}}. Here, we shall content ourselves with calculating. For every geometric point $z$ of $Y_y$,
+ one has
+ \[
+   (\eR^if_! \dZ/n)_z = \h_c^i(f^{-1}(z),\dZ/n) \text{.}
+@@ -2678,7 +2788,7 @@
+ over an algebraically closed field. It satisfies Poincaré duality. Its
+ ordinary cohomology is given by the local acyclicity theorem for smooth
+ morphisms:
+-\[
++\PrintPage{72}\[
+   \h^i(f^{-1}(z),\dZ/n)
+     = \begin{cases}
+         \dZ/n & \text{for $i=0$} \\
+@@ -2724,8 +2834,28 @@
+ \end{corollary}
+ 
+ In particular, under the hypotheses of the corollary, the sheaves
+-$\eR^if_*\dZ/n$ are constructible. From this one can show that, if $S$
++\PrintPage{73}$\eR^if_*\dZ/n$ are constructible. From this one can show that, if $S$
+ is of finite type over the spectrum of a field or of a Dedekind ring,
+ then, for every morphism of finite type $f:X\to S$ and every constructible
+-sheaf $\sF$ on $X$, the sheaves $\eR^if_*\sF$ are constructible
++sheaf $\sF$ on $X$, the sheaves $\eR^if_*\sF$ on $S$ are constructible
+ (\nameref{VII}, \ref{VII:1-1}).
++
++\section*{Bibliography}\label{I:bib}\PrintPage{74}
++\begin{description}
++\item[{[1]}] M. ARTIN. Grothendieck topologies (notes miméographiées), Harvard University, 1962.
++\item[{[2]}] M. ARTIN. Algebraic approximation of structures over complete local rings, Pub. Math. I.H.E.S., n° 36, 1969, p. 23--58.
++\item[{[3]}] M. ARTIN. Théorèmes de représentabilité pour les espaces algébriques (chap. VII, le théorème de finitude en cohomologie étale), Presses de l'Université de Montréal, 1973.
++\item[{[4]}] M. ARTIN, A. GROTHENDIECK, J.L. VERDIER. Théorie des Topos et Cohomologie Étale des Schémas, SGA 4, Lecture notes in Maths., n° 269, 270 et 305, Springer, 1972/73.
++\item[{[5]}] J. GIRAUD. Analysis situs (d'après Artin et Grothendieck). Séminaire Bourbaki, 1962/63, exp. 256.
++\item[{[6]}] A. GROTHENDIECK. Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats. Séminaire Bourbaki, 1959/60, exp. 190.
++\item[{[7]}] A. GROTHENDIECK. Revêtements Étales et Groupe Fondamental, SGA 1, Lecture notes in Maths., n° 224, Springer, 1971.
++\item[{[8]}] A. GROTHENDIECK et J. DIEUDONNÉ. Éléments de géométrie algébrique, Pub. Math. I.H.E.S., n° 4, 8, 11, 17, 20, 24, 28, 32, 1960/67 [cité EGA].
++\item[{[9]}] M. NAGATA. Imbedding of an abstract variety in a complete variety, J. Math. Kyoto Univ., 2-1, 1962, p. 1--10.
++\item[{[10]}] M. NAGATA. Generalisation of the imbedding problem, J. Math. Kyoto Univ., 3-1, 1963, p. 89--102.
++\item[{[11]}] M. RAYNAUD. Anneaux Locaux Henséliens, Lecture notes in Maths., n° 169, Springer, 1970.
++\item[{[12]}]\PrintPage{75} J.-P. SERRE. Géométrie Algébrique et Géométrie Analytique, Ann. de l'Institut Fourier, t. VI, 1956, p. 1--42 (cité GAGA).
++\item[{[13]}] J.-P. SERRE. Corps Locaux, Paris, Hermann, 1968.
++\item[{[14]}] J.-P. SERRE. Cohomologie galoisienne, Lecture notes in Maths., n° 5, Springer, 1965.
++\item[{[15]}] J.-P. SERRE. Groupes algébriques et corps de classes, Paris, Hermann, 1959.
++\item[{[16]}] C. TSEN. Divisionsalgebren über Funktionenkörper, Nach. Ges. Wiss. Göttingen, 1933, p. 335--339.
++\end{description}

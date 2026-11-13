@@ -1,0 +1,23 @@
+--- checkpoint/scripts/build_arcata_en.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/build_arcata_en.py
+@@ -68,6 +68,8 @@
+ p(r"$A'\{T\}=A\{T\}\otimes_AA'$",r"$A'[T]=A[T]\otimes_AA'$",59,'S45-SOL-0195')
+ p(r"of $X=\spec\left(A'\{T\}\right)$",r"of $X'=\spec\left(A'\{T\}\right)$",59,'S45-SOL-0198')
+ p(r'Let $t$ denote the point over which $\bar t$ lies.',r'Let us prove \ref{I:5-2-3}. Let $t$ denote the point over which $\bar t$ lies.',60,'S45-SOL-0206',ai=True)
++p(r'\cite[V]{ra70}',r'\PrintCite{M.\ \textsc{Raynaud}, \emph{Anneaux Locaux Henséliens}, Chapter V}{\cite[V]{ra70}}',18,'S45-ASTRA-E-0010',ai=True)
++p(r'\cite[I]{ra70}',r'\PrintCite{\emph{Anneaux locaux henséliens}, Chapter I}{\cite[I]{ra70}}',24,'S45-ASTRA-E-0010',ai=True)
+ p(r'\eR^q f_* \dZ/n = \begin{cases} \dZ/n & q=0,\\ 0 & q=1,\\ \dZ/n(-1) & q=2,\\ 0 & q>2. \end{cases}',r'\eR^q f_* \dZ/n = \dZ/n,0,\dZ/n(-1),0 \text{ for $q>2$.}',64,'S45-ASTRA-A-0024',math=True)
+ p(r'$\eR^qj_*\dZ/n=0$ are concentrated',r'$\eR^qj_*\dZ/n$ are concentrated',64,'S45-SOL-0219')
+ p('$(0,1)$','$]0,1[$',67,'S45-SOL-0233')
+@@ -121,6 +123,11 @@
+ text+='\n'+bib
+ LOG.append(dict(id='S45-ASTRA-A-0028',page='74–75',status='applied',before='',after=bib,ai_translated=False))
+ 
++supplement=ROOT/'work/rapport_cycle/records/arcata_review_supplement.json'
++if supplement.exists():
++ for op in json.loads(supplement.read_text())['operations']:
++  if op['language']=='en':p(op['before'],op['after'],op['page'],op['id'],ai=op.get('ai_translated',False))
++
+ anchors={
+ 4:r'\chapter{Étale cohomology: the starting points}',5:r'\begingroup',6:r'\section{Grothendieck topologies}\label{I:1}',
+ 7:r'Given a family $\{U_i\}$',8:r'\item a vector bundle $E_U$',9:r'isomorphism $\rho_{yx}',10:'From this point of view, descent techniques',

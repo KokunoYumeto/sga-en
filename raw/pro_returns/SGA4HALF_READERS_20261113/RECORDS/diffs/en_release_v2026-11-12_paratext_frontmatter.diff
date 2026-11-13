@@ -1,0 +1,276 @@
+--- source/en/release_v2026-11-12/05_SGA4HALF_EN_COMPLETE_READER.tex
++++ deliverables/EN/SGA4HALF_EN_corrected_apparatus.tex#frontmatter [paratext_frontmatter]
+@@ -1,20 +1,258 @@
+ 
+-
+-
+-\pagenumbering{alph}
+-\maketitle
+-% Credits page (back of the title page).
++\hypersetup{pageanchor=false}
++\ifcase\EditionMode
++
++\begin{titlepage}
++\centering
++\vspace*{2cm}
++{\Large Séminaire de Géométrie Algébrique du Bois-Marie\par}
++\vspace{0.7cm}
++{\Huge\bfseries SGA 4\textonehalf\par}
++\vspace{0.8cm}
++{\huge Étale cohomology\par}
++\vspace{1cm}
++{\Large Pierre Deligne\par}
++\vspace{0.5cm}
++with the collaboration of\\[0.3em]
++J.-F. Boutot, A. Grothendieck, L. Illusie et J.-L. Verdier
++\vfill
++{\Large \ifnum\EditionIsMaster=1\relax Annotated master\else Diplomatic text\fi\par}
++\vspace{0.7cm}
++Lecture Notes in Mathematics 569, Springer, 1977\\[0.4em]
++Edition checked against the printed volume\\
++13 November 2026
++\end{titlepage}
++
++\chapter*{Sources, credits and rights}
++Pierre Deligne, \emph{Cohomologie étale}, Séminaire de Géométrie Algébrique
++du Bois-Marie SGA 4\textonehalf, with the collaboration of J.-F. Boutot,
++A. Grothendieck, L. Illusie and J.-L. Verdier, Lecture Notes in Mathematics
++569, Springer, 1977. The authors and writers of the individual exposés
++retain their credits in place.
++
++\medskip
++SGA 4\textonehalf\ preserves Daniel Miller’s \LaTeX\ typesetting and its
++original typesetter’s note. It is not attributed to AI. His repository
++(\url{https://github.com/dkmiller/sga4.5}) is no longer online; the French
++text is in \texttt{sga-fr}, and a copy survives at
++\url{https://github.com/NomiL/sga4.5}, commit \texttt{d5266b27}.
++Every layer of this edition rests on his typesetting.
++
++\medskip
++The English text is AI-translated from Miller’s French typesetting.
++The English project’s general credits record OpenAI Codex (GPT-5.6 Sol:
++translation; GPT-6 Astra: corrections and assembly, September--October
++2026) and Claude Opus 5.5 (Anthropic: the SGA 2 and SGA 3 sources of
++26 October 2026, and the translation of SGA 3 revised against the 1970
++printing in November 2026). These collection-wide credits do not attribute
++Miller’s human contribution to AI.
++
++\medskip
++Codex’s corrections (August 2026), the scan-check proposals by GPT-6.1 Sol
++(OpenAI API, maximum reasoning effort, 12 November 2026), and this edition’s
++corrections are AI-produced corrections. Restored French passages are
++AI-transcribed, and their new English translations are AI-translated.
++The second scan check, adjudication, restoration, bilingual alignment and
++this build are by GPT-6 Astra (OpenAI, ChatGPT Pro mode).
++Additional English translation is AI-translated; subsequent corrections,
++editing, reconstruction and typesetting are AI-produced. The
++source-specific human credits and genuine third-party notices remain
++applicable; attribution does not establish permission or endorsement.
++
++\medskip
++The rights in the original work belong to its author or the author's representatives or heirs.
++Where we hold rights, in the AI-produced transcription, translation, corrections and typesetting, they are
++dedicated to the public domain under CC0 1.0. This edition is published for educational, non-profit purposes,
++and we claim no rights we do not hold. If you hold rights in this work and object to its publication here,
++please open a GitHub issue and we will take it down.
++
++\chapter*{Preface to this form}
++This English text follows the printed work, retaining misprints
++where they change the English reading. Transcription errors have been
++repaired. Page markers identify the original pagination. Miller’s
++typesetter’s note is reproduced under his name, with its email address
++omitted.
++
++The photographed title and copyright pages are not reproduced; their
++bibliographic information is supplied above with the present rights
++notice. The original unnumbered general contents are retained. The
++accompanying audit records document the scan check, variants and source
++differences.
++
++\ifnum\EditionIsMaster=1\relax
++This master contains both readings of every variant; its PDF displays the corrected form with apparatus.
++\fi
++
+ \clearpage
+-\thispagestyle{empty}
+-\null\vfill
+-\begingroup\small
+-\noindent\textbf{Original edition.} \textit{Cohomologie \'etale. S\'eminaire de G\'eom\'etrie Alg\'ebrique du Bois-Marie SGA~4\,$\frac12$}, par P.~Deligne, avec la collaboration de J.~F.~Boutot, A.~Grothendieck, L.~Illusie et J.~L.~Verdier. Lecture Notes in Mathematics~569, Springer-Verlag, Berlin, Heidelberg, New York, 1977. ISBN 3-540-08066-X. \copyright{}~by Springer-Verlag Berlin~$\cdot$~Heidelberg 1977.\par
+-\medskip
+-\noindent\textbf{This edition.} English translation produced by AI from Daniel Miller's \LaTeX{} typesetting of the French text of the 1977 printing. Corrections and the typesetting of the English text are also AI-produced.\par
+-\medskip
+-\noindent The rights in the original work belong to its authors or the authors' representatives or heirs. Where we hold rights, in the AI-produced transcription, translation, corrections and typesetting, they are dedicated to the public domain under CC0~1.0. This edition is published for educational, non-profit purposes, and we claim no rights we do not hold. If you hold rights in this work and object to its publication here, please open a GitHub issue (\url{https://github.com/KokunoYumeto/sga-en/issues}) and we will take it down.\par
+-\endgroup
++
++\or
++
++\begin{titlepage}
++\centering
++\vspace*{2cm}
++{\Large Séminaire de Géométrie Algébrique du Bois-Marie\par}
++\vspace{0.7cm}
++{\Huge\bfseries SGA 4\textonehalf\par}
++\vspace{0.8cm}
++{\huge Étale cohomology\par}
++\vspace{1cm}
++{\Large Pierre Deligne\par}
++\vspace{0.5cm}
++with the collaboration of\\[0.3em]
++J.-F. Boutot, A. Grothendieck, L. Illusie et J.-L. Verdier
++\vfill
++{\Large \ifnum\EditionIsMaster=1\relax Annotated master\else Corrected text with apparatus\fi\par}
++\vspace{0.7cm}
++Lecture Notes in Mathematics 569, Springer, 1977\\[0.4em]
++Edition checked against the printed volume\\
++13 November 2026
++\end{titlepage}
++
++\chapter*{Sources, credits and rights}
++Pierre Deligne, \emph{Cohomologie étale}, Séminaire de Géométrie Algébrique
++du Bois-Marie SGA 4\textonehalf, with the collaboration of J.-F. Boutot,
++A. Grothendieck, L. Illusie and J.-L. Verdier, Lecture Notes in Mathematics
++569, Springer, 1977. The authors and writers of the individual exposés
++retain their credits in place.
++
++\medskip
++SGA 4\textonehalf\ preserves Daniel Miller’s \LaTeX\ typesetting and its
++original typesetter’s note. It is not attributed to AI. His repository
++(\url{https://github.com/dkmiller/sga4.5}) is no longer online; the French
++text is in \texttt{sga-fr}, and a copy survives at
++\url{https://github.com/NomiL/sga4.5}, commit \texttt{d5266b27}.
++Every layer of this edition rests on his typesetting.
++
++\medskip
++The English text is AI-translated from Miller’s French typesetting.
++The English project’s general credits record OpenAI Codex (GPT-5.6 Sol:
++translation; GPT-6 Astra: corrections and assembly, September--October
++2026) and Claude Opus 5.5 (Anthropic: the SGA 2 and SGA 3 sources of
++26 October 2026, and the translation of SGA 3 revised against the 1970
++printing in November 2026). These collection-wide credits do not attribute
++Miller’s human contribution to AI.
++
++\medskip
++Codex’s corrections (August 2026), the scan-check proposals by GPT-6.1 Sol
++(OpenAI API, maximum reasoning effort, 12 November 2026), and this edition’s
++corrections are AI-produced corrections. Restored French passages are
++AI-transcribed, and their new English translations are AI-translated.
++The second scan check, adjudication, restoration, bilingual alignment and
++this build are by GPT-6 Astra (OpenAI, ChatGPT Pro mode).
++Additional English translation is AI-translated; subsequent corrections,
++editing, reconstruction and typesetting are AI-produced. The
++source-specific human credits and genuine third-party notices remain
++applicable; attribution does not establish permission or endorsement.
++
++\medskip
++The rights in the original work belong to its author or the author's representatives or heirs.
++Where we hold rights, in the AI-produced transcription, translation, corrections and typesetting, they are
++dedicated to the public domain under CC0 1.0. This edition is published for educational, non-profit purposes,
++and we claim no rights we do not hold. If you hold rights in this work and object to its publication here,
++please open a GitHub issue and we will take it down.
++
++\chapter*{Preface to this form}
++Verified misprints of the printed work are corrected. Every
++such change is marked and has an apparatus entry giving the printed
++reading, correction and source. Transcription repairs are shared by all
++three forms and do not receive apparatus entries. Miller’s typesetter’s
++note is reproduced under his name, with its email address omitted.
++Page markers identify the original pagination.
++
++The photographed title and copyright pages are not reproduced; their
++bibliographic information is supplied above with the present rights
++notice. The original unnumbered general contents are retained. The
++accompanying audit records document the scan check, variants and source
++differences.
++
++\ifnum\EditionIsMaster=1\relax
++This master contains both readings of every variant; its PDF displays the corrected form with apparatus.
++\fi
++
+ \clearpage
+ 
+-\pagenumbering{roman}
++\or
++
++\begin{titlepage}
++\centering
++\vspace*{2cm}
++{\Large Séminaire de Géométrie Algébrique du Bois-Marie\par}
++\vspace{0.7cm}
++{\Huge\bfseries SGA 4\textonehalf\par}
++\vspace{0.8cm}
++{\huge Étale cohomology\par}
++\vspace{1cm}
++{\Large Pierre Deligne\par}
++\vspace{0.5cm}
++with the collaboration of\\[0.3em]
++J.-F. Boutot, A. Grothendieck, L. Illusie et J.-L. Verdier
++\vfill
++{\Large \ifnum\EditionIsMaster=1\relax Annotated master\else Reading text\fi\par}
++\vspace{0.7cm}
++Lecture Notes in Mathematics 569, Springer, 1977\\[0.4em]
++Edition checked against the printed volume\\
++13 November 2026
++\end{titlepage}
++
++\chapter*{Sources, credits and rights}
++Pierre Deligne, \emph{Cohomologie étale}, Séminaire de Géométrie Algébrique
++du Bois-Marie SGA 4\textonehalf, with the collaboration of J.-F. Boutot,
++A. Grothendieck, L. Illusie and J.-L. Verdier, Lecture Notes in Mathematics
++569, Springer, 1977. The authors and writers of the individual exposés
++retain their credits in place.
++
++\medskip
++SGA 4\textonehalf\ preserves Daniel Miller’s \LaTeX\ typesetting and its
++original typesetter’s note. It is not attributed to AI. His repository
++(\url{https://github.com/dkmiller/sga4.5}) is no longer online; the French
++text is in \texttt{sga-fr}, and a copy survives at
++\url{https://github.com/NomiL/sga4.5}, commit \texttt{d5266b27}.
++Every layer of this edition rests on his typesetting.
++
++\medskip
++The English text is AI-translated from Miller’s French typesetting.
++The English project’s general credits record OpenAI Codex (GPT-5.6 Sol:
++translation; GPT-6 Astra: corrections and assembly, September--October
++2026) and Claude Opus 5.5 (Anthropic: the SGA 2 and SGA 3 sources of
++26 October 2026, and the translation of SGA 3 revised against the 1970
++printing in November 2026). These collection-wide credits do not attribute
++Miller’s human contribution to AI.
++
++\medskip
++Codex’s corrections (August 2026), the scan-check proposals by GPT-6.1 Sol
++(OpenAI API, maximum reasoning effort, 12 November 2026), and this edition’s
++corrections are AI-produced corrections. Restored French passages are
++AI-transcribed, and their new English translations are AI-translated.
++The second scan check, adjudication, restoration, bilingual alignment and
++this build are by GPT-6 Astra (OpenAI, ChatGPT Pro mode).
++Additional English translation is AI-translated; subsequent corrections,
++editing, reconstruction and typesetting are AI-produced. The
++source-specific human credits and genuine third-party notices remain
++applicable; attribution does not establish permission or endorsement.
++
++\medskip
++The rights in the original work belong to its author or the author's representatives or heirs.
++Where we hold rights, in the AI-produced transcription, translation, corrections and typesetting, they are
++dedicated to the public domain under CC0 1.0. This edition is published for educational, non-profit purposes,
++and we claim no rights we do not hold. If you hold rights in this work and object to its publication here,
++please open a GitHub issue and we will take it down.
++
++\chapter*{Preface to this form}
++This form gives the corrected text without an apparatus or notes
++by the editors of this edition. Daniel Miller’s typesetter’s note is
++omitted; the authors’ notes, original summaries and bibliographies are
++retained. Original page numbers appear only in the margin.
++
++The photographed title and copyright pages are not reproduced; their
++bibliographic information is supplied above with the present rights
++notice. The original unnumbered general contents are retained. The
++accompanying audit records document the scan check, variants and source
++differences.
++
++\ifnum\EditionIsMaster=1\relax
++This master contains both readings of every variant; its PDF displays the corrected form with apparatus.
++\fi
++
+ \clearpage
++
++\fi

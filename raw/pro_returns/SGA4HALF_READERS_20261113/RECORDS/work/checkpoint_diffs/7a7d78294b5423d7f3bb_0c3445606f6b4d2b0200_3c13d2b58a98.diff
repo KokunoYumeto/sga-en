@@ -1,0 +1,38 @@
+--- checkpoint/work/rapport_cycle/build_components.py
++++ SGA4HALF_READERS_RECORDS.zip/work/rapport_cycle/build_components.py
+@@ -45,7 +45,7 @@
+  for d in DEC:
+   n=int(d['printed_page'])
+   if comp(n)!=c or d['verdict']=='rejected' or d['kind'] in ['misprint_in_print','marker']:continue
+-  if d['id'] in ['S45-SOL-0335','S45-SOL-0358']:
++  if d['id'] in ['S45-SOL-0335','S45-SOL-0344','S45-SOL-0358']:
+    log.append(dict(id=d['id'],page=str(n),status='already repaired in Codex base',before=d['fix_old'],after=d['fix_new']));continue
+   old,new=d['fix_old'],d['fix_new']
+   if d['id'] in raw:
+@@ -58,11 +58,11 @@
+  for d in EXTRA:
+   n=int(d['page'])
+   if comp(n)!=c:continue
+-  text=replace(text,d['old'],d['new'],n,d['id'],log,multiple=d['id'] in ['S45-ASTRA-R-0004','S45-ASTRA-R-0005','S45-ASTRA-R-0008','S45-ASTRA-R-0016','S45-ASTRA-R-0017'])
++  text=replace(text,d['old'],d['new'],n,d['id'],log,multiple=d.get('multiple',False) or d['id'] in ['S45-ASTRA-R-0004','S45-ASTRA-R-0005','S45-ASTRA-R-0008','S45-ASTRA-R-0016','S45-ASTRA-R-0017'])
+  for d in VAR:
+   n=int(d['page'])
+   if comp(n)!=c or d.get('embedded'):continue
+-  after='\\var{'+d['printed']+'}{'+d['corrected']+'}{'+d['id']+'}'
++  after=d.get('prefix','')+'\\var{'+d['printed']+'}{'+d['corrected']+'}{'+d['id']+'}'+d.get('suffix','')
+   text=replace(text,d['old'],after,n,d['id'],log)
+  supplement=OUT/f'supplement_fr_{c}.json'
+  if supplement.exists():
+@@ -95,8 +95,11 @@
+   log.append(dict(id=d['id'],page=str(d['page']),status='applied',before=old,after=new,occurrences=len(ms),ai_translated=d.get('ai_translated',False)))
+  for v in VAR:
+   if comp(int(v['page']))!=c or not v.get('en_old'):continue
+-  old=v['en_old'];new='\\var{'+v['printed_en']+'}{'+v['corrected_en']+'}{'+v['id']+'}'
++  old=v['en_old'];new=v.get('en_prefix','')+'\\var{'+v['printed_en']+'}{'+v['corrected_en']+'}{'+v['id']+'}'+v.get('en_suffix','')
+   ms=matches(text,old)
++  if v.get('en_anchor'):
++   anchors=matches(text,v['en_anchor'])
++   ms=[m for m in ms if len(anchors)==1 and m.start()>anchors[0].end()][:1]
+   if len(ms)!=1:log.append(dict(id=v['id'],page=v['page'],status='variant unmatched' if not ms else 'variant ambiguous',before=old));continue
+   m=ms[0];text=text[:m.start()]+new+text[m.end():]
+   log.append(dict(id=v['id'],page=v['page'],status='variant applied',before=old,after=new))

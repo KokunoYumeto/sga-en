@@ -1,0 +1,10 @@
+--- checkpoint/scripts/checkpoint.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/checkpoint.py
+@@ -22,6 +22,7 @@
+ for owner in owners+['common','records','build','glossary','verification','tex_infrastructure_test','reproducibility']:
+     include.extend(p for p in (ROOT/'work'/owner).rglob('*') if p.is_file() and p.suffix in {'.json','.jsonl','.tsv','.csv','.tex','.py','.md','.txt','.sty','.bib'} and '__pycache__' not in p.parts)
+ include.append(ROOT/'work/manifest_verification.json')
++include.append(ROOT/'requirements-rebuild.txt')
+ for folder in ['deliverables']:
+     include.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and p.suffix in {'.tex','.pdf','.md','.tsv','.json','.py','.sty','.bib','.sh'} and '__pycache__' not in p.parts)
+ privacy_failures=[]

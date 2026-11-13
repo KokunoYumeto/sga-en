@@ -1,0 +1,506 @@
+
+=== 173 ===
+
+Cela résulte de la définition de $\chi(T)$, pour $T$ un torseur, joint 
+    à \eqref{VI:eq:1-3-1} pour \eqref{VI:eq:1-7-1}. 
+  \item Pour $g_0:Y_0\to X_0$ un morphisme, on a 
+    \begin{equation*}\tag{1.7.3}\label{VI:eq:1-7-3}
+      \sF(\chi,f_0\circ g_0) = g_0^\ast \sF(\chi,f_0) \text{.}
+    \end{equation*}
+    En particulier, $\sF(\chi,f_0) = f_0^\ast \sF(\chi)$, où $\sF(\chi)$ 
+    désigne $\sF(\chi,\operatorname{id}_{G_0})$, 
+  \item Pour $u_0:G_0\to H_0$ un morphisme, et 
+    $\chi:H_0(\dF_q) \to E_\lambda^\ast$, on a 
+    \begin{equation*}\tag{1.7.4}\label{VI:eq:1-7-4}
+      \sF(\chi,u_0 f_0) = \sF(\chi u_0,f_0) \text{.}
+    \end{equation*}
+  \item Pour $G_0=\prod_{i\in I} G_0^i$, $\chi$ de coordonnées $\chi_i$ 
+    ($i\in I$) et $f_0$ de coordonnées $f_0^i$, il résulte de 
+    \eqref{VI:eq:1-7-1} à \eqref{VI:eq:1-7-4} que 
+    \begin{equation*}\tag{1.7.5}\label{VI:eq:1-7-5}
+      \sF(\chi,f_0) = \bigotimes_{i\in I} \sF(\chi_i,f_0^i) \text{.}
+    \end{equation*}    
+\end{enumerate}
+
+Noter le $\chi^{-1}$ dans la définition \ref{VI:1-7}. Il assure que, pour 
+$x\in X^F$, on ait sur $\sF(\chi,f_0)_x$ 
+\begin{equation*}\tag{1.7.6}\label{VI:eq:1-7-6}
+  F_x^\ast = \chi f_0(x)
+\end{equation*}
+(utiliser que la fibre en $x$ du morphisme \eqref{VI:eq:1-2-2}, pour 
+$\rho=\chi^{-1}$, commute à $F_x^\ast$, et \eqref{VI:eq:1-5-1}). 
+
+Si $\sF(\chi,f_0)_1$ est le faisceau déduit de $\sF(\chi,f_0)$ par extension 
+du corps de base à $\dF_{q^n}$, on déduit de \eqref{VI:eq:1-6-2} que 
+\begin{equation*}\tag{1.7.7}\label{VI:eq:1-7-7}
+  \sF(\chi,f_0)_1 = \sF(\chi\circ N,f_1) \text{.}
+\end{equation*}
+
+
+
+
+
+\subsection{Abus de notations}\label{VI:1-8}
+
+(i) Si $\Xi$ est une notation pour l'application composée 
+$\chi f_0:X_0(\dF_q) \to E_\lambda^\ast$, on écrira parfois $\sF(\Xi)$ au 
+lieu de $\sF(\chi,f_0)$. Grâce à \eqref{VI:eq:1-7-1} à \eqref{VI:eq:1-7-5}, 
+on ne risque guère d'ambiguïté. Par exemple:
+\begin{enumerate}[a)]
+  \item on écrit $\sF(\chi)$ pour $\sF(\chi,\operatorname{id}_{G_0})$ 
+    (notation déjà utilisée en \ref{VI:1-7}b)); 
+  \item on écrit $\sF(\chi f_0)$ pour $\sF(\chi,f_0)$;
+  \item avec les notations de \ref{VI:1-7}d), on écrit 
+    $\sF(\prod \chi_i f_0^i)$ pour $\sF(\chi,f)$. 
+\end{enumerate}
+
+
+=== 179 ===
+
+\[
+      \h_c^{2n}(S,\sF) \simeq (\sF_u)_{\pi_1(U,u)}(-2n) \text{.}
+    \]
+  \item Ces remarques permettent souvent le calcul de $b_0$ et $b_{2n}$. 
+    Calculer les autres $b_i$ peut être difficile. Si $b_{2n}=0$ et que 
+    $b_{2n-1}\ne 0$, la majoration \eqref{VI:eq:1-17-1} est une majoration à la 
+    Lang-Weil, avec, pour $q$ grand, un gain en $\sqrt q$ par rapport à la 
+    majoration triviale en $O(q^n)$. On prendra toutefois garde que la 
+    majoration \eqref{VI:eq:1-17-1} n'implique pas formellement la majoration 
+    triviale 
+    \[
+      \left|\sum_{s\in S_0(\dF_q)} \prod_i \chi_i(f^i(s))\right| \leqslant \left| S_0(\dF_q)\right| \text{,}
+    \]
+    dont il peut être utile de tenir compte (cf. la preuve de \ref{VI:3-8}). 
+\end{enumerate}
+
+J'explique ci-dessous une méthode pour prouver que $b_i=0$ pour $i\ne n$. 
+Quand elle s'applique, elle fournit une estimation en $O(q^{n/2})$. La constante 
+implicite dans $O$ est $b_n=(-1)^n \chi(S,\sF(\prod \chi_i f^i))$ et peut 
+être difficile à calculer. 
+
+
+
+
+
+\begin{proposition_}\label{VI:1-19}
+Soient $\bar X$ un schéma propre sur un corps alg\'ebriquement clos $k$, 
+$j:X\hookrightarrow \bar X$ un ouvert de $X$ et $\sF$ un $E_\lambda$-faisceau 
+sur $X$. On suppose que 
+\begin{enumerate}[\indent a)]
+  \item $(j_\ast\sF)_x = 0$ pour $x\in \bar X\setminus X$, i.e. 
+    $j_!\sF\iso j_\ast\sF$; 
+  \item $\eR^i j_\ast \sF = 0$ pour $i>0$.
+\end{enumerate}
+Alors, les applications 
+\[
+  \h_c^i(X,\sF) \to \h^i(X,\sF)
+\]
+sont des isomorphismes. 
+\end{proposition_}
+
+Les hypothèses a) b) signifient que $j_! \sF \iso \eR j_\ast \sF$, d'où 
+\[
+  \h_c^i(X,\sF) = \h^i(\bar X,j_!\sF) \iso \hh^i(\bar X,\eR j_\ast \sF) = \h^i(X,\sF) \text{.}
+\]
+Autrement dit, la suite spectrale de Leray pour $j$ 
+\[
+  E_2^{pq} = \h^p(\bar X,\eR^q j_\ast \sF) \Rightarrow \h^{p+q}(X,\sF) 
+\]
+dégénère, par b) en des isomorphismes 
+
+=== 187 ===
+
+\begin{align*}
+  \sum_{a\in A}\chi(a) = \sum_{a\in A} \chi(x a) &= \chi(x) \sum_{a\in A} \chi(a) && \text{, d'où} \\
+  (\chi(x)-1)\sum_{a\in A}\chi(a) &= 0 \text{,}
+\end{align*}
+et il existe par hypothèse $x$ tel que $\chi(x)-1\ne 0$. 
+
+
+
+
+
+\begin{theorem*}[2.7*]\label{VI:2-7*}
+Soient $G_0$ un groupe algébrique commutatif connexe sur $\dF_q$ et 
+$\chi:G_0(\dF_q) \to E_\lambda^\ast$ un caractère non trivial. On a 
+\begin{align*}\tag{2.7.1*}\label{VI:eq:2-7-1*}
+  \h_c^\bullet(G,\sF(\chi)) = 0 \text{.}
+\end{align*}
+\end{theorem*}
+
+Pour $x$ un point rationnel de $G$, notons $t_x$ la translation $t_x(g) = x g$ 
+de $G$. La formule $\fL t_x = t_{\fL(x)} \fL$ exprime que $(t_x,t_{\fL(x)})$ 
+est un automorphisme du diagramme $G\xrightarrow\fL G$ ($G$ muni du torseur de 
+Lang). Soit $\rho(g)$ l'automorphisme de $(G,\sF(\chi))$ qui s'en déduit. 
+Pour $g\in G_0(\dF_q)$, i.e. pour $\fL(g) = e$, c'est l'identité sur $G$, et 
+la multiplication par $\chi(g)^{-1}$ sur $\sF(\chi)$. 
+
+Notons $\rho_H(g)$ l'automorphisme de $\h_c^\bullet(G,\sF(\chi))$ déduit de 
+$\rho(g)$. Un argument d'homotopie (Lemme \ref{VI:2-8} ci-dessous) montre que 
+$\rho_H(g) = \rho_H(e)$, donc est l'identité. D'autre part, pour 
+$g\in G_0(\dF_q)$, $\rho_H(g)$ est la multiplication par 
+$(\chi^{-1}(g):\text{ sur }\h^\bullet(G,\sF(\chi))$, la multiplication par 
+$(\chi^{-1}(g)-1)$ est nulle. Prenant $g$ tel que $\chi(g)\ne 1$, on obtient 
+\ref{VI:2-7*}. 
+
+
+
+
+
+\begin{lemma_}\label{VI:2-8}
+Soient $X$ et $Y$ deux schémas sur $k$ algébriquement clos, avec $X$ 
+séparé de type fini et $Y$ connexe. Soient $\sF$ un faisceau sur $X$ et 
+$(\rho,\varepsilon)$ une famille d'endomorphismes de $(X,\sF)$ paramétrée 
+par $Y$: 
+\begin{align*} 
+  \rho:Y\times_k X &\to Y\times_k X && \text{est un $Y$-morphisme, et} \\
+  \varepsilon:\rho^\ast \pr_2^\ast \sF &\to \pr_2^\ast\sF && \text{un morphisme de faisceaux.} 
+\end{align*}
+On suppose que $\rho$ est propre. Pour $y\in Y(k)$, soit $\rho_H(y)^\ast$ 
+l'endomorphisme de $\h_c^\bullet(X,\sF)$ induit par $\rho_y:X\to X$ et 
+$\varepsilon_y:\rho_y^\ast\sF\to \sF$. Alors, $\rho_H(y)^\ast$ est 
+indépendant de $y$. 
+\end{lemma_}
+
+En effet, $\eR^p \pr_{1!} \pr_2^\ast\sF$ est le 
+faisceau constant sur $Y$ de valeur 
+=== 191 ===
+
+\begin{equation*}\tag{3.5.1}\label{VI:eq:3-5-1}
+      S_f = \sum'_{x\in X_0(\dF_q)} \psi(f(x)) \text{,}
+    \end{equation*}
+    où $\prime$ indique que la somme est étendue aux $x$ tels que 
+    $v_x^\ast(f)=0$. 
+\end{enumerate}
+
+On a $S_f=S_{f+g^p-g}$. On se propose de vérifier que si $f$ n'est pas de la 
+forme $g^p-g+c^{t e}$, alors 
+\begin{equation*}\tag{3.5.2}\label{VI:eq:3-5-2}
+  |S_f|\leqslant \left(2 g-2+\sum_{v_x^\ast(f)\ne 0} [k(x):\dF_q] (1+v_x^\ast(f))\right) q^{1/2} \text{.}
+\end{equation*}
+
+On commence par passer du complexe au $\ell$-adique, en remplaçant $\psi$ par 
+un caractère de la forme $\psi_0\circ \tr_{\dF_q/\dF_p}$, avec 
+$\psi_0:\dF_p\hookrightarrow E_\lambda^\ast$. Pour $j:U_0\hookrightarrow X_0$ 
+l'inclusion de l'ouvert où $f\ne\infty$, on prouve alors que 
+\begin{equation*}\tag{3.5.3}\label{VI:eq:3-5-3}
+  S_f = \sum (-1)^i \tr(F^\ast,\h^i(X,j_\ast \sF(\psi f))) \text{.} 
+\end{equation*}
+
+La formule des traces ramène cet énoncé aux suivants (pour 
+$x\in X_0(\dF_q)$): 
+\begin{enumerate}[\indent a)]
+  \item Si $v_x^\ast(f)=0$, alors $F_x^\ast$ sur $j_\ast \sF(\psi f)$ est 
+    $\psi(f(x))$; 
+  \item Si $v_x^\ast(f)\ne 0$, alors $j_\ast \sF(\psi f)$ se ramifie en $x$: 
+    $(j_\ast \sF(\psi f))_{\bar x}=0$. 
+\end{enumerate}
+
+La formule a) résulte de \eqref{VI:eq:1-7-6} si $v_x(f)=0$, et on se ramène 
+à ce cas en remplaçant $f$ par $f+g^p-g$: à isomorphisme près, ceci ne 
+change pas $\sF(\psi f)_0$ sur l'ouvert où $f$ et $g$ sont réguliers 
+(\ref{VI:1-3}). 
+
+La formule b) résulte de 
+\begin{equation*}\tag{3.5.4}\label{VI:eq:3-5-4}
+  \swan_x \sF(f,\psi) = v_x^\ast(f) \text{.} 
+\end{equation*}
+Après réduction au cas où $v_x(f)=v_x^\ast(f)$ (d'où $p\nmid v_x(f)$) 
+et extension des scalaires à $\dF$, cette formule est dans 
+(J.P.~Serre, Sur les corps locaux à corps résiduel algébriquement clos, Bull.~SMF \textbf{89} (1961), p.~105--154, n\textsuperscript{o}4.4) \cite[4.4]{se61}. 
+
+Enfin, on vérifie que le faisceau $\sF(\psi f)$ sur $U$ est non constant si 
+$f$ n'est pas de la forme $g^p-g+c^{t e}$: puisque $\psi_0$ est injectif, la 
+trivialité de $\sF(\psi f)=\sF(\psi_0 f)$ (\ref{VI:1-8}.ii) équivaut à 
+celle du $\dF_p$-torseur d'équation $T^p-T-f=0$ sur $U$. S'il était trivial, 
+le torseur sur $U_0$ de même équation 
+=== 192 ===
+
+serait l'image réciproque d'un 
+$\dF_q$-torseur sur $\spec(\dF_q)$, d'équation $T^p-T-\lambda=0$, le 
+$\dF_p$-torseur d'équation $T^p-T-(f-\lambda)=0$ sur $U_0$ serait trivial 
+et $f$ serait donc de la forme $g^p-g+\lambda$. Les 
+$\h^i(X,j_\ast \sF(\psi f))$ sont donc nuls pour $i\ne 1$, la formule 
+\eqref{VI:eq:3-5-3} se réduit à 
+\begin{equation*}\tag{3.5.5}\label{VI:eq:3-5-5}
+  S_f = -\tr(F^\ast,\h^1(X,j_\ast \sF(\psi f))) 
+\end{equation*}
+et, d'après \eqref{VI:eq:3-2-1} et \eqref{VI:eq:3-5-4}, $\h^1$ est de 
+dimension $2 g-2+\sum_{v_x^\ast(f)>0} [k(x):\dF_q](1+v_x^\ast(f))$ et $-S_f$ 
+est somme de ce nombre de valeurs propres de $F^\ast$, chacune de valeurs 
+absolues complexes $q^{1/2}$. 
+
+
+
+
+
+\subsection{}\label{VI:3-6}
+
+Supposons que, pour un automorphisme $\sigma$ de $X_0$, on ait 
+\[
+  f(\sigma x) = - f(x) \text{.} 
+\]
+La somme $S_f$ est alors réelle. Si $\sigma$ est involutif, la dualité de 
+Poincaré permet de dire un peu plus: si on pose 
+$\sF_0=j_\ast \sF(\psi f)$, $\sG_0 = j_\ast \sF(\psi(-f))$, on a 
+\begin{enumerate}[\indent a)]
+  \item $\sF_0$ et $\sG_0$ sont en dualité, 
+  \item $\sigma^\ast \sF_0 \iso \sG_0$ et $\sigma^\ast \sG_0 \iso \sF_0$, pour 
+    des isomorphismes naturels tels que le composé 
+    $\sF_0=(\sigma^2)^\ast \sF_0 \iso \sigma^\ast \sG_0 \iso \sF_0$ soit 
+    l'identité. 
+  \item L'accouplement $\sF_0\otimes \sG_0 \to E_\lambda$ vérifie 
+    $\sigma^\ast(f\cdot g) = \sigma^\ast(f) \cdot \sigma^\ast (g)$. 
+\end{enumerate} 
+
+Passant à la cohomologie, on trouve que $\h^1(X,\sF)$ et $\h^1(X,\sG)$ sont en 
+dualité parfaite à valeur dans $E_\lambda(1)$, et que la forme bilinéaire 
+$\alpha\cdot \sigma^\ast\beta$ sur $\h^1(X,\sF)$ est \emph{alternée}: 
+$\sigma^\ast$ agit trivialement sur $E_\lambda(1)$, et 
+\[
+  \alpha\cdot \sigma^\ast \beta = \sigma^\ast(\alpha\cdot \sigma^\ast \beta) = \sigma^\ast \alpha\cdot \beta = -\beta\cdot \sigma^\ast \alpha \text{.} 
+\]
+On en conclut que $\h^1(X,\sF)$ est de dimension paire (on vérifie d'ailleurs 
+facilement que chaque $v_x^\ast(f)$ non nul est impair) et que les valeurs 
+propres de $F^\ast$ sur $\h^1(X,\sF)$ sont groupées en paires $\alpha$ et 
+$q/\alpha$. 
+
+
+
+
+
+
+=== 208 ===
+
+\section{Caractères de Hecke}\label{VI:5}
+
+
+
+
+
+\subsection{}\label{VI:5-1}
+
+Soient $F$ un corps de nombres (de degré fini sur $\dQ$) et $k$ un corps de 
+caractéristique $0$. Voici diverses façon équivalentes de dire ce qu'est un 
+homomorphisme \emph{algébrique} $\alpha:F^\ast \to k^\ast$. 
+\begin{enumerate}[(i)]
+  \item Soit $e_i$ une base de $F$ sur $\dQ$. L'homomorphisme $\alpha$ est 
+    algébrique s'il est donné par une formule 
+    $\alpha(\sum x^i e_i) = A(x^i)$, où $A\in k(X^i)$. 
+\end{enumerate}
+
+Ceci signifie que $\alpha$ coïncide sur $F^\ast$ avec une application 
+rationnelle définie sur $k$ de $\res_{F/\dQ}(\dG_m)$ dans $\dG_m$. Par 
+densité de Zariski de $F^\ast$, et le fait qu'un homomorphisme birationnel 
+est partout défini, une telle application est un homomorphisme de schémas 
+en groupes: 
+\begin{enumerate}[(i)]
+\setcounter{enumi}{1}
+  \item $\alpha$ est induit par un homomorphisme de $k$-schémas en groupes 
+    \[
+      \res_{F/\dQ}(\dG_m)\otimes_\dQ k \to \dG_m \text{.} 
+    \] 
+\end{enumerate}
+
+Si $k$ est un corps de nombre, la propriété d'adjonction de la restriction 
+des scalaires $R$ montre que ceci équivaut à 
+\begin{enumerate}[(i)]
+\setcounter{enumi}{2}
+  \item ($k$ corps de nombres) $\alpha$ est induit par un homomorphisme de 
+    $\dQ$-schémas en groupes: $\res_{F/\dQ}(\dG_m) \to \res_{k/\dQ}(\dG_m)$. 
+\end{enumerate}
+
+Soient $\bar k$ une clôture algébrique de $k$, et $I=\hom(F,\bar k)$. Sur 
+$\bar k$, le groupe des caractères de $\res_{F/\dQ}(\dG_m)$ est $\dZ^I$, de 
+base les plongements de $F$ dans $\bar k$. Les caractères définis sur $k$ 
+sont ceux invariants par $\gal(\bar k/k)$; on peut les décrire soit comme 
+ceux envoyant $F^\ast$ dans $k^\ast\subset \bar k$, soit en terme des 
+orbites de $\gal(\bar k/k)$ dans $I$, correspondant elle-même aux facteurs de 
+$F\otimes k$. 
+\begin{enumerate}[(i)]
+\setcounter{enumi}{3}
+  \item $\alpha$ est de la forme 
+    $\alpha=\prod_{\omega\in I} \omega^{n_\omega}$. Les familles d'exposants 
+    $(n_\omega)$ permises sont celles telles que $n_\omega=n_{\omega'}$ pour 
+    $\omega$ et $\omega'$ dans la même orbite de $\gal(\bar k/k)$. Ce sont 
+    encore celles telle que $\prod_\omega \omega(x)^{n_\omega}\in k$ pour tout 
+    $x\in F$. 
+  
+=== 215 ===
+
+contenant $\beta$ et 
+    $d_\beta=d_{\alpha(\beta)}$. Soit 
+    \[\xymatrix{
+      \lambda_\beta : \mu_{d_\beta}(e_\beta) 
+        & \ar[l]_-\sim \mu_{d_\beta}(E_{\alpha(\beta)}) \ar[r]^-{\lambda_{d(\beta)}} 
+        & k^\ast \text{.} 
+    }\]
+  \item Si $i\in I$ correspond au plongement $\sigma_i$ de $e_\beta$ dans 
+    $\bar f$, la réduction 
+    $_{d_\beta} \bar\lambda_i:\mu_{d_\beta}(\bar f) \to k^\ast$ de 
+    $_{d_\beta} \lambda_i$ est 
+    $\lambda_\beta \circ \sigma_i^{-1}$. 
+\end{enumerate}
+
+Soient $q_\beta$ le nombre d'éléments de $e_\beta$, 
+$\chi_\beta={}_{q_\beta-1}\lambda_\beta$, et 
+$\chi:e^\ast \to k^\ast$ de coordonnées les $\chi_\beta$. Sur l'espace 
+affine sur $A/\fp$ défini par $e$ (\ref{VI:4-6}), ou plutôt sur le tore 
+$e_\beta^\ast$, on a des isomorphismes 
+$\sK_n((_n\bar\lambda_i)_{i\in\beta}) = \sK_{d_\beta}((\lambda_\beta \circ \sigma_i^{-1})_{i\in\beta}) =\sK_{q_\beta-1}((\chi_\beta\circ \sigma_i^{-1})_{i\in I}) = \sF(\chi_\beta)$ (\ref{VI:4-9}). 
+Sur $e^\ast$, on a donc $\sK_n((_n\bar\lambda_i)_{i\in \beta}) = \sF(\chi)$ 
+et cet isomorphisme se descend à la réduction mod $\fp$ de $V^\ast/\dG_m$. 
+Dès lors
+
+
+
+
+
+\begin{proposition_}\label{VI:6-4}
+Avec les notations de \ref{VI:6-2} et \ref{VI:6-3}, $j_\mu(F_\fp)$ est la 
+somme de Jacobi $J(\chi)$. 
+\end{proposition_}
+
+Récrivons les formules liant $(\lambda_i)_{i\in I}$ à 
+$(\chi_\beta)_{\beta\in B}$: pour $i\in \beta\subset \alpha$, 
+\begin{align*}
+  _{d_\alpha} \lambda_i &= \lambda_\alpha\circ \sigma_i^{-1} && \lambda_\alpha:\mu_{d_\alpha}(E_\alpha) \to k^\ast \\
+  \lambda_\beta &= \text{réduction de $\lambda_\alpha$} && :\mu_{d_\alpha}(e_\beta) \to k^\ast \\
+  \chi_\beta &= {}_{q_\beta-1}\lambda_\beta: x\mapsto \lambda_\beta(x^{(q_\beta-1)/d_\alpha}) && :e_\beta^\ast \to k^\ast 
+\end{align*}
+
+
+
+
+
+\begin{theorem_}\label{VI:6-5}
+La représentation $j_\mu$ est définie par un caractère de Hecke 
+algébrique de $F$ à valeurs dans $k^\ast$. 
+\end{theorem_}
+
+Nous le vérifierons à l'aide de \ref{VI:5-10}. On rejoint ici la 
+démonstration de Weil \cite{we52,we74-2}, par l'usage du théorème de 
+Stickelberger, et je ne donnerai que quelques indications. 
+
+
+
+
+
+\subsection{}\label{VI:6-6}
+
+Etant donné $j:\gal(\bar F/F) \to k_\lambda^\ast$, et une extension finie 
+$F'/F$, on vérifie à l'aide de \ref{VI:5-10} que $j$ est défini par un 
+caractère de Hecke si et seulement si $j|\gal(\bar F/F')$ l'est. Cette 
+remarque permet dans \ref{VI:6-5} de se réduire au cas où Galois agit 
+trivialement sur $I$, et où $F$ contient les racines $n$-ièmes de 
+
+=== 227 ===
+
+La puissance tensorielle seconde de $\h_c^1(V_a^1,\sF(\psi\sigma))$ est 
+$\h_c^2(V_a^1\times V_a^1,\sF(\psi\sigma)\boxtimes \sF(\psi\sigma))$ 
+(K\"unneth), la symétrie $x\otimes y\to y\otimes x$ se représentant 
+géométriquement comme $-\tau^\ast$, où $\tau$ est l'automorphisme 
+$(x,y)\to (y,x)$ de $V_a\times V_a$. Si $X'$ est le quotient de 
+$V_a^1\times V_a^1$ par $\{\operatorname{id}{},\tau\}$ et $\pi$ la 
+projection de $V_a^1\times V_a^1$ sur $X'$, le groupe 
+$\operatorname{Sym}^2 \h_c^1(V_a^1,\sF(\psi\sigma))$ s'identifie donc à la 
+cohomologie de $X'$ à coefficient dans la partie antiinvariante par $\tau$ de 
+$\pi_\ast(\sF(\psi\sigma)\boxtimes \sF(\psi\sigma))$. Notons $s$ la fonction 
+sur $X'$ telle que $s\pi =\sigma\pr_1+\sigma\pr_2$. On a 
+$\sF(\psi\sigma)\boxtimes \sF(\psi\sigma) = \sF(\psi(\sigma\pr_1+\sigma\pr_2)) = \sF(\psi s \pi) = \pi^\ast \sF(\psi s)$ 
+(isomorphisme compatible à $\tau$). Sur l'image $\pi(\Delta)$ de la 
+diagonale, le faisceau d'antiinvariants cherchés est donc nul, tandis que sur 
+le complément $X=X'\setminus \pi(\Delta)$, c'est le produit tensoriel de 
+$\sF(\psi s)$ par $\varepsilon(P)$, pour $\varepsilon$ l'unique caractère 
+d'ordre $2$ de $\{1,\tau\}$, et $P$ le $\{1,\tau\}$-torseur sur $X$ qu'est le 
+revêtement double induit par $V_a^1\times V_a^1$. On a 
+\begin{equation*}\tag{7.17.1}\label{VI:eq:7-17-1}
+  \operatorname{Sym}^2 \h_c^1(V_a^1,\sF(\psi\sigma)) = \h_c^2(X,\sF(\psi s)\otimes \varepsilon(P)) \text{.}
+\end{equation*}
+
+Calculons $X$, $s$ et $\varepsilon(P)$. Sur $V_a^1\times V_a^1$, posons 
+$x_1=x_1\circ\pr_1$, $x_2=x_2\circ\pr_1$, $x_1'=x_1\circ \pr_2$, 
+$x_2'=x_2\circ \pr_1$. On a $x_1 x_2=x_1'x_2'=a$. Identifions fonctions sur 
+$X'$ et fonctions sur $X$ invariante par $\tau$. Soient $s_1=x_1+x_1'$, 
+$s_2=x_2+x_2'$, $p_1=x_1 x_1'$, $p_2=x_2 x_2'$. On a $s_1 p_2 = a s_2$, 
+$s_2 p_1 = a s_1$ et $X$ est défini dans $X'$ par $s_1\ne 0$, $s_2\ne 0$. Sur 
+$X$, on a donc $p_1 = a s_1 s_2^{-1}$, et $(s_1,s_2)$ identifie $X$ à 
+$\dG_m\times \dG_m$. Sur $X$, le revêtement $P$ admet pour équation 
+$T^2-s_1 T+a s_1 s_2^{-1}$ (prendre pour $T$ la coordonnée $x_1$). Si 
+$T=s_1 t$, cela se récrit $t^2-t+a s_1^{-1} s_2^{-1}$. On a donc 
+$\varepsilon(P) = \sF(\psi(a s_1^{-1} s_2^{-1}))$. Puisque $s=s_1+s_2$, on a 
+$\sF(\psi s)\otimes \varepsilon(P) = \sF(\psi(s_1+s_2+ a s_1^{-1} s_2^{-1}))$ 
+et le second membre de \eqref{VI:eq:7-17-1} s'identifie au premier membre de 
+\ref{VI:7-17}. 
+
+
+\paragraph{Remarque}
+
+$\h_c^1(V_a^1,\sF(\psi\sigma))$ est aussi le premier groupe de cohomologie de 
+la courbe elliptique complétée de la courbe affine d'équation 
+\begin{align*}
+  y^2-y &= x_1+x_2 \\
+  x_1 x_2 &= a \text{;} 
+\end{align*}
+son invariant modulaire est $j=a^{-2}$. 
+
+
+
+
+
+
+=== 228 ===
+
+\subsection{Remarque}\label{VI:7-18}
+
+Pour $\chi$ un caractère multiplicatif de $\dF_q^\ast$, et $a\ne 0$, la 
+méthode de \ref{VI:7-14} s'applique à l'étude de la somme 
+\[
+  S = \sum_{x_0\dotsm x_n = a} \chi(x_0) \psi(x_0+\cdots + x_n) 
+\]
+(remplacer le faisceau $\sF(\psi)$ sur $\dG_m$ par $\sF(\chi\cdot \psi)$). On 
+trouve encore une cohomologie de dimension $n+1$, et 
+$|S|\leqslant (n+1)q^{n/2}$. De telles sommes ont été considérées par 
+Salié et Mordell (Mordell, Some exponential sums, Proc.~Int.~Conf.~on number theory, Moscow sept.~1971, p.~30--34) \cite{mo73}.
+
+On peut espérer que nos méthodes permettent aussi d'étudier les sommes 
+\[
+  S_{k,\chi,a} = \sum_{N(x)=a} \chi(x) \psi \tr(x) 
+\]
+($k$ algèbre étale sur $\dF_q$, $a\in \dF_q^\ast$, $\chi$ caractère de 
+$k^\ast$). L'analogue de \ref{VI:7-4} (pour $a\ne 0$) devrait être vrai. 
+
+
+
+
+
+\subsection{}\label{VI:7-19}
+
+Le groupe symétrique $\mathfrak{S}_n$ agit sur $\dA^n$ en respectant $V_a$ et 
+l'application $\sigma$, donc aussi le faisceau $\sF(\psi\sigma)$, image 
+réciproque par $\sigma$ du faisceau $\sF(\psi)$ sur $\dG_a$. Il s'agit donc 
+sur $\h_c^{n-1}(V_a,\sF(\psi\sigma))$. La formule \eqref{VI:eq:7-2-5} admet 
+l'interprétation cohomologique suivante
+
+
+
+
+
+\begin{proposition_}\label{VI:7-20}
+L'action de $\mathfrak{S}_n$ sur $\h_c^{n-1}(V_a,\sF(\psi\sigma))$ est la multiplication 
+par le caractère signe. 
+\end{proposition_}
+
+Ceci revient à montrer qu'une transposition $\tau$ agit par multiplication 
+par $-1$. Puisque $\tau^2=1$, $\tau$ ne peut avoir pour valeur propres que 
+$\pm 1$. Soit $V_a/\tau$ le quotient de $V_a$ pour 
+$\{\operatorname{id},\tau\}$. L'application $\sigma$, donc le faisceau 
+$\sF(\psi\sigma)$, passent au quotient, et le sous-espace de 
+$\h_c^{n-1}(V_a,\sF(\psi\sigma))$ fixe par 
+$\tau$ est $\h_c^{n-1}(V_a/\tau,\sF(\psi\sigma))$. Il nous faut prouver que 
+cette cohomologie est nulle. 
+
+Supposons que $a\ne 0$. Pour $\tau=(1,2)$ le quotient $V_a/\tau$ s'identifie 
+à $\dG_a\times \dG_m^{n-2}$, avec pour application de passage au quotient 
+$(x_1,x_2,x_3,\dots,x_n)\mapsto (x_1+x_2,x_3,\dots,x_n)$. En effet, $x_1$ et 
+$x_2$ sont déterminés 

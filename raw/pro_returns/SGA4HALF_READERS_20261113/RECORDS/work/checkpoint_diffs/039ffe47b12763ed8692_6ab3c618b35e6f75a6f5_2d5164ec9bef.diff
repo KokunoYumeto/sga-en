@@ -1,0 +1,15 @@
+--- checkpoint/scripts/compile_reader.py
++++ SGA4HALF_READERS_RECORDS.zip/scripts/compile_reader.py
+@@ -31,6 +31,12 @@
+     return env
+ 
+ def sanitize(s):
++    # pdfTeX wraps embedded font filenames across lines inside angle brackets.
++    # Redact the whole token before the ordinary single-line path filter.
++    def font_token(match):
++        compact=re.sub(r'\s+','',match.group())
++        return '<runtime font file>' if re.search(r'/(?:home|root|workspace|mnt|usr|var|etc|opt)/',compact) else match.group()
++    s=re.sub(r'<[^<>]*>',font_token,s,flags=re.S)
+     s=s.replace(str(ROOT),'[project]')
+     s=re.sub(r'(?:/(?:home|root|workspace|mnt|usr|var|etc|opt)/[^\s)\]<>]+)','[runtime file]',s)
+     s=re.sub(r'[A-Za-z]:\\Users\\[^\s]+','[private path omitted]',s)

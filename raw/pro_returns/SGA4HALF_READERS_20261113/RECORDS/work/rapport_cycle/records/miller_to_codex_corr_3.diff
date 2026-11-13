@@ -1,0 +1,217 @@
+--- fr/miller_src/sga4.5-3.tex
++++ fr/codex_corr/sga4.5-3.tex
+@@ -58,7 +58,7 @@
+ Pour $S=\spec(k)$, avec $k$ algébriquement clos, $X$ une somme finie de 
+ copies de $S$, et $G$ un faisceau plat de $A$-modules sur $X$, on a 
+ \[
+-  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}(\sG)\right) = \Gamma^n \Gamma(X,\sG)
++  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}^n(\sG)\right) = \Gamma^n \Gamma(X,\sG)
+ \]
+ \end{lemma_}
+ 
+@@ -186,8 +186,8 @@
+ les $\Gamma^i M'\otimes \Gamma^j M''$ ($i+j=n$). Dès lors, $\Gamma^n K$ admet 
+ une filtration naturelle, de quotients successifs les complexes 
+ $N(N^{-1} \Gamma^i K'\otimes N^{-1}\Gamma^j K'')$ ($i+j=n$), canoniquement 
+-homotopes aux complexes simples $s(\Gamma^i K'\otimes \Gamma^i K'')$ déduit 
+-des complexes doubles $\Gamma^i K'\otimes \Gamma^i K''$, et 
++homotopes aux complexes simples $s(\Gamma^i K'\otimes \Gamma^j K'')$ déduit 
++des complexes doubles $\Gamma^i K'\otimes \Gamma^j K''$, et 
+ \[
+   \tr(u,\Gamma^n K) = \sum_{i+j=n} \tr(u,\Gamma^i K')\cdot \tr(u,\Gamma^j K'') \text{,}
+ \]
+@@ -364,7 +364,7 @@
+ \begin{align*}
+   \det\left(1-F^* t, \eR\Gamma_c(X,\sK)\right) 
+     &= \prod_n \det\left(1-F^* t^f,\h_c^n(X,\sK)\right)^{(-1)^n} \\
+-    &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\sK))\right)^{(-1)^{p+1}} \text{.}
++    &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\sK))\right)^{(-1)^{p+q}} \text{.}
+ \end{align*}
+ Ceci ramène \ref{III:2-2} (pour $A$ un corps) au cas particulier suivant. 
+ 
+@@ -391,8 +391,8 @@
+ 
+ \subsection{Remarque}\label{III:2-6}
+ 
+-Le cas particulier de b) où $A=\dZ/p$, et où $X$ est réduit su faisceau 
+-constant $\dZ/p$ est degré $0$;
++Le cas particulier de b) où $A=\dZ/p$, et où $\sK$ est réduit au faisceau 
++constant $\dZ/p$ en degré $0$;
+ \[
+   Z(X_0,t) = \prod_{x\in |X_0|} \left(1-t^{\deg(x)}\right)^{-1}
+       \equiv \prod_n \det\left(1-F^* t^f,\h_c^n(X,\dZ/p)\right)^{(-1)^{n+1}} \pmod p
+@@ -455,7 +455,7 @@
+ 
+ D'après \ref{III:1-8}, on a 
+ \[
+-  L(X_0,\sK_0) = \prod_{x\in |X_0|} \sum_n \tr\left(F_x^*,\Gamma^n\sK\right) t^{m\deg(x)} \text{.}
++  L(X_0,\sK_0) = \prod_{x\in |X_0|} \sum_n \tr\left(F_x^*,\Gamma^n\sK\right) t^{n\deg(x)} \text{.}
+ \]
+ Le coefficient de $T^n$ est donc la somme, étendue à celles des 
+ combinaisons linéaires formelles $\sum_{x\in |X_0|} n_x\cdot x$ 
+@@ -536,7 +536,7 @@
+ 
+ 
+ 
+-\section{Théorie d'Artin-Scheier}\label{III:3}
++\section{Théorie d'Artin--Schreier}\label{III:3}
+ 
+ 
+ 
+@@ -550,7 +550,7 @@
+ $\dZ/p$-vectoriels de rang fini, $\sG=G\otimes_{\dZ/p}\sO$ est un faisceau 
+ cohérent localement libre sur $S$. On notera $\Phi$ tant l'endomorphisme 
+ $f\mapsto f^p$ de $\sO$ que son produit tensoriel avec l'identité de 
+-$G$: $\phi:\sG\to\sG$. La théorie d'Artin-Scheier \cite[IX 3.5]{sga4} 
++$G$: $\phi:\sG\to\sG$. La théorie d'Artin--Schreier \cite[IX 3.5]{sga4} 
+ affirme que la suite 
+ \[\xymatrix{
+   0 \ar[r] 
+@@ -600,12 +600,12 @@
+     & 0
+ }
+ \end{equation*}
+-ext exacte.
++est exacte.
+ \end{lemma_}
+ \begin{enumerate}[a)]
+   \item \emph{Existence}: Soit $\sG'\subset j_*\sG$ un prolongement cohérent 
+     de $\sG$ à $\bar S$. Pour tout $n$, on a 
+-    $\Phi(I^n \sG')\subset I^{p^n}\Phi(\sG')$. Soit $n$ assez grand pour 
++    $\Phi(I^n \sG')\subset I^{pn}\Phi(\sG')$. Soit $n$ assez grand pour 
+     que $I^{n(p-1)-1}\Phi(\sG')\subset \sG'$, et posons $\bar\sG=I^n\sG'$. 
+     On a $\Phi(\bar\sG)\subset I^{p n}\Phi(\sG') 
+     =I\cdot I^n\cdot I^{n(p-1)-1}\Phi(\sG')\subset I\cdot I^n\sG' 
+@@ -650,12 +650,12 @@
+ $F_\text{abs}^* U=U$: le diagramme 
+ \[\xymatrix{
+   U \ar[r]^-{F_\text{abs}} \ar[d] 
+-    & S \ar[d] \\
++    & U \ar[d] \\
+   S \ar[r]^-{F_\text{abs}} 
+     & S
+ }\]
+ est cartésien. L'endomorphisme de site annelé 
+-$(\et{\bar S},\sO)\to(\et{\bar S},\sO)$ défini par $F_\text{abs}$ peut donc 
++$(\et S,\sO)\to(\et S,\sO)$ défini par $F_\text{abs}$ peut donc 
+ être décrit comme suit:
+ \begin{center}
+   $F_\text{abs}^*$ est l'identité sur $\et S$; l'homomorphisme 
+@@ -699,24 +699,24 @@
+ Supposons maintenant que $\bar S$ soit un schéma sur $\dF_q$ ($q=p^f$) et 
+ conformément aux conventions de Rapport \S\ref{II:1}, écrivons 
+ $S_0,\bar S_0,G_0,\sG_0,\bar\sG_0$ au lieu de $S,\dots$. Le lemme 
+-\ref{III:3-5}, pour $F_\text{abs}^F:S_0\to S_0$, donne un diagramme commutatif 
++\ref{III:3-5}, pour $F_\text{abs}^f:S_0\to S_0$, donne un diagramme commutatif 
+ \[\xymatrix{
+   F^* G_0 \ar[r] \ar[d] 
+     & G_0 \ar[d] \\
+-  F^*\sG_0 \ar[r]^-{(\Phi^f)'} \ar[r] 
++  F^*\sG_0 \ar[r]^-{(\Phi^f)'} 
+     & \sG_0 
+ }\qquad\text{, puis}\qquad 
+ \xymatrix{
+   F^*(j_! G_0) \ar[r] \ar[d] 
+     & j_!G_0 \ar[d] \\
+   F^*\bar\sG_0 \ar[r]^-{(\Phi^f)'}
+-    & \sG_0
++    & \bar\sG_0
+ }\text{,}
+ \]
+ puis, par extension des scalaires de $\dF_q$ à $\dF$ et passage à la 
+ cohomologie 
+ \[\xymatrix{
+-  F^*(j_! G) \ar[r]^-{F_*} \ar[d] 
++  F^*(j_! G) \ar[r]^-{F^*} \ar[d] 
+     & j_!G \ar[d] \\
+   F^*\bar\sG \ar[r]
+     & \bar\sG
+@@ -730,9 +730,9 @@
+ \]
+ où la seconde ligne est obtenue par extension des scalaires de $\dF_q$ à 
+ $\dF$ de l'endomorphisme $\dF_q$-linéaire $\Phi^f$ de 
+-$\h^\bullet(\bar S_0,\bar G_0)$. 
+-
+-La théorie d'Artin-Scheier fournit une suite exacte longue 
++$\h^\bullet(\bar S_0,\bar\sG_0)$. 
++
++La théorie d'Artin--Schreier fournit une suite exacte longue 
+ \[\xymatrix{
+   \cdots \ar[r]
+     & \h^i(\bar S,j_! G) \ar[r]
+@@ -753,11 +753,11 @@
+ Si $\bar S_0$ est propre sur $\dF_q$, les $\h^i(\bar S,\bar\sG)$ sont de 
+ dimension finie et $\Phi-1$ est surjectif (cf. \ref{III:3-6}b). On a donc 
+ \[
+-  \h_c^i(S,G) = \ker\left(\Phi-1 : \h^i(\bar S,\bar G) \to \h^i(\bar S,\bar\sG)\right) \text{,}
++  \h_c^i(S,G) = \ker\left(\Phi-1 : \h^i(\bar S,\bar\sG) \to \h^i(\bar S,\bar\sG)\right) \text{,}
+ \]
+ et $F^*$ est induit par l'extension $\dF$-linéaire à 
+ $\h^i(\bar S,\bar\sG) = \h^i(\bar S_0,\bar\sG_0)\otimes_{\dF_q}\dF$ de 
+-l'endomorphisme $\dF_q$-linéaire $\Phi^f$ de $\h^i(\bar S_0m\bar\sG_0)$. 
++l'endomorphisme $\dF_q$-linéaire $\Phi^f$ de $\h^i(\bar S_0,\bar\sG_0)$. 
+ 
+ Appliquant le lemme \ref{III:3-8} ci-dessous, on en déduit l'identité 
+ \begin{equation*}\tag{3.7.1}\label{III:eq:3-7-1}
+@@ -784,12 +784,12 @@
+ inversible sur $V'$ et nilpotent sur $V''$. La théorie des endomorphismes 
+ $p$-linéaires assure que 
+ \[
+-  \ker(\Phi-1)\otimes_{\dF_q}\dF \iso V'\otimes_{\dF_q}\dF \text{.}
++  \ker(\Phi-1)\otimes_{\dF_p}\dF \iso V'\otimes_{\dF_q}\dF \text{.}
+ \]
+ Puisque $\tr(F,V'') = 0$, on a donc 
+ \begin{align*}
+   \tr\left(F,\ker(\Phi-1)\right) 
+-    &= \tr\left(F,\ker(\Phi-1)\otimes_{\dF_q}\dF\right) = \tr\left(F,V'\otimes_{\dF_q}\dF\right) \\
++    &= \tr\left(F,\ker(\Phi-1)\otimes_{\dF_p}\dF\right) = \tr\left(F,V'\otimes_{\dF_q}\dF\right) \\
+     &= \tr\left(F,V\otimes_{\dF_q}\dF\right) = \tr(F,V) \text{.}
+ \end{align*}
+ 
+@@ -904,13 +904,13 @@
+   \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(u F^*,\h^i(\bar S,\bar\sG)\right) \text{.}
+ \end{equation*}
+ 
+-%NOTE: trace down reference for Woodshole seminar
++%NOTE: trace down reference for Woods Hole seminar
+ Pour chaque point fermé $i_x:x\hookrightarrow \bar  S$ de $\bar S$, posons 
+ $\bar\sG_x = i_x^*\bar\sG$. La formule des traces de Lefschetz en cohomologie 
+-cohérente (``Woodshole fixed point formula''), appliqué à $F$ et $u$, dit 
++cohérente (``Woods Hole fixed point formula''), appliqué à $F$ et $u$, dit 
+ que 
+ \begin{equation*}\tag{4.4.4}\label{III:eq:4-4-4}
+-  \sum_i (-1)^i \tr\left(u^* F^*, \h^i(\bar S,\bar\sG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\sG_x)}{\det(1-d F_x)} \text{.}
++  \sum_i (-1)^i \tr\left(uF^*, \h^i(\bar S,\bar\sG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\bar\sG_x)}{\det(1-d F_x)} \text{.}
+ \end{equation*}
+ Au second membre
+ \begin{enumerate}[\indent a)]
+@@ -938,16 +938,16 @@
+ Soit $Y_0$ la courbe elliptique sur $\dF_2$ pour laquelle les valeurs propres 
+ de Frobenius sont $\pm \sqrt{-2}$. Elle a $3$ points rationnels, et est 
+ supersingulière. L'involution $\sigma:x\mapsto -x$ n'a donc qu'un seul point 
+-fixe, le point $0$. Le quotient de $Y_0$ par $\sigma$ est un droite projective; 
+-celui de $Y_0\setminus 0$ par $\sigma$ est donc une droite affine $\dF_0^1$, et 
+-$Y_0\setminus 0$ est un revêtement double non ramifié de $\dF_0^1$:
++fixe, le point $0$. Le quotient de $Y_0$ par $\sigma$ est une droite projective; 
++celui de $Y_0\setminus 0$ par $\sigma$ est donc une droite affine $\dA_0^1$, et 
++$Y_0\setminus 0$ est un revêtement double non ramifié de $\dA_0^1$:
+ \[
+   \pi:Y_0\setminus 0 \to \dA_0^1 \qquad \text{, $\pi=\pi\sigma$.}
+ \]
+ 
+ Le faisceau $\pi_*\dZ/2$ est un module libre de rang un sur l'algèbre $A$ du 
+ groupe à deux éléments $\{1,\sigma\}$ sur $\dZ/2$. Cette algèbre est 
+-isomorphe à celle des nombres sur $\dZ/2$. 
++isomorphe à celle des nombres duaux sur $\dZ/2$. 
+ 
+ Le faisceau de $A$-modules $\pi_*\dZ/2$ est notre exemple:
+ \begin{enumerate}[\indent a)]
+@@ -964,7 +964,7 @@
+       \tr_A\left(F^*,\eR\Gamma_c(\dA^1,\pi_*\dZ/2)\right) = 0 \text{.}
+     \]
+   \item Puisque $Y_0\setminus 0$ a deux points rationnels, en l'un des points 
+-    rationnels de $\dA_1^0$, la substitution de Frobenius est l'identité, et 
++    rationnels de $\dA_0^1$, la substitution de Frobenius est l'identité, et 
+     en l'autre, c'est $\sigma$. On a donc 
+     \[
+       \sum_{x\in {\dA^1}^F} \tr\left(F^*,\pi_*\dZ/2\right) = 1+\sigma \text{,}

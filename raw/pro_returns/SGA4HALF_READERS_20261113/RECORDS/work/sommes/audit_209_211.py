@@ -1,0 +1,17 @@
+from audit_helpers import *
+reasons={870:'The first sentence of 5.2 visibly prints dand, a misspelling of dans. Miller already silently corrects it; restore the printed form diplomatically.',871:'In tout idéal a une puissance, a is the verb avoir, printed as ordinary text. Miller incorrectly puts it in mathematics.',872:'The introduction visibly says appelés par Weil. Restore the omitted preposition.',874:'The source reads il suffit de voir que, not voire.',875:'The scan has l’ensemble des x totalement positif. The adjective modifies the plural x and requires positifs.',876:'The scanned congruence is abbreviated as ≡1(m), without the printed word mod. Preserve that exact notation at this occurrence.',877:'The print says On pour toujours prendre. The finite verb required is peut.',878:'The source visibly uses the feminine plural positives for unités.',879:'The restriction formula visibly uses F_1 twice, but its stated characterization concerns restriction of the CM character to its totally real subfield F_1 prime. Correct both field labels to F_1 prime.',880:'The scan explicitly qualifies the conjugates as complexes. Restore the omitted adjective.',881:'The phrase has idéaux fractionnaire in the print. The adjective must agree in the plural.',882:'The scan says the fractional-ideal group is sous torsion; the argument uses that it is torsion-free. Correct sous to sans.',883:'The theorem visibly begins Soient F de k deux corps. The conjunction connecting the fields is et; correct the printed de.'}
+for n,reason in reasons.items():decide(n,reason)
+decide(873,'High-resolution strip p209_s2 clearly reads grössencharaktere, including the e between t and r. It agrees with Miller; the alleged omitted letter in the Sol reading is not present.',verdict='rejected',printed=r'gr\"ossencharaktere',new='No change.')
+page(209,r'\item Posons $F\otimes k=',r'\item Write $F\otimes k=')
+page(210,r'\subsection{Remarque}\label{VI:5-4}',r'\subsection{Remark}\label{VI:5-4}')
+page(211,'Ceci, joint à','This, together with')
+variant(209,'S45-SOL-0870',r'$F^\ast$ dand $k^\ast$',r'$F^\ast$ dans $k^\ast$','Correct the misspelled preposition.',place='5.2, first sentence')
+variant(210,'S45-SOL-0875',r'des $x$ totalement positif',r'des $x$ totalement positifs','Plural agreement with the elements x.',place='Remark 5.4')
+variant(210,'S45-SOL-0877','On pour toujours prendre','On peut toujours prendre','Correct the malformed verb.',place='Remark 5.4')
+variant(210,'S45-SOL-0879',r'\chi_1|F_1=(N_{F_1/\dQ})^N',r'\chi_1|F_1\prime=(N_{F_1\prime/\dQ})^N','The restriction is to the totally real subfield, not to the entire CM field.',en_old=r'\chi_1|F_1=(N_{F_1/\dQ})^N',en_new=r'\chi_1|F_1\prime=(N_{F_1\prime/\dQ})^N',place='5.5, restriction formula')
+variant(210,'S45-SOL-0881','idéaux fractionnaire','idéaux fractionnaires','Plural agreement.',place='5.6')
+variant(210,'S45-SOL-0882',r'$k$ est sous torsion',r'$k$ est sans torsion','The fractional-ideal group is torsion-free, as used by the argument.',en_old=r'$k$ has torsion',en_new=r'$k$ is torsion-free',place='5.6')
+variant(211,'S45-SOL-0883',r'Soient $F$ de $k$',r'Soient $F$ et $k$','The two fields are joined by et.',place='Theorem 5.10')
+for n,p in [(28,209),(29,210),(30,211)]:
+ own(n,p,'Unit-group notation',r'^\ast',r'^\times',r'^\ast','symbol','The corresponding unit groups are printed with asterisks.')
+ append('notation_units',{'page':str(p),'source':f'S45-ASTRA-S-{n:04}','replace':r'^\times','with':r'^\ast'})

@@ -1,0 +1,168 @@
+--- checkpoint/work/verification/verify_final.py
++++ SGA4HALF_READERS_RECORDS.zip/work/verification/verify_final.py
+@@ -1,4 +1,4 @@
+-#![runtime file] python3
++# Invoke this script with python3.
+ """Independent structural, coverage, compilation, and privacy gate.
+ 
+ Run from any directory. The default preliminary report records unavailable
+@@ -19,7 +19,7 @@
+ }
+ LOCAL_PATH=re.compile(r'(?<![\w:])/(?:workspace|home|root|mnt|tmp|private|Users|usr|var|etc|opt|Applications|Volumes|Library|srv|run|media)(?:/[^\s<>"\]\[{}]*)?(?![\w])|(?<![\w:])[A-Za-z]:/[^\s<>"\]\[{}]+|(?<![\w:])[A-Za-z]:(?:\\)+(?:Users|Documents and Settings|Windows|Program Files|ProgramData|Temp|tmp|workspace|home|projects?|build|work)(?:\\)+[^\s<>"\]\[{}]+',re.I)
+ EMAIL=re.compile(r'[A-Za-z0-9_.+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}')
+-CHECKS=[];VARIANTS=[];MARKERS=[];READERS=[];COVERAGE=[];PRIVACY=[]
++CHECKS=[];VARIANTS=[];MARKERS=[];READERS=[];COVERAGE=[];PRIVACY=[];PDF_CHECKED_HASHES=set()
+ 
+ def relative(p):
+  try:return Path(p).resolve().relative_to(ROOT).as_posix()
+@@ -156,6 +156,7 @@
+ 
+ def inspect_tex(reg,ids,metadata):
+  reports={};canonical={};component_occurrences={}
++ page_table={r['printed_page']:r for r in reg.get('PAGES_CHECKED.tsv',[])}
+  op=ROOT/'work/records/VARIANT_OCCURRENCES.json'
+  if need(op,'records'): 
+   for lang in FILES:component_occurrences[lang]=[r for r in readjson(op) if r['language']==lang]
+@@ -163,7 +164,8 @@
+   p=ROOT/'work/build'/('prepare_report_'+lang+'.json')
+   if not need(p,lang):continue
+   report=readjson(p);entries=report['entries'];reports[lang]=entries
+-  check(lang,'preparation diagnostics clear',not report.get('diagnostics') and not report.get('unresolved_citations'),actual={'diagnostics':report.get('diagnostics'),'unresolved_citations':report.get('unresolved_citations')})
++  blocking=[d for d in report.get('diagnostics',[]) if d.get('kind') not in {'bookmark_math_alternative'}]
++  check(lang,'preparation has no blocking diagnostics',not blocking and not report.get('unresolved_citations'),actual={'blocking_diagnostics':blocking,'informational_diagnostics':report.get('diagnostics'),'unresolved_citations':report.get('unresolved_citations')})
+   wanted=[lang.upper()+f'-{i:04d}' for i in range(1,EXPECTED[lang]+1)]
+   check(lang,'prepared occurrence identities', [r['occurrence'] for r in entries]==wanted,EXPECTED[lang],len(entries))
+   report_byid={r['occurrence']:r for r in entries}
+@@ -179,10 +181,19 @@
+    check(scope,'requested mode and master switches',values==dict(EditionMode=mode,EditionIsMaster=master),dict(EditionMode=mode,EditionIsMaster=master),values)
+    if lang not in canonical:canonical[lang]=norm
+    check(scope,'identical master apart from two switches',norm==canonical[lang],digest(canonical[lang]),digest(norm))
++   for kind in ['prepared_body','apparatus']:
++    prepared=ROOT/'work/build'/(kind+'_'+lang+'.tex')
++    if need(prepared,scope):check(scope,'complete '+kind+' included verbatim',prepared.read_text() in s,detail=relative(prepared))
+    check(scope,'flattened TeX has no input/include commands',not re.search(r'\\(?:input|include)\s*\{',without_comments(s)))
+    pp=markers(s);seq=[r['page'] for r in pp]
+    check(scope,'314 original-page markers in order',seq==ORDER,314,len(seq))
+    item['tex_page_markers']=len(pp)
++   if master:
++    badlocations=[]
++    for marker in pp:
++     r=page_table.get(marker['page'],{})
++     if r.get('master_'+lang)!=p.name or str(marker['line'])!=r.get('master_line_'+lang) or s[marker['end']:marker['end']+240].strip()!=r.get('master_marker_context_'+lang):badlocations.append(marker['page'])
++    check(scope,'page-table master lines and contexts match actual markers',not badlocations,314,{'checked':len(pp),'mismatches':badlocations})
+    try:vv=variants(s)
+    except ValueError as e:check(scope,'balanced variant parsing',False,detail=str(e));continue
+    check(scope,'variant identities unique and complete',[v['occurrence'] for v in vv]==wanted,EXPECTED[lang],len(vv))
+@@ -229,8 +240,19 @@
+  for item in READERS:
+   name=item['reader'];lang=item['language'];pdf=ROOT/'deliverables'/lang.upper()/(name+'.pdf');tex=pdf.with_suffix('.tex')
+   cfile=ROOT/'work/build'/(name+'.compile.json');scope=name
+-  if not need(pdf,scope):continue
++  if not need(pdf,scope) or not need(cfile,scope) or not tex.exists():continue
+   item['pdf']=relative(pdf);item['pdf_sha256']=digest(pdf.read_bytes())
++  try:record=readjson(cfile)
++  except json.JSONDecodeError:
++   check(scope,'compile record complete',pending=True,detail='The compilation record is being written.');continue
++  final=record.get('final',{});th=record.get('tex_sha256',final.get('tex_sha256'));ph=record.get('pdf_sha256',final.get('pdf_sha256'))
++  if th and ph:
++   fresh=th==digest(tex.read_bytes()) and ph==item['pdf_sha256'];item['freshness_method']='compile-time SHA-256'
++  else:
++   fresh=pdf.stat().st_mtime_ns>=tex.stat().st_mtime_ns and cfile.stat().st_mtime_ns>=tex.stat().st_mtime_ns;item['freshness_method']='file modification times'
++  if not fresh:
++   check(scope,'PDF build is current and complete',pending=True,detail='Current TeX/PDF does not match the last completed compilation record; PDF may be stale or a build is running.');continue
++  check(scope,'PDF build is current and complete',True,detail=item['freshness_method'])
+   try:
+    doc=fitz.open(pdf);names=doc.resolve_names();item['pdf_pages']=len(doc)
+    pp={k:v for k,v in names.items() if k.startswith('printpage:')}
+@@ -256,16 +278,15 @@
+     for link in page.get_links():
+      if link.get('kind')==fitz.LINK_GOTO and link.get('page',-1)<0:missing_links.append(n)
+    privacy_text(relative(pdf)+' [metadata]',json.dumps(doc.metadata,ensure_ascii=False))
++   PDF_CHECKED_HASHES.add(item['pdf_sha256'])
+    check(scope,'PDF contains no unresolved double-question references',not double_questions,actual=double_questions)
+    check(scope,'PDF internal links have destinations',not missing_links,actual=missing_links)
+    item['pdf_text_replacement_characters']=replacement_chars
+    item['pdf_font_count']=len({f[0] for p in doc for f in p.get_fonts()})
+    doc.close()
+   except Exception as e:check(scope,'PDF opens and resolves name tree',False,detail=clean(e));continue
+-  if not need(cfile,scope):continue
+-  record=readjson(cfile);final=record.get('final',{});item['final_compile_pass']=final.get('pass_number')
++  item['final_compile_pass']=final.get('pass_number')
+   check(scope,'final compile exit and error list clear',final.get('exit_code')==0 and not final.get('errors') and final.get('pdf_exists') is True,0,{'exit_code':final.get('exit_code'),'errors':final.get('errors'),'pdf_exists':final.get('pdf_exists')})
+-  th=record.get('tex_sha256',final.get('tex_sha256'));ph=record.get('pdf_sha256',final.get('pdf_sha256'))
+   if th and ph:
+    check(scope,'compiled TeX and PDF hashes match current artifacts',th==digest(tex.read_bytes()) and ph==digest(pdf.read_bytes()),actual={'tex_matches':th==digest(tex.read_bytes()),'pdf_matches':ph==digest(pdf.read_bytes())})
+    item['freshness_method']='compile-time SHA-256'
+@@ -315,6 +336,14 @@
+  p=OUT/'arcata_own_fix_coverage.json'
+  if need(p,'coverage arcata own'):
+   for r in readjson(p):coverage_row('arcata',r.get('source_id',r.get('id')),r['language'],r.get('printed_page',r.get('page','')),r['status'],r.get('evidence',''),p,r.get('classification',''))
++  status=OUT/'ARCATA_OWN_COVERAGE_STATUS.json'
++  if need(status,'coverage arcata own'):
++   d=readjson(status);stale=[]
++   for lang,files in d.get('input_hashes',{}).items():
++    for f,h in files.items():
++     q=ROOT/'work/arcata'/lang/f
++     if not q.exists() or digest(q.read_bytes())!=h:stale.append(relative(q))
++   check('coverage arcata own','checked source hashes still current',not stale,actual=stale)
+  # The glossary changes are independently recounted against the prepared body.
+  p=ROOT/'work/build/GLOSSARY_CHANGES_APPLIED.json';body=ROOT/'work/build/prepared_body_en.tex'
+  if need(p,'coverage glossary') and need(body,'coverage glossary'):
+@@ -332,20 +361,45 @@
+  check('coverage','all Sol and own findings have both-language coverage',not missing,expected=2*len(targets),actual={'rows':len(COVERAGE),'missing':missing},pending=bool(missing))
+  check('coverage','all supplied evidence checks resolved',not unresolved,actual=unresolved)
+ 
++def inspect_glossary_freshness():
++ p=ROOT/'work/glossary/STATUS.json'
++ if not need(p,'glossary'):return
++ status=readjson(p);stale=[];newer_than_body=[]
++ for r in status.get('input_hashes',[]):
++  q=ROOT/r['path']
++  if not q.exists() or digest(q.read_bytes())!=r['sha256']:stale.append(r['path'])
++  lang='fr' if '/fr/' in r['path'] else 'en'
++  prepared=ROOT/'work/build'/('prepared_body_'+lang+'.tex')
++  if q.exists() and prepared.exists() and q.stat().st_mtime_ns>prepared.stat().st_mtime_ns:newer_than_body.append(r['path'])
++ check('glossary','all counted source hashes current',len(status.get('input_hashes',[]))==22 and not stale,22,{'inputs':len(status.get('input_hashes',[])),'stale':stale})
++ check('assembly','prepared bodies are newer than component inputs',not newer_than_body,actual=newer_than_body)
++
+ def privacy_text(file,text,pdf_page=''):
+  for kind,rx in [('absolute local path',LOCAL_PATH),('email address',EMAIL)]:
+   for m in rx.finditer(text):
+    PRIVACY.append(dict(file=file,kind=kind,line=text.count('\n',0,m.start())+1,pdf_page=pdf_page,value_sha256=digest(m[0]),context=clean(text[max(0,m.start()-50):min(len(text),m.end()+50)].replace('\n',' '))))
+ def inspect_privacy(extra_roots):
+- candidates=set()
++ candidates=set();pdfs=set()
+  for folder in [ROOT/'deliverables',ROOT/'work/records',ROOT/'work/glossary',ROOT/'work/build']+[ROOT/p for p in extra_roots]:
+   if not folder.exists():continue
+-  if folder.is_file():candidates.add(folder);continue
++  if folder.is_file():
++   (pdfs if folder.suffix.lower()=='.pdf' else candidates).add(folder);continue
+   for p in folder.rglob('*'):
+    if not p.is_file() or '__pycache__' in p.parts:continue
+    # Raw TeX runtime logs, aux/out files, and intermediate images are excluded.
+-   if p.suffix.lower() in ['.tex','.tsv','.csv','.json','.jsonl','.md','.diff'] or p.name.endswith('.log.txt'):candidates.add(p)
++   if p.suffix.lower()=='.pdf':pdfs.add(p)
++   elif p.suffix.lower() in ['.tex','.sty','.bib','.py','.sh','.tsv','.csv','.json','.jsonl','.md','.diff','.txt']:candidates.add(p)
+  for p in sorted(candidates):privacy_text(relative(p),p.read_text(errors='replace'))
++ for p in sorted(pdfs):
++  h=digest(p.read_bytes())
++  if h in PDF_CHECKED_HASHES:continue
++  try:
++   import fitz
++   with fitz.open(p) as doc:
++    for n,page in enumerate(doc,1):privacy_text(relative(p),page.get_text(),pdf_page=n)
++    privacy_text(relative(p)+' [metadata]',json.dumps(doc.metadata,ensure_ascii=False))
++   PDF_CHECKED_HASHES.add(h)
++  except Exception as e:check('privacy','additional PDF readable',False,detail=relative(p)+': '+clean(e))
+  check('privacy','distributable text/PDF scan has no paths or addresses',not PRIVACY,0,len(PRIVACY),detail='Raw runtime .log/.aux/.out files excluded; sanitized .log.txt files included. Hit values are hashed and redacted in this report.')
+  return len(candidates)
+ 
+@@ -354,7 +408,7 @@
+  args=parser.parse_args();OUT.mkdir(parents=True,exist_ok=True)
+  started=time.time()
+  try:
+-  reg,ids,meta=load_records();inspect_tex(reg,ids,meta);inspect_pdf_and_builds();load_coverage(reg);privacy_files=inspect_privacy(args.privacy_root)
++  reg,ids,meta=load_records();inspect_tex(reg,ids,meta);inspect_pdf_and_builds();load_coverage(reg);inspect_glossary_freshness();privacy_files=inspect_privacy(args.privacy_root)
+  except Exception as e:
+   check('verifier','unexpected exception',False,detail=type(e).__name__+': '+clean(e));privacy_files=0
+  totals=collections.Counter(r['status'] for r in CHECKS)

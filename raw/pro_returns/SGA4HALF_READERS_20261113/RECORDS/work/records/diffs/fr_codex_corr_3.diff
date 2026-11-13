@@ -1,0 +1,643 @@
+--- source/fr/codex_corr/sga4.5-3.tex
++++ deliverables/FR/SGA4HALF_FR_corrige_apparat.tex#component-3 [3]
+@@ -1,22 +1,30 @@
+ % !TEX root = sga4.5.tex
+ 
+-\chapter{Fonctions \texorpdfstring{$L$}{L} modulo \texorpdfstring{$\ell^n$}{l n} et modulo \texorpdfstring{$p$}{p}}\label{III}
++\chapter{Fonctions \texorpdfstring{$L$}{L} modulo \texorpdfstring{$\ell^n$}{l n} et modulo \texorpdfstring{$p$}{p}}\label{III}\PrintPage{110}
+ 
+ Dans cet exposé, je prouve une formule analogue au théorème du rapport sur 
+ la formule des traces (ce volume; cité ``Rapport'' par la suite) pour un 
+ anneau de coefficients $A$ qui soit de torsion premier à $p$, ou un corps de 
+-caractéristique $p$. Un usage essentiel sera fait de \cite[XVII 5.5]{sga4}. 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-\section{Tenseurs symétriques}\label{III:1}
++caractéristique $p$. Un usage essentiel sera fait de \PrintCite{SGA~4 XVII 5.5}{\cite[XVII 5.5]{sga4}}.
++
++\begin{center}\textbf{Sommaire}\end{center}
++\begin{tabular}{@{}lr@{}}
++1. Tenseurs symétriques & 2 \\
++2. Le théorème & 7 \\
++3. Théorie d'Artin--Schreier & 11 \\
++4. Formule des traces modulo $p$ & 16
++\end{tabular} 
++
++
++
++
++
++
++
++
++
++
++\section{Tenseurs symétriques}\label{III:1}\PrintPage{111}
+ 
+ 
+ 
+@@ -24,9 +32,9 @@
+ 
+ \subsection{}\label{III:1-1}
+ 
+-Soit $A$ un anneau commutatif. Pour une liste de propriétés des foncteurs 
++Soit $A$ un anneau commutatif. Pour une liste des propriétés des foncteurs 
+ $\Gamma^n:(\text{$A$-modules})\to (\text{$A$-modules})$, je renvoie à 
+-\cite[XVII 5.5.1 et 2]{sga4}. Rappelons seulement que pour $M$ plat (en fait, seul 
++\PrintCite{SGA~4 XVII 5.5.1 et 2}{\cite[XVII 5.5.1 et 2]{sga4}}. Rappelons seulement que pour $M$ plat (en fait, seul 
+ le cas où $M$ est projectif de type fini nous intéresse), on a 
+ \[
+   \Gamma^n M = \left(M^{\otimes n}\right)^{S_n} \qquad \text{(tenseurs symétriques de degré $n$).}
+@@ -41,9 +49,9 @@
+ Soient $X$ un $S$-schéma, $X^n/S$ la puissance fibrée $n$-ième de $X$ et 
+ $\pi$ la projection de $X^n/S$ sur $(X^n/S)/S_n=\operatorname{Sym}_S^n(X)$ 
+ (supposé exister). Si $\sG$ est un faisceau de $A$-modules sur $X$, le 
+-produit tensoriel externe de $n$ copies de $\sG$; $\sG^{\boxtimes n}$, est un 
++produit tensoriel externe de $n$ copies de $\sG$: $\sG^{\boxtimes n}$, est un 
+ faisceau $S_n$-équivariant sur $X^n/S$. Nous aurons à faire usage du 
+-foncteur $\Gamma^n$ \emph{externe} de \cite[XVII 5.5.7 à 9]{sga4}. Rappelons 
++foncteur $\Gamma^n$ \emph{externe} de \PrintCite{SGA~4 XVII 5.5.7 à 9}{\cite[XVII 5.5.7 à 9]{sga4}}. Rappelons 
+ seulement que pour $\sG$ un faisceau de $A$-modules plats (en fait, seul le cas 
+ constructible et plat nous intéresse), on a 
+ \[
+@@ -80,16 +88,16 @@
+ Nous aurons à utiliser les dérivés des foncteurs non additifs $\Gamma^n$ 
+ et $\Gamma_\text{ext}^n$. 
+ 
+-La théorie de tela foncteurs dérivés est due à Dold et Puppe 
+-\cite{do61}. Pour des rappels plus complets que ceux donnés ci-dessous, je 
+-renvoie à \cite[XVII 5.5.3]{sga4}. 
+-
+-Soit $\cA$ une catégorie abélienne (voire une catégorie additive où 
++La théorie de tels foncteurs dérivés est due à Dold et Puppe 
++\PrintCite{(Homologie nicht additiver Funktoren. Anwendungen. Ann. Inst. Fourier XI 1961, p.~201--312)}{\cite{do61}}. Pour des rappels plus complets que ceux donnés ci-dessous, je 
++renvoie à \PrintCite{SGA~4 XVII 5.5.3}{\cite[XVII 5.5.3]{sga4}}. 
++
++\PrintPage{112}Soit $\cA$ une catégorie abélienne (voire une catégorie additive où 
+ tout endomorphisme idempotent soit la projection sur un facteur direct). Notons 
+ $N$ le foncteur de normalisation: $N:($complexes cosimpliciaux d'objets de 
+-$\cA)\to($complexes différentiables d'objets de $\cA$, avec $K^i$ pour 
++$\cA)\to($complexes différentiels d'objets de $\cA$, avec $K^i=0$ pour 
+ $i<0)$. C'est une équivalence de catégories. Ainsi que son inverse, elle 
+-transforme homotopes en morphismes homotopes. Si $\Gamma$ est un foncteur 
++transforme morphismes homotopes en morphismes homotopes. Si $T$ est un foncteur 
+ $\cA\to\cB$, et si $K$ est un complexe d'objets de $\cA$, à degrés 
+ positifs ($K^i=0$ pour $i<0$), on pose $T K=N T N^{-1} K$. 
+ 
+@@ -99,7 +107,7 @@
+ 
+ \subsection{Exemple}\label{III:1-5}
+ 
+-Si $K$ est réduit à $M$ en degré $0$, $T K$ st réduit à $T M$ en 
++Si $K$ est réduit à $M$ en degré $0$, $T K$ est réduit à $T M$ en 
+ degré $0$. 
+ 
+ 
+@@ -108,7 +116,7 @@
+ 
+ \subsection{}\label{III:1-6}
+ 
+-Si $K$ est un complexe borné, à degrés positifs, de $A$-module projectifs 
++Si $K$ est un complexe borné, à degrés positifs, de $A$-modules projectifs 
+ de type fini, le complexe de $A$-modules $\Gamma^n K$ a les mêmes 
+ propriétés. 
+ 
+@@ -120,7 +128,7 @@
+ \]
+ 
+ Pour la définition analogue, mais plus compliquée, de 
+-$\eL\Gamma_\text{ext}^n$, je renvoie à \cite[XVII 5.5.14]{sga4}. 
++$\eL\Gamma_\text{ext}^n$, je renvoie à \PrintCite{SGA~4 XVII 5.5.14}{\cite[XVII 5.5.14]{sga4}}. 
+ 
+ 
+ 
+@@ -147,7 +155,7 @@
+ \]
+ 
+ 
+-\subsubsection{}\label{III:1-7-2}
++\subsubsection{}\label{III:1-7-2}\PrintPage{113}
+ 
+ Si on translate $K$ de $q$ crans vers la gauche, on a 
+ \[
+@@ -186,8 +194,7 @@
+ les $\Gamma^i M'\otimes \Gamma^j M''$ ($i+j=n$). Dès lors, $\Gamma^n K$ admet 
+ une filtration naturelle, de quotients successifs les complexes 
+ $N(N^{-1} \Gamma^i K'\otimes N^{-1}\Gamma^j K'')$ ($i+j=n$), canoniquement 
+-homotopes aux complexes simples $s(\Gamma^i K'\otimes \Gamma^j K'')$ déduit 
+-des complexes doubles $\Gamma^i K'\otimes \Gamma^j K''$, et 
++homotopes aux complexes simples $s(\Gamma^i K'\otimes \Gamma^j K'')$ déduits des complexes doubles $\Gamma^i K'\otimes \Gamma^j K''$, et 
+ \[
+   \tr(u,\Gamma^n K) = \sum_{i+j=n} \tr(u,\Gamma^i K')\cdot \tr(u,\Gamma^j K'') \text{,}
+ \]
+@@ -198,7 +205,7 @@
+ 
+ 
+ \begin{lemma_}\label{III:1-10}
+-Soient $F$ une filtration finie stable par $u$ de $K$, telle que les 
++Soit $F$ une filtration finie stable par $u$ de $K$, telle que les 
+ $\gr_F^p(K^q)$ soient projectifs de type fini. Alors, 
+ \[
+   D(u,K) = \prod_p D\left(u,\gr_F^p(K)\right) \text{.}
+@@ -221,16 +228,16 @@
+ 
+ 
+ 
+-D'après \ref{III:1-5}, c'est vrai pour $q=0$. Précédons par récurrence, il 
++\PrintPage{114}D'après \ref{III:1-5}, c'est vrai pour $q=0$. Procédons par récurrence, il 
+ reste à montrer que 
+ \[
+   D\left(u,M[-q]\right) \cdot D\left(u,M[-(q+1)]\right) = 1 \text{.}
+ \]
+-Cette formule résulte de \ref{III:1-9}, appliqué ou complexe $K$ réduit a 
++Cette formule résulte de \ref{III:1-9}, appliqué au complexe $K$ réduit à 
+ $M$ en degrés $q$ et $q+1$ (avec $d=\operatorname{id}$), et à sa 
+ filtration bête:
+ \[
+-  (\cdots 0 \to M \cdots) \to (\cdots M \to M) \to (\cdots M \to 0 \to 0 \cdots) \text{.}
++  (\cdots 0 \to M \cdots) \to (\cdots M \to M) \to (\cdots M \to 0 \cdots) \text{.}
+ \]
+ En effet, $K$ est homotope à $0$. Dans la catégorie dérivée, on a donc 
+ $\Gamma^n(K)=\Gamma^n(0)$; $0$ pour $n>0$ et $A$ pour $n=0$, et $D(u,K)=1$. 
+@@ -248,7 +255,7 @@
+ \]
+ on a 
+ \[
+-  D(u,K) = \prod_q D\left(u,K^q[-q]\right) =_{\text{(\ref{III:1-10})}} \prod_q \left(\sum \tr\left(u,\Gamma^n(K^q)\right) t^n \right)^{(-1)^q} \text{.}
++  D(u,K) = \prod_q D\left(u,K^q[-q]\right) =_{\text{(\ref{III:1-11})}} \prod_q \left(\sum \tr\left(u,\Gamma^n(K^q)\right) t^n \right)^{(-1)^q} \text{.}
+ \]
+ Il reste à prouver que pour $u$ un endomorphisme d'un module projectif de type 
+ fini $M$, on a 
+@@ -256,12 +263,12 @@
+   \det\left(1-u t,M\right)^{-1} = \sum \tr(u,\Gamma^n M) t^n \text{.}
+ \end{equation*}
+ Si $u=0$, les deux membres valent $1$. Ajoutant à $M$ un module $N$ sur lequel 
+-$u=0$, et appliquent \ref{III:1-9}, on se ramène à supposer que $M$ est libre. 
+-Prenons-en un base. Il s'agit alors de prouver des identités algébriques 
+-entres les coordonnées de $u$. Le principe de prolongement des identités 
++$u=0$, et appliquant \ref{III:1-9}, on se ramène à supposer que $M$ est libre. 
++Prenons-en une base. Il s'agit alors de prouver des identités algébriques 
++entre les coordonnées de $u$. Le principe de prolongement des identités 
+ algébriques nous ramène à supposer que $A$ est un corps algébriquement 
+ clos. Le module $M$ admet alors une filtration stable par $u$ à quotients 
+-successifs de rang $1$, et \ref{III:1-10} nous ramène au case où $M$ est de 
++successifs de rang $1$, et \ref{III:1-10} nous ramène au cas où $M$ est de 
+ rang $1$. La formule \eqref{III:eq:1-12-1} se ramène alors à l'identité 
+ \[
+   \frac{1}{1-a t} = \sum a^n t^n \text{.}
+@@ -271,7 +278,7 @@
+ 
+ 
+ 
+-\begin{corollary_}\label{III:1-13}
++\PrintPage{115}\begin{corollary_}\label{III:1-13}
+ Soient $u$ et $u'$ des endomorphismes de complexes bornés $K$ et $K'$ de 
+ $A$-modules projectifs de type fini. Si, dans la catégorie dérivée, $K$, 
+ muni de $u$, est isomorphe à $K'$, muni de $u'$, alors 
+@@ -280,7 +287,7 @@
+ \]
+ \end{corollary_}
+ 
+-Appliquent \ref{III:1-7-2}, on se ramène à supposer que $K$ et $K'$ sont à 
++Appliquant \ref{III:1-7-2}, on se ramène à supposer que $K$ et $K'$ sont à 
+ degrés positifs. On observe alors que le second membre de \ref{III:1-8} 
+ possède la propriété d'invariance voulue. 
+ 
+@@ -293,7 +300,7 @@
+ Ce corollaire permet de définir $\det(1-u t,K)$ pour $u$ un endomorphisme de 
+ $K\in \ob\eD_\text{parf}(A)$. Cette construction est ad hoc; en fait, pour $v$ un 
+ automorphisme de $L\in\ob\eD_\text{parf}(\Lambda)$, on peut définir 
+-$\det(v)\in\Lambda^\times$, et $\det(1-u t,K)$ s'obtient pour $v=1-u t$, 
++$\det(v)\in\Lambda^*$, et $\det(1-u t,K)$ s'obtient pour $v=1-u t$, 
+ $\Lambda=A\llbracket t\rrbracket$ et $L=K\otimes_A\Lambda$. 
+ 
+ 
+@@ -305,7 +312,7 @@
+ 
+ 
+ 
+-\section{Le Théorème}\label{III:2}
++\section{Le Théorème}\label{III:2}\PrintPage{116}
+ 
+ 
+ 
+@@ -362,9 +369,9 @@
+ $E_2^{p q} = \h_c^p(X,\underline\h^q(\sK))\Rightarrow \h_c^{p+q}(X,\sK)$ montre 
+ que 
+ \begin{align*}
+-  \det\left(1-F^* t, \eR\Gamma_c(X,\sK)\right) 
++  \det\left(1-F^* t^f, \eR\Gamma_c(X,\sK)\right) 
+     &= \prod_n \det\left(1-F^* t^f,\h_c^n(X,\sK)\right)^{(-1)^n} \\
+-    &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\sK))\right)^{(-1)^{p+q}} \text{.}
++    &= \prod_{p,q} \det\left(1-F^* t^f,\h_c^p(X,\underline\h^q(\sK))\right)^{(-1)^{p+q}} \text{.}
+ \end{align*}
+ Ceci ramène \ref{III:2-2} (pour $A$ un corps) au cas particulier suivant. 
+ 
+@@ -380,7 +387,7 @@
+ 
+ 
+ 
+-\subsection{Remarque}\label{III:2-5}
++\subsection{Remarque}\label{III:2-5}\PrintPage{117}
+ 
+ Il est facile de réduire le cas b) à celui où $A$ est un corps (voire 
+ même un corps fini) de caractéristique $p$, cf. \ref{III:4-2}. 
+@@ -392,12 +399,12 @@
+ \subsection{Remarque}\label{III:2-6}
+ 
+ Le cas particulier de b) où $A=\dZ/p$, et où $\sK$ est réduit au faisceau 
+-constant $\dZ/p$ en degré $0$;
++constant $\dZ/p$ en degré $0$:
+ \[
+   Z(X_0,t) = \prod_{x\in |X_0|} \left(1-t^{\deg(x)}\right)^{-1}
+       \equiv \prod_n \det\left(1-F^* t^f,\h_c^n(X,\dZ/p)\right)^{(-1)^{n+1}} \pmod p
+ \]
+-avait été prouvé par N. Katz \cite[XXII 3.1]{sga7}. Sa méthode, toute 
++avait été prouvé par N. Katz \PrintCite{SGA~7 XXII 3.1}{\cite[XXII 3.1]{sga7}}. Sa méthode, toute 
+ différente de celle suivie ici, part de la théorie $p$-adique de Dwork de 
+ $Z(X_0,t)$. 
+ 
+@@ -419,17 +426,17 @@
+ \subsection{Plan de la preuve de \ref{III:2-2}}\label{III:2-8}
+ 
+ Une translation sur les degrés \ref{III:1-7-2} nous ramène à supposer 
+-que $\sK_0$ est un complexe borné, à degré positifs, de faisceaux de 
++que $\sK_0$ est un complexe borné, à degrés positifs, de faisceaux de 
+ $A$-modules constructibles et plats. On a alors 
+ $\eR\Gamma_c(X,\sK)\in \ob\eD_\text{parf}^{\geqslant 0}(A)$ (Rapport, 
+ preuve \ref{II:4-9}, b). Nous allons utiliser \ref{III:1-8} pour développer 
+ les deux membres de \eqref{III:eq:2-2-1} en série de puissances de $T=t^f$. 
+-L'égalité des coefficients de $T^n$ de déduira de 
+-\cite[XVII 5.5.21]{sga4} et d'une formule des traces sur 
+-$\operatorname{Sym}^n(X)$; dans le cas a), le formule (Rapport, 
++L'égalité des coefficients de $T^n$ se déduira de 
++\PrintCite{SGA~4 XVII 5.5.21}{\cite[XVII 5.5.21]{sga4}} et d'une formule des traces sur 
++$\operatorname{Sym}^n(X)$; dans le cas a), la formule (Rapport, 
+ \ref{II:4-10}), et dans le cas b) une formule qui sera prouvée dans le 
+ chapitre suivant. Il y a lieu de se ramener au préalable au cas où les 
+-puissances symétriques de $X_0$ existent (par exemple au cas où $X$ est 
++puissances symétriques de $X_0$ existent (par exemple au cas où $X_0$ est 
+ affine) à l'aide des propriétés de multiplicativité en $X_0$ des deux 
+ membres de \eqref{III:eq:2-2-1}: pour $U_0$ un ouvert de $X_0$, de fermé 
+ complémentaire $Y_0$, on a $L(X_0,\sK_0)=L(U_0,\sK_0)\cdot L(Y_0,\sK_0)$ et 
+@@ -451,7 +458,7 @@
+ 
+ 
+ 
+-\subsection{Le premier membre}\label{III:2-10}
++\subsection{Le premier membre}\label{III:2-10}\PrintPage{118}
+ 
+ D'après \ref{III:1-8}, on a 
+ \[
+@@ -467,12 +474,12 @@
+ 
+ Pour $x\in |X_0|$, notons $(x)$ le $0$-cycle des $[k(x):\dF_q]$ points de $X$ 
+ au-dessus de $x$ (une orbite de $F$). L'application 
+-$\sum n_x\mapsto \sum n_x\cdot (x)$ identifie les combinaisons linéaires 
++$\sum n_x x\mapsto \sum n_x\cdot (x)$ identifie les combinaisons linéaires 
+ formelles comme ci-dessus, avec $\sum n_x [k(x):\dF_q]=n$, aux $0$-cycles 
+ effectifs de degré $n$ de $X$ fixes sous $F$, soit encore aux points fixes de 
+ $F$ dans $\operatorname{Sym}^n(X)$. Le coefficient de $T^n$ dans $L(X_0,\sK_0)$ 
+-apparait ainsi comme une somme de produits \eqref{III:eq:2-10-1}, indenée 
+-par $\operatorname{Sym}^n(X)^F$. Plus précisément, 
++apparaît ainsi comme une somme de produits \eqref{III:eq:2-10-1}, indexée 
++par $\operatorname{Sym}^n(X)^F$. Plus précisément, on a 
+ 
+ 
+ 
+@@ -496,7 +503,7 @@
+   L(X_0,\sK_0) 
+     &=_\text{\ref{III:2-9}} \det\left(1-F^* T,\Gamma(X,\sK)\right)^{-1} \\
+     &=_\text{\ref{III:1-8}} \sum_n \tr\left(F^*,\Gamma^n \Gamma(X,\sK)\right) T^n \\
+-    &=_\text{\ref{III:1-3}} \sum_n \tr\left(F^*,\Gamma(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n(\sK)\right) T^n \\
++    &=_\text{\ref{III:1-3}} \sum_n \tr\left(F^*,\Gamma(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n(\sK))\right) T^n \\
+     &= \sum_n \sum_{x\in \operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n(\sK)\right) T^n
+ \end{align*}
+ (par la formule des traces dans le cas trivial d'un ensemble fini). 
+@@ -505,9 +512,9 @@
+ 
+ 
+ 
+-\subsection{Le second membre}\label{III:2-12}
+-
+-D'après \ref{III:1-8} et \cite[XVII 5.5.12]{sga4}, on a 
++\subsection{Le second membre}\label{III:2-12}\PrintPage{119}
++
++D'après \ref{III:1-8} et \PrintCite{SGA~4 XVII 5.5.21}{\cite[XVII 5.5.21]{sga4}}, on a 
+ \begin{align*}
+   \det\left(1-F^* T,\eR\Gamma_c(X,\sK)\right)^{-1} 
+     &= \sum_n \tr\left(F^*,\eL\Gamma^n\eR\Gamma_c(X,\sK)\right) T^n \\
+@@ -522,7 +529,7 @@
+ 
+ Le théorème équivaut donc aux formules des traces 
+ \[
+-  \tr\left(F^*,\eR\Gamma_c(\operatorname{Sym}^n(X,\Gamma_\text{ext}^n \sK)\right) = \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n\sK\right) \text{.}
++  \tr\left(F^*,\eR\Gamma_c(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n \sK)\right) = \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n\sK\right) \text{.}
+ \]
+ Dans le cas a), elles résultent de Rapport \ref{II:4-10}. La formule 
+ analogue dans le cas b) sera prouvée au \S\ref{III:4}. 
+@@ -536,7 +543,7 @@
+ 
+ 
+ 
+-\section{Théorie d'Artin--Schreier}\label{III:3}
++\section{Théorie d'Artin--Schreier}\label{III:3}\PrintPage{120}
+ 
+ 
+ 
+@@ -546,11 +553,11 @@
+ 
+ Dans ce qui suit, un faisceau cohérent sur un schéma $S$ sera toujours 
+ regardé comme un faisceau sur $S_\text{ét}$. Soit $S$ un schéma de 
+-caractéristique $p>0$. Si $G$ un faisceau localement constant de 
++caractéristique $p>0$. Si $G$ est un faisceau localement constant de 
+ $\dZ/p$-vectoriels de rang fini, $\sG=G\otimes_{\dZ/p}\sO$ est un faisceau 
+ cohérent localement libre sur $S$. On notera $\Phi$ tant l'endomorphisme 
+-$f\mapsto f^p$ de $\sO$ que son produit tensoriel avec l'identité de 
+-$G$: $\phi:\sG\to\sG$. La théorie d'Artin--Schreier \cite[IX 3.5]{sga4} 
++$f\to f^p$ de $\sO$ que son produit tensoriel avec l'identité de 
++$G$: $\Phi:\sG\to\sG$. La théorie d'Artin--Schreier \PrintCite{SGA~4 IX 3.5}{\cite[IX 3.5]{sga4}} 
+ affirme que la suite 
+ \[\xymatrix{
+   0 \ar[r] 
+@@ -559,7 +566,7 @@
+     & \sO \ar[r] 
+     & 0
+ }\]
+-est exacte. Par tensorisation avec $G$, on trouve un suite exacte 
++est exacte. Par tensorisation avec $G$, on trouve une suite exacte 
+ \[\xymatrix{
+   0 \ar[r] 
+     & G \ar[r] 
+@@ -577,7 +584,7 @@
+ Supposons que $S$ soit un ouvert dans un schéma noethérien $\bar S$. 
+ Soient $j:S\hookrightarrow \bar S$ le morphisme d'inclusion, et $I$ un 
+ faisceau d'idéaux qui définit le fermé complémentaire 
+-$\bar S\setminus S$. Notons encore $\Phi$ le prolongement par fonctorialité 
++$\bar S-S$. Notons encore $\Phi$ le prolongement par fonctorialité 
+ de $\Phi$ à $j_*\sG$. 
+ 
+ 
+@@ -605,19 +612,19 @@
+ \begin{enumerate}[a)]
+   \item \emph{Existence}: Soit $\sG'\subset j_*\sG$ un prolongement cohérent 
+     de $\sG$ à $\bar S$. Pour tout $n$, on a 
+-    $\Phi(I^n \sG')\subset I^{pn}\Phi(\sG')$. Soit $n$ assez grand pour 
++    $\Phi(I^n \sG')\subset I^{p n}\Phi(\sG')$. Soit $n$ assez grand pour 
+     que $I^{n(p-1)-1}\Phi(\sG')\subset \sG'$, et posons $\bar\sG=I^n\sG'$. 
+     On a $\Phi(\bar\sG)\subset I^{p n}\Phi(\sG') 
+     =I\cdot I^n\cdot I^{n(p-1)-1}\Phi(\sG')\subset I\cdot I^n\sG' 
+     = I\bar\sG$. 
+-  \item \emph{Noyau de $\Phi-1$}: Sur $S$, l'assertion résulte de 
+-    \ref{III:3-1}; il reste à vérifier qu'une section de $x$ de 
++  \item \PrintPage{121}\emph{Noyau de $\Phi-1$}: Sur $S$, l'assertion résulte de 
++    \ref{III:3-1}; il reste à vérifier qu'une section $x$ de 
+     $\ker(\Phi-1)$, sur $U$ étale sur $\bar S$, s'annule dans un voisinage de 
+-    l'image réciproque de $\bar S\setminus S$. Puisque $x=\Phi(x)$, on a en 
++    l'image réciproque de $\bar S-S$. Puisque $x=\Phi(x)$, on a en 
+     effet par \eqref{III:eq:3-3-1} $x\in I\bar\sG$; de plus, 
+     $x\in I^n\bar\sG\Rightarrow x=\Phi(x)\in\Phi(I^n\bar\sG)\subset I^{n p}\bar\sG$, et $x$ est dans tous les $I^n\bar\sG$, donc nul au voisinage de 
+-    $\bar S\setminus S$.
+-  \item \emph{Surjectivité de $\Phi-1$}: On peut supposer $\bar S$ affine, en 
++    $\bar S-S$.
++  \item \emph{Surjectivité de $\Phi-1$}: On peut supposer $\bar S$ affine, et 
+     écrire $\sG$ comme quotient de $\sO^n$; $\Phi$ se relève alors en une 
+     application $p$-linéaire $\widetilde\Phi:\sO^n\to\sO^n$, et il suffit de 
+     vérifier la surjectivité de $\widetilde\Phi-1$:
+@@ -628,7 +635,7 @@
+         & \sG 
+     }\]
+     Le faisceau $\sO^n$ est le faisceau des sections locales du schéma en 
+-    groupes $\dG_a^n$, et $\widetilde\Phi-1$ est induit par un homomorphisme 
++    groupes $\dG_a^n$, et $\widetilde\Phi-1$ est induit par un homomorphisme de 
+     $\dG_a^n$ dans $\dG_a^n$. Cet homomorphisme est étale. Pour vérifier 
+     qu'il est surjectif, il suffit de le voir après tout changement de base 
+     $\spec(k)\to\bar S$ ($k$ algébriquement clos) et sur $k$ algébriquement 
+@@ -657,12 +664,12 @@
+ est cartésien. L'endomorphisme de site annelé 
+ $(\et S,\sO)\to(\et S,\sO)$ défini par $F_\text{abs}$ peut donc 
+ être décrit comme suit:
+-\begin{center}
++\PrintPage{122}\begin{center}
+   $F_\text{abs}^*$ est l'identité sur $\et S$; l'homomorphisme 
+   $F_\text{abs}^*\sO=\sO\to\sO$ est $\Phi$.
+ \end{center}
+-Avec cette description, pour tout faisceau étale $\sG$ sur $S$, la 
+-correspondance de Frobenius $F_\text{abs}^*\sG\to\sG$ est l'identité. 
++Avec cette description, pour tout faisceau étale $G$ sur $S$, la 
++correspondance de Frobenius $F_\text{abs}^*G\to G$ est l'identité. 
+ 
+ Se donner un morphisme $p$-linéaire de faisceaux quasi-cohérents 
+ $u:\sM\to\sN$ sur $S$ revient à se donner un morphisme linéaire 
+@@ -699,7 +706,7 @@
+ Supposons maintenant que $\bar S$ soit un schéma sur $\dF_q$ ($q=p^f$) et 
+ conformément aux conventions de Rapport \S\ref{II:1}, écrivons 
+ $S_0,\bar S_0,G_0,\sG_0,\bar\sG_0$ au lieu de $S,\dots$. Le lemme 
+-\ref{III:3-5}, pour $F_\text{abs}^f:S_0\to S_0$, donne un diagramme commutatif 
++\ref{III:3-5}, pour $F_\text{abs}^f=F:S_0\to S_0$, donne un diagramme commutatif 
+ \[\xymatrix{
+   F^* G_0 \ar[r] \ar[d] 
+     & G_0 \ar[d] \\
+@@ -715,22 +722,22 @@
+ \]
+ puis, par extension des scalaires de $\dF_q$ à $\dF$ et passage à la 
+ cohomologie 
+-\[\xymatrix{
++\PrintPage{123}\[\xymatrix{
+   F^*(j_! G) \ar[r]^-{F^*} \ar[d] 
+     & j_!G \ar[d] \\
+   F^*\bar\sG \ar[r]
+     & \bar\sG
+ }\qquad\text{et}\qquad 
+ \xymatrix{
+-  \h^\bullet(\bar S,j_! G) \ar[r]^-{F^*} \ar[d] 
+-    & \h^\bullet(\bar S,j_!G) \ar[d] \\
+-  \h^\bullet(\bar S,\bar\sG) \ar[r]
+-    & \h^\bullet(\bar S,\bar\sG)
++  \h^*(\bar S,j_! G) \ar[r]^-{F^*} \ar[d] 
++    & \h^*(\bar S,j_!G) \ar[d] \\
++  \h^*(\bar S,\bar\sG) \ar[r]
++    & \h^*(\bar S,\bar\sG)
+ }\text{,}
+ \]
+ où la seconde ligne est obtenue par extension des scalaires de $\dF_q$ à 
+ $\dF$ de l'endomorphisme $\dF_q$-linéaire $\Phi^f$ de 
+-$\h^\bullet(\bar S_0,\bar\sG_0)$. 
++$\h^*(\bar S_0,\bar\sG_0)$. 
+ 
+ La théorie d'Artin--Schreier fournit une suite exacte longue 
+ \[\xymatrix{
+@@ -741,8 +748,8 @@
+     & \cdots
+ }\]
+ où $\Phi$ est l'extension $p$-linéaire à 
+-$\h^\bullet(\bar S,\bar \sG)= \h^\bullet(\bar S_0,\bar\sG_0)\otimes_{\dF_q}\dF$ 
+-de l'endomorphisme $p$-linéaire $\Phi$ de $\h^\bullet(\bar S_0,\bar\sG_0)$. 
++$\h^*(\bar S,\bar \sG)= \h^*(\bar S_0,\bar\sG_0)\otimes_{\dF_q}\dF$ 
++de l'endomorphisme $p$-linéaire $\Phi$ de $\h^*(\bar S_0,\bar\sG_0)$. 
+ 
+ 
+ 
+@@ -751,7 +758,7 @@
+ \subsection{}\label{III:3-7}
+ 
+ Si $\bar S_0$ est propre sur $\dF_q$, les $\h^i(\bar S,\bar\sG)$ sont de 
+-dimension finie et $\Phi-1$ est surjectif (cf. \ref{III:3-6}b). On a donc 
++dimension finie et $\Phi-1$ est surjectif (cf. \ref{III:3-3}c). On a donc 
+ \[
+   \h_c^i(S,G) = \ker\left(\Phi-1 : \h^i(\bar S,\bar\sG) \to \h^i(\bar S,\bar\sG)\right) \text{,}
+ \]
+@@ -770,9 +777,9 @@
+ 
+ \begin{lemma_}\label{III:3-8}
+ Soit $\Phi$ un endomorphisme $p$-linéaire d'un espace vectoriel $V$ sur 
+-$\dF_q$: $\phi(\lambda x) = \lambda^p\phi(x)$. On pose $F=\Phi^f$ ($F$ est 
++$\dF_q$: $\Phi(\lambda x) = \lambda^p\Phi(x)$. On pose $F=\Phi^f$ ($F$ est 
+ linéaire) et on note encore $\Phi$ et $F$ les extensions respectivement 
+-$p$-linéaire de $\Phi$ et $F$ à $V\otimes_{\dF_q}\dF$. Alors, $F$ stabilise 
++$p$-linéaire et linéaire de $\Phi$ et $F$ à $V\otimes_{\dF_q}\dF$. Alors, $F$ stabilise 
+ $\ker(\Phi-1)\subset V\otimes_{\dF_q}\dF$ et 
+ \[
+   \tr\left(F,\ker(\Phi-1)\right) = \tr(F,V) = \tr\left(F,V\otimes_{\dF_q}\dF\right) \text{.}
+@@ -783,7 +790,7 @@
+ $F\Phi-\Phi F$ s'annule sur $V$, donc partout. Écrivons $V=V'+V''$, avec $F$ 
+ inversible sur $V'$ et nilpotent sur $V''$. La théorie des endomorphismes 
+ $p$-linéaires assure que 
+-\[
++\PrintPage{124}\[
+   \ker(\Phi-1)\otimes_{\dF_p}\dF \iso V'\otimes_{\dF_q}\dF \text{.}
+ \]
+ Puisque $\tr(F,V'') = 0$, on a donc 
+@@ -802,7 +809,7 @@
+ 
+ 
+ 
+-\section{Formule des traces modulo \texorpdfstring{$p$}{p}}\label{III:4}
++\section{Formule des traces modulo \texorpdfstring{$p$}{p}}\label{III:4}\PrintPage{125}
+ 
+ 
+ 
+@@ -824,13 +831,13 @@
+ \subsection{Réduction au cas où \texorpdfstring{$A$}{A} est un corps fini}\label{III:4-2}
+ 
+ %NOTE: in this paragraph and others, (3.1.1) seems to be referring to (4.1.1)
+-Un argument standard de passage à a limite nous ramène au cas où $A$ est 
++Un argument standard de passage à la limite nous ramène au cas où $A$ est 
+ de type fini sur $\dZ/p$. Pour chaque idéal maximal $\fm$ de $A$, l'image de 
+-chaque membre de \eqref{III:eq:4-1-1} dans $A/\fm$ est donée par la même 
++chaque membre de \eqref{III:eq:4-1-1} dans $A/\fm$ est donnée par la même 
+ formule, avec $\sK_0$ remplacé par 
+ $\sK_0\lotimes_A A/\fm\in\ob\eD_\text{ctf}(X_0,A/\fm)$ (pour le second membre, 
+ cf. Rapport \ref{II:4-12}). Les $A/\fm$ étant finis, et l'intersection des 
+-idéaux maximaux de $A$ étant réduit à $0$, on obtient la réduction 
++idéaux maximaux de $A$ étant réduite à $0$, on obtient la réduction 
+ annoncée.
+ 
+ 
+@@ -864,6 +871,11 @@
+ 
+ 
+ % originally theorem 4.1bis (i.e. theorem 4.1 again)
++\subsection{}\label{III:4-4}\PrintPage{126}
++La méthode de \hyperref[II]{Rapport} \S 6, ramène maintenant \ref{III:4-1} à l'énoncé suivant.
++
++\begingroup
++\renewcommand*{\thesubsection}{4.1bis}
+ \begin{theorem_}\label{III:4-1bis}
+ Soient $\bar S_0$ une courbe projective et lisse, 
+ $j:S_0\hookrightarrow \bar S_0$ un ouvert dense de $\bar S_0$, et $G_0$ un 
+@@ -873,16 +885,17 @@
+   \sum_{x\in S^F} \tr\left(F_x^*,G_x\right) = \sum_i (-1)^i \tr\left(F^*,\h_c^i(S,G)\right) \text{.}
+ \end{equation*}
+ \end{theorem_}
++\endgroup
+ \begin{proof}
+ Appliquons \ref{III:3-3} à $(S_0,\bar S_0,G_0)$. Le prolongement cohérent 
+ $\bar\sG_0$ de $\sG_0$ dont \ref{III:3-3} garantit l'existence est localement 
+-libre car il est sans torsion (on  $\bar\sG_0\subset j_*\sG_0$) et que 
++libre car il est sans torsion (on a $\bar\sG_0\subset j_*\sG_0$) et que 
+ $\bar S_0$  est régulier de dimension un. L'endomorphisme $q$-linéaire 
+ $\Phi^f$ de $\bar\sG_0$ peut s'interpréter comme un morphisme 
+ \[
+   u : F^*\bar\sG_0 \to \bar\sG_0 \text{.}
+ \]
+-Il se factorise par $I\bar G$, pour $I$ définissant le fermé 
++Il se factorise par $I\bar\sG$, pour $I$ définissant le fermé 
+ $\bar S\setminus S$. Soit $v:j_!G_0 \to \bar\sG_0$ l'unique prolongement de 
+ l'application naturelle $G_0 \to \sG_0 = G_0\otimes_{\dZ/p}\sO$. Le diagramme 
+ \begin{equation*}\tag{4.4.2}\label{III:eq:4-4-2}
+@@ -893,13 +906,15 @@
+     & \bar\sG_0
+ }
+ \end{equation*}
++est commutatif.
++
+ Enfin, notons $u F^*$ l'application composée 
+ \[\xymatrix{
+-  \h^\bullet(\bar S,\bar\sG) \ar[r]^-{F^*} 
+-    & \h^\bullet(\bar S,F^*\bar\sG) \ar[r]^-u 
+-    & \h^\bullet(\bar S,\bar\sG) \text{,}
++  \h^*(\bar S,\bar\sG) \ar[r]^-{F^*} 
++    & \h^*(\bar S,F^*\bar\sG) \ar[r]^-u 
++    & \h^*(\bar S,\bar\sG) \text{,}
+ }\]
+-on par \eqref{III:eq:3-7-1}
++on a par \eqref{III:eq:3-7-1}
+ \begin{equation*}\tag{4.4.3}\label{III:eq:4-4-3}
+   \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(u F^*,\h^i(\bar S,\bar\sG)\right) \text{.}
+ \end{equation*}
+@@ -907,10 +922,10 @@
+ %NOTE: trace down reference for Woods Hole seminar
+ Pour chaque point fermé $i_x:x\hookrightarrow \bar  S$ de $\bar S$, posons 
+ $\bar\sG_x = i_x^*\bar\sG$. La formule des traces de Lefschetz en cohomologie 
+-cohérente (``Woods Hole fixed point formula''), appliqué à $F$ et $u$, dit 
++cohérente (``Woods Hole fixed point formula''), appliquée à $F$ et $u$, dit 
+ que 
+-\begin{equation*}\tag{4.4.4}\label{III:eq:4-4-4}
+-  \sum_i (-1)^i \tr\left(uF^*, \h^i(\bar S,\bar\sG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\bar\sG_x)}{\det(1-d F_x)} \text{.}
++\PrintPage{127}\begin{equation*}\tag{4.4.4}\label{III:eq:4-4-4}
++  \sum_i (-1)^i \tr\left(u F^*, \h^i(\bar S,\bar\sG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\bar\sG_x)}{\det(1-d F_x)} \text{.}
+ \end{equation*}
+ Au second membre
+ \begin{enumerate}[\indent a)]
+@@ -922,7 +937,7 @@
+       \tr(u_x,\bar\sG_x) = \tr(F_x^*,G_x) \text{.}
+     \]
+     L'identité \eqref{III:eq:4-4-1} résulte donc de \eqref{III:eq:4-4-3} 
+-    et \eqref{III:eq:4-4-4}. 
++    \eqref{III:eq:4-4-4}. 
+ \end{enumerate}
+ \end{proof}
+ 
+@@ -951,15 +966,18 @@
+ 
+ Le faisceau de $A$-modules $\pi_*\dZ/2$ est notre exemple:
+ \begin{enumerate}[\indent a)]
+-  \item On a 
+-    $\h_c^\bullet(\dA^1,\pi_*\dZ/2) = \h_c^\bullet(Y\setminus 0,\dZ/2)$. 
++  \item \begingroup
++\emergencystretch=2em\relax
++On a 
++    $\h_c^*(\dA^1,\pi_*\dZ/2) = \h_c^*(Y\setminus 0,\dZ/2)$. 
+     Puisque $Y_0$ est supersingulière, on a $\h^i(Y,\dZ/2)=0$ pour $i>0$, et 
+-    la suite exacte longue 
++    la suite exacte longue\par
++\endgroup 
+     \[
+       \cdots \to \h_c^i(Y\setminus 0,\dZ/2) \to \h^i(Y,\dZ/2) \to \h^i(\{0\},\dZ/2) \to \cdots
+     \]
+-    montre que $\h_c^\bullet(Y\setminus 0,\dZ/2)=0$. On a donc 
+-    $\h_c^\bullet(\dA^1,\pi_*\dZ/2)=0$ et 
++    \PrintPage{128}montre que $\h_c^*(Y\setminus 0,\dZ/2)=0$. On a donc 
++    $\h_c^*(\dA^1,\pi_*\dZ/2)=0$ et 
+     \[
+       \tr_A\left(F^*,\eR\Gamma_c(\dA^1,\pi_*\dZ/2)\right) = 0 \text{.}
+     \]

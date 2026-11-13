@@ -1,0 +1,39 @@
+# inputs
+python3 scripts/unpack_inputs.py
+# components
+python3 scripts/rebuild_opening.py
+python3 scripts/build_arcata_fr.py
+python3 scripts/build_arcata_en.py
+python3 scripts/finalize_arcata_records.py
+python3 scripts/verify_arcata.py
+python3 work/rapport_cycle/review_arcata_noedit.py
+python3 scripts/verify_arcata.py
+python3 work/rapport_cycle/build_components.py 2 3 4 5
+python3 work/rapport_cycle/validate_components.py
+python3 work/sommes/build_components.py
+python3 work/sommes/finish_components.py
+python3 work/sommes/complete_alignment.py
+python3 work/sommes/validate_component.py
+python3 work/finitude_verdier/build_components.py
+python3 work/finitude_verdier/check_coverage.py
+# glossary
+python3 work/glossary/build_glossary.py
+python3 work/glossary/write_glossary_report.py
+# assemble
+python3 scripts/edition_tex.py
+python3 scripts/assemble_readers.py
+# compile
+python3 scripts/compile_reader.py deliverables/FR/SGA4HALF_FR_diplomatique.tex 3
+python3 scripts/compile_reader.py deliverables/FR/SGA4HALF_FR_corrige_apparat.tex 3
+python3 scripts/compile_reader.py deliverables/FR/SGA4HALF_FR_texte_de_lecture.tex 3
+python3 scripts/compile_reader.py deliverables/FR/SGA4HALF_FR_annotated_master.tex 3
+python3 scripts/compile_reader.py deliverables/EN/SGA4HALF_EN_diplomatic.tex 3
+python3 scripts/compile_reader.py deliverables/EN/SGA4HALF_EN_corrected_apparatus.tex 3
+python3 scripts/compile_reader.py deliverables/EN/SGA4HALF_EN_reading.tex 3
+python3 scripts/compile_reader.py deliverables/EN/SGA4HALF_EN_annotated_master.tex 3
+# export
+python3 scripts/export_records.py
+python3 scripts/export_changes.py
+# verify
+python3 work/verification/verify_arcata_own.py
+python3 work/verification/verify_final.py --strict

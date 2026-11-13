@@ -1,0 +1,201 @@
+--- checkpoint/work/arcata/fr/sga4.5-1.tex
++++ SGA4HALF_READERS_RECORDS.zip/work/arcata/fr/sga4.5-1.tex
+@@ -119,7 +119,8 @@
+ \hyperref[I:1-3]{3}), on dégage le concept général de topologie de Grothendieck
+ (\hyperref[I:1-6]{\S 6}); pour en justifier 
+ l'introduction en géométrie algébrique, on démontre un théorème 
+-de descente fidèlement plate (\hyperref[I:1-4]{\S 4}), généralisation du classique théorème 90 90 de Hilbert (\hyperref[I:1-5]{\S 5}). 
++de descente fidèlement plate (\hyperref[I:1-4]{\S 4}), généralisation du
++classique théorème 90 de Hilbert (\hyperref[I:1-5]{\S 5}). 
+ 
+ Le lecteur trouvera une exposition plus complète, mais concise, du 
+ formalisme dans Giraud \cite{gi64}. Les notes de M. Artin: ``Grothendieck 
+@@ -719,7 +720,7 @@
+ isomorphe à $\sF$ muni de l'action canonique $\sF\times \sF\to \sF$ par 
+ translations. 
+ 
+-On peut montrer que $\h^q(X,\sF)$ s'interprète comme l'ensemble des classes 
++On peut montrer que $\h^1(X,\sF)$ s'interprète comme l'ensemble des classes 
+ à isomorphisme près de $\sF$-torseurs. 
+ 
+ 
+@@ -873,7 +874,7 @@
+ 
+ \subsubsection{Groupe multiplicatif:}\label{I:2-2-2}
+ 
+-On notera $\dG_{m,\eta}$ (ou $\dG_m$ s'il n'y a pas d'ambiguïté) le faisceau 
++On notera $\dG_{m,X}$ (ou $\dG_m$ s'il n'y a pas d'ambiguïté) le faisceau 
+ défini par $U\mapsto \Gamma(U,\sO_U^*)$; il s'agit bien d'un faisceau 
+ grâce au théorème de descente fidèlement plate (I.\ref{I:1-4-5}). On a 
+ par définition 
+@@ -895,7 +896,7 @@
+ \end{propositiondash}
+ \begin{proof}
+ Soit $*$ le foncteur qui, à un faisceau inversible $\sL$ sur $X$, associe le 
+-préfaisceau $\sL^*$ suivant sur $\et X$: pour $\varphi_U:U\to X$ étale, 
++préfaisceau $\sL^*$ suivant sur $\et X$: pour $\varphi:U\to X$ étale, 
+ \[
+   \sL^*(U)=\operatorname{Isom}_U(\sO_U,\varphi^*\sL)\text{.}
+ \]
+@@ -1195,8 +1196,8 @@
+ En particulier, si $X=\spec(K)$, on a $\sF(X) = \sF_{\bar K}^G$. Si l'on se 
+ restreint aux faisceaux abéliens, on obtient en passant aux foncteurs 
+ dérivés des isomorphismes canoniques 
+-\[
+-  \PrintPage{26}\h^q(\et X,\sF) = \h^q(G,\sF_{\bar K})\text{.}
++\PrintPage{26}\[
++  \h^q(\et X,\sF) = \h^q(G,\sF_{\bar K})\text{.}
+ \]
+ 
+ 
+@@ -1376,7 +1377,8 @@
+ \]
+ [D'un point de vue géométrique si l'on note $x=\spec(K)$, $x'=\spec(K')$ et 
+ $\pi:x'\to x$ le morphisme canonique, on a $\eR^q \pi_*(\dG_{m,x'}) = 0$ pour 
+-$q>0$ et par suite $\h^q(x',\dG_{m,x'})\simeq \h^q(x,\pi_*\dG_{m,x'})$ pour $q\geqslant 2$]. 
++$q>0$ et par suite $\h^q(x',\dG_{m,x'})\simeq \h^q(x,\pi_*\dG_{m,x'})$ pour 
++$q\geqslant 0$]. 
+ 
+ Par ailleurs le choix d'une base de $K'$ en tant qu'espace vectoriel sur $K$ 
+ permet de définir un homomorphisme 
+@@ -1586,7 +1588,7 @@
+ \[
+   \spec(K) = \eta\times_X \spec(\tilde\sO_{X,x})\text{,}
+ \]
+-donc $(\eR^qj_*\dG_{m,\eta})_x = \h^q(\spec(k),\dG_m)$. 
++donc $(\eR^qj_*\dG_{m,\eta})_x = \h^q(\spec(K),\dG_m)$. 
+ 
+ Or $K$ est une extension algébrique de $k(X)$, donc une extension de degré 
+ de transcendance $1$ de $k$: le lemme résulte de (\ref{I:3-2-4}). 
+@@ -1677,8 +1679,7 @@
+ \[\xymatrix{
+   0 \ar[r] 
+     & \h^1(X,\dmu_n) \ar[r] 
+-    & \pic(X) \ar[r]^-n
+-    & \pic(X) \ar[r] 
++    & \pic(X) \ar[r]^-n 
+     & \pic(X) \ar[r] 
+     & \h^2(X,\dmu_n) \ar[r] 
+     & 0\text{.}
+@@ -1928,7 +1929,7 @@
+ Il revient au même de montrer que les ensembles de parties à la fois 
+ ouvertes et fermées $\operatorname{Of}(X)$ et $\operatorname{Of}(X_0)$ sont 
+ en bijection. On sait que l'ensemble $\operatorname{Of}(X)$ correspond 
+-bijectivement à l'ensemble des idempotents de \PrintPage{41}$\Gamma(X,\sO_X)$, de même 
++bijectivement à l'ensemble des idempotents de $\Gamma(X,\sO_X)$, de même 
+ $\operatorname{Of}(X_0)$ correspond bijectivement à l'ensemble des 
+ idempotents de $\Gamma(X_0,\sO_{X_0})$. Il s'agit donc de montrer que 
+ l'application canonique 
+@@ -1938,7 +1939,7 @@
+ est bijective. 
+ 
+ On notera $\fm$ l'idéal maximal de $A$, $\Gamma(X,\sO_X)^\wedge$ le complété 
+-de $\Gamma(X,\sO_X)$ pour la topologie $\fm$-adique et, pour tout entier 
++de \PrintPage{41}$\Gamma(X,\sO_X)$ pour la topologie $\fm$-adique et, pour tout entier 
+ $n\geqslant 0$, $X_n=X\otimes_A A/\fm^{n+1}$. D'après le théorème de finitude 
+ pour les morphismes propres \hyperlink{cite.ega}{[EGA III, 3.2]}, $\Gamma(X,\sO_X)$ est une 
+ $A$-algèbre finie; comme $A$ est hensélien, il en résulte que 
+@@ -1950,13 +1951,6 @@
+ 
+ D'après le théorème de comparaison pour les morphismes propres 
+ \hyperlink{cite.ega}{[EGA III, 4.1]}, l'application canonique 
+-\[
+-  \Gamma(X,\sO_X)^\wedge \to \varprojlim \Gamma(X_n,\sO_{X_n})
+-\]
+-est bijective.
+-
+-D'après le théorème de comparaison pour les morphismes propres
+-\cite[III.4.1]{ega}, l'application canonique
+ \[
+   \Gamma(X,\sO_X)^\wedge \to \varprojlim \Gamma(X_n,\sO_{X_n})
+ \]
+@@ -2067,7 +2061,7 @@
+ 
+ On vérifie facilement que la catégorie des faisceaux constructibles sur $X$ 
+ est une catégorie abélienne. De plus, si $u:\sF\to \sG$ est un homomorphisme de 
+-faisceaux et si $\sF$ constructible, le faisceau $\operatorname{Im}(u)$ est constructible.
++faisceaux et si $\sF$ est constructible, le faisceau $\operatorname{Im}(u)$ est constructible.
+ 
+ 
+ 
+@@ -2181,7 +2175,7 @@
+ le paragraphe précédent, il suffira de montrer que, si $S$ est le spectre 
+ d'un anneau local noethérien strictement hensélien, $f:X\to S$ un 
+ morphisme propre dont la fibre fermée $X_0$ est de dimension $\leqslant 1$ 
+-et $n$ un entier $\geqslant 0$, l'homomorphisme canonique 
++et \var{$n$ un entier $\geqslant 0$}{$n$ un entier $>0$}{S45-ASTRA-A-0021}, l'homomorphisme canonique 
+ \[
+   \h^q(X,\dZ/n) \to \h^q(X_0,\dZ/n)
+ \]
+@@ -2597,7 +2591,7 @@
+ 
+ 
+ \begin{sourceexampledotdash}[Notation]\label{I:5-1-1}
+-Etant donnés un schéma $S$ et un point géométrique $s$ de $S$, on 
++Étant donnés un schéma $S$ et un point géométrique $s$ de $S$, on 
+ notera $\widetilde S^s$ le spectre du localisé strict de $S$ en $s$. 
+ \end{sourceexampledotdash}
+ 
+@@ -2700,7 +2694,7 @@
+ 
+ \begin{sourceinline}\label{I:5-1-6}
+ 
+-Etant donnés un morphisme localement acyclique $f:X\to S$ et une flèche de 
++Étant donnés un morphisme localement acyclique $f:X\to S$ et une flèche de 
+ spécialisation $t\to \widetilde S^s$, nous allons définir des 
+ homomorphismes canoniques, dits flèches de cospécialisation 
+ \[
+@@ -2966,7 +2960,7 @@
+ \begingroup
+ \renewcommand*{\thesubsubsection}{2.3.3}
+ \begin{sourcebareinline}\label{I:5-2-6} % originally 5.2.3.3
+-Prouvons 2.3. Prouvons \ref{I:5-2-3}. Notons $t$ le point en lequel $\bar t$ est localisé. Il nous est loisible de 
++Prouvons 2.3. Notons $t$ le point en lequel $\bar t$ est localisé. Il nous est loisible de 
+ remplacer $A$ par le normalisé de $A$ dans une extension finie séparable 
+ $k(t')$ de $k(t)$ dans $k(\bar t)$ (cf. \ref{I:5-2-2}). Ceci, et un passage à 
+ la limite préliminaire, \PrintPage{61}nous permettent de supposer que 
+@@ -3098,7 +3092,7 @@
+ Soient $K/k$ une extension de corps séparablement clos, $X$ un $k$-schéma 
+ et $n$ un entier premier à la caractéristique de $k$. Alors l'application 
+ canonique $\h^q(X,\dZ/n) \to \h^q(X_K,\dZ/n)$ est bijective pour tout 
+-$q\geqslant 2$. 
++$q\geqslant 0$. 
+ \end{corollarydotdash}
+ 
+ Il suffit de remarquer que $\bar K$ est limite inductive de $\bar k$-algèbres 
+@@ -3214,7 +3208,7 @@
+ La preuve utilise la résolution des singularités et \ref{I:5-3-4}. Elle est 
+ généralisée au cas d'un morphisme de type fini de schémas excellents de 
+ caractéristique $0$ dans \hyperlink{cite.sga4}{SGA4 XIX \S5}. Une autre démonstration, 
+-indépendante de la résolution,est donnée dans ce volume 
++indépendante de la résolution, est donnée dans ce volume 
+ (\hyperref[VII]{Th. finitude}, \hyperref[VII:1-1]{1.1}),
+ % NOTE: originally (Th. finitude, 1.1),
+ elle s'applique à un morphisme de schémas de type fini sur un corps ou sur 
+@@ -3482,7 +3476,7 @@
+ \begin{equation*}\tag{2.3.3}\label{I:eq:6-2-3-3}
+   \tr\left(u \smallsmile f_0^*(\bar v)\right) = -v(u) \text{.}
+ \end{equation*}
+-Cette compatibilité est prouvée en (\nameref{V}, 3.2.4).
++Cette compatibilité est prouvée en (\nameref{V}, \var{3.2.4}{\ref{V:3-2} et \ref{V:3-4}}{S45-ASTRA-A-0034}).
+ 
+ % originally (Dualité, 3.2.4).
+ 
+@@ -3608,7 +3602,7 @@
+ $S$ est de type fini sur le spectre d'un corps ou d'un anneau de Dedekind, 
+ alors, pour tout morphisme de type fini $f:X\to S$ et tout faisceau 
+ constructible $\sF$ sur $X$, les faisceaux $\eR^i f_* \sF$ sur $S$ sont constructibles 
+-(\nameref{VII}, \ref{VII:1-1}),. 
++(\nameref{VII}, \ref{VII:1-1}). 
+ % originally (Th. finitude, 1.1).
+ 
+ \PrintPage{74}\section*{Bibliographie}\label{I:bib}
+@@ -3617,7 +3611,7 @@
+ \item[{[2]}] M. ARTIN. Algebraic approximation of structures over complete local rings, Pub. Math. I.H.E.S., n° 36, \var{1959}{1969}{S45-ASTRA-A-0029}, p. \var{25--58}{23--58}{S45-ASTRA-A-0030}.
+ \item[{[3]}] M. ARTIN. Théorèmes de représentabilité pour les espaces algébriques (chap. VII, le théorème de finitude en cohomologie étale), Presses de l'Université de Montréal, 1973.
+ \item[{[4]}] M. ARTIN, A. GROTHENDIECK, J.L. VERDIER. Théorie des Topos et Cohomologie Étale des Schémas, SGA 4, Lecture notes in Maths., n° 269, 270 et 305, Springer, 1972/73.
+-\item[{[5]}] J. GIRAUD. Analysis situs (d'après Artin et Grothendieck). Séminaire Bourbaki, 1962/63, exp. 266.
++\item[{[5]}] J. GIRAUD. Analysis situs (d'après Artin et Grothendieck). Séminaire Bourbaki, 1962/63, exp. \var{266}{256}{S45-ASTRA-A-0033}.
+ \item[{[6]}] A. GROTHENDIECK. Technique de descente et théorèmes d'existence en géométrie algébrique. I. Généralités. Descente par morphismes fidèlement plats. Séminaire Bourbaki, 1959/60, exp. 190.
+ \item[{[7]}] A. GROTHENDIECK. Revêtements Étales et Groupe Fondamental, SGA 1, Lecture notes in Maths., n° 224, Springer, 1971.
+ \item[{[8]}] A. GROTHENDIECK et J. DIEUDONNÉ. Éléments de géométrie algébrique, Pub. Math. I.H.E.S., n° 4, 8, 11, 17, 20, 24, 28, 32, 1960/67 [cité EGA].
