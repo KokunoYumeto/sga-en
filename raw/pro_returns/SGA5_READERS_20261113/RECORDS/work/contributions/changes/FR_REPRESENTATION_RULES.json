@@ -1,0 +1,34 @@
+{
+  "implementation": "scripts/prepare_french.py:expand_document; scripts/sga5_common.py:split_document,strip_comments",
+  "implementation_sha256": {
+    "prepare_french.py": "bd2c48d934f9dc240cb06ef92b43bbdb20d792a641bcb30fd5e70b6670b72aec",
+    "sga5_common.py": "d4b12e821428b0bc0970625cb1f0368bea512f5966c5f40a40b17572509f8848"
+  },
+  "raw_body_extraction": {
+    "start_character_0based_in_current_source": 10556,
+    "end_character_0based_in_current_source": 871695,
+    "start_byte_0based_in_current_source": 10558,
+    "end_byte_0based_in_current_source": 883469,
+    "delimiter_policy": "Exact substring after the first begin-document token and before the last end-document token; no trimming."
+  },
+  "raw_body_sha256": "31f41b039101c5eb94540263b0219b67ce7bd185d60b304dd2d216033b82dcf8",
+  "prepared_body_sha256": "bef0b79566cc5911519b39a99bb134b8375ff1710b6ee8d15c33c5992b1ff786",
+  "mapping_reproduces_prepared_body_exactly": true,
+  "macro_expansion_events": 642,
+  "literal_macro_occurrences_expanded": 955,
+  "operations": [
+    "Extract the document body by the exact delimiter slices recorded above.",
+    "Retain full folio-marker comment lines. For every other unescaped percent sign, remove it and the rest of its physical line, including the line ending.",
+    "Track scoped R and uRHom definitions and expand the listed zero-argument macros with their current source definitions.",
+    "Protect a zero-argument macro passed as an unbraced token to an accent or font command by inserting braces before expanding it.",
+    "Keep macro/environment definition lines apart from scoped definitions handled explicitly.",
+    "Replace a font macro followed by whitespace and one alphanumeric argument token with the same macro and that token in braces."
+  ],
+  "macros_expanded": [
+    "\\R",
+    "\\RG",
+    "\\RHom",
+    "\\uRHom"
+  ],
+  "qualification": "The exact literal mapping and all before/after hunks are established here. This report makes no additional visual comparison claim."
+}

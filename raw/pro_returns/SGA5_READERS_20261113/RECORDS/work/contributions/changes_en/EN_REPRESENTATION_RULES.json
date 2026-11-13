@@ -1,0 +1,27 @@
+{
+  "implementation": "scripts/build_changes_en.py:body_mapping",
+  "source_mapping_correspondence": "scripts/prepare_english_master.py:inject/main; scripts/sga5_common.py:split_document,strip_comments",
+  "raw_body_slice": {
+    "start_character_0based": 12309,
+    "end_character_0based": 815199,
+    "start_byte_0based": 12312,
+    "end_byte_0based": 815599,
+    "start_basis": "first verified Exposé I anchor in EN_ALIGNMENT.json",
+    "end_basis": "start of final end-document token; no trimming"
+  },
+  "raw_body_sha256": "c1a7d520cdebce0a7f069a406b103e79449d4f75496181ab29a1dea418e20fe0",
+  "prepared_body_sha256": "43f67ead9781a5563ab5b253e34c18a824ff52591258cf5277a95717faa01977",
+  "injected_validated_anchor_count": 793,
+  "distinct_folios": 479,
+  "retained_marker_count": 793,
+  "processed_nonmarker_comments": 798,
+  "complete_marker_sequence_matches_alignment": true,
+  "exact_prepared_body_reconstruction": true,
+  "operations": [
+    "At every recorded corrected character position insert percent + newline, the exact scan/folio marker, and newline.",
+    "Select the document body and then the first retained folio-1 marker through the body end.",
+    "Retain exact marker lines; for each other unescaped percent, remove the percent and the rest of its physical line including the ending.",
+    "Concatenate the retained characters without trimming or other rewriting."
+  ],
+  "qualification": "This proves the exact source-to-body mapping. Page ranges in the change table use validated anchor bounds, and no additional visual equivalence is claimed."
+}

@@ -1,0 +1,31 @@
+{
+  "variant": "FR-0525",
+  "folio": 248,
+  "command": "source work/toolchain/env.sh; pdftex -ini -interaction=nonstopmode -halt-on-error -output-directory=work/contributions/validation_fr work/contributions/validation_fr/folio248_token_boundary_probe.tex",
+  "probe": "work/contributions/validation_fr/folio248_token_boundary_probe.tex",
+  "probe_sha256": "f1ee30c4deed09505fe28b57cf8389ce939df08c38b67726c09ac155c5ec82a1",
+  "variant_call_sha256": "4ab830239fbda63dd9b7e1435209964bc5de566df4596e680085aac2a6f6982f",
+  "observations": [
+    "COMMENT_ENDLINE_DISCARDED=PASS",
+    "FIRST_ARGUMENT_BEGIN",
+    "LEADING_SPACE=PASS",
+    "NO_PAR_TOKEN=PASS",
+    "FIRST_ARGUMENT_END",
+    "SECOND_ARGUMENT_EMPTY=PASS",
+    "FOLLOWING_INPUT_BEGIN",
+    "LEADING_SPACE=PASS",
+    "NO_PAR_TOKEN=PASS",
+    "FOLLOWING_INPUT_END"
+  ],
+  "checks": {
+    "probe_contains_the_exact_current_variant_call": true,
+    "probe_file_hash_matches": true,
+    "all_ten_TeX_token_observations_match": true,
+    "diplomatic_argument_starts_with_endline_then_display": true,
+    "corrected_argument_is_empty": true,
+    "following_actual_input_starts_with_endline_then_display": true,
+    "marker_termination_is_immediately_before_the_call": true
+  },
+  "interpretation": "The percent comment discards its own endline. TeX tokenizes the endline after the first argument's opening brace as one space, with no paragraph token. The corrected argument is empty; the actual input endline after the complete call is also one space, with no paragraph token. Raw textual substitution places two physical endlines next to one another, but that serialization does not retain TeX's argument-scanning state. The printed mathematical tokens are unchanged; the raw endline discrepancy is retained explicitly in the projection report.",
+  "pass": true
+}

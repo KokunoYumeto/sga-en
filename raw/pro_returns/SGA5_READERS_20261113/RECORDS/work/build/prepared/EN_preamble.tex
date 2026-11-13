@@ -1,0 +1,310 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{microtype}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath,amssymb,mathtools,mathrsfs}
+\usepackage{enumitem}
+\usepackage{amsthm}
+\usepackage{tikz-cd}
+\DeclareMathOperator{\Reg}{Reg}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\codim}{codim}
+\providecommand{\cO}{\mathcal{O}}
+\providecommand{\fm}{\mathfrak{m}}
+\providecommand{\wt}[1]{\widetilde{#1}}
+\providecommand{\Cons}{\operatorname{Cons}}
+\providecommand{\Hh}{\mathrm{H}}
+\providecommand{\uH}{\underline{\mathrm H}}
+\providecommand{\uExt}{\underline{\Ext}}
+\providecommand{\uHom}{\underline{\Hom}}
+\providecommand{\uRHom}{\underline{\RHom}}
+\providecommand{\qedtext}{\hfill$\square$}
+\providecommand{\ZZ}{\mathbb{Z}}
+\providecommand{\QQ}{\mathbb{Q}}
+\providecommand{\RR}{\mathbb{R}}
+\providecommand{\FF}{\mathbb{F}}
+\providecommand{\NN}{\mathbb{N}}
+
+\newenvironment{statement}[1]{\par\medskip\noindent\textbf{#1.}\ }{\par\medskip}
+\newenvironment{prooftext}[1][Proof]{\par\noindent\emph{#1.}\ }{\par\medskip}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  hypertexnames=false,
+  pdftitle={SGA 5: Cohomologie l-adique et fonctions L - English Translation},
+  pdfauthor={SGA 5 authors and redactors},
+  pdfsubject={English translation of SGA 5},
+  pdfkeywords={SGA 5, l-adic cohomology, L-functions, algebraic geometry, English translation}
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\let\accentH\H
+\renewcommand{\H}{\mathrm{H}}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\cd}{cd}
+\newcommand{\R}{\mathrm{R}}
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\ob}{\operatorname{ob}}
+\newcommand{\charac}{\operatorname{char}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\SGAA}{SGA~A}
+
+\providecommand{\Ker}{\operatorname{Ker}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\Gal}{\operatorname{Gal}}
+\providecommand{\car}{\operatorname{car}}
+
+
+\providecommand{\RHom}{\mathrm{RHom}}
+\providecommand{\Dctf}{D_{\mathrm{ctf}}}
+\providecommand{\Id}{\mathrm{Id}}
+\providecommand{\pr}{\operatorname{pr}}
+\providecommand{\Gr}{\Gamma}
+\providecommand{\Fix}{\operatorname{Fix}}
+\providecommand{\Loc}{\operatorname{Loc}}
+\providecommand{\lto}{\longrightarrow}
+\providecommand{\xto}[1]{\xrightarrow{#1}}
+\providecommand{\lisom}{\xrightarrow{\sim}}
+\providecommand{\ctf}{\mathrm{ctf}}
+\providecommand{\et}{\mathrm{\acute{e}t}}
+\providecommand{\Sfrac}{SGA~$4^{1/2}$}
+
+
+\providecommand{\cl}{\operatorname{cl}}
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\EP}{\operatorname{EP}}
+\providecommand{\gr}{\operatorname{gr}}
+\providecommand{\DF}{\operatorname{DF}}
+
+\providecommand{\OO}{\mathcal{O}}
+\providecommand{\LL}{\mathbf L}
+\providecommand{\parf}{\mathrm{parf}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\frob}{\operatorname{Frob}}
+
+\providecommand{\RGamma}{\mathrm R\Gamma}
+\providecommand{\Rj}{\mathrm Rj}
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\cone}{\operatorname{cone}}
+\providecommand{\lten}{\overset{\mathrm L}{\otimes}}
+\providecommand{\Dctf}{D_{\mathrm{ctf}}}
+\providecommand{\Ob}{\operatorname{ob}}
+
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\RHom}{\mathrm{RHom}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\ob}{\operatorname{ob}}
+\providecommand{\lten}{\overset{\mathrm L}{\otimes}}
+\providecommand{\nat}{\natural}
+\providecommand{\dfn}{\mathrm{dfn}}
+
+\providecommand{\Fl}{\operatorname{Fl}}
+\providecommand{\MLAR}{\mathrm{MLAR}}
+\providecommand{\AR}{\mathrm{AR}}
+\providecommand{\NN}{\mathbb N}
+\providecommand{\Ens}{\mathrm{Ens}}
+\providecommand{\cC}{\mathcal C}
+\providecommand{\cE}{\mathcal E}
+\providecommand{\cF}{\mathcal F}
+\providecommand{\cG}{\mathfrak G}
+\providecommand{\source}{\operatorname{source}}
+\providecommand{\op}{\mathrm{op}}
+
+
+\providecommand{\End}{\operatorname{End}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\Im}{\operatorname{Im}}
+\providecommand{\Ker}{\operatorname{Ker}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\gr}{\operatorname{gr}}
+
+\renewcommand{\Im}{\operatorname{Im}}
+
+\providecommand{\Rlim}{\varprojlim}
+\providecommand{\adn}{\operatorname{adn}}
+\providecommand{\adf}{\operatorname{adf}}
+\providecommand{\AR}{\mathrm{AR}}
+\providecommand{\MLAR}{\mathrm{MLAR}}
+\providecommand{\Ecat}{\mathcal E}
+\providecommand{\Dcat}{\mathcal D}
+\providecommand{\Ccat}{\mathcal C}
+\providecommand{\Bcat}{\mathcal B}
+\providecommand{\Pcat}{\mathcal P}
+\providecommand{\J}{J}
+\providecommand{\gr}{\operatorname{gr}}
+\providecommand{\grs}{\operatorname{grs}}
+\providecommand{\Homcat}{\operatorname{Hom}}
+\providecommand{\Ker}{\operatorname{Ker}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\Im}{\operatorname{Im}}
+\providecommand{\can}{\operatorname{can}}
+\providecommand{\epi}{\operatorname{epi}}
+\providecommand{\id}{\operatorname{id}}
+
+
+\providecommand{\RGamma}{\mathrm R\Gamma}
+\providecommand{\RHom}{\mathrm R\mathcal{H}om}
+\providecommand{\Zell}{\mathbb Z_\ell}
+\providecommand{\Qell}{\mathbb Q_\ell}
+\providecommand{\Ql}{\mathbb Q_\ell}
+\providecommand{\lten}{\overset{\mathrm L}{\otimes}}
+\providecommand{\Ob}{\operatorname{ob}}
+\providecommand{\Ens}{\operatorname{Ens}}
+\providecommand{\Ensf}{\operatorname{Ensf}}
+\providecommand{\Aut}{\operatorname{Aut}}
+\providecommand{\End}{\operatorname{End}}
+\providecommand{\Sp}{\operatorname{Sp}}
+\providecommand{\Ab}{\operatorname{Ab}}
+\providecommand{\Abc}{\operatorname{Abc}}
+\providecommand{\Abf}{\operatorname{Abf}}
+\providecommand{\fct}{\operatorname{fct}}
+\providecommand{\Lc}{\operatorname{Lc}}
+\providecommand{\GL}{\operatorname{GL}}
+\providecommand{\car}{\operatorname{car}}
+\providecommand{\cHom}{\mathcal{H}om}
+\providecommand{\fc}{\operatorname{fc}}
+\providecommand{\adc}{\operatorname{adc}}
+\providecommand{\ad}{\operatorname{ad}}
+\providecommand{\adn}{\operatorname{adn}}
+\providecommand{\modn}{\operatorname{mod}}
+\providecommand{\AR}{\operatorname{AR}}
+
+
+\providecommand{\R}{\mathrm R}
+\providecommand{\V}{\mathrm V}
+\providecommand{\A}{\mathbb A}
+\providecommand{\P}{\mathbb P}
+\providecommand{\Z}{\mathbb Z}
+\providecommand{\muS}{\mu_S}
+\providecommand{\cupdot}{\smile}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\Supp}{\operatorname{Supp}}
+\providecommand{\coker}{\operatorname{coker}}
+\providecommand{\lten}{\overset{\mathrm L}{\otimes}}
+\newenvironment{proposition}[1][]{\par\medskip\noindent\textbf{Proposition #1.}\ }{\par\medskip}
+\newenvironment{corollaire}[1][]{\par\medskip\noindent\textbf{Corollaire #1.}\ }{\par\medskip}
+\newenvironment{theoreme}[1][]{\par\medskip\noindent\textbf{Théorème #1.}\ }{\par\medskip}
+\newenvironment{lemme}[1][]{\par\medskip\noindent\textbf{Lemme #1.}\ }{\par\medskip}
+
+
+\providecommand{\Ahat}{\widehat A}
+\providecommand{\Gm}{\mathbb G_m}
+\providecommand{\Et}{\mathrm{et}}
+\providecommand{\Pic}{\operatorname{Pic}}
+\providecommand{\cl}{\operatorname{cl}}
+\providecommand{\EP}{\operatorname{EP}}
+\providecommand{\Ch}{\operatorname{Ch}}
+\providecommand{\lten}{\overset{\mathrm L}{\otimes}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\pr}{\operatorname{pr}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\coker}{\operatorname{Coker}}
+
+
+\providecommand{\cC}{\mathcal C}
+\providecommand{\cD}{\mathcal D}
+\providecommand{\cA}{\mathcal A}
+\providecommand{\cB}{\mathcal B}
+\providecommand{\Ab}{\operatorname{Ab}}
+\providecommand{\Ob}{\operatorname{Ob}}
+\providecommand{\parf}{\mathrm{parf}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\lten}{\overset{\mathrm L}{\otimes}}
+
+
+\providecommand{\Mod}{\operatorname{Mod}}
+\providecommand{\tr}{\operatorname{tr}}
+\providecommand{\Sw}{\operatorname{Sw}}
+\providecommand{\Art}{\operatorname{Art}}
+\providecommand{\etG}{\mathrm{\acute et},G}
+\providecommand{\cT}{\mathcal T}
+
+
+\providecommand{\clK}[1]{\operatorname{cl}_{K(#1)}}
+\providecommand{\clKstar}[1]{\operatorname{cl}_{K^{\bullet}(#1)}}
+\providecommand{\epsD}{\varepsilon^\Delta}
+\providecommand{\alphaD}{\alpha^\Delta}
+\providecommand{\bbone}{\mathbf 1}
+\providecommand{\sw}{\operatorname{sw}}
+\providecommand{\art}{\operatorname{art}}
+\providecommand{\RG}{\mathrm R\Gamma}
+\providecommand{\RGc}{\mathrm R\Gamma_c}
+\providecommand{\RHom}{\mathrm{RHom}}
+\providecommand{\Rpi}{\mathrm R\pi}
+\providecommand{\rG}{\mathrm R\Gamma^G}
+\providecommand{\wh}[1]{\widehat{#1}}
+\providecommand{\checkSw}{\check{\operatorname{Sw}}}
+
+
+\providecommand{\La}{\Lambda}
+\providecommand{\bZ}{\mathbb Z}
+\providecommand{\bQ}{\mathbb Q}
+\providecommand{\bZell}{\mathbb Z_\ell}
+\providecommand{\fm}{\mathfrak m}
+\providecommand{\card}{\operatorname{card}}
+\providecommand{\im}{\operatorname{im}}
+\providecommand{\Aut}{\operatorname{Aut}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\cl}{\operatorname{cl}}
+\providecommand{\NW}{\operatorname{NW}}
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\Ob}{\operatorname{ob}}
+\providecommand{\car}{\operatorname{car}}
+\providecommand{\qedtext}{\hfill$\square$}
+
+
+\providecommand{\fr}{\operatorname{fr}}
+\providecommand{\Fr}{\operatorname{Fr}}
+\providecommand{\Sch}{\operatorname{Sch}}
+\providecommand{\Proj}{\operatorname{Proj}}
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\PP}{\mathbb P}
+\providecommand{\JJ}{\mathcal J}
+\providecommand{\XX}{\mathcal X}
+\providecommand{\cL}{\mathcal L}
+\providecommand{\cM}{\mathcal M}
+\providecommand{\cN}{\mathcal N}
+\providecommand{\cS}{\mathcal S}
+\providecommand{\cX}{\mathcal X}
+\providecommand{\cY}{\mathcal Y}
+\providecommand{\cZ}{\mathcal Z}
+\providecommand{\bF}{\mathbb F}
+\providecommand{\bbZ}{\mathbb Z}
+\providecommand{\simeqto}{\xrightarrow{\sim}}
+
+
+\providecommand{\Fr}{\operatorname{Fr}}
+\providecommand{\fr}{\operatorname{fr}}
+\providecommand{\Sch}{\operatorname{Sch}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\RGamma}{\mathrm R\Gamma}
+\providecommand{\Ob}{\operatorname{Ob}}
+\providecommand{\Gal}{\operatorname{Gal}}
+\providecommand{\et}{\acute{e}t}
+\providecommand{\lten}{\overset{\mathrm L}{\otimes}}
+\providecommand{\boxt}{\boxtimes}

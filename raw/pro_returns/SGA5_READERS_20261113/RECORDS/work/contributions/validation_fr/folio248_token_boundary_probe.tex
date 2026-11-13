@@ -1,0 +1,25 @@
+\catcode123=1
+\catcode125=2
+\catcode35=6
+\catcode37=14
+\newlinechar=10
+\def\empty{}
+\def\ExpectedAB{AB}
+\def\CommentTokens{A%%%%%%%%%%  scan idx 259  |  folio 248  %%%%%%%%%%
+B}
+\ifx\CommentTokens\ExpectedAB\immediate\write16{COMMENT_ENDLINE_DISCARDED=PASS}\else\immediate\write16{COMMENT_ENDLINE_DISCARDED=FAIL}\fi
+\def\LeadingSpace#1 #2\EndTest{\def\Prefix{#1}\ifx\Prefix\empty\immediate\write16{LEADING_SPACE=PASS}\else\immediate\write16{LEADING_SPACE=FAIL}\fi}
+\def\NoPar#1\par#2\EndTest{\def\Rest{#2}\ifx\Rest\empty\immediate\write16{NO_PAR_TOKEN=PASS}\else\immediate\write16{NO_PAR_TOKEN=FAIL}\fi}
+\def\NextInput#1\EndTest{\def\NextTokens{#1}\immediate\write16{FOLLOWING_INPUT_BEGIN}\expandafter\LeadingSpace\NextTokens \EndTest\expandafter\NoPar\NextTokens\par\EndTest\immediate\write16{FOLLOWING_INPUT_END}}
+\long\def\SGAvar#1#2#3{\def\ArgOne{#1}\def\ArgTwo{#2}\immediate\write16{FIRST_ARGUMENT_BEGIN}\expandafter\LeadingSpace\ArgOne \EndTest\expandafter\NoPar\ArgOne\par\EndTest\immediate\write16{FIRST_ARGUMENT_END}\ifx\ArgTwo\empty\immediate\write16{SECOND_ARGUMENT_EMPTY=PASS}\else\immediate\write16{SECOND_ARGUMENT_EMPTY=FAIL}\fi\NextInput}
+%%%%%%%%%%  scan idx 259  |  folio 248  %%%%%%%%%%
+\SGAvar{
+\[
+E^{(n)}_r(X)=\bigl(E_r^{p,q}(X)\bigr)_{p+q=n}
+\]
+est canoniquement muni d'une structure de \((\gr^\bullet(S),\mathcal{D})\)-module gradué. Il en est de même par passage à la limite pour:}{}{FR-0525}
+\[
+\mathcal{E}_r^{(n)}(X)=\bigl(\mathcal{E}_r^{p,q}(X)\bigr)_{p+q=n}.
+\]
+\EndTest
+\end
