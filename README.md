@@ -23,13 +23,15 @@ The English text is AI-translated from French texts of the seminars, volume by v
 - SGA 7 I from a recomposed PDF of the published volume.
 
 Jacob C. Reinhold's English translation was used for comparison and drafting in SGA 2 and SGA 3. Recorded AI work
-includes OpenAI Codex (GPT-5.6 Sol: translation; GPT-6 Astra: corrections and assembly, September–October 2026)
-and Claude Opus 5.5
-(Anthropic: the SGA 2 and SGA 3 sources of 26 October 2026, and the translation of SGA 3 revised against the
-1970 printing in November 2026). GPT-6.1 Sol (OpenAI API) proposed the edits that carry the corrections of the
+includes OpenAI Codex (GPT-5.6 Sol: translation; GPT-6 Astra: corrections and assembly, September–October 2026;
+effort not recorded) and Claude Opus 5.5 (Anthropic, effort not recorded: the SGA 2 and SGA 3 sources of 26 October
+2026, and the translation of SGA 3 revised against the 1970 printing in November 2026). GPT-6.1 Sol (OpenAI API,
+effort high, Flex tier) proposed the edits that carry the corrections of the
 scan check of the French text into SGA 4 (November 2026); each edit was checked by hand. The release
 notes record the correction rounds: spectrum notation in SGA 1 (25 September 2026), mathematical and reference
-corrections in SGA 1 and SGA 7 II (3 October 2026), references in SGA 3 (24 October 2026), the scan-check corrections in SGA 4 (12 November 2026).
+corrections in SGA 1 and SGA 7 II (3 October 2026), references in SGA 3 (24 October 2026), the scan-check corrections in SGA 4 (12 November 2026). The readers of
+14 November 2026 (SGA 4½, 5, 6 and 7) were built by GPT-6 Astra (OpenAI, ChatGPT Pro mode) from the scan-checked French
+text; their release notes name the models of each step with their effort settings.
 
 ## Status
 
@@ -47,9 +49,22 @@ the same way.
 All editions of EGA, FGA and SGA made in this project are listed in
 [ega-fga-sga](https://github.com/KokunoYumeto/ega-fga-sga).
 
+## Readers of 14 November 2026
+
+New readers of SGA 4½, SGA 5, SGA 6 and SGA 7, built from the French text checked page by page against the printed volumes, in three forms: diplomatic (the text as printed, misprints included), corrected with an apparatus of every change, and a reading text. Built by GPT-6 Astra (OpenAI, ChatGPT Pro mode); PDF check and build fixes by Claude Opus 5.5 at effort high (SGA 6: at effort max). Release: [v2026-11-14-english-edition](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-11-14-english-edition); its notes give the state of each volume and the checks.
+
+| Volume | Subject | Diplomatic | Corrected, with apparatus | Reading text |
+|---|---|---|---|---|
+| SGA 4½ | Étale cohomology | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/05_SGA4HALF_EN_diplomatic.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/05_SGA4HALF_EN_diplomatic.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/05_SGA4HALF_EN_corrected_apparatus.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/05_SGA4HALF_EN_corrected_apparatus.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/05_SGA4HALF_EN_reading.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/05_SGA4HALF_EN_reading.tex) |
+| SGA 5 | ℓ-adic cohomology and L-functions | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/06_SGA5_EN_diplomatic.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/06_SGA5_EN_diplomatic.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/06_SGA5_EN_corrected_apparatus.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/06_SGA5_EN_corrected_apparatus.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/06_SGA5_EN_reading.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/06_SGA5_EN_reading.tex) |
+| SGA 6 | Intersection theory and Riemann–Roch | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_diplomatic.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_diplomatic.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_corrected_apparatus.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_corrected_apparatus.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_reading.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_reading.tex) |
+| SGA 7 I and II | Monodromy groups | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_diplomatic.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_diplomatic.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_corrected_apparatus.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_corrected_apparatus.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_reading.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_reading.tex) |
+
+For SGA 1, SGA 2, SGA 3 and SGA 4, and for the cumulative reader of all volumes, the newest version is the release of 12 November 2026 below. The build records of every reader are in [`raw/pro_returns/`](raw/pro_returns/), the PDF check in [`raw/pdf_check_20261114/`](raw/pdf_check_20261114/).
+
 ## Contents
 
-The PDFs and their LaTeX are attached to the release of
+The single-reader editions of every volume, with their LaTeX, are attached to the release of
 [12 November 2026](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-11-12-english-edition). The cumulative
 reader holds all volumes with links between them:
 [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-12-english-edition/00_SGA_EN_CUMULATIVE_LINKED_READER.pdf) ·
