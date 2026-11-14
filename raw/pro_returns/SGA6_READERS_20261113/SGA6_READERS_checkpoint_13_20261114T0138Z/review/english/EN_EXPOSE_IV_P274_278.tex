@@ -1,0 +1,117 @@
+%%%%%%%%%%  scan idx 287  |  folio 274  %%%%%%%%%%
+\SGAPrintPage{274}%
+\sgaStableTarget{sga6.e04.expose}\section*{\underline{EXPOSÉ IV}\\[3pt] \underline{\underline{GROTHENDIECK GROUPS OF RINGED TOPOI}}}
+% The reviewed Exposé IV source renews this local abbreviation with one rule.
+\renewcommand{\parf}{\underline{\mathrm{parf}}}
+\begin{center}
+\underline{by L. ILLUSIE}
+\end{center}
+
+\sgaStableTarget{sga6.e04.sec.1}\section*{1. Reminders and generalities on Grothendieck groups}
+
+\sgaStableTarget{sga6.e04.para.1-1}1.1. Let \(C\) be a \uline{triangulated} category. Recall (I 6.3 and SGA 5 VIII 2) that a map \(f\) from \(\Ob C\) to an abelian group \(G\) is called \uline{additive} if \(f(E)=f(E')+f(E'')\) for every distinguished triangle \(E'\longrightarrow E\longrightarrow E''\longrightarrow E'[1]\). The additive maps from \(\Ob C\) to \(G\) form an abelian group, depending functorially on \(G\). The functor thus obtained is represented by an abelian group \(k(C)\) and a universal additive map \(\cl_C:\Ob C\longrightarrow k(C)\) (denoted by \(\cl\) when there is no risk of confusion).
+
+The group \(k(C)\) depends functorially on \(C\) with respect to exact functors. If \(C,C'\) are triangulated categories, two isomorphic exact functors from \(C\) to \(C'\) induce the same homomorphism \(k(C)\to k(C')\); in particular, if \(u:C\to C'\) is an exact functor that is an equivalence of categories, \(k(u):k(C)\to k(C')\) is an isomorphism.
+
+\sgaStableTarget{sga6.e04.lem.1-2}\textbf{Lemma 1.2.} \uline{Let} \(C\) \uline{be a triangulated category, and let} \(L\in\Ob C\).
+\begin{enumerate}[label=\alph*)]
+\item \uline{For every} \(n\in\mathbb Z\)\uline{, we have}
+\[
+ \cl(L[n])=(-1)^n\cl(L).
+\]
+\uline{If} \(L',L''\) \uline{are objects of} \(C\) \uline{such that} \(L\simeq L'\oplus L''\)\uline{, then} \(\cl(L)=\cl(L')+\cl(L'')\).
+\item \uline{Suppose there exists} \(n\in\mathbb Z\) \uline{such that} \(\coprod_{i\geq0} L[2ni]\) \uline{is representable. Then} \(\cl(L)=0\).
+\end{enumerate}
+
+\uline{Proof.} Assertion a) follows directly from the definitions (cf. SGA 5 VIII 2). For b), it suffices to observe that we have
+
+%%%%%%%%%%  scan idx 288  |  folio 275  %%%%%%%%%%
+\SGAPrintPage{275}%
+\[
+ \coprod_{i\geq0} L[2ni]\simeq
+ L\oplus\left(\coprod_{i\geq0}L[2ni]\right)[2n],
+\]
+and to apply a).
+
+\sgaStableTarget{sga6.e04.lem.1-3}\textbf{Lemma 1.3.} \uline{Let} \(C\) \uline{be a triangulated category, and} \(A\) \uline{a thick subcategory} \(([\mathrm V]\ \mathrm I\ 2.1)\)\uline{. The inclusion and quotient functors define an exact sequence}
+\[
+ k(A)\longrightarrow k(C)\longrightarrow k(C/A)\longrightarrow 0.
+\]
+
+\uline{Proof.} See (SGA 5 VIII 3.1).
+
+\sgaStableTarget{sga6.e04.lem.1-4}\textbf{Lemma 1.4.} \uline{Let} \(A\) \uline{be an additive (resp. abelian) category, and} \(f\) \uline{an additive function} (1.1) \uline{on} \(\Ob K^b(A)\) \uline{(resp.} \(\Ob D^b(A)\)\uline{). For} \(E\in\Ob K^b(A)\) \uline{(resp.} \(D^b(A)\)\uline{) we have}
+\[
+ f(E)=\sum(-1)^i f(E^i)
+\]
+\uline{(resp.}
+\[
+ f(E)=\sum(-1)^i f(H^i(E))
+\]).
+
+\uline{Proof.} Left as an exercise to the reader.
+
+\sgaStableTarget{sga6.e04.para.1-5}1.5. Let \(C\) be an \uline{abelian} category and \(A\) a full subcategory of \(C\), stable under finite sums. A map \(f\) from \(\Ob A\) to an abelian group \(G\) is called \uline{additive} if \(\sum(-1)^i f(E^i)=0\) for every acyclic complex \(E\) of \(C\), with bounded degrees and components belonging to \(A\). When \(A\) is stable under kernels of epimorphisms (I 1.2), this amounts to saying that \(f(L)=f(L')+f(L'')\) for every exact sequence \(0\longrightarrow L'\longrightarrow L\longrightarrow L''\longrightarrow0\) of \(C\) whose terms belong to \(A\). The additive maps from \(\Ob A\) to \(G\) form an abelian group depending functorially on \(G\). Denote by \(K^{b,\emptyset}(A)\) the thick subcategory of \(K^b(A)\) formed by the acyclic complexes. It follows easily from (1.3) and (1.4) that the map
+\sgaStableTarget{sga6.e04.eq.1-5-1}\begin{equation}\tag{1.5.1}
+ \cl_A:\Ob A\longrightarrow k\bigl(K^b(A)/K^{b,\emptyset}(A)\bigr)
+\end{equation}
+
+%%%%%%%%%%  scan idx 289  |  folio 276  %%%%%%%%%%
+\SGAPrintPage{276}%
+induced by \(\cl_{K^b(A)/K^{b,\emptyset}(A)}\) (1.1) is a universal additive map, i.e. the pair \(\left(k\bigl(K^b(A)/K^{b,\emptyset}(A)\bigr),\cl_A\right)\) represents the functor assigning to each abelian group \(G\) the abelian group of additive maps from \(\Ob A\) to \(G\). We shall put
+\sgaStableTarget{sga6.e04.eq.1-5-2}\begin{equation}\tag{1.5.2}
+ k\bigl(K^b(A)/K^{b,\emptyset}(A)\bigr)=k(A)
+\end{equation}
+(we shall write \(k(A,C)\) instead of \(k(A)\) when we wish to avoid any ambiguity about the ambient abelian category)\SGAAuthorFootnote{1}{The notation \(k(A)\) was introduced in (I 6.3) to denote the group \(k(K^b(A))\), which is not in general isomorphic to the group defined by (1.5.2). We therefore change convention here: in the present exposé, the notation \(k(A)\) will denote exclusively the group defined by (1.5.2).}.
+In particular, for \(A=C\), we have
+\sgaStableTarget{sga6.e04.eq.1-5-3}\begin{equation}\tag{1.5.3}
+ k(D^b(C))=k(C).
+\end{equation}
+
+\sgaStableTarget{sga6.e04.lem.1-6}\textbf{Lemma 1.6.} \uline{Let} \(C\) \uline{be an abelian category, and} \(A\) \uline{a thick subcategory (i.e. a full subcategory stable under kernels, cokernels, and extensions). Denote by} \(D_A(C)\) \uline{the full subcategory of} \(D(C)\) \uline{formed by the objects} \(E\) \uline{such that} \(H^i(E)\in\Ob A\) \uline{for every} \(i\)\uline{. Then} \(D_A(C)\) \uline{is a triangulated subcategory} \(([\mathrm V]\ \mathrm I\ 1.2.3)\) \uline{of} \(D(C)\)\uline{, and the canonical functor} \(D^b(A)\longrightarrow D_A^b(C)=D^b(C)\cap D_A(C)\) \uline{induces an isomorphism}
+\[
+ k(A)\xrightarrow{\sim} k(D_A^b(C)),
+\]
+\uline{where} \(k(A)\) \uline{is defined by} (1.5.2).
+
+\uline{Proof.} The first assertion is an immediate consequence of the long exact cohomology sequence. For the second, consider the map \(f:\Ob D_A^b(C)\longrightarrow k(A)\) defined by
+\[
+ f(E)=\sum(-1)^i\cl_A(H^i(E)),
+\]
+where \(\cl_A\) is the map (1.5.1). By the long exact cohomology sequence, \(f\) is additive (1.1), hence defines a homomorphism
+\[
+ \varphi:k(D_A^b(C))\longrightarrow k(A).
+\]
+
+%%%%%%%%%%  scan idx 290  |  folio 277  %%%%%%%%%%
+\SGAPrintPage{277}%
+It follows at once from (1.4) that \(\varphi\) is inverse to the canonical homomorphism \(k(A)\longrightarrow k(D_A^b(C))\).
+
+\sgaStableTarget{sga6.e04.rem.1-6-1}\textbf{Remark 1.6.1.} In the situation of (1.6), the canonical functor \(D^b(A)\longrightarrow D_A^b(C)\) is not in general an equivalence of categories, as shown by the example where \(S\) is a scheme, \(C\) the category of \(\underline{O}_S\)-Modules, and \(A\) the category of quasi-coherent \(\underline{O}_S\)-Modules (II Ap. I 0.3). See, however, the criterion (II 2.1.3).
+
+\sgaStableTarget{sga6.e04.def.1-7}\textbf{Definition 1.7.} \uline{Let} \(C\) \uline{be a triangulated (resp. abelian) category, and} \(C'\) \uline{a subset of} \(\Ob C\)\uline{. We shall say that} \(C'\) \uline{is an} exact \uline{subset (cf.} EGA III 3.1.1\uline{) if, for every distinguished triangle} \(E'\to E\to E''\to E'[1]\) \uline{(resp. every exact sequence} \(0\to E'\to E\to E''\to0\)\uline{) such that two of the terms} \(E',E,E''\) \uline{belong to} \(C'\)\uline{, the third also belongs to it. We shall say that} \(C'\) \uline{is} dense \uline{in} \(\Ob C\) \uline{if} \(\Ob C\) \uline{is the smallest exact subset of} \(\Ob C\) \uline{containing} \(C'\).
+
+\sgaStableTarget{sga6.e04.lem.1-8}\textbf{Lemma 1.8.} \uline{Let} \(C\) \uline{be a triangulated (resp. abelian) category, and} \(C'\) \uline{a dense subset of} \(\Ob C\)\uline{. Then the elements} \(\cl_C(E)\)\uline{, for} \(E\in C'\)\uline{, generate} \(k(C)\).
+
+\uline{Proof.} Put \(C'=C_0\), and, for \(i\geq1\), define \(C_i\) inductively as the set of objects of \(C\) appearing in a distinguished triangle (resp. a short exact sequence) two of whose terms belong to \(C_{i-1}\). The \(C_i\) form an increasing filtration of \(\Ob C\), which is exhaustive by hypothesis. For \(i\geq0\), denote by \(k(C)_i\) the subgroup of \(k(C)\) generated by the elements \(\cl_C(E)\) for \(E\in C_i\). It is immediate from the definitions that, for every \(i\geq0\), \(k(C)_i=k(C)_{i+1}\), hence \(k(C)_i=k(C)_0\). Now let \(x\in k(C)\);
+
+%%%%%%%%%%  scan idx 291  |  folio 278  %%%%%%%%%%
+\SGAPrintPage{278}%
+as is easily seen, we can write \(x=\cl(E')-\cl(E'')\) for \(E',E''\in\Ob C\) (in the first case, we can even arrange that \(E''=0\)). Since the filtration \((C_i)\) is exhaustive, there is an integer \(i\geq0\) such that \(E'\) and \(E''\) belong to \(C_i\); then \(x\in k(C)_i=k(C)_0\), as required.
+
+\sgaStableTarget{sga6.e04.exercise.1-9}\textbf{Exercise 1.9.} Let \(C\) be an abelian category, and \(A\) a full subcategory stable under finite sums, subobjects, and quotients, such that \(\Ob A\) is dense in \(\Ob C\). Then the homomorphism \(k(A,C)\longrightarrow k(C)\) defined by the additive function \(E\mapsto\cl_C(E)\) on \(\Ob A\) (cf. (1.5)) is an isomorphism.
+
+\uline{Hint}: Put \(A=A_0\), and define \(A_i\), for \(i\geq1\), as the full subcategory of \(C\) formed by the objects of \(C\) that are extensions of two objects of \(C_{i-1}\). Prove that \(A_i\) satisfies the same hypotheses as \(A\), then show that the canonical homomorphism \(\varinjlim k(A_i,C)\longrightarrow k(C)\) is an isomorphism (the desired conclusion follows at once).
+
+\sgaStableTarget{sga6.e04.sec.2}\section*{2. The functors \(K_{\bullet}\) and \(K^{\bullet}\) of a ringed topos}
+
+\sgaStableTarget{sga6.e04.para.2-1}2.1. Let \((X,A)\) be a ringed topos. Recall the following notation:
+
+\(D^b({}_A X)_{\coh}\) = category of pseudo-coherent complexes with bounded cohomology of left \(A\)-Modules (I 2.15).
+
+\(D({}_A X)_{\uparf}\) = category of complexes of left \(A\)-Modules of finite perfect amplitude (I 5.8.4).
+
+\(\Loclib({}_A X)\) = category of left \(A\)-Modules locally direct summands of free Modules of finite type (II 2.0).
+
+\(\Coh({}_A X)\) = category of coherent left \(A\)-Modules (relative to the category of free \(A\)-Modules of finite type) (I 3.1).
+

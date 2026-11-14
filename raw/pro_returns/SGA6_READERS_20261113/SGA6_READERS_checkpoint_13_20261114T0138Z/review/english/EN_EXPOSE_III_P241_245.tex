@@ -1,0 +1,212 @@
+%%%%%%%%%%  scan idx 254  |  folio 241  %%%%%%%%%%
+\SGAPrintPage{241}%
+\uline{Proof}. A consequence of (2.2), (2.4) and (1.12).
+
+\sgaStableTarget{sga6.e03.schol.2-6}\textbf{Scholium 2.6.} To prove conjecture (2.1) in the general case, it will no doubt be necessary to introduce new techniques. One may hope that these will one day help to prove the analogous conjecture in Analytic Geometry, for a proper morphism of analytic spaces over a locally ringed topos in suitably topologized \(\mathbb C\)-algebras, a conjecture that is at present ``proved'' only over a complex analytic space (Grauert's theorem [1]).\SGAAuthorFootnote{1}{(added in April 1971) see an article in preparation by R. Kiehl and J.L. Verdier, in which finiteness theorem 1 is proved by different, simpler techniques and under more general hypotheses.}
+
+\sgaStableTarget{sga6.e03.sec.3}\section*{3. Relative finite Tor-dimension}
+
+\sgaStableTarget{sga6.e03.def.3-1}\textbf{Definition 3.1.} \uline{Let} \(f:(X,\underline{O}_X)\longrightarrow(Y,\underline{O}_Y)\) \uline{be a morphism of ringed topoi}, \(E\in\Ob D^{-}(X)\), \([m,n]\) \uline{an interval of} \(\mathbb Z\). \uline{We say that} \(E\) \uline{is} of flat amplitude relative to \(f\) (or \(Y\), when no confusion is possible) contained in \([m,n]\), \uline{and write}
+\[
+  \toramp_f(E)\subset[m,n]\qquad(\text{or }\toramp_Y(E)\subset[m,n])
+\]
+\uline{if} \(E\), \uline{considered as a complex of} \(f^{-1}(\underline{O}_Y)\)-\uline{Modules}, \uline{is of flat amplitude contained} \uline{in} \([m,n]\) (I 5.2). \uline{We say that} \(f\) \uline{is of flat amplitude contained} \uline{in} \([-a,0]\) \((a\geq0)\), \uline{or of} tor-dimension \(\leq a\), \uline{if} \(\underline{O}_X\) \uline{is of flat amplitude} \uline{rel.} \uline{to} \(f\), \uline{contained in} \([-a,0]\). \uline{We say that} \(E\) \uline{is} of finite flat amplitude rel. to \(f\) \uline{if there is an interval} \([m,n]\) \uline{such that} \(\toramp_f(E)\subset[m,n]\).
+
+\sgaStableTarget{sga6.e03.notation.3-2}\textbf{Notation 3.2.} We denote by \(D(f)_{\mathrm{torf}}\), or \(D(X)_{f\text{-}\torf}\), or \(D(X)_{Y\text{-}\torf}\) when no confusion is possible, the full subcategory of \(D^{-}(X)\) formed by the complexes of finite flat amplitude relative to \(f\). By (I 5.3), this is a triangulated subcategory of \(D^b(X)\).
+%%%%%%%%%%  scan idx 255  |  folio 242  %%%%%%%%%%
+\SGAPrintPage{242}%
+\sgaStableTarget{sga6.e03.prop.3-3}\textbf{Proposition 3.3.} \uline{With the data of} (3.1), \uline{suppose that} \(X\) \uline{has enough points} (SGA 4 IV 6.4). \uline{The following conditions are then equivalent}:
+\begin{enumerate}[label=(\roman*)]
+\item \(\toramp_f(E)\subset[m,n]\);
+\item \uline{for every point} \(x\) \uline{of} \(X\), \uline{we have}
+\[
+  \toramp_y(E_x)\subset[m,n],
+\]
+\uline{where} \(y\) \uline{is the image point of} \(x\) \uline{under} \(f\), \uline{ringed by} \(\underline{O}_{Y,y}\);
+\item \uline{for every object} \(V\) \uline{of} \(Y\) \uline{and every} \(\underline{O}_V\)-\uline{Module} \(M\), \uline{we have}
+\[
+  H^i\left((E|f^{-1}(V))\otimes_V^{\mathrm L}M\right)=0
+  \quad\text{\uline{for} }i\notin[m,n],
+\]
+\uline{where} \((E|f^{-1}(V))\otimes_V^{\mathrm L}M=(E|f^{-1}(V))\otimes^{\mathrm L}\mathrm Lf^*(M)\);
+\item \uline{the same condition as} (iii), \uline{but with} \(M\) \uline{the cokernel of a homomorphism} \(\underline{O}_V^q\longrightarrow\underline{O}_V^p\), \uline{where} \(p,q\in\mathbb N\).
+\end{enumerate}
+
+\uline{Proof}. The equivalence (i)\(\Longleftrightarrow\)(ii) follows from (I 5.6.2), and the implications (ii)\(\Longrightarrow\)(iii)\(\Longrightarrow\)(iv) are trivial. Let us prove (iv)\(\Longrightarrow\)(ii). Let \(x\) be a point of \(X\), \(y=f(x)\); we must show that
+\begin{equation}\tag{$*$}
+  H^i(E_x\otimes_{\underline{O}_{Y,y}}^{\mathrm L}M)=0
+\end{equation}
+for every \(\underline{O}_{Y,y}\)-module \(M\) and every \(i\notin[m,n]\). Since every \(\underline{O}_{Y,y}\)-module is a filtered inductive limit of modules of finite presentation, we may restrict ourselves to checking the preceding relation for \(M\) of finite presentation. Now, when \(M\) is an \(\underline{O}_{Y,y}\)-module of finite presentation, the same argument as for ordinary ringed spaces (EGA \(0_{\mathrm I}\) 5.3.9) shows that there is a \(y\)-pointed object \(V\) of \(Y\) and an \(\underline{O}_V\)-Module \(P\), the cokernel of a homomorphism \(\underline{O}_V^q\longrightarrow\underline{O}_V^p\) \((p,q\in\mathbb N)\), such that \(P_y\simeq M\). We then have
+\[
+  \bigl((E|f^{-1}(V))\otimes_V^{\mathrm L}P\bigr)_x
+  \simeq
+  E_x\otimes_{\underline{O}_{Y,y}}^{\mathrm L}M,
+\]
+%%%%%%%%%%  scan idx 256  |  folio 243  %%%%%%%%%%
+\SGAPrintPage{243}%
+by the commutation of tensor product with passage to stalks, and hypothesis (iv) implies (*), q.e.d.
+
+\sgaStableTarget{sga6.e03.rem.3-3-1}\textbf{Remark 3.3.1.} The writer does not know whether the equivalences (i)\(\Longleftrightarrow\)(iii)\(\Longleftrightarrow\)(iv) hold without the hypothesis that \(X\) has enough points.
+
+\sgaStableTarget{sga6.e03.cor.3-4}\textbf{Corollary 3.4.} \uline{Let}
+\[
+\begin{tikzcd}[column sep=large]
+X \arrow[rr,"f"] \arrow[dr,"h"'] & & Y \arrow[dl,"g"]\\
+& Z &
+\end{tikzcd}
+\]
+\uline{be a commutative triangle of ringed topoi}, \uline{where we suppose that} \(X\) \uline{has enough points}, \uline{and let} \(E\in\Ob D(X)\), \(F\in\Ob D(Y)\), \([a,b]\), \([c,d]\) \uline{be intervals of} \(\mathbb Z\). \uline{Then we have}:
+\[
+  \toramp_f(E)\subset[a,b]\quad\text{and}\quad\toramp_g(F)\subset[c,d]
+\]
+\[
+  \Longrightarrow\toramp_h(E\otimes_Y^{\mathrm L}F)\subset[a+c,b+d].
+\]
+
+\uline{Proof}. By (3.3), we must show that the relations on the left imply
+\[
+  H^i\left(\bigl((E\otimes_Y^{\mathrm L}F)|h^{-1}(Z')\bigr)
+  \otimes_{Z'}^{\mathrm L}M\right)=0
+\]
+for every \(i\notin[a+c,b+d]\) and every \(\underline{O}_{Z'}\)-Module \(M\), where \(Z'\) is an object of \(Z\). Now, putting \(Y'=g^{-1}(Z')\), \(X'=f^{-1}(Y')=h^{-1}(Z')\), we have
+\[
+  \bigl((E\otimes_Y^{\mathrm L}F)|X'\bigr)
+  \otimes_{Z'}^{\mathrm L}M
+  \simeq
+  (E|X')\otimes_{Y'}^{\mathrm L}
+  \bigl((F|Y')\otimes_{Z'}^{\mathrm L}M\bigr),
+\]
+and the assertion follows at once from the hypotheses.
+
+In particular:
+
+\sgaStableTarget{sga6.e03.cor.3-4-1}\textbf{Corollary 3.4.1.} \uline{Under the hypotheses of} (3.4),
+\begin{enumerate}[label=\alph*)]
+\item \uline{if} \(g\) \uline{is of tor-dimension} \(\leq n\), \uline{we have}
+\[
+  \toramp_f(E)\subset[a,b]\Longrightarrow\toramp_h(E)\subset[a-n,b];
+\]
+%%%%%%%%%%  scan idx 257  |  folio 244  %%%%%%%%%%
+\SGAPrintPage{244}%
+\item \uline{if} \(f\) \uline{is of tor-dimension} \(\leq m\), \uline{we have}
+\[
+  \toramp_g(F)\subset[c,d]\Longrightarrow\toramp_h(\mathrm Lf^*(F))\subset[c-m,d].
+\]
+\end{enumerate}
+
+\sgaStableTarget{sga6.e03.rem.3-4-2}\textbf{Remark 3.4.2.} Let \(f:X\to Y\) be a morphism of finite tor-dimension and \(E\in\Ob D(X)\). Then, by (3.4.1 a)), when \(E\) is of finite flat amplitude (in the absolute sense), \(E\) is of finite flat amplitude rel. to \(f\). But the converse is false, even when \(f\) is flat, as the example of a singularity of a scheme over a field shows.
+
+\sgaStableTarget{sga6.e03.prop.3-5}\textbf{Proposition 3.5.} \uline{Let} \(S\) \uline{be a scheme}, \uline{and}, \uline{for} \(i=1,2\), \(f_i:X_i\longrightarrow Y_i\) \uline{an} \(S\)-\uline{morphism}, \(E_i\in\Ob D^{-}(X_i)\), \([a_i,b_i]\) \uline{an interval of} \(\mathbb Z\). \uline{Suppose} \(X_1\) \uline{and} \(X_2\), \uline{as well as} \(Y_1\) \uline{and} \(Y_2\), \uline{are tor-independent over} \(S\) (1.5). \uline{Put} \(a=a_1+a_2\), \(b=b_1+b_2\), \(f=f_1\times_Sf_2:X\to Y\). \uline{Then}:
+\begin{enumerate}[label=\alph*)]
+\item \uline{If we have} \(\toramp_{f_1}(E_1)\subset[a_1,b_1]\) \uline{and if} \(E_2\) \uline{is acyclic outside} \([a_2,b_2]\), \(E_1\otimes_S^{\mathrm L}E_2\) (\uline{cf.} (1.6)) \uline{is acyclic outside} \([a,b]\).
+\item \uline{If we have} \(\toramp_{f_i}(E_i)\subset[a_i,b_i]\) \uline{for} \(i=1,2\), \uline{we have}
+\[
+  \toramp_f(E_1\otimes_S^{\mathrm L}E_2)\subset[a,b].
+\]
+\end{enumerate}
+
+\uline{Proof}. By (3.3), it suffices to make the verification ``on the stalks''. Let \(s\) be a point of \(S\), \(x\) a point of \(X\) over \(s\), \(y=f(x)\), \(x_i\) (resp. \(y_i\)) the canonical projection of \(x\) (resp. \(y\)) onto \(X_i\) (resp. \(Y_i\)). Put
+\[
+  (E_i)_{x_i}=M_i,\quad \underline{O}_{X_i,x_i}=A_i,\quad
+  \underline{O}_{Y_i,y_i}=B_i,\quad \underline{O}_{S,s}=C,
+\]
+\[
+  \underline{O}_{X,x}=A=A_1\otimes_C A_2,\qquad
+  \underline{O}_{Y,y}=B=B_1\otimes_C B_2.
+\]
+We have
+\begin{equation}\tag{$*$}
+  (E_1\otimes_S^{\mathrm L}E_2)_x
+  \simeq
+  M_1\otimes_{A_1}^{\mathrm L}A\otimes_{A_2}^{\mathrm L}M_2.
+\end{equation}
+The tor-independence hypotheses imply, on the other hand:
+\[
+  A\simeq A_1\otimes_{B_1}^{\mathrm L}B\otimes_{B_2}^{\mathrm L}A_2.
+\]
+Consequently, the right-hand side of (*) is canonically isomorphic, in the
+%%%%%%%%%%  scan idx 258  |  folio 245  %%%%%%%%%%
+\SGAPrintPage{245}%
+derived category \(D(B)\) of \(B\)-modules, to \(M_1\otimes_{B_1}^{\mathrm L}B\otimes_{B_2}^{\mathrm L}M_2\). The relations \(\toramp_{f_i}(E_i)\subset[a_i,b_i]\) \((i=1,2)\) imply \(\toramp_{B_i}(M_i)\subset[a_i,b_i]\), hence (I 5.6) \(\toramp_B(M_1\otimes_{B_1}^{\mathrm L}B\otimes_{B_2}^{\mathrm L}M_2)\subset[a,b]\), giving assertion b). On the other hand, when we have \(\toramp_{f_1}(E_1)\subset[a_1,b_1]\), \(M_1\) is isomorphic to a complex of flat \(B_1\)-modules, zero outside \([a_1,b_1]\), and consequently when \(E_2\) (hence \(M_2\)) is acyclic outside \([a_2,b_2]\), \(M_1\otimes_{B_1}^{\mathrm L}B\otimes_{B_2}^{\mathrm L}M_2\) is acyclic outside \([a,b]\), giving assertion a), which completes the proof.
+
+\sgaStableTarget{sga6.e03.cor.3-5-1}\textbf{Corollary 3.5.1.} \uline{Under the hypotheses of} (3.5), \uline{if} \(f_1\) \uline{and} \(f_2\) \uline{are of finite tor-dimension} (3.1), \uline{the same holds for} \(f\).
+
+\sgaStableTarget{sga6.e03.cor.3-5-2}\textbf{Corollary 3.5.2.} \uline{Let}
+\[
+\begin{tikzcd}
+X \arrow[d,"f"'] & X' \arrow[l,"g"'] \arrow[d,"f'"]\\
+Y & Y' \arrow[l,"h"']
+\end{tikzcd}
+\]
+\uline{be a Cartesian square of schemes}, \uline{where} \(X\) \uline{and} \(Y'\) \uline{are supposed tor-independent over} \(Y\), \uline{and let} \(E\in\Ob D(X)\). \uline{Then we have}
+\[
+  \toramp_f(E)\subset[a,b]\Longrightarrow
+  \toramp_{f'}(\mathrm Lg^*(E))\subset[a,b],
+\]
+\uline{and consequently the functor} \(\mathrm Lg^*:D^{-}(X)\to D^{-}(X')\) \uline{induces a functor}
+\[
+  \mathrm Lg^*:D(f)_{\mathrm{torf}}\longrightarrow D(f')_{\mathrm{torf}} .
+\]
+
+
+% Original English continuation definitions, retained in their original order.
+\providecommand{\Ob}{\operatorname{Ob}}
+\providecommand{\D}{\mathrm D}
+\providecommand{\Ho}{\mathrm H}
+\providecommand{\RHom}{\mathrm R\!\operatorname{Hom}}
+\providecommand{\parfamp}{\operatorname{parf.amp}}
+\providecommand{\tamp}{\operatorname{tor.amp}}
+\providecommand{\Qcoh}{\operatorname{Qcoh}}
+\providecommand{\Mod}{\operatorname{Mod}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Lib}{\operatorname{Lib}}
+\providecommand{\Loclib}{\operatorname{Loclib}}
+\providecommand{\qcoh}{\mathrm{qcoh}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\parf}{\mathrm{parf}}
+\providecommand{\torf}{\mathrm{torf}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\rg}{\operatorname{rg}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\Cone}{\operatorname{Cone}}
+\providecommand{\pt}{\operatorname{Pt}}
+\providecommand{\ind}{\operatorname{ind}}
+\hbadness=10000
+\hfuzz=20pt
+\emergencystretch=3em
+
+% Reviewed French continuation definitions, retained verbatim.
+% Additions for Exposé III, pages 253--280
+\renewcommand{\Ob}{\operatorname{ob}}
+\providecommand{\D}{\mathrm D}
+\providecommand{\Ho}{\mathrm H}
+\providecommand{\RHom}{\mathrm R\!\operatorname{Hom}}
+\providecommand{\parfamp}{\operatorname{parf.amp}}
+\providecommand{\tamp}{\operatorname{tor.amp}}
+\providecommand{\Qcoh}{\operatorname{Qcoh}}
+\providecommand{\Mod}{\operatorname{Mod}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Lib}{\operatorname{Lib}}
+\providecommand{\Loclib}{\operatorname{Loclib}}
+\providecommand{\qcoh}{\mathrm{qcoh}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\parf}{\mathrm{parf}}
+\providecommand{\torf}{\mathrm{torf}}
+\renewcommand{\id}{\operatorname{id}}
+\providecommand{\uparf}{\underline{\mathrm{parf}}\rule[-1ex]{0pt}{0pt}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\rg}{\operatorname{rg}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\Cone}{\operatorname{Cone}}
+\providecommand{\pt}{\operatorname{Pt}}
+\providecommand{\ind}{\operatorname{ind}}
+\hbadness=10000
+\hfuzz=20pt
+\emergencystretch=3em

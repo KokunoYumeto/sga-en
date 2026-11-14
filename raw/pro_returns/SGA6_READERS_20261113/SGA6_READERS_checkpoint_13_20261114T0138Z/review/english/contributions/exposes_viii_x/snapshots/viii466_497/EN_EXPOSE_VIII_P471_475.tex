@@ -1,0 +1,143 @@
+%%%%%%%%%%  scan idx 484  |  folio 471  %%%%%%%%%%
+\SGAPrintPage{471}%
+it is a complete-intersection ring (EGA IV 19.3.2), and therefore $f$ is a complete intersection at $x$ in the sense of EGA IV 19.3.6.
+
+Conversely, suppose that $f$ is a complete-intersection morphism in the sense of EGA IV 19.3.6, and let $x\in X$. Let $U$ be an affine neighbourhood of $x$, over an affine neighbourhood $U'$ of $y=f(x)$. One can then find a smooth $U'$-scheme $V$, and a closed immersion $U\xrightarrow{i}V$ (for example by taking for $V$ a vector bundle over $U'$). We shall show that $i$ is regular. Now by EGA IV 19.3.7, $i$ is transversally regular at $x$, since $V$ is smooth over $Y$, hence $V_y$ is regular at $x$, and $U'$ is flat over $Y$. It then follows from EGA IV 19.2.4, a)$\Rightarrow$c), that $i$ is regular at $x$. Thus $f$ is a complete-intersection morphism in the sense of 1.1.
+
+\sgaStableTarget{sga6.e08.prop.1-5}\textbf{Proposition 1.5.} \uline{Let} $f:X\to Y$, \uline{and} $g:Y\to Z$ \uline{be two locally complete-intersection morphisms}. \uline{Then} $g\circ f$ \uline{is a locally complete-intersection morphism}.
+
+Let $x\in X$. One can find open neighbourhoods $U,V$ of $x,f(x)$, and regular immersions $i,j$ such that we have the factorizations:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[r,"i"] \arrow[dr,"f"'] & V[T_1,\ldots,T_n] \arrow[d] &\\
+& V \arrow[r,"j"] \arrow[dr,"g"'] & Z[T'_1,\ldots,T'_m] \arrow[d]\\
+& & Z .
+\end{tikzcd}
+\]
+This diagram can be completed by the commutative square:
+
+%%%%%%%%%%  scan idx 485  |  folio 472  %%%%%%%%%%
+\SGAPrintPage{472}%
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+V[T_1,\ldots,T_n] \arrow[r,"j'"] \arrow[d] & Z[T'_1,\ldots,T'_m,T_1,\ldots,T_n] \arrow[d]\\
+V \arrow[r,"j"] & Z[T'_1,\ldots,T'_m],
+\end{tikzcd}
+\]
+where $j'$ is obtained from $j$ by base change; since this base change is flat, $j'$ is a regular immersion, and consequently $j'\circ i$ is a regular immersion of $U$ into a scheme smooth over $Z$, giving the result.
+
+\sgaStableTarget{sga6.e08.prop.1-6}\textbf{Proposition 1.6.} \uline{Let} $f:X\to Y$ \uline{be a morphism and} $g:Y'\to Y$ \uline{a flat base change}. \uline{If} $f$ \uline{is a complete intersection}, \uline{then the morphism} $f':X\times_Y Y'\to Y'$ \uline{obtained from} $f$ \uline{is one as well}. \uline{The converse is true if} $g$ \uline{is also quasi-compact and surjective}.
+
+One can find a covering of $X$ by open subsets $U_i$ such that for every $i$, the restriction of $f$ to $U_i$ factors as $U_i\longrightarrow V_i\longrightarrow Y$, where $U_i\to V_i$ is a regular immersion, and $V_i\to Y$ a smooth morphism. The $U_i\times_Y Y'$ form an open covering of $X\times_Y Y'$, the immersions $U_i\times_Y Y'\longrightarrow V_i\times_Y Y'$ are regular by VII 1.5, and the morphisms $V_i\times_Y Y'\to Y'$ are smooth, giving the first result. For the converse, EGA IV 2.7.1 (iv) first implies that $f$ is locally of finite presentation, which easily reduces us, using 1.2, to the case where $f$ is a closed immersion, in which case the assertion is precisely VII 1.5.
+
+\sgaStableTarget{sga6.e08.prop.1-7}\textbf{Proposition 1.7.} \uline{Let} $f:X\to Y$ \uline{be a complete-intersection morphism}. \uline{Then} $f$ \uline{is a perfect morphism}.
+
+Since the property is local on $X$, one may work in a neighbourhood of a point $x$ of $X$, and suppose that there exist an open subset $U$ containing $x$, and a factorization:
+
+%%%%%%%%%%  scan idx 486  |  folio 473  %%%%%%%%%%
+\SGAPrintPage{473}%
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[rr,"i"] \arrow[dr,"f"'] && V \arrow[dl,"g"]\\
+& Y, &
+\end{tikzcd}
+\]
+where $i$ is a
+regular immersion, and $g$ a smooth morphism. Since $g$ is smooth, it is a perfect morphism (III 4.1). By VII 1.9, $i$ is also a perfect morphism. Since the composite of two perfect morphisms is perfect (III 4.5), the proposition follows.
+
+\sgaStableTarget{sga6.e08.prop.1-8}\textbf{Proposition 1.8.} \uline{Let} $f:X\to Y$ \uline{be a complete-intersection morphism}, $x$ \uline{a point of} $X$, \uline{and consider a factorization}:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[rr,"i"] \arrow[dr,"f"'] && V \arrow[dl,"g"]\\
+& Y &
+\end{tikzcd}
+\]
+\uline{where} $U$ \uline{is an open neighbourhood of} $x$, $i$ \uline{a regular immersion}, \uline{and} $g$ \uline{a smooth morphism}. \uline{Denote by} $\underline{J}$ \uline{the ideal of} $\underline{O}_V$ \uline{defining} $U$. \uline{Then the integer}
+\[
+d_x=\operatorname{rank}\bigl((\underline{\Omega}^1_{V/Y})_{i(x)}\bigr)-\operatorname{rank}\bigl((\underline{J}/\underline{J}^2)_x\bigr)
+\]
+\uline{is independent of the chosen factorization of} $f$.
+
+Suppose that the restriction of $f$ to $U$ factors through two smooth $Y$-schemes $V$ and $V'$, and put $V''=V\times_Y V'$. Then $V''$ is smooth over $Y$, and also over $V$ and $V'$. Moreover, the immersions $X\to V$ and $X\to V'$ define an immersion $X\to V''$, regular by 1.2. One may therefore reduce to comparing the integers $d_x$ associated to two factorizations of $f$ through smooth $Y$-schemes $V$ and $V'$ such that there exists a commutative diagram over $Y$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& V' \arrow[d,"p"]\\
+X \arrow[ur,"j"] \arrow[r,"i"] & V
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 487  |  folio 474  %%%%%%%%%%
+\SGAPrintPage{474}%
+where $p$ is a
+smooth morphism. One may also suppose $\underline{\Omega}^1_{V/Y}$, $\underline{\Omega}^1_{V'/Y}$, $\underline{\Omega}^1_{V'/V}$ of constant rank, as well as the conormal sheaves of $i$ and $j$.
+
+From the commutative diagram (in which all morphisms are smooth):
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+V' \arrow[rr,"p"] \arrow[dr] && V \arrow[dl]\\
+& Y &
+\end{tikzcd}
+\]
+one deduces:
+\sgaStableTarget{sga6.e08.eq.1-8-1}\begin{equation}\tag{1.8.1}
+\operatorname{rank}(\underline{\Omega}^1_{V'/Y})=
+\operatorname{rank}(\underline{\Omega}^1_{V/Y})+
+\operatorname{rank}(\underline{\Omega}^1_{V'/V}).
+\end{equation}
+
+Let $X'=V'\times_V X$; then the rank of $\underline{\Omega}^1_{V'/V}$ is equal to that of $\underline{\Omega}^1_{X'/X}$. Furthermore, $j$ defines a section $X\xrightarrow{j'} X'$, which is a regular immersion of codimension equal to the rank of $\underline{\Omega}^1_{X'/X}$ (EGA IV 17.10.4). If $i'$ is the immersion obtained from $i$ by the base change $V'\to V$, we have $j=i'\circ j'$ and consequently (VII 1.7):
+\sgaStableTarget{sga6.e08.eq.1-8-2}\begin{equation}\tag{1.8.2}
+\operatorname{rank}(\underline{N}_{V'/X})=
+\operatorname{rank}(\underline{N}_{V/X})+
+\operatorname{rank}(\underline{\Omega}^1_{V'/V}).
+\end{equation}
+
+Comparing (1.8.1) and (1.8.2) gives the proposition.
+
+\sgaStableTarget{sga6.e08.def.1-9}\textbf{Definition 1.9.} \uline{The integer} $d_x$ \uline{of Proposition} 1.8 \uline{is called the} virtual relative dimension \uline{of} $X$ \uline{over} $Y$ (\uline{or of} $f$) \uline{at the point} $x$.
+
+The virtual relative dimension of $X$ over $Y$ is therefore a locally constant function on $X$, with integer values (positive or negative). If $f$ is a smooth morphism of relative dimension $n$, its virtual relative dimension is $n$. If $f$ is a regular immersion of codimension $n$, its virtual relative dimension is $-n$.
+
+\sgaStableTarget{sga6.e08.prop.1-10}\textbf{Proposition 1.10.} \uline{Let} $f:X\to Y$ \uline{and} $g:Y\to Z$ \uline{be two complete-intersection morphisms}, \uline{and let} $x$ \uline{be a point of} $X$. \uline{Then}:
+\[
+\operatorname{dim.rel.virt.}_x(g\circ f)=
+\operatorname{dim.rel.virt.}_x(f)+
+\operatorname{dim.rel.virt.}_{f(x)}(g)
+\]
+
+%%%%%%%%%%  scan idx 488  |  folio 475  %%%%%%%%%%
+\SGAPrintPage{475}%
+This follows immediately from 1.9 and from the proof of 1.5.
+
+\sgaStableTarget{sga6.e08.sec.2}\subsection*{2. Relative cotangent complex}
+
+\sgaStableTarget{sga6.e08.para.2-1}\textbf{2.1.} We shall give here a definition of the cotangent complex which, without having all the generality possible (see Exp. 0 4.4), will suffice for the needs of the Riemann--Roch theorem; of course, the definition given in exp. 0 coincides in the case considered with the definition given here.
+
+Let $f:X\to Y$ be a smoothable morphism, that is, one admitting a factorization:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X \arrow[rr,"i"] \arrow[dr,"f"'] && V \arrow[dl,"g"]\\
+& Y, &
+\end{tikzcd}
+\]
+where $g$ is a smooth morphism, and $i$ an immersion which may be supposed closed. Let $\underline{J}$ be the ideal of $X$ in $V$. The canonical derivation:
+\[
+d:\underline{O}_V\longrightarrow\underline{\Omega}^1_{V/Y}
+\]
+defines a homomorphism:
+\[
+\underline{J}\longrightarrow\underline{O}_V\xrightarrow{d}\underline{\Omega}^1_{V/Y}\longrightarrow
+\underline{\Omega}^1_{V/Y}\otimes_{\underline{O}_V}\underline{O}_X
+\]
+which vanishes on $\underline{J}^2$, and hence defines a homomorphism, still denoted $d$:
+\sgaStableTarget{sga6.e08.eq.2-1-1}\begin{equation}\tag{2.1.1}
+\underline{J}/\underline{J}^2\xrightarrow{d} i^*(\underline{\Omega}^1_{V/Y}).
+\end{equation}
+One checks easily that this homomorphism is $\underline{O}_X$-linear. One then defines a chain complex $\underline{L}^{X/Y}_\bullet$ by putting:
+\[
+\underline{L}^{X/Y}_0=i^*(\underline{\Omega}^1_{V/Y}),\qquad
+\underline{L}^{X/Y}_1=\underline{J}/\underline{J}^2;
+\qquad
+\underline{L}^{X/Y}_i=0\quad\text{if }i\neq0,1,
+\]
+and taking as homomorphism $\underline{L}^{X/Y}_1\to \underline{L}^{X/Y}_0$ the homomorphism (2.1.1).

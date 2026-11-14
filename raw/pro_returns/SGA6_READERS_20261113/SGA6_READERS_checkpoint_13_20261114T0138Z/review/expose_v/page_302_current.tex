@@ -1,0 +1,33 @@
+%%%%%%%%%%  scan idx 315  |  folio 302  %%%%%%%%%%
+\(\theta=\Phi(1+Xt)\)~;
+montrons que \(\theta\) vérifie les conditions i) et ii).
+
+i)~: \(H(f_1)(\theta)=H(f_1)\circ\Phi(1+Xt)=\Phi\circ\Ghat(f_1)(1+Xt)=\Phi(1)=0\).
+
+ii)~: \(u_H^n(\theta)=\Phi(1+\cdots+X_nt^n)\) d'après (1.6.1)~; or \(1+\cdots+X_nt^n\equiv 1+\cdots+X_{n-1}t^{n-1}\ \mathrm{mod.}\ F^n\Ghat\), et \(1+\cdots+X_{n-1}t^{n-1}=\Ghat(f_n)(1+\cdots+X_nt^n)\). Comme \(\Phi\circ\Ghat(f_n)=H(f_n)\circ\Phi\), et que \(\Phi\) est un morphisme de foncteurs filtrés, on obtient ii).
+
+Il faut enfin montrer que si \(\theta\in H(K[X])\) vérifie i) et ii), il existe \(\Phi\in\Hom(\Ghat,H)\) tel que \(\theta=\Phi(1+Xt)\).
+
+On détermine d'abord la valeur de \(\Phi\) pour l'élément \(1+\cdots+X_nt^n\) de \(\Ghat(K[X_1,\ldots,X_n])\) grâce à (1.6.1)~; on a donc par définition~: \(\Phi(1+\cdots+X_nt^n)=\sum\limits_{i=1}^n \Phi(1+T_it)\), les \(\Phi(1+T_it)\) étant connus par fonctorialité au moyen des morphismes \(u_i^n\).
+
+On recolle ensuite les \(\Phi(1+\cdots+X_nt^n)\) pour \(n\) variable grâce au diagramme commutatif~:
+\[
+\begin{tikzcd}
+K[X_1,\ldots,X_n] \arrow[r,"f_n"] \arrow[d,"\widetilde{\sigma}_n"'] &
+K[X_1,\ldots,X_n] \arrow[d,"\sigma'_n"']\\
+K[T_1,\ldots,T_n] \arrow[r,"f'_n"] &
+K[T_1,\ldots,T_n],
+\end{tikzcd}
+\tag{1.6.2}
+\]
+où \(f'_n\) est déterminé par \(f'_n(T_i)=T_i\) si \(i<n\), \(f'_n(T_n)=0\), où \(\widetilde{\sigma}_n\) envoie \(X_i\) sur la \(i\)-ième fonction symétrique des \(T_j\), et \(\sigma'_n\) envoie \(X_i\) sur la \(i\)-ième fonction symétrique de \(T_1,\ldots,T_{n-1}\) pour \(i<n\), et \(X_n\) sur \(0\).
+
+En effet, on en déduit~:
+\[
+\begin{aligned}
+H(f_n)\bigl(\Phi(1+\cdots+X_nt^n)\bigr)
+&=H(f'_n)\left(\sum_{i=1}^n \Phi(1+T_it)\right)
+=\sum_{i=1}^{n-1}\Phi(1+T_it)\ \text{(par 1.6.i))}\\
+&=\Phi(1+\cdots+X_{n-1}t^{n-1})
+\end{aligned}
+\]

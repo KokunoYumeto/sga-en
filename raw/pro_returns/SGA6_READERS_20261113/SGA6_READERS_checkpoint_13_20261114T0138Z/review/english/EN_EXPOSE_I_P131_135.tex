@@ -1,0 +1,120 @@
+%%%%%%%%%%  scan idx 144  |  folio 131  %%%%%%%%%%
+\SGAPrintPage{131}%
+in the case of the category of Modules of a ringed topos (cf.\ (3.3)). We shall need some preliminary sorites on the notion of finite tor-dimension. We shall be brief, since this question already appears in the literature: cf.\ ([H] II 4) and (SGA 4 XVII 4.1.9.).
+
+\sgaStableTarget{sga6.e01.prop.5-1}\textbf{Proposition 5.1.} \uline{Let} \((\underline{S},A)\) \uline{be a ringed topos,} \(X\in\Ob \underline{S}\)\uline{,} \(F\in\Ob\Dpx^-({}_A X)\)\uline{,} \(m,n\in\mathbb Z\) \uline{be such that} \(m\leq n\)\uline{. Equivalent conditions}:
+\begin{enumerate}[label=(\roman*)]
+\item \(F\) \uline{is isomorphic, in} \(\Dpx^-({}_A X)\)\uline{, to a complex} \(F'\) \uline{such that} \(F'^i\) \uline{is flat for every} \(i\) \uline{and zero for} \(i\notin[m,n]\);
+\item \uline{for every right} \(A_X\)\uline{-Module} \(E\)\uline{, we have} \(\underline{\Ho}^i(E\overset{\mathrm L}{\otimes}_A F)=0\) \uline{for} \(i\notin[m,n]\).
+\end{enumerate}
+
+\uline{Proof.} The implication (i) \(\Rightarrow\) (ii) is trivial; the implication (ii) \(\Rightarrow\) (i) follows, by truncation, from the
+
+\sgaStableTarget{sga6.e01.lem.5-1-1}\textbf{Lemma 5.1.1.} (cf.\ (4.16)). \uline{Let} \(F\in\Ob\Dpx^-({}_A X)\)\uline{. Assume that} \(F\) \uline{satisfies hypothesis} (ii) of (5.1)\uline{, that} \(F^i=0\) \uline{for} \(i\notin[m,n]\)\uline{, and that} \(F^i\) \uline{is flat for} \(i\ne m\)\uline{. Then} \(F^m\) \uline{is flat.}
+
+\uline{Proof.} We have a distinguished triangle
+\[
+\begin{tikzcd}
+& F^m[-m] \arrow[dl,"+1"'] & \\
+F' \arrow[rr] && F \arrow[ul] & ,
+\end{tikzcd}
+\]
+where \(F'\) has flat components that vanish outside the interval \([m+1,n]\) (suppose \(m<n\)). Apply the functor \(E\overset{\mathrm L}{\otimes}_A.\) for \(E\) an arbitrary right \(A_X\)-Module, and write the exact cohomology sequence.
+
+%%%%%%%%%%  scan idx 145  |  folio 132  %%%%%%%%%%
+\SGAPrintPage{132}%
+\sgaStableTarget{sga6.e01.def.5-2}\textbf{Definition 5.2.} \uline{An object} \(F\) \uline{of} \(\Dpx^-({}_A \underline{S})\) \uline{satisfying the equivalent conditions of} (5.1) \uline{will be said to have} flat amplitude \uline{contained in the interval} \([m,n]\)\uline{, and we shall write}
+\[
+  \toramp(F)\subset[m,n].
+\]
+\uline{We shall say that} \(F\) \uline{has finite flat amplitude (or finite tor-dimension) when there exist integers} \(m\) \uline{and} \(n\) \uline{such that the preceding condition holds.}
+
+\sgaStableTarget{sga6.e01.para.5-3}5.3. Let \(X\in\Ob \underline{S}\). We shall denote by \(\Dpx^-({}_A X)_{\torf}\) the full subcategory of \(\Dpx^-({}_A X)\) formed by the objects of finite tor-dimension. By criterion (ii) of (5.1), it is a triangulated subcategory of \(\Dpx^-({}_A X)\). As \(X\) varies, the categories \(\Dpx^-({}_A X)_{\torf}\) form a triangulated sub-\(\underline{S}\)-category (1.1.4) of \(\Dpx^-({}_A \underline{S})\), which we shall denote by \(\Dpx^-({}_A \underline{S})_{\torf}\). The functor \(\overset{\mathrm L}{\otimes}_A\) induces an exact \(\underline{S}\)-functor
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx^b(\underline{S}_A)\times_{\underline{S}} \Dpx({}_A \underline{S})_{\torf}
+  \longrightarrow \Dpx^b(\underline{S}_{\mathbb Z}).
+\]
+
+\sgaStableTarget{sga6.e01.para.5-4}5.4. For a left \(A\)-Module \(F\) to have flat amplitude contained in \([-n,0]\) (\(n\in\mathbb N\)), it is necessary and sufficient that \(F\) have tor-dimension \(\leq n\) in the usual sense, i.e.\ that \(F\) admit a left resolution of length \(n\) by flat \(A\)-Modules.
+
+%%%%%%%%%%  scan idx 146  |  folio 133  %%%%%%%%%%
+\SGAPrintPage{133}%
+\sgaStableTarget{sga6.e01.para.5-5}5.5. Let \(X\in\Ob \underline{S}\), and \(m,n\in\mathbb Z\) (\(m\leq n\)). For \(F\in\Ob\Dpx^-({}_A X)\) to have flat amplitude contained in \([m,n]\), it is necessary and sufficient that there exist a covering family \((X_i\to X)\) such that \(F|X_i\) has flat amplitude contained in \([m,n]\). In particular, when \(\underline{S}_{/X}\) is of finite type (SGA 4 VI 1.7), and \(F\) is locally of finite tor-dimension, \(F\) has finite tor-dimension.
+
+\sgaStableTarget{sga6.e01.prop.5-6}\textbf{Proposition 5.6.} \uline{Under the hypotheses of} (2.16)\uline{, if} \(E'\) \uline{has flat amplitude contained in} \([m',n']\) \uline{as an object of} \(\Dpx^-({}_{A'} \underline{S}')\) \uline{and} \(E\) \uline{has flat amplitude contained in} \([m,n]\)\uline{, then} \(E'\overset{\mathrm L}{\otimes}_A E\) \uline{has flat amplitude contained in} \([m+m',n+n']\)\uline{.}
+
+\uline{Proof.} This is immediate: use form (5.1 (i)) of the notion of finite tor-dimension and the fact that, when \(E\) is a flat left \(A\)-Module, \(f^{-1}(E)\) is a flat left \(f^{-1}(A)\)-Module (SGA 4 IV App.\ II).
+
+In particular:
+
+\sgaStableTarget{sga6.e01.cor.5-6-1}\textbf{Corollary 5.6.1.} a) \uline{The functor} \(\mathbb L f^*:\Dpx^-({}_A \underline{S})\longrightarrow \Dpx^-({}_{A'} \underline{S}')\) \uline{induces a functor}
+\[
+  \mathbb L f^*:\Dpx({}_A \underline{S})_{\torf}\longrightarrow \Dpx({}_{A'} \underline{S}')_{\torf}.
+\]
+
+b) \uline{If} \(A\) \uline{is commutative, the functor} \(\overset{\mathrm L}{\otimes}_A:\Dpx^-(\underline{S})\times_{\underline{S}}\Dpx^-(\underline{S})\longrightarrow \Dpx^-(\underline{S})\) \uline{induces a functor}
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx(\underline{S})_{\torf}\times_{\underline{S}}\Dpx(\underline{S})_{\torf}
+  \longrightarrow \Dpx(\underline{S})_{\torf}.
+\]
+
+\sgaStableTarget{sga6.e01.rem.5-6-2}\textbf{Remark 5.6.2.} Let \(E\in\Ob\Dpx^-({}_A S)\) (\(S\)= final object of \(\underline{S}\)), and \(m,n\in\mathbb Z\) (\(m\leq n\)). When \(E\) has flat amplitude contained in \([m,n]\), so does \(E_s\), by (5.6), for every point \(s\) of \(\underline{S}\). The converse is true when \(\underline{S}\) has enough points (use form (5.1.(ii)) of the notion of flat
+%%%%%%%%%%  scan idx 147  |  folio 134  %%%%%%%%%%
+\SGAPrintPage{134}%
+amplitude, and the fact that \(\overset{\mathrm L}{\otimes}_A\) commutes with passage to the fibres).
+
+\sgaStableTarget{sga6.e01.exercise.5-7}\textbf{Exercises 5.7.} a) Suppose that \(A\) is commutative and \((\underline{S}',A')\) faithfully flat over \((\underline{S},A)\) (cf.\ (2.16.2)). For \(E\in\Ob\Dpx^-({}_A S)\)\SGAAuthorFootnote{1}{\(S\) = final object of \(\underline{S}\)} to have flat amplitude contained in \([m,n]\), it is necessary and sufficient that \(f^*(E)\) have that property.
+
+b) Let \(F\in\Ob\Dpx^+({}_A S)\)\SGAAuthorFootMark{1}. Show the equivalence of the conditions:
+\begin{enumerate}[label=(\roman*)]
+\item \(F\) is isomorphic, in \(\Dpx^+({}_A S)\), to a complex \(F'\) such that \(F'^i\) is injective for every \(i\) and zero for \(i\notin[m,n]\);
+\item for every left \(A_S\)-Module \(E\), we have \(\Ext^i(E,F)=0\) for \(i\notin[m,n]\).
+\end{enumerate}
+When \(F\) satisfies the preceding conditions, we say that \(F\) has injective amplitude contained in \([m,n]\). The full subcategory of \(\Dpx^+({}_A S)\) formed by the objects of finite injective amplitude is a triangulated subcategory, denoted by \(\Dpx^+({}_A S)_{\injf}\). Show that, when \(A\) is commutative, the functor \(\mathbb R\underline{\Hom}:\Dpx(S)^\circ\times\Dpx^+(S)\longrightarrow \Dpx(S)\) induces a functor
+\[
+  \mathbb R\underline{\Hom}:\Dpx(S)^\circ_{\torf}\times\Dpx(S)_{\injf}
+  \longrightarrow \Dpx(S)_{\injf}.
+\]
+
+We can now answer the question of (5.0) and state the main result of this section.
+
+\sgaStableTarget{sga6.e01.thm.5-8}\textbf{Theorem 5.8.} \uline{Let} \((\underline{S},A)\) \uline{be a ringed topos,} \(E\in\Ob\Dpx({}_A \underline{S})\)\uline{,} \(m,n\in\mathbb Z\)\uline{, with} \(m\leq n\)\uline{. Equivalent conditions}:
+\begin{enumerate}[label=(\roman*)]
+\item \(\perfamp(E)\subset[m,n]\) (4.8);
+\item \(E\) \uline{is} \((m-1)\)\uline{-pseudo-coherent} (2.15) \uline{and we have} \(\toramp(E)\subset[m,n]\) (5.2).
+\end{enumerate}
+\uline{Since} ``\uline{perfect}'' \uline{obviously implies} ``\uline{pseudo-coherent}''\uline{, we deduce}:
+
+%%%%%%%%%%  scan idx 148  |  folio 135  %%%%%%%%%%
+\SGAPrintPage{135}%
+\sgaStableTarget{sga6.e01.cor.5-8-1}\textbf{Corollary 5.8.1.} \uline{For} \(E\) \uline{to be perfect} (4.8)\uline{, it is necessary and sufficient that} \(E\) \uline{be pseudo-coherent} (2.15) \uline{and locally of finite tor-dimension} (5.2)\uline{.}
+
+For the proof, we shall need some lemmas.
+
+\sgaStableTarget{sga6.e01.lem.5-8-2}\textbf{Lemma 5.8.2.} \uline{Let} \(B\) \uline{be a ring of} \(\underline{S}\)\uline{. If} \(E\) \uline{is a left} \(A\)\uline{-Module,} \(G\) \uline{a right} \(B\)\uline{-Module, and} \(F\) \uline{an} \(A\)\uline{-}\(B\)\uline{-Bimodule (on the left over} \(A\)\uline{, on the right over} \(B\)\uline{), there is a functorial canonical homomorphism}
+\sgaStableTarget{sga6.e01.eq.5-8-2-1}\begin{equation}\tag{5.8.2.1}
+  \underline{\Hom}_B(F,G)\otimes_A E
+  \longrightarrow
+  \underline{\Hom}_B(\underline{\Hom}_A(E,F),G).
+\end{equation}
+\uline{This is an isomorphism for} \(G\) \uline{injective and} \(E\) \uline{of finite presentation}.
+
+\uline{Proof.} Let us first define the arrow. By the adjunction formula dear to Cartan, it amounts to defining a homomorphism of \(B\)-Modules:
+\sgaStableTarget{sga6.e01.eq.unnamed.occ5}\begin{equation}\tag{*}
+  \underline{\Hom}_B(F,G)\otimes_A E\otimes_{\mathbb Z_S}\underline{\Hom}_A(E,F)
+  \longrightarrow G\text{\SGAAuthorFootMark{1}}.
+\end{equation}
+\SGAAuthorFootText{1}{we write \(S\) for the final object of \(\underline{S}\) and \(\mathbb Z_S\) for the constant sheaf with value \(\mathbb Z\).}
+Now we have a canonical homomorphism of \(A\)-\(B\)-biModules
+\sgaStableTarget{sga6.e01.eq.unnamed.occ6}\begin{equation}\tag{**}
+  E\otimes_{\mathbb Z_S}\underline{\Hom}_A(E,F)
+  \longrightarrow F
+\end{equation}
+(coming by adjunction from the identity arrow of \(\underline{\Hom}_A(E,F)\)). Likewise, we have a canonical homomorphism of \(B\)-Modules
+\sgaStableTarget{sga6.e01.eq.unnamed.occ7}\begin{equation}\tag{***}
+  \underline{\Hom}_B(F,G)\otimes_A F\longrightarrow G.
+\end{equation}
+We then define (*) as the composite of (**) and (***). To see that the arrow (5.8.2.1) is an isomorphism when \(G\) is injective and \(E\) of finite presentation, it suffices to observe that, when \(G\) is injective, the source and target of the arrow are right-exact functors in \(E\), and that the arrow induces the identity for \(E=A\).
+

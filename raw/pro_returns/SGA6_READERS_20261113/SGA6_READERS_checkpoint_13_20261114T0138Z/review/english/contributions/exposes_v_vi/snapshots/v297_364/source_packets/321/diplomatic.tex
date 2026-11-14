@@ -1,0 +1,44 @@
+
+On
+notera que nous nous écartons ici de la terminologie usuelle (cf. [1]), où on appelait \(\lambda\)-anneau ce que nous appelons pré-\(\lambda\)-anneau, et \(\lambda\)-anneaux « spéciaux » nos \(\lambda\)-anneaux; la raison en est que seuls les \(\lambda\)-anneaux « spéciaux » sont utilisables en pratique.
+
+\textbf{Exemples 2.5.}
+\begin{enumerate}[label=\alph*)]
+\item Nous avons déterminé toutes les structures de pré-\(\lambda\)-anneau de \(\mathbb Z\)~; il résulte de 2.4.1 que seule celle qui est définie par \(\lambda_t(1)=1+t\) est susceptible d'être une structure de \(\lambda\)-anneau. On a alors \(\lambda_t(n)=(1+t)^n\), d'où~:
+\[
+  \forall n,n'\in\mathbb Z,\quad
+  \lambda_t(n)\circ\lambda_t(n')=(1+t)^n\circ(1+t)^{n'}
+  =(1+t)^{nn'}=\lambda_t(nn')~;
+\]
+\[
+  \lambda_u((1+t)^n)
+  =
+  (\lambda_u(1+t))^n
+  =
+  (\underline{1}+\{1+t\}u)^n
+  =
+  \Ghat(\lambda_t)((1+u)^n)
+  =
+  \Ghat(\lambda_t)(\lambda_u(n)).
+\]
+Par suite c'est bien une structure de \(\lambda\)-anneau. Si on désigne par \(\binom{X}{k}\) le polynôme à coefficients rationnels \(\frac{1}{k!}X(X-1)\ldots(X-k+1)\), on a donc~:
+\begin{equation}\tag{2.5.1}
+  \lambda^i(n)=\binom{n}{i}.
+\end{equation}
+
+\item Pour tout anneau \(K\), le pré-\(\lambda\)-anneau \(1+K[[t]]^+\) est un \(\lambda\)-anneau. D'abord, \(\lambda_u(\underline{1})=\lambda_u(1+t)=\underline{1}+\{1+t\}u=\underline{1}+\underline{1}.u\). On vérifie les autres relations par la commutativité des diagrammes~:
+\[
+\begin{tikzcd}[column sep=tiny]
+\Ghat^t\times\Ghat^t \arrow[r,"\lambda_u\times\lambda_u"] \arrow[d,"\circ"'] &
+(\Ghat^u\circ\Ghat^t)\times\Ghat^u\circ\Ghat^t) \arrow[d,"\circ"]\\
+\Ghat^t \arrow[r,"\lambda_u"] &
+\Ghat^u\circ\Ghat^t,
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=tiny]
+\Ghat^t \arrow[r,"\lambda_v"] \arrow[d,"\lambda_u"'] &
+\Ghat^v\circ\Ghat^t \arrow[d,"\Ghat^v(\lambda_u)"]\\
+\Ghat^u\circ\Ghat^t \arrow[r,"\lambda_v"] &
+\Ghat^v\circ\Ghat^u\circ\Ghat^t,
+\end{tikzcd}
+\]

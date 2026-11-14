@@ -1,0 +1,76 @@
+{
+  "id": "EN-INDEPENDENT-VI-BASIS-PRODUCT-415",
+  "status": "independent source-text and mathematical audit; exact factor-count repair supported; no source mutation by this audit",
+  "scan_status": "The coordinator supplied the independent primary/native reading of the printed lower index0. This audit reads source packets and the reviewed1.13 correction; it makes no new image-reading claim.",
+  "source_packets": [
+    {
+      "page": 379,
+      "packet": "build/page_packets/379/current.tex",
+      "sha256": "98f148c5c48616c83709ca212e2b2eac33d2beb91e536fbeb427d83086edbff7"
+    },
+    {
+      "page": 380,
+      "packet": "build/page_packets/380/current.tex",
+      "sha256": "2282da513e425b2f6dea90a3cca0a5fd6fcac69d1af8302fa9cab3f748e3669a"
+    },
+    {
+      "page": 390,
+      "packet": "build/page_packets/390/current.tex",
+      "sha256": "e5658d35442e3a9be889c1e6a8ab9ccc39b71e5905e86ff6760237734a1eb13e"
+    },
+    {
+      "page": 391,
+      "packet": "build/page_packets/391/current.tex",
+      "sha256": "cc9062bd972d1fd07f03438ad72db67a49a334b3fa1730cca6f7db0c7ee79582"
+    },
+    {
+      "page": 414,
+      "packet": "build/page_packets/414/current.tex",
+      "sha256": "938d407243b005268a074a5b445d34c5407a45f7561f7d582a8a39ddb603a210"
+    },
+    {
+      "page": 415,
+      "packet": "build/page_packets/415/current.tex",
+      "sha256": "4694f6959f5c170b936dc37506f84812b689c3574a6307df487a3a8832e01954"
+    }
+  ],
+  "reviewed_basis_endpoint_patch": [
+    {
+      "source_id": "check/findings/findings_376_380.json#21",
+      "page": 379,
+      "layer": "current",
+      "patch_line_sha256": "82289884b3aca8458ae8ed70cdfd3d6361887b104c56facdcc70e8249e1979be",
+      "old": "\\xi^{k+r+1}",
+      "new": "\\xi^{k+r}",
+      "reason": "Both images clearly include the final +1. Multiplication m_(xi^k):K^bullet(X)→K^bullet(X), a↦xi^k a, is a K^bullet(S)-module automorphism with inverse m_(xi^(−k)). It sends the already proved basis1,xi,…,xi^r exactly to xi^k,…,xi^(k+r). The next power satisfies1.9.1 multiplied by xi^k. For S=Spec k,r=0,X=P^0_k,xi=1, the printed two-element list is(1,1), and the nonzero coefficient vector(1,−1) maps to0. Current removes only the final +1."
+    }
+  ],
+  "printed_formula": "x'=\\prod_{i=0}^{r}(\\xi_i-1)",
+  "recommended_current_formula": "x'=\\prod_{i=1}^{r}(\\xi_i-1)",
+  "source_parameter": "Folio414 defines r as the relative dimension of X-prime over X. Proposition3.1 on390–391 builds the relevant flag products as an iterated projective-bundle tower.",
+  "projective_bundle_basis": {
+    "module_map": "For a projective bundle of relative dimension q, the reviewed1.13 basis is b_j=xi^j, 0≤j≤q. The new elements c_m=(xi−1)^m are related by c_m=sum_(j=0)^m (−1)^(m−j) binom(m,j)b_j.",
+    "inverse": "The inverse map is b_j=sum_(m=0)^j binom(j,m)c_m, by xi=1+(xi−1). Both transformations are triangular over the base K ring with diagonal1; their composites are the polynomial identities (1+(xi−1))^j=xi^j and ((1+z)−1)^m=z^m. Thus the map from the free module with basis c_0,…,c_q to the one with basis b_0,…,b_q is an explicit module isomorphism.",
+    "element": "In particular, c_q=(xi−1)^q is a basis element and is a product of exactly q differences of line-bundle classes; repetition of the same class is permitted by the printed existential phrase."
+  },
+  "tower_basis": {
+    "construction": "Write the tower as X=X_0←X_1←…←X_m=X-prime, with X_j=P(F_(j−1)) over X_(j−1) of relative dimension q_j. Pull each tautological line class zeta_j to the top X-prime.",
+    "map": "At each stage the actual projective-bundle formula identifies the direct sum of q_j+1 copies of K(X_(j−1)) with K(X_j), by (a_0,…,a_qj)↦sum_a f_j^*(a_a)(zeta_j−1)^a. Its inverse is the basis-coordinate map. Composing these maps yields the K(X)-basis consisting of all products over j of (zeta_j−1)^(a_j), with 0≤a_j≤q_j.",
+    "top_element": "Choose a_j=q_j at every stage. The resulting basis element has exactly sum_j q_j=r factors. Enumerate the pulled-back zeta_j with q_j repetitions each as xi_1,…,xi_r; then it is precisely the proposed current product from1 to r.",
+    "dimension": "Each projective stage is smooth of constant relative dimension q_j on the rank-constant pieces used by the author. Relative dimensions add under this composition, giving sum_j q_j=r, the r explicitly defined on414."
+  },
+  "counterexamples": {
+    "relative_dimension_zero": "Take X=Spec k and X-prime=X, arising from rank-one flag data. Here r=0 and K(X-prime)=Z with basis1. Every line bundle on the point is k, so each line class is1. The printed product from0 to0 is xi_0−1=0 and cannot be a basis element. The corrected empty product from1 to0 is1, exactly the basis element.",
+    "relative_dimension_one": "Take X=Spec k and X-prime=P^1_k, which is the complete flag scheme of a rank-two vector space. The corrected1.13 gives basis1,xi and380 gives (1−xi^(-1))^2=0. With delta=xi−1=xi(1−xi^(-1)), this is delta^2=0; the basis map identifies K(P^1) with Z[delta]/(delta^2). Every line bundle is O(a): on the two affine-line charts, invertible modules are free because k[t] is a PID; their transition on the overlap is a unit c t^a of k[t,t^(-1)], and rescaling a trivialization removes c. Hence its class is xi^a, for some integer a. The formula (1+delta)^a=1+a delta holds also for negative a because (1+delta)^(-1)=1−delta. Therefore every printed two-factor product (xi^a−1)(xi^b−1)=ab delta^2=0, and no choice of those two line classes can make it a Z-basis element."
+  },
+  "alternative_indexing": {
+    "other_minimal_edit": "x'=\\prod_{i=0}^{r-1}(\\eta_i-1)",
+    "explicit_reindexing": "The bijection j=i+1 sends {0,…,r−1} to {1,…,r}. Define xi_j=eta_(j−1); its inverse is eta_i=xi_(i+1). Under this exact relabelling, the alternative product and the recommended product have identical factors, including the empty r=0 case.",
+    "scope": "The source determines r factors. It does not distinguish between these two equivalent names for an existentially chosen family of line classes. Changing only the lower endpoint0→1 preserves the printed upper endpoint r and is a supported minimal editorial choice; no unique unseen author indexing intention is claimed."
+  },
+  "fit_to_following_proof": {
+    "filtration": "Each factor xi_i−1 has filtration degree1 by the preceding argument. The source multiplicativity6.6 places the r-factor product in K(X-prime)_r, exactly the degree used in the next sentence.",
+    "coefficient_map": "For the constructed K(X)-basis, let pi_top:K(X-prime)→K(X) be the coefficient of its top product x-prime. By the displayed module-basis map, pi_top(x-prime·f^*(a))=a for every a∈K(X). Thus x-prime·f^*(x)=0 forces x=0 by this exact coefficient map, and in particular f^*(x)=0. This establishes the source conclusion without treating multiplication by x-prime as injective on arbitrary elements of K(X-prime). The author separately cites the injectivity of f^* in3.1; its existing text can remain."
+  },
+  "conclusion": "Support current-only lower-index0→1, with printed0 retained diplomatically. The exact basis transformations and tower construction supply the r factors, while the r=0 and P^1 cases rule out the printed r+1 assertion. The equally valid upper-endpoint repair is related by the stated explicit reindexing, rather than excluded."
+}

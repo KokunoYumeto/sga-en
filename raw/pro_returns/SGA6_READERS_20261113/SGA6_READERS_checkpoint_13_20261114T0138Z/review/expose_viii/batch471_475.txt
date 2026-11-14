@@ -1,0 +1,67 @@
+# Main471–475 fully compared; supplementary witness regions on472,474,475.
+CHECKED += list(range(471,476))
+WITNESSES.update({472:[483],474:[485],475:[486]})
+for n,reading,region,reason in [
+ (1,"471 opens c’est un anneau",'470/471 boundary','Both main-page edges confirm the marker already in place. This is the same boundary as466_470#22.'),
+ (2,'carré commutatif :','last line471','The colon at the end of the page is printed and present.'),
+ (4,'472 begins with the square','471/472 boundary','The final prose line of471 precedes the entire square on472; the marker is already outside the tikzcd options.'),
+ (5,'j above the lower arrow','472 square','The observed upper-side label is already encoded; j:V→Z[T′] is unchanged.'),
+ (6,'f′:X×_Y Y′→Y′ in the running line','Proposition1.6','Main and witness show an inline formula, as already restored.'),
+ (7,'Pour la réciproque on conclut','proof1.6','There is no comma after réciproque; both attached layers preserve the absence.'),
+ (11,'473 begins with the triangle, including its comma','472/473 boundary','The entire triangle follows the new folio. Its source comma is preserved. The separate centering patch changes only geometry.'),
+ (12,'No punctuation after V','473 final diagram','The observed absence of a comma is already encoded.'),
+ (13,'i above X→V','473 final diagram','The observed label side is already encoded.'),
+ (15,'No punctuation after Y','474 first triangle','Both main and witness show no comma; both layers match.'),
+ (17,'Soit X′ begins an indented paragraph','after1.8.1','The blank line already matches the paragraph break.'),
+ (18,'En comparant begins an indented paragraph','after1.8.2','The blank line already matches the paragraph break.'),
+ (20,'No terminal stop after (g)','Proposition1.10 display','Main and witness agree; both attached layers already omit the stop.'),
+ (21,'Cela résulte starts an indented paragraph','475 first line','The blank line after the marker already preserves this paragraph.')]:f(n,reading,region,reason,batch='471_475')
+f(8,'schéma lisse sur W','472 end of proof1.5','Main486 and witness483 print W. The actual upper-right scheme is Z[T′_1,…,T′_m,T_1,…,T_n], whose structural smooth projection π is to Z. The two displayed squares give π∘j′∘i=g∘f|_U: first the base-change square identifies projection to Z[T′] after j′ with j after projection to V, and the preceding factorization identifies those remaining composites with f and g. Thus the constructed regular immersion j′∘i factors g∘f through a smooth Z-scheme, which is exactly the claimed conclusion1.5. This fixes the base letter without changing the morphism or proof.',change='Current sur Z; diplomatic sur W.',batch='471_475')
+patch(472,'current',"dans un schéma lisse sur $W$, d'où le résultat.","dans un schéma lisse sur $Z$, d'où le résultat.",'check/findings/findings_471_475.json#8','The structural projection and the two commutative diagrams explicitly factor g∘f over Z.','misprint_in_print')
+f(9,'un morphisme g:Y′→Y un changement','Proposition1.6 opening','Both scans omit a conjunction or separator between the two declarations. The inherited current et joins the declaration of f to that of g; the following base-change construction uses exactly the same two maps. It adds no mathematical hypothesis. Both attached layer readings are appropriate.',change='Retain diplomatic omission and the already present current et.',batch='471_475')
+f(10,'au cas ou','proof1.6','The main page has no grave accent. The context is the locative relative au cas où, and the current accent restoration is already present.',change='Diplomatic ou; current où (already present).',batch='471_475')
+f(16,'p drawn V→V′','474 first triangle','Both main488 and witness485 show the arrow pointing right from V to V′. The immediately preceding diagram binds p:V′→V and i=p∘j. Its differential sequence is 0→p*Ω¹_{V/Y}→Ω¹_{V′/Y}→Ω¹_{V′/V}→0, locally split because the last term is locally free for the smooth p; at a point of V′ its rank equality is exactly1.8.1. The corrected triangle V′→V→Y supplies this same p and sequence. The existing current interchange of V and V′ is retained; the printed triangle is retained diplomatically.',change='Retain the already present current V′→V; preserve diplomatic V→V′.',batch='471_475')
+f(19,'sà dimension','paragraph after Definition1.9','Main and witness show the grave above a. The possessive is sa, as also printed in the immediately preceding smooth case. The inherited current sa is retained.',change='Diplomatic sà; current sa (already present).',batch='471_475')
+f(22,'complexe de chaines','475 lower paragraph','Main and witness show no circumflex. Restore the source-period French spelling chaînes in the current layer; preserve chaines diplomatically.',change='Current chaînes; diplomatic chaines.',batch='471_475')
+patch(475,'current','complexe de chaines','complexe de chaînes','check/findings/findings_471_475.json#22','Restore the omitted circumflex in the current French text.','misprint_in_print')
+f(23,'l’homomorphisme (1.5.1)','475 final line','Both main489 and witness486 print1.5.1. The displayed map immediately above is tagged2.1.1 and is d:J/J²→i*Ω¹_{V/Y}. The definitions L₁=J/J² and L₀=i*Ω¹_{V/Y} identify its domain and codomain exactly with the stated differential L₁→L₀. Hence2.1.1 is the specific required reference, already restored currently.',change='Current (2.1.1) already present; diplomatic (1.5.1).',batch='471_475')
+
+# Exact mathematical symbol rules and source punctuation.
+symbols(473,[(letter('J'),r'\underline{J}',3),(r'\\mathcal O',r'\underline{O}',1),(r'\\Omega',r'\underline{\Omega}',1)],'Proposition1.8 ideal and differential letters','All three J letters, the single O, and the single Ω have a short independent rule. Indices, degree1 and quotient exponents stay outside those rules.')
+symbols(474,[(r'\\Omega',r'\underline{\Omega}',10),(letter('N'),r'\underline{N}',2)],'differential and conormal ranks','All ten Ω letters and both N letters have independent short rules. The order of the author’s conormal subscripts V′/X and V/X is retained exactly; the proof compares these conormal ranks through the composite j=i′∘j′ and the base-change identification for i′.')
+symbols(475,[(letter('J'),r'\underline{J}',7),(r'\\mathcal O',r'\underline{O}',5),(r'\\Omega',r'\underline{\Omega}',5),(letter('L'),r'\underline{L}',6)],'2.1 cotangent-complex definitions','Every occurrence in this page is visibly underlined: J7,O5,Ω5,L6. The complex bullet and numerical chain degrees remain lower subscripts; superscript X/Y and all quotient exponents remain outside the letter rules.')
+f(14,'473:J3,Ω1;474:Ω10,N2;475:J7,Ω5,L6 independently underlined','473–475 sheaf and complex letters','Direct comparison confirms every listed rule. The independent structure-sheaf rules O1 on473 and O5 on475 are restored too. All replacement counts are recorded locally, and the author’s indices are preserved.',change='Apply exact local letter-rule patches in both layers.',batch='471_475')
+own(474,'ends of1.8.1 and1.8.2','A period after each rank equality','Both terminal periods are present','Retain both printed stops.','punctuation','Main488 and witness485 show a distinct stop after the final parenthesis of each rank equality, unlike the unpunctuated Proposition1.10 display below. Both attached layer stops already match.','confirmed; already present')
+
+# Triangle geometry is independent of the474 mathematical direction repair.
+sid=own(473,'the two downward triangles','Y centered below each U,V pair','Y below V','Center the lower vertex in each triangle.','diagram','Both main triangles are symmetric downward configurations. The first ends with a comma and the second does not. Each still displays the same f=g∘i.')
+for punct in [',','']:
+ old=r'''U \arrow[r,"i"] \arrow[dr,"f"'] & V \arrow[d,"g"]\\
+& Y'''+punct+'\n'+r'\end{tikzcd}'
+ new=r'''U \arrow[rr,"i"] \arrow[dr,"f"'] && V \arrow[dl,"g"]\\
+& Y'''+punct+' &\n'+r'\end{tikzcd}'
+ patch(473,'both',old,new,sid,'Restore one centered triangle, preserving its exact terminal punctuation.','diagram')
+sid=own(474,'rank-comparison triangle','Y centered under V and V′','Y below right vertex','Center the lower vertex in each branch.','diagram','The geometric placement is independent of the source misprint in the direction of p. The diplomatic branch retains the printed V→V′; the current branch retains the already justified V′→V. Both receive only the printed centered lower vertex.')
+for layer,left,right in [('diplomatic','V',"V'"),('current',"V'",'V')]:
+ old=left+r''' \arrow[r,"p"] \arrow[dr] & '''+right+r''' \arrow[d]\\
+& Y'''
+ new=left+r''' \arrow[rr,"p"] \arrow[dr] && '''+right+r''' \arrow[dl]\\
+& Y &'''
+ patch(474,layer,old,new,sid,'Restore centered geometry without conflating the two directional readings.','diagram')
+sid=own(475,'lissifiable factorization triangle','Y centered below X,V; final comma','Y below V','Center Y and retain the final comma.','diagram','The source has f outside the left sloping arrow, g outside the right, and i above X→V. The commutative factorization f=g∘i is unchanged.')
+patch(475,'both',r'''X \arrow[r,"i"] \arrow[dr,"f"'] & V \arrow[d,"g"]\\
+& Y,''',r'''X \arrow[rr,"i"] \arrow[dr,"f"'] && V \arrow[dl,"g"]\\
+& Y, &''',sid,'Restore the source geometry and label positions.','diagram')
+
+statement(471,r'\textbf{Proposition 1.5.}','\n\nSoit $x','Proposition1.5 prose')
+statement(472,r'\textbf{Proposition 1.6.}','\n\nOn peut trouver','Proposition1.6 prose')
+statement(472,r'\textbf{Proposition 1.7.}','\n\nLa propriété','Proposition1.7 prose')
+statement(473,r'\textbf{Proposition 1.8.}','\n\nSupposons','Proposition1.8 prose')
+sid=own(474,'Definition1.9 defined term','dimension relative virtuelle is plain and unlined','emph wrapper','Remove the italic wrapper; keep the term outside surrounding rules.','underline','Main and witness leave the defined term plain while underlining L’entier, de la proposition, s’appelle, de, sur, ou de, au point. This local exclusion differs from the printed continuous rule in Definition1.1 and is applied occurrence by occurrence.')
+patch(474,'both',r'\emph{dimension relative virtuelle}','dimension relative virtuelle',sid,'Preserve the explicitly unlined defined phrase.','underline')
+statement(474,r'\textbf{Définition 1.9.}','\n\nLa dimension','Definition1.9 prose',exceptions=('1.8','dimension relative virtuelle'))
+statement(474,r'\textbf{Proposition 1.10.}',None,'Proposition1.10 prose')
+f(3,'Prose word groups underlined in1.5–1.10; dimension relative virtuelle plain in1.9','471–474 statement typography','Every named statement was directly compared; six explicit spans reproduce the rules. Formula letters retain their independent styles. The number1.8 and the defined term of1.9 are excluded from prose rules, as visibly printed. The prior emph wrapper on that term is removed.',change='Apply explicit local statement rules and the1.9 term exclusion in both layers.',batch='471_475')
+
+sid_module470=own(470,'proof1.4 module noun','O_V-Module','same capital M','Retain Module in both layers.','retained_typography','The main and witness visibly print capital Module after the structure-sheaf symbol. The page describes a sheaf of modules and consistently uses this author typography; changing the capital would replace an accurately transcribed source form. The only local changes concern independently observed symbol rules.','retained reading; rejected normalization')
+own(471,'converse proof1.4, U′ plat sur Y','U′ plat sur Y','same true printed observation','Retain U′ and record the local ring maps supplying the proof.','mathematical_scope','U′ is the open affine neighborhood in Y chosen earlier, so U′→Y is an open immersion; its stalk maps are localizations, hence flat. Independently, the proposition already assumes f:X→Y flat, so O_{Y,y}→O_{U,x} is flat, while smoothness gives flat O_{Y,y}→O_{V,x}. The closed immersion gives O_{V,x}→O_{U,x}, and its fibre map is the quotient O_{V,x}⊗_{O_{Y,y}}k(y)→O_{U,x}⊗_{O_{Y,y}}k(y). These are precisely the maps involved in the transverse regularity argument. The printed claim about U′ is true and the needed flatness of U is already a stated hypothesis; no replacement of the prime or completion of the prose is justified.','retained reading; exact maps recorded')

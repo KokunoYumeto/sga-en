@@ -1,0 +1,130 @@
+%%%%%%%%%%  scan idx 623  |  folio 610  %%%%%%%%%%
+\SGAPrintPage{610}%
+\item
+\uline{For} \(i,j\ge0\), \(R^if_*{O}_X\) \uline{and} \(R^jg_*{O}_{X\times_YX}\) \uline{are flat over} \(S\).
+\item \uline{The sequence}
+\sgaStableTarget{sga6.e12.eq.unnamed.occ2}\begin{equation}\tag{*}
+  {O}_Y\longrightarrow f_*{O}_X
+  \mathrel{\substack{\xrightarrow{\pi_1}\\[-0.7ex]\xrightarrow[\pi_2]{}}}
+  g_*{O}_{X\times_YX}
+\end{equation}
+\uline{is exact and} \(\operatorname{coker}(\pi_1-\pi_2)\) \uline{is an} \({O}_Y\)\uline{-module flat over} \(S\).
+\end{enumerate}
+\uline{Then} \(f^*:\Pic_{Y/S}\longrightarrow\Pic_{X/S}\) \uline{is representable by a quasi-affine morphism of finite presentation.}
+
+Indeed, first note that 1)-4) are stable under every base change \(T\to S\). Only the stability of 3) and 4) is not evident. But, by the Künneth formula (EGA III 6.9.9), 1) and 3) imply that the formation of the \(R^if_*({O}_X)\) and \(R^ig_*({O}_{X\times_YX})\) commutes with base changes \(T\to S\), which immediately implies the stability of conditions 3). Moreover, the formation of the cokernel of \(\pi_1-\pi_2:f_*{O}_X\longrightarrow g_*{O}_{X\times_YX}\) therefore also commutes with base changes; since it is flat over \(S\) (by 4)), \(\im(\pi_1-\pi_2)\) is flat over \(S\) and commutes with base changes. Consequently, \(\Ker(\pi_1-\pi_2)\) commutes with base changes \(T\to S\) and is therefore universally equal to \({O}_Y\).
+
+The stability of the hypotheses implies two things: a. Since the assertion to be proved is local for f.p.p.f., by descent we may suppose that \(X\) has a section \(\alpha\), so \(Y\) has the section \(\beta=f\circ\alpha\). b. To establish the assertion it suffices to consider an \(S\)-point of \(\Pic_{X/S}\), that is, by a) and 2), an invertible sheaf \(L\) on \(X\) equipped with a rigidification \(u\) relative to \(\alpha\), and to show that the f.p.p.f. sheaf \(Z\), the inverse image of this point in \(\Pic_{Y/S}\), is representable by a quasi-affine \(S\)-scheme of finite presentation over \(S\).
+
+
+%%%%%%%%%%  scan idx 624  |  folio 611  %%%%%%%%%%
+\SGAPrintPage{611}%
+\sgaStableTarget{sga6.e12.lem.4-2}\textbf{Lemma 4.2.} \uline{Under the conditions of} 4.1, \(f\) \uline{is a descent morphism for the category of locally free sheaves; that is, for every pair} \(L,M\) \uline{of locally free sheaves on} \(Y\)\uline{, the diagram}
+\[
+\begin{tikzcd}[column sep=tiny]
+\Hom_Y(L,M) \arrow[r] &
+\Hom_X(f^*L,f^*M) \arrow[r,shift left=.7ex] \arrow[r,shift right=.7ex] &
+\Hom_{X\times_YX}(g^*L,g^*M)
+\end{tikzcd}
+\]
+\uline{is exact.}
+
+Indeed, for \(N=\underline{\Hom}_{{O}_Y}(L,M)\), we must show that the sequence
+\[
+  \Gamma(Y,N)\longrightarrow\Gamma(X,f^*N)
+  \rightrightarrows
+  \Gamma(X\times_YX,g^*N)
+\]
+is exact, or (by EGA \(0_1\) 5.4.10.1) that the sequence
+\[
+  \Gamma(Y,N)\longrightarrow\Gamma(Y,f_*{O}_X\otimes_{{O}_Y}N)
+  \rightrightarrows
+  \Gamma(Y,g_*{O}_{X\times_YX}\otimes_{{O}_Y}N)
+\]
+is exact. But the sequence (*) \({O}_Y\to f_*{O}_X\rightrightarrows g_*{O}_{X\times_YX}\) is exact by hypothesis; the lemma follows by applying to it the functor \(\Gamma(N\otimes -)\), which is left exact, \(N\) being flat over \(Y\).
+
+Let \(L\) be an invertible sheaf on \(X\) equipped with a rigidification \(u\) relative to \(\alpha\); by 4.2 there is an equivalence between the category \(C\) of pairs \((M,\varphi)\) consisting of an invertible sheaf \(M\) on \(Y\) and an isomorphism \(\varphi:f^*M\xrightarrow{\sim}L\), and the category \(\mathrm{Deff}(S)\) of effective descent data on \(L\) relative to \(f\). But, for \(f^*M\simeq L\), since \(L\) is rigidified relative to \(\alpha\), \(M\) is canonically equipped with a rigidification relative to \(\beta\). Consequently, \(C\) is equivalent to the discrete category defined by the set of classes of \(\beta\)-rigidified invertible sheaves \((M,v)\) on \(Y\) such that \(f^*(M,v)\simeq(L,u)\). But this is precisely the set \(Z(S)\) of \(S\)-points of the inverse image in \(\Pic_{Y/S}\) of the \(S\)-point of \(\Pic_{X/S}\) defined by \((L,u)\). Moreover, this description of \(Z(S)\) is functorial in \(S\). Thus \(Z\) is identified with the functor \(\mathrm{Deff}\), and we may subsequently forget the rigidifications.
+
+
+%%%%%%%%%%  scan idx 625  |  folio 612  %%%%%%%%%%
+\providecommand{\Isom}{\operatorname{Isom}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\Ker}{\operatorname{Ker}}
+\providecommand{\Supp}{\operatorname{Supp}}
+\providecommand{\Ass}{\operatorname{Ass}}
+
+\SGAPrintPage{612}%
+
+There is a canonical monomorphism from \(\mathrm{Deff}\) into the functor \(\mathrm{Rec}\) of gluing data on \(L\). By definition, \(\mathrm{Rec}\) is the functor \(\underline{\Isom}(p_1^*L,p_2^*L)\), where the \(p_i:X\times_YX\to X\) are the projections, which is represented by an affine scheme \(I\) of finite presentation over \(S\) by 2.4. It therefore remains to represent the monomorphism
+\[
+  i:\mathrm{Deff}\hookrightarrow \underline{\Isom}(p_1^*L,p_2^*L)
+\]
+by a morphism of finite presentation, which will necessarily be quasi-affine (by EGA IV 8.11.2).
+
+Observe in passing that, if desired, we may restrict \(\underline{\Isom}(p_1^*L,p_2^*L)\) by imposing the cocycle condition, but this is not indispensable for what follows.
+
+After the base change \(I\to S\), we are therefore reduced to the following problem: for an invertible sheaf \(L\) on \(X\) equipped with a gluing datum \(\varphi:p_1^*L\xrightarrow{\sim}p_2^*L\), represent the subfunctor of \(S\) ``that makes this datum effective''. But we have the
+
+\sgaStableTarget{sga6.e12.lem.4-3}\textbf{Lemma 4.3.} \uline{Under the conditions of} 4.1\uline{, let} \(L\) \uline{be an invertible sheaf on} \(X\) \uline{equipped with a gluing datum}
+\[
+  \varphi:p_1^*L\xrightarrow{\sim}p_2^*L.
+\]
+\uline{For this datum to be effective, it is necessary and sufficient that the following five conditions hold.}
+\begin{enumerate}[label=\arabic*)]
+\item \uline{For every} \(i\ge0\), \(R^if_*(L)\) \uline{is flat over} \(S\).
+\item \uline{For every} \(j\ge0\), \(R^jg_*(p_1^*L)\) \uline{is flat over} \(S\).
+\item \uline{The cokernel of} \(\pi_1-\pi_2:f_*(L)\longrightarrow g_*(p_1^*L)\simeq g_*(p_2^*(L))\) \uline{is flat over} \(S\)\uline{, (where the last isomorphism is} \(g_*(\varphi)\)).
+\item \uline{The kernel} \(N\) \uline{of} \(\pi_1-\pi_2:f_*(L)\to g_*(p_1^*L)\) \uline{is invertible on} \(Y\).
+\item \uline{The composite morphism} \(f^*N\to f^*f_*L\to L\) \uline{is an isomorphism.}
+\end{enumerate}
+
+
+%%%%%%%%%%  scan idx 626  |  folio 613  %%%%%%%%%%
+\SGAPrintPage{613}%
+Indeed, these conditions are sufficient, since already 4) and 5) imply effectivity. Conversely, let \(M\) be invertible on \(Y\), with an isomorphism \(f^*M\simeq L\) compatible with the gluing datum. We may cover \(Y\) by open subsets \(V\) over which \(M\) is isomorphic to \({O}_Y\); hence the descent datum on \(L\) restricted over \(V=f^{-1}(V)\) is isomorphic to the trivial descent datum on \({O}_X|V\). Finally, conditions 1)-5) are local on \(Y\) and hold, by the hypotheses of 4.1, for \(L={O}_X\); they therefore hold for \(L\).
+
+It therefore remains to represent each of conditions 1) to 5) successively by monomorphisms of finite presentation. For 1) and 2), we apply the
+
+\sgaStableTarget{sga6.e12.lem.4-4}\textbf{Lemma 4.4.} \uline{Let} \(S\) \uline{be a scheme,} \(\lambda:X\to S\) \uline{and} \(\mu:Y\to S\) \uline{proper morphisms of finite presentation, and} \(f:X\to Y\) \uline{an} \(S\)\uline{-morphism. Let} \(F\) \uline{be a sheaf on} \(X\) \uline{of finite presentation and} flat \uline{over} \(S\) \uline{and, for an integer} \(n\)\uline{, let} \(S_n\) \uline{be the subfunctor of} \(S\) \uline{that makes} \(R^if_*(F)\) \uline{flat} \uline{over} \(S\) \uline{for every} \(i\ge n\) \uline{(more precisely,} \(S_n(T)=\{\varnothing\}\) \uline{when} \(R^i(f_T)_*(F_T)\) \uline{is} \uline{flat} \uline{for every} \(i\ge n\), \uline{and} \(S_n(T)=\varnothing\) \uline{otherwise). Then} \(S_n\hookrightarrow S\) \uline{is representable by a surjective monomorphism of finite presentation, and then, for} \(i\ge n\)\uline{, the} \(R^i(f_{S_n})_*(F_{S_n})\) \uline{commute with base changes} \(T\to S_n\)\uline{. Moreover,} \(S_n\) \uline{coincides with the functor} \(S'_n\) \uline{that makes the functors}
+\[
+  M\longmapsto R^i(f_V)_*(F_V\otimes\lambda_V^*M)\qquad \text{\uline{for} } i\ge n
+\]
+\uline{exact, where} \(M\) \uline{runs through the quasi-coherent} \({O}_V\)\uline{-modules for every affine open subset} \(V\) \uline{of} \(S\).
+
+Indeed, the assertion is local on \(S\); we may therefore suppose that \(S\) is quasi-compact. The relative dimension of \(X/Y\) is then bounded, say by \(r\), and, for \(n>r\), \(R^nf_*(F_V\otimes\lambda_V^*M)=0\). The assertion therefore holds for \(n>r\);
+
+
+%%%%%%%%%%  scan idx 627  |  folio 614  %%%%%%%%%%
+\SGAPrintPage{614}%
+proceeding by descending induction, suppose it is known for \(n+1\). After replacing \(S\) by \(S_{n+1}=S'_{n+1}\), we may suppose that \(R^if_*(F)\) is \(S\)-flat for \(i\ge n+1\). Since \(F\) is flat over \(S\), it then follows from EGA III 6.9.8 that \(R^nf_*(F)\) commutes with every base change. Consequently, the representability of \(S_n\) follows from the next lemma (see: J.P. Murre, Representation of unramified functors, Séminaire Bourbaki; May 1965, p.294-11, th.2):
+
+\sgaStableTarget{sga6.e12.lem.4-5}\textbf{Lemma 4.5.} \uline{Let} \(X\to S\) \uline{be a proper morphism of finite presentation, and} \(F\) \uline{a sheaf of finite presentation on} \(X\)\uline{. Then the subfunctor} \(S_F\) \uline{of} \(S\) \uline{that makes} \(F\) \uline{flat over} \(S\) \uline{is representable by a surjective monomorphism of finite presentation (which is of course not an immersion in general).}
+
+To represent condition 3) of 4.3, note that, by 1) and 2), \(f_*(L)\) and \(g_*(p_1^*L)\) commute with base changes \(I\to S\), and hence \(\operatorname{coker}(\pi_1-\pi_2)\) does also; then apply 4.5.
+
+To represent 4), note that, by 3) and the fact that \(f_*(L)\) and \(g_*(p_1^*L)\) are flat and commute with base changes, \(N=\ker(\pi_1-\pi_2)\) also commutes; then apply the
+
+\sgaStableTarget{sga6.e12.lem.4-6}\textbf{Lemma 4.6.} \uline{Let} \(\lambda:X\to S\) \uline{be a proper morphism of finite presentation, and} \(u:F\to G\) \uline{a homomorphism of} \({O}_X\)\uline{-Modules of finite presentation, with} \(G\) \uline{flat over} \(S\)\uline{. Then the subfunctor} \(S_1\) \uline{of} \(S\) \uline{that makes} \(u\) \uline{an isomorphism is representable by an open subscheme of} \(S\)\uline{, of finite presentation.}
+
+As usual, we reduce to the case where \(S\) is noetherian, using EGA IV 8 and 11.2.6, which relieves us of the need to consider finite presentation. First let us represent the functor that makes \(u\) an epimorphism,
+
+
+%%%%%%%%%%  scan idx 628  |  folio 615  %%%%%%%%%%
+\SGAPrintPage{615}%
+i.e. makes \(\operatorname{Coker}u\) zero. Since the formation of \(\operatorname{Coker}u\) commutes with base change, we see that it is represented by the open subset \(S-\lambda(\operatorname{supp}(\operatorname{Coker}u))\) of \(S\). We may therefore suppose that \(u\) is already an epimorphism. But, now using the hypothesis that \(G\) is \(S\)-flat, we find that the formation of \(\operatorname{Ker}u\) commutes with base change, and consequently the functor under consideration is represented by the open subset \(S-\lambda(\operatorname{supp}(\operatorname{Ker}u))\) of \(S\).
+
+% Expose XIII local macros
+\providecommand{\Ass}{\operatorname{Ass}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Proj}{\operatorname{Proj}}
+\providecommand{\NS}{\operatorname{NS}}
+\providecommand{\Tors}{\operatorname{Tors}}
+\providecommand{\Picnum}{\operatorname{Pic}^{\mathrm{num}}}
+\providecommand{\Piczero}{\operatorname{Pic}^{0}}
+\providecommand{\Pictau}{\operatorname{Pic}^{\tau}}
+\providecommand{\length}{\operatorname{length}}
+\providecommand{\etale}{\text{\'etale}}
+
+\newpage
+

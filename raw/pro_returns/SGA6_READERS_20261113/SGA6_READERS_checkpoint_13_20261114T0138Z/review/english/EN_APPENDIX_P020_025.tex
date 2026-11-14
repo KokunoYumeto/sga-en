@@ -1,0 +1,128 @@
+%%%%%%%%%%  scan idx 33  |  folio 20  %%%%%%%%%%
+\SGAPrintPage{20}
+\sgaStableTarget{sga6.e00.appendix-to-expose-0-rrr}
+\begin{center}
+{\Large \underline{\underline{CLASSES OF SHEAVES AND THE RIEMANN--ROCH THEOREM}}}\par
+\vspace{0.5em}
+\underline{by A. GROTHENDIECK}\SGAAuthorFootnote{*}{This is the verbatim reproduction of the report cited in the Introduction to the present Seminar. The footnotes indicated by the signs (*), (**) were added in October 1967.}
+\end{center}
+
+\sgaStableTarget{sga6.e00.chapter-i-rings-formal-preliminaries}\subsection*{CHAP. I -- $\lambda$-\uline{Rings} (\uline{formal preliminaries})}
+\begin{longtable}{@{}p{0.74\linewidth}r@{}}
+1. Definitions & 1\\
+2. Examples & 4\\
+3. The $\lambda$-ring defined by a graded ring & 8\\
+4. The operations $\lambda^p(N,x)$ & 13\\
+\end{longtable}
+
+\sgaStableTarget{sga6.e00.chapter-ii-classes-of-coherent-algebraic-sheaves}\subsection*{CHAP. II -- \uline{Classes of coherent algebraic sheaves and Chern classes}\hfill 18}
+\begin{longtable}{@{}p{0.74\linewidth}r@{}}
+1. Chow's theory & 18\\
+2. Definition of the Chern classes of coherent algebraic sheaves & 22\\
+3. Functorial generalities on $K(X)$ & 27\\
+4. Some technical results & 34\\
+5. Sheaf-theoretic definition of Chern classes. Application to the study of injection morphisms & 43\\
+6. The Riemann--Roch theorem & 49
+\end{longtable}
+
+\begin{center}
+Proof of the Riemann--Roch theorem (1 November 1957).
+\end{center}
+
+\clearpage
+
+%%%%%%%%%%  scan idx 34  |  folio 21  %%%%%%%%%%
+\SGAPrintPage{21}
+\sgaStableTarget{sga6.e00.chapter-i-rings-formal-preliminaries.occ2}\section*{CHAPTER I}
+\begin{center}
+$\lambda$-Rings (Formal preliminaries)
+\end{center}
+
+\sgaStableTarget{sga6.e00.sec.1.occ2}\subsection*{\S 1. Definitions}
+
+A \emph{$\lambda$-ring}\SGAAuthorFootnote{*}{In this seminar we instead say \emph{pre-$\lambda$-ring} (V 2.1), reserving the name $\lambda$-ring for those satisfying the additional condition on page 3 (cf V 2.4).} is a commutative ring $K$ with unit, equipped with a family of maps
+\sgaStableTarget{sga6.e00.eq.1-1.occ2}\begin{equation}\tag{1.1}
+\lambda^i:K\longrightarrow K
+\end{equation}
+($i$ an integer $\geq 0$) satisfying the following conditions:
+\sgaStableTarget{sga6.e00.eq.1-2.occ2}\begin{equation}\tag{1.2}
+\lambda^0x=1,\qquad \lambda^1x=x,\qquad
+\lambda^n(x+y)=\sum_{i=0}^n\lambda^ix\cdot\lambda^{n-i}y.
+\end{equation}
+For every $x\in K$, put
+\sgaStableTarget{sga6.e00.eq.1-3.occ2}\begin{equation}\tag{1.3}
+\lambda_t(x)=\sum_{n\geq 0}\lambda^n(x)t^n\in K[[t]] ;
+\end{equation}
+the preceding relations then express that $x\longmapsto\lambda_t(x)$ is a homomorphism from the additive group $K$ to the multiplicative group $1+K[[t]]^+$ of formal series over $K$ with augmentation $1$, lifting the canonical homomorphism $1+\sum_{i>0}x_it^i\longrightarrow x_1$.
+
+Thus, on the ring $\Z$, there exists a unique $\lambda$-structure compatible with its ring structure and such that
+
+%%%%%%%%%%  scan idx 35  |  folio 22  %%%%%%%%%%
+\SGAPrintPage{22}
+\sgaStableTarget{sga6.e00.eq.1-4}\begin{equation}\tag{1.4}
+\lambda_t(1)=1+t.
+\end{equation}
+We then have
+\sgaStableTarget{sga6.e00.eq.1-5}\begin{equation}\tag{1.5}
+\lambda_t(n)=(1+t)^n,
+\end{equation}
+hence $\lambda^i(n)=\binom{n}{i}$.
+
+The notion of a $\lambda$-homomorphism of $\lambda$-rings is clear; an \emph{augmented $\lambda$-ring} is a $\lambda$-ring equipped with a $\lambda$-homomorphism to $\Z$.
+
+To define the notion of a \emph{special $\lambda$-ring}, the following considerations are useful. Let $k$ be a commutative ring with unit, and let $K=1+k[[t]]^+$ be the group of formal series with coefficients in $k$ and augmentation $1$; we shall introduce on it a $\lambda$-ring law whose additive structure is multiplication of formal series. The multiplication of this ring will be denoted by $f\circ g$. It is completely determined by the condition that the coefficients $c_n=c_n(f\circ g)$ of $f\circ g$ are given by \emph{universal} polynomials with integer coefficients in the coefficients $a_i=c_i(f)$ and $b_i=c_i(g)$ of $f$ and $g$, respectively:
+\sgaStableTarget{sga6.e00.eq.1-6}\begin{equation}\tag{1.6}
+c_n=P_n(a_1,\ldots,a_n;b_1,\ldots,b_n),
+\end{equation}
+that it is distributive with respect to the ``addition'' $fg$, and is given for linear factors by:
+\sgaStableTarget{sga6.e00.eq.1-7}\begin{equation}\tag{1.7}
+(1+at)\circ(1+bt)=1+abt.
+\end{equation}
+The $P_n$ are calculated by calculations of symmetric functions; $P_n$ is isobaric of weight $n$ in the $a_i$ and isobaric of weight $n$ in the $b_i$ ($a_i$ and $b_i$ having weight $i$), and is moreover symmetric in $a=(a_i)$ and $b=(b_i)$. Likewise, the $\lambda^i(f)$ are determined unambiguously by the condition that
+
+%%%%%%%%%%  scan idx 36  |  folio 23  %%%%%%%%%%
+\SGAPrintPage{23}
+the coefficients $c_n(\lambda^i(f))=c_n\text{ of }\lambda^i(f)$ are calculated using \emph{universal} polynomials with integer coefficients in the coefficients $c_n(f)=a_n$ of $f$:
+\sgaStableTarget{sga6.e00.eq.1-8}\begin{equation}\tag{1.8}
+c_n=P_{i,n}(a_1,\ldots,a_{in}),
+\end{equation}
+that relations (1.2) hold, and that, for $i>1$, we have:
+\sgaStableTarget{sga6.e00.eq.1-9}\begin{equation}\tag{1.9}
+\lambda^i(1+at)=1
+\end{equation}
+($1$ is the zero element of the ring $K=1+k[[t]]^+$). The $P_{i,n}$ are again calculated by calculations of symmetric functions, and we find that $P_{i,n}$ is an isobaric polynomial of weight $in$ in the $a_i$. Equipped with the preceding operations, $K$ becomes a $\lambda$-ring; its zero element is $1$, and its unit element is $1+t$. We also note the relation:
+\sgaStableTarget{sga6.e00.eq.1-7bis}\begin{equation}\tag{1.7 bis}
+(1+at)\circ f=f(at)
+\end{equation}
+
+Now let $K$ be an arbitrary $\lambda$-ring. We say that $K$ is \emph{special} when the additive homomorphism $\lambda_t$ from $K$ to $1+K[[t]]^+$ is a $\lambda$-homomorphism. This therefore means that we have the formulas:
+\sgaStableTarget{sga6.e00.eq.1-10}\begin{equation}\tag{1.10}
+\lambda_t(1)=1+t,\quad
+\lambda_t(xy)=\lambda_t(x)\circ\lambda_t(y),\quad
+\lambda_t(\lambda^i(x))=\lambda^i(\lambda_t(x)),
+\end{equation}
+or, explicitly:
+\sgaStableTarget{sga6.e00.eq.1-11}\begin{equation}\tag{1.11}
+\begin{cases}
+\lambda^i(1)=0 & \text{for }i>1\\
+\lambda^n(xy)=P_n(\lambda^1x,\ldots,\lambda^n x;\lambda^1y,\ldots,\lambda^n y)\\
+\lambda^n(\lambda^i(x))=P_{i,n}(\lambda^1x,\ldots,\lambda^{in} x),
+\end{cases}
+\end{equation}
+where the $P_n$ and $P_{i,n}$ are the universal polynomials considered above. In particular, formulas (1.5) follow. (We can show that the $\lambda$-ring $1+k[[t]]^+$ constructed from a commutative ring $k$ is spe%
+%%%%%%%%%%  scan idx 37  |  folio 24  %%%%%%%%%%
+\SGAPrintPage{24}%
+cial; but we shall not need this fact).
+
+\sgaStableTarget{sga6.e00.sec.2.occ2}\subsection*{\S 2. Examples}
+
+\sgaStableTarget{sga6.e00.ex.2-1}1) Let $G$ be a group and $k$ a commutative ring; we consider the group $\underline{K}(G)$, the quotient of the free group generated by the classes of representations of $G$ in $k$-modules of finite type by the subgroup generated by elements of the form $(\rho\oplus\rho')-(\rho)-(\rho')$ (we write $\oplus$ for direct sum). Tensor product and exterior powers define a $\lambda$-ring structure on $\underline{K}(G)$. We can also pass to the quotient by elements of the form $(\rho)-(\rho')-(\rho'')$, where $\rho$ is a representation that is an extension of $\rho'$ by $\rho''$, trivial as an extension of $k$-modules. We obtain the group $\underline{K}_r(G)$ of reduced classes of representations of $G$, and we find that the $\lambda$-ring law passes to the quotient.
+
+When $k$ is an \emph{algebraically closed field of characteristic} $0$\SGAAuthorFootnote{*}{It is unnecessary for $k$ to be algebraically closed, cf. (VI 3.3) for a still more general result (including all those that will be used in the present report).}, we can show that $\underline{K}(G)$, and a fortiori $\underline{K}_r(G)$, is a \emph{special} $\lambda$-ring; this no longer holds when the characteristic is $\neq 0$, but nevertheless, when $k$ is algebraically closed\SGAAuthorFootMark{*}, $\underline{K}_r(G)$ is still a special $\lambda$-ring. To prove this, we reduce to the case where $G$ is a product $\Gl(m,k)\times\Gl(n,k)$ and only rational representations of $G$ are considered; our assertion follows from the \emph{explicit determination} of $\underline{K}_r(G)$ \emph{to be made below} (example 3); finally, when $k$ has characteristic $0$, complete reducibility of the rational representations of $G$ shows that $\underline{K}(G)=\underline{K}_r(G)$.
+
+%%%%%%%%%%  scan idx 38  |  folio 25  %%%%%%%%%%
+\SGAPrintPage{25}
+Variants of the preceding example: $G$ is an algebraic group defined over $k$, and only the rational representations of $G$ defined over $k$ are considered; we can consider a topological group, or a Lie group, and continuous representations, etc\dots\SGAAuthorFootnote{1}{Other examples of $\lambda$-rings can be constructed, for example the set of equivalence classes of quadratic forms, the set of classes of representations of a Lie algebra, etc\dots We promise that we shall not need all these examples to treat the Riemann--Roch theorem!}
+
+\sgaStableTarget{sga6.e00.ex.2-2}2) Let $X$ be an algebraic variety, irreducible or not, defined over the field $k$. We can consider the quotient of the free group generated by the classes of vector bundles on $X$ (defined over $k$) by the subgroup generated by elements of the form $(E\oplus E')-(E)-(E')$, on which the $\lambda$-ring operations will be defined by tensor product and exterior powers. When $X$ is complete, this is a free group generated by the indecomposable vector bundles on $X$ (by Krull--Remak--Schmidt); knowing this ring and its basis is equivalent to the complete classification of vector bundles on $X$ and knowing the elementary tensor operations on those bundles. When $k$ is algebraically closed of characteristic $0$, all the other tensor operations on classes of bundles are then known, using what follows in 3). We can make a more drastic passage to the quotient by the group generated by the elements $(E)-(E')-(E'')$, where $E$ is a vector bundle that is an extension of $E'$ by $E''$; we then obtain a $\lambda$-ring, denoted by $\underline{K}(\xi(X))$, where $\xi(X)$ denotes the additive category of vector bundles on $X$ defined over $k$. Using the results of example 1), we show that, when $k$ is algebraically closed\SGAAuthorFootnote{*}{Unnecessary condition, cf. the preceding footnote.}, the $\lambda$-ring $\underline{K}(\xi(X))$ is special, and the same holds for the
+

@@ -1,0 +1,117 @@
+%%%%%%%%%%  scan idx 235  |  folio 222  %%%%%%%%%%
+\SGAPrintPage{222}
+\sgaStableTarget{sga6.e03.expose}\section*{\underline{EXPOSÉ III}\\[3pt] \underline{\underline{RELATIVE FINITENESS CONDITIONS}}}
+\begin{center}
+\underline{by L. ILLUSIE}
+\end{center}
+
+\sgaStableTarget{sga6.e03.sec.1}\section*{1. Relative pseudo-coherence}
+
+\sgaStableTarget{sga6.e03.thm.1-1}\textbf{Theorem 1.1.} \uline{Let} \(n\in\mathbb Z\). \uline{For each locally finite type morphism of schemes} \(f:X\longrightarrow Y\), \uline{there exists one and only one full subcategory} \(D(f)_{n\text{-}\coh}\) \uline{of} \(D(X)\)\SGAAuthorFootnote{1}{\(D(X)\) = derived category of the category of \(\underline{O}_X\)-Modules.} \uline{such that the following conditions are satisfied}:
+\begin{enumerate}[label=(\roman*)]
+\item \uline{If} \(E\in\operatorname{Ob} D(f)_{n\text{-}\coh}\), \uline{then} \(i^*(E)\in\operatorname{Ob} D(fi)_{n\text{-}\coh}\) \uline{for every open immersion} \(i:U\to X\).
+
+\item \uline{If} \(E\in\ob D(X)\) \uline{and there exists an open covering} \((i_\alpha:U_\alpha\to X)_{\alpha\in A}\) \uline{such that} \(i_\alpha^*(E)\in\ob D(fi_\alpha)_{n\text{-}\coh}\) \uline{for every} \(\alpha\in A\), \uline{then} \(E\in\ob D(f)_{n\text{-}\coh}\).
+
+\item \uline{If}
+\[
+\begin{tikzcd}
+X \arrow[rr,"f"] \arrow[dr,"h"'] & & Y \arrow[dl,"g"]\\
+& Z &
+\end{tikzcd}
+\]
+\uline{is a commutative triangle of locally finite type morphisms}, \uline{where} \(f\) \uline{is a closed immersion and} \(g\) \uline{a smooth morphism}, \uline{then we have}
+\[
+  E\in\operatorname{Ob} D(h)_{n\text{-}\coh}
+  \quad\Longleftrightarrow\quad
+  f_*(E)\in D(Y)_{n\text{-}\coh}\qquad\mbox{\SGAAuthorFootMark{2}}\ .
+\]
+\SGAAuthorFootText{2}{\(D(Y)_{n\text{-}\coh}\) = full subcategory of \(D(Y)\) formed by the \(n\)-pseudo-coherent objects (I~2.15).}
+\end{enumerate}
+
+\uline{Proof}. \uline{Uniqueness} is evident. Indeed, let \(f:X\to Y\) be a locally finite type morphism. Choose an open covering \((i_\alpha:X_\alpha\to X)_{\alpha\in A}\) such that, for each \(\alpha\in A\), \(fi_\alpha\) factors as
+\[
+  X_\alpha\xrightarrow{i'_\alpha}Y_\alpha\xrightarrow{f'_\alpha}Y,
+\]
+where \(i'_\alpha\) is a closed immersion and \(f'_\alpha\) a smooth morphism. It follows at once from (i), (ii), (iii) that the objects of \(D(f)_{n\text{-}\coh}\) are the objects \(E\) of \(D(X)\) such that
+\[
+  i'_{\alpha *}i_\alpha^*(E)\in \ob D(Y_\alpha)_{n\text{-}\coh};
+\]
+thus \(D(f)_{n\text{-}\coh}\)
+
+%%%%%%%%%%  scan idx 236  |  folio 223  %%%%%%%%%%
+\SGAPrintPage{223}
+is indeed determined (since it is a full subcategory of \(D(X)\)). To prove existence, we shall need a few lemmas.
+
+\sgaStableTarget{sga6.e03.lem.1-1-1}\textbf{Lemma 1.1.1.} \uline{Let} \(i:X\to Y\) \uline{be a closed immersion of schemes such that} \(i_*(\underline{O}_X)\) \uline{is pseudo-coherent}, \uline{and let} \(E\in\ob D(X)\). \uline{For} \(E\) \uline{to be \(n\)-pseudo-coherent}, \uline{it is necessary and sufficient that} \(i_*(E)\) \uline{be so}.
+
+\uline{Proof}. The ``necessity'' follows from the general criterion for stability of pseudo-coherence under application of a functor (I~2.13). Conversely, suppose that \(i_*(E)\) is \(n\)-pseudo-coherent, and prove that the same is true of \(E\). Since \(i_*(E)\) has locally bounded-above cohomology, the same is true of \(E\); thus, the question being local, we may suppose that \(E\) is \(m\)-pseudo-coherent for sufficiently large \(m\). Let us show, by descending induction on \(m\), that \(E\) is \(m\)-pseudo-coherent for every \(m\geq n\). We may suppose it already proved that \(E\) is \((n+1)\)-pseudo-coherent. After localizing, we therefore have a distinguished triangle
+\[
+\begin{tikzcd}
+& E'' \arrow[dl,"|" marking] & \\
+E' \arrow[rr] & & E \arrow[ul]
+\end{tikzcd}
+\]
+where \(E'\) is perfect and \(E''^i=0\) for \(i>n\). By (I~2.6), we are reduced to showing that \(E''\) is \(n\)-pseudo-coherent. Now, applying \(i_*\) to the preceding triangle, we obtain a distinguished triangle
+\[
+\begin{tikzcd}
+& i_*(E'') \arrow[dl,"|" marking] & \\
+i_*(E') \arrow[rr] & & i_*(E) \arrow[ul]
+\end{tikzcd}\ .
+\]
+By the first part of the proof, \(i_*(E')\) is pseudo-coherent, so by (I~2.6), \(i_*(E'')\) is \(n\)-pseudo-coherent. Since \(i_*(E'')\) is zero in degree \(>n\), this means, by (I~2.10 b)), that \(H^n(i_*(E''))\) is of finite type. Since \(H^n(i_*(E''))\simeq i_*H^n(E'')\), we are reduced to showing, by (I~2.10 b)), that if \(M\) is an \(\underline{O}_X\)-Module such that \(i_*(M)\) is of finite type, then \(M\) is of finite type, which is immediate (and independent of the hypothesis on \(i_*(\underline{O}_X)\)).
+
+%%%%%%%%%%  scan idx 237  |  folio 224  %%%%%%%%%%
+\SGAPrintPage{224}
+\sgaStableTarget{sga6.e03.rem.1-1-2}\textbf{Remark 1.1.2.} The preceding lemma applies in particular when \(i\) is a \uline{regular immersion} (VII~1.4). Indeed, by means of the Koszul complex, we have locally a finite left resolution of \(i_*(\underline{O}_X)\) by free \(\underline{O}_Y\)-Modules of finite type, so \(i_*(\underline{O}_X)\) is perfect (I 4.8 and 4.14) (and therefore a fortiori pseudo-coherent).
+
+\sgaStableTarget{sga6.e03.lem.1-1-3}\textbf{Lemma 1.1.3.} \uline{Let there be a Cartesian square of schemes}
+\[
+\begin{tikzcd}
+X \arrow[d,"i"'] & X' \arrow[l,"f"'] \arrow[d,"i'"]\\
+Y & Y'{,} \arrow[l,"g"']
+\end{tikzcd}
+\]
+\uline{where} \(i\) \uline{is a closed immersion}, \uline{and let} \(E\) \uline{be a complex of} \(\underline{O}_X\)-\uline{Modules}. \uline{Then} the \uline{canonical base-change arrow} (EGA~III 1.4.15.4)
+\[
+  g^*i_*(E)\longrightarrow i'_*f^*(E)
+\]
+\uline{is an isomorphism}.
+
+(ii) \uline{Put} \(E'=f^*(E)\). \uline{If} \(g\) \uline{is flat and} \(i_*(E)\) \(n\)-\uline{pseudo-coherent}, \uline{then} \(i'_*(E')\) \uline{is} \(n\)-\uline{pseudo-coherent}. \uline{Conversely}, \uline{if} \(g\) \uline{is faithfully flat and} \(i'_*(E')\) \(n\)-\uline{pseudo-coherent}, \uline{then} \(i_*(E)\) \uline{is} \(n\)-\uline{pseudo-coherent}.
+
+\uline{Proof}. The assertion is checked trivially on the stalks.
+
+%%%%%%%%%%  scan idx 238  |  folio 225  %%%%%%%%%%
+\SGAPrintPage{225}
+\sgaStableTarget{sga6.e03.lem.1-1-4}\textbf{Lemma 1.1.4.}
+\uline{Let there be a commutative diagram of schemes}
+\[
+\begin{tikzcd}
+X' \arrow[dr,"f'"'] & X \arrow[l,hook',"i'"'] \arrow[r,hook,"i''"] & X'' \arrow[dl,"f''"]\\
+& Y{,} &
+\end{tikzcd}
+\]
+\uline{where} \(i'\) (\uline{resp.} \(i''\)) \uline{is a closed immersion}, \uline{and} \(f'\) (\uline{resp.} \(f''\)) \uline{a smooth morphism}, \uline{and let} \(E\in\ob D(X)\). \uline{We then have}:
+\[
+  i'_*(E)\ n\text{-\uline{pseudo-coherent}}
+  \quad\Longleftrightarrow\quad
+  i''_*(E)\ n\text{-\uline{pseudo-coherent}}.
+\]
+
+\uline{Proof}. Following a device due to Lichtenbaum, we send \(X\) diagonally into \(X'\times_YX''\), and are at once reduced to proving the assertion when one of the morphisms \(f'\), \(f''\) is the identity. Changing notation, we thus have a commutative triangle
+\begin{equation}\tag{$*$}
+\begin{tikzcd}
+& Y \arrow[d,"f"]\\
+X \arrow[r,hook,"j"'] \arrow[ur,hook,"i"] & Z{,}
+\end{tikzcd}
+\end{equation}
+where \(i\) and \(j\) are closed immersions and \(f\) a smooth morphism, and we must show that ``\(i_*(E)\) \(n\)-pseudo-coherent'' is equivalent to ``\(j_*(E)\) \(n\)-pseudo-coherent''. Since the question is local in \(Y\) and in \(Z\) near a point of \(X\), we may suppose that \(X,Y,Z\) are affine and that we have a factorization
+\[
+\begin{tikzcd}
+Y \arrow[r,hook,"i'"] \arrow[d,"f"'] & Z[T_1,\ldots,T_r]\arrow[dl,"f'"]\\
+Z{,}&
+\end{tikzcd}
+\]
+where \(i'\) is a closed immersion, and the oblique arrow the canonical projection. Then (VII 1.10) \(i'\) is a regular immersion, so (1.1.1) an object \(F\) of \(D(Y)\) is \(n\)-pseudo-coherent if and only if \(i'_*(F)\) is so.
+

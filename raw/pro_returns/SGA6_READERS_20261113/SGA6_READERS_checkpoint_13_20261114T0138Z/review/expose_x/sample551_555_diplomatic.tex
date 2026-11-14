@@ -1,0 +1,188 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,tikz-cd}
+\usepackage[normalem]{ulem}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\Mod}{\operatorname{Mod}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Gl}{\operatorname{Gl}}
+\newcommand{\Gm}{\mathbb G_m}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\Sch}{\operatorname{Sch}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\begin{document}
+%%%%%%%%%%  scan idx 564  |  folio 551  %%%%%%%%%%
+Donc il suffit de montrer que l'on a pour tout \(k>1\)
+\[
+ \det(\gamma^k(E-\underline{n}))=1,
+\]
+où, comme ci-dessus, \(E=\cl^{\bullet}(\underline E)\), \(\underline{n}=\epsilon(E)\). Or, on a
+\[
+ \gamma^k(x)=\lambda^k(x+k-1)
+\]
+pour tout \(x\in K^{\bullet}(X)\), de sorte que
+\[
+ \det(\gamma^k(E-\underline{n}))
+ =
+ \det(\lambda^k(E-\underline{n}+k-1))
+ =
+ \det\left(\sum_{p+q=k}\binom{\underline{n}+k-1}{p}\lambda^q(E)\right).
+\]
+Mais (6.2.10) et (6.5.3) donnent
+\[
+ \det(\lambda^q(E))=(\det(E))^{\binom{\underline{n}-1}{\underline{q}-1}}
+\]
+pour tout \(q>0\), d'où
+\[
+ \det(\gamma^k(E-\underline{n}))=(\det(E))^{\underline{r}},
+\]
+avec
+\[
+ \underline{r}=\sum_{\substack{p+q=k\\ q\geq1}}
+ \binom{-\underline{n}+k-1}{p}\binom{\underline{n}-1}{q-1}.
+\]
+Or, \(\underline{r}\) est une section de \(\mathbb Z\), partout égale au coefficient de \(t^{k-1}\) dans \((1+t)^{k-2}\), donc nulle. On a gagné.
+
+\section*{6. Appendice : Calcul des déterminants des faisceaux localement libres}
+
+\subsection*{6.1.}
+Considérons d'abord un topos annelé quelconque \(X=({C},\underline{O})\). Pour toute section positive \(\underline{n}\in\Gamma(\mathbb Z_X)\) du faisceau constant \(\mathbb Z\) et pour tout \(\underline{O}\)-module \(M\in\Mod_{\underline{O}}(X)\), il est clair comment définir les \(\underline{O}\)-modules
+
+\clearpage
+%%%%%%%%%%  scan idx 565  |  folio 552  %%%%%%%%%%
+\begin{equation}\tag{6.1.1}
+ M^{\underline{n}},\qquad \bigotimes^{\underline{n}} M,\qquad \bigwedge^{\underline{n}} M,\quad\text{etc.}
+\end{equation}
+Les
+foncteurs \((\ )^{\underline{n}}\), \(\bigotimes\limits^{\underline{n}}\) et \(\bigwedge\limits^{\underline{n}}\) transforment modules libres (resp. localement libres) en modules libres (resp. localement libres).
+
+De façon générale, considérons des sections \(\underline{n}_1,\ldots,n_r\) de \(\mathbb Z_X\) et un multifoncteur (covariant, pour fixer les idées)
+\[
+ T:\underline{\Mod}^{n_1}(\underline{O})\times\cdots\times
+ \underline{\Mod}^{n_r}(\underline{O})\longrightarrow\underline{\Mod}(\underline{O})
+\]
+à \(r\) variables, où \(\Mod^{\underline{n}}\underline{O}(X)\) désigne la catégorie fibrée sur \(X\) des \(\underline{O}\)-modules localement libres de rang \(\underline{n}\). Soit
+\[
+ M=T(\underline{O}^{\underline{n}_1},\ldots,\underline{O}^{\underline{n}_r})
+\]
+et
+\[
+ G=\operatorname{G\ell}(\underline{n}_1)\times\cdots\times\operatorname{G\ell}(\underline{n}_r),
+ \quad\text{où }\operatorname{G\ell}(\underline{n}_i)=\underline{\Aut}_{\underline{O}}(\underline{O}^{n_i}).
+\]
+Il s'ensuit immédiatement que \(T\) définit une représentation
+\begin{equation}\tag{6.1.2}
+ \alpha_T:G\longrightarrow\underline{\Aut}_{\underline{O}}(M).
+\end{equation}
+Il est clair que si \(M\) est lui-même localement libre de rang \(\underline{m}\), pour tout foncteur composé,
+\[
+ T'T,\ \text{où } T':\underline{\Mod}^{\underline{m}}(\underline{O})\longrightarrow\underline{\Mod}(\underline{O}),
+\]
+on a
+\begin{equation}\tag{6.1.3}
+ \alpha_{T'T}=\alpha_{T'}\,\alpha_T.
+\end{equation}
+
+Réciproquement, étant donné la représentation \(\alpha=\alpha_T:G\to\underline{\Aut}_{\underline{O}}(M)\), on récupère \(T(\underline{E}_1,\ldots,\underline{E}_r)\) (pour toute suite
+
+\clearpage
+%%%%%%%%%%  scan idx 566  |  folio 553  %%%%%%%%%%
+\(\underline{E}_1,\ldots,\underline{E}_r\) de \(\underline{O}\)-modules localement libres de rang \(\underline{n}_1,\ldots,\underline{n}_r\)) par recollement du \(\underline{O}\)-module libre \(T(\underline{O}^{\underline{n}_1},\ldots,\underline{O}^{\underline{n}_r})\) sur des cartes locales trivialisantes moyennant la représentation \(\alpha\). De façon précise, à la suite \(\underline{E}_1,\ldots,\underline{E}_r\) correspond un \(G\)-torseur à droite \(P=P_{\underline{E}_1,\ldots,\underline{E}_r}\) tel que l'on a un isomorphisme canonique
+\begin{equation}\tag{6.1.3}
+ \underline{E}_i\xrightarrow{\sim}P\overset{G}{\wedge}\underline{O}^{\underline{n}_i}\qquad(i=1,\ldots,r),
+\end{equation}
+où \(\overset{G}{\wedge}\) désigne le produit contracté, et \(G\) opère sur \(\underline{O}^{\underline{n}_i}\) via la \(i\)-ième projection \(G\to\Gl(\underline{n}_i)\) ; alors toute représentation
+\[
+ \alpha:G\longrightarrow\underline{\Aut}_{\underline{O}}(M)
+\]
+fait opérer \(G\) sur \(\underline{O}^{\underline{m}}\) par des \(\underline{O}\)-automorphismes, et définit ainsi un multifoncteur \(T=T_\alpha\) tel que
+\begin{equation}\tag{6.1.4}
+ T_\alpha(\underline{E}_1,\ldots,\underline{E}_r)=P_{\underline{E}_1,\ldots,\underline{E}_r}\overset{G}{\wedge} M.
+\end{equation}
+De plus, pour toute représentation composée \(\alpha=\alpha_1\circ\alpha_2\) on trouve
+\begin{equation}\tag{6.1.5}
+ T_\alpha=T_{\alpha_1}\circ T_{\alpha_2}.
+\end{equation}
+
+\subsection*{6.2.}
+Pour tout \(\underline{O}\)-module localement libre \(\underline{E}\) de rang \(\underline{n}\) nous désignerons par \(\det(\underline{E})\) le \(\underline{O}\)-module inversible \(\bigwedge\limits^{\underline{n}} \underline{E}\). Gardant les notations de 6.1, le foncteur \(\det(T(\underline{E}_1,\ldots,\underline{E}_r))\) est déterminé, à isomorphisme canonique près, par la représentation correspondante
+\begin{equation}\tag{6.2.1}
+ \det\circ\alpha_T:G\longrightarrow{G}_m=\Gl(1).
+\end{equation}
+
+Supposons maintenant que \(X\) soit le topos annelé des faisceaux sur le site annelé \((\Sch/S)\) muni de la topologie étale. Alors on peut calculer \(\det(T(\underline{E}_1,\ldots,\underline{E}_r))\), ou ce qui revient au même, la représentation \(\det\circ\alpha_T\), à l'aide de la
+
+
+\clearpage
+%%%%%%%%%%  scan idx 567  |  folio 554  %%%%%%%%%%
+\textbf{Proposition 6.2.2.} \uline{Pour toute section positive} \(\underline{n}\) \uline{de} \(\mathbb Z\)\uline{, le faisceau étale en groupes} \(\underline{\Der}(\Gl(\underline{n}))\) \uline{des commutateurs de} \(\Gl(\underline{n}))\) \uline{est représentable par}
+\(\operatorname{Sl}(\underline{n})=\Ker(\det:\Gl(\underline{n})\to{G}_m)\).
+
+\textbf{Corollaire 6.2.3.} \uline{Toute représentation}
+\begin{equation}\tag{6.2.4}
+ \alpha:G=\Gl(\underline{n}_1)\times\cdots\times\Gl(\underline{n}_r)\longrightarrow{G}_m
+\end{equation}
+\uline{est de la forme}
+\begin{equation}\tag{6.2.5}
+ \alpha(Y)(s)=(\det(s_1))^{\underline{m}_1}\cdots(\det(s_r))^{\underline{m}_r},
+\end{equation}
+\uline{où} \(Y\in\operatorname{Ob}(\Sch/S)\), \(s=(s_1,\ldots,s_r)\in G(Y)\) \uline{et} \(\underline{m}_1,\ldots,\underline{m}_r\) \uline{sont des sections de} \(\mathbb Z\) \uline{uniquement déterminés par} \(\alpha\).
+
+\textbf{Corollaire 6.2.6.} \uline{Avec les notations de} 6.1. \uline{on a}
+\[
+ \det\bigl(T_\alpha(\underline{E}_1,\ldots,\underline{E}_r)\bigr)
+ =
+ \det(\underline{E}_1)^{\otimes \underline{m}_1}\otimes\cdots\otimes
+ \det(\underline{E}_r)^{\otimes \underline{m}_r},
+\]
+\uline{où} \(\underline{m}_1,\ldots,\underline{m}_r\) \uline{sont des sections de} \(\mathbb Z\) \uline{uniquement déterminées par} \(\alpha\).
+
+\textbf{Remarque 6.2.7.} On peut déterminer les exposants \(\underline{m}_1,\ldots,\underline{m}_r\) dans (6.2.5) et (6.2.6) en substituant successivement dans (6.2.5)
+\(s_i=\lambda.\ \operatorname{id}.(\lambda\in{G}_m(Y))\), \(s_j=\operatorname{id}_{\Gl(\underline{n}_j)(Y)}\), pour \(j\ne i\) \((i,j=1,\ldots,r)\), d'où
+\[
+ \det(s_i)=\lambda^{\underline{n}_i}\quad\text{et}\quad
+ \alpha(Y)(s)=\lambda^{\underline{n}_im_i}.
+\]
+Par exemple on déduit ainsi de (6.2.6)
+\begin{align}
+ \det(\underline{E}_i\otimes \underline{E}_2)&=(\det(\underline{E}_1))^{\otimes \underline{n}_2}\otimes(\det(\underline{E}_2))^{\otimes \underline{n}_1}, \tag{6.2.8}\\
+ \det(\underline{E}_1\otimes \underline{E}_2)&=(\det(\underline{E}_1))\otimes(\det(\underline{E}_2)) \tag{6.2.9}
+\end{align}
+et
+\begin{equation}\tag{6.2.10}
+ \det\bigl(\bigwedge\limits^{\underline{m}} \underline{E}_1\bigr)=(\det(\underline{E}_1))^{\binom{\underline{n}_1-1}{\underline{m}-1}}
+\end{equation}
+etc.
+
+
+\clearpage
+%%%%%%%%%%  scan idx 568  |  folio 555  %%%%%%%%%%
+\subsection*{6.3.}
+Montrons d'abord comment 6.2.3 découle de 6.2.2. Pour cela il suffit évidemment de démontrer (6.2.5) pour les
+\(s_{(i)}=(1,\ldots,s_i,\ldots,1)\) \((i=1,\ldots,r)\), donc on peut supposer \(r=1\), \(G=\operatorname{G\ell}(\underline{n}_1)\). D'après 6.2.2 \(\alpha\) se factorise par \(\operatorname{G\ell}(\underline{n}_1)/\operatorname{Sl}(\underline{n}_1)\) i.e. il existe un diagramme commutatif
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{G\ell}(\underline{n}_1) \arrow[rr,"\alpha"] \arrow[dr,"j"'] && {G}_m\\
+& \operatorname{G\ell}(\underline{n}_1)/\operatorname{Sl}(\underline{n}_1) \arrow[ur,"\beta"'] &
+\end{tikzcd}
+\]
+où \(j\) est l'épimorphisme canonique et \(\beta\) une représentation de \(\operatorname{G\ell}(\underline{n}_1)/\operatorname{Sl}(\underline{n}_1)\) dans \({G}_m\). Mais l'homomorphisme
+\[
+ \det:\operatorname{G\ell}(\underline{n}_i)\longrightarrow{G}_m
+\]
+possède une section, de sorte que le monomorphisme
+\[
+ \operatorname{G\ell}(\underline{n}_i)/\operatorname{S\ell}(\underline{n}_i)\longrightarrow{G}_m
+\]
+induit par det est un isomorphisme. D'autre part on sait (SGA 3 VIII 1.3) que toute représentation de \({G}_m\) dans lui-même est de la forme
+\[
+ s\rightsquigarrow s^{\underline{m}},
+\]
+où \(\underline{m}\) est une section de \(\mathbb Z\), d'où l'assertion.
+
+Le corollaire 6.2.6 est une simple reformulation de 6.2.3. Notons que 6.2.3 découle aussi immédiatement de SGA 3 XXII 6.2.1, mais nous voulons lui donner ici une démonstration élémentaire via 6.2.2).
+
+\end{document}
