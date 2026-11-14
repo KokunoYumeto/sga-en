@@ -23,7 +23,7 @@ The English text is AI-translated from French texts of the seminars, volume by v
 - SGA 7 I from a recomposed PDF of the published volume.
 
 Jacob C. Reinhold's English translation was used for comparison and drafting in SGA 2 and SGA 3. Recorded AI work
-includes OpenAI Codex (GPT-5.6 Sol: translation; GPT-6 Astra: corrections and assembly, September–October 2026;
+includes OpenAI Codex (GPT-5.6 Sol (effort not recorded): translation; GPT-6 Astra: corrections and assembly, September–October 2026;
 effort not recorded) and Claude Opus 5.5 (Anthropic, effort not recorded: the SGA 2 and SGA 3 sources of 26 October
 2026, and the translation of SGA 3 revised against the 1970 printing in November 2026). GPT-6.1 Sol (OpenAI API,
 effort high, Flex tier) proposed the edits that carry the corrections of the
