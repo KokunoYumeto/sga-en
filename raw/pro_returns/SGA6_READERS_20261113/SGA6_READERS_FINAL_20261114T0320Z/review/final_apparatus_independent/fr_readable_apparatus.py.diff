@@ -1,0 +1,20 @@
+--- input_snapshot/scripts/fr_readable_apparatus.py
++++ code_at_handoff/fr_readable_apparatus.py
+@@ -33,7 +33,7 @@
+             assert d.get('image') and d.get('reason'),(v['id'],sid)
+             assert not d['verdict'].startswith(('pending','reverted','rejected')),(v['id'],sid)
+             assert str(d.get('page')) in [str(v['page']),'front'],(v['id'],sid,d.get('page'),v['page'])
+-            provenance.append({k:d.get(k,'') for k in ['source_id','page','kind','record_type','type','verdict','printed_reading','change','correction','image','region','reason','review_file','is_misprint','correction_status']})
++            provenance.append({k:d.get(k,'') for k in ['source_id','page','kind','record_type','type','verdict','printed_reading','change','correction','image','region','reason','review_file','is_misprint','correction_status','source_error_kind','classification_basis','classification_reason','classification_source']})
+         v.update(source=ids,status='adjudicated source correspondence complete',source_decisions=provenance,
+                  kind=classify(provenance),link_method=method)
+         report.append(dict(variant_id=v['id'],page=v['page'],source_ids=ids,kind=v['kind'],
+@@ -46,7 +46,7 @@
+     return variants
+ 
+ def classify(provenance):
+-    kinds={str(d.get('kind','')) for d in provenance}
++    kinds={str(d.get(key,'')) for d in provenance for key in ['kind','source_error_kind']}
+     if any('mathematical_source' in k or 'substantive_mathematical' in k for k in kinds):return 'mathematical source correction'
+     if any(d.get('is_misprint') is True or d.get('record_type')=='misprint' or d.get('type')=='misprint' or 'misprint' in str(d.get('kind','')) for d in provenance):return 'source misprint correction'
+     if kinds & {'font','underline','font_convention','notation','convention','confirmed_notation'}:return 'explicit notation convention'

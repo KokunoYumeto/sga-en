@@ -1,0 +1,35 @@
+
+\textbf{Proposition 2.4.4.} \uline{L'application polynôme} \(s_y\) (2.3.1) \uline{est constante sur les classes suivant} \(\Pic^\tau(X)\).
+
+\emph{Démonstration} : Si \(K\) est une extension algébriquement close de \(k\), on trouve un diagramme commutatif
+\[
+\begin{tikzpicture}[>=stealth,baseline=(current bounding box.center)]
+\node (PicX) at (0,2) {\(\Pic(X)\)};
+\node (Kk) at (3.7,2) {\(K_\bullet(\Spec(k))\)};
+\node (Z) at (5.35,1) {\(\mathbb Z\)};
+\node (Q) at (6.6,1) {\(\mathbb Q\)};
+\node (PicXK) at (0,0) {\(\Pic(X_K)\)};
+\node (KK) at (3.7,0) {\(K_\bullet(\Spec(K))\)};
+\draw[->] (PicX) -- node[above] {\(s_y\)} (Kk);
+\draw[->] (PicX) -- (PicXK);
+\draw[->] (PicXK) -- node[above] {\(\underline{s}_y\)} (KK);
+\draw[->] (Kk) -- node[sloped,above] {\(\sim\)} (Z);
+\draw[->] (KK) -- node[sloped,above] {\(\sim\)} (Z);
+\draw[right hook->] (Z) -- (Q);
+\end{tikzpicture},
+\]
+où \(\underline{s}_y\) est l'application polynôme correspondant à \(s_y\) sur \(\Pic(X_K)\). On peut donc supposer \(k\) algébriquement clos. L'assertion découle alors immédiatement de 2.1.3 et 2.4.3.
+
+\textbf{Remarque 2.4.5.} Dans Exp. XIII on va démontrer ce résultat sans utiliser la représentabilité du foncteur \(\Pic_{X/k}\).
+
+\section*{3. Formules de projection pour les gradués associés}
+
+\subsection*{3.1.}
+Considérons un schéma noethérien \(X\). On désigne par \(\Gro(X)\) le gradué associé à la \(\lambda\)-filtration de \(K^{\bullet}(X)\) et par \(\Grb(X)\) le gradué associé à la filtration 1.1.1 de \(K_\bullet(X)\). Grâce à 1.3.2, la loi de composition (1.3.1)
+\[
+ K^{\bullet}(X)\times K_\bullet(X)\longrightarrow K_\bullet(X)
+\]
+induit par passage aux gradués associés des lois de composition
+\begin{equation}\tag{3.1.1}
+ \Gr^i(X)\times\Gr_j(X)\longrightarrow \Gr_{j-i}(X)\qquad(i,j\in\mathbb Z).
+\end{equation}

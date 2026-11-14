@@ -1,0 +1,97 @@
+%%%%%%%%%%  scan idx 608  |  folio 595  %%%%%%%%%%
+\SGAPrintPage{595}%
+\sgaStableTarget{sga6.e12.expose}\section*{\underline{EXPOSÉ XII}\\[3pt] \underline{\underline{A RELATIVE REPRESENTABILITY THEOREM FOR}}\\[3pt] \underline{\underline{THE PICARD FUNCTOR}}}
+\begin{center}
+\underline{by M. Raynaud (written up by S. Kleiman)}
+\end{center}
+
+\sgaStableTarget{sga6.e12.warning}\subsection*{Warning}
+
+The purpose of the two exposés XII, XIII is to give proofs of the nine finiteness theorems for the Picard functor stated by A. Grothendieck in the comments (pp. C 07-C 11) to his ``Fondements de la Géométrie Algébrique'' (cited as FGA). In the first exposé, the first finiteness theorem is proved in the following form, more precise than the one stated in FGA: let \(X\) and \(Y\) be two proper schemes over an integral noetherian base \(S\), and let \(f:X\longrightarrow Y\) be a surjective \(S\)-morphism. Then there is a nonempty open subset \(V\) of \(S\) over which the induced morphism \(f^*:\Pic_{Y/S}\longrightarrow \Pic_{X/S}\) is representable by a quasi-affine morphism of finite presentation. In the second exposé, the rest is proved.
+
+The two exposés differ notably in their proof techniques. In the first, essential use is made of Oort's dévissage, non-flat descent, and the representation of unramified functors. In the second, one first reduces to the case where the schemes \(X/S\) that occur are projective and flat with geometrically integral fibers, or even, as needed, normal or smooth, always by applying the first finiteness theorem to a suitable morphism \(X'\to X\). One then uses the tool of \((b)\)-sheaves forged by G. Castelnuovo and sharpened and used by T. Matsusaka, D. Mumford, Y. Nakai and S. Kleiman. This tool makes it possible, in particular, to dispense with Chow coordinates, the Frobenius morphism and the Lefschetz theorems used in Grothendieck's initial proofs.
+
+The present exposé XII was presented orally, following Grothendieck, by M. Raynaud, whom the writer wishes to thank for communicating his personal notes.
+
+
+%%%%%%%%%%  scan idx 609  |  folio 596  %%%%%%%%%%
+\SGAPrintPage{596}%
+\sgaStableTarget{sga6.e12.sec.1}\section*{1. Statement of the main theorem and applications}
+
+\sgaStableTarget{sga6.e12.thm.1-1}\textbf{Theorem 1.1.} \uline{Let} \(S\) \uline{be a noetherian scheme,} \(X\) \uline{and} \(Y\) \uline{two proper} \(S\)\uline{-schemes, and} \(f:X\to Y\) \uline{a morphism. Suppose that} \(S\) is integral \uline{and} \(f\) surjective. \uline{Then there is a nonempty open subset} \(V\) \uline{of} \(S\) \uline{such that the morphism}
+\[
+  f^*:\underline{\Pic}_{Y/S}|V\longrightarrow \underline{\Pic}_{X/S}|V
+\]
+\uline{between the Picard functors (localized for the} f.p.p.f \uline{topology) is representable by a quasi-affine morphism of finite presentation.}
+
+\sgaStableTarget{sga6.e12.cor.1-2}\textbf{Corollary 1.2.} \uline{Let} \(X\) \uline{be a proper scheme over a noetherian scheme} \(S\)\uline{. Suppose that} \(S\) is integral. \uline{Then there is a nonempty open subset} \(V\) \uline{of} \(S\) \uline{such that the Picard functor} \(\Pic_{X/S}|V\) \uline{is representable by a} \(V\)\uline{-group scheme that is a sum of quasi-projective open subschemes of finite type, hence a fortiori separated over} \(V\).
+
+Indeed, recall the following fact (FGA N\textsuperscript{o}232): let \(S\) be a scheme, and let \(X\) be a projective \(S\)-scheme, of finite presentation and integral over \(S\) (that is, flat with geometrically integral fibers). Then the Picard functor is represented by an \(S\)-group scheme \(\underline{\Pic}_{X/S}\), an increasing union of quasi-projective open subschemes of finite presentation.
+
+Consideration of the ``Hilbert polynomials'' makes it possible here to decompose \(\underline{\Pic}_{X/S}\) as a sum of open subschemes \(\underline{\Pic}^q_{X/S}\), \(q\in\mathbb Q[t]\). In the next exposé it is proved, under the additional hypothesis that \(S\) is noetherian, that the \(\underline{\Pic}^q_{X/S}\) are of finite type over \(S\). It is then known that 1.2 holds in the case where \(X\) is in addition projective and integral over \(S\); we shall deduce the general case using the
+
+\sgaStableTarget{sga6.e12.lem.1-3}\textbf{Lemma 1.3.} \uline{Let} \(X\) \uline{be of finite type over an integral noetherian} \(S\)\uline{. Then there are a nonempty open subset} \(V\) \uline{of} \(S\)\uline{, an integral scheme} \(S'\) \uline{and a finite and}
+
+
+%%%%%%%%%%  scan idx 610  |  folio 597  %%%%%%%%%%
+\SGAPrintPage{597}%
+\uline{flat morphism} \(S'\to V\) \uline{such that every irreducible component} \(X'_i\) \uline{of} \(X_{S'}\)\uline{, endowed with the induced reduced structure, is integral over} \(S'\).
+
+Indeed, there is a finite extension \(L\) of the function field \(k(S)\) such that every irreducible component of \((X_L)_{\text{red}}\) is geometrically integral (by EGA IV 4.6.8). Let \(S_1\) be an integral \(S\)-scheme such that \(k(S_1)=L\) and such that there are a nonempty open subset \(V_1\) of \(S\) and a finite flat morphism \(h:S_1\to V_1\). There is a nonempty open subset \(S_2\) of \(S_1\) such that every irreducible component of \(X_{S_2}\), endowed with the induced reduced structure, is integral over \(S_2\) (EGA IV 9.7.7). Take \(V=V_1-h(S_1-S_2)\) and \(S'=h^{-1}(V)\).
+
+Let us now prove 1.2. Let \(h:S'\to V_1\) and \(X'_i\) be as in 1.3. For every \(i\), let \(f_i:Z_i\to X'_i\) be a Chow presentation with \(Z_i\) integral and \(f_i\) birational. After shrinking \(V\) and \(S'\), we may suppose that \(Z_i\) is integral over \(S'\) (EGA IV 9.7.7). Let \(f:Z=\coprod_i Z_i\longrightarrow X'=X_{S'}\) be the canonical morphism. Then \(\underline{\Pic}_{Z/S'}=\prod_i\underline{\Pic}_{Z_i/S'}\) is representable by a group scheme that is a sum of quasi-projective open subschemes of finite type.
+
+Finally, 1.1 says that, after shrinking \(V\) and \(S'\), the morphism \(f^*:\underline{\Pic}_{X'/S'}\longrightarrow \underline{\Pic}_{Z/S'}\) is representable by a quasi-affine morphism. Consequently, \(\Pic_{X'/S'}\) is representable by a group scheme that is a sum of quasi-projective open subschemes of finite type; by finite flat descent (SGA 1 VIII 7.6 and EGA II 6.6.1), the same holds for \(\Pic_{X/S}|V\).
+
+\sgaStableTarget{sga6.e12.lem.1-4}\textbf{Lemma 1.4.} \uline{Let} \(k\) \uline{be a field,} \(P\) \uline{and} \(Q\) \uline{two} \(k\)\uline{-group schemes locally of finite type, and let} \(f:P\to Q\) \uline{be a quasi-affine morphism. Then} \(f\) \uline{is affine.}
+
+Indeed, let \(R=\Ker(f)\); \(R\) is a \(k\)-group scheme of finite type that is quasi-affine; by (SGA 3 \(\mathrm{VI}_{\mathrm B}\) 11.11), \(R\) is therefore affine.
+
+
+%%%%%%%%%%  scan idx 611  |  folio 598  %%%%%%%%%%
+\SGAPrintPage{598}%
+Thus \(P\to P/R\), which makes \(P\) an \(R\)-torsor over \(P/R\), is affine. Moreover, it is known (SGA 3 1.4.2) that \(P/R\to Q\) is a closed immersion, hence affine, and hence the same holds for the composite \(P\to P/R\to Q\).
+
+\sgaStableTarget{sga6.e12.cor.1-5}\textbf{Corollary 1.5.} \uline{Let} \(k\) \uline{be a field.}
+\begin{enumerate}[label=\alph*)]
+\item \uline{Let} \(X\) \uline{be a proper} \(k\)\uline{-scheme. Then} \(\underline{\Pic}_{X/k}\) \uline{is representable} (J. P. Murre).
+\item \uline{Let} \(f:X\to Y\) \uline{be a surjective morphism between two proper} \(k\)\uline{-schemes. Then the induced morphism} \(f^*:\underline{\Pic}_{Y/k}\longrightarrow \underline{\Pic}_{X/k}\) \uline{is affine.}
+\end{enumerate}
+
+\sgaStableTarget{sga6.e12.cor.1-6}\textbf{Corollary 1.6.} \uline{Let} \(S\) \uline{be an integral noetherian scheme, and} \(f:X\to Y\) \uline{a surjective} \(S\)\uline{-morphism between two proper} \(S\)\uline{-schemes.}
+\begin{enumerate}[label=\alph*)]
+\item \uline{If} \(Y\) \uline{is normal over} \(S\) \uline{(that is, flat with geometrically normal fibers), then, after shrinking} \(S\), \(f^*:\underline{\Pic}_{Y/S}\to\underline{\Pic}_{X/S}\) \uline{is quasi-finite.}
+\item \uline{If} \(\underline{\Pic}_{Y/S}\) \uline{is essentially proper over} \(S\) \uline{(that is, if it satisfies the valuative criterion of properness, for example, if} \(Y\) \uline{is smooth over} \(S\)\uline{), then, after shrinking} \(S\), \(f^*:\underline{\Pic}_{Y/S}\to\underline{\Pic}_{X/S}\) \uline{is finite (and in particular affine).}
+\end{enumerate}
+
+Indeed, in a), for every \(s\in S\), \(R_s=\Ker(f_s^*)\) is an affine algebraic group; its identity component is a proper algebraic group over \(k\) (FGA 236, Theorem 2.1 (iii)); \(R_s\) is therefore finite. In b), \(f^*\) is both proper and quasi-affine, hence finite.
+
+\sgaStableTarget{sga6.e12.rem.1-7}\textbf{Remark 1.7.} It is not known whether 1.1 remains valid when ``quasi-affine'' is replaced there by affine, as 1.5 and 1.6 might suggest.
+
+
+%%%%%%%%%%  scan idx 612  |  folio 599  %%%%%%%%%%
+\SGAPrintPage{599}%
+\sgaStableTarget{sga6.e12.sec.2}\section*{2. First reductions}
+
+\sgaStableTarget{sga6.e12.para.2-1}\textbf{2.1.} Apply 1.3 to \(X/S\) and \(Y/S\): we obtain a nonempty open subset \(V\) of \(S\), an integral scheme \(S'\) and a finite flat morphism \(S'\to V\) such that every irreducible component \(X'_i\) of \(X_{S'}\) and \(Y'_j\) of \(Y_{S'}\), endowed with the induced reduced structure, is integral over \(S'\). By f.p.q.c. descent (EGA IV 2.7.1 (xiv) and SGA 1 VIII 7.9), we may replace \(S\) by \(S'\). It then follows from the following commutative diagram:
+\[
+\begin{tikzcd}
+X_{\red} \arrow[r,"f_{\red}"] \arrow[d,"i"] & Y_{\red} \arrow[d,"j"]\\
+X \arrow[r,"f"] & Y & ,
+\end{tikzcd}
+\]
+implying the commutative diagram
+\[
+\begin{tikzcd}
+\underline{\Pic}_{X_{\red}/S} & \underline{\Pic}_{Y_{\red}/S} \arrow[l]\\
+\underline{\Pic}_{X/S} \arrow[u] & \underline{\Pic}_{Y/S} \arrow[l] \arrow[u] & ,
+\end{tikzcd}
+\]
+and from trivial sorites on morphisms of functors representable by quasi-affine morphisms (following from EGA II 5.1.10 (ii) (v)) that it suffices to prove the following two assertions:
+\begin{enumerate}[label=\Roman*.]
+\item \uline{Theorem} 1.1 \uline{when} \(f\) \uline{is an immersion (necessarily nilpotent).}
+\item \uline{Theorem} 1.1 \uline{when} \(X\) \uline{and} \(Y\) \uline{are reduced and every irreducible component} \(X_i\) \uline{of} \(X\) \uline{and} \(Y_i\) \uline{of} \(Y\)\uline{, endowed with the induced reduced structure, is integral over} \(S\).
+\end{enumerate}
+
+\sgaStableTarget{sga6.e12.para.2-2}\textbf{2.2.} Let us study assertion II. For every \(i\), let \(j=\varphi(i)\) be an index such that \(f(X_i)\subset Y_j\), and put \(\Sigma_j=\coprod_{\varphi(i)=j} X_i\). We then have the two diagrams
+

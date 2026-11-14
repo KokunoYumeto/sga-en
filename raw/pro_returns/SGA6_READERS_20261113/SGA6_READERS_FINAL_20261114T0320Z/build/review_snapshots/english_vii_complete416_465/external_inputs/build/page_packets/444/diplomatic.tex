@@ -1,0 +1,41 @@
+%%%%%%%%%%  scan idx 457  |  folio 444  %%%%%%%%%%
+donc le résultat pour \(n\ge n_0\).
+
+Il reste à redescendre jusqu'à \(n=0\). On procède par récurrence descendante, grâce au diagramme commutatif:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r] \arrow[d] &
+J^{n+1} \arrow[r] \arrow[d,"\sim"'] &
+J^n \arrow[r] \arrow[d] &
+J^n/J^{n+1} \arrow[r] \arrow[d,"\sim"'] &
+0 \arrow[d]\\
+0 \arrow[r] &
+f_*(\cO_{X'}(n+1)) \arrow[r] &
+f_*(\cO_{X'}(n)) \arrow[r] &
+f_*(\cO_{Y'}(n)) \arrow[r] &
+0.
+\end{tikzcd}
+\]
+La ligne du bas est exacte car \(R^1f_*(\cO_{X'}(n+1))=0\) pour tout \(n\ge0\) d'après i) déjà prouvé. Par ailleurs, on a:
+\[
+f_*(\cO_{Y'}(n))
+=i_*\bigl(g_*(\cO_{Y'}(n))\bigr)
+=i_*(\mathbf S(N)_n)
+=J^n/J^{n+1}.
+\]
+La flèche de droite est donc un isomorphisme; celle de gauche en est un d'après l'hypothèse de récurrence; celle du milieu en est donc un également
+
+\textbf{Proposition 3.6.} Avec les hypothèses et les notations de 3.1 et 3.3, on a la relation:
+\[
+f_*\circ f^*=\Id_{K^\circ(X)}.
+\]
+
+Soit \(x\in K^\circ(X)\); on peut écrire, d'après la formule de projection:
+\[
+f_*(f^*(x))=f_*(1.f^*(x))=x.f_*(1).
+\]
+Il suffit donc de montrer que \(f_*(1)=1\).
+
+Or 3.5 montre que la cohomologie de \(\mathbb Rf_*(\cO_{X'})\) est nulle en degrés \(>0\), et égale à \(\cO_X\) en degré \(0\). La proposition en résulte aussitôt.
+
+\textbf{Théorème 3.7.} Soient \(i:Y\to X\) une immersion fermée régulière, \(X'\) le schéma obtenu en faisant éclater \(Y\), et \(Y'=X'\times_XY\), de sorte qu'on a le diagramme commutatif

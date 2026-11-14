@@ -1,0 +1,99 @@
+%%%%%%%%%%  scan idx 597  |  folio 584  %%%%%%%%%%
+\SGAPrintPage{584}%
+\sgaStableTarget{sga6.e10.sec.7.15}\subsection*{7.15. Varying \(S\).}
+Let \(S'\) be a second trait, and let
+\[
+  S'\longrightarrow S
+\]
+be a morphism of traits, i.e., a dominant local morphism (i.e., carrying the closed point to the closed point and the generic point to the generic point). Denote by \(s'\) (resp. \(t'\)) the closed point (resp. the generic point) of \(S'\), and set \(X'=X\times_SS'\). Suppose that \(X'\) is noetherian (e.g., \(X\) of finite type over \(S\)). There is a commutative diagram
+\[
+\begin{tikzcd}
+X & X_t \arrow[l,hook,"j_X"'] & & \\
+& & X' \arrow[ull] & X'_{t'} \arrow[l,hook,"i'_{X'}"] \arrow[ull] \\
+X_s \arrow[uu,hook,"i_X"] & & & \\
+& & X'_{s'} \arrow[uu,hook,"j_{X'}"'] \arrow[ull] &
+\end{tikzcd}
+\;,
+\]
+whose oblique arrows are flat morphisms. One can therefore take the inverse-image homomorphisms for \(K_\bullet\) along all the arrows of the diagram (IV 2.12). Applying definition 7.3, one finds that the following diagram
+\sgaStableTarget{sga6.e10.eq.7-15-1}\begin{equation}\tag{7.15.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(X_t) \arrow[r,"\sigma_X"] \arrow[d] &
+K_\bullet(X_s) \arrow[d]\\
+K_\bullet(X'_{t'}) \arrow[r,"\sigma_{X'}"] &
+K_\bullet(X'_{s'})
+\end{tikzcd}
+\end{equation}
+is commutative, where the vertical arrows are the inverse-image homomorphisms. One immediately obtains an analogous commutative diagram with \(\Gr_\bullet\) in place of \(K_\bullet\); and when \(X_s\) and \(X_t\) are regular, one can also write \(K^\bullet\) and \(\Gr^\bullet\) in place of \(K_\bullet\) and \(\Gr_\bullet\).
+
+
+%%%%%%%%%%  scan idx 598  |  folio 585  %%%%%%%%%%
+\SGAPrintPage{585}%
+\sgaStableTarget{sga6.e10.sec.7.16}\subsection*{7.16. Passage to geometric fibers.}
+Let \(\bar K\) be an algebraic closure of \(K=k(t)\), the inductive limit of its finite subextensions \(K_i\), and let \(\bar A=\lim \bar A_i\) be the normalization of \(A\) in \(\bar K\), the inductive limit of its normalizations \(\bar A_i\) in the \(K_i\). Choose a maximal ideal \(\bar{\underline{m}}\) of \(\bar A\), thus inducing on each \(\bar A_i\) a maximal ideal \(\underline{m}_i\), and set \(B_i=\bar A_{i\,\underline{m}_i}\), which by Krull--Akizuki is again a discrete valuation ring, whose spectrum we denote by \(S_i\) and whose points we denote by \(s_i\) and \(t_i\). The residue field \(\bar k=\bar A/\bar{\underline{m}}\) is an algebraic closure of \(k=k(s)\), and is the inductive limit of the residue fields \(k_i=\bar A_i/\underline{m}_i=k(s_i)\) of the \(B_i\). Set \(\bar t=\Spec(\bar K)\), \(\bar s=\Spec(\bar k)\). \emph{Now suppose} \(X\) \emph{of finite type over} \(S\); then \(X_{\bar t}\) and \(X_{\bar s}\) are of finite type over \(\bar t\) and \(\bar s\), respectively, and hence \emph{noetherian}. By IV 3.2.3, we have
+\[
+  K_\bullet(X_{\bar t})\xleftarrow{\sim}\varinjlim_i K_\bullet(X_{t_i}),
+  \qquad
+  K_\bullet(X_{\bar s})\xleftarrow{\sim}\varinjlim_i K_\bullet(X_{s_i}).
+\]
+On the other hand, by 7.15 there is a homomorphism from the inductive system of the \(K_\bullet(X_{t_i})\) to the inductive system of the \(K_\bullet(X_{s_i})\). Passing to the limit, one obtains a canonical homomorphism:
+\sgaStableTarget{sga6.e10.eq.7-16-1}\begin{equation}\tag{7.16.1}
+  K_\bullet(X_{\bar t})\longrightarrow K_\bullet(X_{\bar s}),
+\end{equation}
+again called, as expected, the \emph{specialization homomorphism}. It induces a homomorphism \(\Gr_\bullet(X_{\bar t})\longrightarrow \Gr_\bullet(X_{\bar s})\) by 7.4, using the fact (whose verification is left to the reader) that the functor \(\Gr_\bullet\) (just like \(K_\bullet\)) commutes with the limits occurring here. Similarly, when \(f\) is smooth, one can interpret (7.16.1) as a homomorphism on \(K^\bullet\), which is moreover a ring homomorphism, and even a homomorphism of \(\lambda\)-rings when \(X\) is separated; in this case it therefore induces a homomorphism on \(\Gr^\bullet\).
+
+
+%%%%%%%%%%  scan idx 599  |  folio 586  %%%%%%%%%%
+\SGAPrintPage{586}%
+\sgaStableTarget{sga6.e10.para.7-16-2}\textbf{7.16.2.}
+We shall not review here, in the case of geometric fibers, the extension of all the properties of specialization homomorphisms proved in the preceding sections for the ``arithmetic'' fibers; they all follow trivially from the latter by passage to the limit. Let us mention only the following interesting consequence of 7.9.4 when \(f\) is smooth and proper: \(\Gr_\bullet^{\mathrm{num}}(X_{\bar t})\) is isomorphic to a quotient of a subgroup of \(\Gr_\bullet^{\mathrm{num}}(X_{\bar s})\); in particular, its rank is bounded above by that of the latter group. This is therefore a \emph{semicontinuity} result for the rank of the group of cycles modulo numerical equivalence.
+
+\sgaStableTarget{sga6.e10.sec.7.17}\subsection*{7.17. Case of an arbitrary base.}
+Now let
+\[
+  f:X\longrightarrow S
+\]
+be a flat and quasi-compact morphism of noetherian preschemes, and let \(s,t\) be two points of \(S\) such that \(s\) is a specialization of \(t\). We wish to relate the groups \(K_\bullet\), etc., for the two fibers \(X_t\) and \(X_s\), and for corresponding geometric fibers. For this, note (EGA II 7.1.9) that there exists a morphism
+\[
+  g:S'\longrightarrow S,
+\]
+where \(S'\) is a trait, and where \(g\) carries the closed point \(s'\) to \(s\) and the generic point \(t'\) to \(t\); one may even assume that \(k(t)\xrightarrow{\sim}k(t')\). Suppose that \(X'=X\times_S S'\) is noetherian, as is the case when \(f\) is of finite type or \(S'\) is essentially of finite type over \(S\) (EGA IV 1.3.8) (which one may assume when \(S\) itself is universally Japanese (EGA \(0_{\mathrm{IV}}\) 23.1.1)). Then the specialization homomorphism for \(X'\) defines a homomorphism
+\sgaStableTarget{sga6.e10.eq.7-17-1}\begin{equation}\tag{7.17.1}
+  \sigma_\bullet:K_\bullet(X_t)\xrightarrow{\sim}K_\bullet(X_{t'})
+  \longrightarrow K_\bullet(X_{s'}).
+\end{equation}
+
+%%%%%%%%%%  scan idx 600  |  folio 587  %%%%%%%%%%
+\SGAPrintPage{587}%
+One thus obtains a specialization homomorphism on \(K_\bullet(X_t)\), but with values not in \(K_\bullet(X_s)\), but in \(K_\bullet(X_{s'})\), where \(X_{s'}\) is obtained from \(X_s\) by an extension \(k(s)\to k(s')\) of the base fields (which may be assumed to be of finite type when \(S\) is universally Japanese). Passing to geometric fibers as explained in 7.16, one likewise obtains a homomorphism
+\sgaStableTarget{sga6.e10.eq.7-17-2}\begin{equation}\tag{7.17.2}
+  \sigma_\bullet:K_\bullet(X_{\bar t})\longrightarrow K_\bullet(X_{\overline{s'}});
+\end{equation}
+so here again the ``geometric'' specialization homomorphism takes its values not in \(K_\bullet(X_{\bar s})\), but in \(K_\bullet(X_{\overline{s'}})\), where \(X_{\overline{s'}}\) is obtained from \(X_{\bar s}\) by the extension of algebraically closed fields \(k(\bar s)\to k(\overline{s'})\).
+
+\sgaStableTarget{sga6.e10.para.7-17-3}\textbf{7.17.3.} In general, the homomorphism \(K_\bullet(X_{\bar s})\to K_\bullet(X_{\overline{s'}})\) is not an isomorphism (because of the possible presence of ``continuous'' components in the group \(K_\bullet(X_{\bar s})\)). It is, however, easy to verify that it is an isomorphism modulo algebraic equivalence (7.11), and also modulo numerical equivalence (4.5.1) when \(f\) is smooth and proper. Consequently, using 7.12, one finds that (7.17.2) induces a specialization homomorphism
+\sgaStableTarget{sga6.e10.eq.7-17-3-1}\begin{equation}\tag{7.17.3.1}
+  K_\bullet^{\mathrm{alg}}(X_{\bar t})\longrightarrow
+  K_\bullet^{\mathrm{alg}}(X_{\bar s});
+\end{equation}
+and when \(f\) is proper and smooth, provided that specialization homomorphism (7.17.2) is compatible with numerical equivalence (cf. 7.9.4), one likewise obtains a homomorphism
+\sgaStableTarget{sga6.e10.eq.7-17-3-2}\begin{equation}\tag{7.17.3.2}
+  K_\bullet^{\mathrm{num}}(X_{\bar t})\longrightarrow
+  K_\bullet^{\mathrm{num}}(X_{\bar s}).
+\end{equation}
+We leave to the reader the task of developing (if needed) the corresponding constructions for \(\Gr_\bullet\), \(K^\bullet\), and \(\Gr^\bullet\), and the properties of these specialization homomorphisms that follow trivially from the properties developed in the preceding sections. Let us mention only
+
+%%%%%%%%%%  scan idx 601  |  folio 588  %%%%%%%%%%
+\SGAPrintPage{588}%
+that it follows from 7.16.2 that \(\Gr_\bullet^{\mathrm{num}}(X_{\bar t})\) is isomorphic to a quotient of a subgroup of \(\Gr_\bullet^{\mathrm{num}}(X_{\bar s})\) (\(f\) proper and smooth); in particular, its rank is again bounded above by the rank of the latter.
+
+\sgaStableTarget{sga6.e10.para.7-17-4}\textbf{7.17.4.} When \(S\) is regular at \(s\) and \(t\) is maximal, one can construct \(S'\) by blowing up \(s\) in the localization of \(S\) at \(s\), and localizing at the generic point of the fiber of \(s\) in the blow-up. One then obtains for \(k(s')\) a \emph{pure extension} of \(k(s)\). Now it is not difficult to show that, when \(k'\) is a pure extension of a field \(k\), for every noetherian scheme \(T\) over \(k\) the canonical homomorphism \(K_\bullet(T)\to K_\bullet(T\otimes_k k')\) is an isomorphism, by representing \(k'\) as the inductive limit of the coordinate rings of affine open subsets of schemes of the form \(\Spec k[T_1,\ldots,T_n]\), and using (IX 1.6). Thus one concludes that (7.17.1) can be regarded as a canonical homomorphism
+\sgaStableTarget{sga6.e10.eq.7-17-4-1}\begin{equation}\tag{7.17.4.1}
+  K_\bullet(X_t)\longrightarrow K_\bullet(X_s).
+\end{equation}
+But note that one cannot deduce from this a homomorphism \(K_\bullet(X_{\bar t})\to K_\bullet(X_{\bar s})\), for when one passes to a finite extension \(K_i\) of \(K=k(t)\) and normalizes \(S\) in \(K_i\), the regularity hypothesis on \(S\) is lost.
+
+Another way to define a homomorphism (7.17.4.1) is to reduce to the case where \(S\) is local with closed point \(s\) (which is trivial), and to consider an increasing sequence of \emph{regular} closed subschemes \(S_i\) of \(S\), with generic points \(t_i\), such that \(\dim S_i=i\) (\(0\leq i\leq n=\dim S\)). Since for every \(i\), \(0\leq i\leq n-1\), \(\underline{O}_{S_{i+1},t_i}\) is a discrete valuation ring with residue field \(k(t_i)\) and fraction field \(k(t_{i+1})\), there is a specialization homomorphism
+\[
+  K_\bullet(X_{t_{i+1}})\longrightarrow K_\bullet(X_{t_i}),
+\]

@@ -1,0 +1,27 @@
+{
+  "code_versions": [
+    {
+      "path": "scripts/fr_readable_apparatus.py",
+      "original_sha256": "86742b4ca5b6becf6a15afd0dc2e4621a65078ff9c47d0d178cde17d799fdf69",
+      "final_sha256": "b07e59c79474680059218384dfde8bcedbe009242f21ea78d3bdaae3777d1113",
+      "comparison": "Only source-error classification supplement transport changed after capture; literal candidate selection and manual precedence are unchanged."
+    },
+    {
+      "path": "scripts/fr_source_links.py",
+      "original_sha256": "6e50ee642a8a2e173bc1c28dc7e661afe03d3dd7f2b50777144500b4fe81fe29",
+      "final_sha256": "14c5887402f1d5c30c18996930cfa00d865105b70fa9a79c03b01bf7a8f4bc70",
+      "comparison": "Only source-error classification supplement transport changed after capture; literal candidate selection and manual precedence are unchanged."
+    }
+  ],
+  "observed_guards": [
+    "Exact ordered970 ID/page/printed/corrected match against the candidate cache.",
+    "Exact manual alternative bytes and SHA-256 match before manual precedence.",
+    "Resolved source has image, reason, accepted verdict, and matching folio.",
+    "Every automatic character edit has a selected literal proof."
+  ],
+  "occurrence_limitation": "Whole replacement uniqueness is tested inside the minimal variant, not across source occurrences on the folio. Literal-component matching measures local character context and can select a hunk from another occurrence. The first-match score and source-ID tie break do not establish occurrence identity.",
+  "compound_limitation": "A single character-diff component may combine edits from two independently adjudicated source issues, as the5)-to4 component in FRV0768. A full-pair source string can reconstruct both while its reason expressly authorizes only one. Source scope must therefore be checked in addition to literal reconstruction.",
+  "context_serialization": "For a component, common_left_literal/common_right_literal store the printed-branch strings; their length is the minimum of two branch-specific matching lengths. The auditor checked each branch against its own source-pair context, without assuming the two neighboring branch strings are identical.",
+  "resolution": "The seven explicit manual whole-alternative links retain the same exact variant alternatives and choose the correct occurrence sources. No builder or source decision was changed by this audit.",
+  "recommendation": "Retain the occurrence-specific manual links and their exact hashes. Future regeneration with changed alternatives should fail the existing assertions and require renewed occurrence review rather than accepting a short-pair match as sufficient provenance."
+}

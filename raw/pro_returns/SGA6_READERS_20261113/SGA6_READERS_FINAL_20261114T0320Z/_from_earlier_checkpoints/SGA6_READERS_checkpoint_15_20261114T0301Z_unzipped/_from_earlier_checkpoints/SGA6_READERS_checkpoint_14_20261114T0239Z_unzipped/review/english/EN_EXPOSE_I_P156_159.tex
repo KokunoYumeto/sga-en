@@ -1,0 +1,124 @@
+%%%%%%%%%%  scan idx 169  |  folio 156  %%%%%%%%%%
+\SGAPrintPage{156}%
+We can interpret \(u\) (resp.\ \(v\)) as a homomorphism, in \(\Dpx(U)\), from \(A|U\) to \(\mathbb{R}\underline{\Hom}(E,F)|U\) (resp.\ \(\mathbb{R}\underline{\Hom}(F,E)|U\)), and form
+\[
+  u\otL v:A|U\longrightarrow(\mathbb{R}\underline{\Hom}(E,F)\otL\mathbb{R}\underline{\Hom}(F,E))|U.
+\]
+The map \((u,v)\mapsto\langle u,v\rangle=\gamma\circ(u\otL v)\) defines an \(H^0(U,A)\)-linear map,
+\[
+  \Hom_{\Dpx(U)}(E|U,F|U)\otimes_{H^0(U,A)}\Hom_{\Dpx(U)}(F|U,E|U)
+  \longrightarrow H^0(U,A),
+\]
+which we shall call the \uline{cup-product}\SGAAuthorFootnote{raisedstar}{the same remark as for the definition of \(\Tr_{E|U}\)}.
+
+The relation between trace and cup-product is expressed in
+
+\sgaStableTarget{sga6.e01.prop.8-3}\textbf{Proposition 8.3.} \uline{In the situation of} (8.2), \uline{for} \(u\in\Hom(E|U,F|U)\) \uline{and} \(v\in\Hom(F|U,E|U)\), \uline{we have}
+\[
+  \Tr_{E|U}(vu)=\Tr_{F|U}(uv)=\langle u,v\rangle.
+\]
+\uline{In particular}, \uline{when} \(E=F\), \uline{we have}
+\[
+  \Tr_{E|U}(u)=\langle u,\Id\rangle=\langle\Id,u\rangle.
+\]
+
+\uline{Proof}. For simplicity, we shall suppose that \(U=S\). We therefore have two arrows \(u:A\longrightarrow E^\vee\otL F\) and \(v:A\longrightarrow F^\vee\otL E\), hence
+\[
+  u\otL v:A\longrightarrow E^\vee\otL F\otL F^\vee\otL E.
+\]
+On the other hand, we have \(vu:A\to E^\vee\otL E\) and \(uv:A\to F^\vee\otL F\). The proposition follows from the commutativity of the following diagrams (whose verification is ``purely mechanical''):
+%%%%%%%%%%  scan idx 170  |  folio 157  %%%%%%%%%%
+\SGAPrintPage{157}%
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ A \arrow[r,"u\otL v"] \arrow[dr,"vu"'] & E^\vee\otL F\otL F^\vee\otL E \arrow[d,"\Id\otL\tau_F"] \\
+ & E^\vee\otL E
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=large,row sep=large]
+ A \arrow[r,"u\otL v"] \arrow[dr,"uv"'] & E^\vee\otL F\otL F^\vee\otL E \arrow[d,"\tau_E\otL\Id"] \\
+ & F^\vee\otL F
+\end{tikzcd}
+\]
+\[
+\begin{tikzcd}[column sep=
+large,row sep=large]
+E^\vee\otL F\otL F^\vee\otL E \arrow[r,"\Id\otL\tau_E"] \arrow[d,"\Id\otL\tau_F"'] & F^\vee\otL F \arrow[d,"\tau_F"]\\
+E^\vee\otL E \arrow[r,"\tau_E"'] & A .
+\end{tikzcd}
+\]
+
+\sgaStableTarget{sga6.e01.cor.8-4}\textbf{Corollary 8.4.} \(E,F,U\) \uline{being given as in} (8.2), \uline{let} \(u\in\Hom(E|U,E|U)\), \(s:E|U\to F|U\) \uline{be an isomorphism}, \uline{so that} \(sus^{-1}\in\Hom(F|U,F|U)\). \uline{We then have}
+\[
+  \Tr_{F|U}(sus^{-1})=\Tr_{E|U}(u).
+\]
+
+\uline{Proof}. This is immediate.
+
+\sgaStableTarget{sga6.e01.rem.8-5}\textbf{Remark 8.5.} When \(\underline{C}\) is a fibered \(\underline{S}\)-category, denote by \(E(\underline{C})\) the fibered \(\underline{S}\)-category whose fiber over \(U\in\Ob \underline{S}\) is the category with objects the pairs \((L,u)\), where \(L\in\Ob\underline{C}_U\) and \(u\in\operatorname{End}_{\underline{S}}(L)\), and with arrows from \((L,u)\) to \((M,v)\) the arrows \(f:L\to M\) such that \(fu=vf\). By (8.4), we can regard the trace homomorphism as an \(\underline{S}\)-functor from \(E(\Dpx(\underline{S})_{\underline{\parf}})^{\mathrm{is}}\) to \(\underline A\) (where the exponent \(\mathrm{is}\) means that the only arrows considered are the isomorphisms, and \(\underline A\) is the \(\underline{S}\)-category with discrete fibers defined by \(A\) (cf.\ (6.6.a))). Since every perfect complex is locally of finite tor-dimension, the forgetful \(\underline{S}\)-functor
+\[
+  E(\Dpx(\underline{S})_{\underline{\parf}})^{\mathrm{is}}
+  \longrightarrow
+  E(\Dpx(\underline{S})_{\parf})^{\mathrm{is}}
+\]
+induces an isomorphism on the associated stacks. Consequently, the trace
+%%%%%%%%%%  scan idx 171  |  folio 158  %%%%%%%%%%
+\SGAPrintPage{158}%
+homomorphism extends uniquely to an \(\underline{S}\)-functor from \(E(\Dpx(\underline{S})_{\parf})^{\mathrm{is}}\) to \(\underline A\).
+
+For \(E\in\Ob\Parf(U)\) (\(U\in\Ob \underline{S}\)), we again denote by
+\[
+  \Tr_E:\Hom(E,E)\longrightarrow H^0(U,A)
+\]
+the corresponding homomorphism, which is a homomorphism of \(H^0(U,A)\)-modules. We see similarly that the definition of the cup-product (8.2), as well as assertions (8.3) and (8.4), generalize to the case of perfect complexes (not necessarily of finite tor-dimension).
+
+\sgaStableTarget{sga6.e01.prop.8-6}\textbf{Proposition 8.6.} \uline{Let} \(U\in\Ob \underline{S}\), \(E,F\in\Parf(U)\), \(u\in\Hom(E,E)\), \(v\in\Hom(F,F)\), \uline{so that} \(u\otL v\in\Hom(E\otL F,E\otL F)\). \uline{We have}
+\[
+  \Tr_{E\otL F}(u\otL v)=\Tr_E(u)\,\Tr_F(v).
+\]
+
+\uline{Proof}. Since the question is local, by (8.4) and (4.10) we can suppose that \(u\) and \(v\) are arrows of \(K^b(\underline{C}_0)\). Using (8.1.2), we reduce to the case where \(u\) and \(v\) are arrows of \(\underline{C}_0\). We conclude by (8.1.1).
+
+%%%%%%%%%%  scan idx 172  |  folio 159  %%%%%%%%%%
+\SGAPrintPage{159}%
+\sgaStableTarget{sga6.e01.bibliography}\section*{BIBLIOGRAPHY}
+\begin{description}[leftmargin=2.5cm,style=nextline]
+\item[{[H]}]
+Hartshorne, R. Residues and Duality, Lecture Notes no.\ 20, Springer, 1966.
+\item[{[V]}] Verdier, J-L. Catégories dérivées, I.H.E.S., 1963.
+\item[{[G]}] Giraud, J. Cohomologie non abélienne, to appear in North Holl. Pub. Comp.
+\item[{SGA 4}] Cohomologie étale des schémas, by M. Artin, A. Grothendieck, and J-L. Verdier, to appear in North Holl. Pub. Comp.
+\item[{SGA 5}] Cohomologie \(\ell\)-adique et fonctions L, by A. Grothendieck, to appear in North Holl. Pub. Comp.
+\item[{[1]}] Hakim, M. Topos annelés et schémas relatifs, thesis (in preparation).
+\item[{[2]}] Verdier, J-L. Les catégories dérivées des catégories abéliennes, to appear in North Holl. Pub. Comp.
+\item[{[MULT]}] Cartan, H. and Eilenberg, S. Homological Algebra, Princeton, 1956.
+\end{description}
+
+\providecommand{\cS}{\mathcal S}
+\providecommand{\cCz}{\mathcal C_0}
+\providecommand{\cCone}{\mathcal C_1}
+\providecommand{\cA}{\mathcal A}
+\providecommand{\cB}{\mathcal B}
+\providecommand{\cL}{\mathcal L}
+\providecommand{\cI}{\mathcal I}
+\providecommand{\cJ}{\mathcal J}
+\providecommand{\Db}{\mathrm D}
+\providecommand{\Kb}{\mathrm K}
+\providecommand{\Dminus}{\mathrm D^{-}}
+\providecommand{\Kminus}{\mathrm K^{-}}
+\providecommand{\Kbd}{\mathrm K^{b}}
+\providecommand{\Mod}{\operatorname{Mod}}
+\providecommand{\Lib}{\operatorname{Lib}}
+\providecommand{\Loclib}{\operatorname{Loclib}}
+\providecommand{\Qcoh}{\operatorname{Qcoh}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\renewcommand{\Ob}{\operatorname{ob}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\coker}{\operatorname{Coker}}
+\providecommand{\coh}{\operatorname{coh}}
+\providecommand{\parf}{\operatorname{parf}}
+\providecommand{\amp}{\operatorname{amp}}
+\providecommand{\RHom}{\operatorname{RHom}}
+

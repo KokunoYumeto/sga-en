@@ -1,0 +1,47 @@
+{
+  "record_type": "author_claim_issue",
+  "page": 355,
+  "source_ids": [
+    "ASTRA-V-AUTHOR-CLAIM-355"
+  ],
+  "image": [
+    "scan/SGA6_scan_360dpi.pdf#page=369",
+    "scan/SGA6_witness_300dpi.djvu#page=366"
+  ],
+  "printed_hypotheses": "K binomial;R an augmented K-lambda-algebra;N in R with lambda^k(N)=0 for k>d;x in Fil^i R. No epsilon(N)=d condition is stated.",
+  "printed_assertion": "gamma^(d+i)(N,x)-(-1)^(d+i-1)(d+i-1)!x lies in Fil^(i+1)R.",
+  "example": {
+    "ring": "K=Z,R=Z[L,L^-1],epsilon(L)=1. Define lambda_t(sum_j m_jL^j)=product_j(1+L^jt)^m_j for finite integer coefficient families. These are the line-element lambda operations;the universal lambda identities follow by substitution of the line powers and extension to additive inverses through reciprocals of formal series.",
+    "augmentation_map": "epsilon:R→Z sends each L^j to1,and sends the displayed total lambda series to(1+t)^(sum_j m_j),so it commutes with every lambda coefficient.",
+    "data": "N=0,d=1,i=1,x=L-1. All lambda^k(N) with k>=1 vanish;epsilon(x)=0 so x is in Fil^1.",
+    "modified_operation": "D=lambda_(-1)(0)=1. The defining identity gamma^p(N,x)D=gamma^p(xD) therefore gives gamma^p(0,x)=gamma^p(x).",
+    "ordinary_gamma": "gamma_t(L-1)=lambda_(t/(1-t))(L-1)=(1+Lt/(1-t))/(1+t/(1-t))=1+(L-1)t,hence gamma^2(x)=0.",
+    "printed_difference": "For d=i=1,the printed difference is0-(-1)^1 1!x=x."
+  },
+  "exact_filtration": {
+    "ideal": "I=(L-1).",
+    "containment": "Every augmentation-zero element z has the expression sum_j m_j(L^j-1). Each L^j-1 lies in I,also for negative j. The product gamma_t(z)=product_j(1+(L^j-1)t)^m_j shows gamma^r(z) in I^r. Every canonical-filtration generator of total index at least q therefore lies in I^q.",
+    "reverse_containment": "x=L-1 has augmentation zero,and gamma^1(x)^q=x^q is a defining generator of Fil^q. Since Fil^q is an ideal,it contains I^q.",
+    "identity": "Fil^q R=I^q for q>=1.",
+    "separating_map": "h:R→Z[u]/(u^2) sends L to1+u,L^-1 to1-u. It is a well-defined ring map because(1+u)(1-u)=1. It kills I^2=Fil^2 and sends the asserted difference x to nonzero u."
+  },
+  "relationship_to_earlier_issue": "The earlier5.7 packet author_claim_issue_343.json concerns the same absence of a prescribed augmentation for N. This example establishes the actual6.10 failure independently from its printed proof.",
+  "disposition": "The355 statement and356 filtration-compatibility claim are decided and retained with an exact counterexample and failed transport. Only the independent prime-placement and capital-X textual slips are corrected;no new hypothesis or replacement theorem is inserted.",
+  "continuation_356": {
+    "source_id": "ASTRA-V-AUTHOR-CLAIM-CONTINUATION-356",
+    "image": [
+      "scan/SGA6_scan_360dpi.pdf#page=370",
+      "scan/SGA6_witness_300dpi.djvu#page=367"
+    ],
+    "printed": "The map sending N-prime_0 to N-d is asserted to preserve the lambda filtrations.",
+    "exact_failure": {
+      "universal_ring": "For d=i=1,write U=N-prime_0,V=X0,N0=1+U. The polynomial generators include U of weight1 and gamma^p(V) of weight p.",
+      "operation_calculation": "For a line element N0,lambda^2(N0,V)=-N0 V^2+(1+N0)lambda^2(V);this follows by expanding lambda^2(V(1-N0)) and dividing by1-N0 in the universal polynomial ring. Since gamma^2(N0,V)=lambda^2(N0,V)+V and gamma^2(V)=lambda^2(V)+V,the exact difference gamma^2(N0,V)+V is(2+U)gamma^2(V)-(1+U)V^2-UV.",
+      "source_weight": "All three displayed terms have total weight at least2,so the source difference lies in Fil^2 R0.",
+      "map": "f(U)=-1,f(V)=L-1,f(gamma^p(V))=0 for p>=2. The source relation gamma^k(U)=0 for k>1 is respected because gamma_t(-1)=1-t.",
+      "image": "f sends the source difference to L-1;the ring map L→1+u into Z[u]/(u^2) sends this to nonzero u and kills Fil^2 R.",
+      "augmentation_square": "epsilon_0(U)=0 but epsilon(f(U))=-1. The asserted filtration compatibility fails already in degree1."
+    },
+    "independent_textual_correction": "The opening relation is corrected only in current from N-prime_0=N0+d to N0=N-prime_0+d;this does not repair the unrestricted final specialization."
+  }
+}

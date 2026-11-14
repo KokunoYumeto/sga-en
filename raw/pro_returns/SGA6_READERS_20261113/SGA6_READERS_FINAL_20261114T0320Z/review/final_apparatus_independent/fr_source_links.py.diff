@@ -1,0 +1,39 @@
+--- input_snapshot/scripts/fr_source_links.py
++++ code_at_handoff/fr_source_links.py
+@@ -7,12 +7,26 @@
+ """
+ from pathlib import Path
+ from collections import defaultdict,Counter
+-import difflib,json,re
++import difflib,hashlib,json,re
+ 
+ ROOT=Path(__file__).resolve().parents[1]
+ 
+ def jsonl(path):
+     return [json.loads(s) for s in path.read_text().splitlines() if s.strip()] if path.exists() else []
++
++def apply_classification_supplements(decisions):
++    path=ROOT/'review/final_classification_audit/SUPPLEMENTAL_SOURCE_ERROR_CLASSIFICATIONS.jsonl'
++    for row in jsonl(path):
++        sid=row['source_id'];d=decisions[sid]
++        original=(ROOT/row['original_decision_path']).read_text().splitlines()[row['original_decision_line']-1]
++        assert hashlib.sha256(original.encode()).hexdigest()==row['original_decision_sha256'],sid
++        assert d['image']==row['image'] and d['reason']==row['underlying_source_reason'],sid
++        assert d.get('is_misprint') is not False and not d['verdict'].startswith(('reverted','rejected','pending')),sid
++        d.update(is_misprint=True,source_error_kind=row['source_error_kind'],
++          classification_basis=row['classification_basis'],classification_reason=row['reason'],
++          classification_source=path.relative_to(ROOT).as_posix()+'#'+sid,
++          correction_status=row['correction_status'])
++    return decisions
+ 
+ def load_decisions():
+     registry=json.loads((ROOT/'build/registry.json').read_text())
+@@ -41,7 +55,7 @@
+             d=rows[0]
+         assert not d.get('verdict','').startswith('pending'),sid
+         decisions[sid]=d
+-    return registry,byid,decisions
++    return registry,byid,apply_classification_supplements(decisions)
+ 
+ def delta(text_a,text_b):
+     return [(i,j,k,l,text_a[i:j],text_b[k:l]) for tag,i,j,k,l in difflib.SequenceMatcher(None,text_a,text_b,autojunk=False).get_opcodes() if tag!='equal']

@@ -1,0 +1,118 @@
+%%%%%%%%%%  scan idx 222  |  folio 209  %%%%%%%%%%
+\SGAPrintPage{209}%
+\uline{of} $s$ \uline{such that} $f|X|S':X|S'\longrightarrow Y|S'$
+\uline{is an isomorphism.}
+
+\uline{Proof.} By (2.7), there exists an open neighborhood $U$ of $X_s$ in $X$ such that $f|U$ is étale (i.e. a local isomorphism). We may assume that $U=X|S'$, where $S'$ is a neighborhood of $s$ in $S$; in other words, after restricting $S$, we may assume that $f$ is étale. We then easily check that the fiber product $Z=X\times_Y X$ is naturally equipped with the structure of a mixed $S$-variety (étale over $X$ for each projection), and that the diagonal morphism $\Delta:X\to Z$ is an open immersion\SGAAuthorFootnote{1}{Note the analogy with Algebraic Geometry (SGA 1 I 5.1).}. Moreover, it is immediate that $Z$ satisfies the same hypothesis as $X$ and $Y$, namely that the open subsets of the form $Z|S'$, for $S'$ an open neighborhood of $s$ in $S$, form a fundamental system of neighborhoods of $Z_s$. Since $\Delta_s:X_s\to Z_s$ is an isomorphism, it follows, after restricting $S$, that $\Delta$ is an isomorphism. Thus $f$ is an open immersion, hence an isomorphism after shrinking $S$ again, and we are done.
+
+\sgaStableTarget{sga6.e02.cor.2-9}\textbf{Corollary 2.9.} \uline{Let} $X$ \uline{be a mixed} $S$\uline{-variety, and} $s\in S$\uline{. Suppose that the hypothesis of} (2.5) \uline{holds. There then exists a neighborhood} $S'$ \uline{of} $s$ \uline{in} $S$ \uline{such that} $X|S'$ \uline{is} $S'$\uline{-isomorphic to} $S'\times X_s$.
+
+\uline{Proof.} Apply (2.6) and (2.8).
+
+\sgaStableTarget{sga6.e02.cor.2-10}\textbf{Corollary 2.10.} \uline{Let} $s\in S$ \uline{and let} $V$ \uline{be a paracompact variety. Put} $X=S\times V$\uline{, and denote by} $i_s$ \uline{the injection of} $V$ \uline{into} $X$ \uline{defined by} $s$\uline{. Suppose that the hypothesis of} (2.5) \uline{holds. Let} $E$ \uline{be a locally free} $\underline{O}_X$ \uline{(resp.} $\underline{O}_X\otimes\underline{\underline{C}}$\uline{)-Module of finite type. There then exists a neighborhood} $S'$ \uline{of} $s$ \uline{in} $S$ \uline{such that} $E|X|S'$ \uline{is isomorphic to} $\pr_2^*i_s^*(E)$ ($\pr_2:S'\times V\to V$ \uline{being the second projection).}
+
+\uline{Proof.} Put $F=\pr_2^*i_s^*(E)$. By (2.4), applied to the Module $\underline{\Homop}(E,F)$, the induction homomorphism
+\[
+  \Homop\bigl(i_s^{-1}(E),i_s^{-1}(F)\bigr)
+  \longrightarrow
+  \Homop\bigl(i_s^*(E),i_s^*(F)\bigr)
+\]
+%%%%%%%%%%  scan idx 223  |  folio 210  %%%%%%%%%%
+\SGAPrintPage{210}%
+is an epimorphism. On the other hand, we have (T.F. II 3.3.1):
+\[
+\begin{aligned}
+  \Homop\bigl(i_s^{-1}(E),i_s^{-1}(F)\bigr)
+  &\simeq H^0\bigl(X_s,i_s^{-1}\underline{\Homop}(E,F)\bigr)\\
+  &=\varinjlim_{S'\ni s} H^0\bigl(X|S',\underline{\Homop}(E,F)\bigr)\qquad (S'\ \text{open})\\
+  &\simeq \varinjlim_{S'\ni s}\Homop(E|X|S',F|X|S').
+\end{aligned}
+\]
+Thus the canonical isomorphism $i_s^*(E)\simeq i_s^*(F)$ is induced by a homomorphism $f:E\to F$ (after shrinking $S$). Since $f_s$ is an isomorphism, $f$ is an isomorphism in a neighborhood of $X_s$ by Nakayama, hence over $X|S'$, where $S'$ is a suitable neighborhood of $s$, q.e.d.
+
+\sgaStableTarget{sga6.e02.sec.3.occ2}\subsection*{3. The finiteness theorem}
+
+\sgaStableTarget{sga6.e02.sec.3.0}\subsubsection*{3.0. Conventions and notation}
+\sgaStableTarget{sga6.e02.para.3-0-1}3.0.1. Let $X$ and $Y$ be topological spaces. We denote by $C(X,Y)$ the set of continuous maps from $X$ to $Y$, and by $\underline C(X,Y)$ the sheaf on $X$ defined by $U\mapsto C(U,Y)$.
+
+\sgaStableTarget{sga6.e02.para.3-0-2}3.0.2. Let $E,F$ be Banach spaces (real or complex). We denote by $\Lop(E,F)$ the Banach space of continuous linear maps from $E$ to $F$.
+
+\sgaStableTarget{sga6.e02.para.3-0-3}3.0.3. The mixed varieties considered in this section will be assumed to be of class $C^\infty$. Let $X$ be a mixed $S$-variety; we shall often identify a locally free $\underline{O}_X$ (resp. $\underline{O}_X\otimes\underline{\underline{C}}$)-Module of finite type with the corresponding real (resp. complex) vector bundle.
+
+\sgaStableTarget{sga6.e02.para.3-0-4}3.0.4. Let $X$ be a compact (ordinary) variety, and let $E$ be a vector bundle (real or complex) of finite rank on $X$. We denote by $C^\infty(X,E)$ the Fréchet space of sections (of class $C^\infty$) of $E$ on $X$. For $r\in\underline{\underline{Z}}$, we denote by $C^r_2(X,E)$ the Hilbert space of sections of $E$ that are $r$ times differentiable in $L^2$ ([16]~IX). For $s\ge r$, $C^s_2(X,E)$ maps into $C^r_2(X,E)$ by a continuous injective linear map with dense image, and we have
+%%%%%%%%%%  scan idx 224  |  folio 211  %%%%%%%%%%
+\SGAPrintPage{211}%
+(loc.cit.)
+\[
+  C^\infty(X,E)=\varprojlim_r C^r_2(X,E).
+\]
+
+\sgaStableTarget{sga6.e02.para.3-0-5}3.0.5.
+Let $S$ be a topological space. We shall need the notion of a \textquotedblleft Hilbert bundle\textquotedblright{} over $S$, for which we refer the reader to [12] or [14]. There is an additive functor from the category of Hilbert bundles (real resp. complex) over $S$ to that of $\underline{O}_S$ resp. $\underline{O}_S\otimes\underline{\underline{C}}$-Modules, associating to each Hilbert bundle $E$ the sheaf $\underline E$ of continuous sections of $E$.
+
+\sgaStableTarget{sga6.e02.sec.3.1}\subsubsection*{3.1. Auxiliary technical results}
+\sgaStableTarget{sga6.e02.lem.3-1-1}\textbf{Lemma 3.1.1.} \uline{Let} $X,Y$ \uline{be topological spaces, with} $X$ \uline{locally compact. Denote by} $\underline C'(X,Y)$ \uline{the presheaf defined on the basis of relatively compact open subsets of} $X$ \uline{by} $\underline C'(X,Y)(U)=C(\bar U,Y)$ (3.0.1)\uline{. The canonical restriction morphism}
+\[
+  \underline C'(X,Y)\longrightarrow \underline C(X,Y)
+\]
+\uline{induces an isomorphism on the associated sheaves.}
+
+\uline{Proof.} This is immediate.
+
+\sgaStableTarget{sga6.e02.lem.3-1-2}\textbf{Lemma 3.1.2.} \uline{Let} $E,F$ \uline{be locally convex topological vector spaces (over} $\underline{\underline{C}}$\uline{, to fix ideas), and} $u:E\to F$ \uline{a continuous linear map (resp. continuous with dense image). Let} $X$ \uline{be a compact space. Equip} $C(X,E)$, $C(X,F)$ \uline{with the topology of uniform convergence. Then the linear map}
+\[
+  u_X:C(X,E)\longrightarrow C(X,F)
+\]
+\uline{induced by} $u$ \uline{is continuous (resp. continuous with dense image).}
+%%%%%%%%%%  scan idx 225  |  folio 212  %%%%%%%%%%
+\SGAPrintPage{212}%
+\uline{Proof.} It is clear that $u_X$ is continuous. On the other hand (Bourbaki, Intégration, chap. III \S~2, lemmas 1 and 2), the subspace $C(X,\underline{\underline{C}})\otimes_{\underline{\underline{C}}}E$ of $C(X,E)$ (formed by the continuous maps from $X$ to $E$ whose values lie in a finite-dimensional vector subspace) is dense; similarly, $C(X,\underline{\underline{C}})\otimes_{\underline{\underline{C}}}F$ is dense in $C(X,F)$. Suppose $u$ is continuous with dense image. Then
+\[
+  u_X(C(X,\underline{\underline{C}})\otimes_{\underline{\underline{C}}}E)=C(X,\underline{\underline{C}})\otimes_{\underline{\underline{C}}}u(E)
+\]
+is dense in $C(X,\underline{\underline{C}})\otimes_{\underline{\underline{C}}}F$, whence, taking closures, we deduce that $u_X(C(X,E))$ is dense in $C(X,F)$, q.e.d.
+
+\sgaStableTarget{sga6.e02.para.3-1-3}3.1.3. Let $V$ be a compact variety, $E$ and $F$ complex vector bundles\SGAAuthorFootnote{1}{To fix ideas (analogous results hold in the real case).} of finite rank on $V$, and $n\in\underline{\underline{N}}$. The space $\Diff^n_{\underline{\underline{C}}}(E,F)$, identified by (1.2.3.1) with
+\[
+  \Homop(P^n(E),F)\simeq C^\infty(V,\underline{\Homop}(P^n(E),F)),
+\]
+is naturally equipped with the structure of a Fréchet space. Let $u\in\Diff^n_{\underline{\underline{C}}}(E,F)$; we easily check that the linear map from $C^\infty(V,E)$ to $C^\infty(V,F)$ defined by $u$ is continuous. Denoting by $\Lop(C^\infty(V,E),C^\infty(V,F))$ the space of continuous linear maps from $C^\infty(V,E)$ to $C^\infty(V,F)$, we therefore have a linear map
+\[
+  \phi:\Diff^n_{\underline{\underline{C}}}(E,F)
+  \longrightarrow \Lop(C^\infty(V,E),C^\infty(V,F)).
+\]
+On the other hand, for $r\in\underline{\underline{Z}}$, $u$ acts by extension of scalars ([16]~IX Th.~12) on the $C^r_2$ sections of $E$ and defines a linear map
+\[
+  \phi_r:\Diff^n_{\underline{\underline{C}}}(E,F)
+  \longrightarrow \Lop(C^r_2(V,E),C^{r-n}_2(V,F)).
+\]
+We readily check that:
+\begin{enumerate}[label=(\roman*)]
+\item the $\phi_r$ are \uline{continuous} (the target is a Banach space
+%%%%%%%%%%  scan idx 226  |  folio 213  %%%%%%%%%%
+\SGAPrintPage{213}%
+(3.0.2));
+\item $\phi=\varprojlim\phi_r$ (i.e.
+for $u\in\Diff^n_{\underline{\underline{C}}}(E,F)$, $\phi(u)$ is the limit of the projective system of the $\phi_r(u)$).
+\end{enumerate}
+(The preceding assertions follow easily from the results of (loc.cit.): we reduce immediately to $n=0$; (ii) then follows directly from the definitions, while (i) follows (after localizing the problem by a partition of unity) from the formula giving the successive derivatives of a product).
+
+\sgaStableTarget{sga6.e02.lem.3-1-4}\textbf{Lemma 3.1.4.} \uline{Let} $S$ \uline{be a topological space,} $V$ \uline{a compact variety,} $E$ \uline{and} $F$ \uline{complex vector bundles of finite rank on} $V$\uline{, and} $n\in\underline{\underline{N}}$\uline{. Denote by} $X$ \uline{the mixed} $S$\uline{-variety} $S\times V$\uline{. For} $u\in\Diff^n_{\underline{\underline{C}}}(\pr_2^*(E),\pr_2^*(F))$\uline{, the map} $s\mapsto i_s^*(u)$ \uline{from} $S$ \uline{to} $\Diff^n_{\underline{\underline{C}}}(E,F)$ \uline{is continuous. The linear map}
+\[
+  \Diff^n_{\underline{\underline{C}}}(\pr_2^*(E),\pr_2^*(F))
+  \longrightarrow C(S,\Diff^n_{\underline{\underline{C}}}(E,F))
+\]
+\uline{thus defined is an isomorphism.}
+
+\uline{Proof.} Using the identification (1.2.3.1), we may restrict to $n=0$. Putting $\underline{\Homop}(E,F)=G$, we are then reduced to showing that, for $u\in\Gamma(X,\pr_2^*(G))$, the map $s\mapsto u_s=i_s^*(u)$ from $S$ to $C^\infty(V,G)$ is continuous, and that the linear map
+\[
+  \Gamma(X,\pr_2^*(G))\longrightarrow C(S,C^\infty(V,G))
+\]
+so obtained is an isomorphism. But this follows immediately from the definition of mixed varieties (1.1).
+
+\sgaStableTarget{sga6.e02.para.3-1-5}3.1.5. Under the hypotheses of (3.1.4), let
+\[
+  u\in\Diff^n(\pr_2^*(E),\pr_2^*(F)).\text{\SGAAuthorFootMark{1}}
+\]
+\SGAAuthorFootText{1}{We omit the subscript $\underline{\underline{C}}$ for brevity.}
+

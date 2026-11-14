@@ -1,0 +1,62 @@
+CHECKED += list(range(481,486))
+WITNESSES.update({481:[492],482:[493],485:[496]})
+for n,reading,region,reason in [
+ (1,'f*(j*(Ω¹_{V′/Z}))','481 formula2.6.2','The nested parentheses are visible in main and witness and are already restored.'),
+ (2,'Parentheses around Ω in each lower-row pullback','481 commutative diagram','All three lower nodes and their nested pullback parentheses match the source. The independent label-side repair is recorded separately.'),
+ (3,'En combinant begins an indented paragraph','481 after2.6.2','The observed blank paragraph is already present.'),
+ (4,'De la suite begins an indented paragraph','481 after diagram explanation','The observed blank paragraph is already present.'),
+ (7,'482 starts est constante sur X','481/482 boundary','The adjacent main-page edges confirm the marker already moved before est.'),
+ (9,'On obtient donc begins an indented paragraph','483 after Proposition3.2','The existing paragraph break matches the image.'),
+ (10,'Pour toute begins an indented paragraph','483 after Ch(A) display','The existing paragraph break matches the image.'),
+ (11,'Enfin, nous avons begins an indented paragraph','483 after completed Chern class','The existing paragraph break matches the image.'),
+ (12,'Nous allons appliquer starts an indented paragraph','484 first line','The blank line after the marker matches the source.'),
+ (14,'x followed by a wavy arrow to checked x','484 end of3.4','The main source visibly has a wavy arrow, already represented by rightsquigarrow.'),
+ (15,'La relation begins an indented paragraph','484 after Proposition3.5','The existing paragraph break matches the image.'),
+ (16,'485 begins Gr K^• (VI5.5), on','484/485 boundary','The final main484 line ends sur les, and485 begins with the graded group. The marker and the preceding Par additivité paragraph are already correct.'),
+ (17,'c¹(x⁻¹)=−c¹(x) inline','485 proof3.5','The formula lies within the running sentence, as already restored.'),
+ (19,'mod. Fil²K^•(X), with no parentheses','485 congruence','Main and witness show the plain abbreviation with its stop and final semicolon. The attached form matches.'),
+ (20,'Théorème3.6. (Riemann-Roch).','485 heading','Both source stops are present in the attached label; bold label typesetting and the joint-name dash follow NOTE_6.'),
+ (21,'No heading after est commutatif.','485/486 boundary','The lower main485 margin is blank after est commutatif. The directly inspected upper main486 begins La démonstration du théorème3.6 without an intervening heading. The unsupported heading is already absent.')]:f(n,reading,region,reason,batch='481_485')
+f(13,'Underlined E and checked E for Modules; plain checked E for its class','484 paragraph3.4','The four underlined Module occurrences and two plain class occurrences match the source. The relation is explicit: dualization sends E to E∨=Hom_{O_X}(E,O_X), and the class map sends E∨ to [E∨] in K^•(X). The underline records the source’s two stages of this same construction, and all four attached rules are already present.',change='Retain the four Module rules and both plain class letters; restore the other local E rules separately.',batch='481_485')
+f(18,'Gr^k K^•(X)','485 first Chern-class paragraph','Main499 and witness496 both print k. For the invertible sheaf under consideration, x has rank1, so x−1 lies in Fil¹. The first Chern class is its image under the quotient Fil¹→Fil¹/Fil²=Gr¹. The displayed identity gives x⁻¹−1−(1−x)=(x−1)(1−x⁻¹) in Fil², so applying precisely this quotient yields c¹(x⁻¹)=−c¹(x). The quotient degree is1 throughout this proof, which determines the corrected exponent independently of the unbound printed k.',change='Current Gr¹; diplomatic Gr^k.',batch='481_485')
+patch(485,'current',r'Or $c^1(x)$ est la classe dans $\Gr^kK^{\bullet}(X)$',r'Or $c^1(x)$ est la classe dans $\Gr^1K^{\bullet}(X)$','check/findings/findings_481_485.json#18','The explicit quotient Fil¹/Fil² computing c¹ fixes the degree.','misprint_in_print')
+
+# Double lower rules are reproduced literally in diplomatic; current transports are declared.
+q=next(q for q in D if q['source_id']=='check/findings/findings_476_480.json#19')
+q.update(verdict='amended',reason='Main480 visibly gives the derived-functor L two separate lower strokes, independently of the single rules on each complex L. Diplomatic now reproduces the literal two strokes; current retains mathbb L for the same derived pullback. For the displayed strictly perfect representative L^{Y/Z}, derived pullback is represented term by term by f*L^{Y/Z}; the identity on that representative is the exact comparison underlying this rendering choice.',change='Diplomatic literal doubly underlined L; current mathbb L retained.')
+patch(480,'diplomatic',r'\mathbb L',r'\underline{\underline{L}}','check/findings/findings_476_480.json#19','Preserve the two directly observed lower rules on the derived functor; the three single complex rules stay separate.','font')
+for pg,count in [(480,1),(482,2)]:
+ sid=own(pg,'projective-space P glyphs','Typed P with two lower rules','mathbb P in both attached layers','Diplomatic literal two-rule P; current bold P.','font_convention','The directly inspected P letters each have two separate lower strokes. Diplomatic keeps these strokes literally; current uses the declared bold-P representation of the same projective-space construction Proj(O_Y[T₀,…,T_r]). The identity graded-algebra map induces the identity on every degree-zero localization chart D_+(T_i), and these chart identities glue to the identity of the projective Y-scheme. The plain abbreviation P elsewhere on482 is untouched.');OWN[-1]['local_counts']={'diplomatic':count,'current':count}
+ patch(pg,'diplomatic',r'\mathbb P',r'\underline{\underline{P}}',sid,'Restore the literal double rule at each counted source occurrence.','font',count)
+ patch(pg,'current',r'\mathbb P',r'\mathbf{P}',sid,'Use the declared bold-P transport for the identical Proj scheme.','font',count)
+f(8,'Two doubly underlined P letters; plain abbreviation P remains plain','482 projective-space identification and triangle','The main source has two independent lower rules at exactly these two projective-space symbols. The local policy now preserves those strokes diplomatically and uses current bold P for the identical Proj(O_Y[T₀,…,T_r]) scheme, with the exact identity-chart comparison recorded. This resolves the checker’s pending font decision without altering the source’s ordinary abbreviation P.',verdict='amended',change='Diplomatic two-rule P; current bold P at these two occurrences.',batch='481_485')
+
+symbols(481,[(r'\\Omega',r'\underline{\Omega}',11),(letter('I'),r'\underline{I}',2),(letter('J'),r'\underline{J}',2),(r'K/K\^2',r'\underline{K}/\underline{K}^2',1)],'481 differential and conormal symbols','All eleven Ω and the two letters of each ideal quotient I/I²,J/J²,K/K² carry independent short rules. The K-group letter in Corollary2.7 has its raised degree bullet and remains plain. The regular expression K is narrowed below to the ideal quotient.')
+# The exact mathematical K pair above is scoped by the source count; the K-group command has an adjacent exponent and would otherwise also match.
+
+sid=own(481,'two right-hand vertical d labels','d on the left of each arrow','d on the right','Put both d labels on the printed left sides.','diagram','The main diagram and witness492 show d to the left of the K/K² and I/I² vertical arrows. Their differential maps and the already left-placed f*(d) are unchanged.')
+patch(481,'both',r'''\arrow[d,"d"]''',r'''\arrow[d,"d"']''',sid,'Exact local count2; label side only.','diagram',2)
+
+sid=own(482,'projective factorization triangle','Y centered below X and projective space','Y below projective space','Center the lower vertex while retaining its stop.','diagram','The main image places f outside the left sloping arrow and g outside the right. The identity f=g∘i and the projective-space glyph choices remain unchanged.')
+for layer,pp in [('diplomatic',r'\underline{\underline{P}}'),('current',r'\mathbf{P}')]:
+ old=r'''X \arrow[r,"i"] \arrow[dr,"f"'] & '''+pp+r'''^r_Y \arrow[d,"g"]\\
+& Y.'''
+ new=r'''X \arrow[rr,"i"] \arrow[dr,"f"'] && '''+pp+r'''^r_Y \arrow[dl,"g"]\\
+& Y. &'''
+ patch(482,layer,old,new,sid,'Restore source placement independently of the P font rendering.','diagram')
+
+symbols(484,[(r'\\mathcal O',r'\underline{O}',3),(r'\\mathbb Z',r'\underline{\mathbb Z}',2)],'484 structure sheaves and constant integer sheaves','Three structure-sheaf O letters carry one rule. Both integer sheaves in H⁰(X,Z),H⁰(Y,Z) have a double-struck Z with an independent short lower rule. The plain scheme Z later in the paragraph is untouched.')
+local_symbols(484,'Par additivité,',None,[(letter('E'),r'\underline{E}',2)],'484 final proof paragraph','Both E occurrences in this proof are Module letters with a short rule. This local span excludes the already correct Module/class distinction in3.4.')
+sid=own(485,'proof3.5 line bundle and dual','E, checked E, E⁻¹ each independently underlined','all three plain','Restore the three Module rules.','font','The main source and witness496 underline the E letter in all three occurrences. The check accent and inverse exponent remain attached to the same letter; the ensuing class x and checked x remain plain. Dualization identifies E∨ with E⁻¹ for this line bundle, and the class map gives checked x=x⁻¹ exactly as printed.')
+patch(485,'both','que $E$ est un faisceau inversible',r'que $\underline{E}$ est un faisceau inversible',sid,'Restore the source Module rule.','font')
+patch(485,'both',r'$\check E=E^{-1}$',r'$\underline{\check E}=\underline{E}^{-1}$',sid,'Restore both independent Module rules, retaining accent and inverse exponent.','font')
+symbols(485,[(r'L\^\{X/Y\}',r'\underline{L}^{X/Y}',1)],'485 complex in theorem3.6','The complex L has a single short lower rule, with X/Y above and the chain bullet below. No rule is added to its K-class T_f.')
+f(6,'Independent Ω, ideal, integer-sheaf, Module and complex rules','481–485 local mathematical typography','All relevant source occurrences were inspected directly. Local counts are Ω11,I2,J2,K2 on481; two underlined double-struck integer-sheaf Z letters and three O letters on484, where four Module rules already match and the final two E rules are restored; three E rules and one L rule on485. Plain K-group letters, class checked E, scheme Z, and T_f are explicitly excluded.',change='Apply occurrence-scoped rule patches; retain the already correct3.4 distinction.',batch='481_485')
+
+sid=own(485,'lower horizontal label in Riemann-Roch square','ch∘c̃ above the lower arrow','label below','Place the lower Chern-character label above its arrow.','diagram','The main source places both horizontal labels above their arrows. The lower map remains ch∘c̃:K^•(Y)→Gr K^•(Y)_Q; no arrow or expression is changed.')
+patch(485,'both',r'''K^{\bullet}(Y) \arrow[r,"\ch\circ\widetilde c"']''',r'''K^{\bullet}(Y) \arrow[r,"\ch\circ\widetilde c"]''',sid,'Restore the lower label side.','diagram')
+statement(481,r'\textbf{Corollaire 2.7.}',"\n\n\\subsection*",'Corollary2.7 prose',exceptions=('2.6',))
+statement(483,r'\textbf{Proposition 3.2.}','\n\nOn obtient','Proposition3.2 prose')
+statement(484,r'\textbf{Proposition 3.5.}','\n\nLa relation','Proposition3.5 prose')
+statement(485,r'\textbf{Théorème 3.6. (Riemann--Roch).}',"\n\nEn d'autres termes",'Theorem3.6 statement and continuation',exceptions=('1.1','1.9','3.3','2.5','2.3'))
+f(5,'Statement prose word groups underlined; numerical references plain','481–485 statements','All four named statement spans were inspected. The theorem continuation underlines désignant…relatif and the conjunction et between2.5 and2.3; the formulas and source references stay independently styled. The named heading uses accepted NOTE_6 typesetting.',change='Apply four explicit statement underline spans in both layers.',batch='481_485')

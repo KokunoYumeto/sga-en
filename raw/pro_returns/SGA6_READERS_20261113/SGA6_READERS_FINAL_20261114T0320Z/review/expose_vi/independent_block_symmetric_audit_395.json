@@ -1,0 +1,51 @@
+{
+  "id": "EN-INDEPENDENT-VI-BLOCK-SYMMETRIC-395",
+  "status": "Independent text and mathematical audit of the provided source packets; no new scan/image observation is claimed.",
+  "source_packets": [
+    {
+      "path": "build/page_packets/395/diplomatic.tex",
+      "sha256": "2646f57b429fe91a7c80bfbc91e6cdde436a1b5cfa851a6f55237512fb5bf5a5"
+    },
+    {
+      "path": "build/page_packets/396/diplomatic.tex",
+      "sha256": "9239e4906c1ecae312127b4bfb59840542cfbb9fa4382c699e9f055c69761d7d"
+    },
+    {
+      "path": "build/page_packets/397/diplomatic.tex",
+      "sha256": "10f372ea406779903a43c2591215455a82053f66391a43341272348b14c4c3e9"
+    },
+    {
+      "path": "build/page_packets/398/diplomatic.tex",
+      "sha256": "02c03002121a14c24192bcbb3edf2edcf80f3032da456ce0a08f06c80bda519a"
+    },
+    {
+      "path": "build/page_packets/399/diplomatic.tex",
+      "sha256": "83960059e5e04c00d46743d07742830a38649a32adda3df0c9de1d0f88cd45e3"
+    }
+  ],
+  "printed_formula": "\\sum_{i=1}^{n}c_i=\\prod_{j=1}^{k}\\left(\\sum_{i=1}^{p_j}c_i^{(j)}\\right)",
+  "supported_current_formula": "1+\\sum_{i=1}^{n}c_i=\\prod_{j=1}^{k}\\left(1+\\sum_{i=1}^{p_j}c_i^{(j)}\\right)",
+  "scope_of_repair": "Insert one constant1+ before the total sum and one inside each block factor. Preserve every sum bound, subscript, superscript, block definition and the following instruction to take the n isobaric relations. Keep the printed formula diplomatically.",
+  "coefficient_identity": {
+    "universal_ring": "Z[xi_1,...,xi_n][t]; the blocks form the declared disjoint partition of the n variables.",
+    "identity": "product_{a=1}^n(1+xi_a t) = product_{j=1}^k(1+sum_{i=1}^{p_j} sigma_i(block j)t^i) = 1+sum_{r=1}^n sigma_r(xi_1,...,xi_n)t^r.",
+    "exact_proof": "The coefficient of t^r in the full product is the sum of products of xi_a over all r-element subsets I of {1,...,n}. Intersection with the k consecutive blocks gives a bijection I <-> (I_1,...,I_k), with sum_j |I_j|=r. This bijection preserves the monomial product. Summing first over fixed block cardinalities gives the product of the corresponding elementary symmetric functions. The empty subset contributes1 in each block and in the full product.",
+    "quotient_map": "Apply the coefficientwise ring homomorphism Z[xi_1,...,xi_n] -> A[xi_1,...,xi_n]/(sigma_r-c_r)=C, carrying xi_a to its class. Under this map sigma_r becomes c_r and the block symmetric functions become the defined c_i^(j).",
+    "relations": "For each r=1,...,n, R_r = c_r - sum_{a_1+...+a_k=r,0<=a_j<=p_j} product_j c_{a_j}^{(j)}, where c_0^(j)=1, is zero in C.",
+    "meaning_of_weights": "The isobaric instruction selects these n coefficient relations. Weight i is a formal bookkeeping weight on the elementary symmetric expressions; no grading on the arbitrary base ring A or on the specialized quotient C is assumed. Merely evaluating the restored polynomial identity at t=1 would not by itself specify all n relations."
+  },
+  "counterexample_to_printed_formula": {
+    "data": "n=k=2, p_1=p_2=1, A=Z, c_1=3, c_2=2; C=Z[xi_1,xi_2]/(xi_1+xi_2-3,xi_1 xi_2-2).",
+    "map": "Evaluation xi_1->1, xi_2->2 annihilates the two defining relations, so it induces a unital ring homomorphism C->Z.",
+    "printed_image": "c_1+c_2 ->5, while c_1^(1)c_1^(2)->2. Thus the printed equality has unequal images under this exact quotient homomorphism.",
+    "restored_image": "1+c_1+c_2 ->6 and (1+c_1^(1))(1+c_1^(2))->(1+1)(1+2)=6.",
+    "coefficient_images": "Degree1:3=1+2. Degree2:2=1*2. The printed product without constant terms omits the degree1 contributions altogether."
+  },
+  "following_source_context": {
+    "396": "The source sends the proof of Lemma4.3 and Corollary4.4 to reference[2], exposé4,pages4.19; no local proof of that lemma is printed here. Theorem4.6 immediately states lambda_t(E)=product_j lambda_t(F_j).",
+    "398": "The complete-flag proof explicitly writes product_i(1+xi_i t)=lambda_t(E). The general-flag proof explicitly identifies lambda_i^(j)=sigma_i(xi_1^(j),...,xi_{p_j}^(j)), then invokes4.3(ii) for its relation ideal.",
+    "399": "The continuation completes the first form of4.6 and again uses the same total-lambda relation in the lambda-algebra presentation. These exact expressions determine the intended block factors including their constant terms.",
+    "scope_limit": "This audit proves the coefficient identity, the failure of the printed equality and the precise constant-term repair. The lemma’s separate basis and relation-ideal generation clauses are retained as source assertions; this short audit does not replace their cited proof."
+  },
+  "recommendation": "The minimal1+ repair is directly supported by the defined elementary symmetric functions and the explicit total-lambda calculation in the following proof. Preserve all indices and the isobaric wording; record the original form in the diplomatic layer."
+}

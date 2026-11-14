@@ -1,0 +1,106 @@
+%%%%%%%%%%  scan idx 198  |  folio 185  %%%%%%%%%%
+\SGAPrintPage{185}%
+localizing in a neighbourhood of $s$, that the $M_i$ (resp. $p_i$) are the fibers at $s$ of coherent sub-$\underline{O}_S$-Modules $F_i$ (resp. coherent Ideals $\underline{p}_i$) of $F$ (resp. $\underline{O}_S$) such that
+\[
+ F=F_0\supset F_1\supset\ldots\supset F_q=0
+\]
+and $F_i/F_{i+1}\simeq\underline{O}_S/\underline{p}_i$. Proving that the sequence $(E_n)$ is stationary in a neighbourhood of $s$ is evidently equivalent to proving that the sequences induced on each graded piece of the filtration $(F_i)$ of $F$ are stationary. Thus we may assume that $F=\underline{O}_S$, and that $\underline{O}_{S,s}$ is an integral domain, the $E_n$ forming an increasing sequence of Ideals of $\underline{O}_S$ such that $(E_n)_s=0$. Since $\underline{O}_s$ is an integral domain, hence in particular reduced, Oka's theorem ([10] IV \S3) further allows us to assume, after localizing at $s$, that $S$ is \uline{reduced}. Let us show that there exists an open neighbourhood $U$ of $s$ such that $E_n|U=0$ for sufficiently large $n$. For this, consider the normalization $\widetilde S$ of $S$ ([10] IV \S4). We know (loc. cit.) that $\widetilde S$ is the analytic spectrum ([10] II \S3) of a finite $\underline{O}_S$-Algebra $\widetilde{\underline{O}}_S$ whose fiber at each $t\in S$ is the integral closure of $\underline{O}_{S,t}$ (cf. note $(^2)$ to (2.4.8)). We have $E_n\subset E_n\cdot\widetilde{\underline{O}}_S$, so it suffices to prove that $E_n\cdot\widetilde{\underline{O}}_S=0$ for sufficiently large $n$. Now we have ([10] II \S3 Prop.8)
+\[
+ E_n\cdot\widetilde{\underline{O}}_S = p_*(\widetilde{E_n\cdot\widetilde{\underline{O}}_S}),
+\]
+where $p:\widetilde S\longrightarrow S$ is the canonical projection, and $\widetilde{E_n\cdot\widetilde{\underline{O}}_S}$ the Ideal of $\underline{O}_{\widetilde S}$ canonically defined by $E_n\cdot\widetilde{\underline{O}}_S$. It therefore suffices to show that there exists an open neighbourhood $V$ of $s$ in $\widetilde S$ such that $\widetilde{E_n\cdot\widetilde{\underline{O}}_S}|V=0$ for sufficiently large $n$, which reduces us to the case where $S$ is \uline{normal}, as we shall now assume. Since $(E_n)_s=0$, the closed immersion $i_n:S_n\longrightarrow S$ defined by $E_n$ is \uline{étale} at $s$. But, since $S$ is normal, the set of points where $i_n$ is étale is both open and closed (see the lemma below), so its image in $S$ is a subset of $S$ that is both open and closed. Thus the restriction of $E_n$ to the connected component of $s$ in $S$ is zero; this connected component is an open set, since $S$ is locally connected, and we are done. It therefore remains to establish the following
+%%%%%%%%%%  scan idx 199  |  folio 186  %%%%%%%%%%
+\SGAPrintPage{186}%
+\sgaStableTarget{sga6.e02.lem.2-4-8-2}\textbf{Lemma 2.4.8.2.} (cf. EGA IV 18.10.3) \uline{Let} $Y$ \uline{be a normal pseudo-analytic space}\SGAAuthorFootnote{1}{It suffices that the local rings of $Y$ be integral domains.}\uline{, and} $f:X\longrightarrow Y$ \uline{an unramified morphism. The set of points of} $X$ \uline{where} $f$ \uline{is étale is both open and closed.}
+
+\uline{Proof.} It is immediate that the set of points where $f$ is étale is open (since saying that $f$ is étale at a point means that $f$ is an isomorphism in a neighbourhood of that point ([8] VI)). It remains to show that the set of points where $f$ is not étale is open. Since an unramified morphism is locally an immersion ([8] VI), we may assume that $f$ is a closed immersion, defined by a coherent Ideal $I$. Let $x$ be a point of $X$ such that $I_x\ne0$. Let $\underline{p}$ be a prime ideal of $\underline{O}_{Y,x}$ containing $I_x$. We have $\dim(\underline{O}_{Y,x})_{\underline{p}}>0$, since otherwise we would have $\underline{p}=0$, as $\underline{O}_{Y,x}$ is an integral domain. Thus $X$ has codimension $>0$ at $x$, hence codimension $>0$ in a neighbourhood of $x$ ([10] III A Cor 1 to Lemma 3), and we are done.
+
+\sgaStableTarget{sga6.e02.sec.3}\section*{3. Complements on quasi-coherent sheaves on schemes\protect\SGAAuthorFootnote{2}{This section is essentially due to J.L. Verdier.}}
+
+\sgaStableTarget{sga6.e02.para.3-0}3.0. In this section, we fix a \uline{quasi-compact and quasi-separated} scheme $S$. The canonical (fully faithful) inclusion functor
+\[
+ \phi:\Qcoh(S)\longrightarrow\Mod(S)\qquad\text{\SGAAuthorFootMark{3}}
+\]\SGAAuthorFootText{3}{$\Mod(S)$ (resp. $\Qcoh(S)$) denotes the category of $\underline{O}_S$-Modules (resp. quasi-coherent $\underline{O}_S$-Modules).}
+extends to a functor, still denoted by $\phi$, from $\mathrm D(\Qcoh(S))$ to $\mathrm D(S)=\mathrm D(\Mod(S))$, which we propose to study\SGAAuthorFootnote{4}{We shall omit $\phi$ in formulas where there is no risk of confusion.}.
+
+\sgaStableTarget{sga6.e02.lem.3-1}\textbf{Lemma 3.1.} \uline{The category} $\Qcoh(S)$ \uline{is an abelian category satisfying} (AB 5) \uline{and for which the quasi-coherent sheaves of finite type form a \textquotedblleft small\textquotedblright{} family of generators. In particular} (Tohoku 1.10.1), $\Qcoh(S)$ \uline{has enough injectives.}
+%%%%%%%%%%  scan idx 200  |  folio 187  %%%%%%%%%%
+\SGAPrintPage{187}%
+\uline{Proof.} The assertion concerning generators follows immediately from the fact that every quasi-coherent sheaf on $S$ is the filtered inductive limit of its quasi-coherent subsheaves of finite type (EGA I 9.4.9 and IV 1.7.7). The other assertions are evident.
+
+\sgaStableTarget{sga6.e02.rem.3-1-1}\textbf{Remark 3.1.1.} The editor does not know whether $\Qcoh(S)$ still has enough injectives when one assumes only that $S$ is quasi-separated.
+
+\sgaStableTarget{sga6.e02.lem.3-2}\textbf{Lemma 3.2.} \uline{The functor} $\phi:\Qcoh(S)\longrightarrow\Mod(S)$ \uline{has a right adjoint}
+\[
+ Q:\Mod(S)\longrightarrow\Qcoh(S),
+\]
+\uline{(called the} coherer).
+
+\uline{Proof.} When $S$ is affine, the existence of $Q$ is immediate: take $Q=\widetilde{\Gamma}_S$ (EGA $\mathrm{Err}_{\mathrm I}$ 1.8.7). Now let $f:U\longrightarrow S$ be an affine open subset of $S$; it is clear that, for $E\in\Ob\Qcoh(S)$ and $F\in\Ob\Mod(U)$, we have a canonical isomorphism
+\sgaStableTarget{sga6.e02.eq.1}\begin{equation}\tag{1}
+ \Hom(E,f_*(F))\simeq \Hom(E,f_*Q(F)).
+\end{equation}
+Then let $(f_i:U_i\longrightarrow S)$ be a finite covering of $S$ by affine open subsets, and for each $(i,j)$ let $(U_{ijk}\longrightarrow U_{ij})$ be a finite covering of $U_{ij}=U_i\cap U_j$ by affine open subsets ($U_{ij}$ is quasi-compact since $S$ is quasi-separated). Let $F\in\Ob\Mod(S)$. We have an exact sequence
+\sgaStableTarget{sga6.e02.eq.2}\begin{equation}\tag{2}
+ 0\longrightarrow F\longrightarrow \coprod_i f_{i*}(F|U_i)
+ \longrightarrow \coprod_{ijk}f_{ijk*}(F|U_{ijk}),
+\end{equation}
+(where $f_{ijk}$ denotes the inclusion of $U_{ijk}$ into $S$). Note that, for an inclusion $g:V\longrightarrow U$ of affine open subsets of $S$, we have an evident natural arrow $Q(F|U)\longrightarrow g_*Q(F|V)$. Consequently, (2) gives an arrow
+\sgaStableTarget{sga6.e02.eq.3}\begin{equation}\tag{3}
+ \coprod_i f_{i*}Q(F|U_i)\longrightarrow
+ \coprod_{ijk}f_{ijk*}Q(F|U_{ijk}),
+\end{equation}
+whose kernel we shall denote by $QF$. Let $E\in\Ob\Qcoh(S)$. Applying the functor $\Hom(E,.)$ to the sequence (2), we obtain, in view of (1), an
+%%%%%%%%%%  scan idx 201  |  folio 188  %%%%%%%%%%
+\SGAPrintPage{188}%
+isomorphism functorial in $E$:
+\[
+ \Hom(E,F)\simeq\Hom(E,QF).
+\]
+This proves the existence of $Q$; uniqueness is evident, since it is an adjoint.
+
+\sgaStableTarget{sga6.e02.lem.3-3}\textbf{Lemma 3.3.} \begin{enumerate}[label=\alph*)]
+\item \uline{The coherer is an additive functor taking injectives to injectives.}
+\item \uline{Write}
+\[
+ \underline{\underline{R}}Q:\mathrm D^+(S)\longrightarrow \mathrm D^+(\Qcoh(S))
+\]
+\uline{for the right derived functor of the coherer. For} $E\in\Ob\mathrm D(\Qcoh(S))$ and $F\in\Ob\mathrm D^+(S)$\uline{, there are canonical functorial isomorphisms}
+\sgaStableTarget{sga6.e02.eq.i}\sgaStableTarget{sga6.e02.eq.ii}\begin{align}
+ \underline{\underline{R}}\Hom_{\Mod}(E,F)&\simeq \underline{\underline{R}}\Hom_{\Qcoh}(E,\underline{\underline{R}}Q(F)) \qquad\text{\SGAAuthorFootMark{1}}\tag{i}\\
+ \Hom_{\Mod}(E,F)&\simeq \Hom_{\Qcoh}(E,\underline{\underline{R}}Q(F)). \tag{ii}
+\end{align}\SGAAuthorFootText{1}{The subscript $\Mod$ (resp. $\Qcoh$) is an abbreviation for $\mathrm D(S)$ (resp. $\mathrm D(\Qcoh(S))$).}
+\end{enumerate}
+
+\uline{Proof.} Assertion a) is an immediate consequence of the definition. For b), it suffices to establish the isomorphism (i), since (ii) will follow by passing to cohomology. For this, we may assume that $F$ has injective components; $QF$ then has injective components by a), and the isomorphism (i) comes simply from the definition of $Q$.
+
+\sgaStableTarget{sga6.e02.lem.3-4}\textbf{Lemma 3.4.} \uline{Let} $f:X\longrightarrow Y$ \uline{be a morphism of quasi-compact and quasi-separated schemes. For} $E\in\Ob\Mod(X)$\uline{, there is a canonical functorial isomorphism}
+\[
+ Qf_*(E)\simeq f_*Q(E).
+\]
+%%%%%%%%%%  scan idx 202  |  folio 189  %%%%%%%%%%
+\SGAPrintPage{189}%
+\uline{Proof.} Since $f$ is quasi-compact and quasi-separated (EGA IV 1.2.3 and 1.2.4), $f_*$ takes quasi-coherent sheaves to quasi-coherent sheaves (III 1.4.10 and IV 1.7.21). The functors $Qf_*$ and $f_*Q$ from $\Mod(X)$ to $\Qcoh(Y)$ are both right adjoints to the functor $f^*:\Qcoh(Y)\longrightarrow\Mod(X)$, and hence canonically isomorphic.
+
+\sgaStableTarget{sga6.e02.prop.3-5}\textbf{Proposition 3.5.} \uline{When} $S$ \uline{is noetherian, or quasi-compact and separated, the functor}
+\begin{equation}\tag{3.0}
+ \phi:\mathrm D^+(\Qcoh(S))\longrightarrow \mathrm D^+(S)
+\end{equation}
+\uline{is fully faithful and has as essential image the full subcategory} $\mathrm D^+(S)_{\qcoh}$ of $\mathrm D^+(S)$ \uline{formed by complexes with quasi-coherent cohomology.}
+
+\uline{Proof.} We may restrict ourselves to proving the assertion in the case where $S$ is separated, the case where $S$ is noetherian being well known ([H] II 7.19). It is evidently equivalent to prove the following assertions:
+
+\begin{enumerate}[label={(3.5.\arabic*)~:}]
+\item \uline{for} $E\in\Ob\mathrm D^+(\Qcoh(S))$, \uline{the adjunction arrow}
+\[
+ E\longrightarrow \underline{\underline{R}}Q(E)
+\]
+(\uline{deduced from} (3.3 b) (ii)) \uline{is an isomorphism};
+\item \uline{for} $E\in\Ob\mathrm D^+(S)_{\qcoh}$, \uline{the adjunction arrow}
+\[
+ \underline{\underline{R}}Q(E)\longrightarrow E
+\]
+(\uline{deduced from} (3.3 b)(ii)) \uline{is an isomorphism}.
+\end{enumerate}
+
+\uline{Proof of} (3.5.1). By an immediate dévissage\SGAAuthorFootnote{1}{Using, for example, the spectral sequence $R^pQ(H^q(E))\Longrightarrow R^{*}Q(E)$.}, we are reduced to proving that quasi-coherent sheaves are acyclic for the coherer, (i.e.\ that, for $E\in\Ob\Qcoh(S)$, we have $R^iQ(E)=0$ for $i>0$), and that, on the other hand, for $E\in\Ob\Qcoh(S)$, the adjunction arrow $E\longrightarrow QE$ is an isomorphism. When $S$ is affine, this follows from the formula $Q=\widetilde{\Gamma}_S$ (cf. proof of (3.2)). In the general case, cover $S$ by finitely many affine open subsets $U_i$. Since $S$ is separated, the inclusions $f_i:U_i\longrightarrow S$ are affine morphisms,

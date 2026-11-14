@@ -1,0 +1,140 @@
+%%%%%%%%%%  scan idx 330  |  folio 317  %%%%%%%%%%
+\SGAPrintPage{317}%
+\(\lambda\)-rings.
+\item
+Let \(A\) be a ring, \(X=\operatorname{Spec}A\); also let \(G\) be a group, acting trivially on \(A\); taking for \((T,A)\) the topos of sheaves of sets on \(X\) on which \(G\) acts, the ring \(K\) thus obtained is the representation ring of \(G\) in the projective \(A\)-modules of finite type.
+\end{itemize}
+
+\sgaStableTarget{sga6.e05.para.2-3}2.3. Let \(K\) be a commutative ring with unit; we propose to endow the abelian group \(\Ghat(K)=1+K[[t]]^+\) with a pre-\(\lambda\)-ring structure, functorial in \(K\). For this, we shall apply the results of (1.10) to the functor \(\Ghat\).
+
+We first define multiplication by specifying a \(\mathbb Z\)-bilinear morphism of functors: \(\Ghat\times\Ghat\longrightarrow\Ghat\), by means of the element \(1+XYt\) of \(\Ghat(\mathbb Z[X,Y])\); this element indeed satisfies 1.7.i), and to see that it satisfies 1.7.ii), we must show that in \(\prod_{i=1}^{n}(1+T_iYt)\), expressed in terms of the elementary symmetric functions \(X_j\) of the \(T_i\), \(X_n\) does not occur in the coefficients of \(t^k\) for \(k<n\), which is evident for reasons of degree.
+
+The law thus defined will be denoted by the sign \(\circ\); we therefore have, by definition:
+\sgaStableTarget{sga6.e05.eq.2-3-1}\begin{equation}\tag{2.3.1}
+  (1+Xt)\circ(1+Yt)=1+XYt.
+\end{equation}
+It is distributive by construction, and associative and commutative by the diagrams:
+\[
+\begin{tikzcd}[column sep=tiny]
+\Ghat\times\Ghat\times\Ghat \arrow[r] \arrow[d] &
+\Ghat\times\Ghat \arrow[d]\\
+\Ghat\times\Ghat \arrow[r] & \Ghat
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=tiny]
+\Ghat\times\Ghat \arrow[r] \arrow[d] &
+\Ghat\times\Ghat \arrow[d]\\
+\Ghat \arrow[r,"\id"] & \Ghat,
+\end{tikzcd}
+\]
+%%%%%%%%%%  scan idx 331  |  folio 318  %%%%%%%%%%
+\SGAPrintPage{318}%
+where the meaning of the arrows is evident, and whose commutativity, by 1.10, need only be verified on the elements \(1+Xt,1+Yt,1+Zt\) of \(\Ghat(\mathbb Z[X,Y,Z])\) (resp. \(1+Xt,1+Yt\) of \(\Ghat(\mathbb Z[X,Y])\)), a verification that is immediate.
+
+By 1.8, the product of two series under this law is calculated by substituting their coefficients in the universal polynomials of the law. We denote the \(n\)-th universal polynomial by \(P_n\); it is a polynomial in \(\mathbb Z[X_i,Y_j]_{1\leq i,j\leq n}\), isobaric of weight \(n\) in each of the two groups of variables (see 1.15), and symmetric with respect to these two groups. As an example, let us give the value of \(P_2\):
+\[
+  P_2(X_1,X_2;Y_1,Y_2)=X_2Y_1^2+Y_2X_1^2-2X_2Y_2.
+\]
+
+We also have the following relation: let \(K\in\operatorname{Ob}(\mathcal C_0)\), \(\psi\in\Ghat(K)\), \(a\in K\), then
+\sgaStableTarget{sga6.e05.eq.2-3-2}\begin{equation}\tag{2.3.2}
+  \psi(t)\circ(1+at)=\psi(at).
+\end{equation}
+As usual, the standard functorial argument reduces it to the case \(K=\mathbb Z[X,Y]\), \(\psi=1+Xt\), \(a=Y\), where it is precisely 2.3.1.
+
+Applying 2.3.2 to \(\Ghat(K)=1+K[[t]]^+\), and to \(a=1\), we see that the element \(1+t\) is the unit for this multiplication. To avoid confusion, we sometimes denote it by \(\underline{1}\), or by \(\underline{1}_\circ\).
+
+The functor \(\Ghat\) can now be regarded as a functor from \(\mathcal C_0\) to the category of commutative rings with unit, and can therefore be composed with itself; to avoid confusion,
+we
+%%%%%%%%%%  scan idx 332  |  folio 319  %%%%%%%%%%
+\SGAPrintPage{319}%
+shall choose different indeterminates for each factor in the product of \(\Ghat\) with itself, and indicate the indeterminate as a superscript when necessary: \(\Ghat^t\), \(\Ghat^u\), etc. For \(A\in\operatorname{Ob}(\mathcal C_0)\), we therefore have \(\Ghat^u\circ\Ghat^t(A)=1+\{1+A[[t]]^+\}[[u]]^+\). To define the operations \(\lambda^i\) on \(1+K[[t]]^+\), we shall therefore specify a morphism of functors: \(\Ghat\longrightarrow\Ghat^u\circ\Ghat^t\).
+For this, we must first define a filtration of the functor \(\Ghat^u\circ\Ghat^t\) that permits the gluing of 1.6.
+
+We first observe that \(F^k\Ghat\) is an ideal for the law \(\circ\); for this, functoriality reduces us to the case \(A=\mathbb Z[X_i,Y]_{i\geq1}\) and the product \(\left(1+\sum_{i\geq k}X_i t^i\right)\circ(1+Yt)\), and the assertion follows from 2.3.2. We then take as \(F^n(\Ghat^u\circ\Ghat^t)\) the set of series of the form \(1+\psi_1u+\ldots+\psi_i u^i+\ldots\), \(\psi_i\in F^{[n/i]}\Ghat\), where \([n/i]\) denotes the integer part of \(n/i\).
+
+The element defining the morphism \(\lambda_u\) is \(\underline{1}+\{1+Xt\}u\); the reader will verify as an exercise that the conditions of 1.6 are indeed satisfied (in fact, the filtration is chosen ad hoc).
+
+Here again, the operations \(\lambda^i\) are calculated by substitution from \(\lambda_u(1+\ldots+X_nt^n+\ldots)\), and are therefore determined by universal polynomials. We denote by \(Q_{i,j}(X_1,\ldots,X_{ij})\) the coefficient of \(t^j\) in \(\lambda^i(1+\ldots+X_nt^n+\ldots)\); it is an isobaric polynomial of weight \(ij\) in the variables \(X_1,\ldots,X_{ij}\) (a verification analogous to that of 1.15). It is calculated by symmetric functions from the defining element:
+\sgaStableTarget{sga6.e05.eq.2-3-3}\begin{equation}\tag{2.3.3}
+  \lambda_u(1+Xt)=\underline{1}+\{1+Xt\}u.
+\end{equation}
+
+As an example, let us give the value of \(Q_{2,2}\):
+%%%%%%%%%%  scan idx 333  |  folio 320  %%%%%%%%%%
+\SGAPrintPage{320}%
+\[
+  Q_{2,2}(X_1,X_2,X_3,X_4)=X_1X_3-X_4.
+\]
+
+Finally, let us indicate the origin of formulas (2.3.1) and (2.3.3). We consider Example 2.2.b), where the operations \(\lambda^i\) are defined by the exterior powers of \(A\)-Modules. We want \(\lambda_t:K\longrightarrow\Ghat(K)\) to be a \(\lambda\)-homomorphism; we must therefore define laws on \(\Ghat\) such that for all \(A\)-Modules \(\underline{E},\underline{F}\), we have:
+\[
+  \lambda_t(EF)=\lambda_t(E)\circ\lambda_t(F)~;\qquad
+  \lambda_u(\lambda_t(E))=\Ghat^u(\lambda_t)(\lambda_u(E))~;
+\]
+now relations (2.3.1) and (2.3.3) are precisely the preceding relations applied to the case where \(\underline{E}\) and \(\underline{F}\) are invertible modules.
+
+We shall see in Exp. VI to what extent the desired property is satisfied.
+
+\sgaStableTarget{sga6.e05.def.2-4}\textbf{Definition 2.4.} \uline{A pre}-\(\lambda\)-\uline{ring} \(K\) \uline{will be called a} \(\lambda\)-\uline{ring if the homomorphism of abelian groups} \(\lambda_t:K\longrightarrow1+K[[t]]^+\) \uline{is a} \(\lambda\)-\uline{homomorphism} \uline{for the pre}-\(\lambda\)-\uline{ring structure on the second member defined in} 2.3.
+
+This therefore means that we have the relations: \(\forall x,y\in K\),
+\sgaStableTarget{sga6.e05.eq.2-4-1}\begin{equation}\tag{2.4.1}
+  \lambda_t(1)=1+t~;\quad
+  \lambda_t(xy)=\lambda_t(x)\circ\lambda_t(y)~;\quad
+  \lambda_u(\lambda_t(x))=\Ghat(\lambda_t)\bigl(\lambda_u(x)\bigr).
+\end{equation}
+
+In terms of the maps \(\lambda^i\), the last two relations are equivalent to: \(x,y\in K\), \(i,j\in\mathbb N\),
+\sgaStableTarget{sga6.e05.eq.2-4-2}\sgaStableTarget{sga6.e05.eq.2-4-3}\begin{align}
+  \lambda^i(xy)
+  &=P_i(\lambda^1(x),\ldots,\lambda^i(x);
+       \lambda^1(y),\ldots,\lambda^i(y)) \tag{2.4.2}\\
+  \lambda^j(\lambda^i(x))
+  &=Q_{i,j}(\lambda^1(x),\ldots,\lambda^{ij}(x)) \notag
+\end{align}
+
+%%%%%%%%%%  scan idx 334  |  folio 321  %%%%%%%%%%
+\SGAPrintPage{321}%
+We note that here we depart from the usual terminology (cf. [1]), where the name \(\lambda\)-ring was used for what we call a pre-\(\lambda\)-ring, and ``special'' \(\lambda\)-rings for our \(\lambda\)-rings; the reason is that only ``special'' \(\lambda\)-rings are usable in practice.
+
+\sgaStableTarget{sga6.e05.ex.2-5}\textbf{Examples 2.5.}
+\begin{enumerate}[label=\alph*)]
+\item We have determined all the pre-\(\lambda\)-ring structures on \(\mathbb Z\); it follows from 2.4.1 that only the one defined by \(\lambda_t(1)=1+t\) can be a \(\lambda\)-ring structure. We then have \(\lambda_t(n)=(1+t)^n\), hence:
+\[
+  \forall n,n'\in\mathbb Z,\quad
+  \lambda_t(n)\circ\lambda_t(n')=(1+t)^n\circ(1+t)^{n'}
+  =(1+t)^{nn'}=\lambda_t(nn')~;
+\]
+\[
+  \lambda_u((1+t)^n)
+  =
+  (\lambda_u(1+t))^n
+  =
+  (\underline{1}+\{1+t\}u)^n
+  =
+  \Ghat(\lambda_t)((1+u)^n)
+  =
+  \Ghat(\lambda_t)(\lambda_u(n)).
+\]
+Consequently, this is indeed a \(\lambda\)-ring structure. Denoting by \(\binom{X}{k}\) the polynomial with rational coefficients \(\frac{1}{k!}X(X-1)\ldots(X-k+1)\), we therefore have:
+\sgaStableTarget{sga6.e05.eq.2-5-1}\begin{equation}\tag{2.5.1}
+  \lambda^i(n)=\binom{n}{i}.
+\end{equation}
+
+\item For every ring \(K\), the pre-\(\lambda\)-ring \(1+K[[t]]^+\) is a \(\lambda\)-ring. First, \(\lambda_u(\underline{1})=\lambda_u(1+t)=\underline{1}+\{1+t\}u=\underline{1}+\underline{1}.u\). We verify the other relations by the commutativity of the diagrams:
+\[
+\begin{tikzcd}[column sep=tiny]
+\Ghat^t\times\Ghat^t \arrow[r,"\lambda_u\times\lambda_u"] \arrow[d,"\circ"'] &
+(\Ghat^u\circ\Ghat^t)\times(\Ghat^u\circ\Ghat^t) \arrow[d,"\circ"]\\
+\Ghat^t \arrow[r,"\lambda_u"] &
+\Ghat^u\circ\Ghat^t,
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=tiny]
+\Ghat^t \arrow[r,"\lambda_v"] \arrow[d,"\lambda_u"'] &
+\Ghat^v\circ\Ghat^t \arrow[d,"\Ghat^v(\lambda_u)"]\\
+\Ghat^u\circ\Ghat^t \arrow[r,"\lambda_v"] &
+\Ghat^v\circ\Ghat^u\circ\Ghat^t,
+\end{tikzcd}
+\]

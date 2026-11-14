@@ -1,0 +1,48 @@
+{
+  "record_type": "post_checkpoint_amendment",
+  "scope": [
+    325,
+    326,
+    327,
+    329
+  ],
+  "after_checkpoint": "build/review_snapshots/expose_v_checkpoint08_through328/",
+  "immutable_snapshot_modified": false,
+  "source_ids": [
+    "ASTRA-V-SUBSTITUTION-325",
+    "ASTRA-V-SUBSTITUTION-326",
+    "ASTRA-V-UNIT-DENOMINATOR-327",
+    "ASTRA-V-SLASH-329"
+  ],
+  "source_readings": [
+    {
+      "page": 325,
+      "printed_reading": "The five slash occurrences on325 have no denominator parentheses: three t/1-t, one t/1+t, and one1/1+t.",
+      "current_change": "Group the denominators in the current layer at the five individually inspected occurrences."
+    },
+    {
+      "page": 326,
+      "printed_reading": "The definition of rho_t prints rho_t(t)=t/1-t.",
+      "current_change": "Group the defining denominator only in the current layer."
+    },
+    {
+      "page": 327,
+      "printed_reading": "The unit paragraph prints rho_t(1+t), soit1/1-t, with no denominator parentheses.",
+      "current_change": "Group the unit denominator only in the current layer."
+    },
+    {
+      "page": 329,
+      "printed_reading": "3.8.1 prints(1/1-t)^x without denominator parentheses.",
+      "current_change": "Group the reciprocal denominator inside the current power expression."
+    }
+  ],
+  "reason": "The already inspected proof on325 expands the substituted monomial as t^n(1-t)^(-n), fixing rho_minus:h(t)→h(t/(1-t)). The inverse map is rho_plus:h(t)→h(t/(1+t)): the two fractional substitutions compose to t in both orders. Also lambda_t(-1)lambda_t(1)=1 and lambda_t(1)=1+t, so lambda_t(-1)=1/(1+t). The unit on327 is rho_minus(1+t)=1+t/(1-t)=1/(1-t). On329, applying rho_minus to(1+t)^x gives(1/(1-t))^x=exp(-xLog(1-t)). Thus each grouping below is fixed by an explicit map or multiplicative inverse, rather than a general change to slash notation. These are post-checkpoint08 current-only grouping amendments; the printed forms remain diplomatic and the immutable snapshot remains unchanged.",
+  "counterchecks": [
+    "In Z[[t]], the ungrouped ordinary-precedence expression t/1-t equals0; the intended t/(1-t) has t coefficient1 and is a substitution automorphism.",
+    "In Z[[t]],1/1+t equals1+t under ordinary precedence; multiplication by1+t then gives1+2t+t^2, whereas1/(1+t) gives product1.",
+    "The327 unit is1/(1-t), with t coefficient1; ordinary-precedence1/1-t is1-t, with t coefficient-1.",
+    "At x=1 in329, exp(-Log(1-t))=1/(1-t), with t coefficient1, so the same reciprocal grouping is forced."
+  ],
+  "evidence": "All four pages were fully compared before this amendment; native327 lower crop was reopened specifically for the unit reading.",
+  "forms": "French current and corresponding corrected English; all diplomatic literal slash readings retained."
+}

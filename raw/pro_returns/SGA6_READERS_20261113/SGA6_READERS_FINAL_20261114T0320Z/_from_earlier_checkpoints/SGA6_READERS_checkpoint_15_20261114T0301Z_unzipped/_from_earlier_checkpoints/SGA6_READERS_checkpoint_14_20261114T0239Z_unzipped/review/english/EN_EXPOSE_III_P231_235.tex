@@ -1,0 +1,136 @@
+%%%%%%%%%%  scan idx 244  |  folio 231  %%%%%%%%%%
+\SGAPrintPage{231}
+This is a condition of a local nature; when \(X,Y,S\) are affine with respective rings \(B,C,A\), it means that the canonical arrow
+\[
+  B\otimes_A^{L}C\longrightarrow B\otimes_A C
+\]
+is an isomorphism. It is therefore satisfied in particular when \(X\) or \(Y\) is flat over \(S\).
+
+\sgaStableTarget{sga6.e03.lem.1-5-1}\textbf{Lemma 1.5.1.} \uline{Let there be Cartesian squares of schemes}
+\[
+\begin{tikzcd}
+X \arrow[d] & X' \arrow[l] \arrow[d] & X'' \arrow[l] \arrow[d]\\
+Y & Y' \arrow[l] & Y'' \arrow[l].
+\end{tikzcd}
+\]
+If \(X\) and \(Y'\) are tor-independent over \(Y\), and if \(X'\) and \(Y''\) are tor-independent over \(Y'\), then \(X\) and \(Y''\) are tor-independent over \(Y\).
+
+\uline{Proof}. An easy exercise on associativity of the tensor product.
+
+\sgaStableTarget{sga6.e03.notation.1-6}\textbf{Notation 1.6.} Let \(X\) and \(Y\) be two \(S\)-schemes, \(E\in\operatorname{ob} D^{-}(X)\), \(F\in\operatorname{ob} D^{-}(Y)\). We shall put
+\[
+  E\otimes_S^{L}F
+  =
+  L\pr_1^*(E)\otimes^{L}L\pr_2^*(F),
+\]
+where \(\pr_1,\pr_2\) are the two projections from \(X\times_SY\).
+
+\sgaStableTarget{sga6.e03.lem.1-7}\textbf{Lemma 1.7.} \uline{Let} \(S\) \uline{be a scheme}, \uline{and, for} \(i=1,2\), \(f_i:X_i\longrightarrow Y_i\) \uline{be a closed} \(S\)-\uline{immersion}. \uline{Suppose that} \(X_1\) \uline{and} \(X_2\), \uline{as well as} \(Y_1\) \uline{and} \(Y_2\), \uline{are tor-independent over} \(S\). \uline{Then}, \uline{for} \(E_i\in\operatorname{ob} D^{-}(X_i)_{\mathrm{qcoh}}\)\SGAAuthorFootnote{1}{\(D(X_i)_{\mathrm{qcoh}}\) denotes the full subcategory of \(D(X_i)\) formed by complexes with quasi-coherent cohomology.}, \uline{there exists a canonical isomorphism}
+\[
+  f_{1*}(E_1)\otimes_S^{L}f_{2*}(E_2)
+  \xrightarrow{\sim}
+  (f_1\times_Sf_2)_*(E_1\otimes_S^{L}E_2).
+\]
+
+\uline{Proof}. Put \(f_1\times_Sf_2=f\). By adjunction, one easily defines a canonical arrow
+
+%%%%%%%%%%  scan idx 245  |  folio 232  %%%%%%%%%%
+\SGAPrintPage{232}
+\[
+  f_{1*}(E_1)\otimes_S^{L}f_{2*}(E_2)
+  \longrightarrow
+  f_*(E_1\otimes_S^{L}E_2).
+\]
+Let us show that it is an isomorphism. The question being local, we may suppose that \(S,X_i,Y_i\) are affine with respective rings \(C,A_i,B_i\). By dévissage, we reduce to \(E_i=\underline{O}_{X_i}\). We must then check that
+\[
+  A_1\otimes_{B_1}^{L}B\otimes_{B_2}^{L}A_2
+  \longrightarrow A
+\]
+is an isomorphism (we have put \(A=A_1\otimes_C A_2\), \(B=B_1\otimes_C B_2\)). But, taking account of the tor-independence hypotheses, this follows at once from associativity of the tensor product.
+
+\sgaStableTarget{sga6.e03.prop.1-8}\textbf{Proposition 1.8.} \uline{Let} \(S\) \uline{be a scheme}, \uline{and}, \uline{for} \(i=1,2\), \(f_i:X_i\longrightarrow Y_i\) \uline{be a locally finite type} \(S\)-\uline{morphism}. \uline{Suppose} \(X_1\) \uline{and} \(X_2\), \uline{as well as} \(Y_1\) \uline{and} \(Y_2\), \uline{tor-independent over} \(S\). \uline{Let} \([a_i,b_i]\) \uline{be an interval of} \(\mathbb Z\), \uline{and} \(E_i\in\operatorname{ob} D^{-}(X_i)_{\mathrm{qcoh}}\) \uline{a complex that is} \(a_i\)-\uline{pseudo-coherent rel.} \uline{to} \(f_i\) \uline{and acyclic in degree} \(>b_i\). \uline{Then} \(E_1\otimes_S^{L}E_2\) \uline{is} \(a\)-\uline{pseudo-coherent rel.} \uline{to} \(f\) \uline{and acyclic in degree} \(>b\), \uline{with} \(f=f_1\times_Sf_2\), \(a=\operatorname{Sup}(a_1+b_2,a_2+b_1)\), \(b=b_1+b_2\).
+
+\uline{Proof}. The question being local on \(X_1\times_SX_2\), we may suppose that \(f_i\) factors as
+\[
+  X_i\xrightarrow{f'_i}Y'_i\xrightarrow{p_i}Y_i,
+\]
+where \(f'_i\) is a closed immersion and \(p_i\) a smooth morphism. Putting \(f'=f'_1\times_Sf'_2\), we must show that \(f'_*(E_1\otimes_S^{L}E_2)\) is \(a\)-pseudo-coherent and acyclic in degree \(>b\). By (1.5.1), \(Y'_1\) and \(Y'_2\) are tor-independent over \(S\): after changing notation, we may therefore suppose that \(f_i=f'_i\), in other words that \(f_i\) is a closed immersion. By hypothesis, \(f_{i*}(E_i)\) is \(a_i\)-pseudo-coherent and acyclic in degree \(>b_i\), so (I 2.16) \(f_{1*}(E_1)\otimes_S^{L}f_{2*}(E_2)\) is \(a\)-pseudo-coherent and acyclic in degree \(>b\). We conclude by (1.7).
+
+%%%%%%%%%%  scan idx 246  |  folio 233  %%%%%%%%%%
+\SGAPrintPage{233}
+\sgaStableTarget{sga6.e03.cor.1-9}\textbf{Corollary 1.9.} \uline{Under the hypotheses of} (1.8), \uline{the functor}
+\[
+  \otimes_S^{L}:D^{-}(X_1)\times D^{-}(X_2)\longrightarrow D^{-}(X)
+\]
+\uline{induces a functor}
+\[
+  \otimes_S^{L}:D^{-}(f_1)_{\mathrm{coh}}\times D^{-}(f_2)_{\mathrm{coh}}
+  \longrightarrow D^{-}(f)_{\mathrm{coh}}\qquad(\text{cf. }(1.2)).
+\]
+\uline{In particular}, \uline{if} \(f_1\) \uline{and} \(f_2\) \uline{are pseudo-coherent} (1.2), \uline{the same holds for} \(f\).
+
+\sgaStableTarget{sga6.e03.cor.1-10}\textbf{Corollary 1.10.} \uline{Let}
+\[
+\begin{tikzcd}
+X \arrow[d,"f"'] & X' \arrow[l,"g"'] \arrow[d,"f'"]\\
+Y & Y' \arrow[l,"h"']
+\end{tikzcd}
+\]
+\uline{be a Cartesian square}, \uline{with} \(f\) \uline{locally of finite type}. \uline{Then}:
+\begin{enumerate}[label=\alph*)]
+\item \uline{Suppose} \(X\) \uline{and} \(Y'\) \uline{tor-independent over} \(Y\) (1.5). \uline{For} \(n\in\mathbb Z\cup\{-\infty\}\), \uline{the functor} \(Lg^*:D^{-}(X)\to D^{-}(X')\) \uline{induces a functor}
+\[
+  Lg^*:D^{-}(f)_{n\text{-}\coh}\longrightarrow D^{-}(f')_{n\text{-}\coh}.
+\]
+\uline{In particular}, \uline{if} \(f\) \uline{is} \(n\)-\uline{pseudo-coherent} (1.2), \uline{the same holds for} \(f'\).
+
+\item \uline{Suppose} \(h\) \uline{faithfully flat}, \uline{let} \(n\in\mathbb Z\cup\{-\infty\}\) \uline{and} \(E\in\operatorname{ob} D^{-}(X)\) \uline{be a complex with quasi-coherent cohomology}. \uline{For} \(E\) \uline{to be} \(n\)-\uline{pseudo-coherent rel.} \uline{to} \(f\), \uline{it is necessary and sufficient that} \(g^*(E)\) \uline{be} \(n\)-\uline{pseudo-coherent} \uline{relative to} \(f'\). \uline{In particular}, \uline{for} \(f\) \uline{to be} \(n\)-\uline{pseudo-coherent}, \uline{it is necessary and sufficient that} \(f'\) \uline{be so}.
+\end{enumerate}
+
+\uline{Proof}. Taking account of (1.2.1 b)), all the assertions of (1.9) and (1.10) follow trivially from (1.8), except the ``sufficiency'' part of (1.10 b)). For this, the question being local on \(X\), we may suppose that \(f\) factors as a closed immersion followed by a smooth morphism. By (1.1.3), we are then reduced to the case where \(f\) (resp. \(f'\)) is the identity of \(X\) (resp. \(X'\)). The assertion then follows, by a standard dévissage (cf. I 2.16.2), from the fact that a quasi-coherent sheaf \(L\) on \(X\) is of finite type if and only if \(g^*L\) is of finite type.
+
+%%%%%%%%%%  scan idx 247  |  folio 234  %%%%%%%%%%
+\SGAPrintPage{234}
+\sgaStableTarget{sga6.e03.prop.1-11}\textbf{Proposition 1.11.} \uline{Let}
+\[
+\begin{tikzcd}
+X \arrow[r,"f"] \arrow[dr,"h"'] & Y \arrow[d,"g"]\\
+& Z
+\end{tikzcd}
+\]
+\uline{be a commutative triangle of locally finite type morphisms}, \uline{let} \(E\in\operatorname{ob} D(X)\), \(F\in\operatorname{ob} D(Y)\), \uline{and} \([a,b]\), \([c,d]\) \uline{be intervals of} \(\mathbb Z\).
+\begin{enumerate}[label=\alph*)]
+\item \uline{If} \(E\) \uline{is} \(a\)-\uline{pseudo-coherent rel.} \uline{to} \(f\) \uline{and acyclic in degree} \(>b\) \uline{and if} \(F\) \uline{is} \(c\)-\uline{pseudo-coherent rel.} \uline{to} \(g\) \uline{and acyclic in degree} \(>d\), \uline{then} \(E\otimes_Y^{L}F\) (cf. (1.6)) \uline{is} \(m\)-\uline{pseudo-coherent rel.} \uline{to} \(h\) \uline{and acyclic in degree} \(>n\), \uline{where} \(m=\operatorname{Sup}(a+d,b+c)\), \uline{and} \(n=b+d\).
+
+\item \uline{If} \(E\) \uline{is} \(a\)-\uline{pseudo-coherent rel.} \uline{to} \(h\) \uline{and acyclic in degree} \(>b\), \uline{and if} \(g\) \uline{is} \((a+1-b)\)-\uline{pseudo-coherent}, \uline{then} \(E\) \uline{is} \(a\)-\uline{pseudo-coherent rel.} \uline{to} \(f\).
+\end{enumerate}
+
+\uline{Proof}. The question being local on \(X\), we may suppose that we have a commutative diagram with a Cartesian square
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& & E^{r+s}_Z \arrow[dr] & \\
+& E^r_Y \arrow[ur,hook,"j"] \arrow[d,"p"'] & & E^s_Z \arrow[d,"q"]\\
+X \arrow[ur,hook,"i"] \arrow[r,"f"] & Y \arrow[urr,hook,"k"'] \arrow[rr,"g"] & & Z{,}
+\end{tikzcd}
+\]
+where \(i,j,k\) are closed immersions, and \(p,q\) the canonical projections of the standard affine spaces. If \(F\) is \(c\)-pseudo-coherent rel. to \(Z\), then \(k_*(F)\) is \(c\)-pseudo-coherent by (1.1 (iii)), and \(j_*(p^*(F))\) is \(c\)-pseudo-coherent by (1.1.3). Similarly, if \(g\) is \(x\)-pseudo-coherent, then \(j_*(\underline{O}_{E^r_Y})\) is \(x\)-pseudo-coherent. By the definition of relative pseudo-coherence (1.2), we are therefore reduced to proving a) and b) when \(f\) and \(g\) are closed immersions.
+
+%%%%%%%%%%  scan idx 248  |  folio 235  %%%%%%%%%%
+\SGAPrintPage{235}
+\uline{Proof of} a). By (1.1 (iii)), we must show the following: suppose \(f_*(E)\) is \(a\)-pseudo-coherent and acyclic in degree \(>b\), and \(g_*(F)\) is \(c\)-pseudo-coherent and acyclic in degree \(>d\); then \(h_*(E\otimes_Y^{L}F)\) is \(m\)-pseudo-coherent and acyclic in degree \(>n\). Now we have a canonical isomorphism
+\[
+  f_*(E)\otimes^{L}F\xrightarrow{\sim} f_*(E\otimes_Y^{L}F)
+\]
+(a special case of the isomorphism in (1.7)). Since the functor \(g_*(.\otimes^{L}F)\) takes locally free sheaves of finite type to \(c\)-pseudo-coherent complexes, and complexes acyclic in degree \(>0\) to complexes acyclic in degree \(>d\), the assertion therefore follows from (I 2.13).
+
+\uline{Proof of} b). We must prove the following assertion: suppose \(h_*(E)\) is \(a\)-pseudo-coherent and acyclic in degree \(>b\), and \(g_*(\underline{O}_Y)\) is \((a+1-b)\)-pseudo-coherent; then \(f_*(E)\) is \(a\)-pseudo-coherent. Since the assertion concerns \(f_*(E)\), we may suppose \(X=Y\) and \(f=\Id_X\). We then proceed as in the proof of (1.1.1), proving by descending induction that \(E\) is pseudo-coherent in degree \(\ge a\). We suppose it already proved that \(E\) is \((a+1)\)-pseudo-coherent, whence (I 2.10), after localizing, a distinguished triangle
+\[
+\begin{tikzcd}
+& E'' \arrow[dl,hook] & \\
+E' \arrow[rr] & & E \arrow[ul],
+\end{tikzcd}
+\]
+where \(E'^i\) is locally free for \(i\in[a+1,b]\), \(E'^i=0\) for \(i\notin[a+1,b]\), and \(E''^i=0\) for \(i>a\). The hypothesis that \(g_*(\underline{O}_Y)\) is \((a+1-b)\)-pseudo-coherent then implies (I 2.11 a)) that \(g_*(E')\) is \((a+1)\)-pseudo-coherent. Since \(g_*(E)\) is \(a\)-pseudo-coherent, it follows from (I 2.6) that \(g_*(E'')\) is \(a\)-pseudo-coherent. We conclude by (I 2.10 b)) and the fact that an \(\underline{O}_Y\)-Module \(M\) is of finite type if and only if \(g_*(M)\) is so.
+
+The following corollaries are deduced trivially from (1.11):
+

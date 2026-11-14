@@ -1,0 +1,68 @@
+# Directly inspected main pages466–470; witness480/481 for469/470.
+CHECKED += list(range(466,471))
+WITNESSES.update({469:[480],470:[481]})
+for n,reading,region,reason in [
+ (1,'EXPOSE VIII, one rule; LE THEOREME DE RIEMANN-ROCH, two rules','heading','The separate uppercase lines and rules are present. The attached accent restoration on typed capitals and joint-name dash follow NOTE_6; no new change.'),
+ (2,'par Pierre BERTHELOT, whole line underlined','author line','The attached capital surname and whole-line rule match the observed line.'),
+ (3,'se factorise en :','definition before triangle','The colon is printed and already present.'),
+ (4,'Y with no terminal punctuation','definition triangle','No comma follows the centered lower vertex. The attached punctuation is correct; the independent geometry repair is recorded separately.'),
+ (5,'A new indented paragraph begins Quitte','after definition','The attached blank paragraph reproduces the observed separation.'),
+ (6,'V followed by a comma','Corollary1.3 diagram','The comma is clearly printed and already present.'),
+ (8,"Or j′ begins a new indented paragraph",'after square','The observed paragraph break is already present.'),
+ (9,"Soit i″ begins a new indented paragraph",'proofii','The observed paragraph break is already present.'),
+ (10,'Page467 ends Posons V=Spec(A),;468 begins X=Spec(B)','467/468 boundary','Both adjoining main-image edges agree with the already relocated marker.'),
+ (13,'Comma after the diagram','proofiv first triangle','The comma at the right of the lower row is present and already transcribed.'),
+ (15,'Montrons maintenant1.2. and La propriété begin distinct paragraphs','proof of1.2','Both paragraph starts are printed; attached separation is correct.'),
+ (16,'On en déduit begins a new indented paragraph','after diamond','The observed paragraph break is already present.'),
+ (17,'Y with no terminal punctuation','proof1.4 triangle','No comma follows Y; the attached punctuation is correct.'),
+ (18,'Par suite, les groupes','Koszul homology sentence','The comma is printed and present in both attached layers.'),
+ (19,'Underlined Tor, subscript i and raised O_Y','homology expression','The main image and native witness crop review/expose_viii/images/w470_tor_native.png show the independent Tor rule. The attached Tor rule is correct; the O rule is restored in the separate local-symbol record.'),
+ (20,'Underlined k in both k(y)','homology expression and residual-field clause','Both short k rules are clear in the main image and native witness crop; both are already encoded.'),
+ (22,"470 ends par un idéal régulier,;471 begins c’est un anneau",'470/471 boundary','The end of main470 and the directly viewed start of main471 agree with the already relocated marker.')]:f(n,reading,region,reason)
+
+# Independently observed diagram placement, preserving objects and composites.
+sid=own(466,'Definition1.1 triangle','U and V on upper row, Y centered below','Y below V','Center Y and retain the two descending edges.','diagram','The image places Y beneath the midpoint of U and V. The displayed morphisms remain i:U→V, V→Y, and their composite U→Y; only the drawn incidence geometry changes.')
+patch(466,'both',r'''\begin{tikzcd}[column sep=tiny]
+U \arrow[r,"i"] \arrow[dr] & V \arrow[d]\\
+& Y
+\end{tikzcd}''',r'''\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[rr,"i"] \arrow[dr] && V \arrow[dl]\\
+& Y &
+\end{tikzcd}''',sid,'Restore the printed centered lower vertex, without changing the three maps.','diagram')
+sid=own(466,'Corollary1.3 lower arrow label','i above X→V','i below X→V','Place i above the arrow.','diagram','The main image places i above the horizontal lower edge; the map remains i:X→V.')
+patch(466,'both',r'''X \arrow[ur,"j"] \arrow[r,"i"'] & V ,''',r'''X \arrow[ur,"j"] \arrow[r,"i"] & V ,''',sid,'Exact source-side placement of the label.','diagram')
+sid=own(467,'proofi square lower arrow label','i above X→V','i below X→V','Place i above the arrow.','diagram','The main image puts i above the lower edge; the base-change square and section maps are unchanged.')
+patch(467,'both',r'''X \arrow[r,"i"'] \arrow[ur,"j"]''',r'''X \arrow[r,"i"] \arrow[ur,"j"]''',sid,'Restore the observed label side.','diagram')
+sid=own(468,'affine ring triangle','u above the leftward edge; v on the upper-left side of the diagonal','both labels on the opposite sides','Swap the two label sides.','diagram','The maps u:A→B and v:A[T_1,…,T_n]→B remain unchanged. Both printed labels lie on the upper sides of their respective arrows.')
+patch(468,'both',r'''\arrow[dl,"v"]''',r'''\arrow[dl,"v"']''',sid,'Source-side label v.','diagram')
+patch(468,'both',r'''\arrow[l,"u"]''',r'''\arrow[l,"u"']''',sid,'Source-side label u.','diagram')
+sid=own(469,'last diagram vertical label','i″ left of the downward arrow','i″ right of it','Place i″ to the left.','diagram','The map is (i,i′):U→Z×_Y V. The scan places its label on the left of the vertical edge.')
+patch(469,'both',r'''\arrow[d,"i''"]''',r'''\arrow[d,"i''"']''',sid,'Restore the printed label side.','diagram')
+sid=own(470,'proof1.4 triangle','Y centered below U and V','Y below V','Center Y with two descending edges.','diagram','The three maps remain i:U→V, f:U→Y and g:V→Y with f=g∘i. The source triangle centers the lower vertex and keeps f outside the left edge, g outside the right edge.')
+patch(470,'both',r'''U \arrow[r,"i"] \arrow[dr,"f"'] & V \arrow[d,"g"]\\
+& Y''',r'''U \arrow[rr,"i"] \arrow[dr,"f"'] && V \arrow[dl,"g"]\\
+& Y &''',sid,'Restore the printed triangle geometry and labels.','diagram')
+
+# Local letter rules; ring J in the affine parenthesis is deliberately plain.
+local_symbols(468,marker(468),'(du point de vue affine',[(letter('I'),r'\underline{I}',3),(letter('J'),r'\underline{J}',9),(letter('K'),r'\underline{K}',14)],'conormal ideal letters','Every I,J,K in the sheaf expressions has one short rule under the letter. The later affine ideal J is plain and lies outside this exact span. Subscripts, powers, pullbacks and quotient signs remain outside the rules.')
+symbols(470,[(r'\\mathcal O',r'\underline{O}',7),(letter('E'),r'\underline{E}',2),(letter('K'),r'\underline{K}',4)],'proof1.4 structure sheaves, module and Koszul complex','Seven O letters, two E letters and four K letters have independent short rules. Native witness review/expose_viii/images/w470_tor_native.png confirms the raised O in the Tor superscript also has its own rule. The four Koszul degree bullets remain lower subscripts; no K-group notation is introduced.')
+f(11,'468: I3,J9,K14 underlined; final affine J plain.470:E2,K4 underlined.','local sheaf letters on468 and470','The directly inspected rules are restored with exact local counts; the independently inspected seven O rules are also recorded. No rule is extended to an index, exponent, or a different letter.',change='Apply the local mathematical-letter patches in both layers.')
+
+# Statement word groups and defined term follow the actual local print.
+sid=own(466,'Definition1.1 defined phrase','morphisme d’intersection complète belongs to an underlined prose group','separate emph wrapper','Remove the emph wrapper before reproducing the printed continuous group.','underline','Unlike the later definition1.9, this definition does not exclude the defined phrase from its rule. Its source group runs through un morphisme d’intersection complète si pour tout point; the word-group patch supplies that rule.')
+patch(466,'both',r"\emph{morphisme d'intersection complète}","morphisme d'intersection complète",sid,'Remove the unsupported italic transport; the exact underlined group is added next.','underline')
+statement(466,r'\textbf{Définition 1.1.}',"\n\nQuitte",'Definition1.1 prose',exceptions=('VII 1.4',))
+statement(466,r'\textbf{Proposition 1.2.}',"\n\nNous montrerons",'Proposition1.2 prose')
+statement(466,r'\textbf{Corollaire 1.3.}',None,'Corollary1.3 opening')
+statement(467,marker(467),'\n\ni) Supposons','Corollary1.3 continuation')
+statement(470,r'\textbf{Proposition 1.4.}','\n\nSupposons','Proposition1.4 prose',exceptions=('1.1','EGA IV 19.3.6'))
+f(7,'Each listed statement has prose word-group rules; formulas and references independently styled','466–470 statements','All four statements and the467 continuation were compared directly. The attached roman prose lacked the observed rules. The defined phrase in1.1 is inside the printed rule, so its prior emph wrapper is removed before adding the exact groups. Named headings follow NOTE_6.',change='Apply explicit statement word-group underline patches in both layers.')
+
+f(12,'au at line end, then dessus without a hyphen','469 opening lines','Both main483 and witness480 visibly omit the compound hyphen. The ordinary compound is printed au-dessus on467; preserving the missing mark diplomatically and restoring it currently distinguishes this source omission from a retained line-end word division. Both attached layers already have the appropriate readings.',change='Diplomatic au dessus; current au-dessus (already present).')
+f(14,'q∘i est régulière','469 proofiv','Main483 and witness480 both print i. Here j:X→W′, q:W′→W[T_1,…,T_n], p:W′→W, p₀:W[T_1,…,T_n]→W, and i=p∘j with p=p₀∘q. The preceding sentence establishes that q∘j is an immersion. Applying caseii to the étale q and regular j makes q∘j regular; caseiii applied to p₀ and q∘j then makes i=p₀∘q∘j regular. This supplies exactly the intermediate morphism used by the proof and fixes only its final argument letter.',change='Current q∘j; diplomatic retains q∘i.')
+patch(469,'current',r'on en déduit que $q\circ i$ est régulière',r'on en déduit que $q\circ j$ est régulière','check/findings/findings_466_470.json#14','The explicitly displayed compositions and casesii–iii prove the corrected intermediate map.','misprint_in_print')
+f(21,'anneau local de U_y en y','470 last sentence','Main484 and witness481 both print y. The preceding regular immersion i_y:U_y→V_y is regular at x, and its local homomorphism is the quotient O_{V_y,x}→O_{U_y,x}=O_{V_y,x}/I_x. This is the regular quotient invoked here;471 explicitly concludes that f is a complete intersection at x. The current x correction is already present.',change='Current en x (already present); diplomatic en y.')
+
+own(467,'proofii, finite-presentation and quasi-compactness sentence','U′→V is asserted to be of finite presentation and quasi-compact','same printed sentence','Retain the author body; record the local descent justification and the limitation of the unrestricted wording.','mathematical_scope','The proof is explicitly local on the target. The chosen U′ can be replaced near a chosen lift by an affine W mapping to an affine neighborhood V₀ in V. The map W→V₀ is étale and affine, hence flat of finite presentation; its open image V₁ gives a faithfully flat quasi-compact map W→V₁. Pullback of i to W is the restriction of i″ and is regular, so the VII1.5 descent used in the text applies locally. An arbitrary U′ in the printed sentence need not be quasi-compact: take V=Spec k[t], X=V(t), V′=the disjoint union of copies V_n for n≥0, p the identity on each copy, and j:X→V₀ the origin. Then X′ is the union of the origins, j′(X) is its zeroth component, and U′=V₀ disjoint union of D(t) in every V_n for n≥1 has U′∩X′=j′(X). The map U′→V is étale and surjective, but the preimage of affine V is the non-quasi-compact infinite union U′. This diagnoses the unreduced wording while the specified affine restriction supplies the actual descent; no new hypothesis or explanatory sentence is inserted into the author body.','retained reading; scope recorded')
+own(469,'proof1.2, immersion fermée i″','immersion fermée i″:U→Z×_Y V','same wording','Retain the printed closed-immersion description with its explicit local construction.','mathematical_scope','The paragraph begins by allowing localization on Z near i(x). Choose an affine neighborhood Y₀ of f(x), an affine neighborhood Z₀ of i(x) in Z×_Y Y₀, and then restrict U and choose affine V over Y₀ so that the regular immersion i′:U→V is closed (the local replacement allowed immediately after1.1). Now Z₀→Y₀ is separated. The graph U→Z₀×_{Y₀}U of i is closed, as the pullback of the closed diagonal of Z₀/Y₀; composing it with the closed immersion Z₀×_{Y₀}U→Z₀×_{Y₀}V induced by i′ gives exactly (i,i′). Thus the claimed closed map is available in the explicitly local proof, and no body emendation is warranted.','retained reading; local construction recorded')
+own(470,'vanishing of Koszul homology','Comme f est un morphisme plat, ils sont nuls','same wording','Retain the printed sentence with its positive-degree scope recorded.','mathematical_scope','For the displayed resolution K_•(u), base change yields H_i(K_•(u)_y)=Tor_i^{O_Y}(O_U,k(y)). Flatness of O_U over Y makes these zero for i>0; H_0 is O_{U_y}, via the quotient map K_0(u)_y→O_{U_y}. The regularity criterion used for u_y is this vanishing of positive Koszul homology. The degree-zero quotient is already the sheaf used in the following local-ring argument. The prose uses the standard positive-degree vanishing in that criterion; no universal vanishing statement or additional body formula is inserted.','retained reading; degree scope recorded')

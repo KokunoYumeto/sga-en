@@ -1,0 +1,162 @@
+%%%%%%%%%%  scan idx 360  |  folio 347  %%%%%%%%%%
+\SGAPrintPage{347}%
+\sgaStableTarget{sga6.e05.expose.occ2}\sgaStableTarget{sga6.e05.def.6-2}\textbf{Definition 6.2.} \uline{The functor defined in} 6.1 \uline{on the category of} \uline{graded} \(K\)-\uline{algebras}, \uline{with values in the category of} \(K\)-\(\lambda\)-\uline{algebras}, \uline{is called the} \uline{Chern ring}; \uline{its value on} \(A\in\operatorname{Ob}(\mathcal G)\) \uline{is denoted by} \(\Ch(A)\) (\uline{or}, \uline{if} \uline{there is a risk of confusion}, \(\Ch_K(A)\)).
+
+From formulas (6.1.1), (6.1.2), (6.1.4), and (3.6.2), we deduce the relations:
+\sgaStableTarget{sga6.e05.eq.6-2-1}\begin{equation}\tag{6.2.1}
+\begin{gathered}
+ (1,1+X).(1,1+Y)=(1,1+X+Y)\\
+ \lambda^i(1,1+X)=0\quad\text{for }i\ge2,
+\end{gathered}
+\end{equation}
+relations which served to define the Chern ring in [1]. Conversely, from these formulas one can recover relations (6.1.1) and (6.1.4).
+
+Let us indicate why the Chern ring is introduced. We place ourselves in the situation of Example 3.9, and denote by \(A\) the associated graded ring (for the filtration defined in 3.10) of the \(K^\bullet\) of a commutatively locally ringed topos (which we suppose to be a \(\lambda\)-ring for simplicity); \(K\) is the augmentation ring. We shall see below that, for every element of an augmented \(\lambda\)-ring, one can define Chern classes with values in the associated graded ring (6.7). To every locally free sheaf of finite type, we can therefore associate an element of \(\Ch(A)\) whose component on the factor \(K\) is the rank of the sheaf, and whose component on the factor \(1+\widehat A^+\) is the sum of the Chern classes. Formulas (6.2.1) are then the usual formulas giving the Chern classes and the rank of the tensor product of two invertible sheaves and of the exterior powers of an invertible sheaf (that is, the map just defined from \(K^\bullet\) to \(\Ch(A)\) is a \(\lambda\)-homomorphism).
+
+%%%%%%%%%%  scan idx 361  |  folio 348  %%%%%%%%%%
+\SGAPrintPage{348}%
+\sgaStableTarget{sga6.e05.para.6-3}6.3.
+For every graded \(K\)-algebra \(A\), we denote by \(A_{\mathbb Q}\) the \(K\)-algebra \(A\otimes_{\mathbb Z}\mathbb Q\), graded in the evident way. By 1.13, we define a functorial homomorphism: \(1+\widehat A^+\xrightarrow{\ \ch\ }\widehat A_{\mathbb Q}^{+}\) by specifying its value on \(1+X\), namely
+\sgaStableTarget{sga6.e05.eq.6-3-1}\begin{equation}\tag{6.3.1}
+  \ch(1+X)=\exp(X)-1.
+\end{equation}
+
+This homomorphism is compatible with the multiplication defined in 6.1 on \(1+\widehat A^+\): by 1.13, it suffices to show this for the elements \(1+X,1+Y\) of \(1+\widehat{K[X,Y]}{}^{+}\); now we have:
+\[
+\begin{aligned}
+ \ch\bigl((1+X)*(1+Y)\bigr)
+ &= \ch\!\left(\frac{1+X+Y}{(1+X)(1+Y)}\right)\\
+ &= \ch(1+X+Y)-\ch(1+X)-\ch(1+Y)\\
+ &= \exp(X+Y)-\exp(X)-\exp(Y)+1\\
+ &= \ch(1+X).\ch(1+Y).
+\end{aligned}
+\]
+
+Let \(\eta\) denote the endomorphism (functorial in \(A\)) of \(\widehat A_{\mathbb Q}^{+}\) defined by:
+\[
+ \eta\!\left(\sum_{k\ge1} a_k t^k\right)
+ =
+ \sum_{k\ge1}\frac{(-1)^{k-1}}{(k-1)!}.a_k t^k.
+\]
+Then, \(\forall\varphi\in1+\widehat A^+\),
+\sgaStableTarget{sga6.e05.eq.6-3-2}\begin{equation}\tag{6.3.2}
+  \ch(\varphi)=\eta(\Log\varphi).
+\end{equation}
+Indeed, \(\ch\) and \(\eta\circ\Log\) are two functorial homomorphisms of abelian groups, and for them to be equal it suffices that they agree on \(1+X\), which is evident.
+
+We deduce that \(\ch\) commutes with the operations of \(K\): indeed, here again it suffices to show this for \(1+X\), and we have:
+\[
+\begin{aligned}
+ \forall a\in K,\quad\ch((1+X)^a)
+ &=\ch(\exp(a\Log(1+X)))\\
+ &=\eta(a\Log(1+X))\\
+ &=a.\eta(\Log(1+X))\\
+ &=a.\ch(1+X).
+\end{aligned}
+\]
+
+%%%%%%%%%%  scan idx 362  |  folio 349  %%%%%%%%%%
+\SGAPrintPage{349}%
+We can therefore extend \(\ch\) in the evident way to a homomorphism of \(K\)-algebras: \(K\times(1+\widehat A^+)\longrightarrow K\oplus\widehat A_{\mathbb Q}^{+}\). We therefore have:
+\sgaStableTarget{sga6.e05.eq.6-3-3}\begin{equation}\tag{6.3.3}
+  \ch(a,\varphi)=a+\eta(\Log\varphi).
+\end{equation}
+
+\sgaStableTarget{sga6.e05.def.6-4}\textbf{Definition 6.4.} \uline{The homomorphism} \(\ch:\Ch A\longrightarrow K\oplus\widehat A_{\mathbb Q}^{+}\) \uline{just} \uline{defined is called the Chern character}.
+
+If \(A\) is of characteristic \(0\) (i.e. is a \(\mathbb Q\)-algebra), the Chern character is an isomorphism: indeed, let \(\psi\in K\oplus\widehat A^+\); we can write \(\psi=a+\psi_1\), where \(\psi_1\) has no term of degree zero; we then define an inverse morphism of \(\ch\) by \(\psi\rightsquigarrow(a,\exp(\eta^{-1}(\psi_1)))\).
+
+\sgaStableTarget{sga6.e05.prop.6-5}\textbf{Proposition 6.5.} \uline{Let} \(A\) \uline{be a} \uline{graded} \(K\)-\uline{algebra}; \uline{on} \(\Ch(A)\) \uline{consider the filtration defined as follows} (\uline{degree filtration}):
+\sgaStableTarget{sga6.e05.eq.6-5-1}\begin{equation}\tag{6.5.1}
+  (\Ch(A))_0=\Ch(A)~;\qquad
+  \forall n\ge1,\ (\Ch(A))_n=0\times 1+\widehat A^{\ge n},
+\end{equation}
+\uline{where} \(\widehat A^{\ge n}=\prod_{i\ge n}A^i\). \uline{We have the following congruences}:
+
+\begin{enumerate}[label=\roman*)]
+\item \uline{Let} \(n\ge1\), \uline{and} \(\varphi\in(\Ch A)_n\); \uline{put} \(\varphi=1+a_n+\ldots\); \uline{then}:
+\sgaStableTarget{sga6.e05.eq.6-5-2}\begin{equation}\tag{6.5.2}
+  \ch(\varphi)=\frac{(-1)^{n-1}}{(n-1)!}.a_n+\ldots~;
+\end{equation}
+
+\item \uline{Let} \(\varphi\in(\Ch A)_m\), \(\psi\in(\Ch A)_n\); \uline{put}
+\(\varphi=1+a_m+\ldots\), \(\psi=1+b_n+\ldots\); \uline{then}:
+\sgaStableTarget{sga6.e05.eq.6-5-3}\begin{equation}\tag{6.5.3}
+  \varphi*\psi
+  =
+  1-\frac{(m+n-1)!}{(m-1)!(n-1)!}.a_m b_n+\ldots,
+\end{equation}
+\uline{and consequently}, \uline{the degree filtration is a ring filtration}.
+\end{enumerate}
+
+i) The Chern character is by construction a morphism of filtered functors; from the congruence \(\varphi\equiv1+a_n\ \mathrm{mod.}\ (\Ch A)_{n+1}\), we deduce
+%%%%%%%%%%  scan idx 363  |  folio 350  %%%%%%%%%%
+\SGAPrintPage{350}%
+therefore \(\ch(\varphi)\equiv\ch(1+a_n)\ \mathrm{mod.}\ \widehat A_{\mathbb Q}^{\ge n+1}\); now \(\ch(1+a_n)=\eta(\Log(1+a_n))\)
+\[
+  =\frac{(-1)^{n-1}}{(n-1)!}\,a_n+\ldots
+\]
+
+ii) By substitution, it suffices to prove formula (6.5.3) for \(A=K[X_i;Y_j]_{i,j\in\mathbb N}\) and for \(\varphi=1+\sum_{k\ge m}X_k\), \(\psi=1+\sum_{k\ge n}Y_k\). Since \(K\) is torsion-free, we can embed this ring in its tensor product with \(\mathbb Q\), and thus see that \(\ch\) is injective. Put \(\varphi*\psi=1+Z_p+\ldots\), where \(Z_p\) is the first nonzero term, \(\neq1\), of \(\varphi*\psi\). The multiplicativity of \(\ch\) gives, by (6.5.2):
+\[
+  \frac{(-1)^{p-1}}{(p-1)!}.Z_p+\ldots
+  =
+  \left(\frac{(-1)^{m-1}}{(m-1)!}.X_m+\ldots\right)
+  \left(\frac{(-1)^{n-1}}{(n-1)!}.Y_n+\ldots\right),
+\]
+whence the value of \(Z_p\) by identifying the terms of lowest degree.
+
+\sgaStableTarget{sga6.e05.para.6-6}6.6. The \(\lambda\)-ring \(\Ch A\) is augmented over \(K\): indeed, we define a \(\lambda\)-homomorphism from \(\Ch A\) to \(K\) by \((a,\varphi)\rightsquigarrow a\). It is therefore endowed with a canonical filtration of an augmented \(\lambda\)-ring. We shall compare it with the one just defined.
+
+\sgaStableTarget{sga6.e05.prop.6-6-1}\textbf{Proposition 6.6.1.} \uline{Let} \(x\in\Ch A\) \uline{be an element of the form} \(x=(n,1+\ldots+a_n)\). \uline{Then}:
+\[
+\begin{array}{ll}
+\text{i)}& \lambda^i(x)=0\quad\text{\uline{for} }i>n~;\\[0.3em]
+\text{ii)}& \lambda^n(x)=(1,1+a_1)\\[0.3em]
+\text{iii)}& \displaystyle\sum_{i=0}^n(-1)^i\lambda^i(x)
+       =(0,1-(n-1)!a_n+\ldots),
+\end{array}
+\]
+\uline{the unwritten terms} \uline{being of degree} \(>n\).
+
+By functoriality, it suffices to give the proof in the case
+%%%%%%%%%%  scan idx 364  |  folio 351  %%%%%%%%%%
+\SGAPrintPage{351}%
+where \(A\) is the ring \(K[X_1,\ldots,X_n]\), filtered by weight with respect to the \(X_i\), \(X_i\) having weight \(i\), and for the element \((n,1+X_1+\ldots+X_n)\).
+
+We embed \(A\) in \(A'=K[T_1,\ldots,T_n]\) by the symmetric functions, and thus obtain an injective homomorphism: \(\Ch A\longrightarrow\Ch A'\); we then have:
+\[
+ (n,1+X_1+\ldots+X_n)
+ =
+ \left(n,\prod_{i=1}^n(1+T_i)\right)
+ =
+ \sum_{i=1}^n(1,1+T_i)
+\]
+We deduce, by (6.2.1):
+\[
+  \lambda_t(x)=\prod_{i=1}^n\bigl(1+(1,1+T_i)t\bigr),
+\]
+and obtain:
+\[
+  \lambda^k(x)=0\ \text{for }k>n,\quad\text{and}\quad
+  \lambda^n(x)=\prod_{i=1}^n(1,1+T_i)
+   =\left(1,1+\sum_{i=1}^nT_i\right)=(1,1+X_1)
+\]
+Finally,
+\[
+  \sum_{i=0}^n(-1)^i\lambda^i(x)=\lambda_{-1}(x)
+  =
+  \prod_{i=1}^n\bigl(1-(1,1+T_i)\bigr)
+  =
+  (-1)^n.\prod_{i=1}^n(0,1+T_i).
+\]
+Now, by (6.5.3), \(\prod_{i=1}^n(0,1+T_i)=\left(0,1+(-1)^{n-1}(n-1)!\prod_{i=1}^nT_i+\ldots\right)\)
+that is: \(\lambda_{-1}(x)=(0,1-(n-1)!X_n+\ldots)\).
+
+\sgaStableTarget{sga6.e05.cor.6-6-2}\textbf{Corollary 6.6.2.} \uline{Relation} 6.6.1.iii) \uline{holds for every element} \(X\) \uline{of augmentation} \(n\).
+
+To prove this, we shall use the lemma:
+
+\sgaStableTarget{sga6.e05.lem.6-6-3}\textbf{Lemma 6.6.3.} \uline{For every} \(n\), \((\Ch A)_n\) \uline{is a} \(\lambda\)-\uline{ideal of} \(\Ch A\).
+
+We may suppose that \(n\ge1\). Let \(x=(0,\varphi)\in(\Ch A)_n\); we can write \(\gamma^i(0,\varphi)=(0,1+Q''_{i,1}+\ldots+Q''_{i,j}+\ldots)\) where the \(Q''_{i,j}\) are the isobaric components of weight \(j\) of the \(Q'_{i,j}\) (3.6). For every \(j\), the polynomials \(Q''_{i,j}\) are therefore polynomials in the first \(j\) coefficients of \(\varphi\). If \(j<n\), they are therefore zero, and consequently the \(\gamma^i(x)\) belong to \((\Ch A)_n\), and

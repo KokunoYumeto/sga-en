@@ -1,0 +1,169 @@
+%%%%%%%%%%  scan idx 465  |  folio 452  %%%%%%%%%%
+\SGAPrintPage{452}%
+Now \(\lambda^p(\xi,p^*(i_*(y)))-\lambda^p(1,p^*(i_*(y)))\) is divisible by \(1-\xi\): to see this, we can work in the universal \(\lambda\)-ring used to define the \(\lambda^p(\xi,X)\) (V 5); then \(\lambda^p(\xi,X)-\lambda^p(1,X)\) is a polynomial in \(\xi\), vanishing for \(\xi=1\), and hence divisible by \(\xi-1\). Furthermore, the dependence equation of \(\xi\) over \(K^{\bullet}(X)\) is \((1-\xi)^2=0\) (VI (1.13.1)). We therefore obtain:
+\[
+\begin{aligned}
+(s\circ i)_*\bigl(\lambda^p(N+1,y)\bigr)
+&\equiv \lambda^p(1,p^*(i_*(y)))(1-\xi) \quad\text{mod.\ torsion}\\
+&\equiv p^*(\lambda^p(1,i_*(y)))(1-\xi) \quad\text{mod.\ torsion}.
+\end{aligned}
+\]
+Applying \(p_*\), we obtain:
+\sgaStableTarget{sga6.e07.eq.4-3-4}\begin{equation}\tag{4.3.4}
+  i_*\bigl(\lambda^p(N+1,y)\bigr)
+  \equiv \lambda^p(1,i_*(y)) \quad\text{mod.\ torsion},
+\end{equation}
+since \(p_*(\xi)=0\).
+
+By the formula in (V 5.6), applied with \(L=1\), \(\lambda^p(N+1,y)\) is the coefficient of \(t^p\) in the series:
+\[
+  \frac{\sum_{k\ge1}\lambda^k(N,y)kt^k}
+       {1+\sum_{k\ge1}\lambda^k(N,y)\lambda_{-1}(N)t^k}.
+\]
+
+Similarly, the same formula applied with \(N=0\) and \(L=1\) shows that \(\lambda^p(1,y)\) is the coefficient of \(t^p\) in the series:
+\[
+  \frac{\sum_{k\ge1}\lambda^k(y)kt^k}
+       {\sum_{k\ge0}\lambda^k(y)t^k}.
+\]
+
+The congruences (4.3.4) can therefore be written:
+\[
+i_*\left(
+  \frac{\sum_{k\ge1}k\lambda^k(N,y)t^k}
+       {1+\sum_{k\ge1}\lambda^k(N,y)\lambda_{-1}(N)t^k}
+\right)
+\equiv
+  \frac{\sum_{k\ge1}k\lambda^k(i_*(y))t^k}
+       {\sum_{k\ge0}\lambda^k(i_*(y))t^k}
+       \quad\text{mod.\ torsion}
+\]
+
+%%%%%%%%%%  scan idx 466  |  folio 453  %%%%%%%%%%
+\SGAPrintPage{453}%
+Applying formula 2.8, we obtain:
+\[
+  \frac{\sum_{k\ge0}k\,i_*(\lambda^k(N,y))t^k}
+       {1+\sum_{k\ge1} i_*(\lambda^k(N,y))t^k}
+  \equiv
+  \frac{\sum_{k\ge0}k\lambda^k(i_*(y))t^k}
+       {\sum_{k\ge0}\lambda^k(i_*(y))t^k}
+       \quad\text{mod.\ torsion}
+\]
+Putting:
+\[
+  u(t)=1+\sum_{k\ge1}i_*(\lambda^k(N,y))t^k,\qquad
+  v(t)=\sum_{k\ge0}\lambda^k(i_*(y))t^k,
+\]
+we can also write this last relation as:
+\[
+  \frac{d}{dt}\!\left(\frac{u(t)}{v(t)}\right)\equiv0
+  \quad\text{mod.\ torsion}.
+\]
+Since the constant term of \(u(t)/v(t)\) is \(1\), and we are writing congruences modulo torsion, we can integrate and write the congruence \(u(t)\equiv v(t)\). This gives the stated congruences.
+
+\sgaStableTarget{sga6.e07.cor.4-4}\textbf{Corollary 4.4.} \uline{With the notation and hypotheses of} 4.3, \uline{we have for every} \(p\ge1\), \uline{and every} \(y\in K^{\bullet}(Y)\):
+\[
+  i_*\bigl(\gamma^p(N,y)\bigr)\equiv \gamma^p(i_*(y))
+  \quad\text{mod.\ torsion}.
+\]
+
+The corollary follows immediately from 4.3, using the expression of the \(\gamma^p\) as linear combinations with integer coefficients of the \(\lambda^p\).
+
+\sgaStableTarget{sga6.e07.rem.4-5}\textbf{Remark 4.5.} The proof of 4.3 itself suggests that (4.3.1) should hold not only modulo torsion, but also as an equality. In [RRR], the equality was proved in characteristic \(0\) by means of a geometric characterization of the \(\lambda^p(N,x)\). An extension of this method to all characteristics would probably be possible if one knew how to define exterior-power operations on perfect complexes (cf. XIV).
+
+%%%%%%%%%%  scan idx 467  |  folio 454  %%%%%%%%%%
+\SGAPrintPage{454}%
+\sgaStableTarget{sga6.e07.thm.4-6}\textbf{Theorem 4.6.}
+\uline{Let} \(X\) \uline{be a quasi-compact scheme having an ample sheaf}, \(d\) \uline{an integer} \(>0\) \uline{and} \(i:Y\to X\) \uline{a regular immersion of codimension} \(d\). \uline{Then}, \uline{for every} \(k\), \uline{we have}:
+\[
+ i_*\bigl((\Fil^kK^{\bullet}(Y))\otimes_{\mathbb Z}\mathbb Q\bigr)
+ \subset
+ (\Fil^{k+d}K^{\bullet}(X))\otimes_{\mathbb Z}\mathbb Q.
+\]
+
+First observe that \(i_*(K^{\bullet}(Y))\subset \Fil^1K^{\bullet}(X)\). Indeed, \(X-Y\) is dense in \(X\): otherwise, \(Y\) would contain an affine open subset, and on this open subset the ideal \(\underline{J}\) defining \(Y\) would be a nil ideal, hence a locally nilpotent ideal since it is of finite type. This is impossible, however, since the \(\underline{J}^n/\underline{J}^{n+1}\) are locally free \(\underline{O}_Y\)-Modules of rank \(\ne0\). The augmentation in \(K^{\bullet}(X)\) of an element of \(i_*(K^{\bullet}(Y))\) is a locally constant function on \(X\); since it vanishes on \(X-Y\), it vanishes on all of \(X\).
+
+For every abelian group \(A\), we put \(A_{\mathbb Q}=A\otimes_{\mathbb Z}\mathbb Q\). Let \(x\in\Fil^kK^{\bullet}(Y)_{\mathbb Q}\); we can write \(x\) in the form:
+\[
+  x=\sum a\,\gamma^{i_1}(x_1)\cdots\gamma^{i_n}(x_n),
+\]
+with \(\epsilon(x_i)=0\) for every \(i\), \(a\in\mathbb Q\), and \(i_1+\cdots+i_n\ge k\). The \(x_i\) can be expressed as linear combinations with integer coefficients of the classes \(E_\alpha\) of finitely many locally free \(\underline{O}_Y\)-Modules of finite type \(\underline{E}_\alpha\). Let \(R\) be the sub-\(\mathbb Q\)-\(\lambda\)-algebra of \(K^{\bullet}(Y)_{\mathbb Q}\) generated by the \(E_\alpha\) and by \(N\). We then have:
+\[
+  x\in\Fil^kR.
+\]
+Furthermore, the \(\lambda\)-ring filtration of \(R\) is discrete (VI 6.2); let \(m\) satisfy \(\Fil^mR=0\). Finally, by decomposing \(Y\) into a finite sum of disjoint open subsets and carrying out the proof on each open subset (since \(K^{\bullet}\) commutes with finite direct sums), we may suppose that the \(\underline{E}_\alpha\) have constant rank \(r_\alpha\). The augmentation ring of \(R\) is then \(\mathbb Q\).
+
+%%%%%%%%%%  scan idx 468  |  folio 455  %%%%%%%%%%
+\SGAPrintPage{455}%
+We shall show that for every \(i\), we have:
+\[
+  i_*(\Fil^iR)\subset \Fil^{i+d}(K^{\bullet}(X)_{\mathbb Q}).
+\]
+This will imply in particular:
+\[
+  i_*(x)\in\Fil^{k+d}K^{\bullet}(X)_{\mathbb Q},
+\]
+and hence prove the theorem.
+
+The proof is by descending induction on \(i\), the case \(i=m\) being trivial. Let \(y\in\Fil^iR\), and put, for every \(j\):
+\[
+  a_j=(-1)^{j-1}(j-1)!.
+\]
+Then by V 6.10,
+\[
+  \gamma^{d+i}(N,y)-a_{d+i}y\in\Fil^{i+1}R.
+\]
+
+We can therefore apply the induction hypothesis, supposing that:
+\[
+  i_*(\Fil^{i+1}R)\subset \Fil^{i+d+1}K^{\bullet}(X)_{\mathbb Q}.
+\]
+Consequently, we have:
+\[
+  i_*\bigl(\gamma^{d+i}(N,y)-a_{d+i}y\bigr)
+  \in\Fil^{i+d+1}K^{\bullet}(X)_{\mathbb Q}.
+\]
+By 4.4, this implies:
+\[
+  \gamma^{d+i}\bigl(i_*(y)\bigr)-a_{d+i}i_*(y)
+  \in\Fil^{i+d+1}K^{\bullet}(X)_{\mathbb Q}.
+\]
+Since \(i_*(y)\) has zero augmentation, \(\gamma^{d+i}\bigl(i_*(y)\bigr)\in\Fil^{d+i}K^{\bullet}(X)_{\mathbb Q}\).
+Since we are calculating modulo torsion, we therefore find:
+\[
+  i_*(y)\in\Fil^{i+d}K^{\bullet}(X)_{\mathbb Q}.
+\]
+
+\sgaStableTarget{sga6.e07.rem.4-6-1}\textbf{Remark 4.6.1.} We see that, even if 4.3 were true without tensoring with \(\mathbb Q\), the proof above works only modulo torsion. For a counterexample, see XIV 4.6.
+
+%%%%%%%%%%  scan idx 469  |  folio 456  %%%%%%%%%%
+\SGAPrintPage{456}%
+\sgaStableTarget{sga6.e07.sec.4.7}\subsection*{4.7.}
+
+We return to the situation of 3.7, where we had the commutative diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+Y' \arrow[r,"j"] \arrow[d,"g"'] & X' \arrow[d,"f"]\\
+Y \arrow[r,"i"] & X,
+\end{tikzcd}
+\]
+where \(i\) is a regular immersion, \(X'\) the \(X\)-scheme obtained by blowing up \(Y\), and \(Y'=X'\times_XY\). Suppose that \(X\) is noetherian with an ample sheaf, and \(Y\) regular. We saw in 3.7 that we then have the exact sequence:
+\[
+0\longrightarrow K^{\bullet}(Y)\xrightarrow{u}
+K^{\bullet}(Y')\times K^{\bullet}(X)\xrightarrow{v}
+K^{\bullet}(X')\longrightarrow0.
+\]
+We shall show that this exact sequence describes the whole situation formed by the \(K^{\bullet}\) of \(X,Y,X',Y'\) from the data of the \(\lambda\)-rings \(K^{\bullet}(X)\), \(K^{\bullet}(Y)\), the maps \(i^*\) and \(i_*\), and the element \(N\) of \(K^{\bullet}(Y)\). (at least up to torsion, for the time being).
+
+Let therefore \(K,K'\) be two \(\lambda\)-rings, \(i_*:K\to K'\) an additive homomorphism, \(i^*:K'\to K\) a \(\lambda\)-homomorphism, \(d\) an integer, and \(N\) an element of \(K\) such that \(\lambda^i(N)=0\) for \(i>d\) and \(\lambda^d(N)\) is invertible. Suppose moreover that the following properties hold:
+\begin{enumerate}[label=\roman*)]
+\item \(i_*\) is \(K'\)-linear (``projection formula'');
+\item \(i^*\circ i_*\) is the homomorphism ``multiplication by \(\lambda_{-1}(N)\)'';
+\item for every \(n\ge1\), and every \(y\in K\), \(i_*\bigl(\lambda^n(N,y)\bigr)=\lambda^n(i_*(y))\) (relation (4.3.1)).
+\end{enumerate}
+
+First we use VI.1.1 to construct a \(K\)-\(\lambda\)-algebra \(K_1\) which plays the role of \(K^{\bullet}(Y')\). Let \(L\) be an indeterminate, and \(K[L]\) the \(K\)-\(\lambda\)-algebra generated by the generator \(L\) subject to the relations \(\lambda^i(L)=0\) for \(i\ge2\) (V 4.9). Put:
+\[
+  P(L)=\lambda^d(N-L)=\sum_{i=0}^{d}(-1)^i\lambda^{d-i}(N)L^i.
+\]

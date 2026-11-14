@@ -1,0 +1,96 @@
+%%%%%%%%%%  scan idx 325  |  folio 312  %%%%%%%%%%
+\SGAPrintPage{312}%
+(1.7) that \(\Phi\) is determined by its value on the element \((\varphi^{(j)})_{j=1..k}\) of \((\Ghat(K[X_i^{(j)}]_{\substack{i\geq1\\ j=1..k}}))^k\) (resp.\ \ldots)..\ Suppose that \(H\) is a functor such as \(\Ghat,\Gg,\Ga,1+\widehat{\operatorname{Gr}\,\mathord{.}\,}^{+}\), etc..; the element \(\Phi((\varphi^{(j)})_{j})\) is a formal series with coefficients in \(K[X_i^{(j)}]_{i\geq1,\ j=1..k}\); the \(n\)-th coefficient of this series will be called the \uline{\(n\)-th universal polynomial of} \(\Phi\); knowing these polynomials is therefore equivalent to knowing \(\Phi\). By the proof of 1.6, these polynomials are themselves determined by the element \(\Phi(1+X^{(1)}t,\ldots,1+X^{(k)}t)\), the calculation following the method of the proof: we calculate the elements \(\Phi(1+X_1^{(1)}t+\ldots+X_n^{(1)}t^n,\ldots,1+X_1^{(k)}t+\ldots+X_n^{(k)}t^n)\) by decomposing \(1+X_1^{(i)}t+\ldots+X_n^{(i)}t^n\) into \(\prod_{j=1}^{n}(1+T_j^{(i)}t)\) and using the additivity of \(\Phi\); the polynomials thus obtained are symmetric in the \(T_j^{(i)}\) (\(i\) fixed and \(j\) varying) and can be expressed in terms of the \(X_j^{(i)}\); by gluing with the aid of the filtration of \(H\), we thus determine the universal polynomials of \(\Phi\). If \((\psi^{(1)},\ldots,\psi^{(k)})\in(\Ghat(A))^k\), the calculation of \(\Phi(\psi^{(1)},\ldots,\psi^{(k)})\) is performed by substituting the coefficients \(a_j^{(i)}\) of the \(\psi^{(i)}\) for the \(X_j^{(i)}\) in the universal polynomials.
+
+Suppose there is an integer \(m\) such that the coefficient of \(t^n\) in \(\theta=\Phi(1+X^{(1)}t,\ldots,1+X^{(k)}t)\) is a polynomial whose isobaric components have weights ranging between \(n\) and \(mn\); then the \(k\)-th universal polynomial of \(\Phi\) has isobaric components whose weights range between \(k\) and \(km\): this follows immediately from the calculation described above and from the theorem on symmetric functions.
+
+%%%%%%%%%%  scan idx 326  |  folio 313  %%%%%%%%%%
+\SGAPrintPage{313}%
+Suppose in particular that \(H=\Ghat\); then the \(n\)-th universal polynomial of \(\Phi\) has no components of weight \(<n\). Now consider the canonical morphism: \(H\longrightarrow1+\widehat{\operatorname{Gr}\,\mathord{.}\,}^{+}\); composing with \(\Phi\) gives a morphism: \((\Ghat)^k\longrightarrow1+\widehat{\operatorname{Gr}\,\mathord{.}\,}^{+}\), which, by the proof of 1.12, factors through \((1+\widehat{\operatorname{Gr}\,\mathord{.}\,}^{+})^k\) and defines a morphism \(\Phi:(1+\widehat{\,\mathord{.}\,}^{+})^k\longrightarrow1+\widehat{\,\mathord{.}\,}^{+}\); we immediately see that the \(n\)-th universal polynomial of \(\Phi\) is the same as that of \((\Ghat)^k\longrightarrow1+\widehat{\operatorname{Gr}\,\mathord{.}\,}^{+}\), that is, the isobaric component of weight \(n\) of the \(n\)-th universal polynomial of \(\Phi\).
+
+The same remarks apply to the case \(H=\Ga\): we can define a morphism of functors \(H\longrightarrow\widehat{\operatorname{Gr}\,\mathord{.}\,}^{+}\) (with \(\widehat{\operatorname{Gr}\,\mathord{.}\,}^{+}=\widehat{\,\mathord{.}\,}^{+}\circ\operatorname{Gr}\), where \(\widehat{\,\mathord{.}\,}^{+}\) is the functor defined on \(\mathcal G\) by \(\widehat B^+=\prod_{i\geq1}B^i\)) analogously to 1.11; we then repeat the reasoning and conclusions of the preceding paragraph.
+
+\sgaStableTarget{sga6.e05.para.1-16}1.16. Let us finish with an example. Suppose that \(K=Q\). We define an endomorphism of the functor \(1+\widehat{\,\mathord{.}\,}^{+}\), denoted by \(\Toddc\) and called the Todd character, by putting:
+\[
+  \Toddc(1+X)=\frac{X}{1-e^{-X}}.
+\]
+Conditions i) and ii) of Theorem 1.13 are verified immediately, showing that we have indeed defined an endomorphism of \(1+\widehat{\,\mathord{.}\,}^{+}\).
+
+\sgaStableTarget{sga6.e05.sec.2}\section*{2. Definition of \(\lambda\)-rings; examples}
+
+In this section, the base ring of Section 1 will be \(\mathbb Z\) (except in 2.9); we work in the category \(\mathcal C_0\) (1.8) and denote by \(\Ghat\) the restriction of \(\Ghat\) to \(\mathcal C_0\) (1.10).
+
+%%%%%%%%%%  scan idx 327  |  folio 314  %%%%%%%%%%
+\SGAPrintPage{314}%
+\sgaStableTarget{sga6.e05.def.2-1}\textbf{Definition 2.1.}: \uline{By a} pre-\(\lambda\)-ring \uline{we mean a ring} \(K\), \uline{commutative with unit}, \uline{endowed with a homomorphism of abelian groups}:
+\[
+  \lambda_t:K\longrightarrow1+K[[t]]^+,
+\]
+\uline{such that for every} \(x\in K\), \(\lambda_t(x)=1+xt+\ldots\)
+
+We put \(\lambda_t(x)=\sum_{i\geq0}^{\infty}\lambda^i(x)t^i\); giving a pre-\(\lambda\)-ring structure on a ring \(K\) is therefore equivalent to giving a family of maps \(\lambda^i\), \(i\in N\), from \(K\) to \(K\), such that:
+\[
+\begin{array}{ll}
+\text{i)}& \forall x\in K,\quad \lambda^0(x)=1,\\[0.3em]
+\text{ii)}& \forall x\in K,\quad \lambda^1(x)=x,\\[0.3em]
+\text{iii)}& \forall x,y\in K,\ \forall n\in N,\quad
+\lambda^n(x+y)=\displaystyle\sum_{p+q=n}\lambda^p(x)\mathbin{.}\lambda^q(y).
+\end{array}
+\]
+
+Let \(K,K'\) be two pre-\(\lambda\)-rings, and \(f:K\to K'\) a ring homomorphism; we say that \(f\) is a homomorphism of pre-\(\lambda\)-rings, or a \(\lambda\)-\uline{homomorphism}, when the diagram:
+\[
+\begin{tikzcd}
+K \arrow[r,"\lambda_t"] \arrow[d,"f"'] &
+1+K[[t]]^+ \arrow[d,"\Ghat(f)"]\\
+K' \arrow[r,"\lambda_t"] &
+1+K'[[t]]^+,
+\end{tikzcd}
+\]
+is commutative.
+
+This is also equivalent to the following relations:
+\[
+  \forall x\in K,\ \forall i\in N,\qquad
+  \lambda^i(f(x))=f(\lambda^i(x)).
+\]
+
+%%%%%%%%%%  scan idx 328  |  folio 315  %%%%%%%%%%
+\SGAPrintPage{315}%
+\sgaStableTarget{sga6.e05.ex.2-2}\textbf{Examples 2.2.}: a) We can give all the pre-\(\lambda\)-ring structures on \(\mathbb Z\). For this it suffices to specify \(\lambda_t(1)\), which will therefore be a formal series with integer coefficients, subject only to the condition that it begin with \(1+t\).
+
+b) Let \((T,\underline{A})\) be a commutatively ringed topos, and let \(K\) be the ``Grothendieck group'' of \(\underline{A}\)-Modules locally isomorphic to a direct summand of a free \(\underline{A}\)-Module of finite type; we know that \(K\) can be endowed with a ring structure by means of the tensor product (Exp. IV), and we shall endow it with a pre-\(\lambda\)-ring structure as follows: for every \(A\)-Module \(\underline{E}\) that is locally a direct summand of a free Module of finite type, we denote by \(\lambda^i(E)\) the class in \(K\) of the \(i\)-th exterior power of \(\underline{E}\) (which is also locally a direct summand of a free Module of finite type); this defines a function on the category of \(\underline{A}\)-Modules that are locally direct summands of a free Module of finite type, with values in the abelian group \(1+K[[t]]^+\); we must then show that this function is additive, which will imply that it factors through \(K\), giving the required structure.
+
+\sgaStableTarget{sga6.e05.lem.2-2-1}\textbf{Lemma 2.2.1.} Let \(0\longrightarrow \underline{E}' \xrightarrow{u} \underline{E} \xrightarrow{v} \underline{E}''\longrightarrow0\) \uline{be an exact sequence of} \(\underline{A}\)-\uline{Modules that is locally split} (\uline{for example such that} \(E''\) \uline{is locally a direct summand of a free Module of finite type}). \uline{There exists on} \(\wedge^n(\underline{E})\) \uline{a finite filtration}, \uline{and isomorphisms}:
+\[
+  \wedge^{n-p}(\underline{E}')\otimes_A\wedge^p(\underline{E}'')
+  \xrightarrow{\sim}
+  \operatorname{Gr}^p\wedge^n(\underline{E}).
+\]
+
+We take as \(F^p\wedge^n(\underline{E})\) the image of the canonical morphism:
+\[
+\begin{gathered}
+  \wedge^{n-p}(\underline{E}')\otimes_A\wedge^p(\underline{E})\longrightarrow\wedge^n(\underline{E})
+  \quad\text{for } 0\leq p\leq n\ ;\quad \text{if } p\geq n,
+\end{gathered}
+\]
+%%%%%%%%%%  scan idx 329  |  folio 316  %%%%%%%%%%
+\SGAPrintPage{316}%
+\(F^p\wedge^n(\underline{E})=\wedge^n(\underline{E})\), and if \(p<0\), \(F^p\wedge^n(\underline{E})=0\). This does define a finite filtration on \(\wedge^n(\underline{E})\).
+
+We define a homomorphism:
+\[
+  f_p:\wedge^{n-p}(\underline{E}')\otimes_A\wedge^p(\underline{E}'')
+  \longrightarrow F^p\wedge^n(\underline{E})/F^{p-1}\wedge^n(\underline{E})
+\]
+by putting \(f_p(x'_1\wedge\ldots\wedge x'_{n-p}\otimes x''_1\wedge\ldots\wedge x''_p)=\operatorname{cl}_{\operatorname{Gr}^p}\bigl(u(x'_1)\wedge\ldots\wedge u(x'_{n-p})\wedge x_1\wedge\ldots\wedge x_p\bigr)\), which visibly does not depend on the choice of the \(x_i\) lifting the given sections \(x''_i\) of \(\underline{E}''\). When the exact sequence is locally split, \(f_p\) is an isomorphism, since locally \(\wedge^n(\underline{E})\simeq\bigoplus_{p+q=n}\wedge^p(\underline{E}')\otimes_A\wedge^q(\underline{E}'')\).
+
+When \(\underline{E}',\underline{E},\underline{E}''\) are locally direct summands of free Modules of finite type, the \(\operatorname{Gr}^p\wedge^n(\underline{E})\) are locally direct summands of free Modules of finite type, and therefore so are the \(F^p\wedge^n(\underline{E})\); we may thus write in \(K\):
+\(\lambda^n(E)=\sum_{p=0}^{n}\operatorname{cl}(\operatorname{Gr}^p\wedge^n(\underline{E}))=\sum_{p=0}^{n}\lambda^{n-p}(E')\mathbin{.}\lambda^p(E'')\), giving additivity.
+
+Let \((T,\underline{A})\), \((T',\underline{A}')\) be two commutatively ringed topoi, and \(f:(T,\underline{A})\longrightarrow(T',\underline{A}')\) a morphism of ringed topoi. We know (Exp. IV, 2.7) that \(f\) defines a ring morphism on the corresponding \(K\), namely \(f^*:K^{\bullet}_{\naif}(T',\underline{A}')\longrightarrow K^{\bullet}_{\naif}(T,\underline{A})\). Since inverse image commutes with exterior powers, the corresponding morphism \(f^*\) on the \(K\) is a \(\lambda\)-homomorphism for the structure just defined.
+
+Let us mention two special cases:
+\begin{itemize}[label=-]
+\item Let \(X\) be a scheme; \(K^{\bullet}_{\naif}(X)\) is thus endowed with a pre-\(\lambda\)-ring structure; this is the case that will be used in the rest of the seminar, and it may be regarded as a ``model'' for the general theory of

@@ -1,0 +1,29 @@
+
+Soient $S'$ un sous-schéma fermé de $S$, et $U$ l'ouvert complémentaire de $S'$ dans $S$. On note $X_U$ la restriction de $X$ au-dessus de $U$, et $X_{S'}$ la restriction de $X$ au-dessus de $S'$. Enfin, on note encore $\xi_i$ les images des $\xi_i$ dans $K^{\bullet}(X_{S'})$ et $K^{\bullet}(X_U)$, et on note :
+\[
+\varphi_{S'}:K_\bullet(S')^{(I)}\to K_\bullet(X_{S'}),\qquad
+\varphi_U:K_\bullet(U)^{(I)}\to K_\bullet(X_U)
+\]
+les homomorphismes définis de la même manière que $\varphi$.
+
+On considère le diagramme
+\[
+\begin{tikzcd}[column sep=tiny]
+K_\bullet(S')^{(I)} \arrow[r,"i_*"] \arrow[d,"\varphi_{S'}"'] & K_\bullet(S)^{(I)} \arrow[r,"j^*"] \arrow[d,"\varphi"] & K_\bullet(U)^{(I)} \arrow[r] \arrow[d,"\varphi_U"] & 0\\
+K_\bullet(X_{S'}) \arrow[r,"u_*"] & K_\bullet(X) \arrow[r,"v^*"] & K_\bullet(X_U) \arrow[r] & 0
+\end{tikzcd}\tag{1.2.1}
+\]
+où $i$ et $j$ désignent les immersions de $S'$ et $U$ dans $S$, $u$ et $v$ les immersions de $X_{S'}$ et $X_U$ dans $X$. Montrons que si $\varphi_{S'}$ et $\varphi_U$ sont surjectives, il en est alors de même pour $\varphi$.
+
+Les deux lignes horizontales du diagramme sont exactes d'après 1.1. On voit alors que pour montrer que $\varphi$ est surjective, il suffit de montrer que les deux carrés sont commutatifs.
+
+Soit $(x'_i)_{i\in I}\in K_\bullet(S')^{(I)}$~; on a :
+\[
+\varphi\circ i_*((x'_i))=\varphi((i_*(x'_i)))=\sum_i \xi_i\cdot f^*(i_*(x'_i));
+\]
+\[
+u_*\circ\varphi_{S'}((x'_i))=u_*\left(\sum_i \xi_i\cdot f^*_{S'}(x'_i)\right)=\sum_i \xi_i\cdot u_*(f^*_{S'}(x'_i)),
+\]
+la dernière égalité résultant de la formule de projection IV 2.11.1.2. L'égalité $\varphi\circ i_*=u_*\circ\varphi_{S'}$ résulte donc de l'égalité $f^*\circ i_*=u_*\circ f^*_{S'}$, vraie d'après IV 3.1.1, car $i$ est
+propre et $f$ plat.
+

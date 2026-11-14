@@ -1,0 +1,180 @@
+%%%%%%%%%%  scan idx 499  |  folio 486  %%%%%%%%%%
+\SGAPrintPage{486}%
+\sgaStableTarget{sga6.e08.continuation-of-the-proof-of-theorem-3-6}The proof of
+Theorem 3.6 will occupy the rest of this exposé. Let us give some preliminaries.
+
+\sgaStableTarget{sga6.e08.prop.3-7}\textbf{Proposition 3.7.} \uline{For arbitrary} $x\in \Gr K^{\bullet}(X)_{\mathbb Q}$, $y\in \Gr K^{\bullet}(Y)_{\mathbb Q}$, \uline{we have}:
+\[
+ f_{\mathrm{gr}}\bigl(x\cdot f^{\mathrm{gr}}(y)\bigr)
+ =
+ f_{\mathrm{gr}}(x)\,y .
+\]
+By additivity, one may suppose \(x\) and \(y\) homogeneous; say $x\in \Gr^iK^{\bullet}(X)_{\mathbb Q}$, $y\in \Gr^jK^{\bullet}(Y)_{\mathbb Q}$.
+Let $x'\in \Fil^iK^{\bullet}(X)_{\mathbb Q}$, $y'\in \Fil^jK^{\bullet}(Y)_{\mathbb Q}$ be elements lifting \(x\) and \(y\). Then the projection formula gives:
+\[
+ f_*\bigl(x'\cdot f^*(y')\bigr)=f_*(x')\,y'.
+\]
+By 3.2, this equality is written in
+\(\Fil^{i+j-d}K^{\bullet}(Y)_{\mathbb Q}\). It gives an equality in
+\(\Gr^{i+j-d}K^{\bullet}(Y)_{\mathbb Q}\), and one checks at once that this is indeed the required equality.
+
+\sgaStableTarget{sga6.e08.lem.3-8}\textbf{Lemma 3.8.} \uline{Let} \(f:X\to Y\), \uline{and} \(g:Y\to Z\) \uline{be two morphisms satisfying the hypotheses of} 3.6. \uline{Then} \(g\circ f\) \uline{also satisfies them}. \uline{If} \(x\) \uline{is an element of} \(K^{\bullet}(X)\), \uline{and if} 3.6 \uline{holds for} \(f\) \uline{and the element} \(x\), \uline{and for} \(g\) \uline{and the element} \(f_*(x)\), \uline{then it holds for} \(g\circ f\) \uline{and the element} \(x\).
+
+By hypothesis, we have:
+\sgaStableTarget{sga6.e08.eq.3-8-1}\begin{equation}\tag{3.8.1}
+ \ch(f_*(x))=
+ f_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_f)\bigr),
+\end{equation}
+and:
+\sgaStableTarget{sga6.e08.eq.3-8-2}\begin{equation}\tag{3.8.2}
+ \ch(g_*(f_*(x)))=
+ g_{\mathrm{gr}}\bigl(\ch(f_*(x))\cdot\Todd(\check T_g)\bigr).
+\end{equation}
+
+Combining (3.8.1) and (3.8.2), we obtain:
+\[
+\ch(g_*(f_*(x)))=
+g_{\mathrm{gr}}\!\left(
+ f_{\mathrm{gr}}\bigl(\ch(x)\Todd(\check T_f)\bigr)\cdot \Todd(\check T_g)
+\right).
+\]
+
+%%%%%%%%%%  scan idx 500  |  folio 487  %%%%%%%%%%
+\SGAPrintPage{487}%
+Applying
+3.7, we find:
+\[
+\ch(g_*(f_*(x)))=
+g_{\mathrm{gr}}\!\left(
+ f_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_f)\cdot
+ f^{\mathrm{gr}}(\Todd(\check T_g))\bigr)
+\right).
+\]
+The functoriality of \(c\) and of \(\Todd\) implies:
+\[
+ f^{\mathrm{gr}}(\Todd(\check T_g))=\Todd(f^*(\check T_g)).
+\]
+By 2.7, we have:
+\[
+ \check T_{g\circ f}=\check T_f+f^*(\check T_g).
+\]
+The multiplicativity of the Todd character therefore implies:
+\[
+ \Todd(\check T_f)\cdot f^{\mathrm{gr}}(\Todd(\check T_g))
+ =
+ \Todd(\check T_{g\circ f}).
+\]
+Thus finally we obtain:
+\[
+ \ch(g_*(f_*(x)))=
+ g_{\mathrm{gr}}\bigl(f_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_{g\circ f})\bigr)\bigr),
+\]
+which is the announced result.
+
+\sgaStableTarget{sga6.e08.para.3-9}\textbf{3.9.} Applying 3.8 to the factorization of \(f\) given in 3.1, one sees that, to prove the Riemann--Roch theorem, it suffices to prove it in the case of a regular immersion of constant codimension, and in the case of the structural morphism: $\mathbf{P}^r_Y\longrightarrow Y$.
+
+Furthermore, one may suppose that the immersion \(i\) satisfies the condition of VII 4.1. Indeed, let \(s\) be the section of \(\mathbf{P}^2_{\mathbf{P}^r_Y}\) introduced in VII 4.2. Then \(s\circ i\) is a regular immersion satisfying the condition of VII 4.1 (VII 4.2), and by 3.8 it suffices to prove 3.6 for \(s\circ i\), \(\mathbf{P}^2_{\mathbf{P}^r_Y}\longrightarrow\mathbf{P}^r_Y\) and \(\mathbf{P}^r_Y\longrightarrow Y\).
+
+We shall therefore prove 3.6 by proving the following two special cases:
+\begin{enumerate}[label=\roman*)]
+\item \(f\) is a regular immersion of constant codimension, satisfying the condition of VII 4.1;
+
+%%%%%%%%%%  scan idx 501  |  folio 488  %%%%%%%%%%
+\SGAPrintPage{488}%
+\item \(f\) is the
+structural morphism \(\mathbf{P}^r_Y\to Y\).
+\end{enumerate}
+
+\sgaStableTarget{sga6.e08.sec.4}\section*{4. Riemann--Roch theorem: case of a regular closed immersion}
+
+\sgaStableTarget{sga6.e08.para.4-1}\textbf{4.1.} Let \(i:Y\to X\) be a regular closed immersion. The Riemann--Roch theorem for \(i\) is essentially relation VII 4.4, which makes it possible to compute the Chern classes of \(i_*(x)\) from the \(\gamma^p(N,x)\). More precisely, if one introduces the \(\lambda\)-ring \(K^{\bullet}(Y)_{\mathbb Q N}\) defined in V 5.5, then the homomorphism from \(K^{\bullet}(Y)_{\mathbb Q N}\) to \(K^{\bullet}(X)_{\mathbb Q}\) obtained from \(i_*\) is a \(\lambda\)-homomorphism by VII 2.8 and VII 4.3. The Riemann--Roch theorem then reduces to an analogous formula concerning the (additive) homomorphism \(K^{\bullet}(Y)\longrightarrow K^{\bullet}(Y)_{\mathbb Q N}\) defined by \(y\rightsquigarrow(0,y)\), that is, to a formal relation valid for every \(\lambda\)-ring. We shall not develop this proof here, in order to avoid still more formalism on \(\lambda\)-rings (cf. \(\RRR\) I 1.5), and shall return to the method of [1], which used blow-up schemes (a method already used in the proof of VII 4.3, and which is also that of the end of \(\RRR\)).
+
+As indicated in 3.9, one may restrict to the case of a regular immersion of constant codimension \(d\) satisfying the condition of VII 4.1, the case of a general regular immersion then following from 3.8. In this section we return to the notation of VII 3.1. We thus have the cartesian square:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+Y' \arrow[r,"j"] \arrow[d,"g"'] & X' \arrow[d,"f"]\\
+Y \arrow[r,"i"] & X ,
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 502  |  folio 489  %%%%%%%%%%
+\SGAPrintPage{489}%
+where \(X'\) is the \(X\)-scheme
+obtained by blowing up \(Y\). We suppose in addition that \(X\) is quasi-compact and has an ample sheaf.
+
+\sgaStableTarget{sga6.e08.prop.4-2}\textbf{Proposition 4.2.} \uline{The morphism} \(f\) \uline{is projective}, \uline{a complete intersection}, \uline{and of virtual relative dimension zero}. \uline{We also have the relation}:
+\[
+ f_{\mathrm{gr}}\circ f^{\mathrm{gr}}=\operatorname{Id}_{\Gr K^{\bullet}(X)_{\mathbb Q}} .
+\]
+
+The first assertion follows immediately from (VII 1.8).
+
+The second relation follows from the relation:
+\[
+ f_*\circ f^*=\operatorname{Id}_{K^{\bullet}(X)},
+\]
+proved in (VII 3.6).
+
+\sgaStableTarget{sga6.e08.prop.4-3}\textbf{Proposition 4.3.} \uline{For every} \(y\in \Gr K^{\bullet}(Y)_{\mathbb Q}\), \uline{we have the relation}:
+\[
+ f^{\mathrm{gr}}\circ i_{\mathrm{gr}}(y)
+ =
+ j_{\mathrm{gr}}\bigl(g^{\mathrm{gr}}(y)\cdot c^{d-1}(\check F)\bigr),
+\]
+\uline{where} \(c^{d-1}\) \uline{denotes the} \((d-1)\)-\uline{th Chern class}.
+
+This relation is contained in VII 4.8, since it is precisely \(v^{\mathrm{gr}}\circ u^{\mathrm{gr}}=0\).
+
+\sgaStableTarget{sga6.e08.prop.4-4}\textbf{Proposition 4.4.} \uline{Let} \(X\) \uline{be a quasi-compact scheme}. \uline{If} \(\underline{E}\) \uline{is a locally free sheaf of finite type on} \(X\), \uline{of class} \(E\) \uline{in} \(K^{\bullet}(X)\), \uline{and of rank} \(n\), \uline{we have}:
+\[
+ \ch(\lambda_{-1}(E))=c^n(\check E)(\Todd(\check E))^{-1}.
+\]
+
+The two sides of the relation to be proved are multiplicative: this is clear for \(\ch\circ\lambda_{-1}\), and for \(\Todd\); it also holds for \(c^n\), which is the class of \((-1)^{\varepsilon(E)}\lambda_{-1}(E)\). Consequently, by passing to the flag bundle of \(\underline{E}\), one may suppose that \(E\) is a sum of classes of invertible sheaves, and reduce to proving the formula for an invertible sheaf. Let
+
+%%%%%%%%%%  scan idx 503  |  folio 490  %%%%%%%%%%
+\SGAPrintPage{490}%
+\(\xi\) be the class of such a sheaf. We then have:
+\[
+ \ch(\lambda_{-1}(\xi))=\ch(1-\xi)=1-\ch(\xi).
+\]
+Since \(\widetilde c(\xi)=(1,1+c^1(\xi))\), the definition of \(\ch\) gives:
+\[
+ \ch(\lambda_{-1}(\xi))=1-\exp(c^1(\xi)).
+\]
+
+Furthermore, \(\xi\) has augmentation \(1\); the Chern class occurring in formula 4.4 for \(\xi\) is therefore \(c^1\). Taking into account the definition of \(\Todd\), and 3.5, the relation to be proved is written:
+\[
+ 1-\exp(c^1(\xi))
+ =
+ -c^1(\xi)\cdot\left(\frac{-c^1(\xi)}{1-\exp(c^1(\xi))}\right)^{-1},
+\]
+and is therefore verified.
+
+\sgaStableTarget{sga6.e08.rem.4-4-1}\textbf{Remark 4.4.1.} It is also possible to deduce 4.4 from a corresponding purely algebraic statement, cf. \(\RRR\) I 1.3.
+
+\sgaStableTarget{sga6.e08.para.4-5}\textbf{4.5.} We shall now show that, to prove the Riemann--Roch theorem in the case considered in this section, one may reduce to the case where \(Y\) is a divisor of \(X\), and where the element to which the formula applies is the inverse image of an element of \(K^{\bullet}(X)\).
+
+By 4.2, the formula to be proved:
+\[
+ \ch(i_*(x))=
+ i_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_i)\bigr)
+\]
+is equivalent to the formula:
+\[
+ f^{\mathrm{gr}}\bigl(\ch(i_*(x))\bigr)
+ =
+ f^{\mathrm{gr}}\circ i_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_i)\bigr).
+\]
+Taking into account the functoriality of \(\ch\), and 4.3, it may also be written:
+\[
+ \ch\bigl(f^*(i_*(x))\bigr)
+ =
+ j_{\mathrm{gr}}\bigl(g^{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_i)\bigr)\cdot c^{d-1}(\check F)\bigr),
+\]
+or, by VII 3.4:
+\[
+ \ch\bigl(j_*(g^*(x)\cdot\lambda_{-1}(F))\bigr)
+ =
+ j_{\mathrm{gr}}\bigl(\ch(g^*(x))\cdot\Todd(g^*(\check T_i))\cdot c^{d-1}(\check F)\bigr).
+\]

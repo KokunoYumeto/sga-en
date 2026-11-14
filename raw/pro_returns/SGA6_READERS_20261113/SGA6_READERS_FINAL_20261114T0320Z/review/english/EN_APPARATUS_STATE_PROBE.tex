@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath}
+\newcommand{\Ob}{\operatorname{ob}}
+\newcommand{\Cart}{\underline{\operatorname{Cart}}}
+\newcommand{\Alias}[1]{\Ob(#1)}
+\expandafter\def\csname SGACapture@EN-STATE-PROBE\endcsname{%
+\global\expandafter\let\csname SGAState@EN-STATE-PROBE@Alias\endcsname\Alias%
+\global\expandafter\let\csname SGAState@EN-STATE-PROBE@Cart\endcsname\Cart%
+\global\expandafter\let\csname SGAState@EN-STATE-PROBE@Ob\endcsname\Ob%
+}
+\expandafter\def\csname SGARestore@EN-STATE-PROBE\endcsname{%
+\expandafter\let\expandafter\Alias\csname SGAState@EN-STATE-PROBE@Alias\endcsname%
+\expandafter\let\expandafter\Cart\csname SGAState@EN-STATE-PROBE@Cart\endcsname%
+\expandafter\let\expandafter\Ob\csname SGAState@EN-STATE-PROBE@Ob\endcsname%
+}
+
+\let\ExpectedOb\Ob
+\let\ExpectedCart\Cart
+\let\ExpectedAlias\Alias
+\begin{document}
+Body: \(\csname SGACapture@EN-STATE-PROBE\endcsname\Alias{X}+\Cart\).
+\renewcommand{\Ob}{\operatorname{Ob}}
+\renewcommand{\Cart}{\operatorname{Cart}}
+\renewcommand{\Alias}[1]{\operatorname{Later}(#1)}
+\let\LaterOb\Ob
+\let\LaterCart\Cart
+\let\LaterAlias\Alias
+Later: \(\Alias{X}+\Cart\).
+\par\noindent\begin{minipage}{\linewidth}
+\csname SGARestore@EN-STATE-PROBE\endcsname
+\ifx\Ob\ExpectedOb\else\errmessage{STATE Ob mismatch}\fi
+\ifx\Cart\ExpectedCart\else\errmessage{STATE Cart mismatch}\fi
+\ifx\Alias\ExpectedAlias\else\errmessage{STATE Alias mismatch}\fi
+Restored: \(\Alias{X}+\Cart\).
+\end{minipage}
+\ifx\Ob\LaterOb\else\errmessage{STATE restore leaked Ob}\fi
+\ifx\Cart\LaterCart\else\errmessage{STATE restore leaked Cart}\fi
+\ifx\Alias\LaterAlias\else\errmessage{STATE restore leaked Alias}\fi
+\typeout{EN-STATE-PROBE PASS: direct meanings, dependency closure, math-mode capture and minipage-local restoration}
+\end{document}

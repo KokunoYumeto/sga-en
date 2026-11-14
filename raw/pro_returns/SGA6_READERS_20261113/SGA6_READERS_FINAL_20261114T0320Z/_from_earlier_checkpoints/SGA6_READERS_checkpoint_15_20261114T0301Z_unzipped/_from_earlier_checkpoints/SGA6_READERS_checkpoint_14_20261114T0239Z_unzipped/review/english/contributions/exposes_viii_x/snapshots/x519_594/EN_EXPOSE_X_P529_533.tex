@@ -1,0 +1,119 @@
+%%%%%%%%%%  scan idx 542  |  folio 529  %%%%%%%%%%
+\SGAPrintPage{529}%
+
+\[
+\dimdot\underline{O}_{S,y'}-\dimdot\underline{O}_{S,x'}=\dimdot\underline{O}_{Z,y'}-\dimdot\underline{O}_{Z,x'}
+\]
+(EGA $0_{IV}$ 14.3.2.1), whence
+\sgaStableTarget{sga6.e10.eq.1-5-4}\begin{equation}\tag{1.5.4}
+D_Y(x)-D_Y(y)=
+[\dimdot\underline{O}_{Z,y'}-\degtr_{k(y')}k(y)]-[\dimdot\underline{O}_{Z,x'}-\degtr_{\underline{k}(x')}\underline{k}(x)].
+\end{equation}
+Since $Z$ is universally catenary, (EGA IV 5.6.5.1.) applies and gives
+\[
+C_1=\dimdot\underline{O}_{Y,y}-e,\qquad C_2=\dimdot\underline{O}_{Y,x}-e,
+\]
+where $C_1$ and $C_2$ are the two terms on the right in (1.5.4). Then (1.5.4) immediately gives
+\[
+D_Y(x)-D_Y(y)=\dimdot\underline{O}_{Y,y}-\dimdot\underline{O}_{Y,x}>0,\qquad \text{Q.E.D.}
+\]
+
+Thus (1.3.2) and (1.3.3) remain valid for a noetherian universally catenary scheme $X$ of dimension $n$ when the filtration of $K_\bullet(X)$ is defined by means of (1.5.1) according to the \emph{codimension} of supports. Observe that this filtration coincides with that of (1.1.1) when, in addition, $X$ is \emph{biequidimensional}.
+
+\sgaStableTarget{sga6.e10.sec.1.6}\subsection*{1.6.}
+One may ask whether it is always possible to define, on a noetherian scheme $X$ of finite dimension, a function $D$ having property (i) of 1.4 and also the following property, stronger than (ii):
+\begin{quote}
+(ii bis) If $x\in X$ and $y\ne x$ is an immediate specialization of $x$, then $D(x)=D(y)+1$.
+\end{quote}
+
+
+%%%%%%%%%%  scan idx 543  |  folio 530  %%%%%%%%%%
+\SGAPrintPage{530}%
+
+For this it is clearly necessary that $X$ be catenary, and sufficient that $X$ be biequidimensional (EGA $0_{IV}$ 14.3.3). Nevertheless, there exist noetherian schemes of finite dimension, catenary and equidimensional, having no such functions $D$. To see this, one can modify the example (EGA IV 5.6.11) as follows: take two copies $Y_1$ and $Y_2$ of the spectrum of the ring $E$ of loc. cit., and denote by $y_i$ and $z_i$ ($i=1,2$) the closed points of $Y_i$ ($i=1,2$) corresponding to the maximal ideals $\underline{m}$ and $\underline{m}'$ of $E$, of heights $2$ and $1$ respectively. Recall that the residue fields of $\underline{m}$ and $\underline{m}'$ are isomorphic. Thus one can construct a scheme $X$ by gluing $Y_1$ and $Y_2$, identifying $y_1$ with $z_2$ and $y_2$ with $z_1$. One can then identify $Y_1$ and $Y_2$ with the two irreducible components of $X$, and then, inside $X$, $Y_1\cap Y_2=\{y_1,y_2\}$ has dimension zero. Thus $X$ is a noetherian, catenary and equidimensional scheme (of dimension $2$). If (ii bis) held on $X$, one would have
+\[
+D(y_1)=D(z_1)-1=D(y_2)-1
+\]
+and, on the other hand,
+\[
+D(y_1)=D(z_2)=D(y_2)+1,
+\]
+giving a contradiction.
+
+
+%%%%%%%%%%  scan idx 544  |  folio 531  %%%%%%%%%%
+\SGAPrintPage{531}%
+
+\sgaStableTarget{sga6.e10.sec.2}\section*{2. Snapper polynomials}
+
+\sgaStableTarget{sga6.e10.sec.2.1}\subsection*{2.1.}
+First recall the definition and some elementary properties of polynomial maps:
+
+\sgaStableTarget{sga6.e10.def.2-1-1}\textbf{Definition 2.1.1.} \uline{Let} $f$ \uline{be a map from an abelian group} $A$ \uline{to an abelian group} $B$\uline{. We say that} $f$ \uline{is a} polynomial map \uline{when, for every sequence} $x_1,\ldots,x_r$ ($r\geq1$\uline{) of elements of} $A$\uline{, there is a family} $(y(x_1,\ldots,x_r;k_1,\ldots,k_r))_{k_1,\ldots,k_r\geq0}$ \uline{of elements of} $B$\uline{, almost all zero, satisfying the following condition: For every sequence} $n_1,\ldots,n_r$ \uline{of integers, one has}
+\[
+f(n_1x_1+\cdots+n_rx_r)=
+\sum_{k_1,\ldots,k_r\geq0}(n_1^{k_1}\cdots n_r^{k_r})
+y(x_1,\ldots,x_r;k_1,\ldots,k_r).
+\]
+\uline{We say that} $f$ \uline{has degree} $\leq m$ \uline{when, for all} $r\in\mathbb Z$ \uline{and} $x_1,\ldots,x_r\in A$\uline{, one has}
+\[
+y(x_1,\ldots,x_r;k_1,\ldots,k_r)=0
+\]
+\uline{for} $k_1+\cdots+k_r>m$.
+
+\sgaStableTarget{sga6.e10.lem.2-1-2}\textbf{Lemma 2.1.2.} \uline{Every homomorphism of abelian groups is a polynomial map of degree} $\leq1$\uline{. If} $h=f\circ g$\uline{, where} $f$ \uline{is a polynomial map of degree} $p$ \uline{and} $g$ \uline{a polynomial map of degree} $q$\uline{, then} $h$ \uline{is a polynomial map of degree} $\leq pq$.
+
+The proof is trivial.
+
+\sgaStableTarget{sga6.e10.lem.2-1-3}\textbf{Lemma 2.1.3.} \uline{Let}
+\[
+0\longrightarrow G'\longrightarrow G\xrightarrow{j}G''\longrightarrow0
+\]
+\uline{be an exact sequence of abelian groups such that} $G'$ \uline{is divisible by}
+
+
+%%%%%%%%%%  scan idx 545  |  folio 532  %%%%%%%%%%
+\SGAPrintPage{532}%
+
+\uline{a prime number} $p$ \uline{and} $G''$ \uline{is a torsion group. Then every polynomial map} $f:G\to\mathbb Q$ \uline{that factors through} $\mathbb Z$ \uline{is constant.}
+
+\emph{Proof}: We must show that for every $x\in G$ one has $f(x)=f(0)$.
+
+a) First suppose that $x$ is a torsion element, say $mx=0$ ($m\in Z$, $m\ne0$). Then the polynomial $P_x(n)=f(nx)-f(0)$ has infinitely many roots, namely all integers divisible by $m$. Thus the polynomial $P_x$ is identically zero, and one has $f(x)=f(0)$.
+
+b) Now suppose that $x$ is an element of infinite order in $G$ divisible by every power $p^k$ ($k\in\mathbb Z$). Consider the polynomials $P_k$ defined by
+\[
+P_k(n)=f(nx/p^k)=\sum_{i\in\mathbb N}n^iy(x/p^k;i)\in\mathbb Z
+\qquad(n\in\mathbb Z;\ y(x/p^k,i)\in\mathbb Q).
+\]
+For every $n\in\mathbb Z$ one has the identity
+\[
+P_k(n)=P_{k+1}(pn)
+\]
+i.e.
+\[
+\sum_{i\in\mathbb N}n^iy(x/p^k;i)=\sum_{i\in\mathbb N}p^in^iy(x/p^{k+1};i),
+\]
+from which comparison of coefficients gives
+\[
+y(x/p^k;i)=p^iy(x/p^{k+1};i)\qquad(i\in\mathbb N).
+\]
+
+
+%%%%%%%%%%  scan idx 546  |  folio 533  %%%%%%%%%%
+\SGAPrintPage{533}%
+
+But every polynomial $P:Q\to\mathbb Q$ is continuous for the topology induced by $\mathbb R$. Thus for sufficiently large $k$ one has
+\[
+|P_x(n/p^k)-P_x(0)|<1.
+\]
+By definition, however, $P_x(n/p^k)$ is an integer for every $n,k\in\mathbb Z$. It follows that $P_x(n/p^k)-P_x(0)=0$ for sufficiently large $k$. Thus the polynomial $P_x$ is constant, and in particular one obtains $P_x(1)=P_x(0)$, i.e. $f(x)=f(0)$.
+
+The two cases a) and b) above show that the restriction of $f$ to $G'$ is constant. We shall now show that $f$ is constant on each coset in $G$ modulo $G'$. For every $b\in G$, denote by $g_b:G'\to\underline{Q}$ the map defined by
+\[
+g_b(y)=f(b+y)\qquad(y\in G').
+\]
+The map $g_b$ is a polynomial map from $G'$ to $\mathbb Q$ that factors through $\mathbb Z$, hence is constant by the preceding argument, whence the assertion that $f$ is constant on the cosets in $G$ modulo $G'$. It follows that one can write $f=h\circ j$, where $h:G''\to\mathbb Q$ is a polynomial map that factors through $\mathbb Z$. But by hypothesis $G''$ is a torsion group, so $h$ is constant. Thus $f$ is constant, Q.E.D.
+
+\sgaStableTarget{sga6.e10.lem.2-1-4}\textbf{Lemma 2.1.4.} \uline{Let} $A$ \uline{be a unital commutative ring and} $I$ \uline{a nilpotent ideal of} $A$\uline{. Let} $P$ \uline{be the multiplicative subgroup of} $A^*$ \uline{consisting of the invertible elements of} $A$ \uline{of the form} $x=1+y$ \uline{with} $y\in I$\uline{, and let} $i:P\to A$ \uline{be the natural injection. Then the composite map}
+

@@ -1,0 +1,30 @@
+{
+  "id": "EN-INDEPENDENT-III-3.5-244-245",
+  "status": "independent proof audit supplied to coordinator; no source replacement proposed or applied",
+  "source_packets": {
+    "231": "78db2bc2bdb938e372cb0cf941e8ad55878044338b084dcb8404e588a9de0463",
+    "241": "f4c0101079a38c00dec45d96a05cc39421986b8d45c80f18156a69da37ecc984",
+    "242": "7d23320767378e8d53f97bd4b9dae3db2f8981d107dbc1001615ee5cf428441c",
+    "244": "a58aac61ad13245172c64493aeebbd7bff3e0a9a958e43c43b8149d7f2e27f34",
+    "245": "92784d6964121e8febfd617da17dde40455cccb3fd11b9b0e7dfab2390cb97be"
+  },
+  "source_scan_status": "Coordinator directly viewed primary244. This independent audit reads the supplied exact TeX packets and tests the stated mathematics; it does not claim a fresh scan reading.",
+  "claim_a_counterexample": {
+    "data": "Fix a prime p. S=Spec Z; X1=Y1=Spec F_p; X2=Y2=S; f1=id, f2=id; E1=O_X1 in degree0; E2=the sheaf associated with Z/p in degree0; [a1,b1]=[a2,b2]=[0,0].",
+    "hypotheses": "Each required scheme pair is (Spec F_p,Spec Z), whose second factor is S. Tensoring over Z with Z is the identity functor, so all positive Tor groups vanish. The complexes are bounded above. Under f1=id, E1 is a free rank-one module over its own structure sheaf, so its relative Tor amplitude is [0,0]. E2 has only H0.",
+    "external_tensor_identification": "X=X1×_S X2=Spec F_p. Under the canonical identification, pr1=id and pr2 corresponds to Z→F_p. Definition1.6 gives Lpr1*(E1)⊗^L_OX Lpr2*(E2). The left term is O_X, and the unit multiplication map identifies this tensor with Lpr2*(E2).",
+    "resolution_and_maps": "The complex P=[Z --p→ Z] in degrees−1,0 has an augmentation P→Z/p given in degree0 by quotient and zero elsewhere. Multiplication by p is injective, and its cokernel is Z/p, so this augmentation is a quasi-isomorphism. Both terms are free. Pullback gives F_p⊗_Z P=[F_p --0→ F_p].",
+    "cohomology": "H−1=ker(0)=F_p and H0=coker(0)=F_p. Thus the external derived tensor is not acyclic outside the printed summed interval[0,0].",
+    "exact_failure_in_proof": "At the relevant points C=B2=A2=Z_(p) and B1=A1=A=B=F_p. The intermediate B⊗^L_B2 M2 is already [F_p --0→ F_p]. Flatness of M1 as a B1-module does not remove this degree−1 cohomology.",
+    "scope": "This disproves3.5(a) as printed. It does not disprove3.5(b): for f2=id_S the same E2 has relative Tor amplitude[−1,0], and the product is an object of that summed amplitude. No assertion about all cases of(b) is deduced from this example."
+  },
+  "local_ring_identification": {
+    "exact_map": "For x in X1×_S X2 over x1,x2,s, the canonical map O_X1,x1⊗_{O_S,s}O_X2,x2→O_X,x becomes an isomorphism after localization at the inverse image q of the maximal ideal of O_X,x. On affine charts this is the map (R1⊗_R R2) localized first at the elements from R1\\p1 and R2\\p2 and then at q; these elements are already invertible in (R1⊗_R R2)_p, proving the stated localization identification.",
+    "counterexample": "Take k=Q, S=Spec k, X1=X2=A1_k, and x the generic point of the diagonal u=t. Its two projections are generic points. Set R=k(t)⊗_k k(u), a localization of k[t,u] obtained by inverting all nonzero one-variable polynomials. The ideals q0=(u−t)R and q1=(u−t−1)R are distinct maximal ideals: the evaluation maps u↦t and u↦t+1 have quotient field k(t), and every inverted one-variable polynomial has a nonzero image.",
+    "failure_and_actual_morphism": "The stalk O_X,x is R_q0. The element u−t−1 belongs to q1 and is not a unit of R; it is outside q0 and is a unit of R_q0. Therefore the canonical localization R→R_q0 is not an isomorphism. This proves concretely that the printed unlocalized equality A=A1⊗_C A2 fails.",
+    "B_equality": "Taking Y1=X1,Y2=X2 and f1,f2 identities produces the identical defect for B=B1⊗_C B2.",
+    "derived_identity": "For the same X1,X2 and x, instead take Y1=Y2=S and both f_i the structural maps. All required pairs are Tor-independent because the base is a field. Then B1=B2=B=k, so A1⊗^L_B1 B⊗^L_B2 A2=R in degree0, whereas A=R_q0. The displayed derived identity also lacks the final localization. The explicit comparison is the same localization map R→R_q0."
+  },
+  "editorial_handling": "Preserve the printed statement, proof and stalk equations in both French layers and both English branches. Record the demonstrated failures and exact comparison maps. The calculations supply no unique source-supported replacement text, so no new hypothesis or repaired theorem is inserted.",
+  "coordinator_scan_status": "Primary244–245 and native witness255–256 personally read in full; the printed assumptions, conclusion, stalk equations and proof agree with the tested passages."
+}

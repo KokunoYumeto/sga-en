@@ -1,0 +1,160 @@
+%%%%%%%%%%  scan idx 494  |  folio 481  %%%%%%%%%%
+\SGAPrintPage{481}%
+Applying
+$i^*\circ j'^*$ gives the exact sequence:
+\[
+0\longrightarrow (p''\circ j'\circ i)^*(\underline{\Omega}^1_{V'/Z})\longrightarrow (j'\circ i)^*(\underline{\Omega}^1_{V''/Z})\longrightarrow (j'\circ i)^*(\underline{\Omega}^1_{V''/V'})\longrightarrow0.
+\]
+Since $j'^*(\underline{\Omega}^1_{V''/V'})=\underline{\Omega}^1_{V/Y}$ by hypothesis (G), we obtain:
+\sgaStableTarget{sga6.e08.eq.2-6-2}\begin{equation}\tag{2.6.2}
+0\longrightarrow f^*(j^*(\underline{\Omega}^1_{V'/Z}))\longrightarrow (j'\circ i)^*(\underline{\Omega}^1_{V''/Z})\longrightarrow i^*(\underline{\Omega}^1_{V/Y})\longrightarrow0.
+\end{equation}
+
+Combining (2.6.1) and (2.6.2), we are reduced to checking that the diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r] & f^*(\underline{J}/\underline{J}^2) \arrow[r] \arrow[d,"f^*(d)"'] & \underline{K}/\underline{K}^2 \arrow[r] \arrow[d,"d"'] & \underline{I}/\underline{I}^2 \arrow[r] \arrow[d,"d"'] & 0\\
+0 \arrow[r] & f^*(j^*(\underline{\Omega}^1_{V'/Z})) \arrow[r] & (j'\circ i)^*(\underline{\Omega}^1_{V''/Z}) \arrow[r] & i^*(\underline{\Omega}^1_{V/Y}) \arrow[r] & 0
+\end{tikzcd}
+\]
+is commutative, which is done locally without difficulty by returning to the definitions of the morphisms involved.
+
+From the resulting exact sequence of complexes, one deduces the announced distinguished triangle in the derived category.
+
+\sgaStableTarget{sga6.e08.cor.2-7}\textbf{Corollary 2.7.} \uline{With the notation and hypotheses of} 2.6, \uline{we have in} $K^{\bullet}(X)$ \uline{the following equality}:
+\[
+T_{g\circ f}=T_f+f^*(T_g).
+\]
+
+\sgaStableTarget{sga6.e08.sec.3}\subsection*{3. Riemann--Roch theorem: statement}
+
+\sgaStableTarget{sga6.e08.para.3-1}\textbf{3.1.} In section 3, $Y$ is a quasi-compact scheme having an ample sheaf.
+
+Let $f:X\to Y$ be a projective complete-intersection morphism (1.1); suppose in addition that the virtual relative dimension of $f$ (1.9)
+
+%%%%%%%%%%  scan idx 495  |  folio 482  %%%%%%%%%%
+\SGAPrintPage{482}%
+is constant on $X$. Since $f$ is projective, there exists a closed immersion $X\to P$, where $P$ is a projective bundle over $Y$, and since $Y$ has an ample sheaf, one may suppose that $P=\mathbf{P}^r_Y$. We thus have a factorization:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X \arrow[rr,"i"] \arrow[dr,"f"'] && \mathbf{P}^r_Y \arrow[dl,"g"]\\
+& Y. &
+\end{tikzcd}
+\]
+Since $f$ is a complete intersection, the immersion $i$ is regular (1.2).
+
+By 1.7, $f$ is a perfect morphism. Moreover, $Y$ has an ample sheaf, and consequently so do $X$ and $P$. One can then define an additive homomorphism:
+\[
+f_*:K^{\bullet}(X)\longrightarrow K^{\bullet}(Y)
+\]
+(IV 2.12), the $K^{\bullet}$ defined in terms of locally free sheaves of finite type, or of perfect complexes, being identical. One can also define additive homomorphisms:
+\[
+i_*:K^{\bullet}(X)\longrightarrow K^{\bullet}(P);
+\qquad
+ g_*:K^{\bullet}(P)\longrightarrow K^{\bullet}(Y),
+\]
+and we have: $f_*=g_*\circ i_*$.
+
+Let $d$ be the virtual relative dimension of $X$ over $Y$. The codimension of $i$ is then $r-d$. By VII 4.6, the homomorphism $i_*$ gives, after tensoring with $\mathbb Q$, inclusions:
+\[
+i_*\bigl(\Fil^kK^{\bullet}(X)_{\mathbb Q}\bigr)
+\subset
+\Fil^{k+r-d}K^{\bullet}(P)_{\mathbb Q}.
+\]
+By VI 5.8, the homomorphism $g_*$ gives inclusions:
+\[
+g_*\bigl(\Fil^{k'}K^{\bullet}(P)\bigr)
+\subset
+\Fil^{k'-r}K^{\bullet}(Y).
+\]
+Composing the two, we thus obtain:
+
+%%%%%%%%%%  scan idx 496  |  folio 483  %%%%%%%%%%
+\SGAPrintPage{483}%
+\sgaStableTarget{sga6.e08.prop.3-2}\textbf{Proposition 3.2.} \uline{Let} $f:X\to Y$ \uline{be a projective morphism}, \uline{a complete intersection}, \uline{whose virtual relative dimension} $d$ \uline{is constant}. \uline{Suppose that} $Y$ \uline{is quasi-compact}, \uline{and has an ample sheaf}. \uline{Then for every} $k\in\mathbb Z$ \uline{we have}:
+\[
+f_*\bigl(\Fil^kK^{\bullet}(X)_{\mathbb Q}\bigr)
+\subset
+\Fil^{k-d}K^{\bullet}(Y)_{\mathbb Q}.
+\]
+
+We thus obtain, in particular, an additive homomorphism:
+\[
+f_{\mathrm{gr}}:\Gr K^{\bullet}(X)_{\mathbb Q}\longrightarrow
+\Gr K^{\bullet}(Y)_{\mathbb Q}
+\]
+sending $\Gr^kK^{\bullet}(X)_{\mathbb Q}$ into $\Gr^{k-d}K^{\bullet}(Y)_{\mathbb Q}$.
+
+\sgaStableTarget{sga6.e08.para.3-3}\textbf{3.3.} Recall that in (V 6.1) we defined a functor $A\longmapsto \operatorname{Ch}(A)$ on the category of graded $K$-algebras, with values in the category of augmented $K$-$\lambda$-algebras, where $K$ is a binomial ring (V 2.7). If $A$ is a graded $K$-algebra, we have:
+\[
+\operatorname{Ch}(A)=K\times(1+\widehat A^+).
+\]
+
+For every augmented $K$-$\lambda$-algebra $\Lambda$, we defined a $K$-$\lambda$-homomorphism, called the ``completed Chern class'' (V 6.7):
+\[
+\widetilde c=(\varepsilon,c):\Lambda\longrightarrow\operatorname{Ch}(\Gr_{\lambda}\Lambda).
+\]
+
+Finally, we defined a ring homomorphism, functorial in $A$, called the Chern character (V 6.4):
+\[
+\ch:\operatorname{Ch}(A)\longrightarrow K\oplus\widehat A^+_{\mathbb Q},
+\]
+and a group endomorphism, called the Todd character (V 1.16):
+\[
+\Todd:1+\widehat A^+\longrightarrow1+\widehat A^+.
+\]
+
+%%%%%%%%%%  scan idx 497  |  folio 484  %%%%%%%%%%
+\SGAPrintPage{484}%
+We shall apply these definitions to the augmented $\lambda$-rings $K^{\bullet}(X)$ and $K^{\bullet}(Y)$, the augmentation rings $H^0(X,\underline{\mathbb Z})$ and $H^0(Y,\underline{\mathbb Z})$ being binomial (V 2.8). To simplify notation, we shall put, for every scheme $Z$ and every $z\in K^{\bullet}(Z)$:
+\[
+\ch(z)=\ch(\widetilde c(z));
+\qquad
+\Todd(z)=\Todd(c(z)).
+\]
+For every graded algebra $A$, we shall regard the group $1+\widehat A^+$ as contained in $\widehat A$. Finally, given a homomorphism $f:A\to B$ which is additive and compatible with the gradings up to a shift, we shall still denote by $f$ the homomorphism $\widehat A\to\widehat B$ obtained from it.
+
+\sgaStableTarget{sga6.e08.para.3-4}\textbf{3.4.} Let $X$ be a scheme. For every locally free $\underline{O}_X$-Module of finite type $\underline{E}$, denote by $\check E$ the class in $K^{\bullet}(X)$ of the dual $\underline{\check E}$ of $\underline{E}$. It is clear that the function associating $\check E$ to $\underline{E}$ is additive on the category of locally free $\underline{O}_X$-Modules of finite type, and therefore defines an endomorphism of $K^{\bullet}(X)$, which we shall denote by $x\rightsquigarrow\check x$.
+
+\sgaStableTarget{sga6.e08.prop.3-5}\textbf{Proposition 3.5.} \uline{Let} $X$ \uline{be a quasi-compact scheme}. \uline{Then for every} $x\in K^{\bullet}(X)$ \uline{and every} $i\geq0$, \uline{we have}:
+\[
+c^i(\check x)=(-1)^i c^i(x).
+\]
+
+The relation to be proved may also be written:
+\[
+c_t(\check x)=c_{-t}(x),
+\]
+where we put: $c_t(x)=\sum_{i\geq0}c^i(x)t^i$.
+
+By additivity, one may therefore suppose that $x$ is the class of a locally free $\underline{O}_X$-Module of finite type $\underline{E}$. Moreover, after replacing $X$ by the flag scheme of $\underline{E}$, which gives an injection on the
+
+%%%%%%%%%%  scan idx 498  |  folio 485  %%%%%%%%%%
+\SGAPrintPage{485}%
+$\Gr K^{\bullet}$ (VI 5.5), one
+may suppose that $\underline{E}$ is an invertible sheaf. We then have: $\underline{\check E}=\underline{E}^{-1}$; hence $\check x=x^{-1}$.
+
+The $c^i(\check x)$, $c^j(x)$ vanish for $i,j\geq2$. It therefore suffices to show that $c^1(x^{-1})=-c^1(x)$. Now $c^1(x)$ is the class in $\Gr^1K^{\bullet}(X)$ of $x-1$, and $c^1(x^{-1})$ that of $x^{-1}-1$. The equality:
+\[
+x^{-1}-1=1-x+(x-1)(1-x^{-1})
+\]
+gives:
+\[
+x^{-1}-1\equiv1-x\qquad\mathrm{mod.}\ \Fil^2K^{\bullet}(X);
+\]
+the result follows.
+
+\sgaStableTarget{sga6.e08.thm.3-6}\textbf{Theorem 3.6. (Riemann--Roch).} \uline{Let} $f:X\to Y$ \uline{be a projective complete-intersection morphism} (1.1), \uline{whose virtual relative dimension} $d$ \uline{is constant} (1.9). \uline{Suppose that} $Y$ \uline{is quasi-compact}, \uline{and has an ample sheaf}. \uline{With the notation of} 3.3, \uline{we then have for every} $x\in K^{\bullet}(X)$ \uline{the relation}:
+\[
+\ch(f_*(x))=f_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_f)\bigr),
+\]
+$\check T_f$ \uline{denoting the dual element of the class of the relative cotangent complex} $\underline{L}^{X/Y}_\bullet$ (2.5 \uline{and} 2.3).
+
+In other words, the diagram
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+K^{\bullet}(X) \arrow[r,"\ch\circ\widetilde c"] \arrow[d,"f_*"'] & \Gr K^{\bullet}(X)_{\mathbb Q} \arrow[d,"x\mapsto f_{\mathrm{gr}}(x\cdot\Todd(\check T_f))"]\\
+K^{\bullet}(Y) \arrow[r,"\ch\circ\widetilde c"] & \Gr K^{\bullet}(Y)_{\mathbb Q}
+\end{tikzcd}
+\]
+is commutative.

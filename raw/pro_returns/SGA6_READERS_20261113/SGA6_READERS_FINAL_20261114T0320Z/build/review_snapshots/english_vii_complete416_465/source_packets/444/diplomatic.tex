@@ -1,0 +1,41 @@
+
+donc le résultat pour \(n\ge n_0\).
+
+Il reste à redescendre jusqu'à \(n=0\). On procède par récurrence descendante, grâce au diagramme commutatif:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r] \arrow[d] &
+\underline{J}^{n+1} \arrow[r] \arrow[d,"\sim"'] &
+\underline{J}^n \arrow[r] \arrow[d] &
+\underline{J}^n/\underline{J}^{n+1} \arrow[r] \arrow[d,"\sim"'] &
+0 \arrow[d]\\
+0 \arrow[r] &
+f_*(\underline{O}_{X'}(n+1)) \arrow[r] &
+f_*(\underline{O}_{X'}(n)) \arrow[r] &
+f_*(\underline{O}_{Y'}(n)) \arrow[r] &
+0.
+\end{tikzcd}
+\]
+La ligne du bas est exacte car \(R^1f_*(\underline{O}_{X'}(n+1))=0\) pour tout \(n\ge0\) d'après i) déjà prouvé. Par ailleurs, on a:
+\[
+f_*(\underline{O}_{Y'}(n))
+=i_*\bigl(g_*(\underline{O}_{Y'}(n))\bigr)
+=i_*(\underline{\underline{S}}(\underline{N})_n)
+=\underline{J}^n/\underline{J}^{n+1}.
+\]
+La flèche de droite est donc un isomorphisme; celle de gauche en est un d'après l'hypothèse de récurrence; celle du milieu en est donc un également
+
+\textbf{Proposition 3.6.} \uline{Avec les hypothèses et les notations de} 3.1 \uline{et} 3.3, \uline{on a la relation}:
+\[
+f_*\circ f^*=\Id_{K^{\bullet}(X)}.
+\]
+
+Soit \(x\in K^{\bullet}(X)\); on peut écrire, d'après la formule de projection:
+\[
+f_*(f^*(x))=f_*(1.f^*(x))=x.f_*(1).
+\]
+Il suffit donc de montrer que \(f_*(1)=1\).
+
+Or 3.5 montre que la cohomologie de \(\mathbb Rf_*(\underline{O}_{X'})\) est nulle en degrés \(>0\), et égale à \(\underline{O}_X\) en degré \(0\). La proposition en résulte aussitôt.
+
+\textbf{Théorème 3.7.} \uline{Soient} \(i:Y\to X\) \uline{une immersion fermée régulière}, \(X'\) \uline{le schéma obtenu en faisant éclater} \(Y\), \uline{et} \(Y'=X'\times_XY\), \uline{de sorte qu'on a le diagramme commutatif}

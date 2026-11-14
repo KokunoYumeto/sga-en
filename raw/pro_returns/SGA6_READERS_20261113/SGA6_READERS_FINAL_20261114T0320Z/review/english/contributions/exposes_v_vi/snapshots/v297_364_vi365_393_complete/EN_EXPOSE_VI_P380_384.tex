@@ -1,0 +1,157 @@
+%%%%%%%%%%  scan idx 393  |  folio 380  %%%%%%%%%%
+\SGAPrintPage{380}%
+\begin{equation}\tag{1.13.2}
+  x^{r+1}=0.
+\end{equation}
+
+\textbf{Remark 1.14.} Using the notion of a ``relative scheme'' (cf [3]), we can still give a meaning to 1.1 by assuming that \(S\) is a locally ringed topos. If we assume that the final object of the topos is quasi-compact, the proof given in the case of schemes carries over without difficulty, and the theorem therefore remains valid.
+
+\sgaStableTarget{sga6.e06.sec.2}\section*{2. Computation of the \(K^{\bullet}\) of a projective bundle: the case of perfect complexes}
+
+The present section will not be used in the rest of the seminar.
+
+In this section, the notation \(K^{\bullet}(X)\) will denote the Grothendieck group of perfect complexes on \(X\) (IV 2.2). We propose to prove the following theorem, analogous to 1.1:
+
+\sgaStableTarget{sga6.e06.thm.2-1}\textbf{Theorem 2.1.} \uline{Let} \(S\) \uline{be a quasi-compact scheme}, \(\underline{E}\) \uline{a locally free} \(\underline{O}_S\)\uline{-Module of rank} \(r+1\), \(X=\mathbf P(\underline{E})\) \uline{the associated projective bundle}; \uline{let} \(\xi\) \uline{be the class} \uline{in} \(K^{\bullet}(X)\) \uline{of the complex equal to} \(\underline{O}_X(1)\) \uline{in degree zero}, \uline{and zero in the other degrees}. \uline{Then} \(K^{\bullet}(X)\), \uline{endowed with its natural} \(K^{\bullet}(S)\)-\uline{algebra structure, is} \uline{a free} \(K^{\bullet}(S)\)-\uline{module with basis} \(1,\xi,\ldots,\xi^r\).
+
+\sgaStableTarget{sga6.e06.sec.2.2}2.2. Let us fix the notation: \(\underline{B}\) will denote the symmetric algebra of \(\underline{E}\); we shall write \(\mathcal A\) for the category of \(\underline{O}_X\)-Modules, \(\mathcal C\) for the category of graded \(\underline{B}\)-Modules with graded morphisms as morphisms, \(\mathcal C_0\) for the full subcategory of \(\mathcal C\) whose objects are the \(\underline{B}\)-Modules locally free of finite type as graded \(\underline{B}\)-Modules, and \(\mathcal C'\) for the category of \(\underline{O}_S\)-Modules. The categories \(\mathcal A\), \(\mathcal C\), and \(\mathcal C'\) are abelian.
+
+For every \(n\), and every complex \(\underline{L}^\bullet\) in \(D^+(\mathcal A)\), we shall write \(\underline{L}^\bullet(n)\) for the complex \(\underline{L}^\bullet\otimes_{\underline{O}_X}\underline{O}_X(n)\).
+
+%%%%%%%%%%  scan idx 394  |  folio 381  %%%%%%%%%%
+\SGAPrintPage{381}%
+\sgaStableTarget{sga6.e06.sec.2.3}2.3.
+We shall need to apply the functor \(\Projz\) to arbitrary graded \(\underline{B}\)-Modules, and not only to quasi-coherent graded \(\underline{B}\)-Modules as in the construction of EGA II 3.2. We shall therefore indicate briefly how this construction can be carried out in the general case.
+
+\sgaStableTarget{sga6.e06.para.2-3-1}2.3.1. First let \(S\) be a scheme, \(\underline{A}\) a quasi-coherent \(\underline{O}_S\)-algebra, \(Y=\Spec(\underline{A})\), and \(f:Y\to S\) the structural morphism. From the isomorphism:
+\[
+  \underline{A}\xrightarrow{\sim} f_*(\underline{O}_Y)
+\]
+we deduce a canonical homomorphism:
+\sgaStableTarget{sga6.e06.eq.2-3-1-1}\begin{equation}\tag{2.3.1.1}
+  f^{-1}(\underline{A})\longrightarrow \underline{O}_Y
+\end{equation}
+where \(f^{-1}\) denotes inverse image in the sense of sheaves of sets; in other words, we have a morphism of ringed spaces:
+\sgaStableTarget{sga6.e06.eq.2-3-1-2}\begin{equation}\tag{2.3.1.2}
+  \bar f:(Y,\underline{O}_Y)\longrightarrow (S,\underline{A})
+\end{equation}
+From it we deduce an ``inverse-image'' functor \(\bar f^{\,*}\) from the category of \(\underline{A}\)-Modules to the category of \(\underline{O}_Y\)-Modules, left adjoint to the ``direct-image'' functor \(\bar f_*\) from the category of \(\underline{O}_Y\)-Modules to the category of \(f_*(\underline{O}_Y)\)-Modules. We therefore have:
+\sgaStableTarget{sga6.e06.eq.2-3-1-3}\begin{equation}\tag{2.3.1.3}
+  \bar f^{\,*}(\underline{M})=f^{-1}(\underline{M})\otimes_{f^{-1}(\underline{A})}\underline{O}_Y
+\end{equation}
+for every \(\underline{A}\)-Module \(\underline{M}\).
+
+Since the homomorphism (2.3.1.1) is flat (since on each stalk it corresponds to a localization), the functor \(\bar f^{\,*}\) thus defined is an exact functor (cf [4], p. 164).
+
+If \(\underline{M}\) is a quasi-coherent \(\underline{A}\)-Module, this construction gives the Module \(\widetilde{\underline{M}}\) defined in EGA II 1.4.3. Indeed, the isomorphism:
+%%%%%%%%%%  scan idx 395  |  folio 382  %%%%%%%%%%
+\SGAPrintPage{382}%
+\[
+  \underline{M}\xrightarrow{\sim} f_*(\widetilde{\underline{M}})=\bar f_*(\widetilde{\underline{M}})
+\]
+gives, by adjunction, a homomorphism:
+\[
+  \bar f^{\,*}(\underline{M})\longrightarrow \widetilde{\underline{M}}
+\]
+and we check immediately on each stalk that it is an isomorphism.
+
+\sgaStableTarget{sga6.e06.para.2-3-2}2.3.2. Now let \(\underline{B}\) be a quasi-coherent graded \(\underline{O}_S\)-Algebra, \(\underline{M}\) a graded \(\underline{B}\)-Module, and \(X=\Proj(\underline{B})\). For every affine open \(U\) of \(S\), and every section \(s\) of \(\underline{B}\) over \(U\), homogeneous of degree \(d>0\), we write \(\underline{M}_{(s),U}\) for the homogeneous component of degree \(0\) of the Module of fractions \(\underline{M}_s\); we therefore have:
+\[
+  \underline{M}_{(s),U}=
+  \bigl((\underline{M}|U)\otimes_{(\underline{B}|U)}(\underline{B}|U)_s\bigr)_0 .
+\]
+If \(V\) is an affine open of \(U\), then \(\underline{M}_{(s),V}\) is the restriction to \(V\) of \(\underline{M}_{(s),U}\).
+
+We consider the basis of open sets of \(X\) formed by the affine opens:
+\[
+  D_+(U,s)\simeq \Spec\bigl((\underline{B}|U)_{(s)}\bigr) .
+\]
+We write \(f\) for the structural morphism \(X\to S\), and \(f_{U,s}\) for the affine morphism:
+\[
+  f_{U,s}:D_+(U,s)\longrightarrow U .
+\]
+We then put:
+\[
+  \Projz(\underline{M})_{U,s}
+  =
+  \bar f_{U,s}^{\,*}\bigl(\underline{M}_{(s),U}\bigr),
+\]
+with the notation of 2.3.1. We shall show that the \(\Projz(\underline{M})_{U,s}\) glue as \(U\) and \(s\) vary, thereby defining an \(\underline{O}_X\)-Module denoted \(\Projz(\underline{M})\). The gluing for variable \(U\) and fixed \(s\) being evident, we are reduced (cf. EGA II 2.5.2) to showing that, if \(t\) is a section of \(\underline{B}\) over \(U\), homogeneous of degree \(e>0\), then the restriction of \(\Projz(\underline{M})_{U,s}\) to \(D_+(U,st)\) is canonically isomorphic to \(\Projz(\underline{M})_{U,st}\). We consider:
+%%%%%%%%%%  scan idx 396  |  folio 383  %%%%%%%%%%
+\SGAPrintPage{383}%
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+D_+(st) \arrow[rr,hook,"i"] \arrow[dr,"f_{U,st}"'] & &
+D_+(s) \arrow[dl,"f_{U,s}"]\\
+& U &
+\end{tikzcd}
+\]
+we have to show that the Modules \(i^*\circ\bar f_{U,s}^{\,*}\bigl(\underline{M}_{(s),U}\bigr)\) and \(\bar f_{U,st}^{\,*}\bigl(\underline{M}_{(st),U}\bigr)\)
+are canonically isomorphic. On the one hand, we have the canonical isomorphisms:
+\[
+\begin{aligned}
+i^*\circ\bar f_{U,s}^{\,*}\bigl(\underline{M}_{(s),U}\bigr)
+&\simeq
+i^*\Bigl(f_{U,s}^{-1}\bigl(\underline{M}_{(s),U}\bigr)
+ \otimes_{f_{U,s}^{-1}((\underline{B}|U)_{(s)})}\underline{O}_{D_+(s)}\Bigr)\\
+&\simeq
+i^{-1}\Bigl(f_{U,s}^{-1}\bigl(\underline{M}_{(s),U}\bigr)
+ \otimes_{f_{U,s}^{-1}((\underline{B}|U)_{(s)})}\underline{O}_{D_+(s)}\Bigr)
+ \otimes_{i^{-1}(\underline{O}_{D_+(s)})}\underline{O}_{D_+(st)}\\
+&\simeq
+f_{U,st}^{-1}\bigl(\underline{M}_{(s),U}\bigr)
+ \otimes_{f_{U,st}^{-1}((\underline{B}|U)_{(s)})}\underline{O}_{D_+(st)} .
+\end{aligned}
+\]
+On the other hand:
+\[
+  \bar f_{U,st}^{\,*}\bigl(\underline{M}_{(st),U}\bigr)
+  \simeq
+  f_{U,st}^{-1}\bigl(\underline{M}_{(st),U}\bigr)
+  \otimes_{f_{U,st}^{-1}((\underline{B}|U)_{(st)})}\underline{O}_{D_+(st)} .
+\]
+Finally, it follows from EGA II 2.2.2, translated into sheaf language, that we have the canonical isomorphisms:
+\[
+  \underline{M}_{(st),U}\simeq
+  \bigl(\underline{M}_{(s),U}\bigr)_{t^d/s^e}
+  \simeq
+  \underline{M}_{(s),U}\otimes_{(\underline{B}|U)_{(s)}}(\underline{B}|U)_{(st)},
+\]
+whence, finally, the desired isomorphism.
+
+It is clear that, if \(\underline{M}\) is quasi-coherent, the Module \(\Projz(\underline{M})\) thus constructed is indeed the one defined in EGA II.
+
+\sgaStableTarget{sga6.e06.para.2-3-3}2.3.3. It follows from 2.3.1 and 2.3.2 that the functor \(\Projz\) is exact. Returning to the notation of 2.2, by passage to the derived categories we therefore deduce a functor still denoted \(\Projz\):
+\[
+  \Projz:D^+(\mathcal C)\longrightarrow D^+(\mathcal A).
+\]
+
+We also see from the preceding constructions that the functor
+%%%%%%%%%%  scan idx 397  |  folio 384  %%%%%%%%%%
+\SGAPrintPage{384}%
+\(\Projz\) on the category of graded \(\underline{B}\)-Modules is compatible with tensor product; the same remains true of the functor obtained on the derived categories.
+
+\sgaStableTarget{sga6.e06.sec.2.4}2.4. For every integer $k$, and every $\underline{O}_X$-Module $\underline{L}$, put:
+\sgaStableTarget{sga6.e06.eq.2-4-1}\begin{equation}\tag{2.4.1}
+  F_k(\underline{L})=\bigoplus_{n\geq k} f_*\bigl(\underline{L}(n)\bigr).
+\end{equation}
+The functor $F_k:\mathcal A\to\mathcal C$ thus defined is left exact. Since the category of $\underline{O}_X$-Modules has enough injectives, we can define a derived functor:
+\sgaStableTarget{sga6.e06.eq.2-4-2}\begin{equation}\tag{2.4.2}
+  \mathbb R F_k:D^+(\mathcal A)\longrightarrow D^+(\mathcal C).
+\end{equation}
+
+If $\underline{L}$ is a locally free $\underline{O}_X$-Module of finite type, there exists an integer $k_0$ such that, for $k\geq k_0$, $\underline{L}$ is $F_k$-acyclic. To see this, it suffices to show that, for $n$ sufficiently large, $\underline{L}$ is acyclic for the functors $\underline{L}\leadsto f_*\bigl(\underline{L}(n)\bigr)$. Since tensoring with $\underline{O}_X(n)$ is an exact functor, this follows immediately from the spectral sequence of composite functors and from 1.3.
+
+2.5. We propose to construct, for every $\underline{O}_X$-Module $\underline{F}$, a homomorphism functorial in $\underline{F}$:
+\sgaStableTarget{sga6.e06.eq.2-5-1}\begin{equation}\tag{2.5.1}
+  \beta:\Projz\bigl(F_k(\underline{F})\bigr)\longrightarrow \underline{F}.
+\end{equation}
+For this, we define the restriction of $\beta$ to the $D_+(U,s)$ (2.3.2). By construction we have, on putting $\underline{M}=F_k(\underline{F})$:
+\[
+  \Projz(\underline{M})|D_+(U,s)
+  =\bar f^{*}_{U,s}\bigl(\underline{M}_{(s),U}\bigr).
+\]
+To define a homomorphism:
+\[
+  \bar f^{*}_{U,s}\bigl(\underline{M}_{(s),U}\bigr)\longrightarrow \underline{F}|D_+(U,s),
+\]

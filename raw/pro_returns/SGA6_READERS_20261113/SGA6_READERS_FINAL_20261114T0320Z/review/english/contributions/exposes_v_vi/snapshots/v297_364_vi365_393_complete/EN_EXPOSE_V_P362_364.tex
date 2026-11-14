@@ -1,0 +1,150 @@
+%%%%%%%%%%  scan idx 375  |  folio 362  %%%%%%%%%%
+\SGAPrintPage{362}%
+operations \(\psi^k\) define, by 7.3, additive endomorphisms of the functor \(\widehat G\) with values in \(\lambda\)-rings; by 1.10, they are characterized by their value on \(1+Xt\). We have:
+\[
+  \frac{d}{du}(\lambda_u(1+Xt))/\lambda_u(1+Xt)
+  =
+  \frac{1+Xt}{\underline{1}+\{1+Xt\}u}
+  =
+  \sum_{k=1}^{\infty}(-1)^{k-1}\{1+Xt\}^{\circ k}u^{k-1}.
+\]
+Consequently:
+\sgaStableTarget{sga6.e05.eq.7-4-1}\begin{equation}\tag{7.4.1}
+  \psi^k(1+Xt)=1+X^k t.
+\end{equation}
+
+\sgaStableTarget{sga6.e05.prop.7-5}\textbf{Proposition 7.5.} i) \uline{If} \(K\) \uline{is a} \(\lambda\)-\uline{ring}, \uline{the operations} \(\psi^k\) \uline{satisfy} \uline{the identities}:
+\sgaStableTarget{sga6.e05.eq.7-5-1}\begin{equation}\tag{7.5.1}
+  \psi^k(1)=1~;\qquad
+  \psi^k(xy)=\psi^k(x)\psi^k(y)~;\qquad
+  \psi^k\circ\psi^{k'}=\psi^{kk'}.
+\end{equation}
+ii) \uline{Conversely}, \uline{if the} \(\psi^k\) \uline{satisfy these identities}, \uline{and if} \(K\) \uline{is of} \uline{characteristic zero}, \(K\) \uline{is a} \(\lambda\)-\uline{ring}.
+
+i) If \(K\) is a \(\lambda\)-ring, we have \(\lambda_t(1)=1+t\), whence: \(\frac{d}{dt}(\lambda_t(1))/\lambda_t(1)=1/(1+t)=\sum_{k=1}^{\infty}(-1)^{k-1}t^{k-1}\), and consequently:
+\[
+  \psi^k(1)=1.
+\]
+
+To prove the second of relations (7.5.1), we consider the diagram:
+\sgaStableTarget{sga6.e05.eq.7-5-2}\begin{equation}\tag{7.5.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+K\times K \arrow[r,"\lambda_t\times\lambda_t"] \arrow[d] &
+\widehat G(K)\times\widehat G(K) \arrow[r,"\Phi^k\times\Phi^k"] \arrow[d,"\circ"'] &
+K\times K \arrow[d]\\
+K \arrow[r,"\lambda_t"] &
+\widehat G(K) \arrow[r,"\Phi^k"] &
+K ,
+\end{tikzcd}
+\end{equation}
+where the vertical arrows are defined by multiplication, and the maps \(\Phi^k\) as follows: the ``logarithmic derivative'' map is
+%%%%%%%%%%  scan idx 376  |  folio 363  %%%%%%%%%%
+\SGAPrintPage{363}%
+a group homomorphism from \(\widehat G(K)\) to \(K[[t]]\); the map which assigns to a series its \((k-1)\)-st coefficient, multiplied by \((-1)^{k-1}\), is an additive homomorphism from \(K[[t]]\) to \(K\); the morphism \(\Phi^k\) will be the composite of the two. It is clear that \(\Phi^k\circ\lambda_t=\psi^k\) by definition (7.1.1).
+
+The second of formulas (7.5.1) therefore expresses the commutativity of the diagram written above. If we suppose that \(K\) is a \(\lambda\)-ring, the left square is commutative, and it suffices to verify the commutativity of the right one. Now this is a diagram of homomorphisms of functors on \(\mathcal C_0\), with source \(\widehat G\times\widehat G\); it therefore suffices, by 1.10, to verify commutativity for \((1+Xt,1+Yt)\); we then have:
+\[
+  \Phi^k(1+Xt)=X^k\qquad\bigl(\text{$(k-1)$-st coefficient of }(-1)^{k-1}X/(1+Xt)\bigr)~;\qquad
+  \Phi^k(1+Yt)=Y^k~;
+\]
+\(\Phi^k\bigl((1+Xt)\circ(1+Yt)\bigr)=\Phi^k(1+XYt)=(XY)^k=\Phi^k(1+Xt)\Phi^k(1+Yt)\), which gives the result.
+
+To prove the last one, we first observe that the diagram:
+\sgaStableTarget{sga6.e05.eq.7-5-3}\begin{equation}\tag{7.5.3}
+\begin{tikzcd}[column sep=large,row sep=large]
+\widehat G^t(K) \arrow[r,"\lambda_u"] \arrow[d,"\Phi^{kk'}"'] &
+\widehat G^u\circ\widehat G^t(K) \arrow[d,"\Phi^{k'}_u"]\\
+K &
+\widehat G^t(K), \arrow[l,"\Phi^k"']
+\end{tikzcd}
+\end{equation}
+is commutative. As above, it indeed suffices to see this for \(1+Xt\), and we have:
+\[
+  \Phi^{k'}_u(\lambda_u(1+Xt))
+  =
+  \Phi^{k'}_u(1+\{1+Xt\}u)
+  =
+  (1+Xt)^{\circ k'}
+  =
+  1+X^{k'}t~;
+\]
+\[
+  \Phi^k(1+X^{k'}t)=X^{kk'}=\Phi^{kk'}(1+Xt).
+\]
+
+Consequently, \(\psi^{kk'}=\Phi^k\circ\Phi^{k'}_u\circ\lambda_u\circ\lambda_t=\Phi^k\circ\psi^{k'}\circ\lambda_t\).
+
+Moreover, \(\psi^k\circ\psi^{k'}=\Phi^k\circ\lambda_t\circ\Phi^{k'}\circ\lambda_t=\Phi^k\circ\lambda_t\circ\psi^{k'}\).
+
+%%%%%%%%%%  scan idx 377  |  folio 364  %%%%%%%%%%
+\SGAPrintPage{364}%
+Now, if \(K\) is a \(\lambda\)-ring, the diagram:
+\sgaStableTarget{sga6.e05.eq.7-5-4}\begin{equation}\tag{7.5.4}
+\begin{tikzcd}[column sep=large,row sep=large]
+K \arrow[r,"\lambda_t"] \arrow[d,"\psi^{k'}"'] &
+\widehat G(K) \arrow[d,"\psi^{k'}"]\\
+K \arrow[r,"\lambda_t"] &
+\widehat G(K)
+\end{tikzcd}
+\end{equation}
+is commutative by 7.3, since \(\lambda_t\) is a \(\lambda\)-homomorphism. The desired relations follow at once.
+
+ii) If \(K\) is of characteristic zero, the ``logarithmic derivative'' map is an isomorphism from \(\widehat G(K)\) onto \(K[[t]]\), since one can integrate. Consequently, two elements of \(\widehat G(K)\) are equal if and only if, for every \(k\), they have the same image under \(\Phi^k\).
+
+To show that \(\lambda_t\) is a ring homomorphism, we must show the commutativity of the left square of diagram (7.5.2), and by the preceding remark, it suffices to show that for every \(k\), diagram (7.5.2) is commutative, since the right square always is. Now these are precisely the relations \(\psi^k(xy)=\psi^k(x)\psi^k(y)\).
+
+To show that \(\lambda_t\) is a \(\lambda\)-homomorphism, it suffices to show that diagram (7.5.4) is commutative for every \(k'\), by 7.3. Now, by the preceding remark, this is equivalent to showing for all \(k,k'\) that \(\Phi^k\circ\psi^{k'}\circ\lambda_t=\Phi^k\circ\lambda_t\circ\psi^{k'}\), that is, the relations \(\psi^{kk'}=\psi^k\circ\psi^{k'}\).
+
+Finally, the relation \(\lambda_t(1)=1+t\) is obtained by integration from the relations \(\psi^k(1)=1\).
+
+\sgaStableTarget{sga6.e05.bibliography}\subsection*{BIBLIOGRAPHY}
+\begin{enumerate}[label={[\arabic*]}]
+\item A. Grothendieck, La théorie des classes de Chern, Bull. Soc. math. France, 86, 1958, p. 137 à 154.
+\item F. Hirzebruch, Neue topologische Methoden in der algebraischen Geometrie.
+\end{enumerate}
+
+% SGA_NATIVE_CONTINUATION_364
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\Proj}{\operatorname{Proj}}
+\providecommand{\Projz}{\operatorname{Proj}_0}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\Comp}{\operatorname{Comp}}
+\providecommand{\Dplus}{D_{+}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\cG}{\mathcal G}
+\providecommand{\cA}{\mathcal A}
+\providecommand{\cB}{\mathcal B}
+\providecommand{\cL}{\mathscr L}
+\providecommand{\cM}{\mathscr M}
+\providecommand{\cN}{\mathscr N}
+\providecommand{\cE}{\mathscr E}
+\providecommand{\cK}{\mathscr K}
+\providecommand{\cP}{\mathscr P}
+\providecommand{\cQ}{\mathscr Q}
+\providecommand{\OO}{\mathcal O}
+\providecommand{\rk}{\operatorname{rk}}
+\providecommand{\colim}{\operatorname*{colim}}
+
+% SGA_REVIEWED_FRENCH_CONTINUATION_364
+% Exposé VI projective-bundle macro additions
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\Proj}{\operatorname{Proj}}
+\providecommand{\Projz}{\operatorname{Proj}_0}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\Comp}{\operatorname{Comp}}
+\providecommand{\Dplus}{D_{+}}
+\renewcommand{\id}{\operatorname{id}}
+\providecommand{\cG}{\mathcal G}
+\providecommand{\cA}{\mathcal A}
+\providecommand{\cB}{\mathcal B}
+\providecommand{\cL}{\mathscr L}
+\providecommand{\cM}{\mathscr M}
+\providecommand{\cN}{\mathscr N}
+\providecommand{\cE}{\mathscr E}
+\providecommand{\cK}{\mathscr K}
+\providecommand{\cP}{\mathscr P}
+\providecommand{\cQ}{\mathscr Q}
+\providecommand{\OO}{\mathcal O}
+\providecommand{\rk}{\operatorname{rk}}
+\providecommand{\colim}{\operatorname*{colim}}
+

@@ -1,0 +1,19 @@
+
+\uline{où} $i$ \uline{et} $j$
+\uline{sont des immersions}, \uline{et} $p$ \uline{un morphisme lisse}. \uline{Alors pour que} $i$ \uline{soit une immersion régulière}, \uline{il faut et il suffit que} $j$ \uline{soit une immersion régulière}.
+
+i) Supposons $i$ régulière. Posons $X'=V'\times_V X$. La donnée de $j$ définit une section $j'$ de $X'$ au-dessus de $X$, telle que $j=i'\circ j'$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X' \arrow[r,"i'"] \arrow[d,"p'"'] & V' \arrow[d,"p"]\\
+X \arrow[r,"i"] \arrow[ur,"j"] \arrow[u,bend right=35,"j'"'] & V .
+\end{tikzcd}
+\]
+
+Or $j'$ est une immersion régulière, car c'est une section d'un morphisme lisse (VII 1.10); $i'$ est une immersion régulière car elle est déduite de $i$ par un changement de base lisse, donc plat (VII 1.5). Donc $j$ est une immersion régulière (VII 1.7).
+
+ii) Supposons $j$ régulière, et $p$ étale. Alors $j'$ est une immersion ouverte (EGA IV 17.9.3), donc un isomorphisme de $X$ sur $j'(X)$; posons $U=j'(X)$.
+
+Soit $i''$ la restriction de $i'$ à $U$, et soit $U'$ un ouvert de $V'$ tel que $U=U'\cap X'$. On a alors : $i''=j\circ(j')^{-1}$, donc $i''$ est une immersion régulière de $U$ dans $U'$. Or le morphisme $U'\to V$, étant lisse, est plat et de présentation finie, donc ouvert. C'est par conséquent un morphisme fidèlement plat et quasi-compact de $U'$ sur un voisinage ouvert de $X$ dans $V$. Il en résulte (VII 1.5) que $i$ est une immersion régulière.
+
+iii) Supposons $j$ régulière, et que $V'$ soit un fibré vectoriel sur $V$. Comme la propriété à prouver ($i$ régulière) est locale sur $V$, on peut supposer $V$ affine, $i$ fermée, et que $V'=V[T_1,\ldots,T_n]$. Posons $V=\Spec(A)$,

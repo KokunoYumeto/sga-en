@@ -1,0 +1,114 @@
+%%%%%%%%%%  scan idx 429  |  folio 416  %%%%%%%%%%
+\SGAPrintPage{416}%
+% Exposé VII: back to the volume's Sym and Proj
+\renewcommand{\Sym}{\operatorname{Sym}}
+\renewcommand{\Projz}{\operatorname{Proj}_0}
+\sgaStableTarget{sga6.e07.expose}\section*{Exposé VII\\[3pt] REGULAR IMMERSIONS AND COMPUTATION OF \texorpdfstring{$K^{\bullet}$}{K0} OF A BLOWN-UP SCHEME}
+\begin{center}
+\uline{by Pierre BERTHELOT}
+\end{center}
+
+\sgaStableTarget{sga6.e07.sec.1}\section*{1. Generalities on regular immersions}
+
+As the classical notion of regular immersion (EGA IV 16.9.2) proves inadequate in the non-noetherian case, we shall define a weaker notion, which nevertheless gives the desired properties and is equivalent to the usual definition in the noetherian case.
+
+\sgaStableTarget{sga6.e07.def.1-1}\textbf{Definition 1.1.} \uline{Let} $A$ \uline{be a commutative ring}, $E$ \uline{a projective} $A$-\uline{module of finite type}, $u:E\longrightarrow A$ \uline{an} $A$-\uline{linear homomorphism}. \uline{We say that} $u$ \uline{is regular if the Koszul complex} $K_\bullet(u)$ \uline{defined by} $u$ \uline{is acyclic in dimension} $>0$, \uline{and hence is a resolution of} $B=A/u(E)$.
+
+Recall that the Koszul complex associated with $u$ is defined as follows: the graded $A$-module $K_\bullet(u)$ is the exterior algebra $\Lambda(E)$, and the boundary operator is interior multiplication by $u$ regarded as an element of the dual $\check E$: it is an antiderivation of degree $-1$ of $\Lambda(E)$, equal to $u$ on $E$.
+
+\sgaStableTarget{sga6.e07.lem.1-2}\textbf{Lemma 1.2.} \uline{Let} $u:E\longrightarrow A$ \uline{be a regular homomorphism}. \uline{Let} $A'$ \uline{be an} $A$-\uline{algebra}, $u':E'\longrightarrow A'$ \uline{the homomorphism deduced from} $u$ \uline{by base change}; \uline{suppose that} $u'$ \uline{is regular}. \uline{Put} $J=u(E)$, $J'=JA'=u(E')$. \uline{Then we have the following relations for every integer} $n\geq0$:
+\sgaStableTarget{sga6.e07.eq.1-2-1}\sgaStableTarget{sga6.e07.eq.1-2-2}\sgaStableTarget{sga6.e07.eq.1-2-3}\sgaStableTarget{sga6.e07.eq.1-2-4}\begin{align}
+ J^n/J^{n+1}\otimes_AA'&\xrightarrow{\sim}J'^n/J'^{n+1}, \tag{1.2.1}\\
+ \Tor_i^A(J^n/J^{n+1},A')&=0\quad\text{\uline{for} }i\geq1; \tag{1.2.2}\\
+ J^n\otimes_AA'&\xrightarrow{\sim}J'^n, \tag{1.2.3}\\
+ \Tor_i^A(J^n,A')&=0\quad\text{\uline{for} }i\geq1. \tag{1.2.4}
+\end{align}
+
+a) First suppose that the $J^n/J^{n+1}$ are projective over $B=A/J$; since $J$ is of finite type, they are locally free of finite type over $B$.
+
+%%%%%%%%%%  scan idx 430  |  folio 417  %%%%%%%%%%
+\SGAPrintPage{417}%
+The relations to be proved can be checked pointwise on $\Spec(A)$, so we are reduced to the case where $A$ is local, with $u(E)\subset\rad(A)$. The $J^n/J^{n+1}$ are then free over $B$, and the relations $\Tor_i^A(J^n/J^{n+1},A')=0$ for $i\geq1$ are equivalent to the relations $\Tor_i^A(B,A')=0$ for $i\geq1$. Now we can compute the $\Tor_i^A$ using the projective resolution $K_\bullet(u)$ of $B$; they are the homology groups of the complex $K_\bullet(u)\otimes_AA'=K_\bullet(u')$. Since $u'$ is assumed regular, this last complex is acyclic in degrees $>0$, whence the relations $\Tor_i^A(J^n/J^{n+1},A')=0$, for $i\geq1$.
+
+We deduce the relations $\Tor_i^A(A/J^n,A')=0$ for $i\geq1$ by induction on $n$ using the exact Tor sequence associated with the exact sequence:
+\[
+ 0\longrightarrow J^n/J^{n+1}\longrightarrow A/J^{n+1}\longrightarrow A/J^n\longrightarrow0.
+\]
+Since for every $k$ we have $J^kA'=J'^k$, this exact sequence and $\Tor_1^A(A/J^n,A')=0$ give the relations $J^n/J^{n+1}\otimes_AA'\xrightarrow{\sim}J'^n/J'^{n+1}$. From the exact sequence:
+\[
+ 0\longrightarrow J^n\longrightarrow A\longrightarrow A/J^n\longrightarrow0,
+\]
+and $\Tor_1^A(A/J^n,A')=0$, we deduce the relations $J^n\otimes_AA'\simeq J'^n$. Finally, from the exact Tor sequence associated with the exact sequence:
+\[
+ 0\longrightarrow J^{n+1}\longrightarrow J^n\longrightarrow J^n/J^{n+1}\longrightarrow0,
+\]
+we deduce the relations $\Tor_i^A(J^n,A')=0$ for $i\geq1$ by induction on $n$, the case $n=0$ being evident.
+
+b) We shall now show that the $J^n/J^{n+1}$ are projective over $B=A/J$. Since the question is local on $\Spec(A)$, we may suppose $E$ free, say $E=(A)^d$, so that $u$ is defined by a sequence $f_1,\ldots,f_d$ of elements of $A$. Put $A_0=\mathbb Z[T_1,\ldots,T_d]$ and let $A_0\longrightarrow A$ be the homomorphism that sends
+
+%%%%%%%%%%  scan idx 431  |  folio 418  %%%%%%%%%%
+\SGAPrintPage{418}%
+$T_i$ to $f_i$; denote by $u_0:E_0=(A_0)^d\longrightarrow A_0$ the homomorphism defined by the sequence $(T_1,\ldots,T_d)$, so that $u$ is deduced from $u_0$ by base change from $A_0$ to $A$. Since the sequence $(T_1,\ldots,T_d)$ is regular (in the classical sense), the homomorphism $u_0$ is regular, and the hypotheses of the lemma hold for the base change $A_0\longrightarrow A$. Now the $J_0^n/J_0^{n+1}$ are free of finite type over $\mathbb Z$, so we can apply the results of a). Consequently $J^n/J^{n+1}\xleftarrow{\sim}J_0^n/J_0^{n+1}\otimes_{A_0}A$, and $J^n/J^{n+1}$ is free of finite type.
+
+\sgaStableTarget{sga6.e07.prop.1-3}\textbf{Proposition 1.3.} \uline{Let} $A$ \uline{be a ring}, $E$ \uline{a projective} $A$-\uline{module of finite type}, $u:E\longrightarrow A$ \uline{a regular homomorphism}, $J=u(E)$. \uline{Then the ideal} $J$ \uline{is quasi-regular} (EGA IV 16.9.7), \uline{that is} (EGA IV 16.9.8):
+\begin{enumerate}[label=\roman*)]
+\item $J$ \uline{is of finite type}.
+\item $J/J^2$ \uline{is a projective} $A/J$-\uline{module of finite type};
+\item \uline{the canonical homomorphism}
+\end{enumerate}
+\sgaStableTarget{sga6.e07.eq.1-3-1}\begin{equation}\tag{1.3.1}
+ \Sym_{A/J}(J/J^2)\longrightarrow \gr_J(A)=\bigoplus_{n\geq0}J^n/J^{n+1},
+\end{equation}
+\uline{is an isomorphism}.
+
+We saw in the proof of 1.2 b) that $J/J^2$ is projective of finite type. Resume the notation of 1.2 b) (since the question is local on $\Spec(A)$, we again suppose $E$ free of finite type). Then the canonical homomorphism (1.3.1) is deduced from the analogous homomorphism for $J_0$ by the base change $A_0\longrightarrow A$, by the relations 1.2. The latter is an isomorphism, so the same is true of (1.3.1).
+
+\sgaStableTarget{sga6.e07.def.1-4}\textbf{Definition 1.4.} \uline{Let} $(X,\underline{A})$ \uline{be a commutatively locally ringed site}, $\underline{E}$ \uline{an} $\underline{A}$-\uline{Module locally free of finite type}, $u:\underline{E}\longrightarrow \underline{A}$ \uline{an} $\underline{A}$-\uline{linear homomorphism}. \uline{We say that} $u$ \uline{is} regular \uline{if the Koszul complex} $\underline{K}_\bullet(u)$ \uline{defined by} $u$ \uline{is acyclic in degrees} $>0$. \uline{Let} $\underline{J}$ \uline{be an Ideal of} $\underline{A}$; \uline{we say that} $\underline{J}$ \uline{is}
+
+%%%%%%%%%%  scan idx 432  |  folio 419  %%%%%%%%%%
+\SGAPrintPage{419}%
+\uline{regular}, \uline{if}, \uline{locally on} $X$, \uline{there exist a free} $\underline{A}$-\uline{Module of finite type} $\underline{E}$, \uline{and a surjective regular homomorphism}: $\underline{E}\longrightarrow \underline{J}$.
+
+\uline{Let} $i:Y\longrightarrow X$ \uline{be an immersion of preschemes}, \uline{and let} $U$ \uline{be an open subset of} $X$ \uline{such that} $i(Y)\subset U$ \uline{and such that} $i$ \uline{is a closed immersion of} $Y$ \uline{into} $U$. \uline{We say that} $i$ \uline{is regular if the ideal of} $\underline{O}_U$ \uline{defining} $i(Y)$ \uline{is regular} (\uline{a condition independent of} $U$). \uline{If} $y\in Y$, \uline{we say that} $i$ \uline{is regular at} $y$ \uline{if there exists a neighborhood} $V$ \uline{of} $i(y)$ \uline{such that the immersion} $i^{-1}(V)\longrightarrow V$ \uline{is regular}. \uline{For an immersion to be regular}, \uline{it is therefore necessary and sufficient that it be regular in a neighborhood of each point}.
+
+\uline{This definition conflicts with} EGA IV 16.9.2, \uline{and replaces that definition}. However, in the noetherian case the two definitions are equivalent (EGA IV 19.5.1). An immersion that can locally be defined by a regular sequence is regular; a regular immersion is quasi-regular (1.3).
+
+\textbf{1.4.1.} Let $X$ be a scheme, $\underline{J}$ an Ideal of finite type of $\underline{O}_X$, $x$ a point of $\Supp(\underline{O}_X/\underline{J})$. We shall say that a family of sections $f_1,\ldots,f_d$ of $\underline{J}$ on a neighborhood of $x$ forms a \uline{minimum system of generators of} $\underline{J}$ \uline{in a neighborhood of} $x$ if the $(f_i)_x$ form a family of generators of $\underline{J}_x$ of minimum cardinality, i.e. their images in $\underline{J}_x\otimes k(x)$ form a basis of this vector space over $k(x)$. Note that the $f_i$ generate $\underline{J}$ on a neighborhood of $x$.
+
+\textbf{1.4.2.} To say that an immersion is regular is also to say that it is defined in some open subset of $X$ by an ideal of finite type $\underline{J}$, and that for every point $x\in\Supp(\underline{O}_X/\underline{J})$ and every minimum system of generators of $\underline{J}$ in a neighborhood of $x$, the Koszul complex associated with this sequence is acyclic in a neighborhood of $x$: indeed, let $f_1,\ldots,f_d$ be a minimum system of
+
+%%%%%%%%%%  scan idx 433  |  folio 420  %%%%%%%%%%
+\SGAPrintPage{420}%
+generators of $\underline{J}$ in a neighborhood of $x$ such that the associated Koszul complex is acyclic (one exists when the immersion is assumed regular); let $g_1,\ldots,g_d$ be another minimum system of generators of $\underline{J}$; there exists a neighborhood of $x$ on which $\underline{J}$ can be generated either by the $f_i$ or by the $g_j$, and consequently there exists on this neighborhood a matrix with coefficients in $\underline{O}_X$ expressing the $g_j$ in terms of the $f_i$. Now the images of the $f_i$ (resp. $g_j$) in $\underline{J}/\underline{J}^2$ form a basis at the point $x$, hence in a neighborhood of $x$, and consequently this matrix is invertible in a neighborhood of $x$. It therefore defines an isomorphism from the Koszul complex defined by the $g_j$ onto the Koszul complex defined by the $f_i$, which shows that the Koszul complex defined by the $g_j$ is acyclic.
+
+\textbf{1.4.3.} Assuming only that $\underline{J}$ is of finite type and $\underline{J}/\underline{J}^2$ is locally free of finite type, note that every minimum system of generators of $\underline{J}$ in a neighborhood of a point $y$ of $Y$ gives a basis of $\underline{J}/\underline{J}^2$ in a neighborhood of $y$. Conversely, given a basis of $\underline{J}/\underline{J}^2$ in a neighborhood of $y$, we can lift it in a neighborhood of $y$ to a family of sections of $\underline{J}$, which generate $\underline{J}_y$ by Nakayama, hence $\underline{J}$ in a neighborhood of $y$ since $\underline{J}$ is of finite type; moreover these generators have minimum cardinality, since they give a basis of $\underline{J}/\underline{J}^2$.
+
+\sgaStableTarget{sga6.e07.prop.1-5}\textbf{Proposition 1.5.} (\uline{Compare} EGA IV 19.1.5 (ii)). \uline{Let} $i:Y\longrightarrow X$ \uline{be an immersion}. \uline{If} $i$ \uline{is regular}, \uline{the same is true of every immersion deduced from} $i$ \uline{by flat base change}. \uline{For} $i$ \uline{to be regular}, \uline{it is necessary and sufficient that it be so locally for the faithfully flat quasi-compact topology}.
+
+Stability under flat base change is evident.
+
+Conversely, let $i'$ be the immersion deduced from $i$ by a
+
+%%%%%%%%%%  scan idx 434  |  folio 421  %%%%%%%%%%
+\SGAPrintPage{421}%
+faithfully flat quasi-compact base change. If $i'$ is regular, then the Ideal $\underline{J}$ defining $i$ is of finite type, and $\underline{J}/\underline{J}^2$ is locally free of finite type, since these properties descend under faithfully flat quasi-compact morphisms. If $f_1,\ldots,f_d$ is a sequence of sections of $\underline{J}$ lifting a basis of $\underline{J}/\underline{J}^2$, the Koszul complex associated with the inverse images of the $f_i$ is acyclic in degrees $>0$ by 1.4; since it is the inverse image of the Koszul complex associated with the $f_i$, the latter is acyclic in degrees $>0$, and $i$ is regular.
+
+\sgaStableTarget{sga6.e07.def.1-6}\textbf{Definition 1.6.} \uline{Let} $i:Y\longrightarrow X$ \uline{be an immersion defined in an open subset} $U$ \uline{of} $X$ \uline{by an Ideal} $\underline{J}$ \uline{of} $\underline{O}_X$; \uline{the} $\underline{O}_Y$-\uline{Module} $\underline{J}/\underline{J}^2$ (\uline{independent of} $U$) \uline{is called the} conormal sheaf of $Y$ in $X$, \uline{and is denoted by} $\underline{N}_{X/Y}$. \uline{If} $i$ \uline{is regular}, $\underline{J}/\underline{J}^2$ \uline{is locally free of finite type}, \uline{and its rank is called the} codimension of $Y$ in $X$, \uline{or the} \uline{codimension of} $i$.
+
+Given two closed immersions: $Z\xrightarrow{j}Y\xrightarrow{i}X$, the conormal sheaves form an exact sequence:
+\sgaStableTarget{sga6.e07.eq.1-6-1}\begin{equation}\tag{1.6.1}
+ j^*(\underline{N}_{X/Y})\longrightarrow \underline{N}_{X/Z}\longrightarrow \underline{N}_{Y/Z}\longrightarrow0.
+\end{equation}
+Indeed, let $\underline{I}$ be the ideal of $Y$ in $X$, $\underline{J}$ the ideal of $Z$ in $X$, $\underline{K}$ the ideal of $Z$ in $Y$. We have the exact sequence:
+\[
+0\longrightarrow \underline{I}\longrightarrow \underline{J}\longrightarrow \underline{K}\longrightarrow0;
+\]
+whence, by tensoring with $\underline{O}_X/\underline{I}=\underline{O}_Y$, the exact sequence:
+\[
+ \underline{I}/\underline{I}^2\longrightarrow \underline{J}\otimes_{\underline{O}_X}\underline{O}_Y\longrightarrow \underline{K}\otimes_{\underline{O}_X}\underline{O}_Y\longrightarrow0;
+\]
+tensoring with $\underline{O}_Z=\underline{O}_X/\underline{J}=\underline{O}_Y/\underline{K}$, we obtain the exact sequence:
+\[
+ j^*(\underline{I}/\underline{I}^2)\longrightarrow \underline{J}\otimes_{\underline{O}_X}\underline{O}_Z\longrightarrow \underline{K}\otimes_{\underline{O}_Y}\underline{O}_Z\longrightarrow0,
+\]
+which is the required sequence.

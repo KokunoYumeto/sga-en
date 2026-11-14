@@ -1,0 +1,40 @@
+{
+  "source_id": "ASTRA-XIV-SCOPE-684-POSTFREEZE",
+  "page": 684,
+  "status": "retained author scope issue; exact counterexample recorded; no body correction",
+  "source_image": "scan/SGA6_scan_360dpi.pdf#page=698",
+  "source_locus": "6.4, complete-intersection input followed by reduced singular point example",
+  "directly_viewed": [
+    {
+      "path": "review/late/images/p684_1.png",
+      "sha256": "52ca6198f0edd7290ecf1accce349671700bfecb978a5d7b0222180644c7fd3f"
+    },
+    {
+      "path": "review/late/images/p684_2.png",
+      "sha256": "36038ddbaf04c94cff29203445d23c6809744a3931f8cf1e18c929fe15412c7e"
+    }
+  ],
+  "reason": "The source passes from a complete-intersection closed subscheme to a reduced singular point in a projective three-dimensional scheme, while using c3(O_X). A concrete allowed scheme Y=P3_C×Spec(C[epsilon]/epsilon^2) and a reduced closed point x show the missing perfect input: the canonical map K0(Perf(Y))→G0(Y) does not even contain [O_x] in its image. The nilpotent ideal J=(epsilon) is globally isomorphic to O_H for H=P3_C. Tensoring J→O_Y→O_H with a perfect complex P gives F→P→F, F=P tensor^L O_H; hence chi(P)=2chi(F) is even, whereas chi(O_x)=1. The local minimal resolution below also has nonzero Tor in arbitrarily high degrees. Preserve the author question in both bodies and record this precise scope obstruction separately; the scan does not determine a unique replacement or an extension of the Chern-class construction.",
+  "exact_example": [
+    "Set R=C[epsilon]/(epsilon^2), D=Spec(R), Y=P3_C×D, H=P3_C×{epsilon=0}, and x=(p,epsilon=0) for a C-rational point p of P3.",
+    "D is the closed double point V(S1^2) in P1_C. Thus Y is closed in P3_C×P1_C and then in P7_C by the Segre map; Y is projective over C. Its underlying space is P3_C, so dim(Y)=3.",
+    "At x the local ring is A=(C[epsilon,u,v,w]/(epsilon^2))_(epsilon,u,v,w). Its maximal ideal modulo its square has the four independent classes epsilon,u,v,w, while its Krull dimension is3. Thus x is singular and its reduced structure sheaf has stalk k=A/(epsilon,u,v,w)=C."
+  ],
+  "exact_Grothendieck_group_map": [
+    "The canonical morphism Phi:K0(Perf(Y))→G0(Y) sends [P] to the alternating sum Σ_j(-1)^j[H^j(P)].",
+    "Let J=(epsilon)⊂O_Y. Multiplication by epsilon identifies O_H with J as O_Y-modules, globally. The short exact sequence0→J→O_Y→O_H→0 gives a distinguished triangle.",
+    "For every object P of Perf(Y), derived tensor with that triangle gives F→P→F, with F=P tensor^L_OY O_H; the first F is identified with P tensor^L J by multiplication by epsilon.",
+    "Euler characteristic chi:G0(Y)→Z is additive on this triangle and chi(P)=2chi(F). The image of chi∘Phi is contained in2Z.",
+    "The skyscraper O_x has H0=C and no higher cohomology, so chi(O_x)=1. Therefore [O_x] has no preimage under Phi. This proves the failure of the specified input map without claiming that no other extension of Chern classes can be defined."
+  ],
+  "exact_local_resolution": [
+    "Over R, the augmented complex ...→R --epsilon→ R --epsilon→ R→C→0 is exact: the kernel and image of multiplication by epsilon are both(epsilon).",
+    "Extend this free resolution to R[u,v,w] and localize at(epsilon,u,v,w); its homology in degree0 is C[u,v,w]_(u,v,w).",
+    "Tensor its terms with the three-variable Koszul complex on u,v,w. The total complex resolves k: the first homology computation reduces it to the Koszul resolution of C over C[u,v,w]_(u,v,w).",
+    "Every differential entry lies in the maximal ideal, so tensoring with k annihilates all differentials. The rank in degree n is Σ_(j=0)^min(3,n) binomial(3,j), hence8 for n≥3. Thus Tor_n^A(k,k)=k^8 for every n≥3.",
+    "The derived-fibre functor k tensor^L_A(-) sends each bounded finite-free representative to a bounded complex. Its value on k is unbounded by the preceding calculation. Consequently O_x is outside the perfect-complex input through this explicitly specified functor."
+  ],
+  "disposition": "Retain the entire author question, including singular, c3(O_X), divisibility by2 and the two cohomology groups. No substitute theorem, new hypothesis or typographical repair is inserted.",
+  "English_transfer": "Retain the same question in both English branches; link this packet from the transfer ledger.",
+  "is_misprint": false
+}

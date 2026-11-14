@@ -1,0 +1,112 @@
+%%%%%%%%%%  scan idx 149  |  folio 136  %%%%%%%%%%
+\SGAPrintPage{136}%
+Here is now a special case of (5.8).
+
+\sgaStableTarget{sga6.e01.lem.5-8-3}\textbf{Lemma 5.8.3.} \uline{Let} \(E\) \uline{be a left} \(A\)-\uline{Module}. \uline{Equivalent conditions}:
+\begin{enumerate}[label=(\roman*)]
+\item \(E\) \uline{is locally a direct factor of a free Module of finite type};
+\item \(E\) \uline{is flat and of finite presentation}.
+\end{enumerate}
+
+\uline{Proof} (after BOURBAKI Alg. Comm. chap.\ I, \S\ 2 Exer 15). It is clear that (i) implies (ii). Let us prove (ii) \(\Rightarrow\) (i). By (1.3.1), we must show that the functor \(\underline{\Hom}_A(E,.)\) is exact. Let \(F\longrightarrow F''\longrightarrow 0\) be an exact sequence of \(A\)-Modules (on the left). We must show that the sequence
+\[
+  \underline{\Hom}_A(E,F)\longrightarrow \underline{\Hom}_A(E,F'')\longrightarrow 0
+\]
+is exact. For this it suffices to prove that, for every injective \(\mathbb Z_S\)-Module \(I\), the sequence obtained by applying the functor \(\underline{\Hom}_{\mathbb Z}(.,I)\) is exact. Now we have a commutative diagram, in which the vertical arrows are the canonical arrows of (5.8.2.1):
+\[
+\begin{array}{ccccccccc}
+0&\to&\underline{\Hom}_{\mathbb Z_S}(F'',I)\otimes_A E&\to&\underline{\Hom}_{\mathbb Z_S}(F,I)\otimes_A E\\
+&&\downarrow&&\downarrow\\
+0&\to&\underline{\Hom}_{\mathbb Z_S}(\underline{\Hom}_A(E,F''),I)&\to&\underline{\Hom}_{\mathbb Z_S}(\underline{\Hom}_A(E,F),I).
+\end{array}
+\]
+The vertical arrows are isomorphisms by (5.8.2). The top row is exact because \(E\) is flat. Thus the bottom row is exact, as required.
+
+\uline{Proof of} (5.8). The implication (i) \(\Rightarrow\) (ii) follows trivially from the definitions. Let us prove (ii) \(\Rightarrow\) (i). Since the question is local, we can suppose that \(E\) is strictly \((m-1)\)-pseudo-coherent. Since, on the other hand, \(E\) is acyclic in degree \(<m\), the
+%%%%%%%%%%  scan idx 150  |  folio 137  %%%%%%%%%%
+\SGAPrintPage{137}%
+truncation arrow
+\[
+\begin{array}{ccccccc}
+&\to&E^{m-1}&\to&E^m&\to&E^{m+1}\to\ldots\\
+&&\downarrow&&\downarrow&&\downarrow\\
+&\to&0&\to&E^m/B^m&\to&E^{m+1}\to\ldots
+\end{array}
+\]
+is a quasi-isomorphism. Denote the truncated complex by \(E'\). By construction, \(E'\) has flat amplitude \(\subset[m,n]\), and \(E'^i\) is free of finite type for \(i>m\). Thus, by (5.1.1), \(E'^m\) is flat. On the other hand, we have a distinguished triangle
+\[
+\begin{tikzcd}
+& E'^m[-m] \arrow[dl,"+1"'] & \\
+E'' \arrow[rr] && E' \arrow[ul] & ,
+\end{tikzcd}
+\]
+where \(E''\) is strictly perfect. By (2.6), \(E'^m[-m]\) is \((m-1)\)-pseudo-coherent, i.e.\ (2.9) \(E'^m\) is of finite presentation. By (5.8.3), we conclude that \(E'^m\) is locally a direct factor of a free Module of finite type, hence that \(\operatorname{parf.amp}(E)\subset[m,n]\).
+
+\sgaStableTarget{sga6.e01.rem.5-8-4}\textbf{Remarks 5.8.4.} a) Using (2.5), we recover the fact that perfect complexes form a triangulated subcategory of \(\Dpx({}_A \underline{S})\).
+
+b) A perfect complex, even with bounded cohomology, does not necessarily have finite tor-dimension. It does, however, when \(\underline{S}\) is of finite type (5.5). Denote by \(\Dpx({}_A \underline{S})_{\underline{\mathrm{parf}}}\) the full sub-\(\underline{S}\)-category of \(\Dpx^b({}_A \underline{S})\) formed by the perfect complexes of finite tor-dimension. It follows at once from (2.16.1 b)) and (5.3) that, when \(A\) is commutative, the functor \(\overset{\mathrm L}{\otimes}_A\) induces a functor
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx(\underline{S})_{\underline{\mathrm{parf}}}\times_{\underline{S}} \Dpx^b(\underline{S})_{\mathrm{coh}}
+  \longrightarrow \Dpx^b(\underline{S})_{\mathrm{coh}}.
+\]
+%%%%%%%%%%  scan idx 151  |  folio 138  %%%%%%%%%%
+\SGAPrintPage{138}%
+This formula is the starting point of the theory of intersections on schemes. Observe, on the other hand, that the (derived) tensor product of two pseudo-coherent complexes with bounded cohomology does not in general have bounded cohomology.
+
+\sgaStableTarget{sga6.e01.cor.5-9}\textbf{Corollary 5.9.} \uline{Suppose that} \(\underline{S}=(\mathrm{Ens})\) \uline{(so} \(A\) ``\uline{is}'' \uline{an ordinary ring) and that every left} \(A\)\uline{-module has finite tor-dimension (this holds, for example, when} \(A\) \uline{has finite global cohomological dimension, see} (MULT VI 2.6) \uline{and} (EGA \(0_{\mathrm{IV}}\) 17.2.8)). \uline{Then we have}
+\[
+\begin{aligned}
+\text{(i)}\quad & \Dpx^b({}_A \underline{S})=\Dpx({}_A \underline{S})_{\torf},\quad\text{\uline{and}}\\
+\text{(ii)}\quad & \Dpx^b({}_A \underline{S})_{\mathrm{coh}}=\Dpx({}_A \underline{S})_{\underline{\mathrm{parf}}}.
+\end{aligned}
+\]
+\uline{In other words, for} \(E\in\Ob\Dpx({}_A \underline{S})\) \uline{to have finite tor-dimension (resp.\ finite tor-dimension and be perfect), it is necessary and sufficient that} \(E\) \uline{have bounded cohomology (resp.\ bounded cohomology and be pseudo-coherent)}.
+
+\uline{Proof}. By (5.8), it suffices to prove (i). Let \(E\in\Ob\Dpx^b({}_A \underline{S})\). We can suppose (extending \(E\) by \(0\)) that \(E\in\Ob\Dpx^b({}_A S)\), where \(S\) is the final object of \(\underline{S}\). Proceeding by induction on the number of nonzero cohomology objects of \(E\), we reduce by dévissage to the case where \(E\) is an ordinary \(A\)-Module, and we are done.
+
+More generally, we can state:
+
+\sgaStableTarget{sga6.e01.cor.5-10}\textbf{Corollary 5.10} \uline{Let} \(X\in\Ob \underline{S}\)\uline{. Suppose that} \(\underline{S}_{/X}\) \uline{has enough points} (SGA 4 IV 6.4.1.) \uline{and that, for every point} \(s\) \uline{of} \(\underline{S}_{/X}\)\uline{, every left} \(A_s\)\uline{-module has finite tor-dimension. Then we have}
+\[
+  \Dpx^b({}_A X)_{\mathrm{coh}}=\Dpx^b({}_A X)_{\mathrm{parf}}.
+\]
+%%%%%%%%%%  scan idx 152  |  folio 139  %%%%%%%%%%
+\SGAPrintPage{139}%
+In other words, for \(E\in\Ob\Dpx^b({}_A X)\) to be pseudo-coherent, it is necessary and sufficient that \(E\) be perfect.
+
+\uline{Proof}. Let \(E\in\Ob\Dpx^b({}_A X)_{\mathrm{coh}}\) and \(s\) be a point of \(\underline{S}_{/X}\). We must show that \(E\) is perfect ``in a neighbourhood of \(s\)'', i.e.\ that there exists an \(s\)-pointed object \(U\) of \(\underline{S}\) over \(X\) such that \(E|U\) is perfect. Since the functor \(s^*\) is exact, by (2.16.1 a)) we have \(E_s\in\Ob\Dpx^b(A_s)_{\mathrm{coh}}\). Thus, by (5.9), \(E_s\) is perfect. The assertion will therefore follow from (3.7.2) and the following lemma:
+
+\sgaStableTarget{sga6.e01.lem.5-10-1}\textbf{Lemma 5.10.1.} \uline{Let} \(s\) \uline{be a point of} \(\underline{S}\) \uline{and let} \(F\in\Ob\Dpx(A_s)_{\mathrm{parf}}\)\uline{. There exist an} \(s\)\uline{-pointed object} \(U\) \uline{of} \(\underline{S}\) \uline{and} \(F'\in\Ob\Dpx({}_A U)_{\mathrm{parf}}\) \uline{such that} \(F'_s=F\)\uline{.}
+
+\uline{Proof}. This is evident when \(F\) is a free \(A_s\)-module of finite type. Now suppose that \(F\) is projective of finite type, hence the image of a projector \(p:L\longrightarrow L\), where \(L\) is free of finite type. There then exist a ``neighbourhood'' \(U\) of \(s\), a free \(A_U\)-Module \(L'\), and a homomorphism \(p':L'\to L'\) such that \(p'_s=p\). Since \({p'_s}^2=p'_s\), we can suppose, after shrinking \(U\), that \(p'^2=p'\). Thus \(F'=\Im(p')\) is a direct factor of \(L'\) and satisfies \(F'_s=F\). This generalizes immediately to the case where \(F\) is strictly perfect, i.e.\ a complex with bounded degrees made up of projective modules of finite type.
+
+\sgaStableTarget{sga6.e01.ex.5-11}\textbf{Examples 5.11.} Corollary (5.10) applies in particular when \((\underline{S},A)\) is defined by a ringed space with \uline{regular} local rings, for example a regular scheme, or a complex analytic space smooth over \(\mathbb C\).
+
+%%%%%%%%%%  scan idx 153  |  folio 140  %%%%%%%%%%
+\SGAPrintPage{140}%
+\sgaStableTarget{sga6.e01.sec.6}\section*{6. Rank of a perfect complex}
+
+\sgaStableTarget{sga6.e01.para.6-0}6.0. Let \((X,\underline{O}_X)\) be a ringed space with local rings. It is well known that to every locally free sheaf of finite type \(L\) on an open set \(U\) of \(X\) we can attach a function \(\rg_U(L)\), locally constant on \(U\) and with integer values, called the \uline{rank} of \(L\), the family of functions \(\rg_U(L)\) being characterized by the following properties:
+\begin{enumerate}[label=(\roman*)]
+\item for an inclusion \(V\subset U\) of open sets, we have \(\rg_V(L|V)=\rg_U(L)|V\);
+\item for every exact sequence of locally free \(\underline{O}_U\)-Modules of finite type
+\[
+  0\longrightarrow L'\longrightarrow L\longrightarrow L''\longrightarrow 0,
+\]
+we have \(\rg_U(L)=\rg_U(L')+\rg_U(L'')\);
+\item \(\rg_X(\underline{O}_X)=1\).
+\end{enumerate}
+In this section, we propose to extend the notion of rank to perfect complexes.
+
+\sgaStableTarget{sga6.e01.def.6-1}\textbf{Definition 6.1} (cf.\ SGA 5 VIII 2). \uline{Let} \(C\) \uline{be an additive (resp.\ triangulated) category and} \(F\) \uline{an abelian group. A function} \(f:\Ob(C)\longrightarrow F\) \uline{is called an} additive function from \(C\) to \(F\) \uline{when for all} \(L,L',L''\in\Ob(C)\) \uline{such that} \(L\simeq L'+L''\) \uline{(resp.\ there is a distinguished triangle}
+\[
+\begin{tikzcd}
+& L'' \arrow[dl, dashed] & \\
+L' \arrow[rr] && L \arrow[ul]
+\end{tikzcd}
+\]
+) \uline{we have} \(f(L)=f(L')+f(L'')\).
+
+\uline{The additive functions from} \(C\) \uline{to} \(F\) \uline{form an abelian group, denoted by} \(\Add(C,F)\).
+

@@ -1,0 +1,30 @@
+{
+  "source_id": "ASTRA-V-GAMMA-EXPONENT-342",
+  "page": 342,
+  "record_type": "exact_identification",
+  "image": [
+    "scan/SGA6_scan_360dpi.pdf#page=356",
+    "scan/SGA6_witness_300dpi.djvu#page=353"
+  ],
+  "printed": "gamma^p(0,x)=sum_(i=0)^(p-1)binom(p-1,i)lambda^i(N,x).",
+  "current_repair": "Only lambda^i(N,x) becomes lambda^(p-i)(N,x); preserve p-1 upper bound, i=0 lower bound, coefficient and comma.",
+  "coefficient_map": {
+    "ring": "A_N with unit1_N=(1,0),z=(0,x).",
+    "definition": "gamma^p(z)=lambda^p(z+(p-1)1_N) by3.2.",
+    "series": "lambda_t(z+(p-1)1_N)=lambda_t(z)(1+t)^(p-1).",
+    "map": "[t^p]:A_N[[t]]→A_N extracts the degree-p coefficient. Applying it to that exact product gives sum_(i=0)^(p-1)binom(p-1,i)lambda^(p-i)(z).",
+    "coordinate_identification": "Each p-i>=1, so lambda^(p-i)(z)=(0,lambda^(p-i)(N,x)) by5.5.3. This proves the repaired summand in the embedded A coordinate.",
+    "counterexample": "At p=1,x=0, the printed sum consists of lambda^0=(1,0), whereas gamma^1(0,0)=(0,0). These differ already in the first integer coordinate under the augmentation A_N→Z.",
+    "independent_review": "Coordinator confirmed the coefficient expansion and the p=1,z=0 obstruction."
+  },
+  "universal_injection": {
+    "ring": "A=Z[N,lambda^2N,...,lambda^dN;lambda^iX,lambda^iY,i>=1].",
+    "D": "D=lambda_(minus1)(N)=1-N+lambda^2N-...+(-1)^d lambda^dN.",
+    "map": "Phi:A_N→A,(n,x)↦n+xD.",
+    "multiplication": "Phi((n,x)(m,y))=nm+(ny+mx+xyD)D=(n+xD)(m+yD).",
+    "lambda_compatibility": "Phi sends(1,0) to1 and the positive coefficient(0,lambda^p(N,x)) to lambda^p(N,x)D=lambda^p(xD), exactly5.3.1. Additivity then handles every(n,x).",
+    "evaluation": "q:A→Z[lambda^iX,lambda^iY,i>=1] sends N↦1,lambda^jN↦0 for j>=2, and fixes the other independent coordinates. It is the lambda-evaluation at the line element1 and satisfies q(D)=0.",
+    "injectivity": "From Phi(n,x)=0, q yields n=0. The independent evaluation N↦0,lambda^jN↦0 sends D to1, so D is nonzero. A is an integral polynomial ring, hence xD=0 implies x=0.",
+    "scope": "This is the actual universal case named immediately before the assertion. No injectivity claim for arbitrary specializations is used."
+  }
+}

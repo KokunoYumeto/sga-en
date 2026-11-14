@@ -1,0 +1,37 @@
+{
+  "record_type": "author_claim_issue_and_exact_identification",
+  "page": 352,
+  "source_ids": [
+    "ASTRA-V-LAMBDA-EVALUATION-352",
+    "check/findings/findings_351_355.json#14",
+    "check/findings/findings_351_355.json#16"
+  ],
+  "image": [
+    "scan/SGA6_scan_360dpi.pdf#page=366",
+    "scan/SGA6_witness_300dpi.djvu#page=363"
+  ],
+  "source_passages": {
+    "339_5_1": "Soient K un anneau binomial,A une K-lambda-algebre,N,x deux elements de A tels que lambda^k(N)=0 pour k>d. On pose lambda_(-1)(N)=sum_(i=0)^d(-1)^i lambda^i(N).",
+    "350_6_6_1": "For x=(n,1+...+a_n),lambda^i(x)=0 for i>n,lambda^n(x)=(1,1+a1),and the finite sum_(i=0)^n(-1)^i lambda^i(x) has pair(0,1-(n-1)!a_n+higher degrees). The diplomatic source has the separately decided >= and missing-pair-parenthesis errors.",
+    "351_6_6_2": "The relation6.6.1.iii is true for every element X of augmentation n. It is expressly the finite sum relation.",
+    "352_proof": "For arbitrary x=(n,1+a1+...+an+...) the proof calls lambda_(-1)(x), compares it modulo(Ch A)_(n+1) with lambda_(-1)(n,1+...+an),and prints lambda_(-1)(x)=(0,1-(n-1)!an+...)."
+  },
+  "evaluation_example": {
+    "ring": "K=Q,A=Q[Y]/(Y^2),degree Y=2;A has degrees0 and2 only.",
+    "character": "ch(a,1+bY)=a+eta(Log(1+bY))=a-bY, since Y^2=0 and eta in degree2 is multiplication by-1. Inverse a+cY→(a,1-cY).",
+    "universal_map": "Q[e1,e2]→A sends e1→0,e2→Y. Apply Ch to this graded map and the rank-two universal splitting computation6.6.1;u=(2,1+Y) has lambda_t(u)=1+u t+1 t^2.",
+    "rank_one_element": "x=u-1=(1,1+Y),because the unit is(1,1) and addition of pairs multiplies their series coordinates.",
+    "exact_series": "lambda_t(x)=lambda_t(u)/(1+t); applying ch gives(1+(2-Y)t+t^2)/(1+t)=1+t-Yt/(1+t).",
+    "coefficients": "ch(lambda^0 x)=1;ch(lambda^1 x)=1-Y;ch(lambda^i x)=(-1)^iY for i>=2.",
+    "partial_sum_map": "The additive coefficient map [Y]:A→Q sends ch(sum_(i=0)^N(-1)^i lambda^i x)=NY to N for every N>=1.",
+    "topology": "The degree filtration is zero above degree2;therefore these nonstationary partial sums do not converge in the degree completion. Full-series evaluation at t=-1 is not supplied for x by that topology."
+  },
+  "finite_statement_map": {
+    "operation": "S_n:Ch(A)→Ch(A),x→sum_(i=0)^n(-1)^i lambda^i(x).",
+    "quotient": "q_n:Ch(A)→Ch(A)/(Ch A)_(n+1) is a lambda-ring quotient by Lemma6.6.3. Therefore q_n(S_n(x))=S_n(q_n(x)) term by term.",
+    "comparison": "q_n(x)=q_n(n,1+a1+...+an);the latter pair has lambda-degree at most n by6.6.1. Thus S_n has exactly the asserted leading coefficient. This proves the printed finite corollary without evaluating the infinite series of the original x."
+  },
+  "missing_superscript": "Both scans have lambda without an exponent after(-1)^i. Put z=x-epsilon(x). The stated definition is gamma^n(z)=lambda^n(z+n-1). Since lambda_t(z+n)=(1+t)lambda_t(z+n-1), comparison of coefficients and the finite alternating sum gives sum_(i=0)^n(-1)^i lambda^i(z+n)=(-1)^n lambda^n(z+n-1): adjacent lower coefficients cancel pairwise. Thus the missing superscript is exactly i. The bounds0,n and the sign(-1)^n stay unchanged.",
+  "filtration_index_identity": "Both scans clearly lower n under Fil. The explicit reference to3.10 identifies its ideal by the generators product gamma^(i_j)(z_j), epsilon(z_j)=0 and sum i_j>=n. The identity on each such generator gives the exact identification of the label Fil_n here with Fil^n in3.10; the proof then sends those generators into(Ch A)_n using6.6.4 and the ring-filtration product. There is no changed ideal, index value or map to repair. Retain this observed index placement in both forms rather than impose a uniform typography on the source label.",
+  "disposition": "Preserve all printed lambda_(-1) occurrences and the finite6.6.2 statement. Only the independently identified missing lambda superscript receives a current textual correction. No replacement theorem or new hypothesis is inserted."
+}

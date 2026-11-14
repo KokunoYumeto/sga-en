@@ -1,0 +1,38 @@
+
+La
+démonstration se fait par récurrence sur la dimension \(s\) du support de \(F\); lorsque \(s=-1\), c'est trivial. Prenons une section \(\sigma\in H^0({O}_X(1))\) qui ne s'annule en aucun point de l'ensemble fini \(\Ass(F)\); alors \(\sigma\) définit une suite exacte \(0\longrightarrow F(-1)\longrightarrow F\longrightarrow G\longrightarrow 0\), et \(G\) est \(m\)-régulier par 1.2., à support de dimension \(s-1\).
+
+Considérons la suite exacte correspondante :
+\[
+H^q(F(n-q-1))\longrightarrow H^q(F(n-q))\longrightarrow H^q(G(n-q)).
+\]
+Par l'hypothèse de récurrence, on a \(H^q(G(n-q))=0\) pour \(n\ge m\), donc \(H^q(F(n-q-1))=0\) implique \(H^q(F(n-q))=0\); mais \(H^q(F(m-q))=0\), ce qui donne (i).
+
+Pour établir (ii), on fait la chasse dans le diagramme commutatif suivant :
+\[
+\begin{tikzcd}[column sep=1.8em,row sep=2.5em]
+ & & & H^0(F(n))\otimes H^0({O}_X(1)) \arrow[rr] \arrow[d]
+ & & H^0(G(n))\otimes H^0({O}_X(1)) \arrow[r] \arrow[d]
+ & 0 \\
+0 \arrow[rr]
+& & H^0(F(n)) \arrow[ur] \arrow[r]
+& H^0(F(n+1)) \arrow[rr]
+& & H^0(G(n+1)) \arrow[d] \\
+& & & & & 0
+\end{tikzcd}
+\]
+où la flèche oblique est définie par \(\varphi\mapsto\varphi\otimes\sigma\), les lignes horizontales sont exactes, la première par la \(n\)-régularité de \(F\) et par (i), déjà prouvé, et la seconde colonne est exacte par l'hypothèse de récurrence.
+
+Enfin, (iii) découle du diagramme commutatif suivant :
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+H^0(F(n))_X\otimes H^0({O}_X(1))_X
+  \arrow[r,"\alpha_n"]
+  \arrow[d]
+& H^0(F(n)(1))_X
+  \arrow[d,"\beta_{n+1}"] \\
+\bigl[H^0(F(n))_X\bigr](1)
+  \arrow[r,"\beta_n\otimes\mathrm{id}"]
+& F(n)(1)
+\end{tikzcd}
+\]

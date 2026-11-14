@@ -1,0 +1,36 @@
+
+les morphismes \(i,j\) pour \(X\) (resp. \(Y\)) des fibres spéciales et générales dans le schéma ambiant. Nous désignons par
+\[
+  g_t:X_t\to Y_t,\qquad g_s:X_s\to Y_s
+\]
+les morphismes induits, donnant donc lieu aux carrés cartésiens
+\begin{equation}\tag{7.10.0}
+\begin{tikzcd}[column sep=large,row sep=large]
+X_t \arrow[r,"g_t"] \arrow[d,"j_X"'] & Y_t \arrow[d,"j_Y"'] &
+X_s \arrow[r,"g_s"] \arrow[d,"i_X"'] & Y_s \arrow[d,"i_Y"']\\
+X \arrow[r,"g"] & Y &
+X \arrow[r,"g"] & Y .
+\end{tikzcd}
+\end{equation}
+
+Supposons d'abord \(g\) \emph{propre}. Je dis qu'alors le diagramme suivant est commutatif :
+\begin{equation}\tag{7.10.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(X_t) \arrow[r,"g_{t*}"] \arrow[d,"\sigma_X"'] &
+K_\bullet(Y_t) \arrow[d,"\sigma_Y"]\\
+K_\bullet(X_s) \arrow[r,"g_{s*}"] &
+K_\bullet(Y_s)
+\end{tikzcd}
+\end{equation}
+Ce résultat généralise 7.5 (car pour \(X=S\), les flèches de (7.3.2) s'identifient à la flèche identique de \(\mathbb Z\)). On notera que si \(X\) et \(Y\) satisfont aux conditions de 7.7 i.e. sont à fibres régulières, alors \(g_t\) et \(g_s\) sont automatiquement de tor-dimension finie, et le diagramme peut s'interpréter comme un diagramme commutatif avec des \(K^\bullet\), qu'on laisse au lecteur de récrire.
+
+Pour prouver la commutativité de (7.10.1), on voit aussitôt, en utilisant la définition de \(\sigma_X\) et \(\sigma_Y\), qu'on est ramené à prouver la commutativité des deux carrés antérieurs du prisme
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(X_t) \arrow[rr,"g_{t*}"] \arrow[dd] && K_\bullet(Y_t) \arrow[dd]\\
+& K_\bullet(X) \arrow[ul,"j_X^*" description] \arrow[dl,"i_X^*" description] \arrow[rr,"g_*"] &&
+K_\bullet(Y) \arrow[ul,"j_Y^*" description] \arrow[dl,"i_Y^*" description]\\
+K_\bullet(X_s) \arrow[rr,"g_{s*}"] && K_\bullet(Y_s).
+\end{tikzcd}
+\tag{*}
+\]

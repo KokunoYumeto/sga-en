@@ -1,0 +1,205 @@
+%%%%%%%%%%  scan idx 450  |  folio 437  %%%%%%%%%%
+\SGAPrintPage{437}%
+We know (EGA II 8.1.8) that \(Y'\) is a closed subscheme of \(X'\) defined by an ideal of \(\underline{O}_{X'}\), canonically isomorphic to \(\underline{O}_{X'}(1)\); since the immersion \(j:Y'\to X'\) is defined by an invertible ideal, it is a regular closed immersion of codimension \(1\). Denote by \(\underline{J}\) the ideal of \(\underline{O}_X\) defining \(Y\), and by \(\underline{J}'\) the ideal of \(\underline{O}_{X'}\) defining \(Y'\); thus \(\underline{J}'\simeq \underline{J}.\underline{O}_{X'}\simeq\underline{O}_{X'}(1)\). Finally, denote by \(f:X'\to X\), and \(g:Y'\to Y\) the structural morphisms. We therefore have the commutative diagram:
+\sgaStableTarget{sga6.e07.eq.3-1-1}\begin{equation}\tag{3.1.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+Y' \arrow[r,"j"] \arrow[d,"g"'] & X' \arrow[d,"f"]\\
+Y \arrow[r,"i"'] & X.
+\end{tikzcd}
+\end{equation}
+
+By definition, \(X'=\Proj(\underline{S})\), where \(\underline{S}=\bigoplus_{n\ge0}\underline{J}^n\). Consequently, we have:
+\[
+Y'=\Proj\bigl(i^*(\underline{S})\bigr)
+=\Proj\left(\left(\bigoplus_{n\ge0}\underline{J}^n\right)\otimes_{\underline{O}_X}(\underline{O}_X/\underline{J})\right)
+=\Proj\left(\bigoplus_{n\ge0}\underline{J}^n/\underline{J}^{n+1}\right).
+\]
+Since \(i\) is regular, \(\bigoplus_{n\ge0}\underline{J}^n/\underline{J}^{n+1}\simeq \underline{\Sym}_{\underline{O}_Y}(\underline{J}/\underline{J}^2)\) (1.3). Denote by \(\underline{N}\) the conormal sheaf \(\underline{J}/\underline{J}^2\); thus:
+\[
+Y'=\bfP(\underline{N}).
+\]
+
+On \(Y'\), we can write the exact sequence:
+\sgaStableTarget{sga6.e07.eq.3-1-2}\begin{equation}\tag{3.1.2}
+0\to \underline{F}\to g^*(\underline{N})\to\underline{O}_{Y'}(1)\to0.
+\end{equation}
+
+Observe that \(\underline{O}_{Y'}(1)=j^*(\underline{O}_{X'}(1))=\underline{J}'/\underline{J}'^2\); it is therefore the conormal sheaf of the immersion \(j\), and we shall denote it by \(\underline{L}\).
+
+\sgaStableTarget{sga6.e07.lem.3-2}\textbf{Lemma 3.2.} \uline{With the hypotheses and notation of} 3.1, \uline{we have the following isomorphisms}:
+\sgaStableTarget{sga6.e07.eq.3-2-i}\sgaStableTarget{sga6.e07.eq.3-2-ii}\[
+\begin{array}{ll}
+\text{i)}&
+\forall i\ge0,\quad
+\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\simeq
+\bigwedge^i\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y);\\[4pt]
+\text{ii)}&
+\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)\simeq \underline{F}.
+\end{array}
+\]
+
+%%%%%%%%%%  scan idx 451  |  folio 438  %%%%%%%%%%
+\SGAPrintPage{438}%
+i) Since \(\underline{O}_Y\) can locally be resolved by a Koszul complex, the graded algebra \(\bigoplus_{i\ge0}\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)\) is alternating (2.2). There therefore exists one and only one algebra homomorphism:
+\sgaStableTarget{sga6.e07.eq.3-2-1}\begin{equation}\tag{3.2.1}
+\bigwedge \underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\longrightarrow
+\bigoplus_{i\ge0}\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y),
+\end{equation}
+extending the inclusion of \(\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)\) in
+\(\bigoplus_{i\ge0}\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)\). It suffices to check locally that it is an isomorphism.
+
+We can therefore work on an affine open subset \(U=\Spec(A)\) of \(X\), with \(\underline{J}\) defined by an ideal \(J\) of \(A\), and choose a regular homomorphism \(u:E\to A\) defining \(J\), with \(E=(A)^n\). Let \(f_1,\ldots,f_d\) be the images of a basis of \(E\).
+
+In \(\bigoplus_{n\ge0}J^n\), for \(m\le p\), we shall denote by \(x^{(m)}\) the element \(x\) of \(J^p\) considered as having degree \(m\). We can restrict to the open subset \(V\) of \(X'\) where, for example, the element \(f_1^{(1)}\) is invertible.
+
+The \(\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)\) are the homology sheaves of the complex \(K_\bullet(u)\otimes_{\underline{O}_X}\underline{O}_{X'}\). To study this complex on \(V\), make the following change of basis in \(E'=E\otimes_A\Gamma(V,\underline{O}_{X'})\): if \(e_1,\ldots,e_d\) is the given basis of \(E\), put:
+\[
+e'_1=e_1;\qquad \text{for }i\ne1,\quad
+e'_i=e_i-(f_i^{(1)}/f_1^{(1)})e_1.
+\]
+Put \(A'=\Gamma(V,\underline{O}_{X'})\); the differential of the complex \(K_\bullet(u)\otimes_A A'\) is given by
+\[
+d(e'_1)=f_1^{(0)};\qquad \text{for }i\ne1,\quad d(e'_i)=0.
+\]
+Taking as a basis of \(\bigwedge^k(E')\) the elements
+\(e'_{i_1}\wedge\cdots\wedge e'_{i_k}\) with \(i_1<\cdots<i_k\), we therefore find:
+\[
+\begin{array}{ll}
+d(a.e'_{i_1}\wedge\cdots\wedge e'_{i_k})=0
+&\text{if }i_1\ne1;\\[3pt]
+d(a.e'_{i_1}\wedge\cdots\wedge e'_{i_k})=
+af_1^{(0)}.e'_{i_2}\wedge\cdots\wedge e'_{i_k}
+&\text{if }i_1=1.
+\end{array}
+\]
+
+%%%%%%%%%%  scan idx 452  |  folio 439  %%%%%%%%%%
+\SGAPrintPage{439}%
+Denoting by \(E''\) the submodule of \(E'\) generated by \(e'_2,\ldots,e'_d\), we therefore see that the image of \(d:\bigwedge^kE'\longrightarrow\bigwedge^{k-1}E'\) is \(f_1^{(0)}\bigwedge^{k-1}E''\). Furthermore, \(f_1^{(0)}\) is regular in \(A'\), since on \(V\) the invertible ideal \(\underline{J}'\) is defined by the equation \(f_1^{(0)}\). The kernel of \(d:\bigwedge^kE'\longrightarrow\bigwedge^{k-1}E'\) is therefore \(\bigwedge^kE''\). Consequently, the \(k\)-th homology group of \(K_\bullet(u)\otimes_AA'\) is \(\bigwedge^kE''/f_1^{(0)}\bigwedge^kE''\); we thus obtain on \(V\) isomorphisms:
+\sgaStableTarget{sga6.e07.eq.3-2-2}\begin{equation}\tag{3.2.2}
+\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\xrightarrow{\sim}
+(\underline{O}_{X'}/f_1^{(0)}\underline{O}_{X'})\otimes_{\underline{O}_{X'}}
+\bigwedge^i(\underline{O}_{X'})^{d-1}
+\xrightarrow{\sim}
+\bigwedge^i(\underline{O}_{Y'})^{d-1}.
+\end{equation}
+In particular, for \(i=1\) we find:
+\[
+\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\xrightarrow{\sim}
+(\underline{O}_{Y'})^{d-1}.
+\]
+Consequently, for every \(i\) we have:
+\sgaStableTarget{sga6.e07.eq.3-2-3}\begin{equation}\tag{3.2.3}
+\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\xrightarrow{\sim}
+\bigwedge^i\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\end{equation}
+
+By 2.2, the isomorphism:
+\[
+\bigwedge(\underline{O}_{Y'})^{d-1}
+\xrightarrow{\sim}
+\bigoplus_{i\ge0}\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\]
+defined by the isomorphisms (3.2.2) is an algebra isomorphism. Hence the same is true of the isomorphism:
+\[
+\bigwedge\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\xrightarrow{\sim}
+\bigoplus_{i\ge0}\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\]
+defined by the isomorphisms (3.2.3). By uniqueness, it is then the restriction to \(V\) of the homomorphism (3.2.1), and the latter is therefore an isomorphism.
+
+ii) Consider the exact sequence:
+\[
+0\longrightarrow \underline{J}\longrightarrow\underline{O}_X\longrightarrow\underline{O}_Y\longrightarrow0,
+\]
+
+%%%%%%%%%%  scan idx 453  |  folio 440  %%%%%%%%%%
+\SGAPrintPage{440}%
+and the exact \(\underline{\Tor}\) sequence obtained by tensoring with \(\underline{O}_{X'}\):
+\[
+0\longrightarrow
+\Tor_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\longrightarrow
+\underline{J}\otimes_{\underline{O}_X}\underline{O}_{X'}
+\longrightarrow
+\underline{O}_{X'}
+\longrightarrow
+\underline{O}_{Y'}
+\longrightarrow0.
+\]
+The image of the morphism: \(\underline{J}\otimes_{\underline{O}_X}\underline{O}_{X'}\to\underline{O}_{X'}\) is
+\(\underline{J}.\underline{O}_{X'}=\underline{O}_{X'}(1)\). Consequently, we obtain the exact sequence:
+\[
+0\longrightarrow
+\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\longrightarrow
+\underline{J}\otimes_{\underline{O}_X}\underline{O}_{X'}
+\longrightarrow
+\underline{O}_{X'}(1)
+\longrightarrow0.
+\]
+
+Then tensor it with \(\underline{O}_{Y'}\); since
+\(\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)\) is an \(\underline{O}_{Y'}\)-Module, and
+\(\underline{O}_{X'}(1)\) is invertible, we obtain the exact sequence:
+\sgaStableTarget{sga6.e07.eq.3-2-4}\[
+0\longrightarrow
+\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\longrightarrow
+g^*(\underline{N})
+\longrightarrow
+\underline{O}_{Y'}(1)
+\longrightarrow0.
+\]
+One readily checks that the morphism \(g^*(\underline{N})\to\underline{O}_{Y'}(1)\) occurring in this sequence is the canonical morphism, so that this sequence is identified with (3.1.2). By definition, we therefore have:
+\[
+\underline{\Tor}_1^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)=\underline{F}.
+\]
+
+\sgaStableTarget{sga6.e07.para.3-3}\textbf{3.3.} We now suppose that \(X\) is a scheme having an ample sheaf. Then the same is true of \(X'\), which is projective over \(X\), and of \(Y\) and \(Y'\). Furthermore, \(i\) and \(j\) are perfect morphisms, since they are regular immersions; \(g\) is smooth and hence perfect, since \(Y'=\bfP(\underline{N})\); finally, \(f\) is perfect by 1.9. Since these morphisms are projective, we can define the additive homomorphisms (IV
+\[
+i_*:K^{\bullet}(Y)\to K^{\bullet}(X);\quad
+j_*:K^{\bullet}(Y')\to K^{\bullet}(X');\quad
+f_*:K^{\bullet}(X')\to K^{\bullet}(X);\quad
+g_*:K^{\bullet}(Y')\to K^{\bullet}(Y).
+\]
+
+%%%%%%%%%%  scan idx 454  |  folio 441  %%%%%%%%%%
+\SGAPrintPage{441}%
+\sgaStableTarget{sga6.e07.prop.3-4}\textbf{Proposition 3.4.} \uline{With the hypotheses and notation of} 3.1 \uline{and} 3.3, \uline{for every} \(x\in K^{\bullet}(Y)\) \uline{we have the relation}:
+\sgaStableTarget{sga6.e07.eq.3-4-1}\[
+f^*(i_*(x))=j_*\bigl(g^*(x).\lambda_{-1}(F)\bigr).
+\]
+
+Since both sides of the relation to be proved are additive, we may suppose that \(x\) is the class of an \(\underline{O}_Y\)-Module locally free of finite type \(\underline{M}\). The element \(f^*(i_*(x))\) is then the class of the complex \(\mathbb Lf^*(\mathbb Ri_*(\underline{M}))\), obtained by taking a projective resolution of \(i_*(\underline{M})\) and applying the functor \(f^*\) to it. The homology sheaves of the resulting complex are the \(\underline{\Tor}_i^{\underline{O}_X}(\underline{M},\underline{O}_{X'})\). By 2.4 and 3.2, we have:
+\[
+\underline{\Tor}_i^{\underline{O}_X}(\underline{M},\underline{O}_{X'})
+\xrightarrow{\sim}
+\underline{M}\otimes_{\underline{O}_Y}\underline{\Tor}_i^{\underline{O}_X}(\underline{O}_{X'},\underline{O}_Y)
+\xrightarrow{\sim}
+\underline{M}\otimes_{\underline{O}_Y}\bigwedge^i\underline{F}.
+\]
+
+It follows that these homology sheaves are locally free of finite type over \(\underline{O}_{Y'}\), hence perfect over \(\underline{O}_{X'}\); consequently, the class in \(K^{\bullet}(X')\) of the complex \(\mathbb Lf^*(\mathbb Ri_*(\underline{M}))\) is the alternating sum of the classes of its homology sheaves, namely:
+\[
+f^*(i_*(x))
+=\sum_{i\ge0}(-1)^i\operatorname{cl}
+\bigl(j_*(\underline{M}\otimes_{\underline{O}_Y}\bigwedge^i\underline{F})\bigr)
+=\sum_{i\ge0}(-1)^i
+j_*\bigl(g^*(x)\lambda^i(F)\bigr).
+\]
+
+\sgaStableTarget{sga6.e07.lem.3-5}\textbf{Lemma 3.5.} \uline{With the hypotheses and notation of} 3.1, \uline{we have the following isomorphisms}:
+\begin{enumerate}[label=\roman*)]
+\item \uline{for every} \(n\ge0\), \uline{and every} \(i\ge1\), \(R^if_*\bigl(\underline{O}_{X'}(n)\bigr)=0\);
+\item \uline{for every} \(n\ge0\), \(f_*\bigl(\underline{O}_{X'}(n)\bigr)=\underline{J}^n\).
+\end{enumerate}
+
+We may clearly suppose \(X\) affine, hence quasi-compact.
+
+i) First recall the following lemma, which was proved in exp. III.

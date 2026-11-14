@@ -1,0 +1,134 @@
+%%%%%%%%%%  scan idx 639  |  folio 626  %%%%%%%%%%
+\SGAPrintPage{626}%
+\(\langle c_1(L_1)\ldots c_1(L_s)\cdot Y\rangle\) the intersection number, which can be calculated as the coefficient of the monomial \(n_1\ldots n_s\) in the Snapper polynomial \(\chi\bigl(L_1^{\otimes n_1}\otimes\ldots\otimes L_s^{\otimes n_s}\otimes{O}_Y\bigr)\) (X 4.3.1).
+
+\sgaStableTarget{sga6.e13.para.2-2}\textbf{2.2.} From now on, we suppose that \(k\) is algebraically closed, that \(X\) is projective, endowed with a very ample invertible sheaf \(H={O}_X(1)\), and that \(X\) is integral, of dimension \(r\).
+
+Let \(L\) be an invertible sheaf on \(X\). The integer \(\langle c_1(L)\cdot c_1(H)^{r-1}\rangle\) is called the \uline{degree} of \(L\) (relative to \(H\)) and is denoted by \(d(L)\).
+
+In what follows we consider an invertible sheaf \(L\) and the Hilbert polynomials: \(\chi(L(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i}\) and \(\chi({O}_X(n))=\sum_{i=0}^{r}e_i\binom{n+i}{i}\).
+
+\sgaStableTarget{sga6.e13.lem.2-3}\textbf{Lemma 2.3.} \emph{We have}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{\(a_r=e_r=d(H)\).}
+\item \emph{(If \(r\ge1\)), \(a_{r-1}-e_{r-1}=d(L)\).}
+\end{enumerate}
+
+Indeed, we obtain (i) and (ii) at once by taking \(m=0,1\) in the following polynomial:
+\[
+\chi\bigl(L^{\otimes m}\otimes H^{\otimes n}\bigr)
+=
+\sum_{i+j\le r} f_{ij}\binom{m+i}{i}\binom{n+j}{j}.
+\]
+
+\sgaStableTarget{sga6.e13.lem.2-4}\textbf{Lemma 2.4.} \emph{If \(d(L)\le0\) and \(h^0(L)\ne0\), then \(L\simeq{O}_X\); therefore \(d(L)=0\) and \(h^0(L)=1\).}
+
+Indeed, since \(X\) is integral, there exists a divisor \(Y\ge0\) such that \(L\simeq{O}_X(Y)\). If \(Y>0\), we would have \(0\ge\langle c_1(L)\cdot c_1(H)^{r-1}\rangle=\langle c_1(H)^{r-1}\cdot Y\rangle\ge1\).
+
+\sgaStableTarget{sga6.e13.lem.2-5}\textbf{Lemma 2.5.} \emph{If \(d(L)\le0\), then \(L\) is a \((0,\ldots,0,a_r)\)-sheaf (with \(r\) zeros).}
+
+%%%%%%%%%%  scan idx 640  |  folio 627  %%%%%%%%%%
+\SGAPrintPage{627}%
+Indeed, if \(r=0\), \(L\) is evidently an \(a_0\)-sheaf. If \(r\ge1\), by 2.4, \(h^0(L(-1))=0\) since \(d(L(-1))<0\). Let \(Y\) be a hyperplane section of \(X\) and let \(0\longrightarrow L(-1)\longrightarrow L\longrightarrow L_Y\longrightarrow0\) be an exact sequence defined by \(Y\). If \(r=1\), by 1.7, \(h^0(L_Y(-1))=a_1\); thus \(L\) is a \((0,a_1)\)-sheaf. If \(r\ge2\), one can take \(Y\) integral by Bertini's theorem and one may thus suppose by induction that \(L_Y\) is a \((0,\ldots,a_r)\)-sheaf; this gives the assertion.
+
+\sgaStableTarget{sga6.e13.lem.2-6}\textbf{Lemma 2.7.} \emph{If \(r=2\) and \(d(L)\le0\), then}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{For every \(n\), \(h^1(L(n))\le a_1(a_1+1)a_2-a_0\)}
+\item \emph{\(a_0\le a_1(a_1+1)\).}
+\end{enumerate}
+
+Let \(Y\) be an integral hyperplane section of \(X\). By 1.7 and 2.5, \(L_Y\) is a \((0,a_2)\)-sheaf with Hilbert polynomial \(\chi(L_Y(n))=a_1+a_2\binom{n+1}{1}\). Thus, by 1.11, \(-a_1\ge0\) and \(L_Y\) is \([-a_1]\)-regular.
+
+Consider the following exact sequence:
+\[
+H^0(L_Y(n))\longrightarrow H^1(L(n-1))
+\longrightarrow H^1(L(n))\longrightarrow H^1(L_Y(n)).
+\]
+For \(n\ge -a_1-1\), we have \(h^1(L(-a_1-2))\ge h^1(L(n))\) since \(h^1(L_Y(n))=0\) by 1.3 (i); for \(n\le -1\), we have \(h^1(L(n-1))\le h^1(L(-1))\) since \(h^0(L_Y(n))=0\) by 2.4. Finally, for every \(n\), \(h^0(L_Y(n-1))\le h^0(L_Y(n))\) since there exists an injection \(L_Y(n-1)\longrightarrow L_Y(n)\), and \(h^0(L_Y(-a_1-1))=a_2\binom{-a_1}{1}+a_1\) since \(h^1(L_Y(-a_1-1))=0\); thus, for \(n\le -a_1-2\), we have \(h^1(L(n))-h^1(L(n+1))\le -a_2a_1+a_1\). As a consequence, we conclude that for every \(n\),
+\sgaStableTarget{sga6.e13.eq.2-6-1}\[
+h^1(L(n))\le h^1(L(-a_1-2))+(-a_1-1)(-a_2a_1+a_1).
+\tag{2.7.1}
+\]
+
+%%%%%%%%%%  scan idx 641  |  folio 628  %%%%%%%%%%
+\SGAPrintPage{628}%
+Since \(L_Y\) is \([-a_1]\)-regular, \(h^2(L(-a_1-2))=0\) by 1.4; hence \(h^1(L(-a_1-2))=h^0(L(-a_1-2))-\chi(L(-a_1-2))\). Now \(h^0(L(-a_1-2))\le a_2\binom{-a_1}{2}\) by 1.8 (i), since \(L\) is a \((0,0,a_2)\)-sheaf by 2.5. Consequently,
+\sgaStableTarget{sga6.e13.eq.2-6-2}\[
+0\le h^1(L(-a_1-2))\le -a_1(-a_1-1)-a_0.
+\tag{2.7.2}
+\]
+Finally, 2.7.2 gives (ii), and 2.7.1 and 2.7.2 give (i).
+
+\sgaStableTarget{sga6.e13.lem.2-8}\textbf{Lemma 2.8.} \emph{We suppose that \(r=2\) and \(d(L)\le0\). Let \(\delta=d(L)\) and \(\beta=\delta(e_2-1)+e_1\). Then}:
+\[
+a_0\ge
+\langle c_1(L)^2\rangle+2e_0+
+\sum_{i=1}^{2}(2e_i-a_i)\binom{\delta-1+i}{i}
+-\beta(\beta+1).
+\]
+
+Indeed, let \(\chi\bigl(L^{\otimes m}(\delta-1)\bigr)=\alpha_2m^2+\alpha_1m+\alpha_0\); then, by comparing polynomials, it follows that \(2\alpha_2=\langle c_1(L)^2\rangle\), that \(\alpha_0=\sum_{i=0}^{2}e_i\binom{\delta-1+i}{i}\) and that \(\alpha_2+\alpha_1+\alpha_0=\sum_{i=0}^{2}a_i\binom{\delta-1+i}{i}\). Let \(\chi\bigl(L^{-1}(\delta)(n)\bigr)=\sum_{i=0}^{2}\beta_i\binom{n+i}{i}\); then \(\beta_0=\alpha_2-\alpha_1+\alpha_0\) and, by 2.3, \(\beta_1=d(L^{-1}(\delta))+e_1\), which equals \(\beta\). Thus \(a_0=2\alpha_2+2\alpha_0-\sum_{i=1}^{2}a_i\binom{\delta-1+i}{i}-\beta_0\), and since \(d(L^{-1}(\delta))\le0\), we have \(\beta_0\le\beta(\beta+1)\) by 2.7 (ii); this gives the assertion.
+
+\sgaStableTarget{sga6.e13.lem.2-9}\textbf{Lemma 2.9.} \emph{We suppose that \(r\ge2\), that \(d(L)\le0\) and that \(X\) is normal. Then}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{\(h^1(L(-n))=0\) for \(n\ge2+h_2(a_{r-2},a_{r-1},a_r)\),}
+\item \emph{\(h^1(L(n))\le h_r(a_{r-2},a_{r-1},a_r)\) for every \(n\),}
+\item \emph{\(|a_i|\le g_{r-i}(a_{r-2},a_{r-1},a_r)\) for \(i=0,\ldots,r\),}
+\end{enumerate}
+\emph{where \(h_2(X_0,X_1,X_2),h_3(X_0,X_1,X_2),\ldots\) and \(g_0(X_0,X_1,X_2),g_1(X_0,X_1,X_2),\ldots\) are universal polynomials with coefficients in \(\mathbb Q\), which depend on neither \(k\) nor \(X\).}
+
+%%%%%%%%%%  scan idx 642  |  folio 629  %%%%%%%%%%
+\SGAPrintPage{629}%
+Indeed, let us first treat the case \(r=2\). Put \(g_i(X_0,X_1,X_2)=X_{2-i}^2\) for \(i=0,1,2\) and \(h_2(X_0,X_1,X_2)=X_1(X_1+1)X_2-X_0\). Then (iii) is evident and (ii) is 2.7 (i).
+
+Let \(X\) lie in \(P=\mathbb P_k^N\), and let \(\omega=\underline{\Ext}^{N-2}_{{O}_P}({O}_X,\Omega^N_{P/k})\). Then \(h^1(L(-n))=h^1(\omega\otimes L^{-1}(n))\) and \(\omega\) is invertible outside the finite set \(Z\) of singular points of \(X\) (see FGA 149 \S 6). Let \(Y\) be a normal hyperplane section of \(X\) which does not contain \(Z\). Then \(\omega_Y(1)\simeq\Omega^1_{Y/k}\) and we have an exact sequence:
+\[
+0\longrightarrow \omega\otimes L^{-1}(-1)
+\longrightarrow \omega\otimes L^{-1}
+\longrightarrow \Omega^1_{Y/k}\otimes L_Y^{-1}(-1)
+\longrightarrow0.
+\]
+Now \(h^1(\Omega^1_{Y/k}\otimes L_Y^{-1}(n))=h^0(L_Y(-n))\) for every \(n\), and \(h^0(L_Y(-n))=0\) for \(n\ge1\) by 2.5. Thus \(\Omega^1_{Y/k}\otimes L_Y^{-1}(-1)\) is 3-regular and, by 1.4, \(\omega\otimes L^{-1}\) is \(\bigl[3+h^1(\omega\otimes L^{-1}(2))\bigr]\)-regular. Consequently, \(h^1(L(-n))=0\) for \(n\ge2+h^1(L(-2))\)\,; hence (i).
+
+Now suppose that \(r\ge3\) and argue by induction on \(r\). Let \(Y\) be a normal hyperplane section of \(X\) and consider the exact sequence:
+\sgaStableTarget{sga6.e13.eq.2-9-1}\[
+H^0(L_Y(-n))\longrightarrow H^1(L(-n-1))
+\longrightarrow H^1(L(-n))\longrightarrow H^1(L_Y(-n)).
+\tag{2.9.1}
+\]
+By 1.7, \(\chi(L_Y(n))=\sum_{i=0}^{r-1}a_{i+1}\binom{n+i}{i}\). Thus, for \(n\ge2+h_2(a_{r-2},a_{r-1},a_r)\), the induction hypothesis gives \(h^1(L_Y(-n))=0\), and since \(n\ge2\) by (ii) for \(r=2\), 2.4 gives \(h^0(L_Y(-n))=0\)\,; hence \(h^1(L(-n-1))=h^1(L(-n))\). But, for \(n\gg0\), \(h^1(L(-n))=0\) (see FGA 149 \S 6)\,; hence (i).
+
+As induction hypothesis, suppose that the polynomials \(g_i\) and \(h_i\) are defined for \(i\le r-1\). Then, for every \(n\), \(h^1(L(n))\le h^1(L(n-1))+h_{r-1}(a_{r-2},a_{r-1},a_r)\) by 2.9.1. Thus, by (i),
+%%%%%%%%%%  scan idx 643  |  folio 630  %%%%%%%%%%
+\SGAPrintPage{630}%
+already proved, we conclude that for any \(m\ge -2\),
+\sgaStableTarget{sga6.e13.eq.2-9-2}\[
+h^1(L(n))\le
+\bigl[2+h_2(a_{r-2},a_{r-1},a_r)+m\bigr]
+h_{r-1}(a_{r-2},a_{r-1},a_r)
+\tag{2.9.2}
+\]
+for every \(n\le m\).
+
+By 2.5, \(L_Y\) is a \((0,\ldots,0,a_r)\)-sheaf. Put \(c_i=g_{r-i}(a_{r-2},a_{r-1},a_r)\) for \(i=1,\ldots,r\) and \(m=P_{r-2}(c_1,\ldots,c_{r-1})\). By 1.11, \(m\ge0\) and \(L_Y\) is \(m\)-regular. Thus, by 1.4 (ii), \(h^1(L(m-2))\ge h^1(L(n))\) for every \(n\ge m-1\). Therefore, if we define polynomials by \(M=P_{r-2}(g_{r-1},\ldots,g_1)\) and \(h_r=(h_2+M)h_{r-1}\), then we have (ii) by 2.9.2.
+
+Finally, since \(L_Y\) is \(m\)-regular, \(h^q(L(m))=0\) for \(q\ge2\) by 1.4 (i)\,; hence \(\sum_{i=0}^{r}a_i\binom{m+i}{i}=h^0(L(m))-h^1(L(m))\). But \(h^0(L(m))\le a_r\binom{m+r}{r}\) by 1.8 (i). Thus, if we define \(g_r=\sum_{i=1}^{r}g_{r-i}\binom{M+i}{i}+a_r\binom{M+r}{r}+h_r\), we have (iii).
+
+\sgaStableTarget{sga6.e13.rem.2-10}\textbf{Remark 2.10.} For fixed \(m\), consider an equality of polynomials in \(n\):
+\[
+\sum_{i=0}^{r}a_{m,i}\binom{n+i}{i}
+=
+\sum_{j=0}^{r}a_j\binom{m+n+j}{j}.
+\]
+Then one easily finds the formula
+\[
+a_{m,i}=\sum_{j=0}^{r-i}a_{j+i}\binom{m-1+j}{j}
+\]
+by induction on \(r\) so that \(a_{m,i}\) becomes \(a_{m,0}\), and by taking \(n=-1\).
+
+Similarly, one finds that there exists a polynomial with rational coefficients \(P_i^{(m,r)}(X_r,\ldots,X_i)\) which is increasing in \(X_i\), such that in the following equality:
+\[
+\sum_{i=0}^{r}a_i^{(m)}\binom{n+i}{i}
+=
+\sum_{j=0}^{r}a_j\binom{mn+j}{j}
+\]

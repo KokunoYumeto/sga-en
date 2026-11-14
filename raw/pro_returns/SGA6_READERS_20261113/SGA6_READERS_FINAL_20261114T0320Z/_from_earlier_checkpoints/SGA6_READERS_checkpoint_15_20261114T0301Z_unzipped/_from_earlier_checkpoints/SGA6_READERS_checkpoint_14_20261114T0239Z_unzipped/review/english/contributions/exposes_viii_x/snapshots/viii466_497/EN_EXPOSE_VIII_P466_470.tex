@@ -1,0 +1,121 @@
+%%%%%%%%%%  scan idx 479  |  folio 466  %%%%%%%%%%
+\SGAPrintPage{466}%
+\sgaStableTarget{sga6.e08.expose}\section*{\underline{EXPOSÉ VIII}\\[3pt] \underline{\underline{THE RIEMANN--ROCH THEOREM}}}
+\begin{center}
+\underline{by Pierre BERTHELOT}
+\end{center}
+
+\sgaStableTarget{sga6.e08.sec.1}\subsection*{1. Complete-intersection morphisms}
+
+\sgaStableTarget{sga6.e08.def.1-1}\textbf{Definition 1.1.} \uline{Let} $f:X\to Y$ \uline{be a morphism of schemes}. \uline{One says that} $f$ \uline{is a complete-intersection morphism if for every point} $x$ \uline{of} $X$, \uline{there exist an open neighbourhood} $U$ \uline{of} $x$, \uline{a smooth} $Y$-\uline{scheme} $V$, \uline{such that the restriction of} $f$ \uline{to} $U$ \uline{factors as}:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[rr,"i"] \arrow[dr] && V \arrow[dl]\\
+& Y &
+\end{tikzcd}
+\]
+\uline{where} $i$ \uline{is a regular immersion} (VII 1.4).
+
+After replacing $V$ by an open subset, one may suppose that $i$ is a regular closed immersion.
+
+In this definition one may replace $V$ by a vector bundle $Y[T_1,\ldots,T_n]$. Indeed, since the notion is local, one may suppose that $V$ is affine, and that its image in $Y$ is contained in an affine open subset $W$ of $Y$. There then exist an integer $n$ and a closed $W$-immersion $V\longrightarrow W[T_1,\ldots,T_n]$, hence a $Y$-immersion $V\to Y[T_1,\ldots,T_n]$, which is regular by VII 1.10. Since the composite of two regular immersions is regular, one thus obtains a regular $Y$-immersion $U\longrightarrow Y[T_1,\ldots,T_n]$ factoring $f$.
+
+\sgaStableTarget{sga6.e08.prop.1-2}\textbf{Proposition 1.2.} \uline{Let} $f:X\to Y$ \uline{be a complete-intersection morphism}. \uline{Then every} $Y$-\uline{immersion} $i:X\to Z$ \uline{of} $X$ \uline{into a smooth} $Y$-\uline{scheme is regular}.
+
+We shall first prove the corollary:
+
+\sgaStableTarget{sga6.e08.cor.1-3}\textbf{Corollary 1.3.} \uline{Consider the commutative diagram}:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& V' \arrow[d,"p"]\\
+X \arrow[ur,"j"] \arrow[r,"i"] & V ,
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 480  |  folio 467  %%%%%%%%%%
+\SGAPrintPage{467}%
+\uline{where} $i$ \uline{and} $j$
+\uline{are immersions}, \uline{and} $p$ \uline{is a smooth morphism}. \uline{Then for} $i$ \uline{to be a regular immersion}, \uline{it is necessary and sufficient that} $j$ \uline{be a regular immersion}.
+
+i) Suppose $i$ regular. Put $X'=V'\times_V X$. The datum of $j$ defines a section $j'$ of $X'$ over $X$, such that $j=i'\circ j'$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X' \arrow[r,"i'"] \arrow[d,"p'"'] & V' \arrow[d,"p"]\\
+X \arrow[r,"i"] \arrow[ur,"j"] \arrow[u,bend right=35,"j'"'] & V .
+\end{tikzcd}
+\]
+
+Now $j'$ is a regular immersion, since it is a section of a smooth morphism (VII 1.10); $i'$ is a regular immersion since it is obtained from $i$ by a smooth, hence flat, base change (VII 1.5). Thus $j$ is a regular immersion (VII 1.7).
+
+ii) Suppose $j$ regular, and $p$ étale. Then $j'$ is an open immersion (EGA IV 17.9.3), hence an isomorphism of $X$ onto $j'(X)$; put $U=j'(X)$.
+
+Let $i''$ be the restriction of $i'$ to $U$, and let $U'$ be an open subset of $V'$ such that $U=U'\cap X'$. We then have: $i''=j\circ(j')^{-1}$, so $i''$ is a regular immersion of $U$ into $U'$. Now the morphism $U'\to V$, being smooth, is flat and of finite presentation, hence open. It is consequently a faithfully flat and quasi-compact morphism from $U'$ onto an open neighbourhood of $X$ in $V$. It follows (VII 1.5) that $i$ is a regular immersion.
+
+iii) Suppose $j$ regular, and that $V'$ is a vector bundle over $V$. Since the property to be proved ($i$ regular) is local on $V$, one may suppose $V$ affine, $i$ closed, and that $V'=V[T_1,\ldots,T_n]$. Put $V=\Spec(A)$,
+
+%%%%%%%%%%  scan idx 481  |  folio 468  %%%%%%%%%%
+\SGAPrintPage{468}%
+$X=\Spec(B)$; we have the commutative diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& A[T_1,\ldots,T_n] \arrow[dl,"v"']\\
+B & A \arrow[l,"u"'] \arrow[u]
+\end{tikzcd}
+\]
+where the morphisms $u$ and $v$ are surjective. Let $t_i$, for $i=1,\ldots,n$, be elements of $A$ such that for every $i$ we have
+\[
+u(t_i)=v(T_i).
+\]
+One defines a homomorphism $w:A[T_1,\ldots,T_n]\longrightarrow A$ by setting $w(T_i)=t_i$. This gives a closed immersion $s:V\to V'$ which is a section of $p$, and which satisfies $j=s\circ i$. Moreover, being a section of a smooth morphism, it is a regular immersion (VII 1.10). Knowing that $s$ and $s\circ i$ are regular, we shall deduce that $i$ is regular if we show that the sequence:
+\[
+0\longrightarrow i^*(\underline{K}/\underline{K}^2)\longrightarrow \underline{J}/\underline{J}^2\longrightarrow \underline{I}/\underline{I}^2\longrightarrow0
+\]
+is exact and locally split, where $\underline{I}$, $\underline{J}$ and $\underline{K}$ denote respectively the ideals defining $i$, $j$, and $s$ (VII 1.7). For this it suffices to show that $i^*(\underline{K}/\underline{K}^2)$ is a direct summand of $\underline{J}/\underline{J}^2$. Now one sees at once that $j'$ is obtained from $s$ by the base change $i':X'\to V'$. Furthermore, the immersions $j'$ and $s$ are regular (VII 1.10). Consequently (VII 1.2), the ideal defining $j'$ is $i'^*(\underline{K})$, and the conormal sheaf of $j'$ is $i^*(\underline{K}/\underline{K}^2)$. The exact sequence of conormal sheaves for the decomposition $j=i'\circ j'$ therefore gives, in particular, a homomorphism: $\underline{J}/\underline{J}^2\longrightarrow i^*(\underline{K}/\underline{K}^2)$. It is immediate to check that the composite: $i^*(\underline{K}/\underline{K}^2)\longrightarrow \underline{J}/\underline{J}^2\longrightarrow i^*(\underline{K}/\underline{K}^2)$ is the identity (from the affine point of view, this corresponds to the decomposition of $J$ as the direct sum of an ideal of $A$, and the ideal generated by the $T_i-t_i$). This indeed gives the required splitting.
+
+%%%%%%%%%%  scan idx 482  |  folio 469  %%%%%%%%%%
+\SGAPrintPage{469}%
+iv)
+Finally suppose $j$ regular and $p$ smooth. For every $x\in X$, one can find an open neighbourhood $W$ of $i(x)$, an open neighbourhood $W'$ of $j(x)$ over $W$, and a commutative diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+W' \arrow[r,"q"] \arrow[d,"p"'] & W[T_1,\ldots,T_n] \arrow[dl,"p_0"]\\
+W & ,
+\end{tikzcd}
+\]
+where $p_0$ is the structural morphism, and $q$ an étale morphism (EGA IV 17.11.4). One may then suppose $V=W$, $V'=W'$. It is easy to see that $q\circ j$ is an immersion (introduce the fiber product $X[T_1,\ldots,T_n]$). Applying the results ii) and iii), one deduces that $q\circ j$ is regular, and then that $i$ is regular.
+
+Let us now prove 1.2.
+
+Since the property is local on $Z$, to prove it one may work in a neighbourhood of a point $x$ of $X$. One can then find an open neighbourhood $U$ of $x$ in $X$, a smooth $Y$-scheme $V$, and a regular $Y$-immersion $i':U\to V$. We then have the following commutative diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& U \arrow[dl,"i"'] \arrow[dr,"i'"] &\\
+Z \arrow[dr] && V \arrow[dl]\\
+& Y . &
+\end{tikzcd}
+\]
+
+This gives a closed immersion $i'':U\to Z\times_Y V$, and the commutative diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& U \arrow[dl,"i"'] \arrow[d,"i''"'] \arrow[dr,"i'"] &\\
+Z & Z\times_Y V \arrow[l,"p"'] \arrow[r,"p'"] & V.
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 483  |  folio 470  %%%%%%%%%%
+\SGAPrintPage{470}%
+Since $i'$ is regular, and $p$ and $p'$ are smooth, it follows by 1.3 that $i''$ and $i$ are regular.
+
+The following proposition will not be used in the rest of the Seminar:
+
+\sgaStableTarget{sga6.e08.prop.1-4}\textbf{Proposition 1.4.} \uline{Let} $f:X\to Y$ \uline{be a flat morphism locally of finite presentation}. \uline{For} $f$ \uline{to be a complete-intersection morphism in the sense of} 1.1, \uline{it is necessary and sufficient that it be a complete-intersection morphism in the sense of} EGA IV 19.3.6.
+
+Suppose that $f$ is a complete-intersection morphism in the sense of 1.1, and let $x\in X$. Then there exist an open neighbourhood $U$ of $x$, and a factorization:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[rr,"i"] \arrow[dr,"f"'] && V \arrow[dl,"g"]\\
+& Y &
+\end{tikzcd}
+\]
+where $i$ is a regular immersion, and $g$ a smooth morphism. Let $y=f(x)$; then the immersion $i_y:U_y\to V_y$ is regular at $x$. Indeed, after restricting $V$, one may suppose that there exist a free $\underline{O}_V$-Module of finite type $\underline{E}$, and a regular homomorphism $u:\underline{E}\to\underline{O}_V$ such that the Koszul complex associated to $u$ is a resolution of $\underline{O}_U$. Consider then the homomorphism $u_y$ induced on the fiber at $y$, and the associated Koszul complex $\underline{K}_\bullet(u_y)=\underline{K}_\bullet(u)_y$. Since $g$ is smooth, hence flat, $\underline{K}_\bullet(u)$ is a $Y$-flat resolution of $\underline{O}_U$. Thus the homology groups of $\underline{K}_\bullet(u)_y$ are the $\underline{\Tor}_i^{\underline{O}_Y}(\underline{O}_U,\underline{k}(y))$, where $\underline{k}(y)$ is the residue field of $\underline{O}_{Y,y}$. Since $f$ is a flat morphism, they vanish, and $i_y$ is regular at $x$. Furthermore, since $g$ is smooth, the local ring of $V_y$ at $x$ is regular. Since the local ring of $U_y$ at $x$ is the quotient of a regular ring by a regular ideal,

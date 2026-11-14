@@ -1,0 +1,151 @@
+%%%%%%%%%%  scan idx 178  |  folio 165  %%%%%%%%%%
+\SGAPrintPage{165}%
+whence the
+first assertion. The second is a particular case, since, for $G\in\Ob\underline{C}_{0S}$, i.e.\ $G$ free and of finite type, and $E\in\Ob\underline{C}'_S$, we have $\underline{\Hom}(G,E)\in\Ob\underline{C}'_S$.
+
+b) The first assertion is trivial. Let us now prove, in case (i) or (ii), the full faithfulness of $\Gamma_S:\underline{C}'_S\longrightarrow\Mod(A(S))$. Let $F,G\in\Ob\underline{C}'_S$, and let
+\sgaStableTarget{sga6.e02.eq.unnamed}\[
+A_S^{(I)}\longrightarrow A_S^{(J)}\longrightarrow F\longrightarrow0
+\tag{$*$}
+\]
+be a global presentation of $F$ (with $I$ and $J$ finite in case (i)). Applying to $(*)$ the functor $\Gamma_S$, which is exact on $\underline{C}'_S$ and commutes, in case (ii), with filtered inductive limits, we obtain an exact sequence
+\sgaStableTarget{sga6.e02.eq.unnamed.occ2}\[
+A(S)^{(I)}\longrightarrow A(S)^{(J)}\longrightarrow\Gamma_S(F)\longrightarrow0.
+\tag{$**$}
+\]
+On the other hand, applying to $(*)$ (resp. $(**)$) the left-exact functor $\operatorname{Hom}_{A_S}(.,G)$ (resp. $\operatorname{Hom}_{A(S)}(.,\Gamma_S(G))$), we obtain a commutative diagram with exact rows:
+\[
+\begin{tikzcd}[column sep=small]
+0 \arrow[r] & \operatorname{Hom}_{A_S}(F,G) \arrow[r] \arrow[d] &
+\operatorname{Hom}_{A_S}(A_S^{(J)},G) \arrow[r] \arrow[d] &
+\operatorname{Hom}_{A_S}(A_S^{(I)},G) \arrow[d] \\
+0 \arrow[r] & \operatorname{Hom}_{A(S)}(\Gamma_S(F),\Gamma_S(G)) \arrow[r] &
+\operatorname{Hom}_{A(S)}(A(S)^{(J)},\Gamma_S(G)) \arrow[r] &
+\operatorname{Hom}_{A(S)}(A(S)^{(I)},\Gamma_S(G)).
+\end{tikzcd}
+\]
+The two vertical arrows on the right are visibly isomorphisms; the same is therefore true of the vertical arrow on the left, which proves the full faithfulness of $\Gamma_S:\underline{C}'_S\longrightarrow\Mod(A(S))$. The characterization of the essential image, in case (i) or (ii), is immediate and is left to the reader.
+
+\sgaStableTarget{sga6.e02.lem.2-1-3}\textbf{Lemma 2.1.3.} \uline{Let} $A$ \uline{and} $B$ \uline{be abelian categories, and} $\phi:A\to B$ \uline{an exact functor.}
+\begin{enumerate}[label=\alph*)]
+\item \uline{For} $M\in\Ob A$\uline{, the following conditions are equivalent:}
+\begin{enumerate}[label=(\roman*)]
+\item \uline{for every} $L\in\Ob A$\uline{, the canonical arrow (induced by} $\phi$)
+\[
+\Ext^n_{A}(L,M)\longrightarrow\Ext^n_{B}(\phi(L),\phi(M))
+\]
+\uline{is an isomorphism for every} $n$;
+\item \uline{for every} $L\in\Ob A$\uline{, the canonical arrow}
+%%%%%%%%%%  scan idx 179  |  folio 166  %%%%%%%%%%
+\SGAPrintPage{166}%
+\[
+\operatorname{Hom}_{A}(L,M)\longrightarrow\operatorname{Hom}_{B}(\phi(L),\phi(M))
+\]
+\uline{is an
+isomorphism, and for every} $n\ge1$ \uline{and every} $x\in\Ext^n_{B}(\phi(L),\phi(M))$ \uline{there exists an epimorphism} $L'\to L$ \uline{in} $A$ \uline{which effaces} $x$.
+\end{enumerate}
+\item \uline{The following conditions are equivalent}:
+\begin{enumerate}[label=(\roman*)]
+\item \uline{for all} $L,M\in\Ob A$ \uline{and every} $n\in\mathbb Z$\uline{, the canonical arrow}
+\[
+\Ext^n_{A}(L,M)\longrightarrow\Ext^n_{B}(\phi(L),\phi(M))
+\]
+\uline{is an isomorphism};
+\item \uline{the canonical functor} (\uline{induced by} $\phi$)
+\[
+\mathrm D^b(A)\longrightarrow\mathrm D^b(B)
+\]
+\uline{is fully faithful and has as essential image the full subcategory of} $\mathrm D^b(B)$ \uline{formed by complexes} $F$ \uline{such that} $H^i(F)$ \uline{is in the essential image of} $\phi$ \uline{for every} $i$.
+\end{enumerate}
+\end{enumerate}
+
+\uline{Proof.} a) For the implication (i)$\Rightarrow$(ii), it suffices to show the following: given $n\ge1$, $L\in\Ob A$, and $y\in\Ext^n_{A}(L,M)$, there exists an epimorphism $L'\to L$ which effaces $y$. For this, one can use Yoneda's interpretation ([18] III 3.2): $y$ is the class of an exact sequence
+\[
+0\longrightarrow M\longrightarrow E_{n-1}\longrightarrow\ldots\longrightarrow E_0\longrightarrow L\longrightarrow0;
+\]
+the epimorphism $E_0\to L$ effaces $y$ ([18] III 3.2.5 and 3.2.8). Let us prove (ii)$\Rightarrow$(i). For brevity, put
+\[
+\Ext^n_{A}(.,M)=F^n,\qquad
+\Ext^n_{B}(\phi(.),\phi(M))=G^n.
+\]
+The effaceability hypothesis means that, for $n\ge1$ and $L\in\Ob A$, we have
+\[
+G^n(L)=\varinjlim\operatorname{Coker}(G^{n-1}(L_0)\to G^{n-1}(L_1)),
+\]
+the inductive limit being taken over the set of exact sequences
+%%%%%%%%%%  scan idx 180  |  folio 167  %%%%%%%%%%
+\SGAPrintPage{167}%
+$0\to L_1\to L_0\to L\to0$. From
+what we saw above, we likewise have
+\[
+F^n(L)=\varinjlim\operatorname{Coker}(F^{n-1}(L_0)\to F^{n-1}(L_1)).
+\]
+since $\phi=\phi^0:F^0\to G^0$ is an isomorphism, it follows, by induction on $n$, that the morphism $\phi^n:F^n\to G^n$ induced by $\phi$ is an isomorphism for every $n$.
+
+b) The equivalence (i)$\Leftrightarrow$(ii) follows from an immediate dévissage, left to the reader.
+
+\sgaStableTarget{sga6.e02.rem.2-1-3-1}\textbf{Remarks 2.1.3.1.} There is of course a dual equivalence to a), which we leave the reader to state. On the other hand, when $A$ and $B$ have enough injectives, conditions (i) and (ii) of b) are equivalent to
+\begin{enumerate}[label=(\roman*),start=3]
+\item for $L\in\Ob\mathrm D^{-}(A)$ and $M\in\Ob\mathrm D^{+}(A)$, the canonical arrow
+\[
+\underline{\underline{R}}\!\operatorname{Hom}(L,M)\longrightarrow
+\underline{\underline{R}}\!\operatorname{Hom}(\phi(L),\phi(M))
+\]
+is an isomorphism,
+\end{enumerate}
+as one sees immediately by a spectral-sequence argument.
+
+\sgaStableTarget{sga6.e02.sec.2.2}\subsection*{2.2. Noetherian schemes and divisorial schemes}
+
+\sgaStableTarget{sga6.e02.notation.2-2-1}\textbf{Notation 2.2.1.} Let $S$ be a scheme. We write $\Qcoh(S)$ (resp. $\Coh(S)$) for the (abelian) category of quasi-coherent (resp. coherent) $\underline{O}_S$-Modules. Let $[m,n]$ be an interval in $\mathbb Z$. We shall say that an object $E$ of $\mathrm D(\Qcoh(S))$ is $n$-pseudo-coherent (resp. pseudo-coherent, resp. of perfect amplitude contained in $[m,n]$, resp. perfect) when $E$ is $n$-pseudo-coherent (resp. pseudo-coherent, resp. of perfect amplitude contained in $[m,n]$, resp. perfect) relative to the category fibered over the Zariski site of $S$ defined by $U\mapsto\Loclib(U)$ ((I 2.3), (I 4.7) and (2.0)). We denote by $\mathrm D^{-}(\Qcoh(S))_{\coh}$ (resp. $\mathrm D(\Qcoh(S))_{\parf}$) the full triangulated subcategory of $\mathrm D(\Qcoh(S))$ formed by pseudo-coherent (resp. perfect) complexes.
+
+\sgaStableTarget{sga6.e02.prop.2-2-2}\textbf{Proposition 2.2.2}\SGAAuthorFootnote{raisedstar}{This ancillary result will not be used in the remainder of the Seminar: the reader is advised to skip it on a first reading.}. \uline{Let} $S$ \uline{be a noetherian scheme. The canonical}
+\uline{functor}
+%%%%%%%%%%  scan idx 181  |  folio 168  %%%%%%%%%%
+\SGAPrintPage{168}%
+\[
+\mathrm D^{-}(\Coh(S))\longrightarrow \mathrm D(\Qcoh(S))
+\]
+\uline{is fully faithful and has as essential image} $\mathrm D^{-}(\Qcoh(S))_{\coh}$.
+
+\uline{Proof.} We apply (1.1), taking for $\underline{S}$ the Zariski site of $S$, and for $\underline{C}$ (resp. $\underline{C}_0$) the fibered category $U\mapsto\Qcoh(U)$ (resp. $\Coh(U)$). Since $\underline{O}_S$ is coherent, the objects of $\underline{C}_0$ are pseudo-coherent (I 3.5), so an object of $\mathrm D(\Qcoh(U))$ ($U$ = open subset of $S$) is pseudo-coherent (in the sense of (2.2.1)) precisely when it is so relative to $\underline{C}_0$ (I 2.14.1). It therefore suffices, by (1.1 c)), to show that conditions (i) and (ii) in the non-resp.\ case of (1.1) are satisfied. For (ii), this is trivial, since a quasi-coherent Module which is a quotient of a coherent Module is coherent, and the notion of coherence is local. For (i), we use (2.1.1 a)) and the fact that every quasi-coherent $\underline{O}_S$-Module is a filtered inductive limit of coherent $\underline{O}_S$-Modules (EGA I 9.4.9).
+
+Admitting (3.5) and (3.7), which are independent of the present section, one easily deduces:
+
+\sgaStableTarget{sga6.e02.cor.2-2-2-1}\textbf{Corollary 2.2.2.1.} \uline{Let} $S$ \uline{be a noetherian scheme (resp.\ noetherian and of finite dimension). The canonical functor}
+\[
+\mathrm D^b(\Coh(S))\longrightarrow\mathrm D(S)
+\]
+\[
+(\text{resp. }\mathrm D^{-}(\Coh(S))\longrightarrow\mathrm D(S))
+\]
+\uline{is fully faithful and has as essential image} $\mathrm D^b(S)_{\coh}$ (resp. $\mathrm D^{-}(S)_{\coh}$) (I 2.15).
+
+\sgaStableTarget{sga6.e02.prop.2-2-3}\textbf{Proposition 2.2.3} (cf. EGA II 4.5.2 and 4.5.5). \uline{Let} $S$ \uline{be a quasi-compact and quasi-separated scheme, and let} $(L_i)_{i\in I}$ \uline{be a family of invertible sheaves on} $S$\uline{. For every} $\underline{O}_S$\uline{-Module} $F$\uline{, and every pair} $(i,n)\in I\times\mathbb Z$\uline{, we denote by} $F_{(i,n)}$ \uline{the sub-}$\underline{O}_S$\uline{-Module of} $F\otimes L_i^{\otimes n}$ \uline{generated by the sections of} $F\otimes L_i^{\otimes n}$ \uline{over} $S$\uline{. The following conditions are equivalent}:
+\begin{enumerate}
+%%%%%%%%%%  scan idx 182  |  folio 169  %%%%%%%%%%
+\item[(i)] \SGAPrintPage{169}%
+\uline{The
+open sets} $S_f$\uline{, for} $f\in\Gamma(S,L_i^{\otimes n})$\uline{,} $i\in I$ \uline{and} $n\in\mathbb N$\uline{, form a basis for the topology of} $S$.
+\item[(i$'$)] \uline{Those of the} $S_f$ \uline{which are affine cover} $S$.
+\item[(ii)] \uline{For every quasi-coherent} $\underline{O}_S$\uline{-Module} $F$ \uline{of finite type, there exists a family} $(r_i)_{i\in I}$ (resp. $(n_i)_{i\in I}$) \uline{of integers} $\ge0$ (resp. $>0$), \uline{and an epimorphism}
+\[
+\coprod_{i\in I}\underline{O}_S^{r_i}\otimes L_i^{\otimes-n_i}\longrightarrow F.
+\]
+\item[(iii)] \uline{For every} $F\in\Ob\Qcoh(S)$\uline{, we have}
+\[
+F=\sum_{(i,n)\in I\times\mathbb N^+}F_{(i,n)}\otimes L_i^{\otimes-n}
+\]
+(\uline{sum (not direct) of subsheaves of} $F$).
+\item[(iii$'$)] \uline{The same condition as} (iii), \uline{but with} $F$ \uline{a quasi-coherent Ideal of} $\underline{O}_S$.
+\end{enumerate}
+
+\uline{Proof.} It consists of a simple paraphrase of (loc.\ cit.); we give it briefly for the reader's convenience.
+
+(i)$\Rightarrow$(i$'$): For $x\in S$, choose an affine open subset $U$ containing $x$. An open subset $S_f$ such that $x\in S_f\subset U$, with $f\in\Gamma(S,L_i^{\otimes n})$ ($n\ge0$), is necessarily affine, as follows from
+
+\sgaStableTarget{sga6.e02.lem.2-2-3-1}\textbf{Lemma 2.2.3.1.} (EGA II 5.5.8). \uline{Let} $X$ \uline{be a scheme,} $L$ \uline{an invertible} $\underline{O}_X$\uline{-Module,} $f\in\Gamma(X,L)$\uline{. The canonical immersion} $i:X_f\to X$ \uline{is affine}.
+
+\uline{Proof.} This is trivial: the question is local on $X$, so we may assume that $X$ is affine and $L\simeq\underline{O}_X$, and we are done.
+
+(i$'$)$\Rightarrow$(ii): Take a finite covering of $S$ by affine open subsets $S_{f_{ij}}$, where $f_{ij}\in\Gamma(S,L_i^{\otimes m_{ij}})$; put $S_i=\bigcup_j S_{f_{ij}}$. Replacing the $f_{ij}$ by suitable powers, we may assume that the $m_{ij}$ corresponding to the same index $i$ are equal to an integer $m_i$. The sheaf

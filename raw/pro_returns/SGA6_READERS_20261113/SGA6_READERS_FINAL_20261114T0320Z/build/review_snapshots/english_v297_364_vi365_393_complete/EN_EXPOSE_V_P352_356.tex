@@ -1,0 +1,184 @@
+%%%%%%%%%%  scan idx 365  |  folio 352  %%%%%%%%%%
+\SGAPrintPage{352}%
+\((\Ch A)_n\) is a \(\lambda\)-ideal.
+
+Now let \(x=(n,1+a_1+\ldots+a_n+\ldots)\) be an element of augmentation \(n\) of \(\Ch A\); \(x\) is congruent \(\mathrm{mod.}\ (\Ch A)_{n+1}\) to \((n,1+\ldots+a_n)\), and consequently \(\lambda_{-1}(x)\) is congruent to \(\lambda_{-1}(n,1+\ldots+a_n)=(0,1-(n-1)!a_n+\ldots)\), whence:
+\[
+  \lambda_{-1}(x)=(0,1-(n-1)!a_n+\ldots).
+\]
+
+\sgaStableTarget{sga6.e05.cor.6-6-4}\textbf{Corollary 6.6.4.} \uline{Let} \(\epsilon\) \uline{be the augmentation homomorphism of} \(\Ch A\); \uline{then}, \uline{for every} \(x\in\Ch A\), \uline{we have}:
+\[
+  \gamma^n(x-\epsilon(x))
+  =
+  (0,1+(-1)^{n-1}(n-1)!a_n+\ldots)
+\]
+
+By definition, \(\gamma^n(x-\epsilon(x))=(-1)^n\sum_{i=0}^n(-1)^i\lambda^i(x+n-\epsilon(x))\). Since \(x+n-\epsilon(x)\) has augmentation \(n\), we can apply Corollary 6.6.2 to it, whence the result.
+
+\sgaStableTarget{sga6.e05.cor.6-6-5}\textbf{Corollary 6.6.5.} \uline{With the notation of} 3.10, \(\Fil_n\Ch A\subset(\Ch A)_n\).
+
+By the preceding corollary, \(\gamma^n(x-\epsilon(x))\in(\Ch A)_n\). The corollary then follows from the fact that the two filtrations are ring filtrations, and that the \(\gamma^n(x-\epsilon(x))\), for varying \(n\) and \(x\), generate the \(\lambda\)-ring filtration.
+
+\sgaStableTarget{sga6.e05.cor.6-6-7}\textbf{Corollary 6.6.7.} \uline{Let} \(A\) \uline{be a} \uline{graded} \(K\)-\uline{algebra of characteristic zero}, \uline{with bounded degrees}; \uline{then the two filtrations defined on} \(\Ch A\) \uline{are} \uline{identical}.
+
+Suppose that \(\Fil^pA=0\), and let \(x=(0,1+a_n+\ldots+a_p)\) be an element of \((\Ch A)_n\). Put \(x'=\left(0,1+\dfrac{(-1)^{n-1}}{(n-1)!}a_n+a_{n+1}+\ldots+a_p\right)\); we then have:
+\(\gamma^n(x')=(0,1+a_n+\ldots+a'_p)\), since \(x'\) has zero augmentation. Consequently,
+%%%%%%%%%%  scan idx 366  |  folio 353  %%%%%%%%%%
+\SGAPrintPage{353}%
+\(x-\gamma^n(x')\in(\Ch A)_{n+1}\). Iterating the operation \(p-n\) times, we reach \((\Ch A)_{p+1}\), which is zero, and have therefore written \(x\) as an element of \(\Fil^n\Ch A\). In view of (6.6.5), the two filtrations are therefore identical.
+
+\sgaStableTarget{sga6.e05.para.6-7}6.7. We now suppose that \(A\) is a \(\lambda\)-ring augmented over \(K\), the augmentation homomorphism being denoted by \(\epsilon\). We therefore have on \(A\) the canonical filtration of an augmented \(\lambda\)-ring, and can thus associate to \(\Gr A\) its Chern ring.
+
+If \(x\in A\), then \(\gamma_t(x-\epsilon(x))\in\Ghat(A)\) by definition of the filtration of an augmented \(\lambda\)-ring. We denote by \(c(x)\), and call the \uline{total Chern class of} \(x\), the image of \(\gamma_t(x-\epsilon(x))\) in \(\Ghat(A)/\Ghat'(A)=1+\widehat{\Gr A}^{+}\); we denote by \(c^i(x)\), and call the \(i\)-th Chern class of \(x\), the \(i\)-th coefficient of \(c(x)\); we therefore have:
+\sgaStableTarget{sga6.e05.eq.6-7-1}\begin{equation}\tag{6.7.1}
+  c^i(x)=\cl_{\Gr^iA}\!\left(\gamma^i(x-\epsilon(x))\right)~;\qquad
+  c(x)=1+c^1(x)+\ldots
+\end{equation}
+We then put:
+\sgaStableTarget{sga6.e05.eq.6-7-2}\begin{equation}\tag{6.7.2}
+  \widetilde c(x)=(\epsilon(x),c(x)),
+\end{equation}
+and call \(\widetilde c(x)\) the completed Chern class of \(x\).
+
+\sgaStableTarget{sga6.e05.prop.6-8}\textbf{Proposition 6.8.} \uline{The completed Chern class} \(\widetilde c:A\longrightarrow\Ch(\Gr A)\), \uline{is} \uline{a} \(K\)-\(\lambda\)-\uline{homomorphism of} \uline{augmented} \(K\)-\(\lambda\)-\uline{algebras}.
+
+It is clear that the homomorphism thus defined is additive; to verify that it is multiplicative, we write:
+\[
+\begin{aligned}
+\gamma_t(xy-\epsilon(xy))
+&=\gamma_t\bigl(\epsilon(y)(x-\epsilon(x))\bigr)\mathbin{.}
+  \gamma_t\bigl(\epsilon(x)(y-\epsilon(y))\bigr)\mathbin{.}
+  \gamma_t\bigl((x-\epsilon(x))(y-\epsilon(y))\bigr)\\
+&=\bigl(\gamma_t(x-\epsilon(x))\bigr)^{\epsilon(y)}\mathbin{.}
+  \bigl(\gamma_t(y-\epsilon(y))\bigr)^{\epsilon(x)}\mathbin{.}
+  \bigl(\gamma_t(x-\epsilon(x))\nabla\gamma_t(y-\epsilon(y))\bigr)
+\end{aligned}
+\]
+%%%%%%%%%%  scan idx 367  |  folio 354  %%%%%%%%%%
+\SGAPrintPage{354}%
+whence the result by (6.1.2), after passage to the quotient.
+
+If \(a\in K\), \(\widetilde c(a)=(a,1)\), so \(\widetilde c\) is a homomorphism of \(K\)-algebras; moreover, it is compatible with the augmentations.
+
+Finally, it remains to see that it is a \(\lambda\)-homomorphism. We must therefore prove the commutativity of the diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+A \arrow[r,"\gamma_t"] \arrow[d,"\widetilde c"'] &
+\widehat G_g(A) \arrow[d,"\widehat G_g(\widetilde c)"]\\
+\Ch(\Gr A) \arrow[r,"\gamma_t"] &
+\widehat G_g(\Ch(\Gr A))
+\end{tikzcd}
+\]
+
+By additivity, it suffices to prove this for the elements of \(K\), for which it is evident, and for the elements of zero augmentation of \(A\), for which it follows, by the definition of \(c\) and (6.1.4), from that of diagram (3.7.2).
+
+\sgaStableTarget{sga6.e05.prop.6-9}\textbf{Proposition 6.9.} \uline{Let} \(A\) \uline{be an augmented} \(K\)-\(\lambda\)-\uline{algebra}, \(z\in\Fil^mA\); \uline{then}:
+\[
+  \gamma^m(z)\equiv(-1)^{m-1}(m-1)!z\ \mathrm{mod.}\ \Fil^{m+1}A,
+\]
+\uline{i}.\uline{e}.
+\[
+  c^m(z)=\cl_{\Gr^mA}\!\left((-1)^{m-1}(m-1)!z\right).
+\]
+
+We must see that these two elements give the same image in \(\Gr^mA\), that is, that the \(m\)-th Chern class of \(z\) is the image of \((-1)^{m-1}(m-1)!z\).
+
+We can write \(z\) as a sum \(\sum a\mathbin{.}\gamma^{i_1}(x_1)\ldots\gamma^{i_k}(x_k)\), with \(a\in A\), \(\epsilon(x_i)=0\) for every \(i\), and \(i_1+\ldots+i_k\ge m\). We then have:
+\[
+  \widetilde c(z)=
+  \sum \widetilde c(a)\mathbin{.}
+        \widetilde c(\gamma^{i_1}(x_1))\ldots
+        \widetilde c(\gamma^{i_k}(x_k))
+\]
+Since \(\widetilde c\) is a \(\lambda\)-homomorphism, we can write:
+\[
+  \widetilde c(\gamma^{i_j}(x_j))=\gamma^{i_j}(\widetilde c(x_j)).
+\]
+%%%%%%%%%%  scan idx 368  |  folio 355  %%%%%%%%%%
+\SGAPrintPage{355}%
+Taking account of the definition of \(c\), and of (6.6.4), we obtain:
+\[
+  \widetilde c(\gamma^{i_j}(x_j))
+  =
+  \left(0,1+(-1)^{i_j-1}(i_j-1)!\,\gamma^{i_j}(x_j)+\ldots\right)
+\]
+By (6.5.3), and the fact that \(\widetilde c(a)=(a,1)\), we finally obtain:
+\[
+\begin{aligned}
+\widetilde c(z)
+&=\sum
+\left(0,\left(1+
+(-1)^{i_1+\ldots+i_k-1}
+(i_1+\ldots+i_k-1)!
+\,\gamma^{i_1}(x_1)\ldots\gamma^{i_k}(x_k)
++\ldots\right)^a\right)\\
+&=
+\left(0,1+
+\sum_{\substack{(x_1,\ldots,x_k)\\ i_1+\ldots+i_k=m}}
+(-1)^{m-1}(m-1)!a\,\gamma^{i_1}(x_1)\ldots\gamma^{i_k}(x_k)
++\ldots\right)\\
+&=
+(0,1+(-1)^{m-1}(m-1)!\bar z+\ldots),
+\end{aligned}
+\]
+whence the result.
+
+\sgaStableTarget{sga6.e05.prop.6-10}\textbf{Proposition 6.10.} \uline{Let} \(K\) \uline{be a binomial ring}, \(R\) \uline{an augmented} \(K\)-\(\lambda\)-\uline{algebra}, \(N\) \uline{an element of} \(R\) \uline{such that} \(\lambda^k(N)=0\) \uline{for} \(k>d\), \uline{and} \(x\in\Fil^iR\). \uline{Then}:
+\[
+  \gamma^{d+i}(N,x)-(-1)^{d+i-1}(d+i-1)!x\in\Fil^{i+1}R.
+\]
+
+We can find elements \(x_{\alpha,j}\in R\), and \(a_\alpha\in K\) such that:
+\[
+  x=\sum_\alpha a_\alpha\,
+       \gamma^{i_1}(x_{\alpha,1})\ldots
+       \gamma^{i_k}(x_{\alpha,k}),
+\]
+with \(i_1+\ldots+i_k\ge i\), and \(\epsilon(x_{\alpha,j})=0\) for every \(\alpha\) and every \(j\). Let \(R_0\) be the \(K\)-\(\lambda\)-algebra generated by generators \(N'_0\), \(X_{\alpha,j}\) subject to the relations:
+\[
+  \gamma^k(N'_0)=0\quad\text{for }k>d.
+\]
+We define an augmentation homomorphism \(R_0\to K\) by \(\epsilon(N'_0)=\epsilon(X_{\alpha,j})=0\). By (4.9.1), \(R_0\) is the ring of polynomials with coefficients in \(K\) in the indeterminates \(\gamma^n(N'_0)\), with \(1\le n\le d\), and \(\gamma^p(X_{\alpha,j})\) with \(p\ge1\), and the \(\lambda\)-filtration of \(R_0\) is identical to its weight filtration, assigning the weight \(k\) to \(\gamma^k(N'_0)\) and \(\gamma^k(X_{\alpha,j})\) (4.12 and 4.15).
+
+We put:
+\[
+  X_0=\sum_\alpha a_\alpha\,
+       \gamma^{i_1}(X_{\alpha,1})\ldots
+       \gamma^{i_k}(X_{\alpha,k}),
+\]
+%%%%%%%%%%  scan idx 369  |  folio 356  %%%%%%%%%%
+\SGAPrintPage{356}%
+and shall first prove 6.10 for \(X_0\) and \(N_0=N'_0+d\) (which do satisfy the hypotheses of 6.10). In view of the preceding remark on the filtration of \(R_0\), it suffices for this to show that:
+\[
+  \gamma^{d+i}(N_0,X_0)\gamma^d(N'_0)
+  -
+  (-1)^{d+i-1}(d+i-1)!X_0\gamma^d(N'_0)
+  \in\Fil^{d+i+1}R_0 .
+\]
+Now we have \(\lambda_{-1}(N_0)=(-1)^d\gamma^d(N'_0)\); this relation can therefore be written:
+\[
+  (-1)^d\gamma^{d+i}(X_0\ (-1)^d\gamma^d(N'_0))
+  -
+  (-1)^{d+i-1}(d+i-1)!X_0\gamma^d(N'_0)
+  \in\Fil^{d+i+1}R_0 .
+\]
+Put \(z=(-1)^dX_0\gamma^d(N'_0)\); then \(z\in\Fil^{d+i}R_0\), and we are reduced to showing:
+\[
+  \gamma^{d+i}(z)-(-1)^{d+i-1}(d+i-1)!z\in\Fil^{d+i+1}R_0 .
+\]
+Now this follows from 6.9.
+
+To deduce 6.10 from this particular case, we consider the \(K\)-\(\lambda\)-homomorphism \(R_0\to R\) which sends \(N'_0\) to \(N-d\) and \(X_{\alpha,j}\) to \(x_{\alpha,j}\) for every \(\alpha\) and every \(j\) (4.7). This homomorphism is compatible with the \(\lambda\)-filtrations, and sends \(N_0\) to \(N\), and \(X_0\) to \(x\), whence the result.
+
+\sgaStableTarget{sga6.e05.prop.6-11}\textbf{Proposition 6.11.} Suppose that \(K\) is of characteristic zero. Let \(n\ge0\) be an integer. Then the functor \(\Ch\) is an equivalence of categories from the category of graded \(K\)-algebras \(A\) such that \(A_0=K\), \(A_k=0\) for \(k>n\), to the category of augmented \(K\)-\(\lambda\)-algebras \(\mathord{\wedge}\) such that \(\Fil^{n+1}\mathord{\wedge}=0\); a quasi-inverse functor is given by \(\mathord{\wedge}\rightsquigarrow\Gr\mathord{\wedge}\).
+
+Let \(A\) be a graded \(K\)-algebra such that \(A_k=0\) for \(k>n\), endowed with the filtration associated to its grading; then \((\Ch A)_{n+1}=0\), hence \(\Fil^{n+1}\Ch A=0\) (6.6.5). Conversely, if \(\mathord{\wedge}\) is an augmented \(K\)-\(\lambda\)-algebra such that \(\Fil^{n+1}\mathord{\wedge}=0\), then \(\Gr^0\mathord{\wedge}=K\), \(\Gr^k\mathord{\wedge}=0\) for \(k>n\).
+
+We shall define isomorphisms of functors:
+\[
+  A\longrightarrow \Gr(\Ch A),
+  \qquad
+  \mathord{\wedge}\longrightarrow \Ch(\Gr\mathord{\wedge}).
+\]
+

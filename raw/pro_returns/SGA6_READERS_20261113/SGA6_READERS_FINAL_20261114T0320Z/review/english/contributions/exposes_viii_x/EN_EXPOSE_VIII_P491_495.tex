@@ -1,0 +1,219 @@
+%%%%%%%%%%  scan idx 504  |  folio 491  %%%%%%%%%%
+\SGAPrintPage{491}%
+Now by
+definition we have:
+\[
+ T_i=-\cl(\underline{J}/\underline{J}^2)=-N;\qquad
+ T_j=-\cl(\underline{J}'/\underline{J}'^2)=-L.
+\]
+Furthermore, the exact sequence:
+\[
+0\longrightarrow \underline{F}\longrightarrow g^*(\underline{N})\longrightarrow \underline{O}_{Y'}(1)\longrightarrow0
+\]
+gives the relation:
+\[
+ g^*(T_i)=-(F+L),
+\]
+from which we deduce:
+\[
+ \Todd(g^*(\check T_i))=\Todd(\check T_j)\cdot(\Todd(\check F))^{-1}.
+\]
+
+Taking 4.4 into account, the relation to be proved is therefore written:
+\[
+ \ch\bigl(j_*(g^*(x)\cdot\lambda_{-1}(F))\bigr)
+ =
+ j_{\mathrm{gr}}\bigl(\ch(g^*(x)\cdot\lambda_{-1}(F))\cdot\Todd(\check T_j)\bigr).
+\]
+
+Putting \(z=g^*(x)\cdot\lambda_{-1}(F)\), this relation is precisely the Riemann--Roch theorem applied to the regular immersion \(j\) of codimension \(1\), and to the element \(z\) of \(K^{\bullet}(Y')\).
+
+Moreover, since we supposed that \(i\) satisfies the hypothesis of (VII 4.1), \(\lambda_{-1}(F)\) is divisible by \((1-L)\). One can therefore find \(z'\) such that \(z=z'(1-L)\), or equivalently \(z=j^*(j_*(z'))\) (exp. VII 2.7). We are thus reduced to the case where \(Y\) is a divisor, and to an element \(x\) such that there exists \(y\), with \(x=i^*(y)\).
+
+\sgaStableTarget{sga6.e08.para.4-6}\textbf{4.6.} We must therefore show the relation:
+\[
+ \ch\bigl(i_*(i^*(y))\bigr)
+ =
+ i_{\mathrm{gr}}\bigl(\ch(i^*(y))\cdot\Todd(\check T_i)\bigr).
+\]
+Now the projection formula gives:
+\[
+ i_*(i^*(y))=y\cdot i_*(1),
+\]
+and from the exact sequence: \(0\longrightarrow \underline{J}\longrightarrow\underline{O}_X\longrightarrow\underline{O}_Y\longrightarrow0\), where \(\underline{J}\) is invertible here, we obtain:
+\[
+ i_*(1)=1-J,
+\]
+hence
+
+%%%%%%%%%%  scan idx 505  |  folio 492  %%%%%%%%%%
+\SGAPrintPage{492}%
+\[
+ \ch(i_*(i^*(y)))=\ch(y)\cdot\ch(1-J).
+\]
+Since \(\underline{J}\) is invertible, we have \(\widetilde c(J)=(1,1+c^1(J))\), hence \(\ch(J)=\exp(c^1(J))\).
+Consequently, we have:
+\[
+ \ch(i_*(i^*(y)))=\ch(y)\cdot(1-\exp(c^1(J))).
+\]
+
+Furthermore, the functoriality of \(\ch\), and the projection formula 3.7 imply:
+\[
+ i_{\mathrm{gr}}\bigl(\ch(i^*(y))\cdot\Todd(\check T_i)\bigr)
+ =
+ \ch(y)\cdot i_{\mathrm{gr}}(\Todd(\check T_i)).
+\]
+Now \(T_i=-\cl(\underline{J}/\underline{J}^2)=-i^*(J)\). Thus:
+\[
+ i_{\mathrm{gr}}(\Todd(\check T_i))
+ =
+ i_{\mathrm{gr}}\bigl(i^{\mathrm{gr}}(\Todd(-\check J))\bigr)
+ =
+ i_{\mathrm{gr}}(1)\cdot\Todd(-\check J).
+\]
+
+Since \(i_*(1)=1-J\), \(i_{\mathrm{gr}}(1)\) is the image in \(\Gr^1K^{\bullet}(X)\) of \(1-J\), and is therefore \(-c^1(J)\). Furthermore, we have:
+\[
+ \Todd(-\check J)=(\Todd(\check J))^{-1}
+ =
+ \frac{1-\exp(c^1(J))}{-c^1(J)}.
+\]
+
+Thus finally we obtain:
+\[
+ i_{\mathrm{gr}}\bigl(\ch(i^*(y))\cdot\Todd(\check T_i)\bigr)
+ =
+ \ch(y)\cdot(1-\exp(c^1(J))),
+\]
+which proves the required relation.
+
+\sgaStableTarget{sga6.e08.sec.5}\section*{5. Riemann--Roch theorem: case of the structural morphism of a projective bundle}
+
+\sgaStableTarget{sga6.e08.para.5-1}\textbf{5.1.} By 3.9, to prove the Riemann--Roch theorem, it remains to prove it for the structural morphism \(f:\mathbf{P}^r_Y\longrightarrow Y\), where \(Y\) is a quasi-compact scheme having an ample sheaf. Put \(P=\mathbf{P}^r_Y\), \(\xi=\cl(\underline{O}_P(1))\), and \(\underline{E}=(\underline{O}_Y)^{r+1}\).
+
+%%%%%%%%%%  scan idx 506  |  folio 493  %%%%%%%%%%
+\SGAPrintPage{493}%
+\sgaStableTarget{sga6.e08.prop.5-2}\textbf{Proposition 5.2.} \uline{We have on} \(P\) \uline{the exact sequence}:
+\[
+0\longrightarrow\underline{\Omega}^1_{P/Y}\longrightarrow f^*(\underline{E})(-1)\longrightarrow\underline{O}_P\longrightarrow0,
+\]
+\uline{i}.\uline{e}. \uline{we have an isomorphism}
+\[
+\underline{\Omega}^1_{P/Y}\simeq \underline{F}(-1),\quad\text{where}\quad \underline{F}=\Ker\bigl(f^*(\underline{E})\longrightarrow\underline{O}_P(1)\bigr).
+\]
+
+Consider the vector bundle over \(Y\) defined by \(\underline{E}\), and denote by \(Z\) the complement of the zero section of this bundle. We have the commutative diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+P \arrow[dr,"f"'] && Z \arrow[ll,"h"'] \arrow[dl,"g"]\\
+& Y. &
+\end{tikzcd}
+\]
+The morphism \(h\) identifies \(Z\) with the affine \(P\)-scheme defined by the sheaf of algebras \(\underline{B}=\bigoplus_{n\in\mathbb Z}\underline{O}_P(n)\); \(\underline{B}\) is a graded \(\underline{O}_P\)-Algebra.
+
+Since \(f,g,h\) are smooth morphisms, one may write the exact sequence of sheaves of relative differentials; since \(Z\) is affine over \(P\), one may write this sequence in terms of \(\underline{B}\)-Modules; one thus obtains:
+\sgaStableTarget{sga6.e08.eq.5-2-1}\begin{equation}\tag{5.2.1}
+0\longrightarrow
+ \underline{\Omega}^1_{P/Y}\otimes_{\underline{O}_P}\underline{B}
+\longrightarrow
+ \underline{\Omega}^1_{\underline{B}/Y}
+\longrightarrow
+ \underline{\Omega}^1_{\underline{B}/\underline{O}_P}
+\longrightarrow0 .
+\end{equation}
+
+Now this exact sequence is a graded exact sequence of graded \(\underline{B}\)-Modules. Indeed, it follows from the commutative diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\mathbf{S}(\underline{E}) \arrow[rr] && \displaystyle\bigoplus_{n\in\mathbb Z}\mathbf{S}(\underline{E})(n)\simeq \mathbf{S}(\underline{E})[T,T^{-1}]\\
+& \underline{O}_Y \arrow[ul] \arrow[ur] &
+\end{tikzcd}
+\]
+where the arrows are algebra homomorphisms compatible with the grading of \(\mathbf{S}(\underline{E})[T,T^{-1}]\) (grading defined by degree in the indeterminate \(T\)), the two other algebras being supposed concentrated
+
+%%%%%%%%%%  scan idx 507  |  folio 494  %%%%%%%%%%
+\SGAPrintPage{494}%
+in degree \(0\).
+
+The module of differentials \(\underline{\Omega}^1_{\underline{B}/\underline{O}_P}\) is isomorphic to \(\underline{B}(-1)\otimes_{\underline{O}_P}\underline{O}_P(1)\), since one can define an \(\mathbf{S}(\underline{E})\)-derivation \(d\):
+\[
+\mathbf{S}(\underline{E})[T,T^{-1}]
+\longrightarrow
+\mathbf{S}(\underline{E})[T,T^{-1}]\otimes_{\mathbf{S}(\underline{E})}\mathbf{S}(\underline{E})\cdot dT
+\]
+so as to satisfy the universal property defining \(\underline{\Omega}^1_{\underline{B}/\underline{O}_P}\), by setting \(d(aT^n)=naT^{n-1}\otimes dT\); moreover, \(d\) is compatible with the gradings if the factor \(\mathbf{S}(\underline{E})\cdot dT\) is assigned degree \(1\).
+
+Let \(V\) be the vector bundle over \(Y\) defined by \(\underline{E}\). Then \(\underline{\Omega}^1_{Z/Y}\) is the restriction to \(Z\) of \(\underline{\Omega}^1_{V/Y}\). Now \(V\) is the affine \(Y\)-scheme defined by \(\mathbf{S}(\underline{E})\), so \(\underline{\Omega}^1_{V/Y}\) is defined by \(\mathbf{S}(\underline{E})\otimes_{\underline{O}_Y}\underline{E}\) (since \(\underline{E}\) is locally free of finite type), hence \(\underline{\Omega}^1_{V/Y}\) is equal to \(g^*(\underline{E})\), and consequently \(\underline{\Omega}^1_{\underline{B}/Y}=f^*(\underline{E})\otimes_{\underline{O}_P}\underline{B}\). To see its grading, one looks locally, and sees at once that \(f^*(\underline{E})\) must be regarded as being of degree \(1\).
+
+Taking the degree \(0\) terms in the exact sequence (5.2.1) gives the announced exact sequence.
+
+\sgaStableTarget{sga6.e08.rem.5-2-1}\textbf{Remark 5.2.1.} Using the general results on the differential study of Hilbert functors ([2], 5), one directly obtains an isomorphism \(\underline{\Omega}^1_{P/Y}\xrightarrow{\sim}\underline{F}(-1)\) from the given functorial characterization of \(g^*(\underline{\Omega}^1_{P/Y})\) for every \(Y\)-morphism \(g:Y'\to P\).
+
+\sgaStableTarget{sga6.e08.para.5-3}\textbf{5.3.} By 5.2, we have:
+\[
+ T_f=\cl(\underline{\Omega}^1_{P/Y})=f^*(E)\cdot\xi^{-1}-1.
+\]
+Consequently:
+\[
+ \widetilde c(T_f)=\widetilde c(E)\cdot\widetilde c(\xi^{-1})-\widetilde c(1).
+\]
+
+%%%%%%%%%%  scan idx 508  |  folio 495  %%%%%%%%%%
+\SGAPrintPage{495}%
+Since \(\underline{E}=(\underline{O}_Y)^{r+1}\), we have \(E=r+1\), and consequently:
+\[
+ \widetilde c(E)=(r+1,1).
+\]
+Put:
+\[
+ x=\cl_{\Gr^1K^{\bullet}(P)}(\xi-1)
+ =
+ \cl_{\Gr^1K^{\bullet}(P)}(1-\xi^{-1})
+ =
+ c^1(\xi).
+\]
+Since \(\xi^{-1}=\check \xi\), we have:
+\[
+ \widetilde c(\xi^{-1})=(1,1-x).
+\]
+By V (6.2.1), this gives:
+\[
+ \widetilde c(T_f)=(r,(1-x)^{r+1}).
+\]
+Taking 3.5 into account, we finally obtain:
+\[
+ \widetilde c(\check T_f)=(r,(1+x)^{r+1}).
+\]
+
+By the definition of \(\Todd\), we therefore have:
+\sgaStableTarget{sga6.e08.eq.5-3-1}\begin{equation}\tag{5.3.1}
+ \Todd(\check T_f)=
+ \left(\frac{x}{1-\exp(-x)}\right)^{r+1}.
+\end{equation}
+
+\sgaStableTarget{sga6.e08.para.5-4}\textbf{5.4.} Using the basis of \(K^{\bullet}(P)\) over \(K^{\bullet}(Y)\) formed by the elements \(\xi^k\), with \(-r\leq k\leq0\), one sees by additivity that it suffices to prove the theorem for elements of the form \(f^*(a)\cdot\xi^k\). We then have:
+\[
+ \ch\bigl(f_*(f^*(a)\xi^k)\bigr)
+ =
+ \ch(a f_*(\xi^k))
+ =
+ \ch(a)\cdot\ch(f_*(\xi^k)).
+\]
+On the other hand:
+\[
+ f_{\mathrm{gr}}\bigl(\ch(f^*(a)\xi^k)\Todd(\check T_f)\bigr)
+ =
+ f_{\mathrm{gr}}\bigl(f^{\mathrm{gr}}(\ch(a))\ch(\xi^k)\Todd(\check T_f)\bigr)
+ =
+ \ch(a)\cdot f_{\mathrm{gr}}\bigl(\ch(\xi^k)\Todd(\check T_f)\bigr).
+\]
+
+One thus sees that it suffices to prove the theorem for the \(\xi^k\), with \(-r\leq k\leq0\). Now by (VI (5.2.3)), we have
+\[
+ f_*(\xi^k)=0\quad\text{for }-r\leq k<0~;\qquad f_*(1)=1.
+\]
+Consequently:
+\sgaStableTarget{sga6.e08.eq.5-4-1}\begin{equation}\tag{5.4.1}
+ \ch(f_*(\xi^k))=0\quad\text{if }-r\leq k<0~;\qquad
+ \ch(f_*(1))=1.
+\end{equation}

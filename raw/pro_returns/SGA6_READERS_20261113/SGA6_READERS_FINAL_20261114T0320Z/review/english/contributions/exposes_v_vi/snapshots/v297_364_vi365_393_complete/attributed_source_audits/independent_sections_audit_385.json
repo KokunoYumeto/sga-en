@@ -1,0 +1,61 @@
+{
+  "id": "EN-INDEPENDENT-VI-SECTIONS-385",
+  "status": "independent text and mathematical audit; no new source-image reading claimed",
+  "source_packets": [
+    {
+      "path": "build/page_packets/380/current.tex",
+      "sha256": "2282da513e425b2f6dea90a3cca0a5fd6fcac69d1af8302fa9cab3f748e3669a"
+    },
+    {
+      "path": "build/page_packets/381/current.tex",
+      "sha256": "cb4d3b19d2e9b7933dc1a3ab5b5d6b554550bf9a955df88d52c60e9a42a51d61"
+    },
+    {
+      "path": "build/page_packets/382/current.tex",
+      "sha256": "f0016017fdcd36b0d43517b861061bd1d31fbfbeb75b9f693393717788c27514"
+    },
+    {
+      "path": "build/page_packets/383/current.tex",
+      "sha256": "a89f3e8fb592547c97abb9809af30f7cf141d5d3c67e7097c6d86998e0fa1aa4"
+    },
+    {
+      "path": "build/page_packets/384/current.tex",
+      "sha256": "eae5088b4ab60bfaeecadabaa0decbe5aeb2f40d63135ca8928807041c9cf756"
+    },
+    {
+      "path": "build/page_packets/385/current.tex",
+      "sha256": "676c152ca6d72d5043b3ce5ed2ac270f9c84d728222d20a967e144dd6c1976c0"
+    }
+  ],
+  "source_context": "B=Sym(E), X=P(E), and F_k(F)=direct sum over q≥k of f_*F(q). The proof writes M=F_k(F), s∈Γ(V,B_d), d>0, and a degree-zero fraction z/s^n. It identifies Γ(V,M_nd) with Γ(D_+(V,s),F(nd)) and then writes z·α_d(s^n)^(-1), while declaring α_d on Γ(V,B_d).",
+  "alpha_subscript": {
+    "conclusion": "Current α_nd(s^n), diplomatic α_d(s^n), is the precise typed subscript repair.",
+    "map": "The graded algebra map α has degree-q component α_q:Γ(V,B_q)→Γ(f^(-1)V,O_X(q)). Graded multiplication sends s^n to the component B_nd; hence α_nd(s^n)=α_d(s)^n in Γ(f^(-1)V,O_X(nd)). On D_+(V,s), a=α_d(s) trivializes O_X(d), so multiplication by a^(-n) is the map F(nd)|D→F|D.",
+    "scope": "The degree nd is forced for the declared homogeneous input s^n. Rewriting the expression as α_d(s)^n is another notation for the same value; no additional hypothesis is required."
+  },
+  "section_equality_counterexample": {
+    "data": "Take a field κ, S=V=Spec(κ), E=κ², B=κ[x_0,x_1] with both variables of degree1, X=P¹_κ, F=O_X, truncation k=0, s=x_0, d=1 and n=2. These are within the source projective-bundle setting.",
+    "left": "Γ(V,M_2)=H⁰(P¹,O(2))=κx_0²⊕κx_0x_1⊕κx_1².",
+    "right": "D_+(x_0)=Spec(κ[t]), t=x_1/x_0. The section x_0² trivializes O(2) there, and Γ(D_+(x_0),O(2))=κ[t]x_0².",
+    "exact_restriction": "a x_0²+b x_0x_1+c x_1² maps to (a+b t+c t²)x_0². The target section t³x_0² has no preimage because equality with a polynomial of degree≤2 would give the nonzero polynomial t³−c t²−b t−a=0 in κ[t].",
+    "conclusion": "The canonical restriction is not surjective, so the asserted equality cannot be the canonical identification required by the construction. The explicit finite-dimensional source and infinite-dimensional target also preclude a κ-linear isomorphism."
+  },
+  "separate_truncation_example": {
+    "data": "Keep S, E, X, F, s, d and n as above, but set the source truncation integer k=3.",
+    "calculation": "M_2=0 by the direct-sum definition, whereas Γ(D_+(x_0),O(2))=κ[t]x_0² is nonzero. Also H⁰(P¹,O(2)) is nonzero. Thus replacing only D_+(V,s) by f^(-1)V would still fail as an unconditional equality at this degree.",
+    "fraction_scope": "The only numerator in degree2 of this truncated M is zero. A fraction can be represented with denominator exponent n+N by replacing its numerator z with s^N z; choosing N large makes (n+N)d≥k. This degree adjustment is part of a full explanation, not a fact printed in the disputed equality."
+  },
+  "actual_canonical_map": {
+    "component_map": "There is a canonical degreewise map j_nd:M_nd→f_*F(nd), identity on the indicated component for nd≥k and the zero-source map for nd<k.",
+    "restriction": "By the definition of direct image, Γ(V,f_*F(nd))=Γ(f^(-1)V,F(nd)). Restriction along D=D_+(V,s)⊂f^(-1)V gives ρ:Γ(f^(-1)V,F(nd))→Γ(D,F(nd)).",
+    "fraction_map": "Send z/s^n to a^(-n)ρ(j_nd(z)), where a=α_d(s)|D and a^n=α_nd(s^n)|D. This is a section of F on D.",
+    "well_definedness": "Equality z/s^n=z-prime/s^m means s^N(s^m z−s^n z-prime)=0 for some N. Compatibility of j and restriction with the B-action sends this to a^N(a^mρ(j_nd(z))−a^nρ(j_md(z-prime)))=0 on D. Multiplying by the inverse trivialization a^(-(N+m+n)) proves equality of the two resulting F-sections. The same formula commutes with restriction in V and with the degree-zero localized B-action.",
+    "finite_degree_example": "In the k=0 example, x_1²/x_0² maps to t². The target t³ is obtained from the degree3 numerator x_1³ with denominator x_0³. Localization permits varying the numerator degree; it does not identify the fixed degree2 source with all chart sections."
+  },
+  "editorial_conclusion": {
+    "alpha": "The source component declaration and graded multiplication support the current-only α_d→α_nd change at the stated argument.",
+    "equality": "Retain the printed section equality in both body forms with a separate defect record. The canonical section map is explicit, but the source does not select a unique textual repair for the displayed equality and missing restriction/truncation explanation.",
+    "nonuniqueness_evidence": "At least two different expansions express the same canonical map: (1) first choose a representative with nd≥k, identify Γ(V,M_nd) with Γ(f^(-1)V,F(nd)), then restrict; (2) retain arbitrary representatives, use the canonical component map j_nd and then restriction, with no equality of the two section spaces. These differ in the actual text and range of representatives while producing the identical fraction map proved above.",
+    "no_replacement_theorem": "No replacement hypothesis or altered theorem is supplied. This packet records the typed local correction, exact counterexamples and the actual morphism used by the construction."
+  }
+}

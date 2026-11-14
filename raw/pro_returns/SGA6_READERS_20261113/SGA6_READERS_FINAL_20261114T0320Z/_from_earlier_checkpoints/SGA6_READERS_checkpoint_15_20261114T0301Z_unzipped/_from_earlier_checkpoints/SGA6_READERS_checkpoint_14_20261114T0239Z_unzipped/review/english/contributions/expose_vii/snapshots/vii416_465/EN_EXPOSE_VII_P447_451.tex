@@ -1,0 +1,180 @@
+%%%%%%%%%%  scan idx 460  |  folio 447  %%%%%%%%%%
+\SGAPrintPage{447}%
+We know that for every regular scheme having an ample sheaf, the Grothendieck groups formed with locally free sheaves of finite type and with coherent sheaves are identical. In particular, this is the case for \(Y'\).
+
+Let \(\underline{E}\) be a coherent \(\underline{O}_{X'}\)-Module supported on \(Y'\); then \(\underline{E}\) is a perfect \(\underline{O}_{X'}\)-Module. Indeed, it is perfect at the points of \(Y'\), since \(X'\) is regular at these points, and at the points of \(X'-Y'\) since it vanishes there.
+
+If \(E\) is the class of \(\underline{E}\) in \(K^{\bullet}(X')\), then \(E\) belongs to the image of \(j_*\). Indeed, we can filter \(\underline{E}\) by the \(\underline{J}'^n.\underline{E}\). This filtration is finite, since, \(X'\) being noetherian, there is an integer \(n_0\) such that \(\underline{J}'^{\,n_0}.\underline{E}=0\); the quotients of this filtration are then \(\underline{O}_{Y'}\)-Modules, so their classes in \(K^{\bullet}(X')\) belong to the image of \(j_*\). Since \(E\) is the sum of the classes of these quotients, \(E\) also belongs to this image.
+
+Let now \(x\in K^{\bullet}(X')\). We can find a perfect complex \(\underline{M}^\bullet\) whose class is \(x\). Consider the distinguished triangle:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& \underline{N}^\bullet \arrow[dr] &\\
+\underline{M}^\bullet \arrow[ur] && \mathbb Lf^*(\mathbb Rf_*(\underline{M}^\bullet)) \arrow[ll] ,
+\end{tikzcd}
+\]
+where the horizontal arrow is the canonical homomorphism. This arrow is an isomorphism on the complement of \(Y'\), and consequently the cohomology sheaves of \(\underline{N}^\bullet\) are coherent sheaves supported on \(Y'\). By the preceding argument, these are perfect \(\underline{O}_{X'}\)-Modules, and their classes belong to the image of \(j_*\). Thus we have:
+\[
+x-f^*(f_*(x))\in\operatorname{Im}(j_*)\,;
+\]
+and consequently the homomorphism \(v\) is surjective.
+
+
+
+% Macros for Exposé VII continuation
+\providecommand{\Q}{\mathbb Q}
+\providecommand{\bfP}{\mathbf P}
+\providecommand{\gr}{\operatorname{gr}}
+\providecommand{\Id}{\operatorname{Id}}
+\providecommand{\Fil}{\operatorname{Fil}}
+\providecommand{\Imf}{\operatorname{Im}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\codim}{\operatorname{codim}}
+\providecommand{\cJ}{\mathcal J}
+\providecommand{\cI}{\mathcal I}
+\providecommand{\cN}{\mathcal N}
+\providecommand{\cE}{\mathcal E}
+\providecommand{\cO}{\mathcal O}
+
+
+
+%%%%%%%%%%  scan idx 461  |  folio 448  %%%%%%%%%%
+\SGAPrintPage{448}%
+\sgaStableTarget{sga6.e07.remark-3-8}\subsection*{Remark 3.8.}
+
+When \(X\) is noetherian and \(Y\) regular, 3.7 determines the abelian group \(K^{\bullet}(X')\) entirely from the \(\lambda\)-rings \(K^{\bullet}(X)\), \(K^{\bullet}(Y)\), the maps \(i_*,i^*\) between these rings, and the element \(N\) of \(K^{\bullet}(Y)\): indeed, \(K^{\bullet}(Y')\) can be computed from \(K^{\bullet}(Y)\) and \(N\) by (VI 1.1). We shall see in the next section that the multiplicative structure of \(K^{\bullet}(X')\) is determined by the same data, as is the \(\lambda\)-structure after tensoring with \(\mathbb Q\) (this restriction is probably unnecessary: see 4.5).
+
+\sgaStableTarget{sga6.e07.sec.4}\section*{4. Regular immersions and the filtration of \(K^{\bullet}\)}
+
+Throughout this section we keep the notation and hypotheses of 3.1.
+
+\sgaStableTarget{sga6.e07.lem.4-1}\textbf{Lemma 4.1.} \uline{Suppose that there exists on} \(Y\) \uline{a locally free sheaf of finite type} \(\underline{N}'\), \uline{such that}, \uline{if} \(N,N'\) \uline{are the classes in} \(K^{\bullet}(Y)\) \uline{of} \(\underline{N},\underline{N}'\), \uline{we have} \(N=N'+2\). \uline{Then the following congruence holds}:
+\[
+  \lambda_{-1}(F)\equiv 0 \ \mathrm{mod.}(1-L).
+\]
+
+Let \(d\) be the rank of \(\underline{N}\) (which we may suppose constant); the rank of \(\underline{F}\) is then \(d-1\). By definition:
+\[
+\begin{aligned}
+\lambda_{-1}(F)
+ &= \sum_{i\ge0}(-1)^i\lambda^i(F)\\
+ &= (-1)^{d-1}\lambda^{d-1}(F-1)\\
+ &= (-1)^{d-1}\lambda^{d-1}(F+L-1-L)\\
+ &= (-1)^{d-1}\lambda^{d-1}(N-2+1-L).
+\end{aligned}
+\]
+Now \(\lambda_t(1-L)=\lambda_t(1)/\lambda_t(L)=(1+t)/(1+Lt)\). Thus for every \(i\ge1\), \(\lambda^i(1-L)\) is divisible by \(1-L\). Consequently:
+\[
+\begin{aligned}
+\lambda_{-1}(F)
+  &\equiv (-1)^{d-1}\lambda^{d-1}(N-2) \qquad\mathrm{mod.}(1-L)\\
+  &\equiv(-1)^{d-1}\lambda^{d-1}(N') \qquad\mathrm{mod.}(1-L).
+\end{aligned}
+\]
+
+%%%%%%%%%%  scan idx 462  |  folio 449  %%%%%%%%%%
+\SGAPrintPage{449}%
+Now \(\underline{N}'\) has rank \(d-2\), so \(\lambda^{d-1}(N')=0\), which gives the result.
+
+\sgaStableTarget{sga6.e07.sec.4.2}\subsection*{4.2.}
+
+Let \(i:Y\to X\) be a regular immersion. Let \(r\) be an integer \(\ge1\), and \(s:X\longrightarrow \mathbf P_X^r\) the section defined by the homomorphism: \((\underline{O}_X)^{r+1}\to\underline{O}_X\), passage to the quotient by the subsheaf generated by the last \(r\) coordinates. If \(\mathbf P_X^r\) is defined by the graded \(\underline{O}_X\)-Algebra \(\underline{O}_X[T_0,\ldots,T_r]\), the ideal \(\underline{I}\) defining the section \(s\) is the ideal generated by the sections \(T_1,\ldots,T_r\), so \(\underline{I}/\underline{I}^2\) is isomorphic to \((\underline{O}_X[T_0])^r\), and hence the corresponding ideal of \(\underline{O}_P\) is isomorphic to \((\underline{O}_X)^r\).
+
+Since the section \(s\) is clearly a regular immersion, the same holds for \(s\circ i\), and we can write the corresponding exact sequence of conormal sheaves (1.7). We thus obtain the following equality in \(K^{\bullet}(Y)\), writing \(\underline{N}\) for the conormal sheaf of \(i\), and \(\underline{N}_1\) for the conormal sheaf of \(s\circ i\):
+\[
+  N_1=N+r.
+\]
+Thus for every regular immersion \(i\), composing it with a section: \(X\to\mathbf P_X^2\), or: \(X\to\mathbf P_{\mathbf P_X^1}^{1}\), gives a regular immersion satisfying the property of Lemma 4.1.
+
+\sgaStableTarget{sga6.e07.thm.4-3}\textbf{Theorem 4.3.} \uline{Let} \(i:Y\to X\) \uline{be a regular closed immersion}, \(N\) \uline{the class in} \(K^{\bullet}(Y)\) \uline{of the conormal sheaf of} \(Y\) \uline{in} \(X\). \uline{Suppose that} \(X\) \uline{is quasi-compact and has an ample sheaf}. \uline{Then}, \uline{with the notation of} 3.3, \uline{we have for every} \(y\in K^{\bullet}(Y)\), \uline{and every} \(p\ge1\):
+\sgaStableTarget{sga6.e07.eq.4-3-1}\begin{equation}\tag{4.3.1}
+ i_*\bigl(\lambda^p(N,y)\bigr)\equiv \lambda^p(i_*(y))
+ \qquad\text{\uline{mod}. \uline{torsion}},
+\end{equation}
+\(\lambda^p(N,y)\) \uline{being the element defined in} (V 5.3).
+
+i) First suppose that the hypothesis of 4.1 is satisfied; in this case we shall show that \(i_*\bigl(\lambda^p(N,y)\bigr)=\lambda^p(i_*(y))\). Since \(f_*\circ f^*=\Id\), this
+
+%%%%%%%%%%  scan idx 463  |  folio 450  %%%%%%%%%%
+\SGAPrintPage{450}%
+relation is equivalent to the relation:
+\[
+  f^*\bigl(i_*(\lambda^p(N,y))\bigr)=
+  f^*\bigl(\lambda^p(i_*(y))\bigr).
+\]
+Now we have:
+\sgaStableTarget{sga6.e07.eq.3-4}\[
+\begin{aligned}
+ f^*\bigl(\lambda^p(i_*(y))\bigr)
+ &=\lambda^p\bigl(f^*(i_*(y))\bigr)\\
+ &=\lambda^p\bigl(j_*(g^*(y)\lambda_{-1}(F))\bigr)
+\qquad(3.4)
+\end{aligned}
+\]
+On the other hand:
+\sgaStableTarget{sga6.e07.eq.3-4.occ2}\[
+  f^*\bigl(i_*(\lambda^p(N,y))\bigr)
+  =
+  j_*\bigl(g^*(\lambda^p(N,y))\lambda_{-1}(F)\bigr)\ (3.4).
+\]
+Since \(g^*(N)=F+L\), we can apply formula (V (5.4.2)):
+\[
+  g^*(\lambda^p(N,y))\lambda_{-1}(F)
+  =
+  \lambda^p(g^*(N),g^*(y))\lambda_{-1}(F)
+  =
+  \lambda^p(L,g^*(y)\lambda_{-1}(F)).
+\]
+Putting: \(z=g^*(y)\lambda_{-1}(F)\), we are therefore reduced to proving the relation:
+\[
+  j_*\bigl(\lambda^p(L,z)\bigr)=\lambda^p(j_*(z)),
+\]
+that is, the analogous relation for the immersion \(j\) and the element \(z\). By hypothesis, \(\lambda_{-1}(F)\) is a multiple of \((1-L)\); we can find \(z'\) such that \(z=z'(1-L)\). Then \(z=j^*(u')\) with \(u'=j_*(z')\) (2.7); since \(L=j^*(J')\), we finally have to verify:
+\[
+  j_*\bigl(j^*(\lambda^p(J',u'))\bigr)=
+  \lambda^p\bigl(j_*(j^*(u'))\bigr).
+\]
+The exact sequence
+\[
+  0\longrightarrow \underline{J}'\longrightarrow \underline{O}_{X'}
+  \longrightarrow \underline{O}_{Y'}\longrightarrow 0
+\]
+gives the relation:
+\sgaStableTarget{sga6.e07.eq.4-3-2}\begin{equation}\tag{4.3.2}
+  j_*(1)=1-J'.
+\end{equation}
+Thus, applying the projection formula, the relation to be verified finally becomes:
+
+%%%%%%%%%%  scan idx 464  |  folio 451  %%%%%%%%%%
+\SGAPrintPage{451}%
+\[
+  \lambda^p(J',u')(1-J')=\lambda^p(u'(1-J')).
+\]
+Since \(1-J'=\lambda_{-1}(J')\), this is the formula defining \(\lambda^p(J',u')\).
+
+ii) We turn to the general case. Compose \(i\) with a section: \(X\to\mathbf P_X^1\), then with a section: \(\mathbf P_X^1\to\mathbf P_{\mathbf P_X^1}^1\), so that the composite immersion satisfies the condition of 4.1. (see 4.2). Proposition 4.3 is then true for the composite immersion by the preceding argument; it therefore remains to ``descend'' to \(X\). We descend first to \(\mathbf P_X^1\), then to \(X\), so that the proof consists in applying the following lemma twice (due to J.P. Jouanolou):
+
+\sgaStableTarget{sga6.e07.lem.unnamed}\textbf{Lemma}: \uline{Under the conditions of} 4.3, \uline{let} \(s:X\to\mathbf P_X^1\) \uline{be the section defined in} 4.2. \uline{If Proposition} 4.3 \uline{is true for} \(s\circ i\), \uline{it is true for} \(i\).
+
+Supposing 4.3 true for \(s\circ i\), we have for every \(p\ge1\), and every \(y\in K^{\bullet}(Y)\):
+\sgaStableTarget{sga6.e07.eq.4-3-3}\begin{equation}\tag{4.3.3}
+ (s\circ i)_*\bigl(\lambda^p(N+1,y)\bigr)
+ \equiv
+ \lambda^p\bigl((s\circ i)_*(y)\bigr)
+ \quad\text{mod.\ torsion}.
+\end{equation}
+
+The section \(s\) is defined by an ideal isomorphic to \(\underline{O}_{\mathbf P}(-1)\) (4.2); write \(\xi\) for its class in \(K^{\bullet}(\mathbf P_X^1)\). We then have the following relation for every \(x\in K^{\bullet}(X)\):
+\[
+  s_*(x)=p^*(x)(1-\xi),
+\]
+where \(p\) is the structural morphism \(\mathbf P_X^1\to X\). Indeed, since \(p\circ s=\Id_X\), we have \(x=s^*(p^*(x))\), whence \(s_*(x)=s_*(s^*(p^*(x)))=p^*(x)s_*(1)\); since \(s_*(1)=1-\xi\), we have the required relation:
+
+Relation (4.3.3) then becomes:
+\[
+\begin{aligned}
+(s\circ i)_*\bigl(\lambda^p(N+1,y)\bigr)
+&\equiv \lambda^p\bigl(p^*(i_*(y))(1-\xi)\bigr)\quad\text{mod.\ torsion}\\
+&\equiv \lambda^p(\xi,p^*(i_*(y)))(1-\xi)\quad\text{mod.\ torsion}.
+\end{aligned}
+\]

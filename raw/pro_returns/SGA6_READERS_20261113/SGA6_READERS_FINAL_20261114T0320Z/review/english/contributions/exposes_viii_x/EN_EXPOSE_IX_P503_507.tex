@@ -1,0 +1,123 @@
+%%%%%%%%%%  scan idx 516  |  folio 503  %%%%%%%%%%
+\SGAPrintPage{503}%
+Furthermore,
+we have $K=\varinjlim_f A_f$, where $f$ runs through the set of nonzero elements of $A$. Consequently, $\Spec(K)=\varprojlim_f\Spec(A_f)$, and:
+\[
+X_s=X\times_S\Spec(K)=\varprojlim_f X\times_S\Spec(A_f)
+\]
+by EGA IV 8.2.3 and 8.2.5. Since the schemes considered are noetherian, and the transition morphisms affine and flat, we have by IV 3.2.3:
+\[
+K_\bullet(X_s)=\varinjlim_f K_\bullet(X\times_S\Spec(A_f)).
+\]
+Since the ``inverse-image'' homomorphisms on the $K_\bullet$ are linear with respect to the $K^{\bullet}$ (IV (2.12.2)), there exists a nonempty open subset $U=\Spec(A_f)$ of $S$ such that in $K_\bullet(X_U)$ we have:
+\[
+y_U=\sum_i\xi_i\cdot n_i.
+\]
+Let $S'$ be a closed subscheme of $S$ with support $S-U$. Then $\varphi_{S'}$ is surjective by the induction hypothesis, and consequently diagram (1.2.1) shows that:
+\[
+y-\sum_i\xi_i\cdot n_i\in \operatorname{Im}(\varphi),
+\]
+so, since $n_i=f^*(n_i)$, $\varphi$ is surjective.
+
+\sgaStableTarget{sga6.e09.cor.1-3}\textbf{Corollary 1.3.} \uline{Let} $f:X\to S$ \uline{be a flat morphism of noetherian schemes}. \uline{Suppose that for every point} $s$ \uline{of} $S$, \uline{the homomorphism}:
+\[
+K^{\bullet}(X)\longrightarrow K_\bullet(X_s)
+\]
+\uline{is surjective}. \uline{Then the homomorphism obtained from} $f^*$:
+\[
+K_\bullet(S)\otimes_{K^{\bullet}(S)}K^{\bullet}(X)\longrightarrow K_\bullet(X)
+\]
+\uline{is surjective}.
+
+%%%%%%%%%%  scan idx 517  |  folio 504  %%%%%%%%%%
+\SGAPrintPage{504}%
+Take
+for the family $(\xi_i)_{i\in I}$ the family of all elements of $K^{\bullet}(X)$. The hypotheses of 1.2 are then satisfied, and consequently the homomorphism:
+\[
+\varphi:\bigl(K_\bullet(S)\bigr)^{(K^{\bullet}(X))}\longrightarrow K_\bullet(X)
+\]
+is surjective. By the definition of $\varphi$, this is equivalent to saying that the homomorphism:
+\[
+K_\bullet(S)\otimes_{K^{\bullet}(S)}K^{\bullet}(X)\longrightarrow K_\bullet(X)
+\]
+is surjective.
+
+\sgaStableTarget{sga6.e09.cor.1-4}\textbf{Corollary 1.4.} \uline{Let} $f:X\to S$ \uline{be a flat morphism of noetherian schemes}. \uline{Suppose that for every point} $\underline{s}$ \uline{of} $S$, \uline{the canonical homomorphism} $\mathbb Z\to K_\bullet(X_s)$ \uline{is an isomorphism}. \uline{Then the homomorphism}:
+\[
+f^*:K_\bullet(S)\longrightarrow K_\bullet(X)
+\]
+\uline{is surjective}. \uline{If in addition} $f$ \uline{has a section} $g$ \uline{of finite Tor-dimension}, \uline{then} $f^*$ \uline{is an isomorphism}.
+
+Take for the family $(\xi_i)_{i\in I}$ the family consisting of the single element $1\in K^{\bullet}(X)$; we then have $\varphi=f^*$, and, the conditions of 1.2 being satisfied, $f^*$ is surjective.
+
+If $f$ has a section $g$ of finite Tor-dimension, one can define a homomorphism $g^*:K_\bullet(X)\to K_\bullet(S)$ (IV 2.12). Since we have $g^*\circ f^*=(f\circ g)^*=\operatorname{Id}$ by IV 2.12.1.1, $f^*$ is injective, hence an isomorphism.
+
+\sgaStableTarget{sga6.e09.rem.1-5}\textbf{Remark 1.5.} For $g$ to have finite Tor-dimension, it is necessary and sufficient that the fibers of $X$ be regular at the points of $g(S)$, i.e.\ that $f$ be regular at the points of $g(S)$ (or smooth at these points if we suppose $f$
+
+%%%%%%%%%%  scan idx 518  |  folio 505  %%%%%%%%%%
+\SGAPrintPage{505}%
+of finite presentation).
+
+Since these properties are local on $X$ and $S$, one may suppose them affine; let $S=\Spec(A)$, $X=\Spec(B)$. We then have:
+\[
+\operatorname{tor.dim}_B(A)=\operatorname{dim.proj}_B(A)=\sup_{s\in S}\operatorname{dim.proj}_{B\otimes_A k(s)}(k(s))
+\]
+by EGA IV 12.3.2, where the hypothesis of finite presentation on $B$ can be replaced by noetherian hypotheses. Now $k(s)$ is isomorphic to the residue field of $\underline{O}_{X_s,g(s)}$, and by EGA $0_{\mathrm{IV}}$ 17.2.5 we have:
+\[
+\operatorname{dim.proj}_{B\otimes_A k(s)}(k(s))=
+\operatorname{dim.proj}_{\underline{O}_{X_s,g(s)}}(k(s)).
+\]
+It then follows from EGA $0_{\mathrm{IV}}$ 17.2.11 that the latter is finite if and only if $\underline{O}_{X_s,g(s)}$ has finite cohomological dimension, that is, is regular.
+
+\sgaStableTarget{sga6.e09.prop.1-6}\textbf{Proposition 1.6.} \uline{Let} $S$ \uline{be a noetherian scheme}, $\underline{E}$ \uline{a locally free} $\underline{O}_S$\uline{-Module of finite type}, $X$ \uline{the vector bundle associated to} $\underline{E}$, \uline{and} $f$ \uline{the structural morphism of} $X$. \uline{Then} \(f^*:K_\bullet(S)\longrightarrow K_\bullet(X)\) \uline{is an isomorphism}.
+
+Since $f$ is smooth, and has a section, namely the zero section, to prove 1.6 it suffices to show that for every $s\in S$, $K_\bullet(X_s)\simeq \mathbb Z$ (1.4). We are thus reduced to the case where the base scheme is a field.
+
+In this case, $\underline{E}$ is a direct sum of submodules of rank $1$, which allows us to decompose $f$ into a sequence of fibrations of rank $1$, and thus reduce to the case where $X$ has rank $1$, namely $X=\Spec(k[T])$. The proposition then follows from the next lemma:
+
+%%%%%%%%%%  scan idx 519  |  folio 506  %%%%%%%%%%
+\SGAPrintPage{506}%
+\sgaStableTarget{sga6.e09.lem.1-7}\textbf{Lemma 1.7.} \uline{Let} $A$ \uline{be a principal ideal domain}, $X=\Spec(A)$. \uline{Then the canonical homomorphism}:
+\[
+\mathbb Z\longrightarrow K_\bullet(X)
+\]
+\uline{is an isomorphism}.
+
+Since $X$ is regular, the homomorphism $K^{\bullet}(X)\to K_\bullet(X)$ is an isomorphism. Thus $K_\bullet(X)$ is generated by the classes of locally free $\underline{O}_X$-Modules of finite type, i.e.\ by the classes of projective $A$-modules of finite type. Since $A$ is a principal ideal domain, every projective module of finite type is free, giving surjectivity. Injectivity follows from the fact that $K^{\bullet}(X)$ is $\mathbb Z$-augmented.
+
+\sgaStableTarget{sga6.e09.prop.1-8}\textbf{Proposition 1.8.} \uline{Let} $S$ \uline{be a noetherian scheme}, $\underline{E}$ \uline{a locally free} $\underline{O}_S$\uline{-Module of rank} $r$, $X$ \uline{the vector bundle associated to} $\underline{E}$, $f$ \uline{the structural morphism of} $X$, \uline{and} $g$ \uline{the zero section of} $X$. \uline{Then the composite homomorphism}:
+\[
+K_\bullet(S)\xrightarrow{g_*}K_\bullet(X)\xrightarrow{g^*}K_\bullet(S)
+\]
+(\uline{where} $g^*$ \uline{is defined by} IV 2.12.1 \uline{and} 1.5) \uline{is multiplication by the element} $\lambda_{-1}(E)$ \uline{of} $K^{\bullet}(S)$, \uline{denoting by} $E$ \uline{the class of} $\underline{E}$ \uline{in} $K^{\bullet}(S)$, \uline{and putting}
+\[
+\lambda_{-1}(E)=\sum_{i=0}^r(-1)^i\lambda^i(E).
+\]
+
+This statement is the analogue, for $K_\bullet$, of VII 2.7.
+
+Let $\underline{F}$ be a coherent $\underline{O}_S$-Module, of class $F$ in $K_\bullet(S)$. Then $g_*(F)$ is the class in $K_\bullet(X)$ of the complex $\mathbb Rg_*(\underline{F})=g_*(\underline{F})$, hence of $\underline{F}$ regarded as an $\underline{O}_X$-Module by means of $g$. To compute $g^*(g_*(F))$, one must therefore take the class of \(\mathbb Lg^*(\underline{F})=\underline{F}\otimes^{\mathbb L}_{\underline{O}_X}\underline{O}_S\).
+
+%%%%%%%%%%  scan idx 520  |  folio 507  %%%%%%%%%%
+\SGAPrintPage{507}%
+For this, consider the complex:
+\[
+0\longrightarrow \wedge^r(\underline{E})\otimes_{\underline{O}_S}\mathbb S(\underline{E})\longrightarrow
+\wedge^{r-1}(\underline{E})\otimes_{\underline{O}_S}\mathbb S(\underline{E})\longrightarrow\ldots\longrightarrow
+\underline{E}\otimes_{\underline{O}_S}\mathbb S(\underline{E})\longrightarrow \mathbb S(\underline{E})\longrightarrow 0
+\]
+where $\mathbb S(\underline{E})$ is the symmetric algebra of $\underline{E}$. This is a resolution of $\underline{O}_S$ over $\mathbb S(E)$ (VI 1.11). The associated complex on $X$, denoted $\underline{L}_\bullet$, has $k$-th term $\wedge^k(f^*(E))$ and is therefore a resolution of $\underline{O}_S$ by locally free $\underline{O}_X$-Modules of finite type; thus we have \(\underline{L}_\bullet\otimes_{\underline{O}_X}\underline{F}=\underline{O}_S\otimes^{\mathbb L}_{\underline{O}_X}\underline{F}\). Consequently:
+\[
+\begin{aligned}
+g^*(g_*(F))
+&=\cl(\underline{L}_\bullet\otimes_{\underline{O}_X}\underline{F})
+=\sum_{i=0}^r(-1)^i\cl(\underline{L}_i\otimes_{\underline{O}_X}\underline{F})\\
+&=\sum_{i=0}^r(-1)^i\cl(\wedge^i(\underline{E})\otimes_{\underline{O}_S}\underline{F})
+=F\cdot\lambda_{-1}(E).
+\end{aligned}
+\]
+The proposition follows by additivity.
+
+\sgaStableTarget{sga6.e09.sec.2}\subsection*{2. Principal bundles under split tori}
+
+\sgaStableTarget{sga6.e09.para.2-1}2.1. Let $S$ be a noetherian scheme, and $T$ a torus over $S$. Suppose $T$ split; we thus have an isomorphism $T\simeq D_S(M)$, where $M$ is a free abelian group of rank $r$, or equivalently $T\simeq \underline{G}_{m\,S}^r$. Let $P$ be a torsor under $T$. Then $P$ is affine over $S$, defined by a graded $\underline{O}_S$-Algebra $\underline{A}$ of type $M$; putting $\underline{A}=\bigoplus_{m\in M}\underline{A}_m$, we have that $\underline{A}_m$ is an invertible $\underline{O}_S$-Module for every $m$, and, for $m,m'\in M$, the homomorphism $\underline{A}_m\otimes_{\underline{O}_S}\underline{A}_{m'}\longrightarrow \underline{A}_{m+m'}$ defined by multiplication in $\underline{A}$ is an isomorphism (SGA 3 VIII 4.1). We thus define a multiplicative homomorphism $\eta:M\longrightarrow K^{\bullet}(S)$ by associating to $m\in M$ the class of $\underline{A}_m$ in $K^{\bullet}(S)$.
