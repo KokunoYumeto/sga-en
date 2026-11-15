@@ -50,6 +50,16 @@ The cumulative reader of 15 November 2026 holds the newest English text of every
 All editions of EGA, FGA and SGA made in this project are listed in
 [ega-fga-sga](https://github.com/KokunoYumeto/ega-fga-sga).
 
+## Which book to read
+
+Each volume comes in three forms, all made from one text checked page by page against the printed volume. **Start with the reading text.**
+
+- **Reading text** (`*_reading.pdf`): the corrected English text, for reading the mathematics.
+- **Diplomatic** (`*_diplomatic.pdf`): the text as printed in the original volume, misprints included where they change the English, for checking against the printed page.
+- **Corrected, with apparatus** (`*_corrected_apparatus.pdf`): the corrected text with every change listed, for anyone who wants to see what was changed and why. An apparatus entry records one change: the printed reading, the corrected reading, the page and the source of the correction; readings that could not be decided are listed apart.
+- **Cumulative linked reader** (`00_SGA_EN_CUMULATIVE_LINKED_READER.pdf`): the newest English text of every volume (the reading text where a volume has the three forms) in one linked PDF, for searching and moving across SGA.
+- **Complete readers** of SGA 1, 2, 3 and 4 (`*_COMPLETE_READER.pdf`): one book per volume, the full text of the volume as published in the edition of 12 November 2026.
+
 ## Readers of 14 November 2026
 
 New readers of SGA 4 (reading text), SGA 4½, SGA 5, SGA 6 and SGA 7, built from the French text checked page by page against the printed volumes, in three forms: diplomatic (the text as printed, misprints included), corrected with an apparatus of every change, and a reading text. Built by GPT-6 Astra (OpenAI, ChatGPT Pro mode); PDF check and build fixes by Claude Opus 5.5 at effort high (SGA 6: at effort max). Release: [v2026-11-14-english-edition](https://github.com/KokunoYumeto/sga-en/releases/tag/v2026-11-14-english-edition); its notes give the state of each volume and the checks.
@@ -62,7 +72,7 @@ New readers of SGA 4 (reading text), SGA 4½, SGA 5, SGA 6 and SGA 7, built from
 | SGA 6 | Intersection theory and Riemann–Roch | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_diplomatic.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_diplomatic.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_corrected_apparatus.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_corrected_apparatus.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_reading.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/07_SGA6_EN_reading.tex) |
 | SGA 7 I and II | Monodromy groups | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_diplomatic.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_diplomatic.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_corrected_apparatus.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_corrected_apparatus.tex) | [PDF](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_reading.pdf) · [LaTeX](https://github.com/KokunoYumeto/sga-en/releases/download/v2026-11-14-english-edition/08_SGA7_EN_reading.tex) |
 
-For SGA 1, SGA 2, SGA 3 and SGA 4, and for the cumulative reader of all volumes, the newest version is the release of 12 November 2026 below. The build records of every reader are in [`raw/pro_returns/`](raw/pro_returns/), the PDF check in [`raw/pdf_check_20261114/`](raw/pdf_check_20261114/).
+The complete readers of SGA 1, SGA 2, SGA 3 and SGA 4 and the cumulative reader of all volumes are attached to the same release, rebuilt on 15 November 2026 for the PDF check; the release of 12 November 2026 below stays as it was. The build records of every reader are in [`raw/pro_returns/`](raw/pro_returns/), the PDF check in [`raw/pdf_check_20261114/`](raw/pdf_check_20261114/).
 
 ## Contents
 
